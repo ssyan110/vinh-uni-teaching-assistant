@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-Hans"><head><meta charset="UTF-8"><title>Bài 1 · Xin chào · Bộ slide đầy đủ</title>
+<script>window.DECK_MANIFEST=[
+    { file: "slides/01-cover.html", label: "Trang bìa" },
+    { file: "slides/02-objectives.html", label: "Mục tiêu" },
+    { file: "slides/03-route.html", label: "Lộ trình" },
+    { file: "slides/04-dialogue.html", label: "Bài đọc" },
+    { file: "slides/05-vocab-core.html", label: "Từ vựng 1" },
+    { file: "slides/06-vocab-more.html", label: "Từ vựng 2" },
+    { file: "slides/07-vocab-use.html", label: "Từ vựng" },
+    { file: "slides/08-syllable.html", label: "Âm tiết" },
+    { file: "slides/09-initials-overview.html", label: "Thanh mẫu" },
+    { file: "slides/10-bpmf.html", label: "b p m f" },
+    { file: "slides/11-dtnl.html", label: "d t n l" },
+    { file: "slides/12-gkh.html", label: "g k h" },
+    { file: "slides/13-finals-single.html", label: "Vận mẫu đơn" },
+    { file: "slides/14-finals-compound.html", label: "Vận mẫu ghép" },
+    { file: "slides/15-writing-pinyin.html", label: "Quy tắc viết" },
+    { file: "slides/16-tones.html", label: "Thanh điệu" },
+    { file: "slides/17-tone-meaning.html", label: "Đổi thanh đổi nghĩa" },
+    { file: "slides/18-tone-mark.html", label: "Dấu thanh" },
+    { file: "slides/19-tone-sandhi.html", label: "Biến điệu" },
+    { file: "slides/20-characters.html", label: "Chữ Hán" },
+    { file: "slides/21-tone-drill.html", label: "Luyện thanh" },
+    { file: "slides/22-initials-drill.html", label: "Luyện thanh mẫu" },
+    { file: "slides/23-finals-drill.html", label: "Luyện vận mẫu" },
+    { file: "slides/24-read.html", label: "Nhận mặt chữ" },
+    { file: "slides/25-writing.html", label: "Tập viết" },
+    { file: "slides/26-exit.html", label: "Kiểm tra cuối bài" }
+];window.DECK_WIDTH=1280;window.DECK_HEIGHT=720;</script>
+<style>*{box-sizing:border-box;margin:0;padding:0}html,body{height:100%;background:#141413;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC",sans-serif}#stage{position:fixed;top:0;left:0;transform-origin:top left;width:1280px;height:720px;background:#f5f4ed;box-shadow:0 10px 60px rgba(0,0,0,.45)}iframe{width:100%;height:100%;border:0;display:block;background:#f5f4ed}.counter{position:fixed;bottom:18px;right:18px;background:rgba(0,0,0,.72);color:white;border-radius:999px;padding:7px 13px;font-size:13px;z-index:10}.nav{position:fixed;top:0;bottom:0;width:18%;z-index:8;cursor:pointer}.nav.left{left:0}.nav.right{right:0}</style></head>
+<body><div id="stage"><iframe id="frame" src="about:blank"></iframe></div><div class="nav left" id="prev"></div><div class="nav right" id="next"></div><div class="counter" id="counter"></div>
+<script>(()=>{const W=window.DECK_WIDTH,H=window.DECK_HEIGHT,deck=window.DECK_MANIFEST,stage=document.getElementById('stage'),frame=document.getElementById('frame'),counter=document.getElementById('counter');let current=Math.max(0,Math.min(deck.length-1,Number(location.hash.slice(1)||1)-1));function fit(){const s=Math.min(innerWidth/W,innerHeight/H);stage.style.transform='translate('+((innerWidth-W*s)/2)+'px,'+((innerHeight-H*s)/2)+'px) scale('+s+')'}function show(i){if(i<0||i>=deck.length)return;current=i;frame.src=deck[i].file;counter.textContent=(i+1)+' / '+deck.length+' · '+deck[i].label;history.replaceState(null,'','#'+(i+1))}addEventListener('resize',fit);addEventListener('keydown',e=>{if(['ArrowRight',' ','PageDown'].includes(e.key))show(current+1);if(['ArrowLeft','PageUp'].includes(e.key))show(current-1);if(e.key==='Home')show(0);if(e.key==='End')show(deck.length-1)});document.getElementById('prev').onclick=()=>show(current-1);document.getElementById('next').onclick=()=>show(current+1);fit();show(current)})();</script></body></html>

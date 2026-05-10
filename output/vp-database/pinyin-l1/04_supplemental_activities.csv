@@ -1,0 +1,11 @@
+﻿activity_id,module_order,activity_type,title,description,target_items,source_pages,game_candidate
+ACT001,1,warmup,Bạn đã thấy pinyin ở đâu?,"Sinh viên nhìn các ví dụ nǐ, hǎo, mā và đoán pinyin dùng để làm gì.",C002,4,no
+ACT002,2,pinyin_drill,Tách âm tiết hǎo,"Khoanh h = thanh mẫu, ao = vận mẫu, dấu ˇ = thanh điệu.","C003,C004,C005",5,yes
+ACT003,3,pinyin_drill,Bật hơi / không bật hơi,"Phân biệt b/p bằng các cặp ba-pa, bo-po, bi-pi, bu-pu.","P001,P002",6,yes
+ACT004,3,pinyin_drill,Ghép âm nhanh,"Giảng viên đưa thanh mẫu, sinh viên ghép với vận mẫu để đọc thành âm tiết.","P001,P002,P003",6,yes
+ACT005,4,pinyin_drill,Biến đổi i/u/ü,"Sinh viên đổi i→yi, u→wu, ü→yu và đọc lại.",P004,7,yes
+ACT006,5,pinyin_drill,Đường thanh điệu,Đọc mā/má/mǎ/mà/ma theo đường cao độ 55/35/214/51/nhẹ.,"T001,T002,T003,T004,T005",8,yes
+ACT007,6,vocabulary_drill,Cặp dễ nhầm,"So sánh 雨/鱼, 饿/鹅, 一/二 bằng pinyin và nghĩa tiếng Việt.","V003,V004,V005,V006,V007,V008",10,yes
+ACT008,7,vocabulary_drill,Gia đình và đồ dùng,"Nhóm từ theo chủ đề: gia đình, đồ dùng, hành động/trạng thái.","V009,V010,V011,V012,V013,V014,V015,V016",12,yes
+ACT009,8,assessment,Tự kiểm tra cuối bài,Làm bài nối thanh điệu và bài nhìn hình viết pinyin từ giáo trình.,"E004,E005",15-16,no
+ACT010,9,culture_tech,Cài bàn phím tiếng Trung giản thể,Sinh viên cài 简体中文 / Pinyin-QWERTY để chuẩn bị nhập pinyin.,"A001,A002",18-19,no

@@ -1,0 +1,75 @@
+<!doctype html><html lang="zh-Hans"><head><meta charset="utf-8"><title></title><style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  width: 960pt;
+  height: 540pt;
+  overflow: hidden;
+  color: #202124;
+  font-family: "Nunito", "Avenir Next", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  background: #D9F4FF;
+  position: relative;
+}
+.page { position: absolute; inset: 0; overflow: hidden; }
+.bg-card { position: absolute; inset: 28pt; border-radius: 34pt; background: #FFFDF4; border: 2.4pt solid #202124; }
+.soft-blob { position: absolute; border-radius: 999pt; border: 2pt solid #202124; opacity: .98; }
+.blob-a { width: 230pt; height: 120pt; left: -58pt; top: 50pt; background: #DDF7EE; transform: rotate(-10deg); }
+.blob-b { width: 260pt; height: 126pt; right: -70pt; bottom: 44pt; background: #FFF5D9; transform: rotate(9deg); }
+.blob-c { width: 120pt; height: 72pt; right: 112pt; top: 28pt; background: #FFD166; transform: rotate(-7deg); }
+.wrap { position: absolute; inset: 48pt 58pt 40pt 58pt; }
+.kicker { display: inline-block; padding: 5pt 11pt; border-radius: 999pt; border: 1.8pt solid #202124; background: #FFF5D9; }
+.kicker p { font-size: 10.4pt; font-weight: 900; letter-spacing: .08em; color: #202124; }
+h1 { font-size: 42pt; line-height: 1.04; font-weight: 950; letter-spacing: -.02em; color: #202124; margin-top: 12pt; }
+h2 { font-size: 29pt; line-height: 1.08; font-weight: 950; color: #202124; }
+p { font-size: 14pt; line-height: 1.35; color: #3b3d3f; }
+.small { font-size: 10.4pt; color: #62666a; line-height: 1.35; }
+.big-pinyin { font-size: 86pt; line-height: .9; font-weight: 950; letter-spacing: .01em; color: #202124; }
+.big-cn { font-size: 64pt; line-height: 1; font-weight: 900; color: #202124; font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif; }
+.sticker { display: inline-block; padding: 7pt 13pt; border-radius: 16pt; border: 2pt solid #202124; transform: rotate(-2deg); }
+.sticker p { font-size: 15pt; font-weight: 900; color: #202124; }
+.row { display: flex; gap: 13pt; align-items: stretch; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18pt; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14pt; }
+.card { border: 2pt solid #202124; border-radius: 22pt; background: white; padding: 15pt; }
+.card-flat { border: 2pt solid #202124; border-radius: 22pt; background: white; padding: 14pt; }
+.caption { display: inline-block; padding: 3pt 8pt; border-radius: 999pt; background: #DDF7EE; border: 1.5pt solid #202124; margin-bottom: 8pt; }
+.caption p { font-size: 9.2pt; font-weight: 900; color: #202124; letter-spacing: .07em; }
+.connector { position: absolute; height: 3pt; background: #202124; border-radius: 99pt; transform-origin: left center; }
+.dot { position: absolute; width: 12pt; height: 12pt; border-radius: 99pt; background: #F06595; border: 2pt solid #202124; }
+.tone { min-height: 118pt; text-align: center; }
+.tone .num { font-size: 10pt; font-weight: 900; color: #202124; }
+.tone .sample { font-size: 38pt; font-weight: 950; color: #202124; margin-top: 5pt; }
+.tone .shape { font-size: 17pt; font-weight: 900; color: #2D7FF9; margin-top: 4pt; }
+.sound-pill { min-width: 70pt; height: 48pt; border: 2pt solid #202124; border-radius: 18pt; display: flex; align-items: center; justify-content: center; background: white; }
+.sound-pill p { font-size: 22pt; font-weight: 950; color: #202124; }
+.note-card { border: 2pt dashed #202124; border-radius: 20pt; background: #FFF5D9; padding: 13pt; }
+.footer { position: absolute; left: 58pt; right: 58pt; bottom: 18pt; display: flex; justify-content: space-between; align-items: center; }
+.footer p { font-size: 8.8pt; font-weight: 800; color: #596066; }
+.doodle-pencil { position: absolute; width: 116pt; height: 18pt; border: 2pt solid #202124; background: #FFD166; transform: rotate(-16deg); border-radius: 6pt; }
+.doodle-pencil div { position: absolute; right: -18pt; top: -2pt; width: 0; height: 0; border-top: 10pt solid transparent; border-bottom: 10pt solid transparent; border-left: 18pt solid #FF7A59; }
+.flash { position: absolute; width: 84pt; height: 54pt; background: white; border: 2pt solid #202124; border-radius: 14pt; transform: rotate(8deg); }
+.flash p { text-align: center; margin-top: 13pt; font-size: 20pt; font-weight: 950; color: #8D7AE6; }
+
+body{background:#DDF7EE;}</style></head><body>
+  <div class="page">
+    <div class="soft-blob blob-a"></div><div class="soft-blob blob-b"></div><div class="soft-blob blob-c"></div>
+    <div class="bg-card"></div>
+    <div class="doodle-pencil" style="right:95pt;top:64pt;"><div></div></div><div class="flash" style="left:92pt;bottom:82pt;"><p>b p m</p></div>
+    <div class="wrap">
+      <div class="kicker"><p>PINYIN LESSON 1</p></div>
+      
+      
+    <div style="position:absolute;left:0;top:70pt;width:440pt;">
+      <h1 style="font-size:58pt;">Pinyin<br><span style="color:#2D7FF9;">Lesson 1</span></h1>
+      <div class="sticker" style="margin-top:16pt;background:#DDF7EE;"><p>你好 · nǐ hǎo</p></div>
+      <p style="margin-top:18pt;width:330pt;font-size:16pt;font-weight:800;">Nhìn âm — nghe thanh — đọc đúng từ buổi đầu tiên.</p>
+    </div>
+    <div class="card" style="position:absolute;right:6pt;top:62pt;width:310pt;height:260pt;background:#FFF5D9;">
+      <div class="caption"><p>BÀI HỌC HÔM NAY</p></div>
+      <p class="big-cn" style="margin-top:8pt;">你好</p>
+      <p class="big-pinyin" style="font-size:46pt;color:#8D7AE6;margin-top:5pt;">nǐ hǎo</p>
+      <p style="font-size:16pt;font-weight:900;margin-top:10pt;">Xin chào</p>
+    </div>
+    </div>
+    
+  </div>
+</body></html>

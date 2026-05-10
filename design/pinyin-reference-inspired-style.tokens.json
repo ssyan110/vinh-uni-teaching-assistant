@@ -1,0 +1,41 @@
+{
+  "name": "pinyin-reference-inspired-original",
+  "copyright_policy": "Inspired by attached reference only; do not copy exact artwork, title lettering, layout, colors, or branding.",
+  "audience": "Vietnamese universities",
+  "languages": {
+    "instruction": "Vietnamese",
+    "target_chinese": "Simplified Chinese",
+    "pronunciation": "Pinyin"
+  },
+  "colors": {
+    "sky": "#D9F4FF",
+    "mint": "#DDF7EE",
+    "cream": "#FFF5D9",
+    "ink": "#202124",
+    "blue_initials": "#2D7FF9",
+    "coral_finals": "#FF7A59",
+    "green_tones": "#2EB67D",
+    "purple_vocab": "#8D7AE6",
+    "yellow_practice": "#FFD166",
+    "pink_accent": "#F06595"
+  },
+  "typography": {
+    "display": "rounded playful outlined title, original implementation",
+    "body": "rounded sans-serif, high readability for Vietnamese + Simplified Chinese",
+    "chinese_font_fallback": "PingFang SC, Noto Sans SC, Microsoft YaHei, Songti SC"
+  },
+  "motifs": [
+    "original hand-drawn classroom objects",
+    "rounded flashcards",
+    "color-coded pinyin concept cards",
+    "central example + connector lines",
+    "student-facing exercise blocks"
+  ],
+  "forbidden_on_class_slides": [
+    "source page notes",
+    "tool/workflow labels",
+    "copyright/brand text from reference PDF",
+    "teacher-prep notes",
+    "audience labels"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "course": "Lớp giao tiếp tiếng Trung",
+  "lessonTitle": "在餐厅点菜 · Gọi món trong nhà hàng",
+  "level": "Sơ cấp / A1",
+  "durationMinutes": 45,
+  "audience": "Sinh viên đại học Việt Nam học tiếng Trung sơ cấp",
+  "languagePolicy": "Tài liệu dùng tiếng Việt cho hướng dẫn giảng dạy và tiếng Trung giản thể cho ví dụ/ngữ liệu chính; pinyin dùng để hỗ trợ phát âm.",
+  "learningObjectives": [
+    "Sinh viên có thể chào nhân viên và xin bàn.",
+    "Sinh viên có thể gọi 2–3 món bằng mẫu 我要 / 我想要.",
+    "Sinh viên có thể hỏi thanh toán một cách lịch sự.",
+    "Sinh viên có thể thực hiện hội thoại gọi món trong 60 giây."
+  ],
+  "keyVocabulary": [
+    { "pinyin": "wǒ yào", "traditional": "我要", "simplified": "我要", "vietnamese": "Tôi muốn / cho tôi" },
+    { "pinyin": "diǎn cài", "traditional": "点菜", "simplified": "点菜", "vietnamese": "gọi món" },
+    { "pinyin": "mǎi dān", "traditional": "买单", "simplified": "买单", "vietnamese": "tính tiền" },
+    { "pinyin": "yí wèi", "traditional": "一位", "simplified": "一位", "vietnamese": "một người" },
+    { "pinyin": "bú yào là", "traditional": "不要辣", "simplified": "不要辣", "vietnamese": "không cay" }
+  ],
+  "lessonFlow": [
+    { "minutes": "0–5", "stage": "Khởi động", "teacher": "Hỏi sinh viên thường gọi món gì. Viết 3 từ đồ ăn sinh viên đã biết lên bảng.", "student": "Trả lời bằng từ khóa tiếng Việt hoặc tiếng Trung." },
+    { "minutes": "5–15", "stage": "Nhập mẫu câu", "teacher": "Làm mẫu cấu trúc 我要 + món ăn. Luyện phát âm và thanh điệu.", "student": "Lặp lại và thay thế bằng các món khác." },
+    { "minutes": "15–25", "stage": "Luyện có hướng dẫn", "teacher": "Cho luyện theo cặp: khách / nhân viên. Chỉnh trật tự từ nhẹ nhàng.", "student": "Luyện các lượt trao đổi ngắn." },
+    { "minutes": "25–38", "stage": "Đóng vai", "teacher": "Phát thẻ tình huống cho từng cặp. Quan sát và ghi lại lỗi phổ biến.", "student": "Thực hiện hội thoại gọi món 60 giây." },
+    { "minutes": "38–45", "stage": "Phản hồi", "teacher": "Khen các mẫu câu hữu ích, sửa 3 lỗi chính và giao bài tập nhỏ.", "student": "Lặp lại câu đã được sửa." }
+  ],
+  "assessment": [
+    "Dùng đúng mẫu 我要 / 我想要.",
+    "Phát âm từ vựng trọng tâm đủ rõ để người nghe hiểu.",
+    "Hoàn thành hội thoại nhà hàng mà không đọc từng dòng."
+  ],
+  "homework": "Ghi âm 45 giây bằng tiếng Trung để gọi món; thêm một yêu cầu đặc biệt như 不要辣."
+}
