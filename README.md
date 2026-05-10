@@ -4,7 +4,7 @@ Mục tiêu: tạo học liệu sẵn sàng cho giảng viên bằng repo `huash
 
 ## VP 製作流程 scope
 
-This system now treats the VP teaching-material flow as **steps 1–8 only before teacher review**:
+This system treats the VP teaching-material flow as **steps 1–8 only before teacher review**:
 
 1. input PDF
 2. lesson split
@@ -15,20 +15,20 @@ This system now treats the VP teaching-material flow as **steps 1–8 only befor
 7. game suggestions
 8. Google Sheets-ready database output
 
-Steps 9–19 are not automated as final materials until teacher review/approval. For the attached Pinyin Lesson 1 PDF, the current database output is:
+Steps 9–19 are not automated as final materials until teacher review/approval. For the Pinyin Lesson 1 PDF, the current database output is:
 
 `output/vp-database/pinyin-l1/06_google_sheets_database.csv`
 
 Google Workspace is not authenticated on this machine yet, so the system exports CSV/JSON files ready for Sheets import.
 
-## Quy tắc thiết kế mới
+## Quy tắc thiết kế
 
-For Pinyin materials, use the attached PDF only as a **copyright-safe design reference**. The new style direction is documented in:
+For Pinyin materials, use reference PDFs only as **copyright-safe design references**. The style direction is documented in:
 
 - `design/pinyin-reference-inspired-style.md`
 - `design/pinyin-reference-inspired-style.tokens.json`
 
-Do not copy exact artwork, title lettering, composition, colors, copyright text, or brand/contact information from the attached PDF.
+Do not copy exact artwork, title lettering, composition, colors, copyright text, or brand/contact information from source PDFs.
 
 ## Quy tắc ngôn ngữ mặc định
 
@@ -47,6 +47,7 @@ Tất cả học liệu trong dự án này dùng cho **đại học Việt Nam*
 - File PDF vector
 - File PPTX có thể chỉnh sửa
 - Hướng dẫn giảng viên / kịch bản dạy
+- Google Sheets-ready CSV/JSON database output for VP lesson planning
 
 ## Vì sao dùng Huashu Design
 
@@ -60,22 +61,20 @@ Huashu Design phù hợp cho pipeline học liệu vì:
 ## Cấu trúc thư mục
 
 - `huashu-design/` — repo thiết kế và script xuất file
-- `kami/` — repo tham chiếu phong cách Kami
 - `examples/sample-lesson.json` — dữ liệu bài học mẫu, tiếng Việt + Trung giản thể
 - `scripts/create-teacher-deck.mjs` — tạo bộ slide giảng viên từ JSON
-- `scripts/create-lesson1-kami-prototype.mjs` — tạo bản mẫu Bài 1 phong cách Kami
+- `scripts/create-vp-pinyin-l1-database.py` — tạo database VP Pinyin Lesson 1
 - `scripts/validate-system.mjs` — kiểm tra thiết lập và đầu ra
 - `output/sample-teacher-deck/` — bộ slide mẫu
-- `output/lesson-1-kami-prototype/` — bản mẫu Bài 1
-- `output/lesson-1-full-kami/` — bộ slide đầy đủ Bài 1
+- `output/pinyin-l1-design-prototype/` — design prototype for Pinyin Lesson 1
+- `output/vp-database/pinyin-l1/` — VP database CSV/JSON output
 
 ## Lệnh chạy
 
 ```bash
 cd ~/Development/ai-teaching-material-system
 npm run build:sample
-npm run build:lesson1:kami
-npm run build:lesson1:full
+npm run vp:pinyin:l1
 ```
 
 Các bước riêng:
@@ -112,20 +111,19 @@ npm run validate
 
 ## Đầu ra hiện tại
 
-Bài 1 đầy đủ:
-
-- `output/lesson-1-full-kami/index.html`
-- `output/lesson-1-full-kami/lesson-1-full-kami.pdf`
-- `output/lesson-1-full-kami/lesson-1-full-kami-editable.pptx`
-
-Bản mẫu Bài 1:
-
-- `output/lesson-1-kami-prototype/index.html`
-- `output/lesson-1-kami-prototype/lesson-1-kami-prototype.pdf`
-- `output/lesson-1-kami-prototype/lesson-1-kami-prototype-editable.pptx`
-
 Bộ mẫu hệ thống:
 
 - `output/sample-teacher-deck/index.html`
 - `output/sample-teacher-deck/teacher-deck.pdf`
 - `output/sample-teacher-deck/teacher-deck-editable.pptx`
+
+Pinyin Lesson 1 design prototype:
+
+- `output/pinyin-l1-design-prototype/index.html`
+- `output/pinyin-l1-design-prototype/pinyin-l1-design-prototype.pdf`
+- `output/pinyin-l1-design-prototype/pinyin-l1-design-prototype-editable.pptx`
+
+VP database:
+
+- `output/vp-database/pinyin-l1/06_google_sheets_database.csv`
+- `output/vp-database/pinyin-l1/vp_pinyin_l1_database.json`

@@ -10,17 +10,6 @@
     "export:pptx": "node huashu-design/scripts/export_deck_pptx.mjs --slides output/sample-teacher-deck/slides --out output/sample-teacher-deck/teacher-deck-editable.pptx",
     "verify:html": ".venv/bin/python huashu-design/scripts/verify.py output/sample-teacher-deck/index.html --slides 7 --output output/sample-teacher-deck/screenshots --wait 3000",
     "build:sample": "npm run create:sample && npm run verify:html && npm run export:pdf && npm run export:pptx && npm run validate",
-    "create:lesson1:kami": "node scripts/create-lesson1-kami-prototype.mjs",
-    "verify:lesson1:kami": ".venv/bin/python huashu-design/scripts/verify.py output/lesson-1-kami-prototype/index.html --slides 6 --output output/lesson-1-kami-prototype/screenshots --wait 3000",
-    "export:lesson1:kami:pdf": "node huashu-design/scripts/export_deck_pdf.mjs --slides output/lesson-1-kami-prototype/slides --out output/lesson-1-kami-prototype/lesson-1-kami-prototype.pdf --width 1280 --height 720",
-    "export:lesson1:kami:pptx": "node huashu-design/scripts/export_deck_pptx.mjs --slides output/lesson-1-kami-prototype/slides --out output/lesson-1-kami-prototype/lesson-1-kami-prototype-editable.pptx",
-    "build:lesson1:kami": "npm run create:lesson1:kami && npm run verify:lesson1:kami && npm run export:lesson1:kami:pdf && npm run export:lesson1:kami:pptx",
-    "create:lesson1:full": "node scripts/create-lesson1-full-kami.mjs",
-    "verify:lesson1:full": ".venv/bin/python huashu-design/scripts/verify.py output/lesson-1-full-kami/index.html --slides 26 --output output/lesson-1-full-kami/screenshots --wait 3000",
-    "export:lesson1:full:pdf": "node huashu-design/scripts/export_deck_pdf.mjs --slides output/lesson-1-full-kami/slides --out output/lesson-1-full-kami/lesson-1-full-kami.pdf --width 1280 --height 720",
-    "export:lesson1:full:pptx": "node huashu-design/scripts/export_deck_pptx.mjs --slides output/lesson-1-full-kami/slides --out output/lesson-1-full-kami/lesson-1-full-kami-editable.pptx",
-    "create:lesson1:strokes": "python3 scripts/create-stroke-gifs.py",
-    "build:lesson1:full": "npm run create:lesson1:full && npm run create:lesson1:strokes && npm run verify:lesson1:full && npm run export:lesson1:full:pdf && npm run export:lesson1:full:pptx",
     "vp:pinyin:l1": "python3 scripts/create-vp-pinyin-l1-database.py"
   },
   "dependencies": {
