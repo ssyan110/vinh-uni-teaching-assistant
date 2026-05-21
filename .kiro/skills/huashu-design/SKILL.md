@@ -904,3 +904,14 @@ Skill 路径引用均采用**相对本 skill 根目录**的形式（`references/
 - **涉及具体品牌**：走「核心资产协议」（§1.a）——Logo（必需）+ 产品图（实体产品必需）+ UI 截图（数字产品必需），色值只是辅助。**不要用 CSS 剪影代替真实产品图**。
 - **做动画之前**：必读 `references/animation-pitfalls.md`——里面 14 条规则每条都来自真实踩过的坑，跳过会让你重做 1-3 轮。
 - **手写 Stage / Sprite**（不用 `assets/animations.jsx`）：必须实现两件事——(a) tick 第一帧同步设 `window.__ready = true` (b) 检测 `window.__recording === true` 时强制 loop=false。否则录视频必出问题。
+
+
+---
+
+## Reference Files
+
+#[[file:references/content-guidelines.md]]
+#[[file:references/workflow.md]]
+#[[file:references/slide-decks.md]]
+#[[file:references/editable-pptx.md]]
+#[[file:references/verification.md]]

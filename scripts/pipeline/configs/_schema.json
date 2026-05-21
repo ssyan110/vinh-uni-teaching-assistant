@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "pipeline_config_schema",
+  "title": "Pipeline_Config",
+  "description": "JSON Schema (draft-07) that validates Pipeline_Config files for the AI teaching material pipeline",
+  "type": "object",
+  "required": [
+    "lesson_type",
+    "version",
+    "teaching_sequence",
+    "database_schema",
+    "valid_record_types",
+    "supplemental_activity_types",
+    "exercise_categories"
+  ],
+  "properties": {
+    "lesson_type": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_-]*$",
+      "description": "Identifier for the lesson type (lowercase, alphanumeric, hyphens, underscores)"
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version of this config"
+    },
+    "teaching_sequence": {
+      "type": "array",
+      "description": "Ordered list of teaching modules for this lesson type",
+      "items": {
+        "type": "object",
+        "required": [
+          "order",
+          "module_id",
+          "label_vi"
+        ],
+        "properties": {
+          "order": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Position in the teaching sequence (1-based)"
+          },
+          "module_id": {
+            "type": "string",
+            "description": "Machine-readable module identifier"
+          },
+          "label_vi": {
+            "type": "string",
+            "description": "Vietnamese display label"
+          },
+          "label_zh": {
+            "type": "string",
+            "description": "Chinese display label"
+          },
+          "optional": {
+            "type": "boolean",
+            "description": "Whether this module is optional in the sequence"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "database_schema": {
+      "type": "array",
+      "description": "Column names for the output database/spreadsheet",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 6
+    },
+    "valid_record_types": {
+      "type": "array",
+      "description": "Allowed values for the record_type column",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "supplemental_activity_types": {
+      "type": "array",
+      "description": "Types of supplemental activities that can be generated",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "exercise_categories": {
+      "type": "array",
+      "description": "Categories of exercises available for this lesson type",
+      "items": {
+        "type": "string"
+      }
+    },
+    "review_statuses": {
+      "type": "array",
+      "description": "Allowed review status values",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "pending_review",
+        "approved",
+        "revise",
+        "rejected"
+      ]
+    },
+    "visibility_values": {
+      "type": "array",
+      "description": "Allowed classroom visibility values",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "student_visible",
+        "teacher_only",
+        "optional_student_visible"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

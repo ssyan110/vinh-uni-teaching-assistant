@@ -1,0 +1,25 @@
+﻿record_id,source_page,source_page_range,source_pdf,section,record_type,chinese_simplified,pinyin,vietnamese,english,word_type_vi,word_type_abbr,raw_source_text,teaching_order,classroom_visibility
+V001,19,19-20,work/pdf-pages/,Từ vựng,vocabulary,你,nǐ,"anh, chị, bạn, ông, bà...",you (singular),đại từ,代,"你 (代) nǐ (nhi) you (singular) anh, chị, bạn, ông, bà...",1,student_visible
+V002,19,19-20,work/pdf-pages/,Từ vựng,vocabulary,好,hǎo,"tốt, đẹp, hay, ngon","good, fine",tính từ,形,"好 (形) hǎo (hảo) good; fine tốt, đẹp, hay, ngon",2,student_visible
+V003,19,19-20,work/pdf-pages/,Từ vựng,vocabulary,你好,nǐ hǎo,Xin chào,Hello,thành ngữ,,你好 nǐ hǎo Hello! xin chào,3,student_visible
+V004,19,19-20,work/pdf-pages/,Từ vựng,vocabulary,一,yī,một,one,số từ,数,一 (数) yī (nhất) one một,4,student_visible
+V005,19,19-20,work/pdf-pages/,Từ vựng,vocabulary,五,wǔ,năm,five,số từ,数,五 (数) wǔ (ngũ) five năm,5,student_visible
+V006,19,19-20,work/pdf-pages/,Từ vựng,vocabulary,八,bā,tám,eight,số từ,数,八 (数) bā (bát) eight tám,6,student_visible
+V007,19,19-20,work/pdf-pages/,Từ vựng,vocabulary,大,dà,"to, lớn",big,tính từ,形,"大 (形) dà (đại) big to, lớn",7,student_visible
+V008,19,19-20,work/pdf-pages/,Từ vựng,vocabulary,不,bù,"không, chẳng",not,phó từ,副,"不 (副) bù (bất) not không, chẳng",8,student_visible
+V009,20,19-20,work/pdf-pages/,Từ vựng,vocabulary,口,kǒu,miệng; nhân khẩu,mouth; classifier for family members,"danh từ, lượng từ",名、量,"口 (名、量) kǒu (khẩu) mouth; (a classifier for family members) miệng, nhân khẩu",9,student_visible
+V010,20,19-20,work/pdf-pages/,Từ vựng,vocabulary,白,bái,trắng,white,tính từ,形,白 (形) bái (bạch) white trắng,10,student_visible
+V011,20,19-20,work/pdf-pages/,Từ vựng,vocabulary,女,nǚ,"nữ, phụ nữ","female, woman",danh từ,名,"女 (名) nǚ (nữ) female; woman nữ, phụ nữ",11,student_visible
+V012,20,19-20,work/pdf-pages/,Từ vựng,vocabulary,马,mǎ,con ngựa,horse,danh từ,名,马 (名) mǎ (mã) horse con ngựa,12,student_visible
+T001,19,19,work/pdf-pages/,Bài đọc,text,"你好
+你好","nǐ hǎo
+nǐ hǎo","Xin chào
+Xin chào","Hello
+Hello",,,课文 Kèwén Text Bài đọc: 你好 / 你好,13,student_visible
+E001,28,28-30,work/pdf-pages/,Bài tập,exercise,声调练习,shēngdiào liànxí,Luyện thanh điệu,,,,"声调 Tones Thanh điệu: yi yi yi yi, wu wu wu wu, ba ba ba ba, da da da da, bu bu bu bu, nü nü nü nü, kou kou kou kou, bai bai bai bai, hei hei hei hei, ma ma ma ma, ni ni ni ni, hao hao hao hao",14,student_visible
+E002,28,28-30,work/pdf-pages/,Bài tập,exercise,变调练习,biàndiào liànxí,Luyện biến điệu,,,,"变调 Modulations of tones Biến điệu: ni hao, meihuo, wu bai, Beihai, gei ni, yufa, keyi, fudao",15,student_visible
+E003,28,28-30,work/pdf-pages/,Bài tập,exercise,辨别声母,biànbié shēngmǔ,Phân biệt thanh mẫu,,,,"辨别声母 Identify the initials Phân biệt thanh mẫu: ba pa da ta ga ka, bu pu du tu gu ku, bai pai dai tai gai kai, bao pao dou tou gao kao",16,student_visible
+E004,29,28-30,work/pdf-pages/,Bài tập,exercise,辨别韵母,biànbié yùnmǔ,Phân biệt vận mẫu,,,,"辨别韵母 Identify the finals Phân biệt vận mẫu: ba bo he fo, pa po ne mo, ma mo de bo, fa fo ke po, bai bei pao pou, mai mei hao hou, gai gei kao kou, hai hei gao gou",17,student_visible
+E005,29,28-30,work/pdf-pages/,Bài tập,exercise,辨音辨调,biànyīn biàndiào,"Phân biệt âm, thanh điệu",,,,"辨音辨调 Pronunciations and tones Phân biệt âm, thanh điệu: ba pa da ta hé fó gé ke, bí pí dé te hou fou gu kù, bu pu dì tì héi féi gui kūi, bǒi pǒi du tú hù fu géi kéi, béi péi dai tai ha fa gǒu kǒu",18,student_visible
+E006,29,28-30,work/pdf-pages/,Bài tập,exercise,认读,rèndú,Nhận mặt chữ và đọc,,,,"认读 Read and learn Nhận mặt chữ và đọc: yi hao, ba hao, ni hao, bu hao, da ma, bai ma, ditu, yitu, daitou, toitou, da lou, ta lou, kefu, keku, da yu, da yi, yufa, lifa, meihao, mai lai — 一 八 大 不 五 口 白 女 马 你 好",19,student_visible
+E007,30,28-30,work/pdf-pages/,Bài tập,exercise,写汉字,xiě hànzì,Tập viết chữ Hán,,,,写汉字 Learn to write Tập viết chữ Hán: 一 八 大 不 五 口 白 女 马 你 好,20,student_visible

@@ -1,0 +1,85 @@
+{
+  "lesson_type": "regular",
+  "version": "1.0.0",
+  "teaching_sequence": [
+    { "order": 1, "module_id": "warmup", "label_vi": "Khởi động", "label_zh": "暖身活動" },
+    { "order": 2, "module_id": "objectives", "label_vi": "Mục tiêu học tập", "label_zh": "學習目標" },
+    { "order": 3, "module_id": "pinyin", "label_vi": "Pinyin", "label_zh": "拼音" },
+    { "order": 4, "module_id": "pinyin_practice", "label_vi": "Luyện pinyin", "label_zh": "拼音練習" },
+    { "order": 5, "module_id": "vocabulary", "label_vi": "Từ vựng", "label_zh": "生詞" },
+    { "order": 6, "module_id": "vocabulary_practice", "label_vi": "Luyện từ vựng", "label_zh": "生詞練習" },
+    { "order": 7, "module_id": "grammar", "label_vi": "Ngữ pháp", "label_zh": "語法" },
+    { "order": 8, "module_id": "grammar_practice", "label_vi": "Luyện ngữ pháp", "label_zh": "語法練習" },
+    { "order": 9, "module_id": "text_preview", "label_vi": "Chuẩn bị đọc bài", "label_zh": "課文預習" },
+    { "order": 10, "module_id": "text", "label_vi": "Bài đọc", "label_zh": "課文" },
+    { "order": 11, "module_id": "culture", "label_vi": "Văn hóa bổ sung", "label_zh": "文化補充" },
+    { "order": 12, "module_id": "discussion", "label_vi": "Thảo luận", "label_zh": "課程討論" },
+    { "order": 13, "module_id": "homework_intro", "label_vi": "Hướng dẫn bài tập", "label_zh": "課後作業說明" }
+  ],
+  "database_schema": [
+    "lesson_id",
+    "lesson_title",
+    "record_id",
+    "record_type",
+    "section",
+    "source_pdf",
+    "source_page",
+    "source_page_range",
+    "teaching_order",
+    "chinese_simplified",
+    "pinyin",
+    "vietnamese",
+    "word_type_vi",
+    "raw_source_text",
+    "classroom_visibility",
+    "teacher_review_status",
+    "approved",
+    "notes_for_review",
+    "generated_at"
+  ],
+  "valid_record_types": [
+    "vocabulary",
+    "grammar",
+    "text",
+    "exercise",
+    "pinyin_table",
+    "concept",
+    "outline",
+    "initials",
+    "finals",
+    "spelling_rule",
+    "tone",
+    "appendix"
+  ],
+  "supplemental_activity_types": [
+    "warmup",
+    "pinyin_drill",
+    "vocabulary_drill",
+    "grammar_drill",
+    "text_preview",
+    "culture_supplement",
+    "discussion",
+    "assessment"
+  ],
+  "exercise_categories": [
+    "tone_discrimination",
+    "pinyin_reading",
+    "vocabulary_matching",
+    "grammar_fill",
+    "sentence_ordering",
+    "text_comprehension",
+    "translation",
+    "hanzi_recognition"
+  ],
+  "review_statuses": [
+    "pending_review",
+    "approved",
+    "revise",
+    "rejected"
+  ],
+  "visibility_values": [
+    "student_visible",
+    "teacher_only",
+    "optional_student_visible"
+  ]
+}

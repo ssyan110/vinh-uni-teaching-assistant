@@ -1,0 +1,71 @@
+{
+  "lesson_type": "pinyin",
+  "version": "1.0.0",
+  "teaching_sequence": [
+    { "order": 1, "module_id": "warmup", "label_vi": "Khởi động", "label_zh": "暖身" },
+    { "order": 2, "module_id": "concepts", "label_vi": "Khái niệm nền tảng", "label_zh": "基礎概念" },
+    { "order": 3, "module_id": "initials_finals", "label_vi": "Thanh mẫu + Vận mẫu", "label_zh": "聲母+韻母" },
+    { "order": 4, "module_id": "spelling_rules", "label_vi": "Quy tắc viết pinyin", "label_zh": "拼寫規則" },
+    { "order": 5, "module_id": "tones", "label_vi": "Thanh điệu", "label_zh": "聲調" },
+    { "order": 6, "module_id": "applied_vocab", "label_vi": "Từ vựng ứng dụng", "label_zh": "應用詞彙" },
+    { "order": 7, "module_id": "assessment", "label_vi": "Kiểm tra cuối bài", "label_zh": "課末測試" },
+    { "order": 8, "module_id": "appendix", "label_vi": "Phụ lục tùy chọn", "label_zh": "附錄", "optional": true }
+  ],
+  "database_schema": [
+    "lesson_id",
+    "lesson_title",
+    "record_id",
+    "record_type",
+    "section",
+    "source_pdf",
+    "source_page",
+    "source_page_range",
+    "teaching_order",
+    "chinese_simplified",
+    "pinyin",
+    "vietnamese",
+    "raw_source_text",
+    "classroom_visibility",
+    "teacher_review_status",
+    "approved",
+    "notes_for_review",
+    "generated_at"
+  ],
+  "valid_record_types": [
+    "concept",
+    "initials",
+    "finals",
+    "tone",
+    "spelling_rule",
+    "pinyin_table",
+    "vocabulary_example",
+    "exercise",
+    "appendix"
+  ],
+  "supplemental_activity_types": [
+    "warmup",
+    "pinyin_drill",
+    "tone_drill",
+    "pronunciation_drill",
+    "assessment",
+    "culture_tech"
+  ],
+  "exercise_categories": [
+    "tone_discrimination",
+    "pinyin_reading",
+    "pinyin_writing",
+    "initial_final_matching",
+    "spelling_rule_application"
+  ],
+  "review_statuses": [
+    "pending_review",
+    "approved",
+    "revise",
+    "rejected"
+  ],
+  "visibility_values": [
+    "student_visible",
+    "teacher_only",
+    "optional_student_visible"
+  ]
+}

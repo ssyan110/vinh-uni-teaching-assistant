@@ -282,3 +282,10 @@ All commands return JSON. Parse with `jq` or read directly. Key fields:
 ```bash
 $GSETUP --revoke
 ```
+
+
+---
+
+## Reference Files
+
+#[[file:references/gmail-search-syntax.md]]

@@ -17,6 +17,10 @@ Project-local rules and context. Auto-included by Kiro; referenced by AGENTS.md 
 - Preserve original source page mapping for every slide, exercise, and homework question.
 - Student-facing materials must not contain teacher tips, internal review notes, or in-class exercise answers.
 - Durable project rules must be written into repo files, not only remembered in chat.
+- Lesson types: `regular` (full lessons with vocab/grammar/text) and `pinyin` (pinyin-only lessons). Never call it "normal" — use "regular".
+- Pinyin content in regular lessons is SKIPPED — pinyin is handled by the separate pinyin lesson workflow.
+- 課文 section is labeled "Bài đọc" in Vietnamese (not "Bài khóa").
+- Default game platform is Blooket. Only use Kahoot or Quizizz when Blooket cannot support the exercise format.
 
 ## Canonical MVP flow (steps 1-19)
 

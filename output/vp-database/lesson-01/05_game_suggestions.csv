@@ -1,0 +1,4 @@
+﻿game_id,linked_activity_id,game_name,game_name_vi,platform,description_vi,question_count,estimated_minutes,difficulty,vocabulary_ids
+G001,ACT002,Flashcard Race,Đua thẻ từ vựng,Blooket,"Ghép chữ Hán với pinyin và nghĩa tiếng Việt. Thi đua theo thời gian, ai nhanh nhất thắng.",12,5,beginner,"['V001', 'V002', 'V003', 'V004', 'V005', 'V006', 'V007', 'V008', 'V009', 'V010', 'V011', 'V012']"
+G002,ACT003,Number Bingo,Bingo số,Blooket,"Nhận biết số 一五八 và các tổ hợp. Giáo viên đọc số, sinh viên chọn đáp án đúng trên Blooket.",10,5,beginner,"['V004', 'V005', 'V006']"
+G003,ACT004,不不不 Game,Trò chơi phủ định 不,Blooket,"Cho từ gốc (大, 好, 白...), sinh viên chọn dạng phủ định đúng. Luyện cách dùng 不 với tính từ.",8,4,beginner,"['V002', 'V007', 'V008', 'V010']"

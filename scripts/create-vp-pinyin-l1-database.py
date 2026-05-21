@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Create VP step 1-8 database outputs for Pinyin Lesson 1.
 
+DEPRECATED: Use `scripts/run_pipeline.py --lesson-type pinyin` instead.
+This script is kept as a reference for the hardcoded data structure.
+The new pipeline reads from `work/design-ref-pinyin-l1/extract.json`.
+
 This intentionally stops before teacher review (VP step 9). Outputs are Google
 Sheets-ready CSV files plus a JSON package for future automation.
 """

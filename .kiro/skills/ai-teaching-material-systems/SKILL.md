@@ -290,3 +290,14 @@ For a full lesson PPTX, automated Huashu verification only proves that the deck 
 ## Session Reference
 
 See `references/huashu-teaching-system-setup.md` for a compact record of a proven setup sequence, commands, failure mode, and validation results.
+
+
+---
+
+## Reference Files
+
+#[[file:references/full-lesson-pdf-to-pptx-vietnamese-university.md]]
+#[[file:references/pinyin-reference-style-prototype.md]]
+#[[file:references/vp-pinyin-lesson-database-and-redesign.md]]
+#[[file:references/huashu-teaching-system-setup.md]]
+#[[file:references/lesson-pdf-kami-prototype.md]]

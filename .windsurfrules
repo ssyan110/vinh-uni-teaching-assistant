@@ -1,0 +1,21 @@
+# Windsurf Rules — AI Teaching Material System
+
+## Non-Negotiable Rules
+
+1. **Slide engine is Huashu Design (HTML-first).** Not Gamma. PDF/PPTX are exports only.
+2. **Language:** Vietnamese for instructions, Simplified Chinese for content, pinyin for pronunciation.
+3. **Review gate:** Steps 1-8 automated. Steps 9-19 require teacher approval.
+4. **Page mapping:** Every slide must trace back to source pages.
+5. **Student safety:** No teacher tips or answers in student materials.
+6. **No AI-isms.** Direct, specific, practical, concise.
+7. **Cross-tool sync.** When updating `.kiro/`, also update AGENTS.md and CLAUDE.md.
+
+## Task Routing
+
+| Task | Skill |
+|------|-------|
+| Pipeline workflow, VP steps | `.kiro/skills/ai-teaching-material-systems/SKILL.md` |
+| Slide design, deck generation | `.kiro/skills/huashu-design/SKILL.md` |
+| PPTX editing/export | `.kiro/skills/powerpoint/SKILL.md` |
+| Google Drive/Sheets | `.kiro/skills/google-workspace/SKILL.md` |
+| Writing quality | `.kiro/skills/avoid-ai-writing/SKILL.md` |

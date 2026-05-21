@@ -1,0 +1,2330 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>AI 教材簡報製作系統</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="requirements-context.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">AI 教材簡報製作系統</h1>
+</header>
+<h1 id="ai-教材簡報製作系統requirements-project-context">AI 教材簡報製作系統：Requirements + Project Context</h1>
+<blockquote>
+<p>Portable project spec. Combines Adam’s original planning document with current implementation decisions. If this document conflicts with older conversations or files, the “Project implementation status” section takes precedence.</p>
+</blockquote>
+<h2 id="project-implementation-status">Project implementation status</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Decision</th>
+<th>Current rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Slide engine</td>
+<td><strong>Huashu Design</strong> — local HTML-first deck engine. Gamma is no longer used.</td>
+</tr>
+<tr>
+<td>Deck source</td>
+<td>HTML source first, then export PDF/PPTX. No hand-building slides page by page.</td>
+</tr>
+<tr>
+<td>Language default</td>
+<td>Vietnamese for instructions/explanations, Simplified Chinese for Chinese content, pinyin for pronunciation. No Traditional Chinese unless requested.</td>
+</tr>
+<tr>
+<td>Review gate</td>
+<td>AI Agent may generate draft database/content. Final classroom/student/homework materials require teacher review first.</td>
+</tr>
+<tr>
+<td>Pre-review automation</td>
+<td>Steps 1-8 are safe to automate before teacher review.</td>
+</tr>
+<tr>
+<td>Post-review scope</td>
+<td>Steps 9-19 begin after teacher review.</td>
+</tr>
+<tr>
+<td>Skills location</td>
+<td><code>.kiro/skills/</code> — readable by Kiro, Claude Code, Hermes, Codex, Cursor.</td>
+</tr>
+<tr>
+<td>Agent entry point</td>
+<td><code>AGENTS.md</code> (also symlinked as <code>CLAUDE.md</code> and <code>CODEX.md</code>).</td>
+</tr>
+<tr>
+<td>Portability</td>
+<td>Skills, requirements, and project rules live inside this repo. No external symlinks or machine-specific paths.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="current-implemented-artifacts">Current implemented artifacts</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Artifact</th>
+<th>Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Project README</td>
+<td><code>README.md</code></td>
+</tr>
+<tr>
+<td>Agent instructions</td>
+<td><code>AGENTS.md</code></td>
+</tr>
+<tr>
+<td>Sample teacher deck</td>
+<td><code>output/sample-teacher-deck/</code></td>
+</tr>
+<tr>
+<td>Sample teacher deck PDF</td>
+<td><code>output/sample-teacher-deck/teacher-deck.pdf</code></td>
+</tr>
+<tr>
+<td>Sample editable PPTX</td>
+<td><code>output/sample-teacher-deck/teacher-deck-editable.pptx</code></td>
+</tr>
+<tr>
+<td>Pinyin Lesson 1 design prototype</td>
+<td><code>output/pinyin-l1-design-prototype/</code></td>
+</tr>
+<tr>
+<td>VP Pinyin Lesson 1 database</td>
+<td><code>output/vp-database/pinyin-l1/</code></td>
+</tr>
+<tr>
+<td>Google Sheets-ready main CSV</td>
+<td><code>output/vp-database/pinyin-l1/06_google_sheets_database.csv</code></td>
+</tr>
+<tr>
+<td>Machine-readable package</td>
+<td><code>output/vp-database/pinyin-l1/vp_pinyin_l1_database.json</code></td>
+</tr>
+<tr>
+<td>Project skills</td>
+<td><code>.kiro/skills/</code></td>
+</tr>
+<tr>
+<td>Project steering</td>
+<td><code>.kiro/steering/</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="canonical-mvp-steps-1-19">Canonical MVP steps 1-19</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 23%" />
+<col style="width: 23%" />
+<col style="width: 23%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: right;">Step</th>
+<th>Stage</th>
+<th>Tool/workflow</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>教材輸入</td>
+<td>Google Drive / local PDF</td>
+<td>原始教材</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>課次切分</td>
+<td>AI Agent</td>
+<td>lesson list</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>內容抽取</td>
+<td>AI Agent</td>
+<td>原始拆解資料</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>頁碼標註</td>
+<td>AI Agent</td>
+<td>page mapping</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>教學重組</td>
+<td>AI Agent</td>
+<td>lesson structure</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>補充活動</td>
+<td>AI Agent</td>
+<td>warm-up, drills, culture, discussion</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>遊戲標記</td>
+<td>AI Agent</td>
+<td>game_suggestion</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>寫入資料庫</td>
+<td>AI Agent / Sheets CSV/API</td>
+<td>教材資料庫版</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>人工審閱</td>
+<td>Google Sheets</td>
+<td>Approved Data</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>生成老師備課版</td>
+<td>AI Agent</td>
+<td>老師備課版</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>生成 Huashu Brief</td>
+<td>AI Agent</td>
+<td>Huashu deck brief</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>生成教師版簡報</td>
+<td>Huashu Design</td>
+<td>HTML teacher deck</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td>匯出備份</td>
+<td>Huashu export scripts</td>
+<td>PPTX / PDF</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td>生成學生版內容</td>
+<td>AI Agent</td>
+<td>Student Version</td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td>生成作業題庫</td>
+<td>AI Agent</td>
+<td>homework/question bank</td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td>題庫審閱</td>
+<td>Google Sheets</td>
+<td>Approved Questions</td>
+</tr>
+<tr>
+<td style="text-align: right;">17</td>
+<td>建立學生版與作業</td>
+<td>Formative or CSV/HTML fallback</td>
+<td>學生版 + 作業</td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td>課堂測試</td>
+<td>Teacher</td>
+<td>class feedback</td>
+</tr>
+<tr>
+<td style="text-align: right;">19</td>
+<td>回填修正</td>
+<td>Google Sheets</td>
+<td>Improvement Log</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="ai-教材簡報製作系統完整規劃文件">AI 教材簡報製作系統完整規劃文件</h1>
+<blockquote>
+<p>文件用途：本文件提供給 AI Agent、教材製作團隊、教學負責人與簡報/作業製作者使用。 核心目標：讓 AI Agent 能依照固定規則拆解原始教材，輸出可審閱、可生成簡報、可製作學生版與課後作業的標準化教材資料。 主流程：<strong>AI Agent 拆解教材 → Google Sheets 人工審閱 → Huashu Design 生成教師版簡報 → Formative 製作學生版與課後作業</strong></p>
+</blockquote>
+<hr />
+<h2 id="專案目標">01｜專案目標</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>項目</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>專案目標</td>
+<td>將原始中文教材轉換成可上課、可複習、可追蹤作業的數位教材</td>
+</tr>
+<tr>
+<td>製作方式</td>
+<td>不由人工逐張設計 PPT，而是由 AI Agent 拆解教材後，交給 AI 簡報工具生成</td>
+</tr>
+<tr>
+<td>教材來源</td>
+<td>原始教材 PDF，例如《漢語教程》</td>
+</tr>
+<tr>
+<td>核心流程</td>
+<td>AI Agent 拆解教材 → Google Sheets 人工審閱 → Huashu Design 生成教師版簡報 → Formative 製作學生版與課後作業</td>
+</tr>
+<tr>
+<td>教材原則</td>
+<td>不改變原教材主線與核心內容，但可補充暖身、練習、文化補充、課後作業</td>
+</tr>
+<tr>
+<td>品質控制</td>
+<td>所有內容先進入 Google Sheets，由老師審閱後才可進入 Huashu Design / Formative</td>
+</tr>
+<tr>
+<td>頁碼規則</td>
+<td>每張 slide、每個練習、每道作業題都需標記原教材頁碼</td>
+</tr>
+<tr>
+<td>製作策略</td>
+<td>先完成最低可用版本 MVP，再逐步優化動畫、聲音、互動與自動化</td>
+</tr>
+<tr>
+<td>學生版方向</td>
+<td>使用 Formative 製作線上閱讀版、練習與課後作業</td>
+</tr>
+<tr>
+<td>教師版方向</td>
+<td>使用 Huashu Design 生成教師版簡報，必要時匯出 PPTX / PDF 備份</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="最終輸出教材版本">02｜最終輸出教材版本</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>教材版本</th>
+<th>使用對象</th>
+<th>工具</th>
+<th>目的</th>
+<th>MVP 是否需要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>教師版簡報</td>
+<td>老師</td>
+<td>Huashu Design / PPTX / PDF</td>
+<td>課堂播放、教學引導、練習展示</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>學生版教材</td>
+<td>學生</td>
+<td>Formative</td>
+<td>學生課堂查看、課後複習</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>課後作業版</td>
+<td>學生</td>
+<td>Formative</td>
+<td>生詞、拼音、漢字、語法、課文相關作業</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>老師備課版</td>
+<td>老師 / 新老師 / 教學主管</td>
+<td>Google Sheets / PDF</td>
+<td>說明每頁怎麼教、怎麼提問、參考答案是什麼</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>教材資料庫版</td>
+<td>AI Agent / 製作團隊</td>
+<td>Google Sheets / JSON</td>
+<td>儲存教材內容、頁碼、審閱狀態、版本紀錄</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>素材庫</td>
+<td>製作團隊</td>
+<td>Google Drive</td>
+<td>管理 PDF、圖片、音檔、簡報、作業</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>優化紀錄版</td>
+<td>老師 / 製作團隊</td>
+<td>Google Sheets</td>
+<td>記錄上課問題、學生反應與版本修改</td>
+<td>建議 MVP 建立</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="各版本用途說明">03｜各版本用途說明</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>版本</th>
+<th>一句話定義</th>
+<th>主要用途</th>
+<th>不包含</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>教師版簡報</td>
+<td>給老師上課播放的簡報</td>
+<td>課堂教學、重點講解、練習展示</td>
+<td>不承擔完整備課說明</td>
+</tr>
+<tr>
+<td>學生版教材</td>
+<td>給學生看的線上教材</td>
+<td>課堂跟讀、課後複習、查看重點</td>
+<td>老師提示、內部審閱資訊、課中練習參考答案</td>
+</tr>
+<tr>
+<td>課後作業版</td>
+<td>給學生完成的線上作業</td>
+<td>線上練習、答題提交、學習追蹤</td>
+<td>課堂即時互動練習</td>
+</tr>
+<tr>
+<td>老師備課版</td>
+<td>給老師看的「怎麼教」</td>
+<td>教學流程、老師提示、參考答案、常見錯誤</td>
+<td>學生不需要看到的內部資訊</td>
+</tr>
+<tr>
+<td>教材資料庫版</td>
+<td>給系統看的「教材後台資料」</td>
+<td>AI Agent 生成簡報、學生版、作業題庫的資料來源</td>
+<td>不直接給老師上課播放</td>
+</tr>
+<tr>
+<td>素材庫</td>
+<td>教材製作資源中心</td>
+<td>集中管理圖片、音檔、PPT、PDF、版本檔案</td>
+<td>不作為審閱主表</td>
+</tr>
+<tr>
+<td>優化紀錄版</td>
+<td>教材改版紀錄</td>
+<td>記錄問題、修正方向、下一版優化內容</td>
+<td>不放正式教材內容</td>
+</tr>
+</tbody>
+</table>
+<h3 id="老師備課版與教材資料庫版差異">老師備課版與教材資料庫版差異</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>項目</th>
+<th>老師備課版</th>
+<th>教材資料庫版</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心目的</td>
+<td>幫老師知道怎麼教</td>
+<td>幫 AI Agent 與團隊管理內容</td>
+</tr>
+<tr>
+<td>使用者</td>
+<td>老師、新老師、教學主管</td>
+<td>AI Agent、製作團隊、教學主管</td>
+</tr>
+<tr>
+<td>內容重點</td>
+<td>教學流程、老師提示、參考答案、活動操作</td>
+<td>原教材內容、頁碼、AI 整理內容、審閱狀態、版本</td>
+</tr>
+<tr>
+<td>是否給學生</td>
+<td>否</td>
+<td>否</td>
+</tr>
+<tr>
+<td>是否可給 AI Agent 讀取</td>
+<td>可以</td>
+<td>必須</td>
+</tr>
+<tr>
+<td>是否直接用於上課</td>
+<td>不直接播放，但老師備課時必讀</td>
+<td>不直接上課使用</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="工具分工">04｜工具分工</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>階段</th>
+<th>工具</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>教材輸入</td>
+<td>Google Drive</td>
+<td>儲存原始教材 PDF、圖片、音檔、簡報</td>
+</tr>
+<tr>
+<td>教材拆解</td>
+<td>AI Agent / Kiro / ChatGPT Agent</td>
+<td>抽取教材內容、標記頁碼、重組教學流程</td>
+</tr>
+<tr>
+<td>人工審閱</td>
+<td>Google Sheets</td>
+<td>老師檢查內容、頁碼、答案、教學順序</td>
+</tr>
+<tr>
+<td>教師版簡報</td>
+<td>Huashu Design</td>
+<td>根據審閱後內容生成教師版簡報</td>
+</tr>
+<tr>
+<td>學生版教材</td>
+<td>Formative</td>
+<td>製作學生線上閱讀版</td>
+</tr>
+<tr>
+<td>課後作業</td>
+<td>Formative</td>
+<td>製作課後練習與作業提交</td>
+</tr>
+<tr>
+<td>課堂團體遊戲</td>
+<td>Kahoot / Quizizz / Blooket</td>
+<td>將拼音練習、生詞練習、語法練習做成班級競賽或即時互動遊戲</td>
+</tr>
+<tr>
+<td>聲音製作</td>
+<td>ElevenLabs / Azure TTS / Google TTS</td>
+<td>後續製作生詞、課文、聽力、口說示範音檔</td>
+</tr>
+<tr>
+<td>視覺素材</td>
+<td>Canva / AI Image Tool</td>
+<td>製作圖片、圖表、生詞圖卡、情境圖</td>
+</tr>
+<tr>
+<td>版本管理</td>
+<td>Google Drive + Google Sheets</td>
+<td>管理 v0.1、v1.0、v2.0 等版本</td>
+</tr>
+</tbody>
+</table>
+<h3 id="工具使用原則">工具使用原則</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>工具</th>
+<th>使用原則</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI Agent</td>
+<td>只負責拆解、整理、生成草稿，不直接發布成品</td>
+</tr>
+<tr>
+<td>Google Sheets</td>
+<td>作為人工審閱與資料中台</td>
+</tr>
+<tr>
+<td>Huashu Design</td>
+<td>用於教師版簡報生成（HTML-first，export PDF/PPTX）</td>
+</tr>
+<tr>
+<td>Formative</td>
+<td>用於學生版教材與課後作業</td>
+</tr>
+<tr>
+<td>Kahoot / Quizizz / Blooket</td>
+<td>作為可選課堂遊戲工具，不取代課堂 slide</td>
+</tr>
+<tr>
+<td>Google Drive</td>
+<td>作為素材與版本管理中心</td>
+</tr>
+<tr>
+<td>Canva / AI Image Tool</td>
+<td>作為圖片、圖表、視覺素材補充工具，不作為主要簡報生產線</td>
+</tr>
+<tr>
+<td>TTS 工具</td>
+<td>第二階段後用於補充音檔，不是 MVP 必須項目</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="整體工作流程">05｜整體工作流程</h2>
+<pre class="text"><code>原始教材 PDF
+↓
+AI Agent 拆解教材內容
+↓
+輸出到 Google Sheets 教材資料庫版
+↓
+老師人工審閱
+↓
+Approved 內容生成老師備課版
+↓
+Approved 內容生成 Huashu Brief
+↓
+Huashu Design 生成教師版簡報
+↓
+老師檢查與微調
+↓
+AI Agent 生成學生版內容
+↓
+AI Agent 生成課後作業題庫
+↓
+老師審閱題庫
+↓
+Formative 製作學生版與課後作業
+↓
+實際上課測試
+↓
+回填問題與優化紀錄
+↓
+進入下一版本</code></pre>
+<hr />
+<h2 id="每課教材標準架構">06｜每課教材標準架構</h2>
+<h3 id="建議教學順序">建議教學順序</h3>
+<p><strong>暖身活動 → 學習目標 → 拼音 → 拼音練習 → 生詞 → 生詞練習 → 語法 → 語法練習 → 課文預習 → 課文 → 文化補充 → 課程討論 → 課後作業說明</strong></p>
+<h3 id="每課教材標準架構表">每課教材標準架構表</h3>
+<table>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: right;">順序</th>
+<th>模組</th>
+<th style="text-align: right;">Slide 建議</th>
+<th>教師版</th>
+<th>學生版</th>
+<th>Formative</th>
+<th>備注 / 參考答案規則</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>暖身活動</td>
+<td style="text-align: right;">1-2</td>
+<td>是</td>
+<td>是</td>
+<td>否</td>
+<td>備注需附參考答案；無需答案則寫 N/A</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>學習目標</td>
+<td style="text-align: right;">1</td>
+<td>是</td>
+<td>是</td>
+<td>否</td>
+<td>備注寫「本課目標用途 / 學生應達成能力」</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>拼音</td>
+<td style="text-align: right;">3-5</td>
+<td>是</td>
+<td>是</td>
+<td>否</td>
+<td>若該課無拼音則跳過</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>拼音練習</td>
+<td style="text-align: right;">2-4</td>
+<td>是</td>
+<td>是</td>
+<td>否</td>
+<td>備注附參考答案；可標記 Kahoot / Quizizz / Blooket</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>生詞</td>
+<td style="text-align: right;">8-12</td>
+<td>是</td>
+<td>是</td>
+<td>否</td>
+<td>依原教材順序</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>生詞練習</td>
+<td style="text-align: right;">3-5</td>
+<td>是</td>
+<td>是</td>
+<td>否</td>
+<td>備注附參考答案；可標記 Kahoot / Quizizz / Blooket</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>語法</td>
+<td style="text-align: right;">5-8</td>
+<td>是</td>
+<td>是</td>
+<td>否</td>
+<td>建議放在課文前，幫助理解課文</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>語法練習</td>
+<td style="text-align: right;">3-5</td>
+<td>是</td>
+<td>是</td>
+<td>否</td>
+<td>備注附參考答案；可標記 Kahoot / Quizizz / Blooket</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>課文預習</td>
+<td style="text-align: right;">1-2</td>
+<td>是</td>
+<td>是</td>
+<td>否</td>
+<td>備注需附參考答案；無需答案則寫 N/A</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>課文</td>
+<td style="text-align: right;">5-8</td>
+<td>是</td>
+<td>是</td>
+<td>否</td>
+<td>按原教材呈現，可加分句理解</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>文化補充</td>
+<td style="text-align: right;">1-2</td>
+<td>是</td>
+<td>是</td>
+<td>否</td>
+<td>可根據主題補充，避免偏離課程</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>課程討論</td>
+<td style="text-align: right;">1</td>
+<td>是</td>
+<td>是</td>
+<td>否</td>
+<td>備注選用</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td>課後作業說明</td>
+<td style="text-align: right;">1</td>
+<td>是</td>
+<td>是</td>
+<td>是</td>
+<td>Formative 只用於課後作業</td>
+</tr>
+</tbody>
+</table>
+<h3 id="已確認的教材架構規則">已確認的教材架構規則</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>規則</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>暖身活動放在學習目標前</td>
+<td>先帶入主題，再說明本課要學什麼</td>
+</tr>
+<tr>
+<td>語法放在課文前</td>
+<td>建議放在生詞後、課文預習前，幫助學生理解課文</td>
+</tr>
+<tr>
+<td>課文理解刪除</td>
+<td>不作為獨立模組，避免與課文預習重疊</td>
+</tr>
+<tr>
+<td>任務活動刪除</td>
+<td>除非原教材明確有類似活動，否則不列為標準模組</td>
+</tr>
+<tr>
+<td>課堂總結改為課程討論</td>
+<td>第 12 模組改名為「課程討論」</td>
+</tr>
+<tr>
+<td>Formative 不做課堂即時練習</td>
+<td>Formative 只用於學生版教材與課後作業</td>
+</tr>
+<tr>
+<td>拼音 / 生詞 / 語法練習可做遊戲</td>
+<td>可標記為 Kahoot / Quizizz / Blooket 團體遊戲建議</td>
+</tr>
+<tr>
+<td>課中練習學生版不附參考答案</td>
+<td>學生版的暖身、拼音練習、生詞練習、語法練習、課文預習不附參考答案</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="教師版簡報結構">07｜教師版簡報結構</h2>
+<table>
+<thead>
+<tr>
+<th>區塊</th>
+<th style="text-align: right;">建議張數</th>
+<th>內容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>暖身活動</td>
+<td style="text-align: right;">1-2</td>
+<td>圖片、問題、前課複習</td>
+</tr>
+<tr>
+<td>學習目標</td>
+<td style="text-align: right;">1</td>
+<td>本課任務與學習成果</td>
+</tr>
+<tr>
+<td>拼音 / 發音</td>
+<td style="text-align: right;">3-5</td>
+<td>規則、示範、練習</td>
+</tr>
+<tr>
+<td>拼音練習</td>
+<td style="text-align: right;">2-4</td>
+<td>聲調辨識、拼讀、聽音選擇</td>
+</tr>
+<tr>
+<td>生詞</td>
+<td style="text-align: right;">8-12</td>
+<td>詞義、拼音、越南語、例句、圖片</td>
+</tr>
+<tr>
+<td>生詞練習</td>
+<td style="text-align: right;">3-5</td>
+<td>配對、選詞、造句</td>
+</tr>
+<tr>
+<td>語法</td>
+<td style="text-align: right;">5-8</td>
+<td>結構、例句、越南語說明</td>
+</tr>
+<tr>
+<td>語法練習</td>
+<td style="text-align: right;">3-5</td>
+<td>替換、改錯、造句、翻譯</td>
+</tr>
+<tr>
+<td>課文預習</td>
+<td style="text-align: right;">1-2</td>
+<td>情境導入、關鍵詞預測</td>
+</tr>
+<tr>
+<td>課文</td>
+<td style="text-align: right;">5-8</td>
+<td>課文呈現、分句理解、角色朗讀</td>
+</tr>
+<tr>
+<td>文化補充</td>
+<td style="text-align: right;">1-2</td>
+<td>越中差異、生活文化</td>
+</tr>
+<tr>
+<td>課程討論</td>
+<td style="text-align: right;">1</td>
+<td>課末討論、延伸思考、口語表達</td>
+</tr>
+<tr>
+<td>作業說明</td>
+<td style="text-align: right;">1</td>
+<td>Formative 作業說明</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>版本</th>
+<th style="text-align: right;">建議總張數</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MVP v0.1</td>
+<td style="text-align: right;">25-35 張</td>
+</tr>
+<tr>
+<td>v1.0</td>
+<td style="text-align: right;">30-40 張</td>
+</tr>
+<tr>
+<td>v2.0 之後</td>
+<td style="text-align: right;">30-40 張，不建議無限制增加</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="學生版教材結構">08｜學生版教材結構</h2>
+<table>
+<thead>
+<tr>
+<th>模組</th>
+<th>是否放入學生版</th>
+<th>說明</th>
+<th>參考答案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>暖身活動</td>
+<td>是</td>
+<td>可讓學生課前或課中思考</td>
+<td>無附參考答案</td>
+</tr>
+<tr>
+<td>學習目標</td>
+<td>是</td>
+<td>讓學生知道本課要學會什麼</td>
+<td>不適用</td>
+</tr>
+<tr>
+<td>拼音</td>
+<td>是</td>
+<td>保留規則與例子</td>
+<td>不適用</td>
+</tr>
+<tr>
+<td>拼音練習</td>
+<td>是</td>
+<td>放在學生版，不放 Formative</td>
+<td>無附參考答案</td>
+</tr>
+<tr>
+<td>生詞</td>
+<td>是</td>
+<td>中文、拼音、越南語、例句</td>
+<td>不適用</td>
+</tr>
+<tr>
+<td>生詞練習</td>
+<td>是</td>
+<td>學生可在課堂跟著做</td>
+<td>無附參考答案</td>
+</tr>
+<tr>
+<td>語法</td>
+<td>是</td>
+<td>保留結構、例句、越南語說明</td>
+<td>不適用</td>
+</tr>
+<tr>
+<td>語法練習</td>
+<td>是</td>
+<td>學生可在課堂跟著做</td>
+<td>無附參考答案</td>
+</tr>
+<tr>
+<td>課文預習</td>
+<td>是</td>
+<td>課文前引導</td>
+<td>無附參考答案</td>
+</tr>
+<tr>
+<td>課文</td>
+<td>是</td>
+<td>原教材課文與必要解釋</td>
+<td>不適用</td>
+</tr>
+<tr>
+<td>文化補充</td>
+<td>是</td>
+<td>可作為課堂延伸與課後閱讀</td>
+<td>不適用</td>
+</tr>
+<tr>
+<td>課程討論</td>
+<td>是</td>
+<td>用於課末討論、延伸思考、口語表達</td>
+<td>無附參考答案</td>
+</tr>
+<tr>
+<td>課後作業說明</td>
+<td>是</td>
+<td>引導學生完成 Formative</td>
+<td>不適用</td>
+</tr>
+<tr>
+<td>老師提示</td>
+<td>否</td>
+<td>只放老師備課版</td>
+<td>不適用</td>
+</tr>
+<tr>
+<td>內部審閱資訊</td>
+<td>否</td>
+<td>只放教材資料庫版</td>
+<td>不適用</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="formative-使用規則">09｜Formative 使用規則</h2>
+<table>
+<thead>
+<tr>
+<th>用途</th>
+<th>是否使用 Formative</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>課堂暖身</td>
+<td>否</td>
+<td>放在教師版與學生版</td>
+</tr>
+<tr>
+<td>拼音練習</td>
+<td>否</td>
+<td>放在教師版與學生版</td>
+</tr>
+<tr>
+<td>生詞練習</td>
+<td>否</td>
+<td>放在教師版與學生版</td>
+</tr>
+<tr>
+<td>語法練習</td>
+<td>否</td>
+<td>放在教師版與學生版</td>
+</tr>
+<tr>
+<td>課文預習</td>
+<td>否</td>
+<td>放在教師版與學生版</td>
+</tr>
+<tr>
+<td>學生閱讀版</td>
+<td>是</td>
+<td>放學生版內容</td>
+</tr>
+<tr>
+<td>課後作業</td>
+<td>是</td>
+<td>Formative 專門做課後作業、線上練習、學生提交</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="課堂團體遊戲使用規則">10｜課堂團體遊戲使用規則</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>使用位置</th>
+<th>工具</th>
+<th>用途</th>
+<th>是否必要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>拼音練習</td>
+<td>Kahoot / Quizizz / Blooket</td>
+<td>聲調辨識、拼音選擇、聽音選答</td>
+<td>選用</td>
+</tr>
+<tr>
+<td>生詞練習</td>
+<td>Kahoot / Quizizz / Blooket</td>
+<td>詞義配對、圖片選詞、中文選越南語</td>
+<td>選用</td>
+</tr>
+<tr>
+<td>語法練習</td>
+<td>Kahoot / Quizizz / Blooket</td>
+<td>選擇正確句子、錯句判斷、語序選擇</td>
+<td>選用</td>
+</tr>
+</tbody>
+</table>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>原則</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>不取代教師版 slide</td>
+<td>團體遊戲只是課堂互動補充</td>
+</tr>
+<tr>
+<td>不放在 Formative</td>
+<td>Formative 只做學生版與課後作業</td>
+</tr>
+<tr>
+<td>備注欄標記</td>
+<td>若適合做遊戲，在備注寫「可製作 Kahoot / Quizizz / Blooket」</td>
+</tr>
+<tr>
+<td>MVP 處理</td>
+<td>MVP 可先不做遊戲，但需要在資料表保留標記欄位</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="課後作業架構">11｜課後作業架構</h2>
+<table>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 23%" />
+<col style="width: 23%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr>
+<th>作業模組</th>
+<th style="text-align: right;">MVP 題數</th>
+<th style="text-align: right;">v3.0 題數</th>
+<th>題型</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>生詞辨識</td>
+<td style="text-align: right;">5-8</td>
+<td style="text-align: right;">8-10</td>
+<td>選擇、配對</td>
+<td>確認詞義</td>
+</tr>
+<tr>
+<td>拼音 / 聽音</td>
+<td style="text-align: right;">3-5</td>
+<td style="text-align: right;">5-8</td>
+<td>聲調、聽音選詞</td>
+<td>訓練發音與聽辨</td>
+</tr>
+<tr>
+<td>漢字練習</td>
+<td style="text-align: right;">3-5</td>
+<td style="text-align: right;">5-8</td>
+<td>筆順觀看、部件辨識、描紅、看拼音選漢字、看越南語選漢字</td>
+<td>訓練字形辨識與基礎書寫</td>
+</tr>
+<tr>
+<td>語法理解</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5-8</td>
+<td>選擇、填空</td>
+<td>檢查語法掌握</td>
+</tr>
+<tr>
+<td>句子排序</td>
+<td style="text-align: right;">3-5</td>
+<td style="text-align: right;">5</td>
+<td>排序</td>
+<td>訓練中文語序</td>
+</tr>
+<tr>
+<td>課文相關題</td>
+<td style="text-align: right;">3-5</td>
+<td style="text-align: right;">5-8</td>
+<td>是非、選擇、簡答</td>
+<td>檢查課文理解</td>
+</tr>
+<tr>
+<td>翻譯 / 造句</td>
+<td style="text-align: right;">2-3</td>
+<td style="text-align: right;">3-5</td>
+<td>簡答</td>
+<td>檢查輸出</td>
+</tr>
+<tr>
+<td>口說錄音</td>
+<td style="text-align: right;">暫不做或 1</td>
+<td style="text-align: right;">1-2</td>
+<td>錄音回答</td>
+<td>檢查口語</td>
+</tr>
+</tbody>
+</table>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>項目</th>
+<th>MVP 標準</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>每課題數</td>
+<td>18-25 題</td>
+</tr>
+<tr>
+<td>優先題型</td>
+<td>選擇、配對、填空、排序、漢字辨識</td>
+</tr>
+<tr>
+<td>漢字練習 MVP 做法</td>
+<td>先做「看拼音選漢字」「看越南語選漢字」「部件辨識」</td>
+</tr>
+<tr>
+<td>暫緩題型</td>
+<td>大量口說錄音、複雜開放題、完整手寫批改</td>
+</tr>
+<tr>
+<td>必備規則</td>
+<td>每題標記原教材頁碼</td>
+</tr>
+<tr>
+<td>審閱流程</td>
+<td>AI 出題 → Google Sheets 審閱 → Formative 建立作業</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="google-sheets-資料庫設計">12｜Google Sheets 資料庫設計</h2>
+<h3 id="lesson-content-sheet">Lesson Content Sheet</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>欄位</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lesson_id</td>
+<td>第幾課</td>
+</tr>
+<tr>
+<td>unit_title</td>
+<td>課名</td>
+</tr>
+<tr>
+<td>section</td>
+<td>暖身 / 學習目標 / 拼音 / 生詞 / 語法 / 課文 / 文化補充 / 課程討論 / 作業</td>
+</tr>
+<tr>
+<td>original_page</td>
+<td>原教材頁碼</td>
+</tr>
+<tr>
+<td>original_content</td>
+<td>原教材原文</td>
+</tr>
+<tr>
+<td>adapted_content</td>
+<td>AI 整理後內容</td>
+</tr>
+<tr>
+<td>vietnamese_explanation</td>
+<td>越南語解釋</td>
+</tr>
+<tr>
+<td>slide_suggestion</td>
+<td>建議簡報內容</td>
+</tr>
+<tr>
+<td>activity_type</td>
+<td>講解 / 練習 / 問答 / 朗讀 / 聽力 / 討論</td>
+</tr>
+<tr>
+<td>student_version</td>
+<td>是否放入學生版</td>
+</tr>
+<tr>
+<td>homework</td>
+<td>是否做成作業</td>
+</tr>
+<tr>
+<td>reference_answer</td>
+<td>參考答案；無需答案則寫 N/A</td>
+</tr>
+<tr>
+<td>game_suggestion</td>
+<td>是否適合做 Kahoot / Quizizz / Blooket</td>
+</tr>
+<tr>
+<td>teacher_note</td>
+<td>老師提示</td>
+</tr>
+<tr>
+<td>review_status</td>
+<td>Approved / Revise / Reject</td>
+</tr>
+<tr>
+<td>reviewer_note</td>
+<td>老師修改意見</td>
+</tr>
+<tr>
+<td>version</td>
+<td>版本號</td>
+</tr>
+</tbody>
+</table>
+<h3 id="huashu-brief-sheet">Huashu Brief Sheet</h3>
+<table>
+<thead>
+<tr>
+<th>欄位</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>slide_no</td>
+<td>投影片順序</td>
+</tr>
+<tr>
+<td>lesson_id</td>
+<td>課次</td>
+</tr>
+<tr>
+<td>section</td>
+<td>所屬模組</td>
+</tr>
+<tr>
+<td>slide_title</td>
+<td>投影片標題</td>
+</tr>
+<tr>
+<td>slide_goal</td>
+<td>此頁教學目的</td>
+</tr>
+<tr>
+<td>slide_content</td>
+<td>投影片內容</td>
+</tr>
+<tr>
+<td>visual_direction</td>
+<td>圖片、排版、視覺方向</td>
+</tr>
+<tr>
+<td>animation_direction</td>
+<td>動畫方向</td>
+</tr>
+<tr>
+<td>audio_needed</td>
+<td>是否需要音檔</td>
+</tr>
+<tr>
+<td>original_page</td>
+<td>對應原教材頁碼</td>
+</tr>
+<tr>
+<td>reference_answer</td>
+<td>參考答案；無需答案則寫 N/A</td>
+</tr>
+<tr>
+<td>game_suggestion</td>
+<td>是否適合做 Kahoot / Quizizz / Blooket</td>
+</tr>
+<tr>
+<td>teacher_note</td>
+<td>老師提示</td>
+</tr>
+<tr>
+<td>review_status</td>
+<td>Approved / Revise / Reject</td>
+</tr>
+</tbody>
+</table>
+<h3 id="formative-question-sheet">Formative Question Sheet</h3>
+<table>
+<thead>
+<tr>
+<th>欄位</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>question_id</td>
+<td>題號</td>
+</tr>
+<tr>
+<td>lesson_id</td>
+<td>課次</td>
+</tr>
+<tr>
+<td>skill</td>
+<td>聽 / 說 / 讀 / 寫 / 生詞 / 拼音 / 漢字 / 語法 / 課文</td>
+</tr>
+<tr>
+<td>question_type</td>
+<td>選擇 / 配對 / 填空 / 排序 / 簡答 / 錄音</td>
+</tr>
+<tr>
+<td>prompt</td>
+<td>題目</td>
+</tr>
+<tr>
+<td>options</td>
+<td>選項</td>
+</tr>
+<tr>
+<td>answer</td>
+<td>標準答案</td>
+</tr>
+<tr>
+<td>explanation</td>
+<td>解釋</td>
+</tr>
+<tr>
+<td>original_page</td>
+<td>對應原教材頁碼</td>
+</tr>
+<tr>
+<td>difficulty</td>
+<td>easy / medium / hard</td>
+</tr>
+<tr>
+<td>review_status</td>
+<td>Approved / Revise / Reject</td>
+</tr>
+<tr>
+<td>reviewer_note</td>
+<td>老師修改意見</td>
+</tr>
+<tr>
+<td>version</td>
+<td>版本號</td>
+</tr>
+</tbody>
+</table>
+<h3 id="improvement-log-sheet">Improvement Log Sheet</h3>
+<table>
+<thead>
+<tr>
+<th>欄位</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>date</td>
+<td>修改日期</td>
+</tr>
+<tr>
+<td>lesson_id</td>
+<td>課次</td>
+</tr>
+<tr>
+<td>issue_type</td>
+<td>內容錯誤 / 教學不順 / 圖片不適合 / 題目太難 / 學生不懂</td>
+</tr>
+<tr>
+<td>issue_description</td>
+<td>問題描述</td>
+</tr>
+<tr>
+<td>source</td>
+<td>老師回饋 / 學生回饋 / 作業數據</td>
+</tr>
+<tr>
+<td>priority</td>
+<td>高 / 中 / 低</td>
+</tr>
+<tr>
+<td>action</td>
+<td>修改方式</td>
+</tr>
+<tr>
+<td>status</td>
+<td>To do / Doing / Done</td>
+</tr>
+<tr>
+<td>version_fixed</td>
+<td>修正在哪個版本</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="設計規範">13｜設計規範</h2>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>要定案內容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>整體風格</td>
+<td>活潑、清楚、現代、適合越南初學者</td>
+</tr>
+<tr>
+<td>色彩系統</td>
+<td>主色、副色、提示色、錯誤色</td>
+</tr>
+<tr>
+<td>字體規範</td>
+<td>中文、拼音、越南語的字級與位置</td>
+</tr>
+<tr>
+<td>圖片風格</td>
+<td>真實照片 / 插畫 / AI 情境圖，需統一</td>
+</tr>
+<tr>
+<td>生詞版型</td>
+<td>中文、拼音、越南語、例句、圖片的排列</td>
+</tr>
+<tr>
+<td>語法圖表</td>
+<td>結構公式、例句、錯誤對比、越南語說明</td>
+</tr>
+<tr>
+<td>練習頁版型</td>
+<td>選擇題、配對題、排序題、漢字練習題、口說題</td>
+</tr>
+<tr>
+<td>頁碼標註</td>
+<td>固定位置標記「原教材 p.xx」</td>
+</tr>
+<tr>
+<td>老師提示樣式</td>
+<td>只出現在老師備課版</td>
+</tr>
+<tr>
+<td>學生版樣式</td>
+<td>去除老師提示，保留重點與練習</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="版本升級路線">14｜版本升級路線</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>版本</th>
+<th>目標</th>
+<th>具體做到</th>
+<th>暫時不做 / 備注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MVP v0.1</td>
+<td>跑通流程</td>
+<td>第1課完整製作；有教師版、學生版、作業版、頁碼對應</td>
+<td>不做複雜動畫、不做完整音檔、不做團體遊戲正式版</td>
+</tr>
+<tr>
+<td>v1.0</td>
+<td>定案標準</td>
+<td>固定風格、圖片、圖表、版型、Sheets 欄位、Huashu Brief 格式</td>
+<td>不做大規模 API 自動化</td>
+</tr>
+<tr>
+<td>v2.0</td>
+<td>動畫優化</td>
+<td>加入逐步出現、轉場、重點標示、互動節奏</td>
+<td>不做過度華麗動畫</td>
+</tr>
+<tr>
+<td>v3.0</td>
+<td>聲音互動</td>
+<td>生詞音檔、課文音檔、聽力題、口說錄音</td>
+<td>不一次做全冊，先做單元</td>
+</tr>
+<tr>
+<td>v4.0</td>
+<td>半自動化</td>
+<td>Agent 自動生成 Huashu Brief、Formative 題庫、老師備課版</td>
+<td>視團隊技術能力與製作量決定</td>
+</tr>
+<tr>
+<td>v5.0</td>
+<td>批量化</td>
+<td>串接 Sheets API、Huashu API、Formative 匯入流程</td>
+<td>視工具 API 成熟度與成本決定</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ai-agent-任務清單">15｜AI Agent 任務清單</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>任務</th>
+<th>具體工作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>教材拆解</td>
+<td>從 PDF 抽出拼音、生詞、課文、語法、練習</td>
+</tr>
+<tr>
+<td>頁碼標記</td>
+<td>每個內容都標記原教材頁碼</td>
+</tr>
+<tr>
+<td>教學重組</td>
+<td>按標準教材架構重新排列</td>
+</tr>
+<tr>
+<td>生成暖身</td>
+<td>根據前課或本課主題生成 1-2 張暖身活動</td>
+</tr>
+<tr>
+<td>生成拼音練習</td>
+<td>產出聲調、拼讀、聽辨相關練習</td>
+</tr>
+<tr>
+<td>生成生詞練習</td>
+<td>產出配對、選詞、看圖說詞、造句</td>
+</tr>
+<tr>
+<td>生成語法練習</td>
+<td>產出替換、改錯、造句、翻譯</td>
+</tr>
+<tr>
+<td>生成課文預習</td>
+<td>產出情境問題、關鍵詞預測</td>
+</tr>
+<tr>
+<td>生成文化補充</td>
+<td>根據本課主題補充越中差異或文化說明</td>
+</tr>
+<tr>
+<td>生成課程討論</td>
+<td>根據本課主題產出課末討論問題</td>
+</tr>
+<tr>
+<td>生成遊戲建議</td>
+<td>判斷拼音、生詞、語法練習是否適合轉成 Kahoot / Quizizz / Blooket</td>
+</tr>
+<tr>
+<td>生成老師備課版</td>
+<td>補充教學提示、參考答案、操作方式</td>
+</tr>
+<tr>
+<td>生成 Huashu Brief</td>
+<td>將審閱後資料轉成 Huashu Design 可用簡報指令</td>
+</tr>
+<tr>
+<td>生成學生版</td>
+<td>去除老師內部提示、內部審閱資訊、課中練習答案，保留學生可讀內容</td>
+</tr>
+<tr>
+<td>生成作業題庫</td>
+<td>生成 Formative 課後作業題，包含漢字練習</td>
+</tr>
+<tr>
+<td>記錄版本</td>
+<td>寫入版本號、修改狀態與審閱結果</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="品質控制規則">16｜品質控制規則</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>檢查項目</th>
+<th>標準</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原教材頁碼</td>
+<td>每張 slide、每道題都要有</td>
+</tr>
+<tr>
+<td>原教材內容</td>
+<td>不可擅自改變核心內容</td>
+</tr>
+<tr>
+<td>補充內容</td>
+<td>必須服務本課教學目標</td>
+</tr>
+<tr>
+<td>越南語解釋</td>
+<td>必須清楚、自然、適合越南學生</td>
+</tr>
+<tr>
+<td>生詞順序</td>
+<td>優先保留原教材順序</td>
+</tr>
+<tr>
+<td>語法順序</td>
+<td>可放到課文前，但內容仍需對應原教材</td>
+</tr>
+<tr>
+<td>題目答案</td>
+<td>必須人工審閱</td>
+</tr>
+<tr>
+<td>參考答案</td>
+<td>暖身、拼音練習、生詞練習、語法練習、課文預習必填；無則 N/A</td>
+</tr>
+<tr>
+<td>學習目標備注</td>
+<td>不寫 N/A，需寫本課目標用途或學生應達成能力</td>
+</tr>
+<tr>
+<td>課程討論</td>
+<td>學生版無附參考答案；老師備課版可附引導方向</td>
+</tr>
+<tr>
+<td>團體遊戲建議</td>
+<td>拼音練習、生詞練習、語法練習可標記是否適合做 Kahoot / Quizizz / Blooket</td>
+</tr>
+<tr>
+<td>圖片風格</td>
+<td>必須符合 v1.0 定案規範</td>
+</tr>
+<tr>
+<td>學生版</td>
+<td>不放老師提示、內部審閱資訊、課中練習參考答案</td>
+</tr>
+<tr>
+<td>老師備課版</td>
+<td>必須說明怎麼教、怎麼問、參考答案是什麼</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="正式量產流程">17｜正式量產流程</h2>
+<table>
+<thead>
+<tr>
+<th>階段</th>
+<th>製作範圍</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第1階段</td>
+<td>只做第1課</td>
+<td>驗證流程可行</td>
+</tr>
+<tr>
+<td>第2階段</td>
+<td>做3課</td>
+<td>固定模板與問題清單</td>
+</tr>
+<tr>
+<td>第3階段</td>
+<td>做1個單元</td>
+<td>測試批量產出</td>
+</tr>
+<tr>
+<td>第4階段</td>
+<td>做整冊</td>
+<td>建立完整教材包</td>
+</tr>
+<tr>
+<td>第5階段</td>
+<td>擴展 HSK1-4</td>
+<td>建立系列化課程產品</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="mvp-驗收標準">18｜MVP 驗收標準</h2>
+<table>
+<thead>
+<tr>
+<th>驗收項目</th>
+<th>通過標準</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第1課已拆解</td>
+<td>有完整 Lesson Content Sheet</td>
+</tr>
+<tr>
+<td>頁碼標註完整</td>
+<td>每張 slide 與每道題都有原教材頁碼</td>
+</tr>
+<tr>
+<td>老師已審閱</td>
+<td>主要內容為 Approved</td>
+</tr>
+<tr>
+<td>教師版可上課</td>
+<td>Huashu Design 簡報可完成一堂課</td>
+</tr>
+<tr>
+<td>學生版可閱讀</td>
+<td>Formative 中有學生可查看內容</td>
+</tr>
+<tr>
+<td>課後作業可提交</td>
+<td>Formative 中有 18-25 題作業</td>
+</tr>
+<tr>
+<td>老師備課版可用</td>
+<td>老師能看懂每頁怎麼教</td>
+</tr>
+<tr>
+<td>學生版無答案</td>
+<td>課中練習不附參考答案</td>
+</tr>
+<tr>
+<td>可回填問題</td>
+<td>Improvement Log 已建立</td>
+</tr>
+<tr>
+<td>可複製到第2課</td>
+<td>第1課流程可重複使用</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="給-ai-agent-的執行規則摘要">19｜給 AI Agent 的執行規則摘要</h2>
+<h3 id="agent-必須遵守的核心規則">Agent 必須遵守的核心規則</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>規則</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>不可直接產出成品</td>
+<td>必須先輸出到 Google Sheets，經人工審閱後才可進入 Huashu Design / Formative</td>
+</tr>
+<tr>
+<td>不可亂改原教材</td>
+<td>原教材核心內容與主線不可擅自更改</td>
+</tr>
+<tr>
+<td>必須標記頁碼</td>
+<td>所有 slide、練習、作業題都必須有原教材頁碼</td>
+</tr>
+<tr>
+<td>必須區分版本</td>
+<td>教師版、學生版、老師備課版、教材資料庫版、作業版不可混淆</td>
+</tr>
+<tr>
+<td>學生版不可放答案</td>
+<td>課中練習在學生版中不附參考答案</td>
+</tr>
+<tr>
+<td>老師備課版必須放答案</td>
+<td>老師備課版要保留參考答案、引導方向、老師提示</td>
+</tr>
+<tr>
+<td>Formative 只做學生版與課後作業</td>
+<td>不用 Formative 做課堂即時練習</td>
+</tr>
+<tr>
+<td>團體遊戲只作為選用</td>
+<td>Kahoot / Quizizz / Blooket 是補充工具，不是必做項</td>
+</tr>
+<tr>
+<td>v4.0 / v5.0 非必做</td>
+<td>半自動化與 API 批量化只是可考慮方向</td>
+</tr>
+</tbody>
+</table>
+<h3 id="agent-每次處理一課時的最小輸出">Agent 每次處理一課時的最小輸出</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>輸出</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lesson Content Sheet 資料</td>
+<td>原文、頁碼、整理內容、學生版標記、老師備註</td>
+</tr>
+<tr>
+<td>Huashu Brief Sheet 資料</td>
+<td>投影片順序、標題、內容、視覺建議、頁碼</td>
+</tr>
+<tr>
+<td>Formative Question Sheet 資料</td>
+<td>課後作業題、答案、解釋、頁碼</td>
+</tr>
+<tr>
+<td>老師備課版內容</td>
+<td>每個模組的教學提示、參考答案、活動操作</td>
+</tr>
+<tr>
+<td>學生版內容</td>
+<td>去除老師提示與答案後的學生可讀版本</td>
+</tr>
+<tr>
+<td>Improvement Log 初始欄位</td>
+<td>預留課後回饋與優化紀錄</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="建議-google-drive-資料夾結構">20｜建議 Google Drive 資料夾結構</h2>
+<pre class="text"><code>AI_教材簡報製作系統/
+├── 00_原始教材/
+│   ├── PDF/
+│   └── 授權與來源記錄/
+├── 01_Google_Sheets_資料庫/
+│   ├── Lesson_Content/
+│   ├── Huashu_Brief/
+│   ├── Formative_Question/
+│   └── Improvement_Log/
+├── 02_教師版簡報/
+│   ├── Huashu_HTML/
+│   ├── PPTX_Backup/
+│   └── PDF_Backup/
+├── 03_學生版_Formative/
+│   ├── 學生版教材/
+│   └── 課後作業/
+├── 04_老師備課版/
+│   ├── PDF/
+│   └── Google_Doc/
+├── 05_素材庫/
+│   ├── 圖片/
+│   ├── 音檔/
+│   ├── 圖表/
+│   └── 遊戲素材/
+├── 06_課堂團體遊戲/
+│   ├── Kahoot/
+│   ├── Quizizz/
+│   └── Blooket/
+└── 99_版本紀錄/
+    ├── MVP_v0.1/
+    ├── v1.0/
+    ├── v2.0/
+    └── v3.0/</code></pre>
+<hr />
+<h2 id="建議-google-sheets-分頁結構">21｜建議 Google Sheets 分頁結構</h2>
+<table>
+<thead>
+<tr>
+<th>分頁名稱</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00_Config</td>
+<td>記錄版本、教材名稱、製作規則</td>
+</tr>
+<tr>
+<td>01_Lesson_Content</td>
+<td>教材主資料庫</td>
+</tr>
+<tr>
+<td>02_Huashu_Brief</td>
+<td>給 Huashu Design 的簡報生成資料</td>
+</tr>
+<tr>
+<td>03_Formative_Question</td>
+<td>給 Formative 的課後作業題庫</td>
+</tr>
+<tr>
+<td>04_Teacher_Guide</td>
+<td>老師備課版資料</td>
+</tr>
+<tr>
+<td>05_Student_Version</td>
+<td>學生版教材資料</td>
+</tr>
+<tr>
+<td>06_Game_Suggestion</td>
+<td>Kahoot / Quizizz / Blooket 建議</td>
+</tr>
+<tr>
+<td>07_Improvement_Log</td>
+<td>上課後問題與優化紀錄</td>
+</tr>
+<tr>
+<td>08_Review_Status</td>
+<td>審閱進度總表</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="審閱狀態定義">22｜審閱狀態定義</h2>
+<table>
+<thead>
+<tr>
+<th>狀態</th>
+<th>定義</th>
+<th>下一步</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Draft</td>
+<td>AI 初稿，尚未審閱</td>
+<td>老師審閱</td>
+</tr>
+<tr>
+<td>Revise</td>
+<td>需要修改</td>
+<td>AI Agent 或製作人員修正</td>
+</tr>
+<tr>
+<td>Approved</td>
+<td>已通過審閱</td>
+<td>可進入 Huashu Design / Formative</td>
+</tr>
+<tr>
+<td>Rejected</td>
+<td>不採用</td>
+<td>不進入後續流程</td>
+</tr>
+<tr>
+<td>Published</td>
+<td>已正式使用</td>
+<td>進入上課與回饋流程</td>
+</tr>
+<tr>
+<td>Archived</td>
+<td>舊版本封存</td>
+<td>不再使用，僅保留紀錄</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="版本命名規則">23｜版本命名規則</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>類型</th>
+<th>命名格式</th>
+<th>範例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>教師版簡報</td>
+<td><code>TeacherSlides_L{課次}_v{版本}</code></td>
+<td><code>TeacherSlides_L01_v0.1</code></td>
+</tr>
+<tr>
+<td>學生版</td>
+<td><code>StudentVersion_L{課次}_v{版本}</code></td>
+<td><code>StudentVersion_L01_v0.1</code></td>
+</tr>
+<tr>
+<td>課後作業</td>
+<td><code>Homework_L{課次}_v{版本}</code></td>
+<td><code>Homework_L01_v0.1</code></td>
+</tr>
+<tr>
+<td>老師備課版</td>
+<td><code>TeacherGuide_L{課次}_v{版本}</code></td>
+<td><code>TeacherGuide_L01_v0.1</code></td>
+</tr>
+<tr>
+<td>Huashu Brief</td>
+<td><code>HuashuBrief_L{課次}_v{版本}</code></td>
+<td><code>HuashuBrief_L01_v0.1</code></td>
+</tr>
+<tr>
+<td>題庫</td>
+<td><code>FormativeQuestions_L{課次}_v{版本}</code></td>
+<td><code>FormativeQuestions_L01_v0.1</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="建議執行順序">24｜建議執行順序</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">優先級</th>
+<th>動作</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>建立 Google Drive 資料夾結構</td>
+<td>先管理原始教材、簡報、作業、音檔</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>建立 Google Sheets 模板</td>
+<td>這是整個系統的核心</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>先做第1課 MVP</td>
+<td>避免一開始整冊返工</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>AI Agent 拆解第1課</td>
+<td>測試教材抽取準確度</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>老師審閱第1課</td>
+<td>確保內容不偏離教材</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>用 Huashu Design 生成教師版</td>
+<td>測試簡報品質</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>用 Formative 建立學生版與作業</td>
+<td>測試學生端流程</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>實際上一堂課</td>
+<td>驗證是否真的可教</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>回填問題並修正</td>
+<td>建立優化循環</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>固定 v1.0 標準後再批量製作</td>
+<td>避免後面大規模返工</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="最終決定總表">25｜最終決定總表</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>項目</th>
+<th>最終決定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主流程</td>
+<td>AI Agent 拆解教材 → Google Sheets 人工審閱 → Huashu Design 生成教師版簡報 → Formative 製作學生版</td>
+</tr>
+<tr>
+<td>教材開頭</td>
+<td>暖身活動 → 學習目標</td>
+</tr>
+<tr>
+<td>語法位置</td>
+<td>生詞後、課文預習前</td>
+</tr>
+<tr>
+<td>Formative 用途</td>
+<td>學生版教材 + 課後作業，不做課堂即時練習</td>
+</tr>
+<tr>
+<td>團體遊戲工具</td>
+<td>Kahoot / Quizizz / Blooket，作為課堂練習選用工具</td>
+</tr>
+<tr>
+<td>課後作業新增</td>
+<td>漢字練習</td>
+</tr>
+<tr>
+<td>暖身張數</td>
+<td>1-2 張 slide</td>
+</tr>
+<tr>
+<td>課文理解</td>
+<td>刪除，不作為獨立模組</td>
+</tr>
+<tr>
+<td>任務活動</td>
+<td>刪除，除非原教材明確有類似活動</td>
+</tr>
+<tr>
+<td>課堂總結</td>
+<td>已改為課程討論</td>
+</tr>
+<tr>
+<td>教師版</td>
+<td>Huashu Design 生成，匯出 PPTX / PDF 備份</td>
+</tr>
+<tr>
+<td>學生版</td>
+<td>Formative 製作閱讀版與課後作業</td>
+</tr>
+<tr>
+<td>老師備課版</td>
+<td>給老師看「怎麼教、怎麼問、答案是什麼」</td>
+</tr>
+<tr>
+<td>教材資料庫版</td>
+<td>給 AI Agent 和製作團隊管理內容</td>
+</tr>
+<tr>
+<td>v1.0 重點</td>
+<td>定案風格、圖片、圖表、版型</td>
+</tr>
+<tr>
+<td>v2.0 重點</td>
+<td>動畫優化</td>
+</tr>
+<tr>
+<td>v4.0 / v5.0</td>
+<td>可考慮做，不列為必做階段</td>
+</tr>
+<tr>
+<td>第一階段</td>
+<td>只做第1課 MVP</td>
+</tr>
+<tr>
+<td>最重要控制點</td>
+<td>每張 slide、每道題都標記原教材頁碼與審閱狀態</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="end-of-document">End of Document</h1>
+</body>
+</html>

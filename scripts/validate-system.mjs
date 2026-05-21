@@ -4,11 +4,17 @@ import path from 'path';
 
 const root = process.cwd();
 const required = [
-  'huashu-design/SKILL.md',
-  'huashu-design/references/slide-decks.md',
-  'huashu-design/references/editable-pptx.md',
-  'huashu-design/scripts/export_deck_pdf.mjs',
-  'huashu-design/scripts/export_deck_pptx.mjs',
+  '.kiro/skills/huashu-design/SKILL.md',
+  '.kiro/skills/huashu-design/references/slide-decks.md',
+  '.kiro/skills/huashu-design/references/editable-pptx.md',
+  '.kiro/skills/huashu-design/scripts/export_deck_pdf.mjs',
+  '.kiro/skills/huashu-design/scripts/export_deck_pptx.mjs',
+  'scripts/pipeline/configs/_schema.json',
+  'scripts/pipeline/configs/normal.json',
+  'scripts/pipeline/configs/pinyin.json',
+  'scripts/pipeline/router.py',
+  'scripts/pipeline/core.py',
+  'scripts/run_pipeline.py',
   'output/sample-teacher-deck/index.html',
   'output/sample-teacher-deck/TEACHER_GUIDE.md',
   'output/sample-teacher-deck/teacher-deck.pdf',

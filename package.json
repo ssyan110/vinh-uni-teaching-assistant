@@ -6,11 +6,12 @@
   "scripts": {
     "create:sample": "node scripts/create-teacher-deck.mjs examples/sample-lesson.json",
     "validate": "node scripts/validate-system.mjs",
-    "export:pdf": "node huashu-design/scripts/export_deck_pdf.mjs --slides output/sample-teacher-deck/slides --out output/sample-teacher-deck/teacher-deck.pdf --width 1280 --height 720",
-    "export:pptx": "node huashu-design/scripts/export_deck_pptx.mjs --slides output/sample-teacher-deck/slides --out output/sample-teacher-deck/teacher-deck-editable.pptx",
-    "verify:html": ".venv/bin/python huashu-design/scripts/verify.py output/sample-teacher-deck/index.html --slides 7 --output output/sample-teacher-deck/screenshots --wait 3000",
+    "export:pdf": "node .kiro/skills/huashu-design/scripts/export_deck_pdf.mjs --slides output/sample-teacher-deck/slides --out output/sample-teacher-deck/teacher-deck.pdf --width 1280 --height 720",
+    "export:pptx": "node .kiro/skills/huashu-design/scripts/export_deck_pptx.mjs --slides output/sample-teacher-deck/slides --out output/sample-teacher-deck/teacher-deck-editable.pptx",
+    "verify:html": ".venv/bin/python .kiro/skills/huashu-design/scripts/verify.py output/sample-teacher-deck/index.html --slides 7 --output output/sample-teacher-deck/screenshots --wait 3000",
     "build:sample": "npm run create:sample && npm run verify:html && npm run export:pdf && npm run export:pptx && npm run validate",
-    "vp:pinyin:l1": "python3 scripts/create-vp-pinyin-l1-database.py"
+    "vp:pinyin:l1": "python3 scripts/create-vp-pinyin-l1-database.py",
+    "vp:run": ".venv/bin/python scripts/run_pipeline.py"
   },
   "dependencies": {
     "@playwright/test": "latest",

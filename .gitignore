@@ -26,7 +26,16 @@ yarn-error.log*
 playwright-report/
 test-results/
 
+# Legacy agent directory (migrated to .kiro/skills/)
+.agent/
+
 # Local temp/cache
 .cache/
 .tmp/
 tmp/
+
+# Working files (OCR, PDFs, intermediate)
+work/
+
+# Source textbook PDFs (too large for git)
+Giáo trình full/
