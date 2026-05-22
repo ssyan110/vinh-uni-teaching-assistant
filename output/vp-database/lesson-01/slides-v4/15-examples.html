@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=960, height=540">
+<title>Bài 1 · Mẫu câu</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; width: 960px; height: 540px; overflow: hidden; position: relative; background: linear-gradient(to top, #F4FAFA, #FFFFFF); padding: 48px; }
+.menu-bar { position: absolute; top: 0; left: 0; right: 0; height: 36px; background: rgba(255,255,255,0.88); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; align-items: center; padding: 0 28px; z-index: 10; }
+.menu-bar .dot { width: 8px; height: 8px; border-radius: 50%; background: #5AACAC; margin-right: 10px; }
+.menu-bar .section-label { font-size: 9pt; font-weight: 600; color: #4A6080; text-transform: uppercase; letter-spacing: 1px; }
+.page-indicator { position: absolute; bottom: 16px; right: 28px; font-size: 9pt; color: #8A9AB0; }
+h1 { font-size: 20pt; color: #1A3A5A; font-weight: 700; margin-bottom: 24px; margin-top: 8px; }
+.examples { display: flex; flex-wrap: wrap; gap: 16px; }
+.ex-card { background: #F8FCFC; border: 1px solid #E0ECEC; border-radius: 12px; padding: 16px 24px; text-align: center; min-width: 200px; flex: 1; }
+.ex-pinyin { font-size: 13pt; color: #5AACAC; margin-bottom: 4px; }
+.ex-char { font-family: 'Noto Sans SC', sans-serif; font-weight: 700; font-size: 20pt; color: #1A3A5A; margin-bottom: 4px; }
+.ex-meaning { font-size: 12pt; color: #4A6080; }
+</style>
+</head>
+<body>
+<div class="menu-bar"><span class="dot"></span><span class="section-label">MẪU CÂU</span></div>
+<div class="page-indicator">15 / 29</div>
+<h1>Mẫu câu / Từ vựng</h1>
+<div class="examples">
+  <div class="ex-card">
+    <div class="ex-pinyin">nǐ hǎo</div>
+    <div class="ex-char">你好</div>
+    <div class="ex-meaning">Xin chào</div>
+  </div>
+  <div class="ex-card">
+    <div class="ex-pinyin">bù hǎo</div>
+    <div class="ex-char">不好</div>
+    <div class="ex-meaning">không tốt</div>
+  </div>
+  <div class="ex-card">
+    <div class="ex-pinyin">dà mǎ</div>
+    <div class="ex-char">大马</div>
+    <div class="ex-meaning">ngựa lớn</div>
+  </div>
+  <div class="ex-card">
+    <div class="ex-pinyin">bú dà</div>
+    <div class="ex-char">不大</div>
+    <div class="ex-meaning">không lớn</div>
+  </div>
+</div>
+</body>
+</html>

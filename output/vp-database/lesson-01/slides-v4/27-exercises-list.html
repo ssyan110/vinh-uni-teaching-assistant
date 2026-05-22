@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=960">
+<title>Bài tập – Danh sách</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: #fff; width: 960px; height: 540px; position: relative; overflow: hidden; }
+.menu-bar { position: absolute; top: 0; left: 0; right: 0; height: 36px; background: rgba(255,255,255,0.88); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; align-items: center; padding: 0 28px; z-index: 10; }
+.menu-bar .dot { width: 8px; height: 8px; border-radius: 50%; background: #F59E0B; margin-right: 10px; }
+.menu-bar .section-label { font-size: 9pt; font-weight: 600; color: #4A6080; text-transform: uppercase; letter-spacing: 1px; }
+.page-indicator { position: absolute; bottom: 16px; right: 28px; font-size: 9pt; color: #8A9AB0; }
+.content { padding: 48px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 56px; }
+.title { font-size: 20pt; color: #1A3A5A; font-weight: 700; }
+.items { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+.item { display: flex; align-items: center; }
+.num { width: 22px; height: 22px; background: #FDE8D0; color: #C07030; font-size: 10pt; font-weight: 700; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.item-text { font-size: 13pt; color: #4A6080; margin-left: 12px; }
+</style>
+</head>
+<body>
+<div class="menu-bar"><span class="dot"></span><span class="section-label">BÀI TẬP</span></div>
+<div class="page-indicator">26 / 29</div>
+<div class="content">
+  <div class="title">Bài tập trong sách</div>
+  <div class="items">
+    <div class="item"><div class="num">1</div><div class="item-text">Luyện thanh điệu (p.28)</div></div>
+    <div class="item"><div class="num">2</div><div class="item-text">Luyện biến điệu (p.28)</div></div>
+    <div class="item"><div class="num">3</div><div class="item-text">Phân biệt thanh mẫu (p.28)</div></div>
+    <div class="item"><div class="num">4</div><div class="item-text">Phân biệt vận mẫu (p.29)</div></div>
+    <div class="item"><div class="num">5</div><div class="item-text">Phân biệt âm và thanh điệu (p.29)</div></div>
+    <div class="item"><div class="num">6</div><div class="item-text">Nhận mặt chữ và đọc (p.29)</div></div>
+    <div class="item"><div class="num">7</div><div class="item-text">Tập viết chữ Hán (p.30)</div></div>
+  </div>
+</div>
+</body>
+</html>

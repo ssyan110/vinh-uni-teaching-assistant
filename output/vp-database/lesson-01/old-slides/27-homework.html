@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=960, height=540">
+  <title>Bài 1 · Bài tập về nhà</title>
+  <link rel="stylesheet" href="shared/tokens.css">
+  <style>
+    body {
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .title {
+      font-size: 24px;
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+    .checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 12px;
+    }
+    .check-item {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      font-size: 18px;
+    }
+    .check-item .bullet {
+      color: var(--accent);
+      font-size: 20px;
+    }
+    .check-item .text {
+      color: var(--text-primary);
+    }
+  </style>
+</head>
+<body>
+  <div class="title">Bài tập về nhà</div>
+  <div class="checklist">
+    <div class="check-item"><span class="bullet">☐</span><span class="text">Làm bài tập E001-E007 trong sách</span></div>
+    <div class="check-item"><span class="bullet">☐</span><span class="text">Tập viết 11 chữ Hán, mỗi chữ 5 lần</span></div>
+    <div class="check-item"><span class="bullet">☐</span><span class="text">Đọc to 12 từ vựng mỗi ngày</span></div>
+    <div class="check-item"><span class="bullet">☐</span><span class="text">Chơi Blooket (nếu có)</span></div>
+  </div>
+  <div class="page-footer"></div>
+</body>
+</html>

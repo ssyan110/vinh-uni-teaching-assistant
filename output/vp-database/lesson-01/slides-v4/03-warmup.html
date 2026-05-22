@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=960, height=540">
+    <title>Bài 1 - Khởi động</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { margin: 0; padding: 0; width: 960px; height: 540px; overflow: hidden; }
+        .slide {
+            width: 960px;
+            height: 540px;
+            background: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+        }
+        .section-title {
+            position: absolute;
+            top: 16px;
+            left: 28px;
+            font-size: 10pt;
+            font-weight: 600;
+            color: #5AACAC;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 10;
+        }
+        .page-indicator {
+            position: absolute;
+            bottom: 16px;
+            right: 28px;
+            font-size: 9pt;
+            color: #8A9AB0;
+            z-index: 10;
+        }
+        .left-content {
+            width: 55%;
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+        }
+        .orange-pill {
+            display: inline-block;
+            background: #FDE8D0;
+            color: #C07030;
+            font-size: 10pt;
+            font-weight: 600;
+            padding: 5px 14px;
+            border-radius: 16px;
+            letter-spacing: 0.5px;
+            align-self: flex-start;
+        }
+        .question {
+            font-size: 20pt;
+            font-weight: 700;
+            color: #1A3A5A;
+            line-height: 1.4;
+        }
+        .pills {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .pill {
+            background: #F0F4F4;
+            color: #5AACAC;
+            font-size: 12pt;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+        .right-image {
+            width: 45%;
+            position: relative;
+        }
+        .right-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px 0 0 20px;
+        }
+        .right-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0.3) 0%, transparent 30%);
+            border-radius: 20px 0 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <span class="section-title">KHỞI ĐỘNG</span>
+        <span class="page-indicator">3 / 29</span>
+        <div class="left-content">
+            <span class="orange-pill">KHỞI ĐỘNG</span>
+            <div class="question">Bạn đã nghe câu chào nào bằng tiếng Trung chưa?</div>
+            <div class="pills">
+                <span class="pill">phim ảnh</span>
+                <span class="pill">bài hát</span>
+                <span class="pill">trải nghiệm</span>
+            </div>
+        </div>
+        <div class="right-image">
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80" alt="People greeting">
+        </div>
+    </div>
+</body>
+</html>

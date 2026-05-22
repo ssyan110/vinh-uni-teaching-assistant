@@ -21,6 +21,11 @@ Project-local rules and context. Auto-included by Kiro; referenced by AGENTS.md 
 - Pinyin content in regular lessons is SKIPPED — pinyin is handled by the separate pinyin lesson workflow.
 - 課文 section is labeled "Bài đọc" in Vietnamese (not "Bài khóa").
 - Default game platform is Blooket. Only use Kahoot or Quizizz when Blooket cannot support the exercise format.
+- Slide design: Gamma Soft Gradient style (locked). See `reference/ppt-style-guide.md`. Do NOT use dark themes, Oriental Fantasy, or 中國風.
+- Vocabulary slides: one word per card, no examples inside. Examples go on a separate "Mẫu câu" page.
+- All vocabulary must include hán việt (Sino-Vietnamese reading) in parentheses.
+- Pinyin always above 漢字 on separate lines. Never inline.
+- Use "từ vựng" not "sinh từ", "cụm từ" not "thành ngữ".
 
 ## Canonical MVP flow (steps 1-19)
 

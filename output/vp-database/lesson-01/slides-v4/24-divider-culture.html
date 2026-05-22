@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=960">
+<title>Văn hóa – Divider</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; width: 960px; height: 540px; position: relative; overflow: hidden; display: flex; }
+.menu-bar { position: absolute; top: 0; left: 0; right: 0; height: 36px; background: rgba(255,255,255,0.88); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; align-items: center; padding: 0 28px; z-index: 10; }
+.menu-bar .dot { width: 8px; height: 8px; border-radius: 50%; background: #EC4899; margin-right: 10px; }
+.menu-bar .section-label { font-size: 9pt; font-weight: 600; color: #4A6080; text-transform: uppercase; letter-spacing: 1px; }
+.page-indicator { position: absolute; bottom: 16px; right: 28px; font-size: 9pt; color: #8A9AB0; }
+.left { width: 55%; background: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.right { width: 45%; background: linear-gradient(180deg, #FDE8F0, #FDF0F4); }
+.left .label { font-size: 11pt; color: #EC4899; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+.left .hanzi { font-family: 'Noto Sans SC', sans-serif; font-weight: 900; font-size: 48pt; color: #1A3A5A; margin-top: 8px; }
+.left .line { width: 40px; height: 3px; background: #EC4899; margin: 16px 0; }
+.left .desc { font-size: 14pt; color: #8A9AB0; }
+</style>
+</head>
+<body>
+<div class="menu-bar"><span class="dot"></span><span class="section-label">VĂN HÓA</span></div>
+<div class="page-indicator">23 / 29</div>
+<div class="left">
+  <div class="label">VĂN HÓA</div>
+  <div class="hanzi">文化</div>
+  <div class="line"></div>
+  <div class="desc">So sánh Việt Nam &amp; Trung Quốc</div>
+</div>
+<div class="right"></div>
+</body>
+</html>

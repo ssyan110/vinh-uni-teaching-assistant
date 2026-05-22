@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=960, height=540">
+  <title>Bài 1 · Ghép thẻ từ vựng</title>
+  <link rel="stylesheet" href="shared/tokens.css">
+  <style>
+    body {
+      align-items: center;
+      gap: 24px;
+    }
+    .title {
+      font-size: 24px;
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+    .cards {
+      display: flex;
+      gap: 24px;
+      margin: 16px 0;
+    }
+    .card {
+      background: var(--bg-surface);
+      border: 1.5px solid var(--accent);
+      border-radius: 8px;
+      padding: 20px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      min-width: 160px;
+    }
+    .card .hanzi {
+      font-family: var(--font-zh);
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .card .pinyin {
+      font-size: 18px;
+      color: var(--accent);
+    }
+    .card .meaning {
+      font-size: 16px;
+      color: var(--text-secondary);
+    }
+    .card .separator {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    .instruction {
+      font-size: 16px;
+      color: var(--text-secondary);
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="title">Ghép thẻ từ vựng</div>
+  <div class="cards">
+    <div class="card">
+      <span class="hanzi">你</span>
+      <span class="separator">↔</span>
+      <span class="pinyin">nǐ</span>
+      <span class="separator">↔</span>
+      <span class="meaning">bạn</span>
+    </div>
+    <div class="card">
+      <span class="hanzi">好</span>
+      <span class="separator">↔</span>
+      <span class="pinyin">hǎo</span>
+      <span class="separator">↔</span>
+      <span class="meaning">tốt</span>
+    </div>
+    <div class="card">
+      <span class="hanzi">马</span>
+      <span class="separator">↔</span>
+      <span class="pinyin">mǎ</span>
+      <span class="separator">↔</span>
+      <span class="meaning">ngựa</span>
+    </div>
+  </div>
+  <div class="instruction">Ghép Chữ Hán ↔ Pinyin ↔ Nghĩa tiếng Việt</div>
+  <div class="page-footer"></div>
+</body>
+</html>
