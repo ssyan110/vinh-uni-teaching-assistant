@@ -1,0 +1,14 @@
+module_order,module_id,module_name_vi,module_name_zh,source_page,status,slide_range,slide_files,notes
+1,cover,Trang bìa,封面,,generated,,01-cover.html,Trang bìa bài học
+2,objectives,Mục tiêu bài học,学习目标,,generated,,02-objectives.html,Mục tiêu học tập được tổng hợp từ nội dung bài
+3,warmup,Khởi động,暖身活动,,generated,,03-warmup.html,Hoạt động khởi động do giáo viên thiết kế
+4,vocabulary,Từ vựng,生词,31-32,extracted,,"04-divider-vocab.html → vocab + sample slides","14 từ vựng: 忙→吗→很→汉语→难→太→爸爸→妈妈→他→她→男→哥哥→弟弟→妹妹. Mỗi từ có 1 slide từ vựng + 1 slide mẫu câu."
+5,vocabulary_practice_divider,Tập từ vựng,词汇练习,,generated,,divider-practice-vocab.html,Divider slide trước phần luyện từ vựng
+6,vocab_summary,Ôn tập từ vựng,词汇小测,,generated,,"vocab-quiz-a.html, vocab-quiz-b.html, vocab-quiz-c.html","Mini quiz từ vựng: 3 slides cho 14 từ. Click để hiện đáp án."
+7,comprehensive_practice_divider,Luyện tập tổng hợp,综合练习,,generated,,divider-comprehensive.html,Divider slide trước phần luyện tập tổng hợp
+8,vocabulary_practice,Luyện từ vựng,词汇练习,,generated,,"practice slides","Flashcard + luyện câu hỏi 吗 + cấu trúc 不太..."
+9,text,Bài đọc,课文,31,extracted,,"divider-text.html, dialogue.html","Hội thoại: 你忙吗? 很忙。汉语难吗? 不太难。"
+10,stroke_writing,Tập viết chữ Hán,写汉字,36,extracted,,"stroke slides","Các chữ Hán trong bài 2 (待确认 during review)"
+11,culture,Văn hóa bổ sung,文化补充,,generated,,"culture slides","Cách gọi thành viên gia đình trong tiếng Trung"
+12,homework_intro,Giới thiệu bài tập về nhà,课后作业说明,34-36,extracted,,"divider-homework.html, exercises-list.html","8 bài tập trong sách (trang 34-36)"
+13,closing,Kết thúc,结束,,generated,,closing.html,Slide kết thúc bài học

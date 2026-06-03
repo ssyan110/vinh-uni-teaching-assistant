@@ -143,7 +143,7 @@ Each major teaching deliverable type is mapped to 3 recommended styles from the 
   - Body text: minimum 24px font size (legible at 10m projection distance)
   - Maximum 6 lines of body text per slide (one core message rule)
   - Visual/diagram area: 60% of slide width when text + visual layout
-  - Page/slide number: bottom-right corner, 18px caption size
+  - Page/slide number: bottom-right corner, 18px caption size. For Adam's textbook courseware, the visible slide `.page-indicator` must show the printed textbook page/range from the database, not the slide number or PDF page; navigation counters belong only in the presenter chrome. Generated classroom activity sections that do not appear directly in the textbook, especially `Luyện tập tổng hợp` and `Văn hóa bổ sung`, omit `.page-indicator`.
   - No text below 18px anywhere on the slide
 - **Content Guidelines**:
   - One core message per slide — if you need a second point, make a second slide

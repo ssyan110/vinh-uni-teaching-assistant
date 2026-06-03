@@ -60,7 +60,7 @@ node huashu-design/scripts/export_deck_pptx.mjs --slides output/<slug>/slides --
 
 ## Full Lesson 1 example structure
 
-For `GT Hán Ngữ 1`, Lesson 1 (`第一课 · 你好`) used PDF pages 19–30 and produced a 26-slide full deck:
+For `GT Hán Ngữ 1`, Lesson 1 (`第一课 · 你好`) was extracted from PDF pages 19–30 and produced a 26-slide full deck. Use PDF pages only for extraction; visible slide `.page-indicator` labels must use textbook page numbers from the database.
 
 1. Cover
 2. Objectives

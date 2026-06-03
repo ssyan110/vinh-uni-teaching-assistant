@@ -8,11 +8,36 @@
 | Decision | Current rule |
 |---|---|
 | Slide engine | **Huashu Design** — local HTML-first deck engine. Gamma is no longer used. |
-| Deck source | HTML source first, then export PDF/PPTX. No hand-building slides page by page. |
-| Language default | Vietnamese for instructions/explanations, Simplified Chinese for Chinese content, pinyin for pronunciation. No Traditional Chinese unless requested. |
+| Deck source | HTML source first. During drafting, do not export PDF backups; use screenshots/contact sheets for QA. Export PDF only after Adam confirms the slide design and content are finalized. |
+| Classroom presenter | Every lesson root exposes `index.html` for class; it launches `slides/index.html`, which has fullscreen mode, left slide thumbnails, annotation tools, and on-demand PDF export. |
+| Clean lesson folders | Each lesson uses `index.html`, `README.md`, `slides/`, `database/`, `exports/final/`, `exports/qa/`, `exports/archive/`, `teacher-guide/`, and `homework-question-bank/`. QA screenshots/contact sheets stay under `exports/qa/`; deprecated generated files stay under `exports/archive/`. |
+| Shared watermark | Canonical logo source: `design/shared-slide-assets/brand/logo-watermark.png`. Copy it into every lesson as `slides/assets/brand/logo-watermark.png`. `slide-base.css` renders it as a top overlay at `opacity:.02` with `pointer-events:none`. |
+| Language default | Vietnamese for visible instructions, activity names, section titles, labels, homework, explanations, and classroom flow. Simplified Chinese is only for target learning content: vocabulary, sample sentences, dialogue, grammar examples, cultural terms, lesson titles, and hanzi-writing characters. Pinyin is for pronunciation. No Traditional Chinese unless requested. |
+| Regular lesson pinyin scope | Pinyin is taught in separate pinyin lessons. Normal `regular` lessons must not include `Pinyin` or `Luyện pinyin` classroom modules, even if textbook pages contain pronunciation exercises. Keep those pages only as raw extracted/review material when needed. |
+| Vocabulary extraction | Extract every textbook vocabulary row, including indented component sub-entries under a main word. Example: `办公室` → also extract `办公`; `电话` → `电`, `话`; `手机` → `手`. Store each as its own vocabulary record with printed source page and parent-word note in `raw_source_text`. |
+| Grammar explanation style | Grammar rows must absorb the textbook explanation, then rewrite it in simple Vietnamese for beginner students. Prefer plain patterns, examples, and Vietnamese/Chinese contrast over dense grammar terminology. |
+| Cover slide template | Use Lesson 10 `output/book-1/lesson-10/slides/01-cover.html` as the canonical cover template for all future lessons. Reuse its layout and visual language directly; only replace lesson number, Chinese/pinyin title, Vietnamese title, topic chips, and topic image. |
+| Vocab slide template | Reuse Lesson 01 `05-vocab-ni.html`: centered vertical stack, rectangular 16:9 image frame, pinyin, large Simplified Chinese character, Vietnamese meaning, hán việt + word type. No circular image crops. |
+| Vocabulary divider image | Reuse Lesson 01 page 04 pattern: soft textbook desk scene with an open book. The book has only `汉` on the left page and `语` on the right page, placed inside the book page margins. This generic `汉语` image can be reused across regular lessons; never add random Chinese filler or extra generated text. |
+| Sample sentence slide template | Every `sample-*` / `MẪU CÂU` slide uses the centered sample card plus a bottom-left circular support image frame: `.sample-spot{left:52px;bottom:28px;width:116px;height:116px}`. The frame must sit centered on the pale background circle graphic and the image must match the full sample phrase. |
+| Visible page indicator | Slide `.page-indicator` shows printed textbook page/range from the database, such as `Trang 1` or `Trang 1-2`. It is never a slide number or PDF page. `source_page` must mean printed textbook page; PDF positions must be stored separately as `source_pdf_page` / `source_pdf_page_range` if needed. Generated slides with no textbook source omit it. Generated classroom activity sections that do not appear directly in the textbook, especially `Luyện tập tổng hợp` and `Văn hóa bổ sung`, also omit it. Do not add separate `.source` footers. |
+| Vocab image workflow | Generate `prompts.json` with `scripts/generate-vocab-images.py`, save 16:9 PNGs in `slides/assets/vocab-images/`, insert by matching filename, render vocab slides, and regenerate any image that does not match its vocabulary word. |
+| Vocab image style | Soft textbook line-art: thin grey-blue outlines, muted pastel fills, white/pale-grey background, gentle shadows. No in-image text, letters, numbers, Chinese characters, labels, watermarks, decorative blobs, teal icon style, stickers, or chibi style. |
 | Review gate | AI Agent may generate draft database/content. Final classroom/student/homework materials require teacher review first. |
+| PDF finalization gate | Before any clean PDF export, the agent must ask Adam whether the design and content are finalized. Export only after Adam confirms finalization. |
+| Regular lesson template | Lesson 01 is the strict visual and section template for future regular lessons. Future lessons follow its section flow and add only lesson-specific extra sections, such as grammar in Lesson 10. |
+| Reusable slide templates | Reuse Lesson 01 templates for reusable pages: dividers, objectives layout, homework divider, exercise-list structure, dialogue avatar layout, and hanzi-writing layout. Do not redesign these from scratch for every lesson; only swap lesson-specific content, printed textbook page numbers, counts, and images. |
+| Reusable divider templates | Use the same Lesson 01 divider templates across all lessons by default. Only swap page numbers, lesson-specific counts, and images Adam explicitly asks to customize for a specific lesson theme. |
+| Slide content alignment | Prefer centering main slide content vertically and horizontally when the slide is not a fixed Lesson 01 template, list, comparison, or dialogue layout. Culture notes, single concepts, example sentences, and practice prompts should feel centered when possible; use left-center layouts only when they improve scanning. |
+| Slide density | Do not squeeze dense activities into one slide. Split practice across more slides; vocabulary matching should use about 4-5 words per slide. |
+| Activity design | Practice activities should be varied and can include listening, speaking, reading, and writing when the lesson content supports it. Comprehensive practice and grammar practice should reference HSK and TOCFL item formats, with a preference for practical daily-use situations. The generated content still uses Simplified Chinese unless Adam explicitly asks otherwise, even when the question style is inspired by TOCFL. |
+| Interactive practice | Prefer simple interactive slide/webapp formats when useful. Example: one multiple-choice question per slide with clickable options; correct choices show success feedback, wrong choices prompt the student to try again. |
+| Instruction language | Student operation text and activity instructions must be natural Vietnamese, such as `Ghép nối`, `Bài tập về nhà`, `Tập viết chữ Hán`, `Tập từ vựng`, `Luyện tập tổng hợp`, and `Hội thoại`. Lesson 01 reusable divider templates may keep their fixed Chinese section heading (`生词`, `词汇练习`, `综合练习`, `课文`, `写汉字`, `补充学习`, `回家作业`) as part of the template; do not redesign those dividers from scratch. |
+| Overflow QA | During HTML/screenshot QA, verify every slide for text overflow. Text must not spill outside the slide, background image panel, card, bubble, tile, button, or fixed container. Fix by splitting content into more slides or revising layout. Do not hide clipped text. |
+| Hanzi writing | Reuse Lesson 01's hanzi-writing title, layout, method, and HanziWriter stroke animation. Do not replace stroke animation with static characters. Use Lesson 01 slowed timing: `strokeAnimationSpeed: 0.575` and `delayBetweenStrokes: 360`, unless Adam changes the Lesson 01 template itself. |
+| Database rule propagation | VP steps 1-8 must generate lesson structure/activity/database metadata that already follows the cover, divider, activity-design, Simplified Chinese, pinyin, image, density, and hanzi-writing rules. Do not leave these as manual slide-cleanup requirements only. |
 | Pre-review automation | Steps 1-8 are safe to automate before teacher review. |
-| Post-review scope | Steps 9-19 begin after teacher review. |
+| Post-review scope | Steps 9-18 begin after teacher review. |
 | Skills location | `.kiro/skills/` — readable by Kiro, Claude Code, Hermes, Codex, Cursor. |
 | Agent entry point | `AGENTS.md` (also symlinked as `CLAUDE.md` and `CODEX.md`). |
 | Portability | Skills, requirements, and project rules live inside this repo. No external symlinks or machine-specific paths. |
@@ -25,7 +50,6 @@
 | Agent instructions | `AGENTS.md` |
 | Sample teacher deck | `output/sample-teacher-deck/` |
 | Sample teacher deck PDF | `output/sample-teacher-deck/teacher-deck.pdf` |
-| Sample editable PPTX | `output/sample-teacher-deck/teacher-deck-editable.pptx` |
 | Pinyin Lesson 1 design prototype | `output/pinyin-l1-design-prototype/` |
 | VP Pinyin Lesson 1 database | `output/vp-database/pinyin-l1/` |
 | Google Sheets-ready main CSV | `output/vp-database/pinyin-l1/06_google_sheets_database.csv` |
@@ -33,7 +57,7 @@
 | Project skills | `.kiro/skills/` |
 | Project steering | `.kiro/steering/` |
 
-## Canonical MVP steps 1-19
+## Canonical MVP flow (steps 1-18)
 
 | Step | Stage | Tool/workflow | Output |
 |---:|---|---|---|
@@ -49,21 +73,20 @@
 | 10 | 生成老師備課版 | AI Agent | 老師備課版 |
 | 11 | 生成 Huashu Brief | AI Agent | Huashu deck brief |
 | 12 | 生成教師版簡報 | Huashu Design | HTML teacher deck |
-| 13 | 匯出備份 | Huashu export scripts | PPTX / PDF |
-| 14 | 生成學生版內容 | AI Agent | Student Version |
-| 15 | 生成作業題庫 | AI Agent | homework/question bank |
-| 16 | 題庫審閱 | Google Sheets | Approved Questions |
-| 17 | 建立學生版與作業 | Formative or CSV/HTML fallback | 學生版 + 作業 |
-| 18 | 課堂測試 | Teacher | class feedback |
-| 19 | 回填修正 | Google Sheets | Improvement Log |
+| 13 | 建立課堂簡報 | HTML presenter | index.html with slide thumbnails, annotations, and PDF export |
+| 14 | 生成作業題庫 | AI Agent | homework/question bank |
+| 15 | 題庫審閱 | Google Sheets | Approved Questions |
+| 16 | 建立作業 | Sheets/CSV/HTML fallback | 作業 |
+| 17 | 課堂測試 | Teacher | class feedback |
+| 18 | 回填修正 | Google Sheets | Improvement Log |
 
 ---
 
 # AI 教材簡報製作系統完整規劃文件
 
 > 文件用途：本文件提供給 AI Agent、教材製作團隊、教學負責人與簡報/作業製作者使用。
-> 核心目標：讓 AI Agent 能依照固定規則拆解原始教材，輸出可審閱、可生成簡報、可製作學生版與課後作業的標準化教材資料。
-> 主流程：**AI Agent 拆解教材 → Google Sheets 人工審閱 → Huashu Design 生成教師版簡報 → Formative 製作學生版與課後作業**
+> 核心目標：讓 AI Agent 能依照固定規則拆解原始教材，輸出可審閱、可生成簡報、可製作課後作業的標準化教材資料。
+> 主流程：**AI Agent 拆解教材 → Google Sheets 人工審閱 → Huashu Design 生成教師版簡報 → 建立課後作業**
 
 ---
 
@@ -74,13 +97,13 @@
 | 專案目標 | 將原始中文教材轉換成可上課、可複習、可追蹤作業的數位教材 |
 | 製作方式 | 不由人工逐張設計 PPT，而是由 AI Agent 拆解教材後，交給 AI 簡報工具生成 |
 | 教材來源 | 原始教材 PDF，例如《漢語教程》 |
-| 核心流程 | AI Agent 拆解教材 → Google Sheets 人工審閱 → Huashu Design 生成教師版簡報 → Formative 製作學生版與課後作業 |
+| 核心流程 | AI Agent 拆解教材 → Google Sheets 人工審閱 → Huashu Design 生成教師版簡報 → 建立課後作業 |
 | 教材原則 | 不改變原教材主線與核心內容，但可補充暖身、練習、文化補充、課後作業 |
 | 品質控制 | 所有內容先進入 Google Sheets，由老師審閱後才可進入 Huashu Design / Formative |
 | 頁碼規則 | 每張 slide、每個練習、每道作業題都需標記原教材頁碼 |
 | 製作策略 | 先完成最低可用版本 MVP，再逐步優化動畫、聲音、互動與自動化 |
-| 學生版方向 | 使用 Formative 製作線上閱讀版、練習與課後作業 |
-| 教師版方向 | 使用 Huashu Design 生成教師版簡報，必要時匯出 PPTX / PDF 備份 |
+| 作業方向 | 使用 Formative 或 Sheets/CSV/HTML-ready fallback 製作課後作業 |
+| 教師版方向 | 使用 Huashu Design 生成教師版 HTML 簡報；草稿階段不匯出 PDF，Adam 確認 finalization 後才匯出 PDF 備份 |
 
 ---
 
@@ -88,7 +111,7 @@
 
 | 教材版本 | 使用對象 | 工具 | 目的 | MVP 是否需要 |
 |---|---|---|---|---|
-| 教師版簡報 | 老師 | Huashu Design / PPTX / PDF | 課堂播放、教學引導、練習展示 | 必要 |
+| 教師版簡報 | 老師 | Huashu HTML presenter / finalized PDF backup | 課堂播放、教學引導、練習展示 | 必要 |
 | 學生版教材 | 學生 | Formative | 學生課堂查看、課後複習 | 必要 |
 | 課後作業版 | 學生 | Formative | 生詞、拼音、漢字、語法、課文相關作業 | 必要 |
 | 老師備課版 | 老師 / 新老師 / 教學主管 | Google Sheets / PDF | 說明每頁怎麼教、怎麼提問、參考答案是什麼 | 必要 |
@@ -133,7 +156,7 @@
 | 教師版簡報 | Huashu Design | 根據審閱後內容生成教師版簡報 |
 | 學生版教材 | Formative | 製作學生線上閱讀版 |
 | 課後作業 | Formative | 製作課後練習與作業提交 |
-| 課堂團體遊戲 | Kahoot / Quizizz / Blooket | 將拼音練習、生詞練習、語法練習做成班級競賽或即時互動遊戲 |
+| 課堂團體遊戲 | Kahoot / Quizizz / Blooket | regular 一般課可將生詞練習、語法練習做成班級競賽；拼音遊戲只適用 `pinyin` lesson type |
 | 聲音製作 | ElevenLabs / Azure TTS / Google TTS | 後續製作生詞、課文、聽力、口說示範音檔 |
 | 視覺素材 | Canva / AI Image Tool | 製作圖片、圖表、生詞圖卡、情境圖 |
 | 版本管理 | Google Drive + Google Sheets | 管理 v0.1、v1.0、v2.0 等版本 |
@@ -144,8 +167,8 @@
 |---|---|
 | AI Agent | 只負責拆解、整理、生成草稿，不直接發布成品 |
 | Google Sheets | 作為人工審閱與資料中台 |
-| Huashu Design | 用於教師版簡報生成（HTML-first，export PDF/PPTX） |
-| Formative | 用於學生版教材與課後作業 |
+| Huashu Design | 用於教師版簡報生成（HTML-first；PDF backup only after finalization） |
+| Formative | 用於課後作業；不可用時保留 Sheets/CSV/HTML-ready fallback |
 | Kahoot / Quizizz / Blooket | 作為可選課堂遊戲工具，不取代課堂 slide |
 | Google Drive | 作為素材與版本管理中心 |
 | Canva / AI Image Tool | 作為圖片、圖表、視覺素材補充工具，不作為主要簡報生產線 |
@@ -172,13 +195,11 @@ Huashu Design 生成教師版簡報
 ↓
 老師檢查與微調
 ↓
-AI Agent 生成學生版內容
-↓
 AI Agent 生成課後作業題庫
 ↓
 老師審閱題庫
 ↓
-Formative 製作學生版與課後作業
+建立作業（Sheets/CSV/HTML）
 ↓
 實際上課測試
 ↓
@@ -193,7 +214,9 @@ Formative 製作學生版與課後作業
 
 ### 建議教學順序
 
-**暖身活動 → 學習目標 → 拼音 → 拼音練習 → 生詞 → 生詞練習 → 語法 → 語法練習 → 課文預習 → 課文 → 文化補充 → 課程討論 → 課後作業說明**
+**Regular 一般課：暖身活動 → 學習目標 → 生詞 → 生詞練習 → 語法 → 語法練習 → 課文預習 → 課文 / 會話 → 練習寫漢字 → 文化補充 → 課程討論 → 課後作業說明**
+
+拼音課程分開做 `pinyin` lesson type。一般課即使課本含拼音 / 發音練習，也不放進 classroom lesson structure。
 
 ### 每課教材標準架構表
 
@@ -201,30 +224,32 @@ Formative 製作學生版與課後作業
 |---:|---|---:|---|---|---|---|
 | 1 | 暖身活動 | 1-2 | 是 | 是 | 否 | 備注需附參考答案；無需答案則寫 N/A |
 | 2 | 學習目標 | 1 | 是 | 是 | 否 | 備注寫「本課目標用途 / 學生應達成能力」 |
-| 3 | 拼音 | 3-5 | 是 | 是 | 否 | 若該課無拼音則跳過 |
-| 4 | 拼音練習 | 2-4 | 是 | 是 | 否 | 備注附參考答案；可標記 Kahoot / Quizizz / Blooket |
-| 5 | 生詞 | 8-12 | 是 | 是 | 否 | 依原教材順序 |
-| 6 | 生詞練習 | 3-5 | 是 | 是 | 否 | 備注附參考答案；可標記 Kahoot / Quizizz / Blooket |
-| 7 | 語法 | 5-8 | 是 | 是 | 否 | 建議放在課文前，幫助理解課文 |
-| 8 | 語法練習 | 3-5 | 是 | 是 | 否 | 備注附參考答案；可標記 Kahoot / Quizizz / Blooket |
-| 9 | 課文預習 | 1-2 | 是 | 是 | 否 | 備注需附參考答案；無需答案則寫 N/A |
-| 10 | 課文 | 5-8 | 是 | 是 | 否 | 按原教材呈現，可加分句理解 |
-| 11 | 文化補充 | 1-2 | 是 | 是 | 否 | 可根據主題補充，避免偏離課程 |
-| 12 | 課程討論 | 1 | 是 | 是 | 否 | 備注選用 |
-| 13 | 課後作業說明 | 1 | 是 | 是 | 是 | Formative 只用於課後作業 |
+| 3 | 生詞 | 8-12 | 是 | 是 | 否 | 依原教材順序 |
+| 4 | 生詞練習 | 3-5 | 是 | 是 | 否 | 備注附參考答案；可標記 Kahoot / Quizizz / Blooket |
+| 5 | 語法 | 5-8 | 是 | 是 | 否 | 建議放在課文前，幫助理解課文 |
+| 6 | 語法練習 | 3-5 | 是 | 是 | 否 | 備注附參考答案；可標記 Kahoot / Quizizz / Blooket |
+| 7 | 課文預習 | 1-2 | 是 | 是 | 否 | 備注需附參考答案；無需答案則寫 N/A |
+| 8 | 課文 / 會話 | 5-8 | 是 | 是 | 否 | 按原教材呈現，可加分句理解；會話可拆成多人頭像對話 slide |
+| 9 | 練習寫漢字 | 3-8 | 是 | 是 | 否 | 參考 Lesson 01 字卡 / 筆順 / 練寫結構；所有筆順動畫用 Lesson 01 慢速設定 |
+| 10 | 文化補充 | 1-2 | 是 | 是 | 否 | 可根據主題補充，避免偏離課程 |
+| 11 | 課程討論 | 1 | 是 | 是 | 否 | 備注選用 |
+| 12 | 課後作業說明 | 1 | 是 | 是 | 是 | Formative 只用於課後作業 |
 
 ### 已確認的教材架構規則
 
 | 規則 | 說明 |
 |---|---|
 | 暖身活動放在學習目標前 | 先帶入主題，再說明本課要學什麼 |
+| Regular 課不放拼音模組 | 拼音課分開教；一般課即使課本頁面有拼音 / 發音練習，也不放進 classroom lesson structure |
 | 語法放在課文前 | 建議放在生詞後、課文預習前，幫助學生理解課文 |
 | 課文理解刪除 | 不作為獨立模組，避免與課文預習重疊 |
 | 任務活動刪除 | 除非原教材明確有類似活動，否則不列為標準模組 |
 | 課堂總結改為課程討論 | 第 12 模組改名為「課程討論」 |
 | Formative 不做課堂即時練習 | Formative 只用於學生版教材與課後作業 |
-| 拼音 / 生詞 / 語法練習可做遊戲 | 可標記為 Kahoot / Quizizz / Blooket 團體遊戲建議 |
-| 課中練習學生版不附參考答案 | 學生版的暖身、拼音練習、生詞練習、語法練習、課文預習不附參考答案 |
+| 生詞 / 語法練習可做遊戲 | 可標記為 Kahoot / Quizizz / Blooket 團體遊戲建議 |
+| 綜合 / 語法練習題型 | 參考 HSK 與 TOCFL 出題形式，偏重生活實際應用；系統產出一律使用簡體中文，除非 Adam 另有指示 |
+| 互動題呈現 | 優先使用簡單互動 slide/webapp；例如一個 slide 一題選擇題，可直接點選選項，答對顯示正確，答錯提示再試一次 |
+| 課中練習學生版不附參考答案 | 學生版的暖身、生詞練習、語法練習、課文預習不附參考答案 |
 
 ---
 
@@ -234,12 +259,15 @@ Formative 製作學生版與課後作業
 |---|---:|---|
 | 暖身活動 | 1-2 | 圖片、問題、前課複習 |
 | 學習目標 | 1 | 本課任務與學習成果 |
-| 拼音 / 發音 | 3-5 | 規則、示範、練習 |
-| 拼音練習 | 2-4 | 聲調辨識、拼讀、聽音選擇 |
 | 生詞 | 8-12 | 詞義、拼音、越南語、例句、圖片 |
 | 生詞練習 | 3-5 | 配對、選詞、造句 |
 | 語法 | 5-8 | 結構、例句、越南語說明 |
 | 語法練習 | 3-5 | 替換、改錯、造句、翻譯 |
+| 課文 / 會話 | 5-8 | 分句理解、角色對話、朗讀練習 |
+| 練習寫漢字 | 3-8 | 筆順、部件、描紅、看字讀音 |
+| 文化補充 | 1-2 | 越中差異、文化說明、生活語用 |
+
+拼音 / 發音與拼音練習只放在 `pinyin` lesson type，不放在 regular 一般課的教師版簡報結構。
 | 課文預習 | 1-2 | 情境導入、關鍵詞預測 |
 | 課文 | 5-8 | 課文呈現、分句理解、角色朗讀 |
 | 文化補充 | 1-2 | 越中差異、生活文化 |
@@ -260,8 +288,6 @@ Formative 製作學生版與課後作業
 |---|---|---|---|
 | 暖身活動 | 是 | 可讓學生課前或課中思考 | 無附參考答案 |
 | 學習目標 | 是 | 讓學生知道本課要學會什麼 | 不適用 |
-| 拼音 | 是 | 保留規則與例子 | 不適用 |
-| 拼音練習 | 是 | 放在學生版，不放 Formative | 無附參考答案 |
 | 生詞 | 是 | 中文、拼音、越南語、例句 | 不適用 |
 | 生詞練習 | 是 | 學生可在課堂跟著做 | 無附參考答案 |
 | 語法 | 是 | 保留結構、例句、越南語說明 | 不適用 |
@@ -281,7 +307,7 @@ Formative 製作學生版與課後作業
 | 用途 | 是否使用 Formative | 說明 |
 |---|---|---|
 | 課堂暖身 | 否 | 放在教師版與學生版 |
-| 拼音練習 | 否 | 放在教師版與學生版 |
+| 拼音練習 | 否 | 只適用 `pinyin` lesson type；regular 一般課不放此模組 |
 | 生詞練習 | 否 | 放在教師版與學生版 |
 | 語法練習 | 否 | 放在教師版與學生版 |
 | 課文預習 | 否 | 放在教師版與學生版 |
@@ -294,7 +320,7 @@ Formative 製作學生版與課後作業
 
 | 使用位置 | 工具 | 用途 | 是否必要 |
 |---|---|---|---|
-| 拼音練習 | Kahoot / Quizizz / Blooket | 聲調辨識、拼音選擇、聽音選答 | 選用 |
+| 拼音練習 | Kahoot / Quizizz / Blooket | 只適用 `pinyin` lesson type：聲調辨識、拼音選擇、聽音選答 | 選用 |
 | 生詞練習 | Kahoot / Quizizz / Blooket | 詞義配對、圖片選詞、中文選越南語 | 選用 |
 | 語法練習 | Kahoot / Quizizz / Blooket | 選擇正確句子、錯句判斷、語序選擇 | 選用 |
 
@@ -444,18 +470,17 @@ Formative 製作學生版與課後作業
 |---|---|
 | 教材拆解 | 從 PDF 抽出拼音、生詞、課文、語法、練習 |
 | 頁碼標記 | 每個內容都標記原教材頁碼 |
-| 教學重組 | 按標準教材架構重新排列 |
+| 教學重組 | 按標準教材架構重新排列；regular 一般課不加入拼音 / 拼音練習模組 |
 | 生成暖身 | 根據前課或本課主題生成 1-2 張暖身活動 |
-| 生成拼音練習 | 產出聲調、拼讀、聽辨相關練習 |
+| 生成拼音練習 | 只適用 `pinyin` lesson type，產出聲調、拼讀、聽辨相關練習 |
 | 生成生詞練習 | 產出配對、選詞、看圖說詞、造句 |
 | 生成語法練習 | 產出替換、改錯、造句、翻譯 |
 | 生成課文預習 | 產出情境問題、關鍵詞預測 |
 | 生成文化補充 | 根據本課主題補充越中差異或文化說明 |
 | 生成課程討論 | 根據本課主題產出課末討論問題 |
-| 生成遊戲建議 | 判斷拼音、生詞、語法練習是否適合轉成 Kahoot / Quizizz / Blooket |
+| 生成遊戲建議 | 判斷生詞、語法練習是否適合轉成 Kahoot / Quizizz / Blooket；拼音遊戲只適用 `pinyin` lesson type |
 | 生成老師備課版 | 補充教學提示、參考答案、操作方式 |
 | 生成 Huashu Brief | 將審閱後資料轉成 Huashu Design 可用簡報指令 |
-| 生成學生版 | 去除老師內部提示、內部審閱資訊、課中練習答案，保留學生可讀內容 |
 | 生成作業題庫 | 生成 Formative 課後作業題，包含漢字練習 |
 | 記錄版本 | 寫入版本號、修改狀態與審閱結果 |
 
@@ -470,12 +495,15 @@ Formative 製作學生版與課後作業
 | 補充內容 | 必須服務本課教學目標 |
 | 越南語解釋 | 必須清楚、自然、適合越南學生 |
 | 生詞順序 | 優先保留原教材順序 |
+| 生詞拆分項 | 原教材生詞下方縮排的小詞 / 單字也要獨立列入資料庫，並在 `raw_source_text` 標記 parent word |
+| 一般課拼音範圍 | 拼音課程分開教；`regular` 一般課的課堂架構不加入拼音 / 拼音練習模組，即使課本該頁有拼音練習 |
 | 語法順序 | 可放到課文前，但內容仍需對應原教材 |
+| 語法解釋 | 吸收課本說明後，用初學者能懂的越南語重寫；避免堆疊文法術語，必要時加入越南語對比 |
 | 題目答案 | 必須人工審閱 |
-| 參考答案 | 暖身、拼音練習、生詞練習、語法練習、課文預習必填；無則 N/A |
+| 參考答案 | 暖身、生詞練習、語法練習、課文預習必填；無則 N/A。拼音練習只適用 `pinyin` lesson type |
 | 學習目標備注 | 不寫 N/A，需寫本課目標用途或學生應達成能力 |
 | 課程討論 | 學生版無附參考答案；老師備課版可附引導方向 |
-| 團體遊戲建議 | 拼音練習、生詞練習、語法練習可標記是否適合做 Kahoot / Quizizz / Blooket |
+| 團體遊戲建議 | 生詞練習、語法練習可標記是否適合做 Kahoot / Quizizz / Blooket；拼音練習只適用 `pinyin` lesson type |
 | 圖片風格 | 必須符合 v1.0 定案規範 |
 | 學生版 | 不放老師提示、內部審閱資訊、課中練習參考答案 |
 | 老師備課版 | 必須說明怎麼教、怎麼問、參考答案是什麼 |
@@ -523,7 +551,7 @@ Formative 製作學生版與課後作業
 | 必須區分版本 | 教師版、學生版、老師備課版、教材資料庫版、作業版不可混淆 |
 | 學生版不可放答案 | 課中練習在學生版中不附參考答案 |
 | 老師備課版必須放答案 | 老師備課版要保留參考答案、引導方向、老師提示 |
-| Formative 只做學生版與課後作業 | 不用 Formative 做課堂即時練習 |
+| Formative 只做課後作業 | 不用 Formative 做課堂即時練習；不可用時保留 Sheets/CSV/HTML-ready fallback |
 | 團體遊戲只作為選用 | Kahoot / Quizizz / Blooket 是補充工具，不是必做項 |
 | v4.0 / v5.0 非必做 | 半自動化與 API 批量化只是可考慮方向 |
 
@@ -554,7 +582,6 @@ AI_教材簡報製作系統/
 │   └── Improvement_Log/
 ├── 02_教師版簡報/
 │   ├── Huashu_HTML/
-│   ├── PPTX_Backup/
 │   └── PDF_Backup/
 ├── 03_學生版_Formative/
 │   ├── 學生版教材/
@@ -632,7 +659,7 @@ AI_教材簡報製作系統/
 | 4 | AI Agent 拆解第1課 | 測試教材抽取準確度 |
 | 5 | 老師審閱第1課 | 確保內容不偏離教材 |
 | 6 | 用 Huashu Design 生成教師版 | 測試簡報品質 |
-| 7 | 用 Formative 建立學生版與作業 | 測試學生端流程 |
+| 7 | 用 Formative 或 Sheets/CSV/HTML-ready fallback 建立作業 | 測試作業流程 |
 | 8 | 實際上一堂課 | 驗證是否真的可教 |
 | 9 | 回填問題並修正 | 建立優化循環 |
 | 10 | 固定 v1.0 標準後再批量製作 | 避免後面大規模返工 |
@@ -643,17 +670,17 @@ AI_教材簡報製作系統/
 
 | 項目 | 最終決定 |
 |---|---|
-| 主流程 | AI Agent 拆解教材 → Google Sheets 人工審閱 → Huashu Design 生成教師版簡報 → Formative 製作學生版 |
+| 主流程 | AI Agent 拆解教材 → Google Sheets 人工審閱 → Huashu Design 生成教師版簡報 → 建立課後作業 |
 | 教材開頭 | 暖身活動 → 學習目標 |
 | 語法位置 | 生詞後、課文預習前 |
-| Formative 用途 | 學生版教材 + 課後作業，不做課堂即時練習 |
+| Formative 用途 | 課後作業，不做課堂即時練習 |
 | 團體遊戲工具 | Kahoot / Quizizz / Blooket，作為課堂練習選用工具 |
 | 課後作業新增 | 漢字練習 |
 | 暖身張數 | 1-2 張 slide |
 | 課文理解 | 刪除，不作為獨立模組 |
 | 任務活動 | 刪除，除非原教材明確有類似活動 |
 | 課堂總結 | 已改為課程討論 |
-| 教師版 | Huashu Design 生成，匯出 PPTX / PDF 備份 |
+| 教師版 | Huashu Design 生成 HTML presenter；Adam 確認 finalization 後才匯出 PDF 備份 |
 | 學生版 | Formative 製作閱讀版與課後作業 |
 | 老師備課版 | 給老師看「怎麼教、怎麼問、答案是什麼」 |
 | 教材資料庫版 | 給 AI Agent 和製作團隊管理內容 |

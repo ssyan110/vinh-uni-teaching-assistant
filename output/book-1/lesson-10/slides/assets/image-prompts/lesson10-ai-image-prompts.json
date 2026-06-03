@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "lesson_id": "lesson-10",
+    "style_reference": "output/book-1/lesson-01/slides/assets/vocab-images/prompts.json",
+    "total_images": 29,
+    "image_style": "Lesson 01 soft textbook line-art: thin grey-blue outlines, muted pastel fills, white or very pale grey background, gentle low-contrast shadows, clean airy layout, natural human proportions, no decorative blobs, no stickers, no chibi style, no thick teal icon art."
+  },
+  "global_negative_prompt": "No labels, no watermark, no random text, no letters, no Chinese characters, no numbers inside the image unless the prompt explicitly says otherwise. Avoid glossy vector art, toy icons, thick outlines, harsh colors, and abstract decorative blobs.",
+  "prompts": [
+    {
+      "id": "cover-topic",
+      "output_path": "output/book-1/lesson-10/slides/assets/photos/cover-topic.png",
+      "slide_use": "cover",
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background, gentle low-contrast shadows. A Vietnamese woman asking where a man is, with a thought bubble above her head showing a small avatar of a man and a question mark. No text, no labels, no watermark."
+    },
+    {
+      "id": "vocab-v001-bangongshi",
+      "output_path": "output/book-1/lesson-10/slides/assets/vocab-images/vocab-v001-bangongshi.png",
+      "word": "办公室",
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide, 16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, Lesson 01 style. Show an empty modern office with desks, chairs, computer, shelves, and plants, but no people. No text, no labels, no Chinese characters, no watermark."
+    },
+    {
+      "id": "vocab-v001a-bangong",
+      "output_path": "output/book-1/lesson-10/slides/assets/vocab-images/vocab-v001a-bangong.png",
+      "word": "办公",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show an office worker calmly doing paperwork at a desk with a laptop and documents, representing working in an office. No text, no labels, no numbers, no Chinese characters."
+    },
+    {
+      "id": "vocab-v002-zhiyuan",
+      "output_path": "output/book-1/lesson-10/slides/assets/vocab-images/vocab-v002-zhiyuan.png",
+      "word": "职员",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show a friendly university office staff member seated behind a reception desk, smiling professionally, with office folders and a computer. No text, no labels, no numbers, no Chinese characters."
+    },
+    {
+      "id": "vocab-v003-zhao",
+      "output_path": "output/book-1/lesson-10/slides/assets/vocab-images/vocab-v003-zhao.png",
+      "word": "找",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style, thin grey-blue outlines, muted pastel fills, white or very pale grey background. Show a person looking for something in a park, scanning around with a searching facial expression; trees and path in background. No text, no labels, no numbers, no Chinese characters, no watermark."
+    },
+    {
+      "id": "vocab-v004-zai",
+      "output_path": "output/book-1/lesson-10/slides/assets/vocab-images/vocab-v004-zai.png",
+      "word": "在",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show a clear location pin in a calm park to indicate being at this location. Keep it simple and symbolic. No text, no labels, no numbers, no Chinese characters, no watermark."
+    },
+    {
+      "id": "vocab-v005-jia",
+      "output_path": "output/book-1/lesson-10/slides/assets/vocab-images/vocab-v005-jia.png",
+      "word": "家",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show a warm simple home living room with sofa, small table, window, plant, and slippers near the entrance; clearly represents home. No text, no labels, no numbers, no Chinese characters."
+    },
+    {
+      "id": "vocab-v006-ne",
+      "output_path": "output/book-1/lesson-10/slides/assets/vocab-images/vocab-v006-ne.png",
+      "word": "呢",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style, pale clean background. Show a simple classroom note card with the Vietnamese text “trợ từ” as the main image, indicating this is a grammar particle. Keep the card clean, centered, and readable. No Chinese characters, no watermark."
+    },
+    {
+      "id": "vocab-v007-zhu",
+      "output_path": "output/book-1/lesson-10/slides/assets/vocab-images/vocab-v007-zhu.png",
+      "word": "住",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show a person living somewhere: a cozy room or small home scene with a relaxed person and a location pin indicating their living place. No text, no labels, no numbers, no Chinese characters, no watermark."
+    },
+    {
+      "id": "vocab-v008-lou",
+      "output_path": "output/book-1/lesson-10/slides/assets/vocab-images/vocab-v008-lou.png",
+      "word": "楼",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show a clean multi-story apartment or school building with visible stacked floors and windows, but no written floor numbers. No text, no labels, no numbers, no Chinese characters."
+    },
+    {
+      "id": "vocab-v009-men",
+      "output_path": "output/book-1/lesson-10/slides/assets/vocab-images/vocab-v009-men.png",
+      "word": "门",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show a simple open door leading into a bright classroom or room, with a visible door handle and frame. No text, no labels, no numbers, no Chinese characters."
+    },
+    {
+      "id": "vocab-v010-fangjian",
+      "output_path": "output/book-1/lesson-10/slides/assets/vocab-images/vocab-v010-fangjian.png",
+      "word": "房间",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show a neat room with a bed, desk, lamp, chair, and window; calm student dorm or bedroom atmosphere. No text, no labels, no numbers, no Chinese characters."
+    },
+    {
+      "id": "vocab-v011-hao",
+      "output_path": "output/book-1/lesson-10/slides/assets/vocab-images/vocab-v011-hao.png",
+      "word": "号",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show random numbers on small colorful notes placed on a desk, clearly representing numbers. No Chinese characters, no watermark."
+    },
+    {
+      "id": "vocab-v012-zhidao",
+      "output_path": "output/book-1/lesson-10/slides/assets/vocab-images/vocab-v012-zhidao.png",
+      "word": "知道",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show a person realizing or knowing something, with a small light bulb icon above or near the head indicating understanding. No text, no labels, no numbers, no Chinese characters, no watermark."
+    },
+    {
+      "id": "vocab-v013-dianhua",
+      "output_path": "output/book-1/lesson-10/slides/assets/vocab-images/vocab-v013-dianhua.png",
+      "word": "电话",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show a simple desk telephone on an office desk with a small notebook and plant nearby, clearly representing telephone. No text, no labels, no numbers, no Chinese characters."
+    },
+    {
+      "id": "vocab-v013a-dian",
+      "output_path": "output/book-1/lesson-10/slides/assets/vocab-images/vocab-v013a-dian.png",
+      "word": "电",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show a wall outlet with a plugged-in phone charger and a small soft glow, clearly representing electricity, in a clean room setting. No text, no labels, no numbers, no Chinese characters."
+    },
+    {
+      "id": "vocab-v013b-hua",
+      "output_path": "output/book-1/lesson-10/slides/assets/vocab-images/vocab-v013b-hua.png",
+      "word": "话",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show a person talking with a conversation bubble containing the Vietnamese phrase “đang nói...” to indicate talking or saying something. No Chinese characters, no numbers, no watermark."
+    },
+    {
+      "id": "vocab-v014-haoma",
+      "output_path": "output/book-1/lesson-10/slides/assets/vocab-images/vocab-v014-haoma.png",
+      "word": "号码",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show random phone-number style digits on small notes placed on a desk, clearly representing a number/code. No Chinese characters, no watermark."
+    },
+    {
+      "id": "vocab-v015-ling",
+      "output_path": "output/book-1/lesson-10/slides/assets/vocab-images/vocab-v015-ling.png",
+      "word": "零（〇）",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show the number zero as the main subject, large and simple on a clean classroom desk scene. No Chinese characters, no labels, no watermark."
+    },
+    {
+      "id": "vocab-v016-shouji",
+      "output_path": "output/book-1/lesson-10/slides/assets/vocab-images/vocab-v016-shouji.png",
+      "word": "手机",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show a modern smartphone held in a student's hand with a blank screen, simple classroom desk background. No text, no labels, no numbers, no Chinese characters."
+    },
+    {
+      "id": "vocab-v016a-shou",
+      "output_path": "output/book-1/lesson-10/slides/assets/vocab-images/vocab-v016a-shou.png",
+      "word": "手",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show one natural human hand resting gently on a desk, palm and fingers clearly visible, natural proportions. No text, no labels, no numbers, no Chinese characters."
+    },
+    {
+      "id": "dialogue-topic",
+      "output_path": "output/book-1/lesson-10/slides/assets/photos/dialogue-topic.png",
+      "slide_use": "dialogue divider",
+      "prompt": "Soft educational textbook illustration, clean Lesson 01 style, vertical-friendly composition. Show a university office scene where a student politely asks a staff member for a teacher, with desk phone, folders, open office door, and hallway hints. No text, no labels, no numbers, no Chinese characters."
+    },
+    {
+      "id": "writing-hand",
+      "output_path": "output/book-1/lesson-10/slides/assets/photos/writing-hand.png",
+      "slide_use": "writing divider",
+      "prompt": "Soft educational textbook illustration, clean Lesson 01 style, vertical-friendly close-up. Show a human hand holding a pen and practicing Chinese character strokes in a square-grid notebook, but do not write a complete readable character. No labels, no watermark, no random text."
+    },
+    {
+      "id": "number-520",
+      "output_path": "output/book-1/lesson-10/slides/assets/culture-images/number-520.png",
+      "slide_use": "culture number slang 520",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show a warm phone-chat feeling about affection: a smartphone with a blank screen, two small hearts, and two students smiling shyly in a gentle classroom/campus scene. No text, no labels, no numbers, no Chinese characters."
+    },
+    {
+      "id": "number-666",
+      "output_path": "output/book-1/lesson-10/slides/assets/culture-images/number-666.png",
+      "slide_use": "culture number slang 666",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show classmates happily praising a student after doing something impressive, with thumbs-up gestures and cheerful faces. No text, no labels, no numbers, no Chinese characters."
+    },
+    {
+      "id": "sample-v007-ta-zhu-nar",
+      "output_path": "output/book-1/lesson-10/slides/assets/sample-images/sample-v007-ta-zhu-nar.png",
+      "slide_use": "sample sentence page 20 · 他住哪儿？",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. On a city street, show a person asking where a man lives; include a small thought bubble with a simple house and a small male avatar to suggest asking about his home. No text, no labels, no numbers, no Chinese characters."
+    },
+    {
+      "id": "sample-v008-shiba-lou",
+      "output_path": "output/book-1/lesson-10/slides/assets/sample-images/sample-v008-shiba-lou.png",
+      "slide_use": "sample sentence page 22 · 十八楼",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show the inside of an elevator with a clean button panel for twenty levels, and level 18 is softly shining to indicate the eighteenth floor. Keep it simple and classroom friendly. No labels or Chinese characters."
+    },
+    {
+      "id": "sample-v015-601",
+      "output_path": "output/book-1/lesson-10/slides/assets/sample-images/sample-v015-601.png",
+      "slide_use": "sample sentence page 40 · 601",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show a teacher sitting inside a university office with room number 601 clearly shown on or near the office door. No Chinese characters, no labels, no watermark."
+    },
+    {
+      "id": "sample-v016-phone-number",
+      "output_path": "output/book-1/lesson-10/slides/assets/sample-images/sample-v016-phone-number.png",
+      "slide_use": "sample sentence page 42 · 他的手机号码是多少？",
+      "prompt": "Soft educational textbook illustration, 16:9 landscape, Lesson 01 style. Show one person politely asking another person for a phone number, with a blank smartphone visible between them. No text, no labels, no Chinese characters, no watermark."
+    }
+  ]
+}

@@ -44,13 +44,14 @@ This design introduces a lesson-type routing layer between the pipeline entry po
                          ▼
 ┌─────────────────────────────────────────────────────────────┐
 │  Output (output/vp-database/{lesson-id}/)                   │
-│  01_lesson_list.csv                                         │
 │  02_content_items.csv                                       │
 │  03_lesson_structure.csv                                    │
 │  04_supplemental_activities.csv                             │
 │  05_game_suggestions.csv                                    │
 │  06_google_sheets_database.csv                              │
 │  vp_{textbook}_{lesson}_database.json                       │
+│                                                             │
+│  Book-level: output/book-{N}/lesson_list.csv                │
 └─────────────────────────────────────────────────────────────┘
 ```
 

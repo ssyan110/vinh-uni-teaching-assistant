@@ -1,0 +1,1048 @@
+{
+  "metadata": {
+    "lesson_type": "regular",
+    "pipeline_config_version": "1.0.0",
+    "generated_at": "2026-06-02T10:00:00+00:00",
+    "vp_scope": "steps 1-8 before teacher review",
+    "steps_completed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "steps_not_implemented": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "lesson_id": "lesson-02",
+    "source_pdf": "work/pdf-pages/",
+    "source_page_range": "31-36",
+    "slide_total": null,
+    "last_updated": "2026-06-02",
+    "slide_design_notes": "Slide structure TBD after teacher review. 14 vocabulary items.",
+    "finalized": false
+  },
+  "content_items": [
+    {
+      "record_id": "V001",
+      "source_page": 31,
+      "source_page_range": "31-32",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "忙",
+      "pinyin": "máng",
+      "vietnamese": "bận",
+      "english": "busy",
+      "word_type_vi": "tính từ",
+      "word_type_abbr": "形",
+      "han_viet": "mang",
+      "raw_source_text": "忙 (形) máng (mang) busy bận",
+      "teaching_order": 1,
+      "classroom_visibility": "student_visible",
+      "sample_sentence": {
+        "pinyin": "hěn máng",
+        "chinese_simplified": "很忙",
+        "vietnamese": "rất bận"
+      }
+    },
+    {
+      "record_id": "V002",
+      "source_page": 31,
+      "source_page_range": "31-32",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "吗",
+      "pinyin": "ma",
+      "vietnamese": "trợ từ nghi vấn",
+      "english": "(a particle used at the end of a question)",
+      "word_type_vi": "trợ từ",
+      "word_type_abbr": "助",
+      "han_viet": "ma",
+      "raw_source_text": "吗 (助) ma (ma) (a particle used at the end of a question) trợ từ nghi vấn",
+      "teaching_order": 2,
+      "classroom_visibility": "student_visible",
+      "sample_sentence": {
+        "pinyin": "nǐ hǎo ma",
+        "chinese_simplified": "你好吗",
+        "vietnamese": "Bạn khỏe không?"
+      },
+      "notes": "Thanh nhẹ (neutral tone) — không có dấu thanh"
+    },
+    {
+      "record_id": "V003",
+      "source_page": 31,
+      "source_page_range": "31-32",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "很",
+      "pinyin": "hěn",
+      "vietnamese": "rất",
+      "english": "very",
+      "word_type_vi": "phó từ",
+      "word_type_abbr": "副",
+      "han_viet": "ngận, hận",
+      "raw_source_text": "很 (副) hěn (ngận, hận) very rất",
+      "teaching_order": 3,
+      "classroom_visibility": "student_visible",
+      "sample_sentence": {
+        "pinyin": "hěn hǎo",
+        "chinese_simplified": "很好",
+        "vietnamese": "rất tốt"
+      }
+    },
+    {
+      "record_id": "V004",
+      "source_page": 31,
+      "source_page_range": "31-32",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "汉语",
+      "pinyin": "Hànyǔ",
+      "vietnamese": "tiếng Hán, tiếng Hoa",
+      "english": "Chinese; Chinese language",
+      "word_type_vi": "danh từ",
+      "word_type_abbr": "名",
+      "han_viet": "Hán ngữ",
+      "raw_source_text": "汉语 (名) Hànyǔ (Hán ngữ) Chinese; Chinese language tiếng Hán, tiếng Hoa",
+      "teaching_order": 4,
+      "classroom_visibility": "student_visible",
+      "sample_sentence": {
+        "pinyin": "xué Hànyǔ",
+        "chinese_simplified": "学汉语",
+        "vietnamese": "học tiếng Hán"
+      }
+    },
+    {
+      "record_id": "V005",
+      "source_page": 31,
+      "source_page_range": "31-32",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "难",
+      "pinyin": "nán",
+      "vietnamese": "khó",
+      "english": "hard; difficult",
+      "word_type_vi": "tính từ",
+      "word_type_abbr": "形",
+      "han_viet": "nan",
+      "raw_source_text": "难 (形) nán (nan) hard; difficult khó",
+      "teaching_order": 5,
+      "classroom_visibility": "student_visible",
+      "sample_sentence": {
+        "pinyin": "hěn nán",
+        "chinese_simplified": "很难",
+        "vietnamese": "rất khó"
+      }
+    },
+    {
+      "record_id": "V006",
+      "source_page": 32,
+      "source_page_range": "31-32",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "太",
+      "pinyin": "tài",
+      "vietnamese": "hơi, quá, lắm",
+      "english": "excessively; too; over",
+      "word_type_vi": "phó từ",
+      "word_type_abbr": "副",
+      "han_viet": "thái",
+      "raw_source_text": "太 (副) tài (thái) excessively; too; over hơi, quá, lắm",
+      "teaching_order": 6,
+      "classroom_visibility": "student_visible",
+      "sample_sentence": {
+        "pinyin": "tài nán",
+        "chinese_simplified": "太难",
+        "vietnamese": "quá khó"
+      }
+    },
+    {
+      "record_id": "V007",
+      "source_page": 32,
+      "source_page_range": "31-32",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "爸爸",
+      "pinyin": "bàba",
+      "vietnamese": "bố, ba",
+      "english": "dad",
+      "word_type_vi": "danh từ",
+      "word_type_abbr": "名",
+      "han_viet": "ba ba",
+      "raw_source_text": "爸爸 (名) bàba (ba ba) dad bố, ba",
+      "teaching_order": 7,
+      "classroom_visibility": "student_visible",
+      "sample_sentence": {
+        "pinyin": "wǒ bàba",
+        "chinese_simplified": "我爸爸",
+        "vietnamese": "bố tôi"
+      },
+      "notes": "Âm tiết thứ 2 đọc thanh nhẹ"
+    },
+    {
+      "record_id": "V008",
+      "source_page": 32,
+      "source_page_range": "31-32",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "妈妈",
+      "pinyin": "māma",
+      "vietnamese": "mẹ, má",
+      "english": "mum",
+      "word_type_vi": "danh từ",
+      "word_type_abbr": "名",
+      "han_viet": "ma ma",
+      "raw_source_text": "妈妈 (名) māma (ma ma) mum mẹ, má",
+      "teaching_order": 8,
+      "classroom_visibility": "student_visible",
+      "sample_sentence": {
+        "pinyin": "wǒ māma",
+        "chinese_simplified": "我妈妈",
+        "vietnamese": "mẹ tôi"
+      },
+      "notes": "Âm tiết thứ 2 đọc thanh nhẹ"
+    },
+    {
+      "record_id": "V009",
+      "source_page": 32,
+      "source_page_range": "31-32",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "他",
+      "pinyin": "tā",
+      "vietnamese": "anh ta, ông ấy",
+      "english": "he; him",
+      "word_type_vi": "đại từ",
+      "word_type_abbr": "代",
+      "han_viet": "tha",
+      "raw_source_text": "他 (代) tā (tha) he; him anh ta, ông ấy",
+      "teaching_order": 9,
+      "classroom_visibility": "student_visible",
+      "sample_sentence": {
+        "pinyin": "tā hěn máng",
+        "chinese_simplified": "他很忙",
+        "vietnamese": "anh ấy rất bận"
+      }
+    },
+    {
+      "record_id": "V010",
+      "source_page": 32,
+      "source_page_range": "31-32",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "她",
+      "pinyin": "tā",
+      "vietnamese": "cô ta, bà ấy",
+      "english": "she; her",
+      "word_type_vi": "đại từ",
+      "word_type_abbr": "代",
+      "han_viet": "tha",
+      "raw_source_text": "她 (代) tā (tha) she; her cô ta, bà ấy",
+      "teaching_order": 10,
+      "classroom_visibility": "student_visible",
+      "sample_sentence": {
+        "pinyin": "tā hěn hǎo",
+        "chinese_simplified": "她很好",
+        "vietnamese": "cô ấy rất tốt"
+      },
+      "notes": "Cùng pinyin với 他 nhưng khác chữ Hán. Giải thích sự khác biệt."
+    },
+    {
+      "record_id": "V011",
+      "source_page": 32,
+      "source_page_range": "31-32",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "男",
+      "pinyin": "nán",
+      "vietnamese": "nam giới, con trai",
+      "english": "male",
+      "word_type_vi": "tính từ",
+      "word_type_abbr": "形",
+      "han_viet": "nam",
+      "raw_source_text": "男 (形) nán (nam) male nam giới, con trai",
+      "teaching_order": 11,
+      "classroom_visibility": "student_visible",
+      "sample_sentence": {
+        "pinyin": "nán shēng",
+        "chinese_simplified": "男生",
+        "vietnamese": "nam sinh"
+      }
+    },
+    {
+      "record_id": "V012",
+      "source_page": 32,
+      "source_page_range": "31-32",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "哥哥",
+      "pinyin": "gēge",
+      "vietnamese": "anh trai",
+      "english": "elder brother",
+      "word_type_vi": "danh từ",
+      "word_type_abbr": "名",
+      "han_viet": "ca ca",
+      "raw_source_text": "哥哥 (名) gēge (ca ca) elder brother anh trai",
+      "teaching_order": 12,
+      "classroom_visibility": "student_visible",
+      "sample_sentence": {
+        "pinyin": "wǒ gēge",
+        "chinese_simplified": "我哥哥",
+        "vietnamese": "anh trai tôi"
+      },
+      "notes": "Âm tiết thứ 2 đọc thanh nhẹ"
+    },
+    {
+      "record_id": "V013",
+      "source_page": 32,
+      "source_page_range": "31-32",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "弟弟",
+      "pinyin": "dìdi",
+      "vietnamese": "em trai",
+      "english": "younger brother",
+      "word_type_vi": "danh từ",
+      "word_type_abbr": "名",
+      "han_viet": "đệ đệ",
+      "raw_source_text": "弟弟 (名) dìdi (đệ đệ) younger brother em trai",
+      "teaching_order": 13,
+      "classroom_visibility": "student_visible",
+      "sample_sentence": {
+        "pinyin": "wǒ dìdi",
+        "chinese_simplified": "我弟弟",
+        "vietnamese": "em trai tôi"
+      },
+      "notes": "Âm tiết thứ 2 đọc thanh nhẹ"
+    },
+    {
+      "record_id": "V014",
+      "source_page": 32,
+      "source_page_range": "31-32",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "妹妹",
+      "pinyin": "mèimei",
+      "vietnamese": "em gái",
+      "english": "younger sister",
+      "word_type_vi": "danh từ",
+      "word_type_abbr": "名",
+      "han_viet": "muội muội",
+      "raw_source_text": "妹妹 (名) mèimei (muội muội) younger sister em gái",
+      "teaching_order": 14,
+      "classroom_visibility": "student_visible",
+      "sample_sentence": {
+        "pinyin": "wǒ mèimei",
+        "chinese_simplified": "我妹妹",
+        "vietnamese": "em gái tôi"
+      },
+      "notes": "Âm tiết thứ 2 đọc thanh nhẹ"
+    },
+    {
+      "record_id": "T001",
+      "source_page": 31,
+      "source_page_range": "31",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Bài đọc",
+      "record_type": "text",
+      "chinese_simplified": "A: 你忙吗?\nB: 很忙。\nA: 汉语难吗?\nB: 不太难。",
+      "pinyin": "A: Nǐ máng ma?\nB: Hěn máng.\nA: Hànyǔ nán ma?\nB: Bù tài nán.",
+      "vietnamese": "A: Bạn bận không?\nB: Rất bận.\nA: Tiếng Hán khó không?\nB: Không khó lắm.",
+      "english": "A: Are you busy?\nB: Very busy.\nA: Is Chinese hard?\nB: Not too hard.",
+      "dialogue_roles": [
+        "A",
+        "B"
+      ],
+      "raw_source_text": "课文: A: 你忙吗? B: 很忙。A: 汉语难吗? B: 不太难。",
+      "teaching_order": 15,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "N001",
+      "source_page": 33,
+      "source_page_range": "33-34",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Ngữ âm",
+      "record_type": "phonetics_note",
+      "chinese_simplified": "轻声",
+      "pinyin": "qīngshēng",
+      "vietnamese": "Thanh nhẹ (neutral tone)",
+      "english": "The neutral tone",
+      "description_vi": "Một số âm tiết trong tiếng Hán không mang thanh điệu, đọc rất nhẹ và ngắn. Độ cao của thanh nhẹ thay đổi tùy thuộc vào thanh điệu âm tiết đứng trước.",
+      "examples": [
+        "māma",
+        "bàba",
+        "dìdi",
+        "gēge",
+        "mèimei",
+        "nǐmen",
+        "tā de"
+      ],
+      "raw_source_text": "注释: 轻声 The neutral tone Thanh nhẹ",
+      "teaching_order": 16,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "N002",
+      "source_page": 33,
+      "source_page_range": "33-34",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Ngữ âm",
+      "record_type": "phonetics_note",
+      "chinese_simplified": "半三声",
+      "pinyin": "bàn sān shēng",
+      "vietnamese": "Nửa thanh ba (half 3rd tone)",
+      "english": "The half 3rd tone",
+      "description_vi": "Khi sau âm tiết thanh 3 là âm tiết thanh 1, 2, 4 hoặc thanh nhẹ, âm tiết đó chỉ đọc nửa phần xuống, không đọc phần lên. Đọc liền ngay sang âm tiết sau.",
+      "examples": [
+        "hěn máng",
+        "hěn nán",
+        "hěn dà",
+        "hǎo ma",
+        "nǐ hē",
+        "nǐ lái",
+        "mǐfàn",
+        "hǎo le"
+      ],
+      "raw_source_text": "注释: 半三声 The half 3rd tone Nửa thanh ba",
+      "teaching_order": 17,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "E001",
+      "source_page": 34,
+      "source_page_range": "34-35",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Bài tập",
+      "record_type": "exercise",
+      "exercise_type": "tone_reading",
+      "chinese_simplified": "声调练习",
+      "pinyin": "shēngdiào liànxí",
+      "vietnamese": "Luyện thanh điệu",
+      "instructions_vi": "Đọc các âm tiết với thanh điệu đúng: tā/tá/tǎ/tà, máng, hěn, nán, Hànyǔ, bàba, māma, gēge, mèimei, dìdi",
+      "raw_source_text": "声调 Tones Thanh điệu",
+      "teaching_order": 18,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "E002",
+      "source_page": 34,
+      "source_page_range": "34-35",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Bài tập",
+      "record_type": "exercise",
+      "exercise_type": "neutral_tone",
+      "chinese_simplified": "轻声练习",
+      "pinyin": "qīngshēng liànxí",
+      "vietnamese": "Luyện thanh nhẹ",
+      "instructions_vi": "Đọc các từ có thanh nhẹ: māma, gēge, tā de, tāmen, hóng de, máng ma, tài ma, bái de, nǎinai, hǎo ma, bǎo le, pǎo le, dìdi, mèimei, lèi ma, lèi le",
+      "raw_source_text": "轻声 The neutral tone Thanh nhẹ",
+      "teaching_order": 19,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "E003",
+      "source_page": 34,
+      "source_page_range": "34-35",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Bài tập",
+      "record_type": "exercise",
+      "exercise_type": "half_third_tone",
+      "chinese_simplified": "半三声练习",
+      "pinyin": "bàn sān shēng liànxí",
+      "vietnamese": "Luyện nửa thanh ba",
+      "instructions_vi": "Đọc các từ có nửa thanh ba: hěn gāo, hěn nán, hěn dà, hǎo ba, nǐ hē, nǐ lái, mǐfàn, hǎo le, bǎn bān, bèn lái, hěn bàng, hěn pàng",
+      "raw_source_text": "半三声 The half 3rd tone Nửa thanh ba",
+      "teaching_order": 20,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "E004",
+      "source_page": 35,
+      "source_page_range": "34-36",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Bài tập",
+      "record_type": "exercise",
+      "exercise_type": "pronunciation_discrimination",
+      "chinese_simplified": "辨音辨调",
+      "pinyin": "biànyīn biàndiào",
+      "vietnamese": "Phân biệt âm, thanh điệu",
+      "instructions_vi": "Nghe và phân biệt: bàn gōng/bàn kōng, dòng hóng/tóng hóng, hěn nán/hěn lán, hán lěng/kě néng, hěn máng/hěn mán, nán fāng/nán fáng",
+      "raw_source_text": "辨音辨调 Pronunciations and tones Phân biệt âm, thanh điệu",
+      "teaching_order": 21,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "E005",
+      "source_page": 35,
+      "source_page_range": "34-36",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Bài tập",
+      "record_type": "exercise",
+      "exercise_type": "read_and_recognize",
+      "chinese_simplified": "认读",
+      "pinyin": "rèndú",
+      "vietnamese": "Nhận biết chữ Hán và đọc",
+      "instructions_vi": "Đọc và nhận biết: 爸爸, 妈妈, 好吗, 忙吗, 难吗, 很好, 很忙, 很大, 很难. Hội thoại: 你好吗?很好! 你忙吗?很忙。汉语难吗?汉语不难。",
+      "raw_source_text": "认读 Read and learn Nhận biết chữ Hán và đọc",
+      "teaching_order": 22,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "E006",
+      "source_page": 35,
+      "source_page_range": "34-36",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Bài tập",
+      "record_type": "exercise",
+      "exercise_type": "answer_questions",
+      "chinese_simplified": "回答问题",
+      "pinyin": "huídá wèntí",
+      "vietnamese": "Trả lời câu hỏi",
+      "instructions_vi": "Trả lời các câu hỏi: (1) Nǐ máng ma? (2) Hànyǔ nán ma? (3) Nǐ bàba hǎo ma? (4) Tā máng ma?",
+      "questions": [
+        {
+          "q": "Nǐ máng ma?",
+          "expected_pattern": "Hěn máng / Bù máng / Bù tài máng"
+        },
+        {
+          "q": "Hànyǔ nán ma?",
+          "expected_pattern": "Hěn nán / Bù nán / Bù tài nán"
+        },
+        {
+          "q": "Nǐ bàba hǎo ma?",
+          "expected_pattern": "Tā hěn hǎo"
+        },
+        {
+          "q": "Tā máng ma?",
+          "expected_pattern": "Tā hěn máng / Tā bù máng"
+        }
+      ],
+      "raw_source_text": "回答问题 Answer the questions Trả lời câu hỏi",
+      "teaching_order": 23,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "E007",
+      "source_page": 35,
+      "source_page_range": "34-36",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Bài tập",
+      "record_type": "exercise",
+      "exercise_type": "complete_dialogue",
+      "chinese_simplified": "完成会话",
+      "pinyin": "wánchéng huìhuà",
+      "vietnamese": "Hoàn thành hội thoại",
+      "instructions_vi": "Điền phần thiếu trong hội thoại",
+      "dialogues": [
+        {
+          "A": "___!",
+          "B": "Nǐ hǎo!",
+          "expected_A": "Nǐ hǎo"
+        },
+        {
+          "A": "___?",
+          "B": "Hěn máng.",
+          "expected_A": "Nǐ máng ma"
+        },
+        {
+          "A": "___?",
+          "B": "Hànyǔ bù nán.",
+          "expected_A": "Hànyǔ nán ma"
+        }
+      ],
+      "raw_source_text": "完成会话 Complete the dialogues Hoàn thành hội thoại",
+      "teaching_order": 24,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "E008",
+      "source_page": 36,
+      "source_page_range": "34-36",
+      "source_pdf": "work/pdf-pages/",
+      "section": "Bài tập",
+      "record_type": "exercise",
+      "exercise_type": "character_writing",
+      "chinese_simplified": "写汉字",
+      "pinyin": "xiě hànzì",
+      "vietnamese": "Tập viết chữ Hán",
+      "instructions_vi": "Tập viết các chữ Hán theo thứ tự nét",
+      "characters_to_write": [
+        "他",
+        "她",
+        "忙",
+        "吗",
+        "很",
+        "难",
+        "太",
+        "男"
+      ],
+      "raw_source_text": "写汉字 Learn to write Tập viết chữ Hán",
+      "teaching_order": 25,
+      "classroom_visibility": "student_visible",
+      "notes": "Cần xác nhận danh sách chữ chính xác khi review (OCR trang 36 bị mờ)"
+    }
+  ],
+  "lesson_structure": [
+    {
+      "module_order": 1,
+      "module_id": "cover",
+      "module_name_vi": "Trang bìa",
+      "module_name_zh": "封面",
+      "source_page": null,
+      "status": "pending_review",
+      "notes": "Trang bìa bài học"
+    },
+    {
+      "module_order": 2,
+      "module_id": "objectives",
+      "module_name_vi": "Mục tiêu bài học",
+      "module_name_zh": "学习目标",
+      "source_page": null,
+      "status": "pending_review",
+      "notes": "Mục tiêu: dùng 吗 đặt câu hỏi, trả lời với 很/不/不太, gọi tên thành viên gia đình, nắm thanh nhẹ và nửa thanh ba"
+    },
+    {
+      "module_order": 3,
+      "module_id": "warmup",
+      "module_name_vi": "Khởi động",
+      "module_name_zh": "暖身活动",
+      "source_page": null,
+      "status": "pending_review",
+      "notes": "Ôn bài 1 (你好) + dẫn vào bài 2 (你忙吗?)"
+    },
+    {
+      "module_order": 4,
+      "module_id": "vocabulary",
+      "module_name_vi": "Từ vựng",
+      "module_name_zh": "生词",
+      "source_page": 31,
+      "source_page_range": "31-32",
+      "status": "extracted",
+      "content_ids": [
+        "V001",
+        "V002",
+        "V003",
+        "V004",
+        "V005",
+        "V006",
+        "V007",
+        "V008",
+        "V009",
+        "V010",
+        "V011",
+        "V012",
+        "V013",
+        "V014"
+      ],
+      "notes": "14 từ vựng. Mỗi từ 1 slide vocab + 1 slide mẫu câu."
+    },
+    {
+      "module_order": 5,
+      "module_id": "vocabulary_practice_divider",
+      "module_name_vi": "Tập từ vựng",
+      "module_name_zh": "词汇练习",
+      "source_page": null,
+      "status": "pending_review",
+      "notes": "Divider: TẬP TỪ VỰNG / 词汇练习"
+    },
+    {
+      "module_order": 6,
+      "module_id": "vocab_summary",
+      "module_name_vi": "Ôn tập từ vựng",
+      "module_name_zh": "词汇小测",
+      "source_page": null,
+      "status": "pending_review",
+      "notes": "Mini quiz từ vựng: 14 từ chia 3 slides (01-05, 06-10, 11-14). Click để hiện đáp án."
+    },
+    {
+      "module_order": 7,
+      "module_id": "comprehensive_practice_divider",
+      "module_name_vi": "Luyện tập tổng hợp",
+      "module_name_zh": "综合练习",
+      "source_page": null,
+      "status": "pending_review",
+      "notes": "Divider: LUYỆN TẬP TỔNG HỢP / 综合练习"
+    },
+    {
+      "module_order": 8,
+      "module_id": "vocabulary_practice",
+      "module_name_vi": "Luyện từ vựng",
+      "module_name_zh": "词汇练习",
+      "source_page": null,
+      "status": "pending_review",
+      "notes": "Flashcard + luyện câu hỏi 吗 + 不太 + gia đình"
+    },
+    {
+      "module_order": 9,
+      "module_id": "text",
+      "module_name_vi": "Bài đọc",
+      "module_name_zh": "课文",
+      "source_page": 31,
+      "source_page_range": "31",
+      "status": "extracted",
+      "content_ids": [
+        "T001"
+      ],
+      "notes": "Hội thoại: 你忙吗? 很忙。汉语难吗? 不太难。"
+    },
+    {
+      "module_order": 10,
+      "module_id": "stroke_writing",
+      "module_name_vi": "Tập viết chữ Hán",
+      "module_name_zh": "写汉字",
+      "source_page": 36,
+      "source_page_range": "36",
+      "status": "extracted",
+      "content_ids": [
+        "E008"
+      ],
+      "notes": "Chữ Hán bài 2 — cần xác nhận danh sách chính xác khi review (trang 36 OCR mờ)"
+    },
+    {
+      "module_order": 11,
+      "module_id": "culture",
+      "module_name_vi": "Văn hóa bổ sung",
+      "module_name_zh": "文化补充",
+      "source_page": null,
+      "status": "pending_review",
+      "notes": "Cách gọi thành viên gia đình trong tiếng Trung — so sánh với tiếng Việt"
+    },
+    {
+      "module_order": 12,
+      "module_id": "homework_intro",
+      "module_name_vi": "Giới thiệu bài tập về nhà",
+      "module_name_zh": "课后作业说明",
+      "source_page": 34,
+      "source_page_range": "34-36",
+      "status": "extracted",
+      "content_ids": [
+        "E001",
+        "E002",
+        "E003",
+        "E004",
+        "E005",
+        "E006",
+        "E007",
+        "E008"
+      ],
+      "notes": "8 bài tập trong sách (trang 34-36)"
+    },
+    {
+      "module_order": 13,
+      "module_id": "closing",
+      "module_name_vi": "Kết thúc",
+      "module_name_zh": "结束",
+      "source_page": null,
+      "status": "pending_review",
+      "notes": "Slide kết thúc bài học"
+    }
+  ],
+  "supplemental_activities": [
+    {
+      "activity_id": "ACT001",
+      "module_target": "warmup",
+      "activity_type": "warmup",
+      "title_vi": "Bạn hôm nay bận không? Thử trả lời bằng tiếng Trung!",
+      "title_zh": "你今天忙吗？试试用中文回答！",
+      "description_vi": "Giáo viên hỏi sinh viên: Hôm nay bạn bận không? Gợi ý dùng 忙/不忙 để trả lời. Ôn lại 你好 từ bài 1.",
+      "duration_minutes": 3,
+      "interaction_mode": "whole_class",
+      "materials_needed": null
+    },
+    {
+      "activity_id": "ACT002",
+      "module_target": "vocabulary_practice",
+      "activity_type": "vocabulary_drill",
+      "title_vi": "Ghép thẻ: Chữ Hán ↔ Pinyin ↔ Nghĩa tiếng Việt",
+      "title_zh": "闪卡配对：汉字 ↔ 拼音 ↔ 越南语",
+      "description_vi": "Sinh viên ghép thẻ chữ Hán với pinyin và nghĩa tiếng Việt. 14 từ vựng bài 2.",
+      "duration_minutes": 5,
+      "interaction_mode": "pair_work",
+      "materials_needed": "Bộ thẻ flashcard 14 từ vựng bài 2",
+      "vocabulary_ids": [
+        "V001",
+        "V002",
+        "V003",
+        "V004",
+        "V005",
+        "V006",
+        "V007",
+        "V008",
+        "V009",
+        "V010",
+        "V011",
+        "V012",
+        "V013",
+        "V014"
+      ]
+    },
+    {
+      "activity_id": "ACT003",
+      "module_target": "vocabulary_practice",
+      "activity_type": "vocabulary_drill",
+      "title_vi": "Hỏi đáp với 吗: luyện câu hỏi Yes/No",
+      "title_zh": "用「吗」提问：练习是非问句",
+      "description_vi": "Giáo viên đưa từ (忙, 难, 好), sinh viên đặt câu hỏi với 吗 và trả lời. Cấu trúc: X + 吗? → 很X / 不X.",
+      "duration_minutes": 5,
+      "interaction_mode": "pair_work",
+      "materials_needed": null,
+      "vocabulary_ids": [
+        "V001",
+        "V002",
+        "V003",
+        "V005"
+      ]
+    },
+    {
+      "activity_id": "ACT004",
+      "module_target": "vocabulary_practice",
+      "activity_type": "vocabulary_drill",
+      "title_vi": "Gia đình tôi: giới thiệu thành viên gia đình",
+      "title_zh": "我的家人：介绍家庭成员",
+      "description_vi": "Sinh viên dùng 他/她 + vai trò gia đình (爸爸/妈妈/哥哥/弟弟/妹妹) để giới thiệu.",
+      "duration_minutes": 5,
+      "interaction_mode": "pair_work",
+      "materials_needed": "Ảnh gia đình (tùy chọn)",
+      "vocabulary_ids": [
+        "V007",
+        "V008",
+        "V009",
+        "V010",
+        "V012",
+        "V013",
+        "V014"
+      ]
+    },
+    {
+      "activity_id": "ACT005",
+      "module_target": "vocabulary_practice",
+      "activity_type": "vocabulary_drill",
+      "title_vi": "Cấu trúc 不太...: nói giảm nhẹ",
+      "title_zh": "不太……：委婉表达",
+      "description_vi": "Giáo viên đưa tính từ (难, 忙, 好), sinh viên luyện nói giảm nhẹ với 不太. So sánh: 不难 vs 不太难.",
+      "duration_minutes": 4,
+      "interaction_mode": "whole_class",
+      "materials_needed": null,
+      "vocabulary_ids": [
+        "V001",
+        "V005",
+        "V006"
+      ]
+    },
+    {
+      "activity_id": "ACT006",
+      "module_target": "text_preview",
+      "activity_type": "text_preview",
+      "title_vi": "Nghe hội thoại bài 2, đoán nội dung",
+      "title_zh": "听第二课对话，猜内容",
+      "description_vi": "Giáo viên đọc mẫu hội thoại. Sinh viên đoán: Họ nói về chuyện gì? Ai bận? Cái gì không khó?",
+      "duration_minutes": 3,
+      "interaction_mode": "whole_class",
+      "materials_needed": "Audio file hoặc giáo viên đọc mẫu"
+    },
+    {
+      "activity_id": "ACT007",
+      "module_target": "culture",
+      "activity_type": "culture_supplement",
+      "title_vi": "Cách gọi thành viên gia đình trong tiếng Trung",
+      "title_zh": "中文家庭成员称呼",
+      "description_vi": "So sánh: tiếng Việt (anh/chị/em) vs tiếng Trung (哥哥/姐姐/弟弟/妹妹). Tiếng Trung phân biệt rõ giới tính và thứ bậc.",
+      "duration_minutes": 5,
+      "interaction_mode": "whole_class",
+      "materials_needed": null
+    },
+    {
+      "activity_id": "ACT008",
+      "module_target": "discussion",
+      "activity_type": "discussion",
+      "title_vi": "Bạn có anh chị em không? Họ bận không?",
+      "title_zh": "你有兄弟姐妹吗？他们忙吗？",
+      "description_vi": "Sinh viên chia sẻ về gia đình: Có mấy anh chị em? Họ làm gì? Luyện dùng 他/她 + 很忙/不忙.",
+      "duration_minutes": 5,
+      "interaction_mode": "pair_work",
+      "materials_needed": null
+    }
+  ],
+  "game_suggestions": [
+    {
+      "game_id": "G001",
+      "linked_activity_id": "ACT002",
+      "game_name": "Flashcard Race",
+      "game_name_vi": "Đua thẻ từ vựng",
+      "platform": "Blooket",
+      "description_vi": "Ghép chữ Hán với pinyin và nghĩa tiếng Việt. 14 từ vựng bài 2.",
+      "question_count": 14,
+      "estimated_minutes": 5,
+      "difficulty": "beginner",
+      "vocabulary_ids": [
+        "V001",
+        "V002",
+        "V003",
+        "V004",
+        "V005",
+        "V006",
+        "V007",
+        "V008",
+        "V009",
+        "V010",
+        "V011",
+        "V012",
+        "V013",
+        "V014"
+      ]
+    },
+    {
+      "game_id": "G002",
+      "linked_activity_id": "ACT003",
+      "game_name": "吗 Question Game",
+      "game_name_vi": "Trò chơi đặt câu hỏi 吗",
+      "platform": "Blooket",
+      "description_vi": "Cho câu trả lời (很忙/不难/很好), sinh viên chọn câu hỏi đúng với 吗.",
+      "question_count": 10,
+      "estimated_minutes": 5,
+      "difficulty": "beginner",
+      "vocabulary_ids": [
+        "V001",
+        "V002",
+        "V003",
+        "V005"
+      ]
+    },
+    {
+      "game_id": "G003",
+      "linked_activity_id": "ACT004",
+      "game_name": "Family Members",
+      "game_name_vi": "Đoán thành viên gia đình",
+      "platform": "Blooket",
+      "description_vi": "Cho mô tả thành viên gia đình, sinh viên chọn từ tiếng Trung đúng.",
+      "question_count": 10,
+      "estimated_minutes": 5,
+      "difficulty": "beginner",
+      "vocabulary_ids": [
+        "V007",
+        "V008",
+        "V009",
+        "V010",
+        "V011",
+        "V012",
+        "V013",
+        "V014"
+      ]
+    },
+    {
+      "game_id": "G004",
+      "linked_activity_id": "ACT005",
+      "game_name": "不太... Softener",
+      "game_name_vi": "Nói giảm nhẹ với 不太",
+      "platform": "Blooket",
+      "description_vi": "Cho câu phủ định mạnh, sinh viên chọn cách nói nhẹ hơn với 不太.",
+      "question_count": 8,
+      "estimated_minutes": 4,
+      "difficulty": "beginner",
+      "vocabulary_ids": [
+        "V001",
+        "V005",
+        "V006"
+      ]
+    }
+  ],
+  "phonetics": {
+    "source_page": 32,
+    "source_page_range": "32-33",
+    "new_finals": [
+      "an",
+      "en",
+      "ang",
+      "eng",
+      "ong"
+    ],
+    "initial_final_table": {
+      "b": {
+        "an": "ban",
+        "en": "ben",
+        "ang": "bang",
+        "eng": "beng"
+      },
+      "d": {
+        "an": "dan",
+        "ang": "dang",
+        "eng": "deng",
+        "ong": "dong"
+      },
+      "t": {
+        "an": "tan",
+        "ang": "tang",
+        "eng": "teng",
+        "ong": "tong"
+      },
+      "l": {
+        "an": "lan",
+        "ang": "lang",
+        "eng": "leng",
+        "ong": "long"
+      },
+      "g": {
+        "an": "gan",
+        "en": "gen",
+        "ang": "gang",
+        "eng": "geng",
+        "ong": "gong"
+      },
+      "k": {
+        "an": "kan",
+        "ang": "kang",
+        "eng": "keng",
+        "ong": "kong"
+      },
+      "h": {
+        "an": "han",
+        "en": "hen",
+        "ang": "hang",
+        "eng": "heng",
+        "ong": "hong"
+      }
+    },
+    "notes_vi": "Bài 2 giới thiệu 5 vận mẫu mới: an, en, ang, eng, ong. Lưu ý: a trong an đọc [a], a trong ang đọc [ɑ]. e trong en/eng đọc [ə]. o trong ong đọc [u]."
+  },
+  "review_checklist": {
+    "items_to_verify": [
+      "Kiểm tra pinyin chính xác: máng (thanh 2), nán (thanh 2), tài (thanh 4)",
+      "Xác nhận hán việt: 很 = ngận hay hận? (sách ghi ngận, hận — cần chọn 1)",
+      "Xác nhận danh sách chữ viết trang 36 (OCR mờ — cần kiểm tra bản gốc)",
+      "Kiểm tra thứ tự dạy: nhóm tính từ/phó từ trước hay nhóm gia đình trước?",
+      "Xác nhận: 男 trong sách là tính từ (形) hay danh từ (名)?",
+      "Kiểm tra mẫu câu 汉语: dùng 学汉语 hay dùng ví dụ khác từ sách?",
+      "Xác nhận: thanh điệu 难 là nán (thanh 2) — sách ghi nán",
+      "Phần ngữ âm (trang 32): bảng vận mẫu có đủ không?",
+      "Hoạt động bổ sung: phù hợp với trình độ sinh viên không?"
+    ],
+    "ocr_quality_notes": "Trang 36 (写汉字) OCR chất lượng thấp — chỉ nhận được phần đầu. Cần đối chiếu trực tiếp với sách in."
+  }
+}

@@ -1,0 +1,5 @@
+game_id,linked_activity_id,game_name,game_name_vi,platform,description_vi,question_count,estimated_minutes,difficulty,vocabulary_ids
+G001,ACT002,Flashcard Race,Đua thẻ từ vựng,Blooket,"Ghép chữ Hán với pinyin và nghĩa tiếng Việt. Thi đua theo thời gian, ai nhanh nhất thắng.",14,5,beginner,"V001,V002,V003,V004,V005,V006,V007,V008,V009,V010,V011,V012,V013,V014"
+G002,ACT003,吗 Question Game,Trò chơi đặt câu hỏi 吗,Blooket,"Cho một câu trả lời (很忙/不难/很好), sinh viên chọn câu hỏi đúng với 吗.",10,5,beginner,"V001,V002,V003,V005"
+G003,ACT004,Family Members,Đoán thành viên gia đình,Blooket,"Cho hình ảnh/mô tả thành viên gia đình, sinh viên chọn từ tiếng Trung đúng (爸爸/妈妈/哥哥/弟弟/妹妹).",10,5,beginner,"V007,V008,V009,V010,V011,V012,V013,V014"
+G004,ACT005,不太... Softener,Nói giảm nhẹ với 不太,Blooket,"Cho câu phủ định mạnh (不难/不忙), sinh viên chọn cách nói nhẹ hơn (不太难/不太忙). Luyện sắc thái.",8,4,beginner,"V001,V005,V006"

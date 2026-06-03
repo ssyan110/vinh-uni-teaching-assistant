@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=960,height=540"><title>Tập viết · 有</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet"><script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script><link rel="stylesheet" href="assets/slide-base.css"><style>
+.stroke-title{position:absolute;left:58px;top:78px;font-size:22pt;font-weight:800}.stroke-card{position:absolute;left:50%;top:112px;transform:translateX(-50%);width:420px;height:370px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px 30px}.writer-target{width:230px;height:230px;position:relative;border:2px solid #999;background:#fafafa}.writer-target::before,.writer-target::after{content:"";position:absolute;pointer-events:none;z-index:0}.writer-target::before{top:50%;left:5%;right:5%;height:0;border-top:1.5px dashed #ccc}.writer-target::after{left:50%;top:5%;bottom:5%;width:0;border-left:1.5px dashed #ccc}.stroke-meta{text-align:center;margin-top:4px}.stroke-meta .pinyin{font-size:18pt}.meaning{font-size:13.5pt;color:#4A6080;margin-top:4px}.hv{font-size:11.5pt;color:#8A9AB0;font-style:italic;margin-top:3px}.animate-btn{margin-top:12px;border:0;border-radius:18px;background:#5AACAC;color:#fff;padding:8px 18px;font-weight:800;cursor:pointer}.fallback-char{font-family:'Noto Sans SC';font-size:130px;font-weight:900;color:#1A3A5A;text-align:center}
+</style></head><body><div class="slide"><div class="menu-bar"><span class="menu-icon"><i data-lucide="pen-line"></i></span><span class="section-label">TẬP VIẾT</span></div><div class="page-indicator">Trang 84</div>
+    <div class="stroke-card card">
+      <div id="writer-target" class="writer-target" data-char="有"></div>
+      <div class="stroke-meta">
+        <div class="pinyin">yǒu</div>
+        <div class="meaning">có</div>
+        <div class="hv">(有)</div>
+      </div>
+    </div>
+    <script src="assets/js/hanzi-writer.min.js"></script>
+    <script>
+      let writer; window.lessonWriter = null;
+      const embeddedCharData = {"strokes":["M 472 626 Q 601 647 868 646 Q 890 646 896 656 Q 902 669 883 684 Q 817 730 754 712 Q 714 705 486 666 L 435 659 Q 306 644 162 625 Q 138 622 156 603 Q 190 572 233 581 Q 321 606 421 619 L 472 626 Z","M 411 492 Q 442 549 472 626 L 486 666 Q 513 750 539 800 Q 546 810 540 821 Q 533 831 500 849 Q 476 861 466 857 Q 453 853 455 837 Q 465 753 437 664 Q 436 663 435 659 L 421 619 Q 354 462 198 305 Q 149 259 79 199 Q 72 190 78 188 Q 87 185 98 191 Q 291 290 388 451 L 411 492 Z","M 426 226 Q 430 283 435 324 L 438 351 Q 442 421 448 444 Q 449 451 449 456 C 451 474 451 474 427 485 Q 418 491 411 492 C 383 504 381 480 388 451 Q 418 337 366 150 Q 356 120 344 99 Q 323 63 353 17 L 355 15 Q 362 0 372 6 Q 408 27 424 197 L 426 226 Z","M 449 456 Q 525 472 604 489 Q 625 495 630 484 Q 651 429 649 119 Q 643 50 639 43 Q 635 37 615 41 Q 587 48 559 55 Q 540 61 540 51 Q 598 2 631 -35 Q 644 -54 660 -58 Q 670 -62 678 -52 Q 717 -1 716 52 Q 680 424 707 473 Q 719 492 707 503 Q 685 522 648 536 Q 629 543 614 536 Q 542 497 427 485 C 397 481 420 450 449 456 Z","M 435 324 Q 441 323 452 324 Q 531 337 590 346 Q 615 350 605 364 Q 593 379 567 383 Q 536 386 438 351 C 410 341 405 326 435 324 Z","M 424 197 Q 428 197 435 197 Q 526 209 593 215 Q 618 218 609 232 Q 599 248 572 253 Q 539 259 426 226 C 397 218 394 197 424 197 Z"],"medians":[[[159,614],[213,605],[502,652],[789,682],[883,663]],[[470,842],[497,805],[484,745],[443,612],[386,497],[329,411],[251,324],[169,252],[83,193]],[[412,482],[418,471],[420,419],[414,294],[397,163],[370,73],[367,16]],[[436,484],[456,474],[484,478],[626,515],[656,500],[670,483],[671,314],[681,115],[677,34],[659,2],[628,10],[550,48]],[[439,330],[454,342],[548,361],[595,357]],[[430,204],[442,213],[482,223],[552,233],[598,226]]],"radStrokes":[2,3,4,5]};
+      function fallbackChar(ch){ document.getElementById('writer-target').innerHTML='<div class="fallback-char">'+ch+'</div>'; }
+      function initWriter(){
+        const el=document.getElementById('writer-target');
+        const ch=el.dataset.char;
+        if(!window.HanziWriter){ fallbackChar(ch); return; }
+        writer=HanziWriter.create('writer-target', ch, {
+          width: 230, height: 230, padding: 18, showOutline: true, showCharacter: false,
+          strokeAnimationSpeed: 0.575, delayBetweenStrokes: 360,
+          charDataLoader: function(char, onComplete){ onComplete(embeddedCharData); }
+        });
+        window.lessonWriter = writer;
+        setTimeout(()=>{ if(writer) writer.animateCharacter(); }, 500);
+      }
+      function playStroke(){ if(writer) writer.animateCharacter(); }
+      initWriter();
+    </script>
+  </div><script src="assets/slide-base.js"></script></body></html>

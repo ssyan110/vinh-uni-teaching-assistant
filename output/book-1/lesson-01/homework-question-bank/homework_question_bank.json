@@ -1,0 +1,362 @@
+{
+  "metadata": {
+    "lesson_id": "lesson-01",
+    "lesson_title": "第一课 · 你好 · Bài 1 · Xin chào",
+    "generated_at": "2026-05-28T12:44:34.557253+00:00",
+    "status": "draft_for_teacher_review",
+    "source_database": "database/vp_lesson_01_database.json",
+    "design_basis": "Adam requested focused Lesson 1 homework plus skill-required additions: all-vocab pinyin choice, randomized 1-10 matching, 很→不 pattern practice, all-vocab hanzi retrieval, dialogue completion, short output.",
+    "revision_note": "Added skill-recommended exercises Q004-Q006. Q004 covers all 12 lesson vocabularies with Vietnamese + pinyin prompts for hanzi writing.",
+    "item_count": 6,
+    "response_action_count": 40,
+    "estimated_total_minutes": 27.0,
+    "skill_distribution": {
+      "pinyin": 1,
+      "vocabulary": 1,
+      "grammar": 1,
+      "hanzi": 1,
+      "text_comprehension": 1,
+      "integrated": 1
+    },
+    "bloom_distribution": {
+      "Remember": 2,
+      "Apply": 4
+    },
+    "delivery_distribution": {
+      "Google Forms": 1,
+      "Google Forms / Printable PDF": 3,
+      "Printable PDF / Formative": 1,
+      "Formative audio / Printable PDF": 1
+    },
+    "required_safeguards": {
+      "all_12_vocab_in_pinyin_practice": true,
+      "numbers_1_to_10_included": true,
+      "number_right_column_randomized": true,
+      "pattern_practice_hen_to_bu_included": true,
+      "all_12_vocab_in_hanzi_retrieval": true,
+      "has_hanzi_retrieval": true,
+      "has_short_output": true,
+      "has_dialogue_use": true,
+      "all_draft_for_review": true
+    }
+  },
+  "items": [
+    {
+      "question_id": "L01-HW-Q001",
+      "lesson_id": "lesson-01",
+      "source_page_range": "1-2, 10-12",
+      "skill_area": "pinyin",
+      "bloom_level": "Remember",
+      "delivery_mode": "Google Forms",
+      "question_type": "pinyin_choice_all_vocab",
+      "prompt_vi": "Nhìn chữ Hán và chọn pinyin đúng. Bao gồm toàn bộ 12 từ/cụm từ của bài.",
+      "prompt_zh": "",
+      "student_input_type": "multiple_choice_grid",
+      "options": {
+        "① 你": [
+          "nī",
+          "ní",
+          "nǐ",
+          "nì"
+        ],
+        "② 好": [
+          "hāo",
+          "háo",
+          "hǎo",
+          "hào"
+        ],
+        "③ 你好": [
+          "nǐ hǎo",
+          "ní hǎo",
+          "nì hǎo",
+          "nī hǎo"
+        ],
+        "④ 一": [
+          "yī",
+          "yí",
+          "yǐ",
+          "yì"
+        ],
+        "⑤ 五": [
+          "wū",
+          "wú",
+          "wǔ",
+          "wù"
+        ],
+        "⑥ 八": [
+          "bā",
+          "bá",
+          "bǎ",
+          "bà"
+        ],
+        "⑦ 大": [
+          "dā",
+          "dá",
+          "dǎ",
+          "dà"
+        ],
+        "⑧ 不": [
+          "bū",
+          "bú",
+          "bǔ",
+          "bù"
+        ],
+        "⑨ 口": [
+          "kōu",
+          "kóu",
+          "kǒu",
+          "kòu"
+        ],
+        "⑩ 白": [
+          "bāi",
+          "bái",
+          "bǎi",
+          "bài"
+        ],
+        "⑪ 女": [
+          "nū",
+          "nú",
+          "nǚ",
+          "nù"
+        ],
+        "⑫ 马": [
+          "mā",
+          "má",
+          "mǎ",
+          "mà"
+        ]
+      },
+      "answer_key": {
+        "①": "nǐ",
+        "②": "hǎo",
+        "③": "nǐ hǎo",
+        "④": "yī",
+        "⑤": "wǔ",
+        "⑥": "bā",
+        "⑦": "dà",
+        "⑧": "bù",
+        "⑨": "kǒu",
+        "⑩": "bái",
+        "⑪": "nǚ",
+        "⑫": "mǎ"
+      },
+      "rubric": "",
+      "points": 12,
+      "estimated_minutes": 6,
+      "response_actions": 12,
+      "teacher_review_status": "draft_for_review",
+      "tags": [
+        "pinyin",
+        "tone",
+        "all_vocab",
+        "recognition"
+      ]
+    },
+    {
+      "question_id": "L01-HW-Q002",
+      "lesson_id": "lesson-01",
+      "source_page_range": "1-2, supplemental",
+      "skill_area": "vocabulary",
+      "bloom_level": "Remember",
+      "delivery_mode": "Google Forms / Printable PDF",
+      "question_type": "number_matching_1_to_10",
+      "prompt_vi": "连连看: Nối chữ Hán + pinyin ở cột trái với số đúng ở cột phải.",
+      "prompt_zh": "",
+      "student_input_type": "matching",
+      "options": {
+        "left_column": [
+          "一 yī",
+          "二 èr",
+          "三 sān",
+          "四 sì",
+          "五 wǔ",
+          "六 liù",
+          "七 qī",
+          "八 bā",
+          "九 jiǔ",
+          "十 shí"
+        ],
+        "right_column": [
+          "7",
+          "2",
+          "10",
+          "4",
+          "1",
+          "9",
+          "3",
+          "6",
+          "8",
+          "5"
+        ]
+      },
+      "answer_key": {
+        "一 yī": "1",
+        "二 èr": "2",
+        "三 sān": "3",
+        "四 sì": "4",
+        "五 wǔ": "5",
+        "六 liù": "6",
+        "七 qī": "7",
+        "八 bā": "8",
+        "九 jiǔ": "9",
+        "十 shí": "10"
+      },
+      "rubric": "Cột số bên phải đã được xáo trộn để học viên phải nối theo nghĩa, không đoán theo thứ tự.",
+      "points": 10,
+      "estimated_minutes": 5,
+      "response_actions": 10,
+      "teacher_review_status": "draft_for_review",
+      "tags": [
+        "numbers",
+        "matching",
+        "1_to_10",
+        "supplemental_practice",
+        "randomized_right_column"
+      ]
+    },
+    {
+      "question_id": "L01-HW-Q003",
+      "lesson_id": "lesson-01",
+      "source_page_range": "1-2",
+      "skill_area": "grammar",
+      "bloom_level": "Apply",
+      "delivery_mode": "Google Forms / Printable PDF",
+      "question_type": "hen_to_bu_negative_transformation",
+      "prompt_vi": "Đổi nghĩa từ khẳng định sang phủ định: thay 很 bằng 不.",
+      "prompt_zh": "",
+      "student_input_type": "short_answer_set",
+      "options": {
+        "① 很好": "____",
+        "② 很大": "____",
+        "③ 很白": "____"
+      },
+      "answer_key": {
+        "① 很好": "不好",
+        "② 很大": "不大",
+        "③ 很白": "不白"
+      },
+      "rubric": "Mỗi câu đúng khi bỏ 很 và dùng 不 trước tính từ: 不好, 不大, 不白.",
+      "points": 3,
+      "estimated_minutes": 3,
+      "response_actions": 3,
+      "teacher_review_status": "draft_for_review",
+      "tags": [
+        "pattern_practice",
+        "bu_negation",
+        "controlled_production"
+      ]
+    },
+    {
+      "question_id": "L01-HW-Q004",
+      "lesson_id": "lesson-01",
+      "source_page_range": "1-2, 12",
+      "skill_area": "hanzi",
+      "bloom_level": "Apply",
+      "delivery_mode": "Printable PDF / Formative",
+      "question_type": "vietnamese_pinyin_to_hanzi_all_vocab",
+      "prompt_vi": "Viết chữ Hán dựa vào nghĩa tiếng Việt và pinyin. Bao gồm toàn bộ 12 từ/cụm từ của bài.",
+      "prompt_zh": "",
+      "student_input_type": "handwriting_or_short_answer_set",
+      "options": {
+        "① anh/chị/bạn... · nǐ": "____",
+        "② tốt/đẹp/hay/ngon · hǎo": "____",
+        "③ Xin chào · nǐ hǎo": "____",
+        "④ một · yī": "____",
+        "⑤ năm · wǔ": "____",
+        "⑥ tám · bā": "____",
+        "⑦ to/lớn · dà": "____",
+        "⑧ không/chẳng · bù": "____",
+        "⑨ miệng/nhân khẩu · kǒu": "____",
+        "⑩ trắng · bái": "____",
+        "⑪ nữ/phụ nữ · nǚ": "____",
+        "⑫ con ngựa · mǎ": "____"
+      },
+      "answer_key": {
+        "①": "你",
+        "②": "好",
+        "③": "你好",
+        "④": "一",
+        "⑤": "五",
+        "⑥": "八",
+        "⑦": "大",
+        "⑧": "不",
+        "⑨": "口",
+        "⑩": "白",
+        "⑪": "女",
+        "⑫": "马"
+      },
+      "rubric": "Mỗi câu đúng khi viết đúng chữ Hán tương ứng với nghĩa tiếng Việt và pinyin. Với 你好, chấp nhận đủ 2 chữ theo đúng thứ tự.",
+      "points": 12,
+      "estimated_minutes": 8,
+      "response_actions": 12,
+      "teacher_review_status": "draft_for_review",
+      "tags": [
+        "hanzi_retrieval",
+        "all_vocab",
+        "vietnamese_to_hanzi",
+        "pinyin_prompt"
+      ]
+    },
+    {
+      "question_id": "L01-HW-Q005",
+      "lesson_id": "lesson-01",
+      "source_page_range": "1",
+      "skill_area": "text_comprehension",
+      "bloom_level": "Apply",
+      "delivery_mode": "Google Forms / Printable PDF",
+      "question_type": "dialogue_completion",
+      "prompt_vi": "Hoàn thành hội thoại bằng chữ Hán: A: 你好。B: ____。",
+      "prompt_zh": "",
+      "student_input_type": "short_answer",
+      "options": [],
+      "answer_key": "你好",
+      "rubric": "Đúng khi học viên viết 你好 để đáp lại lời chào.",
+      "points": 1,
+      "estimated_minutes": 1,
+      "response_actions": 1,
+      "teacher_review_status": "draft_for_review",
+      "tags": [
+        "dialogue",
+        "controlled_output",
+        "greeting"
+      ]
+    },
+    {
+      "question_id": "L01-HW-Q006",
+      "lesson_id": "lesson-01",
+      "source_page_range": "1-2",
+      "skill_area": "integrated",
+      "bloom_level": "Apply",
+      "delivery_mode": "Formative audio / Printable PDF",
+      "question_type": "short_functional_output",
+      "prompt_vi": "Viết 2 câu ngắn bằng tiếng Trung: ① chào một người ② nói một ý phủ định với 不.",
+      "prompt_zh": "",
+      "student_input_type": "short_answer_set",
+      "options": {
+        "① chào một người": "____",
+        "② nói một ý phủ định với 不": "____"
+      },
+      "answer_key": {
+        "acceptable_greeting": [
+          "你好。"
+        ],
+        "acceptable_negative": [
+          "不好。",
+          "不大。",
+          "不白。"
+        ]
+      },
+      "rubric": "Đủ 2 câu; câu ① dùng 你好; câu ② dùng 不 + tính từ đã học, ví dụ 不好 / 不大 / 不白. Có thể chấp nhận biến thể đúng trong phạm vi bài.",
+      "points": 4,
+      "estimated_minutes": 4,
+      "response_actions": 2,
+      "teacher_review_status": "draft_for_review",
+      "tags": [
+        "meaningful_output",
+        "short_output",
+        "bu_negation",
+        "greeting"
+      ]
+    }
+  ]
+}

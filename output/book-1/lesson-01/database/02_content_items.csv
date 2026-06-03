@@ -1,0 +1,53 @@
+record_id,source_page,source_page_range,source_pdf_page_range,source_pdf_page,source_pdf,section,record_type,chinese_simplified,pinyin,vietnamese,english,word_type_vi,word_type_abbr,han_viet,raw_source_text,teaching_order,slide_number,classroom_visibility,sample_sentence_pinyin,sample_sentence_zh,sample_sentence_vi
+V001,1,1-2,19-20,19,work/pdf-pages/,Từ vựng,vocabulary,你,nǐ,bạn,you (singular),đại từ,代,nhĩ,你 (代) nǐ (nhi) you (singular) bạn,1,5,student_visible,nǐ hǎo,你好,Xin chào
+V002,1,1-2,19-20,19,work/pdf-pages/,Từ vựng,vocabulary,好,hǎo,"tốt, đẹp, hay, ngon","good, fine",tính từ,形,hảo,"好 (形) hǎo (hảo) good; fine tốt, đẹp, hay, ngon",2,6,student_visible,hěn hǎo,很好,rất tốt
+V003,1,1-2,19-20,19,work/pdf-pages/,Từ vựng,vocabulary,你好,nǐ hǎo,Xin chào,Hello,cụm từ,,,你好 nǐ hǎo Hello! xin chào,,9,student_visible,,,
+V001-sample,1,1-2,19-20,19,work/pdf-pages/,Mẫu câu,sample,你好,nǐ hǎo,Xin chào,Hello,,,,Mẫu câu cho 你: 你好 nǐ hǎo Xin chào,3,7,student_visible,,,
+V002-sample,1,1-2,19-20,19,work/pdf-pages/,Mẫu câu,sample,很好,hěn hǎo,rất tốt,very good,,,,Mẫu câu cho 好: 很好 hěn hǎo rất tốt,4,8,student_visible,,,
+V004,1,1-2,19-20,19,work/pdf-pages/,Từ vựng,vocabulary,一,yī,một,one,số từ,数,nhất,一 (数) yī (nhất) one một,3,11,student_visible,yī hào,一号,"số 1, ngày 1"
+V004-sample,1,1-2,19-20,19,work/pdf-pages/,Mẫu câu,sample,一号,yī hào,"số 1, ngày 1",number 1,,,,Mẫu câu cho 一: 一号 yī hào số 1 ngày 1,5,12,student_visible,,,
+V005,1,1-2,19-20,19,work/pdf-pages/,Từ vựng,vocabulary,五,wǔ,năm,five,số từ,数,ngũ,五 (数) wǔ (ngũ) five năm,4,13,student_visible,wǔ hào,五号,"số 5, ngày 5"
+V005-sample,1,1-2,19-20,19,work/pdf-pages/,Mẫu câu,sample,五号,wǔ hào,"số 5, ngày 5",number 5,,,,Mẫu câu cho 五: 五号 wǔ hào số 5 ngày 5,6,14,student_visible,,,
+V006,1,1-2,19-20,19,work/pdf-pages/,Từ vựng,vocabulary,八,bā,tám,eight,số từ,数,bát,八 (数) bā (bát) eight tám,5,15,student_visible,bā hào,八号,"số 8, ngày 8"
+V006-sample,1,1-2,19-20,19,work/pdf-pages/,Mẫu câu,sample,八号,bā hào,"số 8, ngày 8",number 8,,,,Mẫu câu cho 八: 八号 bā hào số 8 ngày 8,7,16,student_visible,,,
+V007,1,1-2,19-20,19,work/pdf-pages/,Từ vựng,vocabulary,大,dà,"to, lớn",big,tính từ,形,đại,"大 (形) dà (đại) big to, lớn",6,17,student_visible,hěn dà,很大,rất lớn
+V007-sample,1,1-2,19-20,19,work/pdf-pages/,Mẫu câu,sample,很大,hěn dà,rất lớn,very big,,,,Mẫu câu cho 大: 很大 hěn dà rất lớn,8,18,student_visible,,,
+V008,1,1-2,19-20,19,work/pdf-pages/,Từ vựng,vocabulary,不,bù,"không, chẳng",not,phó từ,副,bất,"不 (副) bù (bất) not không, chẳng",7,19,student_visible,bù hǎo,不好,không tốt
+V008-sample,1,1-2,19-20,19,work/pdf-pages/,Mẫu câu,sample,不好,bù hǎo,không tốt,not good,,,,Mẫu câu cho 不: 不好 bù hǎo không tốt,9,20,student_visible,,,
+V009,2,1-2,19-20,20,work/pdf-pages/,Từ vựng,vocabulary,口,kǒu,miệng; nhân khẩu,mouth; classifier for family members,"danh từ, lượng từ",名、量,khẩu,"口 (名、量) kǒu (khẩu) mouth; (a classifier for family members) miệng, nhân khẩu",8,21,student_visible,yī kǒu,一口,một miệng / một miếng
+V009-sample,2,1-2,19-20,20,work/pdf-pages/,Mẫu câu,sample,一口,yī kǒu,một miệng / một miếng,one mouthful,,,,Mẫu câu cho 口: 一口 yī kǒu một miệng / một miếng,10,22,student_visible,,,
+V010,2,1-2,19-20,20,work/pdf-pages/,Từ vựng,vocabulary,白,bái,trắng,white,tính từ,形,bạch,白 (形) bái (bạch) white trắng,9,23,student_visible,,,
+V011,2,1-2,19-20,20,work/pdf-pages/,Từ vựng,vocabulary,女,nǚ,"nữ, phụ nữ","female, woman",danh từ,名,nữ,"女 (名) nǚ (nữ) female; woman nữ, phụ nữ",10,25,student_visible,nǚ rén,女人,phụ nữ
+V011-sample,2,1-2,19-20,20,work/pdf-pages/,Mẫu câu,sample,女人,nǚ rén,phụ nữ,woman,,,,Mẫu câu cho 女: 女人 nǚ rén phụ nữ,11,26,student_visible,,,
+V012,2,1-2,19-20,20,work/pdf-pages/,Từ vựng,vocabulary,马,mǎ,con ngựa,horse,danh từ,名,mã,马 (名) mǎ (mã) horse con ngựa,11,27,student_visible,bái mǎ,白马,ngựa trắng
+V012-sample,2,1-2,19-20,20,work/pdf-pages/,Mẫu câu,sample,白马,bái mǎ,ngựa trắng,white horse,,,,Mẫu câu cho 马: 白马 bái mǎ ngựa trắng,12,28,student_visible,,,
+VSUM-A,1-2,1-2,19-20,19-20,work/pdf-pages/,Từ vựng,summary,,,Tổng kết từ vựng (phần 1),,,,,Tổng kết 11 từ vựng — phần A (01-06/11),13,29,student_visible,,,
+VSUM-B,1-2,1-2,19-20,19-20,work/pdf-pages/,Từ vựng,summary,,,Tổng kết từ vựng (phần 2),,,,,Tổng kết 11 từ vựng — phần B (07-11/11),14,30,student_visible,,,
+P001,,,,,work/pdf-pages/,Luyện từ vựng,practice,,,Flashcard 你,,,,,Flashcard luyện từ vựng: 你,15,32,student_visible,,,
+P002,,,,,work/pdf-pages/,Luyện từ vựng,practice,,,Flashcard 好,,,,,Flashcard luyện từ vựng: 好,16,33,student_visible,,,
+P003,,,,,work/pdf-pages/,Luyện từ vựng,practice,,,Flashcard 马,,,,,Flashcard luyện từ vựng: 马,17,34,student_visible,,,
+P004,,,,,work/pdf-pages/,Luyện từ vựng,practice,,,Flashcard 白,,,,,Flashcard luyện từ vựng: 白,18,35,student_visible,,,
+P005,,,,,work/pdf-pages/,Luyện từ vựng,practice,,,Flashcard 大,,,,,Flashcard luyện từ vựng: 大,19,36,student_visible,,,
+P006,,,,,work/pdf-pages/,Luyện từ vựng,practice,,,Luyện số 一五八,,,,,Luyện số: 一五八,20,37,student_visible,,,
+P007,,,,,work/pdf-pages/,Luyện từ vựng,practice,,,Nhìn từ đoán nghĩa (不),,,,,Luyện phủ định: 不好 不大,21,38,student_visible,,,
+T001,1,1,19,19,work/pdf-pages/,Bài đọc,text,你好 / 你好,nǐ hǎo / nǐ hǎo,Xin chào / Xin chào,Hello / Hello,,,,课文 Kèwén Text Bài đọc: 你好 / 你好,22,40,student_visible,,,
+S001,12,12,30,30,work/pdf-pages/,Tập viết,stroke,一,yī,một,one,,,nhất,写汉字: 一,23,41,student_visible,,,
+S002,12,12,30,30,work/pdf-pages/,Tập viết,stroke,八,bā,tám,eight,,,bát,写汉字: 八,24,42,student_visible,,,
+S003,12,12,30,30,work/pdf-pages/,Tập viết,stroke,大,dà,"to, lớn",big,,,đại,写汉字: 大,25,43,student_visible,,,
+S004,12,12,30,30,work/pdf-pages/,Tập viết,stroke,不,bù,"không, chẳng",not,,,bất,写汉字: 不,26,44,student_visible,,,
+S005,12,12,30,30,work/pdf-pages/,Tập viết,stroke,五,wǔ,năm,five,,,ngũ,写汉字: 五,27,45,student_visible,,,
+S006,12,12,30,30,work/pdf-pages/,Tập viết,stroke,口,kǒu,miệng,mouth,,,khẩu,写汉字: 口,28,46,student_visible,,,
+S007,12,12,30,30,work/pdf-pages/,Tập viết,stroke,白,bái,trắng,white,,,bạch,写汉字: 白,29,47,student_visible,,,
+S008,12,12,30,30,work/pdf-pages/,Tập viết,stroke,女,nǚ,nữ,female,,,nữ,写汉字: 女,30,48,student_visible,,,
+S009,12,12,30,30,work/pdf-pages/,Tập viết,stroke,马,mǎ,con ngựa,horse,,,mã,写汉字: 马,31,49,student_visible,,,
+S010,12,12,30,30,work/pdf-pages/,Tập viết,stroke,你,nǐ,bạn,you,,,nhĩ,写汉字: 你,32,50,student_visible,,,
+S011,12,12,30,30,work/pdf-pages/,Tập viết,stroke,好,hǎo,"tốt, đẹp",good,,,hảo,写汉字: 好,33,51,student_visible,,,
+C001,,,,,work/pdf-pages/,Văn hóa bổ sung,culture,,,Cách chào hỏi trong tiếng Trung,,,,,Văn hóa: cách chào hỏi,34,53,student_visible,,,
+C002,,,,,work/pdf-pages/,Văn hóa bổ sung,culture,,,Cử chỉ số đếm Trung Quốc,,,,,Văn hóa: cử chỉ số đếm 1-10,35,54,student_visible,,,
+E001,10,10-12,28-30,28,work/pdf-pages/,Bài tập,exercise,声调练习,shēngdiào liànxí,Luyện thanh điệu,Tone practice,,,,声调练习,36,56,student_visible,,,
+E002,10,10-12,28-30,28,work/pdf-pages/,Bài tập,exercise,变调练习,biàndiào liànxí,Luyện biến điệu,Tone sandhi practice,,,,变调练习,37,56,student_visible,,,
+E003,10,10-12,28-30,28,work/pdf-pages/,Bài tập,exercise,辨别声母,biànbié shēngmǔ,Phân biệt thanh mẫu,Identify initials,,,,辨别声母,38,56,student_visible,,,
+E004,11,10-12,28-30,29,work/pdf-pages/,Bài tập,exercise,辨别韵母,biànbié yùnmǔ,Phân biệt vận mẫu,Identify finals,,,,辨别韵母,39,56,student_visible,,,
+E005,11,10-12,28-30,29,work/pdf-pages/,Bài tập,exercise,辨音辨调,biànyīn biàndiào,"Phân biệt âm, thanh điệu",Pronunciations and tones,,,,辨音辨调,40,56,student_visible,,,
+E006,11,10-12,28-30,29,work/pdf-pages/,Bài tập,exercise,认读,rèndú,Nhận mặt chữ và đọc,Read and learn,,,,认读,41,56,student_visible,,,
+E007,12,10-12,28-30,30,work/pdf-pages/,Bài tập,exercise,写汉字,xiě hànzì,Tập viết chữ Hán,Learn to write,,,,写汉字 Learn to write Tập viết chữ Hán: 一 八 大 不 五 口 白 女 马 你 好,42,56,student_visible,,,

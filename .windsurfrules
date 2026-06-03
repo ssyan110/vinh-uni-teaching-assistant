@@ -2,20 +2,56 @@
 
 ## Non-Negotiable Rules
 
-1. **Slide engine is Huashu Design (HTML-first).** Not Gamma. PDF/PPTX are exports only.
-2. **Language:** Vietnamese for instructions, Simplified Chinese for content, pinyin for pronunciation.
-3. **Review gate:** Steps 1-8 automated. Steps 9-19 require teacher approval.
-4. **Page mapping:** Every slide must trace back to source pages.
-5. **Student safety:** No teacher tips or answers in student materials.
-6. **No AI-isms.** Direct, specific, practical, concise.
-7. **Cross-tool sync.** When updating `.kiro/`, also update AGENTS.md and CLAUDE.md.
+0. **Harness engineering default.** Do not rely on chat memory for recurring instructions. Define the artifact and success gate, read the local context harness, use project scripts/templates, verify with concrete checks, inspect outputs/screenshots/logs/data, and update durable docs/skills/memory when Adam explicitly asks.
+1. **Slide engine is Huashu Design (HTML-first).** Not Gamma. HTML is the primary presentation format. No PPTX in the workflow. PDF is backup only.
+2. **Classroom presentation:** HTML presenter (index.html) used directly in class — fullscreen, annotation tools, PDF download.
+3. **Shared slide assets:** Every lesson's `slides/assets/` must have `slide-base.css` + `slide-base.js`. Copy from lesson-01. Do NOT inline common CSS or `revealNext` JS in individual slides.
+3. **Language:** Vietnamese for instructions, Simplified Chinese for content, pinyin for pronunciation.
+4. **Review gate:** Steps 1-8 automated. Steps 9-18 require teacher approval. No separate student version — teacher deck is the classroom material.
+5. **Page mapping:** Source page mapping lives in the database only. Vocab and sample slides do NOT show source page footers.
+6. **Student safety:** No teacher tips or answers in student materials.
+7. **No AI-isms.** Direct, specific, practical, concise.
+8. **Cross-tool sync.** When updating `.kiro/`, also update AGENTS.md and CLAUDE.md.
+9. **Slide filenames:** Sequentially numbered matching MANIFEST position (no gaps). Lesson 01: 01–55.
+10. **你好 standalone vocab slide:** Removed. Appears only in vocab summary quiz and dialogue.
+11. **Vocab counter:** Format `XX/YY`. Lesson 01 total = 11.
+12. **Pinyin word grouping:** Pinyin of a multi-syllable word must be written together (no space between syllables of one word). Correct: "dìèr kè · nǐ shì nǎguó rén?" Wrong: "dì èr kè · nǐ shì nǎ guó rén?" Each vocabulary word's pinyin is one unit. Sentence pinyin groups by word boundaries.
 
 ## Task Routing
 
 | Task | Skill |
 |------|-------|
+| Any non-trivial task or repeated preference | `.kiro/skills/harness-engineering/SKILL.md` |
 | Pipeline workflow, VP steps | `.kiro/skills/ai-teaching-material-systems/SKILL.md` |
-| Slide design, deck generation | `.kiro/skills/huashu-design/SKILL.md` |
-| PPTX editing/export | `.kiro/skills/powerpoint/SKILL.md` |
+| Slide design, HTML presenter, deck generation | `.kiro/skills/huashu-design/SKILL.md` |
 | Google Drive/Sheets | `.kiro/skills/google-workspace/SKILL.md` |
 | Writing quality | `.kiro/skills/avoid-ai-writing/SKILL.md` |
+
+## HTML Presenter — required for every lesson
+
+Every lesson's `slides/` folder must have `index.html`. Copy from `output/book-1/lesson-01/slides/index.html` and update title, MANIFEST, slide count, PDF filename.
+
+**Must include:** MANIFEST array, fullscreen (`F`), navigation, pen/highlighter/eraser/text-box annotation tools, on-demand PDF export (html2canvas + jsPDF — always current, no pre-baked data file).
+
+**CDN deps (required in every index.html):**
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+```
+
+**Do NOT use `slides-data.js`.** Deprecated.
+
+## Reuse for new lessons
+
+This system is reusable for any lesson or course type.
+
+Generic slide scripts (all require `--slides-dir`):
+- `node scripts/build-slides-data.mjs --slides-dir <path>`
+- `node scripts/export-slides-pdf.mjs --slides-dir <path>`
+- `node scripts/watch-slides.mjs --slides-dir <path>`
+
+Pipeline: `python scripts/run_pipeline.py --lesson-type regular|pinyin|auto --lesson-id <id> ...`
+
+New lesson type: drop a JSON config in `scripts/pipeline/configs/` — no code changes needed.
+
+Per-lesson fine-tuning is expected after initial slide generation. The system does not overwrite manual edits.

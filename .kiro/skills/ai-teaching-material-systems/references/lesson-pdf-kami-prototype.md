@@ -17,10 +17,10 @@ Use this when Adam provides a textbook PDF and asks for only one lesson/prototyp
 
 3. **Find the target lesson range**
    - For the Hanka/Hán Ngữ 1 upper-volume PDF in this session:
-     - Lesson 1 starts on PDF page 19.
+     - Lesson 1 was extracted from PDF pages 19–30.
      - Lesson 2 starts on PDF page 31.
-     - Therefore Lesson 1 range is pages 19–30.
-   - Use this as a pattern, not a global fact for all textbooks: confirm the page range each time.
+   - Use this only to locate the lesson range in the PDF. Visible slide `.page-indicator` labels must use the textbook page numbers recorded in the database, not these PDF positions.
+   - Use this as a pattern, not a global fact for all textbooks: confirm the page range and textbook page mapping each time.
 
 4. **OCR only the requested lesson**
    - Use Tesseract when PyMuPDF text is corrupted.

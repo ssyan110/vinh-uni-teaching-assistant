@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=960,height=540"><title>Tập viết · 公</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet"><script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script><link rel="stylesheet" href="assets/slide-base.css"><style>
+.stroke-title{position:absolute;left:58px;top:78px;font-size:22pt;font-weight:800}.stroke-card{position:absolute;left:50%;top:112px;transform:translateX(-50%);width:420px;height:370px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px 30px}.writer-target{width:230px;height:230px;position:relative;border:2px solid #999;background:#fafafa}.writer-target::before,.writer-target::after{content:"";position:absolute;pointer-events:none;z-index:0}.writer-target::before{top:50%;left:5%;right:5%;height:0;border-top:1.5px dashed #ccc}.writer-target::after{left:50%;top:5%;bottom:5%;width:0;border-left:1.5px dashed #ccc}.stroke-meta{text-align:center;margin-top:4px}.stroke-meta .pinyin{font-size:18pt}.meaning{font-size:13.5pt;color:#4A6080;margin-top:4px}.hv{font-size:11.5pt;color:#8A9AB0;font-style:italic;margin-top:3px}.animate-btn{margin-top:12px;border:0;border-radius:18px;background:#5AACAC;color:#fff;padding:8px 18px;font-weight:800;cursor:pointer}.fallback-char{font-family:'Noto Sans SC';font-size:130px;font-weight:900;color:#1A3A5A;text-align:center}
+</style></head><body><div class="slide"><div class="menu-bar"><span class="menu-icon"><i data-lucide="pen-line"></i></span><span class="section-label">TẬP VIẾT</span></div><div class="page-indicator">Trang 84</div>
+    <div class="stroke-card card">
+      <div id="writer-target" class="writer-target" data-char="公"></div>
+      <div class="stroke-meta">
+        <div class="pinyin">gōng</div>
+        <div class="meaning">công</div>
+        <div class="hv">(公)</div>
+      </div>
+    </div>
+    <script src="assets/js/hanzi-writer.min.js"></script>
+    <script>
+      let writer; window.lessonWriter = null;
+      const embeddedCharData = {"strokes":["M 304 649 Q 322 577 199 422 Q 193 418 189 411 Q 152 368 61 284 Q 52 280 64 276 Q 140 291 252 412 Q 256 419 264 426 Q 307 477 374 581 Q 383 594 389 601 Q 396 607 395 617 Q 394 627 380 640 Q 344 670 310 665 Q 301 662 304 649 Z","M 467 783 Q 527 747 562 678 Q 662 477 753 386 Q 775 370 886 372 Q 919 375 966 376 Q 987 377 987 383 Q 987 387 968 395 Q 794 459 735 515 Q 656 594 554 760 Q 533 794 495 799 Q 467 802 465 795 Q 461 786 467 783 Z","M 629 177 Q 500 164 362 133 Q 347 129 343 133 Q 340 137 347 150 Q 477 334 505 364 Q 520 376 512 391 Q 505 406 448 432 Q 429 442 417 436 Q 401 429 409 405 Q 430 333 302 171 Q 277 146 238 118 Q 222 103 226 91 Q 232 70 262 47 Q 275 34 291 47 Q 357 93 633 146 Q 640 147 647 150 C 676 157 659 180 629 177 Z","M 647 150 Q 707 54 718 48 Q 727 45 738 54 Q 754 66 750 118 Q 750 181 585 289 Q 576 296 571 284 Q 567 269 576 255 Q 601 221 629 177 L 647 150 Z"],"medians":[[[314,654],[347,614],[296,512],[215,404],[128,322],[68,282]],[[473,790],[518,770],[544,742],[671,540],[756,445],[783,424],[803,418],[874,400],[982,383]],[[423,420],[446,395],[457,378],[455,372],[389,250],[316,147],[303,108],[347,103],[439,127],[608,159],[639,151]],[[582,276],[662,191],[706,132],[724,81],[723,57]]],"radStrokes":[0,1]};
+      function fallbackChar(ch){ document.getElementById('writer-target').innerHTML='<div class="fallback-char">'+ch+'</div>'; }
+      function initWriter(){
+        const el=document.getElementById('writer-target');
+        const ch=el.dataset.char;
+        if(!window.HanziWriter){ fallbackChar(ch); return; }
+        writer=HanziWriter.create('writer-target', ch, {
+          width: 230, height: 230, padding: 18, showOutline: true, showCharacter: false,
+          strokeAnimationSpeed: 0.575, delayBetweenStrokes: 360,
+          charDataLoader: function(char, onComplete){ onComplete(embeddedCharData); }
+        });
+        window.lessonWriter = writer;
+        setTimeout(()=>{ if(writer) writer.animateCharacter(); }, 500);
+      }
+      function playStroke(){ if(writer) writer.animateCharacter(); }
+      initWriter();
+    </script>
+  </div><script src="assets/slide-base.js"></script></body></html>

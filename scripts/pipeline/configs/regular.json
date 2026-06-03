@@ -1,20 +1,19 @@
 {
   "lesson_type": "regular",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "teaching_sequence": [
     { "order": 1, "module_id": "warmup", "label_vi": "Khởi động", "label_zh": "暖身活動" },
     { "order": 2, "module_id": "objectives", "label_vi": "Mục tiêu học tập", "label_zh": "學習目標" },
-    { "order": 3, "module_id": "pinyin", "label_vi": "Pinyin", "label_zh": "拼音" },
-    { "order": 4, "module_id": "pinyin_practice", "label_vi": "Luyện pinyin", "label_zh": "拼音練習" },
-    { "order": 5, "module_id": "vocabulary", "label_vi": "Từ vựng", "label_zh": "生詞" },
-    { "order": 6, "module_id": "vocabulary_practice", "label_vi": "Luyện từ vựng", "label_zh": "生詞練習" },
-    { "order": 7, "module_id": "grammar", "label_vi": "Ngữ pháp", "label_zh": "語法" },
-    { "order": 8, "module_id": "grammar_practice", "label_vi": "Luyện ngữ pháp", "label_zh": "語法練習" },
-    { "order": 9, "module_id": "text_preview", "label_vi": "Chuẩn bị đọc bài", "label_zh": "課文預習" },
-    { "order": 10, "module_id": "text", "label_vi": "Bài đọc", "label_zh": "課文" },
-    { "order": 11, "module_id": "culture", "label_vi": "Văn hóa bổ sung", "label_zh": "文化補充" },
-    { "order": 12, "module_id": "discussion", "label_vi": "Thảo luận", "label_zh": "課程討論" },
-    { "order": 13, "module_id": "homework_intro", "label_vi": "Hướng dẫn bài tập", "label_zh": "課後作業說明" }
+    { "order": 3, "module_id": "vocabulary", "label_vi": "Từ vựng", "label_zh": "生詞" },
+    { "order": 4, "module_id": "vocabulary_practice", "label_vi": "Luyện từ vựng", "label_zh": "生詞練習" },
+    { "order": 5, "module_id": "grammar", "label_vi": "Ngữ pháp", "label_zh": "語法" },
+    { "order": 6, "module_id": "grammar_practice", "label_vi": "Luyện ngữ pháp", "label_zh": "語法練習" },
+    { "order": 7, "module_id": "text_preview", "label_vi": "Chuẩn bị đọc bài", "label_zh": "課文預習" },
+    { "order": 8, "module_id": "text", "label_vi": "Hội thoại / Bài đọc", "label_zh": "課文" },
+    { "order": 9, "module_id": "hanzi_writing", "label_vi": "Tập viết chữ Hán", "label_zh": "寫漢字" },
+    { "order": 10, "module_id": "culture", "label_vi": "Văn hóa bổ sung", "label_zh": "文化補充" },
+    { "order": 11, "module_id": "discussion", "label_vi": "Thảo luận", "label_zh": "課程討論" },
+    { "order": 12, "module_id": "homework_intro", "label_vi": "Hướng dẫn bài tập", "label_zh": "課後作業說明" }
   ],
   "database_schema": [
     "lesson_id",
@@ -53,7 +52,6 @@
   ],
   "supplemental_activity_types": [
     "warmup",
-    "pinyin_drill",
     "vocabulary_drill",
     "grammar_drill",
     "text_preview",
@@ -66,10 +64,24 @@
     "pinyin_reading",
     "vocabulary_matching",
     "grammar_fill",
+    "hsk_tocfl_life_application",
+    "interactive_multiple_choice",
     "sentence_ordering",
     "text_comprehension",
     "translation",
     "hanzi_recognition"
+  ],
+  "activity_design_rules": [
+    "Practice activities should be varied and can include listening, speaking, reading, and writing when the lesson content supports it.",
+    "Comprehensive practice and grammar practice should reference HSK and TOCFL item formats, with a preference for practical daily-use situations.",
+    "Generated Chinese content must be Simplified Chinese unless Adam explicitly asks otherwise, even when a question style is inspired by TOCFL.",
+    "Prefer simple interactive slide/webapp practice when useful: one multiple-choice question per slide, clickable options, success feedback for correct answers, and a try-again prompt for wrong answers."
+  ],
+  "slide_template_rules": [
+    "Use Lesson 10 cover slide as the canonical cover template for all future lessons; only replace lesson number, title text, topic chips, and topic image.",
+    "Use Lesson 01 divider templates across all lessons by default; only replace page numbers, lesson-specific counts, and images Adam explicitly asks to customize for that lesson.",
+    "Reuse Lesson 01 objectives, homework divider, exercise-list structure, dialogue avatar layout, and hanzi-writing layout unless Adam explicitly changes the template.",
+    "Hanzi-writing slides must use Lesson 01 HanziWriter stroke animation timing: strokeAnimationSpeed 0.575 and delayBetweenStrokes 360; do not use static characters instead of stroke animation."
   ],
   "review_statuses": [
     "pending_review",

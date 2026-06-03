@@ -1,0 +1,26 @@
+record_id,source_page,source_page_range,source_pdf,section,record_type,chinese_simplified,pinyin,vietnamese,english,word_type_vi,word_type_abbr,han_viet,raw_source_text,teaching_order,classroom_visibility,sample_sentence_pinyin,sample_sentence_zh,sample_sentence_vi
+V001,31,31-32,work/pdf-pages/,Từ vựng,vocabulary,忙,máng,"bận",busy,tính từ,形,mang,"忙 (形) máng (mang) busy bận",1,student_visible,hěn máng,很忙,rất bận
+V002,31,31-32,work/pdf-pages/,Từ vựng,vocabulary,吗,ma,"trợ từ nghi vấn",(a particle used at the end of a question),trợ từ,助,ma,"吗 (助) ma (ma) (a particle used at the end of a question) trợ từ nghi vấn",2,student_visible,nǐ hǎo ma,你好吗,Bạn khỏe không?
+V003,31,31-32,work/pdf-pages/,Từ vựng,vocabulary,很,hěn,"rất","very",phó từ,副,"ngận, hận","很 (副) hěn (ngận) very rất",3,student_visible,hěn hǎo,很好,rất tốt
+V004,31,31-32,work/pdf-pages/,Từ vựng,vocabulary,汉语,Hànyǔ,"tiếng Hán, tiếng Hoa","Chinese; Chinese language",danh từ,名,Hán ngữ,"汉语 (名) Hànyǔ (Hán ngữ) Chinese; Chinese language tiếng Hán, tiếng Hoa",4,student_visible,xué Hànyǔ,学汉语,học tiếng Hán
+V005,31,31-32,work/pdf-pages/,Từ vựng,vocabulary,难,nán,"khó","hard; difficult",tính từ,形,nan,"难 (形) nán (nan) hard; difficult khó",5,student_visible,hěn nán,很难,rất khó
+V006,32,31-32,work/pdf-pages/,Từ vựng,vocabulary,太,tài,"hơi, quá, lắm","excessively; too; over",phó từ,副,thái,"太 (副) tài (thái) excessively; too; over hơi, quá, lắm",6,student_visible,tài nán,太难,quá khó
+V007,32,31-32,work/pdf-pages/,Từ vựng,vocabulary,爸爸,bàba,"bố, ba",dad,danh từ,名,ba ba,"爸爸 (名) bàba (ba ba) dad bố, ba",7,student_visible,wǒ bàba,我爸爸,bố tôi
+V008,32,31-32,work/pdf-pages/,Từ vựng,vocabulary,妈妈,māma,"mẹ, má",mum,danh từ,名,ma ma,"妈妈 (名) māma (ma ma) mum mẹ, má",8,student_visible,wǒ māma,我妈妈,mẹ tôi
+V009,32,31-32,work/pdf-pages/,Từ vựng,vocabulary,他,tā,"anh ta, ông ấy","he; him",đại từ,代,tha,"他 (代) tā (tha) he; him anh ta, ông ấy",9,student_visible,tā hěn máng,他很忙,anh ấy rất bận
+V010,32,31-32,work/pdf-pages/,Từ vựng,vocabulary,她,tā,"cô ta, bà ấy","she; her",đại từ,代,tha,"她 (代) tā (tha) she; her cô ta, bà ấy",10,student_visible,tā hěn hǎo,她很好,cô ấy rất tốt
+V011,32,31-32,work/pdf-pages/,Từ vựng,vocabulary,男,nán,"nam giới, con trai",male,tính từ,形,nam,"男 (形) nán (nam) male nam giới, con trai",11,student_visible,nán shēng,男生,nam sinh
+V012,32,31-32,work/pdf-pages/,Từ vựng,vocabulary,哥哥,gēge,"anh trai",elder brother,danh từ,名,ca ca,"哥哥 (名) gēge (ca ca) elder brother anh trai",12,student_visible,wǒ gēge,我哥哥,anh trai tôi
+V013,32,31-32,work/pdf-pages/,Từ vựng,vocabulary,弟弟,dìdi,"em trai",younger brother,danh từ,名,đệ đệ,"弟弟 (名) dìdi (đệ đệ) younger brother em trai",13,student_visible,wǒ dìdi,我弟弟,em trai tôi
+V014,32,31-32,work/pdf-pages/,Từ vựng,vocabulary,妹妹,mèimei,"em gái",younger sister,danh từ,名,muội muội,"妹妹 (名) mèimei (muội muội) younger sister em gái",14,student_visible,wǒ mèimei,我妹妹,em gái tôi
+T001,31,31,work/pdf-pages/,Bài đọc,text,"A: 你忙吗? B: 很忙。A: 汉语难吗? B: 不太难。","A: Nǐ máng ma? B: Hěn máng. A: Hànyǔ nán ma? B: Bù tài nán.","A: Bạn bận không? B: Rất bận. A: Tiếng Hán khó không? B: Không khó lắm.","A: Are you busy? B: Very busy. A: Is Chinese hard? B: Not too hard.",,,,课文: 你忙吗? 很忙。汉语难吗? 不太难。,15,student_visible,,,
+N001,33,33-34,work/pdf-pages/,Ngữ âm,phonetics_note,"轻声","qīngshēng","Thanh nhẹ (neutral tone)","The neutral tone",,,,注释: 轻声 — mama bàba dìdi nǐmen tāde,16,student_visible,,,
+N002,33,33-34,work/pdf-pages/,Ngữ âm,phonetics_note,"半三声","bàn sān shēng","Nửa thanh ba (half 3rd tone)","The half 3rd tone",,,,注释: 半三声 — hěn máng wǔfēn hǎo ma,17,student_visible,,,
+E001,34,34-35,work/pdf-pages/,Bài tập,exercise,声调练习,shēngdiào liànxí,Luyện thanh điệu,Tone practice,,,,"声调 Tones Thanh điệu: tā tá tǎ tà, máng máng mǎng màng, hěn hén hěn hèn, nán nán nǎn nàn, Hàn Hán Hǎn Hàn",18,student_visible,,,
+E002,34,34-35,work/pdf-pages/,Bài tập,exercise,轻声练习,qīngshēng liànxí,Luyện thanh nhẹ,Neutral tone practice,,,,"轻声: māma gēge tā de tāmen, hóng de máng ma tài ma bái de, nǎinai hǎo ma bǎo le pǎo le, dìdi mèimei lèi ma lèi le",19,student_visible,,,
+E003,34,34-35,work/pdf-pages/,Bài tập,exercise,半三声练习,bàn sān shēng liànxí,Luyện nửa thanh ba,Half 3rd tone practice,,,,"半三声: hěn gāo hěn nán hěn dà hǎo ba, nǐ hē nǐ lái mǐfàn hǎo le, bǎn bān bèn lái hěn bàng hěn pàng",20,student_visible,,,
+E004,35,34-36,work/pdf-pages/,Bài tập,exercise,辨音辨调,biànyīn biàndiào,"Phân biệt âm, thanh điệu",Pronunciations and tones,,,,"辨音辨调: bàn gōng bàn kōng dòng hóng tóng hóng, hěn nán hěn lán hán lěng kěnéng, hěn máng hěn mán nánfāng nán fáng",21,student_visible,,,
+E005,35,34-36,work/pdf-pages/,Bài tập,exercise,认读,rèndú,Nhận biết chữ Hán và đọc,Read and learn,,,,"认读: 爸爸 妈妈 好吗 忙吗 难吗 很好 很忙 很大 很难; 你好吗?很好! 你忙吗?很忙。汉语难吗?汉语不难。",22,student_visible,,,
+E006,35,34-36,work/pdf-pages/,Bài tập,exercise,回答问题,huídá wèntí,Trả lời câu hỏi,Answer the questions,,,,"回答问题: (1) Nǐ máng ma? (2) Hànyǔ nán ma? (3) Nǐ bàba hǎo ma? (4) Tā máng ma?",23,student_visible,,,
+E007,35,34-36,work/pdf-pages/,Bài tập,exercise,完成会话,wánchéng huìhuà,Hoàn thành hội thoại,Complete the dialogues,,,,"完成会话: (1) A:___! B: Nǐ hǎo! (2) A:___? B: Hěn máng. (3) A:___? B: Hànyǔ bù nán.",24,student_visible,,,
+E008,36,34-36,work/pdf-pages/,Bài tập,exercise,写汉字,xiě hànzì,Tập viết chữ Hán,Learn to write,,,,"写汉字: characters from lesson 2 (to be confirmed by teacher during review)",25,student_visible,,,

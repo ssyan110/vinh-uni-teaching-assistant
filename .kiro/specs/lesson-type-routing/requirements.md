@@ -104,11 +104,11 @@ This feature introduces a lesson-type routing system that detects or accepts a l
 
 #### Acceptance Criteria
 
-1. THE Pipeline SHALL produce output files in the same directory structure regardless of Lesson_Type, containing exactly: `01_lesson_list.csv`, `02_content_items.csv`, `03_lesson_structure.csv`, `04_supplemental_activities.csv`, `05_game_suggestions.csv`, `06_google_sheets_database.csv`, and a JSON package named `vp_{textbook}_{lesson}_database.json`.
+1. THE Pipeline SHALL produce output files in the same directory structure regardless of Lesson_Type, containing exactly: `02_content_items.csv`, `03_lesson_structure.csv`, `04_supplemental_activities.csv`, `05_game_suggestions.csv`, `06_google_sheets_database.csv`, and a JSON package named `vp_{textbook}_{lesson}_database.json`. The book-level lesson index (`lesson_list.csv`) is maintained separately at `output/book-{N}/lesson_list.csv`.
 2. THE Pipeline SHALL include `teacher_review_status` and `approved` columns in `06_google_sheets_database.csv` for all lesson types, where `teacher_review_status` accepts values from the set {pending_review, revise, approved, rejected} and `approved` accepts a boolean value (TRUE or FALSE, defaulting to FALSE).
 3. THE Pipeline SHALL include `source_page` (integer page number) and `source_page_range` (page range string) columns in `02_content_items.csv` and `06_google_sheets_database.csv` for all lesson types, so that every record traces back to the original source material.
 4. WHEN a lesson of any type reaches step 9 (人工審閱), THE Downstream_Workflow SHALL present it in Google Sheets with identical column headers, review status values, and approval actions as any other lesson type, requiring no lesson-type-specific reviewer instructions.
-5. IF any of the 7 required output files is missing or if `teacher_review_status` or `approved` columns are absent from `06_google_sheets_database.csv`, THEN THE Pipeline SHALL report a validation error indicating which file or column is missing, and SHALL NOT mark the lesson as ready for review.
+5. IF any of the 6 required per-lesson output files is missing or if `teacher_review_status` or `approved` columns are absent from `06_google_sheets_database.csv`, THEN THE Pipeline SHALL report a validation error indicating which file or column is missing, and SHALL NOT mark the lesson as ready for review.
 
 ### Requirement 8: Extensibility for Future Lesson Types
 

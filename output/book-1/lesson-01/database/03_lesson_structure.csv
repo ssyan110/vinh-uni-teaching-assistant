@@ -1,0 +1,14 @@
+﻿module_order,module_id,module_name_vi,module_name_zh,source_page,source_pdf_page_range,source_pdf_page,status,slide_range,slide_files,notes
+1,cover,Trang bìa,封面,,,,generated,1,01-cover.html,Trang bìa bài học
+2,objectives,Mục tiêu bài học,学习目标,,,,generated,2,02-objectives.html,Mục tiêu học tập được tổng hợp từ nội dung bài
+3,warmup,Khởi động,暖身活动,,,,generated,3,03-warmup.html,"Hoạt động khởi động do giáo viên thiết kế, không có trong sách"
+4,vocabulary,Từ vựng,生词,1-2,19-20,19-20,extracted,4-25,04-divider-vocab.html → 05-vocab-ni.html → 06-vocab-hao.html → 07-sample-ni.html → 08-sample-hao.html → 09-vocab-yi.html → 10-sample-yi.html → 11-vocab-wu.html → 12-sample-wu.html → 13-vocab-ba.html → 14-sample-ba.html → 15-vocab-da.html → 16-sample-da.html → 17-vocab-bu.html → 18-sample-bu.html → 19-vocab-kou.html → 20-sample-kou.html → 21-vocab-bai.html → 22-vocab-nu.html → 23-sample-nu.html → 24-vocab-ma.html → 25-sample-ma.html,11 từ vựng (你好 removed as standalone slide). Thứ tự: 你→好→一→五→八→大→不→口→白→女→马. Mỗi từ có 1 slide từ vựng + 1 slide mẫu câu. Visible page indicators use printed textbook pages.
+5,vocabulary_practice_divider,Tập từ vựng,词汇练习,,,,generated,26,26-divider-practice-vocab.html,Divider slide trước phần luyện từ vựng
+6,vocab_summary,Ôn tập từ vựng,词汇小测,,,,generated,27-28,"27-vocab-quiz-a.html, 28-vocab-quiz-b.html","Mini quiz từ vựng: 27 = từ 01-06/11, 28 = từ 07-11/11. Click để hiện đáp án."
+7,comprehensive_practice_divider,Luyện tập tổng hợp,综合练习,,,,generated,29,29-divider-comprehensive.html,Divider slide trước phần luyện tập tổng hợp
+8,vocabulary_practice,Luyện từ vựng,词汇练习,,,,generated,30-36,"30-practice-flashcard-ni.html, 31-practice-flashcard-hao.html, 32-practice-flashcard-ma.html, 33-practice-flashcard-bai.html, 34-practice-flashcard-da.html, 35-practice-numbers.html, 36-practice-tone-bu.html",Flashcard (你好马白大) + luyện số 一五八 + biến điệu 不
+9,text,Bài đọc,课文,1,19,19,extracted,37-38,"37-divider-text.html, 38-dialogue.html",Hội thoại chào hỏi đơn giản: 你好 / 你好
+10,stroke_writing,Tập viết chữ Hán,写汉字,12,30,30,extracted,39-49,39-stroke-yi.html → 40-stroke-ba.html → 41-stroke-da.html → 42-stroke-bu.html → 43-stroke-wu.html → 44-stroke-kou.html → 45-stroke-bai.html → 46-stroke-nu.html → 47-stroke-ma.html → 48-stroke-ni.html → 49-stroke-hao.html,11 chữ Hán: 一八大不五口白女马你好. Có 田字格 và hoạt hình nét bút (tốc độ chậm 50%)
+11,culture,Văn hóa bổ sung,文化补充,,,,generated,50-52,"50-divider-supplement.html, 51-culture-greetings.html, 52-number-gestures.html","Cách chào hỏi, cử chỉ số đếm Trung Quốc"
+12,homework_intro,Giới thiệu bài tập về nhà,课后作业说明,10-12,28-30,28-30,extracted,53-54,"53-divider-homework.html, 54-exercises-list.html",7 bài tập trong sách (trang 10-12)
+13,closing,Kết thúc,结束,,,,generated,55,55-closing.html,Slide kết thúc bài học

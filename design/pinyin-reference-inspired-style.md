@@ -1,6 +1,6 @@
 # Visual redesign direction · Pinyin Lesson 1
 
-Source reference: `/Users/ssyan110/.hermes/cache/documents/doc_6df651b622fb_pinyin-l1.14102024210713.pdf`
+Source reference: `work/design-ref-pinyin-l1/pinyin-l1.pdf`
 
 Important: use this as **style inspiration only**. Do not copy the exact slides, exact illustrations, exact title lettering, exact colors, exact composition, or any `ai mandarin` branding/copyright text.
 

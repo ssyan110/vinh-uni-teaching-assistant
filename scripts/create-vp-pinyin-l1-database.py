@@ -12,23 +12,34 @@ from __future__ import annotations
 
 import csv
 import json
+import os
 from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-PDF = Path('/Users/ssyan110/.hermes/cache/documents/doc_6df651b622fb_pinyin-l1.14102024210713.pdf')
+PDF_ENV = os.environ.get('PINYIN_L1_SOURCE_PDF')
+PDF = Path(PDF_ENV) if PDF_ENV else ROOT / 'work' / 'design-ref-pinyin-l1' / 'pinyin-l1.pdf'
+if not PDF.is_absolute():
+    PDF = ROOT / PDF
 EXTRACT = ROOT / 'work' / 'design-ref-pinyin-l1' / 'extract.txt'
 OUT = ROOT / 'output' / 'vp-database' / 'pinyin-l1'
 
 LESSON_ID = 'pinyin-l1'
 LESSON_TITLE = 'Pinyin · Bài 1'
 
+
+def portable_path(path: Path) -> str:
+    try:
+        return str(path.resolve().relative_to(ROOT))
+    except ValueError:
+        return str(path)
+
 # Step 2: lesson split. The attached PDF is a standalone Pinyin Lesson 1 deck.
 lesson_list = [
     {
         'lesson_id': LESSON_ID,
         'lesson_title': LESSON_TITLE,
-        'source_pdf': str(PDF),
+        'source_pdf': portable_path(PDF),
         'core_pages': '1-17',
         'support_pages': '18-20',
         'excluded_pages': '21 contact/brand page',
@@ -131,7 +142,7 @@ def database_rows():
             'record_id': item['id'],
             'record_type': item['type'],
             'section': item['section'],
-            'source_pdf': str(PDF),
+            'source_pdf': portable_path(PDF),
             'source_page': item['page'],
             'source_page_range': str(item['page']),
             'teaching_order': item['seq'],
@@ -172,12 +183,11 @@ def main():
         'steps_not_implemented': list(range(9,20)),
         'google_sheets_status': 'csv_ready; Google OAuth not authenticated on this machine',
         'source_pdf_exists': PDF.exists(),
-        'source_pdf': str(PDF),
-        'extract_file': str(EXTRACT),
+        'source_pdf': portable_path(PDF),
+        'extract_file': portable_path(EXTRACT),
         'generated_at': datetime.now().isoformat(timespec='seconds'),
     }
     db = database_rows()
-    write_csv(OUT/'01_lesson_list.csv', lesson_list)
     write_csv(OUT/'02_content_items.csv', content_items)
     write_csv(OUT/'03_lesson_structure.csv', lesson_structure)
     write_csv(OUT/'04_supplemental_activities.csv', activities)
@@ -193,7 +203,7 @@ def main():
         'google_sheets_database': db,
     }
     (OUT/'vp_pinyin_l1_database.json').write_text(json.dumps(package, ensure_ascii=False, indent=2), encoding='utf-8')
-    (OUT/'README.md').write_text(f'''# VP 教材資料庫 · Pinyin Bài 1\n\nScope: VP 製作流程 steps 1–8 only. This output stops before teacher review.\n\nSource PDF: `{PDF}`\n\nGenerated files:\n\n- `01_lesson_list.csv` — step 2 lesson list\n- `02_content_items.csv` — steps 3–4 extraction + page mapping\n- `03_lesson_structure.csv` — step 5 teaching restructure\n- `04_supplemental_activities.csv` — step 6 activities\n- `05_game_suggestions.csv` — step 7 game markers\n- `06_google_sheets_database.csv` — step 8 Google Sheets-ready database\n- `vp_pinyin_l1_database.json` — full machine-readable package\n\nGoogle Sheets note: this machine is not authenticated for Google Workspace, so the system produced CSV files ready to import/upload. After OAuth setup, `06_google_sheets_database.csv` can be appended to a Google Sheet.\n''', encoding='utf-8')
+    (OUT/'README.md').write_text(f'''# VP 教材資料庫 · Pinyin Bài 1\n\nScope: VP 製作流程 steps 1–8 only. This output stops before teacher review.\n\nSource PDF: `{portable_path(PDF)}`\n\nGenerated files:\n\n- `02_content_items.csv` — steps 3–4 extraction + page mapping\n- `03_lesson_structure.csv` — step 5 teaching restructure\n- `04_supplemental_activities.csv` — step 6 activities\n- `05_game_suggestions.csv` — step 7 game markers\n- `06_google_sheets_database.csv` — step 8 Google Sheets-ready database\n- `vp_pinyin_l1_database.json` — full machine-readable package\n\nNote: The book-level lesson index is at `output/book-N/lesson_list.csv`.\n\nGoogle Sheets note: this machine is not authenticated for Google Workspace, so the system produced CSV files ready to import/upload. After OAuth setup, `06_google_sheets_database.csv` can be appended to a Google Sheet.\n''', encoding='utf-8')
     print(json.dumps({'out': str(OUT), 'rows': len(db), 'activities': len(activities), 'games': len(game_suggestions)}, ensure_ascii=False))
 
 if __name__ == '__main__':

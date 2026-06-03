@@ -28,11 +28,16 @@
 <header id="title-block-header">
 <h1 class="title">AI 教材簡報製作系統</h1>
 </header>
-<h1 id="ai-教材簡報製作系統requirements-project-context">AI 教材簡報製作系統：Requirements + Project Context</h1>
+<h1 id="ai-教材簡報製作系統requirements-project-context">AI
+教材簡報製作系統：Requirements + Project Context</h1>
 <blockquote>
-<p>Portable project spec. Combines Adam’s original planning document with current implementation decisions. If this document conflicts with older conversations or files, the “Project implementation status” section takes precedence.</p>
+<p>Portable project spec. Combines Adam’s original planning document
+with current implementation decisions. If this document conflicts with
+older conversations or files, the “Project implementation status”
+section takes precedence.</p>
 </blockquote>
-<h2 id="project-implementation-status">Project implementation status</h2>
+<h2 id="project-implementation-status">Project implementation
+status</h2>
 <table>
 <colgroup>
 <col style="width: 50%" />
@@ -47,19 +52,226 @@
 <tbody>
 <tr>
 <td>Slide engine</td>
-<td><strong>Huashu Design</strong> — local HTML-first deck engine. Gamma is no longer used.</td>
+<td><strong>Huashu Design</strong> — local HTML-first deck engine. Gamma
+is no longer used.</td>
 </tr>
 <tr>
 <td>Deck source</td>
-<td>HTML source first, then export PDF/PPTX. No hand-building slides page by page.</td>
+<td>HTML source first. During drafting, do not export PDF backups; use
+screenshots/contact sheets for QA. Export PDF only after Adam confirms
+the slide design and content are finalized.</td>
+</tr>
+<tr>
+<td>Classroom presenter</td>
+<td>Every lesson root exposes <code>index.html</code> for class; it
+launches <code>slides/index.html</code>, which has fullscreen mode, left
+slide thumbnails, annotation tools, and on-demand PDF export.</td>
+</tr>
+<tr>
+<td>Clean lesson folders</td>
+<td>Each lesson uses <code>index.html</code>, <code>README.md</code>,
+<code>slides/</code>, <code>database/</code>,
+<code>exports/final/</code>, <code>exports/qa/</code>,
+<code>exports/archive/</code>, <code>teacher-guide/</code>, and
+<code>homework-question-bank/</code>. QA screenshots/contact sheets stay
+under <code>exports/qa/</code>; deprecated generated files stay under
+<code>exports/archive/</code>.</td>
+</tr>
+<tr>
+<td>Shared watermark</td>
+<td>Canonical logo source:
+<code>design/shared-slide-assets/brand/logo-watermark.png</code>. Copy
+it into every lesson as
+<code>slides/assets/brand/logo-watermark.png</code>.
+<code>slide-base.css</code> renders it as a top overlay at
+<code>opacity:.02</code> with <code>pointer-events:none</code>.</td>
 </tr>
 <tr>
 <td>Language default</td>
-<td>Vietnamese for instructions/explanations, Simplified Chinese for Chinese content, pinyin for pronunciation. No Traditional Chinese unless requested.</td>
+<td>Vietnamese for visible instructions, activity names, section titles,
+labels, homework, explanations, and classroom flow. Simplified Chinese
+is only for target learning content: vocabulary, sample sentences,
+dialogue, grammar examples, cultural terms, lesson titles, and
+hanzi-writing characters. Pinyin is for pronunciation. No Traditional
+Chinese unless requested.</td>
+</tr>
+<tr>
+<td>Regular lesson pinyin scope</td>
+<td>Pinyin is taught in separate pinyin lessons. Normal
+<code>regular</code> lessons must not include <code>Pinyin</code> or
+<code>Luyện pinyin</code> classroom modules, even if textbook pages
+contain pronunciation exercises. Keep those pages only as raw
+extracted/review material when needed.</td>
+</tr>
+<tr>
+<td>Vocabulary extraction</td>
+<td>Extract every textbook vocabulary row, including indented component
+sub-entries under a main word. Example: <code>办公室</code> → also
+extract <code>办公</code>; <code>电话</code> → <code>电</code>,
+<code>话</code>; <code>手机</code> → <code>手</code>. Store each as its
+own vocabulary record with printed source page and parent-word note in
+<code>raw_source_text</code>.</td>
+</tr>
+<tr>
+<td>Grammar explanation style</td>
+<td>Grammar rows must absorb the textbook explanation, then rewrite it
+in simple Vietnamese for beginner students. Prefer plain patterns,
+examples, and Vietnamese/Chinese contrast over dense grammar
+terminology.</td>
+</tr>
+<tr>
+<td>Cover slide template</td>
+<td>Use Lesson 10
+<code>output/book-1/lesson-10/slides/01-cover.html</code> as the
+canonical cover template for all future lessons. Reuse its layout and
+visual language directly; only replace lesson number, Chinese/pinyin
+title, Vietnamese title, topic chips, and topic image.</td>
+</tr>
+<tr>
+<td>Vocab slide template</td>
+<td>Reuse Lesson 01 <code>05-vocab-ni.html</code>: centered vertical
+stack, rectangular 16:9 image frame, pinyin, large Simplified Chinese
+character, Vietnamese meaning, hán việt + word type. No circular image
+crops.</td>
+</tr>
+<tr>
+<td>Vocabulary divider image</td>
+<td>Reuse Lesson 01 page 04 pattern: soft textbook desk scene with an
+open book. The book has only <code>汉</code> on the left page and
+<code>语</code> on the right page, placed inside the book page margins.
+This generic <code>汉语</code> image can be reused across regular
+lessons; never add random Chinese filler or extra generated text.</td>
+</tr>
+<tr>
+<td>Sample sentence slide template</td>
+<td>Every <code>sample-*</code> / <code>MẪU CÂU</code> slide uses the
+centered sample card plus a bottom-left circular support image frame:
+<code>.sample-spot{left:52px;bottom:28px;width:116px;height:116px}</code>.
+The frame must sit centered on the pale background circle graphic and
+the image must match the full sample phrase.</td>
+</tr>
+<tr>
+<td>Visible page indicator</td>
+<td>Slide <code>.page-indicator</code> shows printed textbook page/range
+from the database, such as <code>Trang 1</code> or
+<code>Trang 1-2</code>. It is never a slide number or PDF page.
+<code>source_page</code> must mean printed textbook page; PDF positions
+must be stored separately as <code>source_pdf_page</code> /
+<code>source_pdf_page_range</code> if needed. Generated slides with no
+textbook source omit it. Do not add separate <code>.source</code>
+footers.</td>
+</tr>
+<tr>
+<td>Vocab image workflow</td>
+<td>Generate <code>prompts.json</code> with
+<code>scripts/generate-vocab-images.py</code>, save 16:9 PNGs in
+<code>slides/assets/vocab-images/</code>, insert by matching filename,
+render vocab slides, and regenerate any image that does not match its
+vocabulary word.</td>
+</tr>
+<tr>
+<td>Vocab image style</td>
+<td>Soft textbook line-art: thin grey-blue outlines, muted pastel fills,
+white/pale-grey background, gentle shadows. No in-image text, letters,
+numbers, Chinese characters, labels, watermarks, decorative blobs, teal
+icon style, stickers, or chibi style.</td>
 </tr>
 <tr>
 <td>Review gate</td>
-<td>AI Agent may generate draft database/content. Final classroom/student/homework materials require teacher review first.</td>
+<td>AI Agent may generate draft database/content. Final
+classroom/student/homework materials require teacher review first.</td>
+</tr>
+<tr>
+<td>PDF finalization gate</td>
+<td>Before any clean PDF export, the agent must ask Adam whether the
+design and content are finalized. Export only after Adam confirms
+finalization.</td>
+</tr>
+<tr>
+<td>Regular lesson template</td>
+<td>Lesson 01 is the strict visual and section template for future
+regular lessons. Future lessons follow its section flow and add only
+lesson-specific extra sections, such as grammar in Lesson 10.</td>
+</tr>
+<tr>
+<td>Reusable slide templates</td>
+<td>Reuse Lesson 01 templates for reusable pages: dividers, objectives
+layout, homework divider, exercise-list structure, dialogue avatar
+layout, and hanzi-writing layout. Do not redesign these from scratch for
+every lesson; only swap lesson-specific content, printed textbook page
+numbers, counts, and images.</td>
+</tr>
+<tr>
+<td>Reusable divider templates</td>
+<td>Use the same Lesson 01 divider templates across all lessons by
+default. Only swap page numbers, lesson-specific counts, and images Adam
+explicitly asks to customize for a specific lesson theme.</td>
+</tr>
+<tr>
+<td>Slide content alignment</td>
+<td>Prefer centering main slide content vertically and horizontally when
+the slide is not a fixed Lesson 01 template, list, comparison, or
+dialogue layout. Culture notes, single concepts, example sentences, and
+practice prompts should feel centered when possible; use left-center
+layouts only when they improve scanning.</td>
+</tr>
+<tr>
+<td>Slide density</td>
+<td>Do not squeeze dense activities into one slide. Split practice
+across more slides; vocabulary matching should use about 4-5 words per
+slide.</td>
+</tr>
+<tr>
+<td>Activity design</td>
+<td>Practice activities should be varied and can include listening,
+speaking, reading, and writing when the lesson content supports it.
+Comprehensive practice and grammar practice should reference HSK and
+TOCFL item formats, with a preference for practical daily-use
+situations. The generated content still uses Simplified Chinese unless
+Adam explicitly asks otherwise, even when the question style is inspired
+by TOCFL.</td>
+</tr>
+<tr>
+<td>Interactive practice</td>
+<td>Prefer simple interactive slide/webapp formats when useful. Example:
+one multiple-choice question per slide with clickable options; correct
+choices show success feedback, wrong choices prompt the student to try
+again.</td>
+</tr>
+<tr>
+<td>Instruction language</td>
+<td>Student operation text and activity instructions must be natural
+Vietnamese, such as <code>Ghép nối</code>, <code>Bài tập về nhà</code>,
+<code>Tập viết chữ Hán</code>, <code>Tập từ vựng</code>,
+<code>Luyện tập tổng hợp</code>, and <code>Hội thoại</code>. Lesson 01
+reusable divider templates may keep their fixed Chinese section heading
+(<code>生词</code>, <code>词汇练习</code>, <code>综合练习</code>,
+<code>课文</code>, <code>写汉字</code>, <code>补充学习</code>,
+<code>回家作业</code>) as part of the template; do not redesign those
+dividers from scratch.</td>
+</tr>
+<tr>
+<td>Overflow QA</td>
+<td>During HTML/screenshot QA, verify every slide for text overflow.
+Text must not spill outside the slide, background image panel, card,
+bubble, tile, button, or fixed container. Fix by splitting content into
+more slides or revising layout. Do not hide clipped text.</td>
+</tr>
+<tr>
+<td>Hanzi writing</td>
+<td>Reuse Lesson 01’s hanzi-writing title, layout, method, and
+HanziWriter stroke animation. Do not replace stroke animation with
+static characters. Use Lesson 01 slowed timing:
+<code>strokeAnimationSpeed: 0.575</code> and
+<code>delayBetweenStrokes: 360</code>, unless Adam changes the Lesson 01
+template itself.</td>
+</tr>
+<tr>
+<td>Database rule propagation</td>
+<td>VP steps 1-8 must generate lesson structure/activity/database
+metadata that already follows the cover, divider, activity-design,
+Simplified Chinese, pinyin, image, density, and hanzi-writing rules. Do
+not leave these as manual slide-cleanup requirements only.</td>
 </tr>
 <tr>
 <td>Pre-review automation</td>
@@ -67,23 +279,27 @@
 </tr>
 <tr>
 <td>Post-review scope</td>
-<td>Steps 9-19 begin after teacher review.</td>
+<td>Steps 9-18 begin after teacher review.</td>
 </tr>
 <tr>
 <td>Skills location</td>
-<td><code>.kiro/skills/</code> — readable by Kiro, Claude Code, Hermes, Codex, Cursor.</td>
+<td><code>.kiro/skills/</code> — readable by Kiro, Claude Code, Hermes,
+Codex, Cursor.</td>
 </tr>
 <tr>
 <td>Agent entry point</td>
-<td><code>AGENTS.md</code> (also symlinked as <code>CLAUDE.md</code> and <code>CODEX.md</code>).</td>
+<td><code>AGENTS.md</code> (also symlinked as <code>CLAUDE.md</code> and
+<code>CODEX.md</code>).</td>
 </tr>
 <tr>
 <td>Portability</td>
-<td>Skills, requirements, and project rules live inside this repo. No external symlinks or machine-specific paths.</td>
+<td>Skills, requirements, and project rules live inside this repo. No
+external symlinks or machine-specific paths.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="current-implemented-artifacts">Current implemented artifacts</h2>
+<h2 id="current-implemented-artifacts">Current implemented
+artifacts</h2>
 <table>
 <colgroup>
 <col style="width: 50%" />
@@ -113,10 +329,6 @@
 <td><code>output/sample-teacher-deck/teacher-deck.pdf</code></td>
 </tr>
 <tr>
-<td>Sample editable PPTX</td>
-<td><code>output/sample-teacher-deck/teacher-deck-editable.pptx</code></td>
-</tr>
-<tr>
 <td>Pinyin Lesson 1 design prototype</td>
 <td><code>output/pinyin-l1-design-prototype/</code></td>
 </tr>
@@ -142,7 +354,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="canonical-mvp-steps-1-19">Canonical MVP steps 1-19</h2>
+<h2 id="canonical-mvp-flow-steps-1-18">Canonical MVP flow (steps
+1-18)</h2>
 <table style="width:100%;">
 <colgroup>
 <col style="width: 30%" />
@@ -233,42 +446,36 @@
 </tr>
 <tr>
 <td style="text-align: right;">13</td>
-<td>匯出備份</td>
-<td>Huashu export scripts</td>
-<td>PPTX / PDF</td>
+<td>建立課堂簡報</td>
+<td>HTML presenter</td>
+<td>index.html with slide thumbnails, annotations, and PDF export</td>
 </tr>
 <tr>
 <td style="text-align: right;">14</td>
-<td>生成學生版內容</td>
-<td>AI Agent</td>
-<td>Student Version</td>
-</tr>
-<tr>
-<td style="text-align: right;">15</td>
 <td>生成作業題庫</td>
 <td>AI Agent</td>
 <td>homework/question bank</td>
 </tr>
 <tr>
-<td style="text-align: right;">16</td>
+<td style="text-align: right;">15</td>
 <td>題庫審閱</td>
 <td>Google Sheets</td>
 <td>Approved Questions</td>
 </tr>
 <tr>
-<td style="text-align: right;">17</td>
-<td>建立學生版與作業</td>
-<td>Formative or CSV/HTML fallback</td>
-<td>學生版 + 作業</td>
+<td style="text-align: right;">16</td>
+<td>建立作業</td>
+<td>Sheets/CSV/HTML fallback</td>
+<td>作業</td>
 </tr>
 <tr>
-<td style="text-align: right;">18</td>
+<td style="text-align: right;">17</td>
 <td>課堂測試</td>
 <td>Teacher</td>
 <td>class feedback</td>
 </tr>
 <tr>
-<td style="text-align: right;">19</td>
+<td style="text-align: right;">18</td>
 <td>回填修正</td>
 <td>Google Sheets</td>
 <td>Improvement Log</td>
@@ -276,9 +483,15 @@
 </tbody>
 </table>
 <hr />
-<h1 id="ai-教材簡報製作系統完整規劃文件">AI 教材簡報製作系統完整規劃文件</h1>
+<h1 id="ai-教材簡報製作系統完整規劃文件">AI
+教材簡報製作系統完整規劃文件</h1>
 <blockquote>
-<p>文件用途：本文件提供給 AI Agent、教材製作團隊、教學負責人與簡報/作業製作者使用。 核心目標：讓 AI Agent 能依照固定規則拆解原始教材，輸出可審閱、可生成簡報、可製作學生版與課後作業的標準化教材資料。 主流程：<strong>AI Agent 拆解教材 → Google Sheets 人工審閱 → Huashu Design 生成教師版簡報 → Formative 製作學生版與課後作業</strong></p>
+<p>文件用途：本文件提供給 AI
+Agent、教材製作團隊、教學負責人與簡報/作業製作者使用。 核心目標：讓 AI
+Agent
+能依照固定規則拆解原始教材，輸出可審閱、可生成簡報、可製作課後作業的標準化教材資料。
+主流程：<strong>AI Agent 拆解教材 → Google Sheets 人工審閱 → Huashu
+Design 生成教師版簡報 → 建立課後作業</strong></p>
 </blockquote>
 <hr />
 <h2 id="專案目標">01｜專案目標</h2>
@@ -300,7 +513,8 @@
 </tr>
 <tr>
 <td>製作方式</td>
-<td>不由人工逐張設計 PPT，而是由 AI Agent 拆解教材後，交給 AI 簡報工具生成</td>
+<td>不由人工逐張設計 PPT，而是由 AI Agent 拆解教材後，交給 AI
+簡報工具生成</td>
 </tr>
 <tr>
 <td>教材來源</td>
@@ -308,7 +522,8 @@
 </tr>
 <tr>
 <td>核心流程</td>
-<td>AI Agent 拆解教材 → Google Sheets 人工審閱 → Huashu Design 生成教師版簡報 → Formative 製作學生版與課後作業</td>
+<td>AI Agent 拆解教材 → Google Sheets 人工審閱 → Huashu Design
+生成教師版簡報 → 建立課後作業</td>
 </tr>
 <tr>
 <td>教材原則</td>
@@ -316,7 +531,8 @@
 </tr>
 <tr>
 <td>品質控制</td>
-<td>所有內容先進入 Google Sheets，由老師審閱後才可進入 Huashu Design / Formative</td>
+<td>所有內容先進入 Google Sheets，由老師審閱後才可進入 Huashu Design /
+Formative</td>
 </tr>
 <tr>
 <td>頁碼規則</td>
@@ -327,12 +543,13 @@
 <td>先完成最低可用版本 MVP，再逐步優化動畫、聲音、互動與自動化</td>
 </tr>
 <tr>
-<td>學生版方向</td>
-<td>使用 Formative 製作線上閱讀版、練習與課後作業</td>
+<td>作業方向</td>
+<td>使用 Formative 或 Sheets/CSV/HTML-ready fallback 製作課後作業</td>
 </tr>
 <tr>
 <td>教師版方向</td>
-<td>使用 Huashu Design 生成教師版簡報，必要時匯出 PPTX / PDF 備份</td>
+<td>使用 Huashu Design 生成教師版 HTML 簡報；草稿階段不匯出 PDF，Adam
+確認 finalization 後才匯出 PDF 備份</td>
 </tr>
 </tbody>
 </table>
@@ -359,7 +576,7 @@
 <tr>
 <td>教師版簡報</td>
 <td>老師</td>
-<td>Huashu Design / PPTX / PDF</td>
+<td>Huashu HTML presenter / finalized PDF backup</td>
 <td>課堂播放、教學引導、練習展示</td>
 <td>必要</td>
 </tr>
@@ -565,7 +782,8 @@
 <tr>
 <td>課堂團體遊戲</td>
 <td>Kahoot / Quizizz / Blooket</td>
-<td>將拼音練習、生詞練習、語法練習做成班級競賽或即時互動遊戲</td>
+<td>regular 一般課可將生詞練習、語法練習做成班級競賽；拼音遊戲只適用
+<code>pinyin</code> lesson type</td>
 </tr>
 <tr>
 <td>聲音製作</td>
@@ -607,11 +825,12 @@
 </tr>
 <tr>
 <td>Huashu Design</td>
-<td>用於教師版簡報生成（HTML-first，export PDF/PPTX）</td>
+<td>用於教師版簡報生成（HTML-first；PDF backup only after
+finalization）</td>
 </tr>
 <tr>
 <td>Formative</td>
-<td>用於學生版教材與課後作業</td>
+<td>用於課後作業；不可用時保留 Sheets/CSV/HTML-ready fallback</td>
 </tr>
 <tr>
 <td>Kahoot / Quizizz / Blooket</td>
@@ -649,13 +868,11 @@ Huashu Design 生成教師版簡報
 ↓
 老師檢查與微調
 ↓
-AI Agent 生成學生版內容
-↓
 AI Agent 生成課後作業題庫
 ↓
 老師審閱題庫
 ↓
-Formative 製作學生版與課後作業
+建立作業（Sheets/CSV/HTML）
 ↓
 實際上課測試
 ↓
@@ -665,7 +882,11 @@ Formative 製作學生版與課後作業
 <hr />
 <h2 id="每課教材標準架構">06｜每課教材標準架構</h2>
 <h3 id="建議教學順序">建議教學順序</h3>
-<p><strong>暖身活動 → 學習目標 → 拼音 → 拼音練習 → 生詞 → 生詞練習 → 語法 → 語法練習 → 課文預習 → 課文 → 文化補充 → 課程討論 → 課後作業說明</strong></p>
+<p><strong>Regular 一般課：暖身活動 → 學習目標 → 生詞 → 生詞練習 → 語法
+→ 語法練習 → 課文預習 → 課文 / 會話 → 練習寫漢字 → 文化補充 → 課程討論 →
+課後作業說明</strong></p>
+<p>拼音課程分開做 <code>pinyin</code> lesson type。一般課即使課本含拼音
+/ 發音練習，也不放進 classroom lesson structure。</p>
 <h3 id="每課教材標準架構表">每課教材標準架構表</h3>
 <table>
 <colgroup>
@@ -709,24 +930,6 @@ Formative 製作學生版與課後作業
 </tr>
 <tr>
 <td style="text-align: right;">3</td>
-<td>拼音</td>
-<td style="text-align: right;">3-5</td>
-<td>是</td>
-<td>是</td>
-<td>否</td>
-<td>若該課無拼音則跳過</td>
-</tr>
-<tr>
-<td style="text-align: right;">4</td>
-<td>拼音練習</td>
-<td style="text-align: right;">2-4</td>
-<td>是</td>
-<td>是</td>
-<td>否</td>
-<td>備注附參考答案；可標記 Kahoot / Quizizz / Blooket</td>
-</tr>
-<tr>
-<td style="text-align: right;">5</td>
 <td>生詞</td>
 <td style="text-align: right;">8-12</td>
 <td>是</td>
@@ -735,7 +938,7 @@ Formative 製作學生版與課後作業
 <td>依原教材順序</td>
 </tr>
 <tr>
-<td style="text-align: right;">6</td>
+<td style="text-align: right;">4</td>
 <td>生詞練習</td>
 <td style="text-align: right;">3-5</td>
 <td>是</td>
@@ -744,7 +947,7 @@ Formative 製作學生版與課後作業
 <td>備注附參考答案；可標記 Kahoot / Quizizz / Blooket</td>
 </tr>
 <tr>
-<td style="text-align: right;">7</td>
+<td style="text-align: right;">5</td>
 <td>語法</td>
 <td style="text-align: right;">5-8</td>
 <td>是</td>
@@ -753,7 +956,7 @@ Formative 製作學生版與課後作業
 <td>建議放在課文前，幫助理解課文</td>
 </tr>
 <tr>
-<td style="text-align: right;">8</td>
+<td style="text-align: right;">6</td>
 <td>語法練習</td>
 <td style="text-align: right;">3-5</td>
 <td>是</td>
@@ -762,7 +965,7 @@ Formative 製作學生版與課後作業
 <td>備注附參考答案；可標記 Kahoot / Quizizz / Blooket</td>
 </tr>
 <tr>
-<td style="text-align: right;">9</td>
+<td style="text-align: right;">7</td>
 <td>課文預習</td>
 <td style="text-align: right;">1-2</td>
 <td>是</td>
@@ -771,16 +974,26 @@ Formative 製作學生版與課後作業
 <td>備注需附參考答案；無需答案則寫 N/A</td>
 </tr>
 <tr>
-<td style="text-align: right;">10</td>
-<td>課文</td>
+<td style="text-align: right;">8</td>
+<td>課文 / 會話</td>
 <td style="text-align: right;">5-8</td>
 <td>是</td>
 <td>是</td>
 <td>否</td>
-<td>按原教材呈現，可加分句理解</td>
+<td>按原教材呈現，可加分句理解；會話可拆成多人頭像對話 slide</td>
 </tr>
 <tr>
-<td style="text-align: right;">11</td>
+<td style="text-align: right;">9</td>
+<td>練習寫漢字</td>
+<td style="text-align: right;">3-8</td>
+<td>是</td>
+<td>是</td>
+<td>否</td>
+<td>參考 Lesson 01 字卡 / 筆順 / 練寫結構；所有筆順動畫用 Lesson 01
+慢速設定</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
 <td>文化補充</td>
 <td style="text-align: right;">1-2</td>
 <td>是</td>
@@ -789,7 +1002,7 @@ Formative 製作學生版與課後作業
 <td>可根據主題補充，避免偏離課程</td>
 </tr>
 <tr>
-<td style="text-align: right;">12</td>
+<td style="text-align: right;">11</td>
 <td>課程討論</td>
 <td style="text-align: right;">1</td>
 <td>是</td>
@@ -798,7 +1011,7 @@ Formative 製作學生版與課後作業
 <td>備注選用</td>
 </tr>
 <tr>
-<td style="text-align: right;">13</td>
+<td style="text-align: right;">12</td>
 <td>課後作業說明</td>
 <td style="text-align: right;">1</td>
 <td>是</td>
@@ -826,6 +1039,11 @@ Formative 製作學生版與課後作業
 <td>先帶入主題，再說明本課要學什麼</td>
 </tr>
 <tr>
+<td>Regular 課不放拼音模組</td>
+<td>拼音課分開教；一般課即使課本頁面有拼音 / 發音練習，也不放進
+classroom lesson structure</td>
+</tr>
+<tr>
 <td>語法放在課文前</td>
 <td>建議放在生詞後、課文預習前，幫助學生理解課文</td>
 </tr>
@@ -846,12 +1064,23 @@ Formative 製作學生版與課後作業
 <td>Formative 只用於學生版教材與課後作業</td>
 </tr>
 <tr>
-<td>拼音 / 生詞 / 語法練習可做遊戲</td>
+<td>生詞 / 語法練習可做遊戲</td>
 <td>可標記為 Kahoot / Quizizz / Blooket 團體遊戲建議</td>
 </tr>
 <tr>
+<td>綜合 / 語法練習題型</td>
+<td>參考 HSK 與 TOCFL
+出題形式，偏重生活實際應用；系統產出一律使用簡體中文，除非 Adam
+另有指示</td>
+</tr>
+<tr>
+<td>互動題呈現</td>
+<td>優先使用簡單互動 slide/webapp；例如一個 slide
+一題選擇題，可直接點選選項，答對顯示正確，答錯提示再試一次</td>
+</tr>
+<tr>
 <td>課中練習學生版不附參考答案</td>
-<td>學生版的暖身、拼音練習、生詞練習、語法練習、課文預習不附參考答案</td>
+<td>學生版的暖身、生詞練習、語法練習、課文預習不附參考答案</td>
 </tr>
 </tbody>
 </table>
@@ -877,16 +1106,6 @@ Formative 製作學生版與課後作業
 <td>本課任務與學習成果</td>
 </tr>
 <tr>
-<td>拼音 / 發音</td>
-<td style="text-align: right;">3-5</td>
-<td>規則、示範、練習</td>
-</tr>
-<tr>
-<td>拼音練習</td>
-<td style="text-align: right;">2-4</td>
-<td>聲調辨識、拼讀、聽音選擇</td>
-</tr>
-<tr>
 <td>生詞</td>
 <td style="text-align: right;">8-12</td>
 <td>詞義、拼音、越南語、例句、圖片</td>
@@ -907,32 +1126,27 @@ Formative 製作學生版與課後作業
 <td>替換、改錯、造句、翻譯</td>
 </tr>
 <tr>
-<td>課文預習</td>
-<td style="text-align: right;">1-2</td>
-<td>情境導入、關鍵詞預測</td>
+<td>課文 / 會話</td>
+<td style="text-align: right;">5-8</td>
+<td>分句理解、角色對話、朗讀練習</td>
 </tr>
 <tr>
-<td>課文</td>
-<td style="text-align: right;">5-8</td>
-<td>課文呈現、分句理解、角色朗讀</td>
+<td>練習寫漢字</td>
+<td style="text-align: right;">3-8</td>
+<td>筆順、部件、描紅、看字讀音</td>
 </tr>
 <tr>
 <td>文化補充</td>
 <td style="text-align: right;">1-2</td>
-<td>越中差異、生活文化</td>
-</tr>
-<tr>
-<td>課程討論</td>
-<td style="text-align: right;">1</td>
-<td>課末討論、延伸思考、口語表達</td>
-</tr>
-<tr>
-<td>作業說明</td>
-<td style="text-align: right;">1</td>
-<td>Formative 作業說明</td>
+<td>越中差異、文化說明、生活語用</td>
 </tr>
 </tbody>
 </table>
+<p>拼音 / 發音與拼音練習只放在 <code>pinyin</code> lesson type，不放在
+regular 一般課的教師版簡報結構。 | 課文預習 | 1-2 | 情境導入、關鍵詞預測
+| | 課文 | 5-8 | 課文呈現、分句理解、角色朗讀 | | 文化補充 | 1-2 |
+越中差異、生活文化 | | 課程討論 | 1 | 課末討論、延伸思考、口語表達 | |
+作業說明 | 1 | Formative 作業說明 |</p>
 <table>
 <thead>
 <tr>
@@ -978,18 +1192,6 @@ Formative 製作學生版與課後作業
 <td>是</td>
 <td>讓學生知道本課要學會什麼</td>
 <td>不適用</td>
-</tr>
-<tr>
-<td>拼音</td>
-<td>是</td>
-<td>保留規則與例子</td>
-<td>不適用</td>
-</tr>
-<tr>
-<td>拼音練習</td>
-<td>是</td>
-<td>放在學生版，不放 Formative</td>
-<td>無附參考答案</td>
 </tr>
 <tr>
 <td>生詞</td>
@@ -1062,6 +1264,11 @@ Formative 製作學生版與課後作業
 <hr />
 <h2 id="formative-使用規則">09｜Formative 使用規則</h2>
 <table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
 <thead>
 <tr>
 <th>用途</th>
@@ -1078,7 +1285,8 @@ Formative 製作學生版與課後作業
 <tr>
 <td>拼音練習</td>
 <td>否</td>
-<td>放在教師版與學生版</td>
+<td>只適用 <code>pinyin</code> lesson type；regular
+一般課不放此模組</td>
 </tr>
 <tr>
 <td>生詞練習</td>
@@ -1128,7 +1336,8 @@ Formative 製作學生版與課後作業
 <tr>
 <td>拼音練習</td>
 <td>Kahoot / Quizizz / Blooket</td>
-<td>聲調辨識、拼音選擇、聽音選答</td>
+<td>只適用 <code>pinyin</code> lesson
+type：聲調辨識、拼音選擇、聽音選答</td>
 <td>選用</td>
 </tr>
 <tr>
@@ -1316,7 +1525,8 @@ Formative 製作學生版與課後作業
 </tr>
 <tr>
 <td>section</td>
-<td>暖身 / 學習目標 / 拼音 / 生詞 / 語法 / 課文 / 文化補充 / 課程討論 / 作業</td>
+<td>暖身 / 學習目標 / 拼音 / 生詞 / 語法 / 課文 / 文化補充 / 課程討論 /
+作業</td>
 </tr>
 <tr>
 <td>original_page</td>
@@ -1685,7 +1895,7 @@ Formative 製作學生版與課後作業
 </tr>
 <tr>
 <td>教學重組</td>
-<td>按標準教材架構重新排列</td>
+<td>按標準教材架構重新排列；regular 一般課不加入拼音 / 拼音練習模組</td>
 </tr>
 <tr>
 <td>生成暖身</td>
@@ -1693,7 +1903,8 @@ Formative 製作學生版與課後作業
 </tr>
 <tr>
 <td>生成拼音練習</td>
-<td>產出聲調、拼讀、聽辨相關練習</td>
+<td>只適用 <code>pinyin</code> lesson
+type，產出聲調、拼讀、聽辨相關練習</td>
 </tr>
 <tr>
 <td>生成生詞練習</td>
@@ -1717,7 +1928,8 @@ Formative 製作學生版與課後作業
 </tr>
 <tr>
 <td>生成遊戲建議</td>
-<td>判斷拼音、生詞、語法練習是否適合轉成 Kahoot / Quizizz / Blooket</td>
+<td>判斷生詞、語法練習是否適合轉成 Kahoot / Quizizz /
+Blooket；拼音遊戲只適用 <code>pinyin</code> lesson type</td>
 </tr>
 <tr>
 <td>生成老師備課版</td>
@@ -1726,10 +1938,6 @@ Formative 製作學生版與課後作業
 <tr>
 <td>生成 Huashu Brief</td>
 <td>將審閱後資料轉成 Huashu Design 可用簡報指令</td>
-</tr>
-<tr>
-<td>生成學生版</td>
-<td>去除老師內部提示、內部審閱資訊、課中練習答案，保留學生可讀內容</td>
 </tr>
 <tr>
 <td>生成作業題庫</td>
@@ -1776,8 +1984,22 @@ Formative 製作學生版與課後作業
 <td>優先保留原教材順序</td>
 </tr>
 <tr>
+<td>生詞拆分項</td>
+<td>原教材生詞下方縮排的小詞 / 單字也要獨立列入資料庫，並在
+<code>raw_source_text</code> 標記 parent word</td>
+</tr>
+<tr>
+<td>一般課拼音範圍</td>
+<td>拼音課程分開教；<code>regular</code> 一般課的課堂架構不加入拼音 /
+拼音練習模組，即使課本該頁有拼音練習</td>
+</tr>
+<tr>
 <td>語法順序</td>
 <td>可放到課文前，但內容仍需對應原教材</td>
+</tr>
+<tr>
+<td>語法解釋</td>
+<td>吸收課本說明後，用初學者能懂的越南語重寫；避免堆疊文法術語，必要時加入越南語對比</td>
 </tr>
 <tr>
 <td>題目答案</td>
@@ -1785,7 +2007,8 @@ Formative 製作學生版與課後作業
 </tr>
 <tr>
 <td>參考答案</td>
-<td>暖身、拼音練習、生詞練習、語法練習、課文預習必填；無則 N/A</td>
+<td>暖身、生詞練習、語法練習、課文預習必填；無則 N/A。拼音練習只適用
+<code>pinyin</code> lesson type</td>
 </tr>
 <tr>
 <td>學習目標備注</td>
@@ -1797,7 +2020,8 @@ Formative 製作學生版與課後作業
 </tr>
 <tr>
 <td>團體遊戲建議</td>
-<td>拼音練習、生詞練習、語法練習可標記是否適合做 Kahoot / Quizizz / Blooket</td>
+<td>生詞練習、語法練習可標記是否適合做 Kahoot / Quizizz /
+Blooket；拼音練習只適用 <code>pinyin</code> lesson type</td>
 </tr>
 <tr>
 <td>圖片風格</td>
@@ -1920,7 +2144,8 @@ Formative 製作學生版與課後作業
 <tbody>
 <tr>
 <td>不可直接產出成品</td>
-<td>必須先輸出到 Google Sheets，經人工審閱後才可進入 Huashu Design / Formative</td>
+<td>必須先輸出到 Google Sheets，經人工審閱後才可進入 Huashu Design /
+Formative</td>
 </tr>
 <tr>
 <td>不可亂改原教材</td>
@@ -1943,8 +2168,9 @@ Formative 製作學生版與課後作業
 <td>老師備課版要保留參考答案、引導方向、老師提示</td>
 </tr>
 <tr>
-<td>Formative 只做學生版與課後作業</td>
-<td>不用 Formative 做課堂即時練習</td>
+<td>Formative 只做課後作業</td>
+<td>不用 Formative 做課堂即時練習；不可用時保留 Sheets/CSV/HTML-ready
+fallback</td>
 </tr>
 <tr>
 <td>團體遊戲只作為選用</td>
@@ -1956,7 +2182,8 @@ Formative 製作學生版與課後作業
 </tr>
 </tbody>
 </table>
-<h3 id="agent-每次處理一課時的最小輸出">Agent 每次處理一課時的最小輸出</h3>
+<h3 id="agent-每次處理一課時的最小輸出">Agent
+每次處理一課時的最小輸出</h3>
 <table>
 <colgroup>
 <col style="width: 50%" />
@@ -1996,7 +2223,8 @@ Formative 製作學生版與課後作業
 </tbody>
 </table>
 <hr />
-<h2 id="建議-google-drive-資料夾結構">20｜建議 Google Drive 資料夾結構</h2>
+<h2 id="建議-google-drive-資料夾結構">20｜建議 Google Drive
+資料夾結構</h2>
 <pre class="text"><code>AI_教材簡報製作系統/
 ├── 00_原始教材/
 │   ├── PDF/
@@ -2008,7 +2236,6 @@ Formative 製作學生版與課後作業
 │   └── Improvement_Log/
 ├── 02_教師版簡報/
 │   ├── Huashu_HTML/
-│   ├── PPTX_Backup/
 │   └── PDF_Backup/
 ├── 03_學生版_Formative/
 │   ├── 學生版教材/
@@ -2031,7 +2258,8 @@ Formative 製作學生版與課後作業
     ├── v2.0/
     └── v3.0/</code></pre>
 <hr />
-<h2 id="建議-google-sheets-分頁結構">21｜建議 Google Sheets 分頁結構</h2>
+<h2 id="建議-google-sheets-分頁結構">21｜建議 Google Sheets
+分頁結構</h2>
 <table>
 <thead>
 <tr>
@@ -2172,6 +2400,11 @@ Formative 製作學生版與課後作業
 <hr />
 <h2 id="建議執行順序">24｜建議執行順序</h2>
 <table>
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 30%" />
+<col style="width: 30%" />
+</colgroup>
 <thead>
 <tr>
 <th style="text-align: right;">優先級</th>
@@ -2212,8 +2445,8 @@ Formative 製作學生版與課後作業
 </tr>
 <tr>
 <td style="text-align: right;">7</td>
-<td>用 Formative 建立學生版與作業</td>
-<td>測試學生端流程</td>
+<td>用 Formative 或 Sheets/CSV/HTML-ready fallback 建立作業</td>
+<td>測試作業流程</td>
 </tr>
 <tr>
 <td style="text-align: right;">8</td>
@@ -2248,7 +2481,8 @@ Formative 製作學生版與課後作業
 <tbody>
 <tr>
 <td>主流程</td>
-<td>AI Agent 拆解教材 → Google Sheets 人工審閱 → Huashu Design 生成教師版簡報 → Formative 製作學生版</td>
+<td>AI Agent 拆解教材 → Google Sheets 人工審閱 → Huashu Design
+生成教師版簡報 → 建立課後作業</td>
 </tr>
 <tr>
 <td>教材開頭</td>
@@ -2260,7 +2494,7 @@ Formative 製作學生版與課後作業
 </tr>
 <tr>
 <td>Formative 用途</td>
-<td>學生版教材 + 課後作業，不做課堂即時練習</td>
+<td>課後作業，不做課堂即時練習</td>
 </tr>
 <tr>
 <td>團體遊戲工具</td>
@@ -2288,7 +2522,8 @@ Formative 製作學生版與課後作業
 </tr>
 <tr>
 <td>教師版</td>
-<td>Huashu Design 生成，匯出 PPTX / PDF 備份</td>
+<td>Huashu Design 生成 HTML presenter；Adam 確認 finalization 後才匯出
+PDF 備份</td>
 </tr>
 <tr>
 <td>學生版</td>

@@ -8,11 +8,13 @@ inclusion: always
 
 | Request Pattern | Skill |
 |----------------|-------|
+| Any non-trivial project task, repeated preference, reliability issue, or "Codex keeps forgetting" issue | `.kiro/skills/harness-engineering/SKILL.md` |
 | Pipeline workflow, VP steps, lesson processing | `.kiro/skills/ai-teaching-material-systems/SKILL.md` |
-| Slide design, deck generation, visual QA | `.kiro/skills/huashu-design/SKILL.md` |
-| PPTX inspection, editing, export | `.kiro/skills/powerpoint/SKILL.md` |
+| Slide design, deck generation, HTML presenter, visual QA | `.kiro/skills/huashu-design/SKILL.md` |
 | Google Drive/Sheets automation | `.kiro/skills/google-workspace/SKILL.md` |
 | Clean user-facing docs/lesson copy | `.kiro/skills/avoid-ai-writing/SKILL.md` |
+
+Note: PPTX is removed from the workflow. The `powerpoint` skill is deprecated. Use HTML presenter directly in class.
 
 ## Cross-Tool Sync Rule (MANDATORY)
 

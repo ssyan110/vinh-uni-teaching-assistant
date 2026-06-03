@@ -1,7 +1,7 @@
 # Source
 
 - Upstream: https://github.com/alchaincyf/huashu-design.git
-- Local source: `/Users/ssyan110/Development/huashu_design`
+- Local source: `huashu-design/` if cloned into this repo, or an adjacent `../huashu_design/` checkout.
 - Captured remote/commit:
 
 ```text

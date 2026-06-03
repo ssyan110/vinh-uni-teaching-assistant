@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=960,height=540"><title>汉字书写 · 白</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet"><script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script><link rel="stylesheet" href="assets/slide-base.css"><style>
+.stroke-title{position:absolute;left:58px;top:78px;font-size:22pt;font-weight:800}.stroke-card{position:absolute;left:50%;top:112px;transform:translateX(-50%);width:420px;height:370px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px 30px}.writer-target{width:230px;height:230px;position:relative;border:2px solid #999;background:#fafafa}.writer-target::before,.writer-target::after{content:"";position:absolute;pointer-events:none;z-index:0}.writer-target::before{top:50%;left:5%;right:5%;height:0;border-top:1.5px dashed #ccc}.writer-target::after{left:50%;top:5%;bottom:5%;width:0;border-left:1.5px dashed #ccc}.stroke-meta{text-align:center;margin-top:4px}.stroke-meta .pinyin{font-size:18pt}.meaning{font-size:13.5pt;color:#4A6080;margin-top:4px}.hv{font-size:11.5pt;color:#8A9AB0;font-style:italic;margin-top:3px}.animate-btn{margin-top:12px;border:0;border-radius:18px;background:#5AACAC;color:#fff;padding:8px 18px;font-weight:800;cursor:pointer}.fallback-char{font-family:'Noto Sans SC';font-size:130px;font-weight:900;color:#1A3A5A;text-align:center}
+</style><link rel="stylesheet" href="assets/interactive/lesson1-fun.css"></head><body><div class="slide"><div class="menu-bar"><span class="menu-icon"><i data-lucide="pen-line"></i></span><span class="section-label">TẬP VIẾT</span></div><div class="page-indicator">Trang 12</div>
+    <div class="stroke-card card">
+      <div id="writer-target" class="writer-target" data-char="白"></div>
+      <div class="stroke-meta">
+        <div class="pinyin">bái</div>
+        <div class="meaning">trắng</div>
+        <div class="hv">(bạch)</div>
+      </div>
+    </div>
+    <script src="assets/js/hanzi-writer.min.js"></script>
+    <script>
+      let writer; window.lessonWriter = null;
+      const embeddedCharData = {"strokes":["M 330 536 Q 397 597 434 638 Q 518 732 544 746 Q 569 764 552 783 Q 531 802 496 815 Q 463 828 448 821 Q 432 817 440 801 Q 452 762 384 658 Q 306 538 305 535 C 289 509 308 516 330 536 Z","M 227 531 Q 209 541 190 547 Q 183 550 176 543 Q 167 537 178 524 Q 236 419 241 179 Q 242 113 281 79 Q 282 78 287 75 Q 306 69 309 104 Q 309 111 309 117 L 304 156 Q 303 169 298 184 Q 292 239 283 310 Q 282 311 282 312 L 279 342 Q 272 421 270 485 C 269 510 254 517 227 531 Z","M 640 134 Q 650 106 675 51 Q 684 32 695 32 Q 713 35 724 63 Q 772 150 780 268 Q 792 341 801 428 Q 808 483 834 518 Q 855 540 840 556 Q 815 581 761 606 Q 740 618 702 605 Q 555 557 330 536 L 305 535 Q 268 535 227 531 C 197 529 241 478 270 485 Q 303 497 669 549 Q 712 556 729 536 Q 739 515 739 494 Q 732 337 696 185 Q 692 158 681 156 Q 677 155 664 160 C 635 153 633 152 640 134 Z","M 282 312 Q 297 305 324 308 Q 490 330 613 342 Q 643 345 633 362 Q 620 381 588 389 Q 558 396 505 384 Q 382 360 279 342 C 249 337 253 321 282 312 Z","M 309 117 Q 315 116 324 117 Q 426 133 640 134 C 670 134 685 139 664 160 Q 655 170 643 179 Q 625 192 590 186 Q 431 162 304 156 C 274 154 279 118 309 117 Z"],"medians":[[[449,809],[469,796],[487,761],[423,665],[330,549],[312,536]],[[184,534],[210,513],[236,471],[271,169],[292,88]],[[235,528],[277,511],[336,517],[550,547],[719,578],[742,574],[766,557],[784,536],[757,334],[727,160],[697,109],[695,47]],[[287,335],[300,327],[315,327],[570,365],[620,355]],[[311,150],[324,139],[337,138],[585,160],[655,161]]]};
+      function initWriter(){
+        const el=document.getElementById('writer-target');
+        const ch=el.dataset.char;
+        if(!window.HanziWriter){ el.innerHTML='<div class="fallback-char">'+ch+'</div>'; return; }
+        writer=HanziWriter.create('writer-target', ch, {
+          width: 230, height: 230, padding: 18, showOutline: true, showCharacter: false,
+          strokeAnimationSpeed: 0.575, delayBetweenStrokes: 360,
+          charDataLoader: function(char, onComplete){ onComplete(embeddedCharData); }
+        });
+        window.lessonWriter = writer;
+        setTimeout(()=>writer.animateCharacter(), 500);
+      }
+      function playStroke(){ if(writer) writer.animateCharacter(); }
+      initWriter();
+    </script>
+  </div><script src="assets/slide-base.js"></script><script src="assets/interactive/lesson1-fun.js"></script></body></html>

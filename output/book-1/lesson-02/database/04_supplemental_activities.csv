@@ -1,0 +1,9 @@
+activity_id,module_target,activity_type,title_vi,title_zh,description_vi,duration_minutes,interaction_mode,materials_needed
+ACT001,warmup,warmup,Bạn hôm nay bận không? Thử trả lời bằng tiếng Trung!,你今天忙吗？试试用中文回答！,"Giáo viên hỏi sinh viên: Hôm nay bạn bận không? Gợi ý dùng 忙/不忙 để trả lời. Ôn lại 你好 từ bài 1.",3,whole_class,
+ACT002,vocabulary_practice,vocabulary_drill,Ghép thẻ: Chữ Hán ↔ Pinyin ↔ Nghĩa tiếng Việt,闪卡配对：汉字 ↔ 拼音 ↔ 越南语,"Sinh viên ghép thẻ chữ Hán với pinyin và nghĩa tiếng Việt tương ứng. 14 từ vựng bài 2.",5,pair_work,Bộ thẻ flashcard 14 từ vựng bài 2
+ACT003,vocabulary_practice,vocabulary_drill,"Hỏi đáp với 吗: luyện câu hỏi Yes/No",用「吗」提问：练习是非问句,"Giáo viên đưa từ (忙, 难, 好), sinh viên đặt câu hỏi với 吗 và trả lời. Luyện cấu trúc: X + 吗? → 很X / 不X.",5,pair_work,
+ACT004,vocabulary_practice,vocabulary_drill,"Gia đình tôi: giới thiệu thành viên gia đình",我的家人：介绍家庭成员,"Sinh viên dùng 他/她 + 是 + vai trò gia đình (爸爸/妈妈/哥哥/弟弟/妹妹) để giới thiệu. Có thể dùng ảnh gia đình.",5,pair_work,Ảnh gia đình (tùy chọn)
+ACT005,vocabulary_practice,vocabulary_drill,"Cấu trúc 不太...: nói giảm nhẹ",不太……：委婉表达,"Giáo viên đưa tính từ (难, 忙, 好), sinh viên luyện nói giảm nhẹ với 不太. So sánh: 不难 vs 不太难.",4,whole_class,
+ACT006,text_preview,text_preview,"Nghe hội thoại bài 2, đoán nội dung",听第二课对话，猜内容,"Giáo viên đọc mẫu hoặc phát audio hội thoại. Sinh viên đoán: Họ nói về chuyện gì? Ai bận? Cái gì không khó?",3,whole_class,Audio file hoặc giáo viên đọc mẫu
+ACT007,culture,culture_supplement,Cách gọi thành viên gia đình trong tiếng Trung,中文家庭成员称呼,"So sánh cách gọi gia đình: Tiếng Việt (anh/chị/em) vs tiếng Trung (哥哥/姐姐/弟弟/妹妹). Giải thích tại sao tiếng Trung phân biệt rõ anh/em trai, chị/em gái.",5,whole_class,
+ACT008,discussion,discussion,Bạn có anh chị em không? Họ bận không?,你有兄弟姐妹吗？他们忙吗？,"Sinh viên chia sẻ về gia đình: Có mấy anh chị em? Họ làm gì? Có bận không? Luyện dùng 他/她 + 很忙/不忙.",5,pair_work,

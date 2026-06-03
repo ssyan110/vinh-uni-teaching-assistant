@@ -1,0 +1,41 @@
+{
+  "slide": "06-sample-v001.html",
+  "findings": 0,
+  "consoleErrors": 0,
+  "aligned": [
+    {
+      "pin": "zhè",
+      "han": "这",
+      "pinLeft": 285,
+      "hanLeft": 274,
+      "wordLeft": 274,
+      "wordWidth": 52
+    },
+    {
+      "pin": "shì",
+      "han": "是",
+      "pinLeft": 353,
+      "hanLeft": 340,
+      "wordLeft": 340,
+      "wordWidth": 52
+    },
+    {
+      "pin": "bàngōngshì",
+      "han": "办公室",
+      "pinLeft": 433,
+      "hanLeft": 406,
+      "wordLeft": 406,
+      "wordWidth": 156
+    },
+    {
+      "pin": "ma",
+      "han": "吗",
+      "pinLeft": 589,
+      "hanLeft": 576,
+      "wordLeft": 576,
+      "wordWidth": 52
+    }
+  ],
+  "details": [],
+  "screenshot": "lesson10-page06-aligned-pinyin.png"
+}

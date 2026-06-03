@@ -90,6 +90,22 @@
         "type": "string"
       }
     },
+    "activity_design_rules": {
+      "type": "array",
+      "description": "Courseware activity design rules that generated lesson structures and activities must follow",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "slide_template_rules": {
+      "type": "array",
+      "description": "Reusable slide template rules that downstream deck generation must follow",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
     "review_statuses": {
       "type": "array",
       "description": "Allowed review status values",

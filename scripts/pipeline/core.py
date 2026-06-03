@@ -77,7 +77,6 @@ def run_pipeline(
     )
 
     # Write all output files
-    write_csv(output_dir / "01_lesson_list.csv", lesson_list)
     write_csv(output_dir / "02_content_items.csv", content_items)
     write_csv(output_dir / "03_lesson_structure.csv", lesson_structure)
     write_csv(output_dir / "04_supplemental_activities.csv", activities)
@@ -97,6 +96,8 @@ def run_pipeline(
         "steps_not_implemented": list(range(9, 20)),
         "lesson_id": lesson_id,
         "source_pdf": source_pdf,
+        "activity_design_rules": config.activity_design_rules,
+        "slide_template_rules": config.slide_template_rules,
     }
 
     package = {
@@ -156,6 +157,8 @@ def _generate_structure(
             "content_focus": "",
             "source_pages": "-".join(pages) if pages else "",
             "item_ids": item_ids,
+            "activity_design_rules": " | ".join(config.activity_design_rules),
+            "slide_template_rules": " | ".join(config.slide_template_rules),
         })
     return structure
 
@@ -245,7 +248,6 @@ Generated: {generated_at}
 
 ## Generated files
 
-- `01_lesson_list.csv` — step 2 lesson list
 - `02_content_items.csv` — steps 3–4 extraction + page mapping
 - `03_lesson_structure.csv` — step 5 teaching restructure
 - `04_supplemental_activities.csv` — step 6 activities
@@ -253,8 +255,16 @@ Generated: {generated_at}
 - `06_google_sheets_database.csv` — step 8 Google Sheets-ready database
 - `vp_{lesson_id.replace('-', '_')}_database.json` — full machine-readable package
 
+Note: The book-level lesson index is at `output/book-{{N}}/lesson_list.csv`.
+
 ## Pipeline config
 
 Teaching sequence ({len(config.teaching_sequence)} modules):
 {chr(10).join(f"  {m['order']}. {m['label_vi']}" for m in config.teaching_sequence)}
+
+Activity design rules:
+{chr(10).join(f"  - {rule}" for rule in config.activity_design_rules) or "  - N/A"}
+
+Slide template rules:
+{chr(10).join(f"  - {rule}" for rule in config.slide_template_rules) or "  - N/A"}
 """

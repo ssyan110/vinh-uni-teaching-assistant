@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "lesson_id": "lesson-01",
+    "total_images": 11,
+    "image_spec": {
+      "width": 576,
+      "height": 324,
+      "format": "png",
+      "aspect_ratio": "16:9",
+      "background": "white_or_pale_grey",
+      "style": "soft_textbook_line_art"
+    },
+    "style_notes": "All images must share the soft textbook line-art style: thin grey-blue outlines, muted pastel fills, white or pale grey background, 16:9 landscape, no text or characters in image."
+  },
+  "hermes_instructions": "Generate each image using the prompt below. Save each as a 16:9 PNG, ideally 576x324 or larger. All images must share the same soft textbook line-art style: thin grey-blue outlines, muted pastel fills, white or pale grey background, gentle low-contrast shadows. Do not use flat teal icon art, circular icon framing, decorative blobs, text, letters, numbers, or Chinese characters inside the image.",
+  "prompts": [
+    {
+      "filename": "vocab-nǐ.png",
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide, 16:9 landscape composition, thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background, clean airy layout, gentle flat shading and subtle low-contrast shadows, simple clear visual metaphor suitable for Vietnamese university Chinese learners, no text, no letters, no numbers, no Chinese characters, no labels, no watermark, avoid thick teal outlines, toy icon style, decorative abstract blobs, glossy vector art, stickers, exaggerated chibi proportions, and harsh colors. Subject: A friendly young person smiling and pointing directly at the viewer with their index finger, as if saying you",
+      "chinese": "你",
+      "pinyin": "nǐ",
+      "vietnamese": "bạn",
+      "word_type": "đại từ",
+      "visual_description": "A friendly young person smiling and pointing directly at the viewer with their index finger, as if saying you",
+      "output_path": "output/book-1/lesson-01/slides/assets/vocab-images/vocab-nǐ.png"
+    },
+    {
+      "filename": "vocab-hǎo.png",
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide, 16:9 landscape composition, thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background, clean airy layout, gentle flat shading and subtle low-contrast shadows, simple clear visual metaphor suitable for Vietnamese university Chinese learners, no text, no letters, no numbers, no Chinese characters, no labels, no watermark, avoid thick teal outlines, toy icon style, decorative abstract blobs, glossy vector art, stickers, exaggerated chibi proportions, and harsh colors. Subject: A cheerful person giving a clear thumbs-up with a warm smile, conveying good or great",
+      "chinese": "好",
+      "pinyin": "hǎo",
+      "vietnamese": "tốt, đẹp, hay, ngon",
+      "word_type": "tính từ",
+      "visual_description": "A cheerful person giving a clear thumbs-up with a warm smile, conveying good or great",
+      "output_path": "output/book-1/lesson-01/slides/assets/vocab-images/vocab-hǎo.png"
+    },
+    {
+      "filename": "vocab-yī.png",
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide, 16:9 landscape composition, thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background, clean airy layout, gentle flat shading and subtle low-contrast shadows, simple clear visual metaphor suitable for Vietnamese university Chinese learners, no text, no letters, no numbers, no Chinese characters, no labels, no watermark, avoid thick teal outlines, toy icon style, decorative abstract blobs, glossy vector art, stickers, exaggerated chibi proportions, and harsh colors. Subject: One natural human hand held up with palm facing the viewer, exactly one index finger raised and the other fingers folded naturally, matching the five-finger hand illustration style",
+      "chinese": "一",
+      "pinyin": "yī",
+      "vietnamese": "một",
+      "word_type": "số từ",
+      "visual_description": "One natural human hand held up with palm facing the viewer, exactly one index finger raised and the other fingers folded naturally, matching the five-finger hand illustration style",
+      "output_path": "output/book-1/lesson-01/slides/assets/vocab-images/vocab-yī.png"
+    },
+    {
+      "filename": "vocab-wǔ.png",
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide, 16:9 landscape composition, thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background, clean airy layout, gentle flat shading and subtle low-contrast shadows, simple clear visual metaphor suitable for Vietnamese university Chinese learners, no text, no letters, no numbers, no Chinese characters, no labels, no watermark, avoid thick teal outlines, toy icon style, decorative abstract blobs, glossy vector art, stickers, exaggerated chibi proportions, and harsh colors. Subject: A natural human hand held up with palm facing the viewer and all five fingers spread open",
+      "chinese": "五",
+      "pinyin": "wǔ",
+      "vietnamese": "năm",
+      "word_type": "số từ",
+      "visual_description": "A natural human hand held up with palm facing the viewer and all five fingers spread open",
+      "output_path": "output/book-1/lesson-01/slides/assets/vocab-images/vocab-wǔ.png"
+    },
+    {
+      "filename": "vocab-bā.png",
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide, 16:9 landscape composition, thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background, clean airy layout, gentle flat shading and subtle low-contrast shadows, simple clear visual metaphor suitable for Vietnamese university Chinese learners, no text, no letters, no numbers, no Chinese characters, no labels, no watermark, avoid thick teal outlines, toy icon style, decorative abstract blobs, glossy vector art, stickers, exaggerated chibi proportions, and harsh colors. Subject: One natural human hand making the Chinese number eight gesture: index finger extended upward and thumb extended sideways, with the other fingers folded naturally, matching the five-finger hand illustration style",
+      "chinese": "八",
+      "pinyin": "bā",
+      "vietnamese": "tám",
+      "word_type": "số từ",
+      "visual_description": "One natural human hand making the Chinese number eight gesture: index finger extended upward and thumb extended sideways, with the other fingers folded naturally, matching the five-finger hand illustration style",
+      "output_path": "output/book-1/lesson-01/slides/assets/vocab-images/vocab-bā.png"
+    },
+    {
+      "filename": "vocab-dà.png",
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide, 16:9 landscape composition, thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background, clean airy layout, gentle flat shading and subtle low-contrast shadows, simple clear visual metaphor suitable for Vietnamese university Chinese learners, no text, no letters, no numbers, no Chinese characters, no labels, no watermark, avoid thick teal outlines, toy icon style, decorative abstract blobs, glossy vector art, stickers, exaggerated chibi proportions, and harsh colors. Subject: A very big modern skyscraper in Ho Chi Minh City, inspired by Landmark 81, towering over smaller surrounding buildings and trees, clearly conveying big",
+      "chinese": "大",
+      "pinyin": "dà",
+      "vietnamese": "to, lớn",
+      "word_type": "tính từ",
+      "visual_description": "A very big modern skyscraper in Ho Chi Minh City, inspired by Landmark 81, towering over smaller surrounding buildings and trees, clearly conveying big",
+      "output_path": "output/book-1/lesson-01/slides/assets/vocab-images/vocab-dà.png"
+    },
+    {
+      "filename": "vocab-bù.png",
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide, 16:9 landscape composition, thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background, clean airy layout, gentle flat shading and subtle low-contrast shadows, simple clear visual metaphor suitable for Vietnamese university Chinese learners, no text, no letters, no numbers, no Chinese characters, no labels, no watermark, avoid thick teal outlines, toy icon style, decorative abstract blobs, glossy vector art, stickers, exaggerated chibi proportions, and harsh colors. Subject: A person gently shaking their head with eyes closed and waving both hands in front of their chest in a clear no gesture",
+      "chinese": "不",
+      "pinyin": "bù",
+      "vietnamese": "không, chẳng",
+      "word_type": "phó từ",
+      "visual_description": "A person gently shaking their head with eyes closed and waving both hands in front of their chest in a clear no gesture",
+      "output_path": "output/book-1/lesson-01/slides/assets/vocab-images/vocab-bù.png"
+    },
+    {
+      "filename": "vocab-kǒu.png",
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide, 16:9 landscape composition, thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background, clean airy layout, gentle flat shading and subtle low-contrast shadows, simple clear visual metaphor suitable for Vietnamese university Chinese learners, no text, no letters, no numbers, no Chinese characters, no labels, no watermark, avoid thick teal outlines, toy icon style, decorative abstract blobs, glossy vector art, stickers, exaggerated chibi proportions, and harsh colors. Subject: A friendly face shown close-up with an open mouth as if saying ah, with the mouth as the clear focus",
+      "chinese": "口",
+      "pinyin": "kǒu",
+      "vietnamese": "miệng; nhân khẩu",
+      "word_type": "danh từ, lượng từ",
+      "visual_description": "A friendly face shown close-up with an open mouth as if saying ah, with the mouth as the clear focus",
+      "output_path": "output/book-1/lesson-01/slides/assets/vocab-images/vocab-kǒu.png"
+    },
+    {
+      "filename": "vocab-bái.png",
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide, 16:9 landscape composition, thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background, clean airy layout, gentle flat shading and subtle low-contrast shadows, simple clear visual metaphor suitable for Vietnamese university Chinese learners, no text, no letters, no numbers, no Chinese characters, no labels, no watermark, avoid thick teal outlines, toy icon style, decorative abstract blobs, glossy vector art, stickers, exaggerated chibi proportions, and harsh colors. Subject: A fluffy white rabbit sitting calmly on a small patch of light green grass, clearly representing white",
+      "chinese": "白",
+      "pinyin": "bái",
+      "vietnamese": "trắng",
+      "word_type": "tính từ",
+      "visual_description": "A fluffy white rabbit sitting calmly on a small patch of light green grass, clearly representing white",
+      "output_path": "output/book-1/lesson-01/slides/assets/vocab-images/vocab-bái.png"
+    },
+    {
+      "filename": "vocab-nǚ.png",
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide, 16:9 landscape composition, thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background, clean airy layout, gentle flat shading and subtle low-contrast shadows, simple clear visual metaphor suitable for Vietnamese university Chinese learners, no text, no letters, no numbers, no Chinese characters, no labels, no watermark, avoid thick teal outlines, toy icon style, decorative abstract blobs, glossy vector art, stickers, exaggerated chibi proportions, and harsh colors. Subject: A young woman standing and smiling warmly in simple neat clothing, natural human proportions",
+      "chinese": "女",
+      "pinyin": "nǚ",
+      "vietnamese": "nữ, phụ nữ",
+      "word_type": "danh từ",
+      "visual_description": "A young woman standing and smiling warmly in simple neat clothing, natural human proportions",
+      "output_path": "output/book-1/lesson-01/slides/assets/vocab-images/vocab-nǚ.png"
+    },
+    {
+      "filename": "vocab-mǎ.png",
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide, 16:9 landscape composition, thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background, clean airy layout, gentle flat shading and subtle low-contrast shadows, simple clear visual metaphor suitable for Vietnamese university Chinese learners, no text, no letters, no numbers, no Chinese characters, no labels, no watermark, avoid thick teal outlines, toy icon style, decorative abstract blobs, glossy vector art, stickers, exaggerated chibi proportions, and harsh colors. Subject: A white horse standing in side profile with a flowing mane and tail, friendly and approachable",
+      "chinese": "马",
+      "pinyin": "mǎ",
+      "vietnamese": "con ngựa",
+      "word_type": "danh từ",
+      "visual_description": "A white horse standing in side profile with a flowing mane and tail, friendly and approachable",
+      "output_path": "output/book-1/lesson-01/slides/assets/vocab-images/vocab-mǎ.png"
+    }
+  ]
+}

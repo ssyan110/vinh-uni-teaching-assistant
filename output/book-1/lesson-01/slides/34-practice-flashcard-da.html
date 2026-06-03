@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=960,height=540"><title>Flashcard</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet"><script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script><link rel="stylesheet" href="assets/slide-base.css"><style>
+.flash-title{position:absolute;left:58px;top:70px;font-size:20pt;font-weight:800;color:#1A3A5A}.flash-count{position:absolute;right:58px;top:78px;background:#E8F4F4;color:#5AACAC;border-radius:999px;padding:6px 16px;font-size:10pt;font-weight:900}.flash-card{position:absolute;left:50%;top:116px;transform:translateX(-50%);width:430px;height:326px;perspective:1200px;cursor:pointer}.flip-trigger{position:absolute;width:0;height:0;opacity:0;pointer-events:none}.flip-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .68s cubic-bezier(.2,.8,.2,1)}.flip-face{position:absolute;inset:0;border-radius:24px;background:#fff;box-shadow:0 14px 38px rgba(90,172,172,.16);border:1px solid rgba(90,172,172,.16);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;backface-visibility:hidden;transition:opacity .18s ease}.flip-face:before{content:"";position:absolute;left:0;top:0;bottom:0;width:58px;background:linear-gradient(180deg,#D4EDED,#E8F4F4)}.flip-face:after{content:"";position:absolute;right:-44px;top:-44px;width:130px;height:130px;border-radius:50%;background:rgba(200,184,232,.16)}.face-han{transform:rotateY(0deg);opacity:1}.face-pin{transform:rotateY(180deg);opacity:0}.face-vi{transform:rotateY(360deg);opacity:0}.flash-card:has(.pin-trigger.revealed):not(:has(.vi-trigger.revealed)) .flip-inner{transform:rotateY(180deg)}.flash-card:has(.pin-trigger.revealed):not(:has(.vi-trigger.revealed)) .face-han{opacity:0}.flash-card:has(.pin-trigger.revealed):not(:has(.vi-trigger.revealed)) .face-pin{opacity:1}.flash-card:has(.vi-trigger.revealed) .flip-inner{transform:rotateY(360deg)}.flash-card:has(.vi-trigger.revealed) .face-han,.flash-card:has(.vi-trigger.revealed) .face-pin{opacity:0}.flash-card:has(.vi-trigger.revealed) .face-vi{opacity:1}.flash-hint,.face-label,.flash-han,.flash-pin,.flash-vi,.mini-char{position:relative;z-index:1}.flash-hint,.face-label{display:inline-flex;align-items:center;justify-content:center;background:#F6FBFB;color:#8A9AB0;border-radius:999px;padding:6px 16px;font-size:10pt;font-weight:800;margin-bottom:12px}.face-label{background:#E8F4F4;color:#5AACAC}.flash-han{font-size:112pt;line-height:.95}.flash-pin{font-size:52pt;line-height:1}.mini-char{font-size:48pt;line-height:1;margin-top:20px;color:#D7E6E6}.flash-vi{font-size:40pt;color:#1A3A5A;font-weight:900;line-height:1.12;max-width:300px}.flash-note{position:absolute;left:0;right:0;bottom:50px;text-align:center;color:#8A9AB0;font-size:10pt;font-weight:700}
+</style></head><body><div class="slide"><div class="menu-bar"><span class="menu-icon"><i data-lucide="pencil"></i></span><span class="section-label">TẬP TỪ VỰNG</span></div>
+    <div class="flash-title">Flashcard</div>
+    <div class="flash-count">05 / 5</div>
+    <div class="flash-card">
+      <span class="flip-trigger pin-trigger" data-reveal-step="1"></span>
+      <span class="flip-trigger vi-trigger" data-reveal-step="2"></span>
+      <div class="flip-inner">
+        <div class="flip-face face-han">
+          <div class="flash-hint">Nhìn chữ và đọc trước</div>
+          <div class="hanzi flash-han">大</div>
+        </div>
+        <div class="flip-face face-pin">
+          <div class="face-label">Pinyin</div>
+          <div class="pinyin flash-pin">dà</div>
+          <div class="mini-char hanzi">大</div>
+        </div>
+        <div class="flip-face face-vi">
+          <div class="face-label">Nghĩa</div>
+          <div class="flash-vi">to, lớn</div>
+        </div>
+      </div>
+    </div>
+  </div><script src="assets/slide-base.js"></script></body></html>

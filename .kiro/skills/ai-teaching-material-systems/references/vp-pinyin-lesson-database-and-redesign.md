@@ -15,55 +15,61 @@ Implement **only steps 1–8** before teacher review:
 7. 遊戲標記 — group-game suitability
 8. 寫入資料庫 — Google Sheets-ready database
 
-Stop here. Steps 9–19 require teacher review/approval first. Do not generate final teacher/student decks or homework systems as if approved unless Adam explicitly asks.
+Stop here. Steps 9–18 require teacher review/approval first. Do not generate final teacher decks or homework systems as if approved unless Adam explicitly asks.
 
-## Canonical post-review MVP steps 9–19
-
-Adam later provided the original planning document, which defines steps 9–19 as:
+## Canonical post-review MVP steps 9–18
 
 9. 人工審閱 — teacher checks content, page mapping, teaching order, and answer keys in Google Sheets.
 10. 生成老師備課版 — generate teacher-facing notes from Approved Data.
 11. 生成 Huashu Brief — convert Approved Data into Huashu-compatible deck instructions. Original doc said Gamma Brief; replace Gamma with Huashu Design.
 12. 生成教師版簡報 — Huashu Design generates the teacher deck locally from HTML source.
-13. 匯出備份 — export PPTX / PDF backups from Huashu.
-14. 生成學生版內容 — remove teacher tips, internal review info, and in-class exercise answers.
-15. 生成作業題庫 — create vocabulary, pinyin, hanzi, grammar, and text-related homework/questions.
-16. 題庫審閱 — teacher reviews questions and answers in Google Sheets.
-17. 建立學生版與作業 — create student version and homework in the selected student workflow. If Formative is unavailable/paid, keep Sheets/CSV/HTML-ready content first.
-18. 課堂測試 — use Lesson 1 in class and collect feedback.
-19. 回填修正 — record issues and improvement suggestions in the Improvement Log.
+13. 建立課堂簡報 — build HTML presenter (index.html with fullscreen, left slide thumbnails, annotation tools, and on-demand PDF download).
+14. 生成作業題庫 — create vocabulary, pinyin, hanzi, grammar, and text-related homework/questions.
+15. 題庫審閱 — teacher reviews questions and answers in Google Sheets.
+16. 建立作業 — create homework in the selected workflow. If Formative is unavailable/paid, keep Sheets/CSV/HTML-ready content first.
+17. 課堂測試 — use Lesson 1 in class and collect feedback.
+18. 回填修正 — record issues and improvement suggestions in the Improvement Log.
 
-## Post-review steps 9–19 status
+Note: The old step 14 (生成學生版內容) has been removed. There is no separate student version — the teacher deck IS the classroom material. The old step 13 (匯出備份) is now handled by the HTML presenter's on-demand PDF export.
 
-The exact original canonical wording for VP steps 9–19 was not preserved in the current project notes. If Adam asks what 9–19 are, do not pretend the following is recovered source text. Present it as the current working operational draft unless a transcript/source doc is found.
+## Post-review steps 9–18 status
+
+The working operational draft below expands on the canonical steps above with more detail:
 
 Working draft:
 
 9. 教師審核 / Teacher review — teacher checks extracted content, page mapping, teaching sequence, activities, and approves/rejects rows.
 10. 內容修正 / Content correction — fix vocabulary, pinyin, Vietnamese explanations, Simplified Chinese text, source references, and activity notes.
 11. 最終教學順序確認 / Final teaching sequence approval — lock the approved lesson flow before final generation.
-12. 課件生成 / Generate classroom slide deck — approved database rows become student-facing HTML slides.
-13. 教師手冊生成 / Generate teacher guide — teaching script, timing, activity instructions, answers, and classroom notes; keep this out of classroom slides.
+12. 課件生成 / Generate classroom slide deck — approved database rows become HTML slides via Huashu Design.
+13. 建立課堂簡報 / Build HTML presenter — index.html with fullscreen, thumbnails, annotation tools, and on-demand PDF export.
 14. 練習與作業生成 / Generate exercises + homework — in-class drills, after-class homework, review questions, and answer key.
-15. 遊戲活動生成 / Generate game materials — turn approved game-marked activities into classroom-ready group games.
-16. 輸出 PDF / Export PDF — student/classroom PDF version.
-17. 輸出可編輯 PPTX / Export editable PPTX — editable teacher PowerPoint via huashu-design.
-18. QA 檢查 / Quality assurance — screenshot QA, language check, no teacher notes on slides, no Traditional Chinese, no unwanted English labels, PPTX slide-count verification.
-19. 交付與歸檔 / Delivery + archive — final package: HTML, PDF, PPTX, teacher guide, database, source files, screenshots, and version notes.
+15. 遊戲活動生成 / Generate game materials — turn approved game-marked activities into classroom-ready group games (Blooket preferred).
+16. QA 檢查 / Quality assurance — screenshot QA, language check, no teacher notes on slides, no Traditional Chinese, no unwanted English labels.
+17. 課堂測試 / Classroom test — use lesson in class and collect feedback.
+18. 交付與歸檔 / Delivery + archive — final package: HTML, PDF, teacher guide, database, source files, screenshots, and version notes.
 
-Boundary summary: steps 1–8 build the review database; step 9 is the teacher-review gate; steps 10–19 turn the approved database into final teaching materials.
+Boundary summary: steps 1–8 build the review database; step 9 is the teacher-review gate; steps 10–18 turn the approved database into final teaching materials.
 
 ## Database output shape
 
 Preferred Google Sheets-ready tabs/files:
 
-- `01_lesson_list.csv`
-- `02_content_items.csv`
-- `03_lesson_structure.csv`
-- `04_supplemental_activities.csv`
-- `05_game_suggestions.csv`
-- `06_google_sheets_database.csv`
-- `vp_<lesson>_database.json`
+- `output/book-{N}/lesson_list.csv` (book-level index of all lessons)
+- Per-lesson root:
+  - `index.html` classroom launcher; opens `slides/index.html`
+  - `README.md` short folder map
+  - `slides/` editable slide source and runtime assets
+  - `exports/final/` clean PDF backups
+  - `exports/qa/` screenshots, contact sheets, visual QA artifacts
+  - `exports/archive/` deprecated generated files kept only for traceability
+- Per-lesson `database/` folder:
+  - `02_content_items.csv`
+  - `03_lesson_structure.csv`
+  - `04_supplemental_activities.csv`
+  - `05_game_suggestions.csv`
+  - `06_google_sheets_database.csv`
+  - `vp_<lesson>_database.json`
 
 Minimum columns for the main database:
 
@@ -113,4 +119,4 @@ For VP database tasks, verify:
 - every content row has a source page
 - vocabulary rows include `word_type_vi`
 - metadata says completed steps are `[1,2,3,4,5,6,7,8]`
-- steps 9–19 are explicitly not implemented/pending teacher review
+- steps 9–18 are explicitly not implemented/pending teacher review

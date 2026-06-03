@@ -1,0 +1,18 @@
+{
+  "enabled": true,
+  "name": "Rebuild Slide Data",
+  "description": "Re-renders screenshots and rebuilds slides-data.js for PDF export whenever any lesson slide HTML file is edited.",
+  "version": "2",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "output/**/*.html"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A slide HTML file was edited. Identify which lesson's slides directory it belongs to (the parent folder named 'slides'). Then run: node scripts/build-slides-data.mjs --slides-dir <that-slides-dir>. Do not run it for index.html changes unless a slide content file also changed."
+  },
+  "workspaceFolderName": "ai-teaching-material-system",
+  "shortName": "rebuild-slide-data"
+}

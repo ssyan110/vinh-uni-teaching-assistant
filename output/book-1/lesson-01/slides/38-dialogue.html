@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=960,height=540">
+  <title>Hội thoại</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;700;900&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="assets/slide-base.css"><style>
+body {
+      width: 960px;
+      height: 540px;
+      overflow: hidden;
+      font-family: 'Inter', sans-serif;
+      color: #1A3A5A;
+      background: #fff
+    }
+
+    .slide {
+      position: relative;
+      width: 960px;
+      height: 540px;
+      overflow: hidden;
+      background: linear-gradient(to top, #F4FAFA, #FFFFFF)
+    }
+
+    .slide:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 12% 84%, rgba(90, 172, 172, .08) 0 92px, transparent 94px), radial-gradient(circle at 90% 16%, rgba(200, 184, 232, .12) 0 120px, transparent 122px);
+      pointer-events: none
+    }
+
+    .menu-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background: rgba(255, 255, 255, .90);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(26, 58, 90, .08);
+      display: flex;
+      align-items: center;
+      padding: 0 28px;
+      z-index: 20;
+      box-shadow: 0 8px 22px rgba(26, 58, 90, .10)
+    }
+
+    .menu-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 8px;
+      background: #E8F4F4;
+      color: #5AACAC;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      box-shadow: inset 0 0 0 1px rgba(90, 172, 172, .18)
+    }
+
+    .menu-icon svg {
+      width: 15px;
+      height: 15px;
+      stroke-width: 2.4
+    }
+
+    .menu-icon.char {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 1
+    }
+
+    .section-label {
+      font-size: 9pt;
+      font-weight: 700;
+      color: #4A6080;
+      text-transform: uppercase;
+      letter-spacing: 1.2px
+    }
+
+    .page-indicator {
+      position: absolute;
+      bottom: 16px;
+      right: 28px;
+      font-size: 9pt;
+      color: #8A9AB0;
+      z-index: 20
+    }
+
+    .source {
+      position: absolute;
+      bottom: 16px;
+      left: 28px;
+      font-size: 9pt;
+      color: #8A9AB0;
+      z-index: 20
+    }
+
+    .bg-deco {
+      position: absolute;
+      color: #5AACAC;
+      opacity: .14;
+      z-index: 0
+    }
+
+    .title {
+      font-size: 24pt;
+      font-weight: 800;
+      color: #1A3A5A;
+      line-height: 1.18
+    }
+
+    .subtitle {
+      font-size: 14pt;
+      color: #8A9AB0
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #E8F4F4;
+      color: #5AACAC;
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-size: 10pt;
+      font-weight: 700
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 28px rgba(90, 172, 172, .13);
+      border: 1px solid rgba(90, 172, 172, .14)
+    }
+
+    .stock-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block
+    }
+
+    .photo-panel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      box-shadow: 0 12px 34px rgba(26, 58, 90, .16)
+    }
+
+    .photo-panel:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(255, 255, 255, .24), rgba(255, 255, 255, 0))
+    }
+
+    .hanzi {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-weight: 900;
+      color: #1A3A5A
+    }
+
+    .aligned-text{display:flex;align-items:flex-end;justify-content:center;gap:12px;row-gap:7px;flex-wrap:wrap;overflow:visible}.aligned-text .a-word{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;min-height:76px;overflow:visible}.aligned-text .a-pin{font-size:13.5pt;line-height:1.05;color:#5AACAC;font-weight:800;white-space:nowrap;margin-bottom:7px}.aligned-text .a-han{font-family:'Noto Sans SC';font-size:36pt;line-height:1;color:#1A3A5A;font-weight:900;white-space:nowrap}.aligned-text .a-punct{font-family:'Noto Sans SC';font-size:36pt;line-height:1;color:#1A3A5A;font-weight:900;margin-left:-8px}
+
+    .pinyin {
+      color: #5AACAC;
+      font-weight: 600
+    }
+
+    .line {
+      width: 46px;
+      height: 3px;
+      border-radius: 4px;
+      background: #5AACAC
+    }
+
+    .dialogue-title {
+      position: absolute;
+      left: 62px;
+      top: 78px;
+      font-size: 22pt;
+      font-weight: 800
+    }
+
+    .dialogue {
+      position: absolute;
+      left: 168px;
+      top: 142px;
+      width: 610px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px
+    }
+
+    .dialogue-row {
+      display: flex;
+      align-items: center;
+      gap: 18px
+    }
+
+    .avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      box-shadow: 0 6px 18px rgba(26, 58, 90, .12);
+      border: 3px solid #fff;
+      flex-shrink: 0;
+      overflow: hidden
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    .block {
+      width: 380px;
+      padding: 22px 28px
+    }
+
+    .block-a {
+      border-left: 5px solid #5AACAC
+    }
+
+    .block-b {
+      border-left: 5px solid #B8C8E8
+    }
+
+    .dialogue-align{justify-content:flex-start;gap:8px}.dialogue-align .a-word{min-height:54px}.dialogue-align .a-pin{font-size:10.5pt}.dialogue-align .a-han,.dialogue-align .a-punct{font-size:30pt}
+</style>
+</head>
+
+<body>
+  <div class="slide">
+    <div class="menu-bar"><span class="menu-icon"><i data-lucide="book-open"></i></span><span class="section-label">BÀI
+        ĐỌC</span></div>
+    <div class="page-indicator">Trang 1</div>
+    
+    <div class="dialogue-title">Hội thoại</div>
+    <div class="dialogue">
+      <div class="dialogue-row">
+        <div class="avatar"><img src="avatar-a.png" alt="A"></div>
+        <div class="block card block-a">
+          <div class="aligned-text dialogue-align"><span class="a-word"><span class="a-pin">nǐ</span><span class="a-han">你</span></span><span class="a-word"><span class="a-pin">hǎo</span><span class="a-han">好</span></span></div>
+        </div>
+      </div>
+      <div class="dialogue-row">
+        <div class="avatar"><img src="avatar-b.png" alt="B"></div>
+        <div class="block card block-b">
+          <div class="aligned-text dialogue-align"><span class="a-word"><span class="a-pin">nǐ</span><span class="a-han">你</span></span><span class="a-word"><span class="a-pin">hǎo</span><span class="a-han">好</span></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/slide-base.js"></script>
+</body>
+
+</html>
