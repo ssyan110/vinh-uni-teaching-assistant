@@ -58,12 +58,13 @@ For Adam's VP teaching-material production system, implement only steps 1–8 be
 4. 頁碼標註: every extracted item includes original textbook page mapping.
 5. 教學重組: restructure into the new teaching sequence.
 6. 補充活動: generate warm-up, pinyin drills, vocabulary drills, grammar drills, text preview, culture supplement, discussion.
+6.5 圖片資料化: write image metadata for every classroom visual need, especially vocabulary, sample sentence, cover, divider, and culture images. Use `image_role`, `image_prompt`, `image_file`, `image_reuse_from`, `image_status`, and `image_semantic_check`.
 7. 遊戲標記: mark which activities are suitable for group games.
-8. 寫入資料庫: output a Google Sheets-ready teaching-material database.
+8. 寫入資料庫: output a Google Sheets-ready teaching-material database, including image metadata fields where relevant.
 
 Steps 9–18 start after teacher review/approval and should not be automated as final classroom materials unless Adam explicitly asks:
 
-9. 人工審閱: teachers check content, page mapping, teaching order, and answer keys in Google Sheets.
+9. 人工審閱: teachers check content, page mapping, teaching order, image semantics, and answer keys in Google Sheets.
 10. 生成老師備課版: generate teacher-facing teaching notes from Approved Data.
 11. 生成 Huashu Brief: convert Approved Data into Huashu-compatible slide/deck brief. Original doc said Gamma Brief; replace Gamma with Huashu Design.
 12. 生成教師版簡報: use Huashu Design to generate the teacher deck locally as HTML source, not paid slide software.
@@ -75,6 +76,16 @@ Steps 9–18 start after teacher review/approval and should not be automated as 
 18. 回填修正: record issues and improvement suggestions in the Improvement Log.
 
 Note: The old step 14 (生成學生版內容) has been removed. There is no separate student version — the teacher deck IS the classroom material. The workflow is now 18 steps total.
+
+Practical image workflow:
+
+```bash
+npm run assets:manifest -- output/book-1/lesson-XX
+npm run assets:qa -- output/book-1/lesson-XX
+npm run assets:replace -- --lesson output/book-1/lesson-XX --record V001 --image /path/to/new.png
+```
+
+Read `docs/image-asset-workflow.md` before generating, replacing, or QA-ing lesson images. The asset manifest is the bridge between database image metadata and slide HTML; do not rely on `prompts.json` or manual HTML edits as the source of truth.
 
 See `references/vp-pinyin-lesson-database-and-redesign.md` for the Google Sheets-ready VP database shape, auth fallback, copyright-safe reference-design handling, and post-review steps 9–18.
 
@@ -250,15 +261,9 @@ Before saying the system is ready:
 
 ## Common Pitfalls
 
-### 1. `package.json` with `"type": "module"` can break huashu scripts
+### 1. Do not revive the PPTX workflow
 
-`export_deck_pptx.mjs` imports `scripts/html2pptx.js` using CommonJS `require`. If the project root has `"type": "module"`, Node may treat `html2pptx.js` as ESM and fail with:
-
-```text
-require is not defined in ES module scope
-```
-
-Fix: remove `"type": "module"` from the project `package.json`, or isolate/copy the huashu scripts into a folder with CommonJS semantics.
+PPTX export references in older notes are historical. The current classroom format is the HTML presenter, with clean PDF backup only after Adam confirms finalization.
 
 ### 2. Visual verification matters even after tests pass
 
@@ -287,11 +292,17 @@ Implementation rules:
 - Pinyin: acceptable as pronunciation support.
 - Pinyin word grouping: pinyin of a multi-syllable word must be written together without space between syllables of one word. Correct: "dìèr kè · nǐ shì nǎguó rén?" Wrong: "dì èr kè · nǐ shì nǎ guó rén?" Each vocabulary word's pinyin is one unit. Sentence pinyin groups by word boundaries. Verify correct word-boundary pinyin using Google Translate or an LLM.
 - Regular lesson structure excludes pinyin modules: pinyin is taught in separate pinyin lessons. For normal `regular` lessons, do not add `Pinyin` or `Luyện pinyin` modules to the classroom lesson structure, even if textbook pages contain pronunciation/pinyin exercises. Those pages may remain as raw extracted textbook exercises for teacher review, but they are not classroom teaching modules for regular lessons.
+- Pinyin lesson template: future pinyin decks reuse `output/pinyin/pinyin-01` as the pinyin-course template. Do not build future pinyin lessons from scratch. Keep the same cover, objective, divider, concept, tone, vocabulary, flashcard, practice, appendix/input setup, closing, image style, and presenter behavior; swap lesson-specific text, taught sounds, rules, vocabulary, exercises, and images.
+- Pinyin classroom sequence: keep clear section dividers for concepts/review, initials, finals, sounds/chart, tones, vocabulary, review/practice, appendix/input setup when applicable, and closing. `Mục lục` and `Quy ước` slides are no longer used in any future pinyin classroom deck.
+- Pinyin terminology: use `thanh điệu` exactly. Do not use `thanh điều`.
+- Pinyin objective slides: reuse the Pinyin Lesson 1 objectives layout. Taught initials/finals/rule anchors are bold and red; main goal text changes by lesson, e.g. Lesson 1 has bold red `bmpf`, bold red `aoeiuü`, `Học 5 thanh điệu tiếng Trung`, and `Học đọc 16 từ vựng`.
+- Pinyin images: cover, goal, divider, concept, tone, initials/finals, vocabulary, appendix/input setup, and closing images all use the same soft textbook/course style across pinyin lessons. Treat them as templates; change only lesson-specific content and image subject.
+- Pinyin page indicators: pinyin classroom slides do not show bottom-right `Trang ...` page indicators, even when source page metadata exists in the database. Presenter chrome may still show slide position.
 - Vocabulary extraction: if a textbook vocabulary item has indented component words underneath it, extract those component words as separate vocabulary records too. Keep printed page mapping and note the parent word in `raw_source_text`; e.g. `办公室` includes `办公`, `电话` includes `电` and `话`, `手机` includes `手`.
 - Grammar explanation style: absorb the textbook explanation, then rewrite it in simple Vietnamese for beginner students. Prefer plain sentence patterns, examples, and Vietnamese/Chinese contrast over dense grammar terminology.
 - Classroom slides must not show internal/source/tool/audience labels such as `Kami × Huashu`, `Nguồn: trang...`, `Dành cho sinh viên...`, or implementation notes.
 - Teacher-prep guidance must not appear on classroom PPT/PDF slides. Put teacher tips, lesson flow notes, and prep explanations in a separate file named `教师手册`.
-- Use Lesson 10 `output/book-1/lesson-10/slides/01-cover.html` as the canonical cover template for all future lessons. Reuse its cover layout and visual language; only replace lesson number, Chinese/pinyin title, Vietnamese title, topic chips, and topic image.
+- Use Lesson 10 `output/book-1/lesson-10/slides/01-cover.html` as the canonical cover template for all future lessons. Reuse its cover layout and visual language; only replace lesson number, Chinese/pinyin title, Vietnamese title, and topic image. Do not include the old three keyword/topic pills on cover slides. Keep the lesson badge (`BÀI N · 第N课`) at the larger cover size, about 16pt / 30% larger than the old 12pt badge.
 - Future regular lessons must use Lesson 01 as the strict section/template baseline: cover, objectives, warmup, vocabulary divider, vocab cards + sample sentence cards, vocab practice divider, mini quiz, comprehensive practice, text divider, dialogue with avatars, hanzi writing, supplement/culture, homework divider, exercises list, and closing. Add only lesson-specific extra sections, such as grammar for Lesson 10. Generated `Luyện tập tổng hợp` and `Văn hóa bổ sung` slides omit `.page-indicator` because they are classroom additions, not direct textbook pages.
 - Reusable slide types must come from Lesson 01 templates, not fresh designs. Reuse Lesson 01 dividers, objectives layout, homework divider, exercise-list structure, dialogue avatar layout, and hanzi-writing layout; only adjust lesson-specific content, printed textbook page numbers, item counts, and images.
 - Use the same Lesson 01 divider templates across all lessons by default. Only swap page numbers, counts, and images Adam explicitly asks to customize for a lesson-specific theme.
@@ -343,6 +354,8 @@ Vocabulary image generation:
 4. Use soft textbook line-art: thin grey-blue outlines, muted pastel fills, white/pale-grey background, gentle low-contrast shadows.
 5. Do not include text, letters, numbers, Chinese characters, labels, or watermarks inside images.
 6. Avoid thick teal outlines, circular icons, glossy vector art, stickers, chibi proportions, harsh colors, and abstract blob backgrounds.
+7. Run `npm run assets:manifest -- <lesson-root>` and `npm run assets:qa -- <lesson-root>` after images are saved and after any image replacement.
+8. For one-off vocabulary image replacement, use `npm run assets:replace -- --lesson <lesson-root> --record V001 --image /path/to/new.png` instead of hand-editing slide HTML.
 
 Shared deck watermark:
 

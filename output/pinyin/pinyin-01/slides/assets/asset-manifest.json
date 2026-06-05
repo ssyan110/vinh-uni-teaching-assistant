@@ -1,0 +1,1397 @@
+{
+  "schema_version": "1.0.0",
+  "lesson_id": "pinyin-01",
+  "generated_at": "2026-06-05T16:41:55.419Z",
+  "source_database": "database",
+  "workflow": {
+    "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
+    "required_steps": [
+      "Run or update VP database with image_asset_* metadata for each needed classroom image.",
+      "Build slides/assets/asset-manifest.json before and after slide generation.",
+      "Generate or replace images using the manifest paths, not ad hoc HTML edits.",
+      "Run npm run assets:qa -- --lesson <lesson-root> before delivery.",
+      "Use screenshot/contact-sheet QA for visual semantic checks. Export clean PDF only after Adam confirms finalization."
+    ]
+  },
+  "requirements": {
+    "vocabulary_images": "16:9 PNG, soft textbook line-art, thin grey-blue outlines, muted pastel fills, pale background, no in-image text/letters/numbers/Chinese characters/labels/watermarks",
+    "sample_images": "Must match the full sample phrase. Reuse the vocabulary image only when it is semantically correct.",
+    "shared_assets": "slide-base.css, slide-base.js, and brand/logo-watermark.png must exist in every complete lesson."
+  },
+  "assets": [
+    {
+      "id": "assets-brand-logo-watermark-png",
+      "asset_path": "assets/brand/logo-watermark.png",
+      "role": "brand_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 500,
+        "height": 500,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "lesson-required-assets"
+      ],
+      "html_reference_types": [
+        "required"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-cover-topic-png",
+      "asset_path": "assets/photos/cover-topic.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "01-cover.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-divider-concepts-png",
+      "asset_path": "assets/photos/divider-concepts.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "03-divider-concepts.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-divider-finals-png",
+      "asset_path": "assets/photos/divider-finals.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "08-divider-finals.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-divider-initials-png",
+      "asset_path": "assets/photos/divider-initials.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "06-divider-initials.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-divider-review-png",
+      "asset_path": "assets/photos/divider-review.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1672,
+        "height": 941,
+        "format": "png",
+        "aspect_ratio": 1.7768
+      },
+      "used_by": [
+        "35-divider-review.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-divider-sounds-png",
+      "asset_path": "assets/photos/divider-sounds.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "10-divider-sounds.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-divider-tones-png",
+      "asset_path": "assets/photos/divider-tones.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "13-divider-tones.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-divider-vocabulary-png",
+      "asset_path": "assets/photos/divider-vocabulary.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "16-divider-vocabulary.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-pinyin-concept-1-png",
+      "asset_path": "assets/photos/pinyin-concept-1.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1672,
+        "height": 941,
+        "format": "png",
+        "aspect_ratio": 1.7768
+      },
+      "used_by": [
+        "04-pinyin-concept-1.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "Phiên âm và chữ Hán: nǐ hǎo, 你好"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-pinyin-concept-2-png",
+      "asset_path": "assets/photos/pinyin-concept-2.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1672,
+        "height": 941,
+        "format": "png",
+        "aspect_ratio": 1.7768
+      },
+      "used_by": [
+        "05-pinyin-concept-2.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "Thanh mẫu, vận mẫu và thanh điệu của nǐ hǎo"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-tone-chart-png",
+      "asset_path": "assets/photos/tone-chart.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1672,
+        "height": 941,
+        "format": "png",
+        "aspect_ratio": 1.7768
+      },
+      "used_by": [
+        "14-tone-learning.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "Bảng đường đi của 4 thanh điệu và thanh nhẹ"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-reference-ending-page-background-png",
+      "asset_path": "assets/reference/ending-page-background.png",
+      "role": "reference_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1.5
+      },
+      "used_by": [
+        "41-closing.html"
+      ],
+      "html_reference_types": [
+        "css_url"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-reference-keyboard-android-step-1-png",
+      "asset_path": "assets/reference/keyboard-android-step-1.png",
+      "role": "reference_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 708,
+        "height": 405,
+        "format": "png",
+        "aspect_ratio": 1.7481
+      },
+      "used_by": [
+        "40-keyboard-android.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-reference-keyboard-android-step-2-png",
+      "asset_path": "assets/reference/keyboard-android-step-2.png",
+      "role": "reference_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 455,
+        "height": 405,
+        "format": "png",
+        "aspect_ratio": 1.1235
+      },
+      "used_by": [
+        "40-keyboard-android.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-reference-keyboard-android-step-3-png",
+      "asset_path": "assets/reference/keyboard-android-step-3.png",
+      "role": "reference_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 250,
+        "height": 405,
+        "format": "png",
+        "aspect_ratio": 0.6173
+      },
+      "used_by": [
+        "40-keyboard-android.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-reference-keyboard-ios-step-1-png",
+      "asset_path": "assets/reference/keyboard-ios-step-1.png",
+      "role": "reference_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 479,
+        "height": 405,
+        "format": "png",
+        "aspect_ratio": 1.1827
+      },
+      "used_by": [
+        "39-keyboard-ios.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-reference-keyboard-ios-step-2-png",
+      "asset_path": "assets/reference/keyboard-ios-step-2.png",
+      "role": "reference_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 477,
+        "height": 405,
+        "format": "png",
+        "aspect_ratio": 1.1778
+      },
+      "used_by": [
+        "39-keyboard-ios.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-reference-keyboard-ios-step-3-png",
+      "asset_path": "assets/reference/keyboard-ios-step-3.png",
+      "role": "reference_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 478,
+        "height": 405,
+        "format": "png",
+        "aspect_ratio": 1.1802
+      },
+      "used_by": [
+        "39-keyboard-ios.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-sample-images-objectives-png",
+      "asset_path": "assets/sample-images/objectives.png",
+      "role": "sample_sentence_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "02-objectives.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-slide-base-css",
+      "asset_path": "assets/slide-base.css",
+      "role": "stylesheet",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": null,
+      "used_by": [
+        "01-cover.html",
+        "02-objectives.html",
+        "03-divider-concepts.html",
+        "04-pinyin-concept-1.html",
+        "05-pinyin-concept-2.html",
+        "06-divider-initials.html",
+        "07-initials-only.html",
+        "08-divider-finals.html",
+        "09-finals-only.html",
+        "10-divider-sounds.html",
+        "11-pinyin-chart.html",
+        "12-pinyin-practice.html",
+        "13-divider-tones.html",
+        "14-tone-learning.html",
+        "15-tone-practice.html",
+        "16-divider-vocabulary.html",
+        "17-vocabulary-1.html",
+        "18-flash-v001-ba.html",
+        "19-flash-v002-pa.html",
+        "20-flash-v003-e.html",
+        "21-flash-v004-bu.html",
+        "22-flash-v005-bi.html",
+        "23-flash-v006-mu.html",
+        "24-flash-v007-ma.html",
+        "25-flash-v008-fo.html",
+        "26-vocabulary-2.html",
+        "27-flash-v009-mama.html",
+        "28-flash-v010-baba.html",
+        "29-flash-v011-fuwu.html",
+        "30-flash-v012-yifu.html",
+        "31-flash-v013-pifu.html",
+        "32-flash-v014-mima.html",
+        "33-flash-v015-bofu.html",
+        "34-flash-v016-bomu.html",
+        "35-divider-review.html",
+        "36-tone-match-practice.html",
+        "37-tone-choice-practice.html",
+        "38-listening-finals-tones.html",
+        "39-keyboard-ios.html",
+        "40-keyboard-android.html",
+        "41-closing.html",
+        "lesson-required-assets"
+      ],
+      "html_reference_types": [
+        "required",
+        "stylesheet"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-slide-base-js",
+      "asset_path": "assets/slide-base.js",
+      "role": "script",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": null,
+      "used_by": [
+        "01-cover.html",
+        "02-objectives.html",
+        "03-divider-concepts.html",
+        "04-pinyin-concept-1.html",
+        "05-pinyin-concept-2.html",
+        "06-divider-initials.html",
+        "07-initials-only.html",
+        "08-divider-finals.html",
+        "09-finals-only.html",
+        "10-divider-sounds.html",
+        "11-pinyin-chart.html",
+        "12-pinyin-practice.html",
+        "13-divider-tones.html",
+        "14-tone-learning.html",
+        "15-tone-practice.html",
+        "16-divider-vocabulary.html",
+        "17-vocabulary-1.html",
+        "18-flash-v001-ba.html",
+        "19-flash-v002-pa.html",
+        "20-flash-v003-e.html",
+        "21-flash-v004-bu.html",
+        "22-flash-v005-bi.html",
+        "23-flash-v006-mu.html",
+        "24-flash-v007-ma.html",
+        "25-flash-v008-fo.html",
+        "26-vocabulary-2.html",
+        "27-flash-v009-mama.html",
+        "28-flash-v010-baba.html",
+        "29-flash-v011-fuwu.html",
+        "30-flash-v012-yifu.html",
+        "31-flash-v013-pifu.html",
+        "32-flash-v014-mima.html",
+        "33-flash-v015-bofu.html",
+        "34-flash-v016-bomu.html",
+        "35-divider-review.html",
+        "36-tone-match-practice.html",
+        "37-tone-choice-practice.html",
+        "38-listening-finals-tones.html",
+        "39-keyboard-ios.html",
+        "40-keyboard-android.html",
+        "41-closing.html",
+        "lesson-required-assets"
+      ],
+      "html_reference_types": [
+        "required",
+        "script"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v001-ba-png",
+      "asset_path": "assets/vocab-images/vocab-v001-ba.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "17-vocabulary-1.html",
+        "18-flash-v001-ba.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V001"
+      ],
+      "chinese": [
+        "八"
+      ],
+      "pinyin": [
+        "bā"
+      ],
+      "vietnamese": [
+        "số tám"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide. Square 1:1 composition, ideally 1024x1024 or larger, with the subject centered and enough clean margin for a vocabulary card. Thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background. Gentle flat shading, subtle low-contrast shadows, airy uncluttered layout. Natural human proportions when people appear; no chibi, no sticker style, no glossy vector art. No text, no letters, no numerals, no Chinese characters, no labels, no watermark. Avoid thick teal icon outlines, abstract decorative blobs, harsh colors, photorealism, and dark backgrounds. Subject: eight small oranges arranged clearly on a clean pale desk, countable as eight objects, soft classroom still life.",
+      "visual_description": "eight small oranges arranged clearly on a clean pale desk, countable as eight objects, soft classroom still life",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v002-pa-png",
+      "asset_path": "assets/vocab-images/vocab-v002-pa.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "17-vocabulary-1.html",
+        "19-flash-v002-pa.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V002"
+      ],
+      "chinese": [
+        "怕"
+      ],
+      "pinyin": [
+        "pà"
+      ],
+      "vietnamese": [
+        "sợ"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide. Square 1:1 composition, ideally 1024x1024 or larger, with the subject centered and enough clean margin for a vocabulary card. Thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background. Gentle flat shading, subtle low-contrast shadows, airy uncluttered layout. Natural human proportions when people appear; no chibi, no sticker style, no glossy vector art. No text, no letters, no numerals, no Chinese characters, no labels, no watermark. Avoid thick teal icon outlines, abstract decorative blobs, harsh colors, photorealism, and dark backgrounds. Subject: a young student looking gently frightened, shoulders raised and hands close to the chest, with a soft shadow behind them, not dramatic or scary.",
+      "visual_description": "a young student looking gently frightened, shoulders raised and hands close to the chest, with a soft shadow behind them, not dramatic or scary",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v003-e-png",
+      "asset_path": "assets/vocab-images/vocab-v003-e.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "17-vocabulary-1.html",
+        "20-flash-v003-e.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V003"
+      ],
+      "chinese": [
+        "饿"
+      ],
+      "pinyin": [
+        "è"
+      ],
+      "vietnamese": [
+        "đói"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide. Square 1:1 composition, ideally 1024x1024 or larger, with the subject centered and enough clean margin for a vocabulary card. Thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background. Gentle flat shading, subtle low-contrast shadows, airy uncluttered layout. Natural human proportions when people appear; no chibi, no sticker style, no glossy vector art. No text, no letters, no numerals, no Chinese characters, no labels, no watermark. Avoid thick teal icon outlines, abstract decorative blobs, harsh colors, photorealism, and dark backgrounds. Subject: a young student holding their stomach beside an empty bowl and spoon on a clean desk, showing hunger clearly.",
+      "visual_description": "a young student holding their stomach beside an empty bowl and spoon on a clean desk, showing hunger clearly",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v004-bu-png",
+      "asset_path": "assets/vocab-images/vocab-v004-bu.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "17-vocabulary-1.html",
+        "21-flash-v004-bu.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V004"
+      ],
+      "chinese": [
+        "不"
+      ],
+      "pinyin": [
+        "bù"
+      ],
+      "vietnamese": [
+        "không"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide. Square 1:1 composition, ideally 1024x1024 or larger, with the subject centered and enough clean margin for a vocabulary card. Thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background. Gentle flat shading, subtle low-contrast shadows, airy uncluttered layout. Natural human proportions when people appear; no chibi, no sticker style, no glossy vector art. No text, no letters, no numerals, no Chinese characters, no labels, no watermark. Avoid thick teal icon outlines, abstract decorative blobs, harsh colors, photorealism, and dark backgrounds. Subject: a young student calmly making a clear no gesture by crossing both forearms in front of the chest, friendly expression.",
+      "visual_description": "a young student calmly making a clear no gesture by crossing both forearms in front of the chest, friendly expression",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v005-bi-png",
+      "asset_path": "assets/vocab-images/vocab-v005-bi.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "17-vocabulary-1.html",
+        "22-flash-v005-bi.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V005"
+      ],
+      "chinese": [
+        "鼻"
+      ],
+      "pinyin": [
+        "bí"
+      ],
+      "vietnamese": [
+        "mũi"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide. Square 1:1 composition, ideally 1024x1024 or larger, with the subject centered and enough clean margin for a vocabulary card. Thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background. Gentle flat shading, subtle low-contrast shadows, airy uncluttered layout. Natural human proportions when people appear; no chibi, no sticker style, no glossy vector art. No text, no letters, no numerals, no Chinese characters, no labels, no watermark. Avoid thick teal icon outlines, abstract decorative blobs, harsh colors, photorealism, and dark backgrounds. Subject: a friendly close-up face with the nose as the clear focus, simple clean composition, no medical diagram.",
+      "visual_description": "a friendly close-up face with the nose as the clear focus, simple clean composition, no medical diagram",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v006-mu-png",
+      "asset_path": "assets/vocab-images/vocab-v006-mu.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "17-vocabulary-1.html",
+        "23-flash-v006-mu.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V006"
+      ],
+      "chinese": [
+        "木"
+      ],
+      "pinyin": [
+        "mù"
+      ],
+      "vietnamese": [
+        "gỗ"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide. Square 1:1 composition, ideally 1024x1024 or larger, with the subject centered and enough clean margin for a vocabulary card. Thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background. Gentle flat shading, subtle low-contrast shadows, airy uncluttered layout. Natural human proportions when people appear; no chibi, no sticker style, no glossy vector art. No text, no letters, no numerals, no Chinese characters, no labels, no watermark. Avoid thick teal icon outlines, abstract decorative blobs, harsh colors, photorealism, and dark backgrounds. Subject: a small stack of natural wooden logs and smooth wood planks on a pale classroom desk, clearly representing wood.",
+      "visual_description": "a small stack of natural wooden logs and smooth wood planks on a pale classroom desk, clearly representing wood",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v007-ma-png",
+      "asset_path": "assets/vocab-images/vocab-v007-ma.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "17-vocabulary-1.html",
+        "24-flash-v007-ma.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V007"
+      ],
+      "chinese": [
+        "马"
+      ],
+      "pinyin": [
+        "mǎ"
+      ],
+      "vietnamese": [
+        "con ngựa"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide. Square 1:1 composition, ideally 1024x1024 or larger, with the subject centered and enough clean margin for a vocabulary card. Thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background. Gentle flat shading, subtle low-contrast shadows, airy uncluttered layout. Natural human proportions when people appear; no chibi, no sticker style, no glossy vector art. No text, no letters, no numerals, no Chinese characters, no labels, no watermark. Avoid thick teal icon outlines, abstract decorative blobs, harsh colors, photorealism, and dark backgrounds. Subject: a white horse standing in side profile on a pale simple background, gentle and approachable.",
+      "visual_description": "a white horse standing in side profile on a pale simple background, gentle and approachable",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v008-fo-png",
+      "asset_path": "assets/vocab-images/vocab-v008-fo.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "17-vocabulary-1.html",
+        "25-flash-v008-fo.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V008"
+      ],
+      "chinese": [
+        "佛"
+      ],
+      "pinyin": [
+        "fó"
+      ],
+      "vietnamese": [
+        "Phật"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide. Square 1:1 composition, ideally 1024x1024 or larger, with the subject centered and enough clean margin for a vocabulary card. Thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background. Gentle flat shading, subtle low-contrast shadows, airy uncluttered layout. Natural human proportions when people appear; no chibi, no sticker style, no glossy vector art. No text, no letters, no numerals, no Chinese characters, no labels, no watermark. Avoid thick teal icon outlines, abstract decorative blobs, harsh colors, photorealism, and dark backgrounds. Subject: a small serene Buddha statue on a simple shelf with a plant nearby, respectful, calm classroom illustration style.",
+      "visual_description": "a small serene Buddha statue on a simple shelf with a plant nearby, respectful, calm classroom illustration style",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v009-mama-png",
+      "asset_path": "assets/vocab-images/vocab-v009-mama.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "26-vocabulary-2.html",
+        "27-flash-v009-mama.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V009"
+      ],
+      "chinese": [
+        "妈妈"
+      ],
+      "pinyin": [
+        "māma"
+      ],
+      "vietnamese": [
+        "mẹ"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide. Square 1:1 composition, ideally 1024x1024 or larger, with the subject centered and enough clean margin for a vocabulary card. Thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background. Gentle flat shading, subtle low-contrast shadows, airy uncluttered layout. Natural human proportions when people appear; no chibi, no sticker style, no glossy vector art. No text, no letters, no numerals, no Chinese characters, no labels, no watermark. Avoid thick teal icon outlines, abstract decorative blobs, harsh colors, photorealism, and dark backgrounds. Subject: a warm mother smiling and holding a child gently in a bright home or classroom corner, natural human proportions.",
+      "visual_description": "a warm mother smiling and holding a child gently in a bright home or classroom corner, natural human proportions",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v010-baba-png",
+      "asset_path": "assets/vocab-images/vocab-v010-baba.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "26-vocabulary-2.html",
+        "28-flash-v010-baba.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V010"
+      ],
+      "chinese": [
+        "爸爸"
+      ],
+      "pinyin": [
+        "bàba"
+      ],
+      "vietnamese": [
+        "bố"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide. Square 1:1 composition, ideally 1024x1024 or larger, with the subject centered and enough clean margin for a vocabulary card. Thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background. Gentle flat shading, subtle low-contrast shadows, airy uncluttered layout. Natural human proportions when people appear; no chibi, no sticker style, no glossy vector art. No text, no letters, no numerals, no Chinese characters, no labels, no watermark. Avoid thick teal icon outlines, abstract decorative blobs, harsh colors, photorealism, and dark backgrounds. Subject: a warm father smiling and helping a child with a school bag or notebook, bright simple home or classroom corner.",
+      "visual_description": "a warm father smiling and helping a child with a school bag or notebook, bright simple home or classroom corner",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v011-fuwu-png",
+      "asset_path": "assets/vocab-images/vocab-v011-fuwu.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "26-vocabulary-2.html",
+        "29-flash-v011-fuwu.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V011"
+      ],
+      "chinese": [
+        "服务"
+      ],
+      "pinyin": [
+        "fúwù"
+      ],
+      "vietnamese": [
+        "phục vụ"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide. Square 1:1 composition, ideally 1024x1024 or larger, with the subject centered and enough clean margin for a vocabulary card. Thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background. Gentle flat shading, subtle low-contrast shadows, airy uncluttered layout. Natural human proportions when people appear; no chibi, no sticker style, no glossy vector art. No text, no letters, no numerals, no Chinese characters, no labels, no watermark. Avoid thick teal icon outlines, abstract decorative blobs, harsh colors, photorealism, and dark backgrounds. Subject: a friendly server or helper offering a tray with a cup of water to another person, clear service action.",
+      "visual_description": "a friendly server or helper offering a tray with a cup of water to another person, clear service action",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v012-yifu-png",
+      "asset_path": "assets/vocab-images/vocab-v012-yifu.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "26-vocabulary-2.html",
+        "30-flash-v012-yifu.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V012"
+      ],
+      "chinese": [
+        "衣服"
+      ],
+      "pinyin": [
+        "yīfu"
+      ],
+      "vietnamese": [
+        "quần áo"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide. Square 1:1 composition, ideally 1024x1024 or larger, with the subject centered and enough clean margin for a vocabulary card. Thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background. Gentle flat shading, subtle low-contrast shadows, airy uncluttered layout. Natural human proportions when people appear; no chibi, no sticker style, no glossy vector art. No text, no letters, no numerals, no Chinese characters, no labels, no watermark. Avoid thick teal icon outlines, abstract decorative blobs, harsh colors, photorealism, and dark backgrounds. Subject: neatly folded clothes and one simple shirt on a hanger on a pale desk, clean wardrobe feeling.",
+      "visual_description": "neatly folded clothes and one simple shirt on a hanger on a pale desk, clean wardrobe feeling",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v013-pifu-png",
+      "asset_path": "assets/vocab-images/vocab-v013-pifu.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "26-vocabulary-2.html",
+        "31-flash-v013-pifu.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V013"
+      ],
+      "chinese": [
+        "皮肤"
+      ],
+      "pinyin": [
+        "pífū"
+      ],
+      "vietnamese": [
+        "da"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide. Square 1:1 composition, ideally 1024x1024 or larger, with the subject centered and enough clean margin for a vocabulary card. Thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background. Gentle flat shading, subtle low-contrast shadows, airy uncluttered layout. Natural human proportions when people appear; no chibi, no sticker style, no glossy vector art. No text, no letters, no numerals, no Chinese characters, no labels, no watermark. Avoid thick teal icon outlines, abstract decorative blobs, harsh colors, photorealism, and dark backgrounds. Subject: a close-up of a forearm and hand with soft healthy skin, gentle light, simple clean background, no medical markings.",
+      "visual_description": "a close-up of a forearm and hand with soft healthy skin, gentle light, simple clean background, no medical markings",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v014-mima-png",
+      "asset_path": "assets/vocab-images/vocab-v014-mima.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "26-vocabulary-2.html",
+        "32-flash-v014-mima.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V014"
+      ],
+      "chinese": [
+        "密码"
+      ],
+      "pinyin": [
+        "mìmǎ"
+      ],
+      "vietnamese": [
+        "mật mã"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide. Square 1:1 composition, ideally 1024x1024 or larger, with the subject centered and enough clean margin for a vocabulary card. Thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background. Gentle flat shading, subtle low-contrast shadows, airy uncluttered layout. Natural human proportions when people appear; no chibi, no sticker style, no glossy vector art. No text, no letters, no numerals, no Chinese characters, no labels, no watermark. Avoid thick teal icon outlines, abstract decorative blobs, harsh colors, photorealism, and dark backgrounds. Subject: a smartphone on a desk showing an abstract lock screen with dots only, plus a small key nearby, no digits or letters.",
+      "visual_description": "a smartphone on a desk showing an abstract lock screen with dots only, plus a small key nearby, no digits or letters",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v015-bofu-png",
+      "asset_path": "assets/vocab-images/vocab-v015-bofu.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "26-vocabulary-2.html",
+        "33-flash-v015-bofu.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V015"
+      ],
+      "chinese": [
+        "伯父"
+      ],
+      "pinyin": [
+        "bófù"
+      ],
+      "vietnamese": [
+        "bác trai"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide. Square 1:1 composition, ideally 1024x1024 or larger, with the subject centered and enough clean margin for a vocabulary card. Thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background. Gentle flat shading, subtle low-contrast shadows, airy uncluttered layout. Natural human proportions when people appear; no chibi, no sticker style, no glossy vector art. No text, no letters, no numerals, no Chinese characters, no labels, no watermark. Avoid thick teal icon outlines, abstract decorative blobs, harsh colors, photorealism, and dark backgrounds. Subject: a kind middle-aged uncle smiling warmly in simple neat clothing, natural portrait in a soft classroom/home setting.",
+      "visual_description": "a kind middle-aged uncle smiling warmly in simple neat clothing, natural portrait in a soft classroom/home setting",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v016-bomu-png",
+      "asset_path": "assets/vocab-images/vocab-v016-bomu.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "26-vocabulary-2.html",
+        "34-flash-v016-bomu.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V016"
+      ],
+      "chinese": [
+        "伯母"
+      ],
+      "pinyin": [
+        "bómǔ"
+      ],
+      "vietnamese": [
+        "bác gái"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese language classroom slide. Square 1:1 composition, ideally 1024x1024 or larger, with the subject centered and enough clean margin for a vocabulary card. Thin grey-blue hand-drawn outlines, muted pastel fills, white or very pale grey background. Gentle flat shading, subtle low-contrast shadows, airy uncluttered layout. Natural human proportions when people appear; no chibi, no sticker style, no glossy vector art. No text, no letters, no numerals, no Chinese characters, no labels, no watermark. Avoid thick teal icon outlines, abstract decorative blobs, harsh colors, photorealism, and dark backgrounds. Subject: a kind middle-aged aunt smiling warmly in simple neat clothing, natural portrait in a soft classroom/home setting.",
+      "visual_description": "a kind middle-aged aunt smiling warmly in simple neat clothing, natural portrait in a soft classroom/home setting",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    }
+  ],
+  "vocabulary_coverage": [
+    {
+      "record_id": "V001",
+      "chinese_simplified": "八",
+      "pinyin": "bā",
+      "vietnamese": "số tám",
+      "assets": [
+        "assets/vocab-images/vocab-v001-ba.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V002",
+      "chinese_simplified": "怕",
+      "pinyin": "pà",
+      "vietnamese": "sợ",
+      "assets": [
+        "assets/vocab-images/vocab-v002-pa.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V003",
+      "chinese_simplified": "饿",
+      "pinyin": "è",
+      "vietnamese": "đói",
+      "assets": [
+        "assets/vocab-images/vocab-v003-e.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V004",
+      "chinese_simplified": "不",
+      "pinyin": "bù",
+      "vietnamese": "không",
+      "assets": [
+        "assets/vocab-images/vocab-v004-bu.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V005",
+      "chinese_simplified": "鼻",
+      "pinyin": "bí",
+      "vietnamese": "mũi",
+      "assets": [
+        "assets/vocab-images/vocab-v005-bi.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V006",
+      "chinese_simplified": "木",
+      "pinyin": "mù",
+      "vietnamese": "gỗ",
+      "assets": [
+        "assets/vocab-images/vocab-v006-mu.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V007",
+      "chinese_simplified": "马",
+      "pinyin": "mǎ",
+      "vietnamese": "con ngựa",
+      "assets": [
+        "assets/vocab-images/vocab-v007-ma.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V008",
+      "chinese_simplified": "佛",
+      "pinyin": "fó",
+      "vietnamese": "Phật",
+      "assets": [
+        "assets/vocab-images/vocab-v008-fo.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V009",
+      "chinese_simplified": "妈妈",
+      "pinyin": "māma",
+      "vietnamese": "mẹ",
+      "assets": [
+        "assets/vocab-images/vocab-v009-mama.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V010",
+      "chinese_simplified": "爸爸",
+      "pinyin": "bàba",
+      "vietnamese": "bố",
+      "assets": [
+        "assets/vocab-images/vocab-v010-baba.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V011",
+      "chinese_simplified": "服务",
+      "pinyin": "fúwù",
+      "vietnamese": "phục vụ",
+      "assets": [
+        "assets/vocab-images/vocab-v011-fuwu.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V012",
+      "chinese_simplified": "衣服",
+      "pinyin": "yīfu",
+      "vietnamese": "quần áo",
+      "assets": [
+        "assets/vocab-images/vocab-v012-yifu.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V013",
+      "chinese_simplified": "皮肤",
+      "pinyin": "pífū",
+      "vietnamese": "da",
+      "assets": [
+        "assets/vocab-images/vocab-v013-pifu.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V014",
+      "chinese_simplified": "密码",
+      "pinyin": "mìmǎ",
+      "vietnamese": "mật mã",
+      "assets": [
+        "assets/vocab-images/vocab-v014-mima.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V015",
+      "chinese_simplified": "伯父",
+      "pinyin": "bófù",
+      "vietnamese": "bác trai",
+      "assets": [
+        "assets/vocab-images/vocab-v015-bofu.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V016",
+      "chinese_simplified": "伯母",
+      "pinyin": "bómǔ",
+      "vietnamese": "bác gái",
+      "assets": [
+        "assets/vocab-images/vocab-v016-bomu.png"
+      ],
+      "status": "covered"
+    }
+  ]
+}

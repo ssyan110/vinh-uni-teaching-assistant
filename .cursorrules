@@ -12,10 +12,14 @@
 6. **Student safety:** No teacher tips or answers in student materials.
 7. **No AI-isms.** Direct, specific, practical, concise.
 8. **Cross-tool sync.** When updating `.kiro/`, also update AGENTS.md and CLAUDE.md.
-9. **Slide filenames:** Sequentially numbered matching MANIFEST position (no gaps). Lesson 01: 01–55.
+9. **Slide filenames:** Sequentially numbered matching MANIFEST position (no gaps). Lesson 01: 01–56.
 10. **你好 standalone vocab slide:** Removed. Appears only in vocab summary quiz and dialogue.
 11. **Vocab counter:** Format `XX/YY`. Lesson 01 total = 11.
 12. **Pinyin word grouping:** Pinyin of a multi-syllable word must be written together (no space between syllables of one word). Correct: "dìèr kè · nǐ shì nǎguó rén?" Wrong: "dì èr kè · nǐ shì nǎ guó rén?" Each vocabulary word's pinyin is one unit. Sentence pinyin groups by word boundaries.
+13. **Image asset workflow:** Images are lesson data. VP databases carry `image_role`, `image_prompt`, `image_file`, `image_reuse_from`, `image_status`, and `image_semantic_check`. Complete lessons must have `slides/assets/asset-manifest.json` and `exports/qa/asset-qa-report.json`.
+14. **Pinyin course (6 lessons):** Source is AI Mandarin independent material (`Pinyin lessons/`). Do NOT use 漢語教程 phonetics. Read `docs/pinyin-lesson-database-spec.md` for full spec. Pipeline config: `scripts/pipeline/configs/pinyin.json` v2.0.0. Output to `output/pinyin/pinyin-{01-06}/`.
+15. **Pinyin Lesson 1 template baseline:** Future pinyin decks reuse `output/pinyin/pinyin-01`; do not build from scratch. Keep its cover/objectives/divider/concept/tone/vocab/flashcard/practice/input-setup/closing style, soft textbook/course images, and presenter behavior. Swap only lesson-specific text, sounds, rules, vocabulary, exercises, and images.
+16. **Pinyin wording:** Use `thanh điệu`, never `thanh điều`. No `Mục lục` or `Quy ước` classroom slides. Pinyin slides do not show bottom-right `Trang ...` page indicators.
 
 ## Task Routing
 
@@ -23,13 +27,14 @@
 |------|-------|
 | Any non-trivial task or repeated preference | `.kiro/skills/harness-engineering/SKILL.md` |
 | Pipeline workflow, VP steps | `.kiro/skills/ai-teaching-material-systems/SKILL.md` |
+| Pinyin lesson database or slide generation | `docs/pinyin-lesson-database-spec.md` |
 | Slide design, HTML presenter, deck generation | `.kiro/skills/huashu-design/SKILL.md` |
 | Google Drive/Sheets | `.kiro/skills/google-workspace/SKILL.md` |
 | Writing quality | `.kiro/skills/avoid-ai-writing/SKILL.md` |
 
 ## HTML Presenter — required for every lesson
 
-Every lesson's `slides/` folder must have `index.html`. Copy from `output/book-1/lesson-01/slides/index.html` and update title, MANIFEST, slide count, PDF filename.
+Every complete lesson's `slides/` folder must have `index.html`. Do not hand-edit copied presenter fields. After numbered slide HTML files exist, run `npm run lesson:presenter -- output/book-1/lesson-XX`, then `npm run lesson:shells`. Run `npm run lesson:shells` after database generation too, so draft lessons show a safe status page instead of redirecting to a missing presenter.
 
 **Must include:** MANIFEST array, fullscreen (`F`), navigation, pen/highlighter/eraser/text-box annotation tools, on-demand PDF export (html2canvas + jsPDF — always current, no pre-baked data file).
 
@@ -49,6 +54,11 @@ Generic slide scripts (all require `--slides-dir`):
 - `node scripts/build-slides-data.mjs --slides-dir <path>`
 - `node scripts/export-slides-pdf.mjs --slides-dir <path>`
 - `node scripts/watch-slides.mjs --slides-dir <path>`
+
+Image asset scripts:
+- `npm run assets:manifest -- output/book-1/lesson-XX`
+- `npm run assets:qa -- output/book-1/lesson-XX`
+- `npm run assets:replace -- --lesson output/book-1/lesson-XX --record V001 --image /path/to/new.png`
 
 Pipeline: `python scripts/run_pipeline.py --lesson-type regular|pinyin|auto --lesson-id <id> ...`
 

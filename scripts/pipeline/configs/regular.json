@@ -31,6 +31,12 @@
     "word_type_vi",
     "raw_source_text",
     "classroom_visibility",
+    "image_role",
+    "image_prompt",
+    "image_file",
+    "image_reuse_from",
+    "image_status",
+    "image_semantic_check",
     "teacher_review_status",
     "approved",
     "notes_for_review",
@@ -82,6 +88,12 @@
     "Use Lesson 01 divider templates across all lessons by default; only replace page numbers, lesson-specific counts, and images Adam explicitly asks to customize for that lesson.",
     "Reuse Lesson 01 objectives, homework divider, exercise-list structure, dialogue avatar layout, and hanzi-writing layout unless Adam explicitly changes the template.",
     "Hanzi-writing slides must use Lesson 01 HanziWriter stroke animation timing: strokeAnimationSpeed 0.575 and delayBetweenStrokes 360; do not use static characters instead of stroke animation."
+  ],
+  "image_asset_rules": [
+    "VP steps 1-8 must write image metadata for every classroom image need: image_role, image_prompt, image_file, image_reuse_from, image_status, and image_semantic_check.",
+    "Before slide generation, run npm run assets:manifest -- output/book-1/lesson-XX so slides/assets/asset-manifest.json becomes the source of truth for image paths and reuse.",
+    "When replacing a vocabulary image, use npm run assets:replace -- --lesson output/book-1/lesson-XX --record V001 --image /path/to/new.png so the image is resized to 16:9 and the manifest is rebuilt.",
+    "Before delivery, run npm run assets:qa -- output/book-1/lesson-XX and keep exports/qa/asset-qa-report.json with passing status."
   ],
   "review_statuses": [
     "pending_review",

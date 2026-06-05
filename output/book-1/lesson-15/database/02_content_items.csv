@@ -1,0 +1,18 @@
+record_id,source_page,source_pdf_page,section,record_type,chinese_simplified,pinyin,vietnamese,english,word_type_vi,word_type_abbr,han_viet,sample_sentence_pinyin,sample_sentence_zh,sample_sentence_vi,teaching_order,classroom_visibility
+T001,137,155,Bài đọc,text,(dialogue),,,,,,,,,,14,student_visible
+V001,139,157,Từ vựng,vocabulary,公司,gōngsī,công ty,company,danh từ,名,công ty,gōngsī yǒu duōshao rén?,公司有多少人？,Công ty có bao nhiêu người?,1,student_visible
+V002,139,157,Từ vựng,vocabulary,经理,jīnglǐ,giám đốc,manager,danh từ,名,kinh lý,wǒ shì jīnglǐ.,我是经理。,Tôi là giám đốc.,2,student_visible
+V003,139,157,Từ vựng,vocabulary,千,qiān,nghìn,thousand,số từ,数,thiên,sānqiān rén.,三千人。,3000 người.,3,student_visible
+V004,139,157,Từ vựng,vocabulary,万,wàn,vạn,10 thousand,số từ,数,vạn,yíwàn rén.,一万人。,10000 người.,4,student_visible
+V005,139,157,Từ vựng,vocabulary,多,duō,nhiều,many,tính từ,形,đa,rén hěn duō.,人很多。,Người nhiều.,5,student_visible
+V006,139,157,Từ vựng,vocabulary,少,shǎo,ít,few,tính từ,形,thiểu,rén hěn shǎo.,人很少。,Người ít.,6,student_visible
+V007,139,157,Từ vựng,vocabulary,有,yǒu,có,to have,động từ,动,hữu,yǒu wǔbǎi rén.,有五百人。,Có 500 người.,7,student_visible
+V008,139,157,Từ vựng,vocabulary,没,méi,không,not (有),phó từ,副,một,méiyǒu Rìběn rén.,没有日本人。,Không có người Nhật.,8,student_visible
+V009,139,157,Từ vựng,vocabulary,男,nán,nam,male,tính từ,形,nam,nán zhíyuán duō.,男职员多。,NV nam nhiều.,9,student_visible
+V010,139,157,Từ vựng,vocabulary,外国,wàiguó,nước ngoài,foreign,danh từ,名,ngoại quốc,wàiguó rén duō.,外国人多。,Người NN nhiều.,10,student_visible
+V011,139,157,Từ vựng,vocabulary,层,céng,tầng,floor,lượng từ,量,tằng,sān céng.,三层。,3 tầng.,11,student_visible
+V012,139,157,Từ vựng,vocabulary,教室,jiàoshì,phòng học,classroom,danh từ,名,giáo thất,jiàoshì zài èr céng.,教室在二层。,Phòng học tầng 2.,12,student_visible
+V013,139,157,Từ vựng,vocabulary,宿舍,sùshè,ký túc xá,dormitory,danh từ,名,túc xá,sùshè zài nǎr?,宿舍在哪儿？,KTX ở đâu?,13,student_visible
+G001,141,159,Ngữ pháp,grammar,有字句,,Câu 有: sở hữu/tồn tại,,,,,yǒu wǔbǎi rén.,,,15,student_visible
+G002,141,159,Ngữ pháp,grammar,没有否定,,Phủ định 有 = 没有,,,,,méiyǒu Rìběn rén.,,,16,student_visible
+G003,141,159,Ngữ pháp,grammar,大数字,,Số lớn: 百千万,,,,,sānqiān wǔbǎi.,,,17,student_visible

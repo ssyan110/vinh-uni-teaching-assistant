@@ -1,0 +1,17 @@
+record_id,source_page,source_pdf_page,section,record_type,chinese_simplified,pinyin,vietnamese,english,word_type_vi,word_type_abbr,han_viet,sample_sentence_pinyin,sample_sentence_zh,sample_sentence_vi,teaching_order,classroom_visibility
+T001,124,142,Bài đọc,text,(dialogue),,,,,,,,,,13,student_visible
+V001,126,144,Từ vựng,vocabulary,车,chē,xe,car,danh từ,名,xa,nǐ de chē xīn.,你的车新。,Xe bạn mới.,1,student_visible
+V002,126,144,Từ vựng,vocabulary,还是,háishi,hay,or (Q),liên từ,连,hoàn thị,xīn háishi jiù?,新还是旧？,Mới hay cũ?,2,student_visible
+V003,126,144,Từ vựng,vocabulary,辆,liàng,chiếc xe,(MW),lượng từ,量,lượng,yí liàng chē.,一辆车。,Một chiếc xe.,3,student_visible
+V004,126,144,Từ vựng,vocabulary,自行车,zìxíngchē,xe đạp,bicycle,danh từ,名,tự hành xa,yǒu zìxíngchē.,有自行车。,Có xe đạp.,4,student_visible
+V005,126,144,Từ vựng,vocabulary,小,xiǎo,nhỏ,small,tính từ,形,tiểu,hěn xiǎo.,很小。,Rất nhỏ.,5,student_visible
+V006,126,144,Từ vựng,vocabulary,漂亮,piàoliang,đẹp,pretty,tính từ,形,phiêu lượng,hěn piàoliang.,很漂亮。,Rất đẹp.,6,student_visible
+V007,126,144,Từ vựng,vocabulary,颜色,yánsè,màu sắc,color,danh từ,名,nhan sắc,shénme yánsè?,什么颜色？,Màu gì?,7,student_visible
+V008,126,144,Từ vựng,vocabulary,蓝,lán,xanh dương,blue,tính từ,形,lam,lán de.,蓝的。,Cái xanh.,8,student_visible
+V009,126,144,Từ vựng,vocabulary,绿,lǜ,xanh lá,green,tính từ,形,lục,lǜ de piàoliang.,绿的漂亮。,Xanh lá đẹp.,9,student_visible
+V010,126,144,Từ vựng,vocabulary,黄,huáng,vàng,yellow,tính từ,形,hoàng,huáng de dà.,黄的大。,Cái vàng to.,10,student_visible
+V011,126,144,Từ vựng,vocabulary,多大,duōdà,mấy tuổi,how old,cụm từ,—,đa đại,nǐ duōdà?,你多大？,Mấy tuổi?,11,student_visible
+V012,126,144,Từ vựng,vocabulary,岁,suì,tuổi,years old,lượng từ,量,tuế,èrshí suì.,二十岁。,20 tuổi.,12,student_visible
+G001,128,146,Ngữ pháp,grammar,还是 Q,,Câu hỏi chọn lựa,,,,,xīn háishi jiù?,,,14,student_visible
+G002,128,146,Ngữ pháp,grammar,多+Adj,,Hỏi với 多,,,,,nǐ duōdà?,,,15,student_visible
+G003,128,146,Ngữ pháp,grammar,了 change,,了 thay đổi,,,,,èrshí suì le.,,,16,student_visible

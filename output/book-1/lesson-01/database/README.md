@@ -16,7 +16,7 @@ Last updated: 2026-05-27
 - `06_google_sheets_database.csv` — step 8 Google Sheets-ready database
 - `vp_lesson_01_database.json` — full machine-readable package
 
-## Current slide structure (55 slides)
+## Current slide structure (56 slides)
 
 | Range | Module | Notes |
 |-------|--------|-------|
@@ -29,17 +29,18 @@ Last updated: 2026-05-27
 | 29 | Divider: Luyện tập tổng hợp | 综合练习 |
 | 30–36 | Luyện từ vựng | Flashcard + số + biến điệu 不 |
 | 37–38 | Bài đọc | Divider + hội thoại 你好 |
-| 39–49 | Tập viết | 11 chữ Hán: 一八大不五口白女马你好 |
-| 50–52 | Văn hóa bổ sung | Cách chào + cử chỉ số |
-| 53–54 | Bài tập về nhà | Divider + danh sách bài tập |
-| 55 | Kết thúc | Closing |
+| 39 | Divider: Tập viết | 写汉字 |
+| 40–50 | Tập viết | 11 chữ Hán: 一八大不五口白女马你好 |
+| 51–53 | Văn hóa bổ sung | Cách chào + cử chỉ số |
+| 54–55 | Bài tập về nhà | Divider + danh sách bài tập |
+| 56 | Kết thúc | Closing |
 
 ## Key decisions recorded
 
 - **你好 removed as standalone vocab slide.** It appears only in vocab summary quiz (27-28) and dialogue (38). Vocab total = 11 (not 12).
 - **Visible page indicators use printed textbook pages.** Slide `.page-indicator` shows printed textbook page/range from this database, such as `Trang 1` or `Trang 1-2`; it is not the slide number or PDF page. Slides with no textbook source omit `.page-indicator`. Do not add separate `.source` footers.
 - **Lesson 01 PDF/page mapping:** `work/pdf-pages/page-019.jpg` is printed textbook page 1, so Lesson 01 uses `printed textbook page = PDF page - 18`. The database `source_page` / `source_page_range` values are printed textbook pages; PDF positions are only for locating source images.
-- **Slide filenames are sequentially numbered** matching MANIFEST position (01–55, no gaps).
+- **Slide filenames are sequentially numbered** matching MANIFEST position (01–56, no gaps).
 - **Divider naming:** `26-divider-practice-vocab` = TẬP TỪ VỰNG / 词汇练习; `29-divider-comprehensive` = LUYỆN TẬP TỔNG HỢP / 综合练习.
 
 ## Pipeline config

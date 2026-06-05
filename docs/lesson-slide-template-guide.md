@@ -6,13 +6,15 @@ Use Lesson 01 as the template for future regular lessons:
 output/book-1/lesson-01/
 ```
 
-The classroom format is HTML-first. Open the lesson-root `index.html` in class; it launches `slides/index.html`, the real browser presenter. PDF is a backup export only after Adam confirms the design and content are finalized.
+The classroom format is HTML-first. Open the lesson-root `index.html` in class. Complete lessons launch `slides/index.html`, the real browser presenter; database-only draft lessons show a safe status page. PDF is a backup export only after Adam confirms the design and content are finalized.
+
+Image workflow rule: read `docs/image-asset-workflow.md` before generating or replacing slide images. Images are tracked as lesson data through database image metadata, `slides/assets/asset-manifest.json`, and `exports/qa/asset-qa-report.json`; do not handle them only through ad hoc HTML edits.
 
 Student-facing language rule: keep the Lesson 01 visual language. Student operation text and activity instructions must be Vietnamese. Lesson 01 reusable divider templates may keep their fixed Chinese section heading (`生词`, `词汇练习`, `综合练习`, `课文`, `写汉字`, `补充学习`, `回家作业`) as part of the template. Simplified Chinese also appears as target learning content: vocabulary, examples, dialogue, grammar patterns, cultural terms, lesson titles, and hanzi-writing characters.
 
 Chinese + pinyin alignment rule: when a slide shows Chinese and pinyin together, place each pinyin chunk directly above the matching Chinese character or word group. This applies to vocabulary cards, sample sentences, dialogue lines, grammar examples, culture examples, and Chinese lesson titles. Do not show a whole pinyin sentence as one centered line above or below a Chinese sentence when punctuation makes the mapping unclear.
 
-Cover rule: use Lesson 10 `output/book-1/lesson-10/slides/01-cover.html` as the canonical cover template for all future lessons. Reuse its cover layout and visual language directly; only replace lesson number, Chinese/pinyin title, Vietnamese title, topic chips, and topic image.
+Cover rule: use Lesson 10 `output/book-1/lesson-10/slides/01-cover.html` as the canonical cover template for all future lessons. Reuse its cover layout and visual language directly; only replace lesson number, Chinese/pinyin title, Vietnamese title, and topic image. Do not include the old three keyword/topic pills on cover slides. Keep the lesson badge (`BÀI N · 第N课`) at the larger cover size, about 16pt / 30% larger than the old 12pt badge.
 
 Reusable page rule: do not redesign reusable slide types for each lesson. Copy Lesson 01's visual templates for dividers, objectives, homework divider, exercise list, dialogue avatar layout, and hanzi-writing layout. Only replace lesson-specific content, printed page numbers, counts, and images.
 
@@ -27,6 +29,62 @@ Interactive practice rule: prefer simple interactive slide/webapp formats when u
 Hanzi writing rule: every hanzi-writing slide must reuse Lesson 01's title, layout, method, and HanziWriter stroke animation. Do not use a static character in place of stroke animation. Use the Lesson 01 slowed timing: `strokeAnimationSpeed: 0.575` and `delayBetweenStrokes: 360`, unless Adam changes the Lesson 01 template itself.
 
 Database rule: VP steps 1-8 must generate lesson structure, activity, and database metadata that already follows these slide rules. Do not postpone the cover/divider/activity/Simplified-Chinese/pinyin/image/density/hanzi-writing requirements until manual slide cleanup.
+
+Image metadata rule: records that need classroom visuals must carry `image_role`, `image_prompt`, `image_file`, `image_reuse_from`, `image_status`, and `image_semantic_check` where relevant. Build and check the manifest with:
+
+```bash
+npm run assets:manifest -- output/book-1/lesson-XX
+npm run assets:qa -- output/book-1/lesson-XX
+```
+
+## Pinyin Lesson Template
+
+Pinyin lessons use their own pinyin-course template, not the regular Lesson 01 textbook template. Use Pinyin Lesson 1 as the baseline:
+
+```text
+output/pinyin/pinyin-01/
+```
+
+For future pinyin lessons, do not build slides from scratch. Reuse the Pinyin Lesson 1 cover, objective layout, divider rhythm, concept-slide style, initials/finals teaching slides, tone slides, vocabulary grid, flashcard style, practice slide styling, appendix/input setup style, closing slide, and presenter setup. Replace only lesson-specific text, taught sounds, rules, vocabulary, exercises, and images.
+
+Required pinyin section rhythm:
+
+- Cover
+- Objectives / lesson goal
+- Concept or review divider
+- Concepts or previous-lesson review
+- Initials divider and teaching slides, when applicable
+- Finals divider and teaching slides, when applicable
+- Sounds/chart divider and pinyin chart/practice slides
+- Tone divider and tone/rule slides, when applicable
+- Vocabulary divider, vocabulary grids, and one-word flashcards
+- Review/practice divider and exercises
+- Appendix/input setup, when applicable
+- Closing
+
+`Mục lục` and `Quy ước` slides are no longer used in future pinyin classroom decks. Source contents/rules can remain in database/review notes if useful, but they should not become classroom slides.
+
+Pinyin classroom slides do not show bottom-right `Trang ...` page indicators. Keep source page metadata in the database when useful, but do not render page indicators on pinyin slides.
+
+Use `thanh điệu` exactly in Vietnamese text. Do not use `thanh điều`.
+
+Objective slides:
+
+- Reuse the Pinyin Lesson 1 objective template.
+- Highlight taught initials/finals/rule anchors in bold red.
+- Main text changes by lesson. Lesson 1 example: bold red `bmpf`, bold red `aoeiuü`, `Học 5 thanh điệu tiếng Trung`, `Học đọc 16 từ vựng`.
+
+Pinyin images:
+
+- Cover, goal, divider, concept, tone, initials/finals, vocabulary, appendix, and closing images all use the same soft textbook/course style.
+- Concept slides use the provided or generated soft textbook illustration style.
+- Treat recurring pinyin images as templates; swap main text/content/image subject per lesson instead of redesigning the whole slide.
+
+Pinyin vocabulary and flashcards:
+
+- Pinyin vocabulary grids can use square `1:1` soft textbook images when the pinyin-template slide requires that shape.
+- Flashcards follow the Lesson 1/Lesson 10 flashcard behavior adapted for pinyin: one word per page, pinyin with tone first, click to reveal image and Vietnamese meaning.
+- Do not include repeated helper text such as `Đọc lại pinyin trước khi qua thẻ tiếp theo.`
 
 ## Required Lesson Folder Shape
 
@@ -44,7 +102,8 @@ output/book-{N}/lesson-{NN}/
 └── homework-question-bank/
 ```
 
-- `index.html`: classroom entry point. It opens `slides/index.html`.
+- `index.html`: safe lesson entry point. It opens `slides/index.html` after the presenter exists.
+- For database-only draft lessons, `index.html` is a safe status page instead of a redirect to a missing presenter.
 - `slides/`: editable slide files and runtime assets only.
 - `exports/final/`: clean PDF backups.
 - `exports/qa/`: screenshots, contact sheets, and render checks.
@@ -56,13 +115,21 @@ Do not leave QA screenshots, contact sheets, or deprecated generated data direct
 
 1. Copy `output/book-1/lesson-01/slides/assets/slide-base.css` and `slide-base.js` into the new lesson's `slides/assets/`.
 2. Copy `design/shared-slide-assets/brand/logo-watermark.png` into the new lesson's `slides/assets/brand/logo-watermark.png`.
-3. Copy `output/book-1/lesson-01/slides/index.html` into the new lesson's `slides/` folder and update the title, `MANIFEST`, slide count, thumbnail total, and PDF filename.
-4. Copy `output/book-1/lesson-01/index.html` into the new lesson root and update its visible lesson title.
-5. Use Lesson 10 `01-cover.html` as the new lesson cover template and replace only lesson-specific title/chips/image.
-6. Generate slide files sequentially with filenames matching their `MANIFEST` order. No gaps.
+3. Run `npm run lesson:shells` so the lesson root is safe to open while slides are not generated yet.
+4. Use Lesson 10 `01-cover.html` as the new lesson cover template and replace only the lesson-specific title and image. Do not add keyword/topic pills.
+5. Generate slide files sequentially with filenames matching their `MANIFEST` order. No gaps.
+6. After numbered slide files exist, run `npm run lesson:presenter -- output/book-1/lesson-XX`, then run `npm run lesson:shells` again. This syncs `slides/index.html` from the Lesson 01 presenter template and updates the title, `MANIFEST`, slide count, thumbnail total, first slide, and PDF filename.
 7. For regular lessons, use the Lesson 01 vocabulary slide pattern for every standalone vocabulary word.
 8. During drafting, render screenshots/contact sheets under `exports/qa/` for visual QA. Do not export a PDF until Adam confirms the lesson is finalized.
 9. Check every slide for overflow before delivery. Text must not spill outside the 16:9 slide, background image panels, cards, bubbles, tiles, buttons, or fixed containers. If content is too dense, split it into more slides.
+
+Validation:
+
+```bash
+npm run validate:book1
+```
+
+The validator is status-aware: database-only draft lessons pass when their root `index.html` explains that `slides/index.html` is not ready yet; complete lessons must have a valid presenter with a lesson-specific MANIFEST and PDF filename.
 
 Presenter rule for every new lesson:
 
@@ -181,6 +248,19 @@ Generate one image per prompt and save it as:
 
 ```text
 output/book-1/lesson-XX/slides/assets/vocab-images/{filename}
+```
+
+Then rebuild the manifest and run asset QA:
+
+```bash
+npm run assets:manifest -- output/book-1/lesson-XX
+npm run assets:qa -- output/book-1/lesson-XX
+```
+
+To replace one vocabulary image later, use:
+
+```bash
+npm run assets:replace -- --lesson output/book-1/lesson-XX --record V001 --image /path/to/new.png
 ```
 
 Image requirements:

@@ -52,6 +52,7 @@ class PipelineConfig:
     exercise_categories: list[str]
     activity_design_rules: list[str] = field(default_factory=list)
     slide_template_rules: list[str] = field(default_factory=list)
+    image_asset_rules: list[str] = field(default_factory=list)
     review_statuses: list[str] = field(default_factory=lambda: list(_DEFAULT_REVIEW_STATUSES))
     visibility_values: list[str] = field(default_factory=lambda: list(_DEFAULT_VISIBILITY_VALUES))
 
@@ -142,6 +143,7 @@ def validate_config(config_path: Path) -> PipelineConfig:
         exercise_categories=data.get("exercise_categories", []),
         activity_design_rules=data.get("activity_design_rules", []),
         slide_template_rules=data.get("slide_template_rules", []),
+        image_asset_rules=data.get("image_asset_rules", []),
         review_statuses=data.get("review_statuses", list(_DEFAULT_REVIEW_STATUSES)),
         visibility_values=data.get("visibility_values", list(_DEFAULT_VISIBILITY_VALUES)),
     )

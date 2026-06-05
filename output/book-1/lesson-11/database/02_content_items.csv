@@ -1,0 +1,20 @@
+record_id,source_page,source_pdf_page,source_page_range,source_pdf_page_range,section,record_type,chinese_simplified,pinyin,vietnamese,english,word_type_vi,word_type_abbr,han_viet,sample_sentence_pinyin,sample_sentence_zh,sample_sentence_vi,teaching_order,classroom_visibility,raw_source_text
+T001,86,104,86,104,Bài đọc,text,(See full dialogue in OCR),,,,,,,,,,16,student_visible,
+V001,88,106,88-89,106-107,Từ vựng,vocabulary,我们,wǒmen,chúng tôi,we; us,đại từ,代,ngã môn,wǒmen dōu shì liúxuéshēng.,我们都是留学生。,Chúng tôi đều là lưu học sinh.,1,student_visible,我们 (代) wǒmen (ngã môn) we; us chúng tôi
+V002,88,106,88-89,106-107,Từ vựng,vocabulary,都,dōu,đều,all; both,phó từ,副,đô,wǒmen dōu xuéxí Hànyǔ.,我们都学习汉语。,Chúng tôi đều học tiếng Hán.,2,student_visible,都 (副) dōu (đô) all; both đều
+V003,88,106,88-89,106-107,Từ vựng,vocabulary,位,wèi,vị (lượng từ lịch sự),(polite MW for people),lượng từ,量,vị,zhè wèi shì Wáng jiàoshòu.,这位是王教授。,Vị này là giáo sư Vương.,3,student_visible,位 (量) wèi (vị) (polite MW for people) vị (lượng từ lịch sự)
+V004,88,106,88-89,106-107,Từ vựng,vocabulary,教授,jiàoshòu,giáo sư,professor,danh từ,名,giáo thụ,"Wáng jiàoshòu, nín hǎo!",王教授，您好！,"Giáo sư Vương, xin chào!",4,student_visible,教授 (名) jiàoshòu (giáo thụ) professor giáo sư
+V005,88,106,88-89,106-107,Từ vựng,vocabulary,先,xiān,trước,first; beforehand,phó từ,副,tiên,wǒ xiān jièshào yíxiàr.,我先介绍一下儿。,Tôi giới thiệu trước một chút.,5,student_visible,先 (副) xiān (tiên) first; beforehand trước
+V006,88,106,88-89,106-107,Từ vựng,vocabulary,介绍,jièshào,giới thiệu,to introduce,động từ,动,giới thiệu,wǒ jièshào yíxiàr.,我介绍一下儿。,Tôi giới thiệu một chút.,6,student_visible,介绍 (动) jièshào (giới thiệu) to introduce giới thiệu
+V007,88,106,88-89,106-107,Từ vựng,vocabulary,一下儿,yíxiàr,"một chút, một lát",briefly; a bit,cụm từ,—,nhất hạ nhi,qǐng děng yíxiàr.,请等一下儿。,Xin đợi một chút.,7,student_visible,"一下儿 (—) yíxiàr (nhất hạ nhi) briefly; a bit một chút, một lát"
+V008,88,106,88-89,106-107,Từ vựng,vocabulary,校长,xiàozhǎng,hiệu trưởng,principal; president,danh từ,名,hiệu trưởng,zhè shì Mǎ xiàozhǎng.,这是马校长。,Đây là hiệu trưởng Mã.,8,student_visible,校长 (名) xiàozhǎng (hiệu trưởng) principal; president hiệu trưởng
+V009,88,106,88-89,106-107,Từ vựng,vocabulary,欢迎,huānyíng,"hoan nghênh, chào mừng",to welcome,động từ,动,hoan nghênh,huānyíng nín!,欢迎您！,Hoan nghênh ngài!,9,student_visible,"欢迎 (动) huānyíng (hoan nghênh) to welcome hoan nghênh, chào mừng"
+V010,88,106,88-89,106-107,Từ vựng,vocabulary,你们,nǐmen,các bạn,you (plural),đại từ,代,nhĩ môn,nǐmen dōu shì liúxuéshēng ma?,你们都是留学生吗？,Các bạn đều là lưu học sinh à?,10,student_visible,你们 (代) nǐmen (nhĩ môn) you (plural) các bạn
+V011,88,106,88-89,106-107,Từ vựng,vocabulary,他们,tāmen,"họ, bọn họ",they; them,đại từ,代,tha môn,tāmen dōu xuéxí Hànyǔ.,他们都学习汉语。,Họ đều học tiếng Hán.,11,student_visible,"他们 (代) tāmen (tha môn) they; them họ, bọn họ"
+V012,88,106,88-89,106-107,Từ vựng,vocabulary,班,bān,lớp,class,danh từ,名,ban,nǐ zài nǎ ge bān?,你在哪个班？,Bạn ở lớp nào?,12,student_visible,班 (名) bān (ban) class lớp
+V013,88,106,88-89,106-107,Từ vựng,vocabulary,同学,tóngxué,bạn học,classmate,danh từ,名,đồng học,zhè wèi shì xīn tóngxué.,这位是新同学。,Vị này là bạn học mới.,13,student_visible,同学 (名) tóngxué (đồng học) classmate bạn học
+V014,88,106,88-89,106-107,Từ vựng,vocabulary,新,xīn,mới,new,tính từ,形,tân,"xīn tóngxué, nǐ hǎo!",新同学，你好！,"Bạn mới, xin chào!",14,student_visible,新 (形) xīn (tân) new mới
+V015,88,106,88-89,106-107,Từ vựng,vocabulary,谁,shéi,ai,who,đại từ,代,thuỳ,nǐmen de lǎoshī shì shéi?,你们的老师是谁？,Thầy của các bạn là ai?,15,student_visible,谁 (代) shéi (thuỳ) who ai
+G001,90,108,90-91,108-109,Ngữ pháp,grammar,人称代词复数,,Đại từ nhân xưng số nhiều (我们/你们/他们),,,,,wǒmen dōu shì xuéshēng.,,,17,student_visible,
+G002,90,108,90-91,108-109,Ngữ pháp,grammar,"副词""都""",,"Phó từ ""都"" (đều) — đặt trước động từ",,,,,wǒmen dōu xuéxí Hànyǔ.,,,18,student_visible,
+G003,90,108,90-91,108-109,Ngữ pháp,grammar,"""是""字句",,"Câu có ""是"" — dùng để nhận diện/phân loại",,,,,zhè wèi shì Wáng jiàoshòu.,,,19,student_visible,

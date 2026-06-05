@@ -1,0 +1,5 @@
+activity_id,module_target,activity_type,title_vi,title_zh,description_vi,duration_minutes,interaction_mode,materials_needed
+ACT001,warmup,warmup,Ôn lại: Bạn đi đâu?,复习：你去哪儿？,"Giáo viên hỏi sinh viên hôm nay đi đâu (bưu điện, ngân hàng, trường...). Dẫn vào chủ đề bài mới: đi đâu, làm gì, hẹn gặp lại.",3,whole_class,
+ACT002,vocabulary_practice,vocabulary_drill,Ghép thẻ: Chữ Hán ↔ Pinyin ↔ Nghĩa tiếng Việt,闪卡配对：汉字 ↔ 拼音 ↔ 越南语,Sinh viên ghép thẻ chữ Hán với pinyin và nghĩa tiếng Việt tương ứng. Có thể chơi theo nhóm hoặc cá nhân.,5,pair_work,Bộ thẻ flashcard 15 từ vựng
+ACT003,vocabulary_practice,vocabulary_drill,"Luyện số: nhận biết và đếm 六, 七, 九",数字练习：认识和数 六、七、九,"Giáo viên đưa ra số, sinh viên đọc bằng tiếng Trung. Mở rộng: kết hợp với số đã học (一五八) để đếm từ 1-9.",4,whole_class,Thẻ số 六 七 九
+ACT004,vocabulary_practice,pronunciation_drill,Luyện biến điệu 不: bù hay bú?,"""不""变调练习：bù 还是 bú？","Giáo viên đưa ra các cụm từ có 不, sinh viên phải đọc đúng thanh điệu. Ví dụ: 不去(bú qù), 不好(bù hǎo), 不学(bù xué), 不对(bú duì).",4,whole_class,

@@ -9,19 +9,26 @@
 |---|---|
 | Slide engine | **Huashu Design** — local HTML-first deck engine. Gamma is no longer used. |
 | Deck source | HTML source first. During drafting, do not export PDF backups; use screenshots/contact sheets for QA. Export PDF only after Adam confirms the slide design and content are finalized. |
-| Classroom presenter | Every lesson root exposes `index.html` for class; it launches `slides/index.html`, which has fullscreen mode, left slide thumbnails, annotation tools, and on-demand PDF export. |
+| Classroom presenter | Every lesson root exposes `index.html`. Complete lessons launch `slides/index.html`, which has fullscreen mode, left slide thumbnails, annotation tools, and on-demand PDF export. Database-only draft lessons show a safe status page instead of redirecting to a missing presenter. |
 | Clean lesson folders | Each lesson uses `index.html`, `README.md`, `slides/`, `database/`, `exports/final/`, `exports/qa/`, `exports/archive/`, `teacher-guide/`, and `homework-question-bank/`. QA screenshots/contact sheets stay under `exports/qa/`; deprecated generated files stay under `exports/archive/`. |
 | Shared watermark | Canonical logo source: `design/shared-slide-assets/brand/logo-watermark.png`. Copy it into every lesson as `slides/assets/brand/logo-watermark.png`. `slide-base.css` renders it as a top overlay at `opacity:.02` with `pointer-events:none`. |
 | Language default | Vietnamese for visible instructions, activity names, section titles, labels, homework, explanations, and classroom flow. Simplified Chinese is only for target learning content: vocabulary, sample sentences, dialogue, grammar examples, cultural terms, lesson titles, and hanzi-writing characters. Pinyin is for pronunciation. No Traditional Chinese unless requested. |
 | Regular lesson pinyin scope | Pinyin is taught in separate pinyin lessons. Normal `regular` lessons must not include `Pinyin` or `Luyện pinyin` classroom modules, even if textbook pages contain pronunciation exercises. Keep those pages only as raw extracted/review material when needed. |
+| Pinyin lesson template | Future pinyin decks reuse `output/pinyin/pinyin-01` as the template baseline. Do not build each pinyin lesson from scratch. Keep the same cover/objective/divider/concept/tone/vocabulary/flashcard/practice/input-setup/closing visual language and swap lesson-specific text, taught sounds, vocabulary, exercises, and images. |
+| Pinyin classroom sequence | Pinyin decks use clear section dividers for concepts/review, initials, finals, sounds/chart, tones, vocabulary, review/practice, appendix/input setup when applicable, and closing. `Mục lục` and `Quy ước` slides are no longer used in future pinyin classroom decks. |
+| Pinyin terminology | Use `thanh điệu` exactly. Do not use `thanh điều`. |
+| Pinyin objectives | Reuse the Pinyin Lesson 1 objectives layout. Taught initials/finals/rule anchors are bold and red. Main goal lines change by lesson, e.g. Lesson 1 uses bold red `bmpf`, bold red `aoeiuü`, `Học 5 thanh điệu tiếng Trung`, and `Học đọc 16 từ vựng`. |
+| Pinyin page indicators | Pinyin classroom slides do not show bottom-right `Trang ...` page indicators. Keep page metadata in the database when useful; the presenter chrome may still show slide position. |
+| Pinyin image style | Cover, goal, divider, concept, tone, initials/finals, vocabulary, appendix, and closing images use the same soft textbook/course style across all pinyin lessons. Treat them as templates and change only lesson-specific content. |
 | Vocabulary extraction | Extract every textbook vocabulary row, including indented component sub-entries under a main word. Example: `办公室` → also extract `办公`; `电话` → `电`, `话`; `手机` → `手`. Store each as its own vocabulary record with printed source page and parent-word note in `raw_source_text`. |
 | Grammar explanation style | Grammar rows must absorb the textbook explanation, then rewrite it in simple Vietnamese for beginner students. Prefer plain patterns, examples, and Vietnamese/Chinese contrast over dense grammar terminology. |
-| Cover slide template | Use Lesson 10 `output/book-1/lesson-10/slides/01-cover.html` as the canonical cover template for all future lessons. Reuse its layout and visual language directly; only replace lesson number, Chinese/pinyin title, Vietnamese title, topic chips, and topic image. |
+| Cover slide template | Use Lesson 10 `output/book-1/lesson-10/slides/01-cover.html` as the canonical cover template for all future lessons. Reuse its layout and visual language directly; only replace lesson number, Chinese/pinyin title, Vietnamese title, and topic image. Do not include the old three keyword/topic pills on cover slides. Keep the lesson badge (`BÀI N · 第N课`) at the larger cover size, about 16pt / 30% larger than the old 12pt badge. |
 | Vocab slide template | Reuse Lesson 01 `05-vocab-ni.html`: centered vertical stack, rectangular 16:9 image frame, pinyin, large Simplified Chinese character, Vietnamese meaning, hán việt + word type. No circular image crops. |
 | Vocabulary divider image | Reuse Lesson 01 page 04 pattern: soft textbook desk scene with an open book. The book has only `汉` on the left page and `语` on the right page, placed inside the book page margins. This generic `汉语` image can be reused across regular lessons; never add random Chinese filler or extra generated text. |
 | Sample sentence slide template | Every `sample-*` / `MẪU CÂU` slide uses the centered sample card plus a bottom-left circular support image frame: `.sample-spot{left:52px;bottom:28px;width:116px;height:116px}`. The frame must sit centered on the pale background circle graphic and the image must match the full sample phrase. |
 | Visible page indicator | Slide `.page-indicator` shows printed textbook page/range from the database, such as `Trang 1` or `Trang 1-2`. It is never a slide number or PDF page. `source_page` must mean printed textbook page; PDF positions must be stored separately as `source_pdf_page` / `source_pdf_page_range` if needed. Generated slides with no textbook source omit it. Generated classroom activity sections that do not appear directly in the textbook, especially `Luyện tập tổng hợp` and `Văn hóa bổ sung`, also omit it. Do not add separate `.source` footers. |
 | Vocab image workflow | Generate `prompts.json` with `scripts/generate-vocab-images.py`, save 16:9 PNGs in `slides/assets/vocab-images/`, insert by matching filename, render vocab slides, and regenerate any image that does not match its vocabulary word. |
+| Image asset manifest | Images are tracked as lesson data. VP steps 1-8 should include `image_role`, `image_prompt`, `image_file`, `image_reuse_from`, `image_status`, and `image_semantic_check`. Complete lessons must have `slides/assets/asset-manifest.json` and `exports/qa/asset-qa-report.json`, built with `npm run assets:manifest -- output/book-1/lesson-XX` and checked with `npm run assets:qa -- output/book-1/lesson-XX`. See `docs/image-asset-workflow.md`. |
 | Vocab image style | Soft textbook line-art: thin grey-blue outlines, muted pastel fills, white/pale-grey background, gentle shadows. No in-image text, letters, numbers, Chinese characters, labels, watermarks, decorative blobs, teal icon style, stickers, or chibi style. |
 | Review gate | AI Agent may generate draft database/content. Final classroom/student/homework materials require teacher review first. |
 | PDF finalization gate | Before any clean PDF export, the agent must ask Adam whether the design and content are finalized. Export only after Adam confirms finalization. |
@@ -36,11 +43,13 @@
 | Overflow QA | During HTML/screenshot QA, verify every slide for text overflow. Text must not spill outside the slide, background image panel, card, bubble, tile, button, or fixed container. Fix by splitting content into more slides or revising layout. Do not hide clipped text. |
 | Hanzi writing | Reuse Lesson 01's hanzi-writing title, layout, method, and HanziWriter stroke animation. Do not replace stroke animation with static characters. Use Lesson 01 slowed timing: `strokeAnimationSpeed: 0.575` and `delayBetweenStrokes: 360`, unless Adam changes the Lesson 01 template itself. |
 | Database rule propagation | VP steps 1-8 must generate lesson structure/activity/database metadata that already follows the cover, divider, activity-design, Simplified Chinese, pinyin, image, density, and hanzi-writing rules. Do not leave these as manual slide-cleanup requirements only. |
+| Image replacement rule | Replace vocabulary images with `npm run assets:replace -- --lesson output/book-1/lesson-XX --record V001 --image /path/to/new.png`. This resizes to 16:9, writes to the existing path, and rebuilds the manifest. Do not patch many slide HTML files by hand just to swap one image. |
 | Pre-review automation | Steps 1-8 are safe to automate before teacher review. |
 | Post-review scope | Steps 9-18 begin after teacher review. |
 | Skills location | `.kiro/skills/` — readable by Kiro, Claude Code, Hermes, Codex, Cursor. |
 | Agent entry point | `AGENTS.md` (also symlinked as `CLAUDE.md` and `CODEX.md`). |
 | Portability | Skills, requirements, and project rules live inside this repo. No external symlinks or machine-specific paths. |
+| Presenter durability | Do not hand-edit copied presenter fields. Use `npm run lesson:presenter -- output/book-1/lesson-XX` after numbered slide HTML exists, then `npm run lesson:shells`. Validate with `npm run validate:book1`. |
 
 ## Current implemented artifacts
 
@@ -67,6 +76,7 @@
 | 4 | 頁碼標註 | AI Agent | page mapping |
 | 5 | 教學重組 | AI Agent | lesson structure |
 | 6 | 補充活動 | AI Agent | warm-up, drills, culture, discussion |
+| 6.5 | 圖片資料化 | AI Agent | image metadata fields for vocabulary, sample, cover, divider, and culture images |
 | 7 | 遊戲標記 | AI Agent | game_suggestion |
 | 8 | 寫入資料庫 | AI Agent / Sheets CSV/API | 教材資料庫版 |
 | 9 | 人工審閱 | Google Sheets | Approved Data |

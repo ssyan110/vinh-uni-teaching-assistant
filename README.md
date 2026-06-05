@@ -66,7 +66,11 @@ Huashu Design phù hợp cho pipeline học liệu vì:
 - `scripts/create-teacher-deck.mjs` — tạo bộ slide giảng viên từ JSON
 - `scripts/create-vp-pinyin-l1-database.py` — tạo database VP Pinyin Lesson 1
 - `scripts/validate-system.mjs` — kiểm tra thiết lập và đầu ra
+- `scripts/build-lesson-asset-manifest.mjs` — tạo `slides/assets/asset-manifest.json`
+- `scripts/qa-lesson-assets.mjs` — kiểm tra asset/image workflow của một lesson
+- `scripts/replace-lesson-image.mjs` — thay một ảnh lesson mà không sửa HTML thủ công
 - `docs/lesson-slide-template-guide.md` — quy tắc tái sử dụng template Lesson 01 cho bài mới
+- `docs/image-asset-workflow.md` — quy trình ảnh: database metadata → manifest → QA
 - `output/sample-teacher-deck/` — bộ slide mẫu
 - `output/pinyin-l1-design-prototype/` — design prototype for Pinyin Lesson 1
 - `output/vp-database/pinyin-l1/` — VP database CSV/JSON output
@@ -75,18 +79,18 @@ Huashu Design phù hợp cho pipeline học liệu vì:
 
 ```bash
 cd ~/Development/ai-teaching-material-system
-npm run build:sample
 npm run vp:pinyin:l1
+npm run validate
 ```
 
-Các bước riêng:
+Các lệnh thường dùng:
 
 ```bash
-npm run create:sample
-npm run verify:html
-npm run export:pdf
-npm run export:pptx
 npm run validate
+npm run assets:manifest -- output/book-1/lesson-01
+npm run assets:qa -- output/book-1/lesson-01
+npm run lesson:presenter -- output/book-1/lesson-01
+npm run lesson:shells
 ```
 
 ## Quy trình cho bài học mới
@@ -95,19 +99,26 @@ npm run validate
 2. Thay tiêu đề bài, mục tiêu, từ vựng, tiến trình, kiểm tra và bài tập.
 3. Đảm bảo nội dung giảng viên bằng tiếng Việt, ngữ liệu tiếng Trung bằng giản thể.
 4. Chạy generator.
-5. Với bài regular có từ vựng: chạy `scripts/generate-vocab-images.py`, tạo ảnh từ `prompts.json`, lưu PNG 16:9 vào `slides/assets/vocab-images/`, rồi chèn bằng template từ vựng của Lesson 01.
-6. Xem `output/<deck>/index.html` trên trình duyệt.
-7. Xuất PDF backup.
-8. Chạy kiểm tra trước khi gửi cho giảng viên/sinh viên.
+5. Với bài regular có từ vựng: database phải có image metadata (`image_role`, `image_prompt`, `image_file`, `image_reuse_from`, `image_status`, `image_semantic_check`).
+6. Chạy `scripts/generate-vocab-images.py` khi cần prompt, tạo ảnh từ `prompts.json`, lưu PNG 16:9 vào `slides/assets/vocab-images/`.
+7. Chạy `npm run assets:manifest -- output/book-1/lesson-XX` và `npm run assets:qa -- output/book-1/lesson-XX`.
+8. Xem `output/book-1/lesson-XX/index.html` trên trình duyệt.
+9. Chạy kiểm tra trước khi gửi cho giảng viên/sinh viên.
+10. Chỉ xuất PDF backup sau khi Adam xác nhận nội dung và thiết kế đã final.
 
 ## Quy tắc sản xuất
 
 - Dùng Huashu Design làm ngữ pháp thiết kế và toolchain xuất file.
 - Tài liệu mặc định cho đại học Việt Nam: tiếng Việt + tiếng Trung giản thể.
+- Pinyin lessons dùng `output/pinyin/pinyin-01` làm template baseline. Không dựng lại từ đầu cho từng bài; giữ cùng cover/objectives/divider/concept/tone/vocab/flashcard/practice/input-setup/closing style, cùng phong cách ảnh soft textbook/course, rồi thay text, âm học, luật, từ vựng, bài tập và ảnh theo từng bài.
+- Trong pinyin lessons, dùng đúng `thanh điệu`, không dùng `thanh điều`. Không tạo slide `Mục lục` hoặc `Quy ước`; pinyin classroom slides không hiện nhãn `Trang ...` ở góc dưới.
 - Slide từ vựng dùng template Lesson 01: khung ảnh chữ nhật 16:9, không dùng crop tròn/icon. Bố cục: ảnh → pinyin → chữ Hán giản thể → nghĩa tiếng Việt → hán việt + loại từ.
 - Slide mẫu câu (`MẪU CÂU`, file `sample-*`) dùng card câu ở giữa và một ảnh hỗ trợ trong khung tròn nhỏ dưới bên trái: `.sample-spot{left:52px;bottom:28px;width:116px;height:116px}`. Khung phải nằm giữa vòng tròn nền nhạt và ảnh phải khớp với cả mẫu câu.
 - Ảnh từ vựng dùng phong cách textbook line-art mềm: viền mảnh xám xanh, màu pastel nhẹ, nền trắng/xám rất nhạt, không có chữ/số/ký tự trong ảnh. Sau khi chèn, render từng slide từ vựng và kiểm tra ảnh có khớp từ hay không; nếu sai thì regenerate ảnh đó.
+- Ảnh không được xử lý như việc sửa tay sau khi tạo slide. Mỗi complete lesson phải có `slides/assets/asset-manifest.json` và `exports/qa/asset-qa-report.json`.
+- Khi thay một ảnh từ vựng, dùng `npm run assets:replace -- --lesson output/book-1/lesson-XX --record V001 --image /path/to/new.png`.
 - Xem `docs/lesson-slide-template-guide.md` trước khi tạo hoặc chỉnh lesson deck mới.
+- Xem `docs/image-asset-workflow.md` trước khi tạo, thay, hoặc QA ảnh.
 - Slide phải viết bằng HTML rõ ràng, dễ render và dễ export PDF:
   - `body` = `960pt × 540pt`
   - text nằm trong `<p>` / `<h1>`-`<h6>`

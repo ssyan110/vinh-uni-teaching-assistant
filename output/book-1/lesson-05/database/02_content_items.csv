@@ -1,0 +1,54 @@
+record_id,source_page,source_pdf_page,source_page_range,source_pdf_page_range,section,record_type,title_vi,title_zh,chinese_simplified,pinyin,vietnamese,english,raw_source_text,teaching_order,classroom_visibility
+T001,37,55,37-38,55-56,Bài đọc,text,Đây là thầy giáo Vương,这是王老师,"这是王老师，这是我爸爸。
+王老师，您好！
+您好！请进！请坐！请喝茶！
+谢谢！
+不客气！
+工作忙吗？
+不太忙。
+身体好吗？
+很好！","zhè shì Wáng lǎoshī, zhè shì wǒ bàba.
+Wáng lǎoshī, nín hǎo!
+nín hǎo! qǐng jìn! qǐng zuò! qǐng hē chá!
+xièxie!
+bú kèqi!
+gōngzuò máng ma?
+bú tài máng.
+shēntǐ hǎo ma?
+hěn hǎo!","Đây là thầy giáo Vương, đây là bố tôi.
+Thầy Vương, chào thầy!
+Chào bạn! Mời vào! Mời ngồi! Mời uống trà!
+Cảm ơn!
+Không có gì!
+Công việc bận không?
+Không bận lắm.
+Sức khỏe tốt không?
+Rất tốt!","This is Teacher Wang, this is my father.
+Teacher Wang, hello!
+Hello! Please come in! Please sit down! Please have some tea!
+Thank you!
+You're welcome!
+Is work busy?
+Not too busy.
+How is your health?
+Very good!",课文 这是王老师: 这是王老师，这是我爸爸。王老师，您好！您好！请进！请坐！请喝茶！谢谢！不客气！工作忙吗？不太忙。身体好吗？很好！,15,student_visible
+V001,38,56,38,56,Từ vựng,vocabulary,,,这,zhè,"đây, này",this,"这 (代) zhè (giá) this đây, này",1,student_visible
+V002,38,56,38,56,Từ vựng,vocabulary,,,是,shì,là,"to be (am, are, is)",是 (动) shì (thị) to be là,2,student_visible
+V003,38,56,38,56,Từ vựng,vocabulary,,,老师,lǎoshī,thầy/cô giáo,teacher,老师 (名) lǎoshī (lão sư) teacher thầy/cô giáo,3,student_visible
+V004,38,56,38,56,Từ vựng,vocabulary,,,爸爸,bàba,"bố, ba",father,"爸爸 (名) bàba (ba ba) father bố, ba",4,student_visible
+V005,38,56,38,56,Từ vựng,vocabulary,,,您,nín,"ngài, ông/bà (lịch sự)",you (polite form),"您 (代) nín (nâm) you (polite) ngài, ông/bà (lịch sự)",5,student_visible
+V006,38,56,38,56,Từ vựng,vocabulary,,,请,qǐng,"mời, xin",please; to invite,"请 (动) qǐng (thỉnh) please; to invite mời, xin",6,student_visible
+V007,38,56,38,56,Từ vựng,vocabulary,,,进,jìn,vào,to enter; to come in,进 (动) jìn (tiến) to enter; to come in vào,7,student_visible
+V008,38,56,38,56,Từ vựng,vocabulary,,,坐,zuò,ngồi,to sit,坐 (动) zuò (tọa) to sit ngồi,8,student_visible
+V009,38,56,38,56,Từ vựng,vocabulary,,,喝,hē,uống,to drink,喝 (动) hē (hát) to drink uống,9,student_visible
+V010,38,56,38,56,Từ vựng,vocabulary,,,茶,chá,trà,tea,茶 (名) chá (trà) tea trà,10,student_visible
+V011,38,56,38,56,Từ vựng,vocabulary,,,谢谢,xièxie,cảm ơn,thank you,谢谢 xièxie (tạ tạ) to thank cảm ơn,11,student_visible
+V012,38,56,38,56,Từ vựng,vocabulary,,,客气,kèqi,"khách sáo, lịch sự",polite; courteous,"客气 (形) kèqi (khách khí) polite; courteous khách sáo, lịch sự",12,student_visible
+V013,38,56,38,56,Từ vựng,vocabulary,,,工作,gōngzuò,"công việc, làm việc",work; to work,"工作 (名/动) gōngzuò (công tác) work; to work công việc, làm việc",13,student_visible
+V014,38,56,38,56,Từ vựng,vocabulary,,,忙,máng,bận,busy,忙 (形) máng (mang) busy bận,14,student_visible
+V015,38,56,38,56,Từ vựng,vocabulary,,,太,tài,quá,too; extremely,太 (副) tài (thái) too; extremely quá,15,student_visible
+V016,38,56,38,56,Từ vựng,vocabulary,,,身体,shēntǐ,"sức khỏe, thân thể",body; health,"身体 (名) shēntǐ (thân thể) body; health sức khỏe, thân thể",16,student_visible
+V017,38,56,38,56,Từ vựng,vocabulary,,,妈妈,māma,"mẹ, má",mother,"妈妈 (名) māma (ma ma) mother mẹ, má",17,student_visible
+G001,39,57,39-42,57-60,Ngữ âm,grammar_phonetics,Ngữ âm,语音,"声母 zh, ch, sh, r + 韵母 ua, uo, uai, uei(ui), uan, uen(un), uang, ueng","shēngmǔ zh, ch, sh, r + yùnmǔ ua, uo, uai, uei(ui), uan, uen(un), uang, ueng","Thanh mẫu zh, ch, sh, r + Vận mẫu ua, uo, uai, uei(ui), uan, uen(un), uang, ueng","Initials zh, ch, sh, r + Compound finals ua, uo, uai, uei(ui), uan, uen(un), uang, ueng",语音 Phonetics: 声母 zh ch sh r + 韵母 ua uo uai uei(ui) uan uen(un) uang ueng,18,student_visible
+PN001,39,57,39,57,Tên riêng,proper_name,,,王,Wáng,Vương (họ),Wang (a Chinese family name),专名: 王 Wáng (Vương) Wang (a family name of Chinese) Họ Vương,,student_visible
+CUL001,37,55,37,55,Văn hóa bổ sung,culture_note,"Đãi khách kiểu Trung Quốc: Mời vào, mời ngồi, mời uống trà",中国待客之道：请进、请坐、请喝茶,在中国，客人来了，主人会说「请进！请坐！请喝茶！」这三句话表示热情好客。茶是中国传统文化中重要的待客饮品，给客人倒茶是基本礼节。,"zài Zhōngguó, kèrén lái le, zhǔrén huì shuō ""qǐng jìn! qǐng zuò! qǐng hē chá!"" zhè sān jù huà biǎoshì rèqíng hàokè. chá shì Zhōngguó chuántǒng wénhuà zhōng zhòngyào de dàikè yǐnpǐn, gěi kèrén dào chá shì jīběn lǐjié.","Ở Trung Quốc, khi khách đến, chủ nhà thường nói ""Mời vào! Mời ngồi! Mời uống trà!"" — ba câu này thể hiện sự hiếu khách nồng hậu. Trà là thức uống đãi khách quan trọng trong văn hóa truyền thống Trung Quốc, rót trà mời khách là phép lịch sự cơ bản.","In China, when a guest arrives, the host says 'Please come in! Please sit! Please have tea!' These three phrases express warm hospitality. Tea is an important drink for hosting guests in traditional Chinese culture, and pouring tea for guests is basic etiquette.",文化补充: 请进请坐请喝茶 — Chinese hospitality culture and tea etiquette,,student_visible

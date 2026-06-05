@@ -1,0 +1,24 @@
+record_id,source_page,source_pdf_page,section,record_type,chinese_simplified,pinyin,vietnamese,english,word_type_vi,word_type_abbr,han_viet,sample_sentence_pinyin,sample_sentence_zh,sample_sentence_vi,teaching_order,classroom_visibility
+T001,110,128,Bài đọc,text,(dialogue),,,,,,,,,,19,student_visible
+V001,112,130,Từ vựng,vocabulary,没有,méiyǒu,không có,not have,động từ,动,một hữu,méiyǒu xiāngzi.,没有箱子。,Không có vali.,1,student_visible
+V002,112,130,Từ vựng,vocabulary,箱子,xiāngzi,vali,suitcase,danh từ,名,tương tử,xiāngzi hěn zhòng.,箱子很重。,Vali rất nặng.,2,student_visible
+V003,112,130,Từ vựng,vocabulary,重,zhòng,nặng,heavy,tính từ,形,trọng,hěn zhòng.,很重。,Rất nặng.,3,student_visible
+V004,112,130,Từ vựng,vocabulary,轻,qīng,nhẹ,light,tính từ,形,khinh,bǐjiào qīng.,比较轻。,Khá nhẹ.,4,student_visible
+V005,112,130,Từ vựng,vocabulary,旧,jiù,cũ,old,tính từ,形,cựu,jiù de shì wǒ de.,旧的是我的。,Cái cũ là của tôi.,5,student_visible
+V006,112,130,Từ vựng,vocabulary,黑,hēi,đen,black,tính từ,形,hắc,hēi de hěn zhòng.,黑的很重。,Cái đen nặng.,6,student_visible
+V007,112,130,Từ vựng,vocabulary,红,hóng,đỏ,red,tính từ,形,hồng,hóng de qīng.,红的轻。,Cái đỏ nhẹ.,7,student_visible
+V008,112,130,Từ vựng,vocabulary,东西,dōngxi,đồ,thing,danh từ,名,đông tây,shénme dōngxi?,什么东西？,Thứ gì?,8,student_visible
+V009,112,130,Từ vựng,vocabulary,药,yào,thuốc,medicine,danh từ,名,dược,zhè shì yào.,这是药。,Đây là thuốc.,9,student_visible
+V010,112,130,Từ vựng,vocabulary,中药,zhōngyào,thuốc đông y,Chinese medicine,danh từ,名,trung dược,zhè shì zhōngyào.,这是中药。,Đây là thuốc ĐY.,10,student_visible
+V011,112,130,Từ vựng,vocabulary,茶叶,cháyè,lá trà,tea leaves,danh từ,名,trà diệp,zhè shì cháyè.,这是茶叶。,Đây là lá trà.,11,student_visible
+V012,112,130,Từ vựng,vocabulary,日用品,rìyòngpǐn,đồ dùng,daily items,danh từ,名,nhật dụng phẩm,dōu shì rìyòngpǐn.,都是日用品。,Đều là đồ dùng.,12,student_visible
+V013,112,130,Từ vựng,vocabulary,衣服,yīfu,quần áo,clothes,danh từ,名,y phục,liǎng jiàn yīfu.,两件衣服。,Hai bộ đồ.,13,student_visible
+V014,112,130,Từ vựng,vocabulary,雨伞,yǔsǎn,ô,umbrella,danh từ,名,vũ tản,yì bǎ yǔsǎn.,一把雨伞。,Một cây ô.,14,student_visible
+V015,112,130,Từ vựng,vocabulary,香水,xiāngshuǐ,nước hoa,perfume,danh từ,名,hương thủy,yì píng xiāngshuǐ.,一瓶香水。,Một lọ nước hoa.,15,student_visible
+V016,112,130,Từ vựng,vocabulary,词典,cídiǎn,từ điển,dictionary,danh từ,名,từ điển,yì běn cídiǎn.,一本词典。,Một quyển từ điển.,16,student_visible
+V017,112,130,Từ vựng,vocabulary,光盘,guāngpán,đĩa CD,CD,danh từ,名,quang bàn,liǎng zhāng guāngpán.,两张光盘。,Hai đĩa CD.,17,student_visible
+V018,112,130,Từ vựng,vocabulary,笔,bǐ,bút,pen,danh từ,名,bút,sān zhī bǐ.,三支笔。,Ba cây bút.,18,student_visible
+G001,114,132,Ngữ pháp,grammar,是不是问句,,Câu hỏi 是不是,,,,,zhè shì bu shì yào?,,,20,student_visible
+G002,114,132,Ngữ pháp,grammar,没有否定,,Phủ định 没有,,,,,méiyǒu xiāngzi.,,,21,student_visible
+G003,114,132,Ngữ pháp,grammar,量词,,Lượng từ cho đồ vật,,,,,liǎng jiàn yīfu.,,,22,student_visible
+G004,114,132,Ngữ pháp,grammar,的 nominalizer,,的 danh từ hóa,,,,,hēi de hěn zhòng.,,,23,student_visible

@@ -6,6 +6,12 @@
   "scripts": {
     "validate": "node scripts/validate-system.mjs",
     "validate:lesson1": "node scripts/validate-system.mjs --lesson output/book-1/lesson-01",
+    "validate:book1": "for d in output/book-1/lesson-*; do node scripts/validate-system.mjs --lesson \"$d\"; done",
+    "lesson:shells": "node scripts/update-lesson-shell.mjs --all output/book-1",
+    "lesson:presenter": "node scripts/sync-lesson-presenter.mjs --lesson",
+    "assets:manifest": "node scripts/build-lesson-asset-manifest.mjs --lesson",
+    "assets:qa": "node scripts/qa-lesson-assets.mjs --lesson",
+    "assets:replace": "node scripts/replace-lesson-image.mjs",
     "slides:pdf-data": "node scripts/build-slides-data.mjs --slides-dir",
     "slides:pdf": "node scripts/export-slides-pdf.mjs --slides-dir",
     "slides:watch": "node scripts/watch-slides.mjs --slides-dir",
@@ -13,7 +19,8 @@
     "lesson1:pdf": "node scripts/export-slides-pdf.mjs --slides-dir output/book-1/lesson-01/slides",
     "lesson1:watch": "node scripts/watch-slides.mjs --slides-dir output/book-1/lesson-01/slides",
     "vp:run": ".venv/bin/python scripts/run_pipeline.py",
-    "vp:pinyin:l1": ".venv/bin/python scripts/run_pipeline.py --lesson-type pinyin --lesson-id pinyin-l1 --lesson-title 'Pinyin · Bài 1' --source-pdf work/pdf-pages/ --output-dir output/book-1/pinyin-01/database/ --content-file work/design-ref-pinyin-l1/extract.json",
+    "vp:pinyin:l1": ".venv/bin/python scripts/run_pipeline.py --lesson-type pinyin --lesson-id pinyin-01 --lesson-title 'Pinyin · Bài 1' --source-pdf 'Pinyin lessons/pinyin-l1.14102024210713.pdf' --output-dir output/pinyin/pinyin-01/database/ --content-file work/design-ref-pinyin-l1/extract.json",
+    "pinyin:l1:steps10-12": "node scripts/generate-pinyin-01-steps10-12.mjs",
     "create:deck": "node scripts/create-teacher-deck.mjs"
   },
   "dependencies": {

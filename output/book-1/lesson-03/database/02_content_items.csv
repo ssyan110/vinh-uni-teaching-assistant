@@ -1,0 +1,45 @@
+record_id,source_page,source_pdf_page,source_page_range,source_pdf_page_range,section,record_type,title_vi,title_zh,chinese_simplified,pinyin,vietnamese,english,raw_source_text,teaching_order,classroom_visibility
+T001,19,37,19,37,Bài đọc,text,Học tiếng Hán,学汉语,"你学英语吗？
+不，学汉语。
+去北京吗？
+对。","nǐ xué Yīngyǔ ma?
+bù, xué Hànyǔ.
+qù Běijīng ma?
+duì.","Bạn học tiếng Anh à?
+Không, học tiếng Hán.
+Đi Bắc Kinh à?
+Đúng.","Do you study English?
+No, (I) study Chinese.
+Going to Beijing?
+Right.",课文(一) 学汉语: 你学英语吗？不，学汉语。去北京吗？对。,16,student_visible
+T002,19,37,19-20,37-38,Bài đọc,text,Đi bưu điện,去邮局,"你去邮局寄信吗？
+不去。去银行取钱。
+明天见！
+明天见！","nǐ qù yóujú jì xìn ma?
+bú qù. qù yínháng qǔ qián.
+míngtiān jiàn!
+míngtiān jiàn!","Bạn đi bưu điện gửi thư à?
+Không đi. Đi ngân hàng rút tiền.
+Ngày mai gặp!
+Ngày mai gặp!","Are you going to the post office to mail a letter?
+No. Going to the bank to withdraw money.
+See you tomorrow!
+See you tomorrow!",课文(二) 去邮局: 你去邮局寄信吗？不去。去银行取钱。明天见！明天见！,17,student_visible
+V001,20,38,20-21,38-39,Từ vựng,vocabulary,,,学,xué,học,to learn; to study,学 (动) xué (học) to learn; to study học,1,student_visible
+V002,20,38,20-21,38-39,Từ vựng,vocabulary,,,英语,Yīngyǔ,tiếng Anh,English (language),英语 (名) Yīngyǔ (Anh ngữ) English (language) tiếng Anh,2,student_visible
+V003,20,38,20-21,38-39,Từ vựng,vocabulary,,,对,duì,"đúng, được, đúng rồi",correct; right; OK,"对 (形) duì (đối) right; OK; correct đúng, được, chắc rồi",3,student_visible
+V004,20,38,20-21,38-39,Từ vựng,vocabulary,,,明天,míngtiān,ngày mai,tomorrow,明天 (名) míngtiān (minh thiên) tomorrow ngày mai,4,student_visible
+V005,20,38,20-21,38-39,Từ vựng,vocabulary,,,见,jiàn,"gặp, thấy",to see; to meet,"见 (动) jiàn (kiến) to see gặp, thấy",5,student_visible
+V006,20,38,20-21,38-39,Từ vựng,vocabulary,,,去,qù,"đi, đến",to go,"去 (动) qù (khứ) to go đi, đến",6,student_visible
+V007,20,38,20-21,38-39,Từ vựng,vocabulary,,,邮局,yóujú,bưu điện,post office,邮局 (名) yóujú (bưu cục) post office bưu điện,7,student_visible
+V008,20,38,20-21,38-39,Từ vựng,vocabulary,,,寄,jì,gửi,to mail; to post; to send by mail,寄 (动) jì (ký) to post; to mail; to send by mail gửi,8,student_visible
+V009,20,38,20-21,38-39,Từ vựng,vocabulary,,,信,xìn,thư,letter; mail,信 (名) xìn (tín) letter; mail thư,9,student_visible
+V010,20,38,20-21,38-39,Từ vựng,vocabulary,,,银行,yínháng,ngân hàng,bank,银行 (名) yínháng (ngân hàng) bank ngân hàng,10,student_visible
+V011,20,38,20-21,38-39,Từ vựng,vocabulary,,,取,qǔ,"rút, lấy",to withdraw; to draw,"取 (动) qǔ (thủ) to draw rút, cử, nhắc",11,student_visible
+V012,20,38,20-21,38-39,Từ vựng,vocabulary,,,钱,qián,tiền,money,钱 (名) qián (tiền) money tiền,12,student_visible
+V013,21,39,20-21,38-39,Từ vựng,vocabulary,,,六,liù,sáu,six,六 (数) liù (lục) six sáu,13,student_visible
+V014,21,39,20-21,38-39,Từ vựng,vocabulary,,,七,qī,bảy,seven,七 (数) qī (thất) seven bảy,14,student_visible
+V015,21,39,20-21,38-39,Từ vựng,vocabulary,,,九,jiǔ,chín,nine,九 (数) jiǔ (cửu) nine chín,15,student_visible
+G001,22,40,22-25,40-43,Ngữ âm,grammar_phonetics,Ngữ âm,语音,"声母 j, q, x + ""不""的变调","shēngmǔ j, q, x + ""bù"" de biàndiào","Thanh mẫu j, q, x + Biến điệu của ""不""","Initials j, q, x + Tone sandhi of 不","语音 Phonetics: 声母 j q x 描述 + ""不""的变调规则",18,student_visible
+PN001,21,39,21,39,Tên riêng,proper_name,,,北京,Běijīng,Bắc Kinh (thủ đô Trung Quốc),"Beijing, capital of China","专名: 北京 Běijīng Beijing, capital of China Bắc Kinh",,student_visible
+SUP001,20,38,20,38,Từ vựng bổ sung,supplementary_vocabulary,Tên các ngôn ngữ,,,,,,补充语言词汇: 阿拉伯语、德语、俄语、法语、韩国语、日语、西班牙语,,student_visible

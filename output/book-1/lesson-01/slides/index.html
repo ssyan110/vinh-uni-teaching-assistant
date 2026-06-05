@@ -41,24 +41,24 @@ body.presenting .thumb-number,body.presenting .thumb-name{color:rgba(255,255,255
 </style>
 </head>
 <body>
-<div class="header"><h1>Bài 1 · 你好</h1><div class="subtitle">55 slides · Press <strong>F</strong> for presentation mode</div></div>
+<div class="header"><h1>Bài 1 · 你好</h1><div class="subtitle">56 slides · Press <strong>F</strong> for presentation mode</div></div>
 <aside class="thumb-sidebar" id="thumbSidebar" aria-label="Danh sách slide">
-  <div class="thumb-head"><div class="thumb-title">Mục lục</div><div class="thumb-total">55</div></div>
+  <div class="thumb-head"><div class="thumb-title">Mục lục</div><div class="thumb-total">56</div></div>
   <div class="thumb-list" id="thumbList"></div>
 </aside>
 <div class="stage" id="stage"><div class="slide-surface" id="slideSurface"><iframe id="slideFrame" src="01-cover.html"></iframe><canvas id="drawCanvas"></canvas><a class="stage-video-link" id="stageVideoLink" href="#" target="_blank" rel="noopener noreferrer" aria-label="Mở video viết chữ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></a></div></div>
 <div class="controls" id="controls">
-  <button class="btn" onclick="prev()">← Prev</button><span class="counter" id="counter">1 / 55</span><button class="btn" onclick="next()">Next →</button>
+  <button class="btn" onclick="prev()">← Prev</button><span class="counter" id="counter">1 / 56</span><button class="btn" onclick="next()">Next →</button>
   <div class="separator"></div><button class="btn secondary" onclick="undo()">↩ Undo</button><button class="btn secondary" id="penBtn" onclick="togglePen()">✏️ Pen</button>
   <span class="swatch" style="background:#E04040" data-color="#E04040" onclick="pickColor(this)"></span><span class="swatch selected" style="background:#1A3A5A" data-color="#1A3A5A" onclick="pickColor(this)"></span><span class="swatch" style="background:#5AACAC" data-color="#5AACAC" onclick="pickColor(this)"></span><span class="swatch" style="background:#F5A623" data-color="#F5A623" onclick="pickColor(this)"></span>
   <button class="btn secondary" id="highBtn" onclick="toggleHighlighter()">🖍️ High</button><span class="eraser-wrap"><button class="btn secondary" id="eraseBtn" onclick="toggleEraserMenu('eraserMenu')">Eraser ▾</button><span class="eraser-menu" id="eraserMenu"><button class="btn" id="pixelEraserBtn" onclick="setEraser('pixel')">Pixel</button><button class="btn" id="objectEraserBtn" onclick="setEraser('object')">Object</button></span></span><button class="btn secondary" id="textBtn" onclick="toggleText()">T Text</button><button class="btn danger" onclick="clearSlide()">Clear</button>
   <div class="separator"></div><button class="btn download" onclick="exportPDF()">📥 PDF</button><button class="btn" onclick="enterPresent()">▶ Present</button>
 </div>
 <div class="float-toolbar">
-  <button class="btn" onclick="prev()">←</button><span class="counter" id="counterFloat">1 / 55</span><button class="btn" onclick="next()">→</button>
+  <button class="btn" onclick="prev()">←</button><span class="counter" id="counterFloat">1 / 56</span><button class="btn" onclick="next()">→</button>
   <div class="separator"></div><button class="btn" onclick="undo()">↩</button><button class="btn" id="penBtnFloat" onclick="togglePen()">✏️</button><button class="btn" id="highBtnFloat" onclick="toggleHighlighter()">🖍️</button><span class="eraser-wrap"><button class="btn" id="eraseBtnFloat" onclick="toggleEraserMenu('eraserMenuFloat')">Eraser ▾</button><span class="eraser-menu" id="eraserMenuFloat"><button class="btn" id="pixelEraserBtnFloat" onclick="setEraser('pixel')">Pixel</button><button class="btn" id="objectEraserBtnFloat" onclick="setEraser('object')">Object</button></span></span><button class="btn" id="textBtnFloat" onclick="toggleText()">T</button><button class="btn danger" onclick="clearSlide()">✕</button><button class="btn download" onclick="exportPDF()">📥</button><button class="btn secondary" onclick="exitPresent()">Esc</button>
 </div>
-<div class="export-overlay" id="exportOverlay"><div class="export-box"><h3 id="exportTitle">Exporting PDF...</h3><p id="exportStatus">Rendering slide 1 / 55</p><div class="export-progress"><div class="export-progress-bar" id="exportBar"></div></div><p style="margin-top:10px;font-size:11px;color:#B0BEC5">Rendering live from slides — always up to date</p><button class="btn secondary export-close" id="exportClose" onclick="hideExportOverlay()">Close</button></div></div>
+<div class="export-overlay" id="exportOverlay"><div class="export-box"><h3 id="exportTitle">Exporting PDF...</h3><p id="exportStatus">Rendering slide 1 / 56</p><div class="export-progress"><div class="export-progress-bar" id="exportBar"></div></div><p style="margin-top:10px;font-size:11px;color:#B0BEC5">Rendering live from slides — always up to date</p><button class="btn secondary export-close" id="exportClose" onclick="hideExportOverlay()">Close</button></div></div>
 <script>
 const MANIFEST = [
   "01-cover.html",
@@ -99,23 +99,24 @@ const MANIFEST = [
   "36-practice-tone-bu.html",
   "37-divider-text.html",
   "38-dialogue.html",
-  "39-stroke-yi.html",
-  "40-stroke-ba.html",
-  "41-stroke-da.html",
-  "42-stroke-bu.html",
-  "43-stroke-wu.html",
-  "44-stroke-kou.html",
-  "45-stroke-bai.html",
-  "46-stroke-nu.html",
-  "47-stroke-ma.html",
-  "48-stroke-ni.html",
-  "49-stroke-hao.html",
-  "50-divider-supplement.html",
-  "51-culture-greetings.html",
-  "52-number-gestures.html",
-  "53-divider-homework.html",
-  "54-exercises-list.html",
-  "55-closing.html"
+  "39-divider-writing.html",
+  "40-stroke-yi.html",
+  "41-stroke-ba.html",
+  "42-stroke-da.html",
+  "43-stroke-bu.html",
+  "44-stroke-wu.html",
+  "45-stroke-kou.html",
+  "46-stroke-bai.html",
+  "47-stroke-nu.html",
+  "48-stroke-ma.html",
+  "49-stroke-ni.html",
+  "50-stroke-hao.html",
+  "51-divider-supplement.html",
+  "52-culture-greetings.html",
+  "53-number-gestures.html",
+  "54-divider-homework.html",
+  "55-exercises-list.html",
+  "56-closing.html"
 ];
 let current=0, penActive=false, highlighterActive=false, eraserMode=null, textMode=false, drawing=false, penColor='#1A3A5A';
 const frame=document.getElementById('slideFrame'), stage=document.getElementById('stage'), slideSurface=document.getElementById('slideSurface'), canvas=document.getElementById('drawCanvas'), ctx=canvas.getContext('2d');
@@ -264,7 +265,7 @@ async function exportPDF(){
       });
     }
 
-    pdf.save('Bai-1-NiHao.pdf');
+    pdf.save('lesson-01-teacher-deck.pdf');
     hideExportOverlay();
   }catch(err){
     console.error(err);

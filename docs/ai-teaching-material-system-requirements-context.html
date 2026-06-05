@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>AI 教材簡報製作系統</title>
+  <title>AI 教材簡報製作系統：Requirements + Project Context</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -26,7 +26,8 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">AI 教材簡報製作系統</h1>
+<h1 class="title">AI 教材簡報製作系統：Requirements + Project
+Context</h1>
 </header>
 <h1 id="ai-教材簡報製作系統requirements-project-context">AI
 教材簡報製作系統：Requirements + Project Context</h1>
@@ -63,9 +64,11 @@ the slide design and content are finalized.</td>
 </tr>
 <tr>
 <td>Classroom presenter</td>
-<td>Every lesson root exposes <code>index.html</code> for class; it
-launches <code>slides/index.html</code>, which has fullscreen mode, left
-slide thumbnails, annotation tools, and on-demand PDF export.</td>
+<td>Every lesson root exposes <code>index.html</code>. Complete lessons
+launch <code>slides/index.html</code>, which has fullscreen mode, left
+slide thumbnails, annotation tools, and on-demand PDF export.
+Database-only draft lessons show a safe status page instead of
+redirecting to a missing presenter.</td>
 </tr>
 <tr>
 <td>Clean lesson folders</td>
@@ -104,6 +107,50 @@ contain pronunciation exercises. Keep those pages only as raw
 extracted/review material when needed.</td>
 </tr>
 <tr>
+<td>Pinyin lesson template</td>
+<td>Future pinyin decks reuse <code>output/pinyin/pinyin-01</code> as
+the template baseline. Do not build each pinyin lesson from scratch.
+Keep the same
+cover/objective/divider/concept/tone/vocabulary/flashcard/practice/input-setup/closing
+visual language and swap lesson-specific text, taught sounds,
+vocabulary, exercises, and images.</td>
+</tr>
+<tr>
+<td>Pinyin classroom sequence</td>
+<td>Pinyin decks use clear section dividers for concepts/review,
+initials, finals, sounds/chart, tones, vocabulary, review/practice,
+appendix/input setup when applicable, and closing. <code>Mục lục</code>
+and <code>Quy ước</code> slides are no longer used in future pinyin
+classroom decks.</td>
+</tr>
+<tr>
+<td>Pinyin terminology</td>
+<td>Use <code>thanh điệu</code> exactly. Do not use
+<code>thanh điều</code>.</td>
+</tr>
+<tr>
+<td>Pinyin objectives</td>
+<td>Reuse the Pinyin Lesson 1 objectives layout. Taught
+initials/finals/rule anchors are bold and red. Main goal lines change by
+lesson, e.g. Lesson 1 uses bold red <code>bmpf</code>, bold red
+<code>aoeiuü</code>, <code>Học 5 thanh điệu tiếng Trung</code>, and
+<code>Học đọc 16 từ vựng</code>.</td>
+</tr>
+<tr>
+<td>Pinyin page indicators</td>
+<td>Pinyin classroom slides do not show bottom-right
+<code>Trang ...</code> page indicators. Keep page metadata in the
+database when useful; the presenter chrome may still show slide
+position.</td>
+</tr>
+<tr>
+<td>Pinyin image style</td>
+<td>Cover, goal, divider, concept, tone, initials/finals, vocabulary,
+appendix, and closing images use the same soft textbook/course style
+across all pinyin lessons. Treat them as templates and change only
+lesson-specific content.</td>
+</tr>
+<tr>
 <td>Vocabulary extraction</td>
 <td>Extract every textbook vocabulary row, including indented component
 sub-entries under a main word. Example: <code>办公室</code> → also
@@ -125,7 +172,10 @@ terminology.</td>
 <code>output/book-1/lesson-10/slides/01-cover.html</code> as the
 canonical cover template for all future lessons. Reuse its layout and
 visual language directly; only replace lesson number, Chinese/pinyin
-title, Vietnamese title, topic chips, and topic image.</td>
+title, Vietnamese title, and topic image. Do not include the old three
+keyword/topic pills on cover slides. Keep the lesson badge
+(<code>BÀI N · 第N课</code>) at the larger cover size, about 16pt / 30%
+larger than the old 12pt badge.</td>
 </tr>
 <tr>
 <td>Vocab slide template</td>
@@ -158,8 +208,10 @@ from the database, such as <code>Trang 1</code> or
 <code>source_page</code> must mean printed textbook page; PDF positions
 must be stored separately as <code>source_pdf_page</code> /
 <code>source_pdf_page_range</code> if needed. Generated slides with no
-textbook source omit it. Do not add separate <code>.source</code>
-footers.</td>
+textbook source omit it. Generated classroom activity sections that do
+not appear directly in the textbook, especially
+<code>Luyện tập tổng hợp</code> and <code>Văn hóa bổ sung</code>, also
+omit it. Do not add separate <code>.source</code> footers.</td>
 </tr>
 <tr>
 <td>Vocab image workflow</td>
@@ -168,6 +220,19 @@ footers.</td>
 <code>slides/assets/vocab-images/</code>, insert by matching filename,
 render vocab slides, and regenerate any image that does not match its
 vocabulary word.</td>
+</tr>
+<tr>
+<td>Image asset manifest</td>
+<td>Images are tracked as lesson data. VP steps 1-8 should include
+<code>image_role</code>, <code>image_prompt</code>,
+<code>image_file</code>, <code>image_reuse_from</code>,
+<code>image_status</code>, and <code>image_semantic_check</code>.
+Complete lessons must have
+<code>slides/assets/asset-manifest.json</code> and
+<code>exports/qa/asset-qa-report.json</code>, built with
+<code>npm run assets:manifest -- output/book-1/lesson-XX</code> and
+checked with <code>npm run assets:qa -- output/book-1/lesson-XX</code>.
+See <code>docs/image-asset-workflow.md</code>.</td>
 </tr>
 <tr>
 <td>Vocab image style</td>
@@ -274,6 +339,14 @@ Simplified Chinese, pinyin, image, density, and hanzi-writing rules. Do
 not leave these as manual slide-cleanup requirements only.</td>
 </tr>
 <tr>
+<td>Image replacement rule</td>
+<td>Replace vocabulary images with
+<code>npm run assets:replace -- --lesson output/book-1/lesson-XX --record V001 --image /path/to/new.png</code>.
+This resizes to 16:9, writes to the existing path, and rebuilds the
+manifest. Do not patch many slide HTML files by hand just to swap one
+image.</td>
+</tr>
+<tr>
 <td>Pre-review automation</td>
 <td>Steps 1-8 are safe to automate before teacher review.</td>
 </tr>
@@ -295,6 +368,13 @@ Codex, Cursor.</td>
 <td>Portability</td>
 <td>Skills, requirements, and project rules live inside this repo. No
 external symlinks or machine-specific paths.</td>
+</tr>
+<tr>
+<td>Presenter durability</td>
+<td>Do not hand-edit copied presenter fields. Use
+<code>npm run lesson:presenter -- output/book-1/lesson-XX</code> after
+numbered slide HTML exists, then <code>npm run lesson:shells</code>.
+Validate with <code>npm run validate:book1</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -407,6 +487,13 @@ artifacts</h2>
 <td>補充活動</td>
 <td>AI Agent</td>
 <td>warm-up, drills, culture, discussion</td>
+</tr>
+<tr>
+<td style="text-align: right;">6.5</td>
+<td>圖片資料化</td>
+<td>AI Agent</td>
+<td>image metadata fields for vocabulary, sample, cover, divider, and
+culture images</td>
 </tr>
 <tr>
 <td style="text-align: right;">7</td>

@@ -2,10 +2,15 @@
 
 Use when Adam asks for a small pinyin lesson prototype based on an attached design reference.
 
+For full pinyin lesson decks, use `output/pinyin/pinyin-01` as the template baseline. Do not build future pinyin lessons from scratch; keep the Pinyin Lesson 1 slide rhythm, soft textbook/course visual language, objectives/dividers/concept/tone/vocabulary/flashcard/input-setup/closing patterns, and presenter setup. Swap only lesson-specific text, taught sounds, vocabulary, exercises, and images.
+
 ## Design constraints
 
 - Treat attached PDFs as style inspiration only; never copy exact artwork, title lettering, layout, color values, contact/copyright text, or branding.
 - For Vietnamese university Chinese materials, visible classroom slides are Vietnamese + Simplified Chinese. Pinyin is allowed for pronunciation support.
+- Use `thanh điệu`, not `thanh điều`.
+- Do not create `Mục lục` or `Quy ước` classroom slides for pinyin decks.
+- Pinyin classroom slides do not show bottom-right `Trang ...` page indicators.
 - Keep teacher prep/source/tool notes out of classroom slides. Put prep in `教师手册.md` only when needed.
 
 ## Prototype shape
@@ -54,7 +59,7 @@ Run the full prototype loop before delivery:
 node scripts/create-<prototype>.mjs
 .venv/bin/python huashu-design/scripts/verify.py output/<slug>/index.html --slides N --output output/<slug>/screenshots --wait 3000
 node huashu-design/scripts/export_deck_pdf.mjs --slides output/<slug>/slides --out output/<slug>/<slug>.pdf --width 1280 --height 720
-node huashu-design/scripts/export_deck_pptx.mjs --slides output/<slug>/slides --out output/<slug>/<slug>-editable.pptx
+Deprecated: PPTX export is no longer part of this project workflow. Use the HTML presenter, and export clean PDF backup only after Adam confirms finalization.
 ```
 
 Then visually QA at least cover, concept, and practice slides; fix Vietnamese accents such as `CẶP ÂM DỄ NHẦM` and `Nghe và giơ thẻ` before final export.

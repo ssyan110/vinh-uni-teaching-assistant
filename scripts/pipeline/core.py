@@ -98,6 +98,7 @@ def run_pipeline(
         "source_pdf": source_pdf,
         "activity_design_rules": config.activity_design_rules,
         "slide_template_rules": config.slide_template_rules,
+        "image_asset_rules": config.image_asset_rules,
     }
 
     package = {
@@ -159,6 +160,7 @@ def _generate_structure(
             "item_ids": item_ids,
             "activity_design_rules": " | ".join(config.activity_design_rules),
             "slide_template_rules": " | ".join(config.slide_template_rules),
+            "image_asset_rules": " | ".join(config.image_asset_rules),
         })
     return structure
 
@@ -201,6 +203,12 @@ def _build_database_rows(
         "word_type_vi": lambda item: item.get("pos", item.get("word_type_vi", "")),
         "raw_source_text": lambda item: item.get("raw", item.get("raw_source_text", "")),
         "classroom_visibility": lambda item: _get_visibility(item),
+        "image_role": lambda item: _default_image_role(item),
+        "image_prompt": lambda item: item.get("image_prompt", _default_image_prompt(item)),
+        "image_file": lambda item: item.get("image_file", ""),
+        "image_reuse_from": lambda item: item.get("image_reuse_from", ""),
+        "image_status": lambda item: item.get("image_status", _default_image_status(item)),
+        "image_semantic_check": lambda item: item.get("image_semantic_check", _default_image_semantic_check(item)),
         "teacher_review_status": lambda item: "pending_review",
         "approved": lambda item: "",
         "notes_for_review": lambda item: "",
@@ -228,6 +236,49 @@ def _get_visibility(item: dict) -> str:
     if record_type in ("appendix",):
         return "optional_student_visible"
     return item.get("classroom_visibility", "student_visible")
+
+
+def _default_image_role(item: dict) -> str:
+    """Default image role for database rows that need classroom visuals."""
+    record_type = item.get("type", item.get("record_type", ""))
+    if record_type in ("vocabulary", "vocab") and item.get("standalone_vocab_slide", True) is not False:
+        return "vocabulary_image"
+    if item.get("sample_sentence") or item.get("sample_sentence_zh"):
+        return "sample_sentence_support"
+    return item.get("image_role", "")
+
+
+def _default_image_prompt(item: dict) -> str:
+    """Create a conservative image prompt seed for downstream manifest generation."""
+    if item.get("image_prompt"):
+        return item["image_prompt"]
+    role = _default_image_role(item)
+    if not role:
+        return ""
+    zh = item.get("zh", item.get("chinese_simplified", ""))
+    vi = item.get("vi", item.get("vietnamese", ""))
+    english = item.get("english", "")
+    subject = english or vi or zh
+    return (
+        "Soft educational textbook illustration for a Chinese classroom slide, "
+        "16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, "
+        "no text, no letters, no numbers, no Chinese characters, no labels, no watermark. "
+        f"Show: {subject}."
+    )
+
+
+def _default_image_status(item: dict) -> str:
+    role = _default_image_role(item)
+    return "needs_generation" if role else ""
+
+
+def _default_image_semantic_check(item: dict) -> str:
+    role = _default_image_role(item)
+    if not role:
+        return ""
+    zh = item.get("zh", item.get("chinese_simplified", ""))
+    vi = item.get("vi", item.get("vietnamese", ""))
+    return f"Image must clearly match {zh} / {vi}; verify in screenshot QA before delivery."
 
 
 def _generate_readme(
@@ -267,4 +318,7 @@ Activity design rules:
 
 Slide template rules:
 {chr(10).join(f"  - {rule}" for rule in config.slide_template_rules) or "  - N/A"}
+
+Image asset rules:
+{chr(10).join(f"  - {rule}" for rule in config.image_asset_rules) or "  - N/A"}
 """

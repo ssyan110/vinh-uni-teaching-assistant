@@ -1,0 +1,618 @@
+{
+  "metadata": {
+    "lesson_type": "regular",
+    "pipeline_config_version": "1.0.0",
+    "generated_at": "2026-06-04T10:00:00+00:00",
+    "vp_scope": "steps 1-8",
+    "steps_completed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "steps_not_implemented": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "lesson_id": "lesson-15",
+    "source_pdf": "Giáo trình full/[hanka.edu.vn] - GT Hán Ngữ 1 (Tập 1 - Quyển thượng).pdf",
+    "source_pdf_page_range": "155-177",
+    "textbook_page_range": "137-159",
+    "finalized": false
+  },
+  "lesson_list": [
+    {
+      "lesson_id": "lesson-15",
+      "lesson_title": "Bài 15 · Công ty có bao nhiêu nhân viên",
+      "lesson_type": "regular",
+      "status": "draft_for_teacher_review"
+    }
+  ],
+  "content_items": [
+    {
+      "record_id": "T001",
+      "source_page": 137,
+      "source_pdf_page": 155,
+      "section": "Bài đọc",
+      "record_type": "text",
+      "chinese_simplified": "(dialogue)",
+      "teaching_order": 14,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V001",
+      "source_page": 139,
+      "source_pdf_page": 157,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "公司",
+      "pinyin": "gōngsī",
+      "vietnamese": "công ty",
+      "english": "company",
+      "word_type_vi": "danh từ",
+      "word_type_abbr": "名",
+      "han_viet": "công ty",
+      "sample_sentence_pinyin": "gōngsī yǒu duōshao rén?",
+      "sample_sentence_zh": "公司有多少人？",
+      "sample_sentence_vi": "Công ty có bao nhiêu người?",
+      "teaching_order": 1,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V002",
+      "source_page": 139,
+      "source_pdf_page": 157,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "经理",
+      "pinyin": "jīnglǐ",
+      "vietnamese": "giám đốc",
+      "english": "manager",
+      "word_type_vi": "danh từ",
+      "word_type_abbr": "名",
+      "han_viet": "kinh lý",
+      "sample_sentence_pinyin": "wǒ shì jīnglǐ.",
+      "sample_sentence_zh": "我是经理。",
+      "sample_sentence_vi": "Tôi là giám đốc.",
+      "teaching_order": 2,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V003",
+      "source_page": 139,
+      "source_pdf_page": 157,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "千",
+      "pinyin": "qiān",
+      "vietnamese": "nghìn",
+      "english": "thousand",
+      "word_type_vi": "số từ",
+      "word_type_abbr": "数",
+      "han_viet": "thiên",
+      "sample_sentence_pinyin": "sānqiān rén.",
+      "sample_sentence_zh": "三千人。",
+      "sample_sentence_vi": "3000 người.",
+      "teaching_order": 3,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V004",
+      "source_page": 139,
+      "source_pdf_page": 157,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "万",
+      "pinyin": "wàn",
+      "vietnamese": "vạn",
+      "english": "10 thousand",
+      "word_type_vi": "số từ",
+      "word_type_abbr": "数",
+      "han_viet": "vạn",
+      "sample_sentence_pinyin": "yíwàn rén.",
+      "sample_sentence_zh": "一万人。",
+      "sample_sentence_vi": "10000 người.",
+      "teaching_order": 4,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V005",
+      "source_page": 139,
+      "source_pdf_page": 157,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "多",
+      "pinyin": "duō",
+      "vietnamese": "nhiều",
+      "english": "many",
+      "word_type_vi": "tính từ",
+      "word_type_abbr": "形",
+      "han_viet": "đa",
+      "sample_sentence_pinyin": "rén hěn duō.",
+      "sample_sentence_zh": "人很多。",
+      "sample_sentence_vi": "Người nhiều.",
+      "teaching_order": 5,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V006",
+      "source_page": 139,
+      "source_pdf_page": 157,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "少",
+      "pinyin": "shǎo",
+      "vietnamese": "ít",
+      "english": "few",
+      "word_type_vi": "tính từ",
+      "word_type_abbr": "形",
+      "han_viet": "thiểu",
+      "sample_sentence_pinyin": "rén hěn shǎo.",
+      "sample_sentence_zh": "人很少。",
+      "sample_sentence_vi": "Người ít.",
+      "teaching_order": 6,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V007",
+      "source_page": 139,
+      "source_pdf_page": 157,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "有",
+      "pinyin": "yǒu",
+      "vietnamese": "có",
+      "english": "to have",
+      "word_type_vi": "động từ",
+      "word_type_abbr": "动",
+      "han_viet": "hữu",
+      "sample_sentence_pinyin": "yǒu wǔbǎi rén.",
+      "sample_sentence_zh": "有五百人。",
+      "sample_sentence_vi": "Có 500 người.",
+      "teaching_order": 7,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V008",
+      "source_page": 139,
+      "source_pdf_page": 157,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "没",
+      "pinyin": "méi",
+      "vietnamese": "không",
+      "english": "not (有)",
+      "word_type_vi": "phó từ",
+      "word_type_abbr": "副",
+      "han_viet": "một",
+      "sample_sentence_pinyin": "méiyǒu Rìběn rén.",
+      "sample_sentence_zh": "没有日本人。",
+      "sample_sentence_vi": "Không có người Nhật.",
+      "teaching_order": 8,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V009",
+      "source_page": 139,
+      "source_pdf_page": 157,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "男",
+      "pinyin": "nán",
+      "vietnamese": "nam",
+      "english": "male",
+      "word_type_vi": "tính từ",
+      "word_type_abbr": "形",
+      "han_viet": "nam",
+      "sample_sentence_pinyin": "nán zhíyuán duō.",
+      "sample_sentence_zh": "男职员多。",
+      "sample_sentence_vi": "NV nam nhiều.",
+      "teaching_order": 9,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V010",
+      "source_page": 139,
+      "source_pdf_page": 157,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "外国",
+      "pinyin": "wàiguó",
+      "vietnamese": "nước ngoài",
+      "english": "foreign",
+      "word_type_vi": "danh từ",
+      "word_type_abbr": "名",
+      "han_viet": "ngoại quốc",
+      "sample_sentence_pinyin": "wàiguó rén duō.",
+      "sample_sentence_zh": "外国人多。",
+      "sample_sentence_vi": "Người NN nhiều.",
+      "teaching_order": 10,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V011",
+      "source_page": 139,
+      "source_pdf_page": 157,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "层",
+      "pinyin": "céng",
+      "vietnamese": "tầng",
+      "english": "floor",
+      "word_type_vi": "lượng từ",
+      "word_type_abbr": "量",
+      "han_viet": "tằng",
+      "sample_sentence_pinyin": "sān céng.",
+      "sample_sentence_zh": "三层。",
+      "sample_sentence_vi": "3 tầng.",
+      "teaching_order": 11,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V012",
+      "source_page": 139,
+      "source_pdf_page": 157,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "教室",
+      "pinyin": "jiàoshì",
+      "vietnamese": "phòng học",
+      "english": "classroom",
+      "word_type_vi": "danh từ",
+      "word_type_abbr": "名",
+      "han_viet": "giáo thất",
+      "sample_sentence_pinyin": "jiàoshì zài èr céng.",
+      "sample_sentence_zh": "教室在二层。",
+      "sample_sentence_vi": "Phòng học tầng 2.",
+      "teaching_order": 12,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V013",
+      "source_page": 139,
+      "source_pdf_page": 157,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "宿舍",
+      "pinyin": "sùshè",
+      "vietnamese": "ký túc xá",
+      "english": "dormitory",
+      "word_type_vi": "danh từ",
+      "word_type_abbr": "名",
+      "han_viet": "túc xá",
+      "sample_sentence_pinyin": "sùshè zài nǎr?",
+      "sample_sentence_zh": "宿舍在哪儿？",
+      "sample_sentence_vi": "KTX ở đâu?",
+      "teaching_order": 13,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "G001",
+      "source_page": 141,
+      "source_pdf_page": 159,
+      "section": "Ngữ pháp",
+      "record_type": "grammar",
+      "chinese_simplified": "有字句",
+      "vietnamese": "Câu 有: sở hữu/tồn tại",
+      "sample_sentence_pinyin": "yǒu wǔbǎi rén.",
+      "teaching_order": 15,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "G002",
+      "source_page": 141,
+      "source_pdf_page": 159,
+      "section": "Ngữ pháp",
+      "record_type": "grammar",
+      "chinese_simplified": "没有否定",
+      "vietnamese": "Phủ định 有 = 没有",
+      "sample_sentence_pinyin": "méiyǒu Rìběn rén.",
+      "teaching_order": 16,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "G003",
+      "source_page": 141,
+      "source_pdf_page": 159,
+      "section": "Ngữ pháp",
+      "record_type": "grammar",
+      "chinese_simplified": "大数字",
+      "vietnamese": "Số lớn: 百千万",
+      "sample_sentence_pinyin": "sānqiān wǔbǎi.",
+      "teaching_order": 17,
+      "classroom_visibility": "student_visible"
+    }
+  ],
+  "lesson_structure": [
+    {
+      "module_order": 1,
+      "module_id": "cover",
+      "module_name_vi": "Trang bìa",
+      "status": "planned"
+    },
+    {
+      "module_order": 2,
+      "module_id": "objectives",
+      "module_name_vi": "Mục tiêu",
+      "status": "planned"
+    },
+    {
+      "module_order": 3,
+      "module_id": "warmup",
+      "module_name_vi": "Khởi động",
+      "status": "planned"
+    },
+    {
+      "module_order": 4,
+      "module_id": "vocabulary",
+      "module_name_vi": "Từ vựng",
+      "status": "planned"
+    },
+    {
+      "module_order": 5,
+      "module_id": "vocabulary_practice",
+      "module_name_vi": "Tập từ vựng",
+      "status": "planned"
+    },
+    {
+      "module_order": 6,
+      "module_id": "vocab_summary",
+      "module_name_vi": "Ôn tập",
+      "status": "planned"
+    },
+    {
+      "module_order": 7,
+      "module_id": "grammar",
+      "module_name_vi": "Ngữ pháp",
+      "status": "planned"
+    },
+    {
+      "module_order": 8,
+      "module_id": "comprehensive_practice",
+      "module_name_vi": "Luyện tập tổng hợp",
+      "status": "planned"
+    },
+    {
+      "module_order": 9,
+      "module_id": "text",
+      "module_name_vi": "Bài đọc",
+      "status": "planned"
+    },
+    {
+      "module_order": 10,
+      "module_id": "stroke_writing",
+      "module_name_vi": "Tập viết",
+      "status": "planned"
+    },
+    {
+      "module_order": 11,
+      "module_id": "culture",
+      "module_name_vi": "Văn hóa bổ sung",
+      "status": "planned"
+    },
+    {
+      "module_order": 12,
+      "module_id": "homework_intro",
+      "module_name_vi": "Bài tập về nhà",
+      "status": "planned"
+    }
+  ],
+  "supplemental_activities": [
+    {
+      "activity_id": "ACT001",
+      "activity_type": "warmup",
+      "title_vi": "Khởi động"
+    },
+    {
+      "activity_id": "ACT002",
+      "activity_type": "vocabulary_drill",
+      "title_vi": "Ghép từ vựng"
+    },
+    {
+      "activity_id": "ACT003",
+      "activity_type": "grammar_drill",
+      "title_vi": "Luyện ngữ pháp"
+    },
+    {
+      "activity_id": "ACT004",
+      "activity_type": "speaking_drill",
+      "title_vi": "Luyện nói"
+    }
+  ],
+  "game_suggestions": [
+    {
+      "game_id": "G001",
+      "platform": "Blooket",
+      "title_vi": "Ghép từ vựng"
+    },
+    {
+      "game_id": "G002",
+      "platform": "Blooket",
+      "title_vi": "Luyện ngữ pháp"
+    }
+  ],
+  "google_sheets_database": [
+    {
+      "lesson_id": "lesson-15",
+      "record_id": "T001",
+      "record_type": "text",
+      "chinese_simplified": "(dialogue)",
+      "pinyin": "",
+      "vietnamese": "",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-15",
+      "record_id": "V001",
+      "record_type": "vocabulary",
+      "chinese_simplified": "公司",
+      "pinyin": "gōngsī",
+      "vietnamese": "công ty",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-15",
+      "record_id": "V002",
+      "record_type": "vocabulary",
+      "chinese_simplified": "经理",
+      "pinyin": "jīnglǐ",
+      "vietnamese": "giám đốc",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-15",
+      "record_id": "V003",
+      "record_type": "vocabulary",
+      "chinese_simplified": "千",
+      "pinyin": "qiān",
+      "vietnamese": "nghìn",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-15",
+      "record_id": "V004",
+      "record_type": "vocabulary",
+      "chinese_simplified": "万",
+      "pinyin": "wàn",
+      "vietnamese": "vạn",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-15",
+      "record_id": "V005",
+      "record_type": "vocabulary",
+      "chinese_simplified": "多",
+      "pinyin": "duō",
+      "vietnamese": "nhiều",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-15",
+      "record_id": "V006",
+      "record_type": "vocabulary",
+      "chinese_simplified": "少",
+      "pinyin": "shǎo",
+      "vietnamese": "ít",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-15",
+      "record_id": "V007",
+      "record_type": "vocabulary",
+      "chinese_simplified": "有",
+      "pinyin": "yǒu",
+      "vietnamese": "có",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-15",
+      "record_id": "V008",
+      "record_type": "vocabulary",
+      "chinese_simplified": "没",
+      "pinyin": "méi",
+      "vietnamese": "không",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-15",
+      "record_id": "V009",
+      "record_type": "vocabulary",
+      "chinese_simplified": "男",
+      "pinyin": "nán",
+      "vietnamese": "nam",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-15",
+      "record_id": "V010",
+      "record_type": "vocabulary",
+      "chinese_simplified": "外国",
+      "pinyin": "wàiguó",
+      "vietnamese": "nước ngoài",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-15",
+      "record_id": "V011",
+      "record_type": "vocabulary",
+      "chinese_simplified": "层",
+      "pinyin": "céng",
+      "vietnamese": "tầng",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-15",
+      "record_id": "V012",
+      "record_type": "vocabulary",
+      "chinese_simplified": "教室",
+      "pinyin": "jiàoshì",
+      "vietnamese": "phòng học",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-15",
+      "record_id": "V013",
+      "record_type": "vocabulary",
+      "chinese_simplified": "宿舍",
+      "pinyin": "sùshè",
+      "vietnamese": "ký túc xá",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-15",
+      "record_id": "G001",
+      "record_type": "grammar",
+      "chinese_simplified": "有字句",
+      "pinyin": "",
+      "vietnamese": "Câu 有: sở hữu/tồn tại",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-15",
+      "record_id": "G002",
+      "record_type": "grammar",
+      "chinese_simplified": "没有否定",
+      "pinyin": "",
+      "vietnamese": "Phủ định 有 = 没有",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-15",
+      "record_id": "G003",
+      "record_type": "grammar",
+      "chinese_simplified": "大数字",
+      "pinyin": "",
+      "vietnamese": "Số lớn: 百千万",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    }
+  ]
+}

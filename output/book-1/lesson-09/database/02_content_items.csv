@@ -1,0 +1,58 @@
+record_id,source_page,source_pdf_page,source_page_range,source_pdf_page_range,section,record_type,title_vi,title_zh,chinese_simplified,pinyin,vietnamese,english,raw_source_text,teaching_order,classroom_visibility
+T001,70,88,70-71,88-89,Bài đọc,text,Tôi đổi nhân dân tệ,我换人民币,"玛丽：下午我去图书馆，你去不去？
+麦克：我不去。我要去银行换钱。
+（在中国银行换钱）
+麦克：小姐，我换钱。
+营业员：您换什么钱？
+麦克：我换人民币。
+营业员：换多少？
+麦克：二百美元。
+营业员：请等一会儿……先生，给您钱。请数数。
+麦克：对了。谢谢！
+营业员：不客气！","Mǎlì: xiàwǔ wǒ qù túshūguǎn, nǐ qù bu qù?
+Màikè: wǒ bú qù. wǒ yào qù yínháng huàn qián.
+(zài Zhōngguó Yínháng huàn qián)
+Màikè: xiǎojiě, wǒ huàn qián.
+yíngyèyuán: nín huàn shénme qián?
+Màikè: wǒ huàn rénmínbì.
+yíngyèyuán: huàn duōshao?
+Màikè: èr bǎi měiyuán.
+yíngyèyuán: qǐng děng yíhuìr... xiānsheng, gěi nín qián. qǐng shǔshu.
+Màikè: duì le. xièxie!
+yíngyèyuán: bú kèqi!","Mali: Chiều tôi đi thư viện, bạn đi không?
+Mike: Tôi không đi. Tôi muốn đi ngân hàng đổi tiền.
+(Đổi tiền ở Ngân hàng Trung Quốc)
+Mike: Cô ơi, tôi đổi tiền.
+Nhân viên: Bạn đổi tiền gì?
+Mike: Tôi đổi nhân dân tệ.
+Nhân viên: Đổi bao nhiêu?
+Mike: Hai trăm đô la Mỹ.
+Nhân viên: Xin chờ một lát... Thưa ông, đưa ông tiền. Mời ông đếm.
+Mike: Đúng rồi. Cảm ơn!
+Nhân viên: Không có gì!","Mali: I'm going to the library this afternoon, are you going?
+Mike: I'm not going. I want to go to the bank to exchange money.
+(Exchanging money at Bank of China)
+Mike: Miss, I'd like to exchange money.
+Clerk: What currency would you like?
+Mike: I'd like RMB.
+Clerk: How much?
+Mike: Two hundred US dollars.
+Clerk: Please wait a moment... Sir, here's your money. Please count it.
+Mike: That's right. Thank you!
+Clerk: You're welcome!",课文 我换人民币: 下午我去图书馆，你去不去？我不去。我要去银行换钱。...,15,student_visible
+V001,71,89,71,89,Từ vựng,vocabulary,,,下午,xiàwǔ,buổi chiều,afternoon,下午 (名) xiàwǔ (hạ ngọ) afternoon buổi chiều,1,student_visible
+V002,71,89,71,89,Từ vựng,vocabulary,,,图书馆,túshūguǎn,thư viện,library,图书馆 (名) túshūguǎn (đồ thư quán) library thư viện,2,student_visible
+V003,71,89,71,89,Từ vựng,vocabulary,,,换,huàn,"đổi, thay",to exchange; to change,换 (动) huàn (hoán) to change; to exchange đổi; thay,3,student_visible
+V004,71,89,71,89,Từ vựng,vocabulary,,,小姐,xiǎojiě,cô (xưng hô nữ giới),miss; young lady,小姐 (名) xiǎojiě (tiểu thư) miss cô gái,4,student_visible
+V005,71,89,71,89,Từ vựng,vocabulary,,,人民币,rénmínbì,nhân dân tệ (tiền TQ),Renminbi; RMB (Chinese currency),人民币 (名) rénmínbì (nhân dân tệ) Renminbi; RMB đồng nhân dân tệ,5,student_visible
+V006,71,89,71,89,Từ vựng,vocabulary,,,百,bǎi,trăm,hundred,百 (数) bǎi (bách) hundred trăm,6,student_visible
+V007,72,90,72,90,Từ vựng,vocabulary,,,美元,měiyuán,đô la Mỹ,US dollar,美元 (名) měiyuán (mỹ nguyên) US dollar đô la Mỹ,7,student_visible
+V008,72,90,72,90,Từ vựng,vocabulary,,,等,děng,"đợi, chờ",to wait,"等 (动) děng (đẳng) to wait đợi, chờ",8,student_visible
+V009,72,90,72,90,Từ vựng,vocabulary,,,一会儿,yíhuìr,"một lát, một lúc",a moment; a little while,"一会儿 (名) yíhuìr (nhất hội nhi) a little while một lúc, một lát",9,student_visible
+V010,72,90,72,90,Từ vựng,vocabulary,,,先生,xiānsheng,"ông, ngài (xưng hô nam giới)",Mr.; sir,"先生 (名) xiānsheng (tiên sinh) Mr.; sir ông, ngài",10,student_visible
+V011,72,90,72,90,Từ vựng,vocabulary,,,数,shǔ,đếm,to count,数 (动) shǔ (sổ) to count đếm,11,student_visible
+V012,71,89,71,89,Từ vựng,vocabulary,,,上午,shàngwǔ,buổi sáng,morning (before noon),上午 (名) shàngwǔ (thượng ngọ) morning buổi sáng,12,student_visible
+V013,71,89,71,89,Từ vựng,vocabulary,,,零,líng,không (số 0),zero,零 (数) líng (linh) zero không (số 0),13,student_visible
+V014,71,89,71,89,Từ vựng,vocabulary,,,十,shí,mười,ten,十 (数) shí (thập) ten mười,14,student_visible
+G001,72,90,72,90,Ngữ pháp,grammar,Câu liên động (serial verb construction),连动句,连动句是一个主语带有两个或两个以上动词的句子。两个动词共一个主语，后一个动词说明前一个动作的目的。例如：我去银行换钱。我去食堂吃饭。,liándòng jù shì yí ge zhǔyǔ dài yǒu liǎng ge huò liǎng ge yǐshàng dòngcí de jùzi.,"Câu liên động: một chủ ngữ đi với hai (hoặc hơn) động từ liên tiếp. Động từ sau nói rõ mục đích của động từ trước. Ví dụ: 我去银行换钱 (Tôi đi ngân hàng đổi tiền) — ""đi ngân hàng"" là hành động, ""đổi tiền"" là mục đích. Giống tiếng Việt: ""Tôi đi chợ mua rau"".",A serial verb construction has one subject with two or more verbs. The second verb indicates the purpose of the first action. Example: 我去银行换钱 (I go to the bank to exchange money).,注释: 连动句 — 我去银行换钱。我去食堂吃饭。,15,student_visible
+G002,72,90,72,90,Ngữ pháp,grammar,Số đếm từ 100 trở lên,数字100以上,"一百(100)、二百(200)、三百(300)、一千(1000)、一万(10000)。中间有零时要读""零""。例如：一百零五(105)、二百零三(203)、五百美元(500 USD)。","yì bǎi, èr bǎi, sān bǎi, yì qiān, yí wàn.","Cách đọc số lớn: 百 (bǎi) = trăm, 千 (qiān) = nghìn, 万 (wàn) = vạn/mười nghìn. Khi ở giữa có số 0 phải đọc ""零"" (líng). Ví dụ: 105 = 一百零五 (yì bǎi líng wǔ), 203 = 二百零三 (èr bǎi líng sān), 500 = 五百 (wǔ bǎi). Lưu ý: 200 đọc 二百 (không dùng 两百 trong đếm tiền).","Numbers above 100: 百 (hundred), 千 (thousand), 万 (ten thousand). When there's a zero in the middle, read it as 零. Example: 105 = 一百零五, 200 = 二百.",注释: 数字100以上 — 一百、二百、一千、一万。一百零五。,16,student_visible

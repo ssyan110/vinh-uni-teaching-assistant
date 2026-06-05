@@ -67,14 +67,19 @@ def build_vocab_prompt(word: dict) -> dict:
 
     prompt = f"{STYLE_PREFIX}. Subject: {visual_desc}"
 
-    # Filename uses pinyin (sanitized)
-    safe_pinyin = pinyin.replace(" ", "-").replace("̌", "").replace("̀", "").replace("́", "").replace("̄", "")
+    # Filename uses pinyin (sanitized but still readable).
+    safe_pinyin = pinyin.replace(" ", "-")
     filename = f"vocab-{safe_pinyin}.png"
 
     return {
+        "record_id": word.get("record_id", ""),
         "filename": filename,
         "prompt": prompt,
+        "image_role": "vocabulary_image",
+        "image_status": "needs_generation",
+        "image_semantic_check": f"Image must clearly match {zh} / {vi}; verify in rendered slide QA.",
         "chinese": zh,
+        "chinese_simplified": zh,
         "pinyin": pinyin,
         "vietnamese": vi,
         "word_type": word_type,

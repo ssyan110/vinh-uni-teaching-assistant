@@ -1,0 +1,68 @@
+record_id,source_page,source_pdf_page,source_page_range,source_pdf_page_range,section,record_type,title_vi,title_zh,chinese_simplified,pinyin,vietnamese,english,raw_source_text,teaching_order,classroom_visibility
+T001,56,74,56-57,74-75,Bài đọc,text,Bạn ăn gì,你吃什么,"（在教室）
+麦克：中午你去哪儿吃饭？
+玛丽：我去食堂。
+（在食堂）
+麦克：你吃什么？
+玛丽：我吃馒头。
+麦克：你要几个？
+玛丽：一个。你吃吗？
+麦克：不吃，我吃米饭。你喝什么？
+玛丽：我要一碗鸡蛋汤。你喝吗？
+麦克：不喝，我喝啤酒。
+玛丽：这些是什么？
+麦克：这是饺子，这是包子，那是面条。","(zài jiàoshì)
+Màikè: zhōngwǔ nǐ qù nǎr chīfàn?
+Mǎlì: wǒ qù shítáng.
+(zài shítáng)
+Màikè: nǐ chī shénme?
+Mǎlì: wǒ chī mántou.
+Màikè: nǐ yào jǐ ge?
+Mǎlì: yí ge. nǐ chī ma?
+Màikè: bù chī, wǒ chī mǐfàn. nǐ hē shénme?
+Mǎlì: wǒ yào yì wǎn jīdàn tāng. nǐ hē ma?
+Màikè: bù hē, wǒ hē píjiǔ.
+Mǎlì: zhèxiē shì shénme?
+Màikè: zhè shì jiǎozi, zhè shì bāozi, nà shì miàntiáo.","(Trong phòng học)
+Mike: Buổi trưa bạn đi đâu ăn cơm?
+Mali: Tôi đi nhà ăn.
+(Trong nhà ăn)
+Mike: Bạn ăn gì?
+Mali: Tôi ăn bánh bao chay.
+Mike: Bạn muốn mấy cái?
+Mali: Một cái. Bạn ăn không?
+Mike: Không ăn, tôi ăn cơm. Bạn uống gì?
+Mali: Tôi muốn một bát canh trứng gà. Bạn uống không?
+Mike: Không uống, tôi uống bia.
+Mali: Những cái này là gì?
+Mike: Đây là sủi cảo, đây là bánh bao, kia là mì sợi.","(In a classroom)
+Mike: Where do you go for lunch at noon?
+Mali: I go to the dining hall.
+(In the dining hall)
+Mike: What do you eat?
+Mali: I eat steamed buns.
+Mike: How many do you want?
+Mali: One. Do you eat them?
+Mike: No, I eat rice. What do you drink?
+Mali: I want a bowl of egg soup. Do you drink it?
+Mike: No, I drink beer.
+Mali: What are these?
+Mike: These are dumplings, these are stuffed buns, those are noodles.",课文 你吃什么: 中午你去哪儿吃饭？我去食堂。你吃什么？我吃馒头。你要几个？一个。你吃吗？不吃，我吃米饭。你喝什么？我要一碗鸡蛋汤。你喝吗？不喝，我喝啤酒。这些是什么？这是饺子，这是包子，那是面条。,17,student_visible
+V001,57,75,57,75,Từ vựng,vocabulary,,,中午,zhōngwǔ,buổi trưa,noon; midday,中午 (名) zhōngwǔ (trung ngọ) noon buổi trưa,1,student_visible
+V002,57,75,57,75,Từ vựng,vocabulary,,,吃,chī,ăn,to eat,吃 (动) chī (cật) to eat ăn,2,student_visible
+V003,57,75,57,75,Từ vựng,vocabulary,,,饭,fàn,"cơm, bữa cơm",meal; cooked rice,"饭 (名) fàn (phạn) meal; rice cơm, bữa cơm",3,student_visible
+V004,57,75,57,75,Từ vựng,vocabulary,,,食堂,shítáng,nhà ăn,dining hall; canteen,食堂 (名) shítáng (thực đường) dining hall nhà ăn,4,student_visible
+V005,57,75,57,75,Từ vựng,vocabulary,,,馒头,mántou,bánh bao chay,steamed bun (without filling),馒头 (名) mántou (man đầu) mantou (steamed bun) bánh bao chay,5,student_visible
+V006,57,75,57,75,Từ vựng,vocabulary,,,要,yào,"muốn, cần",to want; to need,"要 (动) yào (yếu) to want; to desire muốn, cần",6,student_visible
+V007,57,75,57,75,Từ vựng,vocabulary,,,个,ge,"cái, chiếc (lượng từ chung)",(general measure word),个 (量) ge (cá) (a general classifier) cái (lượng từ),7,student_visible
+V008,57,75,57,75,Từ vựng,vocabulary,,,米饭,mǐfàn,cơm (đã nấu),cooked rice,米饭 (名) mǐfàn (mễ phạn) steamed rice cơm,8,student_visible
+V009,58,76,58,76,Từ vựng,vocabulary,,,碗,wǎn,"bát, tô (lượng từ)",bowl (measure word),"碗 (名/量) wǎn (oản) bowl bát, cái bát",9,student_visible
+V010,58,76,58,76,Từ vựng,vocabulary,,,鸡蛋,jīdàn,trứng gà,egg,鸡蛋 (名) jīdàn (kê đản) egg trứng,10,student_visible
+V011,58,76,58,76,Từ vựng,vocabulary,,,汤,tāng,"canh, súp",soup,汤 (名) tāng (thang) soup canh,11,student_visible
+V012,58,76,58,76,Từ vựng,vocabulary,,,啤酒,píjiǔ,bia,beer,啤酒 (名) píjiǔ (bì tửu) beer bia,12,student_visible
+V013,58,76,58,76,Từ vựng,vocabulary,,,这些,zhèxiē,những cái này,these,这些 (代) zhèxiē (giá ta) these những cái này,13,student_visible
+V014,58,76,58,76,Từ vựng,vocabulary,,,饺子,jiǎozi,sủi cảo,dumpling (boiled),"饺子 (名) jiǎozi (giảo tử) jiaozi (dumpling) há cao, bánh chẻo",14,student_visible
+V015,58,76,58,76,Từ vựng,vocabulary,,,包子,bāozi,bánh bao (có nhân),stuffed bun,包子 (名) bāozi (bao tử) baozi (stuffed bun) bánh bao,15,student_visible
+V016,58,76,58,76,Từ vựng,vocabulary,,,面条,miàntiáo,mì sợi,noodles,面条 (名) miàntiáo (miến điều) noodle mì sợi,16,student_visible
+G001,58,76,58,76,Ngữ pháp,grammar,"Cấu trúc ""几"" + lượng từ (hỏi số lượng nhỏ)",几+量词,"""几""用来询问10以下的数目，后面要加量词。例如：你要几个？你喝几碗？你买几斤？","""jǐ"" yònglái xúnwèn shí yǐxià de shùmù, hòumian yào jiā liàngcí.","""几"" (jǐ) nghĩa là ""mấy"", dùng hỏi số lượng nhỏ (dưới 10). Sau ""几"" phải có lượng từ. Ví dụ: 你要几个？ (Bạn muốn mấy cái?), 你喝几碗？ (Bạn uống mấy bát?). Giống tiếng Việt hỏi ""mấy cái / mấy bát"".",几 (jǐ) means 'how many' for numbers under 10. It must be followed by a measure word. Example: 你要几个？ (How many do you want?),注释: 几+量词 — 你要几个？你喝几碗？,17,student_visible
+G002,58,76,58,76,Ngữ pháp,grammar,"Lượng từ (个, 碗, 斤)",量词,汉语的数词和名词之间要加量词。常用量词：个（通用），碗（用于盛汤、饭等的器具），斤（重量单位）。例如：一个馒头，一碗汤，一斤苹果。,Hànyǔ de shùcí hé míngcí zhījiān yào jiā liàngcí.,"Trong tiếng Trung, giữa số từ và danh từ phải có lượng từ (giống ""cái, con, chiếc"" trong tiếng Việt). Lượng từ thông dụng: 个 (cái — dùng chung), 碗 (bát — đồ chứa canh/cơm), 斤 (cân — đơn vị đo trọng lượng, 1 斤 = 500g). Ví dụ: 一个馒头 (một cái bánh bao chay), 一碗汤 (một bát canh), 一斤苹果 (một cân táo).","In Chinese, a measure word must be placed between a number and a noun. Common measure words: 个 (general), 碗 (bowl), 斤 (jin, 500g). Example: 一个馒头, 一碗汤, 一斤苹果.",注释: 量词 — 个、碗、斤. 一个馒头，一碗汤，一斤苹果。,18,student_visible

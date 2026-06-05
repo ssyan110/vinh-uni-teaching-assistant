@@ -23,7 +23,7 @@ BASE="$HOME/Desktop/Hermes Output/ai-teaching-material-system"
 mkdir -p "$BASE"
 cd "$BASE"
 git clone https://github.com/alchaincyf/huashu-design.git
-npm install playwright pptxgenjs sharp pdf-lib
+npm install playwright sharp pdf-lib
 npx playwright install chromium
 python3 -m venv .venv
 .venv/bin/python -m pip install --upgrade pip playwright
@@ -35,9 +35,7 @@ python3 -m venv .venv
 - `README.md` — install/capabilities overview
 - `SKILL.md` — design workflow and asset protocol
 - `references/slide-decks.md` — HTML-first deck architecture
-- `references/editable-pptx.md` — PPTX-safe HTML constraints
 - `scripts/export_deck_pdf.mjs` — PDF export
-- `scripts/export_deck_pptx.mjs` — editable PPTX export
 - `scripts/verify.py` — Playwright visual/console verification
 
 ## Proven Output Shape
@@ -55,38 +53,27 @@ output/sample-teacher-deck/
 │   └── 07-assessment.html
 ├── screenshots/
 ├── TEACHER_GUIDE.md
-├── teacher-deck.pdf
-└── teacher-deck-editable.pptx
+└── teacher-deck.pdf
 ```
 
 ## Build Commands Used
 
 ```bash
-npm run create:sample
+npm run create:deck -- examples/sample-lesson.json
 .venv/bin/python huashu-design/scripts/verify.py output/sample-teacher-deck/index.html --slides 7 --output output/sample-teacher-deck/screenshots --wait 3000
-node huashu-design/scripts/export_deck_pdf.mjs --slides output/sample-teacher-deck/slides --out output/sample-teacher-deck/teacher-deck.pdf --width 1280 --height 720
-node huashu-design/scripts/export_deck_pptx.mjs --slides output/sample-teacher-deck/slides --out output/sample-teacher-deck/teacher-deck-editable.pptx
 node scripts/validate-system.mjs
 ```
 
-## Failure Encountered and Fix
+PDF export is a finalization artifact. Do not export a clean PDF backup until Adam confirms the slide design and content are finalized.
 
-### Symptom
+For current lesson folders, also run:
 
-`export_deck_pptx.mjs` failed with:
-
-```text
-require is not defined in ES module scope
-This file is being treated as an ES module because package.json contains "type": "module".
+```bash
+npm run assets:manifest -- output/book-1/lesson-XX
+npm run assets:qa -- output/book-1/lesson-XX
 ```
 
-### Root Cause
-
-The project root had `"type": "module"`. Huashu's `export_deck_pptx.mjs` uses `createRequire()` to load `scripts/html2pptx.js`, and that `.js` file needs CommonJS semantics.
-
-### Fix
-
-Remove `"type": "module"` from the project `package.json`. `.mjs` project scripts still run as ESM, while huashu's `.js` translator remains require-compatible.
+PPTX is deprecated in this project. HTML presenter is the classroom format.
 
 ## Visual Bug Encountered and Fix
 

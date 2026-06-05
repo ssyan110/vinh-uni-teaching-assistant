@@ -10,6 +10,7 @@ inclusion: always
 |----------------|-------|
 | Any non-trivial project task, repeated preference, reliability issue, or "Codex keeps forgetting" issue | `.kiro/skills/harness-engineering/SKILL.md` |
 | Pipeline workflow, VP steps, lesson processing | `.kiro/skills/ai-teaching-material-systems/SKILL.md` |
+| Pinyin lesson database or slide generation | `docs/pinyin-lesson-database-spec.md` |
 | Slide design, deck generation, HTML presenter, visual QA | `.kiro/skills/huashu-design/SKILL.md` |
 | Google Drive/Sheets automation | `.kiro/skills/google-workspace/SKILL.md` |
 | Clean user-facing docs/lesson copy | `.kiro/skills/avoid-ai-writing/SKILL.md` |

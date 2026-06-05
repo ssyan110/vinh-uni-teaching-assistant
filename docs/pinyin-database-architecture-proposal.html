@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>拼音課程資料庫架構提案 · Pinyin Database Architecture Proposal</title>
+  <style>
+    :root {
+      --bg: #FAFBFD;
+      --surface: #FFFFFF;
+      --border: #E2E8F0;
+      --text: #1A202C;
+      --text-secondary: #4A5568;
+      --accent: #5AACAC;
+      --accent-light: #E6F7F7;
+      --purple: #8D7AE6;
+      --purple-light: #F3F0FF;
+      --coral: #FF7A59;
+      --coral-light: #FFF0EC;
+      --green: #2EB67D;
+      --green-light: #E6F9F0;
+      --amber: #F6AD55;
+      --amber-light: #FFFBEB;
+      --blue: #2D7FF9;
+      --blue-light: #EBF4FF;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'PingFang TC', sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.7; padding: 2rem 1rem;
+    }
+    .container { max-width: 1000px; margin: 0 auto; }
+    header {
+      text-align: center; margin-bottom: 3rem; padding: 2.5rem 2rem;
+      background: linear-gradient(135deg, var(--accent-light) 0%, var(--purple-light) 100%);
+      border-radius: 16px; border: 1px solid var(--border);
+    }
+    header h1 { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem; }
+    header .subtitle { font-size: 0.95rem; color: var(--text-secondary); }
+    header .meta { margin-top: 1rem; font-size: 0.8rem; color: var(--text-secondary); opacity: 0.7; }
+    .callout {
+      margin-top: 1rem; padding: 0.85rem 1rem; border-radius: 10px;
+      background: rgba(255,255,255,0.72); border: 1px solid rgba(90,172,172,0.3);
+      color: var(--text-secondary); font-size: 0.86rem; text-align: left;
+    }
+    section {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+      padding: 2rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    h2 {
+      font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;
+      padding-bottom: 0.5rem; border-bottom: 2px solid var(--accent);
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    h2 .num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px; border-radius: 50%; background: var(--accent);
+      color: white; font-size: 0.8rem; font-weight: 700; flex-shrink: 0;
+    }
+    h3 { font-size: 1.05rem; font-weight: 600; margin: 1.5rem 0 0.75rem; }
+    p { margin-bottom: 0.75rem; color: var(--text-secondary); }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.85rem; }
+    thead th {
+      background: var(--accent-light); color: var(--text); font-weight: 600;
+      padding: 0.6rem 0.75rem; text-align: left; border-bottom: 2px solid var(--accent);
+    }
+    tbody td { padding: 0.55rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    tbody tr:hover { background: var(--bg); }
+    code {
+      font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.82rem;
+      background: #F1F5F9; padding: 0.15rem 0.4rem; border-radius: 4px; color: #334155;
+    }
+    pre {
+      background: #1E293B; color: #E2E8F0; padding: 1.25rem; border-radius: 8px;
+      overflow-x: auto; font-size: 0.78rem; line-height: 1.6; margin: 1rem 0;
+    }
+    pre code { background: none; padding: 0; color: inherit; }
+    .badge {
+      display: inline-block; padding: 0.2rem 0.6rem; border-radius: 12px;
+      font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em;
+    }
+    .badge-pinyin { background: var(--accent-light); color: #1A7A7A; }
+    .badge-regular { background: var(--purple-light); color: #5B4DB5; }
+    .badge-new { background: var(--green-light); color: #1A8A5C; }
+    .badge-removed { background: var(--coral-light); color: #CC5533; }
+    .highlight-box {
+      padding: 1rem 1.25rem; border-radius: 8px; margin: 1rem 0; font-size: 0.88rem;
+    }
+    .highlight-box.info { background: var(--blue-light); border-left: 3px solid var(--blue); }
+    .highlight-box.warning { background: var(--amber-light); border-left: 3px solid var(--amber); }
+    .highlight-box.success { background: var(--green-light); border-left: 3px solid var(--green); }
+    .questions-list { counter-reset: question; }
+    .question-item {
+      padding: 1rem; margin: 0.75rem 0; background: var(--bg); border-radius: 8px;
+      border: 1px solid var(--border); counter-increment: question;
+      position: relative; padding-left: 3.5rem;
+    }
+    .question-item::before {
+      content: 'Q' counter(question); position: absolute; left: 1rem; top: 1rem;
+      font-size: 0.75rem; font-weight: 700; color: var(--coral); background: var(--coral-light);
+      padding: 0.15rem 0.5rem; border-radius: 4px;
+    }
+    .question-item strong { display: block; margin-bottom: 0.3rem; font-size: 0.9rem; }
+    .question-item p { font-size: 0.82rem; margin: 0; }
+    .tree {
+      font-family: 'SF Mono', monospace; font-size: 0.78rem; background: #F8FAFC;
+      padding: 1rem 1.25rem; border-radius: 8px; border: 1px solid var(--border);
+      line-height: 1.8; color: var(--text-secondary);
+    }
+    .tree .folder { color: var(--accent); font-weight: 600; }
+    .tree .comment { color: #94A3B8; font-style: italic; }
+    .toc {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+      padding: 1.5rem 2rem; margin-bottom: 1.5rem;
+    }
+    .toc h3 { margin-top: 0; font-size: 0.9rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; }
+    .toc ol { columns: 2; font-size: 0.85rem; padding-left: 1.25rem; color: var(--text-secondary); }
+    .toc ol li { padding: 0.2rem 0; }
+    .toc ol li a { color: var(--accent); text-decoration: none; }
+    .toc ol li a:hover { text-decoration: underline; }
+    .lesson-card {
+      border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem;
+      margin-bottom: 1rem; background: var(--bg);
+    }
+    .lesson-card h4 { font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--accent); }
+    .lesson-card .modules { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+    .lesson-card .mod {
+      padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.72rem; font-weight: 500;
+    }
+    .mod-initials { background: #DBEAFE; color: #1E40AF; }
+    .mod-finals { background: #FCE7F3; color: #9D174D; }
+    .mod-tones { background: var(--green-light); color: #065F46; }
+    .mod-rules { background: var(--amber-light); color: #92400E; }
+    .mod-vocab { background: var(--purple-light); color: #5B21B6; }
+    .mod-practice { background: #F1F5F9; color: #475569; }
+    .mod-special { background: var(--coral-light); color: #9A3412; }
+    @media (max-width: 640px) {
+      .toc ol { columns: 1; }
+      header h1 { font-size: 1.4rem; }
+      section { padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>拼音課程資料庫架構提案</h1>
+  <div class="subtitle">基於 AI Mandarin 獨立拼音教材（6 堂課）</div>
+  <div class="meta">AI Teaching Material System · 2026-06-04 · 待審核<br>來源：Pinyin lessons/ (ai mandarin © 2022)</div>
+  <div class="callout">
+    <strong>2026-06-05 更新：</strong>
+    以 <code>docs/pinyin-lesson-database-spec.md</code> 為最新規則。未來拼音課簡報以
+    <code>output/pinyin/pinyin-01</code> 為模板，不重新設計；課堂版不再使用
+    <code>Mục lục</code> 或 <code>Quy ước</code> 頁；越南語術語使用
+    <code>thanh điệu</code>，不可寫成 <code>thanh điều</code>；拼音課不顯示右下角
+    <code>Trang ...</code> 頁碼。
+  </div>
+</header>
+
+<nav class="toc">
+  <h3>目錄</h3>
+  <ol>
+    <li><a href="#s1">來源教材分析：6 堂課結構</a></li>
+    <li><a href="#s2">輸出路徑結構</a></li>
+    <li><a href="#s3">每堂拼音課的教學模組</a></li>
+    <li><a href="#s4">Record Types 定義</a></li>
+    <li><a href="#s5">Content Item 欄位結構</a></li>
+    <li><a href="#s6">JSON 資料庫主結構</a></li>
+    <li><a href="#s7">Google Sheets 欄位（扁平化）</a></li>
+    <li><a href="#s8">補充活動 &amp; 遊戲建議</a></li>
+    <li><a href="#s9">與 Regular Lesson 差異總結</a></li>
+    <li><a href="#s10">待確認問題</a></li>
+  </ol>
+</nav>
+
+<!-- Section 1: Source Analysis -->
+<section id="s1">
+  <h2><span class="num">1</span>來源教材分析：6 堂課完整結構</h2>
+  <p>來源：<code>Pinyin lessons/</code> 資料夾，AI Mandarin 獨立拼音教材（非漢語教程語音部分）。每堂課 21 頁 PDF，結構固定。</p>
+
+  <div class="lesson-card">
+    <h4>Pinyin L1 — 基礎入門</h4>
+    <p><strong>目錄：</strong>Khái niệm về pinyin → Thanh mẫu (4) → Vận mẫu (6) → Thanh điệu (5) → Từ vựng (16) → Thử thách bản thân</p>
+    <div class="modules">
+      <span class="mod mod-special">拼音概念</span>
+      <span class="mod mod-initials">聲母 b p m f (4)</span>
+      <span class="mod mod-finals">韻母 a o e i u ü (6)</span>
+      <span class="mod mod-rules">規則 i→yi u→wu ü→yu</span>
+      <span class="mod mod-tones">聲調 四聲+輕聲</span>
+      <span class="mod mod-vocab">詞彙 (16)</span>
+      <span class="mod mod-practice">挑戰</span>
+      <span class="mod mod-special">輸入法安裝教學</span>
+    </div>
+  </div>
+
+  <div class="lesson-card">
+    <h4>Pinyin L2 — 聲母擴展 + 三聲變調</h4>
+    <p><strong>目錄：</strong>Khởi động → Thanh mẫu (10) → Từ vựng (16) → Biến điệu thanh 3 → Thử thách bản thân</p>
+    <div class="modules">
+      <span class="mod mod-practice">暖身複習</span>
+      <span class="mod mod-initials">聲母 d t n l + g k h + j q x (10)</span>
+      <span class="mod mod-rules">規則 jü→ju qü→qu xü→xu</span>
+      <span class="mod mod-vocab">詞彙 (16)</span>
+      <span class="mod mod-tones">三聲變調</span>
+      <span class="mod mod-practice">挑戰</span>
+    </div>
+  </div>
+
+  <div class="lesson-card">
+    <h4>Pinyin L3 — 翹舌音/平舌音 + 一不變調</h4>
+    <p><strong>目錄：</strong>Khởi động → Thanh mẫu (7) → Từ vựng (16) → Biến điệu của 一 và 不 → Thử thách bản thân</p>
+    <div class="modules">
+      <span class="mod mod-practice">暖身複習</span>
+      <span class="mod mod-initials">聲母 zh ch sh r + z c s (7)</span>
+      <span class="mod mod-vocab">詞彙 (16)</span>
+      <span class="mod mod-tones">一不變調</span>
+      <span class="mod mod-practice">挑戰</span>
+      <span class="mod mod-special">21聲母總表</span>
+    </div>
+  </div>
+
+  <div class="lesson-card">
+    <h4>Pinyin L4 — 複韻母（i/u/ü 開頭）+ 拼寫規則</h4>
+    <p><strong>目錄：</strong>Khởi động → Quy tắc viết pinyin → Vận mẫu (9) → Từ vựng (20) → Thử thách bản thân</p>
+    <div class="modules">
+      <span class="mod mod-practice">暖身複習</span>
+      <span class="mod mod-rules">規則 iou→iu uei→ui uen→un + 聲調標註規則 + i/u 獨立規則</span>
+      <span class="mod mod-finals">韻母 ia ie iao iou + ua uo uai uei üe (9)</span>
+      <span class="mod mod-vocab">詞彙 (20)</span>
+      <span class="mod mod-practice">挑戰</span>
+    </div>
+  </div>
+
+  <div class="lesson-card">
+    <h4>Pinyin L5 — 韻母（ai/ao/ou/ei + 鼻韻母 an/ang/en/eng/in/ing/ong）</h4>
+    <p><strong>目錄：</strong>Khởi động → Vận mẫu (11) → Từ vựng (20+) → Thử thách bản thân</p>
+    <div class="modules">
+      <span class="mod mod-practice">暖身複習</span>
+      <span class="mod mod-finals">韻母 ai ao ou ei (4)</span>
+      <span class="mod mod-finals">韻母 an ang en eng (4)</span>
+      <span class="mod mod-finals">韻母 in ing ong (3)</span>
+      <span class="mod mod-vocab">詞彙 (20+)</span>
+      <span class="mod mod-practice">挑戰</span>
+    </div>
+  </div>
+
+  <div class="lesson-card">
+    <h4>Pinyin L6 — 韻母（uan/uang/uen + ian/iang/iong/ün/üan）+ 日常用語 + 總複習</h4>
+    <p><strong>目錄：</strong>Khởi động → Vận mẫu (8) → Từ vựng (10+) → Giao tiếp thường ngày → Thử thách bản thân</p>
+    <div class="modules">
+      <span class="mod mod-practice">暖身複習</span>
+      <span class="mod mod-finals">韻母 uan uang uen(un) (3)</span>
+      <span class="mod mod-finals">韻母 ian iang iong ün üan (5)</span>
+      <span class="mod mod-vocab">詞彙 (10+)</span>
+      <span class="mod mod-special">日常用語 你好/謝謝/再見/不客氣/對不起/沒關係</span>
+      <span class="mod mod-practice">挑戰</span>
+      <span class="mod mod-special">36韻母總表</span>
+    </div>
+  </div>
+
+  <div class="highlight-box info">
+    <strong>教材特徵總結：</strong><br>
+    • 每堂固定結構：封面 → 學習規則 → 目錄 → 暖身/概念 → 聲母或韻母表 → 詞彙 → 練習 → 規則/變調 → 挑戰 → 筆記頁 → 聯絡頁<br>
+    • 6 堂完成全部 21 聲母 + 36 韻母 + 5 聲調 + 變調規則 + 拼寫規則<br>
+    • 每堂都有「生詞/Từ vựng」用真實詞彙（含漢字+pinyin）作為該堂學的音的應用<br>
+    • 每堂都有「Thử thách bản thân / 自我挑戰」作為課末測驗<br>
+    • L3 附 21 聲母總表，L6 附 36 韻母總表<br>
+    • 這是獨立教材，不依賴漢語教程
+  </div>
+</section>
+
+<!-- Section 2: Output Path -->
+<section id="s2">
+  <h2><span class="num">2</span>輸出路徑結構</h2>
+  <div class="tree">
+    <span class="folder">output/book-1/</span><br>
+    ├── lesson_list.csv <span class="comment">← 一般課程</span><br>
+    ├── <span class="folder">pinyin_lesson_list.csv</span> <span class="comment">← 拼音 6 堂獨立索引</span><br>
+    ├── <span class="folder">pinyin-01/</span> <span class="comment">← Pinyin L1 基礎入門</span><br>
+    │   ├── index.html<br>
+    │   ├── README.md<br>
+    │   ├── <span class="folder">database/</span><br>
+    │   │   ├── 02_content_items.csv<br>
+    │   │   ├── 03_lesson_structure.csv<br>
+    │   │   ├── 04_supplemental_activities.csv<br>
+    │   │   ├── 05_game_suggestions.csv<br>
+    │   │   ├── 06_google_sheets_database.csv<br>
+    │   │   └── vp_pinyin_01_database.json<br>
+    │   ├── <span class="folder">slides/</span><br>
+    │   ├── <span class="folder">exports/</span><br>
+    │   └── <span class="folder">homework-question-bank/</span><br>
+    ├── <span class="folder">pinyin-02/</span> <span class="comment">← Pinyin L2</span><br>
+    ├── <span class="folder">pinyin-03/</span> <span class="comment">← Pinyin L3</span><br>
+    ├── <span class="folder">pinyin-04/</span> <span class="comment">← Pinyin L4</span><br>
+    ├── <span class="folder">pinyin-05/</span> <span class="comment">← Pinyin L5</span><br>
+    ├── <span class="folder">pinyin-06/</span> <span class="comment">← Pinyin L6</span><br>
+    ├── <span class="folder">lesson-01/</span> <span class="comment">← 一般課程開始</span><br>
+    └── ...
+  </div>
+</section>
+
+<!-- Section 3: Teaching Modules -->
+<section id="s3">
+  <h2><span class="num">3</span>每堂拼音課的通用教學模組</h2>
+  <p>基於原始教材的固定 PDF 頁面結構，提取出以下通用模組序列：</p>
+
+  <table>
+    <thead>
+      <tr><th>order</th><th>module_id</th><th>module_name_vi</th><th>module_name_zh</th><th>出現規律</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td><code>cover</code></td><td>Trang bìa</td><td>封面</td><td>每堂 (p.1)</td></tr>
+      <tr><td>2</td><td><code>study_rules</code></td><td>Quy tắc học tập</td><td>学习规则</td><td>每堂 (p.2)</td></tr>
+      <tr><td>3</td><td><code>objectives</code></td><td>Nội dung bài học</td><td>学习内容</td><td>每堂 (p.3)</td></tr>
+      <tr><td>4</td><td><code>warmup</code></td><td>Khởi động</td><td>暖身/概念</td><td>每堂 (L1=概念, L2-L6=複習暖身)</td></tr>
+      <tr style="background:var(--accent-light)"><td>5</td><td><code>initials</code></td><td>Thanh mẫu</td><td>声母</td><td>L1, L2, L3</td></tr>
+      <tr style="background:#FCE7F3"><td>6</td><td><code>finals</code></td><td>Vận mẫu</td><td>韵母</td><td>L1, L4, L5, L6</td></tr>
+      <tr style="background:var(--amber-light)"><td>7</td><td><code>spelling_rules</code></td><td>Quy tắc viết pinyin</td><td>拼写规则</td><td>L1, L2, L4</td></tr>
+      <tr style="background:var(--green-light)"><td>8</td><td><code>tones</code></td><td>Thanh điệu / Biến điệu</td><td>声调/变调</td><td>L1, L2, L3</td></tr>
+      <tr style="background:var(--purple-light)"><td>9</td><td><code>vocabulary</code></td><td>Từ vựng</td><td>生词</td><td>每堂</td></tr>
+      <tr><td>10</td><td><code>practice</code></td><td>Luyện tập</td><td>练习</td><td>每堂（穿插在各知識模組後）</td></tr>
+      <tr style="background:var(--coral-light)"><td>11</td><td><code>daily_phrases</code></td><td>Giao tiếp thường ngày</td><td>日常用语</td><td>僅 L6</td></tr>
+      <tr><td>12</td><td><code>challenge</code></td><td>Thử thách bản thân</td><td>自我挑战</td><td>每堂</td></tr>
+      <tr><td>13</td><td><code>summary_table</code></td><td>Bảng tổng hợp</td><td>总表</td><td>L3 (聲母表), L6 (韻母表)</td></tr>
+      <tr><td>14</td><td><code>appendix</code></td><td>Phụ lục</td><td>附录</td><td>L1 (輸入法)</td></tr>
+      <tr><td>15</td><td><code>closing</code></td><td>Kết thúc</td><td>结束</td><td>每堂 (筆記頁+聯絡)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="highlight-box warning">
+    <strong>彈性設計：</strong>不是每堂都包含全部 15 個模組。例如 L4/L5/L6 不教新聲母，L5/L6 不教拼寫規則。資料庫中不使用的模組標記為 <code>"status": "not_applicable"</code>。練習模組穿插在各知識模組之間，在資料庫中記錄其歸屬的知識模組。
+  </div>
+</section>
+
+<!-- Section 4: Record Types -->
+<section id="s4">
+  <h2><span class="num">4</span>Record Types 定義</h2>
+
+  <table>
+    <thead><tr><th>record_type</th><th>說明</th><th>出現位置</th><th>範例</th></tr></thead>
+    <tbody>
+      <tr><td><code>concept</code></td><td>拼音基礎概念</td><td>L1</td><td>聲母+韻母+聲調 = 一個音節</td></tr>
+      <tr><td><code>initials</code></td><td>聲母（分組教學）</td><td>L1-L3</td><td>b,p,m,f / d,t,n,l / zh,ch,sh,r</td></tr>
+      <tr><td><code>finals</code></td><td>韻母（分組教學）</td><td>L1,L4-L6</td><td>a,o,e,i,u,ü / ia,ie,iao / an,ang,en,eng</td></tr>
+      <tr><td><code>tone</code></td><td>聲調與變調規則</td><td>L1-L3</td><td>四聲+輕聲 / 三聲變調 / 一不變調</td></tr>
+      <tr><td><code>spelling_rule</code></td><td>拼寫規則</td><td>L1,L2,L4</td><td>ü省點、y/w規則、iou→iu</td></tr>
+      <tr><td><code>vocabulary</code></td><td>應用詞彙（漢字+pinyin+圖片）</td><td>每堂</td><td>爸爸 bàba, 鸡 jī, 虾 xiā</td></tr>
+      <tr><td><code>exercise</code></td><td>課內練習</td><td>每堂</td><td>聽音選擇、填空、配對</td></tr>
+      <tr><td><code>challenge</code></td><td>自我挑戰（課末測驗）</td><td>每堂</td><td>辨音配對、看圖寫拼音、找錯</td></tr>
+      <tr><td><code>pinyin_table</code></td><td>拼音組合表</td><td>每堂知識段</td><td>聲母×韻母組合方格表</td></tr>
+      <tr><td><code>summary_table</code></td><td>聲母/韻母總表</td><td>L3, L6</td><td>21聲母分類表、36韻母分類表</td></tr>
+      <tr><td><code>daily_phrase</code></td><td>日常用語</td><td>L6</td><td>你好、謝謝、再見</td></tr>
+      <tr><td><code>appendix</code></td><td>附錄（輸入法等）</td><td>L1</td><td>iOS/Android 拼音鍵盤安裝</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Section 5: Content Item Fields -->
+<section id="s5">
+  <h2><span class="num">5</span>Content Item 欄位結構</h2>
+
+  <h3>5a. 聲母 Record (initials)</h3>
+  <pre><code>{
+  "record_id": "I001",
+  "record_type": "initials",
+  "section": "Thanh mẫu",
+  "source_page": 6,
+  "teaching_order": 5,
+
+  "pinyin_group_id": "labials",
+  "pinyin_group_label_vi": "Âm môi",
+  "pinyin_group_label_zh": "唇音",
+  "pinyin_items": ["b", "p", "m", "f"],
+
+  "combination_table": {
+    "columns": ["a", "o", "e", "i", "u", "ü"],
+    "rows": {
+      "b": ["ba", "bo", null, "bi", "bu", null],
+      "p": ["pa", "po", null, "pi", "pu", null],
+      "m": ["ma", "mo", "me", "mi", "mu", null],
+      "f": ["fa", "fo", null, null, "fu", null]
+    }
+  },
+
+  "raw_source_text": "THANH MẪU b p m f: ba bo bi bu, pa po pi pu...",
+  "classroom_visibility": "student_visible"
+}</code></pre>
+
+  <h3>5b. 韻母 Record (finals)</h3>
+  <pre><code>{
+  "record_id": "F001",
+  "record_type": "finals",
+  "section": "Vận mẫu",
+  "source_page": 6,
+  "teaching_order": 6,
+
+  "pinyin_group_id": "compound_ai_ao_ou_ei",
+  "pinyin_group_label_vi": "Vận mẫu kép",
+  "pinyin_group_label_zh": "复韵母",
+  "final_type": "compound",
+  "pinyin_items": ["ai", "ao", "ou", "ei"],
+
+  "combination_table": {
+    "columns": ["ai", "ao", "ou", "ei"],
+    "rows": {
+      "b": ["bai", "bao", null, "bei"],
+      "p": ["pai", "pao", "pou", "pei"],
+      "m": ["mai", "mao", "mou", "mei"]
+    }
+  },
+
+  "raw_source_text": "VẬN MẪU ai ao ou ei...",
+  "classroom_visibility": "student_visible"
+}</code></pre>
+
+  <h3>5c. 詞彙 Record (vocabulary)</h3>
+  <pre><code>{
+  "record_id": "V001",
+  "record_type": "vocabulary",
+  "section": "Từ vựng",
+  "source_page": 10,
+  "teaching_order": 9,
+
+  "chinese_simplified": "爸爸",
+  "pinyin": "bà ba",
+  "vietnamese": "bố/ba",
+  "image_description": "hình ảnh người cha",
+
+  "target_sounds": ["b", "a"],
+  "target_tones": [4, 0],
+  "notes": "應用 b + a 組合, thanh 4 + thanh nhẹ",
+
+  "raw_source_text": "爸爸 bà ba",
+  "classroom_visibility": "student_visible"
+}</code></pre>
+
+  <h3>5d. 聲調/變調 Record (tone)</h3>
+  <pre><code>{
+  "record_id": "T001",
+  "record_type": "tone",
+  "section": "Thanh điệu",
+  "source_page": 8,
+  "teaching_order": 7,
+
+  "tone_topic": "four_tones",
+  "tone_items": [
+    {"tone_number": 1, "tone_value": "55", "mark": "ˉ", "example_char": "妈", "example_pinyin": "mā"},
+    {"tone_number": 2, "tone_value": "35", "mark": "ˊ", "example_char": "麻", "example_pinyin": "má"},
+    {"tone_number": 3, "tone_value": "214", "mark": "ˇ", "example_char": "马", "example_pinyin": "mǎ"},
+    {"tone_number": 4, "tone_value": "51", "mark": "ˋ", "example_char": "骂", "example_pinyin": "mà"},
+    {"tone_number": 0, "tone_value": "-", "mark": "", "example_char": "吗", "example_pinyin": "ma"}
+  ],
+
+  "raw_source_text": "声调 thanh 1 '55', thanh 2 '35', thanh 3 '214', thanh 4 '51', thanh nhẹ",
+  "classroom_visibility": "student_visible"
+}</code></pre>
+
+  <h3>5e. 拼寫規則 Record (spelling_rule)</h3>
+  <pre><code>{
+  "record_id": "SR001",
+  "record_type": "spelling_rule",
+  "section": "Quy tắc viết pinyin",
+  "source_page": 7,
+  "teaching_order": 8,
+
+  "rule_id": "standalone_vowels",
+  "rule_title_vi": "Quy tắc khi nguyên âm đứng độc lập",
+  "rule_title_zh": "独立音节拼写规则",
+  "rules": [
+    {"from": "i", "to": "yi", "explanation_vi": "Khi i độc lập → thêm y, đọc vẫn giữ nguyên"},
+    {"from": "u", "to": "wu", "explanation_vi": "Khi u độc lập → thêm w, đọc vẫn giữ nguyên"},
+    {"from": "ü", "to": "yu", "explanation_vi": "Khi ü độc lập → thêm y và bỏ hai chấm"}
+  ],
+
+  "raw_source_text": "拼写规则 i→yi u→wu ü→yu",
+  "classroom_visibility": "student_visible"
+}</code></pre>
+
+  <h3>5f. 練習 Record (exercise)</h3>
+  <pre><code>{
+  "record_id": "EX001",
+  "record_type": "exercise",
+  "section": "Luyện tập",
+  "source_page": 9,
+  "teaching_order": 10,
+
+  "exercise_type": "listening_choose",
+  "linked_module": "tones",
+  "instructions_vi": "Nghe và chọn đáp án đúng cho mỗi câu.",
+  "instructions_zh": "听并选出正确答案",
+  "item_count": 6,
+
+  "raw_source_text": "练习 Luyện tập: Nghe và chọn đáp án đúng...",
+  "classroom_visibility": "student_visible"
+}</code></pre>
+
+  <h3>5g. 自我挑戰 Record (challenge)</h3>
+  <pre><code>{
+  "record_id": "CH001",
+  "record_type": "challenge",
+  "section": "Thử thách bản thân",
+  "source_page": 15,
+  "teaching_order": 12,
+
+  "challenge_type": "tone_matching",
+  "instructions_vi": "Nối những phiên âm sau với thanh điệu tương ứng.",
+  "items": [
+    {"prompt": "mā", "answer": "thanh 1"},
+    {"prompt": "má", "answer": "thanh 2"},
+    {"prompt": "mǎ", "answer": "thanh 3"},
+    {"prompt": "mà", "answer": "thanh 4"},
+    {"prompt": "ma", "answer": "thanh nhẹ"}
+  ],
+
+  "raw_source_text": "自我挑战 Thử thách bản thân...",
+  "classroom_visibility": "student_visible"
+}</code></pre>
+</section>
+
+<!-- Section 6: JSON Structure -->
+<section id="s6">
+  <h2><span class="num">6</span>JSON 資料庫主結構</h2>
+  <pre><code>{
+  "metadata": {
+    "lesson_type": "pinyin",
+    "pipeline_config_version": "2.0.0",
+    "generated_at": "2026-06-04T...",
+    "vp_scope": "steps 1-8 before teacher review",
+    "steps_completed": [1, 2, 3, 4, 5, 6, 7, 8],
+    "lesson_id": "pinyin-01",
+    "lesson_title": "Pinyin · Bài 1 · Cơ bản: thanh mẫu, vận mẫu, thanh điệu",
+    "source_pdf": "Pinyin lessons/pinyin-l1.14102024210713.pdf",
+    "source_pdf_pages": 21,
+    "source_material": "AI Mandarin Pinyin Course (independent)",
+    "total_initials_taught": 4,
+    "total_finals_taught": 6,
+    "total_vocabulary": 16,
+    "finalized": false
+  },
+  "content_items": [ ... ],
+  "lesson_structure": [ ... ],
+  "supplemental_activities": [ ... ],
+  "game_suggestions": [ ... ],
+  "google_sheets_database": [ ... ]
+}</code></pre>
+</section>
+
+<!-- Section 7: Google Sheets -->
+<section id="s7">
+  <h2><span class="num">7</span>Google Sheets Database 欄位（扁平化）</h2>
+  <table>
+    <thead><tr><th>欄位</th><th>說明</th><th>範例</th></tr></thead>
+    <tbody>
+      <tr><td><code>lesson_id</code></td><td>課次代碼</td><td>pinyin-01</td></tr>
+      <tr><td><code>lesson_title</code></td><td>課次標題</td><td>Pinyin · Bài 1 · Cơ bản</td></tr>
+      <tr><td><code>record_id</code></td><td>記錄代碼</td><td>I001, F001, V001, T001</td></tr>
+      <tr><td><code>record_type</code></td><td>類型</td><td>initials / finals / vocabulary / tone / spelling_rule / exercise / challenge</td></tr>
+      <tr><td><code>section</code></td><td>歸屬模組</td><td>Thanh mẫu / Vận mẫu / Từ vựng</td></tr>
+      <tr><td><code>source_page</code></td><td>來源 PDF 頁碼</td><td>6</td></tr>
+      <tr><td><code>teaching_order</code></td><td>教學順序</td><td>5</td></tr>
+      <tr><td><code>pinyin_group</code></td><td>拼音組（聲母/韻母）</td><td>b, p, m, f</td></tr>
+      <tr><td><code>pinyin_items_count</code></td><td>該組項目數</td><td>4</td></tr>
+      <tr><td><code>chinese_simplified</code></td><td>漢字（僅詞彙）</td><td>爸爸</td></tr>
+      <tr><td><code>pinyin</code></td><td>拼音（僅詞彙）</td><td>bà ba</td></tr>
+      <tr><td><code>vietnamese</code></td><td>越南語釋義（僅詞彙）</td><td>bố/ba</td></tr>
+      <tr><td><code>target_sounds</code></td><td>該詞練習的目標音</td><td>b, a</td></tr>
+      <tr><td><code>exercise_type</code></td><td>練習類型（僅exercise/challenge）</td><td>listening_choose / image_match / tone_matching</td></tr>
+      <tr><td><code>raw_source_text</code></td><td>原始文字</td><td>...</td></tr>
+      <tr><td><code>classroom_visibility</code></td><td>可見性</td><td>student_visible</td></tr>
+      <tr><td><code>teacher_review_status</code></td><td>審核狀態</td><td>pending_review</td></tr>
+      <tr><td><code>approved</code></td><td>是否通過</td><td>FALSE</td></tr>
+      <tr><td><code>notes_for_review</code></td><td>備註</td><td></td></tr>
+      <tr><td><code>generated_at</code></td><td>生成時間</td><td>2026-06-04T...</td></tr>
+    </tbody>
+  </table>
+
+  <div class="highlight-box success">
+    <strong>差異總結 vs Regular Lesson：</strong><br>
+    • <span class="badge badge-removed">移除</span> <code>word_type_vi</code>, <code>hán_việt</code>, <code>sample_sentence_*</code><br>
+    • <span class="badge badge-new">新增</span> <code>pinyin_group</code>, <code>pinyin_items_count</code>, <code>target_sounds</code>, <code>exercise_type</code><br>
+    • <code>chinese_simplified</code> / <code>pinyin</code> / <code>vietnamese</code> 僅用於 vocabulary records（詞彙），聲母/韻母不使用這些欄位
+  </div>
+</section>
+
+<!-- Section 8: Activities -->
+<section id="s8">
+  <h2><span class="num">8</span>補充活動 &amp; 遊戲建議</h2>
+  <h3>練習類型（來自原始教材）</h3>
+  <table>
+    <thead><tr><th>exercise_type</th><th>越南語</th><th>說明</th><th>出現課次</th></tr></thead>
+    <tbody>
+      <tr><td><code>listening_choose</code></td><td>Nghe và chọn đáp án đúng</td><td>聽音選正確拼音</td><td>L1-L6</td></tr>
+      <tr><td><code>image_match</code></td><td>Nối hình với phiên âm</td><td>圖片配對拼音</td><td>L1,L2,L5</td></tr>
+      <tr><td><code>fill_blank</code></td><td>Điền phần còn thiếu</td><td>填入缺少的聲母/韻母/聲調</td><td>L2,L4,L5,L6</td></tr>
+      <tr><td><code>true_false</code></td><td>Đúng hay sai?</td><td>判斷拼音正確性</td><td>L2,L3,L6</td></tr>
+      <tr><td><code>tone_matching</code></td><td>Nối thanh điệu</td><td>配對拼音和聲調名稱</td><td>L1</td></tr>
+      <tr><td><code>classify</code></td><td>Xếp vào khung</td><td>把圖片/拼音分類到聲母/韻母組</td><td>L2,L4</td></tr>
+      <tr><td><code>write_pinyin</code></td><td>Viết phiên âm</td><td>看圖寫拼音</td><td>L1-L6</td></tr>
+      <tr><td><code>find_error</code></td><td>Tìm lỗi sai</td><td>找出錯誤的拼音書寫</td><td>L2,L4</td></tr>
+      <tr><td><code>same_different</code></td><td>Giống hay khác nhau</td><td>判斷兩個拼音聲母/韻母是否相同</td><td>L3,L5</td></tr>
+      <tr><td><code>word_combine</code></td><td>Ghép từ</td><td>組合拼音成有意義的詞</td><td>L5</td></tr>
+    </tbody>
+  </table>
+
+  <h3>遊戲建議（Blooket 為主）</h3>
+  <table>
+    <thead><tr><th>game_type</th><th>說明</th><th>適合課次</th></tr></thead>
+    <tbody>
+      <tr><td>辨音競速</td><td>聽音選正確拼音，計時比賽</td><td>每堂</td></tr>
+      <tr><td>聲母配對</td><td>圖片 ↔ 拼音配對</td><td>L1-L3</td></tr>
+      <tr><td>韻母拼讀</td><td>聲母+韻母組合拼讀挑戰</td><td>L4-L6</td></tr>
+      <tr><td>聲調辨別</td><td>同音不同調 MCQ</td><td>L1-L3</td></tr>
+      <tr><td>詞彙圖片配對</td><td>漢字 ↔ 拼音 ↔ 圖片三向配對</td><td>每堂</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Section 9: Comparison -->
+<section id="s9">
+  <h2><span class="num">9</span>與 Regular Lesson 差異總結</h2>
+  <table>
+    <thead><tr><th>比較項目</th><th>Regular Lesson</th><th>Pinyin Lesson</th></tr></thead>
+    <tbody>
+      <tr><td>課程數量</td><td>15 堂 (Book 1)</td><td>6 堂（獨立教材）</td></tr>
+      <tr><td>來源</td><td>漢語教程 PDF</td><td>AI Mandarin 獨立拼音教材</td></tr>
+      <tr><td>核心內容</td><td>生詞 + 語法 + 課文</td><td>聲母 + 韻母 + 聲調 + 拼寫規則</td></tr>
+      <tr><td>詞彙角色</td><td>主要教學內容</td><td>音素的應用練習（輔助角色）</td></tr>
+      <tr><td>每堂 PDF 頁數</td><td>變動（8-20+頁教材頁）</td><td>固定 21 頁</td></tr>
+      <tr><td>record_types</td><td>vocabulary, grammar, text, exercise</td><td>initials, finals, tone, spelling_rule, vocabulary, exercise, challenge, pinyin_table, summary_table, daily_phrase, concept, appendix</td></tr>
+      <tr><td>word_type_vi 欄位</td><td>✅ 有（đại từ, tính từ...）</td><td>❌ 不適用</td></tr>
+      <tr><td>hán_việt 欄位</td><td>✅ 有</td><td>❌ 不適用</td></tr>
+      <tr><td>sample_sentence</td><td>✅ 有</td><td>❌ 不適用</td></tr>
+      <tr><td>pinyin_group</td><td>❌</td><td>✅ 新增（聲母/韻母分組）</td></tr>
+      <tr><td>combination_table</td><td>❌</td><td>✅ 新增（拼音組合表）</td></tr>
+      <tr><td>target_sounds</td><td>❌</td><td>✅ 新增（詞彙練習的目標音）</td></tr>
+      <tr><td>漢字書寫 (HanziWriter)</td><td>✅ 有</td><td>❌ 沒有</td></tr>
+      <tr><td>課文/對話</td><td>✅ 有</td><td>❌ 沒有（L6 有日常用語但非對話）</td></tr>
+      <tr><td>文化補充</td><td>✅ 有</td><td>❌ 沒有（L1 有輸入法教學 = appendix）</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Section 10: Questions -->
+<section id="s10">
+  <h2><span class="num">10</span>待確認問題</h2>
+  <div class="questions-list">
+    <div class="question-item">
+      <strong>Combination Table 組合表怎麼處理？</strong>
+      <p>原始教材每教一組新聲母/韻母就有一個拼音組合方格表。這個表要作為獨立 record (<code>pinyin_table</code>)，還是嵌入在聲母/韻母 record 裡面的 <code>combination_table</code> 欄位？</p>
+    </div>
+    <div class="question-item">
+      <strong>練習的答案要存嗎？</strong>
+      <p>小檔案 PDF 是答案卷。每個 exercise/challenge record 要包含完整答案嗎？還是只記錄題目結構，答案放在單獨的 teacher-only 欄位？</p>
+    </div>
+    <div class="question-item">
+      <strong>詞彙的深度</strong>
+      <p>原始教材的詞彙有漢字+pinyin+圖片。我們要不要加 <code>vietnamese</code> 翻譯（原始教材沒有越南語翻譯）？在課堂使用時，老師會需要越南語嗎？</p>
+    </div>
+    <div class="question-item">
+      <strong>暖身/複習活動要單獨記錄嗎？</strong>
+      <p>L2-L6 的暖身活動都是複習前一堂的內容。這些暖身題目要作為獨立 record，還是只在 lesson_structure 裡標記 <code>"warmup": "review_previous"</code>？</p>
+    </div>
+    <div class="question-item">
+      <strong>課程總表要合併還是分開？</strong>
+      <p>建議使用 <code>lesson_list.csv</code> 加上 <code>lesson_type</code> 欄位，把拼音和一般課程合併在同一個索引中，教學順序為：pinyin-01~06 → lesson-01~15。你同意嗎？</p>
+    </div>
+    <div class="question-item">
+      <strong>越南語近似音對照要加嗎？</strong>
+      <p>原始教材沒有越南語近似音對照（如 b ≈ 'b' tiếng Việt）。我們要不要在資料庫中補充這些？這對越南學生很有用，但需要語言學知識確認準確性。</p>
+    </div>
+    <div class="question-item">
+      <strong>Slide 設計是否沿用 Regular Lesson 模板？</strong>
+      <p>拼音課的 slide 視覺風格要沿用 Lesson 01 的 Soft Classroom Presenter style，還是用原始教材（AI Mandarin）的視覺風格作為靈感？或者用之前做的 pinyin design prototype style？</p>
+    </div>
+  </div>
+</section>
+
+<footer style="text-align:center; padding: 2rem; color: var(--text-secondary); font-size: 0.8rem;">
+  AI Teaching Material System · Pinyin Database Architecture v2 · 基於 AI Mandarin 獨立教材 · 2026-06-04
+</footer>
+
+</div>
+</body>
+</html>

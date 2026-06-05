@@ -18,17 +18,22 @@ Reusable AI teaching-material production system for Chinese courseware used in V
 5. **Page mapping:** Visible slide `.page-indicator` shows the printed textbook page from the database, such as `Trang 1` or `Trang 1-2`. It is not a slide number or PDF page. Generated classroom activity sections that do not appear directly in the textbook, especially `Luyện tập tổng hợp` and `Văn hóa bổ sung`, omit page indicators. Do not add separate source footers.
 6. **No AI-isms:** Direct, specific, practical, concise. No "delve/leverage/robust/seamless."
 8. **Cross-tool sync.** When updating `.kiro/`, also update AGENTS.md and this file.
-9. **Slide filenames:** Sequentially numbered matching MANIFEST position (no gaps). Lesson 01: 01–55.
+9. **Slide filenames:** Sequentially numbered matching MANIFEST position (no gaps). Lesson 01: 01–56.
 10. **你好 as standalone vocab slide:** Removed. Appears only in vocab summary quiz and dialogue.
 11. **Vocab counter:** Format `XX/YY` badge. Lesson 01 total = 11.
 12. **Pinyin word grouping:** Pinyin of a multi-syllable word must be written together (no space between syllables of one word). Correct: "dìèr kè · nǐ shì nǎguó rén?" Wrong: "dì èr kè · nǐ shì nǎ guó rén?" Each vocabulary word's pinyin is one unit. Sentence pinyin groups by word boundaries. Use Google Translate or another LLM to verify correct word-boundary pinyin.
 13. **Chinese + pinyin alignment:** When a slide shows Chinese and pinyin together, put each pinyin chunk directly above the matching Chinese character or word group. Keep punctuation attached to the Chinese line, with no pinyin above punctuation.
-14. **Cover template:** Use Lesson 10 `output/book-1/lesson-10/slides/01-cover.html` as the canonical cover template for all future lessons. Reuse layout/style directly; only replace lesson number, Chinese/pinyin title, Vietnamese title, topic chips, and topic image.
+14. **Cover template:** Use Lesson 10 `output/book-1/lesson-10/slides/01-cover.html` as the canonical cover template for all future lessons. Reuse layout/style directly; only replace lesson number, Chinese/pinyin title, Vietnamese title, and topic image. Do not include the old three keyword/topic pills on cover slides. Keep the lesson badge (`BÀI N · 第N课`) at the larger cover size, about 16pt / 30% larger than the old 12pt badge.
 15. **Reusable templates:** Use Lesson 01 templates for dividers, objectives, homework divider, exercise-list structure, dialogue avatar layout, and hanzi-writing layout. Use the same Lesson 01 dividers by default; only change page numbers/counts and images Adam explicitly asks to customize.
 16. **Activity design:** Practice activities should be varied and can include listening, speaking, reading, and writing when the lesson supports it. Comprehensive practice and grammar practice should reference HSK and TOCFL item formats, favor practical daily-use situations, and still output Simplified Chinese unless Adam explicitly asks otherwise.
 17. **Interactive practice:** Prefer simple interactive slide/webapp formats when useful, such as one multiple-choice question per slide with clickable options, success feedback for correct answers, and a try-again prompt for wrong answers.
 18. **Hanzi writing:** Reuse Lesson 01 hanzi-writing title, layout, method, and HanziWriter stroke animation. Do not use static characters instead of stroke animation. Use `strokeAnimationSpeed: 0.575` and `delayBetweenStrokes: 360` unless Adam changes the Lesson 01 template.
 19. **Database rule propagation:** VP steps 1-8 must output lesson structure/activity/database metadata that follows cover, divider, activity-design, Simplified Chinese, pinyin, image, density, and hanzi-writing rules. Do not defer these rules to manual slide cleanup.
+20. **Image asset workflow:** Images are lesson data, not post-generation cleanup. VP databases carry `image_role`, `image_prompt`, `image_file`, `image_reuse_from`, `image_status`, and `image_semantic_check`. Complete lessons must have `slides/assets/asset-manifest.json` and `exports/qa/asset-qa-report.json`.
+21. **Pinyin course (6 lessons):** Source is AI Mandarin independent material (`Pinyin lessons/`). Do NOT use 漢語教程 phonetics. Read `docs/pinyin-lesson-database-spec.md` for full spec. Pipeline config: `scripts/pipeline/configs/pinyin.json` v2.0.0. Output to `output/pinyin/pinyin-{01-06}/`.
+22. **Pinyin Lesson 1 template baseline:** Future pinyin decks reuse `output/pinyin/pinyin-01` as the template. Do not build pinyin lessons from scratch. Keep the same cover, objectives, dividers, concept slides, tone slides, vocabulary grids, flashcards, practice slides, input setup, closing, soft textbook/course image style, and presenter behavior; swap only lesson-specific text, sounds, rules, vocabulary, exercises, and images.
+23. **Pinyin classroom sequence and wording:** Pinyin decks use clear dividers for concepts/review, initials, finals, sounds/chart, tones, vocabulary, review/practice, appendix/input setup when applicable, and closing. Do not create `Mục lục` or `Quy ước` classroom slides. Use `thanh điệu`, never `thanh điều`.
+24. **Pinyin objectives and page labels:** Pinyin objective slides highlight taught initials/finals/rule anchors in bold red and adapt the goal text by lesson. Pinyin classroom slides do not show bottom-right `Trang ...` page indicators.
 
 ---
 
@@ -40,6 +45,8 @@ Reusable AI teaching-material production system for Chinese courseware used in V
 | `docs/ai-teaching-material-system-requirements-context.md` | Full project spec |
 | `.kiro/steering/ai-teaching-material-system.md` | Project rules (auto-loaded by Kiro) |
 | `.kiro/skills/ai-teaching-material-systems/SKILL.md` | Pipeline workflow, VP steps 1-18 |
+| `docs/image-asset-workflow.md` | Image metadata, asset manifest, image replacement, and asset QA |
+| `docs/pinyin-lesson-database-spec.md` | Pinyin course database architecture (6 lessons, independent from 漢語教程) |
 
 ---
 
@@ -49,6 +56,7 @@ Reusable AI teaching-material production system for Chinese courseware used in V
 |------------------|-------------------|
 | Any non-trivial project task or repeated preference | `.kiro/skills/harness-engineering/SKILL.md` |
 | Pipeline workflow, VP steps, lesson processing | `.kiro/skills/ai-teaching-material-systems/SKILL.md` |
+| Pinyin lesson database or slide generation | `docs/pinyin-lesson-database-spec.md` |
 | Slide design, deck generation, HTML presenter, visual QA | `.kiro/skills/huashu-design/SKILL.md` |
 | Google Drive/Sheets automation | `.kiro/skills/google-workspace/SKILL.md` |
 | Clean user-facing docs/lesson copy | `.kiro/skills/avoid-ai-writing/SKILL.md` |
@@ -106,11 +114,14 @@ Every lesson gets an `index.html` presenter in its `slides/` folder. This is the
 
 ### Creating index.html for a new lesson
 
-Copy from `output/book-1/lesson-01/slides/index.html` and update:
-1. `<title>` and `<h1>` — lesson title
-2. `MANIFEST` array — slide filenames in order
-3. Subtitle and thumbnail total — slide count
-4. `pdf.save(...)` — output filename
+Do not hand-edit copied presenter fields. After numbered slide HTML files exist, run:
+
+```bash
+npm run lesson:presenter -- output/book-1/lesson-XX
+npm run lesson:shells
+```
+
+This syncs from `output/book-1/lesson-01/slides/index.html` and updates the title, `MANIFEST`, slide count, thumbnail total, first slide, and PDF filename. Run `npm run lesson:shells` after database generation too, so database-only draft lessons show a safe status page instead of redirecting to a missing presenter.
 
 ### Convenience shortcuts for Lesson 01
 
@@ -124,6 +135,23 @@ npm run lesson1:watch      # watch slides for changes
 ```bash
 npm run slides:pdf output/book-1/lesson-02/slides
 npm run slides:watch output/book-1/lesson-02/slides
+```
+
+## Image Asset Workflow
+
+Read `docs/image-asset-workflow.md` before generating, replacing, or QA-ing slide images.
+
+Required commands for complete lessons:
+
+```bash
+npm run assets:manifest -- output/book-1/lesson-XX
+npm run assets:qa -- output/book-1/lesson-XX
+```
+
+Replace one vocabulary image without hand-editing slide HTML:
+
+```bash
+npm run assets:replace -- --lesson output/book-1/lesson-XX --record V001 --image /path/to/new.png
 ```
 
 ## Pipeline Workflow (Steps 1-8)
@@ -145,12 +173,16 @@ Add new lesson types by dropping a JSON config in `scripts/pipeline/configs/`.
 
 ```
 output/
-└── book-{N}/
-    ├── lesson_list.csv      master index of all lessons in this book
-    ├── lesson-{NN}/
-    │   ├── slides/          index.html + NN-name.html files
-    │   ├── database/        02_content_items.csv ... vp_database.json
-    │   └── exports/         screenshots/, PDF
+├── book-{N}/
+│   ├── lesson_list.csv      master index of all regular lessons
+│   ├── lesson-{NN}/
+│   │   ├── slides/          index.html + NN-name.html files
+│   │   ├── database/        02_content_items.csv ... vp_database.json
+│   │   └── exports/         screenshots/, PDF
+└── pinyin/
+    ├── pinyin_lesson_list.csv   index of pinyin-01 through pinyin-06
     └── pinyin-{NN}/
-        └── database/
+        ├── slides/          index.html + NN-name.html files
+        ├── database/        02_content_items.csv ... vp_pinyin_NN_database.json
+        └── exports/
 ```

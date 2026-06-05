@@ -1,0 +1,1760 @@
+{
+  "schema_version": "1.0.0",
+  "lesson_id": "lesson-10",
+  "generated_at": "2026-06-04T05:31:15.309Z",
+  "source_database": "database",
+  "workflow": {
+    "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
+    "required_steps": [
+      "Run or update VP database with image_asset_* metadata for each needed classroom image.",
+      "Build slides/assets/asset-manifest.json before and after slide generation.",
+      "Generate or replace images using the manifest paths, not ad hoc HTML edits.",
+      "Run npm run assets:qa -- --lesson <lesson-root> before delivery.",
+      "Use screenshot/contact-sheet QA for visual semantic checks. Export clean PDF only after Adam confirms finalization."
+    ]
+  },
+  "requirements": {
+    "vocabulary_images": "16:9 PNG, soft textbook line-art, thin grey-blue outlines, muted pastel fills, pale background, no in-image text/letters/numbers/Chinese characters/labels/watermarks",
+    "sample_images": "Must match the full sample phrase. Reuse the vocabulary image only when it is semantically correct.",
+    "shared_assets": "slide-base.css, slide-base.js, and brand/logo-watermark.png must exist in every complete lesson."
+  },
+  "assets": [
+    {
+      "id": "assets-brand-logo-watermark-png",
+      "asset_path": "assets/brand/logo-watermark.png",
+      "role": "brand_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 500,
+        "height": 500,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "lesson-required-assets"
+      ],
+      "html_reference_types": [
+        "required"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-culture-images-number-520-png",
+      "asset_path": "assets/culture-images/number-520.png",
+      "role": "culture_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "92-culture-number-520.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-culture-images-number-666-png",
+      "asset_path": "assets/culture-images/number-666.png",
+      "role": "culture_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "93-culture-number-666.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-comprehensive-practice-divider-png",
+      "asset_path": "assets/photos/comprehensive-practice-divider.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1672,
+        "height": 941,
+        "format": "png",
+        "aspect_ratio": 1.7768
+      },
+      "used_by": [
+        "55-divider-comprehensive.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-cover-topic-png",
+      "asset_path": "assets/photos/cover-topic.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "01-cover.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-dialogue-topic-png",
+      "asset_path": "assets/photos/dialogue-topic.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 612,
+        "format": "png",
+        "aspect_ratio": 0.9412
+      },
+      "used_by": [
+        "66-divider-dialogue.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-homework-jpg",
+      "asset_path": "assets/photos/homework.jpg",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 900,
+        "height": 676,
+        "format": "jpeg",
+        "aspect_ratio": 1.3314
+      },
+      "used_by": [
+        "94-divider-homework.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-supplement-jpg",
+      "asset_path": "assets/photos/supplement.jpg",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 900,
+        "height": 600,
+        "format": "jpeg",
+        "aspect_ratio": 1.5
+      },
+      "used_by": [
+        "88-divider-culture.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-vocab-divider-png",
+      "asset_path": "assets/photos/vocab-divider.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1672,
+        "height": 941,
+        "format": "png",
+        "aspect_ratio": 1.7768
+      },
+      "used_by": [
+        "04-divider-vocab.html",
+        "61-divider-grammar.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-vocabulary-exercise-divider-png",
+      "asset_path": "assets/photos/vocabulary-exercise-divider.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1672,
+        "height": 941,
+        "format": "png",
+        "aspect_ratio": 1.7768
+      },
+      "used_by": [
+        "45-divider-vocab-practice.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-writing-hanzi-divider-png",
+      "asset_path": "assets/photos/writing-hanzi-divider.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 941,
+        "height": 1672,
+        "format": "png",
+        "aspect_ratio": 0.5628
+      },
+      "used_by": [
+        "73-divider-writing.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-reference-ending-page-background-png",
+      "asset_path": "assets/reference/ending-page-background.png",
+      "role": "reference_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1.5
+      },
+      "used_by": [
+        "96-closing.html"
+      ],
+      "html_reference_types": [
+        "css_url"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-sample-images-objectives-png",
+      "asset_path": "assets/sample-images/objectives.png",
+      "role": "sample_sentence_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "02-objectives.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-sample-images-sample-v007-ta-zhu-nar-png",
+      "asset_path": "assets/sample-images/sample-v007-ta-zhu-nar.png",
+      "role": "sample_sentence_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "20-sample-v007.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V007"
+      ],
+      "chinese": [
+        "住"
+      ],
+      "pinyin": [
+        "zhù"
+      ],
+      "vietnamese": [
+        "ở, cư trú"
+      ],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-sample-images-sample-v008-shiba-lou-png",
+      "asset_path": "assets/sample-images/sample-v008-shiba-lou.png",
+      "role": "sample_sentence_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "22-sample-v008.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V008"
+      ],
+      "chinese": [
+        "楼"
+      ],
+      "pinyin": [
+        "lóu"
+      ],
+      "vietnamese": [
+        "tầng, nhà lầu"
+      ],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-sample-images-sample-v015-601-png",
+      "asset_path": "assets/sample-images/sample-v015-601.png",
+      "role": "sample_sentence_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "40-sample-v015.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V015"
+      ],
+      "chinese": [
+        "零（〇）"
+      ],
+      "pinyin": [
+        "líng"
+      ],
+      "vietnamese": [
+        "lẻ, số không"
+      ],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-sample-images-sample-v016-phone-number-png",
+      "asset_path": "assets/sample-images/sample-v016-phone-number.png",
+      "role": "sample_sentence_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "42-sample-v016.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V016"
+      ],
+      "chinese": [
+        "手机"
+      ],
+      "pinyin": [
+        "shǒujī"
+      ],
+      "vietnamese": [
+        "điện thoại di động"
+      ],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-slide-base-css",
+      "asset_path": "assets/slide-base.css",
+      "role": "stylesheet",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": null,
+      "used_by": [
+        "01-cover.html",
+        "02-objectives.html",
+        "03-warmup.html",
+        "04-divider-vocab.html",
+        "05-vocab-v001.html",
+        "06-sample-v001.html",
+        "07-vocab-v001a.html",
+        "08-sample-v001a.html",
+        "09-vocab-v002.html",
+        "10-sample-v002.html",
+        "11-vocab-v003.html",
+        "12-sample-v003.html",
+        "13-vocab-v004.html",
+        "14-sample-v004.html",
+        "15-vocab-v005.html",
+        "16-sample-v005.html",
+        "17-vocab-v006.html",
+        "18-sample-v006.html",
+        "19-vocab-v007.html",
+        "20-sample-v007.html",
+        "21-vocab-v008.html",
+        "22-sample-v008.html",
+        "23-vocab-v009.html",
+        "24-sample-v009.html",
+        "25-vocab-v010.html",
+        "26-sample-v010.html",
+        "27-vocab-v011.html",
+        "28-sample-v011.html",
+        "29-vocab-v012.html",
+        "30-sample-v012.html",
+        "31-vocab-v013.html",
+        "32-sample-v013.html",
+        "33-vocab-v013a.html",
+        "34-sample-v013a.html",
+        "35-vocab-v013b.html",
+        "36-sample-v013b.html",
+        "37-vocab-v014.html",
+        "38-sample-v014.html",
+        "39-vocab-v015.html",
+        "40-sample-v015.html",
+        "41-vocab-v016.html",
+        "42-sample-v016.html",
+        "43-vocab-v016a.html",
+        "44-sample-v016a.html",
+        "45-divider-vocab-practice.html",
+        "46-vocab-matching-01.html",
+        "47-vocab-matching-02.html",
+        "48-vocab-matching-03.html",
+        "49-vocab-matching-04.html",
+        "50-vocab-matching-05.html",
+        "51-vocab-summary-01.html",
+        "52-vocab-summary-02.html",
+        "53-vocab-summary-03.html",
+        "54-vocab-summary-04.html",
+        "55-divider-comprehensive.html",
+        "56-practice-flashcard-v001.html",
+        "57-practice-flashcard-v001a.html",
+        "58-practice-flashcard-v002.html",
+        "59-practice-flashcard-v003.html",
+        "60-practice-flashcard-v004.html",
+        "61-divider-grammar.html",
+        "62-grammar-word-order.html",
+        "63-grammar-verb-sentence.html",
+        "64-grammar-number-reading.html",
+        "65-grammar-practice-correction.html",
+        "66-divider-dialogue.html",
+        "67-dialogue-01.html",
+        "68-dialogue-02.html",
+        "69-dialogue-03.html",
+        "70-dialogue-04.html",
+        "71-dialogue-05.html",
+        "72-dialogue-06.html",
+        "73-divider-writing.html",
+        "74-stroke-zhu.html",
+        "75-stroke-you.html",
+        "76-stroke-gong.html",
+        "77-stroke-shi.html",
+        "78-stroke-zai.html",
+        "79-stroke-jia.html",
+        "80-stroke-ne.html",
+        "81-stroke-zhi.html",
+        "82-stroke-dao.html",
+        "83-stroke-dian.html",
+        "84-stroke-hua.html",
+        "85-stroke-hao.html",
+        "86-stroke-shou.html",
+        "87-stroke-ji.html",
+        "88-divider-culture.html",
+        "89-culture-qingwen-vi.html",
+        "90-culture-qingwen-zh.html",
+        "91-culture-qingwen-mistake.html",
+        "92-culture-number-520.html",
+        "93-culture-number-666.html",
+        "94-divider-homework.html",
+        "95-exercises-list.html",
+        "96-closing.html",
+        "lesson-required-assets"
+      ],
+      "html_reference_types": [
+        "required",
+        "stylesheet"
+      ],
+      "record_ids": [
+        "V001",
+        "V001A",
+        "V002",
+        "V003",
+        "V004",
+        "V005",
+        "V006",
+        "V007",
+        "V008",
+        "V009",
+        "V010",
+        "V011",
+        "V012",
+        "V013",
+        "V013A",
+        "V013B",
+        "V014",
+        "V015",
+        "V016",
+        "V016A"
+      ],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-slide-base-js",
+      "asset_path": "assets/slide-base.js",
+      "role": "script",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": null,
+      "used_by": [
+        "01-cover.html",
+        "02-objectives.html",
+        "03-warmup.html",
+        "04-divider-vocab.html",
+        "05-vocab-v001.html",
+        "06-sample-v001.html",
+        "07-vocab-v001a.html",
+        "08-sample-v001a.html",
+        "09-vocab-v002.html",
+        "10-sample-v002.html",
+        "11-vocab-v003.html",
+        "12-sample-v003.html",
+        "13-vocab-v004.html",
+        "14-sample-v004.html",
+        "15-vocab-v005.html",
+        "16-sample-v005.html",
+        "17-vocab-v006.html",
+        "18-sample-v006.html",
+        "19-vocab-v007.html",
+        "20-sample-v007.html",
+        "21-vocab-v008.html",
+        "22-sample-v008.html",
+        "23-vocab-v009.html",
+        "24-sample-v009.html",
+        "25-vocab-v010.html",
+        "26-sample-v010.html",
+        "27-vocab-v011.html",
+        "28-sample-v011.html",
+        "29-vocab-v012.html",
+        "30-sample-v012.html",
+        "31-vocab-v013.html",
+        "32-sample-v013.html",
+        "33-vocab-v013a.html",
+        "34-sample-v013a.html",
+        "35-vocab-v013b.html",
+        "36-sample-v013b.html",
+        "37-vocab-v014.html",
+        "38-sample-v014.html",
+        "39-vocab-v015.html",
+        "40-sample-v015.html",
+        "41-vocab-v016.html",
+        "42-sample-v016.html",
+        "43-vocab-v016a.html",
+        "44-sample-v016a.html",
+        "45-divider-vocab-practice.html",
+        "46-vocab-matching-01.html",
+        "47-vocab-matching-02.html",
+        "48-vocab-matching-03.html",
+        "49-vocab-matching-04.html",
+        "50-vocab-matching-05.html",
+        "51-vocab-summary-01.html",
+        "52-vocab-summary-02.html",
+        "53-vocab-summary-03.html",
+        "54-vocab-summary-04.html",
+        "55-divider-comprehensive.html",
+        "56-practice-flashcard-v001.html",
+        "57-practice-flashcard-v001a.html",
+        "58-practice-flashcard-v002.html",
+        "59-practice-flashcard-v003.html",
+        "60-practice-flashcard-v004.html",
+        "61-divider-grammar.html",
+        "62-grammar-word-order.html",
+        "63-grammar-verb-sentence.html",
+        "64-grammar-number-reading.html",
+        "65-grammar-practice-correction.html",
+        "66-divider-dialogue.html",
+        "67-dialogue-01.html",
+        "68-dialogue-02.html",
+        "69-dialogue-03.html",
+        "70-dialogue-04.html",
+        "71-dialogue-05.html",
+        "72-dialogue-06.html",
+        "73-divider-writing.html",
+        "74-stroke-zhu.html",
+        "75-stroke-you.html",
+        "76-stroke-gong.html",
+        "77-stroke-shi.html",
+        "78-stroke-zai.html",
+        "79-stroke-jia.html",
+        "80-stroke-ne.html",
+        "81-stroke-zhi.html",
+        "82-stroke-dao.html",
+        "83-stroke-dian.html",
+        "84-stroke-hua.html",
+        "85-stroke-hao.html",
+        "86-stroke-shou.html",
+        "87-stroke-ji.html",
+        "88-divider-culture.html",
+        "89-culture-qingwen-vi.html",
+        "90-culture-qingwen-zh.html",
+        "91-culture-qingwen-mistake.html",
+        "92-culture-number-520.html",
+        "93-culture-number-666.html",
+        "94-divider-homework.html",
+        "95-exercises-list.html",
+        "96-closing.html",
+        "lesson-required-assets"
+      ],
+      "html_reference_types": [
+        "required",
+        "script"
+      ],
+      "record_ids": [
+        "V001",
+        "V001A",
+        "V002",
+        "V003",
+        "V004",
+        "V005",
+        "V006",
+        "V007",
+        "V008",
+        "V009",
+        "V010",
+        "V011",
+        "V012",
+        "V013",
+        "V013A",
+        "V013B",
+        "V014",
+        "V015",
+        "V016",
+        "V016A"
+      ],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v001-bangongshi-png",
+      "asset_path": "assets/vocab-images/vocab-v001-bangongshi.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "05-vocab-v001.html",
+        "06-sample-v001.html",
+        "46-vocab-matching-01.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V001"
+      ],
+      "chinese": [
+        "办公室"
+      ],
+      "pinyin": [
+        "bàngōngshì"
+      ],
+      "vietnamese": [
+        "văn phòng"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: office.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v001a-bangong-png",
+      "asset_path": "assets/vocab-images/vocab-v001a-bangong.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "07-vocab-v001a.html",
+        "08-sample-v001a.html",
+        "46-vocab-matching-01.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V001A"
+      ],
+      "chinese": [
+        "办公"
+      ],
+      "pinyin": [
+        "bàngōng"
+      ],
+      "vietnamese": [
+        "làm việc ở văn phòng, làm việc tại cơ quan"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: to work in an office.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v002-zhiyuan-png",
+      "asset_path": "assets/vocab-images/vocab-v002-zhiyuan.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "09-vocab-v002.html",
+        "10-sample-v002.html",
+        "46-vocab-matching-01.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V002"
+      ],
+      "chinese": [
+        "职员"
+      ],
+      "pinyin": [
+        "zhíyuán"
+      ],
+      "vietnamese": [
+        "nhân viên, viên chức"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: employee; office worker.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v003-zhao-png",
+      "asset_path": "assets/vocab-images/vocab-v003-zhao.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "11-vocab-v003.html",
+        "12-sample-v003.html",
+        "46-vocab-matching-01.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V003"
+      ],
+      "chinese": [
+        "找"
+      ],
+      "pinyin": [
+        "zhǎo"
+      ],
+      "vietnamese": [
+        "tìm, kiếm"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: to look for.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v004-zai-png",
+      "asset_path": "assets/vocab-images/vocab-v004-zai.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "13-vocab-v004.html",
+        "14-sample-v004.html",
+        "47-vocab-matching-02.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V004"
+      ],
+      "chinese": [
+        "在"
+      ],
+      "pinyin": [
+        "zài"
+      ],
+      "vietnamese": [
+        "ở, có mặt; tại"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: to be in/at; in; at.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v005-jia-png",
+      "asset_path": "assets/vocab-images/vocab-v005-jia.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "15-vocab-v005.html",
+        "16-sample-v005.html",
+        "47-vocab-matching-02.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V005"
+      ],
+      "chinese": [
+        "家"
+      ],
+      "pinyin": [
+        "jiā"
+      ],
+      "vietnamese": [
+        "nhà; gia đình"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: home; family; classifier for a family, company, shop, etc..",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v006-ne-png",
+      "asset_path": "assets/vocab-images/vocab-v006-ne.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "17-vocab-v006.html",
+        "18-sample-v006.html",
+        "47-vocab-matching-02.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V006"
+      ],
+      "chinese": [
+        "呢"
+      ],
+      "pinyin": [
+        "ne"
+      ],
+      "vietnamese": [
+        "trợ từ ngữ khí"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: modal particle used at the end of a declarative sentence.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v007-zhu-png",
+      "asset_path": "assets/vocab-images/vocab-v007-zhu.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "19-vocab-v007.html",
+        "47-vocab-matching-02.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V007"
+      ],
+      "chinese": [
+        "住"
+      ],
+      "pinyin": [
+        "zhù"
+      ],
+      "vietnamese": [
+        "ở, cư trú"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: to live.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v008-lou-png",
+      "asset_path": "assets/vocab-images/vocab-v008-lou.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "21-vocab-v008.html",
+        "48-vocab-matching-03.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V008"
+      ],
+      "chinese": [
+        "楼"
+      ],
+      "pinyin": [
+        "lóu"
+      ],
+      "vietnamese": [
+        "tầng, nhà lầu"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: building; floor.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v009-men-png",
+      "asset_path": "assets/vocab-images/vocab-v009-men.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "23-vocab-v009.html",
+        "24-sample-v009.html",
+        "48-vocab-matching-03.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V009"
+      ],
+      "chinese": [
+        "门"
+      ],
+      "pinyin": [
+        "mén"
+      ],
+      "vietnamese": [
+        "cửa, cổng"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: door; gate.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v010-fangjian-png",
+      "asset_path": "assets/vocab-images/vocab-v010-fangjian.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "25-vocab-v010.html",
+        "26-sample-v010.html",
+        "48-vocab-matching-03.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V010"
+      ],
+      "chinese": [
+        "房间"
+      ],
+      "pinyin": [
+        "fángjiān"
+      ],
+      "vietnamese": [
+        "phòng"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: room.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v011-hao-png",
+      "asset_path": "assets/vocab-images/vocab-v011-hao.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "27-vocab-v011.html",
+        "28-sample-v011.html",
+        "48-vocab-matching-03.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V011"
+      ],
+      "chinese": [
+        "号"
+      ],
+      "pinyin": [
+        "hào"
+      ],
+      "vietnamese": [
+        "số"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: number.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v012-zhidao-png",
+      "asset_path": "assets/vocab-images/vocab-v012-zhidao.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "29-vocab-v012.html",
+        "30-sample-v012.html",
+        "49-vocab-matching-04.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V012"
+      ],
+      "chinese": [
+        "知道"
+      ],
+      "pinyin": [
+        "zhīdào"
+      ],
+      "vietnamese": [
+        "biết"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: to know.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v013-dianhua-png",
+      "asset_path": "assets/vocab-images/vocab-v013-dianhua.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "31-vocab-v013.html",
+        "32-sample-v013.html",
+        "49-vocab-matching-04.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V013"
+      ],
+      "chinese": [
+        "电话"
+      ],
+      "pinyin": [
+        "diànhuà"
+      ],
+      "vietnamese": [
+        "điện thoại"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: telephone.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v013a-dian-png",
+      "asset_path": "assets/vocab-images/vocab-v013a-dian.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "33-vocab-v013a.html",
+        "34-sample-v013a.html",
+        "49-vocab-matching-04.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V013A"
+      ],
+      "chinese": [
+        "电"
+      ],
+      "pinyin": [
+        "diàn"
+      ],
+      "vietnamese": [
+        "điện"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: electricity.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v013b-hua-png",
+      "asset_path": "assets/vocab-images/vocab-v013b-hua.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "35-vocab-v013b.html",
+        "36-sample-v013b.html",
+        "49-vocab-matching-04.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V013B"
+      ],
+      "chinese": [
+        "话"
+      ],
+      "pinyin": [
+        "huà"
+      ],
+      "vietnamese": [
+        "lời nói"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: words; speech.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v014-haoma-png",
+      "asset_path": "assets/vocab-images/vocab-v014-haoma.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "37-vocab-v014.html",
+        "38-sample-v014.html",
+        "50-vocab-matching-05.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V014"
+      ],
+      "chinese": [
+        "号码"
+      ],
+      "pinyin": [
+        "hàomǎ"
+      ],
+      "vietnamese": [
+        "số, mã số"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: number.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v015-ling-png",
+      "asset_path": "assets/vocab-images/vocab-v015-ling.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "39-vocab-v015.html",
+        "50-vocab-matching-05.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V015"
+      ],
+      "chinese": [
+        "零（〇）"
+      ],
+      "pinyin": [
+        "líng"
+      ],
+      "vietnamese": [
+        "lẻ, số không"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: zero.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v016-shouji-png",
+      "asset_path": "assets/vocab-images/vocab-v016-shouji.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "41-vocab-v016.html",
+        "50-vocab-matching-05.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V016"
+      ],
+      "chinese": [
+        "手机"
+      ],
+      "pinyin": [
+        "shǒujī"
+      ],
+      "vietnamese": [
+        "điện thoại di động"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: mobile phone.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v016a-shou-png",
+      "asset_path": "assets/vocab-images/vocab-v016a-shou.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "43-vocab-v016a.html",
+        "44-sample-v016a.html",
+        "50-vocab-matching-05.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V016A"
+      ],
+      "chinese": [
+        "手"
+      ],
+      "pinyin": [
+        "shǒu"
+      ],
+      "vietnamese": [
+        "tay"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue outlines, muted pastel fills, pale clean background, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: hand.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "avatar-a-png",
+      "asset_path": "avatar-a.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "67-dialogue-01.html",
+        "68-dialogue-02.html",
+        "69-dialogue-03.html",
+        "70-dialogue-04.html",
+        "71-dialogue-05.html",
+        "72-dialogue-06.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "avatar-b-png",
+      "asset_path": "avatar-b.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "67-dialogue-01.html",
+        "68-dialogue-02.html",
+        "69-dialogue-03.html",
+        "70-dialogue-04.html",
+        "71-dialogue-05.html",
+        "72-dialogue-06.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    }
+  ],
+  "vocabulary_coverage": [
+    {
+      "record_id": "V001",
+      "chinese_simplified": "办公室",
+      "pinyin": "bàngōngshì",
+      "vietnamese": "văn phòng",
+      "assets": [
+        "assets/vocab-images/vocab-v001-bangongshi.png",
+        "assets/vocab-images/vocab-v001a-bangong.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V001A",
+      "chinese_simplified": "办公",
+      "pinyin": "bàngōng",
+      "vietnamese": "làm việc ở văn phòng, làm việc tại cơ quan",
+      "assets": [
+        "assets/vocab-images/vocab-v001a-bangong.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V002",
+      "chinese_simplified": "职员",
+      "pinyin": "zhíyuán",
+      "vietnamese": "nhân viên, viên chức",
+      "assets": [
+        "assets/vocab-images/vocab-v002-zhiyuan.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V003",
+      "chinese_simplified": "找",
+      "pinyin": "zhǎo",
+      "vietnamese": "tìm, kiếm",
+      "assets": [
+        "assets/vocab-images/vocab-v003-zhao.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V004",
+      "chinese_simplified": "在",
+      "pinyin": "zài",
+      "vietnamese": "ở, có mặt; tại",
+      "assets": [
+        "assets/vocab-images/vocab-v004-zai.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V005",
+      "chinese_simplified": "家",
+      "pinyin": "jiā",
+      "vietnamese": "nhà; gia đình",
+      "assets": [
+        "assets/vocab-images/vocab-v005-jia.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V006",
+      "chinese_simplified": "呢",
+      "pinyin": "ne",
+      "vietnamese": "trợ từ ngữ khí",
+      "assets": [
+        "assets/vocab-images/vocab-v006-ne.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V007",
+      "chinese_simplified": "住",
+      "pinyin": "zhù",
+      "vietnamese": "ở, cư trú",
+      "assets": [
+        "assets/vocab-images/vocab-v007-zhu.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V008",
+      "chinese_simplified": "楼",
+      "pinyin": "lóu",
+      "vietnamese": "tầng, nhà lầu",
+      "assets": [
+        "assets/vocab-images/vocab-v008-lou.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V009",
+      "chinese_simplified": "门",
+      "pinyin": "mén",
+      "vietnamese": "cửa, cổng",
+      "assets": [
+        "assets/vocab-images/vocab-v009-men.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V010",
+      "chinese_simplified": "房间",
+      "pinyin": "fángjiān",
+      "vietnamese": "phòng",
+      "assets": [
+        "assets/vocab-images/vocab-v010-fangjian.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V011",
+      "chinese_simplified": "号",
+      "pinyin": "hào",
+      "vietnamese": "số",
+      "assets": [
+        "assets/vocab-images/vocab-v011-hao.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V012",
+      "chinese_simplified": "知道",
+      "pinyin": "zhīdào",
+      "vietnamese": "biết",
+      "assets": [
+        "assets/vocab-images/vocab-v012-zhidao.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V013",
+      "chinese_simplified": "电话",
+      "pinyin": "diànhuà",
+      "vietnamese": "điện thoại",
+      "assets": [
+        "assets/vocab-images/vocab-v013-dianhua.png",
+        "assets/vocab-images/vocab-v013a-dian.png",
+        "assets/vocab-images/vocab-v013b-hua.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V013A",
+      "chinese_simplified": "电",
+      "pinyin": "diàn",
+      "vietnamese": "điện",
+      "assets": [
+        "assets/vocab-images/vocab-v013a-dian.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V013B",
+      "chinese_simplified": "话",
+      "pinyin": "huà",
+      "vietnamese": "lời nói",
+      "assets": [
+        "assets/vocab-images/vocab-v013b-hua.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V014",
+      "chinese_simplified": "号码",
+      "pinyin": "hàomǎ",
+      "vietnamese": "số, mã số",
+      "assets": [
+        "assets/vocab-images/vocab-v014-haoma.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V015",
+      "chinese_simplified": "零（〇）",
+      "pinyin": "líng",
+      "vietnamese": "lẻ, số không",
+      "assets": [
+        "assets/vocab-images/vocab-v015-ling.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V016",
+      "chinese_simplified": "手机",
+      "pinyin": "shǒujī",
+      "vietnamese": "điện thoại di động",
+      "assets": [
+        "assets/vocab-images/vocab-v016-shouji.png",
+        "assets/vocab-images/vocab-v016a-shou.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V016A",
+      "chinese_simplified": "手",
+      "pinyin": "shǒu",
+      "vietnamese": "tay",
+      "assets": [
+        "assets/vocab-images/vocab-v016a-shou.png"
+      ],
+      "status": "covered"
+    }
+  ]
+}

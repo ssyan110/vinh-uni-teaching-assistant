@@ -9,21 +9,27 @@ Project-local rules and context. Auto-included by Kiro; referenced by AGENTS.md 
 3. `.kiro/skills/harness-engineering/SKILL.md`
 4. `docs/ai-teaching-material-system-requirements-context.md` or `.html`
 5. `docs/lesson-slide-template-guide.md` for slide/template work
-6. Relevant `.kiro/skills/*/SKILL.md`
+6. `docs/image-asset-workflow.md` for slide image, vocabulary image, cover image, divider image, and image replacement work
+7. Relevant `.kiro/skills/*/SKILL.md`
 
 ## Non-negotiable rules
 
 - Use harness engineering by default. Do not rely on repeated chat reminders; make context, tools, success gates, verification, observations, and durable feedback explicit in repo-local files.
 - Use Huashu Design instead of Gamma unless Adam explicitly changes direction.
 - HTML is the primary presentation format. No PPTX in the workflow. PDF is a backup export only.
-- The lesson-root `index.html` is used directly in class. It opens `slides/index.html`, the HTML presenter with fullscreen mode, PowerPoint-style slide thumbnails, pen/highlighter, text boxes, and PDF download.
+- The lesson-root `index.html` is used directly in class. Complete lessons open `slides/index.html`, the HTML presenter with fullscreen mode, PowerPoint-style slide thumbnails, pen/highlighter, text boxes, and PDF download. Database-only draft lessons show a safe status page instead of redirecting to a missing presenter.
 - Default courseware language: Vietnamese (instructions/labels) + Simplified Chinese (target content) + pinyin (pronunciation). Avoid Traditional Chinese and English labels.
 - Do not generate final classroom/homework materials before teacher review approval.
 - Preserve original source page mapping for every slide, exercise, and homework question.
 - Student-facing materials must not contain teacher tips, internal review notes, or in-class exercise answers.
 - Durable project rules must be written into repo files, not only remembered in chat.
+- Images are lesson data. VP steps 1-8 must carry image metadata (`image_role`, `image_prompt`, `image_file`, `image_reuse_from`, `image_status`, `image_semantic_check`) for records that need visuals. Complete lessons must have `slides/assets/asset-manifest.json` and `exports/qa/asset-qa-report.json`.
 - Lesson types: `regular` (full lessons with vocab/grammar/text) and `pinyin` (pinyin-only lessons). Never call it "normal" — use "regular".
 - Pinyin content in regular lessons is SKIPPED — pinyin is handled by the separate pinyin lesson workflow.
+- **Pinyin course spec:** Read `docs/pinyin-lesson-database-spec.md` before any pinyin lesson work. The pinyin course is 6 independent lessons from AI Mandarin (source: `Pinyin lessons/`). Do NOT use 漢語教程 phonetics content. Pipeline config: `scripts/pipeline/configs/pinyin.json` (v2.0.0).
+- **Pinyin slide template:** Future pinyin decks reuse `output/pinyin/pinyin-01` as the template baseline. Do not build pinyin lessons from scratch. Keep the Pinyin Lesson 1 cover, objectives, dividers, concepts, tone, vocabulary, flashcard, practice, appendix/input setup, closing, image style, and presenter behavior; swap only lesson-specific text, sounds, rules, vocabulary, exercises, and images.
+- **Pinyin sequence and wording:** Pinyin decks use section dividers for concepts/review, initials, finals, sounds/chart, tones, vocabulary, review/practice, appendix/input setup when applicable, and closing. Do not create `Mục lục` or `Quy ước` classroom slides. Use `thanh điệu`, never `thanh điều`.
+- **Pinyin objectives/images/page labels:** Pinyin objective slides highlight taught initials/finals/rule anchors in bold red and adapt the main goal text by lesson. All pinyin cover/goal/divider/concept/tone/initials-finals/vocabulary/closing images use the same soft textbook/course style. Pinyin classroom slides do not show bottom-right `Trang ...` page indicators.
 - 課文 section is labeled "Bài đọc" in Vietnamese (not "Bài khóa").
 - Default game platform is Blooket. Only use Kahoot or Quizizz when Blooket cannot support the exercise format.
 - Slide design: Soft Classroom Presenter style (locked). See `reference/slide-style-guide.md`. Do NOT use dark themes, Oriental Fantasy, or 中國風.
@@ -43,7 +49,7 @@ Steps 1-8 are pre-review and can be automated. Steps 9-18 require teacher approv
 4. 頁碼標註: every item gets original source page mapping.
 5. 教學重組: restructure into the standard lesson sequence.
 6. 補充活動: generate warm-up, pinyin/vocab/grammar drills, text preview, culture supplement, discussion.
-6.5 生成詞彙插圖: generate vocabulary illustration images using `scripts/generate-vocab-images.py`, then feed `prompts.json` to the image-generation agent. Save final images as 16:9 PNGs in `slides/assets/vocab-images/`. Required style: soft textbook line-art, thin grey-blue outlines, muted pastel fills, white/pale-grey background, subtle shadows, no in-image text/letters/numbers/Chinese characters. Do not use circular icons, teal vector blobs, stickers, or chibi art.
+6.5 圖片資料化: for every classroom visual need, write image metadata into the database (`image_role`, `image_prompt`, `image_file`, `image_reuse_from`, `image_status`, `image_semantic_check`). Vocabulary prompts may still be generated with `scripts/generate-vocab-images.py`, but the source of truth is the database plus `slides/assets/asset-manifest.json`, not prompts alone. Required style: soft textbook line-art, thin grey-blue outlines, muted pastel fills, white/pale-grey background, subtle shadows, no in-image text/letters/numbers/Chinese characters. Do not use circular icons, teal vector blobs, stickers, or chibi art.
 7. 遊戲標記: mark activities suitable for Kahoot / Quizizz / Blooket.
 8. 寫入資料庫: output Google Sheets-ready database.
 9. 人工審閱: teacher checks content, pages, teaching order, and answer keys.
@@ -73,7 +79,7 @@ Rules:
 
 ## HTML Presenter — required for every lesson (non-negotiable)
 
-Every lesson root **must** contain an `index.html` launcher for class. Every lesson's `slides/` folder **must** contain an `index.html` presenter. The root launcher opens `slides/index.html` so teachers do not need to dig through slide source files during class.
+Every lesson root **must** contain an `index.html` launcher. Complete lessons open `slides/index.html` so teachers do not need to dig through slide source files during class. Database-only draft lessons must show a safe status page instead of redirecting to a missing `slides/index.html`.
 
 ### What index.html must include
 
@@ -100,13 +106,21 @@ Every lesson root **must** contain an `index.html` launcher for class. Every les
 
 ### Canonical index.html reference
 
-Copy from `output/book-1/lesson-01/slides/index.html` and update:
+Do not hand-edit copied presenter fields. After numbered slide HTML files exist, run:
+
+```bash
+npm run lesson:presenter -- output/book-1/lesson-XX
+npm run lesson:shells
+```
+
+This syncs from `output/book-1/lesson-01/slides/index.html` and updates:
 1. `<title>` and `<h1>` — lesson title
 2. `MANIFEST` array — list of slide filenames in order
 3. Subtitle and thumbnail total — slide count
-4. `pdf.save(...)` filename
+4. First iframe slide
+5. `pdf.save(...)` filename
 
-Also copy `output/book-1/lesson-01/index.html` into the new lesson root and update its visible lesson title.
+Run `npm run lesson:shells` after database generation too, so draft lesson roots stay openable and explain that the presenter is not ready yet.
 
 ### Keyboard shortcuts (same for all lessons)
 
@@ -149,7 +163,7 @@ Every individual slide HTML must reference them:
 ## Slide design rules (apply to ALL lessons unless explicitly changed)
 
 - Visible slide `.page-indicator` must show the printed textbook page, not the slide number or PDF page. `source_page` / `source_page_range` in lesson databases must mean printed textbook page; if extraction needs PDF positions, store those separately as `source_pdf_page` / `source_pdf_page_range`. Format visible labels as `Trang 1` or `Trang 1-2`. If a slide has no textbook source, omit `.page-indicator`. Do not show page indicators on generated classroom activity sections that do not appear directly in the textbook, especially `Luyện tập tổng hợp` and `Văn hóa bổ sung`. Do not add separate `.source` footers. The presenter navigation counter in `index.html` may still show slide position.
-- Use Lesson 10 `output/book-1/lesson-10/slides/01-cover.html` as the canonical cover template for all future lessons. Reuse the cover layout and visual language; only replace lesson number, Chinese/pinyin title, Vietnamese title, topic chips, and topic image.
+- Use Lesson 10 `output/book-1/lesson-10/slides/01-cover.html` as the canonical cover template for all future lessons. Reuse the cover layout and visual language; only replace lesson number, Chinese/pinyin title, Vietnamese title, and topic image. Do not include the old three keyword/topic pills on cover slides. Keep the lesson badge (`BÀI N · 第N课`) at the larger cover size, about 16pt / 30% larger than the old 12pt badge.
 - Vocab slides use the Lesson 01 single-word template from `output/book-1/lesson-01/slides/05-vocab-ni.html`: centered vertical stack with rectangular 16:9 image frame, pinyin, large Simplified Chinese character, Vietnamese meaning, hán việt, and Vietnamese word type.
 - Vocabulary divider slides use the Lesson 01 page 04 image pattern: soft textbook desk scene with an open book. The book has only `汉` on the left page and `语` on the right page, placed inside the page margins. This generic `汉语` image can be reused across lessons. Do not add random Chinese filler or extra generated text.
 - Use the same Lesson 01 divider templates across all lessons by default. Only replace page numbers, counts, and lesson-theme images when Adam explicitly asks for that lesson.
@@ -169,8 +183,12 @@ Every individual slide HTML must reference them:
 - Prefer simple interactive slide/webapp practice when useful: one multiple-choice question per slide, clickable options, success feedback for correct answers, and a try-again prompt for wrong answers.
 - Hanzi-writing slides must reuse Lesson 01's title, layout, method, and HanziWriter stroke animation. Do not use static characters in place of animation. Use Lesson 01 slowed timing: `strokeAnimationSpeed: 0.575` and `delayBetweenStrokes: 360`, unless Adam changes the Lesson 01 template itself.
 - VP steps 1-8 must write lesson structure/activity/database metadata that already follows the cover, divider, activity-design, Simplified Chinese, pinyin, image, density, and hanzi-writing rules. Do not defer these rules to manual slide cleanup.
+- Build image manifests and run asset QA for complete lessons:
+  - `npm run assets:manifest -- output/book-1/lesson-XX`
+  - `npm run assets:qa -- output/book-1/lesson-XX`
+  - Use `npm run assets:replace -- --lesson output/book-1/lesson-XX --record V001 --image /path/to/new.png` for vocabulary image replacement.
 
-## Lesson 01 slide sequence (55 slides)
+## Lesson 01 slide sequence (56 slides)
 
 | # | File | Content |
 |---|------|---------|
@@ -184,10 +202,11 @@ Every individual slide HTML must reference them:
 | 29 | 29-divider-comprehensive | Divider: Luyện tập tổng hợp / 综合练习 |
 | 30–36 | 30-practice-flashcard-ni → 36-practice-negation | Flashcard + số + biến điệu 不 |
 | 37–38 | 37-divider-text, 38-dialogue | Bài đọc: 你好 hội thoại |
-| 39–49 | 39-stroke-yi → 49-stroke-hao | Tập viết 11 chữ Hán |
-| 50–52 | 50-divider-supplement → 52-number-gestures | Văn hóa bổ sung |
-| 53–54 | 53-divider-homework, 54-exercises-list | Bài tập về nhà |
-| 55 | 55-closing | Kết thúc |
+| 39 | 39-divider-writing | Divider: Tập viết chữ Hán / 写汉字 |
+| 40–50 | 40-stroke-yi → 50-stroke-hao | Tập viết 11 chữ Hán |
+| 51–53 | 51-divider-supplement → 53-number-gestures | Văn hóa bổ sung |
+| 54–55 | 54-divider-homework, 55-exercises-list | Bài tập về nhà |
+| 56 | 56-closing | Kết thúc |
 
 ## Reuse for new lessons and course types
 
@@ -196,7 +215,8 @@ This system is designed to produce slides and PDFs for any lesson or course type
 **Adding a new regular lesson:**
 1. Run `python scripts/run_pipeline.py --lesson-type regular --lesson-id lesson-XX ...` to generate the database.
 2. Generate slides driven by the database JSON (fine-tune per lesson after initial generation).
-3. Verify the lesson-root `index.html` opens `slides/index.html`, then verify thumbnail sidebar and presentation hover behavior.
+3. After numbered slide HTML files exist, run `npm run lesson:presenter -- output/book-1/lesson-XX` and `npm run lesson:shells`.
+4. Verify the lesson-root `index.html` opens `slides/index.html`, then verify thumbnail sidebar and presentation hover behavior.
 
 **Adding a new lesson type (e.g. conversation, grammar-focus, culture):**
 Drop a new JSON config in `scripts/pipeline/configs/` following `_schema.json`. No code changes needed.
@@ -210,7 +230,7 @@ Drop a new JSON config in `scripts/pipeline/configs/` following `_schema.json`. 
 **Output path convention:** `output/book-{N}/lesson-{NN}/` or `output/book-{N}/pinyin-{NN}/`
 
 Each lesson root must stay clean:
-- `index.html` opens the classroom presenter.
+- `index.html` opens the classroom presenter when it exists; otherwise it shows a safe draft status page.
 - `slides/` contains editable slide source files and runtime assets.
 - `database/` contains review data.
 - `exports/final/` contains clean PDF backups.
@@ -222,4 +242,4 @@ Each lesson root must stay clean:
 - VP Lesson 01 database: `output/book-1/lesson-01/database/`
   - `03_lesson_structure.csv` — canonical slide sequence with file names
   - `vp_lesson_01_database.json` — full content database
-- VP Pinyin 01 database: `output/book-1/pinyin-01/database/`
+- VP Pinyin 01 database: `output/pinyin/pinyin-01/database/`

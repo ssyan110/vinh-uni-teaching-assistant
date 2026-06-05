@@ -1,0 +1,60 @@
+record_id,source_page,source_pdf_page,source_page_range,source_pdf_page_range,section,record_type,title_vi,title_zh,chinese_simplified,pinyin,vietnamese,english,raw_source_text,teaching_order,classroom_visibility
+T001,46,64,46-47,64-65,Bài đọc,text,Tôi học tiếng Hán,我学习汉语,"麦克：请问，你贵姓？
+张东：我姓张。
+麦克：你叫什么名字？
+张东：我叫张东。
+麦克：你是哪国人？
+张东：我是中国人。你是哪国人？
+麦克：我是美国人。
+张东：你学习什么？
+麦克：我学习汉语。你呢？
+张东：我学习英语。","Màikè: qǐngwèn, nǐ guìxìng?
+Zhāng Dōng: wǒ xìng Zhāng.
+Màikè: nǐ jiào shénme míngzi?
+Zhāng Dōng: wǒ jiào Zhāng Dōng.
+Màikè: nǐ shì nǎ guó rén?
+Zhāng Dōng: wǒ shì Zhōngguó rén. nǐ shì nǎ guó rén?
+Màikè: wǒ shì Měiguó rén.
+Zhāng Dōng: nǐ xuéxí shénme?
+Màikè: wǒ xuéxí Hànyǔ. nǐ ne?
+Zhāng Dōng: wǒ xuéxí Yīngyǔ.","Màikè: Xin hỏi, quý họ?
+Zhāng Dōng: Tôi họ Trương.
+Màikè: Bạn tên gì?
+Zhāng Dōng: Tôi tên Trương Đông.
+Màikè: Bạn là người nước nào?
+Zhāng Dōng: Tôi là người Trung Quốc. Bạn là người nước nào?
+Màikè: Tôi là người Mỹ.
+Zhāng Dōng: Bạn học gì?
+Màikè: Tôi học tiếng Hán. Còn bạn?
+Zhāng Dōng: Tôi học tiếng Anh.","Mike: May I ask, what is your surname?
+Zhang Dong: My surname is Zhang.
+Mike: What is your name?
+Zhang Dong: My name is Zhang Dong.
+Mike: What country are you from?
+Zhang Dong: I am Chinese. What country are you from?
+Mike: I am American.
+Zhang Dong: What do you study?
+Mike: I study Chinese. And you?
+Zhang Dong: I study English.",课文(一) 我学习汉语: 请问你贵姓？我姓张。你叫什么名字？我叫张东。你是哪国人？我是中国人。你是哪国人？我是美国人。你学习什么？我学习汉语。你呢？我学习英语。,13,student_visible
+V001,48,66,48,66,Từ vựng,vocabulary,,,请问,qǐngwèn,xin hỏi,may I ask; excuse me,请问 (动) qǐngwèn (thỉnh vấn) Excuse me xin hỏi,1,student_visible
+V002,48,66,48,66,Từ vựng,vocabulary,,,贵姓,guìxìng,quý họ (kính ngữ hỏi họ),your surname (polite),贵姓 guìxìng (quý tính) May I know your name? quý danh,2,student_visible
+V003,48,66,48,66,Từ vựng,vocabulary,,,姓,xìng,họ (mang họ),surname; to be surnamed,姓 (动/名) xìng (tính) family name họ,3,student_visible
+V004,48,66,48,66,Từ vựng,vocabulary,,,他,tā,"anh ấy, ông ấy",he; him,他 (代) tā (tha) he; him anh ấy,4,student_visible
+V005,48,66,48,66,Từ vựng,vocabulary,,,她,tā,"cô ấy, bà ấy",she; her,她 (代) tā (tha) she; her cô ấy,5,student_visible
+V006,48,66,48,66,Từ vựng,vocabulary,,,哪,nǎ,nào,which; what,哪 (代) nǎ (na) which; where nào,6,student_visible
+V007,48,66,48-49,66-67,Từ vựng,vocabulary,,,国,guó,"nước, quốc gia",country; nation,国 (名) guó (quốc) country; nationality quốc gia,7,student_visible
+V008,49,67,49,67,Từ vựng,vocabulary,,,人,rén,người,person; people,人 (名) rén (nhân) human being; man (or woman) người,8,student_visible
+V009,49,67,49,67,Từ vựng,vocabulary,,,中国,Zhōngguó,Trung Quốc,China,中国 (专名) Zhōngguó (Trung Quốc) China Trung Quốc,9,student_visible
+V010,49,67,49,67,Từ vựng,vocabulary,,,美国,Měiguó,nước Mỹ,the United States; USA,美国 (专名) Měiguó (Mỹ quốc) the United States nước Mỹ,10,student_visible
+V011,49,67,49,67,Từ vựng,vocabulary,,,什么,shénme,"gì, cái gì",what,什么 (代) shénme (thập ma) what cái gì,11,student_visible
+V012,49,67,49,67,Từ vựng,vocabulary,,,汉语,Hànyǔ,tiếng Hán (tiếng Trung),Chinese language,汉语 (名) Hànyǔ (Hán ngữ) Chinese language tiếng Hán,12,student_visible
+V013,50,68,50,68,Từ vựng,vocabulary,,,朋友,péngyou,bạn bè,friend,朋友 (名) péngyou (bằng hữu) friend bạn bè,13,student_visible
+V014,48,66,48,66,Từ vựng,vocabulary,,,名字,míngzi,tên,name; given name,名字 (名) míngzi (danh tự) name tên,14,student_visible
+V015,48,66,48,66,Từ vựng,vocabulary,,,叫,jiào,"tên là, gọi là",to be called; to call,"叫 (动) jiào (khiếu) to call; to name tên là, gọi",15,student_visible
+V016,48,66,48,66,Từ vựng,vocabulary,,,认识,rènshi,"quen biết, nhận ra",to know (a person); to recognize,认识 (动) rènshi (nhận thức) to know; to meet quen biết,16,student_visible
+G001,50,68,50,68,Ngữ pháp,grammar,Đại từ nghi vấn “哪” (nào),疑问代词“哪”,疑问代词“哪”用来询问具体的对象。例如：你是哪国人？他是哪国人？,"yíwèn dàicí ""nǎ"" yònglái xúnwèn jùtǐ de duìxiàng.","""哪"" (nǎ) nghĩa là ""nào"", dùng để hỏi về một đối tượng cụ thể trong nhóm. Khi hỏi quốc tịch, ta nói: 你是哪国人？ (Bạn là người nước nào?). Trong tiếng Việt giống hỏi ""nào"" — chọn một trong nhiều.",The interrogative pronoun 哪 (nǎ) means 'which' and is used to ask about a specific object within a group. Example: 你是哪国人？ (Which country are you from?),注释: 疑问代词“哪” Interrogative pronoun 哪 — 你是哪国人？,17,student_visible
+G002,50,68,50,68,Ngữ pháp,grammar,Đại từ nghi vấn “什么” (gì),疑问代词“什么”,疑问代词“什么”用来询问不确定的事物。例如：你叫什么名字？你学习什么？,"yíwèn dàicí ""shénme"" yònglái xúnwèn bù quèdìng de shìwù.","""什么"" (shénme) nghĩa là ""gì / cái gì"", dùng để hỏi khi chưa biết đó là gì. Ví dụ: 你叫什么名字？ (Bạn tên gì?) / 你学习什么？ (Bạn học gì?). Giống cách tiếng Việt hỏi ""cái gì / gì"". Câu hỏi với ""什么"" không dùng ""吗"".",The interrogative pronoun 什么 (shénme) means 'what' and is used to ask about unknown things. Examples: 你叫什么名字？ (What is your name?) / 你学习什么？ (What do you study?),注释: 疑问代词“什么” Interrogative pronoun 什么 — 你叫什么名字？你学习什么？,18,student_visible
+G003,50,68,50,68,Ngữ pháp,grammar,Câu có vị ngữ là động từ (S + V + O),动词谓语句,汉语的动词谓语句的基本语序是：主语 + 动词 + 宾语。例如：我学习汉语。他认识张东。,Hànyǔ de dòngcí wèiyǔ jù de jīběn yǔxù shì: zhǔyǔ + dòngcí + bīnyǔ.,"Câu tiếng Trung có vị ngữ là động từ theo thứ tự: Chủ ngữ + Động từ + Tân ngữ. Giống tiếng Việt: ""Tôi học tiếng Hán"" = 我学习汉语. Đơn giản: ai + làm gì + cái gì. Ví dụ: 我学习汉语 (Tôi học tiếng Hán), 他认识张东 (Anh ấy quen Trương Đông).",The basic word order for sentences with a verbal predicate in Chinese is: Subject + Verb + Object. Example: 我学习汉语 (I study Chinese). 他认识张东 (He knows Zhang Dong).,注释: 动词谓语句 Sentences with verbal predicate — 我学习汉语。他认识张东。,19,student_visible
+PN001,50,68,50,68,Tên riêng,proper_name,,,张东,Zhāng Dōng,Trương Đông (tên người Trung Quốc),Zhang Dong (name of a Chinese person),专名: 张东 Zhāng Dōng — Zhang Dong (name of a Chinese) Trương Đông,,student_visible
+PN002,50,68,50,68,Tên riêng,proper_name,,,麦克,Màikè,Mike (tên người nước ngoài),Mike (a foreign name),专名: 麦克 Màikè — Mike Mike,,student_visible
+CUL001,50,68,50,68,Văn hóa bổ sung,culture_note,Họ tên người Trung Quốc,中国人的名字,中国人的名字分姓和名两部分，姓在前，名在后。姓多为一个汉字，少数为两个汉字；名有两个汉字的，也有一个汉字的。例如：张东（张 = 姓，东 = 名），王卫国（王 = 姓，卫国 = 名）。,"Zhōngguó rén de míngzi fēn xìng hé míng liǎng bùfen, xìng zài qián, míng zài hòu. xìng duō wéi yí ge Hànzì, shǎoshù wéi liǎng ge Hànzì; míng yǒu liǎng ge Hànzì de, yě yǒu yí ge Hànzì de.","Tên người Trung Quốc gồm hai phần: họ và tên. Họ đứng trước, tên đứng sau. Đa số họ chỉ có một chữ Hán (ví dụ: 张, 王, 李), một số ít họ có hai chữ (ví dụ: 欧阳). Tên có thể có một hoặc hai chữ Hán. Ví dụ: 张东 (họ Trương, tên Đông), 王卫国 (họ Vương, tên Vệ Quốc).","Chinese names have two parts: surname (family name) and given name. The surname always comes first. Most surnames are one character, few are two. Given names can be one or two characters. Examples: 张东 (Zhang = surname, Dong = given name), 王卫国 (Wang = surname, Weiguo = given name).",注释: 中国人的名字 Chinese names — 姓在前名在后，姓多为一个汉字，名有一两个汉字,,student_visible

@@ -1,0 +1,59 @@
+record_id,source_page,source_pdf_page,source_page_range,source_pdf_page_range,section,record_type,title_vi,title_zh,chinese_simplified,pinyin,vietnamese,english,raw_source_text,teaching_order,classroom_visibility
+T001,63,81,63-64,81-82,Bài đọc,text,Một cân táo bao nhiêu tiền,苹果一斤多少钱,"A：你买什么？
+B：我买水果。苹果一斤多少钱？
+A：三块。
+B：三块？太贵了。两块五吧。
+A：你要几斤？
+B：我买五斤。
+A：还要别的吗？
+B：橘子怎么卖？
+A：两块。
+B：要两斤。一共多少钱？
+A：一共十六块五。你给十六块吧。
+B：给你钱。
+A：这是五十，找您三十四块。","A: nǐ mǎi shénme?
+B: wǒ mǎi shuǐguǒ. píngguǒ yì jīn duōshao qián?
+A: sān kuài.
+B: sān kuài? tài guì le. liǎng kuài wǔ ba.
+A: nǐ yào jǐ jīn?
+B: wǒ mǎi wǔ jīn.
+A: hái yào biéde ma?
+B: júzi zěnme mài?
+A: liǎng kuài.
+B: yào liǎng jīn. yígòng duōshao qián?
+A: yígòng shíliù kuài wǔ. nǐ gěi shíliù kuài ba.
+B: gěi nǐ qián.
+A: zhè shì wǔshí, zhǎo nín sānshísì kuài.","A: Bạn mua gì?
+B: Tôi mua trái cây. Táo một cân bao nhiêu tiền?
+A: Ba đồng.
+B: Ba đồng? Đắt quá. Hai đồng năm nhé.
+A: Bạn muốn mấy cân?
+B: Tôi mua năm cân.
+A: Còn muốn gì khác không?
+B: Quýt bán thế nào?
+A: Hai đồng.
+B: Lấy hai cân. Tất cả bao nhiêu tiền?
+A: Tất cả mười sáu đồng năm. Bạn đưa mười sáu đồng nhé.
+B: Đưa bạn tiền.
+A: Đây là năm mươi, trả lại bạn ba mươi bốn đồng.",A: What do you buy? B: I buy fruit...,课文 苹果一斤多少钱 full dialogue,19,student_visible
+V001,64,82,64,82,Từ vựng,vocabulary,,,买,mǎi,mua,to buy,买 (动) mǎi (mãi) to buy mua,1,student_visible
+V002,64,82,64,82,Từ vựng,vocabulary,,,水果,shuǐguǒ,"trái cây, hoa quả",fruit,"水果 (名) shuǐguǒ (thủy quả) fruit trái cây, hoa quả",2,student_visible
+V003,64,82,64,82,Từ vựng,vocabulary,,,苹果,píngguǒ,táo,apple,苹果 (名) píngguǒ (tần quả) apple táo,3,student_visible
+V004,64,82,64,82,Từ vựng,vocabulary,,,斤,jīn,cân (500g),jin (unit of weight),斤 (量) jīn (cân) jin (unit of weight) cân (500g),4,student_visible
+V005,65,83,65,83,Từ vựng,vocabulary,,,多少,duōshao,bao nhiêu,how much/many,多少 (代) duōshao (đa thiểu) how much/many bao nhiêu,5,student_visible
+V006,65,83,65,83,Từ vựng,vocabulary,,,块,kuài,đồng (đơn vị tiền TQ),kuai/yuan,块 (量) kuài (khối) kuai/yuan đồng (đơn vị tiền TQ),6,student_visible
+V007,64,82,64,82,Từ vựng,vocabulary,,,贵,guì,đắt,expensive,贵 (形) guì (quý) expensive đắt,7,student_visible
+V008,64,82,64,82,Từ vựng,vocabulary,,,了,le,rồi (trợ từ ngữ khí),(modal particle),了 (助) le (liễu) (modal particle) rồi (trợ từ ngữ khí),8,student_visible
+V009,64,82,64,82,Từ vựng,vocabulary,,,吧,ba,"đi, nhé (trợ từ gợi ý)",(suggestion particle),"吧 (助) ba (ba) (suggestion particle) đi, nhé (trợ từ gợi ý)",9,student_visible
+V010,65,83,65,83,Từ vựng,vocabulary,,,还,hái,"còn, vẫn còn",still; also,"还 (副) hái (hoàn) still; also còn, vẫn còn",10,student_visible
+V011,65,83,65,83,Từ vựng,vocabulary,,,别的,biéde,cái khác,other,别的 (代) biéde (biệt đích) other cái khác,11,student_visible
+V012,65,83,65,83,Từ vựng,vocabulary,,,橘子,júzi,quýt,orange/tangerine,橘子 (名) júzi (quất tử) orange/tangerine quýt,12,student_visible
+V013,65,83,65,83,Từ vựng,vocabulary,,,怎么,zěnme,thế nào,how,怎么 (代) zěnme (tẩm ma) how thế nào,13,student_visible
+V014,65,83,65,83,Từ vựng,vocabulary,,,卖,mài,bán,to sell,卖 (动) mài (mại) to sell bán,14,student_visible
+V015,65,83,65,83,Từ vựng,vocabulary,,,一共,yígòng,"tất cả, tổng cộng",altogether,"一共 (副) yígòng (nhất cộng) altogether tất cả, tổng cộng",15,student_visible
+V016,65,83,65,83,Từ vựng,vocabulary,,,给,gěi,"cho, đưa",to give,"给 (动) gěi (cấp) to give cho, đưa",16,student_visible
+V017,65,83,65,83,Từ vựng,vocabulary,,,找,zhǎo,trả lại tiền thừa,to give change,找 (动) zhǎo (trảo) to give change trả lại tiền thừa,17,student_visible
+V018,65,83,65,83,Từ vựng,vocabulary,,,毛,máo,hào (= 0.1 đồng),mao (0.1 yuan),毛 (量) máo (mao) mao (0.1 yuan) hào (= 0.1 đồng),18,student_visible
+G001,65,83,65,83,Ngữ pháp,grammar,"So sánh ""多少"" và ""几""",多少 vs 几,"""多少""和""几""都用来询问数量。""几""用于10以下，后面必须加量词。""多少""用于数目较大或不确定，后面可以不加量词。","""duōshao"" hé ""jǐ"" dōu yònglái xúnwèn shùliàng.","""多少"" và ""几"" đều dùng hỏi số lượng. ""几"" hỏi số nhỏ (dưới 10), bắt buộc có lượng từ. ""多少"" hỏi số lớn, có thể không có lượng từ.",Both ask about quantity. 几 for small numbers with measure word. 多少 for larger numbers.,注释: 多少 vs 几,19,student_visible
+G002,65,83,65,83,Ngữ pháp,grammar,"Cấu trúc ""太...了"" (quá...rồi)",太...了,"""太...了""表示程度过高。例如：太贵了（太 + 形容词 + 了）。","""tài...le"" biǎoshì chéngdù guò gāo.","""太...了"" biểu thị mức độ quá cao. Cấu trúc: 太 + tính từ + 了. Ví dụ: 太贵了 (Đắt quá).",太...了 expresses excessive degree.,注释: 太...了 — 太贵了。,20,student_visible
+G003,65,83,65,83,Ngữ pháp,grammar,"Trợ từ ngữ khí ""吧"" (đi/nhé)","语气助词""吧""","语气助词""吧""用在句末，表示建议、请求或商量的语气。例如：两块五吧。你给十六块吧。","yǔqì zhùcí ""ba"" yòng zài jù mò.","""吧"" đặt cuối câu, biểu thị ngữ khí đề nghị hoặc thương lượng. Giống ""đi/nhé"" trong tiếng Việt.",吧 at sentence end expresses suggestion or negotiation.,"注释: 语气助词""吧"" — 两块五吧。",21,student_visible

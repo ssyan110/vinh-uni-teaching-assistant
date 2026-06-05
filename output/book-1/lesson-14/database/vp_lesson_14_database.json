@@ -1,0 +1,589 @@
+{
+  "metadata": {
+    "lesson_type": "regular",
+    "pipeline_config_version": "1.0.0",
+    "generated_at": "2026-06-04T10:00:00+00:00",
+    "vp_scope": "steps 1-8",
+    "steps_completed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "steps_not_implemented": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "lesson_id": "lesson-14",
+    "source_pdf": "Giáo trình full/[hanka.edu.vn] - GT Hán Ngữ 1 (Tập 1 - Quyển thượng).pdf",
+    "source_pdf_page_range": "142-154",
+    "textbook_page_range": "124-136",
+    "finalized": false
+  },
+  "lesson_list": [
+    {
+      "lesson_id": "lesson-14",
+      "lesson_title": "Bài 14 · Xe của bạn mới hay cũ",
+      "lesson_type": "regular",
+      "status": "draft_for_teacher_review"
+    }
+  ],
+  "content_items": [
+    {
+      "record_id": "T001",
+      "source_page": 124,
+      "source_pdf_page": 142,
+      "section": "Bài đọc",
+      "record_type": "text",
+      "chinese_simplified": "(dialogue)",
+      "teaching_order": 13,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V001",
+      "source_page": 126,
+      "source_pdf_page": 144,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "车",
+      "pinyin": "chē",
+      "vietnamese": "xe",
+      "english": "car",
+      "word_type_vi": "danh từ",
+      "word_type_abbr": "名",
+      "han_viet": "xa",
+      "sample_sentence_pinyin": "nǐ de chē xīn.",
+      "sample_sentence_zh": "你的车新。",
+      "sample_sentence_vi": "Xe bạn mới.",
+      "teaching_order": 1,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V002",
+      "source_page": 126,
+      "source_pdf_page": 144,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "还是",
+      "pinyin": "háishi",
+      "vietnamese": "hay",
+      "english": "or (Q)",
+      "word_type_vi": "liên từ",
+      "word_type_abbr": "连",
+      "han_viet": "hoàn thị",
+      "sample_sentence_pinyin": "xīn háishi jiù?",
+      "sample_sentence_zh": "新还是旧？",
+      "sample_sentence_vi": "Mới hay cũ?",
+      "teaching_order": 2,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V003",
+      "source_page": 126,
+      "source_pdf_page": 144,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "辆",
+      "pinyin": "liàng",
+      "vietnamese": "chiếc xe",
+      "english": "(MW)",
+      "word_type_vi": "lượng từ",
+      "word_type_abbr": "量",
+      "han_viet": "lượng",
+      "sample_sentence_pinyin": "yí liàng chē.",
+      "sample_sentence_zh": "一辆车。",
+      "sample_sentence_vi": "Một chiếc xe.",
+      "teaching_order": 3,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V004",
+      "source_page": 126,
+      "source_pdf_page": 144,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "自行车",
+      "pinyin": "zìxíngchē",
+      "vietnamese": "xe đạp",
+      "english": "bicycle",
+      "word_type_vi": "danh từ",
+      "word_type_abbr": "名",
+      "han_viet": "tự hành xa",
+      "sample_sentence_pinyin": "yǒu zìxíngchē.",
+      "sample_sentence_zh": "有自行车。",
+      "sample_sentence_vi": "Có xe đạp.",
+      "teaching_order": 4,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V005",
+      "source_page": 126,
+      "source_pdf_page": 144,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "小",
+      "pinyin": "xiǎo",
+      "vietnamese": "nhỏ",
+      "english": "small",
+      "word_type_vi": "tính từ",
+      "word_type_abbr": "形",
+      "han_viet": "tiểu",
+      "sample_sentence_pinyin": "hěn xiǎo.",
+      "sample_sentence_zh": "很小。",
+      "sample_sentence_vi": "Rất nhỏ.",
+      "teaching_order": 5,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V006",
+      "source_page": 126,
+      "source_pdf_page": 144,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "漂亮",
+      "pinyin": "piàoliang",
+      "vietnamese": "đẹp",
+      "english": "pretty",
+      "word_type_vi": "tính từ",
+      "word_type_abbr": "形",
+      "han_viet": "phiêu lượng",
+      "sample_sentence_pinyin": "hěn piàoliang.",
+      "sample_sentence_zh": "很漂亮。",
+      "sample_sentence_vi": "Rất đẹp.",
+      "teaching_order": 6,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V007",
+      "source_page": 126,
+      "source_pdf_page": 144,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "颜色",
+      "pinyin": "yánsè",
+      "vietnamese": "màu sắc",
+      "english": "color",
+      "word_type_vi": "danh từ",
+      "word_type_abbr": "名",
+      "han_viet": "nhan sắc",
+      "sample_sentence_pinyin": "shénme yánsè?",
+      "sample_sentence_zh": "什么颜色？",
+      "sample_sentence_vi": "Màu gì?",
+      "teaching_order": 7,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V008",
+      "source_page": 126,
+      "source_pdf_page": 144,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "蓝",
+      "pinyin": "lán",
+      "vietnamese": "xanh dương",
+      "english": "blue",
+      "word_type_vi": "tính từ",
+      "word_type_abbr": "形",
+      "han_viet": "lam",
+      "sample_sentence_pinyin": "lán de.",
+      "sample_sentence_zh": "蓝的。",
+      "sample_sentence_vi": "Cái xanh.",
+      "teaching_order": 8,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V009",
+      "source_page": 126,
+      "source_pdf_page": 144,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "绿",
+      "pinyin": "lǜ",
+      "vietnamese": "xanh lá",
+      "english": "green",
+      "word_type_vi": "tính từ",
+      "word_type_abbr": "形",
+      "han_viet": "lục",
+      "sample_sentence_pinyin": "lǜ de piàoliang.",
+      "sample_sentence_zh": "绿的漂亮。",
+      "sample_sentence_vi": "Xanh lá đẹp.",
+      "teaching_order": 9,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V010",
+      "source_page": 126,
+      "source_pdf_page": 144,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "黄",
+      "pinyin": "huáng",
+      "vietnamese": "vàng",
+      "english": "yellow",
+      "word_type_vi": "tính từ",
+      "word_type_abbr": "形",
+      "han_viet": "hoàng",
+      "sample_sentence_pinyin": "huáng de dà.",
+      "sample_sentence_zh": "黄的大。",
+      "sample_sentence_vi": "Cái vàng to.",
+      "teaching_order": 10,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V011",
+      "source_page": 126,
+      "source_pdf_page": 144,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "多大",
+      "pinyin": "duōdà",
+      "vietnamese": "mấy tuổi",
+      "english": "how old",
+      "word_type_vi": "cụm từ",
+      "word_type_abbr": "—",
+      "han_viet": "đa đại",
+      "sample_sentence_pinyin": "nǐ duōdà?",
+      "sample_sentence_zh": "你多大？",
+      "sample_sentence_vi": "Mấy tuổi?",
+      "teaching_order": 11,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "V012",
+      "source_page": 126,
+      "source_pdf_page": 144,
+      "section": "Từ vựng",
+      "record_type": "vocabulary",
+      "chinese_simplified": "岁",
+      "pinyin": "suì",
+      "vietnamese": "tuổi",
+      "english": "years old",
+      "word_type_vi": "lượng từ",
+      "word_type_abbr": "量",
+      "han_viet": "tuế",
+      "sample_sentence_pinyin": "èrshí suì.",
+      "sample_sentence_zh": "二十岁。",
+      "sample_sentence_vi": "20 tuổi.",
+      "teaching_order": 12,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "G001",
+      "source_page": 128,
+      "source_pdf_page": 146,
+      "section": "Ngữ pháp",
+      "record_type": "grammar",
+      "chinese_simplified": "还是 Q",
+      "vietnamese": "Câu hỏi chọn lựa",
+      "sample_sentence_pinyin": "xīn háishi jiù?",
+      "teaching_order": 14,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "G002",
+      "source_page": 128,
+      "source_pdf_page": 146,
+      "section": "Ngữ pháp",
+      "record_type": "grammar",
+      "chinese_simplified": "多+Adj",
+      "vietnamese": "Hỏi với 多",
+      "sample_sentence_pinyin": "nǐ duōdà?",
+      "teaching_order": 15,
+      "classroom_visibility": "student_visible"
+    },
+    {
+      "record_id": "G003",
+      "source_page": 128,
+      "source_pdf_page": 146,
+      "section": "Ngữ pháp",
+      "record_type": "grammar",
+      "chinese_simplified": "了 change",
+      "vietnamese": "了 thay đổi",
+      "sample_sentence_pinyin": "èrshí suì le.",
+      "teaching_order": 16,
+      "classroom_visibility": "student_visible"
+    }
+  ],
+  "lesson_structure": [
+    {
+      "module_order": 1,
+      "module_id": "cover",
+      "module_name_vi": "Trang bìa",
+      "status": "planned"
+    },
+    {
+      "module_order": 2,
+      "module_id": "objectives",
+      "module_name_vi": "Mục tiêu",
+      "status": "planned"
+    },
+    {
+      "module_order": 3,
+      "module_id": "warmup",
+      "module_name_vi": "Khởi động",
+      "status": "planned"
+    },
+    {
+      "module_order": 4,
+      "module_id": "vocabulary",
+      "module_name_vi": "Từ vựng",
+      "status": "planned"
+    },
+    {
+      "module_order": 5,
+      "module_id": "vocabulary_practice",
+      "module_name_vi": "Tập từ vựng",
+      "status": "planned"
+    },
+    {
+      "module_order": 6,
+      "module_id": "vocab_summary",
+      "module_name_vi": "Ôn tập",
+      "status": "planned"
+    },
+    {
+      "module_order": 7,
+      "module_id": "grammar",
+      "module_name_vi": "Ngữ pháp",
+      "status": "planned"
+    },
+    {
+      "module_order": 8,
+      "module_id": "comprehensive_practice",
+      "module_name_vi": "Luyện tập tổng hợp",
+      "status": "planned"
+    },
+    {
+      "module_order": 9,
+      "module_id": "text",
+      "module_name_vi": "Bài đọc",
+      "status": "planned"
+    },
+    {
+      "module_order": 10,
+      "module_id": "stroke_writing",
+      "module_name_vi": "Tập viết",
+      "status": "planned"
+    },
+    {
+      "module_order": 11,
+      "module_id": "culture",
+      "module_name_vi": "Văn hóa bổ sung",
+      "status": "planned"
+    },
+    {
+      "module_order": 12,
+      "module_id": "homework_intro",
+      "module_name_vi": "Bài tập về nhà",
+      "status": "planned"
+    }
+  ],
+  "supplemental_activities": [
+    {
+      "activity_id": "ACT001",
+      "activity_type": "warmup",
+      "title_vi": "Khởi động"
+    },
+    {
+      "activity_id": "ACT002",
+      "activity_type": "vocabulary_drill",
+      "title_vi": "Ghép từ vựng"
+    },
+    {
+      "activity_id": "ACT003",
+      "activity_type": "grammar_drill",
+      "title_vi": "Luyện ngữ pháp"
+    },
+    {
+      "activity_id": "ACT004",
+      "activity_type": "speaking_drill",
+      "title_vi": "Luyện nói"
+    }
+  ],
+  "game_suggestions": [
+    {
+      "game_id": "G001",
+      "platform": "Blooket",
+      "title_vi": "Ghép từ vựng"
+    },
+    {
+      "game_id": "G002",
+      "platform": "Blooket",
+      "title_vi": "Luyện ngữ pháp"
+    }
+  ],
+  "google_sheets_database": [
+    {
+      "lesson_id": "lesson-14",
+      "record_id": "T001",
+      "record_type": "text",
+      "chinese_simplified": "(dialogue)",
+      "pinyin": "",
+      "vietnamese": "",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-14",
+      "record_id": "V001",
+      "record_type": "vocabulary",
+      "chinese_simplified": "车",
+      "pinyin": "chē",
+      "vietnamese": "xe",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-14",
+      "record_id": "V002",
+      "record_type": "vocabulary",
+      "chinese_simplified": "还是",
+      "pinyin": "háishi",
+      "vietnamese": "hay",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-14",
+      "record_id": "V003",
+      "record_type": "vocabulary",
+      "chinese_simplified": "辆",
+      "pinyin": "liàng",
+      "vietnamese": "chiếc xe",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-14",
+      "record_id": "V004",
+      "record_type": "vocabulary",
+      "chinese_simplified": "自行车",
+      "pinyin": "zìxíngchē",
+      "vietnamese": "xe đạp",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-14",
+      "record_id": "V005",
+      "record_type": "vocabulary",
+      "chinese_simplified": "小",
+      "pinyin": "xiǎo",
+      "vietnamese": "nhỏ",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-14",
+      "record_id": "V006",
+      "record_type": "vocabulary",
+      "chinese_simplified": "漂亮",
+      "pinyin": "piàoliang",
+      "vietnamese": "đẹp",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-14",
+      "record_id": "V007",
+      "record_type": "vocabulary",
+      "chinese_simplified": "颜色",
+      "pinyin": "yánsè",
+      "vietnamese": "màu sắc",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-14",
+      "record_id": "V008",
+      "record_type": "vocabulary",
+      "chinese_simplified": "蓝",
+      "pinyin": "lán",
+      "vietnamese": "xanh dương",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-14",
+      "record_id": "V009",
+      "record_type": "vocabulary",
+      "chinese_simplified": "绿",
+      "pinyin": "lǜ",
+      "vietnamese": "xanh lá",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-14",
+      "record_id": "V010",
+      "record_type": "vocabulary",
+      "chinese_simplified": "黄",
+      "pinyin": "huáng",
+      "vietnamese": "vàng",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-14",
+      "record_id": "V011",
+      "record_type": "vocabulary",
+      "chinese_simplified": "多大",
+      "pinyin": "duōdà",
+      "vietnamese": "mấy tuổi",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-14",
+      "record_id": "V012",
+      "record_type": "vocabulary",
+      "chinese_simplified": "岁",
+      "pinyin": "suì",
+      "vietnamese": "tuổi",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-14",
+      "record_id": "G001",
+      "record_type": "grammar",
+      "chinese_simplified": "还是 Q",
+      "pinyin": "",
+      "vietnamese": "Câu hỏi chọn lựa",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-14",
+      "record_id": "G002",
+      "record_type": "grammar",
+      "chinese_simplified": "多+Adj",
+      "pinyin": "",
+      "vietnamese": "Hỏi với 多",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    },
+    {
+      "lesson_id": "lesson-14",
+      "record_id": "G003",
+      "record_type": "grammar",
+      "chinese_simplified": "了 change",
+      "pinyin": "",
+      "vietnamese": "了 thay đổi",
+      "teacher_review_status": "pending",
+      "generated_at": "2026-06-04T10:00:00+00:00"
+    }
+  ]
+}

@@ -1,4 +1,16 @@
-lesson_id,lesson_title,source_page_range,lesson_type,status,database_path
-lesson-01,第一课 · 你好 · Bài 1 · Xin chào,19-30,regular,finalized,output/book-1/lesson-01/database/
-lesson-02,第二课 · 汉语不太难 · Bài 2 · Tiếng Hán không khó lắm,31-36,regular,draft_for_teacher_review,output/book-1/lesson-02/database/
-lesson-10,第十课 · 他住哪儿 · Bài 10 · Anh ấy sống ở đâu?,76-85,regular,draft_for_teacher_review,output/book-1/lesson-10/database/
+lesson_id,lesson_title,source_page_range,pdf_page_range,lesson_type,status,database_path
+lesson-01,第一课 · 你好 · Bài 1 · Xin chào,1-12,19-30,regular,finalized,output/book-1/lesson-01/database/
+lesson-02,第二课 · 汉语不太难 · Bài 2 · Tiếng Hán không khó lắm,13-18,31-36,regular,draft_for_teacher_review,output/book-1/lesson-02/database/
+lesson-03,第三课 · 明天见 · Bài 3 · Ngày mai gặp lại,19-27,37-45,regular,draft_for_teacher_review,output/book-1/lesson-03/database/
+lesson-04,第四课 · 你去哪儿 · Bài 4 · Bạn đi đâu,28-36,46-54,regular,draft_for_teacher_review,output/book-1/lesson-04/database/
+lesson-05,第五课 · 这是王老师 · Bài 5 · Đây là thầy giáo Vương,37-45,55-63,regular,draft_for_teacher_review,output/book-1/lesson-05/database/
+lesson-06,第六课 · 我学习汉语 · Bài 6 · Tôi học tiếng Hán,46-55,64-73,regular,draft_for_teacher_review,output/book-1/lesson-06/database/
+lesson-07,第七课 · 你吃什么 · Bài 7 · Bạn ăn gì,56-62,74-80,regular,draft_for_teacher_review,output/book-1/lesson-07/database/
+lesson-08,第八课 · 苹果一斤多少钱 · Bài 8 · Một cân táo bao nhiêu tiền,63-69,81-87,regular,draft_for_teacher_review,output/book-1/lesson-08/database/
+lesson-09,第九课 · 我换人民币 · Bài 9 · Tôi đổi nhân dân tệ,70-75,88-93,regular,draft_for_teacher_review,output/book-1/lesson-09/database/
+lesson-10,第十课 · 他住哪儿 · Bài 10 · Anh ấy sống ở đâu?,76-85,94-103,regular,draft_for_teacher_review,output/book-1/lesson-10/database/
+lesson-11,第十一课 · 我们都是留学生 · Bài 11 · Chúng tôi đều là lưu học sinh,86-97,104-115,regular,draft_for_teacher_review,output/book-1/lesson-11/database/
+lesson-12,第十二课 · 你在哪儿学习 · Bài 12 · Bạn học ở đâu,98-109,116-127,regular,draft_for_teacher_review,output/book-1/lesson-12/database/
+lesson-13,第十三课 · 这是不是中药 · Bài 13 · Đây có phải là thuốc đông y không,110-123,128-141,regular,draft_for_teacher_review,output/book-1/lesson-13/database/
+lesson-14,第十四课 · 你的车是新的还是旧的 · Bài 14 · Xe của bạn mới hay cũ,124-136,142-154,regular,draft_for_teacher_review,output/book-1/lesson-14/database/
+lesson-15,第十五课 · 你们公司有多少职员 · Bài 15 · Công ty có bao nhiêu nhân viên,137-159,155-177,regular,draft_for_teacher_review,output/book-1/lesson-15/database/

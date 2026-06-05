@@ -49,7 +49,7 @@ npm run lesson1:watch
 | File | Purpose |
 |------|---------|
 | `index.html` | Main presenter runtime, launched by the lesson-root `../index.html` |
-| `01-cover.html` ... `55-closing.html` | Individual slide files (55 total, sequentially numbered) |
+| `01-cover.html` ... `56-closing.html` | Individual slide files (56 total, sequentially numbered) |
 | `README.md` | This file |
 
 ## Reusable Lesson 01 template rules

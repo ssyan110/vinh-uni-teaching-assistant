@@ -51,7 +51,7 @@ Materials are for Vietnamese universities by default:
 ```bash
 .venv/bin/python huashu-design/scripts/verify.py output/<slug>/index.html --slides <N> --output output/<slug>/screenshots --wait 3000
 node huashu-design/scripts/export_deck_pdf.mjs --slides output/<slug>/slides --out output/<slug>/<slug>.pdf --width 1280 --height 720
-node huashu-design/scripts/export_deck_pptx.mjs --slides output/<slug>/slides --out output/<slug>/<slug>-editable.pptx
+Deprecated: PPTX export is no longer part of this project workflow. Use the HTML presenter, and export clean PDF backup only after Adam confirms finalization.
 ```
 
 6. Verify PPTX slide count by opening the PPTX as a zip and counting `ppt/slides/slide*.xml`.
@@ -86,7 +86,7 @@ For `GT Hán Ngữ 1`, Lesson 1 (`第一课 · 你好`) was extracted from PDF p
 - For chips, use `<div class="pill"><p>text</p></div>`.
 - If grid rows have variable lengths, dynamically set `grid-template-columns: repeat(${row.length}, 1fr)` to avoid blank cells in HTML/PPTX.
 - Avoid CSS that Huashu's editable exporter cannot map reliably (heavy shadows, gradients, complex pseudo-elements for essential content).
-- If using local image/GIF assets whose filenames contain Chinese characters, `pptxgenjs`/Huashu may request URL-encoded names (e.g. `%E4%B8%80.gif`). Generate/copy both the raw Chinese filename and the percent-encoded filename so PPTX export can resolve media paths.
+- Deprecated PPTX note: older exports needed URL-encoded media filenames. Current lessons should keep image assets in the HTML presenter workflow and track them through `slides/assets/asset-manifest.json`.
 - For writing slides, local stroke-order GIFs are reliable for HTML/PDF; editable PPTX may embed the first frame/static media depending on exporter support. Keep the slide usable even if animation is flattened.
 
 ## Writing-stroke visuals

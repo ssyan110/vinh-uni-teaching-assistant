@@ -1,0 +1,20 @@
+record_id,source_page,source_pdf_page,section,record_type,chinese_simplified,pinyin,vietnamese,english,word_type_vi,word_type_abbr,han_viet,sample_sentence_pinyin,sample_sentence_zh,sample_sentence_vi,teaching_order,classroom_visibility
+T001,98,116,Bài đọc,text,(dialogue),,,,,,,,,,16,student_visible
+V001,100,118,Từ vựng,vocabulary,语言,yǔyán,ngôn ngữ,language,danh từ,名,ngữ ngôn,Běijīng Yǔyán Dàxué,北京语言大学,ĐH Ngôn ngữ BK,1,student_visible
+V002,100,118,Từ vựng,vocabulary,大学,dàxué,đại học,university,danh từ,名,đại học,zài dàxué xuéxí,在大学学习,học ở đại học,2,student_visible
+V003,100,118,Từ vựng,vocabulary,怎么样,zěnmeyàng,thế nào,how about,đại từ,代,tẩm ma dạng,lǎoshī zěnmeyàng?,老师怎么样？,Thầy thế nào?,3,student_visible
+V004,100,118,Từ vựng,vocabulary,觉得,juéde,cảm thấy,to feel,động từ,动,giác đắc,wǒ juéde hěn nán.,我觉得很难。,Tôi thấy rất khó.,4,student_visible
+V005,100,118,Từ vựng,vocabulary,语法,yǔfǎ,ngữ pháp,grammar,danh từ,名,ngữ pháp,yǔfǎ bú tài nán.,语法不太难。,NP không khó lắm.,5,student_visible
+V006,100,118,Từ vựng,vocabulary,难,nán,khó,difficult,tính từ,形,nan,Hànyǔ nán bu nán?,汉语难不难？,TH khó không?,6,student_visible
+V007,100,118,Từ vựng,vocabulary,听,tīng,nghe,to listen,động từ,动,thính,tīng bǐjiào róngyì.,听比较容易。,Nghe khá dễ.,7,student_visible
+V008,100,118,Từ vựng,vocabulary,说,shuō,nói,to speak,động từ,动,thuyết,shuō de hěn hǎo.,说得很好。,Nói rất giỏi.,8,student_visible
+V009,100,118,Từ vựng,vocabulary,比较,bǐjiào,tương đối,comparatively,phó từ,副,tỉ giáo,bǐjiào róngyì.,比较容易。,Tương đối dễ.,9,student_visible
+V010,100,118,Từ vựng,vocabulary,容易,róngyì,dễ,easy,tính từ,形,dung dị,shuō róngyì.,说容易。,Nói dễ.,10,student_visible
+V011,100,118,Từ vựng,vocabulary,但是,dànshì,nhưng,but,liên từ,连,đán thị,dànshì xiě nán.,但是写难。,Nhưng viết khó.,11,student_visible
+V012,100,118,Từ vựng,vocabulary,读,dú,đọc,to read,động từ,动,độc,dú hěn nán.,读很难。,Đọc rất khó.,12,student_visible
+V013,100,118,Từ vựng,vocabulary,写,xiě,viết,to write,động từ,动,tả,xiě Hànzì nán.,写汉字难。,Viết chữ Hán khó.,13,student_visible
+V014,100,118,Từ vựng,vocabulary,和,hé,và,and,liên từ,连,hòa,tīng hé shuō,听和说,nghe và nói,14,student_visible
+V015,100,118,Từ vựng,vocabulary,谁,shéi,ai,who,đại từ,代,thuỳ,lǎoshī shì shéi?,老师是谁？,Thầy là ai?,15,student_visible
+G001,102,120,Ngữ pháp,grammar,在+place+V,,Giới từ 在,,,,,zài nǎr xuéxí?,,,17,student_visible
+G002,102,120,Ngữ pháp,grammar,的 sở hữu,,的 possessive,,,,,wǒmen de lǎoshī,,,18,student_visible
+G003,102,120,Ngữ pháp,grammar,Adj predicate,,Câu vị ngữ tính từ,,,,,yǔfǎ bú tài nán.,,,19,student_visible

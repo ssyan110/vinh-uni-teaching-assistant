@@ -1,0 +1,49 @@
+record_id,source_page,source_pdf_page,source_page_range,source_pdf_page_range,section,record_type,title_vi,title_zh,chinese_simplified,pinyin,vietnamese,english,raw_source_text,teaching_order,classroom_visibility
+T001,28,46,28,46,Bài đọc,text,Hôm nay thứ mấy,星期几,"今天星期几？
+今天星期二。
+你去哪儿？
+我去天安门，你去不去？
+不去，我回学校。
+再见！
+再见！","jīntiān xīngqī jǐ?
+jīntiān xīngqī'èr.
+nǐ qù nǎr?
+wǒ qù Tiān'ānmén, nǐ qù bu qù?
+bú qù, wǒ huí xuéxiào.
+zàijiàn!
+zàijiàn!","Hôm nay thứ mấy?
+Hôm nay thứ ba.
+Bạn đi đâu?
+Tôi đi Thiên An Môn, bạn đi không?
+Không đi, tôi về trường.
+Tạm biệt!
+Tạm biệt!","What day is today?
+Today is Tuesday.
+Where are you going?
+I'm going to Tian'anmen, are you going?
+Not going, I'm going back to school.
+Goodbye!
+Goodbye!",课文(一) 星期几: 今天星期几？今天星期二。你去哪儿？我去天安门，你去不去？不去，我回学校。再见！再见！,15,student_visible
+T002,28,46,28-29,46-47,Bài đọc,text,Xin lỗi,对不起,"对不起！
+没关系！","duìbuqǐ!
+méiguānxi!","Xin lỗi!
+Không có gì!","Sorry!
+It doesn't matter!",课文(二) 对不起: 对不起！没关系！,16,student_visible
+V001,29,47,29-30,47-48,Từ vựng,vocabulary,,,今天,jīntiān,hôm nay,today,今天 (名) jīntiān (kim thiên) today hôm nay,1,student_visible
+V002,29,47,29-30,47-48,Từ vựng,vocabulary,,,星期,xīngqī,"tuần, thứ",week; day of the week,星期 (名) xīngqī (tinh kỳ) week tuần,2,student_visible
+V003,29,47,29-30,47-48,Từ vựng,vocabulary,,,几,jǐ,"mấy, vài",how many; which; several,"几 (代) jǐ (kỷ) how many; what; several mấy, vài",3,student_visible
+V004,29,47,29-30,47-48,Từ vựng,vocabulary,,,二,èr,hai,two,二 (数) èr (nhị) two hai,4,student_visible
+V005,30,48,29-30,47-48,Từ vựng,vocabulary,,,三,sān,ba,three,三 (数) sān (tam) three ba,5,student_visible
+V006,30,48,29-30,47-48,Từ vựng,vocabulary,,,四,sì,bốn,four,四 (数) sì (tứ) four bốn,6,student_visible
+V007,30,48,29-30,47-48,Từ vựng,vocabulary,,,哪儿,nǎr,ở đâu,where,哪儿 (代) nǎr (nả nhĩ) where ở đâu,7,student_visible
+V008,30,48,29-30,47-48,Từ vựng,vocabulary,,,那儿,nàr,"ở đó, nơi đó",there,"那儿 (代) nàr (na nhĩ) there ở đó, nơi đó, chỗ kia",8,student_visible
+V009,30,48,29-30,47-48,Từ vựng,vocabulary,,,我,wǒ,tôi,I; me,"我 (代) wǒ (ngã) I; me tôi, tao, ta",9,student_visible
+V010,30,48,29-30,47-48,Từ vựng,vocabulary,,,回,huí,"về, trở về",to go back; to return,"回 (动) huí (hồi) to go back (to) về, trở về, quay về",10,student_visible
+V011,30,48,29-30,47-48,Từ vựng,vocabulary,,,学校,xuéxiào,trường học,school,学校 (名) xuéxiào (học hiệu) school trường học,11,student_visible
+V012,30,48,29-30,47-48,Từ vựng,vocabulary,,,再见,zàijiàn,tạm biệt,goodbye,再见 (动) zàijiàn (tái kiến) goodbye tạm biệt,12,student_visible
+V013,30,48,29-30,47-48,Từ vựng,vocabulary,,,对不起,duìbuqǐ,xin lỗi,sorry; excuse me,对不起 duìbuqǐ (đối bất khởi) I'm sorry; sorry; excuse me xin lỗi,13,student_visible
+V014,30,48,29-30,47-48,Từ vựng,vocabulary,,,没关系,méiguānxi,"không có gì, không sao",doesn't matter; that's all right,没关系 méiguānxi (một quan hệ) doesn't matter; don't mind; that's all right không có gì,14,student_visible
+G001,30,48,30-34,48-52,Ngữ âm,grammar_phonetics,Ngữ âm,语音,"声母 z, c, s + 韵母 er 和儿化韵","shēngmǔ z, c, s + yùnmǔ er hé érhùayùn","Thanh mẫu z, c, s + Vận mẫu er và vần cuốn lưỡi","Initials z, c, s + Final er and retroflexed finals",语音 Phonetics: 声母 z c s 描述 + 韵母 er 和儿化韵,17,student_visible
+G002,28,46,28,46,Ngữ pháp,grammar,Câu hỏi chính phản (khẳng định - phủ định),正反问句,正反问句: 动词 + 不 + 动词,zhèngfǎn wènjù: dòngcí + bù + dòngcí,Câu hỏi chính phản: động từ + 不 + động từ,Affirmative-negative questions: Verb + 不 + Verb,课文注释: 正反问句 你去不去？(affirmative-negative question),18,student_visible
+PN001,30,48,30,48,Tên riêng,proper_name,,,天安门,Tiān'ānmén,Thiên An Môn (tên quảng trường ở Bắc Kinh),Tian'anmen (name of a gate/square in Beijing),专名: 天安门 Tiān'ānmén Tiananmen (name of a square) Thiên An Môn,,student_visible
+SUP001,29,47,29,47,Từ vựng bổ sung,supplementary_vocabulary,Các ngày trong tuần,,,,,,补充词汇: 星期一至星期天 (sub-items under 星期),,student_visible

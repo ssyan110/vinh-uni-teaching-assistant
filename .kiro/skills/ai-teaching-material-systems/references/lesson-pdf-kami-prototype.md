@@ -45,7 +45,7 @@ Use this when Adam provides a textbook PDF and asks for only one lesson/prototyp
    - Generate `output/<slug>/slides/*.html` and `index.html`.
    - Run huashu Playwright verification for screenshots.
    - Export PDF with `huashu-design/scripts/export_deck_pdf.mjs`.
-   - Export editable PPTX with `huashu-design/scripts/export_deck_pptx.mjs`.
+   - Deprecated note: editable PPTX export is no longer part of this project workflow. Use the HTML presenter, and export clean PDF backup only after Adam confirms finalization.
    - Verify PPTX slide count by opening the `.pptx` zip and counting `ppt/slides/slide*.xml`.
 
 8. **Do visual QA and one fix loop**
