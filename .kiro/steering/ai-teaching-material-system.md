@@ -5,12 +5,12 @@ Project-local rules and context. Auto-included by Kiro; referenced by AGENTS.md 
 ## Must-read order
 
 1. `AGENTS.md` (cross-agent entry point)
-2. `memory/project-memory.md` if present
-3. `.kiro/skills/harness-engineering/SKILL.md`
-4. `docs/ai-teaching-material-system-requirements-context.md` or `.html`
-5. `docs/lesson-slide-template-guide.md` for slide/template work
-6. `docs/image-asset-workflow.md` for slide image, vocabulary image, cover image, divider image, and image replacement work
-7. Relevant `.kiro/skills/*/SKILL.md`
+2. Classify the request size.
+3. For a small existing-output edit, read only the affected slide/asset plus the specific workflow doc needed for that edit.
+4. For structural/generator work, read `memory/project-memory.md` if present, `.kiro/skills/harness-engineering/SKILL.md`, relevant `.kiro/skills/*/SKILL.md`, and task-relevant docs.
+5. Read `docs/ai-teaching-material-system-requirements-context.md` or `.html` only for broad project spec, pipeline architecture, or full lesson/database generation.
+6. Read `docs/lesson-slide-template-guide.md` for slide/template work.
+7. Read `docs/image-asset-workflow.md` for slide image, vocabulary image, cover image, divider image, and image replacement work.
 
 ## Non-negotiable rules
 
@@ -23,13 +23,15 @@ Project-local rules and context. Auto-included by Kiro; referenced by AGENTS.md 
 - Preserve original source page mapping for every slide, exercise, and homework question.
 - Student-facing materials must not contain teacher tips, internal review notes, or in-class exercise answers.
 - Durable project rules must be written into repo files, not only remembered in chat.
-- Images are lesson data. VP steps 1-8 must carry image metadata (`image_role`, `image_prompt`, `image_file`, `image_reuse_from`, `image_status`, `image_semantic_check`) for records that need visuals. Complete lessons must have `slides/assets/asset-manifest.json` and `exports/qa/asset-qa-report.json`.
+- Match the workflow to the requested change size. For a one-off edit to an existing generated lesson, such as one slide title, wording, spacing, or 1-2 image replacements, edit the affected output directly and run narrow checks. Do not regenerate the whole lesson, rerun the full pipeline, patch the generator, or sync every repo doc unless the change is structural, reusable for future lessons, or explicitly requested as a durable rule.
+- Images are lesson data. VP steps 1-8 must carry image metadata (`image_role`, `image_prompt`, `image_file`, `image_reuse_from`, `image_status`, `image_semantic_check`) for records that need visuals. New slide generation starts with blank, correctly sized placeholder image files; generate real AI images later only when Adam asks. Complete lessons must have `slides/assets/asset-manifest.json` and `exports/qa/asset-qa-report.json`.
 - Lesson types: `regular` (full lessons with vocab/grammar/text) and `pinyin` (pinyin-only lessons). Never call it "normal" — use "regular".
 - Pinyin content in regular lessons is SKIPPED — pinyin is handled by the separate pinyin lesson workflow.
 - **Pinyin course spec:** Read `docs/pinyin-lesson-database-spec.md` before any pinyin lesson work. The pinyin course is 6 independent lessons from AI Mandarin (source: `Pinyin lessons/`). Do NOT use 漢語教程 phonetics content. Pipeline config: `scripts/pipeline/configs/pinyin.json` (v2.0.0).
 - **Pinyin slide template:** Future pinyin decks reuse `output/pinyin/pinyin-01` as the template baseline. Do not build pinyin lessons from scratch. Keep the Pinyin Lesson 1 cover, objectives, dividers, concepts, tone, vocabulary, flashcard, practice, appendix/input setup, closing, image style, and presenter behavior; swap only lesson-specific text, sounds, rules, vocabulary, exercises, and images.
 - **Pinyin sequence and wording:** Pinyin decks use section dividers for concepts/review, initials, finals, sounds/chart, tones, vocabulary, review/practice, appendix/input setup when applicable, and closing. Do not create `Mục lục` or `Quy ước` classroom slides. Use `thanh điệu`, never `thanh điều`.
 - **Pinyin objectives/images/page labels:** Pinyin objective slides highlight taught initials/finals/rule anchors in bold red and adapt the main goal text by lesson. All pinyin cover/goal/divider/concept/tone/initials-finals/vocabulary/closing images use the same soft textbook/course style. Pinyin classroom slides do not show bottom-right `Trang ...` page indicators.
+- **Pinyin vocabulary grids:** `Từ vựng 1`, `Từ vựng 2`, etc. keep only the top bar label plus the vocabulary grid. Do not add extra body descriptions like `Tập trung đọc...`.
 - 課文 section is labeled "Bài đọc" in Vietnamese (not "Bài khóa").
 - Default game platform is Blooket. Only use Kahoot or Quizizz when Blooket cannot support the exercise format.
 - Slide design: Soft Classroom Presenter style (locked). See `reference/slide-style-guide.md`. Do NOT use dark themes, Oriental Fantasy, or 中國風.
@@ -49,7 +51,7 @@ Steps 1-8 are pre-review and can be automated. Steps 9-18 require teacher approv
 4. 頁碼標註: every item gets original source page mapping.
 5. 教學重組: restructure into the standard lesson sequence.
 6. 補充活動: generate warm-up, pinyin/vocab/grammar drills, text preview, culture supplement, discussion.
-6.5 圖片資料化: for every classroom visual need, write image metadata into the database (`image_role`, `image_prompt`, `image_file`, `image_reuse_from`, `image_status`, `image_semantic_check`). Vocabulary prompts may still be generated with `scripts/generate-vocab-images.py`, but the source of truth is the database plus `slides/assets/asset-manifest.json`, not prompts alone. Required style: soft textbook line-art, thin grey-blue outlines, muted pastel fills, white/pale-grey background, subtle shadows, no in-image text/letters/numbers/Chinese characters. Do not use circular icons, teal vector blobs, stickers, or chibi art.
+6.5 圖片資料化: for every classroom visual need, write image metadata into the database (`image_role`, `image_prompt`, `image_file`, `image_reuse_from`, `image_status`, `image_semantic_check`). New slide generation uses blank, correctly sized placeholder image files first. Generate vocabulary prompts or real AI images only when Adam asks for image production. The source of truth is the database plus `slides/assets/asset-manifest.json`, not prompts alone. Required style: soft textbook line-art, thin grey-blue outlines, muted pastel fills, white/pale-grey background, subtle shadows, no in-image text/letters/numbers/Chinese characters. Do not use circular icons, teal vector blobs, stickers, or chibi art.
 7. 遊戲標記: mark activities suitable for Kahoot / Quizizz / Blooket.
 8. 寫入資料庫: output Google Sheets-ready database.
 9. 人工審閱: teacher checks content, pages, teaching order, and answer keys.

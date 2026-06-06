@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate vocabulary illustration prompts for Hermes image generation agent.
+"""Prepare vocabulary illustration prompts for later image generation.
 
 Usage:
     python scripts/generate-vocab-images.py \
@@ -11,10 +11,12 @@ This script:
 1. Reads the lesson database JSON
 2. Extracts vocabulary items
 3. Generates consistent image prompts for each word
-4. Outputs a prompts.json file for the Hermes agent to process
+4. Outputs a prompts.json file for optional later image generation
 
-After running this script, feed prompts.json to the Hermes agent
-for image generation. Images should be saved to the output-dir.
+Do not run this as part of initial slide generation. New lessons should use
+blank placeholders first. Run this only when Adam asks for real images, then
+use Chrome/ChatGPT, Hermes, or another approved source and insert final files
+with the asset replacement workflow.
 """
 
 from __future__ import annotations
@@ -76,7 +78,7 @@ def build_vocab_prompt(word: dict) -> dict:
         "filename": filename,
         "prompt": prompt,
         "image_role": "vocabulary_image",
-        "image_status": "needs_generation",
+        "image_status": "placeholder_needs_generation",
         "image_semantic_check": f"Image must clearly match {zh} / {vi}; verify in rendered slide QA.",
         "chinese": zh,
         "chinese_simplified": zh,
@@ -178,7 +180,7 @@ def main():
             "image_spec": IMAGE_SPEC,
             "style_notes": "All images must share the soft textbook line-art style: thin grey-blue outlines, muted pastel fills, white or pale grey background, 16:9 landscape, no text or characters in image.",
         },
-        "hermes_instructions": (
+        "image_generation_instructions": (
             "Generate each image using the prompt below. "
             "Save each as a 16:9 PNG, ideally 576x324 or larger. "
             "All images must share the same soft textbook line-art style: thin grey-blue outlines, "
@@ -196,8 +198,7 @@ def main():
     print(f"   Prompts file: {prompts_path}")
     print(f"   Output dir:   {output_dir}")
     print()
-    print("Next step: Feed prompts.json to Hermes agent for image generation.")
-    print("Command:   hermes generate-images --prompts prompts.json")
+    print("Next step: Generate images only if Adam asked for them, then insert with assets:replace or assets:crop-contact-sheet.")
 
 
 if __name__ == "__main__":

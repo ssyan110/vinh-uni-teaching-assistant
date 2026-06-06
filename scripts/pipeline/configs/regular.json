@@ -91,9 +91,9 @@
   ],
   "image_asset_rules": [
     "VP steps 1-8 must write image metadata for every classroom image need: image_role, image_prompt, image_file, image_reuse_from, image_status, and image_semantic_check.",
-    "Before slide generation, run npm run assets:manifest -- output/book-1/lesson-XX so slides/assets/asset-manifest.json becomes the source of truth for image paths and reuse.",
-    "When replacing a vocabulary image, use npm run assets:replace -- --lesson output/book-1/lesson-XX --record V001 --image /path/to/new.png so the image is resized to 16:9 and the manifest is rebuilt.",
-    "Before delivery, run npm run assets:qa -- output/book-1/lesson-XX and keep exports/qa/asset-qa-report.json with passing status."
+    "New slide generation starts with blank, correctly sized placeholder image files. Do not generate AI images during initial slide creation.",
+    "Generate real images only when Adam asks, then use npm run assets:replace -- --lesson output/book-1/lesson-XX --record V001 --image /path/to/new.png so vocabulary images are resized and the manifest is rebuilt.",
+    "For new/regenerated lessons and image edits, run npm run assets:manifest -- output/book-1/lesson-XX and npm run assets:qa -- output/book-1/lesson-XX. Do not run image workflow commands for wording-only slide edits."
   ],
   "review_statuses": [
     "pending_review",

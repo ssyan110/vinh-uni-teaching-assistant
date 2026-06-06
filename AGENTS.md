@@ -5,13 +5,15 @@ This file is the entry point for any AI agent working in this repo (Kiro, Hermes
 ## Quick start
 
 1. Read this file.
-2. Read `memory/project-memory.md` if present.
-3. Read `.kiro/skills/harness-engineering/SKILL.md` and use it as the default workflow frame.
-4. Read `docs/ai-teaching-material-system-requirements-context.md` for full project spec.
-5. For lesson slide/template work, read `docs/lesson-slide-template-guide.md`.
-6. For slide image, vocabulary image, cover image, divider image, or image replacement work, read `docs/image-asset-workflow.md`.
-7. For pinyin lesson database or slide generation, read `docs/pinyin-lesson-database-spec.md`.
-8. Read the relevant skill under `.kiro/skills/*/SKILL.md` for the task at hand.
+2. Classify the request size before loading more context:
+   - **Small existing-output edit:** one slide title/wording/layout tweak, or 1-2 image replacements in an already generated lesson.
+   - **Structural/generator work:** new lesson, regenerated lesson, slide-order change, shared template/script change, database/pipeline change, presenter change, or a rule Adam explicitly wants made durable.
+3. For a small existing-output edit, read only the narrow files needed for the affected slide/asset plus `docs/image-asset-workflow.md` when replacing images. Patch the existing output directly and run the smallest useful check.
+4. For structural/generator work, read `memory/project-memory.md` if present, `.kiro/skills/harness-engineering/SKILL.md`, `.kiro/steering/ai-teaching-material-system.md`, relevant `.kiro/skills/*/SKILL.md`, and the relevant project docs below.
+5. Read `docs/ai-teaching-material-system-requirements-context.md` only for full project spec, pipeline architecture, or broad lesson/database generation work.
+6. For lesson slide/template work, read `docs/lesson-slide-template-guide.md`.
+7. For slide image, vocabulary image, cover image, divider image, or image replacement work, read `docs/image-asset-workflow.md`.
+8. For pinyin lesson database or pinyin slide generation, read `docs/pinyin-lesson-database-spec.md`.
 9. Kiro agents also get `.kiro/steering/ai-teaching-material-system.md` auto-loaded.
 
 ## Project summary
@@ -34,6 +36,8 @@ Each skill has a `SKILL.md` with full instructions. Read it before doing work in
 ## Project rules
 
 - **Harness engineering default:** Do not depend on chat memory for recurring instructions. Every non-trivial task must define the artifact and success gate, read the local context harness, use project scripts/templates, verify with concrete checks, inspect outputs/screenshots/logs/data, and update durable project docs/skills/memory when Adam explicitly asks.
+- **Change-scope rule:** Match the workflow to the requested change size. For a one-off edit to an existing generated lesson, such as changing one slide title, fixing wording, replacing 1-2 images, or adjusting spacing on one slide, edit the existing slide/output directly and verify only the affected slide plus any cheap structural check. Do not regenerate the whole lesson, rerun the full pipeline, or update every repo doc unless the change is a reusable rule/template/generator change or Adam explicitly asks for durable propagation.
+- **Small visual edit check:** For a localized slide edit, prefer `npm run slides:screenshot -- --slides-dir <lesson-root>/slides --slide <file.html>` over full-deck screenshot/contact-sheet generation.
 - **Slide engine:** Huashu Design (HTML-first). Not Gamma. HTML is the primary presentation format used in class. No PPTX in the workflow. PDF is a backup export only.
 - **PDF export gate:** During drafting, do not export clean PDF backups. Work in HTML and use screenshots/contact sheets for QA. Before exporting any PDF, ask Adam whether the slide design and content are finalized; export only after Adam confirms they are finalized.
 - **Classroom presentation:** Open the lesson-root `index.html` in class. Complete lessons launch the HTML presenter at `slides/index.html` — fullscreen 16:9, PowerPoint-style slide thumbnails, pen/highlighter, text boxes, undo, PDF download with annotations. Database-only draft lessons show a safe status page instead of redirecting to a missing presenter.
@@ -57,7 +61,7 @@ Each skill has a `SKILL.md` with full instructions. Read it before doing work in
 - **Activity design:** Practice activities should be varied and include listening, speaking, reading, and writing where the lesson content supports it. For comprehensive practice and grammar practice, design questions by referencing HSK and TOCFL item formats, with a preference for practical life-use situations. Even when borrowing TOCFL-style formats, this system outputs Simplified Chinese unless Adam explicitly asks otherwise.
 - **Interactive practice:** Prefer simple interactive slide/webapp formats when useful. For example, one multiple-choice question per slide with clickable options; correct answers show success feedback, wrong answers prompt the student to try again.
 - **Instruction language:** Student operation text and activity instructions must be natural Vietnamese, e.g. `Ghép nối`, `Bài tập về nhà`, `Tập viết chữ Hán`, `Tập từ vựng`, `Luyện tập tổng hợp`, `Hội thoại`. Lesson 01 reusable divider templates may keep their fixed Chinese section heading (`生词`, `词汇练习`, `综合练习`, `课文`, `写汉字`, `补充学习`, `回家作业`) as part of the template; do not redesign those dividers from scratch.
-- **No text overflow:** Before delivery, verify every slide in HTML/screenshot QA. Visible text must not overflow the 16:9 slide, any background image panel, card, bubble, tile, button, or fixed container. Split content into more slides or reduce the content inside the container; do not hide overflow as a workaround.
+- **No text overflow:** For new/regenerated decks, verify every slide in HTML/screenshot QA. For a small existing-slide edit, verify only the affected slide(s) unless the edit changes shared CSS/templates. Visible text must not overflow the 16:9 slide, any background image panel, card, bubble, tile, button, or fixed container. Split content into more slides or reduce the content inside the container; do not hide overflow as a workaround.
 - **Vocabulary divider image:** Reuse Lesson 01 page 04 style: soft textbook desk scene with an open book. The book has only `汉` on the left page and `语` on the right page, placed inside the page margins. This generic `汉语` image can be reused across lessons. Do not add random Chinese filler or extra generated text.
 - **Sample sentence slide template:** Every `sample-*` / `MẪU CÂU` slide includes a small bottom-left circular support image frame (`.sample-spot`, `left:52px;bottom:28px;width:116px;height:116px`) centered on the pale background circle graphic. The image must visually match the full sample phrase. Reuse the matching vocab image when correct; generate a new soft textbook image when the sentence needs a specific scene.
 - **Vocab image style:** 16:9 soft textbook line-art, thin grey-blue outlines, muted pastel fills, white/pale-grey background, subtle shadows. No text, letters, numbers, Chinese characters, labels, watermarks, decorative blobs, thick teal icon outlines, glossy vector/sticker/chibi style.
@@ -70,11 +74,12 @@ Each skill has a `SKILL.md` with full instructions. Read it before doing work in
 - **Pinyin classroom sequence:** Future pinyin lessons must include clear section dividers for concepts/review, initials, finals, sounds/chart, tones, vocabulary, review/practice, appendix/input setup when applicable, and closing. Omit sections that truly do not apply, but do not remove the divider rhythm. `Mục lục` and `Quy ước` slides are no longer used in any future pinyin classroom slides.
 - **Pinyin wording and goal slides:** Use Vietnamese term `thanh điệu` exactly. Do not use `thanh điều`. Pinyin goal slides use the Pinyin Lesson 1 objectives template: highlighted taught initials/finals are bold and red, while the surrounding goal lines change per lesson, e.g. `Học 5 thanh điệu tiếng Trung` and `Học đọc 16 từ vựng`.
 - **Pinyin page indicators:** Pinyin classroom slides do not show bottom-right `Trang ...` page indicators. The presenter navigation counter may still show slide position in the browser chrome.
+- **Pinyin vocabulary grid slides:** For `Từ vựng 1`, `Từ vựng 2`, etc., keep only the top bar section text plus the vocabulary grid. Do not add extra description lines such as `Tập trung đọc...`; instructions belong in teacher notes or separate practice slides.
 - **Vocab sub-entry extraction:** If a textbook vocabulary item has indented component words underneath it, extract those component words as separate vocabulary records too. Example: `办公室` also includes `办公`; `电话` also includes `电` and `话`; `手机` also includes `手`. Keep the printed source page and note the parent word in `raw_source_text`.
 - **Grammar explanation style:** Grammar records must absorb the textbook explanation but rewrite it in simple Vietnamese that a 12-13-year-old can understand. Avoid loading students with terms like chủ ngữ/vị ngữ/tân ngữ unless the term is needed; lead with plain patterns, examples, and meaning. Contrast Vietnamese habits when useful, such as `请问` vs. literal Vietnamese-style translations.
 - **Hanzi writing:** Use Lesson 01 hanzi-writing title, layout, method, and HanziWriter stroke animation. Do not replace stroke animation with static characters. All hanzi-writing slides must use the Lesson 01 slowed stroke timing: `strokeAnimationSpeed: 0.575` and `delayBetweenStrokes: 360` unless Adam changes the Lesson 01 template.
 - **Database generation must carry slide rules:** VP steps 1-8 must output lesson structure/activity/database metadata that follows the cover, divider, activity-design, Simplified Chinese, pinyin, image, density, and hanzi-writing rules. Do not leave these rules only for manual slide cleanup after the database is generated.
-- **Image asset workflow:** Images are lesson data, not post-generation cleanup. VP steps 1-8 must include image metadata (`image_role`, `image_prompt`, `image_file`, `image_reuse_from`, `image_status`, `image_semantic_check`) for records that need classroom visuals. Every complete lesson must have `slides/assets/asset-manifest.json` and `exports/qa/asset-qa-report.json`. Build and check them with `npm run assets:manifest -- output/book-1/lesson-{NN}` and `npm run assets:qa -- output/book-1/lesson-{NN}`. Replace vocabulary images with `npm run assets:replace -- --lesson output/book-1/lesson-{NN} --record V001 --image /path/to/new.png`, not ad hoc HTML edits.
+- **Image asset workflow:** Images are lesson data, not post-generation cleanup. VP steps 1-8 must include image metadata (`image_role`, `image_prompt`, `image_file`, `image_reuse_from`, `image_status`, `image_semantic_check`) for records that need classroom visuals. New lesson generation starts with blank, correctly sized placeholder image files; do not generate AI images while creating slides. Every complete lesson must have `slides/assets/asset-manifest.json` and `exports/qa/asset-qa-report.json`. Build and check them for new/regenerated lessons with `npm run assets:manifest -- output/book-1/lesson-{NN}` and `npm run assets:qa -- output/book-1/lesson-{NN}`. Replace vocabulary images with `npm run assets:replace -- --lesson output/book-1/lesson-{NN} --record V001 --image /path/to/new.png`, or crop selected pinyin vocab images from a ChatGPT contact sheet with `npm run assets:crop-contact-sheet -- --lesson output/pinyin/pinyin-{NN} --sheet /path/to/sheet.png --records V001,V002`. Do not regenerate the lesson for image-only swaps.
 
 ## Lesson 01 current slide structure (56 slides)
 
@@ -204,14 +209,9 @@ python scripts/run_pipeline.py --lesson-type regular --lesson-id lesson-02 \
   --lesson-title "第二课" --source-pdf work/pdf-pages/ \
   --output-dir output/book-1/lesson-02/database/ --content-file work/lesson-02/extract.json
 
-# 1.5. Generate vocabulary image prompts for Hermes agent
-python scripts/generate-vocab-images.py \
-  --database output/book-1/lesson-02/database/vp_lesson_02_database.json \
-  --output-dir output/book-1/lesson-02/slides/assets/vocab-images/ \
-  --prompts-file output/book-1/lesson-02/slides/assets/vocab-images/prompts.json
-# Then: feed prompts.json to Hermes agent for image generation
-# Save final images as 16:9 PNGs in slides/assets/vocab-images/.
-# Build the asset manifest, insert them through the Lesson 01 rectangular vocab frame, then render/check every vocab slide.
+# 1.5. Create blank placeholder images from database image metadata.
+# Do not generate AI images during initial slide creation. Generate real images later only when Adam asks,
+# then insert them with assets:replace or assets:crop-contact-sheet.
 npm run assets:manifest -- output/book-1/lesson-02
 npm run assets:qa -- output/book-1/lesson-02
 

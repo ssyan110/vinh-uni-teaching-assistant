@@ -35,7 +35,7 @@ Note: powerpoint skill is deprecated. PPTX is no longer part of the workflow.
 
 **Use huashu-design instead of Gamma-related content.**
 
-**Use harness engineering by default.** Do not make Adam repeat the same rules in chat. Start by loading the repo-local harness (`AGENTS.md`, `memory/project-memory.md`, `.kiro/steering`, `.kiro/skills/*`, `.agent/skills/*` as relevant), define the artifact and success gate, use existing scripts/templates, verify with concrete checks, inspect generated outputs, and write durable decisions back into project docs/skills/memory when Adam asks.
+**Use harness engineering by default, scaled to the task.** Do not make Adam repeat the same rules in chat. For small edits to existing generated output, load only the affected slide/asset and the one relevant workflow doc, then run a narrow check. For structural/generator work, load the repo-local harness (`AGENTS.md`, `memory/project-memory.md`, `.kiro/steering`, `.kiro/skills/*`, `.agent/skills/*` as relevant), define the artifact and success gate, use existing scripts/templates, verify with concrete checks, inspect generated outputs, and write durable decisions back into project docs/skills/memory when Adam asks.
 
 **Audience/language default:** Adam's teaching materials are for Vietnamese universities. Unless the user explicitly asks otherwise, generated teaching materials should use **Vietnamese + Simplified Chinese**. Avoid Traditional Chinese in courseware. Use Vietnamese for teacher-facing guidance, labels, notes, instructions, and classroom flow; use Simplified Chinese for target-language examples, vocabulary, dialogues, and headings where Chinese is needed. Pinyin can be included as pronunciation support.
 
@@ -86,6 +86,13 @@ npm run assets:replace -- --lesson output/book-1/lesson-XX --record V001 --image
 ```
 
 Read `docs/image-asset-workflow.md` before generating, replacing, or QA-ing lesson images. The asset manifest is the bridge between database image metadata and slide HTML; do not rely on `prompts.json` or manual HTML edits as the source of truth.
+
+Small-edit workflow:
+
+- For a localized edit to an existing generated lesson, patch the affected output file(s) directly. Examples: change one slide title, remove one sentence, adjust spacing on one slide, replace 1-2 images.
+- Do not regenerate the lesson or patch the generator unless the change must survive future regeneration or applies to future lessons as a template/rule.
+- Run the smallest meaningful check: affected-slide screenshot/open check for visual edits, `assets:manifest` plus `assets:qa` for image edits, and `node --check` for edited scripts.
+- Do not sync every repo doc for a localized content edit.
 
 See `references/vp-pinyin-lesson-database-and-redesign.md` for the Google Sheets-ready VP database shape, auth fallback, copyright-safe reference-design handling, and post-review steps 9–18.
 
@@ -211,7 +218,7 @@ When expanding an approved prototype into a full editable PPTX, see `references/
 
 7. **Verify before final response**
 
-Run the full build, open slides with Playwright, validate generated files, and visually inspect representative screenshots/contact sheets. Do not export a PDF during drafting. Ask Adam whether the design and content are finalized before exporting a clean PDF backup.
+For new/regenerated lessons, run the relevant build, open slides with Playwright, validate generated files, and visually inspect representative screenshots/contact sheets. For small existing-output edits, run the smallest meaningful check for the affected slide or asset. Do not export a PDF during drafting. Ask Adam whether the design and content are finalized before exporting a clean PDF backup.
 
 ## HTML Presenter (Classroom Use)
 
@@ -298,6 +305,7 @@ Implementation rules:
 - Pinyin objective slides: reuse the Pinyin Lesson 1 objectives layout. Taught initials/finals/rule anchors are bold and red; main goal text changes by lesson, e.g. Lesson 1 has bold red `bmpf`, bold red `aoeiuü`, `Học 5 thanh điệu tiếng Trung`, and `Học đọc 16 từ vựng`.
 - Pinyin images: cover, goal, divider, concept, tone, initials/finals, vocabulary, appendix/input setup, and closing images all use the same soft textbook/course style across pinyin lessons. Treat them as templates; change only lesson-specific content and image subject.
 - Pinyin page indicators: pinyin classroom slides do not show bottom-right `Trang ...` page indicators, even when source page metadata exists in the database. Presenter chrome may still show slide position.
+- Pinyin vocabulary grid slides: keep only the top bar label plus the vocabulary grid. Do not add extra description lines such as `Tập trung đọc...`; put reminders in teacher notes or separate practice slides.
 - Vocabulary extraction: if a textbook vocabulary item has indented component words underneath it, extract those component words as separate vocabulary records too. Keep printed page mapping and note the parent word in `raw_source_text`; e.g. `办公室` includes `办公`, `电话` includes `电` and `话`, `手机` includes `手`.
 - Grammar explanation style: absorb the textbook explanation, then rewrite it in simple Vietnamese for beginner students. Prefer plain sentence patterns, examples, and Vietnamese/Chinese contrast over dense grammar terminology.
 - Classroom slides must not show internal/source/tool/audience labels such as `Kami × Huashu`, `Nguồn: trang...`, `Dành cho sinh viên...`, or implementation notes.
@@ -348,14 +356,14 @@ Sample sentence slides:
 
 Vocabulary image generation:
 
-1. Run `python scripts/generate-vocab-images.py --database <lesson database> --output-dir <lesson>/slides/assets/vocab-images --prompts-file <lesson>/slides/assets/vocab-images/prompts.json`.
-2. Generate one image per prompt.
-3. Save final images as 16:9 PNGs, ideally `576×324`, in `slides/assets/vocab-images/`.
+1. During initial slide generation, create blank placeholder image files at the correct target size. Do not generate AI images as part of the slide-generation run.
+2. When Adam asks for real images, use Chrome/ChatGPT, an approved source, or `scripts/generate-vocab-images.py` only as prompt preparation.
+3. Save final regular-lesson vocabulary images as 16:9 PNGs, ideally `576×324`, in `slides/assets/vocab-images/`. Save pinyin vocabulary-grid images as square PNGs when the pinyin template requires `1:1`.
 4. Use soft textbook line-art: thin grey-blue outlines, muted pastel fills, white/pale-grey background, gentle low-contrast shadows.
 5. Do not include text, letters, numbers, Chinese characters, labels, or watermarks inside images.
 6. Avoid thick teal outlines, circular icons, glossy vector art, stickers, chibi proportions, harsh colors, and abstract blob backgrounds.
-7. Run `npm run assets:manifest -- <lesson-root>` and `npm run assets:qa -- <lesson-root>` after images are saved and after any image replacement.
-8. For one-off vocabulary image replacement, use `npm run assets:replace -- --lesson <lesson-root> --record V001 --image /path/to/new.png` instead of hand-editing slide HTML.
+7. Insert replacements with `npm run assets:replace -- --lesson <lesson-root> --record V001 --image /path/to/new.png` or crop selected pinyin records with `npm run assets:crop-contact-sheet -- --lesson <lesson-root> --sheet /path/sheet.png --records V001,V002`.
+8. Run `npm run assets:manifest -- <lesson-root>` and `npm run assets:qa -- <lesson-root>` after real image replacement, then inspect the affected slide(s).
 
 Shared deck watermark:
 

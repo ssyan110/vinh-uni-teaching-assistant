@@ -1,22 +1,20 @@
 # Hermes Agent — Vocabulary Image Generation (v3)
 
+Legacy note: do not use this as part of initial slide generation. New lessons should create blank placeholders first. Generate real images only when Adam asks, then insert them with `assets:replace` or `assets:crop-contact-sheet`.
+
 ## Task
 
-Generate 11 vocabulary illustrations using **ChatGPT image generation**. Delete old PNGs first.
+Generate requested vocabulary illustrations using **ChatGPT image generation**. Preserve existing approved PNGs unless Adam explicitly asks to replace them.
 
 ## Steps
 
 ```bash
-# 1. Delete old images
-rm output/book-1/lesson-01/slides/assets/vocab-images/*.png
-rm output/book-1/lesson-01/slides/assets/vocab-images/*.jpg
-
-# 2. Read prompts
+# 1. Read prompts
 # File: output/book-1/lesson-01/slides/assets/vocab-images/prompts.json
 
-# 3. For each entry in prompts[], use ChatGPT image generation with the "prompt" field
+# 2. For each requested entry in prompts[], use ChatGPT image generation with the "prompt" field
 
-# 4. Save each image to:
+# 3. Save each image to:
 # output/book-1/lesson-01/slides/assets/vocab-images/{filename}
 ```
 

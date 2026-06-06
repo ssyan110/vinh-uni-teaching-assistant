@@ -12,6 +12,8 @@
     "assets:manifest": "node scripts/build-lesson-asset-manifest.mjs --lesson",
     "assets:qa": "node scripts/qa-lesson-assets.mjs --lesson",
     "assets:replace": "node scripts/replace-lesson-image.mjs",
+    "assets:crop-contact-sheet": "node scripts/crop-vocab-contact-sheet.mjs",
+    "slides:screenshot": "node scripts/render-slide-screenshot.mjs",
     "slides:pdf-data": "node scripts/build-slides-data.mjs --slides-dir",
     "slides:pdf": "node scripts/export-slides-pdf.mjs --slides-dir",
     "slides:watch": "node scripts/watch-slides.mjs --slides-dir",

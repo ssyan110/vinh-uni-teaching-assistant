@@ -95,7 +95,7 @@ to:
 .note { bottom: 34pt; }
 ```
 
-Then regenerate and re-run full build.
+Then rerender the affected page/deck check. Re-run a full build only when the edit changes a shared template or generator.
 
 ## Validation Standard
 

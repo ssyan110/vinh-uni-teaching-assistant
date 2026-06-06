@@ -137,7 +137,7 @@ async function resetSlides() {
 async function resetGeneratedAssets() {
   const vocabAssets = await fs.readdir(vocabDir).catch(() => []);
   for (const file of vocabAssets) {
-    if (/^(vocab-.+\.(png|svg)|prompts\.json)$/.test(file)) {
+    if (/^(prompts\.json|pinyin-01-vocab-image-prompts\.md)$/.test(file)) {
       await fs.rm(path.join(vocabDir, file));
     }
   }
@@ -355,7 +355,7 @@ function buildDatabase(blueprint) {
         requires_hanzi_recognition: false,
         variant_group: item.variant_group || '',
         image_role: 'vocabulary_image',
-        image_status: 'generated',
+        image_status: 'placeholder_needs_generation',
         image_semantic_check: `Image should clearly show: ${viMeanings.get(simplified) || simplified}`,
       });
       vocabIndex += 1;
@@ -815,43 +815,20 @@ async function writePhotoAsset(file, kind, accent) {
 }
 
 async function createImages(vocab) {
-  const generatedSheetPath = path.join(lessonRoot, 'exports/qa/generated-vocab-source/chatgpt-contact-sheet.png');
-  const generatedSheetExists = !!(await fs.stat(generatedSheetPath).catch(() => null));
-  const lesson01Manifest = JSON.parse(await fs.readFile(
-    path.join(lesson01Root, 'slides/assets/asset-manifest.json'),
-    'utf8',
-  ));
-  const reusableVocabImages = new Map();
-  for (const asset of lesson01Manifest.assets || []) {
-    if (asset.role === 'vocabulary_image' && asset.chinese?.[0]) {
-      reusableVocabImages.set(asset.chinese[0], asset.asset_path.replace(/^assets\//, ''));
-    }
-  }
   const prompts = [];
   for (const [index, item] of vocab.entries()) {
     item.image_file = `vocab-${item.record_id.toLowerCase()}-${slug(item.pinyin)}.png`;
     const outFile = path.join(vocabDir, item.image_file);
-    const reusablePath = reusableVocabImages.get(item.chinese_simplified);
-    if (generatedSheetExists) {
-      const col = index % 4;
-      const row = Math.floor(index / 4);
-      await sharp(generatedSheetPath)
-        .extract({ left: 10 + col * 311, top: 10 + row * 311, width: 300, height: 300 })
-        .resize(1024, 1024, { fit: 'cover' })
-        .png()
-        .toFile(outFile);
-    } else if (reusablePath) {
-      await sharp(path.join(lesson01Root, 'slides/assets', reusablePath))
-        .resize(1024, 1024, { fit: 'cover', position: 'center' })
-        .png()
-        .toFile(outFile);
-    } else {
-      await sharp(Buffer.from(softSvg(visualMap.get(item.chinese_simplified), index % 2 ? '#C8B8E8' : '#5AACAC')))
-        .png()
-        .toFile(outFile);
-    }
-    if (item.chinese_simplified === '八' || item.chinese_simplified === '鼻') {
-      await sharp(Buffer.from(softSvg(visualMap.get(item.chinese_simplified), item.chinese_simplified === '八' ? '#5AACAC' : '#C8B8E8')))
+    const existingImage = await fs.stat(outFile).catch(() => null);
+    if (!existingImage) {
+      await sharp({
+        create: {
+          width: 1024,
+          height: 1024,
+          channels: 4,
+          background: '#F7FAFA',
+        },
+      })
         .png()
         .toFile(outFile);
     }
@@ -866,7 +843,7 @@ async function createImages(vocab) {
       prompt: `${vocabStylePrompt} Subject: ${vocabPromptMap.get(item.chinese_simplified) || item.vietnamese}.`,
       visual_description: vocabPromptMap.get(item.chinese_simplified) || item.vietnamese,
       image_role: 'vocabulary_image',
-      image_status: generatedSheetExists ? 'generated_from_chatgpt_contact_sheet' : reusablePath ? 'reused_approved_png' : 'ready_for_visual_qa',
+      image_status: existingImage ? 'existing_asset_preserved' : 'placeholder_needs_generation',
       image_semantic_check: `Image must clearly match ${item.chinese_simplified} / ${item.vietnamese}; verify in rendered slide QA.`,
     });
   }
@@ -1472,7 +1449,7 @@ function writeSlidesData(db) {
         label: 'Từ vựng 1',
         icon: 'book-open',
         page: 9,
-        body: `<div class="content" style="top:76px"><p class="body-text" style="margin:0 0 15px;font-weight:900;color:#4A6080">Tập trung đọc đúng pinyin, chưa cần nhớ mặt chữ Hán.</p><div class="word-grid">${vocabA.map(vocabCard).join('')}</div></div>`,
+        body: `<div class="content" style="top:92px"><div class="word-grid">${vocabA.map(vocabCard).join('')}</div></div>`,
       }),
     },
     {

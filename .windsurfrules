@@ -20,6 +20,7 @@
 14. **Pinyin course (6 lessons):** Source is AI Mandarin independent material (`Pinyin lessons/`). Do NOT use 漢語教程 phonetics. Read `docs/pinyin-lesson-database-spec.md` for full spec. Pipeline config: `scripts/pipeline/configs/pinyin.json` v2.0.0. Output to `output/pinyin/pinyin-{01-06}/`.
 15. **Pinyin Lesson 1 template baseline:** Future pinyin decks reuse `output/pinyin/pinyin-01`; do not build from scratch. Keep its cover/objectives/divider/concept/tone/vocab/flashcard/practice/input-setup/closing style, soft textbook/course images, and presenter behavior. Swap only lesson-specific text, sounds, rules, vocabulary, exercises, and images.
 16. **Pinyin wording:** Use `thanh điệu`, never `thanh điều`. No `Mục lục` or `Quy ước` classroom slides. Pinyin slides do not show bottom-right `Trang ...` page indicators.
+17. **Pinyin vocabulary grids:** `Từ vựng 1`, `Từ vựng 2`, etc. keep only the top bar label plus the vocabulary grid. Do not add extra body descriptions like `Tập trung đọc...`.
 
 ## Task Routing
 

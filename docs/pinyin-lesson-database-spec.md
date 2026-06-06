@@ -95,6 +95,12 @@ Classroom slide sequence:
 
 Pinyin classroom slides do not show bottom-right `Trang ...` page indicators. The presenter chrome may still show slide position.
 
+Pinyin vocabulary grid slides:
+
+- For `Từ vựng 1`, `Từ vựng 2`, and similar vocabulary overview slides, keep only the top bar section label plus the vocabulary grid.
+- Do not add extra explanatory lines such as `Tập trung đọc...` on the slide body.
+- Put teaching reminders in the teacher guide or in a separate practice slide instead.
+
 Terminology:
 
 - Use `thanh điệu` exactly.

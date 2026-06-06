@@ -100,11 +100,12 @@ npm run lesson:shells
 3. Đảm bảo nội dung giảng viên bằng tiếng Việt, ngữ liệu tiếng Trung bằng giản thể.
 4. Chạy generator.
 5. Với bài regular có từ vựng: database phải có image metadata (`image_role`, `image_prompt`, `image_file`, `image_reuse_from`, `image_status`, `image_semantic_check`).
-6. Chạy `scripts/generate-vocab-images.py` khi cần prompt, tạo ảnh từ `prompts.json`, lưu PNG 16:9 vào `slides/assets/vocab-images/`.
-7. Chạy `npm run assets:manifest -- output/book-1/lesson-XX` và `npm run assets:qa -- output/book-1/lesson-XX`.
-8. Xem `output/book-1/lesson-XX/index.html` trên trình duyệt.
-9. Chạy kiểm tra trước khi gửi cho giảng viên/sinh viên.
-10. Chỉ xuất PDF backup sau khi Adam xác nhận nội dung và thiết kế đã final.
+6. Khi tạo slide ban đầu, dùng ảnh placeholder trống đúng kích thước. Không tạo ảnh AI trong bước tạo slide.
+7. Khi Adam yêu cầu ảnh thật, tạo ảnh bằng Chrome/ChatGPT hoặc nguồn được duyệt, rồi chèn bằng `assets:replace` hoặc `assets:crop-contact-sheet`.
+8. Chạy `npm run assets:manifest -- output/book-1/lesson-XX` và `npm run assets:qa -- output/book-1/lesson-XX` cho bài mới/regenerated hoặc khi có sửa ảnh.
+9. Xem `output/book-1/lesson-XX/index.html` trên trình duyệt.
+10. Chạy kiểm tra trước khi gửi cho giảng viên/sinh viên.
+11. Chỉ xuất PDF backup sau khi Adam xác nhận nội dung và thiết kế đã final.
 
 ## Quy tắc sản xuất
 
@@ -112,9 +113,10 @@ npm run lesson:shells
 - Tài liệu mặc định cho đại học Việt Nam: tiếng Việt + tiếng Trung giản thể.
 - Pinyin lessons dùng `output/pinyin/pinyin-01` làm template baseline. Không dựng lại từ đầu cho từng bài; giữ cùng cover/objectives/divider/concept/tone/vocab/flashcard/practice/input-setup/closing style, cùng phong cách ảnh soft textbook/course, rồi thay text, âm học, luật, từ vựng, bài tập và ảnh theo từng bài.
 - Trong pinyin lessons, dùng đúng `thanh điệu`, không dùng `thanh điều`. Không tạo slide `Mục lục` hoặc `Quy ước`; pinyin classroom slides không hiện nhãn `Trang ...` ở góc dưới.
+- Slide pinyin `Từ vựng 1`, `Từ vựng 2`, v.v. chỉ giữ top bar label và grid từ vựng. Không thêm dòng mô tả như `Tập trung đọc...`.
 - Slide từ vựng dùng template Lesson 01: khung ảnh chữ nhật 16:9, không dùng crop tròn/icon. Bố cục: ảnh → pinyin → chữ Hán giản thể → nghĩa tiếng Việt → hán việt + loại từ.
 - Slide mẫu câu (`MẪU CÂU`, file `sample-*`) dùng card câu ở giữa và một ảnh hỗ trợ trong khung tròn nhỏ dưới bên trái: `.sample-spot{left:52px;bottom:28px;width:116px;height:116px}`. Khung phải nằm giữa vòng tròn nền nhạt và ảnh phải khớp với cả mẫu câu.
-- Ảnh từ vựng dùng phong cách textbook line-art mềm: viền mảnh xám xanh, màu pastel nhẹ, nền trắng/xám rất nhạt, không có chữ/số/ký tự trong ảnh. Sau khi chèn, render từng slide từ vựng và kiểm tra ảnh có khớp từ hay không; nếu sai thì regenerate ảnh đó.
+- Ảnh từ vựng dùng phong cách textbook line-art mềm: viền mảnh xám xanh, màu pastel nhẹ, nền trắng/xám rất nhạt, không có chữ/số/ký tự trong ảnh. Slide mới dùng placeholder trống trước; sau khi chèn ảnh thật, render slide bị ảnh hưởng và kiểm tra ảnh có khớp từ hay không.
 - Ảnh không được xử lý như việc sửa tay sau khi tạo slide. Mỗi complete lesson phải có `slides/assets/asset-manifest.json` và `exports/qa/asset-qa-report.json`.
 - Khi thay một ảnh từ vựng, dùng `npm run assets:replace -- --lesson output/book-1/lesson-XX --record V001 --image /path/to/new.png`.
 - Xem `docs/lesson-slide-template-guide.md` trước khi tạo hoặc chỉnh lesson deck mới.

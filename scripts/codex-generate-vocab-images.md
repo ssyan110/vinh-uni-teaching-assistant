@@ -1,8 +1,10 @@
 # Codex Agent — Generate Vocabulary Images via ChatGPT Web UI
 
+Legacy note: do not use this as part of initial slide generation. New lessons should create blank placeholders first. For pinyin vocabulary batches, prefer one ChatGPT contact sheet and `npm run assets:crop-contact-sheet`; for regular one-off replacements, use `npm run assets:replace`.
+
 ## Task
 
-Use browser control to open ChatGPT, generate 11 vocabulary images using the prompts below, download each image, and save it to the correct filename in the output folder.
+Only when Adam asks for real Lesson 01 vocabulary images, use browser control to open ChatGPT, generate the requested vocabulary images using the prompts below, download each image, and save it to the correct filename in the output folder.
 
 ## Output folder
 

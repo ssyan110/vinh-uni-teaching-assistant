@@ -8,7 +8,7 @@ output/book-1/lesson-01/
 
 The classroom format is HTML-first. Open the lesson-root `index.html` in class. Complete lessons launch `slides/index.html`, the real browser presenter; database-only draft lessons show a safe status page. PDF is a backup export only after Adam confirms the design and content are finalized.
 
-Image workflow rule: read `docs/image-asset-workflow.md` before generating or replacing slide images. Images are tracked as lesson data through database image metadata, `slides/assets/asset-manifest.json`, and `exports/qa/asset-qa-report.json`; do not handle them only through ad hoc HTML edits.
+Image workflow rule: read `docs/image-asset-workflow.md` before generating or replacing slide images. Images are tracked as lesson data through database image metadata, `slides/assets/asset-manifest.json`, and `exports/qa/asset-qa-report.json`; do not handle them only through ad hoc HTML edits. For wording/title/spacing edits that do not touch images, use the small-edit path and do not run image workflow commands.
 
 Student-facing language rule: keep the Lesson 01 visual language. Student operation text and activity instructions must be Vietnamese. Lesson 01 reusable divider templates may keep their fixed Chinese section heading (`生词`, `词汇练习`, `综合练习`, `课文`, `写汉字`, `补充学习`, `回家作业`) as part of the template. Simplified Chinese also appears as target learning content: vocabulary, examples, dialogue, grammar patterns, cultural terms, lesson titles, and hanzi-writing characters.
 
@@ -30,7 +30,7 @@ Hanzi writing rule: every hanzi-writing slide must reuse Lesson 01's title, layo
 
 Database rule: VP steps 1-8 must generate lesson structure, activity, and database metadata that already follows these slide rules. Do not postpone the cover/divider/activity/Simplified-Chinese/pinyin/image/density/hanzi-writing requirements until manual slide cleanup.
 
-Image metadata rule: records that need classroom visuals must carry `image_role`, `image_prompt`, `image_file`, `image_reuse_from`, `image_status`, and `image_semantic_check` where relevant. Build and check the manifest with:
+Image metadata rule: records that need classroom visuals must carry `image_role`, `image_prompt`, `image_file`, `image_reuse_from`, `image_status`, and `image_semantic_check` where relevant. For new/regenerated lessons and image edits, build and check the manifest with:
 
 ```bash
 npm run assets:manifest -- output/book-1/lesson-XX
@@ -83,6 +83,7 @@ Pinyin images:
 Pinyin vocabulary and flashcards:
 
 - Pinyin vocabulary grids can use square `1:1` soft textbook images when the pinyin-template slide requires that shape.
+- Pinyin vocabulary grid slides (`Từ vựng 1`, `Từ vựng 2`, etc.) keep only the top bar label plus the vocabulary grid. Do not add extra body descriptions like `Tập trung đọc...`.
 - Flashcards follow the Lesson 1/Lesson 10 flashcard behavior adapted for pinyin: one word per page, pinyin with tone first, click to reveal image and Vietnamese meaning.
 - Do not include repeated helper text such as `Đọc lại pinyin trước khi qua thẻ tiếp theo.`
 
@@ -122,6 +123,15 @@ Do not leave QA screenshots, contact sheets, or deprecated generated data direct
 7. For regular lessons, use the Lesson 01 vocabulary slide pattern for every standalone vocabulary word.
 8. During drafting, render screenshots/contact sheets under `exports/qa/` for visual QA. Do not export a PDF until Adam confirms the lesson is finalized.
 9. Check every slide for overflow before delivery. Text must not spill outside the 16:9 slide, background image panels, cards, bubbles, tiles, buttons, or fixed containers. If content is too dense, split it into more slides.
+
+## Fast Path For Existing Slide Edits
+
+Use this when Adam asks for a small edit in an already generated lesson.
+
+- Title/wording/content on one slide: edit that numbered slide HTML directly, then inspect that slide with `npm run slides:screenshot -- --slides-dir <lesson-root>/slides --slide <file.html>`.
+- Spacing/layout on one slide: edit that slide's local CSS, then inspect that slide at 16:9 with the same single-slide screenshot command.
+- One or two image swaps: use `npm run assets:replace -- --lesson <lesson-root> --record <record-id> --image <file>` or `npm run assets:crop-contact-sheet -- --lesson <lesson-root> --sheet <sheet.png> --records V001,V002`, then run asset manifest/QA and inspect the affected slide.
+- Do not rerun the lesson generator, pipeline, presenter sync, full screenshot set, or repo-wide doc sync unless the change affects slide order, the presenter MANIFEST, shared templates, database fields, or future lesson rules.
 
 Validation:
 
@@ -235,7 +245,9 @@ Required support image frame:
 
 ## Vocabulary Image Workflow
 
-Generate prompts:
+Initial slide generation uses blank placeholders, not AI-generated images.
+
+When Adam asks for real images, you may prepare prompts with:
 
 ```bash
 python scripts/generate-vocab-images.py \
@@ -244,7 +256,7 @@ python scripts/generate-vocab-images.py \
   --prompts-file output/book-1/lesson-XX/slides/assets/vocab-images/prompts.json
 ```
 
-Generate one image per prompt and save it as:
+Then generate images in Chrome/ChatGPT or from an approved source and insert them with `assets:replace` or `assets:crop-contact-sheet`. Save regular vocabulary images as:
 
 ```text
 output/book-1/lesson-XX/slides/assets/vocab-images/{filename}

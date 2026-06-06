@@ -16,6 +16,8 @@ VP database image metadata
 → screenshot/contact-sheet visual QA
 ```
 
+New lesson decks start with blank, correctly sized placeholder image files. Do not generate AI images during initial slide creation. Generate real images only when Adam asks for them.
+
 ## Required Database Fields
 
 VP steps 1-8 must carry image metadata for records that need classroom visuals:
@@ -26,20 +28,20 @@ VP steps 1-8 must carry image metadata for records that need classroom visuals:
 | `image_prompt` | Image generation prompt or reusable asset description |
 | `image_file` | Final lesson-local file path or filename when known |
 | `image_reuse_from` | Shared asset path when reusing an approved image |
-| `image_status` | `needs_generation`, `generated`, `ready_for_visual_qa`, `approved`, or `needs_regeneration` |
+| `image_status` | `placeholder_needs_generation`, `needs_generation`, `existing_asset_preserved`, `generated`, `ready_for_visual_qa`, `approved`, or `needs_regeneration` |
 | `image_semantic_check` | Plain check, for example: `Image must clearly show one raised finger` |
 
 Do not leave image decisions only in `prompts.json` or slide HTML.
 
 ## Standard Commands
 
-Build the manifest after database generation and after any slide/image edit:
+Build the manifest after database generation, after real image replacement, and for new/regenerated lessons. Do not run this just for a title or wording-only slide edit:
 
 ```bash
 npm run assets:manifest -- output/book-1/lesson-XX
 ```
 
-Run asset QA before delivery:
+Run asset QA before delivering a new/regenerated lesson or an image-related edit. A wording-only slide edit should use a single-slide screenshot check instead:
 
 ```bash
 npm run assets:qa -- output/book-1/lesson-XX
@@ -54,7 +56,28 @@ npm run assets:replace -- \
   --image /path/to/new-image.png
 ```
 
-This resizes vocabulary images to 576x324 PNG, writes them to the existing target path, and rebuilds `asset-manifest.json`.
+This resizes regular vocabulary images to 576x324 PNG, preserves square `1:1` pinyin vocabulary targets, writes the image to the existing target path, and rebuilds `asset-manifest.json`.
+
+Crop selected records from a Chrome/ChatGPT contact sheet:
+
+```bash
+npm run assets:crop-contact-sheet -- \
+  --lesson output/pinyin/pinyin-01 \
+  --sheet output/pinyin/pinyin-01/exports/qa/generated-vocab-source/chatgpt-contact-sheet.png \
+  --records V001,V005
+```
+
+Use this after generating one contact sheet in Chrome/ChatGPT. It maps record IDs to their full vocabulary order in the manifest, crops only the requested records, and rebuilds the manifest. It does not regenerate slides or the lesson.
+
+Before writing files, preview the crop mapping:
+
+```bash
+npm run assets:crop-contact-sheet -- \
+  --lesson output/pinyin/pinyin-01 \
+  --sheet output/pinyin/pinyin-01/exports/qa/generated-vocab-source/chatgpt-contact-sheet.png \
+  --records V001,V005 \
+  --dry-run
+```
 
 ## Manifest Location
 
@@ -77,13 +100,13 @@ The manifest records:
 
 ## QA Gates
 
-`npm run assets:qa -- output/book-1/lesson-XX` must pass before delivery.
+`npm run assets:qa -- output/book-1/lesson-XX` must pass before delivering a new/regenerated lesson or an image-related edit.
 
 It checks:
 
 - required shared assets exist: `slide-base.css`, `slide-base.js`, `brand/logo-watermark.png`
 - every referenced local asset exists
-- vocabulary images are 16:9
+- regular vocabulary images are 16:9; pinyin vocabulary images are 1:1 when the pinyin template uses square image slots
 - vocabulary images map to a record or Chinese word
 - standalone vocabulary records have image coverage
 - all numbered slides use `lucide@0.460.0`
@@ -93,7 +116,7 @@ Asset QA does not replace visual judgment. After it passes, still render screens
 
 ## Image Rules
 
-Vocabulary images:
+Regular vocabulary images:
 
 - PNG, 16:9, ideally 576x324 or larger
 - soft textbook line-art
@@ -131,6 +154,7 @@ Pinyin vocabulary images:
 - Use the soft education textbook style.
 - Use square `1:1` images when the pinyin vocabulary grid/flashcard template calls for square assets.
 - Keep the normal no-text rule unless the image is an approved divider/cover/concept template where text is part of the design.
+- On pinyin vocabulary grid slides, keep only the top bar section label and the grid; do not add extra description/instruction text above the cards.
 
 Pinyin divider/cover/goal images:
 

@@ -34,6 +34,7 @@ Reusable AI teaching-material production system for Chinese courseware used in V
 22. **Pinyin Lesson 1 template baseline:** Future pinyin decks reuse `output/pinyin/pinyin-01` as the template. Do not build pinyin lessons from scratch. Keep the same cover, objectives, dividers, concept slides, tone slides, vocabulary grids, flashcards, practice slides, input setup, closing, soft textbook/course image style, and presenter behavior; swap only lesson-specific text, sounds, rules, vocabulary, exercises, and images.
 23. **Pinyin classroom sequence and wording:** Pinyin decks use clear dividers for concepts/review, initials, finals, sounds/chart, tones, vocabulary, review/practice, appendix/input setup when applicable, and closing. Do not create `Mục lục` or `Quy ước` classroom slides. Use `thanh điệu`, never `thanh điều`.
 24. **Pinyin objectives and page labels:** Pinyin objective slides highlight taught initials/finals/rule anchors in bold red and adapt the goal text by lesson. Pinyin classroom slides do not show bottom-right `Trang ...` page indicators.
+25. **Pinyin vocabulary grids:** `Từ vựng 1`, `Từ vựng 2`, etc. keep only the top bar label plus the vocabulary grid. Do not add extra body descriptions like `Tập trung đọc...`.
 
 ---
 

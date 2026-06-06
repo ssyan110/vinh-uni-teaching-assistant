@@ -35,9 +35,10 @@ await ensureManifest();
 const manifest = JSON.parse(await fs.readFile(manifestPath, 'utf8'));
 
 let target = assetArg;
+let entry = null;
 if (!target && recordArg) {
   const record = recordArg.toUpperCase();
-  const entry = (manifest.assets || []).find((asset) =>
+  entry = (manifest.assets || []).find((asset) =>
     asset.role === 'vocabulary_image' && (asset.record_ids || []).map((id) => id.toUpperCase()).includes(record));
   if (!entry) {
     console.error(`No vocabulary image asset found for ${recordArg}. Run build-lesson-asset-manifest first and check vocabulary_coverage.`);
@@ -51,8 +52,14 @@ const targetPath = path.join(slidesDir, target);
 await fs.mkdir(path.dirname(targetPath), { recursive: true });
 
 if (target.includes('/vocab-images/')) {
+  const isPinyinLesson = manifest.lesson_id?.startsWith('pinyin-')
+    || path.relative(root, lessonDir).replaceAll(path.sep, '/').startsWith('output/pinyin/');
+  const existingRatio = entry?.dimensions?.aspect_ratio;
+  const squareTarget = isPinyinLesson || (typeof existingRatio === 'number' && Math.abs(existingRatio - 1) < 0.02);
+  const width = squareTarget ? 1024 : 576;
+  const height = squareTarget ? 1024 : 324;
   await sharp(sourceImage)
-    .resize(576, 324, { fit: 'cover', position: 'center' })
+    .resize(width, height, { fit: 'cover', position: 'center' })
     .png()
     .toFile(targetPath);
 } else {

@@ -151,6 +151,12 @@ across all pinyin lessons. Treat them as templates and change only
 lesson-specific content.</td>
 </tr>
 <tr>
+<td>Pinyin vocabulary grid slides</td>
+<td><code>Từ vựng 1</code>, <code>Từ vựng 2</code>, etc. keep only the
+top bar label plus the vocabulary grid. Do not add extra body
+descriptions like <code>Tập trung đọc...</code>.</td>
+</tr>
+<tr>
 <td>Vocabulary extraction</td>
 <td>Extract every textbook vocabulary row, including indented component
 sub-entries under a main word. Example: <code>办公室</code> → also
@@ -215,11 +221,11 @@ omit it. Do not add separate <code>.source</code> footers.</td>
 </tr>
 <tr>
 <td>Vocab image workflow</td>
-<td>Generate <code>prompts.json</code> with
-<code>scripts/generate-vocab-images.py</code>, save 16:9 PNGs in
-<code>slides/assets/vocab-images/</code>, insert by matching filename,
-render vocab slides, and regenerate any image that does not match its
-vocabulary word.</td>
+<td>New slide generation uses blank, correctly sized placeholder images.
+Generate real vocabulary images only when Adam asks, then insert them with
+<code>npm run assets:replace -- --lesson output/book-1/lesson-XX --record V001 --image /path/to/image.png</code>
+or crop selected pinyin records from a ChatGPT contact sheet with
+<code>npm run assets:crop-contact-sheet -- --lesson output/pinyin/pinyin-XX --sheet /path/to/sheet.png --records V001,V002</code>.</td>
 </tr>
 <tr>
 <td>Image asset manifest</td>
@@ -317,7 +323,9 @@ dividers from scratch.</td>
 </tr>
 <tr>
 <td>Overflow QA</td>
-<td>During HTML/screenshot QA, verify every slide for text overflow.
+<td>For new/regenerated decks, verify every slide for text overflow
+during HTML/screenshot QA. For small existing-slide edits, verify only
+the affected slide(s) unless the edit changes shared CSS/templates.
 Text must not spill outside the slide, background image panel, card,
 bubble, tile, button, or fixed container. Fix by splitting content into
 more slides or revising layout. Do not hide clipped text.</td>

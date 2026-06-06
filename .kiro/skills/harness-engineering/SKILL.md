@@ -19,11 +19,11 @@ Make the project reliable for Codex, Kiro, Hermes, Claude Code, Cursor, and Wind
 
 2. Load local context
    - `AGENTS.md`
-   - `memory/project-memory.md` if present
-   - `.kiro/steering/ai-teaching-material-system.md`
-   - Relevant `.kiro/skills/*/SKILL.md`
-   - `docs/ai-teaching-material-system-requirements-context.md`
-   - `docs/lesson-slide-template-guide.md` for slide/template work
+   - First classify whether this is a small existing-output edit or structural/generator work.
+   - For small existing-output edits, load only the affected files and the one relevant workflow doc. Do not read the full project spec by default.
+   - For structural/generator work, load `memory/project-memory.md` if present, `.kiro/steering/ai-teaching-material-system.md`, relevant `.kiro/skills/*/SKILL.md`, and task-relevant project docs.
+   - Read `docs/ai-teaching-material-system-requirements-context.md` only for broad project spec, pipeline architecture, or full lesson/database generation.
+   - Read `docs/lesson-slide-template-guide.md` for slide/template work.
 
 3. Execute inside the project
    - Prefer existing templates, scripts, configs, and Lesson 01 slide patterns.
@@ -32,6 +32,7 @@ Make the project reliable for Codex, Kiro, Hermes, Claude Code, Cursor, and Wind
    - No PPTX workflow unless Adam explicitly changes the project rule.
 
 4. Verify with concrete checks
+   - Scale checks to the change. Small one-slide/title/wording/image edits should use targeted output edits and affected-slide checks, not full lesson regeneration.
    - Pipeline/data: run the relevant script and validate JSON/CSV shape.
    - Slides: open the lesson-root `index.html`, confirm it launches `slides/index.html`, render screenshots/contact sheets, and inspect overflow/content/image matches.
    - Presenter: verify MANIFEST order, thumbnails, navigation, annotation tools, and locked CDN versions.
@@ -43,6 +44,7 @@ Make the project reliable for Codex, Kiro, Hermes, Claude Code, Cursor, and Wind
    - Final response should say what changed, which checks ran, and what risk remains.
 
 6. Feed durable lessons back
+   - Only update durable docs/skills for reusable rules, generator/template changes, or repeated instructions Adam wants remembered. Do not turn a one-off slide/title/image edit into a repo-wide doc sync.
    - If Adam says he keeps repeating an instruction, encode it in `AGENTS.md`, `.kiro/steering`, relevant `.kiro/skills`, `.agent/skills`, and cross-tool files.
    - If the lesson is project-specific, add it to `memory/project-memory.md`.
    - If the lesson is global to Adam, add a Codex memory update note under `~/.codex/memories/extensions/ad_hoc/notes/`.

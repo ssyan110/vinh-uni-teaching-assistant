@@ -269,7 +269,7 @@ def _default_image_prompt(item: dict) -> str:
 
 def _default_image_status(item: dict) -> str:
     role = _default_image_role(item)
-    return "needs_generation" if role else ""
+    return "placeholder_needs_generation" if role else ""
 
 
 def _default_image_semantic_check(item: dict) -> str:
