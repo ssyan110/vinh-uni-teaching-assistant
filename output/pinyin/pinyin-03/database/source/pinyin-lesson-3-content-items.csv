@@ -1,0 +1,58 @@
+lesson_id,page_range,page_range_options,sequence,record_type,item_id,title,hanzi,pinyin,symbol,category,final_group,content_focus,exercise_type,source_set_id,source_chart_id,source_tone_sandhi_rule_id,related_rule_id,script_note,meaning_note,pronunciation_first,meaning_focus,requires_hanzi_recognition,includes_tones,is_page_range_flexible,notes
+pinyin_lesson_03,P1,,1,lesson_cover,page_l3_01,封面,,,,lesson_page,,第三課課程封面。,,,,,,,,true,true,false,,false,
+pinyin_lesson_03,P2,,2,learning_objective,page_l3_02,學習目標,,,,lesson_page,,說明本課要學 zh/ch/sh/r、z/c/s、含聲調拼讀、詞彙發音與字義、一不變調。,,,,,,,,true,true,false,,false,
+pinyin_lesson_03,P3,,3,warmup_activity,page_l3_03,暖身活動：複習第二課生詞,,,,lesson_page,,複習第二課生詞；活動可用連連看或聽音猜意 flash card。,,,,,,,,true,true,false,,false,
+pinyin_lesson_03,P4,,4,pinyin_learning_cover,page_l3_04,拼音學習封面 1：zh ch sh r,,,,lesson_page,,進入翹舌音聲母學習段落。,,,,,,,,true,true,false,,false,
+pinyin_lesson_03,P5,,5,pinyin_chart,pinyin_chart_l3_group_1,拼音學習表格 1：zh ch sh r + a o e i u ü,,,,lesson_page,,建立 zh/ch/sh/r 與韻母拼讀組合。,,,pinyin_chart_l3_group_1,,,,,true,true,false,false,false,
+pinyin_lesson_03,P6,,6,pinyin_exercise,page_l3_06,拼音練習 1,,,,lesson_page,,第一組聲母拼讀練習，含聲調。,,,pinyin_chart_l3_group_1,,,,,true,true,false,true,false,
+pinyin_lesson_03,P7,,7,vocabulary_set,vocab_set_l3_01,詞彙 1,,,,lesson_page,,炸雞、茶、車、熱、吃、十、豬、書。,,vocab_set_l3_01,,,,,,true,true,false,,false,
+pinyin_lesson_03,P8,,8,vocab_exercise,page_l3_08,詞彙練習 1,,,,lesson_page,,詞彙 1 的發音與字義練習。,,vocab_set_l3_01,,,,,,true,true,false,,false,
+pinyin_lesson_03,P9,,9,pinyin_learning_cover,page_l3_09,拼音學習封面 2：z c s,,,,lesson_page,,進入平舌音聲母學習段落。,,,,,,,,true,true,false,,false,
+pinyin_lesson_03,P10,,10,pinyin_chart,pinyin_chart_l3_group_2,拼音學習表格 2：z c s + a o e i u ü,,,,lesson_page,,建立 z/c/s 與韻母拼讀組合。,,,pinyin_chart_l3_group_2,,,,,true,true,false,false,false,
+pinyin_lesson_03,P11,,11,pinyin_exercise,page_l3_11,拼音練習 2,,,,lesson_page,,第二組聲母拼讀練習，含聲調。,,,pinyin_chart_l3_group_2,,,,,true,true,false,true,false,
+pinyin_lesson_03,P12,,12,vocabulary_set,vocab_set_l3_02,詞彙 2,,,,lesson_page,,擦、撒、綠色、负责、字、四、組、速度。,,vocab_set_l3_02,,,,,,true,true,false,,false,负责 依使用者原文保留，後續可確認是否改為 負責。
+pinyin_lesson_03,P13,,13,vocab_exercise,page_l3_13,詞彙練習 2,,,,lesson_page,,詞彙 2 的發音與字義練習。,,vocab_set_l3_02,,,,,,true,true,false,,false,
+pinyin_lesson_03,P14,,14,tone_sandhi_rule,rule_l3_yi_bu_tone_sandhi,規則：一不變調,,,,lesson_page,,學習 一/不 在語流中的變調規則。,,,,rule_l3_yi_bu_tone_sandhi,,,,true,true,false,,false,
+pinyin_lesson_03,P15,,15,tone_sandhi_exercise,page_l3_15,綜合練習：一不變調,,,,lesson_page,,練習一不變調的聽辨、朗讀或選擇。,,,,rule_l3_yi_bu_tone_sandhi,,,,true,true,false,,false,
+pinyin_lesson_03,,P16-P17|P16-P18,16,review_exercise,page_l3_16,課後練習,,,,lesson_page,,2-3 個題型整合複習。,,,,,,,,true,true,false,,true,
+pinyin_lesson_03,P19,,17,initials_summary,summary_21_initials,21 聲母總表,,,,lesson_page,,整理第一至第三課學完的 21 個聲母。,,,,,,,,true,true,false,,false,
+pinyin_lesson_03,P3,,90,warmup_activity,warmup_review_pinyin_lesson_02,暖身活動：複習前一課生詞,,,,warmup_activity,,複習前一課的生詞,,,,,,,,true,true,false,,,暖身活動放在學習目標之後，用前一課生詞作為複習材料。
+pinyin_lesson_03,P3,,91,warmup_activity_option,warmup_review_pinyin_lesson_02_option_1,連連看,,,,matching,,學生看照片，連到對應的拼音與漢字。,,,,,,,,true,true,false,,,
+pinyin_lesson_03,P3,,92,warmup_activity_option,warmup_review_pinyin_lesson_02_option_2,聽音猜意 flash card,,,,audio_flashcard,,正面播放生詞音檔，學生猜意思；反面顯示漢字、拼音與圖片。,,,,,,,,true,true,false,,,
+pinyin_lesson_03,P4,,101,initial,initial_zh,聲母 zh,,,zh,retroflex,,聲母 zh。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_03,P4,,102,initial,initial_ch,聲母 ch,,,ch,retroflex,,聲母 ch。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_03,P4,,103,initial,initial_sh,聲母 sh,,,sh,retroflex,,聲母 sh。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_03,P4,,104,initial,initial_r,聲母 r,,,r,retroflex,,聲母 r。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_03,P9,,105,initial,initial_z,聲母 z,,,z,dental_sibilant,,聲母 z。,,,,,,,,true,false,false,,,chart_page=P10; rule_page=
+pinyin_lesson_03,P9,,106,initial,initial_c,聲母 c,,,c,dental_sibilant,,聲母 c。,,,,,,,,true,false,false,,,chart_page=P10; rule_page=
+pinyin_lesson_03,P9,,107,initial,initial_s,聲母 s,,,s,dental_sibilant,,聲母 s。,,,,,,,,true,false,false,,,chart_page=P10; rule_page=
+pinyin_lesson_03,P5,,108,pinyin_chart,pinyin_chart_l3_group_1,zh ch sh r + a o e i u ü,,,,pinyin_chart,,initials=zh|ch|sh|r; finals=a|o|e|i|u|ü,,,,,,,,true,false,false,false,,
+pinyin_lesson_03,P10,,109,pinyin_chart,pinyin_chart_l3_group_2,z c s + a o e i u ü,,,,pinyin_chart,,initials=z|c|s; finals=a|o|e|i|u|ü,,,,,,,,true,false,false,false,,
+pinyin_lesson_03,P14,,110,tone_sandhi_rule,rule_l3_yi_bu_tone_sandhi,一不變調,,,,tone_sandhi_rule,,一、不在特定語音環境中會改變聲調；練習目標是能正確朗讀與聽辨。,,,,rule_l3_yi_bu_tone_sandhi,,,,true,true,false,,,
+pinyin_lesson_03,P14,,111,tone_sandhi_rule_detail,rule_l3_yi_bu_tone_sandhi_yī_yí,一 yī→yí,一,yí,,tone_sandhi_rule_detail,,後面接第四聲,,,,rule_l3_yi_bu_tone_sandhi,,,,true,true,false,,,一 + 四聲時常讀二聲。
+pinyin_lesson_03,P14,,112,tone_sandhi_rule_detail,rule_l3_yi_bu_tone_sandhi_yī_yì,一 yī→yì,一,yì,,tone_sandhi_rule_detail,,後面接第一、二、三聲,,,,rule_l3_yi_bu_tone_sandhi,,,,true,true,false,,,一 + 非四聲時常讀四聲。
+pinyin_lesson_03,P14,,113,tone_sandhi_rule_detail,rule_l3_yi_bu_tone_sandhi_bù_bú,不 bù→bú,不,bú,,tone_sandhi_rule_detail,,後面接第四聲,,,,rule_l3_yi_bu_tone_sandhi,,,,true,true,false,,,不 + 四聲時讀二聲。
+pinyin_lesson_03,P14,,114,tone_sandhi_rule_detail,rule_l3_yi_bu_tone_sandhi_bù_bù,不 bù→bù,不,bù,,tone_sandhi_rule_detail,,其他情況,,,,rule_l3_yi_bu_tone_sandhi,,,,true,true,false,,,其他情況通常維持四聲。
+pinyin_lesson_03,P7,,115,vocabulary,vocab_l3_001_zhaji,炸雞,炸雞,zhájī,,vocab_set_l3_01,,,,vocab_set_l3_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_03,P7,,116,vocabulary,vocab_l3_002_cha,茶,茶,chá,,vocab_set_l3_01,,,,vocab_set_l3_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_03,P7,,117,vocabulary,vocab_l3_003_che,車,車,chē,,vocab_set_l3_01,,,,vocab_set_l3_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_03,P7,,118,vocabulary,vocab_l3_004_re,熱,熱,rè,,vocab_set_l3_01,,,,vocab_set_l3_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_03,P7,,119,vocabulary,vocab_l3_005_chi,吃,吃,chī,,vocab_set_l3_01,,,,vocab_set_l3_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_03,P7,,120,vocabulary,vocab_l3_006_shi,十,十,shí,,vocab_set_l3_01,,,,vocab_set_l3_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_03,P7,,121,vocabulary,vocab_l3_007_zhu,豬,豬,zhū,,vocab_set_l3_01,,,,vocab_set_l3_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_03,P7,,122,vocabulary,vocab_l3_008_shu,書,書,shū,,vocab_set_l3_01,,,,vocab_set_l3_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_03,P12,,123,vocabulary,vocab_l3_009_ca,擦,擦,cā,,vocab_set_l3_02,,,,vocab_set_l3_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_03,P12,,124,vocabulary,vocab_l3_010_sa,撒,撒,sā,,vocab_set_l3_02,,,,vocab_set_l3_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_03,P12,,125,vocabulary,vocab_l3_011_lvse,綠色,綠色,lǜsè,,vocab_set_l3_02,,,,vocab_set_l3_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_03,P12,,126,vocabulary,vocab_l3_012_fuze,负责,负责,fùzé,,vocab_set_l3_02,,,,vocab_set_l3_02,,,,user_input_simplified,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_03,P12,,127,vocabulary,vocab_l3_013_zi,字,字,zì,,vocab_set_l3_02,,,,vocab_set_l3_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_03,P12,,128,vocabulary,vocab_l3_014_si,四,四,sì,,vocab_set_l3_02,,,,vocab_set_l3_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_03,P12,,129,vocabulary,vocab_l3_015_zu,組,組,zǔ,,vocab_set_l3_02,,,,vocab_set_l3_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_03,P12,,130,vocabulary,vocab_l3_016_sudu,速度,速度,sùdù,,vocab_set_l3_02,,,,vocab_set_l3_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_03,P6,,131,exercise,exercise_l3_p6_pinyin_group_1,含聲調拼音練習,,,,exercise,,練習 zh/ch/sh/r + 韻母的含聲調拼讀。,含聲調拼音練習,,pinyin_chart_l3_group_1,,,,,true,true,false,true,false,
+pinyin_lesson_03,P8,,132,exercise,exercise_l3_p8_vocab_1,詞彙 1 練習,,,,exercise,,確認詞彙 1 發音與字義理解。,詞彙 1 練習,vocab_set_l3_01,,,,,,true,true,false,,false,
+pinyin_lesson_03,P11,,133,exercise,exercise_l3_p11_pinyin_group_2,含聲調拼音練習,,,,exercise,,練習 z/c/s + 韻母的含聲調拼讀。,含聲調拼音練習,,pinyin_chart_l3_group_2,,,,,true,true,false,true,false,
+pinyin_lesson_03,P13,,134,exercise,exercise_l3_p13_vocab_2,詞彙 2 練習,,,,exercise,,確認詞彙 2 發音與字義理解。,詞彙 2 練習,vocab_set_l3_02,,,,,,true,true,false,,false,
+pinyin_lesson_03,P15,,135,exercise,exercise_l3_p15_yi_bu,一不變調綜合練習,,,,exercise,,練習一不變調的朗讀、聽辨或選擇。,一不變調綜合練習,,,rule_l3_yi_bu_tone_sandhi,,,,true,true,false,,false,
+pinyin_lesson_03,,P16-P17|P16-P18,136,exercise,exercise_l3_review,課後整合練習,,,,exercise,,用 2-3 個題型整合複習。,課後整合練習,,,,,,,true,true,false,,true,聽音選拼音|看拼音朗讀|字義配對|一不變調判斷
+pinyin_lesson_03,P19,,137,initials_summary,summary_21_initials,21 聲母總表,,,,initials_summary,,b|p|m|f|d|t|n|l|g|k|h|j|q|x|zh|ch|sh|r|z|c|s,,,,,,,,true,false,false,,,

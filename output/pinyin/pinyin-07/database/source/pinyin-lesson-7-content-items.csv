@@ -1,0 +1,96 @@
+lesson_id,page_range,page_range_options,sequence,record_type,item_id,title,hanzi,pinyin,category,content_focus,exercise_type,source_set_id,related_rule_id,pronunciation_first,meaning_focus,requires_hanzi_recognition,is_page_range_flexible,notes
+pinyin_lesson_07,P1,,1,lesson_cover,page_l7_01,封面,,,lesson_page,第七課課程封面。,,,,true,true,false,false,
+pinyin_lesson_07,P2,,2,learning_objective,page_l7_02,學習目標,,,lesson_page,說明本課要學 i/u/ü 開頭拼音變化規則、生詞拼音連寫、詞彙發音與字義。,,,,true,true,false,false,
+pinyin_lesson_07,P3,,3,warmup_activity,page_l7_03,暖身活動：複習第六課生詞,,,lesson_page,複習第六課生詞；活動可用連連看或聽音猜意 flash card。,,,,true,true,false,false,
+pinyin_lesson_07,P4,,4,pinyin_learning_cover,page_l7_04,i/u/ü 開頭拼音學習封面 1：yi yin ying,,,lesson_page,進入 i/in/ing 獨立成音節變化段落。,,,,true,true,false,false,
+pinyin_lesson_07,P5,,5,spelling_rule,rule_l7_i_yi_yin_ying,"i 開頭拼音變化規則 1：i, in, ing → yi, yin, ying",,,lesson_page,學習 i、in、ing 獨立成音節時改寫為 yi、yin、ying。,,,rule_l7_i_yi_yin_ying,true,true,false,false,
+pinyin_lesson_07,P6,,6,vocabulary_set,vocab_set_l7_01,詞彙 1,,,lesson_page,一、音、贏。,,,rule_l7_i_yi_yin_ying,true,true,false,false,
+pinyin_lesson_07,P7,,7,reserved_page,page_l7_07,待安排/保留頁,,,lesson_page,使用者提供的頁碼中未指定 P7 內容。,,,,true,true,false,false,保留原始頁碼間隔，避免自動重排後續頁碼。
+pinyin_lesson_07,P8,,8,pinyin_learning_cover,page_l7_08,i/u/ü 開頭拼音學習封面 2：ya ye yao yan yang yong,,,lesson_page,進入 ia/ie/iao/ian/iang/iong 獨立成音節變化段落。,,,,true,true,false,false,
+pinyin_lesson_07,P9,,9,spelling_rule,rule_l7_i_compound_y,"i 開頭拼音變化規則 2：ia, ie, iao, ian, iang, iong → ya, ye, yao, yan, yang, yong",,,lesson_page,學習 i 開頭複合韻母獨立成音節時改用 y 開頭拼寫。,,,rule_l7_i_compound_y,true,true,false,false,
+pinyin_lesson_07,P10,,10,vocabulary_set,vocab_set_l7_02,詞彙 2,,,lesson_page,鴨、爺爺、藥、顏色、羊、使用。,,,rule_l7_i_compound_y,true,true,false,false,
+pinyin_lesson_07,P11,,11,pinyin_learning_cover,page_l7_11,i/u/ü 開頭拼音學習封面 3：iu,,,lesson_page,進入 iu 獨立成音節變化段落。,,,,true,true,false,false,
+pinyin_lesson_07,P12,,12,spelling_rule,rule_l7_iu_you,i 開頭拼音變化規則 3：iu → you,,,lesson_page,學習 iu 獨立成音節時改寫為 you。,,,rule_l7_iu_you,true,true,false,false,
+pinyin_lesson_07,P13,,13,vocabulary_set,vocab_set_l7_03,詞彙 3,,,lesson_page,游泳。,,,rule_l7_iu_you,true,true,false,false,
+pinyin_lesson_07,P14,,14,vocab_exercise,page_l7_14,詞彙練習 1,,,lesson_page,練習詞彙 1-3 中的十個生詞。,,vocab_set_l7_01|vocab_set_l7_02|vocab_set_l7_03,,true,true,false,false,
+pinyin_lesson_07,P15,,15,pinyin_learning_cover,page_l7_15,i/u/ü 開頭拼音學習封面 4：wu,,,lesson_page,進入 u 獨立成音節變化段落。,,,,true,true,false,false,
+pinyin_lesson_07,P16,,16,spelling_rule,rule_l7_u_wu,u 開頭拼音變化規則 1：u → wu,,,lesson_page,學習 u 獨立成音節時改寫為 wu。,,,rule_l7_u_wu,true,true,false,false,
+pinyin_lesson_07,P17,,17,vocabulary_set,vocab_set_l7_04,詞彙 4,,,lesson_page,五。,,,rule_l7_u_wu,true,true,false,false,
+pinyin_lesson_07,P18,,18,pinyin_learning_cover,page_l7_18,i/u/ü 開頭拼音學習封面 5：wa wo wai wan wang weng,,,lesson_page,進入 ua/uo/uai/uan/uang/ueng 獨立成音節變化段落。,,,,true,true,false,false,
+pinyin_lesson_07,P19,,19,spelling_rule,rule_l7_u_compound_w,"u 開頭拼音變化規則 2：ua, uo, uai, uan, uang, ueng → wa, wo, wai, wan, wang, weng",,,lesson_page,學習 u 開頭複合韻母獨立成音節時改用 w 開頭拼寫。,,,rule_l7_u_compound_w,true,true,false,false,
+pinyin_lesson_07,P20,,20,vocabulary_set,vocab_set_l7_05,詞彙 5,,,lesson_page,襪子、我、外面、玩、忘記、甕。,,,rule_l7_u_compound_w,true,true,false,false,
+pinyin_lesson_07,P21,,21,pinyin_learning_cover,page_l7_21,i/u/ü 開頭拼音學習封面 6：wei wen,,,lesson_page,進入 ui/un 獨立成音節變化段落。,,,,true,true,false,false,
+pinyin_lesson_07,P22,,22,spelling_rule,rule_l7_ui_un_wei_wen,"u 開頭拼音變化規則 3：ui, un → wei, wen",,,lesson_page,學習 ui、un 獨立成音節時改寫為 wei、wen。,,,rule_l7_ui_un_wei_wen,true,true,false,false,
+pinyin_lesson_07,P23,,23,vocabulary_set,vocab_set_l7_06,詞彙 6,,,lesson_page,喂、文化。,,,rule_l7_ui_un_wei_wen,true,true,false,false,
+pinyin_lesson_07,P24,,24,vocab_exercise,page_l7_24,詞彙練習 2,,,lesson_page,練習詞彙 4-6 中的十個生詞。,,vocab_set_l7_04|vocab_set_l7_05|vocab_set_l7_06,,true,true,false,false,
+pinyin_lesson_07,P25,,25,pinyin_learning_cover,page_l7_25,i/u/ü 開頭拼音學習封面 7：yu yue yuan yun,,,lesson_page,進入 ü/üe/üan/ün 獨立成音節變化段落。,,,,true,true,false,false,
+pinyin_lesson_07,P26,,26,spelling_rule,rule_l7_u_umlaut_y,"ü 開頭拼音變化規則：ü, üe, üan, ün → yu, yue, yuan, yun",,,lesson_page,學習 ü 開頭韻母獨立成音節時改用 yu/yue/yuan/yun。,,,rule_l7_u_umlaut_y,true,true,false,false,
+pinyin_lesson_07,P27,,27,vocabulary_set,vocab_set_l7_07,詞彙 7,,,lesson_page,魚、雨、月、越南、圓、雲。,,,rule_l7_u_umlaut_y,true,true,false,false,使用者原始標記為詞彙6；此處整理為詞彙7，避免和 P23 詞彙6 重複。
+pinyin_lesson_07,P28,,28,vocab_exercise,page_l7_28,詞彙練習 3,,,lesson_page,練習詞彙 7。,,vocab_set_l7_07,,true,true,false,false,使用者原始描述為「練習詞彙6中」；此處依 P27 整理為詞彙7。
+pinyin_lesson_07,P29,,29,word_spacing_rule,rule_l7_word_pinyin_spacing,規則：生詞拼音的連寫,,,lesson_page,解釋為什麼「越南」的拼音是 Yuènán，而不是 Yuè nán。,,,rule_l7_word_pinyin_spacing,true,true,false,false,
+pinyin_lesson_07,,P30-P31|P30-P32,30,review_exercise,page_l7_30,課後練習,,,lesson_page,2-3 個題型整合複習。,,,,true,true,false,true,
+pinyin_lesson_07,,P33|P34,31,spelling_rule_summary,summary_l7_i_u_umlaut_rules,i/u 變化規則總結表格,,,lesson_page,整理 i/u/ü 開頭拼音變化規則。,,,,true,true,false,true,
+pinyin_lesson_07,P3,,90,warmup_activity,warmup_review_pinyin_lesson_06,暖身活動：複習第六課生詞,,,warmup_activity,複習前一課的生詞,,,,true,true,false,,暖身活動放在學習目標之後，用第六課生詞作為複習材料。
+pinyin_lesson_07,P3,,91,warmup_activity_option,warmup_review_pinyin_lesson_06_option_1,連連看,,,matching,學生看照片，連到對應的拼音與漢字。,,,,true,true,false,,
+pinyin_lesson_07,P3,,92,warmup_activity_option,warmup_review_pinyin_lesson_06_option_2,聽音猜意 flash card,,,audio_flashcard,正面播放生詞音檔，學生猜意思；反面顯示漢字、拼音與圖片。,,,,true,true,false,,
+pinyin_lesson_07,P5,,101,spelling_rule,rule_l7_i_yi_yin_ying,i/in/ing → yi/yin/ying,,,spelling_rule,韻母獨立成音節時，需要依規則改寫拼音開頭。,,,rule_l7_i_yi_yin_ying,true,true,false,,
+pinyin_lesson_07,P5,,102,spelling_rule_mapping,rule_l7_i_yi_yin_ying_i_to_yi,i→yi,,,spelling_rule_mapping,i is written as yi.,,,rule_l7_i_yi_yin_ying,true,true,false,,
+pinyin_lesson_07,P5,,103,spelling_rule_mapping,rule_l7_i_yi_yin_ying_in_to_yin,in→yin,,,spelling_rule_mapping,in is written as yin.,,,rule_l7_i_yi_yin_ying,true,true,false,,
+pinyin_lesson_07,P5,,104,spelling_rule_mapping,rule_l7_i_yi_yin_ying_ing_to_ying,ing→ying,,,spelling_rule_mapping,ing is written as ying.,,,rule_l7_i_yi_yin_ying,true,true,false,,
+pinyin_lesson_07,P9,,105,spelling_rule,rule_l7_i_compound_y,ia/ie/iao/ian/iang/iong → ya/ye/yao/yan/yang/yong,,,spelling_rule,韻母獨立成音節時，需要依規則改寫拼音開頭。,,,rule_l7_i_compound_y,true,true,false,,
+pinyin_lesson_07,P9,,106,spelling_rule_mapping,rule_l7_i_compound_y_ia_to_ya,ia→ya,,,spelling_rule_mapping,ia is written as ya.,,,rule_l7_i_compound_y,true,true,false,,
+pinyin_lesson_07,P9,,107,spelling_rule_mapping,rule_l7_i_compound_y_ie_to_ye,ie→ye,,,spelling_rule_mapping,ie is written as ye.,,,rule_l7_i_compound_y,true,true,false,,
+pinyin_lesson_07,P9,,108,spelling_rule_mapping,rule_l7_i_compound_y_iao_to_yao,iao→yao,,,spelling_rule_mapping,iao is written as yao.,,,rule_l7_i_compound_y,true,true,false,,
+pinyin_lesson_07,P9,,109,spelling_rule_mapping,rule_l7_i_compound_y_ian_to_yan,ian→yan,,,spelling_rule_mapping,ian is written as yan.,,,rule_l7_i_compound_y,true,true,false,,
+pinyin_lesson_07,P9,,110,spelling_rule_mapping,rule_l7_i_compound_y_iang_to_yang,iang→yang,,,spelling_rule_mapping,iang is written as yang.,,,rule_l7_i_compound_y,true,true,false,,
+pinyin_lesson_07,P9,,111,spelling_rule_mapping,rule_l7_i_compound_y_iong_to_yong,iong→yong,,,spelling_rule_mapping,iong is written as yong.,,,rule_l7_i_compound_y,true,true,false,,
+pinyin_lesson_07,P12,,112,spelling_rule,rule_l7_iu_you,iu → you,,,spelling_rule,韻母獨立成音節時，需要依規則改寫拼音開頭。,,,rule_l7_iu_you,true,true,false,,
+pinyin_lesson_07,P12,,113,spelling_rule_mapping,rule_l7_iu_you_iu_to_you,iu→you,,,spelling_rule_mapping,iu is written as you.,,,rule_l7_iu_you,true,true,false,,
+pinyin_lesson_07,P16,,114,spelling_rule,rule_l7_u_wu,u → wu,,,spelling_rule,韻母獨立成音節時，需要依規則改寫拼音開頭。,,,rule_l7_u_wu,true,true,false,,
+pinyin_lesson_07,P16,,115,spelling_rule_mapping,rule_l7_u_wu_u_to_wu,u→wu,,,spelling_rule_mapping,u is written as wu.,,,rule_l7_u_wu,true,true,false,,
+pinyin_lesson_07,P19,,116,spelling_rule,rule_l7_u_compound_w,ua/uo/uai/uan/uang/ueng → wa/wo/wai/wan/wang/weng,,,spelling_rule,韻母獨立成音節時，需要依規則改寫拼音開頭。,,,rule_l7_u_compound_w,true,true,false,,
+pinyin_lesson_07,P19,,117,spelling_rule_mapping,rule_l7_u_compound_w_ua_to_wa,ua→wa,,,spelling_rule_mapping,ua is written as wa.,,,rule_l7_u_compound_w,true,true,false,,
+pinyin_lesson_07,P19,,118,spelling_rule_mapping,rule_l7_u_compound_w_uo_to_wo,uo→wo,,,spelling_rule_mapping,uo is written as wo.,,,rule_l7_u_compound_w,true,true,false,,
+pinyin_lesson_07,P19,,119,spelling_rule_mapping,rule_l7_u_compound_w_uai_to_wai,uai→wai,,,spelling_rule_mapping,uai is written as wai.,,,rule_l7_u_compound_w,true,true,false,,
+pinyin_lesson_07,P19,,120,spelling_rule_mapping,rule_l7_u_compound_w_uan_to_wan,uan→wan,,,spelling_rule_mapping,uan is written as wan.,,,rule_l7_u_compound_w,true,true,false,,
+pinyin_lesson_07,P19,,121,spelling_rule_mapping,rule_l7_u_compound_w_uang_to_wang,uang→wang,,,spelling_rule_mapping,uang is written as wang.,,,rule_l7_u_compound_w,true,true,false,,
+pinyin_lesson_07,P19,,122,spelling_rule_mapping,rule_l7_u_compound_w_ueng_to_weng,ueng→weng,,,spelling_rule_mapping,ueng is written as weng.,,,rule_l7_u_compound_w,true,true,false,,
+pinyin_lesson_07,P22,,123,spelling_rule,rule_l7_ui_un_wei_wen,ui/un → wei/wen,,,spelling_rule,韻母獨立成音節時，需要依規則改寫拼音開頭。,,,rule_l7_ui_un_wei_wen,true,true,false,,
+pinyin_lesson_07,P22,,124,spelling_rule_mapping,rule_l7_ui_un_wei_wen_ui_to_wei,ui→wei,,,spelling_rule_mapping,ui is written as wei.,,,rule_l7_ui_un_wei_wen,true,true,false,,
+pinyin_lesson_07,P22,,125,spelling_rule_mapping,rule_l7_ui_un_wei_wen_un_to_wen,un→wen,,,spelling_rule_mapping,un is written as wen.,,,rule_l7_ui_un_wei_wen,true,true,false,,
+pinyin_lesson_07,P26,,126,spelling_rule,rule_l7_u_umlaut_y,ü/üe/üan/ün → yu/yue/yuan/yun,,,spelling_rule,韻母獨立成音節時，需要依規則改寫拼音開頭。,,,rule_l7_u_umlaut_y,true,true,false,,
+pinyin_lesson_07,P26,,127,spelling_rule_mapping,rule_l7_u_umlaut_y_ü_to_yu,ü→yu,,,spelling_rule_mapping,ü is written as yu.,,,rule_l7_u_umlaut_y,true,true,false,,
+pinyin_lesson_07,P26,,128,spelling_rule_mapping,rule_l7_u_umlaut_y_üe_to_yue,üe→yue,,,spelling_rule_mapping,üe is written as yue.,,,rule_l7_u_umlaut_y,true,true,false,,
+pinyin_lesson_07,P26,,129,spelling_rule_mapping,rule_l7_u_umlaut_y_üan_to_yuan,üan→yuan,,,spelling_rule_mapping,üan is written as yuan.,,,rule_l7_u_umlaut_y,true,true,false,,
+pinyin_lesson_07,P26,,130,spelling_rule_mapping,rule_l7_u_umlaut_y_ün_to_yun,ün→yun,,,spelling_rule_mapping,ün is written as yun.,,,rule_l7_u_umlaut_y,true,true,false,,
+pinyin_lesson_07,P6,,131,vocabulary,vocab_l7_001_yi,一,一,yī,vocab_set_l7_01,,,vocab_set_l7_01,rule_l7_i_yi_yin_ying,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P6,,132,vocabulary,vocab_l7_002_yin,音,音,yīn,vocab_set_l7_01,,,vocab_set_l7_01,rule_l7_i_yi_yin_ying,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P6,,133,vocabulary,vocab_l7_003_ying,贏,贏,yíng,vocab_set_l7_01,,,vocab_set_l7_01,rule_l7_i_yi_yin_ying,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P10,,134,vocabulary,vocab_l7_004_ya,鴨,鴨,yā,vocab_set_l7_02,,,vocab_set_l7_02,rule_l7_i_compound_y,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P10,,135,vocabulary,vocab_l7_005_yeye,爺爺,爺爺,yéye,vocab_set_l7_02,,,vocab_set_l7_02,rule_l7_i_compound_y,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P10,,136,vocabulary,vocab_l7_006_yao,藥,藥,yào,vocab_set_l7_02,,,vocab_set_l7_02,rule_l7_i_compound_y,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P10,,137,vocabulary,vocab_l7_007_yanse,顏色,顏色,yánsè,vocab_set_l7_02,,,vocab_set_l7_02,rule_l7_i_compound_y,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P10,,138,vocabulary,vocab_l7_008_yang,羊,羊,yáng,vocab_set_l7_02,,,vocab_set_l7_02,rule_l7_i_compound_y,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P10,,139,vocabulary,vocab_l7_009_shiyong,使用,使用,shǐyòng,vocab_set_l7_02,,,vocab_set_l7_02,rule_l7_i_compound_y,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P13,,140,vocabulary,vocab_l7_010_youyong,游泳,游泳,yóuyǒng,vocab_set_l7_03,,,vocab_set_l7_03,rule_l7_iu_you,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P17,,141,vocabulary,vocab_l7_011_wu,五,五,wǔ,vocab_set_l7_04,,,vocab_set_l7_04,rule_l7_u_wu,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P20,,142,vocabulary,vocab_l7_012_wazi,襪子,襪子,wàzi,vocab_set_l7_05,,,vocab_set_l7_05,rule_l7_u_compound_w,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P20,,143,vocabulary,vocab_l7_013_wo,我,我,wǒ,vocab_set_l7_05,,,vocab_set_l7_05,rule_l7_u_compound_w,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P20,,144,vocabulary,vocab_l7_014_waimian,外面,外面,wàimiàn,vocab_set_l7_05,,,vocab_set_l7_05,rule_l7_u_compound_w,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P20,,145,vocabulary,vocab_l7_015_wan,玩,玩,wán,vocab_set_l7_05,,,vocab_set_l7_05,rule_l7_u_compound_w,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P20,,146,vocabulary,vocab_l7_016_wangji,忘記,忘記,wàngjì,vocab_set_l7_05,,,vocab_set_l7_05,rule_l7_u_compound_w,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P20,,147,vocabulary,vocab_l7_017_weng,甕,甕,wèng,vocab_set_l7_05,,,vocab_set_l7_05,rule_l7_u_compound_w,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P23,,148,vocabulary,vocab_l7_018_wei,喂,喂,wèi,vocab_set_l7_06,,,vocab_set_l7_06,rule_l7_ui_un_wei_wen,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P23,,149,vocabulary,vocab_l7_019_wenhua,文化,文化,wénhuà,vocab_set_l7_06,,,vocab_set_l7_06,rule_l7_ui_un_wei_wen,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P27,,150,vocabulary,vocab_l7_020_yu_fish,魚,魚,yú,vocab_set_l7_07,,,vocab_set_l7_07,rule_l7_u_umlaut_y,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P27,,151,vocabulary,vocab_l7_021_yu_rain,雨,雨,yǔ,vocab_set_l7_07,,,vocab_set_l7_07,rule_l7_u_umlaut_y,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P27,,152,vocabulary,vocab_l7_022_yue,月,月,yuè,vocab_set_l7_07,,,vocab_set_l7_07,rule_l7_u_umlaut_y,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P27,,153,vocabulary,vocab_l7_024_yuenan,越南,越南,Yuènán,vocab_set_l7_07,,,vocab_set_l7_07,rule_l7_word_pinyin_spacing,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P27,,154,vocabulary,vocab_l7_025_yuan,圓,圓,yuán,vocab_set_l7_07,,,vocab_set_l7_07,rule_l7_u_umlaut_y,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P27,,155,vocabulary,vocab_l7_026_yun,雲,雲,yún,vocab_set_l7_07,,,vocab_set_l7_07,rule_l7_u_umlaut_y,true,true,false,,發音正確，學習字義，不要求認字。
+pinyin_lesson_07,P29,,156,word_spacing_rule,rule_l7_word_pinyin_spacing,生詞拼音的連寫,,,word_spacing_rule,一個詞的拼音通常連寫；越南是一個詞，所以寫作 Yuènán，而不是分開寫 Yuè nán。,,,rule_l7_word_pinyin_spacing,true,true,false,,
+pinyin_lesson_07,P14,,157,exercise,exercise_l7_p14_vocab_1_3,詞彙練習 1,,,exercise,練習詞彙 1-3 中的十個生詞。,詞彙練習 1,vocab_set_l7_01|vocab_set_l7_02|vocab_set_l7_03,,true,true,false,false,
+pinyin_lesson_07,P24,,158,exercise,exercise_l7_p24_vocab_4_6,詞彙練習 2,,,exercise,練習詞彙 4-6 中的十個生詞。,詞彙練習 2,vocab_set_l7_04|vocab_set_l7_05|vocab_set_l7_06,,true,true,false,false,
+pinyin_lesson_07,P28,,159,exercise,exercise_l7_p28_vocab_7,詞彙練習 3,,,exercise,練習詞彙 7。,詞彙練習 3,vocab_set_l7_07,,true,true,false,false,
+pinyin_lesson_07,,P30-P31|P30-P32,160,exercise,exercise_l7_review,課後整合練習,,,exercise,用 2-3 個題型整合複習。,課後整合練習,,,true,true,false,true,看拼音朗讀|字義配對|聽音猜意|拼音變化規則判斷|生詞拼音連寫判斷
+pinyin_lesson_07,,P33|P34,161,spelling_rule_summary,summary_l7_i_u_umlaut_rules,i/u/ü 變化規則總結表格,,,spelling_rule_summary,rule_l7_i_yi_yin_ying|rule_l7_i_compound_y|rule_l7_iu_you|rule_l7_u_wu|rule_l7_u_compound_w|rule_l7_ui_un_wei_wen|rule_l7_u_umlaut_y,,,,true,true,false,true,總結表格頁碼取決於課後練習是 2 頁或 3 頁。

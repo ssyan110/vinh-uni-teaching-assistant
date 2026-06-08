@@ -1,0 +1,64 @@
+lesson_id,page_range,page_range_options,sequence,record_type,item_id,title,hanzi,pinyin,symbol,category,final_group,content_focus,exercise_type,source_set_id,source_chart_id,related_rule_id,script_note,pronunciation_first,meaning_focus,requires_hanzi_recognition,includes_tones,is_page_range_flexible,notes
+pinyin_lesson_06,P1,,1,lesson_cover,page_l6_01,封面,,,,lesson_page,,第六課課程封面。,,,,,,true,true,false,,false,
+pinyin_lesson_06,P2,,2,learning_objective,page_l6_02,學習目標,,,,lesson_page,,說明本課要學 ia/iao/ian/iang/iong、ua/uo/uai/uan/uang/üan、含聲調拼讀、詞彙發音與字義、üan 拼寫變化。,,,,,,true,true,false,,false,
+pinyin_lesson_06,P3,,3,warmup_activity,page_l6_03,暖身活動：複習第五課生詞,,,,lesson_page,,複習第五課生詞；活動可用連連看或聽音猜意 flash card。,,,,,,true,true,false,,false,
+pinyin_lesson_06,P4,,4,pinyin_learning_cover,page_l6_04,拼音學習封面 1：ia iao ian iang iong,,,,lesson_page,,進入第一組 i 開頭複合韻母學習段落。,,,,,,true,true,false,,false,
+pinyin_lesson_06,P5,,5,pinyin_chart,pinyin_chart_l6_group_1,拼音學習表格 1：全部聲母 + ia iao ian iang iong,,,,lesson_page,,建立 21 聲母與 ia/iao/ian/iang/iong 的拼讀組合。,,,pinyin_chart_l6_group_1,,,true,true,false,false,false,
+pinyin_lesson_06,P6,,6,pinyin_exercise,page_l6_06,拼音練習 1,,,,lesson_page,,第一組韻母拼讀練習，含聲調。,,,pinyin_chart_l6_group_1,,,true,true,false,true,false,
+pinyin_lesson_06,P7,,7,vocabulary_set,vocab_set_l6_01,詞彙 1,,,,lesson_page,,家、下、腳、小、電、錢、香、窮。,,vocab_set_l6_01,,,,true,true,false,,false,
+pinyin_lesson_06,P8,,8,vocab_exercise,page_l6_08,詞彙練習 1,,,,lesson_page,,詞彙 1 的發音與字義練習。,,vocab_set_l6_01,,,,true,true,false,,false,
+pinyin_lesson_06,P9,,9,pinyin_learning_cover,page_l6_09,拼音學習封面 2：ua uo uai uan uang üan,,,,lesson_page,,進入第二組 u/ü 開頭複合韻母學習段落。,,,,,,true,true,false,,false,
+pinyin_lesson_06,P10,,10,pinyin_chart,pinyin_chart_l6_group_2,拼音學習表格 2：全部聲母 + ua uo uai uan uang üan,,,,lesson_page,,建立 21 聲母與 ua/uo/uai/uan/uang/üan 的拼讀組合。,,,pinyin_chart_l6_group_2,rule_l6_jqx_uan_umlaut,,true,true,false,false,false,
+pinyin_lesson_06,P11,,11,pinyin_exercise,page_l6_11,拼音練習 2,,,,lesson_page,,第二組韻母拼讀練習，含聲調。,,,pinyin_chart_l6_group_2,,,true,true,false,true,false,
+pinyin_lesson_06,P12,,12,vocabulary_set,vocab_set_l6_02,詞彙 2,,,,lesson_page,,花、黃瓜、多、說、壞、快、船、床。,,vocab_set_l6_02,,,,true,true,false,,false,
+pinyin_lesson_06,P13,,13,vocab_exercise,page_l6_13,詞彙練習 2,,,,lesson_page,,詞彙 2 的發音與字義練習。,,vocab_set_l6_02,,,,true,true,false,,false,
+pinyin_lesson_06,P14,,14,spelling_rule,rule_l6_jqx_uan_umlaut,規則：üan 的變化,,,,lesson_page,,學習 j/q/x + üan 時，拼寫為 juan/quan/xuan。,,,,rule_l6_jqx_uan_umlaut,,true,true,false,,false,發音仍與 üan 有關，拼寫省略 ü 上兩點。
+pinyin_lesson_06,P15,,15,vocabulary_set,vocab_set_l6_03,詞彙 3,,,,lesson_page,,春卷、安全、選。,,vocab_set_l6_03,,rule_l6_jqx_uan_umlaut,,true,true,false,,false,春卷依使用者原字形保留，之後可確認是否改為繁體「春捲」。
+pinyin_lesson_06,P16,,16,vocab_exercise,page_l6_16,詞彙練習 3,,,,lesson_page,,詞彙 3 的發音與字義練習。,,vocab_set_l6_03,,rule_l6_jqx_uan_umlaut,,true,true,false,,false,
+pinyin_lesson_06,,P17-P18|P17-P19,17,review_exercise,page_l6_17,課後練習,,,,lesson_page,,2-3 個題型整合複習。,,,,,,true,true,false,,true,頁碼與頁數待定；發音正確、認字義為主，不需要認漢字。
+pinyin_lesson_06,P3,,90,warmup_activity,warmup_review_pinyin_lesson_05,暖身活動：複習第五課生詞,,,,warmup_activity,,複習前一課的生詞,,,,,,true,true,false,,,暖身活動放在學習目標之後，用第五課生詞作為複習材料。
+pinyin_lesson_06,P3,,91,warmup_activity_option,warmup_review_pinyin_lesson_05_option_1,連連看,,,,matching,,學生看照片，連到對應的拼音與漢字。,,,,,,true,true,false,,,
+pinyin_lesson_06,P3,,92,warmup_activity_option,warmup_review_pinyin_lesson_05_option_2,聽音猜意 flash card,,,,audio_flashcard,,正面播放生詞音檔，學生猜意思；反面顯示漢字、拼音與圖片。,,,,,,true,true,false,,,
+pinyin_lesson_06,P5|P10,,100,initials_reference,summary_21_initials,全部 21 聲母,,,,initials_reference,,b|p|m|f|d|t|n|l|g|k|h|j|q|x|zh|ch|sh|r|z|c|s,,,,,,true,false,false,,,
+pinyin_lesson_06,P4,,101,final,final_ia,韻母 ia,,,ia,final,i_start_group,韻母 ia。,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_06,P4,,102,final,final_iao,韻母 iao,,,iao,final,i_start_group,韻母 iao。,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_06,P4,,103,final,final_ian,韻母 ian,,,ian,final,i_start_group,韻母 ian。,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_06,P4,,104,final,final_iang,韻母 iang,,,iang,final,i_start_group,韻母 iang。,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_06,P4,,105,final,final_iong,韻母 iong,,,iong,final,i_start_group,韻母 iong。,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_06,P9,,106,final,final_ua,韻母 ua,,,ua,final,u_start_group,韻母 ua。,,,,,,true,false,false,,,chart_page=P10; rule_page=
+pinyin_lesson_06,P9,,107,final,final_uo,韻母 uo,,,uo,final,u_start_group,韻母 uo。,,,,,,true,false,false,,,chart_page=P10; rule_page=
+pinyin_lesson_06,P9,,108,final,final_uai,韻母 uai,,,uai,final,u_start_group,韻母 uai。,,,,,,true,false,false,,,chart_page=P10; rule_page=
+pinyin_lesson_06,P9,,109,final,final_uan,韻母 uan,,,uan,final,u_start_group,韻母 uan。,,,,,,true,false,false,,,chart_page=P10; rule_page=
+pinyin_lesson_06,P9,,110,final,final_uang,韻母 uang,,,uang,final,u_start_group,韻母 uang。,,,,,,true,false,false,,,chart_page=P10; rule_page=
+pinyin_lesson_06,P9,,111,final,final_uan_umlaut,韻母 üan,,,üan,final,u_umlaut_start_rule_based,韻母 üan。,,,,rule_l6_jqx_uan_umlaut,,true,false,false,,,chart_page=P10; rule_page=P14
+pinyin_lesson_06,P5,,112,pinyin_chart,pinyin_chart_l6_group_1,全部聲母 + ia iao ian iang iong,,,,pinyin_chart,,initials=b|p|m|f|d|t|n|l|g|k|h|j|q|x|zh|ch|sh|r|z|c|s; finals=ia|iao|ian|iang|iong,,,pinyin_chart_l6_group_1,,,true,false,false,false,,
+pinyin_lesson_06,P10,,113,pinyin_chart,pinyin_chart_l6_group_2,全部聲母 + ua uo uai uan uang üan,,,,pinyin_chart,,initials=b|p|m|f|d|t|n|l|g|k|h|j|q|x|zh|ch|sh|r|z|c|s; finals=ua|uo|uai|uan|uang|üan,,,pinyin_chart_l6_group_2,rule_l6_jqx_uan_umlaut,,true,false,false,false,,
+pinyin_lesson_06,P14,,114,spelling_rule,rule_l6_jqx_uan_umlaut,j/q/x + üan 拼寫變化,,,,spelling_rule,,j/q/x 後接 üan 時，拼寫省略 ü 上兩點，但發音仍與 üan 有關。,,,,rule_l6_jqx_uan_umlaut,,true,false,false,,,
+pinyin_lesson_06,P14,,115,spelling_rule_mapping,rule_l6_jqx_uan_umlaut_jüan_to_juan,jüan→juan,,,juan,spelling_rule_mapping,,jüan is written as juan.,,,,rule_l6_jqx_uan_umlaut,,true,false,false,,,
+pinyin_lesson_06,P14,,116,spelling_rule_mapping,rule_l6_jqx_uan_umlaut_qüan_to_quan,qüan→quan,,,quan,spelling_rule_mapping,,qüan is written as quan.,,,,rule_l6_jqx_uan_umlaut,,true,false,false,,,
+pinyin_lesson_06,P14,,117,spelling_rule_mapping,rule_l6_jqx_uan_umlaut_xüan_to_xuan,xüan→xuan,,,xuan,spelling_rule_mapping,,xüan is written as xuan.,,,,rule_l6_jqx_uan_umlaut,,true,false,false,,,
+pinyin_lesson_06,P7,,118,vocabulary,vocab_l6_001_jia,家,家,jiā,,vocab_set_l6_01,,,,vocab_set_l6_01,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_06,P7,,119,vocabulary,vocab_l6_002_xia,下,下,xià,,vocab_set_l6_01,,,,vocab_set_l6_01,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_06,P7,,120,vocabulary,vocab_l6_003_jiao,腳,腳,jiǎo,,vocab_set_l6_01,,,,vocab_set_l6_01,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_06,P7,,121,vocabulary,vocab_l6_004_xiao,小,小,xiǎo,,vocab_set_l6_01,,,,vocab_set_l6_01,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_06,P7,,122,vocabulary,vocab_l6_005_dian,電,電,diàn,,vocab_set_l6_01,,,,vocab_set_l6_01,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_06,P7,,123,vocabulary,vocab_l6_006_qian,錢,錢,qián,,vocab_set_l6_01,,,,vocab_set_l6_01,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_06,P7,,124,vocabulary,vocab_l6_007_xiang,香,香,xiāng,,vocab_set_l6_01,,,,vocab_set_l6_01,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_06,P7,,125,vocabulary,vocab_l6_008_qiong,窮,窮,qióng,,vocab_set_l6_01,,,,vocab_set_l6_01,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_06,P12,,126,vocabulary,vocab_l6_009_hua,花,花,huā,,vocab_set_l6_02,,,,vocab_set_l6_02,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_06,P12,,127,vocabulary,vocab_l6_010_huanggua,黃瓜,黃瓜,huángguā,,vocab_set_l6_02,,,,vocab_set_l6_02,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_06,P12,,128,vocabulary,vocab_l6_011_duo,多,多,duō,,vocab_set_l6_02,,,,vocab_set_l6_02,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_06,P12,,129,vocabulary,vocab_l6_012_shuo,說,說,shuō,,vocab_set_l6_02,,,,vocab_set_l6_02,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_06,P12,,130,vocabulary,vocab_l6_013_huai,壞,壞,huài,,vocab_set_l6_02,,,,vocab_set_l6_02,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_06,P12,,131,vocabulary,vocab_l6_014_kuai,快,快,kuài,,vocab_set_l6_02,,,,vocab_set_l6_02,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_06,P12,,132,vocabulary,vocab_l6_015_chuan,船,船,chuán,,vocab_set_l6_02,,,,vocab_set_l6_02,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_06,P12,,133,vocabulary,vocab_l6_016_chuang,床,床,chuáng,,vocab_set_l6_02,,,,vocab_set_l6_02,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_06,P15,,134,vocabulary,vocab_l6_017_chunjuan,春卷,春卷,chūnjuǎn,,vocab_set_l6_03,,,,vocab_set_l6_03,,rule_l6_jqx_uan_umlaut,user_input_form,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_06,P15,,135,vocabulary,vocab_l6_018_anquan,安全,安全,ānquán,,vocab_set_l6_03,,,,vocab_set_l6_03,,rule_l6_jqx_uan_umlaut,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_06,P15,,136,vocabulary,vocab_l6_019_xuan,選,選,xuǎn,,vocab_set_l6_03,,,,vocab_set_l6_03,,rule_l6_jqx_uan_umlaut,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_06,P6,,137,exercise,exercise_l6_p6_pinyin_group_1,含聲調拼音練習,,,,exercise,,練習 21 聲母 + ia/iao/ian/iang/iong 的含聲調拼讀。,含聲調拼音練習,,pinyin_chart_l6_group_1,,,true,true,false,true,false,
+pinyin_lesson_06,P8,,138,exercise,exercise_l6_p8_vocab_1,詞彙 1 練習,,,,exercise,,確認詞彙 1 發音與字義理解。,詞彙 1 練習,vocab_set_l6_01,,,,true,true,false,,false,
+pinyin_lesson_06,P11,,139,exercise,exercise_l6_p11_pinyin_group_2,含聲調拼音練習,,,,exercise,,練習 21 聲母 + ua/uo/uai/uan/uang/üan 的含聲調拼讀。,含聲調拼音練習,,pinyin_chart_l6_group_2,,,true,true,false,true,false,
+pinyin_lesson_06,P13,,140,exercise,exercise_l6_p13_vocab_2,詞彙 2 練習,,,,exercise,,確認詞彙 2 發音與字義理解。,詞彙 2 練習,vocab_set_l6_02,,,,true,true,false,,false,
+pinyin_lesson_06,P16,,141,exercise,exercise_l6_p16_vocab_3,詞彙 3 練習,,,,exercise,,確認詞彙 3 發音、字義與 üan 拼寫變化。,詞彙 3 練習,vocab_set_l6_03,,rule_l6_jqx_uan_umlaut,,true,true,false,,false,
+pinyin_lesson_06,,P17-P18|P17-P19,142,exercise,exercise_l6_review,課後整合練習,,,,exercise,,用 2-3 個題型整合複習。,課後整合練習,,,,,true,true,false,,true,聽音選拼音|看拼音朗讀|字義配對|üan 拼寫規則判斷

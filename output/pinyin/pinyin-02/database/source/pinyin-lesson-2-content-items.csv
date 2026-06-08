@@ -1,0 +1,61 @@
+lesson_id,page_range,page_range_options,sequence,record_type,item_id,title,hanzi,pinyin,symbol,category,final_group,content_focus,exercise_type,source_set_id,source_chart_id,source_tone_sandhi_rule_id,related_rule_id,script_note,meaning_note,pronunciation_first,meaning_focus,requires_hanzi_recognition,includes_tones,is_page_range_flexible,notes
+pinyin_lesson_02,P1,,1,lesson_cover,page_l2_01,封面,,,,lesson_page,,第二課課程封面。,,,,,,,,true,true,false,,false,
+pinyin_lesson_02,P2,,2,learning_objective,page_l2_02,學習目標,,,,lesson_page,,說明本課要學 d/t/n/l/g/k/h、j/q/x、含聲調拼讀、詞彙發音與字義。,,,,,,,,true,true,false,,false,
+pinyin_lesson_02,P3,,3,warmup_activity,page_l2_03,暖身活動：複習第一課生詞,,,,lesson_page,,複習第一課生詞；活動可用連連看或聽音猜意 flash card。,,,,,,,,true,true,false,,false,
+pinyin_lesson_02,P4,,4,pinyin_learning_cover,page_l2_04,拼音學習封面 1：d t n l g k h,,,,lesson_page,,進入第一組聲母學習段落。,,,,,,,,true,true,false,,false,
+pinyin_lesson_02,P5,,5,pinyin_chart,pinyin_chart_l2_group_1,拼音學習表格 1：d t n l g k h + a o e i u ü,,,,lesson_page,,建立第一組聲母與韻母拼讀組合。,,,pinyin_chart_l2_group_1,,,,,true,true,false,false,false,
+pinyin_lesson_02,P6,,6,pinyin_exercise,page_l2_06,拼音練習 1,,,,lesson_page,,第一組聲母拼讀練習，含聲調。,,,pinyin_chart_l2_group_1,,,,,true,true,false,true,false,
+pinyin_lesson_02,P7,,7,vocabulary_set,vocab_set_l2_01,詞彙 1,,,,lesson_page,,大、拿、女、綠、地圖、喝、可樂、哥哥。,,vocab_set_l2_01,,,,,,true,true,false,,false,
+pinyin_lesson_02,P8,,8,vocab_exercise,page_l2_08,詞彙練習 1,,,,lesson_page,,詞彙 1 的發音與字義練習。,,vocab_set_l2_01,,,,,,true,true,false,,false,
+pinyin_lesson_02,P9,,9,pinyin_learning_cover,page_l2_09,拼音學習封面 2：j q x,,,,lesson_page,,進入第二組聲母學習段落。,,,,,,,,true,true,false,,false,
+pinyin_lesson_02,P10,,10,pinyin_chart,pinyin_chart_l2_group_2,拼音學習表格 2：j q x + a o e i u ü,,,,lesson_page,,建立 j/q/x 與韻母拼讀組合。,,,pinyin_chart_l2_group_2,,rule_l2_jqx_u_umlaut,,,true,true,false,false,false,
+pinyin_lesson_02,P11,,11,pinyin_exercise,page_l2_11,拼音練習 2,,,,lesson_page,,第二組聲母拼讀練習，含聲調。,,,pinyin_chart_l2_group_2,,,,,true,true,false,true,false,
+pinyin_lesson_02,P12,,12,vocabulary_set,vocab_set_l2_02,詞彙 2,,,,lesson_page,,雞、幾、七、洗、西、騎馬。,,vocab_set_l2_02,,,,,,true,true,false,,false,
+pinyin_lesson_02,P13,,13,vocab_exercise,page_l2_13,詞彙練習 2,,,,lesson_page,,詞彙 2 的發音與字義練習。,,vocab_set_l2_02,,,,,,true,true,false,,false,
+pinyin_lesson_02,P14,,14,spelling_rule,rule_l2_jqx_u_umlaut,"規則：jü→ju, qü→qu, xü→xu",,,,lesson_page,,學習 j/q/x 後接 ü 時，拼寫上省略兩點。,,,,,rule_l2_jqx_u_umlaut,,,true,true,false,,false,
+pinyin_lesson_02,P15,,15,vocabulary_set,vocab_set_l2_03,詞彙 3,,,,lesson_page,,去、橘、機器、繼續。,,vocab_set_l2_03,,,rule_l2_jqx_u_umlaut,,,true,true,false,,false,
+pinyin_lesson_02,P16,,16,vocab_exercise,page_l2_16,詞彙練習 3,,,,lesson_page,,詞彙 3 的發音與字義練習。,,vocab_set_l2_03,,,rule_l2_jqx_u_umlaut,,,true,true,false,,false,
+pinyin_lesson_02,,P17-P18|P17-P19,17,review_exercise,page_l2_17,課後練習,,,,lesson_page,,2-3 個題型整合複習。,,,,,,,,true,true,false,,true,
+pinyin_lesson_02,P3,,90,warmup_activity,warmup_review_pinyin_lesson_01,暖身活動：複習前一課生詞,,,,warmup_activity,,複習前一課的生詞,,,,,,,,true,true,false,,,暖身活動放在學習目標之後，用前一課生詞作為複習材料。
+pinyin_lesson_02,P3,,91,warmup_activity_option,warmup_review_pinyin_lesson_01_option_1,連連看,,,,matching,,學生看照片，連到對應的拼音與漢字。,,,,,,,,true,true,false,,,
+pinyin_lesson_02,P3,,92,warmup_activity_option,warmup_review_pinyin_lesson_01_option_2,聽音猜意 flash card,,,,audio_flashcard,,正面播放生詞音檔，學生猜意思；反面顯示漢字、拼音與圖片。,,,,,,,,true,true,false,,,
+pinyin_lesson_02,P4,,101,initial,initial_d,聲母 d,,,d,final,,聲母 d。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_02,P4,,102,initial,initial_t,聲母 t,,,t,final,,聲母 t。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_02,P4,,103,initial,initial_n,聲母 n,,,n,final,,聲母 n。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_02,P4,,104,initial,initial_l,聲母 l,,,l,final,,聲母 l。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_02,P4,,105,initial,initial_g,聲母 g,,,g,final,,聲母 g。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_02,P4,,106,initial,initial_k,聲母 k,,,k,final,,聲母 k。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_02,P4,,107,initial,initial_h,聲母 h,,,h,final,,聲母 h。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_02,P9,,108,initial,initial_j,聲母 j,,,j,final,,聲母 j。,,,,,,,,true,false,false,,,chart_page=P10; rule_page=
+pinyin_lesson_02,P9,,109,initial,initial_q,聲母 q,,,q,final,,聲母 q。,,,,,,,,true,false,false,,,chart_page=P10; rule_page=
+pinyin_lesson_02,P9,,110,initial,initial_x,聲母 x,,,x,final,,聲母 x。,,,,,,,,true,false,false,,,chart_page=P10; rule_page=
+pinyin_lesson_02,P5,,111,pinyin_chart,pinyin_chart_l2_group_1,d t n l g k h + a o e i u ü,,,,pinyin_chart,,initials=d|t|n|l|g|k|h; finals=a|o|e|i|u|ü,,,,,,,,true,false,false,false,,
+pinyin_lesson_02,P10,,112,pinyin_chart,pinyin_chart_l2_group_2,j q x + a o e i u ü,,,,pinyin_chart,,initials=j|q|x; finals=a|o|e|i|u|ü,,,,,rule_l2_jqx_u_umlaut,,,true,false,false,false,,
+pinyin_lesson_02,P14,,113,spelling_rule,rule_l2_jqx_u_umlaut,j/q/x + ü 拼寫省略規則,,,,spelling_rule,,j/q/x 後接 ü 時，拼寫省略 ü 上兩點，但發音仍是 ü。,,,,,rule_l2_jqx_u_umlaut,,,true,false,false,,,
+pinyin_lesson_02,P14,,114,spelling_rule_mapping,rule_l2_jqx_u_umlaut_jü_to_ju,jü→ju,,,ju,spelling_rule_mapping,,jü is written as ju.,,,,,rule_l2_jqx_u_umlaut,,,true,false,false,,,
+pinyin_lesson_02,P14,,115,spelling_rule_mapping,rule_l2_jqx_u_umlaut_qü_to_qu,qü→qu,,,qu,spelling_rule_mapping,,qü is written as qu.,,,,,rule_l2_jqx_u_umlaut,,,true,false,false,,,
+pinyin_lesson_02,P14,,116,spelling_rule_mapping,rule_l2_jqx_u_umlaut_xü_to_xu,xü→xu,,,xu,spelling_rule_mapping,,xü is written as xu.,,,,,rule_l2_jqx_u_umlaut,,,true,false,false,,,
+pinyin_lesson_02,P7,,117,vocabulary,vocab_l2_001_da,大,大,dà,,vocab_set_l2_01,,,,vocab_set_l2_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_02,P7,,118,vocabulary,vocab_l2_002_na,拿,拿,ná,,vocab_set_l2_01,,,,vocab_set_l2_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_02,P7,,119,vocabulary,vocab_l2_003_nv,女,女,nǚ,,vocab_set_l2_01,,,,vocab_set_l2_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_02,P7,,120,vocabulary,vocab_l2_004_lv,綠,綠,lǜ,,vocab_set_l2_01,,,,vocab_set_l2_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_02,P7,,121,vocabulary,vocab_l2_005_ditu,地圖,地圖,dìtú,,vocab_set_l2_01,,,,vocab_set_l2_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_02,P7,,122,vocabulary,vocab_l2_006_he,喝,喝,hē,,vocab_set_l2_01,,,,vocab_set_l2_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_02,P7,,123,vocabulary,vocab_l2_007_kele,可樂,可樂,kělè,,vocab_set_l2_01,,,,vocab_set_l2_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_02,P7,,124,vocabulary,vocab_l2_008_gege,哥哥,哥哥,gēge,,vocab_set_l2_01,,,,vocab_set_l2_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_02,P12,,125,vocabulary,vocab_l2_009_ji,雞,雞,jī,,vocab_set_l2_02,,,,vocab_set_l2_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_02,P12,,126,vocabulary,vocab_l2_010_ji,幾,幾,jǐ,,vocab_set_l2_02,,,,vocab_set_l2_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_02,P12,,127,vocabulary,vocab_l2_011_qi,七,七,qī,,vocab_set_l2_02,,,,vocab_set_l2_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_02,P12,,128,vocabulary,vocab_l2_012_xi,洗,洗,xǐ,,vocab_set_l2_02,,,,vocab_set_l2_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_02,P12,,129,vocabulary,vocab_l2_013_xi,西,西,xī,,vocab_set_l2_02,,,,vocab_set_l2_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_02,P12,,130,vocabulary,vocab_l2_014_qima,騎馬,騎馬,qímǎ,,vocab_set_l2_02,,,,vocab_set_l2_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_02,P15,,131,vocabulary,vocab_l2_015_qu,去,去,qù,,vocab_set_l2_03,,,,vocab_set_l2_03,,,rule_l2_jqx_u_umlaut,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_02,P15,,132,vocabulary,vocab_l2_016_ju,橘,橘,jú,,vocab_set_l2_03,,,,vocab_set_l2_03,,,rule_l2_jqx_u_umlaut,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_02,P15,,133,vocabulary,vocab_l2_017_jiqi,機器,機器,jīqì,,vocab_set_l2_03,,,,vocab_set_l2_03,,,rule_l2_jqx_u_umlaut,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_02,P15,,134,vocabulary,vocab_l2_018_jixu,繼續,繼續,jìxù,,vocab_set_l2_03,,,,vocab_set_l2_03,,,rule_l2_jqx_u_umlaut,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_02,P6,,135,exercise,exercise_l2_p6_pinyin_group_1,含聲調拼音練習,,,,exercise,,練習 d/t/n/l/g/k/h + 韻母的含聲調拼讀。,含聲調拼音練習,,pinyin_chart_l2_group_1,,,,,true,true,false,true,false,
+pinyin_lesson_02,P8,,136,exercise,exercise_l2_p8_vocab_1,詞彙 1 練習,,,,exercise,,確認詞彙 1 發音與字義理解。,詞彙 1 練習,vocab_set_l2_01,,,,,,true,true,false,,false,
+pinyin_lesson_02,P11,,137,exercise,exercise_l2_p11_pinyin_group_2,含聲調拼音練習,,,,exercise,,練習 j/q/x + 韻母的含聲調拼讀。,含聲調拼音練習,,pinyin_chart_l2_group_2,,,,,true,true,false,true,false,
+pinyin_lesson_02,P13,,138,exercise,exercise_l2_p13_vocab_2,詞彙 2 練習,,,,exercise,,確認詞彙 2 發音與字義理解。,詞彙 2 練習,vocab_set_l2_02,,,,,,true,true,false,,false,
+pinyin_lesson_02,P16,,139,exercise,exercise_l2_p16_vocab_3,詞彙 3 練習,,,,exercise,,確認詞彙 3 發音、字義與 j/q/x 拼寫規則。,詞彙 3 練習,vocab_set_l2_03,,,rule_l2_jqx_u_umlaut,,,true,true,false,,false,
+pinyin_lesson_02,,P17-P18|P17-P19,140,exercise,exercise_l2_review,課後整合練習,,,,exercise,,用 2-3 個題型整合複習。,課後整合練習,,,,,,,true,true,false,,true,聽音選拼音|看拼音朗讀|字義配對

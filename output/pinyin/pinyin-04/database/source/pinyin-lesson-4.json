@@ -1,0 +1,730 @@
+{
+  "lesson_id": "pinyin_lesson_04",
+  "lesson_no": 4,
+  "title": {
+    "zh": "拼音第四課：複韻母與 üe 拼寫變化",
+    "en": "Pinyin Lesson 4: Compound Finals and ue Spelling Changes"
+  },
+  "metadata": {
+    "page_count_status": "pending",
+    "main_goal": "學會 ai ao ou ei er 與 iu ui ie üe，能搭配全部 21 聲母拼讀含聲調音節，理解 j/q/x + üe 的拼寫變化，並能正確發音、理解本課詞彙字義。",
+    "primary_requirement": "發音正確以及學習字義為主",
+    "recognition_requirement": "不需要認漢字",
+    "pronunciation_first": true,
+    "meaning_focus": true,
+    "requires_hanzi_recognition": false,
+    "page_count_min": 18,
+    "page_count_max": 19
+  },
+  "learning_focus": [
+    "暖身複習第三課生詞",
+    "複韻母 ai ao ou ei er",
+    "複韻母 iu ui ie üe",
+    "全部 21 聲母與新韻母的拼讀組合",
+    "含聲調的拼音練習",
+    "詞彙發音與字義理解",
+    "j/q/x + üe 的拼寫變化"
+  ],
+  "warmup_activity": {
+    "item_id": "warmup_review_pinyin_lesson_03",
+    "page": "P3",
+    "title": "暖身活動：複習前一課生詞",
+    "review_source_lesson_id": "pinyin_lesson_03",
+    "review_source_title": "拼音第三課：翹舌音、平舌音與一不變調",
+    "review_focus": "複習前一課的生詞",
+    "activity_options": [
+      {
+        "activity_type": "matching",
+        "title": "連連看",
+        "front_prompt": "看照片",
+        "answer_target": "拼音&漢字",
+        "description": "學生看照片，連到對應的拼音與漢字。"
+      },
+      {
+        "activity_type": "audio_flashcard",
+        "title": "聽音猜意 flash card",
+        "front_prompt": "播放生詞音檔",
+        "back_content": "漢字＋拼音＋圖片",
+        "description": "正面播放生詞音檔，學生猜意思；反面顯示漢字、拼音與圖片。"
+      }
+    ],
+    "source_vocabulary": [
+      {
+        "hanzi": "炸雞",
+        "pinyin": "zhájī"
+      },
+      {
+        "hanzi": "茶",
+        "pinyin": "chá"
+      },
+      {
+        "hanzi": "車",
+        "pinyin": "chē"
+      },
+      {
+        "hanzi": "熱",
+        "pinyin": "rè"
+      },
+      {
+        "hanzi": "吃",
+        "pinyin": "chī"
+      },
+      {
+        "hanzi": "十",
+        "pinyin": "shí"
+      },
+      {
+        "hanzi": "豬",
+        "pinyin": "zhū"
+      },
+      {
+        "hanzi": "書",
+        "pinyin": "shū"
+      },
+      {
+        "hanzi": "擦",
+        "pinyin": "cā"
+      },
+      {
+        "hanzi": "撒",
+        "pinyin": "sā"
+      },
+      {
+        "hanzi": "綠色",
+        "pinyin": "lǜsè"
+      },
+      {
+        "hanzi": "负责",
+        "pinyin": "fùzé"
+      },
+      {
+        "hanzi": "字",
+        "pinyin": "zì"
+      },
+      {
+        "hanzi": "四",
+        "pinyin": "sì"
+      },
+      {
+        "hanzi": "組",
+        "pinyin": "zǔ"
+      },
+      {
+        "hanzi": "速度",
+        "pinyin": "sùdù"
+      }
+    ],
+    "pronunciation_first": true,
+    "meaning_focus": true,
+    "requires_hanzi_recognition": false,
+    "notes": "暖身活動放在學習目標之後，用前一課生詞作為複習材料。"
+  },
+  "pages": [
+    {
+      "page_range": "P1",
+      "sequence": 1,
+      "title": "封面",
+      "record_type": "lesson_cover",
+      "content_focus": "第四課課程封面。"
+    },
+    {
+      "page_range": "P2",
+      "sequence": 2,
+      "title": "學習目標",
+      "record_type": "learning_objective",
+      "content_focus": "說明本課要學 ai/ao/ou/ei/er、iu/ui/ie/üe、含聲調拼讀、詞彙發音與字義、üe 拼寫變化。",
+      "pronunciation_first": true,
+      "meaning_focus": true,
+      "requires_hanzi_recognition": false
+    },
+    {
+      "page_range": "P3",
+      "sequence": 3,
+      "title": "暖身活動：複習第三課生詞",
+      "record_type": "warmup_activity",
+      "content_focus": "複習第三課生詞；活動可用連連看或聽音猜意 flash card。",
+      "pronunciation_first": true,
+      "meaning_focus": true,
+      "requires_hanzi_recognition": false
+    },
+    {
+      "page_range": "P4",
+      "sequence": 4,
+      "title": "拼音學習封面 1：ai ao ou ei er",
+      "record_type": "pinyin_learning_cover",
+      "content_focus": "進入第一組複韻母學習段落。"
+    },
+    {
+      "page_range": "P5",
+      "sequence": 5,
+      "title": "拼音學習表格 1：全部聲母 + ai ao ou ei er",
+      "record_type": "pinyin_chart",
+      "content_focus": "建立 21 聲母與 ai/ao/ou/ei/er 的拼讀組合。",
+      "pinyin_chart_id": "pinyin_chart_l4_group_1",
+      "includes_tones": false
+    },
+    {
+      "page_range": "P6",
+      "sequence": 6,
+      "title": "拼音練習 1",
+      "record_type": "pinyin_exercise",
+      "content_focus": "第一組複韻母拼讀練習，含聲調。",
+      "source_pinyin_chart_id": "pinyin_chart_l4_group_1",
+      "includes_tones": true
+    },
+    {
+      "page_range": "P7",
+      "sequence": 7,
+      "title": "詞彙 1",
+      "record_type": "vocabulary_set",
+      "content_focus": "開、菜、貓、少、手、口、誰、二。",
+      "vocabulary_set_id": "vocab_set_l4_01",
+      "pronunciation_first": true,
+      "meaning_focus": true,
+      "requires_hanzi_recognition": false
+    },
+    {
+      "page_range": "P8",
+      "sequence": 8,
+      "title": "詞彙練習 1",
+      "record_type": "vocab_exercise",
+      "content_focus": "詞彙 1 的發音與字義練習。",
+      "source_vocabulary_set_id": "vocab_set_l4_01",
+      "pronunciation_first": true,
+      "meaning_focus": true,
+      "requires_hanzi_recognition": false
+    },
+    {
+      "page_range": "P9",
+      "sequence": 9,
+      "title": "拼音學習封面 2：iu ui ie üe",
+      "record_type": "pinyin_learning_cover",
+      "content_focus": "進入第二組複韻母學習段落。",
+      "notes": "封面包含 üe；P10 表格只列 iu/ui/ie，üe 於 P14 規則處理。"
+    },
+    {
+      "page_range": "P10",
+      "sequence": 10,
+      "title": "拼音學習表格 2：全部聲母 + iu ui ie",
+      "record_type": "pinyin_chart",
+      "content_focus": "建立 21 聲母與 iu/ui/ie 的拼讀組合。",
+      "pinyin_chart_id": "pinyin_chart_l4_group_2",
+      "includes_tones": false,
+      "notes": "不含 üe；üe 另由 P14 規則與 P15 詞彙承接。"
+    },
+    {
+      "page_range": "P11",
+      "sequence": 11,
+      "title": "拼音練習 2",
+      "record_type": "pinyin_exercise",
+      "content_focus": "第二組複韻母拼讀練習，含聲調。",
+      "source_pinyin_chart_id": "pinyin_chart_l4_group_2",
+      "includes_tones": true
+    },
+    {
+      "page_range": "P12",
+      "sequence": 12,
+      "title": "詞彙 2",
+      "record_type": "vocabulary_set",
+      "content_focus": "六、牛、九、球、對、睡、貴、姐姐、寫、謝謝。",
+      "vocabulary_set_id": "vocab_set_l4_02",
+      "pronunciation_first": true,
+      "meaning_focus": true,
+      "requires_hanzi_recognition": false
+    },
+    {
+      "page_range": "P13",
+      "sequence": 13,
+      "title": "詞彙練習 2",
+      "record_type": "vocab_exercise",
+      "content_focus": "詞彙 2 的發音與字義練習。",
+      "source_vocabulary_set_id": "vocab_set_l4_02",
+      "pronunciation_first": true,
+      "meaning_focus": true,
+      "requires_hanzi_recognition": false
+    },
+    {
+      "page_range": "P14",
+      "sequence": 14,
+      "title": "規則：üe 的變化",
+      "record_type": "spelling_rule",
+      "content_focus": "學習 j/q/x + üe 時，拼寫為 jue/que/xue。",
+      "spelling_rule_id": "rule_l4_jqx_ue_umlaut"
+    },
+    {
+      "page_range": "P15",
+      "sequence": 15,
+      "title": "詞彙 3",
+      "record_type": "vocabulary_set",
+      "content_focus": "覺得、缺、學。",
+      "vocabulary_set_id": "vocab_set_l4_03",
+      "related_rule_id": "rule_l4_jqx_ue_umlaut",
+      "pronunciation_first": true,
+      "meaning_focus": true,
+      "requires_hanzi_recognition": false
+    },
+    {
+      "page_range": "P16",
+      "sequence": 16,
+      "title": "詞彙練習 3",
+      "record_type": "vocab_exercise",
+      "content_focus": "詞彙 3 的發音與字義練習。",
+      "source_vocabulary_set_id": "vocab_set_l4_03",
+      "related_rule_id": "rule_l4_jqx_ue_umlaut",
+      "pronunciation_first": true,
+      "meaning_focus": true,
+      "requires_hanzi_recognition": false
+    },
+    {
+      "page_range": null,
+      "sequence": 17,
+      "title": "課後練習",
+      "record_type": "review_exercise",
+      "content_focus": "2-3 個題型整合複習。",
+      "page_range_options": [
+        "P17-P18",
+        "P17-P19"
+      ],
+      "is_page_range_flexible": true,
+      "pronunciation_first": true,
+      "meaning_focus": true,
+      "requires_hanzi_recognition": false
+    }
+  ],
+  "all_initials_used": [
+    "b",
+    "p",
+    "m",
+    "f",
+    "d",
+    "t",
+    "n",
+    "l",
+    "g",
+    "k",
+    "h",
+    "j",
+    "q",
+    "x",
+    "zh",
+    "ch",
+    "sh",
+    "r",
+    "z",
+    "c",
+    "s"
+  ],
+  "finals": [
+    {
+      "item_id": "final_ai",
+      "symbol": "ai",
+      "label": "韻母 ai",
+      "final_group": "compound_final_group_1",
+      "introduced_on": "P4",
+      "chart_page": "P5"
+    },
+    {
+      "item_id": "final_ao",
+      "symbol": "ao",
+      "label": "韻母 ao",
+      "final_group": "compound_final_group_1",
+      "introduced_on": "P4",
+      "chart_page": "P5"
+    },
+    {
+      "item_id": "final_ou",
+      "symbol": "ou",
+      "label": "韻母 ou",
+      "final_group": "compound_final_group_1",
+      "introduced_on": "P4",
+      "chart_page": "P5"
+    },
+    {
+      "item_id": "final_ei",
+      "symbol": "ei",
+      "label": "韻母 ei",
+      "final_group": "compound_final_group_1",
+      "introduced_on": "P4",
+      "chart_page": "P5"
+    },
+    {
+      "item_id": "final_er",
+      "symbol": "er",
+      "label": "韻母 er",
+      "final_group": "compound_final_group_1",
+      "introduced_on": "P4",
+      "chart_page": "P5"
+    },
+    {
+      "item_id": "final_iu",
+      "symbol": "iu",
+      "label": "韻母 iu",
+      "final_group": "compound_final_group_2",
+      "introduced_on": "P9",
+      "chart_page": "P10"
+    },
+    {
+      "item_id": "final_ui",
+      "symbol": "ui",
+      "label": "韻母 ui",
+      "final_group": "compound_final_group_2",
+      "introduced_on": "P9",
+      "chart_page": "P10"
+    },
+    {
+      "item_id": "final_ie",
+      "symbol": "ie",
+      "label": "韻母 ie",
+      "final_group": "compound_final_group_2",
+      "introduced_on": "P9",
+      "chart_page": "P10"
+    },
+    {
+      "item_id": "final_ue_umlaut",
+      "symbol": "üe",
+      "label": "韻母 üe",
+      "final_group": "compound_final_group_2_rule_based",
+      "introduced_on": "P9",
+      "rule_page": "P14",
+      "related_rule_id": "rule_l4_jqx_ue_umlaut"
+    }
+  ],
+  "pinyin_charts": [
+    {
+      "item_id": "pinyin_chart_l4_group_1",
+      "page": "P5",
+      "title": "全部聲母 + ai ao ou ei er",
+      "initials": [
+        "b",
+        "p",
+        "m",
+        "f",
+        "d",
+        "t",
+        "n",
+        "l",
+        "g",
+        "k",
+        "h",
+        "j",
+        "q",
+        "x",
+        "zh",
+        "ch",
+        "sh",
+        "r",
+        "z",
+        "c",
+        "s"
+      ],
+      "finals": [
+        "ai",
+        "ao",
+        "ou",
+        "ei",
+        "er"
+      ],
+      "includes_tones": false
+    },
+    {
+      "item_id": "pinyin_chart_l4_group_2",
+      "page": "P10",
+      "title": "全部聲母 + iu ui ie",
+      "initials": [
+        "b",
+        "p",
+        "m",
+        "f",
+        "d",
+        "t",
+        "n",
+        "l",
+        "g",
+        "k",
+        "h",
+        "j",
+        "q",
+        "x",
+        "zh",
+        "ch",
+        "sh",
+        "r",
+        "z",
+        "c",
+        "s"
+      ],
+      "finals": [
+        "iu",
+        "ui",
+        "ie"
+      ],
+      "includes_tones": false,
+      "notes": "P10 表格不含 üe；üe 由 P14 規則處理。"
+    }
+  ],
+  "spelling_rules": [
+    {
+      "item_id": "rule_l4_jqx_ue_umlaut",
+      "page": "P14",
+      "title": "j/q/x + üe 拼寫變化",
+      "rules": [
+        {
+          "underlying_form": "jüe",
+          "written_form": "jue"
+        },
+        {
+          "underlying_form": "qüe",
+          "written_form": "que"
+        },
+        {
+          "underlying_form": "xüe",
+          "written_form": "xue"
+        }
+      ],
+      "explanation": "j/q/x 後接 üe 時，拼寫省略 ü 上兩點，但發音仍與 üe 有關。",
+      "applies_to_vocabulary_set_ids": [
+        "vocab_set_l4_03"
+      ]
+    }
+  ],
+  "vocabulary_sets": [
+    {
+      "set_id": "vocab_set_l4_01",
+      "page": "P7",
+      "practice_page": "P8",
+      "title": "詞彙 1",
+      "items": [
+        {
+          "item_id": "vocab_l4_001_kai",
+          "hanzi": "開",
+          "pinyin": "kāi"
+        },
+        {
+          "item_id": "vocab_l4_002_cai",
+          "hanzi": "菜",
+          "pinyin": "cài"
+        },
+        {
+          "item_id": "vocab_l4_003_mao",
+          "hanzi": "貓",
+          "pinyin": "māo"
+        },
+        {
+          "item_id": "vocab_l4_004_shao",
+          "hanzi": "少",
+          "pinyin": "shǎo"
+        },
+        {
+          "item_id": "vocab_l4_005_shou",
+          "hanzi": "手",
+          "pinyin": "shǒu"
+        },
+        {
+          "item_id": "vocab_l4_006_kou",
+          "hanzi": "口",
+          "pinyin": "kǒu"
+        },
+        {
+          "item_id": "vocab_l4_007_shei",
+          "hanzi": "誰",
+          "pinyin": "shéi"
+        },
+        {
+          "item_id": "vocab_l4_008_er",
+          "hanzi": "二",
+          "pinyin": "èr"
+        }
+      ],
+      "pronunciation_first": true,
+      "meaning_focus": true,
+      "requires_hanzi_recognition": false
+    },
+    {
+      "set_id": "vocab_set_l4_02",
+      "page": "P12",
+      "practice_page": "P13",
+      "title": "詞彙 2",
+      "items": [
+        {
+          "item_id": "vocab_l4_009_liu",
+          "hanzi": "六",
+          "pinyin": "liù"
+        },
+        {
+          "item_id": "vocab_l4_010_niu",
+          "hanzi": "牛",
+          "pinyin": "niú"
+        },
+        {
+          "item_id": "vocab_l4_011_jiu",
+          "hanzi": "九",
+          "pinyin": "jiǔ"
+        },
+        {
+          "item_id": "vocab_l4_012_qiu",
+          "hanzi": "球",
+          "pinyin": "qiú"
+        },
+        {
+          "item_id": "vocab_l4_013_dui",
+          "hanzi": "對",
+          "pinyin": "duì"
+        },
+        {
+          "item_id": "vocab_l4_014_shui",
+          "hanzi": "睡",
+          "pinyin": "shuì"
+        },
+        {
+          "item_id": "vocab_l4_015_gui",
+          "hanzi": "貴",
+          "pinyin": "guì"
+        },
+        {
+          "item_id": "vocab_l4_016_jiejie",
+          "hanzi": "姐姐",
+          "pinyin": "jiějie"
+        },
+        {
+          "item_id": "vocab_l4_017_xie",
+          "hanzi": "寫",
+          "pinyin": "xiě"
+        },
+        {
+          "item_id": "vocab_l4_018_xiexie",
+          "hanzi": "謝謝",
+          "pinyin": "xièxie"
+        }
+      ],
+      "pronunciation_first": true,
+      "meaning_focus": true,
+      "requires_hanzi_recognition": false
+    },
+    {
+      "set_id": "vocab_set_l4_03",
+      "page": "P15",
+      "practice_page": "P16",
+      "title": "詞彙 3",
+      "related_rule_id": "rule_l4_jqx_ue_umlaut",
+      "items": [
+        {
+          "item_id": "vocab_l4_019_juede",
+          "hanzi": "覺得",
+          "pinyin": "juéde",
+          "related_rule_id": "rule_l4_jqx_ue_umlaut"
+        },
+        {
+          "item_id": "vocab_l4_020_que",
+          "hanzi": "缺",
+          "pinyin": "quē",
+          "related_rule_id": "rule_l4_jqx_ue_umlaut"
+        },
+        {
+          "item_id": "vocab_l4_021_xue",
+          "hanzi": "學",
+          "pinyin": "xué",
+          "related_rule_id": "rule_l4_jqx_ue_umlaut"
+        }
+      ],
+      "pronunciation_first": true,
+      "meaning_focus": true,
+      "requires_hanzi_recognition": false
+    }
+  ],
+  "exercises": [
+    {
+      "item_id": "exercise_l4_p6_pinyin_group_1",
+      "page": "P6",
+      "exercise_type": "含聲調拼音練習",
+      "goal": "練習 21 聲母 + ai/ao/ou/ei/er 的含聲調拼讀。",
+      "source_pinyin_chart_id": "pinyin_chart_l4_group_1",
+      "includes_tones": true,
+      "pronunciation_first": true,
+      "meaning_focus": true,
+      "requires_hanzi_recognition": false
+    },
+    {
+      "item_id": "exercise_l4_p8_vocab_1",
+      "page": "P8",
+      "exercise_type": "詞彙 1 練習",
+      "goal": "確認詞彙 1 發音與字義理解。",
+      "source_vocabulary_set_id": "vocab_set_l4_01",
+      "pronunciation_first": true,
+      "meaning_focus": true,
+      "requires_hanzi_recognition": false
+    },
+    {
+      "item_id": "exercise_l4_p11_pinyin_group_2",
+      "page": "P11",
+      "exercise_type": "含聲調拼音練習",
+      "goal": "練習 21 聲母 + iu/ui/ie 的含聲調拼讀。",
+      "source_pinyin_chart_id": "pinyin_chart_l4_group_2",
+      "includes_tones": true,
+      "pronunciation_first": true,
+      "meaning_focus": true,
+      "requires_hanzi_recognition": false
+    },
+    {
+      "item_id": "exercise_l4_p13_vocab_2",
+      "page": "P13",
+      "exercise_type": "詞彙 2 練習",
+      "goal": "確認詞彙 2 發音與字義理解。",
+      "source_vocabulary_set_id": "vocab_set_l4_02",
+      "pronunciation_first": true,
+      "meaning_focus": true,
+      "requires_hanzi_recognition": false
+    },
+    {
+      "item_id": "exercise_l4_p16_vocab_3",
+      "page": "P16",
+      "exercise_type": "詞彙 3 練習",
+      "goal": "確認詞彙 3 發音、字義與 üe 拼寫變化。",
+      "source_vocabulary_set_id": "vocab_set_l4_03",
+      "related_rule_id": "rule_l4_jqx_ue_umlaut",
+      "pronunciation_first": true,
+      "meaning_focus": true,
+      "requires_hanzi_recognition": false
+    },
+    {
+      "item_id": "exercise_l4_review",
+      "page": null,
+      "page_range_options": [
+        "P17-P18",
+        "P17-P19"
+      ],
+      "is_page_range_flexible": true,
+      "exercise_type": "課後整合練習",
+      "goal": "用 2-3 個題型整合複習。",
+      "suggested_question_types": [
+        "聽音選拼音",
+        "看拼音朗讀",
+        "字義配對",
+        "üe 拼寫規則判斷"
+      ],
+      "pronunciation_first": true,
+      "meaning_focus": true,
+      "requires_hanzi_recognition": false
+    }
+  ],
+  "flexible_page_decisions": [
+    {
+      "decision_id": "lesson_4_review_page_count",
+      "options": [
+        {
+          "review_pages": "P17-P18",
+          "total_pages": 18
+        },
+        {
+          "review_pages": "P17-P19",
+          "total_pages": 19
+        }
+      ],
+      "impact": "新增 P3 暖身活動後，課後練習頁碼順延；決定第四課總頁數為 18 或 19。"
+    }
+  ],
+  "database_notes": [
+    "新增 P3 暖身活動後，原 P3 起所有頁碼順延一頁。",
+    "P3 暖身活動複習第三課生詞。",
+    "P9 includes üe in the cover, but P10 table excludes üe; P14 handles üe changes through a spelling rule."
+  ]
+}

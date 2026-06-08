@@ -1073,13 +1073,18 @@ function vocabCard(item) {
 }
 
 const toneMatchCss = `
-.tone-match-title{font-size:34px;font-weight:900;color:#1A3A5A;line-height:1.12;margin-bottom:18px}
-.tone-match-board{position:relative;display:grid;grid-template-columns:300px 1fr 300px;gap:42px;align-items:start;margin-top:12px}
-.tone-match-col{display:grid;gap:14px}
-.tone-match-card{height:64px;border-radius:17px;background:#fff;border:3px solid #B8EDF8;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px rgba(90,172,172,.08)}
-.tone-match-card .pin{font-size:39px;font-weight:900;color:#294778;line-height:1}
-.tone-label{height:64px;border-radius:17px;background:#FFF2A4;display:flex;align-items:center;justify-content:center;font-size:31px;font-weight:900;color:#101318}
-.tone-match-space{height:376px;border-radius:24px;background:rgba(90,172,172,.045);border:1px dashed rgba(90,172,172,.22)}
+.tone-match-title{font-size:26px;font-weight:900;color:#1A3A5A;line-height:1.14;margin-bottom:12px}
+.tone-match-board{position:relative;display:grid;grid-template-columns:270px 1fr 270px;gap:32px;align-items:start;margin-top:8px}
+.tone-match-col{display:grid;gap:10px}
+.tone-match-card{height:52px;border-radius:15px;background:#fff;border:2px solid #B8EDF8;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 15px rgba(90,172,172,.08)}
+.tone-match-card .pin{font-size:31px;font-weight:900;color:#294778;line-height:1}
+.tone-label{height:52px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:23px;font-weight:900;color:#1A3A5A;box-shadow:0 6px 15px rgba(90,172,172,.07)}
+.tone-label:nth-child(1){background:#E8F4F4;color:#387E86}
+.tone-label:nth-child(2){background:#FFF4D8;color:#A66F12}
+.tone-label:nth-child(3){background:#F3F0FA;color:#6E58B8}
+.tone-label:nth-child(4){background:#FCEFF3;color:#C84B63}
+.tone-label:nth-child(5){background:#EEF3FA;color:#5F7088}
+.tone-match-space{height:300px;border-radius:22px;background:rgba(90,172,172,.045);border:1px dashed rgba(90,172,172,.22)}
 `;
 
 const faToneCss = `
@@ -1115,7 +1120,7 @@ const toneChoiceCss = `
 .tone-choice-table tr:nth-child(even) td{background:#EEF3FA}
 .tone-choice-table td{height:58px;border:1px solid rgba(255,255,255,.34);font-size:33px;font-weight:900;color:#294778;vertical-align:middle}
 .tone-choice-table .qno{width:74px;background:transparent!important;text-align:center}
-.tone-choice-num{width:44px;height:44px;border-radius:7px;background:#1CA3F1;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 5px 12px rgba(28,163,241,.24)}
+.tone-choice-num{width:44px;height:44px;border-radius:999px;background:#5AACAC;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:27px;box-shadow:0 5px 12px rgba(90,172,172,.24)}
 .tone-choice-table .opt{padding-left:30px}
 .tone-choice-table .letter{font-weight:900;margin-right:10px}
 `;
@@ -1186,18 +1191,18 @@ function toneMatchPracticeSlide() {
     icon: 'git-branch',
     page: 13,
     extraCss: toneMatchCss,
-    body: `<div class="content"><div class="tone-match-title">Nối những phiên âm sau với thanh điệu tương ứng.</div><div class="tone-match-board"><div class="tone-match-col">${['mà', 'mǎ', 'mā', 'ma', 'má'].map((pin) => `<div class="tone-match-card"><span class="pin">${pin}</span></div>`).join('')}</div><div class="tone-match-space"></div><div class="tone-match-col">${['thanh 1', 'thanh 2', 'thanh 3', 'thanh 4', 'thanh nhẹ'].map((label) => `<div class="tone-label">${label}</div>`).join('')}</div></div></div>`,
+    body: `<div class="content" style="top:92px;bottom:64px"><div class="tone-match-title">Nối phiên âm với thanh điệu tương ứng.</div><div class="tone-match-board"><div class="tone-match-col">${['mà', 'mǎ', 'mā', 'ma', 'má'].map((pin) => `<div class="tone-match-card"><span class="pin">${pin}</span></div>`).join('')}</div><div class="tone-match-space"></div><div class="tone-match-col">${['thanh 1', 'thanh 2', 'thanh 3', 'thanh 4', 'thanh nhẹ'].map((label) => `<div class="tone-label">${label}</div>`).join('')}</div></div></div>`,
   });
 }
 
 function toneChoiceSlide() {
   const rows = [
-    ['ā', 'á', 'ǎ', 'à'],
-    ['bī', 'bí', 'bǐ', 'bì'],
-    ['fā', 'fá', 'fǎ', 'fà'],
-    ['pō', 'pó', 'pǒ', 'pò'],
-    ['wū', 'wú', 'wǔ', 'wù'],
-    ['yū', 'yú', 'yǔ', 'yù'],
+    ['pǒ', 'pō', 'pò', 'pó'],
+    ['wù', 'wǔ', 'wū', 'wú'],
+    ['yú', 'yù', 'yǔ', 'yū'],
+    ['á', 'à', 'ā', 'ǎ'],
+    ['bì', 'bī', 'bí', 'bǐ'],
+    ['fǎ', 'fá', 'fà', 'fā'],
   ];
   return slide({
     title: 'Luyện thanh điệu',

@@ -1,0 +1,64 @@
+lesson_id,page_range,page_range_options,sequence,record_type,item_id,title,hanzi,pinyin,symbol,category,final_group,content_focus,exercise_type,source_set_id,source_chart_id,source_tone_sandhi_rule_id,related_rule_id,script_note,meaning_note,pronunciation_first,meaning_focus,requires_hanzi_recognition,includes_tones,is_page_range_flexible,notes
+pinyin_lesson_04,P1,,1,lesson_cover,page_l4_01,封面,,,,lesson_page,,第四課課程封面。,,,,,,,,true,true,false,,false,
+pinyin_lesson_04,P2,,2,learning_objective,page_l4_02,學習目標,,,,lesson_page,,說明本課要學 ai/ao/ou/ei/er、iu/ui/ie/üe、含聲調拼讀、詞彙發音與字義、üe 拼寫變化。,,,,,,,,true,true,false,,false,
+pinyin_lesson_04,P3,,3,warmup_activity,page_l4_03,暖身活動：複習第三課生詞,,,,lesson_page,,複習第三課生詞；活動可用連連看或聽音猜意 flash card。,,,,,,,,true,true,false,,false,
+pinyin_lesson_04,P4,,4,pinyin_learning_cover,page_l4_04,拼音學習封面 1：ai ao ou ei er,,,,lesson_page,,進入第一組複韻母學習段落。,,,,,,,,true,true,false,,false,
+pinyin_lesson_04,P5,,5,pinyin_chart,pinyin_chart_l4_group_1,拼音學習表格 1：全部聲母 + ai ao ou ei er,,,,lesson_page,,建立 21 聲母與 ai/ao/ou/ei/er 的拼讀組合。,,,pinyin_chart_l4_group_1,,,,,true,true,false,false,false,
+pinyin_lesson_04,P6,,6,pinyin_exercise,page_l4_06,拼音練習 1,,,,lesson_page,,第一組複韻母拼讀練習，含聲調。,,,pinyin_chart_l4_group_1,,,,,true,true,false,true,false,
+pinyin_lesson_04,P7,,7,vocabulary_set,vocab_set_l4_01,詞彙 1,,,,lesson_page,,開、菜、貓、少、手、口、誰、二。,,vocab_set_l4_01,,,,,,true,true,false,,false,
+pinyin_lesson_04,P8,,8,vocab_exercise,page_l4_08,詞彙練習 1,,,,lesson_page,,詞彙 1 的發音與字義練習。,,vocab_set_l4_01,,,,,,true,true,false,,false,
+pinyin_lesson_04,P9,,9,pinyin_learning_cover,page_l4_09,拼音學習封面 2：iu ui ie üe,,,,lesson_page,,進入第二組複韻母學習段落。,,,,,,,,true,true,false,,false,封面包含 üe；P10 表格只列 iu/ui/ie，üe 於 P14 規則處理。
+pinyin_lesson_04,P10,,10,pinyin_chart,pinyin_chart_l4_group_2,拼音學習表格 2：全部聲母 + iu ui ie,,,,lesson_page,,建立 21 聲母與 iu/ui/ie 的拼讀組合。,,,pinyin_chart_l4_group_2,,,,,true,true,false,false,false,不含 üe；üe 另由 P14 規則與 P15 詞彙承接。
+pinyin_lesson_04,P11,,11,pinyin_exercise,page_l4_11,拼音練習 2,,,,lesson_page,,第二組複韻母拼讀練習，含聲調。,,,pinyin_chart_l4_group_2,,,,,true,true,false,true,false,
+pinyin_lesson_04,P12,,12,vocabulary_set,vocab_set_l4_02,詞彙 2,,,,lesson_page,,六、牛、九、球、對、睡、貴、姐姐、寫、謝謝。,,vocab_set_l4_02,,,,,,true,true,false,,false,
+pinyin_lesson_04,P13,,13,vocab_exercise,page_l4_13,詞彙練習 2,,,,lesson_page,,詞彙 2 的發音與字義練習。,,vocab_set_l4_02,,,,,,true,true,false,,false,
+pinyin_lesson_04,P14,,14,spelling_rule,rule_l4_jqx_ue_umlaut,規則：üe 的變化,,,,lesson_page,,學習 j/q/x + üe 時，拼寫為 jue/que/xue。,,,,,rule_l4_jqx_ue_umlaut,,,true,true,false,,false,
+pinyin_lesson_04,P15,,15,vocabulary_set,vocab_set_l4_03,詞彙 3,,,,lesson_page,,覺得、缺、學。,,vocab_set_l4_03,,,rule_l4_jqx_ue_umlaut,,,true,true,false,,false,
+pinyin_lesson_04,P16,,16,vocab_exercise,page_l4_16,詞彙練習 3,,,,lesson_page,,詞彙 3 的發音與字義練習。,,vocab_set_l4_03,,,rule_l4_jqx_ue_umlaut,,,true,true,false,,false,
+pinyin_lesson_04,,P17-P18|P17-P19,17,review_exercise,page_l4_17,課後練習,,,,lesson_page,,2-3 個題型整合複習。,,,,,,,,true,true,false,,true,
+pinyin_lesson_04,P3,,90,warmup_activity,warmup_review_pinyin_lesson_03,暖身活動：複習前一課生詞,,,,warmup_activity,,複習前一課的生詞,,,,,,,,true,true,false,,,暖身活動放在學習目標之後，用前一課生詞作為複習材料。
+pinyin_lesson_04,P3,,91,warmup_activity_option,warmup_review_pinyin_lesson_03_option_1,連連看,,,,matching,,學生看照片，連到對應的拼音與漢字。,,,,,,,,true,true,false,,,
+pinyin_lesson_04,P3,,92,warmup_activity_option,warmup_review_pinyin_lesson_03_option_2,聽音猜意 flash card,,,,audio_flashcard,,正面播放生詞音檔，學生猜意思；反面顯示漢字、拼音與圖片。,,,,,,,,true,true,false,,,
+pinyin_lesson_04,P4,,101,final,final_ai,韻母 ai,,,ai,final,compound_final_group_1,韻母 ai。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_04,P4,,102,final,final_ao,韻母 ao,,,ao,final,compound_final_group_1,韻母 ao。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_04,P4,,103,final,final_ou,韻母 ou,,,ou,final,compound_final_group_1,韻母 ou。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_04,P4,,104,final,final_ei,韻母 ei,,,ei,final,compound_final_group_1,韻母 ei。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_04,P4,,105,final,final_er,韻母 er,,,er,final,compound_final_group_1,韻母 er。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_04,P9,,106,final,final_iu,韻母 iu,,,iu,final,compound_final_group_2,韻母 iu。,,,,,,,,true,false,false,,,chart_page=P10; rule_page=
+pinyin_lesson_04,P9,,107,final,final_ui,韻母 ui,,,ui,final,compound_final_group_2,韻母 ui。,,,,,,,,true,false,false,,,chart_page=P10; rule_page=
+pinyin_lesson_04,P9,,108,final,final_ie,韻母 ie,,,ie,final,compound_final_group_2,韻母 ie。,,,,,,,,true,false,false,,,chart_page=P10; rule_page=
+pinyin_lesson_04,P9,,109,final,final_ue_umlaut,韻母 üe,,,üe,final,compound_final_group_2_rule_based,韻母 üe。,,,,,rule_l4_jqx_ue_umlaut,,,true,false,false,,,chart_page=; rule_page=P14
+pinyin_lesson_04,multiple,,110,initials_reference,summary_21_initials,全部 21 聲母,,,,initials_reference,,b|p|m|f|d|t|n|l|g|k|h|j|q|x|zh|ch|sh|r|z|c|s,,,,,,,,true,false,false,,,
+pinyin_lesson_04,P5,,111,pinyin_chart,pinyin_chart_l4_group_1,全部聲母 + ai ao ou ei er,,,,pinyin_chart,,initials=b|p|m|f|d|t|n|l|g|k|h|j|q|x|zh|ch|sh|r|z|c|s; finals=ai|ao|ou|ei|er,,,,,,,,true,false,false,false,,
+pinyin_lesson_04,P10,,112,pinyin_chart,pinyin_chart_l4_group_2,全部聲母 + iu ui ie,,,,pinyin_chart,,initials=b|p|m|f|d|t|n|l|g|k|h|j|q|x|zh|ch|sh|r|z|c|s; finals=iu|ui|ie,,,,,,,,true,false,false,false,,P10 表格不含 üe；üe 由 P14 規則處理。
+pinyin_lesson_04,P14,,113,spelling_rule,rule_l4_jqx_ue_umlaut,j/q/x + üe 拼寫變化,,,,spelling_rule,,j/q/x 後接 üe 時，拼寫省略 ü 上兩點，但發音仍與 üe 有關。,,,,,rule_l4_jqx_ue_umlaut,,,true,false,false,,,
+pinyin_lesson_04,P14,,114,spelling_rule_mapping,rule_l4_jqx_ue_umlaut_jüe_to_jue,jüe→jue,,,jue,spelling_rule_mapping,,jüe is written as jue.,,,,,rule_l4_jqx_ue_umlaut,,,true,false,false,,,
+pinyin_lesson_04,P14,,115,spelling_rule_mapping,rule_l4_jqx_ue_umlaut_qüe_to_que,qüe→que,,,que,spelling_rule_mapping,,qüe is written as que.,,,,,rule_l4_jqx_ue_umlaut,,,true,false,false,,,
+pinyin_lesson_04,P14,,116,spelling_rule_mapping,rule_l4_jqx_ue_umlaut_xüe_to_xue,xüe→xue,,,xue,spelling_rule_mapping,,xüe is written as xue.,,,,,rule_l4_jqx_ue_umlaut,,,true,false,false,,,
+pinyin_lesson_04,P7,,117,vocabulary,vocab_l4_001_kai,開,開,kāi,,vocab_set_l4_01,,,,vocab_set_l4_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_04,P7,,118,vocabulary,vocab_l4_002_cai,菜,菜,cài,,vocab_set_l4_01,,,,vocab_set_l4_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_04,P7,,119,vocabulary,vocab_l4_003_mao,貓,貓,māo,,vocab_set_l4_01,,,,vocab_set_l4_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_04,P7,,120,vocabulary,vocab_l4_004_shao,少,少,shǎo,,vocab_set_l4_01,,,,vocab_set_l4_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_04,P7,,121,vocabulary,vocab_l4_005_shou,手,手,shǒu,,vocab_set_l4_01,,,,vocab_set_l4_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_04,P7,,122,vocabulary,vocab_l4_006_kou,口,口,kǒu,,vocab_set_l4_01,,,,vocab_set_l4_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_04,P7,,123,vocabulary,vocab_l4_007_shei,誰,誰,shéi,,vocab_set_l4_01,,,,vocab_set_l4_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_04,P7,,124,vocabulary,vocab_l4_008_er,二,二,èr,,vocab_set_l4_01,,,,vocab_set_l4_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_04,P12,,125,vocabulary,vocab_l4_009_liu,六,六,liù,,vocab_set_l4_02,,,,vocab_set_l4_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_04,P12,,126,vocabulary,vocab_l4_010_niu,牛,牛,niú,,vocab_set_l4_02,,,,vocab_set_l4_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_04,P12,,127,vocabulary,vocab_l4_011_jiu,九,九,jiǔ,,vocab_set_l4_02,,,,vocab_set_l4_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_04,P12,,128,vocabulary,vocab_l4_012_qiu,球,球,qiú,,vocab_set_l4_02,,,,vocab_set_l4_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_04,P12,,129,vocabulary,vocab_l4_013_dui,對,對,duì,,vocab_set_l4_02,,,,vocab_set_l4_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_04,P12,,130,vocabulary,vocab_l4_014_shui,睡,睡,shuì,,vocab_set_l4_02,,,,vocab_set_l4_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_04,P12,,131,vocabulary,vocab_l4_015_gui,貴,貴,guì,,vocab_set_l4_02,,,,vocab_set_l4_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_04,P12,,132,vocabulary,vocab_l4_016_jiejie,姐姐,姐姐,jiějie,,vocab_set_l4_02,,,,vocab_set_l4_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_04,P12,,133,vocabulary,vocab_l4_017_xie,寫,寫,xiě,,vocab_set_l4_02,,,,vocab_set_l4_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_04,P12,,134,vocabulary,vocab_l4_018_xiexie,謝謝,謝謝,xièxie,,vocab_set_l4_02,,,,vocab_set_l4_02,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_04,P15,,135,vocabulary,vocab_l4_019_juede,覺得,覺得,juéde,,vocab_set_l4_03,,,,vocab_set_l4_03,,,rule_l4_jqx_ue_umlaut,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_04,P15,,136,vocabulary,vocab_l4_020_que,缺,缺,quē,,vocab_set_l4_03,,,,vocab_set_l4_03,,,rule_l4_jqx_ue_umlaut,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_04,P15,,137,vocabulary,vocab_l4_021_xue,學,學,xué,,vocab_set_l4_03,,,,vocab_set_l4_03,,,rule_l4_jqx_ue_umlaut,,,true,true,false,true,,發音正確，學習字義，不要求認字。
+pinyin_lesson_04,P6,,138,exercise,exercise_l4_p6_pinyin_group_1,含聲調拼音練習,,,,exercise,,練習 21 聲母 + ai/ao/ou/ei/er 的含聲調拼讀。,含聲調拼音練習,,pinyin_chart_l4_group_1,,,,,true,true,false,true,false,
+pinyin_lesson_04,P8,,139,exercise,exercise_l4_p8_vocab_1,詞彙 1 練習,,,,exercise,,確認詞彙 1 發音與字義理解。,詞彙 1 練習,vocab_set_l4_01,,,,,,true,true,false,,false,
+pinyin_lesson_04,P11,,140,exercise,exercise_l4_p11_pinyin_group_2,含聲調拼音練習,,,,exercise,,練習 21 聲母 + iu/ui/ie 的含聲調拼讀。,含聲調拼音練習,,pinyin_chart_l4_group_2,,,,,true,true,false,true,false,
+pinyin_lesson_04,P13,,141,exercise,exercise_l4_p13_vocab_2,詞彙 2 練習,,,,exercise,,確認詞彙 2 發音與字義理解。,詞彙 2 練習,vocab_set_l4_02,,,,,,true,true,false,,false,
+pinyin_lesson_04,P16,,142,exercise,exercise_l4_p16_vocab_3,詞彙 3 練習,,,,exercise,,確認詞彙 3 發音、字義與 üe 拼寫變化。,詞彙 3 練習,vocab_set_l4_03,,,rule_l4_jqx_ue_umlaut,,,true,true,false,,false,
+pinyin_lesson_04,,P17-P18|P17-P19,143,exercise,exercise_l4_review,課後整合練習,,,,exercise,,用 2-3 個題型整合複習。,課後整合練習,,,,,,,true,true,false,,true,聽音選拼音|看拼音朗讀|字義配對|üe 拼寫規則判斷
