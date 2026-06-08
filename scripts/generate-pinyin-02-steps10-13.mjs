@@ -79,6 +79,9 @@ const reviewImageFiles = new Map([
   ['伯母', 'review-v016-bomu.png'],
 ]);
 
+const imageMatchTitle = 'Nối từ vựng với hình ảnh';
+const imageMatchInstruction = 'Nối từ vựng với hình ảnh.';
+
 const esc = (value = '') => String(value)
   .replaceAll('&', '&amp;')
   .replaceAll('<', '&lt;')
@@ -317,8 +320,8 @@ function warmupSlide(reviewItems) {
     };
   });
   return imageMatchingPracticeSlide({
-    title: 'Nối từ Bài 1 với hình ảnh',
-    instruction: 'Nối từ Bài 1 với hình ảnh.',
+    title: imageMatchTitle,
+    instruction: imageMatchInstruction,
     pairs,
     label: 'Ôn bài 1',
   });
@@ -409,8 +412,8 @@ function vocabPracticeSlide(set, title, partLabel = '') {
     image: item.image_file,
   }));
   return imageMatchingPracticeSlide({
-    title: title || 'Nối từ Bài 1 với hình ảnh',
-    instruction: 'Nối từ Bài 1 với hình ảnh.',
+    title: title || imageMatchTitle,
+    instruction: imageMatchInstruction,
     pairs,
     partLabel,
     label: 'Luyện từ vựng',
@@ -451,8 +454,8 @@ function rulePracticeSlide(set) {
     image: item.image_file,
   }));
   return imageMatchingPracticeSlide({
-    title: 'Nối từ Bài 1 với hình ảnh',
-    instruction: 'Nối từ Bài 1 với hình ảnh.',
+    title: imageMatchTitle,
+    instruction: imageMatchInstruction,
     pairs,
     label: 'Luyện quy tắc',
   });
@@ -511,8 +514,8 @@ function fillBlankPracticeSlide() {
 
 function meaningMatchSlide(items, partLabel = '') {
   return imageMatchingPracticeSlide({
-    title: 'Nối từ Bài 1 với hình ảnh',
-    instruction: 'Nối từ Bài 1 với hình ảnh.',
+    title: imageMatchTitle,
+    instruction: imageMatchInstruction,
     pairs: items.map((item) => ({ pinyin: item.pinyin, hanzi: item.chinese_simplified, image: item.image_file })),
     partLabel,
     label: 'Ôn tập',

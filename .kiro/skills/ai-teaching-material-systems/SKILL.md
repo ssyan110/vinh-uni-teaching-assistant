@@ -229,9 +229,11 @@ Features:
 - Left slide thumbnail sidebar with live previews
 - Click any thumbnail to jump to that slide
 - Thumbnail sidebar auto-minimizes in presentation mode and appears when the cursor moves to the left edge
-- Pen/highlighter with color swatches
+- Pen/highlighter with color swatches; highlighter opacity is 30%
+- Straight-line tool: click the first point, then click the second point to draw the line
+- Circle and box tools: drag on the slide to preview the shape, then release to place it
 - Pixel and object eraser
-- Text box annotations (click T, click to place, type, resize, drag via handle)
+- Transparent text box annotations with no visible background or border: click T, click to place, type, drag to move, resize, choose black/blue/red text, and change font size
 - Undo (Z)
 - Per-slide drawing/text persistence during session
 - PDF download with all annotations included
