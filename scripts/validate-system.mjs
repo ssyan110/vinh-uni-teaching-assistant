@@ -59,17 +59,45 @@ async function readLessonInfo(lessonDir) {
     info.status = meta.status || listItem.status || (meta.finalized ? 'finalized' : info.status);
   }
 
-  if (info.title === info.lessonId) {
-    const lessonList = await fs.readFile(path.join(path.dirname(lessonDir), 'lesson_list.csv'), 'utf8').catch(() => '');
+  const lessonListCandidates = [
+    path.join(path.dirname(lessonDir), 'lesson_list.csv'),
+    path.join(path.dirname(lessonDir), 'pinyin_lesson_list.csv'),
+  ];
+  for (const lessonListPath of lessonListCandidates) {
+    const lessonList = await fs.readFile(lessonListPath, 'utf8').catch(() => '');
     const line = lessonList.split(/\r?\n/).find((row) => row.startsWith(`${info.lessonId},`));
     if (line) {
-      const cells = line.split(',');
+      const cells = parseCsvLine(line);
       info.title = cells[1] || info.title;
-      info.status = cells[5] || info.status;
+      info.status = cells[4] || info.status;
+      break;
     }
   }
 
   return info;
+}
+
+function parseCsvLine(line) {
+  const cells = [];
+  let current = '';
+  let quoted = false;
+  for (let i = 0; i < line.length; i++) {
+    const char = line[i];
+    const next = line[i + 1];
+    if (char === '"' && quoted && next === '"') {
+      current += '"';
+      i++;
+    } else if (char === '"') {
+      quoted = !quoted;
+    } else if (char === ',' && !quoted) {
+      cells.push(current);
+      current = '';
+    } else {
+      current += char;
+    }
+  }
+  cells.push(current);
+  return cells;
 }
 
 // ── Core infrastructure ──────────────────────────────────────────────────────
