@@ -505,9 +505,9 @@ async function writeSlides(db, vocab, sets) {
 
   add('cover', coverSlide());
   add('objectives', objectivesSlide(vocab.length));
-  add('divider-review', dividerSlide({ title: 'Ôn bài 1', zh: '复习', label: 'ÔN BÀI 1', img: 'divider-review.png', icon: 'refresh-cw' }));
+  add('divider-review', dividerSlide({ title: 'Ôn bài 1', zh: '复习', label: 'ÔN BÀI 1', img: 'divider-review-page-03.png', icon: 'refresh-cw' }));
   add('warmup-review', warmupSlide(db.warmup_activity.source_vocabulary));
-  add('divider-initials-1', dividerSlide({ title: 'Thanh mẫu d t n l g k h', zh: '声母', label: 'THANH MẪU 1', img: 'divider-initials.png', icon: 'volume-2' }));
+  add('divider-initials-1', dividerSlide({ title: 'Thanh mẫu d t n l g k h', zh: '声母', label: 'THANH MẪU 1', img: 'divider-initials-1-page-05.png', icon: 'volume-2' }));
   add('initials-dtnlgkh', initialsSlide('d t n l g k h', chart1.initials, 'Đọc rõ vị trí đầu lưỡi và âm bật hơi.'));
   add('chart-dtnl', chartSlide(subsetChart(chart1, ['d', 't', 'n', 'l']), 'd t n l + a o e i u ü'));
   add('chart-gkh', chartSlide(subsetChart(chart1, ['g', 'k', 'h']), 'g k h + a o e i u ü'));
@@ -516,7 +516,7 @@ async function writeSlides(db, vocab, sets) {
   add('vocabulary-1', vocabularyGridSlide(set1, 'Từ vựng 1'));
   set1.items.forEach((item, i) => add(`flash-${item.record_id.toLowerCase()}-${slug(item.pinyin)}`, flashcardSlide(item, i, set1.items.length, 1)));
   addVocabPractice('practice-vocabulary-1', set1, 'Luyện từ vựng 1');
-  add('divider-initials-2', dividerSlide({ title: 'Thanh mẫu j q x', zh: '声母', label: 'THANH MẪU 2', img: 'divider-initials.png', icon: 'volume-2' }));
+  add('divider-initials-2', dividerSlide({ title: 'Thanh mẫu j q x', zh: '声母', label: 'THANH MẪU 2', img: 'divider-initials-2-page-22.png', icon: 'volume-2' }));
   add('initials-jqx', initialsSlide('j q x', chart2.initials, 'Các âm này đi với i hoặc ü trong bài này.'));
   add('chart-jqx', chartSlide(chart2, 'j q x + a o e i u ü'));
   add('practice-jqx', pinyinPracticeSlide({ title: 'Luyện đọc nhóm 2', instruction: 'Chú ý j/q/x khi đi với ü.', items: ['jī', 'jǐ', 'qī', 'qí', 'xī', 'xǐ', 'jú', 'qù', 'xū', 'jù', 'qǔ', 'xù'] }));
@@ -524,7 +524,7 @@ async function writeSlides(db, vocab, sets) {
   add('vocabulary-2', vocabularyGridSlide(set2, 'Từ vựng 2'));
   set2.items.forEach((item, i) => add(`flash-${item.record_id.toLowerCase()}-${slug(item.pinyin)}`, flashcardSlide(item, i, set2.items.length, 2)));
   addVocabPractice('practice-vocabulary-2', set2, 'Luyện từ vựng 2');
-  add('divider-rule-jqx', dividerSlide({ title: 'Quy tắc j/q/x', zh: '规则', label: 'QUY TẮC', img: 'divider-sounds.png', icon: 'wand-sparkles' }));
+  add('divider-rule-jqx', dividerSlide({ title: 'Quy tắc j/q/x', zh: '规则', label: 'QUY TẮC', img: 'divider-rule-jqx.png', icon: 'wand-sparkles' }));
   add('rule-jqx-umlaut', ruleSlide());
   add('divider-vocabulary-3', dividerSlide({ title: 'Từ vựng 3', zh: '词汇', label: 'TỪ VỰNG 3', img: 'divider-vocabulary.png', icon: 'images' }));
   add('vocabulary-3', vocabularyGridSlide(set3, 'Từ vựng 3'));

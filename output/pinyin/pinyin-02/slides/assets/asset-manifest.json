@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "lesson_id": "pinyin-02",
-  "generated_at": "2026-06-08T05:15:27.466Z",
+  "generated_at": "2026-06-08T05:59:18.818Z",
   "source_database": "database",
   "workflow": {
     "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
@@ -72,8 +72,8 @@
       "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
     },
     {
-      "id": "assets-photos-divider-initials-png",
-      "asset_path": "assets/photos/divider-initials.png",
+      "id": "assets-photos-divider-initials-1-page-05-png",
+      "asset_path": "assets/photos/divider-initials-1-page-05.png",
       "role": "section_photo",
       "status": "ready_for_visual_qa",
       "exists": true,
@@ -84,8 +84,59 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "05-divider-initials-1.html",
+        "05-divider-initials-1.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-divider-initials-2-page-22-png",
+      "asset_path": "assets/photos/divider-initials-2-page-22.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
         "22-divider-initials-2.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-divider-review-page-03-png",
+      "asset_path": "assets/photos/divider-review-page-03.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "03-divider-review.html"
       ],
       "html_reference_types": [
         "img"
@@ -111,7 +162,6 @@
         "aspect_ratio": 1.7768
       },
       "used_by": [
-        "03-divider-review.html",
         "44-divider-review-final.html"
       ],
       "html_reference_types": [
@@ -126,8 +176,8 @@
       "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
     },
     {
-      "id": "assets-photos-divider-sounds-png",
-      "asset_path": "assets/photos/divider-sounds.png",
+      "id": "assets-photos-divider-rule-jqx-png",
+      "asset_path": "assets/photos/divider-rule-jqx.png",
       "role": "section_photo",
       "status": "ready_for_visual_qa",
       "exists": true,

@@ -16,6 +16,8 @@ Chinese + pinyin alignment rule: when a slide shows Chinese and pinyin together,
 
 Cover rule: use Lesson 10 `output/book-1/lesson-10/slides/01-cover.html` as the canonical cover template for all future lessons. Reuse its cover layout and visual language directly; only replace lesson number, Chinese/pinyin title, Vietnamese title, and topic image. Do not include the old three keyword/topic pills on cover slides. Keep the lesson badge (`BÀI N · 第N课`) at the larger cover size, about 16pt / 30% larger than the old 12pt badge.
 
+Background rule: future regular lessons and pinyin lessons use the updated Pinyin Lesson 1 background style instead of plain single-color backgrounds. Use a warm off-white base with very soft, low-opacity mint/sky/yellow/peach/lavender background shapes. Keep backgrounds visually quiet enough that the main text, cards, tables, and lesson images remain dominant. All decorative backgrounds, blobs, and watermarks must sit behind slide content as bottom-layer elements; they must not overlay or fade across primary content.
+
 Reusable page rule: do not redesign reusable slide types for each lesson. Copy Lesson 01's visual templates for dividers, objectives, homework divider, exercise list, dialogue avatar layout, and hanzi-writing layout. Only replace lesson-specific content, printed page numbers, counts, and images.
 
 Reusable divider rule: use the same Lesson 01 divider templates across all lessons by default. Swap only page numbers, lesson-specific counts, and images Adam explicitly asks to customize for a specific lesson theme.
@@ -46,6 +48,8 @@ output/pinyin/pinyin-01/
 ```
 
 For future pinyin lessons, do not build slides from scratch. Reuse the Pinyin Lesson 1 cover, objective layout, divider rhythm, concept-slide style, initials/finals teaching slides, tone slides, vocabulary grid, flashcard style, practice slide styling, appendix/input setup style, closing slide, and presenter setup. Replace only lesson-specific text, taught sounds, rules, vocabulary, exercises, and images.
+
+Pinyin background rule: keep the updated Pinyin Lesson 1 soft multicolor background system for future pinyin lessons. Do not revert to a monotone background. Background colors should stay subtle, and every background/decorative element must remain below the content layer.
 
 Required pinyin section rhythm:
 
@@ -147,7 +151,7 @@ Presenter rule for every new lesson:
 - The presenter must keep the slide iframe, drawing canvas, text annotations, and hotspot overlays inside one fixed `960×540` `.slide-surface`; fullscreen scales that one surface so notes stay aligned.
 - `exportPDF()` must use slide-load timeouts and `try/catch/finally` cleanup so blocked iframe access or failed resources never leave the export overlay stuck.
 
-The watermark is a shared deck-level overlay from `slide-base.css`: `assets/brand/logo-watermark.png`, top layer above slide content, `opacity:.02`, `pointer-events:none`. It is separate from vocabulary images, which still must not contain in-image watermarks.
+The watermark is a shared deck-level bottom-layer element from `slide-base.css`: `assets/brand/logo-watermark.png`, `opacity:.02`, `pointer-events:none`. It must stay behind slide content. It is separate from vocabulary images, which still must not contain in-image watermarks.
 
 ## Vocabulary Slide Template
 
