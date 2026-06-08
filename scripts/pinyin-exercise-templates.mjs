@@ -90,7 +90,9 @@ function renderToneCuedFinal(value = '') {
 export function renderFillBlankBoard({ title, bankTitle, bankItems, prompts }) {
   const renderedPrompts = prompts.map((prompt, i) => {
     const body = prompt.mode === 'initial'
-      ? `${prompt.reveal ? `<span class="answer-red">${esc(prompt.initial)}</span>` : `<span class="blank${prompt.short ? ' short' : ''}"></span>`}${renderToneCuedFinal(prompt.finalPart || '')}`
+      ? prompt.reveal
+        ? `<span class="answer-red">${esc(prompt.initial)}</span>${esc(prompt.finalPart || '')}`
+        : `<span class="blank${prompt.short ? ' short' : ''}"></span>${renderToneCuedFinal(prompt.finalPart || '')}`
       : `${esc(prompt.initial)}<span class="blank${prompt.short ? ' short' : ''}"></span>`;
     return `<div class="listen-item"><span class="listen-no">${i + 1}.</span>${body}</div>`;
   }).join('');

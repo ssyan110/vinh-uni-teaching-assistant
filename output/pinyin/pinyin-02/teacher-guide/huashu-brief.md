@@ -56,9 +56,7 @@
 - `45-divider-review-final.html`
 - `46-review-listening-choice.html`
 - `47-review-fill-blank.html`
-- `48-review-meaning-match-1.html`
-- `49-review-meaning-match-2.html`
-- `50-closing.html`
+- `48-closing.html`
 
 ## Content Rules
 

@@ -320,8 +320,8 @@ function warmupSlide(reviewItems) {
     };
   });
   return imageMatchingPracticeSlide({
-    title: imageMatchTitle,
-    instruction: imageMatchInstruction,
+    title: 'Nối từ Bài 1 với hình ảnh',
+    instruction: 'Nối từ Bài 1 với hình ảnh.',
     pairs,
     label: 'Ôn bài 1',
   });
@@ -496,17 +496,17 @@ function fillBlankPracticeSlide() {
       bankItems: ['d', 't', 'n', 'l', 'g', 'k', 'h', 'j', 'q', 'x'],
       prompts: [
         { initial: 't', finalPart: 'à', reveal: true },
-        { initial: 'd', finalPart: 'à' },
-        { initial: 'n', finalPart: 'á' },
-        { initial: 'l', finalPart: 'ǜ' },
-        { initial: 'g', finalPart: 'ē' },
-        { initial: 'k', finalPart: 'ě' },
-        { initial: 'h', finalPart: 'ē' },
-        { initial: 'j', finalPart: 'ī' },
-        { initial: 'q', finalPart: 'ù' },
-        { initial: 'x', finalPart: 'ǐ' },
-        { initial: 'j', finalPart: 'ìxù' },
-        { initial: 'q', finalPart: 'ímǎ' },
+        { initial: 'd', finalPart: 'a' },
+        { initial: 'n', finalPart: 'a' },
+        { initial: 'l', finalPart: 'ü' },
+        { initial: 'g', finalPart: 'e' },
+        { initial: 'k', finalPart: 'e' },
+        { initial: 'h', finalPart: 'e' },
+        { initial: 'j', finalPart: 'i' },
+        { initial: 'q', finalPart: 'u' },
+        { initial: 'x', finalPart: 'i' },
+        { initial: 'j', finalPart: 'ixu' },
+        { initial: 'q', finalPart: 'ima' },
       ].map((prompt) => ({ ...prompt, mode: 'initial' })),
     }),
   });
@@ -609,9 +609,6 @@ async function writeSlides(db, vocab, sets) {
   add('divider-review-final', dividerSlide({ title: 'Luyện tập tổng hợp', zh: '练习', label: 'ÔN TẬP', img: 'divider-review.png', icon: 'check-circle-2' }));
   add('review-listening-choice', reviewChoiceSlide(vocab));
   add('review-fill-blank', fillBlankPracticeSlide());
-  chunkItems(vocab.slice(0, 8), 4).forEach((items, index, chunks) => {
-    add(`review-meaning-match-${index + 1}`, meaningMatchSlide(items, chunks.length > 1 ? `phần ${index + 1}` : ''));
-  });
   add('closing', closingSlide());
 
   for (let i = 0; i < slides.length; i += 1) {
