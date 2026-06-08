@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "lesson_id": "pinyin-02",
-  "generated_at": "2026-06-08T07:47:56.552Z",
+  "generated_at": "2026-06-08T09:06:38.226Z",
   "source_database": "database",
   "workflow": {
     "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
@@ -110,7 +110,7 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "22-divider-initials-2.html"
+        "23-divider-initials-2.html"
       ],
       "html_reference_types": [
         "img"
@@ -162,7 +162,7 @@
         "aspect_ratio": 1.7768
       },
       "used_by": [
-        "44-divider-review-final.html"
+        "45-divider-review-final.html"
       ],
       "html_reference_types": [
         "img"
@@ -188,7 +188,7 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "35-divider-rule-jqx.html"
+        "36-divider-rule-jqx.html"
       ],
       "html_reference_types": [
         "img"
@@ -214,9 +214,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "10-divider-vocabulary-1.html",
-        "26-divider-vocabulary-2.html",
-        "37-divider-vocabulary-3.html"
+        "11-divider-vocabulary-1.html",
+        "27-divider-vocabulary-2.html",
+        "38-divider-vocabulary-3.html"
       ],
       "html_reference_types": [
         "img"
@@ -230,25 +230,165 @@
       "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
     },
     {
-      "id": "assets-reference-ending-page-background-png",
-      "asset_path": "assets/reference/ending-page-background.png",
+      "id": "assets-reference-closing-door-students-png",
+      "asset_path": "assets/reference/closing-door-students.png",
       "role": "reference_asset",
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 1536,
-        "height": 1024,
+        "width": 403,
+        "height": 370,
         "format": "png",
-        "aspect_ratio": 1.5
+        "aspect_ratio": 1.0892
       },
       "used_by": [
-        "48-closing.html"
+        "49-closing.html"
       ],
       "html_reference_types": [
         "img"
       ],
       "record_ids": [],
       "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-vocab-images-review-v001-ba-png",
+      "asset_path": "assets/review-vocab-images/review-v001-ba.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "八"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-vocab-images-review-v002-pa-png",
+      "asset_path": "assets/review-vocab-images/review-v002-pa.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "怕"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-vocab-images-review-v003-e-png",
+      "asset_path": "assets/review-vocab-images/review-v003-e.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "饿"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-vocab-images-review-v004-bu-png",
+      "asset_path": "assets/review-vocab-images/review-v004-bu.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "不"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-vocab-images-review-v005-bi-png",
+      "asset_path": "assets/review-vocab-images/review-v005-bi.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "鼻"
+      ],
       "pinyin": [],
       "vietnamese": [],
       "prompt": "",
@@ -297,46 +437,47 @@
         "06-initials-dtnlgkh.html",
         "07-chart-dtnl.html",
         "08-chart-gkh.html",
-        "09-practice-dtnlgkh.html",
-        "10-divider-vocabulary-1.html",
-        "11-vocabulary-1.html",
-        "12-flash-v001-da.html",
-        "13-flash-v002-na.html",
-        "14-flash-v003-nu.html",
-        "15-flash-v004-lu.html",
-        "16-flash-v005-ditu.html",
-        "17-flash-v006-he.html",
-        "18-flash-v007-kele.html",
-        "19-flash-v008-gege.html",
-        "20-practice-vocabulary-1-1.html",
-        "21-practice-vocabulary-1-2.html",
-        "22-divider-initials-2.html",
-        "23-initials-jqx.html",
-        "24-chart-jqx.html",
-        "25-practice-jqx.html",
-        "26-divider-vocabulary-2.html",
-        "27-vocabulary-2.html",
-        "28-flash-v009-ji.html",
-        "29-flash-v010-ji.html",
-        "30-flash-v011-qi.html",
-        "31-flash-v012-xi.html",
-        "32-flash-v013-xi.html",
-        "33-flash-v014-qima.html",
-        "34-practice-vocabulary-2.html",
-        "35-divider-rule-jqx.html",
-        "36-rule-jqx-umlaut.html",
-        "37-divider-vocabulary-3.html",
-        "38-vocabulary-3.html",
-        "39-flash-v015-qu.html",
-        "40-flash-v016-ju.html",
-        "41-flash-v017-jiqi.html",
-        "42-flash-v018-jixu.html",
-        "43-practice-rule-vocabulary.html",
-        "44-divider-review-final.html",
-        "45-review-listening-choice.html",
-        "46-review-fill-blank.html",
-        "47-review-meaning-match.html",
-        "48-closing.html",
+        "09-practice-dtnl-tones.html",
+        "10-practice-gkh-tones.html",
+        "11-divider-vocabulary-1.html",
+        "12-vocabulary-1.html",
+        "13-flash-v001-da.html",
+        "14-flash-v002-na.html",
+        "15-flash-v003-nu.html",
+        "16-flash-v004-lu.html",
+        "17-flash-v005-ditu.html",
+        "18-flash-v006-he.html",
+        "19-flash-v007-kele.html",
+        "20-flash-v008-gege.html",
+        "21-practice-vocabulary-1-1.html",
+        "22-practice-vocabulary-1-2.html",
+        "23-divider-initials-2.html",
+        "24-initials-jqx.html",
+        "25-chart-jqx.html",
+        "26-practice-jqx-tones.html",
+        "27-divider-vocabulary-2.html",
+        "28-vocabulary-2.html",
+        "29-flash-v009-ji.html",
+        "30-flash-v010-ji.html",
+        "31-flash-v011-qi.html",
+        "32-flash-v012-xi.html",
+        "33-flash-v013-xi.html",
+        "34-flash-v014-qima.html",
+        "35-practice-vocabulary-2.html",
+        "36-divider-rule-jqx.html",
+        "37-rule-jqx-umlaut.html",
+        "38-divider-vocabulary-3.html",
+        "39-vocabulary-3.html",
+        "40-flash-v015-qu.html",
+        "41-flash-v016-ju.html",
+        "42-flash-v017-jiqi.html",
+        "43-flash-v018-jixu.html",
+        "44-practice-rule-vocabulary.html",
+        "45-divider-review-final.html",
+        "46-review-listening-choice.html",
+        "47-review-fill-blank.html",
+        "48-review-meaning-match.html",
+        "49-closing.html",
         "lesson-required-assets"
       ],
       "html_reference_types": [
@@ -367,46 +508,47 @@
         "06-initials-dtnlgkh.html",
         "07-chart-dtnl.html",
         "08-chart-gkh.html",
-        "09-practice-dtnlgkh.html",
-        "10-divider-vocabulary-1.html",
-        "11-vocabulary-1.html",
-        "12-flash-v001-da.html",
-        "13-flash-v002-na.html",
-        "14-flash-v003-nu.html",
-        "15-flash-v004-lu.html",
-        "16-flash-v005-ditu.html",
-        "17-flash-v006-he.html",
-        "18-flash-v007-kele.html",
-        "19-flash-v008-gege.html",
-        "20-practice-vocabulary-1-1.html",
-        "21-practice-vocabulary-1-2.html",
-        "22-divider-initials-2.html",
-        "23-initials-jqx.html",
-        "24-chart-jqx.html",
-        "25-practice-jqx.html",
-        "26-divider-vocabulary-2.html",
-        "27-vocabulary-2.html",
-        "28-flash-v009-ji.html",
-        "29-flash-v010-ji.html",
-        "30-flash-v011-qi.html",
-        "31-flash-v012-xi.html",
-        "32-flash-v013-xi.html",
-        "33-flash-v014-qima.html",
-        "34-practice-vocabulary-2.html",
-        "35-divider-rule-jqx.html",
-        "36-rule-jqx-umlaut.html",
-        "37-divider-vocabulary-3.html",
-        "38-vocabulary-3.html",
-        "39-flash-v015-qu.html",
-        "40-flash-v016-ju.html",
-        "41-flash-v017-jiqi.html",
-        "42-flash-v018-jixu.html",
-        "43-practice-rule-vocabulary.html",
-        "44-divider-review-final.html",
-        "45-review-listening-choice.html",
-        "46-review-fill-blank.html",
-        "47-review-meaning-match.html",
-        "48-closing.html",
+        "09-practice-dtnl-tones.html",
+        "10-practice-gkh-tones.html",
+        "11-divider-vocabulary-1.html",
+        "12-vocabulary-1.html",
+        "13-flash-v001-da.html",
+        "14-flash-v002-na.html",
+        "15-flash-v003-nu.html",
+        "16-flash-v004-lu.html",
+        "17-flash-v005-ditu.html",
+        "18-flash-v006-he.html",
+        "19-flash-v007-kele.html",
+        "20-flash-v008-gege.html",
+        "21-practice-vocabulary-1-1.html",
+        "22-practice-vocabulary-1-2.html",
+        "23-divider-initials-2.html",
+        "24-initials-jqx.html",
+        "25-chart-jqx.html",
+        "26-practice-jqx-tones.html",
+        "27-divider-vocabulary-2.html",
+        "28-vocabulary-2.html",
+        "29-flash-v009-ji.html",
+        "30-flash-v010-ji.html",
+        "31-flash-v011-qi.html",
+        "32-flash-v012-xi.html",
+        "33-flash-v013-xi.html",
+        "34-flash-v014-qima.html",
+        "35-practice-vocabulary-2.html",
+        "36-divider-rule-jqx.html",
+        "37-rule-jqx-umlaut.html",
+        "38-divider-vocabulary-3.html",
+        "39-vocabulary-3.html",
+        "40-flash-v015-qu.html",
+        "41-flash-v016-ju.html",
+        "42-flash-v017-jiqi.html",
+        "43-flash-v018-jixu.html",
+        "44-practice-rule-vocabulary.html",
+        "45-divider-review-final.html",
+        "46-review-listening-choice.html",
+        "47-review-fill-blank.html",
+        "48-review-meaning-match.html",
+        "49-closing.html",
         "lesson-required-assets"
       ],
       "html_reference_types": [
@@ -428,14 +570,16 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "11-vocabulary-1.html",
-        "12-flash-v001-da.html"
+        "12-vocabulary-1.html",
+        "13-flash-v001-da.html",
+        "21-practice-vocabulary-1-1.html",
+        "48-review-meaning-match.html"
       ],
       "html_reference_types": [
         "img"
@@ -463,14 +607,16 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "11-vocabulary-1.html",
-        "13-flash-v002-na.html"
+        "12-vocabulary-1.html",
+        "14-flash-v002-na.html",
+        "21-practice-vocabulary-1-1.html",
+        "48-review-meaning-match.html"
       ],
       "html_reference_types": [
         "img"
@@ -498,14 +644,16 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "11-vocabulary-1.html",
-        "14-flash-v003-nu.html"
+        "12-vocabulary-1.html",
+        "15-flash-v003-nu.html",
+        "21-practice-vocabulary-1-1.html",
+        "48-review-meaning-match.html"
       ],
       "html_reference_types": [
         "img"
@@ -533,14 +681,16 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "11-vocabulary-1.html",
-        "15-flash-v004-lu.html"
+        "12-vocabulary-1.html",
+        "16-flash-v004-lu.html",
+        "21-practice-vocabulary-1-1.html",
+        "48-review-meaning-match.html"
       ],
       "html_reference_types": [
         "img"
@@ -568,14 +718,16 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "11-vocabulary-1.html",
-        "16-flash-v005-ditu.html"
+        "12-vocabulary-1.html",
+        "17-flash-v005-ditu.html",
+        "21-practice-vocabulary-1-1.html",
+        "48-review-meaning-match.html"
       ],
       "html_reference_types": [
         "img"
@@ -603,14 +755,16 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "11-vocabulary-1.html",
-        "17-flash-v006-he.html"
+        "12-vocabulary-1.html",
+        "18-flash-v006-he.html",
+        "22-practice-vocabulary-1-2.html",
+        "48-review-meaning-match.html"
       ],
       "html_reference_types": [
         "img"
@@ -638,14 +792,16 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "11-vocabulary-1.html",
-        "18-flash-v007-kele.html"
+        "12-vocabulary-1.html",
+        "19-flash-v007-kele.html",
+        "22-practice-vocabulary-1-2.html",
+        "48-review-meaning-match.html"
       ],
       "html_reference_types": [
         "img"
@@ -673,14 +829,16 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "11-vocabulary-1.html",
-        "19-flash-v008-gege.html"
+        "12-vocabulary-1.html",
+        "20-flash-v008-gege.html",
+        "22-practice-vocabulary-1-2.html",
+        "48-review-meaning-match.html"
       ],
       "html_reference_types": [
         "img"
@@ -708,14 +866,15 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "27-vocabulary-2.html",
-        "28-flash-v009-ji.html"
+        "28-vocabulary-2.html",
+        "29-flash-v009-ji.html",
+        "35-practice-vocabulary-2.html"
       ],
       "html_reference_types": [
         "img"
@@ -743,14 +902,15 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "27-vocabulary-2.html",
-        "29-flash-v010-ji.html"
+        "28-vocabulary-2.html",
+        "30-flash-v010-ji.html",
+        "35-practice-vocabulary-2.html"
       ],
       "html_reference_types": [
         "img"
@@ -778,14 +938,15 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "27-vocabulary-2.html",
-        "30-flash-v011-qi.html"
+        "28-vocabulary-2.html",
+        "31-flash-v011-qi.html",
+        "35-practice-vocabulary-2.html"
       ],
       "html_reference_types": [
         "img"
@@ -813,14 +974,15 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "27-vocabulary-2.html",
-        "31-flash-v012-xi.html"
+        "28-vocabulary-2.html",
+        "32-flash-v012-xi.html",
+        "35-practice-vocabulary-2.html"
       ],
       "html_reference_types": [
         "img"
@@ -848,14 +1010,15 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "27-vocabulary-2.html",
-        "32-flash-v013-xi.html"
+        "28-vocabulary-2.html",
+        "33-flash-v013-xi.html",
+        "35-practice-vocabulary-2.html"
       ],
       "html_reference_types": [
         "img"
@@ -883,14 +1046,15 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "27-vocabulary-2.html",
-        "33-flash-v014-qima.html"
+        "28-vocabulary-2.html",
+        "34-flash-v014-qima.html",
+        "35-practice-vocabulary-2.html"
       ],
       "html_reference_types": [
         "img"
@@ -918,14 +1082,15 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "38-vocabulary-3.html",
-        "39-flash-v015-qu.html"
+        "39-vocabulary-3.html",
+        "40-flash-v015-qu.html",
+        "44-practice-rule-vocabulary.html"
       ],
       "html_reference_types": [
         "img"
@@ -953,14 +1118,15 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "38-vocabulary-3.html",
-        "40-flash-v016-ju.html"
+        "39-vocabulary-3.html",
+        "41-flash-v016-ju.html",
+        "44-practice-rule-vocabulary.html"
       ],
       "html_reference_types": [
         "img"
@@ -988,14 +1154,15 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "38-vocabulary-3.html",
-        "41-flash-v017-jiqi.html"
+        "39-vocabulary-3.html",
+        "42-flash-v017-jiqi.html",
+        "44-practice-rule-vocabulary.html"
       ],
       "html_reference_types": [
         "img"
@@ -1010,9 +1177,9 @@
         "jīqì"
       ],
       "vietnamese": [
-        "máy móc"
+        "máy móc, cơ khí"
       ],
-      "prompt": "Soft textbook 1:1 illustration for máy móc; no text, labels, letters, numbers, or watermark.",
+      "prompt": "Soft textbook 1:1 illustration for máy móc, cơ khí; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Existing image for 机器 (jīqì).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
@@ -1023,14 +1190,15 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "38-vocabulary-3.html",
-        "42-flash-v018-jixu.html"
+        "39-vocabulary-3.html",
+        "43-flash-v018-jixu.html",
+        "44-practice-rule-vocabulary.html"
       ],
       "html_reference_types": [
         "img"

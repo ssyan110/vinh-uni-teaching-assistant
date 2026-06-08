@@ -6,6 +6,7 @@ import {
   chunkItems,
   pinyinExerciseCss,
   renderFillBlankBoard,
+  renderImageMatchingBoard,
   renderMatchingBoard,
   renderMultipleChoiceTable,
   renderReadingDrillBoard,
@@ -18,6 +19,7 @@ const templateRoot = path.join(root, 'output/pinyin/pinyin-01');
 const slidesDir = path.join(lessonRoot, 'slides');
 const assetsDir = path.join(slidesDir, 'assets');
 const vocabDir = path.join(assetsDir, 'vocab-images');
+const reviewVocabDir = path.join(assetsDir, 'review-vocab-images');
 const photosDir = path.join(assetsDir, 'photos');
 const teacherGuideDir = path.join(lessonRoot, 'teacher-guide');
 const qaDir = path.join(lessonRoot, 'exports/qa');
@@ -47,7 +49,7 @@ const meanings = new Map([
   ['骑马', 'cưỡi ngựa'],
   ['去', 'đi'],
   ['橘', 'quả quýt'],
-  ['机器', 'máy móc'],
+  ['机器', 'máy móc, cơ khí'],
   ['继续', 'tiếp tục'],
 ]);
 
@@ -56,6 +58,25 @@ const reviewMeanings = new Map([
   ['木', 'gỗ'], ['马', 'con ngựa'], ['佛', 'Phật'], ['妈妈', 'mẹ'], ['爸爸', 'bố'],
   ['服务', 'phục vụ'], ['衣服', 'quần áo'], ['皮肤', 'da'], ['密码', 'mật mã'],
   ['伯父', 'bác trai'], ['伯母', 'bác gái'],
+]);
+
+const reviewImageFiles = new Map([
+  ['八', 'review-v001-ba.png'],
+  ['怕', 'review-v002-pa.png'],
+  ['饿', 'review-v003-e.png'],
+  ['不', 'review-v004-bu.png'],
+  ['鼻', 'review-v005-bi.png'],
+  ['木', 'review-v006-mu.png'],
+  ['马', 'review-v007-ma.png'],
+  ['佛', 'review-v008-fo.png'],
+  ['妈妈', 'review-v009-mama.png'],
+  ['爸爸', 'review-v010-baba.png'],
+  ['服务', 'review-v011-fuwu.png'],
+  ['衣服', 'review-v012-yifu.png'],
+  ['皮肤', 'review-v013-pifu.png'],
+  ['密码', 'review-v014-mima.png'],
+  ['伯父', 'review-v015-bofu.png'],
+  ['伯母', 'review-v016-bomu.png'],
 ]);
 
 const esc = (value = '') => String(value)
@@ -104,6 +125,7 @@ async function ensureDirs() {
     assetsDir,
     path.join(assetsDir, 'brand'),
     vocabDir,
+    reviewVocabDir,
     photosDir,
     teacherGuideDir,
     path.join(lessonRoot, 'exports/final'),
@@ -131,6 +153,10 @@ async function copyTemplateAssets() {
   await copyDirIfExists(path.join(templateRoot, 'slides/assets/photos'), photosDir);
   await copyDirIfExists(path.join(templateRoot, 'slides/assets/sample-images'), path.join(assetsDir, 'sample-images'));
   await copyDirIfExists(path.join(templateRoot, 'slides/assets/reference'), path.join(assetsDir, 'reference'));
+  for (const file of reviewImageFiles.values()) {
+    const source = file.replace(/^review-/, 'vocab-');
+    await copyIfExists(path.join(templateRoot, 'slides/assets/vocab-images', source), path.join(reviewVocabDir, file));
+  }
 }
 
 function normalizeVocabItem(item, index) {
@@ -206,7 +232,7 @@ function commonCss() {
 .lesson-goal-left{position:absolute;left:60px;top:78px;width:530px}.lesson-goal-title{margin-bottom:28px;font-size:34px;line-height:1.12;font-weight:900;color:#1A3A5A}.lesson-goal-cards{display:flex;flex-direction:column;gap:14px}.lesson-goal{padding:15px 20px;display:flex;align-items:center;gap:16px;font-size:17px;color:#4A6080;line-height:1.34}.lesson-goal-num{width:26px;height:26px;background:#5AACAC;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0}.lesson-goal-right{position:absolute;right:54px;top:98px;width:306px;height:306px;border-radius:20px;overflow:hidden;background:#F8FBFB;border:2px solid rgba(90,172,172,.18);box-shadow:0 10px 28px rgba(90,172,172,.14)}.lesson-goal-right img{width:100%;height:100%;object-fit:cover}.goal-hot{color:#F05A62;font-weight:950}
 .divider-left{position:absolute;left:0;top:40px;bottom:0;width:54%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.divider-kicker{font-size:15px;color:#5AACAC;text-transform:uppercase;letter-spacing:3px;font-weight:900;margin-bottom:12px}.divider-zh{font-family:'Noto Sans SC';font-size:62px;font-weight:900;color:#1A3A5A;margin-bottom:16px}.divider-line{width:88px;height:5px;border-radius:999px;background:#5AACAC}.divider-photo{position:absolute;right:82px;top:116px;width:300px;height:300px;border-radius:20px;overflow:hidden;background:#F8FBFB;border:2px solid rgba(90,172,172,.18);box-shadow:0 8px 24px rgba(90,172,172,.12)}.divider-photo img{width:100%;height:100%;object-fit:cover}
 .sound-table{width:100%;border-collapse:separate;border-spacing:8px}.sound-table th,.sound-table td{height:48px;border-radius:13px;text-align:center;font-weight:900;font-size:21px}.sound-table th{background:#E8F4F4;color:#5AACAC}.sound-table td{background:#fff;border:1px solid rgba(90,172,172,.18);color:#1A3A5A}.sound-table .rowh{background:#F3F0FA;color:#7C6BC8}.sound-table .blank{opacity:.28}
-.chart-full{position:absolute;left:50px;right:50px;top:76px;bottom:38px}.chart-full-title{font-size:36px;line-height:1.1;font-weight:900;color:#1A3A5A;text-align:center;margin-bottom:12px}.chart-full-card{position:absolute;left:0;right:0;top:56px;bottom:0;background:#fff;border:1px solid rgba(90,172,172,.16);border-radius:20px;box-shadow:0 8px 26px rgba(90,172,172,.12);padding:12px}.sound-table-full{height:100%;border-spacing:10px}.sound-table-full th,.sound-table-full td{height:auto;font-size:28px;border-radius:16px}.sound-table-full th{font-size:26px}.sound-table-full .rowh{font-size:30px}
+.chart-full{position:absolute;left:34px;right:34px;top:58px;bottom:22px}.chart-full-card{position:absolute;inset:0;background:#fff;border:1px solid rgba(90,172,172,.16);border-radius:20px;box-shadow:0 8px 26px rgba(90,172,172,.12);padding:10px}.sound-table-full{height:100%;border-spacing:8px;table-layout:fixed}.sound-table-full th,.sound-table-full td{height:auto;font-size:29px;border-radius:15px}.sound-table-full th{font-size:26px}.sound-table-full .rowh{font-size:31px}
 .word-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px 14px}.word-card{position:relative;background:#fff;border-radius:18px;padding:10px 8px 12px;text-align:center;border:1px solid rgba(90,172,172,.16);box-shadow:0 8px 24px rgba(90,172,172,.10);height:184px;overflow:visible}.word-card img{width:78px;height:78px;border-radius:12px;border:2px solid #5AACAC;object-fit:cover;background:#F4FAFA;margin-bottom:8px}.word-card .pinyin{font-size:17px;font-weight:900;color:#5AACAC;line-height:1.16}.word-card .hanzi{font-family:'Noto Sans SC';font-size:31px;line-height:1.12;margin-top:3px;color:#1A3A5A;font-weight:900}.word-card .vietnamese{font-size:12px;line-height:1.22;color:#5F7088;font-weight:700;margin-top:3px}
 .sound-only{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}.sound-only-row{display:flex;align-items:center;justify-content:center;gap:30px;flex-wrap:wrap;width:820px}.sound-only-token{width:112px;height:112px;border-radius:24px;background:#fff;border:2px solid rgba(90,172,172,.26);box-shadow:0 12px 30px rgba(90,172,172,.13);display:flex;align-items:center;justify-content:center;font-size:72px;line-height:1;font-weight:900;color:#1A3A5A}.sound-only-token:nth-child(2n){background:#F4FAFA}.sound-only-token:nth-child(3n){background:#F3F0FA}
 .flash-title{position:absolute;left:58px;top:70px;font-size:20pt;font-weight:800;color:#1A3A5A}.flash-count{position:absolute;right:58px;top:78px;background:#E8F4F4;color:#5AACAC;border-radius:999px;padding:6px 16px;font-size:10pt;font-weight:900}
@@ -215,7 +241,7 @@ function commonCss() {
 .tone-family{position:absolute;left:78px;right:78px;top:86px;bottom:48px}.tone-family-title{font-size:38px;line-height:1.1;font-weight:900;color:#1A3A5A;margin-bottom:22px;text-align:center}.tone-family-board{display:grid;gap:14px}.tone-family-row{display:grid;grid-template-columns:74px repeat(4,1fr);gap:12px;align-items:center}.tone-family-base{height:72px;border-radius:18px;background:#E8F4F4;color:#5AACAC;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900}.tone-family-token{height:72px;border-radius:18px;background:#fff;border:1px solid rgba(90,172,172,.18);box-shadow:0 8px 22px rgba(90,172,172,.09);display:flex;align-items:center;justify-content:center;font-size:37px;font-weight:900;color:#1A3A5A}.tone-family-row:nth-child(2) .tone-family-token{background:#F8FBFB}.tone-family-row:nth-child(3) .tone-family-token{background:#F7F4FC}.tone-family-row:nth-child(4) .tone-family-token{background:#FFF8E8}
 .tone-match-title{font-size:26px;font-weight:900;color:#1A3A5A;line-height:1.14;margin-bottom:12px}.tone-match-board{position:relative;display:grid;grid-template-columns:270px 1fr 270px;gap:32px;align-items:start;margin-top:8px}.tone-match-col{display:grid;gap:6px}.tone-match-card{min-height:38px;border-radius:15px;background:#fff;border:2px solid #B8EDF8;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 15px rgba(90,172,172,.08);padding:4px 10px;text-align:center}.tone-match-card .pin{font-size:23px;font-weight:900;color:#294778;line-height:1.06}.tone-label{min-height:38px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:#1A3A5A;box-shadow:0 6px 15px rgba(90,172,172,.07);padding:4px 10px;text-align:center}.tone-label:nth-child(1){background:#E8F4F4;color:#387E86}.tone-label:nth-child(2){background:#FFF4D8;color:#A66F12}.tone-label:nth-child(3){background:#F3F0FA;color:#6E58B8}.tone-label:nth-child(4){background:#FCEFF3;color:#C84B63}.tone-label:nth-child(5){background:#EEF3FA;color:#5F7088}.tone-label:nth-child(6){background:#E8F4F4;color:#387E86}.tone-label:nth-child(7){background:#FFF4D8;color:#A66F12}.tone-label:nth-child(8){background:#F3F0FA;color:#6E58B8}.tone-match-space{height:340px;border-radius:22px;background:rgba(90,172,172,.045);border:1px dashed rgba(90,172,172,.22)}
 .tone-choice-wrap{position:absolute;left:58px;right:58px;top:74px;bottom:42px}.tone-choice-title{font-size:36px;line-height:1.1;font-weight:900;color:#1A3A5A;margin:0 0 8px}.tone-choice-desc{font-size:19px;line-height:1.35;font-weight:800;color:#5F7088;margin:0 0 18px}.tone-choice-table{width:850px;border-collapse:collapse;table-layout:fixed;background:#F4F8FD;box-shadow:0 10px 28px rgba(26,58,90,.10)}.tone-choice-table tr:nth-child(odd) td{background:#D9E4F2}.tone-choice-table tr:nth-child(even) td{background:#EEF3FA}.tone-choice-table td{height:52px;border:1px solid rgba(255,255,255,.34);font-size:28px;font-weight:900;color:#294778;vertical-align:middle}.tone-choice-table .qno{width:66px;background:transparent!important;text-align:center}.tone-choice-num{width:38px;height:38px;border-radius:999px;background:#5AACAC;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:23px;box-shadow:0 5px 12px rgba(90,172,172,.24)}.tone-choice-table .opt{padding-left:20px}.tone-choice-table .letter{font-weight:900;margin-right:10px}
-.listen-head{display:flex;align-items:center;justify-content:center;margin-bottom:16px;text-align:center}.listen-title{font-size:29px;font-weight:900;color:#1A3A5A;line-height:1.18}.final-bank{width:760px;margin:4px auto 18px;background:rgba(255,255,255,.86);border:1px solid rgba(90,172,172,.16);border-radius:16px;text-align:center;padding:10px 18px;box-shadow:0 6px 20px rgba(90,172,172,.08)}.final-bank-title{font-size:18px;color:#5F7088;font-weight:800;margin-bottom:6px}.finals{display:flex;justify-content:space-around;font-size:25px;font-weight:900;color:#3B7DB4}.listen-grid{display:grid;grid-template-columns:repeat(3,1fr);column-gap:28px;row-gap:20px;margin-top:10px}.listen-item{font-size:25px;color:#202530;line-height:1.1;white-space:nowrap}.listen-no{font-size:23px;margin-right:8px;color:#202530}.blank{display:inline-block;width:44px;border-bottom:3px solid #202530;transform:translateY(-3px);margin:0 4px}.blank.short{width:36px}
+.listen-head{display:flex;align-items:center;justify-content:center;margin-bottom:16px;text-align:center}.listen-title{font-size:29px;font-weight:900;color:#1A3A5A;line-height:1.18}.final-bank{width:760px;margin:4px auto 18px;background:rgba(255,255,255,.86);border:1px solid rgba(90,172,172,.16);border-radius:16px;text-align:center;padding:10px 18px;box-shadow:0 6px 20px rgba(90,172,172,.08)}.final-bank-title{font-size:18px;color:#5F7088;font-weight:800;margin-bottom:6px}.finals{display:flex;justify-content:space-around;font-size:25px;font-weight:900;color:#3B7DB4}.listen-grid{display:grid;grid-template-columns:repeat(3,1fr);column-gap:28px;row-gap:20px;margin-top:10px}.listen-item{font-size:25px;color:#202530;line-height:1.1;white-space:nowrap}.listen-no{font-size:23px;margin-right:8px;color:#202530}.blank{display:inline-block;width:44px;border-bottom:3px solid #202530;transform:translateY(-3px);margin:0 4px}.blank.short{width:36px}.initial-cue{display:inline-block;min-width:48px;text-align:center;font-weight:900;color:#1A3A5A;margin-right:4px}.answer-red{color:#F05A62;font-weight:950}
 ${pinyinExerciseCss()}
 .rule-center{position:absolute;left:60px;right:60px;top:92px;bottom:54px;display:flex;flex-direction:column;align-items:center;justify-content:center}.rule-center .title-xl{text-align:center;margin-bottom:28px}.rule-grid{width:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.rule-card{height:154px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;justify-items:center;text-align:center;gap:10px}.rule-card .from,.rule-card .to{font-size:46px;line-height:1;font-weight:950;color:#1A3A5A}.rule-card .from{color:#7C6BC8}.rule-card .arrow{font-size:34px;font-weight:950;color:#5AACAC}.closing{position:relative;overflow:hidden;background:linear-gradient(112deg,#F5FAF4 0%,#FFFFFF 46%,#DFF1E8 100%)}.closing:before{content:"";position:absolute;left:34px;top:24px;width:300px;height:246px;border-radius:54% 46% 44% 56%;background:rgba(149,212,187,.23);z-index:0}.closing:after{content:"";position:absolute;right:-54px;bottom:-108px;width:372px;height:294px;border-radius:55% 45% 50% 50%;background:rgba(149,212,187,.20);z-index:0}.closing-card-ref{position:absolute;left:96px;right:84px;top:88px;bottom:62px;border-radius:34px;background:rgba(255,255,255,.96);box-shadow:0 18px 34px rgba(36,50,74,.18);z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-left:164px}.closing-door{position:absolute;left:-36px;top:-64px;width:290px;height:266px;object-fit:contain;z-index:2;filter:drop-shadow(0 6px 10px rgba(36,50,74,.10))}.closing-zh{font-family:'Noto Sans SC';font-size:84pt;line-height:.92;font-weight:900;color:#143C68;letter-spacing:0}.closing-sub{margin-top:30px;font-size:29pt;line-height:1.1;font-weight:900;color:#7BC6A7}.closing-next{margin-top:22px;font-size:17pt;line-height:1.25;font-weight:700;color:#6B6F76}
 `;
@@ -254,13 +280,12 @@ function slideShell({ title, icon = 'book-open', label = title, content, extraCs
 function coverSlide() {
   return htmlDoc({
     title: 'Pinyin Bài 2',
-    body: `<div class="slide"><div class="cover"><div class="cover-card"><div class="lesson">PINYIN 2 · 拼音第二课</div>${coverPinyinTitle()}${coverSoundChips([['d', 't', 'n', 'l'], ['g', 'k', 'h'], ['j', 'q', 'x', '→', 'ju', 'qu', 'xu']])}</div><div class="topic-img"><img src="assets/photos/cover-topic.png" alt=""></div></div></div>`,
+    body: `<div class="slide"><div class="cover"><div class="cover-card"><div class="lesson">PINYIN 2 · 拼音第二课</div>${coverPinyinTitle()}${coverSoundChips([['d', 't', 'n', 'l'], ['g', 'k', 'h'], ['j', 'q', 'x']])}</div><div class="topic-img"><img src="assets/photos/cover-topic.png" alt=""></div></div></div>`,
   });
 }
 
 function objectivesSlide(vocabCount) {
   const goals = [
-    'Ôn nhanh từ vựng Pinyin Bài 1 bằng nghe và nhìn hình.',
     'Học thanh mẫu <strong class="goal-hot">d t n l g k h</strong>.',
     'Học thanh mẫu <strong class="goal-hot">j q x</strong> và quy tắc <strong class="goal-hot">ü bỏ hai chấm</strong>.',
     `Đọc đúng ${vocabCount} từ vựng, ưu tiên phát âm và hiểu nghĩa.`,
@@ -286,15 +311,14 @@ function warmupSlide(reviewItems) {
   const pairs = reviewItems.slice(0, 5).map((item) => {
     const zh = simplify(item.hanzi);
     return {
-      leftHtml: matchPinyinHanzi(item.pinyin, zh),
-      right: reviewMeanings.get(zh) || '',
+      pinyin: item.pinyin,
+      hanzi: zh,
+      image: `assets/review-vocab-images/${reviewImageFiles.get(zh) || ''}`,
     };
   });
-  return matchingPracticeSlide({
-    title: '连连看',
-    instruction: 'Nối từ Bài 1 với nghĩa tiếng Việt.',
-    leftTitle: 'Pinyin + chữ',
-    rightTitle: 'Nghĩa',
+  return imageMatchingPracticeSlide({
+    title: 'Nối từ Bài 1 với hình ảnh',
+    instruction: 'Nối từ Bài 1 với hình ảnh.',
     pairs,
     label: 'Ôn bài 1',
   });
@@ -310,31 +334,32 @@ function initialsSlide(title, items) {
   });
 }
 
-function chartRows(chart) {
-  const valid = {
-    d: ['da', '', 'de', 'di', 'du', ''],
-    t: ['ta', '', 'te', 'ti', 'tu', ''],
-    n: ['na', 'no', 'ne', 'ni', 'nu', 'nü'],
-    l: ['la', 'lo', 'le', 'li', 'lu', 'lü'],
-    g: ['ga', '', 'ge', '', 'gu', ''],
-    k: ['ka', '', 'ke', '', 'ku', ''],
-    h: ['ha', '', 'he', '', 'hu', ''],
-    j: ['', '', '', 'ji', '', 'ju'],
-    q: ['', '', '', 'qi', '', 'qu'],
-    x: ['', '', '', 'xi', '', 'xu'],
+function chartRows(chart, values = {}) {
+  const baseValues = {
+    d: { a: 'da', e: 'de', i: 'di', u: 'du' },
+    t: { a: 'ta', e: 'te', i: 'ti', u: 'tu' },
+    n: { a: 'na', o: 'no', e: 'ne', i: 'ni', u: 'nu', 'ü': 'nü' },
+    l: { a: 'la', o: 'lo', e: 'le', i: 'li', u: 'lu', 'ü': 'lü' },
+    g: { a: 'ga', e: 'ge', u: 'gu' },
+    k: { a: 'ka', e: 'ke', u: 'ku' },
+    h: { a: 'ha', e: 'he', u: 'hu' },
+    j: { i: 'ji', 'ü': 'ju' },
+    q: { i: 'qi', 'ü': 'qu' },
+    x: { i: 'xi', 'ü': 'xu' },
   };
+  const tableValues = Object.keys(values).length ? values : baseValues;
   return chart.initials.map((initial) => `<tr><th class="rowh">${esc(initial)}</th>${chart.finals.map((final, i) => {
-    const value = valid[initial]?.[i] || '';
+    const value = tableValues[initial]?.[final] || '';
     return `<td class="${value ? '' : 'blank'}">${esc(value || '-')}</td>`;
   }).join('')}</tr>`).join('');
 }
 
-function chartSlide(chart, title) {
+function chartSlide(chart, title, values = null, label = 'Bảng ghép âm') {
   return slideShell({
     title,
     icon: 'table-2',
-    label: 'Bảng ghép âm',
-    content: `<div class="chart-full"><div class="chart-full-title">${esc(title)}</div><div class="chart-full-card"><table class="sound-table sound-table-full"><thead><tr><th></th>${chart.finals.map((final) => `<th>${esc(final)}</th>`).join('')}</tr></thead><tbody>${chartRows(chart)}</tbody></table></div></div>`,
+    label,
+    content: `<div class="chart-full"><div class="chart-full-card"><table class="sound-table sound-table-full"><thead><tr><th></th>${chart.finals.map((final) => `<th>${esc(final)}</th>`).join('')}</tr></thead><tbody>${chartRows(chart, values || {})}</tbody></table></div></div>`,
   });
 }
 
@@ -352,6 +377,10 @@ function pinyinPracticeSlide({ title, items, instruction, titleAlign = 'center' 
     label: 'Luyện đọc',
     content: renderReadingDrillBoard({ title, rows, rowLabels, titleAlign }),
   });
+}
+
+function tonePracticeChartSlide(chart, title, values) {
+  return chartSlide(chart, title, values, 'Luyện đọc');
 }
 
 function vocabularyGridSlide(set, slideTitle) {
@@ -375,15 +404,15 @@ function flashcardSlide(item, index, total, setNo) {
 
 function vocabPracticeSlide(set, title, partLabel = '') {
   const pairs = set.items.map((item) => ({
-    leftHtml: matchPinyinHanzi(item.pinyin, item.chinese_simplified),
-    right: item.vietnamese,
+    pinyin: item.pinyin,
+    hanzi: item.chinese_simplified,
+    image: item.image_file,
   }));
-  return matchingPracticeSlide({
-    title: '连连看',
-    instruction: `Nối pinyin/chữ với nghĩa${partLabel ? ` (${partLabel})` : ''}.`,
-    leftTitle: 'Pinyin + chữ',
-    rightTitle: 'Nghĩa',
+  return imageMatchingPracticeSlide({
+    title: title || 'Nối từ Bài 1 với hình ảnh',
+    instruction: 'Nối từ Bài 1 với hình ảnh.',
     pairs,
+    partLabel,
     label: 'Luyện từ vựng',
   });
 }
@@ -394,6 +423,15 @@ function matchingPracticeSlide({ title, instruction, leftTitle, rightTitle, pair
     icon: 'git-branch',
     label,
     content: renderMatchingBoard({ instruction, leftTitle, rightTitle, pairs }),
+  });
+}
+
+function imageMatchingPracticeSlide({ title, instruction, pairs, partLabel = '', label = 'Luyện tập' }) {
+  return slideShell({
+    title,
+    icon: 'git-branch',
+    label,
+    content: renderImageMatchingBoard({ instruction, pairs, partLabel }),
   });
 }
 
@@ -408,14 +446,13 @@ function ruleSlide() {
 
 function rulePracticeSlide(set) {
   const pairs = set.items.map((item) => ({
-    leftHtml: matchPinyinHanzi(item.pinyin, item.chinese_simplified),
-    right: item.vietnamese,
+    pinyin: item.pinyin,
+    hanzi: item.chinese_simplified,
+    image: item.image_file,
   }));
-  return matchingPracticeSlide({
-    title: 'Áp dụng quy tắc j/q/x',
-    instruction: 'Nối pinyin có j/q/x với nghĩa.',
-    leftTitle: 'Pinyin + chữ',
-    rightTitle: 'Nghĩa',
+  return imageMatchingPracticeSlide({
+    title: 'Nối từ Bài 1 với hình ảnh',
+    instruction: 'Nối từ Bài 1 với hình ảnh.',
     pairs,
     label: 'Luyện quy tắc',
   });
@@ -447,27 +484,37 @@ function reviewChoiceSlide() {
 
 function fillBlankPracticeSlide() {
   return slideShell({
-    title: 'Nghe và điền âm còn thiếu',
+    title: 'Điền thanh mẫu còn thiếu',
     icon: 'edit-3',
     label: 'Ôn tập',
     content: renderFillBlankBoard({
-      title: 'Nghe rồi điền vận mẫu và thanh điệu còn thiếu.',
-      bankTitle: 'Vận mẫu',
-      bankItems: ['a', 'o', 'e', 'i', 'u', 'ü'],
-      prompts: ['d', 't', 'n', 'l', 'g', 'k', 'h', 'j', 'q', 'x', 'j', 'q']
-        .map((initial) => ({ initial, short: ['j', 'q', 'x'].includes(initial) })),
+      title: 'Điền thanh mẫu còn thiếu.',
+      bankTitle: 'Thanh mẫu',
+      bankItems: ['d', 't', 'n', 'l', 'g', 'k', 'h', 'j', 'q', 'x'],
+      prompts: [
+        { initial: 't', finalPart: 'à', reveal: true },
+        { initial: 'd', finalPart: 'à' },
+        { initial: 'n', finalPart: 'á' },
+        { initial: 'l', finalPart: 'ǜ' },
+        { initial: 'g', finalPart: 'ē' },
+        { initial: 'k', finalPart: 'ě' },
+        { initial: 'h', finalPart: 'ē' },
+        { initial: 'j', finalPart: 'ī' },
+        { initial: 'q', finalPart: 'ù' },
+        { initial: 'x', finalPart: 'ǐ' },
+        { initial: 'j', finalPart: 'ìxù' },
+        { initial: 'q', finalPart: 'ímǎ' },
+      ].map((prompt) => ({ ...prompt, mode: 'initial' })),
     }),
   });
 }
 
 function meaningMatchSlide(vocab) {
   const items = vocab.slice(0, 8);
-  return matchingPracticeSlide({
-    title: 'Ghép pinyin với nghĩa',
-    instruction: 'Nối pinyin với nghĩa tiếng Việt.',
-    leftTitle: 'Pinyin',
-    rightTitle: 'Nghĩa',
-    pairs: items.map((item) => ({ left: item.pinyin, right: item.vietnamese })),
+  return imageMatchingPracticeSlide({
+    title: 'Nối từ Bài 1 với hình ảnh',
+    instruction: 'Nối từ Bài 1 với hình ảnh.',
+    pairs: items.map((item) => ({ pinyin: item.pinyin, hanzi: item.chinese_simplified, image: item.image_file })),
     label: 'Ôn tập',
   });
 }
@@ -511,6 +558,22 @@ async function writeSlides(db, vocab, sets) {
   const set1 = sets[0];
   const set2 = sets[1];
   const set3 = sets[2];
+  const toneDtnl = {
+    d: { a: 'dā', e: 'dé', i: 'dì', u: 'dù' },
+    t: { a: 'tà', e: 'tè', i: 'tí', u: 'tǔ' },
+    n: { a: 'ná', o: 'nò', e: 'nè', i: 'nǐ', u: 'nù', 'ü': 'nǚ' },
+    l: { a: 'lā', o: 'luò', e: 'lè', i: 'lǐ', u: 'lù', 'ü': 'lǜ' },
+  };
+  const toneGkh = {
+    g: { a: 'gā', e: 'gē', u: 'gù' },
+    k: { a: 'kǎ', e: 'kě', u: 'kù' },
+    h: { a: 'hǎ', e: 'hē', u: 'hù' },
+  };
+  const toneJqx = {
+    j: { i: 'jī', 'ü': 'jù' },
+    q: { i: 'qí', 'ü': 'qù' },
+    x: { i: 'xī', 'ü': 'xǔ' },
+  };
 
   add('cover', coverSlide());
   add('objectives', objectivesSlide(vocab.length));
@@ -520,7 +583,8 @@ async function writeSlides(db, vocab, sets) {
   add('initials-dtnlgkh', initialsSlide('d t n l g k h', chart1.initials, 'Đọc rõ vị trí đầu lưỡi và âm bật hơi.'));
   add('chart-dtnl', chartSlide(subsetChart(chart1, ['d', 't', 'n', 'l']), 'd t n l + a o e i u ü'));
   add('chart-gkh', chartSlide(subsetChart(chart1, ['g', 'k', 'h']), 'g k h + a o e i u ü'));
-  add('practice-dtnlgkh', pinyinPracticeSlide({ title: 'Luyện đọc nhóm 1', instruction: 'Đọc từng hàng, sau đó đọc ngẫu nhiên.', titleAlign: 'left', items: ['dā', 'dí', 'dù', 'tǎ', 'tí', 'tǔ', 'ná', 'nǚ', 'lǜ', 'gē', 'kě', 'hē'] }));
+  add('practice-dtnl-tones', tonePracticeChartSlide(subsetChart(chart1, ['d', 't', 'n', 'l']), 'Luyện đọc d t n l', toneDtnl));
+  add('practice-gkh-tones', tonePracticeChartSlide(subsetChart(chart1, ['g', 'k', 'h']), 'Luyện đọc g k h', toneGkh));
   add('divider-vocabulary-1', dividerSlide({ title: 'Từ vựng 1', zh: '词汇', label: 'TỪ VỰNG 1', img: 'divider-vocabulary.png', icon: 'images' }));
   add('vocabulary-1', vocabularyGridSlide(set1, 'Từ vựng 1'));
   set1.items.forEach((item, i) => add(`flash-${item.record_id.toLowerCase()}-${slug(item.pinyin)}`, flashcardSlide(item, i, set1.items.length, 1)));
@@ -528,12 +592,12 @@ async function writeSlides(db, vocab, sets) {
   add('divider-initials-2', dividerSlide({ title: 'Thanh mẫu j q x', zh: '声母', label: 'THANH MẪU 2', img: 'divider-initials-2-page-22.png', icon: 'volume-2' }));
   add('initials-jqx', initialsSlide('j q x', chart2.initials, 'Các âm này đi với i hoặc ü trong bài này.'));
   add('chart-jqx', chartSlide(chart2, 'j q x + a o e i u ü'));
-  add('practice-jqx', pinyinPracticeSlide({ title: 'Luyện đọc nhóm 2', instruction: 'Chú ý j/q/x khi đi với ü.', items: ['jī', 'jǐ', 'qī', 'qí', 'xī', 'xǐ', 'jú', 'qù', 'xū', 'jù', 'qǔ', 'xù'] }));
+  add('practice-jqx-tones', tonePracticeChartSlide(chart2, 'Luyện đọc j q x', toneJqx));
   add('divider-vocabulary-2', dividerSlide({ title: 'Từ vựng 2', zh: '词汇', label: 'TỪ VỰNG 2', img: 'divider-vocabulary.png', icon: 'images' }));
   add('vocabulary-2', vocabularyGridSlide(set2, 'Từ vựng 2'));
   set2.items.forEach((item, i) => add(`flash-${item.record_id.toLowerCase()}-${slug(item.pinyin)}`, flashcardSlide(item, i, set2.items.length, 2)));
   addVocabPractice('practice-vocabulary-2', set2, 'Luyện từ vựng 2');
-  add('divider-rule-jqx', dividerSlide({ title: 'Quy tắc j/q/x', zh: '规则', label: 'QUY TẮC', img: 'divider-rule-jqx.png', icon: 'wand-sparkles' }));
+  add('divider-rule-jqx', dividerSlide({ title: 'Quy tắc j/q/x', zh: '特殊规则', label: 'QUY TẮC', img: 'divider-rule-jqx.png', icon: 'wand-sparkles' }));
   add('rule-jqx-umlaut', ruleSlide());
   add('divider-vocabulary-3', dividerSlide({ title: 'Từ vựng 3', zh: '词汇', label: 'TỪ VỰNG 3', img: 'divider-vocabulary.png', icon: 'images' }));
   add('vocabulary-3', vocabularyGridSlide(set3, 'Từ vựng 3'));

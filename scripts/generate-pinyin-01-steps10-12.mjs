@@ -1014,6 +1014,7 @@ const commonCss = `
 .big-hanzi{font-family:'Noto Sans SC',sans-serif;font-size:58px;line-height:1;font-weight:900;color:#1A3A5A}.big-pinyin{font-size:52px;line-height:1;font-weight:900;color:#5AACAC}
 .word-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px 14px}.word-card{position:relative;background:#fff;border-radius:18px;padding:10px 8px 12px;text-align:center;border:1px solid rgba(90,172,172,.16);box-shadow:0 8px 24px rgba(90,172,172,.10);height:184px;overflow:visible}.word-card img{width:78px;height:78px;border-radius:12px;border:2px solid #5AACAC;object-fit:cover;background:#F4FAFA;margin-bottom:8px}.word-card .pinyin{font-size:17px;font-weight:900;color:#5AACAC;line-height:1.16}.word-card .hanzi{font-size:31px;line-height:1.12;margin-top:3px}.word-card .vi{font-size:12px;line-height:1.22;color:#5F7088;font-weight:700;margin-top:3px}
 .sound-table{width:100%;border-collapse:separate;border-spacing:10px}.sound-table th,.sound-table td{height:56px;border-radius:15px;text-align:center;font-weight:900;font-size:24px}.sound-table th{background:#E8F4F4;color:#5AACAC}.sound-table td{background:#fff;border:1px solid rgba(90,172,172,.18);color:#1A3A5A}.sound-table .rowh{background:#F3F0FA;color:#7C6BC8}
+.chart-full{position:absolute;left:34px;right:34px;top:58px;bottom:22px}.chart-full-card{position:absolute;inset:0;background:#fff;border:1px solid rgba(90,172,172,.16);border-radius:20px;box-shadow:0 8px 26px rgba(90,172,172,.12);padding:10px}.sound-table-full{height:100%;border-spacing:8px;table-layout:fixed}.sound-table-full th,.sound-table-full td{height:auto;font-size:31px;border-radius:15px}.sound-table-full th{font-size:27px}.sound-table-full .rowh{font-size:33px}
 .choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.choice{display:flex;align-items:center;gap:10px;background:#fff;border-radius:14px;border:1px solid rgba(90,172,172,.16);padding:12px 14px;font-size:18px;font-weight:800;color:#1A3A5A}.num{width:28px;height:28px;border-radius:999px;background:#5AACAC;color:white;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;flex:none}
 .pill-bank{display:flex;flex-wrap:wrap;gap:10px}.pill-bank span{display:inline-flex;align-items:center;justify-content:center;min-width:82px;height:36px;border-radius:999px;background:#fff;border:1px solid rgba(90,172,172,.22);font-size:16px;font-weight:900;color:#5AACAC}
 .reference-image{position:absolute;left:34px;right:34px;top:58px;bottom:34px;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 10px 32px rgba(26,58,90,.12);border:1px solid rgba(90,172,172,.14)}.reference-image img{width:100%;height:100%;object-fit:contain;display:block}
@@ -1108,6 +1109,7 @@ const listeningWriteCss = `
 .listen-no{font-size:23px;margin-right:8px;color:#202530}
 .blank{display:inline-block;width:44px;border-bottom:3px solid #202530;transform:translateY(-3px);margin:0 4px}
 .blank.short{width:36px}
+.answer-red{color:#F05A62;font-weight:950}
 `;
 
 const toneChoiceCss = `
@@ -1268,6 +1270,9 @@ function listeningFinalsToneSlide() {
     ['y', 'f'],
   ];
   const itemHtml = items.map((item, index) => {
+    if (index === 0) {
+      return `<div class="listen-item"><span class="listen-no">1.</span><span class="answer-red">bà</span></div>`;
+    }
     const parts = item;
     const pattern = parts.map((part) => `${part ? esc(part) : ''}<span class="blank${part ? '' : ' short'}"></span>`).join(' ');
     return `<div class="listen-item"><span class="listen-no">${index + 1}.</span>${pattern}</div>`;
@@ -1357,6 +1362,12 @@ function soundTable(initials) {
   return `<table class="sound-table"><thead><tr><th></th>${cols.map((col) => `<th>${esc(col)}</th>`).join('')}</tr></thead><tbody>${rows.map(([row, cells]) => `<tr><th class="rowh">${esc(row)}</th>${cells.map((cell) => `<td>${cell ? esc(cell) : ''}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
 }
 
+function fullSoundTable(initials) {
+  const cols = initials.combination_table.columns;
+  const rows = Object.entries(initials.combination_table.rows);
+  return `<div class="chart-full"><div class="chart-full-card"><table class="sound-table sound-table-full"><thead><tr><th></th>${cols.map((col) => `<th>${esc(col)}</th>`).join('')}</tr></thead><tbody>${rows.map(([row, cells]) => `<tr><th class="rowh">${esc(row)}</th>${cells.map((cell) => `<td>${cell ? esc(cell) : ''}</td>`).join('')}</tr>`).join('')}</tbody></table></div></div>`;
+}
+
 function writeSlidesData(db) {
   const byId = new Map(db.content_items.map((item) => [item.record_id, item]));
   const vocab = db.content_items.filter((item) => item.record_type === 'vocabulary');
@@ -1419,7 +1430,7 @@ function writeSlidesData(db) {
         label: 'Bảng ghép âm',
         icon: 'table-2',
         page: 5,
-        body: `<div class="content"><div class="title-xl" style="font-size:40px">Thanh mẫu + vận mẫu</div><div class="soft-card" style="width:790px;margin-top:28px;padding:24px">${soundTable(initials)}</div></div>`,
+        body: fullSoundTable(initials),
       }),
     },
     {
@@ -1429,7 +1440,7 @@ function writeSlidesData(db) {
         label: 'Luyện pinyin',
         icon: 'mic-2',
         page: 6,
-        body: `<div class="content"><div class="title-xl" style="font-size:40px">Luyện đọc</div><div class="soft-card" style="width:790px;margin-top:28px;padding:24px">${soundTable(initials)}</div></div>`,
+        body: fullSoundTable(initials),
       }),
     },
     {

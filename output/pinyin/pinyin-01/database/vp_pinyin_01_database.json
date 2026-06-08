@@ -2,7 +2,7 @@
   "metadata": {
     "lesson_type": "pinyin",
     "pipeline_config_version": "2.0.0",
-    "generated_at": "2026-06-06T04:19:20.101Z",
+    "generated_at": "2026-06-08T09:10:51.866Z",
     "vp_scope": "latest user-approved content imported from pinyin-lesson-1 source files",
     "steps_completed": [
       1,
@@ -307,7 +307,7 @@
       "requires_hanzi_recognition": false,
       "variant_group": "",
       "image_role": "vocabulary_image",
-      "image_status": "generated",
+      "image_status": "placeholder_needs_generation",
       "image_semantic_check": "Image should clearly show: số tám",
       "teaching_order": 7,
       "image_file": "vocab-v001-ba.png"
@@ -336,7 +336,7 @@
       "requires_hanzi_recognition": false,
       "variant_group": "",
       "image_role": "vocabulary_image",
-      "image_status": "generated",
+      "image_status": "placeholder_needs_generation",
       "image_semantic_check": "Image should clearly show: sợ",
       "teaching_order": 8,
       "image_file": "vocab-v002-pa.png"
@@ -364,7 +364,7 @@
       "requires_hanzi_recognition": false,
       "variant_group": "",
       "image_role": "vocabulary_image",
-      "image_status": "generated",
+      "image_status": "placeholder_needs_generation",
       "image_semantic_check": "Image should clearly show: đói",
       "teaching_order": 9,
       "image_file": "vocab-v003-e.png"
@@ -393,7 +393,7 @@
       "requires_hanzi_recognition": false,
       "variant_group": "",
       "image_role": "vocabulary_image",
-      "image_status": "generated",
+      "image_status": "placeholder_needs_generation",
       "image_semantic_check": "Image should clearly show: không",
       "teaching_order": 10,
       "image_file": "vocab-v004-bu.png"
@@ -422,7 +422,7 @@
       "requires_hanzi_recognition": false,
       "variant_group": "",
       "image_role": "vocabulary_image",
-      "image_status": "generated",
+      "image_status": "placeholder_needs_generation",
       "image_semantic_check": "Image should clearly show: mũi",
       "teaching_order": 11,
       "image_file": "vocab-v005-bi.png"
@@ -451,7 +451,7 @@
       "requires_hanzi_recognition": false,
       "variant_group": "",
       "image_role": "vocabulary_image",
-      "image_status": "generated",
+      "image_status": "placeholder_needs_generation",
       "image_semantic_check": "Image should clearly show: gỗ",
       "teaching_order": 12,
       "image_file": "vocab-v006-mu.png"
@@ -480,7 +480,7 @@
       "requires_hanzi_recognition": false,
       "variant_group": "",
       "image_role": "vocabulary_image",
-      "image_status": "generated",
+      "image_status": "placeholder_needs_generation",
       "image_semantic_check": "Image should clearly show: con ngựa",
       "teaching_order": 13,
       "image_file": "vocab-v007-ma.png"
@@ -509,7 +509,7 @@
       "requires_hanzi_recognition": false,
       "variant_group": "",
       "image_role": "vocabulary_image",
-      "image_status": "generated",
+      "image_status": "placeholder_needs_generation",
       "image_semantic_check": "Image should clearly show: Phật",
       "teaching_order": 14,
       "image_file": "vocab-v008-fo.png"
@@ -540,7 +540,7 @@
       "requires_hanzi_recognition": false,
       "variant_group": "",
       "image_role": "vocabulary_image",
-      "image_status": "generated",
+      "image_status": "placeholder_needs_generation",
       "image_semantic_check": "Image should clearly show: mẹ",
       "teaching_order": 15,
       "image_file": "vocab-v009-mama.png"
@@ -571,7 +571,7 @@
       "requires_hanzi_recognition": false,
       "variant_group": "",
       "image_role": "vocabulary_image",
-      "image_status": "generated",
+      "image_status": "placeholder_needs_generation",
       "image_semantic_check": "Image should clearly show: bố",
       "teaching_order": 16,
       "image_file": "vocab-v010-baba.png"
@@ -602,7 +602,7 @@
       "requires_hanzi_recognition": false,
       "variant_group": "",
       "image_role": "vocabulary_image",
-      "image_status": "generated",
+      "image_status": "placeholder_needs_generation",
       "image_semantic_check": "Image should clearly show: phục vụ",
       "teaching_order": 17,
       "image_file": "vocab-v011-fuwu.png"
@@ -633,7 +633,7 @@
       "requires_hanzi_recognition": false,
       "variant_group": "",
       "image_role": "vocabulary_image",
-      "image_status": "generated",
+      "image_status": "placeholder_needs_generation",
       "image_semantic_check": "Image should clearly show: quần áo",
       "teaching_order": 18,
       "image_file": "vocab-v012-yifu.png"
@@ -664,7 +664,7 @@
       "requires_hanzi_recognition": false,
       "variant_group": "",
       "image_role": "vocabulary_image",
-      "image_status": "generated",
+      "image_status": "placeholder_needs_generation",
       "image_semantic_check": "Image should clearly show: da",
       "teaching_order": 19,
       "image_file": "vocab-v013-pifu.png"
@@ -695,7 +695,7 @@
       "requires_hanzi_recognition": false,
       "variant_group": "",
       "image_role": "vocabulary_image",
-      "image_status": "generated",
+      "image_status": "placeholder_needs_generation",
       "image_semantic_check": "Image should clearly show: mật mã",
       "teaching_order": 20,
       "image_file": "vocab-v014-mima.png"
@@ -726,7 +726,7 @@
       "requires_hanzi_recognition": false,
       "variant_group": "family_bofu_bomu",
       "image_role": "vocabulary_image",
-      "image_status": "generated",
+      "image_status": "placeholder_needs_generation",
       "image_semantic_check": "Image should clearly show: bác trai",
       "teaching_order": 21,
       "image_file": "vocab-v015-bofu.png"
@@ -757,7 +757,7 @@
       "requires_hanzi_recognition": false,
       "variant_group": "family_bofu_bomu",
       "image_role": "vocabulary_image",
-      "image_status": "generated",
+      "image_status": "placeholder_needs_generation",
       "image_semantic_check": "Image should clearly show: bác gái",
       "teaching_order": 22,
       "image_file": "vocab-v016-bomu.png"
@@ -1125,7 +1125,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1149,7 +1149,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1173,7 +1173,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1197,7 +1197,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1221,7 +1221,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1245,7 +1245,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1269,7 +1269,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1293,7 +1293,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1317,7 +1317,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1341,7 +1341,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1365,7 +1365,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1389,7 +1389,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1413,7 +1413,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1437,7 +1437,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1461,7 +1461,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1485,7 +1485,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1509,7 +1509,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1533,7 +1533,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1557,7 +1557,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1581,7 +1581,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1605,7 +1605,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1629,7 +1629,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1653,7 +1653,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1677,7 +1677,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1701,7 +1701,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "Phát âm đúng là chính; không yêu cầu nhận mặt chữ Hán.",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     },
     {
       "lesson_id": "pinyin-01",
@@ -1725,7 +1725,7 @@
       "teacher_review_status": "approved_latest_content",
       "approved": true,
       "notes_for_review": "",
-      "generated_at": "2026-06-06T04:19:20.101Z"
+      "generated_at": "2026-06-08T09:10:51.866Z"
     }
   ],
   "database_notes": [

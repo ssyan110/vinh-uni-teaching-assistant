@@ -111,9 +111,9 @@ Pinyin practice slide templates:
 
 - Use `scripts/pinyin-exercise-templates.mjs` for reusable renderer helpers and CSS.
 - Reading drills use Pinyin Lesson 1 slide 15's large sound-board style.
-- `连连看` / matching exercises use Pinyin Lesson 1 slide 36's three-column matching board with a dashed center workspace. The Vietnamese meaning column must be randomized/deranged so meanings do not stay in the same row as their pinyin/hanzi prompts. Split dense matching into multiple slides instead of crowding the board.
+- `连连看` / matching vocabulary exercises use a two-row image board: pinyin+hanzi cards on the top row and shuffled image cards on the bottom row. Do not add Vietnamese meaning columns or top label pills. Image order must be randomized/deranged so images do not stay under their matching prompts. Split dense matching into multiple slides instead of crowding the board.
 - Multiple-choice and listening-choice exercises use Pinyin Lesson 1 slide 37's blue answer-table style.
-- Fill-in-blank and listening-completion exercises use Pinyin Lesson 1 slide 38's sound-bank plus underlined blank style, with no volume/speaker icon in the top bar or instruction header.
+- Fill-in-blank and listening-completion exercises use Pinyin Lesson 1 slide 38's sound-bank plus underlined blank style, with no volume/speaker icon in the top bar or instruction header. Comprehensive fill-in practice must target the lesson's learning goals, not automatically practice finals.
 - Keep visible classroom instructions in natural Vietnamese.
 
 Terminology:

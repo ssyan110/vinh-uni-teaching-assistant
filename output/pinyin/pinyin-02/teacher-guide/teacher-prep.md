@@ -41,11 +41,11 @@
 | qímǎ | 骑马 | cưỡi ngựa |
 | qù | 去 | đi |
 | jú | 橘 | quả quýt |
-| jīqì | 机器 | máy móc |
+| jīqì | 机器 | máy móc, cơ khí |
 | jìxù | 继续 | tiếp tục |
 
 ## Ghi chú
 
 - Slide dùng ảnh placeholder 1:1 theo quy trình image asset. Khi cần ảnh thật, thay từng ảnh bằng `npm run assets:replace` hoặc crop từ contact sheet.
 - Không export PDF sạch cho đến khi Adam xác nhận nội dung và thiết kế đã chốt.
-- Tổng số slide hiện tại: 48.
+- Tổng số slide hiện tại: 49.
