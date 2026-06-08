@@ -1025,7 +1025,8 @@ const commonCss = `
 `;
 
 function slide({ title, label, icon = 'book-open', body, extraCss = '' }) {
-  return `${head(displayText(title))}<style>${commonCss}${extraCss}</style></head><body><div class="slide"><div class="menu-bar"><span class="menu-icon"><i data-lucide="${icon}"></i></span><span class="section-label">${escDisplay(label)}</span></div>${displayText(body)}</div><script src="assets/slide-base.js"></script></body></html>`;
+  const iconHtml = icon ? `<span class="menu-icon"><i data-lucide="${icon}"></i></span>` : '';
+  return `${head(displayText(title))}<style>${commonCss}${extraCss}</style></head><body><div class="slide"><div class="menu-bar">${iconHtml}<span class="section-label">${escDisplay(label)}</span></div>${displayText(body)}</div><script src="assets/slide-base.js"></script></body></html>`;
 }
 
 function bareSlide({ title, body, extraClass = '', extraCss = '' }) {
@@ -1096,9 +1097,7 @@ const faToneCss = `
 `;
 
 const listeningWriteCss = `
-.listen-head{display:flex;align-items:flex-start;gap:15px;margin-bottom:16px}
-.listen-icon{width:46px;height:46px;border-radius:14px;background:#E6F3FF;color:#2C74B8;display:flex;align-items:center;justify-content:center;flex:none}
-.listen-icon i{width:29px;height:29px}
+.listen-head{display:flex;align-items:center;justify-content:center;margin-bottom:16px;text-align:center}
 .listen-title{font-size:29px;font-weight:900;color:#1A3A5A;line-height:1.18}
 .listen-title .vi{display:block;margin-top:5px;font-size:21px;color:#3B7DB4;font-weight:900}
 .final-bank{width:760px;margin:4px auto 18px;background:rgba(255,255,255,.86);border:1px solid rgba(90,172,172,.16);border-radius:16px;text-align:center;padding:10px 18px;box-shadow:0 6px 20px rgba(90,172,172,.08)}
@@ -1276,10 +1275,10 @@ function listeningFinalsToneSlide() {
   return slide({
     title: 'Nghe và viết vận mẫu',
     label: 'Luyện tập',
-    icon: 'volume-2',
+    icon: null,
     page: 13,
     extraCss: listeningWriteCss,
-    body: `<div class="content"><div class="listen-head"><div class="listen-icon"><i data-lucide="volume-2"></i></div><div class="listen-title">Nghe rồi viết vận mẫu và thanh điệu cho các âm tiết dưới đây.</div></div><div class="final-bank"><div class="final-bank-title">Vận mẫu</div><div class="finals"><span>a</span><span>o</span><span>e</span><span>i</span><span>u</span><span>ü</span></div></div><div class="listen-grid">${itemHtml}</div></div>`,
+    body: `<div class="content"><div class="listen-head"><div class="listen-title">Nghe rồi viết vận mẫu và thanh điệu cho các âm tiết dưới đây.</div></div><div class="final-bank"><div class="final-bank-title">Vận mẫu</div><div class="finals"><span>a</span><span>o</span><span>e</span><span>i</span><span>u</span><span>ü</span></div></div><div class="listen-grid">${itemHtml}</div></div>`,
   });
 }
 
