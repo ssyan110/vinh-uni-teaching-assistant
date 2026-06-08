@@ -50,8 +50,12 @@ async function readLessonInfo(lessonDir) {
     const listItem = Array.isArray(data.lesson_list) ? data.lesson_list[0] || {} : {};
     const sheetItem = Array.isArray(data.google_sheets_database) ? data.google_sheets_database[0] || {} : {};
     const contentItem = Array.isArray(data.content_items) ? data.content_items[0] || {} : {};
-    info.lessonId = meta.lesson_id || listItem.lesson_id || fallbackId;
-    info.title = listItem.lesson_title || meta.lesson_title || sheetItem.lesson_title || contentItem.lesson_title || info.lessonId;
+    const topLevelId = typeof data.lesson_id === 'string' ? data.lesson_id : '';
+    const normalizedTopLevelId = topLevelId.replace(/^pinyin_lesson_(\d+)$/, (_match, no) => `pinyin-${String(Number(no)).padStart(2, '0')}`);
+    const titleObject = data.title || {};
+    const titleZh = typeof titleObject.zh === 'string' ? titleObject.zh : '';
+    info.lessonId = meta.lesson_id || listItem.lesson_id || normalizedTopLevelId || fallbackId;
+    info.title = listItem.lesson_title || meta.lesson_title || sheetItem.lesson_title || contentItem.lesson_title || titleZh || info.lessonId;
     info.status = meta.status || listItem.status || (meta.finalized ? 'finalized' : info.status);
   }
 

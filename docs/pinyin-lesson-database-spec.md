@@ -76,6 +76,10 @@ output/pinyin/pinyin-01/
 
 Do not rebuild future pinyin decks from scratch. Keep the Pinyin Lesson 1 visual language, presenter setup, cover/objectives/divider rhythm, concept-slide style, tone practice style, vocabulary/flashcard behavior, appendix/input setup style, and closing style. Change only the lesson-specific text, taught initials/finals/rules, vocabulary, exercises, and image content.
 
+Pinyin cover rule: every pinyin cover keeps the Lesson 1 cover layout. Use a badge like `PINYIN N · 拼音第N课`, keep the main title as `pīn/yīn` above `拼音`, and use the subtitle slot below `拼音` only for the pinyin sounds or spelling rules learned in that lesson. Render those sounds as grouped rounded chips, not one flat text string. Increase spacing between sound tokens inside each chip, and allow chips to wrap to a second line when one line is crowded. Examples: chips `b p m f` + `a o e i u ü`; chips `d t n l` + `g k h` + `j q x → ju qu xu`. Do not put Vietnamese lesson-description notes in that subtitle slot.
+
+Pinyin closing rule: every pinyin ending slide shows exactly three text lines: `下课`, `Bạn có câu hỏi gì không?`, and `Bài tiếp theo: Pinyin N` where `N` is the next pinyin lesson number. Use `下课`, not `下课了`, and do not add extra motivational or content-summary text.
+
 Classroom slide sequence:
 
 1. Cover

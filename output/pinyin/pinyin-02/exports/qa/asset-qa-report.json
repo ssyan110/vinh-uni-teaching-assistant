@@ -1,0 +1,79 @@
+{
+  "lesson_id": "pinyin-02",
+  "checked_at": "2026-06-08T04:33:37.335Z",
+  "manifest": "output/pinyin/pinyin-02/slides/assets/asset-manifest.json",
+  "status": "passed",
+  "failed": [],
+  "results": [
+    {
+      "label": "asset manifest exists",
+      "pass": true,
+      "detail": "output/pinyin/pinyin-02/slides/assets/asset-manifest.json"
+    },
+    {
+      "label": "manifest has assets",
+      "pass": true,
+      "detail": "28 assets"
+    },
+    {
+      "label": "required asset: assets/slide-base.css",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "required asset: assets/slide-base.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "required asset: assets/brand/logo-watermark.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "all referenced assets exist",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "vocabulary image entries present",
+      "pass": true,
+      "detail": "18 entries"
+    },
+    {
+      "label": "vocabulary images are 1:1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "vocabulary images have record or Chinese mapping",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "standalone vocabulary records have image coverage",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "all assets list usage",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "all slides use lucide@0.460.0",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "all slides link shared slide-base.css",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "all slides link shared slide-base.js",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

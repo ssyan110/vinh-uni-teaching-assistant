@@ -1,0 +1,1000 @@
+{
+  "schema_version": "1.0.0",
+  "lesson_id": "pinyin-02",
+  "generated_at": "2026-06-08T04:33:36.966Z",
+  "source_database": "database",
+  "workflow": {
+    "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
+    "required_steps": [
+      "Run or update VP database with image_asset_* metadata for each needed classroom image.",
+      "Build slides/assets/asset-manifest.json before and after slide generation.",
+      "Generate or replace images using the manifest paths, not ad hoc HTML edits.",
+      "Run npm run assets:qa -- --lesson <lesson-root> before delivery.",
+      "Use screenshot/contact-sheet QA for visual semantic checks. Export clean PDF only after Adam confirms finalization."
+    ]
+  },
+  "requirements": {
+    "vocabulary_images": "16:9 PNG, soft textbook line-art, thin grey-blue outlines, muted pastel fills, pale background, no in-image text/letters/numbers/Chinese characters/labels/watermarks",
+    "sample_images": "Must match the full sample phrase. Reuse the vocabulary image only when it is semantically correct.",
+    "shared_assets": "slide-base.css, slide-base.js, and brand/logo-watermark.png must exist in every complete lesson."
+  },
+  "assets": [
+    {
+      "id": "assets-brand-logo-watermark-png",
+      "asset_path": "assets/brand/logo-watermark.png",
+      "role": "brand_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 500,
+        "height": 500,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "lesson-required-assets"
+      ],
+      "html_reference_types": [
+        "required"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-cover-topic-png",
+      "asset_path": "assets/photos/cover-topic.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "01-cover.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-divider-initials-png",
+      "asset_path": "assets/photos/divider-initials.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "05-divider-initials-1.html",
+        "21-divider-initials-2.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-divider-review-png",
+      "asset_path": "assets/photos/divider-review.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1672,
+        "height": 941,
+        "format": "png",
+        "aspect_ratio": 1.7768
+      },
+      "used_by": [
+        "03-divider-review.html",
+        "43-divider-review-final.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-divider-sounds-png",
+      "asset_path": "assets/photos/divider-sounds.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "34-divider-rule-jqx.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-divider-vocabulary-png",
+      "asset_path": "assets/photos/divider-vocabulary.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "10-divider-vocabulary-1.html",
+        "25-divider-vocabulary-2.html",
+        "36-divider-vocabulary-3.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-reference-ending-page-background-png",
+      "asset_path": "assets/reference/ending-page-background.png",
+      "role": "reference_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1.5
+      },
+      "used_by": [
+        "46-closing.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-sample-images-objectives-png",
+      "asset_path": "assets/sample-images/objectives.png",
+      "role": "sample_sentence_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "02-objectives.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-slide-base-css",
+      "asset_path": "assets/slide-base.css",
+      "role": "stylesheet",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": null,
+      "used_by": [
+        "01-cover.html",
+        "02-objectives.html",
+        "03-divider-review.html",
+        "04-warmup-review.html",
+        "05-divider-initials-1.html",
+        "06-initials-dtnlgkh.html",
+        "07-chart-dtnl.html",
+        "08-chart-gkh.html",
+        "09-practice-dtnlgkh.html",
+        "10-divider-vocabulary-1.html",
+        "11-vocabulary-1.html",
+        "12-flash-v001-da.html",
+        "13-flash-v002-na.html",
+        "14-flash-v003-nu.html",
+        "15-flash-v004-lu.html",
+        "16-flash-v005-ditu.html",
+        "17-flash-v006-he.html",
+        "18-flash-v007-kele.html",
+        "19-flash-v008-gege.html",
+        "20-practice-vocabulary-1.html",
+        "21-divider-initials-2.html",
+        "22-initials-jqx.html",
+        "23-chart-jqx.html",
+        "24-practice-jqx.html",
+        "25-divider-vocabulary-2.html",
+        "26-vocabulary-2.html",
+        "27-flash-v009-ji.html",
+        "28-flash-v010-ji.html",
+        "29-flash-v011-qi.html",
+        "30-flash-v012-xi.html",
+        "31-flash-v013-xi.html",
+        "32-flash-v014-qima.html",
+        "33-practice-vocabulary-2.html",
+        "34-divider-rule-jqx.html",
+        "35-rule-jqx-umlaut.html",
+        "36-divider-vocabulary-3.html",
+        "37-vocabulary-3.html",
+        "38-flash-v015-qu.html",
+        "39-flash-v016-ju.html",
+        "40-flash-v017-jiqi.html",
+        "41-flash-v018-jixu.html",
+        "42-practice-rule-vocabulary.html",
+        "43-divider-review-final.html",
+        "44-review-listening-choice.html",
+        "45-review-meaning-match.html",
+        "46-closing.html",
+        "lesson-required-assets"
+      ],
+      "html_reference_types": [
+        "required",
+        "stylesheet"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-slide-base-js",
+      "asset_path": "assets/slide-base.js",
+      "role": "script",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": null,
+      "used_by": [
+        "01-cover.html",
+        "02-objectives.html",
+        "03-divider-review.html",
+        "04-warmup-review.html",
+        "05-divider-initials-1.html",
+        "06-initials-dtnlgkh.html",
+        "07-chart-dtnl.html",
+        "08-chart-gkh.html",
+        "09-practice-dtnlgkh.html",
+        "10-divider-vocabulary-1.html",
+        "11-vocabulary-1.html",
+        "12-flash-v001-da.html",
+        "13-flash-v002-na.html",
+        "14-flash-v003-nu.html",
+        "15-flash-v004-lu.html",
+        "16-flash-v005-ditu.html",
+        "17-flash-v006-he.html",
+        "18-flash-v007-kele.html",
+        "19-flash-v008-gege.html",
+        "20-practice-vocabulary-1.html",
+        "21-divider-initials-2.html",
+        "22-initials-jqx.html",
+        "23-chart-jqx.html",
+        "24-practice-jqx.html",
+        "25-divider-vocabulary-2.html",
+        "26-vocabulary-2.html",
+        "27-flash-v009-ji.html",
+        "28-flash-v010-ji.html",
+        "29-flash-v011-qi.html",
+        "30-flash-v012-xi.html",
+        "31-flash-v013-xi.html",
+        "32-flash-v014-qima.html",
+        "33-practice-vocabulary-2.html",
+        "34-divider-rule-jqx.html",
+        "35-rule-jqx-umlaut.html",
+        "36-divider-vocabulary-3.html",
+        "37-vocabulary-3.html",
+        "38-flash-v015-qu.html",
+        "39-flash-v016-ju.html",
+        "40-flash-v017-jiqi.html",
+        "41-flash-v018-jixu.html",
+        "42-practice-rule-vocabulary.html",
+        "43-divider-review-final.html",
+        "44-review-listening-choice.html",
+        "45-review-meaning-match.html",
+        "46-closing.html",
+        "lesson-required-assets"
+      ],
+      "html_reference_types": [
+        "required",
+        "script"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v001-da-png",
+      "asset_path": "assets/vocab-images/vocab-v001-da.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 320,
+        "height": 320,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "11-vocabulary-1.html",
+        "12-flash-v001-da.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V001"
+      ],
+      "chinese": [
+        "大"
+      ],
+      "pinyin": [
+        "dà"
+      ],
+      "vietnamese": [
+        "lớn"
+      ],
+      "prompt": "Soft textbook 1:1 illustration for lớn; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 大 (dà).",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v002-na-png",
+      "asset_path": "assets/vocab-images/vocab-v002-na.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 320,
+        "height": 320,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "11-vocabulary-1.html",
+        "13-flash-v002-na.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V002"
+      ],
+      "chinese": [
+        "拿"
+      ],
+      "pinyin": [
+        "ná"
+      ],
+      "vietnamese": [
+        "cầm, lấy"
+      ],
+      "prompt": "Soft textbook 1:1 illustration for cầm, lấy; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 拿 (ná).",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v003-nu-png",
+      "asset_path": "assets/vocab-images/vocab-v003-nu.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 320,
+        "height": 320,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "11-vocabulary-1.html",
+        "14-flash-v003-nu.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V003"
+      ],
+      "chinese": [
+        "女"
+      ],
+      "pinyin": [
+        "nǚ"
+      ],
+      "vietnamese": [
+        "nữ"
+      ],
+      "prompt": "Soft textbook 1:1 illustration for nữ; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 女 (nǚ).",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v004-lu-png",
+      "asset_path": "assets/vocab-images/vocab-v004-lu.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 320,
+        "height": 320,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "11-vocabulary-1.html",
+        "15-flash-v004-lu.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V004"
+      ],
+      "chinese": [
+        "绿"
+      ],
+      "pinyin": [
+        "lǜ"
+      ],
+      "vietnamese": [
+        "màu xanh lá"
+      ],
+      "prompt": "Soft textbook 1:1 illustration for màu xanh lá; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 绿 (lǜ).",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v005-ditu-png",
+      "asset_path": "assets/vocab-images/vocab-v005-ditu.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 320,
+        "height": 320,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "11-vocabulary-1.html",
+        "16-flash-v005-ditu.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V005"
+      ],
+      "chinese": [
+        "地图"
+      ],
+      "pinyin": [
+        "dìtú"
+      ],
+      "vietnamese": [
+        "bản đồ"
+      ],
+      "prompt": "Soft textbook 1:1 illustration for bản đồ; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 地图 (dìtú).",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v006-he-png",
+      "asset_path": "assets/vocab-images/vocab-v006-he.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 320,
+        "height": 320,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "11-vocabulary-1.html",
+        "17-flash-v006-he.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V006"
+      ],
+      "chinese": [
+        "喝"
+      ],
+      "pinyin": [
+        "hē"
+      ],
+      "vietnamese": [
+        "uống"
+      ],
+      "prompt": "Soft textbook 1:1 illustration for uống; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 喝 (hē).",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v007-kele-png",
+      "asset_path": "assets/vocab-images/vocab-v007-kele.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 320,
+        "height": 320,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "11-vocabulary-1.html",
+        "18-flash-v007-kele.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V007"
+      ],
+      "chinese": [
+        "可乐"
+      ],
+      "pinyin": [
+        "kělè"
+      ],
+      "vietnamese": [
+        "nước cola"
+      ],
+      "prompt": "Soft textbook 1:1 illustration for nước cola; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 可乐 (kělè).",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v008-gege-png",
+      "asset_path": "assets/vocab-images/vocab-v008-gege.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 320,
+        "height": 320,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "11-vocabulary-1.html",
+        "19-flash-v008-gege.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V008"
+      ],
+      "chinese": [
+        "哥哥"
+      ],
+      "pinyin": [
+        "gēge"
+      ],
+      "vietnamese": [
+        "anh trai"
+      ],
+      "prompt": "Soft textbook 1:1 illustration for anh trai; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 哥哥 (gēge).",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v009-ji-png",
+      "asset_path": "assets/vocab-images/vocab-v009-ji.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 320,
+        "height": 320,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "26-vocabulary-2.html",
+        "27-flash-v009-ji.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V009"
+      ],
+      "chinese": [
+        "鸡"
+      ],
+      "pinyin": [
+        "jī"
+      ],
+      "vietnamese": [
+        "con gà"
+      ],
+      "prompt": "Soft textbook 1:1 illustration for con gà; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 鸡 (jī).",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v010-ji-png",
+      "asset_path": "assets/vocab-images/vocab-v010-ji.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 320,
+        "height": 320,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "26-vocabulary-2.html",
+        "28-flash-v010-ji.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V010"
+      ],
+      "chinese": [
+        "幾"
+      ],
+      "pinyin": [
+        "jǐ"
+      ],
+      "vietnamese": [],
+      "prompt": "Soft textbook 1:1 illustration for ; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 幾 (jǐ).",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v011-qi-png",
+      "asset_path": "assets/vocab-images/vocab-v011-qi.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 320,
+        "height": 320,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "26-vocabulary-2.html",
+        "29-flash-v011-qi.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V011"
+      ],
+      "chinese": [
+        "七"
+      ],
+      "pinyin": [
+        "qī"
+      ],
+      "vietnamese": [
+        "số bảy"
+      ],
+      "prompt": "Soft textbook 1:1 illustration for số bảy; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 七 (qī).",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v012-xi-png",
+      "asset_path": "assets/vocab-images/vocab-v012-xi.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 320,
+        "height": 320,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "26-vocabulary-2.html",
+        "30-flash-v012-xi.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V012"
+      ],
+      "chinese": [
+        "洗"
+      ],
+      "pinyin": [
+        "xǐ"
+      ],
+      "vietnamese": [
+        "rửa"
+      ],
+      "prompt": "Soft textbook 1:1 illustration for rửa; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 洗 (xǐ).",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v013-xi-png",
+      "asset_path": "assets/vocab-images/vocab-v013-xi.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 320,
+        "height": 320,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "26-vocabulary-2.html",
+        "31-flash-v013-xi.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V013"
+      ],
+      "chinese": [
+        "西"
+      ],
+      "pinyin": [
+        "xī"
+      ],
+      "vietnamese": [
+        "phía tây"
+      ],
+      "prompt": "Soft textbook 1:1 illustration for phía tây; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 西 (xī).",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v014-qima-png",
+      "asset_path": "assets/vocab-images/vocab-v014-qima.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 320,
+        "height": 320,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "26-vocabulary-2.html",
+        "32-flash-v014-qima.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V014"
+      ],
+      "chinese": [
+        "骑马"
+      ],
+      "pinyin": [
+        "qímǎ"
+      ],
+      "vietnamese": [
+        "cưỡi ngựa"
+      ],
+      "prompt": "Soft textbook 1:1 illustration for cưỡi ngựa; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 骑马 (qímǎ).",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v015-qu-png",
+      "asset_path": "assets/vocab-images/vocab-v015-qu.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 320,
+        "height": 320,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "37-vocabulary-3.html",
+        "38-flash-v015-qu.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V015"
+      ],
+      "chinese": [
+        "去"
+      ],
+      "pinyin": [
+        "qù"
+      ],
+      "vietnamese": [
+        "đi"
+      ],
+      "prompt": "Soft textbook 1:1 illustration for đi; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 去 (qù).",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v016-ju-png",
+      "asset_path": "assets/vocab-images/vocab-v016-ju.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 320,
+        "height": 320,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "37-vocabulary-3.html",
+        "39-flash-v016-ju.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V016"
+      ],
+      "chinese": [
+        "橘"
+      ],
+      "pinyin": [
+        "jú"
+      ],
+      "vietnamese": [
+        "quả quýt"
+      ],
+      "prompt": "Soft textbook 1:1 illustration for quả quýt; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 橘 (jú).",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v017-jiqi-png",
+      "asset_path": "assets/vocab-images/vocab-v017-jiqi.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 320,
+        "height": 320,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "37-vocabulary-3.html",
+        "40-flash-v017-jiqi.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V017"
+      ],
+      "chinese": [
+        "机器"
+      ],
+      "pinyin": [
+        "jīqì"
+      ],
+      "vietnamese": [
+        "máy móc"
+      ],
+      "prompt": "Soft textbook 1:1 illustration for máy móc; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 机器 (jīqì).",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v018-jixu-png",
+      "asset_path": "assets/vocab-images/vocab-v018-jixu.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 320,
+        "height": 320,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "37-vocabulary-3.html",
+        "41-flash-v018-jixu.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [
+        "V018"
+      ],
+      "chinese": [
+        "继续"
+      ],
+      "pinyin": [
+        "jìxù"
+      ],
+      "vietnamese": [
+        "tiếp tục"
+      ],
+      "prompt": "Soft textbook 1:1 illustration for tiếp tục; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 继续 (jìxù).",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    }
+  ],
+  "vocabulary_coverage": []
+}

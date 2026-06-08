@@ -1,0 +1,184 @@
+{
+  "prompts": [
+    {
+      "record_id": "V001",
+      "chinese_simplified": "大",
+      "pinyin": "dà",
+      "vietnamese": "lớn",
+      "filename": "vocab-v001-da.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for lớn; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 大 (dà)."
+    },
+    {
+      "record_id": "V002",
+      "chinese_simplified": "拿",
+      "pinyin": "ná",
+      "vietnamese": "cầm, lấy",
+      "filename": "vocab-v002-na.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for cầm, lấy; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 拿 (ná)."
+    },
+    {
+      "record_id": "V003",
+      "chinese_simplified": "女",
+      "pinyin": "nǚ",
+      "vietnamese": "nữ",
+      "filename": "vocab-v003-nu.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for nữ; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 女 (nǚ)."
+    },
+    {
+      "record_id": "V004",
+      "chinese_simplified": "绿",
+      "pinyin": "lǜ",
+      "vietnamese": "màu xanh lá",
+      "filename": "vocab-v004-lu.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for màu xanh lá; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 绿 (lǜ)."
+    },
+    {
+      "record_id": "V005",
+      "chinese_simplified": "地图",
+      "pinyin": "dìtú",
+      "vietnamese": "bản đồ",
+      "filename": "vocab-v005-ditu.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for bản đồ; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 地图 (dìtú)."
+    },
+    {
+      "record_id": "V006",
+      "chinese_simplified": "喝",
+      "pinyin": "hē",
+      "vietnamese": "uống",
+      "filename": "vocab-v006-he.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for uống; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 喝 (hē)."
+    },
+    {
+      "record_id": "V007",
+      "chinese_simplified": "可乐",
+      "pinyin": "kělè",
+      "vietnamese": "nước cola",
+      "filename": "vocab-v007-kele.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for nước cola; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 可乐 (kělè)."
+    },
+    {
+      "record_id": "V008",
+      "chinese_simplified": "哥哥",
+      "pinyin": "gēge",
+      "vietnamese": "anh trai",
+      "filename": "vocab-v008-gege.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for anh trai; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 哥哥 (gēge)."
+    },
+    {
+      "record_id": "V009",
+      "chinese_simplified": "鸡",
+      "pinyin": "jī",
+      "vietnamese": "con gà",
+      "filename": "vocab-v009-ji.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for con gà; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 鸡 (jī)."
+    },
+    {
+      "record_id": "V010",
+      "chinese_simplified": "幾",
+      "pinyin": "jǐ",
+      "vietnamese": "",
+      "filename": "vocab-v010-ji.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for ; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 幾 (jǐ)."
+    },
+    {
+      "record_id": "V011",
+      "chinese_simplified": "七",
+      "pinyin": "qī",
+      "vietnamese": "số bảy",
+      "filename": "vocab-v011-qi.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for số bảy; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 七 (qī)."
+    },
+    {
+      "record_id": "V012",
+      "chinese_simplified": "洗",
+      "pinyin": "xǐ",
+      "vietnamese": "rửa",
+      "filename": "vocab-v012-xi.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for rửa; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 洗 (xǐ)."
+    },
+    {
+      "record_id": "V013",
+      "chinese_simplified": "西",
+      "pinyin": "xī",
+      "vietnamese": "phía tây",
+      "filename": "vocab-v013-xi.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for phía tây; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 西 (xī)."
+    },
+    {
+      "record_id": "V014",
+      "chinese_simplified": "骑马",
+      "pinyin": "qímǎ",
+      "vietnamese": "cưỡi ngựa",
+      "filename": "vocab-v014-qima.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for cưỡi ngựa; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 骑马 (qímǎ)."
+    },
+    {
+      "record_id": "V015",
+      "chinese_simplified": "去",
+      "pinyin": "qù",
+      "vietnamese": "đi",
+      "filename": "vocab-v015-qu.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for đi; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 去 (qù)."
+    },
+    {
+      "record_id": "V016",
+      "chinese_simplified": "橘",
+      "pinyin": "jú",
+      "vietnamese": "quả quýt",
+      "filename": "vocab-v016-ju.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for quả quýt; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 橘 (jú)."
+    },
+    {
+      "record_id": "V017",
+      "chinese_simplified": "机器",
+      "pinyin": "jīqì",
+      "vietnamese": "máy móc",
+      "filename": "vocab-v017-jiqi.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for máy móc; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 机器 (jīqì)."
+    },
+    {
+      "record_id": "V018",
+      "chinese_simplified": "继续",
+      "pinyin": "jìxù",
+      "vietnamese": "tiếp tục",
+      "filename": "vocab-v018-jixu.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for tiếp tục; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 继续 (jìxù)."
+    }
+  ]
+}

@@ -48,8 +48,12 @@ async function readLessonInfo(lessonDir) {
   const listItem = Array.isArray(data.lesson_list) ? data.lesson_list[0] || {} : {};
   const sheetItem = Array.isArray(data.google_sheets_database) ? data.google_sheets_database[0] || {} : {};
   const contentItem = Array.isArray(data.content_items) ? data.content_items[0] || {} : {};
-  info.lessonId = meta.lesson_id || listItem.lesson_id || fallbackId;
-  info.title = listItem.lesson_title || meta.lesson_title || sheetItem.lesson_title || contentItem.lesson_title || info.lessonId;
+    const topLevelId = typeof data.lesson_id === 'string' ? data.lesson_id : '';
+    const normalizedTopLevelId = topLevelId.replace(/^pinyin_lesson_(\d+)$/, (_match, no) => `pinyin-${String(Number(no)).padStart(2, '0')}`);
+    const titleObject = data.title || {};
+    const titleZh = typeof titleObject.zh === 'string' ? titleObject.zh : '';
+    info.lessonId = meta.lesson_id || listItem.lesson_id || normalizedTopLevelId || fallbackId;
+    info.title = listItem.lesson_title || meta.lesson_title || sheetItem.lesson_title || contentItem.lesson_title || titleZh || info.lessonId;
 
   if (info.title === info.lessonId) {
     const lessonListPath = path.join(path.dirname(lessonDir), 'lesson_list.csv');
@@ -64,12 +68,22 @@ async function readLessonInfo(lessonDir) {
 }
 
 function displayTitle(info) {
+  const simplifyPinyinTitle = (value) => String(value)
+    .replaceAll('聲', '声')
+    .replaceAll('擴', '扩')
+    .replaceAll('與', '与')
+    .replaceAll('拼寫', '拼写')
+    .replaceAll('規則', '规则')
+    .replaceAll('課', '课');
   const lessonMatch = String(info.lessonId).match(/lesson-(\d+)/);
+  const pinyinMatch = String(info.lessonId).match(/pinyin-(\d+)/);
   const lessonNo = lessonMatch ? Number(lessonMatch[1]) : null;
+  const pinyinNo = pinyinMatch ? Number(pinyinMatch[1]) : null;
   const parts = String(info.title).split(' · ');
   const chineseTitle = parts.find((part) => /[\u3400-\u9fff]/.test(part) && !/^第.+课$/.test(part.trim()))
     || parts.find((part) => /[\u3400-\u9fff]/.test(part))
     || info.title;
+  if (pinyinNo) return `Pinyin Bài ${pinyinNo}`;
   return lessonNo ? `Bài ${lessonNo} · ${chineseTitle.replace(/^第.+课\s*/, '')}` : info.title;
 }
 
