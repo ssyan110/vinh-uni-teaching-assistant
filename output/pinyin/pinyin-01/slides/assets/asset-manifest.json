@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "lesson_id": "pinyin-01",
-  "generated_at": "2026-06-06T04:20:55.778Z",
+  "generated_at": "2026-06-08T07:37:49.871Z",
   "source_database": "database",
   "workflow": {
     "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
@@ -338,22 +338,22 @@
       "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
     },
     {
-      "id": "assets-reference-ending-page-background-png",
-      "asset_path": "assets/reference/ending-page-background.png",
+      "id": "assets-reference-closing-door-students-png",
+      "asset_path": "assets/reference/closing-door-students.png",
       "role": "reference_asset",
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 1536,
-        "height": 1024,
+        "width": 403,
+        "height": 370,
         "format": "png",
-        "aspect_ratio": 1.5
+        "aspect_ratio": 1.0892
       },
       "used_by": [
         "41-closing.html"
       ],
       "html_reference_types": [
-        "css_url"
+        "img"
       ],
       "record_ids": [],
       "chinese": [],

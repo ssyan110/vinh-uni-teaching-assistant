@@ -1,34 +1,3 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>AI 教材簡報製作系統：Requirements + Project Context</title>
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-  <link rel="stylesheet" href="requirements-context.css" />
-</head>
-<body>
-<header id="title-block-header">
-<h1 class="title">AI 教材簡報製作系統：Requirements + Project
-Context</h1>
-</header>
 <h1 id="ai-教材簡報製作系統requirements-project-context">AI
 教材簡報製作系統：Requirements + Project Context</h1>
 <blockquote>
@@ -113,7 +82,10 @@ the template baseline. Do not build each pinyin lesson from scratch.
 Keep the same
 cover/objective/divider/concept/tone/vocabulary/flashcard/practice/input-setup/closing
 visual language and swap lesson-specific text, taught sounds,
-vocabulary, exercises, and images.</td>
+vocabulary, exercises, and images. Closing slides use the
+<code>下课</code> visual composition from
+<code>/Users/ssyan110/Downloads/Mandarin_Pinyin_Foundations.pptx</code>
+while preserving each lesson’s original closing text.</td>
 </tr>
 <tr>
 <td>Pinyin classroom sequence</td>
@@ -148,7 +120,11 @@ position.</td>
 <td>Cover, goal, divider, concept, tone, initials/finals, vocabulary,
 appendix, and closing images use the same soft textbook/course style
 across all pinyin lessons. Treat them as templates and change only
-lesson-specific content.</td>
+lesson-specific content. For pinyin closing slides, recreate the PPTX
+<code>下课</code> visual in HTML with a pale mint classroom background,
+large rounded white card, and students leaving through an open classroom
+door; do not use the full PPTX image as a baked background with old
+text.</td>
 </tr>
 <tr>
 <td>Pinyin vocabulary grid slides</td>
@@ -222,7 +198,8 @@ omit it. Do not add separate <code>.source</code> footers.</td>
 <tr>
 <td>Vocab image workflow</td>
 <td>New slide generation uses blank, correctly sized placeholder images.
-Generate real vocabulary images only when Adam asks, then insert them with
+Generate real vocabulary images only when Adam asks, then insert them
+with
 <code>npm run assets:replace -- --lesson output/book-1/lesson-XX --record V001 --image /path/to/image.png</code>
 or crop selected pinyin records from a ChatGPT contact sheet with
 <code>npm run assets:crop-contact-sheet -- --lesson output/pinyin/pinyin-XX --sheet /path/to/sheet.png --records V001,V002</code>.</td>
@@ -233,7 +210,7 @@ or crop selected pinyin records from a ChatGPT contact sheet with
 <code>image_role</code>, <code>image_prompt</code>,
 <code>image_file</code>, <code>image_reuse_from</code>,
 <code>image_status</code>, and <code>image_semantic_check</code>.
-Complete lessons must have
+Complete new/regenerated lessons and image-related edits must have
 <code>slides/assets/asset-manifest.json</code> and
 <code>exports/qa/asset-qa-report.json</code>, built with
 <code>npm run assets:manifest -- output/book-1/lesson-XX</code> and
@@ -325,10 +302,10 @@ dividers from scratch.</td>
 <td>Overflow QA</td>
 <td>For new/regenerated decks, verify every slide for text overflow
 during HTML/screenshot QA. For small existing-slide edits, verify only
-the affected slide(s) unless the edit changes shared CSS/templates.
-Text must not spill outside the slide, background image panel, card,
-bubble, tile, button, or fixed container. Fix by splitting content into
-more slides or revising layout. Do not hide clipped text.</td>
+the affected slide(s) unless the edit changes shared CSS/templates. Text
+must not spill outside the slide, background image panel, card, bubble,
+tile, button, or fixed container. Fix by splitting content into more
+slides or revising layout. Do not hide clipped text.</td>
 </tr>
 <tr>
 <td>Hanzi writing</td>
@@ -2656,5 +2633,3 @@ PDF 備份</td>
 </table>
 <hr />
 <h1 id="end-of-document">End of Document</h1>
-</body>
-</html>

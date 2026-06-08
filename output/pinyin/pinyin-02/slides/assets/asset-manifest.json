@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "lesson_id": "pinyin-02",
-  "generated_at": "2026-06-08T05:59:18.818Z",
+  "generated_at": "2026-06-08T07:47:56.552Z",
   "source_database": "database",
   "workflow": {
     "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
@@ -453,7 +453,7 @@
         "lớn"
       ],
       "prompt": "Soft textbook 1:1 illustration for lớn; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 大 (dà).",
+      "visual_description": "Existing image for 大 (dà).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
     {
@@ -488,7 +488,7 @@
         "cầm, lấy"
       ],
       "prompt": "Soft textbook 1:1 illustration for cầm, lấy; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 拿 (ná).",
+      "visual_description": "Existing image for 拿 (ná).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
     {
@@ -523,7 +523,7 @@
         "nữ"
       ],
       "prompt": "Soft textbook 1:1 illustration for nữ; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 女 (nǚ).",
+      "visual_description": "Existing image for 女 (nǚ).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
     {
@@ -558,7 +558,7 @@
         "màu xanh lá"
       ],
       "prompt": "Soft textbook 1:1 illustration for màu xanh lá; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 绿 (lǜ).",
+      "visual_description": "Existing image for 绿 (lǜ).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
     {
@@ -593,7 +593,7 @@
         "bản đồ"
       ],
       "prompt": "Soft textbook 1:1 illustration for bản đồ; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 地图 (dìtú).",
+      "visual_description": "Existing image for 地图 (dìtú).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
     {
@@ -628,7 +628,7 @@
         "uống"
       ],
       "prompt": "Soft textbook 1:1 illustration for uống; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 喝 (hē).",
+      "visual_description": "Existing image for 喝 (hē).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
     {
@@ -663,7 +663,7 @@
         "nước cola"
       ],
       "prompt": "Soft textbook 1:1 illustration for nước cola; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 可乐 (kělè).",
+      "visual_description": "Existing image for 可乐 (kělè).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
     {
@@ -698,7 +698,7 @@
         "anh trai"
       ],
       "prompt": "Soft textbook 1:1 illustration for anh trai; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 哥哥 (gēge).",
+      "visual_description": "Existing image for 哥哥 (gēge).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
     {
@@ -733,7 +733,7 @@
         "con gà"
       ],
       "prompt": "Soft textbook 1:1 illustration for con gà; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 鸡 (jī).",
+      "visual_description": "Existing image for 鸡 (jī).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
     {
@@ -768,7 +768,7 @@
         "mấy, bao nhiêu"
       ],
       "prompt": "Soft textbook 1:1 illustration for mấy, bao nhiêu; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 几 (jǐ).",
+      "visual_description": "Existing image for 几 (jǐ).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
     {
@@ -803,7 +803,7 @@
         "số bảy"
       ],
       "prompt": "Soft textbook 1:1 illustration for số bảy; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 七 (qī).",
+      "visual_description": "Existing image for 七 (qī).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
     {
@@ -838,7 +838,7 @@
         "rửa"
       ],
       "prompt": "Soft textbook 1:1 illustration for rửa; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 洗 (xǐ).",
+      "visual_description": "Existing image for 洗 (xǐ).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
     {
@@ -873,7 +873,7 @@
         "phía tây"
       ],
       "prompt": "Soft textbook 1:1 illustration for phía tây; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 西 (xī).",
+      "visual_description": "Existing image for 西 (xī).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
     {
@@ -908,7 +908,7 @@
         "cưỡi ngựa"
       ],
       "prompt": "Soft textbook 1:1 illustration for cưỡi ngựa; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 骑马 (qímǎ).",
+      "visual_description": "Existing image for 骑马 (qímǎ).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
     {
@@ -943,7 +943,7 @@
         "đi"
       ],
       "prompt": "Soft textbook 1:1 illustration for đi; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 去 (qù).",
+      "visual_description": "Existing image for 去 (qù).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
     {
@@ -978,7 +978,7 @@
         "quả quýt"
       ],
       "prompt": "Soft textbook 1:1 illustration for quả quýt; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 橘 (jú).",
+      "visual_description": "Existing image for 橘 (jú).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
     {
@@ -1013,7 +1013,7 @@
         "máy móc"
       ],
       "prompt": "Soft textbook 1:1 illustration for máy móc; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 机器 (jīqì).",
+      "visual_description": "Existing image for 机器 (jīqì).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
     {
@@ -1048,7 +1048,7 @@
         "tiếp tục"
       ],
       "prompt": "Soft textbook 1:1 illustration for tiếp tục; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 继续 (jìxù).",
+      "visual_description": "Existing image for 继续 (jìxù).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     }
   ],

@@ -18,6 +18,8 @@ Cover rule: use Lesson 10 `output/book-1/lesson-10/slides/01-cover.html` as the 
 
 Background rule: future regular lessons and pinyin lessons use the updated Pinyin Lesson 1 background style instead of plain single-color backgrounds. Use a warm off-white base with very soft, low-opacity mint/sky/yellow/peach/lavender background shapes. Keep backgrounds visually quiet enough that the main text, cards, tables, and lesson images remain dominant. All decorative backgrounds, blobs, and watermarks must sit behind slide content as bottom-layer elements; they must not overlay or fade across primary content.
 
+Inserted image rule: when a slide contains a separately inserted full-slide reference image, diagram, chart, or classroom illustration, display it clearly with `opacity:1` and `filter:none`. Do not add an extra white rounded rectangle, border, or shadow frame behind the inserted image unless the slide design specifically calls for a card. If the image is contained without cropping, transparent/empty margins should reveal the slide background instead of a white box.
+
 Reusable page rule: do not redesign reusable slide types for each lesson. Copy Lesson 01's visual templates for dividers, objectives, homework divider, exercise list, dialogue avatar layout, and hanzi-writing layout. Only replace lesson-specific content, printed page numbers, counts, and images.
 
 Reusable divider rule: use the same Lesson 01 divider templates across all lessons by default. Swap only page numbers, lesson-specific counts, and images Adam explicitly asks to customize for a specific lesson theme.
@@ -47,7 +49,7 @@ Pinyin lessons use their own pinyin-course template, not the regular Lesson 01 t
 output/pinyin/pinyin-01/
 ```
 
-For future pinyin lessons, do not build slides from scratch. Reuse the Pinyin Lesson 1 cover, objective layout, divider rhythm, concept-slide style, initials/finals teaching slides, tone slides, vocabulary grid, flashcard style, practice slide styling, appendix/input setup style, closing slide, and presenter setup. Replace only lesson-specific text, taught sounds, rules, vocabulary, exercises, and images.
+For future pinyin lessons, do not build slides from scratch. Reuse the Pinyin Lesson 1 cover, objective layout, divider rhythm, concept-slide style, initials/finals teaching slides, tone slides, vocabulary grid, flashcard style, practice slide styling, appendix/input setup style, closing slide, and presenter setup. Replace only lesson-specific text, taught sounds, rules, vocabulary, exercises, and images. Closing slides use the `下课` visual composition from `/Users/ssyan110/Downloads/Mandarin_Pinyin_Foundations.pptx` while keeping each lesson's original closing text.
 
 Pinyin background rule: keep the updated Pinyin Lesson 1 soft multicolor background system for future pinyin lessons. Do not revert to a monotone background. Background colors should stay subtle, and every background/decorative element must remain below the content layer.
 

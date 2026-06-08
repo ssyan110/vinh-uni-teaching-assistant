@@ -168,20 +168,29 @@ async function writePlaceholderImages(vocab) {
     <circle cx="204" cy="116" r="18" fill="#F3D8B6"/>
   </svg>`;
   const png = await sharp(Buffer.from(svg)).png().toBuffer();
+  const placeholderRecords = new Set();
   for (const item of vocab) {
-    await fs.writeFile(path.join(slidesDir, item.image_file), png);
+    const targetPath = path.join(slidesDir, item.image_file);
+    if (!await exists(targetPath)) {
+      await fs.writeFile(targetPath, png);
+      placeholderRecords.add(item.record_id);
+    }
   }
-  const prompts = vocab.map((item) => ({
-    record_id: item.record_id,
-    chinese_simplified: item.chinese_simplified,
-    pinyin: item.pinyin,
-    vietnamese: item.vietnamese,
-    filename: path.basename(item.image_file),
-    status: 'placeholder_needs_generation',
-    prompt: `Soft textbook 1:1 illustration for ${item.vietnamese}; no text, labels, letters, numbers, or watermark.`,
-    visual_description: `Placeholder image for ${item.chinese_simplified} (${item.pinyin}).`,
-  }));
+  const prompts = vocab.map((item) => {
+    const isPlaceholder = placeholderRecords.has(item.record_id);
+    return {
+      record_id: item.record_id,
+      chinese_simplified: item.chinese_simplified,
+      pinyin: item.pinyin,
+      vietnamese: item.vietnamese,
+      filename: path.basename(item.image_file),
+      status: isPlaceholder ? 'placeholder_needs_generation' : 'existing_asset_preserved',
+      prompt: `Soft textbook 1:1 illustration for ${item.vietnamese}; no text, labels, letters, numbers, or watermark.`,
+      visual_description: `${isPlaceholder ? 'Placeholder image' : 'Existing image'} for ${item.chinese_simplified} (${item.pinyin}).`,
+    };
+  });
   await fs.writeFile(path.join(vocabDir, 'prompts.json'), `${JSON.stringify({ prompts }, null, 2)}\n`, 'utf8');
+  return placeholderRecords.size;
 }
 
 function commonCss() {
@@ -208,7 +217,7 @@ function commonCss() {
 .tone-choice-wrap{position:absolute;left:58px;right:58px;top:74px;bottom:42px}.tone-choice-title{font-size:36px;line-height:1.1;font-weight:900;color:#1A3A5A;margin:0 0 8px}.tone-choice-desc{font-size:19px;line-height:1.35;font-weight:800;color:#5F7088;margin:0 0 18px}.tone-choice-table{width:850px;border-collapse:collapse;table-layout:fixed;background:#F4F8FD;box-shadow:0 10px 28px rgba(26,58,90,.10)}.tone-choice-table tr:nth-child(odd) td{background:#D9E4F2}.tone-choice-table tr:nth-child(even) td{background:#EEF3FA}.tone-choice-table td{height:52px;border:1px solid rgba(255,255,255,.34);font-size:28px;font-weight:900;color:#294778;vertical-align:middle}.tone-choice-table .qno{width:66px;background:transparent!important;text-align:center}.tone-choice-num{width:38px;height:38px;border-radius:999px;background:#5AACAC;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:23px;box-shadow:0 5px 12px rgba(90,172,172,.24)}.tone-choice-table .opt{padding-left:20px}.tone-choice-table .letter{font-weight:900;margin-right:10px}
 .listen-head{display:flex;align-items:center;justify-content:center;margin-bottom:16px;text-align:center}.listen-title{font-size:29px;font-weight:900;color:#1A3A5A;line-height:1.18}.final-bank{width:760px;margin:4px auto 18px;background:rgba(255,255,255,.86);border:1px solid rgba(90,172,172,.16);border-radius:16px;text-align:center;padding:10px 18px;box-shadow:0 6px 20px rgba(90,172,172,.08)}.final-bank-title{font-size:18px;color:#5F7088;font-weight:800;margin-bottom:6px}.finals{display:flex;justify-content:space-around;font-size:25px;font-weight:900;color:#3B7DB4}.listen-grid{display:grid;grid-template-columns:repeat(3,1fr);column-gap:28px;row-gap:20px;margin-top:10px}.listen-item{font-size:25px;color:#202530;line-height:1.1;white-space:nowrap}.listen-no{font-size:23px;margin-right:8px;color:#202530}.blank{display:inline-block;width:44px;border-bottom:3px solid #202530;transform:translateY(-3px);margin:0 4px}.blank.short{width:36px}
 ${pinyinExerciseCss()}
-.rule-center{position:absolute;left:60px;right:60px;top:92px;bottom:54px;display:flex;flex-direction:column;align-items:center;justify-content:center}.rule-center .title-xl{text-align:center;margin-bottom:28px}.rule-grid{width:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.rule-card{height:154px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;justify-items:center;text-align:center;gap:10px}.rule-card .from,.rule-card .to{font-size:46px;line-height:1;font-weight:950;color:#1A3A5A}.rule-card .from{color:#7C6BC8}.rule-card .arrow{font-size:34px;font-weight:950;color:#5AACAC}.closing-card{position:absolute;left:150px;right:150px;top:70px;bottom:58px;border-radius:30px;background:rgba(255,255,255,.9);box-shadow:0 14px 40px rgba(26,58,90,.14);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.closing-photo{width:248px;height:139px;border-radius:18px;overflow:hidden;border:2px solid rgba(90,172,172,.18);box-shadow:0 8px 24px rgba(90,172,172,.12);margin-bottom:16px}.closing-photo img{width:100%;height:100%;object-fit:cover}.closing-zh{font-family:'Noto Sans SC';font-size:72px;line-height:1;font-weight:900;color:#1A3A5A}.closing-sub{margin-top:15px;font-size:22px;font-weight:900;color:#5AACAC}.closing-next{margin-top:16px;font-size:18px;font-weight:800;color:#5F7088}
+.rule-center{position:absolute;left:60px;right:60px;top:92px;bottom:54px;display:flex;flex-direction:column;align-items:center;justify-content:center}.rule-center .title-xl{text-align:center;margin-bottom:28px}.rule-grid{width:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.rule-card{height:154px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;justify-items:center;text-align:center;gap:10px}.rule-card .from,.rule-card .to{font-size:46px;line-height:1;font-weight:950;color:#1A3A5A}.rule-card .from{color:#7C6BC8}.rule-card .arrow{font-size:34px;font-weight:950;color:#5AACAC}.closing{position:relative;overflow:hidden;background:linear-gradient(112deg,#F5FAF4 0%,#FFFFFF 46%,#DFF1E8 100%)}.closing:before{content:"";position:absolute;left:34px;top:24px;width:300px;height:246px;border-radius:54% 46% 44% 56%;background:rgba(149,212,187,.23);z-index:0}.closing:after{content:"";position:absolute;right:-54px;bottom:-108px;width:372px;height:294px;border-radius:55% 45% 50% 50%;background:rgba(149,212,187,.20);z-index:0}.closing-card-ref{position:absolute;left:96px;right:84px;top:88px;bottom:62px;border-radius:34px;background:rgba(255,255,255,.96);box-shadow:0 18px 34px rgba(36,50,74,.18);z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-left:164px}.closing-door{position:absolute;left:-36px;top:-64px;width:290px;height:266px;object-fit:contain;z-index:2;filter:drop-shadow(0 6px 10px rgba(36,50,74,.10))}.closing-zh{font-family:'Noto Sans SC';font-size:84pt;line-height:.92;font-weight:900;color:#143C68;letter-spacing:0}.closing-sub{margin-top:30px;font-size:29pt;line-height:1.1;font-weight:900;color:#7BC6A7}.closing-next{margin-top:22px;font-size:17pt;line-height:1.25;font-weight:700;color:#6B6F76}
 `;
 }
 
@@ -466,7 +475,7 @@ function meaningMatchSlide(vocab) {
 function closingSlide() {
   return htmlDoc({
     title: 'Kết thúc',
-    body: `<div class="slide"><div class="closing-card"><div class="closing-photo"><img src="assets/reference/ending-page-background.png" alt=""></div><div class="closing-zh">下课</div><div class="closing-sub">Bạn có câu hỏi gì không?</div><div class="closing-next">Bài tiếp theo: Pinyin 3</div></div></div>`,
+    body: `<div class="slide closing"><div class="closing-card-ref"><img class="closing-door" src="assets/reference/closing-door-students.png" alt=""><div class="closing-zh">下课</div><div class="closing-sub">Bạn có câu hỏi gì không?</div><div class="closing-next">Bài tiếp theo: Pinyin 3</div></div></div>`,
   });
 }
 
@@ -634,7 +643,7 @@ async function main() {
   await ensureDirs();
   await resetGeneratedSlides();
   await copyTemplateAssets();
-  await writePlaceholderImages(vocab);
+  const vocabPlaceholdersCreated = await writePlaceholderImages(vocab);
   const slideFiles = await writeSlides(db, vocab, sets);
   await writeTeacherGuide(db, vocab, sets, slideFiles);
   await writeReadme(slideFiles);
@@ -645,7 +654,7 @@ async function main() {
     teacher_prep: path.relative(root, path.join(teacherGuideDir, 'teacher-prep.md')),
     huashu_brief: path.relative(root, path.join(teacherGuideDir, 'huashu-brief.md')),
     slides: slideFiles.length,
-    vocab_placeholders: vocab.length,
+    vocab_placeholders_created: vocabPlaceholdersCreated,
   }, null, 2));
 }
 

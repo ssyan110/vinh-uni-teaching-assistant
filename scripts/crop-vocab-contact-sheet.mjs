@@ -19,10 +19,11 @@ const rows = Number(value('--rows') || 4);
 const gapArg = value('--gap');
 const marginArg = value('--margin');
 const cellArg = value('--cell');
+const indexOffset = Number(value('--index-offset') || 0);
 const dryRun = args.includes('--dry-run');
 
 if (!lessonArg || !sheetArg || !recordsArg) {
-  console.error('Usage: node scripts/crop-vocab-contact-sheet.mjs --lesson output/pinyin/pinyin-01 --sheet /path/contact-sheet.png --records V001,V002 [--cols 4 --rows 4 --margin 10 --gap 11 --cell 300 --dry-run]');
+  console.error('Usage: node scripts/crop-vocab-contact-sheet.mjs --lesson output/pinyin/pinyin-01 --sheet /path/contact-sheet.png --records V001,V002 [--cols 4 --rows 4 --margin 10 --gap 11 --cell 300 --index-offset 16 --dry-run]');
   process.exit(1);
 }
 
@@ -79,7 +80,8 @@ const marginY = marginArg == null ? Math.floor((sheetHeight - (cell * rows + gap
 for (const [selectedIndex, record] of records.entries()) {
   const target = targetForRecord(manifest, record);
   const targetPath = path.join(slidesDir, target);
-  const sheetIndex = contactSheetIndexForRecord(manifest, record, selectedIndex);
+  const sheetIndex = contactSheetIndexForRecord(manifest, record, selectedIndex) - indexOffset;
+  if (sheetIndex < 0) throw new Error(`Record ${record} is before --index-offset ${indexOffset}`);
   const col = sheetIndex % cols;
   const row = Math.floor(sheetIndex / cols);
   if (row >= rows) throw new Error(`Record ${record} exceeds ${cols}x${rows} contact-sheet capacity`);

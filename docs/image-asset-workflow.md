@@ -160,6 +160,7 @@ Pinyin divider/cover/goal images:
 
 - Use the approved Pinyin Lesson 1 image family as the style baseline.
 - Replace only the main subject or lesson-specific text when adapting to later pinyin lessons.
+- For pinyin closing slides, use the `下课` visual composition from `/Users/ssyan110/Downloads/Mandarin_Pinyin_Foundations.pptx`: pale mint classroom background, large rounded white card, and students leaving through an open classroom door. Crop/reuse only clean visual assets such as the classroom-door illustration; keep the slide text editable in HTML and preserve the current lesson's original closing text.
 - Do not use unrelated stock-like images or a different illustration style for closing/cover/goal slides.
 
 ## Lesson 01 And Lesson 10

@@ -80,7 +80,7 @@ Keep the updated Pinyin Lesson 1 soft multicolor background system for future pi
 
 Pinyin cover rule: every pinyin cover keeps the Lesson 1 cover layout. Use a badge like `PINYIN N · 拼音第N课`, keep the main title as `pīn/yīn` above `拼音`, and use the subtitle slot below `拼音` only for the pinyin sounds or spelling rules learned in that lesson. Render those sounds as grouped rounded chips, not one flat text string. Increase spacing between sound tokens inside each chip, and allow chips to wrap to a second line when one line is crowded. Examples: chips `b p m f` + `a o e i u ü`; chips `d t n l` + `g k h` + `j q x → ju qu xu`. Do not put Vietnamese lesson-description notes in that subtitle slot.
 
-Pinyin closing rule: every pinyin ending slide shows exactly three text lines: `下课`, `Bạn có câu hỏi gì không?`, and `Bài tiếp theo: Pinyin N` where `N` is the next pinyin lesson number. Use `下课`, not `下课了`, and do not add extra motivational or content-summary text.
+Pinyin closing rule: every pinyin ending slide uses the `下课` visual composition from `/Users/ssyan110/Downloads/Mandarin_Pinyin_Foundations.pptx`: pale mint classroom background, large rounded white card, and students leaving through an open classroom door. Recreate the visual in HTML and keep editable lesson text; do not use the full PPTX image as a baked background with old text. Keep exactly three text lines: `下课`, `Bạn có câu hỏi gì không?`, and `Bài tiếp theo: Pinyin N` where `N` is the next pinyin lesson number. Use `下课`, not `下课了`, and do not add extra motivational or content-summary text.
 
 Classroom slide sequence:
 
