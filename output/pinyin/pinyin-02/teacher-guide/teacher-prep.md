@@ -48,4 +48,4 @@
 
 - Slide dùng ảnh placeholder 1:1 theo quy trình image asset. Khi cần ảnh thật, thay từng ảnh bằng `npm run assets:replace` hoặc crop từ contact sheet.
 - Không export PDF sạch cho đến khi Adam xác nhận nội dung và thiết kế đã chốt.
-- Tổng số slide hiện tại: 49.
+- Tổng số slide hiện tại: 50.

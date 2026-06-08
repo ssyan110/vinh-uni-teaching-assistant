@@ -78,7 +78,7 @@ Do not rebuild future pinyin decks from scratch. Keep the Pinyin Lesson 1 visual
 
 Keep the updated Pinyin Lesson 1 soft multicolor background system for future pinyin decks. Do not revert to the old monotone background. Background images, color blobs, and watermark graphics are always bottom-layer elements behind all text, cards, tables, and main lesson images.
 
-Pinyin cover rule: every pinyin cover keeps the Lesson 1 cover layout. Use a badge like `PINYIN N · 拼音第N课`, keep the main title as `pīn/yīn` above `拼音`, and use the subtitle slot below `拼音` only for the pinyin sounds or spelling rules learned in that lesson. Render those sounds as grouped rounded chips, not one flat text string. Increase spacing between sound tokens inside each chip, and allow chips to wrap to a second line when one line is crowded. Examples: chips `b p m f` + `a o e i u ü`; chips `d t n l` + `g k h` + `j q x → ju qu xu`. Do not put Vietnamese lesson-description notes in that subtitle slot.
+Pinyin cover rule: every pinyin cover keeps the Lesson 1 cover layout. Use a badge like `PINYIN N · 拼音第N课`, keep the main title as `pīn/yīn` above `拼音`, and use the subtitle slot below `拼音` only for the pinyin sounds or spelling rules learned in that lesson. Render those sounds as grouped rounded chips, not one flat text string. Increase spacing between sound tokens inside each chip, and allow chips to wrap to a second line when one line is crowded. Examples: chips `b p m f` + `a o e i u ü`; chips `d t n l` + `g k h` + `j q x`. Do not put Vietnamese lesson-description notes in that subtitle slot.
 
 Pinyin closing rule: every pinyin ending slide uses the `下课` visual composition from `/Users/ssyan110/Downloads/Mandarin_Pinyin_Foundations.pptx`: pale mint classroom background, large rounded white card, and students leaving through an open classroom door. Recreate the visual in HTML and keep editable lesson text; do not use the full PPTX image as a baked background with old text. Keep exactly three text lines: `下课`, `Bạn có câu hỏi gì không?`, and `Bài tiếp theo: Pinyin N` where `N` is the next pinyin lesson number. Use `下课`, not `下课了`, and do not add extra motivational or content-summary text.
 
@@ -107,13 +107,21 @@ Pinyin vocabulary grid slides:
 - Do not add extra explanatory lines such as `Tập trung đọc...` on the slide body.
 - Put teaching reminders in the teacher guide or in a separate practice slide instead.
 
+Pinyin chart slides:
+
+- Pinyin chart and chart-based practice slides do not need a body title.
+- Keep only the presenter/top-bar section label, then make the chart as large as possible within the slide safe area.
+- Chart columns must have equal width.
+- Chart-based practice should reuse the same table layout, adding tone marks or target practice values instead of switching to a different layout.
+- For `j/q/x + ü`, display written forms `ju/qu/xu` under the `ü` column because the spelling drops the two dots but the sound is still `ü`.
+
 Pinyin practice slide templates:
 
 - Use `scripts/pinyin-exercise-templates.mjs` for reusable renderer helpers and CSS.
 - Reading drills use Pinyin Lesson 1 slide 15's large sound-board style.
-- `连连看` / matching vocabulary exercises use a two-row image board: pinyin+hanzi cards on the top row and shuffled image cards on the bottom row. Do not add Vietnamese meaning columns or top label pills. Image order must be randomized/deranged so images do not stay under their matching prompts. Split dense matching into multiple slides instead of crowding the board.
+- `连连看` / matching vocabulary exercises use a two-row image board: pinyin+hanzi cards on the top row and shuffled image cards on the bottom row. Do not add Vietnamese meaning columns or top label pills. Leave a generous vertical gap between the pinyin+hanzi row and image row. Image order must be randomized/deranged so images do not stay under their matching prompts. Split dense matching into multiple slides instead of crowding the board.
 - Multiple-choice and listening-choice exercises use Pinyin Lesson 1 slide 37's blue answer-table style.
-- Fill-in-blank and listening-completion exercises use Pinyin Lesson 1 slide 38's sound-bank plus underlined blank style, with no volume/speaker icon in the top bar or instruction header. Comprehensive fill-in practice must target the lesson's learning goals, not automatically practice finals.
+- Fill-in-blank and listening-completion exercises use Pinyin Lesson 1 slide 38's sound-bank plus underlined blank style, with no volume/speaker icon in the top bar or instruction header. When students fill initials, keep the underline blank before the final and add small parentheses above the vowel to remind them to write the tone. Comprehensive fill-in practice must target the lesson's learning goals, not automatically practice finals.
 - Keep visible classroom instructions in natural Vietnamese.
 
 Terminology:
