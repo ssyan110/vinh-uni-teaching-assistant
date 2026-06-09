@@ -236,7 +236,7 @@ function commonCss() {
 .badge{display:inline-flex;align-items:center;justify-content:center;height:26px;padding:0 12px;border-radius:999px;background:#E8F4F4;color:#5AACAC;font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.badge-purple{background:#F3F0FA;color:#7C6BC8}.badge-amber{background:#FFF4D8;color:#B9821F}.badge-red{background:#FCEFF3;color:#D85A6A}
 .big-pinyin{font-size:52px;line-height:1;font-weight:900;color:#5AACAC}.big-hanzi{font-family:'Noto Sans SC',sans-serif;font-size:58px;line-height:1;font-weight:900;color:#1A3A5A}
 .aligned-text{display:flex;align-items:flex-end;justify-content:center;gap:12px;row-gap:7px;flex-wrap:wrap;overflow:visible}.aligned-text .a-word{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;min-height:76px;overflow:visible}.aligned-text .a-pin{font-size:13.5pt;line-height:1.05;color:#5AACAC;font-weight:800;white-space:nowrap;margin-bottom:7px}.aligned-text .a-han{font-family:'Noto Sans SC';font-size:36pt;line-height:1;color:#1A3A5A;font-weight:900;white-space:nowrap}
-.cover{position:absolute;inset:0;background:linear-gradient(145deg,#F4FAFA 0%,#FFFFFF 56%,#F3F0FA 100%);overflow:hidden}.cover:before{content:"";position:absolute;right:-80px;top:-120px;width:360px;height:360px;border-radius:50%;background:rgba(90,172,172,.13)}.cover-card{position:absolute;left:62px;top:78px;width:520px;z-index:2}.lesson{display:inline-flex;align-items:center;gap:10px;background:#E8F4F4;color:#5AACAC;padding:10px 21px;border-radius:999px;font-weight:800;font-size:21px}.cover-align{justify-content:flex-start;gap:14px;margin-top:26px}.cover-align .a-word{min-height:88px}.cover-align .a-pin{font-size:21px}.cover-align .a-han{font-size:76px}.vi{font-size:30px;color:#4A6080;font-weight:800;margin-top:20px}.cover-sounds{display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px;width:520px;margin-top:22px}.cover-sound-chip{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:44px;padding:0 18px;border-radius:999px;background:rgba(255,255,255,.78);border:1px solid rgba(90,172,172,.2);box-shadow:0 8px 22px rgba(90,172,172,.09);font-size:24px;line-height:1;font-weight:900;color:#4A6080;white-space:nowrap}.cover-sound-chip .arrow{color:#5AACAC;margin:0 1px}.topic-img{position:absolute;right:50px;top:92px;width:318px;height:318px;border-radius:24px;overflow:hidden;background:#F8FBFB;border:2px solid rgba(90,172,172,.18);box-shadow:0 16px 44px rgba(26,58,90,.16)}.topic-img img{width:100%;height:100%;object-fit:cover}
+.cover{position:absolute;inset:0;background:linear-gradient(145deg,#F4FAFA 0%,#FFFFFF 56%,#F3F0FA 100%);overflow:hidden}.cover:before{content:"";position:absolute;right:-80px;top:-120px;width:360px;height:360px;border-radius:50%;background:rgba(90,172,172,.13)}.cover-card{position:absolute;left:62px;top:78px;width:520px;z-index:2}.lesson{display:inline-flex;align-items:center;gap:10px;background:#E8F4F4;color:#5AACAC;padding:10px 21px;border-radius:999px;font-weight:800;font-size:21px}.cover-align{justify-content:flex-start;gap:14px;margin-top:26px}.cover-align .a-word{min-height:88px}.cover-align .a-pin{font-size:21px}.cover-align .a-han{font-size:76px}.vi{font-size:30px;color:#4A6080;font-weight:800;margin-top:20px}.cover-sounds{display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px;width:520px;margin-top:22px}.cover-chip-break{flex-basis:100%;height:0}.cover-sound-chip{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:44px;padding:0 18px;border-radius:999px;background:rgba(255,255,255,.78);border:1px solid rgba(90,172,172,.2);box-shadow:0 8px 22px rgba(90,172,172,.09);font-size:24px;line-height:1;font-weight:900;color:#4A6080;white-space:nowrap}.cover-sound-chip .arrow{color:#5AACAC;margin:0 1px}.topic-img{position:absolute;right:50px;top:92px;width:318px;height:318px;border-radius:24px;overflow:hidden;background:#F8FBFB;border:2px solid rgba(90,172,172,.18);box-shadow:0 16px 44px rgba(26,58,90,.16)}.topic-img img{width:100%;height:100%;object-fit:cover}
 .lesson-goal-left{position:absolute;left:60px;top:78px;width:530px}.lesson-goal-title{margin-bottom:28px;font-size:34px;line-height:1.12;font-weight:900;color:#1A3A5A}.lesson-goal-cards{display:flex;flex-direction:column;gap:14px}.lesson-goal{padding:15px 20px;display:flex;align-items:center;gap:16px;font-size:17px;color:#4A6080;line-height:1.34}.lesson-goal-num{width:26px;height:26px;background:#5AACAC;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0}.lesson-goal-right{position:absolute;right:54px;top:98px;width:306px;height:306px;border-radius:20px;overflow:hidden;background:#F8FBFB;border:2px solid rgba(90,172,172,.18);box-shadow:0 10px 28px rgba(90,172,172,.14)}.lesson-goal-right img{width:100%;height:100%;object-fit:cover}.goal-hot{color:#F05A62;font-weight:950}
 .divider-left{position:absolute;left:0;top:40px;bottom:0;width:54%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.divider-super{font-size:28px;line-height:1.1;color:#1A3A5A;font-weight:900;margin-bottom:12px}.divider-kicker{font-size:15px;color:#5AACAC;text-transform:uppercase;letter-spacing:3px;font-weight:900;margin-bottom:12px}.divider-zh{font-family:'Noto Sans SC';font-size:62px;font-weight:900;color:#1A3A5A;margin-bottom:16px}.divider-line{width:88px;height:5px;border-radius:999px;background:#5AACAC}.divider-photo{position:absolute;right:82px;top:116px;width:300px;height:300px;border-radius:20px;overflow:hidden;background:#F8FBFB;border:2px solid rgba(90,172,172,.18);box-shadow:0 8px 24px rgba(90,172,172,.12)}.divider-photo img{width:100%;height:100%;object-fit:cover}
 .sound-table{width:100%;border-collapse:separate;border-spacing:8px}.sound-table th,.sound-table td{height:48px;border-radius:13px;text-align:center;font-weight:900;font-size:21px;vertical-align:middle}.sound-table th{background:#E8F4F4;color:#5AACAC}.sound-table td{background:#fff;border:1px solid rgba(90,172,172,.18);color:#1A3A5A}.sound-table .rowh{background:#F3F0FA;color:#7C6BC8}.chart-empty{opacity:.34;color:#8A9AB0}.chart-dash{display:inline-flex;align-items:center;justify-content:center;width:100%;height:100%;line-height:1}
@@ -268,7 +268,7 @@ function coverPinyinTitle() {
 }
 
 function coverSoundChips(groups) {
-  return `<div class="cover-sounds">${groups.map((tokens) => `<div class="cover-sound-chip">${tokens.map((token) => token === '→' ? '<span class="arrow">→</span>' : `<span>${esc(token)}</span>`).join('')}</div>`).join('')}</div>`;
+  return `<div class="cover-sounds">${groups.map((tokens) => tokens === 'break' ? '<div class="cover-chip-break"></div>' : `<div class="cover-sound-chip">${tokens.map((token) => token === '→' ? '<span class="arrow">→</span>' : `<span>${esc(token)}</span>`).join('')}</div>`).join('')}</div>`;
 }
 
 function matchPinyinHanzi(pinyin, hanzi) {
@@ -288,14 +288,14 @@ function slideShell({ title, icon = 'book-open', label = title, content, extraCs
 function coverSlide() {
   return htmlDoc({
     title: 'Pinyin Bài 3',
-    body: `<div class="slide"><div class="cover"><div class="cover-card"><div class="lesson">PINYIN 3 · 拼音第三课</div>${coverPinyinTitle()}${coverSoundChips([['zh', 'ch', 'sh', 'r'], ['z', 'c', 's'], ['一', '不', '→', '变调']])}</div><div class="topic-img"><img src="assets/photos/cover-topic.png" alt=""></div></div></div>`,
+    body: `<div class="slide"><div class="cover"><div class="cover-card"><div class="lesson">PINYIN 3 · 拼音第三课</div>${coverPinyinTitle()}${coverSoundChips([['zh', 'ch', 'sh', 'r'], ['z', 'c', 's'], 'break', ['一', '不', '→', 'biến điệu']])}</div><div class="topic-img"><img src="assets/photos/cover-topic.png" alt=""></div></div></div>`,
   });
 }
 
 function objectivesSlide(vocabCount) {
   const goals = [
     'Học thanh mẫu <strong class="goal-hot">zh ch sh r</strong> và <strong class="goal-hot">z c s</strong>.',
-    'Học quy tắc biến điệu của 一 và 不',
+    'Học quy tắc <strong class="goal-hot">biến điệu của 一 và 不</strong>',
     `Đọc đúng ${vocabCount} từ vựng.`,
   ];
   return slideShell({
@@ -319,9 +319,9 @@ function yiBuDividerSlide() {
   return slideShell({
     title: 'Biến điệu của 一 và 不',
     icon: 'wand-sparkles',
-    label: 'biến điệu của 一 và 不',
+    label: 'Biến điệu của 一 và 不',
     extraCss: `.divider-yi-bu-special .divider-kicker{font-size:22px;line-height:1.18;text-transform:none;letter-spacing:0;max-width:360px}.divider-yi-bu-special .divider-zh{font-size:56px;white-space:nowrap}`,
-    content: `<div class="divider-left divider-yi-bu-special"><div class="divider-kicker">biến điệu của 一 và 不</div><div class="divider-zh">一、不变调</div><div class="divider-line"></div></div><div class="divider-photo"><img src="assets/photos/divider-yi-bu-pinyin-03.png" alt=""></div>`,
+    content: `<div class="divider-left divider-yi-bu-special"><div class="divider-kicker">Biến điệu của 一 và 不</div><div class="divider-zh">一、不变调</div><div class="divider-line"></div></div><div class="divider-photo"><img src="assets/photos/divider-yi-bu-pinyin-03.png" alt=""></div>`,
   });
 }
 
@@ -331,7 +331,7 @@ function summaryInitialsDividerSlide() {
     icon: 'table-2',
     label: 'Bảng tổng hợp',
     extraCss: `.divider-summary-special .divider-kicker{font-size:21px;line-height:1.16;text-transform:none;letter-spacing:0;max-width:390px}.divider-summary-special .divider-zh{font-size:56px;white-space:nowrap}`,
-    content: `<div class="divider-left divider-summary-special"><div class="divider-kicker">bảng tổng hợp thanh mẫu pinyin</div><div class="divider-zh">声母总表</div><div class="divider-line"></div></div><div class="divider-photo"><img src="assets/photos/divider-pinyin-summary-pinyin-03.png" alt=""></div>`,
+    content: `<div class="divider-left divider-summary-special"><div class="divider-kicker">Bảng tổng hợp thanh mẫu pinyin</div><div class="divider-zh">声母总表</div><div class="divider-line"></div></div><div class="divider-photo"><img src="assets/photos/divider-pinyin-summary-pinyin-03.png" alt=""></div>`,
   });
 }
 
@@ -532,18 +532,20 @@ function ruleExamplesSlide() {
 }
 
 function rulePracticeSlide() {
-  return multipleChoicePracticeSlide({
+  const rows = [
+    ['yí ge', 'yī ge', 'yì ge', 'yǐ ge'],
+    ['yì bēi', 'yí bēi', 'yī bēi', 'yǐ bēi'],
+    ['bú rè', 'bù rè', 'bǔ rè', 'bū rè'],
+    ['bù chī', 'bú chī', 'bū chī', 'bǔ chī'],
+    ['yì zǔ', 'yí zǔ', 'yī zǔ', 'yǐ zǔ'],
+    ['bú shì', 'bù shì', 'bū shì', 'bǔ shì'],
+  ];
+  const bodyRows = rows.map((row, i) => `<tr><td class="qno"><span class="tone-choice-num">${i + 1}</span></td>${row.map((item, j) => `<td class="opt"><span class="letter">${String.fromCharCode(65 + j)}.</span>${esc(item)}</td>`).join('')}</tr>`).join('');
+  return slideShell({
     title: 'Chọn cách đọc đúng',
-    instruction: 'Nhìn cụm từ, chọn cách đọc 一 / 不 khi nói.',
+    icon: 'headphones',
     label: 'Luyện biến điệu',
-    rows: [
-      ['yí ge', 'yī ge', 'yì ge', 'yǐ ge'],
-      ['yì bēi', 'yí bēi', 'yī bēi', 'yǐ bēi'],
-      ['bú rè', 'bù rè', 'bǔ rè', 'bū rè'],
-      ['bù chī', 'bú chī', 'bū chī', 'bǔ chī'],
-      ['yì zǔ', 'yí zǔ', 'yī zǔ', 'yǐ zǔ'],
-      ['bú shì', 'bù shì', 'bū shì', 'bǔ shì'],
-    ],
+    content: `<div class="tone-choice-wrap"><div class="tone-choice-title">Chọn cách đọc đúng</div><table class="tone-choice-table"><tbody>${bodyRows}</tbody></table></div>`,
   });
 }
 
@@ -557,17 +559,20 @@ function multipleChoicePracticeSlide({ title, instruction, rows, label = 'Ôn t�
 }
 
 function reviewChoiceSlide() {
-  return multipleChoicePracticeSlide({
+  const rows = [
+    ['zhá', 'chá', 'shá', 'zá'],
+    ['chē', 'zē', 'shē', 'cē'],
+    ['rè', 'zhè', 'zè', 'sè'],
+    ['chī', 'cī', 'shī', 'sī'],
+    ['zǔ', 'zhǔ', 'cǔ', 'chǔ'],
+    ['sùdù', 'shūdù', 'zìdù', 'chīdù'],
+  ];
+  const bodyRows = rows.map((row, i) => `<tr><td class="qno"><span class="tone-choice-num">${i + 1}</span></td>${row.map((item, j) => `<td class="opt"><span class="letter">${String.fromCharCode(65 + j)}.</span>${esc(item)}</td>`).join('')}</tr>`).join('');
+  return slideShell({
     title: 'Nghe và chọn pinyin đúng',
-    instruction: 'Nghe giáo viên đọc và chọn pinyin đúng.',
-    rows: [
-      ['zhá', 'chá', 'shá', 'zá'],
-      ['chē', 'zē', 'shē', 'cē'],
-      ['rè', 'zhè', 'zè', 'sè'],
-      ['chī', 'cī', 'shī', 'sī'],
-      ['zǔ', 'zhǔ', 'cǔ', 'chǔ'],
-      ['sùdù', 'shūdù', 'zìdù', 'chīdù'],
-    ],
+    icon: 'headphones',
+    label: 'Ôn tập',
+    content: `<div class="tone-choice-wrap"><div class="tone-choice-title">Nghe và chọn pinyin đúng</div><table class="tone-choice-table"><tbody>${bodyRows}</tbody></table></div>`,
   });
 }
 
