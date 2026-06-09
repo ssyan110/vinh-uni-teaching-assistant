@@ -295,8 +295,7 @@ function coverSlide() {
 function objectivesSlide(vocabCount) {
   const goals = [
     'Học thanh mẫu <strong class="goal-hot">zh ch sh r</strong> và <strong class="goal-hot">z c s</strong>.',
-    'Luyện đọc các âm có thanh điệu, nhất là cặp âm dễ nhầm.',
-    'Học quy tắc <strong class="goal-hot">一 / 不 biến điệu</strong> khi nói.',
+    'Học quy tắc biến điệu của 一 và 不',
     `Đọc đúng ${vocabCount} từ vựng.`,
   ];
   return slideShell({
@@ -323,6 +322,16 @@ function yiBuDividerSlide() {
     label: 'biến điệu của 一 và 不',
     extraCss: `.divider-yi-bu-special .divider-kicker{font-size:22px;line-height:1.18;text-transform:none;letter-spacing:0;max-width:360px}.divider-yi-bu-special .divider-zh{font-size:56px;white-space:nowrap}`,
     content: `<div class="divider-left divider-yi-bu-special"><div class="divider-kicker">biến điệu của 一 và 不</div><div class="divider-zh">一、不变调</div><div class="divider-line"></div></div><div class="divider-photo"><img src="assets/photos/divider-yi-bu-pinyin-03.png" alt=""></div>`,
+  });
+}
+
+function summaryInitialsDividerSlide() {
+  return slideShell({
+    title: 'Bảng tổng hợp thanh mẫu pinyin 声母总表',
+    icon: 'table-2',
+    label: 'Bảng tổng hợp',
+    extraCss: `.divider-summary-special .divider-kicker{font-size:21px;line-height:1.16;text-transform:none;letter-spacing:0;max-width:390px}.divider-summary-special .divider-zh{font-size:56px;white-space:nowrap}`,
+    content: `<div class="divider-left divider-summary-special"><div class="divider-kicker">bảng tổng hợp thanh mẫu pinyin</div><div class="divider-zh">声母总表</div><div class="divider-line"></div></div><div class="divider-photo"><img src="assets/photos/divider-pinyin-summary-pinyin-03.png" alt=""></div>`,
   });
 }
 
@@ -475,7 +484,7 @@ function ruleYiFirstToneSlide() {
         ],
       },
     ].map((card) => `<div class="soft-card yi-first-card"><div class="yi-first-card-title">${esc(card.title)}</div><div class="yi-first-note">${esc(card.note)}</div><div class="yi-first-examples">${card.examples.map(([pin, han]) => `<div class="yi-first-example"><div class="pin">${esc(pin)}</div><div class="han">${esc(han)}</div></div>`).join('')}</div></div>`).join('')}</div></div>`,
-    extraCss: `.yi-first-content{top:86px}.yi-first-title{font-size:52px;line-height:1;font-weight:900;color:#1A3A5A;text-align:left}.yi-first-title span{font-family:'Noto Sans SC';color:#D85A6A}.yi-first-title b{color:#D85A6A}.yi-first-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:24px}.yi-first-card{height:300px;padding:24px 26px}.yi-first-card-title{font-size:30px;line-height:1.1;font-weight:900;color:#1A3A5A}.yi-first-note{font-size:17px;line-height:1.35;font-weight:800;color:#5F7088;margin-top:8px}.yi-first-examples{display:flex;flex-direction:column;gap:12px;margin-top:18px}.yi-first-example{height:54px;border-radius:14px;background:#F7FBFB;border:1px solid rgba(90,172,172,.28);display:flex;align-items:center;justify-content:space-between;padding:0 18px}.yi-first-example .pin{font-size:21px;line-height:1;font-weight:900;color:#D85A6A}.yi-first-example .han{font-family:'Noto Sans SC';font-size:28px;line-height:1;font-weight:900;color:#1A3A5A}`,
+    extraCss: `.yi-first-content{top:90px}.yi-first-title{font-size:34px;line-height:1.1;font-weight:900;color:#1A3A5A;text-align:left}.yi-first-title span{font-family:'Noto Sans SC';color:#D85A6A}.yi-first-title b{color:#D85A6A}.yi-first-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}.yi-first-card{height:268px;padding:20px 22px}.yi-first-card-title{font-size:22px;line-height:1.12;font-weight:900;color:#1A3A5A}.yi-first-note{font-size:14px;line-height:1.35;font-weight:750;color:#5F7088;margin-top:7px}.yi-first-examples{display:flex;flex-direction:column;gap:9px;margin-top:14px}.yi-first-example{height:43px;border-radius:13px;background:#F7FBFB;border:1px solid rgba(90,172,172,.28);display:flex;align-items:center;justify-content:space-between;padding:0 15px}.yi-first-example .pin{font-size:16px;line-height:1;font-weight:850;color:#D85A6A}.yi-first-example .han{font-family:'Noto Sans SC';font-size:22px;line-height:1;font-weight:900;color:#1A3A5A}`,
   });
 }
 
@@ -590,20 +599,20 @@ function fillBlankPracticeSlide() {
 }
 
 function initialsSummarySlide(summary) {
-  const groups = [
-    ['b', 'p', 'm', 'f'],
-    ['d', 't', 'n', 'l'],
-    ['g', 'k', 'h'],
-    ['j', 'q', 'x'],
-    ['zh', 'ch', 'sh', 'r'],
-    ['z', 'c', 's'],
+  const rows = [
+    { label: 'Âm môi', zh: '双唇音', group: ['b', 'p', 'm', 'f'], tone: 'blue' },
+    { label: 'Âm đầu lưỡi', zh: '舌尖音', group: ['d', 't', 'n', 'l'], tone: 'green' },
+    { label: 'Âm gốc lưỡi', zh: '舌根音', group: ['g', 'k', 'h'], tone: 'purple' },
+    { label: 'Âm mặt lưỡi', zh: '舌面音', group: ['j', 'q', 'x'], tone: 'amber' },
+    { label: 'Âm uốn lưỡi', zh: '翘舌音', group: ['zh', 'ch', 'sh', 'r'], tone: 'rose' },
+    { label: 'Âm đầu lưỡi trước', zh: '平舌音', group: ['z', 'c', 's'], tone: 'teal' },
   ];
   return slideShell({
-    title: '21 thanh mẫu',
+    title: 'Bảng tổng hợp thanh mẫu pinyin 声母总表',
     icon: 'table-2',
     label: 'Bảng tổng hợp',
-    content: `<div class="content summary-content"><div class="summary-title">21 thanh mẫu tiếng Trung</div><div class="summary-grid">${groups.map((group, i) => `<div class="soft-card summary-group"><div class="summary-no">${i + 1}</div><div class="summary-row">${group.map((item) => `<span>${esc(item)}</span>`).join('')}</div></div>`).join('')}</div></div>`,
-    extraCss: `.summary-content{top:80px}.summary-title{text-align:center;font-size:33px;line-height:1.1;font-weight:900;color:#1A3A5A;margin-bottom:22px}.summary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 18px}.summary-group{height:84px;display:flex;align-items:center;gap:18px}.summary-no{width:34px;height:34px;border-radius:50%;background:#5AACAC;color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900;flex:none}.summary-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.summary-row span{font-size:34px;line-height:1;font-weight:900;color:#1A3A5A}`,
+    content: `<div class="summary-table-wrap"><div class="summary-table-card"><table class="summary-table"><tbody>${rows.map((row) => `<tr class="${row.tone}"><th><span>${esc(row.label)}</span><small>${esc(row.zh)}</small></th><td>${row.group.map((item) => `<span>${esc(item)}</span>`).join('')}</td></tr>`).join('')}</tbody></table></div></div>`,
+    extraCss: `.summary-table-wrap{position:absolute;left:52px;right:52px;top:70px;bottom:34px}.summary-table-card{height:100%;border-radius:24px;background:linear-gradient(180deg,#FFFFFF 0%,#F7FBFB 100%);border:2px solid rgba(90,172,172,.18);box-shadow:0 14px 34px rgba(26,58,90,.12);padding:14px;box-sizing:border-box}.summary-table{width:100%;height:100%;border-collapse:separate;border-spacing:0 6px;table-layout:fixed}.summary-table th{width:242px;border-radius:17px 0 0 17px;text-align:left;padding:0 18px;color:#1A3A5A;vertical-align:middle}.summary-table th span{display:block;font-size:19px;line-height:1.08;font-weight:900;white-space:nowrap}.summary-table th small{display:block;margin-top:4px;font-family:'Noto Sans SC';font-size:16px;line-height:1;font-weight:900;color:rgba(26,58,90,.62)}.summary-table td{border-radius:0 17px 17px 0;background:#fff;border:1px solid rgba(90,172,172,.14);border-left:0;padding:5px 18px;display:flex;align-items:center;gap:15px;box-sizing:border-box}.summary-table td span{min-width:72px;height:43px;border-radius:14px;background:#FFFFFF;border:1px solid rgba(26,58,90,.10);display:inline-flex;align-items:center;justify-content:center;font-size:31px;line-height:1;font-weight:950;color:#1A3A5A;box-shadow:0 5px 12px rgba(26,58,90,.06)}.summary-table tr.blue th{background:#DDEBF8}.summary-table tr.green th{background:#E4F1E6}.summary-table tr.purple th{background:#EEE8F8}.summary-table tr.amber th{background:#FFF0D2}.summary-table tr.rose th{background:#F9E3EA}.summary-table tr.teal th{background:#DDF1F0}.summary-table tr.blue td{background:#F6FAFE}.summary-table tr.green td{background:#F7FBF7}.summary-table tr.purple td{background:#FAF8FE}.summary-table tr.amber td{background:#FFFCF5}.summary-table tr.rose td{background:#FDF7F9}.summary-table tr.teal td{background:#F6FCFC}`,
   });
 }
 
@@ -693,7 +702,7 @@ async function writeSlides(db, vocab, sets) {
   add('rule-bu-sandhi', ruleBuSlide());
   add('rule-yi-bu-examples', ruleExamplesSlide());
   add('practice-yi-bu-choice', rulePracticeSlide());
-  add('divider-summary-initials', dividerSlide({ title: '21 thanh mẫu', zh: '总表', label: 'BẢNG TỔNG HỢP', img: 'divider-sounds.png', icon: 'table-2' }));
+  add('divider-summary-initials', summaryInitialsDividerSlide());
   add('summary-21-initials', initialsSummarySlide(db.initials_summary));
   add('divider-review-final', dividerSlide({ title: 'Luyện tập tổng hợp', zh: '练习', label: 'ÔN TẬP', img: 'divider-review.png', icon: 'check-circle-2' }));
   add('review-listening-choice', reviewChoiceSlide());
