@@ -97,6 +97,8 @@ Classroom slide sequence:
 11. Appendix/input setup, when applicable
 12. Closing
 
+For pinyin review sections, the divider for `Ôn bài X` must show the Vietnamese title `Khởi động` above the `ÔN BÀI X` label. This keeps the review activity framed as the lesson warm-up.
+
 `Mục lục` and `Quy ước` slides are no longer used in future pinyin classroom decks. If the source PDF contains rules or contents pages, keep them in extraction/review data only when useful; do not render them as classroom slides.
 
 Pinyin classroom slides do not show bottom-right `Trang ...` page indicators. The presenter chrome may still show slide position.

@@ -233,7 +233,7 @@ function commonCss() {
 .aligned-text{display:flex;align-items:flex-end;justify-content:center;gap:12px;row-gap:7px;flex-wrap:wrap;overflow:visible}.aligned-text .a-word{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;min-height:76px;overflow:visible}.aligned-text .a-pin{font-size:13.5pt;line-height:1.05;color:#5AACAC;font-weight:800;white-space:nowrap;margin-bottom:7px}.aligned-text .a-han{font-family:'Noto Sans SC';font-size:36pt;line-height:1;color:#1A3A5A;font-weight:900;white-space:nowrap}
 .cover{position:absolute;inset:0;background:linear-gradient(145deg,#F4FAFA 0%,#FFFFFF 56%,#F3F0FA 100%);overflow:hidden}.cover:before{content:"";position:absolute;right:-80px;top:-120px;width:360px;height:360px;border-radius:50%;background:rgba(90,172,172,.13)}.cover-card{position:absolute;left:62px;top:78px;width:520px;z-index:2}.lesson{display:inline-flex;align-items:center;gap:10px;background:#E8F4F4;color:#5AACAC;padding:10px 21px;border-radius:999px;font-weight:800;font-size:21px}.cover-align{justify-content:flex-start;gap:14px;margin-top:26px}.cover-align .a-word{min-height:88px}.cover-align .a-pin{font-size:21px}.cover-align .a-han{font-size:76px}.vi{font-size:30px;color:#4A6080;font-weight:800;margin-top:20px}.cover-sounds{display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px;width:520px;margin-top:22px}.cover-sound-chip{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:44px;padding:0 18px;border-radius:999px;background:rgba(255,255,255,.78);border:1px solid rgba(90,172,172,.2);box-shadow:0 8px 22px rgba(90,172,172,.09);font-size:24px;line-height:1;font-weight:900;color:#4A6080;white-space:nowrap}.cover-sound-chip .arrow{color:#5AACAC;margin:0 1px}.topic-img{position:absolute;right:50px;top:92px;width:318px;height:318px;border-radius:24px;overflow:hidden;background:#F8FBFB;border:2px solid rgba(90,172,172,.18);box-shadow:0 16px 44px rgba(26,58,90,.16)}.topic-img img{width:100%;height:100%;object-fit:cover}
 .lesson-goal-left{position:absolute;left:60px;top:78px;width:530px}.lesson-goal-title{margin-bottom:28px;font-size:34px;line-height:1.12;font-weight:900;color:#1A3A5A}.lesson-goal-cards{display:flex;flex-direction:column;gap:14px}.lesson-goal{padding:15px 20px;display:flex;align-items:center;gap:16px;font-size:17px;color:#4A6080;line-height:1.34}.lesson-goal-num{width:26px;height:26px;background:#5AACAC;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0}.lesson-goal-right{position:absolute;right:54px;top:98px;width:306px;height:306px;border-radius:20px;overflow:hidden;background:#F8FBFB;border:2px solid rgba(90,172,172,.18);box-shadow:0 10px 28px rgba(90,172,172,.14)}.lesson-goal-right img{width:100%;height:100%;object-fit:cover}.goal-hot{color:#F05A62;font-weight:950}
-.divider-left{position:absolute;left:0;top:40px;bottom:0;width:54%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.divider-kicker{font-size:15px;color:#5AACAC;text-transform:uppercase;letter-spacing:3px;font-weight:900;margin-bottom:12px}.divider-zh{font-family:'Noto Sans SC';font-size:62px;font-weight:900;color:#1A3A5A;margin-bottom:16px}.divider-line{width:88px;height:5px;border-radius:999px;background:#5AACAC}.divider-photo{position:absolute;right:82px;top:116px;width:300px;height:300px;border-radius:20px;overflow:hidden;background:#F8FBFB;border:2px solid rgba(90,172,172,.18);box-shadow:0 8px 24px rgba(90,172,172,.12)}.divider-photo img{width:100%;height:100%;object-fit:cover}
+.divider-left{position:absolute;left:0;top:40px;bottom:0;width:54%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.divider-super{font-size:28px;line-height:1.1;color:#1A3A5A;font-weight:900;margin-bottom:12px}.divider-kicker{font-size:15px;color:#5AACAC;text-transform:uppercase;letter-spacing:3px;font-weight:900;margin-bottom:12px}.divider-zh{font-family:'Noto Sans SC';font-size:62px;font-weight:900;color:#1A3A5A;margin-bottom:16px}.divider-line{width:88px;height:5px;border-radius:999px;background:#5AACAC}.divider-photo{position:absolute;right:82px;top:116px;width:300px;height:300px;border-radius:20px;overflow:hidden;background:#F8FBFB;border:2px solid rgba(90,172,172,.18);box-shadow:0 8px 24px rgba(90,172,172,.12)}.divider-photo img{width:100%;height:100%;object-fit:cover}
 .sound-table{width:100%;border-collapse:separate;border-spacing:8px}.sound-table th,.sound-table td{height:48px;border-radius:13px;text-align:center;font-weight:900;font-size:21px;vertical-align:middle}.sound-table th{background:#E8F4F4;color:#5AACAC}.sound-table td{background:#fff;border:1px solid rgba(90,172,172,.18);color:#1A3A5A}.sound-table .rowh{background:#F3F0FA;color:#7C6BC8}.chart-empty{opacity:.34;color:#8A9AB0}.chart-dash{display:inline-flex;align-items:center;justify-content:center;width:100%;height:100%;line-height:1}
 .chart-full{position:absolute;left:34px;right:34px;top:58px;bottom:22px}.chart-full-card{position:absolute;inset:0;background:#fff;border:1px solid rgba(90,172,172,.16);border-radius:20px;box-shadow:0 8px 26px rgba(90,172,172,.12);padding:10px}.sound-table-full{height:100%;border-spacing:8px;table-layout:fixed}.sound-table-full th,.sound-table-full td{height:auto;font-size:29px;border-radius:15px}.sound-table-full th{font-size:26px}.sound-table-full .rowh{font-size:31px}
 .word-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px 14px}.word-card{position:relative;background:#fff;border-radius:18px;padding:10px 8px 12px;text-align:center;border:1px solid rgba(90,172,172,.16);box-shadow:0 8px 24px rgba(90,172,172,.10);height:184px;overflow:visible}.word-card img{width:78px;height:78px;border-radius:12px;border:2px solid #5AACAC;object-fit:cover;background:#F4FAFA;margin-bottom:8px}.word-card .pinyin{font-size:17px;font-weight:900;color:#5AACAC;line-height:1.16}.word-card .hanzi{font-family:'Noto Sans SC';font-size:31px;line-height:1.12;margin-top:3px;color:#1A3A5A;font-weight:900}.word-card .vietnamese{font-size:12px;line-height:1.22;color:#5F7088;font-weight:700;margin-top:3px}
@@ -291,7 +291,7 @@ function objectivesSlide(vocabCount) {
   const goals = [
     'Học thanh mẫu <strong class="goal-hot">d t n l g k h</strong>.',
     'Học thanh mẫu <strong class="goal-hot">j q x</strong> và quy tắc <strong class="goal-hot">ü bỏ hai chấm</strong>.',
-    `Đọc đúng ${vocabCount} từ vựng, ưu tiên phát âm và hiểu nghĩa.`,
+    `Đọc đúng ${vocabCount} từ vựng.`,
   ];
   return slideShell({
     title: 'Mục tiêu học tập',
@@ -301,12 +301,12 @@ function objectivesSlide(vocabCount) {
   });
 }
 
-function dividerSlide({ title, zh, label, img, icon = 'sparkles' }) {
+function dividerSlide({ title, zh, label, img, icon = 'sparkles', superTitle = '' }) {
   return slideShell({
     title,
     icon,
     label,
-    content: `<div class="divider-left"><div class="divider-kicker">${esc(label)}</div><div class="divider-zh">${esc(zh)}</div><div class="divider-line"></div></div><div class="divider-photo"><img src="assets/photos/${img}" alt=""></div>`,
+    content: `<div class="divider-left">${superTitle ? `<div class="divider-super">${esc(superTitle)}</div>` : ''}<div class="divider-kicker">${esc(label)}</div><div class="divider-zh">${esc(zh)}</div><div class="divider-line"></div></div><div class="divider-photo"><img src="assets/photos/${img}" alt=""></div>`,
   });
 }
 
@@ -580,7 +580,7 @@ async function writeSlides(db, vocab, sets) {
 
   add('cover', coverSlide());
   add('objectives', objectivesSlide(vocab.length));
-  add('divider-review', dividerSlide({ title: 'Ôn bài 1', zh: '复习', label: 'ÔN BÀI 1', img: 'divider-review-page-03.png', icon: 'refresh-cw' }));
+  add('divider-review', dividerSlide({ title: 'Ôn bài 1', zh: '复习', label: 'ÔN BÀI 1', img: 'divider-review-page-03.png', icon: 'refresh-cw', superTitle: 'Khởi động' }));
   add('warmup-review', warmupSlide(db.warmup_activity.source_vocabulary));
   add('divider-initials-1', dividerSlide({ title: 'Thanh mẫu d t n l g k h', zh: '声母', label: 'THANH MẪU 1', img: 'divider-initials-1-page-05.png', icon: 'volume-2' }));
   add('initials-dtnlgkh', initialsSlide('d t n l g k h', chart1.initials, 'Đọc rõ vị trí đầu lưỡi và âm bật hơi.'));

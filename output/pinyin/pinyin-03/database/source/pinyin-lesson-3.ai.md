@@ -110,6 +110,17 @@
 |---|---|---|---|
 | `rule_l3_yi_bu_tone_sandhi` | P14 | 一不變調 | 一、不在特定語音環境中會改變聲調；練習目標是能正確朗讀與聽辨。 |
 
+### 一不變調細則
+
+| item_id | Page | Form | Spoken pinyin | Condition | Note |
+|---|---|---|---|---|---|
+| `rule_l3_yi_bu_tone_sandhi_yī_order` | P14 | 一 | yī | 讀順序時，例如星期一、第一、一樓 | 讀星期一、第一、一樓等順序用語時，一念一聲。 |
+| `rule_l3_yi_bu_tone_sandhi_yī_digit` | P14 | 一 | yī | 逐一讀數字 1，例如電話號碼或年份 | 讀電話號碼、年份、編號中的數字 1 時，通常念一聲。 |
+| `rule_l3_yi_bu_tone_sandhi_yī_yí` | P14 | 一 | yí | 後面接第四聲 | 一 + 四聲時常讀二聲。 |
+| `rule_l3_yi_bu_tone_sandhi_yī_yì` | P14 | 一 | yì | 後面接第一、二、三聲 | 一 + 非四聲時常讀四聲。 |
+| `rule_l3_yi_bu_tone_sandhi_bù_bú` | P14 | 不 | bú | 後面接第四聲 | 不 + 四聲時讀二聲。 |
+| `rule_l3_yi_bu_tone_sandhi_bù_bù` | P14 | 不 | bù | 其他情況 | 其他情況通常維持四聲。 |
+
 ## Vocabulary Set 1
 
 | item_id | Hanzi | Pinyin | Page | Practice Page | Practice Requirement |

@@ -409,6 +409,20 @@
         {
           "base_form": "一",
           "base_pinyin": "yī",
+          "condition": "讀順序時，例如星期一、第一、一樓",
+          "spoken_pinyin": "yī",
+          "note": "讀星期一、第一、一樓等順序用語時，一念一聲。"
+        },
+        {
+          "base_form": "一",
+          "base_pinyin": "yī",
+          "condition": "逐一讀數字 1，例如電話號碼或年份",
+          "spoken_pinyin": "yī",
+          "note": "讀電話號碼、年份、編號中的數字 1 時，通常念一聲。"
+        },
+        {
+          "base_form": "一",
+          "base_pinyin": "yī",
           "condition": "後面接第四聲",
           "spoken_pinyin": "yí",
           "note": "一 + 四聲時常讀二聲。"

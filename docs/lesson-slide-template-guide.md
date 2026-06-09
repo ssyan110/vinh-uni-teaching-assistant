@@ -68,6 +68,8 @@ Required pinyin section rhythm:
 - Appendix/input setup, when applicable
 - Closing
 
+For pinyin review sections, the `Ôn bài X` divider shows `Khởi động` above the `ÔN BÀI X` label.
+
 `Mục lục` and `Quy ước` slides are no longer used in future pinyin classroom decks. Source contents/rules can remain in database/review notes if useful, but they should not become classroom slides.
 
 Pinyin classroom slides do not show bottom-right `Trang ...` page indicators. Keep source page metadata in the database when useful, but do not render page indicators on pinyin slides.
