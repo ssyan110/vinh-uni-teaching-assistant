@@ -316,6 +316,16 @@ function dividerSlide({ title, zh, label, img, icon = 'sparkles', superTitle = '
   });
 }
 
+function yiBuDividerSlide() {
+  return slideShell({
+    title: 'Biến điệu của 一 và 不',
+    icon: 'wand-sparkles',
+    label: 'biến điệu của 一 và 不',
+    extraCss: `.divider-yi-bu-special .divider-kicker{font-size:22px;line-height:1.18;text-transform:none;letter-spacing:0;max-width:360px}.divider-yi-bu-special .divider-zh{font-size:56px;white-space:nowrap}`,
+    content: `<div class="divider-left divider-yi-bu-special"><div class="divider-kicker">biến điệu của 一 và 不</div><div class="divider-zh">一、不变调</div><div class="divider-line"></div></div><div class="divider-photo"><img src="assets/photos/divider-yi-bu-pinyin-03.png" alt=""></div>`,
+  });
+}
+
 function warmupSlide(reviewItems) {
   const pairs = reviewItems.slice(0, 6).map((item) => {
     const zh = simplify(item.hanzi);
@@ -443,10 +453,10 @@ function imageMatchingPracticeSlide({ title, instruction, pairs, partLabel = '',
 
 function ruleYiFirstToneSlide() {
   return slideShell({
-    title: '一 đọc yī',
+    title: 'Khi nào 一 đọc thanh 1?',
     icon: 'wand-sparkles',
     label: 'Biến điệu',
-    content: `<div class="content yi-first-content"><div class="yi-first-title"><span>一</span> đọc <b>yī</b></div><div class="yi-first-grid">${[
+    content: `<div class="content yi-first-content"><div class="yi-first-title">Khi nào <span>一</span> đọc thanh 1?</div><div class="yi-first-grid">${[
       {
         title: 'Đọc thứ tự',
         note: 'Từ chỉ thứ tự.',
@@ -661,23 +671,23 @@ async function writeSlides(db, vocab, sets) {
   add('objectives', objectivesSlide(vocab.length));
   add('divider-review', dividerSlide({ title: 'Ôn bài 2', zh: '复习', label: 'ÔN BÀI 2', img: 'divider-review.png', icon: 'refresh-cw', superTitle: 'Khởi động' }));
   add('warmup-review', warmupSlide(db.warmup_activity.source_vocabulary));
-  add('divider-initials-1', dividerSlide({ title: 'Thanh mẫu zh ch sh r', zh: '翘舌音', label: 'THANH MẪU 1', img: 'divider-initials.png', icon: 'volume-2' }));
+  add('divider-initials-1', dividerSlide({ title: 'Thanh mẫu zh ch sh r', zh: '翘舌音', label: 'THANH MẪU 1', img: 'divider-initials-zhchshr.png', icon: 'volume-2' }));
   add('initials-zhchshr', initialsSlide('zh ch sh r', chart1.initials));
   add('chart-zhchshr', chartSlide(chart1, 'zh ch sh r + a o e i u ü'));
   add('practice-zhchshr-tones', tonePracticeChartSlide(chart1, 'Luyện đọc zh ch sh r', toneRetroflex));
-  add('divider-vocabulary-1', dividerSlide({ title: 'Từ vựng 1', zh: '词汇', label: 'TỪ VỰNG 1', img: 'divider-vocabulary.png', icon: 'images' }));
+  add('divider-vocabulary-1', dividerSlide({ title: 'Từ vựng 1', zh: '词汇', label: 'TỪ VỰNG 1', img: 'divider-vocabulary-pinyin-03.png', icon: 'images' }));
   add('vocabulary-1', vocabularyGridSlide(set1, 'Từ vựng 1'));
   set1.items.forEach((item, i) => add(`flash-${item.record_id.toLowerCase()}-${slug(item.pinyin)}`, flashcardSlide(item, i, set1.items.length, 1)));
   addVocabPractice('practice-vocabulary-1', set1, 'Luyện từ vựng 1');
-  add('divider-initials-2', dividerSlide({ title: 'Thanh mẫu z c s', zh: '平舌音', label: 'THANH MẪU 2', img: 'divider-initials.png', icon: 'volume-2' }));
+  add('divider-initials-2', dividerSlide({ title: 'Thanh mẫu z c s', zh: '平舌音', label: 'THANH MẪU 2', img: 'divider-initials-zcs.png', icon: 'volume-2' }));
   add('initials-zcs', initialsSlide('z c s', chart2.initials));
   add('chart-zcs', chartSlide(chart2, 'z c s + a o e i u ü'));
   add('practice-zcs-tones', tonePracticeChartSlide(chart2, 'Luyện đọc z c s', toneDental));
-  add('divider-vocabulary-2', dividerSlide({ title: 'Từ vựng 2', zh: '词汇', label: 'TỪ VỰNG 2', img: 'divider-vocabulary.png', icon: 'images' }));
+  add('divider-vocabulary-2', dividerSlide({ title: 'Từ vựng 2', zh: '词汇', label: 'TỪ VỰNG 2', img: 'divider-vocabulary-pinyin-03.png', icon: 'images' }));
   add('vocabulary-2', vocabularyGridSlide(set2, 'Từ vựng 2'));
   set2.items.forEach((item, i) => add(`flash-${item.record_id.toLowerCase()}-${slug(item.pinyin)}`, flashcardSlide(item, i, set2.items.length, 2)));
   addVocabPractice('practice-vocabulary-2', set2, 'Luyện từ vựng 2');
-  add('divider-yi-bu', dividerSlide({ title: 'Một và không biến điệu', zh: '一不变调', label: 'BIẾN ĐIỆU', img: 'divider-tones.png', icon: 'wand-sparkles' }));
+  add('divider-yi-bu', yiBuDividerSlide());
   add('rule-yi-first-tone', ruleYiFirstToneSlide());
   add('rule-yi-sandhi', ruleYiSlide());
   add('rule-bu-sandhi', ruleBuSlide());
