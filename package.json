@@ -25,6 +25,11 @@
     "pinyin:l1:steps10-12": "node scripts/generate-pinyin-01-steps10-12.mjs",
     "pinyin:l2:steps10-13": "node scripts/generate-pinyin-02-steps10-13.mjs",
     "pinyin:l3:steps10-13": "node scripts/generate-pinyin-03-steps10-13.mjs",
+    "pinyin:l4:steps10-13": "node scripts/generate-pinyin-04-steps10-13.mjs",
+    "pinyin:remaining:steps10-13": "node scripts/generate-pinyin-remaining-steps10-13.mjs",
+    "pinyin:l5:steps10-13": "node scripts/generate-pinyin-remaining-steps10-13.mjs 05",
+    "pinyin:l6:steps10-13": "node scripts/generate-pinyin-remaining-steps10-13.mjs 06",
+    "pinyin:l7:steps10-13": "node scripts/generate-pinyin-remaining-steps10-13.mjs 07",
     "create:deck": "node scripts/create-teacher-deck.mjs"
   },
   "dependencies": {

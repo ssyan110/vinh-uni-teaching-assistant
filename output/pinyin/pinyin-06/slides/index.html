@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pinyin Bài 6</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#F5F7FA;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:18px 24px 104px 252px;color:#1A3A5A;overflow:auto}
+.header{text-align:center;margin-bottom:16px}.header h1{font-size:20pt;font-weight:800}.header .subtitle{margin-top:5px;font-size:11pt;color:#8A9AB0}
+.stage{position:relative;width:960px;height:540px;background:#000;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(90,172,172,.12);transform-origin:top center}
+.slide-surface{position:absolute;inset:0;width:960px;height:540px;transform-origin:center center}.slide-surface iframe,.slide-surface canvas{position:absolute;inset:0;width:960px;height:540px;border:0}.slide-surface iframe{display:block;pointer-events:none}.slide-surface canvas{z-index:10;pointer-events:none}.slide-surface canvas.active{pointer-events:auto}.stage-video-link{display:none;position:absolute;left:459px;top:91px;width:42px;height:42px;border-radius:50%;background:transparent;color:transparent;align-items:center;justify-content:center;box-shadow:none;z-index:22;text-decoration:none;pointer-events:auto;opacity:0}.stage-video-link.show{display:flex}.stage-video-link svg{display:none}
+.thumb-sidebar{position:fixed;left:18px;top:18px;bottom:104px;z-index:850;width:214px;display:flex;flex-direction:column;background:rgba(255,255,255,.97);border:1px solid rgba(208,216,224,.95);border-radius:14px;box-shadow:0 8px 28px rgba(26,58,90,.14);overflow:hidden;transition:transform .22s ease,opacity .22s ease,background .22s ease;backdrop-filter:blur(12px)}
+.thumb-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:11px 12px 10px;border-bottom:1px solid rgba(208,216,224,.8)}
+.thumb-title{font-size:12px;font-weight:800;color:#1A3A5A}.thumb-total{font-size:11px;font-weight:700;color:#8A9AB0}
+.thumb-list{flex:1;overflow-y:auto;padding:10px 9px 12px;scrollbar-width:thin;scrollbar-color:#B9C5D4 transparent}
+.thumb-button{width:100%;display:grid;grid-template-columns:28px 1fr;gap:8px;align-items:start;margin:0 0 9px;padding:6px;border:1px solid transparent;border-radius:8px;background:transparent;color:#1A3A5A;cursor:pointer;font-family:inherit;text-align:left}
+.thumb-button:hover{background:#F0F5F9;border-color:#D0D8E0}.thumb-button.active{background:#E6F4F4;border-color:#5AACAC;box-shadow:0 0 0 1px rgba(90,172,172,.2)}
+.thumb-number{height:22px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#8A9AB0}.thumb-button.active .thumb-number{color:#1A3A5A}
+.thumb-preview{position:relative;width:144px;height:81px;background:#fff;border-radius:5px;overflow:hidden;box-shadow:0 1px 5px rgba(26,58,90,.14)}
+.thumb-preview iframe{position:absolute;left:0;top:0;width:960px;height:540px;border:0;transform:scale(.15);transform-origin:top left;pointer-events:none}
+.thumb-name{grid-column:2;font-size:10px;font-weight:700;line-height:1.25;color:#6E7F93;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.controls{position:fixed;left:50%;bottom:max(12px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:900;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;width:max-content;max-width:calc(100vw - 24px);padding:9px 12px;background:rgba(255,255,255,.96);border:1px solid rgba(208,216,224,.9);border-radius:14px;box-shadow:0 8px 28px rgba(26,58,90,.16);backdrop-filter:blur(10px)}
+.btn{background:#5AACAC;color:#fff;border:0;border-radius:8px;padding:7px 14px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit}.btn:hover{opacity:.86}.btn:disabled{opacity:.35}.btn.active{background:#1A3A5A}.btn.secondary{background:#8A9AB0}.btn.danger{background:#E06060}.btn.download{background:#7B61FF}.counter{font-size:13px;color:#8A9AB0;min-width:58px;text-align:center;font-weight:700}.separator{width:1px;height:24px;background:#D0D8E0}.swatch{width:22px;height:22px;border-radius:50%;border:2px solid transparent;cursor:pointer}.swatch.selected{border-color:#1A3A5A;transform:scale(1.12)}.text-tools{display:inline-flex;align-items:center;gap:6px}.text-color{width:22px;height:22px;border-radius:50%;border:2px solid rgba(255,255,255,.9);box-shadow:0 0 0 1px rgba(26,58,90,.18);cursor:pointer}.text-color.active{box-shadow:0 0 0 2px #1A3A5A}.text-size{height:28px;border:1px solid #D0D8E0;border-radius:8px;background:#fff;color:#1A3A5A;font:700 12px 'Inter',sans-serif;padding:0 6px}
+.eraser-wrap{position:relative;display:inline-flex;align-items:center}.eraser-menu{display:none;position:absolute;left:50%;bottom:calc(100% + 9px);transform:translateX(-50%);gap:6px;padding:6px;background:rgba(255,255,255,.98);border:1px solid rgba(208,216,224,.95);border-radius:10px;box-shadow:0 10px 28px rgba(26,58,90,.2);z-index:1200;white-space:nowrap}.eraser-menu.show{display:flex}.eraser-menu::after{content:'';position:absolute;left:50%;bottom:-6px;width:10px;height:10px;background:rgba(255,255,255,.98);border-right:1px solid rgba(208,216,224,.95);border-bottom:1px solid rgba(208,216,224,.95);transform:translateX(-50%) rotate(45deg)}.eraser-menu .btn{position:relative;z-index:1;padding:6px 11px;font-size:11px;background:#5AACAC}.eraser-menu .btn.active{background:#1A3A5A}.float-toolbar .eraser-menu{bottom:calc(100% + 10px)}
+.text-annotation{position:absolute;z-index:15;width:220px;min-height:42px;background:transparent;border:0;border-radius:0;padding:4px 6px;color:#000;font-size:24px;line-height:1.2;outline:none;resize:both;overflow:auto;box-shadow:none;cursor:move;user-select:text}.text-annotation:focus{outline:none}.text-annotation.dragging{opacity:.86;user-select:none}
+body.presenting{background:#000;padding:0;overflow:hidden}body.presenting .header,body.presenting .controls{display:none}body.presenting .stage{width:100vw;height:100vh;border-radius:0;box-shadow:none;transform:none!important;display:flex;align-items:center;justify-content:center}body.presenting .slide-surface{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(var(--present-scale,1));transform-origin:center center}
+body.presenting .thumb-sidebar{left:0;top:0;bottom:0;width:226px;border-radius:0 12px 12px 0;background:rgba(15,26,38,.9);border-color:rgba(255,255,255,.14);box-shadow:0 12px 36px rgba(0,0,0,.34);transform:translateX(-202px);opacity:.34;z-index:1100}
+body.presenting .thumb-sidebar:hover,body.presenting .thumb-sidebar.open{transform:translateX(0);opacity:1}
+body.presenting .thumb-sidebar::after{content:'';position:absolute;right:7px;top:50%;width:4px;height:56px;border-radius:999px;background:rgba(255,255,255,.55);transform:translateY(-50%)}
+body.presenting .thumb-sidebar:hover::after,body.presenting .thumb-sidebar.open::after{opacity:0}
+body.presenting .thumb-head{border-bottom-color:rgba(255,255,255,.12)}body.presenting .thumb-title{color:#fff}body.presenting .thumb-total{color:rgba(255,255,255,.66)}
+body.presenting .thumb-button{color:#fff}.thumb-sidebar:not(:hover):not(.open) .thumb-button:focus{outline:none}body.presenting .thumb-button:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22)}body.presenting .thumb-button.active{background:rgba(90,172,172,.28);border-color:#5AACAC}
+body.presenting .thumb-number,body.presenting .thumb-name{color:rgba(255,255,255,.72)}body.presenting .thumb-button.active .thumb-number{color:#fff}
+.float-toolbar{display:none;position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:1000;align-items:center;gap:8px;padding:8px 12px;border-radius:12px;background:rgba(26,58,90,.92);box-shadow:0 4px 20px rgba(0,0,0,.3)}body.presenting .float-toolbar{display:flex}.float-toolbar .btn{padding:5px 11px;font-size:11px}.float-toolbar .counter{color:#fff}.float-toolbar .separator{background:rgba(255,255,255,.28)}
+.export-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.58);align-items:center;justify-content:center}.export-overlay.show{display:flex}.export-box{background:#fff;border-radius:16px;padding:28px 36px;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,.2);max-width:460px}.export-box p{margin-top:8px;color:#8A9AB0;font-size:13px;line-height:1.45}.export-progress{margin-top:14px;width:260px;height:6px;background:#E8ECF8;border-radius:999px;overflow:hidden}.export-progress-bar{height:100%;background:#5AACAC;width:0%;transition:width .2s}.export-overlay.error .export-progress-bar{background:#E06060}.export-close{display:none;margin:16px auto 0}.export-overlay.error .export-close{display:inline-block}
+@media (max-width:900px){body{padding-left:24px}.thumb-sidebar{left:0;top:0;bottom:0;width:214px;border-radius:0 12px 12px 0;transform:translateX(-196px);opacity:.46}.thumb-sidebar:hover,.thumb-sidebar.open{transform:translateX(0);opacity:1}}
+</style>
+</head>
+<body>
+<div class="header"><h1>Pinyin Bài 6</h1><div class="subtitle">51 slides · Press <strong>F</strong> for presentation mode</div></div>
+<aside class="thumb-sidebar" id="thumbSidebar" aria-label="Danh sách slide">
+  <div class="thumb-head"><div class="thumb-title">Mục lục</div><div class="thumb-total">51</div></div>
+  <div class="thumb-list" id="thumbList"></div>
+</aside>
+<div class="stage" id="stage"><div class="slide-surface" id="slideSurface"><iframe id="slideFrame" src="01-cover.html"></iframe><canvas id="drawCanvas"></canvas><a class="stage-video-link" id="stageVideoLink" href="#" target="_blank" rel="noopener noreferrer" aria-label="Mở video viết chữ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></a></div></div>
+<div class="controls" id="controls">
+  <button class="btn" onclick="prev()">← Prev</button><span class="counter" id="counter">1 / 51</span><button class="btn" onclick="next()">Next →</button>
+  <div class="separator"></div><button class="btn secondary" onclick="undo()">↩ Undo</button><button class="btn secondary" id="penBtn" onclick="togglePen()">✏️ Pen</button>
+  <span class="swatch" style="background:#E04040" data-color="#E04040" onclick="pickColor(this)"></span><span class="swatch selected" style="background:#1A3A5A" data-color="#1A3A5A" onclick="pickColor(this)"></span><span class="swatch" style="background:#5AACAC" data-color="#5AACAC" onclick="pickColor(this)"></span><span class="swatch" style="background:#F5A623" data-color="#F5A623" onclick="pickColor(this)"></span>
+  <button class="btn secondary" id="highBtn" onclick="toggleHighlighter()">🖍️ High</button><button class="btn secondary" id="lineBtn" onclick="toggleShape('line')">Line</button><button class="btn secondary" id="circleBtn" onclick="toggleShape('circle')">Circle</button><button class="btn secondary" id="rectBtn" onclick="toggleShape('rect')">Box</button><span class="eraser-wrap"><button class="btn secondary" id="eraseBtn" onclick="toggleEraserMenu('eraserMenu')">Eraser ▾</button><span class="eraser-menu" id="eraserMenu"><button class="btn" id="pixelEraserBtn" onclick="setEraser('pixel')">Pixel</button><button class="btn" id="objectEraserBtn" onclick="setEraser('object')">Object</button></span></span><button class="btn secondary" id="textBtn" onclick="toggleText()">T Text</button><span class="text-tools"><button class="text-color active" style="background:#000" data-text-color="#000000" onclick="pickTextColor(this)" title="Black"></button><button class="text-color" style="background:#1A5BFF" data-text-color="#1A5BFF" onclick="pickTextColor(this)" title="Blue"></button><button class="text-color" style="background:#E04040" data-text-color="#E04040" onclick="pickTextColor(this)" title="Red"></button><select class="text-size" onchange="setTextSize(this.value)" title="Text size"><option value="20">20</option><option value="24" selected>24</option><option value="30">30</option><option value="36">36</option><option value="44">44</option><option value="56">56</option></select></span><button class="btn danger" onclick="clearSlide()">Clear</button>
+  <div class="separator"></div><button class="btn download" onclick="exportPDF()">📥 PDF</button><button class="btn" onclick="enterPresent()">▶ Present</button>
+</div>
+<div class="float-toolbar">
+  <button class="btn" onclick="prev()">←</button><span class="counter" id="counterFloat">1 / 51</span><button class="btn" onclick="next()">→</button>
+  <div class="separator"></div><button class="btn" onclick="undo()">↩</button><button class="btn" id="penBtnFloat" onclick="togglePen()">✏️</button><button class="btn" id="highBtnFloat" onclick="toggleHighlighter()">🖍️</button><button class="btn" id="lineBtnFloat" onclick="toggleShape('line')">／</button><button class="btn" id="circleBtnFloat" onclick="toggleShape('circle')">○</button><button class="btn" id="rectBtnFloat" onclick="toggleShape('rect')">□</button><span class="eraser-wrap"><button class="btn" id="eraseBtnFloat" onclick="toggleEraserMenu('eraserMenuFloat')">Eraser ▾</button><span class="eraser-menu" id="eraserMenuFloat"><button class="btn" id="pixelEraserBtnFloat" onclick="setEraser('pixel')">Pixel</button><button class="btn" id="objectEraserBtnFloat" onclick="setEraser('object')">Object</button></span></span><button class="btn" id="textBtnFloat" onclick="toggleText()">T</button><span class="text-tools"><button class="text-color active" style="background:#000" data-text-color="#000000" onclick="pickTextColor(this)" title="Black"></button><button class="text-color" style="background:#1A5BFF" data-text-color="#1A5BFF" onclick="pickTextColor(this)" title="Blue"></button><button class="text-color" style="background:#E04040" data-text-color="#E04040" onclick="pickTextColor(this)" title="Red"></button><select class="text-size" onchange="setTextSize(this.value)" title="Text size"><option value="20">20</option><option value="24" selected>24</option><option value="30">30</option><option value="36">36</option><option value="44">44</option><option value="56">56</option></select></span><button class="btn danger" onclick="clearSlide()">✕</button><button class="btn download" onclick="exportPDF()">📥</button><button class="btn secondary" onclick="exitPresent()">Esc</button>
+</div>
+<div class="export-overlay" id="exportOverlay"><div class="export-box"><h3 id="exportTitle">Exporting PDF...</h3><p id="exportStatus">Rendering slide 1 / 51</p><div class="export-progress"><div class="export-progress-bar" id="exportBar"></div></div><p style="margin-top:10px;font-size:11px;color:#B0BEC5">Rendering live from slides — always up to date</p><button class="btn secondary export-close" id="exportClose" onclick="hideExportOverlay()">Close</button></div></div>
+<script>
+const MANIFEST = [
+  "01-cover.html",
+  "02-objectives.html",
+  "03-divider-review.html",
+  "04-warmup-review.html",
+  "05-divider-finals-1.html",
+  "06-finals-1.html",
+  "07-chart-1-1.html",
+  "08-chart-1-2.html",
+  "09-chart-1-3.html",
+  "10-practice-finals-1.html",
+  "11-divider-vocabulary-1.html",
+  "12-vocabulary-1.html",
+  "13-flash-v001-jia.html",
+  "14-flash-v002-xia.html",
+  "15-flash-v003-jiao.html",
+  "16-flash-v004-xiao.html",
+  "17-flash-v005-dian.html",
+  "18-flash-v006-qian.html",
+  "19-flash-v007-xiang.html",
+  "20-flash-v008-qiong.html",
+  "21-practice-vocabulary-1.html",
+  "22-divider-finals-2.html",
+  "23-finals-2.html",
+  "24-chart-2-1.html",
+  "25-chart-2-2.html",
+  "26-chart-2-3.html",
+  "27-practice-finals-2.html",
+  "28-divider-vocabulary-2.html",
+  "29-vocabulary-2.html",
+  "30-flash-v009-hua.html",
+  "31-flash-v010-huanggua.html",
+  "32-flash-v011-duo.html",
+  "33-flash-v012-shuo.html",
+  "34-flash-v013-huai.html",
+  "35-flash-v014-kuai.html",
+  "36-flash-v015-chuan.html",
+  "37-flash-v016-chuang.html",
+  "38-practice-vocabulary-2.html",
+  "39-divider-rule.html",
+  "40-rule-rule-l6-jqx-uan-umlaut.html",
+  "41-divider-vocabulary-3.html",
+  "42-vocabulary-3.html",
+  "43-flash-v017-chunjuan.html",
+  "44-flash-v018-anquan.html",
+  "45-flash-v019-xuan.html",
+  "46-practice-vocabulary-3.html",
+  "47-divider-review-final.html",
+  "48-review-listening-choice.html",
+  "49-review-fill-blank.html",
+  "50-review-vocabulary-match.html",
+  "51-closing.html"
+];
+let current=0, penActive=false, highlighterActive=false, eraserMode=null, textMode=false, shapeMode=null, drawing=false, penColor='#1A3A5A', textColor='#000000', textSize=24, activeTextEl=null;
+let shapeStart=null, shapeSnapshot=null;
+const frame=document.getElementById('slideFrame'), stage=document.getElementById('stage'), slideSurface=document.getElementById('slideSurface'), canvas=document.getElementById('drawCanvas'), ctx=canvas.getContext('2d');
+const stageVideoLink=document.getElementById('stageVideoLink');
+const strokeVideoLinks={40:'https://www.youtube.com/watch?v=XwSzIyliD30',45:'https://www.youtube.com/watch?v=uTBt1Kr-xGQ',46:'https://www.youtube.com/watch?v=WdTgD-a5Eqk'};
+const thumbSidebar=document.getElementById('thumbSidebar'), thumbList=document.getElementById('thumbList');
+const slideDrawings={}, slideHistory={}, slideText={};
+let thumbObserver=null;
+function resizeCanvas(){const dpr=window.devicePixelRatio||1;canvas.width=960*dpr;canvas.height=540*dpr;canvas.style.width='960px';canvas.style.height='540px';ctx.setTransform(dpr,0,0,dpr,0,0);restoreCanvas();resizeStage();}
+function positionVideoLink(){if(!stageVideoLink)return;const x=459,y=91,size=42;stageVideoLink.style.position='absolute';stageVideoLink.style.left=x+'px';stageVideoLink.style.top=y+'px';stageVideoLink.style.width=size+'px';stageVideoLink.style.height=size+'px';stageVideoLink.style.transform='none';}
+function updateVideoLink(){if(!stageVideoLink)return;const url=strokeVideoLinks[current];stageVideoLink.classList.toggle('show',!!url);if(url)stageVideoLink.href=url;positionVideoLink();}
+function resizeStage(){if(document.body.classList.contains('presenting')){const s=Math.min(window.innerWidth/960,window.innerHeight/540);document.documentElement.style.setProperty('--present-scale',s);positionVideoLink();return;}const sidebarSpace=window.innerWidth>900?284:48;const s=Math.min(1,(window.innerWidth-sidebarSpace)/960,(window.innerHeight-204)/540);stage.style.transform='scale('+Math.max(.48,s)+')';positionVideoLink();}
+function saveText(){slideText[current]=Array.from(slideSurface.querySelectorAll('.text-annotation')).map(el=>({left:el.style.left,top:el.style.top,width:el.style.width,height:el.style.height,text:el.innerText,color:el.style.color||'#000000',fontSize:el.style.fontSize||'24px'}));}
+function saveCanvas(){if(shapeStart&&shapeSnapshot)cancelShapeDraft();slideDrawings[current]=canvas.toDataURL();saveText();}
+function restoreCanvas(){ctx.setTransform(1,0,0,1,0,0);ctx.clearRect(0,0,canvas.width,canvas.height);const dpr=window.devicePixelRatio||1;ctx.setTransform(dpr,0,0,dpr,0,0);if(slideDrawings[current]){const img=new Image();img.onload=()=>{ctx.setTransform(1,0,0,1,0,0);ctx.clearRect(0,0,canvas.width,canvas.height);ctx.drawImage(img,0,0,canvas.width,canvas.height);ctx.setTransform(dpr,0,0,dpr,0,0);};img.src=slideDrawings[current];}}
+function restoreText(){slideSurface.querySelectorAll('.text-annotation').forEach(el=>el.remove());(slideText[current]||[]).forEach(d=>createTextBox(d));}
+function slideName(file){return file.replace(/^\d+-/,'').replace(/\.html$/,'').replace(/-/g,' ');}
+function loadThumb(iframe){if(iframe&&!iframe.getAttribute('src'))iframe.src=iframe.dataset.src;}
+function buildThumbnails(){thumbList.innerHTML='';if('IntersectionObserver' in window)thumbObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)loadThumb(entry.target.querySelector('iframe'));}),{root:thumbList,rootMargin:'240px 0px'});MANIFEST.forEach((file,i)=>{const btn=document.createElement('button');btn.className='thumb-button';btn.type='button';btn.setAttribute('aria-label','Slide '+(i+1)+': '+slideName(file));btn.addEventListener('click',()=>goToSlide(i));const num=document.createElement('span');num.className='thumb-number';num.textContent=String(i+1).padStart(2,'0');const preview=document.createElement('span');preview.className='thumb-preview';const iframe=document.createElement('iframe');iframe.dataset.src=file;iframe.title='Slide '+(i+1);iframe.tabIndex=-1;iframe.loading='lazy';preview.appendChild(iframe);const name=document.createElement('span');name.className='thumb-name';name.textContent=slideName(file);btn.append(num,preview,name);thumbList.appendChild(btn);if(i<6||!thumbObserver)loadThumb(iframe);if(thumbObserver)thumbObserver.observe(btn);});}
+function updateThumbnails(){const buttons=thumbList.querySelectorAll('.thumb-button');buttons.forEach((btn,i)=>{btn.classList.toggle('active',i===current);btn.setAttribute('aria-current',i===current?'true':'false');});const active=buttons[current];if(active){loadThumb(active.querySelector('iframe'));requestAnimationFrame(()=>active.scrollIntoView({block:'nearest'}));}}
+function goToSlide(index){if(index===current)return;saveCanvas();current=index;update();}
+function update(){frame.src=MANIFEST[current];document.getElementById('counter').textContent=(current+1)+' / '+MANIFEST.length;document.getElementById('counterFloat').textContent=(current+1)+' / '+MANIFEST.length;updateThumbnails();updateVideoLink();setTimeout(()=>{restoreCanvas();restoreText();},80);}
+function prev(){if(current>0){saveCanvas();current--;update();}}function next(){if(current<MANIFEST.length-1){saveCanvas();current++;update();}}
+function pushUndo(){(slideHistory[current]||(slideHistory[current]=[])).push(canvas.toDataURL());if(slideHistory[current].length>40)slideHistory[current].shift();}
+function undo(){const h=slideHistory[current];if(!h||!h.length)return;const img=new Image();img.onload=()=>{ctx.setTransform(1,0,0,1,0,0);ctx.clearRect(0,0,canvas.width,canvas.height);ctx.drawImage(img,0,0,canvas.width,canvas.height);ctx.setTransform(window.devicePixelRatio||1,0,0,window.devicePixelRatio||1,0,0);saveCanvas();};img.src=h.pop();}
+function closeEraserMenus(){document.querySelectorAll('.eraser-menu').forEach(menu=>menu.classList.remove('show'));}
+function toggleEraserMenu(id){if(eraserMode!==null){setEraser(null);return;}const menu=document.getElementById(id);if(!menu)return;const show=!menu.classList.contains('show');closeEraserMenus();if(show)menu.classList.add('show');}
+function resetShapeDraft(){shapeStart=null;shapeSnapshot=null;}
+function cancelShapeDraft(){if(shapeStart&&shapeSnapshot)restoreSnapshot(shapeSnapshot);resetShapeDraft();}
+function setEraser(mode){cancelShapeDraft();eraserMode=mode;penActive=false;highlighterActive=false;textMode=false;shapeMode=null;closeEraserMenus();setTools();}
+function setTools(){const eraserActive=eraserMode!==null, shapeActive=shapeMode!==null, any=penActive||highlighterActive||eraserActive||shapeActive;canvas.classList.toggle('active',any);canvas.style.cursor=eraserMode==='object'?'pointer':eraserActive?'cell':any?'crosshair':'default';['penBtn','penBtnFloat'].forEach(id=>document.getElementById(id)?.classList.toggle('active',penActive));['highBtn','highBtnFloat'].forEach(id=>document.getElementById(id)?.classList.toggle('active',highlighterActive));['lineBtn','lineBtnFloat'].forEach(id=>document.getElementById(id)?.classList.toggle('active',shapeMode==='line'));['circleBtn','circleBtnFloat'].forEach(id=>document.getElementById(id)?.classList.toggle('active',shapeMode==='circle'));['rectBtn','rectBtnFloat'].forEach(id=>document.getElementById(id)?.classList.toggle('active',shapeMode==='rect'));['eraseBtn','eraseBtnFloat'].forEach(id=>document.getElementById(id)?.classList.toggle('active',eraserActive));['pixelEraserBtn','pixelEraserBtnFloat'].forEach(id=>document.getElementById(id)?.classList.toggle('active',eraserMode==='pixel'));['objectEraserBtn','objectEraserBtnFloat'].forEach(id=>document.getElementById(id)?.classList.toggle('active',eraserMode==='object'));['textBtn','textBtnFloat'].forEach(id=>document.getElementById(id)?.classList.toggle('active',textMode));}
+function togglePen(){cancelShapeDraft();penActive=!penActive;highlighterActive=false;eraserMode=null;textMode=false;shapeMode=null;closeEraserMenus();setTools();}function toggleHighlighter(){cancelShapeDraft();highlighterActive=!highlighterActive;penActive=false;eraserMode=null;textMode=false;shapeMode=null;closeEraserMenus();setTools();}function toggleEraser(){setEraser(eraserMode?null:'pixel');}function toggleText(){cancelShapeDraft();textMode=!textMode;penActive=false;highlighterActive=false;eraserMode=null;shapeMode=null;closeEraserMenus();setTools();}
+function toggleShape(mode){cancelShapeDraft();shapeMode=shapeMode===mode?null:mode;penActive=false;highlighterActive=false;eraserMode=null;textMode=false;closeEraserMenus();setTools();}
+function pickColor(el){penColor=el.dataset.color;document.querySelectorAll('.swatch').forEach(s=>s.classList.toggle('selected',s.dataset.color===penColor));if(!penActive&&!highlighterActive&&!shapeMode){penActive=true;eraserMode=null;textMode=false;setTools();}}
+function applyTextStyle(){if(!activeTextEl)return;activeTextEl.style.color=textColor;activeTextEl.style.fontSize=textSize+'px';saveText();}
+function pickTextColor(el){textColor=el.dataset.textColor;document.querySelectorAll('.text-color').forEach(btn=>btn.classList.toggle('active',btn.dataset.textColor===textColor));applyTextStyle();}
+function setTextSize(value){textSize=Number(value)||24;document.querySelectorAll('.text-size').forEach(sel=>{sel.value=String(textSize);});applyTextStyle();}
+function clearSlide(){pushUndo();ctx.clearRect(0,0,960,540);delete slideDrawings[current];slideSurface.querySelectorAll('.text-annotation').forEach(el=>el.remove());delete slideText[current];}
+function getPos(e){const r=canvas.getBoundingClientRect();return{x:(e.clientX-r.left)/r.width*960,y:(e.clientY-r.top)/r.height*540};}
+function captureCanvas(){return ctx.getImageData(0,0,canvas.width,canvas.height);}
+function restoreSnapshot(snapshot){if(!snapshot)return;const dpr=window.devicePixelRatio||1;ctx.setTransform(1,0,0,1,0,0);ctx.putImageData(snapshot,0,0);ctx.setTransform(dpr,0,0,dpr,0,0);}
+function drawShape(from,to){ctx.globalCompositeOperation='source-over';ctx.globalAlpha=1;ctx.strokeStyle=penColor;ctx.lineWidth=4;ctx.lineCap='round';ctx.lineJoin='round';ctx.beginPath();if(shapeMode==='line'){ctx.moveTo(from.x,from.y);ctx.lineTo(to.x,to.y);}else if(shapeMode==='circle'){const x=Math.min(from.x,to.x),y=Math.min(from.y,to.y),w=Math.abs(to.x-from.x),h=Math.abs(to.y-from.y);ctx.ellipse(x+w/2,y+h/2,w/2,h/2,0,0,Math.PI*2);}else if(shapeMode==='rect'){ctx.rect(from.x,from.y,to.x-from.x,to.y-from.y);}ctx.stroke();}
+function startDraw(e){if(shapeMode){const p=getPos(e);if(shapeMode==='line'){if(!shapeStart){shapeStart=p;shapeSnapshot=captureCanvas();return;}pushUndo();restoreSnapshot(shapeSnapshot);drawShape(shapeStart,p);resetShapeDraft();saveCanvas();return;}drawing=true;shapeStart=p;shapeSnapshot=captureCanvas();pushUndo();return;}if(!penActive&&!highlighterActive&&eraserMode===null)return;drawing=true;pushUndo();const p=getPos(e);ctx.beginPath();ctx.moveTo(p.x,p.y);}
+function draw(e){const p=getPos(e);if(shapeMode){if(shapeMode==='line'&&shapeStart){restoreSnapshot(shapeSnapshot);drawShape(shapeStart,p);return;}if(!drawing||!shapeStart)return;restoreSnapshot(shapeSnapshot);drawShape(shapeStart,p);return;}if(!drawing)return;const eraserActive=eraserMode!==null;ctx.globalCompositeOperation=eraserActive?'destination-out':'source-over';ctx.globalAlpha=highlighterActive?0.3:1;ctx.strokeStyle=penColor;ctx.lineWidth=eraserMode==='object'?42:eraserActive?28:highlighterActive?18:3;ctx.lineCap='round';ctx.lineJoin='round';ctx.lineTo(p.x,p.y);ctx.stroke();ctx.beginPath();ctx.moveTo(p.x,p.y);}
+function endDraw(e){if(shapeMode){if(!drawing||!shapeStart||!e)return;drawing=false;const p=getPos(e);restoreSnapshot(shapeSnapshot);drawShape(shapeStart,p);resetShapeDraft();saveCanvas();return;}if(!drawing)return;drawing=false;ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';saveCanvas();}
+canvas.addEventListener('mousedown',startDraw);canvas.addEventListener('mousemove',draw);canvas.addEventListener('mouseup',endDraw);canvas.addEventListener('mouseleave',endDraw);
+stageVideoLink?.addEventListener('click',e=>e.stopPropagation());
+stage.addEventListener('click',e=>{if(textMode){const r=slideSurface.getBoundingClientRect();createTextBox({left:((e.clientX-r.left)/r.width*960)+'px',top:((e.clientY-r.top)/r.height*540)+'px',width:'220px',height:'64px',text:'',color:textColor,fontSize:textSize+'px'});textMode=false;setTools();return;}if(!penActive&&!highlighterActive&&eraserMode===null&&shapeMode===null)frame.contentWindow?.postMessage({type:'reveal-next'},'*');});
+function attachTextDrag(el){let start=null,dragging=false;el.addEventListener('click',e=>e.stopPropagation());el.addEventListener('input',saveText);el.addEventListener('focus',()=>{activeTextEl=el;textColor=rgbToHex(getComputedStyle(el).color);textSize=parseInt(getComputedStyle(el).fontSize,10)||24;document.querySelectorAll('.text-color').forEach(btn=>btn.classList.toggle('active',btn.dataset.textColor.toLowerCase()===textColor.toLowerCase()));document.querySelectorAll('.text-size').forEach(sel=>{sel.value=String(textSize);});});el.addEventListener('pointerdown',e=>{e.stopPropagation();activeTextEl=el;const r=slideSurface.getBoundingClientRect();start={clientX:e.clientX,clientY:e.clientY,left:parseFloat(el.style.left)||0,top:parseFloat(el.style.top)||0,scaleX:r.width/960,scaleY:r.height/540};dragging=false;});document.addEventListener('pointermove',e=>{if(!start)return;const dx=(e.clientX-start.clientX)/start.scaleX,dy=(e.clientY-start.clientY)/start.scaleY;if(!dragging&&Math.hypot(dx,dy)<5)return;dragging=true;el.classList.add('dragging');el.style.left=Math.max(0,Math.min(940,start.left+dx))+'px';el.style.top=Math.max(0,Math.min(520,start.top+dy))+'px';});document.addEventListener('pointerup',()=>{if(!start)return;if(dragging)saveText();el.classList.remove('dragging');start=null;dragging=false;});}
+function rgbToHex(value){const m=String(value).match(/\d+/g);if(!m)return '#000000';return '#'+m.slice(0,3).map(n=>Number(n).toString(16).padStart(2,'0')).join('').toUpperCase();}
+function hexToRgb(value){const hex=String(value||'#000000').replace('#','');const full=hex.length===3?hex.split('').map(c=>c+c).join(''):hex;return [0,2,4].map(i=>parseInt(full.slice(i,i+2),16)||0);}
+function createTextBox(d){const el=document.createElement('div');el.className='text-annotation';el.contentEditable='true';el.style.left=d.left;el.style.top=d.top;el.style.width=d.width;el.style.height=d.height;el.style.color=d.color||textColor;el.style.fontSize=d.fontSize||textSize+'px';el.innerText=d.text||'';slideSurface.appendChild(el);attachTextDrag(el);setTimeout(()=>{activeTextEl=el;el.focus();},0);}
+function enterPresent(){document.body.classList.add('presenting');thumbSidebar.classList.remove('open');document.documentElement.requestFullscreen?.();resizeStage();}function exitPresent(){document.body.classList.remove('presenting');thumbSidebar.classList.remove('open');document.exitFullscreen?.();resizeStage();}
+document.addEventListener('click',e=>{if(!e.target.closest('.eraser-wrap'))closeEraserMenus();});
+let thumbHideTimer=null;
+function showThumbSidebar(){if(!document.body.classList.contains('presenting'))return;thumbSidebar.classList.add('open');clearTimeout(thumbHideTimer);thumbHideTimer=setTimeout(()=>{if(!thumbSidebar.matches(':hover'))thumbSidebar.classList.remove('open');},1800);}
+document.addEventListener('mousemove',e=>{if(!document.body.classList.contains('presenting'))return;if(e.clientX<34){showThumbSidebar();return;}if(e.clientX>270&&!thumbSidebar.matches(':hover')){clearTimeout(thumbHideTimer);thumbHideTimer=setTimeout(()=>thumbSidebar.classList.remove('open'),420);}});
+document.addEventListener('keydown',e=>{if(e.target.isContentEditable)return;if(e.key==='ArrowRight')next();if(e.key==='ArrowLeft')prev();if(e.key.toLowerCase()==='f')enterPresent();if(e.key==='Escape'){if(penActive||highlighterActive||eraserMode!==null||textMode||shapeMode){cancelShapeDraft();penActive=false;highlighterActive=false;eraserMode=null;textMode=false;shapeMode=null;setTools();}else exitPresent();}if(e.key.toLowerCase()==='p')togglePen();if(e.key.toLowerCase()==='h')toggleHighlighter();if(e.key.toLowerCase()==='e')toggleEraser();if(e.key.toLowerCase()==='t')toggleText();if(e.key.toLowerCase()==='l')toggleShape('line');if(e.key.toLowerCase()==='o')toggleShape('circle');if(e.key.toLowerCase()==='r')toggleShape('rect');if(e.key.toLowerCase()==='z')undo();if(e.key.toLowerCase()==='c')clearSlide();});
+function hideExportOverlay(){const overlay=document.getElementById('exportOverlay');overlay.classList.remove('show','error');}
+function setExportError(message){
+  const overlay=document.getElementById('exportOverlay'),title=document.getElementById('exportTitle'),status=document.getElementById('exportStatus'),bar=document.getElementById('exportBar');
+  title.textContent='PDF export needs localhost';
+  status.textContent=message;
+  bar.style.width='100%';
+  overlay.classList.add('show','error');
+}
+function waitForFrameLoad(iframe, src, timeoutMs=10000){
+  return new Promise((resolve,reject)=>{
+    const timer=setTimeout(()=>reject(new Error('Timed out loading '+src)),timeoutMs);
+    iframe.onload=()=>setTimeout(()=>{clearTimeout(timer);resolve();},700);
+    iframe.onerror=()=>{clearTimeout(timer);reject(new Error('Could not load '+src));};
+    iframe.src=src;
+  });
+}
+async function exportPDF(){
+  const overlay=document.getElementById('exportOverlay'),title=document.getElementById('exportTitle'),status=document.getElementById('exportStatus'),bar=document.getElementById('exportBar'),close=document.getElementById('exportClose');
+  overlay.classList.remove('error');
+  title.textContent='Exporting PDF...';
+  status.textContent='Rendering slide 1 / '+MANIFEST.length;
+  bar.style.width='0%';
+  close.style.display='';
+  overlay.classList.add('show');
+
+  if(location.protocol==='file:'){
+    setExportError('Open this lesson through a local server before exporting. From the project root, run: python3 -m http.server 8787, then open http://127.0.0.1:8787/output/book-1/lesson-01/');
+    return;
+  }
+
+  // Flush current slide's live canvas + text to storage before exporting
+  saveCanvas();
+
+  const pdf=new window.jspdf.jsPDF({orientation:'landscape',unit:'px',format:[960,540]});
+
+  // Hidden render iframe — off-screen, fixed 960×540
+  const renderFrame=document.createElement('iframe');
+  renderFrame.style.cssText='position:fixed;left:-9999px;top:0;width:960px;height:540px;border:0;pointer-events:none;';
+  document.body.appendChild(renderFrame);
+
+  // Offscreen canvas for compositing slide + drawing layer
+  const offCanvas=document.createElement('canvas');
+  offCanvas.width=960; offCanvas.height=540;
+  const offCtx=offCanvas.getContext('2d');
+
+  try{
+    for(let i=0;i<MANIFEST.length;i++){
+      if(i>0) pdf.addPage([960,540],'landscape');
+      status.textContent='Rendering slide '+(i+1)+' / '+MANIFEST.length;
+      bar.style.width=((i+1)/MANIFEST.length*100)+'%';
+
+      // 1. Render slide HTML into hidden iframe
+      await waitForFrameLoad(renderFrame, MANIFEST[i]);
+
+      let slideDoc;
+      try{
+        slideDoc=renderFrame.contentDocument||renderFrame.contentWindow.document;
+      }catch(err){
+        throw new Error('Browser blocked slide access. Open the deck through localhost, not file://.');
+      }
+      if(!slideDoc||!slideDoc.body)throw new Error('Slide did not render: '+MANIFEST[i]);
+      const slideCanvas=await html2canvas(slideDoc.body,{
+        width:960,height:540,scale:1,
+        useCORS:true,allowTaint:true,
+        backgroundColor:'#ffffff',
+        logging:false,
+      });
+
+      // 2. Composite: slide base + pen/highlighter drawing layer
+      offCtx.clearRect(0,0,960,540);
+      offCtx.drawImage(slideCanvas,0,0,960,540);
+
+      if(slideDrawings[i]){
+        await new Promise(resolve=>{
+          const drawImg=new Image();
+          drawImg.onload=()=>{
+            // Drawing canvas is stored at DPR scale; draw it scaled down to 960x540.
+            offCtx.drawImage(drawImg,0,0,960,540);
+            resolve();
+          };
+          drawImg.onerror=resolve;
+          drawImg.src=slideDrawings[i];
+        });
+      }
+
+      // 3. Add composited slide to PDF
+      pdf.addImage(offCanvas.toDataURL('image/png'),'PNG',0,0,960,540,undefined,'FAST');
+
+      // 4. Render text box annotations as PDF text (preserves selectability + crispness)
+      (slideText[i]||[]).forEach(t=>{
+        const x=parseFloat(t.left)||0,y=parseFloat(t.top)||0,w=parseFloat(t.width)||220,h=parseFloat(t.height)||64,text=t.text||'';
+        if(!text.trim())return;
+        const [r,g,b]=hexToRgb(t.color||'#000000'),fontSize=parseFloat(t.fontSize)||24;
+        pdf.setTextColor(r,g,b);
+        pdf.setFontSize(fontSize);
+        pdf.text(pdf.splitTextToSize(text,w-12),x+6,y+fontSize);
+      });
+    }
+
+    pdf.save('pinyin-06-teacher-deck.pdf');
+    hideExportOverlay();
+  }catch(err){
+    console.error(err);
+    setExportError(err.message||'PDF export failed. Open through localhost and try again.');
+  }finally{
+    if(renderFrame.parentNode)document.body.removeChild(renderFrame);
+  }
+}
+window.addEventListener('resize',resizeStage);resizeCanvas();buildThumbnails();update();
+</script>
+</body>
+</html>

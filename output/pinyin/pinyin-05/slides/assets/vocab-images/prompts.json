@@ -1,0 +1,194 @@
+{
+  "prompts": [
+    {
+      "record_id": "V001",
+      "chinese_simplified": "米饭",
+      "pinyin": "mǐfàn",
+      "vietnamese": "cơm",
+      "filename": "vocab-v001-mifan.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for cơm; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 米饭 (mǐfàn)."
+    },
+    {
+      "record_id": "V002",
+      "chinese_simplified": "男",
+      "pinyin": "nán",
+      "vietnamese": "nam",
+      "filename": "vocab-v002-nan.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for nam; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 男 (nán)."
+    },
+    {
+      "record_id": "V003",
+      "chinese_simplified": "鸡蛋",
+      "pinyin": "jīdàn",
+      "vietnamese": "trứng gà",
+      "filename": "vocab-v003-jidan.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for trứng gà; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 鸡蛋 (jīdàn)."
+    },
+    {
+      "record_id": "V004",
+      "chinese_simplified": "门",
+      "pinyin": "mén",
+      "vietnamese": "cửa",
+      "filename": "vocab-v004-men.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for cửa; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 门 (mén)."
+    },
+    {
+      "record_id": "V005",
+      "chinese_simplified": "人",
+      "pinyin": "rén",
+      "vietnamese": "người",
+      "filename": "vocab-v005-ren.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for người; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 人 (rén)."
+    },
+    {
+      "record_id": "V006",
+      "chinese_simplified": "新",
+      "pinyin": "xīn",
+      "vietnamese": "mới",
+      "filename": "vocab-v006-xin.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for mới; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 新 (xīn)."
+    },
+    {
+      "record_id": "V007",
+      "chinese_simplified": "春",
+      "pinyin": "chūn",
+      "vietnamese": "mùa xuân",
+      "filename": "vocab-v007-chun.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for mùa xuân; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 春 (chūn)."
+    },
+    {
+      "record_id": "V008",
+      "chinese_simplified": "困",
+      "pinyin": "kùn",
+      "vietnamese": "buồn ngủ",
+      "filename": "vocab-v008-kun.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for buồn ngủ; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 困 (kùn)."
+    },
+    {
+      "record_id": "V009",
+      "chinese_simplified": "军人",
+      "pinyin": "jūnrén",
+      "vietnamese": "quân nhân",
+      "filename": "vocab-v009-junren.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for quân nhân; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 军人 (jūnrén)."
+    },
+    {
+      "record_id": "V010",
+      "chinese_simplified": "裙子",
+      "pinyin": "qúnzi",
+      "vietnamese": "váy",
+      "filename": "vocab-v010-qunzi.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for váy; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 裙子 (qúnzi)."
+    },
+    {
+      "record_id": "V011",
+      "chinese_simplified": "培训",
+      "pinyin": "péixùn",
+      "vietnamese": "đào tạo",
+      "filename": "vocab-v011-peixun.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for đào tạo; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 培训 (péixùn)."
+    },
+    {
+      "record_id": "V012",
+      "chinese_simplified": "汤",
+      "pinyin": "tāng",
+      "vietnamese": "canh",
+      "filename": "vocab-v012-tang.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for canh; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 汤 (tāng)."
+    },
+    {
+      "record_id": "V013",
+      "chinese_simplified": "脏",
+      "pinyin": "zāng",
+      "vietnamese": "bẩn",
+      "filename": "vocab-v013-zang.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for bẩn; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 脏 (zāng)."
+    },
+    {
+      "record_id": "V014",
+      "chinese_simplified": "疼",
+      "pinyin": "téng",
+      "vietnamese": "đau",
+      "filename": "vocab-v014-teng.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for đau; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 疼 (téng)."
+    },
+    {
+      "record_id": "V015",
+      "chinese_simplified": "冷",
+      "pinyin": "lěng",
+      "vietnamese": "lạnh",
+      "filename": "vocab-v015-leng.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for lạnh; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 冷 (lěng)."
+    },
+    {
+      "record_id": "V016",
+      "chinese_simplified": "名字",
+      "pinyin": "míngzi",
+      "vietnamese": "tên",
+      "filename": "vocab-v016-mingzi.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for tên; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 名字 (míngzi)."
+    },
+    {
+      "record_id": "V017",
+      "chinese_simplified": "听",
+      "pinyin": "tīng",
+      "vietnamese": "nghe",
+      "filename": "vocab-v017-ting.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for nghe; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 听 (tīng)."
+    },
+    {
+      "record_id": "V018",
+      "chinese_simplified": "龙",
+      "pinyin": "lóng",
+      "vietnamese": "rồng",
+      "filename": "vocab-v018-long.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for rồng; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 龙 (lóng)."
+    },
+    {
+      "record_id": "V019",
+      "chinese_simplified": "成功",
+      "pinyin": "chénggōng",
+      "vietnamese": "thành công",
+      "filename": "vocab-v019-chenggong.png",
+      "status": "placeholder_needs_generation",
+      "prompt": "Soft textbook 1:1 illustration for thành công; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 成功 (chénggōng)."
+    }
+  ]
+}
