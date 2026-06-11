@@ -1,0 +1,841 @@
+{
+  "schema_version": "1.0.0",
+  "lesson_id": "lesson-05",
+  "generated_at": "2026-06-11T07:13:09.914Z",
+  "source_database": "database",
+  "workflow": {
+    "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
+    "required_steps": [
+      "Run or update VP database with image_asset_* metadata for each needed classroom image.",
+      "Build slides/assets/asset-manifest.json before and after slide generation.",
+      "Generate or replace images using the manifest paths, not ad hoc HTML edits.",
+      "Run npm run assets:qa -- --lesson <lesson-root> before delivery.",
+      "Use screenshot/contact-sheet QA for visual semantic checks. Export clean PDF only after Adam confirms finalization."
+    ]
+  },
+  "requirements": {
+    "vocabulary_images": "16:9 PNG, soft textbook line-art, thin grey-blue outlines, muted pastel fills, pale background, no in-image text/letters/numbers/Chinese characters/labels/watermarks",
+    "sample_images": "Must match the full sample phrase. Reuse the vocabulary image only when it is semantically correct.",
+    "shared_assets": "slide-base.css, slide-base.js, and brand/logo-watermark.png must exist in every complete lesson."
+  },
+  "assets": [
+    {
+      "id": "assets-brand-logo-watermark-png",
+      "asset_path": "assets/brand/logo-watermark.png",
+      "role": "brand_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 500,
+        "height": 500,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "lesson-required-assets"
+      ],
+      "html_reference_types": [
+        "required"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-slide-base-css",
+      "asset_path": "assets/slide-base.css",
+      "role": "stylesheet",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": null,
+      "used_by": [
+        "lesson-required-assets"
+      ],
+      "html_reference_types": [
+        "required"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-slide-base-js",
+      "asset_path": "assets/slide-base.js",
+      "role": "script",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": null,
+      "used_by": [
+        "lesson-required-assets"
+      ],
+      "html_reference_types": [
+        "required"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v001-zhe-png",
+      "asset_path": "assets/vocab-images/vocab-v001-zhe.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "vocab-image-prompts"
+      ],
+      "html_reference_types": [
+        "prompt_metadata"
+      ],
+      "record_ids": [
+        "V001"
+      ],
+      "chinese": [
+        "这"
+      ],
+      "pinyin": [
+        "zhè"
+      ],
+      "vietnamese": [
+        "đây, này"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a friendly student pointing to a nearby object on a desk, clearly meaning this / here.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v002-shi-png",
+      "asset_path": "assets/vocab-images/vocab-v002-shi.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "vocab-image-prompts"
+      ],
+      "html_reference_types": [
+        "prompt_metadata"
+      ],
+      "record_ids": [
+        "V002"
+      ],
+      "chinese": [
+        "是"
+      ],
+      "pinyin": [
+        "shì"
+      ],
+      "vietnamese": [
+        "là"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: one person gently introducing another person with an open-hand gesture, clearly conveying this is someone.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v003-laoshi-png",
+      "asset_path": "assets/vocab-images/vocab-v003-laoshi.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "vocab-image-prompts"
+      ],
+      "html_reference_types": [
+        "prompt_metadata"
+      ],
+      "record_ids": [
+        "V003"
+      ],
+      "chinese": [
+        "老师"
+      ],
+      "pinyin": [
+        "lǎoshī"
+      ],
+      "vietnamese": [
+        "thầy/cô giáo"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a warm teacher standing beside a simple classroom board, holding a book, with students implied softly in the foreground.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v004-baba-png",
+      "asset_path": "assets/vocab-images/vocab-v004-baba.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "vocab-image-prompts"
+      ],
+      "html_reference_types": [
+        "prompt_metadata"
+      ],
+      "record_ids": [
+        "V004"
+      ],
+      "chinese": [
+        "爸爸"
+      ],
+      "pinyin": [
+        "bàba"
+      ],
+      "vietnamese": [
+        "bố, ba"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a kind father standing with a child, warm family feeling, natural proportions.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v005-nin-png",
+      "asset_path": "assets/vocab-images/vocab-v005-nin.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "vocab-image-prompts"
+      ],
+      "html_reference_types": [
+        "prompt_metadata"
+      ],
+      "record_ids": [
+        "V005"
+      ],
+      "chinese": [
+        "您"
+      ],
+      "pinyin": [
+        "nín"
+      ],
+      "vietnamese": [
+        "ngài, ông/bà (lịch sự)"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a young person politely greeting an older respected adult with a slight bow and warm expression.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v006-qing-png",
+      "asset_path": "assets/vocab-images/vocab-v006-qing.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "vocab-image-prompts"
+      ],
+      "html_reference_types": [
+        "prompt_metadata"
+      ],
+      "record_ids": [
+        "V006"
+      ],
+      "chinese": [
+        "请"
+      ],
+      "pinyin": [
+        "qǐng"
+      ],
+      "vietnamese": [
+        "mời, xin"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a host politely gesturing with an open hand toward a doorway or seat, inviting a guest in.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v007-jin-png",
+      "asset_path": "assets/vocab-images/vocab-v007-jin.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "vocab-image-prompts"
+      ],
+      "html_reference_types": [
+        "prompt_metadata"
+      ],
+      "record_ids": [
+        "V007"
+      ],
+      "chinese": [
+        "进"
+      ],
+      "pinyin": [
+        "jìn"
+      ],
+      "vietnamese": [
+        "vào"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a person stepping through an open doorway into a bright room.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v008-zuo-png",
+      "asset_path": "assets/vocab-images/vocab-v008-zuo.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "vocab-image-prompts"
+      ],
+      "html_reference_types": [
+        "prompt_metadata"
+      ],
+      "record_ids": [
+        "V008"
+      ],
+      "chinese": [
+        "坐"
+      ],
+      "pinyin": [
+        "zuò"
+      ],
+      "vietnamese": [
+        "ngồi"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a person calmly sitting on a chair beside a simple desk.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v009-he-png",
+      "asset_path": "assets/vocab-images/vocab-v009-he.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "vocab-image-prompts"
+      ],
+      "html_reference_types": [
+        "prompt_metadata"
+      ],
+      "record_ids": [
+        "V009"
+      ],
+      "chinese": [
+        "喝"
+      ],
+      "pinyin": [
+        "hē"
+      ],
+      "vietnamese": [
+        "uống"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a person taking a sip from a cup, clearly drinking.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v010-cha-png",
+      "asset_path": "assets/vocab-images/vocab-v010-cha.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "vocab-image-prompts"
+      ],
+      "html_reference_types": [
+        "prompt_metadata"
+      ],
+      "record_ids": [
+        "V010"
+      ],
+      "chinese": [
+        "茶"
+      ],
+      "pinyin": [
+        "chá"
+      ],
+      "vietnamese": [
+        "trà"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a warm cup of tea with gentle steam beside a small teapot and a few tea leaves.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v011-xiexie-png",
+      "asset_path": "assets/vocab-images/vocab-v011-xiexie.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "vocab-image-prompts"
+      ],
+      "html_reference_types": [
+        "prompt_metadata"
+      ],
+      "record_ids": [
+        "V011"
+      ],
+      "chinese": [
+        "谢谢"
+      ],
+      "pinyin": [
+        "xièxie"
+      ],
+      "vietnamese": [
+        "cảm ơn"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: one person receiving a small cup or book from another and smiling gratefully with hands gently held near the chest.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v012-keqi-png",
+      "asset_path": "assets/vocab-images/vocab-v012-keqi.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "vocab-image-prompts"
+      ],
+      "html_reference_types": [
+        "prompt_metadata"
+      ],
+      "record_ids": [
+        "V012"
+      ],
+      "chinese": [
+        "客气"
+      ],
+      "pinyin": [
+        "kèqi"
+      ],
+      "vietnamese": [
+        "khách sáo, lịch sự"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: two people politely smiling and lightly waving hands as if saying no need to be so formal.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v013-gongzuo-png",
+      "asset_path": "assets/vocab-images/vocab-v013-gongzuo.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "vocab-image-prompts"
+      ],
+      "html_reference_types": [
+        "prompt_metadata"
+      ],
+      "record_ids": [
+        "V013"
+      ],
+      "chinese": [
+        "工作"
+      ],
+      "pinyin": [
+        "gōngzuò"
+      ],
+      "vietnamese": [
+        "công việc, làm việc"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: an adult working at a neat desk with a laptop, notebook, and focused posture.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v014-mang-png",
+      "asset_path": "assets/vocab-images/vocab-v014-mang.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "vocab-image-prompts"
+      ],
+      "html_reference_types": [
+        "prompt_metadata"
+      ],
+      "record_ids": [
+        "V014"
+      ],
+      "chinese": [
+        "忙"
+      ],
+      "pinyin": [
+        "máng"
+      ],
+      "vietnamese": [
+        "bận"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a person looking busy at a desk with several simple tasks around them, holding papers and a cup, mildly rushed but not stressed.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v015-tai-png",
+      "asset_path": "assets/vocab-images/vocab-v015-tai.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "vocab-image-prompts"
+      ],
+      "html_reference_types": [
+        "prompt_metadata"
+      ],
+      "record_ids": [
+        "V015"
+      ],
+      "chinese": [
+        "太"
+      ],
+      "pinyin": [
+        "tài"
+      ],
+      "vietnamese": [
+        "quá"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a person reacting to an oversized steaming teacup or very tall stack of books, clearly conveying too much / extremely.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v016-shenti-png",
+      "asset_path": "assets/vocab-images/vocab-v016-shenti.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "vocab-image-prompts"
+      ],
+      "html_reference_types": [
+        "prompt_metadata"
+      ],
+      "record_ids": [
+        "V016"
+      ],
+      "chinese": [
+        "身体"
+      ],
+      "pinyin": [
+        "shēntǐ"
+      ],
+      "vietnamese": [
+        "sức khỏe, thân thể"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a healthy person stretching gently with a calm smile, simple body and health concept.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    },
+    {
+      "id": "assets-vocab-images-vocab-v017-mama-png",
+      "asset_path": "assets/vocab-images/vocab-v017-mama.png",
+      "role": "vocabulary_image",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 576,
+        "height": 324,
+        "format": "png",
+        "aspect_ratio": 1.7778
+      },
+      "used_by": [
+        "vocab-image-prompts"
+      ],
+      "html_reference_types": [
+        "prompt_metadata"
+      ],
+      "record_ids": [
+        "V017"
+      ],
+      "chinese": [
+        "妈妈"
+      ],
+      "pinyin": [
+        "māma"
+      ],
+      "vietnamese": [
+        "mẹ, má"
+      ],
+      "prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a kind mother standing with a child, warm family feeling, natural proportions.",
+      "visual_description": "",
+      "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
+    }
+  ],
+  "vocabulary_coverage": [
+    {
+      "record_id": "V001",
+      "chinese_simplified": "这",
+      "pinyin": "zhè",
+      "vietnamese": "đây, này",
+      "assets": [
+        "assets/vocab-images/vocab-v001-zhe.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V002",
+      "chinese_simplified": "是",
+      "pinyin": "shì",
+      "vietnamese": "là",
+      "assets": [
+        "assets/vocab-images/vocab-v002-shi.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V003",
+      "chinese_simplified": "老师",
+      "pinyin": "lǎoshī",
+      "vietnamese": "thầy/cô giáo",
+      "assets": [
+        "assets/vocab-images/vocab-v003-laoshi.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V004",
+      "chinese_simplified": "爸爸",
+      "pinyin": "bàba",
+      "vietnamese": "bố, ba",
+      "assets": [
+        "assets/vocab-images/vocab-v004-baba.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V005",
+      "chinese_simplified": "您",
+      "pinyin": "nín",
+      "vietnamese": "ngài, ông/bà (lịch sự)",
+      "assets": [
+        "assets/vocab-images/vocab-v005-nin.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V006",
+      "chinese_simplified": "请",
+      "pinyin": "qǐng",
+      "vietnamese": "mời, xin",
+      "assets": [
+        "assets/vocab-images/vocab-v006-qing.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V007",
+      "chinese_simplified": "进",
+      "pinyin": "jìn",
+      "vietnamese": "vào",
+      "assets": [
+        "assets/vocab-images/vocab-v007-jin.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V008",
+      "chinese_simplified": "坐",
+      "pinyin": "zuò",
+      "vietnamese": "ngồi",
+      "assets": [
+        "assets/vocab-images/vocab-v008-zuo.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V009",
+      "chinese_simplified": "喝",
+      "pinyin": "hē",
+      "vietnamese": "uống",
+      "assets": [
+        "assets/vocab-images/vocab-v009-he.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V010",
+      "chinese_simplified": "茶",
+      "pinyin": "chá",
+      "vietnamese": "trà",
+      "assets": [
+        "assets/vocab-images/vocab-v010-cha.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V011",
+      "chinese_simplified": "谢谢",
+      "pinyin": "xièxie",
+      "vietnamese": "cảm ơn",
+      "assets": [
+        "assets/vocab-images/vocab-v011-xiexie.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V012",
+      "chinese_simplified": "客气",
+      "pinyin": "kèqi",
+      "vietnamese": "khách sáo, lịch sự",
+      "assets": [
+        "assets/vocab-images/vocab-v012-keqi.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V013",
+      "chinese_simplified": "工作",
+      "pinyin": "gōngzuò",
+      "vietnamese": "công việc, làm việc",
+      "assets": [
+        "assets/vocab-images/vocab-v013-gongzuo.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V014",
+      "chinese_simplified": "忙",
+      "pinyin": "máng",
+      "vietnamese": "bận",
+      "assets": [
+        "assets/vocab-images/vocab-v014-mang.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V015",
+      "chinese_simplified": "太",
+      "pinyin": "tài",
+      "vietnamese": "quá",
+      "assets": [
+        "assets/vocab-images/vocab-v015-tai.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V016",
+      "chinese_simplified": "身体",
+      "pinyin": "shēntǐ",
+      "vietnamese": "sức khỏe, thân thể",
+      "assets": [
+        "assets/vocab-images/vocab-v016-shenti.png"
+      ],
+      "status": "covered"
+    },
+    {
+      "record_id": "V017",
+      "chinese_simplified": "妈妈",
+      "pinyin": "māma",
+      "vietnamese": "mẹ, má",
+      "assets": [
+        "assets/vocab-images/vocab-v017-mama.png"
+      ],
+      "status": "covered"
+    }
+  ]
+}

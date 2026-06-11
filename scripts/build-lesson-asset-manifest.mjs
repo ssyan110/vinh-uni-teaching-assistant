@@ -91,9 +91,13 @@ async function imageInfo(absPath) {
   }
 }
 
+function promptsFromPromptsJson(promptsJson) {
+  return Array.isArray(promptsJson) ? promptsJson : promptsJson?.prompts || [];
+}
+
 function promptMapFromPrompts(promptsJson) {
   const map = new Map();
-  const prompts = Array.isArray(promptsJson) ? promptsJson : promptsJson?.prompts;
+  const prompts = promptsFromPromptsJson(promptsJson);
   for (const item of prompts || []) {
     const file = item.filename || item.output_file || path.basename(item.output_path || '');
     if (file) map.set(file, item);
@@ -117,7 +121,9 @@ const lessonId = db.metadata?.lesson_id || path.basename(lessonDir);
 const slides = (await fs.readdir(slidesDir).catch(() => []))
   .filter((file) => /^\d{2,3}-.+\.html$/.test(file))
   .sort((a, b) => Number(a.split('-')[0]) - Number(b.split('-')[0]));
-const promptMap = promptMapFromPrompts(await readJsonIfExists(path.join(assetsDir, 'vocab-images', 'prompts.json')));
+const promptsJson = await readJsonIfExists(path.join(assetsDir, 'vocab-images', 'prompts.json'));
+const promptMap = promptMapFromPrompts(promptsJson);
+const promptItems = promptsFromPromptsJson(promptsJson);
 const recordsById = new Map((db.content_items || []).map((item) => [item.record_id, item]));
 const recordsByChinese = new Map((db.content_items || []).map((item) => [item.chinese_simplified, item]));
 
@@ -180,6 +186,17 @@ for (const slide of slides) {
 
 for (const required of ['assets/slide-base.css', 'assets/slide-base.js', 'assets/brand/logo-watermark.png']) {
   addRef(required, 'lesson-required-assets', 'required');
+}
+
+for (const prompt of promptItems) {
+  const file = prompt.filename || prompt.output_file || path.basename(prompt.output_path || '');
+  if (!file) continue;
+  addRef(`assets/vocab-images/${file}`, 'vocab-image-prompts', 'prompt_metadata', {
+    record_id: prompt.record_id || prompt.recordId,
+    chinese: prompt.chinese || prompt.chinese_simplified,
+    pinyin: prompt.pinyin,
+    vietnamese: prompt.vietnamese,
+  });
 }
 
 const entries = [];

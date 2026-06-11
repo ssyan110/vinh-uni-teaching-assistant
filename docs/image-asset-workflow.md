@@ -18,6 +18,8 @@ VP database image metadata
 
 New lesson decks start with blank, correctly sized placeholder image files. Do not generate AI images during initial slide creation. Generate real images only when Adam asks for them.
 
+Adam's current generation preference: use Google Chrome + ChatGPT for real vocabulary image generation. Do not use ChatGPT Atlas for this workflow. Do not use local/scripted/SVG fallback images for vocabulary assets unless Adam explicitly asks for that exact fallback. If Chrome/ChatGPT generation, download, or cropping is blocked, stop and report the blocker instead of silently switching tools or generating fallback art.
+
 ## Required Database Fields
 
 VP steps 1-8 must carry image metadata for records that need classroom visuals:

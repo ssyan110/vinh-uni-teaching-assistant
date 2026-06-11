@@ -4,8 +4,28 @@
     "pipeline_config_version": "1.0.0",
     "generated_at": "2026-06-04T08:00:00+00:00",
     "vp_scope": "steps 1-8 before teacher review",
-    "steps_completed": [1, 2, 3, 4, 5, 6, 7, 8],
-    "steps_not_implemented": [9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+    "steps_completed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "steps_not_implemented": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
     "lesson_id": "lesson-05",
     "source_pdf": "Giáo trình full/[hanka.edu.vn] - GT Hán Ngữ 1 (Tập 1 - Quyển thượng).pdf",
     "source_pdf_page_range": "55-63",
@@ -45,7 +65,17 @@
       "pinyin": "zhè shì Wáng lǎoshī, zhè shì wǒ bàba.\nWáng lǎoshī, nín hǎo!\nnín hǎo! qǐng jìn! qǐng zuò! qǐng hē chá!\nxièxie!\nbú kèqi!\ngōngzuò máng ma?\nbú tài máng.\nshēntǐ hǎo ma?\nhěn hǎo!",
       "vietnamese": "Đây là thầy giáo Vương, đây là bố tôi.\nThầy Vương, chào thầy!\nChào bạn! Mời vào! Mời ngồi! Mời uống trà!\nCảm ơn!\nKhông có gì!\nCông việc bận không?\nKhông bận lắm.\nSức khỏe tốt không?\nRất tốt!",
       "english": "This is Teacher Wang, this is my father.\nTeacher Wang, hello!\nHello! Please come in! Please sit down! Please have some tea!\nThank you!\nYou're welcome!\nIs work busy?\nNot too busy.\nHow is your health?\nVery good!",
-      "dialogue_roles": ["A", "C", "B", "C", "B", "C", "B", "C", "B"],
+      "dialogue_roles": [
+        "A",
+        "C",
+        "B",
+        "C",
+        "B",
+        "C",
+        "B",
+        "C",
+        "B"
+      ],
       "raw_source_text": "课文 这是王老师: 这是王老师，这是我爸爸。王老师，您好！您好！请进！请坐！请喝茶！谢谢！不客气！工作忙吗？不太忙。身体好吗？很好！",
       "teaching_order": 15,
       "classroom_visibility": "student_visible"
@@ -70,7 +100,13 @@
       "classroom_visibility": "student_visible",
       "sample_sentence_pinyin": "zhè shì wǒ bàba.",
       "sample_sentence_zh": "这是我爸爸。",
-      "sample_sentence_vi": "Đây là bố tôi."
+      "sample_sentence_vi": "Đây là bố tôi.",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a friendly student pointing to a nearby object on a desk, clearly meaning this / here.",
+      "image_file": "assets/vocab-images/vocab-v001-zhe.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 这 / đây, này and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "record_id": "V002",
@@ -92,7 +128,13 @@
       "classroom_visibility": "student_visible",
       "sample_sentence_pinyin": "zhè shì Wáng lǎoshī.",
       "sample_sentence_zh": "这是王老师。",
-      "sample_sentence_vi": "Đây là thầy Vương."
+      "sample_sentence_vi": "Đây là thầy Vương.",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: one person gently introducing another person with an open-hand gesture, clearly conveying this is someone.",
+      "image_file": "assets/vocab-images/vocab-v002-shi.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 是 / là and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "record_id": "V003",
@@ -114,7 +156,13 @@
       "classroom_visibility": "student_visible",
       "sample_sentence_pinyin": "Wáng lǎoshī, nín hǎo!",
       "sample_sentence_zh": "王老师，您好！",
-      "sample_sentence_vi": "Thầy Vương, chào thầy!"
+      "sample_sentence_vi": "Thầy Vương, chào thầy!",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a warm teacher standing beside a simple classroom board, holding a book, with students implied softly in the foreground.",
+      "image_file": "assets/vocab-images/vocab-v003-laoshi.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 老师 / thầy/cô giáo and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "record_id": "V004",
@@ -136,7 +184,13 @@
       "classroom_visibility": "student_visible",
       "sample_sentence_pinyin": "zhè shì wǒ bàba.",
       "sample_sentence_zh": "这是我爸爸。",
-      "sample_sentence_vi": "Đây là bố tôi."
+      "sample_sentence_vi": "Đây là bố tôi.",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a kind father standing with a child, warm family feeling, natural proportions.",
+      "image_file": "assets/vocab-images/vocab-v004-baba.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 爸爸 / bố, ba and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "record_id": "V005",
@@ -158,7 +212,13 @@
       "classroom_visibility": "student_visible",
       "sample_sentence_pinyin": "nín hǎo!",
       "sample_sentence_zh": "您好！",
-      "sample_sentence_vi": "Chào ngài! (Xin chào ạ!)"
+      "sample_sentence_vi": "Chào ngài! (Xin chào ạ!)",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a young person politely greeting an older respected adult with a slight bow and warm expression.",
+      "image_file": "assets/vocab-images/vocab-v005-nin.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 您 / ngài, ông/bà (lịch sự) and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "record_id": "V006",
@@ -180,7 +240,13 @@
       "classroom_visibility": "student_visible",
       "sample_sentence_pinyin": "qǐng jìn! qǐng zuò!",
       "sample_sentence_zh": "请进！请坐！",
-      "sample_sentence_vi": "Mời vào! Mời ngồi!"
+      "sample_sentence_vi": "Mời vào! Mời ngồi!",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a host politely gesturing with an open hand toward a doorway or seat, inviting a guest in.",
+      "image_file": "assets/vocab-images/vocab-v006-qing.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 请 / mời, xin and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "record_id": "V007",
@@ -202,7 +268,13 @@
       "classroom_visibility": "student_visible",
       "sample_sentence_pinyin": "qǐng jìn!",
       "sample_sentence_zh": "请进！",
-      "sample_sentence_vi": "Mời vào!"
+      "sample_sentence_vi": "Mời vào!",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a person stepping through an open doorway into a bright room.",
+      "image_file": "assets/vocab-images/vocab-v007-jin.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 进 / vào and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "record_id": "V008",
@@ -224,7 +296,13 @@
       "classroom_visibility": "student_visible",
       "sample_sentence_pinyin": "qǐng zuò!",
       "sample_sentence_zh": "请坐！",
-      "sample_sentence_vi": "Mời ngồi!"
+      "sample_sentence_vi": "Mời ngồi!",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a person calmly sitting on a chair beside a simple desk.",
+      "image_file": "assets/vocab-images/vocab-v008-zuo.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 坐 / ngồi and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "record_id": "V009",
@@ -246,7 +324,13 @@
       "classroom_visibility": "student_visible",
       "sample_sentence_pinyin": "qǐng hē chá!",
       "sample_sentence_zh": "请喝茶！",
-      "sample_sentence_vi": "Mời uống trà!"
+      "sample_sentence_vi": "Mời uống trà!",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a person taking a sip from a cup, clearly drinking.",
+      "image_file": "assets/vocab-images/vocab-v009-he.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 喝 / uống and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "record_id": "V010",
@@ -268,7 +352,13 @@
       "classroom_visibility": "student_visible",
       "sample_sentence_pinyin": "qǐng hē chá!",
       "sample_sentence_zh": "请喝茶！",
-      "sample_sentence_vi": "Mời uống trà!"
+      "sample_sentence_vi": "Mời uống trà!",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a warm cup of tea with gentle steam beside a small teapot and a few tea leaves.",
+      "image_file": "assets/vocab-images/vocab-v010-cha.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 茶 / trà and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "record_id": "V011",
@@ -290,7 +380,13 @@
       "classroom_visibility": "student_visible",
       "sample_sentence_pinyin": "xièxie nín!",
       "sample_sentence_zh": "谢谢您！",
-      "sample_sentence_vi": "Cảm ơn ngài!"
+      "sample_sentence_vi": "Cảm ơn ngài!",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: one person receiving a small cup or book from another and smiling gratefully with hands gently held near the chest.",
+      "image_file": "assets/vocab-images/vocab-v011-xiexie.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 谢谢 / cảm ơn and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "record_id": "V012",
@@ -312,7 +408,13 @@
       "classroom_visibility": "student_visible",
       "sample_sentence_pinyin": "bú kèqi!",
       "sample_sentence_zh": "不客气！",
-      "sample_sentence_vi": "Không có gì! (Đừng khách sáo!)"
+      "sample_sentence_vi": "Không có gì! (Đừng khách sáo!)",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: two people politely smiling and lightly waving hands as if saying no need to be so formal.",
+      "image_file": "assets/vocab-images/vocab-v012-keqi.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 客气 / khách sáo, lịch sự and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "record_id": "V013",
@@ -334,7 +436,13 @@
       "classroom_visibility": "student_visible",
       "sample_sentence_pinyin": "gōngzuò máng ma?",
       "sample_sentence_zh": "工作忙吗？",
-      "sample_sentence_vi": "Công việc bận không?"
+      "sample_sentence_vi": "Công việc bận không?",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: an adult working at a neat desk with a laptop, notebook, and focused posture.",
+      "image_file": "assets/vocab-images/vocab-v013-gongzuo.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 工作 / công việc, làm việc and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "record_id": "V014",
@@ -356,7 +464,13 @@
       "classroom_visibility": "student_visible",
       "sample_sentence_pinyin": "bú tài máng.",
       "sample_sentence_zh": "不太忙。",
-      "sample_sentence_vi": "Không bận lắm."
+      "sample_sentence_vi": "Không bận lắm.",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a person looking busy at a desk with several simple tasks around them, holding papers and a cup, mildly rushed but not stressed.",
+      "image_file": "assets/vocab-images/vocab-v014-mang.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 忙 / bận and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "record_id": "V015",
@@ -378,7 +492,13 @@
       "classroom_visibility": "student_visible",
       "sample_sentence_pinyin": "bú tài máng.",
       "sample_sentence_zh": "不太忙。",
-      "sample_sentence_vi": "Không bận lắm."
+      "sample_sentence_vi": "Không bận lắm.",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a person reacting to an oversized steaming teacup or very tall stack of books, clearly conveying too much / extremely.",
+      "image_file": "assets/vocab-images/vocab-v015-tai.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 太 / quá and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "record_id": "V016",
@@ -400,7 +520,13 @@
       "classroom_visibility": "student_visible",
       "sample_sentence_pinyin": "shēntǐ hǎo ma?",
       "sample_sentence_zh": "身体好吗？",
-      "sample_sentence_vi": "Sức khỏe tốt không?"
+      "sample_sentence_vi": "Sức khỏe tốt không?",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a healthy person stretching gently with a calm smile, simple body and health concept.",
+      "image_file": "assets/vocab-images/vocab-v016-shenti.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 身体 / sức khỏe, thân thể and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "record_id": "V017",
@@ -422,7 +548,13 @@
       "classroom_visibility": "student_visible",
       "sample_sentence_pinyin": "zhè shì wǒ māma.",
       "sample_sentence_zh": "这是我妈妈。",
-      "sample_sentence_vi": "Đây là mẹ tôi."
+      "sample_sentence_vi": "Đây là mẹ tôi.",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a kind mother standing with a child, warm family feeling, natural proportions.",
+      "image_file": "assets/vocab-images/vocab-v017-mama.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 妈妈 / mẹ, má and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "record_id": "G001",
@@ -444,14 +576,32 @@
           "title_zh": "声母 zh, ch, sh, r",
           "title_vi": "Thanh mẫu zh, ch, sh, r",
           "explanation_vi": "zh là âm đầu lưỡi quặt, không bật hơi, tắc xát, trong. Đầu lưỡi cong lên chạm ngạc cứng rồi bật ra. ch giống zh nhưng bật hơi mạnh. sh là âm đầu lưỡi quặt, xát trong — đầu lưỡi cong lên tiếp cận ngạc cứng, luồng hơi ma sát ra ngoài. r giống sh nhưng là âm đục — dây thanh rung.",
-          "examples": ["zhè", "zhōngguó", "chá", "chī", "shì", "shēntǐ", "rén", "rè"]
+          "examples": [
+            "zhè",
+            "zhōngguó",
+            "chá",
+            "chī",
+            "shì",
+            "shēntǐ",
+            "rén",
+            "rè"
+          ]
         },
         {
           "point_id": "GP02",
           "title_zh": "韵母 ua, uo, uai, uei(ui), uan, uen(un), uang, ueng",
           "title_vi": "Vận mẫu ua, uo, uai, uei(ui), uan, uen(un), uang, ueng",
           "explanation_vi": "Các vần kép bắt đầu bằng u: ua (uoa), uo (uô), uai (uai), uei viết tắt ui khi có thanh mẫu (ví dụ: huí = h + uei), uan (oan), uen viết tắt un khi có thanh mẫu (ví dụ: chūn = ch + uen), uang (oang), ueng (uêng). Đọc nhanh từ u rồi trượt sang nguyên âm chính.",
-          "examples": ["huā", "shuō", "kuài", "huí", "chuān", "chūn", "zhuāng", "wēng"]
+          "examples": [
+            "huā",
+            "shuō",
+            "kuài",
+            "huí",
+            "chuān",
+            "chūn",
+            "zhuāng",
+            "wēng"
+          ]
         }
       ],
       "raw_source_text": "语音 Phonetics: 声母 zh ch sh r + 韵母 ua uo uai uei(ui) uan uen(un) uang ueng",
@@ -540,7 +690,25 @@
       "status": "extracted",
       "slide_range": null,
       "slide_files": [],
-      "content_ids": ["V001", "V002", "V003", "V004", "V005", "V006", "V007", "V008", "V009", "V010", "V011", "V012", "V013", "V014", "V015", "V016", "V017"],
+      "content_ids": [
+        "V001",
+        "V002",
+        "V003",
+        "V004",
+        "V005",
+        "V006",
+        "V007",
+        "V008",
+        "V009",
+        "V010",
+        "V011",
+        "V012",
+        "V013",
+        "V014",
+        "V015",
+        "V016",
+        "V017"
+      ],
       "notes": "17 từ vựng chính + tên riêng 王. Counter format: XX/17."
     },
     {
@@ -599,7 +767,9 @@
       "status": "extracted",
       "slide_range": null,
       "slide_files": [],
-      "content_ids": ["T001"],
+      "content_ids": [
+        "T001"
+      ],
       "notes": "1 hội thoại: 这是王老师 (giới thiệu + đãi khách)"
     },
     {
@@ -625,7 +795,9 @@
       "status": "planned",
       "slide_range": null,
       "slide_files": [],
-      "content_ids": ["CUL001"],
+      "content_ids": [
+        "CUL001"
+      ],
       "notes": "Văn hóa đãi khách Trung Quốc: 请进请坐请喝茶. Ý nghĩa văn hóa trà và phép lịch sự."
     },
     {
@@ -665,7 +837,25 @@
       "duration_minutes": 5,
       "interaction_mode": "pair_work",
       "materials_needed": "Bộ thẻ flashcard 17 từ vựng",
-      "vocabulary_ids": ["V001", "V002", "V003", "V004", "V005", "V006", "V007", "V008", "V009", "V010", "V011", "V012", "V013", "V014", "V015", "V016", "V017"]
+      "vocabulary_ids": [
+        "V001",
+        "V002",
+        "V003",
+        "V004",
+        "V005",
+        "V006",
+        "V007",
+        "V008",
+        "V009",
+        "V010",
+        "V011",
+        "V012",
+        "V013",
+        "V014",
+        "V015",
+        "V016",
+        "V017"
+      ]
     },
     {
       "activity_id": "ACT003",
@@ -677,7 +867,13 @@
       "duration_minutes": 4,
       "interaction_mode": "pair_work",
       "materials_needed": "Thẻ động từ: 进、坐、喝、看、吃",
-      "vocabulary_ids": ["V006", "V007", "V008", "V009", "V010"]
+      "vocabulary_ids": [
+        "V006",
+        "V007",
+        "V008",
+        "V009",
+        "V010"
+      ]
     },
     {
       "activity_id": "ACT004",
@@ -702,7 +898,25 @@
       "question_count": 17,
       "estimated_minutes": 5,
       "difficulty": "beginner",
-      "vocabulary_ids": ["V001", "V002", "V003", "V004", "V005", "V006", "V007", "V008", "V009", "V010", "V011", "V012", "V013", "V014", "V015", "V016", "V017"]
+      "vocabulary_ids": [
+        "V001",
+        "V002",
+        "V003",
+        "V004",
+        "V005",
+        "V006",
+        "V007",
+        "V008",
+        "V009",
+        "V010",
+        "V011",
+        "V012",
+        "V013",
+        "V014",
+        "V015",
+        "V016",
+        "V017"
+      ]
     },
     {
       "game_id": "G002",
@@ -714,7 +928,13 @@
       "question_count": 10,
       "estimated_minutes": 4,
       "difficulty": "beginner",
-      "vocabulary_ids": ["V006", "V007", "V008", "V009", "V010"]
+      "vocabulary_ids": [
+        "V006",
+        "V007",
+        "V008",
+        "V009",
+        "V010"
+      ]
     }
   ],
   "google_sheets_database": [
@@ -745,7 +965,13 @@
       "teacher_review_status": "pending",
       "approved": "FALSE",
       "notes_for_review": "",
-      "generated_at": "2026-06-04T08:00:00+00:00"
+      "generated_at": "2026-06-04T08:00:00+00:00",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a friendly student pointing to a nearby object on a desk, clearly meaning this / here.",
+      "image_file": "assets/vocab-images/vocab-v001-zhe.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 这 / đây, này and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "lesson_id": "lesson-05",
@@ -774,7 +1000,13 @@
       "teacher_review_status": "pending",
       "approved": "FALSE",
       "notes_for_review": "",
-      "generated_at": "2026-06-04T08:00:00+00:00"
+      "generated_at": "2026-06-04T08:00:00+00:00",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: one person gently introducing another person with an open-hand gesture, clearly conveying this is someone.",
+      "image_file": "assets/vocab-images/vocab-v002-shi.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 是 / là and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "lesson_id": "lesson-05",
@@ -803,7 +1035,13 @@
       "teacher_review_status": "pending",
       "approved": "FALSE",
       "notes_for_review": "",
-      "generated_at": "2026-06-04T08:00:00+00:00"
+      "generated_at": "2026-06-04T08:00:00+00:00",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a warm teacher standing beside a simple classroom board, holding a book, with students implied softly in the foreground.",
+      "image_file": "assets/vocab-images/vocab-v003-laoshi.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 老师 / thầy/cô giáo and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "lesson_id": "lesson-05",
@@ -832,7 +1070,13 @@
       "teacher_review_status": "pending",
       "approved": "FALSE",
       "notes_for_review": "",
-      "generated_at": "2026-06-04T08:00:00+00:00"
+      "generated_at": "2026-06-04T08:00:00+00:00",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a kind father standing with a child, warm family feeling, natural proportions.",
+      "image_file": "assets/vocab-images/vocab-v004-baba.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 爸爸 / bố, ba and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "lesson_id": "lesson-05",
@@ -861,7 +1105,13 @@
       "teacher_review_status": "pending",
       "approved": "FALSE",
       "notes_for_review": "",
-      "generated_at": "2026-06-04T08:00:00+00:00"
+      "generated_at": "2026-06-04T08:00:00+00:00",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a young person politely greeting an older respected adult with a slight bow and warm expression.",
+      "image_file": "assets/vocab-images/vocab-v005-nin.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 您 / ngài, ông/bà (lịch sự) and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "lesson_id": "lesson-05",
@@ -890,7 +1140,13 @@
       "teacher_review_status": "pending",
       "approved": "FALSE",
       "notes_for_review": "",
-      "generated_at": "2026-06-04T08:00:00+00:00"
+      "generated_at": "2026-06-04T08:00:00+00:00",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a host politely gesturing with an open hand toward a doorway or seat, inviting a guest in.",
+      "image_file": "assets/vocab-images/vocab-v006-qing.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 请 / mời, xin and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "lesson_id": "lesson-05",
@@ -919,7 +1175,13 @@
       "teacher_review_status": "pending",
       "approved": "FALSE",
       "notes_for_review": "",
-      "generated_at": "2026-06-04T08:00:00+00:00"
+      "generated_at": "2026-06-04T08:00:00+00:00",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a person stepping through an open doorway into a bright room.",
+      "image_file": "assets/vocab-images/vocab-v007-jin.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 进 / vào and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "lesson_id": "lesson-05",
@@ -948,7 +1210,13 @@
       "teacher_review_status": "pending",
       "approved": "FALSE",
       "notes_for_review": "",
-      "generated_at": "2026-06-04T08:00:00+00:00"
+      "generated_at": "2026-06-04T08:00:00+00:00",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a person calmly sitting on a chair beside a simple desk.",
+      "image_file": "assets/vocab-images/vocab-v008-zuo.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 坐 / ngồi and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "lesson_id": "lesson-05",
@@ -977,7 +1245,13 @@
       "teacher_review_status": "pending",
       "approved": "FALSE",
       "notes_for_review": "",
-      "generated_at": "2026-06-04T08:00:00+00:00"
+      "generated_at": "2026-06-04T08:00:00+00:00",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a person taking a sip from a cup, clearly drinking.",
+      "image_file": "assets/vocab-images/vocab-v009-he.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 喝 / uống and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "lesson_id": "lesson-05",
@@ -1006,7 +1280,13 @@
       "teacher_review_status": "pending",
       "approved": "FALSE",
       "notes_for_review": "",
-      "generated_at": "2026-06-04T08:00:00+00:00"
+      "generated_at": "2026-06-04T08:00:00+00:00",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a warm cup of tea with gentle steam beside a small teapot and a few tea leaves.",
+      "image_file": "assets/vocab-images/vocab-v010-cha.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 茶 / trà and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "lesson_id": "lesson-05",
@@ -1035,7 +1315,13 @@
       "teacher_review_status": "pending",
       "approved": "FALSE",
       "notes_for_review": "",
-      "generated_at": "2026-06-04T08:00:00+00:00"
+      "generated_at": "2026-06-04T08:00:00+00:00",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: one person receiving a small cup or book from another and smiling gratefully with hands gently held near the chest.",
+      "image_file": "assets/vocab-images/vocab-v011-xiexie.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 谢谢 / cảm ơn and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "lesson_id": "lesson-05",
@@ -1064,7 +1350,13 @@
       "teacher_review_status": "pending",
       "approved": "FALSE",
       "notes_for_review": "",
-      "generated_at": "2026-06-04T08:00:00+00:00"
+      "generated_at": "2026-06-04T08:00:00+00:00",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: two people politely smiling and lightly waving hands as if saying no need to be so formal.",
+      "image_file": "assets/vocab-images/vocab-v012-keqi.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 客气 / khách sáo, lịch sự and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "lesson_id": "lesson-05",
@@ -1093,7 +1385,13 @@
       "teacher_review_status": "pending",
       "approved": "FALSE",
       "notes_for_review": "",
-      "generated_at": "2026-06-04T08:00:00+00:00"
+      "generated_at": "2026-06-04T08:00:00+00:00",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: an adult working at a neat desk with a laptop, notebook, and focused posture.",
+      "image_file": "assets/vocab-images/vocab-v013-gongzuo.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 工作 / công việc, làm việc and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "lesson_id": "lesson-05",
@@ -1122,7 +1420,13 @@
       "teacher_review_status": "pending",
       "approved": "FALSE",
       "notes_for_review": "",
-      "generated_at": "2026-06-04T08:00:00+00:00"
+      "generated_at": "2026-06-04T08:00:00+00:00",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a person looking busy at a desk with several simple tasks around them, holding papers and a cup, mildly rushed but not stressed.",
+      "image_file": "assets/vocab-images/vocab-v014-mang.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 忙 / bận and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "lesson_id": "lesson-05",
@@ -1151,7 +1455,13 @@
       "teacher_review_status": "pending",
       "approved": "FALSE",
       "notes_for_review": "",
-      "generated_at": "2026-06-04T08:00:00+00:00"
+      "generated_at": "2026-06-04T08:00:00+00:00",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a person reacting to an oversized steaming teacup or very tall stack of books, clearly conveying too much / extremely.",
+      "image_file": "assets/vocab-images/vocab-v015-tai.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 太 / quá and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "lesson_id": "lesson-05",
@@ -1180,7 +1490,13 @@
       "teacher_review_status": "pending",
       "approved": "FALSE",
       "notes_for_review": "",
-      "generated_at": "2026-06-04T08:00:00+00:00"
+      "generated_at": "2026-06-04T08:00:00+00:00",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a healthy person stretching gently with a calm smile, simple body and health concept.",
+      "image_file": "assets/vocab-images/vocab-v016-shenti.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 身体 / sức khỏe, thân thể and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "lesson_id": "lesson-05",
@@ -1209,7 +1525,13 @@
       "teacher_review_status": "pending",
       "approved": "FALSE",
       "notes_for_review": "",
-      "generated_at": "2026-06-04T08:00:00+00:00"
+      "generated_at": "2026-06-04T08:00:00+00:00",
+      "image_role": "vocabulary_image",
+      "image_prompt": "Soft educational textbook illustration for a Chinese classroom slide, 16:9 landscape, thin grey-blue hand-drawn outlines, muted pastel fills, pale clean background, gentle low-contrast shadows, no text, no letters, no numbers, no Chinese characters, no labels, no watermark. Show: a kind mother standing with a child, warm family feeling, natural proportions.",
+      "image_file": "assets/vocab-images/vocab-v017-mama.png",
+      "image_reuse_from": "",
+      "image_status": "ready_for_visual_qa",
+      "image_semantic_check": "Verify image clearly matches 妈妈 / mẹ, má and contains no text, labels, numbers, or Chinese characters."
     },
     {
       "lesson_id": "lesson-05",
