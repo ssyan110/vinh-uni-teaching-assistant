@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "lesson_id": "pinyin-04",
-  "generated_at": "2026-06-10T09:28:51.422Z",
+  "generated_at": "2026-06-11T05:35:37.105Z",
   "source_database": "database",
   "workflow": {
     "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
@@ -191,7 +191,7 @@
       "used_by": [
         "12-divider-vocabulary-1.html",
         "30-divider-vocabulary-2.html",
-        "48-divider-vocabulary-3.html"
+        "49-divider-vocabulary-3.html"
       ],
       "html_reference_types": [
         "img"
@@ -477,14 +477,14 @@
         "43-practice-vocabulary-2-1.html",
         "44-practice-vocabulary-2-2.html",
         "45-divider-rule-ue.html",
-        "46-rule-jqx-ue.html",
-        "47-rule-jqx-ue-examples.html",
-        "48-divider-vocabulary-3.html",
-        "49-vocabulary-3.html",
-        "50-flash-v019-juede.html",
-        "51-flash-v020-que.html",
-        "52-flash-v021-xue.html",
-        "53-practice-vocabulary-3.html",
+        "46-rule-jqx-ue-jue.html",
+        "47-rule-jqx-ue-que.html",
+        "48-rule-jqx-ue-xue.html",
+        "49-divider-vocabulary-3.html",
+        "50-vocabulary-3.html",
+        "51-flash-v019-juede.html",
+        "52-flash-v020-que.html",
+        "53-flash-v021-xue.html",
         "54-divider-review-final.html",
         "55-review-listening-choice.html",
         "56-review-fill-blank.html",
@@ -558,14 +558,14 @@
         "43-practice-vocabulary-2-1.html",
         "44-practice-vocabulary-2-2.html",
         "45-divider-rule-ue.html",
-        "46-rule-jqx-ue.html",
-        "47-rule-jqx-ue-examples.html",
-        "48-divider-vocabulary-3.html",
-        "49-vocabulary-3.html",
-        "50-flash-v019-juede.html",
-        "51-flash-v020-que.html",
-        "52-flash-v021-xue.html",
-        "53-practice-vocabulary-3.html",
+        "46-rule-jqx-ue-jue.html",
+        "47-rule-jqx-ue-que.html",
+        "48-rule-jqx-ue-xue.html",
+        "49-divider-vocabulary-3.html",
+        "50-vocabulary-3.html",
+        "51-flash-v019-juede.html",
+        "52-flash-v020-que.html",
+        "53-flash-v021-xue.html",
         "54-divider-review-final.html",
         "55-review-listening-choice.html",
         "56-review-fill-blank.html",
@@ -593,8 +593,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -630,8 +630,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -667,8 +667,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -704,8 +704,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -741,8 +741,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -778,8 +778,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -815,8 +815,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -851,8 +851,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -887,8 +887,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -923,8 +923,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -959,8 +959,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -995,8 +995,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -1031,8 +1031,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -1067,8 +1067,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -1103,8 +1103,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -1139,8 +1139,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -1175,8 +1175,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -1211,8 +1211,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -1247,15 +1247,14 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "49-vocabulary-3.html",
-        "50-flash-v019-juede.html",
-        "53-practice-vocabulary-3.html"
+        "50-vocabulary-3.html",
+        "51-flash-v019-juede.html"
       ],
       "html_reference_types": [
         "img"
@@ -1283,15 +1282,14 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "49-vocabulary-3.html",
-        "51-flash-v020-que.html",
-        "53-practice-vocabulary-3.html"
+        "50-vocabulary-3.html",
+        "52-flash-v020-que.html"
       ],
       "html_reference_types": [
         "img"
@@ -1319,15 +1317,14 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "49-vocabulary-3.html",
-        "52-flash-v021-xue.html",
-        "53-practice-vocabulary-3.html"
+        "50-vocabulary-3.html",
+        "53-flash-v021-xue.html"
       ],
       "html_reference_types": [
         "img"

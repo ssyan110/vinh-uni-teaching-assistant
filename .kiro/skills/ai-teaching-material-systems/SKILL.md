@@ -359,12 +359,12 @@ Sample sentence slides:
 Vocabulary image generation:
 
 1. During initial slide generation, create blank placeholder image files at the correct target size. Do not generate AI images as part of the slide-generation run.
-2. When Adam asks for real images, use Chrome/ChatGPT, an approved source, or `scripts/generate-vocab-images.py` only as prompt preparation.
+2. When Adam asks for real images, use Chrome/ChatGPT, an approved source, or `scripts/generate-vocab-images.py` only as prompt preparation. For pinyin vocabulary batches, use `.kiro/skills/pinyin-vocab-contact-sheet-images/SKILL.md`: default to Google Chrome + ChatGPT and create one big contact sheet for the whole batch.
 3. Save final regular-lesson vocabulary images as 16:9 PNGs, ideally `576×324`, in `slides/assets/vocab-images/`. Save pinyin vocabulary-grid images as square PNGs when the pinyin template requires `1:1`.
 4. Use soft textbook line-art: thin grey-blue outlines, muted pastel fills, white/pale-grey background, gentle low-contrast shadows.
 5. Do not include text, letters, numbers, Chinese characters, labels, or watermarks inside images.
 6. Avoid thick teal outlines, circular icons, glossy vector art, stickers, chibi proportions, harsh colors, and abstract blob backgrounds.
-7. Insert replacements with `npm run assets:replace -- --lesson <lesson-root> --record V001 --image /path/to/new.png` or crop selected pinyin records with `npm run assets:crop-contact-sheet -- --lesson <lesson-root> --sheet /path/sheet.png --records V001,V002`.
+7. Insert replacements with `npm run assets:replace -- --lesson <lesson-root> --record V001 --image /path/to/new.png` or crop selected pinyin records with `npm run assets:crop-contact-sheet -- --lesson <lesson-root> --sheet /path/sheet.png --records V001,V002`. Do not generate pinyin vocabulary batches one image at a time unless Adam explicitly asks.
 8. Run `npm run assets:manifest -- <lesson-root>` and `npm run assets:qa -- <lesson-root>` after real image replacement, then inspect the affected slide(s).
 
 Shared deck watermark:

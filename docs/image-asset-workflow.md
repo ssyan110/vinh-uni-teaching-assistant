@@ -69,6 +69,8 @@ npm run assets:crop-contact-sheet -- \
 
 Use this after generating one contact sheet in Chrome/ChatGPT. It maps record IDs to their full vocabulary order in the manifest, crops only the requested records, and rebuilds the manifest. It does not regenerate slides or the lesson.
 
+For pinyin vocabulary batches, use `.kiro/skills/pinyin-vocab-contact-sheet-images/SKILL.md`. The default is Google Chrome + ChatGPT, one large contact sheet for the whole batch, then `assets:crop-contact-sheet`. Do not generate pinyin vocabulary images one by one unless Adam explicitly asks.
+
 Before writing files, preview the crop mapping:
 
 ```bash
@@ -152,6 +154,7 @@ Pinyin concept slides must use the provided or generated soft textbook illustrat
 Pinyin vocabulary images:
 
 - Use the soft education textbook style.
+- For batch generation, use Google Chrome + ChatGPT to create one big contact sheet in vocabulary record order, then crop it into the existing asset slots with `npm run assets:crop-contact-sheet`.
 - Use square `1:1` images when the pinyin vocabulary grid/flashcard template calls for square assets.
 - Keep the normal no-text rule unless the image is an approved divider/cover/concept template where text is part of the design.
 - On pinyin vocabulary grid slides, keep only the top bar section label and the grid; do not add extra description/instruction text above the cards.
