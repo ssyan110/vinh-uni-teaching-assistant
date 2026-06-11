@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "lesson_id": "pinyin-04",
-  "generated_at": "2026-06-11T05:35:37.105Z",
+  "generated_at": "2026-06-11T05:47:18.220Z",
   "source_database": "database",
   "workflow": {
     "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
@@ -124,6 +124,32 @@
       "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
     },
     {
+      "id": "assets-photos-divider-review-nihao-png",
+      "asset_path": "assets/photos/divider-review-nihao.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "03-divider-review.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
       "id": "assets-photos-divider-review-png",
       "asset_path": "assets/photos/divider-review.png",
       "role": "section_photo",
@@ -136,7 +162,6 @@
         "aspect_ratio": 1.7768
       },
       "used_by": [
-        "03-divider-review.html",
         "54-divider-review-final.html"
       ],
       "html_reference_types": [
