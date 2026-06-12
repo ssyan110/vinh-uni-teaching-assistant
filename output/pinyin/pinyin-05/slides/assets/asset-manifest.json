@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "lesson_id": "pinyin-05",
-  "generated_at": "2026-06-12T08:07:07.627Z",
+  "generated_at": "2026-06-12T09:47:05.500Z",
   "source_database": "database",
   "workflow": {
     "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
@@ -110,7 +110,7 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "22-divider-finals-2.html"
+        "30-divider-finals-2.html"
       ],
       "html_reference_types": [
         "img"
@@ -163,7 +163,7 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "34-divider-rule.html"
+        "22-divider-rule.html"
       ],
       "html_reference_types": [
         "img"
@@ -190,7 +190,7 @@
       },
       "used_by": [
         "11-divider-vocabulary-1.html",
-        "28-divider-vocabulary-2.html",
+        "24-divider-vocabulary-2.html",
         "36-divider-vocabulary-3.html"
       ],
       "html_reference_types": [
@@ -224,6 +224,174 @@
       ],
       "record_ids": [],
       "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-04-vocab-v001-kai-png",
+      "asset_path": "assets/review-lesson-04/vocab-v001-kai.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "开"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-04-vocab-v002-cai-png",
+      "asset_path": "assets/review-lesson-04/vocab-v002-cai.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "菜"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-04-vocab-v003-mao-png",
+      "asset_path": "assets/review-lesson-04/vocab-v003-mao.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "猫"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-04-vocab-v004-shao-png",
+      "asset_path": "assets/review-lesson-04/vocab-v004-shao.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "少"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-04-vocab-v005-shou-png",
+      "asset_path": "assets/review-lesson-04/vocab-v005-shou.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "手"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-04-vocab-v006-kou-png",
+      "asset_path": "assets/review-lesson-04/vocab-v006-kou.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "口"
+      ],
       "pinyin": [],
       "vietnamese": [],
       "prompt": "",
@@ -285,20 +453,20 @@
         "19-flash-v007-chun.html",
         "20-flash-v008-kun.html",
         "21-practice-vocabulary-1.html",
-        "22-divider-finals-2.html",
-        "23-finals-2.html",
-        "24-chart-2-1.html",
-        "25-chart-2-2.html",
-        "26-chart-2-3.html",
-        "27-practice-finals-2.html",
-        "28-divider-vocabulary-2.html",
-        "29-vocabulary-2.html",
-        "30-flash-v009-junren.html",
-        "31-flash-v010-qunzi.html",
-        "32-flash-v011-peixun.html",
-        "33-practice-vocabulary-2.html",
-        "34-divider-rule.html",
-        "35-rule-rule-l5-jqx-un-umlaut.html",
+        "22-divider-rule.html",
+        "23-rule-rule-l5-jqx-un-umlaut.html",
+        "24-divider-vocabulary-2.html",
+        "25-vocabulary-2.html",
+        "26-flash-v009-junren.html",
+        "27-flash-v010-qunzi.html",
+        "28-flash-v011-peixun.html",
+        "29-practice-vocabulary-2.html",
+        "30-divider-finals-2.html",
+        "31-finals-2.html",
+        "32-chart-2-1.html",
+        "33-chart-2-2.html",
+        "34-chart-2-3.html",
+        "35-practice-finals-2.html",
         "36-divider-vocabulary-3.html",
         "37-vocabulary-3.html",
         "38-flash-v012-tang.html",
@@ -358,20 +526,20 @@
         "19-flash-v007-chun.html",
         "20-flash-v008-kun.html",
         "21-practice-vocabulary-1.html",
-        "22-divider-finals-2.html",
-        "23-finals-2.html",
-        "24-chart-2-1.html",
-        "25-chart-2-2.html",
-        "26-chart-2-3.html",
-        "27-practice-finals-2.html",
-        "28-divider-vocabulary-2.html",
-        "29-vocabulary-2.html",
-        "30-flash-v009-junren.html",
-        "31-flash-v010-qunzi.html",
-        "32-flash-v011-peixun.html",
-        "33-practice-vocabulary-2.html",
-        "34-divider-rule.html",
-        "35-rule-rule-l5-jqx-un-umlaut.html",
+        "22-divider-rule.html",
+        "23-rule-rule-l5-jqx-un-umlaut.html",
+        "24-divider-vocabulary-2.html",
+        "25-vocabulary-2.html",
+        "26-flash-v009-junren.html",
+        "27-flash-v010-qunzi.html",
+        "28-flash-v011-peixun.html",
+        "29-practice-vocabulary-2.html",
+        "30-divider-finals-2.html",
+        "31-finals-2.html",
+        "32-chart-2-1.html",
+        "33-chart-2-2.html",
+        "34-chart-2-3.html",
+        "35-practice-finals-2.html",
         "36-divider-vocabulary-3.html",
         "37-vocabulary-3.html",
         "38-flash-v012-tang.html",
@@ -409,13 +577,12 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "04-warmup-review.html",
         "12-vocabulary-1.html",
         "13-flash-v001-mifan.html",
         "21-practice-vocabulary-1.html",
@@ -448,13 +615,12 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "04-warmup-review.html",
         "12-vocabulary-1.html",
         "14-flash-v002-nan.html",
         "21-practice-vocabulary-1.html",
@@ -487,13 +653,12 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "04-warmup-review.html",
         "12-vocabulary-1.html",
         "15-flash-v003-jidan.html",
         "21-practice-vocabulary-1.html",
@@ -526,13 +691,12 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "04-warmup-review.html",
         "12-vocabulary-1.html",
         "16-flash-v004-men.html",
         "21-practice-vocabulary-1.html",
@@ -565,13 +729,12 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "04-warmup-review.html",
         "12-vocabulary-1.html",
         "17-flash-v005-ren.html",
         "21-practice-vocabulary-1.html",
@@ -604,13 +767,12 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "04-warmup-review.html",
         "12-vocabulary-1.html",
         "18-flash-v006-xin.html",
         "21-practice-vocabulary-1.html",
@@ -643,8 +805,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -681,8 +843,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -719,15 +881,15 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "29-vocabulary-2.html",
-        "30-flash-v009-junren.html",
-        "33-practice-vocabulary-2.html",
+        "25-vocabulary-2.html",
+        "26-flash-v009-junren.html",
+        "29-practice-vocabulary-2.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -757,15 +919,15 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "29-vocabulary-2.html",
-        "31-flash-v010-qunzi.html",
-        "33-practice-vocabulary-2.html",
+        "25-vocabulary-2.html",
+        "27-flash-v010-qunzi.html",
+        "29-practice-vocabulary-2.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -795,15 +957,15 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
-        "29-vocabulary-2.html",
-        "32-flash-v011-peixun.html",
-        "33-practice-vocabulary-2.html",
+        "25-vocabulary-2.html",
+        "28-flash-v011-peixun.html",
+        "29-practice-vocabulary-2.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -833,8 +995,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -871,8 +1033,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -909,8 +1071,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -948,8 +1110,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -987,8 +1149,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -1026,8 +1188,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -1065,8 +1227,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -1104,8 +1266,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },

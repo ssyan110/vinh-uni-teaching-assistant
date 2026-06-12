@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "lesson_id": "pinyin-04",
-  "generated_at": "2026-06-11T06:24:45.676Z",
+  "generated_at": "2026-06-12T09:29:16.375Z",
   "source_database": "database",
   "workflow": {
     "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
@@ -627,10 +627,12 @@
         "13-vocabulary-1.html",
         "14-flash-v001-kai.html",
         "22-practice-vocabulary-1-1.html",
-        "57-review-vocabulary-match.html"
+        "57-review-vocabulary-match.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V001"
@@ -664,10 +666,12 @@
         "13-vocabulary-1.html",
         "15-flash-v002-cai.html",
         "22-practice-vocabulary-1-1.html",
-        "57-review-vocabulary-match.html"
+        "57-review-vocabulary-match.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V002"
@@ -701,10 +705,12 @@
         "13-vocabulary-1.html",
         "16-flash-v003-mao.html",
         "22-practice-vocabulary-1-1.html",
-        "57-review-vocabulary-match.html"
+        "57-review-vocabulary-match.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V003"
@@ -738,10 +744,12 @@
         "13-vocabulary-1.html",
         "17-flash-v004-shao.html",
         "22-practice-vocabulary-1-1.html",
-        "57-review-vocabulary-match.html"
+        "57-review-vocabulary-match.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V004"
@@ -775,10 +783,12 @@
         "13-vocabulary-1.html",
         "18-flash-v005-shou.html",
         "22-practice-vocabulary-1-1.html",
-        "57-review-vocabulary-match.html"
+        "57-review-vocabulary-match.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V005"
@@ -812,10 +822,12 @@
         "13-vocabulary-1.html",
         "19-flash-v006-kou.html",
         "23-practice-vocabulary-1-2.html",
-        "57-review-vocabulary-match.html"
+        "57-review-vocabulary-match.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V006"
@@ -848,10 +860,12 @@
       "used_by": [
         "13-vocabulary-1.html",
         "20-flash-v007-shei.html",
-        "23-practice-vocabulary-1-2.html"
+        "23-practice-vocabulary-1-2.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V007"
@@ -884,10 +898,12 @@
       "used_by": [
         "13-vocabulary-1.html",
         "21-flash-v008-er.html",
-        "23-practice-vocabulary-1-2.html"
+        "23-practice-vocabulary-1-2.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V008"
@@ -920,10 +936,12 @@
       "used_by": [
         "31-vocabulary-2-1.html",
         "33-flash-v009-liu.html",
-        "43-practice-vocabulary-2-1.html"
+        "43-practice-vocabulary-2-1.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V009"
@@ -956,10 +974,12 @@
       "used_by": [
         "31-vocabulary-2-1.html",
         "34-flash-v010-niu.html",
-        "43-practice-vocabulary-2-1.html"
+        "43-practice-vocabulary-2-1.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V010"
@@ -992,10 +1012,12 @@
       "used_by": [
         "31-vocabulary-2-1.html",
         "35-flash-v011-jiu.html",
-        "43-practice-vocabulary-2-1.html"
+        "43-practice-vocabulary-2-1.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V011"
@@ -1028,10 +1050,12 @@
       "used_by": [
         "31-vocabulary-2-1.html",
         "36-flash-v012-qiu.html",
-        "43-practice-vocabulary-2-1.html"
+        "43-practice-vocabulary-2-1.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V012"
@@ -1064,10 +1088,12 @@
       "used_by": [
         "31-vocabulary-2-1.html",
         "37-flash-v013-dui.html",
-        "43-practice-vocabulary-2-1.html"
+        "43-practice-vocabulary-2-1.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V013"
@@ -1100,10 +1126,12 @@
       "used_by": [
         "32-vocabulary-2-2.html",
         "38-flash-v014-shui.html",
-        "44-practice-vocabulary-2-2.html"
+        "44-practice-vocabulary-2-2.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V014"
@@ -1136,10 +1164,12 @@
       "used_by": [
         "32-vocabulary-2-2.html",
         "39-flash-v015-gui.html",
-        "44-practice-vocabulary-2-2.html"
+        "44-practice-vocabulary-2-2.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V015"
@@ -1172,10 +1202,12 @@
       "used_by": [
         "32-vocabulary-2-2.html",
         "40-flash-v016-jiejie.html",
-        "44-practice-vocabulary-2-2.html"
+        "44-practice-vocabulary-2-2.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V016"
@@ -1208,10 +1240,12 @@
       "used_by": [
         "32-vocabulary-2-2.html",
         "41-flash-v017-xie.html",
-        "44-practice-vocabulary-2-2.html"
+        "44-practice-vocabulary-2-2.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V017"
@@ -1244,10 +1278,12 @@
       "used_by": [
         "32-vocabulary-2-2.html",
         "42-flash-v018-xiexie.html",
-        "44-practice-vocabulary-2-2.html"
+        "44-practice-vocabulary-2-2.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V018"
@@ -1279,10 +1315,12 @@
       },
       "used_by": [
         "50-vocabulary-3.html",
-        "51-flash-v019-juede.html"
+        "51-flash-v019-juede.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V019"
@@ -1314,10 +1352,12 @@
       },
       "used_by": [
         "50-vocabulary-3.html",
-        "52-flash-v020-que.html"
+        "52-flash-v020-que.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V020"
@@ -1349,10 +1389,12 @@
       },
       "used_by": [
         "50-vocabulary-3.html",
-        "53-flash-v021-xue.html"
+        "53-flash-v021-xue.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V021"
