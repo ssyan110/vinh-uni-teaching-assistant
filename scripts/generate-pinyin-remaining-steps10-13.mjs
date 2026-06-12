@@ -67,6 +67,10 @@ const validByLesson = {
 const esc = (value = '') => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 const simplify = (value = '') => String(value).split('').map((ch) => zhMap.get(ch) || ch).join('');
 const slug = (value = '') => String(value).normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-zA-Z0-9]+/g, '-').replace(/^-+|-+$/g, '').toLowerCase() || 'item';
+const displayFinal = (value = '') => value === 'uen(un)' ? 'un' : value;
+const pageNo = (value = '') => Number(String(value).match(/P(\d+)/)?.[1] || 999);
+const letterSuffix = (index) => String.fromCharCode(97 + index);
+const upperLabel = (value = '') => String(value).toLocaleUpperCase('vi-VN');
 
 async function exists(file) {
   try { await fs.stat(file); return true; } catch { return false; }
@@ -135,9 +139,9 @@ function objectivesSlide(db, vocabCount) {
   });
 }
 
-function dividerSlide({ title, zh, label, img = 'divider-finals.png', superTitle = '' }) {
+function dividerSlide({ title, zh, label, img = 'divider-finals.png', icon = 'sparkles', superTitle = '' }) {
   return slideShell({
-    title, icon: 'sparkles', label,
+    title, icon, label,
     content: `<div class="divider-left">${superTitle ? `<div class="divider-super">${esc(superTitle)}</div>` : ''}<div class="divider-kicker">${esc(label)}</div><div class="divider-zh">${esc(simplify(zh))}</div><div class="divider-line"></div></div><div class="divider-photo"><img src="assets/photos/${img}" alt=""></div>`,
   });
 }
@@ -162,10 +166,10 @@ function chartSlide(no, chart, initials, label = 'Bảng ghép âm') {
     return `<td class="${value ? '' : 'chart-empty'}">${value || '-'}</td>`;
   }).join('')}</tr>`).join('');
   return slideShell({
-    title: simplify(chart.title),
+    title: simplify(chart.title).replaceAll('uen(un)', 'un'),
     icon: 'table-2',
     label,
-    content: `<div class="chart-full"><div class="chart-full-card"><table class="sound-table"><thead><tr><th></th>${chart.finals.map((f) => `<th>${esc(f)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div></div>`,
+    content: `<div class="chart-full"><div class="chart-full-card"><table class="sound-table"><thead><tr><th></th>${chart.finals.map((f) => `<th>${esc(displayFinal(f))}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div></div>`,
   });
 }
 
@@ -175,13 +179,15 @@ function markTone(syllable, tone = 1) {
   return v ? syllable.replace(v, marks[v][tone - 1]) : syllable;
 }
 
-function practiceFromChart(no, chart) {
-  const rows = chart.finals.slice(0, 4).map((final) => chart.initials.map((initial) => cellValue(no, initial, final)).filter(Boolean).slice(0, 4).map((s, i) => markTone(s, (i % 4) + 1)));
+function practiceFromChart(no, chart, partIndex = 0, partCount = 1) {
+  const finals = chart.finals || [];
+  const rows = finals.map((final) => chart.initials.map((initial) => cellValue(no, initial, final)).filter(Boolean).slice(0, 4).map((s, i) => markTone(s, (i % 4) + 1)));
+  const title = partCount > 1 ? `Luyện đọc: ${finals.map(displayFinal).join(' ')}` : 'Luyện đọc có thanh điệu';
   return slideShell({
-    title: 'Luyện đọc có thanh điệu',
+    title,
     icon: 'mic-2',
     label: 'Luyện đọc',
-    content: renderReadingDrillBoard({ title: 'Luyện đọc có thanh điệu', rows, rowLabels: chart.finals.slice(0, 4), titleAlign: 'left' }),
+    content: renderReadingDrillBoard({ title, rows, rowLabels: finals.map(displayFinal), titleAlign: 'left' }),
   });
 }
 
@@ -199,23 +205,51 @@ function flashcardSlide(item, index, total, setNo) {
   });
 }
 
-function vocabPracticeSlide(set) {
+function vocabPracticeSlide(set, options = {}) {
+  const opts = typeof options === 'string' ? { title: options } : options;
   const pairs = set.items.map((item) => ({ pinyin: item.pinyin, hanzi: item.chinese_simplified, image: item.image_file }));
   return slideShell({
-    title: 'Nối từ vựng với hình ảnh',
+    title: opts.title || 'Nối từ vựng với hình ảnh',
     icon: 'git-branch',
-    label: 'Luyện từ vựng',
-    content: renderImageMatchingBoard({ instruction: 'Nối từ vựng với hình ảnh.', pairs }),
+    label: opts.label || 'Luyện từ vựng',
+    content: renderImageMatchingBoard({ instruction: opts.instruction || 'Nối từ vựng với hình ảnh.', pairs, partLabel: opts.partLabel || '' }),
   });
 }
 
 function ruleSlide(rule) {
   const rules = rule.rules || [];
+  const title = ruleTitleVi(rule);
+  const colCount = rules.length > 4 ? 3 : Math.min(3, Math.max(1, rules.length));
+  const compactClass = rules.length > 3 ? ' compact' : '';
   return slideShell({
-    title: simplify(rule.title),
+    title,
     icon: 'wand-sparkles',
     label: 'Quy tắc viết pinyin',
-    content: `<div class="rule-center"><div class="title-xl">${esc(simplify(rule.title))}</div><div class="rule-grid">${rules.slice(0, 3).map((r) => `<div class="soft-card rule-card"><div class="from">${esc(r.underlying_form || r.from || r.original || '')}</div><div class="arrow">→</div><div class="to">${esc(r.written_form || r.to || r.changed || '')}</div></div>`).join('')}</div></div>`,
+    content: `<div class="rule-center"><div class="title-xl">${esc(title)}</div><div class="rule-grid${compactClass}">${rules.map((r) => `<div class="soft-card rule-card"><div class="from">${esc(r.underlying_form || r.from || r.original || '')}</div><div class="arrow">→</div><div class="to">${esc(r.written_form || r.to || r.changed || '')}</div></div>`).join('')}</div></div>`,
+    extraCss: `.rule-grid{grid-template-columns:repeat(${colCount},1fr)}.rule-grid.compact{gap:14px}.rule-grid.compact .rule-card{height:118px}.rule-grid.compact .rule-card .from,.rule-grid.compact .rule-card .to{font-size:35px}`,
+  });
+}
+
+function ruleTitleVi(rule) {
+  const title = simplify(rule?.title || rule?.rule_title || 'Quy tắc viết pinyin');
+  const hasJqx = /j\/q\/x|jqx/i.test(title);
+  if (!hasJqx && (title.includes('ü/üe/üan/ün') || title.includes('yu/yue/yuan/yun'))) return 'ü/üe/üan/ün → yu/yue/yuan/yun';
+  if (hasJqx && title.includes('üan')) return 'j/q/x + üan: viết bỏ hai chấm';
+  if (hasJqx && title.includes('ün')) return 'j/q/x + ün: viết bỏ hai chấm';
+  if (hasJqx && title.includes('üe')) return 'j/q/x + üe: viết bỏ hai chấm';
+  if (hasJqx && title.includes('ü')) return 'Sau j/q/x, ü bỏ hai chấm khi viết';
+  if (title.includes('生词拼音')) return 'Pinyin của một từ: viết liền';
+  return title;
+}
+
+function ruleExamplesSlide(rule, set) {
+  if (!set?.items?.length) return null;
+  return slideShell({
+    title: `Đọc theo quy tắc ${ruleTitleVi(rule).split(':')[0]}`,
+    icon: 'list-checks',
+    label: 'Quy tắc viết pinyin',
+    content: `<div class="content"><div class="tone-family-title left">${esc(`Đọc theo quy tắc ${ruleTitleVi(rule).split(':')[0]}`)}</div><div class="rule-examples">${set.items.slice(0, 3).map((item) => `<div class="soft-card rule-example"><div class="pin">${esc(item.pinyin)}</div><div class="han">${esc(item.chinese_simplified)}</div><div class="vi-small">${esc(item.vietnamese)}</div></div>`).join('')}</div></div>`,
+    extraCss: `.rule-examples{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:34px}.rule-example{height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.rule-example .pin{font-size:34px;line-height:1;font-weight:900;color:#5AACAC}.rule-example .han{font-family:'Noto Sans SC';font-size:56px;line-height:1.05;font-weight:900;color:#1A3A5A;margin-top:16px}.rule-example .vi-small{font-size:18px;line-height:1.25;color:#5F7088;font-weight:800;margin-top:14px}`,
   });
 }
 
@@ -256,7 +290,8 @@ function normalizeVocab(db) {
   let index = 0;
   return db.vocabulary_sets.map((set, setIndex) => ({
     ...set,
-    title_vi: set.title.replace('詞彙', 'Từ vựng'),
+    setNo: setIndex + 1,
+    title_vi: set.title.replace(/詞彙|词汇/g, 'Từ vựng'),
     items: set.items.map((item) => {
       index += 1;
       const chinese = simplify(item.hanzi);
@@ -276,27 +311,38 @@ function normalizeVocab(db) {
 async function writePlaceholderImages(slidesDir, vocabSets) {
   const vocabDir = path.join(slidesDir, 'assets/vocab-images');
   await fs.mkdir(vocabDir, { recursive: true });
+  const promptsPath = path.join(vocabDir, 'prompts.json');
+  const existingPrompts = new Map();
+  try {
+    const data = JSON.parse(await fs.readFile(promptsPath, 'utf8'));
+    for (const prompt of data.prompts || []) existingPrompts.set(prompt.record_id, prompt);
+  } catch {
+    // No previous prompt metadata to preserve.
+  }
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320"><rect width="320" height="320" rx="34" fill="#F4FAFA"/><rect x="26" y="26" width="268" height="268" rx="26" fill="#FFFFFF" stroke="#B9DADB" stroke-width="3"/><path d="M86 204c27-42 54-65 86-69 24-3 45 5 63 24" fill="none" stroke="#A9C9CD" stroke-width="11" stroke-linecap="round"/><circle cx="124" cy="125" r="25" fill="#DDEDEE"/><circle cx="204" cy="116" r="18" fill="#F3D8B6"/></svg>`;
   const png = await sharp(Buffer.from(svg)).png().toBuffer();
   const prompts = [];
   for (const item of vocabSets.flatMap((set) => set.items)) {
     const target = path.join(slidesDir, item.image_file);
-    if (!await exists(target)) await fs.writeFile(target, png);
+    const hadImage = await exists(target);
+    if (!hadImage) await fs.writeFile(target, png);
+    const previous = existingPrompts.get(item.record_id) || {};
     prompts.push({
+      ...previous,
       record_id: item.record_id,
       chinese_simplified: item.chinese_simplified,
       pinyin: item.pinyin,
       vietnamese: item.vietnamese,
       filename: path.basename(item.image_file),
-      status: 'placeholder_needs_generation',
+      status: previous.status || (hadImage ? 'existing_asset_preserved' : 'placeholder_needs_generation'),
       prompt: `Soft textbook 1:1 illustration for ${item.vietnamese}; no text, labels, letters, numbers, or watermark.`,
-      visual_description: `Placeholder image for ${item.chinese_simplified} (${item.pinyin}).`,
+      visual_description: previous.visual_description || `${hadImage ? 'Existing image' : 'Placeholder image'} for ${item.chinese_simplified} (${item.pinyin}).`,
     });
   }
-  await fs.writeFile(path.join(vocabDir, 'prompts.json'), `${JSON.stringify({ prompts }, null, 2)}\n`, 'utf8');
+  await fs.writeFile(promptsPath, `${JSON.stringify({ prompts }, null, 2)}\n`, 'utf8');
 }
 
-async function prepareLessonDirs(lessonRoot) {
+async function prepareLessonDirs(lessonRoot, no) {
   const slidesDir = path.join(lessonRoot, 'slides');
   for (const dir of ['slides/assets/brand', 'exports/final', 'exports/qa', 'exports/archive', 'teacher-guide', 'homework-question-bank']) {
     await fs.mkdir(path.join(lessonRoot, dir), { recursive: true });
@@ -309,6 +355,11 @@ async function prepareLessonDirs(lessonRoot) {
   await copyDirIfExists(path.join(templateRoot, 'slides/assets/photos'), path.join(slidesDir, 'assets/photos'));
   await copyDirIfExists(path.join(templateRoot, 'slides/assets/sample-images'), path.join(slidesDir, 'assets/sample-images'));
   await copyDirIfExists(path.join(templateRoot, 'slides/assets/reference'), path.join(slidesDir, 'assets/reference'));
+  const previousNo = String(Number(no) - 1).padStart(2, '0');
+  await copyDirIfExists(
+    path.join(root, `output/pinyin/pinyin-${previousNo}/slides/assets/vocab-images`),
+    path.join(slidesDir, `assets/review-lesson-${previousNo}`),
+  );
   return slidesDir;
 }
 
@@ -318,8 +369,84 @@ function groupInitials(initials) {
 
 function coverGroups(no, db) {
   if (no === '05') return [['an', 'en', 'in', 'un', 'ün'], ['ang', 'eng', 'ing', 'ong'], ['j/q/x', '+', 'ün', '→', 'jun/qun/xun']];
-  if (no === '06') return [['ia', 'iao', 'ian', 'iang', 'iong'], ['ua', 'uo', 'uai', 'uan', 'uang'], 'break', ['j/q/x', '+', 'üan', '→', 'juan/quan/xuan']];
+  if (no === '06') return [['ia', 'iao', 'ian', 'iang', 'iong'], ['ua', 'uo', 'uai', 'uan', 'uang', 'üan'], 'break', ['j/q/x', '+', 'üan', '→', 'juan/quan/xuan']];
   return [['i', '→', 'yi'], ['u', '→', 'wu'], 'break', ['ü', '→', 'yu'], ['ia/ua/üe', '→', 'y/w/y']];
+}
+
+function warmupSlide(no, db) {
+  const previousNo = String(Number(no) - 1).padStart(2, '0');
+  const pairs = (db.warmup_activity?.source_vocabulary || []).slice(0, 6).map((item, index) => ({
+    pinyin: item.pinyin,
+    hanzi: simplify(item.hanzi),
+    image: `assets/review-lesson-${previousNo}/vocab-v${String(index + 1).padStart(3, '0')}-${slug(item.pinyin)}.png`,
+  }));
+  return slideShell({
+    title: `Nối từ Bài ${Number(no) - 1} với hình ảnh`,
+    icon: 'git-branch',
+    label: `Ôn bài ${Number(no) - 1}`,
+    content: renderImageMatchingBoard({
+      instruction: `Nối từ vựng Bài ${Number(no) - 1} với hình ảnh.`,
+      pairs,
+    }),
+  });
+}
+
+function introFinalsForChart(no, db, chart) {
+  if (no === '05' && chart.item_id === 'pinyin_chart_l5_group_1') return ['an', 'en', 'in', 'un', 'ün'];
+  return (chart.finals || []).map(displayFinal);
+}
+
+function chartDividerImage(no, chart, chartNo) {
+  if (no === '05' && chartNo === 1) return 'divider-finals-an-en-in-uen-un.png';
+  if (no === '05' && chartNo === 2) return 'divider-finals-ang-eng-ing-ong.png';
+  if (no === '06' && chartNo === 1) return 'divider-finals-ia-iao-ian-iang-iong.png';
+  if (no === '06' && chartNo === 2) return 'divider-finals-ua-uo-uai-uan-uang-uan.png';
+  return 'divider-finals.png';
+}
+
+function chartDividerZh(no, chartNo) {
+  if (no === '05' && chartNo === 1) return '前鼻韵母';
+  if (no === '05' && chartNo === 2) return '后鼻韵母';
+  if (no === '06' && chartNo === 1) return 'i开头复韵母';
+  if (no === '06' && chartNo === 2) return 'u/ü开头复韵母';
+  return '韵母';
+}
+
+function ruleDividerImage(no, rule) {
+  const title = ruleTitleVi(rule);
+  if (no === '05' && title.includes('ün')) return 'divider-rule-jqx-un.png';
+  if (no === '06' && title.includes('üan')) return 'divider-rule-jqx-uan.png';
+  if (no === '07') return 'divider-rules-i-u-yu.png';
+  return 'divider-concepts.png';
+}
+
+function ruleList(db) {
+  return [...(db.spelling_rules || []), ...(db.word_spacing_rules || [])];
+}
+
+function relatedSetForRule(rule, vocabSets) {
+  const relatedIds = rule.applies_to_vocabulary_set_ids || rule.related_vocabulary_set_ids || [];
+  if (relatedIds.length) return vocabSets.find((set) => relatedIds.includes(set.set_id));
+  return vocabSets.find((set) => set.related_rule_id === rule.item_id || set.related_rule_id === rule.rule_id);
+}
+
+function addVocabularySection(slides, set, setNo, vocab, options = {}) {
+  const { includePractice = true } = options;
+  slides.push([`divider-vocabulary-${setNo}`, dividerSlide({ title: set.title_vi, zh: '词汇', label: upperLabel(set.title_vi), img: 'divider-vocabulary.png', icon: 'images' })]);
+  const gridChunks = chunkItems(set.items, set.items.length > 8 ? 6 : 8);
+  for (const [chunkIndex, items] of gridChunks.entries()) {
+    const suffix = gridChunks.length > 1 ? `-${chunkIndex + 1}` : '';
+    slides.push([`vocabulary-${setNo}${suffix}`, vocabGridSlide({ ...set, items, title_vi: `${set.title_vi}${gridChunks.length > 1 ? ` ${chunkIndex + 1}` : ''}` })]);
+  }
+  for (const item of set.items) slides.push([`flash-${item.record_id.toLowerCase()}-${slug(item.pinyin)}`, flashcardSlide(item, vocab.indexOf(item), vocab.length, setNo)]);
+  if (!includePractice) return;
+  const practiceChunks = chunkItems(set.items, set.items.length > 6 ? 4 : 6);
+  for (const [chunkIndex, items] of practiceChunks.entries()) {
+    const suffix = practiceChunks.length > 1 ? letterSuffix(chunkIndex) : '';
+    slides.push([`practice-vocabulary-${setNo}${suffix}`, vocabPracticeSlide({ ...set, items }, {
+      partLabel: practiceChunks.length > 1 ? `phần ${chunkIndex + 1}` : '',
+    })]);
+  }
 }
 
 function l7RuleSlides(db) {
@@ -341,6 +468,147 @@ function l7RuleSlides(db) {
   });
 }
 
+function balancedPracticeChunks(items, maxSize = 5) {
+  if (items.length <= maxSize) return [items];
+  const chunkCount = Math.ceil(items.length / maxSize);
+  return chunkItems(items, Math.ceil(items.length / chunkCount));
+}
+
+function l7LearningTargets(page) {
+  const tail = String(page?.title || '').split('：').pop() || '';
+  return tail.trim().split(/\s+/).filter(Boolean);
+}
+
+function l7LearningIntroSlide(page, index) {
+  const targets = l7LearningTargets(page);
+  return slideShell({
+    title: `Dạng viết ${index}: ${targets.join(' ')}`,
+    icon: 'route',
+    label: `QUY TẮC ${index}`,
+    content: `<div class="sound-only"><div class="sound-only-row">${targets.map((item) => `<div class="sound-only-token">${esc(item)}</div>`).join('')}</div></div>`,
+  });
+}
+
+function l7WarmupSlides(no, db) {
+  const previousNo = String(Number(no) - 1).padStart(2, '0');
+  const source = db.warmup_activity?.source_vocabulary || [];
+  const pairs = source.map((item, index) => ({
+    pinyin: item.pinyin,
+    hanzi: simplify(item.hanzi),
+    image: `assets/review-lesson-${previousNo}/vocab-v${String(index + 1).padStart(3, '0')}-${slug(item.pinyin)}.png`,
+  }));
+  return balancedPracticeChunks(pairs, 5).map((chunk, index, chunks) => slideShell({
+    title: `Ôn bài ${Number(no) - 1}${chunks.length > 1 ? ` - phần ${index + 1}` : ''}`,
+    icon: 'git-branch',
+    label: `ÔN BÀI ${Number(no) - 1}`,
+    content: renderImageMatchingBoard({
+      instruction: `Nối từ vựng Bài ${Number(no) - 1} với hình ảnh.`,
+      pairs: chunk,
+      partLabel: chunks.length > 1 ? `phần ${index + 1}` : '',
+    }),
+  }));
+}
+
+function addL7PracticeSection(slides, db, vocabSets, exercise, exerciseNo) {
+  const sourceIds = exercise.source_vocabulary_set_ids || [];
+  const items = vocabSets.filter((set) => sourceIds.includes(set.set_id)).flatMap((set) => set.items);
+  for (const [chunkIndex, chunk] of balancedPracticeChunks(items, 5).entries()) {
+    const suffix = letterSuffix(chunkIndex);
+    slides.push([`practice-vocabulary-${exerciseNo}${suffix}`, vocabPracticeSlide({
+      title_vi: `Từ vựng ${exerciseNo}`,
+      items: chunk,
+    }, {
+      partLabel: items.length > 5 ? `phần ${chunkIndex + 1}` : '',
+    })]);
+  }
+}
+
+function l7WordSpacingSlide(rule) {
+  const example = rule.example || {};
+  const correct = example.correct_pinyin || 'Yuènán';
+  const incorrect = example.incorrect_pinyin || 'Yuè nán';
+  return slideShell({
+    title: ruleTitleVi(rule),
+    icon: 'text-cursor-input',
+    label: 'Quy tắc viết pinyin',
+    content: `<div class="content"><div class="title-xl">Pinyin của một từ: viết liền</div><div class="spacing-rule-grid"><div class="soft-card spacing-card good"><div class="tag">ĐÚNG</div><div class="han">${esc(example.hanzi || '越南')}</div><div class="pin">${esc(correct)}</div></div><div class="soft-card spacing-card bad"><div class="tag">KHÔNG VIẾT</div><div class="han">${esc(example.hanzi || '越南')}</div><div class="pin">${esc(incorrect)}</div></div></div><div class="spacing-note">${esc('Một từ tiếng Trung thì pinyin viết liền theo từ đó.')}</div></div>`,
+    extraCss: `.spacing-rule-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}.spacing-card{height:208px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.spacing-card .tag{font-size:14px;font-weight:950;letter-spacing:2px;color:#5AACAC;margin-bottom:12px}.spacing-card.bad .tag{color:#E06060}.spacing-card .han{font-family:'Noto Sans SC';font-size:56px;font-weight:900;line-height:1;color:#1A3A5A}.spacing-card .pin{font-size:40px;font-weight:950;line-height:1;color:#5AACAC;margin-top:14px}.spacing-card.bad .pin{color:#E06060;text-decoration:line-through;text-decoration-thickness:3px}.spacing-note{margin-top:24px;text-align:center;font-size:22px;line-height:1.3;font-weight:850;color:#4A6080}`,
+  });
+}
+
+function l7SummarySlide(db) {
+  const rows = (db.spelling_rules || []).map((rule) => {
+    const left = (rule.rules || []).map((item) => item.underlying_form).join(' / ');
+    const right = (rule.rules || []).map((item) => item.written_form).join(' / ');
+    return `<tr><td>${esc(left)}</td><td>${esc(right)}</td></tr>`;
+  }).join('');
+  return slideShell({
+    title: 'Bảng tổng hợp quy tắc i/u/ü',
+    icon: 'table-2',
+    label: 'TÓM TẮT',
+    content: `<div class="content"><div class="summary-card soft-card"><table class="summary-table"><thead><tr><th>Âm gốc</th><th>Dạng viết khi đứng một mình</th></tr></thead><tbody>${rows}</tbody></table></div></div>`,
+    extraCss: `.summary-card{padding:12px 16px}.summary-table{width:100%;border-collapse:separate;border-spacing:0 8px;table-layout:fixed}.summary-table th{height:38px;background:#E8F4F4;color:#5AACAC;font-size:15px;letter-spacing:.2px;text-align:center}.summary-table th:first-child{border-radius:12px 0 0 12px}.summary-table th:last-child{border-radius:0 12px 12px 0}.summary-table td{height:43px;background:#fff;border-top:1px solid rgba(90,172,172,.16);border-bottom:1px solid rgba(90,172,172,.16);font-size:22px;line-height:1.1;font-weight:950;color:#1A3A5A;text-align:center}.summary-table td:first-child{border-left:1px solid rgba(90,172,172,.16);border-radius:12px 0 0 12px;color:#7C6BC8}.summary-table td:last-child{border-right:1px solid rgba(90,172,172,.16);border-radius:0 12px 12px 0;color:#5AACAC}`,
+  });
+}
+
+function addLesson7Sequence(slides, no, db, vocabSets, vocab) {
+  const ruleById = new Map((db.spelling_rules || []).map((rule) => [rule.item_id, rule]));
+  const setById = new Map(vocabSets.map((set) => [set.set_id, set]));
+  const exerciseByFirstSource = new Map((db.exercises || [])
+    .filter((exercise) => exercise.source_vocabulary_set_ids?.length)
+    .map((exercise, index) => [exercise.source_vocabulary_set_ids[0], { exercise, exerciseNo: index + 1 }]));
+
+  for (const page of db.pages || []) {
+    if (['lesson_cover', 'learning_objective', 'warmup_activity', 'reserved_page'].includes(page.record_type)) continue;
+
+    if (page.record_type === 'pinyin_learning_cover') {
+      const index = slides.filter(([name]) => name.startsWith('rule-intro-')).length + 1;
+      slides.push([`rule-intro-${index}`, l7LearningIntroSlide(page, index)]);
+      continue;
+    }
+
+    if (page.record_type === 'spelling_rule') {
+      const rule = ruleById.get(page.spelling_rule_id || page.item_id);
+      if (rule) slides.push([`rule-${slug(rule.item_id)}`, ruleSlide(rule)]);
+      continue;
+    }
+
+    if (page.record_type === 'vocabulary_set') {
+      const set = setById.get(page.vocabulary_set_id || page.item_id);
+      if (set) addVocabularySection(slides, set, set.setNo, vocab, { includePractice: false });
+      continue;
+    }
+
+    if (page.record_type === 'vocab_exercise') {
+      const exercise = (db.exercises || []).find((item) => item.page === page.page_range || item.page === page.page);
+      if (exercise) {
+        const firstSource = exercise.source_vocabulary_set_ids?.[0];
+        const mapped = firstSource ? exerciseByFirstSource.get(firstSource) : null;
+        addL7PracticeSection(slides, db, vocabSets, exercise, mapped?.exerciseNo || 1);
+      }
+      continue;
+    }
+
+    if (page.record_type === 'word_spacing_rule') {
+      const rule = (db.word_spacing_rules || [])[0];
+      if (rule) slides.push([`rule-${slug(rule.item_id)}`, l7WordSpacingSlide(rule)]);
+      continue;
+    }
+
+    if (page.record_type === 'review_exercise') {
+      slides.push(['divider-review-final', dividerSlide({ title: 'Ôn tập cuối bài', zh: '练习', label: 'ÔN TẬP', img: 'divider-review.png', icon: 'check-circle-2' })]);
+      slides.push(['review-listening-choice', choiceSlide((db.spelling_rules || [])[0] || (db.word_spacing_rules || [])[0])]);
+      slides.push(['review-fill-blank', fillBlankSlide(no, vocab)]);
+      slides.push(['review-vocabulary-match', vocabPracticeSlide({ title_vi: 'Ôn từ vựng', items: vocab.slice(-Math.min(6, vocab.length)) })]);
+      continue;
+    }
+
+    if (page.record_type === 'spelling_rule_summary') {
+      slides.push(['rule-summary', l7SummarySlide(db)]);
+    }
+  }
+}
+
 async function writeGuides(lessonRoot, no, db, vocabCount, slideCount) {
   const dir = path.join(lessonRoot, 'teacher-guide');
   await fs.mkdir(dir, { recursive: true });
@@ -353,7 +621,7 @@ async function generate(no) {
   const lessonRoot = path.join(root, `output/pinyin/pinyin-${no}`);
   const dbPath = path.join(lessonRoot, `database/vp_pinyin_${no}_database.json`);
   const db = JSON.parse(await fs.readFile(dbPath, 'utf8'));
-  const slidesDir = await prepareLessonDirs(lessonRoot);
+  const slidesDir = await prepareLessonDirs(lessonRoot, no);
   const vocabSets = normalizeVocab(db);
   const vocab = vocabSets.flatMap((set) => set.items);
   await writePlaceholderImages(slidesDir, vocabSets);
@@ -361,50 +629,54 @@ async function generate(no) {
   const slides = [];
   slides.push(['cover', coverSlide(no, coverGroups(no, db))]);
   slides.push(['objectives', objectivesSlide(db, vocab.length)]);
-  slides.push(['divider-review', dividerSlide({ title: `Ôn bài ${Number(no) - 1}`, zh: `ÔN BÀI ${Number(no) - 1}`, label: 'Khởi động', img: 'divider-review.png', superTitle: 'Khởi động' })]);
-  slides.push(['warmup-review', vocabPracticeSlide({ title_vi: 'Ôn bài trước', items: vocab.slice(0, Math.min(6, vocab.length)) })]);
+  slides.push(['divider-review', dividerSlide({ title: `Ôn bài ${Number(no) - 1}`, zh: '暖身活动', label: `ÔN BÀI ${Number(no) - 1}`, img: 'divider-review.png', icon: 'refresh-cw', superTitle: 'Khởi động' })]);
+  if (no === '07') {
+    for (const [index, html] of l7WarmupSlides(no, db).entries()) {
+      slides.push([`warmup-review-${letterSuffix(index)}`, html]);
+    }
+  } else {
+    slides.push(['warmup-review', warmupSlide(no, db)]);
+  }
 
   if (no === '07') {
-    slides.push(['divider-rules', dividerSlide({ title: 'Quy tắc viết pinyin', zh: '拼写规则', label: 'Quy tắc viết pinyin', img: 'divider-concepts.png' })]);
-    for (const [i, html] of l7RuleSlides(db).entries()) slides.push([`rule-${i + 1}`, html]);
+    addLesson7Sequence(slides, no, db, vocabSets, vocab);
   } else {
-    const charts = db.pinyin_charts || [];
-    for (const [chartIndex, chart] of charts.entries()) {
-      const finalSymbols = chart.finals || [];
-      slides.push([`divider-finals-${chartIndex + 1}`, dividerSlide({ title: `Vận mẫu ${chartIndex + 1}`, zh: '韵母', label: `Vận mẫu ${chartIndex + 1}`, img: 'divider-finals.png' })]);
-      slides.push([`finals-${chartIndex + 1}`, soundsSlide(`Vận mẫu ${chartIndex + 1}`, finalSymbols)]);
-      for (const [groupIndex, initials] of groupInitials(chart.initials || []).entries()) {
-        slides.push([`chart-${chartIndex + 1}-${groupIndex + 1}`, chartSlide(no, chart, initials)]);
-      }
-      slides.push([`practice-finals-${chartIndex + 1}`, practiceFromChart(no, chart)]);
-      const relatedSet = vocabSets[chartIndex];
-      if (relatedSet) {
-        slides.push([`divider-vocabulary-${chartIndex + 1}`, dividerSlide({ title: relatedSet.title_vi, zh: '词汇', label: relatedSet.title_vi, img: 'divider-vocabulary.png' })]);
-        slides.push([`vocabulary-${chartIndex + 1}`, vocabGridSlide(relatedSet)]);
-        for (const item of relatedSet.items) slides.push([`flash-${item.record_id.toLowerCase()}-${slug(item.pinyin)}`, flashcardSlide(item, vocab.indexOf(item), vocab.length, chartIndex + 1)]);
-        slides.push([`practice-vocabulary-${chartIndex + 1}`, vocabPracticeSlide(relatedSet)]);
+    const events = [
+      ...(db.pinyin_charts || []).map((chart, index) => ({ type: 'chart', chart, index, page: pageNo(chart.page) })),
+      ...ruleList(db).map((rule, index) => ({ type: 'rule', rule, index, page: pageNo(rule.page) })),
+      ...vocabSets.map((set, index) => ({ type: 'vocabulary', set, index, page: pageNo(set.page) })),
+    ].sort((a, b) => a.page - b.page || ({ chart: 1, rule: 2, vocabulary: 3 }[a.type] - { chart: 1, rule: 2, vocabulary: 3 }[b.type]));
+
+    for (const event of events) {
+      if (event.type === 'chart') {
+        const chartNo = event.index + 1;
+        slides.push([`divider-finals-${chartNo}`, dividerSlide({ title: `Vận mẫu ${chartNo}`, zh: chartDividerZh(no, chartNo), label: `VẬN MẪU ${chartNo}`, img: chartDividerImage(no, event.chart, chartNo), icon: 'volume-2' })]);
+        slides.push([`finals-${chartNo}`, soundsSlide(`Vận mẫu ${chartNo}`, introFinalsForChart(no, db, event.chart))]);
+        for (const [groupIndex, initials] of groupInitials(event.chart.initials || []).entries()) {
+          slides.push([`chart-${chartNo}-${groupIndex + 1}`, chartSlide(no, event.chart, initials)]);
+        }
+        const practiceFinalGroups = event.chart.finals.length > 4
+          ? chunkItems(event.chart.finals, Math.ceil(event.chart.finals.length / 2))
+          : [event.chart.finals];
+        for (const [practiceIndex, finals] of practiceFinalGroups.entries()) {
+          const suffix = practiceFinalGroups.length > 1 ? letterSuffix(practiceIndex) : '';
+          slides.push([`practice-finals-${chartNo}${suffix}`, practiceFromChart(no, { ...event.chart, finals }, practiceIndex, practiceFinalGroups.length)]);
+        }
+      } else if (event.type === 'rule') {
+        slides.push([`divider-rule${event.index ? `-${event.index + 1}` : ''}`, dividerSlide({ title: 'Quy tắc viết pinyin', zh: '拼写规则', label: 'QUY TẮC VIẾT', img: ruleDividerImage(no, event.rule), icon: 'wand-sparkles' })]);
+        slides.push([`rule-${slug(event.rule.item_id || event.rule.rule_id || event.rule.title)}`, ruleSlide(event.rule)]);
+        const examples = ruleExamplesSlide(event.rule, relatedSetForRule(event.rule, vocabSets));
+        if (examples) slides.push([`rule-${slug(event.rule.item_id || event.rule.rule_id || event.rule.title)}-examples`, examples]);
+      } else if (event.type === 'vocabulary') {
+        addVocabularySection(slides, event.set, event.index + 1, vocab);
       }
     }
-    const rules = db.spelling_rules || [];
-    if (rules.length) {
-      slides.push(['divider-rule', dividerSlide({ title: 'Quy tắc viết pinyin', zh: '拼写规则', label: 'Quy tắc viết pinyin', img: 'divider-concepts.png' })]);
-      for (const rule of rules) slides.push([`rule-${slug(rule.item_id || rule.title)}`, ruleSlide(rule)]);
-    }
-  }
 
-  const remainingSets = vocabSets.filter((set) => !slides.some(([name]) => name === `vocabulary-${vocabSets.indexOf(set) + 1}`));
-  for (const set of remainingSets) {
-    const i = vocabSets.indexOf(set) + 1;
-    slides.push([`divider-vocabulary-${i}`, dividerSlide({ title: set.title_vi, zh: '词汇', label: set.title_vi, img: 'divider-vocabulary.png' })]);
-    slides.push([`vocabulary-${i}`, vocabGridSlide(set)]);
-    for (const item of set.items) slides.push([`flash-${item.record_id.toLowerCase()}-${slug(item.pinyin)}`, flashcardSlide(item, vocab.indexOf(item), vocab.length, i)]);
-    slides.push([`practice-vocabulary-${i}`, vocabPracticeSlide(set)]);
+    slides.push(['divider-review-final', dividerSlide({ title: 'Ôn tập cuối bài', zh: '练习', label: 'ÔN TẬP', img: 'divider-review.png', icon: 'check-circle-2' })]);
+    slides.push(['review-listening-choice', choiceSlide((db.spelling_rules || [])[0] || (db.word_spacing_rules || [])[0])]);
+    slides.push(['review-fill-blank', fillBlankSlide(no, vocab)]);
+    slides.push(['review-vocabulary-match', vocabPracticeSlide({ title_vi: 'Ôn từ vựng', items: vocab.slice(-Math.min(6, vocab.length)) })]);
   }
-
-  slides.push(['divider-review-final', dividerSlide({ title: 'Ôn tập cuối bài', zh: '复习', label: 'Ôn tập', img: 'divider-review.png' })]);
-  slides.push(['review-listening-choice', choiceSlide((db.spelling_rules || [])[0] || (db.word_spacing_rules || [])[0])]);
-  slides.push(['review-fill-blank', fillBlankSlide(no, vocab)]);
-  slides.push(['review-vocabulary-match', vocabPracticeSlide({ title_vi: 'Ôn từ vựng', items: vocab.slice(-Math.min(6, vocab.length)) })]);
   slides.push(['closing', closingSlide(no)]);
 
   for (const [i, [name, html]] of slides.entries()) {

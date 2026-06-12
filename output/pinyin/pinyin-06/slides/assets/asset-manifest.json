@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "lesson_id": "pinyin-06",
-  "generated_at": "2026-06-12T08:48:12.712Z",
+  "generated_at": "2026-06-12T11:07:56.054Z",
   "source_database": "database",
   "workflow": {
     "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
@@ -110,7 +110,7 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "23-divider-finals-2.html"
+        "24-divider-finals-2.html"
       ],
       "html_reference_types": [
         "img"
@@ -137,7 +137,7 @@
       },
       "used_by": [
         "03-divider-review.html",
-        "49-divider-review-final.html"
+        "52-divider-review-final.html"
       ],
       "html_reference_types": [
         "img"
@@ -163,7 +163,7 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "41-divider-rule.html"
+        "43-divider-rule.html"
       ],
       "html_reference_types": [
         "img"
@@ -189,9 +189,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "11-divider-vocabulary-1.html",
-        "29-divider-vocabulary-2.html",
-        "43-divider-vocabulary-3.html"
+        "12-divider-vocabulary-1.html",
+        "31-divider-vocabulary-2.html",
+        "46-divider-vocabulary-3.html"
       ],
       "html_reference_types": [
         "img"
@@ -217,13 +217,181 @@
         "aspect_ratio": 1.0892
       },
       "used_by": [
-        "53-closing.html"
+        "56-closing.html"
       ],
       "html_reference_types": [
         "img"
       ],
       "record_ids": [],
       "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-05-vocab-v001-mifan-png",
+      "asset_path": "assets/review-lesson-05/vocab-v001-mifan.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "米饭"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-05-vocab-v002-nan-png",
+      "asset_path": "assets/review-lesson-05/vocab-v002-nan.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "男"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-05-vocab-v003-jidan-png",
+      "asset_path": "assets/review-lesson-05/vocab-v003-jidan.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "鸡蛋"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-05-vocab-v004-men-png",
+      "asset_path": "assets/review-lesson-05/vocab-v004-men.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "门"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-05-vocab-v005-ren-png",
+      "asset_path": "assets/review-lesson-05/vocab-v005-ren.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "人"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-05-vocab-v006-xin-png",
+      "asset_path": "assets/review-lesson-05/vocab-v006-xin.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "新"
+      ],
       "pinyin": [],
       "vietnamese": [],
       "prompt": "",
@@ -273,50 +441,53 @@
         "07-chart-1-1.html",
         "08-chart-1-2.html",
         "09-chart-1-3.html",
-        "10-practice-finals-1.html",
-        "11-divider-vocabulary-1.html",
-        "12-vocabulary-1.html",
-        "13-flash-v001-jia.html",
-        "14-flash-v002-xia.html",
-        "15-flash-v003-jiao.html",
-        "16-flash-v004-xiao.html",
-        "17-flash-v005-dian.html",
-        "18-flash-v006-qian.html",
-        "19-flash-v007-xiang.html",
-        "20-flash-v008-qiong.html",
-        "21-practice-vocabulary-1.html",
-        "22-practice-vocabulary-1b.html",
-        "23-divider-finals-2.html",
-        "24-finals-2.html",
-        "25-chart-2-1.html",
-        "26-chart-2-2.html",
-        "27-chart-2-3.html",
-        "28-practice-finals-2.html",
-        "29-divider-vocabulary-2.html",
-        "30-vocabulary-2.html",
-        "31-flash-v009-hua.html",
-        "32-flash-v010-huanggua.html",
-        "33-flash-v011-duo.html",
-        "34-flash-v012-shuo.html",
-        "35-flash-v013-huai.html",
-        "36-flash-v014-kuai.html",
-        "37-flash-v015-chuan.html",
-        "38-flash-v016-chuang.html",
-        "39-practice-vocabulary-2.html",
-        "40-practice-vocabulary-2b.html",
-        "41-divider-rule.html",
-        "42-rule-rule-l6-jqx-uan-umlaut.html",
-        "43-divider-vocabulary-3.html",
-        "44-vocabulary-3.html",
-        "45-flash-v017-chunjuan.html",
-        "46-flash-v018-anquan.html",
-        "47-flash-v019-xuan.html",
-        "48-practice-vocabulary-3.html",
-        "49-divider-review-final.html",
-        "50-review-listening-choice.html",
-        "51-review-fill-blank.html",
-        "52-review-vocabulary-match.html",
-        "53-closing.html",
+        "10-practice-finals-1a.html",
+        "11-practice-finals-1b.html",
+        "12-divider-vocabulary-1.html",
+        "13-vocabulary-1.html",
+        "14-flash-v001-jia.html",
+        "15-flash-v002-xia.html",
+        "16-flash-v003-jiao.html",
+        "17-flash-v004-xiao.html",
+        "18-flash-v005-dian.html",
+        "19-flash-v006-qian.html",
+        "20-flash-v007-xiang.html",
+        "21-flash-v008-qiong.html",
+        "22-practice-vocabulary-1a.html",
+        "23-practice-vocabulary-1b.html",
+        "24-divider-finals-2.html",
+        "25-finals-2.html",
+        "26-chart-2-1.html",
+        "27-chart-2-2.html",
+        "28-chart-2-3.html",
+        "29-practice-finals-2a.html",
+        "30-practice-finals-2b.html",
+        "31-divider-vocabulary-2.html",
+        "32-vocabulary-2.html",
+        "33-flash-v009-hua.html",
+        "34-flash-v010-huanggua.html",
+        "35-flash-v011-duo.html",
+        "36-flash-v012-shuo.html",
+        "37-flash-v013-huai.html",
+        "38-flash-v014-kuai.html",
+        "39-flash-v015-chuan.html",
+        "40-flash-v016-chuang.html",
+        "41-practice-vocabulary-2a.html",
+        "42-practice-vocabulary-2b.html",
+        "43-divider-rule.html",
+        "44-rule-rule-l6-jqx-uan-umlaut.html",
+        "45-rule-rule-l6-jqx-uan-umlaut-examples.html",
+        "46-divider-vocabulary-3.html",
+        "47-vocabulary-3.html",
+        "48-flash-v017-chunjuan.html",
+        "49-flash-v018-anquan.html",
+        "50-flash-v019-xuan.html",
+        "51-practice-vocabulary-3.html",
+        "52-divider-review-final.html",
+        "53-review-listening-choice.html",
+        "54-review-fill-blank.html",
+        "55-review-vocabulary-match.html",
+        "56-closing.html",
         "lesson-required-assets"
       ],
       "html_reference_types": [
@@ -348,50 +519,53 @@
         "07-chart-1-1.html",
         "08-chart-1-2.html",
         "09-chart-1-3.html",
-        "10-practice-finals-1.html",
-        "11-divider-vocabulary-1.html",
-        "12-vocabulary-1.html",
-        "13-flash-v001-jia.html",
-        "14-flash-v002-xia.html",
-        "15-flash-v003-jiao.html",
-        "16-flash-v004-xiao.html",
-        "17-flash-v005-dian.html",
-        "18-flash-v006-qian.html",
-        "19-flash-v007-xiang.html",
-        "20-flash-v008-qiong.html",
-        "21-practice-vocabulary-1.html",
-        "22-practice-vocabulary-1b.html",
-        "23-divider-finals-2.html",
-        "24-finals-2.html",
-        "25-chart-2-1.html",
-        "26-chart-2-2.html",
-        "27-chart-2-3.html",
-        "28-practice-finals-2.html",
-        "29-divider-vocabulary-2.html",
-        "30-vocabulary-2.html",
-        "31-flash-v009-hua.html",
-        "32-flash-v010-huanggua.html",
-        "33-flash-v011-duo.html",
-        "34-flash-v012-shuo.html",
-        "35-flash-v013-huai.html",
-        "36-flash-v014-kuai.html",
-        "37-flash-v015-chuan.html",
-        "38-flash-v016-chuang.html",
-        "39-practice-vocabulary-2.html",
-        "40-practice-vocabulary-2b.html",
-        "41-divider-rule.html",
-        "42-rule-rule-l6-jqx-uan-umlaut.html",
-        "43-divider-vocabulary-3.html",
-        "44-vocabulary-3.html",
-        "45-flash-v017-chunjuan.html",
-        "46-flash-v018-anquan.html",
-        "47-flash-v019-xuan.html",
-        "48-practice-vocabulary-3.html",
-        "49-divider-review-final.html",
-        "50-review-listening-choice.html",
-        "51-review-fill-blank.html",
-        "52-review-vocabulary-match.html",
-        "53-closing.html",
+        "10-practice-finals-1a.html",
+        "11-practice-finals-1b.html",
+        "12-divider-vocabulary-1.html",
+        "13-vocabulary-1.html",
+        "14-flash-v001-jia.html",
+        "15-flash-v002-xia.html",
+        "16-flash-v003-jiao.html",
+        "17-flash-v004-xiao.html",
+        "18-flash-v005-dian.html",
+        "19-flash-v006-qian.html",
+        "20-flash-v007-xiang.html",
+        "21-flash-v008-qiong.html",
+        "22-practice-vocabulary-1a.html",
+        "23-practice-vocabulary-1b.html",
+        "24-divider-finals-2.html",
+        "25-finals-2.html",
+        "26-chart-2-1.html",
+        "27-chart-2-2.html",
+        "28-chart-2-3.html",
+        "29-practice-finals-2a.html",
+        "30-practice-finals-2b.html",
+        "31-divider-vocabulary-2.html",
+        "32-vocabulary-2.html",
+        "33-flash-v009-hua.html",
+        "34-flash-v010-huanggua.html",
+        "35-flash-v011-duo.html",
+        "36-flash-v012-shuo.html",
+        "37-flash-v013-huai.html",
+        "38-flash-v014-kuai.html",
+        "39-flash-v015-chuan.html",
+        "40-flash-v016-chuang.html",
+        "41-practice-vocabulary-2a.html",
+        "42-practice-vocabulary-2b.html",
+        "43-divider-rule.html",
+        "44-rule-rule-l6-jqx-uan-umlaut.html",
+        "45-rule-rule-l6-jqx-uan-umlaut-examples.html",
+        "46-divider-vocabulary-3.html",
+        "47-vocabulary-3.html",
+        "48-flash-v017-chunjuan.html",
+        "49-flash-v018-anquan.html",
+        "50-flash-v019-xuan.html",
+        "51-practice-vocabulary-3.html",
+        "52-divider-review-final.html",
+        "53-review-listening-choice.html",
+        "54-review-fill-blank.html",
+        "55-review-vocabulary-match.html",
+        "56-closing.html",
         "lesson-required-assets"
       ],
       "html_reference_types": [
@@ -419,10 +593,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "04-warmup-review.html",
-        "12-vocabulary-1.html",
-        "13-flash-v001-jia.html",
-        "21-practice-vocabulary-1.html",
+        "13-vocabulary-1.html",
+        "14-flash-v001-jia.html",
+        "22-practice-vocabulary-1a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -458,10 +631,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "04-warmup-review.html",
-        "12-vocabulary-1.html",
-        "14-flash-v002-xia.html",
-        "21-practice-vocabulary-1.html",
+        "13-vocabulary-1.html",
+        "15-flash-v002-xia.html",
+        "22-practice-vocabulary-1a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -497,10 +669,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "04-warmup-review.html",
-        "12-vocabulary-1.html",
-        "15-flash-v003-jiao.html",
-        "21-practice-vocabulary-1.html",
+        "13-vocabulary-1.html",
+        "16-flash-v003-jiao.html",
+        "22-practice-vocabulary-1a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -517,9 +688,9 @@
         "jiǎo"
       ],
       "vietnamese": [
-        "xem nghĩa trong lớp"
+        "chân"
       ],
-      "prompt": "Soft textbook 1:1 illustration for xem nghĩa trong lớp; no text, labels, letters, numbers, or watermark.",
+      "prompt": "Soft textbook 1:1 illustration for chân; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 脚 (jiǎo).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
@@ -536,10 +707,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "04-warmup-review.html",
-        "12-vocabulary-1.html",
-        "16-flash-v004-xiao.html",
-        "21-practice-vocabulary-1.html",
+        "13-vocabulary-1.html",
+        "17-flash-v004-xiao.html",
+        "22-practice-vocabulary-1a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -575,10 +745,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "04-warmup-review.html",
-        "12-vocabulary-1.html",
-        "17-flash-v005-dian.html",
-        "22-practice-vocabulary-1b.html",
+        "13-vocabulary-1.html",
+        "18-flash-v005-dian.html",
+        "23-practice-vocabulary-1b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -614,10 +783,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "04-warmup-review.html",
-        "12-vocabulary-1.html",
-        "18-flash-v006-qian.html",
-        "22-practice-vocabulary-1b.html",
+        "13-vocabulary-1.html",
+        "19-flash-v006-qian.html",
+        "23-practice-vocabulary-1b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -653,9 +821,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "12-vocabulary-1.html",
-        "19-flash-v007-xiang.html",
-        "22-practice-vocabulary-1b.html",
+        "13-vocabulary-1.html",
+        "20-flash-v007-xiang.html",
+        "23-practice-vocabulary-1b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -691,9 +859,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "12-vocabulary-1.html",
-        "20-flash-v008-qiong.html",
-        "22-practice-vocabulary-1b.html",
+        "13-vocabulary-1.html",
+        "21-flash-v008-qiong.html",
+        "23-practice-vocabulary-1b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -710,9 +878,9 @@
         "qióng"
       ],
       "vietnamese": [
-        "xem nghĩa trong lớp"
+        "nghèo"
       ],
-      "prompt": "Soft textbook 1:1 illustration for xem nghĩa trong lớp; no text, labels, letters, numbers, or watermark.",
+      "prompt": "Soft textbook 1:1 illustration for nghèo; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 穷 (qióng).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
@@ -729,9 +897,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "30-vocabulary-2.html",
-        "31-flash-v009-hua.html",
-        "39-practice-vocabulary-2.html",
+        "32-vocabulary-2.html",
+        "33-flash-v009-hua.html",
+        "41-practice-vocabulary-2a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -767,9 +935,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "30-vocabulary-2.html",
-        "32-flash-v010-huanggua.html",
-        "39-practice-vocabulary-2.html",
+        "32-vocabulary-2.html",
+        "34-flash-v010-huanggua.html",
+        "41-practice-vocabulary-2a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -786,9 +954,9 @@
         "huángguā"
       ],
       "vietnamese": [
-        "dưa leo"
+        "dưa chuột"
       ],
-      "prompt": "Soft textbook 1:1 illustration for dưa leo; no text, labels, letters, numbers, or watermark.",
+      "prompt": "Soft textbook 1:1 illustration for dưa chuột; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 黄瓜 (huángguā).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
@@ -805,9 +973,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "30-vocabulary-2.html",
-        "33-flash-v011-duo.html",
-        "39-practice-vocabulary-2.html",
+        "32-vocabulary-2.html",
+        "35-flash-v011-duo.html",
+        "41-practice-vocabulary-2a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -843,9 +1011,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "30-vocabulary-2.html",
-        "34-flash-v012-shuo.html",
-        "39-practice-vocabulary-2.html",
+        "32-vocabulary-2.html",
+        "36-flash-v012-shuo.html",
+        "41-practice-vocabulary-2a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -881,9 +1049,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "30-vocabulary-2.html",
-        "35-flash-v013-huai.html",
-        "40-practice-vocabulary-2b.html",
+        "32-vocabulary-2.html",
+        "37-flash-v013-huai.html",
+        "42-practice-vocabulary-2b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -919,10 +1087,10 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "30-vocabulary-2.html",
-        "36-flash-v014-kuai.html",
-        "40-practice-vocabulary-2b.html",
-        "52-review-vocabulary-match.html",
+        "32-vocabulary-2.html",
+        "38-flash-v014-kuai.html",
+        "42-practice-vocabulary-2b.html",
+        "55-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -958,10 +1126,10 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "30-vocabulary-2.html",
-        "37-flash-v015-chuan.html",
-        "40-practice-vocabulary-2b.html",
-        "52-review-vocabulary-match.html",
+        "32-vocabulary-2.html",
+        "39-flash-v015-chuan.html",
+        "42-practice-vocabulary-2b.html",
+        "55-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -997,10 +1165,10 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "30-vocabulary-2.html",
-        "38-flash-v016-chuang.html",
-        "40-practice-vocabulary-2b.html",
-        "52-review-vocabulary-match.html",
+        "32-vocabulary-2.html",
+        "40-flash-v016-chuang.html",
+        "42-practice-vocabulary-2b.html",
+        "55-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1036,10 +1204,10 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "44-vocabulary-3.html",
-        "45-flash-v017-chunjuan.html",
-        "48-practice-vocabulary-3.html",
-        "52-review-vocabulary-match.html",
+        "47-vocabulary-3.html",
+        "48-flash-v017-chunjuan.html",
+        "51-practice-vocabulary-3.html",
+        "55-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1075,10 +1243,10 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "44-vocabulary-3.html",
-        "46-flash-v018-anquan.html",
-        "48-practice-vocabulary-3.html",
-        "52-review-vocabulary-match.html",
+        "47-vocabulary-3.html",
+        "49-flash-v018-anquan.html",
+        "51-practice-vocabulary-3.html",
+        "55-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1114,10 +1282,10 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "44-vocabulary-3.html",
-        "47-flash-v019-xuan.html",
-        "48-practice-vocabulary-3.html",
-        "52-review-vocabulary-match.html",
+        "47-vocabulary-3.html",
+        "50-flash-v019-xuan.html",
+        "51-practice-vocabulary-3.html",
+        "55-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "lesson_id": "pinyin-07",
-  "generated_at": "2026-06-12T08:04:16.186Z",
+  "generated_at": "2026-06-12T11:34:58.162Z",
   "source_database": "database",
   "workflow": {
     "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
@@ -85,33 +85,7 @@
       },
       "used_by": [
         "03-divider-review.html",
-        "58-divider-review-final.html"
-      ],
-      "html_reference_types": [
-        "img"
-      ],
-      "record_ids": [],
-      "chinese": [],
-      "pinyin": [],
-      "vietnamese": [],
-      "prompt": "",
-      "visual_description": "",
-      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
-    },
-    {
-      "id": "assets-photos-divider-rules-i-u-yu-png",
-      "asset_path": "assets/photos/divider-rules-i-u-yu.png",
-      "role": "section_photo",
-      "status": "ready_for_visual_qa",
-      "exists": true,
-      "dimensions": {
-        "width": 1254,
-        "height": 1254,
-        "format": "png",
-        "aspect_ratio": 1
-      },
-      "used_by": [
-        "05-divider-rules.html"
+        "68-divider-review-final.html"
       ],
       "html_reference_types": [
         "img"
@@ -137,13 +111,13 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "12-divider-vocabulary-1.html",
-        "18-divider-vocabulary-2.html",
+        "10-divider-vocabulary-1.html",
+        "17-divider-vocabulary-2.html",
         "27-divider-vocabulary-3.html",
-        "31-divider-vocabulary-4.html",
-        "35-divider-vocabulary-5.html",
-        "44-divider-vocabulary-6.html",
-        "49-divider-vocabulary-7.html"
+        "34-divider-vocabulary-4.html",
+        "39-divider-vocabulary-5.html",
+        "49-divider-vocabulary-6.html",
+        "57-divider-vocabulary-7.html"
       ],
       "html_reference_types": [
         "img"
@@ -169,13 +143,545 @@
         "aspect_ratio": 1.0892
       },
       "used_by": [
-        "62-closing.html"
+        "73-closing.html"
       ],
       "html_reference_types": [
         "img"
       ],
       "record_ids": [],
       "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-06-vocab-v001-jia-png",
+      "asset_path": "assets/review-lesson-06/vocab-v001-jia.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review-a.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "家"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-06-vocab-v002-xia-png",
+      "asset_path": "assets/review-lesson-06/vocab-v002-xia.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review-a.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "下"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-06-vocab-v003-jiao-png",
+      "asset_path": "assets/review-lesson-06/vocab-v003-jiao.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review-a.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "脚"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-06-vocab-v004-xiao-png",
+      "asset_path": "assets/review-lesson-06/vocab-v004-xiao.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review-a.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "小"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-06-vocab-v005-dian-png",
+      "asset_path": "assets/review-lesson-06/vocab-v005-dian.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "04-warmup-review-a.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "电"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-06-vocab-v006-qian-png",
+      "asset_path": "assets/review-lesson-06/vocab-v006-qian.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "05-warmup-review-b.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "钱"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-06-vocab-v007-xiang-png",
+      "asset_path": "assets/review-lesson-06/vocab-v007-xiang.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "05-warmup-review-b.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "香"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-06-vocab-v008-qiong-png",
+      "asset_path": "assets/review-lesson-06/vocab-v008-qiong.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "05-warmup-review-b.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "穷"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-06-vocab-v009-hua-png",
+      "asset_path": "assets/review-lesson-06/vocab-v009-hua.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "05-warmup-review-b.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "花"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-06-vocab-v010-huanggua-png",
+      "asset_path": "assets/review-lesson-06/vocab-v010-huanggua.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "05-warmup-review-b.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "黄瓜"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-06-vocab-v011-duo-png",
+      "asset_path": "assets/review-lesson-06/vocab-v011-duo.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "06-warmup-review-c.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "多"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-06-vocab-v012-shuo-png",
+      "asset_path": "assets/review-lesson-06/vocab-v012-shuo.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "06-warmup-review-c.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "说"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-06-vocab-v013-huai-png",
+      "asset_path": "assets/review-lesson-06/vocab-v013-huai.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "06-warmup-review-c.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "坏"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-06-vocab-v014-kuai-png",
+      "asset_path": "assets/review-lesson-06/vocab-v014-kuai.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "06-warmup-review-c.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "快"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-06-vocab-v015-chuan-png",
+      "asset_path": "assets/review-lesson-06/vocab-v015-chuan.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "06-warmup-review-c.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "船"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-06-vocab-v016-chuang-png",
+      "asset_path": "assets/review-lesson-06/vocab-v016-chuang.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "07-warmup-review-d.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "床"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-06-vocab-v017-chunjuan-png",
+      "asset_path": "assets/review-lesson-06/vocab-v017-chunjuan.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "07-warmup-review-d.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "春卷"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-06-vocab-v018-anquan-png",
+      "asset_path": "assets/review-lesson-06/vocab-v018-anquan.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "07-warmup-review-d.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "安全"
+      ],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-review-lesson-06-vocab-v019-xuan-png",
+      "asset_path": "assets/review-lesson-06/vocab-v019-xuan.png",
+      "role": "slide_asset",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "07-warmup-review-d.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [
+        "选"
+      ],
       "pinyin": [],
       "vietnamese": [],
       "prompt": "",
@@ -219,65 +725,76 @@
         "01-cover.html",
         "02-objectives.html",
         "03-divider-review.html",
-        "04-warmup-review.html",
-        "05-divider-rules.html",
-        "06-rule-1.html",
-        "07-rule-2.html",
-        "08-rule-3.html",
-        "09-rule-4.html",
-        "10-rule-5.html",
-        "11-rule-6.html",
-        "12-divider-vocabulary-1.html",
-        "13-vocabulary-1.html",
-        "14-flash-v001-yi.html",
-        "15-flash-v002-yin.html",
-        "16-flash-v003-ying.html",
-        "17-practice-vocabulary-1.html",
-        "18-divider-vocabulary-2.html",
-        "19-vocabulary-2.html",
-        "20-flash-v004-ya.html",
-        "21-flash-v005-yeye.html",
-        "22-flash-v006-yao.html",
-        "23-flash-v007-yanse.html",
-        "24-flash-v008-yang.html",
-        "25-flash-v009-shiyong.html",
-        "26-practice-vocabulary-2.html",
+        "04-warmup-review-a.html",
+        "05-warmup-review-b.html",
+        "06-warmup-review-c.html",
+        "07-warmup-review-d.html",
+        "08-rule-intro-1.html",
+        "09-rule-rule-l7-i-yi-yin-ying.html",
+        "10-divider-vocabulary-1.html",
+        "11-vocabulary-1.html",
+        "12-flash-v001-yi.html",
+        "13-flash-v002-yin.html",
+        "14-flash-v003-ying.html",
+        "15-rule-intro-2.html",
+        "16-rule-rule-l7-i-compound-y.html",
+        "17-divider-vocabulary-2.html",
+        "18-vocabulary-2.html",
+        "19-flash-v004-ya.html",
+        "20-flash-v005-yeye.html",
+        "21-flash-v006-yao.html",
+        "22-flash-v007-yanse.html",
+        "23-flash-v008-yang.html",
+        "24-flash-v009-shiyong.html",
+        "25-rule-intro-3.html",
+        "26-rule-rule-l7-iu-you.html",
         "27-divider-vocabulary-3.html",
         "28-vocabulary-3.html",
         "29-flash-v010-youyong.html",
-        "30-practice-vocabulary-3.html",
-        "31-divider-vocabulary-4.html",
-        "32-vocabulary-4.html",
-        "33-flash-v011-wu.html",
-        "34-practice-vocabulary-4.html",
-        "35-divider-vocabulary-5.html",
-        "36-vocabulary-5.html",
-        "37-flash-v012-wazi.html",
-        "38-flash-v013-wo.html",
-        "39-flash-v014-waimian.html",
-        "40-flash-v015-wan.html",
-        "41-flash-v016-wangji.html",
-        "42-flash-v017-weng.html",
-        "43-practice-vocabulary-5.html",
-        "44-divider-vocabulary-6.html",
-        "45-vocabulary-6.html",
-        "46-flash-v018-wei.html",
-        "47-flash-v019-wenhua.html",
-        "48-practice-vocabulary-6.html",
-        "49-divider-vocabulary-7.html",
-        "50-vocabulary-7.html",
-        "51-flash-v020-yu.html",
-        "52-flash-v021-yu.html",
-        "53-flash-v022-yue.html",
-        "54-flash-v023-yuenan.html",
-        "55-flash-v024-yuan.html",
-        "56-flash-v025-yun.html",
-        "57-practice-vocabulary-7.html",
-        "58-divider-review-final.html",
-        "59-review-listening-choice.html",
-        "60-review-fill-blank.html",
-        "61-review-vocabulary-match.html",
-        "62-closing.html",
+        "30-practice-vocabulary-1a.html",
+        "31-practice-vocabulary-1b.html",
+        "32-rule-intro-4.html",
+        "33-rule-rule-l7-u-wu.html",
+        "34-divider-vocabulary-4.html",
+        "35-vocabulary-4.html",
+        "36-flash-v011-wu.html",
+        "37-rule-intro-5.html",
+        "38-rule-rule-l7-u-compound-w.html",
+        "39-divider-vocabulary-5.html",
+        "40-vocabulary-5.html",
+        "41-flash-v012-wazi.html",
+        "42-flash-v013-wo.html",
+        "43-flash-v014-waimian.html",
+        "44-flash-v015-wan.html",
+        "45-flash-v016-wangji.html",
+        "46-flash-v017-weng.html",
+        "47-rule-intro-6.html",
+        "48-rule-rule-l7-ui-un-wei-wen.html",
+        "49-divider-vocabulary-6.html",
+        "50-vocabulary-6.html",
+        "51-flash-v018-wei.html",
+        "52-flash-v019-wenhua.html",
+        "53-practice-vocabulary-2a.html",
+        "54-practice-vocabulary-2b.html",
+        "55-rule-intro-7.html",
+        "56-rule-rule-l7-u-umlaut-y.html",
+        "57-divider-vocabulary-7.html",
+        "58-vocabulary-7.html",
+        "59-flash-v020-yu.html",
+        "60-flash-v021-yu.html",
+        "61-flash-v022-yue.html",
+        "62-flash-v023-yuenan.html",
+        "63-flash-v024-yuan.html",
+        "64-flash-v025-yun.html",
+        "65-practice-vocabulary-3a.html",
+        "66-practice-vocabulary-3b.html",
+        "67-rule-rule-l7-word-pinyin-spacing.html",
+        "68-divider-review-final.html",
+        "69-review-listening-choice.html",
+        "70-review-fill-blank.html",
+        "71-review-vocabulary-match.html",
+        "72-rule-summary.html",
+        "73-closing.html",
         "lesson-required-assets"
       ],
       "html_reference_types": [
@@ -303,65 +820,76 @@
         "01-cover.html",
         "02-objectives.html",
         "03-divider-review.html",
-        "04-warmup-review.html",
-        "05-divider-rules.html",
-        "06-rule-1.html",
-        "07-rule-2.html",
-        "08-rule-3.html",
-        "09-rule-4.html",
-        "10-rule-5.html",
-        "11-rule-6.html",
-        "12-divider-vocabulary-1.html",
-        "13-vocabulary-1.html",
-        "14-flash-v001-yi.html",
-        "15-flash-v002-yin.html",
-        "16-flash-v003-ying.html",
-        "17-practice-vocabulary-1.html",
-        "18-divider-vocabulary-2.html",
-        "19-vocabulary-2.html",
-        "20-flash-v004-ya.html",
-        "21-flash-v005-yeye.html",
-        "22-flash-v006-yao.html",
-        "23-flash-v007-yanse.html",
-        "24-flash-v008-yang.html",
-        "25-flash-v009-shiyong.html",
-        "26-practice-vocabulary-2.html",
+        "04-warmup-review-a.html",
+        "05-warmup-review-b.html",
+        "06-warmup-review-c.html",
+        "07-warmup-review-d.html",
+        "08-rule-intro-1.html",
+        "09-rule-rule-l7-i-yi-yin-ying.html",
+        "10-divider-vocabulary-1.html",
+        "11-vocabulary-1.html",
+        "12-flash-v001-yi.html",
+        "13-flash-v002-yin.html",
+        "14-flash-v003-ying.html",
+        "15-rule-intro-2.html",
+        "16-rule-rule-l7-i-compound-y.html",
+        "17-divider-vocabulary-2.html",
+        "18-vocabulary-2.html",
+        "19-flash-v004-ya.html",
+        "20-flash-v005-yeye.html",
+        "21-flash-v006-yao.html",
+        "22-flash-v007-yanse.html",
+        "23-flash-v008-yang.html",
+        "24-flash-v009-shiyong.html",
+        "25-rule-intro-3.html",
+        "26-rule-rule-l7-iu-you.html",
         "27-divider-vocabulary-3.html",
         "28-vocabulary-3.html",
         "29-flash-v010-youyong.html",
-        "30-practice-vocabulary-3.html",
-        "31-divider-vocabulary-4.html",
-        "32-vocabulary-4.html",
-        "33-flash-v011-wu.html",
-        "34-practice-vocabulary-4.html",
-        "35-divider-vocabulary-5.html",
-        "36-vocabulary-5.html",
-        "37-flash-v012-wazi.html",
-        "38-flash-v013-wo.html",
-        "39-flash-v014-waimian.html",
-        "40-flash-v015-wan.html",
-        "41-flash-v016-wangji.html",
-        "42-flash-v017-weng.html",
-        "43-practice-vocabulary-5.html",
-        "44-divider-vocabulary-6.html",
-        "45-vocabulary-6.html",
-        "46-flash-v018-wei.html",
-        "47-flash-v019-wenhua.html",
-        "48-practice-vocabulary-6.html",
-        "49-divider-vocabulary-7.html",
-        "50-vocabulary-7.html",
-        "51-flash-v020-yu.html",
-        "52-flash-v021-yu.html",
-        "53-flash-v022-yue.html",
-        "54-flash-v023-yuenan.html",
-        "55-flash-v024-yuan.html",
-        "56-flash-v025-yun.html",
-        "57-practice-vocabulary-7.html",
-        "58-divider-review-final.html",
-        "59-review-listening-choice.html",
-        "60-review-fill-blank.html",
-        "61-review-vocabulary-match.html",
-        "62-closing.html",
+        "30-practice-vocabulary-1a.html",
+        "31-practice-vocabulary-1b.html",
+        "32-rule-intro-4.html",
+        "33-rule-rule-l7-u-wu.html",
+        "34-divider-vocabulary-4.html",
+        "35-vocabulary-4.html",
+        "36-flash-v011-wu.html",
+        "37-rule-intro-5.html",
+        "38-rule-rule-l7-u-compound-w.html",
+        "39-divider-vocabulary-5.html",
+        "40-vocabulary-5.html",
+        "41-flash-v012-wazi.html",
+        "42-flash-v013-wo.html",
+        "43-flash-v014-waimian.html",
+        "44-flash-v015-wan.html",
+        "45-flash-v016-wangji.html",
+        "46-flash-v017-weng.html",
+        "47-rule-intro-6.html",
+        "48-rule-rule-l7-ui-un-wei-wen.html",
+        "49-divider-vocabulary-6.html",
+        "50-vocabulary-6.html",
+        "51-flash-v018-wei.html",
+        "52-flash-v019-wenhua.html",
+        "53-practice-vocabulary-2a.html",
+        "54-practice-vocabulary-2b.html",
+        "55-rule-intro-7.html",
+        "56-rule-rule-l7-u-umlaut-y.html",
+        "57-divider-vocabulary-7.html",
+        "58-vocabulary-7.html",
+        "59-flash-v020-yu.html",
+        "60-flash-v021-yu.html",
+        "61-flash-v022-yue.html",
+        "62-flash-v023-yuenan.html",
+        "63-flash-v024-yuan.html",
+        "64-flash-v025-yun.html",
+        "65-practice-vocabulary-3a.html",
+        "66-practice-vocabulary-3b.html",
+        "67-rule-rule-l7-word-pinyin-spacing.html",
+        "68-divider-review-final.html",
+        "69-review-listening-choice.html",
+        "70-review-fill-blank.html",
+        "71-review-vocabulary-match.html",
+        "72-rule-summary.html",
+        "73-closing.html",
         "lesson-required-assets"
       ],
       "html_reference_types": [
@@ -389,10 +917,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "04-warmup-review.html",
-        "13-vocabulary-1.html",
-        "14-flash-v001-yi.html",
-        "17-practice-vocabulary-1.html",
+        "11-vocabulary-1.html",
+        "12-flash-v001-yi.html",
+        "30-practice-vocabulary-1a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -428,10 +955,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "04-warmup-review.html",
-        "13-vocabulary-1.html",
-        "15-flash-v002-yin.html",
-        "17-practice-vocabulary-1.html",
+        "11-vocabulary-1.html",
+        "13-flash-v002-yin.html",
+        "30-practice-vocabulary-1a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -467,10 +993,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "04-warmup-review.html",
-        "13-vocabulary-1.html",
-        "16-flash-v003-ying.html",
-        "17-practice-vocabulary-1.html",
+        "11-vocabulary-1.html",
+        "14-flash-v003-ying.html",
+        "30-practice-vocabulary-1a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -487,9 +1012,9 @@
         "yíng"
       ],
       "vietnamese": [
-        "xem nghĩa trong lớp"
+        "thắng"
       ],
-      "prompt": "Soft textbook 1:1 illustration for xem nghĩa trong lớp; no text, labels, letters, numbers, or watermark.",
+      "prompt": "Soft textbook 1:1 illustration for thắng; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 赢 (yíng).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
@@ -506,10 +1031,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "04-warmup-review.html",
-        "19-vocabulary-2.html",
-        "20-flash-v004-ya.html",
-        "26-practice-vocabulary-2.html",
+        "18-vocabulary-2.html",
+        "19-flash-v004-ya.html",
+        "30-practice-vocabulary-1a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -545,10 +1069,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "04-warmup-review.html",
-        "19-vocabulary-2.html",
-        "21-flash-v005-yeye.html",
-        "26-practice-vocabulary-2.html",
+        "18-vocabulary-2.html",
+        "20-flash-v005-yeye.html",
+        "30-practice-vocabulary-1a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -584,10 +1107,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "04-warmup-review.html",
-        "19-vocabulary-2.html",
-        "22-flash-v006-yao.html",
-        "26-practice-vocabulary-2.html",
+        "18-vocabulary-2.html",
+        "21-flash-v006-yao.html",
+        "31-practice-vocabulary-1b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -623,9 +1145,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "19-vocabulary-2.html",
-        "23-flash-v007-yanse.html",
-        "26-practice-vocabulary-2.html",
+        "18-vocabulary-2.html",
+        "22-flash-v007-yanse.html",
+        "31-practice-vocabulary-1b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -661,9 +1183,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "19-vocabulary-2.html",
-        "24-flash-v008-yang.html",
-        "26-practice-vocabulary-2.html",
+        "18-vocabulary-2.html",
+        "23-flash-v008-yang.html",
+        "31-practice-vocabulary-1b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -699,9 +1221,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "19-vocabulary-2.html",
-        "25-flash-v009-shiyong.html",
-        "26-practice-vocabulary-2.html",
+        "18-vocabulary-2.html",
+        "24-flash-v009-shiyong.html",
+        "31-practice-vocabulary-1b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -739,7 +1261,7 @@
       "used_by": [
         "28-vocabulary-3.html",
         "29-flash-v010-youyong.html",
-        "30-practice-vocabulary-3.html",
+        "31-practice-vocabulary-1b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -775,9 +1297,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "32-vocabulary-4.html",
-        "33-flash-v011-wu.html",
-        "34-practice-vocabulary-4.html",
+        "35-vocabulary-4.html",
+        "36-flash-v011-wu.html",
+        "53-practice-vocabulary-2a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -813,9 +1335,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "36-vocabulary-5.html",
-        "37-flash-v012-wazi.html",
-        "43-practice-vocabulary-5.html",
+        "40-vocabulary-5.html",
+        "41-flash-v012-wazi.html",
+        "53-practice-vocabulary-2a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -851,9 +1373,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "36-vocabulary-5.html",
-        "38-flash-v013-wo.html",
-        "43-practice-vocabulary-5.html",
+        "40-vocabulary-5.html",
+        "42-flash-v013-wo.html",
+        "53-practice-vocabulary-2a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -889,9 +1411,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "36-vocabulary-5.html",
-        "39-flash-v014-waimian.html",
-        "43-practice-vocabulary-5.html",
+        "40-vocabulary-5.html",
+        "43-flash-v014-waimian.html",
+        "53-practice-vocabulary-2a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -927,9 +1449,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "36-vocabulary-5.html",
-        "40-flash-v015-wan.html",
-        "43-practice-vocabulary-5.html",
+        "40-vocabulary-5.html",
+        "44-flash-v015-wan.html",
+        "53-practice-vocabulary-2a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -965,9 +1487,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "36-vocabulary-5.html",
-        "41-flash-v016-wangji.html",
-        "43-practice-vocabulary-5.html",
+        "40-vocabulary-5.html",
+        "45-flash-v016-wangji.html",
+        "54-practice-vocabulary-2b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -984,9 +1506,9 @@
         "wàngjì"
       ],
       "vietnamese": [
-        "xem nghĩa trong lớp"
+        "quên"
       ],
-      "prompt": "Soft textbook 1:1 illustration for xem nghĩa trong lớp; no text, labels, letters, numbers, or watermark.",
+      "prompt": "Soft textbook 1:1 illustration for quên; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 忘记 (wàngjì).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
@@ -1003,9 +1525,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "36-vocabulary-5.html",
-        "42-flash-v017-weng.html",
-        "43-practice-vocabulary-5.html",
+        "40-vocabulary-5.html",
+        "46-flash-v017-weng.html",
+        "54-practice-vocabulary-2b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1041,9 +1563,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "45-vocabulary-6.html",
-        "46-flash-v018-wei.html",
-        "48-practice-vocabulary-6.html",
+        "50-vocabulary-6.html",
+        "51-flash-v018-wei.html",
+        "54-practice-vocabulary-2b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1079,9 +1601,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "45-vocabulary-6.html",
-        "47-flash-v019-wenhua.html",
-        "48-practice-vocabulary-6.html",
+        "50-vocabulary-6.html",
+        "52-flash-v019-wenhua.html",
+        "54-practice-vocabulary-2b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1117,10 +1639,10 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "50-vocabulary-7.html",
-        "51-flash-v020-yu.html",
-        "57-practice-vocabulary-7.html",
-        "61-review-vocabulary-match.html",
+        "58-vocabulary-7.html",
+        "59-flash-v020-yu.html",
+        "65-practice-vocabulary-3a.html",
+        "71-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1156,10 +1678,10 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "50-vocabulary-7.html",
-        "52-flash-v021-yu.html",
-        "57-practice-vocabulary-7.html",
-        "61-review-vocabulary-match.html",
+        "58-vocabulary-7.html",
+        "60-flash-v021-yu.html",
+        "65-practice-vocabulary-3a.html",
+        "71-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1195,10 +1717,10 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "50-vocabulary-7.html",
-        "53-flash-v022-yue.html",
-        "57-practice-vocabulary-7.html",
-        "61-review-vocabulary-match.html",
+        "58-vocabulary-7.html",
+        "61-flash-v022-yue.html",
+        "65-practice-vocabulary-3a.html",
+        "71-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1234,10 +1756,10 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "50-vocabulary-7.html",
-        "54-flash-v023-yuenan.html",
-        "57-practice-vocabulary-7.html",
-        "61-review-vocabulary-match.html",
+        "58-vocabulary-7.html",
+        "62-flash-v023-yuenan.html",
+        "66-practice-vocabulary-3b.html",
+        "71-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1273,10 +1795,10 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "50-vocabulary-7.html",
-        "55-flash-v024-yuan.html",
-        "57-practice-vocabulary-7.html",
-        "61-review-vocabulary-match.html",
+        "58-vocabulary-7.html",
+        "63-flash-v024-yuan.html",
+        "66-practice-vocabulary-3b.html",
+        "71-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1312,10 +1834,10 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "50-vocabulary-7.html",
-        "56-flash-v025-yun.html",
-        "57-practice-vocabulary-7.html",
-        "61-review-vocabulary-match.html",
+        "58-vocabulary-7.html",
+        "64-flash-v025-yun.html",
+        "66-practice-vocabulary-3b.html",
+        "71-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [

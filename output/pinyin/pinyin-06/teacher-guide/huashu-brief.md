@@ -9,7 +9,7 @@
 Reuse Pinyin Lesson 1 soft classroom style, multicolor pale background, square pinyin vocabulary images, section dividers, flashcards, and closing composition.
 
 ## Slide count
-51 slides.
+56 slides.
 
 ## Required checks
 - Asset manifest and QA.

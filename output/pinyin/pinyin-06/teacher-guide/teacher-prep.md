@@ -1,13 +1,13 @@
 # Pinyin Bài 6 - Teacher Prep
 
 ## Trọng tâm
-- 暖身复習第五课生詞
+- 暖身复习第五课生词
 - 韵母 ia iao ian iang iong
 - 韵母 ua uo uai uan uang üan
-- 全部 21 声母与新韵母的拼讀組合
-- 含声調的拼音練習
-- 詞彙發音与字義理解
-- j/q/x + üan 的拼写變化：juan, quan, xuan
+- 全部 21 声母与新韵母的拼读组合
+- 含声调的拼音练习
+- 词汇发音与字义理解
+- j/q/x + üan 的拼写变化：juan, quan, xuan
 
 ## Cách dạy nhanh
 - Bắt đầu bằng ôn bài trước qua hoạt động nối hình.

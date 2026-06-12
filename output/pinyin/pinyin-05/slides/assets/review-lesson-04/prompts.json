@@ -1,0 +1,214 @@
+{
+  "prompts": [
+    {
+      "record_id": "V001",
+      "chinese_simplified": "开",
+      "pinyin": "kāi",
+      "vietnamese": "mở",
+      "filename": "vocab-v001-kai.png",
+      "status": "existing_asset_preserved",
+      "prompt": "Soft textbook 1:1 illustration for mở; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Existing image for 开 (kāi)."
+    },
+    {
+      "record_id": "V002",
+      "chinese_simplified": "菜",
+      "pinyin": "cài",
+      "vietnamese": "món ăn, rau",
+      "filename": "vocab-v002-cai.png",
+      "status": "existing_asset_preserved",
+      "prompt": "Soft textbook 1:1 illustration for món ăn, rau; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Existing image for 菜 (cài)."
+    },
+    {
+      "record_id": "V003",
+      "chinese_simplified": "猫",
+      "pinyin": "māo",
+      "vietnamese": "con mèo",
+      "filename": "vocab-v003-mao.png",
+      "status": "existing_asset_preserved",
+      "prompt": "Soft textbook 1:1 illustration for con mèo; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Existing image for 猫 (māo)."
+    },
+    {
+      "record_id": "V004",
+      "chinese_simplified": "少",
+      "pinyin": "shǎo",
+      "vietnamese": "ít",
+      "filename": "vocab-v004-shao.png",
+      "status": "existing_asset_preserved",
+      "prompt": "Soft textbook 1:1 illustration for ít; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Existing image for 少 (shǎo)."
+    },
+    {
+      "record_id": "V005",
+      "chinese_simplified": "手",
+      "pinyin": "shǒu",
+      "vietnamese": "tay",
+      "filename": "vocab-v005-shou.png",
+      "status": "existing_asset_preserved",
+      "prompt": "Soft textbook 1:1 illustration for tay; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Existing image for 手 (shǒu)."
+    },
+    {
+      "record_id": "V006",
+      "chinese_simplified": "口",
+      "pinyin": "kǒu",
+      "vietnamese": "miệng",
+      "filename": "vocab-v006-kou.png",
+      "status": "existing_asset_preserved",
+      "prompt": "Soft textbook 1:1 illustration for miệng; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Existing image for 口 (kǒu)."
+    },
+    {
+      "record_id": "V007",
+      "chinese_simplified": "谁",
+      "pinyin": "shéi",
+      "vietnamese": "ai",
+      "filename": "vocab-v007-shei.png",
+      "status": "existing_asset_preserved",
+      "prompt": "Soft textbook 1:1 illustration for ai; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Existing image for 谁 (shéi)."
+    },
+    {
+      "record_id": "V008",
+      "chinese_simplified": "二",
+      "pinyin": "èr",
+      "vietnamese": "số hai",
+      "filename": "vocab-v008-er.png",
+      "status": "existing_asset_preserved",
+      "prompt": "Soft textbook 1:1 illustration for số hai; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Existing image for 二 (èr)."
+    },
+    {
+      "record_id": "V009",
+      "chinese_simplified": "六",
+      "pinyin": "liù",
+      "vietnamese": "số sáu",
+      "filename": "vocab-v009-liu.png",
+      "status": "existing_asset_preserved",
+      "prompt": "Soft textbook 1:1 illustration for số sáu; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Existing image for 六 (liù)."
+    },
+    {
+      "record_id": "V010",
+      "chinese_simplified": "牛",
+      "pinyin": "niú",
+      "vietnamese": "con bò",
+      "filename": "vocab-v010-niu.png",
+      "status": "existing_asset_preserved",
+      "prompt": "Soft textbook 1:1 illustration for con bò; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Existing image for 牛 (niú)."
+    },
+    {
+      "record_id": "V011",
+      "chinese_simplified": "九",
+      "pinyin": "jiǔ",
+      "vietnamese": "số chín",
+      "filename": "vocab-v011-jiu.png",
+      "status": "existing_asset_preserved",
+      "prompt": "Soft textbook 1:1 illustration for số chín; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Existing image for 九 (jiǔ)."
+    },
+    {
+      "record_id": "V012",
+      "chinese_simplified": "球",
+      "pinyin": "qiú",
+      "vietnamese": "quả bóng",
+      "filename": "vocab-v012-qiu.png",
+      "status": "existing_asset_preserved",
+      "prompt": "Soft textbook 1:1 illustration for quả bóng; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Existing image for 球 (qiú)."
+    },
+    {
+      "record_id": "V013",
+      "chinese_simplified": "对",
+      "pinyin": "duì",
+      "vietnamese": "đúng, đối với",
+      "filename": "vocab-v013-dui.png",
+      "status": "existing_asset_preserved",
+      "prompt": "Soft textbook 1:1 illustration for đúng, đối với; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Existing image for 对 (duì)."
+    },
+    {
+      "record_id": "V014",
+      "chinese_simplified": "睡",
+      "pinyin": "shuì",
+      "vietnamese": "ngủ",
+      "filename": "vocab-v014-shui.png",
+      "status": "existing_asset_preserved",
+      "prompt": "Soft textbook 1:1 illustration for ngủ; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Existing image for 睡 (shuì)."
+    },
+    {
+      "record_id": "V015",
+      "chinese_simplified": "贵",
+      "pinyin": "guì",
+      "vietnamese": "đắt",
+      "filename": "vocab-v015-gui.png",
+      "status": "existing_asset_preserved",
+      "prompt": "Soft textbook 1:1 illustration for đắt; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Existing image for 贵 (guì)."
+    },
+    {
+      "record_id": "V016",
+      "chinese_simplified": "姐姐",
+      "pinyin": "jiějie",
+      "vietnamese": "chị gái",
+      "filename": "vocab-v016-jiejie.png",
+      "status": "existing_asset_preserved",
+      "prompt": "Soft textbook 1:1 illustration for chị gái; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Existing image for 姐姐 (jiějie)."
+    },
+    {
+      "record_id": "V017",
+      "chinese_simplified": "写",
+      "pinyin": "xiě",
+      "vietnamese": "viết",
+      "filename": "vocab-v017-xie.png",
+      "status": "existing_asset_preserved",
+      "prompt": "Soft textbook 1:1 illustration for viết; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Existing image for 写 (xiě)."
+    },
+    {
+      "record_id": "V018",
+      "chinese_simplified": "谢谢",
+      "pinyin": "xièxie",
+      "vietnamese": "cảm ơn",
+      "filename": "vocab-v018-xiexie.png",
+      "status": "existing_asset_preserved",
+      "prompt": "Soft textbook 1:1 illustration for cảm ơn; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Existing image for 谢谢 (xièxie)."
+    },
+    {
+      "record_id": "V019",
+      "chinese_simplified": "觉得",
+      "pinyin": "juéde",
+      "vietnamese": "cảm thấy",
+      "filename": "vocab-v019-juede.png",
+      "status": "existing_asset_preserved",
+      "prompt": "Soft textbook 1:1 illustration for cảm thấy; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Existing image for 觉得 (juéde)."
+    },
+    {
+      "record_id": "V020",
+      "chinese_simplified": "缺",
+      "pinyin": "quē",
+      "vietnamese": "thiếu",
+      "filename": "vocab-v020-que.png",
+      "status": "existing_asset_preserved",
+      "prompt": "Soft textbook 1:1 illustration for thiếu; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Existing image for 缺 (quē)."
+    },
+    {
+      "record_id": "V021",
+      "chinese_simplified": "学",
+      "pinyin": "xué",
+      "vietnamese": "học",
+      "filename": "vocab-v021-xue.png",
+      "status": "existing_asset_preserved",
+      "prompt": "Soft textbook 1:1 illustration for học; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Existing image for 学 (xué)."
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 # Pinyin Bài 7 - Teacher Prep
 
 ## Trọng tâm
-- 暖身复習第六课生詞
-- i 開頭拼音變化：i/in/ing、ia/ie/iao/ian/iang/iong、iu
-- u 開頭拼音變化：u、ua/uo/uai/uan/uang/ueng、ui/un
-- ü 開頭拼音變化：ü/üe/üan/ün
-- 生詞拼音連写规则
-- 詞彙發音与字義理解
+- 暖身复习第六课生词
+- i 开头拼音变化：i/in/ing、ia/ie/iao/ian/iang/iong、iu
+- u 开头拼音变化：u、ua/uo/uai/uan/uang/ueng、ui/un
+- ü 开头拼音变化：ü/üe/üan/ün
+- 生词拼音连写规则
+- 词汇发音与字义理解
 
 ## Cách dạy nhanh
 - Bắt đầu bằng ôn bài trước qua hoạt động nối hình.

@@ -1,13 +1,13 @@
 # Pinyin Bài 5 - Teacher Prep
 
 ## Trọng tâm
-- 暖身复習第四课生詞
+- 暖身复习第四课生词
 - 前鼻韵母 an en in uen(un) ün
-- 後鼻韵母 ang eng ing ong
-- 全部 21 声母与新韵母的拼讀組合
-- 含声調的拼音練習
-- 詞彙發音与字義理解
-- j/q/x + ün 的拼写變化
+- 后鼻韵母 ang eng ing ong
+- 全部 21 声母与新韵母的拼读组合
+- 含声调的拼音练习
+- 词汇发音与字义理解
+- j/q/x + ün 的拼写变化
 
 ## Cách dạy nhanh
 - Bắt đầu bằng ôn bài trước qua hoạt động nối hình.
