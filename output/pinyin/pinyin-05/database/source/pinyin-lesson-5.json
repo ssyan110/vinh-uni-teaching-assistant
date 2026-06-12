@@ -2,14 +2,14 @@
   "lesson_id": "pinyin_lesson_05",
   "lesson_no": 5,
   "title": {
-    "zh": "拼音第五課：前鼻音、後鼻音與 ün 拼寫變化",
+    "zh": "拼音第五课：前鼻音、后鼻音与 ün 拼写变化",
     "en": "Pinyin Lesson 5: Nasal Finals and un Spelling Changes"
   },
   "metadata": {
     "page_count_status": "pending",
-    "main_goal": "學會 an en in uen(un) ün 與 ang eng ing ong，能搭配全部 21 聲母拼讀含聲調音節，理解 j/q/x + ün 的拼寫變化，並能正確發音、理解本課詞彙字義。",
-    "primary_requirement": "發音正確以及學習字義為主",
-    "recognition_requirement": "不需要認漢字",
+    "main_goal": "学会 an en in uen(un) ün 与 ang eng ing ong，能搭配全部 21 声母拼读含声调音节，理解 j/q/x + ün 的拼写变化，并能正确发音、理解本课词汇字义。",
+    "primary_requirement": "发音正确以及学习字义为主",
+    "recognition_requirement": "不需要认汉字",
     "pronunciation_first": true,
     "meaning_focus": true,
     "requires_hanzi_recognition": false,
@@ -17,40 +17,40 @@
     "page_count_max": 19
   },
   "learning_focus": [
-    "暖身複習第四課生詞",
-    "前鼻韻母 an en in uen(un) ün",
-    "後鼻韻母 ang eng ing ong",
-    "全部 21 聲母與新韻母的拼讀組合",
-    "含聲調的拼音練習",
-    "詞彙發音與字義理解",
-    "j/q/x + ün 的拼寫變化"
+    "暖身复习第四课生词",
+    "前鼻韵母 an en in uen(un) ün",
+    "后鼻韵母 ang eng ing ong",
+    "全部 21 声母与新韵母的拼读组合",
+    "含声调的拼音练习",
+    "词汇发音与字义理解",
+    "j/q/x + ün 的拼写变化"
   ],
   "warmup_activity": {
     "item_id": "warmup_review_pinyin_lesson_04",
     "page": "P3",
-    "title": "暖身活動：複習前一課生詞",
+    "title": "暖身活动：复习前一课生词",
     "review_source_lesson_id": "pinyin_lesson_04",
-    "review_source_title": "拼音第四課：複韻母與 üe 拼寫變化",
-    "review_focus": "複習前一課的生詞",
+    "review_source_title": "拼音第四课：复韵母与 üe 拼写变化",
+    "review_focus": "复习前一课的生词",
     "activity_options": [
       {
         "activity_type": "matching",
-        "title": "連連看",
+        "title": "连连看",
         "front_prompt": "看照片",
-        "answer_target": "拼音&漢字",
-        "description": "學生看照片，連到對應的拼音與漢字。"
+        "answer_target": "拼音&汉字",
+        "description": "学生看照片，连到对应的拼音与汉字。"
       },
       {
         "activity_type": "audio_flashcard",
-        "title": "聽音猜意 flash card",
-        "front_prompt": "播放生詞音檔",
-        "back_content": "漢字＋拼音＋圖片",
-        "description": "正面播放生詞音檔，學生猜意思；反面顯示漢字、拼音與圖片。"
+        "title": "听音猜意 flash card",
+        "front_prompt": "播放生词音档",
+        "back_content": "汉字＋拼音＋图片",
+        "description": "正面播放生词音档，学生猜意思；反面显示汉字、拼音与图片。"
       }
     ],
     "source_vocabulary": [
       {
-        "hanzi": "開",
+        "hanzi": "开",
         "pinyin": "kāi"
       },
       {
@@ -58,7 +58,7 @@
         "pinyin": "cài"
       },
       {
-        "hanzi": "貓",
+        "hanzi": "猫",
         "pinyin": "māo"
       },
       {
@@ -74,7 +74,7 @@
         "pinyin": "kǒu"
       },
       {
-        "hanzi": "誰",
+        "hanzi": "谁",
         "pinyin": "shéi"
       },
       {
@@ -98,7 +98,7 @@
         "pinyin": "qiú"
       },
       {
-        "hanzi": "對",
+        "hanzi": "对",
         "pinyin": "duì"
       },
       {
@@ -106,7 +106,7 @@
         "pinyin": "shuì"
       },
       {
-        "hanzi": "貴",
+        "hanzi": "贵",
         "pinyin": "guì"
       },
       {
@@ -114,15 +114,15 @@
         "pinyin": "jiějie"
       },
       {
-        "hanzi": "寫",
+        "hanzi": "写",
         "pinyin": "xiě"
       },
       {
-        "hanzi": "謝謝",
+        "hanzi": "谢谢",
         "pinyin": "xièxie"
       },
       {
-        "hanzi": "覺得",
+        "hanzi": "觉得",
         "pinyin": "juéde"
       },
       {
@@ -130,14 +130,14 @@
         "pinyin": "quē"
       },
       {
-        "hanzi": "學",
+        "hanzi": "学",
         "pinyin": "xué"
       }
     ],
     "pronunciation_first": true,
     "meaning_focus": true,
     "requires_hanzi_recognition": false,
-    "notes": "暖身活動放在學習目標之後，用前一課生詞作為複習材料。"
+    "notes": "暖身活动放在学习目标之后，用前一课生词作为复习材料。"
   },
   "pages": [
     {
@@ -145,14 +145,14 @@
       "sequence": 1,
       "title": "封面",
       "record_type": "lesson_cover",
-      "content_focus": "第五課課程封面。"
+      "content_focus": "第五课课程封面。"
     },
     {
       "page_range": "P2",
       "sequence": 2,
-      "title": "學習目標",
+      "title": "学习目标",
       "record_type": "learning_objective",
-      "content_focus": "說明本課要學 an/en/in/uen(un)/ün、ang/eng/ing/ong、含聲調拼讀、詞彙發音與字義、ün 拼寫變化。",
+      "content_focus": "说明本课要学 an/en/in/uen(un)/ün、ang/eng/ing/ong、含声调拼读、词汇发音与字义、ün 拼写变化。",
       "pronunciation_first": true,
       "meaning_focus": true,
       "requires_hanzi_recognition": false
@@ -160,9 +160,9 @@
     {
       "page_range": "P3",
       "sequence": 3,
-      "title": "暖身活動：複習第四課生詞",
+      "title": "暖身活动：复习第四课生词",
       "record_type": "warmup_activity",
-      "content_focus": "複習第四課生詞；活動可用連連看或聽音猜意 flash card。",
+      "content_focus": "复习第四课生词；活动可用连连看或听音猜意 flash card。",
       "pronunciation_first": true,
       "meaning_focus": true,
       "requires_hanzi_recognition": false
@@ -170,38 +170,38 @@
     {
       "page_range": "P4",
       "sequence": 4,
-      "title": "拼音學習封面 1：an en in uen(un) ün",
+      "title": "拼音学习封面 1：an en in uen(un) ün",
       "record_type": "pinyin_learning_cover",
-      "content_focus": "進入第一組前鼻韻母學習段落。",
-      "notes": "封面包含 ün；P5 表格只列 an/en/in/uen(un)，ün 於 P9 規則處理。"
+      "content_focus": "进入第一组前鼻韵母学习段落。",
+      "notes": "封面包含 ün；P5 表格只列 an/en/in/uen(un)，ün 于 P9 规则处理。"
     },
     {
       "page_range": "P5",
       "sequence": 5,
-      "title": "拼音學習表格 1：全部聲母 + an en in uen(un)",
+      "title": "拼音学习表格 1：全部声母 + an en in uen(un)",
       "record_type": "pinyin_chart",
-      "content_focus": "建立 21 聲母與 an/en/in/uen(un) 的拼讀組合。",
+      "content_focus": "建立 21 声母与 an/en/in/uen(un) 的拼读组合。",
       "pinyin_chart_id": "pinyin_chart_l5_group_1",
       "includes_tones": false,
-      "notes": "不含 ün；ün 另由 P9 規則與 P10 詞彙承接。"
+      "notes": "不含 ün；ün 另由 P9 规则与 P10 词汇承接。"
     },
     {
       "page_range": "P6",
       "sequence": 6,
-      "title": "拼音練習 1",
+      "title": "拼音练习 1",
       "record_type": "pinyin_exercise",
-      "content_focus": "第一組前鼻韻母拼讀練習，含聲調。",
+      "content_focus": "第一组前鼻韵母拼读练习，含声调。",
       "source_pinyin_chart_id": "pinyin_chart_l5_group_1",
       "includes_tones": true
     },
     {
       "page_range": "P7",
       "sequence": 7,
-      "title": "詞彙 1",
+      "title": "词汇 1",
       "record_type": "vocabulary_set",
-      "content_focus": "米飯、男、雞蛋、門、人、新、春、困。",
+      "content_focus": "米饭、男、鸡蛋、门、人、新、春、困。",
       "vocabulary_set_id": "vocab_set_l5_01",
-      "notes": "困附註 sleepy。",
+      "notes": "困附注 sleepy。",
       "pronunciation_first": true,
       "meaning_focus": true,
       "requires_hanzi_recognition": false
@@ -209,9 +209,9 @@
     {
       "page_range": "P8",
       "sequence": 8,
-      "title": "詞彙練習 1",
+      "title": "词汇练习 1",
       "record_type": "vocab_exercise",
-      "content_focus": "詞彙 1 的發音與字義練習。",
+      "content_focus": "词汇 1 的发音与字义练习。",
       "source_vocabulary_set_id": "vocab_set_l5_01",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -220,17 +220,17 @@
     {
       "page_range": "P9",
       "sequence": 9,
-      "title": "規則：ün 的變化",
+      "title": "规则：ün 的变化",
       "record_type": "spelling_rule",
-      "content_focus": "學習 j/q/x + ün 時，拼寫為 jun/qun/xun。",
+      "content_focus": "学习 j/q/x + ün 时，拼写为 jun/qun/xun。",
       "spelling_rule_id": "rule_l5_jqx_un_umlaut"
     },
     {
       "page_range": "P10",
       "sequence": 10,
-      "title": "詞彙 2",
+      "title": "词汇 2",
       "record_type": "vocabulary_set",
-      "content_focus": "軍人、裙子、培訓。",
+      "content_focus": "军人、裙子、培训。",
       "vocabulary_set_id": "vocab_set_l5_02",
       "related_rule_id": "rule_l5_jqx_un_umlaut",
       "pronunciation_first": true,
@@ -240,9 +240,9 @@
     {
       "page_range": "P11",
       "sequence": 11,
-      "title": "詞彙練習 2",
+      "title": "词汇练习 2",
       "record_type": "vocab_exercise",
-      "content_focus": "詞彙 2 的發音與字義練習。",
+      "content_focus": "词汇 2 的发音与字义练习。",
       "source_vocabulary_set_id": "vocab_set_l5_02",
       "related_rule_id": "rule_l5_jqx_un_umlaut",
       "pronunciation_first": true,
@@ -252,34 +252,34 @@
     {
       "page_range": "P12",
       "sequence": 12,
-      "title": "拼音學習封面 2：ang eng ing ong",
+      "title": "拼音学习封面 2：ang eng ing ong",
       "record_type": "pinyin_learning_cover",
-      "content_focus": "進入後鼻韻母學習段落。"
+      "content_focus": "进入后鼻韵母学习段落。"
     },
     {
       "page_range": "P13",
       "sequence": 13,
-      "title": "拼音學習表格 2：全部聲母 + ang eng ing ong",
+      "title": "拼音学习表格 2：全部声母 + ang eng ing ong",
       "record_type": "pinyin_chart",
-      "content_focus": "建立 21 聲母與 ang/eng/ing/ong 的拼讀組合。",
+      "content_focus": "建立 21 声母与 ang/eng/ing/ong 的拼读组合。",
       "pinyin_chart_id": "pinyin_chart_l5_group_2",
       "includes_tones": false
     },
     {
       "page_range": "P14",
       "sequence": 14,
-      "title": "拼音練習 2",
+      "title": "拼音练习 2",
       "record_type": "pinyin_exercise",
-      "content_focus": "第二組後鼻韻母拼讀練習，含聲調。",
+      "content_focus": "第二组后鼻韵母拼读练习，含声调。",
       "source_pinyin_chart_id": "pinyin_chart_l5_group_2",
       "includes_tones": true
     },
     {
       "page_range": "P15",
       "sequence": 15,
-      "title": "詞彙 3",
+      "title": "词汇 3",
       "record_type": "vocabulary_set",
-      "content_focus": "湯、髒、疼、冷、名字、聽、龍、成功。",
+      "content_focus": "汤、脏、疼、冷、名字、听、龙、成功。",
       "vocabulary_set_id": "vocab_set_l5_03",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -288,9 +288,9 @@
     {
       "page_range": "P16",
       "sequence": 16,
-      "title": "詞彙練習 3",
+      "title": "词汇练习 3",
       "record_type": "vocab_exercise",
-      "content_focus": "詞彙 3 的發音與字義練習。",
+      "content_focus": "词汇 3 的发音与字义练习。",
       "source_vocabulary_set_id": "vocab_set_l5_03",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -299,9 +299,9 @@
     {
       "page_range": null,
       "sequence": 17,
-      "title": "課後練習",
+      "title": "课后练习",
       "record_type": "review_exercise",
-      "content_focus": "2-3 個題型整合複習。",
+      "content_focus": "2-3 个题型整合复习。",
       "page_range_options": [
         "P17-P18",
         "P17-P19"
@@ -339,7 +339,7 @@
     {
       "item_id": "final_an",
       "symbol": "an",
-      "label": "韻母 an",
+      "label": "韵母 an",
       "final_group": "front_nasal_group",
       "introduced_on": "P4",
       "chart_page": "P5"
@@ -347,7 +347,7 @@
     {
       "item_id": "final_en",
       "symbol": "en",
-      "label": "韻母 en",
+      "label": "韵母 en",
       "final_group": "front_nasal_group",
       "introduced_on": "P4",
       "chart_page": "P5"
@@ -355,7 +355,7 @@
     {
       "item_id": "final_in",
       "symbol": "in",
-      "label": "韻母 in",
+      "label": "韵母 in",
       "final_group": "front_nasal_group",
       "introduced_on": "P4",
       "chart_page": "P5"
@@ -363,7 +363,7 @@
     {
       "item_id": "final_uen_un",
       "symbol": "uen(un)",
-      "label": "韻母 uen(un)",
+      "label": "韵母 uen(un)",
       "final_group": "front_nasal_group",
       "introduced_on": "P4",
       "chart_page": "P5"
@@ -371,7 +371,7 @@
     {
       "item_id": "final_un_umlaut",
       "symbol": "ün",
-      "label": "韻母 ün",
+      "label": "韵母 ün",
       "final_group": "front_nasal_rule_based",
       "introduced_on": "P4",
       "rule_page": "P9",
@@ -380,7 +380,7 @@
     {
       "item_id": "final_ang",
       "symbol": "ang",
-      "label": "韻母 ang",
+      "label": "韵母 ang",
       "final_group": "back_nasal_group",
       "introduced_on": "P12",
       "chart_page": "P13"
@@ -388,7 +388,7 @@
     {
       "item_id": "final_eng",
       "symbol": "eng",
-      "label": "韻母 eng",
+      "label": "韵母 eng",
       "final_group": "back_nasal_group",
       "introduced_on": "P12",
       "chart_page": "P13"
@@ -396,7 +396,7 @@
     {
       "item_id": "final_ing",
       "symbol": "ing",
-      "label": "韻母 ing",
+      "label": "韵母 ing",
       "final_group": "back_nasal_group",
       "introduced_on": "P12",
       "chart_page": "P13"
@@ -404,7 +404,7 @@
     {
       "item_id": "final_ong",
       "symbol": "ong",
-      "label": "韻母 ong",
+      "label": "韵母 ong",
       "final_group": "back_nasal_group",
       "introduced_on": "P12",
       "chart_page": "P13"
@@ -414,7 +414,7 @@
     {
       "item_id": "pinyin_chart_l5_group_1",
       "page": "P5",
-      "title": "全部聲母 + an en in uen(un)",
+      "title": "全部声母 + an en in uen(un)",
       "initials": [
         "b",
         "p",
@@ -445,12 +445,12 @@
         "uen(un)"
       ],
       "includes_tones": false,
-      "notes": "P5 表格不含 ün；ün 由 P9 規則處理。"
+      "notes": "P5 表格不含 ün；ün 由 P9 规则处理。"
     },
     {
       "item_id": "pinyin_chart_l5_group_2",
       "page": "P13",
-      "title": "全部聲母 + ang eng ing ong",
+      "title": "全部声母 + ang eng ing ong",
       "initials": [
         "b",
         "p",
@@ -487,7 +487,7 @@
     {
       "item_id": "rule_l5_jqx_un_umlaut",
       "page": "P9",
-      "title": "j/q/x + ün 拼寫變化",
+      "title": "j/q/x + ün 拼写变化",
       "rules": [
         {
           "underlying_form": "jün",
@@ -502,7 +502,7 @@
           "written_form": "xun"
         }
       ],
-      "explanation": "j/q/x 後接 ün 時，拼寫省略 ü 上兩點，但發音仍與 ün 有關。",
+      "explanation": "j/q/x 后接 ün 时，拼写省略 ü 上两点，但发音仍与 ün 有关。",
       "applies_to_vocabulary_set_ids": [
         "vocab_set_l5_02"
       ]
@@ -513,11 +513,11 @@
       "set_id": "vocab_set_l5_01",
       "page": "P7",
       "practice_page": "P8",
-      "title": "詞彙 1",
+      "title": "词汇 1",
       "items": [
         {
           "item_id": "vocab_l5_001_mifan",
-          "hanzi": "米飯",
+          "hanzi": "米饭",
           "pinyin": "mǐfàn"
         },
         {
@@ -527,12 +527,12 @@
         },
         {
           "item_id": "vocab_l5_003_jidan",
-          "hanzi": "雞蛋",
+          "hanzi": "鸡蛋",
           "pinyin": "jīdàn"
         },
         {
           "item_id": "vocab_l5_004_men",
-          "hanzi": "門",
+          "hanzi": "门",
           "pinyin": "mén"
         },
         {
@@ -565,12 +565,12 @@
       "set_id": "vocab_set_l5_02",
       "page": "P10",
       "practice_page": "P11",
-      "title": "詞彙 2",
+      "title": "词汇 2",
       "related_rule_id": "rule_l5_jqx_un_umlaut",
       "items": [
         {
           "item_id": "vocab_l5_009_junren",
-          "hanzi": "軍人",
+          "hanzi": "军人",
           "pinyin": "jūnrén",
           "related_rule_id": "rule_l5_jqx_un_umlaut"
         },
@@ -582,7 +582,7 @@
         },
         {
           "item_id": "vocab_l5_011_peixun",
-          "hanzi": "培訓",
+          "hanzi": "培训",
           "pinyin": "péixùn",
           "related_rule_id": "rule_l5_jqx_un_umlaut"
         }
@@ -595,16 +595,16 @@
       "set_id": "vocab_set_l5_03",
       "page": "P15",
       "practice_page": "P16",
-      "title": "詞彙 3",
+      "title": "词汇 3",
       "items": [
         {
           "item_id": "vocab_l5_012_tang",
-          "hanzi": "湯",
+          "hanzi": "汤",
           "pinyin": "tāng"
         },
         {
           "item_id": "vocab_l5_013_zang",
-          "hanzi": "髒",
+          "hanzi": "脏",
           "pinyin": "zāng"
         },
         {
@@ -624,12 +624,12 @@
         },
         {
           "item_id": "vocab_l5_017_ting",
-          "hanzi": "聽",
+          "hanzi": "听",
           "pinyin": "tīng"
         },
         {
           "item_id": "vocab_l5_018_long",
-          "hanzi": "龍",
+          "hanzi": "龙",
           "pinyin": "lóng"
         },
         {
@@ -647,8 +647,8 @@
     {
       "item_id": "exercise_l5_p6_pinyin_group_1",
       "page": "P6",
-      "exercise_type": "含聲調拼音練習",
-      "goal": "練習 21 聲母 + an/en/in/uen(un) 的含聲調拼讀。",
+      "exercise_type": "含声调拼音练习",
+      "goal": "练习 21 声母 + an/en/in/uen(un) 的含声调拼读。",
       "source_pinyin_chart_id": "pinyin_chart_l5_group_1",
       "includes_tones": true,
       "pronunciation_first": true,
@@ -658,8 +658,8 @@
     {
       "item_id": "exercise_l5_p8_vocab_1",
       "page": "P8",
-      "exercise_type": "詞彙 1 練習",
-      "goal": "確認詞彙 1 發音與字義理解。",
+      "exercise_type": "词汇 1 练习",
+      "goal": "确认词汇 1 发音与字义理解。",
       "source_vocabulary_set_id": "vocab_set_l5_01",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -668,8 +668,8 @@
     {
       "item_id": "exercise_l5_p11_vocab_2",
       "page": "P11",
-      "exercise_type": "詞彙 2 練習",
-      "goal": "確認詞彙 2 發音、字義與 ün 拼寫變化。",
+      "exercise_type": "词汇 2 练习",
+      "goal": "确认词汇 2 发音、字义与 ün 拼写变化。",
       "source_vocabulary_set_id": "vocab_set_l5_02",
       "related_rule_id": "rule_l5_jqx_un_umlaut",
       "pronunciation_first": true,
@@ -679,8 +679,8 @@
     {
       "item_id": "exercise_l5_p14_pinyin_group_2",
       "page": "P14",
-      "exercise_type": "含聲調拼音練習",
-      "goal": "練習 21 聲母 + ang/eng/ing/ong 的含聲調拼讀。",
+      "exercise_type": "含声调拼音练习",
+      "goal": "练习 21 声母 + ang/eng/ing/ong 的含声调拼读。",
       "source_pinyin_chart_id": "pinyin_chart_l5_group_2",
       "includes_tones": true,
       "pronunciation_first": true,
@@ -690,8 +690,8 @@
     {
       "item_id": "exercise_l5_p16_vocab_3",
       "page": "P16",
-      "exercise_type": "詞彙 3 練習",
-      "goal": "確認詞彙 3 發音與字義理解。",
+      "exercise_type": "词汇 3 练习",
+      "goal": "确认词汇 3 发音与字义理解。",
       "source_vocabulary_set_id": "vocab_set_l5_03",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -705,13 +705,13 @@
         "P17-P19"
       ],
       "is_page_range_flexible": true,
-      "exercise_type": "課後整合練習",
-      "goal": "用 2-3 個題型整合複習。",
+      "exercise_type": "课后整合练习",
+      "goal": "用 2-3 个题型整合复习。",
       "suggested_question_types": [
-        "聽音選拼音",
-        "看拼音朗讀",
-        "字義配對",
-        "ün 拼寫規則判斷"
+        "听音选拼音",
+        "看拼音朗读",
+        "字义配对",
+        "ün 拼写规则判断"
       ],
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -731,12 +731,12 @@
           "total_pages": 19
         }
       ],
-      "impact": "新增 P3 暖身活動後，課後練習頁碼順延；決定第五課總頁數為 18 或 19。"
+      "impact": "新增 P3 暖身活动后，课后练习页码顺延；决定第五课总页数为 18 或 19。"
     }
   ],
   "database_notes": [
-    "新增 P3 暖身活動後，原 P3 起所有頁碼順延一頁。",
-    "P3 暖身活動複習第四課生詞。",
+    "新增 P3 暖身活动后，原 P3 起所有页码顺延一页。",
+    "P3 暖身活动复习第四课生词。",
     "困(sleepy) from the user input is stored as vocabulary item 困 with meaning_note sleepy."
   ]
 }

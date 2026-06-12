@@ -1,75 +1,75 @@
-# Pinyin Lesson 4: 複韻母與 üe 拼寫變化
+# Pinyin Lesson 4: 复韵母与 üe 拼写变化
 
 ## Lesson Metadata
 
 | Field | Value |
 |---|---|
 | lesson_id | `pinyin_lesson_04` |
-| title_zh | 拼音第四課：複韻母與 üe 拼寫變化 |
+| title_zh | 拼音第四课：复韵母与 üe 拼写变化 |
 | title_en | Pinyin Lesson 4: Compound Finals and ue Spelling Changes |
-| main_goal | 學會 ai ao ou ei er 與 iu ui ie üe，能搭配全部 21 聲母拼讀含聲調音節，理解 j/q/x + üe 的拼寫變化，並能正確發音、理解本課詞彙字義。 |
-| primary_requirement | 發音正確以及學習字義為主 |
-| recognition_requirement | 不需要認漢字 |
+| main_goal | 学会 ai ao ou ei er 与 iu ui ie üe，能搭配全部 21 声母拼读含声调音节，理解 j/q/x + üe 的拼写变化，并能正确发音、理解本课词汇字义。 |
+| primary_requirement | 发音正确以及学习字义为主 |
+| recognition_requirement | 不需要认汉字 |
 | page_count_status | pending |
 | total_pages_options | 18 或 19 |
 
 ## Learning Focus
 
-- 暖身複習第三課生詞
-- 複韻母 ai ao ou ei er
-- 複韻母 iu ui ie üe
-- 全部 21 聲母與新韻母的拼讀組合
-- 含聲調的拼音練習
-- 詞彙發音與字義理解
-- j/q/x + üe 的拼寫變化
+- 暖身复习第三课生词
+- 复韵母 ai ao ou ei er
+- 复韵母 iu ui ie üe
+- 全部 21 声母与新韵母的拼读组合
+- 含声调的拼音练习
+- 词汇发音与字义理解
+- j/q/x + üe 的拼写变化
 
 ## Page Structure
 
 | Page | Title | Content Focus | Record Type | Notes |
 |---|---|---|---|---|
-| P1 | 封面 | 第四課課程封面。 | `lesson_cover` |  |
-| P2 | 學習目標 | 說明本課要學 ai/ao/ou/ei/er、iu/ui/ie/üe、含聲調拼讀、詞彙發音與字義、üe 拼寫變化。 | `learning_objective` |  |
-| P3 | 暖身活動：複習第三課生詞 | 複習第三課生詞；活動可用連連看或聽音猜意 flash card。 | `warmup_activity` |  |
-| P4 | 拼音學習封面 1：ai ao ou ei er | 進入第一組複韻母學習段落。 | `pinyin_learning_cover` |  |
-| P5 | 拼音學習表格 1：全部聲母 + ai ao ou ei er | 建立 21 聲母與 ai/ao/ou/ei/er 的拼讀組合。 | `pinyin_chart` |  |
-| P6 | 拼音練習 1 | 第一組複韻母拼讀練習，含聲調。 | `pinyin_exercise` |  |
-| P7 | 詞彙 1 | 開、菜、貓、少、手、口、誰、二。 | `vocabulary_set` |  |
-| P8 | 詞彙練習 1 | 詞彙 1 的發音與字義練習。 | `vocab_exercise` |  |
-| P9 | 拼音學習封面 2：iu ui ie üe | 進入第二組複韻母學習段落。 | `pinyin_learning_cover` | 封面包含 üe；P10 表格只列 iu/ui/ie，üe 於 P14 規則處理。 |
-| P10 | 拼音學習表格 2：全部聲母 + iu ui ie | 建立 21 聲母與 iu/ui/ie 的拼讀組合。 | `pinyin_chart` | 不含 üe；üe 另由 P14 規則與 P15 詞彙承接。 |
-| P11 | 拼音練習 2 | 第二組複韻母拼讀練習，含聲調。 | `pinyin_exercise` |  |
-| P12 | 詞彙 2 | 六、牛、九、球、對、睡、貴、姐姐、寫、謝謝。 | `vocabulary_set` |  |
-| P13 | 詞彙練習 2 | 詞彙 2 的發音與字義練習。 | `vocab_exercise` |  |
-| P14 | 規則：üe 的變化 | 學習 j/q/x + üe 時，拼寫為 jue/que/xue。 | `spelling_rule` |  |
-| P15 | 詞彙 3 | 覺得、缺、學。 | `vocabulary_set` |  |
-| P16 | 詞彙練習 3 | 詞彙 3 的發音與字義練習。 | `vocab_exercise` |  |
-| P17-P18 或 P17-P19 | 課後練習 | 2-3 個題型整合複習。 | `review_exercise` |  |
+| P1 | 封面 | 第四课课程封面。 | `lesson_cover` |  |
+| P2 | 学习目标 | 说明本课要学 ai/ao/ou/ei/er、iu/ui/ie/üe、含声调拼读、词汇发音与字义、üe 拼写变化。 | `learning_objective` |  |
+| P3 | 暖身活动：复习第三课生词 | 复习第三课生词；活动可用连连看或听音猜意 flash card。 | `warmup_activity` |  |
+| P4 | 拼音学习封面 1：ai ao ou ei er | 进入第一组复韵母学习段落。 | `pinyin_learning_cover` |  |
+| P5 | 拼音学习表格 1：全部声母 + ai ao ou ei er | 建立 21 声母与 ai/ao/ou/ei/er 的拼读组合。 | `pinyin_chart` |  |
+| P6 | 拼音练习 1 | 第一组复韵母拼读练习，含声调。 | `pinyin_exercise` |  |
+| P7 | 词汇 1 | 开、菜、猫、少、手、口、谁、二。 | `vocabulary_set` |  |
+| P8 | 词汇练习 1 | 词汇 1 的发音与字义练习。 | `vocab_exercise` |  |
+| P9 | 拼音学习封面 2：iu ui ie üe | 进入第二组复韵母学习段落。 | `pinyin_learning_cover` | 封面包含 üe；P10 表格只列 iu/ui/ie，üe 于 P14 规则处理。 |
+| P10 | 拼音学习表格 2：全部声母 + iu ui ie | 建立 21 声母与 iu/ui/ie 的拼读组合。 | `pinyin_chart` | 不含 üe；üe 另由 P14 规则与 P15 词汇承接。 |
+| P11 | 拼音练习 2 | 第二组复韵母拼读练习，含声调。 | `pinyin_exercise` |  |
+| P12 | 词汇 2 | 六、牛、九、球、对、睡、贵、姐姐、写、谢谢。 | `vocabulary_set` |  |
+| P13 | 词汇练习 2 | 词汇 2 的发音与字义练习。 | `vocab_exercise` |  |
+| P14 | 规则：üe 的变化 | 学习 j/q/x + üe 时，拼写为 jue/que/xue。 | `spelling_rule` |  |
+| P15 | 词汇 3 | 觉得、缺、学。 | `vocabulary_set` |  |
+| P16 | 词汇练习 3 | 词汇 3 的发音与字义练习。 | `vocab_exercise` |  |
+| P17-P18 或 P17-P19 | 课后练习 | 2-3 个题型整合复习。 | `review_exercise` |  |
 
 ## Warm-Up Activity
 
 - Page: P3
-- Review source: `pinyin_lesson_03` (拼音第三課：翹舌音、平舌音與一不變調)
-- Review focus: 複習前一課的生詞
-- Activity option 1: 連連看：看照片，連到對應的拼音&漢字。
-- Activity option 2: 聽音猜意 flash card：正面播放生詞音檔；反面顯示漢字＋拼音＋圖片。
+- Review source: `pinyin_lesson_03` (拼音第三课：翘舌音、平舌音与一不变调)
+- Review focus: 复习前一课的生词
+- Activity option 1: 连连看：看照片，连到对应的拼音&汉字。
+- Activity option 2: 听音猜意 flash card：正面播放生词音档；反面显示汉字＋拼音＋图片。
 
 | Hanzi | Pinyin |
 |---|---|
-| 炸雞 | zhájī |
+| 炸鸡 | zhájī |
 | 茶 | chá |
-| 車 | chē |
-| 熱 | rè |
+| 车 | chē |
+| 热 | rè |
 | 吃 | chī |
 | 十 | shí |
-| 豬 | zhū |
-| 書 | shū |
+| 猪 | zhū |
+| 书 | shū |
 | 擦 | cā |
 | 撒 | sā |
-| 綠色 | lǜsè |
+| 绿色 | lǜsè |
 | 负责 | fùzé |
 | 字 | zì |
 | 四 | sì |
-| 組 | zǔ |
+| 组 | zǔ |
 | 速度 | sùdù |
 
 ## All Initials Used
@@ -82,15 +82,15 @@
 
 | item_id | Symbol | Label | Group | Introduced On |
 |---|---|---|---|---|
-| `final_ai` | ai | 韻母 ai | compound_final_group_1 | P4 |
-| `final_ao` | ao | 韻母 ao | compound_final_group_1 | P4 |
-| `final_ou` | ou | 韻母 ou | compound_final_group_1 | P4 |
-| `final_ei` | ei | 韻母 ei | compound_final_group_1 | P4 |
-| `final_er` | er | 韻母 er | compound_final_group_1 | P4 |
-| `final_iu` | iu | 韻母 iu | compound_final_group_2 | P9 |
-| `final_ui` | ui | 韻母 ui | compound_final_group_2 | P9 |
-| `final_ie` | ie | 韻母 ie | compound_final_group_2 | P9 |
-| `final_ue_umlaut` | üe | 韻母 üe | compound_final_group_2_rule_based | P9 |
+| `final_ai` | ai | 韵母 ai | compound_final_group_1 | P4 |
+| `final_ao` | ao | 韵母 ao | compound_final_group_1 | P4 |
+| `final_ou` | ou | 韵母 ou | compound_final_group_1 | P4 |
+| `final_ei` | ei | 韵母 ei | compound_final_group_1 | P4 |
+| `final_er` | er | 韵母 er | compound_final_group_1 | P4 |
+| `final_iu` | iu | 韵母 iu | compound_final_group_2 | P9 |
+| `final_ui` | ui | 韵母 ui | compound_final_group_2 | P9 |
+| `final_ie` | ie | 韵母 ie | compound_final_group_2 | P9 |
+| `final_ue_umlaut` | üe | 韵母 üe | compound_final_group_2_rule_based | P9 |
 
 ## Pinyin Charts
 
@@ -103,63 +103,63 @@
 
 | item_id | Page | Rule | Explanation |
 |---|---|---|---|
-| `rule_l4_jqx_ue_umlaut` | P14 | jüe→jue, qüe→que, xüe→xue | j/q/x 後接 üe 時，拼寫省略 ü 上兩點，但發音仍與 üe 有關。 |
+| `rule_l4_jqx_ue_umlaut` | P14 | jüe→jue, qüe→que, xüe→xue | j/q/x 后接 üe 时，拼写省略 ü 上两点，但发音仍与 üe 有关。 |
 
 ## Vocabulary Set 1
 
 | item_id | Hanzi | Pinyin | Page | Practice Page | Practice Requirement |
 |---|---|---|---|---|---|
-| `vocab_l4_001_kai` | 開 | kāi | P7 | P8 | 發音正確，學習字義，不要求認字。 |
-| `vocab_l4_002_cai` | 菜 | cài | P7 | P8 | 發音正確，學習字義，不要求認字。 |
-| `vocab_l4_003_mao` | 貓 | māo | P7 | P8 | 發音正確，學習字義，不要求認字。 |
-| `vocab_l4_004_shao` | 少 | shǎo | P7 | P8 | 發音正確，學習字義，不要求認字。 |
-| `vocab_l4_005_shou` | 手 | shǒu | P7 | P8 | 發音正確，學習字義，不要求認字。 |
-| `vocab_l4_006_kou` | 口 | kǒu | P7 | P8 | 發音正確，學習字義，不要求認字。 |
-| `vocab_l4_007_shei` | 誰 | shéi | P7 | P8 | 發音正確，學習字義，不要求認字。 |
-| `vocab_l4_008_er` | 二 | èr | P7 | P8 | 發音正確，學習字義，不要求認字。 |
+| `vocab_l4_001_kai` | 开 | kāi | P7 | P8 | 发音正确，学习字义，不要求认字。 |
+| `vocab_l4_002_cai` | 菜 | cài | P7 | P8 | 发音正确，学习字义，不要求认字。 |
+| `vocab_l4_003_mao` | 猫 | māo | P7 | P8 | 发音正确，学习字义，不要求认字。 |
+| `vocab_l4_004_shao` | 少 | shǎo | P7 | P8 | 发音正确，学习字义，不要求认字。 |
+| `vocab_l4_005_shou` | 手 | shǒu | P7 | P8 | 发音正确，学习字义，不要求认字。 |
+| `vocab_l4_006_kou` | 口 | kǒu | P7 | P8 | 发音正确，学习字义，不要求认字。 |
+| `vocab_l4_007_shei` | 谁 | shéi | P7 | P8 | 发音正确，学习字义，不要求认字。 |
+| `vocab_l4_008_er` | 二 | èr | P7 | P8 | 发音正确，学习字义，不要求认字。 |
 
 ## Vocabulary Set 2
 
 | item_id | Hanzi | Pinyin | Page | Practice Page | Practice Requirement |
 |---|---|---|---|---|---|
-| `vocab_l4_009_liu` | 六 | liù | P12 | P13 | 發音正確，學習字義，不要求認字。 |
-| `vocab_l4_010_niu` | 牛 | niú | P12 | P13 | 發音正確，學習字義，不要求認字。 |
-| `vocab_l4_011_jiu` | 九 | jiǔ | P12 | P13 | 發音正確，學習字義，不要求認字。 |
-| `vocab_l4_012_qiu` | 球 | qiú | P12 | P13 | 發音正確，學習字義，不要求認字。 |
-| `vocab_l4_013_dui` | 對 | duì | P12 | P13 | 發音正確，學習字義，不要求認字。 |
-| `vocab_l4_014_shui` | 睡 | shuì | P12 | P13 | 發音正確，學習字義，不要求認字。 |
-| `vocab_l4_015_gui` | 貴 | guì | P12 | P13 | 發音正確，學習字義，不要求認字。 |
-| `vocab_l4_016_jiejie` | 姐姐 | jiějie | P12 | P13 | 發音正確，學習字義，不要求認字。 |
-| `vocab_l4_017_xie` | 寫 | xiě | P12 | P13 | 發音正確，學習字義，不要求認字。 |
-| `vocab_l4_018_xiexie` | 謝謝 | xièxie | P12 | P13 | 發音正確，學習字義，不要求認字。 |
+| `vocab_l4_009_liu` | 六 | liù | P12 | P13 | 发音正确，学习字义，不要求认字。 |
+| `vocab_l4_010_niu` | 牛 | niú | P12 | P13 | 发音正确，学习字义，不要求认字。 |
+| `vocab_l4_011_jiu` | 九 | jiǔ | P12 | P13 | 发音正确，学习字义，不要求认字。 |
+| `vocab_l4_012_qiu` | 球 | qiú | P12 | P13 | 发音正确，学习字义，不要求认字。 |
+| `vocab_l4_013_dui` | 对 | duì | P12 | P13 | 发音正确，学习字义，不要求认字。 |
+| `vocab_l4_014_shui` | 睡 | shuì | P12 | P13 | 发音正确，学习字义，不要求认字。 |
+| `vocab_l4_015_gui` | 贵 | guì | P12 | P13 | 发音正确，学习字义，不要求认字。 |
+| `vocab_l4_016_jiejie` | 姐姐 | jiějie | P12 | P13 | 发音正确，学习字义，不要求认字。 |
+| `vocab_l4_017_xie` | 写 | xiě | P12 | P13 | 发音正确，学习字义，不要求认字。 |
+| `vocab_l4_018_xiexie` | 谢谢 | xièxie | P12 | P13 | 发音正确，学习字义，不要求认字。 |
 
 ## Vocabulary Set 3
 
 | item_id | Hanzi | Pinyin | Page | Practice Page | Related Rule | Practice Requirement |
 |---|---|---|---|---|---|---|
-| `vocab_l4_019_juede` | 覺得 | juéde | P15 | P16 | `rule_l4_jqx_ue_umlaut` | 發音正確，學習字義，不要求認字。 |
-| `vocab_l4_020_que` | 缺 | quē | P15 | P16 | `rule_l4_jqx_ue_umlaut` | 發音正確，學習字義，不要求認字。 |
-| `vocab_l4_021_xue` | 學 | xué | P15 | P16 | `rule_l4_jqx_ue_umlaut` | 發音正確，學習字義，不要求認字。 |
+| `vocab_l4_019_juede` | 觉得 | juéde | P15 | P16 | `rule_l4_jqx_ue_umlaut` | 发音正确，学习字义，不要求认字。 |
+| `vocab_l4_020_que` | 缺 | quē | P15 | P16 | `rule_l4_jqx_ue_umlaut` | 发音正确，学习字义，不要求认字。 |
+| `vocab_l4_021_xue` | 学 | xué | P15 | P16 | `rule_l4_jqx_ue_umlaut` | 发音正确，学习字义，不要求认字。 |
 
 ## Exercise Design
 
 | item_id | Page | Exercise Type | Goal | Constraints |
 |---|---|---|---|---|
-| `exercise_l4_p6_pinyin_group_1` | P6 | 含聲調拼音練習 | 練習 21 聲母 + ai/ao/ou/ei/er 的含聲調拼讀。 | 發音正確、認字義為主，不要求認漢字。 含聲調。 |
-| `exercise_l4_p8_vocab_1` | P8 | 詞彙 1 練習 | 確認詞彙 1 發音與字義理解。 | 發音正確、認字義為主，不要求認漢字。 |
-| `exercise_l4_p11_pinyin_group_2` | P11 | 含聲調拼音練習 | 練習 21 聲母 + iu/ui/ie 的含聲調拼讀。 | 發音正確、認字義為主，不要求認漢字。 含聲調。 |
-| `exercise_l4_p13_vocab_2` | P13 | 詞彙 2 練習 | 確認詞彙 2 發音與字義理解。 | 發音正確、認字義為主，不要求認漢字。 |
-| `exercise_l4_p16_vocab_3` | P16 | 詞彙 3 練習 | 確認詞彙 3 發音、字義與 üe 拼寫變化。 | 發音正確、認字義為主，不要求認漢字。 |
-| `exercise_l4_review` | P17-P18 或 P17-P19 | 課後整合練習 | 用 2-3 個題型整合複習。 | 發音正確、認字義為主，不要求認漢字。 |
+| `exercise_l4_p6_pinyin_group_1` | P6 | 含声调拼音练习 | 练习 21 声母 + ai/ao/ou/ei/er 的含声调拼读。 | 发音正确、认字义为主，不要求认汉字。 含声调。 |
+| `exercise_l4_p8_vocab_1` | P8 | 词汇 1 练习 | 确认词汇 1 发音与字义理解。 | 发音正确、认字义为主，不要求认汉字。 |
+| `exercise_l4_p11_pinyin_group_2` | P11 | 含声调拼音练习 | 练习 21 声母 + iu/ui/ie 的含声调拼读。 | 发音正确、认字义为主，不要求认汉字。 含声调。 |
+| `exercise_l4_p13_vocab_2` | P13 | 词汇 2 练习 | 确认词汇 2 发音与字义理解。 | 发音正确、认字义为主，不要求认汉字。 |
+| `exercise_l4_p16_vocab_3` | P16 | 词汇 3 练习 | 确认词汇 3 发音、字义与 üe 拼写变化。 | 发音正确、认字义为主，不要求认汉字。 |
+| `exercise_l4_review` | P17-P18 或 P17-P19 | 课后整合练习 | 用 2-3 个题型整合复习。 | 发音正确、认字义为主，不要求认汉字。 |
 
 ## Flexible Page Decisions
 
 | Decision ID | Options | Impact |
 |---|---|---|
-| `lesson_4_review_page_count` | P17-P18（total_pages=18）；P17-P19（total_pages=19） | 新增 P3 暖身活動後，課後練習頁碼順延；決定第四課總頁數為 18 或 19。 |
+| `lesson_4_review_page_count` | P17-P18（total_pages=18）；P17-P19（total_pages=19） | 新增 P3 暖身活动后，课后练习页码顺延；决定第四课总页数为 18 或 19。 |
 
 ## Database Notes
 
-- 新增 P3 暖身活動後，原 P3 起所有頁碼順延一頁。
-- P3 暖身活動複習第三課生詞。
+- 新增 P3 暖身活动后，原 P3 起所有页码顺延一页。
+- P3 暖身活动复习第三课生词。
 - P9 includes üe in the cover, but P10 table excludes üe; P14 handles üe changes through a spelling rule.

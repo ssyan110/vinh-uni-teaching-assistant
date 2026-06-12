@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "lesson_id": "pinyin-07",
-  "generated_at": "2026-06-10T09:25:52.562Z",
+  "generated_at": "2026-06-12T08:04:16.186Z",
   "source_database": "database",
   "workflow": {
     "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
@@ -383,8 +383,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -392,10 +392,12 @@
         "04-warmup-review.html",
         "13-vocabulary-1.html",
         "14-flash-v001-yi.html",
-        "17-practice-vocabulary-1.html"
+        "17-practice-vocabulary-1.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V001"
@@ -420,8 +422,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -429,10 +431,12 @@
         "04-warmup-review.html",
         "13-vocabulary-1.html",
         "15-flash-v002-yin.html",
-        "17-practice-vocabulary-1.html"
+        "17-practice-vocabulary-1.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V002"
@@ -457,8 +461,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -466,16 +470,18 @@
         "04-warmup-review.html",
         "13-vocabulary-1.html",
         "16-flash-v003-ying.html",
-        "17-practice-vocabulary-1.html"
+        "17-practice-vocabulary-1.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V003"
       ],
       "chinese": [
-        "贏"
+        "赢"
       ],
       "pinyin": [
         "yíng"
@@ -484,7 +490,7 @@
         "xem nghĩa trong lớp"
       ],
       "prompt": "Soft textbook 1:1 illustration for xem nghĩa trong lớp; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 贏 (yíng).",
+      "visual_description": "Placeholder image for 赢 (yíng).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
     {
@@ -494,8 +500,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -503,10 +509,12 @@
         "04-warmup-review.html",
         "19-vocabulary-2.html",
         "20-flash-v004-ya.html",
-        "26-practice-vocabulary-2.html"
+        "26-practice-vocabulary-2.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V004"
@@ -531,8 +539,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -540,10 +548,12 @@
         "04-warmup-review.html",
         "19-vocabulary-2.html",
         "21-flash-v005-yeye.html",
-        "26-practice-vocabulary-2.html"
+        "26-practice-vocabulary-2.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V005"
@@ -568,8 +578,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -577,10 +587,12 @@
         "04-warmup-review.html",
         "19-vocabulary-2.html",
         "22-flash-v006-yao.html",
-        "26-practice-vocabulary-2.html"
+        "26-practice-vocabulary-2.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V006"
@@ -605,18 +617,20 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
         "19-vocabulary-2.html",
         "23-flash-v007-yanse.html",
-        "26-practice-vocabulary-2.html"
+        "26-practice-vocabulary-2.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V007"
@@ -641,18 +655,20 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
         "19-vocabulary-2.html",
         "24-flash-v008-yang.html",
-        "26-practice-vocabulary-2.html"
+        "26-practice-vocabulary-2.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V008"
@@ -677,18 +693,20 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
         "19-vocabulary-2.html",
         "25-flash-v009-shiyong.html",
-        "26-practice-vocabulary-2.html"
+        "26-practice-vocabulary-2.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V009"
@@ -713,18 +731,20 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
         "28-vocabulary-3.html",
         "29-flash-v010-youyong.html",
-        "30-practice-vocabulary-3.html"
+        "30-practice-vocabulary-3.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V010"
@@ -749,18 +769,20 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
         "32-vocabulary-4.html",
         "33-flash-v011-wu.html",
-        "34-practice-vocabulary-4.html"
+        "34-practice-vocabulary-4.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V011"
@@ -785,18 +807,20 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
         "36-vocabulary-5.html",
         "37-flash-v012-wazi.html",
-        "43-practice-vocabulary-5.html"
+        "43-practice-vocabulary-5.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V012"
@@ -821,18 +845,20 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
         "36-vocabulary-5.html",
         "38-flash-v013-wo.html",
-        "43-practice-vocabulary-5.html"
+        "43-practice-vocabulary-5.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V013"
@@ -857,18 +883,20 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
         "36-vocabulary-5.html",
         "39-flash-v014-waimian.html",
-        "43-practice-vocabulary-5.html"
+        "43-practice-vocabulary-5.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V014"
@@ -893,18 +921,20 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
         "36-vocabulary-5.html",
         "40-flash-v015-wan.html",
-        "43-practice-vocabulary-5.html"
+        "43-practice-vocabulary-5.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V015"
@@ -929,24 +959,26 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
         "36-vocabulary-5.html",
         "41-flash-v016-wangji.html",
-        "43-practice-vocabulary-5.html"
+        "43-practice-vocabulary-5.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V016"
       ],
       "chinese": [
-        "忘記"
+        "忘记"
       ],
       "pinyin": [
         "wàngjì"
@@ -955,7 +987,7 @@
         "xem nghĩa trong lớp"
       ],
       "prompt": "Soft textbook 1:1 illustration for xem nghĩa trong lớp; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 忘記 (wàngjì).",
+      "visual_description": "Placeholder image for 忘记 (wàngjì).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
     {
@@ -965,18 +997,20 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
         "36-vocabulary-5.html",
         "42-flash-v017-weng.html",
-        "43-practice-vocabulary-5.html"
+        "43-practice-vocabulary-5.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V017"
@@ -1001,18 +1035,20 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
         "45-vocabulary-6.html",
         "46-flash-v018-wei.html",
-        "48-practice-vocabulary-6.html"
+        "48-practice-vocabulary-6.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V018"
@@ -1037,18 +1073,20 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
       "used_by": [
         "45-vocabulary-6.html",
         "47-flash-v019-wenhua.html",
-        "48-practice-vocabulary-6.html"
+        "48-practice-vocabulary-6.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V019"
@@ -1073,8 +1111,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -1082,10 +1120,12 @@
         "50-vocabulary-7.html",
         "51-flash-v020-yu.html",
         "57-practice-vocabulary-7.html",
-        "61-review-vocabulary-match.html"
+        "61-review-vocabulary-match.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V020"
@@ -1110,8 +1150,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -1119,10 +1159,12 @@
         "50-vocabulary-7.html",
         "52-flash-v021-yu.html",
         "57-practice-vocabulary-7.html",
-        "61-review-vocabulary-match.html"
+        "61-review-vocabulary-match.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V021"
@@ -1147,8 +1189,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -1156,10 +1198,12 @@
         "50-vocabulary-7.html",
         "53-flash-v022-yue.html",
         "57-practice-vocabulary-7.html",
-        "61-review-vocabulary-match.html"
+        "61-review-vocabulary-match.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V022"
@@ -1184,8 +1228,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -1193,10 +1237,12 @@
         "50-vocabulary-7.html",
         "54-flash-v023-yuenan.html",
         "57-practice-vocabulary-7.html",
-        "61-review-vocabulary-match.html"
+        "61-review-vocabulary-match.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V023"
@@ -1221,8 +1267,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -1230,10 +1276,12 @@
         "50-vocabulary-7.html",
         "55-flash-v024-yuan.html",
         "57-practice-vocabulary-7.html",
-        "61-review-vocabulary-match.html"
+        "61-review-vocabulary-match.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V024"
@@ -1258,8 +1306,8 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 320,
-        "height": 320,
+        "width": 1024,
+        "height": 1024,
         "format": "png",
         "aspect_ratio": 1
       },
@@ -1267,10 +1315,12 @@
         "50-vocabulary-7.html",
         "56-flash-v025-yun.html",
         "57-practice-vocabulary-7.html",
-        "61-review-vocabulary-match.html"
+        "61-review-vocabulary-match.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V025"

@@ -6,7 +6,7 @@
       "pinyin": "yī",
       "vietnamese": "một",
       "filename": "vocab-v001-yi.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for một; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 一 (yī)."
     },
@@ -16,19 +16,19 @@
       "pinyin": "yīn",
       "vietnamese": "âm",
       "filename": "vocab-v002-yin.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for âm; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 音 (yīn)."
     },
     {
       "record_id": "V003",
-      "chinese_simplified": "贏",
+      "chinese_simplified": "赢",
       "pinyin": "yíng",
       "vietnamese": "xem nghĩa trong lớp",
       "filename": "vocab-v003-ying.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for xem nghĩa trong lớp; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 贏 (yíng)."
+      "visual_description": "Placeholder image for 赢 (yíng)."
     },
     {
       "record_id": "V004",
@@ -36,7 +36,7 @@
       "pinyin": "yā",
       "vietnamese": "vịt",
       "filename": "vocab-v004-ya.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for vịt; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 鸭 (yā)."
     },
@@ -46,7 +46,7 @@
       "pinyin": "yéye",
       "vietnamese": "ông nội",
       "filename": "vocab-v005-yeye.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for ông nội; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 爷爷 (yéye)."
     },
@@ -56,7 +56,7 @@
       "pinyin": "yào",
       "vietnamese": "thuốc",
       "filename": "vocab-v006-yao.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for thuốc; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 药 (yào)."
     },
@@ -66,7 +66,7 @@
       "pinyin": "yánsè",
       "vietnamese": "màu sắc",
       "filename": "vocab-v007-yanse.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for màu sắc; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 颜色 (yánsè)."
     },
@@ -76,7 +76,7 @@
       "pinyin": "yáng",
       "vietnamese": "dê, cừu",
       "filename": "vocab-v008-yang.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for dê, cừu; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 羊 (yáng)."
     },
@@ -86,7 +86,7 @@
       "pinyin": "shǐyòng",
       "vietnamese": "sử dụng",
       "filename": "vocab-v009-shiyong.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for sử dụng; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 使用 (shǐyòng)."
     },
@@ -96,7 +96,7 @@
       "pinyin": "yóuyǒng",
       "vietnamese": "bơi",
       "filename": "vocab-v010-youyong.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for bơi; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 游泳 (yóuyǒng)."
     },
@@ -106,7 +106,7 @@
       "pinyin": "wǔ",
       "vietnamese": "năm",
       "filename": "vocab-v011-wu.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for năm; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 五 (wǔ)."
     },
@@ -116,7 +116,7 @@
       "pinyin": "wàzi",
       "vietnamese": "tất",
       "filename": "vocab-v012-wazi.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for tất; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 袜子 (wàzi)."
     },
@@ -126,7 +126,7 @@
       "pinyin": "wǒ",
       "vietnamese": "tôi",
       "filename": "vocab-v013-wo.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for tôi; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 我 (wǒ)."
     },
@@ -136,7 +136,7 @@
       "pinyin": "wàimiàn",
       "vietnamese": "bên ngoài",
       "filename": "vocab-v014-waimian.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for bên ngoài; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 外面 (wàimiàn)."
     },
@@ -146,19 +146,19 @@
       "pinyin": "wán",
       "vietnamese": "chơi",
       "filename": "vocab-v015-wan.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for chơi; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 玩 (wán)."
     },
     {
       "record_id": "V016",
-      "chinese_simplified": "忘記",
+      "chinese_simplified": "忘记",
       "pinyin": "wàngjì",
       "vietnamese": "xem nghĩa trong lớp",
       "filename": "vocab-v016-wangji.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for xem nghĩa trong lớp; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 忘記 (wàngjì)."
+      "visual_description": "Placeholder image for 忘记 (wàngjì)."
     },
     {
       "record_id": "V017",
@@ -166,7 +166,7 @@
       "pinyin": "wèng",
       "vietnamese": "cái chum",
       "filename": "vocab-v017-weng.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for cái chum; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 瓮 (wèng)."
     },
@@ -176,7 +176,7 @@
       "pinyin": "wèi",
       "vietnamese": "alo",
       "filename": "vocab-v018-wei.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for alo; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 喂 (wèi)."
     },
@@ -186,7 +186,7 @@
       "pinyin": "wénhuà",
       "vietnamese": "văn hóa",
       "filename": "vocab-v019-wenhua.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for văn hóa; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 文化 (wénhuà)."
     },
@@ -196,7 +196,7 @@
       "pinyin": "yú",
       "vietnamese": "cá",
       "filename": "vocab-v020-yu.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for cá; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 鱼 (yú)."
     },
@@ -206,7 +206,7 @@
       "pinyin": "yǔ",
       "vietnamese": "mưa",
       "filename": "vocab-v021-yu.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for mưa; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 雨 (yǔ)."
     },
@@ -216,7 +216,7 @@
       "pinyin": "yuè",
       "vietnamese": "trăng, tháng",
       "filename": "vocab-v022-yue.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for trăng, tháng; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 月 (yuè)."
     },
@@ -226,7 +226,7 @@
       "pinyin": "Yuènán",
       "vietnamese": "Việt Nam",
       "filename": "vocab-v023-yuenan.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for Việt Nam; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 越南 (Yuènán)."
     },
@@ -236,7 +236,7 @@
       "pinyin": "yuán",
       "vietnamese": "tròn",
       "filename": "vocab-v024-yuan.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for tròn; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 圆 (yuán)."
     },
@@ -246,7 +246,7 @@
       "pinyin": "yún",
       "vietnamese": "mây",
       "filename": "vocab-v025-yun.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for mây; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 云 (yún)."
     }

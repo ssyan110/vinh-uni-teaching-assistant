@@ -2,28 +2,28 @@
   "lesson_id": "pinyin_lesson_06",
   "lesson_no": 6,
   "title": {
-    "zh": "拼音第六課：i/u/ü 開頭複合韻母與 üan 拼寫變化",
+    "zh": "拼音第六课：i/u/ü 开头复合韵母与 üan 拼写变化",
     "en": "Pinyin Lesson 6: i/u/ü-Initial Finals and uan Spelling Changes"
   },
   "metadata": {
     "page_count_status": "pending",
     "page_count_min": 18,
     "page_count_max": 19,
-    "main_goal": "學會 ia iao ian iang iong 與 ua uo uai uan uang üan，能搭配全部 21 聲母拼讀含聲調音節，理解 j/q/x + üan 的拼寫變化，並能正確發音、理解本課詞彙字義。",
-    "primary_requirement": "發音正確以及學習字義為主",
-    "recognition_requirement": "不需要認漢字",
+    "main_goal": "学会 ia iao ian iang iong 与 ua uo uai uan uang üan，能搭配全部 21 声母拼读含声调音节，理解 j/q/x + üan 的拼写变化，并能正确发音、理解本课词汇字义。",
+    "primary_requirement": "发音正确以及学习字义为主",
+    "recognition_requirement": "不需要认汉字",
     "pronunciation_first": true,
     "meaning_focus": true,
     "requires_hanzi_recognition": false
   },
   "learning_focus": [
-    "暖身複習第五課生詞",
-    "韻母 ia iao ian iang iong",
-    "韻母 ua uo uai uan uang üan",
-    "全部 21 聲母與新韻母的拼讀組合",
-    "含聲調的拼音練習",
-    "詞彙發音與字義理解",
-    "j/q/x + üan 的拼寫變化：juan, quan, xuan"
+    "暖身复习第五课生词",
+    "韵母 ia iao ian iang iong",
+    "韵母 ua uo uai uan uang üan",
+    "全部 21 声母与新韵母的拼读组合",
+    "含声调的拼音练习",
+    "词汇发音与字义理解",
+    "j/q/x + üan 的拼写变化：juan, quan, xuan"
   ],
   "all_initials_used": [
     "b",
@@ -51,29 +51,29 @@
   "warmup_activity": {
     "item_id": "warmup_review_pinyin_lesson_05",
     "page": "P3",
-    "title": "暖身活動：複習第五課生詞",
+    "title": "暖身活动：复习第五课生词",
     "review_source_lesson_id": "pinyin_lesson_05",
-    "review_source_title": "拼音第五課：前鼻音、後鼻音與 ün 拼寫變化",
-    "review_focus": "複習前一課的生詞",
+    "review_source_title": "拼音第五课：前鼻音、后鼻音与 ün 拼写变化",
+    "review_focus": "复习前一课的生词",
     "activity_options": [
       {
         "activity_type": "matching",
-        "title": "連連看",
+        "title": "连连看",
         "front_prompt": "看照片",
-        "answer_target": "拼音&漢字",
-        "description": "學生看照片，連到對應的拼音與漢字。"
+        "answer_target": "拼音&汉字",
+        "description": "学生看照片，连到对应的拼音与汉字。"
       },
       {
         "activity_type": "audio_flashcard",
-        "title": "聽音猜意 flash card",
-        "front_prompt": "播放生詞音檔",
-        "back_content": "漢字＋拼音＋圖片",
-        "description": "正面播放生詞音檔，學生猜意思；反面顯示漢字、拼音與圖片。"
+        "title": "听音猜意 flash card",
+        "front_prompt": "播放生词音档",
+        "back_content": "汉字＋拼音＋图片",
+        "description": "正面播放生词音档，学生猜意思；反面显示汉字、拼音与图片。"
       }
     ],
     "source_vocabulary": [
       {
-        "hanzi": "米飯",
+        "hanzi": "米饭",
         "pinyin": "mǐfàn"
       },
       {
@@ -81,11 +81,11 @@
         "pinyin": "nán"
       },
       {
-        "hanzi": "雞蛋",
+        "hanzi": "鸡蛋",
         "pinyin": "jīdàn"
       },
       {
-        "hanzi": "門",
+        "hanzi": "门",
         "pinyin": "mén"
       },
       {
@@ -105,7 +105,7 @@
         "pinyin": "kùn"
       },
       {
-        "hanzi": "軍人",
+        "hanzi": "军人",
         "pinyin": "jūnrén"
       },
       {
@@ -113,15 +113,15 @@
         "pinyin": "qúnzi"
       },
       {
-        "hanzi": "培訓",
+        "hanzi": "培训",
         "pinyin": "péixùn"
       },
       {
-        "hanzi": "湯",
+        "hanzi": "汤",
         "pinyin": "tāng"
       },
       {
-        "hanzi": "髒",
+        "hanzi": "脏",
         "pinyin": "zāng"
       },
       {
@@ -137,11 +137,11 @@
         "pinyin": "míngzi"
       },
       {
-        "hanzi": "聽",
+        "hanzi": "听",
         "pinyin": "tīng"
       },
       {
-        "hanzi": "龍",
+        "hanzi": "龙",
         "pinyin": "lóng"
       },
       {
@@ -152,7 +152,7 @@
     "pronunciation_first": true,
     "meaning_focus": true,
     "requires_hanzi_recognition": false,
-    "notes": "暖身活動放在學習目標之後，用第五課生詞作為複習材料。"
+    "notes": "暖身活动放在学习目标之后，用第五课生词作为复习材料。"
   },
   "pages": [
     {
@@ -160,14 +160,14 @@
       "sequence": 1,
       "title": "封面",
       "record_type": "lesson_cover",
-      "content_focus": "第六課課程封面。"
+      "content_focus": "第六课课程封面。"
     },
     {
       "page_range": "P2",
       "sequence": 2,
-      "title": "學習目標",
+      "title": "学习目标",
       "record_type": "learning_objective",
-      "content_focus": "說明本課要學 ia/iao/ian/iang/iong、ua/uo/uai/uan/uang/üan、含聲調拼讀、詞彙發音與字義、üan 拼寫變化。",
+      "content_focus": "说明本课要学 ia/iao/ian/iang/iong、ua/uo/uai/uan/uang/üan、含声调拼读、词汇发音与字义、üan 拼写变化。",
       "pronunciation_first": true,
       "meaning_focus": true,
       "requires_hanzi_recognition": false
@@ -175,9 +175,9 @@
     {
       "page_range": "P3",
       "sequence": 3,
-      "title": "暖身活動：複習第五課生詞",
+      "title": "暖身活动：复习第五课生词",
       "record_type": "warmup_activity",
-      "content_focus": "複習第五課生詞；活動可用連連看或聽音猜意 flash card。",
+      "content_focus": "复习第五课生词；活动可用连连看或听音猜意 flash card。",
       "pronunciation_first": true,
       "meaning_focus": true,
       "requires_hanzi_recognition": false
@@ -185,34 +185,34 @@
     {
       "page_range": "P4",
       "sequence": 4,
-      "title": "拼音學習封面 1：ia iao ian iang iong",
+      "title": "拼音学习封面 1：ia iao ian iang iong",
       "record_type": "pinyin_learning_cover",
-      "content_focus": "進入第一組 i 開頭複合韻母學習段落。"
+      "content_focus": "进入第一组 i 开头复合韵母学习段落。"
     },
     {
       "page_range": "P5",
       "sequence": 5,
-      "title": "拼音學習表格 1：全部聲母 + ia iao ian iang iong",
+      "title": "拼音学习表格 1：全部声母 + ia iao ian iang iong",
       "record_type": "pinyin_chart",
-      "content_focus": "建立 21 聲母與 ia/iao/ian/iang/iong 的拼讀組合。",
+      "content_focus": "建立 21 声母与 ia/iao/ian/iang/iong 的拼读组合。",
       "pinyin_chart_id": "pinyin_chart_l6_group_1",
       "includes_tones": false
     },
     {
       "page_range": "P6",
       "sequence": 6,
-      "title": "拼音練習 1",
+      "title": "拼音练习 1",
       "record_type": "pinyin_exercise",
-      "content_focus": "第一組韻母拼讀練習，含聲調。",
+      "content_focus": "第一组韵母拼读练习，含声调。",
       "source_pinyin_chart_id": "pinyin_chart_l6_group_1",
       "includes_tones": true
     },
     {
       "page_range": "P7",
       "sequence": 7,
-      "title": "詞彙 1",
+      "title": "词汇 1",
       "record_type": "vocabulary_set",
-      "content_focus": "家、下、腳、小、電、錢、香、窮。",
+      "content_focus": "家、下、脚、小、电、钱、香、穷。",
       "vocabulary_set_id": "vocab_set_l6_01",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -221,9 +221,9 @@
     {
       "page_range": "P8",
       "sequence": 8,
-      "title": "詞彙練習 1",
+      "title": "词汇练习 1",
       "record_type": "vocab_exercise",
-      "content_focus": "詞彙 1 的發音與字義練習。",
+      "content_focus": "词汇 1 的发音与字义练习。",
       "source_vocabulary_set_id": "vocab_set_l6_01",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -232,16 +232,16 @@
     {
       "page_range": "P9",
       "sequence": 9,
-      "title": "拼音學習封面 2：ua uo uai uan uang üan",
+      "title": "拼音学习封面 2：ua uo uai uan uang üan",
       "record_type": "pinyin_learning_cover",
-      "content_focus": "進入第二組 u/ü 開頭複合韻母學習段落。"
+      "content_focus": "进入第二组 u/ü 开头复合韵母学习段落。"
     },
     {
       "page_range": "P10",
       "sequence": 10,
-      "title": "拼音學習表格 2：全部聲母 + ua uo uai uan uang üan",
+      "title": "拼音学习表格 2：全部声母 + ua uo uai uan uang üan",
       "record_type": "pinyin_chart",
-      "content_focus": "建立 21 聲母與 ua/uo/uai/uan/uang/üan 的拼讀組合。",
+      "content_focus": "建立 21 声母与 ua/uo/uai/uan/uang/üan 的拼读组合。",
       "pinyin_chart_id": "pinyin_chart_l6_group_2",
       "related_rule_id": "rule_l6_jqx_uan_umlaut",
       "includes_tones": false
@@ -249,18 +249,18 @@
     {
       "page_range": "P11",
       "sequence": 11,
-      "title": "拼音練習 2",
+      "title": "拼音练习 2",
       "record_type": "pinyin_exercise",
-      "content_focus": "第二組韻母拼讀練習，含聲調。",
+      "content_focus": "第二组韵母拼读练习，含声调。",
       "source_pinyin_chart_id": "pinyin_chart_l6_group_2",
       "includes_tones": true
     },
     {
       "page_range": "P12",
       "sequence": 12,
-      "title": "詞彙 2",
+      "title": "词汇 2",
       "record_type": "vocabulary_set",
-      "content_focus": "花、黃瓜、多、說、壞、快、船、床。",
+      "content_focus": "花、黄瓜、多、说、坏、快、船、床。",
       "vocabulary_set_id": "vocab_set_l6_02",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -269,9 +269,9 @@
     {
       "page_range": "P13",
       "sequence": 13,
-      "title": "詞彙練習 2",
+      "title": "词汇练习 2",
       "record_type": "vocab_exercise",
-      "content_focus": "詞彙 2 的發音與字義練習。",
+      "content_focus": "词汇 2 的发音与字义练习。",
       "source_vocabulary_set_id": "vocab_set_l6_02",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -280,31 +280,31 @@
     {
       "page_range": "P14",
       "sequence": 14,
-      "title": "規則：üan 的變化",
+      "title": "规则：üan 的变化",
       "record_type": "spelling_rule",
-      "content_focus": "學習 j/q/x + üan 時，拼寫為 juan/quan/xuan。",
+      "content_focus": "学习 j/q/x + üan 时，拼写为 juan/quan/xuan。",
       "spelling_rule_id": "rule_l6_jqx_uan_umlaut",
-      "notes": "發音仍與 üan 有關，拼寫省略 ü 上兩點。"
+      "notes": "发音仍与 üan 有关，拼写省略 ü 上两点。"
     },
     {
       "page_range": "P15",
       "sequence": 15,
-      "title": "詞彙 3",
+      "title": "词汇 3",
       "record_type": "vocabulary_set",
-      "content_focus": "春卷、安全、選。",
+      "content_focus": "春卷、安全、选。",
       "vocabulary_set_id": "vocab_set_l6_03",
       "related_rule_id": "rule_l6_jqx_uan_umlaut",
       "pronunciation_first": true,
       "meaning_focus": true,
       "requires_hanzi_recognition": false,
-      "notes": "春卷依使用者原字形保留，之後可確認是否改為繁體「春捲」。"
+      "notes": "春卷依使用者原字形保留，之后可确认是否改为繁体「春卷」。"
     },
     {
       "page_range": "P16",
       "sequence": 16,
-      "title": "詞彙練習 3",
+      "title": "词汇练习 3",
       "record_type": "vocab_exercise",
-      "content_focus": "詞彙 3 的發音與字義練習。",
+      "content_focus": "词汇 3 的发音与字义练习。",
       "source_vocabulary_set_id": "vocab_set_l6_03",
       "related_rule_id": "rule_l6_jqx_uan_umlaut",
       "pronunciation_first": true,
@@ -314,9 +314,9 @@
     {
       "page_range": null,
       "sequence": 17,
-      "title": "課後練習",
+      "title": "课后练习",
       "record_type": "review_exercise",
-      "content_focus": "2-3 個題型整合複習。",
+      "content_focus": "2-3 个题型整合复习。",
       "page_range_options": [
         "P17-P18",
         "P17-P19"
@@ -325,14 +325,14 @@
       "pronunciation_first": true,
       "meaning_focus": true,
       "requires_hanzi_recognition": false,
-      "notes": "頁碼與頁數待定；發音正確、認字義為主，不需要認漢字。"
+      "notes": "页码与页数待定；发音正确、认字义为主，不需要认汉字。"
     }
   ],
   "finals": [
     {
       "item_id": "final_ia",
       "symbol": "ia",
-      "label": "韻母 ia",
+      "label": "韵母 ia",
       "final_group": "i_start_group",
       "introduced_on": "P4",
       "chart_page": "P5"
@@ -340,7 +340,7 @@
     {
       "item_id": "final_iao",
       "symbol": "iao",
-      "label": "韻母 iao",
+      "label": "韵母 iao",
       "final_group": "i_start_group",
       "introduced_on": "P4",
       "chart_page": "P5"
@@ -348,7 +348,7 @@
     {
       "item_id": "final_ian",
       "symbol": "ian",
-      "label": "韻母 ian",
+      "label": "韵母 ian",
       "final_group": "i_start_group",
       "introduced_on": "P4",
       "chart_page": "P5"
@@ -356,7 +356,7 @@
     {
       "item_id": "final_iang",
       "symbol": "iang",
-      "label": "韻母 iang",
+      "label": "韵母 iang",
       "final_group": "i_start_group",
       "introduced_on": "P4",
       "chart_page": "P5"
@@ -364,7 +364,7 @@
     {
       "item_id": "final_iong",
       "symbol": "iong",
-      "label": "韻母 iong",
+      "label": "韵母 iong",
       "final_group": "i_start_group",
       "introduced_on": "P4",
       "chart_page": "P5"
@@ -372,7 +372,7 @@
     {
       "item_id": "final_ua",
       "symbol": "ua",
-      "label": "韻母 ua",
+      "label": "韵母 ua",
       "final_group": "u_start_group",
       "introduced_on": "P9",
       "chart_page": "P10"
@@ -380,7 +380,7 @@
     {
       "item_id": "final_uo",
       "symbol": "uo",
-      "label": "韻母 uo",
+      "label": "韵母 uo",
       "final_group": "u_start_group",
       "introduced_on": "P9",
       "chart_page": "P10"
@@ -388,7 +388,7 @@
     {
       "item_id": "final_uai",
       "symbol": "uai",
-      "label": "韻母 uai",
+      "label": "韵母 uai",
       "final_group": "u_start_group",
       "introduced_on": "P9",
       "chart_page": "P10"
@@ -396,7 +396,7 @@
     {
       "item_id": "final_uan",
       "symbol": "uan",
-      "label": "韻母 uan",
+      "label": "韵母 uan",
       "final_group": "u_start_group",
       "introduced_on": "P9",
       "chart_page": "P10"
@@ -404,7 +404,7 @@
     {
       "item_id": "final_uang",
       "symbol": "uang",
-      "label": "韻母 uang",
+      "label": "韵母 uang",
       "final_group": "u_start_group",
       "introduced_on": "P9",
       "chart_page": "P10"
@@ -412,7 +412,7 @@
     {
       "item_id": "final_uan_umlaut",
       "symbol": "üan",
-      "label": "韻母 üan",
+      "label": "韵母 üan",
       "final_group": "u_umlaut_start_rule_based",
       "introduced_on": "P9",
       "chart_page": "P10",
@@ -424,7 +424,7 @@
     {
       "item_id": "pinyin_chart_l6_group_1",
       "page": "P5",
-      "title": "全部聲母 + ia iao ian iang iong",
+      "title": "全部声母 + ia iao ian iang iong",
       "initials": [
         "b",
         "p",
@@ -460,7 +460,7 @@
     {
       "item_id": "pinyin_chart_l6_group_2",
       "page": "P10",
-      "title": "全部聲母 + ua uo uai uan uang üan",
+      "title": "全部声母 + ua uo uai uan uang üan",
       "initials": [
         "b",
         "p",
@@ -500,7 +500,7 @@
     {
       "item_id": "rule_l6_jqx_uan_umlaut",
       "page": "P14",
-      "title": "j/q/x + üan 拼寫變化",
+      "title": "j/q/x + üan 拼写变化",
       "rules": [
         {
           "underlying_form": "jüan",
@@ -515,7 +515,7 @@
           "written_form": "xuan"
         }
       ],
-      "explanation": "j/q/x 後接 üan 時，拼寫省略 ü 上兩點，但發音仍與 üan 有關。",
+      "explanation": "j/q/x 后接 üan 时，拼写省略 ü 上两点，但发音仍与 üan 有关。",
       "applies_to_vocabulary_set_ids": [
         "vocab_set_l6_03"
       ]
@@ -526,7 +526,7 @@
       "set_id": "vocab_set_l6_01",
       "page": "P7",
       "practice_page": "P8",
-      "title": "詞彙 1",
+      "title": "词汇 1",
       "pronunciation_first": true,
       "meaning_focus": true,
       "requires_hanzi_recognition": false,
@@ -543,7 +543,7 @@
         },
         {
           "item_id": "vocab_l6_003_jiao",
-          "hanzi": "腳",
+          "hanzi": "脚",
           "pinyin": "jiǎo"
         },
         {
@@ -553,12 +553,12 @@
         },
         {
           "item_id": "vocab_l6_005_dian",
-          "hanzi": "電",
+          "hanzi": "电",
           "pinyin": "diàn"
         },
         {
           "item_id": "vocab_l6_006_qian",
-          "hanzi": "錢",
+          "hanzi": "钱",
           "pinyin": "qián"
         },
         {
@@ -568,7 +568,7 @@
         },
         {
           "item_id": "vocab_l6_008_qiong",
-          "hanzi": "窮",
+          "hanzi": "穷",
           "pinyin": "qióng"
         }
       ]
@@ -577,7 +577,7 @@
       "set_id": "vocab_set_l6_02",
       "page": "P12",
       "practice_page": "P13",
-      "title": "詞彙 2",
+      "title": "词汇 2",
       "pronunciation_first": true,
       "meaning_focus": true,
       "requires_hanzi_recognition": false,
@@ -589,7 +589,7 @@
         },
         {
           "item_id": "vocab_l6_010_huanggua",
-          "hanzi": "黃瓜",
+          "hanzi": "黄瓜",
           "pinyin": "huángguā"
         },
         {
@@ -599,12 +599,12 @@
         },
         {
           "item_id": "vocab_l6_012_shuo",
-          "hanzi": "說",
+          "hanzi": "说",
           "pinyin": "shuō"
         },
         {
           "item_id": "vocab_l6_013_huai",
-          "hanzi": "壞",
+          "hanzi": "坏",
           "pinyin": "huài"
         },
         {
@@ -628,7 +628,7 @@
       "set_id": "vocab_set_l6_03",
       "page": "P15",
       "practice_page": "P16",
-      "title": "詞彙 3",
+      "title": "词汇 3",
       "related_rule_id": "rule_l6_jqx_uan_umlaut",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -649,20 +649,20 @@
         },
         {
           "item_id": "vocab_l6_019_xuan",
-          "hanzi": "選",
+          "hanzi": "选",
           "pinyin": "xuǎn",
           "related_rule_id": "rule_l6_jqx_uan_umlaut"
         }
       ],
-      "notes": "春卷依使用者原字形保留，之後可確認是否改為繁體「春捲」。"
+      "notes": "春卷依使用者原字形保留，之后可确认是否改为繁体「春卷」。"
     }
   ],
   "exercises": [
     {
       "item_id": "exercise_l6_p6_pinyin_group_1",
       "page": "P6",
-      "exercise_type": "含聲調拼音練習",
-      "goal": "練習 21 聲母 + ia/iao/ian/iang/iong 的含聲調拼讀。",
+      "exercise_type": "含声调拼音练习",
+      "goal": "练习 21 声母 + ia/iao/ian/iang/iong 的含声调拼读。",
       "source_pinyin_chart_id": "pinyin_chart_l6_group_1",
       "includes_tones": true,
       "pronunciation_first": true,
@@ -671,8 +671,8 @@
     {
       "item_id": "exercise_l6_p8_vocab_1",
       "page": "P8",
-      "exercise_type": "詞彙 1 練習",
-      "goal": "確認詞彙 1 發音與字義理解。",
+      "exercise_type": "词汇 1 练习",
+      "goal": "确认词汇 1 发音与字义理解。",
       "source_vocabulary_set_id": "vocab_set_l6_01",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -681,8 +681,8 @@
     {
       "item_id": "exercise_l6_p11_pinyin_group_2",
       "page": "P11",
-      "exercise_type": "含聲調拼音練習",
-      "goal": "練習 21 聲母 + ua/uo/uai/uan/uang/üan 的含聲調拼讀。",
+      "exercise_type": "含声调拼音练习",
+      "goal": "练习 21 声母 + ua/uo/uai/uan/uang/üan 的含声调拼读。",
       "source_pinyin_chart_id": "pinyin_chart_l6_group_2",
       "includes_tones": true,
       "pronunciation_first": true,
@@ -691,8 +691,8 @@
     {
       "item_id": "exercise_l6_p13_vocab_2",
       "page": "P13",
-      "exercise_type": "詞彙 2 練習",
-      "goal": "確認詞彙 2 發音與字義理解。",
+      "exercise_type": "词汇 2 练习",
+      "goal": "确认词汇 2 发音与字义理解。",
       "source_vocabulary_set_id": "vocab_set_l6_02",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -701,8 +701,8 @@
     {
       "item_id": "exercise_l6_p16_vocab_3",
       "page": "P16",
-      "exercise_type": "詞彙 3 練習",
-      "goal": "確認詞彙 3 發音、字義與 üan 拼寫變化。",
+      "exercise_type": "词汇 3 练习",
+      "goal": "确认词汇 3 发音、字义与 üan 拼写变化。",
       "source_vocabulary_set_id": "vocab_set_l6_03",
       "related_rule_id": "rule_l6_jqx_uan_umlaut",
       "pronunciation_first": true,
@@ -717,13 +717,13 @@
         "P17-P19"
       ],
       "is_page_range_flexible": true,
-      "exercise_type": "課後整合練習",
-      "goal": "用 2-3 個題型整合複習。",
+      "exercise_type": "课后整合练习",
+      "goal": "用 2-3 个题型整合复习。",
       "suggested_question_types": [
-        "聽音選拼音",
-        "看拼音朗讀",
-        "字義配對",
-        "üan 拼寫規則判斷"
+        "听音选拼音",
+        "看拼音朗读",
+        "字义配对",
+        "üan 拼写规则判断"
       ],
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -743,16 +743,16 @@
           "total_pages": 19
         }
       ],
-      "impact": "決定第六課總頁數為 18 或 19。"
+      "impact": "决定第六课总页数为 18 或 19。"
     }
   ],
   "database_notes": [
-    "P3 暖身活動複習第五課生詞，可用連連看或聽音猜意 flash card。",
+    "P3 暖身活动复习第五课生词，可用连连看或听音猜意 flash card。",
     "P4/P5/P6 form the first pinyin learning block for ia/iao/ian/iang/iong.",
     "P9/P10/P11 form the second pinyin learning block for ua/uo/uai/uan/uang/üan.",
     "P14 spelling rule should connect forward to vocabulary set 3 and backward to the P10 üan pinyin chart.",
     "Vocabulary practice requirements match Lessons 2-5: meaning_focus: true.",
     "Practice records should preserve pronunciation_first: true, meaning_focus: true, and requires_hanzi_recognition: false.",
-    "春卷 is preserved from the user input; confirm later whether the final Traditional Chinese form should be 春捲."
+    "春卷 is preserved from the user input; confirm later whether the final Traditional Chinese form should be 春卷."
   ]
 }

@@ -1,6 +1,6 @@
-# VP 教材資料庫 · 第三课 · 她是哪国人 · Bài 3 · Cô ấy là người nước nào?
+# VP 教材资料库 · 第三课 · 她是哪国人 · Bài 3 · Cô ấy là người nước nào?
 
-Scope: VP 製作流程 steps 1–8 only. This output stops before teacher review.
+Scope: VP 制作流程 steps 1–8 only. This output stops before teacher review.
 
 Lesson type: `regular` (config version 1.2.0)
 Source PDF: `Giáo trình full/[hanka.edu.vn] - GT Hán Ngữ 1 (Tập 1 - Quyển thượng).pdf`

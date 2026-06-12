@@ -1,56 +1,56 @@
 {
   "lesson_id": "pinyin_lesson_01",
   "title": {
-    "zh": "拼音第一課：基礎入門",
+    "zh": "拼音第一课：基础入门",
     "en": "Pinyin Lesson 1: Basic Introduction"
   },
   "metadata": {
     "total_pages": 14,
-    "main_goal": "建立拼音基本概念，學會第一組聲母、單韻母、聲調，並能正確發音基礎詞彙。",
-    "primary_requirement": "發音正確為主",
-    "recognition_requirement": "不需要認漢字",
+    "main_goal": "建立拼音基本概念，学会第一组声母、单韵母、声调，并能正确发音基础词汇。",
+    "primary_requirement": "发音正确为主",
+    "recognition_requirement": "不需要认汉字",
     "pronunciation_first": true,
     "requires_hanzi_recognition": false
   },
   "learning_focus": [
     "拼音概念",
-    "聲母 b p m f",
-    "韻母 a o e i u ü",
-    "四聲與輕聲",
-    "基礎詞彙發音",
-    "中文輸入法設定"
+    "声母 b p m f",
+    "韵母 a o e i u ü",
+    "四声与轻声",
+    "基础词汇发音",
+    "中文输入法设定"
   ],
   "pages": [
     {
       "page_range": "P1",
       "sequence": 1,
-      "title": "目錄",
+      "title": "目录",
       "record_type": "lesson_overview",
-      "content_focus": "第一課課程流程總覽。",
-      "notes": "作為課程導覽頁。"
+      "content_focus": "第一课课程流程总览。",
+      "notes": "作为课程导览页。"
     },
     {
       "page_range": "P2",
       "sequence": 2,
-      "title": "學習目標",
+      "title": "学习目标",
       "record_type": "learning_objective",
-      "content_focus": "認識拼音、聲母、韻母、聲調；能正確發音第一課詞彙。",
-      "notes": "目標應強調發音，不強調認字。"
+      "content_focus": "认识拼音、声母、韵母、声调；能正确发音第一课词汇。",
+      "notes": "目标应强调发音，不强调认字。"
     },
     {
       "page_range": "P3-P4",
       "sequence": 3,
       "title": "拼音概念",
       "record_type": "concept",
-      "content_focus": "拼音是什麼、拼音用途、聲母/韻母/聲調概念。",
-      "notes": "適合拆成多個概念卡。"
+      "content_focus": "拼音是什么、拼音用途、声母/韵母/声调概念。",
+      "notes": "适合拆成多个概念卡。"
     },
     {
       "page_range": "P5",
       "sequence": 4,
-      "title": "聲母 b p m f + 韻母 a o e i u ü 拼音表",
+      "title": "声母 b p m f + 韵母 a o e i u ü 拼音表",
       "record_type": "pinyin_chart",
-      "content_focus": "建立第一組拼讀組合；不含聲調。",
+      "content_focus": "建立第一组拼读组合；不含声调。",
       "linked_record_types": [
         "initials",
         "finals",
@@ -61,33 +61,33 @@
     {
       "page_range": "P6",
       "sequence": 5,
-      "title": "拼音練習",
+      "title": "拼音练习",
       "record_type": "pinyin_exercise",
-      "content_focus": "拼讀練習，不含聲調。",
+      "content_focus": "拼读练习，不含声调。",
       "includes_tones": false
     },
     {
       "page_range": "P7",
       "sequence": 6,
-      "title": "聲調學習",
+      "title": "声调学习",
       "record_type": "tone",
-      "content_focus": "四聲 + 輕聲。",
+      "content_focus": "四声 + 轻声。",
       "includes_neutral_tone": true
     },
     {
       "page_range": "P8",
       "sequence": 7,
-      "title": "聲調練習",
+      "title": "声调练习",
       "record_type": "tone_exercise",
-      "content_focus": "四聲練習，不含輕聲。",
+      "content_focus": "四声练习，不含轻声。",
       "includes_neutral_tone": false
     },
     {
       "page_range": "P9",
       "sequence": 8,
-      "title": "詞彙 1",
+      "title": "词汇 1",
       "record_type": "vocabulary_set",
-      "content_focus": "八、怕、餓、不、鼻、木、馬、佛。",
+      "content_focus": "八、怕、饿、不、鼻、木、马、佛。",
       "vocabulary_set_id": "vocab_set_l1_01",
       "pronunciation_first": true,
       "requires_hanzi_recognition": false
@@ -95,9 +95,9 @@
     {
       "page_range": "P10",
       "sequence": 9,
-      "title": "詞彙練習 1",
+      "title": "词汇练习 1",
       "record_type": "vocab_exercise",
-      "content_focus": "詞彙 1 的發音練習。",
+      "content_focus": "词汇 1 的发音练习。",
       "source_vocabulary_set_id": "vocab_set_l1_01",
       "pronunciation_first": true,
       "requires_hanzi_recognition": false
@@ -105,9 +105,9 @@
     {
       "page_range": "P11",
       "sequence": 10,
-      "title": "詞彙 2",
+      "title": "词汇 2",
       "record_type": "vocabulary_set",
-      "content_focus": "媽媽、爸爸、服務、衣服、皮膚、密碼、伯父/伯母。",
+      "content_focus": "妈妈、爸爸、服务、衣服、皮肤、密码、伯父/伯母。",
       "vocabulary_set_id": "vocab_set_l1_02",
       "pronunciation_first": true,
       "requires_hanzi_recognition": false
@@ -115,9 +115,9 @@
     {
       "page_range": "P12",
       "sequence": 11,
-      "title": "詞彙練習 2",
+      "title": "词汇练习 2",
       "record_type": "vocab_exercise",
-      "content_focus": "詞彙 2 的發音練習。",
+      "content_focus": "词汇 2 的发音练习。",
       "source_vocabulary_set_id": "vocab_set_l1_02",
       "pronunciation_first": true,
       "requires_hanzi_recognition": false
@@ -125,113 +125,113 @@
     {
       "page_range": "P13",
       "sequence": 12,
-      "title": "課後練習",
+      "title": "课后练习",
       "record_type": "review_exercise",
-      "content_focus": "2-3 個題型整合複習。",
+      "content_focus": "2-3 个题型整合复习。",
       "pronunciation_first": true,
       "requires_hanzi_recognition": false
     },
     {
       "page_range": "P14",
       "sequence": 13,
-      "title": "輸入法安裝教學",
+      "title": "输入法安装教学",
       "record_type": "tech_setup",
-      "content_focus": "中文輸入法安裝與設定。"
+      "content_focus": "中文输入法安装与设定。"
     }
   ],
   "initials": [
     {
       "item_id": "initial_b",
       "symbol": "b",
-      "label": "聲母 b",
-      "pronunciation_focus": "雙唇音，不送氣。"
+      "label": "声母 b",
+      "pronunciation_focus": "双唇音，不送气。"
     },
     {
       "item_id": "initial_p",
       "symbol": "p",
-      "label": "聲母 p",
-      "pronunciation_focus": "雙唇音，送氣。"
+      "label": "声母 p",
+      "pronunciation_focus": "双唇音，送气。"
     },
     {
       "item_id": "initial_m",
       "symbol": "m",
-      "label": "聲母 m",
-      "pronunciation_focus": "雙唇鼻音。"
+      "label": "声母 m",
+      "pronunciation_focus": "双唇鼻音。"
     },
     {
       "item_id": "initial_f",
       "symbol": "f",
-      "label": "聲母 f",
-      "pronunciation_focus": "唇齒音。"
+      "label": "声母 f",
+      "pronunciation_focus": "唇齿音。"
     }
   ],
   "finals": [
     {
       "item_id": "final_a",
       "symbol": "a",
-      "label": "韻母 a",
-      "final_type": "單韻母"
+      "label": "韵母 a",
+      "final_type": "单韵母"
     },
     {
       "item_id": "final_o",
       "symbol": "o",
-      "label": "韻母 o",
-      "final_type": "單韻母"
+      "label": "韵母 o",
+      "final_type": "单韵母"
     },
     {
       "item_id": "final_e",
       "symbol": "e",
-      "label": "韻母 e",
-      "final_type": "單韻母"
+      "label": "韵母 e",
+      "final_type": "单韵母"
     },
     {
       "item_id": "final_i",
       "symbol": "i",
-      "label": "韻母 i",
-      "final_type": "單韻母"
+      "label": "韵母 i",
+      "final_type": "单韵母"
     },
     {
       "item_id": "final_u",
       "symbol": "u",
-      "label": "韻母 u",
-      "final_type": "單韻母"
+      "label": "韵母 u",
+      "final_type": "单韵母"
     },
     {
       "item_id": "final_u_umlaut",
       "symbol": "ü",
-      "label": "韻母 ü",
-      "final_type": "單韻母"
+      "label": "韵母 ü",
+      "final_type": "单韵母"
     }
   ],
   "tone_content": [
     {
       "item_id": "tone_four_tones",
-      "title": "四聲",
+      "title": "四声",
       "scope": [
-        "第一聲",
-        "第二聲",
-        "第三聲",
-        "第四聲"
+        "第一声",
+        "第二声",
+        "第三声",
+        "第四声"
       ],
       "learning_page": "P7",
       "practice_page": "P8"
     },
     {
       "item_id": "tone_neutral",
-      "title": "輕聲",
+      "title": "轻声",
       "scope": [
-        "輕聲概念"
+        "轻声概念"
       ],
       "learning_page": "P7",
       "practice_page": null,
-      "notes": "P8 聲調練習不含輕聲。"
+      "notes": "P8 声调练习不含轻声。"
     }
   ],
   "vocabulary_sets": [
     {
       "set_id": "vocab_set_l1_01",
       "page": "P9",
-      "title": "詞彙 1",
+      "title": "词汇 1",
       "pronunciation_first": true,
       "requires_hanzi_recognition": false,
       "items": [
@@ -247,7 +247,7 @@
         },
         {
           "item_id": "vocab_l1_003_e",
-          "hanzi": "餓",
+          "hanzi": "饿",
           "pinyin": "è"
         },
         {
@@ -267,7 +267,7 @@
         },
         {
           "item_id": "vocab_l1_007_ma",
-          "hanzi": "馬",
+          "hanzi": "马",
           "pinyin": "mǎ"
         },
         {
@@ -280,13 +280,13 @@
     {
       "set_id": "vocab_set_l1_02",
       "page": "P11",
-      "title": "詞彙 2",
+      "title": "词汇 2",
       "pronunciation_first": true,
       "requires_hanzi_recognition": false,
       "items": [
         {
           "item_id": "vocab_l1_009_mama",
-          "hanzi": "媽媽",
+          "hanzi": "妈妈",
           "pinyin": "māma"
         },
         {
@@ -296,7 +296,7 @@
         },
         {
           "item_id": "vocab_l1_011_fuwu",
-          "hanzi": "服務",
+          "hanzi": "服务",
           "pinyin": "fúwù"
         },
         {
@@ -306,12 +306,12 @@
         },
         {
           "item_id": "vocab_l1_013_pifu",
-          "hanzi": "皮膚",
+          "hanzi": "皮肤",
           "pinyin": "pífū"
         },
         {
           "item_id": "vocab_l1_014_mima",
-          "hanzi": "密碼",
+          "hanzi": "密码",
           "pinyin": "mìmǎ"
         },
         {
@@ -333,8 +333,8 @@
     {
       "item_id": "exercise_l1_p6_read_pinyin",
       "page": "P6",
-      "exercise_type": "看拼音朗讀",
-      "goal": "練習 b/p/m/f + a/o/e/i/u/ü 的拼讀。",
+      "exercise_type": "看拼音朗读",
+      "goal": "练习 b/p/m/f + a/o/e/i/u/ü 的拼读。",
       "includes_tones": false,
       "pronunciation_first": true,
       "requires_hanzi_recognition": false
@@ -342,8 +342,8 @@
     {
       "item_id": "exercise_l1_p8_tone_reading",
       "page": "P8",
-      "exercise_type": "四聲朗讀/聽辨",
-      "goal": "練習四聲辨讀與發音。",
+      "exercise_type": "四声朗读/听辨",
+      "goal": "练习四声辨读与发音。",
       "includes_neutral_tone": false,
       "pronunciation_first": true,
       "requires_hanzi_recognition": false
@@ -351,8 +351,8 @@
     {
       "item_id": "exercise_l1_p10_vocab_follow",
       "page": "P10",
-      "exercise_type": "詞彙 1 跟讀/錄音",
-      "goal": "確認詞彙 1 發音正確。",
+      "exercise_type": "词汇 1 跟读/录音",
+      "goal": "确认词汇 1 发音正确。",
       "source_vocabulary_set_id": "vocab_set_l1_01",
       "pronunciation_first": true,
       "requires_hanzi_recognition": false
@@ -360,8 +360,8 @@
     {
       "item_id": "exercise_l1_p12_vocab_follow",
       "page": "P12",
-      "exercise_type": "詞彙 2 跟讀/錄音",
-      "goal": "確認詞彙 2 發音正確。",
+      "exercise_type": "词汇 2 跟读/录音",
+      "goal": "确认词汇 2 发音正确。",
       "source_vocabulary_set_id": "vocab_set_l1_02",
       "pronunciation_first": true,
       "requires_hanzi_recognition": false
@@ -369,12 +369,12 @@
     {
       "item_id": "exercise_l1_p13_review",
       "page": "P13",
-      "exercise_type": "課後整合練習",
-      "goal": "用 2-3 個題型整合複習。",
+      "exercise_type": "课后整合练习",
+      "goal": "用 2-3 个题型整合复习。",
       "suggested_question_types": [
-        "聽音選拼音",
-        "看拼音朗讀",
-        "詞彙跟讀/錄音"
+        "听音选拼音",
+        "看拼音朗读",
+        "词汇跟读/录音"
       ],
       "pronunciation_first": true,
       "requires_hanzi_recognition": false

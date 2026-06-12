@@ -2,49 +2,49 @@
   "lesson_id": "pinyin_lesson_03",
   "lesson_no": 3,
   "title": {
-    "zh": "拼音第三課：翹舌音、平舌音與一不變調",
+    "zh": "拼音第三课：翘舌音、平舌音与一不变调",
     "en": "Pinyin Lesson 3: Retroflex Initials, Dental Sibilants, and Tone Sandhi for Yi/Bu"
   },
   "metadata": {
     "page_count_status": "fixed_total_with_flexible_review_range",
-    "main_goal": "學會 zh ch sh r 與 z c s 兩組聲母，能搭配基本韻母拼讀含聲調音節，理解一不變調規則，並能正確發音、理解本課詞彙字義。",
-    "primary_requirement": "發音正確以及學習字義為主",
-    "recognition_requirement": "不需要認漢字",
+    "main_goal": "学会 zh ch sh r 与 z c s 两组声母，能搭配基本韵母拼读含声调音节，理解一不变调规则，并能正确发音、理解本课词汇字义。",
+    "primary_requirement": "发音正确以及学习字义为主",
+    "recognition_requirement": "不需要认汉字",
     "pronunciation_first": true,
     "meaning_focus": true,
     "requires_hanzi_recognition": false,
     "total_pages": 19
   },
   "learning_focus": [
-    "暖身複習第二課生詞",
-    "聲母 zh ch sh r",
-    "聲母 z c s",
-    "含聲調的拼音練習",
-    "詞彙發音與字義理解",
-    "一不變調",
-    "21 聲母總表"
+    "暖身复习第二课生词",
+    "声母 zh ch sh r",
+    "声母 z c s",
+    "含声调的拼音练习",
+    "词汇发音与字义理解",
+    "一不变调",
+    "21 声母总表"
   ],
   "warmup_activity": {
     "item_id": "warmup_review_pinyin_lesson_02",
     "page": "P3",
-    "title": "暖身活動：複習前一課生詞",
+    "title": "暖身活动：复习前一课生词",
     "review_source_lesson_id": "pinyin_lesson_02",
-    "review_source_title": "拼音第二課：聲母擴展與 j/q/x 拼寫規則",
-    "review_focus": "複習前一課的生詞",
+    "review_source_title": "拼音第二课：声母扩展与 j/q/x 拼写规则",
+    "review_focus": "复习前一课的生词",
     "activity_options": [
       {
         "activity_type": "matching",
-        "title": "連連看",
+        "title": "连连看",
         "front_prompt": "看照片",
-        "answer_target": "拼音&漢字",
-        "description": "學生看照片，連到對應的拼音與漢字。"
+        "answer_target": "拼音&汉字",
+        "description": "学生看照片，连到对应的拼音与汉字。"
       },
       {
         "activity_type": "audio_flashcard",
-        "title": "聽音猜意 flash card",
-        "front_prompt": "播放生詞音檔",
-        "back_content": "漢字＋拼音＋圖片",
-        "description": "正面播放生詞音檔，學生猜意思；反面顯示漢字、拼音與圖片。"
+        "title": "听音猜意 flash card",
+        "front_prompt": "播放生词音档",
+        "back_content": "汉字＋拼音＋图片",
+        "description": "正面播放生词音档，学生猜意思；反面显示汉字、拼音与图片。"
       }
     ],
     "source_vocabulary": [
@@ -61,11 +61,11 @@
         "pinyin": "nǚ"
       },
       {
-        "hanzi": "綠",
+        "hanzi": "绿",
         "pinyin": "lǜ"
       },
       {
-        "hanzi": "地圖",
+        "hanzi": "地图",
         "pinyin": "dìtú"
       },
       {
@@ -73,7 +73,7 @@
         "pinyin": "hē"
       },
       {
-        "hanzi": "可樂",
+        "hanzi": "可乐",
         "pinyin": "kělè"
       },
       {
@@ -81,11 +81,11 @@
         "pinyin": "gēge"
       },
       {
-        "hanzi": "雞",
+        "hanzi": "鸡",
         "pinyin": "jī"
       },
       {
-        "hanzi": "幾",
+        "hanzi": "几",
         "pinyin": "jǐ"
       },
       {
@@ -101,7 +101,7 @@
         "pinyin": "xī"
       },
       {
-        "hanzi": "騎馬",
+        "hanzi": "骑马",
         "pinyin": "qímǎ"
       },
       {
@@ -113,18 +113,18 @@
         "pinyin": "jú"
       },
       {
-        "hanzi": "機器",
+        "hanzi": "机器",
         "pinyin": "jīqì"
       },
       {
-        "hanzi": "繼續",
+        "hanzi": "继续",
         "pinyin": "jìxù"
       }
     ],
     "pronunciation_first": true,
     "meaning_focus": true,
     "requires_hanzi_recognition": false,
-    "notes": "暖身活動放在學習目標之後，用前一課生詞作為複習材料。"
+    "notes": "暖身活动放在学习目标之后，用前一课生词作为复习材料。"
   },
   "pages": [
     {
@@ -132,14 +132,14 @@
       "sequence": 1,
       "title": "封面",
       "record_type": "lesson_cover",
-      "content_focus": "第三課課程封面。"
+      "content_focus": "第三课课程封面。"
     },
     {
       "page_range": "P2",
       "sequence": 2,
-      "title": "學習目標",
+      "title": "学习目标",
       "record_type": "learning_objective",
-      "content_focus": "說明本課要學 zh/ch/sh/r、z/c/s、含聲調拼讀、詞彙發音與字義、一不變調。",
+      "content_focus": "说明本课要学 zh/ch/sh/r、z/c/s、含声调拼读、词汇发音与字义、一不变调。",
       "pronunciation_first": true,
       "meaning_focus": true,
       "requires_hanzi_recognition": false
@@ -147,9 +147,9 @@
     {
       "page_range": "P3",
       "sequence": 3,
-      "title": "暖身活動：複習第二課生詞",
+      "title": "暖身活动：复习第二课生词",
       "record_type": "warmup_activity",
-      "content_focus": "複習第二課生詞；活動可用連連看或聽音猜意 flash card。",
+      "content_focus": "复习第二课生词；活动可用连连看或听音猜意 flash card。",
       "pronunciation_first": true,
       "meaning_focus": true,
       "requires_hanzi_recognition": false
@@ -157,34 +157,34 @@
     {
       "page_range": "P4",
       "sequence": 4,
-      "title": "拼音學習封面 1：zh ch sh r",
+      "title": "拼音学习封面 1：zh ch sh r",
       "record_type": "pinyin_learning_cover",
-      "content_focus": "進入翹舌音聲母學習段落。"
+      "content_focus": "进入翘舌音声母学习段落。"
     },
     {
       "page_range": "P5",
       "sequence": 5,
-      "title": "拼音學習表格 1：zh ch sh r + a o e i u ü",
+      "title": "拼音学习表格 1：zh ch sh r + a o e i u ü",
       "record_type": "pinyin_chart",
-      "content_focus": "建立 zh/ch/sh/r 與韻母拼讀組合。",
+      "content_focus": "建立 zh/ch/sh/r 与韵母拼读组合。",
       "pinyin_chart_id": "pinyin_chart_l3_group_1",
       "includes_tones": false
     },
     {
       "page_range": "P6",
       "sequence": 6,
-      "title": "拼音練習 1",
+      "title": "拼音练习 1",
       "record_type": "pinyin_exercise",
-      "content_focus": "第一組聲母拼讀練習，含聲調。",
+      "content_focus": "第一组声母拼读练习，含声调。",
       "source_pinyin_chart_id": "pinyin_chart_l3_group_1",
       "includes_tones": true
     },
     {
       "page_range": "P7",
       "sequence": 7,
-      "title": "詞彙 1",
+      "title": "词汇 1",
       "record_type": "vocabulary_set",
-      "content_focus": "炸雞、茶、車、熱、吃、十、豬、書。",
+      "content_focus": "炸鸡、茶、车、热、吃、十、猪、书。",
       "vocabulary_set_id": "vocab_set_l3_01",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -193,9 +193,9 @@
     {
       "page_range": "P8",
       "sequence": 8,
-      "title": "詞彙練習 1",
+      "title": "词汇练习 1",
       "record_type": "vocab_exercise",
-      "content_focus": "詞彙 1 的發音與字義練習。",
+      "content_focus": "词汇 1 的发音与字义练习。",
       "source_vocabulary_set_id": "vocab_set_l3_01",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -204,36 +204,36 @@
     {
       "page_range": "P9",
       "sequence": 9,
-      "title": "拼音學習封面 2：z c s",
+      "title": "拼音学习封面 2：z c s",
       "record_type": "pinyin_learning_cover",
-      "content_focus": "進入平舌音聲母學習段落。"
+      "content_focus": "进入平舌音声母学习段落。"
     },
     {
       "page_range": "P10",
       "sequence": 10,
-      "title": "拼音學習表格 2：z c s + a o e i u ü",
+      "title": "拼音学习表格 2：z c s + a o e i u ü",
       "record_type": "pinyin_chart",
-      "content_focus": "建立 z/c/s 與韻母拼讀組合。",
+      "content_focus": "建立 z/c/s 与韵母拼读组合。",
       "pinyin_chart_id": "pinyin_chart_l3_group_2",
       "includes_tones": false
     },
     {
       "page_range": "P11",
       "sequence": 11,
-      "title": "拼音練習 2",
+      "title": "拼音练习 2",
       "record_type": "pinyin_exercise",
-      "content_focus": "第二組聲母拼讀練習，含聲調。",
+      "content_focus": "第二组声母拼读练习，含声调。",
       "source_pinyin_chart_id": "pinyin_chart_l3_group_2",
       "includes_tones": true
     },
     {
       "page_range": "P12",
       "sequence": 12,
-      "title": "詞彙 2",
+      "title": "词汇 2",
       "record_type": "vocabulary_set",
-      "content_focus": "擦、撒、綠色、负责、字、四、組、速度。",
+      "content_focus": "擦、撒、绿色、负责、字、四、组、速度。",
       "vocabulary_set_id": "vocab_set_l3_02",
-      "notes": "负责 依使用者原文保留，後續可確認是否改為 負責。",
+      "notes": "负责 依使用者原文保留，后续可确认是否改为 负责。",
       "pronunciation_first": true,
       "meaning_focus": true,
       "requires_hanzi_recognition": false
@@ -241,9 +241,9 @@
     {
       "page_range": "P13",
       "sequence": 13,
-      "title": "詞彙練習 2",
+      "title": "词汇练习 2",
       "record_type": "vocab_exercise",
-      "content_focus": "詞彙 2 的發音與字義練習。",
+      "content_focus": "词汇 2 的发音与字义练习。",
       "source_vocabulary_set_id": "vocab_set_l3_02",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -252,17 +252,17 @@
     {
       "page_range": "P14",
       "sequence": 14,
-      "title": "規則：一不變調",
+      "title": "规则：一不变调",
       "record_type": "tone_sandhi_rule",
-      "content_focus": "學習 一/不 在語流中的變調規則。",
+      "content_focus": "学习 一/不 在语流中的变调规则。",
       "tone_sandhi_rule_id": "rule_l3_yi_bu_tone_sandhi"
     },
     {
       "page_range": "P15",
       "sequence": 15,
-      "title": "綜合練習：一不變調",
+      "title": "综合练习：一不变调",
       "record_type": "tone_sandhi_exercise",
-      "content_focus": "練習一不變調的聽辨、朗讀或選擇。",
+      "content_focus": "练习一不变调的听辨、朗读或选择。",
       "source_tone_sandhi_rule_id": "rule_l3_yi_bu_tone_sandhi",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -271,9 +271,9 @@
     {
       "page_range": null,
       "sequence": 16,
-      "title": "課後練習",
+      "title": "课后练习",
       "record_type": "review_exercise",
-      "content_focus": "2-3 個題型整合複習。",
+      "content_focus": "2-3 个题型整合复习。",
       "page_range_options": [
         "P16-P17",
         "P16-P18"
@@ -286,9 +286,9 @@
     {
       "page_range": "P19",
       "sequence": 17,
-      "title": "21 聲母總表",
+      "title": "21 声母总表",
       "record_type": "initials_summary",
-      "content_focus": "整理第一至第三課學完的 21 個聲母。",
+      "content_focus": "整理第一至第三课学完的 21 个声母。",
       "summary_id": "summary_21_initials"
     }
   ],
@@ -296,7 +296,7 @@
     {
       "item_id": "initial_zh",
       "symbol": "zh",
-      "label": "聲母 zh",
+      "label": "声母 zh",
       "initial_group": "retroflex",
       "introduced_on": "P4",
       "chart_page": "P5"
@@ -304,7 +304,7 @@
     {
       "item_id": "initial_ch",
       "symbol": "ch",
-      "label": "聲母 ch",
+      "label": "声母 ch",
       "initial_group": "retroflex",
       "introduced_on": "P4",
       "chart_page": "P5"
@@ -312,7 +312,7 @@
     {
       "item_id": "initial_sh",
       "symbol": "sh",
-      "label": "聲母 sh",
+      "label": "声母 sh",
       "initial_group": "retroflex",
       "introduced_on": "P4",
       "chart_page": "P5"
@@ -320,7 +320,7 @@
     {
       "item_id": "initial_r",
       "symbol": "r",
-      "label": "聲母 r",
+      "label": "声母 r",
       "initial_group": "retroflex",
       "introduced_on": "P4",
       "chart_page": "P5"
@@ -328,7 +328,7 @@
     {
       "item_id": "initial_z",
       "symbol": "z",
-      "label": "聲母 z",
+      "label": "声母 z",
       "initial_group": "dental_sibilant",
       "introduced_on": "P9",
       "chart_page": "P10"
@@ -336,7 +336,7 @@
     {
       "item_id": "initial_c",
       "symbol": "c",
-      "label": "聲母 c",
+      "label": "声母 c",
       "initial_group": "dental_sibilant",
       "introduced_on": "P9",
       "chart_page": "P10"
@@ -344,7 +344,7 @@
     {
       "item_id": "initial_s",
       "symbol": "s",
-      "label": "聲母 s",
+      "label": "声母 s",
       "initial_group": "dental_sibilant",
       "introduced_on": "P9",
       "chart_page": "P10"
@@ -403,50 +403,50 @@
     {
       "item_id": "rule_l3_yi_bu_tone_sandhi",
       "page": "P14",
-      "title": "一不變調",
-      "explanation": "一、不在特定語音環境中會改變聲調；練習目標是能正確朗讀與聽辨。",
+      "title": "一不变调",
+      "explanation": "一、不在特定语音环境中会改变声调；练习目标是能正确朗读与听辨。",
       "rule_details": [
         {
           "base_form": "一",
           "base_pinyin": "yī",
-          "condition": "讀順序時，例如星期一、第一、一樓",
+          "condition": "读顺序时，例如星期一、第一、一楼",
           "spoken_pinyin": "yī",
-          "note": "讀星期一、第一、一樓等順序用語時，一念一聲。"
+          "note": "读星期一、第一、一楼等顺序用语时，一念一声。"
         },
         {
           "base_form": "一",
           "base_pinyin": "yī",
-          "condition": "逐一讀數字 1，例如電話號碼或年份",
+          "condition": "逐一读数字 1，例如电话号码或年份",
           "spoken_pinyin": "yī",
-          "note": "讀電話號碼、年份、編號中的數字 1 時，通常念一聲。"
+          "note": "读电话号码、年份、编号中的数字 1 时，通常念一声。"
         },
         {
           "base_form": "一",
           "base_pinyin": "yī",
-          "condition": "後面接第四聲",
+          "condition": "后面接第四声",
           "spoken_pinyin": "yí",
-          "note": "一 + 四聲時常讀二聲。"
+          "note": "一 + 四声时常读二声。"
         },
         {
           "base_form": "一",
           "base_pinyin": "yī",
-          "condition": "後面接第一、二、三聲",
+          "condition": "后面接第一、二、三声",
           "spoken_pinyin": "yì",
-          "note": "一 + 非四聲時常讀四聲。"
+          "note": "一 + 非四声时常读四声。"
         },
         {
           "base_form": "不",
           "base_pinyin": "bù",
-          "condition": "後面接第四聲",
+          "condition": "后面接第四声",
           "spoken_pinyin": "bú",
-          "note": "不 + 四聲時讀二聲。"
+          "note": "不 + 四声时读二声。"
         },
         {
           "base_form": "不",
           "base_pinyin": "bù",
-          "condition": "其他情況",
+          "condition": "其他情况",
           "spoken_pinyin": "bù",
-          "note": "其他情況通常維持四聲。"
+          "note": "其他情况通常维持四声。"
         }
       ]
     }
@@ -456,11 +456,11 @@
       "set_id": "vocab_set_l3_01",
       "page": "P7",
       "practice_page": "P8",
-      "title": "詞彙 1",
+      "title": "词汇 1",
       "items": [
         {
           "item_id": "vocab_l3_001_zhaji",
-          "hanzi": "炸雞",
+          "hanzi": "炸鸡",
           "pinyin": "zhájī"
         },
         {
@@ -470,12 +470,12 @@
         },
         {
           "item_id": "vocab_l3_003_che",
-          "hanzi": "車",
+          "hanzi": "车",
           "pinyin": "chē"
         },
         {
           "item_id": "vocab_l3_004_re",
-          "hanzi": "熱",
+          "hanzi": "热",
           "pinyin": "rè"
         },
         {
@@ -490,12 +490,12 @@
         },
         {
           "item_id": "vocab_l3_007_zhu",
-          "hanzi": "豬",
+          "hanzi": "猪",
           "pinyin": "zhū"
         },
         {
           "item_id": "vocab_l3_008_shu",
-          "hanzi": "書",
+          "hanzi": "书",
           "pinyin": "shū"
         }
       ],
@@ -507,7 +507,7 @@
       "set_id": "vocab_set_l3_02",
       "page": "P12",
       "practice_page": "P13",
-      "title": "詞彙 2",
+      "title": "词汇 2",
       "items": [
         {
           "item_id": "vocab_l3_009_ca",
@@ -521,7 +521,7 @@
         },
         {
           "item_id": "vocab_l3_011_lvse",
-          "hanzi": "綠色",
+          "hanzi": "绿色",
           "pinyin": "lǜsè"
         },
         {
@@ -542,7 +542,7 @@
         },
         {
           "item_id": "vocab_l3_015_zu",
-          "hanzi": "組",
+          "hanzi": "组",
           "pinyin": "zǔ"
         },
         {
@@ -551,7 +551,7 @@
           "pinyin": "sùdù"
         }
       ],
-      "notes": "负责 依使用者原文保留，後續可確認是否改為 負責。",
+      "notes": "负责 依使用者原文保留，后续可确认是否改为 负责。",
       "pronunciation_first": true,
       "meaning_focus": true,
       "requires_hanzi_recognition": false
@@ -561,8 +561,8 @@
     {
       "item_id": "exercise_l3_p6_pinyin_group_1",
       "page": "P6",
-      "exercise_type": "含聲調拼音練習",
-      "goal": "練習 zh/ch/sh/r + 韻母的含聲調拼讀。",
+      "exercise_type": "含声调拼音练习",
+      "goal": "练习 zh/ch/sh/r + 韵母的含声调拼读。",
       "source_pinyin_chart_id": "pinyin_chart_l3_group_1",
       "includes_tones": true,
       "pronunciation_first": true,
@@ -572,8 +572,8 @@
     {
       "item_id": "exercise_l3_p8_vocab_1",
       "page": "P8",
-      "exercise_type": "詞彙 1 練習",
-      "goal": "確認詞彙 1 發音與字義理解。",
+      "exercise_type": "词汇 1 练习",
+      "goal": "确认词汇 1 发音与字义理解。",
       "source_vocabulary_set_id": "vocab_set_l3_01",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -582,8 +582,8 @@
     {
       "item_id": "exercise_l3_p11_pinyin_group_2",
       "page": "P11",
-      "exercise_type": "含聲調拼音練習",
-      "goal": "練習 z/c/s + 韻母的含聲調拼讀。",
+      "exercise_type": "含声调拼音练习",
+      "goal": "练习 z/c/s + 韵母的含声调拼读。",
       "source_pinyin_chart_id": "pinyin_chart_l3_group_2",
       "includes_tones": true,
       "pronunciation_first": true,
@@ -593,8 +593,8 @@
     {
       "item_id": "exercise_l3_p13_vocab_2",
       "page": "P13",
-      "exercise_type": "詞彙 2 練習",
-      "goal": "確認詞彙 2 發音與字義理解。",
+      "exercise_type": "词汇 2 练习",
+      "goal": "确认词汇 2 发音与字义理解。",
       "source_vocabulary_set_id": "vocab_set_l3_02",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -603,8 +603,8 @@
     {
       "item_id": "exercise_l3_p15_yi_bu",
       "page": "P15",
-      "exercise_type": "一不變調綜合練習",
-      "goal": "練習一不變調的朗讀、聽辨或選擇。",
+      "exercise_type": "一不变调综合练习",
+      "goal": "练习一不变调的朗读、听辨或选择。",
       "source_tone_sandhi_rule_id": "rule_l3_yi_bu_tone_sandhi",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -618,13 +618,13 @@
         "P16-P18"
       ],
       "is_page_range_flexible": true,
-      "exercise_type": "課後整合練習",
-      "goal": "用 2-3 個題型整合複習。",
+      "exercise_type": "课后整合练习",
+      "goal": "用 2-3 个题型整合复习。",
       "suggested_question_types": [
-        "聽音選拼音",
-        "看拼音朗讀",
-        "字義配對",
-        "一不變調判斷"
+        "听音选拼音",
+        "看拼音朗读",
+        "字义配对",
+        "一不变调判断"
       ],
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -634,7 +634,7 @@
   "initials_summary": {
     "summary_id": "summary_21_initials",
     "page": "P19",
-    "title": "21 聲母總表",
+    "title": "21 声母总表",
     "initials": [
       "b",
       "p",
@@ -680,12 +680,12 @@
           "total_pages": 19
         }
       ],
-      "impact": "新增 P3 暖身活動後，21 聲母總表順延至 P19；若課後練習只到 P17，P18 待安排或保留。"
+      "impact": "新增 P3 暖身活动后，21 声母总表顺延至 P19；若课后练习只到 P17，P18 待安排或保留。"
     }
   ],
   "database_notes": [
-    "新增 P3 暖身活動後，原 P3 起所有頁碼順延一頁。",
-    "P3 暖身活動複習第二課生詞。",
-    "负责 is preserved from the user input; confirm later whether the final Traditional Chinese form should be 負責."
+    "新增 P3 暖身活动后，原 P3 起所有页码顺延一页。",
+    "P3 暖身活动复习第二课生词。",
+    "负责 is preserved from the user input; confirm later whether the final Traditional Chinese form should be 负责."
   ]
 }

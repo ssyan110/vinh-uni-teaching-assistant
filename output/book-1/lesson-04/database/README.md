@@ -1,6 +1,6 @@
-# VP 教材資料庫 · 第四课 · 你去哪儿 · Bài 4 · Bạn đi đâu
+# VP 教材资料库 · 第四课 · 你去哪儿 · Bài 4 · Bạn đi đâu
 
-Scope: VP 製作流程 steps 1–8 only. This output stops before teacher review.
+Scope: VP 制作流程 steps 1–8 only. This output stops before teacher review.
 
 Lesson type: `regular` (config version 1.0.0)
 Source PDF: `Giáo trình full/[hanka.edu.vn] - GT Hán Ngữ 1 (Tập 1 - Quyển thượng).pdf`

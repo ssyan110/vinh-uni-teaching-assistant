@@ -6,7 +6,7 @@
       "pinyin": "jiā",
       "vietnamese": "nhà",
       "filename": "vocab-v001-jia.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for nhà; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 家 (jiā)."
     },
@@ -16,19 +16,19 @@
       "pinyin": "xià",
       "vietnamese": "dưới, xuống",
       "filename": "vocab-v002-xia.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for dưới, xuống; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 下 (xià)."
     },
     {
       "record_id": "V003",
-      "chinese_simplified": "腳",
+      "chinese_simplified": "脚",
       "pinyin": "jiǎo",
       "vietnamese": "xem nghĩa trong lớp",
       "filename": "vocab-v003-jiao.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for xem nghĩa trong lớp; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 腳 (jiǎo)."
+      "visual_description": "Placeholder image for 脚 (jiǎo)."
     },
     {
       "record_id": "V004",
@@ -36,7 +36,7 @@
       "pinyin": "xiǎo",
       "vietnamese": "nhỏ",
       "filename": "vocab-v004-xiao.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for nhỏ; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 小 (xiǎo)."
     },
@@ -46,7 +46,7 @@
       "pinyin": "diàn",
       "vietnamese": "điện",
       "filename": "vocab-v005-dian.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for điện; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 电 (diàn)."
     },
@@ -56,7 +56,7 @@
       "pinyin": "qián",
       "vietnamese": "tiền",
       "filename": "vocab-v006-qian.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for tiền; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 钱 (qián)."
     },
@@ -66,19 +66,19 @@
       "pinyin": "xiāng",
       "vietnamese": "thơm",
       "filename": "vocab-v007-xiang.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for thơm; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 香 (xiāng)."
     },
     {
       "record_id": "V008",
-      "chinese_simplified": "窮",
+      "chinese_simplified": "穷",
       "pinyin": "qióng",
       "vietnamese": "xem nghĩa trong lớp",
       "filename": "vocab-v008-qiong.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for xem nghĩa trong lớp; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 窮 (qióng)."
+      "visual_description": "Placeholder image for 穷 (qióng)."
     },
     {
       "record_id": "V009",
@@ -86,19 +86,19 @@
       "pinyin": "huā",
       "vietnamese": "hoa",
       "filename": "vocab-v009-hua.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for hoa; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 花 (huā)."
     },
     {
       "record_id": "V010",
-      "chinese_simplified": "黃瓜",
+      "chinese_simplified": "黄瓜",
       "pinyin": "huángguā",
-      "vietnamese": "xem nghĩa trong lớp",
+      "vietnamese": "dưa leo",
       "filename": "vocab-v010-huanggua.png",
-      "status": "placeholder_needs_generation",
-      "prompt": "Soft textbook 1:1 illustration for xem nghĩa trong lớp; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 黃瓜 (huángguā)."
+      "status": "ready_for_visual_qa",
+      "prompt": "Soft textbook 1:1 illustration for dưa leo; no text, labels, letters, numbers, or watermark.",
+      "visual_description": "Placeholder image for 黄瓜 (huángguā)."
     },
     {
       "record_id": "V011",
@@ -106,7 +106,7 @@
       "pinyin": "duō",
       "vietnamese": "nhiều",
       "filename": "vocab-v011-duo.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for nhiều; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 多 (duō)."
     },
@@ -116,7 +116,7 @@
       "pinyin": "shuō",
       "vietnamese": "nói",
       "filename": "vocab-v012-shuo.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for nói; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 说 (shuō)."
     },
@@ -126,7 +126,7 @@
       "pinyin": "huài",
       "vietnamese": "xấu, hỏng",
       "filename": "vocab-v013-huai.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for xấu, hỏng; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 坏 (huài)."
     },
@@ -136,7 +136,7 @@
       "pinyin": "kuài",
       "vietnamese": "nhanh",
       "filename": "vocab-v014-kuai.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for nhanh; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 快 (kuài)."
     },
@@ -146,7 +146,7 @@
       "pinyin": "chuán",
       "vietnamese": "thuyền",
       "filename": "vocab-v015-chuan.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for thuyền; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 船 (chuán)."
     },
@@ -156,7 +156,7 @@
       "pinyin": "chuáng",
       "vietnamese": "giường",
       "filename": "vocab-v016-chuang.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for giường; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 床 (chuáng)."
     },
@@ -166,7 +166,7 @@
       "pinyin": "chūnjuǎn",
       "vietnamese": "chả giò",
       "filename": "vocab-v017-chunjuan.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for chả giò; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 春卷 (chūnjuǎn)."
     },
@@ -176,7 +176,7 @@
       "pinyin": "ānquán",
       "vietnamese": "an toàn",
       "filename": "vocab-v018-anquan.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for an toàn; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 安全 (ānquán)."
     },
@@ -186,7 +186,7 @@
       "pinyin": "xuǎn",
       "vietnamese": "chọn",
       "filename": "vocab-v019-xuan.png",
-      "status": "placeholder_needs_generation",
+      "status": "ready_for_visual_qa",
       "prompt": "Soft textbook 1:1 illustration for chọn; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Placeholder image for 选 (xuǎn)."
     }

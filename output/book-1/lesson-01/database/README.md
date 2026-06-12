@@ -1,6 +1,6 @@
-# VP 教材資料庫 · 第一课 · 你好 · Bài 1 · Xin chào
+# VP 教材资料库 · 第一课 · 你好 · Bài 1 · Xin chào
 
-Scope: VP 製作流程 steps 1–9 (includes teacher review). Steps 10–18 pending.
+Scope: VP 制作流程 steps 1–9 (includes teacher review). Steps 10–18 pending.
 
 Lesson type: `regular` (config version 1.0.0)
 Source PDF: `work/pdf-pages/`

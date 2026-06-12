@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "lesson_id": "lesson-05",
-  "generated_at": "2026-06-11T07:13:09.914Z",
+  "generated_at": "2026-06-12T07:54:48.721Z",
   "source_database": "database",
   "workflow": {
     "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
@@ -46,6 +46,32 @@
       "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
     },
     {
+      "id": "assets-photos-vocab-divider-png",
+      "asset_path": "assets/photos/vocab-divider.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1672,
+        "height": 941,
+        "format": "png",
+        "aspect_ratio": 1.7768
+      },
+      "used_by": [
+        "01-divider-vocab.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
       "id": "assets-slide-base-css",
       "asset_path": "assets/slide-base.css",
       "role": "stylesheet",
@@ -53,12 +79,49 @@
       "exists": true,
       "dimensions": null,
       "used_by": [
+        "01-divider-vocab.html",
+        "02-vocab-v001.html",
+        "03-vocab-v002.html",
+        "04-vocab-v003.html",
+        "05-vocab-v004.html",
+        "06-vocab-v005.html",
+        "07-vocab-v006.html",
+        "08-vocab-v007.html",
+        "09-vocab-v008.html",
+        "10-vocab-v009.html",
+        "11-vocab-v010.html",
+        "12-vocab-v011.html",
+        "13-vocab-v012.html",
+        "14-vocab-v013.html",
+        "15-vocab-v014.html",
+        "16-vocab-v015.html",
+        "17-vocab-v016.html",
+        "18-vocab-v017.html",
         "lesson-required-assets"
       ],
       "html_reference_types": [
-        "required"
+        "required",
+        "stylesheet"
       ],
-      "record_ids": [],
+      "record_ids": [
+        "V001",
+        "V002",
+        "V003",
+        "V004",
+        "V005",
+        "V006",
+        "V007",
+        "V008",
+        "V009",
+        "V010",
+        "V011",
+        "V012",
+        "V013",
+        "V014",
+        "V015",
+        "V016",
+        "V017"
+      ],
       "chinese": [],
       "pinyin": [],
       "vietnamese": [],
@@ -74,12 +137,49 @@
       "exists": true,
       "dimensions": null,
       "used_by": [
+        "01-divider-vocab.html",
+        "02-vocab-v001.html",
+        "03-vocab-v002.html",
+        "04-vocab-v003.html",
+        "05-vocab-v004.html",
+        "06-vocab-v005.html",
+        "07-vocab-v006.html",
+        "08-vocab-v007.html",
+        "09-vocab-v008.html",
+        "10-vocab-v009.html",
+        "11-vocab-v010.html",
+        "12-vocab-v011.html",
+        "13-vocab-v012.html",
+        "14-vocab-v013.html",
+        "15-vocab-v014.html",
+        "16-vocab-v015.html",
+        "17-vocab-v016.html",
+        "18-vocab-v017.html",
         "lesson-required-assets"
       ],
       "html_reference_types": [
-        "required"
+        "required",
+        "script"
       ],
-      "record_ids": [],
+      "record_ids": [
+        "V001",
+        "V002",
+        "V003",
+        "V004",
+        "V005",
+        "V006",
+        "V007",
+        "V008",
+        "V009",
+        "V010",
+        "V011",
+        "V012",
+        "V013",
+        "V014",
+        "V015",
+        "V016",
+        "V017"
+      ],
       "chinese": [],
       "pinyin": [],
       "vietnamese": [],
@@ -100,9 +200,11 @@
         "aspect_ratio": 1.7778
       },
       "used_by": [
+        "02-vocab-v001.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
+        "img",
         "prompt_metadata"
       ],
       "record_ids": [
@@ -134,9 +236,11 @@
         "aspect_ratio": 1.7778
       },
       "used_by": [
+        "03-vocab-v002.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
+        "img",
         "prompt_metadata"
       ],
       "record_ids": [
@@ -168,9 +272,11 @@
         "aspect_ratio": 1.7778
       },
       "used_by": [
+        "04-vocab-v003.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
+        "img",
         "prompt_metadata"
       ],
       "record_ids": [
@@ -202,9 +308,11 @@
         "aspect_ratio": 1.7778
       },
       "used_by": [
+        "05-vocab-v004.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
+        "img",
         "prompt_metadata"
       ],
       "record_ids": [
@@ -236,9 +344,11 @@
         "aspect_ratio": 1.7778
       },
       "used_by": [
+        "06-vocab-v005.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
+        "img",
         "prompt_metadata"
       ],
       "record_ids": [
@@ -270,9 +380,11 @@
         "aspect_ratio": 1.7778
       },
       "used_by": [
+        "07-vocab-v006.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
+        "img",
         "prompt_metadata"
       ],
       "record_ids": [
@@ -304,9 +416,11 @@
         "aspect_ratio": 1.7778
       },
       "used_by": [
+        "08-vocab-v007.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
+        "img",
         "prompt_metadata"
       ],
       "record_ids": [
@@ -338,9 +452,11 @@
         "aspect_ratio": 1.7778
       },
       "used_by": [
+        "09-vocab-v008.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
+        "img",
         "prompt_metadata"
       ],
       "record_ids": [
@@ -372,9 +488,11 @@
         "aspect_ratio": 1.7778
       },
       "used_by": [
+        "10-vocab-v009.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
+        "img",
         "prompt_metadata"
       ],
       "record_ids": [
@@ -406,9 +524,11 @@
         "aspect_ratio": 1.7778
       },
       "used_by": [
+        "11-vocab-v010.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
+        "img",
         "prompt_metadata"
       ],
       "record_ids": [
@@ -440,9 +560,11 @@
         "aspect_ratio": 1.7778
       },
       "used_by": [
+        "12-vocab-v011.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
+        "img",
         "prompt_metadata"
       ],
       "record_ids": [
@@ -474,9 +596,11 @@
         "aspect_ratio": 1.7778
       },
       "used_by": [
+        "13-vocab-v012.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
+        "img",
         "prompt_metadata"
       ],
       "record_ids": [
@@ -508,9 +632,11 @@
         "aspect_ratio": 1.7778
       },
       "used_by": [
+        "14-vocab-v013.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
+        "img",
         "prompt_metadata"
       ],
       "record_ids": [
@@ -542,9 +668,11 @@
         "aspect_ratio": 1.7778
       },
       "used_by": [
+        "15-vocab-v014.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
+        "img",
         "prompt_metadata"
       ],
       "record_ids": [
@@ -576,9 +704,11 @@
         "aspect_ratio": 1.7778
       },
       "used_by": [
+        "16-vocab-v015.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
+        "img",
         "prompt_metadata"
       ],
       "record_ids": [
@@ -610,9 +740,11 @@
         "aspect_ratio": 1.7778
       },
       "used_by": [
+        "17-vocab-v016.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
+        "img",
         "prompt_metadata"
       ],
       "record_ids": [
@@ -644,9 +776,11 @@
         "aspect_ratio": 1.7778
       },
       "used_by": [
+        "18-vocab-v017.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
+        "img",
         "prompt_metadata"
       ],
       "record_ids": [

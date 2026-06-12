@@ -1,6 +1,6 @@
-# VP 教材資料庫 · 第十课 · 他住哪儿 · Bài 10 · Anh ấy sống ở đâu?
+# VP 教材资料库 · 第十课 · 他住哪儿 · Bài 10 · Anh ấy sống ở đâu?
 
-Scope: VP 製作流程 steps 1–8 only. This output stops before teacher review.
+Scope: VP 制作流程 steps 1–8 only. This output stops before teacher review.
 
 Lesson type: `regular` (config version 1.1.0)
 Source PDF: `Giáo trình full/[hanka.edu.vn] - GT Hán Ngữ 1 (Tập 1 - Quyển thượng).pdf`

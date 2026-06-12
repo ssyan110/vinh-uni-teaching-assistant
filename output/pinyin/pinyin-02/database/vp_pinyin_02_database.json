@@ -2,14 +2,14 @@
   "lesson_id": "pinyin_lesson_02",
   "lesson_no": 2,
   "title": {
-    "zh": "拼音第二課：聲母擴展與 j/q/x 拼寫規則",
+    "zh": "拼音第二课：声母扩展与 j/q/x 拼写规则",
     "en": "Pinyin Lesson 2: Initial Expansion and j/q/x Spelling Rules"
   },
   "metadata": {
     "page_count_status": "pending",
-    "main_goal": "學會 d t n l g k h 與 j q x 兩組聲母，能搭配基本韻母拼讀含聲調音節，並能正確發音、理解本課詞彙字義。",
-    "primary_requirement": "發音正確以及學習字義為主",
-    "recognition_requirement": "不需要認漢字",
+    "main_goal": "学会 d t n l g k h 与 j q x 两组声母，能搭配基本韵母拼读含声调音节，并能正确发音、理解本课词汇字义。",
+    "primary_requirement": "发音正确以及学习字义为主",
+    "recognition_requirement": "不需要认汉字",
     "pronunciation_first": true,
     "meaning_focus": true,
     "requires_hanzi_recognition": false,
@@ -17,35 +17,35 @@
     "page_count_max": 19
   },
   "learning_focus": [
-    "暖身複習第一課生詞",
-    "聲母 d t n l g k h",
-    "聲母 j q x",
-    "與韻母 a o e i u ü 的拼讀組合",
-    "含聲調的拼音練習",
-    "詞彙發音與字義理解",
-    "j/q/x + ü 的拼寫規則"
+    "暖身复习第一课生词",
+    "声母 d t n l g k h",
+    "声母 j q x",
+    "与韵母 a o e i u ü 的拼读组合",
+    "含声调的拼音练习",
+    "词汇发音与字义理解",
+    "j/q/x + ü 的拼写规则"
   ],
   "warmup_activity": {
     "item_id": "warmup_review_pinyin_lesson_01",
     "page": "P3",
-    "title": "暖身活動：複習前一課生詞",
+    "title": "暖身活动：复习前一课生词",
     "review_source_lesson_id": "pinyin_lesson_01",
-    "review_source_title": "拼音第一課：基礎入門",
-    "review_focus": "複習前一課的生詞",
+    "review_source_title": "拼音第一课：基础入门",
+    "review_focus": "复习前一课的生词",
     "activity_options": [
       {
         "activity_type": "matching",
-        "title": "連連看",
+        "title": "连连看",
         "front_prompt": "看照片",
-        "answer_target": "拼音&漢字",
-        "description": "學生看照片，連到對應的拼音與漢字。"
+        "answer_target": "拼音&汉字",
+        "description": "学生看照片，连到对应的拼音与汉字。"
       },
       {
         "activity_type": "audio_flashcard",
-        "title": "聽音猜意 flash card",
-        "front_prompt": "播放生詞音檔",
-        "back_content": "漢字＋拼音＋圖片",
-        "description": "正面播放生詞音檔，學生猜意思；反面顯示漢字、拼音與圖片。"
+        "title": "听音猜意 flash card",
+        "front_prompt": "播放生词音档",
+        "back_content": "汉字＋拼音＋图片",
+        "description": "正面播放生词音档，学生猜意思；反面显示汉字、拼音与图片。"
       }
     ],
     "source_vocabulary": [
@@ -58,7 +58,7 @@
         "pinyin": "pà"
       },
       {
-        "hanzi": "餓",
+        "hanzi": "饿",
         "pinyin": "è"
       },
       {
@@ -74,7 +74,7 @@
         "pinyin": "mù"
       },
       {
-        "hanzi": "馬",
+        "hanzi": "马",
         "pinyin": "mǎ"
       },
       {
@@ -82,7 +82,7 @@
         "pinyin": "fó"
       },
       {
-        "hanzi": "媽媽",
+        "hanzi": "妈妈",
         "pinyin": "māma"
       },
       {
@@ -90,7 +90,7 @@
         "pinyin": "bàba"
       },
       {
-        "hanzi": "服務",
+        "hanzi": "服务",
         "pinyin": "fúwù"
       },
       {
@@ -98,11 +98,11 @@
         "pinyin": "yīfu"
       },
       {
-        "hanzi": "皮膚",
+        "hanzi": "皮肤",
         "pinyin": "pífū"
       },
       {
-        "hanzi": "密碼",
+        "hanzi": "密码",
         "pinyin": "mìmǎ"
       },
       {
@@ -117,7 +117,7 @@
     "pronunciation_first": true,
     "meaning_focus": true,
     "requires_hanzi_recognition": false,
-    "notes": "暖身活動放在學習目標之後，用前一課生詞作為複習材料。"
+    "notes": "暖身活动放在学习目标之后，用前一课生词作为复习材料。"
   },
   "pages": [
     {
@@ -125,14 +125,14 @@
       "sequence": 1,
       "title": "封面",
       "record_type": "lesson_cover",
-      "content_focus": "第二課課程封面。"
+      "content_focus": "第二课课程封面。"
     },
     {
       "page_range": "P2",
       "sequence": 2,
-      "title": "學習目標",
+      "title": "学习目标",
       "record_type": "learning_objective",
-      "content_focus": "說明本課要學 d/t/n/l/g/k/h、j/q/x、含聲調拼讀、詞彙發音與字義。",
+      "content_focus": "说明本课要学 d/t/n/l/g/k/h、j/q/x、含声调拼读、词汇发音与字义。",
       "pronunciation_first": true,
       "meaning_focus": true,
       "requires_hanzi_recognition": false
@@ -140,9 +140,9 @@
     {
       "page_range": "P3",
       "sequence": 3,
-      "title": "暖身活動：複習第一課生詞",
+      "title": "暖身活动：复习第一课生词",
       "record_type": "warmup_activity",
-      "content_focus": "複習第一課生詞；活動可用連連看或聽音猜意 flash card。",
+      "content_focus": "复习第一课生词；活动可用连连看或听音猜意 flash card。",
       "pronunciation_first": true,
       "meaning_focus": true,
       "requires_hanzi_recognition": false
@@ -150,34 +150,34 @@
     {
       "page_range": "P4",
       "sequence": 4,
-      "title": "拼音學習封面 1：d t n l g k h",
+      "title": "拼音学习封面 1：d t n l g k h",
       "record_type": "pinyin_learning_cover",
-      "content_focus": "進入第一組聲母學習段落。"
+      "content_focus": "进入第一组声母学习段落。"
     },
     {
       "page_range": "P5",
       "sequence": 5,
-      "title": "拼音學習表格 1：d t n l g k h + a o e i u ü",
+      "title": "拼音学习表格 1：d t n l g k h + a o e i u ü",
       "record_type": "pinyin_chart",
-      "content_focus": "建立第一組聲母與韻母拼讀組合。",
+      "content_focus": "建立第一组声母与韵母拼读组合。",
       "pinyin_chart_id": "pinyin_chart_l2_group_1",
       "includes_tones": false
     },
     {
       "page_range": "P6",
       "sequence": 6,
-      "title": "拼音練習 1",
+      "title": "拼音练习 1",
       "record_type": "pinyin_exercise",
-      "content_focus": "第一組聲母拼讀練習，含聲調。",
+      "content_focus": "第一组声母拼读练习，含声调。",
       "source_pinyin_chart_id": "pinyin_chart_l2_group_1",
       "includes_tones": true
     },
     {
       "page_range": "P7",
       "sequence": 7,
-      "title": "詞彙 1",
+      "title": "词汇 1",
       "record_type": "vocabulary_set",
-      "content_focus": "大、拿、女、綠、地圖、喝、可樂、哥哥。",
+      "content_focus": "大、拿、女、绿、地图、喝、可乐、哥哥。",
       "vocabulary_set_id": "vocab_set_l2_01",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -186,9 +186,9 @@
     {
       "page_range": "P8",
       "sequence": 8,
-      "title": "詞彙練習 1",
+      "title": "词汇练习 1",
       "record_type": "vocab_exercise",
-      "content_focus": "詞彙 1 的發音與字義練習。",
+      "content_focus": "词汇 1 的发音与字义练习。",
       "source_vocabulary_set_id": "vocab_set_l2_01",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -197,16 +197,16 @@
     {
       "page_range": "P9",
       "sequence": 9,
-      "title": "拼音學習封面 2：j q x",
+      "title": "拼音学习封面 2：j q x",
       "record_type": "pinyin_learning_cover",
-      "content_focus": "進入第二組聲母學習段落。"
+      "content_focus": "进入第二组声母学习段落。"
     },
     {
       "page_range": "P10",
       "sequence": 10,
-      "title": "拼音學習表格 2：j q x + a o e i u ü",
+      "title": "拼音学习表格 2：j q x + a o e i u ü",
       "record_type": "pinyin_chart",
-      "content_focus": "建立 j/q/x 與韻母拼讀組合。",
+      "content_focus": "建立 j/q/x 与韵母拼读组合。",
       "pinyin_chart_id": "pinyin_chart_l2_group_2",
       "related_rule_id": "rule_l2_jqx_u_umlaut",
       "includes_tones": false
@@ -214,18 +214,18 @@
     {
       "page_range": "P11",
       "sequence": 11,
-      "title": "拼音練習 2",
+      "title": "拼音练习 2",
       "record_type": "pinyin_exercise",
-      "content_focus": "第二組聲母拼讀練習，含聲調。",
+      "content_focus": "第二组声母拼读练习，含声调。",
       "source_pinyin_chart_id": "pinyin_chart_l2_group_2",
       "includes_tones": true
     },
     {
       "page_range": "P12",
       "sequence": 12,
-      "title": "詞彙 2",
+      "title": "词汇 2",
       "record_type": "vocabulary_set",
-      "content_focus": "雞、幾、七、洗、西、騎馬。",
+      "content_focus": "鸡、几、七、洗、西、骑马。",
       "vocabulary_set_id": "vocab_set_l2_02",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -234,9 +234,9 @@
     {
       "page_range": "P13",
       "sequence": 13,
-      "title": "詞彙練習 2",
+      "title": "词汇练习 2",
       "record_type": "vocab_exercise",
-      "content_focus": "詞彙 2 的發音與字義練習。",
+      "content_focus": "词汇 2 的发音与字义练习。",
       "source_vocabulary_set_id": "vocab_set_l2_02",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -245,17 +245,17 @@
     {
       "page_range": "P14",
       "sequence": 14,
-      "title": "規則：jü→ju, qü→qu, xü→xu",
+      "title": "规则：jü→ju, qü→qu, xü→xu",
       "record_type": "spelling_rule",
-      "content_focus": "學習 j/q/x 後接 ü 時，拼寫上省略兩點。",
+      "content_focus": "学习 j/q/x 后接 ü 时，拼写上省略两点。",
       "spelling_rule_id": "rule_l2_jqx_u_umlaut"
     },
     {
       "page_range": "P15",
       "sequence": 15,
-      "title": "詞彙 3",
+      "title": "词汇 3",
       "record_type": "vocabulary_set",
-      "content_focus": "去、橘、機器、繼續。",
+      "content_focus": "去、橘、机器、继续。",
       "vocabulary_set_id": "vocab_set_l2_03",
       "related_rule_id": "rule_l2_jqx_u_umlaut",
       "pronunciation_first": true,
@@ -265,9 +265,9 @@
     {
       "page_range": "P16",
       "sequence": 16,
-      "title": "詞彙練習 3",
+      "title": "词汇练习 3",
       "record_type": "vocab_exercise",
-      "content_focus": "詞彙 3 的發音與字義練習。",
+      "content_focus": "词汇 3 的发音与字义练习。",
       "source_vocabulary_set_id": "vocab_set_l2_03",
       "related_rule_id": "rule_l2_jqx_u_umlaut",
       "pronunciation_first": true,
@@ -277,9 +277,9 @@
     {
       "page_range": null,
       "sequence": 17,
-      "title": "課後練習",
+      "title": "课后练习",
       "record_type": "review_exercise",
-      "content_focus": "2-3 個題型整合複習。",
+      "content_focus": "2-3 个题型整合复习。",
       "page_range_options": [
         "P17-P18",
         "P17-P19"
@@ -294,70 +294,70 @@
     {
       "item_id": "initial_d",
       "symbol": "d",
-      "label": "聲母 d",
+      "label": "声母 d",
       "introduced_on": "P4",
       "chart_page": "P5"
     },
     {
       "item_id": "initial_t",
       "symbol": "t",
-      "label": "聲母 t",
+      "label": "声母 t",
       "introduced_on": "P4",
       "chart_page": "P5"
     },
     {
       "item_id": "initial_n",
       "symbol": "n",
-      "label": "聲母 n",
+      "label": "声母 n",
       "introduced_on": "P4",
       "chart_page": "P5"
     },
     {
       "item_id": "initial_l",
       "symbol": "l",
-      "label": "聲母 l",
+      "label": "声母 l",
       "introduced_on": "P4",
       "chart_page": "P5"
     },
     {
       "item_id": "initial_g",
       "symbol": "g",
-      "label": "聲母 g",
+      "label": "声母 g",
       "introduced_on": "P4",
       "chart_page": "P5"
     },
     {
       "item_id": "initial_k",
       "symbol": "k",
-      "label": "聲母 k",
+      "label": "声母 k",
       "introduced_on": "P4",
       "chart_page": "P5"
     },
     {
       "item_id": "initial_h",
       "symbol": "h",
-      "label": "聲母 h",
+      "label": "声母 h",
       "introduced_on": "P4",
       "chart_page": "P5"
     },
     {
       "item_id": "initial_j",
       "symbol": "j",
-      "label": "聲母 j",
+      "label": "声母 j",
       "introduced_on": "P9",
       "chart_page": "P10"
     },
     {
       "item_id": "initial_q",
       "symbol": "q",
-      "label": "聲母 q",
+      "label": "声母 q",
       "introduced_on": "P9",
       "chart_page": "P10"
     },
     {
       "item_id": "initial_x",
       "symbol": "x",
-      "label": "聲母 x",
+      "label": "声母 x",
       "introduced_on": "P9",
       "chart_page": "P10"
     }
@@ -419,7 +419,7 @@
     {
       "item_id": "rule_l2_jqx_u_umlaut",
       "page": "P14",
-      "title": "j/q/x + ü 拼寫省略規則",
+      "title": "j/q/x + ü 拼写省略规则",
       "rules": [
         {
           "underlying_form": "jü",
@@ -434,7 +434,7 @@
           "written_form": "xu"
         }
       ],
-      "explanation": "j/q/x 後接 ü 時，拼寫省略 ü 上兩點，但發音仍是 ü。",
+      "explanation": "j/q/x 后接 ü 时，拼写省略 ü 上两点，但发音仍是 ü。",
       "applies_to_vocabulary_set_ids": [
         "vocab_set_l2_03"
       ]
@@ -445,7 +445,7 @@
       "set_id": "vocab_set_l2_01",
       "page": "P7",
       "practice_page": "P8",
-      "title": "詞彙 1",
+      "title": "词汇 1",
       "items": [
         {
           "item_id": "vocab_l2_001_da",
@@ -464,12 +464,12 @@
         },
         {
           "item_id": "vocab_l2_004_lv",
-          "hanzi": "綠",
+          "hanzi": "绿",
           "pinyin": "lǜ"
         },
         {
           "item_id": "vocab_l2_005_ditu",
-          "hanzi": "地圖",
+          "hanzi": "地图",
           "pinyin": "dìtú"
         },
         {
@@ -479,7 +479,7 @@
         },
         {
           "item_id": "vocab_l2_007_kele",
-          "hanzi": "可樂",
+          "hanzi": "可乐",
           "pinyin": "kělè"
         },
         {
@@ -496,16 +496,16 @@
       "set_id": "vocab_set_l2_02",
       "page": "P12",
       "practice_page": "P13",
-      "title": "詞彙 2",
+      "title": "词汇 2",
       "items": [
         {
           "item_id": "vocab_l2_009_ji",
-          "hanzi": "雞",
+          "hanzi": "鸡",
           "pinyin": "jī"
         },
         {
           "item_id": "vocab_l2_010_ji",
-          "hanzi": "幾",
+          "hanzi": "几",
           "pinyin": "jǐ"
         },
         {
@@ -525,7 +525,7 @@
         },
         {
           "item_id": "vocab_l2_014_qima",
-          "hanzi": "騎馬",
+          "hanzi": "骑马",
           "pinyin": "qímǎ"
         }
       ],
@@ -537,7 +537,7 @@
       "set_id": "vocab_set_l2_03",
       "page": "P15",
       "practice_page": "P16",
-      "title": "詞彙 3",
+      "title": "词汇 3",
       "related_rule_id": "rule_l2_jqx_u_umlaut",
       "items": [
         {
@@ -554,13 +554,13 @@
         },
         {
           "item_id": "vocab_l2_017_jiqi",
-          "hanzi": "機器",
+          "hanzi": "机器",
           "pinyin": "jīqì",
           "related_rule_id": "rule_l2_jqx_u_umlaut"
         },
         {
           "item_id": "vocab_l2_018_jixu",
-          "hanzi": "繼續",
+          "hanzi": "继续",
           "pinyin": "jìxù",
           "related_rule_id": "rule_l2_jqx_u_umlaut"
         }
@@ -574,8 +574,8 @@
     {
       "item_id": "exercise_l2_p6_pinyin_group_1",
       "page": "P6",
-      "exercise_type": "含聲調拼音練習",
-      "goal": "練習 d/t/n/l/g/k/h + 韻母的含聲調拼讀。",
+      "exercise_type": "含声调拼音练习",
+      "goal": "练习 d/t/n/l/g/k/h + 韵母的含声调拼读。",
       "source_pinyin_chart_id": "pinyin_chart_l2_group_1",
       "includes_tones": true,
       "pronunciation_first": true,
@@ -585,8 +585,8 @@
     {
       "item_id": "exercise_l2_p8_vocab_1",
       "page": "P8",
-      "exercise_type": "詞彙 1 練習",
-      "goal": "確認詞彙 1 發音與字義理解。",
+      "exercise_type": "词汇 1 练习",
+      "goal": "确认词汇 1 发音与字义理解。",
       "source_vocabulary_set_id": "vocab_set_l2_01",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -595,8 +595,8 @@
     {
       "item_id": "exercise_l2_p11_pinyin_group_2",
       "page": "P11",
-      "exercise_type": "含聲調拼音練習",
-      "goal": "練習 j/q/x + 韻母的含聲調拼讀。",
+      "exercise_type": "含声调拼音练习",
+      "goal": "练习 j/q/x + 韵母的含声调拼读。",
       "source_pinyin_chart_id": "pinyin_chart_l2_group_2",
       "includes_tones": true,
       "pronunciation_first": true,
@@ -606,8 +606,8 @@
     {
       "item_id": "exercise_l2_p13_vocab_2",
       "page": "P13",
-      "exercise_type": "詞彙 2 練習",
-      "goal": "確認詞彙 2 發音與字義理解。",
+      "exercise_type": "词汇 2 练习",
+      "goal": "确认词汇 2 发音与字义理解。",
       "source_vocabulary_set_id": "vocab_set_l2_02",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -616,8 +616,8 @@
     {
       "item_id": "exercise_l2_p16_vocab_3",
       "page": "P16",
-      "exercise_type": "詞彙 3 練習",
-      "goal": "確認詞彙 3 發音、字義與 j/q/x 拼寫規則。",
+      "exercise_type": "词汇 3 练习",
+      "goal": "确认词汇 3 发音、字义与 j/q/x 拼写规则。",
       "source_vocabulary_set_id": "vocab_set_l2_03",
       "related_rule_id": "rule_l2_jqx_u_umlaut",
       "pronunciation_first": true,
@@ -632,12 +632,12 @@
         "P17-P19"
       ],
       "is_page_range_flexible": true,
-      "exercise_type": "課後整合練習",
-      "goal": "用 2-3 個題型整合複習。",
+      "exercise_type": "课后整合练习",
+      "goal": "用 2-3 个题型整合复习。",
       "suggested_question_types": [
-        "聽音選拼音",
-        "看拼音朗讀",
-        "字義配對"
+        "听音选拼音",
+        "看拼音朗读",
+        "字义配对"
       ],
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -657,11 +657,11 @@
           "total_pages": 19
         }
       ],
-      "impact": "新增 P3 暖身活動後，課後練習頁碼順延；決定第二課總頁數為 18 或 19。"
+      "impact": "新增 P3 暖身活动后，课后练习页码顺延；决定第二课总页数为 18 或 19。"
     }
   ],
   "database_notes": [
-    "新增 P3 暖身活動後，原 P3 起所有頁碼順延一頁。",
-    "P3 暖身活動複習第一課生詞，可用連連看或聽音猜意 flash card。"
+    "新增 P3 暖身活动后，原 P3 起所有页码顺延一页。",
+    "P3 暖身活动复习第一课生词，可用连连看或听音猜意 flash card。"
   ]
 }

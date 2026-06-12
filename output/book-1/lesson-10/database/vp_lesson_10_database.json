@@ -944,7 +944,7 @@
       "order": 6,
       "module": "Luyện từ vựng",
       "module_id": "vocabulary_practice",
-      "content_focus": "連連看 matching cho toàn bộ sinh词 bài 10. Một slide 16:9 chia 3 hàng: hàng 1 là 汉字, hàng 2 là pinyin, hàng 3 là hình ảnh. Ba hàng phải được xáo trộn độc lập, không để cùng thứ tự. Hình ảnh phải tạo theo nghĩa từng từ, ví dụ 办公室 dùng hình văn phòng.",
+      "content_focus": "连连看 matching cho toàn bộ sinh词 bài 10. Một slide 16:9 chia 3 hàng: hàng 1 là 汉字, hàng 2 là pinyin, hàng 3 là hình ảnh. Ba hàng phải được xáo trộn độc lập, không để cùng thứ tự. Hình ảnh phải tạo theo nghĩa từng từ, ví dụ 办公室 dùng hình văn phòng.",
       "source_pages": "77-78",
       "item_ids": "V001,V001A,V002,V003,V004,V005,V006,V007,V008,V009,V010,V011,V012,V013,V013A,V013B,V014,V015,V016,V016A"
     },
@@ -1018,7 +1018,7 @@
     {
       "activity_id": "A002",
       "activity_type": "vocabulary_drill",
-      "title_vi": "連連看: 汉字 / pinyin / hình ảnh",
+      "title_vi": "连连看: 汉字 / pinyin / hình ảnh",
       "description_vi": "Tạo một slide matching 3 hàng. Hàng 1: toàn bộ 汉字 của sinh词 bài 10. Hàng 2: pinyin. Hàng 3: hình ảnh tương ứng nghĩa của từ. Xáo trộn thứ tự từng hàng độc lập; không để 汉字, pinyin và hình đứng đúng thứ tự sẵn.",
       "source_pages": "77-78",
       "target_items": "V001,V001A,V002,V003,V004,V005,V006,V007,V008,V009,V010,V011,V012,V013,V013A,V013B,V014,V015,V016,V016A",
@@ -1075,7 +1075,7 @@
       "game_id": "GAM001",
       "activity_id": "A002",
       "platform": "Slide matching / Quizizz",
-      "title_vi": "連連看 3 hàng",
+      "title_vi": "连连看 3 hàng",
       "description_vi": "Ghép toàn bộ sinh词 bài 10 theo 3 hàng: 汉字, pinyin, hình ảnh. Ba hàng phải xáo trộn độc lập.",
       "source_pages": "77-78",
       "suitable_for_group_game": "yes"

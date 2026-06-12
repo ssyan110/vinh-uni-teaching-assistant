@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "lesson_id": "pinyin-05",
-  "generated_at": "2026-06-10T09:25:52.527Z",
+  "generated_at": "2026-06-12T08:07:07.627Z",
   "source_database": "database",
   "workflow": {
     "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
@@ -418,10 +418,12 @@
         "04-warmup-review.html",
         "12-vocabulary-1.html",
         "13-flash-v001-mifan.html",
-        "21-practice-vocabulary-1.html"
+        "21-practice-vocabulary-1.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V001"
@@ -455,10 +457,12 @@
         "04-warmup-review.html",
         "12-vocabulary-1.html",
         "14-flash-v002-nan.html",
-        "21-practice-vocabulary-1.html"
+        "21-practice-vocabulary-1.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V002"
@@ -492,10 +496,12 @@
         "04-warmup-review.html",
         "12-vocabulary-1.html",
         "15-flash-v003-jidan.html",
-        "21-practice-vocabulary-1.html"
+        "21-practice-vocabulary-1.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V003"
@@ -529,10 +535,12 @@
         "04-warmup-review.html",
         "12-vocabulary-1.html",
         "16-flash-v004-men.html",
-        "21-practice-vocabulary-1.html"
+        "21-practice-vocabulary-1.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V004"
@@ -566,10 +574,12 @@
         "04-warmup-review.html",
         "12-vocabulary-1.html",
         "17-flash-v005-ren.html",
-        "21-practice-vocabulary-1.html"
+        "21-practice-vocabulary-1.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V005"
@@ -603,10 +613,12 @@
         "04-warmup-review.html",
         "12-vocabulary-1.html",
         "18-flash-v006-xin.html",
-        "21-practice-vocabulary-1.html"
+        "21-practice-vocabulary-1.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V006"
@@ -639,10 +651,12 @@
       "used_by": [
         "12-vocabulary-1.html",
         "19-flash-v007-chun.html",
-        "21-practice-vocabulary-1.html"
+        "21-practice-vocabulary-1.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V007"
@@ -675,10 +689,12 @@
       "used_by": [
         "12-vocabulary-1.html",
         "20-flash-v008-kun.html",
-        "21-practice-vocabulary-1.html"
+        "21-practice-vocabulary-1.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V008"
@@ -711,10 +727,12 @@
       "used_by": [
         "29-vocabulary-2.html",
         "30-flash-v009-junren.html",
-        "33-practice-vocabulary-2.html"
+        "33-practice-vocabulary-2.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V009"
@@ -747,10 +765,12 @@
       "used_by": [
         "29-vocabulary-2.html",
         "31-flash-v010-qunzi.html",
-        "33-practice-vocabulary-2.html"
+        "33-practice-vocabulary-2.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V010"
@@ -783,10 +803,12 @@
       "used_by": [
         "29-vocabulary-2.html",
         "32-flash-v011-peixun.html",
-        "33-practice-vocabulary-2.html"
+        "33-practice-vocabulary-2.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V011"
@@ -819,10 +841,12 @@
       "used_by": [
         "37-vocabulary-3.html",
         "38-flash-v012-tang.html",
-        "46-practice-vocabulary-3.html"
+        "46-practice-vocabulary-3.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V012"
@@ -855,10 +879,12 @@
       "used_by": [
         "37-vocabulary-3.html",
         "39-flash-v013-zang.html",
-        "46-practice-vocabulary-3.html"
+        "46-practice-vocabulary-3.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V013"
@@ -892,10 +918,12 @@
         "37-vocabulary-3.html",
         "40-flash-v014-teng.html",
         "46-practice-vocabulary-3.html",
-        "50-review-vocabulary-match.html"
+        "50-review-vocabulary-match.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V014"
@@ -929,10 +957,12 @@
         "37-vocabulary-3.html",
         "41-flash-v015-leng.html",
         "46-practice-vocabulary-3.html",
-        "50-review-vocabulary-match.html"
+        "50-review-vocabulary-match.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V015"
@@ -966,10 +996,12 @@
         "37-vocabulary-3.html",
         "42-flash-v016-mingzi.html",
         "46-practice-vocabulary-3.html",
-        "50-review-vocabulary-match.html"
+        "50-review-vocabulary-match.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V016"
@@ -1003,10 +1035,12 @@
         "37-vocabulary-3.html",
         "43-flash-v017-ting.html",
         "46-practice-vocabulary-3.html",
-        "50-review-vocabulary-match.html"
+        "50-review-vocabulary-match.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V017"
@@ -1040,10 +1074,12 @@
         "37-vocabulary-3.html",
         "44-flash-v018-long.html",
         "46-practice-vocabulary-3.html",
-        "50-review-vocabulary-match.html"
+        "50-review-vocabulary-match.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V018"
@@ -1077,10 +1113,12 @@
         "37-vocabulary-3.html",
         "45-flash-v019-chenggong.html",
         "46-practice-vocabulary-3.html",
-        "50-review-vocabulary-match.html"
+        "50-review-vocabulary-match.html",
+        "vocab-image-prompts"
       ],
       "html_reference_types": [
-        "img"
+        "img",
+        "prompt_metadata"
       ],
       "record_ids": [
         "V019"

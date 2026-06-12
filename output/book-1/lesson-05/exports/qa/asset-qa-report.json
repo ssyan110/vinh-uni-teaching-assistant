@@ -1,6 +1,6 @@
 {
   "lesson_id": "lesson-05",
-  "checked_at": "2026-06-11T07:13:10.163Z",
+  "checked_at": "2026-06-12T08:00:36.829Z",
   "manifest": "output/book-1/lesson-05/slides/assets/asset-manifest.json",
   "status": "passed",
   "failed": [],
@@ -13,7 +13,7 @@
     {
       "label": "manifest has assets",
       "pass": true,
-      "detail": "20 assets"
+      "detail": "21 assets"
     },
     {
       "label": "required asset: assets/slide-base.css",

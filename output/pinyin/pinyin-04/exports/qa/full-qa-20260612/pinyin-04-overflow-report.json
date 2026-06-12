@@ -1,0 +1,2692 @@
+{
+  "lesson": "pinyin-04",
+  "checked_at": "2026-06-12T05:35:50.323Z",
+  "slide_count": 59,
+  "issue_count": 38,
+  "issues": [
+    {
+      "index": 1,
+      "file": "01-cover.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.cover",
+          "text": "PINYIN 4 · 拼音第四课 pīn 拼 yīn 音 ai ao ou ei er iu ui ie üe Quy tắc j/q/x/ + üe",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 1040,
+            "h": 540
+          },
+          "clientSize": {
+            "w": 960,
+            "h": 540
+          }
+        },
+        {
+          "tag": "div.aligned-text.cover-align",
+          "text": "pīn 拼 yīn 音",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 62,
+            "y": 153,
+            "w": 520,
+            "h": 105
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 520,
+            "h": 122
+          },
+          "clientSize": {
+            "w": 520,
+            "h": 105
+          }
+        },
+        {
+          "tag": "span.a-word",
+          "text": "pīn 拼",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 62,
+            "y": 153,
+            "w": 76,
+            "h": 105
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 76,
+            "h": 122
+          },
+          "clientSize": {
+            "w": 76,
+            "h": 105
+          }
+        },
+        {
+          "tag": "span.a-han",
+          "text": "拼",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 62,
+            "y": 182,
+            "w": 76,
+            "h": 76
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 76,
+            "h": 93
+          },
+          "clientSize": {
+            "w": 76,
+            "h": 76
+          }
+        },
+        {
+          "tag": "span.a-word",
+          "text": "yīn 音",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 152,
+            "y": 153,
+            "w": 76,
+            "h": 105
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 76,
+            "h": 122
+          },
+          "clientSize": {
+            "w": 76,
+            "h": 105
+          }
+        },
+        {
+          "tag": "span.a-han",
+          "text": "音",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 152,
+            "y": 182,
+            "w": 76,
+            "h": 76
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 76,
+            "h": 93
+          },
+          "clientSize": {
+            "w": 76,
+            "h": 76
+          }
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "file": "04-warmup-review.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.han",
+          "text": "炸鸡",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 92.5,
+            "y": 172.8,
+            "w": 60,
+            "h": 30
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 60,
+            "h": 37
+          },
+          "clientSize": {
+            "w": 60,
+            "h": 30
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "茶",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 250.5,
+            "y": 172.8,
+            "w": 30,
+            "h": 30
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 30,
+            "h": 37
+          },
+          "clientSize": {
+            "w": 30,
+            "h": 30
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "车",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 393.5,
+            "y": 172.8,
+            "w": 30,
+            "h": 30
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 30,
+            "h": 37
+          },
+          "clientSize": {
+            "w": 30,
+            "h": 30
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "热",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 536.5,
+            "y": 172.8,
+            "w": 30,
+            "h": 30
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 30,
+            "h": 37
+          },
+          "clientSize": {
+            "w": 30,
+            "h": 30
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "吃",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 679.5,
+            "y": 172.8,
+            "w": 30,
+            "h": 30
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 30,
+            "h": 37
+          },
+          "clientSize": {
+            "w": 30,
+            "h": 30
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "十",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 822.5,
+            "y": 172.8,
+            "w": 30,
+            "h": 30
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 30,
+            "h": 37
+          },
+          "clientSize": {
+            "w": 30,
+            "h": 30
+          }
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "file": "13-vocabulary-1.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.hanzi",
+          "text": "开",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 67,
+            "y": 191.7,
+            "w": 182.5,
+            "h": 34.7
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 183,
+            "h": 39
+          },
+          "clientSize": {
+            "w": 183,
+            "h": 35
+          }
+        },
+        {
+          "tag": "div.hanzi",
+          "text": "菜",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 281.5,
+            "y": 191.7,
+            "w": 182.5,
+            "h": 34.7
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 183,
+            "h": 39
+          },
+          "clientSize": {
+            "w": 183,
+            "h": 35
+          }
+        },
+        {
+          "tag": "div.hanzi",
+          "text": "猫",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 496,
+            "y": 191.7,
+            "w": 182.5,
+            "h": 34.7
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 183,
+            "h": 39
+          },
+          "clientSize": {
+            "w": 183,
+            "h": 35
+          }
+        },
+        {
+          "tag": "div.hanzi",
+          "text": "少",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 710.5,
+            "y": 191.7,
+            "w": 182.5,
+            "h": 34.7
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 183,
+            "h": 39
+          },
+          "clientSize": {
+            "w": 183,
+            "h": 35
+          }
+        },
+        {
+          "tag": "div.hanzi",
+          "text": "手",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 67,
+            "y": 388.7,
+            "w": 182.5,
+            "h": 34.7
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 183,
+            "h": 39
+          },
+          "clientSize": {
+            "w": 183,
+            "h": 35
+          }
+        },
+        {
+          "tag": "div.hanzi",
+          "text": "口",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 281.5,
+            "y": 388.7,
+            "w": 182.5,
+            "h": 34.7
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 183,
+            "h": 39
+          },
+          "clientSize": {
+            "w": 183,
+            "h": 35
+          }
+        },
+        {
+          "tag": "div.hanzi",
+          "text": "谁",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 496,
+            "y": 388.7,
+            "w": 182.5,
+            "h": 34.7
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 183,
+            "h": 39
+          },
+          "clientSize": {
+            "w": 183,
+            "h": 35
+          }
+        },
+        {
+          "tag": "div.hanzi",
+          "text": "二",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 710.5,
+            "y": 388.7,
+            "w": 182.5,
+            "h": 34.7
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 183,
+            "h": 39
+          },
+          "clientSize": {
+            "w": 183,
+            "h": 35
+          }
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "file": "14-flash-v001-kai.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.pinyin.flash-pinyin",
+          "text": "kāi",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 439,
+            "y": 260.3,
+            "w": 115.9,
+            "h": 77.3
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 116,
+            "h": 85
+          },
+          "clientSize": {
+            "w": 116,
+            "h": 77
+          }
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "file": "15-flash-v002-cai.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.pinyin.flash-pinyin",
+          "text": "cài",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 438.8,
+            "y": 260.3,
+            "w": 116.4,
+            "h": 77.3
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 116,
+            "h": 85
+          },
+          "clientSize": {
+            "w": 116,
+            "h": 77
+          }
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "file": "16-flash-v003-mao.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.pinyin.flash-pinyin",
+          "text": "māo",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 413.3,
+            "y": 260.3,
+            "w": 167.4,
+            "h": 77.3
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 167,
+            "h": 85
+          },
+          "clientSize": {
+            "w": 167,
+            "h": 77
+          }
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "file": "17-flash-v004-shao.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.pinyin.flash-pinyin",
+          "text": "shǎo",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 401.9,
+            "y": 260.3,
+            "w": 190.2,
+            "h": 77.3
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 190,
+            "h": 85
+          },
+          "clientSize": {
+            "w": 190,
+            "h": 77
+          }
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "file": "18-flash-v005-shou.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.pinyin.flash-pinyin",
+          "text": "shǒu",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 399.9,
+            "y": 260.3,
+            "w": 194.2,
+            "h": 77.3
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 194,
+            "h": 85
+          },
+          "clientSize": {
+            "w": 194,
+            "h": 77
+          }
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "file": "19-flash-v006-kou.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.pinyin.flash-pinyin",
+          "text": "kǒu",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 424.3,
+            "y": 260.3,
+            "w": 145.5,
+            "h": 77.3
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 145,
+            "h": 85
+          },
+          "clientSize": {
+            "w": 145,
+            "h": 77
+          }
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "file": "20-flash-v007-shei.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.pinyin.flash-pinyin",
+          "text": "shéi",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 414.3,
+            "y": 260.3,
+            "w": 165.5,
+            "h": 77.3
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 165,
+            "h": 85
+          },
+          "clientSize": {
+            "w": 165,
+            "h": 77
+          }
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "file": "21-flash-v008-er.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.pinyin.flash-pinyin",
+          "text": "èr",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 456.8,
+            "y": 260.3,
+            "w": 80.4,
+            "h": 77.3
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 80,
+            "h": 85
+          },
+          "clientSize": {
+            "w": 80,
+            "h": 77
+          }
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "file": "22-practice-vocabulary-1-1.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.han",
+          "text": "开",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 119.8,
+            "y": 172.5,
+            "w": 34,
+            "h": 34
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 34,
+            "h": 41
+          },
+          "clientSize": {
+            "w": 34,
+            "h": 34
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "菜",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 291.4,
+            "y": 172.5,
+            "w": 34,
+            "h": 34
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 34,
+            "h": 41
+          },
+          "clientSize": {
+            "w": 34,
+            "h": 34
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "猫",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 463,
+            "y": 172.5,
+            "w": 34,
+            "h": 34
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 34,
+            "h": 41
+          },
+          "clientSize": {
+            "w": 34,
+            "h": 34
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "少",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 634.6,
+            "y": 172.5,
+            "w": 34,
+            "h": 34
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 34,
+            "h": 41
+          },
+          "clientSize": {
+            "w": 34,
+            "h": 34
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "手",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 806.2,
+            "y": 172.5,
+            "w": 34,
+            "h": 34
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 34,
+            "h": 41
+          },
+          "clientSize": {
+            "w": 34,
+            "h": 34
+          }
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "file": "23-practice-vocabulary-1-2.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.han",
+          "text": "口",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 177,
+            "y": 172.5,
+            "w": 34,
+            "h": 34
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 34,
+            "h": 41
+          },
+          "clientSize": {
+            "w": 34,
+            "h": 34
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "谁",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 463,
+            "y": 172.5,
+            "w": 34,
+            "h": 34
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 34,
+            "h": 41
+          },
+          "clientSize": {
+            "w": 34,
+            "h": 34
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "二",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 749,
+            "y": 172.5,
+            "w": 34,
+            "h": 34
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 34,
+            "h": 41
+          },
+          "clientSize": {
+            "w": 34,
+            "h": 34
+          }
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "file": "31-vocabulary-2-1.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.hanzi",
+          "text": "六",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 67,
+            "y": 191.7,
+            "w": 182.5,
+            "h": 34.7
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 183,
+            "h": 39
+          },
+          "clientSize": {
+            "w": 183,
+            "h": 35
+          }
+        },
+        {
+          "tag": "div.hanzi",
+          "text": "牛",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 281.5,
+            "y": 191.7,
+            "w": 182.5,
+            "h": 34.7
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 183,
+            "h": 39
+          },
+          "clientSize": {
+            "w": 183,
+            "h": 35
+          }
+        },
+        {
+          "tag": "div.hanzi",
+          "text": "九",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 496,
+            "y": 191.7,
+            "w": 182.5,
+            "h": 34.7
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 183,
+            "h": 39
+          },
+          "clientSize": {
+            "w": 183,
+            "h": 35
+          }
+        },
+        {
+          "tag": "div.hanzi",
+          "text": "球",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 710.5,
+            "y": 191.7,
+            "w": 182.5,
+            "h": 34.7
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 183,
+            "h": 39
+          },
+          "clientSize": {
+            "w": 183,
+            "h": 35
+          }
+        },
+        {
+          "tag": "div.hanzi",
+          "text": "对",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 67,
+            "y": 388.7,
+            "w": 182.5,
+            "h": 34.7
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 183,
+            "h": 39
+          },
+          "clientSize": {
+            "w": 183,
+            "h": 35
+          }
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "file": "32-vocabulary-2-2.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.hanzi",
+          "text": "睡",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 67,
+            "y": 191.7,
+            "w": 182.5,
+            "h": 34.7
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 183,
+            "h": 39
+          },
+          "clientSize": {
+            "w": 183,
+            "h": 35
+          }
+        },
+        {
+          "tag": "div.hanzi",
+          "text": "贵",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 281.5,
+            "y": 191.7,
+            "w": 182.5,
+            "h": 34.7
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 183,
+            "h": 39
+          },
+          "clientSize": {
+            "w": 183,
+            "h": 35
+          }
+        },
+        {
+          "tag": "div.hanzi",
+          "text": "姐姐",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 496,
+            "y": 191.7,
+            "w": 182.5,
+            "h": 34.7
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 183,
+            "h": 39
+          },
+          "clientSize": {
+            "w": 183,
+            "h": 35
+          }
+        },
+        {
+          "tag": "div.hanzi",
+          "text": "写",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 710.5,
+            "y": 191.7,
+            "w": 182.5,
+            "h": 34.7
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 183,
+            "h": 39
+          },
+          "clientSize": {
+            "w": 183,
+            "h": 35
+          }
+        },
+        {
+          "tag": "div.hanzi",
+          "text": "谢谢",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 67,
+            "y": 388.7,
+            "w": 182.5,
+            "h": 34.7
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 183,
+            "h": 39
+          },
+          "clientSize": {
+            "w": 183,
+            "h": 35
+          }
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "file": "33-flash-v009-liu.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.pinyin.flash-pinyin",
+          "text": "liù",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 449,
+            "y": 260.3,
+            "w": 96,
+            "h": 77.3
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 96,
+            "h": 85
+          },
+          "clientSize": {
+            "w": 96,
+            "h": 77
+          }
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "file": "34-flash-v010-niu.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.pinyin.flash-pinyin",
+          "text": "niú",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 435.3,
+            "y": 260.3,
+            "w": 123.3,
+            "h": 77.3
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 123,
+            "h": 85
+          },
+          "clientSize": {
+            "w": 123,
+            "h": 77
+          }
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "file": "35-flash-v011-jiu.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.pinyin.flash-pinyin",
+          "text": "jiǔ",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 449,
+            "y": 260.3,
+            "w": 96,
+            "h": 77.3
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 96,
+            "h": 85
+          },
+          "clientSize": {
+            "w": 96,
+            "h": 77
+          }
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "file": "36-flash-v012-qiu.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.pinyin.flash-pinyin",
+          "text": "qiú",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 435.5,
+            "y": 260.3,
+            "w": 123,
+            "h": 77.3
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 123,
+            "h": 85
+          },
+          "clientSize": {
+            "w": 123,
+            "h": 77
+          }
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "file": "37-flash-v013-dui.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.pinyin.flash-pinyin",
+          "text": "duì",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 435.5,
+            "y": 260.3,
+            "w": 123,
+            "h": 77.3
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 123,
+            "h": 85
+          },
+          "clientSize": {
+            "w": 123,
+            "h": 77
+          }
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "file": "38-flash-v014-shui.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.pinyin.flash-pinyin",
+          "text": "shuì",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 412.6,
+            "y": 260.3,
+            "w": 168.8,
+            "h": 77.3
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 169,
+            "h": 85
+          },
+          "clientSize": {
+            "w": 169,
+            "h": 77
+          }
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "file": "39-flash-v015-gui.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.pinyin.flash-pinyin",
+          "text": "guì",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 435.4,
+            "y": 260.3,
+            "w": 123.2,
+            "h": 77.3
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 123,
+            "h": 85
+          },
+          "clientSize": {
+            "w": 123,
+            "h": 77
+          }
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "file": "40-flash-v016-jiejie.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.pinyin.flash-pinyin",
+          "text": "jiějie",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 404.3,
+            "y": 260.3,
+            "w": 185.3,
+            "h": 77.3
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 185,
+            "h": 85
+          },
+          "clientSize": {
+            "w": 185,
+            "h": 77
+          }
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "file": "41-flash-v017-xie.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.pinyin.flash-pinyin",
+          "text": "xiě",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 438.5,
+            "y": 260.3,
+            "w": 116.9,
+            "h": 77.3
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 117,
+            "h": 85
+          },
+          "clientSize": {
+            "w": 117,
+            "h": 77
+          }
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "file": "42-flash-v018-xiexie.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.pinyin.flash-pinyin",
+          "text": "xièxie",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 380.8,
+            "y": 260.3,
+            "w": 232.4,
+            "h": 77.3
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 232,
+            "h": 85
+          },
+          "clientSize": {
+            "w": 232,
+            "h": 77
+          }
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "file": "43-practice-vocabulary-2-1.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.han",
+          "text": "六",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 119.8,
+            "y": 172.5,
+            "w": 34,
+            "h": 34
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 34,
+            "h": 41
+          },
+          "clientSize": {
+            "w": 34,
+            "h": 34
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "牛",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 291.4,
+            "y": 172.5,
+            "w": 34,
+            "h": 34
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 34,
+            "h": 41
+          },
+          "clientSize": {
+            "w": 34,
+            "h": 34
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "九",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 463,
+            "y": 172.5,
+            "w": 34,
+            "h": 34
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 34,
+            "h": 41
+          },
+          "clientSize": {
+            "w": 34,
+            "h": 34
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "球",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 634.6,
+            "y": 172.5,
+            "w": 34,
+            "h": 34
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 34,
+            "h": 41
+          },
+          "clientSize": {
+            "w": 34,
+            "h": 34
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "对",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 806.2,
+            "y": 172.5,
+            "w": 34,
+            "h": 34
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 34,
+            "h": 41
+          },
+          "clientSize": {
+            "w": 34,
+            "h": 34
+          }
+        }
+      ]
+    },
+    {
+      "index": 44,
+      "file": "44-practice-vocabulary-2-2.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.han",
+          "text": "睡",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 119.8,
+            "y": 172.5,
+            "w": 34,
+            "h": 34
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 34,
+            "h": 41
+          },
+          "clientSize": {
+            "w": 34,
+            "h": 34
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "贵",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 291.4,
+            "y": 172.5,
+            "w": 34,
+            "h": 34
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 34,
+            "h": 41
+          },
+          "clientSize": {
+            "w": 34,
+            "h": 34
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "姐姐",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 446,
+            "y": 172.5,
+            "w": 68,
+            "h": 34
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 68,
+            "h": 41
+          },
+          "clientSize": {
+            "w": 68,
+            "h": 34
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "写",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 634.6,
+            "y": 172.5,
+            "w": 34,
+            "h": 34
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 34,
+            "h": 41
+          },
+          "clientSize": {
+            "w": 34,
+            "h": 34
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "谢谢",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 789.2,
+            "y": 172.5,
+            "w": 68,
+            "h": 34
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 68,
+            "h": 41
+          },
+          "clientSize": {
+            "w": 68,
+            "h": 34
+          }
+        }
+      ]
+    },
+    {
+      "index": 46,
+      "file": "46-rule-jqx-ue-jue.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.rule-flash-token",
+          "text": "j u e",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 423.1,
+            "y": 306,
+            "w": 113.8,
+            "h": 72
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 114,
+            "h": 79
+          },
+          "clientSize": {
+            "w": 114,
+            "h": 72
+          }
+        },
+        {
+          "tag": "span",
+          "text": "j",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 423.1,
+            "y": 306,
+            "w": 21.3,
+            "h": 72
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 21,
+            "h": 79
+          },
+          "clientSize": {
+            "w": 21,
+            "h": 72
+          }
+        },
+        {
+          "tag": "span.u-letter",
+          "text": "u",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 445.4,
+            "y": 306,
+            "w": 46.8,
+            "h": 72
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 47,
+            "h": 79
+          },
+          "clientSize": {
+            "w": 47,
+            "h": 72
+          }
+        },
+        {
+          "tag": "span",
+          "text": "e",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 493.2,
+            "y": 306,
+            "w": 43.7,
+            "h": 72
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 44,
+            "h": 79
+          },
+          "clientSize": {
+            "w": 44,
+            "h": 72
+          }
+        }
+      ]
+    },
+    {
+      "index": 47,
+      "file": "47-rule-jqx-ue-que.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.rule-flash-token",
+          "text": "q u e",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 410.5,
+            "y": 306,
+            "w": 138.9,
+            "h": 72
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 139,
+            "h": 79
+          },
+          "clientSize": {
+            "w": 139,
+            "h": 72
+          }
+        },
+        {
+          "tag": "span",
+          "text": "q",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 410.5,
+            "y": 306,
+            "w": 46.5,
+            "h": 72
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 46,
+            "h": 79
+          },
+          "clientSize": {
+            "w": 46,
+            "h": 72
+          }
+        },
+        {
+          "tag": "span.u-letter",
+          "text": "u",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 458,
+            "y": 306,
+            "w": 46.8,
+            "h": 72
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 47,
+            "h": 79
+          },
+          "clientSize": {
+            "w": 47,
+            "h": 72
+          }
+        },
+        {
+          "tag": "span",
+          "text": "e",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 505.8,
+            "y": 306,
+            "w": 43.7,
+            "h": 72
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 44,
+            "h": 79
+          },
+          "clientSize": {
+            "w": 44,
+            "h": 72
+          }
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "file": "48-rule-jqx-ue-xue.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.rule-flash-token",
+          "text": "x u e",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 411.8,
+            "y": 306,
+            "w": 136.3,
+            "h": 72
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 136,
+            "h": 79
+          },
+          "clientSize": {
+            "w": 136,
+            "h": 72
+          }
+        },
+        {
+          "tag": "span",
+          "text": "x",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 411.8,
+            "y": 306,
+            "w": 43.9,
+            "h": 72
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 44,
+            "h": 79
+          },
+          "clientSize": {
+            "w": 44,
+            "h": 72
+          }
+        },
+        {
+          "tag": "span.u-letter",
+          "text": "u",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 456.7,
+            "y": 306,
+            "w": 46.8,
+            "h": 72
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 47,
+            "h": 79
+          },
+          "clientSize": {
+            "w": 47,
+            "h": 72
+          }
+        },
+        {
+          "tag": "span",
+          "text": "e",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 504.5,
+            "y": 306,
+            "w": 43.7,
+            "h": 72
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 44,
+            "h": 79
+          },
+          "clientSize": {
+            "w": 44,
+            "h": 72
+          }
+        }
+      ]
+    },
+    {
+      "index": 50,
+      "file": "50-vocabulary-3.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.hanzi",
+          "text": "觉得",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 175,
+            "y": 323.2,
+            "w": 174,
+            "h": 42.5
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 174,
+            "h": 48
+          },
+          "clientSize": {
+            "w": 174,
+            "h": 43
+          }
+        },
+        {
+          "tag": "div.hanzi",
+          "text": "缺",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 393,
+            "y": 323.2,
+            "w": 174,
+            "h": 42.5
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 174,
+            "h": 48
+          },
+          "clientSize": {
+            "w": 174,
+            "h": 43
+          }
+        },
+        {
+          "tag": "div.hanzi",
+          "text": "学",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 611,
+            "y": 323.2,
+            "w": 174,
+            "h": 42.5
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 174,
+            "h": 48
+          },
+          "clientSize": {
+            "w": 174,
+            "h": 43
+          }
+        }
+      ]
+    },
+    {
+      "index": 51,
+      "file": "51-flash-v019-juede.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.pinyin.flash-pinyin",
+          "text": "juéde",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 388.6,
+            "y": 260.3,
+            "w": 216.8,
+            "h": 77.3
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 217,
+            "h": 85
+          },
+          "clientSize": {
+            "w": 217,
+            "h": 77
+          }
+        }
+      ]
+    },
+    {
+      "index": 52,
+      "file": "52-flash-v020-que.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.pinyin.flash-pinyin",
+          "text": "quē",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 423.5,
+            "y": 260.3,
+            "w": 147,
+            "h": 77.3
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 147,
+            "h": 85
+          },
+          "clientSize": {
+            "w": 147,
+            "h": 77
+          }
+        }
+      ]
+    },
+    {
+      "index": 53,
+      "file": "53-flash-v021-xue.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.pinyin.flash-pinyin",
+          "text": "xué",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 424.9,
+            "y": 260.3,
+            "w": 144.3,
+            "h": 77.3
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 144,
+            "h": 85
+          },
+          "clientSize": {
+            "w": 144,
+            "h": 77
+          }
+        }
+      ]
+    },
+    {
+      "index": 55,
+      "file": "55-review-listening-choice.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.tone-choice-wrap",
+          "text": "Nghe và chọn pinyin đúng 1 A.kāi B.kēi C.kǎo D.kōu 2 A.cài B.cèi C.cuì D.cào 3 A.māo B.mōu C.mǎi D.mēi 4 A.shǒu B.shuǐ C",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 58,
+            "y": 74,
+            "w": 844,
+            "h": 424
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 850,
+            "h": 424
+          },
+          "clientSize": {
+            "w": 844,
+            "h": 424
+          }
+        }
+      ]
+    },
+    {
+      "index": 57,
+      "file": "57-review-vocabulary-match.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.han",
+          "text": "开",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 107.5,
+            "y": 172.8,
+            "w": 30,
+            "h": 30
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 30,
+            "h": 37
+          },
+          "clientSize": {
+            "w": 30,
+            "h": 30
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "菜",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 250.5,
+            "y": 172.8,
+            "w": 30,
+            "h": 30
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 30,
+            "h": 37
+          },
+          "clientSize": {
+            "w": 30,
+            "h": 30
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "猫",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 393.5,
+            "y": 172.8,
+            "w": 30,
+            "h": 30
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 30,
+            "h": 37
+          },
+          "clientSize": {
+            "w": 30,
+            "h": 30
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "少",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 536.5,
+            "y": 172.8,
+            "w": 30,
+            "h": 30
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 30,
+            "h": 37
+          },
+          "clientSize": {
+            "w": 30,
+            "h": 30
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "手",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 679.5,
+            "y": 172.8,
+            "w": 30,
+            "h": 30
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 30,
+            "h": 37
+          },
+          "clientSize": {
+            "w": 30,
+            "h": 30
+          }
+        },
+        {
+          "tag": "div.han",
+          "text": "口",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 822.5,
+            "y": 172.8,
+            "w": 30,
+            "h": 30
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 30,
+            "h": 37
+          },
+          "clientSize": {
+            "w": 30,
+            "h": 30
+          }
+        }
+      ]
+    },
+    {
+      "index": 58,
+      "file": "58-review-rule-choice.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.tone-choice-wrap",
+          "text": "Nghe và chọn cách viết đúng 1 A.jue B.jüe C.jüi D.jui 2 A.que B.qüe C.qui D.qie 3 A.xue B.xüe C.xui D.xie 4 A.juéde B.jü",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 58,
+            "y": 74,
+            "w": 844,
+            "h": 424
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 850,
+            "h": 424
+          },
+          "clientSize": {
+            "w": 844,
+            "h": 424
+          }
+        }
+      ]
+    },
+    {
+      "index": 59,
+      "file": "59-closing.html",
+      "errors": [],
+      "overflow": [
+        {
+          "tag": "div.closing-zh",
+          "text": "下课",
+          "outside": false,
+          "scroll": true,
+          "rect": {
+            "x": 456,
+            "y": 170,
+            "w": 224,
+            "h": 103
+          },
+          "slide": {
+            "x": 0,
+            "y": 0,
+            "w": 960,
+            "h": 540
+          },
+          "scrollSize": {
+            "w": 224,
+            "h": 132
+          },
+          "clientSize": {
+            "w": 224,
+            "h": 103
+          }
+        }
+      ]
+    }
+  ]
+}

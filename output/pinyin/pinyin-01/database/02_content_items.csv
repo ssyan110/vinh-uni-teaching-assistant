@@ -1,27 +1,27 @@
 record_id,record_type,section,source_page,source_page_range,teaching_order,chinese_simplified,chinese_traditional,pinyin,vietnamese,pronunciation_first,requires_hanzi_recognition,raw_source_text
-C001,concept,Khái niệm về pinyin,3,3-4,1,,,,,true,false,拼音是什麼、拼音用途、聲母/韻母/聲調概念。
-I001,initials,Thanh mẫu,5,5,2,,,,,true,false,聲母 b p m f
-F001,finals,Vận mẫu,5,5,3,,,,,true,false,韻母 a o e i u ü
-EX001,exercise,Luyện pinyin,6,6,4,,,,,true,false,拼讀練習，不含聲調。
-T001,tone,Thanh điệu,7,7,5,,,,,true,false,四聲 + 輕聲。P8 聲調練習不含輕聲。
-EX002,exercise,Luyện thanh điệu,8,8,6,,,,,true,false,四聲練習，不含輕聲。
+C001,concept,Khái niệm về pinyin,3,3-4,1,,,,,true,false,拼音是什么、拼音用途、声母/韵母/声调概念。
+I001,initials,Thanh mẫu,5,5,2,,,,,true,false,声母 b p m f
+F001,finals,Vận mẫu,5,5,3,,,,,true,false,韵母 a o e i u ü
+EX001,exercise,Luyện pinyin,6,6,4,,,,,true,false,拼读练习，不含声调。
+T001,tone,Thanh điệu,7,7,5,,,,,true,false,四声 + 轻声。P8 声调练习不含轻声。
+EX002,exercise,Luyện thanh điệu,8,8,6,,,,,true,false,四声练习，不含轻声。
 V001,vocabulary,Từ vựng,9,9,7,八,八,bā,số tám,true,false,八 bā
 V002,vocabulary,Từ vựng,9,9,8,怕,怕,pà,sợ,true,false,怕 pà
-V003,vocabulary,Từ vựng,9,9,9,饿,餓,è,đói,true,false,餓 è
+V003,vocabulary,Từ vựng,9,9,9,饿,饿,è,đói,true,false,饿 è
 V004,vocabulary,Từ vựng,9,9,10,不,不,bù,không,true,false,不 bù
 V005,vocabulary,Từ vựng,9,9,11,鼻,鼻,bí,mũi,true,false,鼻 bí
 V006,vocabulary,Từ vựng,9,9,12,木,木,mù,gỗ,true,false,木 mù
-V007,vocabulary,Từ vựng,9,9,13,马,馬,mǎ,con ngựa,true,false,馬 mǎ
+V007,vocabulary,Từ vựng,9,9,13,马,马,mǎ,con ngựa,true,false,马 mǎ
 V008,vocabulary,Từ vựng,9,9,14,佛,佛,fó,Phật,true,false,佛 fó
-V009,vocabulary,Từ vựng,11,11,15,妈妈,媽媽,māma,mẹ,true,false,媽媽 māma
+V009,vocabulary,Từ vựng,11,11,15,妈妈,妈妈,māma,mẹ,true,false,妈妈 māma
 V010,vocabulary,Từ vựng,11,11,16,爸爸,爸爸,bàba,bố,true,false,爸爸 bàba
-V011,vocabulary,Từ vựng,11,11,17,服务,服務,fúwù,phục vụ,true,false,服務 fúwù
+V011,vocabulary,Từ vựng,11,11,17,服务,服务,fúwù,phục vụ,true,false,服务 fúwù
 V012,vocabulary,Từ vựng,11,11,18,衣服,衣服,yīfu,quần áo,true,false,衣服 yīfu
-V013,vocabulary,Từ vựng,11,11,19,皮肤,皮膚,pífū,da,true,false,皮膚 pífū
-V014,vocabulary,Từ vựng,11,11,20,密码,密碼,mìmǎ,mật mã,true,false,密碼 mìmǎ
+V013,vocabulary,Từ vựng,11,11,19,皮肤,皮肤,pífū,da,true,false,皮肤 pífū
+V014,vocabulary,Từ vựng,11,11,20,密码,密码,mìmǎ,mật mã,true,false,密码 mìmǎ
 V015,vocabulary,Từ vựng,11,11,21,伯父,伯父,bófù,bác trai,true,false,伯父 bófù
 V016,vocabulary,Từ vựng,11,11,22,伯母,伯母,bómǔ,bác gái,true,false,伯母 bómǔ
-EX003,exercise,Luyện từ vựng 1,10,10,23,,,,,true,false,詞彙 1 跟讀/錄音。確認詞彙 1 發音正確。
-EX004,exercise,Luyện từ vựng 2,12,12,24,,,,,true,false,詞彙 2 跟讀/錄音。確認詞彙 2 發音正確。
-CH001,challenge,Ôn tập cuối bài,13,13,25,,,,,true,false,課後整合練習。發音正確為主，不要求認漢字。
-AP001,appendix,Phụ lục,18,18-19,26,,,,,,,中文輸入法安裝與設定。
+EX003,exercise,Luyện từ vựng 1,10,10,23,,,,,true,false,词汇 1 跟读/录音。确认词汇 1 发音正确。
+EX004,exercise,Luyện từ vựng 2,12,12,24,,,,,true,false,词汇 2 跟读/录音。确认词汇 2 发音正确。
+CH001,challenge,Ôn tập cuối bài,13,13,25,,,,,true,false,课后整合练习。发音正确为主，不要求认汉字。
+AP001,appendix,Phụ lục,18,18-19,26,,,,,,,中文输入法安装与设定。

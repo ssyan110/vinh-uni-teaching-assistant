@@ -2,49 +2,49 @@
   "lesson_id": "pinyin_lesson_07",
   "lesson_no": 7,
   "title": {
-    "zh": "拼音第七課：i/u/ü 開頭拼音變化規則",
+    "zh": "拼音第七课：i/u/ü 开头拼音变化规则",
     "en": "Pinyin Lesson 7: Spelling Changes for i/u/ü-Initial Syllables"
   },
   "metadata": {
     "page_count_status": "pending",
     "page_count_min": 33,
     "page_count_max": 34,
-    "main_goal": "學會 i、u、ü 開頭韻母在獨立成音節時的拼音變化，能正確讀寫 yi/yin/ying、ya/ye/yao/yan/yang/yong、you、wu、wa/wo/wai/wan/wang/weng、wei/wen、yu/yue/yuan/yun，並理解生詞拼音連寫規則。",
-    "primary_requirement": "發音正確以及學習字義為主",
-    "recognition_requirement": "不需要認漢字",
+    "main_goal": "学会 i、u、ü 开头韵母在独立成音节时的拼音变化，能正确读写 yi/yin/ying、ya/ye/yao/yan/yang/yong、you、wu、wa/wo/wai/wan/wang/weng、wei/wen、yu/yue/yuan/yun，并理解生词拼音连写规则。",
+    "primary_requirement": "发音正确以及学习字义为主",
+    "recognition_requirement": "不需要认汉字",
     "pronunciation_first": true,
     "meaning_focus": true,
     "requires_hanzi_recognition": false
   },
   "learning_focus": [
-    "暖身複習第六課生詞",
-    "i 開頭拼音變化：i/in/ing、ia/ie/iao/ian/iang/iong、iu",
-    "u 開頭拼音變化：u、ua/uo/uai/uan/uang/ueng、ui/un",
-    "ü 開頭拼音變化：ü/üe/üan/ün",
-    "生詞拼音連寫規則",
-    "詞彙發音與字義理解"
+    "暖身复习第六课生词",
+    "i 开头拼音变化：i/in/ing、ia/ie/iao/ian/iang/iong、iu",
+    "u 开头拼音变化：u、ua/uo/uai/uan/uang/ueng、ui/un",
+    "ü 开头拼音变化：ü/üe/üan/ün",
+    "生词拼音连写规则",
+    "词汇发音与字义理解"
   ],
   "warmup_activity": {
     "item_id": "warmup_review_pinyin_lesson_06",
     "page": "P3",
-    "title": "暖身活動：複習第六課生詞",
+    "title": "暖身活动：复习第六课生词",
     "review_source_lesson_id": "pinyin_lesson_06",
-    "review_source_title": "拼音第六課：i/u/ü 開頭複合韻母與 üan 拼寫變化",
-    "review_focus": "複習前一課的生詞",
+    "review_source_title": "拼音第六课：i/u/ü 开头复合韵母与 üan 拼写变化",
+    "review_focus": "复习前一课的生词",
     "activity_options": [
       {
         "activity_type": "matching",
-        "title": "連連看",
+        "title": "连连看",
         "front_prompt": "看照片",
-        "answer_target": "拼音&漢字",
-        "description": "學生看照片，連到對應的拼音與漢字。"
+        "answer_target": "拼音&汉字",
+        "description": "学生看照片，连到对应的拼音与汉字。"
       },
       {
         "activity_type": "audio_flashcard",
-        "title": "聽音猜意 flash card",
-        "front_prompt": "播放生詞音檔",
-        "back_content": "漢字＋拼音＋圖片",
-        "description": "正面播放生詞音檔，學生猜意思；反面顯示漢字、拼音與圖片。"
+        "title": "听音猜意 flash card",
+        "front_prompt": "播放生词音档",
+        "back_content": "汉字＋拼音＋图片",
+        "description": "正面播放生词音档，学生猜意思；反面显示汉字、拼音与图片。"
       }
     ],
     "source_vocabulary": [
@@ -57,7 +57,7 @@
         "pinyin": "xià"
       },
       {
-        "hanzi": "腳",
+        "hanzi": "脚",
         "pinyin": "jiǎo"
       },
       {
@@ -65,11 +65,11 @@
         "pinyin": "xiǎo"
       },
       {
-        "hanzi": "電",
+        "hanzi": "电",
         "pinyin": "diàn"
       },
       {
-        "hanzi": "錢",
+        "hanzi": "钱",
         "pinyin": "qián"
       },
       {
@@ -77,7 +77,7 @@
         "pinyin": "xiāng"
       },
       {
-        "hanzi": "窮",
+        "hanzi": "穷",
         "pinyin": "qióng"
       },
       {
@@ -85,7 +85,7 @@
         "pinyin": "huā"
       },
       {
-        "hanzi": "黃瓜",
+        "hanzi": "黄瓜",
         "pinyin": "huángguā"
       },
       {
@@ -93,11 +93,11 @@
         "pinyin": "duō"
       },
       {
-        "hanzi": "說",
+        "hanzi": "说",
         "pinyin": "shuō"
       },
       {
-        "hanzi": "壞",
+        "hanzi": "坏",
         "pinyin": "huài"
       },
       {
@@ -121,14 +121,14 @@
         "pinyin": "ānquán"
       },
       {
-        "hanzi": "選",
+        "hanzi": "选",
         "pinyin": "xuǎn"
       }
     ],
     "pronunciation_first": true,
     "meaning_focus": true,
     "requires_hanzi_recognition": false,
-    "notes": "暖身活動放在學習目標之後，用第六課生詞作為複習材料。"
+    "notes": "暖身活动放在学习目标之后，用第六课生词作为复习材料。"
   },
   "pages": [
     {
@@ -136,14 +136,14 @@
       "sequence": 1,
       "title": "封面",
       "record_type": "lesson_cover",
-      "content_focus": "第七課課程封面。"
+      "content_focus": "第七课课程封面。"
     },
     {
       "page_range": "P2",
       "sequence": 2,
-      "title": "學習目標",
+      "title": "学习目标",
       "record_type": "learning_objective",
-      "content_focus": "說明本課要學 i/u/ü 開頭拼音變化規則、生詞拼音連寫、詞彙發音與字義。",
+      "content_focus": "说明本课要学 i/u/ü 开头拼音变化规则、生词拼音连写、词汇发音与字义。",
       "pronunciation_first": true,
       "meaning_focus": true,
       "requires_hanzi_recognition": false
@@ -151,9 +151,9 @@
     {
       "page_range": "P3",
       "sequence": 3,
-      "title": "暖身活動：複習第六課生詞",
+      "title": "暖身活动：复习第六课生词",
       "record_type": "warmup_activity",
-      "content_focus": "複習第六課生詞；活動可用連連看或聽音猜意 flash card。",
+      "content_focus": "复习第六课生词；活动可用连连看或听音猜意 flash card。",
       "pronunciation_first": true,
       "meaning_focus": true,
       "requires_hanzi_recognition": false
@@ -161,24 +161,24 @@
     {
       "page_range": "P4",
       "sequence": 4,
-      "title": "i/u/ü 開頭拼音學習封面 1：yi yin ying",
+      "title": "i/u/ü 开头拼音学习封面 1：yi yin ying",
       "record_type": "pinyin_learning_cover",
-      "content_focus": "進入 i/in/ing 獨立成音節變化段落。"
+      "content_focus": "进入 i/in/ing 独立成音节变化段落。"
     },
     {
       "page_range": "P5",
       "sequence": 5,
-      "title": "i 開頭拼音變化規則 1：i, in, ing → yi, yin, ying",
+      "title": "i 开头拼音变化规则 1：i, in, ing → yi, yin, ying",
       "record_type": "spelling_rule",
-      "content_focus": "學習 i、in、ing 獨立成音節時改寫為 yi、yin、ying。",
+      "content_focus": "学习 i、in、ing 独立成音节时改写为 yi、yin、ying。",
       "spelling_rule_id": "rule_l7_i_yi_yin_ying"
     },
     {
       "page_range": "P6",
       "sequence": 6,
-      "title": "詞彙 1",
+      "title": "词汇 1",
       "record_type": "vocabulary_set",
-      "content_focus": "一、音、贏。",
+      "content_focus": "一、音、赢。",
       "vocabulary_set_id": "vocab_set_l7_01",
       "related_rule_id": "rule_l7_i_yi_yin_ying",
       "pronunciation_first": true,
@@ -188,32 +188,32 @@
     {
       "page_range": "P7",
       "sequence": 7,
-      "title": "待安排/保留頁",
+      "title": "待安排/保留页",
       "record_type": "reserved_page",
-      "content_focus": "使用者提供的頁碼中未指定 P7 內容。",
-      "notes": "保留原始頁碼間隔，避免自動重排後續頁碼。"
+      "content_focus": "使用者提供的页码中未指定 P7 内容。",
+      "notes": "保留原始页码间隔，避免自动重排后续页码。"
     },
     {
       "page_range": "P8",
       "sequence": 8,
-      "title": "i/u/ü 開頭拼音學習封面 2：ya ye yao yan yang yong",
+      "title": "i/u/ü 开头拼音学习封面 2：ya ye yao yan yang yong",
       "record_type": "pinyin_learning_cover",
-      "content_focus": "進入 ia/ie/iao/ian/iang/iong 獨立成音節變化段落。"
+      "content_focus": "进入 ia/ie/iao/ian/iang/iong 独立成音节变化段落。"
     },
     {
       "page_range": "P9",
       "sequence": 9,
-      "title": "i 開頭拼音變化規則 2：ia, ie, iao, ian, iang, iong → ya, ye, yao, yan, yang, yong",
+      "title": "i 开头拼音变化规则 2：ia, ie, iao, ian, iang, iong → ya, ye, yao, yan, yang, yong",
       "record_type": "spelling_rule",
-      "content_focus": "學習 i 開頭複合韻母獨立成音節時改用 y 開頭拼寫。",
+      "content_focus": "学习 i 开头复合韵母独立成音节时改用 y 开头拼写。",
       "spelling_rule_id": "rule_l7_i_compound_y"
     },
     {
       "page_range": "P10",
       "sequence": 10,
-      "title": "詞彙 2",
+      "title": "词汇 2",
       "record_type": "vocabulary_set",
-      "content_focus": "鴨、爺爺、藥、顏色、羊、使用。",
+      "content_focus": "鸭、爷爷、药、颜色、羊、使用。",
       "vocabulary_set_id": "vocab_set_l7_02",
       "related_rule_id": "rule_l7_i_compound_y",
       "pronunciation_first": true,
@@ -223,22 +223,22 @@
     {
       "page_range": "P11",
       "sequence": 11,
-      "title": "i/u/ü 開頭拼音學習封面 3：iu",
+      "title": "i/u/ü 开头拼音学习封面 3：iu",
       "record_type": "pinyin_learning_cover",
-      "content_focus": "進入 iu 獨立成音節變化段落。"
+      "content_focus": "进入 iu 独立成音节变化段落。"
     },
     {
       "page_range": "P12",
       "sequence": 12,
-      "title": "i 開頭拼音變化規則 3：iu → you",
+      "title": "i 开头拼音变化规则 3：iu → you",
       "record_type": "spelling_rule",
-      "content_focus": "學習 iu 獨立成音節時改寫為 you。",
+      "content_focus": "学习 iu 独立成音节时改写为 you。",
       "spelling_rule_id": "rule_l7_iu_you"
     },
     {
       "page_range": "P13",
       "sequence": 13,
-      "title": "詞彙 3",
+      "title": "词汇 3",
       "record_type": "vocabulary_set",
       "content_focus": "游泳。",
       "vocabulary_set_id": "vocab_set_l7_03",
@@ -250,9 +250,9 @@
     {
       "page_range": "P14",
       "sequence": 14,
-      "title": "詞彙練習 1",
+      "title": "词汇练习 1",
       "record_type": "vocab_exercise",
-      "content_focus": "練習詞彙 1-3 中的十個生詞。",
+      "content_focus": "练习词汇 1-3 中的十个生词。",
       "source_vocabulary_set_ids": [
         "vocab_set_l7_01",
         "vocab_set_l7_02",
@@ -265,22 +265,22 @@
     {
       "page_range": "P15",
       "sequence": 15,
-      "title": "i/u/ü 開頭拼音學習封面 4：wu",
+      "title": "i/u/ü 开头拼音学习封面 4：wu",
       "record_type": "pinyin_learning_cover",
-      "content_focus": "進入 u 獨立成音節變化段落。"
+      "content_focus": "进入 u 独立成音节变化段落。"
     },
     {
       "page_range": "P16",
       "sequence": 16,
-      "title": "u 開頭拼音變化規則 1：u → wu",
+      "title": "u 开头拼音变化规则 1：u → wu",
       "record_type": "spelling_rule",
-      "content_focus": "學習 u 獨立成音節時改寫為 wu。",
+      "content_focus": "学习 u 独立成音节时改写为 wu。",
       "spelling_rule_id": "rule_l7_u_wu"
     },
     {
       "page_range": "P17",
       "sequence": 17,
-      "title": "詞彙 4",
+      "title": "词汇 4",
       "record_type": "vocabulary_set",
       "content_focus": "五。",
       "vocabulary_set_id": "vocab_set_l7_04",
@@ -292,24 +292,24 @@
     {
       "page_range": "P18",
       "sequence": 18,
-      "title": "i/u/ü 開頭拼音學習封面 5：wa wo wai wan wang weng",
+      "title": "i/u/ü 开头拼音学习封面 5：wa wo wai wan wang weng",
       "record_type": "pinyin_learning_cover",
-      "content_focus": "進入 ua/uo/uai/uan/uang/ueng 獨立成音節變化段落。"
+      "content_focus": "进入 ua/uo/uai/uan/uang/ueng 独立成音节变化段落。"
     },
     {
       "page_range": "P19",
       "sequence": 19,
-      "title": "u 開頭拼音變化規則 2：ua, uo, uai, uan, uang, ueng → wa, wo, wai, wan, wang, weng",
+      "title": "u 开头拼音变化规则 2：ua, uo, uai, uan, uang, ueng → wa, wo, wai, wan, wang, weng",
       "record_type": "spelling_rule",
-      "content_focus": "學習 u 開頭複合韻母獨立成音節時改用 w 開頭拼寫。",
+      "content_focus": "学习 u 开头复合韵母独立成音节时改用 w 开头拼写。",
       "spelling_rule_id": "rule_l7_u_compound_w"
     },
     {
       "page_range": "P20",
       "sequence": 20,
-      "title": "詞彙 5",
+      "title": "词汇 5",
       "record_type": "vocabulary_set",
-      "content_focus": "襪子、我、外面、玩、忘記、甕。",
+      "content_focus": "袜子、我、外面、玩、忘记、瓮。",
       "vocabulary_set_id": "vocab_set_l7_05",
       "related_rule_id": "rule_l7_u_compound_w",
       "pronunciation_first": true,
@@ -319,22 +319,22 @@
     {
       "page_range": "P21",
       "sequence": 21,
-      "title": "i/u/ü 開頭拼音學習封面 6：wei wen",
+      "title": "i/u/ü 开头拼音学习封面 6：wei wen",
       "record_type": "pinyin_learning_cover",
-      "content_focus": "進入 ui/un 獨立成音節變化段落。"
+      "content_focus": "进入 ui/un 独立成音节变化段落。"
     },
     {
       "page_range": "P22",
       "sequence": 22,
-      "title": "u 開頭拼音變化規則 3：ui, un → wei, wen",
+      "title": "u 开头拼音变化规则 3：ui, un → wei, wen",
       "record_type": "spelling_rule",
-      "content_focus": "學習 ui、un 獨立成音節時改寫為 wei、wen。",
+      "content_focus": "学习 ui、un 独立成音节时改写为 wei、wen。",
       "spelling_rule_id": "rule_l7_ui_un_wei_wen"
     },
     {
       "page_range": "P23",
       "sequence": 23,
-      "title": "詞彙 6",
+      "title": "词汇 6",
       "record_type": "vocabulary_set",
       "content_focus": "喂、文化。",
       "vocabulary_set_id": "vocab_set_l7_06",
@@ -346,9 +346,9 @@
     {
       "page_range": "P24",
       "sequence": 24,
-      "title": "詞彙練習 2",
+      "title": "词汇练习 2",
       "record_type": "vocab_exercise",
-      "content_focus": "練習詞彙 4-6 中的十個生詞。",
+      "content_focus": "练习词汇 4-6 中的十个生词。",
       "source_vocabulary_set_ids": [
         "vocab_set_l7_04",
         "vocab_set_l7_05",
@@ -361,59 +361,59 @@
     {
       "page_range": "P25",
       "sequence": 25,
-      "title": "i/u/ü 開頭拼音學習封面 7：yu yue yuan yun",
+      "title": "i/u/ü 开头拼音学习封面 7：yu yue yuan yun",
       "record_type": "pinyin_learning_cover",
-      "content_focus": "進入 ü/üe/üan/ün 獨立成音節變化段落。"
+      "content_focus": "进入 ü/üe/üan/ün 独立成音节变化段落。"
     },
     {
       "page_range": "P26",
       "sequence": 26,
-      "title": "ü 開頭拼音變化規則：ü, üe, üan, ün → yu, yue, yuan, yun",
+      "title": "ü 开头拼音变化规则：ü, üe, üan, ün → yu, yue, yuan, yun",
       "record_type": "spelling_rule",
-      "content_focus": "學習 ü 開頭韻母獨立成音節時改用 yu/yue/yuan/yun。",
+      "content_focus": "学习 ü 开头韵母独立成音节时改用 yu/yue/yuan/yun。",
       "spelling_rule_id": "rule_l7_u_umlaut_y"
     },
     {
       "page_range": "P27",
       "sequence": 27,
-      "title": "詞彙 7",
+      "title": "词汇 7",
       "record_type": "vocabulary_set",
-      "content_focus": "魚、雨、月、越南、圓、雲。",
+      "content_focus": "鱼、雨、月、越南、圆、云。",
       "vocabulary_set_id": "vocab_set_l7_07",
       "related_rule_id": "rule_l7_u_umlaut_y",
       "pronunciation_first": true,
       "meaning_focus": true,
       "requires_hanzi_recognition": false,
-      "notes": "使用者原始標記為詞彙6；此處整理為詞彙7，避免和 P23 詞彙6 重複。"
+      "notes": "使用者原始标记为词汇6；此处整理为词汇7，避免和 P23 词汇6 重复。"
     },
     {
       "page_range": "P28",
       "sequence": 28,
-      "title": "詞彙練習 3",
+      "title": "词汇练习 3",
       "record_type": "vocab_exercise",
-      "content_focus": "練習詞彙 7。",
+      "content_focus": "练习词汇 7。",
       "source_vocabulary_set_ids": [
         "vocab_set_l7_07"
       ],
       "pronunciation_first": true,
       "meaning_focus": true,
       "requires_hanzi_recognition": false,
-      "notes": "使用者原始描述為「練習詞彙6中」；此處依 P27 整理為詞彙7。"
+      "notes": "使用者原始描述为「练习词汇6中」；此处依 P27 整理为词汇7。"
     },
     {
       "page_range": "P29",
       "sequence": 29,
-      "title": "規則：生詞拼音的連寫",
+      "title": "规则：生词拼音的连写",
       "record_type": "word_spacing_rule",
-      "content_focus": "解釋為什麼「越南」的拼音是 Yuènán，而不是 Yuè nán。",
+      "content_focus": "解释为什么「越南」的拼音是 Yuènán，而不是 Yuè nán。",
       "word_spacing_rule_id": "rule_l7_word_pinyin_spacing"
     },
     {
       "page_range": null,
       "sequence": 30,
-      "title": "課後練習",
+      "title": "课后练习",
       "record_type": "review_exercise",
-      "content_focus": "2-3 個題型整合複習。",
+      "content_focus": "2-3 个题型整合复习。",
       "page_range_options": [
         "P30-P31",
         "P30-P32"
@@ -426,9 +426,9 @@
     {
       "page_range": null,
       "sequence": 31,
-      "title": "i/u 變化規則總結表格",
+      "title": "i/u 变化规则总结表格",
       "record_type": "spelling_rule_summary",
-      "content_focus": "整理 i/u/ü 開頭拼音變化規則。",
+      "content_focus": "整理 i/u/ü 开头拼音变化规则。",
       "page_range_options": [
         "P33",
         "P34"
@@ -456,7 +456,7 @@
           "written_form": "ying"
         }
       ],
-      "explanation": "韻母獨立成音節時，需要依規則改寫拼音開頭。",
+      "explanation": "韵母独立成音节时，需要依规则改写拼音开头。",
       "applies_to_vocabulary_set_ids": [
         "vocab_set_l7_01"
       ]
@@ -491,7 +491,7 @@
           "written_form": "yong"
         }
       ],
-      "explanation": "韻母獨立成音節時，需要依規則改寫拼音開頭。",
+      "explanation": "韵母独立成音节时，需要依规则改写拼音开头。",
       "applies_to_vocabulary_set_ids": [
         "vocab_set_l7_02"
       ]
@@ -506,7 +506,7 @@
           "written_form": "you"
         }
       ],
-      "explanation": "韻母獨立成音節時，需要依規則改寫拼音開頭。",
+      "explanation": "韵母独立成音节时，需要依规则改写拼音开头。",
       "applies_to_vocabulary_set_ids": [
         "vocab_set_l7_03"
       ]
@@ -521,7 +521,7 @@
           "written_form": "wu"
         }
       ],
-      "explanation": "韻母獨立成音節時，需要依規則改寫拼音開頭。",
+      "explanation": "韵母独立成音节时，需要依规则改写拼音开头。",
       "applies_to_vocabulary_set_ids": [
         "vocab_set_l7_04"
       ]
@@ -556,7 +556,7 @@
           "written_form": "weng"
         }
       ],
-      "explanation": "韻母獨立成音節時，需要依規則改寫拼音開頭。",
+      "explanation": "韵母独立成音节时，需要依规则改写拼音开头。",
       "applies_to_vocabulary_set_ids": [
         "vocab_set_l7_05"
       ]
@@ -575,7 +575,7 @@
           "written_form": "wen"
         }
       ],
-      "explanation": "韻母獨立成音節時，需要依規則改寫拼音開頭。",
+      "explanation": "韵母独立成音节时，需要依规则改写拼音开头。",
       "applies_to_vocabulary_set_ids": [
         "vocab_set_l7_06"
       ]
@@ -602,7 +602,7 @@
           "written_form": "yun"
         }
       ],
-      "explanation": "韻母獨立成音節時，需要依規則改寫拼音開頭。",
+      "explanation": "韵母独立成音节时，需要依规则改写拼音开头。",
       "applies_to_vocabulary_set_ids": [
         "vocab_set_l7_07"
       ]
@@ -612,13 +612,13 @@
     {
       "item_id": "rule_l7_word_pinyin_spacing",
       "page": "P29",
-      "title": "生詞拼音的連寫",
+      "title": "生词拼音的连写",
       "example": {
         "hanzi": "越南",
         "correct_pinyin": "Yuènán",
         "incorrect_pinyin": "Yuè nán"
       },
-      "explanation": "一個詞的拼音通常連寫；越南是一個詞，所以寫作 Yuènán，而不是分開寫 Yuè nán。",
+      "explanation": "一个词的拼音通常连写；越南是一个词，所以写作 Yuènán，而不是分开写 Yuè nán。",
       "applies_to_vocabulary_item_ids": [
         "vocab_l7_024_yuenan"
       ]
@@ -629,7 +629,7 @@
       "set_id": "vocab_set_l7_01",
       "page": "P6",
       "practice_page": null,
-      "title": "詞彙 1",
+      "title": "词汇 1",
       "related_rule_id": "rule_l7_i_yi_yin_ying",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -649,7 +649,7 @@
         },
         {
           "item_id": "vocab_l7_003_ying",
-          "hanzi": "贏",
+          "hanzi": "赢",
           "pinyin": "yíng",
           "related_rule_id": "rule_l7_i_yi_yin_ying"
         }
@@ -659,7 +659,7 @@
       "set_id": "vocab_set_l7_02",
       "page": "P10",
       "practice_page": null,
-      "title": "詞彙 2",
+      "title": "词汇 2",
       "related_rule_id": "rule_l7_i_compound_y",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -667,25 +667,25 @@
       "items": [
         {
           "item_id": "vocab_l7_004_ya",
-          "hanzi": "鴨",
+          "hanzi": "鸭",
           "pinyin": "yā",
           "related_rule_id": "rule_l7_i_compound_y"
         },
         {
           "item_id": "vocab_l7_005_yeye",
-          "hanzi": "爺爺",
+          "hanzi": "爷爷",
           "pinyin": "yéye",
           "related_rule_id": "rule_l7_i_compound_y"
         },
         {
           "item_id": "vocab_l7_006_yao",
-          "hanzi": "藥",
+          "hanzi": "药",
           "pinyin": "yào",
           "related_rule_id": "rule_l7_i_compound_y"
         },
         {
           "item_id": "vocab_l7_007_yanse",
-          "hanzi": "顏色",
+          "hanzi": "颜色",
           "pinyin": "yánsè",
           "related_rule_id": "rule_l7_i_compound_y"
         },
@@ -707,7 +707,7 @@
       "set_id": "vocab_set_l7_03",
       "page": "P13",
       "practice_page": "P14",
-      "title": "詞彙 3",
+      "title": "词汇 3",
       "related_rule_id": "rule_l7_iu_you",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -725,7 +725,7 @@
       "set_id": "vocab_set_l7_04",
       "page": "P17",
       "practice_page": null,
-      "title": "詞彙 4",
+      "title": "词汇 4",
       "related_rule_id": "rule_l7_u_wu",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -743,7 +743,7 @@
       "set_id": "vocab_set_l7_05",
       "page": "P20",
       "practice_page": null,
-      "title": "詞彙 5",
+      "title": "词汇 5",
       "related_rule_id": "rule_l7_u_compound_w",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -751,7 +751,7 @@
       "items": [
         {
           "item_id": "vocab_l7_012_wazi",
-          "hanzi": "襪子",
+          "hanzi": "袜子",
           "pinyin": "wàzi",
           "related_rule_id": "rule_l7_u_compound_w"
         },
@@ -775,13 +775,13 @@
         },
         {
           "item_id": "vocab_l7_016_wangji",
-          "hanzi": "忘記",
+          "hanzi": "忘记",
           "pinyin": "wàngjì",
           "related_rule_id": "rule_l7_u_compound_w"
         },
         {
           "item_id": "vocab_l7_017_weng",
-          "hanzi": "甕",
+          "hanzi": "瓮",
           "pinyin": "wèng",
           "related_rule_id": "rule_l7_u_compound_w"
         }
@@ -791,7 +791,7 @@
       "set_id": "vocab_set_l7_06",
       "page": "P23",
       "practice_page": "P24",
-      "title": "詞彙 6",
+      "title": "词汇 6",
       "related_rule_id": "rule_l7_ui_un_wei_wen",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -815,7 +815,7 @@
       "set_id": "vocab_set_l7_07",
       "page": "P27",
       "practice_page": "P28",
-      "title": "詞彙 7",
+      "title": "词汇 7",
       "related_rule_id": "rule_l7_u_umlaut_y",
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -823,7 +823,7 @@
       "items": [
         {
           "item_id": "vocab_l7_020_yu_fish",
-          "hanzi": "魚",
+          "hanzi": "鱼",
           "pinyin": "yú",
           "related_rule_id": "rule_l7_u_umlaut_y"
         },
@@ -847,13 +847,13 @@
         },
         {
           "item_id": "vocab_l7_025_yuan",
-          "hanzi": "圓",
+          "hanzi": "圆",
           "pinyin": "yuán",
           "related_rule_id": "rule_l7_u_umlaut_y"
         },
         {
           "item_id": "vocab_l7_026_yun",
-          "hanzi": "雲",
+          "hanzi": "云",
           "pinyin": "yún",
           "related_rule_id": "rule_l7_u_umlaut_y"
         }
@@ -864,8 +864,8 @@
     {
       "item_id": "exercise_l7_p14_vocab_1_3",
       "page": "P14",
-      "exercise_type": "詞彙練習 1",
-      "goal": "練習詞彙 1-3 中的十個生詞。",
+      "exercise_type": "词汇练习 1",
+      "goal": "练习词汇 1-3 中的十个生词。",
       "source_vocabulary_set_ids": [
         "vocab_set_l7_01",
         "vocab_set_l7_02",
@@ -878,8 +878,8 @@
     {
       "item_id": "exercise_l7_p24_vocab_4_6",
       "page": "P24",
-      "exercise_type": "詞彙練習 2",
-      "goal": "練習詞彙 4-6 中的十個生詞。",
+      "exercise_type": "词汇练习 2",
+      "goal": "练习词汇 4-6 中的十个生词。",
       "source_vocabulary_set_ids": [
         "vocab_set_l7_04",
         "vocab_set_l7_05",
@@ -892,8 +892,8 @@
     {
       "item_id": "exercise_l7_p28_vocab_7",
       "page": "P28",
-      "exercise_type": "詞彙練習 3",
-      "goal": "練習詞彙 7。",
+      "exercise_type": "词汇练习 3",
+      "goal": "练习词汇 7。",
       "source_vocabulary_set_ids": [
         "vocab_set_l7_07"
       ],
@@ -909,14 +909,14 @@
         "P30-P32"
       ],
       "is_page_range_flexible": true,
-      "exercise_type": "課後整合練習",
-      "goal": "用 2-3 個題型整合複習。",
+      "exercise_type": "课后整合练习",
+      "goal": "用 2-3 个题型整合复习。",
       "suggested_question_types": [
-        "看拼音朗讀",
-        "字義配對",
-        "聽音猜意",
-        "拼音變化規則判斷",
-        "生詞拼音連寫判斷"
+        "看拼音朗读",
+        "字义配对",
+        "听音猜意",
+        "拼音变化规则判断",
+        "生词拼音连写判断"
       ],
       "pronunciation_first": true,
       "meaning_focus": true,
@@ -929,7 +929,7 @@
       "P33",
       "P34"
     ],
-    "title": "i/u/ü 變化規則總結表格",
+    "title": "i/u/ü 变化规则总结表格",
     "source_rule_ids": [
       "rule_l7_i_yi_yin_ying",
       "rule_l7_i_compound_y",
@@ -939,7 +939,7 @@
       "rule_l7_ui_un_wei_wen",
       "rule_l7_u_umlaut_y"
     ],
-    "notes": "總結表格頁碼取決於課後練習是 2 頁或 3 頁。"
+    "notes": "总结表格页码取决于课后练习是 2 页或 3 页。"
   },
   "flexible_page_decisions": [
     {
@@ -957,13 +957,13 @@
           "total_pages": 34
         }
       ],
-      "impact": "決定課後練習頁數，以及 i/u 變化規則總結表格落在 P33 或 P34。"
+      "impact": "决定课后练习页数，以及 i/u 变化规则总结表格落在 P33 或 P34。"
     }
   ],
   "database_notes": [
-    "P3 暖身活動複習第六課生詞，可用連連看或聽音猜意 flash card。",
-    "P7 在使用者提供的頁碼中未指定內容，已保留為待安排/保留頁。",
-    "P23 與 P27 原始輸入都標為詞彙6；此處將 P27 整理為詞彙7，避免資料庫 set_id 重複。",
+    "P3 暖身活动复习第六课生词，可用连连看或听音猜意 flash card。",
+    "P7 在使用者提供的页码中未指定内容，已保留为待安排/保留页。",
+    "P23 与 P27 原始输入都标为词汇6；此处将 P27 整理为词汇7，避免资料库 set_id 重复。",
     "P29 explains word-level pinyin spacing: 越南 is written Yuènán, not Yuè nán.",
     "Practice records should preserve pronunciation_first: true, meaning_focus: true, and requires_hanzi_recognition: false."
   ]

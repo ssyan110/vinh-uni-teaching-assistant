@@ -1,6 +1,6 @@
-# VP 教材資料庫 · 第五课 · 这是王老师 · Bài 5 · Đây là thầy giáo Vương
+# VP 教材资料库 · 第五课 · 这是王老师 · Bài 5 · Đây là thầy giáo Vương
 
-Scope: VP 製作流程 steps 1–8 only. This output stops before teacher review.
+Scope: VP 制作流程 steps 1–8 only. This output stops before teacher review.
 
 Lesson type: `regular` (config version 1.0.0)
 Source PDF: `Giáo trình full/[hanka.edu.vn] - GT Hán Ngữ 1 (Tập 1 - Quyển thượng).pdf`

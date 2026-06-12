@@ -1,47 +1,47 @@
 lesson_id,page_range,sequence,record_type,item_id,title,hanzi,pinyin,symbol,category,content_focus,pronunciation_focus,exercise_type,source_set_id,variant_group,pronunciation_first,requires_hanzi_recognition,includes_tones,includes_neutral_tone,notes
-pinyin_lesson_01,P1,1,lesson_overview,page_l1_p1,®é,,,,lesson_page,ç¬¬äèª²èª²ç¨ç¨¸½è¦½ã,,,,,TRUE,FALSE,,,ä½èª²çå°¦½
-pinyin_lesson_01,P2,2,learning_objective,page_l1_p2,å­¸ç®æ,,,,lesson_page,èª¼éæ¯æ¯èª¿ï½æ­£ç¢ºç³ç¬¬ä¸èª²èå½,,,,,TRUE,FALSE,,,®æ¼·èª¿ç³ïä¸¼·èª¿èå­
-pinyin_lesson_01,P3-P4,3,concept,page_l1_p3_p4,¼éæ¦¿µ,,,,lesson_page,¼é¯äéº¼ã³çæ¯/»æ/²èª¿æ¦¿µ,,,,,TRUE,FALSE,,,©åå¤å¿µå
-pinyin_lesson_01,P5,4,pinyin_chart,page_l1_p5,²æ b p m f + »æ a o e i u Ã¼ ¼éè¡,,,,lesson_page,å»ºçç¬¬äçµè®çµï¼«èèª¿ã,,,,,TRUE,FALSE,FALSE,,¯é initialsfinals  syllable combinations
-pinyin_lesson_01,P6,5,pinyin_exercise,page_l1_p6,¼éç·´ç,,,,lesson_page,¼èç·´çï¼«èèª¿ã,,,,,TRUE,FALSE,FALSE,,³æè®³é¼é
-pinyin_lesson_01,P7,6,tone,page_l1_p7,²èª¿å­¸ç,,,,lesson_page, + è¼,,,,,TRUE,FALSE,TRUE,TRUE,è¼ªåå­¸çç´¹ã
-pinyin_lesson_01,P8,7,tone_exercise,page_l1_p8,²èª¿ç·´ç,,,,lesson_page,ç·´çï¼«è²ã,,,,,TRUE,FALSE,TRUE,FALSE,ç·´çï¼«è²ã
-pinyin_lesson_01,P9,8,vocabulary_set,page_l1_p9,è© 1,,,,lesson_page,«ã¼»¦¬,,,vocab_set_l1_01,,TRUE,FALSE,TRUE,,¼éæ­¢ººä¸»ï¼è¦æ¼¢å
-pinyin_lesson_01,P10,9,vocab_exercise,page_l1_p10,è©ç·´ç 1,,,,lesson_page,è© 1 ³ç·´ç¿,,,vocab_set_l1_01,,TRUE,FALSE,TRUE,,¼éæ­¢ººä¸»ï¼è¦æ¼¢å
-pinyin_lesson_01,P11,10,vocabulary_set,page_l1_p11,è© 2,,,,lesson_page,åª½åª½¸ã¡£ç¢¼ã¼¯/ä¼¯æ,,,vocab_set_l1_02,,TRUE,FALSE,TRUE,,ä¼¯ç/ä¼¯æè³åº«å»ºè­°æç­
-pinyin_lesson_01,P12,11,vocab_exercise,page_l1_p12,è©ç·´ç 2,,,,lesson_page,è© 2 ³ç·´ç¿,,,vocab_set_l1_02,,TRUE,FALSE,TRUE,,¼éæ­¢ººä¸»ï¼è¦æ¼¢å
-pinyin_lesson_01,P13,12,review_exercise,page_l1_p13,èª²åç·´ç,,,,lesson_page,2-3 ç¿,,,,,TRUE,FALSE,TRUE,,¼éæ­¢ººä¸»ï¼è¦æ¼¢å
-pinyin_lesson_01,P14,13,tech_setup,page_l1_p14,è¼¸åæ³è£å­,,,,lesson_page,ä¸­æè¼¸åæ³è£è¨­å,,,,,FALSE,FALSE,,,è¡¨­å®§å®¹
-pinyin_lesson_01,P5,14,initial,initial_b,²æ b,,,b,initial,,³ïä¸°£,,,,TRUE,FALSE,,,
-pinyin_lesson_01,P5,15,initial,initial_p,²æ p,,,p,initial,,³ï°£,,,,TRUE,FALSE,,,
-pinyin_lesson_01,P5,16,initial,initial_m,²æ m,,,m,initial,,é¼»é,,,,TRUE,FALSE,,,
-pinyin_lesson_01,P5,17,initial,initial_f,²æ f,,,f,initial,,³ã,,,,TRUE,FALSE,,,
-pinyin_lesson_01,P5,18,final,final_a,»æ a,,,a,final,®éæ¯,,,,,TRUE,FALSE,,,
-pinyin_lesson_01,P5,19,final,final_o,»æ o,,,o,final,®éæ¯,,,,,TRUE,FALSE,,,
-pinyin_lesson_01,P5,20,final,final_e,»æ e,,,e,final,®éæ¯,,,,,TRUE,FALSE,,,
-pinyin_lesson_01,P5,21,final,final_i,»æ i,,,i,final,®éæ¯,,,,,TRUE,FALSE,,,
-pinyin_lesson_01,P5,22,final,final_u,»æ u,,,u,final,®éæ¯,,,,,TRUE,FALSE,,,
-pinyin_lesson_01,P5,23,final,final_u_umlaut,»æ Ã¼,,,Ã¼,final,®éæ¯,,,,,TRUE,FALSE,,,
-pinyin_lesson_01,P7,24,tone,tone_four_tones,,,,,tone,ç¬¬ä²ã¬¬äº¬¬ä¸¬¬,,,,,TRUE,FALSE,TRUE,FALSE,P7 å­¸çï¼P8 ç·´ç
-pinyin_lesson_01,P7,25,tone,tone_neutral,è¼,,,,tone,è¼æ¦¿µ,,,,,TRUE,FALSE,TRUE,TRUE,P7 å­¸çï¼P8 ç·´çä¸è¼
-pinyin_lesson_01,P9,26,vocabulary,vocab_l1_001_ba,,,b,,vocab_set_l1_01,,,,vocab_set_l1_01,,TRUE,FALSE,TRUE,,¼éæ­¢ºï¼è¦èª
-pinyin_lesson_01,P9,27,vocabulary,vocab_l1_002_pa,,,p,,vocab_set_l1_01,,,,vocab_set_l1_01,,TRUE,FALSE,TRUE,,¼éæ­¢ºï¼è¦èª
-pinyin_lesson_01,P9,28,vocabulary,vocab_l1_003_e,é¤,é¤,Ã¨,,vocab_set_l1_01,,,,vocab_set_l1_01,,TRUE,FALSE,TRUE,,¼éæ­¢ºï¼è¦èª
-pinyin_lesson_01,P9,29,vocabulary,vocab_l1_004_bu,ä¸,ä¸,bÃ¹,,vocab_set_l1_01,,,,vocab_set_l1_01,,TRUE,FALSE,TRUE,,¼éæ­¢ºï¼è¦èª
-pinyin_lesson_01,P9,30,vocabulary,vocab_l1_005_bi,é¼,é¼,bÃ­,,vocab_set_l1_01,,,,vocab_set_l1_01,,TRUE,FALSE,TRUE,,¼éæ­¢ºï¼è¦èª
-pinyin_lesson_01,P9,31,vocabulary,vocab_l1_006_mu,,,mÃ¹,,vocab_set_l1_01,,,,vocab_set_l1_01,,TRUE,FALSE,TRUE,,¼éæ­¢ºï¼è¦èª
-pinyin_lesson_01,P9,32,vocabulary,vocab_l1_007_ma,é¦,é¦,m,,vocab_set_l1_01,,,,vocab_set_l1_01,,TRUE,FALSE,TRUE,,¼éæ­¢ºï¼è¦èª
-pinyin_lesson_01,P9,33,vocabulary,vocab_l1_008_fo,ä½,ä½,fÃ³,,vocab_set_l1_01,,,,vocab_set_l1_01,,TRUE,FALSE,TRUE,,¼éæ­¢ºï¼è¦èª
-pinyin_lesson_01,P11,34,vocabulary,vocab_l1_009_mama,åª½åª½,åª½åª½,mma,,vocab_set_l1_02,,,,vocab_set_l1_02,,TRUE,FALSE,TRUE,,¼éæ­¢ºï¼è¦èª
-pinyin_lesson_01,P11,35,vocabulary,vocab_l1_010_baba,¸ç,¸ç,bba,,vocab_set_l1_02,,,,vocab_set_l1_02,,TRUE,FALSE,TRUE,,¼éæ­¢ºï¼è¦èª
-pinyin_lesson_01,P11,36,vocabulary,vocab_l1_011_fuwu,,,fÃºwÃ¹,,vocab_set_l1_02,,,,vocab_set_l1_02,,TRUE,FALSE,TRUE,,¼éæ­¢ºï¼è¦èª
-pinyin_lesson_01,P11,37,vocabulary,vocab_l1_012_yifu,è¡,è¡,yÄ«fu,,vocab_set_l1_02,,,,vocab_set_l1_02,,TRUE,FALSE,TRUE,,¼éæ­¢ºï¼è¦èª
-pinyin_lesson_01,P11,38,vocabulary,vocab_l1_013_pifu,®è,®è,pÃ­fÅ«,,vocab_set_l1_02,,,,vocab_set_l1_02,,TRUE,FALSE,TRUE,,¼éæ­¢ºï¼è¦èª
-pinyin_lesson_01,P11,39,vocabulary,vocab_l1_014_mima,å¯¢¼,å¯¢¼,mÃ¬m,,vocab_set_l1_02,,,,vocab_set_l1_02,,TRUE,FALSE,TRUE,,¼éæ­¢ºï¼è¦èª
-pinyin_lesson_01,P11,40,vocabulary,vocab_l1_015_bofu,ä¼¯ç,ä¼¯ç,bÃ³fÃ¹,,vocab_set_l1_02,,,,vocab_set_l1_02,family_bofu_bomu,TRUE,FALSE,TRUE,,¼éæ­¢ºï¼è¦èª
-pinyin_lesson_01,P11,41,vocabulary,vocab_l1_016_bomu,ä¼¯æ,ä¼¯æ,bÃ³m,,vocab_set_l1_02,,,,vocab_set_l1_02,family_bofu_bomu,TRUE,FALSE,TRUE,,¼éæ­¢ºï¼è¦èª
-pinyin_lesson_01,P6,42,exercise,exercise_l1_p6_read_pinyin,³æè®,,,,exercise,ç·´ç b/p/m/f + a/o/e/i/u/Ã¼ è®,,³æè®,,,TRUE,FALSE,FALSE,,ä¸²èª¿
-pinyin_lesson_01,P8,43,exercise,exercise_l1_p8_tone_reading,/½è¾¨,,,,exercise,ç·´çè¾¨è³ã,,/½è¾¨,,,TRUE,FALSE,TRUE,FALSE,ä¸è¼
-pinyin_lesson_01,P10,44,exercise,exercise_l1_p10_vocab_follow,è© 1 è·/,,,,exercise,ç¢ºèè© 1 ¼éæ­¢º,,è©è·/,vocab_set_l1_01,,TRUE,FALSE,TRUE,,ä¸æ±æ¼¢å
-pinyin_lesson_01,P12,45,exercise,exercise_l1_p12_vocab_follow,è© 2 è·/,,,,exercise,ç¢ºèè© 2 ¼éæ­¢º,,è©è·/,vocab_set_l1_02,,TRUE,FALSE,TRUE,,ä¸æ±æ¼¢å
-pinyin_lesson_01,P13,46,exercise,exercise_l1_p13_review,èª²å´åç·´ç,,,,exercise, 2-3 ç¿,,èª²å´åç·´ç,,,TRUE,FALSE,TRUE,,å»ºè­°é¡ï¼³é¼éï¼¼éï¼å½è®/
+pinyin_lesson_01,P1,1,lesson_overview,page_l1_p1,ï¿½ï¿½,,,,lesson_page,ç¬¬ï¿½è¯¾è¯¾ï¿½ç¨¸ï¿½è§ˆï¿½,,,,,TRUE,FALSE,,,ï¿½è¯¾ï¿½å°¦ï¿½
+pinyin_lesson_01,P2,2,learning_objective,page_l1_p2,å­¦ï¿½ï¿½,,,,lesson_page,è°Šï¿½ï¿½ï¿½è°ƒï¿½æ­£ç¡®ï¿½ç¬¬ï¿½è¯¾ï¿½ï¿½,,,,,TRUE,FALSE,,,ï¿½æ¼·è°ƒï¿½ï¿½ä¸¼ï¿½è°ƒï¿½ï¿½
+pinyin_lesson_01,P3-P4,3,concept,page_l1_p3_p4,ï¿½ï¿½æ¡¤ï¿½,,,,lesson_page,ï¿½ï¿½ï¿½ä¹ˆï¿½ï¿½ï¿½/ï¿½ï¿½/ï¿½è°ƒæ¡¤ï¿½,,,,,TRUE,FALSE,,,ï¿½ï¿½ï¿½å¿µï¿½
+pinyin_lesson_01,P5,4,pinyin_chart,page_l1_p5,ï¿½ï¿½ b p m f + ï¿½ï¿½ a o e i u Ã¼ ï¿½ï¿½ï¿½,,,,lesson_page,å»ºï¿½ç¬¬ï¿½ï¿½ï¿½ï¿½ï¼«ï¿½è°ƒï¿½,,,,,TRUE,FALSE,FALSE,,ï¿½ï¿½ initialsfinals  syllable combinations
+pinyin_lesson_01,P6,5,pinyin_exercise,page_l1_p6,ï¿½ï¿½ç»ƒï¿½,,,,lesson_page,ï¿½ï¿½ç»ƒï¿½ï¼«ï¿½è°ƒï¿½,,,,,TRUE,FALSE,FALSE,,ï¿½ï¿½è®³ï¿½ï¿½
+pinyin_lesson_01,P7,6,tone,page_l1_p7,ï¿½è°ƒå­¦ï¿½,,,,lesson_page, + ï¿½,,,,,TRUE,FALSE,TRUE,TRUE,è½®ï¿½å­¦ï¿½ç»ï¿½
+pinyin_lesson_01,P8,7,tone_exercise,page_l1_p8,ï¿½è°ƒç»ƒï¿½,,,,lesson_page,ç»ƒï¿½ï¼«ï¿½ï¿½,,,,,TRUE,FALSE,TRUE,FALSE,ç»ƒï¿½ï¼«ï¿½ï¿½
+pinyin_lesson_01,P9,8,vocabulary_set,page_l1_p9,ï¿½ 1,,,,lesson_page,ï¿½ã¼»ï¿½ï¿½,,,vocab_set_l1_01,,TRUE,FALSE,TRUE,,ï¿½ï¿½æ­¢ï¿½ï¿½ä¸»ï¿½ï¿½æ±‰ï¿½
+pinyin_lesson_01,P10,9,vocab_exercise,page_l1_p10,ï¿½ç»ƒï¿½ 1,,,,lesson_page,ï¿½ 1 ï¿½ç»ƒï¿½,,,vocab_set_l1_01,,TRUE,FALSE,TRUE,,ï¿½ï¿½æ­¢ï¿½ï¿½ä¸»ï¿½ï¿½æ±‰ï¿½
+pinyin_lesson_01,P11,10,vocabulary_set,page_l1_p11,ï¿½ 2,,,,lesson_page,å¦ˆå¦ˆï¿½ã¡£ç ã¼¯/ä¼¯ï¿½,,,vocab_set_l1_02,,TRUE,FALSE,TRUE,,ä¼¯ï¿½/ä¼¯ï¿½ï¿½åº“å»ºè®®ï¿½ï¿½
+pinyin_lesson_01,P12,11,vocab_exercise,page_l1_p12,ï¿½ç»ƒï¿½ 2,,,,lesson_page,ï¿½ 2 ï¿½ç»ƒï¿½,,,vocab_set_l1_02,,TRUE,FALSE,TRUE,,ï¿½ï¿½æ­¢ï¿½ï¿½ä¸»ï¿½ï¿½æ±‰ï¿½
+pinyin_lesson_01,P13,12,review_exercise,page_l1_p13,è¯¾ï¿½ç»ƒï¿½,,,,lesson_page,2-3 ï¿½,,,,,TRUE,FALSE,TRUE,,ï¿½ï¿½æ­¢ï¿½ï¿½ä¸»ï¿½ï¿½æ±‰ï¿½
+pinyin_lesson_01,P14,13,tech_setup,page_l1_p14,è¾“ï¿½ï¿½ï¿½ï¿½,,,,lesson_page,ä¸­ï¿½è¾“ï¿½ï¿½ï¿½è®¾ï¿½,,,,,FALSE,FALSE,,,è¡¨ï¿½å®§å®¹
+pinyin_lesson_01,P5,14,initial,initial_b,ï¿½ï¿½ b,,,b,initial,,ï¿½ï¿½ä¸°ï¿½,,,,TRUE,FALSE,,,
+pinyin_lesson_01,P5,15,initial,initial_p,ï¿½ï¿½ p,,,p,initial,,ï¿½ï°£,,,,TRUE,FALSE,,,
+pinyin_lesson_01,P5,16,initial,initial_m,ï¿½ï¿½ m,,,m,initial,,é¼»ï¿½,,,,TRUE,FALSE,,,
+pinyin_lesson_01,P5,17,initial,initial_f,ï¿½ï¿½ f,,,f,initial,,ï¿½ï¿½,,,,TRUE,FALSE,,,
+pinyin_lesson_01,P5,18,final,final_a,ï¿½ï¿½ a,,,a,final,ï¿½ï¿½ï¿½,,,,,TRUE,FALSE,,,
+pinyin_lesson_01,P5,19,final,final_o,ï¿½ï¿½ o,,,o,final,ï¿½ï¿½ï¿½,,,,,TRUE,FALSE,,,
+pinyin_lesson_01,P5,20,final,final_e,ï¿½ï¿½ e,,,e,final,ï¿½ï¿½ï¿½,,,,,TRUE,FALSE,,,
+pinyin_lesson_01,P5,21,final,final_i,ï¿½ï¿½ i,,,i,final,ï¿½ï¿½ï¿½,,,,,TRUE,FALSE,,,
+pinyin_lesson_01,P5,22,final,final_u,ï¿½ï¿½ u,,,u,final,ï¿½ï¿½ï¿½,,,,,TRUE,FALSE,,,
+pinyin_lesson_01,P5,23,final,final_u_umlaut,ï¿½ï¿½ Ã¼,,,Ã¼,final,ï¿½ï¿½ï¿½,,,,,TRUE,FALSE,,,
+pinyin_lesson_01,P7,24,tone,tone_four_tones,,,,,tone,ç¬¬ï¿½ã¬¬äº¬ï¿½ä¸¬ï¿½,,,,,TRUE,FALSE,TRUE,FALSE,P7 å­¦ï¿½ï¿½P8 ç»ƒï¿½
+pinyin_lesson_01,P7,25,tone,tone_neutral,ï¿½,,,,tone,ï¿½æ¡¤ï¿½,,,,,TRUE,FALSE,TRUE,TRUE,P7 å­¦ï¿½ï¿½P8 ç»ƒï¿½ï¿½ï¿½
+pinyin_lesson_01,P9,26,vocabulary,vocab_l1_001_ba,,,b,,vocab_set_l1_01,,,,vocab_set_l1_01,,TRUE,FALSE,TRUE,,ï¿½ï¿½æ­¢ï¿½ï¿½ï¿½ï¿½
+pinyin_lesson_01,P9,27,vocabulary,vocab_l1_002_pa,,,p,,vocab_set_l1_01,,,,vocab_set_l1_01,,TRUE,FALSE,TRUE,,ï¿½ï¿½æ­¢ï¿½ï¿½ï¿½ï¿½
+pinyin_lesson_01,P9,28,vocabulary,vocab_l1_003_e,ï¿½,ï¿½,Ã¨,,vocab_set_l1_01,,,,vocab_set_l1_01,,TRUE,FALSE,TRUE,,ï¿½ï¿½æ­¢ï¿½ï¿½ï¿½ï¿½
+pinyin_lesson_01,P9,29,vocabulary,vocab_l1_004_bu,ï¿½,ï¿½,bÃ¹,,vocab_set_l1_01,,,,vocab_set_l1_01,,TRUE,FALSE,TRUE,,ï¿½ï¿½æ­¢ï¿½ï¿½ï¿½ï¿½
+pinyin_lesson_01,P9,30,vocabulary,vocab_l1_005_bi,ï¿½,ï¿½,bÃ­,,vocab_set_l1_01,,,,vocab_set_l1_01,,TRUE,FALSE,TRUE,,ï¿½ï¿½æ­¢ï¿½ï¿½ï¿½ï¿½
+pinyin_lesson_01,P9,31,vocabulary,vocab_l1_006_mu,,,mÃ¹,,vocab_set_l1_01,,,,vocab_set_l1_01,,TRUE,FALSE,TRUE,,ï¿½ï¿½æ­¢ï¿½ï¿½ï¿½ï¿½
+pinyin_lesson_01,P9,32,vocabulary,vocab_l1_007_ma,ï¿½,ï¿½,m,,vocab_set_l1_01,,,,vocab_set_l1_01,,TRUE,FALSE,TRUE,,ï¿½ï¿½æ­¢ï¿½ï¿½ï¿½ï¿½
+pinyin_lesson_01,P9,33,vocabulary,vocab_l1_008_fo,ï¿½,ï¿½,fÃ³,,vocab_set_l1_01,,,,vocab_set_l1_01,,TRUE,FALSE,TRUE,,ï¿½ï¿½æ­¢ï¿½ï¿½ï¿½ï¿½
+pinyin_lesson_01,P11,34,vocabulary,vocab_l1_009_mama,å¦ˆå¦ˆ,å¦ˆå¦ˆ,mma,,vocab_set_l1_02,,,,vocab_set_l1_02,,TRUE,FALSE,TRUE,,ï¿½ï¿½æ­¢ï¿½ï¿½ï¿½ï¿½
+pinyin_lesson_01,P11,35,vocabulary,vocab_l1_010_baba,ï¿½ï¿½,ï¿½ï¿½,bba,,vocab_set_l1_02,,,,vocab_set_l1_02,,TRUE,FALSE,TRUE,,ï¿½ï¿½æ­¢ï¿½ï¿½ï¿½ï¿½
+pinyin_lesson_01,P11,36,vocabulary,vocab_l1_011_fuwu,,,fÃºwÃ¹,,vocab_set_l1_02,,,,vocab_set_l1_02,,TRUE,FALSE,TRUE,,ï¿½ï¿½æ­¢ï¿½ï¿½ï¿½ï¿½
+pinyin_lesson_01,P11,37,vocabulary,vocab_l1_012_yifu,ï¿½,ï¿½,yÄ«fu,,vocab_set_l1_02,,,,vocab_set_l1_02,,TRUE,FALSE,TRUE,,ï¿½ï¿½æ­¢ï¿½ï¿½ï¿½ï¿½
+pinyin_lesson_01,P11,38,vocabulary,vocab_l1_013_pifu,ï¿½ï¿½,ï¿½ï¿½,pÃ­fÅ«,,vocab_set_l1_02,,,,vocab_set_l1_02,,TRUE,FALSE,TRUE,,ï¿½ï¿½æ­¢ï¿½ï¿½ï¿½ï¿½
+pinyin_lesson_01,P11,39,vocabulary,vocab_l1_014_mima,å¯ï¿½,å¯ï¿½,mÃ¬m,,vocab_set_l1_02,,,,vocab_set_l1_02,,TRUE,FALSE,TRUE,,ï¿½ï¿½æ­¢ï¿½ï¿½ï¿½ï¿½
+pinyin_lesson_01,P11,40,vocabulary,vocab_l1_015_bofu,ä¼¯ï¿½,ä¼¯ï¿½,bÃ³fÃ¹,,vocab_set_l1_02,,,,vocab_set_l1_02,family_bofu_bomu,TRUE,FALSE,TRUE,,ï¿½ï¿½æ­¢ï¿½ï¿½ï¿½ï¿½
+pinyin_lesson_01,P11,41,vocabulary,vocab_l1_016_bomu,ä¼¯ï¿½,ä¼¯ï¿½,bÃ³m,,vocab_set_l1_02,,,,vocab_set_l1_02,family_bofu_bomu,TRUE,FALSE,TRUE,,ï¿½ï¿½æ­¢ï¿½ï¿½ï¿½ï¿½
+pinyin_lesson_01,P6,42,exercise,exercise_l1_p6_read_pinyin,ï¿½ï¿½ï¿½,,,,exercise,ç»ƒï¿½ b/p/m/f + a/o/e/i/u/Ã¼ ï¿½,,ï¿½ï¿½ï¿½,,,TRUE,FALSE,FALSE,,ä¸²è°ƒ
+pinyin_lesson_01,P8,43,exercise,exercise_l1_p8_tone_reading,/ï¿½è¾¨,,,,exercise,ç»ƒï¿½è¾¨ï¿½ï¿½,,/ï¿½è¾¨,,,TRUE,FALSE,TRUE,FALSE,ï¿½ï¿½
+pinyin_lesson_01,P10,44,exercise,exercise_l1_p10_vocab_follow,ï¿½ 1 ï¿½/,,,,exercise,ç¡®ï¿½ï¿½ 1 ï¿½ï¿½æ­¢ï¿½,,ï¿½ï¿½/,vocab_set_l1_01,,TRUE,FALSE,TRUE,,ï¿½ï¿½æ±‰ï¿½
+pinyin_lesson_01,P12,45,exercise,exercise_l1_p12_vocab_follow,ï¿½ 2 ï¿½/,,,,exercise,ç¡®ï¿½ï¿½ 2 ï¿½ï¿½æ­¢ï¿½,,ï¿½ï¿½/,vocab_set_l1_02,,TRUE,FALSE,TRUE,,ï¿½ï¿½æ±‰ï¿½
+pinyin_lesson_01,P13,46,exercise,exercise_l1_p13_review,è¯¾ï¿½ï¿½ç»ƒï¿½,,,,exercise, 2-3 ï¿½,,è¯¾ï¿½ï¿½ç»ƒï¿½,,,TRUE,FALSE,TRUE,,å»ºè®®ï¿½ï¼³ï¿½ï¿½ï¼¼ï¿½ï¿½ï¿½ï¿½/

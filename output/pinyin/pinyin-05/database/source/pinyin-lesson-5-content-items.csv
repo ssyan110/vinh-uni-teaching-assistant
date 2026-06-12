@@ -1,62 +1,62 @@
 lesson_id,page_range,page_range_options,sequence,record_type,item_id,title,hanzi,pinyin,symbol,category,final_group,content_focus,exercise_type,source_set_id,source_chart_id,source_tone_sandhi_rule_id,related_rule_id,script_note,meaning_note,pronunciation_first,meaning_focus,requires_hanzi_recognition,includes_tones,is_page_range_flexible,notes
-pinyin_lesson_05,P1,,1,lesson_cover,page_l5_01,封面,,,,lesson_page,,第五課課程封面。,,,,,,,,true,true,false,,false,
-pinyin_lesson_05,P2,,2,learning_objective,page_l5_02,學習目標,,,,lesson_page,,說明本課要學 an/en/in/uen(un)/ün、ang/eng/ing/ong、含聲調拼讀、詞彙發音與字義、ün 拼寫變化。,,,,,,,,true,true,false,,false,
-pinyin_lesson_05,P3,,3,warmup_activity,page_l5_03,暖身活動：複習第四課生詞,,,,lesson_page,,複習第四課生詞；活動可用連連看或聽音猜意 flash card。,,,,,,,,true,true,false,,false,
-pinyin_lesson_05,P4,,4,pinyin_learning_cover,page_l5_04,拼音學習封面 1：an en in uen(un) ün,,,,lesson_page,,進入第一組前鼻韻母學習段落。,,,,,,,,true,true,false,,false,封面包含 ün；P5 表格只列 an/en/in/uen(un)，ün 於 P9 規則處理。
-pinyin_lesson_05,P5,,5,pinyin_chart,pinyin_chart_l5_group_1,拼音學習表格 1：全部聲母 + an en in uen(un),,,,lesson_page,,建立 21 聲母與 an/en/in/uen(un) 的拼讀組合。,,,pinyin_chart_l5_group_1,,,,,true,true,false,false,false,不含 ün；ün 另由 P9 規則與 P10 詞彙承接。
-pinyin_lesson_05,P6,,6,pinyin_exercise,page_l5_06,拼音練習 1,,,,lesson_page,,第一組前鼻韻母拼讀練習，含聲調。,,,pinyin_chart_l5_group_1,,,,,true,true,false,true,false,
-pinyin_lesson_05,P7,,7,vocabulary_set,vocab_set_l5_01,詞彙 1,,,,lesson_page,,米飯、男、雞蛋、門、人、新、春、困。,,vocab_set_l5_01,,,,,,true,true,false,,false,困附註 sleepy。
-pinyin_lesson_05,P8,,8,vocab_exercise,page_l5_08,詞彙練習 1,,,,lesson_page,,詞彙 1 的發音與字義練習。,,vocab_set_l5_01,,,,,,true,true,false,,false,
-pinyin_lesson_05,P9,,9,spelling_rule,rule_l5_jqx_un_umlaut,規則：ün 的變化,,,,lesson_page,,學習 j/q/x + ün 時，拼寫為 jun/qun/xun。,,,,,rule_l5_jqx_un_umlaut,,,true,true,false,,false,
-pinyin_lesson_05,P10,,10,vocabulary_set,vocab_set_l5_02,詞彙 2,,,,lesson_page,,軍人、裙子、培訓。,,vocab_set_l5_02,,,rule_l5_jqx_un_umlaut,,,true,true,false,,false,
-pinyin_lesson_05,P11,,11,vocab_exercise,page_l5_11,詞彙練習 2,,,,lesson_page,,詞彙 2 的發音與字義練習。,,vocab_set_l5_02,,,rule_l5_jqx_un_umlaut,,,true,true,false,,false,
-pinyin_lesson_05,P12,,12,pinyin_learning_cover,page_l5_12,拼音學習封面 2：ang eng ing ong,,,,lesson_page,,進入後鼻韻母學習段落。,,,,,,,,true,true,false,,false,
-pinyin_lesson_05,P13,,13,pinyin_chart,pinyin_chart_l5_group_2,拼音學習表格 2：全部聲母 + ang eng ing ong,,,,lesson_page,,建立 21 聲母與 ang/eng/ing/ong 的拼讀組合。,,,pinyin_chart_l5_group_2,,,,,true,true,false,false,false,
-pinyin_lesson_05,P14,,14,pinyin_exercise,page_l5_14,拼音練習 2,,,,lesson_page,,第二組後鼻韻母拼讀練習，含聲調。,,,pinyin_chart_l5_group_2,,,,,true,true,false,true,false,
-pinyin_lesson_05,P15,,15,vocabulary_set,vocab_set_l5_03,詞彙 3,,,,lesson_page,,湯、髒、疼、冷、名字、聽、龍、成功。,,vocab_set_l5_03,,,,,,true,true,false,,false,
-pinyin_lesson_05,P16,,16,vocab_exercise,page_l5_16,詞彙練習 3,,,,lesson_page,,詞彙 3 的發音與字義練習。,,vocab_set_l5_03,,,,,,true,true,false,,false,
-pinyin_lesson_05,,P17-P18|P17-P19,17,review_exercise,page_l5_17,課後練習,,,,lesson_page,,2-3 個題型整合複習。,,,,,,,,true,true,false,,true,
-pinyin_lesson_05,P3,,90,warmup_activity,warmup_review_pinyin_lesson_04,暖身活動：複習前一課生詞,,,,warmup_activity,,複習前一課的生詞,,,,,,,,true,true,false,,,暖身活動放在學習目標之後，用前一課生詞作為複習材料。
-pinyin_lesson_05,P3,,91,warmup_activity_option,warmup_review_pinyin_lesson_04_option_1,連連看,,,,matching,,學生看照片，連到對應的拼音與漢字。,,,,,,,,true,true,false,,,
-pinyin_lesson_05,P3,,92,warmup_activity_option,warmup_review_pinyin_lesson_04_option_2,聽音猜意 flash card,,,,audio_flashcard,,正面播放生詞音檔，學生猜意思；反面顯示漢字、拼音與圖片。,,,,,,,,true,true,false,,,
-pinyin_lesson_05,P4,,101,final,final_an,韻母 an,,,an,final,front_nasal_group,韻母 an。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
-pinyin_lesson_05,P4,,102,final,final_en,韻母 en,,,en,final,front_nasal_group,韻母 en。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
-pinyin_lesson_05,P4,,103,final,final_in,韻母 in,,,in,final,front_nasal_group,韻母 in。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
-pinyin_lesson_05,P4,,104,final,final_uen_un,韻母 uen(un),,,uen(un),final,front_nasal_group,韻母 uen(un)。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
-pinyin_lesson_05,P4,,105,final,final_un_umlaut,韻母 ün,,,ün,final,front_nasal_rule_based,韻母 ün。,,,,,rule_l5_jqx_un_umlaut,,,true,false,false,,,chart_page=; rule_page=P9
-pinyin_lesson_05,P12,,106,final,final_ang,韻母 ang,,,ang,final,back_nasal_group,韻母 ang。,,,,,,,,true,false,false,,,chart_page=P13; rule_page=
-pinyin_lesson_05,P12,,107,final,final_eng,韻母 eng,,,eng,final,back_nasal_group,韻母 eng。,,,,,,,,true,false,false,,,chart_page=P13; rule_page=
-pinyin_lesson_05,P12,,108,final,final_ing,韻母 ing,,,ing,final,back_nasal_group,韻母 ing。,,,,,,,,true,false,false,,,chart_page=P13; rule_page=
-pinyin_lesson_05,P12,,109,final,final_ong,韻母 ong,,,ong,final,back_nasal_group,韻母 ong。,,,,,,,,true,false,false,,,chart_page=P13; rule_page=
-pinyin_lesson_05,multiple,,110,initials_reference,summary_21_initials,全部 21 聲母,,,,initials_reference,,b|p|m|f|d|t|n|l|g|k|h|j|q|x|zh|ch|sh|r|z|c|s,,,,,,,,true,false,false,,,
-pinyin_lesson_05,P5,,111,pinyin_chart,pinyin_chart_l5_group_1,全部聲母 + an en in uen(un),,,,pinyin_chart,,initials=b|p|m|f|d|t|n|l|g|k|h|j|q|x|zh|ch|sh|r|z|c|s; finals=an|en|in|uen(un),,,,,,,,true,false,false,false,,P5 表格不含 ün；ün 由 P9 規則處理。
-pinyin_lesson_05,P13,,112,pinyin_chart,pinyin_chart_l5_group_2,全部聲母 + ang eng ing ong,,,,pinyin_chart,,initials=b|p|m|f|d|t|n|l|g|k|h|j|q|x|zh|ch|sh|r|z|c|s; finals=ang|eng|ing|ong,,,,,,,,true,false,false,false,,
-pinyin_lesson_05,P9,,113,spelling_rule,rule_l5_jqx_un_umlaut,j/q/x + ün 拼寫變化,,,,spelling_rule,,j/q/x 後接 ün 時，拼寫省略 ü 上兩點，但發音仍與 ün 有關。,,,,,rule_l5_jqx_un_umlaut,,,true,false,false,,,
+pinyin_lesson_05,P1,,1,lesson_cover,page_l5_01,封面,,,,lesson_page,,第五课课程封面。,,,,,,,,true,true,false,,false,
+pinyin_lesson_05,P2,,2,learning_objective,page_l5_02,学习目标,,,,lesson_page,,说明本课要学 an/en/in/uen(un)/ün、ang/eng/ing/ong、含声调拼读、词汇发音与字义、ün 拼写变化。,,,,,,,,true,true,false,,false,
+pinyin_lesson_05,P3,,3,warmup_activity,page_l5_03,暖身活动：复习第四课生词,,,,lesson_page,,复习第四课生词；活动可用连连看或听音猜意 flash card。,,,,,,,,true,true,false,,false,
+pinyin_lesson_05,P4,,4,pinyin_learning_cover,page_l5_04,拼音学习封面 1：an en in uen(un) ün,,,,lesson_page,,进入第一组前鼻韵母学习段落。,,,,,,,,true,true,false,,false,封面包含 ün；P5 表格只列 an/en/in/uen(un)，ün 于 P9 规则处理。
+pinyin_lesson_05,P5,,5,pinyin_chart,pinyin_chart_l5_group_1,拼音学习表格 1：全部声母 + an en in uen(un),,,,lesson_page,,建立 21 声母与 an/en/in/uen(un) 的拼读组合。,,,pinyin_chart_l5_group_1,,,,,true,true,false,false,false,不含 ün；ün 另由 P9 规则与 P10 词汇承接。
+pinyin_lesson_05,P6,,6,pinyin_exercise,page_l5_06,拼音练习 1,,,,lesson_page,,第一组前鼻韵母拼读练习，含声调。,,,pinyin_chart_l5_group_1,,,,,true,true,false,true,false,
+pinyin_lesson_05,P7,,7,vocabulary_set,vocab_set_l5_01,词汇 1,,,,lesson_page,,米饭、男、鸡蛋、门、人、新、春、困。,,vocab_set_l5_01,,,,,,true,true,false,,false,困附注 sleepy。
+pinyin_lesson_05,P8,,8,vocab_exercise,page_l5_08,词汇练习 1,,,,lesson_page,,词汇 1 的发音与字义练习。,,vocab_set_l5_01,,,,,,true,true,false,,false,
+pinyin_lesson_05,P9,,9,spelling_rule,rule_l5_jqx_un_umlaut,规则：ün 的变化,,,,lesson_page,,学习 j/q/x + ün 时，拼写为 jun/qun/xun。,,,,,rule_l5_jqx_un_umlaut,,,true,true,false,,false,
+pinyin_lesson_05,P10,,10,vocabulary_set,vocab_set_l5_02,词汇 2,,,,lesson_page,,军人、裙子、培训。,,vocab_set_l5_02,,,rule_l5_jqx_un_umlaut,,,true,true,false,,false,
+pinyin_lesson_05,P11,,11,vocab_exercise,page_l5_11,词汇练习 2,,,,lesson_page,,词汇 2 的发音与字义练习。,,vocab_set_l5_02,,,rule_l5_jqx_un_umlaut,,,true,true,false,,false,
+pinyin_lesson_05,P12,,12,pinyin_learning_cover,page_l5_12,拼音学习封面 2：ang eng ing ong,,,,lesson_page,,进入后鼻韵母学习段落。,,,,,,,,true,true,false,,false,
+pinyin_lesson_05,P13,,13,pinyin_chart,pinyin_chart_l5_group_2,拼音学习表格 2：全部声母 + ang eng ing ong,,,,lesson_page,,建立 21 声母与 ang/eng/ing/ong 的拼读组合。,,,pinyin_chart_l5_group_2,,,,,true,true,false,false,false,
+pinyin_lesson_05,P14,,14,pinyin_exercise,page_l5_14,拼音练习 2,,,,lesson_page,,第二组后鼻韵母拼读练习，含声调。,,,pinyin_chart_l5_group_2,,,,,true,true,false,true,false,
+pinyin_lesson_05,P15,,15,vocabulary_set,vocab_set_l5_03,词汇 3,,,,lesson_page,,汤、脏、疼、冷、名字、听、龙、成功。,,vocab_set_l5_03,,,,,,true,true,false,,false,
+pinyin_lesson_05,P16,,16,vocab_exercise,page_l5_16,词汇练习 3,,,,lesson_page,,词汇 3 的发音与字义练习。,,vocab_set_l5_03,,,,,,true,true,false,,false,
+pinyin_lesson_05,,P17-P18|P17-P19,17,review_exercise,page_l5_17,课后练习,,,,lesson_page,,2-3 个题型整合复习。,,,,,,,,true,true,false,,true,
+pinyin_lesson_05,P3,,90,warmup_activity,warmup_review_pinyin_lesson_04,暖身活动：复习前一课生词,,,,warmup_activity,,复习前一课的生词,,,,,,,,true,true,false,,,暖身活动放在学习目标之后，用前一课生词作为复习材料。
+pinyin_lesson_05,P3,,91,warmup_activity_option,warmup_review_pinyin_lesson_04_option_1,连连看,,,,matching,,学生看照片，连到对应的拼音与汉字。,,,,,,,,true,true,false,,,
+pinyin_lesson_05,P3,,92,warmup_activity_option,warmup_review_pinyin_lesson_04_option_2,听音猜意 flash card,,,,audio_flashcard,,正面播放生词音档，学生猜意思；反面显示汉字、拼音与图片。,,,,,,,,true,true,false,,,
+pinyin_lesson_05,P4,,101,final,final_an,韵母 an,,,an,final,front_nasal_group,韵母 an。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_05,P4,,102,final,final_en,韵母 en,,,en,final,front_nasal_group,韵母 en。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_05,P4,,103,final,final_in,韵母 in,,,in,final,front_nasal_group,韵母 in。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_05,P4,,104,final,final_uen_un,韵母 uen(un),,,uen(un),final,front_nasal_group,韵母 uen(un)。,,,,,,,,true,false,false,,,chart_page=P5; rule_page=
+pinyin_lesson_05,P4,,105,final,final_un_umlaut,韵母 ün,,,ün,final,front_nasal_rule_based,韵母 ün。,,,,,rule_l5_jqx_un_umlaut,,,true,false,false,,,chart_page=; rule_page=P9
+pinyin_lesson_05,P12,,106,final,final_ang,韵母 ang,,,ang,final,back_nasal_group,韵母 ang。,,,,,,,,true,false,false,,,chart_page=P13; rule_page=
+pinyin_lesson_05,P12,,107,final,final_eng,韵母 eng,,,eng,final,back_nasal_group,韵母 eng。,,,,,,,,true,false,false,,,chart_page=P13; rule_page=
+pinyin_lesson_05,P12,,108,final,final_ing,韵母 ing,,,ing,final,back_nasal_group,韵母 ing。,,,,,,,,true,false,false,,,chart_page=P13; rule_page=
+pinyin_lesson_05,P12,,109,final,final_ong,韵母 ong,,,ong,final,back_nasal_group,韵母 ong。,,,,,,,,true,false,false,,,chart_page=P13; rule_page=
+pinyin_lesson_05,multiple,,110,initials_reference,summary_21_initials,全部 21 声母,,,,initials_reference,,b|p|m|f|d|t|n|l|g|k|h|j|q|x|zh|ch|sh|r|z|c|s,,,,,,,,true,false,false,,,
+pinyin_lesson_05,P5,,111,pinyin_chart,pinyin_chart_l5_group_1,全部声母 + an en in uen(un),,,,pinyin_chart,,initials=b|p|m|f|d|t|n|l|g|k|h|j|q|x|zh|ch|sh|r|z|c|s; finals=an|en|in|uen(un),,,,,,,,true,false,false,false,,P5 表格不含 ün；ün 由 P9 规则处理。
+pinyin_lesson_05,P13,,112,pinyin_chart,pinyin_chart_l5_group_2,全部声母 + ang eng ing ong,,,,pinyin_chart,,initials=b|p|m|f|d|t|n|l|g|k|h|j|q|x|zh|ch|sh|r|z|c|s; finals=ang|eng|ing|ong,,,,,,,,true,false,false,false,,
+pinyin_lesson_05,P9,,113,spelling_rule,rule_l5_jqx_un_umlaut,j/q/x + ün 拼写变化,,,,spelling_rule,,j/q/x 后接 ün 时，拼写省略 ü 上两点，但发音仍与 ün 有关。,,,,,rule_l5_jqx_un_umlaut,,,true,false,false,,,
 pinyin_lesson_05,P9,,114,spelling_rule_mapping,rule_l5_jqx_un_umlaut_jün_to_jun,jün→jun,,,jun,spelling_rule_mapping,,jün is written as jun.,,,,,rule_l5_jqx_un_umlaut,,,true,false,false,,,
 pinyin_lesson_05,P9,,115,spelling_rule_mapping,rule_l5_jqx_un_umlaut_qün_to_qun,qün→qun,,,qun,spelling_rule_mapping,,qün is written as qun.,,,,,rule_l5_jqx_un_umlaut,,,true,false,false,,,
 pinyin_lesson_05,P9,,116,spelling_rule_mapping,rule_l5_jqx_un_umlaut_xün_to_xun,xün→xun,,,xun,spelling_rule_mapping,,xün is written as xun.,,,,,rule_l5_jqx_un_umlaut,,,true,false,false,,,
-pinyin_lesson_05,P7,,117,vocabulary,vocab_l5_001_mifan,米飯,米飯,mǐfàn,,vocab_set_l5_01,,,,vocab_set_l5_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
-pinyin_lesson_05,P7,,118,vocabulary,vocab_l5_002_nan,男,男,nán,,vocab_set_l5_01,,,,vocab_set_l5_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
-pinyin_lesson_05,P7,,119,vocabulary,vocab_l5_003_jidan,雞蛋,雞蛋,jīdàn,,vocab_set_l5_01,,,,vocab_set_l5_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
-pinyin_lesson_05,P7,,120,vocabulary,vocab_l5_004_men,門,門,mén,,vocab_set_l5_01,,,,vocab_set_l5_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
-pinyin_lesson_05,P7,,121,vocabulary,vocab_l5_005_ren,人,人,rén,,vocab_set_l5_01,,,,vocab_set_l5_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
-pinyin_lesson_05,P7,,122,vocabulary,vocab_l5_006_xin,新,新,xīn,,vocab_set_l5_01,,,,vocab_set_l5_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
-pinyin_lesson_05,P7,,123,vocabulary,vocab_l5_007_chun,春,春,chūn,,vocab_set_l5_01,,,,vocab_set_l5_01,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
-pinyin_lesson_05,P7,,124,vocabulary,vocab_l5_008_kun,困,困,kùn,,vocab_set_l5_01,,,,vocab_set_l5_01,,,,,sleepy,true,true,false,true,,發音正確，學習字義，不要求認字。
-pinyin_lesson_05,P10,,125,vocabulary,vocab_l5_009_junren,軍人,軍人,jūnrén,,vocab_set_l5_02,,,,vocab_set_l5_02,,,rule_l5_jqx_un_umlaut,,,true,true,false,true,,發音正確，學習字義，不要求認字。
-pinyin_lesson_05,P10,,126,vocabulary,vocab_l5_010_qunzi,裙子,裙子,qúnzi,,vocab_set_l5_02,,,,vocab_set_l5_02,,,rule_l5_jqx_un_umlaut,,,true,true,false,true,,發音正確，學習字義，不要求認字。
-pinyin_lesson_05,P10,,127,vocabulary,vocab_l5_011_peixun,培訓,培訓,péixùn,,vocab_set_l5_02,,,,vocab_set_l5_02,,,rule_l5_jqx_un_umlaut,,,true,true,false,true,,發音正確，學習字義，不要求認字。
-pinyin_lesson_05,P15,,128,vocabulary,vocab_l5_012_tang,湯,湯,tāng,,vocab_set_l5_03,,,,vocab_set_l5_03,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
-pinyin_lesson_05,P15,,129,vocabulary,vocab_l5_013_zang,髒,髒,zāng,,vocab_set_l5_03,,,,vocab_set_l5_03,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
-pinyin_lesson_05,P15,,130,vocabulary,vocab_l5_014_teng,疼,疼,téng,,vocab_set_l5_03,,,,vocab_set_l5_03,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
-pinyin_lesson_05,P15,,131,vocabulary,vocab_l5_015_leng,冷,冷,lěng,,vocab_set_l5_03,,,,vocab_set_l5_03,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
-pinyin_lesson_05,P15,,132,vocabulary,vocab_l5_016_mingzi,名字,名字,míngzi,,vocab_set_l5_03,,,,vocab_set_l5_03,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
-pinyin_lesson_05,P15,,133,vocabulary,vocab_l5_017_ting,聽,聽,tīng,,vocab_set_l5_03,,,,vocab_set_l5_03,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
-pinyin_lesson_05,P15,,134,vocabulary,vocab_l5_018_long,龍,龍,lóng,,vocab_set_l5_03,,,,vocab_set_l5_03,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
-pinyin_lesson_05,P15,,135,vocabulary,vocab_l5_019_chenggong,成功,成功,chénggōng,,vocab_set_l5_03,,,,vocab_set_l5_03,,,,,,true,true,false,true,,發音正確，學習字義，不要求認字。
-pinyin_lesson_05,P6,,136,exercise,exercise_l5_p6_pinyin_group_1,含聲調拼音練習,,,,exercise,,練習 21 聲母 + an/en/in/uen(un) 的含聲調拼讀。,含聲調拼音練習,,pinyin_chart_l5_group_1,,,,,true,true,false,true,false,
-pinyin_lesson_05,P8,,137,exercise,exercise_l5_p8_vocab_1,詞彙 1 練習,,,,exercise,,確認詞彙 1 發音與字義理解。,詞彙 1 練習,vocab_set_l5_01,,,,,,true,true,false,,false,
-pinyin_lesson_05,P11,,138,exercise,exercise_l5_p11_vocab_2,詞彙 2 練習,,,,exercise,,確認詞彙 2 發音、字義與 ün 拼寫變化。,詞彙 2 練習,vocab_set_l5_02,,,rule_l5_jqx_un_umlaut,,,true,true,false,,false,
-pinyin_lesson_05,P14,,139,exercise,exercise_l5_p14_pinyin_group_2,含聲調拼音練習,,,,exercise,,練習 21 聲母 + ang/eng/ing/ong 的含聲調拼讀。,含聲調拼音練習,,pinyin_chart_l5_group_2,,,,,true,true,false,true,false,
-pinyin_lesson_05,P16,,140,exercise,exercise_l5_p16_vocab_3,詞彙 3 練習,,,,exercise,,確認詞彙 3 發音與字義理解。,詞彙 3 練習,vocab_set_l5_03,,,,,,true,true,false,,false,
-pinyin_lesson_05,,P17-P18|P17-P19,141,exercise,exercise_l5_review,課後整合練習,,,,exercise,,用 2-3 個題型整合複習。,課後整合練習,,,,,,,true,true,false,,true,聽音選拼音|看拼音朗讀|字義配對|ün 拼寫規則判斷
+pinyin_lesson_05,P7,,117,vocabulary,vocab_l5_001_mifan,米饭,米饭,mǐfàn,,vocab_set_l5_01,,,,vocab_set_l5_01,,,,,,true,true,false,true,,发音正确，学习字义，不要求认字。
+pinyin_lesson_05,P7,,118,vocabulary,vocab_l5_002_nan,男,男,nán,,vocab_set_l5_01,,,,vocab_set_l5_01,,,,,,true,true,false,true,,发音正确，学习字义，不要求认字。
+pinyin_lesson_05,P7,,119,vocabulary,vocab_l5_003_jidan,鸡蛋,鸡蛋,jīdàn,,vocab_set_l5_01,,,,vocab_set_l5_01,,,,,,true,true,false,true,,发音正确，学习字义，不要求认字。
+pinyin_lesson_05,P7,,120,vocabulary,vocab_l5_004_men,门,门,mén,,vocab_set_l5_01,,,,vocab_set_l5_01,,,,,,true,true,false,true,,发音正确，学习字义，不要求认字。
+pinyin_lesson_05,P7,,121,vocabulary,vocab_l5_005_ren,人,人,rén,,vocab_set_l5_01,,,,vocab_set_l5_01,,,,,,true,true,false,true,,发音正确，学习字义，不要求认字。
+pinyin_lesson_05,P7,,122,vocabulary,vocab_l5_006_xin,新,新,xīn,,vocab_set_l5_01,,,,vocab_set_l5_01,,,,,,true,true,false,true,,发音正确，学习字义，不要求认字。
+pinyin_lesson_05,P7,,123,vocabulary,vocab_l5_007_chun,春,春,chūn,,vocab_set_l5_01,,,,vocab_set_l5_01,,,,,,true,true,false,true,,发音正确，学习字义，不要求认字。
+pinyin_lesson_05,P7,,124,vocabulary,vocab_l5_008_kun,困,困,kùn,,vocab_set_l5_01,,,,vocab_set_l5_01,,,,,sleepy,true,true,false,true,,发音正确，学习字义，不要求认字。
+pinyin_lesson_05,P10,,125,vocabulary,vocab_l5_009_junren,军人,军人,jūnrén,,vocab_set_l5_02,,,,vocab_set_l5_02,,,rule_l5_jqx_un_umlaut,,,true,true,false,true,,发音正确，学习字义，不要求认字。
+pinyin_lesson_05,P10,,126,vocabulary,vocab_l5_010_qunzi,裙子,裙子,qúnzi,,vocab_set_l5_02,,,,vocab_set_l5_02,,,rule_l5_jqx_un_umlaut,,,true,true,false,true,,发音正确，学习字义，不要求认字。
+pinyin_lesson_05,P10,,127,vocabulary,vocab_l5_011_peixun,培训,培训,péixùn,,vocab_set_l5_02,,,,vocab_set_l5_02,,,rule_l5_jqx_un_umlaut,,,true,true,false,true,,发音正确，学习字义，不要求认字。
+pinyin_lesson_05,P15,,128,vocabulary,vocab_l5_012_tang,汤,汤,tāng,,vocab_set_l5_03,,,,vocab_set_l5_03,,,,,,true,true,false,true,,发音正确，学习字义，不要求认字。
+pinyin_lesson_05,P15,,129,vocabulary,vocab_l5_013_zang,脏,脏,zāng,,vocab_set_l5_03,,,,vocab_set_l5_03,,,,,,true,true,false,true,,发音正确，学习字义，不要求认字。
+pinyin_lesson_05,P15,,130,vocabulary,vocab_l5_014_teng,疼,疼,téng,,vocab_set_l5_03,,,,vocab_set_l5_03,,,,,,true,true,false,true,,发音正确，学习字义，不要求认字。
+pinyin_lesson_05,P15,,131,vocabulary,vocab_l5_015_leng,冷,冷,lěng,,vocab_set_l5_03,,,,vocab_set_l5_03,,,,,,true,true,false,true,,发音正确，学习字义，不要求认字。
+pinyin_lesson_05,P15,,132,vocabulary,vocab_l5_016_mingzi,名字,名字,míngzi,,vocab_set_l5_03,,,,vocab_set_l5_03,,,,,,true,true,false,true,,发音正确，学习字义，不要求认字。
+pinyin_lesson_05,P15,,133,vocabulary,vocab_l5_017_ting,听,听,tīng,,vocab_set_l5_03,,,,vocab_set_l5_03,,,,,,true,true,false,true,,发音正确，学习字义，不要求认字。
+pinyin_lesson_05,P15,,134,vocabulary,vocab_l5_018_long,龙,龙,lóng,,vocab_set_l5_03,,,,vocab_set_l5_03,,,,,,true,true,false,true,,发音正确，学习字义，不要求认字。
+pinyin_lesson_05,P15,,135,vocabulary,vocab_l5_019_chenggong,成功,成功,chénggōng,,vocab_set_l5_03,,,,vocab_set_l5_03,,,,,,true,true,false,true,,发音正确，学习字义，不要求认字。
+pinyin_lesson_05,P6,,136,exercise,exercise_l5_p6_pinyin_group_1,含声调拼音练习,,,,exercise,,练习 21 声母 + an/en/in/uen(un) 的含声调拼读。,含声调拼音练习,,pinyin_chart_l5_group_1,,,,,true,true,false,true,false,
+pinyin_lesson_05,P8,,137,exercise,exercise_l5_p8_vocab_1,词汇 1 练习,,,,exercise,,确认词汇 1 发音与字义理解。,词汇 1 练习,vocab_set_l5_01,,,,,,true,true,false,,false,
+pinyin_lesson_05,P11,,138,exercise,exercise_l5_p11_vocab_2,词汇 2 练习,,,,exercise,,确认词汇 2 发音、字义与 ün 拼写变化。,词汇 2 练习,vocab_set_l5_02,,,rule_l5_jqx_un_umlaut,,,true,true,false,,false,
+pinyin_lesson_05,P14,,139,exercise,exercise_l5_p14_pinyin_group_2,含声调拼音练习,,,,exercise,,练习 21 声母 + ang/eng/ing/ong 的含声调拼读。,含声调拼音练习,,pinyin_chart_l5_group_2,,,,,true,true,false,true,false,
+pinyin_lesson_05,P16,,140,exercise,exercise_l5_p16_vocab_3,词汇 3 练习,,,,exercise,,确认词汇 3 发音与字义理解。,词汇 3 练习,vocab_set_l5_03,,,,,,true,true,false,,false,
+pinyin_lesson_05,,P17-P18|P17-P19,141,exercise,exercise_l5_review,课后整合练习,,,,exercise,,用 2-3 个题型整合复习。,课后整合练习,,,,,,,true,true,false,,true,听音选拼音|看拼音朗读|字义配对|ün 拼写规则判断
