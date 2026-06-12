@@ -126,16 +126,49 @@ function coverSlide(no, groups) {
   });
 }
 
-function objectivesSlide(db, vocabCount) {
-  const goals = [
-    ...(db.learning_focus || []).slice(1, 4),
-    `Đọc đúng ${vocabCount} từ vựng.`,
-  ].slice(0, 4);
+function lessonGoals(no, vocabCount) {
+  const goalsByLesson = {
+    '05': [
+      'Học vận mẫu mũi trước an en in un ün.',
+      'Học vận mẫu mũi sau ang eng ing ong.',
+      'Nắm quy tắc j/q/x + ün.',
+      `Đọc đúng ${vocabCount} từ vựng.`,
+    ],
+    '06': [
+      'Học vận mẫu ia iao ian iang iong.',
+      'Học vận mẫu ua uo uai uan uang üan.',
+      'Nắm quy tắc j/q/x + üan.',
+      `Đọc đúng ${vocabCount} từ vựng.`,
+    ],
+    '07': [
+      'Nắm quy tắc i mở đầu: yi, yin, ying, ya, ye, yao, yan, yang, yong, you.',
+      'Nắm quy tắc u mở đầu: wu, wa, wo, wai, wan, wang, weng, wei, wen.',
+      'Nắm quy tắc ü mở đầu: yu, yue, yuan, yun và pinyin viết liền theo từ.',
+      `Đọc đúng ${vocabCount} từ vựng.`,
+    ],
+  };
+  return goalsByLesson[no] || [`Đọc đúng ${vocabCount} từ vựng.`];
+}
+
+function highlightGoal(goal) {
+  const terms = [
+    'j/q/x', 'ia', 'iao', 'ian', 'iang', 'iong', 'ua', 'uo', 'uai', 'uan', 'uang', 'üan',
+    'an', 'en', 'in', 'un', 'ün', 'ang', 'eng', 'ing', 'ong',
+    'yi', 'yin', 'ying', 'yao', 'yan', 'yang', 'yong', 'you', 'ya', 'ye',
+    'wu', 'wai', 'wan', 'wang', 'weng', 'wei', 'wen', 'wa', 'wo',
+    'yu', 'yue', 'yuan', 'yun',
+  ];
+  const pattern = new RegExp(`(^|[^A-Za-züÜ])(${terms.map((term) => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})(?=$|[^A-Za-züÜ])`, 'g');
+  return esc(goal).replace(pattern, '$1<strong class="goal-hot">$2</strong>');
+}
+
+function objectivesSlide(no, db, vocabCount) {
+  const goals = lessonGoals(no, vocabCount);
   return slideShell({
     title: 'Mục tiêu học tập',
     icon: 'target',
     label: 'MỤC TIÊU',
-    content: `<div class="lesson-goal-left"><div class="lesson-goal-title">Hôm nay bạn sẽ học gì?</div><div class="lesson-goal-cards">${goals.map((goal, i) => `<div class="lesson-goal soft-card"><div class="lesson-goal-num">${i + 1}</div><div>${esc(simplify(goal)).replace(/(an|en|in|ün|ang|eng|ing|ong|ia|iao|ian|iang|iong|ua|uo|uai|uan|uang|üan|yi|wu|yu|thanh điệu)/g, '<strong class="goal-hot">$1</strong>')}</div></div>`).join('')}</div></div><div class="lesson-goal-right"><img src="assets/sample-images/objectives.png" alt=""></div>`,
+    content: `<div class="lesson-goal-left"><div class="lesson-goal-title">Hôm nay bạn sẽ học gì?</div><div class="lesson-goal-cards">${goals.map((goal, i) => `<div class="lesson-goal soft-card"><div class="lesson-goal-num">${i + 1}</div><div>${highlightGoal(goal)}</div></div>`).join('')}</div></div><div class="lesson-goal-right"><img src="assets/sample-images/objectives.png" alt=""></div>`,
   });
 }
 
@@ -265,6 +298,27 @@ function choiceSlide(rule) {
 }
 
 function fillBlankSlide(no, vocab) {
+  if (no === '07') {
+    const prompts = [
+      ['i', 'yi'],
+      ['in', 'yin'],
+      ['iao', 'yao'],
+      ['iu', 'you'],
+      ['u', 'wu'],
+      ['ua', 'wa'],
+      ['ui', 'wei'],
+      ['üe', 'yue'],
+      ['üan', 'yuan'],
+    ];
+    const bank = prompts.map(([, answer]) => answer);
+    return slideShell({
+      title: 'Điền dạng viết đúng',
+      icon: 'pen-line',
+      label: 'Ôn tập',
+      content: `<div class="content l7-fill"><div class="listen-head"><div class="listen-title">Điền dạng viết đúng</div></div><div class="final-bank"><div class="final-bank-title">Ngân hàng đáp án</div><div class="finals">${bank.map((item) => `<span>${esc(item)}</span>`).join('')}</div></div><div class="listen-grid l7-fill-grid">${prompts.map(([source], i) => `<div class="listen-item"><span class="listen-no">${i + 1}.</span><span class="source">${esc(source)}</span><span class="arrow">→</span><span class="blank"></span></div>`).join('')}</div></div>`,
+      extraCss: `.l7-fill .final-bank{width:800px;margin-top:4px;margin-bottom:22px}.l7-fill .finals{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:center;font-size:23px}.l7-fill-grid{width:820px;column-gap:44px;row-gap:22px}.l7-fill-grid .listen-item{font-size:27px;display:flex;align-items:center}.l7-fill-grid .source{display:inline-block;min-width:54px;font-weight:950;color:#1A3A5A}.l7-fill-grid .arrow{color:#5AACAC;font-weight:950;margin:0 12px}.l7-fill-grid .blank{width:82px}`,
+    });
+  }
   const bank = no === '07' ? ['y', 'w', 'yu', 'yi', 'wu'] : [...new Set(vocab.flatMap((v) => v.pinyin.replace(/[āáǎà]/g, 'a').replace(/[ēéěè]/g, 'e').replace(/[īíǐì]/g, 'i').replace(/[ōóǒò]/g, 'o').replace(/[ūúǔù]/g, 'u').replace(/[ǖǘǚǜ]/g, 'ü').match(/[aeiouü]+n?g?/g) || []))].slice(0, 6);
   const prompts = vocab.slice(0, 9).map((item) => {
     const plain = item.pinyin.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -368,9 +422,9 @@ function groupInitials(initials) {
 }
 
 function coverGroups(no, db) {
-  if (no === '05') return [['an', 'en', 'in', 'un', 'ün'], ['ang', 'eng', 'ing', 'ong'], ['j/q/x', '+', 'ün', '→', 'jun/qun/xun']];
-  if (no === '06') return [['ia', 'iao', 'ian', 'iang', 'iong'], ['ua', 'uo', 'uai', 'uan', 'uang', 'üan'], 'break', ['j/q/x', '+', 'üan', '→', 'juan/quan/xuan']];
-  return [['i', '→', 'yi'], ['u', '→', 'wu'], 'break', ['ü', '→', 'yu'], ['ia/ua/üe', '→', 'y/w/y']];
+  if (no === '05') return [['an', 'en', 'in', 'un', 'ün'], ['ang', 'eng', 'ing', 'ong'], ['Quy tắc:', 'j/q/x', '+', 'ün']];
+  if (no === '06') return [['ia', 'iao', 'ian', 'iang', 'iong'], ['ua', 'uo', 'uai', 'uan', 'uang', 'üan'], 'break', ['Quy tắc:', 'j/q/x', '+', 'üan']];
+  return [['Quy tắc:', 'i', '→', 'y'], ['Quy tắc:', 'u', '→', 'w'], 'break', ['Quy tắc:', 'ü', '→', 'yu'], ['Quy tắc:', 'pinyin', 'viết liền']];
 }
 
 function warmupSlide(no, db) {
@@ -484,7 +538,7 @@ function l7LearningIntroSlide(page, index) {
   return slideShell({
     title: `Dạng viết ${index}: ${targets.join(' ')}`,
     icon: 'route',
-    label: `QUY TẮC ${index}`,
+    label: 'QUY TẮC VIẾT',
     content: `<div class="sound-only"><div class="sound-only-row">${targets.map((item) => `<div class="sound-only-token">${esc(item)}</div>`).join('')}</div></div>`,
   });
 }
@@ -628,7 +682,7 @@ async function generate(no) {
 
   const slides = [];
   slides.push(['cover', coverSlide(no, coverGroups(no, db))]);
-  slides.push(['objectives', objectivesSlide(db, vocab.length)]);
+  slides.push(['objectives', objectivesSlide(no, db, vocab.length)]);
   slides.push(['divider-review', dividerSlide({ title: `Ôn bài ${Number(no) - 1}`, zh: '暖身活动', label: `ÔN BÀI ${Number(no) - 1}`, img: 'divider-review.png', icon: 'refresh-cw', superTitle: 'Khởi động' })]);
   if (no === '07') {
     for (const [index, html] of l7WarmupSlides(no, db).entries()) {

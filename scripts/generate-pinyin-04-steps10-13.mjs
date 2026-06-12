@@ -316,7 +316,7 @@ function slideShell({ title, icon = 'book-open', label = title, content, extraCs
 function coverSlide() {
   return htmlDoc({
     title: 'Pinyin Bài 4',
-    body: `<div class="slide"><div class="cover"><div class="cover-card"><div class="lesson">PINYIN 4 · 拼音第四课</div>${coverPinyinTitle()}${coverSoundChips([['ai', 'ao', 'ou', 'ei', 'er'], ['iu', 'ui', 'ie', 'üe'], 'break', ['j/q/x', '+', 'üe', '→', 'jue/que/xue']])}</div><div class="topic-img"><img src="assets/photos/cover-topic.png" alt=""></div></div></div>`,
+    body: `<div class="slide"><div class="cover"><div class="cover-card"><div class="lesson">PINYIN 4 · 拼音第四课</div>${coverPinyinTitle()}${coverSoundChips([['ai', 'ao', 'ou', 'ei', 'er'], ['iu', 'ui', 'ie', 'üe'], 'break', ['Quy tắc:', 'j/q/x', '+', 'üe']])}</div><div class="topic-img"><img src="assets/photos/cover-topic.png" alt=""></div></div></div>`,
   });
 }
 
