@@ -2,6 +2,21 @@
 
 This file is the entry point for any AI agent working in this repo (Kiro, Hermes, Claude Code, Codex, Cursor, etc.). Read it first.
 
+<!-- BEGIN:codex-kiro-bridge -->
+
+## Codex use of `.kiro/`
+
+Adam is no longer using Kiro as the active app, but `.kiro/` remains the canonical local project guidance. Future Codex runs must treat these files as first-class repo instructions, not as Kiro-only leftovers.
+
+- Start by checking `.kiro/steering/` for routing, workflow, project, or portable-agent rules relevant to the task.
+- Read each relevant `.kiro/skills/<name>/SKILL.md` or `.kiro/skills/<name>/skill.md` before acting, especially for structural/generator work.
+- If `.kiro/specs/` contains a spec matching the task, read its `requirements.md`, `design.md`, and `tasks.md` before changing implementation.
+- Follow any local reference-file directives inside those Kiro files before planning or editing.
+- Prefer project-local `.kiro` guidance over generic/global skills when they conflict, unless Adam explicitly says otherwise.
+- Mention which `.kiro` files informed non-trivial project work.
+
+<!-- END:codex-kiro-bridge -->
+
 ## Quick start
 
 1. Read this file.
@@ -14,7 +29,7 @@ This file is the entry point for any AI agent working in this repo (Kiro, Hermes
 6. For lesson slide/template work, read `docs/lesson-slide-template-guide.md`.
 7. For slide image, vocabulary image, cover image, divider image, or image replacement work, read `docs/image-asset-workflow.md`.
 8. For pinyin lesson database or pinyin slide generation, read `docs/pinyin-lesson-database-spec.md`.
-9. Kiro agents also get `.kiro/steering/ai-teaching-material-system.md` auto-loaded.
+9. Adam is no longer using Kiro as the active app, but `.kiro/` remains the canonical local project guidance. Codex and all other agents must treat `.kiro/skills/` and `.kiro/steering/` as first-class repo instructions, not as Kiro-only leftovers.
 
 ## Project summary
 
@@ -79,6 +94,7 @@ Each skill has a `SKILL.md` with full instructions. Read it before doing work in
 - **Pinyin practice/exercise styles:** Future pinyin practice slides reuse the Pinyin Lesson 1 exercise templates by activity type through `scripts/pinyin-exercise-templates.mjs`. Reading drills use slide 15's large sound-board style. `连连看` / matching vocabulary activities use a two-row image layout: pinyin+hanzi cards on the top row, shuffled image cards on the bottom row, no Vietnamese meaning column and no top label pills. Use the generic title `Nối từ vựng với hình ảnh.`; do not include a lesson number such as `Bài 1` in the matching title. Leave a generous vertical gap between the pinyin+hanzi row and image row. Image order must be randomized/deranged so images do not stay under their matching prompts. Split dense matching into more slides instead of crowding. Multiple-choice/listening-choice activities use slide 37's blue answer table. Fill-in-blank/listening-completion activities use slide 38's sound-bank plus underlined blanks, with no volume/speaker icon in the top bar or instruction header; when students fill initials, keep the underline blank before an untoned final and add small parentheses above the vowel to remind them to write the tone. If a prompt is already revealed as the sample answer, show the full answer without parentheses. Comprehensive fill-in practice must target the lesson's learning goals, not automatically practice finals. Keep visible instructions in natural Vietnamese.
 - **Pinyin wording and goal slides:** Use Vietnamese term `thanh điệu` exactly. Do not use `thanh điều`. Pinyin goal slides use the Pinyin Lesson 1 objectives template: highlighted taught initials/finals are bold and red, while the surrounding goal lines change per lesson, e.g. `Học 5 thanh điệu tiếng Trung` and `Học đọc 16 từ vựng`.
 - **Pinyin page indicators:** Pinyin classroom slides do not show bottom-right `Trang ...` page indicators. The presenter navigation counter may still show slide position in the browser chrome.
+- **Vocabulary grid balance rule:** For pinyin `Từ vựng 1`, `Từ vựng 2`, etc. and future regular-lesson vocabulary overview/summary pages, grids with 1-8 vocabulary cards must use the balanced 8-track layout and a 20px row gap / 14px column gap. 8 cards = 4 + 4; 7 cards = 4 on row 1 and 3 centered/even on row 2; 6 cards = 4 + 2 with row 2 under the inner two first-row positions; 5 cards = 4 + 1 with the last card centered; 1-4 cards sit in one centered row with even spacing.
 - **Pinyin vocabulary grid slides:** For `Từ vựng 1`, `Từ vựng 2`, etc., keep only the top bar section text plus the vocabulary grid. Do not add extra description lines such as `Tập trung đọc...`; instructions belong in teacher notes or separate practice slides.
 - **Vocab sub-entry extraction:** If a textbook vocabulary item has indented component words underneath it, extract those component words as separate vocabulary records too. Example: `办公室` also includes `办公`; `电话` also includes `电` and `话`; `手机` also includes `手`. Keep the printed source page and note the parent word in `raw_source_text`.
 - **Grammar explanation style:** Grammar records must absorb the textbook explanation but rewrite it in simple Vietnamese that a 12-13-year-old can understand. Avoid loading students with terms like chủ ngữ/vị ngữ/tân ngữ unless the term is needed; lead with plain patterns, examples, and meaning. Contrast Vietnamese habits when useful, such as `请问` vs. literal Vietnamese-style translations.
@@ -246,9 +262,9 @@ npm run assets:qa -- output/book-1/lesson-02
 **New lesson type (e.g. conversation, grammar-focus):**
 Drop a new JSON config in `scripts/pipeline/configs/` following the `_schema.json` spec.
 
-## For non-Kiro agents
+## For Codex and other agents
 
-If your agent doesn't auto-discover `.kiro/skills/`, read the SKILL.md files directly:
+If your agent doesn't auto-discover `.kiro/skills/`, read the SKILL.md files directly. Codex should do this before non-trivial project work:
 - `.kiro/skills/ai-teaching-material-systems/SKILL.md` — AI Teaching Material Systems
 - `.kiro/skills/avoid-ai-writing/SKILL.md` — Avoid AI Writing — Audit & Rewrite
 - `.kiro/skills/google-workspace/SKILL.md` — Google Workspace

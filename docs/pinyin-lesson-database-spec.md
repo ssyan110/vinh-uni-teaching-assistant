@@ -106,6 +106,7 @@ Pinyin classroom slides do not show bottom-right `Trang ...` page indicators. Th
 Pinyin vocabulary grid slides:
 
 - For `Từ vựng 1`, `Từ vựng 2`, and similar vocabulary overview slides, keep only the top bar section label plus the vocabulary grid.
+- If a vocabulary overview grid has 1-8 cards, use the balanced 8-track layout with a 20px row gap / 14px column gap: 8 cards = 4 + 4; 7 cards = 4 + 3 with row 2 centered and evenly spaced; 6 cards = 4 + 2 with row 2 under the inner two first-row positions; 5 cards = 4 + 1 with the last card centered; 1-4 cards sit in one centered row with even spacing.
 - Do not add extra explanatory lines such as `Tập trung đọc...` on the slide body.
 - Put teaching reminders in the teacher guide or in a separate practice slide instead.
 

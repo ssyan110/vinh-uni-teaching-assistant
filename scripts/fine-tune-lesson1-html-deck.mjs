@@ -2,6 +2,10 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { presenterHtml } from './lesson1-presenter-template.mjs';
+import {
+  vocabularyGridClass,
+  vocabularyGridCss,
+} from './vocabulary-grid-layout.mjs';
 
 const root = process.cwd();
 const slidesDir = path.join(root, 'output/book-1/lesson-01/slides');
@@ -216,12 +220,12 @@ function summarySlide(page, total, group, label) {
   return slideWrap('Tổng kết từ vựng', 'TỪ VỰNG', 'char:文', `${page} / ${total}`, 'Trang 1-2', `
     <div class="summary-title">Mini quiz từ vựng</div>
     <div class="summary-part">${esc(label)}</div>
-    <div class="summary-grid">
+    <div class="${vocabularyGridClass(group.length, 'summary-grid')}">
       ${group.map((v, i) => `<div class="sum-card card" data-reveal-step="${i + 1}"><div class="hanzi sum-han ${v.han.length > 1 ? 'long' : ''}">${esc(v.han)}</div><div class="blank-line"></div><div class="sum-hidden"><div class="pinyin">${esc(v.pinyin)}</div><div class="vi">${esc(v.vi)}</div><div class="hv">(${esc(v.hv)})</div></div></div>`).join('')}
     </div>
     <div class="quiz-note">Click để hiện từng đáp án.</div>
   `, `
-.summary-title{position:absolute;left:58px;top:70px;font-size:20pt;font-weight:800}.summary-part{position:absolute;right:58px;top:76px;font-size:10pt;font-weight:800;color:#5AACAC;background:#E8F4F4;border-radius:16px;padding:6px 14px}.summary-grid{position:absolute;left:58px;right:58px;top:122px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.sum-card{height:152px;padding:12px 14px;text-align:center;overflow:hidden}.sum-han{font-size:34pt;line-height:.98}.sum-han.long{font-size:29pt}.blank-line{width:64px;height:2px;background:#DCEAEA;margin:7px auto 8px}.sum-hidden{opacity:0;transition:opacity .25s}.sum-card.revealed .sum-hidden{opacity:1}.sum-hidden .pinyin{font-size:11.5pt;line-height:1.1}.sum-hidden .vi{font-size:9.6pt;color:#4A6080;line-height:1.14;margin-top:2px}.sum-hidden .hv{font-size:8.8pt;color:#8A9AB0;font-style:italic;line-height:1.08;margin-top:2px}.quiz-note{position:absolute;right:58px;bottom:40px;color:#8A9AB0;font-size:10pt}
+.summary-title{position:absolute;left:58px;top:70px;font-size:20pt;font-weight:800}.summary-part{position:absolute;right:58px;top:76px;font-size:10pt;font-weight:800;color:#5AACAC;background:#E8F4F4;border-radius:16px;padding:6px 14px}.summary-grid{position:absolute;left:58px;right:58px;top:122px;bottom:62px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}${vocabularyGridCss()}.sum-card{height:152px;padding:12px 14px;text-align:center;overflow:hidden}.sum-han{font-size:34pt;line-height:.98}.sum-han.long{font-size:29pt}.blank-line{width:64px;height:2px;background:#DCEAEA;margin:7px auto 8px}.sum-hidden{opacity:0;transition:opacity .25s}.sum-card.revealed .sum-hidden{opacity:1}.sum-hidden .pinyin{font-size:11.5pt;line-height:1.1}.sum-hidden .vi{font-size:9.6pt;color:#4A6080;line-height:1.14;margin-top:2px}.sum-hidden .hv{font-size:8.8pt;color:#8A9AB0;font-style:italic;line-height:1.08;margin-top:2px}.quiz-note{position:absolute;right:58px;bottom:40px;color:#8A9AB0;font-size:10pt}
 `, true);
 }
 

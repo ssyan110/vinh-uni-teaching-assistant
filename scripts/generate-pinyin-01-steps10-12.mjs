@@ -2,6 +2,10 @@
 import fs from 'fs/promises';
 import path from 'path';
 import sharp from 'sharp';
+import {
+  vocabularyGridClass,
+  vocabularyGridCss,
+} from './vocabulary-grid-layout.mjs';
 
 const root = process.cwd();
 const lessonRoot = path.join(root, 'output/pinyin/pinyin-01');
@@ -1012,7 +1016,7 @@ const commonCss = `
 .soft-card{background:#fff;border:1px solid rgba(90,172,172,.16);border-radius:20px;box-shadow:0 8px 26px rgba(90,172,172,.12);padding:18px}.flat-card{background:#fff;border:1px solid rgba(90,172,172,.16);border-radius:16px;padding:14px}
 .badge{display:inline-flex;align-items:center;justify-content:center;height:26px;padding:0 12px;border-radius:999px;background:#E8F4F4;color:#5AACAC;font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.badge-purple{background:#F3F0FA;color:#7C6BC8}.badge-amber{background:#FFF4D8;color:#B9821F}.badge-red{background:#FCEFF3;color:#D85A6A}
 .big-hanzi{font-family:'Noto Sans SC',sans-serif;font-size:58px;line-height:1;font-weight:900;color:#1A3A5A}.big-pinyin{font-size:52px;line-height:1;font-weight:900;color:#5AACAC}
-.word-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px 14px}.word-card{position:relative;background:#fff;border-radius:18px;padding:10px 8px 12px;text-align:center;border:1px solid rgba(90,172,172,.16);box-shadow:0 8px 24px rgba(90,172,172,.10);height:184px;overflow:visible}.word-card img{width:78px;height:78px;border-radius:12px;border:2px solid #5AACAC;object-fit:cover;background:#F4FAFA;margin-bottom:8px}.word-card .pinyin{font-size:17px;font-weight:900;color:#5AACAC;line-height:1.16}.word-card .hanzi{font-size:31px;line-height:1.12;margin-top:3px}.word-card .vi{font-size:12px;line-height:1.22;color:#5F7088;font-weight:700;margin-top:3px}
+.word-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px 14px}${vocabularyGridCss()}.word-card{position:relative;background:#fff;border-radius:18px;padding:10px 8px 12px;text-align:center;border:1px solid rgba(90,172,172,.16);box-shadow:0 8px 24px rgba(90,172,172,.10);height:184px;overflow:visible}.word-card img{width:78px;height:78px;border-radius:12px;border:2px solid #5AACAC;object-fit:cover;background:#F4FAFA;margin-bottom:8px}.word-card .pinyin{font-size:17px;font-weight:900;color:#5AACAC;line-height:1.16}.word-card .hanzi{font-size:31px;line-height:1.12;margin-top:3px}.word-card .vi{font-size:12px;line-height:1.22;color:#5F7088;font-weight:700;margin-top:3px}
 .sound-table{width:100%;border-collapse:separate;border-spacing:10px}.sound-table th,.sound-table td{height:56px;border-radius:15px;text-align:center;font-weight:900;font-size:24px}.sound-table th{background:#E8F4F4;color:#5AACAC}.sound-table td{background:#fff;border:1px solid rgba(90,172,172,.18);color:#1A3A5A}.sound-table .rowh{background:#F3F0FA;color:#7C6BC8}
 .chart-full{position:absolute;left:34px;right:34px;top:58px;bottom:22px}.chart-full-card{position:absolute;inset:0;background:#fff;border:1px solid rgba(90,172,172,.16);border-radius:20px;box-shadow:0 8px 26px rgba(90,172,172,.12);padding:10px}.sound-table-full{height:100%;border-spacing:8px;table-layout:fixed}.sound-table-full th,.sound-table-full td{height:auto;font-size:31px;border-radius:15px}.sound-table-full th{font-size:27px}.sound-table-full .rowh{font-size:33px}
 .choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.choice{display:flex;align-items:center;gap:10px;background:#fff;border-radius:14px;border:1px solid rgba(90,172,172,.16);padding:12px 14px;font-size:18px;font-weight:800;color:#1A3A5A}.num{width:28px;height:28px;border-radius:999px;background:#5AACAC;color:white;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;flex:none}
@@ -1464,7 +1468,7 @@ function writeSlidesData(db) {
         label: 'Từ vựng 1',
         icon: 'book-open',
         page: 9,
-        body: `<div class="content" style="top:92px"><div class="word-grid">${vocabA.map(vocabCard).join('')}</div></div>`,
+        body: `<div class="content" style="top:92px"><div class="${vocabularyGridClass(vocabA.length)}">${vocabA.map(vocabCard).join('')}</div></div>`,
       }),
     },
     {
@@ -1484,7 +1488,7 @@ function writeSlidesData(db) {
         label: 'Từ vựng 2',
         icon: 'book-open',
         page: 11,
-        body: `<div class="content" style="top:76px"><div class="word-grid">${vocabB.map(vocabCard).join('')}</div></div>`,
+        body: `<div class="content" style="top:76px"><div class="${vocabularyGridClass(vocabB.length)}">${vocabB.map(vocabCard).join('')}</div></div>`,
       }),
     },
     {

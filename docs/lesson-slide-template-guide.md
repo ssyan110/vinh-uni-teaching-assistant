@@ -92,6 +92,7 @@ Pinyin vocabulary and flashcards:
 
 - Pinyin vocabulary grids can use square `1:1` soft textbook images when the pinyin-template slide requires that shape.
 - Pinyin vocabulary grid slides (`Từ vựng 1`, `Từ vựng 2`, etc.) keep only the top bar label plus the vocabulary grid. Do not add extra body descriptions like `Tập trung đọc...`.
+- Any pinyin vocabulary grid or regular-lesson vocabulary overview/summary grid with 1-8 cards uses the balanced 8-track layout with a 20px row gap / 14px column gap: 8 = 4 + 4, 7 = 4 + 3 centered, 6 = 4 + 2 under the inner columns, 5 = 4 + 1 centered, and 1-4 = one centered evenly spaced row.
 - Flashcards follow the Lesson 1/Lesson 10 flashcard behavior adapted for pinyin: one word per page, pinyin with tone first, click to reveal image and Vietnamese meaning.
 - Do not include repeated helper text such as `Đọc lại pinyin trước khi qua thẻ tiếp theo.`
 
