@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "lesson_id": "pinyin-07",
-  "generated_at": "2026-06-15T06:42:17.712Z",
+  "generated_at": "2026-06-15T06:59:05.720Z",
   "source_database": "database",
   "workflow": {
     "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
@@ -85,7 +85,7 @@
       },
       "used_by": [
         "03-divider-review.html",
-        "67-divider-review-final.html"
+        "83-divider-review-final.html"
       ],
       "html_reference_types": [
         "img"
@@ -111,7 +111,7 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "24-rule-intro-3.html"
+        "31-rule-intro-3.html"
       ],
       "html_reference_types": [
         "img"
@@ -137,7 +137,7 @@
         "aspect_ratio": 1.0667
       },
       "used_by": [
-        "36-rule-intro-5.html"
+        "43-rule-intro-5.html"
       ],
       "html_reference_types": [
         "img"
@@ -163,7 +163,7 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "31-rule-intro-4.html"
+        "38-rule-intro-4.html"
       ],
       "html_reference_types": [
         "img"
@@ -189,7 +189,7 @@
         "aspect_ratio": 1.2019
       },
       "used_by": [
-        "46-rule-intro-6.html"
+        "58-rule-intro-6.html"
       ],
       "html_reference_types": [
         "img"
@@ -215,7 +215,7 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "14-rule-intro-2.html"
+        "16-rule-intro-2.html"
       ],
       "html_reference_types": [
         "img"
@@ -267,7 +267,7 @@
         "aspect_ratio": 1.2496
       },
       "used_by": [
-        "54-rule-intro-7.html"
+        "67-rule-intro-7.html"
       ],
       "html_reference_types": [
         "img"
@@ -293,13 +293,13 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "09-divider-vocabulary-1.html",
-        "16-divider-vocabulary-2.html",
-        "26-divider-vocabulary-3.html",
-        "33-divider-vocabulary-4.html",
-        "38-divider-vocabulary-5.html",
-        "48-divider-vocabulary-6.html",
-        "56-divider-vocabulary-7.html"
+        "11-divider-vocabulary-1.html",
+        "23-divider-vocabulary-2.html",
+        "33-divider-vocabulary-3.html",
+        "40-divider-vocabulary-4.html",
+        "50-divider-vocabulary-5.html",
+        "61-divider-vocabulary-6.html",
+        "72-divider-vocabulary-7.html"
       ],
       "html_reference_types": [
         "img"
@@ -325,7 +325,7 @@
         "aspect_ratio": 1.0892
       },
       "used_by": [
-        "72-closing.html"
+        "88-closing.html"
       ],
       "html_reference_types": [
         "img"
@@ -912,71 +912,87 @@
         "05-warmup-review-b.html",
         "06-warmup-review-c.html",
         "07-rule-intro-1.html",
-        "08-rule-rule-l7-i-yi-yin-ying.html",
-        "09-divider-vocabulary-1.html",
-        "10-vocabulary-1.html",
-        "11-flash-v001-yi.html",
-        "12-flash-v002-yin.html",
-        "13-flash-v003-ying.html",
-        "14-rule-intro-2.html",
-        "15-rule-rule-l7-i-compound-y.html",
-        "16-divider-vocabulary-2.html",
-        "17-vocabulary-2.html",
-        "18-flash-v004-ya.html",
-        "19-flash-v005-yeye.html",
-        "20-flash-v006-yao.html",
-        "21-flash-v007-yanse.html",
-        "22-flash-v008-yang.html",
-        "23-flash-v009-shiyong.html",
-        "24-rule-intro-3.html",
-        "25-rule-rule-l7-iu-you.html",
-        "26-divider-vocabulary-3.html",
-        "27-vocabulary-3.html",
-        "28-flash-v010-youyong.html",
-        "29-practice-vocabulary-1a.html",
-        "30-practice-vocabulary-1b.html",
-        "31-rule-intro-4.html",
-        "32-rule-rule-l7-u-wu.html",
-        "33-divider-vocabulary-4.html",
-        "34-vocabulary-4.html",
-        "35-flash-v011-wu.html",
-        "36-rule-intro-5.html",
-        "37-rule-rule-l7-u-compound-w.html",
-        "38-divider-vocabulary-5.html",
-        "39-vocabulary-5.html",
-        "40-flash-v012-wazi.html",
-        "41-flash-v013-wo.html",
-        "42-flash-v014-waimian.html",
-        "43-flash-v015-wan.html",
-        "44-flash-v016-wangji.html",
-        "45-flash-v017-weng.html",
-        "46-rule-intro-6.html",
-        "47-rule-rule-l7-ui-un-wei-wen.html",
-        "48-divider-vocabulary-6.html",
-        "49-vocabulary-6.html",
-        "50-flash-v018-wei.html",
-        "51-flash-v019-wenhua.html",
-        "52-practice-vocabulary-2a.html",
-        "53-practice-vocabulary-2b.html",
-        "54-rule-intro-7.html",
-        "55-rule-rule-l7-u-umlaut-y.html",
-        "56-divider-vocabulary-7.html",
-        "57-vocabulary-7.html",
-        "58-flash-v020-yu.html",
-        "59-flash-v021-yu.html",
-        "60-flash-v022-yue.html",
-        "61-flash-v023-yuenan.html",
-        "62-flash-v024-yuan.html",
-        "63-flash-v025-yun.html",
-        "64-practice-vocabulary-3a.html",
-        "65-practice-vocabulary-3b.html",
-        "66-rule-rule-l7-word-pinyin-spacing.html",
-        "67-divider-review-final.html",
-        "68-review-listening-choice.html",
-        "69-review-fill-blank.html",
-        "70-review-vocabulary-match.html",
-        "71-rule-summary.html",
-        "72-closing.html",
+        "08-rule-l7-i-to-yi.html",
+        "09-rule-l7-in-to-yin.html",
+        "10-rule-l7-ing-to-ying.html",
+        "11-divider-vocabulary-1.html",
+        "12-vocabulary-1.html",
+        "13-flash-v001-yi.html",
+        "14-flash-v002-yin.html",
+        "15-flash-v003-ying.html",
+        "16-rule-intro-2.html",
+        "17-rule-l7-ia-to-ya.html",
+        "18-rule-l7-ie-to-ye.html",
+        "19-rule-l7-iao-to-yao.html",
+        "20-rule-l7-ian-to-yan.html",
+        "21-rule-l7-iang-to-yang.html",
+        "22-rule-l7-iong-to-yong.html",
+        "23-divider-vocabulary-2.html",
+        "24-vocabulary-2.html",
+        "25-flash-v004-ya.html",
+        "26-flash-v005-yeye.html",
+        "27-flash-v006-yao.html",
+        "28-flash-v007-yanse.html",
+        "29-flash-v008-yang.html",
+        "30-flash-v009-shiyong.html",
+        "31-rule-intro-3.html",
+        "32-rule-l7-iu-to-you.html",
+        "33-divider-vocabulary-3.html",
+        "34-vocabulary-3.html",
+        "35-flash-v010-youyong.html",
+        "36-practice-vocabulary-1a.html",
+        "37-practice-vocabulary-1b.html",
+        "38-rule-intro-4.html",
+        "39-rule-l7-u-to-wu.html",
+        "40-divider-vocabulary-4.html",
+        "41-vocabulary-4.html",
+        "42-flash-v011-wu.html",
+        "43-rule-intro-5.html",
+        "44-rule-l7-ua-to-wa.html",
+        "45-rule-l7-uo-to-wo.html",
+        "46-rule-l7-uai-to-wai.html",
+        "47-rule-l7-uan-to-wan.html",
+        "48-rule-l7-uang-to-wang.html",
+        "49-rule-l7-ueng-to-weng.html",
+        "50-divider-vocabulary-5.html",
+        "51-vocabulary-5.html",
+        "52-flash-v012-wazi.html",
+        "53-flash-v013-wo.html",
+        "54-flash-v014-waimian.html",
+        "55-flash-v015-wan.html",
+        "56-flash-v016-wangji.html",
+        "57-flash-v017-weng.html",
+        "58-rule-intro-6.html",
+        "59-rule-l7-ui-to-wei.html",
+        "60-rule-l7-un-to-wen.html",
+        "61-divider-vocabulary-6.html",
+        "62-vocabulary-6.html",
+        "63-flash-v018-wei.html",
+        "64-flash-v019-wenhua.html",
+        "65-practice-vocabulary-2a.html",
+        "66-practice-vocabulary-2b.html",
+        "67-rule-intro-7.html",
+        "68-rule-l7-u-umlaut-to-yu.html",
+        "69-rule-l7-ue-umlaut-to-yue.html",
+        "70-rule-l7-uan-umlaut-to-yuan.html",
+        "71-rule-l7-un-umlaut-to-yun.html",
+        "72-divider-vocabulary-7.html",
+        "73-vocabulary-7.html",
+        "74-flash-v020-yu.html",
+        "75-flash-v021-yu.html",
+        "76-flash-v022-yue.html",
+        "77-flash-v023-yuenan.html",
+        "78-flash-v024-yuan.html",
+        "79-flash-v025-yun.html",
+        "80-practice-vocabulary-3a.html",
+        "81-practice-vocabulary-3b.html",
+        "82-rule-rule-l7-word-pinyin-spacing.html",
+        "83-divider-review-final.html",
+        "84-review-listening-choice.html",
+        "85-review-fill-blank.html",
+        "86-review-vocabulary-match.html",
+        "87-rule-summary.html",
+        "88-closing.html",
         "lesson-required-assets"
       ],
       "html_reference_types": [
@@ -1006,71 +1022,87 @@
         "05-warmup-review-b.html",
         "06-warmup-review-c.html",
         "07-rule-intro-1.html",
-        "08-rule-rule-l7-i-yi-yin-ying.html",
-        "09-divider-vocabulary-1.html",
-        "10-vocabulary-1.html",
-        "11-flash-v001-yi.html",
-        "12-flash-v002-yin.html",
-        "13-flash-v003-ying.html",
-        "14-rule-intro-2.html",
-        "15-rule-rule-l7-i-compound-y.html",
-        "16-divider-vocabulary-2.html",
-        "17-vocabulary-2.html",
-        "18-flash-v004-ya.html",
-        "19-flash-v005-yeye.html",
-        "20-flash-v006-yao.html",
-        "21-flash-v007-yanse.html",
-        "22-flash-v008-yang.html",
-        "23-flash-v009-shiyong.html",
-        "24-rule-intro-3.html",
-        "25-rule-rule-l7-iu-you.html",
-        "26-divider-vocabulary-3.html",
-        "27-vocabulary-3.html",
-        "28-flash-v010-youyong.html",
-        "29-practice-vocabulary-1a.html",
-        "30-practice-vocabulary-1b.html",
-        "31-rule-intro-4.html",
-        "32-rule-rule-l7-u-wu.html",
-        "33-divider-vocabulary-4.html",
-        "34-vocabulary-4.html",
-        "35-flash-v011-wu.html",
-        "36-rule-intro-5.html",
-        "37-rule-rule-l7-u-compound-w.html",
-        "38-divider-vocabulary-5.html",
-        "39-vocabulary-5.html",
-        "40-flash-v012-wazi.html",
-        "41-flash-v013-wo.html",
-        "42-flash-v014-waimian.html",
-        "43-flash-v015-wan.html",
-        "44-flash-v016-wangji.html",
-        "45-flash-v017-weng.html",
-        "46-rule-intro-6.html",
-        "47-rule-rule-l7-ui-un-wei-wen.html",
-        "48-divider-vocabulary-6.html",
-        "49-vocabulary-6.html",
-        "50-flash-v018-wei.html",
-        "51-flash-v019-wenhua.html",
-        "52-practice-vocabulary-2a.html",
-        "53-practice-vocabulary-2b.html",
-        "54-rule-intro-7.html",
-        "55-rule-rule-l7-u-umlaut-y.html",
-        "56-divider-vocabulary-7.html",
-        "57-vocabulary-7.html",
-        "58-flash-v020-yu.html",
-        "59-flash-v021-yu.html",
-        "60-flash-v022-yue.html",
-        "61-flash-v023-yuenan.html",
-        "62-flash-v024-yuan.html",
-        "63-flash-v025-yun.html",
-        "64-practice-vocabulary-3a.html",
-        "65-practice-vocabulary-3b.html",
-        "66-rule-rule-l7-word-pinyin-spacing.html",
-        "67-divider-review-final.html",
-        "68-review-listening-choice.html",
-        "69-review-fill-blank.html",
-        "70-review-vocabulary-match.html",
-        "71-rule-summary.html",
-        "72-closing.html",
+        "08-rule-l7-i-to-yi.html",
+        "09-rule-l7-in-to-yin.html",
+        "10-rule-l7-ing-to-ying.html",
+        "11-divider-vocabulary-1.html",
+        "12-vocabulary-1.html",
+        "13-flash-v001-yi.html",
+        "14-flash-v002-yin.html",
+        "15-flash-v003-ying.html",
+        "16-rule-intro-2.html",
+        "17-rule-l7-ia-to-ya.html",
+        "18-rule-l7-ie-to-ye.html",
+        "19-rule-l7-iao-to-yao.html",
+        "20-rule-l7-ian-to-yan.html",
+        "21-rule-l7-iang-to-yang.html",
+        "22-rule-l7-iong-to-yong.html",
+        "23-divider-vocabulary-2.html",
+        "24-vocabulary-2.html",
+        "25-flash-v004-ya.html",
+        "26-flash-v005-yeye.html",
+        "27-flash-v006-yao.html",
+        "28-flash-v007-yanse.html",
+        "29-flash-v008-yang.html",
+        "30-flash-v009-shiyong.html",
+        "31-rule-intro-3.html",
+        "32-rule-l7-iu-to-you.html",
+        "33-divider-vocabulary-3.html",
+        "34-vocabulary-3.html",
+        "35-flash-v010-youyong.html",
+        "36-practice-vocabulary-1a.html",
+        "37-practice-vocabulary-1b.html",
+        "38-rule-intro-4.html",
+        "39-rule-l7-u-to-wu.html",
+        "40-divider-vocabulary-4.html",
+        "41-vocabulary-4.html",
+        "42-flash-v011-wu.html",
+        "43-rule-intro-5.html",
+        "44-rule-l7-ua-to-wa.html",
+        "45-rule-l7-uo-to-wo.html",
+        "46-rule-l7-uai-to-wai.html",
+        "47-rule-l7-uan-to-wan.html",
+        "48-rule-l7-uang-to-wang.html",
+        "49-rule-l7-ueng-to-weng.html",
+        "50-divider-vocabulary-5.html",
+        "51-vocabulary-5.html",
+        "52-flash-v012-wazi.html",
+        "53-flash-v013-wo.html",
+        "54-flash-v014-waimian.html",
+        "55-flash-v015-wan.html",
+        "56-flash-v016-wangji.html",
+        "57-flash-v017-weng.html",
+        "58-rule-intro-6.html",
+        "59-rule-l7-ui-to-wei.html",
+        "60-rule-l7-un-to-wen.html",
+        "61-divider-vocabulary-6.html",
+        "62-vocabulary-6.html",
+        "63-flash-v018-wei.html",
+        "64-flash-v019-wenhua.html",
+        "65-practice-vocabulary-2a.html",
+        "66-practice-vocabulary-2b.html",
+        "67-rule-intro-7.html",
+        "68-rule-l7-u-umlaut-to-yu.html",
+        "69-rule-l7-ue-umlaut-to-yue.html",
+        "70-rule-l7-uan-umlaut-to-yuan.html",
+        "71-rule-l7-un-umlaut-to-yun.html",
+        "72-divider-vocabulary-7.html",
+        "73-vocabulary-7.html",
+        "74-flash-v020-yu.html",
+        "75-flash-v021-yu.html",
+        "76-flash-v022-yue.html",
+        "77-flash-v023-yuenan.html",
+        "78-flash-v024-yuan.html",
+        "79-flash-v025-yun.html",
+        "80-practice-vocabulary-3a.html",
+        "81-practice-vocabulary-3b.html",
+        "82-rule-rule-l7-word-pinyin-spacing.html",
+        "83-divider-review-final.html",
+        "84-review-listening-choice.html",
+        "85-review-fill-blank.html",
+        "86-review-vocabulary-match.html",
+        "87-rule-summary.html",
+        "88-closing.html",
         "lesson-required-assets"
       ],
       "html_reference_types": [
@@ -1098,9 +1130,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "10-vocabulary-1.html",
-        "11-flash-v001-yi.html",
-        "29-practice-vocabulary-1a.html",
+        "12-vocabulary-1.html",
+        "13-flash-v001-yi.html",
+        "36-practice-vocabulary-1a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1136,9 +1168,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "10-vocabulary-1.html",
-        "12-flash-v002-yin.html",
-        "29-practice-vocabulary-1a.html",
+        "12-vocabulary-1.html",
+        "14-flash-v002-yin.html",
+        "36-practice-vocabulary-1a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1174,9 +1206,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "10-vocabulary-1.html",
-        "13-flash-v003-ying.html",
-        "29-practice-vocabulary-1a.html",
+        "12-vocabulary-1.html",
+        "15-flash-v003-ying.html",
+        "36-practice-vocabulary-1a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1212,9 +1244,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "17-vocabulary-2.html",
-        "18-flash-v004-ya.html",
-        "29-practice-vocabulary-1a.html",
+        "24-vocabulary-2.html",
+        "25-flash-v004-ya.html",
+        "36-practice-vocabulary-1a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1250,9 +1282,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "17-vocabulary-2.html",
-        "19-flash-v005-yeye.html",
-        "29-practice-vocabulary-1a.html",
+        "24-vocabulary-2.html",
+        "26-flash-v005-yeye.html",
+        "36-practice-vocabulary-1a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1288,9 +1320,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "17-vocabulary-2.html",
-        "20-flash-v006-yao.html",
-        "30-practice-vocabulary-1b.html",
+        "24-vocabulary-2.html",
+        "27-flash-v006-yao.html",
+        "37-practice-vocabulary-1b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1326,9 +1358,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "17-vocabulary-2.html",
-        "21-flash-v007-yanse.html",
-        "30-practice-vocabulary-1b.html",
+        "24-vocabulary-2.html",
+        "28-flash-v007-yanse.html",
+        "37-practice-vocabulary-1b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1364,9 +1396,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "17-vocabulary-2.html",
-        "22-flash-v008-yang.html",
-        "30-practice-vocabulary-1b.html",
+        "24-vocabulary-2.html",
+        "29-flash-v008-yang.html",
+        "37-practice-vocabulary-1b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1402,9 +1434,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "17-vocabulary-2.html",
-        "23-flash-v009-shiyong.html",
-        "30-practice-vocabulary-1b.html",
+        "24-vocabulary-2.html",
+        "30-flash-v009-shiyong.html",
+        "37-practice-vocabulary-1b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1440,9 +1472,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "27-vocabulary-3.html",
-        "28-flash-v010-youyong.html",
-        "30-practice-vocabulary-1b.html",
+        "34-vocabulary-3.html",
+        "35-flash-v010-youyong.html",
+        "37-practice-vocabulary-1b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1478,9 +1510,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "34-vocabulary-4.html",
-        "35-flash-v011-wu.html",
-        "52-practice-vocabulary-2a.html",
+        "41-vocabulary-4.html",
+        "42-flash-v011-wu.html",
+        "65-practice-vocabulary-2a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1516,9 +1548,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "39-vocabulary-5.html",
-        "40-flash-v012-wazi.html",
-        "52-practice-vocabulary-2a.html",
+        "51-vocabulary-5.html",
+        "52-flash-v012-wazi.html",
+        "65-practice-vocabulary-2a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1554,9 +1586,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "39-vocabulary-5.html",
-        "41-flash-v013-wo.html",
-        "52-practice-vocabulary-2a.html",
+        "51-vocabulary-5.html",
+        "53-flash-v013-wo.html",
+        "65-practice-vocabulary-2a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1592,9 +1624,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "39-vocabulary-5.html",
-        "42-flash-v014-waimian.html",
-        "52-practice-vocabulary-2a.html",
+        "51-vocabulary-5.html",
+        "54-flash-v014-waimian.html",
+        "65-practice-vocabulary-2a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1630,9 +1662,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "39-vocabulary-5.html",
-        "43-flash-v015-wan.html",
-        "52-practice-vocabulary-2a.html",
+        "51-vocabulary-5.html",
+        "55-flash-v015-wan.html",
+        "65-practice-vocabulary-2a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1668,9 +1700,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "39-vocabulary-5.html",
-        "44-flash-v016-wangji.html",
-        "53-practice-vocabulary-2b.html",
+        "51-vocabulary-5.html",
+        "56-flash-v016-wangji.html",
+        "66-practice-vocabulary-2b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1706,9 +1738,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "39-vocabulary-5.html",
-        "45-flash-v017-weng.html",
-        "53-practice-vocabulary-2b.html",
+        "51-vocabulary-5.html",
+        "57-flash-v017-weng.html",
+        "66-practice-vocabulary-2b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1744,9 +1776,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "49-vocabulary-6.html",
-        "50-flash-v018-wei.html",
-        "53-practice-vocabulary-2b.html",
+        "62-vocabulary-6.html",
+        "63-flash-v018-wei.html",
+        "66-practice-vocabulary-2b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1782,9 +1814,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "49-vocabulary-6.html",
-        "51-flash-v019-wenhua.html",
-        "53-practice-vocabulary-2b.html",
+        "62-vocabulary-6.html",
+        "64-flash-v019-wenhua.html",
+        "66-practice-vocabulary-2b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1820,10 +1852,10 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "57-vocabulary-7.html",
-        "58-flash-v020-yu.html",
-        "64-practice-vocabulary-3a.html",
-        "70-review-vocabulary-match.html",
+        "73-vocabulary-7.html",
+        "74-flash-v020-yu.html",
+        "80-practice-vocabulary-3a.html",
+        "86-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1859,10 +1891,10 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "57-vocabulary-7.html",
-        "59-flash-v021-yu.html",
-        "64-practice-vocabulary-3a.html",
-        "70-review-vocabulary-match.html",
+        "73-vocabulary-7.html",
+        "75-flash-v021-yu.html",
+        "80-practice-vocabulary-3a.html",
+        "86-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1898,10 +1930,10 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "57-vocabulary-7.html",
-        "60-flash-v022-yue.html",
-        "64-practice-vocabulary-3a.html",
-        "70-review-vocabulary-match.html",
+        "73-vocabulary-7.html",
+        "76-flash-v022-yue.html",
+        "80-practice-vocabulary-3a.html",
+        "86-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1937,10 +1969,10 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "57-vocabulary-7.html",
-        "61-flash-v023-yuenan.html",
-        "65-practice-vocabulary-3b.html",
-        "70-review-vocabulary-match.html",
+        "73-vocabulary-7.html",
+        "77-flash-v023-yuenan.html",
+        "81-practice-vocabulary-3b.html",
+        "86-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1976,10 +2008,10 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "57-vocabulary-7.html",
-        "62-flash-v024-yuan.html",
-        "65-practice-vocabulary-3b.html",
-        "70-review-vocabulary-match.html",
+        "73-vocabulary-7.html",
+        "78-flash-v024-yuan.html",
+        "81-practice-vocabulary-3b.html",
+        "86-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -2015,10 +2047,10 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "57-vocabulary-7.html",
-        "63-flash-v025-yun.html",
-        "65-practice-vocabulary-3b.html",
-        "70-review-vocabulary-match.html",
+        "73-vocabulary-7.html",
+        "79-flash-v025-yun.html",
+        "81-practice-vocabulary-3b.html",
+        "86-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
