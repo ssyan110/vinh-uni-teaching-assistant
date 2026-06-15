@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "lesson_id": "pinyin-07",
-  "generated_at": "2026-06-15T06:34:50.882Z",
+  "generated_at": "2026-06-15T06:42:17.712Z",
   "source_database": "database",
   "workflow": {
     "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
@@ -125,6 +125,84 @@
       "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
     },
     {
+      "id": "assets-photos-divider-rule-u-prefix-w-png",
+      "asset_path": "assets/photos/divider-rule-u-prefix-w.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1295,
+        "height": 1214,
+        "format": "png",
+        "aspect_ratio": 1.0667
+      },
+      "used_by": [
+        "36-rule-intro-5.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-divider-rule-u-wu-png",
+      "asset_path": "assets/photos/divider-rule-u-wu.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "31-rule-intro-4.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
+      "id": "assets-photos-divider-rule-wei-wen-png",
+      "asset_path": "assets/photos/divider-rule-wei-wen.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1375,
+        "height": 1144,
+        "format": "png",
+        "aspect_ratio": 1.2019
+      },
+      "used_by": [
+        "46-rule-intro-6.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
       "id": "assets-photos-divider-rule-ya-ye-yao-yan-png",
       "asset_path": "assets/photos/divider-rule-ya-ye-yao-yan.png",
       "role": "section_photo",
@@ -177,21 +255,18 @@
       "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
     },
     {
-      "id": "assets-photos-divider-rules-i-u-yu-png",
-      "asset_path": "assets/photos/divider-rules-i-u-yu.png",
+      "id": "assets-photos-divider-rule-yu-prefix-png",
+      "asset_path": "assets/photos/divider-rule-yu-prefix.png",
       "role": "section_photo",
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 1254,
-        "height": 1254,
+        "width": 1402,
+        "height": 1122,
         "format": "png",
-        "aspect_ratio": 1
+        "aspect_ratio": 1.2496
       },
       "used_by": [
-        "31-rule-intro-4.html",
-        "36-rule-intro-5.html",
-        "46-rule-intro-6.html",
         "54-rule-intro-7.html"
       ],
       "html_reference_types": [
