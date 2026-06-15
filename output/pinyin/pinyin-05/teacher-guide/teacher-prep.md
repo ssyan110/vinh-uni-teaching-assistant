@@ -16,6 +16,20 @@
 - Dùng flashcard để học sinh đọc pinyin trước khi xem nghĩa.
 - Kết thúc bằng nghe chọn pinyin và điền âm còn thiếu.
 
+## Slide 55 - 老师备课用
+Đọc các từ sau theo thứ tự để học sinh điền vào 10 chỗ trống:
+
+1. 汤 - tāng
+2. 脏 - zāng
+3. 疼 - téng
+4. 冷 - lěng
+5. 名字 - míngzi
+6. 听 - tīng
+7. 龙 - lóng
+8. 成功 - chénggōng
+9. 军人 - jūnrén
+10. 裙子 - qúnzi
+
 ## Ghi chú
 - Tổng số từ vựng: 19.
 - Deck hiện dùng placeholder image; thay ảnh thật bằng asset workflow khi cần.
