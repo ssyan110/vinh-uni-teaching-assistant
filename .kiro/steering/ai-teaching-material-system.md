@@ -40,6 +40,7 @@ Project-local rules and context. Auto-included by Kiro; referenced by AGENTS.md 
 - **Inserted image rule:** Full-slide/reference/diagram images inserted into a slide must stay clear and unfogged: `opacity:1`, `filter:none`, no pale overlay. Do not put an extra white rounded frame, border, or shadow behind inserted images unless Adam explicitly asks for a card-style image.
 - **Vocabulary grid balance:** Future pinyin `Từ vựng 1`, `Từ vựng 2`, etc. grids and future regular-lesson vocabulary overview/summary grids use the balanced 8-track layout for 1-8 cards with a 20px row gap / 14px column gap: 8 = 4 + 4, 7 = 4 + 3 centered, 6 = 4 + 2 under the inner columns, 5 = 4 + 1 centered, and 1-4 = one centered evenly spaced row.
 - **Pinyin vocabulary grids:** `Từ vựng 1`, `Từ vựng 2`, etc. keep only the top bar label plus the vocabulary grid. Do not add extra body descriptions like `Tập trung đọc...`.
+- **Concise classroom slides:** Slides should be `簡潔有力有重點`: one clear title, one clear task, and no extra subtitle/explanation unless Adam explicitly asks for it. Keep teacher tips, rule notes, and detailed explanations out of classroom slides; put them in teacher prep notes.
 - 課文 section is labeled "Bài đọc" in Vietnamese (not "Bài khóa").
 - Default game platform is Blooket. Only use Kahoot or Quizizz when Blooket cannot support the exercise format.
 - Slide design: Soft Classroom Presenter style (locked). See `reference/slide-style-guide.md`. Do NOT use dark themes, Oriental Fantasy, or 中國風.

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "lesson_id": "pinyin-06",
-  "generated_at": "2026-06-15T05:18:23.064Z",
+  "generated_at": "2026-06-15T05:50:11.553Z",
   "source_database": "database",
   "workflow": {
     "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
@@ -217,7 +217,7 @@
         "aspect_ratio": 1.0892
       },
       "used_by": [
-        "58-closing.html"
+        "60-closing.html"
       ],
       "html_reference_types": [
         "img"
@@ -766,10 +766,12 @@
         "52-flash-v019-xuan.html",
         "53-practice-vocabulary-3.html",
         "54-divider-review-final.html",
-        "55-review-listening-choice.html",
-        "56-review-fill-blank.html",
-        "57-review-vocabulary-match.html",
-        "58-closing.html",
+        "55-review-final-reading-a.html",
+        "56-review-final-reading-b.html",
+        "57-review-final-reading-c.html",
+        "58-review-fill-blank.html",
+        "59-review-vocabulary-match.html",
+        "60-closing.html",
         "lesson-required-assets"
       ],
       "html_reference_types": [
@@ -846,10 +848,12 @@
         "52-flash-v019-xuan.html",
         "53-practice-vocabulary-3.html",
         "54-divider-review-final.html",
-        "55-review-listening-choice.html",
-        "56-review-fill-blank.html",
-        "57-review-vocabulary-match.html",
-        "58-closing.html",
+        "55-review-final-reading-a.html",
+        "56-review-final-reading-b.html",
+        "57-review-final-reading-c.html",
+        "58-review-fill-blank.html",
+        "59-review-vocabulary-match.html",
+        "60-closing.html",
         "lesson-required-assets"
       ],
       "html_reference_types": [
@@ -994,6 +998,7 @@
         "15-vocabulary-1.html",
         "19-flash-v004-xiao.html",
         "24-practice-vocabulary-1a.html",
+        "56-review-final-reading-b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1070,6 +1075,7 @@
         "15-vocabulary-1.html",
         "21-flash-v006-qian.html",
         "25-practice-vocabulary-1b.html",
+        "56-review-final-reading-b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1146,6 +1152,7 @@
         "15-vocabulary-1.html",
         "23-flash-v008-qiong.html",
         "25-practice-vocabulary-1b.html",
+        "56-review-final-reading-b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1222,6 +1229,7 @@
         "34-vocabulary-2.html",
         "36-flash-v010-huanggua.html",
         "43-practice-vocabulary-2a.html",
+        "56-review-final-reading-b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1374,7 +1382,8 @@
         "34-vocabulary-2.html",
         "40-flash-v014-kuai.html",
         "44-practice-vocabulary-2b.html",
-        "57-review-vocabulary-match.html",
+        "56-review-final-reading-b.html",
+        "59-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1413,7 +1422,7 @@
         "34-vocabulary-2.html",
         "41-flash-v015-chuan.html",
         "44-practice-vocabulary-2b.html",
-        "57-review-vocabulary-match.html",
+        "59-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1452,7 +1461,7 @@
         "34-vocabulary-2.html",
         "42-flash-v016-chuang.html",
         "44-practice-vocabulary-2b.html",
-        "57-review-vocabulary-match.html",
+        "59-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1491,7 +1500,8 @@
         "49-vocabulary-3.html",
         "50-flash-v017-chunjuan.html",
         "53-practice-vocabulary-3.html",
-        "57-review-vocabulary-match.html",
+        "56-review-final-reading-b.html",
+        "59-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1530,7 +1540,7 @@
         "49-vocabulary-3.html",
         "51-flash-v018-anquan.html",
         "53-practice-vocabulary-3.html",
-        "57-review-vocabulary-match.html",
+        "59-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1569,7 +1579,7 @@
         "49-vocabulary-3.html",
         "52-flash-v019-xuan.html",
         "53-practice-vocabulary-3.html",
-        "57-review-vocabulary-match.html",
+        "59-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [

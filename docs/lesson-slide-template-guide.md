@@ -26,6 +26,8 @@ Reusable divider rule: use the same Lesson 01 divider templates across all lesso
 
 Centering rule: when a slide is not a fixed Lesson 01 template, list, comparison, or dialogue layout, prefer centering the main content vertically and horizontally. This is especially important for culture notes, single concepts, example sentences, and practice prompts. Use left-center layouts only when they make the content easier to scan.
 
+Concise classroom slide rule: slides should be `簡潔有力有重點`. Use one clear title and one clear task. Avoid subtitles, explanatory notes, teacher tips, or redundant helper text on classroom slides unless Adam explicitly asks for them. Put extra explanation in teacher prep notes instead of the slide.
+
 Activity design rule: practice activities should be varied and can include listening, speaking, reading, and writing when the lesson content supports it. Comprehensive practice and grammar practice should reference HSK and TOCFL item formats, with a preference for practical daily-use situations. The generated content still uses Simplified Chinese unless Adam explicitly asks otherwise, even when the question style is inspired by TOCFL.
 
 Interactive practice rule: prefer simple interactive slide/webapp formats when useful. For example, create one multiple-choice question per slide with clickable options; correct choices show success feedback, and wrong choices prompt the student to try again.
