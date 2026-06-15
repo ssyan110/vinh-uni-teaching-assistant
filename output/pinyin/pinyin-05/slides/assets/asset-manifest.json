@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "lesson_id": "pinyin-05",
-  "generated_at": "2026-06-15T04:20:01.291Z",
+  "generated_at": "2026-06-15T10:26:48.604Z",
   "source_database": "database",
   "workflow": {
     "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
@@ -78,10 +78,10 @@
       "status": "ready_for_visual_qa",
       "exists": true,
       "dimensions": {
-        "width": 1254,
-        "height": 1254,
+        "width": 1402,
+        "height": 1122,
         "format": "png",
-        "aspect_ratio": 1
+        "aspect_ratio": 1.2496
       },
       "used_by": [
         "05-divider-finals-1.html"
@@ -110,7 +110,7 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "34-divider-finals-2.html"
+        "33-divider-finals-2.html"
       ],
       "html_reference_types": [
         "img"
@@ -137,7 +137,7 @@
       },
       "used_by": [
         "03-divider-review.html",
-        "52-divider-review-final.html"
+        "51-divider-review-final.html"
       ],
       "html_reference_types": [
         "img"
@@ -190,8 +190,8 @@
       },
       "used_by": [
         "11-divider-vocabulary-1.html",
-        "28-divider-vocabulary-2.html",
-        "40-divider-vocabulary-3.html"
+        "27-divider-vocabulary-2.html",
+        "39-divider-vocabulary-3.html"
       ],
       "html_reference_types": [
         "img"
@@ -217,7 +217,7 @@
         "aspect_ratio": 1.0892
       },
       "used_by": [
-        "56-closing.html"
+        "55-closing.html"
       ],
       "html_reference_types": [
         "img"
@@ -458,36 +458,35 @@
         "24-rule-l5-jqx-un-jun.html",
         "25-rule-l5-jqx-un-qun.html",
         "26-rule-l5-jqx-un-xun.html",
-        "27-rule-rule-l5-jqx-un-umlaut-examples.html",
-        "28-divider-vocabulary-2.html",
-        "29-vocabulary-2.html",
-        "30-flash-v009-junren.html",
-        "31-flash-v010-qunzi.html",
-        "32-flash-v011-peixun.html",
-        "33-practice-vocabulary-2.html",
-        "34-divider-finals-2.html",
-        "35-finals-2.html",
-        "36-chart-2-1.html",
-        "37-chart-2-2.html",
-        "38-chart-2-3.html",
-        "39-practice-finals-2.html",
-        "40-divider-vocabulary-3.html",
-        "41-vocabulary-3.html",
-        "42-flash-v012-tang.html",
-        "43-flash-v013-zang.html",
-        "44-flash-v014-teng.html",
-        "45-flash-v015-leng.html",
-        "46-flash-v016-mingzi.html",
-        "47-flash-v017-ting.html",
-        "48-flash-v018-long.html",
-        "49-flash-v019-chenggong.html",
-        "50-practice-vocabulary-3a.html",
-        "51-practice-vocabulary-3b.html",
-        "52-divider-review-final.html",
-        "53-review-listening-choice.html",
-        "54-review-fill-blank.html",
-        "55-review-vocabulary-match.html",
-        "56-closing.html",
+        "27-divider-vocabulary-2.html",
+        "28-vocabulary-2.html",
+        "29-flash-v009-junren.html",
+        "30-flash-v010-qunzi.html",
+        "31-flash-v011-peixun.html",
+        "32-practice-vocabulary-2.html",
+        "33-divider-finals-2.html",
+        "34-finals-2.html",
+        "35-chart-2-1.html",
+        "36-chart-2-2.html",
+        "37-chart-2-3.html",
+        "38-practice-finals-2.html",
+        "39-divider-vocabulary-3.html",
+        "40-vocabulary-3.html",
+        "41-flash-v012-tang.html",
+        "42-flash-v013-zang.html",
+        "43-flash-v014-teng.html",
+        "44-flash-v015-leng.html",
+        "45-flash-v016-mingzi.html",
+        "46-flash-v017-ting.html",
+        "47-flash-v018-long.html",
+        "48-flash-v019-chenggong.html",
+        "49-practice-vocabulary-3a.html",
+        "50-practice-vocabulary-3b.html",
+        "51-divider-review-final.html",
+        "52-review-listening-choice.html",
+        "53-review-fill-blank.html",
+        "54-review-vocabulary-match.html",
+        "55-closing.html",
         "lesson-required-assets"
       ],
       "html_reference_types": [
@@ -536,36 +535,35 @@
         "24-rule-l5-jqx-un-jun.html",
         "25-rule-l5-jqx-un-qun.html",
         "26-rule-l5-jqx-un-xun.html",
-        "27-rule-rule-l5-jqx-un-umlaut-examples.html",
-        "28-divider-vocabulary-2.html",
-        "29-vocabulary-2.html",
-        "30-flash-v009-junren.html",
-        "31-flash-v010-qunzi.html",
-        "32-flash-v011-peixun.html",
-        "33-practice-vocabulary-2.html",
-        "34-divider-finals-2.html",
-        "35-finals-2.html",
-        "36-chart-2-1.html",
-        "37-chart-2-2.html",
-        "38-chart-2-3.html",
-        "39-practice-finals-2.html",
-        "40-divider-vocabulary-3.html",
-        "41-vocabulary-3.html",
-        "42-flash-v012-tang.html",
-        "43-flash-v013-zang.html",
-        "44-flash-v014-teng.html",
-        "45-flash-v015-leng.html",
-        "46-flash-v016-mingzi.html",
-        "47-flash-v017-ting.html",
-        "48-flash-v018-long.html",
-        "49-flash-v019-chenggong.html",
-        "50-practice-vocabulary-3a.html",
-        "51-practice-vocabulary-3b.html",
-        "52-divider-review-final.html",
-        "53-review-listening-choice.html",
-        "54-review-fill-blank.html",
-        "55-review-vocabulary-match.html",
-        "56-closing.html",
+        "27-divider-vocabulary-2.html",
+        "28-vocabulary-2.html",
+        "29-flash-v009-junren.html",
+        "30-flash-v010-qunzi.html",
+        "31-flash-v011-peixun.html",
+        "32-practice-vocabulary-2.html",
+        "33-divider-finals-2.html",
+        "34-finals-2.html",
+        "35-chart-2-1.html",
+        "36-chart-2-2.html",
+        "37-chart-2-3.html",
+        "38-practice-finals-2.html",
+        "39-divider-vocabulary-3.html",
+        "40-vocabulary-3.html",
+        "41-flash-v012-tang.html",
+        "42-flash-v013-zang.html",
+        "43-flash-v014-teng.html",
+        "44-flash-v015-leng.html",
+        "45-flash-v016-mingzi.html",
+        "46-flash-v017-ting.html",
+        "47-flash-v018-long.html",
+        "48-flash-v019-chenggong.html",
+        "49-practice-vocabulary-3a.html",
+        "50-practice-vocabulary-3b.html",
+        "51-divider-review-final.html",
+        "52-review-listening-choice.html",
+        "53-review-fill-blank.html",
+        "54-review-vocabulary-match.html",
+        "55-closing.html",
         "lesson-required-assets"
       ],
       "html_reference_types": [
@@ -897,9 +895,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "29-vocabulary-2.html",
-        "30-flash-v009-junren.html",
-        "33-practice-vocabulary-2.html",
+        "28-vocabulary-2.html",
+        "29-flash-v009-junren.html",
+        "32-practice-vocabulary-2.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -935,9 +933,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "29-vocabulary-2.html",
-        "31-flash-v010-qunzi.html",
-        "33-practice-vocabulary-2.html",
+        "28-vocabulary-2.html",
+        "30-flash-v010-qunzi.html",
+        "32-practice-vocabulary-2.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -973,9 +971,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "29-vocabulary-2.html",
-        "32-flash-v011-peixun.html",
-        "33-practice-vocabulary-2.html",
+        "28-vocabulary-2.html",
+        "31-flash-v011-peixun.html",
+        "32-practice-vocabulary-2.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1011,9 +1009,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "41-vocabulary-3.html",
-        "42-flash-v012-tang.html",
-        "50-practice-vocabulary-3a.html",
+        "40-vocabulary-3.html",
+        "41-flash-v012-tang.html",
+        "49-practice-vocabulary-3a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1049,9 +1047,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "41-vocabulary-3.html",
-        "43-flash-v013-zang.html",
-        "50-practice-vocabulary-3a.html",
+        "40-vocabulary-3.html",
+        "42-flash-v013-zang.html",
+        "49-practice-vocabulary-3a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1087,10 +1085,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "41-vocabulary-3.html",
-        "44-flash-v014-teng.html",
-        "50-practice-vocabulary-3a.html",
-        "55-review-vocabulary-match.html",
+        "40-vocabulary-3.html",
+        "43-flash-v014-teng.html",
+        "49-practice-vocabulary-3a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1126,10 +1123,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "41-vocabulary-3.html",
-        "45-flash-v015-leng.html",
-        "50-practice-vocabulary-3a.html",
-        "55-review-vocabulary-match.html",
+        "40-vocabulary-3.html",
+        "44-flash-v015-leng.html",
+        "49-practice-vocabulary-3a.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1165,10 +1161,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "41-vocabulary-3.html",
-        "46-flash-v016-mingzi.html",
-        "51-practice-vocabulary-3b.html",
-        "55-review-vocabulary-match.html",
+        "40-vocabulary-3.html",
+        "45-flash-v016-mingzi.html",
+        "50-practice-vocabulary-3b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1204,10 +1199,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "41-vocabulary-3.html",
-        "47-flash-v017-ting.html",
-        "51-practice-vocabulary-3b.html",
-        "55-review-vocabulary-match.html",
+        "40-vocabulary-3.html",
+        "46-flash-v017-ting.html",
+        "50-practice-vocabulary-3b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1243,10 +1237,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "41-vocabulary-3.html",
-        "48-flash-v018-long.html",
-        "51-practice-vocabulary-3b.html",
-        "55-review-vocabulary-match.html",
+        "40-vocabulary-3.html",
+        "47-flash-v018-long.html",
+        "50-practice-vocabulary-3b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1282,10 +1275,9 @@
         "aspect_ratio": 1
       },
       "used_by": [
-        "41-vocabulary-3.html",
-        "49-flash-v019-chenggong.html",
-        "51-practice-vocabulary-3b.html",
-        "55-review-vocabulary-match.html",
+        "40-vocabulary-3.html",
+        "48-flash-v019-chenggong.html",
+        "50-practice-vocabulary-3b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [

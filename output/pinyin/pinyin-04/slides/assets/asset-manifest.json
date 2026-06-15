@@ -1105,9 +1105,9 @@
         "duì"
       ],
       "vietnamese": [
-        "đúng, đối với"
+        "đúng"
       ],
-      "prompt": "Soft textbook 1:1 illustration for đúng, đối với; no text, labels, letters, numbers, or watermark.",
+      "prompt": "Soft textbook 1:1 illustration for đúng; no text, labels, letters, numbers, or watermark.",
       "visual_description": "Existing image for 对 (duì).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },

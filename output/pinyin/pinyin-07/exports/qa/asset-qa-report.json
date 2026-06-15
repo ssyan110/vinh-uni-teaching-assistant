@@ -1,6 +1,6 @@
 {
   "lesson_id": "pinyin-07",
-  "checked_at": "2026-06-15T07:05:22.998Z",
+  "checked_at": "2026-06-15T10:50:00.752Z",
   "manifest": "output/pinyin/pinyin-07/slides/assets/asset-manifest.json",
   "status": "passed",
   "failed": [],
@@ -13,7 +13,7 @@
     {
       "label": "manifest has assets",
       "pass": true,
-      "detail": "59 assets"
+      "detail": "60 assets"
     },
     {
       "label": "required asset: assets/slide-base.css",

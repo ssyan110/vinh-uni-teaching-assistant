@@ -147,7 +147,7 @@
 
 | item_id | Hanzi | Pinyin | Page | Practice Page | Related Rule | Practice Requirement |
 |---|---|---|---|---|---|---|
-| `vocab_l7_018_wei` | 喂 | wèi | P23 | P24 | `rule_l7_ui_un_wei_wen` | 发音正确，学习字义，不要求认字。 |
+| `vocab_l7_018_wei` | 喂 | wéi | P23 | P24 | `rule_l7_ui_un_wei_wen` | 发音正确，学习字义，不要求认字。 |
 | `vocab_l7_019_wenhua` | 文化 | wénhuà | P23 | P24 | `rule_l7_ui_un_wei_wen` | 发音正确，学习字义，不要求认字。 |
 
 ### 词汇 7

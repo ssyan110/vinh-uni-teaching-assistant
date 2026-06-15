@@ -38,7 +38,7 @@
 | niú | 牛 | con bò |
 | jiǔ | 九 | số chín |
 | qiú | 球 | quả bóng |
-| duì | 对 | đúng, đối với |
+| duì | 对 | đúng |
 | shuì | 睡 | ngủ |
 | guì | 贵 | đắt |
 | jiějie | 姐姐 | chị gái |

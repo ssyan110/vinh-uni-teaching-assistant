@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "lesson_id": "pinyin-07",
-  "generated_at": "2026-06-15T06:59:05.720Z",
+  "generated_at": "2026-06-15T10:50:00.484Z",
   "source_database": "database",
   "workflow": {
     "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
@@ -85,7 +85,7 @@
       },
       "used_by": [
         "03-divider-review.html",
-        "83-divider-review-final.html"
+        "84-divider-review-final.html"
       ],
       "html_reference_types": [
         "img"
@@ -281,6 +281,32 @@
       "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
     },
     {
+      "id": "assets-photos-divider-rules-i-u-yu-png",
+      "asset_path": "assets/photos/divider-rules-i-u-yu.png",
+      "role": "section_photo",
+      "status": "ready_for_visual_qa",
+      "exists": true,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "format": "png",
+        "aspect_ratio": 1
+      },
+      "used_by": [
+        "82-divider-word-linking-rule.html"
+      ],
+      "html_reference_types": [
+        "img"
+      ],
+      "record_ids": [],
+      "chinese": [],
+      "pinyin": [],
+      "vietnamese": [],
+      "prompt": "",
+      "visual_description": "",
+      "replacement_rule": "Replace the file in place, then rebuild the asset manifest and rerun asset QA."
+    },
+    {
       "id": "assets-photos-divider-vocabulary-png",
       "asset_path": "assets/photos/divider-vocabulary.png",
       "role": "section_photo",
@@ -325,7 +351,7 @@
         "aspect_ratio": 1.0892
       },
       "used_by": [
-        "88-closing.html"
+        "89-closing.html"
       ],
       "html_reference_types": [
         "img"
@@ -986,13 +1012,14 @@
         "79-flash-v025-yun.html",
         "80-practice-vocabulary-3a.html",
         "81-practice-vocabulary-3b.html",
-        "82-rule-rule-l7-word-pinyin-spacing.html",
-        "83-divider-review-final.html",
-        "84-review-listening-choice.html",
-        "85-review-fill-blank.html",
-        "86-review-vocabulary-match.html",
-        "87-rule-summary.html",
-        "88-closing.html",
+        "82-divider-word-linking-rule.html",
+        "83-rule-rule-l7-word-pinyin-spacing.html",
+        "84-divider-review-final.html",
+        "85-review-listening-choice.html",
+        "86-review-fill-blank.html",
+        "87-review-vocabulary-match.html",
+        "88-rule-summary.html",
+        "89-closing.html",
         "lesson-required-assets"
       ],
       "html_reference_types": [
@@ -1096,13 +1123,14 @@
         "79-flash-v025-yun.html",
         "80-practice-vocabulary-3a.html",
         "81-practice-vocabulary-3b.html",
-        "82-rule-rule-l7-word-pinyin-spacing.html",
-        "83-divider-review-final.html",
-        "84-review-listening-choice.html",
-        "85-review-fill-blank.html",
-        "86-review-vocabulary-match.html",
-        "87-rule-summary.html",
-        "88-closing.html",
+        "82-divider-word-linking-rule.html",
+        "83-rule-rule-l7-word-pinyin-spacing.html",
+        "84-divider-review-final.html",
+        "85-review-listening-choice.html",
+        "86-review-fill-blank.html",
+        "87-review-vocabulary-match.html",
+        "88-rule-summary.html",
+        "89-closing.html",
         "lesson-required-assets"
       ],
       "html_reference_types": [
@@ -1740,7 +1768,6 @@
       "used_by": [
         "51-vocabulary-5.html",
         "57-flash-v017-weng.html",
-        "66-practice-vocabulary-2b.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1792,13 +1819,13 @@
         "喂"
       ],
       "pinyin": [
-        "wèi"
+        "wéi"
       ],
       "vietnamese": [
         "alo"
       ],
       "prompt": "Soft textbook 1:1 illustration for alo; no text, labels, letters, numbers, or watermark.",
-      "visual_description": "Placeholder image for 喂 (wèi).",
+      "visual_description": "Placeholder image for 喂 (wéi).",
       "replacement_rule": "Replace through scripts/replace-lesson-image.mjs so the image is resized to 16:9 and the manifest is rebuilt."
     },
     {
@@ -1855,7 +1882,7 @@
         "73-vocabulary-7.html",
         "74-flash-v020-yu.html",
         "80-practice-vocabulary-3a.html",
-        "86-review-vocabulary-match.html",
+        "87-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1894,7 +1921,7 @@
         "73-vocabulary-7.html",
         "75-flash-v021-yu.html",
         "80-practice-vocabulary-3a.html",
-        "86-review-vocabulary-match.html",
+        "87-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1933,7 +1960,7 @@
         "73-vocabulary-7.html",
         "76-flash-v022-yue.html",
         "80-practice-vocabulary-3a.html",
-        "86-review-vocabulary-match.html",
+        "87-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -1972,7 +1999,7 @@
         "73-vocabulary-7.html",
         "77-flash-v023-yuenan.html",
         "81-practice-vocabulary-3b.html",
-        "86-review-vocabulary-match.html",
+        "87-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -2011,7 +2038,7 @@
         "73-vocabulary-7.html",
         "78-flash-v024-yuan.html",
         "81-practice-vocabulary-3b.html",
-        "86-review-vocabulary-match.html",
+        "87-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [
@@ -2050,7 +2077,7 @@
         "73-vocabulary-7.html",
         "79-flash-v025-yun.html",
         "81-practice-vocabulary-3b.html",
-        "86-review-vocabulary-match.html",
+        "87-review-vocabulary-match.html",
         "vocab-image-prompts"
       ],
       "html_reference_types": [

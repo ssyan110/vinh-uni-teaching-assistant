@@ -40,24 +40,24 @@ body.presenting .thumb-number,body.presenting .thumb-name{color:rgba(255,255,255
 </style>
 </head>
 <body>
-<div class="header"><h1>Pinyin Bài 5</h1><div class="subtitle">56 slides · Press <strong>F</strong> for presentation mode</div></div>
+<div class="header"><h1>Pinyin Bài 5</h1><div class="subtitle">55 slides · Press <strong>F</strong> for presentation mode</div></div>
 <aside class="thumb-sidebar" id="thumbSidebar" aria-label="Danh sách slide">
-  <div class="thumb-head"><div class="thumb-title">Mục lục</div><div class="thumb-total">56</div></div>
+  <div class="thumb-head"><div class="thumb-title">Mục lục</div><div class="thumb-total">55</div></div>
   <div class="thumb-list" id="thumbList"></div>
 </aside>
 <div class="stage" id="stage"><div class="slide-surface" id="slideSurface"><iframe id="slideFrame" src="01-cover.html"></iframe><canvas id="drawCanvas"></canvas><a class="stage-video-link" id="stageVideoLink" href="#" target="_blank" rel="noopener noreferrer" aria-label="Mở video viết chữ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></a></div></div>
 <div class="controls" id="controls">
-  <button class="btn" onclick="prev()">← Prev</button><span class="counter" id="counter">1 / 56</span><button class="btn" onclick="next()">Next →</button>
+  <button class="btn" onclick="prev()">← Prev</button><span class="counter" id="counter">1 / 55</span><button class="btn" onclick="next()">Next →</button>
   <div class="separator"></div><button class="btn secondary" onclick="undo()">↩ Undo</button><span class="tool-group"><button class="btn secondary" id="drawBtn" onclick="toggleToolMenu('drawMenu')"><span id="drawLabel">Draw</span> ▾</button><span class="tool-menu" id="drawMenu"><button class="btn" id="penBtn" onclick="togglePen()">Pen</button><button class="btn" id="highBtn" onclick="toggleHighlighter()">Highlighter</button></span></span>
   <span class="tool-group"><button class="btn secondary" id="colorBtn" onclick="toggleToolMenu('colorMenu')"><span class="ink-chip" id="inkChip" style="background:#1A3A5A"></span> Ink ▾</button><span class="tool-menu color-menu" id="colorMenu"><button class="color-option swatch" data-color="#E04040" onclick="pickColor(this)"><span class="color-dot" style="background:#E04040"></span>Đỏ</button><button class="color-option swatch selected" data-color="#1A3A5A" onclick="pickColor(this)"><span class="color-dot" style="background:#1A3A5A"></span>Xanh đậm</button><button class="color-option swatch" data-color="#5AACAC" onclick="pickColor(this)"><span class="color-dot" style="background:#5AACAC"></span>Teal</button><button class="color-option swatch" data-color="#F5A623" onclick="pickColor(this)"><span class="color-dot" style="background:#F5A623"></span>Vàng</button></span></span>
   <span class="tool-group"><button class="btn secondary" id="shapeBtn" onclick="toggleToolMenu('shapeMenu')"><span id="shapeLabel">Shape</span> ▾</button><span class="tool-menu" id="shapeMenu"><button class="btn" id="lineBtn" onclick="toggleShape('line')">Line</button><button class="btn" id="circleBtn" onclick="toggleShape('circle')">Circle</button><button class="btn" id="rectBtn" onclick="toggleShape('rect')">Box</button></span></span><span class="eraser-wrap"><button class="btn secondary" id="eraseBtn" onclick="toggleEraserMenu('eraserMenu')">Eraser ▾</button><span class="eraser-menu" id="eraserMenu"><button class="btn" id="pixelEraserBtn" onclick="setEraser('pixel')">Pixel</button><button class="btn" id="objectEraserBtn" onclick="setEraser('object')">Object</button></span></span><span class="tool-group"><button class="btn secondary" id="textBtn" onclick="toggleToolMenu('textMenu')">Text ▾</button><span class="tool-menu text-menu" id="textMenu"><button class="btn" id="textAddBtn" onclick="toggleText()">Add text</button><button class="text-color active" style="background:#000" data-text-color="#000000" onclick="pickTextColor(this)" title="Black"></button><button class="text-color" style="background:#1A5BFF" data-text-color="#1A5BFF" onclick="pickTextColor(this)" title="Blue"></button><button class="text-color" style="background:#E04040" data-text-color="#E04040" onclick="pickTextColor(this)" title="Red"></button><select class="text-size" onchange="setTextSize(this.value)" title="Text size"><option value="20">20</option><option value="24" selected>24</option><option value="30">30</option><option value="36">36</option><option value="44">44</option><option value="56">56</option></select></span></span><button class="btn danger" onclick="clearSlide()">Clear</button>
   <div class="separator"></div><button class="btn download" onclick="exportPDF()">📥 PDF</button><button class="btn" onclick="enterPresent()">▶ Present</button>
 </div>
 <div class="float-toolbar">
-  <button class="btn" onclick="prev()">←</button><span class="counter" id="counterFloat">1 / 56</span><button class="btn" onclick="next()">→</button>
+  <button class="btn" onclick="prev()">←</button><span class="counter" id="counterFloat">1 / 55</span><button class="btn" onclick="next()">→</button>
   <div class="separator"></div><button class="btn" onclick="undo()">↩</button><span class="tool-group"><button class="btn" id="drawBtnFloat" onclick="toggleToolMenu('drawMenuFloat')"><span id="drawLabelFloat">Draw</span> ▾</button><span class="tool-menu" id="drawMenuFloat"><button class="btn" id="penBtnFloat" onclick="togglePen()">Pen</button><button class="btn" id="highBtnFloat" onclick="toggleHighlighter()">Highlighter</button></span></span><span class="tool-group"><button class="btn" id="colorBtnFloat" onclick="toggleToolMenu('colorMenuFloat')"><span class="ink-chip" id="inkChipFloat" style="background:#1A3A5A"></span> Ink ▾</button><span class="tool-menu color-menu" id="colorMenuFloat"><button class="color-option swatch" data-color="#E04040" onclick="pickColor(this)"><span class="color-dot" style="background:#E04040"></span>Đỏ</button><button class="color-option swatch selected" data-color="#1A3A5A" onclick="pickColor(this)"><span class="color-dot" style="background:#1A3A5A"></span>Xanh đậm</button><button class="color-option swatch" data-color="#5AACAC" onclick="pickColor(this)"><span class="color-dot" style="background:#5AACAC"></span>Teal</button><button class="color-option swatch" data-color="#F5A623" onclick="pickColor(this)"><span class="color-dot" style="background:#F5A623"></span>Vàng</button></span></span><span class="tool-group"><button class="btn" id="shapeBtnFloat" onclick="toggleToolMenu('shapeMenuFloat')"><span id="shapeLabelFloat">Shape</span> ▾</button><span class="tool-menu" id="shapeMenuFloat"><button class="btn" id="lineBtnFloat" onclick="toggleShape('line')">Line</button><button class="btn" id="circleBtnFloat" onclick="toggleShape('circle')">Circle</button><button class="btn" id="rectBtnFloat" onclick="toggleShape('rect')">Box</button></span></span><span class="eraser-wrap"><button class="btn" id="eraseBtnFloat" onclick="toggleEraserMenu('eraserMenuFloat')">Eraser ▾</button><span class="eraser-menu" id="eraserMenuFloat"><button class="btn" id="pixelEraserBtnFloat" onclick="setEraser('pixel')">Pixel</button><button class="btn" id="objectEraserBtnFloat" onclick="setEraser('object')">Object</button></span></span><span class="tool-group"><button class="btn" id="textBtnFloat" onclick="toggleToolMenu('textMenuFloat')">Text ▾</button><span class="tool-menu text-menu" id="textMenuFloat"><button class="btn" id="textAddBtnFloat" onclick="toggleText()">Add text</button><button class="text-color active" style="background:#000" data-text-color="#000000" onclick="pickTextColor(this)" title="Black"></button><button class="text-color" style="background:#1A5BFF" data-text-color="#1A5BFF" onclick="pickTextColor(this)" title="Blue"></button><button class="text-color" style="background:#E04040" data-text-color="#E04040" onclick="pickTextColor(this)" title="Red"></button><select class="text-size" onchange="setTextSize(this.value)" title="Text size"><option value="20">20</option><option value="24" selected>24</option><option value="30">30</option><option value="36">36</option><option value="44">44</option><option value="56">56</option></select></span></span><button class="btn danger" onclick="clearSlide()">✕</button><button class="btn download" onclick="exportPDF()">PDF</button><button class="btn secondary" onclick="exitPresent()">Esc</button>
 </div>
-<div class="export-overlay" id="exportOverlay"><div class="export-box"><h3 id="exportTitle">Exporting PDF...</h3><p id="exportStatus">Rendering slide 1 / 56</p><div class="export-progress"><div class="export-progress-bar" id="exportBar"></div></div><p style="margin-top:10px;font-size:11px;color:#B0BEC5">Rendering live from slides — always up to date</p><button class="btn secondary export-close" id="exportClose" onclick="hideExportOverlay()">Close</button></div></div>
+<div class="export-overlay" id="exportOverlay"><div class="export-box"><h3 id="exportTitle">Exporting PDF...</h3><p id="exportStatus">Rendering slide 1 / 55</p><div class="export-progress"><div class="export-progress-bar" id="exportBar"></div></div><p style="margin-top:10px;font-size:11px;color:#B0BEC5">Rendering live from slides — always up to date</p><button class="btn secondary export-close" id="exportClose" onclick="hideExportOverlay()">Close</button></div></div>
 <script>
 const MANIFEST = [
   "01-cover.html",
@@ -86,36 +86,35 @@ const MANIFEST = [
   "24-rule-l5-jqx-un-jun.html",
   "25-rule-l5-jqx-un-qun.html",
   "26-rule-l5-jqx-un-xun.html",
-  "27-rule-rule-l5-jqx-un-umlaut-examples.html",
-  "28-divider-vocabulary-2.html",
-  "29-vocabulary-2.html",
-  "30-flash-v009-junren.html",
-  "31-flash-v010-qunzi.html",
-  "32-flash-v011-peixun.html",
-  "33-practice-vocabulary-2.html",
-  "34-divider-finals-2.html",
-  "35-finals-2.html",
-  "36-chart-2-1.html",
-  "37-chart-2-2.html",
-  "38-chart-2-3.html",
-  "39-practice-finals-2.html",
-  "40-divider-vocabulary-3.html",
-  "41-vocabulary-3.html",
-  "42-flash-v012-tang.html",
-  "43-flash-v013-zang.html",
-  "44-flash-v014-teng.html",
-  "45-flash-v015-leng.html",
-  "46-flash-v016-mingzi.html",
-  "47-flash-v017-ting.html",
-  "48-flash-v018-long.html",
-  "49-flash-v019-chenggong.html",
-  "50-practice-vocabulary-3a.html",
-  "51-practice-vocabulary-3b.html",
-  "52-divider-review-final.html",
-  "53-review-listening-choice.html",
-  "54-review-fill-blank.html",
-  "55-review-vocabulary-match.html",
-  "56-closing.html"
+  "27-divider-vocabulary-2.html",
+  "28-vocabulary-2.html",
+  "29-flash-v009-junren.html",
+  "30-flash-v010-qunzi.html",
+  "31-flash-v011-peixun.html",
+  "32-practice-vocabulary-2.html",
+  "33-divider-finals-2.html",
+  "34-finals-2.html",
+  "35-chart-2-1.html",
+  "36-chart-2-2.html",
+  "37-chart-2-3.html",
+  "38-practice-finals-2.html",
+  "39-divider-vocabulary-3.html",
+  "40-vocabulary-3.html",
+  "41-flash-v012-tang.html",
+  "42-flash-v013-zang.html",
+  "43-flash-v014-teng.html",
+  "44-flash-v015-leng.html",
+  "45-flash-v016-mingzi.html",
+  "46-flash-v017-ting.html",
+  "47-flash-v018-long.html",
+  "48-flash-v019-chenggong.html",
+  "49-practice-vocabulary-3a.html",
+  "50-practice-vocabulary-3b.html",
+  "51-divider-review-final.html",
+  "52-review-listening-choice.html",
+  "53-review-fill-blank.html",
+  "54-review-vocabulary-match.html",
+  "55-closing.html"
 ];
 let current=0, penActive=false, highlighterActive=false, eraserMode=null, textMode=false, shapeMode=null, drawing=false, penColor='#1A3A5A', textColor='#000000', textSize=24, activeTextEl=null;
 let shapeStart=null, shapeSnapshot=null;
