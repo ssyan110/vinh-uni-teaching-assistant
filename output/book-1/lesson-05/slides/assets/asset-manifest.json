@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "lesson_id": "lesson-05",
-  "generated_at": "2026-06-12T07:54:48.721Z",
+  "generated_at": "2026-06-15T03:50:36.166Z",
   "source_database": "database",
   "workflow": {
     "standard": "Database image metadata -> asset manifest -> slide generation/replacement -> asset QA -> screenshot/contact-sheet QA.",
