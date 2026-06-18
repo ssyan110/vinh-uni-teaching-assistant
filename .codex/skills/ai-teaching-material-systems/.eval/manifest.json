@@ -1,0 +1,26 @@
+{
+  "skillId": "ai-teaching-material-systems",
+  "tier": "draft-only",
+  "status": "bootstrapped",
+  "triggerSignals": [
+    "teaching material system",
+    "teacher deck pipeline",
+    "lesson production workflow",
+    "html teaching deck",
+    "courseware system",
+    "classroom-ready validation"
+  ],
+  "tokenBudget": {
+    "maxTokens": 9000,
+    "note": "ponytail: broad systems skill; split references later if the budget keeps rising."
+  },
+  "rollout": {
+    "enabled": false,
+    "canaryPercent": 0
+  },
+  "judge": {
+    "enabled": false,
+    "method": "llm-as-judge",
+    "biasSwapRequested": true
+  }
+}

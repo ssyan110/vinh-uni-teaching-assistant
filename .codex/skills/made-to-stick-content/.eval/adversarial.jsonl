@@ -1,0 +1,3 @@
+{"id":"not-design-deck","input":"Create an interactive HTML deck with a new visual theme and animations.","expectedReject":true}
+{"id":"not-google-workspace","input":"Set up Google Drive and Sheets OAuth for lesson databases.","expectedReject":true}
+{"id":"not-question-bank","input":"Generate 50 pinyin homework questions with answers and scoring metadata.","expectedReject":true}

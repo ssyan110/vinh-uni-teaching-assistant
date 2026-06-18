@@ -1,0 +1,26 @@
+{
+  "skillId": "pinyin-vocab-contact-sheet-images",
+  "tier": "draft-only",
+  "status": "bootstrapped",
+  "triggerSignals": [
+    "contact sheet images",
+    "pinyin vocab images",
+    "crop contact sheet",
+    "replace vocab images",
+    "lesson asset slots",
+    "generate vocabulary illustrations"
+  ],
+  "tokenBudget": {
+    "maxTokens": 4000,
+    "note": "ponytail: focused operational skill; budget should stay compact."
+  },
+  "rollout": {
+    "enabled": false,
+    "canaryPercent": 0
+  },
+  "judge": {
+    "enabled": false,
+    "method": "llm-as-judge",
+    "biasSwapRequested": true
+  }
+}

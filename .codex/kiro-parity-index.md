@@ -18,6 +18,7 @@ Kiro is retired. Use this file only when a task needs a legacy skill, steering n
 - `skills/pinyin-vocab-contact-sheet-images/SKILL.md`
 - `skills/chinese-homework-question-bank/SKILL.md`
 - `skills/avoid-ai-writing/SKILL.md`
+- `skills/made-to-stick-content/SKILL.md`
 
 ## Core docs
 

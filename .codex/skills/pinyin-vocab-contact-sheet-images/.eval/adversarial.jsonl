@@ -1,0 +1,3 @@
+{"id":"full-system-not-contact-sheet","input":"Design a complete teaching-material system from textbook PDF to HTML teacher deck and validation.","expectedReject":true}
+{"id":"homework-bank-not-contact-sheet","input":"Generate a beginner Chinese homework question bank with pinyin, grammar, and hanzi retrieval.","expectedReject":true}
+{"id":"one-by-one-images-not-contact-sheet","input":"Generate one separate image per vocabulary word instead of a single contact sheet.","expectedReject":true}

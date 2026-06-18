@@ -1,0 +1,29 @@
+{
+  "skillRoots": [
+    "skills",
+    ".codex/skills"
+  ],
+  "skillFileNames": [
+    "SKILL.md",
+    "skill.md"
+  ],
+  "evalDirectory": ".eval",
+  "defaults": {
+    "tier": "read-only",
+    "status": "not-started",
+    "tokenBudget": {
+      "maxTokens": 2200
+    }
+  },
+  "budgets": {
+    "maxSkillTokens": 2200,
+    "maxContextTokens": 50000,
+    "requiredGoldenCases": 0,
+    "requiredAdversarialCases": 0
+  },
+  "llmJudge": {
+    "enabled": false,
+    "swapReferenceActual": true
+  },
+  "notes": "Set --strict to fail on warnings. Start with read-only scaffolds and move to stronger modes as you add cases."
+}

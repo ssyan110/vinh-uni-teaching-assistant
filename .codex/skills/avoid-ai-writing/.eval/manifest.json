@@ -1,0 +1,26 @@
+{
+  "skillId": "avoid-ai-writing",
+  "tier": "draft-only",
+  "status": "bootstrapped",
+  "triggerSignals": [
+    "remove ai-isms",
+    "clean up ai writing",
+    "less like ai",
+    "ai tells",
+    "sound less like ai",
+    "detection-only"
+  ],
+  "tokenBudget": {
+    "maxTokens": 9000,
+    "note": "ponytail: large audit/rewrite skill; split later if it keeps growing."
+  },
+  "rollout": {
+    "enabled": false,
+    "canaryPercent": 0
+  },
+  "judge": {
+    "enabled": false,
+    "method": "llm-as-judge",
+    "biasSwapRequested": true
+  }
+}

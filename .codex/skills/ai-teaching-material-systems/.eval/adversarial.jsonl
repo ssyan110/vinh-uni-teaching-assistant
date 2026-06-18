@@ -1,0 +1,2 @@
+{"id":"single-slide-edit-not-system","input":"Fix the spacing on slide 7 and change one title in the current lesson deck.","expectedReject":true}
+{"id":"image-slot-not-system","input":"Generate one contact sheet for vocab images and crop it into the lesson asset slots.","expectedReject":true}

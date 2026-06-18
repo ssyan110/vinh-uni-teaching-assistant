@@ -1,0 +1,26 @@
+{
+  "skillId": "harness-engineering",
+  "tier": "draft-only",
+  "status": "bootstrapped",
+  "triggerSignals": [
+    "success gate",
+    "define the artifact",
+    "verification plan",
+    "project workflow",
+    "non-trivial work",
+    "repeated-preference task"
+  ],
+  "tokenBudget": {
+    "maxTokens": 4000,
+    "note": "ponytail: process skill should stay concise and repeatable."
+  },
+  "rollout": {
+    "enabled": false,
+    "canaryPercent": 0
+  },
+  "judge": {
+    "enabled": false,
+    "method": "llm-as-judge",
+    "biasSwapRequested": true
+  }
+}

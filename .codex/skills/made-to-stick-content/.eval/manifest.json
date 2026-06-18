@@ -1,0 +1,26 @@
+{
+  "skillId": "made-to-stick-content",
+  "tier": "draft-only",
+  "status": "bootstrapped",
+  "triggerSignals": [
+    "made to stick",
+    "sticky teaching content",
+    "simplify lesson copy",
+    "remove research jargon",
+    "make this memorable",
+    "plain classroom language"
+  ],
+  "tokenBudget": {
+    "maxTokens": 3000,
+    "note": "ponytail: small clarity-pass skill; keep it compact."
+  },
+  "rollout": {
+    "enabled": false,
+    "canaryPercent": 0
+  },
+  "judge": {
+    "enabled": false,
+    "method": "llm-as-judge",
+    "biasSwapRequested": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "skillId": "chinese-homework-question-bank",
+  "tier": "draft-only",
+  "status": "bootstrapped",
+  "triggerSignals": [
+    "homework question bank",
+    "chinese homework",
+    "worksheet generator",
+    "beginner chinese exercises",
+    "question bank",
+    "hanzi retrieval tasks"
+  ],
+  "tokenBudget": {
+    "maxTokens": 5000,
+    "note": "ponytail: enough room for pedagogy rules without treating the skill as free."
+  },
+  "rollout": {
+    "enabled": false,
+    "canaryPercent": 0
+  },
+  "judge": {
+    "enabled": false,
+    "method": "llm-as-judge",
+    "biasSwapRequested": true
+  }
+}

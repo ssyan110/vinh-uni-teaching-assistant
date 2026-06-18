@@ -1,0 +1,3 @@
+{"id":"email-only-not-google-workspace","input":"I only need Gmail through an app password for email-only access, not full Workspace setup.","expectedReject":true}
+{"id":"deck-design-not-google-workspace","input":"Create an HTML slide prototype for a Chinese lesson deck.","expectedReject":true}
+{"id":"homework-not-google-workspace","input":"Generate a beginner Chinese homework question bank for lesson 3.","expectedReject":true}

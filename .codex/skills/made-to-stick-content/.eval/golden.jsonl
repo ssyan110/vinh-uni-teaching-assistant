@@ -1,0 +1,3 @@
+{"id":"plain-classroom-language","input":"Rewrite this lesson note in plain classroom language and remove research jargon while keeping the teaching point memorable.","expected":{"trigger":"made-to-stick-content","outputContains":["one learning point","plain","classroom"]}}
+{"id":"sticky-slide-pass","input":"Run a Made to Stick pass on this Chinese lesson slide so teachers can explain it clearly.","expected":{"trigger":"made-to-stick-content","outputContains":["Simple","Concrete","practical"]}}
+{"id":"learner-readable-homework","input":"Make this homework prompt easier for Vietnamese university learners to understand and remember.","expected":{"trigger":"made-to-stick-content","outputContains":["what to do","why it matters","common mistake"]}}

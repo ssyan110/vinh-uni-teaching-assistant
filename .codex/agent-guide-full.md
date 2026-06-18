@@ -24,6 +24,7 @@ Build a reusable AI teaching-material system for Chinese courseware used in Viet
 - `pinyin-vocab-contact-sheet-images/` - pinyin vocab image workflow
 - `chinese-homework-question-bank/` - homework and practice generation
 - `avoid-ai-writing/` - clean user-facing docs and lesson copy
+- `made-to-stick-content/` - plain-language lesson clarity and anti-jargon pass
 
 ## Non-negotiable project rules
 
@@ -42,6 +43,8 @@ Build a reusable AI teaching-material system for Chinese courseware used in Viet
 - New lesson generation should start with placeholders, not AI images.
 - For pinyin vocabulary images, use the Chrome + ChatGPT contact-sheet workflow and stop on blockers instead of silently switching tools.
 - Reuse the Lesson 01 templates and structure unless the change is explicitly template work.
+- Do not use research jargon unless necessary; if a technical term is needed, explain it in plain learner or teacher language immediately.
+- Run the Made to Stick pass for durable teaching content: one learning point, learner tension, concrete example, proof/source, emotional reason to care, and a practical classroom situation.
 
 ## Folder map
 

@@ -1,0 +1,2 @@
+{"id":"rewrite-ai-isms","input":"Audit and rewrite this draft to remove AI-isms. Return the exact sections AI-isms Found and Rewritten Version.","expected":{"trigger":"avoid-ai-writing","outputContains":["AI-isms Found","Rewritten Version"]}}
+{"id":"detection-only","input":"Do a detection-only audit for AI writing patterns. Return the exact sections AI-isms Found and Keep As-Is.","expected":{"trigger":"avoid-ai-writing","outputContains":["AI-isms Found"]}}

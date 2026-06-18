@@ -1,0 +1,3 @@
+{"id":"system-not-huashu","input":"Design the full teaching-material system from textbook PDF to database and QA workflow.","expectedReject":true}
+{"id":"google-auth-not-huashu","input":"Set up Google OAuth for Gmail, Calendar, Sheets, and Drive.","expectedReject":true}
+{"id":"homework-bank-not-huashu","input":"Generate a beginner Chinese homework question bank with hanzi retrieval tasks.","expectedReject":true}

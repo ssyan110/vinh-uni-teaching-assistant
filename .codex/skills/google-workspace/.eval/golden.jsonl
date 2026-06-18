@@ -1,0 +1,3 @@
+{"id":"oauth-setup-flow","input":"Set up Google Workspace access for Gmail, Calendar, Drive, Sheets, and Docs. Include the exact commands $GSETUP --check and $GSETUP --auth-url.","expected":{"trigger":"google-workspace","outputContains":["$GSETUP --check","$GSETUP --auth-url"]}}
+{"id":"gmail-search-usage","input":"Show me how to search unread Gmail and read a message using this skill. Include the exact command $GAPI gmail search.","expected":{"trigger":"google-workspace","outputContains":["$GAPI gmail search"]}}
+{"id":"calendar-create-usage","input":"Show me how to create a Google Calendar event using this skill. Include the exact command $GAPI calendar create.","expected":{"trigger":"google-workspace","outputContains":["$GAPI calendar create"]}}

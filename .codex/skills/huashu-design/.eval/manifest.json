@@ -1,0 +1,26 @@
+{
+  "skillId": "huashu-design",
+  "tier": "draft-only",
+  "status": "bootstrapped",
+  "triggerSignals": [
+    "html prototype",
+    "design demo",
+    "interactive prototype",
+    "html slide deck",
+    "design direction",
+    "review this design"
+  ],
+  "tokenBudget": {
+    "maxTokens": 30000,
+    "note": "ponytail: very large design skill; long-term fix is splitting references, not pretending it is small."
+  },
+  "rollout": {
+    "enabled": false,
+    "canaryPercent": 0
+  },
+  "judge": {
+    "enabled": false,
+    "method": "llm-as-judge",
+    "biasSwapRequested": true
+  }
+}

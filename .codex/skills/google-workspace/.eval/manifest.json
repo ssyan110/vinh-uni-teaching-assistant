@@ -1,0 +1,26 @@
+{
+  "skillId": "google-workspace",
+  "tier": "draft-only",
+  "status": "bootstrapped",
+  "triggerSignals": [
+    "gmail",
+    "calendar",
+    "drive",
+    "sheets",
+    "docs",
+    "google workspace"
+  ],
+  "tokenBudget": {
+    "maxTokens": 9000,
+    "note": "ponytail: operational skill with setup and usage examples; keep a ceiling but leave room."
+  },
+  "rollout": {
+    "enabled": false,
+    "canaryPercent": 0
+  },
+  "judge": {
+    "enabled": false,
+    "method": "llm-as-judge",
+    "biasSwapRequested": true
+  }
+}
