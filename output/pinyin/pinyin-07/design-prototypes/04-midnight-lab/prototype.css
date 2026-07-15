@@ -1,0 +1,26 @@
+
+/* Visual skin only. Layout geometry and source text remain unchanged. */
+body{background:#0C1428;color:#F4F7FF}
+.slide{background:linear-gradient(135deg,#101B34 0%,#10172B 55%,#172241 100%);color:#F4F7FF}
+.slide:before{background:radial-gradient(circle at 11% 88%,rgba(27,217,194,.15) 0 88px,transparent 90px),radial-gradient(circle at 90% 14%,rgba(116,104,255,.18) 0 125px,transparent 127px);opacity:1}
+.slide:after{opacity:.06}
+.menu-bar{background:rgba(14,25,48,.92);border-bottom-color:rgba(151,181,255,.23);box-shadow:0 9px 24px rgba(0,0,0,.25)}
+.menu-icon,.lesson-goal-num,.tone-choice-num{background:#42D8C5;color:#06211F;box-shadow:0 5px 14px rgba(66,216,197,.22)}
+.section-label,.muted,.subtitle,.vietnamese,.tone-choice-desc,.final-bank-title{color:#B6C4DA}
+.title,.title-xl,.lesson-goal-title,.flash-title,.rule-title,.rule-to,.rule-card .to,.tone-choice-title,.listen-title,.divider-super,.divider-zh,.tone-family-title,.tone-match-title,.image-match-title,.hanzi,.a-han,.flash-pinyin,.flash-meaning{color:#F4F7FF}
+.pinyin,.a-pin,.flash-count,.face-label,.image-match-part,.word-card .pinyin,.tone-family-base,.divider-kicker,.rule-arrow,.rule-card .arrow{color:#42D8C5}
+.goal-hot,.answer-red{color:#FF8F8B}
+.soft-card,.card,.word-card,.rule-flash-card,.flip-face,.chart-full-card,.tone-family-token,.tone-match-card,.image-word-tile,.image-tile,.final-bank{background:#192744;border-color:rgba(151,181,255,.23);box-shadow:0 12px 28px rgba(0,0,0,.25)}
+.lesson,.pill,.flash-count,.face-label,.tone-family-base{background:#163A45;color:#42D8C5}
+.topic-img,.lesson-goal-right,.divider-photo,.word-card img,.flash-answer-row img{border-color:#42D8C5;box-shadow:0 12px 30px rgba(3,12,30,.40)}
+.cover{background:linear-gradient(145deg,#152849 0%,#0E172D 58%,#2A1D4B 100%)}
+.cover:before{background:rgba(66,216,197,.20)}
+.cover-sound-chip{background:rgba(23,38,68,.90);border-color:rgba(151,181,255,.23);box-shadow:0 12px 28px rgba(0,0,0,.25);color:#F4F7FF}
+.rule-flash-card:before,.flip-face:before{background:linear-gradient(180deg,#1A5E69,#173B4A)}
+.rule-from,.rule-card .from{color:#B89BFF}
+.rule-arrow,.rule-card .arrow{color:#42D8C5}
+.tone-choice-table{background:#1A2A4A;box-shadow:0 12px 28px rgba(0,0,0,.25)}
+.tone-choice-table tr:nth-child(odd) td{background:#20365B}
+.tone-choice-table tr:nth-child(even) td{background:#172A49}
+.tone-choice-table td,.listen-item,.listen-no,.initial-cue{color:#F4F7FF}
+.blank{border-bottom-color:#F4F7FF}

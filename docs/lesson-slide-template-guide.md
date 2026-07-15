@@ -8,6 +8,15 @@ output/book-1/lesson-01/
 
 The classroom format is HTML-first. Open the lesson-root `index.html` in class. Complete lessons launch `slides/index.html`, the real browser presenter; database-only draft lessons show a safe status page. PDF is a backup export only after Adam confirms the design and content are finalized.
 
+## Formal Course Design Choice
+
+Before starting any new formal course slide or deck — regular textbook lessons and Pinyin lessons included — ask Adam to choose a design option. Do not silently assume the most recently used option.
+
+- **Design Option 1 — Original Course:** use the course's established canonical template: Lesson 01 / Lesson 10 cover language for regular textbook lessons, or Pinyin Lesson 1 for Pinyin lessons.
+- **Design Option 2 — Coral Studio:** use the warm paper, coral, and indigo Coral Studio visual system while preserving the selected course's canonical content structure, title positions, teaching templates, and interactions. Pinyin reference trial: `output/pinyin/pinyin-01/design-prototypes/coral-studio-full-deck/slides/index.html`.
+
+The choice changes visual styling only. It never changes lesson content, text hierarchy, slide layout rules, interaction behavior, or pedagogical sequence.
+
 Image workflow rule: read `docs/image-asset-workflow.md` before generating or replacing slide images. Images are tracked as lesson data through database image metadata, `slides/assets/asset-manifest.json`, and `exports/qa/asset-qa-report.json`; do not handle them only through ad hoc HTML edits. For wording/title/spacing edits that do not touch images, use the small-edit path and do not run image workflow commands.
 
 Student-facing language rule: keep the Lesson 01 visual language. Student operation text and activity instructions must be Vietnamese. Lesson 01 reusable divider templates may keep their fixed Chinese section heading (`生词`, `词汇练习`, `综合练习`, `课文`, `写汉字`, `补充学习`, `回家作业`) as part of the template. Simplified Chinese also appears as target learning content: vocabulary, examples, dialogue, grammar patterns, cultural terms, lesson titles, and hanzi-writing characters.
@@ -16,7 +25,7 @@ Chinese + pinyin alignment rule: when a slide shows Chinese and pinyin together,
 
 Cover rule: use Lesson 10 `output/book-1/lesson-10/slides/01-cover.html` as the canonical cover template for all future lessons. Reuse its cover layout and visual language directly; only replace lesson number, Chinese/pinyin title, Vietnamese title, and topic image. Do not include the old three keyword/topic pills on cover slides. Keep the lesson badge (`BÀI N · 第N课`) at the larger cover size, about 16pt / 30% larger than the old 12pt badge.
 
-Background rule: future regular lessons and pinyin lessons use the updated Pinyin Lesson 1 background style instead of plain single-color backgrounds. Use a warm off-white base with very soft, low-opacity mint/sky/yellow/peach/lavender background shapes. Keep backgrounds visually quiet enough that the main text, cards, tables, and lesson images remain dominant. All decorative backgrounds, blobs, and watermarks must sit behind slide content as bottom-layer elements; they must not overlay or fade across primary content.
+Background rule: use the background system belonging to Adam's selected formal-course design option. Do not revert either option to a plain monotone background. Keep backgrounds visually quiet enough that main text, cards, tables, and lesson images remain dominant. All decorative backgrounds, blobs, and watermarks must sit behind slide content as bottom-layer elements; they must not overlay or fade across primary content.
 
 Inserted image rule: when a slide contains a separately inserted full-slide reference image, diagram, chart, or classroom illustration, display it clearly with `opacity:1` and `filter:none`. Do not add an extra white rounded rectangle, border, or shadow frame behind the inserted image unless the slide design specifically calls for a card. If the image is contained without cropping, transparent/empty margins should reveal the slide background instead of a white box.
 
@@ -53,7 +62,7 @@ output/pinyin/pinyin-01/
 
 For future pinyin lessons, do not build slides from scratch. Reuse the Pinyin Lesson 1 cover, objective layout, divider rhythm, concept-slide style, initials/finals teaching slides, tone slides, vocabulary grid, flashcard style, practice slide styling, appendix/input setup style, closing slide, and presenter setup. Replace only lesson-specific text, taught sounds, rules, vocabulary, exercises, and images. Closing slides use the `下课` visual composition from `/Users/ssyan110/Downloads/Mandarin_Pinyin_Foundations.pptx` while keeping each lesson's original closing text.
 
-Pinyin background rule: keep the updated Pinyin Lesson 1 soft multicolor background system for future pinyin lessons. Do not revert to a monotone background. Background colors should stay subtle, and every background/decorative element must remain below the content layer.
+Pinyin background rule: apply the selected formal-course design option to the Pinyin-specific templates below. Background colors should stay subtle, and every background/decorative element must remain below the content layer.
 
 Required pinyin section rhythm:
 

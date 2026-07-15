@@ -105,10 +105,10 @@ console.log('\n── Core infrastructure ──');
 
 const coreFiles = [
   // Skills
-  '.kiro/skills/huashu-design/SKILL.md',
-  '.kiro/skills/ai-teaching-material-systems/SKILL.md',
-  '.kiro/skills/google-workspace/SKILL.md',
-  '.kiro/skills/avoid-ai-writing/SKILL.md',
+  '.codex/skills/huashu-design/SKILL.md',
+  '.codex/skills/ai-teaching-material-systems/SKILL.md',
+  '.codex/skills/google-workspace/SKILL.md',
+  '.codex/skills/avoid-ai-writing/SKILL.md',
   // Pipeline
   'scripts/pipeline/configs/_schema.json',
   'scripts/pipeline/configs/regular.json',
@@ -130,7 +130,7 @@ const coreFiles = [
   'scripts/qa-lesson-assets.mjs',
   'scripts/replace-lesson-image.mjs',
   // Hooks
-  '.kiro/hooks/rebuild-slide-data.kiro.hook',
+  '.codex/hooks/rebuild-slide-data.kiro.hook',
   // Docs
   'AGENTS.md',
   'CLAUDE.md',

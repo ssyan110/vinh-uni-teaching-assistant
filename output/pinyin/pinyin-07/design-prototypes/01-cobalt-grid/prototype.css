@@ -1,0 +1,26 @@
+
+/* Visual skin only. Layout geometry and source text remain unchanged. */
+body{background:#EEF3FB;color:#142B54}
+.slide{background:linear-gradient(135deg,#F8FAFF 0%,#EDF3FF 100%);color:#142B54}
+.slide:before{background:linear-gradient(90deg,transparent 0 8%,rgba(33,69,140,.055) 8.1% 8.35%,transparent 8.45% 16%,rgba(33,69,140,.055) 16.1% 16.35%,transparent 16.45%);opacity:1}
+.slide:after{opacity:.035}
+.menu-bar{background:rgba(248,250,255,.94);border-bottom-color:rgba(35,67,133,.24);box-shadow:0 8px 20px rgba(22,51,110,.08)}
+.menu-icon,.lesson-goal-num,.tone-choice-num{background:#2463C9;color:#FFF;box-shadow:0 5px 12px rgba(36,99,201,.25)}
+.section-label,.muted,.subtitle,.vietnamese,.tone-choice-desc,.final-bank-title{color:#52647E}
+.title,.title-xl,.lesson-goal-title,.flash-title,.rule-title,.rule-to,.rule-card .to,.tone-choice-title,.listen-title,.divider-super,.divider-zh,.tone-family-title,.tone-match-title,.image-match-title,.hanzi,.a-han,.flash-pinyin,.flash-meaning{color:#142B54}
+.pinyin,.a-pin,.flash-count,.face-label,.image-match-part,.word-card .pinyin,.tone-family-base,.divider-kicker,.rule-arrow,.rule-card .arrow{color:#2463C9}
+.goal-hot,.answer-red{color:#E84755}
+.soft-card,.card,.word-card,.rule-flash-card,.flip-face,.chart-full-card,.tone-family-token,.tone-match-card,.image-word-tile,.image-tile,.final-bank{background:#FFFFFF;border-color:rgba(35,67,133,.24);box-shadow:0 10px 26px rgba(25,60,126,.11)}
+.lesson,.pill,.flash-count,.face-label,.tone-family-base{background:#E8F0FF;color:#2463C9}
+.topic-img,.lesson-goal-right,.divider-photo,.word-card img,.flash-answer-row img{border-color:#2463C9;box-shadow:0 12px 30px rgba(25,60,126,.18)}
+.cover{background:linear-gradient(145deg,#EAF2FF 0%,#FFFFFF 56%,#FFF9D9 100%)}
+.cover:before{background:rgba(255,201,45,.30)}
+.cover-sound-chip{background:rgba(255,255,255,.86);border-color:rgba(35,67,133,.24);box-shadow:0 10px 26px rgba(25,60,126,.11);color:#142B54}
+.rule-flash-card:before,.flip-face:before{background:linear-gradient(180deg,#C9DCFF,#E8F0FF)}
+.rule-from,.rule-card .from{color:#7345C8}
+.rule-arrow,.rule-card .arrow{color:#2463C9}
+.tone-choice-table{background:#DCE9FF;box-shadow:0 10px 26px rgba(25,60,126,.11)}
+.tone-choice-table tr:nth-child(odd) td{background:#D7E5FF}
+.tone-choice-table tr:nth-child(even) td{background:#EDF4FF}
+.tone-choice-table td,.listen-item,.listen-no,.initial-cue{color:#142B54}
+.blank{border-bottom-color:#142B54}
