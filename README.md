@@ -2,6 +2,22 @@
 
 Mục tiêu: tạo học liệu sẵn sàng cho giảng viên bằng repo `huashu-design` cục bộ làm quy trình thiết kế, tạo slide HTML và xuất PDF backup.
 
+## Bắt đầu với bản classic
+
+Nhánh `main` là bản **classic** ổn định để tạo slide HTML. Có thể tải bằng **Code → Download ZIP** trên GitHub, hoặc clone và chạy:
+
+```bash
+git clone https://github.com/ssyan110/ai-teaching-material-system.git
+cd ai-teaching-material-system
+npm ci
+cp examples/sample-lesson.json examples/my-lesson.json
+# Chỉnh examples/my-lesson.json, sau đó tạo slide:
+npm run create:deck -- examples/my-lesson.json
+npm run validate
+```
+
+Mở `output/sample-teacher-deck/index.html` để trình chiếu. Mã nguồn từng slide nằm trong `output/sample-teacher-deck/slides/` và có thể chỉnh trực tiếp.
+
 ## VP 製作流程 scope
 
 This system treats the VP teaching-material flow as **steps 1–8 only before teacher review**:
@@ -78,7 +94,7 @@ Huashu Design phù hợp cho pipeline học liệu vì:
 ## Lệnh chạy
 
 ```bash
-cd ~/Development/ai-teaching-material-system
+cd ai-teaching-material-system
 npm run vp:pinyin:l1
 npm run validate
 ```

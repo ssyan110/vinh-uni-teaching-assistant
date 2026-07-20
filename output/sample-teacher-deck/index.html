@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<title>在餐厅点菜 · Gọi món trong nhà hàng · Bộ slide giảng viên</title>
+<script>
+window.DECK_MANIFEST = [
+    { file: "slides/01-cover.html", label: "Trang bìa" },
+    { file: "slides/02-objectives.html", label: "Mục tiêu" },
+    { file: "slides/03-vocabulary.html", label: "Từ mới" },
+    { file: "slides/04-pattern.html", label: "Mẫu câu" },
+    { file: "slides/05-flow.html", label: "Tiến trình" },
+    { file: "slides/06-practice.html", label: "Luyện tập" },
+    { file: "slides/07-assessment.html", label: "Kiểm tra" }
+];
+window.DECK_WIDTH = 1280;
+window.DECK_HEIGHT = 720;
+</script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; background: #0B1020; overflow: hidden; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+#stage { position: fixed; top: 0; left: 0; transform-origin: top left; width: 1280px; height: 720px; background: white; box-shadow: 0 10px 60px rgba(0,0,0,0.45); }
+iframe { width: 100%; height: 100%; border: 0; display: block; background: white; }
+.counter { position: fixed; bottom: 18px; right: 18px; background: rgba(0,0,0,0.72); color: white; border-radius: 999px; padding: 7px 13px; font-size: 13px; z-index: 10; }
+.nav { position: fixed; top: 0; bottom: 0; width: 18%; z-index: 8; cursor: pointer; }
+.nav.left { left: 0; } .nav.right { right: 0; }
+</style>
+</head>
+<body>
+<div id="stage"><iframe id="frame" src="about:blank"></iframe></div>
+<div class="nav left" id="prev"></div><div class="nav right" id="next"></div><div class="counter" id="counter"></div>
+<script>
+(() => {
+  const W = window.DECK_WIDTH, H = window.DECK_HEIGHT, deck = window.DECK_MANIFEST;
+  const stage = document.getElementById('stage'), frame = document.getElementById('frame'), counter = document.getElementById('counter');
+  let current = Math.max(0, Math.min(deck.length - 1, Number(location.hash.slice(1) || 1) - 1));
+  function fit(){ const s = Math.min(innerWidth/W, innerHeight/H); stage.style.transform = 'translate(' + ((innerWidth-W*s)/2) + 'px,' + ((innerHeight-H*s)/2) + 'px) scale(' + s + ')'; }
+  function show(i){ if(i<0||i>=deck.length) return; current=i; frame.src=deck[i].file; counter.textContent=(i+1)+' / '+deck.length+' · '+deck[i].label; history.replaceState(null,'','#'+(i+1)); }
+  addEventListener('resize', fit); addEventListener('keydown', e => { if(['ArrowRight',' ','PageDown'].includes(e.key)) show(current+1); if(['ArrowLeft','PageUp'].includes(e.key)) show(current-1); if(e.key==='Home') show(0); if(e.key==='End') show(deck.length-1); });
+  document.getElementById('prev').onclick = () => show(current-1); document.getElementById('next').onclick = () => show(current+1);
+  fit(); show(current);
+})();
+</script>
+</body>
+</html>
