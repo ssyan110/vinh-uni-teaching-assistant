@@ -52,8 +52,10 @@ async function readTitle(presenterPath) {
   } catch { return null; }
 }
 
-async function scanLesson(dir, type) {
+async function scanLesson(dir) {
   const id = path.basename(dir);
+  const group = path.basename(path.dirname(dir));
+  const type = group === 'pinyin' ? 'pinyin' : 'regular';
   const slidesDir = path.join(dir, 'slides');
   const dbDir = path.join(dir, 'database');
   let slideFiles = [];
@@ -90,7 +92,7 @@ async function scanLesson(dir, type) {
   });
   const title = (await readTitle(path.join(slidesDir, 'index.html'))) || id;
   return {
-    id, type, title,
+    id, type, group, title,
     dir: path.relative(root, dir),
     slideCount: slideFiles.length,
     hasPresenter,
@@ -104,30 +106,45 @@ async function scanLesson(dir, type) {
   };
 }
 
+async function courseBases() {
+  const bases = [];
+  let entries = [];
+  try { entries = await fs.readdir(path.join(root, 'output'), { withFileTypes: true }); } catch {}
+  for (const e of entries) {
+    if (e.isDirectory() && (e.name === 'pinyin' || /^book-\d+$/.test(e.name))) {
+      bases.push(path.join(root, 'output', e.name));
+    }
+  }
+  return bases;
+}
+
 async function listLessons() {
   const lessons = [];
-  for (const [base, type] of [[path.join(root, 'output', 'book-1'), 'regular'], [path.join(root, 'output', 'pinyin'), 'pinyin']]) {
+  for (const base of await courseBases()) {
     let entries = [];
     try { entries = await fs.readdir(base, { withFileTypes: true }); } catch {}
     for (const e of entries) {
       if (e.isDirectory() && /^(lesson|pinyin)-\d+$/.test(e.name)) {
-        lessons.push(await scanLesson(path.join(base, e.name), type));
+        lessons.push(await scanLesson(path.join(base, e.name)));
       }
     }
   }
-  lessons.sort((a, b) => (a.type === b.type ? a.id.localeCompare(b.id) : a.type.localeCompare(b.type)));
+  const num = (s) => Number((s.match(/(\d+)$/) || [])[1] || 0);
+  lessons.sort((a, b) => (a.group === b.group ? num(a.id) - num(b.id) : a.group.localeCompare(b.group)));
   return lessons;
 }
 
-function lessonDirById(id) {
-  const base = id.startsWith('pinyin-') ? path.join(root, 'output', 'pinyin') : path.join(root, 'output', 'book-1');
-  const dir = path.join(base, id);
-  if (!dir.startsWith(base + path.sep)) throw new Error('bad lesson id');
-  return dir;
+async function lessonDirById(id) {
+  if (!/^[a-z0-9][a-z0-9-]{1,40}$/.test(id)) throw new Error('bad lesson id');
+  for (const base of await courseBases()) {
+    const dir = path.join(base, id);
+    if (dir.startsWith(base + path.sep) && (await exists(dir))) return dir;
+  }
+  throw Object.assign(new Error('lesson not found'), { code: 'ENOENT' });
 }
 
 async function saveStep(id, stepN, body) {
-  const dir = lessonDirById(id);
+  const dir = await lessonDirById(id);
   const file = path.join(dir, 'review-status.json');
   let review = {};
   try { review = JSON.parse(await fs.readFile(file, 'utf8')); } catch {}
@@ -136,17 +153,17 @@ async function saveStep(id, stepN, body) {
   else review.steps[stepN] = { status: body.status, note: body.note || '', updatedAt: new Date().toISOString() };
   if (body.style) review.style = body.style;
   await fs.writeFile(file, JSON.stringify(review, null, 2) + '\n');
-  return scanLesson(dir, id.startsWith('pinyin-') ? 'pinyin' : 'regular');
+  return scanLesson(dir);
 }
 
 async function saveStyle(id, style) {
-  const dir = lessonDirById(id);
+  const dir = await lessonDirById(id);
   const file = path.join(dir, 'review-status.json');
   let review = {};
   try { review = JSON.parse(await fs.readFile(file, 'utf8')); } catch {}
   review.style = style;
   await fs.writeFile(file, JSON.stringify(review, null, 2) + '\n');
-  return scanLesson(dir, id.startsWith('pinyin-') ? 'pinyin' : 'regular');
+  return scanLesson(dir);
 }
 
 const readBody = (req) => new Promise((resolve, reject) => {
@@ -240,8 +257,7 @@ const server = http.createServer(async (req, res) => {
       const taskDef = LESSON_TASKS[body.task];
       if (!taskDef) return send(400, { error: `unknown task: ${body.task}` });
       if (runningJobFor(id)) return send(409, { error: '此課程已有工作執行中' });
-      const dir = path.relative(root, lessonDirById(id));
-      if (!(await exists(path.join(root, dir)))) return send(404, { error: 'lesson not found' });
+      const dir = path.relative(root, await lessonDirById(id));
       const t = taskDef(dir);
       const job = startJob(t.name, t.cmd, t.args, id);
       return send(200, { jobId: job.id });

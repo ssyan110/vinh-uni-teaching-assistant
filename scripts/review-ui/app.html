@@ -73,6 +73,24 @@ a.plain{color:var(--steel);font-weight:700;font-size:13px}
 .hint{font-size:11px;color:var(--muted);margin-top:4px}
 @keyframes pulse{50%{opacity:.4}}
 .running-dot{display:inline-block;width:8px;height:8px;border-radius:999px;background:var(--gold-fill);margin-right:6px;animation:pulse 1s infinite}
+.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:18px}
+.search{flex:1;min-width:220px;max-width:420px;font:inherit;font-size:14px;padding:9px 14px;border:1px solid var(--border);border-radius:12px;background:#fff;color:var(--steel-dark)}
+.search:focus{outline:2px solid var(--steel-tint)}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chipbtn{font-size:12px;font-weight:800;padding:6px 14px;border-radius:999px;border:1px solid var(--border);background:#fff;color:var(--muted);cursor:pointer}
+.chipbtn:hover{background:var(--steel-tint)}
+.chipbtn.on{background:var(--steel);border-color:var(--steel);color:#fff}
+.grouphead{display:flex;align-items:center;gap:10px;margin:26px 0 12px;cursor:pointer;user-select:none}
+.grouphead:first-of-type{margin-top:8px}
+.grouphead h2{font-size:16px;margin:0;font-weight:800;color:var(--steel)}
+.grouphead .count{font-size:12px;font-weight:800;color:var(--muted);background:var(--steel-tint);border-radius:999px;padding:2px 10px}
+.grouphead .arrow{font-size:12px;color:var(--muted);transition:transform .15s}
+.grouphead.closed .arrow{transform:rotate(-90deg)}
+.grouphead .rule{flex:1;height:1px;background:var(--border)}
+.stat{font-size:11px;font-weight:800;padding:2px 8px;border-radius:999px}
+.stat.draft{background:var(--gold-tint);color:var(--gold)}
+.stat.review{background:var(--steel-tint);color:var(--steel)}
+.stat.complete{background:var(--green-tint);color:var(--green)}
 </style>
 </head>
 <body>
@@ -97,12 +115,69 @@ function progress(l) {
   <div class="barlabel">${l.doneCount}/18 完成 · ${l.approvedCount} 已核准 · ${auto} 自動偵測</div>`;
 }
 
-function renderList() {
+let query = '', statusFilter = 'all';
+const collapsed = new Set(JSON.parse(localStorage.getItem('review-ui-collapsed') || '[]'));
+
+function lessonStatus(l) {
+  if (l.doneCount >= 18) return 'complete';
+  if (l.slideCount === 0) return 'draft';
+  return 'review';
+}
+const STATUS_LABEL = { draft: '草稿', review: '審閱中', complete: '完成' };
+const groupLabel = (g) => g === 'pinyin' ? 'Pinyin 拼音課程' : g.replace(/^book-(\d+)$/, 'Book $1 · 第$1冊');
+
+function matches(l) {
+  if (statusFilter !== 'all' && lessonStatus(l) !== statusFilter) return false;
+  if (!query) return true;
+  return (l.id + ' ' + l.title).toLowerCase().includes(query.toLowerCase());
+}
+
+window.setQuery = (v) => { query = v; renderList(true); };
+window.setFilter = (v) => { statusFilter = v; renderList(true); };
+window.toggleGroup = (g) => {
+  collapsed.has(g) ? collapsed.delete(g) : collapsed.add(g);
+  localStorage.setItem('review-ui-collapsed', JSON.stringify([...collapsed]));
+  renderList(true);
+};
+
+function renderList(keepFocus) {
   $('#crumb').hidden = true; current = null;
   const app = $('#app');
   if (!lessons.length) { app.innerHTML = '<div class="empty">找不到課程。請確認 output/ 目錄。</div>'; return; }
+  const visible = lessons.filter(matches);
+  const groups = [...new Set(lessons.map(l => l.group))];
+  const counts = { all: lessons.length, draft: 0, review: 0, complete: 0 };
+  lessons.forEach(l => counts[lessonStatus(l)]++);
+  const card = (l) => `
+    <div class="card" onclick="openLesson('${l.id}')">
+      <div class="rowline" style="margin-bottom:6px">
+        <span class="tag ${l.type==='pinyin'?'gold':''}">${l.type}</span>
+        <span class="tag" style="background:transparent;border:1px solid var(--border)">${l.style}</span>
+        <span class="stat ${lessonStatus(l)}">${STATUS_LABEL[lessonStatus(l)]}</span>
+      </div>
+      <h2>${l.title}</h2>
+      <div class="meta">${l.slideCount} 張投影片 · ${l.dbFiles} 個資料庫檔${l.hasPresenter?' · presenter ✓':''}</div>
+      ${progress(l)}
+    </div>`;
+  const section = (g) => {
+    const items = visible.filter(l => l.group === g);
+    if (!items.length && (query || statusFilter !== 'all')) return '';
+    const isClosed = collapsed.has(g) && !query && statusFilter === 'all';
+    return `
+    <div class="grouphead ${isClosed?'closed':''}" onclick="toggleGroup('${g}')">
+      <span class="arrow">▼</span><h2>${groupLabel(g)}</h2>
+      <span class="count">${items.length}${items.length!==lessons.filter(l=>l.group===g).length?' / '+lessons.filter(l=>l.group===g).length:''} 課</span>
+      <span class="rule"></span>
+    </div>
+    ${isClosed?'':`<div class="grid">${items.map(card).join('')}</div>`}`;
+  };
   app.innerHTML = `
-  <div class="rowline" style="margin-bottom:16px">
+  <div class="toolbar">
+    <input class="search" id="searchbox" placeholder="搜尋課程 ID 或標題…" value="${query.replace(/"/g,'&quot;')}" oninput="setQuery(this.value)">
+    <div class="chips">
+      ${['all','review','draft','complete'].map(f=>`<button class="chipbtn ${statusFilter===f?'on':''}" onclick="setFilter('${f}')">${f==='all'?'全部':STATUS_LABEL[f]} ${counts[f]}</button>`).join('')}
+    </div>
+    <span style="flex:1"></span>
     <button class="newbtn" onclick="togglePipelineForm()">＋ 新課程 · Pipeline 1–8</button>
   </div>
   <div class="panel" id="pipeform" style="display:none;margin-bottom:20px">
@@ -117,16 +192,8 @@ function renderList() {
     </div>
     <div class="console" id="pipe-console"></div>
   </div>
-  <div class="grid">` + lessons.map(l => `
-    <div class="card" onclick="openLesson('${l.id}')">
-      <div class="rowline" style="margin-bottom:6px">
-        <span class="tag ${l.type==='pinyin'?'gold':''}">${l.type}</span>
-        <span class="tag" style="background:transparent;border:1px solid var(--border)">${l.style}</span>
-      </div>
-      <h2>${l.title}</h2>
-      <div class="meta">${l.slideCount} 張投影片 · ${l.dbFiles} 個資料庫檔${l.hasPresenter?' · presenter ✓':''}</div>
-      ${progress(l)}
-    </div>`).join('') + `</div>`;
+  ${visible.length ? groups.map(section).join('') : '<div class="empty">沒有符合的課程。</div>'}`;
+  if (keepFocus) { const s = $('#searchbox'); s.focus(); s.setSelectionRange(s.value.length, s.value.length); }
 }
 
 function renderDetail(l) {
