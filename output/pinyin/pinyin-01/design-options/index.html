@@ -8,16 +8,18 @@
     :root{color-scheme:light;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#382F4D;background:#FFF7F0}
     *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:32px;background:radial-gradient(circle at 84% 12%,#ECE7FF 0 160px,transparent 162px),radial-gradient(circle at 12% 88%,#FFE1D7 0 140px,transparent 142px),#FFF7F0}
     main{width:min(760px,100%);padding:48px;border:1px solid rgba(177,91,82,.22);border-radius:28px;background:rgba(255,253,252,.92);box-shadow:0 18px 44px rgba(141,75,69,.13)}
-    h1{margin:0;color:#382F4D;font-size:34px}.lead{margin:12px 0 30px;color:#766565;line-height:1.55}.choices{display:grid;gap:14px}.choice{display:block;padding:22px 24px;border-radius:18px;text-decoration:none;background:#fff;border:1px solid rgba(177,91,82,.22);color:#382F4D;transition:transform .18s ease,box-shadow .18s ease}.choice:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(141,75,69,.14)}.num{display:inline-grid;place-items:center;width:28px;height:28px;margin-right:10px;border-radius:50%;background:#D95E50;color:#fff;font-size:14px;font-weight:800}.name{font-size:19px;font-weight:800}.desc{display:block;margin:8px 0 0 39px;color:#766565;font-size:14px;line-height:1.45}
+    h1{margin:0;color:#382F4D;font-size:34px}.lead{margin:12px 0 30px;color:#766565;line-height:1.55}.choices{display:grid;gap:14px}.choice{display:block;padding:22px 24px;border-radius:18px;text-decoration:none;background:#fff;border:1px solid rgba(177,91,82,.22);color:#382F4D;transition:transform .18s ease,box-shadow .18s ease}.choice:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(141,75,69,.14)}.num{display:inline-grid;place-items:center;width:28px;height:28px;margin-right:10px;border-radius:50%;background:#D95E50;color:#fff;font-size:14px;font-weight:800}.choice-slate .num{background:#33566B}.name{font-size:19px;font-weight:800}.desc{display:block;margin:8px 0 0 39px;color:#766565;font-size:14px;line-height:1.45}
+    .swatches{display:inline-flex;gap:5px;margin-left:10px;vertical-align:middle}.swatches i{width:14px;height:14px;border-radius:4px;display:inline-block}
   </style>
 </head>
 <body>
   <main>
     <h1>Pinyin 第一課 · 設計成品</h1>
-    <p class="lead">兩個版本均為保留成品；課程內容、排序與互動一致，僅視覺系統不同。</p>
+    <p class="lead">三個版本均為保留成品；課程內容、排序與互動一致，僅視覺系統不同。</p>
     <div class="choices">
-      <a class="choice" href="../slides/index.html"><span class="num">1</span><span class="name">Original Course</span><span class="desc">原始 Pinyin Lesson 1 的既有視覺系統。</span></a>
-      <a class="choice" href="../design-prototypes/coral-studio-full-deck/slides/index.html"><span class="num">2</span><span class="name">Coral Studio</span><span class="desc">暖紙色、珊瑚紅與靛藍的完整 41 張版本。</span></a>
+      <a class="choice" href="../slides/index.html"><span class="num">1</span><span class="name">Original Course</span><span class="swatches"><i style="background:#5AACAC"></i><i style="background:#1A3A5A"></i><i style="background:#7C6BC8"></i></span><span class="desc">原始 Pinyin Lesson 1 的既有視覺系統。</span></a>
+      <a class="choice" href="../design-prototypes/coral-studio-full-deck/slides/index.html"><span class="num">2</span><span class="name">Coral Studio</span><span class="swatches"><i style="background:#D95E50"></i><i style="background:#382F4D"></i><i style="background:#6655B8"></i></span><span class="desc">暖紙色、珊瑚紅與靛藍的完整 41 張版本。</span></a>
+      <a class="choice choice-slate" href="../design-prototypes/slate-citrus-full-deck/slides/index.html"><span class="num">3</span><span class="name">Slate Citrus</span><span class="swatches"><i style="background:#33566B"></i><i style="background:#D9A521"></i><i style="background:#22333E"></i></span><span class="desc">鋼藍結構、芥末金拼音重點的完整 41 張版本；左側鋼藍飾邊、金框圖片。</span></a>
     </div>
   </main>
 </body>

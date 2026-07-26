@@ -1,0 +1,45 @@
+
+/* Slate Citrus — visual skin only. Layout geometry and source text remain unchanged. */
+/* Steel blue #33566B structure · mustard gold #B08616/#D9A521 pinyin & accents · slate ink #22333E text */
+body{background:#F2F5F7;color:#22333E}
+.slide{background:linear-gradient(135deg,#F0F4F7 0%,#FDFEFE 58%,#FAF5E7 100%);color:#22333E}
+.slide:before{background:radial-gradient(circle at 13% 88%,rgba(51,86,107,.09) 0 78px,transparent 80px),radial-gradient(circle at 90% 14%,rgba(217,165,33,.11) 0 108px,transparent 110px);opacity:1}
+body:after{content:"";position:absolute;left:0;top:0;bottom:0;width:10px;background:#33566B;z-index:10000;pointer-events:none}
+.slide:after{opacity:.027}
+.menu-bar{background:rgba(248,251,252,.94);border-bottom-color:rgba(51,86,107,.22);box-shadow:0 8px 20px rgba(34,51,62,.07)}
+.menu-icon,.lesson-goal-num,.tone-choice-num{background:#33566B;color:#FFF;box-shadow:0 5px 12px rgba(51,86,107,.24)}
+.section-label,.muted,.subtitle,.vietnamese,.tone-choice-desc,.final-bank-title{color:#5A6B78}
+.title,.title-xl,.lesson-goal-title,.flash-title,.rule-title,.rule-to,.rule-card .to,.tone-choice-title,.listen-title,.divider-super,.divider-zh,.tone-family-title,.tone-match-title,.image-match-title,.hanzi,.a-han,.flash-pinyin,.flash-meaning{color:#22333E}
+.pinyin,.a-pin,.aligned-text .a-pin,.image-match-part,.word-card .pinyin,.divider-kicker,.rule-arrow,.rule-card .arrow{color:#B08616}
+.aligned-text .a-han{color:#22333E}
+.goal-hot,.answer-red{color:#B04A3E}
+.soft-card,.card,.word-card,.rule-flash-card,.flip-face,.chart-full-card,.tone-family-token,.tone-match-card,.image-word-tile,.image-tile,.final-bank{background:#FDFEFE;border-color:rgba(51,86,107,.22);box-shadow:0 10px 28px rgba(34,51,62,.10)}
+.lesson,.pill,.flash-count,.face-label,.tone-family-base{background:#DEE9EF;color:#33566B}
+.topic-img,.lesson-goal-right,.divider-photo,.word-card img,.flash-answer-row img{border-color:rgba(217,165,33,.55);box-shadow:0 12px 30px rgba(34,51,62,.16)}
+.word-card img{background:#F7F9FA}
+.cover{background:linear-gradient(145deg,#EFF3F6 0%,#FFFFFF 58%,#FBF7E8 100%)}
+.cover:before{background:rgba(51,86,107,.10)}
+.cover-sound-chip{background:rgba(253,254,254,.92);border-color:rgba(51,86,107,.22);box-shadow:0 10px 28px rgba(34,51,62,.10);color:#22333E}
+.cover-sound-chip .arrow{color:#B08616}
+.rule-flash-card:before,.flip-face:before{background:linear-gradient(180deg,#D6E4EC,#EDF3F6)}
+.rule-from,.rule-card .from{color:#5B5FA8}
+.tone-choice-table{background:#E3EBF0;box-shadow:0 10px 28px rgba(34,51,62,.10)}
+.tone-choice-table tr:nth-child(odd) td{background:#DCE7EE}
+.tone-choice-table tr:nth-child(even) td{background:#F0F5F8}
+.tone-choice-table td,.listen-item,.listen-no,.initial-cue{color:#22333E}
+.blank{border-bottom-color:#22333E}
+.divider-line{background:#D9A521}
+.title-with-icon i{color:#33566B}
+
+
+/* Pinyin 01 uses additional teaching templates; all rules below are color-only. */
+.cover-title,.title-md,.big-hanzi,.choice,.large-list li,.practice-token,.drill-token,.tone-row,.tone-options span,.vocab-drill .zh,.review-card h3,.setup-step h3,.numbered-list li,.closing-zh{color:#22333E}
+.cover-sub,.teal,.big-pinyin,.drill-token .pin,.vocab-drill .pin,.closing-sub{color:#B08616}
+.badge,.pill-bank span,.flow-chips span{color:#33566B}
+.purple,.badge-purple{color:#5B5FA8}.amber,.badge-amber{color:#A87814}.red,.badge-red{color:#B04A3E}
+.badge,.flow-chips span{background:#DEE9EF}.badge-purple{background:#E7E8F6}.badge-amber{background:#F7EDCB}.badge-red{background:#F6E5E2}
+.flat-card,.choice,.large-list li,.practice-token,.drill-token,.tone-row,.vocab-drill,.review-card,.setup-step,.numbered-list li,.pill-bank span,.reference-image,.closing-card{background:#FDFEFE;border-color:rgba(51,86,107,.22);box-shadow:0 10px 28px rgba(34,51,62,.10)}
+.num,.review-card .review-num,.setup-step .step-num,.numbered-list li:before{background:#33566B;color:#FFF}
+.cover-art,.topic-img,.overview-art,.divider-photo,.closing-photo{border-color:rgba(217,165,33,.55);box-shadow:0 12px 30px rgba(34,51,62,.16)}
+.sound-table th,.sound-table-full th{background:#DEE9EF;color:#33566B}.sound-table td{background:#FDFEFE;border-color:rgba(51,86,107,.22);color:#22333E}.sound-table .rowh{background:#F7EDCB;color:#A87814}
+.body-text,.setup-step p,.setup-try,.step p,.review-card p,.vi{color:#5A6B78}.setup-try{background:#EDF3F6;border-color:rgba(51,86,107,.22)}
