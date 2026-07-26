@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>歡迎到我家來玩｜15 分鐘試教</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; }
+    body { display: grid; place-items: center; overflow: hidden; background: #241f35; }
+    .stage { width: min(100vw, 177.7778vh); height: min(100vh, 56.25vw); overflow: hidden; background: #fff8f2; }
+    iframe { display: block; width: 960px; height: 540px; border: 0; transform-origin: top left; }
+    @media (min-aspect-ratio: 16/9) { iframe { transform: scale(calc(100vh / 540)); } }
+    @media (max-aspect-ratio: 16/9) { iframe { transform: scale(calc(100vw / 960)); } }
+  </style>
+</head>
+<body>
+  <main class="stage" aria-label="15 分鐘試教新版封面">
+    <iframe src="01-cover.html" title="歡迎到我家來玩"></iframe>
+  </main>
+</body>
+</html>

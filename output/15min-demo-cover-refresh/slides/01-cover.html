@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=960,height=540">
+  <title>歡迎到我家來玩｜15 分鐘試教</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
+  <!-- Assumption: this is a one-slide refresh of the source deck's first, visible cover slide.
+       The user requested the newer project direction, so this uses the Coral Studio warm-paper / coral / indigo skin.
+       No extra teaching copy or image is introduced. -->
+  <style>
+    :root {
+      --paper: #fff8f2;
+      --paper-light: #fffdf9;
+      --ink: #382f4d;
+      --muted: #766565;
+      --coral: #d95e50;
+      --coral-pale: #ffe6df;
+      --indigo: #6655b8;
+      --indigo-pale: #ece9ff;
+      --line: rgba(56, 47, 77, .16);
+    }
+    * { box-sizing: border-box; }
+    html, body { width: 960px; height: 540px; margin: 0; overflow: hidden; }
+    body { background: var(--paper); color: var(--ink); font-family: "Noto Sans TC", sans-serif; }
+    .slide {
+      position: relative;
+      width: 960px;
+      height: 540px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 92% 14%, rgba(102, 85, 184, .14) 0 95px, transparent 96px),
+        radial-gradient(circle at 11% 91%, rgba(217, 94, 80, .15) 0 74px, transparent 75px),
+        linear-gradient(135deg, #fff0e8 0%, var(--paper-light) 55%, #f0efff 100%);
+    }
+    .frame {
+      position: absolute;
+      inset: 30px;
+      border: 1px solid var(--line);
+      pointer-events: none;
+    }
+    .eyebrow {
+      position: absolute;
+      top: 58px;
+      left: 62px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 9px 15px 9px 11px;
+      border-radius: 999px;
+      background: rgba(255, 253, 250, .86);
+      color: var(--muted);
+      box-shadow: 0 8px 20px rgba(141, 75, 69, .08);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: .035em;
+    }
+    .eyebrow::before {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--coral);
+      box-shadow: 15px 0 0 var(--indigo);
+      content: "";
+      margin-right: 13px;
+    }
+    .copy {
+      position: absolute;
+      top: 162px;
+      left: 64px;
+      width: 630px;
+    }
+    h1 {
+      max-width: 640px;
+      margin: 0;
+      color: var(--ink);
+      font-family: "Noto Serif TC", serif;
+      font-size: 76px;
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -.09em;
+    }
+    .rule {
+      width: 168px;
+      height: 7px;
+      margin: 25px 0 24px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--coral) 0 55%, var(--indigo) 55% 100%);
+    }
+    .pattern {
+      margin: 0;
+      color: var(--indigo);
+      font-family: "Noto Serif TC", serif;
+      font-size: 31px;
+      font-weight: 900;
+      letter-spacing: .05em;
+    }
+    .pattern .anchor { color: var(--coral); }
+    .shape {
+      position: absolute;
+      right: 63px;
+      bottom: 57px;
+      width: 255px;
+      height: 255px;
+      border: 1px solid rgba(102, 85, 184, .24);
+      border-radius: 48% 52% 54% 46% / 50% 42% 58% 50%;
+      background: linear-gradient(145deg, rgba(255, 230, 223, .92), rgba(236, 233, 255, .86));
+      box-shadow: 17px 17px 0 rgba(102, 85, 184, .10);
+      transform: rotate(-12deg);
+    }
+    .shape::before, .shape::after { position: absolute; content: ""; }
+    .shape::before {
+      top: 49px;
+      left: 59px;
+      width: 124px;
+      height: 124px;
+      border: 3px solid var(--coral);
+      border-radius: 50%;
+    }
+    .shape::after {
+      right: 32px;
+      bottom: 34px;
+      width: 72px;
+      height: 72px;
+      border: 3px solid var(--indigo);
+      border-radius: 50%;
+      background: rgba(255, 253, 250, .58);
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .eyebrow, .copy, .shape { animation: settle .62s cubic-bezier(.2,.75,.25,1) both; }
+      .copy { animation-delay: .06s; }
+      .shape { animation-delay: .14s; }
+      @keyframes settle { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+      .shape { animation-name: shape-settle; }
+      @keyframes shape-settle { from { opacity: 0; transform: rotate(-12deg) translateY(16px); } to { opacity: 1; transform: rotate(-12deg) translateY(0); } }
+    }
+  </style>
+</head>
+<body>
+  <main class="slide" aria-labelledby="slide-title">
+    <div class="frame" aria-hidden="true"></div>
+    <p class="eyebrow">《時代華語 2》第 5 課｜15 分鐘試教</p>
+    <section class="copy">
+      <h1 id="slide-title">歡迎到我家來玩</h1>
+      <div class="rule" aria-hidden="true"></div>
+      <p class="pattern"><span class="anchor">只要</span>……，就……</p>
+    </section>
+    <div class="shape" aria-hidden="true"></div>
+  </main>
+</body>
+</html>

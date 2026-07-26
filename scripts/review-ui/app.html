@@ -242,7 +242,7 @@ function renderDetail(l) {
       <h3>審閱進度 · 18 步</h3>
       ${progress(l)}<div style="height:10px"></div>
       ${l.steps.map(stepRow).join('')}
-      <div class="legend">步驟 1–8 由資料庫產出自動偵測；9–18 需教師核准。「核准」再點一次可還原為待處理。狀態存於 review-status.json。</div>
+      <div class="legend">步驟 1–8 由資料庫產出自動偵測；9–18 需教師核准。「核准」再點一次可還原為待處理。狀態存於本機 SQLite（work/review-ui/review.db）。</div>
     </div>
     <div>
       <div class="panel">

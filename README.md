@@ -86,6 +86,7 @@ Huashu Design phù hợp cho pipeline học liệu vì:
 - `scripts/qa-lesson-assets.mjs` — kiểm tra asset/image workflow của một lesson
 - `scripts/replace-lesson-image.mjs` — thay một ảnh lesson mà không sửa HTML thủ công
 - `docs/lesson-slide-template-guide.md` — quy tắc tái sử dụng template Lesson 01 cho bài mới
+- `docs/portable-slide-template-guide.md` — fast path to reuse the same slide family in another content-ready project
 - `docs/image-asset-workflow.md` — quy trình ảnh: database metadata → manifest → QA
 - `output/sample-teacher-deck/` — bộ slide mẫu
 - `output/pinyin-l1-design-prototype/` — design prototype for Pinyin Lesson 1

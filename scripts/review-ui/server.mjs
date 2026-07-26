@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 // Local review dashboard for teaching-material production.
 // Phase 1: lesson list, 18-step review checklist, presenter preview, approvals.
-// No external dependencies; state lives in <lessonDir>/review-status.json.
+// Progress and job history live in SQLite (work/review-ui/review.db, created
+// automatically on first launch — see db.mjs).
 import http from 'http';
 import fs from 'fs/promises';
 import path from 'path';
 import { spawn } from 'child_process';
 import { fileURLToPath } from 'url';
+import * as store from './db.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..', '..');
@@ -78,10 +80,9 @@ async function scanLesson(dir) {
       if (qa.length) break;
     } catch {}
   }
-  let review = {};
-  try { review = JSON.parse(await fs.readFile(path.join(dir, 'review-status.json'), 'utf8')); } catch {}
+  const review = store.getReview(`${group}/${id}`);
   const steps = STEPS.map((s) => {
-    const manual = review.steps?.[s.n];
+    const manual = review.steps[s.n];
     const autoDone = s.auto ? artifacts[s.auto] : false;
     return {
       ...s,
@@ -156,17 +157,21 @@ async function createCourse(dir, name) {
   return listCourses();
 }
 
-async function listLessons() {
-  const lessons = [];
+async function allLessonDirs() {
+  const dirs = [];
   for (const base of await courseBases()) {
     let entries = [];
     try { entries = await fs.readdir(base, { withFileTypes: true }); } catch {}
     for (const e of entries) {
-      if (e.isDirectory() && /^(lesson|pinyin)-\d+$/.test(e.name)) {
-        lessons.push(await scanLesson(path.join(base, e.name)));
-      }
+      if (e.isDirectory() && /^(lesson|pinyin)-\d+$/.test(e.name)) dirs.push(path.join(base, e.name));
     }
   }
+  return dirs;
+}
+
+async function listLessons() {
+  const lessons = [];
+  for (const dir of await allLessonDirs()) lessons.push(await scanLesson(dir));
   const num = (s) => Number((s.match(/(\d+)$/) || [])[1] || 0);
   lessons.sort((a, b) => (a.group === b.group ? num(a.id) - num(b.id) : a.group.localeCompare(b.group)));
   return lessons;
@@ -181,26 +186,18 @@ async function lessonDirById(id) {
   throw Object.assign(new Error('lesson not found'), { code: 'ENOENT' });
 }
 
+const lessonKey = (dir) => `${path.basename(path.dirname(dir))}/${path.basename(dir)}`;
+
 async function saveStep(id, stepN, body) {
   const dir = await lessonDirById(id);
-  const file = path.join(dir, 'review-status.json');
-  let review = {};
-  try { review = JSON.parse(await fs.readFile(file, 'utf8')); } catch {}
-  review.steps = review.steps || {};
-  if (body.status === 'pending') delete review.steps[stepN];
-  else review.steps[stepN] = { status: body.status, note: body.note || '', updatedAt: new Date().toISOString() };
-  if (body.style) review.style = body.style;
-  await fs.writeFile(file, JSON.stringify(review, null, 2) + '\n');
+  store.setStep(lessonKey(dir), stepN, body.status, body.note || '');
+  if (body.style) store.setStyle(lessonKey(dir), body.style);
   return scanLesson(dir);
 }
 
 async function saveStyle(id, style) {
   const dir = await lessonDirById(id);
-  const file = path.join(dir, 'review-status.json');
-  let review = {};
-  try { review = JSON.parse(await fs.readFile(file, 'utf8')); } catch {}
-  review.style = style;
-  await fs.writeFile(file, JSON.stringify(review, null, 2) + '\n');
+  store.setStyle(lessonKey(dir), style);
   return scanLesson(dir);
 }
 
@@ -222,37 +219,42 @@ const readRawBody = (req, limit = 120e6) => new Promise((resolve, reject) => {
   req.on('error', reject);
 });
 
-// ---- Job runner: spawns project scripts, buffers logs for polling clients ----
-const jobs = new Map();
-let jobSeq = 0;
+// ---- Job runner: spawns project scripts; metadata + logs persist in SQLite ----
+// Running jobs buffer their log in memory (flushed to the DB at most every
+// 500ms) so polling clients see live output without a DB write per chunk.
+const liveJobs = new Map(); // id -> { log, flushTimer, done }
 
 function startJob(name, cmd, args, lessonId = null) {
-  const id = String(++jobSeq);
-  const job = {
-    id, name, lessonId, cmd: `${cmd} ${args.join(' ')}`,
-    status: 'running', log: '', code: null,
-    startedAt: new Date().toISOString(), endedAt: null,
+  const cmdline = `${cmd} ${args.join(' ')}`;
+  const id = store.insertJob({ name, lessonId, cmd: cmdline, startedAt: new Date().toISOString() });
+  const live = { log: `$ ${cmdline}\n\n`, flushTimer: null, done: false };
+  liveJobs.set(id, live);
+  const flushSoon = () => {
+    if (live.flushTimer || live.done) return;
+    live.flushTimer = setTimeout(() => {
+      live.flushTimer = null;
+      if (!live.done) store.updateJobLog(id, live.log);
+    }, 500);
   };
-  jobs.set(id, job);
-  job.log = `$ ${job.cmd}\n\n`;
+  const append = (d) => { live.log += d; flushSoon(); };
+  const finish = (status, code, tail) => {
+    if (live.done) return;
+    live.done = true;
+    if (live.flushTimer) clearTimeout(live.flushTimer);
+    live.log += tail;
+    store.finishJob(id, { status, code, endedAt: new Date().toISOString(), log: live.log });
+    liveJobs.delete(id);
+  };
   const child = spawn(cmd, args, { cwd: root, env: process.env });
-  child.stdout.on('data', (d) => { job.log += d; });
-  child.stderr.on('data', (d) => { job.log += d; });
-  child.on('error', (e) => {
-    job.log += `\n[spawn error] ${e.message}\n`;
-    job.status = 'failed'; job.endedAt = new Date().toISOString();
-  });
-  child.on('close', (code) => {
-    job.code = code;
-    job.status = code === 0 ? 'done' : 'failed';
-    job.endedAt = new Date().toISOString();
-    job.log += `\n[exit ${code}]\n`;
-  });
-  return job;
+  child.stdout.on('data', append);
+  child.stderr.on('data', append);
+  child.on('error', (e) => finish('failed', null, `\n[spawn error] ${e.message}\n`));
+  child.on('close', (code) => finish(code === 0 ? 'done' : 'failed', code, `\n[exit ${code}]\n`));
+  store.updateJobLog(id, live.log);
+  return { id: String(id) };
 }
 
-const runningJobFor = (lessonId) =>
-  [...jobs.values()].find((j) => j.status === 'running' && j.lessonId === lessonId);
+const runningJobFor = (lessonId) => store.runningJobFor(lessonId);
 
 const LESSON_TASKS = {
   presenter: (dir) => ({ name: '同步 Presenter', cmd: 'node', args: ['scripts/sync-lesson-presenter.mjs', '--lesson', dir] }),
@@ -310,16 +312,20 @@ const server = http.createServer(async (req, res) => {
       return send(200, { jobId: job.id });
     }
     if (url.pathname === '/api/jobs' && req.method === 'GET') {
-      return send(200, [...jobs.values()].map(({ log, ...j }) => ({ ...j, logLength: log.length })).reverse().slice(0, 30));
+      return send(200, store.listJobs(30).map((j) => {
+        const live = liveJobs.get(Number(j.id));
+        return live ? { ...j, logLength: live.log.length } : j;
+      }));
     }
     const jobMatch = url.pathname.match(/^\/api\/jobs\/(\d+)$/);
     if (jobMatch && req.method === 'GET') {
-      const job = jobs.get(jobMatch[1]);
+      const job = store.getJob(Number(jobMatch[1]));
       if (!job) return send(404, { error: 'job not found' });
+      const log = liveJobs.get(Number(job.id))?.log ?? job.log;
       const offset = Math.max(0, Number(url.searchParams.get('offset') || 0));
       return send(200, {
         id: job.id, name: job.name, lessonId: job.lessonId, status: job.status, code: job.code,
-        logChunk: job.log.slice(offset), logLength: job.log.length,
+        logChunk: log.slice(offset), logLength: log.length,
       });
     }
     if (url.pathname === '/api/upload' && req.method === 'POST') {
@@ -373,6 +379,8 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
+store.importLegacy({ lessonDirs: await allLessonDirs() });
+store.recoverJobs(50);
 server.listen(PORT, () => {
   console.log(`Review dashboard: http://localhost:${PORT}`);
 });
