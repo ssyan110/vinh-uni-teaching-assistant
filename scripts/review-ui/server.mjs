@@ -106,6 +106,12 @@ async function scanLesson(dir) {
   };
 }
 
+const COURSES_FILE = path.join(root, 'output', 'courses.json');
+
+async function readCourseRegistry() {
+  try { return JSON.parse(await fs.readFile(COURSES_FILE, 'utf8')); } catch { return {}; }
+}
+
 async function courseBases() {
   const bases = [];
   let entries = [];
@@ -116,6 +122,38 @@ async function courseBases() {
     }
   }
   return bases;
+}
+
+async function listCourses() {
+  const registry = await readCourseRegistry();
+  const bases = await courseBases();
+  const courses = [];
+  for (const base of bases) {
+    const dir = path.basename(base);
+    let count = 0;
+    try { count = (await fs.readdir(base, { withFileTypes: true })).filter((e) => e.isDirectory() && /^(lesson|pinyin)-\d+$/.test(e.name)).length; } catch {}
+    courses.push({
+      dir,
+      name: registry[dir]?.name || (dir === 'pinyin' ? '拼音课程 · Pinyin' : dir.replace(/^book-(\d+)$/, 'Book $1')),
+      type: registry[dir]?.type || (dir === 'pinyin' ? 'pinyin' : 'regular'),
+      lessonCount: count,
+    });
+  }
+  const rank = (d) => (d === 'pinyin' ? 1e9 : Number(d.replace('book-', '')));
+  courses.sort((a, b) => rank(a.dir) - rank(b.dir));
+  return courses;
+}
+
+async function createCourse(dir, name) {
+  if (!/^book-\d{1,3}$/.test(dir)) throw new Error('教材資料夾格式須為 book-N（例：book-2）');
+  if (!name || !name.trim()) throw new Error('請填教材全名');
+  const abs = path.join(root, 'output', dir);
+  if (await exists(abs)) throw new Error(`output/${dir} 已存在`);
+  const registry = await readCourseRegistry();
+  registry[dir] = { name: name.trim(), type: 'regular' };
+  await fs.mkdir(abs, { recursive: true });
+  await fs.writeFile(COURSES_FILE, JSON.stringify(registry, null, 2) + '\n');
+  return listCourses();
 }
 
 async function listLessons() {
@@ -241,6 +279,15 @@ const server = http.createServer(async (req, res) => {
     if (url.pathname === '/api/lessons' && req.method === 'GET') {
       return send(200, await listLessons());
     }
+    if (url.pathname === '/api/courses' && req.method === 'GET') {
+      return send(200, await listCourses());
+    }
+    if (url.pathname === '/api/courses' && req.method === 'POST') {
+      const body = await readBody(req);
+      try {
+        return send(200, await createCourse(String(body.dir || '').trim(), String(body.name || '')));
+      } catch (e) { return send(400, { error: e.message }); }
+    }
     const stepMatch = url.pathname.match(/^\/api\/lessons\/([a-z0-9-]+)\/steps\/(\d+)$/);
     if (stepMatch && req.method === 'POST') {
       return send(200, await saveStep(stepMatch[1], Number(stepMatch[2]), await readBody(req)));
@@ -288,7 +335,11 @@ const server = http.createServer(async (req, res) => {
       const body = await readBody(req);
       const lessonId = String(body.lessonId || '').trim();
       const lessonTitle = String(body.lessonTitle || '').trim();
-      const lessonType = ['regular', 'pinyin', 'auto'].includes(body.lessonType) ? body.lessonType : 'regular';
+      const course = String(body.course || '').trim();
+      const courses = await listCourses();
+      const courseDef = courses.find((c) => c.dir === course);
+      if (!courseDef) return send(400, { error: `教材不存在：${course || '(未選)'}` });
+      const lessonType = ['regular', 'pinyin', 'auto'].includes(body.lessonType) ? body.lessonType : courseDef.type;
       if (!/^[a-z0-9][a-z0-9-]{1,40}$/.test(lessonId)) return send(400, { error: 'lesson id 格式不對（例：lesson-02、pinyin-01）' });
       if (!lessonTitle) return send(400, { error: '請填課程標題' });
       for (const [key, label] of [['sourcePdf', '教材 PDF'], ['contentFile', 'content extract JSON']]) {
@@ -296,8 +347,7 @@ const server = http.createServer(async (req, res) => {
         if (!p.startsWith(root + path.sep) || !(await exists(p))) return send(400, { error: `${label} 找不到：${body[key] || '(未填)'}` });
       }
       if (runningJobFor(lessonId)) return send(409, { error: '此課程已有工作執行中' });
-      const outBase = lessonId.startsWith('pinyin') ? 'output/pinyin' : 'output/book-1';
-      const outputDir = `${outBase}/${lessonId}/database/`;
+      const outputDir = `output/${course}/${lessonId}/database/`;
       const job = startJob(`Pipeline 1–8 · ${lessonId}`, await pythonBin(), [
         'scripts/run_pipeline.py',
         '--lesson-type', lessonType,

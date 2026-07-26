@@ -101,7 +101,7 @@ a.plain{color:var(--steel);font-weight:700;font-size:13px}
 <main id="app"><div class="empty">載入中…</div></main>
 <script>
 const $ = (s, el=document) => el.querySelector(s);
-let lessons = [], current = null;
+let lessons = [], courses = [], current = null;
 
 async function api(path, opts) {
   const r = await fetch(path, opts ? { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(opts) } : undefined);
@@ -124,7 +124,12 @@ function lessonStatus(l) {
   return 'review';
 }
 const STATUS_LABEL = { draft: '草稿', review: '審閱中', complete: '完成' };
-const groupLabel = (g) => g === 'pinyin' ? 'Pinyin 拼音課程' : g.replace(/^book-(\d+)$/, 'Book $1 · 第$1冊');
+const groupLabel = (g) => courses.find((c) => c.dir === g)?.name
+  || (g === 'pinyin' ? '拼音课程 · Pinyin' : g.replace(/^book-(\d+)$/, 'Book $1'));
+const nextBookDir = () => {
+  const ns = courses.map((c) => Number((c.dir.match(/^book-(\d+)$/) || [])[1] || 0));
+  return `book-${Math.max(0, ...ns) + 1}`;
+};
 
 function matches(l) {
   if (statusFilter !== 'all' && lessonStatus(l) !== statusFilter) return false;
@@ -145,7 +150,7 @@ function renderList(keepFocus) {
   const app = $('#app');
   if (!lessons.length) { app.innerHTML = '<div class="empty">找不到課程。請確認 output/ 目錄。</div>'; return; }
   const visible = lessons.filter(matches);
-  const groups = [...new Set(lessons.map(l => l.group))];
+  const groups = [...new Set([...courses.map(c => c.dir), ...lessons.map(l => l.group)])];
   const counts = { all: lessons.length, draft: 0, review: 0, complete: 0 };
   lessons.forEach(l => counts[lessonStatus(l)]++);
   const card = (l) => `
@@ -163,13 +168,14 @@ function renderList(keepFocus) {
     const items = visible.filter(l => l.group === g);
     if (!items.length && (query || statusFilter !== 'all')) return '';
     const isClosed = collapsed.has(g) && !query && statusFilter === 'all';
+    const total = lessons.filter(l => l.group === g).length;
     return `
     <div class="grouphead ${isClosed?'closed':''}" onclick="toggleGroup('${g}')">
       <span class="arrow">▼</span><h2>${groupLabel(g)}</h2>
-      <span class="count">${items.length}${items.length!==lessons.filter(l=>l.group===g).length?' / '+lessons.filter(l=>l.group===g).length:''} 課</span>
+      <span class="count">${items.length}${items.length!==total?' / '+total:''} 課</span>
       <span class="rule"></span>
     </div>
-    ${isClosed?'':`<div class="grid">${items.map(card).join('')}</div>`}`;
+    ${isClosed?'':(items.length?`<div class="grid">${items.map(card).join('')}</div>`:'<div class="empty" style="padding:14px">此教材尚無課程 — 用「＋ 新課程」開始。</div>')}`;
   };
   app.innerHTML = `
   <div class="toolbar">
@@ -183,8 +189,17 @@ function renderList(keepFocus) {
   <div class="panel" id="pipeform" style="display:none;margin-bottom:20px">
     <h3>新課程 · 執行 Pipeline 步驟 1–8</h3>
     <div class="form">
-      <div><label>課程類型</label><select id="pf-type"><option value="regular">regular</option><option value="pinyin">pinyin</option><option value="auto">auto</option></select></div>
-      <div><label>Lesson ID</label><input id="pf-id" placeholder="lesson-02 / pinyin-07"><div class="hint">決定輸出位置 output/book-1 或 output/pinyin</div></div>
+      <div class="full"><label>教材</label>
+        <select id="pf-course" onchange="$('#pf-newcourse').style.display=this.value==='__new__'?'grid':'none'">
+          ${courses.map(c=>`<option value="${c.dir}">${c.name}（output/${c.dir}）</option>`).join('')}
+          <option value="__new__">＋ 新增教材…</option>
+        </select>
+        <div class="form" id="pf-newcourse" style="display:none;margin-top:10px">
+          <div><label>教材全名</label><input id="pf-newname" placeholder="汉语标准教程第二册"></div>
+          <div><label>資料夾</label><input id="pf-newdir" value="${nextBookDir()}"><div class="hint">建立 output/&lt;資料夾&gt;，格式 book-N</div></div>
+        </div>
+      </div>
+      <div><label>Lesson ID</label><input id="pf-id" placeholder="lesson-01"><div class="hint">輸出到 output/&lt;教材&gt;/&lt;lesson-id&gt;/</div></div>
       <div><label>課程標題</label><input id="pf-title" placeholder="第二课 · 你是哪国人？"></div>
       <div class="full"><label>教材 PDF（上傳）</label><input type="file" id="pf-pdf" accept=".pdf"><div class="hint">或直接填既有路徑：</div><input id="pf-pdf-path" placeholder="work/pdf-pages/ 或 Pinyin lessons/xxx.pdf" style="margin-top:6px"></div>
       <div class="full"><label>Content extract JSON（必填）</label><input id="pf-content" placeholder="work/lesson-02/extract.json"><div class="hint">run_pipeline.py 需要抽取內容檔；先由 agent 產出 extract.json 再執行</div></div>
@@ -299,6 +314,11 @@ window.togglePipelineForm = () => {
 
 window.runPipeline = async () => {
   try {
+    let course = $('#pf-course').value;
+    if (course === '__new__') {
+      courses = await api('/api/courses', { dir: $('#pf-newdir').value.trim(), name: $('#pf-newname').value.trim() });
+      course = $('#pf-newdir').value.trim();
+    }
     let sourcePdf = $('#pf-pdf-path').value.trim();
     const file = $('#pf-pdf').files[0];
     if (file) {
@@ -308,7 +328,7 @@ window.runPipeline = async () => {
     }
     if (!sourcePdf) throw new Error('請上傳 PDF 或填 PDF 路徑');
     const { jobId } = await api('/api/pipeline', {
-      lessonType: $('#pf-type').value,
+      course,
       lessonId: $('#pf-id').value.trim(),
       lessonTitle: $('#pf-title').value.trim(),
       sourcePdf,
@@ -333,7 +353,8 @@ window.setStyle = async (style) => {
 };
 $('#crumb').onclick = renderList;
 
-api('/api/lessons').then(d => { lessons = d; renderList(); })
+Promise.all([api('/api/lessons'), api('/api/courses')])
+  .then(([ls, cs]) => { lessons = ls; courses = cs; renderList(); })
   .catch(e => { $('#app').innerHTML = `<div class="empty">載入失敗：${e.message}</div>`; });
 </script>
 </body>
