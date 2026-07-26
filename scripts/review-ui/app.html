@@ -55,6 +55,24 @@ iframe{width:100%;aspect-ratio:16/10;border:1px solid var(--border);border-radiu
 .empty{color:var(--muted);font-size:14px;padding:30px;text-align:center}
 a.plain{color:var(--steel);font-weight:700;font-size:13px}
 .legend{font-size:11px;color:var(--muted);font-weight:600;margin-top:10px;line-height:1.6}
+.toolbtns{display:flex;gap:8px;flex-wrap:wrap}
+.toolbtns button{padding:8px 16px;font-size:13px;border-radius:12px}
+.toolbtns button:disabled{opacity:.45;cursor:not-allowed}
+.console{margin-top:12px;background:var(--steel-dark);color:#D8E4EC;border-radius:12px;padding:14px 16px;font:12px/1.55 ui-monospace,Menlo,monospace;white-space:pre-wrap;word-break:break-all;max-height:320px;overflow:auto;display:none}
+.console.show{display:block}
+.jobstate{font-size:12px;font-weight:800;margin-left:auto}
+.jobstate.running{color:var(--gold)}
+.jobstate.done{color:var(--green)}
+.jobstate.failed{color:var(--red)}
+.newbtn{background:var(--steel);border-color:var(--steel);color:#fff;font-size:13px;padding:8px 18px;border-radius:12px}
+.newbtn:hover{background:var(--steel-dark)}
+.form{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}
+.form label{display:block;font-size:12px;font-weight:800;color:var(--muted);margin-bottom:5px}
+.form input,.form select{width:100%;font:inherit;font-size:14px;padding:8px 10px;border:1px solid var(--border);border-radius:10px;background:#fff;color:var(--steel-dark)}
+.form .full{grid-column:1/-1}
+.hint{font-size:11px;color:var(--muted);margin-top:4px}
+@keyframes pulse{50%{opacity:.4}}
+.running-dot{display:inline-block;width:8px;height:8px;border-radius:999px;background:var(--gold-fill);margin-right:6px;animation:pulse 1s infinite}
 </style>
 </head>
 <body>
@@ -83,7 +101,23 @@ function renderList() {
   $('#crumb').hidden = true; current = null;
   const app = $('#app');
   if (!lessons.length) { app.innerHTML = '<div class="empty">找不到課程。請確認 output/ 目錄。</div>'; return; }
-  app.innerHTML = `<div class="grid">` + lessons.map(l => `
+  app.innerHTML = `
+  <div class="rowline" style="margin-bottom:16px">
+    <button class="newbtn" onclick="togglePipelineForm()">＋ 新課程 · Pipeline 1–8</button>
+  </div>
+  <div class="panel" id="pipeform" style="display:none;margin-bottom:20px">
+    <h3>新課程 · 執行 Pipeline 步驟 1–8</h3>
+    <div class="form">
+      <div><label>課程類型</label><select id="pf-type"><option value="regular">regular</option><option value="pinyin">pinyin</option><option value="auto">auto</option></select></div>
+      <div><label>Lesson ID</label><input id="pf-id" placeholder="lesson-02 / pinyin-07"><div class="hint">決定輸出位置 output/book-1 或 output/pinyin</div></div>
+      <div><label>課程標題</label><input id="pf-title" placeholder="第二课 · 你是哪国人？"></div>
+      <div class="full"><label>教材 PDF（上傳）</label><input type="file" id="pf-pdf" accept=".pdf"><div class="hint">或直接填既有路徑：</div><input id="pf-pdf-path" placeholder="work/pdf-pages/ 或 Pinyin lessons/xxx.pdf" style="margin-top:6px"></div>
+      <div class="full"><label>Content extract JSON（必填）</label><input id="pf-content" placeholder="work/lesson-02/extract.json"><div class="hint">run_pipeline.py 需要抽取內容檔；先由 agent 產出 extract.json 再執行</div></div>
+      <div class="full"><button class="newbtn" onclick="runPipeline()">執行 Pipeline</button></div>
+    </div>
+    <div class="console" id="pipe-console"></div>
+  </div>
+  <div class="grid">` + lessons.map(l => `
     <div class="card" onclick="openLesson('${l.id}')">
       <div class="rowline" style="margin-bottom:6px">
         <span class="tag ${l.type==='pinyin'?'gold':''}">${l.type}</span>
@@ -130,6 +164,16 @@ function renderDetail(l) {
     </div>
     <div>
       <div class="panel">
+        <div class="rowline" style="margin-bottom:8px"><h3 style="margin:0">工具</h3><span class="jobstate" id="jobstate"></span></div>
+        <div class="toolbtns" id="toolbtns">
+          <button onclick="runTask('presenter')">同步 Presenter</button>
+          <button onclick="runTask('assets-manifest')">資產清單</button>
+          <button onclick="runTask('assets-qa')">資產 QA</button>
+          <button onclick="if(confirm('簡報設計與內容已定稿？PDF 為備份匯出。'))runTask('pdf')">匯出 PDF</button>
+        </div>
+        <div class="console" id="task-console"></div>
+      </div>
+      <div class="panel" style="margin-top:20px">
         <h3>簡報預覽</h3>
         ${l.presenterUrl?`<iframe src="${l.presenterUrl}"></iframe>`:'<div class="empty">尚無 presenter</div>'}
       </div>
@@ -137,6 +181,77 @@ function renderDetail(l) {
     </div>
   </div>`;
 }
+
+// ---- Job execution & log streaming (polling) ----
+let pollTimer = null;
+function watchJob(jobId, consoleEl, stateEl, onDone) {
+  clearInterval(pollTimer);
+  consoleEl.classList.add('show');
+  consoleEl.textContent = '';
+  let offset = 0;
+  const tick = async () => {
+    try {
+      const j = await api(`/api/jobs/${jobId}?offset=${offset}`);
+      if (j.logChunk) {
+        consoleEl.textContent += j.logChunk;
+        offset = j.logLength;
+        consoleEl.scrollTop = consoleEl.scrollHeight;
+      }
+      if (stateEl) stateEl.innerHTML = j.status === 'running'
+        ? '<span class="running-dot"></span>執行中'
+        : (j.status === 'done' ? '✓ 完成' : '✗ 失敗');
+      if (stateEl) stateEl.className = 'jobstate ' + j.status;
+      if (j.status !== 'running') { clearInterval(pollTimer); onDone && onDone(j); }
+    } catch (e) { clearInterval(pollTimer); consoleEl.textContent += '\n[poll error] ' + e.message; }
+  };
+  tick();
+  pollTimer = setInterval(tick, 800);
+}
+
+window.runTask = async (task) => {
+  const btns = document.querySelectorAll('#toolbtns button');
+  btns.forEach(b => b.disabled = true);
+  try {
+    const { jobId } = await api(`/api/lessons/${current.id}/run`, { task });
+    watchJob(jobId, $('#task-console'), $('#jobstate'), async () => {
+      btns.forEach(b => b.disabled = false);
+      lessons = await api('/api/lessons');
+      const l = lessons.find(x => x.id === current.id);
+      if (l) current = l;
+    });
+  } catch (e) {
+    btns.forEach(b => b.disabled = false);
+    alert(e.message);
+  }
+};
+
+window.togglePipelineForm = () => {
+  const f = $('#pipeform');
+  f.style.display = f.style.display === 'none' ? 'block' : 'none';
+};
+
+window.runPipeline = async () => {
+  try {
+    let sourcePdf = $('#pf-pdf-path').value.trim();
+    const file = $('#pf-pdf').files[0];
+    if (file) {
+      const up = await fetch(`/api/upload?name=${encodeURIComponent(file.name)}`, { method: 'POST', body: file });
+      if (!up.ok) throw new Error((await up.json()).error || '上傳失敗');
+      sourcePdf = (await up.json()).path;
+    }
+    if (!sourcePdf) throw new Error('請上傳 PDF 或填 PDF 路徑');
+    const { jobId } = await api('/api/pipeline', {
+      lessonType: $('#pf-type').value,
+      lessonId: $('#pf-id').value.trim(),
+      lessonTitle: $('#pf-title').value.trim(),
+      sourcePdf,
+      contentFile: $('#pf-content').value.trim(),
+    });
+    watchJob(jobId, $('#pipe-console'), null, async (j) => {
+      if (j.status === 'done') { lessons = await api('/api/lessons'); renderList(); $('#pipeform').style.display='block'; $('#pipe-console').classList.add('show'); $('#pipe-console').textContent='✓ Pipeline 完成，課程列表已更新。'; }
+    });
+  } catch (e) { alert(e.message); }
+};
 
 window.openLesson = async (id) => { renderDetail(lessons.find(l=>l.id===id)); };
 window.setStep = async (n, status) => {

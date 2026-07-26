@@ -5,6 +5,7 @@
 import http from 'http';
 import fs from 'fs/promises';
 import path from 'path';
+import { spawn } from 'child_process';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -154,6 +155,62 @@ const readBody = (req) => new Promise((resolve, reject) => {
   req.on('end', () => { try { resolve(data ? JSON.parse(data) : {}); } catch (e) { reject(e); } });
 });
 
+const readRawBody = (req, limit = 120e6) => new Promise((resolve, reject) => {
+  const chunks = [];
+  let size = 0;
+  req.on('data', (c) => {
+    size += c.length;
+    if (size > limit) { req.destroy(); reject(new Error('file too large')); return; }
+    chunks.push(c);
+  });
+  req.on('end', () => resolve(Buffer.concat(chunks)));
+  req.on('error', reject);
+});
+
+// ---- Job runner: spawns project scripts, buffers logs for polling clients ----
+const jobs = new Map();
+let jobSeq = 0;
+
+function startJob(name, cmd, args, lessonId = null) {
+  const id = String(++jobSeq);
+  const job = {
+    id, name, lessonId, cmd: `${cmd} ${args.join(' ')}`,
+    status: 'running', log: '', code: null,
+    startedAt: new Date().toISOString(), endedAt: null,
+  };
+  jobs.set(id, job);
+  job.log = `$ ${job.cmd}\n\n`;
+  const child = spawn(cmd, args, { cwd: root, env: process.env });
+  child.stdout.on('data', (d) => { job.log += d; });
+  child.stderr.on('data', (d) => { job.log += d; });
+  child.on('error', (e) => {
+    job.log += `\n[spawn error] ${e.message}\n`;
+    job.status = 'failed'; job.endedAt = new Date().toISOString();
+  });
+  child.on('close', (code) => {
+    job.code = code;
+    job.status = code === 0 ? 'done' : 'failed';
+    job.endedAt = new Date().toISOString();
+    job.log += `\n[exit ${code}]\n`;
+  });
+  return job;
+}
+
+const runningJobFor = (lessonId) =>
+  [...jobs.values()].find((j) => j.status === 'running' && j.lessonId === lessonId);
+
+const LESSON_TASKS = {
+  presenter: (dir) => ({ name: '同步 Presenter', cmd: 'node', args: ['scripts/sync-lesson-presenter.mjs', '--lesson', dir] }),
+  'assets-manifest': (dir) => ({ name: '資產清單', cmd: 'node', args: ['scripts/build-lesson-asset-manifest.mjs', '--lesson', dir] }),
+  'assets-qa': (dir) => ({ name: '資產 QA', cmd: 'node', args: ['scripts/qa-lesson-assets.mjs', '--lesson', dir] }),
+  pdf: (dir) => ({ name: '匯出 PDF', cmd: 'node', args: ['scripts/export-slides-pdf.mjs', '--slides-dir', path.join(dir, 'slides')] }),
+};
+
+async function pythonBin() {
+  const venv = path.join(root, '.venv', 'bin', 'python');
+  return (await exists(venv)) ? venv : 'python3';
+}
+
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, `http://localhost:${PORT}`);
   const send = (code, body, type = 'application/json; charset=utf-8') => {
@@ -175,6 +232,67 @@ const server = http.createServer(async (req, res) => {
     if (styleMatch && req.method === 'POST') {
       const body = await readBody(req);
       return send(200, await saveStyle(styleMatch[1], String(body.style || 'slate-citrus')));
+    }
+    const runMatch = url.pathname.match(/^\/api\/lessons\/([a-z0-9-]+)\/run$/);
+    if (runMatch && req.method === 'POST') {
+      const id = runMatch[1];
+      const body = await readBody(req);
+      const taskDef = LESSON_TASKS[body.task];
+      if (!taskDef) return send(400, { error: `unknown task: ${body.task}` });
+      if (runningJobFor(id)) return send(409, { error: '此課程已有工作執行中' });
+      const dir = path.relative(root, lessonDirById(id));
+      if (!(await exists(path.join(root, dir)))) return send(404, { error: 'lesson not found' });
+      const t = taskDef(dir);
+      const job = startJob(t.name, t.cmd, t.args, id);
+      return send(200, { jobId: job.id });
+    }
+    if (url.pathname === '/api/jobs' && req.method === 'GET') {
+      return send(200, [...jobs.values()].map(({ log, ...j }) => ({ ...j, logLength: log.length })).reverse().slice(0, 30));
+    }
+    const jobMatch = url.pathname.match(/^\/api\/jobs\/(\d+)$/);
+    if (jobMatch && req.method === 'GET') {
+      const job = jobs.get(jobMatch[1]);
+      if (!job) return send(404, { error: 'job not found' });
+      const offset = Math.max(0, Number(url.searchParams.get('offset') || 0));
+      return send(200, {
+        id: job.id, name: job.name, lessonId: job.lessonId, status: job.status, code: job.code,
+        logChunk: job.log.slice(offset), logLength: job.log.length,
+      });
+    }
+    if (url.pathname === '/api/upload' && req.method === 'POST') {
+      const rawName = url.searchParams.get('name') || 'upload.pdf';
+      const safe = rawName.replace(/[^\w.一-鿿-]+/g, '_').slice(-80);
+      const dir = path.join(root, 'work', 'review-ui-uploads');
+      await fs.mkdir(dir, { recursive: true });
+      const dest = path.join(dir, `${Date.now()}-${safe}`);
+      await fs.writeFile(dest, await readRawBody(req));
+      return send(200, { path: path.relative(root, dest) });
+    }
+    if (url.pathname === '/api/pipeline' && req.method === 'POST') {
+      const body = await readBody(req);
+      const lessonId = String(body.lessonId || '').trim();
+      const lessonTitle = String(body.lessonTitle || '').trim();
+      const lessonType = ['regular', 'pinyin', 'auto'].includes(body.lessonType) ? body.lessonType : 'regular';
+      if (!/^[a-z0-9][a-z0-9-]{1,40}$/.test(lessonId)) return send(400, { error: 'lesson id 格式不對（例：lesson-02、pinyin-01）' });
+      if (!lessonTitle) return send(400, { error: '請填課程標題' });
+      for (const [key, label] of [['sourcePdf', '教材 PDF'], ['contentFile', 'content extract JSON']]) {
+        const p = path.resolve(root, String(body[key] || ''));
+        if (!p.startsWith(root + path.sep) || !(await exists(p))) return send(400, { error: `${label} 找不到：${body[key] || '(未填)'}` });
+      }
+      if (runningJobFor(lessonId)) return send(409, { error: '此課程已有工作執行中' });
+      const outBase = lessonId.startsWith('pinyin') ? 'output/pinyin' : 'output/book-1';
+      const outputDir = `${outBase}/${lessonId}/database/`;
+      const job = startJob(`Pipeline 1–8 · ${lessonId}`, await pythonBin(), [
+        'scripts/run_pipeline.py',
+        '--lesson-type', lessonType,
+        '--lesson-id', lessonId,
+        '--lesson-title', lessonTitle,
+        '--source-pdf', String(body.sourcePdf),
+        '--output-dir', outputDir,
+        '--content-file', String(body.contentFile),
+        '--yes',
+      ], lessonId);
+      return send(200, { jobId: job.id });
     }
     if (url.pathname.startsWith('/files/')) {
       const rel = decodeURIComponent(url.pathname.slice('/files/'.length));
