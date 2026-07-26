@@ -45,8 +45,8 @@ button.ok{border-color:var(--green);color:var(--green)}
 button.ok:hover{background:var(--green-tint)}
 button.no{border-color:var(--red);color:var(--red)}
 button.no:hover{background:var(--red-tint)}
-button.active-ok{background:var(--green);border-color:var(--green);color:#fff}
-button.active-no{background:var(--red);border-color:var(--red);color:#fff}
+button.active-ok,button.active-ok:hover{background:var(--green);border-color:var(--green);color:#fff}
+button.active-no,button.active-no:hover{background:var(--red);border-color:var(--red);color:#fff}
 select{font:inherit;font-size:13px;font-weight:700;color:var(--steel-dark);border:1px solid var(--border);border-radius:10px;padding:6px 10px;background:#fff}
 iframe{width:100%;aspect-ratio:16/10;border:1px solid var(--border);border-radius:14px;background:#fff}
 .qa{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:12px}
@@ -104,8 +104,8 @@ function renderDetail(l) {
       <span class="n">${s.n}</span>
       <span><span class="name">${s.name}</span><br><span class="sub">${label}${s.updatedAt?' · '+s.updatedAt.slice(0,10):''}</span></span>
       <span class="actions">
-        <button class="ok ${s.status==='approved'?'active-ok':''}" onclick="setStep(${s.n},'${s.status==='approved'?'pending':'approved'}')">核准</button>
-        <button class="no ${s.status==='rejected'?'active-no':''}" onclick="setStep(${s.n},'${s.status==='rejected'?'pending':'rejected'}')">退回</button>
+        <button class="ok ${s.status==='approved'?'active-ok':''}" onclick="setStep(${s.n},'${s.status==='approved'?'pending':'approved'}')">${s.status==='approved'?'✓ 已核准':'核准'}</button>
+        <button class="no ${s.status==='rejected'?'active-no':''}" onclick="setStep(${s.n},'${s.status==='rejected'?'pending':'rejected'}')">${s.status==='rejected'?'✗ 已退回':'退回'}</button>
       </span>
     </div>`;
   };
