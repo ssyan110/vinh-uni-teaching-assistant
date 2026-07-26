@@ -30,7 +30,8 @@
     "pinyin:l5:steps10-13": "node scripts/generate-pinyin-remaining-steps10-13.mjs 05",
     "pinyin:l6:steps10-13": "node scripts/generate-pinyin-remaining-steps10-13.mjs 06",
     "pinyin:l7:steps10-13": "node scripts/generate-pinyin-remaining-steps10-13.mjs 07",
-    "create:deck": "node scripts/create-teacher-deck.mjs"
+    "create:deck": "node scripts/create-teacher-deck.mjs",
+    "review:ui": "node scripts/review-ui/server.mjs"
   },
   "dependencies": {
     "@playwright/test": "latest",

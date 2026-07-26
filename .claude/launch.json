@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "review-ui",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "review:ui"],
+      "port": 4173
+    }
+  ]
+}

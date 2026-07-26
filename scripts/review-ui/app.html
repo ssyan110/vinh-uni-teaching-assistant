@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>教材審閱台 · Review Dashboard</title>
+<style>
+:root{color-scheme:light;--steel:#33566B;--steel-dark:#22333E;--steel-tint:#DEE9EF;--gold:#B08616;--gold-fill:#D9A521;--gold-tint:#F7EDCB;--paper:#F2F5F7;--card:#FDFEFE;--muted:#5A6B78;--border:rgba(51,86,107,.22);--red:#B04A3E;--red-tint:#F6E5E2;--green:#3E7A4E;--green-tint:#E2F0E5}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--paper);color:var(--steel-dark);min-height:100vh}
+header{position:sticky;top:0;z-index:10;background:rgba(248,251,252,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);padding:14px 26px;display:flex;align-items:center;gap:14px}
+header:before{content:"";position:fixed;left:0;top:0;bottom:0;width:8px;background:var(--steel)}
+h1{font-size:19px;margin:0;font-weight:800}
+h1 small{color:var(--gold);font-weight:800}
+.crumb{color:var(--muted);font-size:14px;font-weight:600;cursor:pointer}
+.crumb:hover{color:var(--steel)}
+main{max-width:1200px;margin:0 auto;padding:26px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px 20px;box-shadow:0 8px 22px rgba(34,51,62,.07);cursor:pointer;transition:transform .15s ease,box-shadow .15s ease}
+.card:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(34,51,62,.12)}
+.card h2{font-size:17px;margin:0 0 4px;font-weight:800}
+.tag{display:inline-flex;align-items:center;height:22px;padding:0 10px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.05em;background:var(--steel-tint);color:var(--steel);text-transform:uppercase}
+.tag.gold{background:var(--gold-tint);color:var(--gold)}
+.meta{color:var(--muted);font-size:13px;margin:8px 0 12px}
+.bar{height:8px;border-radius:999px;background:var(--steel-tint);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--steel);border-radius:999px}
+.bar .done{background:var(--gold-fill)}
+.barlabel{font-size:12px;color:var(--muted);margin-top:6px;font-weight:600}
+.detail{display:grid;grid-template-columns:400px 1fr;gap:20px;align-items:start}
+@media(max-width:980px){.detail{grid-template-columns:1fr}}
+.panel{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px 20px;box-shadow:0 8px 22px rgba(34,51,62,.07)}
+.panel h3{margin:0 0 12px;font-size:15px;font-weight:800;color:var(--steel)}
+.step{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;padding:9px 10px;border-radius:12px;border:1px solid transparent}
+.step:hover{background:var(--paper)}
+.step .n{width:26px;height:26px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;background:var(--steel-tint);color:var(--steel)}
+.step.approved .n{background:var(--green);color:#fff}
+.step.auto-done .n{background:var(--steel);color:#fff}
+.step.rejected .n{background:var(--red);color:#fff}
+.step .name{font-size:14px;font-weight:700}
+.step .sub{font-size:11px;color:var(--muted);font-weight:600}
+.actions{display:flex;gap:6px}
+button{font:inherit;font-size:12px;font-weight:800;border:1px solid var(--border);background:#fff;color:var(--steel);border-radius:999px;padding:4px 12px;cursor:pointer}
+button:hover{background:var(--steel-tint)}
+button.ok{border-color:var(--green);color:var(--green)}
+button.ok:hover{background:var(--green-tint)}
+button.no{border-color:var(--red);color:var(--red)}
+button.no:hover{background:var(--red-tint)}
+button.active-ok{background:var(--green);border-color:var(--green);color:#fff}
+button.active-no{background:var(--red);border-color:var(--red);color:#fff}
+select{font:inherit;font-size:13px;font-weight:700;color:var(--steel-dark);border:1px solid var(--border);border-radius:10px;padding:6px 10px;background:#fff}
+iframe{width:100%;aspect-ratio:16/10;border:1px solid var(--border);border-radius:14px;background:#fff}
+.qa{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:12px}
+.qa img{width:100%;border-radius:10px;border:1px solid var(--border);display:block;cursor:zoom-in}
+.rowline{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.empty{color:var(--muted);font-size:14px;padding:30px;text-align:center}
+a.plain{color:var(--steel);font-weight:700;font-size:13px}
+.legend{font-size:11px;color:var(--muted);font-weight:600;margin-top:10px;line-height:1.6}
+</style>
+</head>
+<body>
+<header>
+  <h1>教材審閱台 <small>· Review</small></h1>
+  <span class="crumb" id="crumb" hidden>← 返回課程列表</span>
+</header>
+<main id="app"><div class="empty">載入中…</div></main>
+<script>
+const $ = (s, el=document) => el.querySelector(s);
+let lessons = [], current = null;
+
+async function api(path, opts) {
+  const r = await fetch(path, opts ? { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(opts) } : undefined);
+  if (!r.ok) throw new Error((await r.json()).error || r.status);
+  return r.json();
+}
+
+function progress(l) {
+  const auto = l.steps.filter(s=>s.status==='auto-done').length;
+  return `<div class="bar"><i class="done" style="width:${(l.doneCount/18)*100}%"></i></div>
+  <div class="barlabel">${l.doneCount}/18 完成 · ${l.approvedCount} 已核准 · ${auto} 自動偵測</div>`;
+}
+
+function renderList() {
+  $('#crumb').hidden = true; current = null;
+  const app = $('#app');
+  if (!lessons.length) { app.innerHTML = '<div class="empty">找不到課程。請確認 output/ 目錄。</div>'; return; }
+  app.innerHTML = `<div class="grid">` + lessons.map(l => `
+    <div class="card" onclick="openLesson('${l.id}')">
+      <div class="rowline" style="margin-bottom:6px">
+        <span class="tag ${l.type==='pinyin'?'gold':''}">${l.type}</span>
+        <span class="tag" style="background:transparent;border:1px solid var(--border)">${l.style}</span>
+      </div>
+      <h2>${l.title}</h2>
+      <div class="meta">${l.slideCount} 張投影片 · ${l.dbFiles} 個資料庫檔${l.hasPresenter?' · presenter ✓':''}</div>
+      ${progress(l)}
+    </div>`).join('') + `</div>`;
+}
+
+function renderDetail(l) {
+  current = l; $('#crumb').hidden = false;
+  const stepRow = s => {
+    const cls = s.status.replace('auto-done','auto-done');
+    const label = {approved:'已核准', rejected:'退回', 'auto-done':'自動偵測完成', pending:'待處理'}[s.status];
+    return `<div class="step ${cls}">
+      <span class="n">${s.n}</span>
+      <span><span class="name">${s.name}</span><br><span class="sub">${label}${s.updatedAt?' · '+s.updatedAt.slice(0,10):''}</span></span>
+      <span class="actions">
+        <button class="ok ${s.status==='approved'?'active-ok':''}" onclick="setStep(${s.n},'${s.status==='approved'?'pending':'approved'}')">核准</button>
+        <button class="no ${s.status==='rejected'?'active-no':''}" onclick="setStep(${s.n},'${s.status==='rejected'?'pending':'rejected'}')">退回</button>
+      </span>
+    </div>`;
+  };
+  $('#app').innerHTML = `
+  <div class="rowline">
+    <span class="tag ${l.type==='pinyin'?'gold':''}">${l.type}</span>
+    <h2 style="margin:0;font-size:22px">${l.title}</h2>
+    <span style="flex:1"></span>
+    <label style="font-size:13px;font-weight:700;color:var(--muted)">風格
+      <select onchange="setStyle(this.value)">
+        ${['slate-citrus','coral-studio','original'].map(s=>`<option ${l.style===s?'selected':''}>${s}</option>`).join('')}
+      </select>
+    </label>
+    ${l.presenterUrl?`<a class="plain" href="${l.presenterUrl}" target="_blank">開新視窗放映 ↗</a>`:''}
+  </div>
+  <div class="detail">
+    <div class="panel">
+      <h3>審閱進度 · 18 步</h3>
+      ${progress(l)}<div style="height:10px"></div>
+      ${l.steps.map(stepRow).join('')}
+      <div class="legend">步驟 1–8 由資料庫產出自動偵測；9–18 需教師核准。「核准」再點一次可還原為待處理。狀態存於 review-status.json。</div>
+    </div>
+    <div>
+      <div class="panel">
+        <h3>簡報預覽</h3>
+        ${l.presenterUrl?`<iframe src="${l.presenterUrl}"></iframe>`:'<div class="empty">尚無 presenter</div>'}
+      </div>
+      ${l.qa.length?`<div class="panel" style="margin-top:20px"><h3>QA 截圖</h3><div class="qa">${l.qa.map(q=>`<a href="/files/${q}" target="_blank"><img src="/files/${q}" loading="lazy"></a>`).join('')}</div></div>`:''}
+    </div>
+  </div>`;
+}
+
+window.openLesson = async (id) => { renderDetail(lessons.find(l=>l.id===id)); };
+window.setStep = async (n, status) => {
+  const updated = await api(`/api/lessons/${current.id}/steps/${n}`, { status });
+  lessons = lessons.map(l => l.id===updated.id ? updated : l);
+  renderDetail(updated);
+};
+window.setStyle = async (style) => {
+  const updated = await api(`/api/lessons/${current.id}/style`, { style });
+  lessons = lessons.map(l => l.id===updated.id ? updated : l);
+  renderDetail(updated);
+};
+$('#crumb').onclick = renderList;
+
+api('/api/lessons').then(d => { lessons = d; renderList(); })
+  .catch(e => { $('#app').innerHTML = `<div class="empty">載入失敗：${e.message}</div>`; });
+</script>
+</body>
+</html>
