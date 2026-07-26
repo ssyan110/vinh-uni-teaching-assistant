@@ -21,6 +21,8 @@ description: 花叔Design（Huashu-Design）——用HTML做高保真原型、�
 
 不适用场景：生产级Web App、SEO网站、需要后端的动态系统——这些用frontend-design skill。
 
+本项目课程 deck 生成前必须先问 Adam 选哪个视觉风格：`original`、`coral-studio`、`slate-citrus`（默认 Slate Citrus）。风格是纯 CSS skin（`output/pinyin/pinyin-01/design-prototypes/<style>-full-deck/prototype.css`），作为每张 slide 的最后一个 stylesheet 引入，不改版式、内容、顺序与 presenter 行为。
+
 ## 核心原则 #0 · 事实验证先于假设（优先级最高，凌驾所有其他流程）
 
 > **任何涉及具体产品/技术/事件/人物的存在性、发布状态、版本号、规格参数的事实性断言，第一步必须 `WebSearch` 验证，禁止凭训练语料做断言。**

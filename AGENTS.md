@@ -14,6 +14,8 @@ Keep this file small; Codex reads `AGENTS.md` automatically.
 
 AI teaching-material system. For structural/generator work, read `.codex/agent-guide-full.md` first; do not use `/Users/ssyan110/Development/huashu_design` for this project.
 
+Slide style gate: before generating any slide deck, ask Adam which style — `original`, `coral-studio`, or `slate-citrus` (default: Slate Citrus). Skins: `output/pinyin/pinyin-01/design-prototypes/<style>-full-deck/prototype.css`, visual-only, applied as the last stylesheet per slide.
+
 ## Load-on-demand docs
 
 - Full previous project instructions: `.codex/agent-guide-full.md`
