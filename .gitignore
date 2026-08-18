@@ -1,0 +1,43 @@
+# OS files
+.DS_Store
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Playwright / test artifacts
+playwright-report/
+test-results/
+
+# Legacy agent directory
+.agent/
+
+# Local temp/cache
+.cache/
+.tmp/
+tmp/
+
+# Working files (OCR, PDFs, intermediate)
+work/
+
+# Source textbook PDFs (local inputs; too large for git)
+Giáo trình/
+Giáo trình/
+Giáo trình full/
