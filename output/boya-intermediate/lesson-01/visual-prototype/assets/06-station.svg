@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" preserveAspectRatio="xMidYMid slice"><defs>
+  <linearGradient id="blueFade" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2F6BFF"/><stop offset="1" stop-color="#89A8FF"/></linearGradient>
+  <linearGradient id="coralFade" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF6B57"/><stop offset="1" stop-color="#FFB19F"/></linearGradient>
+  <linearGradient id="paperFade" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#DDE6EF"/></linearGradient>
+  <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs><rect width="1000" height="700" fill="#F7F8FA"/>
+  <rect width="1000" height="700" fill="#F7F8FA"/>
+  <rect x="52" y="60" width="410" height="250" rx="34" fill="#DCE7FF"/>
+  <rect x="538" y="60" width="410" height="250" rx="34" fill="#FFE2DC"/>
+  <rect x="52" y="390" width="410" height="250" rx="34" fill="#D9F0EF"/>
+  <rect x="538" y="390" width="410" height="250" rx="34" fill="#F4EAC5"/>
+  <path d="M154 202 C194 202 194 119 234 119 S274 270 314 270 S354 165 394 165" fill="none" stroke="#2F6BFF" stroke-width="14" stroke-linecap="round"/>
+  <path d="M644 200h195a30 30 0 0 1 30 30v46a30 30 0 0 1-30 30h-78l-36 35v-35h-81a30 30 0 0 1-30-30v-46a30 30 0 0 1 30-30Z" fill="#FF6B57"/>
+  <path d="M150 522h206" stroke="#1D9A9A" stroke-width="18" stroke-linecap="round"/>
+  <path d="M150 566h145" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round"/>
+  <path d="M640 530l42 42 88-106" fill="none" stroke="#B68B00" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="500" cy="350" r="40" fill="#0F172A"/>
+  <circle cx="500" cy="350" r="17" fill="#FFFFFF"/>
+  <path d="M500 310v-42M500 390v42M460 350h-42M540 350h42" stroke="#0F172A" stroke-width="8" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,58 @@
+{
+  "package": "boya-intermediate-lesson-01-teacher-guide-content-master",
+  "status": "approved_by_adam_2026-08-20",
+  "lesson_id": "boya-intermediate-i-lesson-01",
+  "lesson_number": 1,
+  "lesson_title": "中国人的姓名",
+  "canonical_source": "work/boya-intermediate/extractions/structured-lesson-01.json",
+  "canonical_source_sha256": "0e7c9ced06b7c6e80278b07f3721788de88494b495618705618f6f47f56ab84e",
+  "period_count": 6,
+  "minutes_per_period": 50,
+  "total_minutes": 300,
+  "meeting_plan": [
+    {
+      "meeting": 1,
+      "periods": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "instructional_minutes": 200
+    },
+    {
+      "meeting": 2,
+      "periods": [
+        "P5",
+        "P6"
+      ],
+      "instructional_minutes": 100
+    }
+  ],
+  "source_section_count": 63,
+  "vocabulary_record_count": 34,
+  "grammar_pattern_count": 7,
+  "text_dialogue_count": 5,
+  "exercise_count": 35,
+  "coverage_count": 35,
+  "audio_track_count": 11,
+  "support_material_count": 11,
+  "student_language_policy": "学生端材料使用中文；目标内容与教师手册使用简体中文",
+  "teacher_guide_language": "简体中文",
+  "vietnamese_explanation_policy": "仅在必要时用于说明",
+  "reference_manual_style": "参考正式教师手册的课次目标、教学重点、课时范本、练习解答与课后预习结构",
+  "html_required": false,
+  "downstream_order": [
+    "teacher-guide-approval",
+    "prep-cards-and-activity-cards",
+    "internal-ppt-storyboard-recheck",
+    "visual-storyboard-recheck",
+    "native-pptx",
+    "audio-and-speaker-notes",
+    "qa-and-rehearsal"
+  ],
+  "output_files": [
+    "lesson-01-teacher-guide.md",
+    "manifest.json"
+  ]
+}

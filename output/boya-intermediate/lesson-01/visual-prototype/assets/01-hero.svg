@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" preserveAspectRatio="xMidYMid slice"><defs>
+  <linearGradient id="blueFade" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2F6BFF"/><stop offset="1" stop-color="#89A8FF"/></linearGradient>
+  <linearGradient id="coralFade" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF6B57"/><stop offset="1" stop-color="#FFB19F"/></linearGradient>
+  <linearGradient id="paperFade" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#DDE6EF"/></linearGradient>
+  <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs><rect width="1000" height="700" fill="#DCE5EE"/>
+  <rect width="1000" height="700" fill="#DCE5EE"/>
+  <circle cx="825" cy="110" r="190" fill="#B9C9DD" opacity=".7"/>
+  <circle cx="110" cy="620" r="240" fill="#F7F8FA" opacity=".8"/>
+  <path d="M0 510 C180 410 270 450 390 535 C520 628 650 630 1000 500 L1000 700 L0 700Z" fill="#C5D4E4"/>
+  <g transform="translate(450 145) rotate(-7)">
+    <rect width="320" height="190" rx="24" fill="#F7F8FA"/>
+    <rect x="24" y="25" width="98" height="12" rx="6" fill="#2F6BFF"/>
+    <rect x="24" y="60" width="228" height="10" rx="5" fill="#D1D9E2"/>
+    <rect x="24" y="90" width="168" height="10" rx="5" fill="#D1D9E2"/>
+    <path d="M244 115c0-30 24-54 54-54s54 24 54 54v25H244Z" fill="#2F6BFF" opacity=".9"/>
+    <circle cx="298" cy="55" r="30" fill="#89A8FF"/>
+  </g>
+  <g transform="translate(650 360) rotate(9)">
+    <rect width="230" height="150" rx="20" fill="#0F172A"/>
+    <circle cx="50" cy="46" r="22" fill="#FF6B57"/>
+    <path d="M25 104c0-28 22-50 50-50s50 22 50 50v14H25Z" fill="#FFB19F"/>
+    <rect x="118" y="38" width="75" height="10" rx="5" fill="#FFFFFF" opacity=".9"/>
+    <rect x="118" y="67" width="54" height="10" rx="5" fill="#FFFFFF" opacity=".35"/>
+    <rect x="118" y="96" width="85" height="10" rx="5" fill="#FFFFFF" opacity=".35"/>
+  </g>
+  <path d="M150 220c75-62 170-58 230 8" fill="none" stroke="#2F6BFF" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+  <path d="M168 250c64-45 131-42 186 7" fill="none" stroke="#FF6B57" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+</svg>

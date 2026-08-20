@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="榮市大學《博雅漢語聽說：中級衝刺篇 I》整學期 ACTFL PBI 教案審閱版">
+  <title>博雅漢語聽說・中級衝刺篇 I｜整學期教案審閱版</title>
+  <style>
+    :root {
+      --ink: #1e2b36;
+      --muted: #667582;
+      --paper: #fbfaf6;
+      --surface: #ffffff;
+      --line: #dce3e6;
+      --navy: #17324d;
+      --blue: #2e6f95;
+      --mint: #dcefe9;
+      --mint-dark: #2b6c62;
+      --coral: #c66a56;
+      --coral-soft: #f8e7e1;
+      --gold: #c6953d;
+      --gold-soft: #fbf1d9;
+      --purple: #635784;
+      --purple-soft: #eeeafa;
+      --shadow: 0 14px 38px rgba(27, 47, 61, .08);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      line-height: 1.65;
+    }
+    a { color: var(--blue); }
+    a:hover { color: var(--coral); }
+    h1, h2, h3, h4, p { margin-top: 0; }
+    h1, h2, h3, h4 { color: var(--navy); line-height: 1.25; }
+    h1 { font-size: clamp(2rem, 4vw, 3.6rem); letter-spacing: -.045em; margin-bottom: 16px; }
+    h2 { font-size: clamp(1.45rem, 2vw, 2rem); margin-bottom: 18px; }
+    h3 { font-size: 1.12rem; margin-bottom: 10px; }
+    h4 { font-size: .98rem; margin-bottom: 7px; }
+    small { color: var(--muted); }
+
+    .app-shell { display: grid; grid-template-columns: 278px minmax(0, 1fr); min-height: 100vh; }
+    .sidebar {
+      position: sticky; top: 0; height: 100vh; overflow: auto;
+      padding: 28px 20px; background: var(--navy); color: #eaf1f4;
+    }
+    .brand { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 26px; }
+    .brand-mark { width: 30px; height: 30px; border: 2px solid #a9d9ce; border-radius: 9px 9px 9px 2px; transform: rotate(-8deg); flex: 0 0 auto; }
+    .brand strong { display: block; font-size: .96rem; letter-spacing: .03em; }
+    .brand span { display: block; color: #a9bdc8; font-size: .75rem; margin-top: 3px; }
+    .nav-label { color: #93acb8; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; margin: 22px 0 7px; }
+    .sidebar nav a { display: block; color: #dfecef; text-decoration: none; font-size: .88rem; padding: 8px 10px; border-radius: 9px; }
+    .sidebar nav a:hover { background: rgba(220, 239, 233, .12); color: #fff; }
+    .sidebar .note { margin-top: 26px; padding: 13px 12px; border: 1px solid rgba(220,239,233,.24); border-radius: 12px; color: #c4d5da; font-size: .78rem; }
+    .sidebar button { width: 100%; border: 1px solid rgba(220,239,233,.34); background: transparent; color: #eaf1f4; border-radius: 9px; padding: 8px 10px; cursor: pointer; margin-top: 12px; }
+    .sidebar button:hover { background: rgba(220, 239, 233, .12); }
+
+    main { min-width: 0; }
+    .hero { padding: 70px clamp(24px, 6vw, 92px) 44px; background: linear-gradient(135deg, #eef6f3 0%, #fbfaf6 58%, #f9e8e1 100%); border-bottom: 1px solid var(--line); }
+    .eyebrow { color: var(--coral); font-size: .75rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 13px; }
+    .hero .subtitle { max-width: 760px; font-size: 1.06rem; color: #435666; margin-bottom: 22px; }
+    .hero-meta { display: flex; gap: 9px; flex-wrap: wrap; align-items: center; }
+    .pill { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 5px 10px; background: var(--surface); border: 1px solid var(--line); color: var(--navy); font-size: .77rem; font-weight: 700; }
+    .pill.status { background: var(--gold-soft); border-color: #e8cb8d; color: #755319; }
+    .content { max-width: 1440px; padding: 38px clamp(24px, 6vw, 92px) 90px; }
+    .section { scroll-margin-top: 20px; margin-top: 60px; }
+    .section:first-child { margin-top: 0; }
+    .section-heading { display: flex; gap: 16px; align-items: flex-end; justify-content: space-between; margin-bottom: 18px; }
+    .section-heading p { color: var(--muted); max-width: 740px; margin: 0; }
+
+    .grid { display: grid; gap: 16px; }
+    .grid.stats { grid-template-columns: repeat(4, minmax(0, 1fr)); margin: -2px 0 28px; }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 21px; }
+    .stat { min-height: 130px; position: relative; overflow: hidden; }
+    .stat:after { content: ""; position: absolute; width: 90px; height: 90px; right: -30px; top: -30px; border-radius: 50%; background: var(--mint); opacity: .7; }
+    .stat:nth-child(2):after { background: var(--coral-soft); }
+    .stat:nth-child(3):after { background: var(--gold-soft); }
+    .stat:nth-child(4):after { background: var(--purple-soft); }
+    .stat .number { position: relative; z-index: 1; display: block; font-size: 2.15rem; font-weight: 850; letter-spacing: -.05em; color: var(--navy); }
+    .stat .label { position: relative; z-index: 1; display: block; font-size: .83rem; color: var(--muted); }
+    .callout { border-left: 4px solid var(--coral); background: var(--coral-soft); padding: 15px 18px; border-radius: 0 12px 12px 0; margin: 17px 0; }
+    .callout.mint { border-color: var(--mint-dark); background: var(--mint); }
+    .callout.gold { border-color: var(--gold); background: var(--gold-soft); }
+    .callout p:last-child { margin-bottom: 0; }
+    .muted { color: var(--muted); }
+    .compact { margin: 0; padding-left: 1.2em; }
+    .compact li + li { margin-top: 5px; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 11px; }
+    .tag { display: inline-flex; align-items: center; padding: 3px 8px; border-radius: 999px; background: #eff4f5; color: #3c5a6a; font-size: .72rem; }
+    .tag.mint { background: var(--mint); color: var(--mint-dark); }
+    .tag.coral { background: var(--coral-soft); color: #9d4c3a; }
+    .tag.gold { background: var(--gold-soft); color: #795c22; }
+    .tag.purple { background: var(--purple-soft); color: var(--purple); }
+
+    table { width: 100%; border-collapse: collapse; font-size: .86rem; }
+    th, td { padding: 11px 12px; border-bottom: 1px solid var(--line); vertical-align: top; text-align: left; }
+    th { color: var(--navy); background: #f2f6f6; font-size: .76rem; letter-spacing: .04em; white-space: nowrap; }
+    tr:last-child td { border-bottom: 0; }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 13px; background: var(--surface); box-shadow: var(--shadow); }
+    .table-wrap table { min-width: 760px; }
+    .session-no { font-weight: 850; font-size: 1.06rem; color: var(--coral); white-space: nowrap; }
+    .session-title { font-weight: 800; color: var(--navy); }
+    .source-ref { color: var(--purple); font-size: .78rem; }
+
+    .method-card { position: relative; padding-top: 48px; }
+    .method-number { position: absolute; top: 17px; left: 20px; color: var(--coral); font-weight: 850; font-size: .8rem; letter-spacing: .12em; }
+    .method-card h3 { margin-bottom: 8px; }
+    .flow { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; margin: 20px 0; }
+    .flow-step { min-height: 100px; padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); position: relative; }
+    .flow-step:not(:last-child):after { content: "→"; position: absolute; right: -14px; top: 35px; color: var(--coral); font-size: 1.3rem; z-index: 2; }
+    .flow-step strong { display: block; color: var(--navy); font-size: .84rem; }
+    .flow-step span { display: block; color: var(--muted); font-size: .74rem; margin-top: 5px; }
+
+    details { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); margin-bottom: 13px; overflow: hidden; }
+    details summary { cursor: pointer; list-style: none; padding: 18px 21px; display: flex; gap: 14px; align-items: center; justify-content: space-between; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary:after { content: "+"; color: var(--coral); font-size: 1.35rem; font-weight: 500; }
+    details[open] summary:after { content: "−"; }
+    .summary-main { min-width: 0; }
+    .summary-kicker { color: var(--coral); font-size: .72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .summary-title { display: block; color: var(--navy); font-size: 1.08rem; font-weight: 850; margin-top: 4px; }
+    .summary-sub { display: block; color: var(--muted); font-size: .82rem; margin-top: 3px; }
+    .details-body { border-top: 1px solid var(--line); padding: 21px; }
+    .period-table { min-width: 860px; }
+    .period-table th:first-child { width: 76px; }
+    .period-table td:first-child { font-weight: 850; color: var(--coral); white-space: nowrap; }
+    .period-table td:nth-child(2) { font-weight: 700; color: var(--navy); width: 18%; }
+    .period-table td:nth-child(4) { width: 20%; color: var(--muted); font-size: .78rem; }
+    .evidence { display: inline-block; margin-top: 7px; padding: 3px 7px; border-radius: 7px; background: var(--mint); color: var(--mint-dark); font-size: .72rem; font-weight: 750; }
+    .mini-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .mini-box { padding: 13px 14px; background: #f7f9f8; border-radius: 11px; border: 1px solid #e5ecea; }
+    .mini-box strong { display: block; color: var(--navy); font-size: .78rem; margin-bottom: 4px; }
+    .mini-box span { color: var(--muted); font-size: .8rem; }
+
+    .unit-card { height: 100%; display: flex; flex-direction: column; }
+    .unit-card .unit-head { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; border-bottom: 1px solid var(--line); padding-bottom: 13px; margin-bottom: 14px; }
+    .unit-code { color: var(--coral); font-size: .76rem; font-weight: 850; letter-spacing: .1em; }
+    .unit-page { color: var(--muted); font-size: .76rem; text-align: right; }
+    .unit-card .push { margin-top: auto; }
+    .fact { border: 1px solid var(--line); border-radius: 11px; padding: 11px 12px; background: #fafcfc; margin: 11px 0; }
+    .fact b { display: inline-block; width: 22px; color: var(--coral); }
+    .fact span { font-size: .82rem; color: #465c69; }
+    .source-list { margin: 10px 0 0; padding-left: 1.15em; font-size: .81rem; }
+    .source-list li + li { margin-top: 4px; }
+
+    .rubric td:first-child { font-weight: 800; color: var(--navy); width: 22%; }
+    .rubric td:nth-child(2) { width: 12%; font-weight: 800; color: var(--coral); }
+    .checklist { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px 18px; margin: 0; padding: 0; list-style: none; }
+    .checklist li { position: relative; padding-left: 25px; font-size: .86rem; }
+    .checklist li:before { content: "□"; position: absolute; left: 0; color: var(--coral); font-size: 1.12rem; line-height: 1.35; }
+    .review-item { border-left: 3px solid var(--gold); padding: 10px 13px; background: #fffaf0; margin-top: 10px; border-radius: 0 10px 10px 0; }
+    .review-item strong { color: #73551c; }
+    footer { margin-top: 70px; padding: 25px 0 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .78rem; }
+
+    .search-bar { display: flex; gap: 10px; margin: 16px 0; }
+    .search-bar input { width: min(480px, 100%); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font: inherit; background: var(--surface); color: var(--ink); }
+    .search-bar input:focus { outline: 3px solid rgba(46,111,149,.16); border-color: var(--blue); }
+    [hidden] { display: none !important; }
+
+    @media (max-width: 1050px) {
+      .app-shell { grid-template-columns: 220px minmax(0, 1fr); }
+      .flow { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .flow-step:nth-child(3):after { display: none; }
+      .flow-step:nth-child(4):after { display: block; }
+    }
+    @media (max-width: 760px) {
+      .app-shell { display: block; }
+      .sidebar { position: relative; height: auto; padding: 19px 20px; }
+      .sidebar nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 6px; }
+      .sidebar .note, .sidebar button { display: none; }
+      .hero { padding: 42px 22px 32px; }
+      .content { padding: 28px 18px 60px; }
+      .grid.stats, .grid.two, .grid.three { grid-template-columns: 1fr; }
+      .flow { grid-template-columns: 1fr 1fr; }
+      .flow-step:not(:last-child):after { display: none; }
+      .mini-grid, .checklist { grid-template-columns: 1fr; }
+      .section-heading { display: block; }
+      .section-heading p { margin-top: 7px; }
+    }
+    @media print {
+      body { background: #fff; color: #111; }
+      .sidebar, .search-bar, .hero-meta button { display: none !important; }
+      .app-shell { display: block; }
+      .hero { padding: 25px 0; background: #fff; border-bottom: 1px solid #aaa; }
+      .content { padding: 20px 0; max-width: none; }
+      .card, details, .table-wrap { box-shadow: none; break-inside: avoid; }
+      details { display: block; }
+      details > * { display: block !important; }
+      details summary:after { display: none; }
+      .section { margin-top: 35px; }
+      a { color: #111; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div>
+          <strong>整學期教案</strong>
+          <span>Teacher review draft · v1.0</span>
+        </div>
+      </div>
+      <div class="nav-label">Course map</div>
+      <nav>
+        <a href="#overview">課程定位</a>
+        <a href="#semester-map">學期時間軸</a>
+        <a href="#buoi-plans">15 次 buổi 教案</a>
+        <a href="#unit-blueprints">8 課單元設計</a>
+        <a href="#activity-coverage">教材活動覆蓋</a>
+        <a href="#assessment">評量與證據</a>
+        <a href="#materials">教材製作規格</a>
+        <a href="#review">待確認事項</a>
+      </nav>
+      <div class="nav-label">Source</div>
+      <nav>
+        <a href="../../Giáo%20trình/博雅汉语听说-中级冲刺篇/博雅汉语听说-中级冲刺篇I.pdf">掃描教材 PDF</a>
+        <a href="../../Giáo%20trình/博雅汉语听说-中级冲刺篇/教材资料索引.md">教材資料索引</a>
+        <a href="../../work/boya-intermediate/extractions/source-audit.json">來源審查 JSON</a>
+      </nav>
+      <div class="note">本頁是教師審閱版整學期教案，不是學生用簡報。正式教學材料仍須逐課確認來源頁、音檔對應與答案狀態。</div>
+      <button type="button" onclick="window.print()">列印／另存 PDF</button>
+    </aside>
+
+    <main>
+      <header class="hero" id="top">
+        <div class="eyebrow">Vinh University · Chinese Listening &amp; Speaking</div>
+        <h1>《博雅漢語聽說：中級衝刺篇 I》<br>整學期教案審閱版</h1>
+        <p class="subtitle">以 ACTFL Proficiency-Based Instruction 為主架構，將已學完的《初級起步篇》（一、二冊）銜接到中級聽說課。教材原有的聽力、句型、文化、調查、報告與模擬活動全部保留，重新放入 15 次、每次 200 分鐘的課堂循環。</p>
+        <div class="hero-meta">
+          <span class="pill status">待教師審閱</span>
+          <span class="pill">修訂版 1.0 · 2026-08-19</span>
+          <span class="pill">教師 review HTML</span>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="section" id="overview">
+          <div class="grid stats">
+            <div class="card stat"><span class="number">15</span><span class="label">次授課 buổi</span></div>
+            <div class="card stat"><span class="number">60</span><span class="label">節課堂 × 50 分鐘</span></div>
+            <div class="card stat"><span class="number">8</span><span class="label">教材課次</span></div>
+            <div class="card stat"><span class="number">200′</span><span class="label">每次到校授課時間</span></div>
+          </div>
+
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow">01 · Course position</div>
+              <h2>課程定位與設計邊界</h2>
+            </div>
+            <p>這一版先完成整學期的教師教案骨架與課堂邏輯。逐課簡報、作業題庫與答案鍵不在本次 HTML 的完成範圍。</p>
+          </div>
+
+          <div class="grid two">
+            <div class="card">
+              <h3>已知課程條件</h3>
+              <table>
+                <tbody>
+                  <tr><th>學期範圍</th><td>2026/09/07–2026/12/27；15 個實際授課週，保留 1 個彈性週。</td></tr>
+                  <tr><th>課堂結構</th><td>1 次 buổi = 4 節；1 節 50 分鐘；1 次到校授課共 200 分鐘。</td></tr>
+                  <tr><th>學生背景</th><td>越南大學生；已完成《博雅漢語聽說：初級起步篇》（一、二冊）。</td></tr>
+                  <tr><th>課程技能</th><td>以聽力理解、口語互動與口頭表現為主；閱讀只作為聽說支架。</td></tr>
+                  <tr><th>目標語言</th><td>簡體中文；最終學生版說明可使用自然越南文輔助，但不做逐句翻譯。</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="card">
+              <h3>教材來源狀態</h3>
+              <ul class="compact">
+                <li>掃描 PDF：148 頁，已保存於專案教材目錄。</li>
+                <li>8 課課名、教材頁碼範圍與 91 個 MP3 音檔已整理。</li>
+                <li>教材 QR code 共 8 組，對應課次音檔目錄。</li>
+                <li>本計畫使用教材活動類型與逐課活動清單，不自行補寫掃描教材未印出的答案。</li>
+                <li>正式逐課材料仍需保留 source page、PDF page、audio file 與 review status。</li>
+              </ul>
+              <div class="callout gold"><p><strong>來源控制：</strong>掃描教材沒有可直接引用的完整答案鍵。開放式口說題不設單一標準答案；選擇、填空與是非題在正式製作前逐題核對。</p></div>
+            </div>
+          </div>
+
+          <div class="callout mint">
+            <p><strong>課程主線：</strong>學生從「理解一段中文」逐步走向「使用中文完成一件事」。PBI 負責能力目標、輸入、支架、回饋與評量；Action-Oriented 活動提供角色、限制、受眾與共同決策。</p>
+          </div>
+
+          <div class="grid two">
+            <div class="card">
+              <h3>學期結束時的課程表現目標</h3>
+              <ul class="compact">
+                <li>能從熟悉主題的中級聽力材料抓住主旨，並說出關鍵細節與判斷依據。</li>
+                <li>能詢問、追問、澄清、改述、表達意見，並在聽不懂時修補溝通。</li>
+                <li>能針對人物、地方、經歷、文化或公共議題做 2–3 分鐘口頭表達。</li>
+                <li>能比較越南與中國的語言文化現象，避免只背誦教材句子。</li>
+              </ul>
+              <div class="tag-row"><span class="tag mint">Interpretive</span><span class="tag coral">Interpersonal</span><span class="tag purple">Presentational</span></div>
+            </div>
+            <div class="card">
+              <h3>ACTFL PBI 目標格式</h3>
+              <div class="fact"><b>F</b><span><strong>Functions / Tasks</strong>：描述、敘述、比較、解釋、推薦、說服、協商。</span></div>
+              <div class="fact"><b>A</b><span><strong>Accuracy</strong>：可理解度、核心句式、連接詞、語氣與必要的語用準確度。</span></div>
+              <div class="fact"><b>C</b><span><strong>Context / Content</strong>：自我、人際、音樂、城市、職場、挑戰、環境、學習。</span></div>
+              <div class="fact"><b>T</b><span><strong>Text Type</strong>：詞句、對話、短文、訪談、短報告、2–3 分鐘口語。</span></div>
+              <small>本課程使用 FACT 作為教學與課堂評量框架，不宣稱發出正式 ACTFL 等級。</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="method">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow">02 · Instructional architecture</div>
+              <h2>每課與每次 buổi 的固定教學邏輯</h2>
+            </div>
+            <p>每次 200 分鐘必須切換學習模式，不安排長時間教師講解。四節課各自有清楚的輸入、互動與產出責任。</p>
+          </div>
+          <div class="flow" aria-label="PBI lesson cycle">
+            <div class="flow-step"><strong>1. 情境</strong><span>建立問題與先備知識</span></div>
+            <div class="flow-step"><strong>2. 理解</strong><span>第一次聽主旨、第二次找證據</span></div>
+            <div class="flow-step"><strong>3. 注意</strong><span>從語境理解詞語、句型與語氣</span></div>
+            <div class="flow-step"><strong>4. 互動</strong><span>教材練習、訪談、資訊差</span></div>
+            <div class="flow-step"><strong>5. 遷移</strong><span>換情境完成小組任務</span></div>
+            <div class="flow-step"><strong>6. 重做</strong><span>回饋後重新表現並留下證據</span></div>
+          </div>
+          <div class="grid three">
+            <div class="card method-card"><span class="method-number">PERIOD 01</span><h3>輸入與理解</h3><p>教材音檔、對話、短文或文化材料先以意思為主。學生先猜情境，再找主旨與證據。</p><span class="tag mint">Interpretive mode</span></div>
+            <div class="card method-card"><span class="method-number">PERIOD 02</span><h3>語言支架</h3><p>把生詞、句型、替換、複述與教材題目放回剛聽過的語境，不做脫離情境的規則背誦。</p><span class="tag purple">Form in context</span></div>
+            <div class="card method-card"><span class="method-number">PERIOD 03–04</span><h3>互動與表現</h3><p>用角色、資訊差、限制和受眾讓學生完成教材活動與新增任務；每位學生都要留下個人說話證據。</p><span class="tag coral">Interpersonal + presentational</span></div>
+          </div>
+          <div class="callout"><p><strong>每一課不是「教完教材頁面」而已：</strong>六節課最後必須有一個新的口語情境，確認學生能否把本課語言帶到課文以外。</p></div>
+        </section>
+
+        <section class="section" id="semester-map">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow">03 · Semester timeline</div>
+              <h2>15 次 buổi／60 節完整時間軸</h2>
+            </div>
+            <p>日期按照學期區間做成暫定週次；若正式課表或校方假期不同，移動日期即可，不改變課程節次與教學順序。</p>
+          </div>
+          <div class="search-bar"><input id="sessionSearch" type="search" placeholder="搜尋 buổi、課名、主題或任務…" aria-label="搜尋學期教案"></div>
+          <div class="table-wrap">
+            <table id="timelineTable">
+              <thead><tr><th>Buổi</th><th>暫定週次</th><th>四節課配置</th><th>主題／教材</th><th>主要口語證據</th></tr></thead>
+              <tbody>
+                <tr data-search="1 課程診斷 課程說明 聽力口語基線"><td class="session-no">01</td><td>09/07–09/13</td><td>課程定位；先備銜接；診斷聽力；診斷互動</td><td><span class="session-title">課程啟動與診斷</span><br><span class="source-ref">不引入新教材課文</span></td><td>個人 60 秒自我介紹；雙人追問；聽力主旨與細節紀錄</td></tr>
+                <tr data-search="2 第1課 中国人的姓名 姓名 聽力 句型"><td class="session-no">02</td><td>09/14–09/20</td><td>第1課 P1–P4</td><td><span class="session-title">中國人的姓名</span><br><span class="source-ref">印刷頁 1–16；PDF 12–27；11 音檔</span></td><td>聽力證據表；姓名意義 90 秒說明；稱姓與澄清練習</td></tr>
+                <tr data-search="3 第1課 第2課 姓名 朋友 調查"><td class="session-no">03</td><td>09/21–09/27</td><td>第1課 P5–P6；第2課 P1–P2</td><td><span class="session-title">姓名文化到朋友關係</span><br><span class="source-ref">第1課收束；第2課導入</span></td><td>命名顧問任務；朋友調查準備；第一次聽力主旨</td></tr>
+                <tr data-search="4 第2課 真正的朋友 朋友 辯論 報告"><td class="session-no">04</td><td>09/28–10/04</td><td>第2課 P3–P6</td><td><span class="session-title">真正的朋友</span><br><span class="source-ref">印刷頁 17–31；PDF 28–42；12 音檔</span></td><td>朋友價值觀 3 分鐘演講；小組報告；辯論與追問</td></tr>
+                <tr data-search="5 第5課 音乐的魅力 音樂 偏好 評論"><td class="session-no">05</td><td>10/05–10/11</td><td>第5課 P1–P4</td><td><span class="session-title">音樂的魅力</span><br><span class="source-ref">印刷頁 63–78；PDF 74–89；12 音檔</span></td><td>音樂偏好調查；聽感描述；短篇音樂評論</td></tr>
+                <tr data-search="6 第5課 第3課 音樂 宜居之地 旅遊"><td class="session-no">06</td><td>10/12–10/18</td><td>第5課 P5–P6；第3課 P1–P2</td><td><span class="session-title">音樂策展到宜居城市</span><br><span class="source-ref">第5課收束；第3課導入</span></td><td>校園音樂策展提案；旅遊類別偏好；第3課主旨聽力</td></tr>
+                <tr data-search="7 第3課 宜居之地 城市 農村 旅遊線路"><td class="session-no">07</td><td>10/19–10/25</td><td>第3課 P3–P6</td><td><span class="session-title">宜居之地</span><br><span class="source-ref">印刷頁 32–45；PDF 43–56；11 音檔</span></td><td>十日旅遊線路；海島旅遊公司模擬；城市／農村辯論</td></tr>
+                <tr data-search="8 中期評量 聽力 互動 演講 回饋"><td class="session-no">08</td><td>10/26–11/01</td><td>中期表現；回饋；重做；學習檔案</td><td><span class="session-title">中期聽說評量</span><br><span class="source-ref">範圍：第1、2、5、3課</span></td><td>新聽力材料；陌生情境互動；2 分鐘口頭表現；修訂版重做</td></tr>
+                <tr data-search="9 第7課 我的同事 職場 禮貌 謙虛"><td class="session-no">09</td><td>11/02–11/08</td><td>第7課 P1–P4</td><td><span class="session-title">我的同事</span><br><span class="source-ref">印刷頁 96–110；PDF 107–121；10 音檔</span></td><td>謙虛／敬語辨識；職場請求與回應；語用判斷</td></tr>
+                <tr data-search="10 第7課 第6課 同事 挑戰 運動 偶像"><td class="session-no">10</td><td>11/09–11/15</td><td>第7課 P5–P6；第6課 P1–P2</td><td><span class="session-title">職場語用到挑戰敘事</span><br><span class="source-ref">第7課收束；第6課導入</span></td><td>職場溝通診所；離職／人生態度討論；運動主題主旨聽力</td></tr>
+                <tr data-search="11 第6課 挑戰 運動員 報告 評論 身障"><td class="session-no">11</td><td>11/16–11/22</td><td>第6課 P3–P6</td><td><span class="session-title">挑戰</span><br><span class="source-ref">印刷頁 79–95；PDF 90–106；12 音檔</span></td><td>運動解說；運動員成長報告；人物介紹與同理表達</td></tr>
+                <tr data-search="12 第4課 地球人的擔憂 環境 污染 事故"><td class="session-no">12</td><td>11/23–11/29</td><td>第4課 P1–P4</td><td><span class="session-title">地球人的擔憂</span><br><span class="source-ref">印刷頁 46–62；PDF 57–73；12 音檔</span></td><td>環境議題聽力；事故 2 分鐘敘述；因果關係說明</td></tr>
+                <tr data-search="13 第4課 第8課 地球 漢語學習 環境論壇 漢字"><td class="session-no">13</td><td>11/30–12/06</td><td>第4課 P5–P6；第8課 P1–P2</td><td><span class="session-title">公共議題到語言學習</span><br><span class="source-ref">第4課收束；第8課導入</span></td><td>地球議題論壇；環境調查報告；漢字學習苦惱的第一次聽力</td></tr>
+                <tr data-search="14 第8課 学汉语的苦恼 漢字 語用 委婉語 禁忌語"><td class="session-no">14</td><td>12/07–12/13</td><td>第8課 P3–P6</td><td><span class="session-title">學漢語的苦惱</span><br><span class="source-ref">印刷頁 111–126；PDF 122–137；11 音檔</span></td><td>漢字／組詞競賽；委婉語與禁忌語；趣味漢語專欄</td></tr>
+                <tr data-search="15 期末評量 整合 新情境 口語表現 學習檔案"><td class="session-no">15</td><td>12/14–12/20</td><td>新聽力；整合任務；個人口語抽樣；反思</td><td><span class="session-title">期末整合表現</span><br><span class="source-ref">第1–8課遷移；第16週保留彈性</span></td><td>新情境聽說任務；2–3 分鐘口語；追問、澄清與修補；學習檔案</td></tr>
+                <tr data-search="16 彈性週 補課 重教 重做"><td class="session-no">Flex</td><td>12/21–12/27</td><td>不排新內容；依正式課表調整</td><td><span class="session-title">彈性／補課週</span></td><td>補課、重教、補考、口語重做或個別回饋</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="section" id="buoi-plans">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow">04 · Buổi lesson plans</div>
+              <h2>15 次 buổi 的專業教案展開</h2>
+            </div>
+            <p>每個 buổi 都以四節課安排，包含目標、活動、來源、學生產出與形成性證據。展開卡片可查看細節。</p>
+          </div>
+
+          <details open data-search="01 課程啟動 診斷">
+            <summary><div class="summary-main"><span class="summary-kicker">Buổi 01 · 4 periods · 200 minutes</span><span class="summary-title">課程啟動與聽說診斷</span><span class="summary-sub">建立中級課程規則，確認學生從《初級起步篇》（一、二冊）銜接而來的實際能力。</span></div></summary>
+            <div class="details-body">
+              <div class="mini-grid"><div class="mini-box"><strong>本次目標</strong><span>能完成熟悉主題的簡短互動；教師取得聽力、互動與口頭表現基線。</span></div><div class="mini-box"><strong>學習重點</strong><span>抓主旨、抓細節、追問、澄清、改述；不以診斷成績貼標籤。</span></div><div class="mini-box"><strong>評量性質</strong><span>診斷性，不計入學期成績；建立個人學習檔案。</span></div></div>
+              <div class="table-wrap"><table class="period-table"><thead><tr><th>節次</th><th>目標</th><th>課堂流程與活動</th><th>產出／資料</th></tr></thead><tbody>
+                <tr><td>第1節</td><td>理解課程任務</td><td>說明中級聽說課與 PBI；學生檢視自己在聽力、互動、口語表現上的信心；回顧已學過的日常主題。</td><td>個人自評表；學習檔案首頁</td></tr>
+                <tr><td>第2節</td><td>聽力基線</td><td>使用未教過但內容熟悉的短材料；第一次聽抓主旨，第二次記錄人物、原因、結果等細節；不先提供逐句翻譯。</td><td>主旨／細節紀錄；教師觀察表</td></tr>
+                <tr><td>第3節</td><td>互動基線</td><td>雙人訪談：學習經歷、興趣、在越南大學的生活；每人至少提出兩個追問，練習「你的意思是……嗎？」等修補語。</td><td>60–90 秒訪談；追問清單</td></tr>
+                <tr><td>第4節</td><td>設定學習策略</td><td>學生回聽或回顧自己的表現，選出一項聽力策略與一項口語策略；教師示範課堂 target-language routine。</td><td>個人 Can-Do；第一份學習反思</td></tr>
+              </tbody></table></div>
+              <div class="callout mint"><p><strong>教師備註：</strong>本次不急著補文法。診斷目的在於決定後續哪些語言支架需要越南文說明、哪些可直接用簡體中文處理。</p></div>
+            </div>
+          </details>
+
+          <details data-search="02 第1課 中国人的姓名 姓名">
+            <summary><div class="summary-main"><span class="summary-kicker">Buổi 02 · 第1課 P1–P4 · 200 minutes</span><span class="summary-title">第1課：中國人的姓名（輸入與語言支架）</span><span class="summary-sub">先理解名字、姓氏與命名文化，再處理教材生詞理解、句式與語段聽力。</span></div></summary>
+            <div class="details-body"><div class="mini-grid"><div class="mini-box"><strong>Can-Do</strong><span>我能介紹自己名字的意思，並詢問他人姓名的讀法與來歷。</span></div><div class="mini-box"><strong>語言重點</strong><span>稱姓、姓名順序、澄清讀音；「不然」「是……還是……」「怎麼……怎麼……」等教材句式。</span></div><div class="mini-box"><strong>來源</strong><span>印刷頁 1–16；PDF 12–27；第1課 11 個音檔。</span></div></div><div class="table-wrap"><table class="period-table"><thead><tr><th>節次</th><th>目標</th><th>課堂流程與活動</th><th>產出／資料</th></tr></thead><tbody>
+              <tr><td>第1節</td><td>建立情境與主旨</td><td>看姓名、姓氏與跨文化命名情境；完成課前準備、詞語聽讀；第1次聽力只回答「誰在談什麼、問題在哪裡」。</td><td>主旨句；生詞理解初稿</td></tr>
+              <tr><td>第2節</td><td>找聽力證據</td><td>完成「聽對話回答問題」「選意思相近的一項」「用 3–5 句回答並使用畫線詞語」；每題要求說出證據。</td><td>聽力證據表；口頭短答</td></tr>
+              <tr><td>第3節</td><td>從理解進入使用</td><td>完成聽讀、替換、記憶與複述；教師把「稱姓、姓名讀法、諧音」放到簡短對話中，學生交換資訊。</td><td>雙人澄清對話；複述錄音或觀察記錄</td></tr>
+              <tr><td>第4節</td><td>整合語段理解</td><td>聽語段完成填空、是非與聽後回答；小組整理「姓名造成誤會的原因」，最後做 60 秒口頭說明。</td><td>語段理解單；60 秒說明</td></tr>
+            </tbody></table></div><div class="callout"><p><strong>教材活動保留：</strong>課前準備、課堂小組交流、小調查、詞語理解、句式理解、替換與複述、語段聽力、文化問答。</p></div></div>
+          </details>
+
+          <details data-search="03 第1課 第2課 姓名 真正的朋友">
+            <summary><div class="summary-main"><span class="summary-kicker">Buổi 03 · 第1課 P5–P6 + 第2課 P1–P2 · 200 minutes</span><span class="summary-title">從姓名文化進入朋友關係</span><span class="summary-sub">完成第1課文化與拓展表現，接著導入第2課的朋友調查、名言與主旨聽力。</span></div></summary>
+            <div class="details-body"><div class="mini-grid"><div class="mini-box"><strong>本次目標</strong><span>能比較姓名文化，並以理由說明自己對「真正的朋友」的初步看法。</span></div><div class="mini-box"><strong>跨課銜接</strong><span>由「如何稱呼一個人」轉到「如何理解一段關係」。</span></div><div class="mini-box"><strong>形成性證據</strong><span>命名顧問提案；朋友調查問題單；第2課主旨與關鍵人物紀錄。</span></div></div><div class="table-wrap"><table class="period-table"><thead><tr><th>節次</th><th>目標</th><th>課堂流程與活動</th><th>產出／資料</th></tr></thead><tbody>
+              <tr><td>第1節</td><td>文化比較</td><td>閱讀／聽說第1課文化材料；介紹單姓、複姓、《百家姓》；學生比較中國與越南姓名順序、常見姓氏與命名時間。</td><td>文化比較口頭圖；複姓朗讀</td></tr>
+              <tr><td>第2節</td><td>命名情境表現</td><td>教材「起名兒公司」模擬：客戶提出性別、字數、發音、意義與風格限制；命名顧問提問、協商並說明方案。</td><td>小組命名方案；每人至少一次個人解釋</td></tr>
+              <tr><td>第3節</td><td>朋友主題導入</td><td>第2課課前準備、朋友名言、三分鐘演講準備；完成朋友觀點小調查的問題設計與預測。</td><td>調查問題；三分鐘演講提綱</td></tr>
+              <tr><td>第4節</td><td>第一次理解輸入</td><td>第2課音檔第一次／第二次聽力；先辨識人物與衝突，再找支持答案的語句；不急著做全部句型。</td><td>主旨、人物、證據表</td></tr>
+            </tbody></table></div></div>
+          </details>
+
+          <details data-search="04 第2課 真正的朋友 朋友 辯論 報告">
+            <summary><div class="summary-main"><span class="summary-kicker">Buổi 04 · 第2課 P3–P6 · 200 minutes</span><span class="summary-title">第2課：真正的朋友（觀點、故事與辯論）</span><span class="summary-sub">從聽力理解轉向關係評價、文化故事、口頭報告與有證據的辯論。</span></div></summary>
+            <div class="details-body"><div class="mini-grid"><div class="mini-box"><strong>Can-Do</strong><span>我能描述朋友關係，提出判斷理由，並回應不同意見。</span></div><div class="mini-box"><strong>教材活動</strong><span>朋友調查、名言、三分鐘演講、電影、京劇「唱念做打」、桃園三結義、辯論、報告。</span></div><div class="mini-box"><strong>新任務</strong><span>「真正朋友委員會」：根據案例與調查制定朋友守則。</span></div></div><div class="table-wrap"><table class="period-table"><thead><tr><th>節次</th><th>目標</th><th>課堂流程與活動</th><th>產出／資料</th></tr></thead><tbody>
+              <tr><td>第1節</td><td>精聽與語言使用</td><td>完成詞語理解、3–5 句回答、句式替換、複述與語段練習；將答案改成同伴追問。</td><td>口頭回答；追問紀錄</td></tr>
+              <tr><td>第2節</td><td>文化敘事</td><td>聽／看友情文化材料；以自己的話敘述「桃園三結義」並評價人物；用短片或示範理解京劇「唱念做打」。</td><td>90 秒故事敘述；文化觀察表</td></tr>
+              <tr><td>第3節</td><td>共同決策</td><td>三至四人小組整理朋友調查，面對「為朋友兩肋插刀」等案例；每人提出一項標準並回應同伴。</td><td>朋友守則草案；小組理由卡</td></tr>
+              <tr><td>第4節</td><td>公開表現</td><td>小組報告、三分鐘演講或小辯論；同儕依「觀點、理由、互動、可理解度」回饋，學生重做一段。</td><td>三分鐘口語／報告；回饋後版本</td></tr>
+            </tbody></table></div></div>
+          </details>
+
+          <details data-search="05 第5課 音乐的魅力 音樂 偏好 評論">
+            <summary><div class="summary-main"><span class="summary-kicker">Buổi 05 · 第5課 P1–P4 · 200 minutes</span><span class="summary-title">第5課：音樂的魅力（感受、偏好與描述）</span><span class="summary-sub">用低風險但內容豐富的音樂主題，讓學生從表達喜好進入理由、比較與評論。</span></div></summary>
+            <div class="details-body"><div class="mini-grid"><div class="mini-box"><strong>Can-Do</strong><span>我能描述音樂帶來的感受，說明喜好理由，並向特定聽眾推薦音樂。</span></div><div class="mini-box"><strong>語言重點</strong><span>感受、比較、原因、程度與推薦；由教材實際句式核定可教形式。</span></div><div class="mini-box"><strong>來源</strong><span>第5課 12 個音檔；音樂調查、古典音樂、自然聲音、圖片談話。</span></div></div><div class="table-wrap"><table class="period-table"><thead><tr><th>節次</th><th>目標</th><th>課堂流程與活動</th><th>產出／資料</th></tr></thead><tbody>
+              <tr><td>第1節</td><td>預測與偏好</td><td>完成音樂偏好小調查；聽短材料猜測情境與聲音來源；建立「描述聲音」的詞語資源。</td><td>偏好統計；聲音描述詞庫</td></tr>
+              <tr><td>第2節</td><td>理解與證據</td><td>精聽教材材料，完成理解題與意思判斷；學生用「我聽到……所以……」說明判斷。</td><td>聽力證據表；同伴核對</td></tr>
+              <tr><td>第3節</td><td>評論語言</td><td>句型與替換、聽讀複述；播放自然聲音或古典樂曲，學生從速度、情緒、畫面等角度做描述。</td><td>30 秒聲音評論；語言支架卡</td></tr>
+              <tr><td>第4節</td><td>圖像與音樂</td><td>看圖說話；把旅行照片與「音樂的美」連結；同伴提出一個追問，說話者補充理由。</td><td>照片口述；音樂評論初稿</td></tr>
+            </tbody></table></div><div class="callout mint"><p><strong>課前準備：</strong>學生可帶一首喜歡的音樂或一段自然聲音；不要求高階音樂術語，重點是中文描述與理由。</p></div></div>
+          </details>
+
+          <details data-search="06 第5課 第3課 音樂 宜居之地 旅遊">
+            <summary><div class="summary-main"><span class="summary-kicker">Buổi 06 · 第5課 P5–P6 + 第3課 P1–P2 · 200 minutes</span><span class="summary-title">從音樂策展進入宜居之地</span><span class="summary-sub">完成第5課的音樂調查與策展表現，再用旅遊與生活環境導入第3課。</span></div></summary>
+            <div class="details-body"><div class="mini-grid"><div class="mini-box"><strong>本次目標</strong><span>能向不同對象推薦音樂；能說明自己喜歡的旅遊類型與居住條件。</span></div><div class="mini-box"><strong>教材活動</strong><span>作品評比、音樂欣賞、看圖說話、音樂調查報告；第3課旅遊類別與課前準備。</span></div><div class="mini-box"><strong>形成性證據</strong><span>校園音樂策展提案；第3課主旨聽力與旅遊類別排序。</span></div></div><div class="table-wrap"><table class="period-table"><thead><tr><th>節次</th><th>目標</th><th>課堂流程與活動</th><th>產出／資料</th></tr></thead><tbody>
+              <tr><td>第1節</td><td>評比與統計</td><td>播放學生自然聲音或西方古典音樂；小組評比；整理教材音樂調查並讀出統計結果。</td><td>評比理由；統計口頭報告</td></tr>
+              <tr><td>第2節</td><td>策展表現</td><td>「校園音樂策展會」：依活動、聽眾與氣氛限制選歌；每位學生說明一項選擇並回答問題。</td><td>小組播放清單；個人推薦 60 秒</td></tr>
+              <tr><td>第3節</td><td>第3課導入</td><td>建立「宜居」概念；處理旅遊景點類別、生詞與背景；學生說明自己喜歡的旅遊方式。</td><td>旅遊類別排序；理由句</td></tr>
+              <tr><td>第4節</td><td>抓主旨</td><td>第3課音檔第一次／第二次聽力；辨識地點、人物、生活條件與主要問題。</td><td>主旨與關鍵資訊表</td></tr>
+            </tbody></table></div></div>
+          </details>
+
+          <details data-search="07 第3課 宜居之地 城市 農村 旅遊線路">
+            <summary><div class="summary-main"><span class="summary-kicker">Buổi 07 · 第3課 P3–P6 · 200 minutes</span><span class="summary-title">第3課：宜居之地（比較、規劃與推薦）</span><span class="summary-sub">把城市、農村、住房、旅遊與污染議題組合成可協商的實際任務。</span></div></summary>
+            <div class="details-body"><div class="mini-grid"><div class="mini-box"><strong>Can-Do</strong><span>我能比較兩個地方，根據條件提出推薦，並和同伴協商旅遊或居住方案。</span></div><div class="mini-box"><strong>教材活動</strong><span>三分鐘旅遊演講、海島旅遊公司模擬、國際交流 PPT、十日線路、住房訪談、城鄉辯論、污染措施。</span></div><div class="mini-box"><strong>新任務</strong><span>宜居城市顧問案：預算、交通、環境、文化與生活品質都要納入。</span></div></div><div class="table-wrap"><table class="period-table"><thead><tr><th>節次</th><th>目標</th><th>課堂流程與活動</th><th>產出／資料</th></tr></thead><tbody>
+              <tr><td>第1節</td><td>理解與比較</td><td>完成詞語、語句、語段理解；用表格整理城市／農村的生活條件、優勢與限制。</td><td>比較表；原因與結果句</td></tr>
+              <tr><td>第2節</td><td>訪談與資料</td><td>小組模擬住房訪談；整合教材閱讀與同伴資料；討論環境污染措施與效果。</td><td>訪談紀錄；住房問題摘要</td></tr>
+              <tr><td>第3節</td><td>共同規劃</td><td>旅行公司海島任務或十日旅遊線路設計；不同角色帶有不同限制，必須用中文協商。</td><td>線路／城市方案；角色發言紀錄</td></tr>
+              <tr><td>第4節</td><td>說服與表現</td><td>城市／農村小辯論、三分鐘旅遊演講、國際旅遊介紹；其他組提出反例，說話者重述推薦理由。</td><td>2–3 分鐘推薦；辯論回應</td></tr>
+            </tbody></table></div></div>
+          </details>
+
+          <details data-search="08 中期評量 聽力 互動 演講">
+            <summary><div class="summary-main"><span class="summary-kicker">Buổi 08 · Midterm performance · 200 minutes</span><span class="summary-title">中期聽說評量、回饋與重做</span><span class="summary-sub">以第1、2、5、3課的功能為基礎，換材料、換角色、換限制，觀察遷移。</span></div></summary>
+            <div class="details-body"><div class="mini-grid"><div class="mini-box"><strong>評量範圍</strong><span>姓名與文化、朋友與價值觀、音樂偏好、地方比較與推薦。</span></div><div class="mini-box"><strong>評量原則</strong><span>先理解，再互動，再做口語表現；不考逐字背誦。</span></div><div class="mini-box"><strong>回饋目的</strong><span>學生必須依回饋重做一段，不只拿到分數。</span></div></div><div class="table-wrap"><table class="period-table"><thead><tr><th>節次</th><th>評量焦點</th><th>流程與活動</th><th>證據</th></tr></thead><tbody>
+              <tr><td>第1節</td><td>Interpretive</td><td>聽一段未在教材中逐字出現、但主題熟悉的材料；完成主旨、細節、說話者意圖與證據題。</td><td>聽力作答；證據標記</td></tr>
+              <tr><td>第2節</td><td>Interpersonal</td><td>雙人任務：客戶要選名字、城市、音樂或朋友方案；兩人各自掌握不同限制，必須追問與協商。</td><td>互動觀察表；追問與修補</td></tr>
+              <tr><td>第3節</td><td>Presentational</td><td>抽取熟悉主題的新提示，準備後完成 2 分鐘說明／推薦／觀點表達；接受一個追問。</td><td>個人口語錄音／教師評分</td></tr>
+              <tr><td>第4節</td><td>Feedback and retry</td><td>學生看 rubric 回饋，選一項內容或語言問題重做；完成中期反思與下一階段目標。</td><td>重做版本；學習檔案更新</td></tr>
+            </tbody></table></div></div>
+          </details>
+
+          <details data-search="09 第7課 我的同事 職場 禮貌 謙虛">
+            <summary><div class="summary-main"><span class="summary-kicker">Buổi 09 · 第7課 P1–P4 · 200 minutes</span><span class="summary-title">第7課：我的同事（禮貌、謙虛與職場互動）</span><span class="summary-sub">從一般人際互動進入職場語用，辨識表面意思和社交功能的差異。</span></div></summary>
+            <div class="details-body"><div class="mini-grid"><div class="mini-box"><strong>Can-Do</strong><span>我能在職場情境中提出請求、回應稱讚、表達不同意見，並選擇合適的禮貌程度。</span></div><div class="mini-box"><strong>語言文化</strong><span>謙辭、敬辭、稱呼、謙虛與尊重；比較越南與中文職場互動。</span></div><div class="mini-box"><strong>來源</strong><span>第7課 10 個音檔；教材禮貌表達與文化知識活動。</span></div></div><div class="table-wrap"><table class="period-table"><thead><tr><th>節次</th><th>目標</th><th>課堂流程與活動</th><th>產出／資料</th></tr></thead><tbody>
+              <tr><td>第1節</td><td>辨識語用</td><td>聽職場對話，判斷說話者的表面意思、真正目的與關係；處理謙辭、敬辭與稱呼。</td><td>語用判斷表；理由說明</td></tr>
+              <tr><td>第2節</td><td>控制式到互動</td><td>完成教材詞語理解、替換、複述與語段練習；把「過獎了、不敢當、哪裡哪裡」放進不同關係情境。</td><td>雙人職場對話；語氣比較</td></tr>
+              <tr><td>第3節</td><td>文化比較</td><td>小組查找本國思想文化或生活習慣的突出特點；報告如何用適當的謙虛／尊重表達。</td><td>文化簡報口頭說明</td></tr>
+              <tr><td>第4節</td><td>問題處理</td><td>職場小案例：請假、被稱讚、提出不同意見、請同事幫忙；角色輪換並由觀察者記錄語用選擇。</td><td>角色扮演；語用回饋</td></tr>
+            </tbody></table></div></div>
+          </details>
+
+          <details data-search="10 第7課 第6課 同事 挑戰 運動">
+            <summary><div class="summary-main"><span class="summary-kicker">Buổi 10 · 第7課 P5–P6 + 第6課 P1–P2 · 200 minutes</span><span class="summary-title">從職場語用進入挑戰敘事</span><span class="summary-sub">完成第7課的老好人、離職與人生態度活動，並導入第6課的運動、夢想與偶像主題。</span></div></summary>
+            <div class="details-body"><div class="mini-grid"><div class="mini-box"><strong>本次目標</strong><span>能談論工作選擇與人生態度，並以時間順序說明自己欣賞的人物。</span></div><div class="mini-box"><strong>教材活動</strong><span>老好人討論、歌曲〈中國人〉、植物意義、離職調查、禮貌報告、人生態度討論。</span></div><div class="mini-box"><strong>形成性證據</strong><span>職場溝通診所；離職情況調查；第6課主旨與人物預測。</span></div></div><div class="table-wrap"><table class="period-table"><thead><tr><th>節次</th><th>目標</th><th>課堂流程與活動</th><th>產出／資料</th></tr></thead><tbody>
+              <tr><td>第1節</td><td>敘述與觀點</td><td>介紹「老好人」案例；討論辭職旅行的人生態度；把教材調查結果整理成理由與例子。</td><td>90 秒觀點表達；調查摘要</td></tr>
+              <tr><td>第2節</td><td>職場模擬</td><td>職場溝通診所：員工、主管、同事處理離職、工作分配或不合理要求；使用敬謙語完成協商。</td><td>角色任務；個人語用觀察</td></tr>
+              <tr><td>第3節</td><td>第6課導入</td><td>運動與挑戰圖片／短片預測；處理課前準備、運動詞語與人物關係。</td><td>預測表；運動詞語口頭使用</td></tr>
+              <tr><td>第4節</td><td>聽力主旨</td><td>第6課第一次／第二次聽力；辨認比賽、偶像、夢想與挑戰；用一個完整句說明最重要資訊。</td><td>主旨／細節表</td></tr>
+            </tbody></table></div></div>
+          </details>
+
+          <details data-search="11 第6課 挑戰 運動員 報告 評論 身障">
+            <summary><div class="summary-main"><span class="summary-kicker">Buổi 11 · 第6課 P3–P6 · 200 minutes</span><span class="summary-title">第6課：挑戰（敘事、評論與同理）</span><span class="summary-sub">把運動評論、人物研究、訪談與身障議題組合成多種口語文本。</span></div></summary>
+            <div class="details-body"><div class="mini-grid"><div class="mini-box"><strong>Can-Do</strong><span>我能按照時間順序敘述一個人的成長或挑戰，並針對事件表達同理與看法。</span></div><div class="mini-box"><strong>教材活動</strong><span>運動演講、運動評論、運動員小組報告、夢想與偶像訪談、身障演講、影片評述、人物介紹。</span></div><div class="mini-box"><strong>新任務</strong><span>運動新聞室／人物記者會：記者、運動員、評論員輪流發言。</span></div></div><div class="table-wrap"><table class="period-table"><thead><tr><th>節次</th><th>目標</th><th>課堂流程與活動</th><th>產出／資料</th></tr></thead><tbody>
+              <tr><td>第1節</td><td>精聽與敘事結構</td><td>完成語句理解、替換、複述與語段練習；標記人物、事件、轉折、結果。</td><td>敘事骨架；口頭複述</td></tr>
+              <tr><td>第2節</td><td>影片評論</td><td>觀看一段比賽，模仿電視解說員；比較「描述看到的事」與「加入判斷／情緒」的差異。</td><td>30–60 秒體育解說</td></tr>
+              <tr><td>第3節</td><td>研究與報告</td><td>小組以文字、圖片或影片介紹一位優秀運動員；加入夢想與偶像訪談資料。</td><td>小組人物報告；個人發言</td></tr>
+              <tr><td>第4節</td><td>同理與行動</td><td>身障運動影片評述；「我能為身障者做什麼」與人物介紹；同儕提問後重說一段。</td><td>三分鐘演講／人物介紹；重做版</td></tr>
+            </tbody></table></div></div>
+          </details>
+
+          <details data-search="12 第4課 地球人的擔憂 環境 污染 事故">
+            <summary><div class="summary-main"><span class="summary-kicker">Buổi 12 · 第4課 P1–P4 · 200 minutes</span><span class="summary-title">第4課：地球人的擔憂（問題、原因與後果）</span><span class="summary-sub">從環境與地球議題的聽力理解，建立因果說明與兩分鐘敘述能力。</span></div></summary>
+            <div class="details-body"><div class="mini-grid"><div class="mini-box"><strong>Can-Do</strong><span>我能說明一個環境問題的原因與後果，並用資料支持自己的說法。</span></div><div class="mini-box"><strong>教材活動</strong><span>核戰、水、空氣污染、都市化訪談；環境影片；環保標識；污染調查；疾病報告。</span></div><div class="mini-box"><strong>語言重點</strong><span>原因、結果、讓／使、同時、除了……以外、等待與可能性；正式句式以來源核對為準。</span></div></div><div class="table-wrap"><table class="period-table"><thead><tr><th>節次</th><th>目標</th><th>課堂流程與活動</th><th>產出／資料</th></tr></thead><tbody>
+              <tr><td>第1節</td><td>議題預測</td><td>從四個課前訪談主題建立背景；學生預測說話者立場與可能原因；第一次聽力抓議題與態度。</td><td>問題地圖；主旨紀錄</td></tr>
+              <tr><td>第2節</td><td>因果理解</td><td>完成聽力、句型、語段與閱讀問答；用箭頭整理原因、影響、可能解決方法。</td><td>因果圖；口頭解釋</td></tr>
+              <tr><td>第3節</td><td>資料與文化</td><td>觀看環境影片；查找環保標識；小組整理污染調查或疾病報告的關鍵資訊。</td><td>標識配對；資料摘要</td></tr>
+              <tr><td>第4節</td><td>事件敘述</td><td>選擇歷史上破壞環境、威脅生命的事故，完成兩分鐘成段敘述；同伴只追問原因或後果。</td><td>2 分鐘事故敘述；追問回應</td></tr>
+            </tbody></table></div></div>
+          </details>
+
+          <details data-search="13 第4課 第8課 地球 漢語學習 環境論壇 漢字">
+            <summary><div class="summary-main"><span class="summary-kicker">Buổi 13 · 第4課 P5–P6 + 第8課 P1–P2 · 200 minutes</span><span class="summary-title">從公共議題進入語言學習反思</span><span class="summary-sub">完成環境報告與辯論，再把「問題—原因—策略」框架轉到漢語學習困難。</span></div></summary>
+            <div class="details-body"><div class="mini-grid"><div class="mini-box"><strong>本次目標</strong><span>能提出環境方案並回應質疑；能說明自己的漢語學習困難與初步策略。</span></div><div class="mini-box"><strong>教材活動</strong><span>三分鐘環境演講、環境電影、環保標識、污染調查、世界環境日、風景描述、核能辯論。</span></div><div class="mini-box"><strong>形成性證據</strong><span>地球議題論壇；環境調查報告；第8課學習困難主旨與細節。</span></div></div><div class="table-wrap"><table class="period-table"><thead><tr><th>節次</th><th>目標</th><th>課堂流程與活動</th><th>產出／資料</th></tr></thead><tbody>
+              <tr><td>第1節</td><td>環境說服</td><td>整理環境調查與世界環境日主題；完成風景／家鄉描述；練習用資料支持主張。</td><td>調查報告提綱；景物口述</td></tr>
+              <tr><td>第2節</td><td>共同決策</td><td>地球議題論壇：政府、企業、居民、學生、環保團體提出方案，接受其他組質詢並修訂。</td><td>政策方案；個人答辯</td></tr>
+              <tr><td>第3節</td><td>第8課導入</td><td>從學生漢語學習經驗導入；處理部件、形聲字與漢字學習詞語；第一次聽力辨識問題類型。</td><td>學習困難分類表</td></tr>
+              <tr><td>第4節</td><td>斷句與理解</td><td>聽標點／斷句材料；學生說明同一句話不同斷法造成的意思差異；建立第8課學習檔案問題。</td><td>斷句說明；個人問題清單</td></tr>
+            </tbody></table></div></div>
+          </details>
+
+          <details data-search="14 第8課 学汉语的苦恼 漢字 語用 委婉語 禁忌語">
+            <summary><div class="summary-main"><span class="summary-kicker">Buổi 14 · 第8課 P3–P6 · 200 minutes</span><span class="summary-title">第8課：學漢語的苦惱（語言、文化與語用）</span><span class="summary-sub">把漢字知識、學習故事、委婉語、禁忌語與多義詞整合成學習者支援任務。</span></div></summary>
+            <div class="details-body"><div class="mini-grid"><div class="mini-box"><strong>Can-Do</strong><span>我能解釋漢語學習問題，給出具體建議，並說明詞語在不同情境中的意思與語氣。</span></div><div class="mini-box"><strong>教材活動</strong><span>部件與形聲字、識字／組詞比賽、象形字與生肖、安徒生多媒體、外來詞、委婉語、禁忌語、趣味漢語、「打」的多義。</span></div><div class="mini-box"><strong>新任務</strong><span>漢語學習服務台：處理學習者案例，製作「趣味漢語」短篇並回答追問。</span></div></div><div class="table-wrap"><table class="period-table"><thead><tr><th>節次</th><th>目標</th><th>課堂流程與活動</th><th>產出／資料</th></tr></thead><tbody>
+              <tr><td>第1節</td><td>漢字與詞彙</td><td>部件、形聲字、象形字與生肖材料；識字競賽、組詞競賽；比賽後要求學生說明策略而非只報答案。</td><td>漢字分類；詞語口頭造句</td></tr>
+              <tr><td>第2節</td><td>多媒體與借詞</td><td>以安徒生與作品做多媒體人物介紹；研究外來詞，討論詞語如何進入現代中文。</td><td>90 秒人物介紹；借詞說明</td></tr>
+              <tr><td>第3節</td><td>語用與文化</td><td>委婉語、禁忌語與不同情境的表達；討論「打卡、打假、打酱油、打预防针」等「打」的現代詞義。</td><td>情境判斷；多義詞解釋</td></tr>
+              <tr><td>第4節</td><td>整合與準備</td><td>「趣味漢語」專欄小組製作；漢語學習服務台角色分配；期末新情境口語任務演練。</td><td>專欄草稿；學習者建議；期末提綱</td></tr>
+            </tbody></table></div></div>
+          </details>
+
+          <details data-search="15 期末評量 整合 新情境 口語表現">
+            <summary><div class="summary-main"><span class="summary-kicker">Buổi 15 · Final performance · 200 minutes</span><span class="summary-title">期末整合表現與學習檔案</span><span class="summary-sub">用新材料與新限制抽樣，不把期末變成八課背誦比賽。</span></div></summary>
+            <div class="details-body"><div class="mini-grid"><div class="mini-box"><strong>期末目標</strong><span>學生能理解新聽力、完成互動任務、做 2–3 分鐘口語表達並回應追問。</span></div><div class="mini-box"><strong>整合主題</strong><span>身份、人際、選擇、職場、挑戰、公共議題與語言學習策略。</span></div><div class="mini-box"><strong>證據</strong><span>個人口語樣本、互動觀察、聽力證據表、學習檔案與反思。</span></div></div><div class="table-wrap"><table class="period-table"><thead><tr><th>節次</th><th>評量焦點</th><th>流程與活動</th><th>證據</th></tr></thead><tbody>
+              <tr><td>第1節</td><td>新輸入</td><td>聽一段未教過的校園／生活或公共議題材料；完成主旨、細節、立場與下一步問題。</td><td>Interpretive listening sample</td></tr>
+              <tr><td>第2節</td><td>小組任務</td><td>「Vinh 漢語學習者支援論壇」：小組依不同需求設計建議，分工、協商、接受質詢。</td><td>共同方案；個人發言紀錄</td></tr>
+              <tr><td>第3節</td><td>個人口語</td><td>從新提示中完成說明、敘事、推薦或說服；每人回答至少一個追問。班級較大時採輪站或同步錄音。</td><td>2–3 分鐘口語樣本</td></tr>
+              <tr><td>第4節</td><td>反思與重做</td><td>學生比較診斷、中期、期末表現；選一段重做；完成下階段漢語學習建議。</td><td>學習檔案；自評；重做版</td></tr>
+            </tbody></table></div></div>
+          </details>
+        </section>
+
+        <section class="section" id="unit-blueprints">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow">05 · Eight unit blueprints</div>
+              <h2>8 課教材單元的完整設計</h2>
+            </div>
+            <p>下列每課都包含 ACTFL FACT、教材活動覆蓋、新增小組任務與可觀察的口語證據。</p>
+          </div>
+          <div class="grid two">
+            <article class="card unit-card" data-search="第1課 中国人的姓名 姓名 命名">
+              <div class="unit-head"><div><div class="unit-code">UNIT 01</div><h3>中國人的姓名</h3></div><div class="unit-page">印刷 1–16<br>PDF 12–27<br>11 audio</div></div>
+              <div class="fact"><b>F</b><span>介紹、詢問、澄清、解釋姓名文化。</span></div><div class="fact"><b>A</b><span>稱姓、姓名順序、讀音澄清；教材「不然」「是……還是……」等句式。</span></div><div class="fact"><b>C</b><span>中國與越南的姓名、姓氏、諧音、稱呼與百家姓。</span></div><div class="fact"><b>T</b><span>對話、短答、文化比較、90 秒說明、模擬諮詢。</span></div>
+              <h4>教材原有活動</h4><ul class="source-list"><li>課前準備、課堂小組交流、小調查、訪談至少三位中國朋友。</li><li>詞語理解、句語理解、語段聽力、文化知識、複姓與《百家姓》。</li><li>成段敘述、歷史名人研究、電影演員中文名、命名公司模擬、調查報告。</li></ul>
+              <h4>新增任務</h4><p class="push">命名顧問公司：客戶帶有發音、字數、意義與風格限制；每位學生都必須提問或解釋。</p>
+              <div class="tag-row"><span class="tag mint">clarify</span><span class="tag coral">compare</span><span class="tag gold">cultural pragmatics</span></div>
+            </article>
+
+            <article class="card unit-card" data-search="第2課 真正的朋友 朋友 友情 辯論">
+              <div class="unit-head"><div><div class="unit-code">UNIT 02</div><h3>真正的朋友</h3></div><div class="unit-page">印刷 17–31<br>PDF 28–42<br>12 audio</div></div>
+              <div class="fact"><b>F</b><span>描述關係、評價、表達價值觀、同意／反對、提出理由。</span></div><div class="fact"><b>A</b><span>理由、例子、轉折與回應；以可理解度和互動完成度優先。</span></div><div class="fact"><b>C</b><span>朋友觀、名言、電影、京劇文化與桃園三結義。</span></div><div class="fact"><b>T</b><span>調查、故事敘述、三分鐘演講、辯論、小組報告。</span></div>
+              <h4>教材原有活動</h4><ul class="source-list"><li>朋友名言、三分鐘演講準備、朋友觀點小調查。</li><li>聽力理解、句式練習、電影／文化材料、京劇「唱念做打」。</li><li>桃園三結義敘述與人物評價、小辯論、朋友調查 PPT 報告。</li></ul>
+              <h4>新增任務</h4><p class="push">真正朋友委員會：小組根據案例與調查制定守則，接受另一組質疑。</p>
+              <div class="tag-row"><span class="tag mint">evaluate</span><span class="tag coral">justify</span><span class="tag purple">debate</span></div>
+            </article>
+
+            <article class="card unit-card" data-search="第5課 音乐的魅力 音樂 偏好 推薦">
+              <div class="unit-head"><div><div class="unit-code">UNIT 03</div><h3>音樂的魅力</h3></div><div class="unit-page">印刷 63–78<br>PDF 74–89<br>12 audio</div></div>
+              <div class="fact"><b>F</b><span>表達偏好、描述感受、比較、評論、推薦。</span></div><div class="fact"><b>A</b><span>感受、程度、原因與聽眾導向的推薦語言。</span></div><div class="fact"><b>C</b><span>西方古典音樂、自然聲音、旅行照片與音樂調查。</span></div><div class="fact"><b>T</b><span>聲音評論、圖片口述、調查報告、策展提案。</span></div>
+              <h4>教材原有活動</h4><ul class="source-list"><li>音樂偏好調查、西方古典樂曲、自然聲音錄製。</li><li>音樂欣賞、作品評比、看圖說話、音樂調查統計報告。</li><li>介紹作曲者／音樂家與音樂網站。</li></ul>
+              <h4>新增任務</h4><p class="push">校園音樂策展會：為不同活動與聽眾選歌，提出推薦並回答反對意見。</p>
+              <div class="tag-row"><span class="tag mint">describe</span><span class="tag coral">recommend</span><span class="tag gold">audience</span></div>
+            </article>
+
+            <article class="card unit-card" data-search="第3課 宜居之地 城市 旅遊 居住">
+              <div class="unit-head"><div><div class="unit-code">UNIT 04</div><h3>宜居之地</h3></div><div class="unit-page">印刷 32–45<br>PDF 43–56<br>11 audio</div></div>
+              <div class="fact"><b>F</b><span>描述地方、比較條件、推薦、規劃、協商、辯論。</span></div><div class="fact"><b>A</b><span>比較級、條件、因果、理由與建議；要求說話者補充依據。</span></div><div class="fact"><b>C</b><span>旅遊類別、住房、城市／農村、污染措施與生活品質。</span></div><div class="fact"><b>T</b><span>旅遊演講、訪談報告、路線設計、模擬、辯論。</span></div>
+              <h4>教材原有活動</h4><ul class="source-list"><li>旅遊景點類別、印象最深的旅遊勝地三分鐘演講。</li><li>海島旅遊公司、國際交流 PPT、十日旅遊線路設計。</li><li>住房訪談、城市／農村小辯論、污染措施成段敘述。</li></ul>
+              <h4>新增任務</h4><p class="push">宜居城市顧問案：在預算、交通、環境、文化與生活品質限制下共同推薦城市。</p>
+              <div class="tag-row"><span class="tag mint">compare</span><span class="tag coral">negotiate</span><span class="tag purple">recommend</span></div>
+            </article>
+
+            <article class="card unit-card" data-search="第7課 我的同事 同事 職場 謙虛 禮貌">
+              <div class="unit-head"><div><div class="unit-code">UNIT 05</div><h3>我的同事</h3></div><div class="unit-page">印刷 96–110<br>PDF 107–121<br>10 audio</div></div>
+              <div class="fact"><b>F</b><span>提出請求、回應稱讚、婉拒、說明態度、討論職涯。</span></div><div class="fact"><b>A</b><span>謙辭、敬辭、稱呼與語氣；看語境判斷合適程度。</span></div><div class="fact"><b>C</b><span>職場關係、謙虛、尊重、老好人、離職與人生態度。</span></div><div class="fact"><b>T</b><span>職場對話、調查報告、文化比較、情境角色扮演。</span></div>
+              <h4>教材原有活動</h4><ul class="source-list"><li>謙虛表達研究、A 里 AB、國家文化特點三分鐘演講。</li><li>謙辭／敬辭與禮貌文化、歌曲〈中國人〉、植物意義。</li><li>老好人敘述、離職調查、人生態度討論、三分鐘演講。</li></ul>
+              <h4>新增任務</h4><p class="push">職場溝通診所：處理請假、被稱讚、離職、拒絕工作要求與工作回饋。</p>
+              <div class="tag-row"><span class="tag mint">pragmatics</span><span class="tag coral">request</span><span class="tag gold">register</span></div>
+            </article>
+
+            <article class="card unit-card" data-search="第6課 挑戰 運動員 偶像 敘事 身障">
+              <div class="unit-head"><div><div class="unit-code">UNIT 06</div><h3>挑戰</h3></div><div class="unit-page">印刷 79–95<br>PDF 90–106<br>12 audio</div></div>
+              <div class="fact"><b>F</b><span>敘述經歷、介紹人物、評論影片、表達同理、提出行動。</span></div><div class="fact"><b>A</b><span>時間順序、轉折、原因／結果、敘事連貫與觀點。</span></div><div class="fact"><b>C</b><span>運動、偶像、夢想、成長、身障與克服挑戰。</span></div><div class="fact"><b>T</b><span>訪談、體育解說、人物報告、三分鐘演講、影片評述。</span></div>
+              <h4>教材原有活動</h4><ul class="source-list"><li>運動／偶像訪談、我喜愛的運動三分鐘演講。</li><li>體育比賽影片解說、運動員小組報告、夢想與偶像 PPT。</li><li>身障演講、身障奧運影片評述、身障人物介紹。</li></ul>
+              <h4>新增任務</h4><p class="push">運動新聞室／人物記者會：記者、運動員與評論員輪換角色，回答追問。</p>
+              <div class="tag-row"><span class="tag mint">narrate</span><span class="tag coral">comment</span><span class="tag purple">empathize</span></div>
+            </article>
+
+            <article class="card unit-card" data-search="第4課 地球人的擔憂 環境 污染 核能 辯論">
+              <div class="unit-head"><div><div class="unit-code">UNIT 07</div><h3>地球人的擔憂</h3></div><div class="unit-page">印刷 46–62<br>PDF 57–73<br>12 audio</div></div>
+              <div class="fact"><b>F</b><span>描述議題、解釋原因與後果、報告、說服、提出方案。</span></div><div class="fact"><b>A</b><span>因果連接、資料引用、立場表達與回應質疑。</span></div><div class="fact"><b>C</b><span>核戰、水、空氣污染、都市化、汽車、疾病與環境保護。</span></div><div class="fact"><b>T</b><span>訪談、兩分鐘事故敘述、調查報告、政策論壇、辯論。</span></div>
+              <h4>教材原有活動</h4><ul class="source-list"><li>課前四議題訪談、環境影片、環保標識查找。</li><li>污染調查、疾病報告、風景／家鄉描述、世界環境日主題。</li><li>三分鐘環境演講、事故敘述、核能與環境議題辯論。</li></ul>
+              <h4>新增任務</h4><p class="push">地球議題論壇：政府、企業、居民、學生與環保團體提出方案並接受質詢。</p>
+              <div class="tag-row"><span class="tag mint">explain</span><span class="tag coral">persuade</span><span class="tag gold">evidence</span></div>
+            </article>
+
+            <article class="card unit-card" data-search="第8課 学汉语的苦恼 漢字 語用 委婉語 禁忌語 打">
+              <div class="unit-head"><div><div class="unit-code">UNIT 08</div><h3>學漢語的苦惱</h3></div><div class="unit-page">印刷 111–126<br>PDF 122–137<br>11 audio</div></div>
+              <div class="fact"><b>F</b><span>說明學習問題、給建議、解釋詞義、比較語用、敘述學習經驗。</span></div><div class="fact"><b>A</b><span>部件與詞義、斷句、委婉／禁忌表達、多義詞與情境。</span></div><div class="fact"><b>C</b><span>漢字、形聲字、生肖、安徒生、外來詞、委婉語、禁忌語。</span></div><div class="fact"><b>T</b><span>學習故事、人物介紹、專欄、語用判斷、學習者諮詢。</span></div>
+              <h4>教材原有活動</h4><ul class="source-list"><li>部件／形聲字、象形字／生肖、識字與組詞競賽。</li><li>標點與斷句聽力、安徒生多媒體、外來詞研究。</li><li>委婉語與禁忌語、漢語學習故事、「趣味漢語」專欄、「打」的多義。</li></ul>
+              <h4>新增任務</h4><p class="push">漢語學習服務台：依學習者問題提出建議，說明詞語選擇並製作「趣味漢語」短篇。</p>
+              <div class="tag-row"><span class="tag mint">advise</span><span class="tag coral">mediate</span><span class="tag purple">reflect</span></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="activity-coverage">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow">06 · Textbook fidelity</div>
+              <h2>教材練習與活動覆蓋表</h2>
+            </div>
+            <p>原有活動不被刪除；改以 PBI 階段重新安排。正式資料庫會在每個活動上加 source page、PDF page、audio file 與 review status。</p>
+          </div>
+          <div class="table-wrap"><table>
+            <thead><tr><th>教材原有類型</th><th>在新教案中的位置</th><th>教學轉化</th><th>口語／聽力證據</th></tr></thead>
+            <tbody>
+              <tr><td>課前準備、生詞與小組交流</td><td>每課 P1；課前 20–30 分鐘</td><td>先用圖片、問題或簡短預測建立情境；不先把所有詞翻譯完。</td><td>預測表；一個與主題相關的完整回答。</td></tr>
+              <tr><td>聽對話回答問題</td><td>P1–P2，第一次抓主旨、第二次找證據</td><td>學生必須指出支持答案的語句或資訊，不只勾選答案。</td><td>主旨、人物、原因、結果與證據。</td></tr>
+              <tr><td>意思相近選擇、填空、是非</td><td>P2；輪站或雙人核對</td><td>完成後改述答案，說明選擇理由；不把選擇題當成全部學習成果。</td><td>口頭改述；證據說明。</td></tr>
+              <tr><td>3–5 句回答、畫線詞語</td><td>P2–P3</td><td>先寫／看提示，再逐步撤除提示；同伴追問一題。</td><td>短答、追問、語言支架使用。</td></tr>
+              <tr><td>跟讀、替換、記憶、複述</td><td>P3–P4</td><td>先理解語境，再進行控制式練習，最後換人物、地點或限制。</td><td>複述、替換後的新句、短對話。</td></tr>
+              <tr><td>語段理解、閱讀問答、文化知識</td><td>P2–P4</td><td>作為聽說輸入和文化比較材料；閱讀答案要轉成口頭說明或媒介轉述。</td><td>因果圖、文化比較、口頭摘要。</td></tr>
+              <tr><td>調查、訪談、問卷</td><td>P4–P5；課前 fieldwork 與課堂輪站</td><td>設計問題、訪談、整理結果，再用中文向同伴報告。</td><td>訪談紀錄、統計摘要、個人報告。</td></tr>
+              <tr><td>三分鐘演講、成段敘述</td><td>P6；形成性表現與中／期末證據</td><td>使用提綱而非逐字稿；同伴提出追問，回饋後重做。</td><td>1–3 分鐘口語、組織、可理解度。</td></tr>
+              <tr><td>模擬、辯論、報告、PPT、影片、歌曲、比賽</td><td>P5–P6；Action-Oriented task layer</td><td>加入角色、受眾、資訊差、限制與共同決策；仍須回到個人語言證據。</td><td>互動觀察、共同產品、個人發言與追問。</td></tr>
+            </tbody>
+          </table></div>
+          <div class="callout gold"><p><strong>覆蓋原則：</strong>全部活動都會在教案資料庫中有位置，但不要求教師在 200 分鐘內逐題全班講解。可採全班核心、小組輪站、課前 fieldwork、課後口語作業與評量素材五種路徑。</p></div>
+        </section>
+
+        <section class="section" id="assessment">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow">07 · Assessment</div>
+              <h2>評量設計與學習證據</h2>
+            </div>
+            <p>評量區分「教過的 performance」與「換情境後的 transfer」，不把背過課文當成中級口語能力。</p>
+          </div>
+          <div class="grid two">
+            <div class="card"><h3>建議評量配置</h3><table><tbody><tr><th>形成性表現與課堂證據</th><td>30%</td></tr><tr><th>中期聽說評量</th><td>20%</td></tr><tr><th>期末整合口語表現</th><td>30%</td></tr><tr><th>學習檔案、fieldwork、反思</th><td>20%</td></tr></tbody></table><small>比例是教案建議，需再對照阮老師與系上的正式評量規定。</small></div>
+            <div class="card"><h3>每課留下的證據</h3><ul class="compact"><li>至少一份個人聽力理解證據。</li><li>至少一次雙人／小組互動觀察。</li><li>至少一次 60 秒以上口頭表現。</li><li>一次回饋後的重做或改述。</li><li>一份課前／課後反思或口語錄音。</li></ul></div>
+          </div>
+          <div class="card" style="margin-top:16px"><h3>課程口語 rubric（建議版）</h3><div class="table-wrap"><table class="rubric"><thead><tr><th>面向</th><th>建議權重</th><th>觀察重點</th><th>不採用的錯誤標準</th></tr></thead><tbody>
+            <tr><td>語言功能／任務完成</td><td>25%</td><td>是否完成描述、敘述、比較、推薦、說服等指定功能。</td><td>不要求所有句子都像母語者；先看任務是否完成。</td></tr>
+            <tr><td>可理解度與準確度</td><td>25%</td><td>聽者能否理解；核心詞語、句式、語氣是否足以支持意思。</td><td>不把單一語法錯誤直接等同於能力不足。</td></tr>
+            <tr><td>互動與修補</td><td>25%</td><td>能否追問、回應、澄清、改述、處理聽不懂或意見不同。</td><td>不只評估單人背稿。</td></tr>
+            <tr><td>內容、組織與情境適切度</td><td>25%</td><td>是否有理由、例子、順序；語氣和內容是否適合受眾與情境。</td><td>不以 PPT 美觀或資料數量取代口語能力。</td></tr>
+          </tbody></table></div></div>
+        </section>
+
+        <section class="section" id="materials">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow">08 · Production specification</div>
+              <h2>後續每次 buổi 要生成的教材包</h2>
+            </div>
+            <p>本 HTML 是教案總藍圖；完成 review 後，才進入逐課來源審閱、教學簡報與學生版教材製作。</p>
+          </div>
+          <div class="grid three">
+            <div class="card"><h3>教師備課版</h3><ul class="compact"><li>本次 buổi 的四節 run sheet。</li><li>每項活動的教材頁與音檔對應。</li><li>可能的理解難點與 target-language prompts。</li><li>形成性觀察表與回饋句。</li></ul></div>
+            <div class="card"><h3>學生課堂版</h3><ul class="compact"><li>簡體中文目標語言與自然越南文操作說明。</li><li>主旨／證據聽力單、語言支架與角色卡。</li><li>小組任務的資訊差與限制。</li><li>不放教師備註、內部來源標籤或答案。</li></ul></div>
+            <div class="card"><h3>課後與檔案</h3><ul class="compact"><li>20–40 分鐘口語練習或 fieldwork。</li><li>個人錄音、短報告或反思。</li><li>教師 feedback log。</li><li>source status 與待核對答案清單。</li></ul></div>
+          </div>
+          <div class="card" style="margin-top:16px"><h3>每課資料庫欄位</h3><div class="tag-row"><span class="tag">lesson_id</span><span class="tag">session_id</span><span class="tag">period</span><span class="tag">source_page</span><span class="tag">source_pdf_page</span><span class="tag">audio_file</span><span class="tag">activity_type</span><span class="tag">PBI_mode</span><span class="tag">FACT</span><span class="tag">student_output</span><span class="tag">assessment_evidence</span><span class="tag">review_status</span></div></div>
+        </section>
+
+        <section class="section" id="review">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow">09 · Review gate</div>
+              <h2>請在進入逐課教材製作前確認</h2>
+            </div>
+            <p>這些不是重新詢問已知資訊，而是正式製作時會影響課堂執行的少數決策點。</p>
+          </div>
+          <div class="grid two">
+            <div class="card">
+              <h3>目前已納入的決策</h3>
+              <ul class="checklist"><li>15 次 buổi，每次 4 節，每節 50 分鐘。</li><li>學生已完成《初級起步篇》（一、二冊）。</li><li>課程以聽說為主，PBI 為主架構。</li><li>8 課不照原冊頁面順序直線講授。</li><li>教材原有練習與活動全部保留。</li><li>每次 200 分鐘內安排輸入、互動與表現。</li></ul>
+            </div>
+            <div class="card">
+              <h3>正式製作前要補上的資訊</h3>
+              <div class="review-item"><strong>正式日期／假期：</strong>如果校方課表不是每週固定一次，需把暫定週次換成實際日期。</div>
+              <div class="review-item"><strong>班級人數：</strong>會影響期中、期末個人口語抽樣採輪站、錄音或同步評量。</div>
+              <div class="review-item"><strong>評量比例：</strong>本頁提供建議比例，仍需對照系上規定。</div>
+              <div class="review-item"><strong>逐課來源審閱：</strong>正式簡報前逐課確認音檔細部對應、答案與 OCR 文字。</div>
+            </div>
+          </div>
+          <div class="callout mint"><p><strong>下一個製作閘門：</strong>本整學期教案架構通過 review 後，先建立第 1 課的 source-review package，再依同一規格展開第 2–8 課。這份 HTML 不會把尚未核對的答案假裝成定稿。</p></div>
+        </section>
+
+        <footer>
+          <p><strong>方法參考：</strong> <a href="https://www.actfl.org/educator-resources/guiding-principles-for-language-learning">ACTFL Guiding Principles for Language Learning</a> · <a href="https://www.actfl.org/uploads/files/general/Resources-Publications/ACTFL_Proficiency_Guidelines_2024.pdf">ACTFL Proficiency Guidelines 2024</a> · <a href="https://www.coe.int/en/web/common-european-framework-reference-languages/action-orientation-in-the-classroom">Council of Europe action-oriented approach</a></p>
+          <p>本頁為教師審閱用規劃稿；未宣稱正式 ACTFL 測評結果，也未生成未經教師確認的答案鍵。</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+  <script>
+    const search = document.getElementById('sessionSearch');
+    const timelineRows = Array.from(document.querySelectorAll('#timelineTable tbody tr'));
+    const detailCards = Array.from(document.querySelectorAll('#buoi-plans details'));
+    const unitCards = Array.from(document.querySelectorAll('#unit-blueprints [data-search]'));
+    function applySearch() {
+      const query = (search.value || '').trim().toLowerCase();
+      [...timelineRows, ...detailCards, ...unitCards].forEach((item) => {
+        const haystack = (item.dataset.search || item.textContent || '').toLowerCase();
+        item.hidden = Boolean(query && !haystack.includes(query));
+      });
+    }
+    search.addEventListener('input', applySearch);
+  </script>
+</body>
+</html>

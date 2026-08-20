@@ -1,0 +1,33 @@
+{
+  "package": "boya-intermediate-i-semester-teacher-manual",
+  "status": "overview_and_lesson_01_teacher_guide_approved_lesson_01_pptx_revision_pending_outline_review",
+  "language": "简体中文",
+  "course": "《博雅汉语听说：中级冲刺篇 I》",
+  "semester_window": "2026/09/07–2026/12/27",
+  "teaching_sessions": 15,
+  "flexible_weeks": 1,
+  "periods_per_session": 4,
+  "minutes_per_period": 50,
+  "instructional_minutes_per_session": 200,
+  "total_periods": 60,
+  "total_instructional_minutes": 3000,
+  "lesson_count": 8,
+  "lesson_periods": 6,
+  "current_scope": [
+    "course_overview",
+    "lesson_01"
+  ],
+  "lesson_01_teacher_guide_approval": "approved_by_adam_2026-08-20",
+  "lesson_01_production_status": "pptx_produced_pending_teacher_qa_and_rehearsal",
+  "next_gate": "lesson_01_ppt_outline_v2_review",
+  "source_of_truth_for_lesson_01": "output/boya-intermediate/lesson-01/teacher/lesson-01-teacher-guide.md",
+  "output_files": [
+    "boya-intermediate-i-semester-teacher-manual.md",
+    "boya-intermediate-i-semester-teacher-manual.docx",
+    "boya-intermediate-i-semester-teacher-manual.pdf"
+  ],
+  "lesson_01_pptx": "output/boya-intermediate/lesson-01/pptx/lesson-01.pptx",
+  "lesson_01_pptx_slide_count": 69,
+  "lesson_01_pptx_audio_embedded": 11,
+  "next_scope": "finish_lesson_01_before_unlocking_lesson_02"
+}

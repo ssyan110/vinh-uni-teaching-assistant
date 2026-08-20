@@ -1,0 +1,177 @@
+{
+  "package": "boya-intermediate-lesson-01-native-pptx-v2",
+  "generated_at": "2026-08-20T16:52:25.746Z",
+  "status": "ready_for_pptx_qa",
+  "format": "native-editable-pptx",
+  "html_required": false,
+  "slide_count": 71,
+  "period_count": 6,
+  "minutes_per_period": 50,
+  "total_minutes": 300,
+  "section_dividers": [
+    3,
+    16,
+    26,
+    37,
+    49,
+    59
+  ],
+  "exercise_count": 35,
+  "exercise_coverage_count": 35,
+  "audio_track_count": 11,
+  "audio_embedded_count": 11,
+  "speaker_notes_count": 71,
+  "language": "简体中文",
+  "font_family": "Microsoft YaHei",
+  "student_language_policy": "学生端投影使用简体中文；学生画面只显示当前课堂动作。",
+  "visible_completion_labels": 0,
+  "visible_internal_labels": [],
+  "visual_style": "approved educational textbook line-art contact sheet; grey-blue outlines; muted pastel fills; pale background",
+  "source_of_truth": "output/boya-intermediate/lesson-01/teacher/lesson-01-teacher-guide.md",
+  "input_outline": "output/boya-intermediate/lesson-01/storyboard/lesson-01-ppt-outline-v2.md",
+  "visual_storyboard": "output/boya-intermediate/lesson-01/visual-storyboard/lesson-01-visual-storyboard-v2.md",
+  "approved_contact_sheet": "output/boya-intermediate/lesson-01/visual-storyboard/assets/lesson-01-textbook-contact-sheet-4x4.png",
+  "approved_prototype": "output/boya-intermediate/lesson-01/visual-prototype/lesson-01-visual-prototype.pptx",
+  "audio_manifest": "output/boya-intermediate/lesson-01/pptx/audio-manifest.json",
+  "exercise_slide_map": {
+    "E01-034": [
+      5,
+      14
+    ],
+    "E01-035": [
+      6,
+      14,
+      45,
+      46
+    ],
+    "E01-001": [
+      7,
+      8,
+      9
+    ],
+    "E01-002": [
+      10,
+      11
+    ],
+    "E01-003": [
+      12,
+      13,
+      14
+    ],
+    "E01-004": [
+      17,
+      18
+    ],
+    "E01-005": [
+      19,
+      20
+    ],
+    "E01-009": [
+      21,
+      25
+    ],
+    "E01-010": [
+      22,
+      25
+    ],
+    "E01-011": [
+      23,
+      25
+    ],
+    "E01-012": [
+      24,
+      25
+    ],
+    "E01-006": [
+      28,
+      29
+    ],
+    "E01-007": [
+      30
+    ],
+    "E01-008": [
+      31
+    ],
+    "E01-013": [
+      32
+    ],
+    "E01-014": [
+      33
+    ],
+    "E01-015": [
+      34,
+      35
+    ],
+    "E01-016": [
+      39,
+      40,
+      41,
+      42,
+      47
+    ],
+    "E01-017": [
+      43,
+      44
+    ],
+    "E01-018": [
+      45,
+      46,
+      47
+    ],
+    "E01-019": [
+      51
+    ],
+    "E01-020": [
+      52
+    ],
+    "E01-021": [
+      53,
+      57
+    ],
+    "E01-022": [
+      54,
+      55,
+      57
+    ],
+    "E01-023": [
+      56,
+      57
+    ],
+    "E01-024": [
+      61
+    ],
+    "E01-025": [
+      62
+    ],
+    "E01-026": [
+      63
+    ],
+    "E01-027": [
+      64
+    ],
+    "E01-028": [
+      65
+    ],
+    "E01-029": [
+      66
+    ],
+    "E01-032": [
+      67
+    ],
+    "E01-030": [
+      68
+    ],
+    "E01-031": [
+      69
+    ],
+    "E01-033": [
+      70
+    ]
+  },
+  "pptx_sha256": "17022eceb5a818dee33197e12c76acab547b160905209738c5430fe1c5993a08",
+  "output_files": [
+    "lesson-01.pptx",
+    "audio-manifest.json",
+    "manifest.json"
+  ]
+}

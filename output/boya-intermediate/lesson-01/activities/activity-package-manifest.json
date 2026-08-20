@@ -1,0 +1,242 @@
+{
+  "package": "boya-intermediate-lesson-01-activity-packages",
+  "layout": "one_standalone_material_per_pdf_and_editable_docx",
+  "language": "简体中文",
+  "activities": [
+    {
+      "activity_id": "ACT-01",
+      "title": "姓名访谈",
+      "periods": [
+        "P1",
+        "P2"
+      ],
+      "folder": "activities/01-姓名访谈",
+      "time": "每轮约 4 分钟",
+      "grouping": "三人一组，轮流换角色",
+      "teacher_guide": {
+        "name": "教师速用说明",
+        "pdf": "activities/01-姓名访谈/00-教师速用说明.pdf",
+        "docx": "activities/01-姓名访谈/可编辑原稿/00-教师速用说明.docx"
+      },
+      "student_materials": [
+        {
+          "name": "角色卡：访谈者",
+          "pdf": "activities/01-姓名访谈/01-角色卡-访谈者.pdf",
+          "docx": "activities/01-姓名访谈/可编辑原稿/01-角色卡-访谈者.docx"
+        },
+        {
+          "name": "角色卡：回答者",
+          "pdf": "activities/01-姓名访谈/02-角色卡-回答者.pdf",
+          "docx": "activities/01-姓名访谈/可编辑原稿/02-角色卡-回答者.docx"
+        },
+        {
+          "name": "角色卡：观察者",
+          "pdf": "activities/01-姓名访谈/03-角色卡-观察者.pdf",
+          "docx": "activities/01-姓名访谈/可编辑原稿/03-角色卡-观察者.docx"
+        },
+        {
+          "name": "访谈问题卡",
+          "pdf": "activities/01-姓名访谈/04-访谈问题卡.pdf",
+          "docx": "activities/01-姓名访谈/可编辑原稿/04-访谈问题卡.docx"
+        },
+        {
+          "name": "观察记录卡",
+          "pdf": "activities/01-姓名访谈/05-观察记录卡.pdf",
+          "docx": "activities/01-姓名访谈/可编辑原稿/05-观察记录卡.docx"
+        }
+      ]
+    },
+    {
+      "activity_id": "ACT-02",
+      "title": "起名儿公司",
+      "periods": [
+        "P4"
+      ],
+      "folder": "activities/02-起名儿公司",
+      "time": "约 20 分钟",
+      "grouping": "三至四人一组",
+      "teacher_guide": {
+        "name": "教师速用说明",
+        "pdf": "activities/02-起名儿公司/00-教师速用说明.pdf",
+        "docx": "activities/02-起名儿公司/可编辑原稿/00-教师速用说明.docx"
+      },
+      "student_materials": [
+        {
+          "name": "活动步骤卡",
+          "pdf": "activities/02-起名儿公司/01-活动步骤卡.pdf",
+          "docx": "activities/02-起名儿公司/可编辑原稿/01-活动步骤卡.docx"
+        },
+        {
+          "name": "角色卡：客户",
+          "pdf": "activities/02-起名儿公司/02-角色卡-客户.pdf",
+          "docx": "activities/02-起名儿公司/可编辑原稿/02-角色卡-客户.docx"
+        },
+        {
+          "name": "角色卡：命名顾问",
+          "pdf": "activities/02-起名儿公司/03-角色卡-命名顾问.pdf",
+          "docx": "activities/02-起名儿公司/可编辑原稿/03-角色卡-命名顾问.docx"
+        },
+        {
+          "name": "角色卡：记录员",
+          "pdf": "activities/02-起名儿公司/04-角色卡-记录员.pdf",
+          "docx": "activities/02-起名儿公司/可编辑原稿/04-角色卡-记录员.docx"
+        },
+        {
+          "name": "角色卡：观察员",
+          "pdf": "activities/02-起名儿公司/05-角色卡-观察员.pdf",
+          "docx": "activities/02-起名儿公司/可编辑原稿/05-角色卡-观察员.docx"
+        },
+        {
+          "name": "客户卡一：明亮的名字",
+          "pdf": "activities/02-起名儿公司/06-客户卡-明亮的名字.pdf",
+          "docx": "activities/02-起名儿公司/可编辑原稿/06-客户卡-明亮的名字.docx"
+        },
+        {
+          "name": "客户卡二：有力量的名字",
+          "pdf": "activities/02-起名儿公司/07-客户卡-有力量的名字.pdf",
+          "docx": "activities/02-起名儿公司/可编辑原稿/07-客户卡-有力量的名字.docx"
+        },
+        {
+          "name": "客户卡三：和自然有关的名字",
+          "pdf": "activities/02-起名儿公司/08-客户卡-和自然有关的名字.pdf",
+          "docx": "activities/02-起名儿公司/可编辑原稿/08-客户卡-和自然有关的名字.docx"
+        },
+        {
+          "name": "客户卡四：容易介绍的名字",
+          "pdf": "activities/02-起名儿公司/09-客户卡-容易介绍的名字.pdf",
+          "docx": "activities/02-起名儿公司/可编辑原稿/09-客户卡-容易介绍的名字.docx"
+        },
+        {
+          "name": "姓名提案卡",
+          "pdf": "activities/02-起名儿公司/10-姓名提案卡.pdf",
+          "docx": "activities/02-起名儿公司/可编辑原稿/10-姓名提案卡.docx"
+        }
+      ]
+    },
+    {
+      "activity_id": "ACT-03",
+      "title": "电影演员中文名",
+      "periods": [
+        "P4"
+      ],
+      "folder": "activities/03-电影演员中文名",
+      "time": "约 10 分钟",
+      "grouping": "四人一组",
+      "teacher_guide": {
+        "name": "教师速用说明",
+        "pdf": "activities/03-电影演员中文名/00-教师速用说明.pdf",
+        "docx": "activities/03-电影演员中文名/可编辑原稿/00-教师速用说明.docx"
+      },
+      "student_materials": [
+        {
+          "name": "演员卡 甲",
+          "pdf": "activities/03-电影演员中文名/01-演员卡-甲.pdf",
+          "docx": "activities/03-电影演员中文名/可编辑原稿/01-演员卡-甲.docx"
+        },
+        {
+          "name": "演员卡 乙",
+          "pdf": "activities/03-电影演员中文名/02-演员卡-乙.pdf",
+          "docx": "activities/03-电影演员中文名/可编辑原稿/02-演员卡-乙.docx"
+        },
+        {
+          "name": "演员卡 丙",
+          "pdf": "activities/03-电影演员中文名/03-演员卡-丙.pdf",
+          "docx": "activities/03-电影演员中文名/可编辑原稿/03-演员卡-丙.docx"
+        },
+        {
+          "name": "小组呈现卡",
+          "pdf": "activities/03-电影演员中文名/04-小组呈现卡.pdf",
+          "docx": "activities/03-电影演员中文名/可编辑原稿/04-小组呈现卡.docx"
+        }
+      ]
+    },
+    {
+      "activity_id": "ACT-04",
+      "title": "姓氏信息站",
+      "periods": [
+        "P6"
+      ],
+      "folder": "activities/04-姓氏信息站",
+      "time": "每站约 6 分钟",
+      "grouping": "三人一组，轮站完成",
+      "teacher_guide": {
+        "name": "教师速用说明",
+        "pdf": "activities/04-姓氏信息站/00-教师速用说明.pdf",
+        "docx": "activities/04-姓氏信息站/可编辑原稿/00-教师速用说明.docx"
+      },
+      "student_materials": [
+        {
+          "name": "第一站：句式信息交换",
+          "pdf": "activities/04-姓氏信息站/01-第一站-句式信息交换.pdf",
+          "docx": "activities/04-姓氏信息站/可编辑原稿/01-第一站-句式信息交换.docx"
+        },
+        {
+          "name": "第二站：文化比较",
+          "pdf": "activities/04-姓氏信息站/02-第二站-文化比较.pdf",
+          "docx": "activities/04-姓氏信息站/可编辑原稿/02-第二站-文化比较.docx"
+        },
+        {
+          "name": "第三站：资料卡 A",
+          "pdf": "activities/04-姓氏信息站/03-第三站-资料卡A.pdf",
+          "docx": "activities/04-姓氏信息站/可编辑原稿/03-第三站-资料卡A.docx"
+        },
+        {
+          "name": "第三站：资料卡 B",
+          "pdf": "activities/04-姓氏信息站/04-第三站-资料卡B.pdf",
+          "docx": "activities/04-姓氏信息站/可编辑原稿/04-第三站-资料卡B.docx"
+        },
+        {
+          "name": "第三站：资料卡 C",
+          "pdf": "activities/04-姓氏信息站/05-第三站-资料卡C.pdf",
+          "docx": "activities/04-姓氏信息站/可编辑原稿/05-第三站-资料卡C.docx"
+        },
+        {
+          "name": "第三站：资料卡 D",
+          "pdf": "activities/04-姓氏信息站/06-第三站-资料卡D.pdf",
+          "docx": "activities/04-姓氏信息站/可编辑原稿/06-第三站-资料卡D.docx"
+        },
+        {
+          "name": "第四站：朗读与人物研究",
+          "pdf": "activities/04-姓氏信息站/07-第四站-朗读与人物研究.pdf",
+          "docx": "activities/04-姓氏信息站/可编辑原稿/07-第四站-朗读与人物研究.docx"
+        }
+      ]
+    },
+    {
+      "activity_id": "ACT-05",
+      "title": "调查与研究",
+      "periods": [
+        "P4"
+      ],
+      "folder": "activities/05-调查与研究",
+      "time": "约 10 分钟",
+      "grouping": "四人一组",
+      "teacher_guide": {
+        "name": "教师速用说明",
+        "pdf": "activities/05-调查与研究/00-教师速用说明.pdf",
+        "docx": "activities/05-调查与研究/可编辑原稿/00-教师速用说明.docx"
+      },
+      "student_materials": [
+        {
+          "name": "姓名调查表",
+          "pdf": "activities/05-调查与研究/01-姓名调查表.pdf",
+          "docx": "activities/05-调查与研究/可编辑原稿/01-姓名调查表.docx"
+        },
+        {
+          "name": "小组报告大纲",
+          "pdf": "activities/05-调查与研究/02-小组报告大纲.pdf",
+          "docx": "activities/05-调查与研究/可编辑原稿/02-小组报告大纲.docx"
+        },
+        {
+          "name": "完成检查",
+          "pdf": "activities/05-调查与研究/03-完成检查.pdf",
+          "docx": "activities/05-调查与研究/可编辑原稿/03-完成检查.docx"
+        }
+      ]
+    }
+  ],
+  "index": {
+    "pdf": "activities/00-第一课活动材料索引.pdf",
+    "docx": "activities/可编辑原稿/00-第一课活动材料索引.docx"
+  }
+}
