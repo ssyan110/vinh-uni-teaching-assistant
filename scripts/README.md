@@ -19,6 +19,9 @@ Build the read-only dashboard cache with:
 python3 scripts/build_dashboard.py
 ```
 
+The generated `dashboard/manifest.js` aggregates the eight lesson summaries
+from the source index and any available `lessons/lesson-XX/20-approved/lesson-manifest.json` files. The dashboard only expands the selected lesson; it does not copy every lesson's evidence into the course overview.
+
 Build a release only from authority files with:
 
 ```bash

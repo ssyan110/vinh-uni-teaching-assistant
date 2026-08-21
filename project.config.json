@@ -1,6 +1,9 @@
 {
   "project_id": "vinh-uni-teaching-assistant",
   "course_id": "boya-intermediate-i",
+  "course_title": "《博雅汉语听说：中级冲刺篇 I》",
+  "lesson_count": 8,
+  "lesson_catalog": "Giáo trình/博雅汉语听说-中级冲刺篇/教材资料索引.md",
   "active_lesson": "lesson-01",
   "lesson_root": "lessons/lesson-01",
   "canonical_source": "work/boya-intermediate/extractions/structured-lesson-01.json",
