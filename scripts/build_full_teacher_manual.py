@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -17,19 +18,29 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
+from PIL import Image, ImageDraw, ImageFont
+
+from production_gate import assert_ready
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-LESSON_DIR = PROJECT_ROOT / "output/boya-intermediate/lesson-01"
-LESSON_GUIDE = LESSON_DIR / "teacher/lesson-01-teacher-guide.md"
-MANUAL_DIR = PROJECT_ROOT / "output/boya-intermediate/teacher-manual"
+CONFIG = json.loads((PROJECT_ROOT / "project.config.json").read_text(encoding="utf-8"))
+LESSON_DIR = PROJECT_ROOT / CONFIG["lesson_root"]
+LESSON_GUIDE = Path(os.environ.get(
+    "BOYA_LESSON_GUIDE_PATH",
+    str(LESSON_DIR / "10-design/teacher-manual-draft/lesson-01-teacher-guide.md"),
+))
+MANUAL_DIR = Path(os.environ.get("BOYA_MANUAL_EXPORT_DIR", str(LESSON_DIR / "10-design/teacher-manual-export-draft")))
 MANUAL_MD = MANUAL_DIR / "boya-intermediate-i-semester-teacher-manual.md"
 MANUAL_DOCX = MANUAL_DIR / "boya-intermediate-i-semester-teacher-manual.docx"
 MANUAL_PDF = MANUAL_DIR / "boya-intermediate-i-semester-teacher-manual.pdf"
 MANIFEST = MANUAL_DIR / "manifest.json"
+GANTT_PNG = MANUAL_DIR / "semester-gantt.png"
 
 FONT = "Times New Roman"
-CJK_FONT = "Noto Sans CJK SC"
+# Use a font installed on macOS and available to Word/LibreOffice so Chinese
+# remains readable when a teacher opens or previews the editable DOCX.
+CJK_FONT = "Microsoft YaHei"
 INK = "17324D"
 ACCENT = "2E74B5"
 DARK_ACCENT = "1F4D78"
@@ -37,6 +48,168 @@ LIGHT_BLUE = "E8EEF5"
 LIGHT_GRAY = "F2F4F7"
 FORM_LINE = "AAB8C6"
 MUTED = "64748B"
+
+
+SEMESTER_SESSIONS = [
+    ("01", "09/07", "09/13"),
+    ("02", "09/14", "09/20"),
+    ("03", "09/21", "09/27"),
+    ("04", "09/28", "10/04"),
+    ("05", "10/05", "10/11"),
+    ("06", "10/12", "10/18"),
+    ("07", "10/19", "10/25"),
+    ("08", "10/26", "11/01"),
+    ("09", "11/02", "11/08"),
+    ("10", "11/09", "11/15"),
+    ("11", "11/16", "11/22"),
+    ("12", "11/23", "11/29"),
+    ("13", "11/30", "12/06"),
+    ("14", "12/07", "12/13"),
+    ("15", "12/14", "12/20"),
+    ("弹性周", "12/21", "12/27"),
+]
+
+
+SEMESTER_GANTT_ROWS = [
+    ("课程启动与诊断", "diagnostic", [(0, 0.0, 1.0, "4节")]),
+    ("第1课  中国人的姓名（第2次至第3次）", "lesson", [(1, 0.0, 1.0, "第2次"), (2, 0.0, 0.5, "第3次")]),
+    ("第2课  真正的朋友（第3次至第4次）", "lesson", [(2, 0.5, 0.5, "第3次"), (3, 0.0, 1.0, "第4次")]),
+    ("第5课  音乐的魅力（第5次至第6次）", "lesson", [(4, 0.0, 1.0, "第5次"), (5, 0.0, 0.5, "第6次")]),
+    ("第3课  宜居之地（第6次至第7次）", "lesson", [(5, 0.5, 0.5, "第6次"), (6, 0.0, 1.0, "第7次")]),
+    ("中期听说评量", "assessment", [(7, 0.0, 1.0, "4节")]),
+    ("第7课  我的同事（第9次至第10次）", "lesson", [(8, 0.0, 1.0, "第9次"), (9, 0.0, 0.5, "第10次")]),
+    ("第6课  挑战（第10次至第11次）", "lesson", [(9, 0.5, 0.5, "第10次"), (10, 0.0, 1.0, "第11次")]),
+    ("第4课  地球人的担忧（第12次至第13次）", "lesson", [(11, 0.0, 1.0, "第12次"), (12, 0.0, 0.5, "第13次")]),
+    ("第8课  学汉语的苦恼（第13次至第14次）", "lesson", [(12, 0.5, 0.5, "第13次"), (13, 0.0, 1.0, "第14次")]),
+    ("期末整合表现", "assessment", [(14, 0.0, 1.0, "4节")]),
+    ("弹性周", "flex", [(15, 0.0, 1.0, "按需调整")]),
+]
+
+
+def chart_font_path() -> Path:
+    candidates = [
+        Path("/Library/Fonts/Microsoft/Microsoft Yahei.ttf"),
+        Path("/System/Library/Fonts/STHeiti Medium.ttc"),
+        Path("/System/Library/Fonts/Hiragino Sans GB.ttc"),
+    ]
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+    raise FileNotFoundError("找不到可用于学期甘特图的中文字体")
+
+
+def make_chart_font(path: Path, size: int) -> ImageFont.FreeTypeFont:
+    return ImageFont.truetype(str(path), size=size)
+
+
+def draw_centered(draw: ImageDraw.ImageDraw, box: tuple[float, float, float, float], text: str,
+                  font: ImageFont.FreeTypeFont, fill: str) -> None:
+    left, top, right, bottom = box
+    bounds = draw.textbbox((0, 0), text, font=font)
+    text_width = bounds[2] - bounds[0]
+    text_height = bounds[3] - bounds[1]
+    x = left + (right - left - text_width) / 2 - bounds[0]
+    y = top + (bottom - top - text_height) / 2 - bounds[1]
+    draw.text((x, y), text, font=font, fill=fill)
+
+
+def build_semester_gantt() -> None:
+    """Create the reader-facing semester schedule visual used in the manual."""
+    font_path = chart_font_path()
+    width, height = 3000, 1320
+    image = Image.new("RGB", (width, height), "#F8FAFC")
+    draw = ImageDraw.Draw(image)
+    title_font = make_chart_font(font_path, 48)
+    subtitle_font = make_chart_font(font_path, 25)
+    header_font = make_chart_font(font_path, 22)
+    date_font = make_chart_font(font_path, 17)
+    row_font = make_chart_font(font_path, 23)
+    bar_font = make_chart_font(font_path, 20)
+    small_bar_font = make_chart_font(font_path, 17)
+    summary_font = make_chart_font(font_path, 21)
+    legend_font = make_chart_font(font_path, 19)
+
+    ink = "#17324D"
+    muted = "#64748B"
+    grid = "#D7E1EB"
+    header_fill = "#E8EEF5"
+    row_fill = "#FFFFFF"
+    lesson_colors = ["#2E74B5", "#4C83B0", "#6395B9", "#5576A9", "#7198B5", "#3E7899", "#5B8A9B", "#477B9F"]
+    diagnostic_color = "#7A8794"
+    assessment_color = "#D96B52"
+    flex_color = "#CBD5E1"
+
+    draw.text((80, 45), "学期课程节数与时间安排", font=title_font, fill=ink)
+    draw.text((80, 111), "每个单元代表一次上课（4节／200分钟）；半格代表2节课。", font=subtitle_font, fill=muted)
+
+    left = 550
+    right = 100
+    top = 205
+    header_height = 82
+    row_height = 64
+    grid_width = width - left - right
+    column_width = grid_width / len(SEMESTER_SESSIONS)
+    grid_top = top + header_height
+    grid_bottom = grid_top + row_height * len(SEMESTER_GANTT_ROWS)
+
+    draw.rounded_rectangle((left, top, width - right, grid_bottom), radius=14, fill=row_fill, outline=grid, width=2)
+    for index, (session, start_date, end_date) in enumerate(SEMESTER_SESSIONS):
+        x0 = left + index * column_width
+        x1 = x0 + column_width
+        draw.rectangle((x0, top, x1, grid_top), fill=header_fill)
+        draw.line((x0, top, x0, grid_bottom), fill=grid, width=2)
+        label = "第" + session + "次" if session.isdigit() else session
+        draw_centered(draw, (x0, top + 5, x1, top + 42), label, header_font, ink)
+        draw_centered(draw, (x0, top + 43, x1, grid_top - 3), start_date + "–" + end_date, date_font, muted)
+    draw.line((width - right, top, width - right, grid_bottom), fill=grid, width=2)
+    draw.line((left, grid_top, width - right, grid_top), fill=grid, width=2)
+
+    for row_index, (label, kind, segments) in enumerate(SEMESTER_GANTT_ROWS):
+        y0 = grid_top + row_index * row_height
+        y1 = y0 + row_height
+        if row_index % 2 == 1:
+            draw.rectangle((left, y0, width - right, y1), fill="#FBFCFE")
+        draw.line((left, y1, width - right, y1), fill=grid, width=1)
+        draw.text((80, y0 + 18), label, font=row_font, fill=ink)
+        if kind == "diagnostic":
+            color = diagnostic_color
+        elif kind == "assessment":
+            color = assessment_color
+        elif kind == "flex":
+            color = flex_color
+        else:
+            color = lesson_colors[row_index % len(lesson_colors)]
+        for session_index, offset, duration, text in segments:
+            x0 = left + (session_index + offset) * column_width + 5
+            x1 = left + (session_index + offset + duration) * column_width - 5
+            bar_y0 = y0 + 12
+            bar_y1 = y1 - 12
+            draw.rounded_rectangle((x0, bar_y0, x1, bar_y1), radius=10, fill=color)
+            text_color = "#17324D" if kind == "flex" else "#FFFFFF"
+            font = small_bar_font if duration < 0.6 else bar_font
+            draw_centered(draw, (x0, bar_y0, x1, bar_y1), text, font, text_color)
+
+    # Bottom summary makes the total time visible without reading the table.
+    summary_y = grid_bottom + 38
+    summary_items = [
+        ("60节", "3000分钟", "#2E74B5"),
+        ("8课", "48节教材", "#4C83B0"),
+        ("课程诊断", "4节", diagnostic_color),
+        ("中期评量", "4节", assessment_color),
+        ("期末整合", "4节", assessment_color),
+        ("弹性周", "按需调整", flex_color),
+    ]
+    summary_width = (width - 160) / len(summary_items) - 12
+    for index, (label, value, color) in enumerate(summary_items):
+        x0 = 80 + index * (summary_width + 12)
+        x1 = x0 + summary_width
+        fill = color if color != flex_color else "#E7EDF3"
+        draw.rounded_rectangle((x0, summary_y, x1, summary_y + 78), radius=12, fill=fill)
+        text_color = "#17324D" if color == flex_color else "#FFFFFF"
+        draw.text((x0 + 18, summary_y + 11), label, font=summary_font, fill=text_color)
+        draw.text((x0 + 18, summary_y + 43), value, font=legend_font, fill=text_color)
+
+    image.save(GANTT_PNG, format="PNG", optimize=True)
 
 
 OVERVIEW_MD = dedent(
@@ -49,14 +222,14 @@ OVERVIEW_MD = dedent(
 
     | 栏目 | 当前内容 |
     | --- | --- |
-    | 文件版本 | v0.2 |
+    | 文件版本 | v0.4 |
     | 当前范围 | 全学期课程总览＋第一课〈中国人的姓名〉 |
     | 后续扩充 | 第2–8课继续写入本手册，沿用同一课次结构 |
     | 课程状态 | 第一课教师手册已于 2026-08-20 由 Adam 批准；全学期日期按学校正式课表微调 |
     | 教师手册语言 | 简体中文；只有在确有需要时另附越南文说明 |
     | 学生端语言 | 全中文；目标内容使用教材简体字 |
     | 课程教材 | 《博雅汉语听说：中级冲刺篇 I》 |
-    | 建立日期 | 2026-08-20 |
+    | 更新日期 | 2026-08-21 |
 
     ## 1. 课程快照
 
@@ -122,22 +295,41 @@ OVERVIEW_MD = dedent(
 
     ### 2.3 15次授课时间轴
 
+    下表列出八课在本学期实际覆盖的上课次数。每课占6节课（300分钟），通常分布在连续两次上课中。
+
+    本学期实际教学顺序为：第1课 → 第2课 → 第5课 → 第3课 → 第7课 → 第6课 → 第4课 → 第8课。
+
+    | 课程 | 主题 | 覆盖的上课次数 | 实际日期 | 课程总量 |
+    | --- | --- | --- | --- | --- |
+    | 第1课 | 中国人的姓名 | 第2次至第3次 | 09/14–09/27 | 6节／300分钟 |
+    | 第2课 | 真正的朋友 | 第3次至第4次 | 09/21–10/04 | 6节／300分钟 |
+    | 第5课 | 音乐的魅力 | 第5次至第6次 | 10/05–10/18 | 6节／300分钟 |
+    | 第3课 | 宜居之地 | 第6次至第7次 | 10/12–10/25 | 6节／300分钟 |
+    | 第7课 | 我的同事 | 第9次至第10次 | 11/02–11/15 | 6节／300分钟 |
+    | 第6课 | 挑战 | 第10次至第11次 | 11/09–11/22 | 6节／300分钟 |
+    | 第4课 | 地球人的担忧 | 第12次至第13次 | 11/23–12/06 | 6节／300分钟 |
+    | 第8课 | 学汉语的苦恼 | 第13次至第14次 | 11/30–12/13 | 6节／300分钟 |
+
+    ![学期课程节数与时间安排](semester-gantt.png)
+
+    图1  学期课程节数与时间安排。每个单元代表一次上课（4节／200分钟）；半格代表2节课。
+
     | 次数 | 暂定日期 | 四节课配置 | 主题与教材 | 主要口语／听力证据 |
     | --- | --- | --- | --- | --- |
     | 01 | 09/07–09/13 | 课程启动、先备衔接、听力诊断、互动诊断 | 课程启动与听说诊断；不引入新教材课文 | 个人60秒自我介绍；双人追问；听力主旨与细节记录 |
-    | 02 | 09/14–09/20 | 第1课 P1–P4 | 第1课〈中国人的姓名〉；教材印刷页1–16，PDF pp.12–27，11个音档 | 听力证据表；姓名意义90秒说明；称姓与澄清练习 |
-    | 03 | 09/21–09/27 | 第1课 P5–P6；第2课 P1–P2 | 从姓名文化进入朋友关系；完成第1课收束并导入第2课 | 命名顾问任务；朋友调查准备；第2课第一次听力主旨 |
-    | 04 | 09/28–10/04 | 第2课 P3–P6 | 第2课〈真正的朋友〉；朋友、价值观、故事与观点 | 朋友价值观3分钟演讲；小组报告；辩论与追问 |
-    | 05 | 10/05–10/11 | 第5课 P1–P4 | 第5课〈音乐的魅力〉；偏好、感受、描述与评论 | 音乐偏好调查；听感描述；短篇音乐评论 |
-    | 06 | 10/12–10/18 | 第5课 P5–P6；第3课 P1–P2 | 从音乐策展进入宜居城市；完成第5课收束并导入第3课 | 校园音乐策展提案；旅游类别偏好；第3课主旨听力 |
-    | 07 | 10/19–10/25 | 第3课 P3–P6 | 第3课〈宜居之地〉；城市、农村、生活条件与旅游 | 十日旅游线路；海岛旅游公司模拟；城市／农村观点表达 |
+    | 02 | 09/14–09/20 | 第1课 | 第1课〈中国人的姓名〉；教材印刷页1–16，PDF pp.12–27，11个音档 | 听力证据表；姓名意义90秒说明；称姓与澄清练习 |
+    | 03 | 09/21–09/27 | 第1课收束；第2课导入 | 从姓名文化进入朋友关系；完成第1课收束并导入第2课 | 命名顾问任务；朋友调查准备；第2课第一次听力主旨 |
+    | 04 | 09/28–10/04 | 第2课 | 第2课〈真正的朋友〉；朋友、价值观、故事与观点 | 朋友价值观3分钟演讲；小组报告；辩论与追问 |
+    | 05 | 10/05–10/11 | 第5课 | 第5课〈音乐的魅力〉；偏好、感受、描述与评论 | 音乐偏好调查；听感描述；短篇音乐评论 |
+    | 06 | 10/12–10/18 | 第5课收束；第3课导入 | 从音乐策展进入宜居城市；完成第5课收束并导入第3课 | 校园音乐策展提案；旅游类别偏好；第3课主旨听力 |
+    | 07 | 10/19–10/25 | 第3课 | 第3课〈宜居之地〉；城市、农村、生活条件与旅游 | 十日旅游线路；海岛旅游公司模拟；城市／农村观点表达 |
     | 08 | 10/26–11/01 | 中期听说表现、反馈、重做、学习档案 | 中期评量范围：第1、2、5、3课 | 新听力材料；陌生情境互动；2分钟口语表现；反馈后重做 |
-    | 09 | 11/02–11/08 | 第7课 P1–P4 | 第7课〈我的同事〉；职场关系、礼貌、谦虚与语用 | 谦虚／敬语辨识；职场请求与回应；语用判断 |
-    | 10 | 11/09–11/15 | 第7课 P5–P6；第6课 P1–P2 | 从职场语用进入挑战叙事；完成第7课收束并导入第6课 | 职场沟通诊所；人生态度讨论；第6课主旨听力 |
-    | 11 | 11/16–11/22 | 第6课 P3–P6 | 第6课〈挑战〉；运动、人物、梦想与同理表达 | 运动解说；运动员成长报告；人物介绍与追问 |
-    | 12 | 11/23–11/29 | 第4课 P1–P4 | 第4课〈地球人的担忧〉；问题、原因、结果与环境议题 | 环境议题听力；事故2分钟叙述；因果关系说明 |
-    | 13 | 11/30–12/06 | 第4课 P5–P6；第8课 P1–P2 | 从公共议题进入语言学习反思；完成第4课收束并导入第8课 | 地球议题论坛；环境调查报告；第8课问题主旨听力 |
-    | 14 | 12/07–12/13 | 第8课 P3–P6 | 第8课〈学汉语的苦恼〉；汉字、语用、文化与学习策略 | 汉字／组词任务；委婉语与禁忌语；学习者支援建议 |
+    | 09 | 11/02–11/08 | 第7课 | 第7课〈我的同事〉；职场关系、礼貌、谦虚与语用 | 谦虚／敬语辨识；职场请求与回应；语用判断 |
+    | 10 | 11/09–11/15 | 第7课收束；第6课导入 | 从职场语用进入挑战叙事；完成第7课收束并导入第6课 | 职场沟通诊所；人生态度讨论；第6课主旨听力 |
+    | 11 | 11/16–11/22 | 第6课 | 第6课〈挑战〉；运动、人物、梦想与同理表达 | 运动解说；运动员成长报告；人物介绍与追问 |
+    | 12 | 11/23–11/29 | 第4课 | 第4课〈地球人的担忧〉；问题、原因、结果与环境议题 | 环境议题听力；事故2分钟叙述；因果关系说明 |
+    | 13 | 11/30–12/06 | 第4课收束；第8课导入 | 从公共议题进入语言学习反思；完成第4课收束并导入第8课 | 地球议题论坛；环境调查报告；第8课问题主旨听力 |
+    | 14 | 12/07–12/13 | 第8课 | 第8课〈学汉语的苦恼〉；汉字、语用、文化与学习策略 | 汉字／组词任务；委婉语与禁忌语；学习者支援建议 |
     | 15 | 12/14–12/20 | 期末整合表现、个人口语、反思 | 新听力、新限制和第1–8课迁移 | 新情境听说任务；2–3分钟口语；追问、澄清与重做 |
     | 弹性周 | 12/21–12/27 | 不排新内容；按正式课表调整 | 补课、重做、补考、个别反馈或课程资料整理 | 缺课补做、个人口语补录、学习档案完成 |
 
@@ -328,6 +520,12 @@ def parse_markdown(text: str) -> list[tuple[str, object]]:
         if heading:
             flush_paragraph()
             blocks.append(("heading", (len(heading.group(1)), clean_inline(heading.group(2)))))
+            index += 1
+            continue
+        image = re.match(r"^!\[([^\]]*)\]\(([^)]+)\)$", stripped)
+        if image:
+            flush_paragraph()
+            blocks.append(("image", (image.group(1), image.group(2))))
             index += 1
             continue
         if stripped == "---":
@@ -613,6 +811,9 @@ def add_table(document: Document, rows: Sequence[Sequence[str]], landscape: bool
     set_table_geometry(table, widths)
     for row_index, source_row in enumerate(rows):
         target = table.rows[row_index]
+        tr_pr = target._tr.get_or_add_trPr()
+        cant_split = OxmlElement("w:cantSplit")
+        tr_pr.append(cant_split)
         if row_index == 0:
             set_repeat_table_header(target)
         for column_index in range(count):
@@ -646,6 +847,10 @@ def switch_section(document: Document, landscape: bool) -> None:
     if landscape:
         section.orientation = WD_ORIENT.LANDSCAPE
         section.page_width, section.page_height = section.page_height, section.page_width
+    else:
+        section.orientation = WD_ORIENT.PORTRAIT
+        section.page_width = Inches(8.5)
+        section.page_height = Inches(11)
     apply_header_footer(document)
 
 
@@ -659,7 +864,13 @@ def build_docx(markdown_text: str) -> None:
     for kind, payload in blocks:
         if kind == "heading":
             level, text = payload  # type: ignore[misc]
-            if text.startswith("12. 教材练习对应表") and not landscape:
+            if text.startswith("2.3 15次授课时间轴") and not landscape:
+                switch_section(document, True)
+                landscape = True
+            elif text.startswith("3. 教学方法与课堂决策") and landscape:
+                switch_section(document, False)
+                landscape = False
+            elif text.startswith("12. 教材练习对应表") and not landscape:
                 switch_section(document, True)
                 landscape = True
             elif text.startswith("13. 配套材料清单") and landscape:
@@ -681,6 +892,14 @@ def build_docx(markdown_text: str) -> None:
             add_bullets(document, payload, numbered=True)  # type: ignore[arg-type]
         elif kind == "table":
             add_table(document, payload, landscape)  # type: ignore[arg-type]
+        elif kind == "image":
+            _alt, relative_path = payload  # type: ignore[misc]
+            image_path = (MANUAL_DIR / str(relative_path)).resolve()
+            if image_path.exists():
+                paragraph = document.add_paragraph()
+                set_paragraph(paragraph, after=3, line_spacing=1.0, alignment=WD_ALIGN_PARAGRAPH.CENTER)
+                run = paragraph.add_run()
+                run.add_picture(str(image_path), width=Inches(9.8 if landscape else 7.0))
         elif kind == "separator":
             pending_page_break = True
     document.save(MANUAL_DOCX)
@@ -689,6 +908,8 @@ def build_docx(markdown_text: str) -> None:
 def write_manifest() -> None:
     data = {
         "package": "boya-intermediate-i-semester-teacher-manual",
+        "version": "v0.4",
+        "updated_at": "2026-08-21",
         "status": "overview_plus_lesson_01_ready_for_review",
         "language": "简体中文",
         "course": "《博雅汉语听说：中级冲刺篇 I》",
@@ -704,19 +925,25 @@ def write_manifest() -> None:
         "lesson_periods": 6,
         "current_scope": ["course_overview", "lesson_01"],
         "lesson_01_teacher_guide_approval": "approved_by_adam_2026-08-20",
-        "source_of_truth_for_lesson_01": "output/boya-intermediate/lesson-01/teacher/lesson-01-teacher-guide.md",
+        "source_of_truth_for_lesson_01": "lessons/lesson-01/20-approved/teacher-manual/第一课简易教案.docx",
         "output_files": [
             "boya-intermediate-i-semester-teacher-manual.md",
             "boya-intermediate-i-semester-teacher-manual.docx",
             "boya-intermediate-i-semester-teacher-manual.pdf",
+            "semester-gantt.png",
         ],
+        "semester_schedule_visual": "semester-gantt.png",
         "next_scope": "append_lesson_02_using_the_same_structure",
     }
     MANIFEST.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def main() -> None:
+    assert_ready("semester-manual", MANUAL_DIR)
+    if not LESSON_GUIDE.is_file():
+        raise FileNotFoundError(f"Teacher-guide input is missing: {LESSON_GUIDE}")
     MANUAL_DIR.mkdir(parents=True, exist_ok=True)
+    build_semester_gantt()
     markdown_text = merged_manual_markdown()
     MANUAL_MD.write_text(markdown_text, encoding="utf-8")
     build_docx(markdown_text)

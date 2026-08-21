@@ -1,6 +1,8 @@
 {
   "package": "boya-intermediate-i-semester-teacher-manual",
-  "status": "overview_and_lesson_01_teacher_guide_approved_lesson_01_pptx_revision_pending_outline_review",
+  "version": "v0.4",
+  "updated_at": "2026-08-21",
+  "status": "overview_plus_lesson_01_ready_for_review",
   "language": "简体中文",
   "course": "《博雅汉语听说：中级冲刺篇 I》",
   "semester_window": "2026/09/07–2026/12/27",
@@ -18,16 +20,13 @@
     "lesson_01"
   ],
   "lesson_01_teacher_guide_approval": "approved_by_adam_2026-08-20",
-  "lesson_01_production_status": "pptx_produced_pending_teacher_qa_and_rehearsal",
-  "next_gate": "lesson_01_ppt_outline_v2_review",
   "source_of_truth_for_lesson_01": "output/boya-intermediate/lesson-01/teacher/lesson-01-teacher-guide.md",
   "output_files": [
     "boya-intermediate-i-semester-teacher-manual.md",
     "boya-intermediate-i-semester-teacher-manual.docx",
-    "boya-intermediate-i-semester-teacher-manual.pdf"
+    "boya-intermediate-i-semester-teacher-manual.pdf",
+    "semester-gantt.png"
   ],
-  "lesson_01_pptx": "output/boya-intermediate/lesson-01/pptx/lesson-01.pptx",
-  "lesson_01_pptx_slide_count": 69,
-  "lesson_01_pptx_audio_embedded": 11,
-  "next_scope": "finish_lesson_01_before_unlocking_lesson_02"
+  "semester_schedule_visual": "semester-gantt.png",
+  "next_scope": "append_lesson_02_using_the_same_structure"
 }

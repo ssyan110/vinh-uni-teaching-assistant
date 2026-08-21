@@ -2,6 +2,12 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 
+if (process.env.BOYA_ALLOW_LEGACY_REVIEW !== '1') {
+  throw new Error(
+    'This HTML teaching-design builder is legacy-only. Set BOYA_ALLOW_LEGACY_REVIEW=1 explicitly to rebuild historical evidence.'
+  );
+}
+
 const projectRoot = path.resolve(__dirname, '..');
 const sourceRelative = 'work/boya-intermediate/extractions/structured-lesson-01.json';
 const outputRelative = 'output/boya-intermediate/lesson-01/teaching-design';

@@ -1,0 +1,20 @@
+{
+  "project_id": "vinh-uni-teaching-assistant",
+  "course_id": "boya-intermediate-i",
+  "active_lesson": "lesson-01",
+  "lesson_root": "lessons/lesson-01",
+  "canonical_source": "work/boya-intermediate/extractions/structured-lesson-01.json",
+  "legacy_lesson_root": "output/boya-intermediate/lesson-01",
+  "frozen_final_package_source": "output/boya-intermediate/lesson-01/share/第一课-教学资料",
+  "draft_root": "lessons/lesson-01/10-design",
+  "authority_root": "lessons/lesson-01/20-approved",
+  "qa_root": "lessons/lesson-01/30-qa",
+  "release_root": "lessons/lesson-01/40-release",
+  "dashboard_root": "dashboard",
+  "protected_roots": [
+    "lessons/lesson-01/20-approved",
+    "lessons/lesson-01/30-qa",
+    "lessons/lesson-01/40-release",
+    "output/boya-intermediate/lesson-01/share"
+  ]
+}

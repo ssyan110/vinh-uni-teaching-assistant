@@ -1,174 +1,187 @@
 {
-  "package": "boya-intermediate-lesson-01-native-pptx-v2",
-  "generated_at": "2026-08-20T16:52:25.746Z",
-  "status": "ready_for_pptx_qa",
+  "package": "boya-intermediate-lesson-01-native-pptx-v5",
+  "generated_at": "2026-08-21T11:46:12.356Z",
+  "status": "final_confirmed_by_adam_2026-08-21",
   "format": "native-editable-pptx",
   "html_required": false,
-  "slide_count": 71,
+  "slide_count": 62,
   "period_count": 6,
-  "minutes_per_period": 50,
   "total_minutes": 300,
+  "section_order": [
+    "听说（一）",
+    "词语理解",
+    "语句理解",
+    "语段理解",
+    "口语句式",
+    "文化知识",
+    "拓展练习",
+    "听说（二）",
+    "词语理解",
+    "语句理解",
+    "语段理解",
+    "口语句式",
+    "文化知识",
+    "拓展练习"
+  ],
   "section_dividers": [
     3,
-    16,
-    26,
-    37,
-    49,
-    59
+    6,
+    10,
+    13,
+    18,
+    23,
+    28,
+    34,
+    36,
+    39,
+    42,
+    46,
+    51,
+    56
   ],
   "exercise_count": 35,
   "exercise_coverage_count": 35,
-  "audio_track_count": 11,
-  "audio_embedded_count": 11,
-  "speaker_notes_count": 71,
+  "source_audio_track_count": 11,
+  "classroom_audio_track_count": 9,
+  "embedded_audio_track_count": 9,
+  "embedded_audio_instance_count": 13,
+  "prestudy_audio_tracks": [
+    "1-1",
+    "2-1"
+  ],
+  "speaker_notes_count": 62,
   "language": "简体中文",
-  "font_family": "Microsoft YaHei",
-  "student_language_policy": "学生端投影使用简体中文；学生画面只显示当前课堂动作。",
-  "visible_completion_labels": 0,
-  "visible_internal_labels": [],
-  "visual_style": "approved educational textbook line-art contact sheet; grey-blue outlines; muted pastel fills; pale background",
-  "source_of_truth": "output/boya-intermediate/lesson-01/teacher/lesson-01-teacher-guide.md",
-  "input_outline": "output/boya-intermediate/lesson-01/storyboard/lesson-01-ppt-outline-v2.md",
-  "visual_storyboard": "output/boya-intermediate/lesson-01/visual-storyboard/lesson-01-visual-storyboard-v2.md",
+  "font_family": "Heiti SC",
+  "visible_time_or_group_footnotes": 0,
+  "visible_generic_three_step_pages": 0,
+  "listening_flow": [
+    "听",
+    "写关键词",
+    "回答"
+  ],
+  "visual_style": "教材式编辑视觉：暖米色、薄荷绿、紫色重点、留白、纸张式图片框与多样版式；连续题组合并，装饰图形限制在投影片画布内",
+  "source_of_truth": "output/boya-intermediate/lesson-01/share/第一课-教学资料",
+  "input_outline": "output/boya-intermediate/lesson-01/storyboard/lesson-01-ppt-outline-v5.md",
   "approved_contact_sheet": "output/boya-intermediate/lesson-01/visual-storyboard/assets/lesson-01-textbook-contact-sheet-4x4.png",
-  "approved_prototype": "output/boya-intermediate/lesson-01/visual-prototype/lesson-01-visual-prototype.pptx",
   "audio_manifest": "output/boya-intermediate/lesson-01/pptx/audio-manifest.json",
   "exercise_slide_map": {
     "E01-034": [
-      5,
-      14
+      4
     ],
     "E01-035": [
-      6,
-      14,
-      45,
-      46
+      5
     ],
     "E01-001": [
-      7,
-      8,
-      9
+      7
     ],
     "E01-002": [
-      10,
-      11
+      8
     ],
     "E01-003": [
-      12,
-      13,
-      14
+      9
     ],
     "E01-004": [
-      17,
-      18
+      11
     ],
     "E01-005": [
-      19,
-      20
-    ],
-    "E01-009": [
-      21,
-      25
-    ],
-    "E01-010": [
-      22,
-      25
-    ],
-    "E01-011": [
-      23,
-      25
-    ],
-    "E01-012": [
-      24,
-      25
+      12
     ],
     "E01-006": [
-      28,
-      29
+      14
     ],
     "E01-007": [
-      30
+      15
     ],
     "E01-008": [
-      31
+      16,
+      17
+    ],
+    "E01-009": [
+      19
+    ],
+    "E01-010": [
+      20
+    ],
+    "E01-011": [
+      21
+    ],
+    "E01-012": [
+      22
     ],
     "E01-013": [
-      32
+      24
     ],
     "E01-014": [
-      33
+      25,
+      26,
+      27
     ],
     "E01-015": [
-      34,
-      35
+      29
     ],
     "E01-016": [
-      39,
-      40,
-      41,
-      42,
-      47
+      30,
+      31
     ],
     "E01-017": [
-      43,
-      44
+      32
     ],
     "E01-018": [
-      45,
-      46,
-      47
+      33
     ],
     "E01-019": [
-      51
+      35
     ],
     "E01-020": [
-      52
+      37
     ],
     "E01-021": [
-      53,
-      57
+      38
     ],
     "E01-022": [
-      54,
-      55,
-      57
+      40
     ],
     "E01-023": [
-      56,
-      57
+      41
     ],
     "E01-024": [
-      61
+      43
     ],
     "E01-025": [
-      62
+      44
     ],
     "E01-026": [
-      63
+      45
     ],
     "E01-027": [
-      64
+      47,
+      48,
+      49,
+      50
     ],
     "E01-028": [
-      65
+      52
     ],
     "E01-029": [
-      66
-    ],
-    "E01-032": [
-      67
+      53,
+      54,
+      55
     ],
     "E01-030": [
-      68
+      57
     ],
     "E01-031": [
-      69
+      58
+    ],
+    "E01-032": [
+      59
     ],
     "E01-033": [
-      70
+      60,
+      61
     ]
   },
-  "pptx_sha256": "17022eceb5a818dee33197e12c76acab547b160905209738c5430fe1c5993a08",
+  "pptx_sha256": "8af0390fdf804a93106bff5e2c9ee0d19b5957443c4bd7aafe8f0556364600e1",
   "output_files": [
     "lesson-01.pptx",
     "audio-manifest.json",

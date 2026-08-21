@@ -3,16 +3,27 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const { execFileSync } = require('child_process');
 const { toTeacherGuideChinese } = require('./simplify_chinese');
 
 const projectRoot = path.resolve(__dirname, '..');
-const sourcePath = path.join(projectRoot, 'work/boya-intermediate/extractions/structured-lesson-01.json');
-const storyboardPath = path.join(projectRoot, 'output/boya-intermediate/lesson-01/storyboard/lesson-01-ppt-storyboard.csv');
-const coveragePath = path.join(projectRoot, 'output/boya-intermediate/lesson-01/teaching-design/lesson-01-activity-coverage.csv');
-const supportPath = path.join(projectRoot, 'output/boya-intermediate/lesson-01/storyboard/lesson-01-support-materials.csv');
-const teacherDir = path.join(projectRoot, 'output/boya-intermediate/lesson-01/teacher');
+const projectConfig = JSON.parse(fs.readFileSync(path.join(projectRoot, 'project.config.json'), 'utf8'));
+const lessonRoot = path.join(projectRoot, projectConfig.lesson_root);
+const sourcePath = path.join(projectRoot, projectConfig.canonical_source);
+const storyboardPath = path.join(lessonRoot, '10-design/storyboard/lesson-01-ppt-storyboard.csv');
+const coveragePath = path.join(lessonRoot, '10-design/teaching-design/lesson-01-activity-coverage.csv');
+const activityManifestPath = process.env.BOYA_ACTIVITY_MANIFEST || path.join(lessonRoot, '10-design/activity-package-manifest.json');
+const teacherDir = process.env.BOYA_TEACHER_GUIDE_DRAFT_DIR || path.join(lessonRoot, '10-design/teacher-manual-draft');
 const guidePath = path.join(teacherDir, 'lesson-01-teacher-guide.md');
 const manifestPath = path.join(teacherDir, 'manifest.json');
+
+function assertProductionGate() {
+  execFileSync(process.env.BOYA_PYTHON || 'python3', [
+    path.join(projectRoot, 'scripts/production_gate.py'),
+    '--purpose', 'teacher-guide',
+    '--output-dir', teacherDir,
+  ], { stdio: 'inherit' });
+}
 
 function parseCsv(text) {
   const rows = [];
@@ -55,6 +66,75 @@ function csvRows(filePath) {
   return parseCsv(fs.readFileSync(filePath, 'utf8'));
 }
 
+function supportRowsFromActivityManifest(manifest) {
+  const activityRows = manifest.activities.map((activity) => ({
+    material_id: activity.activity_id,
+    name: `${activity.title}活动包`,
+    audience: '学生小组',
+    periods: activity.periods.join('、'),
+    source_refs: '按活动包与教师手册使用',
+    contents: activity.student_materials.map((material) => material.name).join('、'),
+    format: '可编辑 DOCX'
+  }));
+  return [
+    {
+      material_id: 'TM-01',
+      name: '第一课教师手册',
+      audience: '教师',
+      periods: 'P1–P6',
+      source_refs: '全课',
+      contents: '每节流程、教材内容、音档、分组、教师提示、修补、评量与答案政策',
+      format: 'DOCX／PDF'
+    },
+    {
+      material_id: 'PREP-A',
+      name: '课前预习卡 A：姓名',
+      audience: '学生',
+      periods: 'P1–P4',
+      source_refs: '第一课前半部分',
+      contents: '快速阅读、音档接触、姓名资料、个人问题',
+      format: '可列印 PDF／可编辑 DOCX'
+    },
+    {
+      material_id: 'PREP-B',
+      name: '课前预习卡 B：姓氏',
+      audience: '学生',
+      periods: 'P5–P6',
+      source_refs: '第一课后半部分',
+      contents: '本国姓氏比较、历史人物资料、朗读准备',
+      format: '可列印 PDF／可编辑 DOCX'
+    },
+    ...activityRows,
+    {
+      material_id: 'ASSESS-01',
+      name: '同伴回馈与短讲评量表',
+      audience: '学生／教师',
+      periods: 'P3–P6',
+      source_refs: '成段表达与小组任务',
+      contents: '信息、互动、可理解度、理由／证据与重做目标',
+      format: '可列印 PDF／可编辑 DOCX'
+    },
+    {
+      material_id: 'ASSESS-02',
+      name: '出口卡与“我能”检核',
+      audience: '学生／教师',
+      periods: 'P1–P6',
+      source_refs: '每节课末',
+      contents: '本节表现、听力信息、仍需确认的问题与下一步目标',
+      format: '可列印 PDF／可编辑 DOCX'
+    },
+    {
+      material_id: 'ASSET-01',
+      name: '音档与版本清单',
+      audience: '教师／制作',
+      periods: 'P1–P6',
+      source_refs: '1-1–1-6、2-1–2-5',
+      contents: '音档编号、课堂用途、投影片对应、嵌入状态与版本记录',
+      format: 'JSON／CSV'
+    }
+  ];
+}
+
 function escapePipe(value) {
   return String(value || '—').replace(/\|/g, '\\|').replace(/\n/g, '<br>');
 }
@@ -75,7 +155,8 @@ function bulletList(items) {
 const source = JSON.parse(fs.readFileSync(sourcePath, 'utf8'));
 const storyboardRows = csvRows(storyboardPath);
 const coverageRows = csvRows(coveragePath);
-const supportRows = csvRows(supportPath);
+const activityManifest = JSON.parse(fs.readFileSync(activityManifestPath, 'utf8'));
+const supportRows = supportRowsFromActivityManifest(activityManifest);
 const sourceHash = crypto.createHash('sha256').update(fs.readFileSync(sourcePath)).digest('hex');
 
 const periodPlans = [
@@ -97,19 +178,19 @@ const periodPlans = [
   },
   {
     id: 'P2',
-    title: '從跟讀、重建到句式資訊站',
-    canDo: '我能把課文中的說法換成自己的信息；我能在姓名問題中表達限制、反駁和轉折。',
+    title: '從跟讀、重建到句式任務',
+    canDo: '我能先聽懂句子，再在實際情境中用四個句式完成對話或說明。',
     source: '教材 pp.4、6–7；PDF pp.15、17–18；E01-004、E01-005、E01-009–E01-012；音檔 1-4、1-5。',
-    focus: '跟讀後替換；遮稿重建；總不能……吧、……才怪呢、到時候、話說回來。',
+    focus: '先聽、跟讀、替換，再用牙疼、接孩子、姓名選擇等情境完成句式任務。',
     teacherMoves: [
       '跟讀只作為進入互動的短支架；每次跟讀後立即換成學生自己的信息。',
       '重建對話接受合理改寫，優先看主要信息、回應和追問是否完整。',
-      '句式不做長篇定義；用情境卡讓學生先猜意思、完成任務，再補一句簡短說明。',
-      '最後保留重做時間：學生選一句不清楚的話，根據同伴回饋再說一次。',
+      '句式不做長篇定義；先用情境說出目的，再用教材的對話、改寫和情境題完成任務。',
+      '每個句式都要留下可聽見的產出；最後讓學生選一句不清楚的話，根據同伴回饋再說一次。',
     ],
-    evidence: '每人至少三句替換句；一次不看稿對話重建；四個句式站各完成指定產出；一次重做。',
-    repair: '學生說不出時，先給兩個可選的情境或關鍵詞，不直接給完整答案；完成後換同伴再做一次。',
-    exit: '用一個句式回應姓名選擇問題，並說明語氣或理由。',
+    evidence: '每人至少三句替換句；一次不看稿對話重建；四個句式各完成教材任務；一次重做。',
+    repair: '學生說不出時，先給情境或關鍵詞，不直接給完整答案；完成後換同伴再做一次。',
+    exit: '用一個句式完成一個姓名情境回應。',
   },
   {
     id: 'P3',
@@ -161,19 +242,19 @@ const periodPlans = [
   },
   {
     id: 'P6',
-    title: '姓氏資訊站：理解、比較與回報',
-    canDo: '我能從短文和音檔找出姓氏信息；我能談單姓、複姓和姓氏來源，並介紹一位歷史人物。',
+    title: '姓氏信息与成段报告',
+    canDo: '我能从短文和音频找出姓氏信息；我能总结对话、介绍姓氏，并报告一位历史人物。',
     source: '教材 pp.12–16；PDF pp.23–27；E01-024–E01-033；音檔 2-5。',
-    focus: '問題—原因—結果；單姓、複姓、姓氏來源；60–90 秒姓氏短講；30 秒人物介紹。',
+    focus: '问题、原因、结果；单姓、复姓、姓氏来源；五个姓的听辨；对话总结与人物介绍。',
     teacherMoves: [
-      '把 P6 設計成資訊站：學生先交換預習資料，再互相教一個重點。',
-      '音檔 2-5 第一遍只抓關鍵信息，第二遍找證據；共同卡點最多做 3 分鐘修補。',
-      '句式、文化、閱讀和朗讀都要留下口語產出，不把資訊站變成輪流讀答案。',
-      '用最後的反思和 Can-Do 檢核收束整課，記下下一課要修補的一個語言目標。',
+      '按活动卡安排任务：句式任务、文化比较、课文重点记录、姓氏读法和对话总结；不要求学生轮换找卡。',
+      '音频 2-5 第一遍只抓关键内容，第二遍找细节；共同卡点最多做 3 分钟修补。',
+      '两人一组阅读课文《中国人的姓名》，每人先写下一个重点，再用自己的话告诉同伴；同伴记录在“我听到的重点”表格里。',
+      '先让学生用五句话总结对话，再分组报告一个重点；最后用 Can-Do 检核收束整课。',
     ],
-    evidence: '關鍵空格與判斷證據；問題—原因—結果表；兩次資訊交換；閱讀拼圖教學；60–90 秒短講；30 秒人物介紹；總結出口卡。',
-    repair: '若時間不足，保留 E01-024–E01-026、E01-029、E01-030、E01-033 的核心產出；其餘活動改成站點延伸，但不刪除 coverage。',
-    exit: '完成「我能……」檢核，說出本課最能使用的一個語言表達和下一步目標。',
+    evidence: '填空與判斷證據；三個句式任務；文化比較回答；課文資料重述；每人讀五個姓並由同學記錄；五句對話總結；人物介紹與小組報告。',
+    repair: '若學生缺少資料，使用活動卡上的固定問題和姓名清單；只補足完成任務所需的詞，不改成逐句講解。',
+    exit: '完成「我能……」檢核，說出本課最能使用的一個表達。',
   },
 ];
 
@@ -216,15 +297,18 @@ const assessmentRows = [
 
 const periodSchedule = (periodId) => storyboardRows
   .filter((row) => row.period === periodId)
-  .map((row) => [
-    row.time,
-    row.purpose,
-    [row.source_refs, row.audio_track].filter(Boolean).join('；') || '—',
-    row.student_instruction_zh,
-    row.grouping,
-    row.student_output,
-    row.support_asset,
-  ]);
+  .map((row) => {
+    const isReadingRecord = row.support_asset.includes('03·课文重点记录卡');
+    return [
+      row.time,
+      row.purpose,
+      [row.source_refs, row.audio_track].filter(Boolean).join('；') || '—',
+      isReadingRecord ? '拿出03·课文重点记录卡，阅读短文，写下一个重点，再告诉同伴。' : row.student_instruction_zh,
+      isReadingRecord ? '两人一组' : row.grouping,
+      isReadingRecord ? '一份自己写下的重点和一份听到的重点记录' : row.student_output,
+      isReadingRecord ? '活动四《姓氏信息站》：03·课文重点记录卡' : row.support_asset,
+    ];
+  });
 
 const coverageTableRows = coverageRows.map((row) => [
   row.record_id,
@@ -398,8 +482,15 @@ markdown += table(['步驟', '學生操作', '教師觀察'], [
   ['5. 客戶追問與重做', '客戶問一題；顧問回答後選一句重說。', '是否能澄清或換一種說法。'],
 ]);
 markdown += '\n\n';
-markdown += '### 7.4 姓氏資訊站（P6）\n\n';
-markdown += '配置四類站點：句式資訊交換、文化比較、閱讀拼圖、姓氏朗讀／歷史人物。各站都要有不同信息，學生必須互相問答才能完成；教師只在學生無法繼續互動時介入。每組最後帶走一個「我教會別人的重點」。\n\n';
+markdown += '### 7.4 姓氏信息活动卡（P6）\n\n';
+markdown += table(['活动卡', '学生操作', '完成证据'], [
+  ['01·句式任务卡', '两人一组；每个人完成三个句式任务，同伴按卡片回答。', '每个人说三句话，同伴完成三次回答。'],
+  ['02·文化比较卡', '两人一组；用卡片上的两个问题比较姓名顺序和姓名产生时间。', '每人说出一个比较结果。'],
+  ['03·课文重点记录卡', '两人一组；阅读短文，每人先写下一个重点，再轮流告诉同伴；同伴记录在“我听到的重点”表格里。', '每人一个书面重点和一份听到的重点记录。'],
+  ['07·姓氏读法卡', '两人一组；每人读五个姓，同伴写下听到的五个姓。', '五个姓的记录和是否认识这些姓的回答。'],
+  ['08·对话总结记录', '两人一组；先写下对话重点，再用五句话总结并报告。', '一份对话总结和一段口头报告。'],
+]);
+markdown += '\n活动卡按活动分开提供；每张卡都可以直接发给学生使用。\n\n';
 markdown += '### 7.5 回饋與重做\n\n';
 markdown += '回饋只回答三個問題：聽者聽懂了什麼？哪一句需要再說？下一次要改哪一點？學生在同一節內重做一次；教師不把全部錯誤列出來，也不以語法正確率取代任務完成。\n\n';
 
@@ -460,6 +551,7 @@ markdown += '\n\n';
 markdown += table(['審核人', '審核日期', '決定', '修訂記錄'], [['', '', '', '']]);
 markdown += '\n\n';
 
+assertProductionGate();
 fs.mkdirSync(teacherDir, { recursive: true });
 fs.writeFileSync(guidePath, `${toTeacherGuideChinese(markdown.trim())}\n`, 'utf8');
 

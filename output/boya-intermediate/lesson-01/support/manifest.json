@@ -1,15 +1,13 @@
 {
   "package": "boya-intermediate-lesson-01-support-materials",
-  "status": "approved_by_adam_2026-08-20",
-  "approved_by": "Adam",
-  "approved_at": "2026-08-20",
-  "support_material_approval": "approved_by_adam_2026-08-20",
+  "status": "ready_for_support_material_review",
   "lesson_completion_status": "lesson_01_in_production",
   "language": "简体中文",
   "vietnamese_explanation_policy": "仅在必要时用于说明",
-  "source_of_truth": "output/boya-intermediate/lesson-01/teacher/lesson-01-teacher-guide.md",
+  "source_of_truth": "output/boya-intermediate/lesson-01/share/第一课-教学资料",
+  "final_confirmed_package": "output/boya-intermediate/lesson-01/share/第一课-教学资料",
   "teacher_guide_approval": "approved_by_adam_2026-08-20",
-  "activity_material_layout": "每个活动一个资料夹；每张可独立发放的卡一页一个 PDF，并保留同名可编辑 DOCX。",
+  "activity_material_layout": "每个活动一个资料夹；合并后的 Word 文件直接放在活动资料夹内，不增加中间资料夹；不生成活动卡 PDF。",
   "activity_package_manifest": "activities/activity-package-manifest.json",
   "coverage": [
     {
@@ -41,14 +39,12 @@
     },
     {
       "material_id": "ACT-01",
-      "file": "activities/01-姓名访谈/可编辑原稿/00-教师速用说明.docx",
+      "file": "activities/01-姓名访谈/00-教师速用说明.docx",
       "folder": "activities/01-姓名访谈",
       "student_materials": [
-        "activities/01-姓名访谈/01-角色卡-访谈者.pdf",
-        "activities/01-姓名访谈/02-角色卡-回答者.pdf",
-        "activities/01-姓名访谈/03-角色卡-观察者.pdf",
-        "activities/01-姓名访谈/04-访谈问题卡.pdf",
-        "activities/01-姓名访谈/05-观察记录卡.pdf"
+        "activities/01-姓名访谈/01-角色卡-访谈者.docx",
+        "activities/01-姓名访谈/02-角色卡-回答者.docx",
+        "activities/01-姓名访谈/03-角色卡-观察者.docx"
       ],
       "activities": [
         "E01-003",
@@ -62,19 +58,14 @@
     },
     {
       "material_id": "ACT-02",
-      "file": "activities/02-起名儿公司/可编辑原稿/00-教师速用说明.docx",
+      "file": "activities/02-起名儿公司/00-教师速用说明.docx",
       "folder": "activities/02-起名儿公司",
       "student_materials": [
-        "activities/02-起名儿公司/01-活动步骤卡.pdf",
-        "activities/02-起名儿公司/02-角色卡-客户.pdf",
-        "activities/02-起名儿公司/03-角色卡-命名顾问.pdf",
-        "activities/02-起名儿公司/04-角色卡-记录员.pdf",
-        "activities/02-起名儿公司/05-角色卡-观察员.pdf",
-        "activities/02-起名儿公司/06-客户卡-明亮的名字.pdf",
-        "activities/02-起名儿公司/07-客户卡-有力量的名字.pdf",
-        "activities/02-起名儿公司/08-客户卡-和自然有关的名字.pdf",
-        "activities/02-起名儿公司/09-客户卡-容易介绍的名字.pdf",
-        "activities/02-起名儿公司/10-姓名提案卡.pdf"
+        "activities/02-起名儿公司/01-活动步骤卡.docx",
+        "activities/02-起名儿公司/02-角色卡-客户.docx",
+        "activities/02-起名儿公司/03-角色卡-命名顾问.docx",
+        "activities/02-起名儿公司/04-角色卡-记录员.docx",
+        "activities/02-起名儿公司/05-角色卡-观察员.docx"
       ],
       "activities": [
         "E01-016"
@@ -85,13 +76,10 @@
     },
     {
       "material_id": "ACT-03",
-      "file": "activities/03-电影演员中文名/可编辑原稿/00-教师速用说明.docx",
+      "file": "activities/03-电影演员中文名/00-教师速用说明.docx",
       "folder": "activities/03-电影演员中文名",
       "student_materials": [
-        "activities/03-电影演员中文名/01-演员卡-甲.pdf",
-        "activities/03-电影演员中文名/02-演员卡-乙.pdf",
-        "activities/03-电影演员中文名/03-演员卡-丙.pdf",
-        "activities/03-电影演员中文名/04-小组呈现卡.pdf"
+        "activities/03-电影演员中文名/01-演员卡与小组呈现卡.docx"
       ],
       "activities": [
         "E01-017"
@@ -102,22 +90,21 @@
     },
     {
       "material_id": "ACT-04",
-      "file": "activities/04-姓氏信息站/可编辑原稿/00-教师速用说明.docx",
+      "file": "activities/04-姓氏信息站/00-教师速用说明.docx",
       "folder": "activities/04-姓氏信息站",
       "student_materials": [
-        "activities/04-姓氏信息站/01-第一站-句式信息交换.pdf",
-        "activities/04-姓氏信息站/02-第二站-文化比较.pdf",
-        "activities/04-姓氏信息站/03-第三站-资料卡A.pdf",
-        "activities/04-姓氏信息站/04-第三站-资料卡B.pdf",
-        "activities/04-姓氏信息站/05-第三站-资料卡C.pdf",
-        "activities/04-姓氏信息站/06-第三站-资料卡D.pdf",
-        "activities/04-姓氏信息站/07-第四站-朗读与人物研究.pdf"
+        "activities/04-姓氏信息站/01-句式任务卡.docx",
+        "activities/04-姓氏信息站/02-文化比较卡.docx",
+        "activities/04-姓氏信息站/03-课文重点记录卡.docx",
+        "activities/04-姓氏信息站/07-姓氏读法卡.docx",
+        "activities/04-姓氏信息站/08-对话总结记录.docx"
       ],
       "activities": [
         "E01-027",
         "E01-028",
         "E01-029",
-        "E01-032"
+        "E01-032",
+        "E01-033"
       ],
       "periods": [
         "P6"
@@ -125,12 +112,11 @@
     },
     {
       "material_id": "ACT-05",
-      "file": "activities/05-调查与研究/可编辑原稿/00-教师速用说明.docx",
+      "file": "activities/05-调查与研究/00-教师速用说明.docx",
       "folder": "activities/05-调查与研究",
       "student_materials": [
-        "activities/05-调查与研究/01-姓名调查表.pdf",
-        "activities/05-调查与研究/02-小组报告大纲.pdf",
-        "activities/05-调查与研究/03-完成检查.pdf"
+        "activities/05-调查与研究/01-姓名调查表.docx",
+        "activities/05-调查与研究/02-小组报告大纲.docx"
       ],
       "activities": [
         "E01-018",
@@ -138,7 +124,8 @@
         "E01-035"
       ],
       "periods": [
-        "P4"
+        "P4",
+        "P6"
       ]
     },
     {
@@ -182,80 +169,32 @@
   "output_files": [
     "student/lesson-01-prep-card-a.docx",
     "student/lesson-01-prep-card-b.docx",
-    "activities/可编辑原稿/00-第一课活动材料索引.docx",
-    "activities/01-姓名访谈/可编辑原稿/00-教师速用说明.docx",
-    "activities/01-姓名访谈/可编辑原稿/01-角色卡-访谈者.docx",
-    "activities/01-姓名访谈/可编辑原稿/02-角色卡-回答者.docx",
-    "activities/01-姓名访谈/可编辑原稿/03-角色卡-观察者.docx",
-    "activities/01-姓名访谈/可编辑原稿/04-访谈问题卡.docx",
-    "activities/01-姓名访谈/可编辑原稿/05-观察记录卡.docx",
-    "activities/02-起名儿公司/可编辑原稿/00-教师速用说明.docx",
-    "activities/02-起名儿公司/可编辑原稿/01-活动步骤卡.docx",
-    "activities/02-起名儿公司/可编辑原稿/02-角色卡-客户.docx",
-    "activities/02-起名儿公司/可编辑原稿/03-角色卡-命名顾问.docx",
-    "activities/02-起名儿公司/可编辑原稿/04-角色卡-记录员.docx",
-    "activities/02-起名儿公司/可编辑原稿/05-角色卡-观察员.docx",
-    "activities/02-起名儿公司/可编辑原稿/06-客户卡-明亮的名字.docx",
-    "activities/02-起名儿公司/可编辑原稿/07-客户卡-有力量的名字.docx",
-    "activities/02-起名儿公司/可编辑原稿/08-客户卡-和自然有关的名字.docx",
-    "activities/02-起名儿公司/可编辑原稿/09-客户卡-容易介绍的名字.docx",
-    "activities/02-起名儿公司/可编辑原稿/10-姓名提案卡.docx",
-    "activities/03-电影演员中文名/可编辑原稿/00-教师速用说明.docx",
-    "activities/03-电影演员中文名/可编辑原稿/01-演员卡-甲.docx",
-    "activities/03-电影演员中文名/可编辑原稿/02-演员卡-乙.docx",
-    "activities/03-电影演员中文名/可编辑原稿/03-演员卡-丙.docx",
-    "activities/03-电影演员中文名/可编辑原稿/04-小组呈现卡.docx",
-    "activities/04-姓氏信息站/可编辑原稿/00-教师速用说明.docx",
-    "activities/04-姓氏信息站/可编辑原稿/01-第一站-句式信息交换.docx",
-    "activities/04-姓氏信息站/可编辑原稿/02-第二站-文化比较.docx",
-    "activities/04-姓氏信息站/可编辑原稿/03-第三站-资料卡A.docx",
-    "activities/04-姓氏信息站/可编辑原稿/04-第三站-资料卡B.docx",
-    "activities/04-姓氏信息站/可编辑原稿/05-第三站-资料卡C.docx",
-    "activities/04-姓氏信息站/可编辑原稿/06-第三站-资料卡D.docx",
-    "activities/04-姓氏信息站/可编辑原稿/07-第四站-朗读与人物研究.docx",
-    "activities/05-调查与研究/可编辑原稿/00-教师速用说明.docx",
-    "activities/05-调查与研究/可编辑原稿/01-姓名调查表.docx",
-    "activities/05-调查与研究/可编辑原稿/02-小组报告大纲.docx",
-    "activities/05-调查与研究/可编辑原稿/03-完成检查.docx",
     "assessment/lesson-01-feedback-exit-tickets.docx",
-    "activities/00-第一课活动材料索引.pdf",
-    "activities/01-姓名访谈/00-教师速用说明.pdf",
-    "activities/01-姓名访谈/01-角色卡-访谈者.pdf",
-    "activities/01-姓名访谈/02-角色卡-回答者.pdf",
-    "activities/01-姓名访谈/03-角色卡-观察者.pdf",
-    "activities/01-姓名访谈/04-访谈问题卡.pdf",
-    "activities/01-姓名访谈/05-观察记录卡.pdf",
-    "activities/02-起名儿公司/00-教师速用说明.pdf",
-    "activities/02-起名儿公司/01-活动步骤卡.pdf",
-    "activities/02-起名儿公司/02-角色卡-客户.pdf",
-    "activities/02-起名儿公司/03-角色卡-命名顾问.pdf",
-    "activities/02-起名儿公司/04-角色卡-记录员.pdf",
-    "activities/02-起名儿公司/05-角色卡-观察员.pdf",
-    "activities/02-起名儿公司/06-客户卡-明亮的名字.pdf",
-    "activities/02-起名儿公司/07-客户卡-有力量的名字.pdf",
-    "activities/02-起名儿公司/08-客户卡-和自然有关的名字.pdf",
-    "activities/02-起名儿公司/09-客户卡-容易介绍的名字.pdf",
-    "activities/02-起名儿公司/10-姓名提案卡.pdf",
-    "activities/03-电影演员中文名/00-教师速用说明.pdf",
-    "activities/03-电影演员中文名/01-演员卡-甲.pdf",
-    "activities/03-电影演员中文名/02-演员卡-乙.pdf",
-    "activities/03-电影演员中文名/03-演员卡-丙.pdf",
-    "activities/03-电影演员中文名/04-小组呈现卡.pdf",
-    "activities/04-姓氏信息站/00-教师速用说明.pdf",
-    "activities/04-姓氏信息站/01-第一站-句式信息交换.pdf",
-    "activities/04-姓氏信息站/02-第二站-文化比较.pdf",
-    "activities/04-姓氏信息站/03-第三站-资料卡A.pdf",
-    "activities/04-姓氏信息站/04-第三站-资料卡B.pdf",
-    "activities/04-姓氏信息站/05-第三站-资料卡C.pdf",
-    "activities/04-姓氏信息站/06-第三站-资料卡D.pdf",
-    "activities/04-姓氏信息站/07-第四站-朗读与人物研究.pdf",
-    "activities/05-调查与研究/00-教师速用说明.pdf",
-    "activities/05-调查与研究/01-姓名调查表.pdf",
-    "activities/05-调查与研究/02-小组报告大纲.pdf",
-    "activities/05-调查与研究/03-完成检查.pdf",
     "student/lesson-01-prep-card-a.pdf",
     "student/lesson-01-prep-card-b.pdf",
-    "assessment/lesson-01-feedback-exit-tickets.pdf"
+    "assessment/lesson-01-feedback-exit-tickets.pdf",
+    "activities/00-第一课活动材料索引.docx",
+    "activities/01-姓名访谈/00-教师速用说明.docx",
+    "activities/01-姓名访谈/01-角色卡-访谈者.docx",
+    "activities/01-姓名访谈/02-角色卡-回答者.docx",
+    "activities/01-姓名访谈/03-角色卡-观察者.docx",
+    "activities/02-起名儿公司/00-教师速用说明.docx",
+    "activities/02-起名儿公司/01-活动步骤卡.docx",
+    "activities/02-起名儿公司/02-角色卡-客户.docx",
+    "activities/02-起名儿公司/03-角色卡-命名顾问.docx",
+    "activities/02-起名儿公司/04-角色卡-记录员.docx",
+    "activities/02-起名儿公司/05-角色卡-观察员.docx",
+    "activities/03-电影演员中文名/00-教师速用说明.docx",
+    "activities/03-电影演员中文名/01-演员卡与小组呈现卡.docx",
+    "activities/04-姓氏信息站/00-教师速用说明.docx",
+    "activities/04-姓氏信息站/01-句式任务卡.docx",
+    "activities/04-姓氏信息站/02-文化比较卡.docx",
+    "activities/04-姓氏信息站/03-课文重点记录卡.docx",
+    "activities/04-姓氏信息站/07-姓氏读法卡.docx",
+    "activities/04-姓氏信息站/08-对话总结记录.docx",
+    "activities/05-调查与研究/00-教师速用说明.docx",
+    "activities/05-调查与研究/01-姓名调查表.docx",
+    "activities/05-调查与研究/02-小组报告大纲.docx"
   ],
   "exit_ticket_mapping": [
     {
@@ -322,6 +261,6 @@
       ]
     }
   ],
-  "next_gate": "native_pptx_production_with_audio_and_speaker_notes",
+  "next_gate": "support_material_review_and_pre_delivery_reconciliation_then_recheck_internal_ppt_storyboard",
   "unlock_rule": "lesson_02_remains_locked_until_lesson_01_delivery"
 }

@@ -4,8 +4,27 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 from typing import Iterable, Sequence
+
+from production_gate import assert_ready
+
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+CONFIG = json.loads((PROJECT_ROOT / "project.config.json").read_text(encoding="utf-8"))
+LESSON_ROOT = PROJECT_ROOT / CONFIG["lesson_root"]
+# Generators write drafts only. An approved path must be supplied through the
+# explicit approval/migration workflow, never by a default build command.
+OUTPUT_ROOT = Path(os.environ.get("BOYA_LESSON_DRAFT_ROOT", str(LESSON_ROOT / "10-design" / "support-draft")))
+STUDENT_DIR = OUTPUT_ROOT / "student"
+ACTIVITY_DIR = OUTPUT_ROOT / "activities"
+ASSESSMENT_DIR = OUTPUT_ROOT / "assessment"
+SUPPORT_DIR = OUTPUT_ROOT / "support"
+
+# Run before importing optional document/rendering libraries or creating any
+# output directory. A bad path or missing approval must fail without side effects.
+assert_ready("support", OUTPUT_ROOT)
 
 from docx import Document
 from docx.enum.section import WD_SECTION
@@ -15,16 +34,10 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
 
-
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_ROOT = PROJECT_ROOT / "output/boya-intermediate/lesson-01"
-STUDENT_DIR = OUTPUT_ROOT / "student"
-ACTIVITY_DIR = OUTPUT_ROOT / "activities"
-ASSESSMENT_DIR = OUTPUT_ROOT / "assessment"
-SUPPORT_DIR = OUTPUT_ROOT / "support"
-
 FONT = "Times New Roman"
-CJK_FONT = "Noto Sans CJK SC"
+# Use a font installed on macOS and available to Word/LibreOffice so Chinese
+# remains readable when a teacher opens or previews the editable DOCX.
+CJK_FONT = "Microsoft YaHei"
 INK = "17324D"
 ACCENT = "2E74B5"
 DARK_ACCENT = "1F4D78"
@@ -399,11 +412,15 @@ def build_prep_a() -> Path:
         ["从哪里来", ""],
         ["我喜欢／不太喜欢，因为", ""],
     ], [2200, 7160], row_height=0.42)
-    add_heading(document, "三、我想确认", 1)
-    add_form_table(document, ["我听到或看到的一个问题", "我想问同伴"], [["", ""]], [4680, 4680], row_height=0.75)
+    add_heading(document, "三、上课问同学（选一个）", 1)
+    add_bulleted(document, [
+        "你的名字有什么意思？",
+        "你的名字从哪里来？",
+        "你喜欢自己的名字吗？为什么？",
+    ])
     add_heading(document, "四、小调查", 1)
     add_body(document, "请记录三位中文使用者的资料。课堂上，你要选择一个相同点、不同点或想继续追问的问题。")
-    add_form_table(document, ["朋友", "姓", "名", "名字的意思和来历", "我的追问"], [
+    add_form_table(document, ["朋友", "姓", "名", "名字的意思和来历", "一个相同点或不同点"], [
         ["A", "", "", "", ""],
         ["B", "", "", "", ""],
         ["C", "", "", "", ""],
@@ -427,14 +444,20 @@ def build_prep_b() -> Path:
     ])
     add_heading(document, "二、本国姓氏比较", 1)
     add_body(document, "课堂上，你要和同伴比较姓名顺序、常见姓氏和名字的原因。")
-    add_form_table(document, ["项目", "我的资料", "我想问同伴"], [
-        ["常见姓氏 1", "", ""],
-        ["常见姓氏 2", "", ""],
-        ["常见名字", "", ""],
-        ["为什么常见", "", ""],
-        ["姓名顺序", "", ""],
-    ], [2300, 3600, 3460], row_height=0.48)
-    add_heading(document, "三、历史人物研究卡", 1)
+    add_form_table(document, ["项目", "我的资料"], [
+        ["常见姓氏 1", ""],
+        ["常见姓氏 2", ""],
+        ["常见名字", ""],
+        ["为什么常见", ""],
+        ["姓名顺序", ""],
+    ], [3000, 6360], row_height=0.48)
+    add_heading(document, "三、上课问同学（选一个）", 1)
+    add_bulleted(document, [
+        "你们国家的姓名是姓在前，还是名在前？",
+        "在你们国家，人的姓名是什么时候产生的？",
+        "你知道一个常见的姓吗？",
+    ])
+    add_heading(document, "四、历史人物研究卡", 1)
     add_form_table(document, ["项目", "我的记录"], [
         ["人物姓名", ""],
         ["他的姓", ""],
@@ -442,8 +465,8 @@ def build_prep_b() -> Path:
         ["我想介绍的一件事", ""],
         ["我准备怎样开始介绍", ""],
     ], [2300, 7060], row_height=0.45)
-    add_heading(document, "四、带到课堂", 1)
-    add_body(document, "□ 我看过教材 10–16 页　　□ 我听过音频 2-1 至 2-5　　□ 我准备了两个姓氏　　□ 我准备了一个人物和一个追问")
+    add_heading(document, "五、带到课堂", 1)
+    add_body(document, "□ 我看过教材 10–16 页　　□ 我听过音频 2-1 至 2-5　　□ 我准备了两个姓氏　　□ 我准备了一个人物　　□ 我选好了课堂问题")
     path = STUDENT_DIR / "lesson-01-prep-card-b.docx"
     document.save(path)
     return path
@@ -475,9 +498,9 @@ def build_activity_cards_legacy() -> Path:
     add_numbered(document, [
         "客户拿一张客户卡，先自己读懂要求，圈出最重要的两个条件。客户卡先不给顾问看。",
         "顾问先问至少两个问题。客户根据客户卡回答；如果顾问没有问到重要条件，客户可以补充。",
-        "记录员写下客户的条件。顾问根据回答提出一个姓名，并说明读音、字义和两个理由。",
+        "记录员在命名顾问角色卡的“姓名提案”处写下客户的条件。顾问根据回答提出一个姓名，并说明读音、字义和两个理由。",
         "客户听完提案后，可以接受，也可以提出修改要求；最后问顾问一个问题。",
-        "小组把最后的姓名写在“姓名提案卡”上，准备 90 秒小组呈现。",
+        "小组使用命名顾问角色卡中的“姓名提案”准备 90 秒小组呈现。",
     ])
     add_label_box(document, "开始前", "先分角色，再抽一张客户卡；每组使用一张客户卡完成一次提案。")
 
@@ -505,9 +528,9 @@ def build_activity_cards_legacy() -> Path:
                   [
                       "写下客户最重视的两个条件和顾问问过的问题。",
                       "记录顾问提出的姓名、读音、字义和两个理由。",
-                      "记录客户的接受或修改要求，把最后结果写在“姓名提案卡”上。",
+                      "记录客户的接受或修改要求，把最后结果写在命名顾问角色卡的“姓名提案”处。",
                   ],
-                  "“姓名提案卡”内容完整，小组可以用它准备 90 秒呈现。")
+                  "命名顾问角色卡中的“姓名提案”内容完整，小组可以用它准备 90 秒呈现。")
 
     add_role_card(document, "角色卡：观察员",
                   "观察小组怎样提问、回答和提出姓名。",
@@ -534,7 +557,7 @@ def build_activity_cards_legacy() -> Path:
     add_body(document, "我希望孩子的名字容易读、容易写，也容易向不同国家的人介绍。名字要有友好、快乐或平安的意思。")
     add_label_box(document, "客户先做", "先自己读懂这张卡，圈出两个最重要的条件。不要把卡给顾问看，等顾问提问。")
     add_form_table(document, ["客户最重视的条件", "顾问要继续问什么"], [["", ""]], [4680, 4680], row_height=1.0)
-    add_heading(document, "姓名提案卡", 1, page_break_before=True)
+    add_heading(document, "命名顾问角色卡：姓名提案", 1, page_break_before=True)
     add_label_box(document, "记录员填写", "记录最后的姓名、读音、字的意思、两个理由和客户的追问。")
     add_form_table(document, ["姓名", "怎么读", "字的意思", "两个理由", "客户的追问"], [["", "", "", "", ""]], [1700, 1500, 1900, 2600, 1660], row_height=1.05)
 
@@ -585,7 +608,8 @@ def build_activity_cards_legacy() -> Path:
         ["1. __________________", "1. __________________", "1. __________________"],
         ["2. __________________", "2. __________________", "2. __________________"],
         ["3. __________________", "3. __________________", "3. __________________"],
-        ["我的例子：____________", "我的例子：____________", "我的例子：____________"],
+        ["4. __________________", "4. __________________", "4. __________________"],
+        ["5. __________________", "5. __________________", "5. __________________"],
     ], [3120, 3120, 3120], row_height=0.48)
     add_heading(document, "小组报告大纲", 2)
     add_form_table(document, ["部分", "我们的内容"], [
@@ -598,11 +622,10 @@ def build_activity_cards_legacy() -> Path:
     add_heading(document, "完成检查", 2)
     add_body(document, "□ 我们有资料　　□ 我们有例子　　□ 我们说明了理由　　□ 每个人都有一句话要说")
 
-    legacy_dir = ACTIVITY_DIR / "legacy"
-    legacy_dir.mkdir(parents=True, exist_ok=True)
-    path = legacy_dir / "lesson-01-activity-cards.docx"
-    document.save(path)
-    return path
+    raise RuntimeError(
+        "The retired combined activity-card builder is disabled. "
+        "Use build_lesson_01_activity_packages.py and its DOCX files instead."
+    )
 
 
 def build_assessment() -> Path:
@@ -657,7 +680,6 @@ def build_assessment() -> Path:
 
 
 def write_manifest(paths: Sequence[Path],
-                   activity_pdf_paths: Sequence[Path] = (),
                    activity_specs: Sequence[dict] = (),
                    activity_manifest_path: Path | None = None) -> Path:
     SUPPORT_DIR.mkdir(parents=True, exist_ok=True)
@@ -671,32 +693,26 @@ def write_manifest(paths: Sequence[Path],
             "material_id": spec["activity_id"],
             "file": guide.get("docx"),
             "folder": spec["folder"],
-            "student_materials": [item["pdf"] for item in spec.get("student_materials", [])],
+            "student_materials": [item["docx"] for item in spec.get("student_materials", [])],
             "activities": {
                 "ACT-01": ["E01-003", "E01-034", "E01-035"],
                 "ACT-02": ["E01-016"],
                 "ACT-03": ["E01-017"],
-                "ACT-04": ["E01-027", "E01-028", "E01-029", "E01-032"],
+                "ACT-04": ["E01-027", "E01-028", "E01-029", "E01-032", "E01-033"],
                 "ACT-05": ["E01-018", "E01-031", "E01-035"],
             }.get(spec["activity_id"], []),
             "periods": spec["periods"],
         })
     output_files = [str(path.relative_to(OUTPUT_ROOT)) for path in paths]
-    output_files.extend(str(path.relative_to(OUTPUT_ROOT)) for path in activity_pdf_paths)
-    output_files.extend([
-        "student/lesson-01-prep-card-a.pdf",
-        "student/lesson-01-prep-card-b.pdf",
-        "assessment/lesson-01-feedback-exit-tickets.pdf",
-    ])
     data = {
         "package": "boya-intermediate-lesson-01-support-materials",
-        "status": "ready_for_support_material_review",
+        "status": "draft_for_support_material_review",
         "lesson_completion_status": "lesson_01_in_production",
         "language": "简体中文",
         "vietnamese_explanation_policy": "仅在必要时用于说明",
-        "source_of_truth": "output/boya-intermediate/lesson-01/teacher/lesson-01-teacher-guide.md",
-        "teacher_guide_approval": "approved_by_adam_2026-08-20",
-        "activity_material_layout": "每个活动一个资料夹；每张可独立发放的卡一页一个 PDF，并保留同名可编辑 DOCX。",
+        "source_of_truth": "lessons/lesson-01/20-approved/teacher-manual/第一课简易教案.docx",
+        "teacher_guide_approval": "checked_by_production_gate_from_authority_manifest",
+        "activity_material_layout": "每个活动一个资料夹；合并后的 Word 文件直接放在活动资料夹内，不增加中间资料夹；不生成活动卡 PDF。",
         "activity_package_manifest": str(activity_manifest_path.relative_to(OUTPUT_ROOT)) if activity_manifest_path else None,
         "coverage": coverage + [
             {"material_id": "ASSESS-01", "file": "assessment/lesson-01-feedback-exit-tickets.docx", "activities": ["E01-015", "E01-016", "E01-018", "E01-030", "E01-031"], "periods": ["P3", "P4", "P5", "P6"]},
@@ -727,15 +743,18 @@ def main() -> None:
     prep_a = build_prep_a()
     prep_b = build_prep_b()
     assessment = build_assessment()
-    activity_docx, activity_pdf, activity_specs, activity_manifest = build_all()
+    activity_docx, activity_specs, activity_manifest = build_all()
     paths = [prep_a, prep_b, *activity_docx, assessment]
     manifest = write_manifest(
         paths,
-        activity_pdf_paths=activity_pdf,
         activity_specs=activity_specs,
         activity_manifest_path=activity_manifest,
     )
-    print(json.dumps({"outputs": [str(path) for path in paths], "manifest": str(manifest)}, ensure_ascii=False, indent=2))
+    print(json.dumps({
+        "outputs": [str(path) for path in paths],
+        "activity_pdf_count": 0,
+        "manifest": str(manifest),
+    }, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":
