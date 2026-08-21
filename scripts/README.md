@@ -36,9 +36,9 @@ python3 scripts/production_gate.py --purpose audit
 
 The gate rejects legacy `output/` and `share/` inputs, output paths outside
 `10-design/`, missing source/PBI approvals, unapproved PPT storyboard or
-visual alignment, and release attempts without a passed teacher playback and
-300-minute rehearsal. The generator stops before creating files when a gate
-fails.
+visual alignment, and release attempts without recorded PPTX audio playback
+and a passed 300-minute rehearsal. The generator stops before creating files
+when a gate fails.
 
 Record a real approval only after the relevant human review, with an existing
 evidence file and an explicit confirmation flag:
@@ -46,6 +46,7 @@ evidence file and an explicit confirmation flag:
 ```bash
 python3 scripts/record_lesson_gate.py --gate storyboard --approved-by Adam --approved-at YYYY-MM-DD --evidence lessons/lesson-01/10-design/storyboard/lesson-01-ppt-outline-v5.md --confirm
 python3 scripts/record_lesson_gate.py --gate visual-alignment --approved-by Adam --approved-at YYYY-MM-DD --evidence lessons/lesson-01/20-approved/pptx/第一课-中国人的姓名.pptx --confirm
+python3 scripts/record_lesson_gate.py --gate audio-playback --approved-by Adam --approved-at YYYY-MM-DD --evidence lessons/lesson-01/30-qa/current/pptx-v15/qa-report.md --confirm
 python3 scripts/record_lesson_gate.py --gate rehearsal --approved-by Adam --approved-at YYYY-MM-DD --evidence lessons/lesson-01/30-qa/current/rehearsal-v1/rehearsal-notes.md --confirm
 ```
 

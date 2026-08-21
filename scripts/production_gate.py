@@ -227,8 +227,10 @@ def require_release_ready(authority_manifest: dict[str, Any], blockers: list[str
     if not report_path or not report_path.is_file():
         blockers.append("current QA report is missing")
     rehearsal = qa.get("rehearsal", {})
+    if rehearsal.get("audio_playback_status") != "passed":
+        blockers.append("PPTX audio playback is not recorded as passed")
     if rehearsal.get("status") != "passed":
-        blockers.append("teacher PowerPoint playback and 300-minute rehearsal are not passed")
+        blockers.append("300-minute teacher rehearsal is not passed")
 
 
 def check(purpose: str, output_dir: str | None = None) -> dict[str, Any]:

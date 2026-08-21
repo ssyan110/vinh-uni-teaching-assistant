@@ -85,10 +85,10 @@ def verify() -> dict[str, object]:
 
     rehearsal = manifest.get("qa", {}).get("rehearsal", {})
     delivery_blockers = []
+    if rehearsal.get("audio_playback_status") != "passed":
+        delivery_blockers.append("PPTX audio playback is not recorded as passed")
     if rehearsal.get("status") != "passed":
-        delivery_blockers.append(
-            "teacher PowerPoint playback and 300-minute rehearsal are not passed"
-        )
+        delivery_blockers.append("300-minute teacher rehearsal is not passed")
     delivery_status = "ready" if not delivery_blockers else "blocked"
 
     return {

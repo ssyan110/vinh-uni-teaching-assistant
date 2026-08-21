@@ -17,6 +17,6 @@
 python3 scripts/production_gate.py --purpose audit
 ```
 
-当前第一课的文件完整性已经记录为通过，但 `delivery_status` 仍是
-`pending_rehearsal`。PowerPoint 音频实测和 6 节／300 分钟教师演练通过后，
+当前第一课的文件完整性和 PPTX 音频播放实测已经记录为通过，但
+`delivery_status` 仍是 `pending_rehearsal`。完成 6 节／300 分钟教师演练后，
 才能建立新的 release。

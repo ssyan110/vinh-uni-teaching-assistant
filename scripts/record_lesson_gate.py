@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Record an explicit approval or rehearsal result for Lesson 1.
+"""Record an explicit approval, audio-playback, or rehearsal result for Lesson 1.
 
 This command changes workflow metadata only. It never copies, regenerates, or
 overwrites PPTX, DOCX, activity cards, QA media, or release files.
@@ -64,6 +64,17 @@ def record(gate: str, approved_by: str, approved_at: str, evidence: str) -> Path
         data["current_pptx_alignment_approved_by"] = approved_by
         data["current_pptx_alignment_approved_at"] = approved_at
         data["current_pptx_alignment_evidence"] = evidence
+    elif gate == "audio-playback":
+        path = LESSON_ROOT / "20-approved/lesson-manifest.json"
+        data = load_json(path)
+        qa = data.setdefault("qa", {})
+        rehearsal = qa.setdefault("rehearsal", {})
+        rehearsal["audio_playback_status"] = "passed"
+        rehearsal["audio_playback_verified_by"] = approved_by
+        rehearsal["audio_playback_verified_at"] = approved_at
+        rehearsal["audio_playback_evidence"] = evidence
+        if rehearsal.get("status") == "pending_teacher_playback":
+            rehearsal["status"] = "pending_300_minute_rehearsal"
     elif gate == "rehearsal":
         path = LESSON_ROOT / "20-approved/lesson-manifest.json"
         data = load_json(path)
@@ -84,14 +95,18 @@ def record(gate: str, approved_by: str, approved_at: str, evidence: str) -> Path
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--gate", required=True, choices=("storyboard", "visual-alignment", "rehearsal"))
+    parser.add_argument(
+        "--gate",
+        required=True,
+        choices=("storyboard", "visual-alignment", "audio-playback", "rehearsal"),
+    )
     parser.add_argument("--approved-by", required=True)
     parser.add_argument("--approved-at", default=date.today().isoformat())
     parser.add_argument("--evidence", required=True)
     parser.add_argument(
         "--confirm",
         action="store_true",
-        help="Required acknowledgement that this command records a real approval or completed rehearsal.",
+        help="Required acknowledgement that this command records a real approval, completed audio playback, or completed rehearsal.",
     )
     args = parser.parse_args()
     if not args.confirm:

@@ -63,12 +63,16 @@ window.LESSON_MANIFEST = {
     "status": "recorded_current_pass",
     "integrity_status": "passed",
     "rehearsal": {
-      "status": "pending_teacher_playback",
+      "status": "pending_300_minute_rehearsal",
       "required_checks": [
         "PowerPoint逐页点击课堂音频",
         "确认音频编号与教材活动一致",
         "完成6节课／300分钟教师演练"
-      ]
+      ],
+      "audio_playback_status": "passed",
+      "audio_playback_verified_by": "Adam",
+      "audio_playback_verified_at": "2026-08-21",
+      "audio_playback_evidence": "lessons/lesson-01/30-qa/current/pptx-v15/qa-report.md"
     },
     "current_path": "lessons/lesson-01/30-qa/current",
     "current_report": "lessons/lesson-01/30-qa/current/pptx-v15/qa-report.md",
@@ -242,7 +246,7 @@ window.LESSON_MANIFEST = {
       "blockers": [
         "PPT storyboard current revision is not approved; full PPTX generation is blocked",
         "visual storyboard is not explicitly aligned to the current PPTX",
-        "teacher PowerPoint playback and 300-minute rehearsal are not passed"
+        "300-minute teacher rehearsal is not passed"
       ]
     }
   }
