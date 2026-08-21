@@ -36,7 +36,11 @@ def sha256(path: Path) -> str:
 
 def tree_hash(root: Path) -> str:
     digest = hashlib.sha256()
-    for path in sorted(p for p in root.rglob("*") if p.is_file()):
+    for path in sorted(
+        p
+        for p in root.rglob("*")
+        if p.is_file() and p.name != ".DS_Store" and not p.name.startswith("~$")
+    ):
         digest.update(path.relative_to(root).as_posix().encode("utf-8"))
         digest.update(b"\0")
         digest.update(bytes.fromhex(sha256(path)))
@@ -59,7 +63,11 @@ def copy_immutable(source: Path, destination: Path) -> None:
 
 
 def copy_tree_immutable(source_root: Path, destination_root: Path) -> int:
-    files = sorted(p for p in source_root.rglob("*") if p.is_file())
+    files = sorted(
+        p
+        for p in source_root.rglob("*")
+        if p.is_file() and p.name != ".DS_Store" and not p.name.startswith("~$")
+    )
     if not files:
         raise FileNotFoundError(f"Authority directory is empty: {source_root}")
     for source in files:
@@ -103,7 +111,11 @@ def build_release() -> dict[str, object]:
             "sha256": sha256(path),
             "bytes": path.stat().st_size,
         }
-        for path in sorted(p for p in RELEASE_DIR.rglob("*") if p.is_file())
+        for path in sorted(
+            p
+            for p in RELEASE_DIR.rglob("*")
+            if p.is_file() and p.name != ".DS_Store" and not p.name.startswith("~$")
+        )
     ]
 
     RELEASE_ROOT.mkdir(parents=True, exist_ok=True)

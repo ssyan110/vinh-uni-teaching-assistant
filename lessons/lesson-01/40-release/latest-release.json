@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
-  "release_id": "2026-08-21-final-teaching-materials",
+  "release_id": "2026-08-21-complete-teaching-materials",
   "lesson_id": "lesson-01",
   "lesson_title": "中国人的姓名",
   "source_manifest": "lessons/lesson-01/20-approved/lesson-manifest.json",
   "source_authority_root": "lessons/lesson-01/20-approved",
-  "release_root": "lessons/lesson-01/40-release/2026-08-21-final-teaching-materials",
-  "zip_path": "lessons/lesson-01/40-release/2026-08-21-final-teaching-materials.zip",
+  "release_root": "lessons/lesson-01/40-release/2026-08-21-complete-teaching-materials",
+  "zip_path": "lessons/lesson-01/40-release/2026-08-21-complete-teaching-materials.zip",
   "status": "immutable",
-  "delivery_status": "pending_rehearsal",
+  "delivery_status": "ready",
   "copy_only": true,
   "activity_docx_count": 22,
   "file_count": 25,
@@ -141,5 +141,5 @@
       "bytes": 39400
     }
   ],
-  "created_at": "2026-08-21T12:35:29+00:00"
+  "created_at": "2026-08-21T14:38:38+00:00"
 }

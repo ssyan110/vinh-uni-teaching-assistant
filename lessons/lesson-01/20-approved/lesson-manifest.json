@@ -8,7 +8,7 @@
   "language": "简体中文",
   "authority_status": "final_confirmed",
   "content_status": "final_confirmed_by_adam_2026-08-21",
-  "delivery_status": "pending_rehearsal",
+  "delivery_status": "ready_for_release",
   "authority_rule": "20-approved is the only editable authority; 40-release is copy-only.",
   "source_package": {
     "path": "output/boya-intermediate/lesson-01/share/第一课-教学资料",
@@ -63,12 +63,10 @@
     "status": "recorded_current_pass",
     "integrity_status": "passed",
     "rehearsal": {
-      "status": "pending_300_minute_rehearsal",
-      "required_checks": [
-        "PowerPoint逐页点击课堂音频",
-        "确认音频编号与教材活动一致",
-        "完成6节课／300分钟教师演练"
-      ],
+      "status": "passed",
+      "verified_by": "Adam",
+      "verified_at": "2026-08-21",
+      "evidence": "lessons/lesson-01/30-qa/current/pptx-v15/rehearsal-confirmation.md",
       "audio_playback_status": "passed",
       "audio_playback_verified_by": "Adam",
       "audio_playback_verified_at": "2026-08-21",
@@ -79,13 +77,13 @@
     "legacy_versions": "lessons/lesson-01/30-qa/archive"
   },
   "release": {
-    "latest_release_path": "lessons/lesson-01/40-release/2026-08-21-final-teaching-materials",
-    "latest_zip_path": "lessons/lesson-01/40-release/2026-08-21-final-teaching-materials.zip",
+    "latest_release_path": "lessons/lesson-01/40-release/2026-08-21-complete-teaching-materials",
+    "latest_zip_path": "lessons/lesson-01/40-release/2026-08-21-complete-teaching-materials.zip",
     "status": "immutable",
-    "delivery_status": "pending_rehearsal",
+    "delivery_status": "ready",
     "tree_sha256": "449c1e278273ff5b007165663691dde3e7e018da43dce537ec9ac7e800b6d83e",
     "zip_sha256": "1ee073f2553637c4184bd8177ac920d740c94370fb4df82d6898f559c77adae3",
-    "created_at": "2026-08-21T12:35:29+00:00"
+    "created_at": "2026-08-21T14:38:38+00:00"
   },
   "files": [
     {

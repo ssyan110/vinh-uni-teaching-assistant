@@ -1,16 +1,16 @@
 {
   "package": "boya-intermediate-material-production-dashboard",
-  "status": "lesson_01_full_pptx_v5_62_slides_pending_teacher_playback_rehearsal_lesson_02_to_08_locked",
+  "status": "lesson_01_complete_release_lesson_02_source_review_unlocked_lesson_03_to_08_locked",
   "updated_at": "2026-08-21",
   "course": "《博雅汉语听说：中级冲刺篇 I》",
   "active_lesson": 1,
   "active_lesson_title": "中国人的姓名",
   "lesson_count": 8,
-  "completed_lessons": 0,
-  "completed_gates": 8,
+  "completed_lessons": 1,
+  "completed_gates": 11,
   "total_gates": 11,
-  "next_gate": "lesson_01_teacher_playback_and_rehearsal",
-  "pre_delivery_review_findings": 8,
-  "unlock_rule": "complete_lesson_01_delivery_before_lesson_02_source_review",
+  "next_gate": "lesson_02_source_review",
+  "pre_delivery_review_findings": 0,
+  "unlock_rule": "lesson_01_delivery_completed_unlock_lesson_02_source_review",
   "dashboard": "index.html"
 }

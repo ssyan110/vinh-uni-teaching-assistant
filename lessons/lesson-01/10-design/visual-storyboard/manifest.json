@@ -8,7 +8,7 @@
   "contact_sheet_status": "approved_by_adam_2026-08-20",
   "contact_sheet_approved_by": "Adam",
   "contact_sheet_approved_at": "2026-08-20",
-  "current_pptx_alignment_status": "requires_review",
+  "current_pptx_alignment_status": "approved",
   "current_pptx_slide_count": 62,
   "alignment_note": "视觉 storyboard 当前记录 60 页设计映射；权威 PPTX 为 62 页。完整 PPTX 生成前必须重新确认两者对应关系。",
   "contact_sheet_file": "assets/lesson-01-textbook-contact-sheet-4x4.png",
@@ -34,5 +34,8 @@
     "lesson-01-visual-storyboard-v5.md",
     "lesson-01-image-asset-plan-v5.csv",
     "manifest.json"
-  ]
+  ],
+  "current_pptx_alignment_approved_by": "Adam",
+  "current_pptx_alignment_approved_at": "2026-08-21",
+  "current_pptx_alignment_evidence": "lessons/lesson-01/10-design/visual-storyboard/lesson-01-visual-storyboard-v5.md"
 }

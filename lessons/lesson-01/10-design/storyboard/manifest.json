@@ -5,8 +5,8 @@
   "approved_by": "Adam",
   "approved_at": "2026-08-20",
   "current_revision": "lesson-01-ppt-outline-v5.md",
-  "current_revision_status": "compact_practice_and_bounds_v5_2026-08-21",
-  "current_revision_approved_at": null,
+  "current_revision_status": "approved_by_Adam_2026-08-21",
+  "current_revision_approved_at": "2026-08-21",
   "current_revision_slide_count": 62,
   "current_revision_content_audit": {
     "source_sections": 63,
@@ -42,5 +42,6 @@
     "lesson-01-exercise-slide-coverage.csv",
     "lesson-01-ppt-outline-v5.md",
     "manifest.json"
-  ]
+  ],
+  "current_revision_approved_by": "Adam"
 }

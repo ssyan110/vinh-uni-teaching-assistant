@@ -79,12 +79,13 @@ def record(gate: str, approved_by: str, approved_at: str, evidence: str) -> Path
         path = LESSON_ROOT / "20-approved/lesson-manifest.json"
         data = load_json(path)
         qa = data.setdefault("qa", {})
-        qa["rehearsal"] = {
+        rehearsal = qa.setdefault("rehearsal", {})
+        rehearsal.update({
             "status": "passed",
             "verified_by": approved_by,
             "verified_at": approved_at,
             "evidence": evidence,
-        }
+        })
         data["delivery_status"] = "ready_for_release"
     else:
         raise ValueError(f"unsupported gate: {gate}")

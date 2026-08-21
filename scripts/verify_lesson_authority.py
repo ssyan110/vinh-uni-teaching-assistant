@@ -26,7 +26,11 @@ def sha256(path: Path) -> str:
 
 def tree_hash(root: Path) -> str:
     digest = hashlib.sha256()
-    for path in sorted(p for p in root.rglob("*") if p.is_file()):
+    for path in sorted(
+        p
+        for p in root.rglob("*")
+        if p.is_file() and p.name != ".DS_Store" and not p.name.startswith("~$")
+    ):
         digest.update(path.relative_to(root).as_posix().encode("utf-8"))
         digest.update(b"\0")
         digest.update(bytes.fromhex(sha256(path)))
