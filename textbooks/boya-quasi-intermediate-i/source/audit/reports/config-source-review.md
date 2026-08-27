@@ -12,7 +12,7 @@
 - 来源盘点识别出 12 个课次 QR 页：PDF 页 14、25、35、45、55、64、72、81、90、100、109、118；每个 QR 截图均为可读取的 PNG（约 315–323 × 343–361 px）。
 - 盘点列出 72 个音频（每课 6 个），并且当前 `textbooks/boya-quasi-intermediate-i/source/audio/` 中 72 个文件都存在；逐文件检查时文件大小与 inventory 中 SHA-256 一致。
 - 第一课 `canonical-source.json` 的 SHA-256 与 `source-manifest.json` 登记值一致，且明确标记为 `source_audit_in_progress`，没有假装已批准。
-- 未安排学期时数；`course/README.md` 已说明全书来源理解完成前不安排时数，符合当前决定。
+- 已建立课程层级学期规划草案；正式学期时数仍待全书来源理解、来源批准及学校课表确认，未把草案当作定稿。
 
 ## 架构迁移时发现并已解决
 
@@ -48,4 +48,4 @@ QR 扫描索引已固定为 `textbooks/boya-quasi-intermediate-i/source/qr/scan.
 
 ## 审计结论
 
-多教材架构、来源路径、QR 扫描证据、音频状态与旧 authority 保护已完成。当前来源包仍处于来源审核阶段；下一步只进行第一课逐项来源核对，不安排学期时数，也不制作课程 PPT/DOCX。
+多教材架构、来源路径、QR 扫描证据与音频状态已完成，旧 authority 仍受保护。当前来源包仍处于来源审核阶段；学期规划仅有候选草案，下一步仍只进行第一课逐项来源核对，不制作课程 PPT/DOCX。

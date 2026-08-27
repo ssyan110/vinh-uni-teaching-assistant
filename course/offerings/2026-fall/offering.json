@@ -3,7 +3,7 @@
   "offering_id": "2026-fall",
   "course_id": "vinh-chinese-listening-speaking",
   "status": "source_review",
-  "schedule_status": "deferred_pending_full_textbook_review",
+  "schedule_status": "draft_pending_source_approval_and_official_timetable",
   "primary_textbook_id": "boya-quasi-intermediate-i",
   "textbooks": [
     {
@@ -15,7 +15,7 @@
     }
   ],
   "course_documents": {
-    "semester_overview": null,
+    "semester_overview": "course/offerings/2026-fall/semester-overview.md",
     "teacher_manual": null
   }
 }

@@ -36,7 +36,7 @@
 - 教材来源：`textbooks/boya-quasi-intermediate-i/source/`。
 - 第一课来源包：`lessons/boya-quasi-intermediate-i/lesson-01/00-source/`。
 - 12 个课次 QR 与 72 段音频已登记并完成文件解码检查；逐课文字内容与音频语义对应仍待来源审核。
-- 学期时数、教师手册、学生配套与 PPTX 均尚未建立；必须依 gate 顺序推进。
+- 正式学期时数、教师手册、学生配套与 PPTX 均尚未定稿；目前只有依旧规划建立的学期时数草案，仍必须依 gate 顺序推进。
 
 ## 2. 課堂設計要求
 
