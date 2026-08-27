@@ -7,7 +7,7 @@
 ## 已确认
 
 - `project.config.json` 保留稳定课程 ID，并以 `active_context.textbook_id` 指向 `boya-quasi-intermediate-i`；当前教材为 12 课。
-- 两本教材命名空间已分开：当前教材使用 `lessons/boya-quasi-intermediate-i/`；三年级预定的《中级冲刺篇 I》使用 `lessons/boya-intermediate-i/`，并登记在 `textbooks/registry.json`。
+- 两本教材命名空间已分开：当前 `2026-fall` 使用 `lessons/boya-quasi-intermediate-i/`；《中级冲刺篇 I》直接登记于 `2027-fall`，使用 `lessons/boya-intermediate-i/`，并登记在 `textbooks/registry.json`。
 - 新教材主 PDF、听力文本及参考答案 PDF 位于 `textbooks/boya-quasi-intermediate-i/source/raw/`；配置中的 active textbook、active lesson、font policy、draft/authority/QA/release 根路径均为新教材课次路径。
 - 来源盘点识别出 12 个课次 QR 页：PDF 页 14、25、35、45、55、64、72、81、90、100、109、118；每个 QR 截图均为可读取的 PNG（约 315–323 × 343–361 px）。
 - 盘点列出 72 个音频（每课 6 个），并且当前 `textbooks/boya-quasi-intermediate-i/source/audio/` 中 72 个文件都存在；逐文件检查时文件大小与 inventory 中 SHA-256 一致。
@@ -34,7 +34,7 @@ QR 扫描索引已固定为 `textbooks/boya-quasi-intermediate-i/source/qr/scan.
 
 ### 已解决：三年级教材 authority 保护
 
-`project.config.json.protected_roots` 已登记《中级冲刺篇 I》第一课的 authority、QA 与 release。该教材完整保留并规划于三年级使用，不视为废弃教材。
+`project.config.json.protected_roots` 已登记《中级冲刺篇 I》第一课的 authority、QA 与 release。该教材完整保留并直接规划于 `2027-fall` 三年级使用，不视为废弃教材。
 
 ## 下一轮来源 QA 仍需处理
 

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "offering_id": "2027-fall",
+  "course_id": "vinh-chinese-listening-speaking",
+  "status": "planned",
+  "schedule_status": "not_started",
+  "primary_textbook_id": "boya-intermediate-i",
+  "textbooks": [
+    {
+      "textbook_id": "boya-intermediate-i",
+      "role": "primary",
+      "status": "planned_for_2027_fall",
+      "intended_stage": "third_year",
+      "manifest": "textbooks/boya-intermediate-i/textbook.json",
+      "lesson_root": "lessons/boya-intermediate-i"
+    }
+  ],
+  "course_documents": {
+    "semester_overview": null,
+    "teacher_manual": null,
+    "previous_plan_reference": "course/offerings/2026-fall/legacy/boya-intermediate-i"
+  }
+}

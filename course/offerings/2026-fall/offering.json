@@ -14,18 +14,9 @@
       "lesson_root": "lessons/boya-quasi-intermediate-i"
     }
   ],
-  "future_textbooks": [
-    {
-      "textbook_id": "boya-intermediate-i",
-      "intended_stage": "third_year",
-      "status": "planned_for_third_year",
-      "manifest": "textbooks/boya-intermediate-i/textbook.json",
-      "lesson_root": "lessons/boya-intermediate-i"
-    }
-  ],
   "course_documents": {
     "semester_overview": null,
     "teacher_manual": null,
-    "legacy_replaced_schedule_materials": "course/offerings/2026-fall/legacy/boya-intermediate-i"
+    "superseded_plan_materials": "course/offerings/2026-fall/legacy/boya-intermediate-i"
   }
 }

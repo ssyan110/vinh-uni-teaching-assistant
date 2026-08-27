@@ -13,7 +13,7 @@ archive/                        # 历史快照，不作为生产输入
 ## 当前教材状态
 
 - `boya-quasi-intermediate-i`：《准中级加速篇 I》，本学期使用；当前只开放第一课来源审核。
-- `boya-intermediate-i`：《中级冲刺篇 I》，完整保留并规划于三年级使用；第一课已有批准的 authority、QA 与 release。
+- `boya-intermediate-i`：《中级冲刺篇 I》，完整保留并直接登记于 `2027-fall`，规划给三年级使用；第一课已有批准的 authority、QA 与 release。
 
 ## 路径规则
 
