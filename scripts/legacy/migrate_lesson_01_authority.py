@@ -141,15 +141,15 @@ def build_manifest() -> dict[str, Any]:
         },
         "authority": {
             "pptx": {
-                "path": "lessons/lesson-01/20-approved/pptx/第一课-中国人的姓名.pptx",
+                "path": "lessons/boya-intermediate-i/lesson-01/20-approved/pptx/第一课-中国人的姓名.pptx",
                 "status": "final_confirmed",
             },
             "teacher_manual": {
-                "path": "lessons/lesson-01/20-approved/teacher-manual/第一课简易教案.docx",
+                "path": "lessons/boya-intermediate-i/lesson-01/20-approved/teacher-manual/第一课简易教案.docx",
                 "status": "final_confirmed",
             },
             "activities": {
-                "path": "lessons/lesson-01/20-approved/activities",
+                "path": "lessons/boya-intermediate-i/lesson-01/20-approved/activities",
                 "status": "final_confirmed",
                 "file_count": len(activity_files),
                 "folders": [
@@ -162,27 +162,27 @@ def build_manifest() -> dict[str, Any]:
                 "format": "DOCX only",
             },
             "ppt_preview": {
-                "path": "lessons/lesson-01/20-approved/pptx/第一课-中国人的姓名-投影片预览.pdf",
+                "path": "lessons/boya-intermediate-i/lesson-01/20-approved/pptx/第一课-中国人的姓名-投影片预览.pdf",
                 "status": "export_preview",
             },
         },
         "design_inputs": {
-            "source_review": "lessons/lesson-01/00-source/source-manifest.json",
-            "teaching_design": "lessons/lesson-01/10-design/teaching-design",
-            "storyboard": "lessons/lesson-01/10-design/storyboard",
-            "visual_storyboard": "lessons/lesson-01/10-design/visual-storyboard",
-            "visual_prototype": "lessons/lesson-01/10-design/visual-prototype",
-            "activity_package_manifest": "lessons/lesson-01/10-design/activity-package-manifest.json",
+            "source_review": "lessons/boya-intermediate-i/lesson-01/00-source/source-manifest.json",
+            "teaching_design": "lessons/boya-intermediate-i/lesson-01/10-design/teaching-design",
+            "storyboard": "lessons/boya-intermediate-i/lesson-01/10-design/storyboard",
+            "visual_storyboard": "lessons/boya-intermediate-i/lesson-01/10-design/visual-storyboard",
+            "visual_prototype": "lessons/boya-intermediate-i/lesson-01/10-design/visual-prototype",
+            "activity_package_manifest": "lessons/boya-intermediate-i/lesson-01/10-design/activity-package-manifest.json",
         },
         "qa": {
             "status": "recorded_current_pass",
-            "current_path": "lessons/lesson-01/30-qa/current",
-            "current_report": "lessons/lesson-01/30-qa/current/pptx-v15/qa-report.md",
-            "legacy_versions": "lessons/lesson-01/30-qa/archive",
+            "current_path": "lessons/boya-intermediate-i/lesson-01/30-qa/current",
+            "current_report": "lessons/boya-intermediate-i/lesson-01/30-qa/current/pptx-v15/qa-report.md",
+            "legacy_versions": "lessons/boya-intermediate-i/lesson-01/30-qa/archive",
         },
         "release": {
-            "latest_release_path": "lessons/lesson-01/40-release/2026-08-21-final-teaching-materials",
-            "latest_zip_path": "lessons/lesson-01/40-release/2026-08-21-final-teaching-materials.zip",
+            "latest_release_path": "lessons/boya-intermediate-i/lesson-01/40-release/2026-08-21-final-teaching-materials",
+            "latest_zip_path": "lessons/boya-intermediate-i/lesson-01/40-release/2026-08-21-final-teaching-materials.zip",
             "status": "not_built",
         },
         "files": files,

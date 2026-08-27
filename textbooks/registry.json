@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "textbooks": [
+    {
+      "textbook_id": "boya-quasi-intermediate-i",
+      "title": "《博雅汉语听说：准中级加速篇 I》",
+      "status": "active_source_review",
+      "manifest": "textbooks/boya-quasi-intermediate-i/textbook.json"
+    },
+    {
+      "textbook_id": "boya-intermediate-i",
+      "title": "《博雅汉语听说：中级冲刺篇 I》",
+      "status": "planned_for_third_year",
+      "intended_stage": "third_year",
+      "manifest": "textbooks/boya-intermediate-i/textbook.json"
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Create QR captures, QR/audio metadata, and local audio downloads for the quasi-intermediate book.
+"""Create QR captures, QR/audio metadata, and local audio downloads.
 
-The input TSV is emitted by scripts/scan_qr_vision.swift.  Audio binaries are
-written under work/ (ignored); the JSON inventory is intended to be reviewed
-and then copied into the lesson source package only after source approval.
+The input TSV is emitted by scripts/scan_qr_vision.swift. ``--output-root``
+must point to ``textbooks/<textbook_id>/source`` so that QR captures and audio
+use the repository's standardized textbook-source layout.
 """
 from __future__ import annotations
 
@@ -94,7 +94,7 @@ def main() -> int:
     ap.add_argument("--download", action="store_true")
     args = ap.parse_args()
     out = args.output_root.resolve()
-    qr_dir = out / "qr-captures"
+    qr_dir = out / "qr" / "captures"
     audio_dir = out / "audio"
     out.mkdir(parents=True, exist_ok=True)
     rows = parse_qr_tsv(args.qr_tsv)
@@ -151,19 +151,19 @@ def main() -> int:
             item["audio"].append(asset)
         lessons.append(item)
     inventory = {
-        "course_id": "boya-quasi-intermediate-i",
+        "textbook_id": "boya-quasi-intermediate-i",
         "title": "《博雅汉语听说：准中级加速篇 I》",
         "status": "source_audit_in_progress",
-        "source_pdf": "Giáo trình/博雅汉语听说-准中级加速篇/博雅汉语听说-准中级加速篇I.pdf",
+        "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
         "qr_scan": {"input_tsv": str(args.qr_tsv), "lesson_qr_count": len(lesson_rows)},
         "lessons": lessons,
         "notes": [
             "二维码先从教材页截取并以 Vision 解码；最终封底的两个出版社二维码未计入课程音频。",
-            "音频文件是本地来源输入，暂放在 work/，不纳入 Git 交付包。",
+            "音频文件是本地来源输入，统一放在本教材的 source/audio/，不纳入 Git 交付包。",
             "页面标题、教材印刷页码、音频内容与答案仍需逐课来源 QA；不得把此盘点当成已批准教师手册。",
         ],
     }
-    (out / "qr-audio-inventory.json").write_text(json.dumps(inventory, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (out / "source-inventory.json").write_text(json.dumps(inventory, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"output_root": str(out), "lesson_count": len(lessons),
                       "audio_count": sum(len(x["audio"]) for x in lessons),
                       "downloaded": sum(a.get("download_status") == "passed" for x in lessons for a in x["audio"]),

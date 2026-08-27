@@ -1,0 +1,19 @@
+{
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_id": "lesson-01",
+  "lesson_number": 1,
+  "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+  "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+  "canonical_source": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/canonical-source.json",
+  "canonical_source_sha256": "06585734216ac59ff9e1b1b5bcbc9d2d13761c0b20ff3960aea8df7a40a4a728",
+  "qr_capture_root": "textbooks/boya-quasi-intermediate-i/source/qr/captures",
+  "audio_root": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01",
+  "status": "source_audit_in_progress",
+  "approved": false,
+  "notes": [
+    "此包只记录来源盘点与 QR／音频证据，不是教师手册、PPT 或 DOCX 成品。"
+  ],
+  "audio_count": 6,
+  "audio_decode_status": "72/72 files decode passed"
+}

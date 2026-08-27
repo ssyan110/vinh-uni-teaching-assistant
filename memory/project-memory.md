@@ -7,15 +7,15 @@
 ## 課程與教材
 
 - 學生已完成《博雅漢語聽說：初級起步篇》第一、二冊。
-- 本學期使用《博雅漢語聽說：中級衝刺篇 I》八課。
+- 2026-08-27 系主任会议后，本学期教材切换为《博雅汉语听说：准中级加速篇 I》十二课；《中级冲刺篇 I》不删除，完整保留并规划于三年级使用。
 - 每節 50 分鐘；每次上課 4 節、200 分鐘；每一課以 6 節、300 分鐘為教學生產單位。
-- 第一課是〈中國人的姓名〉，來源審核與 PBI 教學重組均已通過。
-- 第一課 canonical source：`work/boya-intermediate/extractions/structured-lesson-01.json`。
-- 第一課已核對 63 個教材區段、34 個詞語、7 個句式、5 個課文／對話、35 項練習與 11 段音檔。
-- 第一課教師手冊已於 2026-08-20 由 Adam 批准；預習卡、活動卡、評量表與 Exit Ticket 已完成並批准。
-- 整學期教師手冊組裝稿已迁移到：`course/teacher-manual.md`；学期总览使用 `course/semester-overview.md`，各课 authority 以对应 `lessons/lesson-XX/20-approved/` 为准。
-- 2026-08-21 建立新的權威架構：`course/` 保存課程層級來源，`lessons/lesson-01/00-source` 保存來源 manifest，`10-design` 保存設計與 draft，`20-approved` 是唯一 authority，`30-qa` 保存只讀 QA，`40-release` 保存不可變交付包。歷史輸出統一放在 `archive/`。
-- 第一課主任審核包已原樣登記到 `lessons/lesson-01/20-approved/lesson-manifest.json`；整理前的輸入快照保存在 `archive/legacy-materials-2026-08-27/boya-intermediate/lesson-01/share/第一課-教学资料`，只作歷史證據，不是新的生產來源。
+- 当前 active lesson 是新教材第一课〈丽丽是独生女〉，只完成第一轮来源盘点，尚未批准来源；旧教材第一课〈中国人的姓名〉的批准状态只适用于历史锁定版本。
+- 舊教材第一課 canonical source：`textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json`。
+- 舊教材第一課已核對 63 個教材區段、34 個詞語、7 個句式、5 個課文／對話、35 項練習與 11 段音檔。
+- 舊教材第一課教師手冊已於 2026-08-20 由 Adam 批准；其預習卡、活動卡、評量表與 Exit Ticket 的狀態不適用於新教材。
+- 舊教材整學期教師手冊組裝稿位於 `course/offerings/2026-fall/legacy/boya-intermediate-i/teacher-manual.md`；舊學期總覽位於同層 `semester-overview.md`，各課歷史 authority 以 `lessons/boya-intermediate-i/lesson-XX/20-approved/` 為準。
+- 2026-08-27 架构升级为「课程实例 → 教材 → 课次」：`course/` 只保存课程与开课实例；所有教材来源统一放在 `textbooks/<textbook_id>/source/`；逐课生产放在 `lessons/<textbook_id>/lesson-XX/`。同一学期可在 `offering.json` 登记多本教材。
+- 第一課主任審核包已原樣登記到 `lessons/boya-intermediate-i/lesson-01/20-approved/lesson-manifest.json`；整理前的輸入快照保存在 `archive/legacy-materials-2026-08-27/boya-intermediate/lesson-01/share/第一課-教学资料`，只作歷史證據，不是新的生產來源。
 - 教材沒有提供的答案不得自行補寫唯一標準答案。
 
 ## 已確認的教學習慣
@@ -79,7 +79,7 @@
 ## 已批准的生產順序
 
 1. 來源審核包與批准。
-2. PBI 教學重組、6 節課流程與 35 項活動 coverage，並取得批准。
+2. PBI 教學重組、6 節課流程與 canonical source 全部活動 coverage，並取得批准。
 3. 先完成教師手冊內容母版：本課所有內容、重點、時間、音檔、教材練習、活動、教師提示、修補、答案政策、評量與備案。
 4. 教師手冊審核與批准；教師手冊是本課內容的 source of truth。
 5. 依批准的教師手冊製作預習卡、角色卡／資訊站卡／調查表／評量表等學生配套。
@@ -97,14 +97,14 @@
 - 不建立或維護 `.kiro/`；舊 Kiro 文件只作 legacy context。
 - 舊版 v2–v4 PPT 大綱、舊 69 頁 storyboard、舊 visual storyboard 與 v2 PPTX 生成器已刪除；未來不得從舊輸出恢復它們。
 
-## Current 第一課 evidence
+## 《中級衝刺篇 I》第一課 evidence
 
-- 唯一 authority PPTX：`lessons/lesson-01/20-approved/pptx/第一课-中国人的姓名.pptx`；v11-final 主任審核包中的 PPTX 原樣登記，95 頁、95 份 speaker notes、35/35 練習、圖片與音頻保留。
-- 唯一 authority 简易教案：`lessons/lesson-01/20-approved/teacher-manual/第一课简易教案.docx`。
-- 唯一 authority 活动卡：`lessons/lesson-01/20-approved/activities/`；5 个活动资料夹、22 份 DOCX，不交付活动卡 PDF。
-- Current QA：`lessons/lesson-01/30-qa/current/pptx-v17/`；旧版本在 `30-qa/archive/`，其他历史输出统一在 `archive/`。
-- Current 设计输入：`lessons/lesson-01/10-design/`；生成器默认只写其中的 draft 目录。
-- 唯一 authority manifest：`lessons/lesson-01/20-approved/lesson-manifest.json`；`2026-08-24-font-standardized.zip` 是上一個不可變歷史 release，v11 的下一個 release 仍待人工接受。
+- 唯一 authority PPTX：`lessons/boya-intermediate-i/lesson-01/20-approved/pptx/第一课-中国人的姓名.pptx`；v11-final 主任審核包中的 PPTX 原樣登記，95 頁、95 份 speaker notes、35/35 練習、圖片與音頻保留。
+- 唯一 authority 简易教案：`lessons/boya-intermediate-i/lesson-01/20-approved/teacher-manual/第一课简易教案.docx`。
+- 唯一 authority 活动卡：`lessons/boya-intermediate-i/lesson-01/20-approved/activities/`；5 个活动资料夹、22 份 DOCX，不交付活动卡 PDF。
+- Current QA：`lessons/boya-intermediate-i/lesson-01/30-qa/current/pptx-v17/`；旧版本在 `30-qa/archive/`，其他历史输出统一在 `archive/`。
+- Current 设计输入：`lessons/boya-intermediate-i/lesson-01/10-design/`；生成器默认只写其中的 draft 目录。
+- 唯一 authority manifest：`lessons/boya-intermediate-i/lesson-01/20-approved/lesson-manifest.json`；`2026-08-24-font-standardized.zip` 是上一個不可變歷史 release，v11 的下一個 release 仍待人工接受。
 - Current 生產入口：`scripts/build_lesson_01_pptx.js` → `scripts/build_lesson_01_pptx_native.js`；prototype 入口：`scripts/build_lesson_01_prototype.js`。所有生成器默认输出 draft，不覆盖 authority。
 
 ## Authority 與 release 工作流
@@ -113,4 +113,4 @@
 
 ## 下一個工作節點
 
-第一課教師手冊已於 2026-08-20 由 Adam 批准；整學期主手冊目前已完成「課程總覽＋第一課」版本。v11 authority 已完成靜態 QA，但 Microsoft PowerPoint 音頻／投影檢查與 300 分鐘教師 rehearsal 尚待人工接受；在完成前不得稱為 classroom-ready 或建立新的不可變 release。第二課依專案規則保持鎖定。不要把教案文字直接塞進投影片，也不要跳過素材授權紀錄。
+先完成《准中级加速篇 I》第一课的逐页文字来源审核、音频语义对应、练习与答案状态核对，并取得 Adam 来源批准。来源批准前不得制作教师手册、学生配套、Storyboard 或 PPTX；整学期时数必须等全书理解完成后再安排。旧教材第一课的 PPTX、教师手册、QA 与 release 保持锁定，不作为新教材输入。

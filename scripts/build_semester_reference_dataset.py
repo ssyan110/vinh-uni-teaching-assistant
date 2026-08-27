@@ -25,8 +25,10 @@ from openpyxl.utils import get_column_letter
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE_DIR = ROOT / "work" / "boya-intermediate" / "extractions"
-OUT_DIR = ROOT / "course" / "reference-dataset"
+TEXTBOOK_ROOT = ROOT / "textbooks" / "boya-intermediate-i"
+SOURCE_DIR = TEXTBOOK_ROOT / "source" / "derived" / "extractions"
+OUT_DIR = TEXTBOOK_ROOT / "source" / "reference-dataset"
+AUDIO_ROOT = TEXTBOOK_ROOT / "source" / "audio"
 CSV_DIR = OUT_DIR / "csv"
 BOOK_TITLE = "博雅汉语听说·中级冲刺篇 I"
 DATASET_VERSION = "1.0.0"
@@ -454,16 +456,18 @@ def build_exercise_rows(lessons: list[dict[str, Any]]) -> list[dict[str, Any]]:
 def build_audio_rows(lessons: list[dict[str, Any]]) -> list[dict[str, Any]]:
     rows = []
     for lesson in lessons:
-        source = lesson.get("source", {})
         for fallback_order, item in enumerate(lesson.get("audio_map") or [], start=1):
             track = str(item.get("track_label", ""))
             source_file = item.get("file", "")
-            if not source_file and track:
-                source_file = f"音频/第{int(lesson['lesson_number']):02}课/{track}.mp3"
+            canonical_audio_root = (
+                f"textbooks/boya-intermediate-i/source/audio/"
+                f"lesson-{int(lesson['lesson_number']):02}"
+            )
+            if track:
+                source_file = f"{canonical_audio_root}/{track}.mp3"
             local_candidate = ROOT / source_file
             if not local_candidate.exists() and track:
-                candidates = list((ROOT / "Giáo trình").glob(f"**/音频/第{int(lesson['lesson_number']):02}课/{track}.mp3"))
-                local_candidate = candidates[0] if candidates else local_candidate
+                local_candidate = AUDIO_ROOT / f"lesson-{int(lesson['lesson_number']):02}" / f"{track}.mp3"
             rows.append(
                 {
                     "audio_asset_id": item.get("audio_asset_id", ""),
@@ -488,7 +492,7 @@ def build_audio_rows(lessons: list[dict[str, Any]]) -> list[dict[str, Any]]:
                     "size_bytes": item.get("size_bytes", ""),
                     "sha256": item.get("sha256", ""),
                     "review_status": item.get("review_status", lesson.get("review_status", "")),
-                    "source_audio_root": first_value(source.get("audio_root"), source.get("audio_directory")),
+                    "source_audio_root": canonical_audio_root,
                     "source_file": lesson.get("_source_file", ""),
                     "source_order": fallback_order,
                 }

@@ -36,4 +36,4 @@ npm run build
 npm run validate-offline
 ```
 
-本工具放在 `classroom-tools/`，不会修改第一课 PPTX、教师手册、活动卡或 `lessons/lesson-01/20-approved/`。
+本工具放在 `classroom-tools/`，不会修改第一课 PPTX、教师手册、活动卡或 `lessons/boya-intermediate-i/lesson-01/20-approved/`。

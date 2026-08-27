@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "textbook_id": "boya-quasi-intermediate-i",
+  "title": "《博雅汉语听说：准中级加速篇 I》",
+  "lesson_count": 12,
+  "status": "active_source_review",
+  "source_root": "textbooks/boya-quasi-intermediate-i/source",
+  "main_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+  "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+  "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
+  "qr_capture_root": "textbooks/boya-quasi-intermediate-i/source/qr/captures",
+  "qr_detection_index": "textbooks/boya-quasi-intermediate-i/source/qr/scan.tsv",
+  "audio_root": "textbooks/boya-quasi-intermediate-i/source/audio",
+  "lesson_root": "lessons/boya-quasi-intermediate-i"
+}

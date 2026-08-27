@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "textbook_id": "boya-intermediate-i",
+  "title": "《博雅汉语听说：中级冲刺篇 I》",
+  "status": "planned_for_third_year",
+  "source_pdf": "textbooks/boya-intermediate-i/source/raw/博雅汉语听说-中级冲刺篇I.pdf",
+  "source_pdf_sha256": "c7aa70b16496aecc7d9979bc2744dbe22701650511e48e2433ed19d439d70ad9",
+  "source_index": "textbooks/boya-intermediate-i/source/source-index.md",
+  "lesson_count": 8,
+  "qr_count": 8,
+  "audio_count": 91,
+  "lessons": [
+    {
+      "lesson_number": 1,
+      "title": "中国人的姓名",
+      "qr_capture": "textbooks/boya-intermediate-i/source/qr/captures/lesson-01.png",
+      "qr_detection": "textbooks/boya-intermediate-i/source/qr/detection/lesson-01.txt",
+      "audio_root": "textbooks/boya-intermediate-i/source/audio/lesson-01",
+      "audio_count": 11
+    },
+    {
+      "lesson_number": 2,
+      "title": "真正的朋友",
+      "qr_capture": "textbooks/boya-intermediate-i/source/qr/captures/lesson-02.png",
+      "qr_detection": "textbooks/boya-intermediate-i/source/qr/detection/lesson-02.txt",
+      "audio_root": "textbooks/boya-intermediate-i/source/audio/lesson-02",
+      "audio_count": 12
+    },
+    {
+      "lesson_number": 3,
+      "title": "宜居之地",
+      "qr_capture": "textbooks/boya-intermediate-i/source/qr/captures/lesson-03.png",
+      "qr_detection": "textbooks/boya-intermediate-i/source/qr/detection/lesson-03.txt",
+      "audio_root": "textbooks/boya-intermediate-i/source/audio/lesson-03",
+      "audio_count": 11
+    },
+    {
+      "lesson_number": 4,
+      "title": "地球人的担忧",
+      "qr_capture": "textbooks/boya-intermediate-i/source/qr/captures/lesson-04.png",
+      "qr_detection": "textbooks/boya-intermediate-i/source/qr/detection/lesson-04.txt",
+      "audio_root": "textbooks/boya-intermediate-i/source/audio/lesson-04",
+      "audio_count": 12
+    },
+    {
+      "lesson_number": 5,
+      "title": "音乐的魅力",
+      "qr_capture": "textbooks/boya-intermediate-i/source/qr/captures/lesson-05.png",
+      "qr_detection": "textbooks/boya-intermediate-i/source/qr/detection/lesson-05.txt",
+      "audio_root": "textbooks/boya-intermediate-i/source/audio/lesson-05",
+      "audio_count": 12
+    },
+    {
+      "lesson_number": 6,
+      "title": "挑战",
+      "qr_capture": "textbooks/boya-intermediate-i/source/qr/captures/lesson-06.png",
+      "qr_detection": "textbooks/boya-intermediate-i/source/qr/detection/lesson-06.txt",
+      "audio_root": "textbooks/boya-intermediate-i/source/audio/lesson-06",
+      "audio_count": 12
+    },
+    {
+      "lesson_number": 7,
+      "title": "我的同事",
+      "qr_capture": "textbooks/boya-intermediate-i/source/qr/captures/lesson-07.png",
+      "qr_detection": "textbooks/boya-intermediate-i/source/qr/detection/lesson-07.txt",
+      "audio_root": "textbooks/boya-intermediate-i/source/audio/lesson-07",
+      "audio_count": 10
+    },
+    {
+      "lesson_number": 8,
+      "title": "学汉语的苦恼",
+      "qr_capture": "textbooks/boya-intermediate-i/source/qr/captures/lesson-08.png",
+      "qr_detection": "textbooks/boya-intermediate-i/source/qr/detection/lesson-08.txt",
+      "audio_root": "textbooks/boya-intermediate-i/source/audio/lesson-08",
+      "audio_count": 11
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": "quasi-intermediate-source-audit-v0.1",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_number": 1,
+  "lesson_id": "lesson-01",
+  "title": "丽丽是独生女",
+  "title_source": "丽丽是独生女",
+  "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+  "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+  "page_map": {
+    "printed_pages": [
+      1,
+      11
+    ],
+    "pdf_pages": [
+      14,
+      24
+    ],
+    "mapping_status": "first_pass_visual_verified"
+  },
+  "qr_evidence": {
+    "pdf_page": 14,
+    "qr_url": "http://qr31.cn/I3ilDX",
+    "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-01-pdf-page-014.png",
+    "landing_page": "https://biz.cli.im/site/I3ilDX?qrurl=http://qr31.cn/I3ilDX&gtype=2&key=65d1c17d1d4ddc44487828089fb2cc75ccfcfef245"
+  },
+  "audio_map": [
+    {
+      "track_label": "1-1",
+      "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FoLz3BtWhyeedQ79W5vQMj3Yx16s",
+      "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-1.mp3",
+      "download_status": "passed",
+      "decode_status": "passed",
+      "bytes": 1324503,
+      "duration_seconds": 82.469,
+      "sha256": "e01d4adf226d238d4bef5998e6e0bd6d7b114d2dde5d947775f8aad41f994153",
+      "textbook_page": "pending_section_mapping"
+    },
+    {
+      "track_label": "1-2",
+      "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FiUp9X-WHKvAj7LL8dwQrtOk7P0a",
+      "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-2.mp3",
+      "download_status": "passed",
+      "decode_status": "passed",
+      "bytes": 834237,
+      "duration_seconds": 51.827,
+      "sha256": "1981e76366f895ecc770731366d35369aa5727844e2ba21df7c2327e806e7d1c",
+      "textbook_page": "pending_section_mapping"
+    },
+    {
+      "track_label": "1-3",
+      "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/lnVBZP7EHENoB01jP9JLILXWdbxr",
+      "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-3.mp3",
+      "download_status": "passed",
+      "decode_status": "passed",
+      "bytes": 3253802,
+      "duration_seconds": 203.05,
+      "sha256": "4f2b32cabc71ebe5861a6f374435d44fb7c0a3ff1defb536a6987e7e55351f4f",
+      "textbook_page": "pending_section_mapping"
+    },
+    {
+      "track_label": "1-4",
+      "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FgW6A7GmTricr6AsbWAu34qETftm",
+      "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-4.mp3",
+      "download_status": "passed",
+      "decode_status": "passed",
+      "bytes": 1235059,
+      "duration_seconds": 76.878,
+      "sha256": "500ae82dd025c88d5ad8edc0e96d7a93dafaad59d781219682bc3dce0d453a77",
+      "textbook_page": "pending_section_mapping"
+    },
+    {
+      "track_label": "1-5",
+      "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FnFjYjtaJZPgleZYItGEjz8jJi5C",
+      "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-5.mp3",
+      "download_status": "passed",
+      "decode_status": "passed",
+      "bytes": 855970,
+      "duration_seconds": 53.185,
+      "sha256": "9062abe7f667c422bf72c3d76be237fc06a434fb6eec2f6dd54f77769be90c98",
+      "textbook_page": "pending_section_mapping"
+    },
+    {
+      "track_label": "1-6",
+      "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FnFEbDZS2WfgA5PCECBtEGj3LAsA",
+      "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-6.mp3",
+      "download_status": "passed",
+      "decode_status": "passed",
+      "bytes": 1162752,
+      "duration_seconds": 72.359,
+      "sha256": "0a4ccf7a4c2b47651b46e3c30eaef9f3a9cca9fa82413380b6582f6bb343c5f2",
+      "textbook_page": "pending_section_mapping"
+    }
+  ],
+  "content_inventory": {
+    "vocabulary_count": null,
+    "texts_dialogues_count": null,
+    "grammar_pattern_count": null,
+    "exercise_count": null,
+    "status": "textual_extraction_pending"
+  },
+  "answer_policy": "仅记录参考答案 PDF 中可核对的答案；开放题不得自行补写。",
+  "review": {
+    "status": "source_audit_in_progress",
+    "approved": false,
+    "blockers": [
+      "全书扫描页需完成文字／教材区段逐页核对",
+      "音频需完成逐文件解码与内容级听核",
+      "第12课印刷页尾待确认"
+    ]
+  }
+}

@@ -927,7 +927,7 @@ def write_manifest() -> None:
         "lesson_periods": 6,
         "current_scope": ["course_overview", "lesson_01"],
         "lesson_01_teacher_guide_approval": "approved_by_adam_2026-08-20",
-        "source_of_truth_for_lesson_01": "lessons/lesson-01/20-approved/teacher-manual/第一课简易教案.docx",
+        "source_of_truth_for_lesson_01": "lessons/boya-intermediate-i/lesson-01/20-approved/teacher-manual/第一课简易教案.docx",
         "output_files": [
             "boya-intermediate-i-semester-teacher-manual.md",
             "boya-intermediate-i-semester-teacher-manual.docx",

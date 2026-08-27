@@ -1,18 +1,18 @@
 # Project scripts
 
-## Authority and output paths
+## Active context and authority paths
 
-The only approved Lesson 1 source is:
+All generic workflow scripts resolve the active offering, textbook and lesson from `project.config.json`. The current active context is《准中级加速篇 I》第一课来源审核；目前没有已批准的 teacher guide 或 PPTX authority。
 
-`lessons/lesson-01/20-approved/lesson-manifest.json`
+《中级冲刺篇 I》第一课的既有 authority 是：
+
+`lessons/boya-intermediate-i/lesson-01/20-approved/lesson-manifest.json`
 
 The original director-review input snapshot is preserved read-only at:
 
 `archive/legacy-materials-2026-08-27/boya-intermediate/lesson-01/share/第一课-教学资料`
 
-It is historical evidence only. New generators write drafts under
-`lessons/lesson-01/10-design/` and must never read from `archive/` or overwrite
-`20-approved/`.
+The archived director-review snapshot is evidence only. Book-specific legacy generators may reference `lessons/boya-intermediate-i/lesson-01/10-design/`, but they are blocked while that lesson is not the active context and must never read from `archive/` or overwrite `20-approved/`.
 
 Build the read-only dashboard cache with:
 
@@ -20,8 +20,7 @@ Build the read-only dashboard cache with:
 python3 scripts/build_dashboard.py
 ```
 
-The generated `dashboard/manifest.js` aggregates the eight lesson summaries
-from the source index and any available `lessons/lesson-XX/20-approved/lesson-manifest.json` files. The dashboard only expands the selected lesson; it does not copy every lesson's evidence into the course overview.
+The generated `dashboard/manifest.js` aggregates the active textbook's lesson summaries from its source inventory and any available `lessons/<textbook_id>/lesson-XX/20-approved/lesson-manifest.json` files. The dashboard only expands the selected lesson; it does not copy every lesson's evidence into the course overview.
 
 Build a release only from authority files with:
 
@@ -29,7 +28,7 @@ Build a release only from authority files with:
 BOYA_RELEASE_ID=YYYY-MM-DD-description python3 scripts/build_release_package.py
 ```
 
-The release builder writes `lessons/lesson-01/40-release/` and does not
+The release builder writes the active context's configured `40-release/` and does not
 regenerate teaching materials. The release id is required, path-safe, and must
 not already exist. Optional authority `release_materials` entries are copied
 to their declared release paths (for example, an approved worksheet, video, or
@@ -52,17 +51,17 @@ Record a real approval only after the relevant human review, with an existing
 evidence file and an explicit confirmation flag:
 
 ```bash
-python3 scripts/record_lesson_gate.py --gate storyboard --approved-by Adam --approved-at YYYY-MM-DD --evidence lessons/lesson-01/10-design/storyboard/lesson-01-ppt-outline-v5.md --confirm
-python3 scripts/record_lesson_gate.py --gate visual-alignment --approved-by Adam --approved-at YYYY-MM-DD --evidence lessons/lesson-01/20-approved/pptx/第一课-中国人的姓名.pptx --confirm
-python3 scripts/record_lesson_gate.py --gate audio-playback --approved-by Adam --approved-at YYYY-MM-DD --evidence lessons/lesson-01/30-qa/current/pptx-v15/qa-report.md --confirm
-python3 scripts/record_lesson_gate.py --gate rehearsal --approved-by Adam --approved-at YYYY-MM-DD --evidence lessons/lesson-01/30-qa/current/rehearsal-v1/rehearsal-notes.md --confirm
+python3 scripts/record_lesson_gate.py --gate storyboard --approved-by Adam --approved-at YYYY-MM-DD --evidence lessons/boya-intermediate-i/lesson-01/10-design/storyboard/lesson-01-ppt-outline-v5.md --confirm
+python3 scripts/record_lesson_gate.py --gate visual-alignment --approved-by Adam --approved-at YYYY-MM-DD --evidence lessons/boya-intermediate-i/lesson-01/20-approved/pptx/第一课-中国人的姓名.pptx --confirm
+python3 scripts/record_lesson_gate.py --gate audio-playback --approved-by Adam --approved-at YYYY-MM-DD --evidence lessons/boya-intermediate-i/lesson-01/30-qa/current/pptx-v15/qa-report.md --confirm
+python3 scripts/record_lesson_gate.py --gate rehearsal --approved-by Adam --approved-at YYYY-MM-DD --evidence lessons/boya-intermediate-i/lesson-01/30-qa/current/rehearsal-v1/rehearsal-notes.md --confirm
 ```
 
-## Current status
+## 《中级冲刺篇 I》现有生成器状态
 
-The current lesson-production path is native PPTX plus editable support materials. The first lesson's final confirmed teaching package is preserved in the new authority tree; source-review and teaching-design scripts remain review utilities for already completed evidence:
+以下脚本是《中级冲刺篇 I》第一课的书本专属工具。该教材保留给三年级使用，但这些脚本不是当前《准中级加速篇 I》的生成入口：
 
-The current authority is the Adam-approved v11-final package. Its static QA is
+The preserved authority is the Adam-approved v11-final package. Its static QA is
 recorded, but classroom delivery remains pending manual PowerPoint playback,
 projection review, and teacher rehearsal. The previous immutable release is
 retained as historical evidence and is not the current v11 delivery.
@@ -82,9 +81,9 @@ New lesson production should follow:
 
 `source gate → PBI redesign → teacher guide content master → teacher guide approval → prep/activity materials → internal PPT storyboard → visual storyboard → 6-slide prototype → native editable PPTX → audio/content/visual/layout QA`
 
-The teacher guide is the content source of truth. Run `node scripts/build_lesson_01_teacher_guide.js` after the canonical source or approved coverage changes. It writes a draft under `lessons/lesson-01/10-design/teacher-manual-draft/`; it must be explicitly approved before it can enter `20-approved/`. The guide must be completed and approved before the PPT storyboard, visual prototype, or full PPTX can be treated as production artifacts. A prototype made earlier is only a visual discussion draft.
+The teacher guide is the content source of truth. Run `node scripts/build_lesson_01_teacher_guide.js` after the canonical source or approved coverage changes. It writes a draft under `lessons/boya-intermediate-i/lesson-01/10-design/teacher-manual-draft/`; it must be explicitly approved before it can enter `20-approved/`. The guide must be completed and approved before the PPT storyboard, visual prototype, or full PPTX can be treated as production artifacts. A prototype made earlier is only a visual discussion draft.
 
-For a future lesson, run `node scripts/build_lesson_01_pptx.js` only after the teacher guide, support materials, storyboard, visual storyboard and prototype are approved. It writes `lessons/lesson-01/10-design/pptx-draft/lesson-01-draft.pptx`; it never overwrites the approved PowerPoint. After manual PowerPoint review, approval is an explicit copy-and-manifest update step. A changed authority PPTX must pass the manifest hash check before a release can be built.
+Only when《中级冲刺篇 I》第一课再次成为 active context may `node scripts/build_lesson_01_pptx.js` run, and only after the teacher guide, support materials, storyboard, visual storyboard and prototype are approved. It writes `lessons/boya-intermediate-i/lesson-01/10-design/pptx-draft/lesson-01-draft.pptx`; it never overwrites the approved PowerPoint. The current《准中级加速篇 I》must use its own future generator after source and teacher-guide approval.
 
 Activity cards are currently delivered as editable DOCX files only. The former
 `legacy/render_lesson_01_activity_pdfs.py` renderer is retained for historical

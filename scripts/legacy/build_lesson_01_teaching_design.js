@@ -9,7 +9,7 @@ if (process.env.BOYA_ALLOW_LEGACY_REVIEW !== '1') {
 }
 
 const projectRoot = path.resolve(__dirname, '../..');
-const sourceRelative = 'work/boya-intermediate/extractions/structured-lesson-01.json';
+const sourceRelative = 'textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json';
 const outputRelative = 'archive/legacy-rebuilds/boya-intermediate/lesson-01/teaching-design';
 const sourcePath = path.join(projectRoot, sourceRelative);
 const outputDir = path.join(projectRoot, outputRelative);

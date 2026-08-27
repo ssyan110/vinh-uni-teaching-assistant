@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "offering_id": "2026-fall",
+  "course_id": "vinh-chinese-listening-speaking",
+  "status": "source_review",
+  "schedule_status": "deferred_pending_full_textbook_review",
+  "primary_textbook_id": "boya-quasi-intermediate-i",
+  "textbooks": [
+    {
+      "textbook_id": "boya-quasi-intermediate-i",
+      "role": "primary",
+      "status": "active_source_review",
+      "manifest": "textbooks/boya-quasi-intermediate-i/textbook.json",
+      "lesson_root": "lessons/boya-quasi-intermediate-i"
+    }
+  ],
+  "future_textbooks": [
+    {
+      "textbook_id": "boya-intermediate-i",
+      "intended_stage": "third_year",
+      "status": "planned_for_third_year",
+      "manifest": "textbooks/boya-intermediate-i/textbook.json",
+      "lesson_root": "lessons/boya-intermediate-i"
+    }
+  ],
+  "course_documents": {
+    "semester_overview": null,
+    "teacher_manual": null,
+    "legacy_replaced_schedule_materials": "course/offerings/2026-fall/legacy/boya-intermediate-i"
+  }
+}

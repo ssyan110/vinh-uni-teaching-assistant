@@ -15,6 +15,6 @@
 
 第一课题目的新信息与沟通目标必须来自本课权威来源：
 
-`work/boya-intermediate/extractions/structured-lesson-01.json`
+`textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json`
 
 游戏只使用四类本课主题：姓名、起名、姓氏、称呼。前两册语言只用于提问、回答、确认、听、说、读等完成任务所需的基本表达，不能把购物、交通、天气、工作或其他旧课主题变成本轮练习重点。

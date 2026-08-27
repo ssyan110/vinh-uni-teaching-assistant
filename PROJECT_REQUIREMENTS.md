@@ -9,14 +9,14 @@
 ### 1.1 課程基線
 
 - 學生已完成《博雅漢語聽說：初級起步篇》第一、二冊。
-- 本學期使用《博雅漢語聽說：中級衝刺篇 I》八課。
+- 本學期教材已切換為《博雅漢語聽說：準中級加速篇 I》十二課；《中級衝刺篇 I》完整保留，規劃於三年級使用。
 - 課程核心技能是 listening + speaking。
 - 每節 50 分鐘；每次上課 4 節；每次上課 200 分鐘。
 - 每一課以 6 節、300 分鐘重組。
-- 第一課〈中國人的姓名〉目前是第一個完整生產單位。
-- 逐課完成：同一時間只製作一課；第一課所有教材包與交付 QA 完成前，不開始第二課。
+- 當前第一個生產單位是新教材第一課〈丽丽是独生女〉，目前只完成第一輪來源盤點，尚未批准來源。
+- 逐課完成：同一時間只製作一課；新教材第一課所有 gate 完成前，不開始新教材第二課。
 
-### 1.2 第一課已批准的內容狀態
+### 1.2 《中級衝刺篇 I》第一課的既有批准狀態
 
 - 來源：已審核通過。
 - 教學重組：已審核通過。
@@ -29,7 +29,14 @@
 - 教學時間：6 節／300 分鐘。
 - 教師手冊：已於 2026-08-20 由 Adam 審核通過。
 - 學生配套：預習卡、活動卡、評量表與 Exit Ticket 已完成並批准；活動材料按活動分資料夾，每張可獨立發放的卡保留可編輯 DOCX，活動卡不生成或交付 PDF。
-- 整學期主手冊：已建立「課程總覽＋第一課」版本；第2–8課續寫在同一份主手冊中。
+- 舊整學期主手冊與總覽已移入 `course/offerings/2026-fall/legacy/boya-intermediate-i/`，不得作為新教材的學期安排。
+
+### 1.3 当前新教材状态
+
+- 教材来源：`textbooks/boya-quasi-intermediate-i/source/`。
+- 第一课来源包：`lessons/boya-quasi-intermediate-i/lesson-01/00-source/`。
+- 12 个课次 QR 与 72 段音频已登记并完成文件解码检查；逐课文字内容与音频语义对应仍待来源审核。
+- 学期时数、教师手册、学生配套与 PPTX 均尚未建立；必须依 gate 顺序推进。
 
 ## 2. 課堂設計要求
 
@@ -95,10 +102,19 @@
 
 ```text
 course/
-├── semester-overview.md
-└── teacher-manual.md
+├── course-manifest.json
+└── offerings/<offering_id>/offering.json
 
-lessons/lesson-01/
+textbooks/<textbook_id>/
+├── textbook.json
+└── source/
+    ├── raw/
+    ├── qr/captures/
+    ├── qr/detection/
+    ├── audio/lesson-XX/
+    └── source-inventory.json
+
+lessons/<textbook_id>/lesson-XX/
 ├── 00-source/source-manifest.json
 ├── 10-design/
 │   ├── teaching-design/
@@ -231,7 +247,7 @@ Storyboard 是內部必要資料，不需要另外製作 HTML。它必須在教�
 - dashboard 是內部製作進度與 gate 控制頁，必須顯示目前 active lesson、每個 gate 的狀態、證據檔案、下一個動作與鎖定課次。
 - dashboard 必須清楚區分「已完成」「待審核」「製作中」「尚未開始」與「鎖定」，不得把教師手冊完成誤寫成整課 PPT 已完成。
 - 第 2–8 課在第一課完成前保持鎖定；只有第一課交付 QA 通過後，才解除第二課來源審核 gate。
-- dashboard 顯示的課次、權威檔案連結、QA 狀態和 release 位置必須由 `lessons/lesson-01/20-approved/lesson-manifest.json` 產生，不手動寫死連結。
+- dashboard 顯示的課次、權威檔案連結、QA 狀態和 release 位置必須由 `lessons/boya-intermediate-i/lesson-01/20-approved/lesson-manifest.json` 產生，不手動寫死連結。
 
 ### 3.8 生成器與交付規則
 
@@ -326,13 +342,13 @@ Storyboard 是內部必要資料，不需要另外製作 HTML。它必須在教�
 
 ## 5. 來源資料與內容忠實度
 
-### 5.1 第一課 canonical source
+### 5.1 当前第一课 canonical source
 
 ```text
-work/boya-intermediate/extractions/structured-lesson-01.json
-Giáo trình/博雅汉语听说-中级冲刺篇/博雅汉语听说-中级冲刺篇I.pdf
-Giáo trình/博雅汉语听说-中级冲刺篇/教材资料索引.md
-Giáo trình/博雅汉语听说-中级冲刺篇/音频/第01课/
+lessons/boya-quasi-intermediate-i/lesson-01/00-source/canonical-source.json
+textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf
+textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf
+textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/
 ```
 
 ### 5.2 不可違反
@@ -408,7 +424,7 @@ Giáo trình/博雅汉语听说-中级冲刺篇/音频/第01课/
 ## 8. 版本與檔案建議
 
 ```text
-lessons/lesson-01/
+lessons/boya-intermediate-i/lesson-01/
 ├── 00-source/
 ├── 10-design/
 ├── 20-approved/

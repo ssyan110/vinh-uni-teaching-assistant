@@ -44,9 +44,9 @@
 - 教材练习：35/35 已对应投影片或配套材料。
 - 音频：9/9 课堂音频轨道已嵌入，13 个音频实例，预习音频 1-1 与 2-1 保留在预习流程。
 - Speaker notes：60/60 张投影片都有教师提示。
-- Current outline：`lessons/lesson-01/10-design/storyboard/lesson-01-ppt-outline-v5.md`。
-- Current visual storyboard：`lessons/lesson-01/10-design/visual-storyboard/lesson-01-visual-storyboard-v5.md`。
-- 最新 QA 证据：`lessons/lesson-01/30-qa/current/pptx-v17/`；歷史 v12/v13 仍保留在 `archive/legacy-materials-2026-08-27/`。
+- Current outline：`lessons/boya-intermediate-i/lesson-01/10-design/storyboard/lesson-01-ppt-outline-v5.md`。
+- Current visual storyboard：`lessons/boya-intermediate-i/lesson-01/10-design/visual-storyboard/lesson-01-visual-storyboard-v5.md`。
+- 最新 QA 证据：`lessons/boya-intermediate-i/lesson-01/30-qa/current/pptx-v17/`；歷史 v12/v13 仍保留在 `archive/legacy-materials-2026-08-27/`。
 - PowerPoint 实际音频播放、教师 rehearsal、最终修订和交付仍是下一步；第二课继续锁定。
 
 ## 后续课次固定采用的制作标准

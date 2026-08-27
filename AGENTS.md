@@ -20,7 +20,7 @@
 
 - 學校：越南榮市大學。
 - 課程：華語聽說中級課程。
-- 學生已完成《博雅漢語聽說：初級起步篇》第一、二冊，目前使用《博雅漢語聽說：中級衝刺篇 I》八課教材。
+- 學生已完成《博雅漢語聽說：初級起步篇》第一、二冊，本學期教材已切換為《博雅漢語聽說：準中級加速篇 I》十二課；《中級衝刺篇 I》完整保留，規劃於三年級使用。
 - 每次上課 4 節；每節 50 分鐘；每次上課 200 分鐘。
 - 每一課以 6 節、300 分鐘為主要教學單位，並依整學期課程表分配到不同次上課。
 - 本課程重點是聽與說，不以逐字翻譯、逐字教詞或單字書寫為主軸。
@@ -97,11 +97,11 @@
 
 自 2026-08-21 起，教材檔案採「單一權威來源 → 只讀 QA → 不可變交付包」架構：
 
-- 課程層級內容位於 `course/`；學期總覽使用 `course/semester-overview.md`，整學期教師手冊組裝來源使用 `course/teacher-manual.md`。
-- 每課使用 `lessons/lesson-XX/`。`00-source/` 保存來源 manifest，`10-design/` 保存教學設計與視覺設計資料，`20-approved/` 是唯一權威版本，`30-qa/current/` 是目前只讀 QA，`30-qa/archive/` 保存舊 QA，`40-release/` 是不可變交付包。
+- 課程穩定身份位於 `course/course-manifest.json`；每個學期／開課實例位於 `course/offerings/<offering_id>/`，並可在 `offering.json` 登記多本教材。教材 PDF、QR、音頻與來源盤點統一位於 `textbooks/<textbook_id>/source/`，不得混放到 `course/` 或根目錄。
+- 每課使用 `lessons/<textbook_id>/lesson-XX/`。`00-source/` 保存來源 manifest，`10-design/` 保存教學設計與視覺設計資料，`20-approved/` 是唯一權威版本，`30-qa/current/` 是目前只讀 QA，`30-qa/archive/` 保存舊 QA，`40-release/` 是不可變交付包。
 - 每課只能有一份 `20-approved/lesson-manifest.json`。它登記權威 PPTX、教師手冊、活動材料、版本、SHA-256、QA 狀態與最新交付包；其他 index 或 dashboard 資料只能由它產生。
 - 根目錄 `archive/` 只保存跨課程的舊輸出快照；各課 `90-archive/` 只保存該課的歷史審核／版本證據。兩者都不是 authority，也不作新的生成輸入。
-- 使用者確認為最終版的教材包必須先原樣登記到 `20-approved/`。本次第一課的主任審核包已登記到 `20-approved/`；原始審核證據保存在 `lessons/lesson-01/90-archive/approval-evidence-2026-08-27/`，不得把 archive 當成新的生產輸入。
+- 使用者確認為最終版的教材包必須先原樣登記到 `20-approved/`。本次第一課的主任審核包已登記到 `20-approved/`；原始審核證據保存在 `lessons/boya-intermediate-i/lesson-01/90-archive/approval-evidence-2026-08-27/`，不得把 archive 當成新的生產輸入。
 - PPT 生成器、活動卡生成器和其他產生器只能輸出到 `10-design/` 的 draft 位置；不能覆蓋 `20-approved/`。PowerPoint 手動修改後，只有在 Adam 明確批准後才能成為新的 authority。
 - 所有生成器在寫入前必須通過 `python3 scripts/production_gate.py`；gate 失敗時不得建立 draft，且不得把 `archive/`、`output/`、`share/` 或 QA／release 目錄當作輸入或輸出。
 - `40-release/` 只能從 `20-approved/` 複製，不在交付包內重生成或修改教師手冊、活動卡或 PPTX；不再使用 `share`、`share 2`、`share 3` 作為工作流程目錄。
@@ -110,7 +110,7 @@
 
 ### 現行學生 PPT 規則（2026-08-21）
 
-以下規則是今天第一課 PPT 修訂後的固定標準，後續八課沿用：
+以下規則源自《中級衝刺篇 I》第一課的批准稿；其中通用的學生可讀性、PBI、頁碼、材料與 QA 原則沿用到其他教材。涉及〈中國人的姓名〉、特定句式、E01 編號或該教材頁面的例子只約束 `boya-intermediate-i` 的鎖定版本，不得當作其他教材內容來源：
 
 - 視覺採已批准的教育教材式插畫：灰藍細線、低飽和粉彩、淺色背景、清楚留白。不要另換成產品發表會、企業簡報或抽象生成圖風格。
 - 每個 section divider 直接使用教材名稱，例如「聽說（一）」「詞語理解」「語句理解」「語段理解」「口語句式」「文化知識」「拓展練習」「聽說（二）」；divider 只保留 section 名稱與簡單主視覺。
@@ -138,7 +138,7 @@
 - 同一角色使用的提示、問題、記錄表、客戶卡或呈現表，直接合併到該角色的 Word 文件；只有真正需要分開發放、保密、輪換或由不同角色使用的材料才另建檔案。活動 Word 文件直接放在活動資料夾，不建立「可編輯原稿」中間層。
 - 姓氏活動材料要按教材練習分工：姓名分類使用課本給出的姓名和三類名稱；歷史人物介紹單獨放在拓展練習；單姓／復姓練習保留課本名單，但改成讀給同學聽、同學記錄和回答是否認識相關姓氏的互動任務。不同目標不能混在同一張卡裡。
 - 學生已修改的「用三到五句話回答問題，並使用畫線詞語」詞語、題目和順序不得由生成器回填舊版本；生成前必須把目前核准文字寫回結構化規格並做差異檢查。
-- 當前第一課的 PPT 入口是 `scripts/build_lesson_01_pptx.js`，實作位於 `scripts/build_lesson_01_pptx_native.js`；這些入口只能輸出 draft，不得覆蓋 `lessons/lesson-01/20-approved/`。prototype 使用 `scripts/build_lesson_01_prototype.js`。舊版生成器、舊 69 頁 storyboard、舊視覺 storyboard 不得再用。
+- 當前第一課的 PPT 入口是 `scripts/build_lesson_01_pptx.js`，實作位於 `scripts/build_lesson_01_pptx_native.js`；這些入口只能輸出 draft，不得覆蓋 `lessons/boya-intermediate-i/lesson-01/20-approved/`。prototype 使用 `scripts/build_lesson_01_prototype.js`。舊版生成器、舊 69 頁 storyboard、舊視覺 storyboard 不得再用。
 
 ## 不可跳過的生產 gate
 
@@ -154,24 +154,24 @@
 10. Visual storyboard：在內容與課堂流程已確定後，決定文字上限、主視覺、圖片功能、版面節奏、字體、色彩與素材授權。
 11. 6 張 visual prototype：先確認學生畫面方向、低文字密度、初中級用詞、圖片比例與字體，再展開完整 deck。
 12. PPTX 生產：製作學生畫面、音檔、speaker notes 與可編輯版面。
-13. QA：來源忠實度、教材頁碼標記 coverage、35/35 練習覆蓋、音檔、低文字密度、圖片、版面、字體、列印、實際播放與 300 分鐘流程。
+13. QA：來源忠實度、教材頁碼標記 coverage、canonical source 全部練習覆蓋、音檔、低文字密度、圖片、版面、字體、列印、實際播放與 300 分鐘流程。
 14. 交付：教師手冊、學生配套、PPTX 與音檔資料；完成後記錄版本與未決事項。
 
 不得在教師手冊 gate 未批准時製作完整 PPTX。Visual prototype 可以作為方向討論稿，但不能取代教師手冊，也不能讓完整 deck 反過來決定本課內容。若使用者明確說某一 gate 已批准，仍要保留該批准狀態與日期。
 
 ### 逐課鎖定規則
 
-- 同一時間只開放一課進入生產；目前唯一 active lesson 是第一課。
-- 第一課必須完成教師手冊、學生配套、PPT storyboard、Visual storyboard、6 張 prototype、完整原生 PPTX、音檔與 speaker notes、內容／技術／課堂流程 QA、教師 rehearsal 與交付，才算完成。
-- 在第一課完成並記錄交付版本前，不得開始第二課的來源審核、教學重組、教師手冊或 PPT 生產。
+- 同一時間只開放一課進入生產；目前唯一 active lesson 是 `lessons/boya-quasi-intermediate-i/lesson-01/`，且仍停留在來源審核。
+- 新教材第一課必須依 gate 完成來源批准、教師手冊、學生配套、PPT storyboard、Visual storyboard、6 張 prototype、完整原生 PPTX、音檔與 speaker notes、內容／技術／課堂流程 QA、教師 rehearsal 與交付，才算完成。
+- 在新教材第一課完成並記錄交付版本前，不得開始新教材第二課的來源審核、教學重組、教師手冊或 PPT 生產。舊教材第一課的 authority 與 release 保持鎖定，不回改。
 - 整學期總覽可以先存在主教師手冊與 dashboard 中，但不能被解讀為已完成各課教材。
 
 ## 來源忠實度規則
 
-- 第一課的 canonical source 是 `work/boya-intermediate/extractions/structured-lesson-01.json`。
-- PDF 是 `Giáo trình/博雅汉语听说-中级冲刺篇/博雅汉语听说-中级冲刺篇I.pdf`。
-- 教材索引是 `Giáo trình/博雅汉语听说-中级冲刺篇/教材资料索引.md`。
-- 音檔位於 `Giáo trình/博雅汉语听说-中级冲刺篇/音频/第01课/` 至 `第08课/`。
+- 當前第一課的 canonical source 是 `lessons/boya-quasi-intermediate-i/lesson-01/00-source/canonical-source.json`；狀態仍是 `source_audit_in_progress`，尚未獲得來源批准。
+- 主教材與聽力文本／參考答案位於 `textbooks/boya-quasi-intermediate-i/source/raw/`。
+- 全書來源盤點是 `textbooks/boya-quasi-intermediate-i/source/source-inventory.json`；QR 位於 `source/qr/captures/`，音檔位於 `source/audio/lesson-01/` 至 `lesson-12/`。
+- 《中級衝刺篇 I》的 canonical source、PDF、QR 與音檔統一位於 `textbooks/boya-intermediate-i/source/`；該教材未刪除，未來三年級使用時從同一教材專屬結構繼續生產。
 - 教師手冊、教師審閱文件、學生投影片與學生配套統一使用簡體中文；只有必要的越南文說明可以保留越南文。
 - 必須保留教材詞語順序、教材題目與音檔對應。
 - 教材沒有提供答案的開放題，不得自行捏造標準答案；可提供活動流程、評量面向與示例，但要標記為教師提示或示例。
@@ -181,7 +181,7 @@
 
 每課完整包至少包含：
 
-- 教師手冊（先完成並批准）：節次時間、Can-Do、最終任務、教材頁碼、音檔、35/35 練習 coverage、分組、活動步驟、學生產出、教師提示、即時修補、評量、答案政策與備案。
+- 教師手冊（先完成並批准）：節次時間、Can-Do、最終任務、教材頁碼、音檔、canonical source 全部練習 coverage、分組、活動步驟、學生產出、教師提示、即時修補、評量、答案政策與備案。
 - 學生預習卡：課前閱讀／聽力、準備任務、個人資料、問題與預習證據。
 - 補充活動材料：角色卡、客戶需求卡、訪談卡、資訊站卡、調查表、研究卡、同儕回饋表與 exit ticket。
 - 可編輯 PPTX（依批准的教師手冊製作）：16:9、靜態、學生可讀、音檔可播放。

@@ -27,4 +27,4 @@
 ## 尚未驗證
 
 - 尚未完成榮市大學真實班級的教師 rehearsal。
-- 尚未把這套 classroom tool 登記進 `lessons/lesson-01/20-approved/`；目前保持獨立，避免改動第一課已確認教材包。
+- 尚未把這套 classroom tool 登記進 `lessons/boya-intermediate-i/lesson-01/20-approved/`；目前保持獨立，避免改動第一課已確認教材包。

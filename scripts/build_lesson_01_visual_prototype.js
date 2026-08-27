@@ -160,7 +160,7 @@ function writeManifest() {
     format: 'native-pptx-only',
     html_required: false,
     slide_count: 6,
-    source_contact_sheet: 'lessons/lesson-01/10-design/visual-storyboard/assets/lesson-01-textbook-contact-sheet-4x4.png',
+    source_contact_sheet: 'lessons/boya-intermediate-i/lesson-01/10-design/visual-storyboard/assets/lesson-01-textbook-contact-sheet-4x4.png',
     source_contact_sheet_status: 'approved_by_adam_2026-08-20',
     visual_style: 'educational textbook line-art; thin grey-blue outlines; muted pastel fills; pale background; natural human proportions',
     student_language_policy: '简体中文；学生画面只呈现当前动作',

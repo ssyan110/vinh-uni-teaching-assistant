@@ -437,7 +437,7 @@ function renderAll() {
       language: '简体中文',
       cjk_font: CJK_FONT,
       template: '第一课最终版统一视觉母版 V4',
-      template_source: 'lessons/lesson-01/20-approved/pptx/第一课-中国人的姓名.pptx',
+      template_source: 'lessons/boya-intermediate-i/lesson-01/20-approved/pptx/第一课-中国人的姓名.pptx',
       no_textbook_page_markers: true,
       scope: ['如何给孩子取名字：三种常见方式', '如何称呼中国人：关系、年龄、身份、场合'],
       requested_revisions: [

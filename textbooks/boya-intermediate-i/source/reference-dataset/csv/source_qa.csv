@@ -1,0 +1,212 @@
+﻿lesson_id,lesson_number,lesson_title,source_file,item_type,field,status,value,detail
+boya-intermediate-i-lesson-01,1,中国人的姓名,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json,source_qa,status,passed,,four_lane_multi_agent_source_fidelity_review
+boya-intermediate-i-lesson-01,1,中国人的姓名,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json,verified_category,sections,verified,,
+boya-intermediate-i-lesson-01,1,中国人的姓名,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json,verified_category,vocabulary,verified,,
+boya-intermediate-i-lesson-01,1,中国人的姓名,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json,verified_category,texts_dialogues,verified,,
+boya-intermediate-i-lesson-01,1,中国人的姓名,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json,verified_category,grammar_patterns,verified,,
+boya-intermediate-i-lesson-01,1,中国人的姓名,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json,verified_category,exercises,verified,,
+boya-intermediate-i-lesson-01,1,中国人的姓名,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json,verified_category,audio_mapping,verified,,
+boya-intermediate-i-lesson-01,1,中国人的姓名,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json,correction_applied,,applied,,补全教材原生 section 层级
+boya-intermediate-i-lesson-01,1,中国人的姓名,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json,correction_applied,,applied,,T01-002 补回‘过年的时候’中的‘的’
+boya-intermediate-i-lesson-01,1,中国人的姓名,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json,correction_applied,,applied,,T01-005 姓氏‘华’读音修正为 huà
+boya-intermediate-i-lesson-01,1,中国人的姓名,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json,correction_applied,,applied,,E01-003 归回词语理解
+boya-intermediate-i-lesson-01,1,中国人的姓名,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json,correction_applied,,applied,,E01-023 与音频 2-4 归回语句理解
+boya-intermediate-i-lesson-01,1,中国人的姓名,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json,answer_policy,answer_policy,recorded,,只记录教材明确印出的答案；本课扫描页未提供练习答案，不自行补写。
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,source_qa,status,pending,,PDF页图像、OCR页面、来源索引和文件级音频检查
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,verified_category,lesson_boundary,verified,,
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,verified_category,page_mapping,verified,,
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,verified_category,section_hierarchy_first_pass,verified,,
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,verified_category,vocabulary_first_pass,verified,,
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,verified_category,printed_exercise_inventory,verified,,
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,verified_category,audio_file_inventory,verified,,
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,verified_category,audio_decode,verified,,
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,correction_applied,,applied,,将第二课 canonical source 从不完整的 lesson-02.json 分离为本课 source-review 结构化快照。
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,correction_applied,,applied,,以页面图像确认教材印刷页17–31与PDF页28–42的对应关系。
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,correction_applied,,applied,,保留OCR与页面图像的差异，不把OCR缺字、错字或丢失声调写成最终教材文字。
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,correction_applied,,applied,,把教材未提供答案的题目标记为 not_provided_in_source 或 open。
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,unresolved_item,,unresolved,,逐页完成结构化记录的文字忠实度复核，特别是阅读短文、拼音、标点和填空线。
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,unresolved_item,,unresolved,,逐一听核12段音频，将实际内容与教材区段建立内容级对应。
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,unresolved_item,,unresolved,,确认开放题、听力题和句式练习的答案状态；不生成教材未提供的唯一答案。
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,unresolved_item,,unresolved,,等待Adam对来源内容的更正或批准。
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,file_check,pdf_pages,recorded,148,
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,file_check,review_pdf_pages,recorded,15,
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,file_check,ocr_pages_present,recorded,15,
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,file_check,page_images_present,recorded,15,
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,file_check,audio_files_present,recorded,12,
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,file_check,audio_decode_pass,recorded,12/12,
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,file_check,audio_total_duration_seconds,recorded,1032.674,
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,file_check,qr_payload_decoded,recorded,True,
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,answer_policy,answer_policy,recorded,,只记录教材明确印出的题干、示例和答案状态。扫描页未提供完整答案的题目不自行补写唯一答案。
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,uncertainty,audio_content,pending_review,,文件存在且12/12可解码，尚未完成内容级听核。
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,uncertainty,full_text_fidelity,pending_review,,OCR已保存；页面图像为最终依据，部分逐字稿仍需人工校正。
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,uncertainty,answers,not_provided_in_source,,扫描教材未提供完整答案，不生成标准答案。
+boya-intermediate-i-lesson-02,2,真正的朋友,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json,uncertainty,translation,not_started,,来源批准前不进行越南文翻译。
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,source_qa,status,pending,,现行PDF页面图像、项目现有OCR、教材资料索引和文件级音频检查；页面图像优先于OCR。
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,verified_category,lesson_boundary,verified,,
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,verified_category,page_mapping,verified,,
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,verified_category,page_inventory,verified,,
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,verified_category,section_hierarchy_first_pass,verified,,
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,verified_category,vocabulary_inventory_first_pass,verified,,
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,verified_category,printed_exercise_inventory,verified,,
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,verified_category,printed_text_inventory,verified,,
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,verified_category,audio_file_inventory,verified,,
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,verified_category,audio_decode,verified,,
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,verified_category,audio_content_mapping_confirmed_by_user,verified,,
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,correction_applied,,applied,,将旧lesson-03.json中的外部路径排除，使用项目当前PDF、音频和索引路径。
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,correction_applied,,applied,,按教材印刷页32–45与PDF页43–56建立页码映射。
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,correction_applied,,applied,,保留四笔印刷内容／阅读文本；音频对话正文不在扫描页中，暂不臆写。
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,correction_applied,,applied,,修正 S03-012、S03-013 的 section 标签、教材页码、PDF页码和音频引用。
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,correction_applied,,applied,,将 E03-025 的印刷题干与来源备注分离。
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,correction_applied,,applied,,记录四项页面图像确认的词语：一干二净、礁石 jiāoshí、雾霾 wùmái、再说 zàishuō。
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,correction_applied,,applied,,按 Adam 确认记录 11 段音频内容与教材 mapping 正确；不生成音频逐字转写。
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,unresolved_item,,unresolved,,逐页完成阅读文本、词语拼音、标点和填空线的文字忠实度复核。
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,unresolved_item,,unresolved,,本包不生成音频逐字转写；如后续教师手册需要逐字稿，另行建立并人工听核。
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,unresolved_item,,unresolved,,教材未提供答案的开放题不生成唯一答案。
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,unresolved_item,,unresolved,,等待Adam对来源内容的更正或批准。
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,file_check,pdf_pages,recorded,148,
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,file_check,review_pdf_pages,recorded,14,
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,file_check,ocr_pages_present,recorded,14,
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,file_check,page_images_present,recorded,14,
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,file_check,audio_files_present,recorded,11,
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,file_check,audio_decode_pass,recorded,11/11,
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,file_check,audio_total_duration_seconds,recorded,1236.637,
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,file_check,audio_content_mapping_status,recorded,confirmed_by_user,
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,file_check,qr_payload_decoded,recorded,True,
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,answer_policy,answer_policy,recorded,,扫描教材未提供完整答案；来源审核阶段只记录题干、教材明确示例与音频对应，不补写唯一标准答案。
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,uncertainty,audio_content,confirmed_by_user,,Adam已确认11段MP3的实际内容与教材音频标签、页码和区段 mapping 正确；本包不生成逐字转写。
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,uncertainty,full_text_fidelity,pending_review,,项目OCR已复制至本课目录；页面图像为最终依据，部分逐字稿、拼音和填空线仍需人工校正。
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,uncertainty,dialogue_transcripts,pending_review,,教材仅印出音频题目，没有印出对话正文；不把题目反推为对话全文。
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,uncertainty,answers,not_provided_in_source,,扫描教材未提供完整答案，不生成标准答案。
+boya-intermediate-i-lesson-03,3,宜居之地,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json,uncertainty,translation,not_started,,来源批准前不进行越南文翻译。
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,source_qa,status,pending,,PDF页面图像、OCR、教材索引和文件级音频检查
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,verified_category,lesson_boundary,verified,,
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,verified_category,page_mapping,verified,,
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,verified_category,section_inventory,verified,,
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,verified_category,vocabulary_first_pass,verified,,
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,verified_category,printed_exercise_inventory,verified,,
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,verified_category,audio_file_inventory,verified,,
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,verified_category,audio_decode,verified,,
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,unresolved_item,,unresolved,,词语、拼音、标点和阅读文本需逐页以页面图像复核
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,unresolved_item,,unresolved,,Adam已确认12段音档正确；本包不生成逐字转写，代理未进行语义听核
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,unresolved_item,,unresolved,,教材未提供完整答案，开放题不生成唯一答案
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,unresolved_item,,unresolved,,等待Adam来源批准
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,file_check,pdf_pages,recorded,148,
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,file_check,review_pdf_pages,recorded,17,
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,file_check,ocr_pages_present,recorded,17,
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,file_check,page_images_present,recorded,17,
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,file_check,audio_files_present,recorded,12,
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,file_check,audio_decode_pass,recorded,12/12,
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,file_check,audio_total_duration_seconds,recorded,1323.520065,
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,file_check,qr_payload_decoded,recorded,True,
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,answer_policy,answer_policy,recorded,,只记录教材印出的题干、阅读内容和答案状态；教材未提供的答案不自行补写唯一标准答案。
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,uncertainty,full_text_fidelity,pending_review,,OCR存在错字、丢失声调和标点差异，页面图像为最终依据。
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,uncertainty,audio_content,confirmed_by_user,,Adam已确认12段音档正确；12个MP3均存在且可解码；本包不生成逐字转写，代理未进行语义听核。
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,uncertainty,dialogue_transcripts,pending_review,,听对话类内容只有题目和音频编号，未把题目反推为对话全文。
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,uncertainty,answers,not_provided_in_source,,扫描教材未提供完整答案，不生成标准答案。
+boya-intermediate-i-lesson-04,4,地球人的担忧,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json,uncertainty,translation,not_started,,来源批准前不进行翻译或教学重组。
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,source_qa,status,pending QA,,当前 PDF、OCR 页面、PDF 重新渲染页图、教材索引、QR 检测记录和文件级音频检查；页面版面已抽查并完成 16/16 页图字节核对。
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,verified_category,lesson_boundary,verified,,
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,verified_category,page_mapping,verified,,
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,verified_category,page_image_render_match,verified,,
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,verified_category,section_inventory_first_pass,verified,,
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,verified_category,vocabulary_inventory_first_pass,verified,,
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,verified_category,printed_exercise_inventory_first_pass,verified,,
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,verified_category,printed_reading_inventory_first_pass,verified,,
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,verified_category,audio_file_inventory,verified,,
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,verified_category,audio_duration,verified,,
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,verified_category,audio_sha256,verified,,
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,verified_category,audio_decode,verified,,
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,verified_category,qr_payload,verified,,
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,correction_applied,,applied,,没有把旧的 work/boya-intermediate/extractions/lesson-05.json 当作 canonical source。
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,correction_applied,,applied,,将旧 OCR 与页图复制到当前项目相对路径后，以当前 PDF 重新渲染确认 16/16 页图一致。
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,correction_applied,,applied,,Adam已确认12段音档正确；保留音频文件级验证与教材页面编号关系；本包不生成逐字转写，代理未进行语义听核。
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,correction_applied,,applied,,教材未提供的答案保留为 open、not_provided_in_source 或 audio_dependent。
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,unresolved_item,,unresolved,,OCR 逐字忠实度、拼音声调、标点、填空线和个别字词仍需人工复核。
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,unresolved_item,,unresolved,,Adam已确认12段音档正确；本包不生成逐字转写，代理未进行语义听核。
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,unresolved_item,,unresolved,,听力填空、判断题和选择题答案尚未确认；不生成标准答案。
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,unresolved_item,,unresolved,,开放题、拓展练习与阅读题只登记题干，不代表已完成教学设计。
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,unresolved_item,,unresolved,,等待 Adam 对来源内容的更正或批准。
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,file_check,pdf_pages,recorded,148,
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,file_check,review_pdf_pages,recorded,16,
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,file_check,ocr_pages_present,recorded,16/16,
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,file_check,page_images_present,recorded,16/16,
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,file_check,page_images_match_pdf_render,recorded,16/16,
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,file_check,audio_files_present,recorded,12/12,
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,file_check,audio_decode_pass,recorded,12/12,
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,file_check,audio_total_duration_seconds,recorded,1108.976254,
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,file_check,qr_payload_decoded,recorded,True,
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,answer_policy,answer_policy,recorded,,只记录教材印出的题干、示例、开放题和答案状态。教材未提供完整答案的题目不自行补写唯一答案。
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,uncertainty,full_text_fidelity,pending_review,,页面结构、标题、词语和主要题干已从页图建立快照；OCR 与逐字文字尚未完成最终人工校对。
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,uncertainty,audio_content,confirmed_by_user,,Adam已确认12段音档正确；12/12 文件存在、时长和 SHA-256 已核验、ffmpeg decode 通过；本包不生成逐字转写，代理未进行语义听核。
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,uncertainty,answers,pending_review,,教材未提供完整答案；来源包不补写唯一标准答案。
+boya-intermediate-i-lesson-05,5,音乐的魅力,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json,uncertainty,translation_and_teaching_design,not_started,,来源批准前不开始翻译、PBI 教学重组、教师手册、学生配套、storyboard、prototype 或 PPTX。
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,source_qa,status,pending QA,,当前项目PDF页图像、已验证OCR页面、教材资料索引和文件级音频检查；未进行语义听核。
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,verified_category,lesson_boundary,verified,,
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,verified_category,page_mapping,verified,,
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,verified_category,page_rendering,verified,,
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,verified_category,representative_layouts,verified,,
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,verified_category,vocabulary_first_pass,verified,,
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,verified_category,printed_section_inventory,verified,,
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,verified_category,printed_exercise_inventory,verified,,
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,verified_category,printed_reading_inventory,verified,,
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,verified_category,audio_file_inventory,verified,,
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,verified_category,audio_decode,verified,,
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,correction_applied,,applied,,以当前项目PDF重新渲染PDF页90–106；页面图像不使用旧lesson-06/pages输出。
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,correction_applied,,applied,,旧OCR逐页与当前PDF代表性页面核对后复制到新的ocr-lesson-06目录；OCR仍保留为审阅证据，不作为免复核的最终逐字稿。
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,correction_applied,,applied,,从页面图像建立63个section、54个课前词语、15个文化阅读词语、7个句式、40个印刷练习和4个阅读/内容文本记录。
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,correction_applied,,applied,,Adam已确认12段音档正确；本包只记录文件、时长、SHA-256、ffmpeg解码和印刷页标签，不生成逐字转写；代理未进行语义听核。
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,correction_applied,,applied,,开放题和教材未印答案的题目保持open或not_provided_in_source，不补写唯一答案。
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,unresolved_item,,unresolved,,逐字复核17页OCR与结构化正文，特别是拼音、标点、填空线和跨页文字。
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,unresolved_item,,unresolved,,第80页词语第25项印为“宿”、拼音印为“xiǔ”，词义和教材用法待人工确认。
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,unresolved_item,,unresolved,,Adam已确认12段音档正确；本包不生成逐字转写，代理未进行语义听核。
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,unresolved_item,,unresolved,,确认听力选择题、判断题、填空题及开放题答案政策；本包不生成标准答案。
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,unresolved_item,,unresolved,,第87页同时包含听说（一）拓展练习结尾和听说（二）开头，两个顶层section按印刷版面保留共享过渡页。
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,unresolved_item,,unresolved,,等待来源审阅批准；本包未进入PBI、教师手册、配套材料或PPTX生产。
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,file_check,pdf_pages,recorded,148,
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,file_check,review_pdf_pages,recorded,17,
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,file_check,ocr_pages_present,recorded,17,
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,file_check,page_images_present,recorded,17,
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,file_check,audio_files_present,recorded,12,
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,file_check,audio_decode_pass,recorded,12/12,
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,file_check,audio_total_duration_seconds,recorded,1182.748,
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,file_check,page_render_dpi,recorded,200,
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,file_check,qr_payload_decoded,recorded,not_rechecked_in_this_checkpoint,
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,answer_policy,answer_policy,recorded,,只记录教材印出的题干、示例、空格和答案状态。教材没有提供完整答案的听力题、判断题、选择题、开放题和句式练习不自行补写唯一答案。
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,uncertainty,ocr_text_fidelity,pending_review,,17份OCR已 materialize；页面图像优先，未宣称逐字无误。
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,uncertainty,vocabulary_item_25,visually_confirmed,,教材P80／PDF P91页面图已确认第25项印刷为“宿 xiǔ”；词项语义及是否为原书疑误仍待人工审核。
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,uncertainty,audio_content,confirmed_by_user,,Adam已确认12段音档正确；12个MP3存在、时长和ffmpeg解码已验证；本包不生成逐字转写，代理未进行语义听核。
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,uncertainty,answers,pending_review,,教材未提供完整答案；本包不编造唯一答案。
+boya-intermediate-i-lesson-06,6,挑战,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json,uncertainty,translation,not_started,,来源审阅阶段不制作越南文翻译。
+boya-intermediate-i-lesson-07,7,我的同事,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-07.json,source_qa,status,pending QA,,
+boya-intermediate-i-lesson-07,7,我的同事,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-07.json,answer_policy,answer_policy,recorded,,"{""status"":""no_answer_key_in_source_review"",""open_items"":""教材未提供的开放题、填空、判断、选择与听力题不补写标准答案；待教师审核或课堂听辨。"",""audio_policy"":""本阶段只验证文件存在、时长、SHA-256 与 ffmpeg 解码；未完成语义听辨，不把音频答案写入资料。""}"
+boya-intermediate-i-lesson-07,7,我的同事,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-07.json,uncertainty,,pending_review,,"OCR contains character, punctuation and pinyin errors; page images are the authority for later source approval."
+boya-intermediate-i-lesson-07,7,我的同事,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-07.json,uncertainty,,pending_review,,Page 116／教材P105已单独打开并检查页面图；全文逐字复核仍为pending_review。
+boya-intermediate-i-lesson-07,7,我的同事,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-07.json,uncertainty,,pending_review,,教材P105／PDF P116页面图已确认“小道儿消息”的拼音为xiǎodàor xiāoxi。
+boya-intermediate-i-lesson-07,7,我的同事,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-07.json,uncertainty,,pending_review,,第110页读后回答第3题印刷为“谦辞”，但上下文主题为“敬辞”；保留原题，待教师决定是否为教材印刷问题。
+boya-intermediate-i-lesson-07,7,我的同事,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-07.json,uncertainty,,pending_review,,听力内容、填空答案、判断答案与选择答案尚未完成语义听辨。
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,source_qa,status,pending,,PDF页面图像、OCR、教材索引和文件级音频检查
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,verified_category,lesson_boundary,verified,,
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,verified_category,page_mapping,verified,,
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,verified_category,section_inventory,verified,,
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,verified_category,vocabulary_first_pass,verified,,
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,verified_category,printed_exercise_inventory,verified,,
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,verified_category,audio_file_inventory,verified,,
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,verified_category,audio_decode,verified,,
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,unresolved_item,,unresolved,,词语、拼音、标点和阅读文本需逐页以页面图像复核
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,unresolved_item,,unresolved,,Adam已确认11段音档正确；本包不生成逐字转写，代理未进行语义听核
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,unresolved_item,,unresolved,,教材未提供完整答案，开放题不生成唯一答案
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,unresolved_item,,unresolved,,等待Adam来源批准
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,file_check,pdf_pages,recorded,148,
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,file_check,review_pdf_pages,recorded,16,
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,file_check,ocr_pages_present,recorded,16,
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,file_check,page_images_present,recorded,16,
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,file_check,audio_files_present,recorded,11,
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,file_check,audio_decode_pass,recorded,11/11,
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,file_check,audio_total_duration_seconds,recorded,1272.528941,
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,file_check,qr_payload_decoded,recorded,True,
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,answer_policy,answer_policy,recorded,,只记录教材印出的题干、阅读内容和答案状态；教材未提供的答案不自行补写唯一标准答案。
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,uncertainty,full_text_fidelity,confirmed_by_user,,OCR存在错字、丢失声调和标点差异，页面图像为最终依据。
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,uncertainty,audio_content,pending_review,,Adam已确认11段音档正确；11个MP3均存在且可解码；本包不生成逐字转写，代理未进行语义听核。
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,uncertainty,dialogue_transcripts,pending_review,,听对话类内容只有题目和音频编号，未把题目反推为对话全文。
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,uncertainty,answers,not_provided_in_source,,扫描教材未提供完整答案，不生成标准答案。
+boya-intermediate-i-lesson-08,8,学汉语的苦恼,textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json,uncertainty,translation,not_started,,来源批准前不进行翻译或教学重组。

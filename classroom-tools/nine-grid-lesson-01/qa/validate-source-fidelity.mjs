@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 
 const pack = JSON.parse(readFileSync(new URL("../public/content/class-content.json", import.meta.url), "utf8"));
-const source = JSON.parse(readFileSync(new URL("../../../work/boya-intermediate/extractions/structured-lesson-01.json", import.meta.url), "utf8"));
+const source = JSON.parse(readFileSync(new URL("../../../textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json", import.meta.url), "utf8"));
 const errors = [];
 
 const fail = (condition, message) => {

@@ -30,7 +30,7 @@
 
 目前两个内容包共有 28 个具体情境：P1–P2 包 12 个，全课包 16 个。全部题目只练姓名、起名、姓氏或称呼；学生以前学过的语言只用来提问、回答和说清楚，不另外复习购物、交通、天气或工作等旧课主题。每题都加入三个可临场公布的新情况。右侧成长区使用完全离线的真实巴哥犬图片；全班说完后，树与巴哥才会成长。
 
-旧语言范围依据保存在 `reference/prior-boya-i-ii-language-baseline.csv`；第一课的新内容以 `work/boya-intermediate/extractions/structured-lesson-01.json` 为准。详细边界见 `reference/README.md` 与 `docs/lesson-01-source-map.md`。
+旧语言范围依据保存在 `reference/prior-boya-i-ii-language-baseline.csv`；第一课的新内容以 `textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json` 为准。详细边界见 `reference/README.md` 与 `docs/lesson-01-source-map.md`。
 
 未来课程不复制引擎。依照 `docs/CONTENT_PACK_SCHEMA.md` 新增一个内容文件，再在 `index.html` 的 `app.js` 前加入本地脚本即可。
 

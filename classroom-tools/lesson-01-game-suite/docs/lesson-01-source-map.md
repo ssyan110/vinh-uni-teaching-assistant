@@ -2,7 +2,7 @@
 
 來源權威：
 
-`work/boya-intermediate/extractions/structured-lesson-01.json`
+`textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json`
 
 ## 早期包
 

@@ -9,7 +9,7 @@ const projectRoot = path.resolve(__dirname, '..');
 const projectConfig = JSON.parse(fs.readFileSync(path.join(projectRoot, 'project.config.json'), 'utf8'));
 const outputDir = process.env.BOYA_CULTURE_DRAFT_DIR
   ? path.resolve(process.env.BOYA_CULTURE_DRAFT_DIR)
-  : path.join(projectRoot, 'lessons/lesson-01/10-design/pptx-draft/social-appellation-supplement-v1');
+  : path.join(projectRoot, 'lessons/boya-intermediate-i/lesson-01/10-design/pptx-draft/social-appellation-supplement-v1');
 const pptxPath = path.join(outputDir, '第一课-文化补充-姓名与称呼-draft.pptx');
 const outlinePath = path.join(outputDir, '第一课-文化补充-姓名与称呼-outline.md');
 const storyboardPath = path.join(outputDir, '第一课-文化补充-姓名与称呼-storyboard.csv');

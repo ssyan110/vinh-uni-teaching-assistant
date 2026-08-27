@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "textbook_id": "boya-intermediate-i",
+  "title": "《博雅汉语听说：中级冲刺篇 I》",
+  "lesson_count": 8,
+  "status": "planned_for_third_year",
+  "intended_stage": "third_year",
+  "source_root": "textbooks/boya-intermediate-i/source",
+  "main_pdf": "textbooks/boya-intermediate-i/source/raw/博雅汉语听说-中级冲刺篇I.pdf",
+  "source_index": "textbooks/boya-intermediate-i/source/source-index.md",
+  "source_inventory": "textbooks/boya-intermediate-i/source/source-inventory.json",
+  "reference_dataset": "textbooks/boya-intermediate-i/source/reference-dataset",
+  "qr_capture_root": "textbooks/boya-intermediate-i/source/qr/captures",
+  "qr_detection_root": "textbooks/boya-intermediate-i/source/qr/detection",
+  "audio_root": "textbooks/boya-intermediate-i/source/audio",
+  "lesson_root": "lessons/boya-intermediate-i"
+}

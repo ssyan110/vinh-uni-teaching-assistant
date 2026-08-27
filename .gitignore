@@ -29,7 +29,7 @@ test-results/
 /.playwright-cli/
 
 # GitHub file-size limit; extracted approval evidence remains in the archive
-lessons/lesson-01/90-archive/approval-evidence-2026-08-27/social-appellation-supplement-v11/第一课-主任审核包-含文化补充-v11-final.zip
+lessons/boya-intermediate-i/lesson-01/90-archive/approval-evidence-2026-08-27/social-appellation-supplement-v11/第一课-主任审核包-含文化补充-v11-final.zip
 
 # Legacy agent directory
 .agent/
@@ -49,3 +49,10 @@ work/
 Giáo trình/
 Giáo trình/
 Giáo trình full/
+
+# Standardized textbook source locations. Metadata, QR captures, and provenance
+# stay tracked; publisher PDFs and downloaded audio remain local-only inputs.
+/textbooks/*/source/raw/
+/textbooks/*/source/audio/**/*.mp3
+/textbooks/*/source/audio/**/*.part
+/textbooks/*/source/derived/

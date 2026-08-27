@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the Lesson 1 student performance rubric draft.
 
-The draft is written only under lessons/lesson-01/10-design/support-draft.
+The draft is written only under lessons/boya-intermediate-i/lesson-01/10-design/support-draft.
 It uses the four 0–3 dimensions already defined in the approved teacher guide
 and does not change the authority or release package.
 """
@@ -14,7 +14,7 @@ from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_ROOT = PROJECT_ROOT / "lessons" / "lesson-01" / "10-design" / "support-draft"
+OUTPUT_ROOT = PROJECT_ROOT / "lessons" / "boya-intermediate-i" / "lesson-01" / "10-design" / "support-draft"
 os.environ["BOYA_LESSON_DRAFT_ROOT"] = str(OUTPUT_ROOT)
 sys.path.insert(0, str(PROJECT_ROOT / "scripts"))
 

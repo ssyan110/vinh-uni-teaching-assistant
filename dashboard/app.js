@@ -94,6 +94,7 @@
   }
 
   function renderCourse() {
+    const course = data.course || {};
     const summary = data.summary || {};
     const focus = lessonMap.get(summary.focus_lesson_id) || lessons[0];
     const totalGates = Number(summary.total_gates) || 0;
@@ -105,7 +106,7 @@
         <div>
           <p class="eyebrow">COURSE OVERVIEW</p>
           <h2>${text(data.course && data.course.title, '教材制作控制台')}</h2>
-          <p class="muted">这里只看整套八课的状态。点击一课后，才进入该课的生产 Gate、文件与 QA 工作区。</p>
+          <p class="muted">这里只看当前教材 ${course.lesson_count} 课的状态。点击一课后，才进入该课的生产 Gate、文件与 QA 工作区。</p>
         </div>
         <div class="hero-side">
           ${statusChip(focus && focus.status, focus && focus.status_label)}
@@ -133,7 +134,7 @@
       <section class="course-grid">
         <article class="card lesson-board">
           <div class="section-head">
-            <div><p class="eyebrow">LESSON BOARD</p><h3>八课进度</h3></div>
+            <div><p class="eyebrow">LESSON BOARD</p><h3>${course.lesson_count} 课进度</h3></div>
             <span class="section-note">只显示摘要</span>
           </div>
           <div class="lesson-list" role="list">

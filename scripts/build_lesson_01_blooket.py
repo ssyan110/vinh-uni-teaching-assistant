@@ -21,10 +21,10 @@ from typing import Any
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-CANONICAL_SOURCE = PROJECT_ROOT / "work/boya-intermediate/extractions/structured-lesson-01.json"
+CANONICAL_SOURCE = PROJECT_ROOT / "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json"
 DEFAULT_OUTPUT = (
     PROJECT_ROOT
-    / "lessons/lesson-01/10-design/support-draft/blooket/lesson-01"
+    / "lessons/boya-intermediate-i/lesson-01/10-design/support-draft/blooket/lesson-01"
 )
 CSV_HEADER = [
     "Question #",
@@ -303,7 +303,7 @@ def write_outputs(
         "lesson_id": source["lesson_id"],
         "lesson_title": source["lesson_title"],
         "source": {
-            "path": "work/boya-intermediate/extractions/structured-lesson-01.json",
+            "path": "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json",
             "sha256": source_hash,
             "source_review_status": source.get("review_status"),
             "answer_policy": source.get("answer_policy"),
@@ -322,7 +322,7 @@ def write_outputs(
         "generated_on": generated_on,
         "generator": "scripts/build_lesson_01_blooket.py",
         "random_seed": RANDOM_SEED,
-        "source_path": "work/boya-intermediate/extractions/structured-lesson-01.json",
+        "source_path": "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json",
         "source_sha256": source_hash,
         "vocabulary_count": len(source["vocabulary"]),
         "question_count": len(all_items),
@@ -350,7 +350,7 @@ def write_outputs(
 ## 范围
 
 - 课次：第一课《中国人的姓名》
-- 来源：`work/boya-intermediate/extractions/structured-lesson-01.json`
+- 来源：`textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json`
 - 词语数：{len(source['vocabulary'])}
 - 题目数：{len(all_items)}（每种题型 34 题）
 - 题型：汉字选意思、汉字选拼音、拼音选汉字

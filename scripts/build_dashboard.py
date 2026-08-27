@@ -15,9 +15,9 @@ from production_gate import check as check_production_gate
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((PROJECT_ROOT / "project.config.json").read_text(encoding="utf-8"))
 LESSON_COUNT = int(CONFIG.get("lesson_count", 8))
-LESSON_ROOT = PROJECT_ROOT / "lessons"
+LESSON_ROOT = PROJECT_ROOT / CONFIG.get("lesson_collection_root", "lessons")
 CATALOG_PATH = PROJECT_ROOT / CONFIG.get(
-    "lesson_catalog", "Giáo trình/博雅汉语听说-中级冲刺篇/教材资料索引.md"
+    "lesson_catalog", "textbooks/boya-intermediate-i/source/source-index.md"
 )
 DASHBOARD_ROOT = PROJECT_ROOT / CONFIG["dashboard_root"]
 OUTPUT_PATH = DASHBOARD_ROOT / "manifest.js"
@@ -49,10 +49,29 @@ def project_relative(path: Path) -> str:
 
 
 def parse_lesson_catalog() -> dict[int, dict[str, Any]]:
-    """Read lesson titles and page/audio counts from the canonical source index."""
+    """Read lesson titles and page/audio counts from JSON or legacy Markdown."""
 
     if not CATALOG_PATH.is_file():
         return {}
+
+    if CATALOG_PATH.suffix.lower() == ".json":
+        payload = read_json(CATALOG_PATH) or {}
+        catalog: dict[int, dict[str, Any]] = {}
+        for lesson in payload.get("lessons", []):
+            number = int(lesson["lesson_number"])
+            printed_start = lesson.get("printed_page_start")
+            printed_end = lesson.get("printed_page_end_estimate")
+            catalog[number] = {
+                "title": lesson.get("title") or f"第 {number} 课",
+                "printed_pages": (
+                    f"{printed_start}–{printed_end}"
+                    if printed_start is not None and printed_end is not None
+                    else None
+                ),
+                "pdf_pages": str(lesson.get("pdf_page")) if lesson.get("pdf_page") else None,
+                "audio_count": len(lesson.get("audio", [])),
+            }
+        return catalog
 
     catalog: dict[int, dict[str, Any]] = {}
     row_pattern = re.compile(
@@ -244,7 +263,7 @@ def build_gates(
         "teacher_guide": evidence_items(
             [
                 (teacher_manual.get("path"), "教师手册"),
-                ("course/teacher-manual.md", "整学期主手册"),
+                ("course/offerings/2026-fall/legacy/boya-intermediate-i/teacher-manual.md", "整学期主手册"),
             ]
         ),
         "support_materials": evidence_items(
@@ -552,9 +571,14 @@ def build() -> Path:
     }
 
     course_documents = [
-        ("整学期教师手册", "course/teacher-manual.md"),
-        ("整学期课程总览", "course/semester-overview.md"),
-        ("教材资料索引", project_relative(CATALOG_PATH) if CATALOG_PATH.exists() else None),
+        ("课程清单", CONFIG.get("course_manifest")),
+        (
+            "当前开课实例",
+            f"course/offerings/{CONFIG.get('active_context', {}).get('offering_id')}/offering.json",
+        ),
+        ("教材清单", CONFIG.get("textbook_registry")),
+        ("当前教材", CONFIG.get("textbook", {}).get("manifest")),
+        ("教材来源索引", project_relative(CATALOG_PATH) if CATALOG_PATH.exists() else None),
     ]
     documents = [
         {"label": label, "path": path}
@@ -566,12 +590,15 @@ def build() -> Path:
         "manifest_type": "course-dashboard",
         "generated_at": date.today().isoformat(),
         "generated_from": {
-            "authority_manifests": "lessons/lesson-XX/20-approved/lesson-manifest.json",
+            "authority_manifests": f"{project_relative(LESSON_ROOT)}/lesson-XX/20-approved/lesson-manifest.json",
             "lesson_catalog": project_relative(CATALOG_PATH) if CATALOG_PATH.exists() else None,
         },
         "course": {
             "id": CONFIG["course_id"],
-            "title": CONFIG.get("course_title", "《博雅汉语听说：中级冲刺篇 I》"),
+            "title": CONFIG.get("course_title", "榮市大學華語聽說課程"),
+            "offering_id": CONFIG.get("active_context", {}).get("offering_id"),
+            "textbook_id": CONFIG.get("active_context", {}).get("textbook_id"),
+            "textbook_title": CONFIG.get("active_textbook_title"),
             "lesson_count": LESSON_COUNT,
             "documents": documents,
         },

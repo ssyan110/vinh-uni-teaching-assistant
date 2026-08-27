@@ -9,8 +9,8 @@ if (process.env.BOYA_ALLOW_LEGACY_REVIEW !== '1') {
 }
 
 const projectRoot = path.resolve(__dirname, '../..');
-const sourceRelative = 'work/boya-intermediate/extractions/structured-lesson-01.json';
-const pdfRelative = 'Giáo trình/博雅汉语听说-中级冲刺篇/博雅汉语听说-中级冲刺篇I.pdf';
+const sourceRelative = 'textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json';
+const pdfRelative = 'textbooks/boya-intermediate-i/source/raw/博雅汉语听说-中级冲刺篇I.pdf';
 const outputRelative = 'archive/legacy-rebuilds/boya-intermediate/lesson-01/source-review';
 const sourcePath = path.join(projectRoot, sourceRelative);
 const outputDir = path.join(projectRoot, outputRelative);
@@ -197,7 +197,7 @@ function renderExercises() {
 function renderAudio() {
   return source.audio_map.map((item) => {
     const file = `${item.track_label}.mp3`;
-    const relativeAudio = `Giáo trình/博雅汉语听说-中级冲刺篇/音频/第01课/${file}`;
+    const relativeAudio = `textbooks/boya-intermediate-i/source/audio/lesson-01/${file}`;
     return `<tr>
       <td><strong>${escapeHtml(item.track_label)}</strong></td>
       <td>${escapeHtml(item.related_section)}</td>
@@ -230,7 +230,7 @@ function inventoryCsv() {
   return `${lines.join('\n')}\n`;
 }
 
-const lessonAudioRoot = 'Giáo trình/博雅汉语听说-中级冲刺篇/音频/第01课';
+const lessonAudioRoot = 'textbooks/boya-intermediate-i/source/audio/lesson-01';
 const audioFiles = source.audio_map.map((item) => `${lessonAudioRoot}/${item.track_label}.mp3`);
 const manifest = {
   package: 'lesson-01-source-review',

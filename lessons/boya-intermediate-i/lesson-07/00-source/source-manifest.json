@@ -1,0 +1,12 @@
+{
+  "lesson_id":"boya-intermediate-i-lesson-07",
+  "lesson_number":7,
+  "lesson_title":"我的同事",
+  "source_status":"pending_review",
+  "source_qa_status":"pending",
+  "review_status":"awaiting_adam_review",
+  "canonical_source":{"path":"textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-07.json","sha256":"fce6e6dc8f0b2d6feb696e762ff28880b0447e07d977783de5822c889699c01f","status":"source_review_snapshot","note":"已建立第7课结构化来源快照；逐字忠实度、教材疑误和Adam批准仍待完成；音档由Adam确认，代理未进行语义听核且不生成转写。"},
+  "source":{"pdf":"textbooks/boya-intermediate-i/source/raw/博雅汉语听说-中级冲刺篇I.pdf","pdf_sha256":"c7aa70b16496aecc7d9979bc2744dbe22701650511e48e2433ed19d439d70ad9","textbook_printed_page_range":[96,110],"source_pdf_page_range":[107,121],"audio_directory":"textbooks/boya-intermediate-i/source/audio/lesson-07","qr_image":"textbooks/boya-intermediate-i/source/qr/captures/lesson-07.png","source_index":"textbooks/boya-intermediate-i/source/source-index.md"},
+  "review_evidence":{"markdown":"lessons/boya-intermediate-i/lesson-07/00-source/source-review.md","structured_source":"textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-07.json","structured_source_sha256":"fce6e6dc8f0b2d6feb696e762ff28880b0447e07d977783de5822c889699c01f","page_images":"textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-07/","ocr_pages":"textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-07/","ocr_manifest":"textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-07/manifest.json","source_qa_summary":"15页、37个区段、51个词语、6个句式、96项练习、4笔内容／阅读记录、10段音频；source_qa仍为pending。"},
+  "pending_items":["逐页校正OCR文字、拼音、标点和阅读内容","第110页第3题“谦辞”与上下文“敬辞”疑似教材印刷问题，待教师决定","Adam已确认10段音档正确；本包不生成逐字转写，代理未进行语义听核","等待Adam来源更正或批准"]
+}

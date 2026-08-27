@@ -37,7 +37,7 @@ class ProductionWorkflowTests(unittest.TestCase):
     def test_authority_inventory_rejects_unregistered_files(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
-            authority = root / "lessons/lesson-01/20-approved"
+            authority = root / "lessons/boya-intermediate-i/lesson-01/20-approved"
             activity = authority / "activities/card.docx"
             activity.parent.mkdir(parents=True)
             activity.write_bytes(b"approved")
@@ -278,8 +278,8 @@ class ProductionWorkflowTests(unittest.TestCase):
     def test_release_build_is_manifest_driven_and_non_overwriting(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
-            authority = root / "lessons/lesson-01/20-approved"
-            release_root = root / "lessons/lesson-01/40-release"
+            authority = root / "lessons/boya-intermediate-i/lesson-01/20-approved"
+            release_root = root / "lessons/boya-intermediate-i/lesson-01/40-release"
             pptx = authority / "pptx/deck.pptx"
             preview = authority / "pptx/deck.pdf"
             manual = authority / "teacher-manual/manual.docx"

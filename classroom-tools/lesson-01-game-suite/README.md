@@ -35,7 +35,7 @@
 
 ## 內容與來源
 
-內容包使用第一課 canonical source 的 `record_id` 追蹤教材依據；內容檢查位於 `qa/validate-content.mjs`。這個工具屬於 `classroom-tools/`，不會覆蓋 `lessons/lesson-01/20-approved/`，也不會取代第一課 PPTX、教師手冊或活動卡。
+內容包使用第一課 canonical source 的 `record_id` 追蹤教材依據；內容檢查位於 `qa/validate-content.mjs`。這個工具屬於 `classroom-tools/`，不會覆蓋 `lessons/boya-intermediate-i/lesson-01/20-approved/`，也不會取代第一課 PPTX、教師手冊或活動卡。
 
 ## 開發檢查
 

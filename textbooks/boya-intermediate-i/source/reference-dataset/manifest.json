@@ -1,0 +1,97 @@
+{
+  "dataset_name": "博雅汉语听说·中级冲刺篇 I 本學期參考資料集",
+  "dataset_version": "1.0.0",
+  "created_date": "2026-08-27",
+  "source_files": [
+    "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json",
+    "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json",
+    "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json",
+    "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json",
+    "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json",
+    "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json",
+    "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-07.json",
+    "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json"
+  ],
+  "sheet_row_counts": {
+    "README": 13,
+    "Lessons": 8,
+    "Vocabulary": 394,
+    "Grammar": 52,
+    "Texts": 33,
+    "Exercises": 357,
+    "Audio": 91,
+    "Sections": 380,
+    "Glossary": 35,
+    "Source_QA": 211,
+    "Vocabulary_Master": 394,
+    "Grammar_Master": 52,
+    "Proposed_Fields": 16,
+    "Field_Guide": 226
+  },
+  "files": {
+    "博雅汉语听说-中级冲刺篇I-本学期参考资料集-v1.0.0.xlsx": {
+      "sha256": "ebf0309c4fbc94a2077f9d1ff8c336a3c25d900ad689799f3ce6fbb2431c15c9",
+      "bytes": 271819
+    },
+    "README.md": {
+      "sha256": "c2858c3da83501e70306b8c9f92a6c1941ace88b27a0e1b2a0fed6d01776efa3",
+      "bytes": 2380
+    },
+    "csv/audio.csv": {
+      "sha256": "74f1838809cf4c99ab0cc1943e2bf1fc511bfe0c01c6c93beaf08aac64032800",
+      "bytes": 38094
+    },
+    "csv/exercises.csv": {
+      "sha256": "d5493098636d456a0e29809cf14e01a0e3e308850776ff72f56313b283c873b8",
+      "bytes": 142147
+    },
+    "csv/field_guide.csv": {
+      "sha256": "e2b50844bd2d5bab6854754e094109b9c66f69bb72eafeffdf477096c0970fd9",
+      "bytes": 34917
+    },
+    "csv/glossary.csv": {
+      "sha256": "0a9c37327ba32488eb03e9c625d268a088d1b49e72c91ff9bc440369c078dad8",
+      "bytes": 9687
+    },
+    "csv/grammar.csv": {
+      "sha256": "f39d446acd15dd77f44c77ec0d5b84a090f96ff45a55b5696f9fb20c7cd20bb5",
+      "bytes": 28722
+    },
+    "csv/grammar_master.csv": {
+      "sha256": "3418c8f942615b60ee98a0a5b12a7a8a8edd9467370957c2c18d1bcc53a745f5",
+      "bytes": 6383
+    },
+    "csv/lessons.csv": {
+      "sha256": "2c93272dc38dccb94a34d7cd37ceccdf618f476ebf287dcc8d9143ed99105f23",
+      "bytes": 5857
+    },
+    "csv/proposed_fields.csv": {
+      "sha256": "6632bf97168ae1331d756b50a4e287daa1d5f8f6496241695e0fe06be6eafce3",
+      "bytes": 2655
+    },
+    "csv/readme.csv": {
+      "sha256": "24b0e99b6646e3a47d1c693350608b46b3d8e491573d34b7cbf9cee1be5d5fc0",
+      "bytes": 830
+    },
+    "csv/sections.csv": {
+      "sha256": "23d3257a7c534bd1ce3497fa85809ddc075deed08c36be0d3e2cd7b20cd45172",
+      "bytes": 98078
+    },
+    "csv/source_qa.csv": {
+      "sha256": "2c7c4a09f7999487a2b05940e1f4baf636ab7b99de07f07ccab9bf38cf0ef356",
+      "bytes": 45635
+    },
+    "csv/texts.csv": {
+      "sha256": "6d64608809d2a7f491104c2ff15c8ccd6c9f0cf26e95f38ae44c636dc106c0bf",
+      "bytes": 28642
+    },
+    "csv/vocabulary.csv": {
+      "sha256": "28281f92fe0fb1d55ad74f207935485bbbf3d981ef171beafbe59303ed38d1ea",
+      "bytes": 113254
+    },
+    "csv/vocabulary_master.csv": {
+      "sha256": "8a0e26988dda41486605ceaccedc0b349924e474950c2955fdb8e54b4173d2c6",
+      "bytes": 35022
+    }
+  }
+}

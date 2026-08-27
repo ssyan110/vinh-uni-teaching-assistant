@@ -11,7 +11,7 @@ const lessonRoot = path.join(projectRoot, projectConfig.lesson_root);
 const sourcePath = path.join(projectRoot, projectConfig.canonical_source);
 const assetDir = path.join(lessonRoot, '10-design/visual-prototype/assets');
 const contactSheetPath = path.join(lessonRoot, '10-design/visual-storyboard/assets/lesson-01-textbook-contact-sheet-4x4.png');
-const audioRoot = path.join(projectRoot, 'Giáo trình/博雅汉语听说-中级冲刺篇/音频/第01课');
+const audioRoot = path.join(projectRoot, 'textbooks/boya-intermediate-i/source/audio/lesson-01');
 // Never write the generated deck to 20-approved. Manual PowerPoint edits are
 // protected there and become authority only after explicit approval.
 const outputDir = process.env.BOYA_PPTX_DRAFT_DIR || path.join(lessonRoot, '10-design/pptx-draft');
@@ -1196,7 +1196,7 @@ function buildManifest(source, exerciseSlideMap, audioState) {
     visible_generic_three_step_pages: 0,
     listening_flow: ['听', '写关键词', '回答'],
     visual_style: '教材式编辑视觉：暖米色、薄荷绿、紫色重点、留白、纸张式图片框与多样版式；连续题组合并，装饰图形限制在投影片画布内',
-    source_of_truth: 'lessons/lesson-01/20-approved/teacher-manual/第一课简易教案.docx',
+    source_of_truth: 'lessons/boya-intermediate-i/lesson-01/20-approved/teacher-manual/第一课简易教案.docx',
     input_lock: {
       canonical_source_sha256: sha256(sourcePath),
       teacher_manual_sha256: sha256(teacherManualPath),

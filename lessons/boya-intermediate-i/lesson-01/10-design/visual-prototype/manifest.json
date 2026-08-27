@@ -1,0 +1,87 @@
+{
+  "package": "lesson-01-visual-prototype",
+  "generated_at": "2026-08-20T08:36:33.732Z",
+  "status": "approved_by_adam_2026-08-20",
+  "approved_at": "2026-08-20",
+  "format": "native-pptx-only",
+  "html_required": false,
+  "slide_count": 6,
+  "source_contact_sheet": "lessons/boya-intermediate-i/lesson-01/10-design/visual-storyboard/assets/lesson-01-textbook-contact-sheet-4x4.png",
+  "source_contact_sheet_status": "approved_by_adam_2026-08-20",
+  "native_powerpoint_check": "opened_and_checked_on_macos_2026-08-20",
+  "visual_style": "educational textbook line-art; thin grey-blue outlines; muted pastel fills; pale background; natural human proportions",
+  "student_language_policy": "简体中文；学生画面只呈现当前动作",
+  "visible_teacher_notes": false,
+  "slides": [
+    {
+      "number": 1,
+      "title": "你的名字有什么意思？",
+      "role": "开场",
+      "image_cells": [
+        1
+      ]
+    },
+    {
+      "number": 2,
+      "title": "学完这课后，我能……",
+      "role": "学习表现",
+      "image_cells": [
+        5,
+        13,
+        16
+      ]
+    },
+    {
+      "number": 3,
+      "title": "第一部分｜先认识自己的名字",
+      "role": "section divider",
+      "image_cells": [
+        4
+      ]
+    },
+    {
+      "number": 4,
+      "title": "先听大意",
+      "role": "听力操作",
+      "image_cells": [
+        5
+      ]
+    },
+    {
+      "number": 5,
+      "title": "起名儿公司",
+      "role": "任务操作",
+      "image_cells": [
+        13
+      ]
+    },
+    {
+      "number": 6,
+      "title": "交换资料，讲给同伴听",
+      "role": "资料交换与表达",
+      "image_cells": [
+        15,
+        16
+      ]
+    }
+  ],
+  "assets": [
+    "textbook-cell-01.png",
+    "textbook-cell-02.png",
+    "textbook-cell-03.png",
+    "textbook-cell-04.png",
+    "textbook-cell-05.png",
+    "textbook-cell-06.png",
+    "textbook-cell-07.png",
+    "textbook-cell-08.png",
+    "textbook-cell-09.png",
+    "textbook-cell-10.png",
+    "textbook-cell-11.png",
+    "textbook-cell-12.png",
+    "textbook-cell-13.png",
+    "textbook-cell-14.png",
+    "textbook-cell-15.png",
+    "textbook-cell-16.png"
+  ],
+  "pptx_sha256": "6e6f2ac5a2f49e296896ff6aac7223453e728a763bfffefee347b0696a53802f"
+}

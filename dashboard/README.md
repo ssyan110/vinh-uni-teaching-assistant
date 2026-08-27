@@ -2,17 +2,17 @@
 
 `dashboard/index.html` 是课程总览入口。它使用三层视图：
 
-1. 课程总览：八课摘要、当前下一步与锁定状态。
+1. 课程总览：当前教材的课次摘要、当前下一步与锁定状态。
 2. 单课工作区：只展开一课的概览、Gate、文件与 QA。
 3. Gate 详情：查看单个 Gate 的证据文件。
 
-课次、文件和交付链接来自各课的：
+课次根目录、课数与来源清单由 `project.config.json` 的 active context 决定。课次、文件和交付链接来自：
 
-`lessons/lesson-XX/20-approved/lesson-manifest.json`
+`lessons/<textbook_id>/lesson-XX/20-approved/lesson-manifest.json`
 
 尚未建立 authority manifest 的课次，其名称、教材页码与音频数量来自：
 
-`Giáo trình/博雅汉语听说-中级冲刺篇/教材资料索引.md`
+`textbooks/<textbook_id>/source/source-inventory.json`
 
 更新权威 manifest 后运行：
 

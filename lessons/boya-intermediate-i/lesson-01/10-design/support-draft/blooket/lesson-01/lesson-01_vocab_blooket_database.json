@@ -1,0 +1,3123 @@
+{
+  "schema_version": "blooket-database-0.2.0",
+  "status": "draft_for_review",
+  "lesson_id": "boya-intermediate-i-lesson-01",
+  "lesson_title": "中国人的姓名",
+  "source": {
+    "path": "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json",
+    "sha256": "0e7c9ced06b7c6e80278b07f3721788de88494b495618705618f6f47f56ab84e",
+    "source_review_status": "verified",
+    "answer_policy": "只记录教材明确印出的答案；本课扫描页未提供练习答案，不自行补写。"
+  },
+  "meaning_source": {
+    "name": "CC-CEDICT",
+    "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+    "checked_on": "2026-08-25",
+    "status": "external_draft_for_review",
+    "language": "vi",
+    "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+  },
+  "vocabulary_count": 34,
+  "question_count": 102,
+  "question_families": {
+    "character_to_meaning": 34,
+    "character_to_pinyin": 34,
+    "pinyin_to_character": 34
+  },
+  "items": [
+    {
+      "id": "B01-V01-001-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-001",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“起名儿”是什么意思？",
+      "answers": [
+        "chịu khổ",
+        "cậu nhóc",
+        "đặt tên",
+        "cùng làm, không hẹn"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "起名儿",
+      "source_pinyin": "qǐ míngr",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 1,
+      "source_meaning": "đặt tên",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-001-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-001",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“起名儿”的拼音是什么？",
+      "answers": [
+        "qǐ míngr",
+        "tíxiào-jiēfēi",
+        "shǎojiàn",
+        "zāo"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "起名儿",
+      "source_pinyin": "qǐ míngr",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 1
+    },
+    {
+      "id": "B01-V01-001-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-001",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“qǐ míngr”对应哪个词语？",
+      "answers": [
+        "起名儿",
+        "头等大事",
+        "交往",
+        "愣"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "起名儿",
+      "source_pinyin": "qǐ míngr",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 1
+    },
+    {
+      "id": "B01-V01-002-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-002",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“警告”是什么意思？",
+      "answers": [
+        "tò mò",
+        "hiếm gặp",
+        "cảnh báo",
+        "chịu khổ"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "警告",
+      "source_pinyin": "jǐnggào",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 2,
+      "source_meaning": "cảnh báo",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-002-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-002",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“警告”的拼音是什么？",
+      "answers": [
+        "piānpiān",
+        "yóuxì",
+        "yuàn",
+        "jǐnggào"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "警告",
+      "source_pinyin": "jǐnggào",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 2
+    },
+    {
+      "id": "B01-V01-002-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-002",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“jǐnggào”对应哪个词语？",
+      "answers": [
+        "头等大事",
+        "警告",
+        "操心",
+        "困惑不解"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "警告",
+      "source_pinyin": "jǐnggào",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 2
+    },
+    {
+      "id": "B01-V01-003-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-003",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“愣”是什么意思？",
+      "answers": [
+        "đặt tên",
+        "phát âm",
+        "cậu nhóc",
+        "ngẩn người"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "愣",
+      "source_pinyin": "lèng",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 3,
+      "source_meaning": "ngẩn người",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-003-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-003",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“愣”的拼音是什么？",
+      "answers": [
+        "tíxiào-jiēfēi",
+        "chīkǔ",
+        "zuómo",
+        "lèng"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "愣",
+      "source_pinyin": "lèng",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 3
+    },
+    {
+      "id": "B01-V01-003-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-003",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“lèng”对应哪个词语？",
+      "answers": [
+        "从小",
+        "交往",
+        "别扭",
+        "愣"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "愣",
+      "source_pinyin": "lèng",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 3
+    },
+    {
+      "id": "B01-V01-004-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-004",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“惊讶”是什么意思？",
+      "answers": [
+        "vậy mà",
+        "suy nghĩ kỹ",
+        "ngạc nhiên",
+        "từ nhỏ"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "惊讶",
+      "source_pinyin": "jīngyà",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 4,
+      "source_meaning": "ngạc nhiên",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-004-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-004",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“惊讶”的拼音是什么？",
+      "answers": [
+        "hàoqí",
+        "jīngyà",
+        "yóuxì",
+        "jūrán"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "惊讶",
+      "source_pinyin": "jīngyà",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 4
+    },
+    {
+      "id": "B01-V01-004-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-004",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“jīngyà”对应哪个词语？",
+      "answers": [
+        "警告",
+        "偏偏",
+        "居然",
+        "惊讶"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "惊讶",
+      "source_pinyin": "jīngyà",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 4
+    },
+    {
+      "id": "B01-V01-005-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-005",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“从小”是什么意思？",
+      "answers": [
+        "không khỏi",
+        "gượng gạo",
+        "từ nhỏ",
+        "khác biệt"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "从小",
+      "source_pinyin": "cóngxiǎo",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 5,
+      "source_meaning": "từ nhỏ",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-005-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-005",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“从小”的拼音是什么？",
+      "answers": [
+        "mòmíngqímiào",
+        "chīkǔ",
+        "cóngxiǎo",
+        "jǐnggào"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "从小",
+      "source_pinyin": "cóngxiǎo",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 5
+    },
+    {
+      "id": "B01-V01-005-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-005",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“cóngxiǎo”对应哪个词语？",
+      "answers": [
+        "惊讶",
+        "警告",
+        "从小",
+        "偏偏"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "从小",
+      "source_pinyin": "cóngxiǎo",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 5
+    },
+    {
+      "id": "B01-V01-006-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-006",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“吃苦”是什么意思？",
+      "answers": [
+        "xưng hô",
+        "chịu khổ",
+        "kín tiếng",
+        "cùng làm, không hẹn"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "吃苦",
+      "source_pinyin": "chīkǔ",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 6,
+      "source_meaning": "chịu khổ",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-006-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-006",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“吃苦”的拼音是什么？",
+      "answers": [
+        "zūnchēng",
+        "chīkǔ",
+        "bùyóude",
+        "yuàn"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "吃苦",
+      "source_pinyin": "chīkǔ",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 6
+    },
+    {
+      "id": "B01-V01-006-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-006",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“chīkǔ”对应哪个词语？",
+      "answers": [
+        "啼笑皆非",
+        "吃苦",
+        "琢磨",
+        "同音"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "吃苦",
+      "source_pinyin": "chīkǔ",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 6
+    },
+    {
+      "id": "B01-V01-007-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-007",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“怨”是什么意思？",
+      "answers": [
+        "chịu khổ",
+        "trách móc",
+        "cách gọi kính trọng",
+        "suy nghĩ kỹ"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "怨",
+      "source_pinyin": "yuàn",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 7,
+      "source_meaning": "trách móc",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-007-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-007",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“怨”的拼音是什么？",
+      "answers": [
+        "fāyīn",
+        "cóngxiǎo",
+        "shǎojiàn",
+        "yuàn"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "怨",
+      "source_pinyin": "yuàn",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 7
+    },
+    {
+      "id": "B01-V01-007-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-007",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“yuàn”对应哪个词语？",
+      "answers": [
+        "自古",
+        "怨",
+        "好奇",
+        "祖宗"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "怨",
+      "source_pinyin": "yuàn",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 7
+    },
+    {
+      "id": "B01-V01-008-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-008",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“琢磨”是什么意思？",
+      "answers": [
+        "từ xưa",
+        "suy nghĩ kỹ",
+        "trò chơi",
+        "khó hiểu"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "琢磨",
+      "source_pinyin": "zuómo",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 8,
+      "source_meaning": "suy nghĩ kỹ",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-008-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-008",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“琢磨”的拼音是什么？",
+      "answers": [
+        "fèijìn-xīnjī",
+        "zìgǔ",
+        "zuómo",
+        "xiǎozi"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "琢磨",
+      "source_pinyin": "zuómo",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 8
+    },
+    {
+      "id": "B01-V01-008-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-008",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“zuómo”对应哪个词语？",
+      "answers": [
+        "起名儿",
+        "低调",
+        "偏偏",
+        "琢磨"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "琢磨",
+      "source_pinyin": "zuómo",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 8
+    },
+    {
+      "id": "B01-V01-009-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-009",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“费尽心机”是什么意思？",
+      "answers": [
+        "giao tiếp",
+        "hiếm gặp",
+        "tò mò",
+        "vắt óc"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "费尽心机",
+      "source_pinyin": "fèijìn-xīnjī",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 9,
+      "source_meaning": "vắt óc",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-009-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-009",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“费尽心机”的拼音是什么？",
+      "answers": [
+        "fèijìn-xīnjī",
+        "cāoxīn",
+        "jīngyà",
+        "yuàn"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "费尽心机",
+      "source_pinyin": "fèijìn-xīnjī",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 9
+    },
+    {
+      "id": "B01-V01-009-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-009",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“fèijìn-xīnjī”对应哪个词语？",
+      "answers": [
+        "费尽心机",
+        "祖宗",
+        "尊称",
+        "自古"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "费尽心机",
+      "source_pinyin": "fèijìn-xīnjī",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 9
+    },
+    {
+      "id": "B01-V01-010-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-010",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“莫名其妙”是什么意思？",
+      "answers": [
+        "ngẩn người",
+        "khó hiểu",
+        "cảnh báo",
+        "vắt óc"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "莫名其妙",
+      "source_pinyin": "mòmíngqímiào",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 10,
+      "source_meaning": "khó hiểu",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-010-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-010",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“莫名其妙”的拼音是什么？",
+      "answers": [
+        "cóngxiǎo",
+        "zǔzōng",
+        "yǔzhòng-bùtóng",
+        "mòmíngqímiào"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "莫名其妙",
+      "source_pinyin": "mòmíngqímiào",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 10
+    },
+    {
+      "id": "B01-V01-010-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-010",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“mòmíngqímiào”对应哪个词语？",
+      "answers": [
+        "莫名其妙",
+        "游戏",
+        "怨",
+        "费尽心机"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "莫名其妙",
+      "source_pinyin": "mòmíngqímiào",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 10
+    },
+    {
+      "id": "B01-V01-011-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-011",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“困惑不解”是什么意思？",
+      "answers": [
+        "cậu nhóc",
+        "đồng âm",
+        "hoang mang",
+        "cách gọi kính trọng"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "困惑不解",
+      "source_pinyin": "kùnhuò-bùjiě",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 11,
+      "source_meaning": "hoang mang",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-011-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-011",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“困惑不解”的拼音是什么？",
+      "answers": [
+        "lèng",
+        "yǔzhòng-bùtóng",
+        "kùnhuò-bùjiě",
+        "bièniu"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "困惑不解",
+      "source_pinyin": "kùnhuò-bùjiě",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 11
+    },
+    {
+      "id": "B01-V01-011-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-011",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 12,
+        "textbook_printed_page": 1
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“kùnhuò-bùjiě”对应哪个词语？",
+      "answers": [
+        "困惑不解",
+        "吃苦",
+        "琢磨",
+        "游戏"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "困惑不解",
+      "source_pinyin": "kùnhuò-bùjiě",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 11
+    },
+    {
+      "id": "B01-V01-012-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-012",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“与众不同”是什么意思？",
+      "answers": [
+        "trách móc",
+        "không khỏi",
+        "khác biệt",
+        "đồng âm"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "与众不同",
+      "source_pinyin": "yǔzhòng-bùtóng",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 12,
+      "source_meaning": "khác biệt",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-012-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-012",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“与众不同”的拼音是什么？",
+      "answers": [
+        "yóuxì",
+        "cóngxiǎo",
+        "zuómo",
+        "yǔzhòng-bùtóng"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "与众不同",
+      "source_pinyin": "yǔzhòng-bùtóng",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 12
+    },
+    {
+      "id": "B01-V01-012-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-012",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“yǔzhòng-bùtóng”对应哪个词语？",
+      "answers": [
+        "惊讶",
+        "交往",
+        "与众不同",
+        "低调"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "与众不同",
+      "source_pinyin": "yǔzhòng-bùtóng",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 12
+    },
+    {
+      "id": "B01-V01-013-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-013",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“不约而同”是什么意思？",
+      "answers": [
+        "không khỏi",
+        "đồng âm",
+        "tổ tiên",
+        "cùng làm, không hẹn"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "不约而同",
+      "source_pinyin": "búyuē'értóng",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 13,
+      "source_meaning": "cùng làm, không hẹn",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-013-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-013",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“不约而同”的拼音是什么？",
+      "answers": [
+        "yóuxì",
+        "chīkǔ",
+        "zuómo",
+        "búyuē'értóng"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "不约而同",
+      "source_pinyin": "búyuē'értóng",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 13
+    },
+    {
+      "id": "B01-V01-013-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-013",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“búyuē'értóng”对应哪个词语？",
+      "answers": [
+        "不约而同",
+        "怨",
+        "琢磨",
+        "祖宗"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "不约而同",
+      "source_pinyin": "búyuē'értóng",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 13
+    },
+    {
+      "id": "B01-V01-014-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-014",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“发音”是什么意思？",
+      "answers": [
+        "xưng hô",
+        "không khỏi",
+        "cùng làm, không hẹn",
+        "phát âm"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "发音",
+      "source_pinyin": "fāyīn",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 14,
+      "source_meaning": "phát âm",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-014-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-014",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“发音”的拼音是什么？",
+      "answers": [
+        "jūrán",
+        "bùyóude",
+        "fāyīn",
+        "dīdiào"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "发音",
+      "source_pinyin": "fāyīn",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 14
+    },
+    {
+      "id": "B01-V01-014-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-014",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“fāyīn”对应哪个词语？",
+      "answers": [
+        "琢磨",
+        "发音",
+        "起名儿",
+        "困惑不解"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "发音",
+      "source_pinyin": "fāyīn",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 14
+    },
+    {
+      "id": "B01-V01-015-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-015",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“头等大事”是什么意思？",
+      "answers": [
+        "đặt tên",
+        "việc quan trọng nhất",
+        "xưng hô",
+        "ngạc nhiên"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "头等大事",
+      "source_pinyin": "tóuděng dàshì",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 15,
+      "source_meaning": "việc quan trọng nhất",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-015-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-015",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“头等大事”的拼音是什么？",
+      "answers": [
+        "jūrán",
+        "tóuděng dàshì",
+        "búyuē'értóng",
+        "qīnrè"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "头等大事",
+      "source_pinyin": "tóuděng dàshì",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 15
+    },
+    {
+      "id": "B01-V01-015-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-015",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“tóuděng dàshì”对应哪个词语？",
+      "answers": [
+        "惊讶",
+        "糟",
+        "莫名其妙",
+        "头等大事"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "头等大事",
+      "source_pinyin": "tóuděng dàshì",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 15
+    },
+    {
+      "id": "B01-V01-016-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-016",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“别扭”是什么意思？",
+      "answers": [
+        "gượng gạo",
+        "suy nghĩ kỹ",
+        "dở khóc dở cười",
+        "tổ tiên"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "别扭",
+      "source_pinyin": "bièniu",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 16,
+      "source_meaning": "gượng gạo",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-016-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-016",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“别扭”的拼音是什么？",
+      "answers": [
+        "bièniu",
+        "cóngxiǎo",
+        "xiǎozi",
+        "jīngyà"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "别扭",
+      "source_pinyin": "bièniu",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 16
+    },
+    {
+      "id": "B01-V01-016-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-016",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“bièniu”对应哪个词语？",
+      "answers": [
+        "游戏",
+        "同音",
+        "别扭",
+        "小子"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "别扭",
+      "source_pinyin": "bièniu",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 16
+    },
+    {
+      "id": "B01-V01-017-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-017",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“糟”是什么意思？",
+      "answers": [
+        "tệ",
+        "đặt tên",
+        "đồng âm",
+        "lo lắng"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "糟",
+      "source_pinyin": "zāo",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 17,
+      "source_meaning": "tệ",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-017-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-017",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“糟”的拼音是什么？",
+      "answers": [
+        "zuómo",
+        "tóuděng dàshì",
+        "zāo",
+        "tóngyīn"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "糟",
+      "source_pinyin": "zāo",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 17
+    },
+    {
+      "id": "B01-V01-017-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-017",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“zāo”对应哪个词语？",
+      "answers": [
+        "困惑不解",
+        "低调",
+        "糟",
+        "亲热"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "糟",
+      "source_pinyin": "zāo",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 17
+    },
+    {
+      "id": "B01-V01-018-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-018",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“低调”是什么意思？",
+      "answers": [
+        "lại cứ",
+        "từ xưa",
+        "hiếm gặp",
+        "kín tiếng"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "低调",
+      "source_pinyin": "dīdiào",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 18,
+      "source_meaning": "kín tiếng",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-018-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-018",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“低调”的拼音是什么？",
+      "answers": [
+        "dīdiào",
+        "bùyóude",
+        "shǎojiàn",
+        "jiāowǎng"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "低调",
+      "source_pinyin": "dīdiào",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 18
+    },
+    {
+      "id": "B01-V01-018-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-018",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“dīdiào”对应哪个词语？",
+      "answers": [
+        "不约而同",
+        "同音",
+        "低调",
+        "啼笑皆非"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "低调",
+      "source_pinyin": "dīdiào",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 18
+    },
+    {
+      "id": "B01-V01-019-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-019",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“小子”是什么意思？",
+      "answers": [
+        "cậu nhóc",
+        "xưng hô",
+        "phát âm",
+        "gượng gạo"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "小子",
+      "source_pinyin": "xiǎozi",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 19,
+      "source_meaning": "cậu nhóc",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-019-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-019",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“小子”的拼音是什么？",
+      "answers": [
+        "zìgǔ",
+        "xiǎozi",
+        "qīnrè",
+        "jīngyà"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "小子",
+      "source_pinyin": "xiǎozi",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 19
+    },
+    {
+      "id": "B01-V01-019-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-019",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“xiǎozi”对应哪个词语？",
+      "answers": [
+        "交往",
+        "怨",
+        "小子",
+        "从小"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "小子",
+      "source_pinyin": "xiǎozi",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 19
+    },
+    {
+      "id": "B01-V01-020-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-020",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“同音”是什么意思？",
+      "answers": [
+        "đồng âm",
+        "cảnh báo",
+        "không khỏi",
+        "gượng gạo"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "同音",
+      "source_pinyin": "tóngyīn",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 20,
+      "source_meaning": "đồng âm",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-020-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-020",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“同音”的拼音是什么？",
+      "answers": [
+        "jiāowǎng",
+        "tóngyīn",
+        "jīngyà",
+        "zūnchēng"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "同音",
+      "source_pinyin": "tóngyīn",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 20
+    },
+    {
+      "id": "B01-V01-020-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-020",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“tóngyīn”对应哪个词语？",
+      "answers": [
+        "莫名其妙",
+        "同音",
+        "从小",
+        "啼笑皆非"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "同音",
+      "source_pinyin": "tóngyīn",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 20
+    },
+    {
+      "id": "B01-V01-021-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-021",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“游戏”是什么意思？",
+      "answers": [
+        "thân mật",
+        "cách gọi kính trọng",
+        "từ nhỏ",
+        "trò chơi"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "游戏",
+      "source_pinyin": "yóuxì",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 21,
+      "source_meaning": "trò chơi",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-021-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-021",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“游戏”的拼音是什么？",
+      "answers": [
+        "kùnhuò-bùjiě",
+        "yuàn",
+        "yóuxì",
+        "jūrán"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "游戏",
+      "source_pinyin": "yóuxì",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 21
+    },
+    {
+      "id": "B01-V01-021-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-021",
+      "source_ref": {
+        "section_id": "S01-002",
+        "source_pdf_page": 13,
+        "textbook_printed_page": 2
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“yóuxì”对应哪个词语？",
+      "answers": [
+        "称呼",
+        "啼笑皆非",
+        "交往",
+        "游戏"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "游戏",
+      "source_pinyin": "yóuxì",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 21
+    },
+    {
+      "id": "B01-V01-022-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-022",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“居然”是什么意思？",
+      "answers": [
+        "từ nhỏ",
+        "dở khóc dở cười",
+        "vậy mà",
+        "thân mật"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "居然",
+      "source_pinyin": "jūrán",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 22,
+      "source_meaning": "vậy mà",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-022-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-022",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“居然”的拼音是什么？",
+      "answers": [
+        "yǔzhòng-bùtóng",
+        "jūrán",
+        "tíxiào-jiēfēi",
+        "jīngyà"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "居然",
+      "source_pinyin": "jūrán",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 22
+    },
+    {
+      "id": "B01-V01-022-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-022",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“jūrán”对应哪个词语？",
+      "answers": [
+        "居然",
+        "不由得",
+        "尊称",
+        "游戏"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "居然",
+      "source_pinyin": "jūrán",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 22
+    },
+    {
+      "id": "B01-V01-023-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-023",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“好奇”是什么意思？",
+      "answers": [
+        "tò mò",
+        "đồng âm",
+        "cùng làm, không hẹn",
+        "suy nghĩ kỹ"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "好奇",
+      "source_pinyin": "hàoqí",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 23,
+      "source_meaning": "tò mò",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-023-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-023",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“好奇”的拼音是什么？",
+      "answers": [
+        "hàoqí",
+        "zūnchēng",
+        "búyuē'értóng",
+        "jiāowǎng"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "好奇",
+      "source_pinyin": "hàoqí",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 23
+    },
+    {
+      "id": "B01-V01-023-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-023",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“hàoqí”对应哪个词语？",
+      "answers": [
+        "偏偏",
+        "不由得",
+        "与众不同",
+        "好奇"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "好奇",
+      "source_pinyin": "hàoqí",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 23
+    },
+    {
+      "id": "B01-V01-024-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-024",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“不由得”是什么意思？",
+      "answers": [
+        "không khỏi",
+        "gượng gạo",
+        "vậy mà",
+        "tổ tiên"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "不由得",
+      "source_pinyin": "bùyóude",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 24,
+      "source_meaning": "không khỏi",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-024-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-024",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“不由得”的拼音是什么？",
+      "answers": [
+        "bùyóude",
+        "jīngyà",
+        "yóuxì",
+        "piānpiān"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "不由得",
+      "source_pinyin": "bùyóude",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 24
+    },
+    {
+      "id": "B01-V01-024-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-024",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“bùyóude”对应哪个词语？",
+      "answers": [
+        "低调",
+        "不由得",
+        "吃苦",
+        "称呼"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "不由得",
+      "source_pinyin": "bùyóude",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 24
+    },
+    {
+      "id": "B01-V01-025-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-025",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“祖宗”是什么意思？",
+      "answers": [
+        "tổ tiên",
+        "đồng âm",
+        "hiếm gặp",
+        "cách gọi kính trọng"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "祖宗",
+      "source_pinyin": "zǔzōng",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 25,
+      "source_meaning": "tổ tiên",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-025-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-025",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“祖宗”的拼音是什么？",
+      "answers": [
+        "zǔzōng",
+        "mòmíngqímiào",
+        "fèijìn-xīnjī",
+        "qǐ míngr"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "祖宗",
+      "source_pinyin": "zǔzōng",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 25
+    },
+    {
+      "id": "B01-V01-025-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-025",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“zǔzōng”对应哪个词语？",
+      "answers": [
+        "从小",
+        "发音",
+        "偏偏",
+        "祖宗"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "祖宗",
+      "source_pinyin": "zǔzōng",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 25
+    },
+    {
+      "id": "B01-V01-026-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-026",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“偏偏”是什么意思？",
+      "answers": [
+        "lại cứ",
+        "không khỏi",
+        "gượng gạo",
+        "tổ tiên"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "偏偏",
+      "source_pinyin": "piānpiān",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 26,
+      "source_meaning": "lại cứ",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-026-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-026",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“偏偏”的拼音是什么？",
+      "answers": [
+        "yǔzhòng-bùtóng",
+        "piānpiān",
+        "fāyīn",
+        "lèng"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "偏偏",
+      "source_pinyin": "piānpiān",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 26
+    },
+    {
+      "id": "B01-V01-026-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-026",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“piānpiān”对应哪个词语？",
+      "answers": [
+        "不约而同",
+        "偏偏",
+        "交往",
+        "警告"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "偏偏",
+      "source_pinyin": "piānpiān",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 26
+    },
+    {
+      "id": "B01-V01-027-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-027",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“操心”是什么意思？",
+      "answers": [
+        "tò mò",
+        "việc quan trọng nhất",
+        "vậy mà",
+        "lo lắng"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "操心",
+      "source_pinyin": "cāoxīn",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 27,
+      "source_meaning": "lo lắng",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-027-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-027",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“操心”的拼音是什么？",
+      "answers": [
+        "qǐ míngr",
+        "lèng",
+        "cāoxīn",
+        "tíxiào-jiēfēi"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "操心",
+      "source_pinyin": "cāoxīn",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 27
+    },
+    {
+      "id": "B01-V01-027-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-027",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“cāoxīn”对应哪个词语？",
+      "answers": [
+        "操心",
+        "祖宗",
+        "从小",
+        "警告"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "操心",
+      "source_pinyin": "cāoxīn",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 27
+    },
+    {
+      "id": "B01-V01-028-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-028",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“啼笑皆非”是什么意思？",
+      "answers": [
+        "khác biệt",
+        "dở khóc dở cười",
+        "trò chơi",
+        "vắt óc"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "啼笑皆非",
+      "source_pinyin": "tíxiào-jiēfēi",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 28,
+      "source_meaning": "dở khóc dở cười",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-028-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-028",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“啼笑皆非”的拼音是什么？",
+      "answers": [
+        "cóngxiǎo",
+        "tíxiào-jiēfēi",
+        "búyuē'értóng",
+        "bièniu"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "啼笑皆非",
+      "source_pinyin": "tíxiào-jiēfēi",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 28
+    },
+    {
+      "id": "B01-V01-028-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-028",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“tíxiào-jiēfēi”对应哪个词语？",
+      "answers": [
+        "尊称",
+        "不由得",
+        "啼笑皆非",
+        "操心"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "啼笑皆非",
+      "source_pinyin": "tíxiào-jiēfēi",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 28
+    },
+    {
+      "id": "B01-V01-029-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-029",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“少见”是什么意思？",
+      "answers": [
+        "từ xưa",
+        "vắt óc",
+        "kín tiếng",
+        "hiếm gặp"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "少见",
+      "source_pinyin": "shǎojiàn",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 29,
+      "source_meaning": "hiếm gặp",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-029-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-029",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“少见”的拼音是什么？",
+      "answers": [
+        "zāo",
+        "bùyóude",
+        "cóngxiǎo",
+        "shǎojiàn"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "少见",
+      "source_pinyin": "shǎojiàn",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 29
+    },
+    {
+      "id": "B01-V01-029-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-029",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“shǎojiàn”对应哪个词语？",
+      "answers": [
+        "少见",
+        "同音",
+        "亲热",
+        "困惑不解"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "少见",
+      "source_pinyin": "shǎojiàn",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 29
+    },
+    {
+      "id": "B01-V01-030-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-030",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“尊称”是什么意思？",
+      "answers": [
+        "trách móc",
+        "cách gọi kính trọng",
+        "vậy mà",
+        "lo lắng"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "尊称",
+      "source_pinyin": "zūnchēng",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 30,
+      "source_meaning": "cách gọi kính trọng",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-030-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-030",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“尊称”的拼音是什么？",
+      "answers": [
+        "yóuxì",
+        "tíxiào-jiēfēi",
+        "qǐ míngr",
+        "zūnchēng"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "尊称",
+      "source_pinyin": "zūnchēng",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 30
+    },
+    {
+      "id": "B01-V01-030-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-030",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“zūnchēng”对应哪个词语？",
+      "answers": [
+        "少见",
+        "尊称",
+        "起名儿",
+        "祖宗"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "尊称",
+      "source_pinyin": "zūnchēng",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 30
+    },
+    {
+      "id": "B01-V01-031-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-031",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“称呼”是什么意思？",
+      "answers": [
+        "lo lắng",
+        "tệ",
+        "xưng hô",
+        "từ xưa"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "称呼",
+      "source_pinyin": "chēnghu",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 31,
+      "source_meaning": "xưng hô",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-031-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-031",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“称呼”的拼音是什么？",
+      "answers": [
+        "tóuděng dàshì",
+        "zuómo",
+        "chēnghu",
+        "lèng"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "称呼",
+      "source_pinyin": "chēnghu",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 31
+    },
+    {
+      "id": "B01-V01-031-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-031",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“chēnghu”对应哪个词语？",
+      "answers": [
+        "称呼",
+        "别扭",
+        "游戏",
+        "惊讶"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "称呼",
+      "source_pinyin": "chēnghu",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 31
+    },
+    {
+      "id": "B01-V01-032-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-032",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“交往”是什么意思？",
+      "answers": [
+        "lại cứ",
+        "giao tiếp",
+        "từ nhỏ",
+        "cảnh báo"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "交往",
+      "source_pinyin": "jiāowǎng",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 32,
+      "source_meaning": "giao tiếp",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-032-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-032",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“交往”的拼音是什么？",
+      "answers": [
+        "jiāowǎng",
+        "tíxiào-jiēfēi",
+        "zìgǔ",
+        "jūrán"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "交往",
+      "source_pinyin": "jiāowǎng",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 32
+    },
+    {
+      "id": "B01-V01-032-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-032",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“jiāowǎng”对应哪个词语？",
+      "answers": [
+        "好奇",
+        "费尽心机",
+        "交往",
+        "警告"
+      ],
+      "correct_answer_positions": [
+        3
+      ],
+      "time_limit_sec": 20,
+      "source_character": "交往",
+      "source_pinyin": "jiāowǎng",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 32
+    },
+    {
+      "id": "B01-V01-033-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-033",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“自古”是什么意思？",
+      "answers": [
+        "trách móc",
+        "từ xưa",
+        "đặt tên",
+        "cậu nhóc"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "自古",
+      "source_pinyin": "zìgǔ",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 33,
+      "source_meaning": "từ xưa",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-033-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-033",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“自古”的拼音是什么？",
+      "answers": [
+        "zuómo",
+        "zìgǔ",
+        "xiǎozi",
+        "cāoxīn"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "自古",
+      "source_pinyin": "zìgǔ",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 33
+    },
+    {
+      "id": "B01-V01-033-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-033",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“zìgǔ”对应哪个词语？",
+      "answers": [
+        "起名儿",
+        "自古",
+        "少见",
+        "惊讶"
+      ],
+      "correct_answer_positions": [
+        2
+      ],
+      "time_limit_sec": 20,
+      "source_character": "自古",
+      "source_pinyin": "zìgǔ",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 33
+    },
+    {
+      "id": "B01-V01-034-CTM",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-034",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_meaning",
+      "question_text": "“亲热”是什么意思？",
+      "answers": [
+        "thân mật",
+        "việc quan trọng nhất",
+        "ngẩn người",
+        "ngạc nhiên"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "亲热",
+      "source_pinyin": "qīnrè",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 34,
+      "source_meaning": "thân mật",
+      "meaning_source": {
+        "name": "CC-CEDICT",
+        "url": "https://github.com/justinarmstrong/chinese-english-dictionary/blob/master/data/cedict_ts.u8",
+        "checked_on": "2026-08-25",
+        "status": "external_draft_for_review",
+        "language": "vi",
+        "note": "越南文释义是根据外部英汉词典释义整理的最短课堂用语，不是教材原文答案。"
+      },
+      "meaning_review_status": "external_draft_for_review"
+    },
+    {
+      "id": "B01-V01-034-CTP",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-034",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "character_to_pinyin",
+      "question_text": "“亲热”的拼音是什么？",
+      "answers": [
+        "qīnrè",
+        "jīngyà",
+        "tóuděng dàshì",
+        "búyuē'értóng"
+      ],
+      "correct_answer_positions": [
+        1
+      ],
+      "time_limit_sec": 20,
+      "source_character": "亲热",
+      "source_pinyin": "qīnrè",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 34
+    },
+    {
+      "id": "B01-V01-034-PTC",
+      "lesson_id": "boya-intermediate-i-lesson-01",
+      "source_vocab_id": "V01-034",
+      "source_ref": {
+        "section_id": "S01-009",
+        "source_pdf_page": 21,
+        "textbook_printed_page": 10
+      },
+      "question_type": "pinyin_to_character",
+      "question_text": "拼音“qīnrè”对应哪个词语？",
+      "answers": [
+        "不约而同",
+        "惊讶",
+        "发音",
+        "亲热"
+      ],
+      "correct_answer_positions": [
+        4
+      ],
+      "time_limit_sec": 20,
+      "source_character": "亲热",
+      "source_pinyin": "qīnrè",
+      "source_review_status": "pending_review",
+      "status": "draft_for_review",
+      "family_question_number": 34
+    }
+  ]
+}
