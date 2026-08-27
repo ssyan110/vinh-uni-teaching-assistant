@@ -1,0 +1,34 @@
+{
+  "lesson_map_id": "boya-pbi-semester-feedback-map-v1",
+  "status": "course_adapted_formative_feedback_non_grading",
+  "source_boundary_zh_tw": "本表只採用指定 Markdown 第 16–17 節的課程建議；它不是教材逐頁任務的逐字重現，也不產生學期成績。",
+  "lessons": [
+    {"lesson": 1, "theme_zh_cn": "中国人的姓名", "integrated_task_zh_cn": "命名顾问：理解客户条件、追问确认、推荐姓名并说明理由", "feedback_use": "三模式课堂学习反馈"},
+    {"lesson": 2, "theme_zh_cn": "真正的朋友", "integrated_task_zh_cn": "朋友咨询：理解案例、访谈需求、提出朋友选择或相处建议", "feedback_use": "三模式课堂学习反馈"},
+    {"lesson": 3, "theme_zh_cn": "宜居之地", "integrated_task_zh_cn": "比较居住条件、询问生活需求、推荐城市或居住地", "feedback_use": "三模式课堂学习反馈"},
+    {"lesson": 4, "theme_zh_cn": "地球人的担忧", "integrated_task_zh_cn": "理解环境问题、讨论优先顺序、提出解决方案", "feedback_use": "三模式课堂学习反馈"},
+    {"lesson": 5, "theme_zh_cn": "音乐的魅力", "integrated_task_zh_cn": "理解音乐观点、交换偏好、推荐或评论作品", "feedback_use": "三模式课堂学习反馈"},
+    {"lesson": 6, "theme_zh_cn": "挑战", "integrated_task_zh_cn": "访谈挑战经验、确认过程、转述并说明收获", "feedback_use": "三模式课堂学习反馈"},
+    {"lesson": 7, "theme_zh_cn": "我的同事", "integrated_task_zh_cn": "理解人物关系、厘清工作条件、协商合作方案", "feedback_use": "三模式课堂学习反馈"},
+    {"lesson": 8, "theme_zh_cn": "学汉语的苦恼", "integrated_task_zh_cn": "诊断学习困难、追问原因、提出并说明学习计划", "feedback_use": "三模式课堂学习反馈"}
+  ],
+  "lesson_01_positions": [
+    {
+      "task_id": "L1-P4-A1",
+      "title_zh_cn": "起名儿公司",
+      "position": "feedback_observation",
+      "modes": ["interpretive", "interpersonal", "presentational"],
+      "required_individual_evidence": ["个人理解产出", "可辨认的提问、回答、追问或修补回合", "个人姓名建议与理由说明"],
+      "attempts": ["A1", "A2"],
+      "task_completion_separate": true,
+      "school_grading": false
+    },
+    {
+      "task_id": "L1-P6",
+      "title_zh_cn": "第六节迁移检查",
+      "position": "feedback_position_pending_teacher_decision",
+      "allowed_positions": ["revision_only", "parallel_feedback", "presentational_only", "formative_only"],
+      "reason": "完整 P6 内容与新输入、个人证据及自然互动机会需要教师确认。"
+    }
+  ]
+}

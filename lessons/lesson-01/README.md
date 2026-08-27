@@ -9,7 +9,7 @@
 5. `40-release/`：从 `20-approved/` 复制出的不可变交付包。
 6. `90-archive/`：未来明确归档的旧内容。
 
-旧 `output/boya-intermediate/lesson-01/` 暂时保留为 legacy，不是未来的权威来源。
+历史输出已移至 `archive/legacy-materials-2026-08-27/`，不是未来的权威来源。
 
 所有生成器开始前都必须通过：
 
@@ -17,6 +17,6 @@
 python3 scripts/production_gate.py --purpose audit
 ```
 
-当前第一课的文件完整性、PPTX 音频播放实测与 6 节／300 分钟教师 rehearsal
-已经记录为通过，并已建立不可变交付包：
-`lessons/lesson-01/40-release/2026-08-21-complete-teaching-materials`。
+当前第一课 v11-final 已完成文件完整性与静态 QA；Microsoft PowerPoint 音频／投影
+检查及 6 节／300 分钟教师 rehearsal 仍待人工接受。上一個不可變 release 只作历史
+证据，新的 v11 release 尚未建立。

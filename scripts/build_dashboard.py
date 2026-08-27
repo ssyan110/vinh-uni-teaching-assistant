@@ -214,6 +214,11 @@ def build_gates(
     prototype_path = first_matching(
         lesson_root / "10-design/visual-prototype", "*.pptx"
     )
+    source_label = (
+        "历史来源快照"
+        if authority.get("source_package", {}).get("status") == "historical_evidence"
+        else "冻结来源资料"
+    )
     evidence_by_key = {
         "source_review": evidence_items(
             [
@@ -221,7 +226,7 @@ def build_gates(
                     project_relative(lesson_root / "00-source/source-manifest.json"),
                     "来源 manifest",
                 ),
-                (authority.get("source_package", {}).get("path"), "冻结来源资料"),
+                (authority.get("source_package", {}).get("path"), source_label),
             ]
         ),
         "teaching_design": evidence_items(

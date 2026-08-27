@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#eef2ec">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; media-src 'none'; object-src 'none'; base-uri 'none'">
+  <title>开口成林｜课堂口语挑战</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%2318312f'/%3E%3Cpath d='M16 25V12M16 16C10 16 8 12 8 8c6 0 8 4 8 8Zm0 4c6 0 8-4 8-8-6 0-8 4-8 8Z' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-a" aria-hidden="true"></div>
+  <div class="ambient ambient-b" aria-hidden="true"></div>
+
+  <main class="app-shell" id="appShell">
+    <header class="topbar">
+      <button class="brand-button" id="homeButton" type="button" aria-label="回到开始画面">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" role="img">
+            <path d="M20 31V17"/>
+            <path d="M20 20c-6 0-10-3-10-8 6 0 10 3 10 8Z"/>
+            <path d="M20 25c6 0 10-3 10-8-6 0-10 3-10 8Z"/>
+            <path d="M14 32h12"/>
+          </svg>
+        </span>
+        <span>开口成林</span>
+      </button>
+
+      <div class="topbar-actions">
+        <button class="icon-button" id="helpButton" type="button" aria-label="查看快捷键">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.8 9a2.3 2.3 0 1 1 3.4 2c-.8.5-1.2 1-1.2 2"/><path d="M12 16.5h.01"/></svg>
+          <span>快捷键</span>
+        </button>
+        <button class="icon-button" id="fullscreenButton" type="button" aria-label="进入全屏">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/></svg>
+          <span>全屏</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="view home-view is-active" id="homeView" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="eyebrow">课堂口语挑战</p>
+        <h1 id="heroTitle">让每一次开口，<span class="inline-scene" aria-hidden="true"><svg viewBox="0 0 96 38"><path d="M8 29c16-18 29 2 43-12 11-11 22-6 36 8"/><circle cx="19" cy="18" r="5"/><path d="M19 13V8M14 18H9M24 18h5"/></svg></span>都长成一片风景</h1>
+        <p class="hero-lede">先两人练习，再根据新情况改一改，最后向全班说。</p>
+      </div>
+
+      <form class="launch-panel" id="launchForm">
+        <label class="field-block" for="packSelect">
+          <span>今天练什么</span>
+          <select id="packSelect" name="pack"></select>
+        </label>
+        <label class="field-block" for="roundSelect">
+          <span>完成几题</span>
+          <select id="roundSelect" name="rounds">
+            <option value="3">3 个</option>
+            <option value="4" selected>4 个</option>
+            <option value="5">5 个</option>
+            <option value="6">6 个</option>
+          </select>
+        </label>
+        <button class="primary-button launch-button" type="submit">
+          <span>开始挑战</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M14 7l5 5-5 5"/></svg>
+        </button>
+      </form>
+
+      <div class="home-preview" aria-hidden="true">
+        <div class="preview-track"><span></span><span></span><span></span><span></span></div>
+        <div class="preview-tree">
+          <svg viewBox="0 0 240 150">
+            <path class="preview-ground" d="M20 130c45-13 154-12 200 0"/>
+            <path class="preview-trunk" d="M120 131c0-44-1-66 1-101M120 73l-30-25M120 86l35-31"/>
+            <path class="preview-leaf" d="M90 48c-20 2-29-8-31-24 17-3 29 6 31 24ZM155 55c20 0 29-10 29-26-17-1-28 9-29 26ZM121 40c-14-8-17-20-10-34 15 6 19 18 10 34Z"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="view game-view" id="gameView" aria-live="polite">
+      <div class="session-line">
+        <div>
+          <p class="session-pack" id="sessionPack"></p>
+          <p class="session-progress" id="sessionProgress"></p>
+        </div>
+        <div class="phase-rail" id="phaseRail" aria-label="任务步骤">
+          <span data-phase="practice"><b>1</b><em>两人先练</em></span>
+          <span data-phase="change"><b>2</b><em>情况有变</em></span>
+          <span data-phase="present"><b>3</b><em>向全班说</em></span>
+        </div>
+      </div>
+
+      <div class="game-grid">
+        <section class="challenge-stage" aria-labelledby="challengeTitle">
+          <article class="challenge-card" id="challengeCard">
+            <div class="challenge-heading">
+              <p class="stage-kicker" id="stageKicker">先一起练习</p>
+              <h2 id="challengeTitle"></h2>
+              <p class="situation" id="challengeSituation"></p>
+            </div>
+
+            <div class="role-accordion" id="roleAccordion"></div>
+
+            <div class="task-outcome">
+              <div>
+                <p class="micro-label">现在要做</p>
+                <p id="challengeGoal"></p>
+              </div>
+              <div>
+                <p class="micro-label">练完以后</p>
+                <p id="challengeOutcome"></p>
+              </div>
+            </div>
+
+            <div class="language-strip" id="languageStrip">
+              <p class="micro-label">可以这样说</p>
+              <div id="languageItems"></div>
+            </div>
+
+            <div class="change-panel" id="changePanel" hidden>
+              <div class="change-signal" aria-hidden="true"><span></span><span></span><span></span></div>
+              <div>
+                <p class="micro-label">情况有变</p>
+                <p class="change-text" id="changeText"></p>
+                <p class="change-action" id="changeAction"></p>
+              </div>
+            </div>
+
+            <div class="present-panel" id="presentPanel" hidden>
+              <div>
+                <p class="micro-label">向全班说</p>
+                <p class="present-instruction" id="presentInstruction"></p>
+              </div>
+              <div class="audience-carousel">
+                <button type="button" class="carousel-arrow" id="audiencePrev" aria-label="上一个听众任务">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg>
+                </button>
+                <div>
+                  <p class="micro-label">全班听完要做</p>
+                  <p id="audiencePrompt"></p>
+                </div>
+                <button type="button" class="carousel-arrow" id="audienceNext" aria-label="下一个听众任务">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <div class="stage-controls">
+            <button class="secondary-button" id="secondaryAction" type="button"></button>
+            <div class="continue-action">
+              <span id="continueHint">教师按这里继续</span>
+              <button class="primary-button" id="primaryAction" type="button">
+                <span id="primaryActionText"></span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M14 7l5 5-5 5"/></svg>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <aside class="growth-stage" aria-label="全班成长进度">
+          <div class="timer-card" id="timerCard">
+            <div>
+              <p class="micro-label">计时</p>
+              <p class="timer-status" id="timerStatus">准备好就开始</p>
+            </div>
+            <button class="timer-display" id="timerButton" type="button" aria-label="开始或暂停计时">
+              <span id="timerDisplay">00:40</span>
+            </button>
+            <div class="timer-actions">
+              <button type="button" id="minusTime" aria-label="减少十五秒">−15</button>
+              <button type="button" id="resetTimer">重来</button>
+              <button type="button" id="plusTime" aria-label="增加十五秒">＋15</button>
+            </div>
+          </div>
+
+          <div class="growth-card">
+            <div class="growth-copy">
+              <p class="micro-label">全班一起完成</p>
+              <p class="growth-line" id="growthLine"></p>
+            </div>
+            <div class="growth-scene" id="growthScene" aria-label="一棵随着任务成长的树和一只巴哥犬"></div>
+            <div class="growth-dots" id="growthDots"></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="help-dialog" id="helpDialog">
+    <div class="dialog-heading">
+      <div>
+        <p class="eyebrow">教师操作</p>
+        <h2>快捷键</h2>
+      </div>
+      <button class="dialog-close" id="closeHelp" type="button" aria-label="关闭快捷键说明">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <dl class="shortcut-list">
+      <div><dt>空格</dt><dd>开始或暂停计时</dd></div>
+      <div><dt>C</dt><dd>看新情况</dd></div>
+      <div><dt>P</dt><dd>向全班说</dd></div>
+      <div><dt>N</dt><dd>完成后进入下一题</dd></div>
+      <div><dt>R</dt><dd>重置本阶段计时</dd></div>
+      <div><dt>F</dt><dd>进入或退出全屏</dd></div>
+    </dl>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="content/registry.js"></script>
+  <script src="content/lesson-01-p1-p2.js"></script>
+  <script src="content/lesson-01-complete.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

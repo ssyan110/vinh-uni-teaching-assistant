@@ -1,0 +1,74 @@
+{
+  "status": "approved_by_adam_2026-08-27",
+  "approved_by": "Adam",
+  "approved_at": "2026-08-27",
+  "approval_note": "Adam confirmed that this director-review package, including the dialogues, vocabulary, exercises, and Blooket content, is approved for authority promotion.",
+  "deck_title": "第一课：中国人的姓名（含文化知识补充）",
+  "version": "v11-final",
+  "slide_count": 95,
+  "format": "native_editable_pptx",
+  "layout": "16:9",
+  "language": "简体中文",
+  "cjk_font": "KaiTi",
+  "template": "第一课最终版统一视觉母版 V4",
+  "template_source": "lessons/lesson-01/20-approved/pptx/第一课-中国人的姓名.pptx",
+  "no_textbook_page_markers": true,
+  "scope": [
+    "原第一课教学内容",
+    "文化知识补充：如何给孩子取名字、如何称呼中国人"
+  ],
+  "final_pptx": {
+    "path": "lessons/lesson-01/90-archive/approval-evidence-2026-08-27/social-appellation-supplement-v11/第一课-教学资料/01-课堂PPT/第一课-中国人的姓名.pptx",
+    "sha256": "92ec8fe6dbee4441399a6930f241aa4c5922a9549708f45c06f1a6047016090d",
+    "slide_count": 95,
+    "speaker_notes_count": 95,
+    "status": "teacher_finalized_do_not_regenerate"
+  },
+  "preview_pdf": {
+    "path": "lessons/lesson-01/90-archive/approval-evidence-2026-08-27/social-appellation-supplement-v11/第一课-教学资料/01-课堂PPT/第一课-中国人的姓名-投影片预览.pdf",
+    "sha256": "ad936a8623dd90ef050053b2fd611231368bb21f3841bbdd67ebc65c8f3a9f26",
+    "page_count": 95
+  },
+  "finalized_changes": [
+    "教师已在 PowerPoint 中完成最后修订并保存；后续不得重新生成、覆盖或回填此 PPTX。",
+    "第65页删除“进入怎么问姓名部分。”",
+    "第66页删除“根据关系和场合，选择合适的问法。”",
+    "第74页删除重复标题，只保留“想一想，再和同伴说一说。”",
+    "第80页删除“不确定时，先用安全称呼。”",
+    "第87页删除底部“完成：完成一次第一次见面”。",
+    "第88页副标题改为“请回答”。"
+  ],
+  "related_materials": {
+    "teacher_manual": "第一课-教学资料/02-简易教案/第一课简易教案.docx",
+    "activity_cards": "第一课-教学资料/03-活动卡/",
+    "worksheet": "第一课-教学资料/04-文化知识补充学习单/第一课_文化知识补充学习单.pdf",
+    "video": "第一课-教学资料/05-文化知识补充视频/第一课文化知识补充视频.mov"
+  },
+  "output_files": [
+    "第一课-教学资料/01-课堂PPT/第一课-中国人的姓名.pptx",
+    "第一课-教学资料/01-课堂PPT/第一课-中国人的姓名-投影片预览.pdf",
+    "第一课-教学资料/02-简易教案/第一课简易教案.docx",
+    "第一课-教学资料/04-文化知识补充学习单/第一课_文化知识补充学习单.pdf",
+    "第一课-教学资料/05-文化知识补充视频/第一课文化知识补充视频.mov"
+  ],
+  "director_review_package": {
+    "path": "lessons/lesson-01/90-archive/approval-evidence-2026-08-27/social-appellation-supplement-v11/第一课-主任审核包-含文化补充-v11-final.zip",
+    "sha256": "5ae1569fbb6edbefc87403861043c9507d38b2dd21315b59e9e8fa8a3ebcb2bc",
+    "file_count": 27
+  },
+  "do_not_regenerate": true,
+  "old_pptx_to_exclude": [
+    "第一课-中国人的姓名-含文化补充-v11-draft.pptx",
+    "第一课-文化补充-姓名与称呼-v11-draft.pptx"
+  ],
+  "classroom_rehearsal": "not_run",
+  "authority_promotion": {
+    "status": "promoted_to_20-approved",
+    "at": "2026-08-27",
+    "authority_pptx": "lessons/lesson-01/20-approved/pptx/第一课-中国人的姓名.pptx",
+    "authority_preview_pdf": "lessons/lesson-01/20-approved/pptx/第一课-中国人的姓名-投影片预览.pdf",
+    "authority_teacher_manual": "lessons/lesson-01/20-approved/teacher-manual/第一课简易教案.docx",
+    "authority_supplements": "lessons/lesson-01/20-approved/supplements/social-appellation-v11",
+    "authority_blooket": "lessons/lesson-01/20-approved/blooket/lesson-01/lesson-01_vocab_blooket.csv"
+  }
+}

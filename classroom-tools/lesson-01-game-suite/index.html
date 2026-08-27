@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#eef2ec">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; media-src 'none'; object-src 'none'; base-uri 'none'">
+  <title>课堂挑战｜第一课口语游戏</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%2318312f'/%3E%3Cpath d='M16 25V12M16 16C10 16 8 12 8 8c6 0 8 4 8 8Zm0 4c6 0 8-4 8-8-6-1-8 3-8 8Z' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-a" aria-hidden="true"></div>
+  <div class="ambient ambient-b" aria-hidden="true"></div>
+
+  <main class="app-shell">
+    <header class="topbar">
+      <button class="brand-button" id="homeButton" type="button" aria-label="回到开始画面">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40"><path d="M20 31V17M20 20c-6 0-10-3-10-8 6 0 10 3 10 8ZM20 25c6 0 10-3 10-8-6 0-10 3-10 8ZM14 32h12"/></svg>
+        </span>
+        <span>课堂挑战</span>
+      </button>
+      <div class="topbar-actions">
+        <button class="icon-button" id="helpButton" type="button" aria-label="查看教师快捷键">快捷键</button>
+        <button class="icon-button" id="fullscreenButton" type="button" aria-label="进入全屏">全屏</button>
+      </div>
+    </header>
+
+    <section class="view home-view is-active" id="homeView" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="eyebrow">第一课 · 中国人的姓名</p>
+        <h1 id="heroTitle">先开口，再把意思说清楚。</h1>
+        <p class="hero-lede">八种课堂玩法，练习提问、回答、追问、协商和成段表达。</p>
+      </div>
+
+      <form class="launch-panel" id="launchForm">
+        <label class="field-block" for="packSelect">
+          <span>选择课程阶段</span>
+          <select id="packSelect" name="pack"></select>
+        </label>
+        <label class="field-block" for="modeSelect">
+          <span>选择游戏</span>
+          <select id="modeSelect" name="mode"></select>
+        </label>
+        <label class="field-block compact-field" for="roundSelect">
+          <span>本轮题数</span>
+          <select id="roundSelect" name="rounds">
+            <option value="3">3 题</option>
+            <option value="4" selected>4 题</option>
+            <option value="5">5 题</option>
+            <option value="6">6 题</option>
+          </select>
+        </label>
+        <label class="field-block compact-field" for="teamCountSelect">
+          <span>小组数</span>
+          <select id="teamCountSelect" name="teamCount">
+            <option value="2">2 组</option>
+            <option value="3" selected>3 组</option>
+            <option value="4">4 组</option>
+            <option value="5">5 组</option>
+            <option value="6">6 组</option>
+          </select>
+        </label>
+        <button class="primary-button launch-button" type="submit">
+          <span>开始游戏</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M14 7l5 5-5 5"/></svg>
+        </button>
+      </form>
+
+      <section class="mode-preview" aria-live="polite">
+        <div>
+          <p class="micro-label">当前玩法</p>
+          <h2 id="modePreviewTitle"></h2>
+          <p id="modePreviewDescription"></p>
+        </div>
+        <div class="mode-preview-meta">
+          <span id="modePreviewDuration"></span>
+          <span>教师手动判断口语表现</span>
+        </div>
+      </section>
+
+      <div class="home-mark" aria-hidden="true">
+        <div class="home-line"></div>
+        <svg viewBox="0 0 360 180"><path class="home-ground" d="M34 155c86-21 206-19 292 0"/><path class="home-trunk" d="M180 155c0-58 0-90 2-133M181 87l-66-45M181 104l76-60"/><path class="home-leaf" d="M116 43c-28 3-43-12-45-36 26-3 43 11 45 36ZM257 45c28 2 43-13 43-38-27-1-42 13-43 38ZM182 24c-20-11-25-28-14-45 22 8 29 27 14 45Z"/></svg>
+      </div>
+    </section>
+
+    <section class="view live-view" id="liveView" aria-live="polite" hidden>
+      <div class="session-line">
+        <div>
+          <p class="session-pack" id="sessionPack"></p>
+          <p class="session-progress" id="sessionProgress"></p>
+        </div>
+        <div class="live-mode-title" id="liveModeTitle"></div>
+      </div>
+
+      <div class="live-grid">
+        <section class="game-stage" id="gameStage" aria-label="游戏内容"></section>
+        <aside class="control-rail" aria-label="教师控制">
+          <section class="timer-card">
+            <div class="timer-heading">
+              <div>
+                <p class="micro-label">计时</p>
+                <p class="timer-status" id="timerStatus">准备好就开始</p>
+              </div>
+              <button class="timer-display" id="timerButton" type="button" aria-label="开始或暂停计时"><span id="timerDisplay">00:45</span></button>
+            </div>
+            <div class="timer-actions">
+              <button type="button" id="minusTime" aria-label="减少十五秒">−15</button>
+              <button type="button" id="resetTimer">重来</button>
+              <button type="button" id="plusTime" aria-label="增加十五秒">＋15</button>
+            </div>
+          </section>
+          <section class="rail-card">
+            <p class="micro-label">教师提示</p>
+            <p id="modeTeacherHint">先让学生完成，再做短时间修补。</p>
+          </section>
+          <button class="secondary-button rail-home-button" id="railHomeButton" type="button">回到选择</button>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="help-dialog" id="helpDialog">
+    <div class="dialog-heading">
+      <div><p class="eyebrow">教师操作</p><h2>快捷键</h2></div>
+      <button class="dialog-close" id="closeHelp" type="button" aria-label="关闭快捷键说明">×</button>
+    </div>
+    <dl class="shortcut-list">
+      <div><dt>空格</dt><dd>开始或暂停计时</dd></div>
+      <div><dt>R</dt><dd>重置当前计时</dd></div>
+      <div><dt>N</dt><dd>完成当前题并进入下一题</dd></div>
+      <div><dt>H</dt><dd>显示或隐藏当前提示</dd></div>
+      <div><dt>F</dt><dd>进入或退出全屏</dd></div>
+      <div><dt>Esc</dt><dd>关闭说明或回到选择</dd></div>
+    </dl>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="content/registry.js"></script>
+  <script src="content/lesson-01.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0",
+  "manifest_type": "lesson-source-review",
+  "course_id": "boya-intermediate-i",
+  "lesson_id": "lesson-02",
+  "lesson_number": 2,
+  "lesson_title": "真正的朋友",
+  "language": "简体中文",
+  "package": "lesson-02-source-review",
+  "prepared_at": "2026-08-22",
+  "source_status": "pending_review",
+  "source_qa_status": "pending",
+  "extraction_status": "source_review_materialized",
+  "review_status": "awaiting_adam_review",
+  "canonical_source": {
+    "path": "work/boya-intermediate/extractions/structured-lesson-02.json",
+    "sha256": "c71b868c565d3f1c1eb9ee18daa7ac1b2c6e7ded7e282577f6143e8e60cc8bf4",
+    "status": "source_review_snapshot",
+    "note": "已建立第二课 source-review 结构化快照；来源 QA、音频内容听核与 Adam 批准仍未完成。"
+  },
+  "source_pdf": {
+    "path": "Giáo trình/博雅汉语听说-中级冲刺篇/博雅汉语听说-中级冲刺篇I.pdf",
+    "sha256": "c7aa70b16496aecc7d9979bc2744dbe22701650511e48e2433ed19d439d70ad9",
+    "total_pages": 148,
+    "textbook_page_range": "17–31",
+    "pdf_page_range": "28–42",
+    "page_count_in_review": 15,
+    "format": "scanned_image_pdf",
+    "text_layer_status": "empty; use OCR plus visual confirmation"
+  },
+  "ocr_package": {
+    "manifest_path": "work/boya-intermediate/extractions/ocr-lesson-02/manifest.json",
+    "manifest_sha256": "f9db441064cae6f5c5dce52d8b33bffa07c15b6044c4f5ec5dc1f3fc1a08cb65",
+    "text_root": "work/boya-intermediate/extractions/ocr-lesson-02",
+    "page_image_root": "work/boya-intermediate/extractions/pages-preview",
+    "render_dpi": 200,
+    "recognition_languages": ["zh-Hans", "en-US"],
+    "pages": [
+      {"textbook_page": 17, "pdf_page": 28, "ocr_text": "work/boya-intermediate/extractions/ocr-lesson-02/page-028.txt", "page_image": "work/boya-intermediate/extractions/pages-preview/pdf-28.png", "visual_status": "checked"},
+      {"textbook_page": 18, "pdf_page": 29, "ocr_text": "work/boya-intermediate/extractions/ocr-lesson-02/page-029.txt", "page_image": "work/boya-intermediate/extractions/pages-preview/pdf-29.png", "visual_status": "checked"},
+      {"textbook_page": 19, "pdf_page": 30, "ocr_text": "work/boya-intermediate/extractions/ocr-lesson-02/page-030.txt", "page_image": "work/boya-intermediate/extractions/pages-preview/pdf-30.png", "visual_status": "checked"},
+      {"textbook_page": 20, "pdf_page": 31, "ocr_text": "work/boya-intermediate/extractions/ocr-lesson-02/page-031.txt", "page_image": "work/boya-intermediate/extractions/pages-preview/pdf-31.png", "visual_status": "checked"},
+      {"textbook_page": 21, "pdf_page": 32, "ocr_text": "work/boya-intermediate/extractions/ocr-lesson-02/page-032.txt", "page_image": "work/boya-intermediate/extractions/pages-preview/pdf-32.png", "visual_status": "checked"},
+      {"textbook_page": 22, "pdf_page": 33, "ocr_text": "work/boya-intermediate/extractions/ocr-lesson-02/page-033.txt", "page_image": "work/boya-intermediate/extractions/pages-preview/pdf-33.png", "visual_status": "checked"},
+      {"textbook_page": 23, "pdf_page": 34, "ocr_text": "work/boya-intermediate/extractions/ocr-lesson-02/page-034.txt", "page_image": "work/boya-intermediate/extractions/pages-preview/pdf-34.png", "visual_status": "checked"},
+      {"textbook_page": 24, "pdf_page": 35, "ocr_text": "work/boya-intermediate/extractions/ocr-lesson-02/page-035.txt", "page_image": "work/boya-intermediate/extractions/pages-preview/pdf-35.png", "visual_status": "checked"},
+      {"textbook_page": 25, "pdf_page": 36, "ocr_text": "work/boya-intermediate/extractions/ocr-lesson-02/page-036.txt", "page_image": "work/boya-intermediate/extractions/pages-preview/pdf-36.png", "visual_status": "checked"},
+      {"textbook_page": 26, "pdf_page": 37, "ocr_text": "work/boya-intermediate/extractions/ocr-lesson-02/page-037.txt", "page_image": "work/boya-intermediate/extractions/pages-preview/pdf-37.png", "visual_status": "checked"},
+      {"textbook_page": 27, "pdf_page": 38, "ocr_text": "work/boya-intermediate/extractions/ocr-lesson-02/page-038.txt", "page_image": "work/boya-intermediate/extractions/pages-preview/pdf-38.png", "visual_status": "checked"},
+      {"textbook_page": 28, "pdf_page": 39, "ocr_text": "work/boya-intermediate/extractions/ocr-lesson-02/page-039.txt", "page_image": "work/boya-intermediate/extractions/pages-preview/pdf-39.png", "visual_status": "checked"},
+      {"textbook_page": 29, "pdf_page": 40, "ocr_text": "work/boya-intermediate/extractions/ocr-lesson-02/page-040.txt", "page_image": "work/boya-intermediate/extractions/pages-preview/pdf-40.png", "visual_status": "checked"},
+      {"textbook_page": 30, "pdf_page": 41, "ocr_text": "work/boya-intermediate/extractions/ocr-lesson-02/page-041.txt", "page_image": "work/boya-intermediate/extractions/pages-preview/pdf-41.png", "visual_status": "checked"},
+      {"textbook_page": 31, "pdf_page": 42, "ocr_text": "work/boya-intermediate/extractions/ocr-lesson-02/page-042.txt", "page_image": "work/boya-intermediate/extractions/pages-preview/pdf-42.png", "visual_status": "checked"}
+    ]
+  },
+  "qr_source": {
+    "path": "Giáo trình/博雅汉语听说-中级冲刺篇/二维码/第02课.png",
+    "sha256": "67177deb3d8a75439a2cc31dabae4dddfeef00bebbc4a8c5ca941a40bddb9668",
+    "detection_record": "Giáo trình/博雅汉语听说-中级冲刺篇/二维码/检测记录/第02课.检测.txt",
+    "payload": "http://qr71.cn/oaAEJW/qfly6NC",
+    "status": "decoded"
+  },
+  "audio": {
+    "root": "Giáo trình/博雅汉语听说-中级冲刺篇/音频/第02课",
+    "provenance": "Giáo trình/博雅汉语听说-中级冲刺篇/音频/第02课/下载来源.md",
+    "count": 12,
+    "mapping_status": "pending_content_review",
+    "tracks": [
+      {"file": "1-1.mp3", "duration_seconds": 63.869, "sha256": "769f47e24db77b0a717548265de4eb5fd71d4da26e7533eec3ad71423f6713bc", "printed_label_evidence": "教材第17页词语", "mapping_status": "pending_review"},
+      {"file": "1-2.mp3", "duration_seconds": 106.632, "sha256": "219d414f64024a162bd5109409815a427672c8956f07d29d6a18a757d9bffde0", "printed_label_evidence": "教材第19页听对话，回答问题", "mapping_status": "pending_review"},
+      {"file": "1-3.mp3", "duration_seconds": 52.297, "sha256": "1978495f9f0513620f1ab30dbb756a413b517e722b9980d0044495cd0c84b158", "printed_label_evidence": "教材第19–20页选出与所听到的句子意思相近的一项", "mapping_status": "pending_review"},
+      {"file": "1-4.mp3", "duration_seconds": 54.387, "sha256": "5f713b9cfccde23875527dd54e4eb24f1859db8922e79dada5405e092f62bfde", "printed_label_evidence": "教材第20页语句理解", "mapping_status": "pending_review"},
+      {"file": "1-5.mp3", "duration_seconds": 41.796, "sha256": "c44f5535a34adc73cfe9ad94c6110b2f0e9dd810aad32576e04cba42b8966b7a", "printed_label_evidence": "教材第20页听记句子并复述", "mapping_status": "pending_review"},
+      {"file": "1-6.mp3", "duration_seconds": 202.684, "sha256": "1a1c7973f96bdbc5f7f053f00d5ef94d9a11580edfa446ffedc375b51a126ee3", "printed_label_evidence": "教材第21页语段理解", "mapping_status": "pending_review"},
+      {"file": "2-1.mp3", "duration_seconds": 56.895, "sha256": "d72c605ec430e6129e63ee74f54a95351886fb25506c857fdcc83b8338708a23", "printed_label_evidence": "教材第25页词语", "mapping_status": "pending_review"},
+      {"file": "2-2.mp3", "duration_seconds": 92.186, "sha256": "6cf17fbc435559c3d295d63538411f1bcffae2bb94745691499fda01891424ea", "printed_label_evidence": "教材第26页听对话，回答问题", "mapping_status": "pending_review"},
+      {"file": "2-3.mp3", "duration_seconds": 55.171, "sha256": "46ea074c751ef871054d9df53b3d79c12504815c6b231e2248b544beec65b2d1", "printed_label_evidence": "教材第26–27页选出与所听到的句子意思相近的一项", "mapping_status": "pending_review"},
+      {"file": "2-4.mp3", "duration_seconds": 56.451, "sha256": "549b80928a18c818df7d40776a0249e67f685d4e0a59dd246100e4383a54f84c", "printed_label_evidence": "教材第27页语句理解", "mapping_status": "pending_review"},
+      {"file": "2-5.mp3", "duration_seconds": 50.051, "sha256": "45572a8677a74b81ac1d6aa396e35b5bb4bddc47d31b9de9ee1c6c4d6ed987d3", "printed_label_evidence": "教材第28页听录音，填空并谈谈自己的感受", "mapping_status": "pending_review"},
+      {"file": "2-6.mp3", "duration_seconds": 200.255, "sha256": "f7dff43089e614dac58c894ec646d1df2e70315337fb22c3f044abfb4f7b37b0", "printed_label_evidence": "教材第28–29页语段理解", "mapping_status": "pending_review"}
+    ]
+  },
+  "visually_confirmed_inventory": {
+    "lesson_title": "第2课 真正的朋友",
+    "textbook_page_range": "17–31",
+    "section_headers": [
+      "听说（一）",
+      "词语理解",
+      "语句理解",
+      "语段理解",
+      "口语句式",
+      "文化知识",
+      "拓展练习",
+      "听说（二）"
+    ],
+    "vocabulary_sets": [
+      {
+        "audio_label": "1-1",
+        "textbook_page": 17,
+        "items": [
+          {"index": 1, "hanzi": "知音", "pinyin": "zhīyīn"},
+          {"index": 2, "hanzi": "知己", "pinyin": "zhījǐ"},
+          {"index": 3, "hanzi": "感叹", "pinyin": "gǎntàn"},
+          {"index": 4, "hanzi": "大多", "pinyin": "dàduō"},
+          {"index": 5, "hanzi": "可遇不可求", "pinyin": "kě yù bù kě qiú", "marked": true},
+          {"index": 6, "hanzi": "算得上", "pinyin": "suàndeshàng"},
+          {"index": 7, "hanzi": "蛮", "pinyin": "mán"},
+          {"index": 8, "hanzi": "品学兼优", "pinyin": "pǐnxué-jiānyōu", "marked": true},
+          {"index": 9, "hanzi": "排练", "pinyin": "páiliàn"},
+          {"index": 10, "hanzi": "不再", "pinyin": "bú zài"},
+          {"index": 11, "hanzi": "无非", "pinyin": "wúfēi"}
+        ],
+        "status": "visually_checked"
+      },
+      {
+        "audio_label": "1-1",
+        "textbook_page": 18,
+        "items": [
+          {"index": 12, "hanzi": "难得", "pinyin": "nándé", "marked": true},
+          {"index": 13, "hanzi": "转眼", "pinyin": "zhuǎnyǎn"},
+          {"index": 14, "hanzi": "喜出望外", "pinyin": "xǐchūwàngwài", "marked": true},
+          {"index": 15, "hanzi": "节奏", "pinyin": "jiézòu", "marked": true},
+          {"index": 16, "hanzi": "充实", "pinyin": "chōngshí", "marked": true},
+          {"index": 17, "hanzi": "迷", "pinyin": "mí"},
+          {"index": 18, "hanzi": "协会", "pinyin": "xiéhuì"},
+          {"index": 19, "hanzi": "（爱好）者", "pinyin": "（àihào）zhě"},
+          {"index": 20, "hanzi": "亭子", "pinyin": "tíngzi"},
+          {"index": 21, "hanzi": "琴", "pinyin": "qín"},
+          {"index": 22, "hanzi": "足够", "pinyin": "zúgòu"}
+        ],
+        "status": "visually_checked"
+      },
+      {
+        "audio_label": "2-1",
+        "textbook_page": 25,
+        "items": [
+          {"index": 1, "hanzi": "彼此", "pinyin": "bǐcǐ"},
+          {"index": 2, "hanzi": "首选", "pinyin": "shǒuxuǎn"},
+          {"index": 3, "hanzi": "着想", "pinyin": "zhuóxiǎng"},
+          {"index": 4, "hanzi": "高尚", "pinyin": "gāoshàng", "marked": true},
+          {"index": 5, "hanzi": "患难", "pinyin": "huànnàn"},
+          {"index": 6, "hanzi": "屈指可数", "pinyin": "qūzhǐ-kěshǔ"},
+          {"index": 7, "hanzi": "见死不救", "pinyin": "jiànsǐ-bùjiù"},
+          {"index": 8, "hanzi": "疑神疑鬼", "pinyin": "yíshén-yíguǐ"},
+          {"index": 9, "hanzi": "信任", "pinyin": "xìnrèn"},
+          {"index": 10, "hanzi": "从何谈起", "pinyin": "cóng hé tán qǐ"},
+          {"index": 11, "hanzi": "和睦相处", "pinyin": "hémù-xiāngchǔ"},
+          {"index": 12, "hanzi": "结交", "pinyin": "jiéjiāo"},
+          {"index": 13, "hanzi": "幽默", "pinyin": "yōumò", "marked": true},
+          {"index": 14, "hanzi": "趣味", "pinyin": "qùwèi", "marked": true},
+          {"index": 15, "hanzi": "落难", "pinyin": "luònàn"},
+          {"index": 16, "hanzi": "境界", "pinyin": "jìngjiè", "marked": true}
+        ],
+        "status": "visually_checked"
+      },
+      {
+        "audio_label": "2-1",
+        "textbook_page": 26,
+        "items": [
+          {"index": 17, "hanzi": "毫无疑问", "pinyin": "háowú-yíwèn"},
+          {"index": 18, "hanzi": "顺境", "pinyin": "shùnjìng"},
+          {"index": 19, "hanzi": "人间", "pinyin": "rénjiān"},
+          {"index": 20, "hanzi": "人生", "pinyin": "rénshēng"}
+        ],
+        "status": "visually_checked"
+      }
+    ],
+    "page_activity_map": [
+      {"textbook_page": 17, "pdf_page": 28, "content": "课名、听说（一）、课前准备、词语1–11、音频1-1"},
+      {"textbook_page": 18, "pdf_page": 29, "content": "词语12–22、三分钟演讲准备、朋友名言名句5条"},
+      {"textbook_page": 19, "pdf_page": 30, "content": "小调查、词语理解音频1-2问题、音频1-3选择题1–4"},
+      {"textbook_page": 20, "pdf_page": 31, "content": "音频1-3选择题5、三至五句话回答5题、音频1-4跟读与看法、音频1-5听记并复述"},
+      {"textbook_page": 21, "pdf_page": 32, "content": "语段内容提示、音频1-6填空5题／判断3题／听后回答2题"},
+      {"textbook_page": 22, "pdf_page": 33, "content": "口语句式4项、句式练习第1题"},
+      {"textbook_page": 23, "pdf_page": 34, "content": "句式练习第2–4题、文化知识请你说说、俞伯牙阅读短文起始"},
+      {"textbook_page": 24, "pdf_page": 35, "content": "俞伯牙阅读短文续、读后回答2题、拓展练习4项"},
+      {"textbook_page": 25, "pdf_page": 36, "content": "听说（二）、词语1–16、查资料、课堂小组交流、音频2-2问题、音频2-3选择题起始"},
+      {"textbook_page": 26, "pdf_page": 37, "content": "词语17–20、音频2-2问题、音频2-3选择题起始与课堂小组交流"},
+      {"textbook_page": 27, "pdf_page": 38, "content": "音频2-3选择题续、三至五句话回答6题、音频2-4替换画线词语5题"},
+      {"textbook_page": 28, "pdf_page": 39, "content": "音频2-5填空并谈感受4题、语段内容提示、音频2-6填空5题／判断题起始"},
+      {"textbook_page": 29, "pdf_page": 40, "content": "音频2-6判断题续／听后回答、口语句式3项"},
+      {"textbook_page": 30, "pdf_page": 41, "content": "句式练习3题、文化知识请你说说、儒家思想阅读短文起始"},
+      {"textbook_page": 31, "pdf_page": 42, "content": "阅读短文续、读后回答2题、文化对比、拓展练习4项"}
+    ]
+  },
+  "answer_policy": "扫描教材未提供完整答案；来源审核阶段只记录题干、教材明确示例与音频对应，不补写唯一标准答案。",
+  "pending_review": [
+    "完成结构化快照中全部词语、课文、句式、练习和拓展活动的逐页文字忠实度复核。",
+    "确认第一部分与第二部分的练习编号、题目边界和总 coverage 数量。",
+    "逐一听取12段音频，确认音频内容与教材区段的对应关系；当前仅有页面音频标签证据。",
+    "核对 OCR 与页面视觉差异，特别是拼音声调、词语分隔、填空线和题目标点。",
+    "确认开放题只保留教师提示／示例，不生成教材未提供的标准答案。",
+    "来源批准前不开始 PBI 教学重组、教师手册、学生配套、storyboard、prototype 或 PPTX。"
+  ],
+  "review_evidence": {
+    "markdown": "lessons/lesson-02/00-source/source-review.md",
+    "structured_source": "work/boya-intermediate/extractions/structured-lesson-02.json",
+    "structured_source_sha256": "c71b868c565d3f1c1eb9ee18daa7ac1b2c6e7ded7e282577f6143e8e60cc8bf4",
+    "source_qa_summary": "结构化快照已记录63个区段、42个词语、7个句式、38项练习、4笔阅读／内容提示与12段音频；source_qa仍为pending。",
+    "pdf_page_images": "work/boya-intermediate/extractions/pages-preview/pdf-28.png through pdf-42.png",
+    "ocr_pages": "work/boya-intermediate/extractions/ocr-lesson-02/page-028.txt through page-042.txt",
+    "source_index": "Giáo trình/博雅汉语听说-中级冲刺篇/教材资料索引.md",
+    "qr_detection": "Giáo trình/博雅汉语听说-中级冲刺篇/二维码/检测记录/第02课.检测.txt"
+  }
+}

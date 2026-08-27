@@ -17,7 +17,7 @@ const pptxPath = path.join(outputDir, 'lesson-01-visual-prototype.pptx');
 
 const W = 13.333;
 const H = 7.5;
-const FONT = 'SimHei';
+const FONT = projectConfig.font_policy?.cjk || 'KaiTi';
 const COLORS = {
   paper: 'F8FAFC',
   paperWarm: 'FCFBF7',
@@ -144,7 +144,7 @@ function addAudioButton(slide, label, x, y, color = COLORS.coral) {
     fill: { color },
     line: { color, transparency: 100 }
   });
-  addText(slide, `▶  ${label}`, x + 0.13, y + 0.06, 1.7, 0.4, {
+  addText(slide, `>  ${label}`, x + 0.13, y + 0.06, 1.7, 0.4, {
     fontSize: 17,
     color: COLORS.white,
     bold: true,

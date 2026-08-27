@@ -34,10 +34,9 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
 
-FONT = "Times New Roman"
-# Use a font installed on macOS and available to Word/LibreOffice so Chinese
-# remains readable when a teacher opens or previews the editable DOCX.
-CJK_FONT = "Microsoft YaHei"
+FONT = CONFIG.get("font_policy", {}).get("latin", "Times New Roman")
+# Use the standard cross-platform CJK face required for delivery packages.
+CJK_FONT = CONFIG.get("font_policy", {}).get("cjk", "KaiTi")
 INK = "17324D"
 ACCENT = "2E74B5"
 DARK_ACCENT = "1F4D78"
@@ -58,6 +57,7 @@ def set_run_font(run, size: float = 12, color: str = INK, bold: bool | None = No
     r_pr.rFonts.set(qn("w:ascii"), FONT)
     r_pr.rFonts.set(qn("w:hAnsi"), FONT)
     r_pr.rFonts.set(qn("w:eastAsia"), CJK_FONT)
+    r_pr.rFonts.set(qn("w:cs"), FONT)
     lang = r_pr.find(qn("w:lang"))
     if lang is None:
         lang = OxmlElement("w:lang")
@@ -181,6 +181,7 @@ def set_page(document: Document) -> None:
     normal._element.rPr.rFonts.set(qn("w:ascii"), FONT)
     normal._element.rPr.rFonts.set(qn("w:hAnsi"), FONT)
     normal._element.rPr.rFonts.set(qn("w:eastAsia"), CJK_FONT)
+    normal._element.rPr.rFonts.set(qn("w:cs"), FONT)
     normal.font.size = Pt(12)
     normal.font.color.rgb = rgb(INK)
     normal.paragraph_format.space_after = Pt(6)
@@ -197,6 +198,7 @@ def set_page(document: Document) -> None:
         style._element.rPr.rFonts.set(qn("w:ascii"), FONT)
         style._element.rPr.rFonts.set(qn("w:hAnsi"), FONT)
         style._element.rPr.rFonts.set(qn("w:eastAsia"), CJK_FONT)
+        style._element.rPr.rFonts.set(qn("w:cs"), FONT)
         style.font.size = Pt(size)
         style.font.color.rgb = rgb(color)
         style.font.bold = style_name != "Title"
@@ -278,7 +280,7 @@ def add_bulleted(document: Document, items: Sequence[str]) -> None:
         p.paragraph_format.left_indent = Inches(0.28)
         p.paragraph_format.first_line_indent = Inches(-0.18)
         set_paragraph(p, after=4, line_spacing=1.2)
-        run = p.add_run(f"• {item}")
+        run = p.add_run(f"· {item}")
         set_run_font(run, size=12, color=INK)
 
 

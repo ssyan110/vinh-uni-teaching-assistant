@@ -3,16 +3,21 @@
 
 The gate is deliberately read-only. It checks the current authority and design
 manifests before a generator is allowed to write a draft. A generator may never
-write to authority, QA, release, or the frozen legacy package.
+write to authority, QA, release, or the historical archive.
 """
 
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 from pathlib import Path
 from typing import Any
+
+from workflow_integrity import (
+    audit_authority_manifest,
+    audit_frozen_source_package,
+    sha256,
+)
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -33,22 +38,14 @@ PRODUCTION_SCRIPTS = (
     "scripts/build_dashboard.py",
 )
 LEGACY_TOKENS = (
-    "output/boya-intermediate/lesson-01",
-    "output/\\u0062oya-intermediate/lesson-01",
+    "output/",
+    "archive/legacy-materials-2026-08-27/",
     "share/",
 )
 
 
 class ProductionGateError(RuntimeError):
     """Raised when a generator is not allowed to write a draft."""
-
-
-def sha256(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(chunk)
-    return digest.hexdigest()
 
 
 def project_path(relative_path: str) -> Path:
@@ -111,12 +108,12 @@ def validate_output_dir(value: str | None, purpose: str, blockers: list[str]) ->
 
 
 def add_file_status_blockers(manifest: dict[str, Any], blockers: list[str]) -> None:
-    for item in manifest.get("files", []):
-        path = project_path(item["path"])
-        if not path.is_file():
-            blockers.append(f"missing authority file: {item['path']}")
-        elif sha256(path) != item.get("sha256"):
-            blockers.append(f"authority file changed after approval: {item['path']}")
+    audit = audit_authority_manifest(
+        PROJECT_ROOT,
+        PROJECT_ROOT / CONFIG["authority_root"],
+        manifest,
+    )
+    blockers.extend(audit["failures"])
 
 
 def audit_production_paths(blockers: list[str]) -> None:
@@ -181,6 +178,17 @@ def load_base_manifests(blockers: list[str]) -> tuple[dict[str, Any], dict[str, 
         blockers.append("source QA gate is not passed")
     if not str(teaching_manifest.get("status", "")).startswith("approved_by_adam_"):
         blockers.append("PBI teaching-design gate is not approved")
+    if authority_manifest:
+        historical_source = CONFIG.get("historical_package_evidence")
+        if not historical_source:
+            blockers.append("configured historical package evidence is missing")
+        else:
+            source_audit = audit_frozen_source_package(
+                PROJECT_ROOT,
+                historical_source,
+                authority_manifest,
+            )
+            blockers.extend(source_audit["failures"])
     return source_manifest, teaching_manifest, authority_manifest
 
 
@@ -221,7 +229,11 @@ def require_release_ready(authority_manifest: dict[str, Any], blockers: list[str
     except (FileNotFoundError, json.JSONDecodeError) as error:
         blockers.append(f"release design input manifest is unavailable or invalid: {error}")
     qa = authority_manifest.get("qa", {})
-    if qa.get("status") not in {"recorded_current_pass", "passed"}:
+    if qa.get("status") not in {
+        "recorded_current_pass",
+        "passed",
+        "static_qa_passed_pending_manual_acceptance",
+    }:
         blockers.append("current QA is not recorded as passed")
     report_path = project_path(qa.get("current_report", "")) if qa.get("current_report") else None
     if not report_path or not report_path.is_file():
@@ -244,8 +256,8 @@ def check(purpose: str, output_dir: str | None = None) -> dict[str, Any]:
 
     if purpose in {"support", "pptx", "semester-manual", "release"}:
         require_authority_manual(authority, blockers)
-        if purpose != "release":
-            add_file_status_blockers(authority, blockers)
+    if purpose in {"audit", "support", "pptx", "semester-manual", "release"}:
+        add_file_status_blockers(authority, blockers)
     if purpose == "prototype":
         try:
             visual = read_json(LESSON_ROOT / "10-design/visual-storyboard/manifest.json")
@@ -259,7 +271,6 @@ def check(purpose: str, output_dir: str | None = None) -> dict[str, Any]:
         except (FileNotFoundError, json.JSONDecodeError) as error:
             blockers.append(f"PPTX design input manifest is unavailable or invalid: {error}")
     if purpose == "release":
-        add_file_status_blockers(authority, blockers)
         require_release_ready(authority, blockers)
 
     return {

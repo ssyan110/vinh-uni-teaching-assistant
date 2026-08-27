@@ -1,0 +1,42 @@
+{
+  "task_card_schema_version": "1.0",
+  "status": "template_pending_teacher_approval",
+  "card_rules_zh_tw": [
+    "核心資訊與補充資訊必須在評量前區分。",
+    "追問必須根據對方剛才的回答產生。",
+    "本次任務應設計自然的確認、澄清或資訊協商機會。",
+    "Presentational 的理由與例子數量必須預先公布。"
+  ],
+  "cards": [
+    {
+      "task_id": "L1-P4-A1",
+      "lesson": 1,
+      "theme_zh_cn": "中国人的姓名",
+      "title_zh_cn": "起名儿公司",
+      "status": "draft_pending_teacher_approval",
+      "communication_context_zh_cn": "学生扮演命名顾问与客户，先确认条件，再提出中文姓名并说明理由。",
+      "target_functions": ["确认条件", "提出建议", "说明理由", "回答追问"],
+      "core_information": {"items": [], "status": "teacher_must_fill_before_scoring"},
+      "supplementary_information": {"items": [], "status": "teacher_must_fill_before_scoring"},
+      "evidence_requirement": {"count": 2, "status": "proposed_default_pending_approval", "description_zh_cn": "指出两处支持判断的音频或文本信息。"},
+      "interaction_requirement": {"questions": "teacher_fill", "answers": "teacher_fill", "follow_up": 1, "repair_opportunity": 1, "status": "proposed_default_pending_approval"},
+      "presentational_requirement": {"reasons_or_support": 2, "target_discourse": "相连句子或短段落", "status": "proposed_default_pending_approval"},
+      "individual_evidence": ["个人理解任务单", "个人对话回合记录或录音", "个人姓名建议与理由说明"],
+      "attempts": ["A1", "A2"],
+      "allowed_resources": "teacher_fill",
+      "approval_questions": ["核心条件有哪些？", "补充信息有哪些？", "播放次数与准备时间是多少？", "各角色如何轮换？"]
+    },
+    {
+      "task_id": "L1-P6",
+      "lesson": 1,
+      "theme_zh_cn": "中国人的姓名",
+      "title_zh_cn": "第六节迁移检查",
+      "status": "pending_teacher_decision",
+      "position_options": ["revision_only", "parallel_feedback", "presentational_only", "formative_only"],
+      "current_evidence_description_zh_tw": "規格只確認需要新輸入、個人證據與自然互動機會，未替教師宣布 P6 為完整回饋點。",
+      "required_decision": "teacher_select_one_position_option",
+      "individual_evidence": ["teacher_fill"],
+      "attempts": ["A1", "A2"]
+    }
+  ]
+}

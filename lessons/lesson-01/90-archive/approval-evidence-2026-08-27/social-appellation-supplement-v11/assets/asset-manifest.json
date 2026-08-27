@@ -1,0 +1,127 @@
+{
+  "generated_by": "OpenAI image generation",
+  "style_reference": "第一课20-approved/pptx/第一课-中国人的姓名.pptx",
+  "policy": "生成插画不含可读文字；中文字由 PPT 原生文字添加。",
+  "files": {
+    "parents": {
+      "file": "assets/name-parents.png",
+      "sha256": "fb1f17df6c267e1e80ac43173e36ea4c1b182afee58996a447d0b5fd1e92e9cb",
+      "embedded_in_pptx": true
+    },
+    "teacherStudent": {
+      "file": "assets/teacher-student.png",
+      "sha256": "ece62af3bfed8f87ef739f58c3d9c17af5ff823c48128c9b462c9d03823f8cc7",
+      "embedded_in_pptx": true
+    },
+    "reading": {
+      "file": "assets/reading-speaking.png",
+      "sha256": "c4774341a293bd06f7a4444f0cfa16528f2517b24aef0f57f6f93d16deca0519",
+      "embedded_in_pptx": true
+    },
+    "group": {
+      "file": "assets/group-discussion.png",
+      "sha256": "c9f926de5a078be9861e57bd71a0c770477fa95e452a2df6b8e7330642003df9",
+      "embedded_in_pptx": true
+    },
+    "service": {
+      "file": "assets/service-worker.png",
+      "sha256": "3ad2f0ba5ad1b69424279ec472effa3651acb6437fe4739004a5b39e5506574f",
+      "embedded_in_pptx": true
+    },
+    "safeAddress": {
+      "file": "assets/safe-address.png",
+      "sha256": "aff08c11c79890d7371f91a062571334f35f9f2171679a791f8ddf0066718958",
+      "embedded_in_pptx": true
+    },
+    "surnameTeacher": {
+      "file": "assets/surname-teacher.png",
+      "sha256": "cc40be1207bb0f31f9344ed624227aee04969083cb203fffa317de936aedb97b",
+      "embedded_in_pptx": true
+    },
+    "surnameDoctor": {
+      "file": "assets/surname-doctor.png",
+      "sha256": "602f77d7c1726bd05a6025e83f706e892199cc3ab8588da5733f09e80834a747",
+      "embedded_in_pptx": true
+    },
+    "surnameDirector": {
+      "file": "assets/surname-director.png",
+      "sha256": "42fa843857f14070dd920a083375fdd27fb2ab3ad3d3ec209ba0da040678036b",
+      "embedded_in_pptx": true
+    },
+    "surnameStudent": {
+      "file": "assets/surname-student.png",
+      "sha256": "6e76338db2c9c796fdee2cc2923575adfd220c10738a894a9f8feba9b7e7c266",
+      "embedded_in_pptx": true
+    },
+    "familiarName": {
+      "file": "assets/familiar-name.png",
+      "sha256": "627c2db57c3d9c981ceda4be6f3cb7eef0bb43a19b2b3cc335fb48765ca6c5bc",
+      "embedded_in_pptx": true
+    },
+    "familiarSmall": {
+      "file": "assets/familiar-small.png",
+      "sha256": "fdb26063982702084c91e9b53894d536a4f63cec114fd3289c620d2b769f5674",
+      "embedded_in_pptx": true
+    },
+    "familiarOld": {
+      "file": "assets/familiar-old.png",
+      "sha256": "07f0d40154e9cb36b6115a18e5d69ebb7f71b8422e0ed5b314120e4a9fa47fad",
+      "embedded_in_pptx": true
+    },
+    "familiarA": {
+      "file": "assets/familiar-a.png",
+      "sha256": "ed515a6f4e5c594051c9c71fc17aa138d0b2bc2a6a309c076c418913afb54fd9",
+      "embedded_in_pptx": true
+    },
+    "safeServer": {
+      "file": "assets/safe-server.png",
+      "sha256": "95baf628a6afce07d65832ee769bd1a7b9d708e91f9b964c1d609bf10f35241d",
+      "embedded_in_pptx": true
+    },
+    "safeMaster": {
+      "file": "assets/safe-master.png",
+      "sha256": "fad98ecc673dbcaa62c86351a4ce277721f94f1909a9d329276d015fe2dc4a7a",
+      "embedded_in_pptx": true
+    },
+    "safeMs": {
+      "file": "assets/safe-ms.png",
+      "sha256": "a80ce5948a54fe86ac8e73383930394d563cb20dc0fd6bfca3277ded35b8cbdb",
+      "embedded_in_pptx": true
+    },
+    "safeMr": {
+      "file": "assets/safe-mr.png",
+      "sha256": "ded29cd9f6d692bde36cab4795effb50c2dcb5271ab96304664277c853b97685",
+      "embedded_in_pptx": true
+    },
+    "nameAdvisor": {
+      "file": "assets/name-advisor.png",
+      "sha256": "d1b21f417f1f3e023ab5c8bf111e8b3ca08088384ee953c5b199ee976146da96",
+      "embedded_in_pptx": true
+    },
+    "nameBlessing": {
+      "file": "assets/name-blessing.png",
+      "sha256": "97aba81b87d0ffb59c98187cd2a64cd4d8f40b1c0d3d14b20fc5cba9ed6d3f4a",
+      "embedded_in_pptx": true
+    },
+    "nameSelect": {
+      "file": "assets/name-select.png",
+      "sha256": "e2d018bf7e249b10b444f765c202a91c15fdacda48789355cdfc640c54989bf4",
+      "embedded_in_pptx": true
+    },
+    "askSurname": {
+      "file": "assets/ask-surname.png",
+      "sha256": "af94c042118aa5dc10ac50d459fce661d1404752611250f19ed19703b1fa18c4",
+      "embedded_in_pptx": true
+    },
+    "askAddress": {
+      "file": "assets/ask-address.png",
+      "sha256": "7b510b26c136eb5188b88ffcbafe5df96ad04b640457968fb84319aca8e57b1f",
+      "embedded_in_pptx": true
+    },
+    "quizCompare": {
+      "file": "assets/quiz-compare.png",
+      "sha256": "599abed8a78248aaea7bb0296a5b45f904ad9aa868996e07acc2b9407ef5752b",
+      "embedded_in_pptx": true
+    }
+  }
+}

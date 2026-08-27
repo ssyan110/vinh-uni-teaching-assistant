@@ -1,0 +1,484 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-08-27T05:11:21+00:00",
+  "project_root": "/Users/ssyan110/Development/vinh-uni-teaching-assistant",
+  "lesson_id": "lesson-01",
+  "lesson_title": "中国人的姓名",
+  "authority_status": "final_confirmed",
+  "teacher_manual_status": "final_confirmed",
+  "status": "blocked",
+  "classroom_ready": false,
+  "summary": {
+    "errors": 2,
+    "warnings": 10,
+    "info": 1,
+    "artifacts_scanned": 29
+  },
+  "existing_production_gate": {
+    "purpose": "audit",
+    "status": "blocked",
+    "output_dir": null,
+    "blockers": [
+      "frozen source package tree hash mismatch"
+    ]
+  },
+  "limitations": [
+    "Static OOXML checks do not replace opening the deck in Microsoft PowerPoint.",
+    "DOCX blank-page checks detect explicit page-break segments; pagination still requires rendered or print review.",
+    "Audio signatures and relationships are checked, but semantic listening and real playback remain human checks.",
+    "Font and boundary checks report deterministic declarations; projection readability still needs manual acceptance."
+  ],
+  "artifacts": [
+    {
+      "path": "lessons/lesson-01/00-source/source-manifest.json",
+      "kind": "source_manifest",
+      "status": "scanned",
+      "sha256": "992b4a59d47652ff6468c9de5534c1d0fa8b1ce2c6d8477d51fc797c573dd8f6",
+      "bytes": 1775,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/lesson-manifest.json",
+      "kind": "authority_manifest",
+      "status": "scanned",
+      "sha256": "9c07e5d17c28984726fa9210ccc858d345a49078e6b7a8146473dc9d2eb9fe43",
+      "bytes": 12919,
+      "details": {}
+    },
+    {
+      "path": "work/boya-intermediate/extractions/structured-lesson-01.json",
+      "kind": "canonical_lesson_json",
+      "status": "scanned",
+      "sha256": "0e7c9ced06b7c6e80278b07f3721788de88494b495618705618f6f47f56ab84e",
+      "bytes": 69938,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/00-第一课活动材料索引.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "9eb17b0bb84f39f5c464c139f71e70a383de710def0635085157e014bc0778f8",
+      "bytes": 40175,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/活动01-姓名访谈/00-教师速用说明.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "90bb8f8d26b84f2839f2ee0f78c3f7aebd09c87e8f83770686d6ae17b1bbd275",
+      "bytes": 39909,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/活动01-姓名访谈/01-角色卡-访谈者.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "ddaa05449fdbddf8479ebe9b4352368da04971a3fc6558d7622a125ab427998a",
+      "bytes": 39889,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/活动01-姓名访谈/02-角色卡-回答者.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "564ddde7dd5e6bd9061010f5285f984bfd002220bfda70785b94ca975f130636",
+      "bytes": 39454,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/活动01-姓名访谈/03-角色卡-观察者.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "1eaa55a0a906ef682b9a854534d6021388e6dda5597d35a9a4b5659cd58d9337",
+      "bytes": 39790,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/活动02-起名儿公司/00-教师速用说明.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "cfe7e81956ccc54585474cc4d30d26d50c6bd2033105e66622667d79ccb8da7a",
+      "bytes": 39987,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/活动02-起名儿公司/01-活动步骤卡.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "d613e4a1ff9a6370bed2d97634b6f364bd97f2891fb43ba6833f7f52d8f5d411",
+      "bytes": 39667,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/活动02-起名儿公司/02-角色卡-客户.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "c7fa521e0a267bcdd5ee5e248f46b12aa156b5448e256feaa9ee04c11741fe46",
+      "bytes": 40470,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/活动02-起名儿公司/03-角色卡-命名顾问.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "70c5d844aad49c7c36e693f2cc28d77b47158eb9dab34d4fc88d997593be63d5",
+      "bytes": 39977,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/活动02-起名儿公司/04-角色卡-记录员.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "a8e9ae3ada79559b610b9882bab775c27a92134ffa07712fe40c7aa9bdb4fb5f",
+      "bytes": 39554,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/活动02-起名儿公司/05-角色卡-观察员.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "cba4bbba035fbb7aaaaa125544344b87b44bfe536dda9f4507e0159f525372b7",
+      "bytes": 39512,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/活动03-电影演员中文名/00-教师速用说明.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "778f69e4ddf8d80464ae2027f6ea18a58913fea10d748e91afe4982d9c4fb74a",
+      "bytes": 39804,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/活动03-电影演员中文名/01-演员卡与小组呈现卡.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "06fce698d1ea34100d1b4a1e9b93aafd851aa6cd3d109ffe2bc6cf3ab05b8192",
+      "bytes": 40207,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/活动04-姓氏信息站/00-教师速用说明.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "149df27dd0f5e92618ecde873a03b826623b5b824713f9d2966b648694c30a19",
+      "bytes": 40073,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/活动04-姓氏信息站/01-句式任务卡.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "83fada623615b01507918e64058895cc4b2abceb9b0e2c9a11cd7b36473152f5",
+      "bytes": 39746,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/活动04-姓氏信息站/02-文化比较卡.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "ca651ca281851c9c2584c8fac019177cf734cb0673baa3f6b9254afd894d4739",
+      "bytes": 39644,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/活动04-姓氏信息站/03-课文重点记录卡.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "244769486bf23b5c1e07c14311f302a8f296477f5a1f4d898832df6ccb87bf1c",
+      "bytes": 27904,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/活动04-姓氏信息站/07-姓氏读法卡.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "fef2050b7e74e0c9a2892aa05a45796088aa38b2b5df7fc1e9ce5d587c763082",
+      "bytes": 39623,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/活动04-姓氏信息站/08-对话总结记录.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "f216a7cbe06a6991e3070510910e1c117c71996d2171d6346bddfd0040dafe80",
+      "bytes": 39869,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/活动05-调查与研究/00-教师速用说明.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "18be6332e0fb6f0867360c8af2f89a1c08c1b10f093a5a9b8984abe9458ed190",
+      "bytes": 39874,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/活动05-调查与研究/01-姓名调查表.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "f0bcafe46c444b8d3e14ed17a7969a5f6f5f8afe6b2480009528632c483dfa96",
+      "bytes": 39686,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/activities/活动05-调查与研究/02-小组报告大纲.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "7736cd1386edeade60c3525086511414b544e37e5f2842e3f26663e4cfbdce56",
+      "bytes": 39786,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/pptx/第一课-中国人的姓名.pptx",
+      "kind": "pptx",
+      "status": "scanned",
+      "sha256": "92ec8fe6dbee4441399a6930f241aa4c5922a9549708f45c06f1a6047016090d",
+      "bytes": 78069916,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/20-approved/teacher-manual/第一课简易教案.docx",
+      "kind": "docx",
+      "status": "scanned",
+      "sha256": "6cbfbb7c9ea522a3b0317feb50fcb613be01fdc14b834685fc2d334b7856d638",
+      "bytes": 29826,
+      "details": {}
+    },
+    {
+      "path": "lessons/lesson-01/10-design/support-draft/blooket/lesson-01/lesson-01_vocab_blooket.csv",
+      "kind": "blooket_csv",
+      "status": "scanned",
+      "sha256": "3b74c487d64b1f13e781c0f16459506f791f94838354a14e9efaad63cf42b626",
+      "bytes": 9087,
+      "details": {}
+    },
+    {
+      "path": "classroom-tools/nine-grid-lesson-01/dist",
+      "kind": "nine_grid_bundle",
+      "status": "scanned",
+      "sha256": null,
+      "bytes": null,
+      "details": {}
+    }
+  ],
+  "findings": [
+    {
+      "severity": "error",
+      "code": "missing_qa_evidence",
+      "path": "lessons/lesson-01/20-approved/lesson-manifest.json",
+      "message": "QA evidence is missing: lessons/lesson-01/30-qa/current/pptx-v17/qa-report.md",
+      "location": "current_report",
+      "details": {}
+    },
+    {
+      "severity": "warning",
+      "code": "missing_qa_metadata",
+      "path": "lessons/lesson-01/20-approved/lesson-manifest.json",
+      "message": "QA metadata has no rehearsal_evidence path.",
+      "location": null,
+      "details": {}
+    },
+    {
+      "severity": "warning",
+      "code": "missing_qa_metadata",
+      "path": "lessons/lesson-01/20-approved/lesson-manifest.json",
+      "message": "QA metadata has no audio_playback_evidence path.",
+      "location": null,
+      "details": {}
+    },
+    {
+      "severity": "warning",
+      "code": "nested_review_status_inconsistent",
+      "path": "work/boya-intermediate/extractions/structured-lesson-01.json",
+      "message": "Lesson is verified, but 34 vocabulary record(s) retain non-verified review status.",
+      "location": "vocabulary",
+      "details": {
+        "status_counts": {
+          "pending_review": 34
+        }
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "nested_review_status_inconsistent",
+      "path": "work/boya-intermediate/extractions/structured-lesson-01.json",
+      "message": "Lesson is verified, but 5 texts_dialogues record(s) retain non-verified review status.",
+      "location": "texts_dialogues",
+      "details": {
+        "status_counts": {
+          "pending_review": 5
+        }
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "nested_review_status_inconsistent",
+      "path": "work/boya-intermediate/extractions/structured-lesson-01.json",
+      "message": "Lesson is verified, but 7 grammar_patterns record(s) retain non-verified review status.",
+      "location": "grammar_patterns",
+      "details": {
+        "status_counts": {
+          "pending_review": 7
+        }
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "nested_review_status_inconsistent",
+      "path": "work/boya-intermediate/extractions/structured-lesson-01.json",
+      "message": "Lesson is verified, but 35 exercises record(s) retain non-verified review status.",
+      "location": "exercises",
+      "details": {
+        "status_counts": {
+          "pending_review": 35
+        }
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "small_pptx_font",
+      "path": "lessons/lesson-01/20-approved/pptx/第一课-中国人的姓名.pptx",
+      "message": "74 slide(s) contain explicit text smaller than 16 pt.",
+      "location": null,
+      "details": {
+        "slides": {
+          "2": 11.0,
+          "4": 9.0,
+          "5": 9.0,
+          "7": 9.0,
+          "8": 9.0,
+          "9": 9.0,
+          "11": 9.0,
+          "12": 9.0,
+          "14": 9.0,
+          "15": 9.0,
+          "16": 9.0,
+          "17": 9.0,
+          "19": 9.0,
+          "20": 9.0,
+          "21": 9.0,
+          "22": 9.0,
+          "24": 9.0,
+          "25": 9.0,
+          "26": 9.0,
+          "27": 9.0,
+          "29": 9.0,
+          "30": 9.0,
+          "31": 9.0,
+          "32": 9.0,
+          "33": 9.0,
+          "35": 9.0,
+          "37": 9.0,
+          "38": 9.0,
+          "40": 9.0,
+          "41": 9.0,
+          "43": 9.0,
+          "44": 9.0,
+          "45": 9.0,
+          "47": 9.0,
+          "48": 9.0,
+          "49": 9.0,
+          "50": 9.0,
+          "52": 9.0,
+          "53": 9.0,
+          "54": 9.0,
+          "55": 9.0,
+          "57": 11.0,
+          "58": 11.0,
+          "59": 11.0,
+          "60": 11.0,
+          "62": 11.0,
+          "63": 11.0,
+          "64": 11.0,
+          "66": 11.0,
+          "67": 11.0,
+          "68": 11.0,
+          "70": 11.0,
+          "71": 11.0,
+          "72": 11.0,
+          "73": 11.0,
+          "74": 11.0,
+          "76": 11.0,
+          "77": 11.0,
+          "78": 11.0,
+          "79": 11.0,
+          "81": 11.0,
+          "82": 11.0,
+          "83": 11.0,
+          "84": 11.0,
+          "85": 11.0,
+          "86": 11.0,
+          "87": 11.0,
+          "88": 11.0,
+          "90": 9.0,
+          "91": 9.0,
+          "92": 9.0,
+          "93": 9.0,
+          "94": 9.0,
+          "95": 11.0
+        }
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "pptx_shape_out_of_bounds",
+      "path": "lessons/lesson-01/20-approved/pptx/第一课-中国人的姓名.pptx",
+      "message": "1 top-level shape(s) extend outside the declared slide canvas.",
+      "location": null,
+      "details": {
+        "examples": [
+          {
+            "slide": 88,
+            "shape_index": 24,
+            "x": 2743200,
+            "y": 6512011,
+            "cx": 184731,
+            "cy": 369332
+          }
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "blooket_requires_teacher_review",
+      "path": "lessons/lesson-01/10-design/support-draft/blooket/lesson-01/manifest.json",
+      "message": "Blooket content is review-stage and must not be treated as an approved answer key.",
+      "location": null,
+      "details": {
+        "status": "approved_by_adam_2026-08-27"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "nine_grid_lane_convention_present",
+      "path": "classroom-tools/nine-grid-lesson-01/dist/content/class-content.json",
+      "message": "Ordinary cells use vocabulary data; sentence/pattern work is represented as function-button exercises.",
+      "location": null,
+      "details": {
+        "vocabulary": 21,
+        "functions": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "nine_grid_requires_manual_acceptance",
+      "path": "classroom-tools/nine-grid-lesson-01/dist",
+      "message": "Offline nine-grid still requires manual projection and teacher acceptance before classroom use.",
+      "location": null,
+      "details": {}
+    },
+    {
+      "severity": "error",
+      "code": "existing_production_gate_blocked",
+      "path": "scripts/production_gate.py",
+      "message": "Existing production workflow audit is blocked.",
+      "location": null,
+      "details": {
+        "blockers": [
+          "frozen source package tree hash mismatch"
+        ]
+      }
+    }
+  ]
+}

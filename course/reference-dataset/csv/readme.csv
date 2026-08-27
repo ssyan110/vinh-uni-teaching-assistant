@@ -1,0 +1,14 @@
+﻿item,value
+dataset_name,博雅汉语听说·中级冲刺篇 I 本學期參考資料集
+dataset_version,1.0.0
+created_date,2026-08-25
+scope,第1–8課；詞語、句式、課文／對話、練習、音檔、教材段落、來源 QA 與跨課索引
+primary_format,XLSX multi-sheet workbook
+csv_note,CSV 不支援多工作表；csv/ 內每個 CSV 對應一個 XLSX 工作表
+source_policy,只使用 structured-lesson-01..08.json；保留 review/uncertainty 狀態
+translation_policy,未自行生成越南文、英文翻譯或唯一答案；待來源批准與教師審核
+lesson_1_status,passed
+lesson_2_to_8_status,source review materialized/pending review or Adam approval
+vocabulary_rows,394
+grammar_rows,52
+proposed_next_step,完成 P0 欄位：詞性、中文釋義、教師審核越南文、課本例句連結

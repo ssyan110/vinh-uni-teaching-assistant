@@ -2,7 +2,7 @@
 
 | 项目 | 结果 |
 | --- | --- |
-| 文件 | `output/boya-intermediate/lesson-01/pptx/lesson-01.pptx` |
+| 文件 | `archive/legacy-materials-2026-08-27/boya-intermediate/lesson-01/pptx/lesson-01.pptx` |
 | 投影片 | 62 张 |
 | 教材练习覆盖 | 35／35 |
 | 课堂音频 | 9 段、13 个播放页实例 |

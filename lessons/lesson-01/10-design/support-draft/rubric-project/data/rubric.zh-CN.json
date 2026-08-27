@@ -1,0 +1,347 @@
+{
+  "rubric": {
+    "id": "boya-pbi-semester-v1",
+    "title_zh_cn": "博雅汉语听说·中级冲刺篇 I 课堂学习表现反馈表——课程适配版",
+    "status": "course_adapted_formative_feedback_non_grading",
+    "official_actfl_rating": false,
+    "legal_notice_zh_cn": "本表用于课堂学习反馈，不用于学校成绩、正式评定或 ACTFL official rating；0–3 只表示学生在本次任务中表现出的学习状态，不换算为 ACTFL 等级。",
+    "scale": {
+      "values": [0, 1, 2, 3],
+      "special_codes": ["NR", "N/A"],
+      "actfl_level_mapping": null
+    },
+    "modes": {
+      "interpretive": {"criterion_count": 5, "criteria": ["I1", "I2", "I3", "I4", "I5"]},
+      "interpersonal": {"criterion_count": 5, "criteria": ["P1", "P2", "P3", "P4", "P5"]},
+      "presentational": {"criterion_count": 5, "criteria": ["PR1", "PR2", "PR3", "PR4", "PR5"]}
+    },
+    "task_completion": {
+      "max_score": 3,
+      "included_in_school_grade": false
+    },
+    "retry": {
+      "store_attempts_separately": true,
+      "default_policy": "keep_both"
+    },
+    "feedback_use": {
+      "school_grading": false,
+      "purpose_zh_cn": "帮助教师指出学生本次任务已经做到的地方、需要继续练习的地方，以及下一步可以尝试的行动。"
+    }
+  },
+  "criteria": [
+    {
+      "id": "I1",
+      "mode": "interpretive",
+      "title_zh_cn": "主旨与沟通目的",
+      "scores": {
+        "3": "能用一两个完整句准确说明材料的主要意思，并指出说话人的主要目的、立场或观点。",
+        "2": "主要意思正确，但说话人的目的、观点或范围有一处不清楚。",
+        "1": "只能说出主题、个别词语或零散信息，不能说明主要意思。",
+        "0": "没有回答，或回答与材料无关。"
+      },
+      "source_construct": "main idea／purpose",
+      "source_ids": ["S05", "S08"],
+      "source_pages_or_sections": "S05 印刷页 16；S08 页 14–17",
+      "task_specific_part": "本任务要求用一至两个完整句说明材料主要意思与说话人的目的、立场或观点。",
+      "adaptation_note_zh_tw": "0–3 切點為課程適配，不對應 ACTFL sublevel；本次任務須先明列材料與溝通目的。",
+      "student_language": "zh-CN"
+    },
+    {
+      "id": "I2",
+      "mode": "interpretive",
+      "title_zh_cn": "核心信息",
+      "scores": {
+        "3": "找出任务目标卡列出的全部核心信息，并正确说明重要的顺序、比较或关系。",
+        "2": "只遗漏或误解一项核心信息，整体理解没有改变。",
+        "1": "找出少量信息，但遗漏或误解的内容已经改变主要意思或任务条件。",
+        "0": "没有找出任何核心信息。"
+      },
+      "source_construct": "supporting details／key information",
+      "source_ids": ["S05", "S08"],
+      "source_pages_or_sections": "S05 印刷页 16；S08 页 14",
+      "task_specific_part": "核心信息由任务目标卡预先列出；补充信息与核心信息不得在评分后才决定。",
+      "adaptation_note_zh_tw": "核心資訊的數量與內容是 task-specific；0–3 切點不是 ACTFL 的通用門檻。",
+      "student_language": "zh-CN"
+    },
+    {
+      "id": "I3",
+      "mode": "interpretive",
+      "title_zh_cn": "音频／文本证据",
+      "scores": {
+        "3": "指出任务要求数量的具体词语、句子、时间点或内容；所有证据都能支持答案。",
+        "2": "至少有一处有效证据，但另一处不具体、不完整或不能完全支持答案。",
+        "1": "只能重复材料中的词语，但不能说明这些词语怎样支持答案。",
+        "0": "没有指出任何证据。"
+      },
+      "source_construct": "evidence／context clues",
+      "source_ids": ["S05", "S15"],
+      "source_pages_or_sections": "S05 印刷页 17；S15",
+      "task_specific_part": "证据数量、时间点、引用方式与材料版本由任务目标卡预先规定。",
+      "adaptation_note_zh_tw": "證據的數量與形式是課程適配；同伴告知答案後的重寫不能算獨立理解證據。",
+      "student_language": "zh-CN"
+    },
+    {
+      "id": "I4",
+      "mode": "interpretive",
+      "title_zh_cn": "信息关系与推论",
+      "scores": {
+        "3": "能说明任务要求的原因、结果、态度、比较、顺序或隐含意思，并指出判断线索。",
+        "2": "判断大致正确，但解释或支持线索不完整。",
+        "1": "只列出信息，不能说明关系；或主要依靠没有证据的猜测。",
+        "0": "没有相关回答。"
+      },
+      "source_construct": "inference／relationships",
+      "source_ids": ["S05", "S08"],
+      "source_pages_or_sections": "S05 印刷页 16–17；S08",
+      "task_specific_part": "本次材料要观察的原因、结果、态度、比较、顺序或隐含意思须写入任务目标卡。",
+      "adaptation_note_zh_tw": "關係與推論的類型依本次材料設定；不能以沒有預先設計的抽象推論扣分。",
+      "student_language": "zh-CN"
+    },
+    {
+      "id": "I5",
+      "mode": "interpretive",
+      "title_zh_cn": "理解策略与自我修正",
+      "scores": {
+        "3": "能利用上下文、语气、连接词、背景知识或笔记检查理解，并在没有别人提供答案时自行修正。",
+        "2": "在一次中性提醒或规定的再次播放后，能发现并修正部分理解。",
+        "1": "需要选择题、引导问题、同伴答案或多次提示后才能修正，无法确认独立理解。",
+        "0": "提供支持后仍没有可用理解证据。"
+      },
+      "source_construct": "interpretive strategies",
+      "source_ids": ["S05"],
+      "source_pages_or_sections": "S05 印刷页 17",
+      "task_specific_part": "再次播放、一次中性提醒与可用笔记须在任务目标卡中预先固定。",
+      "adaptation_note_zh_tw": "策略證據要和別人提供答案分開；0–3 是本課觀察切點，不是 ACTFL sublevel。",
+      "student_language": "zh-CN"
+    },
+    {
+      "id": "P1",
+      "mode": "interpersonal",
+      "title_zh_cn": "沟通功能与任务结果",
+      "scores": {
+        "3": "使用任务指定的沟通功能完成任务，例如确认条件、比较选择、提出建议、协商决定或解决问题。",
+        "2": "基本完成任务，但遗漏一项必要条件、信息或决定。",
+        "1": "尝试参与，但没有使用正确的沟通功能，或没有形成任务结果。",
+        "0": "没有尝试、完全离题，或只重复别人说的话。"
+      },
+      "source_construct": "functions／task-oriented communication",
+      "source_ids": ["S04", "S08"],
+      "source_pages_or_sections": "S04 印刷页 14；S08 页 18–21",
+      "task_specific_part": "任务结果与必要条件由任务目标卡定义，例如确认条件、比较、建议、协商或解决问题。",
+      "adaptation_note_zh_tw": "溝通功能與任務結果屬於本次任務條件；不能因學生選擇不同立場而扣分。",
+      "student_language": "zh-CN"
+    },
+    {
+      "id": "P2",
+      "mode": "interpersonal",
+      "title_zh_cn": "提问、回答与追问",
+      "scores": {
+        "3": "能主动开始或推进对话；回答切题，并根据对方刚才的回答提出至少一次真正的追问。",
+        "2": "能完成主要问答，但追问与对方回答关系不清楚、只是预先准备的问题，或遗漏一个必要回合。",
+        "1": "主要只用短句回答；没有主动提问或追问，需要教师持续提问才能继续。",
+        "0": "没有形成双向交流。"
+      },
+      "source_construct": "ask／answer／follow-up",
+      "source_ids": ["S04", "S08"],
+      "source_pages_or_sections": "S04 印刷页 14；S08 页 18–21",
+      "task_specific_part": "本次任务暂定至少一次真正追问；追问必须根据对方刚才的回答产生，使用前须教师确认。",
+      "adaptation_note_zh_tw": "「至少一次」是本課 task-specific 門檻，不是 ACTFL 通用規則；預設問題不能自動算真正追問。",
+      "student_language": "zh-CN"
+    },
+    {
+      "id": "P3",
+      "mode": "interpersonal",
+      "title_zh_cn": "理解、确认与修补",
+      "scores": {
+        "3": "正确理解对方的核心信息；不清楚时能主动澄清、确认、重述或换一种说法。若没有明显误解，也能确认关键条件。",
+        "2": "大部分信息理解正确；在对方提示后能够澄清或重述，但仍有一项信息没有确认。",
+        "1": "经常需要对方重复或改说；只重复原来的说法，无法解决核心误解。",
+        "0": "在标准化的第二次提示后仍不能理解或回应。"
+      },
+      "source_construct": "clarification／restate／circumlocution／negotiate meaning",
+      "source_ids": ["S04", "S09"],
+      "source_pages_or_sections": "S04 印刷页 15；S09 Communication",
+      "task_specific_part": "本次任务应设计自然的确认机会；修补机会、提示语句与未确认信息数量须预先固定。",
+      "adaptation_note_zh_tw": "對話當下的澄清、確認、重述與換說法屬 Interpersonal；教師回饋後的重做另存。",
+      "student_language": "zh-CN"
+    },
+    {
+      "id": "P4",
+      "mode": "interpersonal",
+      "title_zh_cn": "语篇与词汇运用",
+      "scores": {
+        "3": "在开场、发展和回应等主要回合中使用本任务要求的完整句、句子串或相连句子；词汇与主题相关，缺词时能换一种说法。",
+        "2": "在两个主要回合中达到目标语篇，其余回合主要使用短语、重复词或准备好的句子。",
+        "1": "主要使用单词、短语或背诵句；只有一个独立完整句，难以继续交换信息。",
+        "0": "没有足够语言样本。"
+      },
+      "source_construct": "text type／vocabulary",
+      "source_ids": ["S04", "S19"],
+      "source_pages_or_sections": "S04 印刷页 14–15；S19",
+      "task_specific_part": "目标语篇、主要回合数量与可用准备资源由任务目标卡预先规定。",
+      "adaptation_note_zh_tw": "語篇與詞彙的切點參考公開 ACTFL-aligned 工具，但本課描述為有限適配，不沿用其 proficiency mapping。",
+      "student_language": "zh-CN"
+    },
+    {
+      "id": "P5",
+      "mode": "interpersonal",
+      "title_zh_cn": "可理解度与语言控制",
+      "scores": {
+        "3": "对方不需要别人代为解释就能理解核心意思；发音、声调、词序或语法问题不改变关键信息。",
+        "2": "对方需要一至两次自然的确认或重复，但最后能恢复并理解核心意思。",
+        "1": "需要多次修补；部分关键信息仍无法确认，错误已经影响任务结果。",
+        "0": "大部分内容无法理解，或没有可评分语料。"
+      },
+      "source_construct": "comprehensibility／language control",
+      "source_ids": ["S04", "S19"],
+      "source_pages_or_sections": "S04 印刷页 15；S19",
+      "task_specific_part": "只看是否妨碍核心理解；不按发音、声调、词序或语法错误数量直接扣分。",
+      "adaptation_note_zh_tw": "可理解度以溝通結果為準；自然確認與重複是本課觀察切點，不是錯誤數量門檻。",
+      "student_language": "zh-CN"
+    },
+    {
+      "id": "PR1",
+      "mode": "presentational",
+      "title_zh_cn": "沟通功能与内容",
+      "scores": {
+        "3": "完成任务指定的说明、推荐、比较、叙述或表达观点功能，并包含目标卡列出的全部必要内容。",
+        "2": "完成主要沟通功能，但遗漏一项必要内容。",
+        "1": "只说出主题或零散信息，没有真正完成指定沟通功能。",
+        "0": "没有尝试，或内容完全离题。"
+      },
+      "source_construct": "present／describe／explain／state views",
+      "source_ids": ["S06", "S08"],
+      "source_pages_or_sections": "S06 印刷页 18；S08 页 22–24",
+      "task_specific_part": "任务指定的说明、推荐、比较、叙述、观点与必要内容由任务目标卡预先定义。",
+      "adaptation_note_zh_tw": "Presentational 只評個人連續表達的功能與內容，不放即時追問、澄清或協商。",
+      "student_language": "zh-CN"
+    },
+    {
+      "id": "PR2",
+      "mode": "presentational",
+      "title_zh_cn": "理由、例子与支持信息",
+      "scores": {
+        "3": "提供任务要求数量的理由、例子、事实或细节，并清楚说明它们与主要观点的关系。",
+        "2": "至少提供一项有效理由或例子，但另一项不完整、重复或与观点关系不清楚。",
+        "1": "只有结论或个人意见，没有相关支持；或所举内容与观点无关。",
+        "0": "没有任何支持信息。"
+      },
+      "source_construct": "reasons／examples／supporting details",
+      "source_ids": ["S08"],
+      "source_pages_or_sections": "S08 页 22、28",
+      "task_specific_part": "理由、例子或支持信息的数量须在任务开始前公布；第一课建议暂定两项，待教师确认。",
+      "adaptation_note_zh_tw": "理由數量與連結方式是 task-specific；不把學生採取的立場或內容選擇本身當成分數。",
+      "student_language": "zh-CN"
+    },
+    {
+      "id": "PR3",
+      "mode": "presentational",
+      "title_zh_cn": "组织与信息顺序",
+      "scores": {
+        "3": "有清楚的开头、发展和结束；信息顺序合理，并使用因为、所以、首先、另外、不过、最后等连接方式。",
+        "2": "基本顺序可以理解，并使用至少一个连接方式，但有一处跳跃、重复或缺少结尾。",
+        "1": "主要是信息清单或彼此不相连的句子，听者需要自己推测关系。",
+        "0": "没有可辨认的组织。"
+      },
+      "source_construct": "organization／connected discourse",
+      "source_ids": ["S06", "S08"],
+      "source_pages_or_sections": "S06 印刷页 19；S08 页 28",
+      "task_specific_part": "任务可预先规定开头、发展、结束与适合的连接方式，但不能把固定模板当作唯一正确答案。",
+      "adaptation_note_zh_tw": "組織與連貫表達屬 Presentational；不加入與聽者即時協商有關的行為。",
+      "student_language": "zh-CN"
+    },
+    {
+      "id": "PR4",
+      "mode": "presentational",
+      "title_zh_cn": "语篇与词汇运用",
+      "scores": {
+        "3": "大部分内容达到本任务指定的完整句、句子串、相连句子或短段落；使用与主题有关的词汇，缺词时能换一种说法。",
+        "2": "能使用若干完整句或句子串，但重复较多，部分内容仍依赖背诵句或孤立短语。",
+        "1": "主要使用单词、短语或互不相连的简单句，难以形成完整说明。",
+        "0": "没有足够语言样本。"
+      },
+      "source_construct": "text type／vocabulary／circumlocution",
+      "source_ids": ["S06", "S20"],
+      "source_pages_or_sections": "S06 印刷页 18–19；S20",
+      "task_specific_part": "目标语篇与可用准备资源由任务目标卡预先规定；自我换说法只评个人表达，不评听者即时反应。",
+      "adaptation_note_zh_tw": "語篇與詞彙切點參考公開 ACTFL-aligned 工具；不沿用其 proficiency 對應，也不把即時互動混入 Presentational。",
+      "student_language": "zh-CN"
+    },
+    {
+      "id": "PR5",
+      "mode": "presentational",
+      "title_zh_cn": "可理解度与语言控制",
+      "scores": {
+        "3": "听者能够理解主要观点和支持内容；发音、声调、词序或语法问题不改变关键信息。",
+        "2": "部分内容需要听者集中注意或听一次重复，但整体意思可以恢复。",
+        "1": "多处内容需要猜测；错误使主要观点、理由或事件关系不清楚。",
+        "0": "大部分内容无法理解，或没有可评分语料。"
+      },
+      "source_construct": "comprehensibility／language control",
+      "source_ids": ["S06", "S20"],
+      "source_pages_or_sections": "S06 印刷页 19；S20",
+      "task_specific_part": "只看是否影响主要观点、支持内容或事件关系；不按错误数量直接扣分。",
+      "adaptation_note_zh_tw": "Presentational 的可理解度看聽者能否恢復主要意思；不能加入追問、澄清或協商。",
+      "student_language": "zh-CN"
+    }
+  ],
+  "student_compact": [
+    {
+      "id": "compact_interpretive",
+      "title_zh_cn": "诠释理解",
+      "scores": {
+        "3": "能说出材料的主要意思，找出任务卡标明的全部核心条件，并指出两处能支持判断的音频或文本信息；证据与答案一致。",
+        "2": "能说出主要意思并找出全部核心条件，但遗漏一项补充信息，或只指出一处支持证据；遗漏不改变客户的核心需求。",
+        "1": "只能说出主题或零散信息；至少一个核心条件理解错误或遗漏；所给信息不能支持判断。",
+        "0": "没有可评分的回答，或回答与材料无关；不能指出主题和核心条件。"
+      },
+      "official_or_adapted_note": "能力构念参考 ACTFL Interpretive Performance Descriptors；0–3 切点与本课证据数量为课程适配。"
+    },
+    {
+      "id": "compact_interpersonal",
+      "title_zh_cn": "人际互动",
+      "scores": {
+        "3": "主动提出与条件有关的问题，回答对方的问题，并根据对方的回答提出至少一次切题追问；出现不清楚时，能主动澄清、确认或重述，最后双方对核心条件形成共同理解。",
+        "2": "能完成相关问答并提出一次切题追问；能确认大部分条件；遇到不清楚时，在对方提示后能澄清或重述，但仍有一项信息没有核实。",
+        "1": "主要只回答直接问题或照读准备内容；没有切题追问；出现理解问题时不能解决，仍有核心条件没有确认。",
+        "0": "没有形成双向交流；只有单向发言、没有可用回应，或大部分内容与任务无关。"
+      },
+      "official_or_adapted_note": "能力构念参考 ACTFL Interpersonal Performance Descriptors；追问、条件数量与修补机会是课程适配。"
+    },
+    {
+      "id": "compact_presentational",
+      "title_zh_cn": "表达呈现",
+      "scores": {
+        "3": "清楚提出一个中文姓名，用一组相连的句子或一个短段落说明；给出两项理由，并把理由与客户条件、姓名含义或用字特点明确连接；听者能辨认推荐结果和理由。",
+        "2": "清楚提出一个中文姓名，用几句完整句说明，并给出至少一项相关理由；推荐结果和主要理由可以理解，但缺少一项连接或支持信息。",
+        "1": "说出一个姓名，但说明主要由词语、片段或彼此不相连的句子组成；理由与客户条件或姓名含义没有明确连接，主要意思需要听者推测。",
+        "0": "没有提出可辨认的姓名建议，或没有提供可评分的说明。"
+      },
+      "official_or_adapted_note": "能力构念参考 ACTFL Presentational Performance Descriptors；姓名、理由数量与客户条件是第一课任务适配。"
+    },
+    {
+      "id": "compact_task_completion",
+      "title_zh_cn": "任务完成记录",
+      "scores": {
+        "3": "个人证据显示已经完成四个部分：确认条件、提出姓名、说明理由、完成指定的追问回应；每一部分都能辨认是本人完成。",
+        "2": "个人证据显示完成四个部分中的三个；没有用同组同学的表现代替本人证据。",
+        "1": "个人证据只显示完成四个部分中的一个或两个。",
+        "0": "没有可辨认的个人证据，或只有小组作品，无法确认本人完成了哪一部分。"
+      },
+      "official_or_adapted_note": "这是 task-specific criterion，不属于 ACTFL 能力等级，也不用于学校成绩。"
+    }
+  ],
+  "task_completion": {
+    "id": "task_completion",
+    "title_zh_cn": "任务完成记录",
+    "classification": "task_specific_criterion",
+    "included_in_school_grade": false,
+    "scores": {
+      "3": "完成本次任务目标卡列出的全部必要步骤，每一项都能确认是本人完成。",
+      "2": "只遗漏一个必要步骤。",
+      "1": "只完成一个或少量步骤，任务结果不完整。",
+      "0": "没有完成任何必要步骤，或只有小组作品，无法确认个人表现。",
+      "NR": "因缺席、设备或记录问题无法取得证据；需要补评。"
+    }
+  }
+}

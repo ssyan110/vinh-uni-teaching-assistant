@@ -22,4 +22,4 @@ python3 scripts/build_dashboard.py
 
 `manifest.js` 是为直接用浏览器打开 `file://` 页面而生成的只读汇总缓存，不是第二份内容来源。
 
-旧的 `output/material-production-dashboard/index.html` 只作为兼容入口，会转到这里；不要把它当作 dashboard 数据来源。
+旧的 dashboard 快照已移至 `archive/legacy-materials-2026-08-27/material-production-dashboard/`；不要把它当作 dashboard 数据来源。

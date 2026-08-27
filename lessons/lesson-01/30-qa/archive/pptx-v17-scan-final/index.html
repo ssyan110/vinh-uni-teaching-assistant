@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson QA Studio · lesson-01</title>
+  <style>
+    :root { --ink:#17324d; --muted:#66758a; --paper:#f5f7f8; --card:#fff; --line:#dce3e8; --red:#b33a3a; --amber:#9a6500; --blue:#245b89; }
+    * { box-sizing:border-box; } body { margin:0; color:var(--ink); background:var(--paper); font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    main { width:min(1180px,calc(100% - 36px)); margin:38px auto 72px; }
+    header { display:flex; align-items:flex-end; justify-content:space-between; gap:24px; margin-bottom:24px; }
+    h1 { margin:0; font-size:clamp(30px,5vw,58px); letter-spacing:-.045em; } h2 { margin:36px 0 14px; font-size:22px; }
+    .eyebrow { color:var(--blue); font-weight:800; letter-spacing:.12em; text-transform:uppercase; font-size:12px; }
+    .status { padding:8px 13px; border:1px solid var(--line); border-radius:999px; background:#fff; font-weight:800; white-space:nowrap; }
+    .cards { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:17px; box-shadow:0 8px 30px rgba(23,50,77,.05); }
+    .card strong { display:block; font-size:30px; } .card span { color:var(--muted); }
+    .notice { margin-top:16px; padding:14px 16px; border-radius:12px; background:#fff7df; border:1px solid #eed9a0; color:#684a00; }
+    .table-wrap { overflow:auto; background:#fff; border:1px solid var(--line); border-radius:14px; }
+    table { width:100%; border-collapse:collapse; min-width:920px; } th,td { padding:12px 13px; text-align:left; vertical-align:top; border-bottom:1px solid var(--line); }
+    th { background:#edf2f5; font-size:12px; letter-spacing:.04em; text-transform:uppercase; } tr:last-child td { border-bottom:0; }
+    code,pre { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; } code { font-size:12px; } pre { white-space:pre-wrap; overflow-wrap:anywhere; font-size:12px; color:#24394d; }
+    .badge { display:inline-block; padding:3px 8px; border-radius:999px; font-size:11px; font-weight:850; text-transform:uppercase; }
+    .badge.error { color:#8d2020; background:#fde8e8; } .badge.warning { color:#765000; background:#fff1c9; } .badge.info { color:#1e557d; background:#e5f1f8; }
+    .location { color:var(--muted); font-size:12px; margin-top:3px; } details { margin-top:8px; } summary { cursor:pointer; color:var(--blue); }
+    ul { padding-left:1.2em; } footer { color:var(--muted); margin-top:26px; font-size:13px; }
+    @media (max-width:760px) { header { align-items:flex-start; flex-direction:column; } .cards { grid-template-columns:repeat(2,1fr); } }
+  </style>
+</head>
+<body>
+<main>
+  <header><div><div class="eyebrow">Lesson QA Studio</div><h1>中国人的姓名</h1></div><div class="status">Blocked</div></header>
+  <div class="cards">
+    <div class="card"><strong>1</strong><span>Errors</span></div>
+    <div class="card"><strong>9</strong><span>Warnings</span></div>
+    <div class="card"><strong>1</strong><span>Info</span></div>
+    <div class="card"><strong>29</strong><span>Artifacts scanned</span></div>
+  </div>
+  <div class="notice"><strong>Authority boundary:</strong> this report does not promote files or certify classroom readiness. Teacher approval and manual acceptance remain required.</div>
+  <h2>Findings</h2>
+  <div class="table-wrap"><table><thead><tr><th>Level</th><th>Check</th><th>Artifact</th><th>Result</th></tr></thead><tbody><tr><td><span class='badge error'>error</span></td><td><code>existing_production_gate_blocked</code></td><td>scripts/production_gate.py</td><td>Existing production workflow audit is blocked.<details><summary>Evidence</summary><pre>{
+  &quot;blockers&quot;: [
+    &quot;frozen source package tree hash mismatch&quot;
+  ]
+}</pre></details></td></tr><tr><td><span class='badge warning'>warning</span></td><td><code>nine_grid_requires_manual_acceptance</code></td><td>classroom-tools/nine-grid-lesson-01/dist</td><td>Offline nine-grid still requires manual projection and teacher acceptance before classroom use.</td></tr><tr><td><span class='badge warning'>warning</span></td><td><code>missing_qa_metadata</code></td><td>lessons/lesson-01/20-approved/lesson-manifest.json</td><td>QA metadata has no rehearsal_evidence path.</td></tr><tr><td><span class='badge warning'>warning</span></td><td><code>missing_qa_metadata</code></td><td>lessons/lesson-01/20-approved/lesson-manifest.json</td><td>QA metadata has no audio_playback_evidence path.</td></tr><tr><td><span class='badge warning'>warning</span></td><td><code>pptx_shape_out_of_bounds</code></td><td>lessons/lesson-01/20-approved/pptx/第一课-中国人的姓名.pptx</td><td>1 top-level shape(s) extend outside the declared slide canvas.<details><summary>Evidence</summary><pre>{
+  &quot;examples&quot;: [
+    {
+      &quot;slide&quot;: 88,
+      &quot;shape_index&quot;: 24,
+      &quot;x&quot;: 2743200,
+      &quot;y&quot;: 6512011,
+      &quot;cx&quot;: 184731,
+      &quot;cy&quot;: 369332
+    }
+  ]
+}</pre></details></td></tr><tr><td><span class='badge warning'>warning</span></td><td><code>small_pptx_font</code></td><td>lessons/lesson-01/20-approved/pptx/第一课-中国人的姓名.pptx</td><td>74 slide(s) contain explicit text smaller than 16 pt.<details><summary>Evidence</summary><pre>{
+  &quot;slides&quot;: {
+    &quot;2&quot;: 11.0,
+    &quot;4&quot;: 9.0,
+    &quot;5&quot;: 9.0,
+    &quot;7&quot;: 9.0,
+    &quot;8&quot;: 9.0,
+    &quot;9&quot;: 9.0,
+    &quot;11&quot;: 9.0,
+    &quot;12&quot;: 9.0,
+    &quot;14&quot;: 9.0,
+    &quot;15&quot;: 9.0,
+    &quot;16&quot;: 9.0,
+    &quot;17&quot;: 9.0,
+    &quot;19&quot;: 9.0,
+    &quot;20&quot;: 9.0,
+    &quot;21&quot;: 9.0,
+    &quot;22&quot;: 9.0,
+    &quot;24&quot;: 9.0,
+    &quot;25&quot;: 9.0,
+    &quot;26&quot;: 9.0,
+    &quot;27&quot;: 9.0,
+    &quot;29&quot;: 9.0,
+    &quot;30&quot;: 9.0,
+    &quot;31&quot;: 9.0,
+    &quot;32&quot;: 9.0,
+    &quot;33&quot;: 9.0,
+    &quot;35&quot;: 9.0,
+    &quot;37&quot;: 9.0,
+    &quot;38&quot;: 9.0,
+    &quot;40&quot;: 9.0,
+    &quot;41&quot;: 9.0,
+    &quot;43&quot;: 9.0,
+    &quot;44&quot;: 9.0,
+    &quot;45&quot;: 9.0,
+    &quot;47&quot;: 9.0,
+    &quot;48&quot;: 9.0,
+    &quot;49&quot;: 9.0,
+    &quot;50&quot;: 9.0,
+    &quot;52&quot;: 9.0,
+    &quot;53&quot;: 9.0,
+    &quot;54&quot;: 9.0,
+    &quot;55&quot;: 9.0,
+    &quot;57&quot;: 11.0,
+    &quot;58&quot;: 11.0,
+    &quot;59&quot;: 11.0,
+    &quot;60&quot;: 11.0,
+    &quot;62&quot;: 11.0,
+    &quot;63&quot;: 11.0,
+    &quot;64&quot;: 11.0,
+    &quot;66&quot;: 11.0,
+    &quot;67&quot;: 11.0,
+    &quot;68&quot;: 11.0,
+    &quot;70&quot;: 11.0,
+    &quot;71&quot;: 11.0,
+    &quot;72&quot;: 11.0,
+    &quot;73&quot;: 11.0,
+    &quot;74&quot;: 11.0,
+    &quot;76&quot;: 11.0,
+    &quot;77&quot;: 11.0,
+    &quot;78&quot;: 11.0,
+    &quot;79&quot;: 11.0,
+    &quot;81&quot;: 11.0,
+    &quot;82&quot;: 11.0,
+    &quot;83&quot;: 11.0,
+    &quot;84&quot;: 11.0,
+    &quot;85&quot;: 11.0,
+    &quot;86&quot;: 11.0,
+    &quot;87&quot;: 11.0,
+    &quot;88&quot;: 11.0,
+    &quot;90&quot;: 9.0,
+    &quot;91&quot;: 9.0,
+    &quot;92&quot;: 9.0,
+    &quot;93&quot;: 9.0,
+    &quot;94&quot;: 9.0,
+    &quot;95&quot;: 11.0
+  }
+}</pre></details></td></tr><tr><td><span class='badge warning'>warning</span></td><td><code>nested_review_status_inconsistent</code></td><td>work/boya-intermediate/extractions/structured-lesson-01.json<div class='location'>vocabulary</div></td><td>Lesson is verified, but 34 vocabulary record(s) retain non-verified review status.<details><summary>Evidence</summary><pre>{
+  &quot;status_counts&quot;: {
+    &quot;pending_review&quot;: 34
+  }
+}</pre></details></td></tr><tr><td><span class='badge warning'>warning</span></td><td><code>nested_review_status_inconsistent</code></td><td>work/boya-intermediate/extractions/structured-lesson-01.json<div class='location'>texts_dialogues</div></td><td>Lesson is verified, but 5 texts_dialogues record(s) retain non-verified review status.<details><summary>Evidence</summary><pre>{
+  &quot;status_counts&quot;: {
+    &quot;pending_review&quot;: 5
+  }
+}</pre></details></td></tr><tr><td><span class='badge warning'>warning</span></td><td><code>nested_review_status_inconsistent</code></td><td>work/boya-intermediate/extractions/structured-lesson-01.json<div class='location'>grammar_patterns</div></td><td>Lesson is verified, but 7 grammar_patterns record(s) retain non-verified review status.<details><summary>Evidence</summary><pre>{
+  &quot;status_counts&quot;: {
+    &quot;pending_review&quot;: 7
+  }
+}</pre></details></td></tr><tr><td><span class='badge warning'>warning</span></td><td><code>nested_review_status_inconsistent</code></td><td>work/boya-intermediate/extractions/structured-lesson-01.json<div class='location'>exercises</div></td><td>Lesson is verified, but 35 exercises record(s) retain non-verified review status.<details><summary>Evidence</summary><pre>{
+  &quot;status_counts&quot;: {
+    &quot;pending_review&quot;: 35
+  }
+}</pre></details></td></tr><tr><td><span class='badge info'>info</span></td><td><code>nine_grid_lane_convention_present</code></td><td>classroom-tools/nine-grid-lesson-01/dist/content/class-content.json</td><td>Ordinary cells use vocabulary data; sentence/pattern work is represented as function-button exercises.<details><summary>Evidence</summary><pre>{
+  &quot;vocabulary&quot;: 21,
+  &quot;functions&quot;: 19
+}</pre></details></td></tr></tbody></table></div>
+  <h2>Deterministic limits</h2><ul><li>Static OOXML checks do not replace opening the deck in Microsoft PowerPoint.</li><li>DOCX blank-page checks detect explicit page-break segments; pagination still requires rendered or print review.</li><li>Audio signatures and relationships are checked, but semantic listening and real playback remain human checks.</li><li>Font and boundary checks report deterministic declarations; projection readability still needs manual acceptance.</li></ul>
+  <footer>Generated 2026-08-27T05:22:02+00:00 · classroom_ready=false</footer>
+</main>
+</body>
+</html>

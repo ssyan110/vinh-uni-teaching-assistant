@@ -26,6 +26,10 @@ yarn-error.log*
 # Playwright / test artifacts
 playwright-report/
 test-results/
+/.playwright-cli/
+
+# GitHub file-size limit; extracted approval evidence remains in the archive
+lessons/lesson-01/90-archive/approval-evidence-2026-08-27/social-appellation-supplement-v11/第一课-主任审核包-含文化补充-v11-final.zip
 
 # Legacy agent directory
 .agent/
@@ -37,6 +41,9 @@ tmp/
 
 # Working files (OCR, PDFs, intermediate)
 work/
+
+# The former root output tree is archived; new material belongs in lessons/
+/output/
 
 # Source textbook PDFs (local inputs; too large for git)
 Giáo trình/

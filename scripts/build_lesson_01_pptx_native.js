@@ -26,7 +26,7 @@ const exerciseCoveragePath = path.join(storyboardDir, 'lesson-01-exercise-slide-
 const storyboardManifestPath = path.join(storyboardDir, 'manifest.json');
 const teacherManualPath = path.join(lessonRoot, '20-approved/teacher-manual/第一课简易教案.docx');
 
-const FONT = process.env.LESSON_01_FONT || 'Heiti SC';
+const FONT = projectConfig.font_policy?.cjk || 'KaiTi';
 const COLORS = {
   cream: 'FFF8E6',
   warmWhite: 'FFFDF8',
@@ -351,7 +351,7 @@ function addTopics(slide, topics, x, y, w) {
     const chipX = x + index * (chipW + gap);
     const fills = [COLORS.mint, COLORS.yellowSoft, COLORS.purpleSoft];
     slide.addShape('roundRect', { x: chipX, y, w: chipW, h: 0.72, rectRadius: 0.08, fill: { color: fills[index % fills.length] }, line: { color: COLORS.line, pt: 0.8 } });
-    addText(slide, topic, chipX + 0.08, y + 0.14, chipW - 0.16, 0.36, { fontSize: 17, bold: true, align: 'center' });
+    addText(slide, topic, chipX + 0.08, y + 0.14, chipW - 0.16, 0.36, { fontSize: 20, bold: true, align: 'center' });
   });
 }
 

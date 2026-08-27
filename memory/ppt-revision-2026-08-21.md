@@ -44,11 +44,11 @@
 - 教材练习：35/35 已对应投影片或配套材料。
 - 音频：9/9 课堂音频轨道已嵌入，13 个音频实例，预习音频 1-1 与 2-1 保留在预习流程。
 - Speaker notes：60/60 张投影片都有教师提示。
-- Current outline：`output/boya-intermediate/lesson-01/storyboard/lesson-01-ppt-outline-v5.md`。
-- Current visual storyboard：`output/boya-intermediate/lesson-01/visual-storyboard/lesson-01-visual-storyboard-v5.md`。
-- 最新 QA 证据：`output/boya-intermediate/lesson-01/qa/pptx-v13/`；v12 仍保留为上一轮视觉检查记录。
+- Current outline：`lessons/lesson-01/10-design/storyboard/lesson-01-ppt-outline-v5.md`。
+- Current visual storyboard：`lessons/lesson-01/10-design/visual-storyboard/lesson-01-visual-storyboard-v5.md`。
+- 最新 QA 证据：`lessons/lesson-01/30-qa/current/pptx-v17/`；歷史 v12/v13 仍保留在 `archive/legacy-materials-2026-08-27/`。
 - PowerPoint 实际音频播放、教师 rehearsal、最终修订和交付仍是下一步；第二课继续锁定。
 
 ## 后续课次固定采用的制作标准
 
-教师手册批准后，才制作配套、PPT storyboard、Visual storyboard、prototype 和 PPTX。每课只保留一份 current outline、current visual storyboard 和 current PPTX；旧版大纲、旧 storyboard 和旧生成器在依赖迁移后删除，不留在 current output 资料夹中。
+教师手册批准后，才制作配套、PPT storyboard、Visual storyboard、prototype 和 PPTX。每课只保留一份 current outline、current visual storyboard 和 current PPTX；旧版大纲、旧 storyboard 和旧生成器在依赖迁移后删除或移到明确的 `90-archive/`，不留在 `10-design` 的 current draft 区。

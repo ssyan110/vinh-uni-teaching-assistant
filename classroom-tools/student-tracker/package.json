@@ -1,0 +1,36 @@
+{
+  "name": "keji-student-tracker",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "main": "desktop/main.cjs",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --pretty false",
+    "test": "vitest run",
+    "desktop:package": "npm run build && electron-packager . 課跡 --platform=darwin --arch=arm64 --out=release --overwrite --icon=desktop/app-icon.icns --app-bundle-id=com.adam.keji --prune=true",
+    "desktop:install": "zsh desktop/install.sh"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.112.3",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-router-dom": "7.18.2",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@electron/packager": "^20.3.0",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.1.0",
+    "electron": "^38.1.0",
+    "typescript": "5.9.3",
+    "vite": "8.2.2",
+    "vitest": "4.1.0"
+  }
+}

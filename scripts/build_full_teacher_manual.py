@@ -37,10 +37,9 @@ MANUAL_PDF = MANUAL_DIR / "boya-intermediate-i-semester-teacher-manual.pdf"
 MANIFEST = MANUAL_DIR / "manifest.json"
 GANTT_PNG = MANUAL_DIR / "semester-gantt.png"
 
-FONT = "Times New Roman"
-# Use a font installed on macOS and available to Word/LibreOffice so Chinese
-# remains readable when a teacher opens or previews the editable DOCX.
-CJK_FONT = "Microsoft YaHei"
+FONT = CONFIG.get("font_policy", {}).get("latin", "Times New Roman")
+# Use the standard cross-platform CJK face required for delivery packages.
+CJK_FONT = CONFIG.get("font_policy", {}).get("cjk", "KaiTi")
 INK = "17324D"
 ACCENT = "2E74B5"
 DARK_ACCENT = "1F4D78"
@@ -88,9 +87,9 @@ SEMESTER_GANTT_ROWS = [
 
 def chart_font_path() -> Path:
     candidates = [
-        Path("/Library/Fonts/Microsoft/Microsoft Yahei.ttf"),
-        Path("/System/Library/Fonts/STHeiti Medium.ttc"),
-        Path("/System/Library/Fonts/Hiragino Sans GB.ttc"),
+        Path("/Library/Fonts/Microsoft/Kaiti.ttf"),
+        Path("/System/Library/Fonts/Supplemental/Kai.ttf"),
+        Path("/System/Library/Fonts/Supplemental/Kaiti.ttc"),
     ]
     for candidate in candidates:
         if candidate.exists():
@@ -582,6 +581,7 @@ def set_run_font(run, size: float = 12, color: str = INK, bold: bool | None = No
     r_pr.rFonts.set(qn("w:ascii"), FONT)
     r_pr.rFonts.set(qn("w:hAnsi"), FONT)
     r_pr.rFonts.set(qn("w:eastAsia"), CJK_FONT)
+    r_pr.rFonts.set(qn("w:cs"), FONT)
     lang = r_pr.find(qn("w:lang"))
     if lang is None:
         lang = OxmlElement("w:lang")
@@ -703,6 +703,7 @@ def set_page_defaults(document: Document) -> None:
     normal._element.rPr.rFonts.set(qn("w:ascii"), FONT)
     normal._element.rPr.rFonts.set(qn("w:hAnsi"), FONT)
     normal._element.rPr.rFonts.set(qn("w:eastAsia"), CJK_FONT)
+    normal._element.rPr.rFonts.set(qn("w:cs"), FONT)
     normal.font.size = Pt(12)
     normal.font.color.rgb = RGBColor.from_string(INK)
     normal.paragraph_format.space_after = Pt(6)
@@ -718,6 +719,7 @@ def set_page_defaults(document: Document) -> None:
         style._element.rPr.rFonts.set(qn("w:ascii"), FONT)
         style._element.rPr.rFonts.set(qn("w:hAnsi"), FONT)
         style._element.rPr.rFonts.set(qn("w:eastAsia"), CJK_FONT)
+        style._element.rPr.rFonts.set(qn("w:cs"), FONT)
         style.font.size = Pt(size)
         style.font.color.rgb = RGBColor.from_string(color)
         style.font.bold = name != "Title"

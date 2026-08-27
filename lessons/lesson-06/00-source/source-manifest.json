@@ -1,0 +1,110 @@
+{
+  "manifest_schema": "boya-source-review-manifest-0.1.0",
+  "lesson_id": "boya-intermediate-i-lesson-06",
+  "lesson_number": 6,
+  "lesson_title": "挑战",
+  "source_status": "pending_review",
+  "source_qa_status": "pending",
+  "canonical_source": {
+    "path": "work/boya-intermediate/extractions/structured-lesson-06.json",
+    "sha256": "d5c52190cda8024a759f954b113986571e551b96fdc896e97fc2a12818e9d038",
+    "status": "source_review_snapshot",
+    "note": "已登记第6课结构化来源快照；逐字忠实度、教材疑误和Adam批准仍待完成；音档由Adam确认，代理未进行语义听核且不生成转写。"
+  },
+  "status": "source_review_materialized",
+  "review_status": "pending_review",
+  "qa_status": "pending QA",
+  "review_date": "2026-08-22",
+  "scope": {
+    "printed_pages": [79, 95],
+    "pdf_pages": [90, 106],
+    "page_count": 17,
+    "audio_count": 12,
+    "semantic_listening_performed": false
+  },
+  "source_files": {
+    "pdf": {
+      "path": "Giáo trình/博雅汉语听说-中级冲刺篇/博雅汉语听说-中级冲刺篇I.pdf",
+      "sha256": "c7aa70b16496aecc7d9979bc2744dbe22701650511e48e2433ed19d439d70ad9",
+      "pdf_page_count": 148
+    },
+    "textbook_index": {
+      "path": "Giáo trình/博雅汉语听说-中级冲刺篇/教材资料索引.md"
+    }
+  },
+  "artifacts": {
+    "structured_json": {
+      "path": "work/boya-intermediate/extractions/structured-lesson-06.json",
+      "sha256": "d5c52190cda8024a759f954b113986571e551b96fdc896e97fc2a12818e9d038"
+    },
+    "ocr_directory": {
+    "path": "work/boya-intermediate/extractions/ocr-lesson-06/",
+    "manifest": "work/boya-intermediate/extractions/ocr-lesson-06/manifest.json",
+      "file_count": 17,
+      "filename_pattern": "page-090.txt through page-106.txt"
+    },
+    "page_preview_directory": {
+      "path": "work/boya-intermediate/extractions/pages-preview/lesson-06/",
+      "file_count": 17,
+      "filename_pattern": "pdf-090.png through pdf-106.png",
+      "render_dpi": 200
+    }
+  },
+  "pages": [
+    {"pdf_page": 90, "printed_page": 79, "ocr_path": "work/boya-intermediate/extractions/ocr-lesson-06/page-090.txt", "ocr_sha256": "61f2a1aa58e12d2f3a72114a623a621c002e1be8c4945df73a51e91145449826", "image_path": "work/boya-intermediate/extractions/pages-preview/lesson-06/pdf-090.png", "image_sha256": "3ba5efa3ba9f6097568d23b893483d6b39b31fc5c9e8a8a25121d7bac9012edd", "image_dimensions": [1617, 2253]},
+    {"pdf_page": 91, "printed_page": 80, "ocr_path": "work/boya-intermediate/extractions/ocr-lesson-06/page-091.txt", "ocr_sha256": "10d8f4b6beab641b70bf64a6b469991465aefe2e6dc374f8713814b64a74a80a", "image_path": "work/boya-intermediate/extractions/pages-preview/lesson-06/pdf-091.png", "image_sha256": "4ed47538e11b11c71f89fdf8e00cc7fd63606fe89916829e52a6ef9f0d3ba9a8", "image_dimensions": [1617, 2250]},
+    {"pdf_page": 92, "printed_page": 81, "ocr_path": "work/boya-intermediate/extractions/ocr-lesson-06/page-092.txt", "ocr_sha256": "8994b69f58f5346c851bedb02433a4b1bcdae15f762974144bc4e7e494bb21cb", "image_path": "work/boya-intermediate/extractions/pages-preview/lesson-06/pdf-092.png", "image_sha256": "0c6b3613779e3008969ead1d2507336ac3250b85a790c7531da1f59e3e29e965", "image_dimensions": [1617, 2259]},
+    {"pdf_page": 93, "printed_page": 82, "ocr_path": "work/boya-intermediate/extractions/ocr-lesson-06/page-093.txt", "ocr_sha256": "1094b408ffea05d583c606a10a4617a571449898a049415adf6dd296d5e4278b", "image_path": "work/boya-intermediate/extractions/pages-preview/lesson-06/pdf-093.png", "image_sha256": "1239247cd084788559b28507d01ce69c389fe6bde78272006737bf77e1cb0760", "image_dimensions": [1617, 2256]},
+    {"pdf_page": 94, "printed_page": 83, "ocr_path": "work/boya-intermediate/extractions/ocr-lesson-06/page-094.txt", "ocr_sha256": "1cd9add5e57423bd11b45ae65ced9affef190c6dc9d55877a438d5c2eddd4568", "image_path": "work/boya-intermediate/extractions/pages-preview/lesson-06/pdf-094.png", "image_sha256": "218622e1ee4272623e69cc9005de9bb9a0ec60e6e5b7e82f31f10f1ac7f0019d", "image_dimensions": [1617, 2256]},
+    {"pdf_page": 95, "printed_page": 84, "ocr_path": "work/boya-intermediate/extractions/ocr-lesson-06/page-095.txt", "ocr_sha256": "9b6c396c2d891a8edba19a33988df489623d18ea2c117d27d15e939d2ce046c5", "image_path": "work/boya-intermediate/extractions/pages-preview/lesson-06/pdf-095.png", "image_sha256": "d3d75f8828562ddec3167bdbaedc246700144f7b2354e2b3dee9850635987c28", "image_dimensions": [1617, 2253]},
+    {"pdf_page": 96, "printed_page": 85, "ocr_path": "work/boya-intermediate/extractions/ocr-lesson-06/page-096.txt", "ocr_sha256": "5b1b76516418a9c52477a2270ef604db8e2a4a7e2b6ba13609873ea50484fff8", "image_path": "work/boya-intermediate/extractions/pages-preview/lesson-06/pdf-096.png", "image_sha256": "f51dfdf94036781d8ff8d88911eda943a3121c65d28050e308fcc646f59e1d32", "image_dimensions": [1617, 2256]},
+    {"pdf_page": 97, "printed_page": 86, "ocr_path": "work/boya-intermediate/extractions/ocr-lesson-06/page-097.txt", "ocr_sha256": "7f893a69351ba2fa2d3ee08cd2b16ee9b6eaae2a68cdba8e4d79d154c155c4c5", "image_path": "work/boya-intermediate/extractions/pages-preview/lesson-06/pdf-097.png", "image_sha256": "6bd8942a4c0433af76a1b8051431afaf689ffff6a34bffd26c7ac905bc160ccb", "image_dimensions": [1617, 2253]},
+    {"pdf_page": 98, "printed_page": 87, "ocr_path": "work/boya-intermediate/extractions/ocr-lesson-06/page-098.txt", "ocr_sha256": "4175e368cc8bb22883efc7313252369b073768b9f91550955fba78fc77ee623a", "image_path": "work/boya-intermediate/extractions/pages-preview/lesson-06/pdf-098.png", "image_sha256": "8aa2d07abad018ccc3c78472d0c150944b17ab9a734a2aa3ee9d5cc703faa1d2", "image_dimensions": [1609, 2256]},
+    {"pdf_page": 99, "printed_page": 88, "ocr_path": "work/boya-intermediate/extractions/ocr-lesson-06/page-099.txt", "ocr_sha256": "e1d852b92ad9d0c72a95393d269f5462b89e23ec91edb5802e742a50a4a4a2b8", "image_path": "work/boya-intermediate/extractions/pages-preview/lesson-06/pdf-099.png", "image_sha256": "dcce1c441b7f2e63de84b8ce89ac79ee8e667b1bce8dba91c5f8a0542fa4d769", "image_dimensions": [1617, 2250]},
+    {"pdf_page": 100, "printed_page": 89, "ocr_path": "work/boya-intermediate/extractions/ocr-lesson-06/page-100.txt", "ocr_sha256": "67a7e0e7614903933324702e2e84f9ba82c4da57d7ed7536e08d8db40008fca1", "image_path": "work/boya-intermediate/extractions/pages-preview/lesson-06/pdf-100.png", "image_sha256": "071c4a1312441bf78c5f8f2a3b45b05937c1979c895c67a92f572d5ee17192ae", "image_dimensions": [1600, 2256]},
+    {"pdf_page": 101, "printed_page": 90, "ocr_path": "work/boya-intermediate/extractions/ocr-lesson-06/page-101.txt", "ocr_sha256": "9f173135bfb0b9a1d8e2eac8ae8925179dc69c289d35e26f21df44c89c4da82c", "image_path": "work/boya-intermediate/extractions/pages-preview/lesson-06/pdf-101.png", "image_sha256": "6980d78ba9e61bb55cccab9140a6339a61aec9045741c5e3e4ae58d18de2e0a6", "image_dimensions": [1617, 2253]},
+    {"pdf_page": 102, "printed_page": 91, "ocr_path": "work/boya-intermediate/extractions/ocr-lesson-06/page-102.txt", "ocr_sha256": "eca872ace964886b00f6ba5ec13f58d703e29bfedb62019229d2670fa3dd9648", "image_path": "work/boya-intermediate/extractions/pages-preview/lesson-06/pdf-102.png", "image_sha256": "de1b3b8ff09e36e21261cd86d21aa21eb496d3f6d325f420f8eda05d64d81030", "image_dimensions": [1617, 2256]},
+    {"pdf_page": 103, "printed_page": 92, "ocr_path": "work/boya-intermediate/extractions/ocr-lesson-06/page-103.txt", "ocr_sha256": "8cab258d9c23e009ae30be28e767559a219557e8378e491beea93490eb4e075e", "image_path": "work/boya-intermediate/extractions/pages-preview/lesson-06/pdf-103.png", "image_sha256": "ae380eda5a066db54f625da9a65d538a2d7b26321fdcb86701996a8b34946307", "image_dimensions": [1617, 2256]},
+    {"pdf_page": 104, "printed_page": 93, "ocr_path": "work/boya-intermediate/extractions/ocr-lesson-06/page-104.txt", "ocr_sha256": "bb8deeb4007f11a2934b51a75a0b562b55bede9a3437eb9193a3362bcc44c949", "image_path": "work/boya-intermediate/extractions/pages-preview/lesson-06/pdf-104.png", "image_sha256": "dfc61bccb59c04baa90173c54b8e0a9a46b58729ab93014608e34d4bc8489435", "image_dimensions": [1620, 2250]},
+    {"pdf_page": 105, "printed_page": 94, "ocr_path": "work/boya-intermediate/extractions/ocr-lesson-06/page-105.txt", "ocr_sha256": "20fd39273e5b29a3bcae18ffc224239a9ce58ea7a34434654888c88ae3ed49a0", "image_path": "work/boya-intermediate/extractions/pages-preview/lesson-06/pdf-105.png", "image_sha256": "182b891c23044f83ef4a4b874171e207b6547a29834b70f713bbbde7910fb4ae", "image_dimensions": [1620, 2250]},
+    {"pdf_page": 106, "printed_page": 95, "ocr_path": "work/boya-intermediate/extractions/ocr-lesson-06/page-106.txt", "ocr_sha256": "659eab003ca7bcb4c4c497a76601150cca8b55f748f4297e3f9f3b7e4d72641c", "image_path": "work/boya-intermediate/extractions/pages-preview/lesson-06/pdf-106.png", "image_sha256": "dbf16098ef29adcdd34e7aaeaf722884313927fac9323a025f8372948810a83c", "image_dimensions": [1620, 2262]}
+  ],
+  "audio": {
+    "root": "Giáo trình/博雅汉语听说-中级冲刺篇/音频/第06课/",
+    "decode_method": "ffmpeg -v error -i <file> -f null -",
+    "decode_status": "passed",
+    "semantic_review_status": "confirmed_by_user",
+    "content_confirmation_note": "Adam已确认12段音档正确；代理未进行语义听核，本包不生成逐字转写。",
+    "tracks": [
+      {"label": "1-1", "path": "Giáo trình/博雅汉语听说-中级冲刺篇/音频/第06课/1-1.mp3", "duration_seconds": 66.691, "size_bytes": 1067075, "sha256": "fdb2db5d41934246c4a17c9ee77fb62270421fd57efce84d5af4ff93e301e763"},
+      {"label": "1-2", "path": "Giáo trình/博雅汉语听说-中级冲刺篇/音频/第06课/1-2.mp3", "duration_seconds": 124.996, "size_bytes": 1999960, "sha256": "3db77f8bcf94aec47bf5872de9c2e9324296d4a3f49d87c033cbdb1251aa1b18"},
+      {"label": "1-3", "path": "Giáo trình/博雅汉语听说-中级冲刺篇/音频/第06课/1-3.mp3", "duration_seconds": 59.638, "size_bytes": 954226, "sha256": "c83c84d1fc23f38e18a8f8824e739ee2359662d012ac44e881351e5e73596cc0"},
+      {"label": "1-4", "path": "Giáo trình/博雅汉语听说-中级冲刺篇/音频/第06课/1-4.mp3", "duration_seconds": 61.388, "size_bytes": 982229, "sha256": "7f91e383e406ae839812442d60adc9c2cc7a1ce8b20ebee83017b9696f3e9c10"},
+      {"label": "1-5", "path": "Giáo trình/博雅汉语听说-中级冲刺篇/音频/第06课/1-5.mp3", "duration_seconds": 65.646, "size_bytes": 1050356, "sha256": "ff55e7beaebffba5eb4ba866e667333239713202ad472dba3c58b4196e393d40"},
+      {"label": "1-6", "path": "Giáo trình/博雅汉语听说-中级冲刺篇/音频/第06课/1-6.mp3", "duration_seconds": 240.013, "size_bytes": 3840234, "sha256": "25784e8c5e44ba1e8f8f8f669c724867f0b5861543a1a2f3785b800cfc8fc8a3"},
+      {"label": "2-1", "path": "Giáo trình/博雅汉语听说-中级冲刺篇/音频/第06课/2-1.mp3", "duration_seconds": 56.137, "size_bytes": 898219, "sha256": "4c51e3b38df75aed9614bd0ffd0f923f6d6e8893e7332dea6a2b79e775d06d66"},
+      {"label": "2-2", "path": "Giáo trình/博雅汉语听说-中级冲刺篇/音频/第06课/2-2.mp3", "duration_seconds": 113.267, "size_bytes": 1812296, "sha256": "81ecbeb950453be9e08dcf622023b1dd32f8b4b3760bd6a31e9b72c7d1330260"},
+      {"label": "2-3", "path": "Giáo trình/博雅汉语听说-中级冲刺篇/音频/第06课/2-3.mp3", "duration_seconds": 72.594, "size_bytes": 1161534, "sha256": "89a9e6f5070054e1f8c8b1d51ffe2e6b90c3ef85a582894987cbcc0ac68cd8e4"},
+      {"label": "2-4", "path": "Giáo trình/博雅汉语听说-中级冲刺篇/音频/第06课/2-4.mp3", "duration_seconds": 64.131, "size_bytes": 1026115, "sha256": "d5afe50b61a24fc7c1159c631753a343515c4a73a0f4275edf4fe212e0b0303c"},
+      {"label": "2-5", "path": "Giáo trình/博雅汉语听说-中级冲刺篇/音频/第06课/2-5.mp3", "duration_seconds": 58.593, "size_bytes": 937507, "sha256": "c781c7531fedaa67266d064f4fd107b89b09c86da8f4f65b4b89e4c84d8f0d8e"},
+      {"label": "2-6", "path": "Giáo trình/博雅汉语听说-中级冲刺篇/音频/第06课/2-6.mp3", "duration_seconds": 199.654, "size_bytes": 3194487, "sha256": "396bf039d43b093fd6c2ee916a8a22fa915d8fe6f966fb4309cf8a6b0e697d03"}
+    ],
+    "total_duration_seconds": 1182.748
+  },
+  "content_snapshot": {
+    "sections": 63,
+    "vocabulary_records": 54,
+    "glossary_records": 15,
+    "grammar_patterns": 7,
+    "text_dialogue_records": 4,
+    "exercise_records": 40,
+    "audio_records": 12,
+    "answers_materialized": false
+  },
+  "open_items": [
+    {"id": "L06-O01", "status": "pending_review", "item": "OCR 與版面文字尚未逐字人工核對。"},
+    {"id": "L06-O02", "status": "confirmed_by_user", "item": "Adam已确认12段音档正确；代理未进行语义听核，本包不生成逐字转写；文件存在、哈希、时长与 ffmpeg decode 已验证。"},
+    {"id": "L06-O03", "status": "pending_review", "item": "教材未明示的答案不建立標準答案；開放題答案維持未定。"},
+    {"id": "L06-O05", "status": "pending_review", "item": "第87頁跨欄內容與聽說（二）起始位置需人工確認。"}
+  ]
+}
