@@ -1,9 +1,9 @@
 {
   "project_id": "vinh-uni-teaching-assistant",
-  "course_id": "boya-intermediate-i",
-  "course_title": "《博雅汉语听说：中级冲刺篇 I》",
-  "lesson_count": 8,
-  "lesson_catalog": "Giáo trình/博雅汉语听说-中级冲刺篇/教材资料索引.md",
+  "course_id": "boya-quasi-intermediate-i",
+  "course_title": "《博雅汉语听说：准中级加速篇 I》",
+  "lesson_count": 12,
+  "lesson_catalog": "course/boya-quasi-intermediate/source-inventory.json",
   "active_lesson": "lesson-01",
   "font_policy": {
     "cjk": "KaiTi",
@@ -13,19 +13,39 @@
     "allow_custom_fonts": false,
     "allow_font_file_dependencies": false
   },
-  "lesson_root": "lessons/lesson-01",
-  "canonical_source": "work/boya-intermediate/extractions/structured-lesson-01.json",
+  "lesson_root": "lessons/quasi-intermediate/lesson-01",
+  "canonical_source": "lessons/quasi-intermediate/lesson-01/00-source/canonical-source.json",
+  "textbook": {
+    "source_dir": "Giáo trình/博雅汉语听说-准中级加速篇",
+    "main_pdf": "Giáo trình/博雅汉语听说-准中级加速篇/博雅汉语听说-准中级加速篇I.pdf",
+    "answer_pdf": "Giáo trình/博雅汉语听说-准中级加速篇/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+    "qr_audio_inventory": "course/boya-quasi-intermediate/source-inventory.json",
+    "local_audio_root": "work/boya-quasi-intermediate/source-audit/audio"
+  },
   "archive_root": "archive/legacy-materials-2026-08-27",
   "historical_package_evidence": "archive/legacy-materials-2026-08-27/boya-intermediate/lesson-01/share/第一课-教学资料",
-  "draft_root": "lessons/lesson-01/10-design",
-  "authority_root": "lessons/lesson-01/20-approved",
-  "qa_root": "lessons/lesson-01/30-qa",
-  "release_root": "lessons/lesson-01/40-release",
+  "draft_root": "lessons/quasi-intermediate/lesson-01/10-design",
+  "authority_root": "lessons/quasi-intermediate/lesson-01/20-approved",
+  "qa_root": "lessons/quasi-intermediate/lesson-01/30-qa",
+  "release_root": "lessons/quasi-intermediate/lesson-01/40-release",
   "dashboard_root": "dashboard",
   "protected_roots": [
+    "lessons/quasi-intermediate/lesson-01/20-approved",
+    "lessons/quasi-intermediate/lesson-01/30-qa",
+    "lessons/quasi-intermediate/lesson-01/40-release",
+    "archive/legacy-materials-2026-08-27/boya-intermediate/lesson-01/share",
     "lessons/lesson-01/20-approved",
     "lessons/lesson-01/30-qa",
-    "lessons/lesson-01/40-release",
-    "archive/legacy-materials-2026-08-27/boya-intermediate/lesson-01/share"
-  ]
+    "lessons/lesson-01/40-release"
+  ],
+  "legacy_course": {
+    "course_id": "boya-intermediate-i",
+    "course_title": "《博雅汉语听说：中级冲刺篇 I》",
+    "lesson_count": 8,
+    "lesson_catalog": "Giáo trình/博雅汉语听说-中级冲刺篇/教材资料索引.md",
+    "lesson_root": "lessons/lesson-01",
+    "canonical_source": "work/boya-intermediate/extractions/structured-lesson-01.json",
+    "authority_root": "lessons/lesson-01/20-approved",
+    "archive_root": "archive/legacy-materials-2026-08-27/boya-intermediate"
+  }
 }

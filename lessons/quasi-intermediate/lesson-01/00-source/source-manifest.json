@@ -1,0 +1,18 @@
+{
+  "course_id": "boya-quasi-intermediate-i",
+  "lesson_id": "lesson-01",
+  "lesson_number": 1,
+  "source_pdf": "Giáo trình/博雅汉语听说-准中级加速篇/博雅汉语听说-准中级加速篇I.pdf",
+  "answer_pdf": "Giáo trình/博雅汉语听说-准中级加速篇/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+  "canonical_source": "lessons/quasi-intermediate/lesson-01/00-source/canonical-source.json",
+  "canonical_source_sha256": "001b4f9c7e696cde277474f815708e1cd33d2e9574f6bb9cbcc3ed552d727903",
+  "qr_capture_root": "course/boya-quasi-intermediate/qr-captures",
+  "audio_root": "work/boya-quasi-intermediate/source-audit/audio/lesson-01",
+  "status": "source_audit_in_progress",
+  "approved": false,
+  "notes": [
+    "此包只记录来源盘点与 QR／音频证据，不是教师手册、PPT 或 DOCX 成品。"
+  ],
+  "audio_count": 6,
+  "audio_decode_status": "72/72 files decode passed"
+}
