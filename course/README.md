@@ -7,8 +7,7 @@ course/
 ├── course-manifest.json
 └── offerings/
     └── <offering_id>/
-        ├── offering.json
-        └── legacy/          # 被替换的学期文件，只作历史证据
+        └── offering.json
 ```
 
 当前开课实例是 `2026-fall`，主教材为《博雅汉语听说：准中级加速篇 I》。`2027-fall` 已登记为后续开课实例，主教材为《博雅汉语听说：中级冲刺篇 I》。两个开课实例的学期时数都须在完整理解对应教材后再建立 `semester-overview.md` 与整学期教师手册。

@@ -9,4 +9,4 @@
 - 结构化提取与 OCR：`source/derived/`（本地生成资料）
 - 逐课生产：`lessons/boya-intermediate-i/lesson-01/` 至 `lesson-08/`
 
-第一课已有批准的 authority、QA 与 release，全部留在标准逐课结构中。教材现已直接登记到 `course/offerings/2027-fall/offering.json`。先前为 2026-fall 制作、后来被课程换书决定取代的学期总览与主教师手册，单独保存在 `course/offerings/2026-fall/legacy/boya-intermediate-i/` 作为参考；这不影响 2027-fall 重新安排课程。
+第一课已有批准的 authority、QA 与 release，全部留在标准逐课结构中。教材现已直接登记到 `course/offerings/2027-fall/offering.json`。2027-fall 的学期总览与主教师手册将在完整理解教材后建立。

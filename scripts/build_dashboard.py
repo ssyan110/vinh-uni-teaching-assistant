@@ -263,7 +263,6 @@ def build_gates(
         "teacher_guide": evidence_items(
             [
                 (teacher_manual.get("path"), "教师手册"),
-                ("course/offerings/2026-fall/legacy/boya-intermediate-i/teacher-manual.md", "整学期主手册"),
             ]
         ),
         "support_materials": evidence_items(

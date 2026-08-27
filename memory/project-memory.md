@@ -13,7 +13,7 @@
 - 舊教材第一課 canonical source：`textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json`。
 - 舊教材第一課已核對 63 個教材區段、34 個詞語、7 個句式、5 個課文／對話、35 項練習與 11 段音檔。
 - 舊教材第一課教師手冊已於 2026-08-20 由 Adam 批准；其預習卡、活動卡、評量表與 Exit Ticket 的狀態不適用於新教材。
-- 舊教材整學期教師手冊組裝稿位於 `course/offerings/2026-fall/legacy/boya-intermediate-i/teacher-manual.md`；舊學期總覽位於同層 `semester-overview.md`，各課歷史 authority 以 `lessons/boya-intermediate-i/lesson-XX/20-approved/` 為準。
+- 舊教材的整學期規劃稿已因換書決定移除；《中級衝刺篇 I》的 2027-fall 學期安排待完整理解教材後建立，各課歷史 authority 仍以 `lessons/boya-intermediate-i/lesson-XX/20-approved/` 為準。
 - 2026-08-27 架构升级为「课程实例 → 教材 → 课次」：`course/` 只保存课程与开课实例；所有教材来源统一放在 `textbooks/<textbook_id>/source/`；逐课生产放在 `lessons/<textbook_id>/lesson-XX/`。同一学期可在 `offering.json` 登记多本教材。
 - 第一課主任審核包已原樣登記到 `lessons/boya-intermediate-i/lesson-01/20-approved/lesson-manifest.json`；整理前的輸入快照保存在 `archive/legacy-materials-2026-08-27/boya-intermediate/lesson-01/share/第一課-教学资料`，只作歷史證據，不是新的生產來源。
 - 教材沒有提供的答案不得自行補寫唯一標準答案。
