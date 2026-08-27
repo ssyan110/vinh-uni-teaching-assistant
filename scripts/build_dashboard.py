@@ -25,7 +25,7 @@ OUTPUT_PATH = DASHBOARD_ROOT / "manifest.js"
 
 GATE_DEFINITIONS = [
     ("source_review", "来源审核", "核对教材 PDF、区段、练习、音频与答案政策。"),
-    ("teaching_design", "PBI 教学重组", "建立 6 节／300 分钟流程、Can-Do 与练习 coverage。"),
+    ("teaching_design", "PBI 教学重组", "依该课核准实体课时建立流程、Can-Do 与练习 coverage。"),
     ("teacher_guide", "教师手册内容母版", "完成并批准可直接执行的教师手册。"),
     ("support_materials", "预习卡与补充活动材料", "完成预习卡、活动卡、评量表与 Exit Ticket。"),
     ("storyboard", "PPT storyboard", "逐页对应教材内容、学生动作、音档与课堂产出。"),
@@ -33,7 +33,7 @@ GATE_DEFINITIONS = [
     ("prototype", "6 张视觉 prototype", "确认学生画面方向、字级、留白与图片比例。"),
     ("pptx", "完整原生 PPTX", "完成可编辑、静态、16:9 的课堂 PPTX。"),
     ("audio_notes", "音档与 speaker notes", "完成音频嵌入、编号对应与 PowerPoint 播放测试。"),
-    ("qa_rehearsal", "内容 QA、技术 QA 与教师 rehearsal", "完成内容、版面、技术、列印与 300 分钟课堂流程验证。"),
+    ("qa_rehearsal", "内容 QA、技术 QA 与教师 rehearsal", "依该课核准实体课时完成内容、版面、技术、列印与课堂流程验证。"),
     ("release", "不可变交付包", "从 authority 建立 release，并完成版本与 hash 登记。"),
 ]
 
@@ -508,8 +508,8 @@ def build_lesson(
         },
         "catalog": catalog_entry,
         "scope": {
-            "period_count": scope.get("period_count", 6),
-            "total_minutes": scope.get("total_minutes", 300),
+            "period_count": scope.get("period_count"),
+            "total_minutes": scope.get("total_minutes"),
             "ppt_slide_count": scope.get("ppt_slide_count"),
             "activity_count": scope.get("activity_count"),
         },

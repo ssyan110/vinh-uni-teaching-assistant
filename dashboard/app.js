@@ -206,7 +206,7 @@
         <article class="card fact-panel">
           <p class="eyebrow">LESSON SNAPSHOT</p>
           <div class="fact-grid">
-            <div><span>课堂时间</span><strong>${text(lesson.scope && lesson.scope.period_count, '6')} 节／${text(lesson.scope && lesson.scope.total_minutes, '300')} 分钟</strong></div>
+            <div><span>课堂时间</span><strong>${lesson.scope && lesson.scope.period_count != null && lesson.scope.total_minutes != null ? `${text(lesson.scope.period_count)} 节／${text(lesson.scope.total_minutes)} 分钟` : '待核定'}</strong></div>
             <div><span>教材页</span><strong>${text(catalog.printed_pages)}</strong></div>
             <div><span>教材练习</span><strong>${text(counts.exercises)}</strong></div>
             <div><span>音档</span><strong>${text(counts.audio)}</strong></div>

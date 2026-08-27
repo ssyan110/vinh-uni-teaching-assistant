@@ -69,8 +69,8 @@ window.DASHBOARD_MANIFEST = {
         "audio_count": 6
       },
       "scope": {
-        "period_count": 6,
-        "total_minutes": 300,
+        "period_count": null,
+        "total_minutes": null,
         "ppt_slide_count": null,
         "activity_count": null
       },
@@ -105,8 +105,8 @@ window.DASHBOARD_MANIFEST = {
         "audio_count": 6
       },
       "scope": {
-        "period_count": 6,
-        "total_minutes": 300,
+        "period_count": null,
+        "total_minutes": null,
         "ppt_slide_count": null,
         "activity_count": null
       },
@@ -141,8 +141,8 @@ window.DASHBOARD_MANIFEST = {
         "audio_count": 6
       },
       "scope": {
-        "period_count": 6,
-        "total_minutes": 300,
+        "period_count": null,
+        "total_minutes": null,
         "ppt_slide_count": null,
         "activity_count": null
       },
@@ -177,8 +177,8 @@ window.DASHBOARD_MANIFEST = {
         "audio_count": 6
       },
       "scope": {
-        "period_count": 6,
-        "total_minutes": 300,
+        "period_count": null,
+        "total_minutes": null,
         "ppt_slide_count": null,
         "activity_count": null
       },
@@ -213,8 +213,8 @@ window.DASHBOARD_MANIFEST = {
         "audio_count": 6
       },
       "scope": {
-        "period_count": 6,
-        "total_minutes": 300,
+        "period_count": null,
+        "total_minutes": null,
         "ppt_slide_count": null,
         "activity_count": null
       },
@@ -249,8 +249,8 @@ window.DASHBOARD_MANIFEST = {
         "audio_count": 6
       },
       "scope": {
-        "period_count": 6,
-        "total_minutes": 300,
+        "period_count": null,
+        "total_minutes": null,
         "ppt_slide_count": null,
         "activity_count": null
       },
@@ -285,8 +285,8 @@ window.DASHBOARD_MANIFEST = {
         "audio_count": 6
       },
       "scope": {
-        "period_count": 6,
-        "total_minutes": 300,
+        "period_count": null,
+        "total_minutes": null,
         "ppt_slide_count": null,
         "activity_count": null
       },
@@ -321,8 +321,8 @@ window.DASHBOARD_MANIFEST = {
         "audio_count": 6
       },
       "scope": {
-        "period_count": 6,
-        "total_minutes": 300,
+        "period_count": null,
+        "total_minutes": null,
         "ppt_slide_count": null,
         "activity_count": null
       },
@@ -357,8 +357,8 @@ window.DASHBOARD_MANIFEST = {
         "audio_count": 6
       },
       "scope": {
-        "period_count": 6,
-        "total_minutes": 300,
+        "period_count": null,
+        "total_minutes": null,
         "ppt_slide_count": null,
         "activity_count": null
       },
@@ -393,8 +393,8 @@ window.DASHBOARD_MANIFEST = {
         "audio_count": 6
       },
       "scope": {
-        "period_count": 6,
-        "total_minutes": 300,
+        "period_count": null,
+        "total_minutes": null,
         "ppt_slide_count": null,
         "activity_count": null
       },
@@ -429,8 +429,8 @@ window.DASHBOARD_MANIFEST = {
         "audio_count": 6
       },
       "scope": {
-        "period_count": 6,
-        "total_minutes": 300,
+        "period_count": null,
+        "total_minutes": null,
         "ppt_slide_count": null,
         "activity_count": null
       },
@@ -465,8 +465,8 @@ window.DASHBOARD_MANIFEST = {
         "audio_count": 6
       },
       "scope": {
-        "period_count": 6,
-        "total_minutes": 300,
+        "period_count": null,
+        "total_minutes": null,
         "ppt_slide_count": null,
         "activity_count": null
       },
@@ -522,7 +522,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 2,
           "id": "teaching_design",
           "title": "PBI 教学重组",
-          "description": "建立 6 节／300 分钟流程、Can-Do 与练习 coverage。",
+          "description": "依该课核准实体课时建立流程、Can-Do 与练习 coverage。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -594,7 +594,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 10,
           "id": "qa_rehearsal",
           "title": "内容 QA、技术 QA 与教师 rehearsal",
-          "description": "完成内容、版面、技术、列印与 300 分钟课堂流程验证。",
+          "description": "依该课核准实体课时完成内容、版面、技术、列印与课堂流程验证。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -628,7 +628,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 2,
           "id": "teaching_design",
           "title": "PBI 教学重组",
-          "description": "建立 6 节／300 分钟流程、Can-Do 与练习 coverage。",
+          "description": "依该课核准实体课时建立流程、Can-Do 与练习 coverage。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -700,7 +700,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 10,
           "id": "qa_rehearsal",
           "title": "内容 QA、技术 QA 与教师 rehearsal",
-          "description": "完成内容、版面、技术、列印与 300 分钟课堂流程验证。",
+          "description": "依该课核准实体课时完成内容、版面、技术、列印与课堂流程验证。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -734,7 +734,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 2,
           "id": "teaching_design",
           "title": "PBI 教学重组",
-          "description": "建立 6 节／300 分钟流程、Can-Do 与练习 coverage。",
+          "description": "依该课核准实体课时建立流程、Can-Do 与练习 coverage。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -806,7 +806,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 10,
           "id": "qa_rehearsal",
           "title": "内容 QA、技术 QA 与教师 rehearsal",
-          "description": "完成内容、版面、技术、列印与 300 分钟课堂流程验证。",
+          "description": "依该课核准实体课时完成内容、版面、技术、列印与课堂流程验证。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -840,7 +840,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 2,
           "id": "teaching_design",
           "title": "PBI 教学重组",
-          "description": "建立 6 节／300 分钟流程、Can-Do 与练习 coverage。",
+          "description": "依该课核准实体课时建立流程、Can-Do 与练习 coverage。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -912,7 +912,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 10,
           "id": "qa_rehearsal",
           "title": "内容 QA、技术 QA 与教师 rehearsal",
-          "description": "完成内容、版面、技术、列印与 300 分钟课堂流程验证。",
+          "description": "依该课核准实体课时完成内容、版面、技术、列印与课堂流程验证。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -946,7 +946,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 2,
           "id": "teaching_design",
           "title": "PBI 教学重组",
-          "description": "建立 6 节／300 分钟流程、Can-Do 与练习 coverage。",
+          "description": "依该课核准实体课时建立流程、Can-Do 与练习 coverage。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -1018,7 +1018,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 10,
           "id": "qa_rehearsal",
           "title": "内容 QA、技术 QA 与教师 rehearsal",
-          "description": "完成内容、版面、技术、列印与 300 分钟课堂流程验证。",
+          "description": "依该课核准实体课时完成内容、版面、技术、列印与课堂流程验证。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -1052,7 +1052,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 2,
           "id": "teaching_design",
           "title": "PBI 教学重组",
-          "description": "建立 6 节／300 分钟流程、Can-Do 与练习 coverage。",
+          "description": "依该课核准实体课时建立流程、Can-Do 与练习 coverage。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -1124,7 +1124,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 10,
           "id": "qa_rehearsal",
           "title": "内容 QA、技术 QA 与教师 rehearsal",
-          "description": "完成内容、版面、技术、列印与 300 分钟课堂流程验证。",
+          "description": "依该课核准实体课时完成内容、版面、技术、列印与课堂流程验证。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -1158,7 +1158,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 2,
           "id": "teaching_design",
           "title": "PBI 教学重组",
-          "description": "建立 6 节／300 分钟流程、Can-Do 与练习 coverage。",
+          "description": "依该课核准实体课时建立流程、Can-Do 与练习 coverage。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -1230,7 +1230,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 10,
           "id": "qa_rehearsal",
           "title": "内容 QA、技术 QA 与教师 rehearsal",
-          "description": "完成内容、版面、技术、列印与 300 分钟课堂流程验证。",
+          "description": "依该课核准实体课时完成内容、版面、技术、列印与课堂流程验证。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -1264,7 +1264,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 2,
           "id": "teaching_design",
           "title": "PBI 教学重组",
-          "description": "建立 6 节／300 分钟流程、Can-Do 与练习 coverage。",
+          "description": "依该课核准实体课时建立流程、Can-Do 与练习 coverage。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -1336,7 +1336,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 10,
           "id": "qa_rehearsal",
           "title": "内容 QA、技术 QA 与教师 rehearsal",
-          "description": "完成内容、版面、技术、列印与 300 分钟课堂流程验证。",
+          "description": "依该课核准实体课时完成内容、版面、技术、列印与课堂流程验证。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -1370,7 +1370,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 2,
           "id": "teaching_design",
           "title": "PBI 教学重组",
-          "description": "建立 6 节／300 分钟流程、Can-Do 与练习 coverage。",
+          "description": "依该课核准实体课时建立流程、Can-Do 与练习 coverage。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -1442,7 +1442,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 10,
           "id": "qa_rehearsal",
           "title": "内容 QA、技术 QA 与教师 rehearsal",
-          "description": "完成内容、版面、技术、列印与 300 分钟课堂流程验证。",
+          "description": "依该课核准实体课时完成内容、版面、技术、列印与课堂流程验证。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -1476,7 +1476,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 2,
           "id": "teaching_design",
           "title": "PBI 教学重组",
-          "description": "建立 6 节／300 分钟流程、Can-Do 与练习 coverage。",
+          "description": "依该课核准实体课时建立流程、Can-Do 与练习 coverage。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -1548,7 +1548,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 10,
           "id": "qa_rehearsal",
           "title": "内容 QA、技术 QA 与教师 rehearsal",
-          "description": "完成内容、版面、技术、列印与 300 分钟课堂流程验证。",
+          "description": "依该课核准实体课时完成内容、版面、技术、列印与课堂流程验证。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -1582,7 +1582,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 2,
           "id": "teaching_design",
           "title": "PBI 教学重组",
-          "description": "建立 6 节／300 分钟流程、Can-Do 与练习 coverage。",
+          "description": "依该课核准实体课时建立流程、Can-Do 与练习 coverage。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -1654,7 +1654,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 10,
           "id": "qa_rehearsal",
           "title": "内容 QA、技术 QA 与教师 rehearsal",
-          "description": "完成内容、版面、技术、列印与 300 分钟课堂流程验证。",
+          "description": "依该课核准实体课时完成内容、版面、技术、列印与课堂流程验证。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -1688,7 +1688,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 2,
           "id": "teaching_design",
           "title": "PBI 教学重组",
-          "description": "建立 6 节／300 分钟流程、Can-Do 与练习 coverage。",
+          "description": "依该课核准实体课时建立流程、Can-Do 与练习 coverage。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
@@ -1760,7 +1760,7 @@ window.DASHBOARD_MANIFEST = {
           "number": 10,
           "id": "qa_rehearsal",
           "title": "内容 QA、技术 QA 与教师 rehearsal",
-          "description": "完成内容、版面、技术、列印与 300 分钟课堂流程验证。",
+          "description": "依该课核准实体课时完成内容、版面、技术、列印与课堂流程验证。",
           "status": "locked",
           "status_label": "锁定",
           "evidence": []
