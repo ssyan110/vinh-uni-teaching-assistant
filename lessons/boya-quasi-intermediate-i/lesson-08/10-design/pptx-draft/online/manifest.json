@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-pptx-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-08",
+  "mode": "online",
+  "title": "第八课《孙子和《孙子兵法》》在线预习",
+  "status": "draft_not_approved",
+  "builder_scope": "scripts/build_l23_pptx_drafts.js",
+  "draft_gate": "lesson-specific",
+  "source_sha256": "30bc7a4716233edf482abac6d8838a296359a51f2c5958efb9becf535f216b89",
+  "layout_source": "boya-quasi-intermediate-i lesson-01 approved layout family",
+  "shared_layout_contract": "course/boya-online-layout-contract.json",
+  "fixed_structure": [
+    "cover",
+    "learning_flow",
+    "goals",
+    "vocabulary",
+    "practice_after_each_full_five",
+    "proper_nouns_if_present",
+    "short_text_divider_before_each_text",
+    "short_text_record",
+    "expressions_after_related_text",
+    "comprehensive_practice",
+    "fixed_three_slide_ending"
+  ],
+  "route_asset": "learning-route-user-supplied-transparent.png",
+  "vocabulary_practice_after_every": 5,
+  "vocabulary_extension_policy": "empty_until_explicitly_supplied",
+  "fixed_ending_titles": [
+    "我觉得很难的地方",
+    "课前检查",
+    "谢谢大家，我们课堂见。"
+  ],
+  "short_example_policy": "curated_short_sentences_max_24_hanzi_chars",
+  "short_text_policy": "textbook_reading_prompt_and_record_layout_no_full_text_copy",
+  "shared_assets": [
+    "lesson-01-cover-family-work-hobby.png",
+    "learning-route-user-supplied-transparent.png",
+    "divider-family.png",
+    "divider-work.png",
+    "divider-hobby.png",
+    "divider-comprehensive.png",
+    "symbolic-vocabulary.png",
+    "symbolic-listening.png",
+    "symbolic-sentence-pattern.png",
+    "oral-practice-divider.png",
+    "speaking-practice.png"
+  ],
+  "vocabulary_image_policy": "one_distinct_semantic_asset_per_vocabulary_item",
+  "vocabulary_image_count": 31,
+  "vocabulary_image_assets": [
+    {
+      "word": "士兵",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-01.png",
+      "status": "candidate"
+    },
+    {
+      "word": "打仗",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-02.png",
+      "status": "candidate"
+    },
+    {
+      "word": "训练",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-03.png",
+      "status": "candidate"
+    },
+    {
+      "word": "进攻",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-04.png",
+      "status": "candidate"
+    },
+    {
+      "word": "军事家",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-05.png",
+      "status": "candidate"
+    },
+    {
+      "word": "记载",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-06.png",
+      "status": "candidate"
+    },
+    {
+      "word": "将军",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-07.png",
+      "status": "candidate"
+    },
+    {
+      "word": "权力",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-08.png",
+      "status": "candidate"
+    },
+    {
+      "word": "策略",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-09.png",
+      "status": "candidate"
+    },
+    {
+      "word": "打败仗",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-10.png",
+      "status": "candidate"
+    },
+    {
+      "word": "结束",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-11.png",
+      "status": "candidate"
+    },
+    {
+      "word": "开设",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-12.png",
+      "status": "candidate"
+    },
+    {
+      "word": "带兵打仗",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-13.png",
+      "status": "candidate"
+    },
+    {
+      "word": "严明",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-14.png",
+      "status": "candidate"
+    },
+    {
+      "word": "根据",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-15.png",
+      "status": "candidate"
+    },
+    {
+      "word": "曾经",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-16.png",
+      "status": "candidate"
+    },
+    {
+      "word": "展示",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-17.png",
+      "status": "candidate"
+    },
+    {
+      "word": "妻子",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-18.png",
+      "status": "candidate"
+    },
+    {
+      "word": "制定",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-19.png",
+      "status": "candidate"
+    },
+    {
+      "word": "嘻嘻哈哈",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-20.png",
+      "status": "candidate"
+    },
+    {
+      "word": "严肃",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-21.png",
+      "status": "candidate"
+    },
+    {
+      "word": "按",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-22.png",
+      "status": "candidate"
+    },
+    {
+      "word": "军法",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-23.png",
+      "status": "candidate"
+    },
+    {
+      "word": "处死",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-24.png",
+      "status": "candidate"
+    },
+    {
+      "word": "难过",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-25.png",
+      "status": "candidate"
+    },
+    {
+      "word": "任命",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-26.png",
+      "status": "candidate"
+    },
+    {
+      "word": "打胜仗",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-27.png",
+      "status": "candidate"
+    },
+    {
+      "word": "既",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-28.png",
+      "status": "candidate"
+    },
+    {
+      "word": "战败",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-29.png",
+      "status": "candidate"
+    },
+    {
+      "word": "孙子",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-30.png",
+      "status": "candidate"
+    },
+    {
+      "word": "《孙子兵法》",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/l08-vocab-dedicated-31.png",
+      "status": "candidate"
+    }
+  ],
+  "slide_count": 59,
+  "audio_tracks_embedded": [
+    "8-1",
+    "8-2",
+    "8-3",
+    "8-4",
+    "8-5",
+    "8-6"
+  ],
+  "audio_playback_policy": "embedded_on_audio-summary-slides; PowerPoint playback QA remains pending for draft",
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/pptx-draft/online/lesson-08-在线预习.pptx",
+    "sha256": "d978f0233260ffc4b776c5e426db7079422066b977fc83bec499ab5ba5f63278",
+    "bytes": 23071744
+  },
+  "generated_at": "2026-08-29T16:33:53.242Z"
+}

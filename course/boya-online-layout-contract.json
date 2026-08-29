@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "contract_id": "boya-quasi-intermediate-i-online-v1",
+  "reference_lesson_key": "boya-quasi-intermediate-i:lesson-01",
+  "description": "Shared online student-PPT layout contract for subsequent lessons.",
+  "scope_policy": "layout_and_reusable_microcopy_only",
+  "lesson_specific_content_source": "lesson canonical-source.json plus content-contract.json; task counts and summary requirements override layout defaults",
+  "cover": {
+    "online_label": "在线课",
+    "subtitle": "听一听，问一问，说一说。",
+    "asset": "lesson-01-cover-family-work-hobby.png"
+  },
+  "learning_route": {
+    "title": "学习流程图",
+    "asset": "learning-route-user-supplied-transparent.png"
+  },
+  "goals": {
+    "title": "学完这课后，我能……"
+  },
+  "vocabulary": {
+    "divider_title": "词语",
+    "divider_subtitle": "看图、读音、词类、意思、用法和例句。",
+    "practice_after_every": 5,
+    "practice_title": "请你说说它们的中文并造句",
+    "extension_label": "扩展：",
+    "extension_policy": "empty_until_explicitly_supplied",
+    "page_breaks": {
+      "2": { "first_page": 12, "first_count": 17, "second_page": 13 },
+      "3": { "first_page": 22, "first_count": 17, "second_page": 23 },
+      "4": { "first_page": 32, "first_count": 17, "second_page": 33 }
+    },
+    "page_breaks_policy": "The entries above are lesson-specific layout overrides only; future lessons must derive printed-page breaks from their own canonical source/content contract and may not inherit these numbers."
+  },
+  "proper_nouns": {
+    "divider_title": "专有名词"
+  },
+  "reading": {
+    "divider_title": "听力和阅读练习",
+    "summary_instruction": "先听音档 {audio}，再写本课要求的简单摘要。",
+    "summary_range_default": null,
+    "record_title": "短文{ordinal}：记录练习",
+    "record_subtitle": "短文记录练习"
+  },
+  "expressions": {
+    "divider_title": "句式",
+    "student_instruction": "完成教材中的练习。"
+  },
+  "comprehensive": {
+    "divider_title": "综合练习"
+  },
+  "ending": {
+    "slides": [
+      {
+        "title": "我觉得很难的地方",
+        "prompt": "写下你不太懂的词语、句式、短文、听力。",
+        "lines": 6
+      },
+      {
+        "title": "课前检查",
+        "checks": [
+          "我已经学完本课所有词语，知道它们的意思和用法。",
+          "我已经听完本课所有听力音频。",
+          "我已经按本课要求为三段短文写好摘要。",
+          "我已经记下听不懂的词语、句式、短文或听力。",
+          "我已经学完本课所有句式，并完成每个句式的练习。",
+          "我已经完成课本第{table_page}页的表格。",
+          "我已经按本课要求写好个人介绍，并使用指定的课本词语和句式。",
+          "我已经准备好在课堂介绍自己。"
+        ]
+      },
+      {
+        "title": "谢谢大家，我们课堂见。"
+      }
+    ]
+  },
+  "fonts": {
+    "cjk": "KaiTi",
+    "latin": "Times New Roman",
+    "minimum_visible_pt": 20
+  }
+}

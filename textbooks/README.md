@@ -16,4 +16,4 @@ textbooks/<textbook_id>/
     └── source-inventory.json
 ```
 
-教材来源只放在这里；`course/` 不保存教材文件，`lessons/` 不复制整本教材来源。新增教材时先登记 `textbooks/registry.json`，再建立同名的 `lessons/<textbook_id>/`。
+教材来源只放在这里；`course/` 不保存教材文件，`lessons/` 不复制整本教材来源。新增教材时先登记 `textbooks/registry.json`，再建立同名的 `lessons/<textbook_id>/`，并由 `scripts/build_lesson_registry.py` 更新 `course/lesson-registry.json`。

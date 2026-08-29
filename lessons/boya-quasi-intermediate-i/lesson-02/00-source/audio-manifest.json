@@ -1,0 +1,48 @@
+{
+  "schema_version": "boya-lesson-audio-manifest-v1",
+  "lesson_id": "lesson-02",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-02",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_title": "王红的一天",
+  "audio_count": 7,
+  "audio_count_note": "6 个出版社 QR 音频 + 1 个 Adam 提供并转换的 2-7 来源音频",
+  "recorded_at": "2026-08-29",
+  "provenance": {
+    "source_type": "publisher_qr_landing_page",
+    "qr_url": "http://qr31.cn/H1krER",
+    "landing_page": "https://biz.cli.im/site/H1krER?qrurl=http://qr31.cn/H1krER&gtype=2&key=2f3e4171ce1d0df5087828fc7991b4470b28d38181",
+    "landing_audio_labels": ["2-1", "2-2", "2-3", "2-4", "2-5", "2-6"],
+    "textbook_labels_seen": ["2-1", "2-2", "2-3", "2-4", "2-5", "2-6", "2-7"],
+    "expected_audio_labels": ["2-1", "2-2", "2-3", "2-4", "2-5", "2-6", "2-7"],
+    "label_discrepancy": "主教材 P18-P19 及答案 PDF 文件页10标示短文三《课外活动》使用 2-7；publisher QR landing page 与 source inventory 仍只列 2-1 至 2-6，2-7 由 Adam 提供 WAV 后恢复。",
+    "recovery": {
+      "source_type": "user_supplied_audio",
+      "input_filename": "2-7.wav",
+      "input_sha256": "b4830c93f602533f75737d9bc2b34f835a42fc0e2df26cb031131253f930cb70",
+      "input_format": "wav_pcm_s16le",
+      "input_sample_rate_hz": 24000,
+      "input_channels": 1,
+      "input_duration_seconds": 57.04,
+      "output_path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-7.mp3",
+      "output_sha256": "13e4a8068ce1b50a52243ed98b956484406b2678373e59f8cc66096652b735fd",
+      "output_format": "mp3",
+      "conversion": "PCM WAV to MP3, 128 kbps CBR, 44100 Hz, mono",
+      "recovered_at": "2026-08-29"
+    }
+  },
+  "technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/audit/audio-technical-2026-08-29.md",
+  "tracks": [
+    {"label":"2-1","coding":"AN1539798","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FrcsApC3vbzAKWKS-hUPQNs18T4v","path":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-1.mp3","scope":"词语（P12-P13）","bytes":861404,"sha256":"9425046c170d85f1a8dd25fa9d7afce508811dafebcdc8b0b806938aca3d8a56","duration_seconds":53.524898,"codec":"mp3","sample_rate_hz":44100,"channels":1,"download_status":"passed","decode_status":"passed","semantic_status":"pending_teacher_playback","teacher_playback_status":"pending"},
+    {"label":"2-2","coding":"UY1783192","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FuOLWdJhJOaCfDAOhTGm555Y2Eiv","path":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-2.mp3","scope":"词语理解（P13-P14）","bytes":683353,"sha256":"5ad1a76dea86112f9a967a5d49ae124a7afbf01be77b0989bf8369dec2eed6fc","duration_seconds":42.396735,"codec":"mp3","sample_rate_hz":44100,"channels":1,"download_status":"passed_with_retry_error_recorded","source_inventory_error":"URLError: <urlopen error _ssl.c:1063: The handshake operation timed out>","decode_status":"passed","semantic_status":"pending_teacher_playback","teacher_playback_status":"pending"},
+    {"label":"2-3","coding":"MU1783193","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fn8_en5WTQpj8eLTt--rauvOi18M","path":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-3.mp3","scope":"听说句子（P14-P15）","bytes":1869103,"sha256":"97b01a753c80a4b2ec850b0d0f60514c58e2455901dafc988958512de112a1db","duration_seconds":116.506122,"codec":"mp3","sample_rate_hz":44100,"channels":1,"download_status":"passed_with_retry_error_recorded","source_inventory_error":"URLError: <urlopen error [Errno 60] Operation timed out>","decode_status":"passed","semantic_status":"pending_teacher_playback","teacher_playback_status":"pending"},
+    {"label":"2-4","coding":"TV1783194","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FtAmltELpWLKXr_R4mjQWl-aepsK","path":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-4.mp3","scope":"听小对话（P15）","bytes":1350834,"sha256":"7dcd2b8934ab85277744aad0e39c9aa039af7803adcceb33269469c096a80fa3","duration_seconds":84.114286,"codec":"mp3","sample_rate_hz":44100,"channels":1,"download_status":"passed","decode_status":"passed","semantic_status":"pending_teacher_playback","teacher_playback_status":"pending"},
+    {"label":"2-5","coding":"IX1783195","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FpZ_TqHXC83O_j9ELJ9jesJPS_D9","path":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-5.mp3","scope":"短文一《王红喜欢上课》（P15-P16）","bytes":805815,"sha256":"44dbd41d3631363b7c998e91730a412e12b537a65a8f88ed09884a3483e2e957","duration_seconds":50.050612,"codec":"mp3","sample_rate_hz":44100,"channels":1,"download_status":"passed","decode_status":"passed","semantic_status":"pending_teacher_playback","teacher_playback_status":"pending"},
+    {"label":"2-6","coding":"NY1783196","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FmhttHW2y3TFGkjunvaqc9JRE7ek","path":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-6.mp3","scope":"短文二《生日午餐》（P17-P18）","bytes":1041962,"sha256":"b59eb5af70b6928d11da243665eb8dd4e70d2dbef616f1a249816be6f1ab9265","duration_seconds":64.809796,"codec":"mp3","sample_rate_hz":44100,"channels":1,"download_status":"passed","decode_status":"passed","semantic_status":"pending_teacher_playback","teacher_playback_status":"pending"},
+    {"label":"2-7","coding":null,"play_url":null,"path":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-7.mp3","scope":"短文三《课外活动》（P18-P19）","source_type":"user_supplied_recovery","original_filename":"2-7.wav","original_bytes":2737964,"original_sha256":"b4830c93f602533f75737d9bc2b34f835a42fc0e2df26cb031131253f930cb70","original_format":"wav_pcm_s16le","original_sample_rate_hz":24000,"original_channels":1,"bytes":913702,"sha256":"13e4a8068ce1b50a52243ed98b956484406b2678373e59f8cc66096652b735fd","duration_seconds":57.04,"codec":"mp3","sample_rate_hz":44100,"channels":1,"download_status":"recovered_from_user_supplied_wav","decode_status":"passed","semantic_status":"passed","teacher_playback_status":"passed","semantic_verified_by":"Adam","teacher_playback_verified_by":"Adam","verified_at":"2026-08-29"}
+  ],
+  "missing_tracks": [],
+  "recovered_tracks": ["2-7"],
+  "status": "technical_pass_for_7_of_7; 2-7_semantic_and_teacher_playback_passed; 2-1_to_2-6_pending",
+  "coverage_status": "tracks_2-1_to_2-7_mapped_to_source_sections; 2-7_user_supplied_recovery_approved_by_adam; 2-1_to_2-6_semantic_and_teacher_playback_pending",
+  "technical_summary": {"expected_track_count":7,"local_track_count":7,"decode_passed":7,"missing_track_count":0,"semantic_listening_completed":1,"teacher_powerpoint_playback_completed":1}
+}

@@ -1,0 +1,531 @@
+{
+  "schema_version": 1,
+  "registry_type": "textbook-scoped-lesson-registry",
+  "lesson_key_format": "<textbook_id>:<lesson_id>",
+  "generated_at": "2026-08-29",
+  "generated_from": {
+    "course_manifest": "course/course-manifest.json",
+    "textbook_registry": "textbooks/registry.json",
+    "offering_root": "course/offerings"
+  },
+  "textbooks": [
+    {
+      "textbook_id": "boya-intermediate-i",
+      "title": "《博雅汉语听说：中级冲刺篇 I》",
+      "status": "planned_for_2027_fall",
+      "lesson_count": 8,
+      "lesson_key_prefix": "boya-intermediate-i:",
+      "lesson_root": "lessons/boya-intermediate-i",
+      "manifest": "textbooks/boya-intermediate-i/textbook.json",
+      "source_inventory": "textbooks/boya-intermediate-i/source/source-inventory.json",
+      "offering_ids": [
+        "2027-fall"
+      ]
+    },
+    {
+      "textbook_id": "boya-quasi-intermediate-i",
+      "title": "《博雅汉语听说：准中级加速篇 I》",
+      "status": "active_source_review",
+      "lesson_count": 12,
+      "lesson_key_prefix": "boya-quasi-intermediate-i:",
+      "lesson_root": "lessons/boya-quasi-intermediate-i",
+      "manifest": "textbooks/boya-quasi-intermediate-i/textbook.json",
+      "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
+      "offering_ids": [
+        "2026-fall"
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "lesson_key": "boya-intermediate-i:lesson-01",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2027-fall"
+      ],
+      "textbook_id": "boya-intermediate-i",
+      "lesson_id": "lesson-01",
+      "lesson_number": 1,
+      "title": "中国人的姓名",
+      "lesson_path": "lessons/boya-intermediate-i/lesson-01",
+      "source_manifest": "lessons/boya-intermediate-i/lesson-01/00-source/source-manifest.json",
+      "authority_manifest": "lessons/boya-intermediate-i/lesson-01/20-approved/lesson-manifest.json",
+      "source_inventory": "textbooks/boya-intermediate-i/source/source-inventory.json",
+      "printed_pages": null,
+      "pdf_page": null,
+      "audio_count": 11,
+      "status": {
+        "stage": "authority",
+        "authority_status": "final_confirmed",
+        "content_status": "approved_by_adam_2026-08-27",
+        "delivery_status": "blocked"
+      }
+    },
+    {
+      "lesson_key": "boya-intermediate-i:lesson-02",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2027-fall"
+      ],
+      "textbook_id": "boya-intermediate-i",
+      "lesson_id": "lesson-02",
+      "lesson_number": 2,
+      "title": "真正的朋友",
+      "lesson_path": "lessons/boya-intermediate-i/lesson-02",
+      "source_manifest": "lessons/boya-intermediate-i/lesson-02/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-intermediate-i/source/source-inventory.json",
+      "printed_pages": null,
+      "pdf_page": null,
+      "audio_count": 12,
+      "status": {
+        "stage": "source",
+        "source_status": "pending_review",
+        "source_qa_status": "pending",
+        "status": null
+      }
+    },
+    {
+      "lesson_key": "boya-intermediate-i:lesson-03",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2027-fall"
+      ],
+      "textbook_id": "boya-intermediate-i",
+      "lesson_id": "lesson-03",
+      "lesson_number": 3,
+      "title": "宜居之地",
+      "lesson_path": "lessons/boya-intermediate-i/lesson-03",
+      "source_manifest": "lessons/boya-intermediate-i/lesson-03/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-intermediate-i/source/source-inventory.json",
+      "printed_pages": null,
+      "pdf_page": null,
+      "audio_count": 11,
+      "status": {
+        "stage": "source",
+        "source_status": "pending_review",
+        "source_qa_status": "pending",
+        "status": null
+      }
+    },
+    {
+      "lesson_key": "boya-intermediate-i:lesson-04",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2027-fall"
+      ],
+      "textbook_id": "boya-intermediate-i",
+      "lesson_id": "lesson-04",
+      "lesson_number": 4,
+      "title": "地球人的担忧",
+      "lesson_path": "lessons/boya-intermediate-i/lesson-04",
+      "source_manifest": "lessons/boya-intermediate-i/lesson-04/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-intermediate-i/source/source-inventory.json",
+      "printed_pages": null,
+      "pdf_page": null,
+      "audio_count": 12,
+      "status": {
+        "stage": "source",
+        "source_status": "pending_review",
+        "source_qa_status": "pending",
+        "status": null
+      }
+    },
+    {
+      "lesson_key": "boya-intermediate-i:lesson-05",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2027-fall"
+      ],
+      "textbook_id": "boya-intermediate-i",
+      "lesson_id": "lesson-05",
+      "lesson_number": 5,
+      "title": "音乐的魅力",
+      "lesson_path": "lessons/boya-intermediate-i/lesson-05",
+      "source_manifest": "lessons/boya-intermediate-i/lesson-05/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-intermediate-i/source/source-inventory.json",
+      "printed_pages": null,
+      "pdf_page": null,
+      "audio_count": 12,
+      "status": {
+        "stage": "source",
+        "source_status": "pending_review",
+        "source_qa_status": "pending QA",
+        "status": null
+      }
+    },
+    {
+      "lesson_key": "boya-intermediate-i:lesson-06",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2027-fall"
+      ],
+      "textbook_id": "boya-intermediate-i",
+      "lesson_id": "lesson-06",
+      "lesson_number": 6,
+      "title": "挑战",
+      "lesson_path": "lessons/boya-intermediate-i/lesson-06",
+      "source_manifest": "lessons/boya-intermediate-i/lesson-06/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-intermediate-i/source/source-inventory.json",
+      "printed_pages": null,
+      "pdf_page": null,
+      "audio_count": 12,
+      "status": {
+        "stage": "source",
+        "source_status": "pending_review",
+        "source_qa_status": "pending",
+        "status": "source_review_materialized"
+      }
+    },
+    {
+      "lesson_key": "boya-intermediate-i:lesson-07",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2027-fall"
+      ],
+      "textbook_id": "boya-intermediate-i",
+      "lesson_id": "lesson-07",
+      "lesson_number": 7,
+      "title": "我的同事",
+      "lesson_path": "lessons/boya-intermediate-i/lesson-07",
+      "source_manifest": "lessons/boya-intermediate-i/lesson-07/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-intermediate-i/source/source-inventory.json",
+      "printed_pages": null,
+      "pdf_page": null,
+      "audio_count": 10,
+      "status": {
+        "stage": "source",
+        "source_status": "pending_review",
+        "source_qa_status": "pending",
+        "status": null
+      }
+    },
+    {
+      "lesson_key": "boya-intermediate-i:lesson-08",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2027-fall"
+      ],
+      "textbook_id": "boya-intermediate-i",
+      "lesson_id": "lesson-08",
+      "lesson_number": 8,
+      "title": "学汉语的苦恼",
+      "lesson_path": "lessons/boya-intermediate-i/lesson-08",
+      "source_manifest": "lessons/boya-intermediate-i/lesson-08/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-intermediate-i/source/source-inventory.json",
+      "printed_pages": null,
+      "pdf_page": null,
+      "audio_count": 11,
+      "status": {
+        "stage": "source",
+        "source_status": "pending_review",
+        "source_qa_status": "pending",
+        "status": null
+      }
+    },
+    {
+      "lesson_key": "boya-quasi-intermediate-i:lesson-01",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-quasi-intermediate-i",
+      "lesson_id": "lesson-01",
+      "lesson_number": 1,
+      "title": "丽丽是独生女",
+      "lesson_path": "lessons/boya-quasi-intermediate-i/lesson-01",
+      "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-manifest.json",
+      "authority_manifest": "lessons/boya-quasi-intermediate-i/lesson-01/20-approved/lesson-manifest.json",
+      "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
+      "printed_pages": "1–11",
+      "pdf_page": 14,
+      "audio_count": 8,
+    "status": {
+      "stage": "authority",
+      "authority_status": "pptx_chair_approved",
+      "content_status": "pptx_approved_by_department_chair_2026-08-29",
+      "delivery_status": "pptx_only_handoff_pending_full_package",
+      "pptx_draft_status": "promoted_to_locked_authority",
+      "release_status": "blocked_pending_full_package"
+      }
+    },
+    {
+      "lesson_key": "boya-quasi-intermediate-i:lesson-02",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-quasi-intermediate-i",
+      "lesson_id": "lesson-02",
+      "lesson_number": 2,
+      "title": "王红的一天",
+      "lesson_path": "lessons/boya-quasi-intermediate-i/lesson-02",
+      "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
+      "printed_pages": "12–21",
+      "pdf_page": 25,
+    "audio_count": 7,
+    "status": {
+      "stage": "source",
+      "source_status": "pending_review",
+      "source_qa_status": "technical_audio_passed_7_of_7; 2-7_semantic_and_playback_approved; 2-1_to_2-6_pending",
+      "authority_status": "not_created",
+      "pptx_draft_status": "generated_not_approved",
+      "draft_modes": ["online", "face-to-face"],
+      "release_status": "locked_pending_authority"
+      }
+    },
+    {
+      "lesson_key": "boya-quasi-intermediate-i:lesson-03",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-quasi-intermediate-i",
+      "lesson_id": "lesson-03",
+      "lesson_number": 3,
+      "title": "我对学中文越来越有兴趣",
+      "lesson_path": "lessons/boya-quasi-intermediate-i/lesson-03",
+      "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
+      "printed_pages": "22–31",
+      "pdf_page": 35,
+      "audio_count": 6,
+    "status": {
+      "stage": "source",
+      "source_status": "partial_adam_review_source_and_images_audio_pending",
+      "source_qa_status": "source_content_and_images_passed; audio_semantic_playback_pending",
+      "authority_status": "not_created",
+      "pptx_draft_status": "generated_not_approved",
+      "draft_modes": ["online", "face-to-face"],
+      "release_status": "locked_pending_authority"
+      }
+    },
+  {
+    "lesson_key": "boya-quasi-intermediate-i:lesson-04",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-quasi-intermediate-i",
+      "lesson_id": "lesson-04",
+      "lesson_number": 4,
+      "title": "在中国学汉语",
+      "lesson_path": "lessons/boya-quasi-intermediate-i/lesson-04",
+      "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
+      "printed_pages": "32–41",
+      "pdf_page": 45,
+      "audio_count": 6,
+    "status": {
+      "stage": "source",
+      "source_status": "pending_review",
+      "source_qa_status": "blocked",
+      "authority_status": "not_created",
+      "pptx_draft_status": "legacy_unverified_do_not_use",
+      "release_status": "locked_pending_source_and_current_builder"
+    }
+    },
+    {
+      "lesson_key": "boya-quasi-intermediate-i:lesson-05",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-quasi-intermediate-i",
+      "lesson_id": "lesson-05",
+      "lesson_number": 5,
+      "title": "我的音乐老师",
+      "lesson_path": "lessons/boya-quasi-intermediate-i/lesson-05",
+      "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
+      "printed_pages": "42–50",
+      "pdf_page": 55,
+      "audio_count": 6,
+      "status": {
+        "stage": "source",
+        "source_status": "pending_review",
+        "source_qa_status": "blocked",
+        "status": null
+      }
+    },
+    {
+      "lesson_key": "boya-quasi-intermediate-i:lesson-06",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-quasi-intermediate-i",
+      "lesson_id": "lesson-06",
+      "lesson_number": 6,
+      "title": "大岛参加了学校的合唱团",
+      "lesson_path": "lessons/boya-quasi-intermediate-i/lesson-06",
+      "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
+      "printed_pages": "51–58",
+      "pdf_page": 64,
+      "audio_count": 6,
+      "status": {
+        "stage": "source",
+        "source_status": "pending_review",
+        "source_qa_status": "technical_audio_passed_semantic_playback_pending",
+        "status": null
+      }
+    },
+    {
+      "lesson_key": "boya-quasi-intermediate-i:lesson-07",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-quasi-intermediate-i",
+      "lesson_id": "lesson-07",
+      "lesson_number": 7,
+      "title": "小张热爱登山",
+      "lesson_path": "lessons/boya-quasi-intermediate-i/lesson-07",
+      "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
+      "printed_pages": "59–67",
+      "pdf_page": 72,
+      "audio_count": 6,
+      "status": {
+        "stage": "source",
+        "source_status": "pending_review",
+        "source_qa_status": "blocked",
+        "status": null
+      }
+    },
+    {
+      "lesson_key": "boya-quasi-intermediate-i:lesson-08",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-quasi-intermediate-i",
+      "lesson_id": "lesson-08",
+      "lesson_number": 8,
+      "title": "孙子和《孙子兵法》",
+      "lesson_path": "lessons/boya-quasi-intermediate-i/lesson-08",
+      "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
+      "printed_pages": "68–76",
+      "pdf_page": 81,
+      "audio_count": 6,
+      "status": {
+        "stage": "source",
+        "source_status": "pending_review",
+        "source_qa_status": "blocked",
+        "status": null
+      }
+    },
+    {
+      "lesson_key": "boya-quasi-intermediate-i:lesson-09",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-quasi-intermediate-i",
+      "lesson_id": "lesson-09",
+      "lesson_number": 9,
+      "title": "北方菜和南方菜",
+      "lesson_path": "lessons/boya-quasi-intermediate-i/lesson-09",
+      "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
+      "printed_pages": "77–86",
+      "pdf_page": 90,
+      "audio_count": 6,
+      "status": {
+        "stage": "source",
+        "source_status": null,
+        "source_qa_status": null,
+        "status": "pending_review"
+      }
+    },
+    {
+      "lesson_key": "boya-quasi-intermediate-i:lesson-10",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-quasi-intermediate-i",
+      "lesson_id": "lesson-10",
+      "lesson_number": 10,
+      "title": "中国人喜欢聚餐",
+      "lesson_path": "lessons/boya-quasi-intermediate-i/lesson-10",
+      "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-10/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
+      "printed_pages": "87–95",
+      "pdf_page": 100,
+      "audio_count": 6,
+      "status": {
+        "stage": "source",
+        "source_status": "pending_review",
+        "source_qa_status": "technical_audio_passed_semantic_playback_pending",
+        "status": null
+      }
+    },
+    {
+      "lesson_key": "boya-quasi-intermediate-i:lesson-11",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-quasi-intermediate-i",
+      "lesson_id": "lesson-11",
+      "lesson_number": 11,
+      "title": "原来他们是关心我",
+      "lesson_path": "lessons/boya-quasi-intermediate-i/lesson-11",
+      "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
+      "printed_pages": "96–104",
+      "pdf_page": 109,
+      "audio_count": 6,
+      "status": {
+        "stage": "source",
+        "source_status": "pending_review",
+        "source_qa_status": "blocked",
+        "status": null
+      }
+    },
+    {
+      "lesson_key": "boya-quasi-intermediate-i:lesson-12",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-quasi-intermediate-i",
+      "lesson_id": "lesson-12",
+      "lesson_number": 12,
+      "title": "散步",
+      "lesson_path": "lessons/boya-quasi-intermediate-i/lesson-12",
+      "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
+      "printed_pages": "105–113",
+      "pdf_page": 118,
+      "audio_count": 6,
+      "status": {
+        "stage": "source",
+        "source_status": "pending_review",
+        "source_qa_status": "blocked",
+        "status": null
+      }
+    }
+  ]
+}

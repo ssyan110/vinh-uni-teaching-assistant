@@ -1,0 +1,97 @@
+{
+  "schema_version": "boya-lesson-source-manifest-v1",
+  "manifest_type": "lesson-source-review",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_id": "lesson-03",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-03",
+  "lesson_number": 3,
+  "lesson_title": "我对学中文越来越有兴趣",
+  "language": "简体中文",
+  "package": "lesson-03-source-review",
+  "prepared_at": "2026-08-29",
+  "source_status": "partial_adam_review_source_and_images_audio_pending",
+  "source_qa_status": "source_content_and_images_passed; audio_semantic_playback_pending",
+  "extraction_status": "source_review_materialized",
+  "review_status": "source_and_images_approved_by_adam",
+  "approved": false,
+  "approved_by": [],
+  "approved_at": null,
+  "approval_scope": ["source_content", "image_assets", "wording:越来越"],
+  "adam_review": {
+    "status": "source_and_images_approved",
+    "approved_by": "Adam",
+    "approved_at": "2026-08-29",
+    "scope": ["source_content", "image_assets", "wording:越来越"],
+    "notes": "Adam 确认第三课来源与图片全部正确；短文三题目使用“越来越”。六段音频仍保留各自的教师语义听核与播放状态，未因本次来源／图片确认而改写。"
+  },
+  "canonical_source": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/canonical-source.json",
+    "sha256": "821f8009e7ec2b53d9f38b7adcb2421f0012c4730b61cc8db6a08bf2c59c5aa1",
+    "status": "partial_source_and_images_approved_audio_pending",
+    "note": "Adam 已确认来源内容、图片与“越来越”用字；音频语义听核／播放仍为独立 QA 项。"
+  },
+  "canonical_source_sha256": "821f8009e7ec2b53d9f38b7adcb2421f0012c4730b61cc8db6a08bf2c59c5aa1",
+  "source_pdf": {
+    "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+    "sha256": "39899d0f400e187f57c16db821f8f4c207f936eae0e4fbfe3cab52c02bfea806",
+    "total_pages": 134,
+    "textbook_page_range": "22–31",
+    "pdf_page_range": "35–44",
+    "page_count_in_review": 10,
+    "format": "scanned_image_pdf",
+    "text_layer_status": "empty; visual review used"
+  },
+  "answer_pdf": {
+    "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+    "sha256": "3c21e1574b0187259769799d183eca78a60a515b5b7fce202eda9e9ade2c20b8",
+    "total_pages": 33,
+    "pdf_page_range_in_review": "11–13",
+    "index_range": "[11,13]",
+    "continuation_note": "文件页12为本课听力文本主体；文件页13承接短文三续段；来源盘点使用区间端点记录，需人工确认编号口径。",
+    "answer_status": "closed_answers_visual_checked; open_tasks_have_no_unique_answer"
+  },
+  "page_audit": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/audit/source-pages-22-31-audit-draft.md",
+    "sha256": "34cd11890ea491b74a6e841857f7be5cfbf1f932185e362eb86febbcc40b8c2c",
+    "status": "visual_review_confirmed_by_adam_2026-08-29"
+  },
+  "answer_audit": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/audit/answer-pages-11-13-audit-draft.md",
+    "sha256": "91f567962a8ecec58ba39a40a491483c3ee36a94b6c5b9685f3526c3b50d5078",
+    "status": "visual_review_confirmed_by_adam_2026-08-29"
+  },
+  "qr_source": {
+    "qr_url": "http://qr31.cn/IeruLV",
+    "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-03-pdf-page-035.png",
+    "landing_page": "https://biz.cli.im/site/IeruLV?qrurl=http://qr31.cn/IeruLV&gtype=2&key=82ff4173cf8bafe74878285867a6fa3f53d5dc1924",
+    "landing_audio_labels": ["3-1", "3-2", "3-3", "3-4", "3-5", "3-6"],
+    "status": "source_inventory_verified"
+  },
+  "audio": {
+    "root": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-03",
+    "manifest_path": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/audio-manifest.json",
+    "manifest_sha256": "a1ed9e45e39cc0707864ce4e731fe32787e4bc04856089886a383e52fa7f06f8",
+    "technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/audit/audio-technical-2026-08-28.md",
+    "track_count": 6,
+    "status": "technical_pass_semantic_pending"
+  },
+  "listening_exercise_contract": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/listening-exercise-contract.json",
+    "sha256": "a40cf98a075eb3d515208b980548fd5817da1968c8dcf5cfdf37093f3dc07c3c",
+    "status": "source_content_approved_audio_semantic_pending",
+    "exercise_count": 9
+  },
+  "review_evidence": [
+    "lessons/boya-quasi-intermediate-i/lesson-03/00-source/audit/source-pages-22-31-audit-draft.md",
+    "lessons/boya-quasi-intermediate-i/lesson-03/00-source/audit/answer-pages-11-13-audit-draft.md",
+    "lessons/boya-quasi-intermediate-i/lesson-03/00-source/audit/audio-technical-2026-08-28.md",
+    "lessons/boya-quasi-intermediate-i/lesson-03/00-source/audit/adam-review-2026-08-29.md"
+  ],
+  "blockers": [
+    "六段音频已完成文件存在、bytes、SHA-256、ffprobe 时长和解码核对；教师逐段语义听核及 PowerPoint 实际播放测试尚未完成。",
+    "扫描 PDF 无可用文字层；视觉转录、题目和教材印刷页码已由 Adam 确认。",
+    "开放式口语、综合填表、小组总结和拓展练习没有唯一标准答案，不补写答案。"
+  ],
+  "next_minimum_step": "完成六段音频的教师语义听核与 PowerPoint 播放测试；来源内容、图片与“越来越”用字已批准，音频 QA 完成后再更新 authority 设计与 PPTX 升格 gate。"
+}

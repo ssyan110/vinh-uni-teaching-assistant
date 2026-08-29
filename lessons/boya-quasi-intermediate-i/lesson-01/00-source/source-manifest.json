@@ -2,11 +2,13 @@
   "course_id": "vinh-chinese-listening-speaking",
   "textbook_id": "boya-quasi-intermediate-i",
   "lesson_id": "lesson-01",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-01",
   "lesson_number": 1,
+  "lesson_title": "丽丽是独生女",
   "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
   "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
   "canonical_source": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/canonical-source.json",
-  "canonical_source_sha256": "06585734216ac59ff9e1b1b5bcbc9d2d13761c0b20ff3960aea8df7a40a4a728",
+  "canonical_source_sha256": "f630d77a7881e97a121e0877ab7a1ba05048924896187d429b0150cbfd3c6aab",
   "qr_capture_root": "textbooks/boya-quasi-intermediate-i/source/qr/captures",
   "audio_root": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01",
   "status": "source_audit_in_progress",
@@ -14,6 +16,9 @@
   "notes": [
     "此包只记录来源盘点与 QR／音频证据，不是教师手册、PPT 或 DOCX 成品。"
   ],
-  "audio_count": 6,
-  "audio_decode_status": "72/72 files decode passed"
+  "audio_count": 8,
+  "audio_count_note": "6 个出版社 QR 音频 + 2 个教材 P7–P8 标示且已在本地恢复的音频；1-7、1-8 的出版社 QR 映射与语义听核仍待确认。",
+  "audio_decode_status": "8/8 files decode passed",
+  "audio_manifest": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/audio-manifest.json",
+  "audio_technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/audit/audio-technical-2026-08-29.md"
 }

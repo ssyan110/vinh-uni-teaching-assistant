@@ -36,6 +36,8 @@ MANUAL_DOCX = MANUAL_DIR / "boya-intermediate-i-semester-teacher-manual.docx"
 MANUAL_PDF = MANUAL_DIR / "boya-intermediate-i-semester-teacher-manual.pdf"
 MANIFEST = MANUAL_DIR / "manifest.json"
 GANTT_PNG = MANUAL_DIR / "semester-gantt.png"
+HISTORICAL_LESSON_KEY = "boya-intermediate-i:lesson-01"
+EXPECTED_HISTORICAL_LESSON_ROOT = (PROJECT_ROOT / "lessons/boya-intermediate-i/lesson-01").resolve()
 
 FONT = CONFIG.get("font_policy", {}).get("latin", "Times New Roman")
 # Use the standard cross-platform CJK face required for delivery packages.
@@ -941,6 +943,14 @@ def write_manifest() -> None:
 
 
 def main() -> None:
+    active_key = CONFIG.get("active_context", {}).get("lesson_key")
+    configured_root = (PROJECT_ROOT / CONFIG.get("lesson_root", "")).resolve()
+    if active_key != HISTORICAL_LESSON_KEY or configured_root != EXPECTED_HISTORICAL_LESSON_ROOT:
+        raise RuntimeError(
+            "build_full_teacher_manual.py is historical and scoped to "
+            f"{HISTORICAL_LESSON_KEY}; active context is {active_key!r} and lesson_root is {configured_root}. "
+            "Use a lesson-key-scoped semester builder for the current offering."
+        )
     assert_ready("semester-manual", MANUAL_DIR)
     if not LESSON_GUIDE.is_file():
         raise FileNotFoundError(f"Teacher-guide input is missing: {LESSON_GUIDE}")

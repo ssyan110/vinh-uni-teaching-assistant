@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-pptx-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-10",
+  "mode": "face-to-face",
+  "title": "第十课《中国人喜欢聚餐》实体课",
+  "status": "draft_not_approved",
+  "builder_scope": "scripts/build_l23_pptx_drafts.js",
+  "draft_gate": "lesson-specific",
+  "source_sha256": "379c2d4158ae7e96ef77451d33e1bba4cb2a87f8785af2d6a99795580acd19f2",
+  "layout_source": "boya-quasi-intermediate-i lesson-01 approved layout family",
+  "short_example_policy": "curated_short_sentences_max_24_hanzi_chars",
+  "short_text_policy": "textbook_listening_prompt_and_record_layout_no_full_text_copy",
+  "shared_assets": [
+    "lesson-01-cover-family-work-hobby.png",
+    "lesson-01-learning-path.png",
+    "divider-family.png",
+    "divider-work.png",
+    "divider-hobby.png",
+    "divider-comprehensive.png",
+    "symbolic-vocabulary.png",
+    "symbolic-listening.png",
+    "symbolic-sentence-pattern.png",
+    "oral-practice-divider.png",
+    "speaking-practice.png"
+  ],
+  "slide_count": 35,
+  "audio_tracks_embedded": [],
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/pptx-draft/face-to-face/lesson-10-实体课.pptx",
+    "sha256": "181b26930393d5b56f756f3aa97814d270383fc284019aa3d1ff22fc0c4410bc",
+    "bytes": 43771139
+  },
+  "generated_at": "2026-08-29T16:34:00.763Z"
+}

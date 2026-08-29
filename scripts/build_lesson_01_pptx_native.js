@@ -4,9 +4,21 @@ const crypto = require('crypto');
 const { execFileSync } = require('child_process');
 const PptxGenJS = require('pptxgenjs');
 const { toSimplified, toTeacherGuideChinese } = require('./simplify_chinese');
+const designSystem = require('./boya_design_system');
 
 const projectRoot = path.resolve(__dirname, '..');
 const projectConfig = JSON.parse(fs.readFileSync(path.join(projectRoot, 'project.config.json'), 'utf8'));
+const HISTORICAL_LESSON_KEY = 'boya-intermediate-i:lesson-01';
+const activeLessonKey = projectConfig.active_context && projectConfig.active_context.lesson_key;
+const expectedLessonRoot = path.join(projectRoot, 'lessons/boya-intermediate-i/lesson-01');
+const configuredLessonRoot = path.resolve(projectRoot, projectConfig.lesson_root || '');
+if (activeLessonKey !== HISTORICAL_LESSON_KEY || configuredLessonRoot !== expectedLessonRoot) {
+  throw new Error(
+    `build_lesson_01_pptx_native.js is historical and scoped to ${HISTORICAL_LESSON_KEY}; ` +
+    `active context is ${activeLessonKey || 'missing'} and lesson_root is ${configuredLessonRoot}. ` +
+    'Use a lesson-key-scoped builder for the current offering.',
+  );
+}
 const lessonRoot = path.join(projectRoot, projectConfig.lesson_root);
 const sourcePath = path.join(projectRoot, projectConfig.canonical_source);
 const assetDir = path.join(lessonRoot, '10-design/visual-prototype/assets');
@@ -26,25 +38,25 @@ const exerciseCoveragePath = path.join(storyboardDir, 'lesson-01-exercise-slide-
 const storyboardManifestPath = path.join(storyboardDir, 'manifest.json');
 const teacherManualPath = path.join(lessonRoot, '20-approved/teacher-manual/第一课简易教案.docx');
 
-const FONT = projectConfig.font_policy?.cjk || 'KaiTi';
+const FONT = designSystem.fonts.cjk;
 const COLORS = {
-  cream: 'FFF8E6',
-  warmWhite: 'FFFDF8',
-  mint: 'DEF4EE',
-  mintDeep: 'CCEBE5',
-  ink: '202321',
-  line: '2F3A3D',
-  purple: '8E79E5',
-  purpleSoft: 'EEE9FF',
-  yellow: 'F7CF5D',
-  yellowSoft: 'FFF1BA',
-  coral: 'F0A08A',
-  coralSoft: 'FBE4DD',
-  blue: '6B9AC4',
-  blueSoft: 'E2EEF7',
-  greenText: '415C58',
-  white: 'FFFFFF',
-  gray: '69706D'
+  cream: designSystem.colors.paper,
+  warmWhite: designSystem.colors.white,
+  mint: designSystem.colors.mint,
+  mintDeep: designSystem.colors.mintDeep,
+  ink: designSystem.colors.ink,
+  line: designSystem.colors.line,
+  purple: designSystem.colors.purple,
+  purpleSoft: designSystem.colors.lilac,
+  yellow: designSystem.colors.yellow,
+  yellowSoft: designSystem.colors.yellowSoft,
+  coral: designSystem.colors.coral,
+  coralSoft: designSystem.colors.coralSoft,
+  blue: designSystem.colors.blue,
+  blueSoft: designSystem.colors.blueSoft,
+  greenText: designSystem.colors.teal,
+  white: designSystem.colors.white,
+  gray: designSystem.colors.muted
 };
 
 function assertProductionGate() {

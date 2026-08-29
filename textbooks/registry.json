@@ -1,5 +1,7 @@
 {
   "schema_version": 1,
+  "lesson_registry": "course/lesson-registry.json",
+  "lesson_key_format": "<textbook_id>:<lesson_id>",
   "textbooks": [
     {
       "textbook_id": "boya-quasi-intermediate-i",

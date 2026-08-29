@@ -18,5 +18,7 @@
       "manifest": "course/offerings/2027-fall/offering.json"
     }
   ],
-  "textbook_registry": "textbooks/registry.json"
+  "textbook_registry": "textbooks/registry.json",
+  "lesson_registry": "course/lesson-registry.json",
+  "lesson_key_format": "<textbook_id>:<lesson_id>"
 }

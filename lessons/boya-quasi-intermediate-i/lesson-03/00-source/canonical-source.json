@@ -1,0 +1,270 @@
+{
+  "schema_version": "quasi-intermediate-source-audit-v1.0",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_number": 3,
+  "lesson_id": "lesson-03",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-03",
+  "title": "我对学中文越来越有兴趣",
+  "title_source": "主教材 PDF 第35页（印刷 P22）课名页视觉核对",
+  "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+  "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+  "page_map": {
+    "printed_pages": [22, 31],
+    "pdf_pages": [35, 44],
+    "answer_pdf_pages": [11, 13],
+    "answer_file_pages": [11, 13],
+    "answer_index_pages": [11, 13],
+    "mapping_status": "visual_verified_pdf_offset_plus_13; answer_file_page_12_is_in_range_continuation"
+  },
+  "qr_evidence": {
+    "pdf_page": 35,
+    "qr_url": "http://qr31.cn/IeruLV",
+    "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-03-pdf-page-035.png",
+    "landing_page": "https://biz.cli.im/site/IeruLV?qrurl=http://qr31.cn/IeruLV&gtype=2&key=82ff4173cf8bafe74878285867a6fa3f53d5dc1924",
+    "decode_status": "source_inventory_verified",
+    "landing_audio_labels": ["3-1", "3-2", "3-3", "3-4", "3-5", "3-6"]
+  },
+  "audio_map": [
+    {"label":"3-1","coding":"OV1539801","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Ft1QDnBokZmWrRT5bCaMwcMVb2lq","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-03/3-1.mp3","content_type":"audio/mpeg","bytes":991389,"sha256":"244ca28316b97f2ba6a3d71f24af09e49247f934d6b32665f25891f9818d0878","download_status":"passed_in_source_inventory","decode_status":"passed","duration_seconds":61.649,"semantic_status":"pending_teacher_playback"},
+    {"label":"3-2","coding":"ES1783187","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FpwcUw7xm9WaPwY9Bj0I4XvFLM_h","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-03/3-2.mp3","content_type":"audio/mpeg","bytes":645737,"sha256":"f152ee86a7432f5fc8f115b23ecfa575a8f0084a37ea50f6565e63a7a0417c6d","download_status":"passed_in_source_inventory","decode_status":"passed","duration_seconds":40.046,"semantic_status":"pending_teacher_playback"},
+    {"label":"3-3","coding":"RZ1783188","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FnnJlIJiOG8PJnO6NxdoPadP_LlD","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-03/3-3.mp3","content_type":"audio/mpeg","bytes":1297741,"sha256":"983613344869f0f5eb969c730f52f772f083c4d2320c993a45261c4a5654c276","download_status":"passed_in_source_inventory","decode_status":"passed","duration_seconds":80.797,"semantic_status":"pending_teacher_playback"},
+    {"label":"3-4","coding":"MV1783189","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FmwI-DnIswYJnXjDoSnC_wZqaph9","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-03/3-4.mp3","content_type":"audio/mpeg","bytes":1107164,"sha256":"e0cee2a4a5be21321c2cc69897366d8b07f6bb1cda340a921640d55fc8ce250a","download_status":"passed_in_source_inventory","decode_status":"passed","duration_seconds":68.885,"semantic_status":"pending_teacher_playback"},
+    {"label":"3-5","coding":"KL1783190","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fv7MVgJrNF9A9IHOC5mKDVeFrtX3","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-03/3-5.mp3","content_type":"audio/mpeg","bytes":1176127,"sha256":"7fbb009795228f6cf7131d12627cb3c6418e2e9b4efde9ad7cae3589d0b3047d","download_status":"passed_in_source_inventory","decode_status":"passed","duration_seconds":73.195,"semantic_status":"pending_teacher_playback"},
+    {"label":"3-6","coding":"JW1783191","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FiRgwv_YOo1SvKSarKiDiQ0QcX4y","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-03/3-6.mp3","content_type":"audio/mpeg","bytes":1136839,"sha256":"6ec0ccb21950db29dcaf971fbe7e097b5cc14d65ea2e3a5b3a9cccdd755c3e96","download_status":"passed_in_source_inventory","decode_status":"passed","duration_seconds":70.74,"semantic_status":"pending_teacher_playback"}
+  ],
+  "content_inventory": {
+    "vocabulary_count": 23,
+    "proper_noun_count": 2,
+    "vocabulary_comprehension_group_count": 3,
+    "vocabulary_comprehension_item_count": 10,
+    "listening_sentence_item_count": 12,
+    "texts_dialogues_count": 3,
+    "grammar_pattern_count": 14,
+    "listening_exercise_group_count": 6,
+    "comprehensive_exercise_count": 3,
+    "exercise_count": 27,
+    "status": "visual_source_snapshot_adam_approved_2026-08-29"
+  },
+  "answer_policy": "仅记录参考答案 PDF 中可核对的选择／判断答案与听力文本；开放式口语题不补写唯一标准答案。",
+  "review": {
+    "status": "source_and_images_approved_by_adam",
+    "approved": true,
+    "approved_by": ["Adam"],
+    "approved_at": "2026-08-29",
+    "blockers": [
+      "六段音频已完成文件存在、bytes、SHA-256、ffprobe 时长和解码核对；教师逐段播放及语义听核尚未完成。",
+      "开放式口语、综合填表、小组总结与拓展练习没有唯一标准答案，不补写答案。",
+      "来源盘点将答案 PDF 范围记为 [11,13]；实际答案文件第11、12、13页均属于本课证据，已在 page_map 标注第12页为连续页。"
+    ],
+    "approval_basis": [
+      "主教材 PDF 第35–44页（印刷 P22–P31）高分辨率视觉核对",
+      "答案 PDF 文件第11–13页（答案印刷 P8–P10）题目答案与三段听力文本视觉核对",
+      "来源总盘点第三课 QR、音频 bytes、hash、时长和解码记录",
+      "Adam 于 2026-08-29 确认第三课来源内容与图片；短文三题目使用“越来越”，不使用先前视觉草稿中的“越来越越”。"
+    ],
+    "approval_scope": ["source_content", "image_assets", "wording:越来越"]
+  },
+  "sections": [
+    {
+      "id": "vocabulary",
+      "printed_pages": [22, 23],
+      "audio": "3-1",
+      "entries": [
+        {"no":1,"word":"兴趣","pinyin":"xìngqù","pos":"名","gloss":"interest"},
+        {"no":2,"word":"古老肉","pinyin":"gǔlǎoròu","pos":"名","gloss":"fried pork in sweet and sour sauce"},
+        {"no":3,"word":"西红柿炒鸡蛋","pinyin":"xīhóngshì chǎo jīdàn","pos":null,"pos_status":"blank_in_source","gloss":"scrambled eggs with tomatoes"},
+        {"no":4,"word":"暑假","pinyin":"shǔjià","pos":"名","gloss":"summer vacation"},
+        {"no":5,"word":"招待","pinyin":"zhāodài","pos":"动","gloss":"to entertain; to cater"},
+        {"no":6,"word":"聊天儿","pinyin":"liáotiānr","pos":null,"pos_status":"blank_in_source","gloss":"to chat","starred":true},
+        {"no":7,"word":"转学","pinyin":"zhuǎnxué","pos":null,"pos_status":"blank_in_source","gloss":"to transfer to another school"},
+        {"no":8,"word":"另外","pinyin":"lìngwài","pos":"代","gloss":"another; other"},
+        {"no":9,"word":"互相","pinyin":"hùxiāng","pos":"副","gloss":"each other"},
+        {"no":10,"word":"有趣","pinyin":"yǒuqù","pos":"形","gloss":"interesting"},
+        {"no":11,"word":"声调","pinyin":"shēngdiào","pos":"名","gloss":"tone"},
+        {"no":12,"word":"重复","pinyin":"chóngfù","pos":"动","gloss":"to repeat","starred":true},
+        {"no":13,"word":"接触","pinyin":"jiēchù","pos":"动","gloss":"to contact"},
+        {"no":14,"word":"帮忙","pinyin":"bāngmáng","pos":null,"pos_status":"blank_in_source","gloss":"to offer help","starred":true},
+        {"no":15,"word":"记得","pinyin":"jìde","pos":"动","gloss":"remember","starred":true},
+        {"no":16,"word":"例如","pinyin":"lìrú","pos":"动","gloss":"for example","starred":true},
+        {"no":17,"word":"中国通","pinyin":"Zhōngguótōng","pos":"名","gloss":"China hand"},
+        {"no":18,"word":"神秘","pinyin":"shénmì","pos":"形","gloss":"mysterious"},
+        {"no":19,"word":"开（课）","pinyin":"kāi (kè)","pos":"动","gloss":"to offer (a course)"},
+        {"no":20,"word":"总是","pinyin":"zǒngshì","pos":"副","gloss":"always"},
+        {"no":21,"word":"更","pinyin":"gèng","pos":"副","gloss":"even"},
+        {"no":22,"word":"于是","pinyin":"yúshì","pos":"连","gloss":"therefore"},
+        {"no":23,"word":"选修","pinyin":"xuǎnxiū","pos":"动","gloss":"to elect (a course)"}
+      ],
+      "proper_nouns": [
+        {"word":"德语","pinyin":"Déyǔ","gloss":"German language"},
+        {"word":"拉丁语","pinyin":"Lādīngyǔ","gloss":"Latin"}
+      ],
+      "source_status":"visually_verified_adam_approved_2026-08-29"
+    },
+    {
+      "id":"vocabulary_comprehension",
+      "printed_pages":[23,24],
+      "audio":"3-2",
+      "instruction":"听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+      "groups":[
+        {"topic":"关于中国菜的词语","words":["古老肉","饺子","西红柿炒鸡蛋"],"answer":["1.B","2.A","3.C"]},
+        {"topic":"关于学习的词语","words":["画画儿","大夫","画花儿"],"answer":["1.A","2.B","3.C"]},
+        {"topic":"关于生活的词语","words":["放暑假","招待客人","聊天儿","看望"],"answer":["1.A","2.D","3.C","4.B"]}
+      ],
+      "answer_status":"answers_checked_against_answer_pdf"
+    },
+    {
+      "id":"listening_sentences",
+      "printed_pages":[24,25],
+      "audio_tracks":["3-3"],
+      "exercises":{
+        "exercise_3_3":{
+          "heading_verbatim":"一、听句子，判断对错",
+          "items":[
+            [1,"丽丽不是客人。","错"],
+            [2,"阿里家来客人了。","错"],
+            [3,"李大为要去新学校。","对"],
+            [4,"哥哥要再学一种外语。","对"],
+            [5,"下星期二上课。","错"],
+            [6,"姐姐常常去爷爷奶奶那儿。","对"],
+            [7,"同学们不喜欢王红。","错"],
+            [8,"李大为觉得写汉字挺好玩儿。","对"],
+            [9,"李大为觉得声调最难。","错"],
+            [10,"他们可以再说一遍。","对"],
+            [11,"中文越来越难学。","错"],
+            [12,"同学们觉得和中国人交流很难。","错"]
+          ]
+        }
+      },
+      "answer_status":"answers_checked_against_answer_pdf"
+    },
+    {
+      "id":"short_text_1",
+      "printed_pages":[25,26],
+      "audio":"3-4",
+      "title":"开始接触汉语并产生一定的兴趣",
+      "text":"我的中文名字叫李大为。我的爸爸妈妈都是大夫。上小学的时候，爸爸的一位中国朋友王先生和他的太太常常来我家做客。每年他们都请我们一家人和他们一起庆祝中国新年。有时候，王太太还让我帮忙招待客人。我记得每次他们都准备很多菜。我最爱吃的是古老肉、西红柿炒鸡蛋和饺子。那时候我学会了一些中文，例如“你好”“谢谢”“再见”“好吃”“我爱你”“没关系”“欢迎”“好说”“没办法”“中国通”什么的。我觉得中文挺有趣，也有点儿神秘，但是我还没有想到要在学校学习它。",
+      "text_source":"答案 PDF 文件第12页视觉转录；主教材第25页只显示题组与阅读比较提示",
+      "exercises":{
+        "first_listen":["王先生是谁？","有时候，李大为帮王太太做什么？","李大为会中文吗？","李大为上中文课吗？"],
+        "second_listen":["李大为喜欢吃什么中国菜？","李大为为什么会说一点儿中文？","李大为会说哪些中文词语？"],
+        "present":"请你介绍一下李大为：（1）李大为的家庭情况；（2）他们和王先生一家的关系；（3）李大为觉得中文怎么样。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：大夫、朋友、做客、庆祝、中国菜、中文、有趣、神秘。常用表达参考：……（的）时候。",
+        "compare":"李大为的爸爸妈妈都是大夫。王先生是爸爸的中国朋友，王先生和太太常常来李大为家做客，也请他们一起庆祝中国新年。李大为喜欢吃古老肉、西红柿炒鸡蛋和饺子，会说一些简单的中文，觉得中文有趣又有点儿神秘。"
+      },
+      "exercise_metadata":{
+        "first_listen":{"heading_verbatim":"（一）听第一遍，简单回答问题","textbook_printed_pages":[25],"audio_tracks":["3-4"]},
+        "second_listen":{"heading_verbatim":"（二）听第二遍，回答下面的问题，要求说两三个句子，不少于20字","textbook_printed_pages":[25],"audio_tracks":["3-4"]},
+        "present":{"heading_verbatim":"（三）请你介绍一下李大为","textbook_printed_pages":[25,26],"audio_tracks":["3-4"]},
+        "compare":{"heading_verbatim":"（四）读下面的短文，跟你说的进行比较","textbook_printed_pages":[26],"audio_tracks":[]}
+      }
+    },
+    {
+      "id":"common_expressions_family",
+      "printed_pages":[26],
+      "topic":"谈论家庭生活",
+      "items":[
+        {"expression":"每＋量词","examples":["每年李大为都去王先生家庆祝中国新年。","每次回家，丽丽都给妈妈做一两个北方菜。"]},
+        {"expression":"帮／忙","examples":["妈妈请客的时候，毛毛也帮忙做饭。","爸爸的朋友请他帮一个忙。"]},
+        {"expression":"……什么的","examples":["李大为喜欢吃中国菜，例如西红柿炒鸡蛋、古老肉什么的。","玛丽会说一点儿中文，例如“谢谢”“不客气”什么的。"]},
+        {"expression":"……（的）时候","examples":["上小学的时候，李大为常去王先生家。","吃饭的时候，爷爷奶奶总是说：“多吃点儿。”"]},
+        {"expression":"记得","examples":["丽丽记得十年前她和爸爸妈妈经常去养老院帮忙。","阿里小时候去过不少地方，可是他已经不太记得了。"]}
+      ],
+      "source_status":"examples_visually_verified_adam_approved_2026-08-29"
+    },
+    {
+      "id":"short_text_2",
+      "printed_pages":[26,27,28],
+      "audio":"3-5",
+      "title":"为什么选修中文",
+      "text":"上中学时，我学了一年德语，我觉得德语挺有用，学德语也很有意思。第二年我要转学，到另外一所中学去上学，那所中学不开德语课，可是有汉语课和拉丁语课。放暑假的时候，王先生的爸爸妈妈从中国来了，爸爸妈妈带我去看望他们，中国爷爷和中国奶奶都不会说英文。吃饭的时候，他们总是对我说“多吃点儿，多吃点儿”，我觉得很好玩儿。中国爷爷汉字写得很漂亮，他还教我写了“我”“好”“人”。我对汉语的兴趣更大了。我想，中国人那么多，会说中文，可以和很多很多人交流，也可以了解中国文化。于是，我决定在新学校选修中文课。",
+      "text_source":"答案 PDF 文件第12页视觉转录；主教材第26–28页视觉核对",
+      "exercises":{
+        "first_listen":["李大为觉得学德语怎么样？","放暑假的时候，谁来了？","李大为决定在新学校学什么？"],
+        "second_listen":["李大为为什么不继续学德语了？（转 另外 所）","中国爷爷奶奶怎么样？（教 写）","李大为为什么选修中文？（兴趣 交流 了解）"],
+        "present":"请你说说李大为为什么决定选修中文：（1）李大为上中学时选了什么外语，第二年发生了什么；（2）中国爷爷奶奶怎么样；（3）李大为觉得会中文有什么好处。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：德语、第二年、转学、放暑假、认识、中国爷爷、教、写汉字、兴趣、决定、选修。常用表达参考：但是／可是、于是。",
+        "compare":"李大为上中学时学了一年德语。第二年他要转学，新学校不开德语课，所以他认识了中国爷爷奶奶，学会了一点儿汉字，也对中文产生了更大的兴趣，于是决定选修中文课。"
+      },
+      "exercise_metadata":{
+        "first_listen":{"heading_verbatim":"（一）听第一遍，简单回答问题","textbook_printed_pages":[26],"audio_tracks":["3-5"]},
+        "second_listen":{"heading_verbatim":"（二）听第二遍，用括号中的词语说出两三个句子，不少于20字","textbook_printed_pages":[27],"audio_tracks":["3-5"]},
+        "present":{"heading_verbatim":"（三）请你说说李大为为什么决定选修中文","textbook_printed_pages":[27],"audio_tracks":["3-5"]},
+        "compare":{"heading_verbatim":"（四）读下面的短文，跟你说的进行比较","textbook_printed_pages":[27],"audio_tracks":[]}
+      }
+    },
+    {
+      "id":"common_expressions_study",
+      "printed_pages":[27,28],
+      "topic":"谈论学习工作",
+      "items":[
+        {"expression":"可以……也可以……","examples":["会说中文，可以和中国人交流，也可以了解中国文化。","和中国人聊天儿，可以练习听力，也可以了解中国人的想法。"]},
+        {"expression":"另（外）","examples":["另（外）一所学校／另（外）一门外语。","另（外）一位老师／另外几家公司。"]},
+        {"expression":"更（1）","examples":["阿里对汉语的兴趣更大了。","同学们觉得中文更有趣了。"]},
+        {"expression":"动词＋得（1）","examples":["中国爷爷写字写得很漂亮。","中国人说话说得很快。"]},
+        {"expression":"但是","examples":["李大为觉得中文挺有趣，但是他还没打算在学校学它。","和中国人聊天儿很有意思，但是有时候听不懂。"]},
+        {"expression":"于是","examples":["玛丽觉得中文很有趣，于是她开始学习中文。","中村发现看中文电视可以练习中文，于是他每天看一小时中文电视。"]}
+      ],
+      "source_status":"examples_visually_verified_adam_approved_2026-08-29"
+    },
+    {
+      "id":"short_text_3",
+      "printed_pages":[28,29],
+      "audio":"3-6",
+      "title":"中文课",
+      "text":"开始上中文课以后，我才知道学中文不容易。中文的声调很难，写汉字更难。比如，我喜欢画画儿，可是我说出的是“我喜欢画花儿”；我想写“我想当大夫”，可我写的是“我想当大天”；我想写“图书馆”，我写的是“图书饭”。不过，我们的老师教得很好，课堂上，同学们也常常互相帮助。每个月，老师都请一些中国留学生来和我们聊天儿。刚开始，我们觉得中国学生说话很快。我们听不懂的时候，就请他们重复一遍、两遍。现在，我们已经慢慢适应了。我们中文说得也越来越好了。和中国人交流，同学们都觉得很有收获。我觉得学中文越来越有意思了。",
+      "text_source":"答案 PDF 文件第12–13页视觉转录；主教材第28–29页视觉核对",
+      "exercises":{
+        "first_listen":["李大为觉得中文难不难？","李大为喜欢做什么？","李大为的中文老师怎么样？","李大为觉得上中文课有意思吗？"],
+        "second_listen":["李大为说错过什么？为什么？（声调）","李大为写错过什么？（可是）","李大为和他的同学们为什么喜欢和中国人聊天儿？（越来越 收获）"],
+        "group":"题目：大家一起谈谈李大为的中文课。要求：一个人先说4～6个句子，不少于40字；然后小组其他同学补充；最后再由一名同学总结，说6～8个句子，不少于60字。词语参考：不容易、老师、课堂上、聊天儿、重复、交流、有收获。常用表达参考：互相、每个月、越来越。",
+        "compare":"开始学汉语以后，李大为觉得学习汉语不容易。不过，老师教得很好，课堂上同学们常常互相帮助。每个月，他们还跟中国留学生聊一次天儿，听不懂时请对方重复。现在他们慢慢适应了，说中文越来越好，和中国人交流很有收获。"
+      },
+      "exercise_metadata":{
+        "first_listen":{"heading_verbatim":"（一）听第一遍，简单回答问题","textbook_printed_pages":[28],"audio_tracks":["3-6"]},
+        "second_listen":{"heading_verbatim":"（二）听第二遍，用括号中的词语说出两三个句子，不少于20字","textbook_printed_pages":[28],"audio_tracks":["3-6"]},
+        "group":{"heading_verbatim":"（三）分组练习","textbook_printed_pages":[29],"audio_tracks":["3-6"]},
+        "compare":{"heading_verbatim":"（四）读下面的短文，跟你说的进行比较","textbook_printed_pages":[29],"audio_tracks":[]}
+      }
+    },
+    {
+      "id":"common_expressions_discuss",
+      "printed_pages":[29],
+      "topic":"谈论中文课堂",
+      "items":[
+        {"expression":"更（2）","examples":["声调不容易，写汉字更难。","大家听力不错，口语更好。"]},
+        {"expression":"互相","examples":["同学们互相学习，互相帮助。","朋友应该互相关心。"]},
+        {"expression":"遍","examples":["每个生词要读三遍。","这个电影我看过两遍。"]}
+      ],
+      "source_status":"examples_visually_verified_adam_approved_2026-08-29"
+    },
+    {
+      "id":"comprehensive_practice",
+      "printed_pages":[30,31],
+      "audio_tracks":["3-4","3-5","3-6"],
+      "items":[
+        {
+          "id":"comprehensive_1",
+          "instruction":"请你根据听过的三段短文填表",
+          "table_rows":[
+            {"topic":"李大为的家庭生活","fields":["家里有什么人","他和爸爸妈妈做什么","喜欢吃什么菜","会说什么中文词语"]},
+            {"topic":"李大为为什么选中文课","fields":["学过什么外语","为什么不学了","为什么选修中文"]},
+            {"topic":"李大为的中文课","fields":["李大为觉得中文难不难","李大为上中文课的时候做什么","李大为喜欢不喜欢上中文课"]}
+          ],
+          "answer_status":"open_table_teacher_check"
+        },
+        {
+          "id":"comprehensive_2",
+          "instruction":"小组活动：根据上面的表格和下面给出的参考词语和常用表达，谈一谈：（1）李大为小时候的生活；（2）李大为为什么选中文课；（3）李大为觉得学中文怎么样。要求：一名同学先说6～8个句子，不少于60字；然后小组其他同学补充；最后由一名同学总结，说8～10个句子，不少于80字。",
+          "vocabulary_reference":["做客","中文","德语","转学","选修","声调","汉字","聊天"],
+          "expression_reference":["例如","有兴趣","互相","越来越"],
+          "answer_status":"open_presentational_task"
+        },
+        {
+          "id":"comprehensive_3",
+          "instruction":"拓展练习：你是什么时候开始对中文有兴趣的？请你谈一谈：（1）自己小时候的生活；（2）为什么选修中文；（3）在国内怎么学中文。要求：（1）使用这一课学过的词语和常用表达；（2）说8～10个句子，不少于80字。",
+          "answer_status":"open_presentational_task"
+        }
+      ],
+      "source_status":"visually_verified_adam_approved_2026-08-29"
+    }
+  ]
+}

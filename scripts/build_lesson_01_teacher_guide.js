@@ -8,6 +8,17 @@ const { toTeacherGuideChinese } = require('./simplify_chinese');
 
 const projectRoot = path.resolve(__dirname, '..');
 const projectConfig = JSON.parse(fs.readFileSync(path.join(projectRoot, 'project.config.json'), 'utf8'));
+const HISTORICAL_LESSON_KEY = 'boya-intermediate-i:lesson-01';
+const activeLessonKey = projectConfig.active_context && projectConfig.active_context.lesson_key;
+const expectedLessonRoot = path.join(projectRoot, 'lessons/boya-intermediate-i/lesson-01');
+const configuredLessonRoot = path.resolve(projectRoot, projectConfig.lesson_root || '');
+if (activeLessonKey !== HISTORICAL_LESSON_KEY || configuredLessonRoot !== expectedLessonRoot) {
+  throw new Error(
+    `build_lesson_01_teacher_guide.js is historical and scoped to ${HISTORICAL_LESSON_KEY}; ` +
+    `active context is ${activeLessonKey || 'missing'} and lesson_root is ${configuredLessonRoot}. ` +
+    'Use a lesson-key-scoped builder for the current offering.',
+  );
+}
 const lessonRoot = path.join(projectRoot, projectConfig.lesson_root);
 const sourcePath = path.join(projectRoot, projectConfig.canonical_source);
 const storyboardPath = path.join(lessonRoot, '10-design/storyboard/lesson-01-ppt-storyboard.csv');

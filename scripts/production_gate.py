@@ -18,12 +18,14 @@ from workflow_integrity import (
     audit_frozen_source_package,
     sha256,
 )
+from validate_lesson_identity import validate as validate_lesson_identity
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((PROJECT_ROOT / "project.config.json").read_text(encoding="utf-8"))
 LESSON_ROOT = PROJECT_ROOT / CONFIG["lesson_root"]
 DESIGN_ROOT = PROJECT_ROOT / CONFIG["draft_root"]
+LESSON_REGISTRY = PROJECT_ROOT / CONFIG.get("lesson_registry", "course/lesson-registry.json")
 
 PRODUCTION_SCRIPTS = (
     "scripts/build_lesson_01_teacher_guide.js",
@@ -33,6 +35,7 @@ PRODUCTION_SCRIPTS = (
     "scripts/build_lesson_01_pptx_native.js",
     "scripts/build_lesson_01_prototype.js",
     "scripts/build_lesson_01_visual_prototype.js",
+    "scripts/build_l23_pptx_drafts.js",
     "scripts/build_full_teacher_manual.py",
     "scripts/build_release_package.py",
     "scripts/build_dashboard.py",
@@ -150,6 +153,13 @@ def audit_production_paths(blockers: list[str]) -> None:
                     )
 
 
+def audit_lesson_identity(blockers: list[str]) -> None:
+    """Reject a generator run if the active textbook/lesson scope is ambiguous."""
+
+    errors = validate_lesson_identity(LESSON_REGISTRY, PROJECT_ROOT / "project.config.json")
+    blockers.extend(f"lesson identity: {error}" for error in errors)
+
+
 def load_base_manifests(blockers: list[str]) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
     source_manifest: dict[str, Any] = {}
     teaching_manifest: dict[str, Any] = {}
@@ -242,7 +252,108 @@ def require_release_ready(authority_manifest: dict[str, Any], blockers: list[str
     if rehearsal.get("audio_playback_status") != "passed":
         blockers.append("PPTX audio playback is not recorded as passed")
     if rehearsal.get("status") != "passed":
-        blockers.append("300-minute teacher rehearsal is not passed")
+        blockers.append("approved contact-hour teacher rehearsal is not passed")
+
+
+def check_lesson_ppt_draft(lesson_key: str | None, output_dir: str | None = None) -> dict[str, Any]:
+    """Gate a lesson-specific PPTX draft without granting authority.
+
+    The original gate is intentionally tied to the active lesson authority and
+    therefore remains the correct gate for approved/release work.  Later
+    lessons need a safe, explicit draft stage while their own authority
+    manifests are still being built.  This stage validates identity, source
+    integrity, boundary confirmation, and output scope; it never approves or
+    writes an authority file.
+    """
+    blockers: list[str] = []
+    if not lesson_key:
+        blockers.append("lesson-specific PPTX draft requires --lesson-key")
+        return {"purpose": "pptx", "stage": "draft", "status": "blocked", "output_dir": output_dir, "blockers": blockers}
+
+    try:
+        registry = read_json(LESSON_REGISTRY)
+    except (FileNotFoundError, json.JSONDecodeError) as error:
+        blockers.append(f"lesson registry is unavailable or invalid: {error}")
+        return {"purpose": "pptx", "stage": "draft", "lesson_key": lesson_key, "status": "blocked", "output_dir": output_dir, "blockers": blockers}
+
+    entries = registry if isinstance(registry, list) else registry.get("lessons", [])
+    entry = next((item for item in entries if item.get("lesson_key") == lesson_key), None)
+    if not entry:
+        blockers.append(f"lesson identity is not registered: {lesson_key}")
+        return {"purpose": "pptx", "stage": "draft", "lesson_key": lesson_key, "status": "blocked", "output_dir": output_dir, "blockers": blockers}
+
+    textbook_id = entry.get("textbook_id")
+    lesson_id = entry.get("lesson_id")
+    if not textbook_id or not lesson_id:
+        blockers.append("registered lesson is missing textbook_id or lesson_id")
+        return {"purpose": "pptx", "stage": "draft", "lesson_key": lesson_key, "status": "blocked", "output_dir": output_dir, "blockers": blockers}
+
+    lesson_root = PROJECT_ROOT / "lessons" / textbook_id / lesson_id
+    draft_root = lesson_root / "10-design" / "pptx-draft"
+    candidate = Path(output_dir) if output_dir else draft_root
+    if not candidate.is_absolute():
+        candidate = PROJECT_ROOT / candidate
+    resolved = candidate.resolve()
+    try:
+        resolved.relative_to(draft_root.resolve())
+    except ValueError:
+        blockers.append(f"draft output must stay under {draft_root.resolve()}")
+    for protected in (lesson_root / "20-approved", lesson_root / "30-qa", lesson_root / "40-release"):
+        try:
+            resolved.relative_to(protected.resolve())
+            blockers.append(f"draft output is inside protected path: {protected}")
+        except ValueError:
+            pass
+
+    canonical_path = lesson_root / "00-source" / "canonical-source.json"
+    source_manifest_path = lesson_root / "00-source" / "source-manifest.json"
+    refs_path = lesson_root / "10-design" / "storyboard" / f"{lesson_id}-source-refs.csv"
+    boundary_dir = lesson_root / "10-design" / "storyboard"
+    boundary_candidates = sorted(boundary_dir.glob(f"{lesson_id}-boundary-confirmation*.md"))
+    boundary_path = boundary_candidates[-1] if boundary_candidates else None
+    if not canonical_path.is_file():
+        blockers.append(f"canonical source is missing: {canonical_path.relative_to(PROJECT_ROOT)}")
+    if not source_manifest_path.is_file():
+        blockers.append(f"source manifest is missing: {source_manifest_path.relative_to(PROJECT_ROOT)}")
+    if not refs_path.is_file():
+        blockers.append(f"source refs CSV is missing: {refs_path.relative_to(PROJECT_ROOT)}")
+    if not boundary_path or not boundary_path.is_file():
+        blockers.append(f"online/face boundary confirmation is missing under: {boundary_dir.relative_to(PROJECT_ROOT)}")
+    if canonical_path.is_file() and source_manifest_path.is_file():
+        try:
+            canonical = read_json(canonical_path)
+            source_manifest = read_json(source_manifest_path)
+            canonical_key = canonical.get("lesson_key")
+            if canonical_key and canonical_key != lesson_key:
+                blockers.append("canonical source lesson_key does not match the requested lesson")
+            elif not canonical_key:
+                legacy_matches = (
+                    canonical.get("textbook_id") == textbook_id
+                    and canonical.get("lesson_id") == lesson_id
+                    and lesson_id == "lesson-01"
+                )
+                if not legacy_matches:
+                    blockers.append("canonical source lesson_key is missing for a non-legacy lesson")
+            if source_manifest.get("lesson_key") != lesson_key:
+                blockers.append("source manifest lesson_key does not match the requested lesson")
+            expected = source_manifest.get("canonical_source_sha256")
+            if expected and expected != sha256(canonical_path):
+                blockers.append("canonical source hash differs from the lesson source manifest")
+            if not (lesson_root / "00-source" / "audio-manifest.json").is_file():
+                blockers.append("lesson audio manifest is missing")
+            if not (lesson_root / "10-design" / "assets" / "image-manifest.json").is_file():
+                blockers.append("lesson image manifest is missing")
+        except (json.JSONDecodeError, OSError) as error:
+            blockers.append(f"lesson source metadata is unavailable or invalid: {error}")
+
+    return {
+        "purpose": "pptx",
+        "stage": "draft",
+        "lesson_key": lesson_key,
+        "status": "ready" if not blockers else "blocked",
+        "output_dir": str(resolved),
+        "blockers": blockers,
+    }
 
 
 def check(purpose: str, output_dir: str | None = None) -> dict[str, Any]:
@@ -251,6 +362,7 @@ def check(purpose: str, output_dir: str | None = None) -> dict[str, Any]:
         blockers.append(f"unknown production purpose: {purpose}")
 
     draft_path = validate_output_dir(output_dir, purpose, blockers)
+    audit_lesson_identity(blockers)
     audit_production_paths(blockers)
     _source, _teaching, authority = load_base_manifests(blockers)
 
@@ -293,8 +405,22 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--purpose", required=True)
     parser.add_argument("--output-dir")
+    parser.add_argument("--stage", choices=("authority", "draft"), default="authority")
+    parser.add_argument("--lesson-key")
     args = parser.parse_args()
-    result = check(args.purpose, args.output_dir)
+    if args.stage == "draft":
+        if args.purpose != "pptx":
+            result = {
+                "purpose": args.purpose,
+                "stage": "draft",
+                "status": "blocked",
+                "output_dir": args.output_dir,
+                "blockers": ["draft stage is only available for purpose=pptx"],
+            }
+        else:
+            result = check_lesson_ppt_draft(args.lesson_key, args.output_dir)
+    else:
+        result = check(args.purpose, args.output_dir)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0 if result["status"] == "ready" else 1
 

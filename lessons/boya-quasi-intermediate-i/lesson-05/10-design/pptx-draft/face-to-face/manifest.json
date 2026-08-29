@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-pptx-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-05",
+  "mode": "face-to-face",
+  "title": "第五课《我的音乐老师》实体课",
+  "status": "draft_not_approved",
+  "builder_scope": "scripts/build_l23_pptx_drafts.js",
+  "draft_gate": "lesson-specific",
+  "source_sha256": "7311f648cfd3541b64ae8010457fa6d737c1aa3306ea23e9a3d8c63a9abef32c",
+  "layout_source": "boya-quasi-intermediate-i lesson-01 approved layout family",
+  "short_example_policy": "curated_short_sentences_max_24_hanzi_chars",
+  "short_text_policy": "textbook_listening_prompt_and_record_layout_no_full_text_copy",
+  "shared_assets": [
+    "lesson-01-cover-family-work-hobby.png",
+    "lesson-01-learning-path.png",
+    "divider-family.png",
+    "divider-work.png",
+    "divider-hobby.png",
+    "divider-comprehensive.png",
+    "symbolic-vocabulary.png",
+    "symbolic-listening.png",
+    "symbolic-sentence-pattern.png",
+    "oral-practice-divider.png",
+    "speaking-practice.png"
+  ],
+  "slide_count": 53,
+  "audio_tracks_embedded": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6"
+  ],
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/pptx-draft/face-to-face/lesson-05-实体课.pptx",
+    "sha256": "ba7d7fbd6c4c8b33753d0603a97231b44ba8ff6479c0d5add2b924072d585841",
+    "bytes": 67792699
+  },
+  "generated_at": "2026-08-29T16:33:46.003Z"
+}

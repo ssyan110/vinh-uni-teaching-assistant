@@ -5,6 +5,8 @@
   "status": "planned",
   "schedule_status": "not_started",
   "primary_textbook_id": "boya-intermediate-i",
+  "lesson_key_prefix": "boya-intermediate-i:",
+  "lesson_registry": "course/lesson-registry.json",
   "textbooks": [
     {
       "textbook_id": "boya-intermediate-i",

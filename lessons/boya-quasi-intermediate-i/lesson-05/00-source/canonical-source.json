@@ -1,0 +1,230 @@
+{
+  "lesson_key": "boya-quasi-intermediate-i:lesson-05",
+  "schema_version": "quasi-intermediate-source-audit-v1.0",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_number": 5,
+  "lesson_id": "lesson-05",
+  "title": "我的音乐老师",
+  "title_source": "主教材 PDF 第55页（印刷 P42）课名页视觉核对",
+  "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+  "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+  "page_map": {
+    "printed_pages": [42, 50],
+    "pdf_pages": [55, 63],
+    "answer_pdf_pages": [17, 18],
+    "mapping_status": "visual_verified_pdf_offset_plus_13; answer_pages_visual_first_pass"
+  },
+  "qr_evidence": {
+    "pdf_page": 55,
+    "qr_url": "http://qr31.cn/I69bRX",
+    "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-05-pdf-page-055.png",
+    "landing_page": "https://biz.cli.im/site/I69bRX?qrurl=http://qr31.cn/I69bRX&gtype=2&key=51706170bd8e6b559878288aae4fdb0723d68a5972",
+    "decode_status": "source_inventory_verified",
+    "landing_audio_labels": ["5-1", "5-2", "5-3", "5-4", "5-5", "5-6"]
+  },
+  "audio_map": [
+    {"label":"5-1","coding":"VY1539809","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FoIB78qgI_pFDMwGV49iFIj4qWIU","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-05/5-1.mp3","content_type":"audio/mpeg","bytes":885645,"sha256":"1c1d9029e5b40f886ea8203d8480add879170111ed44fba7d67ac6621e30d480","download_status":"passed_in_source_inventory","decode_status":"passed","duration_seconds":55.04,"semantic_status":"pending_teacher_playback"},
+    {"label":"5-2","coding":"JT1783202","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fgpdiucp_bQPNaNsdHzNUmCrvt2O","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-05/5-2.mp3","content_type":"audio/mpeg","bytes":585551,"sha256":"ea449e40711cebcca767b5ab2374f30e90dcde11399975050ae2757c9b7ee5d7","download_status":"passed_in_source_inventory","decode_status":"passed","duration_seconds":36.284,"semantic_status":"pending_teacher_playback"},
+    {"label":"5-3","coding":"CG1783203","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FkiobDOhbwG9t_nuvt6x6ZlVFrTh","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-05/5-3.mp3","content_type":"audio/mpeg","bytes":983030,"sha256":"4f335875bde65cf149b6f979511ff07b2fabc69a8fd4c0fdc11af0cc9bcd5a97","download_status":"passed_in_source_inventory","decode_status":"passed","duration_seconds":61.127,"semantic_status":"pending_teacher_playback"},
+    {"label":"5-4","coding":"UY1783204","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FotVXE0VjRsi5JcfEkb5P7lldbBy","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-05/5-4.mp3","content_type":"audio/mpeg","bytes":645737,"sha256":"be587417124680e0a8a7f713967ee1b05a415a88944e5331c50e7bbb10f32454","download_status":"passed_in_source_inventory","decode_status":"passed","duration_seconds":40.046,"semantic_status":"pending_teacher_playback"},
+    {"label":"5-5","coding":"OU1783205","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FnjV1KGwGnueHTJ_Ma8edmGzskSa","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-05/5-5.mp3","content_type":"audio/mpeg","bytes":896512,"sha256":"2a0aa676c6195103d295b3f9282c6625ff9ef99f844a541d51837ccd45b6b177","download_status":"passed_in_source_inventory","decode_status":"passed","duration_seconds":55.719,"semantic_status":"pending_teacher_playback"},
+    {"label":"5-6","coding":"ER1783206","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FqJjYw3o4Rw1XiK2rmSTKbRq-qKw","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-05/5-6.mp3","content_type":"audio/mpeg","bytes":788261,"sha256":"ee68c73d15eb6dfbbc6aca39c01ff7649e2870fa624600091a6f66975b19d189","download_status":"passed_in_source_inventory","decode_status":"passed","duration_seconds":48.953,"semantic_status":"pending_teacher_playback"}
+  ],
+  "content_inventory": {
+    "vocabulary_count": 24,
+    "proper_noun_count": 2,
+    "vocabulary_comprehension_group_count": 2,
+    "vocabulary_comprehension_item_count": 7,
+    "listening_sentence_item_count": 10,
+    "texts_dialogues_count": 3,
+    "grammar_pattern_count": 15,
+    "listening_exercise_group_count": 6,
+    "comprehensive_exercise_count": 3,
+    "exercise_count": 28,
+    "status": "visual_source_snapshot_pending_adam_approval"
+  },
+  "answer_policy": "仅记录参考答案 PDF 中可核对的选择／判断答案与听力文本；开放式口语题不补写唯一标准答案。",
+  "review": {
+    "status": "source_audit_in_progress",
+    "approved": false,
+    "approved_by": [],
+    "approved_at": null,
+    "blockers": [
+      "六段音频已完成文件存在、bytes、SHA-256、ffprobe 时长和解码核对；教师逐段播放及语义听核尚未完成。",
+      "扫描教材无可用文字层；最终来源批准需由 Adam 对视觉转录、教材页码和答案证据确认。",
+      "开放式口语与综合练习没有唯一标准答案，不补写答案。"
+    ],
+    "approval_basis": [
+      "主教材 PDF 第55–63页（印刷 P42–P50）高分辨率视觉核对",
+      "答案 PDF 第17–18页（答案印刷 P14–P15）题目答案与听力文本视觉核对",
+      "来源总盘点第五课 QR、音频 bytes、hash 和时长记录"
+    ]
+  },
+  "sections": [
+    {
+      "id": "vocabulary",
+      "printed_pages": [42, 43],
+      "audio": "5-1",
+      "entries": [
+        {"no":1,"word":"合唱","pinyin":"héchàng","pos":"动","gloss":"to chorus"},
+        {"no":2,"word":"迷","pinyin":"mí","pos":"名","gloss":"fan"},
+        {"no":3,"word":"吹","pinyin":"chuī","pos":"动","gloss":"to play; to blow"},
+        {"no":4,"word":"笛子","pinyin":"dízi","pos":"名","gloss":"bamboo flute"},
+        {"no":5,"word":"乐器","pinyin":"yuèqì","pos":"名","gloss":"musical instrument"},
+        {"no":6,"word":"享受","pinyin":"xiǎngshòu","pos":"动","gloss":"to enjoy","starred":true},
+        {"no":7,"word":"火","pinyin":"huǒ","pos":"名","gloss":"fire"},
+        {"no":8,"word":"有神","pinyin":"yǒushén","pos":"形","gloss":"bright; shining"},
+        {"no":9,"word":"从小","pinyin":"cóngxiǎo","pos":"副","gloss":"from childhood"},
+        {"no":10,"word":"积极","pinyin":"jījí","pos":"副","gloss":"positive; active","starred":true},
+        {"no":11,"word":"深奥","pinyin":"shēn'ào","pos":"形","gloss":"profound; abstruse"},
+        {"no":12,"word":"中等","pinyin":"zhōngděng","pos":"形","gloss":"medium"},
+        {"no":13,"word":"个子","pinyin":"gèzi","pos":"名","gloss":"height"},
+        {"no":14,"word":"欣赏","pinyin":"xīnshǎng","pos":"动","gloss":"to appreciate"},
+        {"no":15,"word":"民族","pinyin":"mínzú","pos":"名","gloss":"nationality; ethnic"},
+        {"no":16,"word":"鼓励","pinyin":"gǔlì","pos":"动","gloss":"to encourage","starred":true},
+        {"no":17,"word":"耐心","pinyin":"nàixīn","pos":"形","gloss":"patient","starred":true},
+        {"no":18,"word":"亲切","pinyin":"qīnqiè","pos":"形","gloss":"cordial; kind"},
+        {"no":19,"word":"理论","pinyin":"lǐlùn","pos":"名","gloss":"theory"},
+        {"no":20,"word":"影响","pinyin":"yǐngxiǎng","pos":"名","gloss":"influence"},
+        {"no":21,"word":"古典","pinyin":"gǔdiǎn","pos":"形","gloss":"classical","starred":true},
+        {"no":22,"word":"着迷","pinyin":"zháomí","pos":null,"pos_status":"blank_in_source","gloss":"to be fascinated"},
+        {"no":23,"word":"乐曲","pinyin":"yuèqǔ","pos":"名","gloss":"melody"},
+        {"no":24,"word":"感情","pinyin":"gǎnqíng","pos":"名","gloss":"feeling; affection","starred":true}
+      ],
+      "proper_nouns": [
+        {"word":"《茉莉花》","pinyin":"Mòlìhuā","gloss":"Jasmine"},
+        {"word":"《康定情歌》","pinyin":"Kāngdìng Qínggē","gloss":"Love Song in Kangding"}
+      ],
+      "source_status":"visually_verified_pending_adam_approval"
+    },
+    {
+      "id":"vocabulary_comprehension",
+      "printed_pages":[43,44],
+      "audio":"5-2",
+      "instruction":"听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+      "groups":[
+        {"topic":"关于音乐的词语","words":["合唱","音乐迷","吹笛子","乐器"],"answer":["1.A","2.B","3.D","4.C"]},
+        {"topic":"关于生活的词语","words":["享受","火","有神"],"answer":["1.A","2.B","3.C"]}
+      ],
+      "answer_status":"answers_checked_against_answer_pdf"
+    },
+    {
+      "id":"listening_sentences",
+      "printed_pages":[44],
+      "audio_tracks":["5-3"],
+      "exercises":{
+        "exercise_5_3":{
+          "heading_verbatim":"一、听句子，判断对错",
+          "items":[
+            [1,"他从小就喜欢音乐。","错"],[2,"他积极参加合唱比赛。","对"],[3,"这门课我觉得很深奥。","错"],[4,"王红说听音乐是一种享受。","错"],[5,"爸爸个子很高。","错"],[6,"他们都对学习乐器很感兴趣。","对"],[7,"老师教我们欣赏欧洲音乐和民族音乐。","错"],[8,"老师鼓励同学们问问题。","错"],[9,"老师回答学生们的问题很耐心。","对"],[10,"李老师常常亲切地鼓励我们。","错"]
+          ]
+        }
+      },
+      "answer_status":"answers_checked_against_answer_pdf"
+    },
+    {
+      "id":"short_text_1",
+      "printed_pages":[45],
+      "audio":"5-4",
+      "title":"我从小就喜欢唱歌",
+      "text":"我从小就喜欢唱歌。上小学的时候，每年学校举办合唱比赛，我都积极参加。可是，对于音乐，我是既喜欢又觉得深奥。我不懂音乐理论，也说不出多少音乐术语，可是音乐却让我觉得很亲切。如果说我喜欢唱歌是受了爸爸的影响，那真正让我成为音乐迷的却是我中学的音乐老师。",
+      "exercises":{
+        "first_listen":["“我”从小就喜欢什么？","“我”是不是音乐迷？"],
+        "second_listen":["“我”为何喜欢唱歌？（受……影响）","“我”觉得音乐怎么样？（既……又……）","“我”为何成为了音乐迷？（音乐老师）"],
+        "present":"请你说说“我”的音乐生活：（1）“我”从小就喜欢什么；（2）“我”受了哪些人的影响。要求：说6–8个句子，不少于60字。使用下面的词语和常用表达。词语参考：积极、参加、成为、音乐迷。常用表达参考：从小就、每……都……、既……又……、可是、受……影响。",
+        "compare":"我从小就喜欢唱歌，每年都积极参加合唱比赛。我对音乐既喜欢又觉得深奥。我不懂音乐理论，可是音乐让我觉得很亲切。我受爸爸和中学音乐老师的影响，成为了音乐迷。"
+      },
+      "exercise_metadata":{
+        "first_listen":{"heading_verbatim":"（一）听第一遍，简单回答问题","textbook_printed_pages":[45],"audio_tracks":["5-4"]},
+        "second_listen":{"heading_verbatim":"（二）听第二遍，用括号中的词语说出三个句子，不少于20字","textbook_printed_pages":[45],"audio_tracks":["5-4"]}
+      }
+    },
+    {
+      "id":"common_expressions_introduce_experience",
+      "printed_pages":[46],
+      "topic":"介绍经历",
+      "items":[
+        {"expression":"从小就","examples":["丽丽从小就喜欢画画儿。","朴大宇从小就对汉语有兴趣。"]},
+        {"expression":"每星期……都……","examples":["王红每星期二都去做志愿者。","朴大宇每星期三下午都去听讲座。"]},
+        {"expression":"对于","examples":["对于音乐，我从小就喜欢。","对于这个问题，王红做过一点儿研究。"]},
+        {"expression":"可是","examples":["我喜欢逛公园，可是来北京以后，我只去过天安门。","我喜欢唱歌，可是没有学过音乐理论。"]},
+        {"expression":"如果……那……","examples":["如果我当初选择中文专业，那我现在可能已经是中国通了。","如果不是对那家公司的工作很满意，那丽丽也不会到北京来工作。"]},
+        {"expression":"受……影响","examples":["受老师的影响，丽丽决定学习设计专业。","受中国朋友的影响，朴大宇去年开始看京剧。"]}
+      ],
+      "source_status":"examples_visually_verified"
+    },
+    {
+      "id":"short_text_2",
+      "printed_pages":[46,47],
+      "audio":"5-5",
+      "title":"老师上课教什么",
+      "text":"我们的音乐老师姓李，是一位中等个子的中年男老师。他黑黑的头发，眼睛很有神。上课的时候，李老师教我们怎么欣赏欧洲古典音乐，也让我们了解中国民族音乐、民族乐器。李老师教我们全年级的同学学习吹笛子，很多同学都是第一次接触民族乐器，可是越学越着迷。不少同学每天把笛子带到学校，一有空儿就练习。我知道的民族乐曲，比如《茉莉花》《康定情歌》，大部分都是那时候了解的。",
+      "exercises":{
+        "first_listen":["李老师是男老师还是女老师？","“我们”上音乐课学什么？"],
+        "second_listen":["李老师教“我们”什么？（欣赏）","李老师教“我们”什么乐器？（吹）","同学们喜欢学什么？（吹、把、带、一……就……）"],
+        "present":"请你说说“我”的音乐课：李老师教“我们”什么；同学们为什么喜欢学吹笛子。要求：说6–8个句子，不少于60字。使用下面的词语和常用表达。词语参考：欣赏、欧洲、民族、吹、笛子。常用表达参考：越……越……、把、一……就……、比如。",
+        "compare":"李老师是一位中等个子的中年男老师，眼睛很有神。他教我们欣赏欧洲古典音乐，也让我们了解中国民族音乐和民族乐器。很多同学越学吹笛子越着迷，一有空儿就练习。"
+      },
+      "exercise_metadata":{
+        "first_listen":{"heading_verbatim":"（一）听第一遍，简单回答问题","textbook_printed_pages":[46],"audio_tracks":["5-5"]},
+        "second_listen":{"heading_verbatim":"（二）听第二遍，用括号中的词语说一句，第3题要求说三个句子，不少于30字","textbook_printed_pages":[46],"audio_tracks":["5-5"]}
+      }
+    },
+    {
+      "id":"common_expressions_introduce_person",
+      "printed_pages":[47],
+      "topic":"介绍人物",
+      "items":[
+        {"expression":"外貌描写","examples":["小姑娘黑头发，黑眼睛，长得很像妈妈。","体育老师个子高高的，瘦瘦的。"]},
+        {"expression":"越……越……","examples":["孩子越大越懂事。","李大为觉得中文越学越有意思。"]},
+        {"expression":"把","examples":["王红把妈妈当成自己最好的朋友。","上大学以后，王红把头发剪短了。"]},
+        {"expression":"一……就……","examples":["丽丽一说话就脸红。","朴大宇很聪明，你一说他就明白。"]},
+        {"expression":"比如","examples":["李大为喜欢吃中国菜，比如饺子和豆腐。","王红喜欢体育活动，比如打球、跑步和游泳。"]},
+        {"expression":"大部分","examples":["班上大部分同学都喜欢数学课。","朴大宇晚上大部分时间都在学习中文。"]}
+      ],
+      "source_status":"examples_visually_verified"
+    },
+    {
+      "id":"short_text_3",
+      "printed_pages":[48],
+      "audio":"5-6",
+      "title":"老师讲课的风格",
+      "text":"李老师教音乐课特别有感情。他常常鼓励同学们问问题。同学们的问题，李老师都非常耐心地回答。李老师课讲得很清楚，内容也特别有意思。听李老师讲音乐，真是一种享受，就连以前对音乐理论不感兴趣的同学也越来越爱上音乐课了。从李老师那里，我了解了，音乐是夏天的风，也是冬天的火，让人感觉舒服，也让人觉得生活更美好。",
+      "text_source_note":"改编自叶文玲《灵魂的伊甸园》",
+      "exercises":{
+        "first_listen":["李老师教课怎么样？","音乐对人们的生活有什么影响？"],
+        "second_listen":["李老师讲课有什么特点？（耐心、特别、清楚）","同学们为什么喜欢上音乐课？（一种享受）","李老师让同学们明白了什么道理？（夏天的风、冬天的火、美好）"],
+        "present":"请你说说李老师的音乐有什么特色。要求：说6–8个句子，不少于60字。使用下面的词语和常用表达。词语参考：耐心、清楚、内容、夏天的风、冬天的火、生活、美好。常用表达参考：从……那里、对……感兴趣。",
+        "compare":"李老师教音乐课很有感情，讲得很清楚，内容也特别有意思。他常常鼓励同学问问题，而且非常耐心地回答。听他的课是一种享受，同学们越来越爱上音乐课，觉得音乐让生活更美好。"
+      },
+      "exercise_metadata":{
+        "first_listen":{"heading_verbatim":"（一）听第一遍，简单回答问题","textbook_printed_pages":[48],"audio_tracks":["5-6"]},
+        "second_listen":{"heading_verbatim":"（二）听第二遍，用括号中的词语说出三个句子，不少于20字","textbook_printed_pages":[48],"audio_tracks":["5-6"]}
+      }
+    },
+    {
+      "id":"common_expressions_discuss_learning",
+      "printed_pages":[49],
+      "topic":"谈论学习",
+      "items":[
+        {"expression":"真是一种享受","examples":["听李老师上音乐课真是一种享受。","和中国同学用中文一起讨论问题真是一种享受。"]},
+        {"expression":"连……都……","examples":["刚来中国的时候，李大为连“你好”都不会说。","朴大宇忙着准备考研究生，连星期日都不休息。"]},
+        {"expression":"对……感兴趣","examples":["王红的专业是文学，可是她对数学也很感兴趣。","李大为对现在的专业不感兴趣，打算转专业。"]},
+        {"expression":"从……那里","examples":["从老师那里，我们也学到了做人的道理。","朴大宇和中国同学互相学习，他们都从对方那里了解了不少有趣的看法。"]}
+      ],
+      "source_status":"examples_visually_verified"
+    },
+    {
+      "id":"comprehensive_practice",
+      "printed_pages":[49,50],
+      "audio_tracks":["5-4","5-5","5-6"],
+      "items":[
+        {"id":"comprehensive_1","instruction":"请你根据听过的三段短文填表","table_headers":["人物","喜欢什么","为什么","上李老师的课，有什么收获","相貌","上课教什么","教课怎么样"],"answer_status":"open_table_teacher_check"},
+        {"id":"comprehensive_2","instruction":"小组活动：根据上面的表格和下面给出的参考词语和常用表达，谈一谈：（1）我和音乐；（2）介绍一下李老师和他教的音乐课。要求一名同学先说6–8个句子，不少于60字；然后小组其他同学补充；最后由一名同学总结，说10–12个句子，不少于100字。","answer_status":"open_presentational_task"},
+        {"id":"comprehensive_3","instruction":"拓展练习：请你说一说：（1）你喜欢谁；（2）为什么喜欢；（3）介绍一下这个人。要求使用这一课学过的词语和常用表达；说10–12句话，不少于100字。","answer_status":"open_presentational_task"}
+      ],
+      "source_status":"visually_verified_pending_adam_approval"
+    }
+  ]
+}

@@ -13,6 +13,17 @@ from production_gate import assert_ready
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((PROJECT_ROOT / "project.config.json").read_text(encoding="utf-8"))
+HISTORICAL_LESSON_KEY = "boya-intermediate-i:lesson-01"
+active_lesson_key = CONFIG.get("active_context", {}).get("lesson_key")
+expected_lesson_root = (PROJECT_ROOT / "lessons/boya-intermediate-i/lesson-01").resolve()
+configured_lesson_root = (PROJECT_ROOT / CONFIG.get("lesson_root", "")).resolve()
+if active_lesson_key != HISTORICAL_LESSON_KEY or configured_lesson_root != expected_lesson_root:
+    raise RuntimeError(
+        "build_lesson_01_support_materials.py is historical and scoped to "
+        f"{HISTORICAL_LESSON_KEY}; active context is {active_lesson_key or 'missing'} "
+        f"and lesson_root is {configured_lesson_root}. Use a lesson-key-scoped builder for the current offering."
+    )
+DESIGN = json.loads((PROJECT_ROOT / CONFIG["design_system"]).read_text(encoding="utf-8"))
 LESSON_ROOT = PROJECT_ROOT / CONFIG["lesson_root"]
 # Generators write drafts only. An approved path must be supplied through the
 # explicit approval/migration workflow, never by a default build command.
@@ -34,16 +45,16 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
 
-FONT = CONFIG.get("font_policy", {}).get("latin", "Times New Roman")
-# Use the standard cross-platform CJK face required for delivery packages.
-CJK_FONT = CONFIG.get("font_policy", {}).get("cjk", "KaiTi")
-INK = "17324D"
-ACCENT = "2E74B5"
-DARK_ACCENT = "1F4D78"
-LIGHT_BLUE = "E8EEF5"
-LIGHT_GRAY = "F2F4F7"
-FORM_LINE = "AAB8C6"
-WHITE = "FFFFFF"
+FONT = DESIGN["fonts"]["latin"]
+CJK_FONT = DESIGN["fonts"]["cjk"]
+COLORS = DESIGN["colors"]
+INK = COLORS["ink"]
+ACCENT = COLORS["teal"]
+DARK_ACCENT = COLORS["purple"]
+LIGHT_BLUE = COLORS["blue"]
+LIGHT_GRAY = COLORS["paper"]
+FORM_LINE = COLORS["line"]
+WHITE = COLORS["white"]
 
 
 def rgb(hex_value: str) -> RGBColor:

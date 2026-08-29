@@ -289,16 +289,28 @@ def expected_release_entries(manifest: dict[str, Any]) -> tuple[list[dict[str, A
         if isinstance(item, dict) and isinstance(item.get("path"), str)
     }
     authority = manifest.get("authority", {})
+    pptx = authority.get("pptx", {}) if isinstance(authority.get("pptx"), dict) else {}
     requested = [
-        (authority.get("pptx", {}).get("path"), "01-课堂PPT", "pptx"),
-        (authority.get("ppt_preview", {}).get("path"), "01-课堂PPT", "ppt_preview"),
+        (pptx.get("path"), "01-课堂PPT", "pptx"),
+        (pptx.get("online_path"), "01-课堂PPT", "pptx"),
         (authority.get("teacher_manual", {}).get("path"), "02-简易教案", "teacher_manual"),
     ]
+    # A PDF preview is a QA artifact unless the authority manifest explicitly
+    # declares it as a release material. Do not make PPTX-only authority fail
+    # merely because no preview PDF is registered.
+    preview = authority.get("ppt_preview", {})
+    if isinstance(preview, dict) and preview.get("path"):
+        requested.append((preview.get("path"), "01-课堂PPT", "ppt_preview"))
     entries: list[dict[str, Any]] = []
 
     for source_path, release_parent, category in requested:
+        # Optional authority fields (such as a second online deck path) are
+        # intentionally absent in older manifests and should not become a
+        # spurious mapping failure.
+        if not source_path:
+            continue
         item = by_path.get(source_path)
-        if not source_path or item is None:
+        if item is None:
             failures.append(f"release authority entry is not declared in files: {source_path!r}")
             continue
         entries.append(

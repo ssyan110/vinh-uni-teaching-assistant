@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-08-29T12:35:00+07:00",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-01",
+  "lesson_title": "丽丽是独生女",
+  "approval_scope": "department_chair_approved_current_pptx_only",
+  "status": "partial_pass",
+  "classroom_ready": false,
+  "summary": {
+    "errors": 0,
+    "warnings": 6,
+    "info": 6,
+    "artifacts_scanned": 2
+  },
+  "checks": {
+    "authority_copy_exact": {
+      "status": "passed",
+      "details": "20-approved 中的两份 PPTX 与 10-design draft SHA-256 一致；未改写内容。"
+    },
+    "pptx_zip_integrity": {
+      "status": "passed",
+      "files_checked": 2,
+      "zip_test_failures": 0
+    },
+    "pptx_dimensions": {
+      "status": "passed",
+      "online": "13.333 × 7.500 in",
+      "face_to_face": "13.333 × 7.500 in",
+      "ratio": "16:9"
+    },
+    "slide_counts": {
+      "status": "passed",
+      "online": 72,
+      "face_to_face": 51,
+      "empty_slides": 0
+    },
+    "speaker_notes": {
+      "status": "warning",
+      "online_nonempty_notes": 61,
+      "online_total_slides": 72,
+      "face_to_face_nonempty_notes": 51,
+      "face_to_face_total_slides": 51,
+      "note": "批准稿原样保留；在线预习部分有 11 张投影片的备注区为空。"
+    },
+    "embedded_images": {
+      "status": "passed",
+      "online_images_decoded": 44,
+      "face_to_face_images_decoded": 48,
+      "decode_failures": 0,
+      "external_image_dependencies": 0
+    },
+    "embedded_audio": {
+      "status": "passed_static_pending_playback",
+      "face_to_face_audio_relationships": 8,
+      "mapped_tracks": ["1-2", "1-3", "1-4", "1-5", "1-6", "1-7", "1-8"],
+      "source_hash_matches": "8/8",
+      "online_audio_relationships": 0,
+      "note": "在线预习 PPTX 不放课堂音频；实体课 PPTX 已内嵌 1-2 至 1-8。PowerPoint 实际逐段播放仍待人工确认。"
+    },
+    "fonts": {
+      "status": "warning_locked_approval",
+      "face_to_face_min_visible_pt": 20,
+      "online_min_visible_pt": 12,
+      "required_font_policy": {
+        "cjk": "KaiTi",
+        "latin": "Times New Roman"
+      },
+      "note": "实体课投影字级静态通过；在线预习批准稿的页眉、页码和封面英文标签保留原字号，本次不擅自修改批准内容。"
+    },
+    "textbook_page_markers": {
+      "status": "recorded_not_storyboard_verified",
+      "online_marker_bearing_slides": 65,
+      "face_to_face_marker_bearing_slides": 31,
+      "note": "已读取投影片中现有教材页码标记；因当前课次尚无 approved storyboard，尚未完成逐页 source_refs coverage 验证。"
+    },
+    "audio_source_technical": {
+      "status": "passed_technical_pending_semantic",
+      "tracks_present": 8,
+      "tracks_decoded": 8,
+      "semantic_listening": "pending_teacher_listening",
+      "evidence": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/audit/audio-technical-2026-08-29.md"
+    },
+    "previews": {
+      "status": "passed_export",
+      "online_pdf_pages": 72,
+      "face_to_face_pdf_pages": 51,
+      "online_pdf": "lessons/boya-quasi-intermediate-i/lesson-01/30-qa/current/pptx-chair-approved/previews/lesson-01-在线预习.pdf",
+      "face_to_face_pdf": "lessons/boya-quasi-intermediate-i/lesson-01/30-qa/current/pptx-chair-approved/previews/lesson-01-实体课.pdf",
+      "contact_sheets": [
+        "lessons/boya-quasi-intermediate-i/lesson-01/30-qa/current/pptx-chair-approved/lesson-01-online-contact-sheet.png",
+        "lessons/boya-quasi-intermediate-i/lesson-01/30-qa/current/pptx-chair-approved/lesson-01-face-contact-sheet.png"
+      ]
+    }
+  },
+  "remaining_gates": [
+    {
+      "gate": "来源批准",
+      "status": "blocked",
+      "reason": "1-1 至 1-8 尚未完成教师语义听核；1-7、1-8 的出版社 QR 对应仍未确认。"
+    },
+    {
+      "gate": "教学重组与正式课时",
+      "status": "missing",
+      "reason": "未建立本课 PBI 教学设计与正式实体课时记录。"
+    },
+    {
+      "gate": "教师手册与学生配套",
+      "status": "missing",
+      "reason": "教师手册、预习卡、活动卡、评量表和 Exit Ticket 尚未建立。"
+    },
+    {
+      "gate": "rehearsal 与 release",
+      "status": "blocked",
+      "reason": "没有教师 rehearsal、PowerPoint 实际播放证据，也没有从完整 authority 建立不可变 release ZIP。"
+    }
+  ],
+  "limitations": [
+    "静态 OOXML、PDF 导出和 ZIP 检查不替代 Microsoft PowerPoint 中的人工播放与投影验收。",
+    "本报告不把系主任批准 PPTX 扩大解释为来源、教师手册或活动材料批准。",
+    "批准稿中的投影片文字、图片、页码、备注和音频关系均未修改。"
+  ]
+}

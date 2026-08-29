@@ -3,9 +3,21 @@ const path = require('path');
 const crypto = require('crypto');
 const { execFileSync } = require('child_process');
 const PptxGenJS = require('pptxgenjs');
+const designSystem = require('./boya_design_system');
 
 const projectRoot = path.resolve(__dirname, '..');
 const projectConfig = JSON.parse(fs.readFileSync(path.join(projectRoot, 'project.config.json'), 'utf8'));
+const HISTORICAL_LESSON_KEY = 'boya-intermediate-i:lesson-01';
+const activeLessonKey = projectConfig.active_context && projectConfig.active_context.lesson_key;
+const expectedLessonRoot = path.join(projectRoot, 'lessons/boya-intermediate-i/lesson-01');
+const configuredLessonRoot = path.resolve(projectRoot, projectConfig.lesson_root || '');
+if (activeLessonKey !== HISTORICAL_LESSON_KEY || configuredLessonRoot !== expectedLessonRoot) {
+  throw new Error(
+    `build_lesson_01_visual_prototype.js is historical and scoped to ${HISTORICAL_LESSON_KEY}; ` +
+    `active context is ${activeLessonKey || 'missing'} and lesson_root is ${configuredLessonRoot}. ` +
+    'Use a lesson-key-scoped builder for the current offering.',
+  );
+}
 const lessonRoot = path.join(projectRoot, projectConfig.lesson_root);
 const outputDir = process.env.BOYA_PROTOTYPE_DRAFT_DIR || path.join(lessonRoot, '10-design/visual-prototype-draft');
 const assetDir = path.join(outputDir, 'assets');
@@ -17,21 +29,8 @@ const pptxPath = path.join(outputDir, 'lesson-01-visual-prototype.pptx');
 
 const W = 13.333;
 const H = 7.5;
-const FONT = projectConfig.font_policy?.cjk || 'KaiTi';
-const COLORS = {
-  paper: 'F8FAFC',
-  paperWarm: 'FCFBF7',
-  ink: '172033',
-  slate: '5F6E82',
-  blue: '3D70D9',
-  blueSoft: 'E6EEF9',
-  coral: 'E97862',
-  coralSoft: 'F8E6E0',
-  teal: '4B9D9A',
-  tealSoft: 'E2F0EE',
-  line: 'C9D5E2',
-  white: 'FFFFFF'
-};
+const FONT = designSystem.fonts.cjk;
+const COLORS = designSystem.colors;
 
 function assertProductionGate() {
   execFileSync(process.env.BOYA_PYTHON || 'python3', [

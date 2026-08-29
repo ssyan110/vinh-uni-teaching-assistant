@@ -14,6 +14,8 @@
     delivered: 'done',
     in_progress: 'review',
     source_review: 'review',
+    draft_in_progress: 'review',
+    draft_legacy_unverified: 'review',
     available: 'available',
     locked: 'locked',
     done: 'done',
@@ -57,7 +59,7 @@
     }
     return {
       view: 'lesson',
-      lessonId: parts[1],
+      lessonKey: parts[1],
       tab: ['overview', 'gates', 'files', 'qa'].includes(parts[2]) ? parts[2] : 'overview',
       gateId: parts[3] || ''
     };
@@ -96,7 +98,7 @@
   function renderCourse() {
     const course = data.course || {};
     const summary = data.summary || {};
-    const focus = lessonMap.get(summary.focus_lesson_id) || lessons[0];
+    const focus = lessonMap.get(summary.focus_lesson_key || summary.focus_lesson_id) || lessons[0];
     const totalGates = Number(summary.total_gates) || 0;
     const completedGates = Number(summary.completed_gates) || 0;
     const gatePercent = totalGates ? Math.round(completedGates / totalGates * 100) : 0;
@@ -150,7 +152,7 @@
           <article class="card side-card rule-card">
             <p class="eyebrow">WORKFLOW RULE</p>
             <h3>逐课推进</h3>
-            <p>当前课次完成教师手册、配套、PPTX、QA、rehearsal 与交付后，才解锁下一课。</p>
+            <p>authority／release 依课次顺序推进；已确认来源包与边界的后续课次可以先制作 draft，但 draft 不会解锁下一课的 authority。</p>
           </article>
         </aside>
       </section>
@@ -275,9 +277,9 @@
   }
 
   function renderLesson(route) {
-    const lesson = lessonMap.get(route.lessonId);
-    const detail = details[route.lessonId] || { gates: [], file_groups: [] };
-    const locked = lesson.status === 'locked';
+    const lesson = lessonMap.get(route.lessonKey);
+    const detail = details[route.lessonKey] || { gates: [], file_groups: [] };
+    const locked = lesson.status === 'locked' || lesson.status === 'draft_legacy_unverified';
     const tabs = locked ? '' : `
       <nav class="tabs" aria-label="单课工作区">
         ${tabLink(lesson, 'overview', '概览', route.tab === 'overview')}
@@ -291,8 +293,8 @@
       content = `
         <article class="locked-panel card">
           <div class="lock-icon" aria-hidden="true">×</div>
-          <p class="eyebrow">LESSON LOCKED</p>
-          <h3>第 ${text(lesson.number)} 课尚未解锁</h3>
+          <p class="eyebrow">${lesson.status === 'draft_legacy_unverified' ? 'LEGACY DRAFT BLOCKED' : 'LESSON LOCKED'}</p>
+          <h3>${lesson.status === 'draft_legacy_unverified' ? `第 ${text(lesson.number)} 课旧草稿不能使用` : `第 ${text(lesson.number)} 课尚未解锁`}</h3>
           <p>${text(lesson.unlock_reason)}</p>
           <a class="button secondary" href="#course">返回课程总览</a>
         </article>
@@ -311,7 +313,7 @@
       <div class="back-link"><a href="#course">← 返回课程总览</a></div>
       <section class="lesson-hero card">
         <div>
-          <p class="eyebrow">LESSON WORKSPACE · ${String(lesson.number).padStart(2, '0')}</p>
+          <p class="eyebrow">LESSON WORKSPACE · ${String(lesson.number).padStart(2, '0')} · ${text(lesson.lesson_key)}</p>
           <h2>第 ${text(lesson.number)} 课 · ${text(lesson.title)}</h2>
           <p class="muted">${text(lesson.next_action)}</p>
         </div>

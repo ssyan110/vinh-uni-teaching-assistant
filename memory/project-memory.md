@@ -1,6 +1,6 @@
 # Project Memory
 
-最後更新：2026-08-27
+最後更新：2026-08-28
 
 這份檔案只記錄已確認、會影響未來工作的長期決策；不要把猜測或未批准的內容寫成事實。
 
@@ -9,14 +9,14 @@
 - 學生已完成《博雅漢語聽說：初級起步篇》第一、二冊。
 - 2026-08-27 系主任会议后，本学期教材切换为《博雅汉语听说：准中级加速篇 I》十二课；《中级冲刺篇 I》不删除，完整保留并规划于三年级使用。
 - 每節 50 分鐘；每次上課 4 節、200 分鐘；每一課的實體課時不固定，必須依各冊教材實際課數、各課內容量與正式課表分配，可跨次上課或在同次安排多課。
-- 当前 active lesson 是新教材第一课〈丽丽是独生女〉，只完成第一轮来源盘点，尚未批准来源；旧教材第一课〈中国人的姓名〉的批准状态只适用于历史锁定版本。
-- 舊教材第一課 canonical source：`textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json`。
+- 当前 active lesson key 是 `boya-quasi-intermediate-i:lesson-01`，教材为《准中级加速篇 I》第一课〈丽丽是独生女〉。Adam 已明确确认该课完成交付；当前 checkout 尚未找到对应的 `20-approved/` 与 `40-release/` 文件，因此须把交付证据对回这个 key，不能用旧教材文件代替。
+- 舊教材第一課的獨立身份是 `boya-intermediate-i:lesson-01`；其 canonical source：`textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json`。旧教材第一课〈中国人的姓名〉的批准状态只适用于该教材的历史锁定版本。
 - 舊教材第一課已核對 63 個教材區段、34 個詞語、7 個句式、5 個課文／對話、35 項練習與 11 段音檔。
 - 舊教材第一課教師手冊已於 2026-08-20 由 Adam 批准；其預習卡、活動卡、評量表與 Exit Ticket 的狀態不適用於新教材。
-- 舊教材的整學期規劃稿已因換書決定移除；《中級衝刺篇 I》的 2027-fall 學期安排待完整理解教材後建立，各課歷史 authority 仍以 `lessons/boya-intermediate-i/lesson-XX/20-approved/` 為準。
+- 舊教材的整學期規劃稿已因換書決定移除；《中級衝刺篇 I》的 2027-fall 學期安排待完整理解教材後建立，各課歷史 authority 仍以 `boya-intermediate-i:lesson-XX` 對應的 `lessons/boya-intermediate-i/lesson-XX/20-approved/` 為準。
 - 2026-08-27 已確認：線上學習由學生自行安排，屬課外額外準備，不設固定分鐘數，也不追蹤學生實際花費時間；線上時間不折抵、不替代或縮減各課核准的實體課時。每冊教材的實體課總量與各課分配，必須先依實際課數、內容量及正式課表核定；先前準中級草案中的 12 課×6 節、84 節／21 次只作被撤回的工作假設，不再視為規則或已確認時數。
-- 2026-08-27 架构升级为「课程实例 → 教材 → 课次」：`course/` 只保存课程与开课实例；所有教材来源统一放在 `textbooks/<textbook_id>/source/`；逐课生产放在 `lessons/<textbook_id>/lesson-XX/`。同一学期可在 `offering.json` 登记多本教材。
-- 第一課主任審核包已原樣登記到 `lessons/boya-intermediate-i/lesson-01/20-approved/lesson-manifest.json`；整理前的輸入快照保存在 `archive/legacy-materials-2026-08-27/boya-intermediate/lesson-01/share/第一課-教学资料`，只作歷史證據，不是新的生產來源。
+- 2026-08-27 架构升级为「课程实例 → 教材 → 课次」：`course/` 只保存课程与开课实例；所有教材来源统一放在 `textbooks/<textbook_id>/source/`；逐课生产放在 `lessons/<textbook_id>/lesson-XX/`；跨教材身份统一由 `course/lesson-registry.json` 的 `<textbook_id>:<lesson_id>` 登记。同一学期可在 `offering.json` 登记多本教材。
+- 舊教材 `boya-intermediate-i:lesson-01` 的主任審核包已原樣登記到 `lessons/boya-intermediate-i/lesson-01/20-approved/lesson-manifest.json`；整理前的輸入快照保存在 `archive/legacy-materials-2026-08-27/boya-intermediate/lesson-01/share/第一課-教学资料`，只作歷史證據，不是準中級教材的生產來源。
 - 教材沒有提供的答案不得自行補寫唯一標準答案。
 
 ## 已確認的教學習慣
@@ -29,7 +29,7 @@
 
 ## 2026-08-27 席主任審閱後的後續教材原則
 
-以下決策只適用於第一課之後的新課；第一課目前已批准的 authority、PPTX、教師手冊與活動材料不回改：
+以下決策按各教材自己的 `lesson_key` 套用於第一課之後的新課；同號但不同教材的課次不互相取代，已批准 authority、PPTX、教師手冊與活動材料不回改：
 
 - 每課 PPT 在封面後先放學生可見的學習流程圖，依已批准的教師手冊與 storyboard 呈現該課的實際學習順序，例如「詞語 → 討論活動 → ABC → XYZ」。
 - 每課 PPT 的詞語頁涵蓋 canonical source 的全部生詞與核准的補充生詞（如有）；一頁一個詞語，每頁固定有「詞語、拼音、詞類、使用場合、用法、例句、擴展用法、圖片」。圖片要服務詞義、使用場合或記憶，素材來源與授權狀態另記在內部清單。
@@ -50,6 +50,13 @@
 - 學生畫面只寫學生現在要做的事情，不顯示「能力目標」「聽力策略」「句式情境」「資訊站」「視覺樣稿」等教師／製作分類；操作文字以初級到中級常用詞為準。
 - speaker notes 可以保留教師提示，但不能在投影畫面可見。
 - 「只需要 PPT」不代表刪除配套；完整教材仍要包含教師手冊、學生預習卡、補充活動卡、評量／exit ticket 與音檔資料。
+
+## 2026-08-29 統一提交檔案命名
+
+- 所有面向 Adam 的課次交付檔案（PPTX、DOCX、PDF、音檔、CSV、ZIP）統一使用 `lesson-<nn>-<用途>.<副檔名>`；課次號固定兩位數，分隔符使用半形 `-`，副檔名使用小寫。
+- 每課兩份課堂 PPTX 固定為 `lesson-01-在线预习.pptx` 與 `lesson-01-实体课.pptx`；教師手冊、預習卡、活動材料、預覽、音檔與教材包沿用同一前綴。
+- 提交檔名不使用 `第一課`／`第一课`、`online`／`face-to-face`、空格、底線、日期或重複 `final`；版本、SHA-256 與審核狀態寫入 manifest、QA 與 release 紀錄。內部 draft 可暫用 `-draft-vNN`，提交前改回 canonical 名稱。
+- schema 固定檔名、出版社／第三方來源檔名與歷史 archive 保留原名；既有 approved／release 不追溯改名，任何會改變 authority 路徑或 hash 的改名都要先取得 Adam 明確批准。
 
 ## 2026-08-21 PPT 修訂後的固定規則
 
@@ -100,7 +107,7 @@
 
 ## 《中級衝刺篇 I》第一課 evidence
 
-- 唯一 authority PPTX：`lessons/boya-intermediate-i/lesson-01/20-approved/pptx/第一课-中国人的姓名.pptx`；v11-final 主任審核包中的 PPTX 原樣登記，95 頁、95 份 speaker notes、35/35 練習、圖片與音頻保留。
+- `boya-intermediate-i:lesson-01` 的唯一 authority PPTX：`lessons/boya-intermediate-i/lesson-01/20-approved/pptx/第一课-中国人的姓名.pptx`；v11-final 主任審核包中的 PPTX 原樣登記，95 頁、95 份 speaker notes、35/35 練習、圖片與音頻保留。
 - 唯一 authority 简易教案：`lessons/boya-intermediate-i/lesson-01/20-approved/teacher-manual/第一课简易教案.docx`。
 - 唯一 authority 活动卡：`lessons/boya-intermediate-i/lesson-01/20-approved/activities/`；5 个活动资料夹、22 份 DOCX，不交付活动卡 PDF。
 - Current QA：`lessons/boya-intermediate-i/lesson-01/30-qa/current/pptx-v17/`；旧版本在 `30-qa/archive/`，其他历史输出统一在 `archive/`。
@@ -110,8 +117,8 @@
 
 ## Authority 與 release 工作流
 
-後續每課固定順序：來源審核 → PBI 教學設計 → 教師手冊 → 活動卡與預習材料 → PPT draft → PowerPoint 人工審閱 → 明確批准 authority → 只讀 QA → release package。生成器不能覆蓋 `20-approved`；dashboard 只從 `lesson-manifest.json` 產生連結。
+後續每課固定順序：來源審核 → PBI 教學設計 → 教師手冊 → 活動卡與預習材料 → PPT draft → PowerPoint 人工審閱 → 明確批准 authority → 只讀 QA → release package。所有步驟先解析 `lesson_key`；生成器不能覆蓋 `20-approved`；dashboard 只從 `course/lesson-registry.json` 與對應 `lesson-manifest.json` 產生連結。
 
 ## 下一個工作節點
 
-先完成《准中级加速篇 I》第一课的逐页文字来源审核、音频语义对应、练习与答案状态核对，并取得 Adam 来源批准。来源批准前不得制作教师手册、学生配套、Storyboard 或 PPTX；当前学期规划只是候选草案，正式时数须等全书理解、来源批准与学校课表确认后定稿。旧教材第一课的 PPTX、教师手册、QA 与 release 保持锁定，不作为新教材输入。
+以 `boya-quasi-intermediate-i:lesson-01` 為準，先完成使用者已確認交付內容的 authority/release 證據對回；之後才依使用者指定的下一個準中級 `lesson_key` 推進。準中級與中級教材的 PPTX、教師手冊、QA 與 release 互不替代；正式時數仍須等全書理解、來源批准與學校課表確認後定稿。

@@ -1,0 +1,15 @@
+{
+  "schema_version":"lesson-audio-manifest-v1.0",
+  "lesson_id":"lesson-06",
+  "source_root":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-06",
+  "status":"technical_decode_passed_semantic_playback_pending",
+  "tracks":[
+    {"label":"6-1","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-1.mp3","bytes":835908,"sha256":"e6a10655fad4e516ee464b3abf473a8b265690687fbcb503856e6f0f340e00e8","duration_seconds":51.931429,"sample_rate_hz":44100,"channels":1,"content_scope":"词语","download_status":"passed","decode_status":"passed","semantic_status":"pending_teacher_playback"},
+    {"label":"6-2","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-2.mp3","bytes":417531,"sha256":"4fd7127fe75a122db88809a652f37116876fd117b9ade982d90fa64eec2b5b68","duration_seconds":25.782857,"sample_rate_hz":44100,"channels":1,"content_scope":"词语理解","download_status":"passed","decode_status":"passed","semantic_status":"pending_teacher_playback"},
+    {"label":"6-3","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-3.mp3","bytes":1029841,"sha256":"c12e3a9488ba340ea856e79b4881787ffa586886f170dcd47e5e570386403e83","duration_seconds":64.052245,"sample_rate_hz":44100,"channels":1,"content_scope":"听说句子","download_status":"passed","decode_status":"passed","semantic_status":"pending_teacher_playback"},
+    {"label":"6-4","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-4.mp3","bytes":921590,"sha256":"fb40784e9b2d9a441d858900a77f1186134c82238d9423da572b9c2ee7dc414f","duration_seconds":57.286531,"sample_rate_hz":44100,"channels":1,"content_scope":"短文一","download_status":"passed","decode_status":"passed","semantic_status":"pending_teacher_playback"},
+    {"label":"6-5","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-5.mp3","bytes":949175,"sha256":"03b57cddfcff2e4a76801a592d50af1eb449b984a4df5c465c2726d27512406e","duration_seconds":59.010612,"sample_rate_hz":44100,"channels":1,"content_scope":"短文二","download_status":"passed","decode_status":"passed","semantic_status":"pending_teacher_playback"},
+    {"label":"6-6","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-6.mp3","bytes":773214,"sha256":"61198dc3eaef408f46b1b57c97952d9c91561b30f3ef4c2ce018185e1fc851e2","duration_seconds":48.013061,"sample_rate_hz":44100,"channels":1,"content_scope":"短文三","download_status":"passed","decode_status":"passed","semantic_status":"pending_teacher_playback"}
+  ],
+  "technical_summary":{"track_count":6,"decode_passed":6,"semantic_listening_completed":0,"teacher_powerpoint_playback_completed":0}
+}

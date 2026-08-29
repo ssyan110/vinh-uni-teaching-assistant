@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-pptx-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-06",
+  "mode": "face-to-face",
+  "title": "第六课《大岛参加了学校的合唱团》实体课",
+  "status": "draft_not_approved",
+  "builder_scope": "scripts/build_l23_pptx_drafts.js",
+  "draft_gate": "lesson-specific",
+  "source_sha256": "d4233f801616869451703ead1981ee1ba4f19d2796e89074fe7854c2272ac70c",
+  "layout_source": "boya-quasi-intermediate-i lesson-01 approved layout family",
+  "short_example_policy": "curated_short_sentences_max_24_hanzi_chars",
+  "short_text_policy": "textbook_listening_prompt_and_record_layout_no_full_text_copy",
+  "shared_assets": [
+    "lesson-01-cover-family-work-hobby.png",
+    "lesson-01-learning-path.png",
+    "divider-family.png",
+    "divider-work.png",
+    "divider-hobby.png",
+    "divider-comprehensive.png",
+    "symbolic-vocabulary.png",
+    "symbolic-listening.png",
+    "symbolic-sentence-pattern.png",
+    "oral-practice-divider.png",
+    "speaking-practice.png"
+  ],
+  "slide_count": 35,
+  "audio_tracks_embedded": [],
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-06/10-design/pptx-draft/face-to-face/lesson-06-实体课.pptx",
+    "sha256": "17d8018357aafb69e962ccc52daed1284b8450f9932b6bcd80f7af740b5ce5a5",
+    "bytes": 43713058
+  },
+  "generated_at": "2026-08-29T16:33:47.982Z"
+}

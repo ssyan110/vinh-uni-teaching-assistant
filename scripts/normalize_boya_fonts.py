@@ -19,6 +19,7 @@ CJK_FONT = "KaiTi"
 LATIN_FONT = "Times New Roman"
 
 DOCX_R_FONTS_RE = re.compile(rb"<w:rFonts\b[^>]*?/?>")
+DOCX_RPR_BLOCK_RE = re.compile(rb"<w:rPr\b[^>]*>(.*?)</w:rPr>", re.DOTALL)
 DOCX_FONT_TABLE_RE = re.compile(rb"<w:font\b[^>]*>")
 PPTX_FONT_TAG_RE = re.compile(rb"<a:(latin|ea|cs|buFont|font)\b[^>]*?/?>")
 PPTX_APP_FONT_NAME_REPLACEMENTS = {
@@ -99,6 +100,46 @@ def normalize_docx_font_table(data: bytes) -> tuple[bytes, int]:
     return DOCX_FONT_TABLE_RE.sub(patch, data), changed
 
 
+def normalize_docx_language(data: bytes) -> tuple[bytes, int]:
+    """Mark every run/style property as Simplified Chinese for Han text.
+
+    Word stores the language hint alongside the font slots.  Generated drafts
+    previously set ``w:eastAsia=KaiTi`` but omitted ``w:lang``; LibreOffice
+    could then classify mixed Han/Latin runs as Latin-only while exporting a
+    PDF, producing empty CJK glyph boxes.  This patch only touches XML
+    language metadata and leaves text/layout/media unchanged.
+    """
+
+    changed = 0
+
+    def patch(match: re.Match[bytes]) -> bytes:
+        nonlocal changed
+        block = match.group(0)
+        if b"<w:lang" in block:
+            # Keep any existing language choices but ensure East Asian script
+            # explicitly uses Simplified Chinese.  Preserve quote style.
+            lang_match = re.search(rb"<w:lang\b[^>]*?/?>", block)
+            if not lang_match:
+                return block
+            tag = lang_match.group(0)
+            next_tag, did = replace_attr(tag, "w:eastAsia", "zh-CN")
+            changed += int(did)
+            # If no default language was provided, add zh-CN without
+            # overwriting an existing Latin language setting.
+            if not re.search(rb"\bw:val\s*=", next_tag):
+                next_tag, did = replace_attr(next_tag, "w:val", "zh-CN")
+                changed += int(did)
+            return block[:lang_match.start()] + next_tag + block[lang_match.end():]
+        insert_at = block.rfind(b"</w:rPr>")
+        if insert_at < 0:
+            return block
+        lang_tag = b'<w:lang w:val="zh-CN" w:eastAsia="zh-CN"/>'
+        changed += 1
+        return block[:insert_at] + lang_tag + block[insert_at:]
+
+    return DOCX_RPR_BLOCK_RE.sub(patch, data), changed
+
+
 def normalize_pptx_xml(data: bytes) -> tuple[bytes, int]:
     """Normalize DrawingML font declarations in one PowerPoint XML part."""
 
@@ -157,6 +198,9 @@ def normalize_archive(input_path: Path, output_path: Path) -> dict[str, object]:
             if info.filename.endswith(".xml"):
                 if input_path.suffix.lower() == ".docx" and info.filename.startswith("word/"):
                     next_data, part_changes = normalize_docx_xml(data)
+                    if info.filename.endswith(".xml"):
+                        next_data, language_changes = normalize_docx_language(next_data)
+                        part_changes += language_changes
                     if info.filename == "word/fontTable.xml":
                         next_data, table_changes = normalize_docx_font_table(next_data)
                         part_changes += table_changes

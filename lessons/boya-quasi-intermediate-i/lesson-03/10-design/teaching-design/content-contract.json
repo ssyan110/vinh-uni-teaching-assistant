@@ -1,0 +1,79 @@
+{
+  "schema_version": "boya-lesson-content-contract-v1",
+  "status": "pbi_draft_source_locked_boundary_pending_adam",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-03",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_id": "lesson-03",
+  "title": "我对学中文越来越有兴趣",
+  "content_authority": {
+    "source": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/canonical-source.json",
+    "source_sha256_at_draft": "821f8009e7ec2b53d9f38b7adcb2421f0012c4730b61cc8db6a08bf2c59c5aa1",
+    "exercise_contract": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/listening-exercise-contract.json",
+    "images": "lessons/boya-quasi-intermediate-i/lesson-03/10-design/assets/image-manifest.json",
+    "rule": "不改写教材题目、课文、词语、常用表达或开放任务；开放题不生成唯一答案。"
+  },
+  "can_do": {
+    "interpretive": [
+      "我能听懂三段短文的主旨和关键细节：家庭生活、选择中文课、中文课堂体验。",
+      "我能根据听力证据判断12个句子正误，并从三组图片中辨认10个词语。",
+      "我能用表格整理三段短文的信息，并指出李大为兴趣变化的证据。"
+    ],
+    "interpersonal": [
+      "我能和同学互相提问、回答和确认，说明人物经历、选择原因和学习困难。",
+      "我能在听不懂时请同伴重复，并用‘但是／可是、于是、越来越、互相’等已学表达接续对话。"
+    ],
+    "presentational": [
+      "我能用6–8个句子介绍李大为的家庭生活、选修中文的原因或中文课体验（不少于60字）。",
+      "我能在小组中先发言、补充并作总结；最后能联系自己的经历说8–10个句子（不少于80字）。"
+    ],
+    "evidence_policy": "Can-Do 为教学设计草案，须由 Adam 确认线上／实体边界与正式课时后才可锁定。"
+  },
+  "language_targets": {
+    "vocabulary": ["兴趣", "古老肉", "西红柿炒鸡蛋", "暑假", "招待", "聊天儿", "转学", "另外", "互相", "有趣", "声调", "重复", "接触", "帮忙", "记得", "例如", "中国通", "神秘", "开（课）", "总是", "更", "于是", "选修"],
+    "proper_nouns": ["德语", "拉丁语"],
+    "common_expressions": {
+      "family": ["每＋量词", "帮／忙", "……什么的", "……（的）时候", "记得"],
+      "study": ["可以……也可以……", "另（外）", "更（1）", "动词＋得（1）", "但是", "于是"],
+      "class": ["更（2）", "互相", "遍"]
+    },
+    "just_in_time_policy": "先做听说任务，再针对学生实际出现的高影响问题进行不超过5分钟的语言修补；不做逐词讲解。"
+  },
+  "exercise_coverage": {
+    "listening_contract_rows": "10-design/teaching-design/exercise-coverage.csv",
+    "required_audio": ["3-1", "3-2", "3-3", "3-4", "3-5", "3-6"],
+    "closed_answer_policy": "3-2与3-3仅使用答案 PDF 已核对答案；其余简答、比较、填表、总结和拓展均为开放产出。",
+    "comprehensive": ["comprehensive_1", "comprehensive_2", "comprehensive_3"]
+  },
+  "image_policy": {
+    "manifest": "lessons/boya-quasi-intermediate-i/lesson-03/10-design/assets/image-manifest.json",
+    "approved_scope": "Adam 已批准现有来源与图片；素材仍为10-design候选，进入PPT前须通过visual storyboard与PPT gate。",
+    "asset_ids": ["L03-V01", "L03-V02", "L03-V03", "L03-V04", "L03-V05", "L03-V06", "L03-V07", "L03-V08", "L03-V09", "L03-V10", "L03-V11", "L03-V12", "L03-V13", "L03-V14", "L03-V15", "L03-V16", "L03-V17", "L03-V18", "L03-V19", "L03-V20", "L03-V21", "L03-V22", "L03-V23", "L03-V24", "L03-V25", "L03-CONTEXT-CHINESE-NEW-YEAR", "L03-CONTEXT-TRANSFER-CHOICE", "L03-CONTEXT-CHINESE-CLASS"],
+    "pending_choice_assets": ["L03-E03-2-FOOD-B", "L03-E03-2-STUDY-A", "L03-E03-2-STUDY-B", "L03-E03-2-STUDY-C", "L03-E03-2-LIFE-D"],
+    "divider": "复用共享 divider，不生成新 divider。"
+  },
+  "online_face_boundary_proposal": {
+    "status": "pending_adam_confirmation",
+    "principle": "线上约三分之二、实体约三分之一仅为内容配置估计；线上不折抵实体课时，正式实体课时待课表确认。",
+    "online_candidate": [
+      "课名、全部23个词语与2个专名的预习识别；音频3-1、3-2及词语选择记录。",
+      "三段短文全文与音频3-4、3-5、3-6：学生先听、标关键词、完成第一遍和第二遍问题。",
+      "三段短文的比较文本、家庭／学习／课堂常用表达的预习例句；学生提交个人问题。"
+    ],
+    "face_to_face_candidate": [
+      "音频3-3判断题核对与证据说明；短文听后互问、追问、请重复和修补理解。",
+      "三段短文的介绍、分组补充、总结及综合练习填表和小组口语任务。",
+      "拓展练习：联系自己的学中文经历，完成成段口语并获得同伴反馈、重做。"
+    ],
+    "confirmation_needed": ["线上与实体 PPT 的具体页边界", "本课正式实体课时与分次安排", "哪些口语产出需要独立预习卡或活动卡"]
+  },
+  "production_gates": {
+    "source_review": "passed_source_and_images_approved_2026-08-29; audio_semantic_playback_pending",
+    "pbi_design": "draft_this_file; Adam boundary and hours approval pending",
+    "teacher_manual": "not_started",
+    "student_materials": "not_started",
+    "ppt_storyboard": "blocked_until_boundary_confirmation",
+    "visual_storyboard": "not_started",
+    "pptx": "not_started",
+    "qa_release": "blocked"
+  }
+}

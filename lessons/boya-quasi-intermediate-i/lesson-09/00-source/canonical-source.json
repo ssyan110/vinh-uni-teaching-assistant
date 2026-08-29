@@ -1,0 +1,285 @@
+{
+  "lesson_key": "boya-quasi-intermediate-i:lesson-09",
+  "schema_version": "quasi-intermediate-source-audit-v1.0",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_number": 9,
+  "lesson_id": "lesson-09",
+  "title": "北方菜和南方菜",
+  "title_source": "主教材 PDF 第90页（印刷 P77）课名页视觉核对",
+  "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+  "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+  "page_map": {
+    "printed_pages": [77, 86],
+    "pdf_pages": [90, 99],
+    "answer_pdf_pages": [24, 25],
+    "mapping_status": "visual_verified_pdf_offset_plus_13; inventory_answer_page_labels_retained",
+    "answer_visual_locator": {
+      "inventory_answer_pdf_pages": [24, 25],
+      "rendered_internal_pages": [25, 26],
+      "rendered_printed_labels": [22, 23],
+      "status": "pending_adam_confirmation_of_answer_pdf_page_numbering"
+    }
+  },
+  "qr_evidence": {
+    "pdf_page": 90,
+    "qr_url": "http://qr31.cn/IloNOS",
+    "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-09-pdf-page-090.png",
+    "landing_page": "https://biz.cli.im/site/IloNOS?qrurl=http://qr31.cn/IloNOS&gtype=2&key=995d2170976559ed387829f37eb237b28eec029042",
+    "decode_status": "source_inventory_verified",
+    "landing_audio_labels": ["9-1", "9-2", "9-3", "9-4", "9-5", "9-6"]
+  },
+  "audio_map": [
+    {
+      "label": "9-1", "coding": "JP1539815",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FiocWTYN33Xkat-AB-7mCcCi-UVI",
+      "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-1.mp3",
+      "content_type": "audio/mpeg", "bytes": 819190,
+      "sha256": "8322ba07d5f22db4c2a9f9b0f4cda6bda9e29db8b06871c77268e704b9a77320",
+      "download_status": "passed", "decode_status": "passed", "duration_seconds": 50.887,
+      "technical_status": "passed", "semantic_status": "pending_teacher_playback", "playback_status": "pending_teacher_playback"
+    },
+    {
+      "label": "9-2", "coding": "AJ1783222",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FkUKsmZjlQxRjUW2E1SCDJycGAE_",
+      "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-2.mp3",
+      "content_type": "audio/mpeg", "bytes": 434250,
+      "sha256": "39d304b722d8b382e41ff40467aa157c854f2a3b02d7cd781703f6259a02d292",
+      "download_status": "passed", "decode_status": "passed", "duration_seconds": 26.828,
+      "technical_status": "passed", "semantic_status": "pending_teacher_playback", "playback_status": "pending_teacher_playback"
+    },
+    {
+      "label": "9-3", "coding": "GO1783223",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FplPzJNtiMTKVqriNR1XI4dawTaO",
+      "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-3.mp3",
+      "content_type": "audio/mpeg", "bytes": 1074145,
+      "sha256": "68a1dc11366ed1c6d4949de1f76edf01e8f361408c0350eebdf6a9448b698fc2",
+      "download_status": "passed", "decode_status": "passed", "duration_seconds": 66.821,
+      "technical_status": "passed", "semantic_status": "pending_teacher_playback", "playback_status": "pending_teacher_playback"
+    },
+    {
+      "label": "9-4", "coding": "QU1783224",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FsiUpkVRHilvVBUFc0CdchBN34s0",
+      "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-4.mp3",
+      "content_type": "audio/mpeg", "bytes": 1106746,
+      "sha256": "9e5fbe68debdfe0fbaec36fd4264b14b6ed2bd9b930805a19d339d66961c234c",
+      "download_status": "passed", "decode_status": "passed", "duration_seconds": 68.859,
+      "technical_status": "passed", "semantic_status": "pending_teacher_playback", "playback_status": "pending_teacher_playback"
+    },
+    {
+      "label": "9-5", "coding": "AE1783225",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FtFH9Y9G406dOZC0Me07nMT4RsHZ",
+      "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-5.mp3",
+      "content_type": "audio/mpeg", "bytes": 1013959,
+      "sha256": "4cda86d58af50ca4ecd5dca46ec712537ae0c0d6545c41d3bc14355a97f46213",
+      "download_status": "passed", "decode_status": "passed", "duration_seconds": 63.06,
+      "technical_status": "passed", "semantic_status": "pending_teacher_playback", "playback_status": "pending_teacher_playback"
+    },
+    {
+      "label": "9-6", "coding": "AG1783227",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fhq-iAZIOoP9lAlwN7qAmAeMH02M",
+      "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-6.mp3",
+      "content_type": "audio/mpeg", "bytes": 874779,
+      "sha256": "e30f25b5a404d9f19e0c482181ed56a0fe62e49a144ea6bd86cf222f7c989ee7",
+      "download_status": "passed", "decode_status": "passed", "duration_seconds": 54.361,
+      "technical_status": "passed", "semantic_status": "pending_teacher_playback", "playback_status": "pending_teacher_playback"
+    }
+  ],
+  "content_inventory": {
+    "vocabulary_count": 27,
+    "proper_noun_count": 0,
+    "vocabulary_comprehension_group_count": 1,
+    "vocabulary_comprehension_item_count": 7,
+    "listening_sentence_item_count": 10,
+    "texts_dialogues_count": 3,
+    "grammar_pattern_count": 21,
+    "listening_exercise_group_count": 6,
+    "comprehensive_exercise_count": 3,
+    "exercise_count": 59,
+    "status": "visual_source_snapshot_pending_adam_approval"
+  },
+  "answer_policy": "仅记录参考答案 PDF 中可核对的词语选择／判断答案与听力文本；开放式口语、表格和拓展题不补写唯一标准答案。",
+  "review": {
+    "status": "source_audit_in_progress",
+    "approved": false,
+    "approved_by": [],
+    "approved_at": null,
+    "blockers": [
+      "六段音频文件存在、bytes、SHA-256、ffprobe 时长和解码已核对；教师逐段播放、语义听核和课堂设备播放尚未完成。",
+      "扫描教材 PDF 无可用文字层；最终来源批准需由 Adam 对视觉转录、教材页码和答案证据确认。",
+      "source-inventory 的答案 PDF 页码字段与本次视觉渲染的印刷页脚存在偏移（见 page_map.answer_visual_locator），需确认编号口径。",
+      "开放式口语、综合表格与拓展练习没有唯一标准答案，不补写答案。"
+    ],
+    "approval_basis": [
+      "主教材 PDF 第90–99页（印刷 P77–P86）逐页视觉核对",
+      "答案 PDF 相关页（inventory 页码 24–25；视觉渲染内部页 25–26，印刷页脚 P22–P23）题目答案与听力文本核对",
+      "来源总盘点第九课 QR、音频 bytes、hash、时长和解码记录"
+    ]
+  },
+  "visual_page_inventory": [
+    {"pdf_page":90,"printed_page":77,"sections":["课名页","词语（1–17）","音频9-1"]},
+    {"pdf_page":91,"printed_page":78,"sections":["词语（18–27）","词语理解（音频9-2，图片A–G）"]},
+    {"pdf_page":92,"printed_page":79,"sections":["词语理解填空（7题）","听说句子（音频9-3，判断10题）"]},
+    {"pdf_page":93,"printed_page":80,"sections":["听说短文一《北京人常吃什么》（音频9-4，第一至三项）"]},
+    {"pdf_page":94,"printed_page":81,"sections":["短文一比较段","常用词语和表达：谈论习惯与爱好"]},
+    {"pdf_page":95,"printed_page":82,"sections":["听说短文二《北方人不爱喝汤吗》（音频9-5，第一至四项）"]},
+    {"pdf_page":96,"printed_page":83,"sections":["常用词语和表达：谈看法和建议","听说短文三《南方人爱喝早茶，爱吃大排档》（音频9-6，第一项）"]},
+    {"pdf_page":97,"printed_page":84,"sections":["短文三第二至四项","常用词语和表达：谈习惯和爱好"]},
+    {"pdf_page":98,"printed_page":85,"sections":["常用词语和表达续表","综合练习：根据三段短文填表、说一说"]},
+    {"pdf_page":99,"printed_page":86,"sections":["综合练习说一说要求","拓展练习"]}
+  ],
+  "sections": [
+    {
+      "id": "vocabulary", "printed_pages": [77, 78], "audio": "9-1",
+      "entries": [
+        {"no":1,"word":"土豆","pinyin":"tǔdòu","pos":"名","gloss":"potato","starred":true},
+        {"no":2,"word":"蔬菜","pinyin":"shūcài","pos":"名","gloss":"vegetable"},
+        {"no":3,"word":"早餐","pinyin":"zǎocān","pos":"名","gloss":"dim sum"},
+        {"no":4,"word":"凉拌","pinyin":"liángbàn","pos":"动","gloss":"cold tossed"},
+        {"no":5,"word":"青菜","pinyin":"qīngcài","pos":"名","gloss":"green vegetable"},
+        {"no":6,"word":"酸辣汤","pinyin":"suānlàtāng","pos":"名","gloss":"hot and sour soup"},
+        {"no":7,"word":"涮","pinyin":"shuàn","pos":"动","gloss":"to boil instantly","starred":true},
+        {"no":8,"word":"口味","pinyin":"kǒuwèi","pos":"名","gloss":"taste","starred":true},
+        {"no":9,"word":"渐渐","pinyin":"jiànjiàn","pos":"副","gloss":"gradually"},
+        {"no":10,"word":"黄瓜","pinyin":"huángguā","pos":"名","gloss":"cucumber"},
+        {"no":11,"word":"炖","pinyin":"dùn","pos":"动","gloss":"to stew","starred":true},
+        {"no":12,"word":"夜宵","pinyin":"yèxiāo","pos":"名","gloss":"late-night snack"},
+        {"no":13,"word":"大排档","pinyin":"dàpáidàng","pos":"名","gloss":"food stalls","starred":true},
+        {"no":14,"word":"聚会","pinyin":"jùhuì","pos":"动","gloss":"to get together"},
+        {"no":15,"word":"聚餐","pinyin":"jùcān","pos":"动","gloss":"to have a dinner party","starred":true},
+        {"no":16,"word":"休闲","pinyin":"xiūxián","pos":"动","gloss":"to recreate"},
+        {"no":17,"word":"豆角","pinyin":"dòujiǎo","pos":"名","gloss":"french bean"},
+        {"no":18,"word":"不光","pinyin":"bùguāng","pos":"连","gloss":"not only"},
+        {"no":19,"word":"取代","pinyin":"qǔdài","pos":"动","gloss":"to replace"},
+        {"no":20,"word":"季节","pinyin":"jìjié","pos":"名","gloss":"season"},
+        {"no":21,"word":"种类","pinyin":"zhǒnglèi","pos":"名","gloss":"kind; type"},
+        {"no":22,"word":"普遍","pinyin":"pǔbiàn","pos":"形","gloss":"common; universal"},
+        {"no":23,"word":"年轻","pinyin":"niánqīng","pos":"形","gloss":"young"},
+        {"no":24,"word":"一般","pinyin":"yìbān","pos":"形","gloss":"usually"},
+        {"no":25,"word":"数量","pinyin":"shùliàng","pos":"名","gloss":"amount; quantity"},
+        {"no":26,"word":"增加","pinyin":"zēngjiā","pos":"动","gloss":"to increase"},
+        {"no":27,"word":"方式","pinyin":"fāngshì","pos":"名","gloss":"method; style","starred":true}
+      ],
+      "source_status": "visually_verified_pending_adam_approval"
+    },
+    {
+      "id":"vocabulary_comprehension", "printed_pages":[78,79], "audio":"9-2",
+      "instruction":"听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+      "groups":[{"topic":"饮食词语（图片A–G）","words":["土豆","蔬菜","早餐","凉拌西红柿","青菜","酸辣汤","涮羊肉"],"answer":["1.C","2.B","3.A","4.E","5.D","6.F","7.G"]}],
+      "exercises":{"items":["土豆","蔬菜","早餐","凉拌西红柿","青菜","酸辣汤","涮羊肉"]},
+      "answer_status":"answers_checked_against_answer_pdf"
+    },
+    {
+      "id":"listening_sentences", "printed_pages":[79], "audio_tracks":["9-3"],
+      "exercises":{"exercise_9_3":{"heading_verbatim":"一、听句子，判断对错","items":[
+        {"no":1,"text":"大家喜欢的味道不一样。","answer":"对"},
+        {"no":2,"text":"朴大宇每天都和中国人一起上课。","answer":"错"},
+        {"no":3,"text":"王红的习惯和以前不一样了。","answer":"对"},
+        {"no":4,"text":"现在大家不常出去吃饭了。","answer":"错"},
+        {"no":5,"text":"小陈没做热菜。","answer":"错"},
+        {"no":6,"text":"土豆、黄瓜是大家喜欢吃的。","answer":"错"},
+        {"no":7,"text":"他们现在吃晚饭。","answer":"错"},
+        {"no":8,"text":"南方在街上吃饭的地方很多，菜也很好吃。","answer":"对"},
+        {"no":9,"text":"小张要开会。","answer":"错"},
+        {"no":10,"text":"人们有空儿的时候喜欢一起吃饭。","answer":"对"}
+      ]}},
+      "answer_status":"answers_checked_against_answer_pdf"
+    },
+    {
+      "id":"short_text_1", "printed_pages":[80,81], "audio":"9-4", "title":"北京人常吃什么",
+      "text":"小陈是广东人，她18岁来北京上大学，大学毕业后留在北京工作，接触的北方菜多了，对北方菜越来越适应，她自己吃饭的口味也有了变化。北京人喜欢吃西红柿、茄子、豆角、黄瓜、白菜、土豆，但是吃绿叶菜不太多。夏天，北京人爱吃凉拌黄瓜、凉拌西红柿、凉面、炸酱面、茄子豆角面。到了冬天，北京人喜欢吃炖菜，比如白菜炖豆腐、牛肉炖土豆什么的。当然，涮羊肉也很受欢迎。现在，北京人不光涮羊肉，还涮牛肉片、鱼片、蔬菜什么的。可以说，各种各样的肉和菜都可以放进火锅里涮，但羊肉片是无法被取代的。",
+      "text_source":"答案 PDF 听力文本（视觉转录，语义待播放核对）",
+      "exercises":{
+        "first_listen":["小陈是哪儿的人？","小陈是什么时候来北京的？","北京人不喜欢吃什么菜？"],
+        "second_listen":["北京人夏天喜欢吃哪些菜？（凉拌）","北京人冬天喜欢吃哪些菜？（炖）","北京人还喜欢吃什么菜？（涮）"],
+        "present":"说说北京人喜欢吃什么菜。要求：说6–8句、不少于60字，使用词语和常用表达。词语参考：绿叶菜、土豆、豆角、西红柿、夏天、冬天、凉拌、炖、涮、取代；常用表达参考：不光。",
+        "compare":"北京人吃绿叶菜不太多。夏天常吃凉拌菜，比如凉拌黄瓜、西红柿。冬天吃炖菜，比如白菜炖豆腐。北京人还特别喜欢吃涮羊肉。现在，北京人不光涮羊肉，也涮鱼肉、牛肉和蔬菜什么的。"
+      },
+      "exercise_metadata":{
+        "first_listen":{"heading_verbatim":"（一）听第一遍，简单回答问题","textbook_printed_pages":[80],"audio_tracks":["9-4"]},
+        "second_listen":{"heading_verbatim":"（二）听第二遍，用括号中的词语说出三个句子，不少于20字","textbook_printed_pages":[80],"audio_tracks":["9-4"]}
+      }
+    },
+    {
+      "id":"common_expressions_habits_preferences_1", "printed_pages":[81], "topic":"谈论习惯与爱好",
+      "items":[
+        {"expression":"也","examples":["在北京的时间长了，认识的人多了，生活也越来越有意思了。","和中国人聊天儿，开始的时候听不懂，也说不出什么，几个月过去了，能听懂的越来越多，和中国人聊天儿也不那么难了。"]},
+        {"expression":"什么的","examples":["大鸟的爱好很多，弹琴、看话剧什么的，她都喜欢。","小张爱运动，游泳、打球什么的都会。"]},
+        {"expression":"不光……还……","examples":["常和小张一起爬山的，不光有他的同学，还有他的同事。","李大为不光爱吃中国菜，还会做几个中国菜。"]},
+        {"expression":"当然","examples":["小陈觉得做北方菜花时间少，忙的时候她就常做北方菜。当然，如果有时间，她还是喜欢炖点儿汤。","朴大宇已经适应了北京的生活，中文也有了一些进步。当然，他有时候也很想家，想妈妈做的菜。"]},
+        {"expression":"可以说","examples":["来客人吃饺子，过春节也吃饺子，可以说，饺子对北方人来说是一种很重要的食品。","朴大宇第一次来中国，看到街上有很多饭馆儿，每次去饭馆儿吃饭，里面的客人都很多。他想，要是来中国开饭馆儿，一定能赚很多钱。所以，朴大宇在大学选了中文。可以说，他学中文是为了来中国做生意。"]}
+      ],
+      "source_status":"examples_visually_verified"
+    },
+    {
+      "id":"short_text_2", "printed_pages":[82], "audio":"9-5", "title":"北方人不爱喝汤吗",
+      "text":"小陈在家的时候，她妈妈只要有空儿，就给她做各种各样的汤。不同的季节喝的汤也不一样，比如，天气热的时候，冬瓜汤喝起来很舒服。妈妈说多喝汤对身体有好处。她生病的时候，妈妈也会给她炖汤，妈妈说，喝汤可以让她的病快一点儿好。来北京以后，小陈发现北方人不是每顿饭都喝汤，而且汤的种类不多。人们在家里常做的有西红柿鸡蛋汤、冬瓜丸子汤、酸辣汤，而且不像广东人那样，花好几个小时炖汤。学校食堂卖得最多的也是西红柿鸡蛋汤、黄瓜汤。",
+      "text_source":"答案 PDF 听力文本（视觉转录，语义待播放核对）",
+      "exercises":{
+        "first_listen":["小陈在家的时候，她妈妈常给她做什么？","北京人每顿饭都喝汤吗？","小陈学校的食堂常卖什么汤？"],
+        "second_listen":["妈妈觉得喝汤怎么样？（有好处）","小陈生病的时候，她妈妈为什么给她炖汤？（快一点儿）","广东人做汤和北京人有什么不同？（种类、时间）"],
+        "present":"说说北方人和广东人有什么不同。要求：说6–8句、不少于60字；词语参考：季节、不同、种类、西红柿、酸辣汤、冬瓜丸子、炖；常用表达参考：而且、对……有好处。",
+        "compare":"北方人做的汤，种类不多，常做的几种汤是西红柿鸡蛋汤、酸辣汤、冬瓜丸子汤。广东人做的汤种类就多，而且季节不同，汤的种类也不相同。如果一个人生病了，家人也会炖一些对病人身体有好处的汤。不仅如此，广东人炖汤往往要花上几个小时。"
+      },
+      "exercise_metadata":{
+        "first_listen":{"heading_verbatim":"（一）听第一遍，简单回答问题","textbook_printed_pages":[82],"audio_tracks":["9-5"]},
+        "second_listen":{"heading_verbatim":"（二）听第二遍，用括号中的词语说出三个句子，不少于20字","textbook_printed_pages":[82],"audio_tracks":["9-5"]}
+      }
+    },
+    {
+      "id":"common_expressions_views_suggestions", "printed_pages":[83], "topic":"谈看法和建议",
+      "items":[
+        {"expression":"只要……就……","examples":["只要多花点儿时间，炖出来的汤就好喝。","只要早一点儿起床，就能吃上早饭。"]},
+        {"expression":"各种各样","examples":["图书馆有各种各样的中文书，朴大宇很喜欢去看。","李大为在餐馆儿打工，每天接触各种各样的人。"]},
+        {"expression":"动词＋起来（2）","examples":["炸酱面做起来不难，吃起来也很好吃。","这首歌很好听，学起来也挺容易。"]},
+        {"expression":"对……（没）有好处（3）","examples":["晚饭少吃一点儿，对身体有好处。","多听多说，对练习中文发音有好处。"]},
+        {"expression":"形容词＋一点儿","examples":["今天考试，李大为想早一点儿去学校。","时间不早了，我们快一点儿走吧。"]},
+        {"expression":"而且","examples":["小陈觉得北方菜也很好吃，而且做起来容易一些。","丽丽现在骑车去公司，比坐公共汽车方便，而且可以锻炼身体。"]}
+      ],
+      "source_status":"examples_visually_verified"
+    },
+    {
+      "id":"short_text_3", "printed_pages":[83,84], "audio":"9-6", "title":"南方人爱喝早茶，爱吃大排档",
+      "text":"刚来北京上学的时候，小陈发现，北方人不怎么吃夜宵，虽说有小吃一条街，但是不像广州那样普遍，广州人半夜了还到街上吃大排档。四年过去了，北京人，特别是年轻人，晚上也喜欢去逛（guì）街，后海吃夜宵。在广州，亲戚朋友聚会，常常是约好到酒楼喝早茶，点一壶茶，吃上几样点心，特别舒服。北京人聚餐一般是吃午餐或晚餐，不过，随着在北京的广东餐馆儿数量的增加，周末“喝早茶”渐渐成了北京人，特别是年轻人的一种休闲方式。",
+      "text_source":"答案 PDF 听力文本（视觉转录；‘逛’后注音及‘后海’前动词按扫描图保留，待语义播放核对）",
+      "exercises":{
+        "first_listen":["小陈刚来北京的时候，有什么发现？","现在有没有变化？","北京人一般什么时候聚餐？"],
+        "second_listen":["广东人有什么习惯？（大排档）","广东人和亲友什么时候聚餐？吃什么？（点心）","北京人喝早茶吗？（随着）"],
+        "present":"说说北京人和广东人吃饭的习惯有什么不同。要求：说6–8句、不少于60字；词语参考：夜宵、早茶、聚餐、大排档、休闲方式、增加；常用表达参考：随着、不像……那样。",
+        "compare":"以前，北京人不像广东人那样爱吃夜宵，而广东人晚上常常吃大排档。现在的北京年轻人晚上也去逛街，之后吃夜宵。广东人常约亲友喝早茶，广东人聚餐一般选在中午或晚上。现在，随着广东餐馆儿的增多，喝早茶也成了北京人的一种休闲方式。"
+      },
+      "exercise_metadata":{
+        "first_listen":{"heading_verbatim":"（一）听第一遍，简单回答问题","textbook_printed_pages":[83],"audio_tracks":["9-6"]},
+        "second_listen":{"heading_verbatim":"（二）听第二遍，用括号中的词语说出三个句子，不少于20字","textbook_printed_pages":[84],"audio_tracks":["9-6"]}
+      }
+    },
+    {
+      "id":"common_expressions_habits_preferences_2", "printed_pages":[84,85], "topic":"谈习惯和爱好",
+      "items":[
+        {"expression":"刚……的时候","examples":["刚来中国的时候，朴大宇不习惯北京的天气。","刚进合唱团的时候，大鸟觉得记歌词特别难。"]},
+        {"expression":"不怎么","examples":["朴大宇觉得看懂中文不怎么难，可是听懂就不容易了。","大鸟会弹钢琴，也爱听音乐，可是来中国以前不怎么喜欢唱歌。"]},
+        {"expression":"特别是","examples":["李大为觉得学汉语不容易，特别是写汉字，更难。","北方人喜欢吃面食，特别是饺子和面条儿。"]},
+        {"expression":"一般","examples":["北方人早饭一般吃得比较多。","只要有时间，小张周末一般都去登山。"]},
+        {"expression":"随着","examples":["随着年龄的增长，李大为对汉语的兴趣越来越大。","随着收入的增加，去饭馆儿吃饭不再是新鲜事。","随着汉语水平的提高，朴大宇越来越想了解中国文化。"]}
+      ],
+      "source_status":"examples_visually_verified"
+    },
+    {
+      "id":"comprehensive_practice", "printed_pages":[85,86], "audio_tracks":["9-4","9-5","9-6"],
+      "items":[
+        {"id":"comprehensive_1","instruction":"请你根据听过的三段短文填表","table_headers":["人物类别","常吃什么","不常吃什么","有什么变化","常做什么","有什么特别的饮食习惯"],"answer_status":"open_table_teacher_check"},
+        {"id":"comprehensive_2","instruction":"小组活动：根据上面的表格和参考词语、常用表达，谈一谈：（1）北京人常吃什么；（2）南方人的特色饮食；（3）南方人和北方人的饮食习惯。要求：一名同学说8–10个句子，不少于80字；小组其他同学补充；最后由一名同学总结，说10–12个句子，不少于100字。","answer_status":"open_presentational_task"},
+        {"id":"comprehensive_3","instruction":"拓展练习：说一说：（1）你喜欢吃哪些菜；（2）在你们国家，有什么特别的节日食品；（3）你自己做饭不做饭，你一般在哪儿吃饭。要求使用这一课学过的词语和常用表达；说10–12句话，不少于100字。","answer_status":"open_presentational_task"}
+      ],
+      "source_status":"visually_verified_pending_adam_approval"
+    }
+  ],
+  "extraction_snapshot": {
+    "main_pdf_text_layer": "unavailable",
+    "visual_render_directory": "/tmp/boya-source-AHyKLM/main-090.png..main-099.png",
+    "answer_visual_render_directory": "/tmp/boya-source-AHyKLM/answer-25.png..answer-26.png",
+    "audio_technical_evidence": "source-inventory.json plus local MP3 bytes/hash/duration/decode",
+    "semantic_audio_status": "pending_teacher_playback",
+    "source_review_status": "pending_review"
+  }
+}

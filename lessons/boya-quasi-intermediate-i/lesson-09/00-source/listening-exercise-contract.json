@@ -1,0 +1,94 @@
+{
+  "schema_version": "boya-listening-exercise-contract-v1",
+  "lesson_id": "lesson-09",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "status": "draft",
+  "approved_by": [],
+  "approved_at": null,
+  "canonical_source": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json",
+    "sha256": "2284f4741b1f2393e9d036c9887b257e8dda87f36e38370473002d462484877d"
+  },
+  "source_evidence": [
+    {"path":"lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/source-pages-77-86-audit-draft.md","sha256":"3589fdf7417fc2945a69e0f0c1272ee2b35e8951e5ba245f26554b8ecd3e01a1","locator":"P77–P86 视觉页码、板块与九项 exercise-level 记录逐项来源"},
+    {"path":"lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/answer-pages-24-25-audit-draft.md","sha256":"d11a91b60fc30122a4c80aa7296720575c9f4b59a6022d1c27da28ac0a2b34b7","locator":"答案 PDF inventory P24–P25／视觉答案-25/26：封闭答案与听力文本"},
+    {"path":"lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/audio-technical-2026-08-28.md","sha256":"a2afb6ad3b764a44bd870d00d64c2a420bd183511b1cdbb6d4856f208b55dda7","locator":"9-1至9-6 technical audio integrity；semantic/playback pending"},
+    {"path":"textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf","sha256":"39899d0f400e187f57c16db821f8f4c207f936eae0e4fbfe3cab52c02bfea806","locator":"主教材 PDF 第90–99页（印刷 P77–P86）"},
+    {"path":"textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf","sha256":"3c21e1574b0187259769799d183eca78a60a515b5b7fce202eda9e9ade2c20b8","locator":"答案 PDF source-inventory 页码 P24–P25；视觉渲染答案-25/26"}
+  ],
+  "rules": {
+    "section_printed_pages_are_scope_only": true,
+    "heading_must_be_textbook_verbatim": true,
+    "audio_track_does_not_determine_slide_count": true,
+    "missing_metadata_blocks_generation": true,
+    "semantic_audio_review_status": "pending_teacher_playback"
+  },
+  "listening_exercises": [
+    {
+      "exercise_id":"text.vocabulary","section_id":"vocabulary","exercise_kind":"vocabulary_pronunciation","order":1,
+      "heading_verbatim":"词语",
+      "heading_source":{"path":"lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/source-pages-77-86-audit-draft.md","excerpt":"词语","locator":"P77–P78｜词语｜音频9-1"},
+      "locator":"sections.vocabulary.entries","page_scope":"section_page","textbook_printed_pages":[77,78],"audio_tracks":["9-1"],"item_count":27,
+      "coverage_refs":["vocabulary.entries[1..27]"],
+      "items_sha256":"1f6ce56645931f98734c332e6afa97d6a9b4dfaba061c098be64792697bb37fc","slide_policy":"one_slide_per_exercise","audio_status":"local_file_present_semantic_listening_pending"
+    },
+    {
+      "exercise_id":"text.vocabulary_comprehension","section_id":"vocabulary_comprehension","exercise_kind":"vocabulary_comprehension","order":2,
+      "heading_verbatim":"听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+      "heading_source":{"path":"lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/source-pages-77-86-audit-draft.md","excerpt":"听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读","locator":"P78–P79｜词语理解｜音频9-2"},
+      "locator":"sections.vocabulary_comprehension.groups[0]","page_scope":"exercise_page","textbook_printed_pages":[78,79],"audio_tracks":["9-2"],"item_count":7,
+      "coverage_refs":["vocabulary_comprehension.groups[0]"],
+      "items_sha256":"db42280f5367d66962ded0b88e9ce4120d93c08d6ce25d80028732d80770c018","slide_policy":"one_slide_per_exercise","audio_status":"local_file_present_semantic_listening_pending"
+    },
+    {
+      "exercise_id":"text.listening_sentences.exercise_9_3","section_id":"listening_sentences","exercise_kind":"true_false","order":3,
+      "heading_verbatim":"一、听句子，判断对错",
+      "heading_source":{"path":"lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/source-pages-77-86-audit-draft.md","excerpt":"一、听句子，判断对错","locator":"P79｜听说句子｜音频9-3"},
+      "locator":"sections.listening_sentences.exercises.exercise_9_3","page_scope":"exercise_page","textbook_printed_pages":[79],"audio_tracks":["9-3"],"item_count":10,
+      "coverage_refs":["listening_sentences.exercises.exercise_9_3.items[1..10]"],
+      "items_sha256":"d2e2bd5e56e06e2bbfbab3313a244664438396458f704e350b17b641bee89775","slide_policy":"one_slide_per_exercise","audio_status":"local_file_present_semantic_listening_pending"
+    },
+    {
+      "exercise_id":"text.short_text_1.exercise.first_listen","section_id":"short_text_1","exercise_kind":"first_listen","order":1,
+      "heading_verbatim":"（一）听第一遍，简单回答问题",
+      "heading_source":{"path":"lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/source-pages-77-86-audit-draft.md","excerpt":"（一）听第一遍，简单回答问题","locator":"P80｜短文一《北京人常吃什么》｜（一）"},
+      "locator":"exercises.first_listen","page_scope":"exercise_page","textbook_printed_pages":[80],"audio_tracks":["9-4"],"item_count":3,
+      "items_sha256":"593f5d096a71c5a7fefa432a5f0e9f78df6d686ab55269eb005cfc51719ce973","slide_policy":"one_slide_per_exercise"
+    },
+    {
+      "exercise_id":"text.short_text_1.exercise.second_listen","section_id":"short_text_1","exercise_kind":"second_listen","order":2,
+      "heading_verbatim":"（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+      "heading_source":{"path":"lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/source-pages-77-86-audit-draft.md","excerpt":"（二）听第二遍，用括号中的词语说出三个句子，不少于20字","locator":"P80｜短文一《北京人常吃什么》｜（二）"},
+      "locator":"exercises.second_listen","page_scope":"exercise_page","textbook_printed_pages":[80],"audio_tracks":["9-4"],"item_count":3,
+      "items_sha256":"31d2a6e352164130729bfe7fb5b5bd7b3d6810797bed4bc33118c70cef7c32eb","slide_policy":"one_slide_per_exercise"
+    },
+    {
+      "exercise_id":"text.short_text_2.exercise.first_listen","section_id":"short_text_2","exercise_kind":"first_listen","order":1,
+      "heading_verbatim":"（一）听第一遍，简单回答问题",
+      "heading_source":{"path":"lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/source-pages-77-86-audit-draft.md","excerpt":"（一）听第一遍，简单回答问题","locator":"P82｜短文二《北方人不爱喝汤吗》｜（一）"},
+      "locator":"exercises.first_listen","page_scope":"exercise_page","textbook_printed_pages":[82],"audio_tracks":["9-5"],"item_count":3,
+      "items_sha256":"c0ef6674268d3d315957b741aa831ff5b1e00739b1854d1b1b1055618c997b73","slide_policy":"one_slide_per_exercise"
+    },
+    {
+      "exercise_id":"text.short_text_2.exercise.second_listen","section_id":"short_text_2","exercise_kind":"second_listen","order":2,
+      "heading_verbatim":"（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+      "heading_source":{"path":"lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/source-pages-77-86-audit-draft.md","excerpt":"（二）听第二遍，用括号中的词语说出三个句子，不少于20字","locator":"P82｜短文二《北方人不爱喝汤吗》｜（二）"},
+      "locator":"exercises.second_listen","page_scope":"exercise_page","textbook_printed_pages":[82],"audio_tracks":["9-5"],"item_count":3,
+      "items_sha256":"fc5fa1a4b1761c57c1f5d3e32bb4e89ea8c40a3d1ce0ac2a46254591f35be1ba","slide_policy":"one_slide_per_exercise"
+    },
+    {
+      "exercise_id":"text.short_text_3.exercise.first_listen","section_id":"short_text_3","exercise_kind":"first_listen","order":1,
+      "heading_verbatim":"（一）听第一遍，简单回答问题",
+      "heading_source":{"path":"lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/source-pages-77-86-audit-draft.md","excerpt":"（一）听第一遍，简单回答问题","locator":"P83｜短文三《南方人爱喝早茶，爱吃大排档》｜（一）"},
+      "locator":"exercises.first_listen","page_scope":"exercise_page","textbook_printed_pages":[83],"audio_tracks":["9-6"],"item_count":3,
+      "items_sha256":"3ec2a7a273997c8b50bf2c3c48edd97b7cf1133fc7729b9c3d4ffe0679b93f11","slide_policy":"one_slide_per_exercise"
+    },
+    {
+      "exercise_id":"text.short_text_3.exercise.second_listen","section_id":"short_text_3","exercise_kind":"second_listen","order":2,
+      "heading_verbatim":"（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+      "heading_source":{"path":"lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/source-pages-77-86-audit-draft.md","excerpt":"（二）听第二遍，用括号中的词语说出三个句子，不少于20字","locator":"P84｜短文三《南方人爱喝早茶，爱吃大排档》｜（二）"},
+      "locator":"exercises.second_listen","page_scope":"exercise_page","textbook_printed_pages":[84],"audio_tracks":["9-6"],"item_count":3,
+      "items_sha256":"5d1695a0daaa5c5528c84aa4ec252245ff50ab928a7e3059b047a1a1a67f4e76","slide_policy":"one_slide_per_exercise"
+    }
+  ]
+}

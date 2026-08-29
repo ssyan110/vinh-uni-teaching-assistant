@@ -27,8 +27,33 @@ AUTHORITY_ROOT = PROJECT_ROOT / CONFIG["authority_root"]
 RELEASE_ROOT = PROJECT_ROOT / CONFIG["release_root"]
 MANIFEST_PATH = AUTHORITY_ROOT / "lesson-manifest.json"
 LATEST_PATH = RELEASE_ROOT / "latest-release.json"
-PACKAGE_NAME = "第一课-教学资料"
 RELEASE_ID_PATTERN = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,79}")
+
+
+def package_name() -> str:
+    """Build the canonical package folder from the authority lesson identity.
+
+    Existing historical packages keep their original names; only newly built
+    releases use the current lesson-<nn>-教材包 convention.
+    """
+    lesson_id = "lesson-01"
+    textbook_id = None
+    if MANIFEST_PATH.is_file():
+        try:
+            manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
+            lesson_id = str(manifest.get("lesson_id", lesson_id))
+            textbook_id = manifest.get("textbook_id")
+        except (OSError, json.JSONDecodeError):
+            pass
+    # Older test fixtures and historical authority snapshots predate the
+    # compound textbook identity. Preserve their legacy package folder; new
+    # lesson-key-scoped manifests use the canonical name below.
+    if not textbook_id:
+        return "第一课-教学资料"
+    match = re.fullmatch(r"lesson-(\d{2})", lesson_id)
+    if not match:
+        raise ValueError(f"authority manifest has invalid lesson_id: {lesson_id}")
+    return f"lesson-{match.group(1)}-教材包"
 
 
 def validate_release_id(value: str | None) -> str:
@@ -45,7 +70,7 @@ def validate_release_id(value: str | None) -> str:
 
 def release_paths(release_id: str) -> tuple[Path, Path, Path]:
     release_dir = RELEASE_ROOT / release_id
-    package_dir = release_dir / PACKAGE_NAME
+    package_dir = release_dir / package_name()
     zip_path = RELEASE_ROOT / f"{release_id}.zip"
     release_root = RELEASE_ROOT.resolve()
     for path in (release_dir.resolve(), package_dir.resolve(), zip_path.resolve()):

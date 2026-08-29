@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "system_id": "boya-classroom-materials",
+  "version": "2026-08-27",
+  "source": "scripts/lesson_pptx_master_template.js",
+  "purpose": "Shared visual and typography tokens for reusable Boya classroom materials.",
+  "fonts": {
+    "cjk": "KaiTi",
+    "latin": "Times New Roman",
+    "html_cjk_stack": "KaiTi, STKaiti, serif",
+    "html_latin_stack": "Times New Roman, serif",
+    "system_fonts_only": true
+  },
+  "colors": {
+    "paper": "FBF8F1",
+    "paperWarm": "FBF8F1",
+    "white": "FFFDF9",
+    "warmWhite": "FFFDF9",
+    "ink": "14282D",
+    "muted": "61736F",
+    "slate": "61736F",
+    "line": "D3D9D1",
+    "mint": "D8F0E9",
+    "mintDeep": "A9D8CB",
+    "teal": "3C8F86",
+    "tealSoft": "D8F0E9",
+    "lilac": "EEE9FF",
+    "purple": "8C78D7",
+    "yellow": "F6D36D",
+    "yellowSoft": "FFF1BE",
+    "coral": "EA927E",
+    "coralSoft": "F9DED4",
+    "blue": "DFECF5",
+    "blueSoft": "DFECF5",
+    "sand": "F1E5D1",
+    "shadow": "D8D2C7",
+    "greenText": "3C8F86",
+    "gray": "61736F"
+  },
+  "layout": {
+    "slide_ratio": "16:9",
+    "slide_width_in": 13.333,
+    "slide_height_in": 7.5,
+    "radius_in": 0.06,
+    "border_pt": 0.8,
+    "body_pt": 12,
+    "heading_1_pt": 16,
+    "heading_2_pt": 14,
+    "heading_3_pt": 12,
+    "ppt_body_pt": 22,
+    "ppt_min_visible_pt": 20,
+    "shadow_css": "0 12px 30px rgba(20,40,45,.08)"
+  },
+  "usage": {
+    "student_language": "简体中文",
+    "latin_rule": "越南文与其他拉丁字母文字使用 Times New Roman",
+    "cjk_rule": "中文汉字使用 KaiTi",
+    "medium_rule": "PPTX、DOCX、HTML 共用同一套 token；各格式只保留必要的版面差异"
+  }
+}

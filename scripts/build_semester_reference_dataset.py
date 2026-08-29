@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-"""Build a source-faithful reference dataset for the current Boya semester.
+"""Build the legacy reference dataset for 《中级冲刺篇 I》.
 
-The canonical inputs are the eight structured lesson JSON files.  The output is
-deliberately a derived reference artifact: it preserves source/review status and
-leaves teacher-enrichment fields blank when the source does not provide them.
+This script is intentionally scoped to ``boya-intermediate-i`` (the planned
+2027-fall/third-year offering).  It must not be used for the active
+``boya-quasi-intermediate-i`` 2026-fall course.  The canonical inputs are the
+eight structured lesson JSON files.  The output is a derived reference
+artifact: it preserves source/review status and leaves teacher-enrichment
+fields blank when the source does not provide them.
 """
 
 from __future__ import annotations

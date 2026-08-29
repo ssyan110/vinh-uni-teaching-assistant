@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { toSimplified } = require('./simplify_chinese');
+const designSystem = require('./boya_design_system');
 
 // Shared visual master for all future lesson PPTX files.
 // This is intentionally aligned with the approved Lesson 01 V4 visual system:
@@ -8,28 +9,9 @@ const { toSimplified } = require('./simplify_chinese');
 const projectRoot = path.resolve(__dirname, '..');
 const projectConfig = JSON.parse(fs.readFileSync(path.join(projectRoot, 'project.config.json'), 'utf8'));
 
-const CJK_FONT = projectConfig.font_policy?.cjk || 'KaiTi';
-const LATIN_FONT = projectConfig.font_policy?.latin || 'Times New Roman';
-
-const COLORS = {
-  paper: 'FBF8F1',
-  white: 'FFFDF9',
-  ink: '14282D',
-  muted: '61736F',
-  line: 'D3D9D1',
-  mint: 'D8F0E9',
-  mintDeep: 'A9D8CB',
-  teal: '3C8F86',
-  lilac: 'EEE9FF',
-  purple: '8C78D7',
-  yellow: 'F6D36D',
-  yellowSoft: 'FFF1BE',
-  coral: 'EA927E',
-  coralSoft: 'F9DED4',
-  blue: 'DFECF5',
-  sand: 'F1E5D1',
-  shadow: 'D8D2C7'
-};
+const CJK_FONT = designSystem.fonts.cjk;
+const LATIN_FONT = designSystem.fonts.latin;
+const COLORS = designSystem.colors;
 
 function simplify(value) {
   return toSimplified(String(value == null ? '' : value));
@@ -75,8 +57,9 @@ function addLine(slide, x, y, w, color = COLORS.line, pt = 0.7) {
   slide.addShape('line', { x, y, w, h: 0, line: { color, pt } });
 }
 
-function addHeader(slide, page, title = '') {
-  addText(slide, '第一课 · 中国人的姓名', 0.72, 0.26, 3.8, 0.24, { fontSize: 11, color: COLORS.muted, bold: true });
+function addHeader(slide, page, title = '', context = {}) {
+  const lessonLabel = clean(context.lessonLabel || context.headerLabel || '博雅汉语听说');
+  addText(slide, lessonLabel, 0.72, 0.26, context.headerWidth || 5.4, 0.24, { fontSize: 11, color: COLORS.muted, bold: true });
   addText(slide, String(page).padStart(2, '0'), 12.0, 0.26, 0.62, 0.24, { fontSize: 11, color: COLORS.muted, bold: true, align: 'right' });
   addLine(slide, 0.72, 0.66, 11.9, COLORS.line, 0.8);
   slide.addShape('rect', { x: 0.72, y: 0.64, w: 0.48, h: 0.04, fill: { color: COLORS.purple }, line: { color: COLORS.purple, transparency: 100 } });

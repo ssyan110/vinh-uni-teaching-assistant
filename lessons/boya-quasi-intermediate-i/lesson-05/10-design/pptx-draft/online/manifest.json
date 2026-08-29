@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-pptx-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-05",
+  "mode": "online",
+  "title": "第五课《我的音乐老师》在线预习",
+  "status": "draft_not_approved",
+  "builder_scope": "scripts/build_l23_pptx_drafts.js",
+  "draft_gate": "lesson-specific",
+  "source_sha256": "7311f648cfd3541b64ae8010457fa6d737c1aa3306ea23e9a3d8c63a9abef32c",
+  "layout_source": "boya-quasi-intermediate-i lesson-01 approved layout family",
+  "shared_layout_contract": "course/boya-online-layout-contract.json",
+  "fixed_structure": [
+    "cover",
+    "learning_flow",
+    "goals",
+    "vocabulary",
+    "practice_after_each_full_five",
+    "proper_nouns_if_present",
+    "short_text_divider_before_each_text",
+    "short_text_record",
+    "expressions_after_related_text",
+    "comprehensive_practice",
+    "fixed_three_slide_ending"
+  ],
+  "route_asset": "learning-route-user-supplied-transparent.png",
+  "vocabulary_practice_after_every": 5,
+  "vocabulary_extension_policy": "empty_until_explicitly_supplied",
+  "fixed_ending_titles": [
+    "我觉得很难的地方",
+    "课前检查",
+    "谢谢大家，我们课堂见。"
+  ],
+  "short_example_policy": "curated_short_sentences_max_24_hanzi_chars",
+  "short_text_policy": "textbook_reading_prompt_and_record_layout_no_full_text_copy",
+  "shared_assets": [
+    "lesson-01-cover-family-work-hobby.png",
+    "learning-route-user-supplied-transparent.png",
+    "divider-family.png",
+    "divider-work.png",
+    "divider-hobby.png",
+    "divider-comprehensive.png",
+    "symbolic-vocabulary.png",
+    "symbolic-listening.png",
+    "symbolic-sentence-pattern.png",
+    "oral-practice-divider.png",
+    "speaking-practice.png"
+  ],
+  "vocabulary_image_policy": "one_distinct_semantic_asset_per_vocabulary_item",
+  "vocabulary_image_count": 26,
+  "vocabulary_image_assets": [
+    {
+      "word": "合唱",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-01-hechang.png",
+      "status": "candidate"
+    },
+    {
+      "word": "迷",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-02-mi.png",
+      "status": "candidate"
+    },
+    {
+      "word": "吹",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-03-chui.png",
+      "status": "candidate"
+    },
+    {
+      "word": "笛子",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-04-dizi.png",
+      "status": "candidate"
+    },
+    {
+      "word": "乐器",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-05-leqi.png",
+      "status": "candidate"
+    },
+    {
+      "word": "享受",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-06-xiangshou.png",
+      "status": "candidate"
+    },
+    {
+      "word": "火",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-07-huo.png",
+      "status": "candidate"
+    },
+    {
+      "word": "有神",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-08-youshen.png",
+      "status": "candidate"
+    },
+    {
+      "word": "从小",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-09-congxiao.png",
+      "status": "candidate"
+    },
+    {
+      "word": "积极",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-10-jiji.png",
+      "status": "candidate"
+    },
+    {
+      "word": "深奥",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-11-shenao.png",
+      "status": "candidate"
+    },
+    {
+      "word": "中等",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-12-zhongdeng.png",
+      "status": "candidate"
+    },
+    {
+      "word": "个子",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-13-gezi.png",
+      "status": "candidate"
+    },
+    {
+      "word": "欣赏",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-14-xinshang.png",
+      "status": "candidate"
+    },
+    {
+      "word": "民族",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-15-minzu.png",
+      "status": "candidate"
+    },
+    {
+      "word": "鼓励",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-16-guli.png",
+      "status": "candidate"
+    },
+    {
+      "word": "耐心",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-17-naixin.png",
+      "status": "candidate"
+    },
+    {
+      "word": "亲切",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-18-qinqie.png",
+      "status": "candidate"
+    },
+    {
+      "word": "理论",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-19-lilun.png",
+      "status": "candidate"
+    },
+    {
+      "word": "影响",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-20-yingxiang.png",
+      "status": "candidate"
+    },
+    {
+      "word": "古典",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-21-gudian.png",
+      "status": "candidate"
+    },
+    {
+      "word": "着迷",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-22-zhaomi.png",
+      "status": "candidate"
+    },
+    {
+      "word": "乐曲",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-23-yuequ.png",
+      "status": "candidate"
+    },
+    {
+      "word": "感情",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-vocab-24-ganqing.png",
+      "status": "candidate"
+    },
+    {
+      "word": "《茉莉花》",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-proper-25-molihua.png",
+      "status": "candidate"
+    },
+    {
+      "word": "《康定情歌》",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/assets/l05-proper-26-kangdingqingge.png",
+      "status": "candidate"
+    }
+  ],
+  "slide_count": 71,
+  "audio_tracks_embedded": [
+    "5-1",
+    "5-2",
+    "5-3",
+    "5-4",
+    "5-5",
+    "5-6"
+  ],
+  "audio_playback_policy": "embedded_on_audio-summary-slides; PowerPoint playback QA remains pending for draft",
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/pptx-draft/online/lesson-05-在线预习.pptx",
+    "sha256": "d0d321d3fa5b45da3ac7d784035a5363f9e397104d7506b5c734191114bec409",
+    "bytes": 123546672
+  },
+  "generated_at": "2026-08-29T16:33:44.451Z"
+}

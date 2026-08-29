@@ -1,0 +1,26 @@
+{
+  "schema_version": "boya-lesson-audio-manifest-v1",
+  "lesson_id": "lesson-04",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_title": "在中国学汉语",
+  "recorded_at": "2026-08-28",
+  "provenance": {
+    "source_type": "publisher_qr_landing_page",
+    "qr_url": "http://qr31.cn/I9bLMV",
+    "landing_page": "https://biz.cli.im/site/I9bLMV?qrurl=http://qr31.cn/I9bLMV&gtype=2&key=c36f817489cc67e6287828f1f97c00a7fc43446948",
+    "landing_audio_labels": ["4-1", "4-2", "4-3", "4-4", "4-5", "4-6"],
+    "textbook_labels_seen": ["4-1", "4-2", "4-3", "4-4", "4-5", "4-6"],
+    "label_discrepancy": null
+  },
+  "technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/audit/audio-technical-2026-08-28.md",
+  "tracks": [
+    {"label":"4-1","coding":"JZ1539803","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fuj6EZ_93nW0avU3822yEY3rVqPd","path":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-1.mp3","scope":"词语（P32–P33）","bytes":824205,"sha256":"46f02a4c825b2c0e1d08d5a35496fa34453142ec0c8ad2514f9a0e02c3e26797","duration_seconds":51.2,"codec":"mp3","download_status":"passed_in_source_inventory","decode_status":"passed","semantic_status":"pending_teacher_playback"},
+    {"label":"4-2","coding":"KN1783197","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FmhgvlQy5pQj_wkq5NbGKsu8G2qJ","path":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-2.mp3","scope":"词语理解（P33）","bytes":530380,"sha256":"2ce4035b96a931c3192f135707d04190d772dcc69b04b69a2cdf29d4a14c0689","duration_seconds":32.836,"codec":"mp3","download_status":"passed_in_source_inventory","decode_status":"passed","semantic_status":"pending_teacher_playback"},
+    {"label":"4-3","coding":"EG1783198","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FlOJKyFFAWqTQLKN6tUQL0qnmF8z","path":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-3.mp3","scope":"听说句子（P34）","bytes":1525541,"sha256":"b7f2d459172de811c551557926474ef0318c7d2cffca4ecc7f69c81609bcd9d0","duration_seconds":95.033,"codec":"mp3","download_status":"passed_in_source_inventory","decode_status":"passed","semantic_status":"pending_teacher_playback"},
+    {"label":"4-4","coding":"AP1783199","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FmwmH05bvsxa4_bClt9MxdMRmKXR","path":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-4.mp3","scope":"短文一《对北京的印象》（P35–P36）","bytes":1125554,"sha256":"ea9f2e63b3cb0971d621c8ce5460a04ef1308547f5635514bde80846bcbe479e","duration_seconds":70.034,"codec":"mp3","download_status":"passed_in_source_inventory","decode_status":"passed","semantic_status":"pending_teacher_playback"},
+    {"label":"4-5","coding":"IT1783200","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FjGNrXScKTDec1d7-W2bz3pJIjgQ","path":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-5.mp3","scope":"短文二《学习内容》（P36–P37）","bytes":981776,"sha256":"76693000356a2b28cc1381e8a7e520943a3b2c178cd96a0f025f8ea2e1456083","duration_seconds":61.048,"codec":"mp3","download_status":"passed_in_source_inventory","decode_status":"passed","semantic_status":"pending_teacher_playback"},
+    {"label":"4-6","coding":"UW1783201","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FiNhTId2ChbKv-LTKOCMcRFFiPOS","path":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-6.mp3","scope":"短文三《在中国学汉语和在本国学汉语的异同》（P38–P39）","bytes":1359193,"sha256":"c3f757061c2f300f21a3b8d2222f5eda6b29d3ce30c9224c8ae47734c66a8f11","duration_seconds":84.637,"codec":"mp3","download_status":"passed_in_source_inventory","decode_status":"passed","semantic_status":"pending_teacher_playback"}
+  ],
+  "status": "technical_pass_semantic_pending",
+  "coverage_status": "all_six_tracks_mapped_to_source_sections"
+}

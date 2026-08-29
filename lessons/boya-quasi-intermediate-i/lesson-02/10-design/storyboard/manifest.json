@@ -1,0 +1,46 @@
+{
+  "schema_version": "ppt-preflight-v1",
+  "manifest_type": "lesson-ppt-preflight",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-02",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_id": "lesson-02",
+  "title": "王红的一天",
+  "status": "draft_authorized_by_adam_2026-08-29_with_blockers",
+  "candidate_page_blocks": 10,
+  "source_refs_csv": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/storyboard/lesson-02-source-refs.csv",
+  "preflight_report": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/storyboard/lesson-02-ppt-preflight.md",
+  "inputs": {
+    "canonical_source_sha256": "6dfb97de7500c888849dad2a5a1c93978542917d3a725a8aeafe53be16545fe3",
+    "audio_manifest_sha256": "b2700867ebefaa506cd15721c2591b74a0e16e18cf081cfa5e4070b501c17718",
+    "teaching_design_sha256": "3f03c5ca4f05cbfa43ec2889fb0fcf1b87b2bb1a2b54d5231df4f98c49ed0935",
+    "image_manifest_sha256": "3db73cd8965d1b4b54ab113476ec95ecb70001208455bc433337dba682743e06",
+    "visual_brief_sha256": "a159cc3fe784707f31c942c35c575523092a5f8111efc2cd3b8998946974ca04"
+  },
+  "assets": {
+    "physical_candidate_assets": 36,
+    "missing_physical_assets": 0,
+    "reuse_shared_divider": true,
+    "asset_entry_status": "candidate_pending_source_and_visual_review"
+  },
+  "gates": {
+    "source_approval": "pending_adam",
+    "online_face_boundary": "confirmed_by_adam_2026-08-29_same_structure_as_lesson_01",
+    "formal_contact_hours": "pending_adam",
+    "teacher_manual": "draft_only",
+    "support_materials": "draft_only",
+    "ppt_storyboard": "preflight_only",
+    "pptx": "draft_in_progress"
+  },
+  "blockers": [
+    "来源尚未批准；2-1至2-6语义听核待完成。",
+    "2-7是用户恢复音频，须保留来源说明并完成统一来源批准。",
+    "线上／实体边界与正式实体课时待Adam确认。",
+    "教师手册与配套材料仍为草案，不得进入approved或release。"
+  ],
+  "do_not_generate": [
+    "不要覆盖20-approved或40-release；草稿只能写入10-design/pptx-draft。",
+    "不要创建20-approved或40-release文件。",
+    "不要从另一教材或archive补充内容。",
+    "不要为开放题捏造唯一答案。"
+  ]
+}

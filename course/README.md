@@ -13,3 +13,5 @@ course/
 当前开课实例是 `2026-fall`，主教材为《博雅汉语听说：准中级加速篇 I》，已建立一份待来源批准与正式课表确认的学期规划草案。`2027-fall` 已登记为后续开课实例，主教材为《博雅汉语听说：中级冲刺篇 I》。两个开课实例的正式学期时数都须先完整理解对应教材的实际课数与内容，再分配各课实体课时并定稿。课时计算一律先按实体课节数；线上自学是学生自行安排的课外 self-paced study，不设固定分钟数，另列且不互相折抵。
 
 未来同一学期采用多本教材时，直接在 `offering.json` 的 `textbooks` 数组登记，不复制课程目录，也不把教材资料混入 `course/`。
+
+课次身份由 `course/lesson-registry.json` 统一登记，格式为 `<textbook_id>:<lesson_id>`。例如，2026 秋季的 `boya-quasi-intermediate-i:lesson-01` 与 2027 秋季的 `boya-intermediate-i:lesson-01` 是两个不同的课次。

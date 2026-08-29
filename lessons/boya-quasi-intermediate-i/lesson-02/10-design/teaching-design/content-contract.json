@@ -1,0 +1,157 @@
+{
+  "schema_version": "boya-lesson-content-contract-draft-v0.1",
+  "status": "draft_pending_source_approval_semantic_audio_review",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-02",
+  "offering_id": "2026-fall",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_id": "lesson-02",
+  "lesson_title": "王红的一天",
+  "authority_basis": {
+    "status": "canonical_source_only_no_approved_pptx",
+    "canonical_source": "../../00-source/canonical-source.json",
+    "listening_exercise_contract": "../../00-source/listening-exercise-contract.json",
+    "rule": "本契约只引用本教材 lesson-02 的 canonical source；不读取、不复制另一教材或其他课次内容。"
+  },
+  "source_inputs": {
+    "canonical_source": "../../00-source/canonical-source.json",
+    "source_status": "source_audit_in_progress",
+    "semantic_audio_status": "2-1至2-6待教师逐段听核；2-7为用户恢复音频，技术通过且Adam已确认，但仍保留来源说明",
+    "source_evidence": [
+      "../../00-source/audit/source-pages-12-21-audit-draft.md",
+      "../../00-source/audit/answer-pages-8-10-audit-draft.md",
+      "../../00-source/audit/audio-technical-2026-08-29.md",
+      "../../00-source/listening-exercise-contract.json"
+    ]
+  },
+  "can_do": {
+    "interpretive": [
+      {"text":"听懂王红一天的学校生活、生日午餐和博物馆志愿活动的主要信息。","evidence":"short_text_1/2/3 first_listen"},
+      {"text":"从听力中找出时间、地点、人物、活动和结果等关键信息，并用教材题目核对。","evidence":"listening_sentences.exercise_2_3; short_text_1/2/3"},
+      {"text":"根据三段短文填出王红一天的安排表，保留听力证据。","evidence":"comprehensive_practice.comprehensive_1"}
+    ],
+    "interpersonal": [
+      {"text":"用本课词语询问并回答同伴的学校生活、生日午餐和课外活动。","evidence":"short_text_1/2/3 group_practice"},
+      {"text":"听同伴的补充，确认或修正表格中的时间、地点、人物和活动。","evidence":"comprehensive_practice.comprehensive_1/2"},
+      {"text":"在小组中先说、补充、再总结，使用指定词语和常用表达。","evidence":"short_text_2/3 group_practice; comprehensive_2"}
+    ],
+    "presentational": [
+      {"text":"用6—8个句子、不少于60字介绍王红的学校生活。","evidence":"short_text_1.exercises.present"},
+      {"text":"用6—8个句子、不少于60字介绍王红的生日午餐或课外活动。","evidence":"short_text_2/3 group_practice"},
+      {"text":"用8—10个句子、不少于80字谈自己的学校生活、难忘的生日和课外活动。","evidence":"comprehensive_practice.comprehensive_3"}
+    ]
+  },
+  "content_units": {
+    "vocabulary": {
+      "source_section":"sections.vocabulary",
+      "count":29,
+      "printed_pages":[12,13],
+      "audio":"2-1",
+      "student_action":"每页一个词语：看词语、拼音、词类、使用场合、用法、例句、扩展用法和图片，再在口语任务中使用。",
+      "items":[
+        {"content_id":"L02-V01","word":"排球","source_ref":"sections.vocabulary.entries[1]"},
+        {"content_id":"L02-V02","word":"志愿者","source_ref":"sections.vocabulary.entries[2]"},
+        {"content_id":"L02-V03","word":"讲解员","source_ref":"sections.vocabulary.entries[3]"},
+        {"content_id":"L02-V04","word":"博物馆","source_ref":"sections.vocabulary.entries[4]"},
+        {"content_id":"L02-V05","word":"展品","source_ref":"sections.vocabulary.entries[5]"},
+        {"content_id":"L02-V06","word":"体育课","source_ref":"sections.vocabulary.entries[6]"},
+        {"content_id":"L02-V07","word":"了解","source_ref":"sections.vocabulary.entries[7]"},
+        {"content_id":"L02-V08","word":"周围","source_ref":"sections.vocabulary.entries[8]"},
+        {"content_id":"L02-V09","word":"基本","source_ref":"sections.vocabulary.entries[9]"},
+        {"content_id":"L02-V10","word":"不知不觉","source_ref":"sections.vocabulary.entries[10]"},
+        {"content_id":"L02-V11","word":"热烈","source_ref":"sections.vocabulary.entries[11]"},
+        {"content_id":"L02-V12","word":"游客","source_ref":"sections.vocabulary.entries[12]"},
+        {"content_id":"L02-V13","word":"布置","source_ref":"sections.vocabulary.entries[13]"},
+        {"content_id":"L02-V14","word":"尤其","source_ref":"sections.vocabulary.entries[14]"},
+        {"content_id":"L02-V15","word":"交流","source_ref":"sections.vocabulary.entries[15]"},
+        {"content_id":"L02-V16","word":"顿","source_ref":"sections.vocabulary.entries[16]"},
+        {"content_id":"L02-V17","word":"庆祝","source_ref":"sections.vocabulary.entries[17]"},
+        {"content_id":"L02-V18","word":"特点","source_ref":"sections.vocabulary.entries[18]"},
+        {"content_id":"L02-V19","word":"环境","source_ref":"sections.vocabulary.entries[19]"},
+        {"content_id":"L02-V20","word":"熟悉","source_ref":"sections.vocabulary.entries[20]"},
+        {"content_id":"L02-V21","word":"感觉","source_ref":"sections.vocabulary.entries[21]"},
+        {"content_id":"L02-V22","word":"收获","source_ref":"sections.vocabulary.entries[22]"},
+        {"content_id":"L02-V23","word":"插","source_ref":"sections.vocabulary.entries[23]"},
+        {"content_id":"L02-V24","word":"接着","source_ref":"sections.vocabulary.entries[24]"},
+        {"content_id":"L02-V25","word":"科学","source_ref":"sections.vocabulary.entries[25]"},
+        {"content_id":"L02-V26","word":"参观","source_ref":"sections.vocabulary.entries[26]"},
+        {"content_id":"L02-V27","word":"举办","source_ref":"sections.vocabulary.entries[27]"},
+        {"content_id":"L02-V28","word":"增长","source_ref":"sections.vocabulary.entries[28]"},
+        {"content_id":"L02-V29","word":"同时","source_ref":"sections.vocabulary.entries[29]"}
+      ]
+    },
+    "audio": [
+      {"content_id":"L02-AUDIO-2-1","track":"2-1","pages":[12,13],"source_ref":"sections.vocabulary","status":"technical_pass_semantic_pending"},
+      {"content_id":"L02-AUDIO-2-2","track":"2-2","pages":[13,14],"source_ref":"sections.vocabulary_comprehension","status":"technical_pass_semantic_pending"},
+      {"content_id":"L02-AUDIO-2-3","track":"2-3","pages":[14,15],"source_ref":"sections.listening_sentences","status":"technical_pass_semantic_pending"},
+      {"content_id":"L02-AUDIO-2-4","track":"2-4","pages":[15],"source_ref":"sections.listening_dialogue","status":"technical_pass_semantic_pending"},
+      {"content_id":"L02-AUDIO-2-5","track":"2-5","pages":[15,16],"source_ref":"sections.short_text_1","status":"technical_pass_semantic_pending"},
+      {"content_id":"L02-AUDIO-2-6","track":"2-6","pages":[17,18],"source_ref":"sections.short_text_2","status":"technical_pass_semantic_pending"},
+      {"content_id":"L02-AUDIO-2-7","track":"2-7","pages":[18,19],"source_ref":"sections.short_text_3","status":"technical_pass_semantic_verified_by_Adam_user_supplied_recovery"}
+    ],
+    "exercises": [
+      {"content_id":"L02-E01","source_ref":"sections.vocabulary_comprehension.groups","kind":"vocabulary_comprehension","pages":[13,14],"items":11,"audio":"2-2"},
+      {"content_id":"L02-E02","source_ref":"sections.listening_sentences.exercises.exercise_2_3","kind":"true_false","pages":[14,15],"items":10,"audio":"2-3"},
+      {"content_id":"L02-E03","source_ref":"sections.listening_dialogue.items","kind":"dialogue_multiple_choice","pages":[15],"items":5,"audio":"2-4"},
+      {"content_id":"L02-E04","source_ref":"sections.short_text_1.exercises.first_listen","kind":"first_listen_short_answer","pages":[15],"items":5,"audio":"2-5"},
+      {"content_id":"L02-E05","source_ref":"sections.short_text_1.exercises.second_listen","kind":"second_listen_sentence_output","pages":[16],"items":2,"audio":"2-5"},
+      {"content_id":"L02-E06","source_ref":"sections.short_text_2.exercises.first_listen","kind":"first_listen_short_answer","pages":[17],"items":4,"audio":"2-6"},
+      {"content_id":"L02-E07","source_ref":"sections.short_text_2.exercises.second_listen","kind":"second_listen_sentence_output","pages":[17],"items":2,"audio":"2-6"},
+      {"content_id":"L02-E08","source_ref":"sections.short_text_2.exercises.group_practice","kind":"group_presentational","pages":[17,18],"items":1,"audio":null},
+      {"content_id":"L02-E09","source_ref":"sections.short_text_3.exercises.first_listen","kind":"first_listen_short_answer","pages":[18],"items":3,"audio":"2-7"},
+      {"content_id":"L02-E10","source_ref":"sections.short_text_3.exercises.second_listen","kind":"second_listen_sentence_output","pages":[19],"items":2,"audio":"2-7"},
+      {"content_id":"L02-E11","source_ref":"sections.short_text_3.exercises.group_practice","kind":"group_presentational","pages":[18,19],"items":1,"audio":null},
+      {"content_id":"L02-E12","source_ref":"sections.comprehensive_practice.items[1]","kind":"listening_table","pages":[20],"items":1,"audio":"2-5,2-6,2-7"},
+      {"content_id":"L02-E13","source_ref":"sections.comprehensive_practice.items[2]","kind":"group_presentational","pages":[20],"items":1,"audio":null},
+      {"content_id":"L02-E14","source_ref":"sections.comprehensive_practice.items[3]","kind":"extension_presentational","pages":[21],"items":1,"audio":null}
+    ],
+    "common_expressions": {
+      "source_groups":["sections.common_expressions_school_life","sections.common_expressions_extra_curricular"],
+      "count":15,
+      "student_action":"先在教材情境中理解，再用该表达完成一条与学校生活、生日午餐或课外活动有关的口语。",
+      "items":[
+        {"content_id":"L02-EXP01","expression":"对……熟悉／对……有了了解","source_ref":"common_expressions_school_life.items[1]"},
+        {"content_id":"L02-EXP02","expression":"尤其","source_ref":"common_expressions_school_life.items[2]"},
+        {"content_id":"L02-EXP03","expression":"虽然……可是……","source_ref":"common_expressions_school_life.items[3]"},
+        {"content_id":"L02-EXP04","expression":"不知不觉","source_ref":"common_expressions_school_life.items[4]"},
+        {"content_id":"L02-EXP05","expression":"同时","source_ref":"common_expressions_school_life.items[5]"},
+        {"content_id":"L02-EXP06","expression":"给……办／介绍","source_ref":"common_expressions_extra_curricular.items[1]"},
+        {"content_id":"L02-EXP07","expression":"处所＋动词＋着＋人／物","source_ref":"common_expressions_extra_curricular.items[2]"},
+        {"content_id":"L02-EXP08","expression":"接着","source_ref":"common_expressions_extra_curricular.items[3]"},
+        {"content_id":"L02-EXP09","expression":"安安静静／舒舒服服／急急忙忙／开开心心＋（地）＋动词词组","source_ref":"common_expressions_extra_curricular.items[4]"},
+        {"content_id":"L02-EXP10","expression":"量词","source_ref":"common_expressions_extra_curricular.items[5]"},
+        {"content_id":"L02-EXP11","expression":"自从……以来","source_ref":"common_expressions_extra_curricular.items[6]"},
+        {"content_id":"L02-EXP12","expression":"每……都……","source_ref":"common_expressions_extra_curricular.items[7]"},
+        {"content_id":"L02-EXP13","expression":"不但……同时……","source_ref":"common_expressions_extra_curricular.items[8]"},
+        {"content_id":"L02-EXP14","expression":"其中","source_ref":"common_expressions_extra_curricular.items[9]"},
+        {"content_id":"L02-EXP15","expression":"过得","source_ref":"common_expressions_extra_curricular.items[10]"}
+      ]
+    },
+    "texts": [
+      {"content_id":"L02-TEXT-01","title":"王红喜欢上课","source_ref":"sections.short_text_1","pages":[15,16],"audio":"2-5","output":"6—8句，不少于60字"},
+      {"content_id":"L02-TEXT-02","title":"生日午餐","source_ref":"sections.short_text_2","pages":[17,18],"audio":"2-6","output":"先4—6句，再由同学总结6—8句"},
+      {"content_id":"L02-TEXT-03","title":"课外活动","source_ref":"sections.short_text_3","pages":[18,19],"audio":"2-7","output":"先4—6句，再由同学总结6—8句"}
+    ]
+  },
+  "image_assets": {
+    "manifest":"../assets/image-manifest.json",
+    "count":36,
+    "status":"generated_candidates_pending_source_and_visual_review",
+    "policy":"图片只服务词义、情境、比较、证据或记忆；divider沿用共用模板，不新增divider图片。"
+  },
+  "online_face_boundary": {
+    "status":"proposal_pending_Adam_confirmation",
+    "online_proposal": {
+      "scope":"课文全文阅读、音频预习、词语与常用表达预览、关键词记录、综合表格预填和个人问题准备。",
+      "content_refs":["vocabulary","short_text_1","short_text_2","short_text_3","common_expressions_school_life","common_expressions_extra_curricular","comprehensive_practice.comprehensive_1"]
+    },
+    "face_to_face_proposal": {
+      "scope":"听力证据核对、词语理解、听句判断与对话选择、同伴问答、小组补充与总结、个人口语发表和重做。",
+      "content_refs":["vocabulary_comprehension","listening_sentences","listening_dialogue","short_text_1.exercises.first_listen","short_text_2.exercises.group_practice","short_text_3.exercises.group_practice","comprehensive_practice.comprehensive_2","comprehensive_practice.comprehensive_3"]
+    },
+    "formal_contact_hours":null,
+    "note":"正式实体课时必须依教材内容量与学校正式课表核定；本草案不预设每课固定节数或分钟数。"
+  },
+  "answer_policy":"闭合题答案只引用答案 PDF；短文口语、表格教师核对、小组总结和拓展练习不捏造唯一标准答案。",
+  "approval_state":"teaching_design_not_approved",
+  "next_gate":"Adam确认来源语义、正式实体课时与线上／实体边界后，才能写教师手册内容母版和逐页生产规格。"
+}

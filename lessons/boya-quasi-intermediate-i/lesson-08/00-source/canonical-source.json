@@ -1,0 +1,633 @@
+{
+  "lesson_key": "boya-quasi-intermediate-i:lesson-08",
+  "schema_version": "quasi-intermediate-source-audit-v1.0",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_number": 8,
+  "lesson_id": "lesson-08",
+  "title": "孙子和《孙子兵法》",
+  "title_source": "主教材 PDF 第81页（印刷 P68）课名页视觉核对",
+  "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+  "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+  "page_map": {
+    "printed_pages": [
+      68,
+      76
+    ],
+    "pdf_pages": [
+      81,
+      89
+    ],
+    "answer_pdf_pages": [
+      22,
+      23
+    ],
+    "mapping_status": "visual_verified_first_pass"
+  },
+  "qr_evidence": {
+    "pdf_page": 81,
+    "qr_url": "http://qr31.cn/JjDVWY",
+    "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-08-pdf-page-081.png",
+    "landing_page": "https://biz.cli.im/site/JjDVWY?qrurl=http://qr31.cn/JjDVWY&gtype=2&key=67ae517d4ac066c8b87829448cdeba53bf434f2028",
+    "landing_audio_labels": [
+      "8-1",
+      "8-2",
+      "8-3",
+      "8-4",
+      "8-5",
+      "8-6"
+    ],
+    "decode_status": "source_inventory_verified"
+  },
+  "audio_map": [
+    {
+      "label": "8-1",
+      "coding": "VY1539814",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fs5tr7IkZUb9Gxj83gJU-uX3ofcK",
+      "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-08/8-1.mp3",
+      "bytes": 976761,
+      "sha256": "4ee0ae390aa808652db94f1af28358729422b59215aaaef5bfcda8e72d9638c2",
+      "duration_seconds": 60.735,
+      "decode_status": "passed"
+    },
+    {
+      "label": "8-2",
+      "coding": "BG1783217",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FrpdFK0rp3lQUAo-_YqsNhj0UJ6s",
+      "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-08/8-2.mp3",
+      "bytes": 405828,
+      "sha256": "4510530d12236865d6c35aa4640d388c83005716e45826ba589979a1a2980143",
+      "duration_seconds": 25.051,
+      "decode_status": "passed"
+    },
+    {
+      "label": "8-3",
+      "coding": "LO1783218",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fth40dIQu-9BXFsp6ObafCLnfZe7",
+      "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-08/8-3.mp3",
+      "bytes": 885645,
+      "sha256": "cdbeb41756155fe7435902859a07d0ad7d1acc55f5234b4e490a6786e8e1f474",
+      "duration_seconds": 55.04,
+      "decode_status": "passed"
+    },
+    {
+      "label": "8-4",
+      "coding": "NT1783219",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FgDbiW1RQgrJruOgJE25Grca5AFZ",
+      "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-08/8-4.mp3",
+      "bytes": 1158979,
+      "sha256": "6e8a109c37d868b290ee98647028607df9863f52052ddf75fe5c6b9d8a529536",
+      "duration_seconds": 72.124,
+      "decode_status": "passed"
+    },
+    {
+      "label": "8-5",
+      "coding": "IZ1783220",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FmzgBzpC9QtDGVhyyCSVyWw3lqFs",
+      "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-08/8-5.mp3",
+      "bytes": 1074981,
+      "sha256": "f5e40224124fabbe596cc3ed9e3e87194d0166a54598c9ce8e852da941e870fd",
+      "duration_seconds": 66.873,
+      "decode_status": "passed"
+    },
+    {
+      "label": "8-6",
+      "coding": "CH1783221",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fi6dgkPoem8ah75q-v69KhZh2yVq",
+      "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-08/8-6.mp3",
+      "bytes": 1049068,
+      "sha256": "1ce2666355336e2f89705864fb9e135ea000969b6a8e9286bf27a171d581b4e1",
+      "duration_seconds": 65.254,
+      "decode_status": "passed"
+    }
+  ],
+  "content_inventory": {
+    "vocabulary_count": 29,
+    "proper_noun_count": 2,
+    "vocabulary_comprehension_group_count": 1,
+    "listening_sentence_item_count": 10,
+    "texts_dialogues_count": 3,
+    "listening_exercise_group_count": 6,
+    "common_expression_group_count": 3,
+    "comprehensive_exercise_count": 3,
+    "status": "visual_source_snapshot_pending_adam_approval"
+  },
+  "answer_policy": "仅记录参考答案 PDF 中可核对的答案；开放式口语题不补写唯一答案，保留教师示例和评量空间。",
+  "review": {
+    "status": "pending_review",
+    "approved": false,
+    "approved_by": [],
+    "approved_at": null,
+    "blockers": [
+      "扫描教材无可用文字层；最终来源批准需由 Adam 对视觉转录、教材页码和答案证据确认。",
+      "六段音频已通过本地文件 bytes、SHA-256、ffprobe 时长和解码核验；语义听核及教师 PowerPoint 播放实测仍待完成。",
+      "开放式口语、综合填表与小组总结没有唯一标准答案，不补写答案。"
+    ],
+    "approval_basis": [
+      "主教材 PDF 第81–90页（印刷 P68–P76）视觉核对",
+      "答案 PDF 文件第22–23页视觉核对",
+      "来源总盘点 QR、音频 bytes、hash 和时长记录"
+    ]
+  },
+  "sections": [
+    {
+      "id": "vocabulary",
+      "printed_pages": [
+        68,
+        69
+      ],
+      "audio": "8-1",
+      "entries": [
+        {
+          "no": 1,
+          "word": "士兵",
+          "pinyin": "shìbīng",
+          "pos": "名",
+          "gloss": "soldier"
+        },
+        {
+          "no": 2,
+          "word": "打仗",
+          "pinyin": "dǎzhàng",
+          "pos": "动",
+          "gloss": "to go to war"
+        },
+        {
+          "no": 3,
+          "word": "训练",
+          "pinyin": "xùnliàn",
+          "pos": "动",
+          "gloss": "to train"
+        },
+        {
+          "no": 4,
+          "word": "进攻",
+          "pinyin": "jìngōng",
+          "pos": "动",
+          "gloss": "to attack"
+        },
+        {
+          "no": 5,
+          "word": "军事家",
+          "pinyin": "jūnshìjiā",
+          "pos": "名",
+          "gloss": "strategist"
+        },
+        {
+          "no": 6,
+          "word": "记载",
+          "pinyin": "jìzǎi",
+          "pos": "动",
+          "gloss": "to record"
+        },
+        {
+          "no": 7,
+          "word": "将军",
+          "pinyin": "jiāngjūn",
+          "pos": "名",
+          "gloss": "general; commander"
+        },
+        {
+          "no": 8,
+          "word": "权力",
+          "pinyin": "quánlì",
+          "pos": "名",
+          "gloss": "power"
+        },
+        {
+          "no": 9,
+          "word": "策略",
+          "pinyin": "cèlüè",
+          "pos": "名",
+          "gloss": "strategy"
+        },
+        {
+          "no": 10,
+          "word": "打败仗",
+          "pinyin": "dǎ bàizhàng",
+          "pos": "动",
+          "gloss": "to lose a battle"
+        },
+        {
+          "no": 11,
+          "word": "结束",
+          "pinyin": "jiéshù",
+          "pos": "动",
+          "gloss": "to finish"
+        },
+        {
+          "no": 12,
+          "word": "开设",
+          "pinyin": "kāishè",
+          "pos": "动",
+          "gloss": "to offer (a course)"
+        },
+        {
+          "no": 13,
+          "word": "带兵打仗",
+          "pinyin": "dài bīng dǎzhàng",
+          "pos": "动",
+          "gloss": "to command troops"
+        },
+        {
+          "no": 14,
+          "word": "严明",
+          "pinyin": "yánmíng",
+          "pos": "形",
+          "gloss": "strict and impartial"
+        },
+        {
+          "no": 15,
+          "word": "根据",
+          "pinyin": "gēnjù",
+          "pos": "介",
+          "gloss": "based on"
+        },
+        {
+          "no": 16,
+          "word": "曾经",
+          "pinyin": "céngjīng",
+          "pos": "副",
+          "gloss": "once"
+        },
+        {
+          "no": 17,
+          "word": "展示",
+          "pinyin": "zhǎnshì",
+          "pos": "动",
+          "gloss": "to show; display"
+        },
+        {
+          "no": 18,
+          "word": "妻子",
+          "pinyin": "qīzi",
+          "pos": "名",
+          "gloss": "wife"
+        },
+        {
+          "no": 19,
+          "word": "制定",
+          "pinyin": "zhìdìng",
+          "pos": "动",
+          "gloss": "to draw up"
+        },
+        {
+          "no": 20,
+          "word": "嘻嘻哈哈",
+          "pinyin": "xīxī-hāhā",
+          "pos": "形",
+          "gloss": "laughing and joking"
+        },
+        {
+          "no": 21,
+          "word": "严肃",
+          "pinyin": "yánsù",
+          "pos": "形",
+          "gloss": "serious"
+        },
+        {
+          "no": 22,
+          "word": "按",
+          "pinyin": "àn",
+          "pos": "介",
+          "gloss": "according to"
+        },
+        {
+          "no": 23,
+          "word": "军法",
+          "pinyin": "jūnfǎ",
+          "pos": "名",
+          "gloss": "military law"
+        },
+        {
+          "no": 24,
+          "word": "处死",
+          "pinyin": "chǔsǐ",
+          "pos": "动",
+          "gloss": "to execute"
+        },
+        {
+          "no": 25,
+          "word": "难过",
+          "pinyin": "nánguò",
+          "pos": "形",
+          "gloss": "sad"
+        },
+        {
+          "no": 26,
+          "word": "任命",
+          "pinyin": "rènmìng",
+          "pos": "动",
+          "gloss": "to appoint"
+        },
+        {
+          "no": 27,
+          "word": "打胜仗",
+          "pinyin": "dǎ shèngzhàng",
+          "pos": "动",
+          "gloss": "to win a battle"
+        },
+        {
+          "no": 28,
+          "word": "既",
+          "pinyin": "jì",
+          "pos": "副",
+          "gloss": "both ... (and)"
+        },
+        {
+          "no": 29,
+          "word": "战败",
+          "pinyin": "zhànbài",
+          "pos": "动",
+          "gloss": "to be defeated"
+        }
+      ],
+      "proper_nouns": [
+        [
+          "孙子",
+          "Sūn Zǐ",
+          "春秋时期军事家"
+        ],
+        [
+          "《孙子兵法》",
+          "Sūn Zǐ Bīngfǎ",
+          "The Art of War"
+        ]
+      ],
+      "source_status": "visual_transcription_pending_review"
+    },
+    {
+      "id": "vocabulary_comprehension",
+      "printed_pages": [
+        70
+      ],
+      "audio": "8-2",
+      "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读。",
+      "groups": [
+        {
+          "words": [
+            "士兵",
+            "打仗",
+            "训练",
+            "进攻",
+            "吴王"
+          ],
+          "answer": [
+            "1.A",
+            "2.E",
+            "3.C",
+            "4.D",
+            "5.B"
+          ]
+        }
+      ],
+      "answer_status": "answers_checked_against_answer_pdf"
+    },
+    {
+      "id": "listening_sentences",
+      "printed_pages": [
+        70
+      ],
+      "audio_tracks": [
+        "8-3"
+      ],
+      "exercises": {
+        "exercise_8_3": {
+          "heading_verbatim": "一、听句子，判断对错",
+          "items": [
+            [
+              1,
+              "他写了很多书。",
+              "错"
+            ],
+            [
+              2,
+              "这件事有根据。",
+              "对"
+            ],
+            [
+              3,
+              "他们下星期开始训练。",
+              "错"
+            ],
+            [
+              4,
+              "将军权力很大。",
+              "对"
+            ],
+            [
+              5,
+              "他提出的策略现在还有影响。",
+              "对"
+            ],
+            [
+              6,
+              "我们打了败仗。",
+              "错"
+            ],
+            [
+              7,
+              "战争结束了。",
+              "对"
+            ],
+            [
+              8,
+              "下学期要开设两门新课。",
+              "对"
+            ],
+            [
+              9,
+              "这几句话企业家们都知道。",
+              "错"
+            ],
+            [
+              10,
+              "这本书大家都比较熟悉。",
+              "对"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "short_text_1",
+      "printed_pages": [
+        71,
+        72
+      ],
+      "audio": "8-4",
+      "title": "孙子趣事",
+      "text": "孙子，名叫孙武（约公元前545年—公元前470年），是春秋时期有名的军事家。他很会带兵打仗，认为军法要严明，统治者要给将军足够的权力。根据《史记》记载，吴王阖闾曾经让孙子展示怎样训练军队，训练的对象是宫中的180名美女。孙子把她们分成两队，由吴王的两位妻子当队长。孙武制定了军法以后就开始训练。训练的时候，美女们嘻嘻哈哈，很不严肃，孙子就按军法把两位队长处死了。吴王虽然非常难过，可是他也明白了孙子带兵打仗的能力，任命他做了将军。",
+      "exercises": {
+        "first_listen": [
+          "孙武是谁？",
+          "吴王让他训练谁？",
+          "吴王明白了什么？"
+        ],
+        "second_listen": [
+          "孙武是什么时候的人？（春秋）",
+          "孙武对军法有什么样的看法？（严明 权力）",
+          "孙武杀了谁？为什么？（严肃 军法 队长）"
+        ],
+        "present": "谈一谈孙子和《孙子兵法》的主要内容。",
+        "compare": "孙子的军事理论及其世界影响。"
+      },
+      "exercise_metadata": {
+        "first_listen": {
+          "heading_verbatim": "（一）听第一遍，简单回答问题",
+          "textbook_printed_pages": [
+            71
+          ],
+          "audio_tracks": [
+            "8-4"
+          ]
+        },
+        "second_listen": {
+          "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+          "textbook_printed_pages": [
+            71
+          ],
+          "audio_tracks": [
+            "8-4"
+          ]
+        }
+      }
+    },
+    {
+      "id": "short_text_2",
+      "printed_pages": [
+        72,
+        73
+      ],
+      "audio": "8-5",
+      "title": "《孙子兵法》",
+      "text": "《孙子兵法》共有13篇，是关于战争理论的书。孙子觉得战争是国家大事，关系重大，必须仔细考察。他认为，如果可以通过其他方法解决问题而不用打仗的话，是最好的。如果必须打仗，要研究军事策略，而且要尽可能在短时间内结束战争，要在对方没有准备的时候进攻。孙子指出，要想打胜仗，还必须了解对方也要了解自己。如果既了解对方也了解自己，就不会战败。如果既不了解别人也不了解自己，每场都会打败仗。这就是有名的“攻其无备，出其不意”“知彼知己，百战不殆”“不知彼，不知己，每战必殆”的军事方法和策略。",
+      "exercises": {
+        "first_listen": [
+          "孙子写的书叫什么？",
+          "这本书里面有多少篇？"
+        ],
+        "second_listen": [
+          "这本书是关于什么的书？（理论）",
+          "孙子在书中谈到了哪些理论？（解决 短时间 了解对方和自己 进攻）",
+          "你能不能说出书中的原话？（百战不殆）"
+        ],
+        "present": "谈一谈孙子和《孙子兵法》的主要内容。",
+        "compare": "孙子的军事理论及其世界影响。"
+      },
+      "exercise_metadata": {
+        "first_listen": {
+          "heading_verbatim": "（一）听第一遍，简单回答问题",
+          "textbook_printed_pages": [
+            72
+          ],
+          "audio_tracks": [
+            "8-5"
+          ]
+        },
+        "second_listen": {
+          "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+          "textbook_printed_pages": [
+            72
+          ],
+          "audio_tracks": [
+            "8-5"
+          ]
+        }
+      }
+    },
+    {
+      "id": "short_text_3",
+      "printed_pages": [
+        74
+      ],
+      "audio": "8-6",
+      "title": "《孙子兵法》和它的影响",
+      "text": "无论是古代还是现代，《孙子兵法》的影响都很大。不仅在中国是这样，它被翻译介绍到国外之后，也很受欢迎。不管是网上，还是在国外的书店，都能找到英文版、法文版、日文版或者韩文版的《孙子兵法》。有些国外大学还开设了《孙子兵法》课程。书中所说的方法和策略，除了被用在军事活动中，在商业活动中使用得也比较多，比如“知彼知己，百战不殆”“攻其无备，出其不意”，已经成为企业家们熟悉的名句。",
+      "exercises": {
+        "first_listen": [
+          "《孙子兵法》在国外有没有影响？",
+          "在哪里可以找到外文版的《孙子兵法》？"
+        ],
+        "second_listen": [
+          "《孙子兵法》主要有哪几种外文版本？（或者）",
+          "《孙子兵法》对哪些活动有影响？（军事活动 商业活动）",
+          "请你解释一下‘攻其无备，出其不意’是什么意思。（没有准备 进攻）"
+        ],
+        "present": "谈一谈孙子和《孙子兵法》的主要内容。",
+        "compare": "孙子的军事理论及其世界影响。"
+      },
+      "exercise_metadata": {
+        "first_listen": {
+          "heading_verbatim": "（一）听第一遍，简单回答问题",
+          "textbook_printed_pages": [
+            74
+          ],
+          "audio_tracks": [
+            "8-6"
+          ]
+        },
+        "second_listen": {
+          "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+          "textbook_printed_pages": [
+            74
+          ],
+          "audio_tracks": [
+            "8-6"
+          ]
+        }
+      }
+    },
+    {
+      "id": "common_expressions",
+      "printed_pages": [
+        72,
+        73,
+        74
+      ],
+      "groups": [
+        {
+          "topic": "说明情况",
+          "items": [
+            "根据",
+            "曾经",
+            "把……动词+成",
+            "按",
+            "把……动词+补语",
+            "虽然（2）",
+            "关于",
+            "通过",
+            "必须",
+            "要在……内",
+            "既……又/也……",
+            "既不……也不……",
+            "被翻译/介绍+到/成",
+            "有的……有的……还有的……",
+            "除了……还/也……",
+            "比如",
+            "已经成为"
+          ]
+        }
+      ],
+      "source_status": "visual_transcription_pending_review"
+    },
+    {
+      "id": "comprehensive_practice",
+      "printed_pages": [
+        75,
+        76
+      ],
+      "audio_tracks": [
+        "8-4",
+        "8-5",
+        "8-6"
+      ],
+      "items": [
+        "请你根据听过的三段短文填表。",
+        "小组活动：谈一谈孙武带兵的故事、军事理论和《孙子兵法》的影响。",
+        "拓展练习：谈谈你喜欢的历史人物。"
+      ],
+      "source_status": "visual_transcription_pending_review"
+    }
+  ]
+}

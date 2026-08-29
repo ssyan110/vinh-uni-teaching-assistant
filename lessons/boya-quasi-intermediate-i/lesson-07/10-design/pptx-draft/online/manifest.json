@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-pptx-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-07",
+  "mode": "online",
+  "title": "第七课《小张热爱登山》在线预习",
+  "status": "draft_not_approved",
+  "builder_scope": "scripts/build_l23_pptx_drafts.js",
+  "draft_gate": "lesson-specific",
+  "source_sha256": "ba48b06a41851b95177b501ebbfeb5c99edbf52e7945360ea148b61cb2cfc471",
+  "layout_source": "boya-quasi-intermediate-i lesson-01 approved layout family",
+  "shared_layout_contract": "course/boya-online-layout-contract.json",
+  "fixed_structure": [
+    "cover",
+    "learning_flow",
+    "goals",
+    "vocabulary",
+    "practice_after_each_full_five",
+    "proper_nouns_if_present",
+    "short_text_divider_before_each_text",
+    "short_text_record",
+    "expressions_after_related_text",
+    "comprehensive_practice",
+    "fixed_three_slide_ending"
+  ],
+  "route_asset": "learning-route-user-supplied-transparent.png",
+  "vocabulary_practice_after_every": 5,
+  "vocabulary_extension_policy": "empty_until_explicitly_supplied",
+  "fixed_ending_titles": [
+    "我觉得很难的地方",
+    "课前检查",
+    "谢谢大家，我们课堂见。"
+  ],
+  "short_example_policy": "curated_short_sentences_max_24_hanzi_chars",
+  "short_text_policy": "textbook_reading_prompt_and_record_layout_no_full_text_copy",
+  "shared_assets": [
+    "lesson-01-cover-family-work-hobby.png",
+    "learning-route-user-supplied-transparent.png",
+    "divider-family.png",
+    "divider-work.png",
+    "divider-hobby.png",
+    "divider-comprehensive.png",
+    "symbolic-vocabulary.png",
+    "symbolic-listening.png",
+    "symbolic-sentence-pattern.png",
+    "oral-practice-divider.png",
+    "speaking-practice.png"
+  ],
+  "vocabulary_image_policy": "one_distinct_semantic_asset_per_vocabulary_item",
+  "vocabulary_image_count": 26,
+  "vocabulary_image_assets": [
+    {
+      "word": "登山",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-01-dengshan.png",
+      "status": "candidate"
+    },
+    {
+      "word": "优美",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-02-youmei.png",
+      "status": "candidate"
+    },
+    {
+      "word": "热爱",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-03-reai.png",
+      "status": "candidate"
+    },
+    {
+      "word": "邻居",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-04-linju.png",
+      "status": "candidate"
+    },
+    {
+      "word": "机会",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-05-jihui.png",
+      "status": "candidate"
+    },
+    {
+      "word": "耐力",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-06-naili.png",
+      "status": "candidate"
+    },
+    {
+      "word": "放松",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-07-fangsong.png",
+      "status": "candidate"
+    },
+    {
+      "word": "市民",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-08-shimin.png",
+      "status": "candidate"
+    },
+    {
+      "word": "挑战",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-09-tiaozhan.png",
+      "status": "candidate"
+    },
+    {
+      "word": "根本",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-10-genben.png",
+      "status": "candidate"
+    },
+    {
+      "word": "合作",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-11-hezuo.png",
+      "status": "candidate"
+    },
+    {
+      "word": "浪漫",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-12-langman.png",
+      "status": "candidate"
+    },
+    {
+      "word": "羡慕",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-13-xianmu.png",
+      "status": "candidate"
+    },
+    {
+      "word": "地道",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-14-didao.png",
+      "status": "candidate"
+    },
+    {
+      "word": "发亮",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-15-faliang.png",
+      "status": "candidate"
+    },
+    {
+      "word": "不管",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-16-buguan.png",
+      "status": "candidate"
+    },
+    {
+      "word": "肚子",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-17-duzi.png",
+      "status": "candidate"
+    },
+    {
+      "word": "感受",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-18-ganshou.png",
+      "status": "candidate"
+    },
+    {
+      "word": "危险",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-19-weixian.png",
+      "status": "candidate"
+    },
+    {
+      "word": "将来",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-20-jianglai.png",
+      "status": "candidate"
+    },
+    {
+      "word": "山顶",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-21-shanding.png",
+      "status": "candidate"
+    },
+    {
+      "word": "俱乐部",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-22-julebu.png",
+      "status": "candidate"
+    },
+    {
+      "word": "结交",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-23-jiejiao.png",
+      "status": "candidate"
+    },
+    {
+      "word": "害怕",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-24-haipa.png",
+      "status": "candidate"
+    },
+    {
+      "word": "信心",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-25-xinxin.png",
+      "status": "candidate"
+    },
+    {
+      "word": "愉快",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/assets/l07-vocab-26-yukuai.png",
+      "status": "candidate"
+    }
+  ],
+  "slide_count": 53,
+  "audio_tracks_embedded": [
+    "7-1",
+    "7-2",
+    "7-3",
+    "7-4",
+    "7-5",
+    "7-6"
+  ],
+  "audio_playback_policy": "embedded_on_audio-summary-slides; PowerPoint playback QA remains pending for draft",
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/pptx-draft/online/lesson-07-在线预习.pptx",
+    "sha256": "f2ef0638966cfed5f62dcd3dc271f6a9d826ebf142af22ea7202b1599733f1f0",
+    "bytes": 154181282
+  },
+  "generated_at": "2026-08-29T16:33:51.384Z"
+}

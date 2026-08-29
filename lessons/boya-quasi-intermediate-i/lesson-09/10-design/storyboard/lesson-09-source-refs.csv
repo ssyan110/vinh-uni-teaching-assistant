@@ -1,0 +1,11 @@
+﻿record_type,deck,section_id,source_ref,textbook_printed_pages,audio_tracks,status
+candidate_source_ref,online+face-to-face,vocabulary,00-source/canonical-source.json#sections.vocabulary,77、78,9-1,candidate_mapping_not_final_storyboard
+candidate_source_ref,online+face-to-face,vocabulary_comprehension,00-source/canonical-source.json#sections.vocabulary_comprehension,78、79,9-2,candidate_mapping_not_final_storyboard
+candidate_source_ref,online+face-to-face,listening_sentences,00-source/canonical-source.json#sections.listening_sentences,79,9-3,candidate_mapping_not_final_storyboard
+candidate_source_ref,online+face-to-face,short_text_1,00-source/canonical-source.json#sections.short_text_1,80、81,9-4,candidate_mapping_not_final_storyboard
+candidate_source_ref,online+face-to-face,common_expressions_habits_preferences_1,00-source/canonical-source.json#sections.common_expressions_habits_preferences_1,81,,candidate_mapping_not_final_storyboard
+candidate_source_ref,online+face-to-face,short_text_2,00-source/canonical-source.json#sections.short_text_2,82,9-5,candidate_mapping_not_final_storyboard
+candidate_source_ref,online+face-to-face,common_expressions_views_suggestions,00-source/canonical-source.json#sections.common_expressions_views_suggestions,83,,candidate_mapping_not_final_storyboard
+candidate_source_ref,online+face-to-face,short_text_3,00-source/canonical-source.json#sections.short_text_3,83、84,9-6,candidate_mapping_not_final_storyboard
+candidate_source_ref,online+face-to-face,common_expressions_habits_preferences_2,00-source/canonical-source.json#sections.common_expressions_habits_preferences_2,84、85,,candidate_mapping_not_final_storyboard
+candidate_source_ref,online+face-to-face,comprehensive_practice,00-source/canonical-source.json#sections.comprehensive_practice,85、86,9-4；9-5；9-6,candidate_mapping_not_final_storyboard

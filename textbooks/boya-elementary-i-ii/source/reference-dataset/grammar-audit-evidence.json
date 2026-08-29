@@ -1,0 +1,634 @@
+{
+  "audit_version": "0.1-draft",
+  "generated": "2026-08-29",
+  "scope": "User-supplied scanned PDFs; read-only audit; not authority",
+  "pdf_text_layer": false,
+  "page_note": "scan_page is PDF image order; printed_page is the book footer/TOC and should be used for lesson references. I has one ordering anomaly: printed p98 is scan p118 (after printed p107).",
+  "status_legend": {
+    "explicit_section_ocr_needs_manual": "Reference-pattern heading or key/common-sentence heading is visible; OCR extraction still needs manual image check.",
+    "sentence_inferred_ocr_needs_manual": "No dedicated reference-pattern heading found; pattern is inferred from the printed key/common sentences and activity prompts.",
+    "phonetics_explicit_ocr_needs_manual": "Explicit phonetics/usage note; manual check still required because PDF has no text layer."
+  },
+  "lessons": [
+    {
+      "lesson_key": "boya-elementary-i:lesson-01",
+      "title": "拼音和日常用语（一）",
+      "printed_start_page": 1,
+      "scan_start_page": 12,
+      "source_pages": [
+        {"scan_page": 13, "printed_page": 2, "section": "注意／四声、轻声"},
+        {"scan_page": 14, "printed_page": 3, "section": "注意／j-q-x与ü、i调号"},
+        {"scan_page": 15, "printed_page": 4, "section": "日常用语"},
+        {"scan_page": 16, "printed_page": 5, "section": "日常用语问答"}
+      ],
+      "patterns": ["声调标在韵母主元音a、o、e、i、u、ü上", "轻声不标调号", "j/q/x后ü省略两点（写u）", "i上标调时省略i点"],
+      "evidence": ["声调要标在韵母中“a、o、e、i、u、ü”这六个字母上。", "汉语中还有又轻又短的轻声，轻声不标声调符号。", "j、q、x后的u是ü，i标调时不再加点。", "你好；谢谢；不客气；对不起；没关系；再见。"],
+      "source_status": "phonetics_explicit_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-02",
+      "title": "拼音和日常用语（二）",
+      "printed_start_page": 6,
+      "scan_start_page": 17,
+      "source_pages": [
+        {"scan_page": 17, "printed_page": 6, "section": "复韵母／听辨"},
+        {"scan_page": 18, "printed_page": 7, "section": "注意／调号顺序"},
+        {"scan_page": 20, "printed_page": 9, "section": "日常用语"}
+      ],
+      "patterns": ["复韵母、鼻韵母辨音", "调号标写顺序a、o、e、i、u、ü", "u和i同现时调号标在后一个元音"],
+      "evidence": ["声调标写顺序为：a、o、e、i、u、ü。", "u和i一起出现时，声调要标在后面的元音上。", "早上好；晚上好；明天见；请进；什么；多少钱。"],
+      "source_status": "phonetics_explicit_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-03",
+      "title": "拼音和日常用语（三）",
+      "printed_start_page": 10,
+      "scan_start_page": 21,
+      "source_pages": [
+        {"scan_page": 21, "printed_page": 10, "section": "儿化韵"},
+        {"scan_page": 22, "printed_page": 11, "section": "儿化韵说明"},
+        {"scan_page": 23, "printed_page": 12, "section": "y和w拼写"},
+        {"scan_page": 24, "printed_page": 13, "section": "三声变调／不、一变调"},
+        {"scan_page": 26, "printed_page": 15, "section": "日常用语"}
+      ],
+      "patterns": ["儿化韵：er接在名词词尾并与前韵母融合，写作r", "无声母时i开头韵母写y（yi/yin/ying、ya/ye/yao/you等）", "无声母时ü开头写yu/yue/yuan/yun，u开头写wu/wa/wo等", "三声变调", "不的变调", "一的变调"],
+      "evidence": ["儿化韵有时表示喜爱或小巧，部分词儿化后词义、词性变化。", "i开头韵母前无声母时写成yi、yin、ying或ya、ye、yao、you等。", "ü开头无声母写yu、yue、yuan、yun；u开头无声母加w。", "‘不’在第四声前变调；‘一’在不同声调前变调（具体调值请看图核对）。", "明白了；我听不懂；请再说一遍；太贵了；便宜（一）点儿吧；厕所在哪儿？"],
+      "source_status": "phonetics_explicit_ocr_needs_manual",
+      "needs_manual": true,
+      "manual_reason": "OCR cannot reliably preserve tone marks and the printed 一／不 tone values; verify from scan image."
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-04",
+      "title": "你叫什么名字",
+      "printed_start_page": 16,
+      "scan_start_page": 27,
+      "source_pages": [
+        {"scan_page": 33, "printed_page": 22, "section": "交际练习／问题提示"},
+        {"scan_page": 34, "printed_page": 23, "section": "重点句子"}
+      ],
+      "patterns": ["S+叫+名字", "S+姓+姓氏", "S+是+身份／国籍", "是……吗？／吗问句", "不是……（是……）", "什么疑问词"],
+      "evidence": ["你叫什么名字？", "我叫李军。", "你是留学生吗？", "他不是留学生，是中国学生。", "他姓什么？"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-05",
+      "title": "认识你很高兴",
+      "printed_start_page": 24,
+      "scan_start_page": 35,
+      "source_pages": [
+        {"scan_page": 37, "printed_page": 26, "section": "注意／们"},
+        {"scan_page": 39, "printed_page": 28, "section": "注意／国家表达"},
+        {"scan_page": 42, "printed_page": 31, "section": "交际练习／问题提示"},
+        {"scan_page": 43, "printed_page": 32, "section": "重点句子"}
+      ],
+      "patterns": ["也（A也……）", "很+形容词", "呢追问／转问", "的领属定语", "是／也是", "哪／哪个疑问", "人名词后们（数量词前不用）"],
+      "evidence": ["我也很高兴。", "我是韩国留学生，你呢？", "你是哪国人？", "你是哪个大学的留学生？", "她是我的同学，也是我的同屋。", "‘们’只能用于表示人的名词后；有数量词或其他复数成分时不能用。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-06",
+      "title": "这是什么",
+      "printed_start_page": 33,
+      "scan_start_page": 44,
+      "source_pages": [
+        {"scan_page": 46, "printed_page": 35, "section": "的短语"},
+        {"scan_page": 47, "printed_page": 36, "section": "注意／的用法"},
+        {"scan_page": 51, "printed_page": 40, "section": "参考句式"},
+        {"scan_page": 52, "printed_page": 41, "section": "重点句子"}
+      ],
+      "patterns": ["这／那+是+什么／谁", "这／那是谁的……？", "的领属与定语（属性定语通常不加的；很修饰定语需的）", "我来介绍一下儿……", "是字句／形容词谓语"],
+      "evidence": ["这／那是什么？", "这／那是谁……？", "这／那是……吗？", "我来介绍一下儿……", "这是谁的手机？", "这是我的好朋友。", "我们的教室很大。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-07",
+      "title": "欢迎去我家玩儿",
+      "printed_start_page": 42,
+      "scan_start_page": 53,
+      "source_pages": [
+        {"scan_page": 56, "printed_page": 45, "section": "注意／就"},
+        {"scan_page": 58, "printed_page": 47, "section": "参考句式／处所"},
+        {"scan_page": 60, "printed_page": 49, "section": "重点句子／问题提示"}
+      ],
+      "patterns": ["在+地点（住／存在）", "你……在哪儿？", "的+方位词与处所省略的", "就+动词（加强肯定）", "欢迎+去／来+地点+V", "吗问句"],
+      "evidence": ["你……在哪儿？", "你的……在这儿吗？", "你住在哪儿？", "我住在学校外边。", "她的家就在我们学校的东边。", "欢迎去我家玩儿。", "右边是谁的房间？"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-08",
+      "title": "明天晚上你有时间吗",
+      "printed_start_page": 50,
+      "scan_start_page": 61,
+      "source_pages": [
+        {"scan_page": 64, "printed_page": 53, "section": "注意／两与量词"},
+        {"scan_page": 67, "printed_page": 56, "section": "参考句式／时间表"},
+        {"scan_page": 68, "printed_page": 57, "section": "参考句式／交际练习、重点句子"}
+      ],
+      "patterns": ["时间词作状语", "有／没有+时间、课、事", "几点／多少点、点半、一刻、差", "吧句末建议／邀请", "一起+V", "两在量词前"],
+      "evidence": ["你今天上午八点有课吗？", "有什么课？", "明天呢？", "你几点有时间？", "明天晚上你有时间吗？", "我们一起吃饭吧？", "明天下午我没有课。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "title": "我们怎么去",
+      "printed_start_page": 58,
+      "scan_start_page": 69,
+      "source_pages": [
+        {"scan_page": 76, "printed_page": 65, "section": "参考句式／电话号码与交通"},
+        {"scan_page": 77, "printed_page": 66, "section": "注意／这样吧"},
+        {"scan_page": 79, "printed_page": 68, "section": "重点句子"}
+      ],
+      "patterns": ["怎么+V", "交通工具+V（骑自行车／坐车）", "从……到……", "V+地点（去学校等连动）", "吧建议", "这样吧话语建议", "给+人+物／快递你给我朋友", "V一下儿", "和连接名词"],
+      "evidence": ["A：我们怎么去……？B：我们……去。", "我们怎么去？", "我们骑自行车去吧。", "他不在办公室。", "我加一下儿你的微信吧。", "这样吧，快递你给我朋友吧。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "title": "西瓜怎么卖",
+      "printed_start_page": 69,
+      "scan_start_page": 80,
+      "source_pages": [
+        {"scan_page": 87, "printed_page": 76, "section": "参考句式／价格"},
+        {"scan_page": 90, "printed_page": 79, "section": "参考句式／交际练习、重点句子"}
+      ],
+      "patterns": ["多少钱／怎么卖", "要+N／V", "几／多少+量词", "数量+量词+名词", "两在量词前", "再+V（追加）", "一共+金额", "怎么付钱", "在+地点+卖"],
+      "evidence": ["……多少钱？", "……怎么卖？", "在……卖多少钱？", "你要买什么？", "你要买几个／多少？", "有……吗？", "怎么付钱？", "买五瓶啤酒，再买两大瓶可乐。", "我扫微信付钱。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-11",
+      "title": "明天天气怎么样",
+      "printed_start_page": 80,
+      "scan_start_page": 91,
+      "source_pages": [
+        {"scan_page": 97, "printed_page": 86, "section": "参考句式"},
+        {"scan_page": 99, "printed_page": 88, "section": "重点句子"}
+      ],
+      "patterns": ["……怎么样？", "形容词谓语（天气很好）", "太+形容词+了", "不太+形容词", "也／常／最+形容词", "天气预报说+小句"],
+      "evidence": ["……怎么样？例如：你的同屋怎么样？", "明天天气怎么样？", "明天天气很好。", "天气太热了。", "现在是最好的季节。", "这个季节不太热，也不常下雨。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true,
+      "manual_reason": "OCR misread 季节 in one key sentence; confirm from image."
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-12",
+      "title": "我正在等公共汽车呢",
+      "printed_start_page": 89,
+      "scan_start_page": 100,
+      "source_pages": [
+        {"scan_page": 107, "printed_page": 96, "section": "参考句式"},
+        {"scan_page": 118, "printed_page": 98, "section": "重点句子（扫描顺序异常）"}
+      ],
+      "patterns": ["正在+V+呢", "在+地点+V（进行）", "从……到……", "每+时间／量词+都", "什么时候+V", "一会儿（短时量）", "下个+时间"],
+      "evidence": ["……在哪儿？", "干什么？", "……什么时候……？", "我正在车站等公共汽车呢。", "你（正）在干什么呢？", "我从星期一到星期五每天都有课。", "从下个星期开始上电影课。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true,
+      "manual_reason": "Printed p98 is physically scan p118; do not use scan sequence as authority."
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "title": "你打算买什么样子",
+      "printed_start_page": 99,
+      "scan_start_page": 109,
+      "source_pages": [
+        {"scan_page": 112, "printed_page": 101, "section": "注意／有点儿与一点儿"},
+        {"scan_page": 119, "printed_page": 108, "section": "参考式、重点句子"}
+      ],
+      "patterns": ["打算+V", "什么样的／什么颜色的（的名词化、省略中心名词）", "有点儿+形容词", "形容词+一点儿", "有没有+N／A不A", "挺+形容词", "要是……（条件）", "每+量词"],
+      "evidence": ["……怎么样？", "……多少钱？", "你打算买什么样子的？", "你喜欢什么颜色的？", "这个手机屏幕有点儿小，有没有大一点儿？", "要是你买两件，每件350块，怎么样？", "我要两件，一件白的，一件蓝的。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true,
+      "manual_reason": "OCR alternates 样子／样子的 and drops 的 in the last color phrase; verify printed scan."
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "title": "祝你生日快乐",
+      "printed_start_page": 109,
+      "scan_start_page": 120,
+      "source_pages": [
+        {"scan_page": 128, "printed_page": 117, "section": "参考句式"},
+        {"scan_page": 129, "printed_page": 118, "section": "重点句子"}
+      ],
+      "patterns": ["祝+人+祝愿", "打算+怎么+V", "先……然后……", "给+人+打电话", "在+地点+对面", "送给+人", "为+人+准备", "多+V+一点儿", "听你的"],
+      "evidence": ["这是送给……", "祝你生日快乐！", "这是为你准备……", "我打算先给爸爸妈妈打个电话，然后几个朋友一起吃饭。", "那个饭店就在学校南门对面。", "这是送给你生日礼物。", "你们多吃一点儿。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-15",
+      "title": "我可以试试吗",
+      "printed_start_page": 119,
+      "scan_start_page": 130,
+      "source_pages": [
+        {"scan_page": 139, "printed_page": 128, "section": "重点句子／交际练习"}
+      ],
+      "patterns": ["可以／能+V", "动词重叠（试试、看看、查查）", "只有+N", "再+V", "别的（的名词化）", "A不A正反问", "一定+V／形容词", "为什么疑问", "连动：去+地点+V", "就+结果／时间"],
+      "evidence": ["这件衣服我可以试试吗？", "只有这一种颜色。", "算了，我再看看别的吧。", "这件衣服合适不合适？", "这件您穿一定很合适。", "我要去机场接朋友。", "我上网查查就明白了。"],
+      "source_status": "sentence_inferred_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-16",
+      "title": "来一斤饺子",
+      "printed_start_page": 129,
+      "scan_start_page": 140,
+      "source_pages": [
+        {"scan_page": 149, "printed_page": 138, "section": "重点句子／点菜活动"}
+      ],
+      "patterns": ["离+地点+近／远", "啦列举语气", "都+谓语", "不是……吗？确认／反问", "来+数量+食物（点菜）", "有+人／物", "几位数量问句", "什么+名词"],
+      "evidence": ["这个食堂离教室很近。", "包子啦，面条儿啦，饺子啦，味道都不错。", "你不是南方人吗？", "师傅，来一份蘑菇，半份鸡肉，二两米饭。", "同学，这儿有人吗？", "欢迎光临！您几位？", "要什么馅儿？"],
+      "source_status": "sentence_inferred_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-17",
+      "title": "喝茶还是喝咖啡",
+      "printed_start_page": 139,
+      "scan_start_page": 150,
+      "source_pages": [
+        {"scan_page": 154, "printed_page": 143, "section": "参考句式"},
+        {"scan_page": 160, "printed_page": 149, "section": "重点句子"}
+      ],
+      "patterns": ["（是）A还是B选择问句", "会+V／会不会", "怎么走", "从+地点+往+方向", "看起来+形容词", "就／都／可以"],
+      "evidence": ["（是）……还是……？", "A：你会……吗？B：会／不会。", "你们是坐车还是骑车来？", "从学校南门往左走。", "看起来就好吃。", "随便，都可以。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-18",
+      "title": "今天我七点半就起床了",
+      "printed_start_page": 150,
+      "scan_start_page": 161,
+      "source_pages": [
+        {"scan_page": 169, "printed_page": 158, "section": "参考句式"},
+        {"scan_page": 170, "printed_page": 159, "section": "重点句子"}
+      ],
+      "patterns": ["一般+都", "不+V作主语", "对+对象+不好", "得+V（必要）", "就／才时间对比", "以前／以后", "差不多／已经／还", "多长时间", "有的……有的……"],
+      "evidence": ["……多长时间？", "来中国以前……，来中国以后……", "开始时候……，现在……", "我一般都不吃早饭。", "不吃早饭对身体不好。", "你这个习惯得改改。", "今天七点半就起床了，以前九点才起床。", "有的习惯了，有的还不太习惯。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-19",
+      "title": "你又熬夜了",
+      "printed_start_page": 160,
+      "scan_start_page": 171,
+      "source_pages": [
+        {"scan_page": 180, "printed_page": 169, "section": "重点句子"}
+      ],
+      "patterns": ["V了（完成）", "句末了（变化）", "又+V+了", "时量+了", "让+人+V", "会+V", "一定+V"],
+      "evidence": ["我给你发了微信，你怎么没回？", "你又熬夜了。", "我们等了你二十分钟了。", "不好意思，让你们久等了。", "你一定会喝醉。"],
+      "source_status": "sentence_inferred_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-20",
+      "title": "我想请一天假",
+      "printed_start_page": 170,
+      "scan_start_page": 181,
+      "source_pages": [
+        {"scan_page": 190, "printed_page": 179, "section": "重点句子"}
+      ],
+      "patterns": ["想+V", "可以吗", "哪儿+形容词／哪儿不舒服", "好像+小句", "如果……的话，再……", "还+能", "最好+V", "跟+人+一起+V", "连动句", "了"],
+      "evidence": ["明天我想请一天假，可以吗？", "你哪儿不舒服？", "我好像感冒了。", "明天如果还发烧的话，再来打一针。", "我还能去上课吗？", "你最好在家休息休息。", "我不能跟你一起去看电影了。"],
+      "source_status": "sentence_inferred_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-21",
+      "title": "每个人要说多长时间",
+      "printed_start_page": 180,
+      "scan_start_page": 191,
+      "source_pages": [
+        {"scan_page": 199, "printed_page": 188, "section": "重点句子"}
+      ],
+      "patterns": ["每+量词+名词", "要+V", "多长时间", "这么+形容词", "对……来说", "一定+形容词", "怎么办", "因为……所以……", "提前+时量", "就", "还是", "了"],
+      "evidence": ["每个人说一段话。", "口试每个人要说多长时间？", "你这么用功，对你来说一定不难。", "那怎么办呢？", "我们担心路上堵车，所以提前一个小时就出门了。", "还是迟到了十几分钟。", "因为半路上车坏了，所以我们迟到了。"],
+      "source_status": "sentence_inferred_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-22",
+      "title": "明天你下了课去哪儿",
+      "printed_start_page": 189,
+      "scan_start_page": 200,
+      "source_pages": [
+        {"scan_page": 208, "printed_page": 197, "section": "重点句子"}
+      ],
+      "patterns": ["V了+O（下了课）", "别+V", "什么+名词反问", "快+V+了／V死了", "V了……就……", "哪儿有……反问", "这么+形容词", "……以前", "吧／呀句末语气"],
+      "evidence": ["我们开学一个星期了。", "明天下了课你去哪儿？", "你别忘了。", "你开什么玩笑？", "我快饿死了。", "早上起了床就来上课了，哪儿有时间吃早饭？", "天气这么热，打什么篮球呀？", "吃饭以前唱卡拉OK吧。"],
+      "source_status": "sentence_inferred_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-23",
+      "title": "假期有什么打算",
+      "printed_start_page": 198,
+      "scan_start_page": 209,
+      "source_pages": [
+        {"scan_page": 218, "printed_page": 207, "section": "重点句子"}
+      ],
+      "patterns": ["快要+V+了", "得+V（必须）", "对+对象+感兴趣", "打算+V", "时量+待", "形容词+极了", "还没+V", "可能……也可能……"],
+      "evidence": ["快要放暑假了，假期你有什么打算？", "我得回一趟老家。", "我对中国历史很感兴趣。", "你打算在西安待多长时间？", "风景漂亮极了。", "我还没决定，可能去内蒙古，也可能去西安。"],
+      "source_status": "sentence_inferred_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-24",
+      "title": "学得怎么样",
+      "printed_start_page": 209,
+      "scan_start_page": 220,
+      "source_pages": [
+        {"scan_page": 227, "printed_page": 216, "section": "参考句式／V+得"},
+        {"scan_page": 228, "printed_page": 217, "section": "重点句子"}
+      ],
+      "patterns": ["V+得+形容词", "V+得怎么样", "的名词化+都", "到结果补语（回到）", "都……了", "不+V条件省略", "真／挺+形容词", "帮+人+V"],
+      "evidence": ["参考句式：V.+得……", "你学得怎么样？", "你记得真清楚。", "昨天坐火车回到北京，都夜里三点了。", "你不说，我都忘了。", "拍得不好的都删了。", "他帮我解决了很多问题。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-25",
+      "title": "准备好了吗",
+      "printed_start_page": 218,
+      "scan_start_page": 229,
+      "source_pages": [
+        {"scan_page": 237, "printed_page": 226, "section": "重点句子"}
+      ],
+      "patterns": ["结果补语好／干净／清楚", "吗问句", "什么列举（杯子、碗什么）", "都", "会+V", "好几个+名词", "V得更+形容词", "该+V+了", "为+对象+V", "也+没+V", "时量"],
+      "evidence": ["明天晚上的聚餐准备好了吗？", "杯子、碗什么我都洗干净了。", "李军说他会带好几个朋友来呢。", "他没说清楚。", "对方打得更好。", "你的手机该充值了。", "可以用微信为手机充值。", "我们等了半天，张红也没来。"],
+      "source_status": "sentence_inferred_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-ii:lesson-01",
+      "title": "订一张机票",
+      "printed_start_page": 1,
+      "scan_start_page": 12,
+      "source_pages": [
+        {"scan_page": 21, "printed_page": 10, "section": "参考句式／常用句子"},
+        {"scan_page": 22, "printed_page": 11, "section": "常用句子续页（需核对）"}
+      ],
+      "patterns": ["想／要+V", "订+数量+机票", "从……到……", "A还是B选择问", "……可以吗？", "需要+N／V", "一直+状态", "会不会+V", "是否+V", "打八折／打折", "几点起飞／到达", "正点／晚点"],
+      "evidence": ["……可以吗？", "……还是……？", "我想订一张从北京到上海的机票。", "你要头等舱还是经济舱？", "订票时需要护照吗？", "飞机会不会晚点？"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true,
+      "manual_reason": "OCR sees only two common sentences on scan p21; verify continuation on scan p22."
+    },
+    {
+      "lesson_key": "boya-elementary-ii:lesson-02",
+      "title": "您有房子出租，是吗",
+      "printed_start_page": 12,
+      "scan_start_page": 23,
+      "source_pages": [
+        {"scan_page": 26, "printed_page": 15, "section": "交际练习／租房句型"},
+        {"scan_page": 30, "printed_page": 19, "section": "综合练习／对话框架"},
+        {"scan_page": 33, "printed_page": 22, "section": "常用句子"}
+      ],
+      "patterns": ["有+N+出租，是吗？", "离+地点+近／远", "A不A（远不远）", "A比B+形容词", "A和B比……多了", "方位词：里、周围、附近", "可以+V（看房）", "如果……（条件）", "对+对象+满意", "和+人+一起+V", "每个月+金额"],
+      "evidence": ["您那儿有房子出租吗？", "公寓离地铁站远不远？", "这套公寓里有什么？", "公寓周围有什么？", "房租比别的地方便宜多了。", "我对这套房子很满意。", "如果觉得房租贵，你可以找一个人合租。"],
+      "source_status": "sentence_inferred_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-ii:lesson-03",
+      "title": "我丢了一个钱包",
+      "printed_start_page": 23,
+      "scan_start_page": 34,
+      "source_pages": [
+        {"scan_page": 41, "printed_page": 30, "section": "综合练习／寻物启事"},
+        {"scan_page": 42, "printed_page": 31, "section": "常用句子（OCR标题误读）"},
+        {"scan_page": 43, "printed_page": 32, "section": "常用句子续页"}
+      ],
+      "patterns": ["V了（丢了）", "好像+小句", "可能+小句", "在+地点+V", "V的时候", "穿着+衣物（着状态）", "里面有+数量／物品", "左右约数", "先+V+找找", "怎么和……联系", "可以+V"],
+      "evidence": ["我的钱包好像丢了。", "我的钱包可能是在跑步的时候丢。", "钱包里面有五十块钱左右。", "钱包里有我的照片。我黄头发，穿着一件蓝色衬衫。", "我们先去操场找找吧。", "拾到者怎么和你联系？"],
+      "source_status": "sentence_inferred_ocr_needs_manual",
+      "needs_manual": true,
+      "manual_reason": "‘常用句子’ heading is OCRed as 南用句子; verify title and wording from image."
+    },
+    {
+      "lesson_key": "boya-elementary-ii:lesson-04",
+      "title": "我在中国生活",
+      "printed_start_page": 33,
+      "scan_start_page": 44,
+      "source_pages": [
+        {"scan_page": 52, "printed_page": 41, "section": "活动提示"},
+        {"scan_page": 53, "printed_page": 42, "section": "参考句式／常用句子"}
+      ],
+      "patterns": ["在+地点+生活", "A没有B那么+形容词", "A和B一样", "像……一样", "有的……有的……", "一……就……", "一年比一年……", "比较+形容词", "就+动词（强调）"],
+      "evidence": ["A没有B那么……", "A和B一样", "像……一样", "有……有的……", "一年比一年……", "我们国家的中国菜没有这儿的地道。", "我和你一样，也爱吃汉堡包。", "我一去饭馆儿就点麻婆豆腐。", "开车人一年比一年多了。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-ii:lesson-05",
+      "title": "在饭馆儿点菜",
+      "printed_start_page": 43,
+      "scan_start_page": 54,
+      "source_pages": [
+        {"scan_page": 62, "printed_page": 51, "section": "参考句式／点菜"},
+        {"scan_page": 63, "printed_page": 52, "section": "常用句子"}
+      ],
+      "patterns": ["可以／想+V", "一起+V", "又……又……", "A比B+形容词", "A没有B这么+形容词", "点儿+N／有点儿", "还要／再来+N", "最主要的是……", "对+对象+满意", "都", "给+人+物／打包"],
+      "evidence": ["又……又……", "A比B+形容词", "A没有B+形容词", "最主要是", "学校附近饭馆儿不错，又好吃又干净。", "食堂做没有这儿这么好吃。", "我对这家饭馆儿的环境和价钱都很满意。", "我想买单，再麻烦您给我一个打包盒。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true,
+      "manual_reason": "Reference page OCR drops some punctuation and the word 这么; visually verify exact patterns."
+    },
+    {
+      "lesson_key": "boya-elementary-ii:lesson-06",
+      "title": "参加学校社团",
+      "printed_start_page": 53,
+      "scan_start_page": 64,
+      "source_pages": [
+        {"scan_page": 72, "printed_page": 61, "section": "参考句式／报名对话"},
+        {"scan_page": 73, "printed_page": 62, "section": "常用句子"}
+      ],
+      "patterns": ["不但……而且……", "在……上写上……", "为了……", "……就行了", "V着／喝着茶写字", "希望+V", "带上+N", "可以+V", "报名参加+活动", "欢迎+人+参加"],
+      "evidence": ["不但……而且……", "在……上写上……", "为了……", "……就行了", "参加社团不但可以交朋友，而且还可以练习汉语。", "我希望喝着茶写汉字。", "带上学生证去报名就行了。", "你在报名表上写上名字和专业就行了。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-ii:lesson-07",
+      "title": "去动物园",
+      "printed_start_page": 63,
+      "scan_start_page": 74,
+      "source_pages": [
+        {"scan_page": 82, "printed_page": 71, "section": "参考句式／常用句子"}
+      ],
+      "patterns": ["离……不远", "重叠形容词+的（胖胖的等）", "又……又……", "再说", "虽然……但是……", "比字句", "V得+状态（挤得满满）", "一直+V", "就是+地点／判断", "该+V+了", "V了就……"],
+      "evidence": ["离……不远", "adj.+adj.+的", "又……又……", "再说", "虽然……但是……", "去动物园人一定比别的时候都多。", "你看，地铁上挤得满满。", "一直往前走就是大熊猫馆。", "该吃午饭了。", "那儿离这儿不远，走路十分钟就到了。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true,
+      "manual_reason": "OCR has 胖胖／胖胖的 and 挤得满满 variants; verify printed image."
+    },
+    {
+      "lesson_key": "boya-elementary-ii:lesson-08",
+      "title": "一场篮球比赛",
+      "printed_start_page": 72,
+      "scan_start_page": 83,
+      "source_pages": [
+        {"scan_page": 92, "printed_page": 81, "section": "参考句式／常用句子"}
+      ],
+      "patterns": ["如果……的话", "像……一样", "只好+V", "给+对象+加油", "都……了", "为了……", "好不容易（才）……", "起晚了／拿起+N", "一定+形容词"],
+      "evidence": ["如果……的话", "像……一样", "只好", "给……加油", "都……了", "为了……", "好不容易（才）", "我挤不上去公共汽车，只好急忙打出租车了。", "我们好不容易才赢了这场比赛。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-ii:lesson-09",
+      "title": "糟糕的一天",
+      "printed_start_page": 82,
+      "scan_start_page": 93,
+      "source_pages": [
+        {"scan_page": 96, "printed_page": 85, "section": "听说句子／结果可能补语"},
+        {"scan_page": 100, "printed_page": 89, "section": "综合练习"},
+        {"scan_page": 101, "printed_page": 90, "section": "常用句子"}
+      ],
+      "patterns": ["又……又……／又……了", "结果补语：摔坏、看不清楚、写不下来", "不小心+V", "一下子", "没+V／V不下来、V不清楚（可能补语）", "V来V去", "V的时候／上课时", "忘了+V", "怎么办", "真是+名词／形容词"],
+      "evidence": ["我不小心摔倒了，眼镜也一下子摔坏了。", "我眼睛近视，没戴眼镜，看不清楚。", "上课时我发现自己忘了带笔。", "老师说得太快，我写不下来。", "我看不清楚黑板上的字。", "坐公交车没有零钱，怎么办？", "今天真是糟糕一天！"],
+      "source_status": "sentence_inferred_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-ii:lesson-10",
+      "title": "你的旅行怎么样",
+      "printed_start_page": 91,
+      "scan_start_page": 102,
+      "source_pages": [
+        {"scan_page": 111, "printed_page": 100, "section": "参考句式／常用句子"}
+      ],
+      "patterns": ["V+着（状态）", "记不清楚／找不到／听不懂（可能补语）", "（往）+方向+拐／走", "一边……一边……", "V过／去过", "可能+小句", "所以因果", "才+V", "急得+小句", "V来V去"],
+      "evidence": ["V+着", "记不清楚", "找不到", "听不懂", "（往）……拐", "一边……一边……", "我家墙上贴着很多旅行时照的照片。", "我记不清楚了，可能是2018年去的那儿。", "我一边说，一边做动作，服务员才明白我要‘水饺’。", "我找不到宾馆了，急得我在路上走来走去。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-ii:lesson-11",
+      "title": "做一个家常菜",
+      "printed_start_page": 101,
+      "scan_start_page": 112,
+      "source_pages": [
+        {"scan_page": 121, "printed_page": 110, "section": "参考句式／做菜对话"},
+        {"scan_page": 122, "printed_page": 111, "section": "常用句子"}
+      ],
+      "patterns": ["V起来（吃起来／说起来／做起来）", "先……再……最后……", "又……又……", "一……就……", "把+食材+V", "V成+结果", "V着（点着）", "再+V", "一会儿", "就+结果"],
+      "evidence": ["V起来", "先……再……最后……", "又……又……", "难不难，一做就知道了。", "把土豆去皮，切成丝。", "把火点着，把锅放在火上。", "先放土豆丝，再放辣椒丝，最后加点儿盐。", "再炒一会儿就熟了。", "说起来容易，做起来难。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true,
+      "manual_reason": "OCR misreads 贵／责 and some punctuation; verify source image."
+    },
+    {
+      "lesson_key": "boya-elementary-ii:lesson-12",
+      "title": "搬进学校的宿舍",
+      "printed_start_page": 112,
+      "scan_start_page": 123,
+      "source_pages": [
+        {"scan_page": 131, "printed_page": 120, "section": "参考句式／搬家活动"},
+        {"scan_page": 132, "printed_page": 121, "section": "常用句子"}
+      ],
+      "patterns": ["趋向补语：搬进、拿出、放上、搬走", "把+物品+V", "把+物品+放在+处所", "在……里／上／旁边", "如果……可以……", "放不下（可能补语）", "看起来+形容词", "一边……一边……", "不但……而且……", "有个+名词"],
+      "evidence": ["不但……而且……", "又……又……", "看起来……", "一边……一边……", "如果一个纸箱子放不下，可以放在另一个箱子里。", "搬家公司帮我把这些东西搬走。", "离学校东门不远有个小公园。", "我可以一边散步一边练习中文。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true,
+      "manual_reason": "OCR has 纸箱子／纸稍子 and 箱子／和子 errors; verify all nouns from image."
+    },
+    {
+      "lesson_key": "boya-elementary-ii:lesson-13",
+      "title": "我叫‘不紧张’",
+      "printed_start_page": 122,
+      "scan_start_page": 133,
+      "source_pages": [
+        {"scan_page": 141, "printed_page": 130, "section": "参考句式／常用句子"},
+        {"scan_page": 142, "printed_page": 131, "section": "常用句子续页"}
+      ],
+      "patterns": ["V不出来（可能补语）", "adj.+得+结果／程度", "越……越……", "连……都……", "不管……都……", "为了……", "一遍一遍+V", "看起来+形容词", "连……都忘了怎么说"],
+      "evidence": ["V+不出来", "adj.+得……", "越……越……", "连……都……", "不管……都……", "我紧张得连‘你好’都说不出来。", "越紧张，越不知道该怎么说。", "她不管遇到什么事情，都不紧张。", "最重要的是，一遍一遍告诉自己，我叫‘不紧张’。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-ii:lesson-14",
+      "title": "实现理想",
+      "printed_start_page": 132,
+      "scan_start_page": 143,
+      "source_pages": [
+        {"scan_page": 149, "printed_page": 138, "section": "综合练习／参考词语"},
+        {"scan_page": 150, "printed_page": 139, "section": "参考句式／常用句子"}
+      ],
+      "patterns": ["其实……", "为了……", "只要……就……", "V下来（坚持下来）", "专门+V", "V过（经历）", "就+结果", "因为……所以……", "当+职业", "必须／一定要+V"],
+      "evidence": ["其实……", "为了……", "V下来", "我专门学过唱歌，但后来觉得太麻烦了，就没坚持下来。", "只要坚持努力，就可以成功。", "为了和小孩子沟通，你应该多花时间学习中文。", "怎么做才能实现理想呢？只要……，就……。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true,
+      "manual_reason": "OCR reads 其实 as 其买 in the reference label; verify from image."
+    },
+    {
+      "lesson_key": "boya-elementary-ii:lesson-15",
+      "title": "我喜欢的咖啡厅",
+      "printed_start_page": 141,
+      "scan_start_page": 152,
+      "source_pages": [
+        {"scan_page": 159, "printed_page": 148, "section": "活动对话"},
+        {"scan_page": 160, "printed_page": 149, "section": "参考句式／常用句子"}
+      ],
+      "patterns": ["V+一下儿", "如果……就……", "又……又……", "V+着", "越来越……", "……就可以了", "不但……而且……", "把+物+放在……", "让+人+形容词", "可以+V"],
+      "evidence": ["V+一下儿", "如果……就……", "又……又……", "V+着", "越来越……", "……就可以了", "这儿的音乐让人很放松。", "这儿咖啡不但种类多，而且味道好。", "把糖放在盘子里一起拿过来好吗？", "现在生活真是越来越方便了。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-ii:lesson-16",
+      "title": "母校聚会",
+      "printed_start_page": 150,
+      "scan_start_page": 161,
+      "source_pages": [
+        {"scan_page": 166, "printed_page": 155, "section": "参考句式"},
+        {"scan_page": 167, "printed_page": 156, "section": "常用句子"}
+      ],
+      "patterns": ["除了……以外", "别+V", "一边……一边……", "真是太……了", "一……就……", "时（上大学时）", "还是+名词／形容词", "像……那样", "V后（见面后）", "有点儿+形容词", "会+V", "可以+V"],
+      "evidence": ["除了……以外", "别+V", "一边……一边……", "真是太……了", "我一回到母校，就会有一种熟悉的感觉。", "我记得那时我经常一边喝咖啡，一边看书。", "你现在还像上大学时候那样每天晚上跑步吗？", "别担心，大家会找到共同话题。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true
+    },
+    {
+      "lesson_key": "boya-elementary-ii:lesson-17",
+      "title": "我的假期",
+      "printed_start_page": 159,
+      "scan_start_page": 168,
+      "source_pages": [
+        {"scan_page": 176, "printed_page": 165, "section": "参考式"},
+        {"scan_page": 177, "printed_page": 166, "section": "常用句子"}
+      ],
+      "patterns": ["马上就要+V+了", "可得+V", "连着+V／连着放", "把+宾语+V个遍", "一个一个地+V", "一方面……另一方面……", "不够+人／时间+V", "可以+V", "V+时量", "多么+形容词+啊"],
+      "evidence": ["连着+V", "把……玩儿个遍", "……地+V", "V+一下儿", "一方面……另一方面……", "黄金周马上就要到了。", "这么难得的假期，我可得痛快地玩儿一下儿。", "我打算把所有的省玩儿个遍。", "时间恐怕不够你一个省一个省地看。", "去山东不错，一方面，离北京不太远；另一方面，那里很好玩儿。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true,
+      "manual_reason": "OCR reads 连着 as 连看 and drops 的／啊 in examples; verify image."
+    },
+    {
+      "lesson_key": "boya-elementary-ii:lesson-18",
+      "title": "去打工",
+      "printed_start_page": 169,
+      "scan_start_page": 178,
+      "source_pages": [
+        {"scan_page": 186, "printed_page": 175, "section": "面试准备活动"},
+        {"scan_page": 187, "printed_page": 176, "section": "参考式／常用句子"}
+      ],
+      "patterns": ["虽然……但是……", "被动句（会被问……）", "只要……就……", "一边……一边……", "从来没+V", "要是……非……不可", "V得很", "应该+V", "最好+V", "的时候", "一件一件地+V", "对……来说", "同时+V"],
+      "evidence": ["虽然……但是……", "被动句", "只要……就……", "一边……一边……", "从来没+V", "要是想做好这个工作，非学习几年不可。", "虽然需要很长时间，但是我有信心成功。", "我从来没做过这样工作。", "面试的时候，会被问一些问题。", "只要我愿意花时间，我就可以做好。"],
+      "source_status": "explicit_section_ocr_needs_manual",
+      "needs_manual": true,
+      "manual_reason": "OCR drops or corrupts some punctuation in the reference labels; verify image."
+    }
+  ]
+}

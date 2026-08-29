@@ -1,0 +1,81 @@
+{
+  "schema_version": "boya-l1-retrospective-storyboard-v1",
+  "manifest_type": "retrospective_storyboard",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-01",
+  "offering_id": "2026-fall",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_id": "lesson-01",
+  "retrospective_not_generation_input": true,
+  "authority_basis": {
+    "status": "department_chair_approved_pptx",
+    "approval_record": "20-approved/lesson-01-pptx-approval-record.md",
+    "pptx": [
+      {
+        "deck": "online",
+        "label": "在线预习",
+        "path": "lessons/boya-quasi-intermediate-i/lesson-01/20-approved/pptx/lesson-01-在线预习.pptx",
+        "slides": 72,
+        "sha256": "7c2c62d4f2d55677181822610524c3fc49a963e5a0bfa042274ab629980bd900",
+        "bytes": 21626344
+      },
+      {
+        "deck": "face_to_face",
+        "label": "实体课",
+        "path": "lessons/boya-quasi-intermediate-i/lesson-01/20-approved/pptx/lesson-01-实体课.pptx",
+        "slides": 51,
+        "sha256": "c476cf51f63f75bc6d9afe4886b6df6a0c38d90e8a90d73e5649160c97b545e1",
+        "bytes": 71806730
+      }
+    ]
+  },
+  "source_scope": {
+    "canonical_source": "00-source/canonical-source.json",
+    "source_extraction": "00-source/source-extraction-draft.json",
+    "allowed_source_refs": [
+      "00-source/source-extraction-draft.json#sections.common_expressions",
+      "00-source/source-extraction-draft.json#sections.comprehensive_practice",
+      "00-source/source-extraction-draft.json#sections.listening_sentences;00-source/canonical-source.json#audio_map[track_label=1-3]",
+      "00-source/source-extraction-draft.json#sections.listening_sentences;00-source/canonical-source.json#audio_map[track_label=1-4]",
+      "00-source/source-extraction-draft.json#sections.listening_sentences;00-source/canonical-source.json#audio_map[track_label=1-5]",
+      "00-source/source-extraction-draft.json#sections.listening_sentences;00-source/canonical-source.json#audio_map[track_label=1-6]",
+      "00-source/source-extraction-draft.json#sections.listening_sentences;00-source/canonical-source.json#audio_map[track_label=1-7]",
+      "00-source/source-extraction-draft.json#sections.listening_sentences;00-source/canonical-source.json#audio_map[track_label=1-8]",
+      "00-source/source-extraction-draft.json#sections.short_text_1",
+      "00-source/source-extraction-draft.json#sections.short_text_2",
+      "00-source/source-extraction-draft.json#sections.short_text_3",
+      "00-source/source-extraction-draft.json#sections.vocabulary",
+      "00-source/source-extraction-draft.json#sections.vocabulary_comprehension;00-source/canonical-source.json#audio_map[track_label=1-2]"
+    ],
+    "cross_textbook_refs": []
+  },
+  "outputs": {
+    "storyboard_csv": {
+      "path": "10-design/storyboard/lesson-01-ppt-storyboard-retrospective.csv",
+      "sha256": "7f76459d82ee8b3e1a3efba5164750a85240b8d744ca093b6123f8711267eec5",
+      "bytes": 63643,
+      "rows": 123
+    },
+    "visual_storyboard_md": {
+      "path": "10-design/storyboard/lesson-01-visual-storyboard-retrospective.md",
+      "sha256": "4c4caa78b1f6cefe7ab01c0aba37bc73dd2a44f82d0a9026a69b2166cf16da10",
+      "bytes": 3279
+    }
+  },
+  "qa_scope": [
+    "slide_text_extraction",
+    "speaker_notes_extraction",
+    "printed_page_marker_extraction",
+    "audio_relationship_extraction",
+    "image_relationship_extraction",
+    "layout_observation"
+  ],
+  "not_claimed": [
+    "source_semantic_approval",
+    "teacher_manual_approval",
+    "support_material_approval",
+    "powerpoint_manual_playback",
+    "teacher_rehearsal",
+    "40-release_delivery"
+  ],
+  "generated_at": "2026-08-29"
+}

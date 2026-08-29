@@ -1,0 +1,17 @@
+{
+  "schema_version": "listening-exercise-contract-v1.0",
+  "lesson_id": "lesson-06",
+  "lesson_number": 6,
+  "title": "大岛参加了学校的合唱团",
+  "status": "ready_pending_semantic_playback",
+  "approved": false,
+  "exercises": [
+    {"exercise_id":"L06-E01","order":1,"section_id":"vocabulary","source_heading_verbatim":"词语","textbook_printed_pages":[51,52],"audio_tracks":["6-1"],"item_count":25,"coverage_refs":["vocabulary.entries[1..25]"],"answer_status":"not_applicable_vocab_pronunciation","semantic_status":"pending_teacher_playback"},
+    {"exercise_id":"L06-E02","order":2,"section_id":"vocabulary_comprehension","source_heading_verbatim":"一、听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读","textbook_printed_pages":[52],"audio_tracks":["6-2"],"item_count":5,"coverage_refs":["vocabulary_comprehension.groups[0]"],"answer_status":"answers_checked_against_answer_pdf","semantic_status":"pending_teacher_playback"},
+    {"exercise_id":"L06-E03","order":3,"section_id":"listening_sentences","source_heading_verbatim":"听句子，判断对错","textbook_printed_pages":[53],"audio_tracks":["6-3"],"item_count":10,"coverage_refs":["listening_sentences.exercise_6_3.items[1..10]"],"answer_status":"answers_checked_against_answer_pdf","semantic_status":"pending_teacher_playback"},
+    {"exercise_id":"L06-E04","order":4,"section_id":"short_text_1","source_heading_verbatim":"短文一　大岛的业余爱好","textbook_printed_pages":[53,54],"audio_tracks":["6-4"],"item_count":6,"coverage_refs":["short_text_1.exercises.first_listen.items[1..2]","short_text_1.exercises.second_listen.items[1..4]"],"answer_status":"open_presentational_task_no_unique_answer","semantic_status":"pending_teacher_playback"},
+    {"exercise_id":"L06-E05","order":5,"section_id":"short_text_2","source_heading_verbatim":"短文二　一次偶然事件让她进入了合唱团","textbook_printed_pages":[54,55],"audio_tracks":["6-5"],"item_count":7,"coverage_refs":["short_text_2.exercises.first_listen.items[1..2]","short_text_2.exercises.second_listen.items[1..3]"],"answer_status":"open_presentational_task_no_unique_answer","semantic_status":"pending_teacher_playback"},
+    {"exercise_id":"L06-E06","order":6,"section_id":"short_text_3","source_heading_verbatim":"短文三　参加合唱团的得与失","textbook_printed_pages":[56,57],"audio_tracks":["6-6"],"item_count":5,"coverage_refs":["short_text_3.exercises.first_listen.items[1..2]","short_text_3.exercises.second_listen.items[1..3]"],"answer_status":"open_presentational_task_no_unique_answer","semantic_status":"pending_teacher_playback"}
+  ],
+  "validation": {"contract_validator":"pending local validator availability","exercise_count":6,"missing_audio_tracks":[],"notes":["6-1 is the vocabulary pronunciation track and is retained as an exercise-level record.","The printed source and transcript use 大岛; inventory OCR title 大圣 is retained as a historical discrepancy, and Adam confirmed 大岛 on 2026-08-29."]}
+}

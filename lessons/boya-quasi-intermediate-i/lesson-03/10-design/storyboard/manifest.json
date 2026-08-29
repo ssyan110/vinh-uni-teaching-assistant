@@ -1,0 +1,53 @@
+{
+  "schema_version": "ppt-preflight-v1",
+  "manifest_type": "lesson-ppt-preflight",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-03",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_id": "lesson-03",
+  "title": "我对学中文越来越有兴趣",
+  "status": "draft_authorized_by_adam_2026-08-29_with_blockers",
+  "candidate_page_blocks": 10,
+  "source_refs_csv": "lessons/boya-quasi-intermediate-i/lesson-03/10-design/storyboard/lesson-03-source-refs.csv",
+  "preflight_report": "lessons/boya-quasi-intermediate-i/lesson-03/10-design/storyboard/lesson-03-ppt-preflight.md",
+  "inputs": {
+    "canonical_source_sha256": "821f8009e7ec2b53d9f38b7adcb2421f0012c4730b61cc8db6a08bf2c59c5aa1",
+    "audio_manifest_sha256": "a1ed9e45e39cc0707864ce4e731fe32787e4bc04856089886a383e52fa7f06f8",
+    "teaching_design_sha256": "2893f712eb3f1c4356725cde5fa42f47bfa335f9c04e7380f9aaec1ef56bb8a8",
+    "image_manifest_sha256": "2e3695e40c07f86f5f63ae09fd5a672ed0f152b26fbc27701f39f62a24470107",
+    "visual_brief_sha256": "e929b886dcb05b0f6e2b3ba268edd7083895975514107ad4373c77726b5290b8"
+  },
+  "assets": {
+    "physical_candidate_assets": 28,
+    "missing_physical_assets": 5,
+    "missing_asset_ids": [
+      "L03-E03-2-FOOD-B",
+      "L03-E03-2-STUDY-A",
+      "L03-E03-2-STUDY-B",
+      "L03-E03-2-STUDY-C",
+      "L03-E03-2-LIFE-D"
+    ],
+    "reuse_shared_divider": true,
+    "asset_entry_status": "candidate_pending_visual_review"
+  },
+  "gates": {
+    "source_approval": "recorded_adam_visual_source_approval_but_audio_semantic_pending",
+    "online_face_boundary": "confirmed_by_adam_2026-08-29_same_structure_as_lesson_01",
+    "formal_contact_hours": "pending_adam",
+    "teacher_manual": "draft_only",
+    "support_materials": "draft_only",
+    "ppt_storyboard": "preflight_only",
+    "pptx": "draft_in_progress"
+  },
+  "blockers": [
+    "3-2五个听词图片候选尚未生成。",
+    "3-1至3-6音频教师逐段语义听核待完成。",
+    "线上／实体边界与正式实体课时待Adam确认。",
+    "教师手册与配套材料仍为草案，不得进入approved或release。"
+  ],
+  "do_not_generate": [
+    "不要覆盖20-approved或40-release；草稿只能写入10-design/pptx-draft。",
+    "不要创建20-approved或40-release文件。",
+    "不要从另一教材或archive补充内容。",
+    "不要为开放题捏造唯一答案。"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-pptx-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-07",
+  "mode": "face-to-face",
+  "title": "第七课《小张热爱登山》实体课",
+  "status": "draft_not_approved",
+  "builder_scope": "scripts/build_l23_pptx_drafts.js",
+  "draft_gate": "lesson-specific",
+  "source_sha256": "ba48b06a41851b95177b501ebbfeb5c99edbf52e7945360ea148b61cb2cfc471",
+  "layout_source": "boya-quasi-intermediate-i lesson-01 approved layout family",
+  "short_example_policy": "curated_short_sentences_max_24_hanzi_chars",
+  "short_text_policy": "textbook_listening_prompt_and_record_layout_no_full_text_copy",
+  "shared_assets": [
+    "lesson-01-cover-family-work-hobby.png",
+    "lesson-01-learning-path.png",
+    "divider-family.png",
+    "divider-work.png",
+    "divider-hobby.png",
+    "divider-comprehensive.png",
+    "symbolic-vocabulary.png",
+    "symbolic-listening.png",
+    "symbolic-sentence-pattern.png",
+    "oral-practice-divider.png",
+    "speaking-practice.png"
+  ],
+  "slide_count": 35,
+  "audio_tracks_embedded": [
+    "7-1",
+    "7-2",
+    "7-3",
+    "7-4",
+    "7-5",
+    "7-6"
+  ],
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/pptx-draft/face-to-face/lesson-07-实体课.pptx",
+    "sha256": "24ac81db2287a258998b086d9245075ac9e020692f0e0043abfa798024a62877",
+    "bytes": 44037256
+  },
+  "generated_at": "2026-08-29T16:33:52.475Z"
+}

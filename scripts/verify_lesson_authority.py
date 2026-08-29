@@ -28,8 +28,23 @@ AUTHORITY_ROOT = PROJECT_ROOT / CONFIG["authority_root"]
 RELEASE_ROOT = PROJECT_ROOT / CONFIG["release_root"]
 MANIFEST_PATH = AUTHORITY_ROOT / "lesson-manifest.json"
 LATEST_PATH = RELEASE_ROOT / "latest-release.json"
-PACKAGE_NAME = "第一课-教学资料"
+LEGACY_PACKAGE_NAME = "第一课-教学资料"
 RELEASE_ID_PATTERN = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,79}")
+
+
+def canonical_package_name(manifest: dict[str, Any]) -> str:
+    lesson_id = str(manifest.get("lesson_id", "lesson-01"))
+    match = re.fullmatch(r"lesson-(\d{2})", lesson_id)
+    if not match:
+        raise ValueError(f"authority manifest has invalid lesson_id: {lesson_id}")
+    return f"lesson-{match.group(1)}-教材包"
+
+
+def package_candidates(manifest: dict[str, Any]) -> list[str]:
+    names = [canonical_package_name(manifest)]
+    if manifest.get("textbook_id") == "boya-intermediate-i" and manifest.get("lesson_id") == "lesson-01":
+        names.append(LEGACY_PACKAGE_NAME)
+    return names
 
 
 def add_failure(failures: list[str], message: str) -> None:
@@ -104,13 +119,14 @@ def audit_release_zip(
     zip_path: Path | None,
     entries: list[dict[str, Any]],
     failures: list[str],
+    package_name: str = LEGACY_PACKAGE_NAME,
 ) -> str | None:
     if zip_path is None or not zip_path.is_file():
         add_failure(failures, "release ZIP is missing")
         return None
     zip_digest = sha256(zip_path)
     expected = {
-        f"{PACKAGE_NAME}/{entry['release_path']}": entry
+        f"{package_name}/{entry['release_path']}": entry
         for entry in entries
     }
     try:
@@ -121,7 +137,7 @@ def audit_release_zip(
                 add_failure(failures, "release ZIP contains duplicate entries")
             for name in names:
                 pure = PurePosixPath(name)
-                if pure.is_absolute() or ".." in pure.parts or pure.parts[:1] != (PACKAGE_NAME,):
+                if pure.is_absolute() or ".." in pure.parts or pure.parts[:1] != (package_name,):
                     add_failure(failures, f"release ZIP contains unsafe path: {name}")
             for name in sorted(set(expected) - set(names)):
                 add_failure(failures, f"release ZIP file is missing: {name}")
@@ -152,6 +168,7 @@ def audit_latest_release(
     actual_files: dict[str, Path],
     entries: list[dict[str, Any]],
     failures: list[str],
+    package_name: str,
 ) -> None:
     if latest is None or release_dir is None or zip_path is None:
         return
@@ -194,7 +211,7 @@ def audit_latest_release(
         declared[item["path"]] = item
 
     actual = {
-        f"{PACKAGE_NAME}/{relative}": path
+        f"{package_name}/{relative}": path
         for relative, path in actual_files.items()
     }
     for path in sorted(set(actual) - set(declared)):
@@ -250,6 +267,7 @@ def verify() -> dict[str, object]:
     release_dir = None
     zip_path = None
     package_dir = None
+    package_name = canonical_package_name(manifest)
     release_tree = None
     release_zip_sha256 = None
     actual_release_files: list[dict[str, object]] = []
@@ -268,7 +286,14 @@ def verify() -> dict[str, object]:
             relative_parts = release_dir.relative_to(RELEASE_ROOT.resolve()).parts
             if len(relative_parts) != 1 or not RELEASE_ID_PATTERN.fullmatch(relative_parts[0]):
                 add_failure(failures, "latest release path does not use one safe release id")
-            package_dir = release_dir / PACKAGE_NAME
+            for candidate_name in package_candidates(manifest):
+                candidate_dir = release_dir / candidate_name
+                if candidate_dir.is_dir():
+                    package_name = candidate_name
+                    package_dir = candidate_dir
+                    break
+            if package_dir is None:
+                package_dir = release_dir / package_name
         if zip_path is not None and release_dir is not None:
             if zip_path.parent.resolve() != RELEASE_ROOT.resolve():
                 add_failure(failures, "latest release ZIP is not directly under release root")
@@ -282,7 +307,7 @@ def verify() -> dict[str, object]:
         )
         if release_tree != release.get("tree_sha256"):
             add_failure(failures, "release tree hash mismatch")
-        release_zip_sha256 = audit_release_zip(zip_path, entries, failures)
+        release_zip_sha256 = audit_release_zip(zip_path, entries, failures, package_name)
         if release_zip_sha256 != release.get("zip_sha256"):
             add_failure(failures, "release ZIP hash mismatch")
 
@@ -296,6 +321,7 @@ def verify() -> dict[str, object]:
             actual_release_files,
             entries,
             failures,
+            package_name,
         )
 
     activity_root = AUTHORITY_ROOT / "activities"
@@ -312,7 +338,7 @@ def verify() -> dict[str, object]:
     if rehearsal.get("audio_playback_status") != "passed":
         delivery_blockers.append("PPTX audio playback is not recorded as passed")
     if rehearsal.get("status") != "passed":
-        delivery_blockers.append("300-minute teacher rehearsal is not passed")
+        delivery_blockers.append("approved contact-hour teacher rehearsal is not passed")
     if failures:
         delivery_blockers.append("authority or release integrity verification failed")
     delivery_status = "ready" if not delivery_blockers else "blocked"

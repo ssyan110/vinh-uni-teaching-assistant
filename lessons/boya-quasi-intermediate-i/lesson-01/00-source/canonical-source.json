@@ -91,6 +91,34 @@
       "duration_seconds": 72.359,
       "sha256": "0a4ccf7a4c2b47651b46e3c30eaef9f3a9cca9fa82413380b6582f6bb343c5f2",
       "textbook_page": "pending_section_mapping"
+    },
+    {
+      "track_label": "1-7",
+      "source_url": null,
+      "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-7.mp3",
+      "source_type": "local_recovered_audio",
+      "source_note": "教材印刷 P7 标示 1-7；不在当前 QR 落地页的 1-1 至 1-6 清单中。",
+      "download_status": "recovered_local",
+      "decode_status": "passed",
+      "bytes": 406125,
+      "duration_seconds": 45.851,
+      "sha256": "8436f27897869119956e107d8b391bdb6fa47b7fa338cf531b0a694c78e2cdcb",
+      "textbook_page": 7,
+      "semantic_status": "pending_teacher_listening"
+    },
+    {
+      "track_label": "1-8",
+      "source_url": null,
+      "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-8.mp3",
+      "source_type": "local_recovered_audio",
+      "source_note": "教材印刷 P8 标示 1-8；不在当前 QR 落地页的 1-1 至 1-6 清单中。",
+      "download_status": "recovered_local",
+      "decode_status": "passed",
+      "bytes": 696501,
+      "duration_seconds": 70.131,
+      "sha256": "359e19cbbcf9c950adc3787fb71870f58b4df1209a76b5b26d134599af12bdc9",
+      "textbook_page": 8,
+      "semantic_status": "pending_teacher_listening"
     }
   ],
   "content_inventory": {

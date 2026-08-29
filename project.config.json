@@ -5,16 +5,20 @@
   "course_title": "榮市大學華語聽說中級課程",
   "course_manifest": "course/course-manifest.json",
   "textbook_registry": "textbooks/registry.json",
+  "lesson_registry": "course/lesson-registry.json",
+  "lesson_key_format": "<textbook_id>:<lesson_id>",
   "active_context": {
     "offering_id": "2026-fall",
     "textbook_id": "boya-quasi-intermediate-i",
-    "lesson_id": "lesson-01"
+    "lesson_id": "lesson-01",
+    "lesson_key": "boya-quasi-intermediate-i:lesson-01"
   },
   "active_textbook_title": "《博雅汉语听说：准中级加速篇 I》",
   "lesson_count": 12,
   "lesson_catalog": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
   "lesson_collection_root": "lessons/boya-quasi-intermediate-i",
   "active_lesson": "lesson-01",
+  "active_lesson_key": "boya-quasi-intermediate-i:lesson-01",
   "font_policy": {
     "cjk": "KaiTi",
     "latin": "Times New Roman",
@@ -23,6 +27,7 @@
     "allow_custom_fonts": false,
     "allow_font_file_dependencies": false
   },
+  "design_system": "scripts/boya_design_system.json",
   "lesson_root": "lessons/boya-quasi-intermediate-i/lesson-01",
   "canonical_source": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/canonical-source.json",
   "textbook": {

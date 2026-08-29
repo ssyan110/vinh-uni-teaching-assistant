@@ -1,0 +1,34 @@
+{
+  "schema_version": "boya-audio-manifest-v1",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_id": "lesson-09",
+  "lesson_number": 9,
+  "status": "draft",
+  "review_status": "pending_review",
+  "qr_capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-09-pdf-page-090.png",
+  "qr_url": "http://qr31.cn/IloNOS",
+  "tracks": [
+    {"label":"9-1","coding":"JP1539815","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-1.mp3","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FiocWTYN33Xkat-AB-7mCcCi-UVI","content_type":"audio/mpeg","bytes":819190,"sha256":"8322ba07d5f22db4c2a9f9b0f4cda6bda9e29db8b06871c77268e704b9a77320","duration_seconds":50.887,"technical_status":{"download":"passed","decode":"passed","file_integrity":"passed"},"semantic_status":"pending_teacher_playback","playback_status":"pending_teacher_playback"},
+    {"label":"9-2","coding":"AJ1783222","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-2.mp3","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FkUKsmZjlQxRjUW2E1SCDJycGAE_","content_type":"audio/mpeg","bytes":434250,"sha256":"39d304b722d8b382e41ff40467aa157c854f2a3b02d7cd781703f6259a02d292","duration_seconds":26.828,"technical_status":{"download":"passed","decode":"passed","file_integrity":"passed"},"semantic_status":"pending_teacher_playback","playback_status":"pending_teacher_playback"},
+    {"label":"9-3","coding":"GO1783223","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-3.mp3","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FplPzJNtiMTKVqriNR1XI4dawTaO","content_type":"audio/mpeg","bytes":1074145,"sha256":"68a1dc11366ed1c6d4949de1f76edf01e8f361408c0350eebdf6a9448b698fc2","duration_seconds":66.821,"technical_status":{"download":"passed","decode":"passed","file_integrity":"passed"},"semantic_status":"pending_teacher_playback","playback_status":"pending_teacher_playback"},
+    {"label":"9-4","coding":"QU1783224","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-4.mp3","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FsiUpkVRHilvVBUFc0CdchBN34s0","content_type":"audio/mpeg","bytes":1106746,"sha256":"9e5fbe68debdfe0fbaec36fd4264b14b6ed2bd9b930805a19d339d66961c234c","duration_seconds":68.859,"technical_status":{"download":"passed","decode":"passed","file_integrity":"passed"},"semantic_status":"pending_teacher_playback","playback_status":"pending_teacher_playback"},
+    {"label":"9-5","coding":"AE1783225","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-5.mp3","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FtFH9Y9G406dOZC0Me07nMT4RsHZ","content_type":"audio/mpeg","bytes":1013959,"sha256":"4cda86d58af50ca4ecd5dca46ec712537ae0c0d6545c41d3bc14355a97f46213","duration_seconds":63.06,"technical_status":{"download":"passed","decode":"passed","file_integrity":"passed"},"semantic_status":"pending_teacher_playback","playback_status":"pending_teacher_playback"},
+    {"label":"9-6","coding":"AG1783227","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-6.mp3","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fhq-iAZIOoP9lAlwN7qAmAeMH02M","content_type":"audio/mpeg","bytes":874779,"sha256":"e30f25b5a404d9f19e0c482181ed56a0fe62e49a144ea6bd86cf222f7c989ee7","duration_seconds":54.361,"technical_status":{"download":"passed","decode":"passed","file_integrity":"passed"},"semantic_status":"pending_teacher_playback","playback_status":"pending_teacher_playback"}
+  ],
+  "exercise_bindings": [
+    {"exercise_id":"text.vocabulary","heading_verbatim":"词语","textbook_printed_pages":[77,78],"audio_tracks":["9-1"],"item_count":27,"semantic_status":"pending_teacher_playback"},
+    {"exercise_id":"text.vocabulary_comprehension","heading_verbatim":"听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读","textbook_printed_pages":[78,79],"audio_tracks":["9-2"],"item_count":7,"semantic_status":"pending_teacher_playback"},
+    {"exercise_id":"text.listening_sentences.exercise_9_3","heading_verbatim":"一、听句子，判断对错","textbook_printed_pages":[79],"audio_tracks":["9-3"],"item_count":10,"semantic_status":"pending_teacher_playback"},
+    {"exercise_id":"text.short_text_1.exercise.first_listen","heading_verbatim":"（一）听第一遍，简单回答问题","textbook_printed_pages":[80],"audio_tracks":["9-4"],"item_count":3,"semantic_status":"pending_teacher_playback"},
+    {"exercise_id":"text.short_text_1.exercise.second_listen","heading_verbatim":"（二）听第二遍，用括号中的词语说出三个句子，不少于20字","textbook_printed_pages":[80],"audio_tracks":["9-4"],"item_count":3,"semantic_status":"pending_teacher_playback"},
+    {"exercise_id":"text.short_text_2.exercise.first_listen","heading_verbatim":"（一）听第一遍，简单回答问题","textbook_printed_pages":[82],"audio_tracks":["9-5"],"item_count":3,"semantic_status":"pending_teacher_playback"},
+    {"exercise_id":"text.short_text_2.exercise.second_listen","heading_verbatim":"（二）听第二遍，用括号中的词语说出三个句子，不少于20字","textbook_printed_pages":[82],"audio_tracks":["9-5"],"item_count":3,"semantic_status":"pending_teacher_playback"},
+    {"exercise_id":"text.short_text_3.exercise.first_listen","heading_verbatim":"（一）听第一遍，简单回答问题","textbook_printed_pages":[83],"audio_tracks":["9-6"],"item_count":3,"semantic_status":"pending_teacher_playback"},
+    {"exercise_id":"text.short_text_3.exercise.second_listen","heading_verbatim":"（二）听第二遍，用括号中的词语说出三个句子，不少于20字","textbook_printed_pages":[84],"audio_tracks":["9-6"],"item_count":3,"semantic_status":"pending_teacher_playback"}
+  ],
+  "notes": [
+    "技术状态只表示本地文件完整性、解码和时长核对通过，不等于音频语义或课堂播放已批准。",
+    "听力题组题名、题目页、题数与音频绑定以 listening-exercise-contract.json 为准。"
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": "boya-l1-parallel-completion-audit-v1",
+  "generated_at": "2026-08-29T12:55:00+07:00",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-01",
+  "offering_id": "2026-fall",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_id": "lesson-01",
+  "authority_basis": {
+    "status": "department_chair_approved_current_pptx_only",
+    "pptx_locked": true,
+    "do_not_promote_drafts": true,
+    "cross_textbook_refs": []
+  },
+  "overall_status": "partial_pass_draft_outputs_verified_pending_manual_and_structural_fixes",
+  "derived_from_approved_pptx": {
+    "teaching_design": "verified",
+    "storyboard_retrospective": "verified",
+    "teacher_manual_draft": "verified_with_audio_note_conflict",
+    "support_material_drafts": "verified_with_missing_docx_lesson_key",
+    "semantic_source_review": "not_pptx_derived_source_audit_only"
+  },
+  "checks": {
+    "approved_pptx": {
+      "status": "passed_static",
+      "online_slides": 72,
+      "face_to_face_slides": 51,
+      "online_sha256": "7c2c62d4f2d55677181822610524c3fc49a963e5a0bfa042274ab629980bd900",
+      "face_to_face_sha256": "c476cf51f63f75bc6d9afe4886b6df6a0c38d90e8a90d73e5649160c97b545e1",
+      "zip_integrity": "passed"
+    },
+    "storyboard": {
+      "status": "passed_retrospective_scope",
+      "rows": 123,
+      "online_rows": 72,
+      "face_to_face_rows": 51,
+      "bad_lesson_keys": 0,
+      "retrospective_not_generation_input_all_true": true,
+      "source_refs_machine_resolvable": false
+    },
+    "docx_openability": {
+      "status": "passed_libreoffice_pdf_export",
+      "files": {
+        "teacher_manual": {"pages": 14},
+        "prestudy_card": {"pages": 2},
+        "activity_card": {"pages": 1},
+        "rubric": {"pages": 1},
+        "exit_ticket": {"pages": 2}
+      }
+    },
+    "simplified_chinese_scan": {
+      "status": "passed_common_traditional_character_scan",
+      "files_scanned": 5,
+      "unexpected_common_traditional_characters": []
+    },
+    "cross_textbook_identity": {
+      "status": "passed",
+      "active_cross_textbook_refs": 0,
+      "exclusion_mentions_allowed": true
+    }
+  },
+  "findings": [
+    {
+      "id": "L1-STRUCT-001",
+      "severity": "high",
+      "status": "open",
+      "summary": "storyboard 与 content-contract 的 source_refs 指向 canonical-source.json#sections，但 canonical source 当前没有 sections 对象。",
+      "action": "对齐可解析的 canonical content ID 后重新进行 source_refs coverage QA；不修改批准 PPTX。"
+    },
+    {
+      "id": "L1-CONSIST-002",
+      "severity": "medium",
+      "status": "open",
+      "summary": "教师手册逐页记录将 1-7、1-8 写成尚未取得，与当前本地音频和 audio-manifest 技术通过状态冲突。",
+      "action": "人工播放听核后修订草案说明；不得把技术通过当作语义批准。"
+    },
+    {
+      "id": "L1-META-003",
+      "severity": "medium",
+      "status": "open",
+      "summary": "四份学生 DOCX 没有内部 lesson_key；Exit Ticket 草案文件名含空格和英文大小写，学生标题含英文。",
+      "action": "批准前补齐文件身份／规范命名，并将学生标题改为全中文；不将现有草案复制到 authority。"
+    },
+    {
+      "id": "L1-LANG-004",
+      "severity": "medium",
+      "status": "open_locked_draft",
+      "summary": "Exit Ticket 学生材料标题含英文，违反学生材料全中文要求。",
+      "action": "在不改变批准 PPT 内容的前提下，批准前改为中文标题；批准 PPT 封面中的既有 Online preview 属锁定内容，不在本次改动。"
+    }
+  ],
+  "verified": [
+    "批准 PPTX 两份哈希、页数、16:9、ZIP 完整。",
+    "实体课 1-2 至 1-8 音频关系静态存在且来源哈希匹配 8/8。",
+    "DOCX 可开并成功导出 PDF。",
+    "全部回溯 storyboard 行 lesson_key 正确且标记为 retrospective_not_generation_input。",
+    "没有把中级冲刺篇 I 材料作为当前课次输入。"
+  ],
+  "pending_adam_or_teacher": [
+    "1-1 至 1-8 内容级听核与来源批准。",
+    "canonical source content ID 与 source_refs 结构修正。",
+    "正式实体课时与线上／实体边界确认。",
+    "教师手册和学生配套批准。",
+    "PowerPoint 实际播放、投影／列印与教师 rehearsal。",
+    "从完整 authority 建立 40-release。"
+  ],
+  "authority_and_release": {
+    "drafts_promoted": false,
+    "release_created": false,
+    "current_authority": "20-approved PPTX only"
+  }
+}

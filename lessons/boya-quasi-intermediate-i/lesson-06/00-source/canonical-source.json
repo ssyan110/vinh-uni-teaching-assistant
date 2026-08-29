@@ -1,0 +1,73 @@
+{
+  "lesson_key": "boya-quasi-intermediate-i:lesson-06",
+  "schema_version": "quasi-intermediate-source-audit-v1.0",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_number": 6,
+  "lesson_id": "lesson-06",
+  "title": "大岛参加了学校的合唱团",
+  "title_source": "主教材印刷 P51 标题页视觉核对；Adam 于 2026-08-29 确认使用‘大岛’；source-inventory 中的‘大圣’保留为历史 OCR/索引差异",
+  "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+  "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+  "page_map": {
+    "printed_pages": [51, 52, 53, 54, 55, 56, 57, 58],
+    "pdf_pages": [64, 65, 66, 67, 68, 69, 70, 71],
+    "answer_pdf_pages": [19, 20],
+    "mapping_status": "visually_verified_page_ranges; answer range contains lesson-06 transcript on PDF 19-20 despite inventory table 18-19"
+  },
+  "qr_evidence": {
+    "pdf_page": 64,
+    "qr_url": "http://qr31.cn/I4detK",
+    "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-06-pdf-page-064.png",
+    "landing_page": "https://biz.cli.im/site/I4detK?qrurl=http://qr31.cn/I4detK&gtype=2&key=84d4f17ce1fdd90c6878280301fcf372341b1f6991",
+    "landing_page_status": "inventory_recorded; live semantic review pending",
+    "landing_audio_labels": ["6-1", "6-2", "6-3", "6-4", "6-5", "6-6"],
+    "textbook_audio_labels_expected": ["6-1", "6-2", "6-3", "6-4", "6-5", "6-6"],
+    "discrepancy": "source-inventory title uses 大圣; page images and transcript identify character as 大岛; Adam confirmed 大岛 on 2026-08-29"
+  },
+  "audio_map": [
+    {"track_label":"6-1","coding":"LZ1539811","source_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FlRYydScPjHF5mhHrRw3vNlypFoD","local_file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-1.mp3","textbook_printed_pages":[51],"content_scope":"词语","download_status":"passed","decode_status":"passed","semantic_listening_status":"pending_teacher_playback","bytes":835908,"duration_seconds":51.931429,"sample_rate_hz":44100,"channels":1,"sha256":"e6a10655fad4e516ee464b3abf473a8b265690687fbcb503856e6f0f340e00e8"},
+    {"track_label":"6-2","coding":"TY1783207","source_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FnPkt_nYFaZsCmvGs5TFkkC0Wkt-","local_file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-2.mp3","textbook_printed_pages":[52],"content_scope":"词语理解","download_status":"passed","decode_status":"passed","semantic_listening_status":"pending_teacher_playback","bytes":417531,"duration_seconds":25.782857,"sample_rate_hz":44100,"channels":1,"sha256":"4fd7127fe75a122db88809a652f37116876fd117b9ade982d90fa64eec2b5b68"},
+    {"track_label":"6-3","coding":"IQ1783208","source_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Frqw6QqvokMwCqUea8ntq5yR_4VJ","local_file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-3.mp3","textbook_printed_pages":[53],"content_scope":"听说句子","download_status":"passed","decode_status":"passed","semantic_listening_status":"pending_teacher_playback","bytes":1029841,"duration_seconds":64.052245,"sample_rate_hz":44100,"channels":1,"sha256":"c12e3a9488ba340ea856e79b4881787ffa586886f170dcd47e5e570386403e83"},
+    {"track_label":"6-4","coding":"UW1783209","source_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FjkC3M1ZWlUNlSjjgSY_tZAAhnhv","local_file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-4.mp3","textbook_printed_pages":[53,54],"content_scope":"听说短文一","download_status":"passed","decode_status":"passed","semantic_listening_status":"pending_teacher_playback","bytes":921590,"duration_seconds":57.286531,"sample_rate_hz":44100,"channels":1,"sha256":"fb40784e9b2d9a441d858900a77f1186134c82238d9423da572b9c2ee7dc414f"},
+    {"track_label":"6-5","coding":"NO1783210","source_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fqdkn8eQJgFlnoT6ku9SW9mDfXJU","local_file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-5.mp3","textbook_printed_pages":[54,55],"content_scope":"听说短文二","download_status":"passed","decode_status":"passed","semantic_listening_status":"pending_teacher_playback","bytes":949175,"duration_seconds":59.010612,"sample_rate_hz":44100,"channels":1,"sha256":"03b57cddfcff2e4a76801a592d50af1eb449b984a4df5c465c2726d27512406e"},
+    {"track_label":"6-6","coding":"JM1783211","source_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FoXvWLwyvFzgCGiY_LTsqLaX1lAo","local_file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-6.mp3","textbook_printed_pages":[56,57],"content_scope":"听说短文三","download_status":"passed","decode_status":"passed","semantic_listening_status":"pending_teacher_playback","bytes":773214,"duration_seconds":48.013061,"sample_rate_hz":44100,"channels":1,"sha256":"61198dc3eaef408f46b1b57c97952d9c91561b30f3ef4c2ce018185e1fc851e2"}
+  ],
+  "content_inventory": {
+    "vocabulary_count": 25,
+    "vocabulary_comprehension_group_count": 1,
+    "listening_sentence_item_count": 10,
+    "texts_dialogues_count": 3,
+    "short_text_listening_group_count": 6,
+    "common_expression_group_count": 2,
+    "comprehensive_practice_count": 3,
+    "status": "source_review_snapshot"
+  },
+  "answer_policy": "仅记录参考答案 PDF 中可核对的词语理解与判断答案及听力文本；开放式口语题不补写唯一答案。",
+  "review": {
+    "status": "pending_review",
+    "approved": false,
+    "approved_by": [],
+    "approved_at": null,
+    "source_status": "pending_review",
+    "source_qa_status": "technical_audio_passed_semantic_playback_pending",
+    "blockers": [
+      "source-inventory OCR 索引仍写‘大圣’，作为历史差异保留；Adam 已于 2026-08-29 确认教材标题与人名使用‘大岛’",
+      "6段音频已完成文件解码核验，尚未完成逐段语义听核与 PowerPoint 播放实测"
+    ],
+    "approval_basis": "主教材 PDF P51-P58 与答案 PDF lesson-06 transcript visually checked; all source records remain draft"
+  },
+  "sections": [
+    {"id":"vocabulary","printed_pages":[51,52],"audio":"6-1","source_status":"visually_verified_pending_adam_approval","entries":[
+      {"no":1,"word":"钢琴","pinyin":"gāngqín","pos":"名","gloss":"piano"},{"no":2,"word":"合唱节","pinyin":"héchàngjié","pos":"名","gloss":"choral festival"},{"no":3,"word":"话剧","pinyin":"huàjù","pos":"名","gloss":"drama; stage play"},{"no":4,"word":"交响乐","pinyin":"jiāoxiǎngyuè","pos":"名","gloss":"symphony"},{"no":5,"word":"住院","pinyin":"zhùyuàn","pos":null,"pos_status":"blank_in_source","gloss":"to be hospitalized"},{"no":6,"word":"弹","pinyin":"tán","pos":"动","gloss":"to play (piano, guitar, etc.)"},{"no":7,"word":"翻译","pinyin":"fānyì","pos":"动","gloss":"to translate"},{"no":8,"word":"硕士","pinyin":"shuòshì","pos":"名","gloss":"master’s degree"},{"no":9,"word":"正式","pinyin":"zhèngshì","pos":"形","gloss":"formal"},{"no":10,"word":"语速","pinyin":"yǔsù","pos":"名","gloss":"talking speed"},{"no":11,"word":"代替","pinyin":"dàitì","pos":"动","gloss":"to replace"},{"no":12,"word":"充实","pinyin":"chōngshí","pos":"形","gloss":"full; substantial"},{"no":13,"word":"忙碌","pinyin":"mánglù","pos":"形","gloss":"busy"},{"no":14,"word":"排练","pinyin":"páiliàn","pos":"动","gloss":"to rehearse"},{"no":15,"word":"业余","pinyin":"yèyú","pos":"形","gloss":"non-professional; amateur"},{"no":16,"word":"爱好","pinyin":"àihào","pos":"名","gloss":"hobby"},{"no":17,"word":"研究生","pinyin":"yánjiūshēng","pos":"名","gloss":"graduate student"},{"no":18,"word":"外向","pinyin":"wàixiàng","pos":"形","gloss":"outgoing"},{"no":19,"word":"乐观","pinyin":"lèguān","pos":"形","gloss":"optimistic"},{"no":20,"word":"相当","pinyin":"xiāngdāng","pos":"副","gloss":"quite"},{"no":21,"word":"梦想","pinyin":"mèngxiǎng","pos":"名","gloss":"dream"},{"no":22,"word":"伟大","pinyin":"wěidà","pos":"形","gloss":"great"},{"no":23,"word":"作家","pinyin":"zuòjiā","pos":"名","gloss":"writer"},{"no":24,"word":"作品","pinyin":"zuòpǐn","pos":"名","gloss":"work; writing"},{"no":25,"word":"发音","pinyin":"fāyīn","pos":"名","gloss":"pronunciation"}]},
+    {"id":"vocabulary_comprehension","printed_pages":[52],"audio":"6-2","instruction":"听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读","groups":[{"topic":"音乐与演出","image_labels":["A","B","C","D","E"],"words":["钢琴","合唱节","话剧","交响乐","住院"],"answer":["1.E","2.D","3.C","4.B","5.A"]}],"answer_status":"answers_checked_against_answer_pdf_18/19"},
+    {"id":"listening_sentences","printed_pages":[53],"audio_tracks":["6-3"],"exercise_6_3":{"heading_verbatim":"听句子，判断对错","instruction":"听句子，判断对错","items":[[1,"李大为会弹钢琴。","对"],[2,"这本书没有英文版。","对"],[3,"大岛不是本科生。","对"],[4,"朴大宇对学习口语很感兴趣。","错"],[5,"这个电影的故事不好懂。","错"],[6,"毛毛身体不舒服。","对"],[7,"朋友和姐姐一起比赛。","错"],[8,"王红放假的时候很无聊。","错"],[9,"大岛觉得忙一点儿好。","对"],[10,"大岛今天晚上有比赛。","错"]],"answer_status":"answers_checked_against_answer_pdf_19"}},
+    {"id":"short_text_1","printed_pages":[53,54],"audio":"6-4","title":"大岛的业余爱好","text":"大岛由美来自日本，是中国现代文学专业的硕士研究生。大岛性格外向、乐观、积极，她的业余爱好相当多。她会弹钢琴，也喜欢看话剧、参观博物馆。她的梦想是翻译中国伟大作家的作品。她正在尝试翻译一篇小说。来中国后，她已经看了几部中国话剧。她觉得，和电影相比，话剧演员的语速要慢一些，说话声音比较大，发音也更清楚。看话剧还可以了解比较正式的汉语，对她的专业学习和研究更有帮助。","exercises":{"first_listen":{"instruction":"（一）听第一遍，简单回答问题","items":["大岛的专业是什么？","大岛的爱好多不多？"]},"second_listen":{"instruction":"（二）听第二遍，用括号中的词语说出两三个句子，不少于20字","items":["大岛的性格怎么样？（外向）","大岛有什么爱好？（弹 参观）","她正在做什么？（尝试）","大岛为什么喜欢话剧？（语速 正式）"]},"present":"（三）请你说说大岛的爱好。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：专业 硕士生 弹 参观 话剧 语速 正式。常用表达参考：相当 和……相比。","compare":"（四）读下面的短文，跟你说的进行比较。大岛是中国文学专业的硕士生。她的爱好相当多。她会弹钢琴，也喜欢参观博物馆。她还喜欢看中国的话剧。和电影相比，话剧的语速慢一些，看话剧还能学到比较正式的语言。"},"exercise_metadata":{"first_listen":{"heading_verbatim":"（一）听第一遍，简单回答问题","textbook_printed_pages":[53],"audio_tracks":["6-4"]},"second_listen":{"heading_verbatim":"（二）听第二遍，用括号中的词语说出两三个句子，不少于20字","textbook_printed_pages":[53],"audio_tracks":["6-4"]}},"answer_status":"open_presentational_task_no_unique_answer"},
+    {"id":"short_text_2","printed_pages":[54,55],"audio":"6-5","title":"一次偶然事件让她进入了合唱团","text":"大岛小时候学过钢琴，也喜欢听歌、听交响乐，但是对唱歌不是特别感兴趣。上研究生一年级的时候，快过新年了，系里要参加学校的合唱节，可是，比赛前两天，团里的一名同学突然生病住院了。那位同学和大岛是好朋友，知道大岛会弹钢琴，懂音乐，就请大岛代替她。为了帮朋友的忙，大岛答应了。比赛的时候，大家的表现很好，得了第三名。学校合唱团的老师听了大岛的演唱，邀请大岛参加学校合唱团。大岛发现，和大家一起唱歌挺有意思的，就同意了。","exercises":{"first_listen":{"instruction":"（一）听第一遍，简单回答问题","items":["大岛喜欢什么？不大喜欢什么？","比赛结果怎么样？"]},"second_listen":{"instruction":"（二）听第二遍，用括号中的词语说出两三个句子，不少于20字","items":["大岛为什么参加了合唱比赛？（合唱团 住院 代替）","比赛后，发生了什么事？（邀请 参加）","大岛为什么同意了？（和大家一起）"]},"present":"（三）请你说说大岛参加合唱团的经过。要求：说6～8个句子，不少于60字。词语参考：弹钢琴 交响乐 感兴趣 合唱比赛 住院 代替 答应 第三名 邀请 同意。常用表达参考：上……的时候。","compare":"（四）读下面的短文，跟你说的进行比较。大岛会弹钢琴，也喜欢听歌、听交响乐，但是对唱歌不是特别感兴趣。不过有一次，系里要参加合唱节，一名同学突然住院了，她请大岛代替她参加比赛。大家唱得很好，得了第三名。合唱团的老师邀请大岛参加合唱团，大岛同意了。"},"exercise_metadata":{"first_listen":{"heading_verbatim":"（一）听第一遍，简单回答问题","textbook_printed_pages":[54],"audio_tracks":["6-5"]},"second_listen":{"heading_verbatim":"（二）听第二遍，用括号中的词语说出两三个句子，不少于20字","textbook_printed_pages":[54],"audio_tracks":["6-5"]}},"answer_status":"open_presentational_task_no_unique_answer"},
+    {"id":"short_text_3","printed_pages":[56,57],"audio":"6-6","title":"参加合唱团的得与失","text":"参加合唱团以后，大岛的生活更充实也忙碌。合唱团每星期排练两个晚上。在合唱团，他们用汉语交流。可是，他们不光唱中文歌，还唱英文歌、德文歌、意大利文歌和韩文歌。不过，参加合唱团以后，大岛没有那么多时间看话剧了，她明白了‘有得必有失’的意思。","exercises":{"first_listen":{"instruction":"（一）听第一遍，简单回答问题","items":["大岛一个星期排练几次？","合唱团唱的都是中文歌吗？"]},"second_listen":{"instruction":"（二）听第二遍，用括号中的词语说出两三个句子，不少于20字","items":["大岛为什么高兴？（排练 听课 交流）","合唱团唱什么语言的歌？（不都是 还有）","对大岛来说，‘有得必有失’是什么意思？（忙碌 没有那么多时间）"]},"present":"（三）请你说说大岛参加合唱团以后的情况。要求：说6～8个句子，不少于60字。词语参考：充实 忙碌 排练 中文。常用表达参考：没有那么多时间 有得必有失。","compare":"（四）读下面的短文，跟你说的进行比较。参加合唱团以后，大岛的生活充实而忙碌。合唱团每星期排练两次，他们用汉语交流，也唱英文、德文、意大利文和韩文歌。参加合唱团以后，大岛没有那么多时间看话剧了，她明白了‘有得必有失’的意思。"},"exercise_metadata":{"first_listen":{"heading_verbatim":"（一）听第一遍，简单回答问题","textbook_printed_pages":[56],"audio_tracks":["6-6"]},"second_listen":{"heading_verbatim":"（二）听第二遍，用括号中的词语说出两三个句子，不少于20字","textbook_printed_pages":[56],"audio_tracks":["6-6"]}},"answer_status":"open_presentational_task_no_unique_answer"},
+    {"id":"common_expressions","printed_pages":[54,55,56],"audio":null,"groups":[{"topic":"说明情况","items":[{"expression":"来自","examples":["朴大宇来自韩国。","李老师来自北京。"]},{"expression":"相当","examples":["朴大宇的留学生活相当忙碌。","阿里的钢琴弹得相当好。"]},{"expression":"和……相比","examples":["和山东菜相比，丽丽觉得广东菜更可口。","和坐公共汽车相比，王红觉得坐地铁更方便。"]},{"expression":"对……有帮助（2）","examples":["看中国话剧，对学中文有帮助。","和中国人聊天儿，对练习口语有帮助。"]}]},{"topic":"谈论时间","items":[{"expression":"小时候","examples":["朴大宇小时候来过中国。","大岛小时候学过钢琴。"]},{"expression":"上……的时候","examples":["李大为上中学二年级的时候开始学习中文。","大岛上研究生的时候参加了合唱团。"]},{"expression":"快……的时候","examples":["快考试的时候，在图书馆复习的学生很多。","快过春节的时候，火车票很难买。"]},{"expression":"……前一/几天","examples":["比赛前一天，要休息好。","开学前几天，大部分同学都回到了学校。"]},{"expression":"让某人……的是","examples":["让她遗憾的是，她没有时间常去看话剧了。","让他没想到的是，孩子们说的话那么不容易懂。"]},{"expression":"要+动词+上+数量词","examples":["每天下班，路上都要花上两三个小时。","我每个月都要吃上一两次饺子。"]},{"expression":"没有那么多","examples":["现在没有那么多人来他的小店买东西了。","她来到了陌生的城市，没有那么多朋友来看她了。"]}]}],"source_status":"visually_verified_pending_adam_approval"},
+    {"id":"comprehensive_practice","printed_pages":[57,58],"audio_tracks":["6-4","6-5","6-6"],"exercise_1":{"instruction":"请你根据听过的三段短文填表","table_fields":{"大岛的爱好":["在哪儿学习","喜欢什么","为什么喜欢看话剧"],"大岛参加了合唱比赛":["不太喜欢什么","比赛前几天","比赛的时候"],"大岛参加合唱团以后":["高兴的事","没想到的事","有得必有失"]}},"exercise_2":"根据上面的表格和下面给出的参考词语和常用表达，谈一谈：（1）大岛的爱好；（2）大岛参加了合唱比赛；（3）大岛参加了合唱团。要求：一名同学先说8～10个句子，不少于80字；然后小组其他同学纠正补充；最后由一名同学总结，说10～12个句子，不少于100字。词语参考：专业 硕士生 弹 参观 话剧 语速 正式 弹钢琴 交响乐 感兴趣 合唱比赛 住院 代替 答应 第三名 邀请 同意 充实 忙碌 排练 中文。常用表达参考：相当 和……相比 没有那么多时间 有得必有失","exercise_3":"拓展练习：你有什么爱好？请你说一说：（1）你喜欢什么；（2）为什么喜欢；（3）有什么有趣的事情。要求：（1）使用这一课学过的词语和常用表达；（2）说10～12个句子，不少于100字。","answer_status":"open_presentational_tasks_no_unique_answer"}
+  ],
+  "extraction_snapshot": {"page_audit":"audit/source-pages-51-58-audit-draft.md","answer_audit":"audit/answer-pages-18-19-audit-draft.md","audio_audit":"audit/audio-technical-2026-08-28.md","status":"draft_source_review_snapshot","created_at":"2026-08-28","note":"主教材为扫描影像；正文与答案按页面视觉核对。未将语义听核或教师播放测试标记为完成。"
+  }
+}

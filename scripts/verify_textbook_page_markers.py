@@ -16,7 +16,7 @@ import zipfile
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
-from add_textbook_page_markers import NS, read_page_map
+from add_textbook_page_markers import MARKER_FONT_SIZE_HUNDREDTHS, NS, read_page_map
 
 
 SLIDE_RE = re.compile(r"ppt/slides/slide(\d+)\.xml")
@@ -64,6 +64,15 @@ def _marker_label(shape: ET.Element) -> str:
     return "".join(text.text or "" for text in shape.findall(".//a:t", NS))
 
 
+def _marker_font_size(shape: ET.Element) -> int | None:
+    values = []
+    for node in shape.findall(".//a:rPr", NS) + shape.findall(".//a:endParaRPr", NS):
+        value = _int_attr(node, "sz")
+        if value is not None:
+            values.append(value)
+    return min(values) if values else None
+
+
 def _slide_text_shapes(root: ET.Element) -> list[tuple[str, tuple[int, int, int, int]]]:
     shapes: list[tuple[str, tuple[int, int, int, int]]] = []
     for shape in root.findall(".//p:sp", NS):
@@ -102,7 +111,11 @@ def _read_pptx(pptx_path: Path) -> tuple[int, int, dict[int, dict[str, object]]]
             ]
             slides[slide_no] = {
                 "markers": [
-                    {"label": _marker_label(shape), "bounds": _bbox(shape)}
+                    {
+                        "label": _marker_label(shape),
+                        "bounds": _bbox(shape),
+                        "font_size_hundredths": _marker_font_size(shape),
+                    }
                     for shape in marker_shapes
                 ],
                 "text_shapes": _slide_text_shapes(root),
@@ -164,6 +177,11 @@ def verify(pptx_path: Path, source_path: Path, storyboard_path: Path, pdf_path: 
             if bounds is None:
                 failures.append(f"Slide {slide_no}: marker has no readable bounds")
                 continue
+            font_size = marker.get("font_size_hundredths")
+            if not isinstance(font_size, int) or font_size < MARKER_FONT_SIZE_HUNDREDTHS:
+                failures.append(
+                    f"Slide {slide_no}: textbook marker font is below 20 pt ({font_size!r})"
+                )
             x, y, marker_width, marker_height = bounds
             if x < 0 or y < 0 or x + marker_width > width or y + marker_height > height:
                 failures.append(f"Slide {slide_no}: marker is outside the slide canvas: {bounds}")

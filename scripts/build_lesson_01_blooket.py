@@ -21,6 +21,17 @@ from typing import Any
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+CONFIG = json.loads((PROJECT_ROOT / "project.config.json").read_text(encoding="utf-8"))
+HISTORICAL_LESSON_KEY = "boya-intermediate-i:lesson-01"
+active_lesson_key = CONFIG.get("active_context", {}).get("lesson_key")
+configured_lesson_root = (PROJECT_ROOT / CONFIG.get("lesson_root", "")).resolve()
+expected_lesson_root = (PROJECT_ROOT / "lessons/boya-intermediate-i/lesson-01").resolve()
+if active_lesson_key != HISTORICAL_LESSON_KEY or configured_lesson_root != expected_lesson_root:
+    raise RuntimeError(
+        "build_lesson_01_blooket.py is historical and scoped to "
+        f"{HISTORICAL_LESSON_KEY}; active context is {active_lesson_key or 'missing'} "
+        f"and lesson_root is {configured_lesson_root}. Use a lesson-key-scoped builder for the current offering."
+    )
 CANONICAL_SOURCE = PROJECT_ROOT / "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json"
 DEFAULT_OUTPUT = (
     PROJECT_ROOT

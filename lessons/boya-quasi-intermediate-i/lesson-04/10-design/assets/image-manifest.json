@@ -1,0 +1,223 @@
+{
+  "schema_version": "boya-lesson-image-manifest-v1",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-04",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_id": "lesson-04",
+  "title": "在中国学汉语",
+  "generated_at": "2026-08-28",
+  "generation_mode": "built-in image_gen",
+  "style": {
+    "name": "approved educational textbook illustration",
+    "linework": "fine blue-gray",
+    "palette": "low-saturation pastel on pale warm background",
+    "layout": "wide 16:9 with clear negative space",
+    "text_policy": "no readable text embedded in images"
+  },
+  "divider_policy": {
+    "generated": false,
+    "note": "Section dividers reuse the shared approved divider set; no new divider image was generated."
+  },
+  "asset_status_policy": "These are 10-design drafts. can_enter_ppt remains false until source/visual review and explicit approval.",
+  "assets": [
+    {
+      "asset_id": "l04-beijing-street-taxi",
+      "filename": "l04-beijing-street-taxi.png",
+      "sha256": "7573fdff95fb37b7475c53204c39dea5aaade358984a807d5fcdbc7ddb0f0878",
+      "purpose": "主題與短文一〈对北京的印象〉；呈現北京街道、出租车、司机、快餐店／面包店與再次到北京的惊讶发现。可重用於词语：司机、快餐店、发现、印象、吃惊、到处。",
+      "source_refs": [
+        "canonical-source.json#sections.vocabulary.entries[2]（司机）",
+        "canonical-source.json#sections.vocabulary.entries[3]（快餐店）",
+        "canonical-source.json#sections.vocabulary.entries[9]（发现）",
+        "canonical-source.json#sections.vocabulary.entries[18]（吃惊）",
+        "canonical-source.json#sections.short_text_1（对北京的印象）",
+        "listening-exercise-contract.json#text.short_text_1.exercise.first_listen",
+        "canonical-source.json#sections.common_expressions_experience.items[4]（到处）"
+      ],
+      "textbook_printed_pages": [32, 33, 35, 36],
+      "generated_source_path": "/Users/ssyan110/.codex/generated_images/01a0493d-f37c-71b3-8680-708b435ff896/exec-7e82e8bd-da1c-4478-bd1d-9c6a4e8e23ab.png",
+      "prompt": "Use case: scientific-educational\nAsset type: Chinese listening-and-speaking lesson illustration for a student PPTX\nPrimary request: Create a calm, clear educational illustration for the lesson theme 在中国学汉语, showing a university student experiencing present-day Beijing and noticing changes from an earlier visit.\nScene/backdrop: A bright Beijing street near a university, with a few cars, a clearly recognizable but generic taxi, a small foreign-style fast-food storefront and a bakery storefront in the distance. Keep the street uncluttered.\nSubject: One international university student with a backpack looking surprised but pleased; a taxi driver is visible through the taxi window, ready for a short conversation.\nStyle/medium: Approved textbook illustration style: fine blue-gray linework, low-saturation pastel fills, pale warm background, generous white space, simple friendly educational drawing, static raster illustration.\nComposition/framing: Wide 16:9 scene with the student and taxi in the right two-thirds; open negative space on the left for PPT text. Clear silhouettes and large simple shapes.\nLighting/mood: Soft daylight, curious and welcoming.\nColor palette: muted blue-gray, pale mint, dusty coral, light yellow, warm off-white.\nMaterials/textures: clean flat paper-like illustration, no photorealism.\nText (verbatim): \"\"\nConstraints: No readable text anywhere in the image; no Chinese characters, no Latin words, no logos, no watermark; the picture must support the concepts of 以前、发现、吃惊、司机、出租车、快餐店、面包店、到处.\nAvoid: dense crowds, tiny details, flags, branded signs, embedded labels, speech bubbles, divider/title-card composition.",
+      "license_status": "originally generated for this project with built-in image_gen; no external image license required",
+      "generation_status": "generated_and_copied_to_workspace",
+      "can_enter_ppt": false,
+      "ppt_entry_status": "candidate_pending_adam_visual_review"
+    },
+    {
+      "asset_id": "l04-language-partner-reading",
+      "filename": "l04-language-partner-reading.png",
+      "sha256": "82fbd5d82b1290aab484a6ee53d9d92894ea221ca60d0685620b8f75861ef80f",
+      "purpose": "詞語與短文二學習場景；呈現阅读、语伴、互相学习與口語交流。",
+      "source_refs": [
+        "canonical-source.json#sections.vocabulary.entries[5]（阅读）",
+        "canonical-source.json#sections.vocabulary.entries[6]（语伴）",
+        "canonical-source.json#sections.short_text_2（学习内容）",
+        "canonical-source.json#sections.common_expressions_learning.items[2]（既……又……）",
+        "listening-exercise-contract.json#text.short_text_2.exercise.second_listen"
+      ],
+      "textbook_printed_pages": [32, 36, 37],
+      "generated_source_path": "/Users/ssyan110/.codex/generated_images/01a0493d-f37c-71b3-8680-708b435ff896/exec-8b72a7f8-e774-402b-90d6-89345833c3de.png",
+      "prompt": "Use case: scientific-educational\nAsset type: Chinese listening-and-speaking lesson illustration for a student PPTX\nPrimary request: Show an international university student studying Chinese at a generic Beijing university with a language partner.\nScene/backdrop: Bright university campus classroom or study area in Beijing; subtle university architecture but no named signs.\nSubject: Two university students, one international student and one Chinese language partner, sitting together with open notebooks and a few books; they are speaking and listening to each other, friendly and focused.\nStyle/medium: Approved textbook illustration style: fine blue-gray linework, low-saturation pastel fills, pale warm background, generous white space, simple educational drawing, static raster illustration.\nComposition/framing: Wide landscape 16:9, students in right half, open negative space on left for PPT text. Make books and face-to-face interaction clear.\nLighting/mood: Soft daylight, collaborative, welcoming.\nColor palette: muted blue-gray, pale mint, dusty coral, light yellow, warm off-white.\nMaterials/textures: clean flat paper-like illustration, no photorealism.\nText (verbatim): \"\"\nConstraints: No readable text anywhere; no Chinese characters, Latin words, logos, or watermark. Support the source ideas 语伴、阅读、讲座、互相学习、口语、了解中国人的想法.\nAvoid: flags, branded signs, dense details, speech bubbles, divider/title-card composition.",
+      "license_status": "originally generated for this project with built-in image_gen; no external image license required",
+      "generation_status": "generated_and_copied_to_workspace",
+      "can_enter_ppt": false,
+      "ppt_entry_status": "candidate_pending_adam_visual_review"
+    },
+    {
+      "asset_id": "l04-restaurant-order-serve",
+      "filename": "l04-restaurant-order-serve.png",
+      "sha256": "d47ec88c24c44c05aa4d2d5ed504ea33515da5e1a06dd15e879e5f404a1bf62c",
+      "purpose": "短文三饭馆片段與生活詞語；呈現点菜、上菜、菜量大、很饿。",
+      "source_refs": [
+        "canonical-source.json#sections.vocabulary.entries[1]（上（菜））",
+        "canonical-source.json#sections.vocabulary.entries[4]（点（菜））",
+        "canonical-source.json#sections.vocabulary.entries[24]（饿）",
+        "canonical-source.json#sections.short_text_3（在中国学汉语和在本国学汉语的异同）",
+        "canonical-source.json#sections.common_expressions_discuss.items[5]（动词＋上）"
+      ],
+      "textbook_printed_pages": [32, 33, 38, 39],
+      "generated_source_path": "/Users/ssyan110/.codex/generated_images/01a0493d-f37c-71b3-8680-708b435ff896/exec-0d728ee9-dc4c-4f23-8db5-45cf26db3cf9.png",
+      "prompt": "Use case: scientific-educational\nAsset type: Chinese listening-and-speaking lesson illustration for a student PPTX\nPrimary request: Show a simple restaurant moment that makes the concepts 点菜、上菜、菜量 and 饿 easy to understand.\nScene/backdrop: Clean casual Chinese restaurant interior, a small table with a menu shown only as blank shapes, a server bringing several dishes, and a hungry university student ordering with a gesture.\nSubject: One student points toward dishes while a server brings plates; generous portions are visibly larger than expected, but natural and friendly.\nStyle/medium: Approved textbook illustration style: fine blue-gray linework, low-saturation pastel fills, pale warm background, generous white space, simple educational drawing, static raster illustration.\nComposition/framing: Wide 16:9, action grouped to the right with open negative space on the left. Use a clear order-to-serving sequence in one scene without arrows or words.\nLighting/mood: Warm daylight, lightly humorous, welcoming.\nColor palette: muted blue-gray, pale mint, dusty coral, light yellow, warm off-white.\nMaterials/textures: clean flat paper-like illustration, no photorealism.\nText (verbatim): \"\"\nConstraints: No readable text anywhere; no Chinese characters, Latin words, logos, or watermark. Support only source ideas 点菜、上菜、菜量、饿、快餐店／饭馆儿.\nAvoid: restaurant brand marks, menus with text, excessive food detail, divider/title-card composition.",
+      "license_status": "originally generated for this project with built-in image_gen; no external image license required",
+      "generation_status": "generated_and_copied_to_workspace",
+      "can_enter_ppt": false,
+      "ppt_entry_status": "candidate_pending_adam_visual_review"
+    },
+    {
+      "asset_id": "l04-news-subtitles",
+      "filename": "l04-news-subtitles.png",
+      "sha256": "c2b677c4c7a40dbedd1e8da0c6563c1253c3ebe71b9da48896d22bd1a23b5fad",
+      "purpose": "短文二聽力與詞語；呈現新闻、字幕、阅读與看得懂／听不懂的對比。",
+      "source_refs": [
+        "canonical-source.json#sections.vocabulary.entries[11]（新闻）",
+        "canonical-source.json#sections.vocabulary.entries[12]（字幕）",
+        "canonical-source.json#sections.vocabulary.entries[5]（阅读）",
+        "canonical-source.json#sections.vocabulary.entries[21]（听力）",
+        "canonical-source.json#sections.short_text_2（学习内容）",
+        "canonical-source.json#sections.common_expressions_learning.items[1]（通常）"
+      ],
+      "textbook_printed_pages": [32, 36, 37],
+      "generated_source_path": "/Users/ssyan110/.codex/generated_images/01a0493d-f37c-71b3-8680-708b435ff896/exec-4638153e-623c-4633-8f01-36e26f680b4e.png",
+      "prompt": "Use case: scientific-educational\nAsset type: Chinese listening-and-speaking lesson illustration for a student PPTX\nPrimary request: Show a student watching Chinese news or a film while reading subtitles and practicing listening.\nScene/backdrop: Cozy student room or campus media corner with a screen showing a generic news or movie scene; subtitle area on screen must be abstract blank lines or shapes with no readable letters.\nSubject: One international student watches attentively, reads the subtitle area, and takes a few notes; expression shows that reading is easier than listening, without frustration.\nStyle/medium: Approved textbook illustration style: fine blue-gray linework, low-saturation pastel fills, pale warm background, generous white space, simple educational drawing, static raster illustration.\nComposition/framing: Wide landscape 16:9, student and screen on right two-thirds, open negative space on left for PPT text.\nLighting/mood: Soft screen glow with warm ambient daylight, thoughtful and encouraging.\nColor palette: muted blue-gray, pale mint, dusty coral, light yellow, warm off-white.\nMaterials/textures: clean flat paper-like illustration, no photorealism.\nText (verbatim): \"\"\nConstraints: No readable text anywhere; no Chinese characters, Latin words, logos, watermark, or speech bubbles. Support source ideas 新闻、字幕、阅读、听力、看电视、看电影、看得懂、听不懂.\nAvoid: recognizable media brands, dense UI, realistic text, divider/title-card composition.",
+      "license_status": "originally generated for this project with built-in image_gen; no external image license required",
+      "generation_status": "generated_and_copied_to_workspace",
+      "can_enter_ppt": false,
+      "ppt_entry_status": "candidate_pending_adam_visual_review"
+    },
+    {
+      "asset_id": "l04-korea-beijing-classes",
+      "filename": "l04-korea-beijing-classes.png",
+      "sha256": "1ea7c28bd713a8df3bdff8f5eba794ade0c5627169bebe43ceb421c344fe1bf1",
+      "purpose": "短文三核心比較；並列呈現大課、小課、練習機會、教師解釋、聽力時間與在中國學習效率。不是 divider。",
+      "source_refs": [
+        "canonical-source.json#sections.short_text_3（在中国学汉语和在本国学汉语的异同）",
+        "listening-exercise-contract.json#text.short_text_3.exercise.first_listen",
+        "listening-exercise-contract.json#text.short_text_3.exercise.second_listen",
+        "canonical-source.json#sections.common_expressions_discuss.items[1]（只有）",
+        "canonical-source.json#sections.common_expressions_discuss.items[3]（另外）",
+        "canonical-source.json#sections.common_expressions_discuss.items[4]（动词＋上）"
+      ],
+      "textbook_printed_pages": [38, 39],
+      "generated_source_path": "/Users/ssyan110/.codex/generated_images/01a0493d-f37c-71b3-8680-708b435ff896/exec-c6f29ddc-965e-44a5-b807-64ea5d15a5cc.png",
+      "prompt": "Use case: scientific-educational\nAsset type: Chinese listening-and-speaking lesson illustration for a student PPTX\nPrimary request: Show a side-by-side visual comparison of studying Chinese in Korea and in Beijing, matching the lesson's contrast.\nScene/backdrop: A balanced split composition with two connected classroom/study settings: left side a large lecture class with about thirty students and a teacher explaining with a local-language cue represented only by neutral gestures; right side a smaller practice class with five students and a student using Chinese immediately in a café or university setting. Keep people count visually approximate, not exact labels.\nSubject: Left: many students seated in rows, teacher at front; right: five students actively practicing and then using new language in a nearby café. Keep people count visually approximate, not exact labels.\nStyle/medium: Approved textbook illustration style: fine blue-gray linework, low-saturation pastel fills, pale warm background, generous white space, simple educational drawing, static raster illustration.\nComposition/framing: Wide 16:9, clean vertical visual separation without text or divider labels; reserve a little negative space at top for slide text.\nLighting/mood: Soft daylight, clear comparison, encouraging.\nColor palette: muted blue-gray, pale mint, dusty coral, light yellow, warm off-white.\nMaterials/textures: clean flat paper-like illustration, no photorealism.\nText (verbatim): \"\"\nConstraints: No readable text anywhere; no Chinese characters, Latin words, logos, flags, watermark, or graphic labels. Support source ideas 大课、小课、练习机会、解释、听力时间少、效率高、马上用得上.\nAvoid: charts, arrows, numbers, captions, commercial classroom branding, divider/title-card composition.",
+      "license_status": "originally generated for this project with built-in image_gen; no external image license required",
+      "generation_status": "generated_and_copied_to_workspace",
+      "can_enter_ppt": false,
+      "ppt_entry_status": "candidate_pending_adam_visual_review"
+    },
+    {
+      "asset_id": "l04-taxi-conversation",
+      "filename": "l04-taxi-conversation.png",
+      "sha256": "943ee5d6054ca77db173b5380c61a6af4f44aafd810ed1e4d0522861ac533485",
+      "purpose": "短文一口語理解；呈現司机與學生聊天、听懂對話與生活習慣問題。",
+      "source_refs": [
+        "canonical-source.json#sections.vocabulary.entries[2]（司机）",
+        "canonical-source.json#sections.vocabulary.entries[19]（聊）",
+        "canonical-source.json#sections.short_text_1（对北京的印象）",
+        "canonical-source.json#sections.common_expressions_experience.items[3]（这／那是……的事了）",
+        "canonical-source.json#sections.common_expressions_experience.items[4]（发现）",
+        "listening-exercise-contract.json#text.short_text_1.exercise.second_listen"
+      ],
+      "textbook_printed_pages": [35, 36],
+      "generated_source_path": "/Users/ssyan110/.codex/generated_images/01a0493d-f37c-71b3-8680-708b435ff896/exec-d0d5f574-1613-4439-8f44-83bfff6c4665.png",
+      "prompt": "Use case: scientific-educational\nAsset type: Chinese listening-and-speaking lesson illustration for a student PPTX\nPrimary request: Show a short, friendly conversation between an international student and a taxi driver in Beijing.\nScene/backdrop: Generic taxi interior at a quiet city street; the student sits in the back and speaks with the driver, who turns slightly with a welcoming expression.\nSubject: International student asks a question and the driver listens; both use natural hand gestures for chatting. The taxi and city street should be clear enough to support 司机、聊天儿、听懂.\nStyle/medium: Approved textbook illustration style: fine blue-gray linework, low-saturation pastel fills, pale warm background, generous white space, simple educational drawing, static raster illustration.\nComposition/framing: Wide 16:9, interior three-quarter view, faces and hand gestures readable, blank negative space near upper left for PPT text.\nLighting/mood: Soft daylight, warm and successful communication.\nColor palette: muted blue-gray, pale mint, dusty coral, light yellow, warm off-white.\nMaterials/textures: clean flat paper-like illustration, no photorealism.\nText (verbatim): \"\"\nConstraints: No readable text anywhere; no Chinese characters, Latin words, logos, watermark, or speech bubbles. Support only source ideas 司机、聊天儿、听懂、生活习惯.\nAvoid: taxi company branding, license plate text, crowded traffic, divider/title-card composition.",
+      "license_status": "originally generated for this project with built-in image_gen; no external image license required",
+      "generation_status": "generated_and_copied_to_workspace",
+      "can_enter_ppt": false,
+      "ppt_entry_status": "candidate_pending_adam_visual_review"
+    },
+    {
+      "asset_id": "l04-lecture-language-partner",
+      "filename": "l04-lecture-language-partner.png",
+      "sha256": "649ef016d65608bb3c252822f8a0c42ffb747e6e0f9d2dfe08a1a69fc74bfb80",
+      "purpose": "短文二與詞語拓展；呈現讲座、国际学生、语伴、阅读與解释的學習環境。",
+      "source_refs": [
+        "canonical-source.json#sections.vocabulary.entries[6]（讲座）",
+        "canonical-source.json#sections.vocabulary.entries[7]（国际）",
+        "canonical-source.json#sections.vocabulary.entries[5]（语伴）",
+        "canonical-source.json#sections.short_text_2（学习内容）",
+        "canonical-source.json#sections.common_expressions_learning.items[2]（既……又……）",
+        "listening-exercise-contract.json#text.short_text_2.exercise.first_listen"
+      ],
+      "textbook_printed_pages": [32, 36, 37],
+      "generated_source_path": "/Users/ssyan110/.codex/generated_images/01a0493d-f37c-71b3-8680-708b435ff896/exec-2f8f7adb-a9bd-4085-9994-62034d698726.png",
+      "prompt": "Use case: scientific-educational\nAsset type: Chinese listening-and-speaking lesson illustration for a student PPTX\nPrimary request: Show an international university student attending a lecture and then practicing Chinese with a language partner, in one cohesive educational scene.\nScene/backdrop: A bright, generic university campus study hall with a small lecture audience in the background and two students in the foreground comparing open notebooks after the talk. A lecturer gestures at the front; keep all boards, books, and papers blank or filled only with abstract lines.\nSubject: One international student and one Chinese language partner speaking face to face, listening and taking notes; the lecture audience and lecturer provide context for 讲座 and 国际.\nStyle/medium: Approved textbook illustration style: fine blue-gray linework, low-saturation pastel fills, pale warm background, generous white space, simple friendly educational drawing, static raster illustration.\nComposition/framing: Wide 16:9, foreground pair in the right half, smaller lecture scene softened in the background, open negative space on the left for PPT text.\nLighting/mood: Soft daylight, curious and collaborative.\nColor palette: muted blue-gray, pale mint, dusty coral, light yellow, warm off-white.\nMaterials/textures: clean flat paper-like illustration, no photorealism.\nText (verbatim): \"\"\nConstraints: No readable text anywhere; no Chinese characters, Latin words, logos, flags, watermark, labels, speech bubbles. Support source ideas 讲座、国际、语伴、阅读、互相学习、解释.\nAvoid: named universities, branded signage, dense detail, divider/title-card composition.",
+      "license_status": "originally generated for this project with built-in image_gen; no external image license required",
+      "generation_status": "generated_and_copied_to_workspace",
+      "can_enter_ppt": false,
+      "ppt_entry_status": "candidate_pending_adam_visual_review"
+    },
+    {
+      "asset_id": "l04-study-extra-effort",
+      "filename": "l04-study-extra-effort.png",
+      "sha256": "f6b36ccb6e422293edd35ae72a2c9afc4dbde3be4200f6e67c2f69112df2c515",
+      "purpose": "短文二学习策略與詞語頁；呈現加倍努力、解释、词语、听力與語伴互助。",
+      "source_refs": [
+        "canonical-source.json#sections.vocabulary.entries[13]（加倍）",
+        "canonical-source.json#sections.vocabulary.entries[14]（解释）",
+        "canonical-source.json#sections.vocabulary.entries[15]（词语）",
+        "canonical-source.json#sections.vocabulary.entries[16]（效率）",
+        "canonical-source.json#sections.vocabulary.entries[21]（听力）",
+        "canonical-source.json#sections.common_expressions_learning.items[4]（加倍）",
+        "canonical-source.json#sections.short_text_2（学习内容）"
+      ],
+      "textbook_printed_pages": [32, 36, 37],
+      "generated_source_path": "/Users/ssyan110/.codex/generated_images/01a0493d-f37c-71b3-8680-708b435ff896/exec-460623f0-432f-4e3d-b379-1603ecd94535.png",
+      "prompt": "Use case: scientific-educational\nAsset type: Chinese listening-and-speaking lesson illustration for a student PPTX\nPrimary request: Show a university student making an extra effort to improve Chinese listening and vocabulary with a study partner.\nScene/backdrop: Quiet campus study table with two students. One student listens to a small audio player or laptop with a blank screen, then points to blank vocabulary cards while the partner explains with a gesture. A second neat stack of notes suggests repeated practice, without numbers or text.\nSubject: International student focused and motivated; Chinese language partner patiently explains and checks understanding. Keep interaction supportive and natural.\nStyle/medium: Approved textbook illustration style: fine blue-gray linework, low-saturation pastel fills, pale warm background, generous white space, simple educational drawing, static raster illustration.\nComposition/framing: Wide 16:9, people and study materials on the right two-thirds, generous negative space on left for PPT text.\nLighting/mood: Soft daylight, calm determination, encouraging.\nColor palette: muted blue-gray, pale mint, dusty coral, light yellow, warm off-white.\nMaterials/textures: clean flat paper-like illustration, no photorealism.\nText (verbatim): \"\"\nConstraints: No readable text anywhere; no Chinese characters, Latin words, logos, watermark, labels, speech bubbles. Support source ideas 加倍努力、解释、词语、听力、效率、既可以练习口语又可以了解想法.\nAvoid: test scores, clocks with numbers, branded devices, dense details, divider/title-card composition.",
+      "license_status": "originally generated for this project with built-in image_gen; no external image license required",
+      "generation_status": "generated_and_copied_to_workspace",
+      "can_enter_ppt": false,
+      "ppt_entry_status": "candidate_pending_adam_visual_review"
+    }
+  ],
+  "vocabulary_coverage": {
+    "上（菜）": ["l04-restaurant-order-serve"],
+    "司机": ["l04-beijing-street-taxi", "l04-taxi-conversation"],
+    "快餐店": ["l04-beijing-street-taxi"],
+    "点（菜）": ["l04-restaurant-order-serve"],
+    "阅读": ["l04-language-partner-reading", "l04-news-subtitles"],
+    "语伴": ["l04-language-partner-reading", "l04-lecture-language-partner", "l04-study-extra-effort"],
+    "讲座": ["l04-lecture-language-partner"],
+    "国际": ["l04-lecture-language-partner"],
+    "发现": ["l04-beijing-street-taxi"],
+    "习惯": ["l04-taxi-conversation"],
+    "新闻": ["l04-news-subtitles"],
+    "字幕": ["l04-news-subtitles"],
+    "加倍": ["l04-study-extra-effort"],
+    "解释": ["l04-study-extra-effort", "l04-lecture-language-partner"],
+    "词语": ["l04-study-extra-effort"],
+    "效率": ["l04-korea-beijing-classes", "l04-study-extra-effort"],
+    "印象": ["l04-beijing-street-taxi"],
+    "吃惊": ["l04-beijing-street-taxi"],
+    "聊": ["l04-taxi-conversation", "l04-language-partner-reading"],
+    "通常": ["l04-language-partner-reading", "l04-news-subtitles"],
+    "听力": ["l04-news-subtitles", "l04-study-extra-effort", "l04-korea-beijing-classes"],
+    "异同": ["l04-korea-beijing-classes"],
+    "量": ["l04-restaurant-order-serve"],
+    "饿": ["l04-restaurant-order-serve"]
+  },
+  "qa_notes": [
+    "All eight assets are raster PNG files copied into this lesson's 10-design/assets directory.",
+    "Images were visually inspected after generation; no intentional readable text, Chinese characters, Latin words, logos, or watermarks were requested.",
+    "These assets are drafts only. Do not embed into approved PPTX until the lesson's visual storyboard and Adam's review are complete.",
+    "No section divider was generated; the shared approved divider set remains the source for divider slides."
+  ]
+}

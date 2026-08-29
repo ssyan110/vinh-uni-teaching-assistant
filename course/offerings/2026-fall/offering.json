@@ -5,6 +5,8 @@
   "status": "source_review",
   "schedule_status": "draft_pending_source_approval_and_official_timetable",
   "primary_textbook_id": "boya-quasi-intermediate-i",
+  "lesson_key_prefix": "boya-quasi-intermediate-i:",
+  "lesson_registry": "course/lesson-registry.json",
   "textbooks": [
     {
       "textbook_id": "boya-quasi-intermediate-i",

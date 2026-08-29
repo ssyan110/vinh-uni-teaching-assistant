@@ -1,0 +1,120 @@
+{
+  "dataset_id": "boya-elementary-i-ii-reference-dataset",
+  "dataset_version": "1.0.0",
+  "generated_date": "2026-08-29",
+  "source_books": [
+    {
+      "textbook_id": "boya-elementary-i",
+      "title": "博雅汉语听说·初级起步篇 I",
+      "pdf_path": "/Users/ssyan110/Desktop/Work/Teaching/博雅漢語教材/博雅汉语听说-初级起步篇I.pdf",
+      "pdf_exists": true,
+      "pdf_sha256": "9a98ee0b376c9b5cff20622987a0e4b9cee68287e45dc547665a3cd537fb517a",
+      "ocr_dir": ".tmp/ocr-elementary-i",
+      "ocr_pages": 249,
+      "appendix_pdf_pages": [
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248
+      ],
+      "appendix_entries_extracted": 556,
+      "appendix_unique_word_pinyin": 550
+    },
+    {
+      "textbook_id": "boya-elementary-ii",
+      "title": "博雅汉语听说·初级起步篇 II",
+      "pdf_path": "/Users/ssyan110/Desktop/Work/Teaching/博雅漢語教材/博雅汉语听说-初级起步篇II.pdf",
+      "pdf_exists": true,
+      "pdf_sha256": "d87e803987b2e204945cb5af112b614a8c7a3444f84a00951c2db9aaa498a95b",
+      "ocr_dir": ".tmp/ocr-elementary-ii",
+      "ocr_pages": 197,
+      "appendix_pdf_pages": [
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196
+      ],
+      "appendix_entries_extracted": 467,
+      "appendix_unique_word_pinyin": 465
+    }
+  ],
+  "counts": {
+    "lessons": 43,
+    "vocabulary_master": 1015,
+    "vocabulary_occurrences": 1009,
+    "grammar": 377,
+    "grammar_audit": 377,
+    "grammar_source_patterns": 109,
+    "grammar_legacy_candidates": 67,
+    "expressions": 18,
+    "reference_sentences": 265,
+    "vocabulary_master_unique_headwords": 1013,
+    "translation_missing_vocabulary": 0,
+    "translation_missing_grammar": 0,
+    "translation_missing_expressions": 0
+  },
+  "translation_policy": "meaning_vi is a Vietnamese study aid. Subagent translations are marked translated_subagent_draft until a teacher reviews them; English source definitions are retained when OCR captured them.",
+  "source_policy": "Supplied PDFs are current source. The appendix is the vocabulary index; OCR and image-checked corrections remain reviewable. The independent grammar audit is primary for search, while direct OCR patterns and old baseline candidates are retained as separate evidence layers.",
+  "files": {
+    "博雅汉语听说-初级起步篇I-II-词汇语法参考数据库-v1.0.0.xlsx": {
+      "sha256": "eb59c2409b0eb6fbf0ef63d79725f28487a1d7ad504c83396ea43062c1e001c4",
+      "bytes": 463571
+    },
+    "csv/expressions.csv": {
+      "sha256": "ef6ea5e498cd1719ad6fab3750fe33676ad1b04a5bc0c06d436fb6ceaab6f6dd",
+      "bytes": 6209
+    },
+    "csv/grammar.csv": {
+      "sha256": "11a673413d563609ce82faee6c0fd731a963ba3a6e4aa9dc8f287709c42d475d",
+      "bytes": 383064
+    },
+    "csv/grammar_legacy_candidates.csv": {
+      "sha256": "a86c028b8cea6d3d77c790f59692b28a8c23c09ab468b8b4de6faf898eda3beb",
+      "bytes": 24971
+    },
+    "csv/grammar_source_patterns.csv": {
+      "sha256": "522c6650174c1f026a12b5c1c299f7ee2e08384874e62012145ab002f690c81f",
+      "bytes": 53855
+    },
+    "csv/lessons.csv": {
+      "sha256": "de05b02c367dd48bfa7626ad3b1e4b9bdd30316615e51204bd06fa16e62cd66d",
+      "bytes": 12697
+    },
+    "csv/reference_sentences.csv": {
+      "sha256": "9172023f77b2cf99fe52a96a22a50f3a0549750f6bbd283f495993b3e69f47b5",
+      "bytes": 47995
+    },
+    "csv/translations_vi.csv": {
+      "sha256": "637a451322acb844429eb395219ba7d7913b98299685409936abecff0f605f1c",
+      "bytes": 231235
+    },
+    "csv/vocabulary_master.csv": {
+      "sha256": "c01409cb5b747f6be3279b36fe7ea8b88fe702f6dbede44cea9ce71eda5dbf87",
+      "bytes": 378021
+    },
+    "csv/vocabulary_occurrences.csv": {
+      "sha256": "d320d9e779abb7bbfe2b071da7067b27dcf24466b05ad1f177290f759650b06b",
+      "bytes": 340888
+    },
+    "grammar-audit-evidence.json": {
+      "sha256": "3ff83f98f05ee73c8dbd2369b835a72c1145af0ac953807f54171c1831a6a03e",
+      "bytes": 43473
+    },
+    "translation-overrides.csv": {
+      "sha256": "63eac7c18af76bd3a42c6bac0f2fcd410ca1ede397e7eaa62d173ce82c65d254",
+      "bytes": 154606
+    }
+  }
+}

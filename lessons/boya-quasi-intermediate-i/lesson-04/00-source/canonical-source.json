@@ -1,0 +1,106 @@
+{
+  "schema_version": "quasi-intermediate-source-audit-v1.0",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-04",
+  "lesson_number": 4,
+  "lesson_id": "lesson-04",
+  "title": "在中国学汉语",
+  "title_source": "主教材 PDF 第45页（印刷 P32）课名页视觉核对",
+  "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+  "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+  "page_map": {
+    "printed_pages": [32, 41],
+    "pdf_pages": [45, 54],
+    "answer_pdf_pages": [14, 16],
+    "answer_index_pages": [14, 15],
+    "mapping_status": "visual_verified_pdf_offset_plus_13; answer_file_page_16_continuation_noted"
+  },
+  "qr_evidence": {
+    "pdf_page": 45,
+    "qr_url": "http://qr31.cn/I9bLMV",
+    "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-04-pdf-page-045.png",
+    "landing_page": "https://biz.cli.im/site/I9bLMV?qrurl=http://qr31.cn/I9bLMV&gtype=2&key=c36f817489cc67e6287828f1f97c00a7fc43446948",
+    "decode_status": "source_inventory_verified",
+    "landing_audio_labels": ["4-1", "4-2", "4-3", "4-4", "4-5", "4-6"]
+  },
+  "audio_map": [
+    {"label":"4-1","coding":"JZ1539803","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fuj6EZ_93nW0avU3822yEY3rVqPd","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-1.mp3","content_type":"audio/mpeg","bytes":824205,"sha256":"46f02a4c825b2c0e1d08d5a35496fa34453142ec0c8ad2514f9a0e02c3e26797","download_status":"passed_in_source_inventory","decode_status":"passed","duration_seconds":51.2,"semantic_status":"pending_teacher_playback"},
+    {"label":"4-2","coding":"KN1783197","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FmhgvlQy5pQj_wkq5NbGKsu8G2qJ","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-2.mp3","content_type":"audio/mpeg","bytes":530380,"sha256":"2ce4035b96a931c3192f135707d04190d772dcc69b04b69a2cdf29d4a14c0689","download_status":"passed_in_source_inventory","decode_status":"passed","duration_seconds":32.836,"semantic_status":"pending_teacher_playback"},
+    {"label":"4-3","coding":"EG1783198","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FlOJKyFFAWqTQLKN6tUQL0qnmF8z","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-3.mp3","content_type":"audio/mpeg","bytes":1525541,"sha256":"b7f2d459172de811c551557926474ef0318c7d2cffca4ecc7f69c81609bcd9d0","download_status":"passed_in_source_inventory","decode_status":"passed","duration_seconds":95.033,"semantic_status":"pending_teacher_playback"},
+    {"label":"4-4","coding":"AP1783199","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FmwmH05bvsxa4_bClt9MxdMRmKXR","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-4.mp3","content_type":"audio/mpeg","bytes":1125554,"sha256":"ea9f2e63b3cb0971d621c8ce5460a04ef1308547f5635514bde80846bcbe479e","download_status":"passed_in_source_inventory","decode_status":"passed","duration_seconds":70.034,"semantic_status":"pending_teacher_playback"},
+    {"label":"4-5","coding":"IT1783200","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FjGNrXScKTDec1d7-W2bz3pJIjgQ","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-5.mp3","content_type":"audio/mpeg","bytes":981776,"sha256":"76693000356a2b28cc1381e8a7e520943a3b2c178cd96a0f025f8ea2e1456083","download_status":"passed_in_source_inventory","decode_status":"passed","duration_seconds":61.048,"semantic_status":"pending_teacher_playback"},
+    {"label":"4-6","coding":"UW1783201","play_url":"https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FiNhTId2ChbKv-LTKOCMcRFFiPOS","file":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-6.mp3","content_type":"audio/mpeg","bytes":1359193,"sha256":"c3f757061c2f300f21a3b8d2222f5eda6b29d3ce30c9224c8ae47734c66a8f11","download_status":"passed_in_source_inventory","decode_status":"passed","duration_seconds":84.637,"semantic_status":"pending_teacher_playback"}
+  ],
+  "content_inventory": {
+    "vocabulary_count": 24,
+    "proper_noun_count": 0,
+    "vocabulary_comprehension_group_count": 2,
+    "vocabulary_comprehension_item_count": 8,
+    "listening_sentence_item_count": 15,
+    "texts_dialogues_count": 3,
+    "grammar_pattern_count": 18,
+    "listening_exercise_group_count": 6,
+    "comprehensive_exercise_count": 3,
+    "exercise_count": 27,
+    "status": "visual_source_snapshot_pending_adam_approval"
+  },
+  "answer_policy": "仅记录参考答案 PDF 中可核对的选择／判断答案与听力文本；开放式口语题不补写唯一标准答案。",
+  "review": {
+    "status": "source_audit_in_progress",
+    "approved": false,
+    "approved_by": [],
+    "approved_at": null,
+    "blockers": [
+      "六段音频已完成文件存在、bytes、SHA-256、时长和解码核对；教师逐段播放及语义听核尚未完成。",
+      "扫描教材无可用文字层；最终来源批准需由 Adam 对视觉转录、教材页码和答案证据确认。",
+      "开放式口语题、综合填表与小组总结没有唯一标准答案，不补写答案。",
+      "答案索引标示第14–15页，但短文三听力文本在答案文件第16页有续段，已保留并标记。"
+    ],
+    "approval_basis": [
+      "主教材 PDF 第45–54页（印刷 P32–P41）高分辨率视觉核对",
+      "答案 PDF 文件第14–16页（答案印刷 P11–P13）题目答案与听力文本视觉核对",
+      "来源总盘点第四课 QR、音频 bytes、hash 和时长记录"
+    ]
+  },
+  "sections": [
+    {
+      "id":"vocabulary","printed_pages":[32,33],"audio":"4-1",
+      "entries":[
+        {"no":1,"word":"上（菜）","pinyin":"shàng (cài)","pos":"动","gloss":"to serve"},{"no":2,"word":"司机","pinyin":"sījī","pos":"名","gloss":"driver"},{"no":3,"word":"快餐店","pinyin":"kuàicāndiàn","pos":"名","gloss":"fast food restaurant"},{"no":4,"word":"点（菜）","pinyin":"diǎn (cài)","pos":"动","gloss":"to order"},{"no":5,"word":"阅读","pinyin":"yuèdú","pos":"动","gloss":"to read","starred":true},{"no":6,"word":"语伴","pinyin":"yǔbàn","pos":"名","gloss":"language partner"},{"no":7,"word":"讲座","pinyin":"jiǎngzuò","pos":"名","gloss":"speech"},{"no":8,"word":"国际","pinyin":"guójì","pos":"形","gloss":"international","starred":true},{"no":9,"word":"发现","pinyin":"fāxiàn","pos":"动","gloss":"to find; to discover"},{"no":10,"word":"习惯","pinyin":"xíguàn","pos":"动","gloss":"to get used to"},{"no":11,"word":"新闻","pinyin":"xīnwén","pos":"名","gloss":"news"},{"no":12,"word":"字幕","pinyin":"zìmù","pos":"名","gloss":"subtitle; caption"},{"no":13,"word":"加倍","pinyin":"jiābèi","pos":"副","gloss":"double"},{"no":14,"word":"解释","pinyin":"jiěshì","pos":"动","gloss":"to explain","starred":true},{"no":15,"word":"词语","pinyin":"cíyǔ","pos":"名","gloss":"word and expression"},{"no":16,"word":"效率","pinyin":"xiàolǜ","pos":"名","gloss":"efficient"},
+        {"no":17,"word":"印象","pinyin":"yìnxiàng","pos":"名","gloss":"impression","starred":true},{"no":18,"word":"吃惊","pinyin":"chījīng","pos":null,"pos_status":"blank_in_source","gloss":"surprised; shocked","starred":true},{"no":19,"word":"聊","pinyin":"liáo","pos":"动","gloss":"to chat"},{"no":20,"word":"通常","pinyin":"tōngcháng","pos":"副","gloss":"usually","starred":true},{"no":21,"word":"听力","pinyin":"tīnglì","pos":"名","gloss":"listening"},{"no":22,"word":"异同","pinyin":"yìtóng","pos":"名","gloss":"similarities and differences"},{"no":23,"word":"量","pinyin":"liàng","pos":"名","gloss":"amount; quantity"},{"no":24,"word":"饿","pinyin":"è","pos":"形","gloss":"hungry"}
+      ],
+      "source_status":"visually_verified_pending_adam_approval"
+    },
+    {
+      "id":"vocabulary_comprehension","printed_pages":[33,34],"audio":"4-2",
+      "instruction":"听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+      "groups":[
+        {"topic":"关于生活的词语","words":["上菜","面包店","司机","快餐店","点菜"],"answer":["1.D","2.B","3.C","4.A","5.E"]},
+        {"topic":"关于学习的词语","words":["阅读","语伴","讲座"],"answer":["1.A","2.C","3.B"]}
+      ],
+      "answer_status":"answers_checked_against_answer_pdf"
+    },
+    {
+      "id":"listening_sentences","printed_pages":[34],"audio_tracks":["4-3"],
+      "exercises":{"exercise_4_3":{"heading_verbatim":"一、听句子，判断对错","items":[[1,"毛毛以前没来过北京。","错"],[2,"姐姐学习历史。","错"],[3,"朴大宇看到很多新鲜事。","对"],[4,"丽丽还不习惯现在的生活。","对"],[5,"哥哥会开车。","对"],[6,"王红不爱吃快餐。","错"],[7,"中国新闻李大为看得懂。","对"],[8,"弟弟喜欢看书。","对"],[9,"阿里昨天看了一个中国电影。","错"],[10,"同学们去小学教课。","错"],[11,"那个电影是英文的。","错"],[12,"王红有很多韩国朋友。","错"],[13,"毛毛现在不努力。","错"],[14,"老师常常听写生词。","错"],[15,"我们学的词语很有用。","对"]]}},
+      "answer_status":"answers_checked_against_answer_pdf"
+    },
+    {
+      "id":"short_text_1","printed_pages":[35],"audio":"4-4","title":"对北京的印象",
+      "text":"朴大宇是大学二年级的学生，他的专业是国际关系。今年暑假他到了北京，要在北京大学学习两个月汉语。朴大宇小时候和父母来过北京，那是十多年前的事了。爸爸妈妈带着他去了哪些地方他都忘了，只记得在北京，街上有很多人，很多自行车。这次再来北京，他吃惊地发现，路上的汽车多了，外国快餐店、面包店到处都是。因为天气热、路又不熟，他有时候坐出租车。司机师傅常常问他：“您是哪儿人啊？”“觉得北京怎么样啊？”“生活习惯不习惯？”他听懂了，也能和司机聊几句了，他心里真高兴！",
+      "exercises":{"first_listen":["朴大宇在哪里学习？","朴大宇以前来过中国吗？"],"second_listen":["朴大宇为什么坐出租车？（天气  熟悉）"],"present":"请你说说朴大宇在北京的生活：（1）以前来过北京；（2）这次有什么发现；（3）他觉得自己的中文怎么样。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：以前、汽车、出租车、司机、记得、听懂、高兴。常用表达参考：又、到处、聊几句、吃惊地发现。","compare":"朴大宇以前来过北京，但是他不太记得了。这次暑假来北京学习，他发现街上汽车多了，外国快餐店和面包店到处都是。因为天气热、路又不熟，他有时候坐出租车。他听得懂司机的话，也能和司机聊几句，心里很高兴。"},
+      "exercise_metadata":{"first_listen":{"heading_verbatim":"（一）听第一遍，简单回答问题","textbook_printed_pages":[35],"audio_tracks":["4-4"]},"second_listen":{"heading_verbatim":"（二）听第二遍，用括号中的词语说出两三个句子，不少于20字","textbook_printed_pages":[35],"audio_tracks":["4-4"]}}
+    },
+    {
+      "id":"common_expressions_experience","printed_pages":[36],"topic":"说明情况","items":[{"expression":"年级","examples":["弟弟上高中二年级。","他们的语伴是大学二、三年级的学生。"]},{"expression":"专业","examples":["我想报考中文专业。","我大学学习的专业是金融。"]},{"expression":"这／那是……的事了","examples":["不说这件事了，这都是五年前的事了。","学音乐，那都是过去的事了。"]},{"expression":"发现","examples":["老师高兴地发现，同学们经过一个暑假，进步很快。","他吃惊地发现，原来那家小饭馆儿已经没有了。"]},{"expression":"到处","examples":["街上到处都是电动车。","快餐店到处都是。"]},{"expression":"又（1）","examples":["菜都是辣的，价钱又贵，我们就去了一家饭馆儿。","价钱不贵，质量又好，我买了不少。"]}],"source_status":"examples_visually_verified"},
+    {
+      "id":"short_text_2","printed_pages":[36,37],"audio":"4-5","title":"学习内容","text":"在北京大学，朴大宇上三门课——汉语会话、新闻汉语和中国文化。他们每天上午都有课；星期二、星期四和星期五下午通常去参观或者听讲座；晚上和语伴互相学习。他们班每两名同学就有一位中国语伴，语伴是大二或者大三的学生。和语伴练习，既可以练习口语，又可以了解中国人的想法。朴大宇觉得自己的汉语阅读和口语进步挺快，不过听力还不行。看电视、看电影的时候，很多字幕他都能读懂，但还有很多地方听不懂，他决定加倍努力学习中文。","exercises":{"first_listen":["朴大宇上几门课？","朴大宇什么时候上课？","朴大宇晚上做什么？"],"second_listen":["朴大宇都上什么课？（新闻  文化）","朴大宇下午做什么？（参观  讲座）","朴大宇觉得和语伴一起学习怎么样？（既……又……）","朴大宇觉得自己的汉语怎么样？（进步  不过  加倍）"],"present":"请你说说朴大宇在北京的学习情况。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：三门课、字幕、听力、决定。常用表达参考：每……都……、通常、既……又……、加倍。","compare":"朴大宇在北京大学上汉语会话、新闻汉语和中国文化三门课。每天上午都有课，下午通常参观或听讲座，晚上和语伴互相学习。和语伴练习既可以练口语，又可以了解中国人的想法。他的阅读和口语进步很快，但是听力还需要加倍努力。"},"exercise_metadata":{"first_listen":{"heading_verbatim":"（一）听第一遍，简单回答问题","textbook_printed_pages":[36],"audio_tracks":["4-5"]},"second_listen":{"heading_verbatim":"（二）听第二遍，用括号中的词语说一句，第3～4题要求说三个句子，不少于20字","textbook_printed_pages":[37],"audio_tracks":["4-5"]}}},
+    {
+      "id":"common_expressions_learning","printed_pages":[37],"topic":"谈论学习","items":[{"expression":"通常","examples":["周末我们通常去参观博物馆。","他们通常和中国语伴一起读报纸。"]},{"expression":"既……又……","examples":["看中文电影既可以练习听力，又可以了解中国社会。","在公司实习，既可以锻炼自己的工作能力，又可以接触社会。"]},{"expression":"不过","examples":["王红口语挺流利，不过发音还有点儿问题。","小张想考研究生，不过他还没决定学什么专业。"]},{"expression":"决定","examples":["朴大宇决定利用暑假去中国学习。","经过认真考虑，丽丽决定转专业。"]},{"expression":"加倍","examples":["要想提高自己的汉语水平，一定要加倍努力。","我们要加倍珍惜大学时光。"]}],"source_status":"examples_visually_verified"},
+    {
+      "id":"short_text_3","printed_pages":[38,39],"audio":"4-6","title":"在中国学汉语和在本国学汉语的异同","text":"在韩国的时候，朴大宇每星期只有6节汉语课，4节是大课，30名左右的同学一起学习。学习生词和语法的时候，老师常常用韩语解释，学生们对汉语生词、语法的意思和用法了解得比较清楚，可是练习中文听力的时间不多。另外两节是练习课，一个班只有5名同学，练习的机会多一些，同学们都很喜欢。不过，朴大宇觉得，在北京学汉语效率更高，上课的时候学到的生词、语法，下课后他马上就能用上。比如昨天上午上课，他们学了“睡得着”“吃不了”“买不起”“看不清楚”，中午在饭馆儿点菜，他和两名同学一共点了4个菜、1个汤。服务员告诉他们，他们饭馆儿的菜量比较大，4个菜他们不一定吃得了。朴大宇回答：“我们都很饿，吃得了。请快点儿上菜。”大家都笑了。","exercises":{"first_listen":["在韩国的时候，朴大宇每个星期几节中文课？","在韩国上大课的时候一个班有多少学生？","在韩国上中文课的时候，老师说韩语吗？"],"second_listen":["朴大宇在韩国上的中文课怎么样？（大课  练习课  解释）","朴大宇为什么觉得在中国学习汉语效率高？（马上  用得上）"],"present":"请你比较朴大宇在韩国学汉语和在中国学汉语的异同。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：大课、小课、解释、了解、听力、效率、课上、马上、点菜。常用表达参考：用得上。","compare":"朴大宇在韩国每星期只有六节汉语课，大课人数多，老师用韩语解释，听力练习不多；小课人数少，练习机会多。在北京学汉语效率更高，课上学到的词语和语法下课后马上就能用上。"},"exercise_metadata":{"first_listen":{"heading_verbatim":"（一）听第一遍，简单回答问题","textbook_printed_pages":[38],"audio_tracks":["4-6"]},"second_listen":{"heading_verbatim":"（二）听第二遍，用括号中的词语说出三个句子，不少于20字","textbook_printed_pages":[39],"audio_tracks":["4-6"]}}},
+    {"id":"common_expressions_discuss","printed_pages":[39],"topic":"谈论学习","items":[{"expression":"左右","examples":["每天晚上要花两个小时左右复习。","阿里每天都要写一篇200字左右的中文日记。"]},{"expression":"只有","examples":["上练习课的时候，班上只有5名学生。","朴大宇每星期只有两节文化课。"]},{"expression":"另外","examples":["同学们这学期上四门课：汉语会话、新闻汉语、汉语语法，另外一门是中国文化。","李大为新交了三名中国朋友，一名是自己的语伴，另外两名是一起打球的大学生。"]},{"expression":"动词＋上","examples":["写作文的时候要用上新学的成语和俗语。","朴大宇的同学考上了中国人民大学新闻系。"]},{"expression":"形容词＋一些","examples":["朴大宇的听力好一些了。","用汉语的机会多一些了。","开始实习以后，学中文的时间少了一些。"]},{"expression":"记得住／看得清楚","examples":["一天学这么多生词你记得住吗？","虽然坐在后面，黑板上的字他也看得清楚。"]},{"expression":"动词＋两／几＋量词","examples":["各位，我先说两句／几句。","吃完饭，丽丽想去图书馆借两／几本书。"]}],"source_status":"examples_visually_verified"},
+    {"id":"comprehensive_practice","printed_pages":[40,41],"audio_tracks":["4-4","4-5","4-6"],"items":[{"id":"comprehensive_1","instruction":"请你根据听过的三段短文填表","table_headers":["人物","环境怎么样","交通","汉语使用","上什么课","课外活动","汉语怎么样","在韩国","在中国"],"answer_status":"open_table_teacher_check"},{"id":"comprehensive_2","instruction":"小组活动：根据上面的表格和下面给出的参考词语和常用表达，谈一谈：（1）朴大宇在北京的生活；（2）朴大宇在北京的学习；（3）比较朴大宇在韩国和中国学汉语的异同。要求：一名同学先说6～8个句子；然后小组其他同学纠正补充；最后由一名同学总结，说10～12个句子，不少于100字。词语参考：以前、路上、坐出租车、聊天儿、三门课、语伴、大课、解释、效率。常用表达参考：到处、既……又……、吃惊地发现、用得上。","answer_status":"open_presentational_task"},{"id":"comprehensive_3","instruction":"拓展练习：你以前来过中国吗？请你谈一谈：（1）什么时候来的；（2）来中国做什么；（3）对中国的印象怎么样。要求：（1）使用这一课学过的词语和常用表达；（2）说8～10个句子，不少于80字。","answer_status":"open_presentational_task"}],"source_status":"visually_verified_pending_adam_approval"}
+  ]
+}

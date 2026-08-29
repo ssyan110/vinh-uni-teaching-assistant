@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-pptx-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-04",
+  "mode": "online",
+  "title": "第四课《在中国学汉语》在线预习",
+  "status": "draft_not_approved",
+  "builder_scope": "scripts/build_l23_pptx_drafts.js",
+  "draft_gate": "lesson-specific",
+  "source_sha256": "0eb2afac761ba8a31682ae74cabf4a6faeebbd5e23ba8ea5d94b424014fe9aee",
+  "layout_source": "boya-quasi-intermediate-i lesson-01 approved layout family",
+  "shared_layout_contract": "course/boya-online-layout-contract.json",
+  "fixed_structure": [
+    "cover",
+    "learning_flow",
+    "goals",
+    "vocabulary",
+    "practice_after_each_full_five",
+    "proper_nouns_if_present",
+    "short_text_divider_before_each_text",
+    "short_text_record",
+    "expressions_after_related_text",
+    "comprehensive_practice",
+    "fixed_three_slide_ending"
+  ],
+  "route_asset": "learning-route-user-supplied-transparent.png",
+  "vocabulary_practice_after_every": 5,
+  "vocabulary_extension_policy": "empty_until_explicitly_supplied",
+  "vocabulary_page_breaks": {
+    "first_page": 32,
+    "first_count": 17,
+    "second_page": 33
+  },
+  "fixed_ending_titles": [
+    "我觉得很难的地方",
+    "课前检查",
+    "谢谢大家，我们课堂见。"
+  ],
+  "short_example_policy": "curated_short_sentences_max_24_hanzi_chars",
+  "short_text_policy": "textbook_reading_prompt_and_record_layout_no_full_text_copy",
+  "shared_assets": [
+    "lesson-01-cover-family-work-hobby.png",
+    "learning-route-user-supplied-transparent.png",
+    "divider-family.png",
+    "divider-work.png",
+    "divider-hobby.png",
+    "divider-comprehensive.png",
+    "symbolic-vocabulary.png",
+    "symbolic-listening.png",
+    "symbolic-sentence-pattern.png",
+    "oral-practice-divider.png",
+    "speaking-practice.png"
+  ],
+  "vocabulary_image_policy": "one_distinct_semantic_asset_per_vocabulary_item",
+  "vocabulary_image_count": 24,
+  "vocabulary_image_assets": [
+    {
+      "word": "上（菜）",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-01.png"
+    },
+    {
+      "word": "司机",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-02.png"
+    },
+    {
+      "word": "快餐店",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-03.png"
+    },
+    {
+      "word": "点（菜）",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-04.png"
+    },
+    {
+      "word": "阅读",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-05.png"
+    },
+    {
+      "word": "语伴",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-06.png"
+    },
+    {
+      "word": "讲座",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-07.png"
+    },
+    {
+      "word": "国际",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-08.png"
+    },
+    {
+      "word": "发现",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-09.png"
+    },
+    {
+      "word": "习惯",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-10.png"
+    },
+    {
+      "word": "新闻",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-11.png"
+    },
+    {
+      "word": "字幕",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-12.png"
+    },
+    {
+      "word": "加倍",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-13.png"
+    },
+    {
+      "word": "解释",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-14.png"
+    },
+    {
+      "word": "词语",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-15.png"
+    },
+    {
+      "word": "效率",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-16.png"
+    },
+    {
+      "word": "印象",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-17.png"
+    },
+    {
+      "word": "吃惊",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-18.png"
+    },
+    {
+      "word": "聊",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-19.png"
+    },
+    {
+      "word": "通常",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-20.png"
+    },
+    {
+      "word": "听力",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-21.png"
+    },
+    {
+      "word": "异同",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-22.png"
+    },
+    {
+      "word": "量",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-23.png"
+    },
+    {
+      "word": "饿",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/assets/generated-vocab-images/l04-vocab-24.png"
+    }
+  ],
+  "slide_count": 70,
+  "audio_tracks_embedded": [
+    "4-1",
+    "4-2",
+    "4-3",
+    "4-4",
+    "4-5",
+    "4-6"
+  ],
+  "audio_playback_policy": "embedded_on_audio-summary-slides; PowerPoint playback QA remains pending for draft",
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/pptx-draft/online/lesson-04-在线预习.pptx",
+    "sha256": "aca01f8b26b958ff44a94930770aad9680b684597205aa232bdf34a3815da350",
+    "bytes": 24248759
+  },
+  "generated_at": "2026-08-29T15:56:23.998Z"
+}

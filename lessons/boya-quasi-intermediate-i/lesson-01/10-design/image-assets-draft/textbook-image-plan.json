@@ -1,0 +1,14 @@
+{
+  "lesson_id": "boya-quasi-intermediate-i/lesson-01",
+  "source": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+  "policy": "优先从教材扫描页裁切；不重新绘制已有教材图片。",
+  "planned_crops": [
+    {"printed_page": 3, "pdf_page": 16, "use": "家庭、父母、出生、离开、工作与压力词语页"},
+    {"printed_page": 4, "pdf_page": 17, "use": "拍照片、户外与爱好词语页"},
+    {"printed_page": 5, "pdf_page": 18, "use": "北京公司／工作情境"},
+    {"printed_page": 7, "pdf_page": 20, "use": "设计师用电脑、工作与开夜车情境"},
+    {"printed_page": 8, "pdf_page": 21, "use": "拍照片与爱好情境"}
+  ],
+  "no_suitable_image_pages": [1, 2, 6, 9, 10, 11],
+  "fallback": "使用原生流程图或 ChatGPT 生成同一套教育教材式插画；生成图需记录提示词、尺寸、hash 与审核状态。"
+}

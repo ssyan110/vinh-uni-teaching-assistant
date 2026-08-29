@@ -1,0 +1,250 @@
+{
+  "schema_version": "boya-listening-exercise-contract-v1",
+  "lesson_id": "lesson-08",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "status": "draft",
+  "approved_by": [],
+  "approved_at": null,
+  "canonical_source": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json",
+    "sha256": "8667e605b2753f7baac33cbc211102647088b6ea9c90d20aa5803ab377e3f109"
+  },
+  "source_evidence": [
+    {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/audit/source-pages-68-76-audit-draft.md",
+      "sha256": "7192ce621b122815ae9caee1650e6b9a8d777956bb7f8a4a0f27d31e94e4043e",
+      "locator": "P68–P76 题组标题、题目和页码"
+    },
+    {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/audit/answer-pages-22-23-audit-draft.md",
+      "sha256": "d3490d7409dcc73b454bba807197846f5bf91a591f06d5157d3b6c86b1001d4c",
+      "locator": "答案 PDF 第22–23页题目答案与听力文本"
+    },
+    {
+      "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+      "sha256": "39899d0f400e187f57c16db821f8f4c207f936eae0e4fbfe3cab52c02bfea806",
+      "locator": "主教材印刷 P68–P76"
+    },
+    {
+      "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+      "sha256": "3c21e1574b0187259769799d183eca78a60a515b5b7fce202eda9e9ade2c20b8",
+      "locator": "答案 PDF 第22–23页"
+    }
+  ],
+  "rules": {
+    "section_printed_pages_are_scope_only": true,
+    "heading_must_be_textbook_verbatim": true,
+    "audio_track_does_not_determine_slide_count": true,
+    "missing_metadata_blocks_generation": true,
+    "semantic_audio_review_status": "pending_teacher_playback"
+  },
+  "listening_exercises": [
+    {
+      "exercise_id": "text.vocabulary",
+      "section_id": "vocabulary",
+      "exercise_kind": "vocabulary_pronunciation",
+      "order": 1,
+      "heading_verbatim": "词语",
+      "heading_source": {
+        "path": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json",
+        "excerpt": "词语",
+        "locator": "sections.vocabulary｜P68–P69｜音频8-1"
+      },
+      "locator": "sections.vocabulary.entries",
+      "page_scope": "section_page",
+      "textbook_printed_pages": [68, 69],
+      "audio_tracks": ["8-1"],
+      "item_count": 29,
+      "coverage_refs": ["vocabulary.entries[1..29]"],
+      "items_sha256": "ba433eed1bd69d2012f3c91733fb09f67d7cf3faff175014f6320d89663a9aa1",
+      "slide_policy": "one_slide_per_exercise",
+      "audio_status": "local_file_present_semantic_listening_pending"
+    },
+    {
+      "exercise_id": "text.vocabulary_comprehension",
+      "section_id": "vocabulary_comprehension",
+      "exercise_kind": "vocabulary_comprehension",
+      "order": 2,
+      "heading_verbatim": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读。",
+      "heading_source": {
+        "path": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json",
+        "excerpt": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读。",
+        "locator": "sections.vocabulary_comprehension｜P70｜音频8-2"
+      },
+      "locator": "sections.vocabulary_comprehension.groups[0]",
+      "page_scope": "exercise_page",
+      "textbook_printed_pages": [70],
+      "audio_tracks": ["8-2"],
+      "item_count": 5,
+      "coverage_refs": ["vocabulary_comprehension.groups[0]"],
+      "items_sha256": "8de0c800e7a3ecb0c10f214053c442dc90f1be52bf5fc73c62f0e7446b6ec7e8",
+      "slide_policy": "one_slide_per_exercise",
+      "audio_status": "local_file_present_semantic_listening_pending"
+    },
+    {
+      "exercise_id": "text.listening_sentences.exercise_8_3",
+      "section_id": "listening_sentences",
+      "exercise_kind": "true_false",
+      "order": 3,
+      "heading_verbatim": "一、听句子，判断对错",
+      "heading_source": {
+        "path": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json",
+        "excerpt": "一、听句子，判断对错",
+        "locator": "sections.listening_sentences｜P70｜音频8-3"
+      },
+      "locator": "sections.listening_sentences.exercises.exercise_8_3",
+      "page_scope": "exercise_page",
+      "textbook_printed_pages": [70],
+      "audio_tracks": ["8-3"],
+      "item_count": 10,
+      "coverage_refs": ["listening_sentences.exercises.exercise_8_3.items[1..10]"],
+      "items_sha256": "2df03a8f9df9bbcb6fe60153bc95fd1b101a8e1f6cbd3bc04a438b8dbc11d82e",
+      "slide_policy": "one_slide_per_exercise",
+      "audio_status": "local_file_present_semantic_listening_pending"
+    },
+    {
+      "exercise_id": "text.short_text_1.exercise.first_listen",
+      "section_id": "short_text_1",
+      "exercise_kind": "first_listen",
+      "order": 1,
+      "heading_verbatim": "（一）听第一遍，简单回答问题",
+      "heading_source": {
+        "path": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/audit/source-pages-68-76-audit-draft.md",
+        "excerpt": "（一）听第一遍，简单回答问题",
+        "locator": "P71｜short_text_1｜first_listen"
+      },
+      "locator": "exercises.first_listen",
+      "page_scope": "exercise_page",
+      "textbook_printed_pages": [
+        71
+      ],
+      "audio_tracks": [
+        "8-4"
+      ],
+      "item_count": 3,
+      "items_sha256": "5864919622ac84c04471988f2db7b49118dbea655d6e94f3a6f32e9616b53aa6",
+      "slide_policy": "one_slide_per_exercise",
+      "audio_status": "local_file_present_semantic_listening_pending"
+    },
+    {
+      "exercise_id": "text.short_text_1.exercise.second_listen",
+      "section_id": "short_text_1",
+      "exercise_kind": "second_listen",
+      "order": 2,
+      "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+      "heading_source": {
+        "path": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/audit/source-pages-68-76-audit-draft.md",
+        "excerpt": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+        "locator": "P71｜short_text_1｜second_listen"
+      },
+      "locator": "exercises.second_listen",
+      "page_scope": "exercise_page",
+      "textbook_printed_pages": [
+        71
+      ],
+      "audio_tracks": [
+        "8-4"
+      ],
+      "item_count": 3,
+      "items_sha256": "a8472c336dd0a31c6dad0f277bf734deb23c57133a6430a6cd8ba3a2286c071f",
+      "slide_policy": "one_slide_per_exercise",
+      "audio_status": "local_file_present_semantic_listening_pending"
+    },
+    {
+      "exercise_id": "text.short_text_2.exercise.first_listen",
+      "section_id": "short_text_2",
+      "exercise_kind": "first_listen",
+      "order": 1,
+      "heading_verbatim": "（一）听第一遍，简单回答问题",
+      "heading_source": {
+        "path": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/audit/source-pages-68-76-audit-draft.md",
+        "excerpt": "（一）听第一遍，简单回答问题",
+        "locator": "P72｜short_text_2｜first_listen"
+      },
+      "locator": "exercises.first_listen",
+      "page_scope": "exercise_page",
+      "textbook_printed_pages": [
+        72
+      ],
+      "audio_tracks": [
+        "8-5"
+      ],
+      "item_count": 2,
+      "items_sha256": "761dcf2b49b504e714010c11e80f50bc9edca383e5cf7b310b2a9affba419a47",
+      "slide_policy": "one_slide_per_exercise",
+      "audio_status": "local_file_present_semantic_listening_pending"
+    },
+    {
+      "exercise_id": "text.short_text_2.exercise.second_listen",
+      "section_id": "short_text_2",
+      "exercise_kind": "second_listen",
+      "order": 2,
+      "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+      "heading_source": {
+        "path": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/audit/source-pages-68-76-audit-draft.md",
+        "excerpt": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+        "locator": "P72｜short_text_2｜second_listen"
+      },
+      "locator": "exercises.second_listen",
+      "page_scope": "exercise_page",
+      "textbook_printed_pages": [
+        72
+      ],
+      "audio_tracks": [
+        "8-5"
+      ],
+      "item_count": 3,
+      "items_sha256": "f5403599fbf43b7e365099878ecdcb92f890f9be67efd4bc9c6119375a5c9221",
+      "slide_policy": "one_slide_per_exercise",
+      "audio_status": "local_file_present_semantic_listening_pending"
+    },
+    {
+      "exercise_id": "text.short_text_3.exercise.first_listen",
+      "section_id": "short_text_3",
+      "exercise_kind": "first_listen",
+      "order": 1,
+      "heading_verbatim": "（一）听第一遍，简单回答问题",
+      "heading_source": {
+        "path": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/audit/source-pages-68-76-audit-draft.md",
+        "excerpt": "（一）听第一遍，简单回答问题",
+        "locator": "P74｜short_text_3｜first_listen"
+      },
+      "locator": "exercises.first_listen",
+      "page_scope": "exercise_page",
+      "textbook_printed_pages": [
+        74
+      ],
+      "audio_tracks": [
+        "8-6"
+      ],
+      "item_count": 2,
+      "items_sha256": "cfbd1b3a4ebc761e838bb359c6e04e64c6fbdb1875ff8a6c816d5ac64abf120e",
+      "slide_policy": "one_slide_per_exercise",
+      "audio_status": "local_file_present_semantic_listening_pending"
+    },
+    {
+      "exercise_id": "text.short_text_3.exercise.second_listen",
+      "section_id": "short_text_3",
+      "exercise_kind": "second_listen",
+      "order": 2,
+      "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+      "heading_source": {
+        "path": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/audit/source-pages-68-76-audit-draft.md",
+        "excerpt": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+        "locator": "P74｜short_text_3｜second_listen"
+      },
+      "locator": "exercises.second_listen",
+      "page_scope": "exercise_page",
+      "textbook_printed_pages": [
+        74
+      ],
+      "audio_tracks": [
+        "8-6"
+      ],
+      "item_count": 3,
+      "items_sha256": "9f90bc00d6302990b01761c496921b9567394e7a1a56031b5bbe27376e323936",
+      "slide_policy": "one_slide_per_exercise",
+      "audio_status": "local_file_present_semantic_listening_pending"
+    }
+  ]
+}

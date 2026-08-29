@@ -1,0 +1,209 @@
+{
+  "schema_version": "quasi-intermediate-source-extraction-draft-v0.1",
+  "status": "source_audit_in_progress",
+  "approved": false,
+  "lesson_id": "lesson-01",
+  "lesson_number": 1,
+  "title": "丽丽是独生女",
+  "source_pages": {
+    "main_pdf_pages": [14, 24],
+    "textbook_printed_pages": [1, 11],
+    "answer_pdf_pages": [4, 7]
+  },
+  "sections": [
+    {
+      "id": "vocabulary",
+      "printed_pages": [1, 2],
+      "audio": "1-1",
+      "entries": [
+        {"no": 1, "word": "独生女", "pinyin": "dúshēngnǚ", "pos": "名", "gloss": "only daughter"},
+        {"no": 2, "word": "出生", "pinyin": "chūshēng", "pos": "动", "gloss": "to be born", "starred": true},
+        {"no": 3, "word": "照顾", "pinyin": "zhàogù", "pos": "动", "gloss": "to look after"},
+        {"no": 4, "word": "离开", "pinyin": "líkāi", "pos": null, "pos_status": "blank_in_source", "gloss": "to leave"},
+        {"no": 5, "word": "广告", "pinyin": "guǎnggào", "pos": "名", "gloss": "advertisement"},
+        {"no": 6, "word": "满意", "pinyin": "mǎnyì", "pos": "动", "gloss": "to be satisfied"},
+        {"no": 7, "word": "努力", "pinyin": "nǔlì", "pos": "形", "gloss": "to work hard; hardworking"},
+        {"no": 8, "word": "压力", "pinyin": "yālì", "pos": "名", "gloss": "pressure; stress"},
+        {"no": 9, "word": "开夜车", "pinyin": "kāiyèchē", "pos": null, "pos_status": "blank_in_source", "gloss": "to work in the night"},
+        {"no": 10, "word": "受欢迎", "pinyin": "shòu huānyíng", "pos": null, "pos_status": "blank_in_source", "gloss": "popular; to be well received"},
+        {"no": 11, "word": "帮助", "pinyin": "bāngzhù", "pos": "动", "gloss": "to help"},
+        {"no": 12, "word": "放假", "pinyin": "fàngjià", "pos": null, "pos_status": "blank_in_source", "gloss": "to have vacation; to have a day off"},
+        {"no": 13, "word": "越来越", "pinyin": "yuèláiyuè", "pos": null, "pos_status": "blank_in_source", "gloss": "more and more"},
+        {"no": 14, "word": "拍", "pinyin": "pāi", "pos": "动", "gloss": "to take (a picture); to shoot"},
+        {"no": 15, "word": "照片", "pinyin": "zhàopiān", "pos": "名", "gloss": "photograph"},
+        {"no": 16, "word": "适应", "pinyin": "shìyìng", "pos": "动", "gloss": "to be adapted to", "starred": true},
+        {"no": 17, "word": "要求", "pinyin": "yāoqiú", "pos": "名/动", "gloss": "requirement; to request", "starred": true},
+        {"no": 18, "word": "卫生", "pinyin": "wèishēng", "pos": "形", "gloss": "clean"},
+        {"no": 19, "word": "担心", "pinyin": "dānxīn", "pos": null, "pos_status": "blank_in_source", "gloss": "to worry; to feel anxious", "starred": true},
+        {"no": 20, "word": "父母", "pinyin": "fùmǔ", "pos": "名", "gloss": "parents"},
+        {"no": 21, "word": "空儿", "pinyin": "kòngr", "pos": "名", "gloss": "free time", "starred": true},
+        {"no": 22, "word": "设计", "pinyin": "shèjì", "pos": "动", "gloss": "to design", "starred": true},
+        {"no": 23, "word": "毕业", "pinyin": "bìyè", "pos": null, "pos_status": "blank_in_source", "gloss": "to graduate", "starred": true},
+        {"no": 24, "word": "公司", "pinyin": "gōngsī", "pos": "名", "gloss": "company", "starred": true},
+        {"no": 25, "word": "老板", "pinyin": "lǎobǎn", "pos": "名", "gloss": "boss", "starred": true},
+        {"no": 26, "word": "生活", "pinyin": "shēnghuó", "pos": "动/名", "gloss": "to live; life"},
+        {"no": 27, "word": "客户", "pinyin": "kèhù", "pos": "名", "gloss": "client"},
+        {"no": 28, "word": "烧茄子", "pinyin": "shāoqiézi", "pos": "名", "gloss": "eggplant cooked in soy sauce"},
+        {"no": 29, "word": "糖醋鱼", "pinyin": "tángcùyú", "pos": "名", "gloss": "sweet and sour fish"}
+      ],
+      "proper_nouns": [
+        {"word": "春节", "pinyin": "Chūn Jié", "gloss": "Spring Festival; Chinese New Year"},
+        {"word": "广州美术学院", "pinyin": "Guǎngzhōu Měishù Xuéyuàn", "gloss": "Guangzhou Academy of Fine Arts"}
+      ]
+    },
+    {
+      "id": "vocabulary_comprehension",
+      "printed_page": 3,
+      "audio": "1-2",
+      "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读。",
+      "groups": [
+        {"topic": "关于家庭生活的词语", "words": ["出生", "照顾", "春节", "离开", "独生女"], "answer": ["1.B", "2.E", "3.C", "4.D", "5.A"]},
+        {"topic": "关于工作的词语", "words": ["广告", "满意", "努力", "压力", "开夜车", "受欢迎"], "answer": ["1.D", "2.C", "3.A", "4.B", "5.F", "6.E"]},
+        {"topic": "关于爱好的词语", "words": ["帮助", "放假", "拍照片"], "answer": ["1.B", "2.C", "3.A"]}
+      ],
+      "answer_status": "answers_checked_against_answer_pdf"
+    },
+    {
+      "id": "listening_sentences",
+      "printed_pages": [4, 5, 6],
+      "audio_tracks": ["1-3", "1-4", "1-5"],
+      "exercise_1_3": {
+        "instruction": "听句子，判断对错。",
+        "items": [
+          [1, "丽丽没有哥哥姐姐。", "对"],
+          [2, "王红是在广州生的。", "对"],
+          [3, "妹妹要去看爸爸妈妈。", "错"],
+          [4, "弟弟一个人生活还有问题。", "错"],
+          [5, "阿里的爸爸妈妈不放心。", "对"],
+          [6, "大家工作不太忙。", "错"],
+          [7, "他们不知道怎么工作。", "错"],
+          [8, "我们的工作不太容易。", "对"],
+          [9, "自己做饭很便宜。", "错"]
+        ]
+      },
+      "exercise_1_4": {
+        "instruction": "听小对话，选择正确答案。",
+        "items": [
+          [1, "小王觉得自己的工作怎么样？", ["很难", "很好"], "B"],
+          [2, "丽丽的父母担心吗？", ["担心", "不担心了"], "A"],
+          [3, "阿里怎么了？", ["觉得开车很累", "昨天睡得很晚"], "B"],
+          [4, "谁喜欢丽丽的设计？", ["客户", "老师"], "A"],
+          [5, "小王下个星期做什么？", ["工作", "休息"], "B"]
+        ]
+      },
+      "exercise_1_5": {
+        "instruction": "听句子，回答问题。",
+        "items": [
+          [1, "丽丽的爸爸妈妈在不在北京？", "不在北京。"],
+          [2, "弟弟自己洗衣服吗？", "弟弟自己洗衣服。"],
+          [3, "小王什么时候打电话？", "有空儿的时候。"],
+          [4, "丽丽为什么有时候很晚才能睡觉？", "要设计出好的广告。"],
+          [5, "丽丽设计的广告怎么样？", "越来越好。"],
+          [6, "爸爸有什么爱好？", "做饭和拍照片。"],
+          [7, "自己做饭怎么样？", "不仅好吃，而且卫生。"],
+          [8, "姐姐拍的照片怎么样？", "很漂亮。"]
+        ]
+      },
+      "answer_status": "answers_checked_against_answer_pdf"
+    },
+    {
+      "id": "short_text_1",
+      "printed_pages": [5, 6],
+      "audio": "1-6",
+      "title": "丽丽在北京找到了工作",
+      "text": "王丽丽是家里的独生女，今年7月大学毕业，在北京找到了工作。8月，她就要离开父母，去北京生活。丽丽出生在广州，她爸爸是一家公司的老板，妈妈是小学音乐老师。丽丽从出生到大学毕业一直和父母住在一起，还没有一个人生活过。爸爸说：“广州也有不少好公司，爸爸的公司就不错，为什么一定要去北京？北京的冬天那么冷，你不一定能适应。”妈妈说：“孩子，你爸爸说得对。你一个人住，什么事都得自己做。你能行吗？”丽丽对他们说：“爸、妈，我对这份工作很满意。你们别为我担心，我已经23岁了，能自己照顾自己。如果有空儿，我就给你们打电话。”",
+      "exercises": {
+        "first_listen": ["丽丽有没有弟弟妹妹？", "丽丽是哪里人？", "丽丽要去哪儿？", "丽丽多大了？", "丽丽家有什么人？"],
+        "second_listen": [
+          "丽丽毕业以后要去哪里工作？她喜欢不喜欢这份工作？（北京 满意）",
+          "丽丽的爸爸妈妈对丽丽说什么了？（一个人 北京 天气 适应）",
+          "丽丽说什么？（满意 担心 照顾）"
+        ],
+        "present": "请你介绍一下丽丽：说说她的家庭情况；丽丽毕业后的打算，她父母的想法和她自己的想法有没有不同。要求说6—8个句子，不少于60字。",
+        "compare": "读下面的短文，跟你说的进行比较。丽丽是独生女。她的爸爸是公司老板，妈妈是小学老师。大学毕业后，丽丽要离开父母，去北京生活。丽丽的爸爸妈妈为她担心。丽丽说自己对新工作很满意。如果有空儿，她就打电话。"
+      }
+    },
+    {
+      "id": "short_text_2",
+      "printed_pages": [7, 8],
+      "audio": "1-7",
+      "audio_status": "local_file_present; publisher_qr_mapping_unresolved; semantic_listening_pending",
+      "title": "丽丽工作很努力",
+      "text": "丽丽在广州美术学院学的是设计，现在是广告公司的设计师。这是一家很有名的大公司，工作要求高，丽丽觉得压力很大。广告公司的工作很忙，从星期一到星期五，每天早上9点上班，下午6点下班。为了设计出让客户满意的广告，有时候还需要开夜车，很晚才能睡觉。但是丽丽很爱自己的工作，工作特别努力，她的设计越来越受客户欢迎，老板对她的工作也很满意。",
+      "exercises": {
+        "first_listen": ["丽丽在大学学的是什么？", "丽丽上班的公司大不大？", "丽丽工作忙不忙？", "丽丽喜欢不喜欢自己的工作？", "丽丽晚上工作不工作？"],
+        "second_listen": [
+          "丽丽每天工作多长时间？丽丽觉得自己的工作容易不容易？（早上 晚上 开夜车 要求）",
+          "丽丽现在做的是什么工作？她工作做得好不好？为什么？（设计 努力 受欢迎 老板 满意）"
+        ],
+        "present": "请你说说丽丽的工作情况：她在哪儿做什么工作；她的工作态度和工作成绩；客户和老板对她的看法。要求说6—8个句子，不少于60字。",
+        "compare": "读下面的短文，跟你说的进行比较。丽丽在北京一家广告公司工作。她从星期一到星期五每天早上9点上班，下午6点下班。为了设计出好的广告，丽丽有时候很晚才能睡觉。丽丽工作很努力，她的设计越来越受欢迎，老板对她的工作也比较满意。"
+      }
+    },
+    {
+      "id": "short_text_3",
+      "printed_pages": [8, 9],
+      "audio": "1-8",
+      "audio_status": "local_file_present; publisher_qr_mapping_unresolved; semantic_listening_pending",
+      "title": "丽丽的爱好很多",
+      "text": "有空儿的时候，丽丽喜欢自己做饭。她租的房子不大，可是厨房很好。她说，自己做饭不仅好吃，而且卫生，对身体更好。刚来北京的时候，她真的有点儿不适应，常常想家。现在，她来北京已经半年多了，生活和工作都慢慢适应了，也交上了新朋友。她最好的朋友是小明、小兰。放假的时候，他们常常一起做饭。丽丽做的饭越来越好吃，朋友们最爱吃她做的烧茄子和糖醋鱼。春节的时候丽丽上班的公司放7天假，她打算回广州，要给爸爸妈妈做几个好吃的菜。除了做饭，丽丽还喜欢拍照片。因为她是学设计的，所以她拍的照片很漂亮。她说，拍照片对她的设计工作有帮助。",
+      "exercises": {
+        "first_listen": ["丽丽喜欢做什么？", "丽丽租的房子有厨房吗？", "丽丽想不想爸爸妈妈？", "丽丽在北京有没有朋友？", "春节丽丽回家吗？"],
+        "second_listen": [
+          "丽丽什么菜做得好吃？（茄子 鱼）",
+          "丽丽说自己做饭怎么样？（不仅……而且…… 卫生）",
+          "丽丽觉得拍照片有什么好处？（对……有帮助）"
+        ],
+        "group": "大家一起谈谈丽丽的爱好。一个人先说4—6个句子，不少于40字；小组其他同学补充；最后一名同学总结，说6—8个句子，不少于60字。",
+        "compare": "读下面的短文，跟你说的进行比较。有空儿的时候，丽丽不仅喜欢做饭，而且喜欢拍照片。她说自己做饭不仅好吃，而且对身体好。她做的菜越来越好吃。周末她常和朋友们一起做饭，她做的烧茄子很受朋友欢迎。她说，拍照片对她的工作有帮助。"
+      }
+    },
+    {
+      "id": "common_expressions",
+      "printed_pages": [6, 8, 9],
+      "groups": [
+        {"topic": "谈论家庭生活", "items": ["出生在", "……是……", "什么", "为……担心", "如果……就……"]},
+        {"topic": "谈论工作", "items": ["从……到……", "为了", "越来越", "受……欢迎", "对……满意"]},
+        {"topic": "谈论业余生活", "items": ["毕业／见面", "放假", "不仅……而且……", "除了……还……／除了……也……", "因为……所以……", "对……有好处／有帮助（1）"]}
+      ],
+      "source_status": "examples_transcribed_from_scanned_pages; final visual/manual check still required"
+    },
+    {
+      "id": "comprehensive_practice",
+      "printed_pages": [10, 11],
+      "exercise_1": "请你根据听过的三段短文填表。",
+      "table_fields": {
+        "丽丽的家庭情况": ["家庭成员", "职业", "对丽丽去北京的态度"],
+        "丽丽的工作情况": ["工作单位", "职位", "工作时间", "工作表现"],
+        "丽丽的爱好": ["什么爱好", "为什么", "有意思的事"]
+      },
+      "exercise_2": "根据上面的表格和参考词语、常用表达，谈一谈：（1）丽丽的家庭；（2）丽丽的学习、工作情况；（3）丽丽的爱好。一名同学先说6—8个句子，不少于60字；小组其他同学补充；最后一名同学总结，说8—10个句子，不少于80字。",
+      "exercise_3": "拓展练习：请你谈谈自己的基本情况：（1）自己的家庭；（2）自己的学习（工作）情况；（3）自己的兴趣爱好。要求使用这一课学过的词语和常用表达；说6—8个句子，不少于60字。",
+      "answer_status": "open_presentational_tasks_have_no_unique_answer_in_answer_pdf"
+    }
+  ],
+  "audio_mapping": [
+    {"track": "1-1", "printed_pages": [1, 2], "status": "file_present_decode_passed; semantic_listening_pending"},
+    {"track": "1-2", "printed_pages": [3], "status": "file_present_decode_passed; semantic_listening_pending"},
+    {"track": "1-3", "printed_pages": [4], "status": "file_present_decode_passed; semantic_listening_pending"},
+    {"track": "1-4", "printed_pages": [4, 5], "status": "file_present_decode_passed; semantic_listening_pending"},
+    {"track": "1-5", "printed_pages": [5, 6], "status": "file_present_decode_passed; semantic_listening_pending"},
+    {"track": "1-6", "printed_pages": [5, 6], "status": "file_present_decode_passed; semantic_listening_pending"},
+    {"track": "1-7", "printed_pages": [7], "status": "local_file_present; publisher_qr_mapping_unresolved; semantic_listening_pending"},
+    {"track": "1-8", "printed_pages": [8], "status": "local_file_present; publisher_qr_mapping_unresolved; semantic_listening_pending"}
+  ],
+  "unresolved": [
+    "教材P7、P8标示1-7、1-8；本地1-7、1-8文件已存在并通过技术解码，但当前QR落地页仍只登记1-1至1-6，来源类型与语义对应需教师听核。",
+    "1-1至1-6尚未完成逐文件语义听核；目前只确认文件存在、解码与技术metadata。",
+    "词性栏空白处保留null，不自行补词性。",
+    "开放式介绍、比较、小组总结和拓展练习不设唯一标准答案。",
+    "本课正式实体课时与线上／实体PPT边界尚未由Adam确认。"
+  ],
+  "evidence": {
+    "main_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+    "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+    "audio_root": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01",
+    "page_transcription_agents": ["source_pages_1_5", "source_pages_6_11"],
+    "answer_audio_audit_agent": "answer_audio_audit"
+  }
+}

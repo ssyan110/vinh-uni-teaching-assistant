@@ -1,0 +1,599 @@
+{
+  "lesson_key": "boya-quasi-intermediate-i:lesson-07",
+  "schema_version": "quasi-intermediate-source-audit-v1.0",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_number": 7,
+  "lesson_id": "lesson-07",
+  "title": "小张热爱登山",
+  "title_source": "主教材 PDF 第72页（印刷 P59）课名页视觉核对",
+  "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+  "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+  "page_map": {
+    "printed_pages": [
+      59,
+      67
+    ],
+    "pdf_pages": [
+      72,
+      80
+    ],
+    "answer_pdf_pages": [
+      20,
+      21
+    ],
+    "mapping_status": "visual_verified_first_pass"
+  },
+  "qr_evidence": {
+    "pdf_page": 72,
+    "qr_url": "http://qr31.cn/I7dyDT",
+    "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-07-pdf-page-072.png",
+    "landing_page": "https://biz.cli.im/site/I7dyDT?qrurl=http://qr31.cn/I7dyDT&gtype=2&key=1f37b1766d5d24adc878292076608ec1b666357015",
+    "landing_audio_labels": [
+      "7-1",
+      "7-2",
+      "7-3",
+      "7-4",
+      "7-5",
+      "7-6"
+    ],
+    "decode_status": "source_inventory_verified"
+  },
+  "audio_map": [
+    {
+      "label": "7-1",
+      "coding": "EM1539812",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fl6AbBu2IAsLCZeOG6Lud6gz3VN3",
+      "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-07/7-1.mp3",
+      "bytes": 917828,
+      "sha256": "65f215bffedcd77d2961e939ff98309f281ef933371454e85ef43b7893c0cae6",
+      "duration_seconds": 57.051,
+      "decode_status": "passed"
+    },
+    {
+      "label": "7-2",
+      "coding": "AT1783212",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fv1KPLHYilNPRMocACQbnOyEme84",
+      "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-07/7-2.mp3",
+      "bytes": 420875,
+      "sha256": "cb099fc04a47bca06833d839dd63110bbbab1907273d2909399ec3eba4aca500",
+      "duration_seconds": 25.992,
+      "decode_status": "passed"
+    },
+    {
+      "label": "7-3",
+      "coding": "HZ1783213",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FrEHDdPzJXG0DPn0RA9MLmkC_ze9",
+      "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-07/7-3.mp3",
+      "bytes": 932039,
+      "sha256": "c033e983392a4c89a6f8fc07647c6bff847b5f0cd2ddeb08b6a9560aa20cd669",
+      "duration_seconds": 57.94,
+      "decode_status": "passed"
+    },
+    {
+      "label": "7-4",
+      "coding": "FX1783214",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fm2U64p9MU2fViFi_FHmma4iSxjY",
+      "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-07/7-4.mp3",
+      "bytes": 995569,
+      "sha256": "bfc5fa1ea1d796e5607a9b7598d16f689466ce3e0dd9da93afee52875613b8f0",
+      "duration_seconds": 61.91,
+      "decode_status": "passed"
+    },
+    {
+      "label": "7-5",
+      "coding": "TW1783215",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FiGKpAdf35vQDYHFbSOJk822X1Ej",
+      "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-07/7-5.mp3",
+      "bytes": 955863,
+      "sha256": "e9ab7a6aad444d01b68f2945e75c67f455fef7126c8a5fb6da64c6fff216cec0",
+      "duration_seconds": 59.429,
+      "decode_status": "passed"
+    },
+    {
+      "label": "7-6",
+      "coding": "OT1783216",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FmVA1Mq_XzBfEUqNnbIWQ39oxbiW",
+      "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-07/7-6.mp3",
+      "bytes": 1029841,
+      "sha256": "5233d683bc73fd9d9675cade116a09f739533699121c96b18dc7531f92c584e3",
+      "duration_seconds": 64.052,
+      "decode_status": "passed"
+    }
+  ],
+  "content_inventory": {
+    "vocabulary_count": 26,
+    "proper_noun_count": 0,
+    "vocabulary_comprehension_group_count": 1,
+    "listening_sentence_item_count": 10,
+    "texts_dialogues_count": 3,
+    "listening_exercise_group_count": 6,
+    "common_expression_group_count": 3,
+    "comprehensive_exercise_count": 3,
+    "status": "visual_source_snapshot_pending_adam_approval"
+  },
+  "answer_policy": "仅记录参考答案 PDF 中可核对的答案；开放式口语题不补写唯一答案，保留教师示例和评量空间。",
+  "review": {
+    "status": "pending_review",
+    "approved": false,
+    "approved_by": [],
+    "approved_at": null,
+    "blockers": [
+      "扫描教材无可用文字层；最终来源批准需由 Adam 对视觉转录、教材页码和答案证据确认。",
+      "六段音频已通过本地文件 bytes、SHA-256、ffprobe 时长和解码核验；语义听核及教师 PowerPoint 播放实测仍待完成。",
+      "开放式口语、综合填表与小组总结没有唯一标准答案，不补写答案。"
+    ],
+    "approval_basis": [
+      "主教材 PDF 第72–81页（印刷 P59–P67）视觉核对",
+      "答案 PDF 文件第20–21页视觉核对",
+      "来源总盘点 QR、音频 bytes、hash 和时长记录"
+    ]
+  },
+  "sections": [
+    {
+      "id": "vocabulary",
+      "printed_pages": [
+        59,
+        60
+      ],
+      "audio": "7-1",
+      "entries": [
+        {
+          "no": 1,
+          "word": "登山",
+          "pinyin": "dēngshān",
+          "pos": "动",
+          "gloss": "to climb mountains"
+        },
+        {
+          "no": 2,
+          "word": "优美",
+          "pinyin": "yōuměi",
+          "pos": "形",
+          "gloss": "beautiful; graceful"
+        },
+        {
+          "no": 3,
+          "word": "热爱",
+          "pinyin": "rè'ài",
+          "pos": "动",
+          "gloss": "to love; adore"
+        },
+        {
+          "no": 4,
+          "word": "邻居",
+          "pinyin": "línjū",
+          "pos": "名",
+          "gloss": "neighbor"
+        },
+        {
+          "no": 5,
+          "word": "机会",
+          "pinyin": "jīhuì",
+          "pos": "名",
+          "gloss": "opportunity"
+        },
+        {
+          "no": 6,
+          "word": "耐力",
+          "pinyin": "nàilì",
+          "pos": "名",
+          "gloss": "endurance; stamina"
+        },
+        {
+          "no": 7,
+          "word": "放松",
+          "pinyin": "fàngsōng",
+          "pos": "动",
+          "gloss": "to relax"
+        },
+        {
+          "no": 8,
+          "word": "市民",
+          "pinyin": "shìmín",
+          "pos": "名",
+          "gloss": "citizen; resident"
+        },
+        {
+          "no": 9,
+          "word": "挑战",
+          "pinyin": "tiǎozhàn",
+          "pos": "动",
+          "gloss": "to challenge"
+        },
+        {
+          "no": 10,
+          "word": "根本",
+          "pinyin": "gēnběn",
+          "pos": "副",
+          "gloss": "fundamentally"
+        },
+        {
+          "no": 11,
+          "word": "合作",
+          "pinyin": "hézuò",
+          "pos": "动",
+          "gloss": "to cooperate"
+        },
+        {
+          "no": 12,
+          "word": "浪漫",
+          "pinyin": "làngmàn",
+          "pos": "形",
+          "gloss": "romantic"
+        },
+        {
+          "no": 13,
+          "word": "羡慕",
+          "pinyin": "xiànmù",
+          "pos": "动",
+          "gloss": "to admire; envy"
+        },
+        {
+          "no": 14,
+          "word": "地道",
+          "pinyin": "dìdao",
+          "pos": "形",
+          "gloss": "authentic; genuine"
+        },
+        {
+          "no": 15,
+          "word": "发亮",
+          "pinyin": "fāliàng",
+          "pos": "动",
+          "gloss": "to shine; glisten"
+        },
+        {
+          "no": 16,
+          "word": "不管",
+          "pinyin": "bùguǎn",
+          "pos": "连",
+          "gloss": "no matter how"
+        },
+        {
+          "no": 17,
+          "word": "肚子",
+          "pinyin": "dùzi",
+          "pos": "名",
+          "gloss": "stomach; belly"
+        },
+        {
+          "no": 18,
+          "word": "感受",
+          "pinyin": "gǎnshòu",
+          "pos": "动",
+          "gloss": "to feel"
+        },
+        {
+          "no": 19,
+          "word": "危险",
+          "pinyin": "wēixiǎn",
+          "pos": "形",
+          "gloss": "dangerous"
+        },
+        {
+          "no": 20,
+          "word": "将来",
+          "pinyin": "jiānglái",
+          "pos": "名",
+          "gloss": "future"
+        },
+        {
+          "no": 21,
+          "word": "山顶",
+          "pinyin": "shāndǐng",
+          "pos": "名",
+          "gloss": "hilltop"
+        },
+        {
+          "no": 22,
+          "word": "俱乐部",
+          "pinyin": "jùlèbù",
+          "pos": "名",
+          "gloss": "club"
+        },
+        {
+          "no": 23,
+          "word": "结交",
+          "pinyin": "jiéjiāo",
+          "pos": "动",
+          "gloss": "to get along with"
+        },
+        {
+          "no": 24,
+          "word": "害怕",
+          "pinyin": "hàipà",
+          "pos": "动",
+          "gloss": "to fear"
+        },
+        {
+          "no": 25,
+          "word": "信心",
+          "pinyin": "xìnxīn",
+          "pos": "名",
+          "gloss": "confidence"
+        },
+        {
+          "no": 26,
+          "word": "愉快",
+          "pinyin": "yúkuài",
+          "pos": "形",
+          "gloss": "happy; agreeable"
+        }
+      ],
+      "proper_nouns": [],
+      "source_status": "visual_transcription_pending_review"
+    },
+    {
+      "id": "vocabulary_comprehension",
+      "printed_pages": [
+        60
+      ],
+      "audio": "7-2",
+      "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读。",
+      "groups": [
+        {
+          "words": [
+            "乒乓球",
+            "登山",
+            "滑冰",
+            "游泳",
+            "优美",
+            "登山鞋"
+          ],
+          "answer": [
+            "1.E",
+            "2.B",
+            "3.C",
+            "4.D",
+            "5.A",
+            "6.F"
+          ]
+        }
+      ],
+      "answer_status": "answers_checked_against_answer_pdf"
+    },
+    {
+      "id": "listening_sentences",
+      "printed_pages": [
+        61
+      ],
+      "audio_tracks": [
+        "7-3"
+      ],
+      "exercises": {
+        "exercise_7_3": {
+          "heading_verbatim": "一、听句子，判断对错",
+          "items": [
+            [
+              1,
+              "李老师非常喜欢当老师。",
+              "对"
+            ],
+            [
+              2,
+              "小张是丽丽的邻居。",
+              "错"
+            ],
+            [
+              3,
+              "小王想去，可是一直没有机会。",
+              "错"
+            ],
+            [
+              4,
+              "朴大宇耐力很强。",
+              "对"
+            ],
+            [
+              5,
+              "哥哥想放松放松。",
+              "对"
+            ],
+            [
+              6,
+              "那个地方风景优美，是市民常去的地方。",
+              "对"
+            ],
+            [
+              7,
+              "这项工作很有挑战性。",
+              "错"
+            ],
+            [
+              8,
+              "大家根本没有时间登山。",
+              "错"
+            ],
+            [
+              9,
+              "同事们的合作出了点儿问题。",
+              "错"
+            ],
+            [
+              10,
+              "大岛是个浪漫的人。",
+              "错"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "short_text_1",
+      "printed_pages": [
+        61,
+        62
+      ],
+      "audio": "7-4",
+      "title": "小张是登山迷",
+      "text": "我邻居小张热爱运动，打球、游泳、滑冰样样都会，令人羡慕。不过，他最大的爱好是登山，是个地地道道的登山迷。一说起登山，他就兴奋得眼睛发亮。",
+      "exercises": {
+        "first_listen": [
+          "小张喜欢什么？",
+          "小张最大的爱好是什么？",
+          "小张小时候怎么样？"
+        ],
+        "second_listen": [
+          "谈起登山，小张怎么样？（兴奋）",
+          "小张小时候为什么不喜欢登山？（很早 饿着肚子 感受）",
+          "小张什么时候爱上登山的？（毕业 开始）"
+        ],
+        "present": "谈谈小张的爱好是什么。",
+        "compare": "小张的爱好和登山带来的好处。"
+      },
+      "exercise_metadata": {
+        "first_listen": {
+          "heading_verbatim": "（一）听第一遍，简单回答问题",
+          "textbook_printed_pages": [
+            61
+          ],
+          "audio_tracks": [
+            "7-4"
+          ]
+        },
+        "second_listen": {
+          "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+          "textbook_printed_pages": [
+            61
+          ],
+          "audio_tracks": [
+            "7-4"
+          ]
+        }
+      }
+    },
+    {
+      "id": "short_text_2",
+      "printed_pages": [
+        63,
+        64
+      ],
+      "audio": "7-5",
+      "title": "小张真正爱上了登山",
+      "text": "上大学以后，小张来到了大城市，登山的机会不多。毕业以后，小张来到了另一座城市。他的工作虽然很好，可是压力很大，非常需要放松。小张说，那座城市的郊区有很多山，市民周末和节假日常常去那里。周末去登山，慢慢成了小张的习惯。他说，登山很累，有时候可能还有点儿危险，可是登山可以锻炼身体，提高耐力。累的时候，还可以停下来欣赏优美的风景。他说，将来如果找到自己喜欢的女孩儿，一定要在山顶上对她说他爱她。他这个人还挺浪漫的。",
+      "exercises": {
+        "first_listen": [
+          "上大学以后，小张常常登山吗？",
+          "小张的工作怎么样？",
+          "小张工作的城市山多吗？"
+        ],
+        "second_listen": [
+          "为什么登山成了小张的习惯？（压力 放松 郊区）",
+          "小张觉得登山怎么样？（累 危险 锻炼 欣赏）",
+          "为什么说小张是个浪漫的人？（将来 山顶）"
+        ],
+        "present": "谈谈小张的爱好是什么。",
+        "compare": "小张的爱好和登山带来的好处。"
+      },
+      "exercise_metadata": {
+        "first_listen": {
+          "heading_verbatim": "（一）听第一遍，简单回答问题",
+          "textbook_printed_pages": [
+            63
+          ],
+          "audio_tracks": [
+            "7-5"
+          ]
+        },
+        "second_listen": {
+          "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+          "textbook_printed_pages": [
+            63
+          ],
+          "audio_tracks": [
+            "7-5"
+          ]
+        }
+      }
+    },
+    {
+      "id": "short_text_3",
+      "printed_pages": [
+        64,
+        65
+      ],
+      "audio": "7-6",
+      "title": "登山可以增进友谊",
+      "text": "因为登山，小张参加了登山俱乐部，认识了新朋友，结交了不少登山伙伴。有空儿的时候，他也会约上同事、在同一座城市工作的大学和中学同学，一起参加他们登山俱乐部的活动。他们去的往往是有挑战性的地方，跟他一起去的同学、同事刚开始觉得有点儿害怕，没有信心，这时候，小张就鼓励他们。慢慢地，大家也爱上了登山。不仅如此，同事们的关系越来越好，合作起来也更加愉快，工作效率也更高了。今年过生日的时候，同事、朋友们一起送了他一双登山鞋，他收到的时候十分激动。",
+      "exercises": {
+        "first_listen": [
+          "小张和谁一起登山？",
+          "他们去什么样的地方登山？",
+          "今年过生日，小张收到了什么礼物？"
+        ],
+        "second_listen": [
+          "登山给小张带来了什么好处？（认识 参加）",
+          "登山对小张的工作有什么好处？（关系 合作 效率）"
+        ],
+        "present": "谈谈小张的爱好是什么。",
+        "compare": "小张的爱好和登山带来的好处。"
+      },
+      "exercise_metadata": {
+        "first_listen": {
+          "heading_verbatim": "（一）听第一遍，简单回答问题",
+          "textbook_printed_pages": [
+            64
+          ],
+          "audio_tracks": [
+            "7-6"
+          ]
+        },
+        "second_listen": {
+          "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+          "textbook_printed_pages": [
+            64
+          ],
+          "audio_tracks": [
+            "7-6"
+          ]
+        }
+      }
+    },
+    {
+      "id": "common_expressions",
+      "printed_pages": [
+        62,
+        65
+      ],
+      "groups": [
+        {
+          "topic": "谈论个人生活",
+          "items": [
+            "样样都会",
+            "不管……都……",
+            "像……一样",
+            "又（2）",
+            "根本",
+            "另外",
+            "虽然……可是",
+            "慢慢地",
+            "不仅如此",
+            "刚开始……慢慢地",
+            "动词+上",
+            "动词+起来"
+          ]
+        }
+      ],
+      "source_status": "visual_transcription_pending_review"
+    },
+    {
+      "id": "comprehensive_practice",
+      "printed_pages": [
+        66,
+        67
+      ],
+      "audio_tracks": [
+        "7-4",
+        "7-5",
+        "7-6"
+      ],
+      "items": [
+        "请你根据听过的三段短文填表。",
+        "小组活动：谈一谈小张的爱好、登山经历和登山好处。",
+        "拓展练习：谈谈你喜欢的运动。"
+      ],
+      "source_status": "visual_transcription_pending_review"
+    }
+  ]
+}

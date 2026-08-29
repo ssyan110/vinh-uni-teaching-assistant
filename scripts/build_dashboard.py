@@ -10,14 +10,21 @@ from pathlib import Path
 from typing import Any
 
 from production_gate import check as check_production_gate
+from validate_lesson_identity import validate as validate_lesson_identity
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((PROJECT_ROOT / "project.config.json").read_text(encoding="utf-8"))
 LESSON_COUNT = int(CONFIG.get("lesson_count", 8))
 LESSON_ROOT = PROJECT_ROOT / CONFIG.get("lesson_collection_root", "lessons")
+TEXTBOOK_ID = str(CONFIG.get("active_context", {}).get("textbook_id", ""))
+OFFERING_ID = str(CONFIG.get("active_context", {}).get("offering_id", ""))
+LESSON_KEY_FORMAT = CONFIG.get("lesson_key_format", "<textbook_id>:<lesson_id>")
+LESSON_REGISTRY_PATH = PROJECT_ROOT / CONFIG.get(
+    "lesson_registry", "course/lesson-registry.json"
+)
 CATALOG_PATH = PROJECT_ROOT / CONFIG.get(
-    "lesson_catalog", "textbooks/boya-intermediate-i/source/source-index.md"
+    "lesson_catalog", f"textbooks/{TEXTBOOK_ID}/source/source-inventory.json"
 )
 DASHBOARD_ROOT = PROJECT_ROOT / CONFIG["dashboard_root"]
 OUTPUT_PATH = DASHBOARD_ROOT / "manifest.js"
@@ -102,11 +109,42 @@ def path_if_exists(path: str | None) -> str | None:
     return path if candidate.exists() else None
 
 
+def scoped_registry() -> tuple[dict[str, Any], dict[int, dict[str, Any]]]:
+    """Return the registry and only the active textbook's lessons."""
+
+    registry = read_json(LESSON_REGISTRY_PATH) or {}
+    lessons: dict[int, dict[str, Any]] = {}
+    for item in registry.get("lessons", []):
+        if item.get("textbook_id") != TEXTBOOK_ID:
+            continue
+        lessons[int(item["lesson_number"])] = item
+    return registry, lessons
+
+
 def first_matching(directory: Path, pattern: str) -> str | None:
     if not directory.is_dir():
         return None
     matches = sorted(directory.glob(pattern))
     return project_relative(matches[0]) if matches else None
+
+
+def draft_manifests(lesson_root: Path) -> list[dict[str, Any]]:
+    manifests: list[dict[str, Any]] = []
+    draft_root = lesson_root / "10-design/pptx-draft"
+    if not draft_root.is_dir():
+        return manifests
+    for path in sorted(draft_root.glob("*/manifest.json")):
+        payload = read_json(path)
+        if payload is not None:
+            payload = dict(payload)
+            payload["manifest_path"] = project_relative(path)
+            payload["compatibility_status"] = (
+                "legacy_unverified"
+                if payload.get("builder_scope") == "legacy_generator_unverified"
+                else "current_or_explicit"
+            )
+            manifests.append(payload)
+    return manifests
 
 
 def evidence_items(items: list[tuple[str | None, str]]) -> list[dict[str, str]]:
@@ -281,7 +319,7 @@ def build_gates(
                     "PPT storyboard manifest",
                 ),
                 (
-                    f"{design_inputs.get('storyboard', '').rstrip('/')}/{storyboard.get('current_revision')}"
+                    f"{(design_inputs.get('storyboard') or '').rstrip('/')}/{storyboard.get('current_revision')}"
                     if storyboard
                     else None,
                     "当前 PPT 大纲",
@@ -295,7 +333,7 @@ def build_gates(
                     "Visual storyboard manifest",
                 ),
                 (
-                    f"{design_inputs.get('visual_storyboard', '').rstrip('/')}/{visual_storyboard.get('current_revision')}"
+                    f"{(design_inputs.get('visual_storyboard') or '').rstrip('/')}/{visual_storyboard.get('current_revision')}"
                     if visual_storyboard
                     else None,
                     "当前 Visual storyboard",
@@ -438,18 +476,41 @@ def build_lesson(
     number: int,
     catalog: dict[int, dict[str, Any]],
     previous_delivered: bool,
+    registry_lessons: dict[int, dict[str, Any]],
 ) -> tuple[dict[str, Any], dict[str, Any], bool]:
     lesson_id = f"lesson-{number:02d}"
-    lesson_root = LESSON_ROOT / lesson_id
+    identity = registry_lessons.get(number, {})
+    lesson_key = identity.get("lesson_key") or f"{TEXTBOOK_ID}:{lesson_id}"
+    lesson_root = PROJECT_ROOT / identity.get("lesson_path", f"{LESSON_ROOT.relative_to(PROJECT_ROOT)}/{lesson_id}")
     authority_path = lesson_root / "20-approved/lesson-manifest.json"
     source_path = lesson_root / "00-source/source-manifest.json"
     authority = read_json(authority_path)
     source = read_json(source_path)
-    catalog_entry = catalog.get(number, {})
+    catalog_entry = dict(catalog.get(number, {}))
+    # The cross-textbook lesson registry is the current identity authority.
+    # Keep a raw inventory title only as provenance when OCR differs from the
+    # confirmed printed title, but never show that stale title as the lesson
+    # name in the dashboard.
+    if identity.get("title"):
+        inventory_title = catalog_entry.get("title")
+        if inventory_title and inventory_title != identity["title"]:
+            catalog_entry["source_inventory_title"] = inventory_title
+        catalog_entry["title"] = identity["title"]
 
-    title = (authority or source or {}).get("lesson_title") or catalog_entry.get("title") or f"第 {number} 课"
+    title = (
+        (authority or source or {}).get("lesson_title")
+        or catalog_entry.get("title")
+        or identity.get("title")
+        or f"第 {number} 课"
+    )
+    drafts = draft_manifests(lesson_root)
+    draft_available = any(item.get("compatibility_status") != "legacy_unverified" for item in drafts)
+    legacy_draft_available = bool(drafts) and not draft_available
     unlocked = previous_delivered
-    gates = build_gates(number, lesson_root, authority, source, unlocked)
+    # A lesson with an explicitly scoped draft is actionable even when the
+    # previous lesson has not reached immutable release. Keep authority gates
+    # locked, but expose the source-review gate instead of hiding all work.
+    gates = build_gates(number, lesson_root, authority, source, unlocked or draft_available)
     completed_gates = sum(1 for gate in gates if gate["status"] in {"done", "approved"})
     delivered = bool(
         authority
@@ -483,6 +544,18 @@ def build_lesson(
         stage = "来源审核" if source else "等待开始"
         next_action = "继续来源审核并记录批准。" if source else "开始来源审核。"
         unlock_reason = "上一课已完成交付，当前课次已解锁。"
+    elif draft_available:
+        status = "draft_in_progress"
+        status_label = "草稿製作中"
+        stage = "10-design PPTX draft"
+        next_action = "完成來源語義、教師手冊、配套、QA 與 rehearsal 後，才能升級 authority。"
+        unlock_reason = "來源包與線上／實體邊界已允許 draft；authority／release 仍依序鎖定。"
+    elif legacy_draft_available:
+        status = "draft_legacy_unverified"
+        status_label = "旧草稿待核"
+        stage = "10-design 旧 draft"
+        next_action = "不要沿用旧草稿；先以本课 lesson_key、来源包与边界确认重新建立当前 draft。"
+        unlock_reason = "发现旧生成器草稿，但它没有当前生成器兼容声明，不能作为生产输入。"
     else:
         status = "locked"
         status_label = "锁定"
@@ -492,8 +565,26 @@ def build_lesson(
 
     scope = (authority or {}).get("scope", {})
     authority_section = (authority or {}).get("authority", {})
+    canonical = read_json(lesson_root / "00-source/canonical-source.json") or {}
+    source_counts = source.get("counts", {}) if source else {}
+    canonical_sections = canonical.get("sections", [])
+    source_section_count = (
+        (source or {}).get("section_count")
+        or source_counts.get("sections")
+        or (len(canonical_sections) if isinstance(canonical_sections, (list, dict)) else None)
+    )
+    exercise_count = (
+        (source or {}).get("exercise_count")
+        or source_counts.get("exercises")
+        or source_counts.get("listening_contract_records")
+        or source_counts.get("comprehensive_exercises")
+    )
     summary = {
-        "id": lesson_id,
+        "id": lesson_key,
+        "lesson_key": lesson_key,
+        "textbook_id": TEXTBOOK_ID,
+        "offering_id": OFFERING_ID,
+        "lesson_id": lesson_id,
         "number": number,
         "title": title,
         "status": status,
@@ -501,6 +592,17 @@ def build_lesson(
         "stage": stage,
         "next_action": next_action,
         "unlock_reason": unlock_reason,
+        "draft_available": draft_available,
+        "drafts": [
+            {
+                "mode": item.get("mode"),
+                "status": item.get("status"),
+                "output": item.get("output"),
+                "manifest_path": item.get("manifest_path"),
+                "compatibility_status": item.get("compatibility_status"),
+            }
+            for item in drafts
+        ],
         "progress": {
             "completed": completed_gates,
             "total": len(GATE_DEFINITIONS),
@@ -514,8 +616,8 @@ def build_lesson(
             "activity_count": scope.get("activity_count"),
         },
         "counts": {
-            "source_sections": (source or {}).get("section_count"),
-            "exercises": (source or {}).get("exercise_count"),
+            "source_sections": source_section_count,
+            "exercises": exercise_count,
             "audio": (source or {}).get("audio_count") or catalog_entry.get("audio_count"),
             "authority_files": len((authority or {}).get("files", [])),
             "activity_files": authority_section.get("activities", {}).get("file_count"),
@@ -524,6 +626,7 @@ def build_lesson(
         "source_manifest_path": project_relative(source_path) if source else None,
     }
     detail = {
+        "identity": identity,
         "manifest": authority,
         "source_manifest": source,
         "gates": gates,
@@ -533,13 +636,19 @@ def build_lesson(
 
 
 def build() -> Path:
+    identity_errors = validate_lesson_identity(LESSON_REGISTRY_PATH, PROJECT_ROOT / "project.config.json")
+    if identity_errors:
+        raise RuntimeError("lesson identity validation failed:\n" + "\n".join(identity_errors))
+    registry, registry_lessons = scoped_registry()
     catalog = parse_lesson_catalog()
     lesson_summaries: list[dict[str, Any]] = []
     lesson_details: dict[str, dict[str, Any]] = {}
     previous_delivered = True
 
     for number in range(1, LESSON_COUNT + 1):
-        summary, detail, delivered = build_lesson(number, catalog, previous_delivered)
+        summary, detail, delivered = build_lesson(
+            number, catalog, previous_delivered, registry_lessons
+        )
         lesson_summaries.append(summary)
         lesson_details[summary["id"]] = detail
         previous_delivered = delivered
@@ -548,14 +657,15 @@ def build() -> Path:
         (
             lesson
             for lesson in lesson_summaries
-            if lesson["status"] in {"in_progress", "source_review", "available"}
+            if lesson["status"] in {"in_progress", "source_review", "available", "draft_in_progress"}
         ),
         lesson_summaries[-1],
     )
     counts = {
         "delivered": sum(lesson["status"] == "delivered" for lesson in lesson_summaries),
         "in_progress": sum(lesson["status"] == "in_progress" for lesson in lesson_summaries),
-        "available": sum(lesson["status"] in {"source_review", "available"} for lesson in lesson_summaries),
+        "available": sum(lesson["status"] in {"source_review", "available", "draft_in_progress"} for lesson in lesson_summaries),
+        "draft_available": sum(bool(lesson.get("draft_available")) for lesson in lesson_summaries),
         "locked": sum(lesson["status"] == "locked" for lesson in lesson_summaries),
         "completed_gates": sum(lesson["progress"]["completed"] for lesson in lesson_summaries),
         "total_gates": len(lesson_summaries) * len(GATE_DEFINITIONS),
@@ -576,6 +686,7 @@ def build() -> Path:
             f"course/offerings/{CONFIG.get('active_context', {}).get('offering_id')}/offering.json",
         ),
         ("教材清单", CONFIG.get("textbook_registry")),
+        ("课次身份索引", CONFIG.get("lesson_registry")),
         ("当前教材", CONFIG.get("textbook", {}).get("manifest")),
         ("教材来源索引", project_relative(CATALOG_PATH) if CATALOG_PATH.exists() else None),
     ]
@@ -591,6 +702,7 @@ def build() -> Path:
         "generated_from": {
             "authority_manifests": f"{project_relative(LESSON_ROOT)}/lesson-XX/20-approved/lesson-manifest.json",
             "lesson_catalog": project_relative(CATALOG_PATH) if CATALOG_PATH.exists() else None,
+            "lesson_registry": project_relative(LESSON_REGISTRY_PATH),
         },
         "course": {
             "id": CONFIG["course_id"],
@@ -599,11 +711,16 @@ def build() -> Path:
             "textbook_id": CONFIG.get("active_context", {}).get("textbook_id"),
             "textbook_title": CONFIG.get("active_textbook_title"),
             "lesson_count": LESSON_COUNT,
+            "lesson_key_format": LESSON_KEY_FORMAT,
+            "active_lesson_key": CONFIG.get("active_context", {}).get("lesson_key"),
+            "lesson_registry": project_relative(LESSON_REGISTRY_PATH),
+            "textbooks": registry.get("textbooks", []),
             "documents": documents,
         },
         "summary": {
             **counts,
             "focus_lesson_id": focus["id"],
+            "focus_lesson_key": focus["lesson_key"],
             "focus_lesson_title": focus["title"],
             "next_action": focus["next_action"],
         },

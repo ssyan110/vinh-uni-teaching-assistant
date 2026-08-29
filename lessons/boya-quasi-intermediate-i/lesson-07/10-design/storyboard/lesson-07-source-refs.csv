@@ -1,0 +1,9 @@
+﻿record_type,deck,section_id,source_ref,textbook_printed_pages,audio_tracks,status
+candidate_source_ref,online+face-to-face,vocabulary,00-source/canonical-source.json#sections.vocabulary,59、60,7-1,candidate_mapping_not_final_storyboard
+candidate_source_ref,online+face-to-face,vocabulary_comprehension,00-source/canonical-source.json#sections.vocabulary_comprehension,60,7-2,candidate_mapping_not_final_storyboard
+candidate_source_ref,online+face-to-face,listening_sentences,00-source/canonical-source.json#sections.listening_sentences,61,7-3,candidate_mapping_not_final_storyboard
+candidate_source_ref,online+face-to-face,short_text_1,00-source/canonical-source.json#sections.short_text_1,61、62,7-4,candidate_mapping_not_final_storyboard
+candidate_source_ref,online+face-to-face,short_text_2,00-source/canonical-source.json#sections.short_text_2,63、64,7-5,candidate_mapping_not_final_storyboard
+candidate_source_ref,online+face-to-face,short_text_3,00-source/canonical-source.json#sections.short_text_3,64、65,7-6,candidate_mapping_not_final_storyboard
+candidate_source_ref,online+face-to-face,common_expressions,00-source/canonical-source.json#sections.common_expressions,62、65,,candidate_mapping_not_final_storyboard
+candidate_source_ref,online+face-to-face,comprehensive_practice,00-source/canonical-source.json#sections.comprehensive_practice,66、67,7-4；7-5；7-6,candidate_mapping_not_final_storyboard

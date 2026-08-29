@@ -1,0 +1,123 @@
+{
+  "schema_version": "boya-lesson-source-manifest-v1",
+  "manifest_type": "lesson-source-review",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_id": "lesson-02",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-02",
+  "lesson_number": 2,
+  "lesson_title": "王红的一天",
+  "language": "简体中文",
+  "audio_count": 7,
+  "audio_count_note": "6 个出版社 QR 音频 + 1 个 Adam 提供并转换的 2-7 来源音频",
+  "package": "lesson-02-source-review",
+  "prepared_at": "2026-08-29",
+  "source_status": "pending_review",
+  "source_qa_status": "technical_audio_passed_7_of_7; 2-7_semantic_and_playback_approved; 2-1_to_2-6_pending",
+  "extraction_status": "source_review_materialized",
+  "review_status": "partial_adam_review_recorded",
+  "approved": false,
+  "approved_by": [],
+  "approved_at": null,
+  "adam_review": {
+    "status": "partial_approval",
+    "approved_by": "Adam",
+    "approved_at": "2026-08-29",
+    "scope": ["audio_track:2-7", "source_record", "image_assets"],
+    "notes": "Adam 确认 2-7 与教材 P18-P19《课外活动》对应并通过播放；L2 图片与来源记录正确。2-1 至 2-6 的语义／PowerPoint 播放状态不因本次确认而改写。"
+  },
+  "canonical_source": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/canonical-source.json",
+    "sha256": "6dfb97de7500c888849dad2a5a1c93978542917d3a725a8aeafe53be16545fe3",
+    "status": "source_review_snapshot_with_adam_2-7_confirmation",
+    "note": "Adam 已确认 2-7、来源记录与图片；整体课次仍未成为 approved authority。"
+  },
+  "canonical_source_sha256": "6dfb97de7500c888849dad2a5a1c93978542917d3a725a8aeafe53be16545fe3",
+  "source_pdf": {
+    "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+    "sha256": "39899d0f400e187f57c16db821f8f4c207f936eae0e4fbfe3cab52c02bfea806",
+    "total_pages": 134,
+    "textbook_page_range": "12-21",
+    "pdf_page_range": "25-34",
+    "page_count_in_review": 10,
+    "format": "scanned_image_pdf",
+    "text_layer_status": "empty; visual review used"
+  },
+  "answer_pdf": {
+    "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+    "sha256": "3c21e1574b0187259769799d183eca78a60a515b5b7fce202eda9e9ade2c20b8",
+    "total_pages": 33,
+    "pdf_page_range_in_review": "8-10",
+    "printed_page_range_in_review": "答案 P5-P7",
+    "answer_status": "closed_answers_visual_checked; open_tasks_have_no_unique_answer",
+    "continuation_note": "文件页9-10承接三段听力文本；短文三标签为 2-7。"
+  },
+  "page_audit": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/audit/source-pages-12-21-audit-draft.md",
+    "sha256": "69738d61834d253a9060b755574cf7eced4a60492a4457a5b1596adf53f3ae67",
+    "status": "visual_first_pass"
+  },
+  "answer_audit": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/audit/answer-pages-8-10-audit-draft.md",
+    "sha256": "16207446a8ebe132bb4816440bd3cbe41ded1a941ea0f0f55bf9b3ace64823e0",
+    "status": "visual_first_pass"
+  },
+  "qr_source": {
+    "qr_url": "http://qr31.cn/H1krER",
+    "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-02-pdf-page-025.png",
+    "capture_sha256": "a007a443b36249a9d47ae494c678f9a3d25eca44a17cf945379b9a7c5cf25d16",
+    "landing_page": "https://biz.cli.im/site/H1krER?qrurl=http://qr31.cn/H1krER&gtype=2&key=2f3e4171ce1d0df5087828fc7991b4470b28d38181",
+    "landing_audio_labels": ["2-1", "2-2", "2-3", "2-4", "2-5", "2-6"],
+    "textbook_labels_seen": ["2-1", "2-2", "2-3", "2-4", "2-5", "2-6", "2-7"],
+    "status": "decoded_landing_page_2-1_to_2-6; user_supplied_2-7_recovered"
+  },
+  "audio": {
+    "root": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02",
+    "manifest_path": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/audio-manifest.json",
+    "manifest_sha256": "b2700867ebefaa506cd15721c2591b74a0e16e18cf081cfa5e4070b501c17718",
+    "technical_audit": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/audit/audio-technical-2026-08-29.md",
+    "technical_audit_sha256": "3aa21e84ccc59edb45eeabddcd83d26075e0451f0ac65a4c6d27ad5747539961",
+    "expected_track_count": 7,
+    "local_track_count": 7,
+    "decode_passed_count": 7,
+    "semantic_listening_count": 1,
+    "teacher_playback_count": 1,
+    "missing_tracks": [],
+    "recovered_tracks": ["2-7"],
+    "status": "technical_pass_for_7_of_7; 2-7_semantic_and_playback_passed; 2-1_to_2-6_pending"
+  },
+  "listening_exercise_contract": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/listening-exercise-contract.json",
+    "sha256": "1b3d105ca9b42b4141a9fd72cfb76aa463c1391c1c8316e8eef0a358dd2cb9fe",
+    "status": "draft_pending_source_approval_semantic_audio_review",
+    "exercise_count": 10,
+    "missing_audio_tracks": []
+  },
+  "review_evidence": [
+    "lessons/boya-quasi-intermediate-i/lesson-02/00-source/audit/source-pages-12-21-audit-draft.md",
+    "lessons/boya-quasi-intermediate-i/lesson-02/00-source/audit/answer-pages-8-10-audit-draft.md",
+    "lessons/boya-quasi-intermediate-i/lesson-02/00-source/audit/audio-technical-2026-08-29.md",
+    "lessons/boya-quasi-intermediate-i/lesson-02/00-source/audit/audio-recovery-2026-08-29.md",
+    "lessons/boya-quasi-intermediate-i/lesson-02/00-source/audit/adam-review-2026-08-29.md"
+  ],
+  "counts": {
+    "vocabulary": 29,
+    "vocabulary_comprehension_groups": 3,
+    "vocabulary_comprehension_items": 11,
+    "listening_sentence_items": 10,
+    "dialogue_items": 5,
+    "short_texts": 3,
+    "listening_exercise_groups": 7,
+    "listening_contract_records": 10,
+    "common_expression_groups": 2,
+    "grammar_patterns": 15,
+    "comprehensive_exercises": 3
+  },
+  "blockers": [
+    "L2 来源记录与图片已由 Adam 确认；整体来源仍需完成剩余音频与课次级批准。",
+    "主教材与答案 PDF 显示短文三《课外活动》使用 2-7；Adam 已提供 WAV 并转换为项目 MP3，来源类型记录为用户提供恢复，不改写出版社 QR/source inventory。",
+    "2-7 已完成语义听核与 PowerPoint 播放确认；2-1 至 2-6 的教师语义听核与播放实测仍待完成。",
+    "开放式口语题、综合填表、分组总结与拓展练习没有唯一标准答案。"
+  ],
+  "next_minimum_step": "完成 2-1 至 2-6 的语义听核与 PowerPoint 播放；随后记录 L2 整体来源批准，来源批准前不得进入 PBI、教师手册或 PPTX。"
+}

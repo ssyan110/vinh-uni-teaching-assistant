@@ -1,0 +1,326 @@
+{
+  "schema_version": "quasi-intermediate-source-audit-v1.0",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_number": 2,
+  "lesson_id": "lesson-02",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-02",
+  "title": "王红的一天",
+  "title_source": "主教材 PDF 第25页（印刷 P12）课名页视觉核对",
+  "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+  "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+  "page_map": {
+    "printed_pages": [12, 21],
+    "pdf_pages": [25, 34],
+    "answer_pdf_pages": [8, 10],
+    "answer_printed_pages": [5, 7],
+    "mapping_status": "visual_first_pass; textbook PDF pages 25-34 map to printed P12-P21; answer PDF files pages 8-10 map to answer printed P5-P7; textbook short text three is labelled 2-7; QR/source inventory lists 2-1 through 2-6 and a user-supplied 2-7 recovery is now present"
+  },
+  "qr_evidence": {
+    "pdf_page": 25,
+    "qr_url": "http://qr31.cn/H1krER",
+    "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-02-pdf-page-025.png",
+    "landing_page": "https://biz.cli.im/site/H1krER?qrurl=http://qr31.cn/H1krER&gtype=2&key=2f3e4171ce1d0df5087828fc7991b4470b28d38181",
+    "decode_status": "source_inventory_verified",
+    "landing_audio_labels": ["2-1", "2-2", "2-3", "2-4", "2-5", "2-6"],
+    "textbook_labels_seen": ["2-1", "2-2", "2-3", "2-4", "2-5", "2-6", "2-7"],
+    "label_discrepancy": "主教材 P18-P19 与答案 PDF 将短文三《课外活动》标为 2-7；QR/source inventory 仍只登记 2-1 至 2-6，2-7 由 Adam 提供 WAV 后恢复，未宣称为 QR 原始下载。"
+  },
+  "audio_map": [
+    {
+      "label": "2-1",
+      "coding": "AN1539798",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FrcsApC3vbzAKWKS-hUPQNs18T4v",
+      "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-1.mp3",
+      "content_type": "audio/mpeg",
+      "bytes": 861404,
+      "sha256": "9425046c170d85f1a8dd25fa9d7afce508811dafebcdc8b0b806938aca3d8a56",
+      "download_status": "passed_in_source_inventory",
+      "decode_status": "passed",
+      "duration_seconds": 53.524898,
+      "semantic_status": "pending_teacher_playback"
+    },
+    {
+      "label": "2-2",
+      "coding": "UY1783192",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FuOLWdJhJOaCfDAOhTGm555Y2Eiv",
+      "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-2.mp3",
+      "content_type": "audio/mpeg",
+      "bytes": 683353,
+      "sha256": "5ad1a76dea86112f9a967a5d49ae124a7afbf01be77b0989bf8369dec2eed6fc",
+      "download_status": "passed_in_source_inventory_with_retry_error_recorded",
+      "source_inventory_error": "URLError: <urlopen error _ssl.c:1063: The handshake operation timed out>",
+      "decode_status": "passed",
+      "duration_seconds": 42.396735,
+      "semantic_status": "pending_teacher_playback"
+    },
+    {
+      "label": "2-3",
+      "coding": "MU1783193",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fn8_en5WTQpj8eLTt--rauvOi18M",
+      "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-3.mp3",
+      "content_type": "audio/mpeg",
+      "bytes": 1869103,
+      "sha256": "97b01a753c80a4b2ec850b0d0f60514c58e2455901dafc988958512de112a1db",
+      "download_status": "passed_in_source_inventory_with_retry_error_recorded",
+      "source_inventory_error": "URLError: <urlopen error [Errno 60] Operation timed out>",
+      "decode_status": "passed",
+      "duration_seconds": 116.506122,
+      "semantic_status": "pending_teacher_playback"
+    },
+    {
+      "label": "2-4",
+      "coding": "TV1783194",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FtAmltELpWLKXr_R4mjQWl-aepsK",
+      "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-4.mp3",
+      "content_type": "audio/mpeg",
+      "bytes": 1350834,
+      "sha256": "7dcd2b8934ab85277744aad0e39c9aa039af7803adcceb33269469c096a80fa3",
+      "download_status": "passed_in_source_inventory",
+      "decode_status": "passed",
+      "duration_seconds": 84.114286,
+      "semantic_status": "pending_teacher_playback"
+    },
+    {
+      "label": "2-5",
+      "coding": "IX1783195",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FpZ_TqHXC83O_j9ELJ9jesJPS_D9",
+      "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-5.mp3",
+      "content_type": "audio/mpeg",
+      "bytes": 805815,
+      "sha256": "44dbd41d3631363b7c998e91730a412e12b537a65a8f88ed09884a3483e2e957",
+      "download_status": "passed_in_source_inventory",
+      "decode_status": "passed",
+      "duration_seconds": 50.050612,
+      "semantic_status": "pending_teacher_playback"
+    },
+    {
+      "label": "2-6",
+      "coding": "NY1783196",
+      "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FmhttHW2y3TFGkjunvaqc9JRE7ek",
+      "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-6.mp3",
+      "content_type": "audio/mpeg",
+      "bytes": 1041962,
+      "sha256": "b59eb5af70b6928d11da243665eb8dd4e70d2dbef616f1a249816be6f1ab9265",
+      "download_status": "passed_in_source_inventory",
+      "decode_status": "passed",
+      "duration_seconds": 64.809796,
+      "semantic_status": "pending_teacher_playback"
+    },
+    {
+      "label": "2-7",
+      "coding": null,
+      "play_url": null,
+      "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-7.mp3",
+      "content_type": "audio/mpeg",
+      "bytes": 913702,
+      "sha256": "13e4a8068ce1b50a52243ed98b956484406b2678373e59f8cc66096652b735fd",
+      "download_status": "recovered_from_user_supplied_wav",
+      "decode_status": "passed",
+      "duration_seconds": 57.04,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "semantic_status": "passed",
+      "teacher_playback_status": "passed",
+      "semantic_verified_by": "Adam",
+      "teacher_playback_verified_by": "Adam",
+      "verified_at": "2026-08-29",
+      "source_type": "user_supplied_recovery",
+      "original_filename": "2-7.wav",
+      "original_bytes": 2737964,
+      "original_sha256": "b4830c93f602533f75737d9bc2b34f835a42fc0e2df26cb031131253f930cb70",
+      "note": "主教材 P18-P19 与答案 PDF 文件页10均标示短文三《课外活动》音频 2-7；项目文件由 Adam 提供的 WAV 转换而来，QR/source inventory 仍只列 2-1 至 2-6。"
+    }
+  ],
+  "content_inventory": {
+    "vocabulary_count": 29,
+    "proper_noun_count": 0,
+    "vocabulary_comprehension_group_count": 3,
+    "vocabulary_comprehension_item_count": 11,
+    "listening_sentence_item_count": 10,
+    "dialogue_item_count": 5,
+    "texts_dialogues_count": 3,
+    "grammar_pattern_count": 15,
+    "listening_exercise_group_count": 7,
+    "comprehensive_exercise_count": 3,
+    "exercise_count": 31,
+    "status": "visual_source_snapshot_pending_adam_approval"
+  },
+  "answer_policy": "仅记录参考答案 PDF 中可核对的词语理解、听句子判断、听小对话选择答案与听力文本；开放式口语题、分组总结和拓展练习不补写唯一标准答案。",
+  "review": {
+    "status": "source_audit_in_progress",
+    "approved": false,
+    "approved_by": [],
+    "approved_at": null,
+    "blockers": [
+      "教材正文为扫描影像，最终来源批准需由 Adam 对视觉转录、教材页码、题组和答案证据确认。",
+      "主教材与答案均显示短文三《课外活动》音频标签为 2-7；Adam 已提供 WAV 并完成项目 MP3 转换，但 QR/source inventory 仍只登记 2-1 至 2-6，需保留用户来源说明。",
+      "2-1 至 2-7 已完成文件存在、bytes、SHA-256、ffprobe 时长和解码核对；教师逐段语义听核及 PowerPoint 实际播放测试尚未完成。",
+      "开放式口语题、综合填表、分组总结与拓展练习没有唯一标准答案，不补写答案。"
+    ],
+    "approval_basis": [
+      "主教材 PDF 第25-34页（印刷 P12-P21）高分辨率视觉核对",
+      "答案 PDF 文件第8-10页（答案印刷 P5-P7）题组答案与三段听力文本视觉核对",
+      "来源总盘点第二课 QR、音频 bytes、SHA-256、ffprobe 时长和解码记录；2-7 用户恢复记录见 audio technical audit"
+    ]
+  },
+  "sections": [
+    {
+      "id": "vocabulary",
+      "printed_pages": [12, 13],
+      "audio": "2-1",
+      "entries": [
+        {"no":1,"word":"排球","pinyin":"páiqiú","pos":"名","gloss":"volleyball"},
+        {"no":2,"word":"志愿者","pinyin":"zhìyuànzhě","pos":"名","gloss":"volunteer"},
+        {"no":3,"word":"讲解员","pinyin":"jiǎngjiěyuán","pos":"名","gloss":"docent"},
+        {"no":4,"word":"博物馆","pinyin":"bówùguǎn","pos":"名","gloss":"museum"},
+        {"no":5,"word":"展品","pinyin":"zhǎnpǐn","pos":"名","gloss":"exhibit"},
+        {"no":6,"word":"体育课","pinyin":"tǐyùkè","pos":"名","gloss":"physical education"},
+        {"no":7,"word":"了解","pinyin":"liǎojiě","pos":"动","gloss":"to understand"},
+        {"no":8,"word":"周围","pinyin":"zhōuwéi","pos":"名","gloss":"around; round"},
+        {"no":9,"word":"基本","pinyin":"jīběn","pos":"副","gloss":"basically"},
+        {"no":10,"word":"不知不觉","pinyin":"bùzhī-bùjué","pos":null,"pos_status":"blank_in_source","gloss":"unknowingly"},
+        {"no":11,"word":"热烈","pinyin":"rèliè","pos":"形","gloss":"warm"},
+        {"no":12,"word":"游客","pinyin":"yóukè","pos":"名","gloss":"tourist"},
+        {"no":13,"word":"布置","pinyin":"bùzhì","pos":"动","gloss":"to decorate; to arrange"},
+        {"no":14,"word":"尤其","pinyin":"yóuqí","pos":"副","gloss":"especially","starred":true},
+        {"no":15,"word":"交流","pinyin":"jiāoliú","pos":"动","gloss":"to communicate","starred":true},
+        {"no":16,"word":"顿","pinyin":"dùn","pos":"量","gloss":"measure word for meal, etc."},
+        {"no":17,"word":"庆祝","pinyin":"qìngzhù","pos":"动","gloss":"to celebrate"},
+        {"no":18,"word":"特点","pinyin":"tèdiǎn","pos":"名","gloss":"characteristic","starred":true},
+        {"no":19,"word":"环境","pinyin":"huánjìng","pos":"名","gloss":"environment","starred":true},
+        {"no":20,"word":"熟悉","pinyin":"shúxī","pos":"动","gloss":"to be familiar with","starred":true},
+        {"no":21,"word":"感觉","pinyin":"gǎnjué","pos":"动","gloss":"to feel","starred":true},
+        {"no":22,"word":"收获","pinyin":"shōuhuò","pos":"名","gloss":"harvest; gain","starred":true},
+        {"no":23,"word":"插","pinyin":"chā","pos":"动","gloss":"to insert; to place"},
+        {"no":24,"word":"接着","pinyin":"jiēzhe","pos":"动／副","gloss":"to continue; afterwards"},
+        {"no":25,"word":"科学","pinyin":"kēxué","pos":"名","gloss":"science"},
+        {"no":26,"word":"参观","pinyin":"cānguān","pos":"动","gloss":"to visit; to tour"},
+        {"no":27,"word":"举办","pinyin":"jǔbàn","pos":"动","gloss":"to hold"},
+        {"no":28,"word":"增长","pinyin":"zēngzhǎng","pos":"动","gloss":"to increase; to grow"},
+        {"no":29,"word":"同时","pinyin":"tóngshí","pos":"连","gloss":"at the same time","starred":true}
+      ],
+      "source_status":"visually_verified_pending_adam_approval"
+    },
+    {
+      "id":"vocabulary_comprehension",
+      "printed_pages":[13,14],
+      "audio":"2-2",
+      "instruction":"听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+      "groups":[
+        {"topic":"关于课外活动的词语","image_labels":["A","B","C","D","E"],"words":["排球","志愿者","讲解员","博物馆","展品"],"answer":["1.A","2.E","3.B","4.C","5.D"]},
+        {"topic":"关于学习的词语","image_labels":["A","B","C"],"words":["认真","讨论","上体育课"],"answer":["1.C","2.B","3.A"]},
+        {"topic":"关于生活的词语","image_labels":["A","B","C"],"words":["蛋糕","蜡烛","面条儿"],"answer":["1.A","2.C","3.B"]}
+      ],
+      "answer_status":"answers_checked_against_answer_pdf"
+    },
+    {
+      "id":"listening_sentences",
+      "printed_pages":[14,15],
+      "audio_tracks":["2-3"],
+      "exercises":{"exercise_2_3":{"heading_verbatim":"听句子，判断对错","items":[[1,"姐姐有3名同屋。","错"],[2,"同学们了解了大学学习的特点。","错"],[3,"大学周围有博物馆。","错"],[4,"毛毛对大学生活基本适应了。","对"],[5,"丽丽觉得数学课挺有用。","对"],[6,"不知不觉，到了下课时间。","错"],[7,"同学们讨论得很热烈。","对"],[8,"过新年的时候，那家公园游客不少。","错"],[9,"王红在博物馆当志愿者。","对"],[10,"展览是哥哥和他的朋友布置的。","错"]]}},
+      "answer_status":"answers_checked_against_answer_pdf"
+    },
+    {
+      "id":"listening_dialogue",
+      "printed_pages":[15],
+      "audio":"2-4",
+      "title":"听小对话，选择正确答案",
+      "heading_verbatim":"听小对话，选择正确答案",
+      "items":[
+        {"no":1,"dialogue":["A：丽丽，明天上午你有空吗？一起去博物馆怎么样？","B：不好意思，我很累，想在家好好儿休息休息。"],"answer":"A"},
+        {"no":2,"dialogue":["A：王红，你上大学了？","B：嗯。我喜欢上课，尤其是数学课。"],"answer":"A"},
+        {"no":3,"dialogue":["A：阿里，老师说学校的排球比赛下星期一开始。","B：好啊，我也想和中国同学交流交流。"],"answer":"B"},
+        {"no":4,"dialogue":["A：你看，教室里坐满了人。","B：是啊，我们来晚了。"],"answer":"A"},
+        {"no":5,"dialogue":["A：明天晚上我们一起吃一顿饭吧。","B：好啊，我想吃四川菜。"],"answer":"B"}
+      ],
+      "answer_status":"answers_checked_against_answer_pdf"
+    },
+    {
+      "id":"short_text_1",
+      "printed_pages":[15,16],
+      "audio":"2-5",
+      "title":"王红喜欢上课",
+      "text":"今天11月8日，星期二，是王红19岁生日。早上，同屋们对她说，中午要好好儿为她庆祝生日。两个月以前，王红开始了大学生活。现在她对大学的学习特点有了比较清楚的了解，基本适应了大学的生活和学习，对周围环境也熟悉了。王红喜欢上课，尤其是数学课，数学虽然不容易，可是很有用。今天头两节课就是数学课。她7点50分到教室，老师和大部分同学都已经到了。大家听课认真，讨论热烈，不知不觉就到了下课时间。同学们感觉很愉快，同时也很有收获。第三四节是体育课，王红她们和来学校交流的外国学生打了一场排球比赛。大家都觉得这样的交流很有意思。",
+      "exercises":{"first_listen":["王红多大？","王红是大学生吗？","王红特别喜欢什么课？","王红觉得什么课不容易？","王红体育课做什么了？"],"second_listen":["王红觉得大学生活怎么样？（了解  熟悉  适应）","王红上午上什么课了？她的课上得怎么样？（同时  讨论  认真  不知不觉）"],"present":"请你说说王红的大学生活，重点说说她上课的情况。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：开始、每次、收获、周围、环境。常用表达参考：对……有了了解、对……熟悉了、尤其、虽然……可是……。","compare":"王红今年19岁，两个月以前开始上大学。现在，她对大学的学习特点有了了解，对周围环境也熟悉了，已经基本适应了大学生活。她喜欢上课，尤其是数学课。她觉得数学虽然很难，可是很有用。每次上课，她都觉得很有收获。"},
+      "exercise_metadata":{"first_listen":{"heading_verbatim":"（一）听第一遍，简单回答问题","textbook_printed_pages":[15],"audio_tracks":["2-5"]},"second_listen":{"heading_verbatim":"（二）听第二遍，用括号中的词语说出两三个句子，不少于20字","textbook_printed_pages":[16],"audio_tracks":["2-5"]}},
+      "answer_status":"open_presentational_task_no_unique_answer"
+    },
+    {
+      "id":"common_expressions_school_life",
+      "printed_pages":[16,17],
+      "topic":"谈论学校生活",
+      "items":[
+        {"expression":"对……熟悉／对……有了了解","examples":["王红对学校的历史不太熟悉。","我对同学们的情况有了一些了解。"]},
+        {"expression":"尤其","examples":["我喜欢学历史，尤其是世界历史。","我们班的同学都喜欢上体育课，尤其是小王。"]},
+        {"expression":"虽然……可是……","examples":["我很喜欢我的专业，虽然很忙很累，可是我每天都很愉快。","天气虽然很冷，可是来操场锻炼的学生还是很多。"]},
+        {"expression":"不知不觉","examples":["时间过得真快，不知不觉，这个学期已经过了一半。","大家讨论得很热烈，不知不觉，天已经黑了。"]},
+        {"expression":"同时","examples":["我来中国，主要是学习中文，同时，也希望了解中国文化。","出去旅游可以了解一个地方的历史，同时，也有可能交到中国朋友。"]}
+      ],
+      "source_status":"examples_visually_verified"
+    },
+    {
+      "id":"short_text_2",
+      "printed_pages":[17,18],
+      "audio":"2-6",
+      "title":"生日午餐",
+      "text":"从体育馆出来，王红接到同屋李梅的电话，让她回宿舍。推开宿舍的门，王红看见宿舍里坐满了人，她的3名同屋还有其他几位同学坐在大桌子旁边。桌子上摆着面条儿、水果和一个大蛋糕，蛋糕上插着一根红蜡烛。看见王红进来，大家都站起来大声说：‘王红，生日快乐！’接着，她们还一起给王红唱了生日歌。王红高兴极了，她和同学、朋友们开开心心地吃了一顿饭。",
+      "exercises":{"first_listen":["王红中午在哪里吃的饭？","王红她们中午吃什么了？","王红的同屋唱歌了吗？","王红感觉怎么样？"],"second_listen":["和王红一起吃饭的人多不多？她们是谁？（同屋  坐满  朋友）","桌子上摆着什么？（摆  插）"],"group_practice":{"title":"王红的生日午餐","requirements":"一个人先说4～6个句子，不少于40字；然后其他同学补充；最后再由一名同学总结，说6～8个句子，不少于60字。","vocabulary_reference":["摆","插","生日歌","愉快"],"expression_reference":["给……开生日会","顿","开开心心"]},"compare":"今天是王红的生日。中午，同屋在宿舍给她开了一个生日会。桌子上摆着蛋糕，蛋糕上插着蜡烛。同学们一起唱了生日歌，王红跟同学们开开心心地吃了一顿饭。"},
+      "exercise_metadata":{"first_listen":{"heading_verbatim":"（一）听第一遍，简单回答问题","textbook_printed_pages":[17],"audio_tracks":["2-6"]},"second_listen":{"heading_verbatim":"（二）听第二遍，用括号中的词语说出两三个句子，不少于20字","textbook_printed_pages":[17],"audio_tracks":["2-6"]}},
+      "answer_status":"open_presentational_task_no_unique_answer"
+    },
+    {
+      "id":"common_expressions_extra_curricular",
+      "printed_pages":[18,19,20],
+      "topic":"谈论课外生活",
+      "items":[
+        {"expression":"给……办／介绍","examples":["大家给小丽办了一个生日会。","请给大家介绍一下这道菜的做法。"]},
+        {"expression":"处所＋动词＋着＋人／物","examples":["电影院里只坐着十几名观众。","房间里摆着一张长沙发。"]},
+        {"expression":"接着","examples":["星期天早上，我收拾了房间，接着，又把脏衣服洗了。","我们去游泳馆游了一会儿泳，接着又去咖啡馆坐了坐。"]},
+        {"expression":"安安静静／舒舒服服／急急忙忙／开开心心＋（地）＋动词词组","examples":["周末没有课，可以安安静静地在宿舍看书。","丽丽过春节的时候可以舒舒服服地吃妈妈做的早饭，不用急急忙忙地赶着去上班。"]},
+        {"expression":"量词","examples":["住在宿舍，一天三顿饭都在食堂吃。","王红每个月都去看一场电影。"]},
+        {"expression":"自从……以来","examples":["自从上大学以来，王红每周二下午都去博物馆当志愿者。","自从开学以来，先后有500名同学参与了校园服务活动。"]},
+        {"expression":"每……都……","examples":["我们这博物馆，每周六、日都有高中学生在这儿做讲解员。","我们学校，每学期都会安排两次社会实践活动。"]},
+        {"expression":"不但……同时……","examples":["参加志愿服务活动，不但可以帮助别人，同时，对自己也是很好的社会实践机会。","这学期我参加了自行车俱乐部，不但有机会去以前没去过的地方游玩儿，同时，也认识了不少新朋友。"]},
+        {"expression":"其中","examples":["报名参加这次活动的学生很多，其中不少是大一新生。","学校举办了各种各样的讲座，其中，心理辅导讲座最受学生们欢迎。"]},
+        {"expression":"过得","examples":["时间过得真快，这个学期结束了。","丽丽觉得，周末可以过得轻松一点儿。"]}
+      ],
+      "source_status":"examples_visually_verified"
+    },
+    {
+      "id":"short_text_3",
+      "printed_pages":[18,19],
+      "audio":"2-7",
+      "title":"课外活动",
+      "text":"王红下午没有课。自从上大学以来，她每星期二下午都去学校附近的科学博物馆做志愿者。这家博物馆已经有50年的历史了，里面的展品很丰富，每天都有不少游客来这里参观，其中一部分是本市的中小学生。下个月，博物馆要举办一次特别展览，王红今天去帮助他们翻译展品介绍、布置展品、回答网友提出的问题。特别展览开始以后，她还要去做讲解员。王红很喜欢这样的课外活动，因为这些课外活动不但可以增长科学知识，同时，也有机会为别人服务。今年这个生日，王红觉得过得很有意义。",
+      "exercises":{"first_listen":["王红每星期二下午去哪儿？","下星期有什么活动？王红要做什么？","这个生日王红觉得过得怎么样？"],"second_listen":["那个科学博物馆怎么样？（展品  参观  其中）","王红今天去做什么？（布置  回答  翻译）"],"group_practice":{"title":"大家一起谈谈王红的课外活动","requirements":"一名同学先说4～6个句子，不少于40字；然后其他同学补充；最后再由一名同学总结，说6～8个句子，不少于60字。","vocabulary_reference":["当","志愿者","翻译","布置","回答","讲解员","增长","服务"],"expression_reference":["自从……以来","每……都……","不但……同时……"]},"compare":"自从上大学以来，王红每周二下午都去博物馆当志愿者。她常做一些翻译材料、布置展品、回答网友问题这样的工作。在博物馆工作，不但可以增长知识，同时，也可以为别人服务。"},
+      "exercise_metadata":{"first_listen":{"heading_verbatim":"（一）听第一遍，简单回答问题","textbook_printed_pages":[18],"audio_tracks":["2-7"]},"second_listen":{"heading_verbatim":"（二）听第二遍，用括号中的词语说出两三个句子，不少于20字","textbook_printed_pages":[19],"audio_tracks":["2-7"]}},
+      "answer_status":"audio_recovered_user_supplied; semantic_listening_pending; open_presentational_task_no_unique_answer"
+    },
+    {
+      "id":"comprehensive_practice",
+      "printed_pages":[20,21],
+      "audio_tracks":["2-5","2-6","2-7"],
+      "items":[
+        {"id":"comprehensive_1","instruction":"这是王红一天的安排，请你根据听过的三段短文填表","table_transcription":[{"row":"11月8日 星期____ 今天是我的____","cells":["上午","中午","下午"]},{"row":"上午","cells":["____课","","有收获"]},{"row":"上午","cells":["体育课","和外国学生________","有意思"]},{"row":"中午","cells":["在宿舍开________","朋友们请我吃________、________、________","________"]},{"row":"下午","cells":["去博物馆做________","________、________、回答网友问题","有意义"]}],"answer_status":"open_table_teacher_check"},
+        {"id":"comprehensive_2","instruction":"根据上面的表格和下面给出的参考词语和常用表达，谈一谈：（1）王红的学校生活；（2）王红的生日午餐；（3）王红的课外活动。要求：一名同学先说6～8个句子，不少于60字；然后小组其他同学补充；最后由一名同学总结，说8～10个句子，不少于80字。词语参考：了解 熟悉 适应 有用 收获 摆 回答 讲解员 志愿者。常用表达参考：开开心心 顿 尤其。","answer_status":"open_presentational_task"},
+        {"id":"comprehensive_3","instruction":"拓展练习：你们学校生活怎么样？请你谈一谈：（1）自己的学校生活；（2）自己最难忘的生日；（3）自己的课外活动。要求：（1）使用这一课学过的词语和常用表达；（2）说8～10个句子，不少于80字。","answer_status":"open_presentational_task"}
+      ],
+      "source_status":"visually_verified_pending_adam_approval"
+    }
+  ],
+  "extraction_snapshot": {
+    "page_audit": "audit/source-pages-12-21-audit-draft.md",
+    "answer_audit": "audit/answer-pages-8-10-audit-draft.md",
+    "audio_audit": "audit/audio-technical-2026-08-29.md",
+    "status": "draft_source_review_snapshot",
+    "created_at": "2026-08-28",
+    "note": "主教材为扫描影像；正文、题目、答案与三段听力文本按页面视觉核对。短文三在教材标为 2-7，Adam 提供的 WAV 已转换并登记为用户来源恢复；未将语义听核或教师播放测试标记为完成。"
+  },
+  "source_fingerprints": {
+    "source_pdf_sha256": "39899d0f400e187f57c16db821f8f4c207f936eae0e4fbfe3cab52c02bfea806",
+    "answer_pdf_sha256": "3c21e1574b0187259769799d183eca78a60a515b5b7fce202eda9e9ade2c20b8",
+    "qr_capture_sha256": "a007a443b36249a9d47ae494c678f9a3d25eca44a17cf945379b9a7c5cf25d16"
+  }
+}

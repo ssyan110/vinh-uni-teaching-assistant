@@ -1,6 +1,9 @@
 {
   "manifest_schema": "boya-source-review-manifest-0.1.0",
-  "lesson_id": "boya-intermediate-i-lesson-06",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-intermediate-i",
+  "lesson_id": "lesson-06",
+  "lesson_key": "boya-intermediate-i:lesson-06",
   "lesson_number": 6,
   "lesson_title": "挑战",
   "source_status": "pending_review",

@@ -1,0 +1,71 @@
+{
+  "schema_version": "quasi-intermediate-source-manifest-v1",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_id": "lesson-09",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-09",
+  "lesson_number": 9,
+  "title": "北方菜和南方菜",
+  "source_pdf": {
+    "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+    "sha256": "39899d0f400e187f57c16db821f8f4c207f936eae0e4fbfe3cab52c02bfea806",
+    "pdf_pages": [90, 99],
+    "printed_pages": [77, 86]
+  },
+  "answer_pdf": {
+    "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+    "sha256": "3c21e1574b0187259769799d183eca78a60a515b5b7fce202eda9e9ade2c20b8",
+    "inventory_pages": [24, 25],
+    "visual_render_internal_pages": [25, 26],
+    "visual_printed_labels": [22, 23],
+    "page_numbering_status": "pending_adam_confirmation"
+  },
+  "qr": {
+    "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-09-pdf-page-090.png",
+    "url": "http://qr31.cn/IloNOS",
+    "landing_page": "https://biz.cli.im/site/IloNOS?qrurl=http://qr31.cn/IloNOS&gtype=2&key=995d2170976559ed387829f37eb237b28eec029042",
+    "status": "verified_in_source_inventory"
+  },
+  "canonical_source": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json",
+    "sha256": "8369e3df9ce5e0776012596149d6fbf7ba3a16afed00982ba522ecf36c04f51a"
+  },
+  "listening_contract": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/listening-exercise-contract.json",
+    "sha256": "55ced7e6847745c70453c4ddf09af71a5fb7265d646773091f4b68e07a38da98",
+    "count": 9
+  },
+  "audio_manifest": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/audio-manifest.json",
+    "sha256": "a56870a2d601ad5a6eb082bb169e081df7def71005edfcfa567c8d695cb288a6",
+    "audio_root": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-09",
+    "count": 6,
+    "technical_status": "6/6 files present; bytes, SHA-256, duration and decode passed",
+    "semantic_status": "pending_teacher_playback"
+  },
+  "audit": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/source-pages-77-86-audit-draft.md",
+    "sha256": "3589fdf7417fc2945a69e0f0c1272ee2b35e8951e5ba245f26554b8ecd3e01a1",
+    "status": "draft"
+  },
+  "answer_audit": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/answer-pages-24-25-audit-draft.md",
+    "sha256": "d11a91b60fc30122a4c80aa7296720575c9f4b59a6022d1c27da28ac0a2b34b7",
+    "status": "draft",
+    "scope": "答案页码口径、封闭答案、9-4/9-5/9-6视觉听力文本和开放题答案政策"
+  },
+  "audio_technical_audit": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/audio-technical-2026-08-28.md",
+    "sha256": "a2afb6ad3b764a44bd870d00d64c2a420bd183511b1cdbb6d4856f208b55dda7",
+    "status": "technical_pass_semantic_pending",
+    "scope": "六段 MP3 文件、bytes、SHA-256、时长和解码"
+  },
+  "status": "pending_review",
+  "approved": false,
+  "approved_by": [],
+  "approved_at": null,
+  "notes": [
+    "本 source package 只记录来源盘点、页面／板块、听力题组契约、音频技术状态和答案证据；不构成教学手册、PPT 或 release authority。",
+    "所有音频 semantic_status 与 playback_status 保持 pending_teacher_playback；来源及 Adam 审核未完成前不得进入 20-approved。"
+  ]
+}

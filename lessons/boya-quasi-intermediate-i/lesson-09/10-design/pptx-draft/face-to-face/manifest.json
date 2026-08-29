@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-pptx-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-09",
+  "mode": "face-to-face",
+  "title": "第九课《北方菜和南方菜》实体课",
+  "status": "draft_not_approved",
+  "builder_scope": "scripts/build_l23_pptx_drafts.js",
+  "draft_gate": "lesson-specific",
+  "source_sha256": "8369e3df9ce5e0776012596149d6fbf7ba3a16afed00982ba522ecf36c04f51a",
+  "layout_source": "boya-quasi-intermediate-i lesson-01 approved layout family",
+  "short_example_policy": "curated_short_sentences_max_24_hanzi_chars",
+  "short_text_policy": "textbook_listening_prompt_and_record_layout_no_full_text_copy",
+  "shared_assets": [
+    "lesson-01-cover-family-work-hobby.png",
+    "lesson-01-learning-path.png",
+    "divider-family.png",
+    "divider-work.png",
+    "divider-hobby.png",
+    "divider-comprehensive.png",
+    "symbolic-vocabulary.png",
+    "symbolic-listening.png",
+    "symbolic-sentence-pattern.png",
+    "oral-practice-divider.png",
+    "speaking-practice.png"
+  ],
+  "slide_count": 53,
+  "audio_tracks_embedded": [
+    "9-1",
+    "9-2",
+    "9-3",
+    "9-4",
+    "9-5",
+    "9-6"
+  ],
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/pptx-draft/face-to-face/lesson-09-实体课.pptx",
+    "sha256": "00797b7d1bc7804597112c423cdea4908ea57ff4f867ceb8f3c94df697294727",
+    "bytes": 68331266
+  },
+  "generated_at": "2026-08-29T16:33:58.982Z"
+}

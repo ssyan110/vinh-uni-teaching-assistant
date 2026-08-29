@@ -1,0 +1,92 @@
+{
+  "schema_version": "boya-lesson-source-manifest-v1",
+  "manifest_type": "lesson-source-review",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_id": "lesson-07",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-07",
+  "lesson_number": 7,
+  "lesson_title": "小张热爱登山",
+  "language": "简体中文",
+  "package": "lesson-07-source-review",
+  "prepared_at": "2026-08-28",
+  "source_status": "pending_review",
+  "source_qa_status": "blocked",
+  "extraction_status": "source_review_materialized",
+  "review_status": "awaiting_adam_review",
+  "approved": false,
+  "approved_by": [],
+  "approved_at": null,
+  "canonical_source": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json",
+    "sha256": "ba48b06a41851b95177b501ebbfeb5c99edbf52e7945360ea148b61cb2cfc471",
+    "status": "source_review_snapshot"
+  },
+  "canonical_source_sha256": "ba48b06a41851b95177b501ebbfeb5c99edbf52e7945360ea148b61cb2cfc471",
+  "source_pdf": {
+    "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+    "sha256": "39899d0f400e187f57c16db821f8f4c207f936eae0e4fbfe3cab52c02bfea806",
+    "total_pages": 134,
+    "textbook_page_range": "59–67",
+    "pdf_page_range": "72–81",
+    "page_count_in_review": 10,
+    "format": "scanned_image_pdf",
+    "text_layer_status": "empty; visual review used"
+  },
+  "answer_pdf": {
+    "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+    "sha256": "3c21e1574b0187259769799d183eca78a60a515b5b7fce202eda9e9ade2c20b8",
+    "total_pages": 33,
+    "pdf_page_range_in_review": "20–21",
+    "answer_status": "closed_answers_visual_checked; open_tasks_have_no_unique_answer"
+  },
+  "page_audit": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/audit/source-pages-59-67-audit-draft.md",
+    "sha256": "38a63346d5199aad4d96ee6b2459aa02ff91bc6f61169510d749ddf396eb9a38",
+    "status": "visual_first_pass"
+  },
+  "answer_audit": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/audit/answer-pages-20-21-audit-draft.md",
+    "sha256": "ff6c51bcc04c7e31a30bf1dd80e079960be94eae2eecdc216ec68b8fdcb358da",
+    "status": "visual_first_pass"
+  },
+  "qr_source": {
+    "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-07-pdf-page-072.png",
+    "qr_url": "http://qr31.cn/I7dyDT",
+    "landing_page": "https://biz.cli.im/site/I7dyDT?qrurl=http://qr31.cn/I7dyDT&gtype=2&key=1f37b1766d5d24adc878292076608ec1b666357015",
+    "status": "decoded_landing_page_lists_1_to_6"
+  },
+  "audio": {
+    "root": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-07",
+    "manifest": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/audio-manifest.json",
+    "manifest_sha256": "362496771294081ee42f781ba863d6c329303f4baa62ba8ecec0f616c33b3574",
+    "technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/audit/audio-technical-2026-08-28.md",
+    "expected_track_count": 6,
+    "local_track_count": 6,
+    "decode_passed_count": 6,
+    "semantic_listening_count": 0,
+    "teacher_playback_count": 0,
+    "status": "technical_pass_semantic_review_pending"
+  },
+  "listening_exercise_contract": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/listening-exercise-contract.json",
+  "listening_exercise_contract_sha256": "1fd3a4f5e019de8d2d57a9dd7acd2973c12cd88c4176543071f51afbee6d87fd",
+  "listening_exercise_contract_detail": {
+    "status": "draft_validated",
+    "exercise_count": 9
+  },
+  "review_evidence": {
+    "page_range": "P59–P67",
+    "answer_page_range": "答案 PDF P20–P21",
+    "vocabulary_count": 26,
+    "proper_noun_count": 0,
+    "short_text_count": 3,
+    "short_text_listen_group_count": 6,
+    "status": "page_answer_audio_mapping_written; final source approval pending"
+  },
+  "blockers": [
+    "六段音频技术核验通过；语义听核和教师播放实测待完成。",
+    "扫描教材无文字层；需 Adam 核对视觉转录、页码和答案证据。",
+    "开放式题目无唯一答案，保持答案政策。"
+  ],
+  "next_minimum_step": "Adam 审核 canonical source 与 listening exercise contract"
+}

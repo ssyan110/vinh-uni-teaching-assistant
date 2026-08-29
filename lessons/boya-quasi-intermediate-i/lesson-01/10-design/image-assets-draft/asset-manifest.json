@@ -1,0 +1,153 @@
+{
+  "lesson_id": "boya-quasi-intermediate-i/lesson-01",
+  "status": "support_draft",
+  "policy": "教材已有图片优先使用教材截图；缺少情境图时使用 ChatGPT 生成，并在此记录提示词与文件 hash。",
+  "assets": [
+    {
+      "id": "cover-family-work-hobby",
+      "path": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/image-assets-draft/lesson-01-cover-family-work-hobby.png",
+      "source": "ChatGPT image generation",
+      "purpose": "封面：丽丽、父母、广州到北京、工作与爱好",
+      "prompt_summary": "教育教材式插画；灰蓝细线、低饱和粉彩、浅色背景、留白；无文字、无数字、无标志；16:9",
+      "dimensions": "1672x941",
+      "sha256": "49f9b4000b9c996da76eb7385e42a2ff0d4d67c3c67e812bb63acd9b251e3226",
+      "approval_status": "not_approved"
+    },
+    {
+      "id": "learning-path",
+      "path": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/image-assets-draft/lesson-01-learning-path.png",
+      "source": "ChatGPT image generation",
+      "purpose": "线上 PPT 开头学习流程：词语、短文、表达、造句、整理表格",
+      "prompt_summary": "五个相连学习场景；教育教材式灰蓝细线、低饱和粉彩、浅色背景、留白；无文字、无数字、无标志；16:9",
+      "dimensions": "1672x941",
+      "sha256": "93504fe9008a3d2e8039094ce4d5a7e324ab491cc4d9ddf6b81bb57cb02169f8",
+      "approval_status": "not_approved"
+    },
+    {
+      "id": "learning-route-can-do-2026-08-28",
+      "path": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/image-assets-draft/learning-route-user-supplied-transparent.png",
+      "source": "用户提供流程图；ChatGPT 去背流程后保留原图像素",
+      "purpose": "Can-Do 前的学习路线流程图",
+      "prompt_summary": "去除外部纯白背景并输出透明 PNG；为保持中文文字与图标完全不变，最终素材保留用户原图像素。",
+      "dimensions": "1672x941",
+      "sha256": "5d415b343c7ca42a275d76ccdc5ba47bc6f97c8852da5397235018476f0895c4",
+      "approval_status": "not_approved"
+    },
+    {
+      "id": "learning-route-seven-steps-2026-08-28",
+      "path": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/image-assets-draft/learning-route-user-supplied-v2.png",
+      "source": "用户提供流程图",
+      "purpose": "实体课 slide 2 学习路线：复习词语、开口热身、听懂课文、学习句式、整理信息、介绍丽丽、介绍自己",
+      "prompt_summary": "用户指定的七步学习流程图；保留原图像素，不改动图中文字与图标。",
+      "dimensions": "1672x941",
+      "sha256": "d9a062c344e238a0ff3c52b956dd148348c6212bcacff3c24f0dfbef3e4b9e61",
+      "approval_status": "not_approved"
+    },
+    {
+      "id": "learning-route-seven-steps-transparent-2026-08-28",
+      "path": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/image-assets-draft/learning-route-user-supplied-transparent-v4.png",
+      "source": "用户提供流程图；去除白色背景",
+      "purpose": "实体课 slide 2 学习路线：复习词语、开口热身、听懂课文、学习句式、整理信息、介绍丽丽、介绍自己",
+      "prompt_summary": "先以用户指定的流程图为基础，再移除连接到图像边界的纯白背景；保留原图图标、箭头、中文文字与位置，输出 RGBA 透明 PNG。",
+      "dimensions": "1672x941",
+      "sha256": "0d6e214bca48cfdb5bfab109fda73e762d3546b2c390792ab84c60522cdd3414",
+      "approval_status": "not_approved"
+    },
+    {
+      "id": "symbolic-vocabulary-2026-08-28",
+      "path": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/image-assets-draft/symbolic-vocabulary.png",
+      "source": "ChatGPT image generation",
+      "purpose": "词语 divider 的 symbolic 中文词语学习图",
+      "prompt_summary": "教育教材式 symbolic 插画：中文词典、汉字卡片、词语闪卡与铅笔；灰蓝细线、低饱和粉彩、留白；无文字标签。",
+      "dimensions": "1672x941",
+      "sha256": "f71af1688952974a1dff9866ad6ebe7b46557f98d654929e2e49d3f9cd30c0d0",
+      "approval_status": "not_approved"
+    },
+    {
+      "id": "symbolic-listening-2026-08-28",
+      "path": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/image-assets-draft/symbolic-listening.png",
+      "source": "ChatGPT image generation",
+      "purpose": "听力练习 divider 的 symbolic 听力学习图",
+      "prompt_summary": "教育教材式 symbolic 插画：耳机、声波、播放按钮与听力记录场景；灰蓝细线、低饱和粉彩、留白；无文字标签。",
+      "dimensions": "1672x941",
+      "sha256": "446f9fcf18f001bd46c365b66d2240c5471e6e2a276384d734338de89fab87ff",
+      "approval_status": "not_approved"
+    },
+    {
+      "id": "symbolic-sentence-pattern-2026-08-28",
+      "path": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/image-assets-draft/symbolic-sentence-pattern.png",
+      "source": "ChatGPT image generation",
+      "purpose": "句式 divider 的 symbolic 句式组合图",
+      "prompt_summary": "教育教材式 symbolic 插画：彩色句子拼图、对话气泡、铅笔组合句子；灰蓝细线、低饱和粉彩、留白；无文字标签。",
+      "dimensions": "1672x941",
+      "sha256": "8d0a3ff28f3cfd7483e10e1c449c559d2f8cfe77069d177a7b436f71006f6060",
+      "approval_status": "not_approved"
+    },
+    {
+      "id": "oral-practice-divider-2026-08-28",
+      "path": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/image-assets-draft/oral-practice-divider.png",
+      "source": "ChatGPT image generation",
+      "purpose": "口语练习 divider：两人面对面说与听",
+      "prompt_summary": "教育教材式口语练习插画：两位大学生面对面练习对话，一人说、一人听并记录；灰蓝细线、低饱和粉彩、浅色背景、留白；无文字标签。",
+      "dimensions": "1672x941",
+      "sha256": "91290507794e3501dcaf6dd5fd83860e1fa65e6b1bb10794968b03f848b374f9",
+      "approval_status": "not_approved"
+    },
+    {
+      "id": "symbolic-comprehensive-practice-2026-08-28",
+      "path": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/image-assets-draft/symbolic-comprehensive-practice.png",
+      "source": "ChatGPT image generation",
+      "purpose": "综合练习 divider 的 symbolic 综合学习图",
+      "prompt_summary": "教育教材式 symbolic 插画：勾选清单、表格、对话气泡、耳机与铅笔；灰蓝细线、低饱和粉彩、留白；无文字标签。",
+      "dimensions": "1672x941",
+      "sha256": "fa56f5df9b6d2e9a1bd5911c974027d14dd7009f32a418c10524eda77cc0a682",
+      "approval_status": "not_approved"
+    },
+    {
+      "id": "symbolic-comprehensive-practice-2026-08-28",
+      "path": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/image-assets-draft/symbolic-comprehensive-practice.png",
+      "source": "ChatGPT image generation",
+      "purpose": "综合练习 divider 的 symbolic 综合学习图",
+      "prompt_summary": "教育教材式 symbolic 插画：勾选清单、表格、对话气泡、耳机与铅笔；灰蓝细线、低饱和粉彩、留白；无文字标签。",
+      "dimensions": "1672x941",
+      "sha256": "fa56f5df9b6d2e9a1bd5911c974027d14dd7009f32a418c10524eda77cc0a682",
+      "approval_status": "not_approved"
+    },
+    {
+      "id": "face-to-face-generated-visuals-2026-08-28",
+      "path": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/image-assets-draft/",
+      "source": "ChatGPT image generation",
+      "purpose": "实体课分隔页、听说问题、句式练习与课末表达的情境图",
+      "files": [
+        "divider-listening.png",
+        "divider-family.png",
+        "divider-work.png",
+        "divider-hobby.png",
+        "divider-comprehensive.png",
+        "university-weekend.png",
+        "daily-routines-collage.png",
+        "speaking-practice.png"
+      ],
+      "license_status": "内部教学草稿；ChatGPT 生成素材，未作公开发布授权声明。",
+      "approval_status": "not_approved"
+    },
+    {
+      "id": "vocabulary-contact-sheets-2026-08-28",
+      "path": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/image-assets-draft/vocab-contact-sheets/",
+      "source": "ChatGPT image generation",
+      "purpose": "31个生词的独立情境图原始 contact sheet，共7张；用于裁切单词图片。",
+      "prompt_summary": "灰蓝细线、低饱和粉彩、浅色背景、留白；每个词语一个独立面板；无文字、无数字、无标志。",
+      "count": 7,
+      "approval_status": "not_approved"
+    },
+    {
+      "id": "vocabulary-cropped-images-2026-08-28",
+      "path": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/image-assets-draft/vocab-images/",
+      "source": "裁切自 vocabulary-contact-sheets-2026-08-28",
+      "purpose": "生词页与每五词回顾页；每个生词一张独立内嵌 PNG。",
+      "count": 31,
+      "license_status": "内部教学草稿；ChatGPT 生成素材，未作公开发布授权声明。",
+      "approval_status": "not_approved"
+    }
+  ]
+}

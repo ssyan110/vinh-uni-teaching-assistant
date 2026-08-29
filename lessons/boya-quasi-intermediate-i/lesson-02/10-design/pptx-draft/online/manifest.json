@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-pptx-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-02",
+  "mode": "online",
+  "title": "第二课《王红的一天》在线预习",
+  "status": "draft_not_approved",
+  "builder_scope": "scripts/build_l23_pptx_drafts.js",
+  "draft_gate": "lesson-specific",
+  "source_sha256": "6dfb97de7500c888849dad2a5a1c93978542917d3a725a8aeafe53be16545fe3",
+  "layout_source": "boya-quasi-intermediate-i lesson-01 approved layout family",
+  "shared_layout_contract": "course/boya-online-layout-contract.json",
+  "fixed_structure": [
+    "cover",
+    "learning_flow",
+    "goals",
+    "vocabulary",
+    "practice_after_each_full_five",
+    "proper_nouns_if_present",
+    "short_text_divider_before_each_text",
+    "short_text_record",
+    "expressions_after_related_text",
+    "comprehensive_practice",
+    "fixed_three_slide_ending"
+  ],
+  "route_asset": "learning-route-user-supplied-transparent.png",
+  "vocabulary_practice_after_every": 5,
+  "vocabulary_extension_policy": "empty_until_explicitly_supplied",
+  "vocabulary_page_breaks": {
+    "first_page": 12,
+    "first_count": 17,
+    "second_page": 13
+  },
+  "fixed_ending_titles": [
+    "我觉得很难的地方",
+    "课前检查",
+    "谢谢大家，我们课堂见。"
+  ],
+  "short_example_policy": "curated_short_sentences_max_24_hanzi_chars",
+  "short_text_policy": "textbook_reading_prompt_and_record_layout_no_full_text_copy",
+  "shared_assets": [
+    "lesson-01-cover-family-work-hobby.png",
+    "learning-route-user-supplied-transparent.png",
+    "divider-family.png",
+    "divider-work.png",
+    "divider-hobby.png",
+    "divider-comprehensive.png",
+    "symbolic-vocabulary.png",
+    "symbolic-listening.png",
+    "symbolic-sentence-pattern.png",
+    "oral-practice-divider.png",
+    "speaking-practice.png"
+  ],
+  "vocabulary_image_policy": "one_distinct_semantic_asset_per_vocabulary_item",
+  "vocabulary_image_count": 29,
+  "vocabulary_image_assets": [
+    {
+      "word": "排球",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-01-paiqiu.png"
+    },
+    {
+      "word": "志愿者",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-02-zhiyuanzhe.png"
+    },
+    {
+      "word": "讲解员",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-03-jiangjieyuan.png"
+    },
+    {
+      "word": "博物馆",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-04-bowuguan.png"
+    },
+    {
+      "word": "展品",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-05-zhanpin.png"
+    },
+    {
+      "word": "体育课",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-06-tiyuke.png"
+    },
+    {
+      "word": "了解",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-07-liaojie.png"
+    },
+    {
+      "word": "周围",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-08-zhouwei.png"
+    },
+    {
+      "word": "基本",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-09-jiben.png"
+    },
+    {
+      "word": "不知不觉",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-10-buzhibujue.png"
+    },
+    {
+      "word": "热烈",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-11-relie.png"
+    },
+    {
+      "word": "游客",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-12-youke.png"
+    },
+    {
+      "word": "布置",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-13-buzhi.png"
+    },
+    {
+      "word": "尤其",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-14-youqi.png"
+    },
+    {
+      "word": "交流",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-15-jiaoliu.png"
+    },
+    {
+      "word": "顿",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-16-dun.png"
+    },
+    {
+      "word": "庆祝",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-17-qingzhu.png"
+    },
+    {
+      "word": "特点",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-18-tedian.png"
+    },
+    {
+      "word": "环境",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-19-huanjing.png"
+    },
+    {
+      "word": "熟悉",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-20-shuxi.png"
+    },
+    {
+      "word": "感觉",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-21-ganjue.png"
+    },
+    {
+      "word": "收获",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-22-shouhuo.png"
+    },
+    {
+      "word": "插",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-23-cha.png"
+    },
+    {
+      "word": "接着",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-24-jiezhe.png"
+    },
+    {
+      "word": "科学",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-25-kexue.png"
+    },
+    {
+      "word": "参观",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-26-canguan.png"
+    },
+    {
+      "word": "举办",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-27-juban.png"
+    },
+    {
+      "word": "增长",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-28-zengzhang.png"
+    },
+    {
+      "word": "同时",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/assets/l02-vocab-29-tongshi.png"
+    }
+  ],
+  "slide_count": 72,
+  "audio_tracks_embedded": [
+    "2-1",
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7"
+  ],
+  "audio_playback_policy": "embedded_on_audio-summary-slides; PowerPoint playback QA remains pending for draft",
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/pptx-draft/online/lesson-02-在线预习.pptx",
+    "sha256": "fa5bada6b1a1f94a8659c5d3450000fa54e3747b154506a22afc561732cdadeb",
+    "bytes": 107080468
+  },
+  "generated_at": "2026-08-29T15:56:17.321Z"
+}
