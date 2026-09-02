@@ -19,11 +19,18 @@ const PYTHON = process.env.BOYA_PYTHON || 'python3';
 const W = 13.333;
 const H = 7.5;
 const C = design.colors;
+const T = design.pptTypography;
 const CJK = design.fonts.cjk;
 const LATIN = design.fonts.latin;
 const DEFAULT_LESSON_NUMBERS = [2, 3, 4, 5, 6, 7, 8, 9, 10];
 const ONLINE_LAYOUT_CONTRACT_PATH = path.join(ROOT, 'course/boya-online-layout-contract.json');
 const ONLINE_LAYOUT = JSON.parse(fs.readFileSync(ONLINE_LAYOUT_CONTRACT_PATH, 'utf8'));
+const ONLINE_CONTENT_CONTRACT_PATH = path.join(ROOT, 'course/boya-online-content-contract.json');
+const ONLINE_CONTENT = JSON.parse(fs.readFileSync(ONLINE_CONTENT_CONTRACT_PATH, 'utf8'));
+const EXAMPLE_BANK_PATH = path.join(ROOT, 'course/boya-example-bank.json');
+const EXAMPLE_BANK = JSON.parse(fs.readFileSync(EXAMPLE_BANK_PATH, 'utf8'));
+const FACE_ORDER_CONTRACT_PATH = path.join(ROOT, 'course/boya-face-to-face-order-contract.json');
+const FACE_ORDER = JSON.parse(fs.readFileSync(FACE_ORDER_CONTRACT_PATH, 'utf8'));
 const L1_ASSET_ROOT = path.join(ROOT, 'lessons/boya-quasi-intermediate-i/lesson-01/10-design/image-assets-draft');
 const MAX_SHORT_EXAMPLE_CHARS = 24;
 let ACTIVE_MODE = 'online';
@@ -45,17 +52,41 @@ function requestedLessonNumbers() {
 }
 
 function validateOnlineLayoutContract() {
-  if (ONLINE_LAYOUT.contract_id !== 'boya-quasi-intermediate-i-online-v1') throw new Error('Unexpected online layout contract');
+  if (ONLINE_LAYOUT.contract_id !== 'boya-quasi-intermediate-i-online-v2') throw new Error('Unexpected online layout contract');
   if (ONLINE_LAYOUT.scope_policy !== 'layout_and_reusable_microcopy_only') throw new Error('Online contract scope must remain layout-only');
-  if (ONLINE_LAYOUT.cover?.online_label !== '在线课' || ONLINE_LAYOUT.cover?.subtitle !== '听一听，问一问，说一说。') throw new Error('Online cover text contract is incomplete');
+  if (ONLINE_LAYOUT.visual?.slide_background !== '#FFFFFF' || C.slideBackground !== 'FFFFFF') throw new Error('Finalized PPTX canvas must be pure white');
+  const contractTypography = ONLINE_LAYOUT.pptTypography || {};
+  if (!T || Object.keys(T).length !== Object.keys(contractTypography).length || !Object.keys(contractTypography).every((key) => T[key] === contractTypography[key])) throw new Error('PPTX typography tokens must match the current online layout contract');
+  if (Object.values(contractTypography).some((value) => !Number.isFinite(value) || value <= 0) || contractTypography.visible_min_pt < 20 || contractTypography.task_prompt_min_pt < contractTypography.visible_min_pt) throw new Error('PPTX typography contract contains invalid readability values');
+  if (ONLINE_LAYOUT.cover?.online_label !== '在线课' || ONLINE_LAYOUT.cover?.bottom_subtitle_policy !== 'forbidden' || Object.prototype.hasOwnProperty.call(ONLINE_LAYOUT.cover, 'subtitle')) throw new Error('Online cover must not contain a subtitle');
   if (ONLINE_LAYOUT.learning_route?.title !== '学习流程图' || ONLINE_LAYOUT.learning_route?.asset !== 'learning-route-user-supplied-transparent.png') throw new Error('Learning-route contract is incomplete');
   if (ONLINE_LAYOUT.vocabulary?.practice_after_every !== 5 || ONLINE_LAYOUT.vocabulary?.practice_title !== '请你说说它们的中文并造句') throw new Error('Vocabulary practice contract is incomplete');
-  if (ONLINE_LAYOUT.vocabulary?.extension_policy !== 'empty_until_explicitly_supplied' || ONLINE_LAYOUT.vocabulary?.extension_label !== '扩展：') throw new Error('Vocabulary expansion contract is incomplete');
+  if (ONLINE_LAYOUT.vocabulary?.meaning_field !== 'meaning_vi' || ONLINE_LAYOUT.vocabulary?.meaning_language !== 'Vietnamese' || !String(ONLINE_LAYOUT.vocabulary?.extension_policy || '').startsWith('word_specific_optional') || !String(ONLINE_LAYOUT.vocabulary?.grammar_detail_policy || '').startsWith('word_specific_optional')) throw new Error('Vocabulary content contract is incomplete');
+  if (ONLINE_LAYOUT.goals?.number_marker?.shape !== 'filled_circle' || JSON.stringify(ONLINE_LAYOUT.goals.number_marker.fill_sequence) !== JSON.stringify(['teal', 'coral', 'purple', 'yellow']) || ONLINE_LAYOUT.goals.number_marker.number_color !== 'white' || ONLINE_LAYOUT.goals.number_marker.outline !== 'none') throw new Error('Goals number-marker contract is incomplete');
+  if (ONLINE_LAYOUT.expressions?.pattern_box?.shape !== 'roundRect' || ONLINE_LAYOUT.expressions?.pattern_box?.fill !== 'lilac' || ONLINE_LAYOUT.expressions?.pattern_box?.text_color !== 'purple' || ONLINE_LAYOUT.expressions?.visible_header_expression_policy !== 'forbidden' || ONLINE_LAYOUT.expressions?.visible_context_policy !== 'forbidden' || ONLINE_LAYOUT.expressions?.example_label !== '例句：' || ONLINE_LAYOUT.expressions?.example_pt !== 35 || ONLINE_LAYOUT.expressions?.example_count !== 2) throw new Error('Expression practice layout contract is incomplete');
   if (ONLINE_LAYOUT.ending?.slides?.length !== 3 || ONLINE_LAYOUT.ending.slides[0]?.title !== '我觉得很难的地方' || ONLINE_LAYOUT.ending.slides[1]?.title !== '课前检查' || ONLINE_LAYOUT.ending.slides[2]?.title !== '谢谢大家，我们课堂见。') throw new Error('Fixed ending contract is incomplete');
   if (ONLINE_LAYOUT.fonts?.cjk !== CJK || ONLINE_LAYOUT.fonts?.latin !== LATIN || Number(ONLINE_LAYOUT.fonts?.minimum_visible_pt) < 20) throw new Error('Font contract is incomplete');
+  if (ONLINE_CONTENT.goals?.title !== ONLINE_LAYOUT.goals.title || ONLINE_CONTENT.goals?.label !== ONLINE_LAYOUT.goals.label || ONLINE_CONTENT.vocabulary?.meaning_vi?.language !== 'Vietnamese' || ONLINE_CONTENT.example_bank?.source !== 'course/boya-example-bank.json') throw new Error('Online content contract is incomplete');
+  if (EXAMPLE_BANK.policy?.examples_per_item !== 2 || EXAMPLE_BANK.policy?.max_hanzi_chars !== MAX_SHORT_EXAMPLE_CHARS || !String(EXAMPLE_BANK.review?.status || '').trim() || !String(EXAMPLE_BANK.review?.reviewed_at || '').trim()) throw new Error('Example bank contract is incomplete');
 }
 
 validateOnlineLayoutContract();
+
+function validateFaceOrderContract() {
+  if (FACE_ORDER.contract_id !== 'boya-quasi-intermediate-i-face-to-face-v2') throw new Error('Unexpected face-to-face order contract');
+  if (FACE_ORDER.visual?.slide_background !== '#FFFFFF' || C.slideBackground !== 'FFFFFF') throw new Error('Finalized PPTX canvas must be pure white');
+  if (FACE_ORDER.pptTypography?.visible_min_pt !== 20) throw new Error('Face-to-face typography contract is incomplete');
+  for (const key of Object.keys(T)) if (FACE_ORDER.pptTypography?.[key] !== T[key]) throw new Error(`Face-to-face typography token mismatch: ${key}`);
+  if (FACE_ORDER.first_unit_rule.indexOf('短文（一）') === -1) throw new Error('Face-to-face contract must lock the first short-text divider');
+  if (FACE_ORDER.divider_position_policy.indexOf('固定页码') === -1 || FACE_ORDER.section_boundary_policy.indexOf('下一个短文 divider') === -1) {
+    throw new Error('Face-to-face divider position and section boundary rules are incomplete');
+  }
+  if (!Array.isArray(FACE_ORDER.short_text_unit_sequence) || FACE_ORDER.short_text_unit_sequence.indexOf('听力题目') === -1 || FACE_ORDER.short_text_unit_sequence.indexOf('简单题目问答') === -1) {
+    throw new Error('Face-to-face short-text sequence is incomplete');
+  }
+}
+
+validateFaceOrderContract();
 
 const LESSON_NUMBER_LABELS = {
   1: '一', 2: '二', 3: '三', 4: '四', 5: '五', 6: '六',
@@ -70,264 +101,124 @@ function lessonLabel(lesson) {
   return `第${lessonNumberLabel(lesson.number)}课`;
 }
 
-const POS_USAGE = {
-  '名': '介绍人、事物或生活信息',
-  '动': '说明动作、经历或计划',
-  '形': '说明状态、感觉或评价',
-  '副': '修饰动作或状态',
-  '代': '指另一个人、事物或地方',
-  '量': '表示动作或事物的数量',
-  '连': '连接前后两个意思',
-  '动／副': '表示动作继续或随后发生',
-  '': '请结合教材句子理解和使用'
-};
+function exampleBankFor(lesson) {
+  return EXAMPLE_BANK.lessons?.[lesson.lessonKey] || {};
+}
 
-// The canonical source stores English glosses for audit purposes.  Student
-// screens remain fully Chinese, so these are concise Chinese explanations;
-// the source word, pinyin and source text remain the authority.
-const GLOSS_CN = {
-  '排球': '一种球类运动', '志愿者': '主动帮助别人的人', '讲解员': '为参观者介绍展品的人',
-  '博物馆': '收藏和展示物品的地方', '展品': '在展览中展示的物品', '体育课': '学习体育的课',
-  '了解': '知道并明白', '周围': '附近的地方', '基本': '大体上', '不知不觉': '没有注意到',
-  '热烈': '气氛积极、感情强烈', '游客': '来参观的人', '布置': '安排和摆放', '尤其': '特别是',
-  '交流': '互相说话、交换想法', '顿': '表示吃饭等次数', '庆祝': '用活动表示高兴', '特点': '特别的地方',
-  '环境': '周围的情况', '熟悉': '知道得很清楚', '感觉': '身体或心里的感受', '收获': '得到的东西或经验',
-  '插': '放进或立在里面', '接着': '然后', '科学': '研究自然和社会规律的知识', '参观': '到地方看一看',
-  '举办': '组织活动', '增长': '增加、提高', '同时': '在同一时间',
-  '兴趣': '喜欢并想了解的事', '古老肉': '一种酸甜口味的菜', '西红柿炒鸡蛋': '西红柿和鸡蛋一起炒的菜',
-  '暑假': '学校暑期放的假', '招待': '热情地接待客人', '聊天儿': '轻松地说话', '转学': '换到另一所学校学习',
-  '上（菜）': '把做好的菜送到桌上', '司机': '开车的人', '快餐店': '提供快速餐点的店', '点（菜）': '选择要吃的菜',
-  '阅读': '看书或看文字', '语伴': '一起练习语言的伙伴', '讲座': '有人讲话、介绍知识的活动', '国际': '和多个国家有关',
-  '发现': '找到以前不知道的情况', '习惯': '慢慢适应并觉得正常', '新闻': '最近发生的事情', '字幕': '画面下方的文字',
-  '加倍': '比原来多一倍或更加努力', '解释': '说明意思或原因', '词语': '词和表达', '效率': '做事快而且效果好',
-  '印象': '留下的感觉', '吃惊': '感到意外', '聊': '轻松地说话', '通常': '平常大多数时候', '听力': '听懂话的能力',
-  '异同': '相同和不同的地方', '量': '数量或分量', '饿': '想吃东西的感觉',
-  '另外': '别的、另一个', '互相': '彼此', '有趣': '让人觉得有意思', '声调': '说话时声音的高低变化',
-  '重复': '再说或再做一次', '接触': '接近并了解', '帮忙': '帮助别人做事', '记得': '没有忘记',
-  '例如': '举例说明', '中国通': '很了解中国的人', '神秘': '让人觉得不了解', '开（课）': '学校安排这门课',
-  '总是': '一直这样', '更': '表示程度增加', '于是': '表示前面的事引出后面的结果', '选修': '按照兴趣选择学习',
-  '德语': '德国的语言', '拉丁语': '拉丁语'
-};
+function vocabularyDataFor(lesson, entry) {
+  const content = ONLINE_CONTENT.lessons?.[lesson.lessonId] || {};
+  const override = content.vocabulary?.entries?.[entry.word] || {};
+  const bankExamples = exampleBankFor(lesson).vocabulary?.[entry.word];
+  const data = { ...entry, ...override };
+  // For new drafts the example bank is the source of truth. A lesson content
+  // override cannot silently bypass the "database first" requirement.
+  if (content.status !== 'finalized_reference' && bankExamples !== undefined) data.examples = bankExamples;
+  return data;
+}
 
-// 第一課核准稿使用的是「一詞一頁＋一個可直接朗讀的短句」。
-// 後續課次不得從長課文或長例句自動抽取文字；每個詞語都必須有獨立、短小、
-// 可替換成學生自身資訊的例句。這份表是內容規格的一部分，不是 fallback 文案。
-const SHORT_EXAMPLES = {
-  2: {
-    '排球': '我喜欢打排球。',
-    '志愿者': '她是学校的志愿者。',
-    '讲解员': '她以后要当讲解员。',
-    '博物馆': '我去过科学博物馆。',
-    '展品': '我最喜欢那件展品。',
-    '体育课': '今天上午有体育课。',
-    '了解': '我对学校有了了解。',
-    '周围': '学校周围有很多商店。',
-    '基本': '我基本适应了大学生活。',
-    '不知不觉': '不知不觉，天已经黑了。',
-    '热烈': '大家讨论得很热烈。',
-    '游客': '导游带游客参观校园。',
-    '布置': '我们一起布置教室。',
-    '尤其': '我喜欢运动，尤其是排球。',
-    '交流': '我喜欢和同学交流。',
-    '顿': '我们一起吃一顿饭。',
-    '庆祝': '我们一起庆祝生日。',
-    '特点': '这门课有自己的特点。',
-    '环境': '这里的环境让人很放松。',
-    '熟悉': '搬来以后，我慢慢熟悉了这座城市。',
-    '感觉': '下课以后，我感觉轻松多了。',
-    '收获': '参加比赛以后，我收获了信心。',
-    '插': '她把蜡烛插在蛋糕上。',
-    '接着': '吃完饭，接着唱歌。',
-    '科学': '我对科学很有兴趣。',
-    '参观': '周末我们去参观博物馆。',
-    '举办': '市里下个月举办音乐节。',
-    '增长': '阅读可以增长知识。',
-    '同时': '我学习中文，同时了解文化。'
-  },
-  3: {
-    '兴趣': '我对中文有兴趣。',
-    '古老肉': '我喜欢吃古老肉。',
-    '西红柿炒鸡蛋': '我会做西红柿炒鸡蛋。',
-    '暑假': '暑假我想回家。',
-    '招待': '周末我要招待朋友。',
-    '聊天儿': '我喜欢和朋友聊天儿。',
-    '转学': '他明年要转学。',
-    '另外': '我还想学另外一门语言。',
-    '互相': '同学们互相帮助。',
-    '有趣': '学中文很有趣。',
-    '声调': '中文的声调不容易。',
-    '重复': '请你再重复一遍。',
-    '接触': '我想多接触中文。',
-    '帮忙': '你能帮忙吗？',
-    '记得': '我记得那一天。',
-    '例如': '我喜欢中国菜，例如饺子。',
-    '中国通': '他是一个中国通。',
-    '神秘': '中文以前对我很神秘。',
-    '开（课）': '学校下学期开中文课。',
-    '总是': '他总是认真听课。',
-    '更': '写汉字更难。',
-    '于是': '我很感兴趣，于是开始学习。',
-    '选修': '我决定选修中文。',
-    '德语': '我以前学过德语。',
-    '拉丁语': '学校还开拉丁语课。'
-  },
-  4: {
-    '上（菜）': '服务员把热菜端上来了。', '司机': '司机在路口停下车。', '快餐店': '这家快餐店中午人很多。', '点（菜）': '请先看菜单，再点菜。',
-    '阅读': '睡前阅读让我很安静。', '语伴': '我的语伴会纠正发音。', '讲座': '这场讲座介绍北京文化。', '国际': '学校有国际学生中心。',
-    '发现': '我在地图上发现了新路线。', '习惯': '他很快习惯了早起。', '新闻': '爸爸早上听新闻。', '字幕': '我打开字幕学习发音。',
-    '加倍': '考试前她加倍练习听力。', '解释': '请你解释这个词的意思。', '词语': '我把新词语写在卡片上。', '效率': '安静的房间能提高效率。',
-    '印象': '这次旅行给我留下深刻印象。', '吃惊': '听到这个消息，他非常吃惊。', '聊': '晚饭后我们聊了几分钟。', '通常': '我通常坐公交车上学。',
-    '听力': '每天听十分钟，听力会进步。', '异同': '小组正在讨论两地的异同。', '量': '请少放一点儿盐，菜量够了。', '饿': '走了一上午，我现在很饿。'
+function expressionItemsFromSection(section) {
+  const direct = Array.isArray(section?.items) ? section.items : [];
+  const grouped = Array.isArray(section?.groups)
+    ? section.groups.flatMap((group) => Array.isArray(group?.items) ? group.items : [])
+    : [];
+  return [...direct, ...grouped].map((item) => typeof item === 'string' ? { expression: item } : item).filter((item) => item && String(item.expression || '').trim());
+}
+
+function onlineContentFor(lesson) {
+  const content = ONLINE_CONTENT.lessons?.[lesson.lessonId];
+  if (!content || content.status === 'blocked_before_content_approval') {
+    const reason = content?.reason || '缺少课次专属内容契约';
+    throw new Error(`第${lesson.number}课在线预习 draft 已停止：${reason}`);
   }
-};
-
-// Every vocabulary page follows the approved Lesson 1 rule of two short,
-// speakable examples.  Keep these sentences explicit and short; never fall
-// back to a sentence copied from a textbook paragraph.
-const SHORT_EXAMPLES_SECOND = {
-  2: {
-    '排球': '她每周都打排球。',
-    '志愿者': '我想当一名志愿者。',
-    '讲解员': '博物馆需要讲解员。',
-    '博物馆': '下雨天，我们去了博物馆。',
-    '展品': '请不要用手摸展品。',
-    '体育课': '我喜欢上体育课。',
-    '了解': '我想了解这里的生活。',
-    '周围': '我常在学校周围散步。',
-    '基本': '我基本完成了作业。',
-    '不知不觉': '不知不觉，雨停了。',
-    '热烈': '大家的掌声很热烈。',
-    '游客': '游客正在门口排队。',
-    '布置': '我们正在布置房间。',
-    '尤其': '我尤其喜欢这门课。',
-    '交流': '我们常用中文交流。',
-    '顿': '我今天吃了两顿饭。',
-    '庆祝': '我们一起庆祝新年。',
-    '特点': '这家店的特点很明显。',
-    '环境': '安静的环境适合读书。',
-    '熟悉': '你可以先熟悉一下路线。',
-    '感觉': '第一次上台，我有点儿紧张。',
-    '收获': '这次采访让我认识了新朋友。',
-    '插': '请把花插在瓶子里。',
-    '接着': '下课后，接着上自习。',
-    '科学': '我喜欢看科学杂志。',
-    '参观': '明天我们去参观学校。',
-    '举办': '社区周末举办跳蚤市场。',
-    '增长': '运动可以增长体力。',
-    '同时': '她学习中文，同时工作。'
-  },
-  3: {
-    '兴趣': '我对音乐也有兴趣。',
-    '古老肉': '这家饭店的古老肉很好吃。',
-    '西红柿炒鸡蛋': '妈妈常做西红柿炒鸡蛋。',
-    '暑假': '暑假我们一起旅行。',
-    '招待': '谢谢你热情招待我。',
-    '聊天儿': '我们下课后聊天儿。',
-    '转学': '他因为搬家要转学。',
-    '另外': '你还需要另外一张纸。',
-    '互相': '我们在学习上互相帮助。',
-    '有趣': '这个故事很有趣。',
-    '声调': '请注意汉语的声调。',
-    '重复': '老师请我重复一遍。',
-    '接触': '多接触中文会有进步。',
-    '帮忙': '谢谢你帮忙。',
-    '记得': '你还记得他的名字吗？',
-    '例如': '我喜欢水果，例如苹果。',
-    '中国通': '她对中国很了解，是个中国通。',
-    '神秘': '这个地方看起来很神秘。',
-    '开（课）': '学校今年开了日语课。',
-    '总是': '她总是按时到校。',
-    '更': '多练习以后会更熟练。',
-    '于是': '他很喜欢，于是买了一本。',
-    '选修': '我准备选修历史课。',
-    '德语': '她正在学习德语。',
-    '拉丁语': '他对拉丁语有兴趣。'
-  },
-  4: {
-    '上（菜）': '我们等了十分钟，菜才上来。', '司机': '那位司机很熟悉北京的路。', '快餐店': '学生常在快餐店吃午饭。', '点（菜）': '你想点什么菜？',
-    '阅读': '周末我会阅读一本小说。', '语伴': '我和语伴约在图书馆见面。', '讲座': '讲座结束后可以提问。', '国际': '她参加了国际会议。',
-    '发现': '他发现自己听错了一个词。', '习惯': '我还没有习惯这里的天气。', '新闻': '这条新闻很快传开了。', '字幕': '没有字幕，我听不懂这部电影。',
-    '加倍': '为了赶上进度，他加倍工作。', '解释': '她耐心地解释了原因。', '词语': '这个词语在课文里出现两次。', '效率': '一起讨论可以提高学习效率。',
-    '印象': '那位老师给我留下了好印象。', '吃惊': '看到这么大的雪，大家都很吃惊。', '聊': '他们边喝茶边聊旅行。', '通常': '商店通常九点开门。',
-    '听力': '听完录音，请写下关键词。', '异同': '你能说出这两个词的异同吗？', '量': '这杯水的量刚刚好。', '饿': '午饭前我常常觉得饿。'
+  if (!Array.isArray(content.goals) || content.goals.length < 3 || content.goals.length > 4 || content.goals.some((goal) => !String(goal || '').trim())) {
+    throw new Error(`第${lesson.number}课在线预习 draft 已停止：学习目标必须是已核准的 3–4 项，且不得使用通用 fallback`);
   }
-};
-
-const SHORT_EXPRESSION_EXAMPLES = {
-  2: {
-    '对……熟悉／对……有了了解': '我对这里很熟悉。',
-    '尤其': '我喜欢运动，尤其是排球。',
-    '虽然……可是……': '虽然很累，可是我很开心。',
-    '不知不觉': '不知不觉，天黑了。',
-    '同时': '我学习中文，同时学文化。',
-    '给……办／介绍': '我们给妈妈办生日会。',
-    '处所＋动词＋着＋人／物': '桌上摆着一本书。',
-    '接着': '吃完饭，接着唱歌。',
-    '安安静静／舒舒服服／急急忙忙／开开心心＋（地）＋动词词组': '我想安安静静地看书。',
-    '量词': '我吃了两顿饭。',
-    '自从……以来': '自从上大学以来，我常运动。',
-    '每……都……': '我每天都听中文。',
-    '不但……同时……': '运动不但健康，同时很有趣。',
-    '其中': '班里有十个人，其中我最安静。',
-    '过得': '我周末过得很开心。'
-  },
-  3: {
-    '每＋量词': '我每年都回家。',
-    '帮／忙': '周末我帮妈妈做饭。',
-    '……什么的': '我喜欢饺子、面条什么的。',
-    '……（的）时候': '上课的时候，我很认真。',
-    '记得': '我记得第一次上课。',
-    '可以……也可以……': '学中文可以交朋友，也可以旅行。',
-    '另（外）': '我想学另外一门语言。',
-    '更（1）': '我现在对中文更有兴趣。',
-    '动词＋得（1）': '老师说得很清楚。',
-    '但是': '我喜欢中文，但是声调很难。',
-    '于是': '我很感兴趣，于是开始学习。',
-    '更（2）': '写汉字更难。',
-    '互相': '同学们互相帮助。',
-    '遍': '请再说一遍。'
+  if (content.cover?.bottom_subtitle || content.cover?.subtitle) {
+    throw new Error(`第${lesson.number}课在线预习 draft 已停止：封面不得有底部 subtitle`);
   }
-};
-
-const SHORT_EXPRESSION_EXAMPLES_SECOND = {
-  2: {
-    '对……熟悉／对……有了了解': '我对这本教材有了了解。',
-    '尤其': '他喜欢运动，尤其是游泳。',
-    '虽然……可是……': '虽然下雨，可是我还是来了。',
-    '不知不觉': '不知不觉，时间过去了。',
-    '同时': '他工作，同时学习中文。',
-    '给……办／介绍': '我给朋友办生日会。',
-    '处所＋动词＋着＋人／物': '墙上挂着一张画。',
-    '接着': '他说完，接着问问题。',
-    '安安静静／舒舒服服／急急忙忙／开开心心＋（地）＋动词词组': '孩子们开开心心地玩。',
-    '量词': '我吃了三顿饭。',
-    '自从……以来': '自从毕业以来，我常旅行。',
-    '每……都……': '我每天都练习发音。',
-    '不但……同时……': '中文不但有趣，同时很有用。',
-    '其中': '我们班有五个人，其中他最高。',
-    '过得': '她在这里过得很好。'
-  },
-  3: {
-    '每＋量词': '我每周上三节课。',
-    '帮／忙': '他帮我拿书。',
-    '……什么的': '我喜欢茶、咖啡什么的。',
-    '……（的）时候': '吃饭的时候，我们聊天儿。',
-    '记得': '我记得你的生日。',
-    '可以……也可以……': '周末可以学习，也可以休息。',
-    '另（外）': '我想买另外一本书。',
-    '更（1）': '他学得越多，兴趣更大。',
-    '动词＋得（1）': '她说中文说得很清楚。',
-    '但是': '我想去，但是今天下雨。',
-    '于是': '他有兴趣，于是开始学习。',
-    '更（2）': '今天比昨天更冷。',
-    '互相': '同学们在课堂上互相学习。',
-    '遍': '请再读两遍。'
+  const coverTitlePt = Number(content.cover?.online_title_pt);
+  if (!Number.isFinite(coverTitlePt) || coverTitlePt < T.cover_title_min_pt || coverTitlePt > T.cover_title_max_pt) {
+    throw new Error(`第${lesson.number}课在线预习 draft 已停止：封面标题字号必须由课次内容契约明确指定（${T.cover_title_min_pt}–${T.cover_title_max_pt} pt）`);
   }
-};
+  if (!String(content.route?.asset || '').trim() || !String(content.route?.variant || '').trim()) {
+    throw new Error(`第${lesson.number}课在线预习 draft 已停止：学习流程图必须有课次专属 asset 与 visual variant`);
+  }
+  const isNewDraft = content.status !== 'finalized_reference';
+  const requiredExampleCount = Number(ONLINE_CONTENT.vocabulary?.examples?.count?.min || 2);
+  [...regularVocabEntries(lesson), ...properNounEntries(lesson)].forEach((entry) => {
+    const bankExamples = exampleBankFor(lesson).vocabulary?.[entry.word];
+    const data = vocabularyDataFor(lesson, entry);
+    const meaning = String(data.meaning_vi || '').trim();
+    if (!meaning || data.meaning_vi_status !== 'reviewed') {
+      throw new Error(`第${lesson.number}课词语“${entry.word}”缺少已审核的越南文 meaning_vi；禁止使用 gloss、英文或中文 fallback`);
+    }
+    if (isNewDraft && (!Array.isArray(bankExamples) || bankExamples.length !== requiredExampleCount)) {
+      throw new Error(`第${lesson.number}课词语“${entry.word}”必须在例句资料库中有 ${requiredExampleCount} 条例句`);
+    }
+    if (data.examples !== undefined && data.examples !== null) {
+      if (!Array.isArray(data.examples) || (isNewDraft && data.examples.length !== requiredExampleCount) || data.examples.length > 3) {
+        throw new Error(`第${lesson.number}课词语“${entry.word}”例句数量不符合契约`);
+      }
+      data.examples.forEach((example, exampleIndex) => assertShortSentence(example, `第${lesson.number}课词语“${entry.word}”例句${exampleIndex + 1}`));
+    }
+  });
+  const expressionOverrides = content.expressions?.items || {};
+  expressionSections(lesson).forEach((section) => {
+    expressionItemsFromSection(section).forEach((item) => {
+      const configured = expressionOverrides[item.expression];
+      const bankExamples = exampleBankFor(lesson).expressions?.[item.expression];
+      const examples = isNewDraft ? bankExamples : configured?.examples !== undefined ? configured.examples : bankExamples;
+      if (isNewDraft && (!Array.isArray(bankExamples) || bankExamples.length !== 2)) {
+        throw new Error(`第${lesson.number}课表达“${item.expression}”必须在例句资料库中有 2 条例句`);
+      }
+      if (examples !== undefined && examples !== null) {
+        if (!Array.isArray(examples) || examples.length > 2) throw new Error(`第${lesson.number}课表达“${item.expression}”例句数量不符合契约`);
+        examples.forEach((example, exampleIndex) => assertShortSentence(example, `第${lesson.number}课表达“${item.expression}”例句${exampleIndex + 1}`));
+      }
+    });
+  });
+  return content;
+}
+
+function vocabularyData(lesson, entry) {
+  onlineContentFor(lesson);
+  return vocabularyDataFor(lesson, entry);
+}
+
+function addMixedLabelValue(slide, label, value, x, y, w, h, options = {}) {
+  const labelText = simp(label);
+  const valueText = String(value || '');
+  slide.addText([
+    { text: labelText, options: { fontFace: CJK, fontSize: options.labelFontSize || options.fontSize || T.body_pt, color: options.labelColor || options.color || C.ink, bold: Boolean(options.labelBold) } },
+    { text: valueText, options: { fontFace: LATIN, fontSize: options.valueFontSize || options.fontSize || T.body_pt, color: options.valueColor || options.color || C.ink, bold: Boolean(options.valueBold) } }
+  ], {
+    x, y, w, h,
+    fontFace: CJK,
+    fontSize: options.fontSize || T.body_pt,
+    color: options.color || C.ink,
+    margin: options.margin === undefined ? 0.04 : options.margin,
+    fit: options.fit || 'shrink',
+    valign: options.valign || 'mid',
+    align: options.align || 'left',
+    breakLine: true,
+    paraSpaceAfterPt: 0,
+    lang: 'zh-CN'
+  });
+}
 
 function sharedAsset(name) {
   const filePath = path.join(L1_ASSET_ROOT, name);
   return fs.existsSync(filePath) ? filePath : null;
+}
+
+function configuredAsset(lesson, assetName) {
+  if (!assetName) return null;
+  const candidates = [
+    path.isAbsolute(assetName) ? assetName : path.join(ROOT, assetName),
+    path.join(lesson.assetRoot, assetName),
+    path.join(L1_ASSET_ROOT, assetName)
+  ];
+  return candidates.find((candidate) => fs.existsSync(candidate)) || null;
 }
 
 function assertShortSentence(value, label) {
@@ -343,8 +234,8 @@ function assertExampleVariety(lesson) {
   const entries = [...regularVocabEntries(lesson), ...properNounEntries(lesson)];
   const examples = [];
   entries.forEach((entry) => {
-    [SHORT_EXAMPLES[lesson.number]?.[entry.word], SHORT_EXAMPLES_SECOND[lesson.number]?.[entry.word]].forEach((sentence) => {
-      if (!sentence) return;
+    const data = vocabularyData(lesson, entry);
+    (Array.isArray(data.examples) ? data.examples : []).forEach((sentence) => {
       const skeleton = String(sentence).replace(entry.word.replace(/[（）]/g, ''), '<词>').replace(/[“”‘’]/g, '').replace(/[，。！？；、：\s]/g, '');
       examples.push({ word: entry.word, sentence, skeleton });
     });
@@ -563,6 +454,21 @@ function readLesson(number) {
   return lesson;
 }
 
+function audioTrackLabels(lesson) {
+  const labels = [];
+  const add = (value) => {
+    if (value !== undefined && value !== null && String(value).trim()) labels.push(String(value));
+  };
+  (lesson.canonical.audio_map || []).forEach((item) => {
+    add(item.label || item.track_label || item.track || item.audio || item.id);
+  });
+  Object.values(lesson.sections).forEach((section) => {
+    add(section.audio);
+    (section.audio_tracks || []).forEach(add);
+  });
+  return [...new Set(labels)];
+}
+
 function runDraftGate(lesson, outputDir) {
   execFileSync(PYTHON, [
     path.join(ROOT, 'scripts/production_gate.py'),
@@ -577,7 +483,7 @@ function addText(slide, value, x, y, w, h, options = {}) {
   slide.addText(simp(value), {
     x, y, w, h,
     fontFace: options.fontFace || CJK,
-    fontSize: options.fontSize || 22,
+    fontSize: options.fontSize || T.body_pt,
     color: options.color || C.ink,
     margin: options.margin === undefined ? 0.04 : options.margin,
     fit: options.fit || 'shrink',
@@ -596,7 +502,7 @@ function addLatin(slide, value, x, y, w, h, options = {}) {
   slide.addText(String(value || ''), {
     x, y, w, h,
     fontFace: LATIN,
-    fontSize: options.fontSize || 18,
+    fontSize: options.fontSize || T.small_label_pt,
     color: options.color || C.muted,
     margin: options.margin === undefined ? 0.04 : options.margin,
     fit: options.fit || 'shrink',
@@ -605,6 +511,38 @@ function addLatin(slide, value, x, y, w, h, options = {}) {
     breakLine: true,
     paraSpaceAfterPt: 0,
     lang: 'en-US',
+    ...options
+  });
+}
+
+function addMixedScriptText(slide, value, x, y, w, h, options = {}) {
+  const text = String(value || '');
+  const runs = [];
+  let current = '';
+  let currentIsCjk = null;
+  for (const char of text) {
+    const isCjk = /[\u3400-\u9fff]/.test(char);
+    if (current && isCjk !== currentIsCjk) {
+      runs.push({ text: current, options: { fontFace: currentIsCjk ? CJK : LATIN } });
+      current = '';
+    }
+    current += char;
+    currentIsCjk = isCjk;
+  }
+  if (current) runs.push({ text: current, options: { fontFace: currentIsCjk ? CJK : LATIN } });
+  slide.addText(runs, {
+    x, y, w, h,
+    fontFace: CJK,
+    fontSize: options.fontSize || T.body_pt,
+    color: options.color || C.muted,
+    margin: options.margin === undefined ? 0.04 : options.margin,
+    fit: options.fit || 'shrink',
+    valign: options.valign || 'mid',
+    align: options.align || 'left',
+    bold: Boolean(options.bold),
+    breakLine: true,
+    paraSpaceAfterPt: 0,
+    lang: 'zh-CN',
     ...options
   });
 }
@@ -618,15 +556,15 @@ function addBox(slide, x, y, w, h, fill = C.white, border = C.line, radius = 0.0
 }
 
 function addHeader(slide, lesson, number, title = '', pages = '') {
-  slide.background = { color: C.paper };
+  slide.background = { color: C.slideBackground };
   if (ACTIVE_MODE === 'face') {
     // Exact header family used by the approved Lesson 1 face-to-face deck.
     addText(slide, `${lessonLabel(lesson)}｜${lesson.title}`, 0.65, 0.25, 4.5, 0.28, { fontSize: 20, color: C.muted, bold: true });
     addLatin(slide, String(number).padStart(2, '0'), 12.0, 0.25, 0.65, 0.28, { fontSize: 20, align: 'right', color: C.muted });
     addLine(slide, 0.65, 0.69, 12.0);
-    if (pages) addText(slide, pages, 10.55, 7.02, 2.1, 0.28, { fontSize: 20, color: C.muted, align: 'right', objectName: `Textbook Page Marker ${String(number).padStart(2, '0')}` });
+    if (pages) addMixedScriptText(slide, pages, 10.55, 7.02, 2.1, 0.28, { fontSize: T.page_marker_pt, color: C.muted, align: 'right', objectName: `Textbook Page Marker ${String(number).padStart(2, '0')}` });
     if (title) {
-      const size = title.length > 22 ? 27 : 34;
+      const size = title.length > 22 ? T.long_title_pt : T.slide_title_pt;
       addText(slide, title, 0.72, 0.98, 8.0, 0.62, { fontSize: size, bold: true, valign: 'top' });
     }
     return;
@@ -637,10 +575,10 @@ function addHeader(slide, lesson, number, title = '', pages = '') {
   addText(slide, `${lessonLabel(lesson)}｜${lesson.title}`, 0.65, 0.25, 4.5, 0.28, { fontSize: 20, color: C.muted, bold: true });
   addLatin(slide, String(number).padStart(2, '0'), 12.0, 0.25, 0.65, 0.28, { fontSize: 20, align: 'right', color: C.muted });
   addLine(slide, 0.65, 0.69, 12.0);
-  if (pages) addText(slide, pages, 10.35, 7.02, 2.3, 0.28, { fontSize: 20, color: C.muted, align: 'right', objectName: `Textbook Page Marker ${String(number).padStart(2, '0')}` });
+  if (pages) addMixedScriptText(slide, pages, 10.35, 7.02, 2.3, 0.28, { fontSize: T.page_marker_pt, color: C.muted, align: 'right', objectName: `Textbook Page Marker ${String(number).padStart(2, '0')}` });
   if (title) {
-    const size = title.length > 22 ? 27 : 34;
-    addText(slide, title, 0.72, 0.98, 11.6, 0.62, { fontSize: size, bold: true, valign: 'top' });
+    const size = title.length > 22 ? T.long_title_pt : T.slide_title_pt;
+      addText(slide, title, 0.72, 0.98, 11.6, 0.62, { fontSize: size, bold: true, valign: 'top' });
   }
 }
 
@@ -688,7 +626,7 @@ function addSteps(slide, steps, y = 2.5) {
       slide.addShape('line', { x: x + 0.62, y: y + 0.28, w: gap - 0.83, h: 0, line: { color: C.line, pt: 2, endArrowType: 'triangle' } });
     }
     slide.addShape('ellipse', { x, y, w: 0.54, h: 0.54, fill: { color: [C.teal, C.coral, C.purple, C.yellow][index % 4] }, line: { transparency: 100 } });
-    addLatin(slide, String(index + 1), x, y + 0.11, 0.54, 0.25, { fontSize: 19, color: C.white, align: 'center', bold: true });
+    addLatin(slide, String(index + 1), x, y + 0.11, 0.54, 0.25, { fontSize: T.small_label_pt, color: C.white, align: 'center', bold: true });
     addText(slide, step, x + 0.7, y + 0.04, gap - 0.88, 0.4, { fontSize: 23, bold: true, color: C.teal });
   });
 }
@@ -702,7 +640,7 @@ function addFaceRouteSteps(slide, steps) {
     const x = startX + index * (cardW + gap);
     addBox(slide, x, y, cardW, 2.05, [C.mint, C.blue, C.yellowSoft, C.lilac][index % 4], [C.mint, C.blue, C.yellowSoft, C.lilac][index % 4]);
     addLatin(slide, String(index + 1), x + 0.49, y + 0.28, 0.6, 0.28, { fontSize: 21, color: C.purple, bold: true, align: 'center' });
-    addText(slide, step, x + 0.14, y + 0.77, cardW - 0.28, 0.78, { fontSize: step.length > 5 ? 18 : 21, color: C.purple, bold: true, align: 'center', valign: 'mid' });
+    addText(slide, step, x + 0.14, y + 0.77, cardW - 0.28, 0.78, { fontSize: step.length > 5 ? T.visible_min_pt : T.route_step_pt, color: C.purple, bold: true, align: 'center', valign: 'mid' });
     if (index < steps.length - 1) {
       slide.addShape('line', { x: x + cardW + 0.02, y: y + 1.03, w: gap - 0.04, h: 0, line: { color: C.line, pt: 1.4, endArrowType: 'triangle' } });
     }
@@ -728,9 +666,9 @@ function dividerAssetName(title, contextIndex = 0) {
 
 function addDivider(slide, lesson, number, title, subtitle, contextIndex = 0) {
   addHeader(slide, lesson, number);
-  addText(slide, title, 0.9, 2.25, 7.2, 0.8, { fontSize: 48, color: C.purple, bold: true });
+  addText(slide, title, 0.9, 2.25, 7.2, 0.8, { fontSize: T.divider_pt, color: C.purple, bold: true });
   if (subtitle) {
-    addText(slide, subtitle, 0.95, 3.25, 6.4, 0.5, { fontSize: 24, color: C.teal, bold: true });
+    addText(slide, subtitle, 0.95, 3.25, 6.4, 0.5, { fontSize: T.subtitle_pt, color: C.teal, bold: true });
     addLine(slide, 0.95, 4.05, 5.7, C.coral, 2);
   }
   const image = sharedAsset(dividerAssetName(title, contextIndex)) || firstContextFile(lesson, contextIndex);
@@ -740,10 +678,19 @@ function addDivider(slide, lesson, number, title, subtitle, contextIndex = 0) {
 }
 
 function lessonTopics(lesson) {
-  return lesson.number === 2 ? '学校生活 · 生日午餐 · 课外活动' : lesson.number === 3 ? '家庭生活 · 选修中文 · 中文课堂' : '北京生活 · 学习内容 · 学习比较';
+  return lesson.number === 2
+    ? '学校生活 · 生日午餐 · 课外活动'
+    : lesson.number === 3
+      ? '家庭生活 · 选修中文 · 中文课堂'
+      : lesson.number === 7
+        ? '运动爱好 · 登山经历 · 活动收获'
+        : '北京生活 · 学习内容 · 学习比较';
 }
 
 function addCover(slide, lesson, mode, number) {
+  const content = onlineContentFor(lesson);
+  const titlePt = Number(content.cover?.[mode === 'online' ? 'online_title_pt' : 'face_title_pt'] || T.cover_title_pt);
+  const badgePt = Number(content.cover?.badge_pt || T.cover_badge_pt);
   if (mode === 'online') {
     // Copy the approved Lesson 1 entity-class cover geometry.  The only
     // intentional mode change is the teal pill text: 在线课.
@@ -752,26 +699,22 @@ function addCover(slide, lesson, mode, number) {
     addBox(slide, 7.05, 1.08, 5.55, 4.7, C.white, 'D3D9D1');
     if (coverFile && fs.existsSync(coverFile)) slide.addImage({ path: coverFile, x: 7.11, y: 1.14, w: 5.43, h: 4.58, sizingContain: true });
     slide.addShape('roundRect', { x: 0.78, y: 1.08, w: 1.3, h: 0.42, rectRadius: 0.08, fill: { color: C.teal }, line: { color: C.teal, pt: 0.8 } });
-    addText(slide, ONLINE_LAYOUT.cover.online_label, 0.86, 1.11, 1.14, 0.3, { fontSize: 20, color: C.white, bold: true, align: 'center' });
-    addText(slide, lesson.title, 0.78, 1.72, 6.0, 0.82, { fontSize: 44, color: C.ink, bold: true, valign: 'top' });
-    addText(slide, ONLINE_LAYOUT.cover.subtitle, 0.82, 2.70, 5.8, 0.5, { fontSize: 24, color: C.teal });
+    addText(slide, ONLINE_LAYOUT.cover.online_label, 0.86, 1.11, 1.14, 0.3, { fontSize: badgePt, color: C.white, bold: true, align: 'center' });
+    addText(slide, lesson.title, 0.78, 1.72, 6.0, 0.82, { fontSize: titlePt, color: C.ink, bold: true, valign: 'top' });
   } else {
     addHeader(slide, lesson, number);
     const coverFile = sharedAsset('lesson-01-cover-family-work-hobby.png');
     addBox(slide, 7.05, 1.08, 5.55, 4.7, C.white, 'D3D9D1');
     if (coverFile && fs.existsSync(coverFile)) slide.addImage({ path: coverFile, x: 7.11, y: 1.14, w: 5.43, h: 4.58, sizingContain: true });
     slide.addShape('roundRect', { x: 0.78, y: 1.08, w: 1.3, h: 0.42, rectRadius: 0.08, fill: { color: C.teal }, line: { color: C.teal, pt: 0.8 } });
-    addText(slide, '实体课', 0.86, 1.11, 1.14, 0.3, { fontSize: 20, color: C.white, bold: true, align: 'center' });
-    addText(slide, lesson.title, 0.78, 1.72, 6.0, 0.82, { fontSize: 44, color: C.ink, bold: true, valign: 'top' });
-    // The approved Lesson 1 face-to-face cover uses the same short learning
-    // promise as the online cover. Keep the entity-class cover identical;
-    // only the green/teal pill identifies the delivery mode.
-    addText(slide, ONLINE_LAYOUT.cover.subtitle, 0.82, 2.70, 5.8, 0.5, { fontSize: 24, color: C.teal });
+    addText(slide, '实体课', 0.86, 1.11, 1.14, 0.3, { fontSize: badgePt, color: C.white, bold: true, align: 'center' });
+    addText(slide, lesson.title, 0.78, 1.72, 6.0, 0.82, { fontSize: titlePt, color: C.ink, bold: true, valign: 'top' });
   }
   notes(slide, `${mode === 'online' ? '线上预习' : '实体课堂'}封面。学生先看本课主题。`);
 }
 
 function addRouteSlide(slide, lesson, number, mode) {
+  const content = onlineContentFor(lesson);
   addHeader(slide, lesson, number, mode === 'online' ? ONLINE_LAYOUT.learning_route.title : '今天的学习路线');
   if (mode === 'face') {
     // Reuse the exact route visual from the approved Lesson 1 face-to-face
@@ -782,8 +725,9 @@ function addRouteSlide(slide, lesson, number, mode) {
     notes(slide, '使用第一课实体课核准的学习路线图。');
     return;
   }
-  const route = sharedAsset(ONLINE_LAYOUT.learning_route.asset);
-  if (!route || !fs.existsSync(route)) throw new Error(`User-supplied learning-route asset is missing: ${ONLINE_LAYOUT.learning_route.asset}`);
+  const routeAsset = content.route?.asset || ONLINE_LAYOUT.learning_route.asset;
+  const route = configuredAsset(lesson, routeAsset);
+  if (!route) throw new Error(`User-supplied learning-route asset is missing: ${routeAsset}`);
   slide.addImage({ path: route, x: 0.72, y: 1.58, w: 11.90, h: 5.48, sizingContain: true });
   notes(slide, `${mode === 'online' ? '线上' : '实体'}课程路线；不显示教师时间或内部制作标签。`);
 }
@@ -802,7 +746,8 @@ function properNounEntries(lesson) {
 }
 
 function vocabPageLabel(lesson, entry, index, properNoun = false) {
-  const contract = ONLINE_LAYOUT.vocabulary.page_breaks[String(lesson.number)];
+  const lessonContent = ONLINE_CONTENT.lessons?.[lesson.lessonId];
+  const contract = lessonContent?.vocabulary?.page_breaks || ONLINE_LAYOUT.vocabulary.page_breaks[String(lesson.number)];
   if (properNoun) return pageLabel([entry.printed_page || (lesson.number === 3 ? 23 : contract?.second_page || lesson.sections.vocabulary.printed_pages?.at(-1))]);
   if (!contract) return pageLabel(lesson.sections.vocabulary.printed_pages);
   const firstCount = Number(contract.first_count);
@@ -810,53 +755,42 @@ function vocabPageLabel(lesson, entry, index, properNoun = false) {
   return pageLabel([page]);
 }
 
-// No expansion is invented here.  Adam supplies an expansion during the
-// lesson's refinement pass; until then the student-facing field stays exactly
-// the contracted label `扩展：`.
-const ONLINE_VOCAB_EXTENSIONS = Object.freeze({ 2: Object.freeze({}), 3: Object.freeze({}) });
-
-function vocabExtension(lesson, word) {
-  const explicit = ONLINE_VOCAB_EXTENSIONS[lesson.number]?.[word];
-  if (ONLINE_LAYOUT.vocabulary.extension_policy === 'empty_until_explicitly_supplied' && !explicit) return ONLINE_LAYOUT.vocabulary.extension_label;
-  return explicit ? `${ONLINE_LAYOUT.vocabulary.extension_label}${explicit}` : ONLINE_LAYOUT.vocabulary.extension_label;
+function vocabExamples(lesson, entry) {
+  const data = vocabularyData(lesson, entry);
+  return (Array.isArray(data.examples) ? data.examples : [])
+    .map((example, index) => assertShortSentence(example, `第${lesson.number}课词语“${entry.word}”例句${index + 1}`));
 }
 
-function vocabExample(lesson, word) {
-  const example = SHORT_EXAMPLES[lesson.number]?.[word];
-  if (example) return assertShortSentence(example, `第${lesson.number}课词语“${word}”例句`);
-  if (lesson.number >= 5) return assertShortSentence(`我正在学习“${word}”这个词。`, `第${lesson.number}课词语“${word}”例句`);
-  if (lesson.number === 4) return assertShortSentence(`我会用“${word}”。`, `第${lesson.number}课词语“${word}”例句`);
-  throw new Error(`缺少第${lesson.number}课词语“${word}”的短例句；禁止从课文自动抓取长句。`);
-}
-
-function vocabExamples(lesson, word) {
-  const first = vocabExample(lesson, word);
-  const second = SHORT_EXAMPLES_SECOND[lesson.number]?.[word];
-  if (second) return [first, assertShortSentence(second, `第${lesson.number}课词语“${word}”第二例句`)];
-  if (lesson.number >= 5) return [first, assertShortSentence(`请再用“${word}”说一句话。`, `第${lesson.number}课词语“${word}”第二例句`)];
-  if (lesson.number === 4) return [first, assertShortSentence(`我还想了解“${word}”。`, `第${lesson.number}课词语“${word}”第二例句`)];
-  throw new Error(`缺少第${lesson.number}课词语“${word}”的第二条短例句。`);
+function vocabularyOptionalRows(data) {
+  return [
+    ['扩展：', data.extension],
+    ['用法：', data.usage_detail],
+    ['常用短语：', data.common_phrase],
+    ['语法说明：', data.grammar_detail]
+  ].filter(([, value]) => String(value || '').trim()).map(([label, value]) => `${label}${value}`);
 }
 
 function addVocabSlide(slide, lesson, number, entry, index, properNoun = false) {
+  const data = vocabularyData(lesson, entry);
   const pages = vocabPageLabel(lesson, entry, index, properNoun);
-  addHeader(slide, lesson, number, entry.word, pages);
+  addHeader(slide, lesson, number, data.word, pages);
   // Match the approved Lesson 1 vocabulary geometry: a left information
   // card, a shorter image panel, and a separate two-line example strip.
   addBox(slide, 0.78, 1.67, 5.35, 4.98, C.white, C.line);
-  addText(slide, entry.word, 1.08, 1.98, 4.72, 0.68, { fontSize: entry.word.length > 6 ? 34 : 42, color: C.purple, bold: true });
-  addLatin(slide, entry.pinyin || '', 1.10, 2.75, 4.70, 0.36, { fontSize: 24, color: C.teal });
-  const pos = entry.pos || '—';
+  addText(slide, data.word, 1.08, 1.98, 4.72, 0.68, { fontSize: data.word.length > 6 ? T.vocabulary_headword_long_pt : T.vocabulary_headword_pt, color: C.purple, bold: true });
+  addLatin(slide, data.pinyin || '', 1.10, 2.75, 4.70, 0.36, { fontSize: T.pinyin_pt, color: C.teal });
+  const pos = data.pos || '—';
   const posLabel = ({ '名': '名词', '动': '动词', '形': '形容词', '副': '副词', '代': '代词', '量': '量词', '连': '连词', '动／副': '动词／副词', '专有名词': '专有名词' }[pos] || pos);
-  addText(slide, `词类：${posLabel}`, 1.10, 3.32, 4.70, 0.36, { fontSize: 22, color: C.ink });
-  addText(slide, `意思：${GLOSS_CN[entry.word] || entry.gloss || '请结合教材理解'}`, 1.10, 3.78, 4.70, 0.52, { fontSize: 21, color: C.ink, valign: 'top' });
-  addText(slide, `使用场合：${POS_USAGE[pos] || POS_USAGE['']}`, 1.10, 4.43, 4.65, 0.70, { fontSize: 20, color: C.muted, valign: 'top' });
-  addText(slide, vocabExtension(lesson, entry.word), 1.10, 5.33, 4.72, 0.66, { fontSize: 20, color: C.teal, bold: true, valign: 'top' });
-  imagePanel(slide, lesson.wordToAsset.get(entry.word), 6.42, 1.67, 6.15, 3.62, [C.mint, C.blue, C.yellowSoft][index % 3], '教材图片');
-  addBox(slide, 6.42, 5.49, 6.15, 1.17, C.white, C.paper);
-  const examples = vocabExamples(lesson, entry.word);
-  addText(slide, `例句1：${examples[0]}\n例句2：${examples[1]}`, 6.72, 5.69, 5.55, 0.78, { fontSize: 22, color: C.ink, bold: true, valign: 'top' });
-  notes(slide, `词语 ${entry.word}；来源：canonical-source.json#sections.vocabulary。词类为空时保留“—”，扩展内容按共用契约留空，待本课精修时由 Adam 明确提供。`);
+  addText(slide, `词类：${posLabel}`, 1.10, 3.32, 4.70, 0.36, { fontSize: T.vocabulary_pos_pt, color: C.ink });
+  addMixedLabelValue(slide, '意思：', data.meaning_vi, 1.10, 3.78, 4.70, 0.52, { fontSize: T.vocabulary_meaning_pt, color: C.ink, valign: 'top' });
+  if (String(data.usage || '').trim()) addText(slide, `使用场合：${data.usage}`, 1.10, 4.43, 4.65, 0.70, { fontSize: T.vocabulary_usage_pt, color: C.muted, valign: 'top' });
+  const optionalRows = vocabularyOptionalRows(data);
+  if (optionalRows.length) addText(slide, optionalRows.join('\n'), 1.10, 5.28, 4.72, 1.10, { fontSize: optionalRows.length > 2 ? T.visible_min_pt : T.vocabulary_optional_pt, color: C.teal, bold: true, valign: 'top' });
+  imagePanel(slide, lesson.wordToAsset.get(data.word), 6.42, 1.67, 6.15, 3.62, [C.mint, C.blue, C.yellowSoft][index % 3], '教材图片');
+  addBox(slide, 6.42, 5.49, 6.15, 1.17, C.white, C.line);
+  const examples = vocabExamples(lesson, entry);
+  if (examples.length) addText(slide, examples.map((example, exampleIndex) => `例句${exampleIndex + 1}：${example}`).join('\n'), 6.72, 5.69, 5.55, 0.78, { fontSize: T.vocabulary_example_pt, color: C.ink, bold: true, valign: 'top' });
+  notes(slide, `词语 ${data.word}；来源：canonical-source.json#sections.vocabulary。意思栏使用已审核的越南文；扩展、用法、语法说明与例句仅在课次内容契约明确提供时显示。`);
 }
 
 function pageLabelForVocabGroup(lesson, entries, startIndex) {
@@ -883,7 +817,7 @@ function addVocabPracticeSlide(slide, lesson, number, entries, startIndex) {
       addText(slide, entry.word, x + 0.12, 3.05, cardW - 0.24, 0.6, { fontSize: entry.word.length > 6 ? 23 : 29, color: C.purple, bold: true, align: 'center' });
     }
     addLine(slide, x + 0.18, 5.10, cardW - 0.36, C.teal, 1.0);
-    addText(slide, entry.word, x - 0.07, 5.38, cardW + 0.14, 0.36, { fontSize: entry.word.length > 6 ? 18 : 21, color: C.purple, bold: true, align: 'center' });
+    addText(slide, entry.word, x - 0.07, 5.38, cardW + 0.14, 0.36, { fontSize: entry.word.length > 6 ? T.small_label_pt : 21, color: C.purple, bold: true, align: 'center' });
   });
   notes(slide, `完成五个词语的口语练习：说出词语并各造一句话。来源：canonical-source.json#sections.vocabulary。`);
 }
@@ -891,6 +825,50 @@ function addVocabPracticeSlide(slide, lesson, number, entries, startIndex) {
 function shortTextContextFile(lesson, index) {
   const asset = lesson.contextAssets[index % Math.max(lesson.contextAssets.length, 1)];
   return fileFromAsset(lesson.assetRoot, asset);
+}
+
+function exerciseItems(section, key) {
+  const value = section?.exercises?.[key];
+  if (Array.isArray(value)) return value.map((item) => String(item));
+  if (value && Array.isArray(value.items)) return value.items.map((item) => String(item));
+  return [];
+}
+
+function exerciseInstruction(section, key, fallback) {
+  const value = section?.exercises?.[key];
+  if (value && typeof value === 'object' && value.instruction) return String(value.instruction);
+  const metadata = section?.exercise_metadata?.[key];
+  if (metadata?.heading_verbatim) return String(metadata.heading_verbatim);
+  return fallback;
+}
+
+function shortTextLabel(index) {
+  return ['一', '二', '三'][index] || String(index + 1);
+}
+
+function faceExpressionPlan(lesson, textCount) {
+  const sections = expressionSections(lesson).filter((section) => Array.isArray(section.items) || Array.isArray(section.groups));
+  const hasGroupedExpressions = sections.some((section) => Array.isArray(section.groups) && section.groups.length);
+  if (hasGroupedExpressions) {
+    const shared = [];
+    sections.forEach((section) => {
+      (section.groups || []).forEach((group, groupIndex) => {
+        const items = (group.items || []).map((item) => typeof item === 'string' ? { expression: item } : item);
+        if (!items.length) return;
+        shared.push({
+          ...section,
+          id: `${section.id}__group_${groupIndex + 1}`,
+          topic: group.topic || section.topic,
+          items
+        });
+      });
+    });
+    return { byText: [], shared };
+  }
+  return {
+    byText: sections.slice(0, textCount),
+    shared: sections.slice(textCount)
+  };
 }
 
 const SHORT_TEXT_RECORDS = {
@@ -934,19 +912,31 @@ const SHORT_TEXT_RECORDS = {
       output: '准备说 4—6 句，介绍他的中文课。'
     }
   ],
+  7: [
+    {
+      title: '小张是登山迷',
+      prompts: ['小张喜欢什么运动？', '他最大的爱好是什么？', '他什么时候真正喜欢上登山？'],
+      fields: ['运动爱好', '最大爱好', '小时候的经历', '真正喜欢登山的时间'],
+      output: '准备说 6—8 句，介绍小张的爱好。'
+    },
+    {
+      title: '小张真正爱上了登山',
+      prompts: ['他为什么需要放松？', '登山有哪些好处？', '为什么说他很浪漫？'],
+      fields: ['工作和压力', '登山的机会', '登山的好处', '浪漫的想法'],
+      output: '准备说 6—8 句，说明小张为什么喜欢登山。'
+    },
+    {
+      title: '登山可以增进友谊',
+      prompts: ['小张和谁一起登山？', '他们去什么样的地方？', '登山对工作有什么好处？'],
+      fields: ['登山伙伴', '活动地点', '同事关系', '工作效率'],
+      output: '准备说 6—8 句，说明登山带来的好处。'
+    }
+  ],
   4: [
     { title: '对北京的印象', prompts: ['朴大宇在哪里学习？', '他这次发现了什么？', '他怎样和司机聊天？'], fields: ['人物', '地点', '新发现', '中文交流'], output: '准备说 6—8 句，介绍他在北京的生活。' },
     { title: '学习内容', prompts: ['他上什么课？', '下午和晚上做什么？', '他的汉语怎么样？'], fields: ['课程', '学习时间', '语伴活动', '汉语情况'], output: '准备说 6—8 句，介绍他的学习情况。' },
     { title: '在中国学汉语和在本国学汉语的异同', prompts: ['在韩国怎样上课？', '在中国学习有什么不同？', '为什么说在中国效率高？'], fields: ['韩国课堂', '北京课堂', '学习机会', '学习效率'], output: '准备说 6—8 句，比较两地的学习情况。' }
-  ],
-  4: {
-    '上（菜）': '服务员正在上菜。', '司机': '司机开车很认真。', '快餐店': '学校旁边有一家快餐店。', '点（菜）': '我们先点菜吧。',
-    '阅读': '我每天阅读中文新闻。', '语伴': '我的语伴来自中国。', '讲座': '下午有一个中文讲座。', '国际': '这是国际交流活动。',
-    '发现': '我发现自己进步了。', '习惯': '我还不习惯这里的生活。', '新闻': '我每天看中文新闻。', '字幕': '电影有中文字幕。',
-    '加倍': '我决定加倍努力。', '解释': '老师解释得很清楚。', '词语': '这些词语很有用。', '效率': '在这里学习效率很高。',
-    '印象': '北京给我留下了好印象。', '吃惊': '我吃惊地发现汽车多了。', '聊': '我能和司机聊几句。', '通常': '我通常晚上阅读。',
-    '听力': '我的听力还需要练习。', '异同': '我们比较两种学习方法的异同。', '量': '这家饭馆儿的菜量很大。', '饿': '我们都很饿。'
-  }
+  ]
 };
 
 function textPageLabel(section, useLastPage = false) {
@@ -1004,8 +994,14 @@ function addOnlineTextSlides(slides, lesson, numberRef, section, sectionIndex) {
 }
 
 function addOnlineFinalTextTaskSlide(slide, lesson, number, section) {
-  const title = lesson.number === 2 ? '我的一天' : lesson.number === 3 ? '我的中文学习' : '我学习中文的经历';
-  const prompt = lesson.number === 2 ? '请用三到五句介绍你的一天。' : lesson.number === 3 ? '请用三到五句介绍你的中文学习。' : '请用三到五句介绍你学习中文的经历。';
+  const title = lesson.number === 2 ? '我的一天' : lesson.number === 3 ? '我的中文学习' : lesson.number === 7 ? '我的运动爱好' : '我学习中文的经历';
+  const prompt = lesson.number === 2
+    ? '请用三到五句介绍你的一天。'
+    : lesson.number === 3
+      ? '请用三到五句介绍你的中文学习。'
+      : lesson.number === 7
+        ? '请用三到五句介绍你喜欢的运动。'
+        : '请用三到五句介绍你学习中文的经历。';
   addHeader(slide, lesson, number, title, textPageLabel(section, true));
   addText(slide, prompt, 1.0, 1.62, 11.2, 0.48, { fontSize: 27, color: C.teal, bold: true, align: 'center' });
   addText(slide, '必须使用 5 个课本词语和 3 个句式。', 1.0, 2.14, 11.2, 0.42, { fontSize: 24, color: C.purple, bold: true, align: 'center' });
@@ -1022,21 +1018,16 @@ function expressionSections(lesson) {
   return Object.values(lesson.sections).filter((section) => /^common_expressions(?:_|$)/.test(String(section.id || '')));
 }
 
-function expressionExample(lesson, item) {
-  const example = SHORT_EXPRESSION_EXAMPLES[lesson.number]?.[item.expression];
-  if (example) return assertShortSentence(example, `第${lesson.number}课表达“${item.expression}”例句`);
-  if (lesson.number >= 5) return assertShortSentence(`我正在练习“${item.expression}”。`, `第${lesson.number}课表达“${item.expression}”例句`);
-  if (lesson.number === 4) return assertShortSentence(`我会用“${item.expression}”说一句话。`, `第${lesson.number}课表达“${item.expression}”例句`);
-  throw new Error(`缺少第${lesson.number}课表达“${item.expression}”的短例句；禁止把教材长例句直接放进 PPT。`);
-}
-
 function expressionExamples(lesson, item) {
-  const first = expressionExample(lesson, item);
-  const second = SHORT_EXPRESSION_EXAMPLES_SECOND[lesson.number]?.[item.expression];
-  if (second) return [first, assertShortSentence(second, `第${lesson.number}课表达“${item.expression}”第二例句`)];
-  if (lesson.number >= 5) return [first, assertShortSentence(`请用“${item.expression}”再说一句。`, `第${lesson.number}课表达“${item.expression}”第二例句`)];
-  if (lesson.number === 4) return [first, assertShortSentence(`同学也会用“${item.expression}”。`, `第${lesson.number}课表达“${item.expression}”第二例句`)];
-  throw new Error(`缺少第${lesson.number}课表达“${item.expression}”的第二条短例句。`);
+  const content = onlineContentFor(lesson);
+  const configured = content.expressions?.items?.[item.expression];
+  const bankExamples = exampleBankFor(lesson).expressions?.[item.expression];
+  const sourceExamples = item.examples;
+  const examples = content.status !== 'finalized_reference'
+    ? bankExamples
+    : configured?.examples !== undefined ? configured.examples : bankExamples !== undefined ? bankExamples : sourceExamples;
+  if (!Array.isArray(examples)) return [];
+  return examples.map((example, exampleIndex) => assertShortSentence(example, `第${lesson.number}课表达“${item.expression}”例句${exampleIndex + 1}`));
 }
 
 // The source audit shows where each expression row starts.  Keep single-page
@@ -1063,24 +1054,33 @@ const EXPRESSION_PAGE_MAP = {
 };
 
 function expressionPageLabel(lesson, section, index) {
+  const expression = section?.items?.[index]?.expression;
+  const configuredPage = ONLINE_CONTENT.lessons?.[lesson.lessonId]?.expressions?.page_map?.[expression];
+  if (configuredPage !== undefined && configuredPage !== null) {
+    return pageLabel(Array.isArray(configuredPage) ? configuredPage : [configuredPage]);
+  }
   const pages = EXPRESSION_PAGE_MAP[lesson.number]?.[section.id];
   return pageLabel(pages?.[index] ? [pages[index]] : section.printed_pages);
 }
 
 function addExpressionSlide(slide, lesson, number, item, section, index) {
-  addHeader(slide, lesson, number, item.expression, expressionPageLabel(lesson, section, index));
+  // The finalized online expression slide keeps only the persistent lesson
+  // header and page marker; the purple pattern box is the sole expression heading.
+  addHeader(slide, lesson, number, '', expressionPageLabel(lesson, section, index));
   const examples = expressionExamples(lesson, item);
+  const content = onlineContentFor(lesson);
+  const instruction = item.student_instruction || content.expressions?.student_instruction || ONLINE_LAYOUT.expressions.student_instruction;
   addBox(slide, 0.9, 1.65, 11.55, 1.18, C.lilac, C.lilac);
   addText(slide, item.expression, 1.25, 1.95, 10.8, 0.55, { fontSize: item.expression.length > 18 ? 29 : 34, color: C.purple, bold: true, align: 'center' });
-  addText(slide, `情境：${lesson.number === 2 ? '谈论学校生活和课外活动' : lesson.number === 3 ? '谈论中文学习和课堂生活' : '谈论在中国学习汉语'}`, 1.0, 3.16, 4.6, 0.38, { fontSize: 22, color: C.teal, bold: true });
-  addText(slide, `例句：${examples[0]}`, 1.0, 3.72, 10.7, 0.45, { fontSize: 25, color: C.ink, bold: true });
-  addText(slide, `例句：${examples[1]}`, 1.0, 4.16, 10.7, 0.45, { fontSize: 25, color: C.ink, bold: true });
-  addText(slide, ONLINE_LAYOUT.expressions.student_instruction, 1.0, 4.62, 5.0, 0.35, { fontSize: 23, color: C.teal, bold: true });
+  examples.forEach((example, exampleIndex) => addText(slide, `${ONLINE_LAYOUT.expressions.example_label || '例句：'}${example}`, 1.0, 3.345 + exampleIndex * 0.585, 10.7, 0.45, { fontSize: T.expression_example_pt, color: C.ink, bold: true }));
+  const instructionY = examples.length ? 4.62 : 3.72;
+  addText(slide, instruction, 1.0, instructionY, 8.8, 0.35, { fontSize: 23, color: C.teal, bold: true });
   [0, 1, 2].forEach((lineIndex) => {
-    addText(slide, `${lineIndex + 1}.`, 1.1, 5.1 + lineIndex * 0.47, 0.35, 0.3, { fontSize: 20, color: C.muted });
-    addLine(slide, 1.55, 5.35 + lineIndex * 0.47, 10.25, C.teal, 1.0);
+    const lineY = examples.length ? 5.1 + lineIndex * 0.47 : 4.18 + lineIndex * 0.47;
+    addText(slide, `${lineIndex + 1}.`, 1.1, lineY, 0.35, 0.3, { fontSize: 20, color: C.muted });
+    addLine(slide, 1.55, lineY + 0.25, 10.25, C.teal, 1.0);
   });
-  notes(slide, `常用表达 ${item.expression}；学生先读两条短例句，再准备三句话，课堂用于任务。`);
+  notes(slide, `常用表达 ${item.expression}；${examples.length ? '学生先读已核准的短例句，再' : ''}准备三句话，课堂用于任务。`);
 }
 
 const COMPREHENSIVE_COLUMNS = {
@@ -1093,13 +1093,17 @@ const COMPREHENSIVE_COLUMNS = {
     ['家庭生活', '家人 · 中国朋友 · 中国菜 · 中文'],
     ['为什么选中文', '以前的语言 · 转学 · 原因'],
     ['中文课', '学习难点 · 课堂活动 · 学习收获']
+  ],
+  7: [
+    ['短文一', '运动爱好 · 最大爱好 · 小时候'],
+    ['短文二', '登山机会 · 登山好处 · 浪漫想法'],
+    ['短文三', '登山伙伴 · 工作关系 · 生日礼物']
   ]
 };
 
 function addTableCards(slide, lesson, number, item, pages) {
   addHeader(slide, lesson, number, '请你根据听过的三段短文填表。', pages);
-  const tablePage = lesson.number === 2 ? 20 : 30;
-  addText(slide, `请填写课本第${tablePage}页的表格。`, 0.95, 1.52, 7.4, 0.45, { fontSize: 25, color: C.purple, bold: true });
+  addMixedScriptText(slide, `请填写${pages || '教材对应页'}的表格。`, 0.95, 1.52, 7.4, 0.45, { fontSize: 25, color: C.purple, bold: true });
   const columns = COMPREHENSIVE_COLUMNS[lesson.number] || [];
   columns.forEach(([topic, fields], index) => {
     const x = 0.9 + index * 4.08;
@@ -1113,7 +1117,7 @@ function addTableCards(slide, lesson, number, item, pages) {
 }
 
 function comprehensiveTopic(lesson) {
-  return lesson.number === 2 ? '王红' : lesson.number === 3 ? '李大为' : '朴大宇';
+  return lesson.number === 2 ? '王红' : lesson.number === 3 ? '李大为' : lesson.number === 7 ? '小张' : '朴大宇';
 }
 
 function comprehensivePrompt(lesson) {
@@ -1121,6 +1125,8 @@ function comprehensivePrompt(lesson) {
     ? '请填表后，说一说王红的学校生活、生日和课外活动。'
     : lesson.number === 3
       ? '请填表后，说一说李大为的家庭生活、选中文和中文课。'
+      : lesson.number === 7
+        ? '请填表后，说一说小张的爱好、登山经历和登山带来的好处。'
       : '请填表后，说一说朴大宇在北京的生活、学习和课堂经验。';
 }
 
@@ -1138,6 +1144,8 @@ function comprehensiveQuestions(lesson) {
     ? ['王红为什么喜欢上课？', '她觉得数学课怎么样？', '她的生日午餐在哪里？', '大家一起吃了什么？', '王红为什么去博物馆？', '她在博物馆要做什么？']
     : lesson.number === 3
       ? ['李大为为什么会说一点儿中文？', '他喜欢吃什么中国菜？', '他为什么决定选修中文？', '中国爷爷奶奶怎么样？', '学中文时，哪里不容易？', '他为什么喜欢和中国人聊天儿？']
+      : lesson.number === 7
+        ? ['小张最大的爱好是什么？', '他什么时候真正喜欢上登山？', '登山给小张带来了哪些好处？', '登山对他的工作有什么好处？', '他今年生日收到了什么礼物？', '你喜欢什么运动？为什么？']
       : ['朴大宇以前来过北京吗？', '他这次在北京发现了什么？', '他在北京上什么课？', '他晚上和谁一起学习？', '在韩国和中国学习汉语有什么不同？', '为什么说在中国学习效率更高？'];
 }
 
@@ -1182,6 +1190,8 @@ function addOnlinePersonalInfoSlide(slide, lesson, number, pages) {
     ? [['学校生活', '你喜欢哪门课？'], ['生日', '你怎么庆祝生日？'], ['课外活动', '你参加过什么活动？']]
     : lesson.number === 3
       ? [['家庭生活', '家里有什么人？'], ['中文学习', '为什么学习中文？'], ['课堂经验', '中文哪里不容易？']]
+      : lesson.number === 7
+        ? [['运动爱好', '你喜欢什么运动？'], ['活动经历', '你参加过什么活动？'], ['运动收获', '这项运动带来了什么好处？']]
       : [['北京印象', '你对北京有什么印象？'], ['中文学习', '你在哪里学习汉语？'], ['学习比较', '哪里学习汉语更有效率？']];
   const fills = [C.mint, C.blue, C.yellow];
   cards.forEach(([topic, prompt], index) => {
@@ -1208,7 +1218,8 @@ function addOnlineOutlineSlide(slide, lesson, number, pages) {
 }
 
 function addOnlineEndingSlides(slides, lesson, numberRef) {
-  const tablePage = lesson.number === 2 ? 20 : lesson.number === 3 ? 30 : 40;
+  const comprehensivePages = lesson.sections.comprehensive_practice?.printed_pages || [];
+  const tablePage = comprehensivePages.length ? comprehensivePages[0] : '';
   const ending = ONLINE_LAYOUT.ending.slides;
 
   numberRef.value += 1;
@@ -1245,7 +1256,9 @@ function addOnlineEndingSlides(slides, lesson, numberRef) {
 }
 
 function slideXmlText(xml) {
-  return [...String(xml).matchAll(/<a:t>([\s\S]*?)<\/a:t>/g)].map((match) => match[1]).join(' | ');
+  // Join runs without separators so mixed-script labels such as “教材 P59”
+  // and “先听音档 7-4” can be asserted exactly as students see them.
+  return [...String(xml).matchAll(/<a:t>([\s\S]*?)<\/a:t>/g)].map((match) => match[1]).join('');
 }
 
 function assertVocabularyImageMapping(lesson) {
@@ -1258,6 +1271,7 @@ function assertVocabularyImageMapping(lesson) {
 }
 
 function assertOnlineDeckContract(outPath, lesson, slideCount) {
+  const content = onlineContentFor(lesson);
   const texts = [];
   const slideXml = [];
   for (let index = 1; index <= slideCount; index += 1) {
@@ -1268,12 +1282,11 @@ function assertOnlineDeckContract(outPath, lesson, slideCount) {
   const allText = texts.join('\n');
   const required = [
     ONLINE_LAYOUT.cover.online_label,
-    ONLINE_LAYOUT.cover.subtitle,
     ONLINE_LAYOUT.learning_route.title,
     ONLINE_LAYOUT.goals.title,
     ONLINE_LAYOUT.vocabulary.divider_title,
     ONLINE_LAYOUT.reading.divider_title,
-    ONLINE_LAYOUT.expressions.divider_title,
+    content.expressions?.divider_title || ONLINE_LAYOUT.expressions.divider_title,
     ONLINE_LAYOUT.comprehensive.divider_title,
     ONLINE_LAYOUT.ending.slides[0].title,
     ONLINE_LAYOUT.ending.slides[1].title,
@@ -1281,6 +1294,12 @@ function assertOnlineDeckContract(outPath, lesson, slideCount) {
   ];
   required.forEach((value) => {
     if (!allText.includes(value)) throw new Error(`线上版式契约缺少文字：${value}`);
+  });
+  if (texts[0].includes('看图、读音、词类') || texts[0].includes('学习词语 →') || texts[0].includes('学习词语>')) {
+    throw new Error('线上封面不应包含底部 subtitle 或学习流程文字');
+  }
+  content.goals.forEach((goal) => {
+    if (!texts[2].includes(goal)) throw new Error(`第${lesson.number}课学习目标页缺少核准目标：${goal}`);
   });
   ['Online preview', '我们这样学习', '短文阅读', '常用表达', '上课前整理好', '课前检查：', '准备好了', '请把“'].forEach((value) => {
     if (allText.includes(value)) throw new Error(`线上版式契约仍含旧文字：${value}`);
@@ -1327,8 +1346,17 @@ function assertOnlineDeckContract(outPath, lesson, slideCount) {
     const textElements = [...String(slideXml[index]).matchAll(/<a:t>([\s\S]*?)<\/a:t>/g)].map((match) => match[1]);
     const words = [...regularWords, ...properWords].filter((word) => textElements.includes(word));
     if (words.length !== 1) throw new Error(`词语页 ${index + 1} 未对应唯一词语`);
-    if (!value.includes('例句1：') || !value.includes('例句2：')) throw new Error(`词语页 ${index + 1} 未保留两条例句`);
-    if (!value.includes(ONLINE_LAYOUT.vocabulary.extension_label)) throw new Error(`词语页 ${index + 1} 缺少扩展栏`);
+    const entry = [...regularVocabEntries(lesson), ...properNounEntries(lesson)].find((candidate) => candidate.word === words[0]);
+    const data = vocabularyData(lesson, entry);
+    if (!value.includes('意思：') || !value.includes(data.meaning_vi)) throw new Error(`词语页 ${index + 1} 缺少已审核的越南文意思`);
+    if (value.includes('请结合教材理解') || value.includes('请提供释义')) throw new Error(`词语页 ${index + 1} 使用了释义 fallback`);
+    if (String(data.usage || '').trim() && !value.includes(data.usage)) throw new Error(`词语页 ${index + 1} 缺少逐词使用场合`);
+    vocabExamples(lesson, entry).forEach((example, exampleIndex) => {
+      if (!value.includes(example) || !value.includes(`例句${exampleIndex + 1}：`)) throw new Error(`词语页 ${index + 1} 缺少已核准例句${exampleIndex + 1}`);
+    });
+    vocabularyOptionalRows(data).forEach((row) => {
+      if (!value.includes(row)) throw new Error(`词语页 ${index + 1} 缺少已核准可选栏位：${row}`);
+    });
     // Missing candidate assets remain visible as a placeholder in draft; the
     // manifest/QA must retain the pending-assets status until replacement.
   });
@@ -1345,10 +1373,11 @@ function assertOnlineDeckContract(outPath, lesson, slideCount) {
     if (recordIndex < 0 || !texts[recordIndex].includes(recordLabel)) throw new Error(`短文${sectionIndex + 1}记录页缺少具体教材页码`);
   });
 
-  expressionSections(lesson).forEach((section) => {
-    (section.items || []).forEach((item, index) => {
+  const expressionPlan = faceExpressionPlan(lesson, textSections.length);
+  [...expressionPlan.byText, ...expressionPlan.shared].forEach((section) => {
+    expressionItemsFromSection(section).forEach((item, index) => {
       const label = expressionPageLabel(lesson, section, index);
-      const hit = texts.find((value) => value.includes(item.expression) && value.includes('完成教材中的练习。') && value.includes(label));
+      const hit = texts.find((value) => value.includes(item.expression) && value.includes('三句话') && value.includes(label));
       if (!hit) throw new Error(`句式“${item.expression}”缺少具体教材页码`);
     });
   });
@@ -1372,7 +1401,7 @@ function assertFaceDeckContract(outPath, lesson, slideCount) {
     texts.push(slideXmlText(xml));
   }
   const allText = texts.join('\n');
-  ['实体课', ONLINE_LAYOUT.cover.subtitle, '今天的学习路线', '学完这课后，我能……', '听力练习', '口语练习', '句式练习', '综合表达'].forEach((value) => {
+  ['实体课', '今天的学习路线', '学完这课后，我能……', '听力练习', '口语练习', '句式练习', '综合表达'].forEach((value) => {
     if (!allText.includes(value)) throw new Error(`实体课版式契约缺少文字：${value}`);
   });
   if (!xmls[1].includes('<p:pic>')) throw new Error('实体课学习路线页没有嵌入第一课核准路线图');
@@ -1389,14 +1418,76 @@ function assertFaceDeckContract(outPath, lesson, slideCount) {
     if (!texts.some((value) => value.includes('根据课本，回答问题') && value.includes(first))) throw new Error('实体课综合问题页教材页码错误');
     if (!texts.some((value) => value.includes('必须使用10个课本中的词语') && value.includes(last))) throw new Error('实体课个人口语页教材页码错误');
   }
-  expressionSections(lesson).forEach((section) => (section.items || []).forEach((item, index) => {
+  expressionSections(lesson).forEach((section) => expressionItemsFromSection(section).forEach((item, index) => {
     const label = expressionPageLabel(lesson, section, index);
     if (!texts.some((value) => value.includes(item.expression) && value.includes(label))) throw new Error(`实体课句式“${item.expression}”缺少具体教材页码`);
   }));
+  assertFaceDeckOrder(texts, lesson);
+}
+
+function findFaceSlide(texts, start, end, predicate) {
+  for (let index = start; index < end; index += 1) {
+    if (predicate(texts[index], index)) return index;
+  }
+  return -1;
+}
+
+function assertFaceDeckOrder(texts, lesson) {
+  const firstShortDivider = findFaceSlide(texts, 0, texts.length, (value) => value.includes('短文（一）') && !value.includes('你说的跟短文（一）'));
+  if (firstShortDivider < 4) throw new Error(`第${lesson.number}课短文（一）必须在封面、学习流程、Can-Do和暖身之后，实际为第${firstShortDivider + 1}页`);
+
+  const textSections = Object.values(lesson.sections).filter((section) => section.text);
+  const expressionPlan = faceExpressionPlan(lesson, textSections.length);
+  let cursor = firstShortDivider;
+  textSections.forEach((section, sectionIndex) => {
+    const divider = findFaceSlide(texts, cursor, texts.length, (value) => value.includes(`短文（${shortTextLabel(sectionIndex)}）`) && !value.includes('你说的跟'));
+    if (divider < 0) throw new Error(`第${lesson.number}课缺少短文（${shortTextLabel(sectionIndex)}）divider`);
+    if (sectionIndex === 0 && divider !== firstShortDivider) throw new Error(`第${lesson.number}课短文（一）不是第一篇短文单元的起点`);
+    const nextDivider = sectionIndex < textSections.length - 1
+      ? findFaceSlide(texts, divider + 1, texts.length, (value) => {
+        return ['一', '二', '三'].slice(sectionIndex + 1).some((label) => value.includes(`短文（${label}）`) && !value.includes('你说的跟'));
+      })
+      : findFaceSlide(texts, divider + 1, texts.length, (value) => value.includes('综合表达'));
+    const end = nextDivider >= 0 ? nextDivider : texts.length;
+    const sectionStart = divider + 1;
+    const strategy = findFaceSlide(texts, sectionStart, end, (value) => value.includes('听力练习') && value.includes('先看题、抓关键词'));
+    if (strategy < 0) throw new Error(`第${lesson.number}课短文${shortTextLabel(sectionIndex)}缺少听力练习`);
+    const secondItems = exerciseItems(section, 'second_listen');
+    const firstItems = exerciseItems(section, 'first_listen');
+    const listeningQuestions = findFaceSlide(texts, strategy + 1, end, (value) => value.includes('听力题目') && (!secondItems.length || value.includes(secondItems[0])));
+    if (listeningQuestions < 0) throw new Error(`第${lesson.number}课短文${shortTextLabel(sectionIndex)}缺少听力题目`);
+    const simpleQuestions = findFaceSlide(texts, listeningQuestions + 1, end, (value) => value.includes('简单题目问答') && (!firstItems.length || value.includes(firstItems[0])));
+    if (simpleQuestions < 0) throw new Error(`第${lesson.number}课短文${shortTextLabel(sectionIndex)}缺少简单题目问答`);
+    const oral = findFaceSlide(texts, simpleQuestions + 1, end, (value) => value.includes('口语练习'));
+    if (oral < 0) throw new Error(`第${lesson.number}课短文${shortTextLabel(sectionIndex)}缺少口语练习`);
+    const introduction = findFaceSlide(texts, oral + 1, end, (value) => value.includes('介绍'));
+    if (introduction < 0) throw new Error(`第${lesson.number}课短文${shortTextLabel(sectionIndex)}缺少介绍任务`);
+    const compare = findFaceSlide(texts, introduction + 1, end, (value) => value.includes(`你说的跟短文（${shortTextLabel(sectionIndex)}）哪里不一样？`));
+    if (compare < 0) throw new Error(`第${lesson.number}课短文${shortTextLabel(sectionIndex)}缺少比较任务`);
+    const expressionSection = expressionPlan.byText[sectionIndex];
+    let outputStart = compare + 1;
+    if (expressionSection) {
+      const expressionDivider = findFaceSlide(texts, compare + 1, end, (value) => value.includes('句式练习'));
+      if (expressionDivider < 0) throw new Error(`第${lesson.number}课短文${shortTextLabel(sectionIndex)}缺少该短文句式练习`);
+      outputStart = expressionDivider + 1;
+    }
+    const output = findFaceSlide(texts, outputStart, end, (value) => value.includes('请你说说'));
+    if (output < 0) throw new Error(`第${lesson.number}课短文${shortTextLabel(sectionIndex)}缺少口语输出`);
+    cursor = output + 1;
+  });
+
+  if (expressionPlan.shared.length) {
+    const sharedDivider = findFaceSlide(texts, cursor, texts.length, (value) => value.includes('句式练习'));
+    if (sharedDivider < 0) throw new Error(`第${lesson.number}课共享句式练习没有放在短文单元之后`);
+    cursor = sharedDivider;
+  }
+  const comprehensive = findFaceSlide(texts, cursor, texts.length, (value) => value.includes('综合表达'));
+  if (comprehensive < 0) throw new Error(`第${lesson.number}课短文单元后缺少综合表达`);
 }
 
 function buildOnline(lesson) {
   ACTIVE_MODE = 'online';
+  const content = onlineContentFor(lesson);
   assertVocabularyImageMapping(lesson);
   assertExampleVariety(lesson);
   const outputDir = path.join(lesson.outputRoot, 'online');
@@ -1419,7 +1510,7 @@ function buildOnline(lesson) {
 
   // Vocabulary follows the Lesson 1 rhythm: one word per slide, then a
   // five-word speaking practice slide. Proper nouns get their own divider.
-  numberRef.value += 1; addDivider(slides.addSlide(), lesson, numberRef.value, ONLINE_LAYOUT.vocabulary.divider_title, ONLINE_LAYOUT.vocabulary.divider_subtitle, 0);
+  numberRef.value += 1; addDivider(slides.addSlide(), lesson, numberRef.value, ONLINE_LAYOUT.vocabulary.divider_title, content.vocabulary?.divider_subtitle || ONLINE_LAYOUT.vocabulary.divider_subtitle, 0);
   const regularEntries = regularVocabEntries(lesson);
   regularEntries.forEach((entry, index) => {
     numberRef.value += 1;
@@ -1442,20 +1533,28 @@ function buildOnline(lesson) {
 
   numberRef.value += 1; addDivider(slides.addSlide(), lesson, numberRef.value, ONLINE_LAYOUT.reading.divider_title, '', 0);
   const texts = Object.values(lesson.sections).filter((section) => section.text);
-  const expressionSectionsForText = expressionSections(lesson);
+  const expressionPlan = faceExpressionPlan(lesson, texts.length);
   texts.forEach((section, index) => {
     numberRef.value += 1;
     addDivider(slides.addSlide(), lesson, numberRef.value, `短文（${['一', '二', '三'][index] || String(index + 1)}）`, '', index);
     addOnlineTextSlides(slides, lesson, numberRef, section, index);
-    const expressionSection = expressionSectionsForText[index];
+    const expressionSection = expressionPlan.byText[index];
     if (expressionSection) {
       numberRef.value += 1;
-      addDivider(slides.addSlide(), lesson, numberRef.value, '句式练习', '', index);
+      addDivider(slides.addSlide(), lesson, numberRef.value, content.expressions?.divider_title || ONLINE_LAYOUT.expressions.divider_title, '', index);
       (expressionSection.items || []).forEach((item, expressionIndex) => {
         numberRef.value += 1;
         addExpressionSlide(slides.addSlide(), lesson, numberRef.value, item, expressionSection, expressionIndex);
       });
     }
+  });
+  expressionPlan.shared.forEach((expressionSection, sharedIndex) => {
+    numberRef.value += 1;
+    addDivider(slides.addSlide(), lesson, numberRef.value, content.expressions?.divider_title || ONLINE_LAYOUT.expressions.divider_title, '', sharedIndex);
+    (expressionSection.items || []).forEach((item, expressionIndex) => {
+      numberRef.value += 1;
+      addExpressionSlide(slides.addSlide(), lesson, numberRef.value, item, expressionSection, expressionIndex);
+    });
   });
   if (texts.length) {
     numberRef.value += 1;
@@ -1476,7 +1575,8 @@ function buildOnline(lesson) {
   addOnlineEndingSlides(slides, lesson, numberRef);
 
   const outPath = path.join(outputDir, `lesson-${String(lesson.number).padStart(2, '0')}-在线预习.pptx`);
-  const audioTracks = (lesson.canonical.audio_map || []).map((item) => item.label || item.track || item.audio || item.id).filter(Boolean);
+  const sourceAudioTracks = audioTrackLabels(lesson);
+  const embeddedAudioTracks = [...new Set(texts.filter((section) => section.audio).map((section) => String(section.audio)))];
   return pptx.writeFile({ fileName: outPath }).then(() => {
     assertOnlineDeckContract(outPath, lesson, numberRef.value);
     const manifest = {
@@ -1491,11 +1591,18 @@ function buildOnline(lesson) {
       source_sha256: lesson.sourceHash,
       layout_source: 'boya-quasi-intermediate-i lesson-01 approved layout family',
       shared_layout_contract: path.relative(ROOT, ONLINE_LAYOUT_CONTRACT_PATH),
+      lesson_content_contract: path.relative(ROOT, ONLINE_CONTENT_CONTRACT_PATH),
+      example_bank: {
+        source: path.relative(ROOT, EXAMPLE_BANK_PATH),
+        review_status: EXAMPLE_BANK.review?.status || null,
+        vocabulary_examples_per_item: EXAMPLE_BANK.policy?.examples_per_item || null,
+        expression_examples_per_item: ONLINE_LAYOUT.expressions?.example_count || null
+      },
       fixed_structure: ['cover', 'learning_flow', 'goals', 'vocabulary', 'practice_after_each_full_five', 'proper_nouns_if_present', 'short_text_divider_before_each_text', 'short_text_record', 'expressions_after_related_text', 'comprehensive_practice', 'fixed_three_slide_ending'],
-      route_asset: ONLINE_LAYOUT.learning_route.asset,
+      route_asset: content.route?.asset || ONLINE_LAYOUT.learning_route.asset,
       vocabulary_practice_after_every: ONLINE_LAYOUT.vocabulary.practice_after_every,
       vocabulary_extension_policy: ONLINE_LAYOUT.vocabulary.extension_policy,
-      vocabulary_page_breaks: ONLINE_LAYOUT.vocabulary.page_breaks[String(lesson.number)],
+      vocabulary_page_breaks: content.vocabulary?.page_breaks || ONLINE_LAYOUT.vocabulary.page_breaks[String(lesson.number)],
       fixed_ending_titles: ONLINE_LAYOUT.ending.slides.map((slide) => slide.title),
       short_example_policy: `curated_short_sentences_max_${MAX_SHORT_EXAMPLE_CHARS}_hanzi_chars`,
       short_text_policy: 'textbook_reading_prompt_and_record_layout_no_full_text_copy',
@@ -1504,7 +1611,8 @@ function buildOnline(lesson) {
       vocabulary_image_count: regularEntries.length + properEntries.length,
       vocabulary_image_assets: [...regularEntries, ...properEntries].map((entry) => ({ word: entry.word, asset: lesson.wordToAsset.get(entry.word) ? path.relative(ROOT, lesson.wordToAsset.get(entry.word)) : null, status: lesson.wordToAsset.get(entry.word) ? 'candidate' : 'pending_asset' })),
       slide_count: numberRef.value,
-      audio_tracks_embedded: audioTracks,
+      audio_tracks_available: sourceAudioTracks,
+      audio_tracks_embedded: embeddedAudioTracks,
       audio_playback_policy: 'embedded_on_audio-summary-slides; PowerPoint playback QA remains pending for draft',
       output: { path: path.relative(ROOT, outPath), sha256: sha256(outPath), bytes: fs.statSync(outPath).size },
       generated_at: new Date().toISOString()
@@ -1515,20 +1623,19 @@ function buildOnline(lesson) {
 }
 
 function addCanDoSlide(slide, lesson, number) {
-  addHeader(slide, lesson, number, '学完这课后，我能……');
-  const cards = lesson.number === 2
-    ? ['听懂王红一天中的学校生活、生日午餐和课外活动。', '用本课词语介绍自己的学校生活和课外活动。', '回答并讨论跟三段短文有关的问题。', '根据信息表完成一段口语总结。']
-    : lesson.number === 3
-      ? ['听懂李大为学习中文经历中的主要信息。', '说明自己为什么学习或选修中文。', '回答并讨论家庭、学习和中文课堂问题。', '用本课词语完成一段个人口语介绍。']
-      : ['听懂朴大宇在北京学习汉语的主要信息。', '介绍他在北京的生活和学习内容。', '比较在中国和本国学习汉语的异同。', '根据三段短文完成一段口语总结。'];
-  addText(slide, '听懂 · 介绍 · 讨论 · 准备', 0.78, 1.73, 8.5, 0.4, { fontSize: 20, color: C.teal, bold: true });
-  cards.forEach((text, index) => {
-    const y = 2.45 + index * 0.78;
-    slide.addShape('rect', { x: 0.98, y, w: 0.38, h: 0.38, fill: { color: C.white }, line: { color: C.purple, pt: 0.8 } });
-    addLatin(slide, String(index + 1), 0.98, y + 0.08, 0.38, 0.2, { fontSize: 20, color: C.purple, bold: true, align: 'center' });
-    addText(slide, text, 1.55, y - 0.04, 10.65, 0.5, { fontSize: 22, bold: true, valign: 'mid' });
+  const content = onlineContentFor(lesson);
+  addHeader(slide, lesson, number);
+  addText(slide, ONLINE_LAYOUT.goals.title, 0.72, 1.02, 8.2, 0.60, { fontSize: T.goals_title_pt, bold: true, valign: 'top' });
+  addText(slide, ONLINE_LAYOUT.goals.label, 0.78, 1.73, 8.5, 0.4, { fontSize: T.goals_label_pt, color: C.teal, bold: true });
+  const goalMarkerColors = [C.teal, C.coral, C.purple, C.yellow];
+  content.goals.forEach((text, index) => {
+    const y = 2.50 + index * 0.78;
+    const markerColor = goalMarkerColors[index % goalMarkerColors.length];
+    slide.addShape('ellipse', { x: 0.98, y, w: 0.38, h: 0.38, fill: { color: markerColor }, line: { transparency: 100 } });
+    addLatin(slide, String(index + 1), 0.98, y + 0.08, 0.38, 0.2, { fontSize: T.goals_number_pt, color: C.white, bold: true, align: 'center' });
+    addText(slide, text, 1.55, y - 0.04, 10.65, 0.5, { fontSize: T.goals_item_pt, bold: true, valign: 'mid' });
   });
-  notes(slide, '快速朗读四项学习结果；学生知道今天要用听、问、说完成任务。');
+  notes(slide, `快速朗读本课 ${content.goals.length} 项学习结果；学生知道今天要用听、问、说完成任务。`);
 }
 
 function addWarmup(slide, lesson, number) {
@@ -1546,7 +1653,7 @@ function addWarmup(slide, lesson, number) {
 
 function addVocabComprehensionSlide(slide, lesson, number) {
   const section = lesson.sections.vocabulary_comprehension;
-  addHeader(slide, lesson, number, '听力练习', pageLabel(section.printed_pages));
+  addHeader(slide, lesson, number, '听力题目', pageLabel(section.printed_pages));
   addAudio(slide, lesson, section.audio);
   addText(slide, '看图片，选择答案', 0.75, 1.66, 8.6, 0.42, { fontSize: 24, color: C.teal, bold: true });
   addText(slide, `请看教材第${printedPageRange(section.printed_pages)}页的题目。`, 1.15, 2.75, 11.0, 1.0, { fontSize: 34, color: C.ink, bold: true, align: 'center', valign: 'mid' });
@@ -1568,7 +1675,7 @@ function addListeningSentencesSlides(slides, lesson, numberRef) {
   const exercise = Object.values(section.exercises || {})[0] || {};
   numberRef.value += 1;
   const slide = slides.addSlide();
-  addHeader(slide, lesson, numberRef.value, '听力练习', pageLabel(section.printed_pages));
+  addHeader(slide, lesson, numberRef.value, '听力题目', pageLabel(section.printed_pages));
   addAudio(slide, lesson, (section.audio_tracks || [])[0]);
   addText(slide, exercise.heading_verbatim || '听句子，判断对错', 0.75, 1.66, 8.6, 0.42, { fontSize: 24, color: C.teal, bold: true });
   addText(slide, `请看教材第${printedPageRange(section.printed_pages)}页的题目。`, 1.15, 2.75, 11.0, 1.0, { fontSize: 34, color: C.ink, bold: true, align: 'center', valign: 'mid' });
@@ -1577,7 +1684,7 @@ function addListeningSentencesSlides(slides, lesson, numberRef) {
 
 function addDialogueSlide(slide, lesson, number) {
   const section = lesson.sections.listening_dialogue;
-  addHeader(slide, lesson, number, '听力练习', pageLabel(section.printed_pages));
+  addHeader(slide, lesson, number, '听力题目', pageLabel(section.printed_pages));
   addAudio(slide, lesson, section.audio);
   addText(slide, '听小对话，选择答案', 0.75, 1.66, 8.6, 0.42, { fontSize: 24, color: C.teal, bold: true });
   addText(slide, `请看教材第${printedPageRange(section.printed_pages)}页的题目和选项。`, 1.15, 2.75, 11.0, 1.0, { fontSize: 34, color: C.ink, bold: true, align: 'center', valign: 'mid' });
@@ -1585,7 +1692,7 @@ function addDialogueSlide(slide, lesson, number) {
 }
 
 function addQuestionSlide(slide, lesson, number, question, index = 0) {
-  addHeader(slide, lesson, number, '请你说说');
+  addHeader(slide, lesson, number, '简单题目问答');
   addText(slide, question, 0.95, 2.45, 7.7, 1.55, { fontSize: 34, bold: true, align: 'center', valign: 'mid' });
   addBox(slide, 9.0, 1.75, 3.35, 3.7, C.white, 'D3D9D1');
   const image = sharedAsset('lesson-01-cover-family-work-hobby.png') || firstContextFile(lesson, index);
@@ -1635,9 +1742,30 @@ function addTextCompareSlide(slide, lesson, number, section, sectionIndex) {
 function addListeningStrategySlide(slide, lesson, number, section, sectionIndex) {
   addHeader(slide, lesson, number, '听力练习', pageLabel(section.printed_pages));
   if (section.audio) addAudio(slide, lesson, section.audio);
-  addText(slide, `短文（${['一', '二', '三'][sectionIndex]}）`, 0.75, 1.66, 8.6, 0.42, { fontSize: 24, color: C.teal, bold: true });
+  addText(slide, `短文（${shortTextLabel(sectionIndex)}）`, 0.75, 1.66, 8.6, 0.42, { fontSize: 24, color: C.teal, bold: true });
   addText(slide, '先看题、抓关键词，再听并记重点，最后回答。', 1.15, 2.75, 11.0, 1.0, { fontSize: 34, color: C.ink, bold: true, align: 'center', valign: 'mid' });
   notes(slide, `听力策略页；播放 ${section.audio || '本课音频'}，学生只记录关键词，不在投影片阅读整段课文。`);
+}
+
+function addTextListeningQuestionsSlide(slide, lesson, number, section, sectionIndex) {
+  const items = exerciseItems(section, 'second_listen');
+  if (!items.length) return false;
+  addHeader(slide, lesson, number, '听力题目', pageLabel(section.printed_pages));
+  addAudio(slide, lesson, section.audio);
+  addText(slide, exerciseInstruction(section, 'second_listen', '听第二遍，回答问题。'), 0.85, 1.55, 11.4, 0.54, { fontSize: 23, color: C.teal, bold: true, align: 'center' });
+  addBullets(slide, items, 0.95, 2.22, 11.2, 3.85, { fontSize: items.length > 3 ? 21 : 24 });
+  notes(slide, `短文（${shortTextLabel(sectionIndex)}）听力题目；学生再听 ${section.audio || '本课音频'}，使用括号词语或短文信息回答。`);
+  return true;
+}
+
+function addTextSimpleQuestionsSlide(slide, lesson, number, section, sectionIndex) {
+  const items = exerciseItems(section, 'first_listen');
+  if (!items.length) return false;
+  addHeader(slide, lesson, number, '简单题目问答', pageLabel(section.printed_pages));
+  addText(slide, exerciseInstruction(section, 'first_listen', '听第一遍，简单回答问题。'), 0.85, 1.55, 11.4, 0.54, { fontSize: 23, color: C.teal, bold: true, align: 'center' });
+  addBullets(slide, items, 0.95, 2.22, 11.2, 3.85, { fontSize: items.length > 4 ? 21 : 24 });
+  notes(slide, `短文（${shortTextLabel(sectionIndex)}）简单题目问答；两人一组一问一答，先回答，再补充短文中的信息。`);
+  return true;
 }
 
 function addOutputTaskSlide(slide, lesson, number, section, sectionIndex) {
@@ -1674,8 +1802,13 @@ function buildFace(lesson) {
   numberRef.value += 1; addRouteSlide(pptx.addSlide(), lesson, numberRef.value, 'face');
   numberRef.value += 1; addCanDoSlide(pptx.addSlide(), lesson, numberRef.value);
   numberRef.value += 1; addWarmup(pptx.addSlide(), lesson, numberRef.value);
-  numberRef.value += 1; addDivider(pptx.addSlide(), lesson, numberRef.value, '听力练习', lesson.number === 2 ? '听懂一天中的主要信息。' : '听懂学习中文经历中的主要信息。', 0);
+  const texts = Object.values(lesson.sections).filter((section) => section.text);
 
+  // Lesson-wide foundation listening is not owned by any one short text.
+  // Keep it before the short-text units; once a short-text divider appears,
+  // every following slide belongs to that text until the next divider.
+  numberRef.value += 1;
+  addDivider(pptx.addSlide(), lesson, numberRef.value, '听力练习', lesson.number === 2 ? '先听懂一天中的主要信息。' : '先听懂本课主题中的主要信息。', 0);
   numberRef.value += 1; addVocabularyListeningSlide(pptx.addSlide(), lesson, numberRef.value);
   numberRef.value += 1; addVocabComprehensionSlide(pptx.addSlide(), lesson, numberRef.value);
   addListeningSentencesSlides(pptx, lesson, numberRef);
@@ -1684,24 +1817,33 @@ function buildFace(lesson) {
   const relatedQuestions = lesson.number === 2
     ? ['你最喜欢哪一门课？为什么？', '你觉得大学生活怎么样？', '你生日时喜欢怎么庆祝？', '你去过博物馆吗？', '你参加过什么课外活动？']
     : ['你小时候学过什么？', '你为什么学习中文？', '你觉得中文哪里难？', '你和同学常常怎么互相帮助？', '你喜欢和朋友聊天儿吗？', '你会说哪些外语？'];
-  relatedQuestions.forEach((question, index) => {
+  relatedQuestions.forEach((question, questionIndex) => {
     numberRef.value += 1;
-    addQuestionSlide(pptx.addSlide(), lesson, numberRef.value, question, index);
+    addQuestionSlide(pptx.addSlide(), lesson, numberRef.value, question, questionIndex);
   });
 
-  const texts = Object.values(lesson.sections).filter((section) => section.text);
-  numberRef.value += 1;
-  addDivider(pptx.addSlide(), lesson, numberRef.value, '口语练习', '', 0);
+  const expressionPlan = faceExpressionPlan(lesson, texts.length);
   texts.forEach((section, index) => {
-    const expressionSection = expressionSections(lesson)[index];
     numberRef.value += 1;
     addDivider(pptx.addSlide(), lesson, numberRef.value, `短文（${['一', '二', '三'][index]}）`, '', index);
+
     numberRef.value += 1;
     addListeningStrategySlide(pptx.addSlide(), lesson, numberRef.value, section, index);
+    numberRef.value += 1;
+    if (!addTextListeningQuestionsSlide(pptx.addSlide(), lesson, numberRef.value, section, index)) {
+      throw new Error(`第${lesson.number}课短文${shortTextLabel(index)}缺少听力题目`);
+    }
+    numberRef.value += 1;
+    if (!addTextSimpleQuestionsSlide(pptx.addSlide(), lesson, numberRef.value, section, index)) {
+      throw new Error(`第${lesson.number}课短文${shortTextLabel(index)}缺少简单题目问答`);
+    }
+    numberRef.value += 1;
+    addDivider(pptx.addSlide(), lesson, numberRef.value, '口语练习', '', index);
     numberRef.value += 1;
     addTextPresentationSlide(pptx.addSlide(), lesson, numberRef.value, section, index);
     numberRef.value += 1;
     addTextCompareSlide(pptx.addSlide(), lesson, numberRef.value, section, index);
+    const expressionSection = expressionPlan.byText[index];
     if (expressionSection) {
       numberRef.value += 1;
       addDivider(pptx.addSlide(), lesson, numberRef.value, '句式练习', '', index);
@@ -1712,6 +1854,18 @@ function buildFace(lesson) {
     }
     numberRef.value += 1;
     addOutputTaskSlide(pptx.addSlide(), lesson, numberRef.value, section, index);
+  });
+
+  // Some source packages provide one or more expression groups shared by
+  // several short texts. Keep those groups after the text units instead of
+  // assigning them to a text by guesswork.
+  expressionPlan.shared.forEach((expressionSection, sharedIndex) => {
+    numberRef.value += 1;
+    addDivider(pptx.addSlide(), lesson, numberRef.value, '句式练习', '', sharedIndex);
+    (expressionSection.items || []).forEach((item, expressionIndex) => {
+      numberRef.value += 1;
+      addExpressionFaceSlide(pptx.addSlide(), lesson, numberRef.value, item, expressionSection, expressionIndex);
+    });
   });
 
   const comprehensive = lesson.sections.comprehensive_practice;
@@ -1728,7 +1882,7 @@ function buildFace(lesson) {
   }
 
   const outPath = path.join(outputDir, `lesson-${String(lesson.number).padStart(2, '0')}-实体课.pptx`);
-  const audioTracks = (lesson.canonical.audio_map || []).map((item) => item.label || item.track || item.audio || item.id).filter(Boolean);
+  const audioTracks = audioTrackLabels(lesson);
   return pptx.writeFile({ fileName: outPath }).then(() => {
     assertFaceDeckContract(outPath, lesson, numberRef.value);
     const manifest = {
@@ -1742,6 +1896,7 @@ function buildFace(lesson) {
       draft_gate: 'lesson-specific',
       source_sha256: lesson.sourceHash,
       layout_source: 'boya-quasi-intermediate-i lesson-01 approved layout family',
+      face_order_contract: path.relative(ROOT, FACE_ORDER_CONTRACT_PATH),
       short_example_policy: `curated_short_sentences_max_${MAX_SHORT_EXAMPLE_CHARS}_hanzi_chars`,
       short_text_policy: 'textbook_listening_prompt_and_record_layout_no_full_text_copy',
       shared_assets: ['lesson-01-cover-family-work-hobby.png', 'lesson-01-learning-path.png', 'divider-family.png', 'divider-work.png', 'divider-hobby.png', 'divider-comprehensive.png', 'symbolic-vocabulary.png', 'symbolic-listening.png', 'symbolic-sentence-pattern.png', 'oral-practice-divider.png', 'speaking-practice.png'],

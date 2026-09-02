@@ -1,0 +1,31 @@
+{
+  "schema_version": "boya-lesson-image-manifest-v1",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-01",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_id": "lesson-01",
+  "lesson_title": "丽丽是独生女",
+  "source_scope": {
+    "canonical_source": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-extraction-draft.json",
+    "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-manifest.json",
+    "asset_manifest": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/image-assets-draft/asset-manifest.json",
+    "source_status": "draft_adapter; image assets remain candidate material"
+  },
+  "approval_boundary": {
+    "generation_status": "generated_draft",
+    "adam_review_status": "pending",
+    "can_enter_draft_ppt": false,
+    "can_enter_approved_ppt": false,
+    "reason": "This adapter lets the lesson-specific draft gate identify the existing Lesson 1 asset inventory; it does not approve any image or PPTX."
+  },
+  "assets": [
+    {"asset_id": "L01-cover", "file": "../image-assets-draft/lesson-01-cover-family-work-hobby.png", "category": "context", "use": ["封面"], "can_enter_ppt": false},
+    {"asset_id": "L01-route", "file": "../image-assets-draft/learning-route-user-supplied-transparent-v4.png", "category": "learning_route", "use": ["学习流程"], "can_enter_ppt": false},
+    {"asset_id": "L01-family-divider", "file": "../image-assets-draft/divider-family.png", "category": "context", "use": ["短文（一）"], "can_enter_ppt": false},
+    {"asset_id": "L01-work-divider", "file": "../image-assets-draft/divider-work.png", "category": "context", "use": ["短文（二）"], "can_enter_ppt": false},
+    {"asset_id": "L01-hobby-divider", "file": "../image-assets-draft/divider-hobby.png", "category": "context", "use": ["短文（三）"], "can_enter_ppt": false},
+    {"asset_id": "L01-listening-divider", "file": "../image-assets-draft/symbolic-listening.png", "category": "divider", "use": ["听力练习"], "can_enter_ppt": false},
+    {"asset_id": "L01-sentence-divider", "file": "../image-assets-draft/symbolic-sentence-pattern.png", "category": "divider", "use": ["句式练习"], "can_enter_ppt": false},
+    {"asset_id": "L01-oral-divider", "file": "../image-assets-draft/oral-practice-divider.png", "category": "divider", "use": ["口语练习"], "can_enter_ppt": false},
+    {"asset_id": "L01-comprehensive-divider", "file": "../image-assets-draft/divider-comprehensive.png", "category": "divider", "use": ["综合表达"], "can_enter_ppt": false}
+  ]
+}

@@ -2,7 +2,7 @@
   "schema_version": "boya-lesson-image-manifest-v1",
   "lesson_key": "boya-quasi-intermediate-i:lesson-05",
   "lesson_title": "我的音乐老师",
-  "generated_at": "2026-08-29",
+  "generated_at": "2026-09-02",
   "source_scope": {
     "canonical_source": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/canonical-source.json",
     "listening_exercise_contract": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/listening-exercise-contract.json",
@@ -400,6 +400,23 @@
       "dimensions": "1254x1254",
       "generation": "image_gen.imagegen",
       "license": "OpenAI-generated original project draft; no external asset license claimed"
+    },
+    {
+      "asset_id": "L05-COVER-MUSIC-TEACHER-SQUARE",
+      "file": "lesson-05-cover-music-teacher-square.png",
+      "category": "lesson_cover",
+      "use": ["第五课方形框封面主视觉", "《我的音乐老师》课名页图片框"],
+      "source_refs": ["canonical-source.json#lesson_title", "canonical-source.json#sections.short_text_1", "canonical-source.json#sections.short_text_2", "canonical-source.json#sections.short_text_3", "user-request-2026-09-02"],
+      "textbook_printed_pages": [],
+      "prompt": "Original 1:1 full-bleed educational textbook illustration for 我的音乐老师: a warm adult music teacher guiding university students in a music classroom, conducting or demonstrating, with choir students and recognizable instruments including a Chinese bamboo flute, violin, piano, and music stand; one engaged student admires the teacher; warm off-white paper, fine gray-blue linework, muted pastel watercolor, no large blank area or title space, no readable text, lyrics, labels, logos, flags, signs, captions, speech bubbles, numbers, or watermark.",
+      "sha256": "89413ad7a01cb28b3be7367b93af57e2e07be8be161911059a272ff5b26e464a",
+      "dimensions": "1254x1254",
+      "generation": "image_gen.imagegen",
+      "generated_source_path": "/Users/ssyan110/.codex/generated_images/01a05cfd-fe68-7472-8fe2-0c058690808c/exec-e5d98c98-3dcb-456f-9ef5-eef7de2766fc.png",
+      "generation_status": "generated_and_copied_to_workspace",
+      "license": "OpenAI-generated original project draft; no external asset license claimed",
+      "can_enter_ppt": false,
+      "ppt_entry_status": "candidate_pending_visual_storyboard_and_pptx_review"
     }
   ]
 }

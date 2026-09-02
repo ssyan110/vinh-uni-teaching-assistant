@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "manifest_type": "lesson-authority",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-02",
+  "lesson_id": "lesson-02",
+  "lesson_number": 2,
+  "lesson_title": "王红的一天",
+  "language": "简体中文",
+  "authority_status": "user-directed-finalized-replacement-2026-09-02",
+  "content_status": "finalized-reference-replaced-2026-09-02",
+  "delivery_status": "pptx_only_handoff_pending_full_package",
+  "authority_rule": "20-approved 中的批准 PPTX 原样锁定；完整交付仍须补齐来源、教师手册、配套材料、QA、rehearsal 与 release。",
+  "scope": {
+    "approval_scope": "two_current_pptx_only",
+    "printed_pages": "12–21",
+    "online_slide_count": 80,
+    "face_to_face_slide_count": 57
+  },
+  "authority": {
+    "pptx": {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-02/20-approved/pptx/lesson-02-实体课.pptx",
+      "online_path": "lessons/boya-quasi-intermediate-i/lesson-02/20-approved/pptx/lesson-02-在线预习.pptx",
+      "status": "final_confirmed",
+      "approval_scope": "user-directed-finalized-replacement-2026-09-02",
+      "version": "finalized-reference-replaced-2026-09-02",
+      "slide_count": 57,
+      "online_slide_count": 80,
+      "sha256": "fd3e7dec08647dd3e037d02a6d7b5326e9b0893d55bf3ace33dbac116655d143",
+      "bytes": 22884027,
+      "online_sha256": "65d45b9d09858a818d635a3ae9bb9cb1a462f7dd3a9a06a2177338f2b08e4dc3",
+      "online_bytes": 64623651,
+      "face_to_face_path": "lessons/boya-quasi-intermediate-i/lesson-02/20-approved/pptx/lesson-02-实体课.pptx",
+      "face_to_face_sha256": "fd3e7dec08647dd3e037d02a6d7b5326e9b0893d55bf3ace33dbac116655d143",
+      "face_to_face_bytes": 22884027,
+      "face_to_face_slide_count": 57,
+      "online_speaker_notes_count": 79,
+      "speaker_notes_count": 56
+    }
+  },
+  "qa": {
+    "status": "pptx_static_qa_pending_recording",
+    "rehearsal": "pending_manual_acceptance",
+    "audio_playback": "pending_manual_acceptance"
+  },
+  "release": {
+    "status": "pending_manual_acceptance",
+    "delivery_status": "blocked",
+    "latest_release_path": null,
+    "latest_zip_path": null
+  }
+}

@@ -1,7 +1,7 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "system_id": "boya-classroom-materials",
-  "version": "2026-08-27",
+  "version": "2026-09-02",
   "source": "scripts/lesson_pptx_master_template.js",
   "purpose": "Shared visual and typography tokens for reusable Boya classroom materials.",
   "fonts": {
@@ -11,7 +11,49 @@
     "html_latin_stack": "Times New Roman, serif",
     "system_fonts_only": true
   },
+  "pptTypography": {
+    "visible_min_pt": 20,
+    "header_pt": 20,
+    "page_marker_pt": 22,
+    "small_label_pt": 22,
+    "keyword_pt": 24,
+    "body_compact_pt": 22,
+    "body_pt": 25,
+    "subtitle_pt": 24,
+    "task_prompt_pt": 34,
+    "task_prompt_min_pt": 28,
+    "slide_title_pt": 34,
+    "long_title_pt": 27,
+    "divider_pt": 48,
+    "cover_title_pt": 44,
+    "cover_title_min_pt": 44,
+    "cover_title_max_pt": 50,
+    "cover_badge_pt": 20,
+    "goals_title_pt": 36,
+    "goals_label_pt": 23,
+    "goals_number_pt": 22,
+    "goals_item_pt": 24,
+    "vocabulary_headword_pt": 42,
+    "vocabulary_headword_long_pt": 34,
+    "vocabulary_pos_pt": 22,
+    "vocabulary_meaning_pt": 22,
+    "vocabulary_usage_pt": 22,
+    "vocabulary_optional_pt": 23,
+    "vocabulary_example_pt": 22,
+    "pinyin_pt": 24,
+    "route_step_pt": 23,
+    "record_subtitle_pt": 25,
+    "expression_example_pt": 35
+  },
+  "effectiveTypographyPolicy": {
+    "visible_min_pt": 20,
+    "autofit_allowed": true,
+    "autofit_must_preserve_min_pt": true,
+    "validate_explicit_and_inherited_sizes": true,
+    "validate_font_scale": true
+  },
   "colors": {
+    "slideBackground": "FFFFFF",
     "paper": "FBF8F1",
     "paperWarm": "FBF8F1",
     "white": "FFFDF9",
@@ -52,9 +94,10 @@
     "shadow_css": "0 12px 30px rgba(20,40,45,.08)"
   },
   "usage": {
-    "student_language": "简体中文",
-    "latin_rule": "越南文与其他拉丁字母文字使用 Times New Roman",
+    "student_language": "简体中文；在线词语页的意思栏使用越南文词汇，不使用英文",
+    "latin_rule": "越南文、拼音与其他拉丁字母文字使用 Times New Roman",
     "cjk_rule": "中文汉字使用 KaiTi",
+    "mixed_run_rule": "中越混排必须按文字脚本设置 run-level 字体，不得把整段混合文字当作单一 CJK 字体",
     "medium_rule": "PPTX、DOCX、HTML 共用同一套 token；各格式只保留必要的版面差异"
   }
 }

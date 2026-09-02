@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "manifest_type": "lesson-authority",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-04",
+  "lesson_id": "lesson-04",
+  "lesson_number": 4,
+  "lesson_title": "在中国学汉语",
+  "language": "简体中文",
+  "authority_status": "user-directed-finalized-replacement-2026-09-02",
+  "content_status": "finalized-reference-replaced-2026-09-02",
+  "delivery_status": "pptx_only_handoff_pending_full_package",
+  "authority_rule": "20-approved 中的批准 PPTX 原样锁定；完整交付仍须补齐来源、教师手册、配套材料、QA、rehearsal 与 release。",
+  "scope": {
+    "approval_scope": "two_current_pptx",
+    "printed_pages": "32–41",
+    "online_slide_count": 75,
+    "face_to_face_slide_count": 57
+  },
+  "authority": {
+    "pptx": {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-04/20-approved/pptx/lesson-04-在线预习.pptx",
+      "online_path": "lessons/boya-quasi-intermediate-i/lesson-04/20-approved/pptx/lesson-04-在线预习.pptx",
+      "status": "final_confirmed",
+      "approval_scope": "user-directed-finalized-replacement-2026-09-02",
+      "version": "finalized-reference-replaced-2026-09-02",
+      "slide_count": 75,
+      "online_slide_count": 75,
+      "sha256": "9d64a7ae2cac06f033907349a325a700406bc798b9a595830b7ce299080eb312",
+      "bytes": 20087746,
+      "face_to_face_path": "lessons/boya-quasi-intermediate-i/lesson-04/20-approved/pptx/lesson-04-实体课.pptx",
+      "face_to_face_status": "final_confirmed",
+      "face_to_face_version": "user-finalized-2026-08-31",
+      "face_to_face_slide_count": 57,
+      "face_to_face_sha256": "f18c6a1d1b344784ea2b3863a32f6b7bf6b5ff899e6ae5d89b7c92f3f33a3218",
+      "face_to_face_bytes": 24327091,
+      "online_sha256": "9d64a7ae2cac06f033907349a325a700406bc798b9a595830b7ce299080eb312",
+      "online_bytes": 20087746,
+      "online_speaker_notes_count": 74,
+      "speaker_notes_count": 57
+    },
+    "face_to_face": {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-04/20-approved/pptx/lesson-04-实体课.pptx",
+      "status": "final_confirmed"
+    }
+  },
+  "qa": {
+    "status": "two_pptx_static_qa_recorded",
+    "rehearsal": "pending_manual_acceptance",
+    "audio_playback": "pending_manual_acceptance"
+  },
+  "release": {
+    "status": "pending_manual_acceptance",
+    "delivery_status": "blocked",
+    "latest_release_path": null,
+    "latest_zip_path": null
+  }
+}

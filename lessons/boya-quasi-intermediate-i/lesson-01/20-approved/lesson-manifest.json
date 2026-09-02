@@ -13,8 +13,8 @@
     "latin": "Times New Roman",
     "updated_at": "2026-08-29"
   },
-  "authority_status": "pptx_chair_approved",
-  "content_status": "pptx_approved_by_department_chair_2026-08-29",
+  "authority_status": "user-directed-finalized-replacement-2026-09-02",
+  "content_status": "finalized-reference-replaced-2026-09-02",
   "delivery_status": "pptx_only_handoff_pending_full_package",
   "authority_rule": "20-approved 中的批准 PPTX 原样锁定；完整交付仍须补齐来源、教师手册、配套材料、QA、rehearsal 与 release。",
   "approval_record": "lessons/boya-quasi-intermediate-i/lesson-01/20-approved/lesson-01-pptx-approval-record.md",
@@ -26,25 +26,37 @@
   "scope": {
     "approval_scope": "two_current_pptx_only",
     "printed_pages": "1–11",
-    "online_slide_count": 72,
-    "face_to_face_slide_count": 51,
-    "audio_tracks_in_face_to_face_pptx": ["1-2", "1-3", "1-4", "1-5", "1-6", "1-7", "1-8"]
+    "online_slide_count": 83,
+    "face_to_face_slide_count": 57,
+    "audio_tracks_in_face_to_face_pptx": [
+      "1-2",
+      "1-3",
+      "1-4",
+      "1-5",
+      "1-6",
+      "1-7",
+      "1-8"
+    ]
   },
   "authority": {
     "pptx": {
       "path": "lessons/boya-quasi-intermediate-i/lesson-01/20-approved/pptx/lesson-01-实体课.pptx",
       "online_path": "lessons/boya-quasi-intermediate-i/lesson-01/20-approved/pptx/lesson-01-在线预习.pptx",
       "status": "final_confirmed",
-      "approval_scope": "department_chair_approved_current_decks",
-      "version": "chair-approved-2026-08-29",
-      "slide_count": 51,
-      "online_slide_count": 72,
-      "speaker_notes_count": 51,
-      "online_speaker_notes_count": 61,
-      "sha256": "c476cf51f63f75bc6d9afe4886b6df6a0c38d90e8a90d73e5649160c97b545e1",
-      "bytes": 71806730,
-      "online_sha256": "7c2c62d4f2d55677181822610524c3fc49a963e5a0bfa042274ab629980bd900",
-      "online_bytes": 21626344
+      "approval_scope": "user-directed-finalized-replacement-2026-09-02",
+      "version": "finalized-reference-replaced-2026-09-02",
+      "slide_count": 57,
+      "online_slide_count": 83,
+      "speaker_notes_count": 57,
+      "online_speaker_notes_count": 81,
+      "sha256": "7a776c11826579ad7b9c5a87d74aefcbb8501b068370f43a36aa7fcaf6fe72d2",
+      "bytes": 28496383,
+      "online_sha256": "b1c4682de81c481530deac72f17b155390a701b2888f4685db2015dee501bb40",
+      "online_bytes": 25061551,
+      "face_to_face_path": "lessons/boya-quasi-intermediate-i/lesson-01/20-approved/pptx/lesson-01-实体课.pptx",
+      "face_to_face_sha256": "7a776c11826579ad7b9c5a87d74aefcbb8501b068370f43a36aa7fcaf6fe72d2",
+      "face_to_face_bytes": 28496383,
+      "face_to_face_slide_count": 57
     },
     "teacher_manual": {
       "path": null,
@@ -64,8 +76,8 @@
     "source_extraction_draft": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-extraction-draft.json",
     "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-manifest.json",
     "audio_manifest": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/audio-manifest.json",
-    "pptx_draft_online": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/pptx-draft/online/lesson-01-在线预习.pptx",
-    "pptx_draft_face_to_face": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/pptx-draft/face-to-face/lesson-01-实体课.pptx",
+    "pptx_draft_online": null,
+    "pptx_draft_face_to_face": null,
     "teaching_design": null,
     "storyboard": null,
     "visual_storyboard": null,
@@ -109,14 +121,14 @@
     {
       "path": "lessons/boya-quasi-intermediate-i/lesson-01/20-approved/pptx/lesson-01-在线预习.pptx",
       "status": "final_confirmed",
-      "sha256": "7c2c62d4f2d55677181822610524c3fc49a963e5a0bfa042274ab629980bd900",
-      "bytes": 21626344
+      "sha256": "b1c4682de81c481530deac72f17b155390a701b2888f4685db2015dee501bb40",
+      "bytes": 25061551
     },
     {
       "path": "lessons/boya-quasi-intermediate-i/lesson-01/20-approved/pptx/lesson-01-实体课.pptx",
       "status": "final_confirmed",
-      "sha256": "c476cf51f63f75bc6d9afe4886b6df6a0c38d90e8a90d73e5649160c97b545e1",
-      "bytes": 71806730
+      "sha256": "7a776c11826579ad7b9c5a87d74aefcbb8501b068370f43a36aa7fcaf6fe72d2",
+      "bytes": 28496383
     }
   ]
 }

@@ -26,11 +26,11 @@
     {
       "id": "learning-route-can-do-2026-08-28",
       "path": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/image-assets-draft/learning-route-user-supplied-transparent.png",
-      "source": "用户提供流程图；ChatGPT 去背流程后保留原图像素",
-      "purpose": "Can-Do 前的学习路线流程图",
-      "prompt_summary": "去除外部纯白背景并输出透明 PNG；为保持中文文字与图标完全不变，最终素材保留用户原图像素。",
+      "source": "ChatGPT image generation；依据 Adam 确认的线上预习流程",
+      "purpose": "线上 PPT 开头学习流程图：学习词语、读／听短文、记录摘要、回答问题、学习句式、整理信息、准备介绍自己",
+      "prompt_summary": "沿用第一课低饱和粉彩、灰蓝细线、七张圆角卡片与箭头；更新为确认的七步线上预习流程；简体中文文字、无英文、无越南文、无额外文字。",
       "dimensions": "1672x941",
-      "sha256": "5d415b343c7ca42a275d76ccdc5ba47bc6f97c8852da5397235018476f0895c4",
+      "sha256": "112d1b498e83d9fca8e82180a2dabfb1aff77fea1e5af8501d57d454b71b7b6a",
       "approval_status": "not_approved"
     },
     {

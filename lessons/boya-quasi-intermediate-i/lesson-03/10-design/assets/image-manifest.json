@@ -4,7 +4,7 @@
   "textbook_id": "boya-quasi-intermediate-i",
   "lesson_id": "lesson-03",
   "title": "我对学中文越来越有兴趣",
-  "generated_at": "2026-08-29",
+  "generated_at": "2026-09-01",
   "generation_mode": "built-in image_gen",
   "source_scope": {
     "canonical_source": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/canonical-source.json",
@@ -486,6 +486,22 @@
       "license_status": "originally generated for this project with built-in image_gen; no external image license required",
       "can_enter_ppt": false,
       "ppt_entry_status": "candidate_approved_by_adam_pending_storyboard_ppt_entry"
+    },
+    {
+      "asset_id": "L03-COVER-INTEREST-SQUARE",
+      "filename": "lesson-03-cover-interest-square.png",
+      "category": "lesson_cover",
+      "use": ["第三课方形框封面主视觉", "《我对学中文越来越有兴趣》课名页图片框"],
+      "source_refs": ["canonical-source.json#lesson_title", "visual-brief-draft.md#封面", "user-request-2026-09-01"],
+      "textbook_printed_pages": [],
+      "prompt": "Corrected original 1:1 full-bleed educational textbook illustration for 我对学中文越来越有兴趣: a young male university student becoming increasingly interested in Chinese through lively class discussion, studying and drawing on blank paper, and friendly language-learning exchange; warm off-white paper, fine blue-gray linework, muted pastel watercolor, no large blank area or title space, no readable text, pinyin, English, numbers, logos, flags, labels, signs, captions, speech bubbles, or watermark.",
+      "generated_source_path": "/Users/ssyan110/.codex/generated_images/01a05cfd-fe68-7472-8fe2-0c058690808c/exec-38625a8d-cc0e-42c4-b014-ed22520f511c.png",
+      "sha256": "7c12e38ebdddc3409bdc07d81477f8d1cc21447b411cbf626ea101eda1ca5c20",
+      "dimensions": "1254x1254",
+      "generation_status": "generated_and_copied_to_workspace",
+      "license_status": "originally generated for this project with built-in image_gen; no external image license required",
+      "can_enter_ppt": false,
+      "ppt_entry_status": "candidate_pending_visual_storyboard_and_pptx_review"
     }
   ],
   "vocabulary_coverage": {
@@ -575,7 +591,7 @@
     }
   ],
   "qa_notes": [
-    "28 PNG assets are present in this lesson's 10-design/assets directory: 25 vocabulary assets and 3 wide short-text context assets.",
+    "29 PNG assets are present in this lesson's 10-design/assets directory: 25 vocabulary assets, 3 wide short-text context assets, and 1 square lesson-cover candidate.",
     "Images were visually inspected after generation; no intentional readable text, Chinese characters, Latin words, numbers, logos, watermarks, or speech bubbles were requested.",
     "Adam 已确认现有图片与第三课来源相符；尚未生成的 5 个 3-2 图片选择项仍需后续素材补齐。",
     "The five ungenerated 3-2 picture-choice items are explicitly listed as pending; existing vocabulary assets are reused only where the source word matches.",

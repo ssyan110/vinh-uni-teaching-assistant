@@ -7,9 +7,10 @@
   "status": "draft_not_approved",
   "builder_scope": "scripts/build_l23_pptx_drafts.js",
   "draft_gate": "lesson-specific",
-  "source_sha256": "ba48b06a41851b95177b501ebbfeb5c99edbf52e7945360ea148b61cb2cfc471",
+  "source_sha256": "c529512b98b62bdf8dc72e98605f5ec047ba969d7d365bb9c23da904fc4df45e",
   "layout_source": "boya-quasi-intermediate-i lesson-01 approved layout family",
   "shared_layout_contract": "course/boya-online-layout-contract.json",
+  "lesson_content_contract": "course/boya-online-content-contract.json",
   "fixed_structure": [
     "cover",
     "learning_flow",
@@ -25,7 +26,12 @@
   ],
   "route_asset": "learning-route-user-supplied-transparent.png",
   "vocabulary_practice_after_every": 5,
-  "vocabulary_extension_policy": "empty_until_explicitly_supplied",
+  "vocabulary_extension_policy": "word_specific_optional; never show an empty universal extension label",
+  "vocabulary_page_breaks": {
+    "first_page": 59,
+    "first_count": 17,
+    "second_page": 60
+  },
   "fixed_ending_titles": [
     "我觉得很难的地方",
     "课前检查",
@@ -180,8 +186,8 @@
       "status": "candidate"
     }
   ],
-  "slide_count": 53,
-  "audio_tracks_embedded": [
+  "slide_count": 69,
+  "audio_tracks_available": [
     "7-1",
     "7-2",
     "7-3",
@@ -189,11 +195,16 @@
     "7-5",
     "7-6"
   ],
+  "audio_tracks_embedded": [
+    "7-4",
+    "7-5",
+    "7-6"
+  ],
   "audio_playback_policy": "embedded_on_audio-summary-slides; PowerPoint playback QA remains pending for draft",
   "output": {
     "path": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/pptx-draft/online/lesson-07-在线预习.pptx",
-    "sha256": "f2ef0638966cfed5f62dcd3dc271f6a9d826ebf142af22ea7202b1599733f1f0",
-    "bytes": 154181282
+    "sha256": "d0e1837dd5b60cdaf3efd130e54a0f4f727383262c845913f9403a175d8d3f4e",
+    "bytes": 154317751
   },
-  "generated_at": "2026-08-29T16:33:51.384Z"
+  "generated_at": "2026-09-02T15:58:14.781Z"
 }

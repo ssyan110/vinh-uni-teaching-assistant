@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "manifest_type": "lesson-authority",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-03",
+  "lesson_id": "lesson-03",
+  "lesson_number": 3,
+  "lesson_title": "我对学中文越来越有兴趣",
+  "language": "简体中文",
+  "authority_status": "user-directed-finalized-replacement-2026-09-02",
+  "content_status": "finalized-reference-replaced-2026-09-02",
+  "delivery_status": "pptx_only_handoff_pending_full_package",
+  "authority_rule": "20-approved 中的批准 PPTX 原样锁定；完整交付仍须补齐来源、教师手册、配套材料、QA、rehearsal 与 release。",
+  "scope": {
+    "approval_scope": "two_current_pptx",
+    "printed_pages": "22–31",
+    "online_slide_count": 68,
+    "face_to_face_slide_count": 50
+  },
+  "authority": {
+    "pptx": {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-03/20-approved/pptx/lesson-03-在线预习.pptx",
+      "online_path": "lessons/boya-quasi-intermediate-i/lesson-03/20-approved/pptx/lesson-03-在线预习.pptx",
+      "status": "final_confirmed",
+      "approval_scope": "user-directed-finalized-replacement-2026-09-02",
+      "version": "finalized-reference-replaced-2026-09-02",
+      "slide_count": 68,
+      "online_slide_count": 68,
+      "sha256": "21352c7ff0d7153725cd74685f7b5a4a11d1258a58d047dc0c90645752133929",
+      "bytes": 70149488,
+      "face_to_face_path": "lessons/boya-quasi-intermediate-i/lesson-03/20-approved/pptx/lesson-03-实体课.pptx",
+      "face_to_face_status": "final_confirmed",
+      "face_to_face_version": "user-finalized-2026-08-31",
+      "face_to_face_slide_count": 50,
+      "face_to_face_sha256": "17b111fb64da8839c6896214f0c07655c87965896c56244a8f1ab2d16de4a85a",
+      "face_to_face_bytes": 24360819,
+      "online_sha256": "21352c7ff0d7153725cd74685f7b5a4a11d1258a58d047dc0c90645752133929",
+      "online_bytes": 70149488,
+      "online_speaker_notes_count": 68,
+      "speaker_notes_count": 50
+    },
+    "face_to_face": {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-03/20-approved/pptx/lesson-03-实体课.pptx",
+      "status": "final_confirmed"
+    }
+  },
+  "qa": {
+    "status": "two_pptx_static_qa_recorded",
+    "rehearsal": "pending_manual_acceptance",
+    "audio_playback": "pending_manual_acceptance"
+  },
+  "release": {
+    "status": "pending_manual_acceptance",
+    "delivery_status": "blocked",
+    "latest_release_path": null,
+    "latest_zip_path": null
+  }
+}

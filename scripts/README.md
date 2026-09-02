@@ -66,10 +66,24 @@ authority and does not replace the full authority/release gate, which checks
 approved design inputs, audio playback and the lesson's approved contact-hour
 rehearsal. The generator stops before creating files when a gate fails.
 
-`scripts/build_l23_pptx_drafts.js` is currently scoped only to
-`boya-quasi-intermediate-i:lesson-02` and `:lesson-03`; it rejects other lesson
-keys and requires an explicit `--lesson-key`, so its L2/L3 content tables cannot
-silently leak into later lessons. Any
+The boundary confirmation is a lesson-scoped Markdown record at
+`lessons/<textbook_id>/<lesson_id>/10-design/storyboard/<lesson_id>-boundary-confirmation-YYYY-MM-DD.md`.
+It records content routing only: online preparation covers textbook reading, audio
+preview, vocabulary understanding, short-text key-point recording and personal
+question preparation; face-to-face class covers listening comprehension, peer
+questions, information-gap work, oral practice, presentation, feedback and retry.
+It must also state that online study is extra self-paced preparation, not a fixed
+time quota and not a substitute for approved contact hours. The record does not
+approve source content, teaching design, teacher guides, PPTX, playback, rehearsal
+or release.
+
+`scripts/build_l23_pptx_drafts.js` is currently scoped to
+`boya-quasi-intermediate-i:lesson-02` through `:lesson-10`; it rejects other
+lesson keys and requires an explicit `--lesson-key`, so a draft cannot silently
+leak into an unprepared lesson. Its face-to-face order is governed by
+`course/boya-face-to-face-order-contract.json`: lesson-wide foundation content
+comes first, then each short-text divider owns its complete listening, question,
+oral, comparison, expression and output block. Any
 older draft found under a later lesson must be treated as legacy evidence until
 that lesson has its own source package, boundary confirmation, and generator
 scope.
@@ -80,7 +94,9 @@ slide numbers and must not be passed as `--storyboard` until a current
 slide-to-source mapping has been created.
 
 Record a real approval only after the relevant human review, with an existing
-evidence file and an explicit confirmation flag:
+evidence file from the same lesson tree, an explicit `lesson_key`, and a
+confirmation flag. The recorder resolves the lesson through the registry,
+stores the evidence SHA-256 and refuses cross-lesson evidence:
 
 ```bash
 python3 scripts/record_lesson_gate.py --lesson-key boya-intermediate-i:lesson-01 --gate storyboard --approved-by Adam --approved-at YYYY-MM-DD --evidence lessons/boya-intermediate-i/lesson-01/10-design/storyboard/lesson-01-ppt-outline-v5.md --confirm
@@ -88,6 +104,44 @@ python3 scripts/record_lesson_gate.py --lesson-key boya-intermediate-i:lesson-01
 python3 scripts/record_lesson_gate.py --lesson-key boya-intermediate-i:lesson-01 --gate audio-playback --approved-by Adam --approved-at YYYY-MM-DD --evidence lessons/boya-intermediate-i/lesson-01/30-qa/current/pptx-v15/qa-report.md --confirm
 python3 scripts/record_lesson_gate.py --lesson-key boya-intermediate-i:lesson-01 --gate rehearsal --approved-by Adam --approved-at YYYY-MM-DD --evidence lessons/boya-intermediate-i/lesson-01/30-qa/current/rehearsal-v1/rehearsal-notes.md --confirm
 ```
+
+## Agent control loop
+
+For a non-trivial, multi-step task, create a local run packet before execution:
+
+```bash
+python3 scripts/agent_loop.py init \
+  --run-id lesson-02-online-draft \
+  --lesson-key boya-quasi-intermediate-i:lesson-02 \
+  --offering-id 2026-fall \
+  --artifact "lesson-02 online PPTX draft" \
+  --purpose pptx \
+  --gate-stage draft \
+  --output-dir lessons/boya-quasi-intermediate-i/lesson-02/10-design/pptx-draft/online \
+  --success-criterion "PPTX opens and is ZIP-valid" \
+  --success-criterion "current storyboard source mapping passes"
+python3 scripts/agent_loop.py preflight --run-id lesson-02-online-draft
+```
+
+After one bounded execution, record the attempt and its verified result:
+
+```bash
+python3 scripts/agent_loop.py attempt \
+  --run-id lesson-02-online-draft \
+  --summary "generated one online draft inside the declared output root"
+python3 scripts/agent_loop.py result \
+  --run-id lesson-02-online-draft \
+  --result passed \
+  --summary "all declared criteria passed" \
+  --evidence lessons/boya-quasi-intermediate-i/lesson-02/10-design/pptx-draft/online/qa-report.json \
+  --all-criteria-passed
+python3 scripts/validate_workflow_state.py --run-id lesson-02-online-draft
+```
+
+Run packets stay under ignored `.agent/runs/<run-id>/`. They track agent
+execution, evidence hashes, retry budget and stop reasons only. They cannot
+approve lesson content, promote a draft, pass manual playback or rehearsal, or
+replace any lesson manifest.
 
 ## 《中级冲刺篇 I》现有生成器状态
 

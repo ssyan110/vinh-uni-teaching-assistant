@@ -109,21 +109,23 @@
     }
   },
   "online_face_boundary": {
-    "status": "reconstructed_from_approved_pptx; pending Adam confirmation",
+    "status": "confirmed_by_adam_2026-08-31",
+    "decision_record": "../storyboard/lesson-01-boundary-confirmation-2026-08-31.md",
+    "decision_scope": "content_routing_only; does_not_approve_source_teaching_design_teacher_manual_pptx_playback_rehearsal_or_release",
     "online": {
-      "slides": "1–72",
-      "observed_scope": "词语、三篇短文阅读、常用表达造句、综合准备、个人信息整理与课前检查。",
-      "source": "approved_online_pptx_and_notes"
+      "scope": "教材阅读、音档预听、词语理解、短文重点记录，以及课前个人资料与问题准备。",
+      "activities": ["教材阅读", "音档预听", "词语理解", "短文重点记录", "个人资料与问题准备"]
     },
     "face_to_face": {
-      "slides": "1–51",
-      "observed_scope": "听力练习、口语热身、三篇短文口头介绍、句式口语练习、综合表达与个人介绍。",
-      "source": "approved_face_to_face_pptx_and_notes"
+      "scope": "听力理解、同伴问答、资讯差活动、口语练习、个人发表、反馈与重做。",
+      "activities": ["听力理解", "同伴问答", "资讯差活动", "口语练习", "个人发表", "反馈与重做"]
     },
     "formal_contact_hours": null,
-    "note": "PPT 没有提供正式实体课时；不得由本草案推定固定节数或分钟数。"
+    "time_policy": "课外额外准备；学生自行安排；不设固定分钟数、不要求计时或追踪；不折抵、替代或缩减核准实体课时。",
+    "ratio_policy": "线上约三分之二、实体约三分之一只是内容配置估计，依本课教材内容量调整，不是学习时数、页数或验收比例。",
+    "note": "本记录不由 PPT 页数推定正式实体课时；正式实体课时仍须依教材内容量与学校正式课表核定。"
   },
   "answer_policy": "只记录 canonical source／参考答案 PDF 可核对的答案；开放题不得自行补写唯一答案。",
   "approval_state": "teaching_design_not_approved",
-  "next_gate": "Adam 确认来源语义、正式实体课时与线上／实体内容边界后，才能形成教师手册内容母版。"
+  "next_gate": "确认记录已完成；下一步仍须完成来源语义审核、正式实体课时核定、PBI 教学重组与教师手册内容母版。"
 }

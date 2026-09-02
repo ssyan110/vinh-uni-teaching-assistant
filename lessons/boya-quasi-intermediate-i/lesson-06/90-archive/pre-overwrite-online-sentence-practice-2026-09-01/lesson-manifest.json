@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "manifest_type": "lesson-authority",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-06",
+  "lesson_id": "lesson-06",
+  "lesson_number": 6,
+  "lesson_title": "大岛参加了学校的合唱团",
+  "language": "简体中文",
+  "authority_status": "two_pptx_user_approved_finalized_2026-09-01",
+  "content_status": "online_and_face_to_face_pptx_finalized_by_user_2026-09-01",
+  "delivery_status": "pptx_only_handoff_pending_full_package",
+  "authority_rule": "20-approved 中的批准 PPTX 原样锁定；完整交付仍须补齐来源、教师手册、配套材料、QA、rehearsal 与 release。",
+  "scope": {
+    "approval_scope": "two_current_pptx",
+    "printed_pages": "51–58",
+    "online_slide_count": 59,
+    "face_to_face_slide_count": 54
+  },
+  "authority": {
+    "pptx": {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-06/20-approved/pptx/lesson-06-在线预习.pptx",
+      "online_path": "lessons/boya-quasi-intermediate-i/lesson-06/20-approved/pptx/lesson-06-在线预习.pptx",
+      "status": "final_confirmed",
+      "approval_scope": "user_finalized_online_and_face_to_face_decks",
+      "version": "user-finalized-2026-09-01",
+      "slide_count": 59,
+      "online_slide_count": 59,
+      "sha256": "1a7115c65ee3c0e31bdf55b094e521a8ba5953cb58fac77ba6b7526fd18469dc",
+      "bytes": 22655779,
+      "face_to_face_path": "lessons/boya-quasi-intermediate-i/lesson-06/20-approved/pptx/lesson-06-实体课.pptx",
+      "face_to_face_status": "final_confirmed",
+      "face_to_face_version": "user-finalized-2026-09-01",
+      "face_to_face_slide_count": 54,
+      "face_to_face_sha256": "57e94eb107b7f8a7d1ac5ddf156e9a6e89f61c8b94c550b156170c0592859d0c",
+      "face_to_face_bytes": 20063841
+    }
+  },
+  "qa": {
+    "status": "two_pptx_static_qa_recorded",
+    "rehearsal": "pending_manual_acceptance",
+    "audio_playback": "pending_manual_acceptance"
+  },
+  "release": {
+    "status": "pending_manual_acceptance",
+    "delivery_status": "blocked",
+    "latest_release_path": null,
+    "latest_zip_path": null
+  }
+}

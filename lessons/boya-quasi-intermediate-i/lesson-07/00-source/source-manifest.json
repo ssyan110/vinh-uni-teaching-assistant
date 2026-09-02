@@ -19,17 +19,17 @@
   "approved_at": null,
   "canonical_source": {
     "path": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json",
-    "sha256": "ba48b06a41851b95177b501ebbfeb5c99edbf52e7945360ea148b61cb2cfc471",
+    "sha256": "c529512b98b62bdf8dc72e98605f5ec047ba969d7d365bb9c23da904fc4df45e",
     "status": "source_review_snapshot"
   },
-  "canonical_source_sha256": "ba48b06a41851b95177b501ebbfeb5c99edbf52e7945360ea148b61cb2cfc471",
+  "canonical_source_sha256": "c529512b98b62bdf8dc72e98605f5ec047ba969d7d365bb9c23da904fc4df45e",
   "source_pdf": {
     "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
     "sha256": "39899d0f400e187f57c16db821f8f4c207f936eae0e4fbfe3cab52c02bfea806",
     "total_pages": 134,
     "textbook_page_range": "59–67",
-    "pdf_page_range": "72–81",
-    "page_count_in_review": 10,
+    "pdf_page_range": "72–80",
+    "page_count_in_review": 9,
     "format": "scanned_image_pdf",
     "text_layer_status": "empty; visual review used"
   },
@@ -37,7 +37,7 @@
     "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
     "sha256": "3c21e1574b0187259769799d183eca78a60a515b5b7fce202eda9e9ade2c20b8",
     "total_pages": 33,
-    "pdf_page_range_in_review": "20–21",
+    "pdf_page_range_in_review": "21–22",
     "answer_status": "closed_answers_visual_checked; open_tasks_have_no_unique_answer"
   },
   "page_audit": {
@@ -46,9 +46,9 @@
     "status": "visual_first_pass"
   },
   "answer_audit": {
-    "path": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/audit/answer-pages-20-21-audit-draft.md",
-    "sha256": "ff6c51bcc04c7e31a30bf1dd80e079960be94eae2eecdc216ec68b8fdcb358da",
-    "status": "visual_first_pass"
+    "path": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/audit/answer-pages-21-22-correction-2026-09-02.md",
+    "sha256": "0e63fdffe2d013587b3154755c0f0414d260390e44893559ae64f8df1ce8704a",
+    "status": "visual_correction_recorded"
   },
   "qr_source": {
     "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-07-pdf-page-072.png",
@@ -69,14 +69,14 @@
     "status": "technical_pass_semantic_review_pending"
   },
   "listening_exercise_contract": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/listening-exercise-contract.json",
-  "listening_exercise_contract_sha256": "1fd3a4f5e019de8d2d57a9dd7acd2973c12cd88c4176543071f51afbee6d87fd",
+  "listening_exercise_contract_sha256": "4511d13f46e32771e6f0c63e37a2f409a3a0cd3cfbf7b00afbcb1092ae7cafba",
   "listening_exercise_contract_detail": {
     "status": "draft_validated",
     "exercise_count": 9
   },
   "review_evidence": {
     "page_range": "P59–P67",
-    "answer_page_range": "答案 PDF P20–P21",
+    "answer_page_range": "答案 PDF P21–P22",
     "vocabulary_count": 26,
     "proper_noun_count": 0,
     "short_text_count": 3,

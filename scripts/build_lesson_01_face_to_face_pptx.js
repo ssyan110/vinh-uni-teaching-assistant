@@ -19,7 +19,8 @@ const pageRoot = path.join(assetRoot, 'textbook-pages');
 // The gate is intentionally run before creating the draft output directory.
 if (process.env.BOYA_RECOVERY_REBUILD !== '1') {
   execFileSync(process.env.BOYA_PYTHON || 'python3', [
-    path.join(root, 'scripts/production_gate.py'), '--purpose', 'pptx', '--output-dir', outputDir
+    path.join(root, 'scripts/production_gate.py'), '--purpose', 'pptx', '--stage', 'draft',
+    '--lesson-key', 'boya-quasi-intermediate-i:lesson-01', '--output-dir', path.join(lessonRoot, '10-design/pptx-draft')
   ], { stdio: 'inherit' });
 }
 
@@ -30,11 +31,13 @@ const H = 7.5;
 const FONT_CJK = design.fonts.cjk;
 const FONT_LATIN = design.fonts.latin;
 const C = { ...design.colors };
+const T = design.pptTypography;
+const pageMarkers = {};
 
 function addText(slide, text, x, y, w, h, opts = {}) {
   slide.addText(text, {
     x, y, w, h, fontFace: opts.fontFace || FONT_CJK,
-    fontSize: opts.fontSize || 24, color: opts.color || C.ink,
+    fontSize: opts.fontSize || T.body_pt, color: opts.color || C.ink,
     margin: opts.margin === undefined ? 0.04 : opts.margin,
     breakLine: false, fit: 'shrink', valign: opts.valign || 'mid',
     align: opts.align || 'left', bold: opts.bold || false,
@@ -43,14 +46,17 @@ function addText(slide, text, x, y, w, h, opts = {}) {
   });
 }
 
-function addHeader(slide, n, pageLabel, bg = C.paper) {
-  slide.background = { color: bg };
-  addText(slide, '第一课｜丽丽是独生女', 0.65, 0.25, 4.5, 0.28, { fontSize: 20, color: C.slate, bold: true });
-  addText(slide, String(n).padStart(2, '0'), 12.0, 0.25, 0.65, 0.28, { fontSize: 20, color: C.slate, align: 'right', fontFace: FONT_LATIN });
+function addHeader(slide, n, pageLabel, bg = C.slideBackground) {
+  // The finalized L1-L6 decks use a pure-white canvas. Keep the legacy bg
+  // parameter for call-site compatibility, but never let it control the slide.
+  slide.background = { color: C.slideBackground };
+  if (pageLabel) pageMarkers[String(n)] = pageLabel;
+  addText(slide, '第一课｜丽丽是独生女', 0.65, 0.25, 4.5, 0.28, { fontSize: T.header_pt, color: C.slate, bold: true });
+  addText(slide, String(n).padStart(2, '0'), 12.0, 0.25, 0.65, 0.28, { fontSize: T.header_pt, color: C.slate, align: 'right', fontFace: FONT_LATIN });
   slide.addShape('line', { x: 0.65, y: 0.69, w: 12.0, h: 0, line: { color: C.line, pt: 1 } });
   if (pageLabel) slide.addText([
-    { text: '教材 ', options: { fontFace: FONT_CJK, fontSize: 20, color: C.slate } },
-    { text: pageLabel.replace(/^教材\s*/, ''), options: { fontFace: FONT_LATIN, fontSize: 20, color: C.slate } }
+    { text: '教材 ', options: { fontFace: FONT_CJK, fontSize: T.page_marker_pt, color: C.slate } },
+    { text: pageLabel.replace(/^教材\s*/, ''), options: { fontFace: FONT_LATIN, fontSize: T.page_marker_pt, color: C.slate } }
   ], {
     x: 10.55, y: 7.02, w: 2.1, h: 0.28, margin: 0, fit: 'shrink', valign: 'mid', align: 'right', lang: 'zh-CN',
     objectName: `Textbook Page Marker ${n}`
@@ -63,8 +69,8 @@ function addPill(slide, text, x, y, w, color = C.teal) {
 }
 
 function addTitle(slide, title, subtitle = '') {
-  addText(slide, title, 0.72, 0.98, 8.0, 0.62, { fontSize: 34, bold: true, valign: 'top' });
-  if (subtitle) addText(slide, subtitle, 0.75, 1.66, 8.6, 0.42, { fontSize: 24, color: C.slate, valign: 'top' });
+  addText(slide, title, 0.72, 0.98, 8.0, 0.62, { fontSize: T.slide_title_pt, bold: true, valign: 'top' });
+  if (subtitle) addText(slide, subtitle, 0.75, 1.66, 8.6, 0.42, { fontSize: T.subtitle_pt, color: C.slate, valign: 'top' });
 }
 
 function addImage(slide, filename, x, y, w, h) {
@@ -108,7 +114,7 @@ function addSteps(slide, steps, x = 0.85, y = 2.35) {
 
 function addCard(slide, text, x, y, w, h, fill = C.white, opts = {}) {
   slide.addShape('roundRect', { x, y, w, h, rectRadius: 0.08, fill: { color: fill }, line: { color: opts.line || C.line, pt: 1.1 } });
-  addText(slide, text, x + 0.16, y + 0.12, w - 0.32, h - 0.24, { fontSize: opts.fontSize || 23, valign: opts.valign || 'top', bold: opts.bold || false, color: opts.color || C.ink });
+  addText(slide, text, x + 0.16, y + 0.12, w - 0.32, h - 0.24, { fontSize: opts.fontSize || T.body_pt, valign: opts.valign || 'top', bold: opts.bold || false, color: opts.color || C.ink });
 }
 
 function addBullets(slide, items, x, y, w, h, opts = {}) {
@@ -146,10 +152,38 @@ function addPromptSlide(n, title, prompt, page, track = null, subtitle = '') {
 }
 
 function addQuestionSlide(n, question, page = null, image = null) {
-  const s = slideBase(n, '请你说说', '', page, C.paper);
+  const s = slideBase(n, '简单题目问答', '', page, C.paper);
   addText(s, question, image ? 0.95 : 1.0, image ? 2.45 : 2.6, image ? 7.7 : 11.3, image ? 1.55 : 1.35, { fontSize: 34, bold: true, align: image ? 'left' : 'center', valign: 'mid' });
   if (image) addImage(s, image, 9.0, 1.75, 3.35, 3.7);
   notes(s, '先个人准备，再两人互说；教师观察学生是否能说出原因。');
+  return s;
+}
+
+function exerciseItems(section, key) {
+  const value = section?.exercises?.[key];
+  if (Array.isArray(value)) return value.map((item) => String(item));
+  if (value && Array.isArray(value.items)) return value.items.map((item) => String(item));
+  return [];
+}
+
+function exerciseInstruction(section, key, fallback) {
+  const value = section?.exercises?.[key];
+  if (value && typeof value === 'object' && value.instruction) return String(value.instruction);
+  return fallback;
+}
+
+function shortTextLabel(index) {
+  return ['一', '二', '三'][index] || String(index + 1);
+}
+
+function addTextQuestionSlide(n, section, sectionIndex, key, title, fallbackInstruction) {
+  const items = exerciseItems(section, key);
+  if (!items.length) throw new Error(`短文${shortTextLabel(sectionIndex)}缺少${title}`);
+  const s = slideBase(n, title, '', `教材 P${section.printed_pages.join('–')}`, C.paper);
+  addAudio(s, section.audio);
+  addText(s, exerciseInstruction(section, key, fallbackInstruction), 0.85, 1.55, 11.4, 0.54, { fontSize: 23, color: C.teal, bold: true, align: 'center' });
+  addBullets(s, items, 0.95, 2.22, 11.2, 3.85, { fontSize: items.length > 4 ? 21 : 24 });
+  notes(s, `短文（${shortTextLabel(sectionIndex)}）${title}；学生使用 ${section.audio} 音频完成任务。`);
   return s;
 }
 
@@ -356,6 +390,7 @@ addPromptSlide(pptx._slides.length + 1, '听力练习', '先看题、抓关键�
 
 */
 
+/* LEGACY CURRENT BUILD — retained as historical reference only.
 // Current slide build: route image, Can-Do, clear listening labels, dividers,
 // exact printed page references, and spacious image-supported speaking tasks.
 {
@@ -480,14 +515,187 @@ addDividerSlide(pptx._slides.length + 1, '综合表达', 'divider-comprehensive.
 addPromptSlide(pptx._slides.length + 1, '听力练习', '先看题、抓关键词，再听并记重点，最后回答。', '教材 P7–8', '1-7', '短文（二）');
 addPromptSlide(pptx._slides.length + 1, '听力练习', '先看题、抓关键词，再听并记重点，最后回答。', '教材 P8–9', '1-8', '短文（三）');
 
-const pageMarkers = {
-  '6': '教材 P3', '7': '教材 P3', '8': '教材 P4', '9': '教材 P4–5',
-  '12': '教材 P5', '18': '教材 P5–6', '21': '教材 P6', '22': '教材 P6',
-  '24': '教材 P6', '25': '教材 P6', '26': '教材 P6', '27': '教材 P6', '28': '教材 P6', '29': '教材 P6',
-  '31': '教材 P7', '33': '教材 P8', '34': '教材 P8', '35': '教材 P8', '36': '教材 P8', '37': '教材 P8', '38': '教材 P7',
-  '40': '教材 P8', '42': '教材 P9', '43': '教材 P9', '44': '教材 P9', '45': '教材 P9',
-  '47': '教材 P10', '48': '教材 P10', '49': '教材 P11', '50': '教材 P7–8', '51': '教材 P8–9'
-};
+*/
+
+// Current slide build follows course/boya-face-to-face-order-contract.json.
+{
+  const n = pptx._slides.length + 1;
+  const s = pptx.addSlide(); addHeader(s, n, null, C.paper);
+  addPill(s, '实体课', 0.78, 1.08, 1.3, C.teal);
+  addText(s, '丽丽是独生女', 0.78, 1.72, 6.0, 0.82, { fontSize: 44, bold: true });
+  addText(s, '听一听，问一问，说一说。', 0.82, 2.7, 5.8, 0.5, { fontSize: 25, color: C.slate });
+  addImage(s, 'lesson-01-cover-family-work-hobby.png', 7.05, 1.08, 5.55, 4.7);
+  notes(s, '开场：先看图说出家庭、工作和爱好三个主题。');
+}
+{
+  const n = pptx._slides.length + 1;
+  const s = slideBase(n, '今天的学习路线', '', null, C.paper);
+  const route = path.join(assetRoot, 'learning-route-user-supplied-transparent-v4.png');
+  if (fs.existsSync(route)) s.addImage({ path: route, x: 0.72, y: 1.25, w: 11.9, h: 5.85 });
+  else addSteps(s, ['复习词语', '开口热身', '听懂课文', '整理信息', '介绍自己'], 0.85, 2.55);
+  notes(s, '按流程推进：复习词语 → 开口热身 → 短文听力 → 题目问答 → 口语练习 → 句式练习 → 综合表达。');
+}
+addCanDoSlide(pptx._slides.length + 1);
+{
+  const n = pptx._slides.length + 1;
+  const s = slideBase(n, '先想一想', '毕业以后，你会不会离开家乡？', null, C.paper);
+  addImage(s, 'lesson-01-cover-family-work-hobby.png', 8.55, 1.18, 3.95, 3.55);
+  addBullets(s, ['你最期待什么？', '你最担心什么？', '你的父母会怎么想？'], 0.96, 2.22, 6.6, 2.25, { fontSize: 30 });
+  addText(s, '参考句式：我想……，因为……', 0.98, 5.18, 7.15, 0.54, { fontSize: 26, color: C.coral, bold: true });
+  notes(s, '启发性暖身。两人先说，再邀请学生分享。');
+}
+
+const orderedShortTextSections = [sections.short_text_1, sections.short_text_2, sections.short_text_3];
+const orderedShortTextImages = ['divider-family.png', 'divider-work.png', 'divider-hobby.png'];
+const orderedShortTextExpressions = [
+  ['出生在……', '……是……', '什么', '为……担心', '如果……就……'],
+  ['从……到……', '为了', '越来越', '受……欢迎', '对……满意'],
+  ['不仅……而且……', '除了……还……／除了……也……', '因为……所以……', '对……有好处／有帮助']
+];
+
+function addL1TextUnit(index) {
+  const section = orderedShortTextSections[index];
+  const label = shortTextLabel(index);
+  const next = () => pptx._slides.length + 1;
+  addDividerSlide(next(), `短文（${label}）`, orderedShortTextImages[index], '');
+
+  if (index === 0) {
+    // These source-listed foundation listening tasks stay in the deck, but
+    // they no longer push the first short-text divider away from slide 5.
+    addDividerSlide(next(), '听力练习', 'symbolic-listening.png', '');
+    addPromptSlide(next(), '听力练习', '请看教材第3页，听一听这些词语。', '教材 P3', '1-2', '关于家庭生活的词语');
+    addPromptSlide(next(), '听力练习', '请看教材第3页，听一听这些词语。', '教材 P3', '1-2', '关于工作的词语');
+    addPromptSlide(next(), '听力题目', '请看教材第4页的题目。', '教材 P4', '1-3', '听句子，判断对错');
+    addPromptSlide(next(), '听力题目', '请看教材第4—5页的题目和选项。', '教材 P4–5', '1-4', '听小对话，选择答案');
+    [
+      ['你觉得大学生活怎么样？为什么？', 'university-weekend.png'],
+      ['你星期五晚上常做什么？为什么？', 'university-weekend.png'],
+      ['你自己洗衣服吗？为什么？', 'daily-routines-collage.png'],
+      ['你晚睡觉吗？为什么？', 'daily-routines-collage.png'],
+      ['你有什么爱好？为什么你喜欢？', 'daily-routines-collage.png'],
+      ['你自己做饭吗？为什么？', 'daily-routines-collage.png'],
+      ['你常拍照吗？为什么？', 'daily-routines-collage.png']
+    ].forEach(([question, image]) => addQuestionSlide(next(), question, null, image));
+    addPromptSlide(next(), '听力题目', '请看教材第5页的问题。', '教材 P5', '1-5', '听句子，回答问题');
+  }
+
+  addPromptSlide(next(), '听力练习', '先看题、抓关键词，再听并记重点，最后回答。', `教材 P${section.printed_pages.join('–')}`, section.audio, `短文（${label}）`);
+  addTextQuestionSlide(next(), section, index, 'second_listen', '听力题目', '听第二遍，回答问题。');
+  addTextQuestionSlide(next(), section, index, 'first_listen', '简单题目问答', '听第一遍，简单回答问题。');
+  addDividerSlide(next(), '口语练习', 'oral-practice-divider.png', '');
+
+  const intro = index === 0
+    ? ['介绍丽丽', '现在，请你用6—8句介绍丽丽。', ['说说她的家庭情况。', '她毕业后的打算、父母的想法和她自己的想法怎么样？'], '参考词语：毕业　离开　满意\n常用表达：出生在……　为……担心　如果……就……']
+    : index === 1
+      ? ['介绍短文', '请你用6—8句话介绍丽丽的工作情况。', ['她在哪里工作？每天工作多长时间？', '她的工作态度、工作成绩和客户、老板的看法怎么样？'], '参考词语：毕业　工作　努力\n常用表达：从……到……　越来越　对……满意']
+      : ['介绍短文', '请你用6—8句话介绍丽丽的爱好。', ['她喜欢做什么？她做饭怎么样？', '拍照片对她的工作有什么帮助？'], '参考词语：爱好　做饭　拍照片\n常用表达：不仅……而且……　除了……还……　对……有帮助'];
+  {
+    const s = slideBase(next(), intro[0], '', `教材 P${section.printed_pages[section.printed_pages.length - 1]}`, C.paper);
+    addText(s, intro[1], 1.0, 1.78, 11.3, 0.6, { fontSize: 31, bold: true, align: 'center' });
+    addBullets(s, intro[2], 1.0, 2.55, 11.2, 1.4, { fontSize: 28 });
+    addCard(s, intro[3], 1.2, 4.45, 10.8, 1.25, C.lilac, { fontSize: 27, bold: true });
+    notes(s, `学生完成短文（${label}）介绍；开放题不设唯一答案。`);
+  }
+  {
+    const s = slideBase(next(), `短文（${label}）`, '', `教材 P${section.printed_pages[section.printed_pages.length - 1]}`, C.paper);
+    addText(s, `你说的跟短文（${label}）哪里不一样？`, 1.0, 2.55, 11.3, 1.0, { fontSize: 36, bold: true, align: 'center', valign: 'mid' });
+    notes(s, `学生比较自己的介绍与教材短文（${label}）的信息。`);
+  }
+  addDividerSlide(next(), '句式练习', 'symbolic-sentence-pattern.png', '');
+  orderedShortTextExpressions[index].forEach((expression) => addExpressionSlide(next(), expression, `教材 P${section.printed_pages[section.printed_pages.length - 1]}`));
+  {
+    const s = slideBase(next(), '请你说说', '', `教材 P${section.printed_pages[section.printed_pages.length - 1]}`, C.paper);
+    addImage(s, orderedShortTextImages[index], 9.05, 1.75, 3.2, 3.65);
+    addText(s, index === 0
+      ? '请你说说你的家庭情况，必须使用5个课本中的词语和三个句式。'
+      : index === 1
+        ? '说说你想做的工作和为什么，必须使用5个课本中的词语和三个句式。'
+        : '说说你的爱好和它带来的帮助，必须使用5个课本中的词语和三个句式。',
+    0.95, 2.35, 7.7, 1.6, { fontSize: 31, bold: true, align: 'center', valign: 'mid' });
+    notes(s, `短文（${label}）口语输出；学生先个人准备，再两人互说。`);
+  }
+}
+
+orderedShortTextSections.forEach((_, index) => addL1TextUnit(index));
+
+addDividerSlide(pptx._slides.length + 1, '综合表达', 'divider-comprehensive.png');
+{
+  const s = slideBase(pptx._slides.length + 1, '请你介绍丽丽', '', '教材 P10', C.paper);
+  addImage(s, 'divider-comprehensive.png', 9.05, 1.75, 3.2, 3.65);
+  addText(s, '请填表后，说一说丽丽的家庭、工作、爱好。', 0.95, 2.45, 7.7, 1.3, { fontSize: 32, bold: true, align: 'center', valign: 'mid' });
+  notes(s, '学生完成教材 P10 的三栏信息整理。');
+}
+{
+  const s = slideBase(pptx._slides.length + 1, '根据课本，回答问题', '', '教材 P10', C.paper);
+  addImage(s, 'divider-comprehensive.png', 9.05, 1.75, 3.2, 3.65);
+  addBullets(s, [
+    '丽丽的父母为什么担心？', '丽丽为什么去北京？', '丽丽觉得新工作怎么样？',
+    '为什么丽丽有时候很晚才能睡觉？', '丽丽喜欢做哪些事？', '丽丽的哪个爱好对工作有帮助？'
+  ], 0.95, 1.7, 7.7, 4.4, { fontSize: 27 });
+  notes(s, '学生逐题回答；开放题不设唯一答案。');
+}
+{
+  const s = slideBase(pptx._slides.length + 1, '请你说说', '', '教材 P11', C.paper);
+  addImage(s, 'speaking-practice.png', 9.05, 1.75, 3.2, 3.65);
+  addText(s, '① 我的家庭', 1.05, 1.72, 3.0, 0.45, { fontSize: 25, color: C.teal, bold: true });
+  addCard(s, '____________________________', 1.0, 2.15, 7.35, 0.72, C.mint, { fontSize: 30, bold: true });
+  addText(s, '② 我的学习／工作', 1.05, 3.05, 3.4, 0.45, { fontSize: 25, color: C.purple, bold: true });
+  addCard(s, '____________________________', 1.0, 3.48, 7.35, 0.72, C.lilac, { fontSize: 30, bold: true });
+  addText(s, '③ 我的兴趣爱好', 1.05, 4.38, 3.2, 0.45, { fontSize: 25, color: C.coral, bold: true });
+  addCard(s, '____________________________', 1.0, 4.81, 7.35, 0.72, C.yellow, { fontSize: 30, bold: true });
+  addText(s, '必须使用10个课本中的词语和5个句式。说8—10句。', 1.0, 6.05, 7.35, 0.42, { fontSize: 24, bold: true, align: 'center', color: C.coral });
+  notes(s, '每位学生完成 8—10 句个人介绍；这是本课实体课的最终口语产出。');
+}
+
+function slideXmlText(xml) {
+  return [...String(xml).matchAll(/<a:t>([\s\S]*?)<\/a:t>/g)].map((match) => match[1]).join(' | ');
+}
+
+function findSlide(texts, start, predicate) {
+  for (let index = start; index < texts.length; index += 1) {
+    if (predicate(texts[index])) return index;
+  }
+  return -1;
+}
+
+function assertL1FaceOrder(filePath) {
+  const texts = [];
+  for (let index = 1; index <= pptx._slides.length; index += 1) {
+    const xml = execFileSync('unzip', ['-p', filePath, `ppt/slides/slide${index}.xml`], { encoding: 'utf8' });
+    texts.push(slideXmlText(xml));
+  }
+  const firstShort = findSlide(texts, 0, (value) => value.includes('短文（一）') && !value.includes('你说的跟短文（一）'));
+  if (firstShort !== 4) throw new Error(`第一课短文（一）必须是暖身后的第一张内容页，实际为第${firstShort + 1}页`);
+  let cursor = firstShort;
+  orderedShortTextSections.forEach((section, index) => {
+    const label = shortTextLabel(index);
+    const divider = findSlide(texts, cursor, (value) => value.includes(`短文（${label}）`) && !value.includes('你说的跟'));
+    if (divider !== cursor && index === 0) throw new Error(`第一课短文（一）单元起点错误`);
+    const nextLabel = ['二', '三'][index];
+    const unitEnd = nextLabel
+      ? findSlide(texts, divider + 1, (value) => value.includes(`短文（${nextLabel}）`) && !value.includes('你说的跟'))
+      : findSlide(texts, divider + 1, (value) => value.includes('综合表达'));
+    const end = unitEnd < 0 ? texts.length : unitEnd;
+    const strategy = findSlide(texts, divider + 1, (value) => value.includes('听力练习') && value.includes('先看题、抓关键词') && value.includes(`短文（${label}）`));
+    if (strategy < 0 || strategy >= end) throw new Error(`第一课短文${label}缺少听力练习`);
+    const second = exerciseItems(section, 'second_listen');
+    const first = exerciseItems(section, 'first_listen');
+    const listeningQuestions = findSlide(texts, strategy + 1, (value) => value.includes('听力题目') && value.includes(second[0]));
+    if (listeningQuestions < 0 || listeningQuestions >= end) throw new Error(`第一课短文${label}缺少听力题目`);
+    const simpleQuestions = findSlide(texts, listeningQuestions + 1, (value) => value.includes('简单题目问答') && value.includes(first[0]));
+    if (simpleQuestions < 0 || simpleQuestions >= end) throw new Error(`第一课短文${label}缺少简单题目问答`);
+    const oral = findSlide(texts, simpleQuestions + 1, (value) => value.includes('口语练习'));
+    const introduction = findSlide(texts, oral + 1, (value) => value.includes('介绍'));
+    const compare = findSlide(texts, introduction + 1, (value) => value.includes(`你说的跟短文（${label}）哪里不一样？`));
+    const expression = findSlide(texts, compare + 1, (value) => value.includes('句式练习'));
+    const output = findSlide(texts, expression + 1, (value) => value.includes('请你说说'));
+    if (oral < 0 || oral >= end || introduction < 0 || introduction >= end || compare < 0 || compare >= end || expression < 0 || expression >= end || output < 0 || output >= end) {
+      throw new Error(`第一课短文${label}单元顺序不完整`);
+    }
+    cursor = end;
+  });
+  if (findSlide(texts, cursor, (value) => value.includes('综合表达')) < 0) throw new Error('第一课短文单元后缺少综合表达');
+}
 
 const manifest = {
   artifact: 'lesson-01-实体课',
@@ -497,6 +705,7 @@ const manifest = {
   output: path.relative(root, outputPath),
   student_language: '简体中文',
   fonts: { cjk: FONT_CJK, latin: FONT_LATIN, min_visible_pt: 20 },
+  face_order_contract: 'course/boya-face-to-face-order-contract.json',
   audio_tracks: ['1-2', '1-3', '1-4', '1-5', '1-6', '1-7', '1-8'],
   audio_tracks_not_available: [],
   textbook_image_assets: [],
@@ -515,6 +724,7 @@ const manifest = {
 
 (async () => {
   await pptx.writeFile({ fileName: outputPath });
+  assertL1FaceOrder(outputPath);
   manifest.sha256 = crypto.createHash('sha256').update(fs.readFileSync(outputPath)).digest('hex');
   fs.writeFileSync(path.join(outputDir, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`);
   console.log(JSON.stringify(manifest, null, 2));

@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="荣市大学《博雅汉语听说：准中级加速篇 I》11周整学期教师教案">
+  <title>博雅汉语听说・准中级加速篇 I｜11周整学期教师教案</title>
+  <style>
+    :root {
+      --ink: #1e2b36;
+      --muted: #667582;
+      --paper: #fbfaf6;
+      --surface: #ffffff;
+      --line: #dce3e6;
+      --navy: #17324d;
+      --blue: #2e6f95;
+      --mint: #dcefe9;
+      --mint-dark: #2b6c62;
+      --coral: #c66a56;
+      --coral-soft: #f8e7e1;
+      --gold: #c6953d;
+      --gold-soft: #fbf1d9;
+      --purple: #635784;
+      --purple-soft: #eeeafa;
+      --shadow: 0 14px 38px rgba(27, 47, 61, .08);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: KaiTi, "STKaiti", serif;
+      font-size: 18px;
+      line-height: 1.78;
+    }
+    a { color: var(--blue); }
+    a:hover { color: var(--coral); }
+    h1, h2, h3, h4, p { margin-top: 0; }
+    h1, h2, h3, h4 { color: var(--navy); line-height: 1.28; }
+    h1 { font-size: clamp(2rem, 4vw, 3.6rem); letter-spacing: -.045em; margin-bottom: 16px; }
+    h2 { font-size: clamp(1.45rem, 2vw, 2rem); margin-bottom: 18px; }
+    h3 { font-size: 1.24rem; margin-bottom: 10px; }
+    h4 { font-size: 1.08rem; margin-bottom: 7px; }
+    small { color: var(--muted); }
+    .app-shell { display: grid; grid-template-columns: 278px minmax(0, 1fr); min-height: 100vh; }
+    .sidebar { position: sticky; top: 0; height: 100vh; overflow: auto; padding: 28px 20px; background: var(--navy); color: #eaf1f4; }
+    .brand { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 26px; }
+    .brand-mark { width: 30px; height: 30px; border: 2px solid #a9d9ce; border-radius: 9px 9px 9px 2px; transform: rotate(-8deg); flex: 0 0 auto; }
+    .brand strong { display: block; font-size: 1.06rem; letter-spacing: .03em; }
+    .brand span { display: block; color: #a9bdc8; font-size: .85rem; margin-top: 3px; }
+    .nav-label { color: #93acb8; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; margin: 22px 0 7px; }
+    .sidebar nav a { display: block; color: #dfecef; text-decoration: none; font-size: .98rem; padding: 8px 10px; border-radius: 9px; }
+    .sidebar nav a:hover { background: rgba(220,239,233,.12); color: #fff; }
+    .sidebar .note { margin-top: 26px; padding: 13px 12px; border: 1px solid rgba(220,239,233,.24); border-radius: 12px; color: #c4d5da; font-size: .88rem; }
+    .sidebar button { width: 100%; border: 1px solid rgba(220,239,233,.34); background: transparent; color: #eaf1f4; border-radius: 9px; padding: 8px 10px; cursor: pointer; margin-top: 12px; font: inherit; }
+    .sidebar button:hover { background: rgba(220,239,233,.12); }
+    main { min-width: 0; }
+    .hero { padding: 70px clamp(24px, 6vw, 92px) 44px; background: linear-gradient(135deg, #eef6f3 0%, #fbfaf6 58%, #f9e8e1 100%); border-bottom: 1px solid var(--line); }
+    .eyebrow { color: var(--coral); font-size: .88rem; font-weight: 800; letter-spacing: .14em; margin-bottom: 13px; }
+    .hero .subtitle { max-width: 840px; font-size: 1.12rem; color: #435666; margin-bottom: 22px; }
+    .hero-meta { display: flex; gap: 9px; flex-wrap: wrap; align-items: center; }
+    .pill { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 5px 10px; background: var(--surface); border: 1px solid var(--line); color: var(--navy); font-size: .92rem; font-weight: 700; }
+    .pill.status { background: var(--gold-soft); border-color: #e8cb8d; color: #755319; }
+    .content { max-width: 1440px; padding: 38px clamp(24px, 6vw, 92px) 90px; }
+    .section { scroll-margin-top: 20px; margin-top: 60px; }
+    .section:first-child { margin-top: 0; }
+    .section-heading { display: flex; gap: 16px; align-items: flex-end; justify-content: space-between; margin-bottom: 18px; }
+    .section-heading p { color: var(--muted); max-width: 740px; margin: 0; }
+    .grid { display: grid; gap: 16px; }
+    .grid.stats { grid-template-columns: repeat(4, minmax(0, 1fr)); margin: -2px 0 28px; }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 21px; }
+    .stat { min-height: 130px; position: relative; overflow: hidden; }
+    .stat:after { content: ""; position: absolute; width: 90px; height: 90px; right: -30px; top: -30px; border-radius: 50%; background: var(--mint); opacity: .7; }
+    .stat:nth-child(2):after { background: var(--coral-soft); }
+    .stat:nth-child(3):after { background: var(--gold-soft); }
+    .stat:nth-child(4):after { background: var(--purple-soft); }
+    .stat .number { position: relative; z-index: 1; display: block; font-size: 2.15rem; font-weight: 850; letter-spacing: -.05em; color: var(--navy); }
+    .stat .label { position: relative; z-index: 1; display: block; font-size: 1rem; color: var(--muted); }
+    .callout { border-left: 4px solid var(--coral); background: var(--coral-soft); padding: 15px 18px; border-radius: 0 12px 12px 0; margin: 17px 0; }
+    .callout.mint { border-color: var(--mint-dark); background: var(--mint); }
+    .callout.gold { border-color: var(--gold); background: var(--gold-soft); }
+    .callout p:last-child { margin-bottom: 0; }
+    .muted { color: var(--muted); }
+    .small { color: var(--muted); font-size: .95rem; line-height: 1.6; }
+    .compact { margin: 0; padding-left: 1.2em; }
+    .compact li + li { margin-top: 5px; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 11px; }
+    .tag { display: inline-flex; align-items: center; padding: 3px 8px; border-radius: 999px; background: #eff4f5; color: #3c5a6a; font-size: .9rem; }
+    .tag.mint { background: var(--mint); color: var(--mint-dark); }
+    .tag.coral { background: var(--coral-soft); color: #9d4c3a; }
+    .tag.gold { background: var(--gold-soft); color: #795c22; }
+    .tag.purple { background: var(--purple-soft); color: var(--purple); }
+    table { width: 100%; border-collapse: collapse; font-size: 1rem; }
+    th, td { padding: 11px 12px; border-bottom: 1px solid var(--line); vertical-align: top; text-align: left; }
+    th { color: var(--navy); background: #f2f6f6; font-size: .96rem; letter-spacing: .04em; white-space: nowrap; }
+    tr:last-child td { border-bottom: 0; }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 13px; background: var(--surface); box-shadow: var(--shadow); }
+    .table-wrap table { min-width: 920px; }
+    .session-no { font-weight: 850; font-size: 1.16rem; color: var(--coral); white-space: nowrap; }
+    .session-title { font-weight: 800; color: var(--navy); }
+    .source-ref { color: var(--purple); font-size: .92rem; }
+    .flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin: 20px 0; }
+    .flow-step { min-height: 126px; padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); position: relative; }
+    .flow-step:not(:last-child):after { content: "→"; position: absolute; right: -14px; top: 42px; color: var(--coral); font-size: 1.5rem; z-index: 2; }
+    .flow-step strong { display: block; color: var(--navy); font-size: 1rem; }
+    .flow-step span { display: block; color: var(--muted); font-size: .92rem; margin-top: 5px; }
+    details { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); margin-bottom: 13px; overflow: hidden; }
+    details summary { cursor: pointer; list-style: none; padding: 18px 21px; display: flex; gap: 14px; align-items: center; justify-content: space-between; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary:after { content: "+"; color: var(--coral); font-size: 1.5rem; font-weight: 500; }
+    details[open] summary:after { content: "−"; }
+    .summary-main { min-width: 0; }
+    .summary-kicker { color: var(--coral); font-size: .86rem; font-weight: 800; letter-spacing: .12em; }
+    .summary-title { display: block; color: var(--navy); font-size: 1.22rem; font-weight: 850; margin-top: 4px; }
+    .summary-sub { display: block; color: var(--muted); font-size: .96rem; margin-top: 3px; }
+    .details-body { border-top: 1px solid var(--line); padding: 21px; }
+    .period-table { min-width: 960px; }
+    .period-table th:first-child { width: 82px; }
+    .period-table td:first-child { font-weight: 850; color: var(--coral); white-space: nowrap; }
+    .period-table td:nth-child(2) { font-weight: 700; color: var(--navy); width: 24%; }
+    .period-table td:nth-child(4) { width: 25%; color: var(--muted); font-size: .93rem; }
+    .evidence { display: inline-block; margin-top: 7px; padding: 3px 7px; border-radius: 7px; background: var(--mint); color: var(--mint-dark); font-size: .9rem; font-weight: 750; }
+    .mini-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .mini-box { padding: 13px 14px; background: #f7f9f8; border-radius: 11px; border: 1px solid #e5ecea; }
+    .mini-box strong { display: block; color: var(--navy); font-size: .94rem; margin-bottom: 4px; }
+    .mini-box span { color: var(--muted); font-size: .95rem; }
+    .lesson-card { height: 100%; display: flex; flex-direction: column; }
+    .lesson-card .lesson-head { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; border-bottom: 1px solid var(--line); padding-bottom: 13px; margin-bottom: 14px; }
+    .lesson-code { color: var(--coral); font-size: .92rem; font-weight: 850; letter-spacing: .1em; }
+    .lesson-page { color: var(--muted); font-size: .9rem; text-align: right; }
+    .lesson-card .push { margin-top: auto; }
+    .fact { border: 1px solid var(--line); border-radius: 11px; padding: 11px 12px; background: #fafcfc; margin: 11px 0; }
+    .fact b { display: inline-block; width: 26px; color: var(--coral); }
+    .fact span { font-size: .95rem; color: #465c69; }
+    .checklist { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px 18px; margin: 0; padding: 0; list-style: none; }
+    .checklist li { position: relative; padding-left: 25px; font-size: 1rem; }
+    .checklist li:before { content: "□"; position: absolute; left: 0; color: var(--coral); font-size: 1.22rem; line-height: 1.35; }
+    footer { margin-top: 70px; padding: 25px 0 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+    .search-bar { display: flex; gap: 10px; margin: 16px 0; }
+    .search-bar input { width: min(560px, 100%); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font: inherit; background: var(--surface); color: var(--ink); }
+    .search-bar input:focus { outline: 3px solid rgba(46,111,149,.16); border-color: var(--blue); }
+    [hidden] { display: none !important; }
+    @media (max-width: 1050px) { .app-shell { grid-template-columns: 220px minmax(0, 1fr); } .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); } .flow-step:nth-child(2):after { display: none; } .flow-step:nth-child(4):after { display: none; } }
+    @media (max-width: 760px) { .app-shell { display: block; } .sidebar { position: relative; height: auto; padding: 19px 20px; } .sidebar nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 6px; } .sidebar .note, .sidebar button { display: none; } .hero { padding: 42px 22px 32px; } .content { padding: 28px 18px 60px; } .grid.stats, .grid.two, .grid.three { grid-template-columns: 1fr; } .flow { grid-template-columns: 1fr; } .flow-step:after { display: none !important; } .mini-grid, .checklist { grid-template-columns: 1fr; } .section-heading { display: block; } .section-heading p { margin-top: 7px; } }
+    @media print { body { background: #fff; color: #111; } .sidebar, .search-bar, .hero-meta button { display: none !important; } .app-shell { display: block; } .hero { padding: 25px 0; background: #fff; border-bottom: 1px solid #aaa; } .content { padding: 20px 0; max-width: none; } .card, details, .table-wrap { box-shadow: none; break-inside: avoid; } details { display: block; } details > * { display: block !important; } details summary:after { display: none; } .section { margin-top: 35px; } a { color: #111; text-decoration: none; } }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark" aria-hidden="true"></div><div><strong>整学期教师教案</strong><span>11周课程实施版</span></div></div>
+      <div class="nav-label">课程导航</div>
+      <nav>
+        <a href="#overview">课程定位</a>
+        <a href="#semester-map">11周时间轴</a>
+        <a href="#weekly-plans">逐周教案</a>
+        <a href="#lesson-map">12课进度</a>
+        <a href="#assessment">评量与证据</a>
+        <a href="#materials">材料与分工</a>
+        <a href="#confirm">执行前确认</a>
+      </nav>
+      <div class="nav-label">课程资料</div>
+      <nav>
+        <a href="../../../textbooks/boya-quasi-intermediate-i/source/raw/%E5%8D%9A%E9%9B%85%E6%B1%89%E8%AF%AD%E5%90%AC%E8%AF%B4-%E5%87%86%E4%B8%AD%E7%BA%A7%E5%8A%A0%E9%80%9F%E7%AF%87I.pdf">教材 PDF</a>
+        <a href="../../../textbooks/boya-quasi-intermediate-i/source/source-inventory.json">教材来源盘点</a>
+        <a href="semester-teacher-manual.docx">Word 教案</a>
+      </nav>
+      <div class="note">按每周一次、每次4节、每节50分钟编排。线上预习由学生自行安排，不折抵实体课时。</div>
+      <button type="button" onclick="window.print()">列印／另存 PDF</button>
+    </aside>
+
+    <main>
+      <header class="hero" id="top">
+        <div class="eyebrow">VINH UNIVERSITY · CHINESE LISTENING &amp; SPEAKING</div>
+        <h1>《博雅汉语听说：准中级加速篇 I》<br>11周整学期教师教案</h1>
+        <p class="subtitle">以听力理解、互动口语和成段表达为主线，在11个教学周内完成12课教材学习，并把课程诊断、阶段检核、期末整合表现、反馈重做和学习档案纳入每周课堂循环。</p>
+        <div class="hero-meta"><span class="pill status">11周排课修订版</span><span class="pill">2026/09/07–2026/11/22</span><span class="pill">44节实体课时</span><span class="pill">每次200分钟</span></div>
+      </header>
+
+      <div class="content">
+        <section class="section" id="overview">
+          <div class="grid stats"><div class="card stat"><span class="number">11</span><span class="label">教学周</span></div><div class="card stat"><span class="number">44</span><span class="label">实体课时</span></div><div class="card stat"><span class="number">12</span><span class="label">教材课次</span></div><div class="card stat"><span class="number">72</span><span class="label">来源盘点音频</span></div></div>
+          <div class="section-heading"><div><h2>课程定位</h2><p>学生已完成初级起步篇一、二册，本学期进入准中级听说学习。</p></div></div>
+          <div class="grid two">
+            <div class="card"><h3>学期 Can-Do（可观察表现）</h3><p class="small">期末时，学生面对教材相近主题或同主题新材料，能够完成下列任务；教师依据听力记录、互动观察、口语表现和重做版本判断达成情况。</p><div class="table-wrap"><table class="cando-table"><thead><tr><th>模式</th><th>学生能够完成的任务</th><th>课堂证据与最低要求</th></tr></thead><tbody><tr><td>Interpretive 1</td><td>听一段教材音频或同主题新听力，先看3–5个问题、抓关键词；听1–2遍后写出主旨和至少4条细节信息（人物、时间、原因、结果或态度）。</td><td>完成5个问题，至少4题能在听力记录中指出依据。</td></tr><tr><td>Interpretive 2</td><td>读／听一段短文后，不逐句翻译，按照时间、人物关系、原因结果或两类比较整理3–5条信息，并用2–3句话说出重点。</td><td>信息记录表加2–3句口头概括；同伴能根据概括复述主要内容。</td></tr><tr><td>Interpersonal 1</td><td>在家庭、日程、学习、兴趣、饮食、文化或健康主题的双人任务中连续交流4–6分钟；提出至少3个问题，回答同伴问题，并追问至少1次。</td><td>信息差记录表；教师或同伴能听到问题、回答和追问。</td></tr><tr><td>Interpersonal 2</td><td>面对不同意见或信息不清时，用确认、改述或补充说明修补交流；根据任务限制比较选项，与同伴共同做出一个选择并说出理由。</td><td>互动观察记录；对话中至少出现1次确认／修补和1次共同决定。</td></tr><tr><td>Presentational 1</td><td>根据个人提纲，完成60–90秒的家庭、日常、学习经历或兴趣说明；交代主题，按先后或因果说出至少3条信息，并回答1个追问。</td><td>现场口语或录音；内容完整、顺序清楚，能回应追问。</td></tr><tr><td>Presentational 2</td><td>针对一个对象和目的，完成2–3分钟的比较、推荐、建议或计划；比较两个选择，给出至少2个理由，说明一项条件变化下的调整方法，并回答1个追问。</td><td>成段口语与任务提纲；听者能说出你的选择、理由和调整办法。</td></tr><tr><td>修补与重做</td><td>根据教师或同伴反馈，把一段60–90秒口语重做一次，指出自己修改的1项内容，并把听力记录、口语样本、反馈和反思放入学习档案。</td><td>原始版、反馈表、重做版和一句反思记录。</td></tr></tbody></table></div></div>
+            <div class="card"><h3>课堂运行原则</h3><ul class="compact"><li>每周一次、每次4节、每节50分钟；线上学习为课外自行安排。</li><li>先看题目、抓关键词，再听、记重点、回答和核对。</li><li>先让学生完成听说任务，再处理影响理解和任务完成的语言问题。</li><li>直接讲解原则上每节不超过5分钟；未预习学生使用3–5分钟恢复路线。</li><li>每周保留听力证据、互动观察、个人口语、反馈重做和出口记录。</li></ul></div>
+          </div>
+          <div class="callout mint"><strong>验收重点：</strong> 听力记录要有主旨、细节和依据；互动要有问题、追问、确认或修补，并完成共同决定；成段表达要说清对象、目的、理由和调整办法。</div>
+        </section>
+
+        <section class="section" id="semester-map">
+          <div class="section-heading"><div><h2>11周学期时间轴</h2><p>第9、10周采用课前预习加课堂压缩的方式各完成两课；第11周完成整合表现。</p></div></div>
+          <div class="table-wrap"><table><thead><tr><th>周次</th><th>日期</th><th>实体课安排</th><th>4节课的主要产出</th><th>课外衔接</th></tr></thead><tbody>
+            <tr><td class="session-no">01</td><td>09/07–09/13</td><td class="session-title">第1课《丽丽是独生女》</td><td>课程诊断；家庭信息听说；60秒家庭说明；一次重做</td><td>预习第2课，听2-1至2-6</td></tr>
+            <tr><td class="session-no">02</td><td>09/14–09/20</td><td class="session-title">第2课《王红的一天》</td><td>日程信息交换；共同安排一天；说明取舍</td><td>预习第3课，准备中文学习经历</td></tr>
+            <tr><td class="session-no">03</td><td>09/21–09/27</td><td class="session-title">第3课《我对学中文越来越有兴趣》</td><td>听力证据；学习兴趣访谈；原因和变化说明</td><td>预习第4课，准备学习选择或问题</td></tr>
+            <tr><td class="session-no">04</td><td>09/28–10/04</td><td class="session-title">第4课《在中国学汉语》</td><td>学习经历理解；同伴咨询；建议说明</td><td>预习第5课，准备人物或兴趣资料</td></tr>
+            <tr><td class="session-no">05</td><td>10/05–10/11</td><td class="session-title">第5课《我的音乐老师》</td><td>人物信息整理；访谈；60–90秒推荐</td><td>预习第6课，准备团队活动经历或愿望</td></tr>
+            <tr><td class="session-no">06</td><td>10/12–10/18</td><td class="session-title">第6课《大圣参加了学校的合唱团》；阶段检核</td><td>团队活动信息交换；共同方案；阶段听说检核</td><td>预习第7课，准备户外活动问题</td></tr>
+            <tr><td class="session-no">07</td><td>10/19–10/25</td><td class="session-title">第7课《小张热爱登山》</td><td>经历与条件听辨；路线或准备方案；安全建议</td><td>预习第8课，标记文化材料重点</td></tr>
+            <tr><td class="session-no">08</td><td>10/26–11/01</td><td class="session-title">第8课《孙子和〈孙子兵法〉》</td><td>文化材料主旨与观点；策略案例说明；回应追问</td><td>预习第9课，准备饮食比较</td></tr>
+            <tr><td class="session-no">09</td><td>11/02–11/08</td><td class="session-title">第9课《北方菜和南方菜》＋第10课《中国人喜欢聚餐》</td><td>比较和推荐；聚餐共同计划；处理临时变化</td><td>预习第11、12课</td></tr>
+            <tr><td class="session-no">10</td><td>11/09–11/15</td><td class="session-title">第11课《原来他们是关心我》＋第12课《散步》</td><td>澄清误解；回应关心；安排健康休闲计划</td><td>整理学习档案，准备期末提纲</td></tr>
+            <tr><td class="session-no">11</td><td>11/16–11/22</td><td class="session-title">期末整合表现、学习档案与补做</td><td>新听力；综合互动；2–3分钟个人表达；反思与重做</td><td>完成学期反思和下阶段建议</td></tr>
+          </tbody></table></div>
+        </section>
+
+        <section class="section" id="weekly-plans">
+          <div class="section-heading"><div><h2>逐周教案</h2><p>每一周保留“理解—互动—表达—重做”的证据链。点击周次查看4节课安排。</p></div></div>
+          <div class="search-bar"><input id="weekSearch" type="search" placeholder="搜索课次、主题、活动或产出" aria-label="搜索逐周教案"></div>
+
+          <details open data-search="第1周 第1课 丽丽是独生女 家庭 身份 诊断">
+            <summary><div class="summary-main"><span class="summary-kicker">第1周 · 09/07–09/13</span><span class="summary-title">第1课《丽丽是独生女》</span><span class="summary-sub">家庭与身份信息；课程诊断；60秒家庭说明</span></div></summary>
+            <div class="details-body"><div class="callout gold"><strong>课前：</strong>打开教材P1–P11；听1-1至1-6；记录人物、关系、数量或事件等关键词；准备3–5句家庭介绍。</div><div class="table-wrap"><table class="period-table"><thead><tr><th>节次</th><th>课堂重点</th><th>教师操作</th><th>学生证据</th></tr></thead><tbody><tr><td>第1节</td><td>课程说明；熟悉主题口语诊断；回收预习；第一次听力</td><td>先让学生完成熟悉主题口语，再进入教材听力；未预习学生走恢复路线</td><td>主旨、关键词、一个证据；教师初始观察记录</td></tr><tr><td>第2节</td><td>核对听力信息；比较答案；人物关系口头改述</td><td>以教材题目为中心核对；只修补影响理解的词语或句子</td><td>个人听力表；人物关系与关键细节</td></tr><tr><td>第3节</td><td>家庭信息交换与澄清</td><td>一人说明、一人提问；要求至少一次确认或澄清</td><td>访谈记录；追问和确认</td></tr><tr><td>第4节</td><td>60秒家庭说明；反馈与重做；出口卡</td><td>反馈聚焦一项高影响问题；安排学生重新说一遍</td><td>说明初稿、重做版、出口卡</td></tr></tbody></table></div></div>
+          </details>
+
+          <details data-search="第2周 第2课 王红的一天 日程 时间 安排">
+            <summary><div class="summary-main"><span class="summary-kicker">第2周 · 09/14–09/20</span><span class="summary-title">第2课《王红的一天》</span><span class="summary-sub">日程顺序；时间信息交换；共同安排一天</span></div></summary>
+            <div class="details-body"><div class="callout gold"><strong>课前：</strong>打开教材P12–P21；听2-1至2-6；记录时间、活动和先后关系；准备自己一天中的三个活动。</div><div class="table-wrap"><table class="period-table"><thead><tr><th>节次</th><th>课堂重点</th><th>教师操作</th><th>学生证据</th></tr></thead><tbody><tr><td>第1节</td><td>个人日程回收；听力主旨和细节</td><td>先看题目、抓关键词，再听；让同伴互相补充信息</td><td>日程关键词表；主旨和两个细节</td></tr><tr><td>第2节</td><td>时间与活动顺序口头复述</td><td>按教材题目核对；把答案改说成完整句</td><td>日程复述；时间追问回应</td></tr><tr><td>第3节</td><td>带限制安排一天</td><td>两人交换不同日程限制；要求说明一个取舍</td><td>共同日程方案；提问、确认和协商</td></tr><tr><td>第4节</td><td>介绍方案；反馈与重做</td><td>引导听者追问时间安排；保留一次改说</td><td>60–90秒说明；修订表达</td></tr></tbody></table></div></div>
+          </details>
+
+          <details data-search="第3周 第3课 我对学中文越来越有兴趣 兴趣 学习 变化 原因">
+            <summary><div class="summary-main"><span class="summary-kicker">第3周 · 09/21–09/27</span><span class="summary-title">第3课《我对学中文越来越有兴趣》</span><span class="summary-sub">兴趣与变化；学习经历访谈；学习安排</span></div></summary>
+            <div class="details-body"><div class="callout gold"><strong>课前：</strong>打开教材P22–P31；听3-1至3-6；标记兴趣、变化或原因信息；准备自己的学习经历。</div><div class="table-wrap"><table class="period-table"><thead><tr><th>节次</th><th>课堂重点</th><th>教师操作</th><th>学生证据</th></tr></thead><tbody><tr><td>第1节</td><td>主旨、变化和原因听辨</td><td>比较课前预测；要求学生用关键词支持判断</td><td>听力证据表；变化与支持信息</td></tr><tr><td>第2节</td><td>教材练习口头回答、复述和改述</td><td>语言修补只处理影响表达的问题</td><td>个人口头回答；原因或变化说明</td></tr><tr><td>第3节</td><td>学习兴趣访谈</td><td>询问开始学习、困难和现在的变化；听者追问</td><td>访谈表；两个问题和一个追问</td></tr><tr><td>第4节</td><td>说明一项学习安排</td><td>同伴提出可执行性问题；学生根据反馈重做</td><td>60–90秒安排；反馈和修订版</td></tr></tbody></table></div></div>
+          </details>
+
+          <details data-search="第4周 第4课 在中国学汉语 学习经历 选择 建议 咨询">
+            <summary><div class="summary-main"><span class="summary-kicker">第4周 · 09/28–10/04</span><span class="summary-title">第4课《在中国学汉语》</span><span class="summary-sub">学习经历与选择；学习者咨询；建议说明</span></div></summary>
+            <div class="details-body"><div class="callout gold"><strong>课前：</strong>打开教材P32–P41；听4-1至4-6；记录地点、经历、困难或选择；准备一个想咨询的学习问题。</div><div class="table-wrap"><table class="period-table"><thead><tr><th>节次</th><th>课堂重点</th><th>教师操作</th><th>学生证据</th></tr></thead><tbody><tr><td>第1节</td><td>听前预测；地点、人物和问题</td><td>让小组比较听力证据，不先讲解全文</td><td>主旨、关键词和细节证据</td></tr><tr><td>第2节</td><td>教材理解题转为同伴问答</td><td>用短时间修补高影响表达；要求补充信息</td><td>问答记录；完整句回答</td></tr><tr><td>第3节</td><td>学习者咨询任务</td><td>根据不同需求提出建议；听者说明是否接受</td><td>建议卡；原因、条件和回应</td></tr><tr><td>第4节</td><td>小组分享与个人选择说明</td><td>安排反馈和一次根据听者问题的改说</td><td>60秒建议说明；改说证据</td></tr></tbody></table></div></div>
+          </details>
+
+          <details data-search="第5周 第5课 我的音乐老师 人物 音乐 兴趣 推荐 访谈">
+            <summary><div class="summary-main"><span class="summary-kicker">第5周 · 10/05–10/11</span><span class="summary-title">第5课《我的音乐老师》</span><span class="summary-sub">人物与兴趣；访谈；60–90秒推荐</span></div></summary>
+            <div class="details-body"><div class="callout gold"><strong>课前：</strong>打开教材P42–P50；听5-1至5-6；记录人物特点、事件和说话者态度；准备一位重要人物或一项兴趣。</div><div class="table-wrap"><table class="period-table"><thead><tr><th>节次</th><th>课堂重点</th><th>教师操作</th><th>学生证据</th></tr></thead><tbody><tr><td>第1节</td><td>人物、事件和态度听辨</td><td>根据教材图片和题目预测；听后回到证据</td><td>人物信息表；主旨和两个细节</td></tr><tr><td>第2节</td><td>教材练习核对；人物复述</td><td>两人互相复述并指出遗漏；修补影响听说的语言</td><td>人物复述；“为什么重要”追问回应</td></tr><tr><td>第3节</td><td>人物／兴趣访谈</td><td>听者选择一个信息继续追问；交换角色</td><td>访谈记录；提问、追问和确认</td></tr><tr><td>第4节</td><td>人物或兴趣推荐</td><td>同伴指出一项清楚处和一项可改进处；重做</td><td>60–90秒推荐初稿与重做版</td></tr></tbody></table></div></div>
+          </details>
+
+          <details data-search="第6周 第6课 大圣参加了学校的合唱团 合唱团 团队 阶段检核">
+            <summary><div class="summary-main"><span class="summary-kicker">第6周 · 10/12–10/18</span><span class="summary-title">第6课《大圣参加了学校的合唱团》＋阶段检核</span><span class="summary-sub">校园团队活动；共同安排；前半学期听说表现检验</span></div></summary>
+            <div class="details-body"><div class="callout gold"><strong>课前：</strong>打开教材P51–P58；听6-1至6-6；记录参加团队、时间、人物和安排；准备一次集体活动经历或愿望。</div><div class="table-wrap"><table class="period-table"><thead><tr><th>节次</th><th>课堂重点</th><th>教师操作</th><th>学生证据</th></tr></thead><tbody><tr><td>第1节</td><td>参加活动、人物和安排听辨</td><td>先抓关键词，再完成教材听力理解和同伴核对</td><td>主旨、细节和一个依据</td></tr><tr><td>第2节</td><td>团队活动介绍</td><td>把教材信息改说成介绍；修补时间、顺序和参加表达</td><td>口头复述；澄清问题回应</td></tr><tr><td>第3节</td><td>团队活动方案</td><td>根据成员、时间或任务限制安排排练／活动</td><td>小组共同方案；协商和确认</td></tr><tr><td>第4节</td><td>阶段听说检核与重做</td><td>新短听力＋双人互动＋60–90秒说明；反馈后重做</td><td>阶段表现记录；个人改进目标</td></tr></tbody></table></div></div>
+          </details>
+
+          <details data-search="第7周 第7课 小张热爱登山 登山 户外 条件 安全 建议">
+            <summary><div class="summary-main"><span class="summary-kicker">第7周 · 10/19–10/25</span><span class="summary-title">第7课《小张热爱登山》</span><span class="summary-sub">户外活动经历；条件与结果；路线和安全建议</span></div></summary>
+            <div class="details-body"><div class="callout gold"><strong>课前：</strong>打开教材P59–P67；听7-1至7-6；记录人物、地点、时间、条件和结果；准备一个户外活动问题。</div><div class="table-wrap"><table class="period-table"><thead><tr><th>节次</th><th>课堂重点</th><th>教师操作</th><th>学生证据</th></tr></thead><tbody><tr><td>第1节</td><td>事件顺序和关键条件</td><td>听前预测；要求学生比较不同听力证据</td><td>事件顺序表；主旨、细节和结果</td></tr><tr><td>第2节</td><td>条件与结果口头说明</td><td>完成教材理解练习并口头核对</td><td>口头复述；条件与结果关系</td></tr><tr><td>第3节</td><td>户外活动顾问</td><td>根据时间、天气或能力限制决定路线和准备物品</td><td>路线／准备方案；询问和确认</td></tr><tr><td>第4节</td><td>计划或建议说明</td><td>同伴提出一个风险问题；反馈后重做</td><td>60–90秒说明；风险回应</td></tr></tbody></table></div></div>
+          </details>
+
+          <details data-search="第8周 第8课 孙子和孙子兵法 文化 观点 策略 报告">
+            <summary><div class="summary-main"><span class="summary-kicker">第8周 · 10/26–11/01</span><span class="summary-title">第8课《孙子和〈孙子兵法〉》</span><span class="summary-sub">文化材料；主旨与观点；策略案例报告</span></div></summary>
+            <div class="details-body"><div class="callout gold"><strong>课前：</strong>打开教材P68–P76；听8-1至8-6；记录人物、事件、观点和例子；标记一个想讨论的问题。</div><div class="table-wrap"><table class="period-table"><thead><tr><th>节次</th><th>课堂重点</th><th>教师操作</th><th>学生证据</th></tr></thead><tbody><tr><td>第1节</td><td>人物、事件和观点听辨</td><td>先看题目和标题；小组比较支持判断的依据</td><td>文化材料主旨与细节</td></tr><tr><td>第2节</td><td>文化材料概括和问答</td><td>区分教材信息与学生自己的推论</td><td>一段口头概括；信息来源说明</td></tr><tr><td>第3节</td><td>策略案例讨论</td><td>把材料中的一个观点用于学习、团队或日常问题</td><td>案例卡；问题、做法和理由</td></tr><tr><td>第4节</td><td>小组短报告和追问</td><td>听众提出一个追问；报告者澄清或修订一次</td><td>1–2分钟报告；追问回应和重做</td></tr></tbody></table></div></div>
+          </details>
+
+          <details data-search="第9周 第9课 北方菜和南方菜 第10课 中国人喜欢聚餐 饮食 比较 聚餐 推荐 计划">
+            <summary><div class="summary-main"><span class="summary-kicker">第9周 · 11/02–11/08</span><span class="summary-title">第9课《北方菜和南方菜》＋第10课《中国人喜欢聚餐》</span><span class="summary-sub">饮食比较；推荐；聚餐共同计划与临时变化</span></div></summary>
+            <div class="details-body"><div class="callout gold"><strong>课前：</strong>打开教材P77–P95；听9-1至9-6、10-1至10-6；各记录一组比较信息和一项聚餐习惯；准备一个推荐理由。</div><div class="table-wrap"><table class="period-table"><thead><tr><th>节次</th><th>课堂重点</th><th>教师操作</th><th>学生证据</th></tr></thead><tbody><tr><td>第1节</td><td>第9课比较听力与教材题目</td><td>引导学生找出比较信息并回到听力证据</td><td>比较表；两项差异和一个依据</td></tr><tr><td>第2节</td><td>第9课菜单顾问</td><td>按对象、口味或预算推荐；处理不同意见</td><td>推荐说明；比较、理由和回应</td></tr><tr><td>第3节</td><td>第10课聚餐信息理解</td><td>记录人物、场合和安排；核对教材理解题</td><td>聚餐信息表；主旨、细节和回应</td></tr><tr><td>第4节</td><td>聚餐主办任务</td><td>共同安排聚餐并处理一个临时变化；快速反馈</td><td>共同计划；变化回应；90秒小组说明</td></tr></tbody></table></div></div>
+          </details>
+
+          <details data-search="第10周 第11课 原来他们是关心我 第12课 散步 关心 误解 澄清 健康 生活 计划">
+            <summary><div class="summary-main"><span class="summary-kicker">第10周 · 11/09–11/15</span><span class="summary-title">第11课《原来他们是关心我》＋第12课《散步》</span><span class="summary-sub">澄清误解；回应关心；生活与健康计划</span></div></summary>
+            <div class="details-body"><div class="callout gold"><strong>课前：</strong>打开教材P96–P113；听11-1至11-6、12-1至12-6；记录误解、关心、活动和安排信息；准备一个生活情境。</div><div class="table-wrap"><table class="period-table"><thead><tr><th>节次</th><th>课堂重点</th><th>教师操作</th><th>学生证据</th></tr></thead><tbody><tr><td>第1节</td><td>第11课关系、误解和关心</td><td>让学生记录依据，再两人核对并改述</td><td>关系信息图；误解说明</td></tr><tr><td>第2节</td><td>关心对话诊所</td><td>根据角色信息重建对话；安排澄清、回应和重说</td><td>澄清对话；确认、改述和修补</td></tr><tr><td>第3节</td><td>第12课生活或健康安排</td><td>记录散步、生活或健康信息；口头核对教材题目</td><td>计划信息表；主旨、细节和建议</td></tr><tr><td>第4节</td><td>生活计划任务与期末提纲</td><td>根据对象需求安排计划；个人说明并回答追问</td><td>60–90秒说明；期末提纲初稿</td></tr></tbody></table></div></div>
+          </details>
+
+          <details data-search="第11周 期末 整合 表现 学习档案 补做 听力 互动 口语">
+            <summary><div class="summary-main"><span class="summary-kicker">第11周 · 11/16–11/22</span><span class="summary-title">期末整合表现、学习档案与补做</span><span class="summary-sub">新听力；综合互动；2–3分钟个人表达；反馈重做</span></div></summary>
+            <div class="details-body"><div class="callout gold"><strong>课前：</strong>整理全学期听力记录、口语样本、反馈和重做；准备期末个人口语提纲。</div><div class="table-wrap"><table class="period-table"><thead><tr><th>节次</th><th>课堂重点</th><th>教师操作</th><th>学生证据</th></tr></thead><tbody><tr><td>第1节</td><td>新准中级听力理解</td><td>先看题、抓关键词；听后回答主旨、细节、态度和依据</td><td>Interpretive记录；答案和听力证据</td></tr><tr><td>第2节</td><td>综合互动任务</td><td>给出新情境和限制；观察提问、确认、不同意见回应</td><td>互动观察记录；共同方案</td></tr><tr><td>第3节</td><td>个人成段表现</td><td>每人完成2–3分钟表达并回答至少一个追问</td><td>Presentational口语；任务、可理解度、组织和回应</td></tr><tr><td>第4节</td><td>反馈、重做、档案和补做</td><td>按rubric反馈；完成重做、反思和缺席补做</td><td>期末重做版；学习档案；下阶段建议</td></tr></tbody></table></div></div>
+          </details>
+        </section>
+
+        <section class="section" id="lesson-map">
+          <div class="section-heading"><div><h2>12课进度与教材范围</h2><p>页码和音频编号来自当前教材来源盘点；具体词语、句式、题号和答案状态仍按各课来源包核对。</p></div></div>
+          <div class="table-wrap"><table><thead><tr><th>课次</th><th>课名</th><th>教材印刷页</th><th>音频</th><th>计划周次</th><th>主要表现任务</th></tr></thead><tbody>
+            <tr><td>第1课</td><td class="session-title">丽丽是独生女</td><td>P1–P11</td><td>1-1–1-6</td><td>第1周</td><td>家庭信息交换与家庭说明</td></tr><tr><td>第2课</td><td class="session-title">王红的一天</td><td>P12–P21</td><td>2-1–2-6</td><td>第2周</td><td>日程交换与共同安排</td></tr><tr><td>第3课</td><td class="session-title">我对学中文越来越有兴趣</td><td>P22–P31</td><td>3-1–3-6</td><td>第3周</td><td>学习兴趣访谈与学习安排</td></tr><tr><td>第4课</td><td class="session-title">在中国学汉语</td><td>P32–P41</td><td>4-1–4-6</td><td>第4周</td><td>学习咨询与建议说明</td></tr><tr><td>第5课</td><td class="session-title">我的音乐老师</td><td>P42–P50</td><td>5-1–5-6</td><td>第5周</td><td>人物／兴趣推荐</td></tr><tr><td>第6课</td><td class="session-title">大圣参加了学校的合唱团</td><td>P51–P58</td><td>6-1–6-6</td><td>第6周</td><td>团队活动方案与阶段检核</td></tr><tr><td>第7课</td><td class="session-title">小张热爱登山</td><td>P59–P67</td><td>7-1–7-6</td><td>第7周</td><td>户外活动与安全建议</td></tr><tr><td>第8课</td><td class="session-title">孙子和《孙子兵法》</td><td>P68–P76</td><td>8-1–8-6</td><td>第8周</td><td>文化材料概括与策略案例</td></tr><tr><td>第9课</td><td class="session-title">北方菜和南方菜</td><td>P77–P86</td><td>9-1–9-6</td><td>第9周</td><td>比较、推荐与理由</td></tr><tr><td>第10课</td><td class="session-title">中国人喜欢聚餐</td><td>P87–P95</td><td>10-1–10-6</td><td>第9周</td><td>聚餐共同计划与变化回应</td></tr><tr><td>第11课</td><td class="session-title">原来他们是关心我</td><td>P96–P104</td><td>11-1–11-6</td><td>第10周</td><td>澄清误解与回应关心</td></tr><tr><td>第12课</td><td class="session-title">散步</td><td>P105–P113</td><td>12-1–12-6</td><td>第10周</td><td>生活／健康计划与建议</td></tr>
+          </tbody></table></div>
+        </section>
+
+        <section class="section" id="assessment">
+          <div class="section-heading"><div><h2>评量与学习档案</h2><p>建议比例可按院系正式规定替换，但四类表现证据应继续保留。</p></div></div>
+          <div class="grid two"><div class="card"><h3>建议评分结构</h3><div class="table-wrap"><table><thead><tr><th>项目</th><th>比例</th><th>证据</th></tr></thead><tbody><tr><td>形成性课堂表现</td><td>30%</td><td>每周听力记录、互动观察、短讲、任务产出、反馈后重做</td></tr><tr><td>阶段听说检核</td><td>20%</td><td>第6周新听力、双人互动、60–90秒说明、一次重做</td></tr><tr><td>期末整合表现</td><td>30%</td><td>第11周新听力、综合互动、2–3分钟个人口语、追问回应</td></tr><tr><td>学习档案与预习证据</td><td>20%</td><td>预习记录、听力证据、口语样本、反馈、反思与修订</td></tr></tbody></table></div></div><div class="card"><h3>口语观察维度</h3><ol class="compact"><li><strong>任务完成：</strong>是否完成说明、询问、比较、推荐、建议或共同决定。</li><li><strong>可理解度与必要准确度：</strong>听者能否理解；能否修补影响理解的问题。</li><li><strong>互动与修补：</strong>是否会回答、追问、确认、澄清和回应不同意见。</li><li><strong>内容组织与情境适切度：</strong>是否有清楚顺序、理由、对象意识和结尾。</li></ol></div></div>
+          <div class="callout">每周至少保存：一份个人听力理解记录、一次双人／小组互动观察、一次60秒以上个人口语、一次反馈后的重做，以及一张出口卡或反思记录。</div>
+        </section>
+
+        <section class="section" id="materials">
+          <div class="section-heading"><div><h2>线上预习与实体课分工</h2><p>线上为实体课准备语言和证据，实体课完成互动、表现、反馈和重做。</p></div></div>
+          <div class="flow"><div class="flow-step"><strong>1 · 课前看教材</strong><span>看题目、图片和板块标题，预测人物、地点、问题或观点。</span></div><div class="flow-step"><strong>2 · 听并记重点</strong><span>第一次抓主旨，之后记录人物、时间、原因、结果或态度。</span></div><div class="flow-step"><strong>3 · 课堂做任务</strong><span>听力核对、双人互动、小组协商和个人口语表现。</span></div><div class="flow-step"><strong>4 · 反馈后重做</strong><span>保留一项改进目标，重新表达并放入学习档案。</span></div></div>
+          <div class="grid three"><div class="card"><h3>教师每周准备</h3><ul class="compact"><li>教材、音频和印刷页码</li><li>预习证据回收方式与恢复路线</li><li>听力关键词表和教材题目口头核对方式</li><li>角色、信息差、限制、共同产出和反馈问题</li></ul></div><div class="card"><h3>学生使用材料</h3><ul class="compact"><li>预习卡或线上预习页</li><li>听力关键词记录表</li><li>访谈表、信息差卡、角色卡、调查表</li><li>小组报告提纲、同伴反馈表和出口卡</li></ul></div><div class="card"><h3>学习档案</h3><ul class="compact"><li>预习证据</li><li>听力记录</li><li>口语样本与反馈</li><li>重做版本和学期反思</li></ul></div></div>
+        </section>
+
+        <section class="section" id="confirm">
+          <div class="section-heading"><div><h2>执行前确认</h2><p>这些项目影响正式实施方式，不改变本版的11周课程顺序。</p></div></div>
+          <div class="card"><ul class="checklist"><li>学校正式课表是否为每周一次、每次4节、每节50分钟。</li><li>200分钟是否为有效教学时间；如包含统一休息，需按课表平移分钟。</li><li>第9、10周的两课压缩安排是否符合班级实际进度。</li><li>阶段检核和期末个人口语采用轮站、同步录音或其他方式。</li><li>评量比例是否采用本版建议，或替换为院系正式规定。</li><li>逐课来源审核、练习coverage、音频播放和教师手册完成后再进入正式教材交付。</li></ul></div>
+        </section>
+
+        <footer>荣市大学华语听说中级课程 · 2026-fall · 11周排课修订版 · 更新日期：2026/08/30</footer>
+      </div>
+    </main>
+  </div>
+  <script>
+    const search = document.querySelector('#weekSearch');
+    const details = [...document.querySelectorAll('#weekly-plans details')];
+    search.addEventListener('input', () => {
+      const query = search.value.trim().toLowerCase();
+      details.forEach((item) => {
+        const matched = !query || item.dataset.search.toLowerCase().includes(query);
+        item.hidden = !matched;
+        if (query && matched) item.open = true;
+      });
+    });
+  </script>
+</body>
+</html>

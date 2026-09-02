@@ -27,11 +27,13 @@ from lxml import etree
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 LESSON_ROOT = PROJECT_ROOT / "lessons/boya-quasi-intermediate-i/lesson-01"
 REFINEMENT_PATH = LESSON_ROOT / "10-design/teaching-design/online-refinement-2026-08-29.json"
+SOURCE_PATH = LESSON_ROOT / "00-source/source-extraction-draft.json"
 ROUTE_ASSET = LESSON_ROOT / "10-design/image-assets-draft/learning-route-user-supplied-transparent.png"
 OUTPUT_DIR = LESSON_ROOT / "10-design/pptx-draft/online"
 MANIFEST_PATH = OUTPUT_DIR / "manifest.json"
 GATE_SCRIPT = PROJECT_ROOT / "scripts/production_gate.py"
 LESSON_KEY = "boya-quasi-intermediate-i:lesson-01"
+EXPECTED_ROUTE_STEPS = ["学习词语", "读／听短文", "记录摘要", "回答问题", "学习句式", "整理信息", "准备介绍自己"]
 
 P_NS = "http://schemas.openxmlformats.org/presentationml/2006/main"
 A_NS = "http://schemas.openxmlformats.org/drawingml/2006/main"
@@ -57,7 +59,7 @@ VOCAB_SLIDES = (
     + [40, 41]
 )
 EXPECTED_ENDING = {
-    70: ["我觉得很难的地方", "写下你不太懂的词语、句式、短文、听力。"],
+    70: ["我觉得很难的地方", "写下你不太懂的词语、句式、短文或听力内容。"],
     71: [
         "课前检查",
         "我已经学完本课所有词语，知道它们的意思和用法。",
@@ -229,13 +231,16 @@ def patch_cover(root: etree._Element) -> None:
     pill = find_shape(root, name="Shape 3")
     label = first_shape(find_shape(root, exact="在线预习"), find_shape(root, exact="实体课"), find_shape(root, exact="在线课"))
     subtitle = first_shape(find_shape(root, exact="家庭 · 工作 · 爱好"), find_shape(root, exact="听一听，问一问，说一说。"))
-    if pill is None or label is None or subtitle is None:
+    if pill is None or label is None:
         raise ValueError("Current online deck does not contain the expected editable cover shapes")
     set_geometry(pill, cx=round(1.30 * EMU_PER_INCH))
     set_geometry(label, x=round(0.86 * EMU_PER_INCH), y=round(1.11 * EMU_PER_INCH),
                  cx=round(1.14 * EMU_PER_INCH), cy=round(0.30 * EMU_PER_INCH))
     set_text(label, "在线课")
-    set_text(subtitle, "听一听，问一问，说一说。")
+    if subtitle is not None:
+        parent = subtitle.getparent()
+        if parent is not None:
+            parent.remove(subtitle)
 
 
 def patch_route(root: etree._Element) -> str:
@@ -259,17 +264,15 @@ def patch_route(root: etree._Element) -> str:
 
 def patch_extensions(roots: dict[int, etree._Element], refinement: dict[str, Any]) -> int:
     extension_label = refinement["vocabulary"]["extension_label"]
+    source = json.loads(SOURCE_PATH.read_text(encoding="utf-8"))
+    vocabulary = next(section for section in source["sections"] if section["id"] == "vocabulary")
+    words = [entry["word"] for entry in vocabulary["entries"]]
+    words.extend(entry["word"] for entry in vocabulary.get("proper_nouns", []))
+    if len(words) != len(VOCAB_SLIDES):
+        raise ValueError(f"Vocabulary/source slide count mismatch: {len(words)} words vs {len(VOCAB_SLIDES)} slides")
+    word_by_slide = dict(zip(VOCAB_SLIDES, words))
+    extensions = refinement["vocabulary"].get("extensions", {})
     template: etree._Element | None = None
-    for slide_no in VOCAB_SLIDES:
-        for shape in text_shapes(roots[slide_no]):
-            if "扩展" in text_of(shape):
-                template = deepcopy(shape)
-                break
-        if template is not None:
-            break
-    if template is None:
-        raise ValueError("No existing vocabulary extension shape is available as an editable template")
-
     added = 0
     for slide_no in VOCAB_SLIDES:
         root = roots[slide_no]
@@ -277,20 +280,37 @@ def patch_extensions(roots: dict[int, etree._Element], refinement: dict[str, Any
         if sp_tree is None:
             raise ValueError(f"Slide {slide_no} has no shape tree")
         matches = [shape for shape in text_shapes(root) if "扩展" in text_of(shape)]
+        expansion = str(extensions.get(word_by_slide[slide_no], "") or "").strip()
+        if not expansion:
+            for extra in matches:
+                parent = extra.getparent()
+                if parent is not None:
+                    parent.remove(extra)
+            continue
         if matches:
-            set_text(matches[0], extension_label)
+            set_text(matches[0], f"{extension_label}{expansion}")
             for extra in matches[1:]:
                 parent = extra.getparent()
                 if parent is not None:
                     parent.remove(extra)
             continue
+        if template is None:
+            for candidate_slide in VOCAB_SLIDES:
+                for shape in text_shapes(roots[candidate_slide]):
+                    if "扩展" in text_of(shape):
+                        template = deepcopy(shape)
+                        break
+                if template is not None:
+                    break
+        if template is None:
+            raise ValueError("No existing vocabulary extension shape is available as an editable template")
         new_shape = deepcopy(template)
         c_nv_pr = new_shape.find("./p:nvSpPr/p:cNvPr", NS)
         if c_nv_pr is None:
             raise ValueError(f"Extension template on slide {slide_no} has no non-visual properties")
         c_nv_pr.set("id", str(next_shape_id(sp_tree)))
         c_nv_pr.set("name", f"Text Extension {slide_no:02d}")
-        set_text(new_shape, extension_label)
+        set_text(new_shape, f"{extension_label}{expansion}")
         insert_shape(sp_tree, new_shape)
         added += 1
     return added
@@ -398,6 +418,8 @@ def patch_pptx(input_path: Path, output_path: Path, refinement: dict[str, Any]) 
         raise FileNotFoundError(input_path)
     if not ROUTE_ASSET.is_file():
         raise FileNotFoundError(ROUTE_ASSET)
+    if refinement.get("learning_route", {}).get("steps") != EXPECTED_ROUTE_STEPS:
+        raise ValueError("Learning-route steps do not match the confirmed online-prep flow")
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     gate = run_gate()

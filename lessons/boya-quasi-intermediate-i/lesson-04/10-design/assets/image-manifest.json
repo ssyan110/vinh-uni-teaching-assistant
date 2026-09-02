@@ -4,7 +4,7 @@
   "textbook_id": "boya-quasi-intermediate-i",
   "lesson_id": "lesson-04",
   "title": "在中国学汉语",
-  "generated_at": "2026-08-28",
+  "generated_at": "2026-09-02",
   "generation_mode": "built-in image_gen",
   "style": {
     "name": "approved educational textbook illustration",
@@ -186,6 +186,22 @@
       "generation_status": "generated_and_copied_to_workspace",
       "can_enter_ppt": false,
       "ppt_entry_status": "candidate_pending_adam_visual_review"
+    },
+    {
+      "asset_id": "L04-COVER-CHINA-STUDY-SQUARE",
+      "filename": "lesson-04-cover-china-study-square.png",
+      "category": "lesson_cover",
+      "use": ["第四课方形框封面主视觉", "《在中国学汉语》课名页图片框"],
+      "source_refs": ["canonical-source.json#lesson_title", "canonical-source.json#sections.short_text_1", "canonical-source.json#sections.short_text_2", "canonical-source.json#sections.short_text_3", "user-request-2026-09-02"],
+      "textbook_printed_pages": [],
+      "prompt": "Original 1:1 full-bleed educational textbook illustration for 在中国学汉语: a young Korean male university student studying Chinese in China through Beijing street life, a Chinese class or lecture, and everyday practice with a language partner; warm off-white paper, fine blue-gray linework, muted pastel watercolor, no large blank area or title space, no readable Chinese, Korean, pinyin, English, numbers, logos, flags, labels, signs, captions, speech bubbles, or watermark.",
+      "generated_source_path": "/Users/ssyan110/.codex/generated_images/01a05cfd-fe68-7472-8fe2-0c058690808c/exec-5b170497-8c0a-4b8b-bd12-e6c8f1b6c861.png",
+      "sha256": "fc1d4e3659a9e8038f5a45028beb49cf81047d0b536b308312914894dd485eb6",
+      "dimensions": "1254x1254",
+      "generation_status": "generated_and_copied_to_workspace",
+      "license_status": "originally generated for this project with built-in image_gen; no external image license required",
+      "can_enter_ppt": false,
+      "ppt_entry_status": "candidate_pending_visual_storyboard_and_pptx_review"
     }
   ],
   "vocabulary_coverage": {
@@ -215,7 +231,7 @@
     "饿": ["l04-restaurant-order-serve"]
   },
   "qa_notes": [
-    "All eight assets are raster PNG files copied into this lesson's 10-design/assets directory.",
+    "Nine assets are raster PNG files copied into this lesson's 10-design/assets directory, including one square lesson-cover candidate.",
     "Images were visually inspected after generation; no intentional readable text, Chinese characters, Latin words, logos, or watermarks were requested.",
     "These assets are drafts only. Do not embed into approved PPTX until the lesson's visual storyboard and Adam's review are complete.",
     "No section divider was generated; the shared approved divider set remains the source for divider slides."

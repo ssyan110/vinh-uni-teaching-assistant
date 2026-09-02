@@ -1,0 +1,438 @@
+{
+  "schema_version": 1,
+  "contract_id": "boya-quasi-intermediate-i-online-content-v1",
+  "authority": "lesson-specific content contract linked to canonical-source.json; finalized L01-L06 PPTX are read-only visual/content evidence",
+  "scope": "boya-quasi-intermediate-i:lesson-01..lesson-12",
+  "purpose": "Content fields that the shared online layout cannot safely infer from a source package.",
+  "example_bank": {
+    "source": "course/boya-example-bank.json",
+    "lesson_key_field": "lesson_key",
+    "vocabulary_field": "vocabulary",
+    "expression_field": "expressions",
+    "required_for": "new lesson drafts; finalized_reference lessons remain read-only",
+    "item_policy": "each vocabulary item and each online expression item has exactly two explicit short examples"
+  },
+  "before_online_draft": [
+    "lesson-specific goals are approved",
+    "every vocabulary entry has reviewed meaning_vi text",
+    "every vocabulary entry has exactly two reviewed short examples in the lesson example bank",
+    "every online expression item has exactly two reviewed short examples in the lesson example bank",
+    "every non-empty vocabulary usage value is reviewed and word-specific; a blank usage field is allowed",
+    "every non-empty extension, grammar_detail and common_phrase value is explicitly supplied; extension and grammar_detail remain word-specific optional fields",
+    "cover subtitle is absent",
+    "route wording and section labels are confirmed for this lesson"
+  ],
+  "cover": {
+    "bottom_subtitle": { "policy": "forbidden", "field": null },
+    "title_pt": { "policy": "lesson-specific; finalized range 44-50 pt" },
+    "badge_pt": { "default": 20 }
+  },
+  "goals": {
+    "title": "学完这课后，我能……",
+    "label": "听懂 · 介绍 · 讨论 · 准备",
+    "item_count": { "min": 3, "max": 4 },
+    "source": "lesson-specific approved content",
+    "fallback": "forbidden"
+  },
+  "route": {
+    "title": "学习流程图",
+    "asset_source": "lesson-specific approved route asset",
+    "visual_variant_policy": "lesson-specific; do not assume the rectangular-card and circular-icon variants are interchangeable"
+  },
+  "vocabulary": {
+    "required_fields": ["word", "pinyin", "pos", "meaning_vi"],
+    "meaning_vi": {
+      "language": "Vietnamese",
+      "student_label": "意思：",
+      "fallback_fields_forbidden": ["gloss", "meaning_en", "GLOSS_CN", "English"],
+      "review_status_field": "meaning_vi_status=reviewed",
+      "blank_policy": "block online draft until reviewed Vietnamese wording is supplied"
+    },
+    "usage": {
+      "policy": "word-specific when supplied; use only reviewed content; do not synthesize from part of speech",
+      "blank_policy": "allowed; omit the usage label when no reviewed word-specific content is supplied"
+    },
+    "optional_fields": ["usage", "usage_detail", "extension", "grammar_detail", "common_phrase", "follow_up_page"],
+    "optional_field_policy": "render only non-empty, explicitly supplied values; omit the label and shape when blank",
+    "extension": { "label": "扩展：", "required": false },
+    "grammar_detail": { "required": false, "blank_allowed": true },
+    "examples": {
+      "required": true,
+      "required_for": "new lesson drafts; finalized_reference lessons are not regenerated",
+      "source": "course/boya-example-bank.json",
+      "count": { "min": 2, "max": 2 },
+      "max_hanzi_chars": 24,
+      "fallback": "forbidden",
+      "sentence_policy": "explicit short sentence only; never copy a long textbook paragraph"
+    },
+    "picture": { "policy": "one semantic embedded asset per target unless the lesson contract records a deliberate multi-image exception" }
+  },
+  "expressions": {
+    "divider_title_policy": "lesson-specific; finalized values include 句式 and 句式练习",
+    "student_instruction_policy": "direct action wording supplied by lesson content or item; common form is 用这个句式写出三句话; do not use one universal sentence for every item",
+    "explanation_policy": "optional; may be blank until explicitly supplied",
+    "items": "map keyed by the exact canonical expression",
+    "example_bank_source": "course/boya-example-bank.json",
+    "example_policy": "new lesson drafts require exactly two explicit short sentences per expression; finalized_reference decks remain read-only",
+    "visible_context_policy": "forbidden on the online expression practice slide",
+    "visible_header_expression_policy": "forbidden; the purple pattern box is the only visible expression heading",
+    "example_font_pt": 35
+  },
+  "lessons": {
+    "lesson-01": {
+      "status": "finalized_reference",
+      "cover": { "online_title_pt": 50, "face_title_pt": 45, "route_variant": "rectangular_cards" },
+      "route": { "asset": "learning-route-user-supplied-transparent.png", "variant": "rectangular_cards" },
+      "goals": [
+        "听懂关于家庭、工作和爱好的主要信息。",
+        "用本课词语介绍自己的家庭、学习／工作和爱好。",
+        "回答和讨论跟课本主题有关的问题。",
+        "根据要求写出并准备一段个人介绍。"
+      ],
+      "expressions": { "divider_title": "句式练习", "student_instruction": "用这个句式写出三句话" }
+    },
+    "lesson-02": {
+      "status": "finalized_reference",
+      "cover": { "online_title_pt": 50, "face_title_pt": 44, "route_variant": "circular_icons" },
+      "route": { "asset": "lessons/boya-quasi-intermediate-i/lesson-03/10-design/assets/lesson-03-learning-route.png", "variant": "circular_icons" },
+      "goals": [
+        "听懂王红一天中的学校生活、生日午餐和课外活动。",
+        "用本课词语介绍自己的学校生活和课外活动。",
+        "回答并讨论跟学校生活、生日、课外活动有关的问题。",
+        "根据信息表完成一段关于生活、生日、课外活动的口语总结。"
+      ],
+      "expressions": { "divider_title": "句式练习", "student_instruction": "用这个句式写出三句话" }
+    },
+    "lesson-03": {
+      "status": "finalized_reference",
+      "cover": { "online_title_pt": 45, "face_title_pt": 45, "route_variant": "circular_icons" },
+      "route": { "asset": "lessons/boya-quasi-intermediate-i/lesson-03/10-design/assets/lesson-03-learning-route.png", "variant": "circular_icons" },
+      "goals": [
+        "听懂李大为学习中文经历中的主要信息。",
+        "说明自己为什么学习或选修中文。",
+        "回答并讨论家庭、学习和中文课堂问题。",
+        "能够介绍个人的家庭生活和学习经历。"
+      ],
+      "expressions": { "divider_title": "句式", "student_instruction": "用这个句式写出三句话" }
+    },
+    "lesson-04": {
+      "status": "finalized_reference",
+      "cover": { "online_title_pt": 44, "face_title_pt": 44, "route_variant": "circular_icons" },
+      "route": { "asset": "lessons/boya-quasi-intermediate-i/lesson-03/10-design/assets/lesson-03-learning-route.png", "variant": "circular_icons" },
+      "goals": [
+        "听懂关于家庭、工作和爱好的主要信息。",
+        "用本课词语介绍自己的对北京的印象和学习经历。",
+        "讨论在中国学习汉语和本国学习汉语的异同。"
+      ],
+      "expressions": { "divider_title": "句式", "student_instruction": "用这个句式写出三句话" }
+    },
+    "lesson-05": {
+      "status": "finalized_reference",
+      "cover": { "online_title_pt": 44, "face_title_pt": 44, "route_variant": "rectangular_cards" },
+      "route": { "asset": "learning-route-user-supplied-transparent.png", "variant": "rectangular_cards" },
+      "goals": [
+        "听懂三段短文中音乐老师的主要信息。",
+        "介绍自己的音乐经历和音乐爱好。",
+        "能够简单地描述别人的外貌和风格。",
+        "能够简单地和别人讨论、回答和音乐有关的主题。"
+      ],
+      "expressions": { "divider_title": "句式练习", "student_instruction": "用这个句式写出三句话" }
+    },
+    "lesson-06": {
+      "status": "finalized_reference",
+      "cover": { "online_title_pt": 44, "face_title_pt": 44, "route_variant": "rectangular_cards" },
+      "route": { "asset": "learning-route-user-supplied-transparent.png", "variant": "rectangular_cards" },
+      "goals": [
+        "听懂大岛的爱好、合唱团经历和得失。",
+        "介绍自己的业余爱好和活动经历。",
+        "讨论参加活动的收获和失去。",
+        "能够详细地介绍和解释自己喜欢的东西。"
+      ],
+      "expressions": { "divider_title": "句式练习", "student_instruction": "用这个句式写出三句话" }
+    },
+    "lesson-07": {
+      "status": "draft_content_reviewed_pending_adam_approval",
+      "content_review": {
+        "status": "ai_reviewed_for_draft",
+        "reviewed_at": "2026-09-02",
+        "reviewer": "Codex",
+        "note": "本次先建立第七课可审阅 draft；内容仍受来源包 pending_review 与 Adam 最终确认 gate 约束，不进入 20-approved。"
+      },
+      "cover": {
+        "online_title_pt": 44,
+        "face_title_pt": 44,
+        "badge_pt": 20,
+        "bottom_subtitle": null
+      },
+      "route": {
+        "asset": "learning-route-user-supplied-transparent.png",
+        "variant": "rectangular_cards"
+      },
+      "goals": [
+        "听懂三篇短文中小张的爱好、登山经历和登山带来的好处。",
+        "用本课词语介绍自己的运动爱好和活动经历。",
+        "讨论运动、登山和参加活动的收获，回答并追问同伴的问题。",
+        "根据短文信息整理重点，准备一段关于自己爱好的口语介绍。"
+      ],
+      "vocabulary": {
+        "divider_subtitle": "看图、读音、词类、意思、用法和例句。",
+        "page_breaks": {
+          "first_page": 59,
+          "first_count": 17,
+          "second_page": 60
+        },
+        "entries": {
+          "登山": { "meaning_vi": "leo núi", "meaning_vi_status": "reviewed" },
+          "优美": { "meaning_vi": "đẹp; thanh nhã", "meaning_vi_status": "reviewed" },
+          "热爱": { "meaning_vi": "yêu thích; say mê", "meaning_vi_status": "reviewed" },
+          "邻居": { "meaning_vi": "hàng xóm", "meaning_vi_status": "reviewed" },
+          "机会": { "meaning_vi": "cơ hội", "meaning_vi_status": "reviewed" },
+          "耐力": { "meaning_vi": "sức bền; sức chịu đựng", "meaning_vi_status": "reviewed" },
+          "放松": { "meaning_vi": "thư giãn", "meaning_vi_status": "reviewed" },
+          "市民": { "meaning_vi": "người dân thành phố", "meaning_vi_status": "reviewed" },
+          "挑战": { "meaning_vi": "thách thức", "meaning_vi_status": "reviewed" },
+          "根本": { "meaning_vi": "hoàn toàn không (thường dùng trong câu phủ định)", "meaning_vi_status": "reviewed" },
+          "合作": { "meaning_vi": "hợp tác", "meaning_vi_status": "reviewed" },
+          "浪漫": { "meaning_vi": "lãng mạn", "meaning_vi_status": "reviewed" },
+          "羡慕": { "meaning_vi": "ngưỡng mộ; ghen tị", "meaning_vi_status": "reviewed" },
+          "地道": { "meaning_vi": "chính gốc; đích thực", "meaning_vi_status": "reviewed" },
+          "发亮": { "meaning_vi": "sáng lên; lấp lánh", "meaning_vi_status": "reviewed" },
+          "不管": { "meaning_vi": "bất kể; dù", "meaning_vi_status": "reviewed" },
+          "肚子": { "meaning_vi": "bụng", "meaning_vi_status": "reviewed" },
+          "感受": { "meaning_vi": "cảm nhận", "meaning_vi_status": "reviewed" },
+          "危险": { "meaning_vi": "nguy hiểm", "meaning_vi_status": "reviewed" },
+          "将来": { "meaning_vi": "tương lai", "meaning_vi_status": "reviewed" },
+          "山顶": { "meaning_vi": "đỉnh núi", "meaning_vi_status": "reviewed" },
+          "俱乐部": { "meaning_vi": "câu lạc bộ", "meaning_vi_status": "reviewed" },
+          "结交": { "meaning_vi": "kết giao; làm quen", "meaning_vi_status": "reviewed" },
+          "害怕": { "meaning_vi": "sợ; sợ hãi", "meaning_vi_status": "reviewed" },
+          "信心": { "meaning_vi": "niềm tin; sự tự tin", "meaning_vi_status": "reviewed" },
+          "愉快": { "meaning_vi": "vui vẻ; dễ chịu", "meaning_vi_status": "reviewed" }
+        }
+      },
+      "expressions": {
+        "divider_title": "句式",
+        "student_instruction": "用这个句式写出三句话",
+        "page_map": {
+          "样样（量词重叠）": 62,
+          "地地道道（形容词重叠）": 62,
+          "不管……都……": 62,
+          "像……一样（1）": 62,
+          "又（2）": 63,
+          "根本": 63,
+          "另": 64,
+          "虽然……可是": 64,
+          "慢慢": 64,
+          "成了": 64,
+          "如果……一定……": 64,
+          "动词+上（2）": 65,
+          "往往": 65,
+          "刚开始……慢慢地": 65,
+          "不仅如此": 65,
+          "动词+起来（1）": 65
+        },
+        "items": {}
+      }
+    },
+    "lesson-08": {
+      "status": "draft_meaning_vi_reviewed_pending_lesson_content",
+      "content_review": {
+        "status": "meaning_vi_only_reviewed",
+        "reviewed_at": "2026-09-02",
+        "reviewer": "Codex + six lesson-isolated subagents",
+        "note": "本次只补充第八课 meaning_vi；来源、学习目标、学习流程、教师手册、PPT 与完整内容仍未批准。"
+      },
+      "vocabulary": {
+        "entries": {
+          "士兵": { "meaning_vi": "binh lính; người lính", "meaning_vi_status": "reviewed" },
+          "打仗": { "meaning_vi": "đánh trận; giao chiến", "meaning_vi_status": "reviewed" },
+          "训练": { "meaning_vi": "huấn luyện", "meaning_vi_status": "reviewed" },
+          "进攻": { "meaning_vi": "tấn công", "meaning_vi_status": "reviewed" },
+          "军事家": { "meaning_vi": "nhà quân sự; nhà chiến lược quân sự", "meaning_vi_status": "reviewed" },
+          "记载": { "meaning_vi": "ghi chép; ghi lại", "meaning_vi_status": "reviewed" },
+          "将军": { "meaning_vi": "tướng quân; viên tướng", "meaning_vi_status": "reviewed" },
+          "权力": { "meaning_vi": "quyền lực", "meaning_vi_status": "reviewed" },
+          "策略": { "meaning_vi": "chiến lược; kế sách", "meaning_vi_status": "reviewed" },
+          "打败仗": { "meaning_vi": "thua trận", "meaning_vi_status": "reviewed" },
+          "结束": { "meaning_vi": "kết thúc", "meaning_vi_status": "reviewed" },
+          "开设": { "meaning_vi": "mở lớp; mở khóa học", "meaning_vi_status": "reviewed" },
+          "带兵打仗": { "meaning_vi": "chỉ huy binh lính đánh trận", "meaning_vi_status": "reviewed" },
+          "严明": { "meaning_vi": "nghiêm minh", "meaning_vi_status": "reviewed" },
+          "根据": { "meaning_vi": "dựa vào; căn cứ vào", "meaning_vi_status": "reviewed" },
+          "曾经": { "meaning_vi": "đã từng", "meaning_vi_status": "reviewed" },
+          "展示": { "meaning_vi": "trình bày; thể hiện", "meaning_vi_status": "reviewed" },
+          "妻子": { "meaning_vi": "vợ", "meaning_vi_status": "reviewed" },
+          "制定": { "meaning_vi": "đề ra; xây dựng", "meaning_vi_status": "reviewed" },
+          "嘻嘻哈哈": { "meaning_vi": "cười cợt; đùa cợt", "meaning_vi_status": "reviewed" },
+          "严肃": { "meaning_vi": "nghiêm túc", "meaning_vi_status": "reviewed" },
+          "按": { "meaning_vi": "theo; chiếu theo", "meaning_vi_status": "reviewed" },
+          "军法": { "meaning_vi": "luật quân đội; quân luật", "meaning_vi_status": "reviewed" },
+          "处死": { "meaning_vi": "xử tử", "meaning_vi_status": "reviewed" },
+          "难过": { "meaning_vi": "buồn; đau lòng", "meaning_vi_status": "reviewed" },
+          "任命": { "meaning_vi": "bổ nhiệm; cử làm", "meaning_vi_status": "reviewed" },
+          "打胜仗": { "meaning_vi": "thắng trận", "meaning_vi_status": "reviewed" },
+          "既": { "meaning_vi": "vừa… vừa…; đã… lại…", "meaning_vi_status": "reviewed" },
+          "战败": { "meaning_vi": "bị đánh bại; thất trận", "meaning_vi_status": "reviewed" },
+          "孙子": { "meaning_vi": "Tôn Tử; nhà quân sự thời Xuân Thu", "meaning_vi_status": "reviewed" },
+          "《孙子兵法》": { "meaning_vi": "sách Binh pháp Tôn Tử; sách về lý thuyết chiến tranh", "meaning_vi_status": "reviewed" }
+        }
+      }
+    },
+    "lesson-09": {
+      "status": "draft_meaning_vi_reviewed_pending_lesson_content",
+      "content_review": {
+        "status": "meaning_vi_only_reviewed",
+        "reviewed_at": "2026-09-02",
+        "reviewer": "Codex + six lesson-isolated subagents",
+        "note": "本次只补充第九课 meaning_vi；来源、学习目标、学习流程、教师手册、PPT 与完整内容仍未批准。"
+      },
+      "vocabulary": {
+        "entries": {
+          "土豆": { "meaning_vi": "khoai tây", "meaning_vi_status": "reviewed" },
+          "蔬菜": { "meaning_vi": "rau củ", "meaning_vi_status": "reviewed" },
+          "早茶": { "meaning_vi": "dim sum, điểm tâm sáng", "meaning_vi_status": "reviewed" },
+          "凉拌": { "meaning_vi": "trộn nguội", "meaning_vi_status": "reviewed" },
+          "青菜": { "meaning_vi": "rau xanh", "meaning_vi_status": "reviewed" },
+          "酸辣汤": { "meaning_vi": "canh chua cay", "meaning_vi_status": "reviewed" },
+          "涮": { "meaning_vi": "nhúng vào nước lẩu đang sôi", "meaning_vi_status": "reviewed" },
+          "口味": { "meaning_vi": "khẩu vị", "meaning_vi_status": "reviewed" },
+          "渐渐": { "meaning_vi": "dần dần", "meaning_vi_status": "reviewed" },
+          "黄瓜": { "meaning_vi": "dưa chuột; dưa leo", "meaning_vi_status": "reviewed" },
+          "炖": { "meaning_vi": "hầm; ninh", "meaning_vi_status": "reviewed" },
+          "夜宵": { "meaning_vi": "bữa ăn khuya", "meaning_vi_status": "reviewed" },
+          "大排档": { "meaning_vi": "quán ăn đường phố bình dân", "meaning_vi_status": "reviewed" },
+          "聚会": { "meaning_vi": "tụ họp", "meaning_vi_status": "reviewed" },
+          "聚餐": { "meaning_vi": "cùng nhau ăn một bữa", "meaning_vi_status": "reviewed" },
+          "休闲": { "meaning_vi": "thư giãn; giải trí", "meaning_vi_status": "reviewed" },
+          "豆角": { "meaning_vi": "đậu que", "meaning_vi_status": "reviewed" },
+          "不光": { "meaning_vi": "không chỉ", "meaning_vi_status": "reviewed" },
+          "取代": { "meaning_vi": "thay thế", "meaning_vi_status": "reviewed" },
+          "季节": { "meaning_vi": "mùa", "meaning_vi_status": "reviewed" },
+          "种类": { "meaning_vi": "loại; chủng loại", "meaning_vi_status": "reviewed" },
+          "普遍": { "meaning_vi": "phổ biến", "meaning_vi_status": "reviewed" },
+          "年轻": { "meaning_vi": "trẻ", "meaning_vi_status": "reviewed" },
+          "一般": { "meaning_vi": "thường; thông thường", "meaning_vi_status": "reviewed" },
+          "数量": { "meaning_vi": "số lượng", "meaning_vi_status": "reviewed" },
+          "增加": { "meaning_vi": "tăng lên", "meaning_vi_status": "reviewed" },
+          "方式": { "meaning_vi": "cách thức", "meaning_vi_status": "reviewed" }
+        }
+      }
+    },
+    "lesson-10": {
+      "status": "draft_meaning_vi_reviewed_pending_lesson_content",
+      "content_review": {
+        "status": "meaning_vi_only_reviewed",
+        "reviewed_at": "2026-09-02",
+        "reviewer": "Codex + six lesson-isolated subagents",
+        "note": "本次只补充第十课 meaning_vi；来源、学习目标、学习流程、教师手册、PPT 与完整内容仍未批准。"
+      },
+      "vocabulary": {
+        "entries": {
+          "穿戴": { "meaning_vi": "mặc; đeo", "meaning_vi_status": "reviewed" },
+          "整齐": { "meaning_vi": "gọn gàng; chỉnh tề", "meaning_vi_status": "reviewed" },
+          "商量": { "meaning_vi": "bàn bạc; thảo luận", "meaning_vi_status": "reviewed" },
+          "碰": { "meaning_vi": "tình cờ gặp", "meaning_vi_status": "reviewed" },
+          "实习": { "meaning_vi": "thực tập", "meaning_vi_status": "reviewed" },
+          "答应": { "meaning_vi": "đồng ý; nhận lời", "meaning_vi_status": "reviewed" },
+          "厨师": { "meaning_vi": "đầu bếp", "meaning_vi_status": "reviewed" },
+          "收入": { "meaning_vi": "thu nhập", "meaning_vi_status": "reviewed" },
+          "社交": { "meaning_vi": "giao tiếp xã hội", "meaning_vi_status": "reviewed" },
+          "费用": { "meaning_vi": "chi phí", "meaning_vi_status": "reviewed" },
+          "分摊": { "meaning_vi": "chia đều chi phí; cùng nhau trả", "meaning_vi_status": "reviewed" },
+          "调查": { "meaning_vi": "điều tra; khảo sát", "meaning_vi_status": "reviewed" },
+          "功课": { "meaning_vi": "bài vở; bài tập", "meaning_vi_status": "reviewed" },
+          "同乡": { "meaning_vi": "đồng hương", "meaning_vi_status": "reviewed" },
+          "普通": { "meaning_vi": "bình thường", "meaning_vi_status": "reviewed" },
+          "花费": { "meaning_vi": "tiêu tốn; chi tiêu", "meaning_vi_status": "reviewed" },
+          "负担": { "meaning_vi": "gánh chịu chi phí", "meaning_vi_status": "reviewed" },
+          "请客": { "meaning_vi": "mời ăn; đãi khách", "meaning_vi_status": "reviewed" },
+          "增多": { "meaning_vi": "tăng lên; nhiều hơn", "meaning_vi_status": "reviewed" },
+          "特色": { "meaning_vi": "đặc điểm riêng; nét đặc trưng", "meaning_vi_status": "reviewed" },
+          "比例": { "meaning_vi": "tỷ lệ", "meaning_vi_status": "reviewed" },
+          "行为": { "meaning_vi": "hành vi", "meaning_vi_status": "reviewed" },
+          "大饱口福": { "meaning_vi": "được ăn uống thỏa thích", "meaning_vi_status": "reviewed" },
+          "距离": { "meaning_vi": "khoảng cách", "meaning_vi_status": "reviewed" },
+          "追求": { "meaning_vi": "theo đuổi", "meaning_vi_status": "reviewed" },
+          "和谐": { "meaning_vi": "hòa hợp; hài hòa", "meaning_vi_status": "reviewed" },
+          "相处": { "meaning_vi": "sống hòa thuận với nhau", "meaning_vi_status": "reviewed" }
+        }
+      }
+    },
+    "lesson-11": {
+      "status": "draft_meaning_vi_reviewed_pending_lesson_content",
+      "content_review": {
+        "status": "meaning_vi_only_reviewed",
+        "reviewed_at": "2026-09-02",
+        "reviewer": "Codex + six lesson-isolated subagents",
+        "note": "本次只补充第十一课 meaning_vi；来源、学习目标、学习流程、教师手册、PPT 与完整内容仍未批准。idioms 仍按现有 schema 单独管理。"
+      },
+      "vocabulary": {
+        "entries": {
+          "打招呼": { "meaning_vi": "chào hỏi", "meaning_vi_status": "reviewed" },
+          "拥抱": { "meaning_vi": "ôm", "meaning_vi_status": "reviewed" },
+          "鞠躬": { "meaning_vi": "cúi chào", "meaning_vi_status": "reviewed" },
+          "握手": { "meaning_vi": "bắt tay", "meaning_vi_status": "reviewed" },
+          "问候": { "meaning_vi": "hỏi thăm; chào hỏi", "meaning_vi_status": "reviewed" },
+          "点头": { "meaning_vi": "gật đầu", "meaning_vi_status": "reviewed" },
+          "俗语": { "meaning_vi": "tục ngữ; câu nói dân gian", "meaning_vi_status": "reviewed" },
+          "管": { "meaning_vi": "quản lý; trông nom", "meaning_vi_status": "reviewed" },
+          "离": { "meaning_vi": "cách; cách xa", "meaning_vi_status": "reviewed" },
+          "交通": { "meaning_vi": "giao thông; việc đi lại", "meaning_vi_status": "reviewed" },
+          "方便": { "meaning_vi": "thuận tiện; tiện lợi", "meaning_vi_status": "reviewed" },
+          "风和日丽": { "meaning_vi": "trời trong, gió mát, nắng đẹp", "meaning_vi_status": "reviewed" },
+          "关心": { "meaning_vi": "quan tâm; chăm lo", "meaning_vi_status": "reviewed" },
+          "瘦": { "meaning_vi": "gầy", "meaning_vi_status": "reviewed" },
+          "说实话": { "meaning_vi": "nói thật; nói thật lòng", "meaning_vi_status": "reviewed" },
+          "亲戚": { "meaning_vi": "họ hàng; người thân", "meaning_vi_status": "reviewed" },
+          "串门": { "meaning_vi": "sang nhà người quen chơi; đến thăm nhà", "meaning_vi_status": "reviewed" },
+          "冻": { "meaning_vi": "đóng băng; chịu lạnh", "meaning_vi_status": "reviewed" },
+          "急于": { "meaning_vi": "nóng lòng muốn", "meaning_vi_status": "reviewed" },
+          "脱": { "meaning_vi": "cởi; tháo ra", "meaning_vi_status": "reviewed" },
+          "过早": { "meaning_vi": "quá sớm", "meaning_vi_status": "reviewed" },
+          "厚": { "meaning_vi": "dày; ấm (dùng cho quần áo)", "meaning_vi_status": "reviewed" },
+          "远亲": { "meaning_vi": "họ hàng xa", "meaning_vi_status": "reviewed" }
+        }
+      }
+    },
+    "lesson-12": {
+      "status": "draft_meaning_vi_reviewed_pending_lesson_content",
+      "content_review": {
+        "status": "meaning_vi_only_reviewed",
+        "reviewed_at": "2026-09-02",
+        "reviewer": "Codex + six lesson-isolated subagents",
+        "note": "本次只补充第十二课 meaning_vi；来源、学习目标、学习流程、教师手册、PPT 与完整内容仍未批准。"
+      },
+      "vocabulary": {
+        "entries": {
+          "宽阔": { "meaning_vi": "rộng rãi", "meaning_vi_status": "reviewed" },
+          "池塘": { "meaning_vi": "ao", "meaning_vi_status": "reviewed" },
+          "背": { "meaning_vi": "cõng; mang trên lưng", "meaning_vi_status": "reviewed" },
+          "散步": { "meaning_vi": "đi dạo", "meaning_vi_status": "reviewed" },
+          "摸": { "meaning_vi": "sờ; chạm vào", "meaning_vi_status": "reviewed" },
+          "本来": { "meaning_vi": "vốn; ban đầu", "meaning_vi_status": "reviewed" },
+          "突然": { "meaning_vi": "đột nhiên; bất ngờ", "meaning_vi_status": "reviewed" },
+          "分歧": { "meaning_vi": "bất đồng; khác biệt ý kiến", "meaning_vi_status": "reviewed" },
+          "取决（于）": { "meaning_vi": "phụ thuộc (vào)", "meaning_vi_status": "reviewed" },
+          "强壮": { "meaning_vi": "khỏe mạnh; cường tráng", "meaning_vi_status": "reviewed" },
+          "稳": { "meaning_vi": "vững; vững vàng", "meaning_vi_status": "reviewed" },
+          "愿意": { "meaning_vi": "sẵn lòng; bằng lòng", "meaning_vi_status": "reviewed" },
+          "稍微": { "meaning_vi": "hơi; một chút", "meaning_vi_status": "reviewed" },
+          "疲劳": { "meaning_vi": "mệt mỏi", "meaning_vi_status": "reviewed" },
+          "尽量": { "meaning_vi": "cố gắng hết mức có thể", "meaning_vi_status": "reviewed" },
+          "信服": { "meaning_vi": "bị thuyết phục; tin theo", "meaning_vi_status": "reviewed" },
+          "便": { "meaning_vi": "bèn; liền", "meaning_vi_status": "reviewed" },
+          "叫": { "meaning_vi": "kêu lên", "meaning_vi_status": "reviewed" },
+          "发生": { "meaning_vi": "xảy ra", "meaning_vi_status": "reviewed" },
+          "责任": { "meaning_vi": "trách nhiệm", "meaning_vi_status": "reviewed" },
+          "陪伴": { "meaning_vi": "ở bên; đồng hành cùng", "meaning_vi_status": "reviewed" },
+          "改": { "meaning_vi": "thay đổi; sửa lại", "meaning_vi_status": "reviewed" },
+          "主意": { "meaning_vi": "ý định; ý kiến", "meaning_vi_status": "reviewed" },
+          "金色": { "meaning_vi": "màu vàng; vàng óng", "meaning_vi_status": "reviewed" },
+          "行": { "meaning_vi": "hàng (cây); dãy", "meaning_vi_status": "reviewed" },
+          "阳光": { "meaning_vi": "ánh nắng; ánh mặt trời", "meaning_vi_status": "reviewed" },
+          "蹲": { "meaning_vi": "ngồi xổm", "meaning_vi_status": "reviewed" }
+        }
+      }
+    }
+  }
+}

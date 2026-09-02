@@ -31,13 +31,31 @@ test-results/
 # GitHub file-size limit; extracted approval evidence remains in the archive
 lessons/boya-intermediate-i/lesson-01/90-archive/approval-evidence-2026-08-27/social-appellation-supplement-v11/第一课-主任审核包-含文化补充-v11-final.zip
 
-# Legacy agent directory
-.agent/
+# Project-local agent harness. Keep durable contracts and skills versioned;
+# individual run packets are local execution evidence and stay untracked.
+.agent/*
+!.agent/agent-workflow-index.md
+!.agent/agent-operating-contract.md
+!.agent/skills/
+.agent/skills/*
+!.agent/skills/README.md
+!.agent/skills/harness-engineering/
+!.agent/skills/harness-engineering/SKILL.md
+!.agent/skills/boya-lesson-production/
+!.agent/skills/boya-lesson-production/SKILL.md
+!.agent/runs/
+.agent/runs/*
+!.agent/runs/README.md
 
 # Local temp/cache
 .cache/
 .tmp/
 tmp/
+# Root-level render and QA scratch artifacts
+/.tmp*
+/.l*
+**/.DS_Store
+**/*-DS_Store
 
 # Working files (OCR, PDFs, intermediate)
 work/

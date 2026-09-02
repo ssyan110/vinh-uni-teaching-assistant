@@ -4,14 +4,15 @@ const { toSimplified } = require('./simplify_chinese');
 const designSystem = require('./boya_design_system');
 
 // Shared visual master for all future lesson PPTX files.
-// This is intentionally aligned with the approved Lesson 01 V4 visual system:
-// warm paper, KaiTi, pastel blocks, thin ink lines, and framed illustrations.
+// This is intentionally aligned with the finalized L1-L6 visual system:
+// white canvas, KaiTi, pastel blocks, thin ink lines, and framed illustrations.
 const projectRoot = path.resolve(__dirname, '..');
 const projectConfig = JSON.parse(fs.readFileSync(path.join(projectRoot, 'project.config.json'), 'utf8'));
 
 const CJK_FONT = designSystem.fonts.cjk;
 const LATIN_FONT = designSystem.fonts.latin;
 const COLORS = designSystem.colors;
+const T = designSystem.pptTypography;
 
 function simplify(value) {
   return toSimplified(String(value == null ? '' : value));
@@ -25,7 +26,7 @@ function addText(slide, value, x, y, w, h, options = {}) {
   slide.addText(simplify(value), {
     x, y, w, h,
     fontFace: CJK_FONT,
-    fontSize: 22,
+    fontSize: T.body_pt,
     color: COLORS.ink,
     margin: 0,
     fit: 'shrink',
@@ -41,7 +42,7 @@ function addLatin(slide, value, x, y, w, h, options = {}) {
   slide.addText(String(value), {
     x, y, w, h,
     fontFace: LATIN_FONT,
-    fontSize: 14,
+    fontSize: T.small_label_pt,
     color: COLORS.muted,
     margin: 0,
     fit: 'shrink',
@@ -59,12 +60,13 @@ function addLine(slide, x, y, w, color = COLORS.line, pt = 0.7) {
 
 function addHeader(slide, page, title = '', context = {}) {
   const lessonLabel = clean(context.lessonLabel || context.headerLabel || '博雅汉语听说');
-  addText(slide, lessonLabel, 0.72, 0.26, context.headerWidth || 5.4, 0.24, { fontSize: 11, color: COLORS.muted, bold: true });
-  addText(slide, String(page).padStart(2, '0'), 12.0, 0.26, 0.62, 0.24, { fontSize: 11, color: COLORS.muted, bold: true, align: 'right' });
+  slide.background = { color: COLORS.slideBackground };
+  addText(slide, lessonLabel, 0.72, 0.26, context.headerWidth || 5.4, 0.24, { fontSize: T.header_pt, color: COLORS.muted, bold: true });
+  addText(slide, String(page).padStart(2, '0'), 12.0, 0.26, 0.62, 0.24, { fontSize: T.header_pt, color: COLORS.muted, bold: true, align: 'right' });
   addLine(slide, 0.72, 0.66, 11.9, COLORS.line, 0.8);
   slide.addShape('rect', { x: 0.72, y: 0.64, w: 0.48, h: 0.04, fill: { color: COLORS.purple }, line: { color: COLORS.purple, transparency: 100 } });
   if (title) {
-    const size = title.length > 28 ? 23 : title.length > 20 ? 27 : 34;
+    const size = title.length > 20 ? T.long_title_pt : T.slide_title_pt;
     addText(slide, title, 0.78, 0.9, 11.75, 0.58, { fontSize: size, bold: true, valign: 'top' });
   }
 }
@@ -124,15 +126,15 @@ function addImagePanel(slide, files, x, y, w, h, fill = COLORS.mint, variant = 0
 function addMaterial(slide, material, x, y, w, color = COLORS.yellow) {
   if (!material) return;
   addAccent(slide, x, y + 0.02, 0.08, color, 0.52);
-  addText(slide, '材料', x + 0.22, y, 0.46, 0.22, { fontSize: 10, color: COLORS.muted, bold: true });
+  addText(slide, '材料', x + 0.22, y, 0.46, 0.22, { fontSize: T.small_label_pt, color: COLORS.muted, bold: true });
   const parts = String(material).replace(/^材料[：:]\s*/, '').replace(/：/g, '\n').replace(/、/g, ' · ').split('\n');
-  addText(slide, parts[0], x + 0.82, y - 0.02, w - 0.82, 0.25, { fontSize: 15, color: COLORS.ink, bold: true });
-  if (parts[1]) addText(slide, parts.slice(1).join(' · '), x + 0.82, y + 0.25, w - 0.82, 0.22, { fontSize: 11.5, color: COLORS.muted, bold: true });
+  addText(slide, parts[0], x + 0.82, y - 0.02, w - 0.82, 0.25, { fontSize: T.small_label_pt, color: COLORS.ink, bold: true });
+  if (parts[1]) addText(slide, parts.slice(1).join(' · '), x + 0.82, y + 0.25, w - 0.82, 0.22, { fontSize: T.small_label_pt, color: COLORS.muted, bold: true });
 }
 
 function addOutcome(slide, outcome, x, y, w) {
   if (!outcome) return;
-  addText(slide, '完成：' + outcome, x, y, w, 0.36, { fontSize: 14, color: COLORS.teal, bold: true });
+  addText(slide, '完成：' + outcome, x, y, w, 0.36, { fontSize: T.body_pt, color: COLORS.teal, bold: true });
   addLine(slide, x, y + 0.45, w, COLORS.mintDeep, 1.3);
 }
 

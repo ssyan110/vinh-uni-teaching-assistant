@@ -246,13 +246,13 @@
       "printed_pages": "1–11",
       "pdf_page": 14,
       "audio_count": 8,
-    "status": {
-      "stage": "authority",
-      "authority_status": "pptx_chair_approved",
-      "content_status": "pptx_approved_by_department_chair_2026-08-29",
-      "delivery_status": "pptx_only_handoff_pending_full_package",
-      "pptx_draft_status": "promoted_to_locked_authority",
-      "release_status": "blocked_pending_full_package"
+      "status": {
+        "stage": "authority",
+        "authority_status": "pptx_chair_approved",
+        "content_status": "pptx_approved_by_department_chair_2026-08-29",
+        "delivery_status": "pptx_only_handoff_pending_full_package",
+        "pptx_draft_status": "promoted_to_locked_authority",
+        "release_status": "blocked_pending_full_package"
       }
     },
     {
@@ -267,19 +267,22 @@
       "title": "王红的一天",
       "lesson_path": "lessons/boya-quasi-intermediate-i/lesson-02",
       "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/source-manifest.json",
-      "authority_manifest": null,
+      "authority_manifest": "lessons/boya-quasi-intermediate-i/lesson-02/20-approved/lesson-manifest.json",
       "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
       "printed_pages": "12–21",
       "pdf_page": 25,
-    "audio_count": 7,
-    "status": {
-      "stage": "source",
-      "source_status": "pending_review",
-      "source_qa_status": "technical_audio_passed_7_of_7; 2-7_semantic_and_playback_approved; 2-1_to_2-6_pending",
-      "authority_status": "not_created",
-      "pptx_draft_status": "generated_not_approved",
-      "draft_modes": ["online", "face-to-face"],
-      "release_status": "locked_pending_authority"
+      "audio_count": 7,
+      "status": {
+        "stage": "pptx-approved",
+        "source_status": "pending_review",
+        "source_qa_status": "technical_audio_passed_7_of_7; 2-7_semantic_and_playback_approved; 2-1_to_2-6_pending",
+        "authority_status": "pptx_user_approved_2026-08-31",
+        "pptx_draft_status": "promoted_to_locked_authority",
+        "draft_modes": [
+          "online",
+          "face-to-face"
+        ],
+        "release_status": "blocked_pending_full_package"
       }
     },
     {
@@ -294,23 +297,26 @@
       "title": "我对学中文越来越有兴趣",
       "lesson_path": "lessons/boya-quasi-intermediate-i/lesson-03",
       "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/source-manifest.json",
-      "authority_manifest": null,
+      "authority_manifest": "lessons/boya-quasi-intermediate-i/lesson-03/20-approved/lesson-manifest.json",
       "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
       "printed_pages": "22–31",
       "pdf_page": 35,
       "audio_count": 6,
-    "status": {
-      "stage": "source",
-      "source_status": "partial_adam_review_source_and_images_audio_pending",
-      "source_qa_status": "source_content_and_images_passed; audio_semantic_playback_pending",
-      "authority_status": "not_created",
-      "pptx_draft_status": "generated_not_approved",
-      "draft_modes": ["online", "face-to-face"],
-      "release_status": "locked_pending_authority"
+      "status": {
+        "stage": "pptx-approved",
+        "source_status": "partial_adam_review_source_and_images_audio_pending",
+        "source_qa_status": "source_content_and_images_passed; audio_semantic_playback_pending",
+        "authority_status": "two_pptx_user_approved_finalized_2026-08-31",
+        "pptx_draft_status": "both_promoted_to_locked_authority",
+        "draft_modes": [
+          "online",
+          "face-to-face"
+        ],
+        "release_status": "blocked_pending_full_package"
       }
     },
-  {
-    "lesson_key": "boya-quasi-intermediate-i:lesson-04",
+    {
+      "lesson_key": "boya-quasi-intermediate-i:lesson-04",
       "course_id": "vinh-chinese-listening-speaking",
       "offering_ids": [
         "2026-fall"
@@ -321,19 +327,23 @@
       "title": "在中国学汉语",
       "lesson_path": "lessons/boya-quasi-intermediate-i/lesson-04",
       "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/source-manifest.json",
-      "authority_manifest": null,
+      "authority_manifest": "lessons/boya-quasi-intermediate-i/lesson-04/20-approved/lesson-manifest.json",
       "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
       "printed_pages": "32–41",
       "pdf_page": 45,
       "audio_count": 6,
-    "status": {
-      "stage": "source",
-      "source_status": "pending_review",
-      "source_qa_status": "blocked",
-      "authority_status": "not_created",
-      "pptx_draft_status": "legacy_unverified_do_not_use",
-      "release_status": "locked_pending_source_and_current_builder"
-    }
+      "status": {
+        "stage": "pptx-approved",
+        "source_status": "partial_adam_review_source_and_images_audio_pending",
+        "source_qa_status": "source_content_and_images_passed; audio_semantic_playback_pending",
+        "authority_status": "two_pptx_user_approved_finalized_2026-08-31",
+        "pptx_draft_status": "both_promoted_to_locked_authority",
+        "draft_modes": [
+          "online",
+          "face-to-face"
+        ],
+        "release_status": "blocked_pending_full_package"
+      }
     },
     {
       "lesson_key": "boya-quasi-intermediate-i:lesson-05",
@@ -347,16 +357,18 @@
       "title": "我的音乐老师",
       "lesson_path": "lessons/boya-quasi-intermediate-i/lesson-05",
       "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/source-manifest.json",
-      "authority_manifest": null,
+      "authority_manifest": "lessons/boya-quasi-intermediate-i/lesson-05/20-approved/lesson-manifest.json",
       "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
       "printed_pages": "42–50",
       "pdf_page": 55,
       "audio_count": 6,
       "status": {
-        "stage": "source",
+        "stage": "pptx-approved",
         "source_status": "pending_review",
         "source_qa_status": "blocked",
-        "status": null
+        "authority_status": "two_pptx_user_approved_finalized_2026-09-01",
+        "pptx_draft_status": "promoted_to_locked_authority",
+        "release_status": "blocked_pending_full_package"
       }
     },
     {
@@ -371,16 +383,18 @@
       "title": "大岛参加了学校的合唱团",
       "lesson_path": "lessons/boya-quasi-intermediate-i/lesson-06",
       "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/source-manifest.json",
-      "authority_manifest": null,
+      "authority_manifest": "lessons/boya-quasi-intermediate-i/lesson-06/20-approved/lesson-manifest.json",
       "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
       "printed_pages": "51–58",
       "pdf_page": 64,
       "audio_count": 6,
       "status": {
-        "stage": "source",
+        "stage": "pptx-approved",
         "source_status": "pending_review",
         "source_qa_status": "technical_audio_passed_semantic_playback_pending",
-        "status": null
+        "authority_status": "two_pptx_user_approved_finalized_2026-09-01",
+        "pptx_draft_status": "promoted_to_locked_authority",
+        "release_status": "blocked_pending_full_package"
       }
     },
     {
@@ -395,16 +409,18 @@
       "title": "小张热爱登山",
       "lesson_path": "lessons/boya-quasi-intermediate-i/lesson-07",
       "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/source-manifest.json",
-      "authority_manifest": null,
+      "authority_manifest": "lessons/boya-quasi-intermediate-i/lesson-07/20-approved/lesson-manifest.json",
       "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
       "printed_pages": "59–67",
       "pdf_page": 72,
       "audio_count": 6,
       "status": {
-        "stage": "source",
+        "stage": "pptx-approved",
         "source_status": "pending_review",
-        "source_qa_status": "blocked",
-        "status": null
+        "source_qa_status": "technical_audio_passed_semantic_playback_pending",
+        "authority_status": "two_pptx_user_approved_finalized_2026-09-01",
+        "pptx_draft_status": "promoted_to_locked_authority",
+        "release_status": "blocked_pending_full_package"
       }
     },
     {
@@ -419,16 +435,18 @@
       "title": "孙子和《孙子兵法》",
       "lesson_path": "lessons/boya-quasi-intermediate-i/lesson-08",
       "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/source-manifest.json",
-      "authority_manifest": null,
+      "authority_manifest": "lessons/boya-quasi-intermediate-i/lesson-08/20-approved/lesson-manifest.json",
       "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
       "printed_pages": "68–76",
       "pdf_page": 81,
       "audio_count": 6,
       "status": {
-        "stage": "source",
+        "stage": "pptx-approved",
         "source_status": "pending_review",
         "source_qa_status": "blocked",
-        "status": null
+        "authority_status": "online_pptx_user_promoted_2026-09-01",
+        "pptx_draft_status": "promoted_to_locked_authority",
+        "release_status": "blocked_pending_full_package"
       }
     },
     {

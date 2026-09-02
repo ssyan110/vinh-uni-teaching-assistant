@@ -112,7 +112,7 @@ contract 的六项只覆盖短文 first／second listen；`audio-manifest.exerci
 
 ### P3（不阻塞，但需标注）
 
-- canonical 的英文 gloss（例如 `早餐` 的 gloss）属于审计辅助，不是教材权威文本；进入学生材料前须另行校对，不能直接当作已批准翻译。
+- canonical 的英文 gloss（例如 `早茶` 的 gloss）属于审计辅助，不是教材权威文本；进入学生材料前须另行校对，不能直接当作已批准翻译。
 - contract 没有显式 `approved` 布尔字段，虽然 `status=draft`、空 `approved_by` 和空 `approved_at` 已表明未批准；若 schema 要求显式字段，应在 schema 决定后统一补齐并重算 hash。
 
 ## 7. Gate 状态与安全修正边界
@@ -122,4 +122,3 @@ contract 的六项只覆盖短文 first／second listen；`audio-manifest.exerci
 - 教师手册、配套材料、Storyboard、PPTX、release：**不得开始**。
 - 可安全计划但本次不直接执行的修正：补齐 9-1 至 9-3 的 contract／binding、统一答案页定位、解决 9-6 文本不确定性；每项都需同步受影响 hash。
 - 下一最小可验证步骤：先由 Adam 确认答案页口径、9-6 文本和 contract 范围，再修订 contract／audio bindings，重算 manifest hash，重新跑来源与音频 QA。
-

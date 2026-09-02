@@ -7,10 +7,10 @@
   "approved_at": null,
   "canonical_source": {
     "path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json",
-    "sha256": "2284f4741b1f2393e9d036c9887b257e8dda87f36e38370473002d462484877d"
+    "sha256": "c928011dfed526c506af0c73ab0dd420bb0eba07f43938f179c08743c60b0da1"
   },
   "source_evidence": [
-    {"path":"lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/source-pages-77-86-audit-draft.md","sha256":"3589fdf7417fc2945a69e0f0c1272ee2b35e8951e5ba245f26554b8ecd3e01a1","locator":"P77–P86 视觉页码、板块与九项 exercise-level 记录逐项来源"},
+    {"path":"lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/source-pages-77-86-audit-draft.md","sha256":"8a9c1a49364b74ca5255ea2aa1d7949b34b7a3f4c6c6b0e331f79357816d2d47","locator":"P77–P86 视觉页码、板块与九项 exercise-level 记录逐项来源"},
     {"path":"lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/answer-pages-24-25-audit-draft.md","sha256":"d11a91b60fc30122a4c80aa7296720575c9f4b59a6022d1c27da28ac0a2b34b7","locator":"答案 PDF inventory P24–P25／视觉答案-25/26：封闭答案与听力文本"},
     {"path":"lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/audio-technical-2026-08-28.md","sha256":"a2afb6ad3b764a44bd870d00d64c2a420bd183511b1cdbb6d4856f208b55dda7","locator":"9-1至9-6 technical audio integrity；semantic/playback pending"},
     {"path":"textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf","sha256":"39899d0f400e187f57c16db821f8f4c207f936eae0e4fbfe3cab52c02bfea806","locator":"主教材 PDF 第90–99页（印刷 P77–P86）"},

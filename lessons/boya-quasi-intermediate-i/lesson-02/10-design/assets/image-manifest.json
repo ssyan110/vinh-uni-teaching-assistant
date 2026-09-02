@@ -4,7 +4,7 @@
   "textbook_id": "boya-quasi-intermediate-i",
   "lesson_id": "lesson-02",
   "lesson_title": "王红的一天",
-  "generated_at": "2026-08-29",
+  "generated_at": "2026-09-01",
   "source_scope": {
     "canonical_source": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/canonical-source.json",
     "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/source-manifest.json",
@@ -651,6 +651,40 @@
       "can_enter_ppt": false,
       "ppt_entry_status": "blocked_missing_audio_2-7_and_pending_source_review",
       "blocker": "The source text labels this as track 2-7, but the QR/source inventory/local audio directory contain only 2-1 through 2-6. Do not use on an audio-driven slide until 2-7 is recovered and reviewed."
+    },
+    {
+      "asset_id": "L02-COVER-DAY",
+      "file": "lesson-02-cover-day.png",
+      "category": "lesson_cover",
+      "use": ["第二课封面主视觉", "《王红的一天》课名页背景图"],
+      "source_refs": ["canonical-source.json#lesson_title", "visual-brief-draft.md#封面", "user-request-2026-09-01"],
+      "textbook_printed_pages": [],
+      "prompt": "Original 16:9 educational textbook illustration for 王红的一天: one young university woman across morning university classroom, midday birthday lunch with roommates, and afternoon science museum volunteer activity; warm off-white paper, fine blue-gray linework, muted pastel watercolor, generous negative space on the right, no readable text, pinyin, English, numbers, logos, flags, labels, or watermarks.",
+      "sha256": "e5e6f0294ed9e50a940d90d8b60716b9a767cb7febe242e662a73e687b54a234",
+      "dimensions": "1672x941",
+      "generated_source_path": "/Users/ssyan110/.codex/generated_images/01a05cfd-fe68-7472-8fe2-0c058690808c/exec-4bc9381b-5cc4-430d-a82a-c14a6fdb4b66.png",
+      "generation": "image_gen.imagegen",
+      "generation_status": "generated_and_copied_to_workspace",
+      "license_status": "OpenAI-generated original project draft; no external asset license claimed",
+      "can_enter_ppt": false,
+      "ppt_entry_status": "candidate_pending_visual_storyboard_and_pptx_review"
+    },
+    {
+      "asset_id": "L02-COVER-DAY-SQUARE",
+      "file": "lesson-02-cover-day-square.png",
+      "category": "lesson_cover",
+      "use": ["第二课方形框封面主视觉", "《王红的一天》课名页图片框"],
+      "source_refs": ["canonical-source.json#lesson_title", "visual-brief-draft.md#封面", "user-request-2026-09-01-square-frame"],
+      "textbook_printed_pages": [],
+      "prompt": "Recomposed original near-square full-bleed educational textbook illustration for 王红的一天, showing university classroom, birthday lunch with roommates, and science museum volunteer activity; fill the entire square canvas, no large blank area or title space, warm off-white paper, fine blue-gray linework, muted pastel watercolor, no readable text, pinyin, English, numbers, logos, flags, labels, or watermarks.",
+      "sha256": "f3da279fb36d61e6ec6067452682a7b010b811c7dac4d220ffc591fde7322bed",
+      "dimensions": "1254x1254",
+      "generated_source_path": "/Users/ssyan110/.codex/generated_images/01a05cfd-fe68-7472-8fe2-0c058690808c/exec-16618d73-3d53-4a13-8f1e-4016439ce3ac.png",
+      "generation": "image_gen.imagegen",
+      "generation_status": "generated_and_copied_to_workspace",
+      "license_status": "OpenAI-generated original project draft; no external asset license claimed",
+      "can_enter_ppt": false,
+      "ppt_entry_status": "candidate_pending_visual_storyboard_and_pptx_review"
     }
   ],
   "pending_asset_mapping": [
@@ -663,7 +697,7 @@
     {"asset_id": "L02-E02-2-STUDY-B", "status": "pending_reuse_mapping", "reuses_asset_id": "L02-V11", "source_refs": ["canonical-source.json#sections.vocabulary_comprehension.groups[1]"], "note": "No duplicate image generated; use the approved candidate only after storyboard review."}
   ],
   "qa_notes": [
-    "36 PNG assets are copied into this lesson's 10-design/assets directory: 29 vocabulary candidates, 4 vocabulary-comprehension candidates, and 3 short-text context candidates.",
+    "37 PNG assets are copied into this lesson's 10-design/assets directory: 29 vocabulary candidates, 4 vocabulary-comprehension candidates, 3 short-text context candidates, and 1 lesson-cover candidate.",
     "All generated files are 1672x941 PNGs and have SHA-256 values recorded above.",
     "The generated prompts explicitly prohibit readable text, Chinese characters, Latin words, numbers, logos, flags, labels, captions, watermarks, and speech bubbles; visual inspection and final PPT placement QA remain pending.",
     "No section divider was generated. The shared approved divider set remains the source for divider slides.",

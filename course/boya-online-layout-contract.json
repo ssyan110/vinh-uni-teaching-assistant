@@ -1,35 +1,130 @@
 {
-  "schema_version": 1,
-  "contract_id": "boya-quasi-intermediate-i-online-v1",
+  "schema_version": 2,
+  "contract_id": "boya-quasi-intermediate-i-online-v2",
   "reference_lesson_key": "boya-quasi-intermediate-i:lesson-01",
-  "description": "Shared online student-PPT layout contract for subsequent lessons.",
+  "reference_scope": "boya-quasi-intermediate-i:lesson-01..lesson-06",
+  "description": "Shared online student-PPT layout contract reconstructed from the twelve finalized Lesson 01-06 PPTX files.",
   "scope_policy": "layout_and_reusable_microcopy_only",
-  "lesson_specific_content_source": "lesson canonical-source.json plus content-contract.json; task counts and summary requirements override layout defaults",
+  "lesson_specific_content_source": "lesson canonical-source.json plus lesson-specific online-content-contract.json; lesson data overrides layout defaults",
+  "visual": {
+    "slide_background": "#FFFFFF",
+    "local_warm_white": "#FFFDF9",
+    "background_policy": "投影片主畫布固定純白；暖白只用於局部卡片、圖片框或插畫內容，不作整張投影片背景。"
+  },
+  "pptTypography": {
+    "visible_min_pt": 20,
+    "header_pt": 20,
+    "page_marker_pt": 22,
+    "small_label_pt": 22,
+    "keyword_pt": 24,
+    "body_compact_pt": 22,
+    "body_pt": 25,
+    "subtitle_pt": 24,
+    "task_prompt_pt": 34,
+    "task_prompt_min_pt": 28,
+    "slide_title_pt": 34,
+    "long_title_pt": 27,
+    "divider_pt": 48,
+    "cover_title_pt": 44,
+    "cover_title_min_pt": 44,
+    "cover_title_max_pt": 50,
+    "cover_badge_pt": 20,
+    "goals_title_pt": 36,
+    "goals_label_pt": 23,
+    "goals_number_pt": 22,
+    "goals_item_pt": 24,
+    "vocabulary_headword_pt": 42,
+    "vocabulary_headword_long_pt": 34,
+    "vocabulary_pos_pt": 22,
+    "vocabulary_meaning_pt": 22,
+    "vocabulary_usage_pt": 22,
+    "vocabulary_optional_pt": 23,
+    "vocabulary_example_pt": 22,
+    "pinyin_pt": 24,
+    "route_step_pt": 23,
+    "record_subtitle_pt": 25,
+    "expression_example_pt": 35
+  },
+  "effective_typography_policy": {
+    "visible_min_pt": 20,
+    "autofit": "allowed only when the rendered effective size remains at least 20 pt",
+    "validation": "inspect explicit and inherited a:rPr/a:defRPr size plus fontScale; confirm with full rendered preview",
+    "historical_reference_exceptions": "The finalized L01-L06 files contain isolated inherited 18 pt/default and script-field anomalies; do not copy them into new drafts."
+  },
+  "geometry_emu": {
+    "canvas": { "width": 12192000, "height": 6858000 },
+    "header": { "x": 594360, "y": 228600, "cx": 4114800, "cy": 256032 },
+    "slide_number": { "x": 10972800, "y": 228600, "cx": 594360, "cy": 256032 },
+    "header_rule": { "x": 594360, "y": 630936, "cx": 10972800, "cy": 0 },
+    "main_title": { "x": 658368, "y": 896112, "cx": 10607040, "cy": 566928 },
+    "bottom_page_marker": { "x": 9464040, "y": 6419088, "cx": 2103120, "cy": 256032 },
+    "cover": {
+      "badge": { "x": 786384, "y": 1014984, "cx": 1042416, "cy": 274320 },
+      "title": { "x": 713232, "y": 1572768, "cx": 5486400, "cy": 749808 }
+    },
+    "goals": {
+      "title": { "x": 658368, "y": 932688, "cx": 7498080, "cy": 548640 },
+      "label": { "x": 713232, "y": 1581912, "cx": 7772400, "cy": 365760 },
+      "number_box": { "x": 896112, "y": 2286000, "cx": 347472, "cy": 347472 },
+      "number": { "x": 896112, "y": 2359152, "cx": 347472, "cy": 182880 },
+      "item": { "x": 1417320, "y": 2240280, "cx": 9738360, "cy": 457200 },
+      "item_step_y": 713232
+    },
+    "vocabulary": {
+      "left_card": { "x": 713232, "y": 1527048, "cx": 4892040, "cy": 4553712 },
+      "headword": { "x": 987552, "y": 1810512, "cx": 4315968, "cy": 621792 },
+      "pinyin": { "x": 1005840, "y": 2514600, "cx": 4297680, "cy": 329184 },
+      "pos": { "x": 1005840, "y": 3035808, "cx": 4297680, "cy": 329184 },
+      "meaning": { "x": 1005840, "y": 3456432, "cx": 4297680, "cy": 475488 },
+      "usage": { "x": 1005840, "y": 4050792, "cx": 4251960, "cy": 640080 },
+      "image": { "x": 6016752, "y": 1673352, "cx": 5330952, "cy": 3017520 },
+      "examples": { "x": 6144768, "y": 5202936, "cx": 5074920, "cy": 713232 }
+    }
+  },
   "cover": {
     "online_label": "在线课",
-    "subtitle": "听一听，问一问，说一说。",
-    "asset": "lesson-01-cover-family-work-hobby.png"
+    "bottom_subtitle_policy": "forbidden",
+    "asset": "lesson-01-cover-family-work-hobby.png",
+    "title_policy": "lesson-specific value between 44 and 50 pt; never add a bottom subtitle"
   },
   "learning_route": {
     "title": "学习流程图",
     "asset": "learning-route-user-supplied-transparent.png"
   },
   "goals": {
-    "title": "学完这课后，我能……"
+    "title": "学完这课后，我能……",
+    "label": "听懂 · 介绍 · 讨论 · 准备",
+    "item_count_policy": "lesson-specific; finalized L01-L03/L05-L06 use four items and finalized L04 uses three",
+    "source_policy": "must come from the lesson-specific content contract; no generic goals or another lesson's protagonist",
+    "number_marker": {
+      "shape": "filled_circle",
+      "fill_sequence": ["teal", "coral", "purple", "yellow"],
+      "number_color": "white",
+      "outline": "none"
+    }
   },
   "vocabulary": {
     "divider_title": "词语",
     "divider_subtitle": "看图、读音、词类、意思、用法和例句。",
     "practice_after_every": 5,
     "practice_title": "请你说说它们的中文并造句",
+    "meaning_field": "meaning_vi",
+    "meaning_language": "Vietnamese",
+    "meaning_policy": "required per vocabulary item; student-facing meaning must be Vietnamese vocabulary, never English and never a Chinese or English fallback",
+    "usage_policy": "lesson-specific and word-specific when supplied; blank is allowed; do not synthesize a generic explanation from part of speech",
+    "optional_fields": ["usage", "usage_detail", "extension", "grammar_detail", "common_phrase"],
+    "optional_field_policy": "render only when the lesson content contract supplies non-empty text; otherwise omit both the label and the empty field",
     "extension_label": "扩展：",
-    "extension_policy": "empty_until_explicitly_supplied",
+    "extension_policy": "word_specific_optional; never show an empty universal extension label",
+    "grammar_detail_policy": "word_specific_optional; may remain blank until explicitly supplied",
+    "example_policy": "new lesson drafts require exactly two explicit short sentences from the lesson example bank; never generate filler or copy a long textbook sentence",
+    "example_max_hanzi_chars": 24,
     "page_breaks": {
       "2": { "first_page": 12, "first_count": 17, "second_page": 13 },
       "3": { "first_page": 22, "first_count": 17, "second_page": 23 },
       "4": { "first_page": 32, "first_count": 17, "second_page": 33 }
     },
-    "page_breaks_policy": "The entries above are lesson-specific layout overrides only; future lessons must derive printed-page breaks from their own canonical source/content contract and may not inherit these numbers."
+    "page_breaks_policy": "The entries above are audited Lesson 02-04 source-page mappings only; future lessons must derive printed-page breaks from their own canonical source/content contract and may not inherit these numbers."
   },
   "proper_nouns": {
     "divider_title": "专有名词"
@@ -43,7 +138,18 @@
   },
   "expressions": {
     "divider_title": "句式",
-    "student_instruction": "完成教材中的练习。"
+    "student_instruction": "用这个句式写出三句话",
+    "pattern_box": {
+      "shape": "roundRect",
+      "fill": "lilac",
+      "text_color": "purple"
+    },
+    "visible_header_expression_policy": "forbidden",
+    "visible_context_policy": "forbidden",
+    "example_label": "例句：",
+    "example_count": 2,
+    "example_pt": 35,
+    "example_max_hanzi_chars": 24
   },
   "comprehensive": {
     "divider_title": "综合练习"
@@ -52,7 +158,7 @@
     "slides": [
       {
         "title": "我觉得很难的地方",
-        "prompt": "写下你不太懂的词语、句式、短文、听力。",
+        "prompt": "写下你不太懂的词语、句式、短文或听力内容。",
         "lines": 6
       },
       {
@@ -61,7 +167,7 @@
           "我已经学完本课所有词语，知道它们的意思和用法。",
           "我已经听完本课所有听力音频。",
           "我已经按本课要求为三段短文写好摘要。",
-          "我已经记下听不懂的词语、句式、短文或听力。",
+          "我已经记下听不懂的词语、句式、短文或听力内容。",
           "我已经学完本课所有句式，并完成每个句式的练习。",
           "我已经完成课本第{table_page}页的表格。",
           "我已经按本课要求写好个人介绍，并使用指定的课本词语和句式。",
@@ -76,6 +182,7 @@
   "fonts": {
     "cjk": "KaiTi",
     "latin": "Times New Roman",
-    "minimum_visible_pt": 20
+    "minimum_visible_pt": 20,
+    "script_policy": "CJK Hanzi uses KaiTi at run level; Vietnamese, pinyin and other Latin-script text uses Times New Roman at run level."
   }
 }

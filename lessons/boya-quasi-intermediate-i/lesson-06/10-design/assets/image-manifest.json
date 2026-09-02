@@ -4,7 +4,7 @@
   "textbook_id": "boya-quasi-intermediate-i",
   "lesson_id": "lesson-06",
   "lesson_title": "大岛参加了学校的合唱团",
-  "generated_at": "2026-08-29",
+  "generated_at": "2026-09-02",
   "source_scope": {
     "canonical_source": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/canonical-source.json",
     "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/source-manifest.json",
@@ -238,6 +238,23 @@
       "license_status": "OpenAI-generated original project draft; no external asset license claimed",
       "can_enter_ppt": false,
       "ppt_entry_status": "candidate_pending_source_and_visual_review"
+    },
+    {
+      "asset_id": "L06-COVER-CHOIR-SQUARE",
+      "file": "lesson-06-cover-choir-square.png",
+      "category": "lesson_cover",
+      "use": ["第六课方形框封面主视觉", "《大岛参加了学校的合唱团》课名页图片框"],
+      "source_refs": ["canonical-source.json#title", "canonical-source.json#sections.short_text_1", "canonical-source.json#sections.short_text_2", "canonical-source.json#sections.short_text_3", "user-request-2026-09-02"],
+      "textbook_printed_pages": [],
+      "prompt": "Original 1:1 full-bleed educational textbook illustration for 大岛参加了学校的合唱团: young Japanese female graduate student Oshima Yumi playing piano, joining a university choir rehearsal, singing with a diverse group, and becoming happy and engaged; warm off-white paper, fine gray-blue linework, muted pastel watercolor, no large blank area or title space, no readable Chinese, Japanese, Korean, pinyin, English, numbers, labels, logos, flags, signs, captions, speech bubbles, lyrics, or watermark.",
+      "sha256": "78d8a6437a73ef332d16d845702d6e33170bac8c83500c23994af5155e8bafc6",
+      "dimensions": "1254x1254",
+      "generated_source_path": "/Users/ssyan110/.codex/generated_images/01a05cfd-fe68-7472-8fe2-0c058690808c/exec-e3bdf0e5-f921-48c6-a694-d2d987113abb.png",
+      "generation": "image_gen.imagegen",
+      "generation_status": "generated_and_copied_to_workspace",
+      "license_status": "OpenAI-generated original project draft; no external asset license claimed",
+      "can_enter_ppt": false,
+      "ppt_entry_status": "candidate_pending_visual_storyboard_and_pptx_review"
     }
   ],
   "coverage_summary": {
@@ -269,7 +286,7 @@
     }
   ],
   "qa_notes": [
-    "All 11 assets are raster PNG files copied into this lesson's 10-design/assets directory; no source or protected directory was modified.",
+    "All 12 assets are raster PNG files copied into this lesson's 10-design/assets directory, including one square lesson-cover candidate; no source or protected directory was modified.",
     "Images were visually inspected after generation; they follow the approved educational illustration direction and leave negative space for PPT text.",
     "The source is still pending audio review; the printed-name discrepancy is recorded as historical OCR evidence (大岛／大圣), with Adam's confirmed teaching form 大岛. Do not treat these images as approved lesson content.",
     "These assets are draft-only. Do not embed them into approved PPTX until the source, visual storyboard, and Adam review are complete.",

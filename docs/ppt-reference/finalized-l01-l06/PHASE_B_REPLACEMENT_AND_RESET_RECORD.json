@@ -1,0 +1,627 @@
+{
+  "operation": "user-directed-finalized-replacement-and-source-only-reset",
+  "timestamp_local": "20260902-195915",
+  "project": "/Users/ssyan110/Development/vinh-uni-teaching-assistant",
+  "finalized_source": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课",
+  "scope": {
+    "l01_l06": "replace approved online and face-to-face PPTX with canonical finalized sources; remove pptx-draft folders",
+    "l07_l12": "retain only 00-source; move all other lesson-level artifacts to Trash"
+  },
+  "trash_root": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915",
+  "replacements": [
+    {
+      "lesson": "01",
+      "mode": "在线预习",
+      "target": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-01/20-approved/pptx/lesson-01-在线预习.pptx",
+      "canonical_source": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-01-在线预习.pptx..pptx",
+      "previous": {
+        "sha256": "44ccea584b57acaeb6433e1a54103bf4f336d00d94f4988ab6f6d748d9d82700",
+        "bytes": 25060786,
+        "slide_count": 83,
+        "notes_count": 81
+      },
+      "current": {
+        "sha256": "b1c4682de81c481530deac72f17b155390a701b2888f4685db2015dee501bb40",
+        "bytes": 25061551,
+        "slide_count": 83,
+        "notes_count": 81
+      }
+    },
+    {
+      "lesson": "01",
+      "mode": "实体课",
+      "target": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-01/20-approved/pptx/lesson-01-实体课.pptx",
+      "canonical_source": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-01-实体课.pptx",
+      "previous": {
+        "sha256": "9445184e9e20cc772b159e997b93cf4b4e2711d30586f8fd6260ce5e983962ea",
+        "bytes": 28497876,
+        "slide_count": 57,
+        "notes_count": 57
+      },
+      "current": {
+        "sha256": "7a776c11826579ad7b9c5a87d74aefcbb8501b068370f43a36aa7fcaf6fe72d2",
+        "bytes": 28496383,
+        "slide_count": 57,
+        "notes_count": 57
+      }
+    },
+    {
+      "lesson": "02",
+      "mode": "在线预习",
+      "target": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-02/20-approved/pptx/lesson-02-在线预习.pptx",
+      "canonical_source": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-02-在线预习.pptx",
+      "previous": {
+        "sha256": "e60086e7bcff79269ec8fcd0377267c6cd32f8d7460a74111e8324fb3a87189d",
+        "bytes": 63949429,
+        "slide_count": 80,
+        "notes_count": 79
+      },
+      "current": {
+        "sha256": "65d45b9d09858a818d635a3ae9bb9cb1a462f7dd3a9a06a2177338f2b08e4dc3",
+        "bytes": 64623651,
+        "slide_count": 80,
+        "notes_count": 79
+      }
+    },
+    {
+      "lesson": "02",
+      "mode": "实体课",
+      "target": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-02/20-approved/pptx/lesson-02-实体课.pptx",
+      "canonical_source": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-02-实体课.pptx",
+      "previous": {
+        "sha256": "6de33e6ade9bf44d7cbbe8e0c6850239906fa0772b7908cbcce72f4f994d559e",
+        "bytes": 22216586,
+        "slide_count": 57,
+        "notes_count": 56
+      },
+      "current": {
+        "sha256": "fd3e7dec08647dd3e037d02a6d7b5326e9b0893d55bf3ace33dbac116655d143",
+        "bytes": 22884027,
+        "slide_count": 57,
+        "notes_count": 56
+      }
+    },
+    {
+      "lesson": "03",
+      "mode": "在线预习",
+      "target": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-03/20-approved/pptx/lesson-03-在线预习.pptx",
+      "canonical_source": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-03-在线预习.pptx",
+      "previous": {
+        "sha256": "0bc101fdaac5344dff800580ecbcc7887a5fa0876b81fbda9c999c1eea0d9552",
+        "bytes": 70147802,
+        "slide_count": 68,
+        "notes_count": 68
+      },
+      "current": {
+        "sha256": "21352c7ff0d7153725cd74685f7b5a4a11d1258a58d047dc0c90645752133929",
+        "bytes": 70149488,
+        "slide_count": 68,
+        "notes_count": 68
+      }
+    },
+    {
+      "lesson": "03",
+      "mode": "实体课",
+      "target": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-03/20-approved/pptx/lesson-03-实体课.pptx",
+      "canonical_source": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-03-实体课.pptx",
+      "previous": {
+        "sha256": "2efe399e3bda9c400f273c6f6c898ff0e70268b995edfd5d40d252bcf9fc1ee7",
+        "bytes": 24361067,
+        "slide_count": 50,
+        "notes_count": 50
+      },
+      "current": {
+        "sha256": "17b111fb64da8839c6896214f0c07655c87965896c56244a8f1ab2d16de4a85a",
+        "bytes": 24360819,
+        "slide_count": 50,
+        "notes_count": 50
+      }
+    },
+    {
+      "lesson": "04",
+      "mode": "在线预习",
+      "target": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-04/20-approved/pptx/lesson-04-在线预习.pptx",
+      "canonical_source": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-04-在线预习.pptx",
+      "previous": {
+        "sha256": "ad4809d22155e2253fb4e02d1827dbae3b9cfd83ef1d5d84eccfa075def08aae",
+        "bytes": 20084486,
+        "slide_count": 75,
+        "notes_count": 74
+      },
+      "current": {
+        "sha256": "9d64a7ae2cac06f033907349a325a700406bc798b9a595830b7ce299080eb312",
+        "bytes": 20087746,
+        "slide_count": 75,
+        "notes_count": 74
+      }
+    },
+    {
+      "lesson": "04",
+      "mode": "实体课",
+      "target": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-04/20-approved/pptx/lesson-04-实体课.pptx",
+      "canonical_source": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-04-实体课.pptx",
+      "previous": {
+        "sha256": "95ea0c8d2220503f8cc0a6740bd3a13176c0ef29335c1d531155ef2f3463670d",
+        "bytes": 24327082,
+        "slide_count": 57,
+        "notes_count": 57
+      },
+      "current": {
+        "sha256": "f18c6a1d1b344784ea2b3863a32f6b7bf6b5ff899e6ae5d89b7c92f3f33a3218",
+        "bytes": 24327091,
+        "slide_count": 57,
+        "notes_count": 57
+      }
+    },
+    {
+      "lesson": "05",
+      "mode": "在线预习",
+      "target": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-05/20-approved/pptx/lesson-05-在线预习.pptx",
+      "canonical_source": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-05-在线预习.pptx",
+      "previous": {
+        "sha256": "1fb2a35bc81fb827bcfd753787a572f6a74bc4f4dcc0932b1105ca9d94060880",
+        "bytes": 76340908,
+        "slide_count": 76,
+        "notes_count": 76
+      },
+      "current": {
+        "sha256": "f521af90ee80e71f69ed810a341b665e0a5b5a90a8c494a0ceb6ed286ca362b7",
+        "bytes": 76341126,
+        "slide_count": 76,
+        "notes_count": 76
+      }
+    },
+    {
+      "lesson": "05",
+      "mode": "实体课",
+      "target": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-05/20-approved/pptx/lesson-05-实体课.pptx",
+      "canonical_source": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-05-实体课.pptx",
+      "previous": {
+        "sha256": "39fc0caf7254ef0a0ef3533eec737a5b57e2c174a94121d5d2ec71109c172334",
+        "bytes": 22679538,
+        "slide_count": 55,
+        "notes_count": 55
+      },
+      "current": {
+        "sha256": "1e03cd84a0998988ecc7da1707e758372cde5886fef8a221032dc6e45ddc78a2",
+        "bytes": 22679297,
+        "slide_count": 55,
+        "notes_count": 55
+      }
+    },
+    {
+      "lesson": "06",
+      "mode": "在线预习",
+      "target": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-06/20-approved/pptx/lesson-06-在线预习.pptx",
+      "canonical_source": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-06-在线预习.pptx",
+      "previous": {
+        "sha256": "48d5d5523d173cf89ad87bb7c7b3fe608eda13aa9234b2dcef1a4614cc6dcaed",
+        "bytes": 23818148,
+        "slide_count": 69,
+        "notes_count": 69
+      },
+      "current": {
+        "sha256": "cf5d8ef770b0dbb9f19d2a81d29a2bbbface12291821a0d3d3c83599cc49e215",
+        "bytes": 22977327,
+        "slide_count": 69,
+        "notes_count": 69
+      }
+    },
+    {
+      "lesson": "06",
+      "mode": "实体课",
+      "target": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-06/20-approved/pptx/lesson-06-实体课.pptx",
+      "canonical_source": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-06-实体课.pptx",
+      "previous": {
+        "sha256": "0acd492bffb44c5524a53f7ec08e75202cf3e2a688c70f37255f5c499372f6fa",
+        "bytes": 22648185,
+        "slide_count": 50,
+        "notes_count": 50
+      },
+      "current": {
+        "sha256": "48ebf75a70eb07b77ae718b4daecfb0da59cc3397e7c54f7d2677e7958b9c735",
+        "bytes": 22653030,
+        "slide_count": 50,
+        "notes_count": 50
+      }
+    }
+  ],
+  "manifest_updates": [
+    {
+      "path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-01/20-approved/lesson-manifest.json",
+      "online": {
+        "path": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-01-在线预习.pptx..pptx",
+        "sha256": "b1c4682de81c481530deac72f17b155390a701b2888f4685db2015dee501bb40",
+        "bytes": 25061551,
+        "slide_count": 83,
+        "notes_count": 81
+      },
+      "face_to_face": {
+        "path": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-01-实体课.pptx",
+        "sha256": "7a776c11826579ad7b9c5a87d74aefcbb8501b068370f43a36aa7fcaf6fe72d2",
+        "bytes": 28496383,
+        "slide_count": 57,
+        "notes_count": 57
+      }
+    },
+    {
+      "path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-02/20-approved/lesson-manifest.json",
+      "online": {
+        "path": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-02-在线预习.pptx",
+        "sha256": "65d45b9d09858a818d635a3ae9bb9cb1a462f7dd3a9a06a2177338f2b08e4dc3",
+        "bytes": 64623651,
+        "slide_count": 80,
+        "notes_count": 79
+      },
+      "face_to_face": {
+        "path": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-02-实体课.pptx",
+        "sha256": "fd3e7dec08647dd3e037d02a6d7b5326e9b0893d55bf3ace33dbac116655d143",
+        "bytes": 22884027,
+        "slide_count": 57,
+        "notes_count": 56
+      }
+    },
+    {
+      "path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-03/20-approved/lesson-manifest.json",
+      "online": {
+        "path": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-03-在线预习.pptx",
+        "sha256": "21352c7ff0d7153725cd74685f7b5a4a11d1258a58d047dc0c90645752133929",
+        "bytes": 70149488,
+        "slide_count": 68,
+        "notes_count": 68
+      },
+      "face_to_face": {
+        "path": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-03-实体课.pptx",
+        "sha256": "17b111fb64da8839c6896214f0c07655c87965896c56244a8f1ab2d16de4a85a",
+        "bytes": 24360819,
+        "slide_count": 50,
+        "notes_count": 50
+      }
+    },
+    {
+      "path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-04/20-approved/lesson-manifest.json",
+      "online": {
+        "path": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-04-在线预习.pptx",
+        "sha256": "9d64a7ae2cac06f033907349a325a700406bc798b9a595830b7ce299080eb312",
+        "bytes": 20087746,
+        "slide_count": 75,
+        "notes_count": 74
+      },
+      "face_to_face": {
+        "path": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-04-实体课.pptx",
+        "sha256": "f18c6a1d1b344784ea2b3863a32f6b7bf6b5ff899e6ae5d89b7c92f3f33a3218",
+        "bytes": 24327091,
+        "slide_count": 57,
+        "notes_count": 57
+      }
+    },
+    {
+      "path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-05/20-approved/lesson-manifest.json",
+      "online": {
+        "path": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-05-在线预习.pptx",
+        "sha256": "f521af90ee80e71f69ed810a341b665e0a5b5a90a8c494a0ceb6ed286ca362b7",
+        "bytes": 76341126,
+        "slide_count": 76,
+        "notes_count": 76
+      },
+      "face_to_face": {
+        "path": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-05-实体课.pptx",
+        "sha256": "1e03cd84a0998988ecc7da1707e758372cde5886fef8a221032dc6e45ddc78a2",
+        "bytes": 22679297,
+        "slide_count": 55,
+        "notes_count": 55
+      }
+    },
+    {
+      "path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-06/20-approved/lesson-manifest.json",
+      "online": {
+        "path": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-06-在线预习.pptx",
+        "sha256": "cf5d8ef770b0dbb9f19d2a81d29a2bbbface12291821a0d3d3c83599cc49e215",
+        "bytes": 22977327,
+        "slide_count": 69,
+        "notes_count": 69
+      },
+      "face_to_face": {
+        "path": "/Users/ssyan110/Desktop/finalized_博雅汉语_准中级加速篇1_第一课到第六课/lesson-06-实体课.pptx",
+        "sha256": "48ebf75a70eb07b77ae718b4daecfb0da59cc3397e7c54f7d2677e7958b9c735",
+        "bytes": 22653030,
+        "slide_count": 50,
+        "notes_count": 50
+      }
+    }
+  ],
+  "moved_to_trash": [
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-02/10-design/pptx-draft",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-02/10-design/pptx-draft",
+      "reason": "remove all draft PPTX artifacts per user direction",
+      "is_dir": true,
+      "file_count": 18
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-03/10-design/pptx-draft",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-03/10-design/pptx-draft",
+      "reason": "remove all draft PPTX artifacts per user direction",
+      "is_dir": true,
+      "file_count": 18
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-04/10-design/pptx-draft",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-04/10-design/pptx-draft",
+      "reason": "remove all draft PPTX artifacts per user direction",
+      "is_dir": true,
+      "file_count": 8
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-05/10-design/pptx-draft",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-05/10-design/pptx-draft",
+      "reason": "remove all draft PPTX artifacts per user direction",
+      "is_dir": true,
+      "file_count": 5
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-06/10-design/pptx-draft",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-06/10-design/pptx-draft",
+      "reason": "remove all draft PPTX artifacts per user direction",
+      "is_dir": true,
+      "file_count": 7
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-07/30-qa",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-07/30-qa",
+      "reason": "reset lesson to course/source data only per user direction",
+      "is_dir": true,
+      "file_count": 0
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-07/.DS_Store",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-07/.DS_Store",
+      "reason": "reset lesson to course/source data only per user direction",
+      "is_dir": false,
+      "bytes": 6148,
+      "sha256": "d8082011fcf38dbbbb80defe86608dacf433e03969898d295fb4157b0b71e18b"
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-07/20-approved",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-07/20-approved",
+      "reason": "reset lesson to course/source data only per user direction",
+      "is_dir": true,
+      "file_count": 5
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-07/90-archive",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-07/90-archive",
+      "reason": "reset lesson to course/source data only per user direction",
+      "is_dir": true,
+      "file_count": 2
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-07/40-release",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-07/40-release",
+      "reason": "reset lesson to course/source data only per user direction",
+      "is_dir": true,
+      "file_count": 0
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-07/10-design",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-07/10-design",
+      "reason": "reset lesson to course/source data only per user direction",
+      "is_dir": true,
+      "file_count": 43
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-08/.DS_Store",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-08/.DS_Store",
+      "reason": "reset lesson to course/source data only per user direction",
+      "is_dir": false,
+      "bytes": 6148,
+      "sha256": "aee8c73c94bb88bc7ae9ee35ab9f78a1ce5de47b91faedee51f649bb9a9fcddd"
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-08/20-approved",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-08/20-approved",
+      "reason": "reset lesson to course/source data only per user direction",
+      "is_dir": true,
+      "file_count": 2
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-08/10-design",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-08/10-design",
+      "reason": "reset lesson to course/source data only per user direction",
+      "is_dir": true,
+      "file_count": 113
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-09/.DS_Store",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-09/.DS_Store",
+      "reason": "reset lesson to course/source data only per user direction",
+      "is_dir": false,
+      "bytes": 6148,
+      "sha256": "aee8c73c94bb88bc7ae9ee35ab9f78a1ce5de47b91faedee51f649bb9a9fcddd"
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-09/10-design",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-09/10-design",
+      "reason": "reset lesson to course/source data only per user direction",
+      "is_dir": true,
+      "file_count": 42
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-10/10-design",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-10/10-design",
+      "reason": "reset lesson to course/source data only per user direction",
+      "is_dir": true,
+      "file_count": 115
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-11/10-design",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-11/10-design",
+      "reason": "reset lesson to course/source data only per user direction",
+      "is_dir": true,
+      "file_count": 12
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-12/10-design",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-12/10-design",
+      "reason": "reset lesson to course/source data only per user direction",
+      "is_dir": true,
+      "file_count": 9
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/.tmp-l08-clean-base.pptx",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/.tmp-l08-clean-base.pptx",
+      "reason": "lesson-08 temporary draft PPTX removed per user direction",
+      "is_dir": false,
+      "bytes": 19912704,
+      "sha256": "097a395657eeb02ea0aecb098ec7465feda49d7cc39ca7cc3f80d352a0212d93"
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-01/20-approved/pptx/lesson-01-在线预习.pptx",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-01/20-approved/pptx/lesson-01-在线预习.pptx",
+      "reason": "replace approved PPTX with user-designated finalized canonical source",
+      "is_dir": false,
+      "bytes": 25060786,
+      "sha256": "44ccea584b57acaeb6433e1a54103bf4f336d00d94f4988ab6f6d748d9d82700"
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-01/20-approved/pptx/lesson-01-实体课.pptx",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-01/20-approved/pptx/lesson-01-实体课.pptx",
+      "reason": "replace approved PPTX with user-designated finalized canonical source",
+      "is_dir": false,
+      "bytes": 28497876,
+      "sha256": "9445184e9e20cc772b159e997b93cf4b4e2711d30586f8fd6260ce5e983962ea"
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-02/20-approved/pptx/lesson-02-在线预习.pptx",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-02/20-approved/pptx/lesson-02-在线预习.pptx",
+      "reason": "replace approved PPTX with user-designated finalized canonical source",
+      "is_dir": false,
+      "bytes": 63949429,
+      "sha256": "e60086e7bcff79269ec8fcd0377267c6cd32f8d7460a74111e8324fb3a87189d"
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-02/20-approved/pptx/lesson-02-实体课.pptx",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-02/20-approved/pptx/lesson-02-实体课.pptx",
+      "reason": "replace approved PPTX with user-designated finalized canonical source",
+      "is_dir": false,
+      "bytes": 22216586,
+      "sha256": "6de33e6ade9bf44d7cbbe8e0c6850239906fa0772b7908cbcce72f4f994d559e"
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-03/20-approved/pptx/lesson-03-在线预习.pptx",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-03/20-approved/pptx/lesson-03-在线预习.pptx",
+      "reason": "replace approved PPTX with user-designated finalized canonical source",
+      "is_dir": false,
+      "bytes": 70147802,
+      "sha256": "0bc101fdaac5344dff800580ecbcc7887a5fa0876b81fbda9c999c1eea0d9552"
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-03/20-approved/pptx/lesson-03-实体课.pptx",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-03/20-approved/pptx/lesson-03-实体课.pptx",
+      "reason": "replace approved PPTX with user-designated finalized canonical source",
+      "is_dir": false,
+      "bytes": 24361067,
+      "sha256": "2efe399e3bda9c400f273c6f6c898ff0e70268b995edfd5d40d252bcf9fc1ee7"
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-04/20-approved/pptx/lesson-04-在线预习.pptx",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-04/20-approved/pptx/lesson-04-在线预习.pptx",
+      "reason": "replace approved PPTX with user-designated finalized canonical source",
+      "is_dir": false,
+      "bytes": 20084486,
+      "sha256": "ad4809d22155e2253fb4e02d1827dbae3b9cfd83ef1d5d84eccfa075def08aae"
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-04/20-approved/pptx/lesson-04-实体课.pptx",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-04/20-approved/pptx/lesson-04-实体课.pptx",
+      "reason": "replace approved PPTX with user-designated finalized canonical source",
+      "is_dir": false,
+      "bytes": 24327082,
+      "sha256": "95ea0c8d2220503f8cc0a6740bd3a13176c0ef29335c1d531155ef2f3463670d"
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-05/20-approved/pptx/lesson-05-在线预习.pptx",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-05/20-approved/pptx/lesson-05-在线预习.pptx",
+      "reason": "replace approved PPTX with user-designated finalized canonical source",
+      "is_dir": false,
+      "bytes": 76340908,
+      "sha256": "1fb2a35bc81fb827bcfd753787a572f6a74bc4f4dcc0932b1105ca9d94060880"
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-05/20-approved/pptx/lesson-05-实体课.pptx",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-05/20-approved/pptx/lesson-05-实体课.pptx",
+      "reason": "replace approved PPTX with user-designated finalized canonical source",
+      "is_dir": false,
+      "bytes": 22679538,
+      "sha256": "39fc0caf7254ef0a0ef3533eec737a5b57e2c174a94121d5d2ec71109c172334"
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-06/20-approved/pptx/lesson-06-在线预习.pptx",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-06/20-approved/pptx/lesson-06-在线预习.pptx",
+      "reason": "replace approved PPTX with user-designated finalized canonical source",
+      "is_dir": false,
+      "bytes": 23818148,
+      "sha256": "48d5d5523d173cf89ad87bb7c7b3fe608eda13aa9234b2dcef1a4614cc6dcaed"
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-06/20-approved/pptx/lesson-06-实体课.pptx",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-06/20-approved/pptx/lesson-06-实体课.pptx",
+      "reason": "replace approved PPTX with user-designated finalized canonical source",
+      "is_dir": false,
+      "bytes": 22648185,
+      "sha256": "0acd492bffb44c5524a53f7ec08e75202cf3e2a688c70f37255f5c499372f6fa"
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-01/20-approved/lesson-manifest.json",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-01/20-approved/lesson-manifest.json",
+      "reason": "replace authority manifest metadata after user-directed finalized PPTX replacement",
+      "is_dir": false,
+      "bytes": 5157,
+      "sha256": "b546bef205c0bc8c5cfb8a2448687641e79f8339552c752f9905a23fdbce686b"
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-02/20-approved/lesson-manifest.json",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-02/20-approved/lesson-manifest.json",
+      "reason": "replace authority manifest metadata after user-directed finalized PPTX replacement",
+      "is_dir": false,
+      "bytes": 1838,
+      "sha256": "64e7cb8a75258680e8630867f565ce7dff437cccbcebe0bde9da950658c9d081"
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-03/20-approved/lesson-manifest.json",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-03/20-approved/lesson-manifest.json",
+      "reason": "replace authority manifest metadata after user-directed finalized PPTX replacement",
+      "is_dir": false,
+      "bytes": 2323,
+      "sha256": "b5fe65aaed071d292073b69d7c924d651fc5dda7d2cd3e551f8e170a12bf370d"
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-04/20-approved/lesson-manifest.json",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-04/20-approved/lesson-manifest.json",
+      "reason": "replace authority manifest metadata after user-directed finalized PPTX replacement",
+      "is_dir": false,
+      "bytes": 2326,
+      "sha256": "dc0e2c8d273e109ef9039ef195be9a932f1120faf9879d0e00707b6f0facc4b1"
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-05/20-approved/lesson-manifest.json",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-05/20-approved/lesson-manifest.json",
+      "reason": "replace authority manifest metadata after user-directed finalized PPTX replacement",
+      "is_dir": false,
+      "bytes": 2160,
+      "sha256": "05c48a3862f8d0597a83149a555377a9c3df41258dc0ecfd7d02bb8317ddb4fb"
+    },
+    {
+      "original_path": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-06/20-approved/lesson-manifest.json",
+      "trash_path": "/Users/ssyan110/.Trash/vinh-uni-phase-b-reset-20260902-195915/lessons/boya-quasi-intermediate-i/lesson-06/20-approved/lesson-manifest.json",
+      "reason": "replace authority manifest metadata after user-directed finalized PPTX replacement",
+      "is_dir": false,
+      "bytes": 2201,
+      "sha256": "4309cb5fac1fd69951173ce64ab3c365553e41372a7d73af4bfa3c4ee445cbea"
+    }
+  ],
+  "counts": {
+    "replaced_pptx": 12,
+    "moved_items": 38
+  }
+}

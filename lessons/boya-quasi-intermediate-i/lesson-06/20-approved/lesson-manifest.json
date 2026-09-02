@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "manifest_type": "lesson-authority",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-06",
+  "lesson_id": "lesson-06",
+  "lesson_number": 6,
+  "lesson_title": "大岛参加了学校的合唱团",
+  "language": "简体中文",
+  "authority_status": "user-directed-finalized-replacement-2026-09-02",
+  "content_status": "finalized-reference-replaced-2026-09-02",
+  "delivery_status": "pptx_only_handoff_pending_full_package",
+  "authority_rule": "20-approved 中的批准 PPTX 原样锁定；完整交付仍须补齐来源、教师手册、配套材料、QA、rehearsal 与 release。",
+  "scope": {
+    "approval_scope": "two_current_pptx",
+    "printed_pages": "51–58",
+    "online_slide_count": 69,
+    "face_to_face_slide_count": 50
+  },
+  "authority": {
+    "pptx": {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-06/20-approved/pptx/lesson-06-在线预习.pptx",
+      "online_path": "lessons/boya-quasi-intermediate-i/lesson-06/20-approved/pptx/lesson-06-在线预习.pptx",
+      "status": "final_confirmed",
+      "approval_scope": "user-directed-finalized-replacement-2026-09-02",
+      "version": "finalized-reference-replaced-2026-09-02",
+      "slide_count": 69,
+      "online_slide_count": 69,
+      "sha256": "cf5d8ef770b0dbb9f19d2a81d29a2bbbface12291821a0d3d3c83599cc49e215",
+      "bytes": 22977327,
+      "face_to_face_path": "lessons/boya-quasi-intermediate-i/lesson-06/20-approved/pptx/lesson-06-实体课.pptx",
+      "face_to_face_status": "final_confirmed",
+      "face_to_face_version": "user-finalized-2026-09-01",
+      "face_to_face_slide_count": 50,
+      "face_to_face_sha256": "48ebf75a70eb07b77ae718b4daecfb0da59cc3397e7c54f7d2677e7958b9c735",
+      "face_to_face_bytes": 22653030,
+      "online_sha256": "cf5d8ef770b0dbb9f19d2a81d29a2bbbface12291821a0d3d3c83599cc49e215",
+      "online_bytes": 22977327,
+      "online_speaker_notes_count": 69,
+      "speaker_notes_count": 50
+    }
+  },
+  "qa": {
+    "status": "two_pptx_static_qa_recorded",
+    "rehearsal": "pending_manual_acceptance",
+    "audio_playback": "pending_manual_acceptance"
+  },
+  "release": {
+    "status": "pending_manual_acceptance",
+    "delivery_status": "blocked",
+    "latest_release_path": null,
+    "latest_zip_path": null
+  }
+}

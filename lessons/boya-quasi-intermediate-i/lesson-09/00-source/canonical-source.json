@@ -134,7 +134,7 @@
       "entries": [
         {"no":1,"word":"土豆","pinyin":"tǔdòu","pos":"名","gloss":"potato","starred":true},
         {"no":2,"word":"蔬菜","pinyin":"shūcài","pos":"名","gloss":"vegetable"},
-        {"no":3,"word":"早餐","pinyin":"zǎocān","pos":"名","gloss":"dim sum"},
+        {"no":3,"word":"早茶","pinyin":"zǎochá","pos":"名","gloss":"dim sum"},
         {"no":4,"word":"凉拌","pinyin":"liángbàn","pos":"动","gloss":"cold tossed"},
         {"no":5,"word":"青菜","pinyin":"qīngcài","pos":"名","gloss":"green vegetable"},
         {"no":6,"word":"酸辣汤","pinyin":"suānlàtāng","pos":"名","gloss":"hot and sour soup"},
@@ -165,8 +165,8 @@
     {
       "id":"vocabulary_comprehension", "printed_pages":[78,79], "audio":"9-2",
       "instruction":"听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
-      "groups":[{"topic":"饮食词语（图片A–G）","words":["土豆","蔬菜","早餐","凉拌西红柿","青菜","酸辣汤","涮羊肉"],"answer":["1.C","2.B","3.A","4.E","5.D","6.F","7.G"]}],
-      "exercises":{"items":["土豆","蔬菜","早餐","凉拌西红柿","青菜","酸辣汤","涮羊肉"]},
+      "groups":[{"topic":"饮食词语（图片A–G）","words":["土豆","蔬菜","早茶","凉拌西红柿","青菜","酸辣汤","涮羊肉"],"answer":["1.C","2.B","3.A","4.E","5.D","6.F","7.G"]}],
+      "exercises":{"items":["土豆","蔬菜","早茶","凉拌西红柿","青菜","酸辣汤","涮羊肉"]},
       "answer_status":"answers_checked_against_answer_pdf"
     },
     {

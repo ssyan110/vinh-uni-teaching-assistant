@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-pptx-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-02",
+  "mode": "face-to-face",
+  "title": "第二课《王红的一天》实体课",
+  "status": "draft_not_approved",
+  "builder_scope": "scripts/build_l23_pptx_drafts.js",
+  "draft_gate": "lesson-specific",
+  "source_sha256": "6dfb97de7500c888849dad2a5a1c93978542917d3a725a8aeafe53be16545fe3",
+  "layout_source": "boya-quasi-intermediate-i lesson-01 approved layout family",
+  "face_order_contract": "course/boya-face-to-face-order-contract.json",
+  "short_example_policy": "curated_short_sentences_max_24_hanzi_chars",
+  "short_text_policy": "textbook_listening_prompt_and_record_layout_no_full_text_copy",
+  "shared_assets": [
+    "lesson-01-cover-family-work-hobby.png",
+    "lesson-01-learning-path.png",
+    "divider-family.png",
+    "divider-work.png",
+    "divider-hobby.png",
+    "divider-comprehensive.png",
+    "symbolic-vocabulary.png",
+    "symbolic-listening.png",
+    "symbolic-sentence-pattern.png",
+    "oral-practice-divider.png",
+    "speaking-practice.png"
+  ],
+  "slide_count": 57,
+  "audio_tracks_embedded": [
+    "2-1",
+    "2-2",
+    "2-3",
+    "2-4",
+    "2-5",
+    "2-6",
+    "2-7"
+  ],
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-02/10-design/pptx-draft/face-to-face/lesson-02-实体课.pptx",
+    "sha256": "d3dbaf617787716a678bfd036aa21cb076e808840c895d0371837af017482a5a",
+    "bytes": 21402152
+  },
+  "generated_at": "2026-08-31T08:02:57.577Z"
+}

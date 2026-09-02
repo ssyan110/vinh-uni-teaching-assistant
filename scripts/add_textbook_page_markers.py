@@ -225,7 +225,7 @@ def read_page_map(source_path: Path, storyboard_path: Path) -> dict[int, str]:
             missing_slide_numbers += 1
             continue
 
-        pages: list[int] = []
+        derived_pages: list[int] = []
         for ref in refs:
             ref_pages = _pages_for_ref(source, ref)
             if not ref_pages:
@@ -236,7 +236,28 @@ def read_page_map(source_path: Path, storyboard_path: Path) -> dict[int, str]:
                 else:
                     missing_refs.append(ref)
                 continue
-            pages.extend(ref_pages)
+            derived_pages.extend(ref_pages)
+
+        # Current lesson source-ref inventories may carry a narrower
+        # slide-level page scope than the canonical section-level pages. Use
+        # that explicit scope when present, while still resolving every
+        # source_ref and rejecting a page that falls outside its source.
+        explicit_pages = _page_numbers(
+            row.get("source_pages")
+            or row.get("textbook_printed_pages")
+            or row.get("printed_pages")
+        )
+        if explicit_pages:
+            if derived_pages and not all(
+                min(derived_pages) <= page <= max(derived_pages)
+                for page in explicit_pages
+            ):
+                raise ValueError(
+                    f"Storyboard page scope {explicit_pages} falls outside source refs {sorted(set(derived_pages))}"
+                )
+            pages = explicit_pages
+        else:
+            pages = derived_pages
 
         if not pages:
             continue

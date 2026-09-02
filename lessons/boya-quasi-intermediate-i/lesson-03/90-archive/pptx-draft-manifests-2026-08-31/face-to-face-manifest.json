@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-pptx-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-03",
+  "mode": "face-to-face",
+  "title": "第三课《我对学中文越来越有兴趣》实体课",
+  "status": "draft_not_approved",
+  "builder_scope": "scripts/build_l23_pptx_drafts.js",
+  "draft_gate": "lesson-specific",
+  "source_sha256": "821f8009e7ec2b53d9f38b7adcb2421f0012c4730b61cc8db6a08bf2c59c5aa1",
+  "layout_source": "boya-quasi-intermediate-i lesson-01 approved layout family",
+  "face_order_contract": "course/boya-face-to-face-order-contract.json",
+  "short_example_policy": "curated_short_sentences_max_24_hanzi_chars",
+  "short_text_policy": "textbook_listening_prompt_and_record_layout_no_full_text_copy",
+  "shared_assets": [
+    "lesson-01-cover-family-work-hobby.png",
+    "lesson-01-learning-path.png",
+    "divider-family.png",
+    "divider-work.png",
+    "divider-hobby.png",
+    "divider-comprehensive.png",
+    "symbolic-vocabulary.png",
+    "symbolic-listening.png",
+    "symbolic-sentence-pattern.png",
+    "oral-practice-divider.png",
+    "speaking-practice.png"
+  ],
+  "slide_count": 54,
+  "audio_tracks_embedded": [
+    "3-1",
+    "3-2",
+    "3-3",
+    "3-4",
+    "3-5",
+    "3-6"
+  ],
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-03/10-design/pptx-draft/face-to-face/lesson-03-实体课.pptx",
+    "sha256": "db78d0693b48f79cd6d28d0ed397489a14183d35a0d6b03d19b73f53d80e561e",
+    "bytes": 20249768
+  },
+  "generated_at": "2026-08-31T08:02:59.435Z"
+}

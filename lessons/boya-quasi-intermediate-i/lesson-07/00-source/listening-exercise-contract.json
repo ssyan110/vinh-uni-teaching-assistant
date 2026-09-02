@@ -7,7 +7,7 @@
   "approved_at": null,
   "canonical_source": {
     "path": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json",
-    "sha256": "6672fe355e5a4a5359facbaccb6493e09552108ddea61eaf91dddae9685e9bc4"
+      "sha256": "c529512b98b62bdf8dc72e98605f5ec047ba969d7d365bb9c23da904fc4df45e"
   },
   "source_evidence": [
     {
@@ -16,9 +16,9 @@
       "locator": "P59–P67 题组标题、题目和页码"
     },
     {
-      "path": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/audit/answer-pages-20-21-audit-draft.md",
-      "sha256": "ff6c51bcc04c7e31a30bf1dd80e079960be94eae2eecdc216ec68b8fdcb358da",
-      "locator": "答案 PDF 第20–21页题目答案与听力文本"
+      "path": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/audit/answer-pages-21-22-correction-2026-09-02.md",
+      "sha256": "0e63fdffe2d013587b3154755c0f0414d260390e44893559ae64f8df1ce8704a",
+      "locator": "答案 PDF 第21–22页题目答案与听力文本"
     },
     {
       "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
@@ -28,7 +28,7 @@
     {
       "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
       "sha256": "3c21e1574b0187259769799d183eca78a60a515b5b7fce202eda9e9ade2c20b8",
-      "locator": "答案 PDF 第20–21页"
+      "locator": "答案 PDF 第21–22页"
     }
   ],
   "rules": {
@@ -133,14 +133,14 @@
       "order": 2,
       "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
       "heading_source": {
-        "path": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/audit/source-pages-59-67-audit-draft.md",
+        "path": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/audit/answer-pages-21-22-correction-2026-09-02.md",
         "excerpt": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
-        "locator": "P61｜short_text_1｜second_listen"
+        "locator": "P62｜short_text_1｜second_listen"
       },
       "locator": "exercises.second_listen",
       "page_scope": "exercise_page",
       "textbook_printed_pages": [
-        61
+        62
       ],
       "audio_tracks": [
         "7-4"

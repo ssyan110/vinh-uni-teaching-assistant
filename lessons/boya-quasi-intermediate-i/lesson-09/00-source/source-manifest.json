@@ -28,11 +28,11 @@
   },
   "canonical_source": {
     "path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json",
-    "sha256": "8369e3df9ce5e0776012596149d6fbf7ba3a16afed00982ba522ecf36c04f51a"
+    "sha256": "c928011dfed526c506af0c73ab0dd420bb0eba07f43938f179c08743c60b0da1"
   },
   "listening_contract": {
     "path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/listening-exercise-contract.json",
-    "sha256": "55ced7e6847745c70453c4ddf09af71a5fb7265d646773091f4b68e07a38da98",
+    "sha256": "23c66341a2e8101d10b8f1d341bb93f6e2c35c6b49c2f2bb0f873df2abf23f14",
     "count": 9
   },
   "audio_manifest": {
@@ -45,7 +45,7 @@
   },
   "audit": {
     "path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/source-pages-77-86-audit-draft.md",
-    "sha256": "3589fdf7417fc2945a69e0f0c1272ee2b35e8951e5ba245f26554b8ecd3e01a1",
+    "sha256": "8a9c1a49364b74ca5255ea2aa1d7949b34b7a3f4c6c6b0e331f79357816d2d47",
     "status": "draft"
   },
   "answer_audit": {

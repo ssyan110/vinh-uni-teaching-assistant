@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-pptx-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-04",
+  "mode": "face-to-face",
+  "title": "第四课《在中国学汉语》实体课",
+  "status": "draft_refined_2026-08-31",
+  "builder_scope": "scripts/build_l23_pptx_drafts.js",
+  "draft_gate": "lesson-specific",
+  "source_sha256": "0eb2afac761ba8a31682ae74cabf4a6faeebbd5e23ba8ea5d94b424014fe9aee",
+  "layout_source": "boya-quasi-intermediate-i lesson-01 approved layout family",
+  "face_order_contract": "course/boya-face-to-face-order-contract.json",
+  "short_example_policy": "curated_short_sentences_max_24_hanzi_chars",
+  "short_text_policy": "textbook_listening_prompt_and_record_layout_no_full_text_copy",
+  "shared_assets": [
+    "lesson-01-cover-family-work-hobby.png",
+    "lesson-01-learning-path.png",
+    "divider-family.png",
+    "divider-work.png",
+    "divider-hobby.png",
+    "divider-comprehensive.png",
+    "symbolic-vocabulary.png",
+    "symbolic-listening.png",
+    "symbolic-sentence-pattern.png",
+    "oral-practice-divider.png",
+    "speaking-practice.png"
+  ],
+  "slide_count": 61,
+  "audio_tracks_embedded": [
+    "4-1",
+    "4-2",
+    "4-3",
+    "4-4",
+    "4-5",
+    "4-6"
+  ],
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/pptx-draft/face-to-face/lesson-04-实体课.pptx",
+    "sha256": "0220c38ed51bc6ab41f702112013296c33e570dc601747c5452a5483ebbd073f",
+    "bytes": 78765751
+  },
+  "generated_at": "2026-08-31T08:03:01.518Z",
+  "sha256": "81d10dae72d8def4e9bf641937ea270e9717706d003d910eae5872ae270efd87",
+  "bytes": 20394321
+}

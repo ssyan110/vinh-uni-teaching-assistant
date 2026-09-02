@@ -25,4 +25,4 @@
 
 ## 待人工确认
 
-来源语义审核、PBI 教学重组及正式课时、教师手册批准、配套材料、PPT 播放与教师 rehearsal 完成后，才能继续建立正式 authority/release。
+线上／实体内容边界已由 Adam 于 2026-08-31 确认并保存记录；来源语义审核、PBI 教学重组、正式课时、教师手册批准、配套材料、PPT 播放与教师 rehearsal 完成后，才能继续建立正式 authority/release。
