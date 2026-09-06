@@ -1,13 +1,86 @@
 {
-  "schema_version":"boya-lesson-source-manifest-v1","manifest_type":"lesson-source-review","course_id":"vinh-chinese-listening-speaking","textbook_id":"boya-quasi-intermediate-i","lesson_id":"lesson-12","lesson_key":"boya-quasi-intermediate-i:lesson-12","lesson_number":12,"lesson_title":"散步","language":"简体中文","package":"lesson-12-source-review","prepared_at":"2026-08-28","source_status":"pending_review","source_qa_status":"blocked","extraction_status":"source_review_materialized","review_status":"awaiting_adam_review","approved":false,"approved_by":null,"approved_at":null,
-  "canonical_source":"lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json","canonical_source_sha256":"d465dec552b8efef27dea0d9f0d772634e45eb6db4cfd4caf5e99cbc547d6f01",
-  "source_pdf":{"path":"textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf","sha256":"39899d0f400e187f57c16db821f8f4c207f936eae0e4fbfe3cab52c02bfea806","total_pages":134,"textbook_page_range":"105–113","pdf_page_range":"118–126","page_count_in_review":9,"format":"scanned_image_pdf","text_layer_status":"empty; visual review used"},
-  "answer_pdf":{"path":"textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf","sha256":"3c21e1574b0187259769799d183eca78a60a515b5b7fce202eda9e9ade2c20b8","total_pages":33,"pdf_page_range_in_review":"28–29","answer_status":"closed_answers_visual_checked; open_tasks_have_no_unique_answer"},
-  "page_audit":{"path":"lessons/boya-quasi-intermediate-i/lesson-12/00-source/audit/source-pages-105-113-audit-draft.md","sha256":"db1cc29bb4b6eaf19473af47498cb15baf4e5d93449d10e5beeba178b97f9142","status":"visual_first_pass"},
-  "answer_audit":{"path":"lessons/boya-quasi-intermediate-i/lesson-12/00-source/audit/source-pages-105-113-audit-draft.md","sha256":"db1cc29bb4b6eaf19473af47498cb15baf4e5d93449d10e5beeba178b97f9142","status":"answer_pages_28-29_included_in_visual_first_pass"},
-  "qr_source":{"capture":"textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-12-pdf-page-118.png","qr_url":"http://qr31.cn/IhjvBZ","landing_page":"https://biz.cli.im/site/IhjvBZ?qrurl=http://qr31.cn/IhjvBZ&gtype=2&key=57f6317855318c071878297e5609bf670214049105","status":"decoded_landing_page_lists_12-1_to_12-6"},
-  "audio":{"root":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-12","manifest":"lessons/boya-quasi-intermediate-i/lesson-12/00-source/audio-manifest.json","manifest_sha256":"205f334a669ef3d7b5d23853f8b5b22d0615c8b70c0d1f615c4ec541d8dfb458","technical_evidence":"lessons/boya-quasi-intermediate-i/lesson-12/00-source/audit/audio-technical-2026-08-28.md","expected_track_count":6,"local_track_count":6,"decode_passed_count":6,"semantic_listening_count":0,"teacher_playback_count":0,"status":"technical_pass_semantic_review_pending"},
-  "listening_exercise_contract":"lessons/boya-quasi-intermediate-i/lesson-12/00-source/listening-exercise-contract.json","listening_exercise_contract_sha256":"d7f8b7ebd5a588e3b5eba1137abcd3e560ae15da915762fc29bba5460873db76","listening_exercise_contract_detail":{"status":"draft","exercise_count":9},
-  "review_evidence":{"page_range":"P105–P113","answer_page_range":"答案 PDF P28–P29","vocabulary_count":27,"vocabulary_comprehension_group_count":1,"listening_sentence_item_count":10,"short_text_count":3,"short_text_listen_group_count":6,"common_expression_group_count":3,"comprehensive_practice_count":3,"status":"page_answer_audio_mapping_written; final source approval pending"},
-  "blockers":["六段音频仅完成技术核验；语义听核与教师播放实测 pending。","扫描教材无文字层；需 Adam 终审视觉转录、页码和答案证据。","来源批准前不得进入教师手册、配套材料、PPT storyboard 或 PPTX 生成 gate。"]
+  "schema_version": "boya-lesson-source-manifest-v1",
+  "manifest_type": "lesson-source-review",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_id": "lesson-12",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-12",
+  "lesson_number": 12,
+  "lesson_title": "散步",
+  "language": "简体中文",
+  "package": "lesson-12-source-review",
+  "prepared_at": "2026-08-28",
+  "source_status": "approved",
+  "source_qa_status": "passed",
+  "extraction_status": "source_review_materialized",
+  "review_status": "approved_by_adam",
+  "approved": true,
+  "approved_by": "Adam Yan",
+  "approved_at": "2026-09-04T15:53:03+07:00",
+  "canonical_source": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json",
+  "canonical_source_sha256": "9a8767c6e2ad68e32f5c8757ea47004f5af3461004cae0bfb47a860f9d328afe",
+  "source_pdf": {
+    "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+    "sha256": "39899d0f400e187f57c16db821f8f4c207f936eae0e4fbfe3cab52c02bfea806",
+    "total_pages": 134,
+    "textbook_page_range": "105–113",
+    "pdf_page_range": "118–126",
+    "page_count_in_review": 9,
+    "format": "scanned_image_pdf",
+    "text_layer_status": "empty; visual review used"
+  },
+  "answer_pdf": {
+    "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+    "sha256": "3c21e1574b0187259769799d183eca78a60a515b5b7fce202eda9e9ade2c20b8",
+    "total_pages": 33,
+    "pdf_page_range_in_review": "28–29",
+    "answer_status": "closed_answers_visual_checked; open_tasks_have_no_unique_answer"
+  },
+  "page_audit": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/audit/source-pages-105-113-audit-draft.md",
+    "sha256": "db1cc29bb4b6eaf19473af47498cb15baf4e5d93449d10e5beeba178b97f9142",
+    "status": "visual_first_pass"
+  },
+  "answer_audit": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/audit/source-pages-105-113-audit-draft.md",
+    "sha256": "db1cc29bb4b6eaf19473af47498cb15baf4e5d93449d10e5beeba178b97f9142",
+    "status": "answer_pages_28-29_included_in_visual_first_pass"
+  },
+  "qr_source": {
+    "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-12-pdf-page-118.png",
+    "qr_url": "http://qr31.cn/IhjvBZ",
+    "landing_page": "https://biz.cli.im/site/IhjvBZ?qrurl=http://qr31.cn/IhjvBZ&gtype=2&key=57f6317855318c071878297e5609bf670214049105",
+    "status": "decoded_landing_page_lists_12-1_to_12-6"
+  },
+  "audio": {
+    "root": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-12",
+    "manifest": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/audio-manifest.json",
+    "manifest_sha256": "205f334a669ef3d7b5d23853f8b5b22d0615c8b70c0d1f615c4ec541d8dfb458",
+    "technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/audit/audio-technical-2026-08-28.md",
+    "expected_track_count": 6,
+    "local_track_count": 6,
+    "decode_passed_count": 6,
+    "semantic_listening_count": 6,
+    "teacher_playback_count": 6,
+    "status": "technical_semantic_teacher_playback_approved"
+  },
+  "listening_exercise_contract": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/listening-exercise-contract.json",
+  "listening_exercise_contract_sha256": "d7f8b7ebd5a588e3b5eba1137abcd3e560ae15da915762fc29bba5460873db76",
+  "listening_exercise_contract_detail": {
+    "status": "draft",
+    "exercise_count": 9
+  },
+  "review_evidence": {
+    "page_range": "P105–P113",
+    "answer_page_range": "答案 PDF P28–P29",
+    "vocabulary_count": 27,
+    "vocabulary_comprehension_group_count": 1,
+    "listening_sentence_item_count": 10,
+    "short_text_count": 3,
+    "short_text_listen_group_count": 6,
+    "common_expression_group_count": 3,
+    "comprehensive_practice_count": 3,
+    "status": "source_pack_and_audio_approved_by_adam"
+  },
+  "blockers": []
 }

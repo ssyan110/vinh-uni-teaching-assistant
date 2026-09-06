@@ -1,0 +1,444 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-pptx-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-12",
+  "mode": "online",
+  "title": "第十二课《散步》在线预习",
+  "status": "draft_not_approved",
+  "builder_scope": "scripts/build_l23_pptx_drafts.js",
+  "draft_gate": "lesson-specific",
+  "source_sha256": "9a8767c6e2ad68e32f5c8757ea47004f5af3461004cae0bfb47a860f9d328afe",
+  "layout_source": "boya-quasi-intermediate-i lesson-01 approved layout family",
+  "shared_layout_contract": "course/boya-online-layout-contract.json",
+  "lesson_content_contract": "course/boya-online-content-contract.json",
+  "example_bank": {
+    "source": "course/boya-example-bank.json",
+    "review_status": "ai_reviewed_pending_adam_approval",
+    "vocabulary_examples_per_item": 2,
+    "expression_examples_per_item": 2
+  },
+  "fixed_structure": [
+    "cover",
+    "learning_flow",
+    "goals",
+    "vocabulary",
+    "practice_after_each_full_five",
+    "proper_nouns_if_present",
+    "short_text_divider_before_each_text",
+    "short_text_record",
+    "expressions_after_related_text",
+    "comprehensive_practice",
+    "difficult_points_reflection",
+    "pre_class_check",
+    "thanks"
+  ],
+  "route_asset": "learning-route-user-supplied-transparent.png",
+  "vocabulary_practice_after_every": 5,
+  "vocabulary_extension_policy": "word_specific_optional; never show an empty universal extension label",
+  "vocabulary_page_breaks": {
+    "first_page": 105,
+    "first_count": 17,
+    "second_page": 106
+  },
+  "fixed_ending_titles": [
+    "我觉得很难的地方",
+    "课前检查",
+    "谢谢大家，我们课堂见。"
+  ],
+  "short_example_policy": "curated_short_sentences_max_24_hanzi_chars",
+  "short_text_policy": "textbook_reading_prompt_and_record_layout_no_full_text_copy",
+  "shared_assets": [
+    "lesson-01-cover-family-work-hobby.png",
+    "learning-route-user-supplied-transparent.png",
+    "divider-family.png",
+    "divider-work.png",
+    "divider-hobby.png",
+    "divider-comprehensive.png",
+    "symbolic-vocabulary.png",
+    "symbolic-listening.png",
+    "symbolic-sentence-pattern.png",
+    "oral-practice-divider.png",
+    "speaking-practice.png"
+  ],
+  "image_manifest": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/image-manifest.json",
+  "lesson_specific_image_assets": [
+    {
+      "asset_id": "L12-cover",
+      "file": "lesson-12-cover-walking.png",
+      "category": "cover",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-context-01",
+      "file": "lesson-12-context-01.png",
+      "category": "short_text_context",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-context-02",
+      "file": "lesson-12-context-02.png",
+      "category": "short_text_context",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-context-03",
+      "file": "lesson-12-context-03.png",
+      "category": "short_text_context",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V01",
+      "file": "l12-vocab-dedicated-01.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V02",
+      "file": "l12-vocab-dedicated-02.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V03",
+      "file": "l12-vocab-dedicated-03.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V04",
+      "file": "l12-vocab-dedicated-04.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V05",
+      "file": "l12-vocab-dedicated-05.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V06",
+      "file": "l12-vocab-dedicated-06.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V07",
+      "file": "l12-vocab-dedicated-07.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V08",
+      "file": "l12-vocab-dedicated-08.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V09",
+      "file": "l12-vocab-dedicated-09.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V10",
+      "file": "l12-vocab-dedicated-10.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V11",
+      "file": "l12-vocab-dedicated-11.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V12",
+      "file": "l12-vocab-dedicated-12.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V13",
+      "file": "l12-vocab-dedicated-13.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V14",
+      "file": "l12-vocab-dedicated-14.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V15",
+      "file": "l12-vocab-dedicated-15.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V16",
+      "file": "l12-vocab-dedicated-16.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V17",
+      "file": "l12-vocab-dedicated-17.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V18",
+      "file": "l12-vocab-dedicated-18.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V19",
+      "file": "l12-vocab-dedicated-19.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V20",
+      "file": "l12-vocab-dedicated-20.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V21",
+      "file": "l12-vocab-dedicated-21.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V22",
+      "file": "l12-vocab-dedicated-22.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V23",
+      "file": "l12-vocab-dedicated-23.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V24",
+      "file": "l12-vocab-dedicated-24.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V25",
+      "file": "l12-vocab-dedicated-25.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V26",
+      "file": "l12-vocab-dedicated-26.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L12-V27",
+      "file": "l12-vocab-dedicated-27.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    }
+  ],
+  "image_approval_status": "approved_by_adam_for_ppt_generation",
+  "vocabulary_image_policy": "one_distinct_semantic_asset_per_vocabulary_item",
+  "vocabulary_image_count": 27,
+  "vocabulary_image_assets": [
+    {
+      "word": "宽阔",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-01.png",
+      "status": "candidate"
+    },
+    {
+      "word": "池塘",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-02.png",
+      "status": "candidate"
+    },
+    {
+      "word": "背",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-03.png",
+      "status": "candidate"
+    },
+    {
+      "word": "散步",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-04.png",
+      "status": "candidate"
+    },
+    {
+      "word": "摸",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-05.png",
+      "status": "candidate"
+    },
+    {
+      "word": "本来",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-06.png",
+      "status": "candidate"
+    },
+    {
+      "word": "突然",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-07.png",
+      "status": "candidate"
+    },
+    {
+      "word": "分歧",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-08.png",
+      "status": "candidate"
+    },
+    {
+      "word": "取决（于）",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-09.png",
+      "status": "candidate"
+    },
+    {
+      "word": "强壮",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-10.png",
+      "status": "candidate"
+    },
+    {
+      "word": "稳",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-11.png",
+      "status": "candidate"
+    },
+    {
+      "word": "愿意",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-12.png",
+      "status": "candidate"
+    },
+    {
+      "word": "稍微",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-13.png",
+      "status": "candidate"
+    },
+    {
+      "word": "疲劳",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-14.png",
+      "status": "candidate"
+    },
+    {
+      "word": "尽量",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-15.png",
+      "status": "candidate"
+    },
+    {
+      "word": "信服",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-16.png",
+      "status": "candidate"
+    },
+    {
+      "word": "便",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-17.png",
+      "status": "candidate"
+    },
+    {
+      "word": "叫",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-18.png",
+      "status": "candidate"
+    },
+    {
+      "word": "发生",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-19.png",
+      "status": "candidate"
+    },
+    {
+      "word": "责任",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-20.png",
+      "status": "candidate"
+    },
+    {
+      "word": "陪伴",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-21.png",
+      "status": "candidate"
+    },
+    {
+      "word": "改",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-22.png",
+      "status": "candidate"
+    },
+    {
+      "word": "主意",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-23.png",
+      "status": "candidate"
+    },
+    {
+      "word": "金色",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-24.png",
+      "status": "candidate"
+    },
+    {
+      "word": "行",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-25.png",
+      "status": "candidate"
+    },
+    {
+      "word": "阳光",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-26.png",
+      "status": "candidate"
+    },
+    {
+      "word": "蹲",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/assets/l12-vocab-dedicated-27.png",
+      "status": "candidate"
+    }
+  ],
+  "slide_count": 74,
+  "audio_tracks_available": [
+    "12-1",
+    "12-2",
+    "12-3",
+    "12-4",
+    "12-5",
+    "12-6"
+  ],
+  "audio_tracks_embedded": [
+    "12-4",
+    "12-5",
+    "12-6"
+  ],
+  "audio_playback_policy": "embedded_on_audio-summary-slides; PowerPoint playback QA remains pending for draft",
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-12/10-design/pptx-draft/online/lesson-12-在线预习.pptx",
+    "sha256": "75aec7c3fdb9fdf0c22576b46524f08c341eb309b95039c742f454388b9e9eac",
+    "bytes": 183747454
+  },
+  "generated_at": "2026-09-04T09:09:45.253Z"
+}

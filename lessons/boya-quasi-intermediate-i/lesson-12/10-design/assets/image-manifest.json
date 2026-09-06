@@ -1,0 +1,338 @@
+{
+  "schema_version": "boya-lesson-image-manifest-v1",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-12",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_id": "lesson-12",
+  "lesson_title": "散步",
+  "generated_at": "2026-09-04",
+  "generation_mode": "raster_handpainted_textbook_illustration",
+  "source_scope": {
+    "canonical_source": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json",
+    "source_status": "approved"
+  },
+  "style": {
+    "rendering": "hand-painted watercolor and colored-pencil raster with paper texture",
+    "linework": "delicate gray-blue ink",
+    "palette": "low-saturation pastel on warm off-white paper",
+    "image_format": "PNG",
+    "student_text_policy": "no readable Chinese, Latin text, numbers, logos, labels, captions, watermark, flags, or speech bubbles"
+  },
+  "approval_boundary": {
+    "generation_status": "complete_and_staged_qa_passed",
+    "authorization_status": "approved_by_adam_for_ppt_generation",
+    "can_enter_ppt": true,
+    "reason": "Adam approved source/audio; all 31 lesson-specific raster PNGs generated, staged, decoded, and dimension-checked."
+  },
+  "assets": [
+    {
+      "asset_id": "L12-cover",
+      "file": "lesson-12-cover-walking.png",
+      "category": "cover",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "a family walking together in warm sunlight on a park path",
+      "sha256": "fa90f69ac7924b552cce209ed307bca2d5d2e805ac31d3d92723d6a3355a4a9a"
+    },
+    {
+      "asset_id": "L12-context-01",
+      "file": "lesson-12-context-01.png",
+      "category": "short_text_context",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "family walking in a park with a wide path, pond and trees",
+      "sha256": "767a1f6fc0db8084a12964377b90ec1b0feb7d8e66e45d97f1a2b896b4052768"
+    },
+    {
+      "asset_id": "L12-context-02",
+      "file": "lesson-12-context-02.png",
+      "category": "short_text_context",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "a family walking outdoors and discussing whether to take a wide road or a small interesting path",
+      "sha256": "7d92b0f52d6eb58157383a4f51e48c6d88fd2ecdba59c65f56aa4f0675cc0a85"
+    },
+    {
+      "asset_id": "L12-context-03",
+      "file": "lesson-12-context-03.png",
+      "category": "short_text_context",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "a family walking slowly and steadily under golden sunlight toward flowers, trees and a small pond",
+      "sha256": "a6ba58dd0aae9b93181c9ddfce8b57be06a7c4ee2009214e29029b74087c1f64"
+    },
+    {
+      "asset_id": "L12-V01",
+      "file": "l12-vocab-dedicated-01.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "宽阔",
+      "sha256": "98f0c3b59b344f4062ddc672c55c1dc4dc16e74c98c64fa49cfe714f374c542b"
+    },
+    {
+      "asset_id": "L12-V02",
+      "file": "l12-vocab-dedicated-02.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "池塘",
+      "sha256": "6ea8e66ed7783c2d72b02de0e83e447918ad9765b51cad53d5ef548fbd4c43d0"
+    },
+    {
+      "asset_id": "L12-V03",
+      "file": "l12-vocab-dedicated-03.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "背",
+      "sha256": "b4bb9bae09263b46bf9e2c24aaa3b77e15aea91d7185372296903e7730eec248"
+    },
+    {
+      "asset_id": "L12-V04",
+      "file": "l12-vocab-dedicated-04.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "散步",
+      "sha256": "a4182fff40896f0549c21c4d1aaa953a4720c58c7fbc1ecd4a9aebead5268603"
+    },
+    {
+      "asset_id": "L12-V05",
+      "file": "l12-vocab-dedicated-05.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "摸",
+      "sha256": "9c9d6cc1170438faed399d08476d372d1d6743c272cb3e6dff8ce97b26dce6ea"
+    },
+    {
+      "asset_id": "L12-V06",
+      "file": "l12-vocab-dedicated-06.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "本来",
+      "sha256": "fadd81bbdf17240f007da5fcfa2235071b3e43d76a1613bf8ea6b8dd507c2a38"
+    },
+    {
+      "asset_id": "L12-V07",
+      "file": "l12-vocab-dedicated-07.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "突然",
+      "sha256": "d41d22b289792e947a16da75ecac053b202aaa0f4018c8259ff1c46b97f3793c"
+    },
+    {
+      "asset_id": "L12-V08",
+      "file": "l12-vocab-dedicated-08.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "分歧",
+      "sha256": "0381f9501ac7723e2dec4c93656f160cc80b38a013f84b440c2463d83f0524fe"
+    },
+    {
+      "asset_id": "L12-V09",
+      "file": "l12-vocab-dedicated-09.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "取决（于）",
+      "sha256": "92d7cbb7e173336eb08a97ba43f77f9dd42c1b87b28896e42e33f9db326e5f75"
+    },
+    {
+      "asset_id": "L12-V10",
+      "file": "l12-vocab-dedicated-10.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "强壮",
+      "sha256": "2d1116e395b66553b6624bed4361f944fc2e5ebc38a5ef63d42b72c6818987f4"
+    },
+    {
+      "asset_id": "L12-V11",
+      "file": "l12-vocab-dedicated-11.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "稳",
+      "sha256": "35a692754408af6222f552e95852ad27afb3c6ec89e9423be84b03cac2d459ef"
+    },
+    {
+      "asset_id": "L12-V12",
+      "file": "l12-vocab-dedicated-12.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "愿意",
+      "sha256": "d3c55e07ce9d7692c4198468e69a20785dd5b192ec86be96e560639d12c94eb9"
+    },
+    {
+      "asset_id": "L12-V13",
+      "file": "l12-vocab-dedicated-13.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "稍微",
+      "sha256": "d8bd0d6908470976b3dab52ece82a15190e3b762b22cc9e0f7014d06bf016b2b"
+    },
+    {
+      "asset_id": "L12-V14",
+      "file": "l12-vocab-dedicated-14.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "疲劳",
+      "sha256": "79571bdf6fbe4dc907723b8db38dd312a1818cd24c4198dff0a1817e077d098d"
+    },
+    {
+      "asset_id": "L12-V15",
+      "file": "l12-vocab-dedicated-15.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "尽量",
+      "sha256": "28cd1d8955d4bdf247e2f4dca342cf6774eaeb7ef2da0426ecd72f78586bfd25"
+    },
+    {
+      "asset_id": "L12-V16",
+      "file": "l12-vocab-dedicated-16.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "信服",
+      "sha256": "01a9a8db56ad6c952b4023d4ee2d2c489a9ad5bf585d092e2f5d6235990a642d"
+    },
+    {
+      "asset_id": "L12-V17",
+      "file": "l12-vocab-dedicated-17.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "便",
+      "sha256": "c6f1a3075dbb88a8e6db4b7786d340fb42e813b74dca4a99344710372a9467e6"
+    },
+    {
+      "asset_id": "L12-V18",
+      "file": "l12-vocab-dedicated-18.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "叫",
+      "sha256": "5be2d9c6d34d6db5ec836158247644f7864ce20a2092e277928348829d235e61"
+    },
+    {
+      "asset_id": "L12-V19",
+      "file": "l12-vocab-dedicated-19.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "发生",
+      "sha256": "953d7e889b16a6a35c80af464e29d0dcb787e988b581e6ed589cf6b9c32b4f45"
+    },
+    {
+      "asset_id": "L12-V20",
+      "file": "l12-vocab-dedicated-20.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "责任",
+      "sha256": "a25251968374cdb4ecec945797ca511c0a195baa8e965a0f21e070a3754d1185"
+    },
+    {
+      "asset_id": "L12-V21",
+      "file": "l12-vocab-dedicated-21.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "陪伴",
+      "sha256": "85300aebb6dc9074afdffc94b16ac2048a7c4d81a527a61d3bd50f0561a0b8de"
+    },
+    {
+      "asset_id": "L12-V22",
+      "file": "l12-vocab-dedicated-22.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "改",
+      "sha256": "974f94f5b57d4327760a157add76cdd5ea94082e953bf6eebb59f00725a95002"
+    },
+    {
+      "asset_id": "L12-V23",
+      "file": "l12-vocab-dedicated-23.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "主意",
+      "sha256": "8d65afcd78ec66efe3dbe0bbc02a394d53501080af0fd923bf6be53a108859b1"
+    },
+    {
+      "asset_id": "L12-V24",
+      "file": "l12-vocab-dedicated-24.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "金色",
+      "sha256": "d37d3e2e60e50d6b53458be3a5197ea840c987d51f50cfcdfddb08ff7b792094"
+    },
+    {
+      "asset_id": "L12-V25",
+      "file": "l12-vocab-dedicated-25.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "行",
+      "sha256": "4b1ce8fc00a7a98b5f3177c7fd02c5245ee583089a3a2138dd9d71c20fb2bb82"
+    },
+    {
+      "asset_id": "L12-V26",
+      "file": "l12-vocab-dedicated-26.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "阳光",
+      "sha256": "6d482b3847b2568d39824befb2c433f78ab0ac455f8acfb55f79d0a9cdbc9adf"
+    },
+    {
+      "asset_id": "L12-V27",
+      "file": "l12-vocab-dedicated-27.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "蹲",
+      "sha256": "1b96b073bde415b52be9da5818115266a4045899f2450c992cd109a3ce93d967"
+    }
+  ]
+}

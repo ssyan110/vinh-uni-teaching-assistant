@@ -248,7 +248,7 @@
       "audio_count": 8,
       "status": {
         "stage": "authority",
-        "authority_status": "pptx_chair_approved",
+        "authority_status": "two_pptx_user_approved_finalized_2026-09-03",
         "content_status": "pptx_approved_by_department_chair_2026-08-29",
         "delivery_status": "pptx_only_handoff_pending_full_package",
         "pptx_draft_status": "promoted_to_locked_authority",
@@ -276,7 +276,7 @@
         "stage": "pptx-approved",
         "source_status": "pending_review",
         "source_qa_status": "technical_audio_passed_7_of_7; 2-7_semantic_and_playback_approved; 2-1_to_2-6_pending",
-        "authority_status": "pptx_user_approved_2026-08-31",
+        "authority_status": "two_pptx_user_approved_finalized_2026-09-03",
         "pptx_draft_status": "promoted_to_locked_authority",
         "draft_modes": [
           "online",
@@ -366,7 +366,7 @@
         "stage": "pptx-approved",
         "source_status": "pending_review",
         "source_qa_status": "blocked",
-        "authority_status": "two_pptx_user_approved_finalized_2026-09-01",
+        "authority_status": "two_pptx_user_approved_finalized_2026-09-03",
         "pptx_draft_status": "promoted_to_locked_authority",
         "release_status": "blocked_pending_full_package"
       }
@@ -444,7 +444,7 @@
         "stage": "pptx-approved",
         "source_status": "pending_review",
         "source_qa_status": "blocked",
-        "authority_status": "online_pptx_user_promoted_2026-09-01",
+        "authority_status": "two_pptx_user_approved_finalized_2026-09-03",
         "pptx_draft_status": "promoted_to_locked_authority",
         "release_status": "blocked_pending_full_package"
       }
@@ -461,16 +461,18 @@
       "title": "北方菜和南方菜",
       "lesson_path": "lessons/boya-quasi-intermediate-i/lesson-09",
       "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/source-manifest.json",
-      "authority_manifest": null,
+      "authority_manifest": "lessons/boya-quasi-intermediate-i/lesson-09/20-approved/lesson-manifest.json",
       "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
       "printed_pages": "77–86",
       "pdf_page": 90,
       "audio_count": 6,
       "status": {
-        "stage": "source",
-        "source_status": null,
-        "source_qa_status": null,
-        "status": "pending_review"
+        "stage": "pptx-approved",
+        "source_status": "pending_review",
+        "source_qa_status": "technical_audio_passed_semantic_playback_pending",
+        "authority_status": "two_pptx_user_approved_finalized_2026-09-03",
+        "pptx_draft_status": "promoted_to_locked_authority",
+        "release_status": "blocked_pending_full_package"
       }
     },
     {

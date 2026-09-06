@@ -1,0 +1,444 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-pptx-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-10",
+  "mode": "online",
+  "title": "第十课《中国人喜欢聚餐》在线预习",
+  "status": "draft_not_approved",
+  "builder_scope": "scripts/build_l23_pptx_drafts.js",
+  "draft_gate": "lesson-specific",
+  "source_sha256": "379c2d4158ae7e96ef77451d33e1bba4cb2a87f8785af2d6a99795580acd19f2",
+  "layout_source": "boya-quasi-intermediate-i lesson-01 approved layout family",
+  "shared_layout_contract": "course/boya-online-layout-contract.json",
+  "lesson_content_contract": "course/boya-online-content-contract.json",
+  "example_bank": {
+    "source": "course/boya-example-bank.json",
+    "review_status": "ai_reviewed_pending_adam_approval",
+    "vocabulary_examples_per_item": 2,
+    "expression_examples_per_item": 2
+  },
+  "fixed_structure": [
+    "cover",
+    "learning_flow",
+    "goals",
+    "vocabulary",
+    "practice_after_each_full_five",
+    "proper_nouns_if_present",
+    "short_text_divider_before_each_text",
+    "short_text_record",
+    "expressions_after_related_text",
+    "comprehensive_practice",
+    "difficult_points_reflection",
+    "pre_class_check",
+    "thanks"
+  ],
+  "route_asset": "learning-route-user-supplied-transparent.png",
+  "vocabulary_practice_after_every": 5,
+  "vocabulary_extension_policy": "word_specific_optional; never show an empty universal extension label",
+  "vocabulary_page_breaks": {
+    "first_page": 87,
+    "first_count": 17,
+    "second_page": 88
+  },
+  "fixed_ending_titles": [
+    "我觉得很难的地方",
+    "课前检查",
+    "谢谢大家，我们课堂见。"
+  ],
+  "short_example_policy": "curated_short_sentences_max_24_hanzi_chars",
+  "short_text_policy": "textbook_reading_prompt_and_record_layout_no_full_text_copy",
+  "shared_assets": [
+    "lesson-01-cover-family-work-hobby.png",
+    "learning-route-user-supplied-transparent.png",
+    "divider-family.png",
+    "divider-work.png",
+    "divider-hobby.png",
+    "divider-comprehensive.png",
+    "symbolic-vocabulary.png",
+    "symbolic-listening.png",
+    "symbolic-sentence-pattern.png",
+    "oral-practice-divider.png",
+    "speaking-practice.png"
+  ],
+  "image_manifest": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/image-manifest.json",
+  "lesson_specific_image_assets": [
+    {
+      "asset_id": "L10-cover",
+      "file": "lesson-10-cover-gathering.png",
+      "category": "cover",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-context-01",
+      "file": "lesson-10-context-01.png",
+      "category": "short_text_context",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-context-02",
+      "file": "lesson-10-context-02.png",
+      "category": "short_text_context",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-context-03",
+      "file": "lesson-10-context-03.png",
+      "category": "short_text_context",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V01",
+      "file": "l10-vocab-dedicated-01.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V02",
+      "file": "l10-vocab-dedicated-02.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V03",
+      "file": "l10-vocab-dedicated-03.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V04",
+      "file": "l10-vocab-dedicated-04.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V05",
+      "file": "l10-vocab-dedicated-05.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V06",
+      "file": "l10-vocab-dedicated-06.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V07",
+      "file": "l10-vocab-dedicated-07.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V08",
+      "file": "l10-vocab-dedicated-08.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V09",
+      "file": "l10-vocab-dedicated-09.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V10",
+      "file": "l10-vocab-dedicated-10.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V11",
+      "file": "l10-vocab-dedicated-11.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V12",
+      "file": "l10-vocab-dedicated-12.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V13",
+      "file": "l10-vocab-dedicated-13.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V14",
+      "file": "l10-vocab-dedicated-14.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V15",
+      "file": "l10-vocab-dedicated-15.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V16",
+      "file": "l10-vocab-dedicated-16.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V17",
+      "file": "l10-vocab-dedicated-17.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V18",
+      "file": "l10-vocab-dedicated-18.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V19",
+      "file": "l10-vocab-dedicated-19.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V20",
+      "file": "l10-vocab-dedicated-20.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V21",
+      "file": "l10-vocab-dedicated-21.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V22",
+      "file": "l10-vocab-dedicated-22.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V23",
+      "file": "l10-vocab-dedicated-23.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V24",
+      "file": "l10-vocab-dedicated-24.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V25",
+      "file": "l10-vocab-dedicated-25.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V26",
+      "file": "l10-vocab-dedicated-26.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    },
+    {
+      "asset_id": "L10-V27",
+      "file": "l10-vocab-dedicated-27.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true
+    }
+  ],
+  "image_approval_status": "approved_by_adam_for_ppt_generation",
+  "vocabulary_image_policy": "one_distinct_semantic_asset_per_vocabulary_item",
+  "vocabulary_image_count": 27,
+  "vocabulary_image_assets": [
+    {
+      "word": "穿戴",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-01.png",
+      "status": "candidate"
+    },
+    {
+      "word": "整齐",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-02.png",
+      "status": "candidate"
+    },
+    {
+      "word": "商量",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-03.png",
+      "status": "candidate"
+    },
+    {
+      "word": "碰",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-04.png",
+      "status": "candidate"
+    },
+    {
+      "word": "实习",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-05.png",
+      "status": "candidate"
+    },
+    {
+      "word": "答应",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-06.png",
+      "status": "candidate"
+    },
+    {
+      "word": "厨师",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-07.png",
+      "status": "candidate"
+    },
+    {
+      "word": "收入",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-08.png",
+      "status": "candidate"
+    },
+    {
+      "word": "社交",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-09.png",
+      "status": "candidate"
+    },
+    {
+      "word": "费用",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-10.png",
+      "status": "candidate"
+    },
+    {
+      "word": "分摊",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-11.png",
+      "status": "candidate"
+    },
+    {
+      "word": "调查",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-12.png",
+      "status": "candidate"
+    },
+    {
+      "word": "功课",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-13.png",
+      "status": "candidate"
+    },
+    {
+      "word": "同乡",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-14.png",
+      "status": "candidate"
+    },
+    {
+      "word": "普通",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-15.png",
+      "status": "candidate"
+    },
+    {
+      "word": "花费",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-16.png",
+      "status": "candidate"
+    },
+    {
+      "word": "负担",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-17.png",
+      "status": "candidate"
+    },
+    {
+      "word": "请客",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-18.png",
+      "status": "candidate"
+    },
+    {
+      "word": "增多",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-19.png",
+      "status": "candidate"
+    },
+    {
+      "word": "特色",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-20.png",
+      "status": "candidate"
+    },
+    {
+      "word": "比例",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-21.png",
+      "status": "candidate"
+    },
+    {
+      "word": "行为",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-22.png",
+      "status": "candidate"
+    },
+    {
+      "word": "大饱口福",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-23.png",
+      "status": "candidate"
+    },
+    {
+      "word": "距离",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-24.png",
+      "status": "candidate"
+    },
+    {
+      "word": "追求",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-25.png",
+      "status": "candidate"
+    },
+    {
+      "word": "和谐",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-26.png",
+      "status": "candidate"
+    },
+    {
+      "word": "相处",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/assets/l10-vocab-dedicated-27.png",
+      "status": "candidate"
+    }
+  ],
+  "slide_count": 67,
+  "audio_tracks_available": [
+    "10-1",
+    "10-2",
+    "10-3",
+    "10-4",
+    "10-5",
+    "10-6"
+  ],
+  "audio_tracks_embedded": [
+    "10-4",
+    "10-5",
+    "10-6"
+  ],
+  "audio_playback_policy": "embedded_on_audio-summary-slides; PowerPoint playback QA remains pending for draft",
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-10/10-design/pptx-draft/online/lesson-10-在线预习.pptx",
+    "sha256": "7151684ddd31a6c2ea973a946555209314bb7570c8865cb8e1a2e00cbe69fbb3",
+    "bytes": 185159132
+  },
+  "generated_at": "2026-09-04T04:02:50.125Z"
+}

@@ -1,0 +1,446 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-pptx-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-09",
+  "mode": "online",
+  "title": "第九课《北方菜和南方菜》在线预习",
+  "status": "draft_not_approved",
+  "builder_scope": "scripts/build_l23_pptx_drafts.js",
+  "draft_gate": "lesson-specific",
+  "source_sha256": "c928011dfed526c506af0c73ab0dd420bb0eba07f43938f179c08743c60b0da1",
+  "layout_source": "boya-quasi-intermediate-i lesson-01 approved layout family",
+  "shared_layout_contract": "course/boya-online-layout-contract.json",
+  "lesson_content_contract": "course/boya-online-content-contract.json",
+  "example_bank": {
+    "source": "course/boya-example-bank.json",
+    "review_status": "ai_reviewed_pending_adam_approval",
+    "vocabulary_examples_per_item": 2,
+    "expression_examples_per_item": 2
+  },
+  "fixed_structure": [
+    "cover",
+    "learning_flow",
+    "goals",
+    "vocabulary",
+    "practice_after_each_full_five",
+    "proper_nouns_if_present",
+    "short_text_divider_before_each_text",
+    "short_text_record",
+    "expressions_after_related_text",
+    "comprehensive_practice",
+    "difficult_points_reflection",
+    "pre_class_check",
+    "thanks"
+  ],
+  "route_asset": "learning-route-user-supplied-transparent.png",
+  "vocabulary_practice_after_every": 5,
+  "vocabulary_extension_policy": "word_specific_optional; never show an empty universal extension label",
+  "vocabulary_page_breaks": {
+    "first_page": 77,
+    "first_count": 17,
+    "second_page": 78
+  },
+  "fixed_ending_titles": [
+    "我觉得很难的地方",
+    "课前检查",
+    "谢谢大家，我们课堂见。"
+  ],
+  "short_example_policy": "curated_short_sentences_max_24_hanzi_chars",
+  "short_text_policy": "textbook_reading_prompt_and_record_layout_no_full_text_copy",
+  "shared_assets": [
+    "lesson-01-cover-family-work-hobby.png",
+    "learning-route-user-supplied-transparent.png",
+    "divider-family.png",
+    "divider-work.png",
+    "divider-hobby.png",
+    "divider-comprehensive.png",
+    "symbolic-vocabulary.png",
+    "symbolic-listening.png",
+    "symbolic-sentence-pattern.png",
+    "oral-practice-divider.png",
+    "speaking-practice.png"
+  ],
+  "image_manifest": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/image-manifest.json",
+  "lesson_specific_image_assets": [
+    {
+      "asset_id": "L09-cover",
+      "file": "lesson-09-cover-food.png",
+      "category": "cover",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-C01",
+      "file": "lesson-09-context-01.png",
+      "category": "short_text_context",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-C02",
+      "file": "lesson-09-context-02.png",
+      "category": "short_text_context",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-C03",
+      "file": "lesson-09-context-03.png",
+      "category": "short_text_context",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V01",
+      "file": "l09-vocab-dedicated-01.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V02",
+      "file": "l09-vocab-dedicated-02.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V03",
+      "file": "l09-vocab-dedicated-03.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V04",
+      "file": "l09-vocab-dedicated-04.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V05",
+      "file": "l09-vocab-dedicated-05.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V06",
+      "file": "l09-vocab-dedicated-06.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V07",
+      "file": "l09-vocab-dedicated-07.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V08",
+      "file": "l09-vocab-dedicated-08.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V09",
+      "file": "l09-vocab-dedicated-09.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V10",
+      "file": "l09-vocab-dedicated-10.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V11",
+      "file": "l09-vocab-dedicated-11.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V12",
+      "file": "l09-vocab-dedicated-12.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V13",
+      "file": "l09-vocab-dedicated-13.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V14",
+      "file": "l09-vocab-dedicated-14.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V15",
+      "file": "l09-vocab-dedicated-15.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V16",
+      "file": "l09-vocab-dedicated-16.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V17",
+      "file": "l09-vocab-dedicated-17.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V18",
+      "file": "l09-vocab-dedicated-18.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V19",
+      "file": "l09-vocab-dedicated-19.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V20",
+      "file": "l09-vocab-dedicated-20.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V21",
+      "file": "l09-vocab-dedicated-21.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V22",
+      "file": "l09-vocab-dedicated-22.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V23",
+      "file": "l09-vocab-dedicated-23.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V24",
+      "file": "l09-vocab-dedicated-24.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V25",
+      "file": "l09-vocab-dedicated-25.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V26",
+      "file": "l09-vocab-dedicated-26.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V27",
+      "file": "l09-vocab-dedicated-27.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    }
+  ],
+  "image_approval_status": "pending_source_visual_and_adam_review",
+  "vocabulary_image_policy": "one_distinct_semantic_asset_per_vocabulary_item",
+  "vocabulary_image_count": 27,
+  "vocabulary_image_assets": [
+    {
+      "word": "土豆",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-01.png",
+      "status": "candidate"
+    },
+    {
+      "word": "蔬菜",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-02.png",
+      "status": "candidate"
+    },
+    {
+      "word": "早茶",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-03.png",
+      "status": "candidate"
+    },
+    {
+      "word": "凉拌",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-04.png",
+      "status": "candidate"
+    },
+    {
+      "word": "青菜",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-05.png",
+      "status": "candidate"
+    },
+    {
+      "word": "酸辣汤",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-06.png",
+      "status": "candidate"
+    },
+    {
+      "word": "涮",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-07.png",
+      "status": "candidate"
+    },
+    {
+      "word": "口味",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-08.png",
+      "status": "candidate"
+    },
+    {
+      "word": "渐渐",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-09.png",
+      "status": "candidate"
+    },
+    {
+      "word": "黄瓜",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-10.png",
+      "status": "candidate"
+    },
+    {
+      "word": "炖",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-11.png",
+      "status": "candidate"
+    },
+    {
+      "word": "夜宵",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-12.png",
+      "status": "candidate"
+    },
+    {
+      "word": "大排档",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-13.png",
+      "status": "candidate"
+    },
+    {
+      "word": "聚会",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-14.png",
+      "status": "candidate"
+    },
+    {
+      "word": "聚餐",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-15.png",
+      "status": "candidate"
+    },
+    {
+      "word": "休闲",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-16.png",
+      "status": "candidate"
+    },
+    {
+      "word": "豆角",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-17.png",
+      "status": "candidate"
+    },
+    {
+      "word": "不光",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-18.png",
+      "status": "candidate"
+    },
+    {
+      "word": "取代",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-19.png",
+      "status": "candidate"
+    },
+    {
+      "word": "季节",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-20.png",
+      "status": "candidate"
+    },
+    {
+      "word": "种类",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-21.png",
+      "status": "candidate"
+    },
+    {
+      "word": "普遍",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-22.png",
+      "status": "candidate"
+    },
+    {
+      "word": "年轻",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-23.png",
+      "status": "candidate"
+    },
+    {
+      "word": "一般",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-24.png",
+      "status": "candidate"
+    },
+    {
+      "word": "数量",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-25.png",
+      "status": "candidate"
+    },
+    {
+      "word": "增加",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-26.png",
+      "status": "candidate"
+    },
+    {
+      "word": "方式",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/l09-vocab-dedicated-27.png",
+      "status": "candidate"
+    }
+  ],
+  "slide_count": 72,
+  "page_marker_status": "passed",
+  "page_marker_storyboard": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/storyboard/lesson-09-online-page-marker-storyboard.csv",
+  "audio_tracks_available": [
+    "9-1",
+    "9-2",
+    "9-3",
+    "9-4",
+    "9-5",
+    "9-6"
+  ],
+  "audio_tracks_embedded": [
+    "9-4",
+    "9-5",
+    "9-6"
+  ],
+  "audio_playback_policy": "embedded_on_audio-summary-slides; PowerPoint playback QA remains pending for draft",
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/pptx-draft/online/lesson-09-在线预习.pptx",
+    "sha256": "12a5b25eaf722e6da736ca41763bbfb190fe12ce61c1058f3f8e00f00a5c7562",
+    "bytes": 69015000
+  },
+  "generated_at": "2026-09-03T12:07:56.690Z"
+}

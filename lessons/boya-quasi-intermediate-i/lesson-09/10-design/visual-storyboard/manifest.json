@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-visual-storyboard-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-09",
+  "status": "draft_pending_visual_review",
+  "alignment_status": "draft_pending_pptx",
+  "visual_system": "boya-classroom-materials",
+  "canvas": "16:9",
+  "background": "#FFFFFF",
+  "fonts": { "cjk": "KaiTi", "latin": "Times New Roman" },
+  "visible_min_pt": 20,
+  "asset_manifest": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/image-manifest.json",
+  "slide_families": [
+    "cover",
+    "learning-route",
+    "can-do-goals",
+    "one-word-vocabulary",
+    "short-text-record",
+    "expression-practice",
+    "comprehensive-table",
+    "personal-speaking"
+  ],
+  "density_rules": ["一页一个词语", "句式页只放紫色句型框、两条例句和三条书写线", "长课文不整段贴入学生 PPT"],
+  "approval_note": "第九课课次图片与版面仍为 draft，图片全部待 Adam／来源视觉审核。"
+}

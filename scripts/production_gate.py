@@ -13,12 +13,15 @@ import json
 from pathlib import Path
 from typing import Any
 
+from blocker_contract import blocker_records, with_blocker_records
 from workflow_integrity import (
     audit_authority_manifest,
     audit_frozen_source_package,
     sha256,
 )
 from validate_lesson_identity import validate as validate_lesson_identity
+from lesson_context import LessonContext, LessonContextError, resolve_lesson_context
+from workflow_integrity import resolve_relative_path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -69,21 +72,22 @@ def is_within(child: Path, parent: Path) -> bool:
         return False
 
 
-def default_output_dir(purpose: str) -> Path | None:
+def default_output_dir(purpose: str, context: LessonContext | None = None) -> Path | None:
+    design_root = context.design_root if context else DESIGN_ROOT
     defaults = {
-        "teacher-guide": DESIGN_ROOT / "teacher-manual-draft",
-        "support": DESIGN_ROOT / "support-draft",
-        "prototype": DESIGN_ROOT / "visual-prototype-draft",
-        "pptx": DESIGN_ROOT / "pptx-draft",
-        "semester-manual": DESIGN_ROOT / "teacher-manual-export-draft",
+        "teacher-guide": design_root / "teacher-manual-draft",
+        "support": design_root / "support-draft",
+        "prototype": design_root / "visual-prototype-draft",
+        "pptx": design_root / "pptx-draft",
+        "semester-manual": design_root / "teacher-manual-export-draft",
     }
     return defaults.get(purpose)
 
 
-def validate_output_dir(value: str | None, purpose: str, blockers: list[str]) -> Path | None:
+def validate_output_dir(value: str | None, purpose: str, blockers: list[str], context: LessonContext | None = None) -> Path | None:
     if purpose in {"audit", "release"}:
         return None
-    default = default_output_dir(purpose)
+    default = default_output_dir(purpose, context)
     if default is None:
         blockers.append(f"no draft output root is configured for purpose: {purpose}")
         return None
@@ -95,7 +99,7 @@ def validate_output_dir(value: str | None, purpose: str, blockers: list[str]) ->
     if not candidate.is_absolute():
         candidate = PROJECT_ROOT / candidate
     resolved = candidate.resolve()
-    design_root = DESIGN_ROOT.resolve()
+    design_root = (context.design_root if context else DESIGN_ROOT).resolve()
     if resolved == design_root or not is_within(resolved, design_root):
         blockers.append(f"draft output is outside 10-design: {resolved}")
     expected_root = default.resolve()
@@ -107,19 +111,23 @@ def validate_output_dir(value: str | None, purpose: str, blockers: list[str]) ->
         protected_path = project_path(protected).resolve()
         if is_within(resolved, protected_path):
             blockers.append(f"draft output is inside protected path: {protected}")
+    if context:
+        for protected_path in (context.authority_root, context.qa_root, context.release_root, context.lesson_root / "90-archive"):
+            if is_within(resolved, protected_path.resolve()):
+                blockers.append(f"draft output is inside protected path: {protected_path}")
     return resolved
 
 
-def add_file_status_blockers(manifest: dict[str, Any], blockers: list[str]) -> None:
+def add_file_status_blockers(manifest: dict[str, Any], blockers: list[str], context: LessonContext | None = None) -> None:
     audit = audit_authority_manifest(
         PROJECT_ROOT,
-        PROJECT_ROOT / CONFIG["authority_root"],
+        context.authority_root if context else PROJECT_ROOT / CONFIG["authority_root"],
         manifest,
     )
     blockers.extend(audit["failures"])
 
 
-def audit_production_paths(blockers: list[str]) -> None:
+def audit_production_paths(blockers: list[str], context: LessonContext | None = None) -> None:
     for relative_path in PRODUCTION_SCRIPTS:
         path = project_path(relative_path)
         if not path.is_file():
@@ -132,7 +140,8 @@ def audit_production_paths(blockers: list[str]) -> None:
                     f"production script reads or writes legacy path token {token!r}: {relative_path}"
                 )
 
-    for path in sorted((LESSON_ROOT / "10-design").rglob("*.json")):
+    design_root = context.design_root if context else LESSON_ROOT / "10-design"
+    for path in sorted(design_root.rglob("*.json")):
         text = path.read_text(encoding="utf-8")
         for token in LEGACY_TOKENS:
             if token in text:
@@ -141,7 +150,7 @@ def audit_production_paths(blockers: list[str]) -> None:
                     f"{path.relative_to(PROJECT_ROOT)}"
                 )
 
-    current_qa = LESSON_ROOT / "30-qa/current"
+    current_qa = (context.qa_root if context else LESSON_ROOT / "30-qa") / "current"
     if current_qa.is_dir():
         for path in sorted(current_qa.rglob("*.md")):
             text = path.read_text(encoding="utf-8")
@@ -160,26 +169,48 @@ def audit_lesson_identity(blockers: list[str]) -> None:
     blockers.extend(f"lesson identity: {error}" for error in errors)
 
 
-def load_base_manifests(blockers: list[str]) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
+def check_manifest_scope(manifest: dict[str, Any], label: str, context: LessonContext, blockers: list[str], *, require_key: bool = False) -> None:
+    for field, expected in (("lesson_key", context.lesson_key), ("textbook_id", context.textbook_id), ("lesson_id", context.lesson_id)):
+        actual = manifest.get(field)
+        if field == "lesson_id" and actual == f"{context.textbook_id}-{context.lesson_id}":
+            continue  # Historical manifest identity spelling.
+        if (actual is not None and actual != expected) or (field == "lesson_key" and require_key and actual is None):
+            blockers.append(f"lesson identity: {label} {field}={actual!r}, expected {expected!r}")
+
+
+def scoped_manifest_path(value: Any, required_root: Path, label: str, blockers: list[str]) -> Path | None:
+    try:
+        return resolve_relative_path(PROJECT_ROOT, value, required_root=required_root)[0]
+    except ValueError as error:
+        blockers.append(f"{label} path is invalid: {error}")
+        return None
+
+
+def load_base_manifests(blockers: list[str], context: LessonContext | None = None) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
+    lesson_root = context.lesson_root if context else LESSON_ROOT
     source_manifest: dict[str, Any] = {}
     teaching_manifest: dict[str, Any] = {}
     authority_manifest: dict[str, Any] = {}
     try:
-        source_manifest = read_json(LESSON_ROOT / "00-source/source-manifest.json")
+        source_manifest = read_json((context.source_root if context else lesson_root / "00-source") / "source-manifest.json")
     except (FileNotFoundError, json.JSONDecodeError) as error:
         blockers.append(f"source manifest is unavailable or invalid: {error}")
     try:
-        teaching_manifest = read_json(LESSON_ROOT / "10-design/teaching-design/manifest.json")
+        teaching_manifest = read_json((context.design_root if context else lesson_root / "10-design") / "teaching-design/manifest.json")
     except (FileNotFoundError, json.JSONDecodeError) as error:
         blockers.append(f"teaching-design manifest is unavailable or invalid: {error}")
     try:
-        authority_manifest = read_json(LESSON_ROOT / "20-approved/lesson-manifest.json")
+        authority_manifest = read_json((context.authority_root if context else lesson_root / "20-approved") / "lesson-manifest.json")
     except (FileNotFoundError, json.JSONDecodeError) as error:
         blockers.append(f"authority manifest is unavailable or invalid: {error}")
 
-    canonical = project_path(CONFIG["canonical_source"])
+    if context:
+        for label, manifest in (("source", source_manifest), ("teaching-design", teaching_manifest), ("authority", authority_manifest)):
+            check_manifest_scope(manifest, label, context, blockers, require_key=label == "source")
+
+    canonical = context.canonical_source if context else project_path(CONFIG["canonical_source"])
     if not canonical.is_file():
-        blockers.append(f"canonical source is missing: {CONFIG['canonical_source']}")
+        blockers.append(f"canonical source is missing: {canonical.relative_to(PROJECT_ROOT)}")
     elif source_manifest.get("canonical_source_sha256") != sha256(canonical):
         blockers.append("canonical source hash differs from the approved source manifest")
     if source_manifest.get("source_status") != "verified":
@@ -189,7 +220,12 @@ def load_base_manifests(blockers: list[str]) -> tuple[dict[str, Any], dict[str, 
     if not str(teaching_manifest.get("status", "")).startswith("approved_by_adam_"):
         blockers.append("PBI teaching-design gate is not approved")
     if authority_manifest:
-        historical_source = CONFIG.get("historical_package_evidence")
+        # Explicit lessons own their evidence; never borrow the active L01 snapshot.
+        source_package = authority_manifest.get("source_package")
+        historical_source = (
+            (source_package.get("path") if isinstance(source_package, dict) else None)
+            if context else CONFIG.get("historical_package_evidence")
+        )
         if not historical_source:
             blockers.append("configured historical package evidence is missing")
         else:
@@ -202,21 +238,28 @@ def load_base_manifests(blockers: list[str]) -> tuple[dict[str, Any], dict[str, 
     return source_manifest, teaching_manifest, authority_manifest
 
 
-def require_authority_manual(authority_manifest: dict[str, Any], blockers: list[str]) -> None:
+def require_authority_manual(authority_manifest: dict[str, Any], blockers: list[str], context: LessonContext | None = None) -> None:
     if authority_manifest.get("authority_status") != "final_confirmed":
         blockers.append("authority manifest is not final_confirmed")
     teacher = authority_manifest.get("authority", {}).get("teacher_manual", {})
     teacher_path = project_path(teacher.get("path", "")) if teacher.get("path") else None
+    if context and teacher.get("path"):
+        teacher_path = scoped_manifest_path(teacher["path"], context.authority_root, "teacher manual", blockers)
     if not teacher_path or not teacher_path.is_file():
         blockers.append("approved teacher manual is missing from 20-approved")
     if teacher.get("status") != "final_confirmed":
         blockers.append("teacher manual is not marked final_confirmed")
 
 
-def require_approved_design_inputs(blockers: list[str]) -> None:
-    storyboard = read_json(LESSON_ROOT / "10-design/storyboard/manifest.json")
-    visual = read_json(LESSON_ROOT / "10-design/visual-storyboard/manifest.json")
-    prototype = read_json(LESSON_ROOT / "10-design/visual-prototype/manifest.json")
+def require_approved_design_inputs(blockers: list[str], context: LessonContext | None = None) -> None:
+    design_root = context.design_root if context else LESSON_ROOT / "10-design"
+    storyboard = read_json(design_root / "storyboard/manifest.json")
+    visual = read_json(design_root / "visual-storyboard/manifest.json")
+    prototype = read_json(design_root / "visual-prototype/manifest.json")
+
+    if context:
+        for label, manifest in (("storyboard", storyboard), ("visual storyboard", visual), ("visual prototype", prototype)):
+            check_manifest_scope(manifest, label, context, blockers)
 
     if not storyboard.get("current_revision_approved_at"):
         blockers.append(
@@ -228,17 +271,20 @@ def require_approved_design_inputs(blockers: list[str]) -> None:
         blockers.append("visual storyboard is not explicitly aligned to the current PPTX")
     if "approved" not in str(prototype.get("status", "")).lower():
         blockers.append("six-slide visual prototype is not approved")
-    if not (LESSON_ROOT / "10-design/activity-package-manifest.json").is_file():
+    if not (design_root / "activity-package-manifest.json").is_file():
         blockers.append("activity package manifest is missing")
 
 
-def require_release_ready(authority_manifest: dict[str, Any], blockers: list[str]) -> None:
-    require_authority_manual(authority_manifest, blockers)
+def require_release_ready(authority_manifest: dict[str, Any], blockers: list[str], context: LessonContext | None = None) -> None:
+    require_authority_manual(authority_manifest, blockers, context)
     try:
-        require_approved_design_inputs(blockers)
+        require_approved_design_inputs(blockers, context)
     except (FileNotFoundError, json.JSONDecodeError) as error:
         blockers.append(f"release design input manifest is unavailable or invalid: {error}")
     qa = authority_manifest.get("qa", {})
+    if not isinstance(qa, dict):
+        blockers.append("authority qa must be an object")
+        qa = {}
     if qa.get("status") not in {
         "recorded_current_pass",
         "passed",
@@ -246,9 +292,14 @@ def require_release_ready(authority_manifest: dict[str, Any], blockers: list[str
     }:
         blockers.append("current QA is not recorded as passed")
     report_path = project_path(qa.get("current_report", "")) if qa.get("current_report") else None
+    if context and qa.get("current_report"):
+        report_path = scoped_manifest_path(qa["current_report"], context.qa_root / "current", "current QA report", blockers)
     if not report_path or not report_path.is_file():
         blockers.append("current QA report is missing")
     rehearsal = qa.get("rehearsal", {})
+    if not isinstance(rehearsal, dict):
+        blockers.append("authority qa.rehearsal must be an object")
+        rehearsal = {}
     if rehearsal.get("audio_playback_status") != "passed":
         blockers.append("PPTX audio playback is not recorded as passed")
     if rehearsal.get("status") != "passed":
@@ -258,8 +309,7 @@ def require_release_ready(authority_manifest: dict[str, Any], blockers: list[str
 def check_lesson_ppt_draft(lesson_key: str | None, output_dir: str | None = None) -> dict[str, Any]:
     """Gate a lesson-specific PPTX draft without granting authority.
 
-    The original gate is intentionally tied to the active lesson authority and
-    therefore remains the correct gate for approved/release work.  Later
+    The authority gate requires full approval evidence for its lesson scope. Later
     lessons need a safe, explicit draft stage while their own authority
     manifests are still being built.  This stage validates identity, source
     integrity, boundary confirmation, and output scope; it never approves or
@@ -268,25 +318,25 @@ def check_lesson_ppt_draft(lesson_key: str | None, output_dir: str | None = None
     blockers: list[str] = []
     if not lesson_key:
         blockers.append("lesson-specific PPTX draft requires --lesson-key")
-        return {"purpose": "pptx", "stage": "draft", "status": "blocked", "output_dir": output_dir, "blockers": blockers}
+        return with_blocker_records({"purpose": "pptx", "stage": "draft", "status": "blocked", "output_dir": output_dir, "blockers": blockers}, scope="draft/pptx")
 
     try:
         registry = read_json(LESSON_REGISTRY)
     except (FileNotFoundError, json.JSONDecodeError) as error:
         blockers.append(f"lesson registry is unavailable or invalid: {error}")
-        return {"purpose": "pptx", "stage": "draft", "lesson_key": lesson_key, "status": "blocked", "output_dir": output_dir, "blockers": blockers}
+        return with_blocker_records({"purpose": "pptx", "stage": "draft", "lesson_key": lesson_key, "status": "blocked", "output_dir": output_dir, "blockers": blockers}, scope="draft/pptx")
 
     entries = registry if isinstance(registry, list) else registry.get("lessons", [])
     entry = next((item for item in entries if item.get("lesson_key") == lesson_key), None)
     if not entry:
         blockers.append(f"lesson identity is not registered: {lesson_key}")
-        return {"purpose": "pptx", "stage": "draft", "lesson_key": lesson_key, "status": "blocked", "output_dir": output_dir, "blockers": blockers}
+        return with_blocker_records({"purpose": "pptx", "stage": "draft", "lesson_key": lesson_key, "status": "blocked", "output_dir": output_dir, "blockers": blockers}, scope="draft/pptx")
 
     textbook_id = entry.get("textbook_id")
     lesson_id = entry.get("lesson_id")
     if not textbook_id or not lesson_id:
         blockers.append("registered lesson is missing textbook_id or lesson_id")
-        return {"purpose": "pptx", "stage": "draft", "lesson_key": lesson_key, "status": "blocked", "output_dir": output_dir, "blockers": blockers}
+        return with_blocker_records({"purpose": "pptx", "stage": "draft", "lesson_key": lesson_key, "status": "blocked", "output_dir": output_dir, "blockers": blockers}, scope="draft/pptx")
 
     lesson_root = PROJECT_ROOT / "lessons" / textbook_id / lesson_id
     draft_root = lesson_root / "10-design" / "pptx-draft"
@@ -346,55 +396,75 @@ def check_lesson_ppt_draft(lesson_key: str | None, output_dir: str | None = None
         except (json.JSONDecodeError, OSError) as error:
             blockers.append(f"lesson source metadata is unavailable or invalid: {error}")
 
-    return {
+    return with_blocker_records({
         "purpose": "pptx",
         "stage": "draft",
         "lesson_key": lesson_key,
         "status": "ready" if not blockers else "blocked",
         "output_dir": str(resolved),
         "blockers": blockers,
-    }
+    }, scope="draft/pptx")
 
 
-def check(purpose: str, output_dir: str | None = None) -> dict[str, Any]:
+def check(purpose: str, output_dir: str | None = None, lesson_key: str | None = None, offering_id: str | None = None) -> dict[str, Any]:
+    """Check authority gates in an explicit scope, or the legacy active scope."""
     blockers: list[str] = []
+    context = None
+    if lesson_key is not None:
+        try:
+            context = resolve_lesson_context(PROJECT_ROOT, lesson_key, offering_id)
+            # Resolve protected paths before any audit, so unsafe aliases fail closed.
+            _ = (context.design_root, context.source_root, context.canonical_source,
+                 context.authority_root, context.qa_root, context.release_root)
+        except LessonContextError as error:
+            return with_blocker_records({
+                "purpose": purpose, "lesson_key": lesson_key, "status": "blocked",
+                "output_dir": output_dir, "blockers": [f"lesson identity: {error}"],
+            }, scope=f"authority/{purpose}")
+    # Keep legacy helper call shapes for existing integrations and mocks.
+    scope = (context,) if context else ()
+    design_root = context.design_root if context else LESSON_ROOT / "10-design"
     if purpose not in {"audit", "teacher-guide", "support", "prototype", "pptx", "semester-manual", "release"}:
         blockers.append(f"unknown production purpose: {purpose}")
 
-    draft_path = validate_output_dir(output_dir, purpose, blockers)
-    audit_lesson_identity(blockers)
-    audit_production_paths(blockers)
-    _source, _teaching, authority = load_base_manifests(blockers)
+    draft_path = validate_output_dir(output_dir, purpose, blockers, *scope)
+    if context is None:
+        audit_lesson_identity(blockers)
+    audit_production_paths(blockers, *scope)
+    _source, _teaching, authority = load_base_manifests(blockers, *scope)
 
     if purpose in {"support", "pptx", "semester-manual", "release"}:
-        require_authority_manual(authority, blockers)
+        require_authority_manual(authority, blockers, *scope)
     if purpose in {"audit", "support", "pptx", "semester-manual", "release"}:
-        add_file_status_blockers(authority, blockers)
+        add_file_status_blockers(authority, blockers, *scope)
     if purpose == "prototype":
         try:
-            visual = read_json(LESSON_ROOT / "10-design/visual-storyboard/manifest.json")
+            visual = read_json(design_root / "visual-storyboard/manifest.json")
+            if context:
+                check_manifest_scope(visual, "visual storyboard", context, blockers)
             if "approved" not in str(visual.get("status", "")).lower():
                 blockers.append("visual storyboard is not approved")
         except (FileNotFoundError, json.JSONDecodeError) as error:
             blockers.append(f"visual storyboard manifest is unavailable or invalid: {error}")
     if purpose == "pptx":
         try:
-            require_approved_design_inputs(blockers)
+            require_approved_design_inputs(blockers, *scope)
         except (FileNotFoundError, json.JSONDecodeError) as error:
             blockers.append(f"PPTX design input manifest is unavailable or invalid: {error}")
     if purpose == "release":
-        require_release_ready(authority, blockers)
+        require_release_ready(authority, blockers, *scope)
 
-    return {
+    return with_blocker_records({
         "purpose": purpose,
         "status": "ready" if not blockers else "blocked",
         "output_dir": str(draft_path) if draft_path else None,
+        **({"lesson_key": context.lesson_key} if context else {}),
         "blockers": blockers,
-    }
+    }, scope=f"authority/{purpose}")
 
 
-def assert_ready(purpose: str, output_dir: Path | str | None = None) -> dict[str, Any]:
-    result = check(purpose, str(output_dir) if output_dir is not None else None)
+def assert_ready(purpose: str, output_dir: Path | str | None = None, lesson_key: str | None = None) -> dict[str, Any]:
+    result = check(purpose, str(output_dir) if output_dir is not None else None, **({"lesson_key": lesson_key} if lesson_key is not None else {}))
     if result["status"] != "ready":
         lines = "\n".join(f"- {item}" for item in result["blockers"])
         raise ProductionGateError(f"Production gate blocked ({purpose}):\n{lines}")
@@ -416,11 +486,12 @@ def main() -> int:
                 "status": "blocked",
                 "output_dir": args.output_dir,
                 "blockers": ["draft stage is only available for purpose=pptx"],
+                "blocker_records": blocker_records(["draft stage is only available for purpose=pptx"], scope="draft"),
             }
         else:
             result = check_lesson_ppt_draft(args.lesson_key, args.output_dir)
     else:
-        result = check(args.purpose, args.output_dir)
+        result = check(args.purpose, args.output_dir, lesson_key=args.lesson_key)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0 if result["status"] == "ready" else 1
 

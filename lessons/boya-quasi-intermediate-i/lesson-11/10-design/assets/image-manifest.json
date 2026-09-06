@@ -1,0 +1,328 @@
+{
+  "schema_version": "boya-lesson-image-manifest-v1",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-11",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_id": "lesson-11",
+  "lesson_title": "原来他们是关心我",
+  "generated_at": "2026-09-04",
+  "generation_mode": "raster_handpainted_textbook_illustration",
+  "source_scope": {
+    "canonical_source": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/canonical-source.json",
+    "source_status": "approved"
+  },
+  "style": {
+    "rendering": "hand-painted watercolor and colored-pencil raster with paper texture",
+    "linework": "delicate gray-blue ink",
+    "palette": "low-saturation pastel on warm off-white paper",
+    "image_format": "PNG",
+    "student_text_policy": "no readable Chinese, Latin text, numbers, logos, labels, captions, watermark, flags, or speech bubbles"
+  },
+  "approval_boundary": {
+    "generation_status": "complete_and_staged_qa_passed",
+    "authorization_status": "approved_by_adam_for_ppt_generation",
+    "can_enter_ppt": true,
+    "reason": "Adam approved source/audio; all 30 lesson-specific raster PNGs generated, staged, decoded, and dimension-checked."
+  },
+  "assets": [
+    {
+      "asset_id": "L11-cover",
+      "file": "lesson-11-cover-greeting.png",
+      "category": "cover",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "friends greeting warmly in a Chinese family home",
+      "sha256": "aadc89bde5e41671c0b079d12906a4e0f54ac1c70b532ab41d78738dfa686233"
+    },
+    {
+      "asset_id": "L11-context-01",
+      "file": "lesson-11-context-01.png",
+      "category": "short_text_context",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "people greeting in different ways: nodding, smiling, bowing and shaking hands",
+      "sha256": "b54253cb9ea3da5495a5b7bea45a88f8696f8577eb57d9ac4ec99a54bc896f54"
+    },
+    {
+      "asset_id": "L11-context-02",
+      "file": "lesson-11-context-02.png",
+      "category": "short_text_context",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "international student living with a Chinese host family and commuting to school",
+      "sha256": "89d179929e791f5221e99d880be9fb5dbe205dea6c967a92b725f8e99b644b78"
+    },
+    {
+      "asset_id": "L11-context-03",
+      "file": "lesson-11-context-03.png",
+      "category": "short_text_context",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "Chinese family caring for a young guest with warm clothes and food",
+      "sha256": "f7c61ef40bf3b1694aedfe277bc3987ce4b6c31f9dbd484e0a270d999aaac6ab"
+    },
+    {
+      "asset_id": "L11-V01",
+      "file": "l11-vocab-dedicated-01.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "打招呼",
+      "sha256": "bc22bb23899a4b0e24ec3d3231ff23c6771d7cb078737ba7a8498ea81b21d39b"
+    },
+    {
+      "asset_id": "L11-V02",
+      "file": "l11-vocab-dedicated-02.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "拥抱",
+      "sha256": "30df2342e913d4045a563b2d0350af10513de7d7e8307bcc73f53fcf59815794"
+    },
+    {
+      "asset_id": "L11-V03",
+      "file": "l11-vocab-dedicated-03.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "鞠躬",
+      "sha256": "3c2c0ab68c3ff2edc71f1b927b08721a81c2fe6ec012716b878b23e67766fc81"
+    },
+    {
+      "asset_id": "L11-V04",
+      "file": "l11-vocab-dedicated-04.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "握手",
+      "sha256": "30923d45e8840b3a11014c17d8a57243ed3599f4b8a20b4d247f12ee7f839dcf"
+    },
+    {
+      "asset_id": "L11-V05",
+      "file": "l11-vocab-dedicated-05.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "问候",
+      "sha256": "7fd6c672118d4fdfd7118da1dcc9bb504e2f31bd95e0b110e25f8a7bebea1d0b"
+    },
+    {
+      "asset_id": "L11-V06",
+      "file": "l11-vocab-dedicated-06.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "点头",
+      "sha256": "e854b59e74600c73274dd12d5ff0bd27919b9049e52da5b40ca3fca0a6f1eb4f"
+    },
+    {
+      "asset_id": "L11-V07",
+      "file": "l11-vocab-dedicated-07.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "俗语",
+      "sha256": "07cf489ba9d258252e1999440797bb4e0a36a2cda8176952b7a658caaa05ab2f"
+    },
+    {
+      "asset_id": "L11-V08",
+      "file": "l11-vocab-dedicated-08.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "管",
+      "sha256": "827011b9fdff4ae424cab1e6f6062b65145acbc55fb8e4c6259ee3b7611ae010"
+    },
+    {
+      "asset_id": "L11-V09",
+      "file": "l11-vocab-dedicated-09.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "离",
+      "sha256": "25ea03adf112a46f68ae8acb8cbcbee5bf17d5b7b9c7120ec2ef65769e637558"
+    },
+    {
+      "asset_id": "L11-V10",
+      "file": "l11-vocab-dedicated-10.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "交通",
+      "sha256": "0490db8e1987ed38db08135fc19225d12b9f43a8b8d7b0e32d19316bdaf7af93"
+    },
+    {
+      "asset_id": "L11-V11",
+      "file": "l11-vocab-dedicated-11.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "方便",
+      "sha256": "23313ed4153f15e62dc4edf34a9507c2eec88fe07cac9d3d3588dc47df4fdb28"
+    },
+    {
+      "asset_id": "L11-V12",
+      "file": "l11-vocab-dedicated-12.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "风和日丽",
+      "sha256": "14a6120122cec76e8d28a01318a69358b2d39cbaeaf2e9ce48d839143af58d29"
+    },
+    {
+      "asset_id": "L11-V13",
+      "file": "l11-vocab-dedicated-13.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "关心",
+      "sha256": "18ce433c5ba4b4f61aecf25133021cb32ac8c910ba7f8f802656cd03bad99372"
+    },
+    {
+      "asset_id": "L11-V14",
+      "file": "l11-vocab-dedicated-14.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "瘦",
+      "sha256": "45b879ada4f0a9f4f2f07b18364d80a7bf99e8039281200d2f00a78c71c281cb"
+    },
+    {
+      "asset_id": "L11-V15",
+      "file": "l11-vocab-dedicated-15.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "说实话",
+      "sha256": "64d00a7e81945ffa1722250c0c207091a45d6f32b01416470154707e913dc9d1"
+    },
+    {
+      "asset_id": "L11-V16",
+      "file": "l11-vocab-dedicated-16.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "亲戚",
+      "sha256": "59e121996411ac4fcdb6669525cf4cbc2924f720b2ebd23a915dd47d7e867fde"
+    },
+    {
+      "asset_id": "L11-V17",
+      "file": "l11-vocab-dedicated-17.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "串门",
+      "sha256": "9116f0016fbf330232ba5ddb232cad66d51acd7c9660adacc284bd0aadfc7c60"
+    },
+    {
+      "asset_id": "L11-V18",
+      "file": "l11-vocab-dedicated-18.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "冻",
+      "sha256": "efaed468ae445d536c0af567361a7367fd502aab1d6722f8dbe017e75d280edc"
+    },
+    {
+      "asset_id": "L11-V19",
+      "file": "l11-vocab-dedicated-19.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "急于",
+      "sha256": "c7f64a6e7760215bda310576a4812766393e1bd119948791d9fd79a944d78d1e"
+    },
+    {
+      "asset_id": "L11-V20",
+      "file": "l11-vocab-dedicated-20.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "脱",
+      "sha256": "2daf631315f8ff04dac908347b461819079e73156ae024427ed1bdecb70b712d"
+    },
+    {
+      "asset_id": "L11-V21",
+      "file": "l11-vocab-dedicated-21.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "过早",
+      "sha256": "f98ad0ba159b9f29fe5b188f10ab590d48832ce6a37b5af22826bce135d006ef"
+    },
+    {
+      "asset_id": "L11-V22",
+      "file": "l11-vocab-dedicated-22.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "厚",
+      "sha256": "2020fc08e2e14c3c5150bb2bf969228154808e6dc4b88d2e501403a768e5ff54"
+    },
+    {
+      "asset_id": "L11-V23",
+      "file": "l11-vocab-dedicated-23.png",
+      "category": "vocabulary",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "远亲",
+      "sha256": "42016a719aec3ec802b1a862028e1411f7f694131f9d281087f98882c4f46cce"
+    },
+    {
+      "asset_id": "L11-I01",
+      "file": "l11-idiom-dedicated-01.png",
+      "category": "idiom",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "春捂秋冻",
+      "sha256": "751536b967027dfc089cf7071c3bf6f943f329f058cc6b6289c87186843fc9da"
+    },
+    {
+      "asset_id": "L11-I02",
+      "file": "l11-idiom-dedicated-02.png",
+      "category": "idiom",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "饱吹饿唱",
+      "sha256": "009e2c6d48fa705ded1c53456bb9f5bfcddff67046c3667e4ed6b42a8faa5cde"
+    },
+    {
+      "asset_id": "L11-I03",
+      "file": "l11-idiom-dedicated-03.png",
+      "category": "idiom",
+      "status": "approved_for_ppt_draft",
+      "can_enter_ppt": true,
+      "source_kind": "generated_raster",
+      "scene": "远亲不如近邻",
+      "sha256": "826fa178e97616858b964bf7a1976f74d08fa93ffc6b216537f9ce501fb08f41"
+    }
+  ]
+}

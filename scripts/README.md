@@ -1,8 +1,22 @@
 # Project scripts
 
+Canonical workflow contract: `docs/workflow/canonical-workflow-contract.md`
+Optimization roadmap: `docs/workflow/WORKFLOW_V2_OPTIMIZATION_SPEC.md`
+
+Use `lesson_key`-scoped commands and the canonical contract for all new work. This README documents command compatibility and implementation details; it does not redefine lifecycle or gate semantics.
+
+`lessonctl.py` is the normal agent-facing coordinator for the currently implemented
+preflight, compile, image-probe, build staging, and QA adapters. Its JSON results
+preserve legacy `blockers` strings and also expose shared `blocker_records` with
+stable `code`, `message`, and `scope`; this is diagnostic output, not an approval
+or release authorization.
+
+`run_lesson_production.py` is retired compatibility evidence and must not be used.
+It is intentionally disabled because it predates the canonical context/gate/run-packet flow.
+
 ## Active context and authority paths
 
-All generic workflow scripts resolve the active offering, textbook and lesson from `project.config.json`. The stable cross-textbook identity is `lesson_key` in `course/lesson-registry.json`, formatted as `<textbook_id>:<lesson_id>`; a bare `lesson-01` is never enough to select a source or output directory. Status is read from the selected key's manifests rather than from this README.
+Migration is incremental: legacy generic scripts still read active-context fields from `project.config.json`; new lesson-scoped code resolves an explicit key through `lesson_context.py`. Do not remove legacy config keys until their consumers have migrated. The stable cross-textbook identity is `lesson_key` in `course/lesson-registry.json`, formatted as `<textbook_id>:<lesson_id>`; a bare `lesson-01` is never enough to select a source or output directory. Status is read from the selected key's manifests rather than from this README.
 
 《中级冲刺篇 I》第一课的既有 authority 是：
 
@@ -37,14 +51,68 @@ Validate the identity boundary before rebuilding the dashboard:
 python3 scripts/validate_lesson_identity.py
 ```
 
-Build a release only from authority files with:
+Plan a lesson-scoped release without writing anything:
 
 ```bash
-BOYA_RELEASE_ID=YYYY-MM-DD-description python3 scripts/build_release_package.py
+python3 scripts/build_release_package.py --plan \
+  --lesson-key boya-quasi-intermediate-i:lesson-10 \
+  --offering-id 2026-fall \
+  --release-id YYYY-MM-DD-description
 ```
 
-The release builder writes the active context's configured `40-release/` and does not
-regenerate teaching materials. The release id is required, path-safe, and must
+A read-only transaction/recovery inspection is available for crash or partial
+state. It requires an explicit lesson key and never cleans or repairs anything:
+
+```bash
+python3 scripts/build_release_package.py --inspect \
+  --lesson-key boya-quasi-intermediate-i:lesson-10 \
+  --offering-id 2026-fall \
+  --release-id YYYY-MM-DD-description
+```
+
+`status=clear` means no matching transaction/recovery artifacts were found.
+`status=review` means artifacts exist and require human inspection; `blocked`
+means the inspector found an unsafe or malformed state. All statuses return
+`write_performed=false`. Do not interpret `review` as authorization to delete,
+recover, or publish.
+
+After reviewing a `ready` plan and receiving explicit release authorization, the
+scoped writer requires the exact release id twice:
+
+```bash
+python3 scripts/build_release_package.py --execute \
+  --lesson-key boya-quasi-intermediate-i:lesson-10 \
+  --offering-id 2026-fall \
+  --release-id YYYY-MM-DD-description \
+  --confirm-release-id YYYY-MM-DD-description
+```
+
+It acquires an exclusive release-id transaction reservation, stages the package,
+ZIP, and metadata beneath the selected lesson's release root, and verifies hashes,
+byte counts, portable/collision-safe paths, CRC, mappings, and JSON. Authority
+sources and the authority-manifest hash are rechecked immediately before publish.
+The final package and ZIP are read back before metadata pointers move; afterward,
+the scoped authority verifier must pass before success is reported. A competing
+invocation that does not own the reservation cannot modify or clean it. A failed
+commit rolls back files created by that transaction. If rollback is incomplete,
+the transaction marker remains and all later plans for that release id are blocked
+pending human review. Parent-directory `fsync` is attempted where supported.
+Process or machine crashes cannot be made fully atomic across directory, ZIP, and
+two metadata files; a remaining transaction marker, pending metadata artifact, or
+partial target must never be auto-deleted.
+
+The legacy active-context writer is separately gated and requires both an
+explicit legacy flag and the repeated release id:
+
+```bash
+python3 scripts/build_release_package.py --legacy-active-build \
+  --release-id YYYY-MM-DD-description \
+  --confirm-release-id YYYY-MM-DD-description
+```
+
+The legacy builder writes the active context's configured `40-release/`; the
+scoped writer resolves the selected lesson instead. Neither regenerates teaching
+materials. The release id is required, path-safe, and must
 not already exist. Optional authority `release_materials` entries are copied
 to their declared release paths (for example, an approved worksheet, video, or
 Blooket import); the builder still refuses to publish until audio playback and
@@ -105,6 +173,19 @@ python3 scripts/record_lesson_gate.py --lesson-key boya-intermediate-i:lesson-01
 python3 scripts/record_lesson_gate.py --lesson-key boya-intermediate-i:lesson-01 --gate rehearsal --approved-by Adam --approved-at YYYY-MM-DD --evidence lessons/boya-intermediate-i/lesson-01/30-qa/current/rehearsal-v1/rehearsal-notes.md --confirm
 ```
 
+## Read-only authority verification (scoped)
+
+```bash
+python3 scripts/verify_lesson_authority.py --lesson-key boya-quasi-intermediate-i:lesson-10 --offering-id 2026-fall
+```
+
+This audits the selected lesson's authority and existing release without writing
+materials. Omit `--lesson-key` only for legacy active-context compatibility.
+`status=passed` and exit 0 mean integrity checks passed; inspect `delivery_status`
+and `delivery_blockers` separately. Pending manual acceptance, playback or rehearsal
+never becomes permission to deliver. Failed repository checks do not prevent the
+separate read-only finalized-PPTX intake workflow.
+
 ## Agent control loop
 
 For a non-trivial, multi-step task, create a local run packet before execution:
@@ -123,6 +204,36 @@ python3 scripts/agent_loop.py init \
 python3 scripts/agent_loop.py preflight --run-id lesson-02-online-draft
 ```
 
+Attach a read-only plan/inspect result to the run packet without changing its
+phase or granting authority:
+
+```bash
+python3 scripts/agent_loop.py check \
+  --run-id lesson-02-release-review \
+  --result-file .agent/checks/lesson-02-plan.json
+```
+
+The command also verifies that the returned `lesson_key`, `offering_id`,
+`release_id`, and command mode exactly match the requested arguments before any
+result artifact is written. Cross-lesson or cross-offering results are rejected.
+
+The result file is kept as a hash-pinned `latest_external_check` record with
+`blocker_records`. It must be inside the project, and tampering invalidates run
+state. This records evidence only; it does not approve, promote, recover, or
+publish anything.
+
+For the scoped release utility, `release-check` runs only the read-only modes and
+attaches the result automatically. `--mode execute` is not accepted:
+
+```bash
+python3 scripts/agent_loop.py release-check \
+  --run-id lesson-02-release-review \
+  --mode plan \
+  --lesson-key boya-quasi-intermediate-i:lesson-02 \
+  --offering-id 2026-fall \
+  --release-id review-2026-09-05
+```
+
 After one bounded execution, record the attempt and its verified result:
 
 ```bash
@@ -139,9 +250,11 @@ python3 scripts/validate_workflow_state.py --run-id lesson-02-online-draft
 ```
 
 Run packets stay under ignored `.agent/runs/<run-id>/`. They track agent
-execution, evidence hashes, retry budget and stop reasons only. They cannot
-approve lesson content, promote a draft, pass manual playback or rehearsal, or
-replace any lesson manifest.
+execution, evidence hashes, retry budget and stop reasons only. Preflight now also
+stores backward-compatible `blocker_records` with stable `code`, `message`, and
+`scope` fields; legacy `blockers` strings remain for compatibility. These records
+classify gate and result blockers, but do not approve lesson content, promote a
+draft, pass manual playback or rehearsal, or replace any lesson manifest.
 
 ## 《中级冲刺篇 I》现有生成器状态
 

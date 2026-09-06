@@ -22,6 +22,14 @@
 
 若舊輸出與來源資料或使用者最新決定衝突，舊輸出不得作為規格。
 
+### Finalized PPTX 優先規則（Adam 確認，2026-09-04）
+
+- Desktop 教材根目錄 `/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材` 中 Adam 已手動完成並確認的 finalized PPTX，是下一套教材 workflow 的最高優先級操作真值。
+- 當任務是以既有 finalized PPTX 建立新版 lesson spec、版式基線、內容快照或 QA 輸入時，直接讀取 PPTX package 內的 slide order、可見文字、speaker notes、media、版面尺寸與 SHA-256；不得被舊的 source approval、storyboard、content contract、repo draft、20-approved mirror 或 historical QA gate 阻擋或覆蓋。
+- finalized PPTX 的內容與版式優先於舊 generator、舊 metadata 和舊 project gate；若與它們衝突，記錄為 legacy drift，不回頭修改 finalized PPTX 以遷就舊規則。
+- 此優先規則只授權「把 finalized PPTX 當作新流程輸入與真值」；不代表自動修改 `00-source/`、`20-approved/`、`30-qa/`、`40-release/` 或把新的未經 Adam 確認內容標成 finalized。
+- `scripts/lessonctl.py` 預設使用 `--source finalized-pptx`；只有明確指定 `--source repo` 時，才執行舊的 repo source／approval gates。
+
 ## 課次身份（跨教材必讀）
 
 課號只在單一本教材內有效。所有跨檔案、dashboard、QA 與生成器引用都必須以
@@ -200,6 +208,16 @@
 - 姓氏活動材料要按教材練習分工：姓名分類使用課本給出的姓名和三類名稱；歷史人物介紹單獨放在拓展練習；單姓／復姓練習保留課本名單，但改成讀給同學聽、同學記錄和回答是否認識相關姓氏的互動任務。不同目標不能混在同一張卡裡。
 - 學生已修改的「用三到五句話回答問題，並使用畫線詞語」詞語、題目和順序不得由生成器回填舊版本；生成前必須把目前核准文字寫回結構化規格並做差異檢查。
 - 舊《中級衝刺篇 I》第一課的 PPT 入口是 `scripts/build_lesson_01_pptx.js`，實作位於 `scripts/build_lesson_01_pptx_native.js`；這些入口只能輸出該教材的 draft，不得覆蓋 `lessons/boya-intermediate-i/lesson-01/20-approved/`。prototype 使用 `scripts/build_lesson_01_prototype.js`。任何新教材生成器都必須先由 `lesson_key` 選定教材，不能沿用這些舊入口猜測課次。
+
+## AI 影像與 PPTX 原子化生產流程（Adam 確認，2026-09-03）
+
+- Adam 明確要求：先取得該課批准，才啟動 AI 生產；批准後由 2–3 個獨立 subagents 平行生成該課全部圖片，不能用 vector、SVG、Pillow shape renderer、placeholder、stock substitute 或其他課次圖片替代。
+- 每個 worker 只能寫入 `.agent/runs/<run-id>/staging/worker-N/`；worker 不得寫入 `20-approved/`、`30-qa/`、`40-release/` 或正式 lesson assets。
+- 所有 worker 必須完成並回報 `status=success` 與 `ai_visual_qa=passed`；任何一個 worker 失敗、image provider 不可用、圖片缺失或視覺 QA 失敗，整個 run 立即 blocked，不建立或交付 PPTX。
+- coordinator 只有在全部圖片存在、PNG 可解碼、尺寸通過、AI visual QA 通過後，才可原子化 promotion 到 `10-design/assets/`、更新 manifest、設定 `can_enter_ppt=true`，並啟動 PPTX builder。
+- PPTX builder 必須把 manifest 的 `can_enter_ppt` 當硬 gate；副檔名是 `.png` 不代表圖片合規。候選、review-pending 或 provider 不明的圖片不得進入 PPTX。
+- 兩份 PPTX 必須全部 build 成功，並通過 ZIP、圖片解碼、頁數、16:9、字級、無空白頁、文字／邊界與 PowerPoint/PDF 視覺 QA 後，run 才能標記 `complete` 並交付。只完成一份、任何 QA 未完成或任何 blocker 存在，都不得給 Adam 半成品。
+- 正式 agent-facing 入口是 `scripts/lessonctl.py`，現階段只提供 preflight、compile、image-probe、build（finalized 複製到 staging）及 qa；它尚未接管圖片生產、promotion 或 release。`scripts/run_lesson_production.py` 已退役，不得用於新的生產。後續 coordinator migration 以 `docs/workflow/canonical-workflow-contract.md` 為準；本節既有 approval、圖片及 AI visual QA 要求仍然有效。
 
 ## 不可跳過的生產 gate
 

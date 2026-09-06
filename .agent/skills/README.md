@@ -1,6 +1,11 @@
 
 # Project-local portable skills
 
+Canonical workflow contract: `docs/workflow/canonical-workflow-contract.md`
+Optimization roadmap: `docs/workflow/WORKFLOW_V2_OPTIMIZATION_SPEC.md`
+
+Use the canonical contract for lifecycle, gates, artifact states, identity, and safety. Use only the task-relevant skill below for domain/artifact rules; do not load the full PPTX production bundle for workflow, requirements, source-inventory, audio, or classroom-tool tasks.
+
 Project-specific skills are the durable production rules for this repository. Read the matching skill before changing courseware files.
 
 ## Required skills

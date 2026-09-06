@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-activity-package-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-09",
+  "status": "draft_not_built",
+  "planned_materials": [
+    { "name": "lesson-09-预习卡.docx", "purpose": "记录 P77—P86 预习证据和自己的饮食问题" },
+    { "name": "lesson-09-饮食比较记录卡.docx", "purpose": "记录同伴饮食信息并比较三篇短文" },
+    { "name": "lesson-09-口语反馈表.docx", "purpose": "记录信息完整度、词语使用和可理解度" }
+  ],
+  "source_of_truth": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/teaching-design/lesson-09-pbi-design.md",
+  "note": "本轮先完成 PPTX draft 所需的结构化输入；配套 DOCX 仍未批准。"
+}

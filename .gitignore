@@ -51,6 +51,22 @@ lessons/boya-intermediate-i/lesson-01/90-archive/approval-evidence-2026-08-27/so
 .cache/
 .tmp/
 tmp/
+
+# Local-only data and generated binary deliverables
+/classroom-tools/private/
+/.frontend-slides/
+**/.vercel/
+*.pptx
+*.pdf
+*.docx
+*.png
+*.jpg
+*.jpeg
+*.zip
+*.mp3
+*.wav
+*.m4a
+
 # Root-level render and QA scratch artifacts
 /.tmp*
 /.l*

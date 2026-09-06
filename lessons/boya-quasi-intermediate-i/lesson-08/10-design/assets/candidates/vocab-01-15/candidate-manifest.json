@@ -1,0 +1,177 @@
+{
+  "schema_version": "boya-vocab-image-candidate-manifest-v1",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-08",
+  "offering_id": "2026-fall",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_id": "lesson-08",
+  "lesson_title": "孙子和《孙子兵法》",
+  "generated_at": "2026-09-03",
+  "generation_tool": "imagegen skill",
+  "style": {
+    "visual_direction": "educational textbook illustration",
+    "linework": "fine blue-gray",
+    "palette": "low-saturation pastel",
+    "background": "pure white",
+    "image_format": "PNG",
+    "content_restrictions": [
+      "no readable text",
+      "no numbers",
+      "no logos",
+      "no flags",
+      "no watermarks"
+    ]
+  },
+  "status": "pending_review",
+  "candidates": [
+    {
+      "word": "士兵",
+      "file": "vocab-01-shibing.png",
+      "prompt": "Create one standalone square PNG educational textbook illustration for the Chinese vocabulary word “士兵” (soldier). Show a single calm historical soldier in simple ancient East Asian military clothing, standing upright with a spear held safely downward, clearly identifiable as a soldier but not aggressive. Fine blue-gray linework, low-saturation pastel colors, pure white background with generous clean space, gentle classroom textbook illustration, no gore. Absolutely no readable text, Chinese characters, Latin letters, numbers, logos, emblems, flags, watermarks, captions, labels, speech bubbles, or decorative typography. The image must be square and contain only the illustration.",
+      "dimensions": "1254x1254",
+      "width_px": 1254,
+      "height_px": 1254,
+      "sha256": "c11761c091cb9f409556665d082ad61f1a73536e47d631ee106d8b97e7398ca5",
+      "status": "pending_review"
+    },
+    {
+      "word": "打仗",
+      "file": "vocab-02-dazhang.png",
+      "prompt": "Create one standalone square PNG educational textbook illustration for the Chinese vocabulary word “打仗” (fight a war / battle). Show two small opposing groups of ancient East Asian soldiers facing each other across an open field in a non-graphic historical battle scene, a few raised shields and lowered spears, clear action but no injury or gore. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous clean space, gentle classroom textbook illustration. Absolutely no readable text, Chinese characters, Latin letters, numbers, logos, emblems, flags, watermarks, captions, labels, speech bubbles, or decorative typography. The image must be square and contain only the illustration.",
+      "dimensions": "1254x1254",
+      "width_px": 1254,
+      "height_px": 1254,
+      "sha256": "1cb8fa411bec6eb6904bc79f551f21e2b78fde3b95711d26a573d294ee64228c",
+      "status": "pending_review"
+    },
+    {
+      "word": "训练",
+      "file": "vocab-03-xunlian.png",
+      "prompt": "Create one standalone square PNG educational textbook illustration for the Chinese vocabulary word “训练” (training). Show a calm ancient East Asian military drill: several soldiers practicing synchronized spear movements under an instructor's guidance in an open training yard, clearly rehearsal rather than battle. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous clean space, gentle classroom textbook illustration. Absolutely no readable text, Chinese characters, Latin letters, numbers, logos, emblems, flags, watermarks, captions, labels, speech bubbles, or decorative typography. The image must be square and contain only the illustration.",
+      "dimensions": "1254x1254",
+      "width_px": 1254,
+      "height_px": 1254,
+      "sha256": "ebb6c7ab3006f6f000d4eb6eb6f2ba4cc7174a09844ee97876f8edcb0996c623",
+      "status": "pending_review"
+    },
+    {
+      "word": "进攻",
+      "file": "vocab-04-jingong.png",
+      "prompt": "Create one standalone square PNG educational textbook illustration for the Chinese vocabulary word “进攻” (attack / advance to attack). Show a small ancient East Asian troop moving forward in a coordinated advance toward a distant simple wooden defensive gate, with one front soldier stepping ahead and shields raised, clear directional action but no impact, injury, gore, or destruction. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous clean space, gentle classroom textbook illustration. Absolutely no readable text, Chinese characters, Latin letters, numbers, logos, emblems, flags, watermarks, captions, labels, speech bubbles, or decorative typography. The image must be square and contain only the illustration.",
+      "dimensions": "1254x1254",
+      "width_px": 1254,
+      "height_px": 1254,
+      "sha256": "811a6bed27693952de27b26feba49581d358607636a7fb30e5fb462e714cfc29",
+      "status": "pending_review"
+    },
+    {
+      "word": "军事家",
+      "file": "vocab-05-junshijia.png",
+      "prompt": "Create one standalone square PNG educational textbook illustration for the Chinese vocabulary word “军事家” (military strategist). Show a thoughtful ancient East Asian strategist in simple historical clothing studying a small terrain model with colored wooden pieces and plain stones, planning calmly at a low table. The scene should clearly communicate strategic military thinking, not combat. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous clean space, gentle classroom textbook illustration. Absolutely no readable text, Chinese characters, Latin letters, numbers, logos, emblems, flags, watermarks, captions, labels, speech bubbles, or decorative typography; the terrain model must have no map writing or symbols. The image must be square and contain only the illustration.",
+      "dimensions": "1254x1254",
+      "width_px": 1254,
+      "height_px": 1254,
+      "sha256": "de41a90d7457005e8ec4aaa8813f858acde0f7d637316ec6bf3b45792331de2a",
+      "status": "pending_review"
+    },
+    {
+      "word": "记载",
+      "file": "vocab-06-jizai.png",
+      "prompt": "Create one standalone square PNG educational textbook illustration for the Chinese vocabulary word “记载” (to record / document). Show an ancient East Asian historian or scribe carefully documenting an event on blank bamboo slips with a brush, with a few neatly stacked slips beside them; the act of recording must be obvious, but all surfaces must be blank or contain only non-readable abstract texture, no writing. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous clean space, gentle classroom textbook illustration. Absolutely no readable text, Chinese characters, Latin letters, numbers, logos, emblems, flags, watermarks, captions, labels, speech bubbles, or decorative typography. The image must be square and contain only the illustration.",
+      "dimensions": "1254x1254",
+      "width_px": 1254,
+      "height_px": 1254,
+      "sha256": "b9217fe455b6eb7eb4d3837bd11304e578e5fe40eabc12a9673b42e69be170c8",
+      "status": "pending_review"
+    },
+    {
+      "word": "将军",
+      "file": "vocab-07-jiangjun.png",
+      "prompt": "Create one standalone square PNG educational textbook illustration for the Chinese vocabulary word “将军” (general / commander). Show a composed ancient East Asian military commander in distinctive but plain historical armor standing before a small formation of soldiers, giving a calm hand signal. Make the commander visually prominent and clearly a leader, with no aggressive attack. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous clean space, gentle classroom textbook illustration. Absolutely no readable text, Chinese characters, Latin letters, numbers, logos, emblems, flags, watermarks, captions, labels, speech bubbles, or decorative typography. The image must be square and contain only the illustration.",
+      "dimensions": "1254x1254",
+      "width_px": 1254,
+      "height_px": 1254,
+      "sha256": "d970a1cc4b36b1e34b873e839a9c87260963b81f81865394b2f2b0d3ade4134c",
+      "status": "pending_review"
+    },
+    {
+      "word": "权力",
+      "file": "vocab-08-quanli.png",
+      "prompt": "Create one standalone square PNG educational textbook illustration for the Chinese vocabulary word “权力” (power / authority). Show a calm ancient East Asian ruler or commander seated slightly higher while two aides stand respectfully below and listen, making social authority and decision-making clear through posture and composition, not through symbols. No throne ornament with emblems. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous clean space, gentle classroom textbook illustration. Absolutely no readable text, Chinese characters, Latin letters, numbers, logos, emblems, flags, watermarks, captions, labels, speech bubbles, or decorative typography. The image must be square and contain only the illustration.",
+      "dimensions": "1254x1254",
+      "width_px": 1254,
+      "height_px": 1254,
+      "sha256": "3f24ad28233425591026ec967edc703081af5971b9a42b8d844874bc284a85b2",
+      "status": "pending_review"
+    },
+    {
+      "word": "策略",
+      "file": "vocab-09-celue.png",
+      "prompt": "Create one standalone square PNG educational textbook illustration for the Chinese vocabulary word “策略” (strategy). Show an ancient East Asian strategist arranging a few colored wooden tokens on a plain terrain board while studying the opposing sides from a thoughtful distance; the visual should clearly communicate planning and choosing a strategy. The board must have only simple terrain shapes and no writing, letters, numbers, arrows, or symbols. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous clean space, gentle classroom textbook illustration. Absolutely no readable text, Chinese characters, Latin letters, numbers, logos, emblems, flags, watermarks, captions, labels, speech bubbles, or decorative typography. The image must be square and contain only the illustration.",
+      "dimensions": "1254x1254",
+      "width_px": 1254,
+      "height_px": 1254,
+      "sha256": "04f7a6b95868360ce16cb5a00d5f93b8aee201fd6e96e7dbbbe4c2bc28727609",
+      "status": "pending_review"
+    },
+    {
+      "word": "打败仗",
+      "file": "vocab-10-daibaizhang.png",
+      "prompt": "Create one standalone square PNG educational textbook illustration for the Chinese vocabulary word “打败仗” (lose a battle). Show a small ancient East Asian troop retreating after a non-graphic defeat: tired soldiers walking away with lowered heads, one shield lowered and a dropped spear on the ground, no injuries, no gore, no flags. The scene must clearly communicate losing a battle. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous clean space, gentle classroom textbook illustration. Absolutely no readable text, Chinese characters, Latin letters, numbers, logos, emblems, flags, watermarks, captions, labels, speech bubbles, or decorative typography. The image must be square and contain only the illustration.",
+      "dimensions": "1254x1254",
+      "width_px": 1254,
+      "height_px": 1254,
+      "sha256": "7e37642cba1d3925569771135cc559411616b01f893a9f37b22d5ed77b3246ad",
+      "status": "pending_review"
+    },
+    {
+      "word": "结束",
+      "file": "vocab-11-jieshu.png",
+      "prompt": "Create one standalone square PNG educational textbook illustration for the Chinese vocabulary word “结束” (finish / end). Show a peaceful ancient battlefield after a conflict has ended: two groups have lowered and neatly placed their weapons on the ground and are calmly walking away, with clear quiet open space and soft evening light. No fighting, no injury, no gore. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous clean space, gentle classroom textbook illustration. Absolutely no readable text, Chinese characters, Latin letters, numbers, logos, emblems, flags, watermarks, captions, labels, speech bubbles, or decorative typography. The image must be square and contain only the illustration.",
+      "dimensions": "1254x1254",
+      "width_px": 1254,
+      "height_px": 1254,
+      "sha256": "fe1ffd81761fc7de0172e0cf5264e6fe112cd125a85c3df48c04988488795c8e",
+      "status": "pending_review"
+    },
+    {
+      "word": "开设",
+      "file": "vocab-12-kaishe.png",
+      "prompt": "Create one standalone square PNG educational textbook illustration for the Chinese vocabulary word “开设” (to offer or establish a course). Show a teacher opening a new classroom course: welcoming students into a simple lecture room, with a blank easel and neatly arranged desks, the teacher gesturing invitingly toward the class. Make the act of offering a course clear without any writing. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous clean space, gentle classroom textbook illustration. Absolutely no readable text, Chinese characters, Latin letters, numbers, logos, emblems, flags, watermarks, captions, labels, speech bubbles, or decorative typography. The easel and notebooks must be blank. The image must be square and contain only the illustration.",
+      "dimensions": "1254x1254",
+      "width_px": 1254,
+      "height_px": 1254,
+      "sha256": "c4a68f8561f41dbf0b056ef08886177f287209a5693cbf2b8db526e61535f12d",
+      "status": "pending_review"
+    },
+    {
+      "word": "带兵打仗",
+      "file": "vocab-13-daibingdazhang.png",
+      "prompt": "Create one standalone square PNG educational textbook illustration for the Chinese vocabulary phrase “带兵打仗” (command troops in battle). Show a clearly leading ancient East Asian commander at the front, gesturing forward while an organized group of soldiers follows behind in formation across a field; communicate command and troop leadership, not a close-up attack. No flags, no gore, no injury. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous clean space, gentle classroom textbook illustration. Absolutely no readable text, Chinese characters, Latin letters, numbers, logos, emblems, flags, watermarks, captions, labels, speech bubbles, or decorative typography. The image must be square and contain only the illustration.",
+      "dimensions": "1254x1254",
+      "width_px": 1254,
+      "height_px": 1254,
+      "sha256": "145494191693cb8f9cfafb87b6c905a735292e247f48f20218fbeb95845f8294",
+      "status": "pending_review"
+    },
+    {
+      "word": "严明",
+      "file": "vocab-14-yanming.png",
+      "prompt": "Create one standalone square PNG educational textbook illustration for the Chinese vocabulary word “严明” (strict and impartial). Show a calm, disciplined ancient East Asian commander standing between two soldiers and inspecting them with the same neutral standard, both soldiers standing equally straight and attentive; make fairness and strict discipline clear without punishment or violence. Balanced, orderly composition. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous clean space, gentle classroom textbook illustration. Absolutely no readable text, Chinese characters, Latin letters, numbers, logos, emblems, flags, watermarks, captions, labels, speech bubbles, or decorative typography. The image must be square and contain only the illustration.",
+      "dimensions": "1254x1254",
+      "width_px": 1254,
+      "height_px": 1254,
+      "sha256": "87708f9291c44ecfa3d5df9b4db044478aa35e414cdc12573ca878592e812f22",
+      "status": "pending_review"
+    },
+    {
+      "word": "根据",
+      "file": "vocab-15-genju.png",
+      "prompt": "Create one standalone square PNG educational textbook illustration for the Chinese vocabulary word “根据” (according to / based on). Show an ancient East Asian commander carefully consulting a plain, blank reference scroll beside a small terrain model, then pointing to the terrain while making a decision with an aide; the visual must clearly communicate making a decision based on evidence. The scroll must have no writing, symbols, letters, or numbers. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous clean space, gentle classroom textbook illustration. Absolutely no readable text, Chinese characters, Latin letters, numbers, logos, emblems, flags, watermarks, captions, labels, speech bubbles, or decorative typography. The image must be square and contain only the illustration.",
+      "dimensions": "1254x1254",
+      "width_px": 1254,
+      "height_px": 1254,
+      "sha256": "53248fdc05c6c6bbcbfe7767a0dc2e94db85b8971cdd3befc21ce8b6480446e2",
+      "status": "pending_review"
+    }
+  ]
+}

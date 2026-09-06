@@ -3,6 +3,10 @@
   "contract_id": "boya-quasi-intermediate-i-face-to-face-v2",
   "scope": "boya-quasi-intermediate-i:lesson-01..lesson-12",
   "student_facing_language": "简体中文；不含在线词语页的越南文意思层",
+  "lesson_specific_routing_fields": {
+    "sentence_patterns": "face_expression_routing",
+    "optional_section_follow_up": "face_section_follow_up_questions"
+  },
   "visual": {
     "slide_background": "#FFFFFF",
     "local_warm_white": "#FFFDF9",
@@ -39,11 +43,11 @@
     "goals_item_pt": 24,
     "vocabulary_headword_pt": 42,
     "vocabulary_headword_long_pt": 34,
-    "vocabulary_pos_pt": 22,
-    "vocabulary_meaning_pt": 22,
-    "vocabulary_usage_pt": 22,
-    "vocabulary_optional_pt": 23,
-    "vocabulary_example_pt": 22,
+    "vocabulary_pos_pt": 24,
+    "vocabulary_meaning_pt": 24,
+    "vocabulary_usage_pt": 24,
+    "vocabulary_optional_pt": 24,
+    "vocabulary_example_pt": 24,
     "pinyin_pt": 24,
     "route_step_pt": 23,
     "record_subtitle_pt": 25,
@@ -52,33 +56,34 @@
   "base_sequence": [
     "封面",
     "学习流程",
-    "Can-Do",
-    "暖身"
+    "学习目标",
+    "先想一想",
+    "听力练习",
+    "前三个听力（n-1、n-2、n-3）",
+    "请你说说（简单的问题练习口语）"
   ],
   "short_text_unit_sequence": [
     "短文（N）",
-    "听力练习",
-    "听力题目",
-    "简单题目问答",
+    "短文（N）听力练习（通常音频 n-4）",
     "口语练习",
-    "介绍本课人物或短文",
-    "你说的跟短文（N）哪里不一样？",
-    "该短文的句式练习",
-    "该短文的口语输出"
+    "6—8句介绍刚刚的内容",
+    "你说的和短文（N）哪里不一样？",
+    "句式练习",
+    "针对该 section 的小问答（可选）"
   ],
-  "first_unit_rule": "每课先完成本课规定的前置听力与热身内容，再进入短文（一）；进入某个短文 divider 后，只放该短文的听力、题目、简单问答、口语、介绍、比较、对应句式与口语输出。",
+  "first_unit_rule": "每课先完成封面、学习流程、学习目标、先想一想、前三个听力和课前请你说说；再进入短文（一）。",
   "divider_position_policy": "短文（一）divider 的页码由本课实际前置内容数量决定，不把第 5 张或任何固定页码当成全册规则；只有 lesson_specific_first_divider 中登记的第一课特例保留固定位置。",
   "section_boundary_policy": "每个短文 section 从对应 divider 开始，到下一个短文 divider 或综合表达 divider 前结束；不得把某一短文的题目、口语、比较或句式移到另一个短文 section。",
   "lesson_specific_first_divider": {
     "boya-quasi-intermediate-i:lesson-01": 5
   },
-  "pre_short_text_foundation": "词语、词语理解、句子、小对话和全课主题问答等没有归属于某篇短文的内容，可以放在短文（一）divider 之前；第 1 课已明确要求短文（一）divider 保留在第 5 张。",
-  "shared_expression_rule": "有按短文分组的句式时紧跟对应短文；只有跨短文共享分组时，全部短文结束后再放一个句式练习单元。",
+  "pre_short_text_foundation": "短文（一）之前依序放置先想一想、听力练习、各课前三个听力（n-1、n-2、n-3）和请你说说；不把课次固定页码当成全册规则。",
+  "shared_expression_rule": "句式练习必须紧跟相关短文的比较任务，并放在该 section 的可选小问答之前；跨短文共享句式只有在 content contract 明确批准时才能另行安排，不得猜测。",
   "comprehensive_sequence": [
     "综合表达",
-    "综合信息整理",
+    "全文介绍（课本填表）",
     "根据课本，回答问题",
-    "个人口语输出"
+    "请你说说（介绍学生个人信息）"
   ],
   "missing_deck_policy": "只验证实际存在的 draft；缺少实体课 PPTX 或生产 gate 输入时报告 blocker，不用其他课模板冒充。"
 }

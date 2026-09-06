@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "manifest_type": "lesson-authority",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-07",
+  "offering_id": "2026-fall",
+  "lesson_id": "lesson-07",
+  "lesson_number": 7,
+  "lesson_title": "小张热爱登山",
+  "language": "简体中文",
+  "font_policy": {"cjk": "KaiTi", "latin": "Times New Roman"},
+  "authority_status": "final_confirmed",
+  "content_status": "finalized_by_adam_2026-09-03",
+  "delivery_status": "pptx_only_handoff_pending_full_package",
+  "authority_rule": "20-approved 中的批准 PPTX 原样锁定；完整交付仍须补齐来源、教师手册、配套材料、QA、rehearsal 与 release。",
+  "approval_record": "lessons/boya-quasi-intermediate-i/lesson-07/20-approved/lesson-07-pptx-approval-record.md",
+  "source_package": {"path": "lessons/boya-quasi-intermediate-i/lesson-07/00-source", "status": "active_source_pending_review"},
+  "scope": {"approval_scope": "two_current_pptx_only", "printed_pages": "59–67", "online_slide_count": 69, "face_to_face_slide_count": 59},
+  "authority": {
+    "pptx": {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-07/20-approved/pptx/lesson-07-实体课.pptx",
+      "online_path": "lessons/boya-quasi-intermediate-i/lesson-07/20-approved/pptx/lesson-07-在线预习.pptx",
+      "status": "final_confirmed",
+      "approval_scope": "adam_confirmed_finalized_2026-09-03",
+      "version": "finalized_2026-09-03",
+      "slide_count": 59,
+      "online_slide_count": 69,
+      "sha256": "5abcd6b624a26a8149ed9573bf527086df35a6688cb8e08569edfdf17a07c382",
+      "bytes": 22669029,
+      "online_sha256": "8ac3348585b28a4b86fc4c9e86450244dc15d52d32487a1a5c487848e20e2baa",
+      "online_bytes": 84698947,
+      "face_to_face_path": "lessons/boya-quasi-intermediate-i/lesson-07/20-approved/pptx/lesson-07-实体课.pptx",
+      "face_to_face_sha256": "5abcd6b624a26a8149ed9573bf527086df35a6688cb8e08569edfdf17a07c382",
+      "face_to_face_bytes": 22669029,
+      "face_to_face_slide_count": 59
+    },
+    "teacher_manual": {"path": null, "status": "missing", "required": true},
+    "activities": {"path": "lessons/boya-quasi-intermediate-i/lesson-07/20-approved/activities", "status": "missing", "file_count": 0, "required": true, "format": "DOCX only"}
+  },
+  "qa": {"status": "pptx_static_qa_pending_manual_acceptance", "current_report": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/pptx-draft/online/qa-report-2026-09-02.md", "rehearsal": {"status": "pending_manual_acceptance", "audio_playback": "pending_manual_acceptance"}},
+  "release": {"status": "pending_manual_acceptance", "delivery_status": "blocked", "latest_release_path": null, "latest_zip_path": null},
+  "files": [
+    {"path": "lessons/boya-quasi-intermediate-i/lesson-07/20-approved/lesson-07-pptx-approval-record.md", "status": "approval_record", "sha256": "28c99cf1456b2369b864d105613edf8f4c333731865ff5134c63c96f20de62e8", "bytes": 358},
+    {"path": "lessons/boya-quasi-intermediate-i/lesson-07/20-approved/pptx/lesson-07-在线预习.pptx", "status": "final_confirmed", "sha256": "8ac3348585b28a4b86fc4c9e86450244dc15d52d32487a1a5c487848e20e2baa", "bytes": 84698947},
+    {"path": "lessons/boya-quasi-intermediate-i/lesson-07/20-approved/pptx/lesson-07-实体课.pptx", "status": "final_confirmed", "sha256": "5abcd6b624a26a8149ed9573bf527086df35a6688cb8e08569edfdf17a07c382", "bytes": 22669029}
+  ]
+}

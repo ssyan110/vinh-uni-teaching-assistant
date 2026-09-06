@@ -5,12 +5,38 @@ from __future__ import annotations
 
 import hashlib
 import re
+import unicodedata
 from pathlib import Path, PurePosixPath
 from typing import Any
 
 
 IGNORED_FILE_NAMES = {".DS_Store"}
 SHA256_PATTERN = re.compile(r"[0-9a-f]{64}")
+WINDOWS_RESERVED_NAMES = {
+    "con", "prn", "aux", "nul", "clock$",
+    *(f"com{number}" for number in range(1, 10)),
+    *(f"lpt{number}" for number in range(1, 10)),
+}
+
+
+def portable_release_path_key(value: str) -> tuple[str | None, str | None]:
+    """Return a portable collision key, or an error for unsafe release paths."""
+    if not value or "\\" in value or any(ord(char) < 32 or ord(char) == 127 for char in value):
+        return None, "contains a backslash or control character"
+    path = PurePosixPath(value)
+    if path.is_absolute() or any(part in {"", ".", ".."} for part in path.parts):
+        return None, "is not a canonical relative POSIX path"
+    keys: list[str] = []
+    for part in path.parts:
+        if part != unicodedata.normalize("NFC", part):
+            return None, "is not NFC-normalized"
+        if part.endswith((".", " ")) or ":" in part:
+            return None, "contains a non-portable component"
+        stem = part.split(".", 1)[0].casefold()
+        if stem in WINDOWS_RESERVED_NAMES:
+            return None, f"uses reserved component {part!r}"
+        keys.append(part.casefold())
+    return "/".join(keys), None
 
 
 def is_ignored_file(path: Path) -> bool:
@@ -398,4 +424,17 @@ def expected_release_entries(manifest: dict[str, Any]) -> tuple[list[dict[str, A
     release_paths = [entry["release_path"] for entry in entries]
     if len(release_paths) != len(set(release_paths)):
         failures.append("release mapping contains duplicate destination paths")
+    portable: dict[str, str] = {}
+    for release_path in release_paths:
+        key, error = portable_release_path_key(release_path)
+        if error:
+            failures.append(f"release mapping has unsafe portable path {release_path!r}: {error}")
+            continue
+        assert key is not None
+        if key in portable and portable[key] != release_path:
+            failures.append(
+                f"release mapping has portable-name collision: {portable[key]!r} and {release_path!r}"
+            )
+        else:
+            portable[key] = release_path
     return entries, failures

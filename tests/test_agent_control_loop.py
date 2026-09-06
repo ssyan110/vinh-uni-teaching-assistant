@@ -4,6 +4,7 @@ import json
 import sys
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 
 
@@ -12,9 +13,11 @@ SCRIPTS_ROOT = PROJECT_ROOT / "scripts"
 sys.path.insert(0, str(SCRIPTS_ROOT))
 
 from agent_loop import (  # noqa: E402
+    attach_external_check,
     create_run,
     record_attempt,
     record_result,
+    run_release_check,
     run_preflight,
     validate_state,
 )
@@ -213,6 +216,100 @@ class AgentControlLoopTests(unittest.TestCase):
             state["blocker_categories"]["human"],
             ["online/face boundary confirmation is missing"],
         )
+
+    def test_preflight_emits_structured_blocker_records(self) -> None:
+        self.create_default_run(run_id="structured-blockers")
+
+        def gate(_root: Path, state: dict[str, object]) -> dict[str, object]:
+            return {
+                "purpose": state["purpose"], "stage": state["gate_stage"],
+                "status": "blocked", "output_dir": state["output_dir"],
+                "blockers": [
+                    "image manifest is missing",
+                    {"code": "boundary_confirmation_missing", "message": "boundary confirmation is missing", "scope": "lesson"},
+                ],
+            }
+
+        state = run_preflight(self.root, "structured-blockers", gate)
+        self.assertEqual(
+            [(item["code"], item["scope"]) for item in state["blocker_records"]],
+            [("artifact_missing", "draft/pptx"), ("boundary_confirmation_missing", "lesson")],
+        )
+        self.assertEqual([], validate_state(self.root, state, check_evidence=True))
+
+    def test_validator_rejects_malformed_blocker_records(self) -> None:
+        state = self.create_default_run(run_id="malformed-blockers")
+        state["blocker_records"] = [{"code": "only-code"}]
+        self.assertTrue(any("requires code, message and scope" in item for item in validate_state(self.root, state, check_evidence=True)))
+
+    def test_external_check_is_attached_without_changing_run_phase(self) -> None:
+        state = self.create_default_run(run_id="external-check")
+        result_file = self.root / "checks/plan.json"
+        result_file.parent.mkdir()
+        result_file.write_text(json.dumps({
+            "command": "plan", "status": "blocked",
+            "lesson_key": self.lesson_keys[1], "release_id": "r1",
+            "blockers": ["authority manifest is missing"],
+        }), encoding="utf-8")
+        state = attach_external_check(self.root, "external-check", str(result_file))
+        self.assertEqual(state["phase"], "defined")
+        self.assertEqual(state["latest_external_check"]["command"], "plan")
+        self.assertEqual(state["latest_external_check"]["blocker_records"][0]["code"], "artifact_missing")
+        self.assertEqual([], validate_state(self.root, state, check_evidence=True))
+        result_file.write_text("tampered", encoding="utf-8")
+        self.assertTrue(any("hash-mismatched" in item for item in validate_state(self.root, state, check_evidence=True)))
+
+    def test_external_check_rejects_mismatched_structured_records(self) -> None:
+        self.create_default_run(run_id="bad-external")
+        result_file = self.root / "checks/bad.json"
+        result_file.parent.mkdir()
+        result_file.write_text(json.dumps({
+            "command": "inspect", "status": "review", "blockers": ["partial state"],
+            "blocker_records": [{"code": "wrong", "message": "partial state", "scope": "wrong"}],
+        }), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "blocker_records"):
+            attach_external_check(self.root, "bad-external", str(result_file))
+
+    def test_release_check_runs_only_read_only_mode_and_pins_result(self) -> None:
+        self.create_default_run(run_id="release-check")
+        payload = {
+            "command": "plan", "status": "blocked",
+            "lesson_key": self.lesson_keys[1], "offering_id": "test-offering", "release_id": "r1",
+            "blockers": ["authority manifest is missing"],
+        }
+        completed = type("Completed", (), {"stdout": json.dumps(payload), "returncode": 1})()
+        with mock.patch("agent_loop.subprocess.run", return_value=completed) as runner:
+            state = run_release_check(
+                self.root, "release-check", "plan", self.lesson_keys[1], "r1", "test-offering"
+            )
+        command = runner.call_args.args[0]
+        self.assertIn("--plan", command)
+        self.assertNotIn("--execute", command)
+        self.assertEqual(state["phase"], "defined")
+        self.assertEqual(state["latest_external_check"]["status"], "blocked")
+        self.assertEqual([], validate_state(self.root, state, check_evidence=True))
+
+    def test_release_check_rejects_execute_mode(self) -> None:
+        self.create_default_run(run_id="release-execute")
+        with self.assertRaisesRegex(ValueError, "plan or inspect"):
+            run_release_check(self.root, "release-execute", "execute", self.lesson_keys[1], "r1")
+
+    def test_release_check_rejects_cross_scope_identity_before_write(self) -> None:
+        for field, wrong in (("lesson_key", self.lesson_keys[0]), ("offering_id", "other-offering"), ("release_id", "other-release")):
+            with self.subTest(field=field):
+                run_id = f"identity-{field.replace('_', '-') }"
+                self.create_default_run(run_id=run_id)
+                payload = {
+                    "command": "plan", "status": "blocked",
+                    "lesson_key": self.lesson_keys[1], "offering_id": "test-offering",
+                    "release_id": "r1", "blockers": [],
+                }
+                payload[field] = wrong
+                completed = type("Completed", (), {"stdout": json.dumps(payload), "returncode": 1})()
+                with mock.patch("agent_loop.subprocess.run", return_value=completed):
+                    with self.assertRaisesRegex(ValueError, field):
+                        run_release_check(self.root, run_id, "plan", self.lesson_keys[1], "r1", "test-offering")
+                self.assertFalse((self.root / ".agent/runs" / run_id / "checks").exists())
 
     def test_evidence_mutation_invalidates_completed_run(self) -> None:
         self.create_default_run(run_id="hash-run")

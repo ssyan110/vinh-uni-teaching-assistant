@@ -1,6 +1,11 @@
 
 # Agent Workflow Index
 
+Canonical workflow contract: `docs/workflow/canonical-workflow-contract.md`
+Optimization roadmap: `docs/workflow/WORKFLOW_V2_OPTIMIZATION_SPEC.md`
+
+Read the canonical contract first for lifecycle, gate, artifact-state, identity, and safety decisions. The longer files below remain compatibility context during migration.
+
 This is the portable entry point for AI agents working in this project. The current course decisions are project requirements, not chat-only reminders.
 
 ## Required reading order

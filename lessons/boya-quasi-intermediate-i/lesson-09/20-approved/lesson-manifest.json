@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "manifest_type": "lesson-authority",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-09",
+  "offering_id": "2026-fall",
+  "lesson_id": "lesson-09",
+  "lesson_number": 9,
+  "lesson_title": "北方菜和南方菜",
+  "language": "简体中文",
+  "font_policy": {"cjk": "KaiTi", "latin": "Times New Roman"},
+  "authority_status": "final_confirmed",
+  "content_status": "finalized_by_adam_2026-09-03",
+  "delivery_status": "pptx_only_handoff_pending_full_package",
+  "authority_rule": "20-approved 中的批准 PPTX 原样锁定；完整交付仍须补齐来源、教师手册、配套材料、QA、rehearsal 与 release。",
+  "approval_record": "lessons/boya-quasi-intermediate-i/lesson-09/20-approved/lesson-09-pptx-approval-record.md",
+  "source_package": {"path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source", "status": "active_source_pending_review"},
+  "scope": {"approval_scope": "two_current_pptx_only", "printed_pages": "77–86", "online_slide_count": 72, "face_to_face_slide_count": 57},
+  "authority": {
+    "pptx": {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-09/20-approved/pptx/lesson-09-实体课.pptx",
+      "online_path": "lessons/boya-quasi-intermediate-i/lesson-09/20-approved/pptx/lesson-09-在线预习.pptx",
+      "status": "final_confirmed",
+      "approval_scope": "adam_confirmed_finalized_2026-09-03",
+      "version": "finalized_2026-09-03",
+      "slide_count": 57,
+      "online_slide_count": 72,
+      "sha256": "ad4611ce9e44e50d3501e567008d9cefbfa52aaef8fb678c939e97bd2b3fcf28",
+      "bytes": 24986695,
+      "online_sha256": "12a5b25eaf722e6da736ca41763bbfb190fe12ce61c1058f3f8e00f00a5c7562",
+      "online_bytes": 69015000,
+      "face_to_face_path": "lessons/boya-quasi-intermediate-i/lesson-09/20-approved/pptx/lesson-09-实体课.pptx",
+      "face_to_face_sha256": "ad4611ce9e44e50d3501e567008d9cefbfa52aaef8fb678c939e97bd2b3fcf28",
+      "face_to_face_bytes": 24986695,
+      "face_to_face_slide_count": 57
+    },
+    "teacher_manual": {"path": null, "status": "missing", "required": true},
+    "activities": {"path": "lessons/boya-quasi-intermediate-i/lesson-09/20-approved/activities", "status": "missing", "file_count": 0, "required": true, "format": "DOCX only"}
+  },
+  "qa": {"status": "static_qa_passed_pending_manual_acceptance", "current_report": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/qa/lesson-09-pptx-draft-qa.md", "rehearsal": {"status": "pending_manual_acceptance", "audio_playback": "pending_manual_acceptance"}},
+  "release": {"status": "pending_manual_acceptance", "delivery_status": "blocked", "latest_release_path": null, "latest_zip_path": null},
+  "files": [
+    {"path": "lessons/boya-quasi-intermediate-i/lesson-09/20-approved/lesson-09-pptx-approval-record.md", "status": "approval_record", "sha256": "fce765706516db306d2afaa0f17f98d6c4ff302658fe14d373a25b5716646e4b", "bytes": 358},
+    {"path": "lessons/boya-quasi-intermediate-i/lesson-09/20-approved/pptx/lesson-09-在线预习.pptx", "status": "final_confirmed", "sha256": "12a5b25eaf722e6da736ca41763bbfb190fe12ce61c1058f3f8e00f00a5c7562", "bytes": 69015000},
+    {"path": "lessons/boya-quasi-intermediate-i/lesson-09/20-approved/pptx/lesson-09-实体课.pptx", "status": "final_confirmed", "sha256": "ad4611ce9e44e50d3501e567008d9cefbfa52aaef8fb678c939e97bd2b3fcf28", "bytes": 24986695}
+  ]
+}

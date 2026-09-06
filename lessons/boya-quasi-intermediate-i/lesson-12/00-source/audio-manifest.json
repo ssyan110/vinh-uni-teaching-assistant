@@ -1,11 +1,111 @@
 {
-  "schema_version":"boya-lesson-audio-manifest-v1","lesson_id":"lesson-12","textbook_id":"boya-quasi-intermediate-i","lesson_title":"散步","recorded_at":"2026-08-28","provenance":{"source_type":"publisher_qr_landing_page","qr_url":"http://qr31.cn/IhjvBZ","landing_page":"https://biz.cli.im/site/IhjvBZ?qrurl=http://qr31.cn/IhjvBZ&gtype=2&key=57f6317855318c071878297e5609bf670214049105","landing_audio_labels":["12-1","12-2","12-3","12-4","12-5","12-6"]},
-  "technical_evidence":"lessons/boya-quasi-intermediate-i/lesson-12/00-source/audit/audio-technical-2026-08-28.md","tracks":[
-    {"label":"12-1","coding":"LQ1539821","path":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-1.mp3","bytes":751063,"sha256":"0046a2acc58578a44402eed233213858b7bc33229a2665072a077a53df39adc5","duration_seconds":46.629,"codec":"mp3","sample_rate_hz":44100,"channels":1,"decode_status":"passed","semantic_status":"not_listened","teacher_playback_status":"pending"},
-    {"label":"12-2","coding":"JU1783238","path":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-2.mp3","bytes":388274,"sha256":"427c06de928174b14cb3152bc9673ba67d9ad87b70f2f30a9d5ec7aec1d6ebdf","duration_seconds":23.954,"codec":"mp3","sample_rate_hz":44100,"channels":1,"decode_status":"passed","semantic_status":"not_listened","teacher_playback_status":"pending"},
-    {"label":"12-3","coding":"CU1783239","path":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-3.mp3","bytes":848865,"sha256":"cd6492e404f3e090c87c8eeb1246f43d70925c2cb4ac92bc072d0e14d03ccd44","duration_seconds":52.741,"codec":"mp3","sample_rate_hz":44100,"channels":1,"decode_status":"passed","semantic_status":"not_listened","teacher_playback_status":"pending"},
-    {"label":"12-4","coding":"CJ1783240","path":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-4.mp3","bytes":939144,"sha256":"9685d6f19a703e68786b3890da2dd5c1695d39f2888432ec773bad09569155af","duration_seconds":58.384,"codec":"mp3","sample_rate_hz":44100,"channels":1,"decode_status":"passed","semantic_status":"not_listened","teacher_playback_status":"pending"},
-    {"label":"12-5","coding":"NS1783241","path":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-5.mp3","bytes":725567,"sha256":"94256f12b0900b9d622a5c64e7b1d0d30aaf9d9f2641f5aedbc9f28a90446240","duration_seconds":45.035,"codec":"mp3","sample_rate_hz":44100,"channels":1,"decode_status":"passed","semantic_status":"not_listened","teacher_playback_status":"pending"},
-    {"label":"12-6","coding":"HY1783242","path":"textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-6.mp3","bytes":971745,"sha256":"fb8c2763dd7f5993a55871fc13df63a9af461bad1b684d9fbc7e4b7bfd23a179","duration_seconds":60.421,"codec":"mp3","sample_rate_hz":44100,"channels":1,"decode_status":"passed","semantic_status":"not_listened","teacher_playback_status":"pending"}
-  ],"status":"draft_pending_source_approval","coverage_status":"12-1_to_12-6_technical_only;semantic_and_teacher_playback_pending"
+  "schema_version": "boya-lesson-audio-manifest-v1",
+  "lesson_id": "lesson-12",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_title": "散步",
+  "recorded_at": "2026-08-28",
+  "provenance": {
+    "source_type": "publisher_qr_landing_page",
+    "qr_url": "http://qr31.cn/IhjvBZ",
+    "landing_page": "https://biz.cli.im/site/IhjvBZ?qrurl=http://qr31.cn/IhjvBZ&gtype=2&key=57f6317855318c071878297e5609bf670214049105",
+    "landing_audio_labels": [
+      "12-1",
+      "12-2",
+      "12-3",
+      "12-4",
+      "12-5",
+      "12-6"
+    ]
+  },
+  "technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/audit/audio-technical-2026-08-28.md",
+  "tracks": [
+    {
+      "label": "12-1",
+      "coding": "LQ1539821",
+      "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-1.mp3",
+      "bytes": 751063,
+      "sha256": "0046a2acc58578a44402eed233213858b7bc33229a2665072a077a53df39adc5",
+      "duration_seconds": 46.629,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "decode_status": "passed",
+      "semantic_status": "teacher_approved",
+      "teacher_playback_status": "approved_by_adam"
+    },
+    {
+      "label": "12-2",
+      "coding": "JU1783238",
+      "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-2.mp3",
+      "bytes": 388274,
+      "sha256": "427c06de928174b14cb3152bc9673ba67d9ad87b70f2f30a9d5ec7aec1d6ebdf",
+      "duration_seconds": 23.954,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "decode_status": "passed",
+      "semantic_status": "teacher_approved",
+      "teacher_playback_status": "approved_by_adam"
+    },
+    {
+      "label": "12-3",
+      "coding": "CU1783239",
+      "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-3.mp3",
+      "bytes": 848865,
+      "sha256": "cd6492e404f3e090c87c8eeb1246f43d70925c2cb4ac92bc072d0e14d03ccd44",
+      "duration_seconds": 52.741,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "decode_status": "passed",
+      "semantic_status": "teacher_approved",
+      "teacher_playback_status": "approved_by_adam"
+    },
+    {
+      "label": "12-4",
+      "coding": "CJ1783240",
+      "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-4.mp3",
+      "bytes": 939144,
+      "sha256": "9685d6f19a703e68786b3890da2dd5c1695d39f2888432ec773bad09569155af",
+      "duration_seconds": 58.384,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "decode_status": "passed",
+      "semantic_status": "teacher_approved",
+      "teacher_playback_status": "approved_by_adam"
+    },
+    {
+      "label": "12-5",
+      "coding": "NS1783241",
+      "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-5.mp3",
+      "bytes": 725567,
+      "sha256": "94256f12b0900b9d622a5c64e7b1d0d30aaf9d9f2641f5aedbc9f28a90446240",
+      "duration_seconds": 45.035,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "decode_status": "passed",
+      "semantic_status": "teacher_approved",
+      "teacher_playback_status": "approved_by_adam"
+    },
+    {
+      "label": "12-6",
+      "coding": "HY1783242",
+      "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-6.mp3",
+      "bytes": 971745,
+      "sha256": "fb8c2763dd7f5993a55871fc13df63a9af461bad1b684d9fbc7e4b7bfd23a179",
+      "duration_seconds": 60.421,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "decode_status": "passed",
+      "semantic_status": "teacher_approved",
+      "teacher_playback_status": "approved_by_adam"
+    }
+  ],
+  "status": "approved",
+  "coverage_status": "12-1_to_12-6_technical_semantic_teacher_playback_approved",
+  "approved_by": "Adam Yan",
+  "approved_at": "2026-09-04T15:53:03+07:00"
 }

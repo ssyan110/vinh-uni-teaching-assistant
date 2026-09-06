@@ -7,14 +7,13 @@ import { StudentsPage } from './pages/StudentsPage'
 import { StudentDetailPage } from './pages/StudentDetailPage'
 import { FollowupsPage } from './pages/FollowupsPage'
 import { MorePage } from './pages/MorePage'
+import { OutcomesPage } from './pages/OutcomesPage'
 import { useTracker } from './state/TrackerContext'
 
 export function App() {
   const { access } = useTracker()
 
-  if (access === 'checking') {
-    return <div className="app-loading" aria-live="polite"><span className="loading-mark">課</span><p>正在整理今天的課堂…</p></div>
-  }
+  if (access === 'checking') return <LoginPage />
 
   if (access === 'signed_out') return <LoginPage />
 
@@ -24,6 +23,7 @@ export function App() {
         <Route path="/today" element={<TodayPage />} />
         <Route path="/sessions/:sessionId" element={<SessionPage />} />
         <Route path="/students" element={<StudentsPage />} />
+        <Route path="/outcomes" element={<OutcomesPage />} />
         <Route path="/students/:studentId" element={<StudentDetailPage />} />
         <Route path="/followups" element={<FollowupsPage />} />
         <Route path="/more" element={<MorePage />} />

@@ -3,10 +3,11 @@ import { useNavigate } from 'react-router-dom'
 import { useTracker } from '../state/TrackerContext'
 
 export function LoginPage() {
-  const { signIn, enterDemo, busy, error, configured, clearError } = useTracker()
+  const { signIn, enterDemo, busy, error, configured, configurationIssue, access, clearError } = useTracker()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const navigate = useNavigate()
+  const checking = access === 'checking'
 
   const submit = async (event: FormEvent) => {
     event.preventDefault()
@@ -25,37 +26,31 @@ export function LoginPage() {
   return (
     <main className="login-page">
       <section className="login-story">
-        <div className="login-brand"><span className="brand-mark large">課</span><span>課跡</span></div>
+        <div className="login-brand"><img className="brand-logo large" src={`${import.meta.env.BASE_URL}logo.svg`} alt="" /><span>荣市大学</span></div>
         <div>
-          <p className="eyebrow">你的課堂，不漏掉下一步</p>
-          <h1>記得學生，也記得<br />下一堂要怎麼教。</h1>
-          <p className="login-lead">點名、觀察、收尾放在同一個工作台。少寫一點，留下真正會用到的紀錄。</p>
-        </div>
-        <div className="login-proof" aria-hidden="true">
-          <div><strong>10 秒</strong><span>開始課堂</span></div>
-          <div><strong>2 次點擊</strong><span>留下觀察</span></div>
-          <div><strong>2 分鐘</strong><span>完成收尾</span></div>
+          <p className="eyebrow">教师端</p>
+          <h1>荣市大学<br />学生管理系统</h1>
+          <p className="login-lead">用于管理课程、学生、出席和课堂记录。</p>
         </div>
       </section>
 
       <section className="login-panel">
         <div className="login-card">
-          <p className="eyebrow">教師登入</p>
-          <h2>回到你的工作台</h2>
-          <p className="muted">只有你的帳號能查看學生與課堂紀錄。</p>
-          {configured ? (
-            <form onSubmit={submit} className="form-stack">
-              <label>電子郵件<input type="email" autoComplete="email" required value={email} onChange={(event) => setEmail(event.target.value)} /></label>
-              <label>密碼<input type="password" autoComplete="current-password" required value={password} onChange={(event) => setPassword(event.target.value)} /></label>
-              <button className="primary-button full" disabled={busy}>{busy ? '登入中…' : '登入'}</button>
-            </form>
-          ) : (
-            <div className="setup-note"><strong>正式帳號尚未連接</strong><span>目前可先查看並操作完整範例。</span></div>
-          )}
+          <p className="eyebrow">教师登录</p>
+          <h2>教师登录</h2>
+          <p className="muted">登录后管理课程和学生记录。</p>
+          {!configured && configurationIssue
+            ? <p className="login-status unavailable" role="status">{configurationIssue}</p>
+            : checking && <p className="login-status checking" role="status">正在检查登录状态，请稍候。</p>}
+          <form onSubmit={submit} className="form-stack" aria-busy={busy || checking}>
+            <label htmlFor="teacher-email">电子邮件<input id="teacher-email" type="email" autoComplete="email" required value={email} onChange={(event) => setEmail(event.target.value)} /></label>
+            <label htmlFor="teacher-password">密码<input id="teacher-password" type="password" autoComplete="current-password" required value={password} onChange={(event) => setPassword(event.target.value)} /></label>
+            <button className="primary-button full" disabled={busy || checking || !configured}>{busy ? '登录中…' : checking ? '检查中…' : '登录'}</button>
+          </form>
           {error && <p className="form-error" role="alert">{error}</p>}
-          <button type="button" className="text-button demo-entry" onClick={demo}>使用範例資料進入</button>
+          <button type="button" className="text-button demo-entry" onClick={demo} disabled={busy || checking}>使用示例数据查看界面</button>
         </div>
-        <p className="privacy-note">學生資料只用於你的教學紀錄，不提供公開註冊。</p>
+        <p className="privacy-note">学生资料仅用于你的教学记录，不提供公开注册。</p>
       </section>
     </main>
   )

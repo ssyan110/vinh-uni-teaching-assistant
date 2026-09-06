@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-pptx-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-08",
+  "mode": "face-to-face",
+  "title": "第八课《孙子和《孙子兵法》》实体课",
+  "status": "draft_not_approved",
+  "builder_scope": "scripts/build_l23_pptx_drafts.js",
+  "draft_gate": "lesson-specific",
+  "source_sha256": "30bc7a4716233edf482abac6d8838a296359a51f2c5958efb9becf535f216b89",
+  "layout_source": "boya-quasi-intermediate-i lesson-01 approved layout family",
+  "face_order_contract": "course/boya-face-to-face-order-contract.json",
+  "short_example_policy": "curated_short_sentences_max_24_hanzi_chars",
+  "short_text_policy": "textbook_listening_prompt_and_record_layout_no_full_text_copy",
+  "shared_assets": [
+    "lesson-01-cover-family-work-hobby.png",
+    "lesson-01-learning-path.png",
+    "divider-family.png",
+    "divider-work.png",
+    "divider-hobby.png",
+    "divider-comprehensive.png",
+    "symbolic-vocabulary.png",
+    "symbolic-listening.png",
+    "symbolic-sentence-pattern.png",
+    "oral-practice-divider.png",
+    "speaking-practice.png"
+  ],
+  "image_manifest": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/image-manifest.json",
+  "lesson_specific_image_assets": [
+    {
+      "asset_id": "L08-cover",
+      "file": "lesson-08-cover-sunzi.png",
+      "category": "cover",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-C01",
+      "file": "lesson-08-context-01-palace-training.png",
+      "category": "short_text_context",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-C02",
+      "file": "lesson-08-context-02-war-strategy.png",
+      "category": "short_text_context",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-C03",
+      "file": "lesson-08-context-03-world-influence.png",
+      "category": "short_text_context",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V01",
+      "file": "vocab-01-shibing.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V02",
+      "file": "vocab-02-dazhang.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V03",
+      "file": "vocab-03-xunlian.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V04",
+      "file": "vocab-04-jingong.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V05",
+      "file": "vocab-05-junshijia.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V06",
+      "file": "vocab-06-jizai.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V07",
+      "file": "vocab-07-jiangjun.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V08",
+      "file": "vocab-08-quanli.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V09",
+      "file": "vocab-09-celue.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V10",
+      "file": "vocab-10-daibaizhang.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V11",
+      "file": "vocab-11-jieshu.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V12",
+      "file": "vocab-12-kaishe.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V13",
+      "file": "vocab-13-daibingdazhang.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V14",
+      "file": "vocab-14-yanming.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V15",
+      "file": "vocab-15-genju.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V16",
+      "file": "vocab-16-cengjing.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V17",
+      "file": "vocab-17-zhanshi.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V18",
+      "file": "vocab-18-qizi.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V19",
+      "file": "vocab-19-zhiding.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V20",
+      "file": "vocab-20-xixihaha.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V21",
+      "file": "vocab-21-yansu.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V22",
+      "file": "vocab-22-an.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V23",
+      "file": "vocab-23-junfa.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V24",
+      "file": "vocab-24-chusi.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V25",
+      "file": "vocab-25-nanguo.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V26",
+      "file": "vocab-26-renming.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V27",
+      "file": "vocab-27-dashengzhang.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V28",
+      "file": "vocab-28-ji.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V29",
+      "file": "vocab-29-zhanbai.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V30",
+      "file": "vocab-30-sunzi.png",
+      "category": "proper_noun",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V31",
+      "file": "vocab-31-sunzibingfa.png",
+      "category": "proper_noun",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    }
+  ],
+  "image_approval_status": "pending_source_visual_and_adam_review",
+  "slide_count": 59,
+  "audio_tracks_embedded": [
+    "8-1",
+    "8-2",
+    "8-3",
+    "8-4",
+    "8-5",
+    "8-6"
+  ],
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/pptx-draft/face-to-face/lesson-08-实体课.pptx",
+    "sha256": "591f63bbbf05556ce2db79f64d77d1b43db448fb72cf942108973d205a832da9",
+    "bytes": 28396938
+  },
+  "generated_at": "2026-09-03T09:18:04.198Z"
+}

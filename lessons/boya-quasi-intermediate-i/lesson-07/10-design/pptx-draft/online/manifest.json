@@ -11,6 +11,12 @@
   "layout_source": "boya-quasi-intermediate-i lesson-01 approved layout family",
   "shared_layout_contract": "course/boya-online-layout-contract.json",
   "lesson_content_contract": "course/boya-online-content-contract.json",
+  "example_bank": {
+    "source": "course/boya-example-bank.json",
+    "review_status": "ai_reviewed_pending_adam_approval",
+    "vocabulary_examples_per_item": 2,
+    "expression_examples_per_item": 2
+  },
   "fixed_structure": [
     "cover",
     "learning_flow",
@@ -203,8 +209,8 @@
   "audio_playback_policy": "embedded_on_audio-summary-slides; PowerPoint playback QA remains pending for draft",
   "output": {
     "path": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/pptx-draft/online/lesson-07-在线预习.pptx",
-    "sha256": "d0e1837dd5b60cdaf3efd130e54a0f4f727383262c845913f9403a175d8d3f4e",
-    "bytes": 154317751
+    "sha256": "8ac3348585b28a4b86fc4c9e86450244dc15d52d32487a1a5c487848e20e2baa",
+    "bytes": 84698947
   },
-  "generated_at": "2026-09-02T15:58:14.781Z"
+  "generated_at": "2026-09-03T03:27:03.912Z"
 }

@@ -5,6 +5,11 @@ description: Portable project harness for the AI Teaching Material System. Read 
 
 # Harness Engineering
 
+Canonical project workflow: `docs/workflow/canonical-workflow-contract.md`
+Optimization roadmap: `docs/workflow/WORKFLOW_V2_OPTIMIZATION_SPEC.md`
+
+Use the canonical contract for lifecycle, gates, artifact states, lesson identity, and safety. This skill owns only the generic run-packet and evidence loop; course and artifact requirements belong to routed skills.
+
 This `.agent` copy is the canonical project harness. Kiro is retired for this project; do not create or maintain `.kiro/` and do not route new work through legacy Kiro files.
 
 Minimum loop:

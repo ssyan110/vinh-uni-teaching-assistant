@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-visual-prototype-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-09",
+  "status": "draft_not_approved",
+  "prototype_slides": ["封面", "学习流程", "学习目标", "词语", "短文记录", "句式练习"],
+  "checks": ["纯白画布", "KaiTi／Times New Roman", "可见文字不低于20 pt", "图片不含文字", "句式例句35 pt"],
+  "approval_note": "文字和素材方向待教师审阅；完整 PPTX 仍为 draft。"
+}

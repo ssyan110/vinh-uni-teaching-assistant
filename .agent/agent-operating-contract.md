@@ -1,6 +1,9 @@
 # Agent Operating Contract
 
-This contract controls how an agent executes multi-step work in this repository.
+Canonical workflow contract: `docs/workflow/canonical-workflow-contract.md`
+Optimization roadmap: `docs/workflow/WORKFLOW_V2_OPTIMIZATION_SPEC.md`
+
+This contract controls how an agent executes multi-step work in this repository. Lifecycle, gate semantics, artifact states, lesson identity and safety are defined once in the canonical workflow contract.
 It does not redefine lesson approval, teaching content, QA or release authority.
 
 ## Control loop

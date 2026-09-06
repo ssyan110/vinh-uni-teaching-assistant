@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import re
@@ -10,12 +11,14 @@ import zipfile
 from pathlib import Path, PurePosixPath
 from typing import Any
 
-from production_gate import check as check_production_workflow
+from production_gate import check as check_production_workflow, check_manifest_scope
+from lesson_context import LessonContextError, resolve_lesson_context, _safe_project_path
 from workflow_integrity import (
     audit_authority_manifest,
     audit_frozen_source_package,
     expected_release_entries,
     material_files,
+    portable_release_path_key,
     resolve_relative_path,
     sha256,
     tree_hash,
@@ -71,12 +74,13 @@ def safe_release_path(
     value: Any,
     failures: list[str],
     label: str,
+    release_root: Path | None = None,
 ) -> Path | None:
     try:
         path, _normalized = resolve_relative_path(
             PROJECT_ROOT,
             value,
-            required_root=RELEASE_ROOT,
+            required_root=release_root if release_root is not None else RELEASE_ROOT,
         )
     except ValueError as error:
         add_failure(failures, f"invalid {label}: {error}")
@@ -135,10 +139,21 @@ def audit_release_zip(
             names = [info.filename for info in infos]
             if len(names) != len(set(names)):
                 add_failure(failures, "release ZIP contains duplicate entries")
+            portable_names: dict[str, str] = {}
             for name in names:
                 pure = PurePosixPath(name)
                 if pure.is_absolute() or ".." in pure.parts or pure.parts[:1] != (package_name,):
                     add_failure(failures, f"release ZIP contains unsafe path: {name}")
+                portable_key, portable_error = portable_release_path_key(name)
+                if portable_error:
+                    add_failure(failures, f"release ZIP contains non-portable path: {name}: {portable_error}")
+                elif portable_key in portable_names and portable_names[portable_key] != name:
+                    add_failure(
+                        failures,
+                        f"release ZIP contains portable-name collision: {portable_names[portable_key]!r} and {name!r}",
+                    )
+                elif portable_key is not None:
+                    portable_names[portable_key] = name
             for name in sorted(set(expected) - set(names)):
                 add_failure(failures, f"release ZIP file is missing: {name}")
             for name in sorted(set(names) - set(expected)):
@@ -227,20 +242,47 @@ def audit_latest_release(
             add_failure(failures, f"latest-release file byte count mismatch: {relative}")
 
 
-def verify() -> dict[str, object]:
+def verify(lesson_key: str | None = None, offering_id: str | None = None) -> dict[str, object]:
+    """Read one explicit lesson; no-key calls retain legacy active configuration."""
     failures: list[str] = []
-    manifest = read_json(MANIFEST_PATH, failures, "authority manifest")
+    context = None
+    authority_root, release_root = AUTHORITY_ROOT, RELEASE_ROOT
+    manifest_path, latest_path = MANIFEST_PATH, LATEST_PATH
+    if lesson_key is not None:
+        try:
+            context = resolve_lesson_context(PROJECT_ROOT, lesson_key, offering_id)
+            authority_root, release_root = context.authority_root, context.release_root
+            manifest_path = _safe_project_path(authority_root, "lesson-manifest.json")
+            latest_path = _safe_project_path(release_root, "latest-release.json")
+        except LessonContextError as error:
+            return {"lesson_key": lesson_key, "status": "failed", "delivery_status": "blocked",
+                    "checked_authority_files": 0, "failures": [str(error)]}
+    elif offering_id is not None:
+        return {"status": "failed", "delivery_status": "blocked", "checked_authority_files": 0,
+                "failures": ["offering_id requires an explicit lesson_key"]}
+    manifest = read_json(manifest_path, failures, "authority manifest")
     if manifest is None:
         return {
-            "manifest": str(MANIFEST_PATH),
+            **({"lesson_key": lesson_key, "offering_id": context.offering_id} if context else {}),
+            "manifest": str(manifest_path),
+            "delivery_status": "blocked",
             "checked_authority_files": 0,
             "status": "failed",
             "failures": failures,
         }
 
+    if context:
+        check_manifest_scope(manifest, "authority", context, failures, require_key=True)
+        if manifest.get("lesson_id") != context.lesson_id:
+            add_failure(failures, "authority lesson_id must match the selected context")
+        if failures:
+            return {"lesson_key": lesson_key, "manifest": str(manifest_path),
+                    "checked_authority_files": 0, "status": "failed",
+                    "delivery_status": "blocked", "failures": failures}
+
     authority_audit = audit_authority_manifest(
         PROJECT_ROOT,
-        AUTHORITY_ROOT,
+        authority_root,
         manifest,
     )
     for failure in authority_audit["failures"]:
@@ -248,7 +290,9 @@ def verify() -> dict[str, object]:
 
     source_audit = audit_frozen_source_package(
         PROJECT_ROOT,
-        CONFIG.get("historical_package_evidence", ""),
+        ((manifest.get("source_package") or {}).get("path", "")
+         if context and isinstance(manifest.get("source_package"), dict)
+         else "" if context else CONFIG.get("historical_package_evidence", "")),
         manifest,
     )
     for failure in source_audit["failures"]:
@@ -276,26 +320,35 @@ def verify() -> dict[str, object]:
             release.get("latest_release_path"),
             failures,
             "latest release path",
+            release_root,
         )
         zip_path = safe_release_path(
             release.get("latest_zip_path"),
             failures,
             "latest release ZIP path",
+            release_root,
         )
         if release_dir is not None:
-            relative_parts = release_dir.relative_to(RELEASE_ROOT.resolve()).parts
+            relative_parts = release_dir.relative_to(release_root.resolve()).parts
             if len(relative_parts) != 1 or not RELEASE_ID_PATTERN.fullmatch(relative_parts[0]):
                 add_failure(failures, "latest release path does not use one safe release id")
             for candidate_name in package_candidates(manifest):
-                candidate_dir = release_dir / candidate_name
+                try:
+                    candidate_dir = _safe_project_path(release_dir, candidate_name)
+                except LessonContextError as error:
+                    add_failure(failures, f"invalid release package directory: {error}")
+                    continue
                 if candidate_dir.is_dir():
                     package_name = candidate_name
                     package_dir = candidate_dir
                     break
             if package_dir is None:
-                package_dir = release_dir / package_name
+                try:
+                    package_dir = _safe_project_path(release_dir, package_name)
+                except LessonContextError as error:
+                    add_failure(failures, f"invalid release package directory: {error}")
         if zip_path is not None and release_dir is not None:
-            if zip_path.parent.resolve() != RELEASE_ROOT.resolve():
+            if zip_path.parent.resolve() != release_root.resolve():
                 add_failure(failures, "latest release ZIP is not directly under release root")
             if zip_path.name != f"{release_dir.name}.zip":
                 add_failure(failures, "release directory and ZIP ids do not match")
@@ -311,7 +364,7 @@ def verify() -> dict[str, object]:
         if release_zip_sha256 != release.get("zip_sha256"):
             add_failure(failures, "release ZIP hash mismatch")
 
-        latest = read_json(LATEST_PATH, failures, "latest-release metadata")
+        latest = read_json(latest_path, failures, "latest-release metadata")
         audit_latest_release(
             latest,
             release_dir,
@@ -324,16 +377,23 @@ def verify() -> dict[str, object]:
             package_name,
         )
 
-    activity_root = AUTHORITY_ROOT / "activities"
+    activity_root = authority_root / "activities"
     if any("可编辑原稿" in path.parts for path in activity_root.rglob("*")):
         add_failure(failures, "legacy editable-source layer found under authority activities")
 
-    workflow_audit = check_production_workflow("audit")
+    workflow_audit = check_production_workflow("audit", **({"lesson_key": lesson_key, "offering_id": context.offering_id} if context else {}))
     for blocker in workflow_audit["blockers"]:
         if blocker not in failures:
             add_failure(failures, f"production workflow audit: {blocker}")
 
-    rehearsal = manifest.get("qa", {}).get("rehearsal", {})
+    qa = manifest.get("qa", {})
+    if not isinstance(qa, dict):
+        add_failure(failures, "authority qa must be an object")
+        qa = {}
+    rehearsal = qa.get("rehearsal", {})
+    if not isinstance(rehearsal, dict):
+        add_failure(failures, "authority qa.rehearsal must be an object")
+        rehearsal = {}
     delivery_blockers = []
     if rehearsal.get("audio_playback_status") != "passed":
         delivery_blockers.append("PPTX audio playback is not recorded as passed")
@@ -341,10 +401,13 @@ def verify() -> dict[str, object]:
         delivery_blockers.append("approved contact-hour teacher rehearsal is not passed")
     if failures:
         delivery_blockers.append("authority or release integrity verification failed")
+    if release_pending:
+        delivery_blockers.append("current release is pending manual acceptance")
     delivery_status = "ready" if not delivery_blockers else "blocked"
 
     return {
-        "manifest": str(MANIFEST_PATH),
+        **({"lesson_key": lesson_key, "offering_id": context.offering_id} if context else {}),
+        "manifest": str(manifest_path),
         "checked_authority_files": authority_audit["checked_files"],
         "actual_authority_files": authority_audit["actual_file_count"],
         "source_package_file_count": source_audit["file_count"],
@@ -360,7 +423,15 @@ def verify() -> dict[str, object]:
     }
 
 
-if __name__ == "__main__":
-    result = verify()
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--lesson-key", help="Exact registry key; omitted retains legacy active context")
+    parser.add_argument("--offering-id", help="Offering for the explicit lesson key")
+    args = parser.parse_args()
+    result = verify(args.lesson_key, args.offering_id)
     print(json.dumps(result, ensure_ascii=False, indent=2))
-    raise SystemExit(0 if result["status"] == "passed" else 1)
+    return 0 if result["status"] == "passed" else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

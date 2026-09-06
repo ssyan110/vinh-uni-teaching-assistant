@@ -6,6 +6,7 @@ import type {
   FollowupKind,
   FollowupStatus,
   ImportStudentRow,
+  LearningEvent,
   ObservationResult,
   TrackerSnapshot,
 } from '../types'
@@ -16,6 +17,7 @@ export interface TrackerRepository {
   saveAttendance(sessionId: string, studentId: string, status: AttendanceStatus): Promise<void>
   confirmRemainingPresent(sessionId: string, studentIds: string[]): Promise<void>
   saveObservation(sessionId: string, studentId: string, result: ObservationResult, note?: string): Promise<void>
+  saveLearningEvent(event: Omit<LearningEvent, 'id' | 'owner_id' | 'occurred_at'> & { occurredAt?: string }): Promise<void>
   closeSession(sessionId: string, reflection: Pick<ClassSession, 'what_worked' | 'common_difficulty' | 'next_adjustment'>): Promise<void>
   setFollowupStatus(followupId: string, status: FollowupStatus): Promise<void>
   addFollowup(input: { courseId: string; studentId?: string; sessionId?: string; kind: FollowupKind; title: string; dueOn?: string }): Promise<void>
@@ -41,7 +43,9 @@ function readDemo(): TrackerSnapshot {
   const saved = sessionStorage.getItem(DEMO_KEY)
   if (!saved) return createDemoSnapshot()
   try {
-    return JSON.parse(saved) as TrackerSnapshot
+    const parsed = JSON.parse(saved) as TrackerSnapshot
+    parsed.learningEvents ??= []
+    return parsed
   } catch {
     return createDemoSnapshot()
   }
@@ -107,6 +111,18 @@ export class DemoRepository implements TrackerRepository {
     this.save()
   }
 
+  async saveLearningEvent(input: Omit<LearningEvent, 'id' | 'owner_id' | 'occurred_at'> & { occurredAt?: string }) {
+    const session = this.snapshot.sessions.find((item) => item.id === input.session_id && item.course_id === input.course_id)
+    const enrolled = this.snapshot.enrollments.some((item) => item.course_id === input.course_id && item.student_id === input.student_id && item.status === 'active')
+    if (!session || !enrolled) throw new Error('學生或課堂不屬於這個班級。')
+    if (!input.textbook_id || !input.lesson_id || !input.activity_label.trim()) throw new Error('請填寫教材、課次與活動。')
+    for (const value of [input.task_completion, input.comprehensibility, input.language_control, input.interaction]) {
+      if (value !== null && (!Number.isInteger(value) || value < 0 || value > 3)) throw new Error('分數必須介於 0 到 3。')
+    }
+    this.snapshot.learningEvents.unshift({ ...input, id: uid('learning-event'), owner_id: 'demo-owner', occurred_at: input.occurredAt ?? new Date().toISOString() })
+    this.save()
+  }
+
   async closeSession(sessionId: string, reflection: Pick<ClassSession, 'what_worked' | 'common_difficulty' | 'next_adjustment'>) {
     const session = this.snapshot.sessions.find((item) => item.id === sessionId)
     if (!session) throw new Error('找不到這堂課。')
@@ -166,12 +182,13 @@ export class SupabaseRepository implements TrackerRepository {
   constructor(private client: SupabaseClient, private ownerId: string) {}
 
   async load(): Promise<TrackerSnapshot> {
-    const tableNames = ['academic_terms', 'courses', 'students', 'enrollments', 'class_sessions', 'attendance_records', 'observation_records', 'followups'] as const
+    const tableNames = ['academic_terms', 'courses', 'students', 'enrollments', 'class_sessions', 'attendance_records', 'observation_records', 'followups', 'learning_events'] as const
     const results = await Promise.all(tableNames.map((table) => this.client.from(table).select('*').eq('owner_id', this.ownerId)))
     results.forEach((result) => assertNoError(result.error))
     return {
       terms: results[0].data ?? [], courses: results[1].data ?? [], students: results[2].data ?? [], enrollments: results[3].data ?? [],
       sessions: results[4].data ?? [], attendance: results[5].data ?? [], observations: results[6].data ?? [], followups: results[7].data ?? [],
+      learningEvents: results[8].data ?? [],
     } as TrackerSnapshot
   }
 
@@ -202,6 +219,12 @@ export class SupabaseRepository implements TrackerRepository {
 
   async saveObservation(sessionId: string, studentId: string, resultValue: ObservationResult, note = '') {
     const result = await this.client.from('observation_records').upsert({ owner_id: this.ownerId, session_id: sessionId, student_id: studentId, result: resultValue, note: note || null, observed_at: new Date().toISOString() }, { onConflict: 'session_id,student_id' })
+    assertNoError(result.error)
+  }
+
+  async saveLearningEvent(input: Omit<LearningEvent, 'id' | 'owner_id' | 'occurred_at'> & { occurredAt?: string }) {
+    const { occurredAt, ...record } = input
+    const result = await this.client.from('learning_events').insert({ ...record, owner_id: this.ownerId, occurred_at: occurredAt ?? new Date().toISOString() })
     assertNoError(result.error)
   }
 

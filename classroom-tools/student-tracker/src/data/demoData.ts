@@ -5,10 +5,12 @@ import type {
   Course,
   Enrollment,
   Followup,
+  LearningEvent,
   ObservationRecord,
   Student,
   TrackerSnapshot,
 } from '../types'
+import { randomizerRosters } from './randomizerRosterAdapter'
 
 const owner = 'demo-owner'
 const term: AcademicTerm = {
@@ -21,10 +23,9 @@ const term: AcademicTerm = {
 }
 
 const courseSeeds = [
-  ['course-a', 'CN201-A', '華語聽說二 A 班', 'A302', '週一、週三 08:00'],
-  ['course-b', 'CN201-B', '華語聽說二 B 班', 'A305', '週一、週三 10:00'],
-  ['course-c', 'CN203-A', '華語會話二 A 班', 'B201', '週二、週四 13:30'],
-  ['course-d', 'CN203-B', '華語會話二 B 班', 'B204', '週二、週四 15:30'],
+  ['course-lt-01', 'LT_01', 'LT_01 華語班', '—', '依課表上課'],
+  ['course-lt-02', 'LT_02', 'LT_02 華語班', '—', '依課表上課'],
+  ['course-lt-03', 'LT_03', 'LT_03 華語班', '—', '依課表上課'],
 ] as const
 
 const courses: Course[] = courseSeeds.map(([id, code, name, room, schedule_text]) => ({
@@ -39,34 +40,22 @@ const courses: Course[] = courseSeeds.map(([id, code, name, room, schedule_text]
   archived_at: null,
 }))
 
-const familyNames = ['阮', '陳', '黎', '范', '黃', '潘', '武', '鄧', '裴', '杜']
-const givenNames = ['明安', '嘉欣', '德輝', '玉蘭', '國慶', '芳草', '海燕', '俊傑', '秋香', '寶珠']
-const latinNames = ['Nguyễn Minh An', 'Trần Gia Hân', 'Lê Đức Huy', 'Phạm Ngọc Lan', 'Hoàng Quốc Khánh', 'Phan Phương Thảo', 'Vũ Hải Yến', 'Đặng Tuấn Kiệt', 'Bùi Thu Hương', 'Đỗ Bảo Châu']
-
-const students: Student[] = Array.from({ length: 100 }, (_, index) => ({
-  id: `student-${String(index + 1).padStart(3, '0')}`,
-  owner_id: owner,
-  student_code: `SV26${String(index + 1).padStart(3, '0')}`,
-  chinese_name: `${familyNames[index % familyNames.length]}${givenNames[index % givenNames.length]}`,
-  original_name: `${latinNames[index % latinNames.length]} ${index + 1}`,
-  preferred_name: index % 7 === 0 ? givenNames[index % givenNames.length] : null,
-  status: 'active',
+const classOrder = ['LT_01', 'LT_02', 'LT_03'] as const
+const rosterRows = classOrder.flatMap((classId) => randomizerRosters[classId].map(([studentCode, name, seatNumber]) => ({ classId, studentCode, name, seatNumber })))
+const demoCode = (classId: typeof classOrder[number], seatNumber: number) => `DEMO-${classId}-${String(seatNumber).padStart(2, '0')}`
+const students: Student[] = rosterRows.map(({ studentCode, name }) => ({
+  id: studentCode, owner_id: owner, student_code: studentCode, chinese_name: name, original_name: name, preferred_name: null, status: 'active',
 }))
-
-const enrollments: Enrollment[] = students.map((student, index) => ({
-  id: `enrollment-${index + 1}`,
-  owner_id: owner,
-  course_id: courses[Math.floor(index / 25)].id,
-  student_id: student.id,
-  seat_number: (index % 25) + 1,
-  status: 'active',
+const enrollments: Enrollment[] = rosterRows.map(({ classId, studentCode, seatNumber }, index) => ({
+  id: `enrollment-${index + 1}`, owner_id: owner, course_id: courses.find((course) => course.code === classId)!.id,
+  student_id: studentCode, seat_number: Number(seatNumber), status: 'active',
 }))
 
 const sessions: ClassSession[] = [
   {
     id: 'session-previous-a',
     owner_id: owner,
-    course_id: 'course-a',
+    course_id: 'course-lt-01',
     session_date: '2026-08-20',
     starts_at: '08:00',
     topic: '第一課：姓名與介紹',
@@ -80,7 +69,7 @@ const sessions: ClassSession[] = [
   {
     id: 'session-previous-b',
     owner_id: owner,
-    course_id: 'course-b',
+    course_id: 'course-lt-02',
     session_date: '2026-08-20',
     starts_at: '10:00',
     topic: '第一課：姓名與介紹',
@@ -94,23 +83,39 @@ const sessions: ClassSession[] = [
 ]
 
 const attendance: AttendanceRecord[] = [
-  { id: 'att-1', owner_id: owner, session_id: 'session-previous-a', student_id: 'student-003', status: 'late', note: null },
-  { id: 'att-2', owner_id: owner, session_id: 'session-previous-a', student_id: 'student-011', status: 'absent', note: null },
+  { id: 'att-1', owner_id: owner, session_id: 'session-previous-a', student_id: demoCode('LT_01', 3), status: 'late', note: null },
+  { id: 'att-2', owner_id: owner, session_id: 'session-previous-a', student_id: demoCode('LT_01', 11), status: 'absent', note: null },
 ]
 
 const observations: ObservationRecord[] = [
-  { id: 'obs-1', owner_id: owner, session_id: 'session-previous-a', student_id: 'student-001', result: 'independent', note: null, observed_at: '2026-08-20T08:40:00+07:00' },
-  { id: 'obs-2', owner_id: owner, session_id: 'session-previous-a', student_id: 'student-004', result: 'with_prompt', note: '需要提示追問句。', observed_at: '2026-08-20T08:43:00+07:00' },
-  { id: 'obs-3', owner_id: owner, session_id: 'session-previous-a', student_id: 'student-008', result: 'not_yet', note: '只回答，還沒有追問。', observed_at: '2026-08-20T08:46:00+07:00' },
-  { id: 'obs-4', owner_id: owner, session_id: 'session-previous-b', student_id: 'student-026', result: 'independent', note: null, observed_at: '2026-08-20T10:45:00+07:00' },
+  { id: 'obs-1', owner_id: owner, session_id: 'session-previous-a', student_id: demoCode('LT_01', 1), result: 'independent', note: null, observed_at: '2026-08-20T08:40:00+07:00' },
+  { id: 'obs-2', owner_id: owner, session_id: 'session-previous-a', student_id: demoCode('LT_01', 4), result: 'with_prompt', note: '需要提示追問句。', observed_at: '2026-08-20T08:43:00+07:00' },
+  { id: 'obs-3', owner_id: owner, session_id: 'session-previous-a', student_id: demoCode('LT_01', 8), result: 'not_yet', note: '只回答，還沒有追問。', observed_at: '2026-08-20T08:46:00+07:00' },
+  { id: 'obs-4', owner_id: owner, session_id: 'session-previous-b', student_id: demoCode('LT_02', 9), result: 'independent', note: null, observed_at: '2026-08-20T10:45:00+07:00' },
 ]
 
 const followups: Followup[] = [
-  { id: 'followup-1', owner_id: owner, course_id: 'course-a', student_id: 'student-008', session_id: 'session-previous-a', kind: 'reobserve', title: '下次再看一次追問表現', due_on: '2026-08-24', status: 'open', completed_at: null },
-  { id: 'followup-2', owner_id: owner, course_id: 'course-b', student_id: 'student-031', session_id: null, kind: 'makeup', title: '補做姓名介紹口語任務', due_on: '2026-08-25', status: 'open', completed_at: null },
-  { id: 'followup-3', owner_id: owner, course_id: 'course-c', student_id: 'student-058', session_id: null, kind: 'remind', title: '提醒帶預習卡', due_on: '2026-08-27', status: 'open', completed_at: null },
+  { id: 'followup-1', owner_id: owner, course_id: 'course-lt-01', student_id: demoCode('LT_01', 8), session_id: 'session-previous-a', kind: 'reobserve', title: '下次再看一次追問表現', due_on: '2026-08-24', status: 'open', completed_at: null },
+  { id: 'followup-2', owner_id: owner, course_id: 'course-lt-02', student_id: demoCode('LT_02', 4), session_id: null, kind: 'makeup', title: '補做姓名介紹口語任務', due_on: '2026-08-25', status: 'open', completed_at: null },
+  { id: 'followup-3', owner_id: owner, course_id: 'course-lt-03', student_id: demoCode('LT_03', 7), session_id: null, kind: 'remind', title: '提醒帶預習卡', due_on: '2026-08-27', status: 'open', completed_at: null },
 ]
 
+const learningEvents: LearningEvent[] = [
+  ['le-1',demoCode('LT_01', 1),'random_call',3,3,2,3,false,'08:38'],
+  ['le-2',demoCode('LT_01', 4),'voluntary_answer',3,2,2,2,false,'08:42'],
+  ['le-3',demoCode('LT_01', 8),'class_observation',1,2,1,1,true,'08:46'],
+  ['le-4',demoCode('LT_01', 13),'random_call',2,2,2,1,true,'08:52'],
+  ['le-5',demoCode('LT_01', 15),'voluntary_answer',3,3,3,2,false,'09:03'],
+  ['le-6',demoCode('LT_01', 16),'class_observation',2,2,1,2,true,'09:12'],
+  ['le-7',demoCode('LT_01', 17),'random_call',3,2,2,3,false,'09:24'],
+  ['le-8',demoCode('LT_01', 18),'class_observation',2,3,2,2,false,'09:36'],
+].map(([id, student_id, source, task_completion, comprehensibility, language_control, interaction, needs_review, time]) => ({
+  id: String(id), owner_id: owner, course_id: 'course-lt-01', session_id: 'session-previous-a', student_id: String(student_id),
+  occurred_at: `2026-08-20T${time}:00+07:00`, source: source as LearningEvent['source'], lesson_label: '第一課',
+  activity_label: '姓名與追問', task_completion: Number(task_completion), comprehensibility: Number(comprehensibility),
+  language_control: Number(language_control), interaction: Number(interaction), needs_review: Boolean(needs_review),
+}))
+
 export function createDemoSnapshot(): TrackerSnapshot {
-  return structuredClone({ terms: [term], courses, students, enrollments, sessions, attendance, observations, followups })
+  return structuredClone({ terms: [term], courses, students, enrollments, sessions, attendance, observations, followups, learningEvents })
 }

@@ -1,0 +1,492 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-pptx-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-08",
+  "mode": "online",
+  "title": "第八课《孙子和《孙子兵法》》在线预习",
+  "status": "draft_not_approved",
+  "builder_scope": "scripts/build_l23_pptx_drafts.js",
+  "draft_gate": "lesson-specific",
+  "source_sha256": "30bc7a4716233edf482abac6d8838a296359a51f2c5958efb9becf535f216b89",
+  "layout_source": "boya-quasi-intermediate-i lesson-01 approved layout family",
+  "shared_layout_contract": "course/boya-online-layout-contract.json",
+  "lesson_content_contract": "course/boya-online-content-contract.json",
+  "example_bank": {
+    "source": "course/boya-example-bank.json",
+    "review_status": "ai_reviewed_pending_adam_approval",
+    "vocabulary_examples_per_item": 2,
+    "expression_examples_per_item": 2
+  },
+  "fixed_structure": [
+    "cover",
+    "learning_flow",
+    "goals",
+    "vocabulary",
+    "practice_after_each_full_five",
+    "proper_nouns_if_present",
+    "short_text_divider_before_each_text",
+    "short_text_record",
+    "expressions_after_related_text",
+    "comprehensive_practice",
+    "difficult_points_reflection",
+    "pre_class_check",
+    "thanks"
+  ],
+  "route_asset": "learning-route-user-supplied-transparent.png",
+  "vocabulary_practice_after_every": 5,
+  "vocabulary_extension_policy": "word_specific_optional; never show an empty universal extension label",
+  "vocabulary_page_breaks": {
+    "first_page": 68,
+    "first_count": 17,
+    "second_page": 69
+  },
+  "fixed_ending_titles": [
+    "我觉得很难的地方",
+    "课前检查",
+    "谢谢大家，我们课堂见。"
+  ],
+  "short_example_policy": "curated_short_sentences_max_24_hanzi_chars",
+  "short_text_policy": "textbook_reading_prompt_and_record_layout_no_full_text_copy",
+  "shared_assets": [
+    "lesson-01-cover-family-work-hobby.png",
+    "learning-route-user-supplied-transparent.png",
+    "divider-family.png",
+    "divider-work.png",
+    "divider-hobby.png",
+    "divider-comprehensive.png",
+    "symbolic-vocabulary.png",
+    "symbolic-listening.png",
+    "symbolic-sentence-pattern.png",
+    "oral-practice-divider.png",
+    "speaking-practice.png"
+  ],
+  "image_manifest": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/image-manifest.json",
+  "lesson_specific_image_assets": [
+    {
+      "asset_id": "L08-cover",
+      "file": "lesson-08-cover-sunzi.png",
+      "category": "cover",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-C01",
+      "file": "lesson-08-context-01-palace-training.png",
+      "category": "short_text_context",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-C02",
+      "file": "lesson-08-context-02-war-strategy.png",
+      "category": "short_text_context",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-C03",
+      "file": "lesson-08-context-03-world-influence.png",
+      "category": "short_text_context",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V01",
+      "file": "vocab-01-shibing.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V02",
+      "file": "vocab-02-dazhang.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V03",
+      "file": "vocab-03-xunlian.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V04",
+      "file": "vocab-04-jingong.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V05",
+      "file": "vocab-05-junshijia.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V06",
+      "file": "vocab-06-jizai.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V07",
+      "file": "vocab-07-jiangjun.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V08",
+      "file": "vocab-08-quanli.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V09",
+      "file": "vocab-09-celue.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V10",
+      "file": "vocab-10-daibaizhang.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V11",
+      "file": "vocab-11-jieshu.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V12",
+      "file": "vocab-12-kaishe.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V13",
+      "file": "vocab-13-daibingdazhang.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V14",
+      "file": "vocab-14-yanming.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V15",
+      "file": "vocab-15-genju.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V16",
+      "file": "vocab-16-cengjing.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V17",
+      "file": "vocab-17-zhanshi.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V18",
+      "file": "vocab-18-qizi.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V19",
+      "file": "vocab-19-zhiding.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V20",
+      "file": "vocab-20-xixihaha.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V21",
+      "file": "vocab-21-yansu.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V22",
+      "file": "vocab-22-an.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V23",
+      "file": "vocab-23-junfa.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V24",
+      "file": "vocab-24-chusi.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V25",
+      "file": "vocab-25-nanguo.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V26",
+      "file": "vocab-26-renming.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V27",
+      "file": "vocab-27-dashengzhang.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V28",
+      "file": "vocab-28-ji.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V29",
+      "file": "vocab-29-zhanbai.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V30",
+      "file": "vocab-30-sunzi.png",
+      "category": "proper_noun",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L08-V31",
+      "file": "vocab-31-sunzibingfa.png",
+      "category": "proper_noun",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    }
+  ],
+  "image_approval_status": "pending_source_visual_and_adam_review",
+  "vocabulary_image_policy": "one_distinct_semantic_asset_per_vocabulary_item",
+  "vocabulary_image_count": 31,
+  "vocabulary_image_assets": [
+    {
+      "word": "士兵",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-01-shibing.png",
+      "status": "candidate"
+    },
+    {
+      "word": "打仗",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-02-dazhang.png",
+      "status": "candidate"
+    },
+    {
+      "word": "训练",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-03-xunlian.png",
+      "status": "candidate"
+    },
+    {
+      "word": "进攻",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-04-jingong.png",
+      "status": "candidate"
+    },
+    {
+      "word": "军事家",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-05-junshijia.png",
+      "status": "candidate"
+    },
+    {
+      "word": "记载",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-06-jizai.png",
+      "status": "candidate"
+    },
+    {
+      "word": "将军",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-07-jiangjun.png",
+      "status": "candidate"
+    },
+    {
+      "word": "权力",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-08-quanli.png",
+      "status": "candidate"
+    },
+    {
+      "word": "策略",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-09-celue.png",
+      "status": "candidate"
+    },
+    {
+      "word": "打败仗",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-10-daibaizhang.png",
+      "status": "candidate"
+    },
+    {
+      "word": "结束",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-11-jieshu.png",
+      "status": "candidate"
+    },
+    {
+      "word": "开设",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-12-kaishe.png",
+      "status": "candidate"
+    },
+    {
+      "word": "带兵打仗",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-13-daibingdazhang.png",
+      "status": "candidate"
+    },
+    {
+      "word": "严明",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-14-yanming.png",
+      "status": "candidate"
+    },
+    {
+      "word": "根据",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-15-genju.png",
+      "status": "candidate"
+    },
+    {
+      "word": "曾经",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-16-cengjing.png",
+      "status": "candidate"
+    },
+    {
+      "word": "展示",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-17-zhanshi.png",
+      "status": "candidate"
+    },
+    {
+      "word": "妻子",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-18-qizi.png",
+      "status": "candidate"
+    },
+    {
+      "word": "制定",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-19-zhiding.png",
+      "status": "candidate"
+    },
+    {
+      "word": "嘻嘻哈哈",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-20-xixihaha.png",
+      "status": "candidate"
+    },
+    {
+      "word": "严肃",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-21-yansu.png",
+      "status": "candidate"
+    },
+    {
+      "word": "按",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-22-an.png",
+      "status": "candidate"
+    },
+    {
+      "word": "军法",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-23-junfa.png",
+      "status": "candidate"
+    },
+    {
+      "word": "处死",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-24-chusi.png",
+      "status": "candidate"
+    },
+    {
+      "word": "难过",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-25-nanguo.png",
+      "status": "candidate"
+    },
+    {
+      "word": "任命",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-26-renming.png",
+      "status": "candidate"
+    },
+    {
+      "word": "打胜仗",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-27-dashengzhang.png",
+      "status": "candidate"
+    },
+    {
+      "word": "既",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-28-ji.png",
+      "status": "candidate"
+    },
+    {
+      "word": "战败",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-29-zhanbai.png",
+      "status": "candidate"
+    },
+    {
+      "word": "孙子",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-30-sunzi.png",
+      "status": "candidate"
+    },
+    {
+      "word": "《孙子兵法》",
+      "asset": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/assets/vocab-31-sunzibingfa.png",
+      "status": "candidate"
+    }
+  ],
+  "slide_count": 79,
+  "audio_tracks_available": [
+    "8-1",
+    "8-2",
+    "8-3",
+    "8-4",
+    "8-5",
+    "8-6"
+  ],
+  "audio_tracks_embedded": [
+    "8-4",
+    "8-5",
+    "8-6"
+  ],
+  "audio_playback_policy": "embedded_on_audio-summary-slides; PowerPoint playback QA remains pending for draft",
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/pptx-draft/online/lesson-08-在线预习.pptx",
+    "sha256": "25c27fa5c91581357c7d43e4557fd8429beffc006f739e877937ec690ffe19e1",
+    "bytes": 71980096
+  },
+  "generated_at": "2026-09-03T09:18:02.299Z"
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-teaching-design-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-09",
+  "status": "draft_not_approved",
+  "source": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json",
+  "boundary_confirmation": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/storyboard/lesson-09-boundary-confirmation-2026-09-03.md",
+  "can_do": {
+    "interpretive": "听懂三篇短文中北方菜、南方菜和饮食习惯的主要信息。",
+    "interpersonal": "回答并讨论跟饮食、口味、聚餐和生活方式有关的问题。",
+    "presentational": "根据三篇短文整理信息，比较南北饮食习惯，并介绍自己的饮食生活。"
+  },
+  "task_spine": [
+    "先预听并记录词语和短文重点",
+    "课堂用关键词回答听力问题",
+    "重述三篇短文并比较自己与短文的饮食习惯",
+    "完成综合表格和个人口语介绍"
+  ],
+  "source_coverage": {
+    "listening_exercises": 9,
+    "short_texts": 3,
+    "vocabulary_items": 27,
+    "expression_items": 16,
+    "comprehensive_items": 3
+  },
+  "approval_note": "本文件只记录 draft 教学重组输入；不代表来源、教师手册、PPT 或课堂 rehearsal 已批准。"
+}

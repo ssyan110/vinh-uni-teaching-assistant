@@ -1,0 +1,143 @@
+{
+  "schema_version": "boya-vocab-image-candidate-manifest-v1",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-08",
+  "offering_id": "2026-fall",
+  "generated_at": "2026-09-03",
+  "status": "pending_review",
+  "image_policy": {
+    "format": "PNG",
+    "dimensions": "square",
+    "style": "fine blue-gray linework, low-saturation pastel educational textbook illustration",
+    "content": "No readable text, numbers, logos, flags, watermarks, labels, captions, or speech bubbles. Historical imagery is non-graphic and uses blank scrolls or bamboo slips."
+  },
+  "assets": [
+    {
+      "word": "曾经",
+      "file": "vocab-16-cengjing.png",
+      "prompt": "Create one independent square PNG educational textbook illustration for the Chinese vocabulary concept “曾经” meaning “once / in the past”. Show a gentle, clearly readable visual of the same person looking at a small framed memory scene of their earlier life, with a subtle past-versus-present composition and no written text. Approved classroom illustration style: fine blue-gray linework, low-saturation pastel colors, pure white background, generous negative space, simple friendly shapes, calm and concrete. No readable Chinese, Latin letters, numbers, labels, captions, logos, watermark, flag, speech bubble, or decorative abstract symbolism. The image must serve the meaning of a past experience, not be generic decoration. Square composition, clean edges, no border, no text.",
+      "dimensions": {"width": 1254, "height": 1254},
+      "sha256": "8a07a30e4246a1b04708c34d83b7b28fd75f789f87ddcfd9de70a703c82918ed",
+      "status": "pending_review"
+    },
+    {
+      "word": "展示",
+      "file": "vocab-17-zhanshi.png",
+      "prompt": "Create one independent square PNG educational textbook illustration for the Chinese vocabulary concept “展示” meaning “to show / display”. Show a person clearly presenting an open blank artifact or object on a small table to two attentive viewers, with an inviting gesture and the object visibly on display. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous negative space, simple friendly textbook illustration. No readable Chinese, Latin letters, numbers, labels, captions, logos, watermark, flag, speech bubble, or abstract decoration. Square composition, no border, no text.",
+      "dimensions": {"width": 1254, "height": 1254},
+      "sha256": "7a755a7d4763ad2fe3f1b509858380bd04712ba3dcc06429214a53a0c66c745a",
+      "status": "pending_review"
+    },
+    {
+      "word": "妻子",
+      "file": "vocab-18-qizi.png",
+      "prompt": "Create one independent square PNG educational textbook illustration for the Chinese vocabulary “妻子” meaning “wife”. Show a respectful historical domestic scene with an adult woman and her adult spouse together, the woman clearly presented as the spouse through warm partnership and household context, not a wedding ceremony. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous negative space, gentle educational textbook illustration. No readable Chinese, Latin letters, numbers, labels, captions, logos, watermark, flag, speech bubble, or abstract decoration. Square composition, no border, no text.",
+      "dimensions": {"width": 1254, "height": 1254},
+      "sha256": "1423afef9d579dbd20500ff9725047ad703a831d8e218da603133c70cf85b27d",
+      "status": "pending_review"
+    },
+    {
+      "word": "制定",
+      "file": "vocab-19-zhiding.png",
+      "prompt": "Create one independent square PNG educational textbook illustration for the Chinese vocabulary concept “制定” meaning “to formulate / draw up”. Show a thoughtful commander or team leader arranging blank cards and simple markers on a clean planning board or map to create a plan, with a deliberate planning gesture. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous negative space, clear educational textbook illustration. All cards and map surfaces must be blank with no readable writing. No Chinese, Latin letters, numbers, labels, captions, logos, watermark, flag, speech bubble, or abstract decoration. Square composition, no border, no text.",
+      "dimensions": {"width": 1254, "height": 1254},
+      "sha256": "ed00bb13da503a92a662d953016e712b9d76e018ee3ee34ceb41e30f0add07a7",
+      "status": "pending_review"
+    },
+    {
+      "word": "嘻嘻哈哈",
+      "file": "vocab-20-xixihaha.png",
+      "prompt": "Create one independent square PNG educational textbook illustration for the Chinese idiom “嘻嘻哈哈” meaning laughing and joking. Show a small group of friendly adult people laughing together with open cheerful expressions and relaxed playful gestures, clearly lighthearted and not serious. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous negative space, simple educational textbook illustration. No readable Chinese, Latin letters, numbers, labels, captions, logos, watermark, flag, speech bubble, or abstract decoration. Square composition, no border, no text.",
+      "dimensions": {"width": 1254, "height": 1254},
+      "sha256": "04322d5e948bf9949f36b9e8a4254664d6e4a2494efde935b6ca3bfcf493fcdd",
+      "status": "pending_review"
+    },
+    {
+      "word": "严肃",
+      "file": "vocab-21-yansu.png",
+      "prompt": "Create one independent square PNG educational textbook illustration for the Chinese vocabulary “严肃” meaning serious. Show a disciplined commander or teacher with a calm, firm expression and upright posture while a small group stands quietly at attention; the mood is clearly serious, not angry or frightening. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous negative space, simple educational textbook illustration. No readable Chinese, Latin letters, numbers, labels, captions, logos, watermark, flag, speech bubble, or abstract decoration. Square composition, no border, no text.",
+      "dimensions": {"width": 1254, "height": 1254},
+      "sha256": "acf3cbc6425f1f1466b158a5b008d43c565f2712c600a75d1c649c2e7a68a6c8",
+      "status": "pending_review"
+    },
+    {
+      "word": "按",
+      "file": "vocab-22-an.png",
+      "prompt": "Create one independent square PNG educational textbook illustration for the Chinese preposition “按” meaning according to. Show a person carefully following a blank rule tablet or blank instruction card while carrying out an orderly action, making the relation “follow according to a rule” immediately clear. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous negative space, concrete educational textbook illustration. The tablet and card must be completely blank. No readable Chinese, Latin letters, numbers, labels, captions, logos, watermark, flag, speech bubble, or abstract decoration. Square composition, no border, no text.",
+      "dimensions": {"width": 1254, "height": 1254},
+      "sha256": "9e587b5f694895f12ac950a623645c1573ee480fd040a32bc1dcc163de5c1cfd",
+      "status": "pending_review"
+    },
+    {
+      "word": "军法",
+      "file": "vocab-23-junfa.png",
+      "prompt": "Create one independent square PNG educational textbook illustration for the Chinese noun “军法” meaning military law. Show an ancient military commander beside an upright blank bamboo-slip code and an orderly line of soldiers, conveying formal military rules and discipline. The bamboo slips must have no writing or symbols. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous negative space, respectful historical educational textbook illustration. No readable Chinese, Latin letters, numbers, labels, captions, logos, watermark, flag, speech bubble, or abstract decoration. Square composition, no border, no text.",
+      "dimensions": {"width": 1254, "height": 1254},
+      "sha256": "ccd5ff961efb8b3ea9a8b772b63ba7bf523e3b1c5f84074771e51f1f68606644",
+      "status": "pending_review"
+    },
+    {
+      "word": "处死",
+      "file": "vocab-24-chusi.png",
+      "prompt": "Create one independent square PNG educational textbook illustration for the Chinese verb “处死” meaning to execute. Use a non-graphic, classroom-appropriate ancient justice scene: a solemn commander points toward a separate empty wooden punishment platform while a restrained prisoner is shown only as a small distant silhouette, clearly separated from the platform; no harm is shown, no blood, no gore, no frightening detail. Include a plain blank law tablet to convey a formal sentence. Absolutely no flags, pennants, banners, standards, poles, spear shafts, or hanging cloth. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous negative space, respectful educational textbook illustration. No readable Chinese, Latin letters, numbers, labels, captions, logos, watermark, speech bubble, or abstract decoration. Square composition, no border, no text.",
+      "dimensions": {"width": 1254, "height": 1254},
+      "sha256": "bb8327bc88191b2fdc609e28b128c0ad20cce987b1f9ccc3427a5ac97aa04dc0",
+      "status": "pending_review"
+    },
+    {
+      "word": "难过",
+      "file": "vocab-25-nanguo.png",
+      "prompt": "Create one independent square PNG educational textbook illustration for the Chinese adjective “难过” meaning sad. Show an adult person sitting quietly with downcast face and gentle tears beside a wilted flower, clearly conveying sadness without melodrama. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous negative space, sensitive educational textbook illustration. No readable Chinese, Latin letters, numbers, labels, captions, logos, watermark, flag, speech bubble, or abstract decoration. Square composition, no border, no text.",
+      "dimensions": {"width": 1254, "height": 1254},
+      "sha256": "436d78cd09040f4bdd0912e2f9a6f5ad852db654e591cf2f9e8e3a855f173f17",
+      "status": "pending_review"
+    },
+    {
+      "word": "任命",
+      "file": "vocab-26-renming.png",
+      "prompt": "Create one independent square PNG educational textbook illustration for the Chinese verb “任命” meaning to appoint. Show a ruler or senior leader formally handing a ceremonial command baton to a respectful general, with the surrounding people witnessing the official appointment. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous negative space, clear historical educational textbook illustration. No readable Chinese, Latin letters, numbers, labels, captions, logos, watermark, flag, speech bubble, or abstract decoration. Square composition, no border, no text.",
+      "dimensions": {"width": 1254, "height": 1254},
+      "sha256": "0a967d43508f377a32c58bb1d890c4b083c144218194a55c79245b10d4b7b5f3",
+      "status": "pending_review"
+    },
+    {
+      "word": "打胜仗",
+      "file": "vocab-27-dashengzhang.png",
+      "prompt": "Create one independent square PNG educational textbook illustration for the Chinese verb phrase “打胜仗” meaning to win a battle. Show a disciplined group of soldiers and their commander celebrating a clear victory on a hill with relieved smiles, raised hands, and a safe non-graphic battlefield aftermath; no flags. The composition must convey winning, not generic teamwork. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous negative space, educational textbook illustration. No readable Chinese, Latin letters, numbers, labels, captions, logos, watermark, flags, speech bubbles, or abstract decoration. Square composition, no border, no text.",
+      "dimensions": {"width": 1254, "height": 1254},
+      "sha256": "8383265b5f2bf084adcb875323ab368f3aa9c0cc1298cb3ed52d95792d1c092a",
+      "status": "pending_review"
+    },
+    {
+      "word": "既",
+      "file": "vocab-28-ji.png",
+      "prompt": "Create one independent square PNG educational textbook illustration for the Chinese adverb “既” in the pattern “既……又/也……”, meaning both…and. Show one person clearly doing two compatible things at once in a balanced split composition, holding a blank strategy map in one hand and listening to another person in the other, with two equal visual cues connected by a subtle line. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous negative space, concrete educational textbook illustration. No readable Chinese, Latin letters, numbers, labels, captions, logos, watermark, flag, speech bubble, or abstract decoration. Square composition, no border, no text.",
+      "dimensions": {"width": 1254, "height": 1254},
+      "sha256": "10e37e8e5a30070beffa2e26207d63b31dc4d6598ce6b057b3f33ccddc478a9b",
+      "status": "pending_review"
+    },
+    {
+      "word": "战败",
+      "file": "vocab-29-zhanbai.png",
+      "prompt": "Create one independent square PNG educational textbook illustration for the Chinese verb “战败” meaning to be defeated in battle. Show a non-graphic historical scene with a tired defeated commander and a few soldiers lowering their heads beside a lowered broken shield, while the opposing side is only a distant silhouette; the visual must clearly convey defeat, not sadness alone. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous negative space, respectful educational textbook illustration. No flags. No readable Chinese, Latin letters, numbers, labels, captions, logos, watermark, speech bubble, or abstract decoration. Square composition, no border, no text.",
+      "dimensions": {"width": 1254, "height": 1254},
+      "sha256": "2f72a905e6aefef14d659b4842bd16772c4020614738fc7945228849bd53aa36",
+      "status": "pending_review"
+    },
+    {
+      "word": "孙子",
+      "file": "vocab-30-sunzi.png",
+      "prompt": "Create one independent square PNG educational textbook illustration for the proper noun “孙子”. Show Sun Tzu as an ancient Chinese military strategist in historically inspired clothing, calm and thoughtful, holding a completely blank bamboo-slip bundle beside a plain strategy table. Use a recognizable historical scholar-strategist presence without portrait text or name labels. The table may have blank geometric wooden pieces only, but no map. Absolutely no flags, pennants, banners, standards, poles, spear shafts, hanging cloth, or symbols. Fine blue-gray linework, low-saturation pastel colors, pure white background, generous negative space, respectful educational textbook illustration. No readable Chinese, Latin letters, numbers, labels, captions, logos, watermark, speech bubble, or abstract decoration. Square composition, no border, no text.",
+      "dimensions": {"width": 1254, "height": 1254},
+      "sha256": "596c5c7442347e74ed20ae3e37f35bb5c8692b61514011fab2792723b635ba8a",
+      "status": "pending_review"
+    },
+    {
+      "word": "《孙子兵法》",
+      "file": "vocab-31-sunzibingfa.png",
+      "prompt": "Create one independent square PNG educational textbook illustration for the proper noun “《孙子兵法》” meaning The Art of War. Show an ancient Chinese military treatise represented only by neatly arranged completely blank bamboo slips and a rolled blank scroll on a low table, with a few plain wooden planning pieces beside it. Convey a book about military strategy through the bamboo slips and planning objects, with no map. Absolutely no flags, pennants, banners, standards, poles, spear shafts, hanging cloth, or symbols. Historical atmosphere, fine blue-gray linework, low-saturation pastel colors, pure white background, generous negative space, respectful educational textbook illustration. No readable Chinese, Latin letters, numbers, labels, captions, logos, watermark, speech bubble, or abstract decoration. Square composition, no border, no text.",
+      "dimensions": {"width": 1254, "height": 1254},
+      "sha256": "2d67829fbee67df538cad61c872bc3906c9709f48682cc0065e98426bcd30cbf",
+      "status": "pending_review"
+    }
+  ]
+}

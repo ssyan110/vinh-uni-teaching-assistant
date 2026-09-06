@@ -56,10 +56,10 @@ export function MorePage() {
   const exportStudents = () => {
     const header = ['學號', '中文姓名', '原名', '常用名', '狀態']
     const rows = snapshot.students.map((student) => [student.student_code, student.chinese_name, student.original_name, student.preferred_name, student.status].map(csvEscape).join(','))
-    downloadFile(`課跡-學生名冊-${new Date().toISOString().slice(0, 10)}.csv`, `\uFEFF${header.join(',')}\n${rows.join('\n')}`, 'text/csv;charset=utf-8')
+    downloadFile(`荣市大学-学生名册-${new Date().toISOString().slice(0, 10)}.csv`, `\uFEFF${header.join(',')}\n${rows.join('\n')}`, 'text/csv;charset=utf-8')
   }
 
-  const exportBackup = () => downloadFile(`課跡-完整備份-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(snapshot, null, 2), 'application/json')
+  const exportBackup = () => downloadFile(`荣市大学-完整备份-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(snapshot, null, 2), 'application/json')
 
   return (
     <div className="page more-page">

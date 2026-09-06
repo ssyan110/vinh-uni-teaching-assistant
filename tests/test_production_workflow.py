@@ -20,6 +20,7 @@ from workflow_integrity import (
     audit_authority_manifest,
     audit_frozen_source_package,
     expected_release_entries,
+    portable_release_path_key,
     sha256,
     tree_hash,
 )
@@ -228,6 +229,21 @@ class ProductionWorkflowTests(unittest.TestCase):
 
         self.assertTrue(any("unsafe release_path" in failure for failure in failures))
 
+    def test_release_mapping_rejects_portable_name_collision(self) -> None:
+        manifest = {
+            "authority": {},
+            "files": [
+                {"path": "authority/a.txt", "sha256": "1" * 64, "bytes": 1},
+                {"path": "authority/b.txt", "sha256": "2" * 64, "bytes": 1},
+            ],
+            "release_materials": [
+                {"source_path": "authority/a.txt", "release_path": "Extra/File.txt", "category": "supplement"},
+                {"source_path": "authority/b.txt", "release_path": "extra/file.TXT", "category": "supplement"},
+            ],
+        }
+        _entries, failures = expected_release_entries(manifest)
+        self.assertTrue(any("portable-name collision" in failure for failure in failures))
+
     def test_release_directory_rejects_unapproved_extra_file(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             package = Path(temp) / "第一课-教学资料"
@@ -333,6 +349,35 @@ class ProductionWorkflowTests(unittest.TestCase):
                     / "test-v1/第一课-教学资料/03-活动卡/group/card.docx"
                 ).read_bytes(),
             )
+
+    def test_portable_release_paths_reject_cross_platform_hazards(self) -> None:
+        unsafe = (
+            "folder\\escape.txt", "folder/control\x01.txt", "folder/CON.txt",
+            "folder/name. ", "folder/name:", "folder/e\u0301.txt",
+        )
+        for value in unsafe:
+            with self.subTest(value=value):
+                _key, error = portable_release_path_key(value)
+                self.assertIsNotNone(error)
+        first, error = portable_release_path_key("Folder/É.TXT")
+        second, error2 = portable_release_path_key("folder/é.txt")
+        self.assertIsNone(error)
+        self.assertIsNone(error2)
+        self.assertEqual(first, second)
+
+    def test_release_zip_rejects_backslash_and_portable_collision(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            zip_path = Path(temp) / "unsafe-portable.zip"
+            package = "lesson-01-教材包"
+            with zipfile.ZipFile(zip_path, "w") as archive:
+                archive.writestr(f"{package}/Folder/A.txt", "one")
+                archive.writestr(f"{package}/folder/a.TXT", "two")
+                archive.writestr(f"{package}/folder\\escape.txt", "bad")
+            failures: list[str] = []
+            audit_release_zip(zip_path, [], failures, package)
+            text = "\n".join(failures)
+            self.assertIn("portable-name collision", text)
+            self.assertIn("non-portable path", text)
 
     def test_release_zip_rejects_unsafe_member(self) -> None:
         with tempfile.TemporaryDirectory() as temp:

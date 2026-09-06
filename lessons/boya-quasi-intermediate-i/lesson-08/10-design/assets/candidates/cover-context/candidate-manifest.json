@@ -1,0 +1,73 @@
+{
+  "schema_version": "boya-lesson-image-candidate-manifest-v1",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-08",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_id": "lesson-08",
+  "lesson_title": "孙子和《孙子兵法》",
+  "generated_at": "2026-09-03",
+  "candidate_scope": "cover_and_short_text_context",
+  "visual_requirements": {
+    "slide_background": "pure white, supplied by PPT",
+    "style": "approved educational textbook illustration",
+    "linework": "fine blue-gray",
+    "palette": "low-saturation pastel",
+    "format": "PNG",
+    "aspect_ratio": "16:9",
+    "text_policy": "no readable text, numbers, logos, flags, labels, captions, watermark, or speech bubbles"
+  },
+  "approval_boundary": {
+    "status": "pending_review",
+    "can_enter_ppt": false,
+    "note": "Candidate assets only; semantic review and Adam approval are still required."
+  },
+  "candidates": [
+    {
+      "file": "lesson-08-cover-sunzi.png",
+      "purpose": "封面主视觉：孙武、古代卷册、地图与抽象战略意象；为 PPT 标题保留左侧留白。",
+      "prompt": "Create one candidate illustration for a Chinese language educational textbook slide cover, widescreen 16:9 composition. Subject: Sun Wu / Sun Tzu as a calm ancient Chinese military thinker in simple spring-and-autumn-period clothing, standing beside an open bamboo-slip manuscript and a folded silk map, with subtle abstract strategy elements such as a few small stones arranged like a planning board and a distant soft landscape. Make the composition balanced with generous quiet negative space for slide title placement, especially on the left, and the main figure and objects grouped toward the right-center. Approved textbook illustration style: fine blue-gray linework, delicate pencil and watercolor texture, low-saturation pastel slate blue, sage, muted sand, and a restrained coral accent, airy educational editorial illustration, gentle and approachable, historically inspired but not dramatic. The illustration itself must have a clean near-white background that can sit on a pure white PowerPoint canvas. No readable text, no Chinese characters, no Latin letters, no numbers, no labels, no logos, no watermark, no flag, no military insignia, no speech bubbles, no photorealism, no weapons in use, no blood, no violence.",
+      "dimensions": {
+        "width_px": 1672,
+        "height_px": 941,
+        "aspect_ratio": "1672:941"
+      },
+      "sha256": "2e143c46afd0c0f7c6628c0a40590855a57d35e4fc40ba9157c200685dc664bd",
+      "status": "pending_review"
+    },
+    {
+      "file": "lesson-08-context-01-palace-training.png",
+      "purpose": "短文一情境图：孙武在宫廷庭院训练宫女，表现带队、训练、规则与纪律。",
+      "prompt": "Create one candidate illustration for a Chinese language educational textbook slide, widescreen 16:9 composition. Short-text context: the historical story of Sun Wu training palace women. Show an ancient Chinese palace courtyard in the Spring and Autumn period: Sun Wu stands calmly at the front giving clear instructions with an open hand, two rows of palace women in simple period clothing stand in an orderly formation, and two female captains stand at the front of the two groups with attentive serious expressions. Include a small ceremonial drum and simple wooden practice staffs placed safely at the side, suggesting military training without depicting combat. The scene should communicate leadership, training, rules, and discipline in a child-safe, non-violent way. Approved educational textbook illustration style: fine blue-gray linework, delicate pencil and watercolor texture, low-saturation pastel slate blue, sage, muted sand, and restrained coral accents, airy composition, generous negative space, gentle historically inspired editorial illustration. The illustration itself has a clean near-white background that can sit on a pure white PowerPoint canvas. No readable text, no Chinese characters, no Latin letters, no numbers, no labels, no logos, no watermark, no flags, no military insignia, no speech bubbles, no blood, no execution, no injury, no photorealism.",
+      "dimensions": {
+        "width_px": 1672,
+        "height_px": 941,
+        "aspect_ratio": "1672:941"
+      },
+      "sha256": "87b625c134e6111759cafe0dc678e0a5cea00e1f44b94e5385fb4416e83efec1",
+      "status": "pending_review"
+    },
+    {
+      "file": "lesson-08-context-02-war-strategy.png",
+      "purpose": "短文二情境图：古代卷册、地形图、双方棋子与路线，表现战争理论与策略思考。",
+      "prompt": "Create one candidate illustration for a Chinese language educational textbook slide, widescreen 16:9 composition. Short-text context: Sun Tzu's book about war theory and strategy. Show an open ancient bamboo-slip manuscript and a hand-drawn terrain map on a low wooden table, with two small opposing groups of neutral wooden markers arranged in thoughtful formations on the map, connected by subtle blue-gray paths to suggest planning, timing, knowing the opponent and knowing oneself. A calm scholar's hand may point toward an unprepared route, but do not show battle or violence. Include a distant misty landscape and a simple ink-wash mountain backdrop. Approved educational textbook illustration style: fine blue-gray linework, delicate pencil and watercolor texture, low-saturation pastel slate blue, sage, muted sand, and restrained coral accents, airy educational editorial illustration, clear visual hierarchy, generous negative space for slide text. The illustration itself has a clean near-white background that can sit on a pure white PowerPoint canvas. No readable text, no Chinese characters, no Latin letters, no numbers, no labels, no logos, no watermark, no flag, no military insignia, no speech bubbles, no weapons, no blood, no photorealism.",
+      "dimensions": {
+        "width_px": 1672,
+        "height_px": 941,
+        "aspect_ratio": "1672:941"
+      },
+      "sha256": "b3b712b10744e8f140037e2a3f26b78738955e7f9e0dc7e3608266fc28bd29ec",
+      "status": "pending_review"
+    },
+    {
+      "file": "lesson-08-context-03-world-influence.png",
+      "purpose": "短文三情境图：古代卷册、地球、大学课堂、书店与商业讨论，表现《孙子兵法》的世界影响。",
+      "prompt": "Create one candidate illustration for a Chinese language educational textbook slide, widescreen 16:9 composition. Short-text context: the worldwide influence of Sun Tzu's book. Show an open ancient manuscript resting in the foreground beside a softly painted globe, with delicate blue-gray curved paths radiating outward toward small, diverse groups of people in three calm settings: a modern university seminar, a bookstore with several blank book covers, and a business team studying a planning board. Suggest that the ideas travel from history into education and business, without making the scene commercial or political. Use abstract blank book pages and blank map shapes only, with no language-specific marks. Approved educational textbook illustration style: fine blue-gray linework, delicate pencil and watercolor texture, low-saturation pastel slate blue, sage, muted sand, and restrained coral accents, airy educational editorial illustration, clear visual hierarchy, generous negative space for slide text. The illustration itself has a clean near-white background that can sit on a pure white PowerPoint canvas. No readable text, no Chinese characters, no Latin letters, no numbers, no labels, no logos, no watermark, no flags, no military insignia, no speech bubbles, no photorealism, no weapons, no battle scene.",
+      "dimensions": {
+        "width_px": 1672,
+        "height_px": 941,
+        "aspect_ratio": "1672:941"
+      },
+      "sha256": "0a679c5020a35820e589960f2ae7de2650ce3d478e833edbb12002ed4c528fdb",
+      "status": "pending_review"
+    }
+  ]
+}

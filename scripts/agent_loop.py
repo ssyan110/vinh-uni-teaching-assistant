@@ -11,12 +11,14 @@ import argparse
 import json
 import os
 import re
+import subprocess
 import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable
 
 from lesson_context import LessonContext, resolve_lesson_context
+from blocker_contract import HUMAN_TOKENS, blocker_records
 from workflow_integrity import resolve_relative_path, sha256
 
 
@@ -24,17 +26,6 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 RUN_ID_PATTERN = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,79}")
 PHASES = {"defined", "ready", "verifying", "needs_human", "blocked", "complete"}
 PURPOSES = {"audit", "teacher-guide", "support", "prototype", "pptx", "semester-manual", "release"}
-HUMAN_TOKENS = (
-    "approval",
-    "approved",
-    "manual",
-    "rehearsal",
-    "teacher",
-    "review",
-    "boundary confirmation",
-)
-
-
 def utc_now() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
@@ -236,8 +227,10 @@ def create_run(
         "attempt_count": 0,
         "max_attempts": max_attempts,
         "latest_preflight": None,
+        "latest_external_check": None,
         "evidence": [],
         "blockers": [],
+        "blocker_records": [],
         "blocker_categories": {"human": [], "technical": []},
         "human_required": False,
         "next_action": "run preflight",
@@ -310,18 +303,22 @@ def run_preflight(
     result = (gate_runner or _default_gate_runner)(project_root, state)
     if not isinstance(result, dict) or result.get("status") not in {"ready", "blocked"}:
         raise ValueError("gate runner returned an invalid result")
-    blockers = result.get("blockers", [])
-    if not isinstance(blockers, list):
+    raw_blockers = result.get("blockers", [])
+    if not isinstance(raw_blockers, list):
         raise ValueError("gate runner blockers must be a list")
+    records = blocker_records(raw_blockers, scope=f"{state['gate_stage']}/{state['purpose']}")
+    blockers = [record["message"] for record in records]
     human_blockers = [
         blocker
         for blocker in blockers
-        if any(token in str(blocker).lower() for token in HUMAN_TOKENS)
+        if any(token in blocker.lower() for token in HUMAN_TOKENS)
     ]
     technical_blockers = [blocker for blocker in blockers if blocker not in human_blockers]
     human_required = bool(human_blockers)
-    state["latest_preflight"] = {"checked_at": utc_now(), **result}
+    normalized_result = {**result, "blockers": blockers, "blocker_records": records}
+    state["latest_preflight"] = {"checked_at": utc_now(), **normalized_result}
     state["blockers"] = blockers
+    state["blocker_records"] = records
     state["blocker_categories"] = {
         "human": human_blockers,
         "technical": technical_blockers,
@@ -348,10 +345,105 @@ def run_preflight(
         "status": result["status"],
         "phase": state["phase"],
         "blockers": blockers,
+        "blocker_records": records,
     })
     if state["phase"] in {"blocked", "needs_human"}:
         write_final_report(paths["final_report"], state)
     return state
+
+
+def attach_external_check(
+    project_root: Path,
+    run_id: str,
+    result_file: str,
+) -> dict[str, Any]:
+    """Attach a read-only command result without granting authority or changing phase."""
+    paths = run_paths(project_root, run_id)
+    state = load_state(paths["state"])
+    failures = validate_state(project_root, state, check_evidence=True)
+    if failures:
+        raise ValueError("invalid run state:\n- " + "\n- ".join(failures))
+    resolved, normalized = resolve_scoped_path(project_root, result_file)
+    if not resolved.is_file() or resolved.is_symlink():
+        raise FileNotFoundError(f"external check result is missing or unsafe: {resolved}")
+    payload = json.loads(resolved.read_text(encoding="utf-8"))
+    if not isinstance(payload, dict):
+        raise ValueError("external check result must be an object")
+    command = payload.get("command")
+    if command not in {"plan", "inspect", "preflight", "compile", "image-probe", "build", "qa"}:
+        raise ValueError("external check command is unsupported")
+    status = payload.get("status")
+    if status not in {"ready", "blocked", "clear", "review", "passed"}:
+        raise ValueError("external check status is unsupported")
+    raw_blockers = payload.get("blockers", [])
+    if not isinstance(raw_blockers, list):
+        raise ValueError("external check blockers must be a list")
+    records = blocker_records(raw_blockers, scope=f"external/{command}")
+    supplied_records = payload.get("blocker_records")
+    if supplied_records is not None:
+        if not isinstance(supplied_records, list) or supplied_records != records:
+            raise ValueError("external check blocker_records do not match blockers")
+    check = {
+        "command": command,
+        "status": status,
+        "path": normalized,
+        "sha256": sha256(resolved),
+        "checked_at": utc_now(),
+        "lesson_key": payload.get("lesson_key"),
+        "release_id": payload.get("release_id"),
+        "blockers": [item["message"] for item in records],
+        "blocker_records": records,
+    }
+    state["latest_external_check"] = check
+    write_state(paths["state"], state)
+    append_event(paths, "external_check_attached", check)
+    return state
+
+
+def run_release_check(
+    project_root: Path,
+    run_id: str,
+    mode: str,
+    lesson_key: str,
+    release_id: str,
+    offering_id: str | None = None,
+) -> dict[str, Any]:
+    """Run only the read-only scoped release plan/inspect command and attach it."""
+    if mode not in {"plan", "inspect"}:
+        raise ValueError("release check mode must be plan or inspect; execute is not allowed")
+    paths = run_paths(project_root, run_id)
+    state = load_state(paths["state"])
+    failures = validate_state(project_root, state, check_evidence=True)
+    if failures:
+        raise ValueError("invalid run state:\n- " + "\n- ".join(failures))
+    command = [
+        os.environ.get("PYTHON", "python3"),
+        str(project_root / "scripts/build_release_package.py"),
+        f"--{mode}", "--lesson-key", lesson_key, "--release-id", release_id,
+    ]
+    if offering_id:
+        command.extend(["--offering-id", offering_id])
+    completed = subprocess.run(command, cwd=project_root, text=True, capture_output=True, check=False)
+    try:
+        payload = json.loads(completed.stdout)
+    except json.JSONDecodeError as error:
+        raise ValueError(f"release check returned invalid JSON: {error}") from error
+    if not isinstance(payload, dict):
+        raise ValueError("release check result must be an object")
+    expected_identity = {
+        "lesson_key": lesson_key,
+        "release_id": release_id,
+    }
+    if offering_id is not None:
+        expected_identity["offering_id"] = offering_id
+    for field, expected in expected_identity.items():
+        if payload.get(field) != expected:
+            raise ValueError(f"release check {field} does not match requested scope")
+    if payload.get("command") != mode:
+        raise ValueError("release check command does not match requested mode")
+    result_path = paths["root"] / "checks" / f"release-{mode}.json"
+    atomic_write_text(result_path, json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
+    return attach_external_check(project_root, run_id, str(result_path))
 
 
 def record_attempt(project_root: Path, run_id: str, summary: str) -> dict[str, Any]:
@@ -425,6 +517,7 @@ def record_result(
 
     state["evidence"].extend(_record_evidence(project_root, evidence, summary))
     state["blockers"] = []
+    state["blocker_records"] = []
     state["blocker_categories"] = {"human": [], "technical": []}
     state["human_required"] = False
     if result == "passed":
@@ -437,12 +530,14 @@ def record_result(
         state["phase"] = "needs_human"
         state["human_required"] = True
         state["blockers"] = [summary.strip()]
+        state["blocker_records"] = blocker_records(state["blockers"], scope="result/needs-human")
         state["blocker_categories"] = {"human": [summary.strip()], "technical": []}
         state["next_action"] = "wait for the named human decision, then rerun preflight"
         state["stop_reason"] = "human decision required"
     else:
         state["criteria_status"] = "failed"
         state["blockers"] = [summary.strip()]
+        state["blocker_records"] = blocker_records(state["blockers"], scope="result/failed")
         state["blocker_categories"] = {"human": [], "technical": [summary.strip()]}
         if state["attempt_count"] < state["max_attempts"]:
             state["phase"] = "ready"
@@ -542,6 +637,16 @@ def validate_state(
     if not isinstance(blockers, list) or not all(isinstance(item, str) for item in blockers):
         failures.append("blockers must be a string list")
         blockers = []
+    records = state.get("blocker_records", [])
+    if records is not None:
+        if not isinstance(records, list) or not all(isinstance(item, dict) for item in records):
+            failures.append("blocker_records must be an object list")
+        else:
+            for index, item in enumerate(records):
+                if not all(isinstance(item.get(field), str) and item[field] for field in ("code", "message", "scope")):
+                    failures.append(f"blocker_records[{index}] requires code, message and scope")
+            if sorted(item["message"] for item in records if isinstance(item, dict) and isinstance(item.get("message"), str)) != sorted(blockers):
+                failures.append("blocker records do not account for every blocker")
     categories = state.get("blocker_categories")
     if not isinstance(categories, dict):
         failures.append("blocker_categories must be an object")
@@ -582,6 +687,27 @@ def validate_state(
             failures.append("output_dir is not normalized for the selected lesson")
     except (OSError, ValueError, RuntimeError) as error:
         failures.append(f"lesson context validation failed: {error}")
+
+    external = state.get("latest_external_check")
+    if external is not None:
+        if not isinstance(external, dict):
+            failures.append("latest_external_check must be an object")
+        else:
+            for field in ("command", "status", "path", "sha256"):
+                if not isinstance(external.get(field), str) or not external[field]:
+                    failures.append(f"latest_external_check.{field} must be a non-empty string")
+            try:
+                check_path, normalized_check_path = resolve_scoped_path(project_root, external.get("path", ""))
+                if normalized_check_path != external.get("path") or not check_path.is_file() or sha256(check_path) != external.get("sha256"):
+                    failures.append("latest_external_check result file is missing or hash-mismatched")
+            except (TypeError, ValueError):
+                failures.append("latest_external_check result path is unsafe")
+            check_blockers = external.get("blockers", [])
+            check_records = external.get("blocker_records", [])
+            if not isinstance(check_blockers, list) or not isinstance(check_records, list):
+                failures.append("latest_external_check blockers and blocker_records must be lists")
+            elif [item.get("message") for item in check_records if isinstance(item, dict)] != check_blockers:
+                failures.append("latest_external_check blocker records do not match blockers")
 
     latest = state.get("latest_preflight")
     if state["phase"] in {"ready", "verifying", "complete"}:
@@ -668,6 +794,21 @@ def build_parser() -> argparse.ArgumentParser:
         command = subparsers.add_parser(name, help=help_text)
         command.add_argument("--run-id", required=True)
         command.set_defaults(handler=handler)
+
+    check_result = subparsers.add_parser("check", help="Attach a read-only external command result")
+    check_result.add_argument("--run-id", required=True)
+    check_result.add_argument("--result-file", required=True)
+    check_result.set_defaults(handler=lambda a: attach_external_check(PROJECT_ROOT, a.run_id, a.result_file))
+
+    release_check = subparsers.add_parser("release-check", help="Run read-only release plan or inspect and attach result")
+    release_check.add_argument("--run-id", required=True)
+    release_check.add_argument("--mode", choices=("plan", "inspect"), required=True)
+    release_check.add_argument("--lesson-key", required=True)
+    release_check.add_argument("--release-id", required=True)
+    release_check.add_argument("--offering-id")
+    release_check.set_defaults(handler=lambda a: run_release_check(
+        PROJECT_ROOT, a.run_id, a.mode, a.lesson_key, a.release_id, a.offering_id
+    ))
 
     attempt = subparsers.add_parser("attempt", help="Record one bounded execution attempt")
     attempt.add_argument("--run-id", required=True)

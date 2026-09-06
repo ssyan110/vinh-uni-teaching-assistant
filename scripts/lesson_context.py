@@ -22,6 +22,30 @@ class LessonContext:
     lesson_root: Path
     registry_entry: dict[str, Any]
 
+    @property
+    def source_root(self) -> Path:
+        return _safe_project_path(self.lesson_root, "00-source")
+
+    @property
+    def canonical_source(self) -> Path:
+        return _safe_project_path(self.lesson_root, "00-source/canonical-source.json")
+
+    @property
+    def design_root(self) -> Path:
+        return _safe_project_path(self.lesson_root, "10-design")
+
+    @property
+    def authority_root(self) -> Path:
+        return _safe_project_path(self.lesson_root, "20-approved")
+
+    @property
+    def qa_root(self) -> Path:
+        return _safe_project_path(self.lesson_root, "30-qa")
+
+    @property
+    def release_root(self) -> Path:
+        return _safe_project_path(self.lesson_root, "40-release")
+
 
 def _read_json(path: Path) -> dict[str, Any]:
     try:

@@ -1,0 +1,392 @@
+{
+  "schema_version": "boya-lesson-image-manifest-v1",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-09",
+  "textbook_id": "boya-quasi-intermediate-i",
+  "lesson_id": "lesson-09",
+  "lesson_title": "北方菜和南方菜",
+  "generated_at": "2026-09-03",
+  "generation_mode": "raster_handpainted_textbook_illustration",
+  "source_scope": {
+    "canonical_source": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json",
+    "source_manifest": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/source-manifest.json",
+    "listening_exercise_contract": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/listening-exercise-contract.json",
+    "audio_manifest": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/audio-manifest.json",
+    "source_status": "pending_review",
+    "content_policy": "Do not reuse unrelated vocabulary images; every image must serve meaning, context, comparison, evidence, or memory."
+  },
+  "style": {
+    "visual_direction": "finalized Boya educational textbook raster illustration",
+    "rendering": "hand-painted watercolor and colored-pencil raster with paper texture",
+    "linework": "delicate gray-blue ink and natural pencil detail",
+    "palette": "low-saturation pastel on warm off-white illustration paper",
+    "layout": "square vocabulary images; wide context images; clear negative space",
+    "image_format": "PNG",
+    "student_text_policy": "Images contain no readable Chinese, Latin text, numbers, logos, labels, captions, watermark, flags, or speech bubbles.",
+    "forbidden_style": "vector art, flat icons, geometric diagrams, sticker graphics, draft placeholders"
+  },
+  "approval_boundary": {
+    "generation_status": "draft_inputs_only",
+    "authorization_status": "pending_source_visual_and_adam_review",
+    "license_status": "Generated raster candidates; no release approval claimed.",
+    "can_enter_ppt": false,
+    "reason": "Raster candidates are registered for draft generation and remain pending visual/source review."
+  },
+  "legacy_assets_quarantined": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-09/90-archive/legacy-vector-assets-2026-09-03",
+    "count": 31,
+    "format": "SVG",
+    "reason": "The former vector drafts are retained as reversible history and excluded from active generation inputs."
+  },
+  "assets": [
+    {
+      "asset_id": "L09-cover",
+      "file": "lesson-09-cover-food.png",
+      "category": "cover",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "c41a540bede939208db9805643997350fb836057f60b4ca8f4d42277e696b12f",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "use": [
+        "封面"
+      ]
+    },
+    {
+      "asset_id": "L09-C01",
+      "file": "lesson-09-context-01.png",
+      "category": "short_text_context",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "91d4c34a947122f2e453a7ceab79945a9533b46b48314be7c929b32ed1900a7f",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "use": [
+        "短文一"
+      ]
+    },
+    {
+      "asset_id": "L09-C02",
+      "file": "lesson-09-context-02.png",
+      "category": "short_text_context",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "62e760bc1e391fa2549f486aae41c0d8d8dd5e7f6cfea3429b0b248a76080e92",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "use": [
+        "短文二"
+      ]
+    },
+    {
+      "asset_id": "L09-C03",
+      "file": "lesson-09-context-03.png",
+      "category": "short_text_context",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "a127b0b2cba523f80b364933da2f21fd53b373b67e67875f4dd7e298607d223b",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "use": [
+        "短文三"
+      ]
+    },
+    {
+      "asset_id": "L09-V01",
+      "file": "l09-vocab-dedicated-01.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "b2f8acfb90789bc14e6a055da1add98d5055960df14273abf6153d273017379a",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "potato"
+    },
+    {
+      "asset_id": "L09-V02",
+      "file": "l09-vocab-dedicated-02.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "5c48204a3e9da2cdc6e3f706d44592299a0b769c1b5157555dca24c8a8a8d7aa",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "vegetables"
+    },
+    {
+      "asset_id": "L09-V03",
+      "file": "l09-vocab-dedicated-03.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "21e6518f054ed41c0be1d0c038d0c2bbcc6787748d4af306ae7adbcff1adcd24",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "early_tea"
+    },
+    {
+      "asset_id": "L09-V04",
+      "file": "l09-vocab-dedicated-04.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "b9dc2566211289999050dea19b2701c99bae360145e873d4aa26a40e97ee897b",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "cold_toss"
+    },
+    {
+      "asset_id": "L09-V05",
+      "file": "l09-vocab-dedicated-05.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "4bfae92f78a9ab7ffbdaa4d8b05b98a5927b22f357d4dd9ecba8694415b16a16",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "greens"
+    },
+    {
+      "asset_id": "L09-V06",
+      "file": "l09-vocab-dedicated-06.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "89fe14e2bf8c8231160dd130265386cad55651b4297df85368c437681b1c5d32",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "sour_soup"
+    },
+    {
+      "asset_id": "L09-V07",
+      "file": "l09-vocab-dedicated-07.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "450c9dcbedc47390fe401d5e32ca1c72b09cf2b9f65d62e31e0b46e5817746a1",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "hotpot"
+    },
+    {
+      "asset_id": "L09-V08",
+      "file": "l09-vocab-dedicated-08.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "906b71043a2e9a8198691e525bea6ae78155161947d800ef7ee15312a7669256",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "taste"
+    },
+    {
+      "asset_id": "L09-V09",
+      "file": "l09-vocab-dedicated-09.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "9a475c2d8ca40c24609a436ae6653c60da1f3347d3d25fe91871c2e4590bd324",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "gradually"
+    },
+    {
+      "asset_id": "L09-V10",
+      "file": "l09-vocab-dedicated-10.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "809794071ae26625c7bb58c4157f5f04818d8af1b197c5ff0840f7d1fa12497b",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "cucumber"
+    },
+    {
+      "asset_id": "L09-V11",
+      "file": "l09-vocab-dedicated-11.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "4d53f8eed7313b8e2bc92b27dd015bd8648aaa9360f366e73a366cd06725ce4b",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "stew"
+    },
+    {
+      "asset_id": "L09-V12",
+      "file": "l09-vocab-dedicated-12.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "92ef5bb419273e728bea6917853e9c564f420493575543e7e59797bee00d4b11",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "late_snack"
+    },
+    {
+      "asset_id": "L09-V13",
+      "file": "l09-vocab-dedicated-13.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "464cbcadb7f2cbc92e8c35ee729e479d745e483d68c2db4e763a97215eec8468",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "food_stall"
+    },
+    {
+      "asset_id": "L09-V14",
+      "file": "l09-vocab-dedicated-14.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "f95b8d4eb4ec950c8080bacc475433e04ee855bec9b3be41e37cf1512c40e03b",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "gathering"
+    },
+    {
+      "asset_id": "L09-V15",
+      "file": "l09-vocab-dedicated-15.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "6d3e5612f143cb51dcadba5edfae1d393014870e16109d12cc8613eafb8c7316",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "shared_meal"
+    },
+    {
+      "asset_id": "L09-V16",
+      "file": "l09-vocab-dedicated-16.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "8b8112b1e84fd2d63b1785dddbc842dde9ac71abc99102aceb9d7881a72839fa",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "leisure"
+    },
+    {
+      "asset_id": "L09-V17",
+      "file": "l09-vocab-dedicated-17.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "812df495b194341873db62de27272bd46e0ad62073923f811666f1ec0f84d85f",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "beans"
+    },
+    {
+      "asset_id": "L09-V18",
+      "file": "l09-vocab-dedicated-18.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "a96a215f1a6e994bacb89f117c1ec7d01e8e13e649af2e1fc5980c447c0cce55",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "not_only"
+    },
+    {
+      "asset_id": "L09-V19",
+      "file": "l09-vocab-dedicated-19.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "eb17c4088b0f38bfa02b38edb370f95873b7ab26b19b5df14d1ae40c5d50707a",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "replace"
+    },
+    {
+      "asset_id": "L09-V20",
+      "file": "l09-vocab-dedicated-20.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "0994a37d50f7e51f51737418567ca33016e7181b58d46b31b854f042334dcc3c",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "season"
+    },
+    {
+      "asset_id": "L09-V21",
+      "file": "l09-vocab-dedicated-21.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "6ebaa4cd6c45c2886b28747bcf4c23fd6dc4f55916ea4f4f1be62d269a32b699",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "kinds"
+    },
+    {
+      "asset_id": "L09-V22",
+      "file": "l09-vocab-dedicated-22.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "321d3f6a0b1b9dd4a08b11b5d0b389bc77d5a95a57a5306ac7bbc25919b35901",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "common"
+    },
+    {
+      "asset_id": "L09-V23",
+      "file": "l09-vocab-dedicated-23.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "e6611f96cb3d40d299b9dff82dd6a6650c8dd390a487ccfe4c7edfe02d0c9032",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "young"
+    },
+    {
+      "asset_id": "L09-V24",
+      "file": "l09-vocab-dedicated-24.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "3ff8f4d408df830d0c50a6ce84f61df4061b6ad72c3e7afc41d5b0e4e802088f",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "usually"
+    },
+    {
+      "asset_id": "L09-V25",
+      "file": "l09-vocab-dedicated-25.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "93e7143f359984d84b9cee2d11dc2ae951ad1e79b9404fab89d43f94bb652053",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "quantity"
+    },
+    {
+      "asset_id": "L09-V26",
+      "file": "l09-vocab-dedicated-26.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "a9eea114d43a4dd0a9b3598197927f279ba8d54ebd0d11342d0937bbd89358a2",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "increase"
+    },
+    {
+      "asset_id": "L09-V27",
+      "file": "l09-vocab-dedicated-27.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false,
+      "sha256": "a7a1d23a1c60cb13c8f992b85b49e744074188e5c39f53fa43c56bfd00dc88b6",
+      "source_kind": "generated_raster",
+      "style_match_target": "finalized_l01_l06_raster_illustration",
+      "scene": "way"
+    }
+  ],
+  "pending_assets": []
+}

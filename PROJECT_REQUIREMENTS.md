@@ -1,5 +1,10 @@
 # 教材製作需求規格
 
+Workflow V2 canonical contract: `docs/workflow/canonical-workflow-contract.md`
+Workflow V2 optimization roadmap: `docs/workflow/WORKFLOW_V2_OPTIMIZATION_SPEC.md`
+
+本文件保留課程、教材與驗收要求；生命週期、gate、artifact state、lesson identity 與 agent safety 以 canonical workflow contract 為準，重複的通用 workflow 條文在 migration 期間只作相容參考。
+
 版本：2026-08-29
 
 本規格是榮市大學華語聽說課程的生產基準。它把課堂需求、ACTFL Proficiency-Based Instruction、學校翻轉預習習慣與 PPTX 交付要求放在同一份可檢查的文件中。

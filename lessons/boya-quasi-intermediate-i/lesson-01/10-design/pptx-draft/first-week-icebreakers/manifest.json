@@ -1,0 +1,64 @@
+{
+  "artifact": "lesson-01-第一周破冰-投影活动",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-01",
+  "offering_id": "2026-fall",
+  "format": "native-pptx-only",
+  "status": "draft_only",
+  "student_language": "简体中文",
+  "delivery": "projector_only_no_printed_handouts",
+  "slide_count": 8,
+  "fonts": {
+    "cjk": "KaiTi",
+    "latin": "Times New Roman",
+    "min_visible_pt": 20
+  },
+  "output": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/pptx-draft/first-week-icebreakers/lesson-01-第一周破冰-投影活动.pptx",
+  "sources": [
+    {
+      "organization": "British Council TeachingEnglish",
+      "title": "The first class",
+      "url": "https://www.teachingenglish.org.uk/professional-development/teachers/planning-lessons-and-courses/first-class",
+      "used_for": [
+        "Personal Star / What’s the question?",
+        "first-class goals"
+      ]
+    },
+    {
+      "organization": "British Council TeachingEnglish",
+      "title": "Mingling: true or false?",
+      "url": "https://www.teachingenglish.org.uk/teaching-resources/teaching-secondary/activities/pre-intermediate-a2/mingling-true-or-false",
+      "worksheet_url": "https://www.teachingenglish.org.uk/sites/teacheng/files/mingling-true-or-false-worksheet.pdf",
+      "used_for": [
+        "question-led mingling",
+        "follow-up questions",
+        "class feedback"
+      ]
+    },
+    {
+      "organization": "Cambridge University Press & Assessment",
+      "title": "Cambridge Life Competencies Activity Cards — Adult Learners",
+      "url": "https://www.cambridge.org/gb/files/9616/2514/0251/ELT_CambridgeLifeCompetencies_ActivityCards_DigitalDownload_AdultLearners.pdf",
+      "used_for": [
+        "Interested or bored?",
+        "listening and responding respectfully"
+      ]
+    },
+    {
+      "organization": "ACTFL / NCSSFL",
+      "title": "2026 NCSSFL-ACTFL Can-Do Statements",
+      "url": "https://www.actfl.org/educator-resources/ncssfl-actfl-can-do-statements",
+      "used_for": [
+        "Interpretive / Interpersonal / Presentational alignment"
+      ]
+    }
+  ],
+  "adaptation_policy": "Source activities are summarized and adapted for a Mandarin listening-speaking class; this deck does not reproduce a source worksheet or claim to be an official source card.",
+  "qa": {
+    "source_gate": "passed_before_write",
+    "output_scope": "10-design/pptx-draft/first-week-icebreakers",
+    "authority_or_release": "not_created",
+    "manual_powerpoint_playback": "pending",
+    "classroom_rehearsal": "pending"
+  },
+  "sha256": "fb39a51315ef4f309ff74d456630abcdcba7358694b4d55f0715eb285c29df46"
+}

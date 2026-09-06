@@ -91,6 +91,47 @@ export interface Followup {
   completed_at: string | null
 }
 
+export type LearningEventSource = 'class_observation' | 'random_call' | 'voluntary_answer'
+export type ClassroomOpportunityStatus = 'called' | 'volunteered' | 'not_selected' | 'absent' | 'excused' | 'technical_issue'
+export type ClassroomResponseStatus = 'answered' | 'partial' | 'no_response' | 'declined' | 'peer_supported' | 'unobserved'
+export type NoResponseReason = 'unprepared' | 'unclear_prompt' | 'forgot' | 'anxious_unwell' | 'time_insufficient' | 'chose_skip' | 'other'
+export type AnswerContext = 'prepared' | 'unprepared' | 'unknown'
+export type ClassroomRecordStatus = 'valid' | 'corrected' | 'voided'
+
+export interface LearningEvent {
+  client_event_id?: string
+  textbook_id?: string
+  lesson_id?: string
+  id: string
+  owner_id: string
+  course_id: string
+  session_id: string
+  student_id: string
+  occurred_at: string
+  source: LearningEventSource
+  lesson_label: string
+  activity_label: string
+  task_completion: number | null
+  comprehensibility: number | null
+  language_control: number | null
+  interaction: number | null
+  needs_review: boolean
+  event_order?: number | null
+  opportunity_status?: ClassroomOpportunityStatus | null
+  response_status?: ClassroomResponseStatus
+  no_response_reason?: NoResponseReason | null
+  answer_context?: AnswerContext
+  attendance_status?: AttendanceStatus | null
+  score?: number | null
+  record_status?: ClassroomRecordStatus
+  teacher_note?: string | null
+  correction_note?: string | null
+  corrected_at?: string | null
+  counted_for_summary?: boolean
+  /** Legacy compatibility only; this is not the university's official grade. */
+  counted_for_grade?: boolean
+}
+
 export interface TrackerSnapshot {
   terms: AcademicTerm[]
   courses: Course[]
@@ -100,6 +141,7 @@ export interface TrackerSnapshot {
   attendance: AttendanceRecord[]
   observations: ObservationRecord[]
   followups: Followup[]
+  learningEvents: LearningEvent[]
 }
 
 export interface ImportStudentRow {
@@ -119,4 +161,5 @@ export const emptySnapshot: TrackerSnapshot = {
   attendance: [],
   observations: [],
   followups: [],
+  learningEvents: [],
 }

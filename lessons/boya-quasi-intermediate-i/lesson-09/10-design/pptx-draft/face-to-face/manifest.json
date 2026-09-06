@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "manifest_type": "lesson-pptx-draft",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-09",
+  "mode": "face-to-face",
+  "title": "第九课《北方菜和南方菜》实体课",
+  "status": "draft_not_approved",
+  "builder_scope": "scripts/build_l23_pptx_drafts.js",
+  "draft_gate": "lesson-specific",
+  "source_sha256": "c928011dfed526c506af0c73ab0dd420bb0eba07f43938f179c08743c60b0da1",
+  "layout_source": "boya-quasi-intermediate-i lesson-01 approved layout family",
+  "face_order_contract": "course/boya-face-to-face-order-contract.json",
+  "short_example_policy": "curated_short_sentences_max_24_hanzi_chars",
+  "short_text_policy": "textbook_listening_prompt_and_record_layout_no_full_text_copy",
+  "shared_assets": [
+    "lesson-01-cover-family-work-hobby.png",
+    "lesson-01-learning-path.png",
+    "divider-family.png",
+    "divider-work.png",
+    "divider-hobby.png",
+    "divider-comprehensive.png",
+    "symbolic-vocabulary.png",
+    "symbolic-listening.png",
+    "symbolic-sentence-pattern.png",
+    "oral-practice-divider.png",
+    "speaking-practice.png"
+  ],
+  "image_manifest": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/assets/image-manifest.json",
+  "lesson_specific_image_assets": [
+    {
+      "asset_id": "L09-cover",
+      "file": "lesson-09-cover-food.png",
+      "category": "cover",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-C01",
+      "file": "lesson-09-context-01.png",
+      "category": "short_text_context",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-C02",
+      "file": "lesson-09-context-02.png",
+      "category": "short_text_context",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-C03",
+      "file": "lesson-09-context-03.png",
+      "category": "short_text_context",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V01",
+      "file": "l09-vocab-dedicated-01.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V02",
+      "file": "l09-vocab-dedicated-02.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V03",
+      "file": "l09-vocab-dedicated-03.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V04",
+      "file": "l09-vocab-dedicated-04.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V05",
+      "file": "l09-vocab-dedicated-05.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V06",
+      "file": "l09-vocab-dedicated-06.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V07",
+      "file": "l09-vocab-dedicated-07.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V08",
+      "file": "l09-vocab-dedicated-08.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V09",
+      "file": "l09-vocab-dedicated-09.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V10",
+      "file": "l09-vocab-dedicated-10.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V11",
+      "file": "l09-vocab-dedicated-11.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V12",
+      "file": "l09-vocab-dedicated-12.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V13",
+      "file": "l09-vocab-dedicated-13.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V14",
+      "file": "l09-vocab-dedicated-14.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V15",
+      "file": "l09-vocab-dedicated-15.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V16",
+      "file": "l09-vocab-dedicated-16.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V17",
+      "file": "l09-vocab-dedicated-17.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V18",
+      "file": "l09-vocab-dedicated-18.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V19",
+      "file": "l09-vocab-dedicated-19.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V20",
+      "file": "l09-vocab-dedicated-20.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V21",
+      "file": "l09-vocab-dedicated-21.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V22",
+      "file": "l09-vocab-dedicated-22.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V23",
+      "file": "l09-vocab-dedicated-23.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V24",
+      "file": "l09-vocab-dedicated-24.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V25",
+      "file": "l09-vocab-dedicated-25.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V26",
+      "file": "l09-vocab-dedicated-26.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    },
+    {
+      "asset_id": "L09-V27",
+      "file": "l09-vocab-dedicated-27.png",
+      "category": "vocabulary",
+      "status": "candidate_pending_review",
+      "can_enter_ppt": false
+    }
+  ],
+  "image_approval_status": "pending_source_visual_and_adam_review",
+  "slide_count": 57,
+  "page_marker_status": "passed",
+  "page_marker_storyboard": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/storyboard/lesson-09-face-page-marker-storyboard.csv",
+  "audio_tracks_embedded": [
+    "9-1",
+    "9-2",
+    "9-3",
+    "9-4",
+    "9-5",
+    "9-6"
+  ],
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/pptx-draft/face-to-face/lesson-09-实体课.pptx",
+    "sha256": "ad4611ce9e44e50d3501e567008d9cefbfa52aaef8fb678c939e97bd2b3fcf28",
+    "bytes": 24986695
+  },
+  "generated_at": "2026-09-03T12:07:58.693Z"
+}
