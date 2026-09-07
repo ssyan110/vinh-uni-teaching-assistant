@@ -1,4 +1,4 @@
-import type { CharacterItem, ContentPack, ImportPreview, Lesson, SentenceItem, VocabularyItem } from "./types";
+import type { CharacterItem, ContentPack, ImportPreview, Lesson, SentenceItem, SentencePattern, VocabularyItem } from "./types";
 
 const HAN_CHARACTER = /\p{Script=Han}/u;
 const HAN_CHARACTERS = /\p{Script=Han}/gu;
@@ -78,6 +78,24 @@ function normalizeSentence(raw: Record<string, unknown>, index: number, defaultL
   };
 }
 
+function normalizeSentencePattern(raw: Record<string, unknown>, index: number, defaultLesson: string): SentencePattern | null {
+  const pattern = text(raw.pattern ?? raw.expression);
+  if (!pattern) return null;
+  return {
+    ...raw,
+    item_id: text(raw.item_id ?? raw.id) || `sentence-pattern-${index + 1}`,
+    pattern,
+    introduced_lesson_id: text(raw.introduced_lesson_id ?? raw.lesson_id) || defaultLesson,
+    review_lesson_ids: stringList(raw.review_lesson_ids),
+    topic: text(raw.topic) || undefined,
+    printed_pages: Array.isArray(raw.printed_pages)
+      ? raw.printed_pages.map(Number).filter((page) => Number.isFinite(page))
+      : undefined,
+    source_file: text(raw.source_file) || undefined,
+    active: raw.active !== false
+  };
+}
+
 function finalizePack(
   source: Partial<ContentPack>,
   lessonsInput: Record<string, unknown>[],
@@ -119,6 +137,9 @@ function finalizePack(
   const sentences = (Array.isArray(source.sentences) ? source.sentences : [])
     .map((item, index) => normalizeSentence(item as Record<string, unknown>, index, defaultLesson))
     .filter((item): item is SentenceItem => item !== null);
+  const sentencePatterns = (Array.isArray(source.sentence_patterns) ? source.sentence_patterns : [])
+    .map((item, index) => normalizeSentencePattern(item as unknown as Record<string, unknown>, index, defaultLesson))
+    .filter((item): item is SentencePattern => item !== null);
 
   return {
     pack: {
@@ -132,6 +153,7 @@ function finalizePack(
       characters,
       vocabulary,
       grammar: Array.isArray(source.grammar) ? source.grammar : [],
+      sentence_patterns: sentencePatterns,
       sentences,
       exercises: Array.isArray(source.exercises) ? source.exercises : []
     },
@@ -257,6 +279,9 @@ export function validatePack(pack: ContentPack): string[] {
   }
   for (const item of pack.sentences) {
     if (!lessonIds.has(item.introduced_lesson_id)) errors.push(`句子“${item.sentence}”引用了不存在的课次：${item.introduced_lesson_id}。`);
+  }
+  for (const item of pack.sentence_patterns ?? []) {
+    if (!lessonIds.has(item.introduced_lesson_id)) errors.push(`句式“${item.pattern}”引用了不存在的课次：${item.introduced_lesson_id}。`);
   }
   return errors;
 }

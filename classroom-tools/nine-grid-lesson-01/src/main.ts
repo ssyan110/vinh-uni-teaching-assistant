@@ -10,6 +10,7 @@ import {
   functionCellPositions,
   winLengthForSide,
   functionPromptsForScope,
+  sentencePatternPromptsForScope,
   seededShuffle,
   splitVocabularyRounds,
   vocabularyRoundPlan,
@@ -92,7 +93,10 @@ function boardPromptPoolForScope(
   selection: ScopeSelection,
   requiredCount: number
 ): FunctionPrompt[] {
-  const prompts = functionPromptsForScope(content, selection);
+  const prompts = [
+    ...sentencePatternPromptsForScope(content, selection),
+    ...functionPromptsForScope(content, selection)
+  ];
   if (prompts.length >= requiredCount || sentencesForScope(content, selection).length === 0) return prompts;
 
   // Some imported lesson packs keep textbook sentences in `sentences` but do
@@ -105,10 +109,8 @@ function boardPromptPoolForScope(
     .map((item): FunctionPrompt => ({
       kind: "pattern-make",
       prompt: item.sentence,
-      activity: prompts.length % 2 === 0 ? "make-sentence" : "translate-vietnamese",
-      support: prompts.length % 2 === 0
-        ? "请参考上面的课内句式，用这个句式造一个新的句子。"
-        : "请先读出例句，再说出它的越南文意思。",
+      activity: "translate-vietnamese",
+      support: "请先读出课本例句，再说出它的越南文意思。",
       seconds: 30,
       sourceItemId: `sentence-${item.item_id}`
     }));
@@ -136,15 +138,16 @@ function shell(content: string, options: { compact?: boolean } = {}): string {
 }
 
 function renderHome(): void {
-  const hasContent = Boolean(pack && (pack.vocabulary.length || pack.exercises.length));
+  const hasContent = Boolean(pack && (pack.vocabulary.length || pack.exercises.length || pack.sentence_patterns?.length));
   const lessonCount = pack?.lessons.length ?? 0;
+  const functionContentCount = (pack?.sentence_patterns?.length ?? 0) + (pack?.exercises.length ?? 0);
   const contentCard = hasContent && pack
     ? `<section class="content-status" aria-label="当前内容">
         <div><span class="eyebrow">本册内容</span><h2>${escapeHtml(pack.class_name)}</h2></div>
         <dl>
           <div><dt>可选内容</dt><dd>${lessonCount}</dd></div>
           <div><dt>词语</dt><dd>${pack.vocabulary.length}</dd></div>
-          <div><dt>功能格</dt><dd>${pack.exercises.length}</dd></div>
+          <div><dt>功能题</dt><dd>${functionContentCount}</dd></div>
         </dl>
       </section>`
     : `<section class="empty-note" aria-label="空白状态">
@@ -193,6 +196,8 @@ function renderSetup(): void {
   const firstRoundWordCount = roundPlan[0]?.length ?? 0;
   const firstRoundFunctionCount = Math.max(0, firstRoundSide ** 2 - firstRoundWordCount);
   const scopedPrompts = boardPromptPoolForScope(pack, currentSelection, firstRoundFunctionCount);
+  const scopedPatternCount = sentencePatternPromptsForScope(pack, currentSelection).length;
+  const scopedExampleCount = functionPromptsForScope(pack, currentSelection).length;
   const needsFunctionPrompts = true;
   const canStart = selectedLessonIds.length > 0 && chosen.length > 0 && (!needsFunctionPrompts || scopedPrompts.length > 0);
 
@@ -216,7 +221,7 @@ function renderSetup(): void {
               <label><input type="radio" name="legacy-submode" value="classroom" ${legacySubmode === "classroom" ? "checked" : ""}/><span><b>课堂分队</b><small>首轮蓝队先，之后每轮交换先手；占格后换队。</small></span></label>
               <label><input type="radio" name="legacy-submode" value="solo" ${legacySubmode === "solo" ? "checked" : ""}/><span><b>学生对战电脑</b><small>学生用蓝队，电脑用红队。</small></span></label>
             </fieldset>
-            <div class="function-note"><strong>句式造句格固定 30 秒</strong><span>参考所选课 PPT 句式，造一个新句子 · 教师判定</span></div>
+            <div class="function-note"><strong>功能格固定 30 秒</strong><span>按图标选择：用句式造句，或读例句并说出越南文意思 · 教师判定</span></div>
           </div>
         </div>
       </div>
@@ -227,7 +232,7 @@ function renderSetup(): void {
         ${chosen.length
           ? `<div class="plan-line"><b>${firstRoundSide ** 2}</b><span>${firstRoundWordCount} 个词语 + ${firstRoundFunctionCount} 个功能格 · ${roundPlan.length} 轮</span></div>`
           : `<div class="plan-line"><b>${firstRoundSide ** 2}</b><span>格 · 请至少选择一课</span></div>`}
-        <div class="plan-functions"><span>所选课句式造句题</span><strong>${scopedPrompts.length}</strong><small>${firstRoundFunctionCount ? "句式题用完后再轮换" : "本轮无需补入功能格"}</small></div>
+        <div class="plan-functions"><span>可用功能题 <small>句式 ${scopedPatternCount} · 例句 ${scopedExampleCount}</small></span><strong>${scopedPrompts.length}</strong><small>${firstRoundFunctionCount ? "按需要轮换功能题" : "本轮无需补入功能格"}</small></div>
         <button class="button button--primary button--wide" data-action="start-game" ${canStart ? "" : "disabled"}>开始游戏 <span aria-hidden="true">→</span></button>
       </aside>
     </section>
@@ -282,7 +287,7 @@ function renderGame(): void {
       </div>
     </section>
     <section class="game-footer">
-      <p><strong>${winner || isDraw ? "本轮结束" : (isManual ? "教师确认后点击词语占格" : "请蓝队选择一格")}</strong><span> · ${isManual ? "两组轮流换人，独立读词并解释意思；功能格参考句式造一个新句子。" : "电脑红队会自动选择。"}</span></p>
+      <p><strong>${winner || isDraw ? "本轮结束" : (isManual ? "教师确认后点击词语占格" : "请蓝队选择一格")}</strong><span> · ${isManual ? "两组轮流换人，独立读词并解释意思；功能格按图标完成句式造句或越南文口语任务。" : "电脑红队会自动选择。"}</span></p>
       <div class="round-controls"><button class="text-button" data-action="undo-turn" ${turnHistory.length ? "" : "disabled"}>撤销上一步</button>${winner || isDraw ? `<button class="button button--primary" data-action="next-round">${roundIndex < rounds.length - 1 ? "下一轮" : "再玩一次"} →</button>` : `<button class="button button--secondary" data-action="pass-turn">未通过，换队</button><button class="text-button" data-action="reset-round">重开本轮</button>`}</div>
     </section>
     ${activePrompt ? `<div class="modal-backdrop" role="presentation"><section class="task-modal" role="dialog" aria-modal="true" aria-labelledby="task-title">
@@ -304,7 +309,7 @@ function renderGame(): void {
   if (modal) {
     modal.querySelector<HTMLButtonElement>("button")?.focus();
     modal.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") {
+      if (event.key === "Escape" || event.key === "Esc") {
         if (celebrating) dismissCelebration();
         else if (activePrompt) cancelPrompt();
       }
@@ -332,6 +337,7 @@ function getScopeSelection(): ScopeSelection {
 }
 
 function bindCommonActions(): void {
+  document.onkeydown = null;
   document.querySelectorAll<HTMLElement>("[data-action='home']").forEach((button) => button.addEventListener("click", () => navigate("home")));
   document.querySelector<HTMLElement>("[data-action='setup']")?.addEventListener("click", () => navigate("setup"));
 }
@@ -360,6 +366,11 @@ function bindSetupActions(): void {
 }
 
 function bindGameActions(): void {
+  document.onkeydown = (event) => {
+    if (event.key !== "Escape" && event.key !== "Esc") return;
+    if (celebrating) dismissCelebration();
+    else if (activePrompt) cancelPrompt();
+  };
   document.querySelector<HTMLButtonElement>("[data-action='save-result']")?.addEventListener("click", saveResultImage);
   document.querySelector<HTMLElement>("[data-action='dismiss-celebration']")?.addEventListener("click", dismissCelebration);
   document.querySelectorAll<HTMLElement>("[data-action='pass-turn']").forEach((button) => button.addEventListener("click", passTurn));

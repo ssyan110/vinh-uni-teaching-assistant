@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import raw from '../public/content/class-content.json';
 import { parseContent } from './importer';
 import { functionCellPositions } from './game';
-import { vocabularyForScope, functionPromptsForScope, splitVocabularyRounds, vocabularyRoundPlan, boardWordLines, createLegacyBoardVocabulary, fillFunctionPrompts, seededShuffle } from './game';
+import { vocabularyForScope, functionPromptsForScope, sentencePatternPromptsForScope, splitVocabularyRounds, vocabularyRoundPlan, boardWordLines, createLegacyBoardVocabulary, fillFunctionPrompts, seededShuffle } from './game';
 
 const pack = parseContent(JSON.stringify(raw), 'class-content.json').pack;
 const ids = pack.lessons.map(x => x.lesson_id);
@@ -17,7 +17,10 @@ describe('book lesson isolation', () => {
       const prompts = functionPromptsForScope(pack, scope);
       const expectedPrompts = pack.exercises.filter(x => lessonIds.includes(String(x.introduced_lesson_id)));
       expect(prompts.map(x => x.sourceItemId)).toEqual(expectedPrompts.map(x => x.item_id));
-      if (prompts.length) expect(new Set(prompts.map(x => x.activity))).toEqual(new Set(["make-sentence", "translate-vietnamese"]));
+      if (prompts.length) expect(new Set(prompts.map(x => x.activity))).toEqual(new Set(["translate-vietnamese"]));
+      const sentencePatterns = sentencePatternPromptsForScope(pack, scope);
+      expect(sentencePatterns.every(x => x.activity === "make-sentence")).toBe(true);
+      if (lessonIds.includes(ids[0])) expect(sentencePatterns.some(x => x.prompt === "不仅……而且……")).toBe(true);
       const rounds = splitVocabularyRounds(seededShuffle(vocabulary, 93));
       expect(rounds.flat().length).toBe(vocabulary.length);
       for (const round of rounds) {

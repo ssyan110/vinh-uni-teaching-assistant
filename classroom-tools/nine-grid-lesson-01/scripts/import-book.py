@@ -14,10 +14,41 @@ parser.add_argument('--source-root', type=Path, required=True)
 args = parser.parse_args()
 root = args.source_root.resolve(strict=True)
 pack = dict(schema_version='1.0.0', pack_id=BOOK+'-nine-grid', class_id=BOOK,
-            class_name='博雅汉语听说：准中级加速篇 I', content_revision=1,
+            class_name='博雅汉语听说：准中级加速篇 I', content_revision=2,
             chinese_variant='simplified', textbook_id=BOOK, lessons=[], characters=[],
-            vocabulary=[], grammar=[], sentences=[], exercises=[])
+            vocabulary=[], grammar=[], sentence_patterns=[], sentences=[], exercises=[])
 snapshots = []
+
+def append_sentence_patterns(pack, sections, lesson_key, source_file):
+    """Flatten the source's common-expression inventory into sentence-pattern prompts."""
+    sequence = 0
+    def walk(node, topic='', printed_pages=None):
+        nonlocal sequence
+        if isinstance(node, dict):
+            topic = node.get('topic', topic)
+            printed_pages = node.get('printed_pages', printed_pages or [])
+            expression = node.get('expression')
+            if isinstance(expression, str) and expression.strip():
+                sequence += 1
+                pack['sentence_patterns'].append(dict(
+                    item_id=f'{lesson_key}:sentence-pattern:{sequence:02}',
+                    pattern=expression.strip(), introduced_lesson_id=lesson_key,
+                    topic=topic, printed_pages=printed_pages, source_file=source_file))
+            for key in ('items', 'groups'):
+                if key in node:
+                    walk(node[key], topic, printed_pages)
+        elif isinstance(node, list):
+            for item in node:
+                if isinstance(item, str) and item.strip():
+                    sequence += 1
+                    pack['sentence_patterns'].append(dict(
+                        item_id=f'{lesson_key}:sentence-pattern:{sequence:02}',
+                        pattern=item.strip(), introduced_lesson_id=lesson_key,
+                        topic=topic, printed_pages=printed_pages or [], source_file=source_file))
+                else:
+                    walk(item, topic, printed_pages)
+    for section in sections:
+        walk(section)
 for n in range(1, 13):
     key = f'{BOOK}:lesson-{n:02}'
     relative = f'lessons/{BOOK}/lesson-{n:02}/00-source/' + ('source-extraction-draft.json' if n == 1 else 'canonical-source.json')
@@ -36,6 +67,7 @@ for n in range(1, 13):
                     vocabulary=vocab,
                     expressions=[s for s in sections if s['id'].startswith('common_expressions')])
     snapshots.append(snapshot)
+    append_sentence_patterns(pack, snapshot['expressions'], key, relative)
     pack['lessons'].append(dict(lesson_id=key, lesson_key=key, textbook_id=BOOK,
                                lesson_name=f'第{n}课：{source["title"]}', order=n))
     for category in ['entries', 'proper_nouns', 'idioms']:

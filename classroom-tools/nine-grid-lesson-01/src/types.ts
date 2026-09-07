@@ -39,6 +39,17 @@ export interface SentenceItem {
   [key: string]: unknown;
 }
 
+export interface SentencePattern {
+  item_id: string;
+  pattern: string;
+  introduced_lesson_id: string;
+  review_lesson_ids?: string[];
+  topic?: string;
+  printed_pages?: number[];
+  source_file?: string;
+  active?: boolean;
+}
+
 export interface ContentPack {
   schema_version: string;
   pack_id: string;
@@ -50,6 +61,7 @@ export interface ContentPack {
   characters: CharacterItem[];
   vocabulary: VocabularyItem[];
   grammar: Record<string, unknown>[];
+  sentence_patterns?: SentencePattern[];
   sentences: SentenceItem[];
   exercises: Record<string, unknown>[];
 }
