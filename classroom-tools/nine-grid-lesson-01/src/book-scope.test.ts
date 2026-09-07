@@ -17,6 +17,7 @@ describe('book lesson isolation', () => {
       const prompts = functionPromptsForScope(pack, scope);
       const expectedPrompts = pack.exercises.filter(x => lessonIds.includes(String(x.introduced_lesson_id)));
       expect(prompts.map(x => x.sourceItemId)).toEqual(expectedPrompts.map(x => x.item_id));
+      expect(new Set(prompts.map(x => x.activity))).toEqual(new Set(["make-sentence", "translate-vietnamese"]));
       const rounds = splitVocabularyRounds(seededShuffle(vocabulary, 93));
       expect(rounds.flat().length).toBe(vocabulary.length);
       for (const round of rounds) {

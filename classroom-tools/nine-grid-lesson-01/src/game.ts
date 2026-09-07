@@ -253,8 +253,11 @@ export function functionPromptsForScope(pack: ContentPack, selection: ScopeSelec
     if (!prompt) return [];
     return [{
       kind,
+      activity: index % 2 === 0 ? "make-sentence" : "translate-vietnamese",
       prompt,
-      support: String(item.instruction ?? "").trim() || undefined,
+      support: index % 2 === 0
+        ? "请参考上面的课内句式，用这个句式造一个新的句子。"
+        : "请先读出例句，再说出它的越南文意思。",
       // Function cells intentionally use one classroom rhythm: every task gets
       // a visible 30-second turn, regardless of its prompt kind.
       seconds: 30,
