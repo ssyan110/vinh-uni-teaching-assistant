@@ -1,4 +1,5 @@
 name: Deploy nine-grid classroom game
+
 on:
   push:
     branches: [main]
@@ -6,13 +7,16 @@ on:
       - "classroom-tools/nine-grid-lesson-01/**"
       - ".github/workflows/deploy-nine-grid-pages.yml"
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
   group: pages
   cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -33,6 +37,7 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: classroom-tools/nine-grid-lesson-01/dist
+
   deploy:
     environment:
       name: github-pages

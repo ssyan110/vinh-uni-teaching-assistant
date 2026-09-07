@@ -62,7 +62,9 @@ describe("board planning", () => {
     expect(winLengthForSide(3)).toBe(3);
     expect(winLengthForSide(4)).toBe(4);
     expect(winLengthForSide(6)).toBe(4);
-    expect(winLengthForSide(7)).toBe(5);
+    expect(winLengthForSide(7)).toBe(4);
+    expect(winLengthForSide(8)).toBe(4);
+    expect(winLengthForSide(9)).toBe(5);
     expect(winLengthForSide(12)).toBe(5);
   });
 

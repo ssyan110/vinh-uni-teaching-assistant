@@ -83,7 +83,7 @@ export function splitIntoLegacyRounds<T>(items: T[]): T[][] {
 
 export function winLengthForSide(side: number): number {
   if (side <= 3) return 3;
-  if (side <= 6) return 4;
+  if (side <= 8) return 4;
   return 5;
 }
 
@@ -304,7 +304,7 @@ export function chooseSoloAiMove(
   const winningMove = (team: Team): number | undefined => empty.find((index) => {
     const next = [...owners];
     next[index] = team;
-    return detectWinner(next, side, LEGACY_WIN_LENGTH) === team;
+    return detectWinner(next, side, winLengthForSide(side)) === team;
   });
   const win = winningMove(ai);
   if (win !== undefined) return win;
@@ -313,4 +313,53 @@ export function chooseSoloAiMove(
   const center = Math.floor((side * side) / 2);
   if (owners[center] === null) return center;
   return seededShuffle(empty, seed)[0] ?? null;
+}
+
+/** Keep at least seven PPT example tasks per round, on 6–9 sided boards. */
+export function vocabularyRoundPlan(wordCount: number, firstLessonOnly = false): { wordCounts: number[]; sides: number[] } {
+  const count = Math.max(0, Math.floor(wordCount));
+  if (!count) return { wordCounts: [], sides: [] };
+  if (firstLessonOnly && count === 31) return { wordCounts: [31], sides: [6] };
+  const rounds = Math.ceil(count / 74);
+  const wordCounts = Array.from({ length: rounds }, (_, index) =>
+    Math.floor(count / rounds) + (index < count % rounds ? 1 : 0)
+  );
+  return { wordCounts, sides: wordCounts.map(size => Math.max(6, Math.ceil(Math.sqrt(size + 7)))) };
+}
+
+/** A shuffled checkerboard parity keeps example cells apart on every shared edge. */
+export function functionCellPositions(side: number, count: number, seed: number): number[] {
+  const slots = Array.from({ length: side * side }, (_, i) => i);
+  const parity = (i: number) => (Math.floor(i / side) + i % side) % 2;
+  const groups = [slots.filter(i => parity(i) === 0), slots.filter(i => parity(i) === 1)]
+    .filter(group => group.length >= count);
+  if (!groups.length) throw new Error('Too many example cells to keep them separated');
+  return seededShuffle(seededShuffle(groups, seed)[0], seed ^ 0x51f15e).slice(0, count);
+}
+
+export function splitVocabularyRounds<T>(items: T[]): T[][] {
+  let offset = 0;
+  return vocabularyRoundPlan(items.length).wordCounts.map(count => {
+    const round = items.slice(offset, offset + count);
+    offset += count;
+    return round;
+  });
+}
+
+/** Up to three Han characters per line; punctuation stays with its text. */
+export function boardWordLines(word: string): string[] {
+  const lines: string[] = [];
+  let line = '', count = 0;
+  for (const character of Array.from(word)) {
+    const han = /\p{Script=Han}/u.test(character);
+    if (han && count === 3) {
+      lines.push(line);
+      line = '';
+      count = 0;
+    }
+    line += character;
+    if (han) count++;
+  }
+  if (line) lines.push(line);
+  return lines;
 }

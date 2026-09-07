@@ -1,0 +1,174 @@
+{
+  "browser": "Chrome via agent-browser",
+  "offline": true,
+  "cases": [
+    {
+      "lessons": [
+        1
+      ],
+      "words": 31,
+      "functions": 5,
+      "side": 6,
+      "heading": "6 × 6 · 第1课：丽丽是独生女 · 第 1 / 1 轮",
+      "isolated": true
+    },
+    {
+      "lessons": [
+        1,
+        2
+      ],
+      "words": 60,
+      "functions": 21,
+      "side": 9,
+      "heading": "9 × 9 · 第1课：丽丽是独生女、第2课：王红的一天 · 第 1 / 1 轮",
+      "isolated": true
+    },
+    {
+      "lessons": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "words": 65,
+      "functions": 16,
+      "side": 9,
+      "heading": "9 × 9 · 全十二课（第1—12课） · 第 1 / 5 轮",
+      "isolated": true
+    },
+    {
+      "lessons": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "words": 65,
+      "functions": 16,
+      "side": 9,
+      "heading": "9 × 9 · 全十二课（第1—12课） · 第 2 / 5 轮",
+      "isolated": true
+    },
+    {
+      "lessons": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "words": 65,
+      "functions": 16,
+      "side": 9,
+      "heading": "9 × 9 · 全十二课（第1—12课） · 第 3 / 5 轮",
+      "isolated": true
+    },
+    {
+      "lessons": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "words": 65,
+      "functions": 16,
+      "side": 9,
+      "heading": "9 × 9 · 全十二课（第1—12课） · 第 4 / 5 轮",
+      "isolated": true
+    },
+    {
+      "lessons": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "words": 64,
+      "functions": 17,
+      "side": 9,
+      "heading": "9 × 9 · 全十二课（第1—12课） · 第 5 / 5 轮",
+      "isolated": true
+    },
+    {
+      "lessons": [
+        2
+      ],
+      "words": 29,
+      "functions": 7,
+      "side": 6,
+      "heading": "6 × 6 · 第2课：王红的一天 · 第 1 / 1 轮",
+      "isolated": true
+    },
+    {
+      "lessons": [
+        1
+      ],
+      "words": 31,
+      "functions": 5,
+      "side": 6,
+      "heading": "6 × 6 · 第1课：丽丽是独生女 · 第 1 / 1 轮",
+      "isolated": true
+    },
+    {
+      "lessons": [
+        3,
+        4
+      ],
+      "words": 49,
+      "functions": 15,
+      "side": 8,
+      "heading": "8 × 8 · 第3课：我对学中文越来越有兴趣、第4课：在中国学汉语 · 第 1 / 1 轮",
+      "isolated": true
+    }
+  ],
+  "all_rounds_unique": 324,
+  "keyboard": true,
+  "pptx_example_text": true,
+  "turn_alternation": true,
+  "undo_restores_turn": true,
+  "failed_turn_no_claim": true,
+  "teacher_claims": true,
+  "win_confirmation": true,
+  "mobile_board_scroll_only": true,
+  "long_words_three_per_line": true,
+  "page_errors": ""
+}

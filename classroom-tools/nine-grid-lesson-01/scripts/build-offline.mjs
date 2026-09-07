@@ -26,4 +26,4 @@ const offline = index
   // treated as JavaScript text, not as String.replace substitution tokens.
   .replace("</body>", () => `<script>${safeScript}</script>\n  </body>`);
 
-writeFileSync(resolve(root, "第一课-听说一-词语连线.html"), offline, "utf8");
+writeFileSync(resolve(root, "博雅准中级-全册词语连线.html"), offline, "utf8");
