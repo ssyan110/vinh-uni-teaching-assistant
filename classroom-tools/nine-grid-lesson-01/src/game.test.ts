@@ -15,6 +15,7 @@ import {
   cycleManualOwner,
   fillFunctionPrompts,
   functionPromptsForScope,
+  sentencePatternPromptsForScope,
   LEGACY_BOARD_SIDE
 } from "./game";
 import type { CellOwner, CharacterItem } from "./types";
@@ -171,6 +172,7 @@ describe("optional legacy classroom mode", () => {
       characters: items(2),
       vocabulary: [],
       grammar: [],
+      sentence_patterns: [{ item_id: "sp1", pattern: "不仅……而且……", introduced_lesson_id: "l1" }],
       sentences: [],
       exercises: [
         { item_id: "e1", function_kind: "pattern-make", prompt: "请问你的名字怎么念？", instruction: "回答问题。", introduced_lesson_id: "l1" },
@@ -182,6 +184,9 @@ describe("optional legacy classroom mode", () => {
     expect(prompts.map((prompt) => [prompt.kind, prompt.prompt, prompt.seconds])).toEqual([
       ["pattern-make", "请问你的名字怎么念？", 30],
       ["dialogue-pattern", "到时候别忘了通知我。", 30]
+    ]);
+    expect(sentencePatternPromptsForScope(scopedPack, { mode: "single", lessonIds: ["l1"] })).toMatchObject([
+      { activity: "make-sentence", prompt: "不仅……而且……", sourceItemId: "sp1" }
     ]);
     expect(functionPromptsForScope({ ...scopedPack, exercises: [] }, { mode: "all", lessonIds: [] })).toEqual([]);
   });

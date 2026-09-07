@@ -3,7 +3,7 @@
   "pack_id": "boya-quasi-intermediate-i-nine-grid",
   "class_id": "boya-quasi-intermediate-i",
   "class_name": "博雅汉语听说：准中级加速篇 I",
-  "content_revision": 1,
+  "content_revision": 2,
   "chinese_variant": "simplified",
   "textbook_id": "boya-quasi-intermediate-i",
   "lessons": [
@@ -4630,6 +4630,2026 @@
       ],
       "vocabulary_category": "entries"
     }
+  ],
+  "sentence_patterns": [
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-01:sentence-pattern:01",
+    "pattern": "出生在",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-01",
+    "topic": "谈论家庭生活",
+    "printed_pages": [
+      6,
+      8,
+      9
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-extraction-draft.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-01:sentence-pattern:02",
+    "pattern": "……是……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-01",
+    "topic": "谈论家庭生活",
+    "printed_pages": [
+      6,
+      8,
+      9
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-extraction-draft.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-01:sentence-pattern:03",
+    "pattern": "什么",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-01",
+    "topic": "谈论家庭生活",
+    "printed_pages": [
+      6,
+      8,
+      9
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-extraction-draft.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-01:sentence-pattern:04",
+    "pattern": "为……担心",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-01",
+    "topic": "谈论家庭生活",
+    "printed_pages": [
+      6,
+      8,
+      9
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-extraction-draft.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-01:sentence-pattern:05",
+    "pattern": "如果……就……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-01",
+    "topic": "谈论家庭生活",
+    "printed_pages": [
+      6,
+      8,
+      9
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-extraction-draft.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-01:sentence-pattern:06",
+    "pattern": "从……到……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-01",
+    "topic": "谈论工作",
+    "printed_pages": [
+      6,
+      8,
+      9
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-extraction-draft.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-01:sentence-pattern:07",
+    "pattern": "为了",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-01",
+    "topic": "谈论工作",
+    "printed_pages": [
+      6,
+      8,
+      9
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-extraction-draft.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-01:sentence-pattern:08",
+    "pattern": "越来越",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-01",
+    "topic": "谈论工作",
+    "printed_pages": [
+      6,
+      8,
+      9
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-extraction-draft.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-01:sentence-pattern:09",
+    "pattern": "受……欢迎",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-01",
+    "topic": "谈论工作",
+    "printed_pages": [
+      6,
+      8,
+      9
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-extraction-draft.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-01:sentence-pattern:10",
+    "pattern": "对……满意",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-01",
+    "topic": "谈论工作",
+    "printed_pages": [
+      6,
+      8,
+      9
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-extraction-draft.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-01:sentence-pattern:11",
+    "pattern": "毕业／见面",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-01",
+    "topic": "谈论业余生活",
+    "printed_pages": [
+      6,
+      8,
+      9
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-extraction-draft.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-01:sentence-pattern:12",
+    "pattern": "放假",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-01",
+    "topic": "谈论业余生活",
+    "printed_pages": [
+      6,
+      8,
+      9
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-extraction-draft.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-01:sentence-pattern:13",
+    "pattern": "不仅……而且……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-01",
+    "topic": "谈论业余生活",
+    "printed_pages": [
+      6,
+      8,
+      9
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-extraction-draft.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-01:sentence-pattern:14",
+    "pattern": "除了……还……／除了……也……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-01",
+    "topic": "谈论业余生活",
+    "printed_pages": [
+      6,
+      8,
+      9
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-extraction-draft.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-01:sentence-pattern:15",
+    "pattern": "因为……所以……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-01",
+    "topic": "谈论业余生活",
+    "printed_pages": [
+      6,
+      8,
+      9
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-extraction-draft.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-01:sentence-pattern:16",
+    "pattern": "对……有好处／有帮助（1）",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-01",
+    "topic": "谈论业余生活",
+    "printed_pages": [
+      6,
+      8,
+      9
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-extraction-draft.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-02:sentence-pattern:01",
+    "pattern": "对……熟悉／对……有了了解",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-02",
+    "topic": "谈论学校生活",
+    "printed_pages": [
+      16,
+      17
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-02:sentence-pattern:02",
+    "pattern": "尤其",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-02",
+    "topic": "谈论学校生活",
+    "printed_pages": [
+      16,
+      17
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-02:sentence-pattern:03",
+    "pattern": "虽然……可是……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-02",
+    "topic": "谈论学校生活",
+    "printed_pages": [
+      16,
+      17
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-02:sentence-pattern:04",
+    "pattern": "不知不觉",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-02",
+    "topic": "谈论学校生活",
+    "printed_pages": [
+      16,
+      17
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-02:sentence-pattern:05",
+    "pattern": "同时",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-02",
+    "topic": "谈论学校生活",
+    "printed_pages": [
+      16,
+      17
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-02:sentence-pattern:06",
+    "pattern": "给……办／介绍",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-02",
+    "topic": "谈论课外生活",
+    "printed_pages": [
+      18,
+      19,
+      20
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-02:sentence-pattern:07",
+    "pattern": "处所＋动词＋着＋人／物",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-02",
+    "topic": "谈论课外生活",
+    "printed_pages": [
+      18,
+      19,
+      20
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-02:sentence-pattern:08",
+    "pattern": "接着",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-02",
+    "topic": "谈论课外生活",
+    "printed_pages": [
+      18,
+      19,
+      20
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-02:sentence-pattern:09",
+    "pattern": "安安静静／舒舒服服／急急忙忙／开开心心＋（地）＋动词词组",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-02",
+    "topic": "谈论课外生活",
+    "printed_pages": [
+      18,
+      19,
+      20
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-02:sentence-pattern:10",
+    "pattern": "量词",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-02",
+    "topic": "谈论课外生活",
+    "printed_pages": [
+      18,
+      19,
+      20
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-02:sentence-pattern:11",
+    "pattern": "自从……以来",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-02",
+    "topic": "谈论课外生活",
+    "printed_pages": [
+      18,
+      19,
+      20
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-02:sentence-pattern:12",
+    "pattern": "每……都……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-02",
+    "topic": "谈论课外生活",
+    "printed_pages": [
+      18,
+      19,
+      20
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-02:sentence-pattern:13",
+    "pattern": "不但……同时……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-02",
+    "topic": "谈论课外生活",
+    "printed_pages": [
+      18,
+      19,
+      20
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-02:sentence-pattern:14",
+    "pattern": "其中",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-02",
+    "topic": "谈论课外生活",
+    "printed_pages": [
+      18,
+      19,
+      20
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-02:sentence-pattern:15",
+    "pattern": "过得",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-02",
+    "topic": "谈论课外生活",
+    "printed_pages": [
+      18,
+      19,
+      20
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-03:sentence-pattern:01",
+    "pattern": "每＋量词",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-03",
+    "topic": "谈论家庭生活",
+    "printed_pages": [
+      26
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-03:sentence-pattern:02",
+    "pattern": "帮／忙",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-03",
+    "topic": "谈论家庭生活",
+    "printed_pages": [
+      26
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-03:sentence-pattern:03",
+    "pattern": "……什么的",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-03",
+    "topic": "谈论家庭生活",
+    "printed_pages": [
+      26
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-03:sentence-pattern:04",
+    "pattern": "……（的）时候",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-03",
+    "topic": "谈论家庭生活",
+    "printed_pages": [
+      26
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-03:sentence-pattern:05",
+    "pattern": "记得",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-03",
+    "topic": "谈论家庭生活",
+    "printed_pages": [
+      26
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-03:sentence-pattern:06",
+    "pattern": "可以……也可以……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-03",
+    "topic": "谈论学习工作",
+    "printed_pages": [
+      27,
+      28
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-03:sentence-pattern:07",
+    "pattern": "另（外）",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-03",
+    "topic": "谈论学习工作",
+    "printed_pages": [
+      27,
+      28
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-03:sentence-pattern:08",
+    "pattern": "更（1）",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-03",
+    "topic": "谈论学习工作",
+    "printed_pages": [
+      27,
+      28
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-03:sentence-pattern:09",
+    "pattern": "动词＋得（1）",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-03",
+    "topic": "谈论学习工作",
+    "printed_pages": [
+      27,
+      28
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-03:sentence-pattern:10",
+    "pattern": "但是",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-03",
+    "topic": "谈论学习工作",
+    "printed_pages": [
+      27,
+      28
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-03:sentence-pattern:11",
+    "pattern": "于是",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-03",
+    "topic": "谈论学习工作",
+    "printed_pages": [
+      27,
+      28
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-03:sentence-pattern:12",
+    "pattern": "更（2）",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-03",
+    "topic": "谈论中文课堂",
+    "printed_pages": [
+      29
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-03:sentence-pattern:13",
+    "pattern": "互相",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-03",
+    "topic": "谈论中文课堂",
+    "printed_pages": [
+      29
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-03:sentence-pattern:14",
+    "pattern": "遍",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-03",
+    "topic": "谈论中文课堂",
+    "printed_pages": [
+      29
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-04:sentence-pattern:01",
+    "pattern": "年级",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-04",
+    "topic": "说明情况",
+    "printed_pages": [
+      36
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-04:sentence-pattern:02",
+    "pattern": "专业",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-04",
+    "topic": "说明情况",
+    "printed_pages": [
+      36
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-04:sentence-pattern:03",
+    "pattern": "这／那是……的事了",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-04",
+    "topic": "说明情况",
+    "printed_pages": [
+      36
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-04:sentence-pattern:04",
+    "pattern": "发现",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-04",
+    "topic": "说明情况",
+    "printed_pages": [
+      36
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-04:sentence-pattern:05",
+    "pattern": "到处",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-04",
+    "topic": "说明情况",
+    "printed_pages": [
+      36
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-04:sentence-pattern:06",
+    "pattern": "又（1）",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-04",
+    "topic": "说明情况",
+    "printed_pages": [
+      36
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-04:sentence-pattern:07",
+    "pattern": "通常",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-04",
+    "topic": "谈论学习",
+    "printed_pages": [
+      37
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-04:sentence-pattern:08",
+    "pattern": "既……又……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-04",
+    "topic": "谈论学习",
+    "printed_pages": [
+      37
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-04:sentence-pattern:09",
+    "pattern": "不过",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-04",
+    "topic": "谈论学习",
+    "printed_pages": [
+      37
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-04:sentence-pattern:10",
+    "pattern": "决定",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-04",
+    "topic": "谈论学习",
+    "printed_pages": [
+      37
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-04:sentence-pattern:11",
+    "pattern": "加倍",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-04",
+    "topic": "谈论学习",
+    "printed_pages": [
+      37
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-04:sentence-pattern:12",
+    "pattern": "左右",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-04",
+    "topic": "谈论学习",
+    "printed_pages": [
+      39
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-04:sentence-pattern:13",
+    "pattern": "只有",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-04",
+    "topic": "谈论学习",
+    "printed_pages": [
+      39
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-04:sentence-pattern:14",
+    "pattern": "另外",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-04",
+    "topic": "谈论学习",
+    "printed_pages": [
+      39
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-04:sentence-pattern:15",
+    "pattern": "动词＋上",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-04",
+    "topic": "谈论学习",
+    "printed_pages": [
+      39
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-04:sentence-pattern:16",
+    "pattern": "形容词＋一些",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-04",
+    "topic": "谈论学习",
+    "printed_pages": [
+      39
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-04:sentence-pattern:17",
+    "pattern": "记得住／看得清楚",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-04",
+    "topic": "谈论学习",
+    "printed_pages": [
+      39
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-04:sentence-pattern:18",
+    "pattern": "动词＋两／几＋量词",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-04",
+    "topic": "谈论学习",
+    "printed_pages": [
+      39
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-05:sentence-pattern:01",
+    "pattern": "从小就",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-05",
+    "topic": "介绍经历",
+    "printed_pages": [
+      46
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-05:sentence-pattern:02",
+    "pattern": "每星期……都……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-05",
+    "topic": "介绍经历",
+    "printed_pages": [
+      46
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-05:sentence-pattern:03",
+    "pattern": "对于",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-05",
+    "topic": "介绍经历",
+    "printed_pages": [
+      46
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-05:sentence-pattern:04",
+    "pattern": "可是",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-05",
+    "topic": "介绍经历",
+    "printed_pages": [
+      46
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-05:sentence-pattern:05",
+    "pattern": "如果……那……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-05",
+    "topic": "介绍经历",
+    "printed_pages": [
+      46
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-05:sentence-pattern:06",
+    "pattern": "受……影响",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-05",
+    "topic": "介绍经历",
+    "printed_pages": [
+      46
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-05:sentence-pattern:07",
+    "pattern": "外貌描写",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-05",
+    "topic": "介绍人物",
+    "printed_pages": [
+      47
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-05:sentence-pattern:08",
+    "pattern": "越……越……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-05",
+    "topic": "介绍人物",
+    "printed_pages": [
+      47
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-05:sentence-pattern:09",
+    "pattern": "把",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-05",
+    "topic": "介绍人物",
+    "printed_pages": [
+      47
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-05:sentence-pattern:10",
+    "pattern": "一……就……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-05",
+    "topic": "介绍人物",
+    "printed_pages": [
+      47
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-05:sentence-pattern:11",
+    "pattern": "比如",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-05",
+    "topic": "介绍人物",
+    "printed_pages": [
+      47
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-05:sentence-pattern:12",
+    "pattern": "大部分",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-05",
+    "topic": "介绍人物",
+    "printed_pages": [
+      47
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-05:sentence-pattern:13",
+    "pattern": "真是一种享受",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-05",
+    "topic": "谈论学习",
+    "printed_pages": [
+      49
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-05:sentence-pattern:14",
+    "pattern": "连……都……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-05",
+    "topic": "谈论学习",
+    "printed_pages": [
+      49
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-05:sentence-pattern:15",
+    "pattern": "对……感兴趣",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-05",
+    "topic": "谈论学习",
+    "printed_pages": [
+      49
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-05:sentence-pattern:16",
+    "pattern": "从……那里",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-05",
+    "topic": "谈论学习",
+    "printed_pages": [
+      49
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-06:sentence-pattern:01",
+    "pattern": "来自",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-06",
+    "topic": "说明情况",
+    "printed_pages": [
+      54,
+      55,
+      56
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-06:sentence-pattern:02",
+    "pattern": "相当",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-06",
+    "topic": "说明情况",
+    "printed_pages": [
+      54,
+      55,
+      56
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-06:sentence-pattern:03",
+    "pattern": "和……相比",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-06",
+    "topic": "说明情况",
+    "printed_pages": [
+      54,
+      55,
+      56
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-06:sentence-pattern:04",
+    "pattern": "对……有帮助（2）",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-06",
+    "topic": "说明情况",
+    "printed_pages": [
+      54,
+      55,
+      56
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-06:sentence-pattern:05",
+    "pattern": "小时候",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-06",
+    "topic": "谈论时间",
+    "printed_pages": [
+      54,
+      55,
+      56
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-06:sentence-pattern:06",
+    "pattern": "上……的时候",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-06",
+    "topic": "谈论时间",
+    "printed_pages": [
+      54,
+      55,
+      56
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-06:sentence-pattern:07",
+    "pattern": "快……的时候",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-06",
+    "topic": "谈论时间",
+    "printed_pages": [
+      54,
+      55,
+      56
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-06:sentence-pattern:08",
+    "pattern": "……前一/几天",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-06",
+    "topic": "谈论时间",
+    "printed_pages": [
+      54,
+      55,
+      56
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-06:sentence-pattern:09",
+    "pattern": "让某人……的是",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-06",
+    "topic": "谈论时间",
+    "printed_pages": [
+      54,
+      55,
+      56
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-06:sentence-pattern:10",
+    "pattern": "要+动词+上+数量词",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-06",
+    "topic": "谈论时间",
+    "printed_pages": [
+      54,
+      55,
+      56
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-06:sentence-pattern:11",
+    "pattern": "没有那么多",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-06",
+    "topic": "谈论时间",
+    "printed_pages": [
+      54,
+      55,
+      56
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-07:sentence-pattern:01",
+    "pattern": "样样（量词重叠）",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-07",
+    "topic": "谈论个人生活",
+    "printed_pages": [
+      62,
+      65
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-07:sentence-pattern:02",
+    "pattern": "地地道道（形容词重叠）",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-07",
+    "topic": "谈论个人生活",
+    "printed_pages": [
+      62,
+      65
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-07:sentence-pattern:03",
+    "pattern": "不管……都……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-07",
+    "topic": "谈论个人生活",
+    "printed_pages": [
+      62,
+      65
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-07:sentence-pattern:04",
+    "pattern": "像……一样（1）",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-07",
+    "topic": "谈论个人生活",
+    "printed_pages": [
+      62,
+      65
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-07:sentence-pattern:05",
+    "pattern": "又（2）",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-07",
+    "topic": "谈论个人生活",
+    "printed_pages": [
+      62,
+      65
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-07:sentence-pattern:06",
+    "pattern": "根本",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-07",
+    "topic": "谈论个人生活",
+    "printed_pages": [
+      62,
+      65
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-07:sentence-pattern:07",
+    "pattern": "另",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-07",
+    "topic": "谈论个人生活",
+    "printed_pages": [
+      62,
+      65
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-07:sentence-pattern:08",
+    "pattern": "虽然……可是",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-07",
+    "topic": "谈论个人生活",
+    "printed_pages": [
+      62,
+      65
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-07:sentence-pattern:09",
+    "pattern": "慢慢",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-07",
+    "topic": "谈论个人生活",
+    "printed_pages": [
+      62,
+      65
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-07:sentence-pattern:10",
+    "pattern": "成了",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-07",
+    "topic": "谈论个人生活",
+    "printed_pages": [
+      62,
+      65
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-07:sentence-pattern:11",
+    "pattern": "如果……一定……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-07",
+    "topic": "谈论个人生活",
+    "printed_pages": [
+      62,
+      65
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-07:sentence-pattern:12",
+    "pattern": "动词+上（2）",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-07",
+    "topic": "谈论个人生活",
+    "printed_pages": [
+      62,
+      65
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-07:sentence-pattern:13",
+    "pattern": "往往",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-07",
+    "topic": "谈论个人生活",
+    "printed_pages": [
+      62,
+      65
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-07:sentence-pattern:14",
+    "pattern": "刚开始……慢慢地",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-07",
+    "topic": "谈论个人生活",
+    "printed_pages": [
+      62,
+      65
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-07:sentence-pattern:15",
+    "pattern": "不仅如此",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-07",
+    "topic": "谈论个人生活",
+    "printed_pages": [
+      62,
+      65
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-07:sentence-pattern:16",
+    "pattern": "动词+起来（1）",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-07",
+    "topic": "谈论个人生活",
+    "printed_pages": [
+      62,
+      65
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-08:sentence-pattern:01",
+    "pattern": "根据",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-08",
+    "topic": "说明情况",
+    "printed_pages": [
+      72,
+      73,
+      74
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-08:sentence-pattern:02",
+    "pattern": "曾经",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-08",
+    "topic": "说明情况",
+    "printed_pages": [
+      72,
+      73,
+      74
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-08:sentence-pattern:03",
+    "pattern": "把……动词+成",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-08",
+    "topic": "说明情况",
+    "printed_pages": [
+      72,
+      73,
+      74
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-08:sentence-pattern:04",
+    "pattern": "按",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-08",
+    "topic": "说明情况",
+    "printed_pages": [
+      72,
+      73,
+      74
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-08:sentence-pattern:05",
+    "pattern": "把……动词+补语",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-08",
+    "topic": "说明情况",
+    "printed_pages": [
+      72,
+      73,
+      74
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-08:sentence-pattern:06",
+    "pattern": "虽然（2）",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-08",
+    "topic": "说明情况",
+    "printed_pages": [
+      72,
+      73,
+      74
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-08:sentence-pattern:07",
+    "pattern": "关于",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-08",
+    "topic": "说明情况",
+    "printed_pages": [
+      72,
+      73,
+      74
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-08:sentence-pattern:08",
+    "pattern": "通过",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-08",
+    "topic": "说明情况",
+    "printed_pages": [
+      72,
+      73,
+      74
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-08:sentence-pattern:09",
+    "pattern": "必须",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-08",
+    "topic": "说明情况",
+    "printed_pages": [
+      72,
+      73,
+      74
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-08:sentence-pattern:10",
+    "pattern": "要在……内",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-08",
+    "topic": "说明情况",
+    "printed_pages": [
+      72,
+      73,
+      74
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-08:sentence-pattern:11",
+    "pattern": "既……又/也……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-08",
+    "topic": "说明情况",
+    "printed_pages": [
+      72,
+      73,
+      74
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-08:sentence-pattern:12",
+    "pattern": "既不……也不……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-08",
+    "topic": "说明情况",
+    "printed_pages": [
+      72,
+      73,
+      74
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-08:sentence-pattern:13",
+    "pattern": "被翻译/介绍+到/成",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-08",
+    "topic": "说明情况",
+    "printed_pages": [
+      72,
+      73,
+      74
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-08:sentence-pattern:14",
+    "pattern": "有的……有的……还有的……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-08",
+    "topic": "说明情况",
+    "printed_pages": [
+      72,
+      73,
+      74
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-08:sentence-pattern:15",
+    "pattern": "除了……还/也……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-08",
+    "topic": "说明情况",
+    "printed_pages": [
+      72,
+      73,
+      74
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-08:sentence-pattern:16",
+    "pattern": "比如",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-08",
+    "topic": "说明情况",
+    "printed_pages": [
+      72,
+      73,
+      74
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-08:sentence-pattern:17",
+    "pattern": "已经成为",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-08",
+    "topic": "说明情况",
+    "printed_pages": [
+      72,
+      73,
+      74
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-09:sentence-pattern:01",
+    "pattern": "也",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-09",
+    "topic": "谈论习惯与爱好",
+    "printed_pages": [
+      81
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-09:sentence-pattern:02",
+    "pattern": "什么的",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-09",
+    "topic": "谈论习惯与爱好",
+    "printed_pages": [
+      81
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-09:sentence-pattern:03",
+    "pattern": "不光……还……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-09",
+    "topic": "谈论习惯与爱好",
+    "printed_pages": [
+      81
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-09:sentence-pattern:04",
+    "pattern": "当然",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-09",
+    "topic": "谈论习惯与爱好",
+    "printed_pages": [
+      81
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-09:sentence-pattern:05",
+    "pattern": "可以说",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-09",
+    "topic": "谈论习惯与爱好",
+    "printed_pages": [
+      81
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-09:sentence-pattern:06",
+    "pattern": "只要……就……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-09",
+    "topic": "谈看法和建议",
+    "printed_pages": [
+      83
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-09:sentence-pattern:07",
+    "pattern": "各种各样",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-09",
+    "topic": "谈看法和建议",
+    "printed_pages": [
+      83
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-09:sentence-pattern:08",
+    "pattern": "动词＋起来（2）",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-09",
+    "topic": "谈看法和建议",
+    "printed_pages": [
+      83
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-09:sentence-pattern:09",
+    "pattern": "对……（没）有好处（3）",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-09",
+    "topic": "谈看法和建议",
+    "printed_pages": [
+      83
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-09:sentence-pattern:10",
+    "pattern": "形容词＋一点儿",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-09",
+    "topic": "谈看法和建议",
+    "printed_pages": [
+      83
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-09:sentence-pattern:11",
+    "pattern": "而且",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-09",
+    "topic": "谈看法和建议",
+    "printed_pages": [
+      83
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-09:sentence-pattern:12",
+    "pattern": "刚……的时候",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-09",
+    "topic": "谈习惯和爱好",
+    "printed_pages": [
+      84,
+      85
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-09:sentence-pattern:13",
+    "pattern": "不怎么",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-09",
+    "topic": "谈习惯和爱好",
+    "printed_pages": [
+      84,
+      85
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-09:sentence-pattern:14",
+    "pattern": "特别是",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-09",
+    "topic": "谈习惯和爱好",
+    "printed_pages": [
+      84,
+      85
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-09:sentence-pattern:15",
+    "pattern": "一般",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-09",
+    "topic": "谈习惯和爱好",
+    "printed_pages": [
+      84,
+      85
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-09:sentence-pattern:16",
+    "pattern": "随着",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-09",
+    "topic": "谈习惯和爱好",
+    "printed_pages": [
+      84,
+      85
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-10:sentence-pattern:01",
+    "pattern": "还要",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-10",
+    "topic": "谈论时间和安排",
+    "printed_pages": [
+      90,
+      91,
+      93
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-10/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-10:sentence-pattern:02",
+    "pattern": "就是",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-10",
+    "topic": "谈论时间和安排",
+    "printed_pages": [
+      90,
+      91,
+      93
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-10/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-10:sentence-pattern:03",
+    "pattern": "动词重叠",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-10",
+    "topic": "谈论时间和安排",
+    "printed_pages": [
+      90,
+      91,
+      93
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-10/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-10:sentence-pattern:04",
+    "pattern": "一 + 单音节动词",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-10",
+    "topic": "谈论时间和安排",
+    "printed_pages": [
+      90,
+      91,
+      93
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-10/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-10:sentence-pattern:05",
+    "pattern": "动词+不起",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-10",
+    "topic": "说明情况",
+    "printed_pages": [
+      90,
+      91,
+      93
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-10/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-10:sentence-pattern:06",
+    "pattern": "连……都／也……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-10",
+    "topic": "说明情况",
+    "printed_pages": [
+      90,
+      91,
+      93
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-10/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-10:sentence-pattern:07",
+    "pattern": "更是",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-10",
+    "topic": "说明情况",
+    "printed_pages": [
+      90,
+      91,
+      93
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-10/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-10:sentence-pattern:08",
+    "pattern": "……等",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-10",
+    "topic": "说明情况",
+    "printed_pages": [
+      90,
+      91,
+      93
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-10/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-10:sentence-pattern:09",
+    "pattern": "一般来说",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-10",
+    "topic": "说明情况",
+    "printed_pages": [
+      90,
+      91,
+      93
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-10/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-10:sentence-pattern:10",
+    "pattern": "大饱口福／眼福／耳福",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-10",
+    "topic": "说明情况",
+    "printed_pages": [
+      90,
+      91,
+      93
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-10/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-10:sentence-pattern:11",
+    "pattern": "从……来说",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-10",
+    "topic": "说明情况",
+    "printed_pages": [
+      90,
+      91,
+      93
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-10/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-11:sentence-pattern:01",
+    "pattern": "不一定",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-11",
+    "topic": "说明情况",
+    "printed_pages": [
+      99
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-11:sentence-pattern:02",
+    "pattern": "只是",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-11",
+    "topic": "说明情况",
+    "printed_pages": [
+      99
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-11:sentence-pattern:03",
+    "pattern": "点头",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-11",
+    "topic": "说明情况",
+    "printed_pages": [
+      99
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-11:sentence-pattern:04",
+    "pattern": "极少",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-11",
+    "topic": "说明情况",
+    "printed_pages": [
+      99
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-11:sentence-pattern:05",
+    "pattern": "如果……，或是……的话",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-11",
+    "topic": "说明情况",
+    "printed_pages": [
+      99
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-11:sentence-pattern:06",
+    "pattern": "停下来",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-11",
+    "topic": "说明情况",
+    "printed_pages": [
+      99
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-11:sentence-pattern:07",
+    "pattern": "后来",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-11",
+    "topic": "说明情况",
+    "printed_pages": [
+      101
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-11:sentence-pattern:08",
+    "pattern": "就",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-11",
+    "topic": "说明情况",
+    "printed_pages": [
+      101
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-11:sentence-pattern:09",
+    "pattern": "……家有……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-11",
+    "topic": "说明情况",
+    "printed_pages": [
+      101
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-11:sentence-pattern:10",
+    "pattern": "住（在）一个房间",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-11",
+    "topic": "说明情况",
+    "printed_pages": [
+      101
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-11:sentence-pattern:11",
+    "pattern": "离……远／不远",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-11",
+    "topic": "说明情况",
+    "printed_pages": [
+      101
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-11:sentence-pattern:12",
+    "pattern": "极了",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-11",
+    "topic": "说明情况",
+    "printed_pages": [
+      101
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-11:sentence-pattern:13",
+    "pattern": "有些",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-11",
+    "topic": "谈自己的想法",
+    "printed_pages": [
+      102
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-11:sentence-pattern:14",
+    "pattern": "对",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-11",
+    "topic": "谈自己的想法",
+    "printed_pages": [
+      102
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-11:sentence-pattern:15",
+    "pattern": "动词+得（2）",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-11",
+    "topic": "谈自己的想法",
+    "printed_pages": [
+      102
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-11:sentence-pattern:16",
+    "pattern": "多+动词+数词+量词+名词",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-11",
+    "topic": "谈自己的想法",
+    "printed_pages": [
+      102
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-11:sentence-pattern:17",
+    "pattern": "渐渐地",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-11",
+    "topic": "谈自己的想法",
+    "printed_pages": [
+      102
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-12:sentence-pattern:01",
+    "pattern": "本来",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-12",
+    "topic": "情况描写",
+    "printed_pages": [
+      108,
+      109
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-12:sentence-pattern:02",
+    "pattern": "稍微+动词+一点儿",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-12",
+    "topic": "情况描写",
+    "printed_pages": [
+      108,
+      109
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-12:sentence-pattern:03",
+    "pattern": "正因为……才……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-12",
+    "topic": "情况描写",
+    "printed_pages": [
+      108,
+      109
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-12:sentence-pattern:04",
+    "pattern": "尽量",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-12",
+    "topic": "情况描写",
+    "printed_pages": [
+      108,
+      109
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-12:sentence-pattern:05",
+    "pattern": "像……一样（2）",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-12",
+    "topic": "情况描写",
+    "printed_pages": [
+      108,
+      109
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-12:sentence-pattern:06",
+    "pattern": "突然",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-12",
+    "topic": "情况描写",
+    "printed_pages": [
+      108,
+      109
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-12:sentence-pattern:07",
+    "pattern": "发生",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-12",
+    "topic": "情况描写",
+    "printed_pages": [
+      110
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-12:sentence-pattern:08",
+    "pattern": "取决于",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-12",
+    "topic": "情况描写",
+    "printed_pages": [
+      110
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-12:sentence-pattern:09",
+    "pattern": "习惯",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-12",
+    "topic": "情况描写",
+    "printed_pages": [
+      110
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-12:sentence-pattern:10",
+    "pattern": "总是",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-12",
+    "topic": "情况描写",
+    "printed_pages": [
+      110
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-12:sentence-pattern:11",
+    "pattern": "分成",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-12",
+    "topic": "情况描写",
+    "printed_pages": [
+      110
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-12:sentence-pattern:12",
+    "pattern": "愿意",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-12",
+    "topic": "情况描写",
+    "printed_pages": [
+      110
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-12:sentence-pattern:13",
+    "pattern": "决定",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-12",
+    "topic": "说明转变、叙述过程",
+    "printed_pages": [
+      112
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-12:sentence-pattern:14",
+    "pattern": "改主意",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-12",
+    "topic": "说明转变、叙述过程",
+    "printed_pages": [
+      112
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-12:sentence-pattern:15",
+    "pattern": "还是……吧",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-12",
+    "topic": "说明转变、叙述过程",
+    "printed_pages": [
+      112
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-12:sentence-pattern:16",
+    "pattern": "再",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-12",
+    "topic": "说明转变、叙述过程",
+    "printed_pages": [
+      112
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-12:sentence-pattern:17",
+    "pattern": "动词+不／得+过去",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-12",
+    "topic": "说明转变、叙述过程",
+    "printed_pages": [
+      112
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json"
+  },
+  {
+    "item_id": "boya-quasi-intermediate-i:lesson-12:sentence-pattern:18",
+    "pattern": "很……，很……",
+    "introduced_lesson_id": "boya-quasi-intermediate-i:lesson-12",
+    "topic": "说明转变、叙述过程",
+    "printed_pages": [
+      112
+    ],
+    "source_file": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json"
+  }
   ],
   "grammar": [],
   "sentences": [],

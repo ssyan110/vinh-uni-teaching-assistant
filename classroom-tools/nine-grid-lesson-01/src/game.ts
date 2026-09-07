@@ -3,6 +3,7 @@ import type {
   CharacterItem,
   ContentPack,
   FunctionPrompt,
+  SentencePattern,
   ScopeSelection,
   Team,
   VocabularyItem
@@ -238,6 +239,22 @@ export function sentencesForScope(pack: ContentPack, selection: ScopeSelection) 
   return pack.sentences.filter((item) => isInScope(item, selected) && item.sentence.trim());
 }
 
+export function sentencePatternsForScope(pack: ContentPack, selection: ScopeSelection): SentencePattern[] {
+  const selected = lessonIdsForScope(pack, selection);
+  return (pack.sentence_patterns ?? []).filter((item) => isInScope(item, selected) && item.pattern.trim());
+}
+
+export function sentencePatternPromptsForScope(pack: ContentPack, selection: ScopeSelection): FunctionPrompt[] {
+  return sentencePatternsForScope(pack, selection).map((item) => ({
+    kind: "pattern-make",
+    activity: "make-sentence",
+    prompt: item.pattern,
+    support: "请用这个句式造一个和自己有关的新句子。",
+    seconds: 30,
+    sourceItemId: item.item_id
+  }));
+}
+
 export function functionPromptsForScope(pack: ContentPack, selection: ScopeSelection): FunctionPrompt[] {
   const selected = lessonIdsForScope(pack, selection);
   return pack.exercises.flatMap((raw, index): FunctionPrompt[] => {
@@ -253,11 +270,9 @@ export function functionPromptsForScope(pack: ContentPack, selection: ScopeSelec
     if (!prompt) return [];
     return [{
       kind,
-      activity: index % 2 === 0 ? "make-sentence" : "translate-vietnamese",
+      activity: "translate-vietnamese",
       prompt,
-      support: index % 2 === 0
-        ? "请参考上面的课内句式，用这个句式造一个新的句子。"
-        : "请先读出例句，再说出它的越南文意思。",
+      support: "请先读出课本例句，再说出它的越南文意思。",
       // Function cells intentionally use one classroom rhythm: every task gets
       // a visible 30-second turn, regardless of its prompt kind.
       seconds: 30,

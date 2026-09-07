@@ -11,9 +11,16 @@ assert.equal(pack.lessons[0].lesson_name, '第1课：丽丽是独生女');
 assert.deepEqual(pack.lessons.map(x=>x.lesson_id), Array.from({length:12},(_,i)=>`${book}:lesson-${String(i+1).padStart(2,'0')}`));
 assert.equal(pack.vocabulary.length, 324);
 assert.equal(pack.exercises.length, 958);
+assert.equal(pack.sentence_patterns.length, 185);
 assert.equal(pack.characters.length, 0);
 assert.equal(pack.sentences.length, 0);
 const ids = new Set(pack.lessons.map(x=>x.lesson_id));
+assert.equal(new Set(pack.sentence_patterns.map(x=>x.item_id)).size, pack.sentence_patterns.length);
+for (const item of pack.sentence_patterns) {
+  assert(ids.has(item.introduced_lesson_id));
+  assert(item.pattern.trim());
+  assert(item.source_file.startsWith(`lessons/${book}/`));
+}
 for (const collection of [pack.vocabulary, pack.exercises]) {
   assert.equal(new Set(collection.map(x=>x.item_id)).size, collection.length);
   for (const item of collection) {
@@ -35,4 +42,4 @@ for (const id of ids) {
   assert(pack.vocabulary.some(x=>x.introduced_lesson_id===id));
   assert(pack.exercises.some(x=>x.introduced_lesson_id===id));
 }
-console.log('Content verified: twelve lessons, 324 vocabulary occurrences, 958 PPT example sentence tasks.');
+console.log('Content verified: twelve lessons, 324 vocabulary occurrences, 185 sentence patterns, 958 PPT example sentence tasks.');
