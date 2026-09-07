@@ -80,6 +80,13 @@ function promptActivityTitle(activity: FunctionPromptActivity): string {
   return activity === "translate-vietnamese" ? "读例句，再说出越南文意思" : "用这个句式造一个新句子";
 }
 
+/** Lucide-compatible inline icons keep the game usable in the offline file. */
+function promptActivityIcon(activity: FunctionPromptActivity): string {
+  return activity === "translate-vietnamese"
+    ? `<svg class="function-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"></rect><path d="M5 10a7 7 0 0 0 14 0M12 17v5M8 22h8"></path></svg>`
+    : `<svg class="function-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><path d="M13 2v7h7M16 13.5l-4.8 4.8-2.7.4.4-2.7a1.6 1.6 0 0 1 2.3-2.3zM9 6h1M9 10h1"></path></svg>`;
+}
+
 function boardPromptPoolForScope(
   content: ContentPack,
   selection: ScopeSelection,
@@ -270,7 +277,7 @@ function renderGame(): void {
           const promptLabel = prompt ? promptActivityLabel(prompt.activity) : "";
           const disabled = Boolean(winner || isDraw || owners[index]);
           const aria = prompt ? `${promptLabel}功能格` : item?.word ?? "空白格";
-          return `<button class="board-cell ${prompt ? "board-cell--function" : "board-cell--word"} ${owners[index] ? `claimed claimed--${owners[index]}` : ""}" role="gridcell" style="--word-length:${Math.max(2, ...wordLines.map((line) => Array.from(line).length))};--word-lines:${Math.max(1,wordLines.length)}" data-source-item="${escapeHtml(item?.item_id ?? prompt?.sourceItemId ?? "")}" data-cell="${index}" aria-label="${escapeHtml(aria)}${owners[index] ? `，已由${teamName(owners[index] as Team)}选择` : ""}" ${disabled ? "disabled" : ""}><span>${prompt ? promptLabel : wordLines.map(escapeHtml).join("<br>")}</span>${prompt ? `<small>30 秒</small>` : ""}</button>`;
+          return `<button class="board-cell ${prompt ? "board-cell--function" : "board-cell--word"} ${owners[index] ? `claimed claimed--${owners[index]}` : ""}" role="gridcell" style="--word-length:${Math.max(2, ...wordLines.map((line) => Array.from(line).length))};--word-lines:${Math.max(1,wordLines.length)}" data-source-item="${escapeHtml(item?.item_id ?? prompt?.sourceItemId ?? "")}" data-cell="${index}" aria-label="${escapeHtml(aria)}${owners[index] ? `，已由${teamName(owners[index] as Team)}选择` : ""}" ${disabled ? "disabled" : ""}><span>${prompt ? promptActivityIcon(prompt.activity) : wordLines.map(escapeHtml).join("<br>")}</span>${prompt ? `<small>30 秒</small>` : ""}</button>`;
         }).join("")}
       </div>
     </section>
