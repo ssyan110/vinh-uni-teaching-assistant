@@ -1,0 +1,59 @@
+@import url("./styles/base.css");
+
+.lesson-picker { min-width: 0; margin: 0; padding: 0; border: 0; }
+.lesson-picker legend { font-size: 20px; font-weight: bold; }
+.lesson-tools { display: flex; gap: 24px; margin: 14px 0; }
+.lesson-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.lesson-options label { display: flex; gap: 10px; align-items: start; padding: 12px; border: 1px solid var(--line-strong); border-radius: 10px; cursor: pointer; font-size: 18px; }
+.lesson-options label:has(input:checked) { background: var(--teal-soft); border-color: var(--teal-dark); }
+.lesson-options input { width: 20px; height: 20px; flex-shrink: 0; accent-color: var(--teal-dark); }
+.lesson-options small { display: block; font-size: 14px; margin-top: 5px; color: var(--ink-soft); }
+.game-header .eyebrow { letter-spacing: normal; line-height: 1.5; }
+@media (max-width: 680px) { .lesson-options { grid-template-columns: 1fr; } }
+.game-header__left > .back-button { flex-shrink: 0; white-space: nowrap; }
+.game-header .eyebrow { white-space: normal; overflow: visible; }
+/* Wide cells show up to three Han characters per line, without isolated brackets. */
+.board-stage { display: block; min-height: 0; padding: 8px; overflow-x: auto; }
+.board { width: 100%; min-width: calc(var(--board-side) * 156px); max-width: none; height: calc(100dvh - 235px); min-height: calc(var(--board-side) * 84px); aspect-ratio: auto; grid-template-rows: repeat(var(--board-side), minmax(0, 1fr)); grid-template-columns: repeat(var(--board-side), minmax(0, 1fr)); container-type: size; border-width: 4px; }
+.board-cell { min-height: 0; padding: 6px; }
+.board-cell span, .board-cell--word span { white-space: nowrap; word-break: normal; overflow-wrap: normal; line-break: auto; font-size: min(44px, calc((100cqw / var(--board-side) - 20px) / var(--word-length)), calc((100cqh / var(--board-side) - 14px) / var(--word-lines) / 1.15)); line-height: 1.15; }
+.board-cell:hover:not(:disabled) { transform: none; }
+.board-cell--function small { font-size: 14px; }
+.board-scroll-hint { display: none; margin: 8px 14px; font-size: 16px; }
+.turn-indicator { display: inline-block; margin-top: 8px; padding: 7px 14px; border: 2px solid currentColor; border-radius: 8px; font-size: 22px; font-weight: bold; line-height: 1.2; }
+.turn-indicator--blue { color: #fff; background: #1266a0; }
+.turn-indicator--red { color: #fff; background: #b74432; }
+.round-controls { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; justify-content: end; }
+.round-controls .button { white-space: nowrap; }
+.task-modal .form-actions { flex-wrap: wrap; }
+@media (max-width: 680px) { .turn-indicator { font-size: 16px; padding: 6px 8px; } .board { height: 65dvh; } .board-scroll-hint { display: block; } .round-controls { gap: 10px; } }
+.team-score--blue, .board-cell.claimed--blue { background: #1266a0; }
+.team-score--red, .board-cell.claimed--red { background: #b74432; }
+.board-cell.claimed::after { content: none; }
+.board-cell.claimed { box-shadow: inset 0 0 0 3px rgb(255 255 255 / 24%); }
+.board-cell.claimed small { color: #fff; }
+.board { border: 3px solid #cad4d8; border-radius: 18px; box-shadow: 0 8px 30px rgb(23 50 77 / 8%); }
+.board-cell { border-color: #dce3e6; }
+.game-actions { align-items: center; }
+.pug-companion { width: 86px; flex-shrink: 0; }
+.pug-art { display: block; width: 100%; overflow: visible; }
+.pug-companion--happy .pug-body { transform-origin: 100px 180px; animation: pug-jump 650ms ease-in-out; }
+.claim-pop { animation: claim-pop 280ms ease-out; }
+.victory-backdrop { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; overflow-y: auto; background: #fff6e7; padding: 24px; }
+.victory-modal { width: 100%; max-width: 900px; border: 0; background: transparent; box-shadow: none; text-align: center; }
+.victory-pug { width: min(52vh, 390px); max-width: 80vw; margin: 0 auto; animation: victory-enter 650ms cubic-bezier(.2,.8,.25,1); }
+.victory-pug .pug-body { transform-origin: 100px 180px; animation: pug-jump 750ms ease-in-out 650ms 2; }
+.victory-modal h2 { font-size: clamp(36px, 6vw, 72px); margin: 8px 0 14px; }
+.victory-modal p { font-size: 24px; }
+.victory-team { font-weight: bold; margin: 14px 0 0; }
+.victory--blue .victory-team { color: #1266a0; }
+.victory--red .victory-team { color: #b74432; }
+.victory-modal .form-actions { justify-content: center; }
+#result-preview { display: grid; gap: 18px; justify-items: center; }
+#result-preview img { width: min(100%, 560px); height: auto; border: 1px solid #cad4d8; border-radius: 12px; }
+#export-status { font-size: 18px; line-height: 1.6; }
+@keyframes pug-jump { 0%,100% { transform: translateY(0) scale(1); } 18% { transform: translateY(3px) scale(1.06,.94); } 48% { transform: translateY(-24px) rotate(-5deg); } 72% { transform: translateY(-8px) rotate(4deg); } 87% { transform: translateY(2px) scale(1.04,.96); } }
+@keyframes claim-pop { 0% { opacity: .65; transform: scale(.93); } 100% { opacity: 1; transform: scale(1); } }
+@keyframes victory-enter { from { opacity: 0; transform: translateY(80px) scale(.65); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@media (max-width: 680px) { .pug-companion { width: 60px; } .victory-modal { padding: 8px; } }
+@media (prefers-reduced-motion: reduce) { .pug-companion--happy .pug-body, .victory-pug, .victory-pug .pug-body, .claim-pop { animation: none; } .board-cell { transition: none; } }

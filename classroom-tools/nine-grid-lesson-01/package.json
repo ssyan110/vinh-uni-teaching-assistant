@@ -1,0 +1,21 @@
+{
+  "name": "vinh-lesson-01-nine-grid",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build && node scripts/build-offline.mjs",
+    "preview": "vite preview",
+    "validate-content": "node qa/validate-content.mjs",
+    "validate-source": "node qa/validate-source-fidelity.mjs",
+    "validate-offline": "node qa/validate-offline.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vite": "^6.1.0",
+    "vitest": "^3.2.4"
+  }
+}
