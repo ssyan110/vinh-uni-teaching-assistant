@@ -1,11 +1,12 @@
-# 第一课九宫格项目规则
+# 博雅准中级全册词语连线
 
-开始修改前先读本文件、`README.md`、`docs/lesson-01-source-map.md` 和根项目的 `AGENTS.md`。
-
-- 本工具是 `/classroom-tools/` 下的补充课堂游戏，不属于 `lessons/*/20-approved/`。
-- 一般格只显示第一课《听说（一）》的词语；句子和句式练习只进入功能格。
-- 教材内容以根项目 `textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json` 为准，不自行编写教材答案。
-- 学生可见内容全部使用简体中文；中文字体使用 `KaiTi`，拉丁字母使用 `Times New Roman`。
-- 保留离线运行、键盘操作、投影可读性和移动端布局。
-- 修改内容后运行 `npm run validate-content`、`npm test` 和 `npm run build`。
-- 不修改第一课 PPTX、教师手册、活动卡、authority 或 release。
+- 本 app 是补充课堂工具；Adam 于 2026-09-06 授权扩充到《博雅汉语听说：准中级加速篇 I》全十二课。
+- `lesson_id` 使用完整 `boya-quasi-intermediate-i:lesson-NN`；第一课《丽丽是独生女》。不得混入旧《中级冲刺篇 I》内容。
+- 先读 README 和 `docs/lesson-01-source-map.md`。原始来源记录、状态与 SHA256 在 `docs/source-snapshot.json`；来源可能保留草稿状态，不能据此宣称教材新获核准。
+- 一般格只放不重复词语；最多三个汉字一行，超过三个汉字分行，短词括号不拆开。棋盘按词数自动选择6–9边，每轮至少7个功能格，上下左右不相邻，斜角允许相邻。功能格照录所选课在线预习PPT中标注“例句”的完整句子，要求读例句再造句；不编造教材题或答案。
+- 6–8边连四格，9边连五格。课堂首轮蓝队先行，之后每轮交换先手；电脑模式学生蓝队先行。教师确认占格后换队；清楚显示当前队伍，未通过可不占格换队，撤销须同时恢复占格与轮次。
+- 成功占格触发八哥犬跳跃；达到连线立即判胜并全屏庆祝，不再次要求教师确认。可保存包含获胜队伍与棋盘的PNG，可用按钮或Escape关闭庆祝，之后仍可撤销。尊重减少动态效果设置。
+- 最新例外：单独第一课恢复6×6，31词加5例句格；不适用至少7功能格规则。混选仍按一般规则。
+- 学生可见文字使用简体中文、Times New Roman / KaiTi；保留离线、键盘、投影和移动端操作。
+- 运行 `npm test`、`npm run validate-content`、`npm run validate-source`、`npm run build`、`npm run validate-offline`，并验证单课、多课、全册、重新选课。
+- 不修改 PPTX、教师手册、活动卡、authority、release 或原专案。
