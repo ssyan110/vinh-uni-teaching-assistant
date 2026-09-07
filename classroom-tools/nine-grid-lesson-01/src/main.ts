@@ -21,6 +21,7 @@ import type {
   CellOwner,
   ContentPack,
   FunctionPrompt,
+  FunctionPromptActivity,
   LegacySubmode,
   ScopeSelection,
   Team,
@@ -71,16 +72,12 @@ function teamName(team: Team): string {
   return team === "red" ? "红队" : "蓝队";
 }
 
-function promptKindLabel(kind: FunctionPrompt["kind"]): string {
-  if (kind === "dialogue-pattern") return "对话";
-  if (kind === "sentence-rewrite") return "改写";
-  return "例句";
+function promptActivityLabel(activity: FunctionPromptActivity): string {
+  return activity === "translate-vietnamese" ? "读例句·说越南文" : "句式造句";
 }
 
-function promptKindTitle(kind: FunctionPrompt["kind"]): string {
-  if (kind === "dialogue-pattern") return "用句式回答，再造一句";
-  if (kind === "sentence-rewrite") return "用句式改写";
-  return "读例句，再说一句";
+function promptActivityTitle(activity: FunctionPromptActivity): string {
+  return activity === "translate-vietnamese" ? "读例句，再说出越南文意思" : "用这个句式造一个新句子";
 }
 
 function boardPromptPoolForScope(
@@ -101,7 +98,10 @@ function boardPromptPoolForScope(
     .map((item): FunctionPrompt => ({
       kind: "pattern-make",
       prompt: item.sentence,
-      support: "读课本句子，用本课句式或词语再造一句。",
+      activity: prompts.length % 2 === 0 ? "make-sentence" : "translate-vietnamese",
+      support: prompts.length % 2 === 0
+        ? "请参考上面的课内句式，用这个句式造一个新的句子。"
+        : "请先读出例句，再说出它的越南文意思。",
       seconds: 30,
       sourceItemId: `sentence-${item.item_id}`
     }));
@@ -119,7 +119,7 @@ function shell(content: string, options: { compact?: boolean } = {}): string {
       <header class="topbar">
         <button class="brand" data-action="home" aria-label="返回首页">
           <span class="brand-mark" aria-hidden="true">字</span>
-          <span><strong>博雅词语连线</strong><small>听说 · 词语与例句课堂游戏</small></span>
+          <span><strong>博雅词语连线</strong><small>词语与句式造句课堂游戏</small></span>
         </button>
         <div class="content-chip" aria-label="当前内容">${contentSummary}</div>
       </header>
@@ -165,7 +165,7 @@ function renderHome(): void {
             `<span class="sample-cell ${[0, 4, 8].includes(index) ? "sample-cell--marked" : ""}">${word}</span>`
           ).join("")}
         </div>
-        <p>6 × 6 至 9 × 9 <small>例句格上下左右不相邻</small></p>
+        <p>6 × 6 至 9 × 9 <small>句式造句格上下左右不相邻</small></p>
       </div>
     </section>
     ${contentError ? `<section class="content-error" role="alert"><strong>内容无法使用</strong><p>${escapeHtml(contentError)}</p></section>` : ""}
@@ -198,7 +198,7 @@ function renderSetup(): void {
       <div class="setup-main">
         <span class="eyebrow">本轮内容</span>
         <h1>选好课次，<br><em>开始对战。</em></h1>
-        <p class="setup-lead">第一课用 6 × 6，含31个词语和5个例句格。其他选课随词数调整，最多 9 × 9；例句格上下左右不相邻，词语混合分轮，不重复。</p>
+        <p class="setup-lead">第一课用 6 × 6，含31个词语和5个句式造句格。其他选课随词数调整，最多 9 × 9；句式造句格上下左右不相邻，词语混合分轮，不重复。</p>
         <div class="setup-card">
           <fieldset class="lesson-picker"><legend>选择本轮课次（可多选）</legend>
             <div class="lesson-tools"><button class="text-button" data-action="all-lessons">全选十二课</button><button class="text-button" data-action="clear-lessons">清空选择</button></div>
@@ -209,7 +209,7 @@ function renderSetup(): void {
               <label><input type="radio" name="legacy-submode" value="classroom" ${legacySubmode === "classroom" ? "checked" : ""}/><span><b>课堂分队</b><small>首轮蓝队先，之后每轮交换先手；占格后换队。</small></span></label>
               <label><input type="radio" name="legacy-submode" value="solo" ${legacySubmode === "solo" ? "checked" : ""}/><span><b>学生对战电脑</b><small>学生用蓝队，电脑用红队。</small></span></label>
             </fieldset>
-            <div class="function-note"><strong>功能格固定 30 秒</strong><span>所选课 PPT 例句 · 教师判定</span></div>
+            <div class="function-note"><strong>句式造句格固定 30 秒</strong><span>参考所选课 PPT 句式，造一个新句子 · 教师判定</span></div>
           </div>
         </div>
       </div>
@@ -220,7 +220,7 @@ function renderSetup(): void {
         ${chosen.length
           ? `<div class="plan-line"><b>${firstRoundSide ** 2}</b><span>${firstRoundWordCount} 个词语 + ${firstRoundFunctionCount} 个功能格 · ${roundPlan.length} 轮</span></div>`
           : `<div class="plan-line"><b>${firstRoundSide ** 2}</b><span>格 · 请至少选择一课</span></div>`}
-        <div class="plan-functions"><span>所选课 PPT 例句</span><strong>${scopedPrompts.length}</strong><small>${firstRoundFunctionCount ? "例句题用完后再轮换" : "本轮无需补入功能格"}</small></div>
+        <div class="plan-functions"><span>所选课句式造句题</span><strong>${scopedPrompts.length}</strong><small>${firstRoundFunctionCount ? "句式题用完后再轮换" : "本轮无需补入功能格"}</small></div>
         <button class="button button--primary button--wide" data-action="start-game" ${canStart ? "" : "disabled"}>开始游戏 <span aria-hidden="true">→</span></button>
       </aside>
     </section>
@@ -267,7 +267,7 @@ function renderGame(): void {
           const item = boardVocabulary[index];
           const prompt = functionCells.get(index);
           const wordLines = boardWordLines(item?.word ?? "");
-          const promptLabel = prompt ? promptKindLabel(prompt.kind) : "";
+          const promptLabel = prompt ? promptActivityLabel(prompt.activity) : "";
           const disabled = Boolean(winner || isDraw || owners[index]);
           const aria = prompt ? `${promptLabel}功能格` : item?.word ?? "空白格";
           return `<button class="board-cell ${prompt ? "board-cell--function" : "board-cell--word"} ${owners[index] ? `claimed claimed--${owners[index]}` : ""}" role="gridcell" style="--word-length:${Math.max(2, ...wordLines.map((line) => Array.from(line).length))};--word-lines:${Math.max(1,wordLines.length)}" data-source-item="${escapeHtml(item?.item_id ?? prompt?.sourceItemId ?? "")}" data-cell="${index}" aria-label="${escapeHtml(aria)}${owners[index] ? `，已由${teamName(owners[index] as Team)}选择` : ""}" ${disabled ? "disabled" : ""}><span>${prompt ? promptLabel : wordLines.map(escapeHtml).join("<br>")}</span>${prompt ? `<small>30 秒</small>` : ""}</button>`;
@@ -275,12 +275,12 @@ function renderGame(): void {
       </div>
     </section>
     <section class="game-footer">
-      <p><strong>${winner || isDraw ? "本轮结束" : (isManual ? "教师确认后点击词语占格" : "请蓝队选择一格")}</strong><span> · ${isManual ? "两组轮流换人，独立读词并解释意思；功能格先读例句，再说一句。" : "电脑红队会自动选择。"}</span></p>
+      <p><strong>${winner || isDraw ? "本轮结束" : (isManual ? "教师确认后点击词语占格" : "请蓝队选择一格")}</strong><span> · ${isManual ? "两组轮流换人，独立读词并解释意思；功能格参考句式造一个新句子。" : "电脑红队会自动选择。"}</span></p>
       <div class="round-controls"><button class="text-button" data-action="undo-turn" ${turnHistory.length ? "" : "disabled"}>撤销上一步</button>${winner || isDraw ? `<button class="button button--primary" data-action="next-round">${roundIndex < rounds.length - 1 ? "下一轮" : "再玩一次"} →</button>` : `<button class="button button--secondary" data-action="pass-turn">未通过，换队</button><button class="text-button" data-action="reset-round">重开本轮</button>`}</div>
     </section>
     ${activePrompt ? `<div class="modal-backdrop" role="presentation"><section class="task-modal" role="dialog" aria-modal="true" aria-labelledby="task-title">
-      <span class="eyebrow">${teamName(turnTeam)} · ${promptKindLabel(activePrompt.kind)}练习 · ${activePrompt.seconds} 秒</span>
-      <h2 id="task-title">${promptKindTitle(activePrompt.kind)}</h2>
+      <span class="eyebrow">${teamName(turnTeam)} · ${promptActivityLabel(activePrompt.activity)} · ${activePrompt.seconds} 秒</span>
+      <h2 id="task-title">${promptActivityTitle(activePrompt.activity)}</h2>
       <p class="task-prompt" lang="zh">${escapeHtml(activePrompt.prompt)}</p>
       ${activePrompt.support ? `<p class="task-support">${escapeHtml(activePrompt.support)}</p>` : ""}
       <div class="prompt-countdown" aria-live="polite"><strong id="prompt-timer">${promptRemaining}</strong><span>秒</span></div>

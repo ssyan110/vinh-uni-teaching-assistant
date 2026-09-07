@@ -78,9 +78,11 @@ export type GameMode = "modern" | "legacy";
 export type LegacySubmode = "classroom" | "solo";
 /** The only three kinds that can appear in a function cell. */
 export type FunctionPromptKind = "pattern-make" | "dialogue-pattern" | "sentence-rewrite";
+export type FunctionPromptActivity = "make-sentence" | "translate-vietnamese";
 
 export interface FunctionPrompt {
   kind: FunctionPromptKind;
+  activity: FunctionPromptActivity;
   prompt: string;
   support?: string;
   seconds: 30;
