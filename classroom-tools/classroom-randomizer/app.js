@@ -305,7 +305,9 @@
   function renderTimerState() {
     const hasPending = Boolean(state && Model.pendingAttempt(state)) && !isDrawing;
     const enabled = hasPending && timerDuration > 0;
-    elements.timerReadout.hidden = !enabled;
+    const preserveTimerSpace = isDrawing && !elements.timerReadout.hidden;
+    elements.timerReadout.hidden = !enabled && !preserveTimerSpace;
+    elements.timerReadout.classList.toggle("is-drawing", preserveTimerSpace);
     elements.timerValue.textContent = String(timerRemaining);
     elements.timerReadout.classList.toggle("is-ending", enabled && timerRemaining <= 5);
     elements.timerToggleButton.disabled = !enabled;
@@ -867,9 +869,6 @@
       resetResponseDraft();
       persist();
       renderApp();
-      if (elements.drawStage && typeof elements.drawStage.scrollIntoView === "function") {
-        elements.drawStage.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
       if (drawingRevealTimer) global.clearTimeout(drawingRevealTimer);
       drawingRevealTimer = global.setTimeout(() => {
         isDrawing = false;
@@ -1004,6 +1003,11 @@
     elements.quickResponseHint.textContent = isVolunteer
       ? "记录后会回到抽选区，继续课堂活动。"
       : "记录后会自动回到抽选区，显示下一位学生。";
+    elements.quickResponseBar.classList.remove("is-drawing");
+    elements.responseCard.classList.remove("is-drawing");
+    [elements.recordNextButton, elements.recordCompleteButton, elements.noAnswerButton].forEach((button) => {
+      button.disabled = false;
+    });
     elements.recordNextButton.textContent = attempt.selectionMethod !== "volunteer" && Model.getProgress(state).poolCount <= 1
       ? "记录回答并完成本轮"
       : "记录回答并抽下一位";
@@ -1049,6 +1053,7 @@
       ? attempt.lessonId
       : state.session.lessonId;
     const lessonNumber = Model.getLessonNumber(attemptLessonId);
+    const preserveResponseLayout = isDrawing && !elements.responseCard.hidden;
     elements.drawTitle.textContent = isDrawing
       ? "正在抽选"
       : attempt
@@ -1058,8 +1063,10 @@
     elements.emptyState.hidden = Boolean(attempt);
     elements.pendingCard.hidden = !attempt;
     elements.pendingCard.classList.toggle("is-drawing", isDrawing);
-    elements.quickResponseBar.hidden = !attempt || isDrawing;
-    elements.responseCard.hidden = !attempt || isDrawing;
+    elements.quickResponseBar.hidden = !attempt || (isDrawing && !preserveResponseLayout);
+    elements.responseCard.hidden = !attempt || (isDrawing && !preserveResponseLayout);
+    elements.quickResponseBar.classList.toggle("is-drawing", isDrawing && preserveResponseLayout);
+    elements.responseCard.classList.toggle("is-drawing", isDrawing && preserveResponseLayout);
     elements.drawButton.disabled = Boolean(attempt) || isDrawing || progress.roundComplete || progress.noEligibleStudents;
     elements.drawButton.classList.toggle("is-disabled", elements.drawButton.disabled);
     elements.drawButton.querySelector("span:last-of-type").textContent = progress.roundComplete ? "本轮完成" : "抽一位";
@@ -1073,10 +1080,14 @@
     }
 
     if (isDrawing) {
-      elements.studentNumber.textContent = "";
+      if (preserveResponseLayout) {
+        [elements.recordNextButton, elements.recordCompleteButton, elements.noAnswerButton].forEach((button) => {
+          button.disabled = true;
+        });
+      }
+      elements.studentNumber.textContent = "座号 —";
       elements.studentName.textContent = "下一位同学";
       elements.pendingStatus.textContent = "正在洗牌";
-      elements.pendingPrompt.textContent = "看卡片转一转，马上揭晓";
       renderTimerState();
       return;
     }

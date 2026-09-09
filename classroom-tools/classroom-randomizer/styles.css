@@ -505,7 +505,6 @@ textarea::placeholder {
   display: grid;
   min-height: 260px;
   place-items: center;
-  scroll-margin-top: 18px;
   border: 1px dashed var(--line-strong);
   border-radius: 16px;
   background: linear-gradient(135deg, #f9fbfb, #eef6f6);
@@ -552,6 +551,7 @@ textarea::placeholder {
 }
 
 .pending-card {
+  position: relative;
   width: min(100%, 650px);
   padding: 32px 30px;
   text-align: center;
@@ -620,6 +620,20 @@ textarea::placeholder {
 
 .pending-card.is-drawing .draw-animation {
   display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  margin: 0;
+  transform: translate(-50%, -50%);
+}
+
+.pending-card.is-drawing > .pending-card-heading,
+.pending-card.is-drawing > .student-number,
+.pending-card.is-drawing > h3,
+.pending-card.is-drawing > .pending-prompt,
+.pending-card.is-drawing > .timer-readout {
+  visibility: hidden;
 }
 
 .draw-card {
@@ -696,6 +710,10 @@ textarea::placeholder {
   border-radius: 999px;
   color: var(--accent-dark);
   background: #edf8f6;
+}
+
+.timer-readout.is-drawing {
+  visibility: hidden;
 }
 
 .timer-readout strong {
@@ -943,6 +961,15 @@ textarea::placeholder {
 
 .quick-response-bar .response-actions .button-primary {
   flex: 0 1 auto;
+}
+
+.quick-response-bar.is-drawing,
+.response-card.is-drawing {
+  opacity: 0.72;
+}
+
+.response-card.is-drawing {
+  pointer-events: none;
 }
 
 .draw-actions {
