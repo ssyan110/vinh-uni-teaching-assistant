@@ -35,9 +35,9 @@
             <h2 id="startTitle">开始一堂课</h2>
             <p class="start-copy">设置学生名单后，直接开始抽问。</p>
             <div class="start-checklist" aria-label="开始前设置">
-              <div><span>01</span><strong>选择课堂记录方式</strong></div>
-              <div><span>02</span><strong>加入学生名单</strong></div>
-              <div><span>03</span><strong>按下开始本堂课</strong></div>
+              <div><span>01</span><strong>选择教材与课次</strong></div>
+              <div><span>02</span><strong>确认学生名单</strong></div>
+              <div><span>03</span><strong>开始本堂抽问</strong></div>
             </div>
           </div>
 
@@ -60,13 +60,6 @@
               <label class="field">
                 <span>上课日期</span>
                 <input id="dateInput" name="date" type="date">
-              </label>
-              <label class="field">
-                <span>这堂课怎么记录</span>
-                <select id="scoringModeInput" name="scoringMode">
-                  <option value="graded">课堂记录：纳入课堂摘要</option>
-                  <option value="practice">练习记录：只保留原始资料</option>
-                </select>
               </label>
               <label class="field">
                 <span>使用教材</span>
@@ -156,7 +149,7 @@
                 </div>
                 <div class="student-number" id="studentNumber">座号 —</div>
                 <h3 id="studentName">—</h3>
-                <p class="pending-prompt" id="pendingPrompt">请先让学生回答，再记下口语表现。</p>
+                <p class="pending-prompt" id="pendingPrompt">请先让学生回答，再记录回答状态。</p>
                 <div class="timer-readout" id="timerReadout" hidden>
                   <span>思考时间</span>
                   <strong id="timerValue">20</strong>
@@ -207,17 +200,22 @@
               <small>快捷键 Space</small>
             </button>
 
-            <section class="assessment-card" id="assessmentCard" hidden aria-labelledby="assessmentTitle">
-              <div class="assessment-heading">
+            <section class="response-card" id="responseCard" hidden aria-labelledby="responseTitle">
+              <div class="response-heading">
                 <div>
                   <p class="section-kicker">学生回答后</p>
-                  <h3 id="assessmentTitle">口语表现评分</h3>
+                  <h3 id="responseTitle">记录这次回答</h3>
                 </div>
-                <div class="score-total" id="scoreTotal">—／12</div>
+                <span class="response-badge">课堂记录</span>
               </div>
-              <p class="assessment-note">每项 0–3 分，共 12 分。0＝尚未展现｜1＝需要大量协助｜2＝大致完成｜3＝能独立完成。<br>这里保存的是课堂原始表现，不是学校正式成绩；未准备但回答，请记录情境，不另加准备分。</p>
-              <div id="rubricFields" class="rubric-fields"></div>
-              <div class="assessment-context-grid">
+              <p class="response-note">选择回答情况后，这位学生就完成本轮；这里只保存抽问记录，不影响下一位抽问。</p>
+              <label class="field"><span>题目／活动 <em>选填，方便回看</em></span><input id="taskPromptInput" type="text" maxlength="500" placeholder="例如：向同学介绍家人，用两三句连贯的话说明共同爱好"></label>
+              <button id="newQuestionButton" class="button button-quiet" type="button">开始新题目</button>
+              <p class="privacy-note">题目可以不填写；未填写时只保存教材与课次，不记录小问题内容。</p>
+              <label class="field"><span>是否得到实质提示或协助 <em>选填；主动澄清不自动算协助</em></span>
+                <select id="assistanceInput"><option value="unknown">未记录</option><option value="yes">有实质提示或协助</option><option value="no">没有实质提示或协助</option></select>
+              </label>
+              <div class="response-context-grid">
                 <label class="field">
                   <span>回答结果</span>
                   <select id="responseStatusInput">
@@ -250,16 +248,11 @@
               </label>
               <label class="field note-field">
                 <span>教师备注 <em>选填</em></span>
-                <input id="noteInput" type="text" placeholder="例如：声调、词语、未准备但回答" autocomplete="off">
+                <input id="noteInput" type="text" maxlength="2000" placeholder="例如：能说出理由，但漏了例子" autocomplete="off">
               </label>
-              <label class="check-field">
-                <input id="countedForGradeInput" type="checkbox">
-                <span>纳入课堂摘要（不代表正式成绩）</span>
-              </label>
-              <div class="assessment-actions">
-                <button class="has-icon icon-save button button-primary" id="scoreNextButton" type="button">保存并抽下一位</button>
-                <button class="has-icon icon-save button button-secondary" id="scoreCompleteButton" type="button">只保存这笔</button>
-                <button class="has-icon icon-timer button button-secondary" id="deferButton" type="button">回答完成，稍后评分</button>
+              <div class="response-actions">
+                <button class="has-icon icon-save button button-primary" id="recordNextButton" type="button">记录回答并抽下一位</button>
+                <button class="has-icon icon-save button button-secondary" id="recordCompleteButton" type="button">只记录这笔</button>
                 <button class="has-icon icon-circle-help button button-quiet" id="noAnswerButton" type="button">记录未回答</button>
               </div>
             </section>
@@ -268,7 +261,7 @@
               <button class="has-icon icon-undo-2 button button-quiet" id="undoButton" type="button">返回上一步</button>
               <button class="has-icon icon-refresh-cw button button-secondary" id="nextRoundButton" type="button" hidden>开始下一轮抽问</button>
             </div>
-            <p class="privacy-note">完成本轮只代表学生已回答；次数、回答情境和口语表现会分别保存，之后再按课程需要计算。</p>
+              <p class="privacy-note">完成本轮只代表学生已回答；次数、回答情境和备注会分别保存，不计算成绩。</p>
           </section>
 
           <aside class="side-panel" aria-label="本堂课记录">
@@ -282,11 +275,11 @@
               </div>
               <div class="summary-metrics">
                 <div><strong id="answeredMetric">0</strong><span>回答次数</span></div>
-                <div><strong id="pendingMetric">0</strong><span>待评分</span></div>
+                <div><strong id="pendingMetric">0</strong><span>待记录</span></div>
                 <div><strong id="notAnsweredMetric">0</strong><span>未回答次数</span></div>
               </div>
               <div class="summary-divider"></div>
-              <div class="mini-summary" id="sessionScoreSummary">目前还没有课堂表现记录</div>
+              <div class="mini-summary" id="sessionRecordSummary">目前还没有课堂回答记录</div>
             </section>
 
             <section class="roster-card">
@@ -318,16 +311,6 @@
               <div class="student-list" id="studentList"></div>
             </section>
 
-            <section class="pending-list-card" id="pendingAssessmentsCard" hidden>
-              <div class="side-heading">
-                <div>
-                  <p class="section-kicker">稍后处理</p>
-                  <h3>还有几位需要评分</h3>
-                </div>
-              </div>
-              <div class="pending-assessment-list" id="pendingAssessmentsList"></div>
-            </section>
-
             <section class="attempts-card">
               <div class="side-heading">
                 <div>
@@ -345,8 +328,8 @@
           <div class="footer-actions">
             <button class="has-icon icon-download button button-quiet" id="exportCsvButton" type="button">原始记录 CSV</button>
             <button class="has-icon icon-download button button-quiet" id="exportXlsxButton" type="button">原始记录 Excel</button>
-            <button class="has-icon icon-download button button-secondary" id="exportSummaryCsvButton" type="button">学生汇总 CSV</button>
-            <button class="has-icon icon-download button button-secondary" id="exportSummaryXlsxButton" type="button">学生汇总 Excel</button>
+            <button class="has-icon icon-download button button-secondary" id="exportSummaryCsvButton" type="button">参与汇总 CSV</button>
+            <button class="has-icon icon-download button button-secondary" id="exportSummaryXlsxButton" type="button">参与汇总 Excel</button>
             <button class="has-icon icon-download button button-quiet" id="backupButton" type="button">下载完整备份</button>
             <label class="has-icon icon-upload file-button button button-quiet" for="restoreFile">导入备份</label>
             <input id="restoreFile" type="file" accept=".json,application/json" hidden>
@@ -364,9 +347,9 @@
         <button class="icon-button" id="closeHelpButton" type="button" aria-label="关闭说明">×</button>
       </div>
       <ol class="help-list">
-        <li><strong>需要投影时，先打开学生画面</strong><span>把新窗口拖到投影机；老师画面上的评分与备注不会显示给学生。</span></li>
+          <li><strong>需要投影时，先打开学生画面</strong><span>把新窗口拖到投影机；教师记录与备注不会显示给学生。</span></li>
         <li><strong>提问后按「抽一位」</strong><span>姓名揭晓后开始思考计时；时间到不会自动判定结果。</span></li>
-        <li><strong>回答后记下表现</strong><span>按「保存并抽下一位」可以连续抽问；只想停下来讲评时，按「只保存这笔」。</span></li>
+          <li><strong>回答后记录状态</strong><span>按「记录回答并抽下一位」可以连续抽问；想停下来时，按「只记录这笔」。</span></li>
         <li><strong>没有回答就先记录</strong><span>按「记录未回答」后，再按「抽一位」继续；这位同学稍后还能再抽到。</span></li>
         <li><strong>课程内容改变时直接切换课次</strong><span>后续抽问会记在新课次，之前保存的回答仍保留原课次。</span></li>
       </ol>
@@ -381,7 +364,7 @@
         </div>
         <button class="icon-button" id="closeCloudButton" type="button" aria-label="关闭连接设置">×</button>
       </div>
-      <p class="dialog-copy" id="cloudDialogCopy">登录后，班级名单、课堂、抽问、回答、备注与口语评分会保存到教学数据库；学生画面不会显示分数。</p>
+      <p class="dialog-copy" id="cloudDialogCopy">登录后，班级名单、课堂、抽问、回答状态与备注会保存到教学数据库；学生画面不会显示教师记录。</p>
       <div class="cloud-invite-panel" id="cloudInvitePanel" hidden>
         <p>邀请已确认。请设置教师账号密码，之后就能登录并加载班级名单。</p>
         <form class="cloud-auth-form" id="cloudInviteForm">
@@ -429,20 +412,9 @@
           <select id="recordsStudentSelect"></select>
         </label>
       </div>
-      <section class="formative-preview-card" aria-labelledby="formativePreviewTitle">
-        <div class="formative-preview-heading">
-          <div>
-            <p class="section-kicker">教师参考</p>
-            <h3 id="formativePreviewTitle">课堂表现指数预览</h3>
-          </div>
-          <span class="mode-pill">不代表正式成绩</span>
-        </div>
-        <div class="formative-preview-value" id="recordsIndexSummary">选择学生后显示预览。</div>
-        <p class="formative-preview-note">品质 60% · 随机回答率 20% · 自愿参与 10% · 证据完整度 10%。准备充分的自愿回答每课最多计 3 次，原始记录不会被改写。</p>
-      </section>
       <div class="records-summary" id="recordsSummary">选择学生后显示回答记录。</div>
       <div class="records-list" id="recordsList"></div>
-      <p class="dialog-footnote">这里是课堂原始记录的快速查询；回答次数、回答情境、评分与备注会保存到教学数据库，正式成绩请按学校课程规则另行计算。</p>
+      <p class="dialog-footnote">这里是课堂原始记录的快速查询；回答次数、回答来源、回答情境、回答状态与备注会保存到教学数据库。</p>
     </dialog>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>

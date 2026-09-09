@@ -165,7 +165,7 @@ h3 {
 .form-actions,
 .roster-tools,
 .footer-actions,
-.assessment-actions,
+  .response-actions,
 .draw-actions {
   display: flex;
   flex-wrap: wrap;
@@ -765,7 +765,7 @@ textarea::placeholder {
   font-weight: 400;
 }
 
-.assessment-card {
+.response-card {
   margin-top: 18px;
   padding: 22px;
   border: 1px solid #c9dedd;
@@ -773,43 +773,31 @@ textarea::placeholder {
   background: #f5fbfa;
 }
 
-.assessment-heading {
+.response-heading {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 18px;
 }
 
-.assessment-heading h3 {
+.response-heading h3 {
   font-size: 25px;
 }
 
-.score-total {
-  min-width: 76px;
-  padding: 7px 10px;
-  border-radius: 9px;
-  color: var(--accent-dark);
-  background: #e2f2f0;
-  font-family: "Times New Roman", serif;
-  font-size: 20px;
-  font-weight: 700;
-  text-align: center;
-}
-
-.assessment-note {
+.response-note {
   margin: 9px 0 16px;
   color: var(--muted);
   font-size: 15px;
 }
 
-.assessment-context-grid {
+.response-context-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
   margin-top: 14px;
 }
 
-.assessment-context-grid .field {
+.response-context-grid .field {
   margin-bottom: 0;
 }
 
@@ -823,93 +811,15 @@ textarea::placeholder {
   background: #fffaf1;
 }
 
-.rubric-fields {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.rubric-field {
-  min-width: 0;
-  margin: 0;
-  padding: 12px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: #fff;
-}
-
-.rubric-field legend {
-  max-width: 100%;
-  padding: 0 4px;
-  color: var(--ink-soft);
-  font-size: 17px;
-  font-weight: 700;
-}
-
-.rubric-field p {
-  min-height: 44px;
-  margin: 3px 4px 9px;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.score-options {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
-}
-
-.score-option {
-  display: grid;
-  min-height: 58px;
-  place-items: center;
-  gap: 1px;
-  border: 1px solid var(--line-strong);
-  border-radius: 8px;
-  color: var(--ink-soft);
-  background: #fff;
-  font-family: "Times New Roman", serif;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.score-option small {
-  font-family: "Times New Roman", KaiTi, "STKaiti", "BiauKai", serif;
-  font-size: 12px;
-  font-weight: 400;
-}
-
-.score-option:hover,
-.score-option.is-selected {
-  border-color: var(--accent);
-  color: #fff;
-  background: var(--accent);
-}
-
 .note-field {
   margin: 15px 0 8px;
 }
 
-.check-field {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--ink-soft);
-  font-size: 16px;
-}
-
-.check-field input {
-  width: 18px;
-  height: 18px;
-  min-height: 0;
-  accent-color: var(--accent);
-}
-
-.assessment-actions {
+.response-actions {
   margin-top: 16px;
 }
 
-.assessment-actions .button-primary {
+.response-actions .button-primary {
   flex: 1 1 190px;
 }
 
@@ -1094,22 +1004,21 @@ textarea::placeholder {
   font-weight: 700;
 }
 
-.student-score {
+.student-status {
   color: var(--muted);
   font-size: 14px;
   white-space: nowrap;
 }
 
-.student-row.is-pending .student-score {
+.student-row.is-pending .student-status {
   color: #a6533c;
   font-weight: 700;
 }
 
-.student-row.is-answered .student-score {
+.student-row.is-answered .student-status {
   color: var(--success);
 }
 
-.pending-assessment-list,
 .attempt-list {
   display: grid;
   max-height: 360px;
@@ -1119,7 +1028,6 @@ textarea::placeholder {
   padding-right: 3px;
 }
 
-.pending-assessment-item,
 .attempt-item {
   display: flex;
   align-items: center;
@@ -1131,14 +1039,12 @@ textarea::placeholder {
   background: var(--surface-soft);
 }
 
-.pending-assessment-item div,
 .attempt-item > div:first-child {
   display: grid;
   gap: 2px;
   min-width: 0;
 }
 
-.pending-assessment-item strong,
 .attempt-item strong {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1146,7 +1052,6 @@ textarea::placeholder {
   font-size: 16px;
 }
 
-.pending-assessment-item span,
 .attempt-item span {
   overflow: hidden;
   color: var(--muted);
@@ -1364,40 +1269,6 @@ textarea::placeholder {
   font-weight: 700;
 }
 
-.formative-preview-card {
-  margin-top: 20px;
-  padding: 16px 17px;
-  border: 1px solid #d8e7e5;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #f3faf8, #fbfdfc);
-}
-
-.formative-preview-heading {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 14px;
-}
-
-.formative-preview-heading h3 {
-  font-size: 22px;
-}
-
-.formative-preview-value {
-  margin-top: 12px;
-  color: var(--accent-dark);
-  font-family: "Times New Roman", KaiTi, "STKaiti", "BiauKai", serif;
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.formative-preview-note {
-  margin: 8px 0 0;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.55;
-}
-
 .records-list {
   display: grid;
   gap: 8px;
@@ -1418,7 +1289,7 @@ textarea::placeholder {
 }
 
 .record-date,
-.record-score {
+.record-status {
   font-family: "Times New Roman", KaiTi, "STKaiti", "BiauKai", serif;
   font-weight: 700;
 }
@@ -1443,7 +1314,7 @@ textarea::placeholder {
   white-space: normal;
 }
 
-.record-score {
+.record-status {
   color: var(--accent-dark);
   font-size: 18px;
 }
@@ -1505,7 +1376,7 @@ textarea::placeholder {
     grid-template-columns: 100px minmax(0, 1fr);
   }
 
-  .record-score {
+  .record-status {
     grid-column: 2;
   }
 }
@@ -1551,8 +1422,7 @@ textarea::placeholder {
   }
 
   .form-grid,
-  .rubric-fields,
-  .assessment-context-grid,
+  .response-context-grid,
   .records-filters,
   .roster-view-tools,
   .lesson-context-item,
@@ -1598,7 +1468,7 @@ textarea::placeholder {
     font-size: 26px;
   }
 
-  .assessment-actions,
+  .response-actions,
   .draw-actions,
   .form-actions,
   .footer-actions {
@@ -1606,7 +1476,7 @@ textarea::placeholder {
     flex-direction: column;
   }
 
-  .assessment-actions .button,
+  .response-actions .button,
   .draw-actions .button,
   .form-actions .button,
   .footer-actions .button,
@@ -1649,7 +1519,6 @@ html, body { background: #f5f7f8; }
 .student-row.is-answered { background: #f0faf5; }
 .student-row.is-pending { border-color: #109b76; background: #e7f7f0; }
 .volunteer-button { color: #087e60; border-color: #b7dfcf; background: #effaf5; }
-.score-option { border-radius: 8px; }
 .attempt-item { border-radius: 8px; background: #fafbfc; }
 @media(max-width:680px) { .app-shell { width: calc(100% - 24px); } .topbar { margin-inline: -12px; padding: 16px 12px; } }
 
@@ -1681,7 +1550,7 @@ html, body { background: #f5f7f8; }
     padding-inline: 11px;
   }
 
-  .assessment-actions .button.has-icon,
+  .response-actions .button.has-icon,
   .draw-actions .button.has-icon,
   .footer-actions .button.has-icon,
   .footer-actions .file-button.has-icon {

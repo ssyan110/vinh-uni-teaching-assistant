@@ -2,9 +2,9 @@
   "name": "classroom-randomizer",
   "version": "0.1.0",
   "private": true,
-  "description": "Offline classroom random calling and rubric scoring tool",
+  "description": "Offline classroom random calling and response-record tool",
   "scripts": {
-    "test": "node --test src/model.test.cjs src/rosters.test.cjs"
+    "test": "node --test src/model.test.cjs src/rosters.test.cjs src/cloud.test.cjs"
   },
   "engines": {
     "node": ">=20"

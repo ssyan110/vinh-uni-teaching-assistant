@@ -5,7 +5,6 @@
   const PUBLISHABLE_KEY = "sb_publishable_MShaHD2QWDfcX4g9WAjStQ_0sKMTpGz";
   const TOKEN_KEY = "vinh-uni-teaching/randomizer-auth-v1";
   const QUEUE_KEY = "vinh-uni-teaching/randomizer-sync-queue-v2";
-  const LEGACY_QUEUE_KEY = "vinh-uni-teaching/randomizer-sync-queue-v1";
   const NO_RESPONSE_REASON_IDS = new Set([
     "unprepared",
     "unclear_prompt",
@@ -16,6 +15,7 @@
     "other"
   ]);
   const ATTENDANCE_STATUS_IDS = new Set(["unconfirmed", "present", "late", "absent", "excused"]);
+  const RESPONSE_RECORD_ID = "classroom-response-v1";
 
   let session = readJson(TOKEN_KEY);
   let authRedirectError = null;
@@ -23,7 +23,7 @@
   const rosterCache = new Map();
 
   function storageFor(key) {
-    return key === QUEUE_KEY || key === LEGACY_QUEUE_KEY ? root.localStorage : root.sessionStorage;
+    return key === QUEUE_KEY ? root.localStorage : root.sessionStorage;
   }
 
   function consumeAuthRedirect() {
@@ -240,7 +240,9 @@
       textbookId: text(source.textbookId) || "boya-quasi-intermediate-i",
       lessonId: normalizedLessonId,
       lessonLabel: `第 ${lessonNumber} 课`,
-      scoringMode: source.scoringMode === "practice" ? "practice" : "graded",
+      // The randomizer stores classroom response records only. Keep the
+      // legacy database column populated with its non-grading value.
+      scoringMode: "practice",
       taskMode: text(source.taskMode) || "interpersonal_listening_speaking",
       taskTarget: text(source.taskTarget) || "short_response",
       currentRound: Number(currentRound.number) > 0 ? Number(currentRound.number) : 1,
@@ -297,11 +299,10 @@
     const studentCode = text(snapshot.studentCode || snapshot.student_code || source.studentCode || snapshot.id || source.studentId);
     const studentName = text(snapshot.name || snapshot.studentName || source.studentName || studentCode);
     const outcome = ["pending", "answered", "not_answered", "undone"].includes(source.outcome) ? source.outcome : "pending";
-    const assessmentStatus = ["scored", "pending", "not_applicable"].includes(source.assessmentStatus)
-      ? source.assessmentStatus
-      : "not_applicable";
-    const scored = outcome === "answered" && assessmentStatus === "scored";
-    const scores = source.scores || {};
+    // `randomizer_attempts` still has legacy assessment columns and requires
+    // `pending` for an answered row. This is only a database compatibility
+    // value; the randomizer never creates, edits, or synchronizes scores.
+    const assessmentStatus = outcome === "answered" ? "pending" : "not_applicable";
     const selectionMethod = source.selectionMethod === "volunteer" ? "volunteer" : "random";
     const responseStatus = outcome === "not_answered"
       ? "no_response"
@@ -311,9 +312,6 @@
     const noResponseReason = responseStatus === "no_response" && NO_RESPONSE_REASON_IDS.has(source.noResponseReason)
       ? source.noResponseReason
       : responseStatus === "no_response" ? "other" : null;
-    const countedForSummary = source.countedForSummary !== undefined
-      ? Boolean(source.countedForSummary)
-      : source.countedForGrade !== false;
     const attendanceStatus = ATTENDANCE_STATUS_IDS.has(text(source.attendanceStatus))
       ? text(source.attendanceStatus)
       : null;
@@ -337,21 +335,15 @@
       correctionNote: text(source.correctionNote) || null,
       correctedAt: source.correctedAt || null,
       assessmentStatus,
+      taskPrompt: text(source.taskPrompt) || null,
+      assistance: source.assistance ?? null,
+      questionId: text(source.questionId) || null,
       textbookId: text(source.textbookId) || normalizedSession.textbookId,
       lessonId: lessonId(source.lessonId || normalizedSession.lessonId),
       taskMode: text(source.taskMode) || normalizedSession.taskMode,
       taskTarget: text(source.taskTarget) || normalizedSession.taskTarget,
-      rubricId: text(source.rubricId) || "oral-response-v1",
+      rubricId: text(source.rubricId) || RESPONSE_RECORD_ID,
       rubricVersion: text(source.rubricVersion) || "1.0",
-      taskCompletion: scored ? Number(scores.task_completion) : null,
-      comprehensibility: scored ? Number(scores.comprehensibility) : null,
-      languageControlVocabulary: scored ? Number(scores.language_control_vocabulary) : null,
-      contentInteraction: scored ? Number(scores.content_interaction) : null,
-      totalScore: scored ? Number(source.totalScore) : null,
-      score: scored ? Number(source.totalScore) : null,
-      countedForSummary,
-      // Compatibility column; it must not be read as the official university grade.
-      countedForGrade: source.countedForGrade !== false,
       note: text(source.note) || null,
       // Old local/queued records may not have event_order. The database now
       // requires a positive value, so use the round as a stable compatibility
@@ -387,68 +379,21 @@
       attendance_status: normalizedAttempt.attendanceStatus,
       record_status: normalizedAttempt.recordStatus,
       assessment_status: normalizedAttempt.assessmentStatus,
+      task_prompt: normalizedAttempt.taskPrompt,
+      assistance: normalizedAttempt.assistance,
+      question_id: normalizedAttempt.questionId,
       textbook_id: normalizedAttempt.textbookId,
       lesson_id: normalizedAttempt.lessonId,
       task_mode: normalizedAttempt.taskMode,
       task_target: normalizedAttempt.taskTarget,
       rubric_id: normalizedAttempt.rubricId,
       rubric_version: normalizedAttempt.rubricVersion,
-      task_completion: normalizedAttempt.taskCompletion,
-      comprehensibility: normalizedAttempt.comprehensibility,
-      language_control_vocabulary: normalizedAttempt.languageControlVocabulary,
-      content_interaction: normalizedAttempt.contentInteraction,
-      score: normalizedAttempt.score,
-      total_score: normalizedAttempt.totalScore,
-      counted_for_summary: normalizedAttempt.countedForSummary,
-      counted_for_grade: normalizedAttempt.countedForGrade,
       note: normalizedAttempt.note,
       correction_note: normalizedAttempt.correctionNote,
       corrected_at: normalizedAttempt.correctedAt,
       created_at: normalizedAttempt.createdAt,
       drawn_at: normalizedAttempt.drawnAt,
       completed_at: normalizedAttempt.completedAt
-    };
-  }
-
-  function learningEventBody(normalizedSession, normalizedAttempt, context, classSessionId) {
-    if (normalizedAttempt.outcome !== "answered" || normalizedAttempt.assessmentStatus !== "scored") return null;
-    const student = context.roster.find((candidate) => candidate.studentCode === normalizedAttempt.studentCode);
-    if (!student) return null;
-    return {
-      client_event_id: normalizedAttempt.clientAttemptId,
-      course_id: context.courseId,
-      session_id: classSessionId,
-      student_id: student.id,
-      occurred_at: normalizedAttempt.completedAt || normalizedAttempt.drawnAt,
-      source: normalizedAttempt.selectionMethod === "volunteer" ? "voluntary_answer" : "random_call",
-      textbook_id: normalizedAttempt.textbookId,
-      lesson_id: normalizedAttempt.lessonId,
-      lesson_label: normalizedSession.lessonLabel,
-      activity_label: normalizedSession.activityLabel,
-      event_order: normalizedAttempt.eventOrder,
-      opportunity_status: normalizedAttempt.opportunityStatus,
-      response_status: normalizedAttempt.responseStatus,
-      no_response_reason: normalizedAttempt.noResponseReason,
-      answer_context: normalizedAttempt.answerContext,
-      attendance_status: normalizedAttempt.attendanceStatus,
-      record_status: normalizedAttempt.recordStatus,
-      rubric_version: normalizedAttempt.rubricVersion,
-      task_completion: normalizedAttempt.taskCompletion,
-      comprehensibility: normalizedAttempt.comprehensibility,
-      language_control: normalizedAttempt.languageControlVocabulary,
-      interaction: normalizedAttempt.contentInteraction,
-      score: normalizedAttempt.score,
-      needs_review: [
-        normalizedAttempt.taskCompletion,
-        normalizedAttempt.comprehensibility,
-        normalizedAttempt.languageControlVocabulary,
-        normalizedAttempt.contentInteraction
-      ].some((value) => Number(value) <= 1),
-      counted_for_summary: normalizedAttempt.countedForSummary,
-      counted_for_grade: normalizedAttempt.countedForGrade,
-      teacher_note: normalizedAttempt.note,
-      correction_note: normalizedAttempt.correctionNote,
-      corrected_at: normalizedAttempt.correctedAt
     };
   }
 
@@ -469,47 +414,8 @@
       headers: { Prefer: "resolution=merge-duplicates,return=minimal" },
       body: JSON.stringify(randomizerAttemptBody(normalizedAttempt, context, cloudSession.randomizerSessionId))
     });
-    const learningEvent = learningEventBody(normalizedSession, normalizedAttempt, context, cloudSession.classSessionId);
-    if (learningEvent) {
-      await request("/rest/v1/learning_events?on_conflict=owner_id,client_event_id", {
-        method: "POST",
-        headers: { Prefer: "resolution=merge-duplicates,return=minimal" },
-        body: JSON.stringify(learningEvent)
-      });
-    }
-  }
-
-  async function syncLegacyAssessment(item) {
-    const context = await fetchClassRoster(item.classId);
-    const classSessionId = await ensureClassSession(context, item.sessionDate, {
-      topic: item.activityLabel || "华语课堂抽问"
-    });
-    const student = context.roster.find((candidate) => candidate.studentCode === item.studentCode);
-    if (!student) throw new Error("找不到这笔回答对应的学生。");
-    const score = item.scores || {};
-    await request("/rest/v1/learning_events?on_conflict=owner_id,client_event_id", {
-      method: "POST",
-      headers: { Prefer: "resolution=merge-duplicates,return=minimal" },
-      body: JSON.stringify({
-        client_event_id: item.client_event_id,
-        course_id: context.courseId,
-        session_id: classSessionId,
-        student_id: student.id,
-        occurred_at: item.occurred_at || new Date().toISOString(),
-        source: item.source || "random_call",
-        textbook_id: item.textbook_id,
-        lesson_id: item.lesson_id,
-        lesson_label: item.lesson_label,
-        activity_label: item.activity_label,
-        rubric_version: item.rubric_version || "1.0",
-        task_completion: score.task_completion,
-        comprehensibility: score.comprehensibility,
-        language_control: score.language_control_vocabulary,
-        interaction: score.content_interaction,
-        needs_review: item.needs_review,
-        counted_for_grade: item.counted_for_grade !== false
-      })
-    });
+    // Deliberately do not write to learning_events. That table belongs to the
+    // separate learning tracker; this tool keeps its own raw attempt record.
   }
 
   function readQueue(key) {
@@ -522,7 +428,7 @@
   }
 
   function pendingCount() {
-    return readQueue(QUEUE_KEY).length + readQueue(LEGACY_QUEUE_KEY).length;
+    return readQueue(QUEUE_KEY).length;
   }
 
   function enqueue(event) {
@@ -534,10 +440,8 @@
   async function flushQueueInternal() {
     if (!isSignedIn()) return { sent: 0, pending: pendingCount(), attempts: 0, sessions: 0 };
     const queue = readQueue(QUEUE_KEY);
-    const legacyQueue = readQueue(LEGACY_QUEUE_KEY);
-    if (!queue.length && !legacyQueue.length) return { sent: 0, pending: 0, attempts: 0, sessions: 0 };
+    if (!queue.length) return { sent: 0, pending: 0, attempts: 0, sessions: 0 };
     const remaining = [];
-    const remainingLegacy = [];
     let sent = 0;
     let attempts = 0;
     let sessions = 0;
@@ -549,9 +453,6 @@
         } else if (item.kind === "attempt") {
           await syncAttemptItem(item);
           attempts += 1;
-        } else if (item.kind === "legacy_assessment") {
-          await syncLegacyAssessment(item);
-          attempts += 1;
         } else {
           throw new Error("无法识别的同步数据。");
         }
@@ -560,17 +461,8 @@
         remaining.push(item);
       }
     }
-    for (const item of legacyQueue) {
-      try {
-        await syncLegacyAssessment(item);
-        sent += 1;
-      } catch (error) {
-        remainingLegacy.push(item);
-      }
-    }
     writeQueue(remaining, QUEUE_KEY);
-    writeQueue(remainingLegacy, LEGACY_QUEUE_KEY);
-    return { sent, pending: remaining.length + remainingLegacy.length, attempts, sessions };
+    return { sent, pending: remaining.length, attempts, sessions };
   }
 
   function flushQueue() {
@@ -604,28 +496,6 @@
     return flushQueue();
   }
 
-  async function recordAssessment(input) {
-    requireSession();
-    const score = input.scores || {};
-    enqueue({
-      kind: "legacy_assessment",
-      client_event_id: input.clientEventId,
-      classId: input.classId,
-      studentCode: input.studentCode,
-      source: input.source || "random_call",
-      sessionDate: input.sessionDate,
-      textbook_id: input.textbookId,
-      lesson_id: input.lessonId,
-      lesson_label: input.lessonLabel,
-      activity_label: input.activityLabel,
-      rubric_version: input.rubricVersion || "1.0",
-      scores: score,
-      needs_review: [score.task_completion, score.comprehensibility, score.language_control_vocabulary, score.content_interaction].some((value) => Number(value) <= 1),
-      counted_for_grade: input.countedForGrade !== false
-    });
-    return flushQueue();
-  }
-
   root.RandomizerCloud = Object.freeze({
     completeInvite,
     currentUserEmail,
@@ -635,7 +505,6 @@
     hasInviteSession,
     isSignedIn,
     pendingCount,
-    recordAssessment,
     recordState,
     signIn,
     signOut,

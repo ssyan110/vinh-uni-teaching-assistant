@@ -7,16 +7,12 @@
 }(typeof globalThis !== "undefined" ? globalThis : this, function createRandomizerModel() {
   "use strict";
 
-  const SCHEMA_VERSION = 3;
+  const SCHEMA_VERSION = 4;
   const LEGACY_SCHEMA_VERSION = 1;
-  const DEFAULT_RUBRIC_ID = "oral-response-v1";
-  const DEFAULT_RUBRIC_VERSION = "1.0";
   const DEFAULT_TASK_MODE = "interpersonal_listening_speaking";
   const DEFAULT_TASK_TARGET = "short_response";
   const DEFAULT_TEXTBOOK_ID = "boya-quasi-intermediate-i";
   const DEFAULT_LESSON_ID = "lesson-01";
-  const SCORE_MIN = 0;
-  const SCORE_MAX = 3;
 
   const RESPONSE_STATUS_IDS = Object.freeze([
     "answered",
@@ -45,23 +41,6 @@
 
   const RECORD_STATUS_IDS = Object.freeze(["valid", "corrected", "voided"]);
 
-  // This is a transparent classroom-performance preview, not the university's
-  // official grade formula. Keep the policy in one place so the raw records can
-  // be recalculated later without changing any stored attempt.
-  const FORMATIVE_POLICY = Object.freeze({
-    id: "classroom-formative-preview-v1",
-    version: "1.0",
-    status: "preview_only",
-    qualityWeight: 0.60,
-    randomResponseRateWeight: 0.20,
-    voluntaryInitiativeWeight: 0.10,
-    evidenceCoverageWeight: 0.10,
-    randomEvidenceWeight: 1,
-    preparedVoluntaryEvidenceWeight: 1.5,
-    voluntaryCapPerLesson: 3,
-    evidenceTargetPerLesson: 3
-  });
-
   const CLASS_OPTIONS = Object.freeze([
     { id: "LT_01", label: "LT_01（27 人）", studentCount: 27 },
     { id: "LT_02", label: "LT_02（30 人）", studentCount: 30 },
@@ -81,32 +60,11 @@
     }
   ]);
 
-  const RUBRIC_CRITERIA = Object.freeze([
-    {
-      id: "task_completion",
-      label: "听懂问题并完成任务",
-      shortLabel: "任务",
-      description: "能听懂问题，并完成这道题的要求。"
-    },
-    {
-      id: "comprehensibility",
-      label: "表达清楚度",
-      shortLabel: "清楚",
-      description: "发音、声调和语速让同伴听得懂。"
-    },
-    {
-      id: "language_control_vocabulary",
-      label: "句式与词语运用",
-      shortLabel: "语言",
-      description: "用合适的句式和词语表达意思。"
-    },
-    {
-      id: "content_interaction",
-      label: "内容与互动",
-      shortLabel: "互动",
-      description: "能依题目补充细节、澄清或追问。"
-    }
-  ]);
+  function normalizeAssistance(value) {
+    if (value === undefined || value === null) return null;
+    if (typeof value !== "boolean") throw new Error("协助记录格式不正确");
+    return value;
+  }
 
   const TASK_MODES = Object.freeze({
     interpersonal_listening_speaking: "人际听说",
@@ -211,17 +169,6 @@
       && ["answered", "partial", "peer_supported"].includes(responseStatus);
   }
 
-  function isScoredForSummary(attempt) {
-    return Boolean(
-      attempt
-      && attempt.outcome === "answered"
-      && attempt.assessmentStatus === "scored"
-      && attempt.recordStatus !== "voided"
-      && attempt.countedForSummary !== false
-      && attempt.countedForGrade !== false
-    );
-  }
-
   function nextEventOrder(state) {
     return state.attempts.reduce((max, attempt) => Math.max(max, Number(attempt.eventOrder) || 0), 0) + 1;
   }
@@ -277,14 +224,6 @@
       .filter(Boolean);
   }
 
-  function rubricSnapshot() {
-    return {
-      id: DEFAULT_RUBRIC_ID,
-      version: DEFAULT_RUBRIC_VERSION,
-      criteria: clone(RUBRIC_CRITERIA)
-    };
-  }
-
   function createSession(options) {
     const settings = options || {};
     const students = normalizeStudents(settings.roster || []);
@@ -300,12 +239,10 @@
         id: text(settings.sessionId) || id("session"),
         className: text(settings.className),
         date: text(settings.date) || localDate(),
-        scoringMode: settings.scoringMode === "practice" ? "practice" : "graded",
         textbookId: textbook.id,
         lessonId: normalizeLessonId(settings.lessonId || settings.lessonNumber, textbook.id),
         taskMode: text(settings.taskMode) || DEFAULT_TASK_MODE,
         taskTarget: text(settings.taskTarget) || DEFAULT_TASK_TARGET,
-        rubric: rubricSnapshot(),
         createdAt,
         updatedAt: createdAt
       },
@@ -360,13 +297,20 @@
       .filter((student) => !excluded.has(student.id) && !answered.has(student.id));
   }
 
+  function getLastParticipantId(state) {
+    // Attempt order survives round changes and backup imports; ignore withdrawn turns.
+    for (let index = state.attempts.length - 1; index >= 0; index -= 1) {
+      const attempt = state.attempts[index];
+      if (attempt.outcome !== "undone" && attempt.recordStatus !== "voided") return attempt.studentId;
+    }
+    return null;
+  }
+
   function getSelectablePool(state) {
     const pool = getDrawingPool(state);
-    if (pool.length <= 1 || !state.currentRound.lastNotAnsweredStudentId) {
-      return pool;
-    }
-    const withoutLast = pool.filter((student) => student.id !== state.currentRound.lastNotAnsweredStudentId);
-    return withoutLast.length > 0 ? withoutLast : pool;
+    const lastStudentId = getLastParticipantId(state);
+    if (pool.length <= 1 || !lastStudentId) return pool;
+    return pool.filter((student) => student.id !== lastStudentId);
   }
 
   function getRandomSelectionPool(state) {
@@ -469,27 +413,12 @@
       taskTarget: settings.taskTarget !== undefined
         ? text(settings.taskTarget) || DEFAULT_TASK_TARGET
         : state.session.taskTarget || DEFAULT_TASK_TARGET,
+      sessionDate: state.session.date,
       drawnAt,
       createdAt: drawnAt,
       completedAt: null,
       updatedAt: drawnAt,
       outcome: "pending",
-      assessmentStatus: "not_applicable",
-      rubricId: state.session.rubric.id,
-      rubricVersion: state.session.rubric.version,
-      scores: null,
-      totalScore: null,
-      countedForSummary: settings.countedForSummary !== undefined
-        ? Boolean(settings.countedForSummary)
-        : settings.countedForGrade !== undefined
-          ? Boolean(settings.countedForGrade)
-          : state.session.scoringMode === "graded",
-      // Kept for older backups and database rows. It is not an official grade.
-      countedForGrade: settings.countedForGrade !== undefined
-        ? Boolean(settings.countedForGrade)
-        : settings.countedForSummary !== undefined
-          ? Boolean(settings.countedForSummary)
-          : state.session.scoringMode === "graded",
       note: "",
       selectionMethod: "random",
       eventType: "random_call",
@@ -529,20 +458,9 @@
       lessonId: normalizeLessonId(state.session.lessonId, state.session.textbookId || DEFAULT_TEXTBOOK_ID),
       taskMode: text(settings.taskMode) || state.session.taskMode || DEFAULT_TASK_MODE,
       taskTarget: text(settings.taskTarget) || state.session.taskTarget || DEFAULT_TASK_TARGET,
+      sessionDate: state.session.date,
       drawnAt: selectedAt, createdAt: selectedAt, completedAt: null, updatedAt: selectedAt,
-      outcome: "pending", assessmentStatus: "not_applicable",
-      rubricId: state.session.rubric.id, rubricVersion: state.session.rubric.version,
-      scores: null, totalScore: null,
-      countedForSummary: settings.countedForSummary !== undefined
-        ? Boolean(settings.countedForSummary)
-        : settings.countedForGrade !== undefined
-          ? Boolean(settings.countedForGrade)
-          : state.session.scoringMode === "graded",
-      countedForGrade: settings.countedForGrade !== undefined
-        ? Boolean(settings.countedForGrade)
-        : settings.countedForSummary !== undefined
-          ? Boolean(settings.countedForSummary)
-          : state.session.scoringMode === "graded",
+      outcome: "pending",
       note: "",
       selectionMethod: "volunteer",
       eventType: "voluntary_speaking",
@@ -570,23 +488,6 @@
     return state.attempts.find((attempt) => attempt.id === state.currentRound.pendingAttemptId) || null;
   }
 
-  function normalizeScores(scores) {
-    const source = scores || {};
-    const normalized = {};
-    for (const criterion of RUBRIC_CRITERIA) {
-      const value = Number(source[criterion.id]);
-      if (!Number.isInteger(value) || value < SCORE_MIN || value > SCORE_MAX) {
-        throw new Error(`请完成「${criterion.label}」这一项评分（0 到 3 分）`);
-      }
-      normalized[criterion.id] = value;
-    }
-    return normalized;
-  }
-
-  function totalScore(scores) {
-    return RUBRIC_CRITERIA.reduce((total, criterion) => total + scores[criterion.id], 0);
-  }
-
   function updatePending(state, eventType, payload, updater) {
     const current = pendingAttempt(state);
     if (!current) {
@@ -600,49 +501,24 @@
     }, (next) => updater(next, current.id));
   }
 
-  function scorePending(state, scores, options) {
-    const normalized = normalizeScores(scores);
+  function recordResponse(state, options) {
     const settings = options || {};
-    return updatePending(state, "answer_scored", {
-      totalScore: totalScore(normalized),
-      responseStatus: normalizeAnsweredResponseStatus(settings.responseStatus),
-      answerContext: normalizeAnswerContext(settings.answerContext)
+    const assistance = normalizeAssistance(settings.assistance);
+    if (text(settings.taskPrompt).length > 500 || text(settings.note).length > 2000) throw new Error("题目限 500 字，备注限 2000 字");
+    const responseStatus = normalizeAnsweredResponseStatus(settings.responseStatus);
+    const answerContext = normalizeAnswerContext(settings.answerContext);
+    return updatePending(state, "response_recorded", {
+      responseStatus,
+      answerContext
     }, (next, attemptId) => {
       const attempt = next.attempts.find((item) => item.id === attemptId);
-      const completedAt = timestamp();
       attempt.outcome = "answered";
-      attempt.assessmentStatus = "scored";
-      attempt.scores = normalized;
-      attempt.totalScore = totalScore(normalized);
-      attempt.responseStatus = normalizeAnsweredResponseStatus(settings.responseStatus);
+      attempt.responseStatus = responseStatus;
       attempt.noResponseReason = null;
-      attempt.answerContext = normalizeAnswerContext(settings.answerContext);
-      if (settings.countedForSummary !== undefined) attempt.countedForSummary = Boolean(settings.countedForSummary);
-      if (settings.countedForGrade !== undefined) attempt.countedForGrade = Boolean(settings.countedForGrade);
+      attempt.answerContext = answerContext;
+      attempt.assistance = assistance;
       attempt.note = text(settings.note);
-      attempt.completedAt = completedAt;
-      attempt.updatedAt = completedAt;
-      if (attempt.selectionMethod !== "volunteer" && !next.currentRound.answeredStudentIds.includes(attempt.studentId)) {
-        next.currentRound.answeredStudentIds.push(attempt.studentId);
-      }
-      next.currentRound.pendingAttemptId = null;
-      next.currentRound.lastNotAnsweredStudentId = null;
-      return next;
-    });
-  }
-
-  function deferPending(state, options) {
-    const settings = options || {};
-    return updatePending(state, "answer_deferred", {}, (next, attemptId) => {
-      const attempt = next.attempts.find((item) => item.id === attemptId);
-      attempt.outcome = "answered";
-      attempt.assessmentStatus = "pending";
-      attempt.responseStatus = normalizeAnsweredResponseStatus(settings.responseStatus);
-      attempt.noResponseReason = null;
-      attempt.answerContext = normalizeAnswerContext(settings.answerContext);
-      attempt.note = text(settings.note);
-      if (settings.countedForSummary !== undefined) attempt.countedForSummary = Boolean(settings.countedForSummary);
-      if (settings.countedForGrade !== undefined) attempt.countedForGrade = Boolean(settings.countedForGrade);
+      assignQuestion(next, attempt, settings.taskPrompt);
       attempt.completedAt = timestamp();
       attempt.updatedAt = attempt.completedAt;
       if (attempt.selectionMethod !== "volunteer" && !next.currentRound.answeredStudentIds.includes(attempt.studentId)) {
@@ -665,11 +541,11 @@
     }, (next, attemptId) => {
       const attempt = next.attempts.find((item) => item.id === attemptId);
       attempt.outcome = "not_answered";
-      attempt.assessmentStatus = "not_applicable";
       attempt.responseStatus = "no_response";
       attempt.noResponseReason = reason || "other";
       attempt.answerContext = normalizeAnswerContext(settings.answerContext);
       attempt.note = text(settings.note);
+      assignQuestion(next, attempt, settings.taskPrompt);
       attempt.completedAt = timestamp();
       attempt.updatedAt = attempt.completedAt;
       next.currentRound.pendingAttemptId = null;
@@ -678,47 +554,25 @@
     });
   }
 
-  function saveAssessment(state, attemptId, scores, options) {
-    const normalized = normalizeScores(scores);
-    const settings = options || {};
-    const existing = state.attempts.find((attempt) => attempt.id === attemptId);
-    if (!existing || existing.outcome !== "answered") {
-      throw new Error("找不到这笔回答记录");
+  function assignQuestion(next, attempt, value) {
+    const prompt = text(value);
+    if (attempt.taskPrompt === prompt && attempt.questionId) return;
+    attempt.taskPrompt = prompt;
+    if (!prompt) { attempt.questionId = null; return; }
+    const contextKey = `${attempt.textbookId}:${attempt.lessonId}`;
+    const current = next.session.activeQuestion;
+    if (current && current.prompt === prompt && current.contextKey === contextKey) {
+      attempt.questionId = current.id;
+    } else {
+      const question = { id: id("question"), prompt, contextKey };
+      attempt.questionId = question.id;
+      next.session.activeQuestion = question;
     }
-    const isCorrection = existing.assessmentStatus === "scored";
-    return withMutation(state, "assessment_saved", {
-      attemptId,
-      studentId: existing.studentId,
-      totalScore: totalScore(normalized)
-    }, (next) => {
-      const attempt = next.attempts.find((item) => item.id === attemptId);
-      attempt.assessmentStatus = "scored";
-      attempt.scores = normalized;
-      attempt.totalScore = totalScore(normalized);
-      if (settings.note !== undefined) attempt.note = text(settings.note);
-      if (settings.responseStatus !== undefined) {
-        attempt.responseStatus = normalizeAnsweredResponseStatus(settings.responseStatus);
-      }
-      if (settings.answerContext !== undefined) {
-        attempt.answerContext = normalizeAnswerContext(settings.answerContext);
-      }
-      attempt.noResponseReason = null;
-      if (isCorrection) {
-        attempt.recordStatus = "corrected";
-        attempt.correctedAt = timestamp();
-        attempt.correctionNote = text(settings.correctionNote !== undefined ? settings.correctionNote : settings.note);
-      } else {
-        attempt.recordStatus = "valid";
-        attempt.correctedAt = null;
-        attempt.correctionNote = "";
-      }
-      if (settings.countedForSummary !== undefined) {
-        attempt.countedForSummary = Boolean(settings.countedForSummary);
-      }
-      if (settings.countedForGrade !== undefined) {
-        attempt.countedForGrade = Boolean(settings.countedForGrade);
-      }
-      attempt.updatedAt = timestamp();
+  }
+
+  function beginQuestion(state) {
+    return withMutation(state, "new_question", {}, next => {
+      next.session.activeQuestion = null;
       return next;
     });
   }
@@ -785,9 +639,6 @@
     if (undoneAttempt && !wasAlreadyInBefore) {
       const tombstone = clone(undoneAttempt);
       tombstone.outcome = "undone";
-      tombstone.assessmentStatus = "not_applicable";
-      tombstone.scores = null;
-      tombstone.totalScore = null;
       tombstone.responseStatus = "unobserved";
       tombstone.noResponseReason = null;
       tombstone.recordStatus = "voided";
@@ -823,99 +674,6 @@
     return state.attempts.filter((attempt) => attempt.outcome !== "undone");
   }
 
-  function getPendingAssessments(state) {
-    return activeAttempts(state).filter((attempt) => attempt.outcome === "answered" && attempt.assessmentStatus === "pending");
-  }
-
-  function averageScore(attempts) {
-    const values = attempts
-      .map((attempt) => Number(attempt.totalScore))
-      .filter((value) => Number.isFinite(value));
-    return values.length ? values.reduce((sum, value) => sum + value, 0) / values.length : null;
-  }
-
-  function isSummaryEligible(attempt) {
-    return Boolean(
-      attempt
-      && attempt.outcome !== "undone"
-      && attempt.recordStatus !== "voided"
-      && attempt.countedForSummary !== false
-      && attempt.countedForGrade !== false
-    );
-  }
-
-  function formativeQualityWeight(attempt) {
-    return attempt.selectionMethod === "volunteer" && attempt.answerContext === "prepared"
-      ? FORMATIVE_POLICY.preparedVoluntaryEvidenceWeight
-      : FORMATIVE_POLICY.randomEvidenceWeight;
-  }
-
-  function calculateFormativePreview(input) {
-    const attempts = (Array.isArray(input) ? input : []).filter(isSummaryEligible);
-    const scored = attempts.filter(isScoredForSummary);
-    const qualityWeightTotal = scored.reduce((sum, attempt) => sum + formativeQualityWeight(attempt), 0);
-    const qualityScore = qualityWeightTotal > 0
-      ? scored.reduce((sum, attempt) => {
-        const normalized = Number(attempt.totalScore) / (SCORE_MAX * RUBRIC_CRITERIA.length);
-        return sum + normalized * formativeQualityWeight(attempt);
-      }, 0) / qualityWeightTotal
-      : null;
-
-    const randomOpportunities = attempts.filter((attempt) => {
-      const opportunityStatus = attempt.opportunityStatus || "called";
-      return attempt.selectionMethod !== "volunteer"
-        && opportunityStatus === "called"
-        && ["answered", "not_answered"].includes(attempt.outcome);
-    });
-    const randomAnsweredCount = randomOpportunities.filter(isEffectiveAnswer).length;
-    const randomResponseRate = randomOpportunities.length
-      ? randomAnsweredCount / randomOpportunities.length
-      : null;
-    const preparedVoluntaryAnswerCount = scored.filter((attempt) => (
-      attempt.selectionMethod === "volunteer"
-      && attempt.answerContext === "prepared"
-      && isEffectiveAnswer(attempt)
-    )).length;
-    const voluntaryInitiative = Math.min(
-      preparedVoluntaryAnswerCount,
-      FORMATIVE_POLICY.voluntaryCapPerLesson
-    ) / FORMATIVE_POLICY.voluntaryCapPerLesson;
-    const effectiveScoredCount = scored.filter(isEffectiveAnswer).length;
-    const evidenceCoverage = Math.min(
-      effectiveScoredCount,
-      FORMATIVE_POLICY.evidenceTargetPerLesson
-    ) / FORMATIVE_POLICY.evidenceTargetPerLesson;
-
-    const components = [
-      { key: "quality", value: qualityScore, weight: FORMATIVE_POLICY.qualityWeight },
-      { key: "randomResponseRate", value: randomResponseRate, weight: FORMATIVE_POLICY.randomResponseRateWeight },
-      { key: "voluntaryInitiative", value: voluntaryInitiative, weight: FORMATIVE_POLICY.voluntaryInitiativeWeight },
-      { key: "evidenceCoverage", value: evidenceCoverage, weight: FORMATIVE_POLICY.evidenceCoverageWeight }
-    ].filter((component) => component.value !== null);
-    const availableWeight = components.reduce((sum, component) => sum + component.weight, 0);
-    const index = availableWeight > 0
-      ? components.reduce((sum, component) => sum + component.value * component.weight, 0) / availableWeight * 100
-      : null;
-
-    return {
-      policyId: FORMATIVE_POLICY.id,
-      policyVersion: FORMATIVE_POLICY.version,
-      status: index === null ? "insufficient_evidence" : "preview_only",
-      index: index === null ? null : Number(index.toFixed(1)),
-      qualityScore: qualityScore === null ? null : Number((qualityScore * 100).toFixed(1)),
-      randomResponseRate: randomResponseRate === null ? null : Number((randomResponseRate * 100).toFixed(1)),
-      voluntaryInitiative: Number((voluntaryInitiative * 100).toFixed(1)),
-      evidenceCoverage: Number((evidenceCoverage * 100).toFixed(1)),
-      scoredEvidenceCount: effectiveScoredCount,
-      randomOpportunityCount: randomOpportunities.length,
-      randomAnsweredCount,
-      preparedVoluntaryAnswerCount,
-      voluntaryCapPerLesson: FORMATIVE_POLICY.voluntaryCapPerLesson,
-      evidenceTargetPerLesson: FORMATIVE_POLICY.evidenceTargetPerLesson,
-      hasEnoughEvidence: effectiveScoredCount >= FORMATIVE_POLICY.evidenceTargetPerLesson
-    };
-  }
-
   function summarizeAttemptCollection(input, includeLessonBreakdown) {
     const attempts = (Array.isArray(input) ? input : [])
       .filter((attempt) => attempt && attempt.outcome !== "undone" && attempt.recordStatus !== "voided");
@@ -924,23 +682,22 @@
     const effective = answered.filter(isEffectiveAnswer);
     const randomCalls = attempts.filter((attempt) => attempt.selectionMethod !== "volunteer");
     const volunteers = attempts.filter((attempt) => attempt.selectionMethod === "volunteer");
-    const rawScored = answered.filter((attempt) => attempt.assessmentStatus === "scored" && Number.isFinite(Number(attempt.totalScore)));
-    const scored = rawScored.filter(isScoredForSummary);
-    const criterionTotals = {};
-    for (const criterion of RUBRIC_CRITERIA) criterionTotals[criterion.id] = 0;
-    scored.forEach((attempt) => {
-      for (const criterion of RUBRIC_CRITERIA) {
-        criterionTotals[criterion.id] += Number(attempt.scores?.[criterion.id]) || 0;
-      }
-    });
-    const criterionAverages = {};
-    for (const criterion of RUBRIC_CRITERIA) {
-      criterionAverages[criterion.id] = scored.length ? criterionTotals[criterion.id] / scored.length : null;
-    }
     const noResponseReasonStats = {};
     notAnswered.forEach((attempt) => {
       const reason = normalizeNoResponseReason(attempt.noResponseReason);
       noResponseReasonStats[reason] = (noResponseReasonStats[reason] || 0) + 1;
+    });
+    const responseStatusCounts = Object.fromEntries(RESPONSE_STATUS_IDS.map((status) => [status, 0]));
+    attempts.forEach((attempt) => {
+      const status = normalizeResponseStatus(
+        attempt.responseStatus,
+        attempt.outcome === "answered" ? "answered" : attempt.outcome === "not_answered" ? "no_response" : "unobserved"
+      );
+      responseStatusCounts[status] += 1;
+    });
+    const answerContextCounts = Object.fromEntries(ANSWER_CONTEXTS.map((context) => [context.id, 0]));
+    answered.forEach((attempt) => {
+      answerContextCounts[normalizeAnswerContext(attempt.answerContext)] += 1;
     });
     const result = {
       attempts: attempts.length,
@@ -948,25 +705,16 @@
       answeredCount: answered.length,
       effectiveAnswerCount: effective.length,
       notAnsweredCount: notAnswered.length,
-      pendingAssessmentCount: answered.filter((attempt) => attempt.assessmentStatus === "pending").length,
+      unrecordedCount: attempts.filter((attempt) => attempt.outcome === "pending").length,
+      participationDayCount: new Set(answered.map((a) => a.sessionDate).filter(Boolean)).size,
       randomCallCount: randomCalls.length,
       randomCallEffectiveAnswerCount: randomCalls.filter(isEffectiveAnswer).length,
       voluntarySpeakingCount: volunteers.length,
       voluntaryEffectiveAnswerCount: volunteers.filter(isEffectiveAnswer).length,
-      rawScoredCount: rawScored.length,
-      scoredCount: scored.length,
-      rawTotalScore: rawScored.reduce((sum, attempt) => sum + Number(attempt.totalScore), 0),
-      rawAverageScore: averageScore(rawScored),
-      totalScore: scored.reduce((sum, attempt) => sum + Number(attempt.totalScore), 0),
-      averageScore: averageScore(scored),
-      randomAverageScore: averageScore(scored.filter((attempt) => attempt.selectionMethod !== "volunteer")),
-      voluntaryAverageScore: averageScore(scored.filter((attempt) => attempt.selectionMethod === "volunteer")),
-      criterionAverages,
-      noResponseReasonStats,
-      formativePreview: calculateFormativePreview(attempts)
+      responseStatusCounts,
+      answerContextCounts,
+      noResponseReasonStats
     };
-    result.formativeIndexPreview = result.formativePreview.index;
-    result.formativeIndexStatus = result.formativePreview.status;
 
     if (includeLessonBreakdown) {
       const lessonGroups = new Map();
@@ -985,16 +733,7 @@
           label: formatLessonLabel(group.textbookId, group.lessonId),
           ...summarizeAttemptCollection(group.attempts, false)
         }));
-      const lessonIndexes = result.lessonBreakdown
-        .map((lesson) => lesson.formativeIndexPreview)
-        .filter((value) => Number.isFinite(Number(value)));
-      result.formativeLessonCount = lessonIndexes.length;
-      result.formativeIndexPreview = lessonIndexes.length
-        ? Number((lessonIndexes.reduce((sum, value) => sum + Number(value), 0) / lessonIndexes.length).toFixed(1))
-        : null;
-      result.formativeIndexStatus = result.formativeIndexPreview === null
-        ? "insufficient_evidence"
-        : "preview_only";
+
     }
     return result;
   }
@@ -1079,15 +818,12 @@
       "session_id", "session_date", "class_name", "textbook_id", "textbook_title",
       "lesson_id", "lesson_number", "round_number", "event_order", "attempt_id", "event_type", "selection_method",
       "student_id", "student_code", "seat_number", "student_name",
-      "task_mode", "task_target", "opportunity_status", "response_status", "outcome", "no_response_reason", "no_response_reason_label", "answer_context", "attendance_status", "record_status", "assessment_status", "rubric_id",
-      "rubric_version", "task_completion_score", "comprehensibility_score",
-      "language_control_vocabulary_score", "content_interaction_score", "score", "total_score",
-      "counted_for_summary", "counted_for_grade_legacy", "note", "correction_note", "corrected_at", "created_at", "drawn_at", "completed_at", "updated_at"
+      "task_mode", "task_target", "opportunity_status", "response_status", "outcome", "no_response_reason", "no_response_reason_label", "answer_context", "attendance_status", "record_status",
+      "note", "correction_note", "corrected_at", "created_at", "drawn_at", "completed_at", "updated_at", "task_prompt", "assistance"
   ]);
 
   function sessionExportRow(state, attempt) {
       const student = attempt.studentSnapshot || getStudent(state, attempt.studentId) || {};
-      const scores = attempt.scores || {};
       const textbookId = attempt.textbookId || state.session.textbookId || DEFAULT_TEXTBOOK_ID;
       const textbook = getTextbook(textbookId);
       const lessonId = normalizeLessonId(
@@ -1121,24 +857,15 @@
         attempt.answerContext || "unknown",
         attempt.attendanceStatus || "",
         attempt.recordStatus || "valid",
-        attempt.assessmentStatus,
-        attempt.rubricId,
-        attempt.rubricVersion,
-        scores.task_completion,
-        scores.comprehensibility,
-        scores.language_control_vocabulary,
-        scores.content_interaction,
-        attempt.totalScore,
-        attempt.totalScore,
-        attempt.countedForSummary !== false,
-        attempt.countedForGrade !== false,
         attempt.note,
         attempt.correctionNote,
         attempt.correctedAt,
         attempt.createdAt || attempt.drawnAt,
         attempt.drawnAt,
         attempt.completedAt,
-        attempt.updatedAt
+        attempt.updatedAt,
+        attempt.taskPrompt || "",
+        attempt.assistance ?? ""
       ];
       return values;
   }
@@ -1160,8 +887,7 @@
     "class_name", "student_id", "student_code", "seat_number", "student_name",
     "total_attempt_count", "total_answer_count", "effective_answer_count", "random_call_count",
     "random_call_effective_answer_count", "voluntary_speaking_count", "voluntary_effective_answer_count",
-    "raw_scored_count", "raw_average_score", "random_average_score", "voluntary_average_score",
-    "formative_index_preview", "formative_index_status", "formative_lesson_count",
+    "participation_day_count", "not_answered_count",
     "no_response_reasons", "lesson_summaries"
   ]);
 
@@ -1186,7 +912,7 @@
         const target = students.get(studentKey);
         entry.attempts
           .filter((attempt) => attempt.studentId === student.id || (attempt.studentSnapshot?.studentCode && attempt.studentSnapshot.studentCode === student.studentCode))
-          .forEach((attempt) => target.attempts.push(attempt));
+          .forEach((attempt) => target.attempts.push({ ...attempt, sessionDate: entry.session.date }));
       });
     });
 
@@ -1197,12 +923,9 @@
         .join("；");
       const lessons = (summary.lessonBreakdown || [])
         .map((lesson) => {
-          const average = lesson.rawAverageScore === null ? "—" : Number(lesson.rawAverageScore).toFixed(1);
-          const formative = lesson.formativeIndexPreview === null ? "证据还少" : `${lesson.formativeIndexPreview}/100`;
-          return `${lesson.label}：回答 ${lesson.totalAnswerCount} 次，自愿 ${lesson.voluntarySpeakingCount} 次，原始平均 ${average}/12，指数预览 ${formative}`;
+          return `${lesson.label}：回答 ${lesson.totalAnswerCount} 次，自愿回答 ${lesson.voluntaryEffectiveAnswerCount} 次`;
         })
         .join("；");
-      const average = summary.rawAverageScore === null ? "" : Number(summary.rawAverageScore).toFixed(1);
       return [
         item.className,
         item.student.id,
@@ -1216,13 +939,8 @@
         summary.randomCallEffectiveAnswerCount,
         summary.voluntarySpeakingCount,
         summary.voluntaryEffectiveAnswerCount,
-        summary.rawScoredCount,
-        average,
-        summary.randomAverageScore === null ? "" : Number(summary.randomAverageScore).toFixed(1),
-        summary.voluntaryAverageScore === null ? "" : Number(summary.voluntaryAverageScore).toFixed(1),
-        summary.formativeIndexPreview === null ? "" : Number(summary.formativeIndexPreview).toFixed(1),
-        summary.formativeIndexStatus,
-        summary.formativeLessonCount || 0,
+        summary.participationDayCount,
+        summary.notAnsweredCount,
         reasons,
         lessons
       ];
@@ -1244,7 +962,7 @@
 
   function importBackup(input) {
     const parsed = typeof input === "string" ? JSON.parse(input) : clone(input);
-    if (!parsed || ![LEGACY_SCHEMA_VERSION, 2, SCHEMA_VERSION].includes(parsed.schemaVersion) || !parsed.session || !Array.isArray(parsed.roster)) {
+    if (!parsed || ![LEGACY_SCHEMA_VERSION, 2, 3, SCHEMA_VERSION].includes(parsed.schemaVersion) || !parsed.session || !Array.isArray(parsed.roster)) {
       throw new Error("这不是可使用的课堂完整备份");
     }
     if (!Array.isArray(parsed.attempts) || !parsed.currentRound) {
@@ -1285,6 +1003,7 @@
         : countedForSummary;
       return {
         ...attempt,
+        sessionDate: attempt.sessionDate || parsed.session.date,
         selectionMethod,
         eventType: attempt.eventType || (selectionMethod === "volunteer" ? "voluntary_speaking" : "random_call"),
         opportunityStatus: attempt.opportunityStatus || (selectionMethod === "volunteer" ? "volunteered" : "called"),
@@ -1310,20 +1029,17 @@
 
   return {
     SCHEMA_VERSION,
-    DEFAULT_RUBRIC_ID,
-    DEFAULT_RUBRIC_VERSION,
     DEFAULT_TASK_MODE,
     DEFAULT_TASK_TARGET,
     DEFAULT_TEXTBOOK_ID,
     DEFAULT_LESSON_ID,
     CLASS_OPTIONS,
     TEXTBOOK_OPTIONS,
-    RUBRIC_CRITERIA,
+    beginQuestion,
     RESPONSE_STATUS_IDS,
     NO_RESPONSE_REASONS,
     ANSWER_CONTEXTS,
     RECORD_STATUS_IDS,
-    FORMATIVE_POLICY,
     TASK_MODES,
     TASK_TARGETS,
     getTextbook,
@@ -1338,22 +1054,19 @@
     getEligibleStudents,
     getDrawingPool,
     getSelectablePool,
+    getLastParticipantId,
     getRandomSelectionPool,
     setSessionContext,
     pendingAttempt,
     drawStudent,
     selectVolunteer,
-    scorePending,
-    deferPending,
+    recordResponse,
     returnPending,
-    saveAssessment,
     setExcluded,
     startNextRound,
     undoLastAction,
     getProgress,
-    getPendingAssessments,
     getSummary,
-    calculateFormativePreview,
     summarizeAttempts,
     getSessionExportRows,
     exportSessionCsv,

@@ -16,7 +16,6 @@
     sessionForm: document.getElementById("sessionForm"),
     classNameInput: document.getElementById("classNameInput"),
     dateInput: document.getElementById("dateInput"),
-    scoringModeInput: document.getElementById("scoringModeInput"),
     textbookInput: document.getElementById("textbookInput"),
     lessonInput: document.getElementById("lessonInput"),
     taskModeInput: document.getElementById("taskModeInput"),
@@ -53,18 +52,14 @@
     timerResetButton: document.getElementById("timerResetButton"),
     timerTeacherLabel: document.getElementById("timerTeacherLabel"),
     drawButton: document.getElementById("drawButton"),
-    assessmentCard: document.getElementById("assessmentCard"),
-    assessmentTitle: document.getElementById("assessmentTitle"),
-    rubricFields: document.getElementById("rubricFields"),
-    scoreTotal: document.getElementById("scoreTotal"),
+    responseCard: document.getElementById("responseCard"),
+    responseTitle: document.getElementById("responseTitle"),
     responseStatusInput: document.getElementById("responseStatusInput"),
     answerContextInput: document.getElementById("answerContextInput"),
     noResponseReasonInput: document.getElementById("noResponseReasonInput"),
     noteInput: document.getElementById("noteInput"),
-    countedForGradeInput: document.getElementById("countedForGradeInput"),
-    scoreNextButton: document.getElementById("scoreNextButton"),
-    scoreCompleteButton: document.getElementById("scoreCompleteButton"),
-    deferButton: document.getElementById("deferButton"),
+    recordNextButton: document.getElementById("recordNextButton"),
+    recordCompleteButton: document.getElementById("recordCompleteButton"),
     noAnswerButton: document.getElementById("noAnswerButton"),
     undoButton: document.getElementById("undoButton"),
     nextRoundButton: document.getElementById("nextRoundButton"),
@@ -72,13 +67,11 @@
     answeredMetric: document.getElementById("answeredMetric"),
     pendingMetric: document.getElementById("pendingMetric"),
     notAnsweredMetric: document.getElementById("notAnsweredMetric"),
-    sessionScoreSummary: document.getElementById("sessionScoreSummary"),
+    sessionRecordSummary: document.getElementById("sessionRecordSummary"),
     eligibleLabel: document.getElementById("eligibleLabel"),
     studentSearchInput: document.getElementById("studentSearchInput"),
     studentStatusFilter: document.getElementById("studentStatusFilter"),
     studentList: document.getElementById("studentList"),
-    pendingAssessmentsCard: document.getElementById("pendingAssessmentsCard"),
-    pendingAssessmentsList: document.getElementById("pendingAssessmentsList"),
     attemptList: document.getElementById("attemptList"),
     lastSavedLabel: document.getElementById("lastSavedLabel"),
     exportCsvButton: document.getElementById("exportCsvButton"),
@@ -114,7 +107,6 @@
     closeRecordsButton: document.getElementById("closeRecordsButton"),
     recordsClassSelect: document.getElementById("recordsClassSelect"),
     recordsStudentSelect: document.getElementById("recordsStudentSelect"),
-    recordsIndexSummary: document.getElementById("recordsIndexSummary"),
     recordsSummary: document.getElementById("recordsSummary"),
     recordsList: document.getElementById("recordsList"),
     toast: document.getElementById("toast")
@@ -123,14 +115,13 @@
   let state = null;
   let studentSearchQuery = "";
   let studentStatusFilter = "all";
-  let scoreDraft = {};
+  let assistanceDraft = null;
+  let taskPromptDraft = "";
   let noteDraft = "";
-  let countedDraft = true;
   let responseStatusDraft = "answered";
   let answerContextDraft = "unknown";
   let noResponseReasonDraft = "";
   let pendingDraftId = null;
-  let assessmentTargetId = null;
   let taskDraftTarget = Model.DEFAULT_TASK_TARGET;
   let toastTimer = null;
   let lastRosterClassId = "";
@@ -149,7 +140,6 @@
   const builtInRosters = global.RandomizerRosters && global.RandomizerRosters.classes
     ? global.RandomizerRosters.classes
     : {};
-  const scoreLevelLabels = ["未展现", "需协助", "大致完成", "独立完成"];
 
   function today() {
     const date = new Date();
@@ -553,7 +543,6 @@
 
   function loadDefaultStartValues() {
     elements.dateInput.value = today();
-    elements.scoringModeInput.value = "graded";
     elements.taskModeInput.value = Model.DEFAULT_TASK_MODE;
     elements.taskTargetInput.value = Model.DEFAULT_TASK_TARGET;
     populateClassOptions();
@@ -571,7 +560,6 @@
     }
     populateClassOptions(current.session.className || "");
     elements.dateInput.value = current.session.date || today();
-    elements.scoringModeInput.value = current.session.scoringMode || "graded";
     elements.taskModeInput.value = current.session.taskMode || Model.DEFAULT_TASK_MODE;
     elements.taskTargetInput.value = current.session.taskTarget || Model.DEFAULT_TASK_TARGET;
     populateTextbookOptions(current.session.textbookId, current.session.lessonId);
@@ -795,7 +783,6 @@
     state = Model.createSession({
       className: elements.classNameInput.value,
       date: elements.dateInput.value,
-      scoringMode: elements.scoringModeInput.value,
       textbookId: elements.textbookInput.value,
       lessonId: elements.lessonInput.value,
       taskMode: elements.taskModeInput.value,
@@ -804,7 +791,7 @@
     });
     resetTimer(false);
     taskDraftTarget = state.session.taskTarget || Model.DEFAULT_TASK_TARGET;
-    resetAssessmentDraft();
+    resetResponseDraft();
     persist();
     setView("app");
     renderApp();
@@ -825,35 +812,35 @@
     state = saved;
     resetTimer(false);
     taskDraftTarget = state.session.taskTarget || Model.DEFAULT_TASK_TARGET;
-    resetAssessmentDraft();
+    resetResponseDraft();
     setView("app");
     renderApp();
     showToast("已回到上次课堂");
   }
 
-  function resetAssessmentDraft() {
-    scoreDraft = {};
+  function resetResponseDraft() {
     noteDraft = "";
-    countedDraft = state ? state.session.scoringMode === "graded" : true;
     responseStatusDraft = "answered";
     answerContextDraft = "unknown";
     noResponseReasonDraft = "";
     pendingDraftId = null;
-    assessmentTargetId = null;
   }
 
   function handleDraw() {
     if (!state || isDrawing) return;
     try {
+      const pool = Model.getSelectablePool(state);
+      if (!Model.pendingAttempt(state) && pool.length === 1 && pool[0].id === Model.getLastParticipantId(state)) {
+        if (!global.confirm(`目前只剩 ${pool[0].name} 可以抽问，刚才也是这位同学。是否再次抽问？取消可先安排其他活动。`)) return;
+      }
       state = Model.drawStudent(state, {
         taskMode: state.session.taskMode || Model.DEFAULT_TASK_MODE,
-        taskTarget: taskDraftTarget,
-        countedForSummary: state.session.scoringMode === "graded"
+        taskTarget: taskDraftTarget
       });
       stopTimer();
       timerRemaining = timerDuration;
       isDrawing = true;
-      resetAssessmentDraft();
+      resetResponseDraft();
       persist();
       renderApp();
       if (drawingRevealTimer) global.clearTimeout(drawingRevealTimer);
@@ -868,65 +855,29 @@
     }
   }
 
-  function handleScore(drawNext) {
+  function handleResponse(drawNext) {
     try {
       const pending = Model.pendingAttempt(state);
-      const selected = assessmentTargetId
-        ? state.attempts.find((attempt) => attempt.id === assessmentTargetId && attempt.outcome === "answered")
-        : null;
-      const editing = !pending && Boolean(selected);
-      if (pending) {
-          state = Model.scorePending(state, scoreDraft, {
-          note: noteDraft,
-          countedForSummary: countedDraft,
-          countedForGrade: countedDraft,
-          responseStatus: responseStatusDraft,
-          answerContext: answerContextDraft
-        });
-      } else if (selected) {
-          state = Model.saveAssessment(state, selected.id, scoreDraft, {
-          note: noteDraft,
-          countedForSummary: countedDraft,
-          countedForGrade: countedDraft,
-          responseStatus: responseStatusDraft,
-          answerContext: answerContextDraft,
-          correctionNote: noteDraft
-        });
-      } else {
-        throw new Error("目前没有可保存的评分");
-      }
-      stopTimer();
-      timerRemaining = timerDuration;
-      resetAssessmentDraft();
-      persist();
-      const progress = Model.getProgress(state);
-      if (drawNext && !editing && !progress.roundComplete && !progress.noEligibleStudents) {
-        showToast("评分已保存，正在抽下一位。");
-        handleDraw();
-      } else {
-        renderApp();
-        showToast(editing ? "评分已更新" : "评分已保存，这位同学完成本轮");
-      }
-    } catch (error) {
-      showToast(error.message, true);
-    }
-  }
-
-  function handleDefer() {
-    try {
-      state = Model.deferPending(state, {
+      if (!pending) throw new Error("目前没有正在回答的学生");
+      state = Model.recordResponse(state, {
         note: noteDraft,
-        countedForSummary: countedDraft,
-        countedForGrade: countedDraft,
+        taskPrompt: taskPromptDraft,
         responseStatus: responseStatusDraft,
-        answerContext: answerContextDraft
+        answerContext: answerContextDraft,
+        assistance: assistanceDraft
       });
       stopTimer();
       timerRemaining = timerDuration;
-      resetAssessmentDraft();
+      resetResponseDraft();
       persist();
-      renderApp();
-      showToast("已记下这位同学的回答，稍后再评分");
+      const progress = Model.getProgress(state);
+      if (drawNext && !progress.roundComplete && !progress.noEligibleStudents) {
+        showToast("回答已记录，正在抽下一位。");
+        handleDraw();
+      } else {
+        renderApp();
+        showToast("回答已记录");
+      }
     } catch (error) {
       showToast(error.message, true);
     }
@@ -941,12 +892,13 @@
       }
       state = Model.returnPending(state, {
         note: noteDraft,
+        taskPrompt: taskPromptDraft,
         noResponseReason: noResponseReasonDraft,
         answerContext: answerContextDraft
       });
       stopTimer();
       timerRemaining = timerDuration;
-      resetAssessmentDraft();
+      resetResponseDraft();
       persist();
       renderApp();
       showToast("已记录未回答；这位同学仍会留在可抽名单中");
@@ -962,7 +914,7 @@
       if (drawingRevealTimer) global.clearTimeout(drawingRevealTimer);
       drawingRevealTimer = null;
       state = Model.undoLastAction(state);
-      resetAssessmentDraft();
+      resetResponseDraft();
       persist();
       renderApp();
       showToast("已返回上一步");
@@ -975,7 +927,7 @@
     try {
       resetTimer(false);
       state = Model.startNextRound(state);
-      resetAssessmentDraft();
+      resetResponseDraft();
       persist();
       renderApp();
       showToast(`第 ${state.currentRound.number} 轮抽问开始`);
@@ -1004,9 +956,9 @@
     }
     if (pendingDraftId === attempt.id) return;
     pendingDraftId = attempt.id;
-    scoreDraft = attempt.scores ? { ...attempt.scores } : {};
+    assistanceDraft = attempt.assistance ?? null;
+    taskPromptDraft = attempt.taskPrompt || (attempt.outcome === "pending" ? state.session.activeQuestion?.prompt || "" : "");
     noteDraft = attempt.note || "";
-    countedDraft = attempt.countedForSummary !== false && attempt.countedForGrade !== false;
     responseStatusDraft = ["partial", "peer_supported"].includes(attempt.responseStatus)
       ? attempt.responseStatus
       : "answered";
@@ -1016,59 +968,19 @@
     noResponseReasonDraft = attempt.noResponseReason || "";
   }
 
-  function renderRubric(attempt, editing) {
+  function renderResponseForm(attempt) {
     ensurePendingDraft(attempt);
-    elements.assessmentTitle.textContent = editing ? "修改口语评分" : "口语表现评分";
-    elements.scoreCompleteButton.textContent = editing ? "保存修改" : "只保存这笔";
-    elements.scoreNextButton.hidden = Boolean(editing);
-    elements.deferButton.hidden = Boolean(editing);
-    elements.noAnswerButton.hidden = Boolean(editing);
-    elements.rubricFields.replaceChildren();
-    Model.RUBRIC_CRITERIA.forEach((criterion) => {
-      const fieldset = document.createElement("fieldset");
-      fieldset.className = "rubric-field";
-      const legend = document.createElement("legend");
-      legend.textContent = criterion.label;
-      const description = document.createElement("p");
-      description.textContent = criterion.description;
-      const options = document.createElement("div");
-      options.className = "score-options";
-      [0, 1, 2, 3].forEach((score) => {
-        const button = document.createElement("button");
-        button.type = "button";
-        button.className = "score-option";
-        const value = document.createElement("span");
-        value.textContent = String(score);
-        const label = document.createElement("small");
-        label.textContent = scoreLevelLabels[score];
-        button.append(value, label);
-        button.setAttribute("aria-label", `${criterion.label}：${score} 分，${scoreLevelLabels[score]}`);
-        button.setAttribute("aria-pressed", String(scoreDraft[criterion.id] === score));
-        if (scoreDraft[criterion.id] === score) button.classList.add("is-selected");
-        button.addEventListener("click", () => {
-          scoreDraft[criterion.id] = score;
-          renderApp();
-        });
-        options.appendChild(button);
-      });
-      fieldset.append(legend, description, options);
-      elements.rubricFields.appendChild(fieldset);
-    });
-
-    const selectedScores = Model.RUBRIC_CRITERIA.map((criterion) => scoreDraft[criterion.id]).filter((value) => Number.isInteger(value));
-    if (selectedScores.length === Model.RUBRIC_CRITERIA.length) {
-      elements.scoreTotal.textContent = `${selectedScores.reduce((total, value) => total + value, 0)}／12`;
-    } else {
-      elements.scoreTotal.textContent = `${selectedScores.length}／4 项`;
-    }
-    elements.scoreCompleteButton.disabled = selectedScores.length !== Model.RUBRIC_CRITERIA.length;
-    elements.scoreNextButton.disabled = selectedScores.length !== Model.RUBRIC_CRITERIA.length;
-    if (!editing) {
-      const progress = Model.getProgress(state);
-      elements.scoreNextButton.textContent = progress.poolCount <= 1 ? "保存并完成本轮" : "保存并抽下一位";
-    }
+    elements.responseTitle.textContent = attempt.selectionMethod === "volunteer" ? "记录自愿发言" : "记录这次回答";
+    elements.recordNextButton.textContent = attempt.selectionMethod !== "volunteer" && Model.getProgress(state).poolCount <= 1
+      ? "记录回答并完成本轮"
+      : "记录回答并抽下一位";
+    elements.recordNextButton.hidden = false;
+    elements.recordCompleteButton.hidden = false;
+    elements.noAnswerButton.hidden = false;
+    elements.noResponseReasonInput.closest("label").hidden = false;
+    document.getElementById("assistanceInput").value = assistanceDraft === null ? "unknown" : assistanceDraft ? "yes" : "no";
+    document.getElementById("taskPromptInput").value = taskPromptDraft;
     elements.noteInput.value = noteDraft;
-    elements.countedForGradeInput.checked = countedDraft;
     elements.responseStatusInput.value = responseStatusDraft;
     elements.answerContextInput.value = answerContextDraft;
     elements.noResponseReasonInput.value = noResponseReasonDraft;
@@ -1096,11 +1008,7 @@
 
   function renderMainStage(progress) {
     const pending = Model.pendingAttempt(state);
-    const selected = !pending && assessmentTargetId
-      ? state.attempts.find((attempt) => attempt.id === assessmentTargetId && attempt.outcome === "answered")
-      : null;
-    const attempt = pending || selected;
-    const editing = Boolean(selected);
+    const attempt = pending;
     const attemptTextbookId = attempt && attempt.textbookId
       ? attempt.textbookId
       : state.session.textbookId;
@@ -1111,21 +1019,20 @@
     elements.drawTitle.textContent = isDrawing
       ? "正在抽选"
       : attempt
-        ? editing ? "修改这笔评分" : attempt.selectionMethod === "volunteer" ? "记录自愿发言" : "等待学生回答"
+        ? attempt.selectionMethod === "volunteer" ? "记录自愿发言" : "等待学生回答"
         : "提问后，抽一位学生";
     renderEmptyState(progress);
     elements.emptyState.hidden = Boolean(attempt);
     elements.pendingCard.hidden = !attempt;
     elements.pendingCard.classList.toggle("is-drawing", isDrawing);
-    elements.assessmentCard.hidden = !attempt || isDrawing;
+    elements.responseCard.hidden = !attempt || isDrawing;
     elements.drawButton.disabled = Boolean(attempt) || isDrawing || progress.roundComplete || progress.noEligibleStudents;
     elements.drawButton.classList.toggle("is-disabled", elements.drawButton.disabled);
     elements.drawButton.querySelector("span:last-of-type").textContent = progress.roundComplete ? "本轮完成" : "抽一位";
-    elements.nextRoundButton.hidden = !progress.roundComplete || editing;
+    elements.nextRoundButton.hidden = !progress.roundComplete;
 
     if (!attempt) {
       ensurePendingDraft(null);
-      assessmentTargetId = null;
       elements.pendingStatus.textContent = "等待回答";
       renderTimerState();
       return;
@@ -1143,32 +1050,11 @@
     const student = attempt.studentSnapshot || Model.getStudent(state, attempt.studentId) || {};
     elements.studentNumber.textContent = student.seatNumber ? `座号 ${student.seatNumber}` : (student.studentCode || "这位同学");
     elements.studentName.textContent = student.name || "未填写姓名";
-    elements.pendingStatus.textContent = editing ? "修改评分中" : attempt.selectionMethod === "volunteer" ? "自愿发言" : "等待回答";
+    elements.pendingStatus.textContent = attempt.selectionMethod === "volunteer" ? "自愿发言" : "等待回答";
     const target = Model.TASK_TARGETS[attempt.taskTarget] || "这题回答";
-    elements.pendingPrompt.textContent = editing
-      ? `${Model.formatLessonLabel(attemptTextbookId, attemptLessonId)}｜${target}。可以修改这笔评分。`
-      : `${Model.formatLessonLabel(attemptTextbookId, attemptLessonId)}｜${target}。请先让学生回答，再记下表现。`;
-    renderRubric(attempt, editing);
+    elements.pendingPrompt.textContent = `${Model.formatLessonLabel(attemptTextbookId, attemptLessonId)}｜${target}。请先让学生回答，再记录回答情况。`;
+    renderResponseForm(attempt);
     renderTimerState();
-  }
-
-  function openAssessment(attemptId) {
-    if (!state) return;
-    if (Model.pendingAttempt(state)) {
-      showToast("请先完成目前这位学生的回答", true);
-      return;
-    }
-    const attempt = state.attempts.find((item) => item.id === attemptId && item.outcome === "answered");
-    if (!attempt) return;
-    assessmentTargetId = attempt.id;
-    pendingDraftId = null;
-    scoreDraft = {};
-    noteDraft = "";
-    countedDraft = attempt.countedForSummary !== false && attempt.countedForGrade !== false;
-    renderApp();
-    if (elements.assessmentCard && typeof elements.assessmentCard.scrollIntoView === "function") {
-      elements.assessmentCard.scrollIntoView({ behavior: "smooth", block: "center" });
-    }
   }
 
   function attemptStudent(attempt) {
@@ -1188,31 +1074,7 @@
     return Model.NO_RESPONSE_REASONS.find((item) => item.id === reason)?.label || "其他";
   }
 
-  function renderAttemptLists(pendingAssessments) {
-    const pending = pendingAssessments || [];
-    elements.pendingAssessmentsCard.hidden = pending.length === 0;
-    elements.pendingAssessmentsList.replaceChildren();
-    pending.slice().reverse().forEach((attempt) => {
-      const item = document.createElement("div");
-      item.className = "pending-assessment-item";
-      const copy = document.createElement("div");
-      const student = attemptStudent(attempt);
-      const title = document.createElement("strong");
-      title.textContent = student.name || "未填写姓名";
-      const meta = document.createElement("span");
-      meta.textContent = attemptMeta(attempt);
-      copy.append(title, meta);
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "button button-small button-secondary";
-      button.textContent = "补上评分";
-      button.disabled = Boolean(Model.pendingAttempt(state));
-      button.title = button.disabled ? "请先完成目前这位学生的回答" : "打开这笔回答的评分";
-      button.addEventListener("click", () => openAssessment(attempt.id));
-      item.append(copy, button);
-      elements.pendingAssessmentsList.appendChild(item);
-    });
-
+  function renderAttemptLists() {
     elements.attemptList.replaceChildren();
     const attempts = state.attempts
       .filter((attempt) => attempt.outcome !== "undone")
@@ -1221,7 +1083,7 @@
     if (attempts.length === 0) {
       const empty = document.createElement("p");
       empty.className = "history-empty";
-      empty.textContent = "每次抽问与评分，都会留在这里。";
+      empty.textContent = "每次抽问与回答记录，都会留在这里。";
       elements.attemptList.appendChild(empty);
       return;
     }
@@ -1236,25 +1098,15 @@
         ? "等待回答"
         : attempt.outcome === "not_answered"
           ? `未回答 · ${noResponseReasonLabel(attempt.noResponseReason)}`
-          : attempt.assessmentStatus === "pending"
-            ? "待评分"
-            : `${attempt.totalScore}／12${attempt.countedForSummary === false || attempt.countedForGrade === false ? " · 不纳入摘要" : ""}`;
+          : attempt.responseStatus === "partial"
+            ? "部分回答"
+            : attempt.responseStatus === "peer_supported"
+              ? "提示／协助后回答"
+              : "已回答";
       const meta = document.createElement("span");
-      meta.textContent = `${status} · ${attemptMeta(attempt)}`;
+      meta.textContent = `${status} · ${attemptMeta(attempt)}${attempt.taskPrompt ? ` · 题目：${attempt.taskPrompt}` : ""}${attempt.note ? ` · ${attempt.note}` : ""}`;
       copy.append(title, meta);
-      const actions = document.createElement("div");
-      actions.className = "attempt-actions";
-      if (attempt.outcome === "answered") {
-        const button = document.createElement("button");
-        button.type = "button";
-        button.className = "button button-small button-quiet";
-        button.textContent = attempt.assessmentStatus === "pending" ? "补上评分" : "修改评分";
-        button.disabled = Boolean(Model.pendingAttempt(state));
-        button.title = button.disabled ? "请先完成目前这位学生的回答" : "打开这笔回答的评分";
-        button.addEventListener("click", () => openAssessment(attempt.id));
-        actions.appendChild(button);
-      }
-      item.append(copy, actions);
+      item.append(copy);
       elements.attemptList.appendChild(item);
     });
   }
@@ -1262,17 +1114,13 @@
   function renderSummary() {
     const progress = Model.getProgress(state);
     const attempts = state.attempts.filter((attempt) => attempt.outcome !== "undone");
-    const pending = Model.getPendingAssessments(state);
     const summary = Model.summarizeAttempts(attempts);
 
     elements.answeredMetric.textContent = String(summary.totalAnswerCount);
-    elements.pendingMetric.textContent = String(pending.length);
+    elements.pendingMetric.textContent = Model.pendingAttempt(state) ? "1" : "0";
     elements.notAnsweredMetric.textContent = String(summary.notAnsweredCount);
     elements.modePill.textContent = "原始记录";
-    const average = summary.rawAverageScore === null ? "—" : Number(summary.rawAverageScore).toFixed(1);
-    elements.sessionScoreSummary.textContent = summary.rawScoredCount
-      ? `已记录 ${summary.rawScoredCount} 次评分｜原始平均 ${average}／12｜随机回答 ${summary.randomCallEffectiveAnswerCount} 次｜自愿发言 ${summary.voluntaryEffectiveAnswerCount} 次。仅作课堂记录摘要，不代表正式成绩。`
-      : "目前还没有课堂表现评分；每次记录都会保留，之后可按课程需要计算。";
+    elements.sessionRecordSummary.textContent = `回答 ${summary.totalAnswerCount} 次｜随机回答 ${summary.randomCallEffectiveAnswerCount} 次｜自愿回答 ${summary.voluntaryEffectiveAnswerCount} 次。每次回答独立保存。`;
     elements.eligibleLabel.textContent = `本轮 ${progress.eligibleCount} 位`;
 
     const answeredIds = new Set(state.currentRound.answeredStudentIds);
@@ -1317,12 +1165,12 @@
       const summary = summaries.find((item) => item.student.id === student.id);
       const volunteerCount = summary ? summary.voluntarySpeakingCount : 0;
       const volunteerSuffix = volunteerCount ? ` · 自愿 ${volunteerCount} 次` : "";
-      const score = document.createElement("span");
-      score.className = "student-score";
-      if (excluded) score.textContent = "暂不抽问";
-      else if (pendingId === student.id) score.textContent = "等待回答";
-      else if (answeredIds.has(student.id)) score.textContent = `${summary && summary.pendingAssessmentCount ? "稍后评分" : "本轮已完成"} · 回答 ${summary ? summary.totalAnswerCount : 0} 次${volunteerSuffix}`;
-      else score.textContent = `随机 ${summary ? summary.randomCallCount : 0} 次${volunteerSuffix}`;
+      const status = document.createElement("span");
+      status.className = "student-status";
+      if (excluded) status.textContent = "暂不抽问";
+      else if (pendingId === student.id) status.textContent = "等待回答";
+      else if (answeredIds.has(student.id)) status.textContent = `本轮已完成 · 回答 ${summary ? summary.totalAnswerCount : 0} 次${volunteerSuffix}`;
+      else status.textContent = `随机 ${summary ? summary.randomCallCount : 0} 次${volunteerSuffix}`;
 
       const controls = document.createElement("div");
       controls.className = "student-controls";
@@ -1336,12 +1184,11 @@
         try {
           state = Model.selectVolunteer(state, student.id, {
             taskMode: state.session.taskMode,
-            taskTarget: taskDraftTarget,
-            countedForSummary: state.session.scoringMode === "graded"
+            taskTarget: taskDraftTarget
           });
           stopTimer();
           timerRemaining = timerDuration;
-          resetAssessmentDraft();
+          resetResponseDraft();
           persist();
           renderApp();
           if (timerDuration > 0) startTimer();
@@ -1369,18 +1216,18 @@
       const checkText = document.createElement("span");
       checkText.textContent = "暂不抽问";
       checkLabel.append(checkbox, checkText);
-      controls.append(score, volunteerButton, checkLabel);
+      controls.append(status, volunteerButton, checkLabel);
       row.append(identity, controls);
       elements.studentList.appendChild(row);
     });
-    renderAttemptLists(pending);
+    renderAttemptLists();
   }
 
   function renderApp() {
     if (!state) return;
     const progress = Model.getProgress(state);
     elements.sessionTitle.textContent = state.session.className || "未填写班级名称";
-    elements.sessionMeta.textContent = `${state.session.date || "未设置日期"} · ${state.session.scoringMode === "graded" ? "纳入课堂摘要" : "仅保留原始资料"}`;
+    elements.sessionMeta.textContent = `${state.session.date || "未设置日期"} · 课堂回答记录`;
     populateActiveContextSelectors();
     elements.roundNumber.textContent = String(progress.roundNumber);
     elements.progressLabel.textContent = `本轮完成 ${progress.answeredCount}／${progress.eligibleCount}`;
@@ -1595,7 +1442,7 @@
       state = imported;
       resetTimer(false);
       taskDraftTarget = state.session.taskTarget || Model.DEFAULT_TASK_TARGET;
-      resetAssessmentDraft();
+      resetResponseDraft();
       persist();
       setView("app");
       renderApp();
@@ -1670,12 +1517,12 @@
     state = Model.importBackup(Model.exportBackup(entry));
     resetTimer(false);
     taskDraftTarget = state.session.taskTarget || Model.DEFAULT_TASK_TARGET;
-    resetAssessmentDraft();
+    resetResponseDraft();
     persist();
     closeDialog(elements.historyDialog);
     setView("app");
     renderApp();
-    showToast("已打开历史课堂，可以补上或修改评分");
+    showToast("已打开历史课堂，可以继续查看课堂记录");
   }
 
   function allStoredSessions() {
@@ -1730,16 +1577,9 @@
           });
       });
     rows.sort((a, b) => String(b.attempt.drawnAt || b.entry.session.date).localeCompare(String(a.attempt.drawnAt || a.entry.session.date)));
-    const summary = Model.summarizeAttempts(rows.map(({ attempt }) => attempt));
-    const average = summary.rawAverageScore === null ? null : Number(summary.rawAverageScore).toFixed(1);
-    const formativeIndex = summary.formativeIndexPreview === null
-      ? "证据还少，暂不显示稳定指数"
-      : `${Number(summary.formativeIndexPreview).toFixed(1)}／100`;
-    elements.recordsIndexSummary.textContent = rows.length
-      ? `课堂表现指数预览：${formativeIndex} · 已覆盖 ${summary.formativeLessonCount || 0} 个课次`
-      : "选择学生后显示预览。";
+    const summary = Model.summarizeAttempts(rows.map(({ entry, attempt }) => ({ ...attempt, sessionDate: entry.session.date })));
     elements.recordsSummary.textContent = rows.length
-      ? `共 ${summary.attempts} 条课堂记录｜回答 ${summary.totalAnswerCount} 次｜有效回答 ${summary.effectiveAnswerCount} 次｜随机 ${summary.randomCallCount} 次｜自愿 ${summary.voluntarySpeakingCount} 次｜原始平均 ${average || "—"}／12（不代表正式成绩）`
+      ? `回答 ${summary.totalAnswerCount} 次｜参与 ${summary.participationDayCount} 个上课日｜随机回答 ${summary.randomCallEffectiveAnswerCount} 次｜自愿回答 ${summary.voluntaryEffectiveAnswerCount} 次｜未回答 ${summary.notAnsweredCount} 次`
       : "目前没有这位学生的回答记录。";
     elements.recordsList.replaceChildren();
     if (rows.length === 0) {
@@ -1768,9 +1608,7 @@
         ? `未回答：${noResponseReasonLabel(attempt.noResponseReason)}`
         : attempt.outcome === "pending"
           ? "等待回答"
-          : attempt.assessmentStatus === "pending"
-            ? "回答完成，待评分"
-            : attempt.responseStatus === "partial"
+          : attempt.responseStatus === "partial"
               ? "部分回答"
               : attempt.responseStatus === "peer_supported"
                 ? "提示／协助后回答"
@@ -1780,20 +1618,19 @@
         : attempt.answerContext === "unprepared"
           ? "未准备"
           : "未记录情境";
-      const note = attempt.note ? `｜${attempt.note}` : "";
+      const assistance = attempt.assistance === true ? "｜有实质提示或协助" : attempt.assistance === false ? "｜无实质提示或协助" : "";
+      const note = `${assistance}${attempt.taskPrompt ? `｜题目：${attempt.taskPrompt}` : ""}${attempt.note ? `｜${attempt.note}` : ""}`;
       const correction = attempt.recordStatus === "corrected" ? "｜已更正" : "";
       detail.textContent = `${source} · 第 ${attempt.roundNumber} 轮 · ${status} · ${contextLabel}${correction}${note}`;
       context.append(title, detail);
-      const score = document.createElement("span");
-      score.className = "record-score";
-      score.textContent = attempt.outcome === "not_answered"
+      const recordState = document.createElement("span");
+      recordState.className = "record-status";
+      recordState.textContent = attempt.outcome === "not_answered"
         ? "未回答"
         : attempt.outcome === "pending"
           ? "等待回答"
-          : attempt.assessmentStatus === "scored"
-            ? `${attempt.totalScore}／12`
-            : "待评分";
-      item.append(date, context, score);
+          : "已记录";
+      item.append(date, context, recordState);
       elements.recordsList.appendChild(item);
     });
   }
@@ -1882,13 +1719,19 @@
   elements.noResponseReasonInput.addEventListener("change", (event) => {
     noResponseReasonDraft = event.target.value;
   });
-  elements.countedForGradeInput.addEventListener("change", (event) => {
-    countedDraft = event.target.checked;
-  });
   elements.drawButton.addEventListener("click", handleDraw);
-  elements.scoreNextButton.addEventListener("click", () => handleScore(true));
-  elements.scoreCompleteButton.addEventListener("click", () => handleScore(false));
-  elements.deferButton.addEventListener("click", handleDefer);
+  document.getElementById("newQuestionButton").addEventListener("click", () => {
+    if (!state) { showToast("请先开始一堂课。", true); return; }
+    state = Model.beginQuestion(state);
+    taskPromptDraft = "";
+    document.getElementById("taskPromptInput").value = "";
+    persist();
+    showToast("已开始新题目，请填写本题要求。");
+  });
+  document.getElementById("assistanceInput").addEventListener("change", (event) => { assistanceDraft = event.target.value === "unknown" ? null : event.target.value === "yes"; });
+  document.getElementById("taskPromptInput").addEventListener("input", (event) => { taskPromptDraft = event.target.value; });
+  elements.recordNextButton.addEventListener("click", () => handleResponse(true));
+  elements.recordCompleteButton.addEventListener("click", () => handleResponse(false));
   elements.noAnswerButton.addEventListener("click", handleNoAnswer);
   elements.undoButton.addEventListener("click", handleUndo);
   elements.nextRoundButton.addEventListener("click", handleNextRound);
@@ -1924,7 +1767,7 @@
       toggleFullscreen();
       return;
     }
-    if (event.code === "Space" && !isTypingTarget(event.target) && state && !Model.pendingAttempt(state) && !assessmentTargetId && !isDrawing) {
+    if (event.code === "Space" && !isTypingTarget(event.target) && state && !Model.pendingAttempt(state) && !isDrawing) {
       event.preventDefault();
       handleDraw();
     }
