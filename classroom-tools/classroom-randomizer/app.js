@@ -52,6 +52,9 @@
     timerResetButton: document.getElementById("timerResetButton"),
     timerTeacherLabel: document.getElementById("timerTeacherLabel"),
     drawButton: document.getElementById("drawButton"),
+    quickResponseBar: document.getElementById("quickResponseBar"),
+    quickResponseTitle: document.getElementById("quickResponseTitle"),
+    quickResponseHint: document.getElementById("quickResponseHint"),
     responseCard: document.getElementById("responseCard"),
     responseTitle: document.getElementById("responseTitle"),
     responseStatusInput: document.getElementById("responseStatusInput"),
@@ -140,6 +143,7 @@
   const builtInRosters = global.RandomizerRosters && global.RandomizerRosters.classes
     ? global.RandomizerRosters.classes
     : {};
+  const DRAW_REVEAL_DURATION = 1350;
 
   function today() {
     const date = new Date();
@@ -366,9 +370,22 @@
     h1{max-width:1200px;margin:12px 0;color:#17324d;font-size:clamp(70px,12vw,170px);line-height:1.04;letter-spacing:.01em}
     .prompt{color:#34536b;font-size:clamp(25px,3vw,44px)}.timer{display:inline-flex;align-items:baseline;gap:10px;margin-top:30px;padding:12px 24px;border:2px solid #b6d4d1;border-radius:999px;color:#21645f;background:#fff;font-size:clamp(20px,2vw,30px)}
     .timer strong{font-family:"Times New Roman",serif;font-size:clamp(44px,6vw,80px);line-height:1}.timer.ending{color:#9a4d3a;border-color:#edb7a8;background:#fff0ec}
-    footer{display:flex;justify-content:space-between;color:#6b7d8c;font-size:clamp(16px,1.7vw,24px)}.rolling h1{animation:pulse .65s ease-in-out infinite alternate;color:#2c817b}
+    footer{display:flex;justify-content:space-between;color:#6b7d8c;font-size:clamp(16px,1.7vw,24px)}
+    .draw-animation{position:relative;display:none;width:min(38vw,300px);height:min(22vw,156px);margin:0 auto 2px}
+    .rolling .draw-animation{display:block}
+    .draw-card{position:absolute;top:18px;left:50%;display:grid;width:clamp(48px,6vw,72px);height:clamp(64px,9vw,96px);place-items:center;border:2px solid #b8d8d1;border-radius:16px;color:#21645f;background:#e7f7f0;box-shadow:0 12px 20px rgba(24,40,48,.14);font-family:KaiTi,"STKaiti","BiauKai",serif;font-size:clamp(26px,4vw,42px);font-weight:700;transform-origin:50% 100%}
+    .draw-card-left{margin-left:clamp(-100px,-8vw,-66px);color:#a6533c;background:#fff0ec;animation:shuffle-left 1240ms cubic-bezier(.4,0,.2,1) both}
+    .draw-card-center{z-index:2;margin-left:clamp(-36px,-3vw,-24px);border-color:#a9cbe2;color:#356080;background:#eef5f7;animation:shuffle-center 1240ms cubic-bezier(.4,0,.2,1) both}
+    .draw-card-right{margin-left:clamp(28px,2.5vw,38px);border-color:#d9c5e8;color:#70528e;background:#f5effb;animation:shuffle-right 1240ms cubic-bezier(.4,0,.2,1) both}
+    .draw-spark{position:absolute;color:#d7795c;font-size:clamp(20px,3vw,32px);font-style:normal;opacity:0;animation:spark-pop 1240ms ease-out both}.draw-spark-one{top:5px;left:12%}.draw-spark-two{right:12%;bottom:12px;color:#109b76;animation-delay:180ms}
+    .rolling h1{color:#2c817b}.rolling .prompt{color:#2c817b}
     .complete h1{color:#2d7a57}.complete .stage:before{content:"✦  ✦  ✦";position:absolute;margin-top:-28vh;color:#d9a441;font-size:clamp(26px,4vw,54px);letter-spacing:.8em}
-    [hidden]{display:none!important}@keyframes pulse{from{opacity:.45;transform:scale(.98)}to{opacity:1;transform:scale(1)}}
+    [hidden]{display:none!important}
+    @keyframes shuffle-left{0%{opacity:.55;transform:translate(0,14px) rotate(0) scale(.86)}22%{opacity:1;transform:translate(-52px,0) rotate(-18deg) scale(1)}46%{transform:translate(45px,-9px) rotate(20deg)}68%{transform:translate(-34px,5px) rotate(-15deg)}84%{transform:translate(-13px,4px) rotate(-8deg)}100%{opacity:1;transform:translate(-7px,4px) rotate(-6deg)}}
+    @keyframes shuffle-center{0%{opacity:.7;transform:translate(0,12px) rotate(0) scale(.8)}24%{opacity:1;transform:translate(0,-14px) rotate(-4deg) scale(1.05)}48%{transform:translate(16px,-1px) rotate(8deg) scale(1)}72%{transform:translate(-13px,-8px) rotate(-6deg) scale(1.03)}100%{opacity:1;transform:translate(0,0) rotate(0) scale(1.05)}}
+    @keyframes shuffle-right{0%{opacity:.55;transform:translate(0,14px) rotate(0) scale(.86)}22%{opacity:1;transform:translate(52px,0) rotate(18deg) scale(1)}46%{transform:translate(-45px,-9px) rotate(-20deg)}68%{transform:translate(34px,5px) rotate(15deg)}84%{transform:translate(13px,4px) rotate(8deg)}100%{opacity:1;transform:translate(7px,4px) rotate(6deg)}}
+    @keyframes spark-pop{0%,100%{opacity:0;transform:scale(.45) rotate(-20deg)}42%{opacity:1;transform:scale(1) rotate(8deg)}68%{opacity:.25;transform:scale(.8) rotate(20deg)}}
+    @media (prefers-reduced-motion:reduce){.draw-card,.draw-spark{animation:none}.draw-card,.draw-spark{opacity:1;transform:none}}
   </style>
 </head>
 <body>
@@ -377,6 +394,13 @@
     <section class="stage">
       <div>
         <div class="seat" id="displaySeat"></div>
+        <div class="draw-animation" aria-hidden="true">
+          <span class="draw-card draw-card-left">抽</span>
+          <span class="draw-card draw-card-center">问</span>
+          <span class="draw-card draw-card-right">答</span>
+          <i class="draw-spark draw-spark-one">✦</i>
+          <i class="draw-spark draw-spark-two">✦</i>
+        </div>
         <h1 id="displayName">准备好了吗？</h1>
         <p class="prompt" id="displayPrompt">请等老师抽问</p>
         <div class="timer" id="displayTimer" hidden><span>思考时间</span><strong id="displayTimerValue">20</strong><span>秒</span></div>
@@ -431,8 +455,8 @@
       timer.classList.remove("ending");
       if (isDrawing) {
         doc.getElementById("displaySeat").textContent = "";
-        doc.getElementById("displayName").textContent = "抽选中…";
-        doc.getElementById("displayPrompt").textContent = "请看大屏幕";
+        doc.getElementById("displayName").textContent = "下一位同学";
+        doc.getElementById("displayPrompt").textContent = "卡片转一转，马上揭晓";
       } else if (attempt) {
         const student = attempt.studentSnapshot || Model.getStudent(state, attempt.studentId) || {};
         const target = Model.TASK_TARGETS[attempt.taskTarget] || "完整回答这一题";
@@ -843,13 +867,16 @@
       resetResponseDraft();
       persist();
       renderApp();
+      if (elements.drawStage && typeof elements.drawStage.scrollIntoView === "function") {
+        elements.drawStage.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
       if (drawingRevealTimer) global.clearTimeout(drawingRevealTimer);
       drawingRevealTimer = global.setTimeout(() => {
         isDrawing = false;
         drawingRevealTimer = null;
         renderApp();
         if (timerDuration > 0) startTimer();
-      }, 850);
+      }, DRAW_REVEAL_DURATION);
     } catch (error) {
       showToast(error.message, true);
     }
@@ -970,7 +997,13 @@
 
   function renderResponseForm(attempt) {
     ensurePendingDraft(attempt);
-    elements.responseTitle.textContent = attempt.selectionMethod === "volunteer" ? "记录自愿发言" : "记录这次回答";
+    const isVolunteer = attempt.selectionMethod === "volunteer";
+    const responseTitle = isVolunteer ? "记录自愿发言" : "记录这次回答";
+    elements.responseTitle.textContent = responseTitle;
+    elements.quickResponseTitle.textContent = responseTitle;
+    elements.quickResponseHint.textContent = isVolunteer
+      ? "记录后会回到抽选区，继续课堂活动。"
+      : "记录后会自动回到抽选区，显示下一位学生。";
     elements.recordNextButton.textContent = attempt.selectionMethod !== "volunteer" && Model.getProgress(state).poolCount <= 1
       ? "记录回答并完成本轮"
       : "记录回答并抽下一位";
@@ -1025,6 +1058,7 @@
     elements.emptyState.hidden = Boolean(attempt);
     elements.pendingCard.hidden = !attempt;
     elements.pendingCard.classList.toggle("is-drawing", isDrawing);
+    elements.quickResponseBar.hidden = !attempt || isDrawing;
     elements.responseCard.hidden = !attempt || isDrawing;
     elements.drawButton.disabled = Boolean(attempt) || isDrawing || progress.roundComplete || progress.noEligibleStudents;
     elements.drawButton.classList.toggle("is-disabled", elements.drawButton.disabled);
@@ -1040,9 +1074,9 @@
 
     if (isDrawing) {
       elements.studentNumber.textContent = "";
-      elements.studentName.textContent = "抽选中…";
-      elements.pendingStatus.textContent = "即将揭晓";
-      elements.pendingPrompt.textContent = "请看大屏幕";
+      elements.studentName.textContent = "下一位同学";
+      elements.pendingStatus.textContent = "正在洗牌";
+      elements.pendingPrompt.textContent = "看卡片转一转，马上揭晓";
       renderTimerState();
       return;
     }

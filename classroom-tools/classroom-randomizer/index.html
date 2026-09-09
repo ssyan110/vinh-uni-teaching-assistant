@@ -135,6 +135,19 @@
 
             <div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div>
 
+            <div class="quick-response-bar" id="quickResponseBar" hidden aria-live="polite" aria-label="当前课堂操作">
+              <div class="quick-response-copy">
+                <span class="section-kicker">当前课堂操作</span>
+                <strong id="quickResponseTitle">记录这次回答</strong>
+                <span id="quickResponseHint">记录后会自动回到抽选区，显示下一位学生。</span>
+              </div>
+              <div class="response-actions">
+                <button class="has-icon icon-save button button-primary" id="recordNextButton" type="button">记录回答并抽下一位</button>
+                <button class="has-icon icon-save button button-secondary" id="recordCompleteButton" type="button">只记录这笔</button>
+                <button class="has-icon icon-circle-help button button-quiet" id="noAnswerButton" type="button">记录未回答</button>
+              </div>
+            </div>
+
             <div class="draw-stage" id="drawStage">
               <div class="empty-state" id="emptyState">
                 <span class="draw-symbol" aria-hidden="true">?</span>
@@ -146,6 +159,13 @@
                 <div class="pending-card-heading">
                   <span class="pending-label">轮到这位同学</span>
                   <span class="pending-status" id="pendingStatus">等待回答</span>
+                </div>
+                <div class="draw-animation" aria-hidden="true">
+                  <span class="draw-card draw-card-left">抽</span>
+                  <span class="draw-card draw-card-center">问</span>
+                  <span class="draw-card draw-card-right">答</span>
+                  <i class="draw-spark draw-spark-one">✦</i>
+                  <i class="draw-spark draw-spark-two">✦</i>
                 </div>
                 <div class="student-number" id="studentNumber">座号 —</div>
                 <h3 id="studentName">—</h3>
@@ -250,11 +270,6 @@
                 <span>教师备注 <em>选填</em></span>
                 <input id="noteInput" type="text" maxlength="2000" placeholder="例如：能说出理由，但漏了例子" autocomplete="off">
               </label>
-              <div class="response-actions">
-                <button class="has-icon icon-save button button-primary" id="recordNextButton" type="button">记录回答并抽下一位</button>
-                <button class="has-icon icon-save button button-secondary" id="recordCompleteButton" type="button">只记录这笔</button>
-                <button class="has-icon icon-circle-help button button-quiet" id="noAnswerButton" type="button">记录未回答</button>
-              </div>
             </section>
 
             <div class="draw-actions">
@@ -349,7 +364,7 @@
       <ol class="help-list">
           <li><strong>需要投影时，先打开学生画面</strong><span>把新窗口拖到投影机；教师记录与备注不会显示给学生。</span></li>
         <li><strong>提问后按「抽一位」</strong><span>姓名揭晓后开始思考计时；时间到不会自动判定结果。</span></li>
-          <li><strong>回答后记录状态</strong><span>按「记录回答并抽下一位」可以连续抽问；想停下来时，按「只记录这笔」。</span></li>
+          <li><strong>回答后记录状态</strong><span>操作列会保持在上方；按「记录回答并抽下一位」后会回到抽选区显示动画。</span></li>
         <li><strong>没有回答就先记录</strong><span>按「记录未回答」后，再按「抽一位」继续；这位同学稍后还能再抽到。</span></li>
         <li><strong>课程内容改变时直接切换课次</strong><span>后续抽问会记在新课次，之前保存的回答仍保留原课次。</span></li>
       </ol>
