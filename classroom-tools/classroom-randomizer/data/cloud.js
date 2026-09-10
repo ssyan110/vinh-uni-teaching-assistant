@@ -20,6 +20,7 @@
   let session = readJson(TOKEN_KEY);
   let authRedirectError = null;
   let flushPromise = null;
+  let refreshPromise = null;
   const rosterCache = new Map();
 
   function storageFor(key) {
@@ -91,21 +92,78 @@
     };
   }
 
-  async function request(path, options) {
+  function isSessionExpiringSoon() {
+    if (!session || !session.access_token || !session.refresh_token || session.invite_pending) return false;
+    const expiresAt = Number(session.expires_at || 0);
+    return expiresAt > 0 && expiresAt <= Math.floor(Date.now() / 1000) + 60;
+  }
+
+  function responseData(responseText) {
+    try { return responseText ? JSON.parse(responseText) : null; } catch (error) { return responseText; }
+  }
+
+  function responseFailure(response, data) {
+    const message = data && (data.message || data.error_description || data.hint || data.details)
+      ? (data.message || data.error_description || data.hint || data.details)
+      : `云端连接失败（${response.status}）`;
+    const failure = new Error(message);
+    failure.status = response.status;
+    return failure;
+  }
+
+  async function refreshSession() {
+    if (!session || !session.refresh_token) throw new Error("登录已过期，请重新登录教师账号。");
+    if (!refreshPromise) {
+      const refreshToken = session.refresh_token;
+      refreshPromise = root.fetch(`${PROJECT_URL}/auth/v1/token?grant_type=refresh_token`, {
+        method: "POST",
+        headers: { apikey: PUBLISHABLE_KEY, "Content-Type": "application/json" },
+        body: JSON.stringify({ refresh_token: refreshToken })
+      }).then(async (response) => {
+        const data = responseData(await response.text());
+        if (!response.ok) throw responseFailure(response, data);
+        session = { ...session, ...data, invite_pending: false };
+        writeJson(TOKEN_KEY, session);
+        return session;
+      }).finally(() => {
+        refreshPromise = null;
+      });
+    }
+    return refreshPromise;
+  }
+
+  function invalidateExpiredSession(error) {
+    if (error && (error.status === 400 || error.status === 401)) {
+      signOut();
+    }
+  }
+
+  async function request(path, options, allowRefresh = true) {
+    if (allowRefresh && isSessionExpiringSoon()) {
+      try {
+        await refreshSession();
+      } catch (error) {
+        invalidateExpiredSession(error);
+        throw error;
+      }
+    }
     const response = await root.fetch(`${PROJECT_URL}${path}`, {
       ...options,
       headers: authHeaders({ "Content-Type": "application/json", ...(options && options.headers) })
     });
     const responseText = await response.text();
-    let data = null;
-    try { data = responseText ? JSON.parse(responseText) : null; } catch (error) { data = responseText; }
+    const data = responseData(responseText);
+    if (!response.ok && response.status === 401 && allowRefresh && session && session.refresh_token) {
+      try {
+        await refreshSession();
+        return request(path, options, false);
+      } catch (error) {
+        invalidateExpiredSession(error);
+        throw error;
+      }
+    }
     if (!response.ok) {
-      const message = data && (data.message || data.error_description || data.hint || data.details)
-        ? (data.message || data.error_description || data.hint || data.details)
-        : `云端连接失败（${response.status}）`;
-      const failure = new Error(message);
-      failure.status = response.status;
-      throw failure;
+      throw responseFailure(response, data);
     }
     return data;
   }

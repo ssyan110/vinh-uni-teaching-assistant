@@ -610,7 +610,8 @@
     return Array.isArray(roster) ? roster.map((student) => ({ ...student })) : [];
   }
 
-  async function loadCloudRoster(classId) {
+  async function loadCloudRoster(classId, options) {
+    const silent = Boolean(options && options.silent);
     if (!global.RandomizerCloud || !global.RandomizerCloud.isSignedIn()) {
       elements.rosterSource.textContent = "请先登录教师账号，系统才会加载这个班级的名单。";
       elements.rosterInput.value = "";
@@ -621,19 +622,28 @@
     try {
       const result = await global.RandomizerCloud.fetchClassRoster(classId);
       cloudRosterByClass[classId] = result.roster;
-      if (elements.classNameInput.value === classId) {
+      if (elements.classNameInput.value === classId && (!silent || !elements.rosterInput.value.trim())) {
         elements.rosterInput.value = rosterToText(result.roster);
         elements.rosterSource.textContent = `已从教学数据库加载 ${classId} 名册；课堂记录会同步保存。`;
         updateRosterCount();
       }
       return true;
     } catch (error) {
-      elements.rosterSource.textContent = "尚未加载名单；请先在学生管理系统导入这个班级。";
-      elements.rosterInput.value = "";
-      updateRosterCount();
-      showToast(error.message || "无法加载班级名单", true);
+      if (elements.classNameInput.value === classId && (!silent || !elements.rosterInput.value.trim())) {
+        elements.rosterSource.textContent = "尚未加载名单；请先在学生管理系统导入这个班级。";
+        elements.rosterInput.value = "";
+        updateRosterCount();
+      }
+      if (!silent) showToast(error.message || "无法加载班级名单", true);
       return false;
     }
+  }
+
+  function preloadCloudRosters() {
+    if (!global.RandomizerCloud
+      || !global.RandomizerCloud.isSignedIn()
+      || global.RandomizerCloud.hasInviteSession()) return;
+    void Promise.all(Model.CLASS_OPTIONS.map((item) => loadCloudRoster(item.id, { silent: true })));
   }
 
   function loadBuiltInRoster(classId) {
@@ -732,7 +742,7 @@
       updateCloudStatus();
       closeDialog(elements.cloudDialog);
       showToast("已连接教学数据库；选择班级后会加载名单。");
-      if (elements.classNameInput.value) void loadCloudRoster(elements.classNameInput.value);
+      preloadCloudRosters();
       void flushCloudQueue();
       syncCloudState();
     } catch (error) {
@@ -760,7 +770,7 @@
       updateCloudStatus();
       closeDialog(elements.cloudDialog);
       showToast("教师账号已完成；选择班级后会加载名单。 ");
-      if (elements.classNameInput.value) void loadCloudRoster(elements.classNameInput.value);
+      preloadCloudRosters();
       void flushCloudQueue();
       syncCloudState();
     } catch (error) {
@@ -1832,6 +1842,7 @@
     loadDefaultStartValues();
   }
   updateCloudStatus();
+  preloadCloudRosters();
   if (global.RandomizerCloud && (global.RandomizerCloud.hasInviteSession() || global.RandomizerCloud.getAuthRedirectError())) {
     openCloudDialog();
   }

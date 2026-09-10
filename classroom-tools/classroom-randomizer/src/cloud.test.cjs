@@ -5,9 +5,17 @@ const fs = require("node:fs");
 
 const cloudSource = fs.readFileSync(require.resolve("../data/cloud.js"), "utf8");
 
-function createHarness({ failAttempts = false } = {}) {
+function createHarness({ failAttempts = false, expiredSession = false } = {}) {
+  const initialSession = expiredSession
+    ? {
+        access_token: "expired",
+        refresh_token: "refresh-token",
+        expires_at: expiredSession === "401" ? 0 : 1,
+        user: { id: "teacher" }
+      }
+    : { access_token: "test-only", user: { id: "teacher" } };
   const values = new Map([
-    ["vinh-uni-teaching/randomizer-auth-v1", JSON.stringify({ access_token: "test-only", user: { id: "teacher" } })]
+    ["vinh-uni-teaching/randomizer-auth-v1", JSON.stringify(initialSession)]
   ]);
   const storage = {
     getItem: (key) => values.get(key) || null,
@@ -16,13 +24,35 @@ function createHarness({ failAttempts = false } = {}) {
   };
   const savedAttempts = new Map();
   const paths = [];
+  const authorizationHeaders = [];
   let shouldFailAttempts = failAttempts;
+  let accessToken = initialSession.access_token;
+  let refreshCount = 0;
   const window = {
     localStorage: storage,
     sessionStorage: storage,
     location: { hash: "", search: "", pathname: "/" },
     fetch: async (url, options = {}) => {
       paths.push(url);
+      authorizationHeaders.push(options.headers && options.headers.Authorization);
+      if (url.includes("/auth/v1/token?grant_type=refresh_token")) {
+        refreshCount += 1;
+        accessToken = "refreshed";
+        return {
+          ok: true,
+          status: 200,
+          text: async () => JSON.stringify({
+            access_token: "refreshed",
+            refresh_token: "refresh-token-2",
+            expires_in: 3600,
+            expires_at: Math.floor(Date.now() / 1000) + 3600,
+            user: { id: "teacher" }
+          })
+        };
+      }
+      if (expiredSession && accessToken === "expired") {
+        return { ok: false, status: 401, text: async () => '{"message":"expired"}' };
+      }
       const body = options.body ? JSON.parse(options.body) : null;
       let data = [];
       if (url.includes("/courses?")) data = [{ id: "course" }];
@@ -45,6 +75,8 @@ function createHarness({ failAttempts = false } = {}) {
     cloud: window.RandomizerCloud,
     paths,
     savedAttempts,
+    authorizationHeaders,
+    refreshCount: () => refreshCount,
     setAttemptFailure(value) {
       shouldFailAttempts = value;
     }
@@ -106,6 +138,24 @@ test("raw response records sync idempotently without scores or learning-event wr
   await send(harness.cloud, rawAttempt({ note: "更新后的课堂备注" }));
   assert.equal(harness.savedAttempts.size, 1);
   assert.equal(harness.savedAttempts.get("answer-1").note, "更新后的课堂备注");
+});
+
+test("an expired login refreshes before loading a class roster", async () => {
+  const harness = createHarness({ expiredSession: true });
+  const result = await harness.cloud.fetchClassRoster("LT_02");
+
+  assert.equal(result.roster.length, 1);
+  assert.equal(harness.refreshCount(), 1);
+  assert.ok(harness.authorizationHeaders.includes("Bearer refreshed"));
+});
+
+test("a legacy session without expiry metadata refreshes after a 401", async () => {
+  const harness = createHarness({ expiredSession: "401" });
+  const result = await harness.cloud.fetchClassRoster("LT_03");
+
+  assert.equal(result.roster.length, 1);
+  assert.equal(harness.refreshCount(), 1);
+  assert.ok(harness.authorizationHeaders.includes("Bearer refreshed"));
 });
 
 test("pending and unanswered calls remain raw records, and the scoring API is absent", async () => {
