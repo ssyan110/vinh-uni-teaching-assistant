@@ -1,71 +1,38 @@
-import { useState, type FormEvent } from 'react'
-import { Navigate, useNavigate, useParams } from 'react-router-dom'
-import { StatusPill } from '../components/StatusPill'
-import { useTracker } from '../state/TrackerContext'
-import type { FollowupKind } from '../types'
-
+import {useState,type FormEvent} from 'react'
+import {Link,useParams,useSearchParams} from 'react-router-dom'
+import {useTracker} from '../state/TrackerContext'
+import {todayIso} from '../data/repository'
+import {eventDay,evidenceRows,currentNotes,noteLabels} from '../utils/classroomAnalysis'
+import {EvidenceList} from '../components/EvidenceList'
+import {downloadCsv,exportClassroomCsv} from '../utils/classroomExport'
+import type {StudentNote,NoteInput} from '../types'
 export function StudentDetailPage() {
-  const { studentId } = useParams()
-  const navigate = useNavigate()
-  const { snapshot, addFollowup, busy } = useTracker()
-  const student = snapshot.students.find((item) => item.id === studentId)
-  const enrollment = snapshot.enrollments.find((item) => item.student_id === studentId && item.status === 'active')
-  const course = snapshot.courses.find((item) => item.id === enrollment?.course_id)
-  const [showForm, setShowForm] = useState(false)
-  const [title, setTitle] = useState('')
-  const [kind, setKind] = useState<FollowupKind>('reobserve')
-  const [dueOn, setDueOn] = useState('')
-
-  if (!student || !course || !enrollment) return <Navigate to="/students" replace />
-
-  const observations = snapshot.observations.filter((item) => item.student_id === student.id)
-  const attendance = snapshot.attendance.filter((item) => item.student_id === student.id)
-  const followups = snapshot.followups.filter((item) => item.student_id === student.id)
-  const timeline = [
-    ...observations.map((item) => ({ id: item.id, date: item.observed_at.slice(0, 10), type: 'observation' as const, record: item })),
-    ...attendance.map((item) => ({ id: item.id, date: snapshot.sessions.find((session) => session.id === item.session_id)?.session_date ?? '', type: 'attendance' as const, record: item })),
-    ...followups.map((item) => ({ id: item.id, date: item.due_on ?? '', type: 'followup' as const, record: item })),
-  ].sort((a, b) => b.date.localeCompare(a.date))
-
-  const submit = async (event: FormEvent) => {
-    event.preventDefault()
-    await addFollowup({ courseId: course.id, studentId: student.id, kind, title, dueOn: dueOn || undefined })
-    setTitle('')
-    setDueOn('')
-    setShowForm(false)
-  }
-
-  return (
-    <div className="page student-detail-page">
-      <button className="back-link" onClick={() => navigate('/students')}>← 回到學生名單</button>
-      <header className="student-profile">
-        <span className="profile-avatar">{student.chinese_name.slice(-2)}</span>
-        <div><p className="eyebrow">{course.code} · {enrollment.seat_number ?? '—'} 號</p><h1>{student.chinese_name}</h1><p>{student.original_name ?? student.student_code} · {student.student_code}</p></div>
-        <button className="primary-button compact" onClick={() => setShowForm((value) => !value)}>新增待辦</button>
-      </header>
-
-      {showForm && <form className="inline-form panel" onSubmit={submit}>
-        <label>類型<select value={kind} onChange={(event) => setKind(event.target.value as FollowupKind)}><option value="reobserve">再觀察</option><option value="remind">提醒</option><option value="makeup">補做</option></select></label>
-        <label className="grow">要記得什麼<input required value={title} onChange={(event) => setTitle(event.target.value)} placeholder="例：下次再看追問表現" /></label>
-        <label>日期<input type="date" value={dueOn} onChange={(event) => setDueOn(event.target.value)} /></label>
-        <button className="primary-button compact" disabled={busy}>儲存</button>
-      </form>}
-
-      <div className="student-stats">
-        <div><strong>{observations.length}</strong><span>課堂觀察</span></div>
-        <div><strong>{observations.filter((item) => item.result === 'independent').length}</strong><span>獨立完成</span></div>
-        <div><strong>{attendance.filter((item) => item.status === 'late' || item.status === 'absent').length}</strong><span>出席例外</span></div>
-        <div><strong>{followups.filter((item) => item.status === 'open').length}</strong><span>未完成待辦</span></div>
-      </div>
-
-      <section className="panel timeline-panel">
-        <div className="panel-heading"><div><p className="section-kicker">最近在前</p><h2>教學歷程</h2></div></div>
-        {timeline.length ? <div className="timeline">{timeline.map((item) => {
-          if (item.type === 'observation') return <div className="timeline-item" key={item.id}><time>{item.date}</time><span className="timeline-line" /><div><StatusPill value={item.record.result} /><strong>{snapshot.sessions.find((session) => session.id === item.record.session_id)?.observation_target || '課堂任務觀察'}</strong>{item.record.note && <p>{item.record.note}</p>}</div></div>
-          if (item.type === 'attendance') return <div className="timeline-item" key={item.id}><time>{item.date}</time><span className="timeline-line" /><div><StatusPill value={item.record.status} /><strong>出席紀錄</strong></div></div>
-          return <div className="timeline-item" key={item.id}><time>{item.date || '未定'}</time><span className="timeline-line" /><div><StatusPill value={item.record.kind} /><strong>{item.record.title}</strong><p>{item.record.status === 'open' ? '尚未完成' : '已處理'}</p></div></div>
-        })}</div> : <div className="quiet-empty">這名學生還沒有課堂紀錄。</div>}
-      </section>
-    </div>
-  )
+ const {studentId}=useParams();const {snapshot,addNote,addFollowup,correctClassroomRecord,busy}=useTracker();const [params,setParams]=useSearchParams()
+ const student=snapshot.students.find(s=>s.id===studentId)
+ const enrollmentCourses=snapshot.courses.filter(c=>snapshot.enrollments.some(e=>e.course_id===c.id&&e.student_id===studentId))
+ const requested=params.get('course')||'';const courseId=enrollmentCourses.some(c=>c.id===requested)?requested:enrollmentCourses.length===1?enrollmentCourses[0].id:''
+ const [date,setDate]=useState(todayIso());const [category,setCategory]=useState<StudentNote['category']>('other');const [body,setBody]=useState('');const [editing,setEditing]=useState<StudentNote|null>(null);const [reason,setReason]=useState('');const [message,setMessage]=useState('');const [formError,setFormError]=useState('')
+ const [from,setFrom]=useState('');const [to,setTo]=useState('');const [lesson,setLesson]=useState('');const [todo,setTodo]=useState('');const [due,setDue]=useState('');const [page,setPage]=useState(1)
+ if(!student) return <div className="panel">找不到學生。<Link to="/students">回到學生名單</Link></div>
+ const all=evidenceRows(snapshot).filter(r=>r.studentId===studentId&&r.courseId===courseId)
+ const rows=all.filter(r=>(!from||eventDay(r.date)>=from)&&(!to||eventDay(r.date)<=to)&&(!lesson||`${r.textbook}:${r.lesson}`===lesson))
+ const notes=snapshot.studentNotes.filter(n=>n.student_id===studentId&&n.course_id===courseId)
+ const latest=currentNotes(notes).filter(n=>(!from||n.note_date>=from)&&(!to||n.note_date<=to))
+ const followups=snapshot.followups.filter(f=>f.student_id===studentId&&f.course_id===courseId)
+ const reset=()=>{setEditing(null);setDate(todayIso());setCategory('other');setBody('');setReason('');setFormError('')}
+ const submit=async(e:FormEvent)=>{e.preventDefault();setFormError('');setMessage('');try{const input:NoteInput={course_id:courseId,student_id:student.id,note_date:date,category,body:body.trim(),supersedes_id:editing?.id||null,correction_reason:editing?reason.trim():null};await addNote(input);reset();setMessage('事實備註已保存。')}catch(err){setFormError(err instanceof Error?err.message:'保存失敗，輸入已保留。')}}
+ const edit=(n:StudentNote)=>{setEditing(n);setDate(n.note_date);setCategory(n.category);setBody(n.body);setReason('');setMessage('')}
+ const oldVersions=(n:StudentNote)=>{const result:StudentNote[]=[];const visited=new Set<string>();let id=n.supersedes_id;while(id&&!visited.has(id)){visited.add(id);const old=notes.find(v=>v.id===id);if(!old) break;result.push(old);id=old.supersedes_id}return result}
+ return <div className="page student-detail-page"><Link to="/students" className="back-link">← 學生名單</Link>
+ <header className="page-heading"><p className="eyebrow">學生歷程 · {student.student_code}</p><h1>{student.chinese_name}</h1><p>{student.original_name}</p></header>
+ <section className="panel filter-panel"><label>查看班級<select disabled={busy} value={courseId} onChange={e=>{if((body.trim()||editing)&&!window.confirm("尚有未保存的備註，確定切換班級並放棄輸入？")) return;setParams(e.target.value?{course:e.target.value}:{});reset();setLesson('');setPage(1);setTodo('')}}><option value="">請選擇班級</option>{enrollmentCourses.map(c=><option key={c.id} value={c.id}>{c.code} · {c.name}</option>)}</select></label><label>開始日期<input type="date" value={from} onChange={e=>setFrom(e.target.value)}/></label><label>結束日期<input type="date" value={to} min={from} onChange={e=>setTo(e.target.value)}/></label><label>教材／課次<select value={lesson} onChange={e=>setLesson(e.target.value)}><option value="">全部課次</option>{[...new Set(all.map(r=>`${r.textbook}:${r.lesson}`))].map(l=><option key={l}>{l}</option>)}</select></label><button className="secondary-button" disabled={!courseId} onClick={()=>downloadCsv(exportClassroomCsv(snapshot,rows,courseId,student.id,from,to,`${from||'開始'} 至 ${to||'現在'}；${lesson||'全部課次'}`),`${student.student_code}-學生紀錄.csv`)}>匯出學生 CSV</button></section>
+ {!courseId?<section className="panel">請選擇此學生的班級，備註與待辦會保存到選定班級。</section>:<>
+ <div className="outcome-metrics"><div><span>回答紀錄</span><strong>{rows.filter(r=>r.included).length}</strong></div><div><span>參與上課日</span><strong>{new Set(rows.filter(r=>r.included).map(r=>eventDay(r.date))).size}</strong></div><div><span>自願回答</span><strong>{rows.filter(r=>r.included&&r.source==='自願發言').length}</strong></div><div><span>未回答紀錄</span><strong>{rows.filter(r=>r.status==='未回答').length}</strong></div></div>
+ <section className="panel"><h2>{editing?'修正事實備註':'新增事實備註'}</h2><p>記錄具體發生的事情；只供教師查看，不扣分、不轉成口語表現。</p><form className="note-form" onSubmit={submit}><label>事件日期<input required type="date" value={date} onChange={e=>setDate(e.target.value)}/></label><label>事件類別<select value={category} onChange={e=>setCategory(e.target.value as StudentNote['category'])}>{Object.entries(noteLabels).map(([id,label])=><option value={id} key={id}>{label}</option>)}</select></label><label className="wide">事實內容<textarea required maxLength={2000} value={body} onChange={e=>setBody(e.target.value)} placeholder="例如：今天未交教材 P12 的預習作業；已提醒下次補交。"/></label>{editing&&<label className="wide">修正原因<input required maxLength={500} value={reason} onChange={e=>setReason(e.target.value)}/></label>}<button className="primary-button" disabled={busy}>保存事實備註</button>{editing&&<button type="button" className="secondary-button" onClick={reset}>取消修正</button>}</form>{formError&&<p role="alert">{formError}</p>}{message&&<p role="status">{message}</p>}</section>
+ <section className="panel"><h2>事實備註</h2>{latest.map(n=><article key={n.id} className="fact-note"><p><time>{n.note_date}</time> · {noteLabels[n.category]}</p><p>{n.body}</p>{n.correction_reason&&<p>修正原因：{n.correction_reason}</p>}<button className="text-button" onClick={()=>edit(n)}>修正這筆</button><button className="text-button" onClick={()=>{setTodo(`${noteLabels[n.category]}：${n.body}`.slice(0,300));setDue('')}}>帶入跟進待辦</button>{n.supersedes_id&&<details><summary>查看修正前紀錄</summary>{oldVersions(n).map(old=><p key={old.id}>{old.note_date} · {noteLabels[old.category]} · {old.body}</p>)}</details>}</article>)}{!latest.length&&<p>選定日期尚無事實備註。</p>}</section>
+ <section className="panel"><h2>跟進待辦</h2><form className="note-form" onSubmit={async e=>{e.preventDefault();setMessage('');try{await addFollowup({courseId,studentId:student.id,kind:'remind',title:todo,dueOn:due||undefined});setTodo('');setMessage('跟進待辦已保存。')}catch(err){setFormError(err instanceof Error?err.message:'待辦保存失敗。')}}}><label className="wide">需要跟進的事<input required maxLength={300} value={todo} onChange={e=>setTodo(e.target.value)}/></label><label>到期日（選填）<input type="date" value={due} onChange={e=>setDue(e.target.value)}/></label><button className="secondary-button" disabled={busy}>新增跟進待辦</button></form>{followups.map(f=><p key={f.id}>{f.title} · {f.due_on||'未定日期'} · {f.status==='open'?'待處理':f.status==='completed'?'已完成':'已取消'}</p>)}<Link to="/followups">處理待辦 →</Link></section>
+ <section className="panel"><h2>每次回答</h2><p className="field-help">回答次數只計入有效回答；更正後保留原始紀錄、修正原因與時間，但不再計入次數。</p><EvidenceList rows={rows.slice(0,page*30)} onCorrect={(target,correctionReason)=>correctClassroomRecord({...target,reason:correctionReason}).then(()=>setMessage('回答紀錄已更正，回答次數已更新。'))}/>{rows.length>page*30&&<button onClick={()=>setPage(p=>p+1)}>再顯示 30 筆</button>}</section>
+ <details className="panel"><summary>舊課堂觀察與出席紀錄（只讀歷史）</summary><p>目前出席以獨立 QR 點名 Google Sheet 為準，以下舊紀錄不代表已同步。</p>{snapshot.observations.filter(o=>o.student_id===student.id&&snapshot.sessions.some(s=>s.id===o.session_id&&s.course_id===courseId)).map(o=><p key={o.id}>{o.observed_at} · {o.result} · {o.note}</p>)}{snapshot.attendance.filter(a=>a.student_id===student.id&&snapshot.sessions.some(s=>s.id===a.session_id&&s.course_id===courseId)).map(a=><p key={a.id}>{snapshot.sessions.find(s=>s.id===a.session_id)?.session_date} · {a.status}</p>)}</details>
+ </>}
+ </div>
 }

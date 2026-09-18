@@ -5,7 +5,10 @@
   const PUBLISHABLE_KEY = "sb_publishable_MShaHD2QWDfcX4g9WAjStQ_0sKMTpGz";
   const TOKEN_KEY = "vinh-uni-teaching/randomizer-auth-v1";
   const QUEUE_KEY = "vinh-uni-teaching/randomizer-sync-queue-v2";
+  const ATTENDANCE_ACK_KEY = "vinh-uni-teaching/randomizer-attendance-ack-v1";
+  const ATTENDANCE_ORIGINAL_KEY = "vinh-uni-teaching/randomizer-attendance-original-v1";
   const NO_RESPONSE_REASON_IDS = new Set([
+    "absent",
     "unprepared",
     "unclear_prompt",
     "forgot",
@@ -24,7 +27,7 @@
   const rosterCache = new Map();
 
   function storageFor(key) {
-    return key === QUEUE_KEY ? root.localStorage : root.sessionStorage;
+    return [QUEUE_KEY, ATTENDANCE_ACK_KEY, ATTENDANCE_ORIGINAL_KEY].includes(key) ? root.localStorage : root.sessionStorage;
   }
 
   function consumeAuthRedirect() {
@@ -255,7 +258,7 @@
   }
 
   async function ensureClassSession(context, sessionDate, metadata) {
-    const existing = await request(`/rest/v1/class_sessions?select=id&course_id=eq.${encodeURIComponent(context.courseId)}&status=eq.in_progress&limit=1`);
+    const existing = await request(`/rest/v1/class_sessions?select=id&course_id=eq.${encodeURIComponent(context.courseId)}&session_date=eq.${encodeURIComponent(isoDate(sessionDate))}&status=eq.in_progress&limit=1`);
     if (Array.isArray(existing) && existing[0]) return existing[0].id;
     const details = metadata || {};
     const created = await request("/rest/v1/class_sessions", {
@@ -270,7 +273,7 @@
       })
     }).catch(async (error) => {
       if (error.status !== 409) throw error;
-      const retry = await request(`/rest/v1/class_sessions?select=id&course_id=eq.${encodeURIComponent(context.courseId)}&status=eq.in_progress&limit=1`);
+      const retry = await request(`/rest/v1/class_sessions?select=id&course_id=eq.${encodeURIComponent(context.courseId)}&session_date=eq.${encodeURIComponent(isoDate(sessionDate))}&status=eq.in_progress&limit=1`);
       return retry;
     });
     const row = Array.isArray(created) ? created[0] : created;
@@ -307,14 +310,20 @@
       answeredStudentIds: Array.isArray(currentRound.answeredStudentIds) ? currentRound.answeredStudentIds.map(String) : [],
       excludedStudentIds: Array.isArray(input && input.excludedStudentIds) ? input.excludedStudentIds.map(String) : [],
       rosterCount: Array.isArray(input && input.roster) ? input.roster.length : 0,
-      status: "in_progress",
+      status: source.status === "completed" ? "completed" : "in_progress",
+      completedAt: source.completedAt || null,
       activityLabel: `教师提问：${text(source.taskTarget) || "口语回答"}`
     };
   }
 
   async function ensureRandomizerSession(normalized, context) {
     const rosterContext = context || await fetchClassRoster(normalized.classId);
-    const classSessionId = await ensureClassSession(rosterContext, normalized.sessionDate, {
+    const existing = await request(`/rest/v1/randomizer_sessions?select=id,class_session_id,status&course_id=eq.${encodeURIComponent(rosterContext.courseId)}&client_session_id=eq.${encodeURIComponent(normalized.clientSessionId)}&limit=1`);
+    const linked = Array.isArray(existing) && existing[0];
+    if (linked && linked.class_session_id && linked.status === "completed") {
+      return { context: rosterContext, classSessionId: linked.class_session_id, randomizerSessionId: linked.id };
+    }
+    const classSessionId = linked && linked.class_session_id || await ensureClassSession(rosterContext, normalized.sessionDate, {
       topic: `华语课堂抽问｜${normalized.textbookId}｜${normalized.lessonId}`,
       observationTarget: normalized.activityLabel
     });
@@ -332,7 +341,7 @@
       answered_student_ids: normalized.answeredStudentIds,
       excluded_student_ids: normalized.excludedStudentIds,
       roster_count: normalized.rosterCount,
-      status: normalized.status
+      status: "in_progress"
     };
     const saved = await request("/rest/v1/randomizer_sessions?on_conflict=owner_id,client_session_id", {
       method: "POST",
@@ -476,6 +485,53 @@
     // separate learning tracker; this tool keeps its own raw attempt record.
   }
 
+  async function syncAttendanceItem(item) {
+    const context = await fetchClassRoster(item.session.classId);
+    const student = context.roster.find(candidate => candidate.studentCode === item.change.studentCode);
+    if (!student) throw new Error("缺席记录中的学生不在本班云端名单中。");
+    const linked = await ensureRandomizerSession(item.session, context);
+    const filter = `session_id=eq.${encodeURIComponent(linked.classSessionId)}&student_id=eq.${encodeURIComponent(student.id)}`;
+    const originals = readJson(ATTENDANCE_ORIGINAL_KEY) || {};
+    const key = item.client_event_id;
+    let original = originals[key];
+    let current;
+    if (!original || item.change.restoreOriginal) {
+      const rows = await request(`/rest/v1/attendance_records?select=id,status,updated_at&${filter}&limit=1`);
+      current = Array.isArray(rows) ? rows[0] : null;
+    }
+    if (!original) {
+      original = { status: current ? current.status : null, expectedStatus: current ? current.status : null };
+      originals[key] = original;
+      // Capture before writing, so an offline retry or interrupted request cannot
+      // replace the true original with our own absence mark.
+      writeJson(ATTENDANCE_ORIGINAL_KEY, originals);
+    }
+    if (item.change.restoreOriginal) {
+      const currentStatus = current ? current.status : null;
+      if (currentStatus !== original.status) {
+        if (!current || currentStatus !== original.expectedStatus) throw new Error("出席记录已在其他地方修改，请先到学生管理系统核对。");
+        const rowFilter = `id=eq.${encodeURIComponent(current.id)}${current.updated_at ? `&updated_at=eq.${encodeURIComponent(current.updated_at)}` : ""}`;
+        const restored = await request(`/rest/v1/attendance_records?${rowFilter}`, {
+          method: original.status === null ? "DELETE" : "PATCH",
+          headers: { Prefer: "return=representation" },
+          ...(original.status === null ? {} : { body: JSON.stringify({ status: original.status }) })
+        });
+        if (!Array.isArray(restored) || restored.length !== 1) throw new Error("出席记录已更新，撤销尚未保存，请重新同步。");
+      }
+    } else {
+      original.expectedStatus = item.change.status;
+      writeJson(ATTENDANCE_ORIGINAL_KEY, originals);
+      await request("/rest/v1/attendance_records?on_conflict=session_id,student_id", {
+        method: "POST",
+        headers: { Prefer: "resolution=merge-duplicates,return=minimal" },
+        body: JSON.stringify({ session_id: linked.classSessionId, student_id: student.id, status: item.change.status })
+      });
+    }
+    const acknowledged = readJson(ATTENDANCE_ACK_KEY) || {};
+    acknowledged[key] = item.change.changeId || item.change.changedAt;
+    writeJson(ATTENDANCE_ACK_KEY, acknowledged);
+  }
+
   function readQueue(key) {
     const queue = readJson(key);
     return Array.isArray(queue) ? queue : [];
@@ -511,16 +567,25 @@
         } else if (item.kind === "attempt") {
           await syncAttemptItem(item);
           attempts += 1;
+        } else if (item.kind === "attendance") {
+          await syncAttendanceItem(item);
+        } else if (item.kind === "finish") {
+          await request("/rest/v1/rpc/finish_randomizer_class", { method: "POST", body: JSON.stringify({ p_client_session_id: item.session.clientSessionId }) });
         } else {
           throw new Error("无法识别的同步数据。");
         }
         sent += 1;
       } catch (error) {
-        remaining.push(item);
+        remaining.push(...queue.slice(queue.indexOf(item)));
+        break;
       }
     }
-    writeQueue(remaining, QUEUE_KEY);
-    return { sent, pending: remaining.length, attempts, sessions };
+    // Preserve records enqueued while a network request was in flight.
+    const latest = readQueue(QUEUE_KEY);
+    const failed = new Set(remaining.map(item => item.client_event_id));
+    const retained = latest.filter(item => failed.has(item.client_event_id) || !queue.some(old => old.client_event_id === item.client_event_id && JSON.stringify(old) === JSON.stringify(item)));
+    writeQueue(retained, QUEUE_KEY);
+    return { sent, pending: retained.length, attempts, sessions };
   }
 
   function flushQueue() {
@@ -551,6 +616,15 @@
         attempt
       });
     });
+    const acknowledged = readJson(ATTENDANCE_ACK_KEY) || {};
+    Object.values(input.attendanceChanges || {}).forEach(change => {
+      if (!change || (!change.restoreOriginal && !["absent", "present"].includes(change.status)) || !change.studentCode || !change.changedAt) return;
+      const key = `attendance:${normalizedSession.clientSessionId}:${change.studentCode}`;
+      // Do not replay an acknowledged mark over a later correction in Tracker.
+      if (acknowledged[key] === (change.changeId || change.changedAt)) return;
+      enqueue({ kind: "attendance", client_event_id: key, session: normalizedSession, change });
+    });
+    if (normalizedSession.status === "completed") enqueue({ kind: "finish", client_event_id: `finish:${normalizedSession.clientSessionId}`, session: normalizedSession });
     return flushQueue();
   }
 

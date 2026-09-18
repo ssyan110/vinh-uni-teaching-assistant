@@ -1,7 +1,9 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { DemoRepository, SupabaseRepository, type TrackerRepository } from '../data/repository'
 import { isSupabaseConfigured, supabase, supabaseConfigIssue } from '../lib/supabase'
-import { emptySnapshot, type AttendanceStatus, type ClassSession, type FollowupKind, type FollowupStatus, type ImportStudentRow, type LearningEvent, type ObservationResult, type TrackerSnapshot } from '../types'
+import { emptySnapshot, type AttendanceStatus, type ClassSession, type ClassroomRecordCorrectionInput, type FollowupKind, type FollowupStatus, type ImportStudentRow, type LearningEvent, type NoteInput, type ObservationResult, type TrackerSnapshot } from '../types'
+
+import { orderCourses } from '../utils/courseOrder'
 
 type AccessState = 'checking' | 'signed_out' | 'ready'
 type DataMode = 'demo' | 'supabase' | null
@@ -14,16 +16,23 @@ interface TrackerContextValue {
   error: string | null
   configured: boolean
   configurationIssue: string | null
+  refreshing: boolean
+  refreshError: string | null
+  lastRefreshed: string | null
+  refresh(): Promise<void>
+  addNote(input: NoteInput): Promise<void>
   enterDemo(): Promise<void>
   signIn(email: string, password: string): Promise<void>
   signOut(): Promise<void>
   clearError(): void
   startSession(courseId: string): Promise<string>
+  updateSession(sessionId: string, input: { sessionDate: string; sessionNumber: number | null; reason: string }): Promise<void>
   saveAttendance(sessionId: string, studentId: string, status: AttendanceStatus): Promise<void>
   confirmRemainingPresent(sessionId: string, studentIds: string[]): Promise<void>
   saveObservation(sessionId: string, studentId: string, result: ObservationResult, note?: string): Promise<void>
   saveLearningEvent(event: Omit<LearningEvent, 'id' | 'owner_id' | 'occurred_at'> & { occurredAt?: string }): Promise<void>
-  closeSession(sessionId: string, reflection: Pick<ClassSession, 'what_worked' | 'common_difficulty' | 'next_adjustment'>): Promise<void>
+  correctClassroomRecord(input: ClassroomRecordCorrectionInput): Promise<void>
+  closeSession(sessionId: string, reflection: Pick<ClassSession, 'class_status' | 'progress_text' | 'what_worked' | 'common_difficulty' | 'next_adjustment'>): Promise<void>
   setFollowupStatus(followupId: string, status: FollowupStatus): Promise<void>
   addFollowup(input: { courseId: string; studentId?: string; sessionId?: string; kind: FollowupKind; title: string; dueOn?: string }): Promise<void>
   importStudents(courseId: string, rows: ImportStudentRow[]): Promise<void>
@@ -48,13 +57,21 @@ export function TrackerProvider({ children }: { children: ReactNode }) {
   const [snapshot, setSnapshot] = useState<TrackerSnapshot>(emptySnapshot)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [refreshing, setRefreshing] = useState(false)
+  const [refreshError, setRefreshError] = useState<string | null>(null)
+  const [lastRefreshed, setLastRefreshed] = useState<string | null>(null)
+  const refreshPending = useRef(false)
+  const revision = useRef(0)
   const repository = useRef<TrackerRepository | null>(null)
 
   const loadRepository = useCallback(async (nextRepository: TrackerRepository, nextMode: Exclude<DataMode, null>) => {
+    revision.current += 1
     repository.current = nextRepository
     setMode(nextMode)
     sessionStorage.setItem(MODE_KEY, nextMode)
     setSnapshot(await nextRepository.load())
+    setLastRefreshed(new Date().toISOString())
+    setRefreshError(null)
     setAccess('ready')
   }, [])
 
@@ -75,12 +92,54 @@ export function TrackerProvider({ children }: { children: ReactNode }) {
       if (data.session) await loadRepository(new SupabaseRepository(supabase, data.session.user.id), 'supabase')
       else setAccess('signed_out')
     }
-    void initialize()
+    void initialize().catch(() => {
+      if (!active) return
+      repository.current = null
+      setMode(null)
+      setAccess('signed_out')
+      setError('無法載入教學資料，請確認網路後重新登入。')
+    })
     return () => { active = false }
   }, [loadRepository])
 
+  const refresh = useCallback(async () => {
+    const repo = repository.current
+    if (!repo || mode !== 'supabase' || busy || refreshPending.current) return
+    const version = revision.current
+    refreshPending.current = true
+    setRefreshing(true)
+    try {
+      const next = await repo.load()
+      if (repository.current !== repo || revision.current !== version) return
+      setSnapshot(next)
+      setLastRefreshed(new Date().toISOString())
+      setRefreshError(null)
+    } catch {
+      if (repository.current === repo && revision.current === version) setRefreshError('更新失敗，目前顯示上次資料。請確認網路後重試。')
+    } finally {
+      refreshPending.current = false
+      setRefreshing(false)
+    }
+  }, [mode, busy])
+
+  useEffect(() => {
+    if (mode !== 'supabase' || access !== 'ready') return
+    const update = () => { if (document.visibilityState === 'visible') void refresh() }
+    const timer = window.setInterval(update, 15000)
+    window.addEventListener('focus', update)
+    window.addEventListener('online', update)
+    document.addEventListener('visibilitychange', update)
+    return () => {
+      window.clearInterval(timer)
+      window.removeEventListener('focus', update)
+      window.removeEventListener('online', update)
+      document.removeEventListener('visibilitychange', update)
+    }
+  }, [access, mode, refresh])
+
   const run = useCallback(async <T,>(action: (repo: TrackerRepository) => Promise<T>): Promise<T> => {
     if (!repository.current) throw new Error('資料尚未就緒。')
+    revision.current += 1
     setBusy(true)
     setError(null)
     try {
@@ -96,8 +155,10 @@ export function TrackerProvider({ children }: { children: ReactNode }) {
     }
   }, [])
 
+  const orderedSnapshot = useMemo(() => ({ ...snapshot, courses: orderCourses(snapshot.courses) }), [snapshot])
+
   const value = useMemo<TrackerContextValue>(() => ({
-    access, mode, snapshot, busy, error, configured: isSupabaseConfigured, configurationIssue: supabaseConfigIssue,
+    access, mode, snapshot: orderedSnapshot, busy, error, refreshing, refreshError, lastRefreshed, refresh, configured: isSupabaseConfigured, configurationIssue: supabaseConfigIssue,
     enterDemo: async () => loadRepository(new DemoRepository(), 'demo'),
     signIn: async (email, password) => {
       if (!supabase) throw new Error(supabaseConfigIssue ?? '当前无法登录，请联系系统管理员。')
@@ -118,23 +179,29 @@ export function TrackerProvider({ children }: { children: ReactNode }) {
     signOut: async () => {
       if (mode === 'supabase' && supabase) await supabase.auth.signOut()
       sessionStorage.removeItem(MODE_KEY)
+      revision.current += 1
       repository.current = null
+      setLastRefreshed(null)
+      setRefreshError(null)
       setSnapshot(emptySnapshot)
       setMode(null)
       setAccess('signed_out')
     },
+    addNote: (input) => run((repo) => repo.addNote(input)),
     clearError: () => setError(null),
     startSession: (courseId) => run((repo) => repo.startSession(courseId)),
+    updateSession: (sessionId, input) => run((repo) => repo.updateSession(sessionId, input)),
     saveAttendance: (sessionId, studentId, status) => run((repo) => repo.saveAttendance(sessionId, studentId, status)),
     confirmRemainingPresent: (sessionId, studentIds) => run((repo) => repo.confirmRemainingPresent(sessionId, studentIds)),
     saveObservation: (sessionId, studentId, result, note) => run((repo) => repo.saveObservation(sessionId, studentId, result, note)),
     saveLearningEvent: (event) => run((repo) => repo.saveLearningEvent(event)),
+    correctClassroomRecord: (input) => run((repo) => repo.correctClassroomRecord(input)),
     closeSession: (sessionId, reflection) => run((repo) => repo.closeSession(sessionId, reflection)),
     setFollowupStatus: (followupId, status) => run((repo) => repo.setFollowupStatus(followupId, status)),
     addFollowup: (input) => run((repo) => repo.addFollowup(input)),
     importStudents: (courseId, rows) => run((repo) => repo.importStudents(courseId, rows)),
     addCourse: (input) => run((repo) => repo.addCourse(input)),
-  }), [access, mode, snapshot, busy, error, loadRepository, run])
+  }), [access, mode, orderedSnapshot, busy, error, refreshing, refreshError, lastRefreshed, refresh, loadRepository, run])
 
   return <TrackerContext.Provider value={value}>{children}</TrackerContext.Provider>
 }

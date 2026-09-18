@@ -24,6 +24,7 @@
   ]);
 
   const NO_RESPONSE_REASONS = Object.freeze([
+    { id: "absent", label: "缺席／没来上课" },
     { id: "unprepared", label: "没有准备" },
     { id: "unclear_prompt", label: "听不懂题目" },
     { id: "forgot", label: "一时想不起" },
@@ -244,10 +245,13 @@
         taskMode: text(settings.taskMode) || DEFAULT_TASK_MODE,
         taskTarget: text(settings.taskTarget) || DEFAULT_TASK_TARGET,
         createdAt,
+        status: "in_progress",
+        completedAt: null,
         updatedAt: createdAt
       },
       roster: students,
       excludedStudentIds: [],
+      attendanceChanges: {},
       currentRound: {
         number: 1,
         answeredStudentIds: [],
@@ -267,6 +271,7 @@
   }
 
   function withMutation(state, eventType, payload, mutate) {
+    if (state.session.status === "completed") throw new Error("这堂课已经结束，请开始下一堂课。");
     const before = stateSnapshot(state);
     const event = {
       id: id("event"),
@@ -278,6 +283,17 @@
     next.events = [...before.events, event];
     next.undoStack = [...state.undoStack, { before, event }];
     next.session.updatedAt = event.timestamp;
+    return next;
+  }
+
+  function finishSession(state) {
+    if (state.session.status === "completed") return state;
+    const next = withMutation(state, "session_completed", {}, (copy) => {
+      copy.session.status = "completed";
+      copy.session.completedAt = timestamp();
+      return copy;
+    });
+    next.undoStack = [];
     return next;
   }
 
@@ -311,43 +327,6 @@
     const lastStudentId = getLastParticipantId(state);
     if (pool.length <= 1 || !lastStudentId) return pool;
     return pool.filter((student) => student.id !== lastStudentId);
-  }
-
-  function getRandomSelectionPool(state) {
-    const pool = getSelectablePool(state);
-    if (pool.length <= 1) return pool;
-
-    const randomStats = new Map();
-    state.attempts.forEach((attempt) => {
-      if (attempt.selectionMethod !== "random" || attempt.outcome === "undone") return;
-      const current = randomStats.get(attempt.studentId) || { count: 0, lastDrawnAt: "" };
-      current.count += 1;
-      if (!current.lastDrawnAt || String(attempt.drawnAt || "") > current.lastDrawnAt) {
-        current.lastDrawnAt = String(attempt.drawnAt || "");
-      }
-      randomStats.set(attempt.studentId, current);
-    });
-
-    const ranked = pool.map((student, index) => {
-      const stats = randomStats.get(student.id) || { count: 0, lastDrawnAt: "" };
-      return { student, index, ...stats };
-    }).sort((left, right) => {
-      if (left.count !== right.count) return left.count - right.count;
-      if (!left.lastDrawnAt && right.lastDrawnAt) return -1;
-      if (left.lastDrawnAt && !right.lastDrawnAt) return 1;
-      if (left.lastDrawnAt !== right.lastDrawnAt) return left.lastDrawnAt.localeCompare(right.lastDrawnAt);
-      return left.index - right.index;
-    });
-
-    const lowestCallCount = ranked[0].count;
-    const leastCalled = ranked.filter((item) => item.count === lowestCallCount);
-    const neverCalled = leastCalled.filter((item) => !item.lastDrawnAt);
-    if (neverCalled.length > 0) return neverCalled.map((item) => item.student);
-
-    // Keep a small random frontier among the least-called students: longer
-    // waiting students are favoured, while the classroom still feels random.
-    const frontierSize = Math.max(1, Math.min(leastCalled.length, Math.ceil(leastCalled.length * 0.25)));
-    return leastCalled.slice(0, frontierSize).map((item) => item.student);
   }
 
   function setSessionContext(state, textbookId, lessonId) {
@@ -389,10 +368,8 @@
     }
     const settings = options || {};
     // Injected randomIndex is used by deterministic tests and import tools.
-    // Normal classroom draws use the fair priority frontier above.
-    const pool = typeof settings.randomIndex === "function"
-      ? getSelectablePool(state)
-      : getRandomSelectionPool(state);
+    // Normal classroom draws use the complete currently selectable pool.
+    const pool = getSelectablePool(state);
     if (pool.length === 0) {
       throw new Error(getEligibleStudents(state).length === 0 ? "目前没有可抽问的学生" : "这一轮已完成，请开始下一轮抽问");
     }
@@ -488,6 +465,40 @@
     return state.attempts.find((attempt) => attempt.id === state.currentRound.pendingAttemptId) || null;
   }
 
+  // A completed volunteer answer is independent of the random call in progress.
+  function recordVolunteer(state, studentId, options) {
+    const working = clone(state);
+    working.currentRound.pendingAttemptId = null;
+    const recorded = recordResponse(selectVolunteer(working, studentId, options), options);
+    const attempt = recorded.attempts[recorded.attempts.length - 1];
+    return withMutation(state, "volunteer_recorded", { attemptId: attempt.id, studentId }, next => {
+      next.attempts.push(attempt);
+      next.session.activeQuestion = recorded.session.activeQuestion;
+      return next;
+    });
+  }
+
+  function setAbsent(state, studentId, absent) {
+    const student = getStudent(state, studentId);
+    if (!student) throw new Error("找不到这位同学");
+    return withMutation(state, "attendance_changed", { studentId }, next => {
+      next.attendanceChanges = next.attendanceChanges || {};
+      next.attendanceChanges[studentId] = { studentCode: student.studentCode, status: absent ? "absent" : "present", changedAt: timestamp(), changeId: id("attendance") };
+      next.excludedStudentIds = next.excludedStudentIds.filter(value => value !== studentId);
+      if (absent) next.excludedStudentIds.push(studentId);
+      const pending = pendingAttempt(next);
+      if (absent && pending && pending.studentId === studentId) {
+        pending.outcome = "not_answered";
+        pending.responseStatus = "no_response";
+        pending.noResponseReason = "absent";
+        pending.attendanceStatus = "absent";
+        pending.completedAt = pending.updatedAt = timestamp();
+        next.currentRound.pendingAttemptId = null;
+      }
+      return next;
+    });
+  }
+
   function updatePending(state, eventType, payload, updater) {
     const current = pendingAttempt(state);
     if (!current) {
@@ -533,16 +544,19 @@
   function returnPending(state, options) {
     const settings = options || {};
     const reason = text(settings.noResponseReason);
-    if (reason && !NO_RESPONSE_REASONS.some((item) => item.id === reason)) {
+    if (!reason) {
+      throw new Error("请选择未回答原因");
+    }
+    if (!NO_RESPONSE_REASONS.some((item) => item.id === reason)) {
       throw new Error("未回答原因不在可选范围内");
     }
     return updatePending(state, "not_answered", {
-      noResponseReason: reason || "other"
+      noResponseReason: reason
     }, (next, attemptId) => {
       const attempt = next.attempts.find((item) => item.id === attemptId);
       attempt.outcome = "not_answered";
       attempt.responseStatus = "no_response";
-      attempt.noResponseReason = reason || "other";
+      attempt.noResponseReason = reason;
       attempt.answerContext = normalizeAnswerContext(settings.answerContext);
       attempt.note = text(settings.note);
       assignQuestion(next, attempt, settings.taskPrompt);
@@ -630,6 +644,18 @@
       attemptId: entry.event.attemptId || ""
     };
     const next = clone(entry.before);
+    if (entry.event.type === "attendance_changed") {
+      const studentId = entry.event.studentId;
+      const previous = (next.attendanceChanges || {})[studentId];
+      next.attendanceChanges = next.attendanceChanges || {};
+      next.attendanceChanges[studentId] = {
+        studentCode: getStudent(next, studentId).studentCode,
+        status: previous ? previous.status : null,
+        restoreOriginal: previous ? Boolean(previous.restoreOriginal) : true,
+        changedAt: undoEvent.timestamp,
+        changeId: id("attendance")
+      };
+    }
     const undoneAttempt = entry.event.attemptId
       ? state.attempts.find((attempt) => attempt.id === entry.event.attemptId)
       : null;
@@ -1047,6 +1073,7 @@
     normalizeLessonId,
     formatLessonLabel,
     createSession,
+    finishSession,
     normalizeStudents,
     parseCsvRows,
     parseRosterText,
@@ -1055,11 +1082,12 @@
     getDrawingPool,
     getSelectablePool,
     getLastParticipantId,
-    getRandomSelectionPool,
     setSessionContext,
     pendingAttempt,
     drawStudent,
     selectVolunteer,
+    recordVolunteer,
+    setAbsent,
     recordResponse,
     returnPending,
     setExcluded,

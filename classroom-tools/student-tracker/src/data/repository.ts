@@ -1,8 +1,11 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
 import { createDemoSnapshot } from './demoData'
 import type {
+  NoteInput,
   AttendanceStatus,
   ClassSession,
+  ClassroomRecordCorrectionInput,
+  ClassroomRecordStatus,
   FollowupKind,
   FollowupStatus,
   ImportStudentRow,
@@ -12,13 +15,16 @@ import type {
 } from '../types'
 
 export interface TrackerRepository {
+  addNote(input: NoteInput): Promise<void>
   load(): Promise<TrackerSnapshot>
   startSession(courseId: string): Promise<string>
+  updateSession(sessionId: string, input: { sessionDate: string; sessionNumber: number | null; reason: string }): Promise<void>
   saveAttendance(sessionId: string, studentId: string, status: AttendanceStatus): Promise<void>
   confirmRemainingPresent(sessionId: string, studentIds: string[]): Promise<void>
   saveObservation(sessionId: string, studentId: string, result: ObservationResult, note?: string): Promise<void>
   saveLearningEvent(event: Omit<LearningEvent, 'id' | 'owner_id' | 'occurred_at'> & { occurredAt?: string }): Promise<void>
-  closeSession(sessionId: string, reflection: Pick<ClassSession, 'what_worked' | 'common_difficulty' | 'next_adjustment'>): Promise<void>
+  correctClassroomRecord(input: ClassroomRecordCorrectionInput): Promise<void>
+  closeSession(sessionId: string, reflection: Pick<ClassSession, 'class_status' | 'progress_text' | 'what_worked' | 'common_difficulty' | 'next_adjustment'>): Promise<void>
   setFollowupStatus(followupId: string, status: FollowupStatus): Promise<void>
   addFollowup(input: { courseId: string; studentId?: string; sessionId?: string; kind: FollowupKind; title: string; dueOn?: string }): Promise<void>
   importStudents(courseId: string, rows: ImportStudentRow[]): Promise<void>
@@ -41,13 +47,16 @@ export function todayIso() {
 
 function readDemo(): TrackerSnapshot {
   const saved = sessionStorage.getItem(DEMO_KEY)
-  if (!saved) return createDemoSnapshot()
+  if (!saved) return { ...createDemoSnapshot(), correctionAudits: [] }
   try {
     const parsed = JSON.parse(saved) as TrackerSnapshot
     parsed.learningEvents ??= []
+    parsed.attempts ??= []
+    parsed.studentNotes ??= []
+    parsed.correctionAudits ??= []
     return parsed
   } catch {
-    return createDemoSnapshot()
+    return { ...createDemoSnapshot(), correctionAudits: [] }
   }
 }
 
@@ -60,6 +69,14 @@ export class DemoRepository implements TrackerRepository {
 
   async load() {
     return structuredClone(this.snapshot)
+  }
+
+  async addNote(input: NoteInput) {
+    validateNote(input)
+    if (!this.snapshot.enrollments.some(e => e.course_id === input.course_id && e.student_id === input.student_id)) throw new Error('學生不屬於這個班級。')
+    if (input.supersedes_id && (!this.snapshot.studentNotes.some(n => n.id === input.supersedes_id && n.course_id === input.course_id && n.student_id === input.student_id) || this.snapshot.studentNotes.some(n => n.supersedes_id === input.supersedes_id))) throw new Error('這筆備註已修正，請更新後再試。')
+    this.snapshot.studentNotes.unshift({...input, id:uid('note'),owner_id:'demo-owner',created_at:new Date().toISOString()})
+    this.save()
   }
 
   async startSession(courseId: string) {
@@ -75,6 +92,8 @@ export class DemoRepository implements TrackerRepository {
       topic: null,
       observation_target: null,
       status: 'in_progress',
+      class_status: null,
+      progress_text: null,
       what_worked: null,
       common_difficulty: null,
       next_adjustment: null,
@@ -82,6 +101,18 @@ export class DemoRepository implements TrackerRepository {
     })
     this.save()
     return id
+  }
+
+  async updateSession(sessionId: string, input: { sessionDate: string; sessionNumber: number | null; reason: string }) {
+    validateSessionEdit(input)
+    const session = this.snapshot.sessions.find((item) => item.id === sessionId)
+    if (!session) throw new Error('找不到這堂課。')
+    if (input.sessionNumber !== null && this.snapshot.sessions.some((item) => item.id !== sessionId && item.course_id === session.course_id && item.session_number === input.sessionNumber)) {
+      throw new Error('這個班級已有相同的上課次數。')
+    }
+    session.session_date = input.sessionDate
+    session.session_number = input.sessionNumber
+    this.save()
   }
 
   async saveAttendance(sessionId: string, studentId: string, status: AttendanceStatus) {
@@ -112,6 +143,7 @@ export class DemoRepository implements TrackerRepository {
   }
 
   async saveLearningEvent(input: Omit<LearningEvent, 'id' | 'owner_id' | 'occurred_at'> & { occurredAt?: string }) {
+    if (input.client_event_id && this.snapshot.learningEvents.some(event => event.client_event_id === input.client_event_id)) return
     const session = this.snapshot.sessions.find((item) => item.id === input.session_id && item.course_id === input.course_id)
     const enrolled = this.snapshot.enrollments.some((item) => item.course_id === input.course_id && item.student_id === input.student_id && item.status === 'active')
     if (!session || !enrolled) throw new Error('學生或課堂不屬於這個班級。')
@@ -123,9 +155,43 @@ export class DemoRepository implements TrackerRepository {
     this.save()
   }
 
-  async closeSession(sessionId: string, reflection: Pick<ClassSession, 'what_worked' | 'common_difficulty' | 'next_adjustment'>) {
+  async correctClassroomRecord(input: ClassroomRecordCorrectionInput) {
+    validateClassroomRecordCorrection(input)
+    const reason = input.reason.trim()
+    const correctedAt = new Date().toISOString()
+    const audits = this.snapshot.correctionAudits ?? (this.snapshot.correctionAudits = [])
+    if (input.recordType === 'randomizer_attempt') {
+      const record = this.snapshot.attempts.find((item) => item.id === input.recordId)
+      if (!record) throw new Error('找不到這筆回答紀錄。')
+      const previousStatus = record.record_status ?? 'valid'
+      if (previousStatus === 'corrected') throw new Error('這筆回答紀錄已更正。')
+      if (previousStatus === 'voided') throw new Error('這筆回答紀錄已撤銷。')
+      record.record_status = 'corrected'
+      record.counted_for_summary = false
+      record.correction_note = reason
+      record.corrected_at = correctedAt
+      audits.unshift({ id: uid('correction'), owner_id: 'demo-owner', record_type: input.recordType, record_id: record.id, course_id: record.course_id, student_id: record.student_id, previous_record_status: previousStatus, next_record_status: 'corrected', reason, created_at: correctedAt })
+      this.save()
+      return
+    }
+
+    const record = this.snapshot.learningEvents.find((item) => item.id === input.recordId)
+    if (!record) throw new Error('找不到這筆回答紀錄。')
+    const previousStatus = (record.record_status ?? 'valid') as ClassroomRecordStatus
+    if (previousStatus === 'corrected') throw new Error('這筆回答紀錄已更正。')
+    if (previousStatus === 'voided') throw new Error('這筆回答紀錄已撤銷。')
+    record.record_status = 'corrected'
+    record.counted_for_summary = false
+    record.correction_note = reason
+    record.corrected_at = correctedAt
+    audits.unshift({ id: uid('correction'), owner_id: 'demo-owner', record_type: input.recordType, record_id: record.id, course_id: record.course_id, student_id: record.student_id, previous_record_status: previousStatus, next_record_status: 'corrected', reason, created_at: correctedAt })
+    this.save()
+  }
+
+  async closeSession(sessionId: string, reflection: Pick<ClassSession, 'class_status' | 'progress_text' | 'what_worked' | 'common_difficulty' | 'next_adjustment'>) {
     const session = this.snapshot.sessions.find((item) => item.id === sessionId)
     if (!session) throw new Error('找不到這堂課。')
+    validateSessionReflection(reflection)
     Object.assign(session, reflection, { status: 'completed', completed_at: new Date().toISOString() })
     this.save()
   }
@@ -178,18 +244,62 @@ function assertNoError(error: { message: string } | null) {
   if (error) throw new Error(error.message)
 }
 
+export function validateNote(input: NoteInput) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(input.note_date) || Number.isNaN(Date.parse(input.note_date)) || new Date(input.note_date).toISOString().slice(0,10) !== input.note_date) throw new Error('請填寫有效日期。')
+  if (!input.body.trim() || input.body.length > 2000) throw new Error('請填寫事實內容，最多 2000 字。')
+  if (input.supersedes_id && (!input.correction_reason?.trim() || input.correction_reason.length > 500)) throw new Error('修正時請說明原因，最多 500 字。')
+  if (!['homework_missing','textbook_missing','classroom_rule','other'].includes(input.category)) throw new Error('請選擇事件類別。')
+}
+
+export function validateSessionReflection(reflection: Pick<ClassSession, 'class_status' | 'progress_text' | 'what_worked' | 'common_difficulty' | 'next_adjustment'>) {
+  if ([reflection.class_status, reflection.progress_text, reflection.what_worked, reflection.common_difficulty, reflection.next_adjustment].some((value) => value !== null && value.length > 2000)) {
+    throw new Error('課後文字最多 2000 字。')
+  }
+}
+
+export function validateSessionEdit(input: { sessionDate: string; sessionNumber: number | null; reason: string }) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(input.sessionDate) || Number.isNaN(Date.parse(input.sessionDate)) || new Date(`${input.sessionDate}T00:00:00Z`).toISOString().slice(0, 10) !== input.sessionDate) {
+    throw new Error('請填寫有效上課日期。')
+  }
+  if (input.sessionNumber !== null && (!Number.isInteger(input.sessionNumber) || input.sessionNumber < 1 || input.sessionNumber > 999)) {
+    throw new Error('上課次數必須是 1 到 999 的整數。')
+  }
+  if (!input.reason.trim() || input.reason.trim().length > 500) throw new Error('請說明修正原因，最多 500 字。')
+}
+
+export function validateClassroomRecordCorrection(input: ClassroomRecordCorrectionInput) {
+  if (!['randomizer_attempt', 'learning_event'].includes(input.recordType)) throw new Error('回答紀錄類型不正確。')
+  if (!input.recordId.trim()) throw new Error('找不到要修正的回答紀錄。')
+  if (!input.reason.trim() || input.reason.trim().length > 500) throw new Error('請說明修正原因，最多 500 字。')
+}
+
 export class SupabaseRepository implements TrackerRepository {
   constructor(private client: SupabaseClient, private ownerId: string) {}
 
   async load(): Promise<TrackerSnapshot> {
-    const tableNames = ['academic_terms', 'courses', 'students', 'enrollments', 'class_sessions', 'attendance_records', 'observation_records', 'followups', 'learning_events'] as const
-    const results = await Promise.all(tableNames.map((table) => this.client.from(table).select('*').eq('owner_id', this.ownerId)))
-    results.forEach((result) => assertNoError(result.error))
+    const tableNames = ['academic_terms', 'courses', 'students', 'enrollments', 'class_sessions', 'attendance_records', 'observation_records', 'followups', 'learning_events', 'randomizer_attempts', 'student_notes', 'classroom_record_corrections'] as const
+    const results = await Promise.all(tableNames.map(async (table) => {
+      const rows: unknown[] = []
+      for (let offset=0;;offset+=1000) {
+        const result = await this.client.from(table).select(table === 'randomizer_attempts' ? '*,randomizer_sessions!randomizer_attempts_session_fk(class_session_id)' : '*').eq('owner_id',this.ownerId).order('id').range(offset,offset+999)
+        assertNoError(result.error)
+        rows.push(...(result.data ?? []))
+        if ((result.data?.length ?? 0) < 1000) break
+      }
+      return {data:rows}
+    }))
     return {
       terms: results[0].data ?? [], courses: results[1].data ?? [], students: results[2].data ?? [], enrollments: results[3].data ?? [],
       sessions: results[4].data ?? [], attendance: results[5].data ?? [], observations: results[6].data ?? [], followups: results[7].data ?? [],
-      learningEvents: results[8].data ?? [],
+      learningEvents: results[8].data ?? [], attempts: results[9].data ?? [], studentNotes: results[10].data ?? [], correctionAudits: results[11].data ?? [],
     } as TrackerSnapshot
+  }
+
+  async addNote(input: NoteInput) {
+    validateNote(input)
+    const result = await this.client.from('student_notes').insert({...input,owner_id:this.ownerId})
+    if (result.error?.code === '23505') throw new Error('這筆備註已被修正，請更新後再試。')
+    assertNoError(result.error)
   }
 
   async startSession(courseId: string) {
@@ -200,6 +310,17 @@ export class SupabaseRepository implements TrackerRepository {
     assertNoError(result.error)
     if (!result.data) throw new Error('無法建立課堂。')
     return result.data.id as string
+  }
+
+  async updateSession(sessionId: string, input: { sessionDate: string; sessionNumber: number | null; reason: string }) {
+    validateSessionEdit(input)
+    const result = await this.client.rpc('correct_class_session', {
+      p_session_id: sessionId,
+      p_session_date: input.sessionDate,
+      p_session_number: input.sessionNumber,
+      p_reason: input.reason.trim(),
+    })
+    assertNoError(result.error)
   }
 
   async saveAttendance(sessionId: string, studentId: string, status: AttendanceStatus) {
@@ -224,11 +345,25 @@ export class SupabaseRepository implements TrackerRepository {
 
   async saveLearningEvent(input: Omit<LearningEvent, 'id' | 'owner_id' | 'occurred_at'> & { occurredAt?: string }) {
     const { occurredAt, ...record } = input
-    const result = await this.client.from('learning_events').insert({ ...record, owner_id: this.ownerId, occurred_at: occurredAt ?? new Date().toISOString() })
+    const row = { ...record, owner_id: this.ownerId, occurred_at: occurredAt ?? new Date().toISOString() }
+    const result = input.client_event_id
+      ? await this.client.from('learning_events').upsert(row, { onConflict: 'owner_id,client_event_id', ignoreDuplicates: true })
+      : await this.client.from('learning_events').insert(row)
     assertNoError(result.error)
   }
 
-  async closeSession(sessionId: string, reflection: Pick<ClassSession, 'what_worked' | 'common_difficulty' | 'next_adjustment'>) {
+  async correctClassroomRecord(input: ClassroomRecordCorrectionInput) {
+    validateClassroomRecordCorrection(input)
+    const result = await this.client.rpc('correct_classroom_record', {
+      p_record_type: input.recordType,
+      p_record_id: input.recordId,
+      p_reason: input.reason.trim(),
+    })
+    assertNoError(result.error)
+  }
+
+  async closeSession(sessionId: string, reflection: Pick<ClassSession, 'class_status' | 'progress_text' | 'what_worked' | 'common_difficulty' | 'next_adjustment'>) {
+    validateSessionReflection(reflection)
     const result = await this.client.from('class_sessions').update({ ...reflection, status: 'completed', completed_at: new Date().toISOString() }).eq('id', sessionId).eq('owner_id', this.ownerId)
     assertNoError(result.error)
   }

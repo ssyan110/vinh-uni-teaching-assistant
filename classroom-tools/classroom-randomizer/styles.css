@@ -896,16 +896,6 @@ textarea::placeholder {
   margin-bottom: 0;
 }
 
-.no-response-field {
-  margin-top: 12px;
-  margin-bottom: 8px;
-}
-
-.no-response-field select {
-  border-color: #e3b77d;
-  background: #fffaf1;
-}
-
 .note-field {
   margin: 15px 0 8px;
 }
@@ -1300,6 +1290,42 @@ textarea::placeholder {
   color: var(--muted);
 }
 
+.no-response-dialog {
+  width: min(560px, calc(100% - 30px));
+}
+
+.no-response-dialog .dialog-copy strong {
+  color: var(--ink);
+}
+
+.no-response-reasons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.no-response-reason-button {
+  min-height: 54px;
+  padding: 12px 14px;
+  border: 1px solid #e3b77d;
+  border-radius: 10px;
+  color: #6f481d;
+  background: #fffaf1;
+  font-weight: 700;
+  text-align: left;
+}
+
+.no-response-reason-button:hover,
+.no-response-reason-button:focus-visible {
+  border-color: #bd7a25;
+  background: #ffefcd;
+}
+
+.no-response-dialog-actions {
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
 .cloud-auth-form {
   display: grid;
   gap: 16px;
@@ -1692,6 +1718,10 @@ textarea::placeholder {
 
   .quick-response-bar .response-actions .button-primary {
     grid-column: 1 / -1;
+  }
+
+  .no-response-reasons {
+    grid-template-columns: 1fr;
   }
 
   .response-actions .button,

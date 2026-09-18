@@ -61,6 +61,8 @@ const sessions: ClassSession[] = [
     topic: '第一課：姓名與介紹',
     observation_target: '能追問同學姓名的由來',
     status: 'completed',
+    class_status: '整體順利，學生能投入姓名介紹活動。',
+    progress_text: '完成第一課姓名與介紹，進入追問練習。',
     what_worked: '先示範一輪再換同伴，學生比較快進入活動。',
     common_difficulty: '追問時容易只重複原問題。',
     next_adjustment: '板書兩個追問句，先讓同桌練一次。',
@@ -75,6 +77,8 @@ const sessions: ClassSession[] = [
     topic: '第一課：姓名與介紹',
     observation_target: '能用三到五句介紹一個名字',
     status: 'completed',
+    class_status: '大部分學生能跟上，少數學生需要句型提示。',
+    progress_text: '完成姓名介紹與角色卡活動，留下短重做。',
     what_worked: '角色卡讓比較安靜的學生也有內容可說。',
     common_difficulty: '常漏用「原來」回應同伴。',
     next_adjustment: '收尾前加一輪短重做。',
@@ -117,5 +121,5 @@ const learningEvents: LearningEvent[] = [
 }))
 
 export function createDemoSnapshot(): TrackerSnapshot {
-  return structuredClone({ terms: [term], courses, students, enrollments, sessions, attendance, observations, followups, learningEvents })
+  return structuredClone({ terms: [term], courses, students, enrollments, sessions, attendance, observations, followups, learningEvents, attempts: [], studentNotes: [] })
 }

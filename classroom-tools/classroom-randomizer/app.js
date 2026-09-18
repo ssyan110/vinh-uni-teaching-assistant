@@ -29,6 +29,7 @@
     sessionTitle: document.getElementById("sessionTitle"),
     sessionMeta: document.getElementById("sessionMeta"),
     newSessionButton: document.getElementById("newSessionButton"),
+    endSessionButton: document.getElementById("endSessionButton"),
     presentationButton: document.getElementById("presentationButton"),
     roundNumber: document.getElementById("roundNumber"),
     progressLabel: document.getElementById("progressLabel"),
@@ -59,7 +60,6 @@
     responseTitle: document.getElementById("responseTitle"),
     responseStatusInput: document.getElementById("responseStatusInput"),
     answerContextInput: document.getElementById("answerContextInput"),
-    noResponseReasonInput: document.getElementById("noResponseReasonInput"),
     noteInput: document.getElementById("noteInput"),
     recordNextButton: document.getElementById("recordNextButton"),
     recordCompleteButton: document.getElementById("recordCompleteButton"),
@@ -89,6 +89,11 @@
     historyButton: document.getElementById("historyButton"),
     helpDialog: document.getElementById("helpDialog"),
     closeHelpButton: document.getElementById("closeHelpButton"),
+    noResponseDialog: document.getElementById("noResponseDialog"),
+    noResponseStudent: document.getElementById("noResponseStudent"),
+    noResponseReasonOptions: document.getElementById("noResponseReasonOptions"),
+    closeNoResponseDialogButton: document.getElementById("closeNoResponseDialogButton"),
+    cancelNoResponseButton: document.getElementById("cancelNoResponseButton"),
     cloudDialog: document.getElementById("cloudDialog"),
     closeCloudButton: document.getElementById("closeCloudButton"),
     cloudInvitePanel: document.getElementById("cloudInvitePanel"),
@@ -137,8 +142,6 @@
   let timerInterval = null;
   let cloudRosterByClass = {};
   let cloudSyncTimer = null;
-  let cloudSyncInFlight = false;
-  let cloudSyncRequested = false;
   let cloudSyncWarned = false;
   const builtInRosters = global.RandomizerRosters && global.RandomizerRosters.classes
     ? global.RandomizerRosters.classes
@@ -238,16 +241,14 @@
 
   function syncCloudState() {
     if (!state || !cloudReady()) return;
-    if (cloudSyncInFlight) {
-      cloudSyncRequested = true;
-      return;
-    }
-    cloudSyncInFlight = true;
+    // Enqueue every snapshot immediately, including an ending class while
+    // an earlier network write is still running. The cloud queue serializes sends.
     global.RandomizerCloud.recordState({
       classId: state.session.className,
       session: state.session,
       currentRound: state.currentRound,
       excludedStudentIds: state.excludedStudentIds,
+      attendanceChanges: state.attendanceChanges,
       roster: state.roster,
       attempts: state.attempts
     }).then((result) => {
@@ -264,12 +265,6 @@
       if (!cloudSyncWarned) {
         showToast("暂时无法同步；请保持登录，记录会在连接恢复后自动保存。", true);
         cloudSyncWarned = true;
-      }
-    }).finally(() => {
-      cloudSyncInFlight = false;
-      if (cloudSyncRequested) {
-        cloudSyncRequested = false;
-        syncCloudState();
       }
     });
   }
@@ -585,7 +580,11 @@
       return;
     }
     populateClassOptions(current.session.className || "");
-    elements.dateInput.value = current.session.date || today();
+    // The setup form is for the next class. Opening the app or returning to
+    // the setup view must not carry yesterday's saved session date forward.
+    // Resuming an unfinished class still uses current.session.date below in
+    // resumeSession(), so this does not rewrite an existing classroom record.
+    elements.dateInput.value = today();
     elements.taskModeInput.value = current.session.taskMode || Model.DEFAULT_TASK_MODE;
     elements.taskTargetInput.value = current.session.taskTarget || Model.DEFAULT_TASK_TARGET;
     populateTextbookOptions(current.session.textbookId, current.session.lessonId);
@@ -811,6 +810,10 @@
       return;
     }
 
+    if (state && state.session.status !== "completed") {
+      showToast("请先回到本堂课，按「结束课程」后再开始下一堂。", true);
+      return;
+    }
     if (state && !global.confirm("开始下一堂课前，上一堂课会保留在历史记录。要继续吗？")) {
       return;
     }
@@ -832,6 +835,21 @@
     setView("app");
     renderApp();
     showToast("本堂课已开始；记录会自动保存到教学数据库");
+  }
+
+  function endSession() {
+    if (!state || state.session.status === "completed") return;
+    const pending = Model.pendingAttempt(state);
+    if (!global.confirm(pending ? "结束本堂课？当前抽到的学生尚未记录回答，这次不计回答次数。已保存的回答会保留。" : "结束本堂课？已保存的回答会保留，并同步到学生管理系统。")) return;
+    stopTimer();
+    if (drawingRevealTimer) global.clearTimeout(drawingRevealTimer);
+    drawingRevealTimer = null;
+    isDrawing = false;
+    state = Model.finishSession(state);
+    archiveState(state);
+    persist();
+    renderApp();
+    showToast("本堂课已结束；记录正在同步。请查看上方的同步状态。");
   }
 
   function resumeSession() {
@@ -919,17 +937,18 @@
     }
   }
 
-  function handleNoAnswer() {
+  function handleNoAnswer(reasonOverride) {
+    const selectedReason = reasonOverride || noResponseReasonDraft;
     try {
-      if (!noResponseReasonDraft) {
-        showToast("请先选择未回答原因", true);
-        elements.noResponseReasonInput.focus();
+      if (!selectedReason) {
+        openNoResponseDialog();
         return;
       }
-      state = Model.returnPending(state, {
+      const absentStudentId = selectedReason === "absent" && Model.pendingAttempt(state).studentId;
+      state = absentStudentId ? Model.setAbsent(state, absentStudentId, true) : Model.returnPending(state, {
         note: noteDraft,
         taskPrompt: taskPromptDraft,
-        noResponseReason: noResponseReasonDraft,
+        noResponseReason: selectedReason,
         answerContext: answerContextDraft
       });
       stopTimer();
@@ -937,7 +956,7 @@
       resetResponseDraft();
       persist();
       renderApp();
-      showToast("已记录未回答；这位同学仍会留在可抽名单中");
+      showToast(absentStudentId ? "已记录缺席，本堂课不再抽问这位同学。" : "已记录未回答；这位同学仍会留在可抽名单中");
     } catch (error) {
       showToast(error.message, true);
     }
@@ -1004,6 +1023,43 @@
     noResponseReasonDraft = attempt.noResponseReason || "";
   }
 
+  function renderNoResponseReasonOptions() {
+    elements.noResponseReasonOptions.replaceChildren();
+    Model.NO_RESPONSE_REASONS.forEach((reason) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "no-response-reason-button";
+      button.dataset.reason = reason.id;
+      button.textContent = reason.label;
+      button.addEventListener("click", () => {
+        noResponseReasonDraft = reason.id;
+        closeDialog(elements.noResponseDialog);
+        handleNoAnswer(reason.id);
+      });
+      elements.noResponseReasonOptions.appendChild(button);
+    });
+  }
+
+  function closeNoResponseDialog() {
+    noResponseReasonDraft = "";
+    closeDialog(elements.noResponseDialog);
+    if (state && Model.pendingAttempt(state) && !elements.noAnswerButton.disabled) {
+      elements.noAnswerButton.focus();
+    }
+  }
+
+  function openNoResponseDialog() {
+    const pending = state && Model.pendingAttempt(state);
+    if (!pending || isDrawing) return;
+    const student = pending.studentSnapshot || Model.getStudent(state, pending.studentId) || {};
+    elements.noResponseStudent.textContent = student.name || "这位同学";
+    noResponseReasonDraft = "";
+    renderNoResponseReasonOptions();
+    openDialog(elements.noResponseDialog);
+    const firstOption = elements.noResponseReasonOptions.querySelector("button");
+    if (firstOption) global.setTimeout(() => firstOption.focus(), 0);
+  }
+
   function renderResponseForm(attempt) {
     ensurePendingDraft(attempt);
     const isVolunteer = attempt.selectionMethod === "volunteer";
@@ -1024,13 +1080,11 @@
     elements.recordNextButton.hidden = false;
     elements.recordCompleteButton.hidden = false;
     elements.noAnswerButton.hidden = false;
-    elements.noResponseReasonInput.closest("label").hidden = false;
     document.getElementById("assistanceInput").value = assistanceDraft === null ? "unknown" : assistanceDraft ? "yes" : "no";
     document.getElementById("taskPromptInput").value = taskPromptDraft;
     elements.noteInput.value = noteDraft;
     elements.responseStatusInput.value = responseStatusDraft;
     elements.answerContextInput.value = answerContextDraft;
-    elements.noResponseReasonInput.value = noResponseReasonDraft;
   }
 
   function renderEmptyState(progress) {
@@ -1222,7 +1276,7 @@
       const volunteerSuffix = volunteerCount ? ` · 自愿 ${volunteerCount} 次` : "";
       const status = document.createElement("span");
       status.className = "student-status";
-      if (excluded) status.textContent = "暂不抽问";
+      if (excluded) status.textContent = "缺席 · 不抽问";
       else if (pendingId === student.id) status.textContent = "等待回答";
       else if (answeredIds.has(student.id)) status.textContent = `本轮已完成 · 回答 ${summary ? summary.totalAnswerCount : 0} 次${volunteerSuffix}`;
       else status.textContent = `随机 ${summary ? summary.randomCallCount : 0} 次${volunteerSuffix}`;
@@ -1232,21 +1286,21 @@
       const volunteerButton = document.createElement("button");
       volunteerButton.type = "button";
       volunteerButton.className = "volunteer-button";
-      volunteerButton.textContent = "自愿发言";
-      volunteerButton.disabled = excluded || Boolean(pendingAttempt);
-      volunteerButton.title = excluded ? "暂不抽问的学生不能记录自愿发言" : "记录这位学生主动发言";
+      volunteerButton.textContent = "自愿发言 +1";
+      volunteerButton.disabled = excluded || isDrawing;
+      volunteerButton.setAttribute("aria-label", `${student.name} 自愿发言加一次`);
+      volunteerButton.title = excluded ? "请先改为到课，再记录发言" : "立即保存一次自愿回答，不影响正在进行的抽问";
       volunteerButton.addEventListener("click", () => {
         try {
-          state = Model.selectVolunteer(state, student.id, {
+          state = Model.recordVolunteer(state, student.id, {
             taskMode: state.session.taskMode,
-            taskTarget: taskDraftTarget
+            taskTarget: taskDraftTarget,
+            taskPrompt: taskPromptDraft,
+            responseStatus: "answered"
           });
-          stopTimer();
-          timerRemaining = timerDuration;
-          resetResponseDraft();
           persist();
           renderApp();
-          if (timerDuration > 0) startTimer();
+          showToast(`${student.name}：已在本机保存自愿发言一次；云端状态见上方。`);
         } catch (error) {
           showToast(error.message, true);
         }
@@ -1256,20 +1310,22 @@
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
       checkbox.checked = excluded;
-      checkbox.disabled = Boolean(pendingAttempt) || answeredIds.has(student.id);
-      checkbox.setAttribute("aria-label", `${student.name} 暂不抽问`);
+      checkbox.disabled = isDrawing;
+      checkbox.setAttribute("aria-label", `${student.name} 缺席`);
       checkbox.addEventListener("change", () => {
         try {
-          state = Model.setExcluded(state, student.id, checkbox.checked);
+          state = Model.setAbsent(state, student.id, checkbox.checked);
+          if (!Model.pendingAttempt(state)) { stopTimer(); resetResponseDraft(); }
           persist();
           renderApp();
+          showToast(`${student.name}：已在本机保存${checkbox.checked ? "缺席" : "到课"}；云端状态见上方。`);
         } catch (error) {
           checkbox.checked = excluded;
           showToast(error.message, true);
         }
       });
       const checkText = document.createElement("span");
-      checkText.textContent = "暂不抽问";
+      checkText.textContent = "缺席";
       checkLabel.append(checkbox, checkText);
       controls.append(status, volunteerButton, checkLabel);
       row.append(identity, controls);
@@ -1280,9 +1336,10 @@
 
   function renderApp() {
     if (!state) return;
+    elements.appView.querySelectorAll("[data-ended-disabled]").forEach(control => { control.disabled = false; delete control.dataset.endedDisabled; });
     const progress = Model.getProgress(state);
     elements.sessionTitle.textContent = state.session.className || "未填写班级名称";
-    elements.sessionMeta.textContent = `${state.session.date || "未设置日期"} · 课堂回答记录`;
+    elements.sessionMeta.textContent = `${state.session.date || "未设置日期"} · ${state.session.status === "completed" ? "已结束" : "进行中"} · 课堂回答记录`;
     populateActiveContextSelectors();
     elements.roundNumber.textContent = String(progress.roundNumber);
     elements.progressLabel.textContent = `本轮完成 ${progress.answeredCount}／${progress.eligibleCount}`;
@@ -1297,12 +1354,21 @@
       ? "学生画面已打开"
       : "打开学生画面";
     renderStudentDisplay();
+    const ended = state.session.status === "completed";
+    elements.endSessionButton.disabled = ended;
+    elements.endSessionButton.textContent = ended ? "本堂课已结束" : "结束课程";
+    if (ended) {
+      elements.appView.querySelectorAll(".draw-panel button, .draw-panel input, .draw-panel select, #studentList button, #studentList input, #undoButton, #nextRoundButton").forEach(control => { if (!control.disabled) control.dataset.endedDisabled = "true"; control.disabled = true; });
+    }
   }
 
   function renderStart() {
     const saved = state || storedCurrentState();
     elements.resumeButton.hidden = !saved;
-    if (saved) {
+    elements.resumeButton.textContent = saved && saved.session.status === "completed" ? "查看上一堂记录" : "继续未完成的课堂";
+    if (saved && saved.session.status === "completed") {
+      elements.startNote.textContent = "上一堂课已结束，记录已保留。确认日期后可开始下一堂。";
+    } else if (saved) {
       elements.startNote.textContent = cloudReady()
         ? `有一堂尚未结束的课；开始新课前会先保留它。课堂记录会保存到教学数据库，已有 ${readHistory().length} 堂历史记录。`
         : `有一堂尚未结束的课；开始新课前会先保留它。请先登录教师账号，才能继续保存课堂记录。`;
@@ -1730,7 +1796,12 @@
     updateRosterCount();
   });
   elements.resumeButton.addEventListener("click", resumeSession);
+  elements.endSessionButton.addEventListener("click", endSession);
   elements.newSessionButton.addEventListener("click", () => {
+    if (state && state.session.status !== "completed") {
+      showToast("请先按「结束课程」，保存本堂课的结束状态。", true);
+      return;
+    }
     stopTimer();
     isDrawing = false;
     if (drawingRevealTimer) global.clearTimeout(drawingRevealTimer);
@@ -1771,9 +1842,6 @@
   elements.answerContextInput.addEventListener("change", (event) => {
     answerContextDraft = event.target.value;
   });
-  elements.noResponseReasonInput.addEventListener("change", (event) => {
-    noResponseReasonDraft = event.target.value;
-  });
   elements.drawButton.addEventListener("click", handleDraw);
   document.getElementById("newQuestionButton").addEventListener("click", () => {
     if (!state) { showToast("请先开始一堂课。", true); return; }
@@ -1787,7 +1855,7 @@
   document.getElementById("taskPromptInput").addEventListener("input", (event) => { taskPromptDraft = event.target.value; });
   elements.recordNextButton.addEventListener("click", () => handleResponse(true));
   elements.recordCompleteButton.addEventListener("click", () => handleResponse(false));
-  elements.noAnswerButton.addEventListener("click", handleNoAnswer);
+  elements.noAnswerButton.addEventListener("click", openNoResponseDialog);
   elements.undoButton.addEventListener("click", handleUndo);
   elements.nextRoundButton.addEventListener("click", handleNextRound);
   elements.exportCsvButton.addEventListener("click", exportCsv);
@@ -1799,6 +1867,12 @@
   elements.fullscreenButton.addEventListener("click", toggleFullscreen);
   elements.helpButton.addEventListener("click", () => openDialog(elements.helpDialog));
   elements.closeHelpButton.addEventListener("click", () => closeDialog(elements.helpDialog));
+  elements.closeNoResponseDialogButton.addEventListener("click", closeNoResponseDialog);
+  elements.cancelNoResponseButton.addEventListener("click", closeNoResponseDialog);
+  elements.noResponseDialog.addEventListener("cancel", (event) => {
+    event.preventDefault();
+    closeNoResponseDialog();
+  });
   elements.cloudButton.addEventListener("click", openCloudDialog);
   elements.closeCloudButton.addEventListener("click", () => closeDialog(elements.cloudDialog));
   elements.cloudInviteForm.addEventListener("submit", completeCloudInvite);

@@ -3,15 +3,15 @@ import { useTracker } from '../state/TrackerContext'
 import { Icon } from './Icon'
 
 const navigation = [
-  { to: '/today', label: '今日', mark: 'house' },
+  { to: '/today', label: '班級', mark: 'house' },
   { to: '/students', label: '學生', mark: 'users' },
-  { to: '/outcomes', label: '成效', mark: 'chart-no-axes-combined' },
+  { to: '/participation', label: '回答次數', mark: 'users' },
   { to: '/followups', label: '待辦', mark: 'clipboard-check' },
   { to: '/more', label: '更多', mark: 'settings' },
 ]
 
 export function AppShell() {
-  const { snapshot, busy, error, clearError, mode } = useTracker()
+  const { snapshot, busy, error, clearError, mode, refreshing, refreshError, lastRefreshed, refresh } = useTracker()
   const location = useLocation()
   const openFollowups = snapshot.followups.filter((item) => item.status === 'open').length
 
@@ -41,10 +41,12 @@ export function AppShell() {
       <div className="mobile-brand"><img className="brand-logo small" src={`${import.meta.env.BASE_URL}logo.svg`} alt="" /><strong>荣市大学</strong></div>
           <div className="save-state" aria-live="polite">
             <span className={busy ? 'state-dot saving' : 'state-dot'} />
-            {busy ? '儲存中' : mode === 'demo' ? '範例資料' : '已儲存'}
+            {busy ? '儲存中' : mode === 'demo' ? '範例資料' : refreshing ? '更新中' : refreshError ? '更新失敗' : `更新於 ${lastRefreshed ? new Date(lastRefreshed).toLocaleTimeString('zh-TW', {hour: '2-digit', minute: '2-digit', second: '2-digit'}) : '—'}`}
+            {mode === 'supabase' && <button type="button" className="back-link" disabled={busy || refreshing} onClick={() => void refresh()}>更新資料</button>}
           </div>
         </header>
 
+        {refreshError && <div className="error-banner" role="status">{refreshError}</div>}
         {error && <div className="error-banner" role="alert"><span>{error}</span><button type="button" onClick={clearError}>關閉</button></div>}
         <main className={location.pathname.startsWith('/sessions/') ? 'content session-content' : 'content'}>
           <Outlet />

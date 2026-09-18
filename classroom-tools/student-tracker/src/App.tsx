@@ -7,7 +7,7 @@ import { StudentsPage } from './pages/StudentsPage'
 import { StudentDetailPage } from './pages/StudentDetailPage'
 import { FollowupsPage } from './pages/FollowupsPage'
 import { MorePage } from './pages/MorePage'
-import { OutcomesPage } from './pages/OutcomesPage'
+import { ParticipationPage } from './pages/ParticipationPage'
 import { useTracker } from './state/TrackerContext'
 
 export function App() {
@@ -23,7 +23,7 @@ export function App() {
         <Route path="/today" element={<TodayPage />} />
         <Route path="/sessions/:sessionId" element={<SessionPage />} />
         <Route path="/students" element={<StudentsPage />} />
-        <Route path="/outcomes" element={<OutcomesPage />} />
+        <Route path="/participation" element={<ParticipationPage />} />
         <Route path="/students/:studentId" element={<StudentDetailPage />} />
         <Route path="/followups" element={<FollowupsPage />} />
         <Route path="/more" element={<MorePage />} />

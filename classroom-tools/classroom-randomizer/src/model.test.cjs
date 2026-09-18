@@ -2,6 +2,45 @@ const test = require("node:test");
 const assert = require("node:assert/strict");
 const model = require("./model.js");
 
+test("direct absence saves attendance without inventing a call and preserves another pending student", () => {
+  let state = model.createSession({ className: "QA", roster: roster(3) });
+  state = drawById(state, "S01");
+  const pending = state.currentRound.pendingAttemptId;
+  state = model.setAbsent(state, "S02", true);
+  assert.equal(state.attendanceChanges.S02.status, "absent");
+  assert.equal(state.attempts.length, 1);
+  assert.equal(state.currentRound.pendingAttemptId, pending);
+  assert.equal(model.getDrawingPool(state).some(s => s.id === "S02"), false);
+  const restored = model.importBackup(JSON.stringify(state));
+  assert.equal(restored.attendanceChanges.S02.status, "absent");
+  state = model.undoLastAction(state);
+  assert.equal(state.attendanceChanges.S02.status, null);
+  assert.equal(state.attendanceChanges.S02.restoreOriginal, true);
+  assert.equal(state.currentRound.pendingAttemptId, pending);
+  state = model.setAbsent(state, "S01", true);
+  assert.equal(model.pendingAttempt(state), null);
+  assert.equal(state.attempts[0].noResponseReason, "absent");
+  assert.equal(model.summarizeAttempts(state.attempts).totalAnswerCount, 0);
+});
+
+test("volunteer +1 works during a pending draw, repeats, survives reload and undoes one answer", () => {
+  let state = model.createSession({ className: "QA", roster: roster(3) });
+  state = drawById(state, "S01");
+  const pending = state.currentRound.pendingAttemptId;
+  state = model.recordVolunteer(state, "S02", { taskPrompt: "你喜欢什么？" });
+  state = model.recordVolunteer(state, "S02", {});
+  assert.equal(state.currentRound.pendingAttemptId, pending);
+  assert.deepEqual(state.currentRound.answeredStudentIds, []);
+  assert.equal(model.summarizeAttempts(state.attempts).voluntaryEffectiveAnswerCount, 2);
+  state = model.importBackup(JSON.stringify(state));
+  state = model.undoLastAction(state);
+  assert.equal(model.summarizeAttempts(state.attempts).voluntaryEffectiveAnswerCount, 1);
+  assert.equal(state.attempts.at(-1).recordStatus, "voided");
+  assert.equal(state.currentRound.pendingAttemptId, pending);
+  state = model.setAbsent(state, "S03", true);
+  assert.throws(() => model.recordVolunteer(state, "S03"), /不能记录/);
+});
+
 function roster(count = 30) {
   return Array.from({ length: count }, (_, index) => ({
     studentCode: `S${String(index + 1).padStart(2, "0")}`,
@@ -61,6 +100,29 @@ test("an unanswered student stays in the drawing pool and can be called again", 
 
   assert.equal(model.getProgress(state).roundComplete, true);
   assert.equal(state.attempts.filter((attempt) => attempt.studentId === "S01").length, 2);
+});
+
+test("absence is a selectable no-response reason, while no selection leaves the pending attempt untouched", () => {
+  const absenceReason = model.NO_RESPONSE_REASONS.find((reason) => reason.id === "absent");
+  assert.deepEqual(absenceReason, { id: "absent", label: "缺席／没来上课" });
+
+  let state = drawById(model.createSession({ roster: roster(1) }), "S01");
+  const beforeCancel = model.exportBackup(state);
+  assert.throws(() => model.returnPending(state, {}), /请选择未回答原因/);
+  assert.equal(model.exportBackup(state), beforeCancel);
+  assert.equal(state.attempts.length, 1);
+  assert.equal(state.attempts[0].outcome, "pending");
+
+  state = model.returnPending(state, { noResponseReason: "absent" });
+  assert.equal(state.attempts.length, 1);
+  assert.equal(state.attempts[0].outcome, "not_answered");
+  assert.equal(state.attempts[0].responseStatus, "no_response");
+  assert.equal(state.attempts[0].noResponseReason, "absent");
+  assert.equal(model.getProgress(state).answeredCount, 0);
+  assert.equal(model.getDrawingPool(state).some((student) => student.id === "S01"), true);
+  assert.equal(model.summarizeAttempts(state.attempts).noResponseReasonStats.absent, 1);
+  assert.match(model.exportSessionCsv(state), /absent/);
+  assert.match(model.exportSessionCsv(state), /缺席／没来上课/);
 });
 
 test("recording a response needs no score, rubric, or later assessment step", () => {
@@ -206,10 +268,42 @@ test("undo restores the pool and keeps a voided raw event", () => {
   assert.equal(state.events.at(-1).type, "undo");
 });
 
-test("drawing prefers students with fewer random calls while keeping the pool round-based", () => {
+test("normal drawing stays random across all currently selectable students", () => {
   let state = model.createSession({ roster: roster(3) });
-  assert.equal(model.getRandomSelectionPool(state).length, 3);
+  state = model.returnPending(drawById(state, "S01"), { noResponseReason: "unprepared" });
+  state = record(drawById(state, "S02"));
   state = record(drawById(state, "S01"));
+  state = record(drawById(state, "S03"));
+  state = model.startNextRound(state);
 
-  assert.deepEqual(model.getRandomSelectionPool(state).map((student) => student.id).sort(), ["S02", "S03"]);
+  const originalCrypto = Object.getOwnPropertyDescriptor(globalThis, "crypto");
+  Object.defineProperty(globalThis, "crypto", {
+    configurable: true,
+    value: { getRandomValues(values) { values[0] = 0; return values; } }
+  });
+  try {
+    state = model.drawStudent(state);
+  } finally {
+    Object.defineProperty(globalThis, "crypto", originalCrypto);
+  }
+
+  assert.equal(state.attempts.at(-1).studentId, "S01");
+});
+
+test("ending a class preserves answers and pending selection, cannot reopen through undo or new draws", () => {
+  let state = model.createSession({ className: "LT_02", roster: roster(3) });
+  state = model.recordResponse(model.drawStudent(state));
+  state = model.drawStudent(state);
+  const before = structuredClone(state.attempts);
+  const ended = model.finishSession(state);
+  assert.equal(ended.session.status, "completed");
+  assert.ok(ended.session.completedAt);
+  assert.deepEqual(ended.attempts, before);
+  assert.equal(model.getSummary(ended).totalAnswerCount, model.getSummary(state).totalAnswerCount);
+  assert.deepEqual(ended.undoStack, []);
+  assert.equal(model.finishSession(ended), ended);
+  assert.throws(() => model.recordResponse(ended), /已经结束/);
+  assert.equal(model.importBackup(model.exportBackup(ended)).session.status, "completed");
+  const next = model.createSession({ className: "LT_02", roster: roster(3) });
+  assert.equal(next.session.status, "in_progress");
 });

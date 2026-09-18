@@ -49,14 +49,19 @@ export interface ClassSession {
   owner_id: string
   course_id: string
   session_date: string
+  session_number?: number | null
   starts_at: string | null
   topic: string | null
   observation_target: string | null
   status: 'in_progress' | 'completed'
+  class_status: string | null
+  progress_text: string | null
   what_worked: string | null
   common_difficulty: string | null
   next_adjustment: string | null
   completed_at: string | null
+  created_at?: string
+  updated_at?: string
 }
 
 export interface AttendanceRecord {
@@ -94,11 +99,32 @@ export interface Followup {
 export type LearningEventSource = 'class_observation' | 'random_call' | 'voluntary_answer'
 export type ClassroomOpportunityStatus = 'called' | 'volunteered' | 'not_selected' | 'absent' | 'excused' | 'technical_issue'
 export type ClassroomResponseStatus = 'answered' | 'partial' | 'no_response' | 'declined' | 'peer_supported' | 'unobserved'
-export type NoResponseReason = 'unprepared' | 'unclear_prompt' | 'forgot' | 'anxious_unwell' | 'time_insufficient' | 'chose_skip' | 'other'
+export type NoResponseReason = 'unprepared' | 'unclear_prompt' | 'forgot' | 'anxious_unwell' | 'time_insufficient' | 'chose_skip' | 'absent' | 'other'
 export type AnswerContext = 'prepared' | 'unprepared' | 'unknown'
 export type ClassroomRecordStatus = 'valid' | 'corrected' | 'voided'
+export type ClassroomRecordType = 'randomizer_attempt' | 'learning_event'
+
+export interface ClassroomRecordCorrectionInput {
+  recordType: ClassroomRecordType
+  recordId: string
+  reason: string
+}
+
+export interface ClassroomRecordCorrection {
+  id: string
+  owner_id: string
+  record_type: ClassroomRecordType
+  record_id: string
+  course_id: string
+  student_id: string | null
+  previous_record_status: ClassroomRecordStatus
+  next_record_status: ClassroomRecordStatus
+  reason: string
+  created_at: string
+}
 
 export interface LearningEvent {
+  rubric_version?: string
   client_event_id?: string
   textbook_id?: string
   lesson_id?: string
@@ -132,6 +158,30 @@ export interface LearningEvent {
   counted_for_grade?: boolean
 }
 
+export type PerformanceLevel = 'needs_support' | 'mostly_complete' | 'complete'
+export type FactMark = 0 | 1 | 2 | 3 | 4 | 'na' | 'insufficient'
+export type FactMarks = Partial<Record<'F' | 'A' | 'C' | 'T', FactMark>>
+export interface RandomizerAttempt {
+ randomizer_sessions?: { class_session_id: string } | null
+ fact_marks?: FactMarks | null; fact_version?: string | null; assistance?: boolean | null
+ id: string; owner_id: string; client_attempt_id: string; randomizer_session_id: string
+ course_id: string; student_id: string | null; student_code: string; student_name: string
+ selection_method: 'random' | 'volunteer'; outcome: 'pending' | 'answered' | 'not_answered' | 'undone'
+ assessment_status: 'scored' | 'observed' | 'pending' | 'not_applicable'
+ performance_level: PerformanceLevel | null; observation_version: string | null
+ task_prompt: string | null; question_id: string | null; textbook_id: string; lesson_id: string
+ task_target: string; task_mode: string; rubric_id: string; rubric_version: string
+ task_completion: number | null; comprehensibility: number | null; language_control_vocabulary: number | null; content_interaction: number | null
+ total_score: number | null; record_status: ClassroomRecordStatus; counted_for_summary: boolean
+ drawn_at: string; completed_at: string | null; note: string | null; no_response_reason?: NoResponseReason | null; correction_note: string | null; corrected_at: string | null
+}
+export interface StudentNote {
+ id: string; owner_id: string; course_id: string; student_id: string; note_date: string
+ category: 'homework_missing' | 'textbook_missing' | 'classroom_rule' | 'other'
+ body: string; supersedes_id: string | null; correction_reason: string | null; created_at: string
+}
+export type NoteInput = Omit<StudentNote, 'id' | 'owner_id' | 'created_at'>
+
 export interface TrackerSnapshot {
   terms: AcademicTerm[]
   courses: Course[]
@@ -142,6 +192,10 @@ export interface TrackerSnapshot {
   observations: ObservationRecord[]
   followups: Followup[]
   learningEvents: LearningEvent[]
+  attempts: RandomizerAttempt[]
+  studentNotes: StudentNote[]
+  /** Append-only correction audit; optional for snapshots saved before this field existed. */
+  correctionAudits?: ClassroomRecordCorrection[]
 }
 
 export interface ImportStudentRow {
@@ -162,4 +216,7 @@ export const emptySnapshot: TrackerSnapshot = {
   observations: [],
   followups: [],
   learningEvents: [],
+  attempts: [],
+  studentNotes: [],
+  correctionAudits: [],
 }

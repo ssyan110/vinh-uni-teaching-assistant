@@ -115,6 +115,7 @@
             <p class="session-meta" id="sessionMeta">—</p>
           </div>
           <div class="session-bar-actions">
+            <button class="button button-primary" id="endSessionButton" type="button">结束课程</button>
             <button class="has-icon icon-clipboard-check button button-quiet" id="newSessionButton" type="button">开始下一堂</button>
             <button class="has-icon icon-monitor button button-secondary" id="presentationButton" type="button">打开学生画面</button>
           </div>
@@ -253,19 +254,6 @@
                   </select>
                 </label>
               </div>
-              <label class="field no-response-field">
-                <span>未回答原因 <em>点击「记录未回答」前选择</em></span>
-                <select id="noResponseReasonInput">
-                  <option value="">请选择原因</option>
-                  <option value="unprepared">没有准备</option>
-                  <option value="unclear_prompt">听不懂题目</option>
-                  <option value="forgot">一时想不起</option>
-                  <option value="anxious_unwell">紧张／不舒服</option>
-                  <option value="time_insufficient">时间不足</option>
-                  <option value="chose_skip">选择跳过</option>
-                  <option value="other">其他</option>
-                </select>
-              </label>
               <label class="field note-field">
                 <span>教师备注 <em>选填</em></span>
                 <input id="noteInput" type="text" maxlength="2000" placeholder="例如：能说出理由，但漏了例子" autocomplete="off">
@@ -305,7 +293,7 @@
                 </div>
                 <span class="muted" id="eligibleLabel">本轮 0 位</span>
               </div>
-              <p class="side-help">搜索学生后可直接记录自愿发言；自愿发言不会占用本轮的随机抽问名额。</p>
+              <p class="side-help">勾选「缺席」立即记录并停止抽问，取消勾选改为到课。学生回答后按「自愿发言 +1」立即加记一次，不影响正在进行的抽问。</p>
               <div class="roster-view-tools">
                 <label class="student-search">
                   <span class="visually-hidden">搜索学生</span>
@@ -315,13 +303,13 @@
                   <option value="all">全部学生</option>
                   <option value="available">尚未抽问</option>
                   <option value="answered">本轮已完成</option>
-                  <option value="absent">暂不抽问</option>
+                  <option value="absent">缺席</option>
                 </select>
               </div>
               <div class="roster-legend" aria-label="学生状态说明">
                 <span><i class="status-dot available"></i>尚未抽问</span>
                 <span><i class="status-dot answered"></i>本轮已完成</span>
-                <span><i class="status-dot absent"></i>暂不抽问</span>
+                <span><i class="status-dot absent"></i>缺席</span>
               </div>
               <div class="student-list" id="studentList"></div>
             </section>
@@ -365,10 +353,25 @@
           <li><strong>需要投影时，先打开学生画面</strong><span>把新窗口拖到投影机；教师记录与备注不会显示给学生。</span></li>
         <li><strong>提问后按「抽一位」</strong><span>姓名揭晓后开始思考计时；时间到不会自动判定结果。</span></li>
           <li><strong>回答后记录状态</strong><span>操作列会保持在上方；按「记录回答并抽下一位」后会回到抽选区显示动画。</span></li>
-        <li><strong>没有回答就先记录</strong><span>按「记录未回答」后，再按「抽一位」继续；这位同学稍后还能再抽到。</span></li>
+        <li><strong>没有回答就先记录</strong><span>按「记录未回答」后直接选择原因并保存，再按「抽一位」继续；这位同学稍后还能再抽到。</span></li>
         <li><strong>课程内容改变时直接切换课次</strong><span>后续抽问会记在新课次，之前保存的回答仍保留原课次。</span></li>
       </ol>
       <p class="dialog-footnote">快捷键：Space 抽一位，F 切换全屏。输入文字时不会触发快捷键。</p>
+    </dialog>
+
+    <dialog class="dialog no-response-dialog" id="noResponseDialog" aria-labelledby="noResponseDialogTitle" aria-describedby="noResponseDialogCopy">
+      <div class="dialog-heading">
+        <div>
+          <p class="section-kicker">未回答记录</p>
+          <h2 id="noResponseDialogTitle">为什么没有回答？</h2>
+        </div>
+        <button class="icon-button" id="closeNoResponseDialogButton" type="button" aria-label="取消未回答记录">×</button>
+      </div>
+      <p class="dialog-copy" id="noResponseDialogCopy">为 <strong id="noResponseStudent">这位同学</strong> 选择一个原因；选定后会立即保存一笔未回答记录。</p>
+      <div class="no-response-reasons" id="noResponseReasonOptions" role="group" aria-label="未回答原因"></div>
+      <div class="form-actions no-response-dialog-actions">
+        <button class="button button-quiet" id="cancelNoResponseButton" type="button">取消，不记录</button>
+      </div>
     </dialog>
 
     <dialog class="dialog" id="cloudDialog">
