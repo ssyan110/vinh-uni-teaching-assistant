@@ -157,15 +157,14 @@ function renderHome(): void {
   const hasContent = Boolean(pack && (pack.vocabulary.length || pack.exercises.length || pack.sentence_patterns?.length));
   const lessonCount = pack?.lessons.filter((lesson) => lesson.active !== false).length ?? 0;
   const functionContentCount = (pack?.sentence_patterns?.length ?? 0) + (pack?.exercises.length ?? 0);
-  const textbookCards = textbookCatalog
+  const activeTextbooks = textbookCatalog
     .filter((entry) => entry.active !== false)
-    .map((entry) => {
+  const selectedEntry = activeTextbooks.find((entry) => entry.textbook_id === selectedTextbookId);
+  const textbookOptions = activeTextbooks.map((entry) => {
       const entryPack = packsByTextbook[entry.textbook_id];
       const selected = entry.textbook_id === selectedTextbookId;
       const lessonCountForBook = entryPack?.lessons.filter((lesson) => lesson.active !== false).length ?? 0;
-      return `<button class="textbook-option ${selected ? "textbook-option--selected" : ""}" data-action="textbook" data-textbook-id="${escapeHtml(entry.textbook_id)}" aria-pressed="${selected}">
-        <strong>${escapeHtml(entry.title)}</strong><span>${escapeHtml(entry.description)}</span><small>${lessonCountForBook} 课 · ${entryPack?.content_mode === "pinyin" ? "拼音发音训练" : "词语与句式练习"}</small>
-      </button>`;
+      return `<option value="${escapeHtml(entry.textbook_id)}" ${selected ? "selected" : ""}>${escapeHtml(entry.title)} · ${lessonCountForBook}课 · ${entryPack?.content_mode === "pinyin" ? "拼音发音训练" : "词语与句式练习"}</option>`;
     }).join("");
   const contentCard = hasContent && pack
     ? `<section class="content-status" aria-label="当前内容">
@@ -207,8 +206,14 @@ function renderHome(): void {
       </div>
     </section>
     <section class="book-picker" aria-label="选择教材">
-      <div><span class="eyebrow">第一步</span><h2>选择要使用的教材</h2><p>进入后再选择本轮课次。</p></div>
-      <div class="textbook-options">${textbookCards || "<p>教材目录正在读取。</p>"}</div>
+      <div><span class="eyebrow">第一步</span><h2>选择要使用的教材</h2><p>从下拉菜单选择教材，进入后再选择本轮课次。</p></div>
+      <div class="textbook-select">
+        <label for="textbook-select">当前教材</label>
+        <select id="textbook-select" class="textbook-dropdown" data-action="textbook" aria-describedby="textbook-description" ${activeTextbooks.length ? "" : "disabled"}>
+          ${textbookOptions || "<option>教材目录正在读取。</option>"}
+        </select>
+        <p id="textbook-description">${escapeHtml(selectedEntry?.description ?? "教材目录正在读取。")}</p>
+      </div>
     </section>
     ${contentError ? `<section class="content-error" role="alert"><strong>内容无法使用</strong><p>${escapeHtml(contentError)}</p></section>` : ""}
     ${contentCard}
@@ -385,7 +390,9 @@ function getScopeSelection(): ScopeSelection {
 
 function bindCommonActions(): void {
   document.onkeydown = null;
-  document.querySelectorAll<HTMLElement>("[data-action=textbook]").forEach((button) => button.addEventListener("click", () => selectTextbook(button.dataset.textbookId ?? "")));
+  document.querySelector<HTMLSelectElement>("[data-action=textbook]")?.addEventListener("change", (event) => {
+    selectTextbook((event.currentTarget as HTMLSelectElement).value);
+  });
   document.querySelectorAll<HTMLElement>("[data-action='home']").forEach((button) => button.addEventListener("click", () => navigate("home")));
   document.querySelector<HTMLElement>("[data-action='setup']")?.addEventListener("click", () => navigate("setup"));
 }
