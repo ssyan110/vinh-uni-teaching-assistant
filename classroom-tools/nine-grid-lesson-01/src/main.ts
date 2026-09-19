@@ -17,7 +17,7 @@ import {
   sentencesForScope,
   vocabularyForScope
 } from "./game";
-import { loadCommittedSeed } from "./content-source";
+import { loadCommittedLibrary } from "./content-source";
 import type {
   CellOwner,
   ContentPack,
@@ -26,6 +26,7 @@ import type {
   LegacySubmode,
   ScopeSelection,
   Team,
+  TextbookCatalogEntry,
   VocabularyItem
 } from "./types";
 
@@ -36,6 +37,9 @@ if (!appElement) throw new Error("找不到游戏显示区域。");
 const app: HTMLDivElement = appElement;
 
 let pack: ContentPack | null = null;
+let textbookCatalog: TextbookCatalogEntry[] = [];
+let packsByTextbook: Record<string, ContentPack> = {};
+let selectedTextbookId = "boya-quasi-intermediate-i";
 let view: View = "home";
 let selectedLessonIds: string[] = ["boya-quasi-intermediate-i:lesson-01"];
 let promptTimerId: number | null = null;
@@ -73,16 +77,25 @@ function teamName(team: Team): string {
   return team === "red" ? "红队" : "蓝队";
 }
 
+function isPinyinPack(): boolean {
+  return pack?.content_mode === "pinyin" || pack?.textbook_id === "boya-elementary-i";
+}
+
 function promptActivityLabel(activity: FunctionPromptActivity): string {
+  if (activity === "find-error") return "找错·纠音";
   return activity === "translate-vietnamese" ? "读例句·说越南文" : "句式造句";
 }
 
 function promptActivityTitle(activity: FunctionPromptActivity): string {
+  if (activity === "find-error") return "找出错误，改正并读一遍";
   return activity === "translate-vietnamese" ? "读例句，再说出越南文意思" : "用这个句式造一个新句子";
 }
 
 /** Lucide-compatible inline icons keep the game usable in the offline file. */
 function promptActivityIcon(activity: FunctionPromptActivity): string {
+  if (activity === "find-error") {
+    return `<svg class="function-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5M8 10.5l2 2 4-4"></path></svg>`;
+  }
   return activity === "translate-vietnamese"
     ? `<svg class="function-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"></rect><path d="M5 10a7 7 0 0 0 14 0M12 17v5M8 22h8"></path></svg>`
     : `<svg class="function-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><path d="M13 2v7h7M16 13.5l-4.8 4.8-2.7.4.4-2.7a1.6 1.6 0 0 1 2.3-2.3zM9 6h1M9 10h1"></path></svg>`;
@@ -117,18 +130,18 @@ function boardPromptPoolForScope(
   return [...prompts, ...sentencePrompts];
 }
 
-function shell(content: string, options: { compact?: boolean } = {}): string {
+function shell(content: string, options: { compact?: boolean; pinyin?: boolean } = {}): string {
   const contentSummary = pack
     ? `<span>${escapeHtml(pack.class_name)}</span><span>${pack.lessons.length} 课</span>`
     : `<span>还没有内容</span>`;
   return `
-    <div class="app-shell ${options.compact ? "app-shell--compact" : ""}">
+    <div class="app-shell ${options.compact ? "app-shell--compact" : ""} ${options.pinyin ? "app-shell--pinyin" : ""}">
       <div class="ambient ambient-a" aria-hidden="true"></div>
       <div class="ambient ambient-b" aria-hidden="true"></div>
       <header class="topbar">
         <button class="brand" data-action="home" aria-label="返回首页">
           <span class="brand-mark" aria-hidden="true">字</span>
-          <span><strong>博雅词语连线</strong><small>词语与句式造句课堂游戏</small></span>
+          <span><strong>博雅教材九宫格</strong><small>${options.pinyin ? "拼音发音课堂游戏" : "词语与句式课堂游戏"}</small></span>
         </button>
         <div class="content-chip" aria-label="当前内容">${contentSummary}</div>
       </header>
@@ -137,58 +150,77 @@ function shell(content: string, options: { compact?: boolean } = {}): string {
     </div>`;
 }
 
+
+
 function renderHome(): void {
+  const pinyin = isPinyinPack();
   const hasContent = Boolean(pack && (pack.vocabulary.length || pack.exercises.length || pack.sentence_patterns?.length));
-  const lessonCount = pack?.lessons.length ?? 0;
+  const lessonCount = pack?.lessons.filter((lesson) => lesson.active !== false).length ?? 0;
   const functionContentCount = (pack?.sentence_patterns?.length ?? 0) + (pack?.exercises.length ?? 0);
+  const textbookCards = textbookCatalog
+    .filter((entry) => entry.active !== false)
+    .map((entry) => {
+      const entryPack = packsByTextbook[entry.textbook_id];
+      const selected = entry.textbook_id === selectedTextbookId;
+      const lessonCountForBook = entryPack?.lessons.filter((lesson) => lesson.active !== false).length ?? 0;
+      return `<button class="textbook-option ${selected ? "textbook-option--selected" : ""}" data-action="textbook" data-textbook-id="${escapeHtml(entry.textbook_id)}" aria-pressed="${selected}">
+        <strong>${escapeHtml(entry.title)}</strong><span>${escapeHtml(entry.description)}</span><small>${lessonCountForBook} 课 · ${entryPack?.content_mode === "pinyin" ? "拼音发音训练" : "词语与句式练习"}</small>
+      </button>`;
+    }).join("");
   const contentCard = hasContent && pack
     ? `<section class="content-status" aria-label="当前内容">
-        <div><span class="eyebrow">本册内容</span><h2>${escapeHtml(pack.class_name)}</h2></div>
+        <div><span class="eyebrow">当前教材</span><h2>${escapeHtml(pack.class_name)}</h2></div>
         <dl>
-          <div><dt>可选内容</dt><dd>${lessonCount}</dd></div>
-          <div><dt>词语</dt><dd>${pack.vocabulary.length}</dd></div>
-          <div><dt>功能题</dt><dd>${functionContentCount}</dd></div>
+          <div><dt>可选课次</dt><dd>${lessonCount}</dd></div>
+          <div><dt>${pinyin ? "普通发音题" : "词语"}</dt><dd>${pack.vocabulary.length}</dd></div>
+          <div><dt>功能格</dt><dd>${functionContentCount}</dd></div>
         </dl>
       </section>`
     : `<section class="empty-note" aria-label="空白状态">
         <span aria-hidden="true">＋</span>
-        <div><strong>还没有课堂内容</strong><p>请重新打开完整的游戏文件。</p></div>
+        <div><strong>还没有可用教材</strong><p>请重新打开完整的游戏文件。</p></div>
       </section>`;
+  const samples = pinyin
+    ? ["b", "nǐ", "jǔ", "yīnyuè", "找错", "bù", "y", "w", "ü"]
+    : ["独生女", "照顾", "例句", "压力", "生活", "毕业", "父母", "例句", "照片"];
 
   app.innerHTML = shell(`
     <section class="hero">
       <div class="hero-copy">
-        <span class="eyebrow">准中级加速篇 I · 全十二课</span>
-        <h1>看内容，<br><em>说出来。</em></h1>
-        <p class="hero-lead">两组轮流，每回合换一位同学。先独立读词并解释意思，教师确认后占格；6–8列连四格、9列连五格获胜，由教师给胜组加分。</p>
+        <span class="eyebrow">${pinyin ? "初级起步篇 I · 第一至三课" : "准中级加速篇 I · 全十二课"}</span>
+        <h1>选教材，<br><em>${pinyin ? "练发音。" : "说出来。"}</em></h1>
+        <p class="hero-lead">${pinyin ? "先选教材，再选择课次。初级起步篇前三课只练拼音；学生读对后，由教师确认并占格。" : "先选教材，再选择课次。两组轮流练习，学生先读词或完成任务，教师确认后占格；6–8列连四格、9列连五格获胜。"}</p>
         <div class="hero-actions">
           <button class="button button--primary" data-action="setup" ${hasContent ? "" : "disabled"}>
-            <span>开始游戏</span><span aria-hidden="true">→</span>
+            <span>进入选择课次</span><span aria-hidden="true">→</span>
           </button>
-
         </div>
       </div>
       <div class="hero-board" aria-hidden="true">
         <span class="board-stamp">连成一线</span>
         <div class="sample-grid">
-          ${["独生女", "照顾", "例句", "压力", "生活", "毕业", "父母", "例句", "照片"].map((word, index) =>
+          ${samples.map((word, index) =>
             `<span class="sample-cell ${[0, 4, 8].includes(index) ? "sample-cell--marked" : ""}">${word}</span>`
           ).join("")}
         </div>
-        <p>6 × 6 至 9 × 9 <small>句式造句格上下左右不相邻</small></p>
+        <p>${pinyin ? "拼音发音 · 教师确认" : "6 × 6 至 9 × 9"} <small>${pinyin ? "普通格与找错功能格" : "句式造句格上下左右不相邻"}</small></p>
       </div>
+    </section>
+    <section class="book-picker" aria-label="选择教材">
+      <div><span class="eyebrow">第一步</span><h2>选择要使用的教材</h2><p>进入后再选择本轮课次。</p></div>
+      <div class="textbook-options">${textbookCards || "<p>教材目录正在读取。</p>"}</div>
     </section>
     ${contentError ? `<section class="content-error" role="alert"><strong>内容无法使用</strong><p>${escapeHtml(contentError)}</p></section>` : ""}
     ${contentCard}
-    <footer class="home-footer"><span>课堂投影 · 词语、句式、口语互动</span><span>离线可用</span></footer>
-  `);
+    <footer class="home-footer"><span>课堂投影 · 先选教材，再选课次</span><span>离线可用</span></footer>
+  `, { pinyin });
   bindCommonActions();
 }
-
 function renderSetup(): void {
   if (!pack) return renderHome();
   const activeLessons = pack.lessons.filter((lesson) => lesson.active !== false).sort((a, b) => a.order - b.order);
   selectedLessonIds = selectedLessonIds.filter((id) => activeLessons.some((lesson) => lesson.lesson_id === id));
+  const pinyin = isPinyinPack();
   const currentSelection = getScopeSelection();
   const chosen = vocabularyForScope(pack, currentSelection);
   const roundPlan = splitVocabularyRounds(chosen);
@@ -210,33 +242,33 @@ function renderSetup(): void {
       <div class="setup-main">
         <span class="eyebrow">本轮内容</span>
         <h1>选好课次，<br><em>开始对战。</em></h1>
-        <p class="setup-lead">第一课用 6 × 6，含31个词语和5个句式造句格。其他选课随词数调整，最多 9 × 9；句式造句格上下左右不相邻，词语混合分轮，不重复。</p>
+        <p class="setup-lead">${pinyin ? "本教材前三课只显示拼音。学生先读普通发音格；功能格要找出错误、改正并读一遍，教师确认后才占格。" : "第一课用 6 × 6，含31个词语和5个句式造句格。其他选课随词数调整，最多 9 × 9；句式造句格上下左右不相邻，词语混合分轮，不重复。"}</p>
         <div class="setup-card">
           <fieldset class="lesson-picker"><legend>选择本轮课次（可多选）</legend>
-            <div class="lesson-tools"><button class="text-button" data-action="all-lessons">全选十二课</button><button class="text-button" data-action="clear-lessons">清空选择</button></div>
-            <div class="lesson-options">${activeLessons.map((lesson) => `<label><input type="checkbox" name="lesson" value="${escapeHtml(lesson.lesson_id)}" ${selectedLessonIds.includes(lesson.lesson_id) ? "checked" : ""}/><span>${escapeHtml(lesson.lesson_name)}<small>${vocabularyForScope(pack!, {mode: "single", lessonIds: [lesson.lesson_id]}).length} 个词语</small></span></label>`).join("")}</div>
+            <div class="lesson-tools"><button class="text-button" data-action="all-lessons">全选${activeLessons.length}课</button><button class="text-button" data-action="clear-lessons">清空选择</button></div>
+            <div class="lesson-options">${activeLessons.map((lesson) => `<label><input type="checkbox" name="lesson" value="${escapeHtml(lesson.lesson_id)}" ${selectedLessonIds.includes(lesson.lesson_id) ? "checked" : ""}/><span>${escapeHtml(lesson.lesson_name)}<small>${vocabularyForScope(pack!, {mode: "single", lessonIds: [lesson.lesson_id]}).length} ${pinyin ? "个普通发音题" : "个词语"}</small></span></label>`).join("")}</div>
           </fieldset>
           <div class="legacy-settings">
             <fieldset><legend>课堂操作方式</legend>
               <label><input type="radio" name="legacy-submode" value="classroom" ${legacySubmode === "classroom" ? "checked" : ""}/><span><b>课堂分队</b><small>首轮蓝队先，之后每轮交换先手；占格后换队。</small></span></label>
               <label><input type="radio" name="legacy-submode" value="solo" ${legacySubmode === "solo" ? "checked" : ""}/><span><b>学生对战电脑</b><small>学生用蓝队，电脑用红队。</small></span></label>
             </fieldset>
-            <div class="function-note"><strong>功能格固定 30 秒</strong><span>按图标选择：用句式造句，或读例句并说出越南文意思 · 教师判定</span></div>
+            <div class="function-note"><strong>功能格固定 30 秒</strong><span>${pinyin ? "找出错误 → 改正 → 朗读 · 教师确认后占格" : "按图标选择：用句式造句，或读例句并说出越南文意思 · 教师判定"}</span></div>
           </div>
         </div>
       </div>
       <aside class="board-plan" aria-live="polite">
         <span class="eyebrow">${firstRoundSide} × ${firstRoundSide} 棋盘 · ${winLengthForSide(firstRoundSide)}格连线</span>
         <h2>${escapeHtml(selectedScopeName())}</h2>
-        <strong>${chosen.length}</strong><span>个不重复词语</span>
+        <strong>${chosen.length}</strong><span>${pinyin ? "个普通发音题" : "个不重复词语"}</span>
         ${chosen.length
           ? `<div class="plan-line"><b>${firstRoundSide ** 2}</b><span>${firstRoundWordCount} 个词语 + ${firstRoundFunctionCount} 个功能格 · ${roundPlan.length} 轮</span></div>`
           : `<div class="plan-line"><b>${firstRoundSide ** 2}</b><span>格 · 请至少选择一课</span></div>`}
-        <div class="plan-functions"><span>可用功能题 <small>句式 ${scopedPatternCount} · 例句 ${scopedExampleCount}</small></span><strong>${scopedPrompts.length}</strong><small>${firstRoundFunctionCount ? "按需要轮换功能题" : "本轮无需补入功能格"}</small></div>
+        <div class="plan-functions"><span>可用功能格 <small>${pinyin ? "找错题" : `句式 ${scopedPatternCount} · 例句 ${scopedExampleCount}`}</small></span><strong>${scopedPrompts.length}</strong><small>${firstRoundFunctionCount ? "按需要轮换功能题" : "本轮无需补入功能格"}</small></div>
         <button class="button button--primary button--wide" data-action="start-game" ${canStart ? "" : "disabled"}>开始游戏 <span aria-hidden="true">→</span></button>
       </aside>
     </section>
-  `);
+  `, { pinyin });
   bindCommonActions();
   bindSetupActions();
 }
@@ -252,6 +284,7 @@ function renderGame(): void {
   const side = boardSide;
   const required = boardSide >= 9 ? 5 : 4;
   const isManual = legacySubmode === "classroom";
+  const pinyin = isPinyinPack();
   const claims = countClaims(owners);
   const isDraw = !winner && !pendingWinner && owners.length > 0 && owners.every(Boolean);
   const result = winner || isDraw
@@ -282,19 +315,20 @@ function renderGame(): void {
           const promptLabel = prompt ? promptActivityLabel(prompt.activity) : "";
           const disabled = Boolean(winner || isDraw || owners[index]);
           const aria = prompt ? `${promptLabel}功能格` : item?.word ?? "空白格";
-          return `<button class="board-cell ${prompt ? "board-cell--function" : "board-cell--word"} ${owners[index] ? `claimed claimed--${owners[index]}` : ""}" role="gridcell" style="--word-length:${Math.max(2, ...wordLines.map((line) => Array.from(line).length))};--word-lines:${Math.max(1,wordLines.length)}" data-source-item="${escapeHtml(item?.item_id ?? prompt?.sourceItemId ?? "")}" data-cell="${index}" aria-label="${escapeHtml(aria)}${owners[index] ? `，已由${teamName(owners[index] as Team)}选择` : ""}" ${disabled ? "disabled" : ""}><span>${prompt ? promptActivityIcon(prompt.activity) : wordLines.map(escapeHtml).join("<br>")}</span>${prompt ? `<small>30 秒</small>` : ""}</button>`;
+          return `<button class="board-cell ${prompt ? "board-cell--function" : "board-cell--word"} ${pinyin ? "board-cell--pinyin" : ""} ${owners[index] ? `claimed claimed--${owners[index]}` : ""}" role="gridcell" style="--word-length:${Math.max(2, ...wordLines.map((line) => Array.from(line).length))};--word-lines:${Math.max(1,wordLines.length)}" data-source-item="${escapeHtml(item?.item_id ?? prompt?.sourceItemId ?? "")}" data-cell="${index}" aria-label="${escapeHtml(aria)}${owners[index] ? `，已由${teamName(owners[index] as Team)}选择` : ""}" ${disabled ? "disabled" : ""}><span>${prompt ? promptActivityIcon(prompt.activity) : wordLines.map(escapeHtml).join("<br>")}</span>${prompt ? `<small>30 秒</small>` : ""}</button>`;
         }).join("")}
       </div>
     </section>
     <section class="game-footer">
-      <p><strong>${winner || isDraw ? "本轮结束" : (isManual ? "教师确认后点击词语占格" : "请蓝队选择一格")}</strong><span> · ${isManual ? "两组轮流换人，独立读词并解释意思；功能格按图标完成句式造句或越南文口语任务。" : "电脑红队会自动选择。"}</span></p>
+      <p><strong>${winner || isDraw ? "本轮结束" : (isManual ? (pinyin ? "学生读对后，教师确认并占格" : "教师确认后点击词语占格") : "请蓝队选择一格")}</strong><span> · ${isManual ? (pinyin ? "普通格读拼音；功能格找错、改正并朗读，教师判定通过。" : "两组轮流换人，独立读词并解释意思；功能格按图标完成句式造句或越南文口语任务。") : "电脑红队会自动选择。"}</span></p>
       <div class="round-controls"><button class="text-button" data-action="undo-turn" ${turnHistory.length ? "" : "disabled"}>撤销上一步</button>${winner || isDraw ? `<button class="button button--primary" data-action="next-round">${roundIndex < rounds.length - 1 ? "下一轮" : "再玩一次"} →</button>` : `<button class="button button--secondary" data-action="pass-turn">未通过，换队</button><button class="text-button" data-action="reset-round">重开本轮</button>`}</div>
     </section>
-    ${activePrompt ? `<div class="modal-backdrop" role="presentation"><section class="task-modal" role="dialog" aria-modal="true" aria-labelledby="task-title">
+      ${activePrompt ? `<div class="modal-backdrop" role="presentation"><section class="task-modal" role="dialog" aria-modal="true" aria-labelledby="task-title">
       <span class="eyebrow">${teamName(turnTeam)} · ${promptActivityLabel(activePrompt.activity)} · ${activePrompt.seconds} 秒</span>
       <h2 id="task-title">${promptActivityTitle(activePrompt.activity)}</h2>
       <p class="task-prompt" lang="zh">${escapeHtml(activePrompt.prompt)}</p>
       ${activePrompt.support ? `<p class="task-support">${escapeHtml(activePrompt.support)}</p>` : ""}
+      ${activePrompt.answer ? `<details class="teacher-check"><summary>教师核对（点击查看）</summary><strong>${escapeHtml(activePrompt.answer)}</strong>${activePrompt.teacherCheck ? `<p>${escapeHtml(activePrompt.teacherCheck)}</p>` : ""}</details>` : ""}
       <div class="prompt-countdown" aria-live="polite"><strong id="prompt-timer">${promptRemaining}</strong><span>秒</span></div>
       <div class="form-actions"><button class="button button--secondary" data-action="skip-prompt">返回棋盘</button><button class="button button--secondary" data-action="pass-turn">未通过，换队</button><button class="button button--primary" data-action="complete-prompt">${teamName(turnTeam)}完成并占格</button></div>
     </section></div>` : ""}
@@ -302,7 +336,7 @@ function renderGame(): void {
       <div class="victory-pug">${pugArtwork()}</div><p class="victory-team">${teamName(winner)}获胜！</p><h2 id="victory-title">恭喜你赢了！</h2><p>一起为自己和队友鼓掌吧！</p>
       <div class="form-actions"><button class="button button--primary" data-action="save-result">保存比赛结果图片</button><button class="button button--secondary" data-action="dismiss-celebration">查看棋盘</button></div><p id="export-status" role="status"></p><div id="result-preview"></div>
     </section></div>` : ""}
-  `, { compact: true });
+  `, { compact: true, pinyin });
   bindCommonActions();
   bindGameActions();
   const modal = document.querySelector<HTMLElement>(".task-modal");
@@ -327,9 +361,22 @@ function renderGame(): void {
 }
 
 function selectedScopeName(): string {
-  if (selectedLessonIds.length === 12) return "全十二课（第1—12课）";
-  if (selectedLessonIds.length > 2) return `第${pack?.lessons.filter((lesson) => selectedLessonIds.includes(lesson.lesson_id)).map((lesson) => lesson.order).join("、")}课`;
-  return pack?.lessons.filter((lesson) => selectedLessonIds.includes(lesson.lesson_id)).map((lesson) => lesson.lesson_name).join("、") || "请至少选择一课";
+  const activeLessons = pack?.lessons.filter((lesson) => lesson.active !== false) ?? [];
+  const selectedLessons = activeLessons.filter((lesson) => selectedLessonIds.includes(lesson.lesson_id));
+  if (selectedLessons.length === activeLessons.length && activeLessons.length > 1) return `全${activeLessons.length}课`;
+  if (selectedLessons.length > 2) return `第${selectedLessons.map((lesson) => lesson.order).join("、")}课`;
+  return selectedLessons.map((lesson) => lesson.lesson_name).join("、") || "请至少选择一课";
+}
+
+function selectTextbook(textbookId: string): void {
+  const nextPack = packsByTextbook[textbookId];
+  if (!nextPack) return;
+  selectedTextbookId = textbookId;
+  pack = nextPack;
+  selectedLessonIds = [nextPack.lessons.find((lesson) => lesson.active !== false)?.lesson_id ?? ""];
+  liveMessage = `已选择${nextPack.class_name}。下一步请选择课次。`;
+  view = "home";
+  renderHome();
 }
 
 function getScopeSelection(): ScopeSelection {
@@ -338,6 +385,7 @@ function getScopeSelection(): ScopeSelection {
 
 function bindCommonActions(): void {
   document.onkeydown = null;
+  document.querySelectorAll<HTMLElement>("[data-action=textbook]").forEach((button) => button.addEventListener("click", () => selectTextbook(button.dataset.textbookId ?? "")));
   document.querySelectorAll<HTMLElement>("[data-action='home']").forEach((button) => button.addEventListener("click", () => navigate("home")));
   document.querySelector<HTMLElement>("[data-action='setup']")?.addEventListener("click", () => navigate("setup"));
 }
@@ -684,12 +732,16 @@ function stopPromptTimer(): void {
 
 async function initialize(): Promise<void> {
   renderHome();
-  const resolution = await loadCommittedSeed();
-  pack = resolution.pack;
+  const resolution = await loadCommittedLibrary();
+  textbookCatalog = resolution.catalog.textbooks.filter((entry) => entry.active !== false);
+  packsByTextbook = resolution.packs;
   contentError = resolution.error;
-  if (pack && (pack.class_id !== "boya-quasi-intermediate-i" || pack.lessons.some((lesson) => !lesson.lesson_id.startsWith("boya-quasi-intermediate-i:lesson-")))) {
-    pack = null;
-    contentError = "教材不匹配，请打开《准中级加速篇 I》的完整游戏文件。";
+  const defaultEntry = textbookCatalog.find((entry) => entry.textbook_id === selectedTextbookId && packsByTextbook[entry.textbook_id])
+    ?? textbookCatalog.find((entry) => packsByTextbook[entry.textbook_id]);
+  if (defaultEntry) {
+    selectedTextbookId = defaultEntry.textbook_id;
+    pack = packsByTextbook[defaultEntry.textbook_id];
+    selectedLessonIds = [defaultEntry.default_lesson_id ?? pack.lessons.find((lesson) => lesson.active !== false)?.lesson_id ?? ""];
   }
   renderHome();
 }

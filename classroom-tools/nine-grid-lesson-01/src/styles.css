@@ -1,5 +1,24 @@
 @import url("./styles/base.css");
 
+.book-picker { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(220px, .6fr) minmax(0, 1.4fr); gap: 24px; align-items: start; margin: 0 4vw 28px; padding: 22px 26px; border: 1px solid rgba(255, 255, 255, .78); border-radius: var(--radius-lg); background: var(--paper-bright); box-shadow: var(--shadow); backdrop-filter: blur(16px); }
+.book-picker h2 { margin: 0; font-size: 24px; }
+.book-picker p { margin: 6px 0 0; color: var(--ink-soft); line-height: 1.5; }
+.textbook-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.textbook-option { display: grid; gap: 7px; min-height: 132px; padding: 17px; border: 1px solid var(--line-strong); border-radius: 16px; color: var(--ink); background: rgba(255, 255, 255, .55); text-align: left; cursor: pointer; transition: border-color 180ms ease, background 180ms ease, transform 180ms ease; }
+.textbook-option:hover { transform: translateY(-2px); border-color: var(--teal); background: #fff; }
+.textbook-option--selected { border-color: var(--teal-dark); background: var(--teal-soft); box-shadow: inset 0 0 0 2px var(--teal); }
+.textbook-option strong { font-size: 18px; line-height: 1.35; }
+.textbook-option span { color: var(--ink-soft); font-size: 14px; line-height: 1.45; }
+.textbook-option small { color: var(--teal-dark); font-size: 12px; font-weight: 800; }
+.teacher-check { margin: 20px 0 0; padding: 12px 15px; border: 1px dashed var(--line-strong); border-radius: 12px; color: var(--teal-dark); background: var(--teal-soft); text-align: left; }
+.teacher-check summary { cursor: pointer; font-weight: 800; }
+.teacher-check strong { display: block; margin-top: 10px; font-size: 27px; line-height: 1.3; text-align: center; }
+.teacher-check p { margin: 8px 0 0; color: var(--ink-soft); font-size: 14px; line-height: 1.5; }
+.app-shell--pinyin .board-cell--pinyin span { font-family: "Times New Roman", sans-serif; font-weight: 700; }
+.app-shell--pinyin .board-cell--function { background: rgba(224, 235, 247, .94); }
+.app-shell--pinyin .board-cell--function:hover:not(:disabled) { background: #f0f6fb; }
+@media (max-width: 980px) { .book-picker { grid-template-columns: 1fr; } }
+@media (max-width: 680px) { .book-picker { margin-inline: 0; padding: 18px; } .textbook-options { grid-template-columns: 1fr; } }
 .lesson-picker { min-width: 0; margin: 0; padding: 0; border: 0; }
 .lesson-picker legend { font-size: 20px; font-weight: bold; }
 .lesson-tools { display: flex; gap: 24px; margin: 14px 0; }

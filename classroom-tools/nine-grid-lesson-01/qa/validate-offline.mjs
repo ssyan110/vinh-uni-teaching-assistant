@@ -4,6 +4,10 @@ const html = readFileSync(new URL("../博雅准中级-全册词语连线.html", 
 const errors = [];
 
 if (!html.includes("window.__CLASS_CONTENT__=")) errors.push("离线版没有内嵌课堂内容");
+if (!html.includes("window.__TEXTBOOK_CATALOG__=")) errors.push("离线版没有内嵌教材目录");
+if (!html.includes("boya-elementary-i")) errors.push("离线版没有内嵌初级起步篇教材");
+if (!html.includes("find-error")) errors.push("离线版没有内嵌拼音找错功能");
+if (html.includes("F-L02-TONE-")) errors.push("离线版仍包含已删除的标调位置题");
 if (!html.includes("window.__OFFLINE_SEED_ONLY__=true")) errors.push("离线版没有启用单文件启动模式");
 if (!html.includes("独生女")) errors.push("离线版没有内嵌第一课词语");
 if (!html.includes("丽丽是家里的独生女。")) errors.push("离线版没有内嵌 PPT 例句");

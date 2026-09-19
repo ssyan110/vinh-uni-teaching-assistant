@@ -265,14 +265,21 @@ export function functionPromptsForScope(pack: ContentPack, selection: ScopeSelec
       : [];
     if (item.active === false || (!selected.has(lessonId) && !reviewIds.some((id) => selected.has(id)))) return [];
     const kind = item.function_kind;
-    if (kind !== "pattern-make" && kind !== "dialogue-pattern" && kind !== "sentence-rewrite") return [];
+    if (kind !== "pattern-make" && kind !== "dialogue-pattern" && kind !== "sentence-rewrite" && kind !== "find-error") return [];
     const prompt = String(item.prompt ?? "").trim();
     if (!prompt) return [];
+    const activity = kind === "find-error"
+      ? "find-error"
+      : "translate-vietnamese";
     return [{
       kind,
-      activity: "translate-vietnamese",
+      activity,
       prompt,
-      support: "请先读出课本例句，再说出它的越南文意思。",
+      support: kind === "find-error"
+        ? String(item.instruction ?? "").trim() || "找出错误，说出正确形式，再读一遍。"
+        : "请先读出课本例句，再说出它的越南文意思。",
+      answer: kind === "find-error" ? String(item.correct_form ?? "").trim() || undefined : undefined,
+      teacherCheck: kind === "find-error" ? String(item.teacher_check ?? "").trim() || undefined : undefined,
       // Function cells intentionally use one classroom rhythm: every task gets
       // a visible 30-second turn, regardless of its prompt kind.
       seconds: 30,
@@ -366,6 +373,7 @@ export function splitVocabularyRounds<T>(items: T[]): T[][] {
 
 /** Up to three Han characters per line; punctuation stays with its text. */
 export function boardWordLines(word: string): string[] {
+  if (word.includes(" / ")) return word.split(" / ").map((line) => line.trim()).filter(Boolean);
   const lines: string[] = [];
   let line = '', count = 0;
   for (const character of Array.from(word)) {

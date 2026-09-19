@@ -12,8 +12,14 @@ if (!scriptMatch || !styleMatch) throw new Error("找不到 Vite 生成的 JS �
 
 const script = readFileSync(resolve(dist, scriptMatch[1]), "utf8");
 const style = readFileSync(resolve(dist, styleMatch[1]), "utf8");
-const content = JSON.parse(readFileSync(resolve(root, "public/content/class-content.json"), "utf8"));
-const safeContent = JSON.stringify(content).replaceAll("<", "\\u003c");
+const catalog = JSON.parse(readFileSync(resolve(root, "public/content/textbooks.json"), "utf8"));
+const packs = Object.fromEntries(catalog.textbooks.map((entry) => [
+  entry.textbook_id,
+  JSON.parse(readFileSync(resolve(root, "public", entry.pack_file), "utf8"))
+]));
+const safeCatalog = JSON.stringify(catalog).replaceAll("<", "\\u003c");
+const safePacks = JSON.stringify(packs).replaceAll("<", "\\u003c");
+const safeContent = JSON.stringify(packs["boya-quasi-intermediate-i"]).replaceAll("<", "\\u003c");
 const safeScript = script.replaceAll("</script", "<\\/script");
 
 const offline = index
@@ -21,7 +27,7 @@ const offline = index
   // Keep the seed in <head>, but move the bundled runtime to the end of the
   // body. Inline scripts ignore `defer`; placing the runtime after #app keeps
   // the DOM query valid in file:// browsers as well as served pages.
-  .replace(scriptMatch[0], `<script>window.__CLASS_CONTENT__=${safeContent};window.__OFFLINE_SEED_ONLY__=true;</script>`)
+  .replace(scriptMatch[0], `<script>window.__TEXTBOOK_CATALOG__=${safeCatalog};window.__TEXTBOOK_PACKS__=${safePacks};window.__CLASS_CONTENT__=${safeContent};window.__OFFLINE_SEED_ONLY__=true;</script>`)
   // Use a function replacement so `$&` or `$'` inside the minified bundle are
   // treated as JavaScript text, not as String.replace substitution tokens.
   .replace("</body>", () => `<script>${safeScript}</script>\n  </body>`);

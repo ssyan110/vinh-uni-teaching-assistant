@@ -57,6 +57,10 @@ export interface ContentPack {
   class_name: string;
   content_revision: number;
   chinese_variant: "simplified" | "traditional";
+  textbook_id?: string;
+  content_mode?: "vocabulary" | "pinyin";
+  content_status?: string;
+  notes?: string;
   lessons: Lesson[];
   characters: CharacterItem[];
   vocabulary: VocabularyItem[];
@@ -64,6 +68,20 @@ export interface ContentPack {
   sentence_patterns?: SentencePattern[];
   sentences: SentenceItem[];
   exercises: Record<string, unknown>[];
+}
+
+export interface TextbookCatalogEntry {
+  textbook_id: string;
+  title: string;
+  description: string;
+  pack_file: string;
+  default_lesson_id?: string;
+  active?: boolean;
+}
+
+export interface TextbookCatalog {
+  schema_version: string;
+  textbooks: TextbookCatalogEntry[];
 }
 
 export type ScopeMode = "all" | "single" | "multiple" | "cumulative";
@@ -88,15 +106,16 @@ export type CellOwner = Team | null;
 
 export type GameMode = "modern" | "legacy";
 export type LegacySubmode = "classroom" | "solo";
-/** The only three kinds that can appear in a function cell. */
-export type FunctionPromptKind = "pattern-make" | "dialogue-pattern" | "sentence-rewrite";
-export type FunctionPromptActivity = "make-sentence" | "translate-vietnamese";
+export type FunctionPromptKind = "pattern-make" | "dialogue-pattern" | "sentence-rewrite" | "find-error";
+export type FunctionPromptActivity = "make-sentence" | "translate-vietnamese" | "find-error";
 
 export interface FunctionPrompt {
   kind: FunctionPromptKind;
   activity: FunctionPromptActivity;
   prompt: string;
   support?: string;
+  answer?: string;
+  teacherCheck?: string;
   seconds: 30;
   sourceItemId: string;
 }
