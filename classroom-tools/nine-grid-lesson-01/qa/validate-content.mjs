@@ -47,11 +47,12 @@ for (const id of ids) {
 assert.deepEqual(catalog.textbooks.map(x => x.textbook_id), ['boya-quasi-intermediate-i', 'boya-elementary-i']);
 assert.equal(pinyinPack.textbook_id, 'boya-elementary-i');
 assert.equal(pinyinPack.content_mode, 'pinyin');
+assert.equal(pinyinPack.content_revision, 2);
 assert.deepEqual(pinyinPack.lessons.map(x => x.lesson_id), ['boya-elementary-i:lesson-01', 'boya-elementary-i:lesson-02', 'boya-elementary-i:lesson-03']);
 assert.equal(pinyinPack.vocabulary.length, 143);
 assert.equal(pinyinPack.exercises.length, 60);
 assert.equal(pinyinPack.exercises.filter(x => x.item_id.includes('TONE')).length, 0);
 assert(pinyinPack.vocabulary.every(x => !/\p{Script=Han}/u.test(x.word) && x.word === x.pinyin));
-assert(pinyinPack.exercises.every(x => x.function_kind === 'find-error' && x.activity === 'find-error' && x.prompt && x.correct_form && !/\p{Script=Han}/u.test(x.prompt) && !/\p{Script=Han}/u.test(x.correct_form)));
+assert(pinyinPack.exercises.every(x => x.function_kind === 'find-error' && x.activity === 'find-error' && x.prompt && x.correct_form && x.prompt !== x.correct_form && !x.prompt.includes(' / ') && !/\p{Script=Han}/u.test(x.prompt) && !/\p{Script=Han}/u.test(x.correct_form)));
 assert([...new Set(pinyinPack.exercises.map(x => x.introduced_lesson_id))].every(id => pinyinPack.lessons.some(lesson => lesson.lesson_id === id)));
 console.log('Content verified: quasi-intermediate 12 lessons plus elementary pinyin lessons 1-3 (143 pronunciation items, 60 find-error tasks).');
