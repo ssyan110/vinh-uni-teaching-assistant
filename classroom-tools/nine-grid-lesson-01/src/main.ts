@@ -156,6 +156,7 @@ function renderHome(): void {
   const pinyin = isPinyinPack();
   const hasContent = Boolean(pack && (pack.vocabulary.length || pack.exercises.length || pack.sentence_patterns?.length));
   const lessonCount = pack?.lessons.filter((lesson) => lesson.active !== false).length ?? 0;
+  const vocabularyCount = pack ? vocabularyForScope(pack, { mode: "all", lessonIds: [] }).length : 0;
   const functionContentCount = (pack?.sentence_patterns?.length ?? 0) + (pack?.exercises.length ?? 0);
   const activeTextbooks = textbookCatalog
     .filter((entry) => entry.active !== false)
@@ -171,7 +172,7 @@ function renderHome(): void {
         <div><span class="eyebrow">当前教材</span><h2>${escapeHtml(pack.class_name)}</h2></div>
         <dl>
           <div><dt>可选课次</dt><dd>${lessonCount}</dd></div>
-          <div><dt>${pinyin ? "普通发音题" : "词语"}</dt><dd>${pack.vocabulary.length}</dd></div>
+          <div><dt>${pinyin ? "普通发音题" : "词语"}</dt><dd>${vocabularyCount}</dd></div>
           <div><dt>功能格</dt><dd>${functionContentCount}</dd></div>
         </dl>
       </section>`

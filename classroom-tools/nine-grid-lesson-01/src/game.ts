@@ -231,7 +231,16 @@ export function charactersForScope(pack: ContentPack, selection: ScopeSelection)
 
 export function vocabularyForScope(pack: ContentPack, selection: ScopeSelection): VocabularyItem[] {
   const selected = lessonIdsForScope(pack, selection);
-  return uniqueVocabulary(pack.vocabulary.filter((item) => isInScope(item, selected) && item.word.trim()));
+  const scoped = pack.vocabulary.filter((item) => isInScope(item, selected) && item.word.trim());
+  const items = pack.content_mode === "pinyin"
+    ? scoped.flatMap((item) => {
+        const syllables = item.word.split(" / ").map((word) => word.trim()).filter(Boolean);
+        return syllables.map((word, index) => syllables.length === 1
+          ? item
+          : { ...item, item_id: `${item.item_id}:part-${index + 1}`, word, pinyin: word });
+      })
+    : scoped;
+  return uniqueVocabulary(items);
 }
 
 export function sentencesForScope(pack: ContentPack, selection: ScopeSelection) {

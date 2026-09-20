@@ -1,10 +1,12 @@
 import { describe, it, expect } from 'vitest';
 import raw from '../public/content/class-content.json';
+import pinyinRaw from '../public/content/boya-elementary-i-l01-l03-pinyin.json';
 import { parseContent } from './importer';
 import { functionCellPositions } from './game';
 import { vocabularyForScope, functionPromptsForScope, sentencePatternPromptsForScope, splitVocabularyRounds, vocabularyRoundPlan, boardWordLines, createLegacyBoardVocabulary, fillFunctionPrompts, seededShuffle } from './game';
 
 const pack = parseContent(JSON.stringify(raw), 'class-content.json').pack;
+const pinyinPack = parseContent(JSON.stringify(pinyinRaw), 'boya-elementary-i-l01-l03-pinyin.json').pack;
 const ids = pack.lessons.map(x => x.lesson_id);
 
 describe('book lesson isolation', () => {
@@ -45,6 +47,23 @@ describe('book lesson isolation', () => {
     const fixture = { ...pack, vocabulary: [a, { ...a, item_id: 'duplicate-in-l2', introduced_lesson_id: ids[1] }] };
     expect(vocabularyForScope(fixture, {mode:'multiple',lessonIds:ids.slice(0,2)})).toHaveLength(1);
     expect(vocabularyForScope(fixture, {mode:'single',lessonIds:[ids[1]]})[0].item_id).toBe('duplicate-in-l2');
+  });
+});
+
+describe('pinyin board items', () => {
+  it('shows each syllable from a source contrast pair as its own item', () => {
+    const lesson = 'boya-elementary-i:lesson-01';
+    const items = vocabularyForScope(pinyinPack, { mode: 'single', lessonIds: [lesson] });
+    const allItems = vocabularyForScope(pinyinPack, { mode: 'all', lessonIds: [] });
+    const pair = items.filter((item) => item.item_id.startsWith('R-L01-052:part-'));
+
+    expect(items).toHaveLength(90);
+    expect(items.every((item) => !item.word.includes(' / '))).toBe(true);
+    expect(pair.map((item) => item.word)).toEqual(['bā', 'bō']);
+    expect(pair.every((item) => item.pinyin === item.word && item.source_record_id === 'R-L01-052')).toBe(true);
+    expect(vocabularyRoundPlan(items.length)).toEqual({ wordCounts: [45, 45], sides: [8, 8] });
+    expect(allItems).toHaveLength(175);
+    expect(allItems.every((item) => !item.word.includes(' / '))).toBe(true);
   });
 });
 
