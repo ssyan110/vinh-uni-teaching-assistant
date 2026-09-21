@@ -1,12 +1,12 @@
 import { describe, it, expect } from 'vitest';
 import raw from '../public/content/class-content.json';
-import pinyinRaw from '../public/content/boya-elementary-i-l01-l03-pinyin.json';
+import elementaryRaw from '../public/content/boya-elementary-i.json';
 import { parseContent } from './importer';
 import { functionCellPositions } from './game';
 import { vocabularyForScope, functionPromptsForScope, sentencePatternPromptsForScope, splitVocabularyRounds, vocabularyRoundPlan, boardWordLines, createLegacyBoardVocabulary, fillFunctionPrompts, seededShuffle } from './game';
 
 const pack = parseContent(JSON.stringify(raw), 'class-content.json').pack;
-const pinyinPack = parseContent(JSON.stringify(pinyinRaw), 'boya-elementary-i-l01-l03-pinyin.json').pack;
+const elementaryPack = parseContent(JSON.stringify(elementaryRaw), 'boya-elementary-i.json').pack;
 const ids = pack.lessons.map(x => x.lesson_id);
 
 describe('book lesson isolation', () => {
@@ -50,11 +50,11 @@ describe('book lesson isolation', () => {
   });
 });
 
-describe('pinyin board items', () => {
+describe('elementary book board items', () => {
   it('shows each syllable from a source contrast pair as its own item', () => {
     const lesson = 'boya-elementary-i:lesson-01';
-    const items = vocabularyForScope(pinyinPack, { mode: 'single', lessonIds: [lesson] });
-    const allItems = vocabularyForScope(pinyinPack, { mode: 'all', lessonIds: [] });
+    const items = vocabularyForScope(elementaryPack, { mode: 'single', lessonIds: [lesson] });
+    const allItems = vocabularyForScope(elementaryPack, { mode: 'all', lessonIds: [] });
     const pair = items.filter((item) => item.item_id.startsWith('R-L01-052:part-'));
 
     expect(items).toHaveLength(90);
@@ -62,8 +62,22 @@ describe('pinyin board items', () => {
     expect(pair.map((item) => item.word)).toEqual(['bā', 'bō']);
     expect(pair.every((item) => item.pinyin === item.word && item.source_record_id === 'R-L01-052')).toBe(true);
     expect(vocabularyRoundPlan(items.length)).toEqual({ wordCounts: [45, 45], sides: [8, 8] });
-    expect(allItems).toHaveLength(175);
+    expect(allItems).toHaveLength(342);
     expect(allItems.every((item) => !item.word.includes(' / '))).toBe(true);
+  });
+
+  it('keeps lessons 4–10 as single vocabulary and Vietnamese-meaning pattern prompts', () => {
+    const lesson = 'boya-elementary-i:lesson-04';
+    const items = vocabularyForScope(elementaryPack, { mode: 'single', lessonIds: [lesson] });
+    const prompts = sentencePatternPromptsForScope(elementaryPack, { mode: 'single', lessonIds: [lesson] });
+
+    expect(elementaryPack.lessons).toHaveLength(10);
+    expect(elementaryPack.lessons[0].content_mode).toBe('pinyin');
+    expect(elementaryPack.lessons[3].content_mode).toBe('vocabulary');
+    expect(items).toHaveLength(19);
+    expect(items.every((item) => item.meaning_vi && !item.word.includes(' / '))).toBe(true);
+    expect(prompts).toHaveLength(7);
+    expect(prompts.every((item) => item.support?.includes('越南文意思') && !item.answer)).toBe(true);
   });
 });
 

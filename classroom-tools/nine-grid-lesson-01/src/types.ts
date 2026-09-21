@@ -2,6 +2,7 @@ export interface Lesson {
   lesson_id: string;
   lesson_name: string;
   order: number;
+  content_mode?: "vocabulary" | "pinyin";
   active?: boolean;
 }
 
@@ -42,6 +43,7 @@ export interface SentenceItem {
 export interface SentencePattern {
   item_id: string;
   pattern: string;
+  meaning_vi?: string;
   introduced_lesson_id: string;
   review_lesson_ids?: string[];
   topic?: string;

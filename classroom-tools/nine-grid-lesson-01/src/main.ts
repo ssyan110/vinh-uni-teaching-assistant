@@ -77,8 +77,18 @@ function teamName(team: Team): string {
   return team === "red" ? "红队" : "蓝队";
 }
 
-function isPinyinPack(): boolean {
-  return pack?.content_mode === "pinyin" || pack?.textbook_id === "boya-elementary-i";
+function contentModeForLesson(lessonId: string): "pinyin" | "vocabulary" {
+  const lesson = pack?.lessons.find((item) => item.lesson_id === lessonId);
+  return lesson?.content_mode ?? pack?.content_mode ?? "vocabulary";
+}
+
+function selectedContentMode(): "pinyin" | "vocabulary" | "mixed" {
+  if (!pack) return "vocabulary";
+  const modes = new Set(pack.lessons
+    .filter((lesson) => lesson.active !== false && selectedLessonIds.includes(lesson.lesson_id))
+    .map((lesson) => contentModeForLesson(lesson.lesson_id)));
+  if (modes.size > 1) return "mixed";
+  return modes.has("pinyin") ? "pinyin" : "vocabulary";
 }
 
 function promptActivityLabel(activity: FunctionPromptActivity): string {
@@ -141,7 +151,7 @@ function shell(content: string, options: { compact?: boolean; pinyin?: boolean }
       <header class="topbar">
         <button class="brand" data-action="home" aria-label="返回首页">
           <span class="brand-mark" aria-hidden="true">字</span>
-          <span><strong>博雅教材九宫格</strong><small>${options.pinyin ? "拼音发音课堂游戏" : "词语与句式课堂游戏"}</small></span>
+          <span><strong>博雅教材九宫格</strong><small>${pack?.textbook_id === "boya-elementary-i" ? "拼音、词语与句式课堂游戏" : options.pinyin ? "拼音发音课堂游戏" : "词语与句式课堂游戏"}</small></span>
         </button>
         <div class="content-chip" aria-label="当前内容">${contentSummary}</div>
       </header>
@@ -153,7 +163,8 @@ function shell(content: string, options: { compact?: boolean; pinyin?: boolean }
 
 
 function renderHome(): void {
-  const pinyin = isPinyinPack();
+  const pinyin = selectedContentMode() === "pinyin";
+  const elementary = pack?.textbook_id === "boya-elementary-i";
   const hasContent = Boolean(pack && (pack.vocabulary.length || pack.exercises.length || pack.sentence_patterns?.length));
   const lessonCount = pack?.lessons.filter((lesson) => lesson.active !== false).length ?? 0;
   const vocabularyCount = pack ? vocabularyForScope(pack, { mode: "all", lessonIds: [] }).length : 0;
@@ -165,14 +176,15 @@ function renderHome(): void {
       const entryPack = packsByTextbook[entry.textbook_id];
       const selected = entry.textbook_id === selectedTextbookId;
       const lessonCountForBook = entryPack?.lessons.filter((lesson) => lesson.active !== false).length ?? 0;
-      return `<option value="${escapeHtml(entry.textbook_id)}" ${selected ? "selected" : ""}>${escapeHtml(entry.title)} · ${lessonCountForBook}课 · ${entryPack?.content_mode === "pinyin" ? "拼音发音训练" : "词语与句式练习"}</option>`;
+      const contentLabel = entry.textbook_id === "boya-elementary-i" ? "拼音、词语与句式" : "词语与句式练习";
+      return `<option value="${escapeHtml(entry.textbook_id)}" ${selected ? "selected" : ""}>${escapeHtml(entry.title)} · ${lessonCountForBook}课 · ${contentLabel}</option>`;
     }).join("");
   const contentCard = hasContent && pack
     ? `<section class="content-status" aria-label="当前内容">
         <div><span class="eyebrow">当前教材</span><h2>${escapeHtml(pack.class_name)}</h2></div>
         <dl>
           <div><dt>可选课次</dt><dd>${lessonCount}</dd></div>
-          <div><dt>${pinyin ? "普通发音题" : "词语"}</dt><dd>${vocabularyCount}</dd></div>
+          <div><dt>${elementary ? "拼音／词语内容" : pinyin ? "普通发音题" : "词语"}</dt><dd>${vocabularyCount}</dd></div>
           <div><dt>功能格</dt><dd>${functionContentCount}</dd></div>
         </dl>
       </section>`
@@ -187,9 +199,9 @@ function renderHome(): void {
   app.innerHTML = shell(`
     <section class="hero">
       <div class="hero-copy">
-        <span class="eyebrow">${pinyin ? "初级起步篇 I · 第一至三课" : "准中级加速篇 I · 全十二课"}</span>
-        <h1>选教材，<br><em>${pinyin ? "练发音。" : "说出来。"}</em></h1>
-        <p class="hero-lead">${pinyin ? "先选教材，再选择课次。初级起步篇前三课只练拼音；学生读对后，由教师确认并占格。" : "先选教材，再选择课次。两组轮流练习，学生先读词或完成任务，教师确认后占格；6–8列连四格、9列连五格获胜。"}</p>
+        <span class="eyebrow">${elementary ? "初级起步篇 I · 全十课" : "准中级加速篇 I · 全十二课"}</span>
+        <h1>选教材，<br><em>${elementary ? "练拼音和表达。" : "说出来。"}</em></h1>
+        <p class="hero-lead">${elementary ? "第1–3课练拼音，第4–10课练词语和句式。学生读对或完成任务后，由教师确认并占格。" : "先选教材，再选择课次。两组轮流练习，学生先读词或完成任务，教师确认后占格；6–8列连四格、9列连五格获胜。"}</p>
         <div class="hero-actions">
           <button class="button button--primary" data-action="setup" ${hasContent ? "" : "disabled"}>
             <span>进入选择课次</span><span aria-hidden="true">→</span>
@@ -203,7 +215,7 @@ function renderHome(): void {
             `<span class="sample-cell ${[0, 4, 8].includes(index) ? "sample-cell--marked" : ""}">${word}</span>`
           ).join("")}
         </div>
-        <p>${pinyin ? "拼音发音 · 教师确认" : "6 × 6 至 9 × 9"} <small>${pinyin ? "普通格与找错功能格" : "句式造句格上下左右不相邻"}</small></p>
+        <p>${elementary ? "拼音 · 词语 · 句式" : "6 × 6 至 9 × 9"} <small>${elementary ? "前三课纠音，后七课练词语和句式" : "句式造句格上下左右不相邻"}</small></p>
       </div>
     </section>
     <section class="book-picker" aria-label="选择教材">
@@ -226,7 +238,10 @@ function renderSetup(): void {
   if (!pack) return renderHome();
   const activeLessons = pack.lessons.filter((lesson) => lesson.active !== false).sort((a, b) => a.order - b.order);
   selectedLessonIds = selectedLessonIds.filter((id) => activeLessons.some((lesson) => lesson.lesson_id === id));
-  const pinyin = isPinyinPack();
+  const contentMode = selectedContentMode();
+  const pinyin = contentMode === "pinyin";
+  const mixed = contentMode === "mixed";
+  const elementary = pack.textbook_id === "boya-elementary-i";
   const currentSelection = getScopeSelection();
   const chosen = vocabularyForScope(pack, currentSelection);
   const roundPlan = splitVocabularyRounds(chosen);
@@ -238,6 +253,23 @@ function renderSetup(): void {
   const scopedExampleCount = functionPromptsForScope(pack, currentSelection).length;
   const needsFunctionPrompts = true;
   const canStart = selectedLessonIds.length > 0 && chosen.length > 0 && (!needsFunctionPrompts || scopedPrompts.length > 0);
+  const lessonOptions = activeLessons.map((lesson) => {
+    const lessonPinyin = contentModeForLesson(lesson.lesson_id) === "pinyin";
+    const count = vocabularyForScope(pack!, { mode: "single", lessonIds: [lesson.lesson_id] }).length;
+    return `<label><input type="checkbox" name="lesson" value="${escapeHtml(lesson.lesson_id)}" ${selectedLessonIds.includes(lesson.lesson_id) ? "checked" : ""}/><span>${escapeHtml(lesson.lesson_name)}<small>${count} ${lessonPinyin ? "个普通发音题" : "个词语"}</small></span></label>`;
+  }).join("");
+  const setupLead = pinyin
+    ? "本课只显示拼音。学生先读普通发音格；功能格要找出错误、改正并读一遍，教师确认后才占格。"
+    : mixed
+      ? "所选内容同时包含拼音和词语。普通格按内容朗读；功能格按图标找错纠音、读句式并说明越南文意思，教师确认后占格。"
+      : elementary
+        ? "普通格每格一个词语；功能格练习本课句式并说出越南文意思，教师确认后占格。"
+        : "第一课用 6 × 6，含31个词语和5个句式造句格。其他选课随词数调整，最多 9 × 9；句式造句格上下左右不相邻，词语混合分轮，不重复。";
+  const functionInstruction = pinyin
+    ? "找出错误 → 改正 → 朗读 · 教师确认后占格"
+    : mixed
+      ? "拼音课找错纠音；词语课朗读、说越南文意思或练句式 · 教师确认"
+      : "按图标选择：读句式并说越南文意思、造句；教师判定";
 
   app.innerHTML = shell(`
     <div class="page-heading">
@@ -248,29 +280,29 @@ function renderSetup(): void {
       <div class="setup-main">
         <span class="eyebrow">本轮内容</span>
         <h1>选好课次，<br><em>开始对战。</em></h1>
-        <p class="setup-lead">${pinyin ? "本教材前三课只显示拼音。学生先读普通发音格；功能格要找出错误、改正并读一遍，教师确认后才占格。" : "第一课用 6 × 6，含31个词语和5个句式造句格。其他选课随词数调整，最多 9 × 9；句式造句格上下左右不相邻，词语混合分轮，不重复。"}</p>
+        <p class="setup-lead">${setupLead}</p>
         <div class="setup-card">
           <fieldset class="lesson-picker"><legend>选择本轮课次（可多选）</legend>
             <div class="lesson-tools"><button class="text-button" data-action="all-lessons">全选${activeLessons.length}课</button><button class="text-button" data-action="clear-lessons">清空选择</button></div>
-            <div class="lesson-options">${activeLessons.map((lesson) => `<label><input type="checkbox" name="lesson" value="${escapeHtml(lesson.lesson_id)}" ${selectedLessonIds.includes(lesson.lesson_id) ? "checked" : ""}/><span>${escapeHtml(lesson.lesson_name)}<small>${vocabularyForScope(pack!, {mode: "single", lessonIds: [lesson.lesson_id]}).length} ${pinyin ? "个普通发音题" : "个词语"}</small></span></label>`).join("")}</div>
+            <div class="lesson-options">${lessonOptions}</div>
           </fieldset>
           <div class="legacy-settings">
             <fieldset><legend>课堂操作方式</legend>
               <label><input type="radio" name="legacy-submode" value="classroom" ${legacySubmode === "classroom" ? "checked" : ""}/><span><b>课堂分队</b><small>首轮蓝队先，之后每轮交换先手；占格后换队。</small></span></label>
               <label><input type="radio" name="legacy-submode" value="solo" ${legacySubmode === "solo" ? "checked" : ""}/><span><b>学生对战电脑</b><small>学生用蓝队，电脑用红队。</small></span></label>
             </fieldset>
-            <div class="function-note"><strong>功能格固定 30 秒</strong><span>${pinyin ? "找出错误 → 改正 → 朗读 · 教师确认后占格" : "按图标选择：用句式造句，或读例句并说出越南文意思 · 教师判定"}</span></div>
+            <div class="function-note"><strong>功能格固定 30 秒</strong><span>${functionInstruction}</span></div>
           </div>
         </div>
       </div>
       <aside class="board-plan" aria-live="polite">
         <span class="eyebrow">${firstRoundSide} × ${firstRoundSide} 棋盘 · ${winLengthForSide(firstRoundSide)}格连线</span>
         <h2>${escapeHtml(selectedScopeName())}</h2>
-        <strong>${chosen.length}</strong><span>${pinyin ? "个普通发音题" : "个不重复词语"}</span>
+        <strong>${chosen.length}</strong><span>${pinyin ? "个普通发音题" : mixed ? "个拼音／词语项目" : "个不重复词语"}</span>
         ${chosen.length
           ? `<div class="plan-line"><b>${firstRoundSide ** 2}</b><span>${firstRoundWordCount} 个词语 + ${firstRoundFunctionCount} 个功能格 · ${roundPlan.length} 轮</span></div>`
           : `<div class="plan-line"><b>${firstRoundSide ** 2}</b><span>格 · 请至少选择一课</span></div>`}
-        <div class="plan-functions"><span>可用功能格 <small>${pinyin ? "找错题" : `句式 ${scopedPatternCount} · 例句 ${scopedExampleCount}`}</small></span><strong>${scopedPrompts.length}</strong><small>${firstRoundFunctionCount ? "按需要轮换功能题" : "本轮无需补入功能格"}</small></div>
+        <div class="plan-functions"><span>可用功能格 <small>${pinyin ? "找错题" : mixed ? "找错题与句式题" : `句式 ${scopedPatternCount} · 例句 ${scopedExampleCount}`}</small></span><strong>${scopedPrompts.length}</strong><small>${firstRoundFunctionCount ? "按需要轮换功能题" : "本轮无需补入功能格"}</small></div>
         <button class="button button--primary button--wide" data-action="start-game" ${canStart ? "" : "disabled"}>开始游戏 <span aria-hidden="true">→</span></button>
       </aside>
     </section>
@@ -290,7 +322,9 @@ function renderGame(): void {
   const side = boardSide;
   const required = boardSide >= 9 ? 5 : 4;
   const isManual = legacySubmode === "classroom";
-  const pinyin = isPinyinPack();
+  const contentMode = selectedContentMode();
+  const pinyin = contentMode === "pinyin";
+  const mixed = contentMode === "mixed";
   const claims = countClaims(owners);
   const isDraw = !winner && !pendingWinner && owners.length > 0 && owners.every(Boolean);
   const result = winner || isDraw
@@ -326,7 +360,7 @@ function renderGame(): void {
       </div>
     </section>
     <section class="game-footer">
-      <p><strong>${winner || isDraw ? "本轮结束" : (isManual ? (pinyin ? "学生读对后，教师确认并占格" : "教师确认后点击词语占格") : "请蓝队选择一格")}</strong><span> · ${isManual ? (pinyin ? "普通格读拼音；功能格找错、改正并朗读，教师判定通过。" : "两组轮流换人，独立读词并解释意思；功能格按图标完成句式造句或越南文口语任务。") : "电脑红队会自动选择。"}</span></p>
+      <p><strong>${winner || isDraw ? "本轮结束" : (isManual ? (pinyin ? "学生读对后，教师确认并占格" : "教师确认后点击内容占格") : "请蓝队选择一格")}</strong><span> · ${isManual ? (pinyin ? "普通格读拼音；功能格找错、改正并朗读，教师判定通过。" : mixed ? "普通格读拼音或词语；功能格按提示找错、说明越南文意思或完成句式任务。教师确认通过后占格。" : "两组轮流换人，独立读词并解释意思；功能格按提示读句式、说越南文意思或造句。") : "电脑红队会自动选择。"}</span></p>
       <div class="round-controls"><button class="text-button" data-action="undo-turn" ${turnHistory.length ? "" : "disabled"}>撤销上一步</button>${winner || isDraw ? `<button class="button button--primary" data-action="next-round">${roundIndex < rounds.length - 1 ? "下一轮" : "再玩一次"} →</button>` : `<button class="button button--secondary" data-action="pass-turn">未通过，换队</button><button class="text-button" data-action="reset-round">重开本轮</button>`}</div>
     </section>
       ${activePrompt ? `<div class="modal-backdrop" role="presentation"><section class="task-modal" role="dialog" aria-modal="true" aria-labelledby="task-title">

@@ -22,6 +22,7 @@ function normalizeLesson(raw: Record<string, unknown>, index: number): Lesson {
     lesson_id: lessonId,
     lesson_name: text(raw.lesson_name ?? raw.name) || `第${index + 1}课`,
     order: Number(raw.order) || index + 1,
+    content_mode: raw.content_mode === "pinyin" || raw.content_mode === "vocabulary" ? raw.content_mode : undefined,
     active: raw.active !== false
   };
 }

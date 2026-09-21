@@ -12,8 +12,8 @@
     {
       "textbook_id": "boya-elementary-i",
       "title": "《博雅汉语听说：初级起步篇 I》",
-      "description": "第一至三课拼音发音训练；教师确认读对后才占格。",
-      "pack_file": "content/boya-elementary-i-l01-l03-pinyin.json",
+      "description": "共十课：前三课拼音训练，第四至第十课练词语与句式；教师确认后占格。",
+      "pack_file": "content/boya-elementary-i.json",
       "default_lesson_id": "boya-elementary-i:lesson-01",
       "active": true
     }

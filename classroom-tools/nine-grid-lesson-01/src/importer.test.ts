@@ -10,7 +10,7 @@ describe("content import", () => {
       class_name: "Lớp A",
       content_revision: 2,
       chinese_variant: "simplified",
-      lessons: [{ lesson_id: "l1", lesson_name: "Bài 1", order: 1 }],
+      lessons: [{ lesson_id: "l1", lesson_name: "Bài 1", order: 1, content_mode: "pinyin" }],
       characters: [
         { item_id: "c1", character: "你", introduced_lesson_id: "l1" },
         { item_id: "c2", character: "好", introduced_lesson_id: "l1" }
@@ -24,6 +24,7 @@ describe("content import", () => {
     expect(preview.validCharacters).toBe(2);
     expect(preview.pack.content_revision).toBe(2);
     expect(preview.pack.chinese_variant).toBe("simplified");
+    expect(preview.pack.lessons[0].content_mode).toBe("pinyin");
     expect(validatePack(preview.pack)).toEqual([]);
   });
 

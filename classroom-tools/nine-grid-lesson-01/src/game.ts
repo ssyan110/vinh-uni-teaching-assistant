@@ -232,14 +232,17 @@ export function charactersForScope(pack: ContentPack, selection: ScopeSelection)
 export function vocabularyForScope(pack: ContentPack, selection: ScopeSelection): VocabularyItem[] {
   const selected = lessonIdsForScope(pack, selection);
   const scoped = pack.vocabulary.filter((item) => isInScope(item, selected) && item.word.trim());
-  const items = pack.content_mode === "pinyin"
-    ? scoped.flatMap((item) => {
-        const syllables = item.word.split(" / ").map((word) => word.trim()).filter(Boolean);
-        return syllables.map((word, index) => syllables.length === 1
-          ? item
-          : { ...item, item_id: `${item.item_id}:part-${index + 1}`, word, pinyin: word });
-      })
-    : scoped;
+  const pinyinLessons = new Set(pack.lessons
+    .filter((lesson) => lesson.content_mode === "pinyin" || (lesson.content_mode === undefined && pack.content_mode === "pinyin"))
+    .map((lesson) => lesson.lesson_id));
+  const items = scoped.flatMap((item) => {
+    const syllables = pinyinLessons.has(item.introduced_lesson_id)
+      ? item.word.split(" / ").map((word) => word.trim()).filter(Boolean)
+      : [item.word];
+    return syllables.map((word, index) => syllables.length === 1
+      ? item
+      : { ...item, item_id: `${item.item_id}:part-${index + 1}`, word, pinyin: word });
+  });
   return uniqueVocabulary(items);
 }
 
@@ -258,7 +261,9 @@ export function sentencePatternPromptsForScope(pack: ContentPack, selection: Sco
     kind: "pattern-make",
     activity: "make-sentence",
     prompt: item.pattern,
-    support: "请用这个句式造一个和自己有关的新句子。",
+    support: item.meaning_vi
+      ? "先说出这个句式的越南文意思，再用它造一个自己的句子。"
+      : "请用这个句式造一个和自己有关的新句子。",
     seconds: 30,
     sourceItemId: item.item_id
   }));
