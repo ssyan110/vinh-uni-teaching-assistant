@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "textbook_id": "boya-elementary-i",
+  "title": "《博雅汉语听说：初级起步篇 I》",
+  "lesson_count": 25,
+  "status": "active_source_review",
+  "intended_stage": "first_year",
+  "source_root": "textbooks/boya-elementary-i/source",
+  "main_pdf": "external-user-source:/Users/ssyan110/Desktop/Work/Teaching/02_教材/博雅漢語教材/1. 博雅汉语听说-初级起步篇I.pdf",
+  "main_pdf_sha256": "9a98ee0b376c9b5cff20622987a0e4b9cee68287e45dc547665a3cd537fb517a",
+  "source_inventory": "textbooks/boya-elementary-i/source/source-inventory.json",
+  "reference_dataset": "textbooks/boya-elementary-i-ii/source/reference-dataset",
+  "audio_root": "textbooks/boya-elementary-i/source/audio",
+  "lesson_root": "lessons/boya-elementary-i",
+  "note": "本次只建立第一课的 draft 来源包与实体课 PPTX；全册其余课次仍须各自完成来源审核与边界确认。"
+}

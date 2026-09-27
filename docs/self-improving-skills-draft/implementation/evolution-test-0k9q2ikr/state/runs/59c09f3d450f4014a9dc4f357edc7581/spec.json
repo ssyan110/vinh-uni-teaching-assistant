@@ -1,0 +1,32 @@
+{
+  "evidence": "Fixture-only observation: sample download previously failed verification. tampered",
+  "cases": [
+    {
+      "kind": "target",
+      "prompt": "Choose a verification step.",
+      "options": {
+        "a": "Check the bytes",
+        "b": "Assume success"
+      },
+      "expected": "a"
+    },
+    {
+      "kind": "regression",
+      "prompt": "Choose a verification step.",
+      "options": {
+        "a": "Check the bytes",
+        "b": "Assume success"
+      },
+      "expected": "a"
+    },
+    {
+      "kind": "heldout",
+      "prompt": "Choose a verification step.",
+      "options": {
+        "a": "Check the bytes",
+        "b": "Assume success"
+      },
+      "expected": "a"
+    }
+  ]
+}

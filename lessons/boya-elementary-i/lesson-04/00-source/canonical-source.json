@@ -1,0 +1,431 @@
+{
+  "schema_version": "boya-elementary-source-v1",
+  "lesson_key": "boya-elementary-i:lesson-04",
+  "textbook_id": "boya-elementary-i",
+  "lesson_id": "lesson-04",
+  "offering_id": "2026-fall",
+  "title": "你叫什么名字",
+  "source_status": "visual_source_checked_draft_not_human_approved",
+  "source_pdf": {
+    "path": "external-user-source:/Users/ssyan110/Desktop/Work/Teaching/02_教材/博雅漢語教材/1. 博雅汉语听说-初级起步篇I.pdf",
+    "sha256": "9a98ee0b376c9b5cff20622987a0e4b9cee68287e45dc547665a3cd537fb517a",
+    "printed_pages": "16–23",
+    "pdf_pages": "27–34"
+  },
+  "source_review": {
+    "method": "All eight original scanned pages visually inspected 2026-09-19; OCR used only for locating text.",
+    "evidence": ".agent/runs/elementary-l04-20260919/staging/source-pages",
+    "answer_status": "No publisher listening answers or audio semantics verified; questions retained in textbook."
+  },
+  "sections": {
+    "vocabulary": {
+      "id": "vocabulary",
+      "title": "词语",
+      "textbook_printed_pages": [
+        16,
+        17
+      ],
+      "source_pdf_pages": [
+        27,
+        28
+      ],
+      "audio": "4-1",
+      "exercise_item_count": 19,
+      "teacher_notes": "15个词语、4个专有名词；先核对预习，再抽听易错词，不逐词长讲。",
+      "items": [
+        {
+          "word": "你",
+          "pinyin": "nǐ",
+          "pos": "代",
+          "textbook_printed_page": 16,
+          "source_order": 1
+        },
+        {
+          "word": "叫",
+          "pinyin": "jiào",
+          "pos": "动",
+          "textbook_printed_page": 16,
+          "source_order": 2
+        },
+        {
+          "word": "什么",
+          "pinyin": "shénme",
+          "pos": "代",
+          "textbook_printed_page": 16,
+          "source_order": 3
+        },
+        {
+          "word": "名字",
+          "pinyin": "míngzi",
+          "pos": "名",
+          "textbook_printed_page": 16,
+          "source_order": 4
+        },
+        {
+          "word": "他",
+          "pinyin": "tā",
+          "pos": "代",
+          "textbook_printed_page": 16,
+          "source_order": 5
+        },
+        {
+          "word": "学",
+          "pinyin": "xué",
+          "pos": "动",
+          "textbook_printed_page": 16,
+          "source_order": 6
+        },
+        {
+          "word": "姓",
+          "pinyin": "xìng",
+          "pos": "动",
+          "textbook_printed_page": 16,
+          "source_order": 7
+        },
+        {
+          "word": "好",
+          "pinyin": "hǎo",
+          "pos": "形",
+          "textbook_printed_page": 16,
+          "source_order": 8
+        },
+        {
+          "word": "我",
+          "pinyin": "wǒ",
+          "pos": "代",
+          "textbook_printed_page": 16,
+          "source_order": 9
+        },
+        {
+          "word": "是",
+          "pinyin": "shì",
+          "pos": "动",
+          "textbook_printed_page": 16,
+          "source_order": 10
+        },
+        {
+          "word": "不",
+          "pinyin": "bù",
+          "pos": "副",
+          "textbook_printed_page": 16,
+          "source_order": 11
+        },
+        {
+          "word": "老师",
+          "pinyin": "lǎoshī",
+          "pos": "名",
+          "textbook_printed_page": 16,
+          "source_order": 12
+        },
+        {
+          "word": "学生",
+          "pinyin": "xuésheng",
+          "pos": "名",
+          "textbook_printed_page": 16,
+          "source_order": 13
+        },
+        {
+          "word": "留学生",
+          "pinyin": "liúxuésheng",
+          "pos": "名",
+          "textbook_printed_page": 16,
+          "source_order": 14
+        },
+        {
+          "word": "吗",
+          "pinyin": "ma",
+          "pos": "助",
+          "textbook_printed_page": 16,
+          "source_order": 15
+        },
+        {
+          "word": "中国",
+          "pinyin": "Zhōngguó",
+          "pos": "专有名词",
+          "textbook_printed_page": 16,
+          "source_order": 16
+        },
+        {
+          "word": "汉语",
+          "pinyin": "Hànyǔ",
+          "pos": "专有名词",
+          "textbook_printed_page": 17,
+          "source_order": 17
+        },
+        {
+          "word": "李",
+          "pinyin": "Lǐ",
+          "pos": "专有名词",
+          "textbook_printed_page": 17,
+          "source_order": 18
+        },
+        {
+          "word": "王",
+          "pinyin": "Wáng",
+          "pos": "专有名词",
+          "textbook_printed_page": 17,
+          "source_order": 19
+        }
+      ]
+    },
+    "word_tones": {
+      "id": "word_tones",
+      "title": "听录音，写声调",
+      "textbook_printed_pages": [
+        17
+      ],
+      "source_pdf_pages": [
+        28
+      ],
+      "audio": "4-2",
+      "exercise_item_count": 19,
+      "teacher_notes": "12个单音节、7个词语。学生看教材并标调；根据实际听音结果核对，不能靠OCR还原声调选项。"
+    },
+    "word_choice": {
+      "id": "word_choice",
+      "title": "听录音，选择听到的词语",
+      "textbook_printed_pages": [
+        17
+      ],
+      "source_pdf_pages": [
+        28
+      ],
+      "audio": "4-3",
+      "exercise_item_count": 5,
+      "teacher_notes": "5组词语辨音。先看教材选项，再播放对应录音，学生在教材选择。"
+    },
+    "pinyin_choice": {
+      "id": "pinyin_choice",
+      "title": "听录音，选择正确的拼音",
+      "textbook_printed_pages": [
+        17
+      ],
+      "source_pdf_pages": [
+        28
+      ],
+      "audio": "4-4",
+      "exercise_item_count": 6,
+      "teacher_notes": "6题，各3个选项。学生在教材完成；不在投影片重排容易错调的拼音选项。"
+    },
+    "word_reading": {
+      "id": "word_reading",
+      "title": "朗读词语",
+      "textbook_printed_pages": [
+        18
+      ],
+      "source_pdf_pages": [
+        29
+      ],
+      "audio": null,
+      "exercise_item_count": 4,
+      "teacher_notes": "教材四组：你我他；老师/王老师/学生/留学生；是/不是/好/不好；叫什么/是什么/学什么/姓什么。小组轮流读，教师抽听并修补。"
+    },
+    "word_matching": {
+      "id": "word_matching",
+      "title": "读词语，连线",
+      "textbook_printed_pages": [
+        18
+      ],
+      "source_pdf_pages": [
+        29
+      ],
+      "audio": null,
+      "exercise_item_count": 1,
+      "teacher_notes": "教材左列是、姓、叫；右列大卫、留学生、王、老师、李、李军。完成连线后读出搭配；不把开放搭配误设成唯一一对一匹配。"
+    },
+    "name_order": {
+      "id": "name_order",
+      "title": "中国人的姓名",
+      "textbook_printed_pages": [
+        18
+      ],
+      "source_pdf_pages": [
+        29
+      ],
+      "audio": null,
+      "exercise_item_count": 2,
+      "teacher_notes": "教材说明：姓在前，名字在后；例子李军、王大卫。用不同色块显示姓/名字，不加入外国姓名的一概规则。"
+    },
+    "sentence_fill": {
+      "id": "sentence_fill",
+      "title": "听录音，填空（可以写拼音）",
+      "textbook_printed_pages": [
+        18,
+        19
+      ],
+      "source_pdf_pages": [
+        29,
+        30
+      ],
+      "audio": "4-5",
+      "exercise_item_count": 8,
+      "teacher_notes": "8题跨P18–19。先看题，听并补关键字，可写拼音；没有音频与答案证据时不提供猜测答案。"
+    },
+    "sentence_picture": {
+      "id": "sentence_picture",
+      "title": "听录音，把听到的句子的序号填到相应的图片下面",
+      "textbook_printed_pages": [
+        19
+      ],
+      "source_pdf_pages": [
+        30
+      ],
+      "audio": "4-6",
+      "exercise_item_count": 4,
+      "teacher_notes": "4张图片，学生在教材图片下填写所听句子的序号。投影片不重绘原题图片，避免改变题目线索。"
+    },
+    "sentence_repeat": {
+      "id": "sentence_repeat",
+      "title": "跟着录音重复句子",
+      "textbook_printed_pages": [
+        19
+      ],
+      "source_pdf_pages": [
+        30
+      ],
+      "audio": "4-7",
+      "exercise_item_count": null,
+      "teacher_notes": "教材未印出该录音全部句子与数量，跟录音重复；不能从其他题目推定录音文本。"
+    },
+    "pair_questions": {
+      "id": "pair_questions",
+      "title": "两个人一组，互相问答",
+      "textbook_printed_pages": [
+        19,
+        20
+      ],
+      "source_pdf_pages": [
+        30,
+        31
+      ],
+      "audio": null,
+      "exercise_item_count": 8,
+      "teacher_notes": "8组开放回应。教材第一人问，另一人回答，交换问答角色；答案依本人信息变化。P19的1–3题与P20的4–8题均须完成。"
+    },
+    "picture_answers": {
+      "id": "picture_answers",
+      "title": "看图，回答录音中的问题",
+      "textbook_printed_pages": [
+        20
+      ],
+      "source_pdf_pages": [
+        31
+      ],
+      "audio": "4-8",
+      "exercise_item_count": 4,
+      "teacher_notes": "4张教材图片；先看图，再听问题、回答。图片包含医生、教师、李红和大卫，不把职业/姓名看图答案冒充未听到的完整问句。"
+    },
+    "dialogue_1": {
+      "id": "dialogue_1",
+      "title": "你叫什么名字",
+      "textbook_printed_pages": [
+        21
+      ],
+      "source_pdf_pages": [
+        32
+      ],
+      "audio": "4-9",
+      "exercise_item_count": 2,
+      "teacher_notes": "先看第一段两题，再听并选择：李军是不是留学生、玛丽学不学汉语。核对以后再口头复述人物信息。"
+    },
+    "dialogue_2": {
+      "id": "dialogue_2",
+      "title": "他是中国学生吗",
+      "textbook_printed_pages": [
+        21
+      ],
+      "source_pdf_pages": [
+        32
+      ],
+      "audio": "4-10",
+      "exercise_item_count": 2,
+      "teacher_notes": "先看第二段两题，再听并选择：他是不是中国学生、老师姓什么。与第一段分别播放和核对。"
+    },
+    "passage_reading": {
+      "id": "passage_reading",
+      "title": "朗读",
+      "textbook_printed_pages": [
+        21
+      ],
+      "source_pdf_pages": [
+        32
+      ],
+      "audio": null,
+      "exercise_item_count": 3,
+      "teacher_notes": "教材三段短介绍均保留在书上。轮流朗读，听者确认说的是玛丽、李军还是王大卫。"
+    },
+    "picture_speaking": {
+      "id": "picture_speaking",
+      "title": "用所给的词语看图说话",
+      "textbook_printed_pages": [
+        22
+      ],
+      "source_pdf_pages": [
+        33
+      ],
+      "audio": null,
+      "exercise_item_count": 1,
+      "teacher_notes": "使用教材是、叫、姓、学四个提示词及王明老师、玛丽留学生、大卫留学生的原图，说出人物信息。"
+    },
+    "communication": {
+      "id": "communication",
+      "title": "交际练习",
+      "textbook_printed_pages": [
+        22
+      ],
+      "source_pdf_pages": [
+        33
+      ],
+      "audio": null,
+      "exercise_item_count": 1,
+      "teacher_notes": "课前把实际学生姓名写在卡片上，打乱发放，确保每人拿到的不是本人。学生离座问答找人；遇到其他人也问清姓名并记录。教材活动5–10分钟。随后每人向小组介绍卡片上的人和新认识的人，教师抽听；误听姓名时用第三课“请再说一遍”修补。无需另造学生姓名。"
+    },
+    "key_sentences": {
+      "id": "key_sentences",
+      "title": "重点句子",
+      "textbook_printed_pages": [
+        23
+      ],
+      "source_pdf_pages": [
+        34
+      ],
+      "audio": null,
+      "exercise_item_count": 8,
+      "teacher_notes": "教材8句全部回顾，先读再用真实信息替换姓名和身份。教材句子是语言例子，不是听力标准答案。",
+      "items": [
+        {
+          "text": "你好！",
+          "pinyin": "Nǐ hǎo!"
+        },
+        {
+          "text": "你叫什么名字？",
+          "pinyin": "Nǐ jiào shénme míngzi?"
+        },
+        {
+          "text": "我叫李军。",
+          "pinyin": "Wǒ jiào Lǐ Jūn."
+        },
+        {
+          "text": "你是留学生吗？",
+          "pinyin": "Nǐ shì liúxuésheng ma?"
+        },
+        {
+          "text": "他不是留学生，是中国学生。",
+          "pinyin": "Tā bú shì liúxuésheng, shì Zhōngguó xuésheng."
+        },
+        {
+          "text": "我学汉语。",
+          "pinyin": "Wǒ xué Hànyǔ."
+        },
+        {
+          "text": "他姓什么？",
+          "pinyin": "Tā xìng shénme?"
+        },
+        {
+          "text": "他姓王。",
+          "pinyin": "Tā xìng Wáng."
+        }
+      ]
+    }
+  }
+}

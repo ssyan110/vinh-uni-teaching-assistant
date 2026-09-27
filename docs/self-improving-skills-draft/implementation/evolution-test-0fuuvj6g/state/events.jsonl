@@ -1,0 +1,7 @@
+{"time": 1789314337.52577, "event": "retrieval_index", "session": "fixture", "turn": "one", "count": 0}
+{"time": 1789314337.526853, "event": "review_requested", "session": "fixture", "turn": "one", "tool_count": 2}
+{"time": 1789314337.530765, "event": "promoted", "name": "learned-fixture-check", "run": "9b3824d0324c4d4bb0a0ef37b0407f1b"}
+{"time": 1789314337.5312, "event": "retrieval_index", "session": "fixture", "turn": "three", "count": 1}
+{"time": 1789314337.531976, "event": "reverted", "name": "learned-fixture-check", "run": "9b3824d0324c4d4bb0a0ef37b0407f1b"}
+{"time": 1789314337.5428789, "event": "promoted", "name": "learned-fixture-check", "run": "832d31e4c57940a8972adbb62f336643"}
+{"time": 1789314337.544241, "event": "reverted", "name": "learned-fixture-check", "run": "832d31e4c57940a8972adbb62f336643"}

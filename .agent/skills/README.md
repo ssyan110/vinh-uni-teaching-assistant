@@ -11,9 +11,9 @@ Project-specific skills are the durable production rules for this repository. Re
 ## Required skills
 
 - `harness-engineering/SKILL.md` — minimum artifact, gate, execution and verification loop for non-trivial work.
-- `boya-lesson-production/SKILL.md` — authoritative PPTX-only workflow for Boya Chinese listening/speaking lessons, including source gates, PBI redesign, teacher guide, prep cards, supplemental activities and QA.
+- `boya-lesson-production/SKILL.md` — artifact-specific PPTX/content production procedures. Its ownership boundary is defined in `boya-lesson-production/references/ownership-map.md`; lifecycle, identity, gate and release semantics remain canonical elsewhere.
 
-Read `AGENTS.md`, `PROJECT_REQUIREMENTS.md` and `memory/project-memory.md` before either skill. The current user-approved course decision is PPTX-only: do not create HTML decks or HTML animations.
+Read `AGENTS.md`, `PROJECT_REQUIREMENTS.md` and `memory/project-memory.md` before either skill. New decks default to `native-pptx`; Adam may select the Open Slide path in `tools/open-slide/` for a deck. Open Slide remains draft-only until its lesson QA/release path is defined.
 
 The current student-deck rules are in `boya-lesson-production/SKILL.md`. They cover the approved educational textbook visual style, textbook section dividers, readable same-audio merging, plain student actions, visible material names, audio buttons, varied layouts and native PowerPoint QA. Retired v2/v3/v4 outline and deck scripts are not supported production inputs.
 

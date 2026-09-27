@@ -1,0 +1,9 @@
+{
+  "existing_notify_preserved": true,
+  "existing_config_values_preserved": true,
+  "trusted_hook_keys": [
+    "/Users/ssyan110/.codex/hooks.json:post_tool_use:0:0",
+    "/Users/ssyan110/.codex/hooks.json:user_prompt_submit:0:0",
+    "/Users/ssyan110/.codex/hooks.json:stop:0:0"
+  ]
+}

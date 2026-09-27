@@ -1,0 +1,55 @@
+{
+  "status": "installed-and-tested",
+  "cli_version": "0.154.0-alpha.6.2",
+  "hooks": [
+    {
+      "eventName": "postToolUse",
+      "enabled": true,
+      "trustStatus": "trusted"
+    },
+    {
+      "eventName": "userPromptSubmit",
+      "enabled": true,
+      "trustStatus": "trusted"
+    },
+    {
+      "eventName": "stop",
+      "enabled": true,
+      "trustStatus": "trusted"
+    }
+  ],
+  "controller_checks": [
+    "bounded hooks",
+    "retrieval metadata",
+    "path rejection",
+    "promotion",
+    "withdrawal",
+    "failed comparison",
+    "frozen suite",
+    "concurrent edits",
+    "symlink rejection",
+    "prior-version restoration",
+    "rollback conflict",
+    "tampered receipt",
+    "held-out tuning refusal"
+  ],
+  "real_hook_review": "triggered once, loaded installed skill, ran no-change, preserved original final answer",
+  "real_decision_pilot": {
+    "baseline_passed": 1,
+    "candidate_passed": 3,
+    "cases": 3,
+    "fixture": true,
+    "automatic_promotion": true,
+    "subsequent_task_read_skill": true,
+    "exact_rollback_verified": true
+  },
+  "production_candidate": "rejected because baseline already passed all three cases",
+  "production_learned_skills": 0,
+  "existing_notify_preserved": true,
+  "limits": [
+    "Decision tests are not live external-action tests.",
+    "Existing desktop task hot reload was not verified; no managed daemon socket was available.",
+    "No general capability gain is claimed."
+  ],
+  "controller_sha256": "8fa1d75ea44cb62966758161e892e557dca4dde6772a034ee52271c3711f9b6c"
+}

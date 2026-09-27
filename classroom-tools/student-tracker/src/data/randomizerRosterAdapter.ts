@@ -2,7 +2,7 @@
 // Production rosters are imported after teacher authentication.
 export type RandomizerClassId = 'LT_01' | 'LT_02' | 'LT_03'
 
-const classSizes: Record<RandomizerClassId, number> = { LT_01: 27, LT_02: 30, LT_03: 14 }
+const classSizes: Record<RandomizerClassId, number> = { LT_01: 26, LT_02: 30, LT_03: 15 }
 
 export const randomizerRosters = Object.fromEntries(
   (Object.keys(classSizes) as RandomizerClassId[]).map((classId) => [

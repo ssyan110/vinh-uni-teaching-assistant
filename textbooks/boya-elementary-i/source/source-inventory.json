@@ -1,0 +1,43 @@
+{
+  "schema_version": "boya-elementary-source-inventory-v1",
+  "textbook_id": "boya-elementary-i",
+  "title": "《博雅汉语听说：初级起步篇 I》",
+  "lesson_count": 25,
+  "source_pdf": {
+    "path": "external-user-source:/Users/ssyan110/Desktop/Work/Teaching/02_教材/博雅漢語教材/1. 博雅汉语听说-初级起步篇I.pdf",
+    "sha256": "9a98ee0b376c9b5cff20622987a0e4b9cee68287e45dc547665a3cd537fb517a",
+    "status": "user_local_source_verified"
+  },
+  "derived_evidence": {
+    "ocr_root": ".tmp/ocr-elementary-i",
+    "ocr_manifest": ".tmp/ocr-elementary-i/manifest.json",
+    "reference_dataset": "textbooks/boya-elementary-i-ii/source/reference-dataset/manifest.json",
+    "course_analysis": "docs/boya-elementary-i-textbook-analysis-and-ppt-plan-2026-09-15.md"
+  },
+  "lessons": [
+    {
+      "lesson_number": 4,
+      "lesson_id": "lesson-04",
+      "lesson_key": "boya-elementary-i:lesson-04",
+      "title": "你叫什么名字",
+      "printed_page_start": 16,
+      "printed_page_end_estimate": 23,
+      "pdf_page": 27,
+      "audio_labels": ["4-1", "4-2", "4-3", "4-4", "4-5", "4-6", "4-7", "4-8", "4-9", "4-10"],
+      "audio_file_status": "not_found_in_project",
+      "source_status": "lesson_specific_draft_package",
+      "source_manifest": "lessons/boya-elementary-i/lesson-04/00-source/source-manifest.json"
+    },
+    {
+      "lesson_number": 1,
+      "lesson_id": "lesson-01",
+      "title": "拼音和日常用语（一）",
+      "printed_page_start": 1,
+      "printed_page_end_estimate": 5,
+      "pdf_page": 12,
+      "audio_labels": ["1-1", "1-2", "1-3", "1-4", "1-5", "1-6", "1-7", "1-8", "1-9"],
+      "source_status": "lesson_specific_draft_package"
+    }
+  ],
+  "not_yet_materialized": "This inventory records Lesson 1 and the 2026-09-19 Lesson 4 intake. Consult course/lesson-registry.json and each lesson source directory for other lesson packages; no whole-book source approval is implied."
+}

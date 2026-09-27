@@ -1,0 +1,48 @@
+{
+  "type": "offline-procedural-decision-tests",
+  "results": [
+    {
+      "kind": "target",
+      "baseline": {
+        "choice": "a",
+        "reason": "Query runtime skill discovery with cwds and forceReload=true, then verify the exact installed path and enabled value. File existence and quick_validate alone do not establish runtime discovery.",
+        "passed": true
+      },
+      "candidate": {
+        "choice": "a",
+        "reason": "Query skills/list with the intended workspace in cwds and forceReload=true, then check the exact absolute SKILL.md path and enabled value. Structural validation alone does not establish runtime discovery.",
+        "passed": true
+      }
+    },
+    {
+      "kind": "regression",
+      "baseline": {
+        "choice": "b",
+        "reason": "Discovery with enabled=true confirms availability, not actual use. A new task must read and apply the procedure to establish use.",
+        "passed": true
+      },
+      "candidate": {
+        "choice": "b",
+        "reason": "The exact path and enabled=true establish discovery. Actual use requires evidence that a relevant new task read the current SKILL.md and applied its procedure.",
+        "passed": true
+      }
+    },
+    {
+      "kind": "heldout",
+      "baseline": {
+        "choice": "c",
+        "reason": "Refreshed discovery and a subsequent task reading the current file provide evidence of the revision being loaded. A changed hash proves only a file change; the old task remains a historical snapshot.",
+        "passed": true
+      },
+      "candidate": {
+        "choice": "c",
+        "reason": "Refresh discovery and verify current-file use in a subsequent relevant task. Preserve the old task snapshot; a changed file hash alone does not prove reloading or use.",
+        "passed": true
+      }
+    }
+  ],
+  "passed": false,
+  "candidate_hash": "72d7af52ff5058546aaa2b0fa915f2a11deb4b5ae44aeb9f8dfbb1d46bc88738",
+  "spec_hash": "6af7c6d4b3c0874f2df19003a742c7efe0a38fca5e73496849d201183bece2ff",
+  "limitation": "Decision tests do not establish live tool execution or general capability gains."
+}

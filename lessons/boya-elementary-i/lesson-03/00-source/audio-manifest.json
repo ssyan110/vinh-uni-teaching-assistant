@@ -1,0 +1,24 @@
+{
+  "schema_version": "boya-lesson-audio-manifest-v1",
+  "lesson_key": "boya-elementary-i:lesson-03",
+  "textbook_id": "boya-elementary-i",
+  "lesson_id": "lesson-03",
+  "source_scope": "教材印刷 P10–P15，页面标号 3-1 至 3-12",
+  "audio_controls_in_pptx": false,
+  "powerpoint_playback_status": "not_applicable_audio_controls_omitted",
+  "tracks": [
+    {"id": "3-1", "printed_page": "P10", "use": "er 音示范", "file": null, "status": "page_label_verified_audio_file_missing"},
+    {"id": "3-2", "printed_page": "P10", "use": "er 相关跟读", "file": null, "status": "page_label_verified_audio_file_missing"},
+    {"id": "3-3", "printed_page": "P10", "use": "普通韵母与儿化韵对照", "file": null, "status": "page_label_verified_audio_file_missing"},
+    {"id": "3-4", "printed_page": "P11", "use": "儿化韵朗读", "file": null, "status": "page_label_verified_audio_file_missing"},
+    {"id": "3-5", "printed_page": "P12", "use": "y、w 拼写规则", "file": null, "status": "page_label_verified_audio_file_missing"},
+    {"id": "3-6", "printed_page": "P12–P13", "use": "y、w 规则后朗读", "file": null, "status": "page_label_verified_audio_file_missing"},
+    {"id": "3-7", "printed_page": "P13", "use": "三声变调示例", "file": null, "status": "page_label_verified_audio_file_missing"},
+    {"id": "3-8", "printed_page": "P13", "use": "三声变调跟读", "file": null, "status": "page_label_verified_audio_file_missing"},
+    {"id": "3-9", "printed_page": "P14", "use": "bu、yi 变调", "file": null, "status": "page_label_verified_audio_file_missing"},
+    {"id": "3-10", "printed_page": "P14", "use": "听音选择", "file": null, "status": "page_label_verified_audio_file_missing"},
+    {"id": "3-11", "printed_page": "P14", "use": "听音补全音节并标声调", "file": null, "status": "page_label_verified_audio_file_missing"},
+    {"id": "3-12", "printed_page": "P15", "use": "日常用语跟读", "file": null, "status": "page_label_verified_audio_file_missing"}
+  ],
+  "open_gates": ["audio file acquisition", "semantic matching", "teacher playback/rehearsal"]
+}

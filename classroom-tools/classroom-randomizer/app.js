@@ -75,6 +75,13 @@
     studentSearchInput: document.getElementById("studentSearchInput"),
     studentStatusFilter: document.getElementById("studentStatusFilter"),
     studentList: document.getElementById("studentList"),
+    volunteerPanelButton: document.getElementById("volunteerPanelButton"),
+    volunteerDialog: document.getElementById("volunteerDialog"),
+    closeVolunteerButton: document.getElementById("closeVolunteerButton"),
+    volunteerSearchInput: document.getElementById("volunteerSearchInput"),
+    volunteerList: document.getElementById("volunteerList"),
+    volunteerFeedback: document.getElementById("volunteerFeedback"),
+    undoVolunteerButton: document.getElementById("undoVolunteerButton"),
     attemptList: document.getElementById("attemptList"),
     lastSavedLabel: document.getElementById("lastSavedLabel"),
     exportCsvButton: document.getElementById("exportCsvButton"),
@@ -304,6 +311,7 @@
     syncHistoryEntry(state);
     renderSavedTime();
     syncCloudState();
+    return saved;
   }
 
   function showToast(message, warning) {
@@ -385,18 +393,18 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>华语课堂抽问｜学生画面</title>
   <style>
-    :root{font-family:"Times New Roman",KaiTi,"STKaiti","BiauKai",serif;color:#17324d;background:#fff}
-    *{box-sizing:border-box}body{min-height:100vh;margin:0;background:linear-gradient(145deg,#f8fbfb 0%,#eef6f6 100%)}
+    :root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#1d1d1f;background:#fff}
+    *{box-sizing:border-box}body{min-height:100vh;margin:0;background:#f5f5f7}
     main{display:grid;min-height:100vh;grid-template-rows:auto 1fr auto;padding:clamp(24px,4vw,56px)}
     header{display:flex;justify-content:space-between;gap:24px;color:#34536b;font-size:clamp(18px,2vw,28px)}
     header strong{color:#21645f}.stage{display:grid;place-items:center;text-align:center}.seat{color:#21645f;font-size:clamp(24px,3vw,42px);font-weight:700}
     h1{max-width:1200px;margin:12px 0;color:#17324d;font-size:clamp(70px,12vw,170px);line-height:1.04;letter-spacing:.01em}
     .prompt{color:#34536b;font-size:clamp(25px,3vw,44px)}.timer{display:inline-flex;align-items:baseline;gap:10px;margin-top:30px;padding:12px 24px;border:2px solid #b6d4d1;border-radius:999px;color:#21645f;background:#fff;font-size:clamp(20px,2vw,30px)}
-    .timer strong{font-family:"Times New Roman",serif;font-size:clamp(44px,6vw,80px);line-height:1}.timer.ending{color:#9a4d3a;border-color:#edb7a8;background:#fff0ec}
+    .timer strong{font-family:inherit;font-size:clamp(44px,6vw,80px);line-height:1}.timer.ending{color:#9a4d3a;border-color:#edb7a8;background:#fff0ec}
     footer{display:flex;justify-content:space-between;color:#6b7d8c;font-size:clamp(16px,1.7vw,24px)}
     .draw-animation{position:relative;display:none;width:min(38vw,300px);height:min(22vw,156px);margin:0 auto 2px}
     .rolling .draw-animation{display:block}
-    .draw-card{position:absolute;top:18px;left:50%;display:grid;width:clamp(48px,6vw,72px);height:clamp(64px,9vw,96px);place-items:center;border:2px solid #b8d8d1;border-radius:16px;color:#21645f;background:#e7f7f0;box-shadow:0 12px 20px rgba(24,40,48,.14);font-family:KaiTi,"STKaiti","BiauKai",serif;font-size:clamp(26px,4vw,42px);font-weight:700;transform-origin:50% 100%}
+    .draw-card{position:absolute;top:18px;left:50%;display:grid;width:clamp(48px,6vw,72px);height:clamp(64px,9vw,96px);place-items:center;border:2px solid #b8d8d1;border-radius:16px;color:#21645f;background:#e7f7f0;box-shadow:0 12px 20px rgba(24,40,48,.14);font-family:inherit;font-size:clamp(26px,4vw,42px);font-weight:700;transform-origin:50% 100%}
     .draw-card-left{margin-left:clamp(-100px,-8vw,-66px);color:#a6533c;background:#fff0ec;animation:shuffle-left 1240ms cubic-bezier(.4,0,.2,1) both}
     .draw-card-center{z-index:2;margin-left:clamp(-36px,-3vw,-24px);border-color:#a9cbe2;color:#356080;background:#eef5f7;animation:shuffle-center 1240ms cubic-bezier(.4,0,.2,1) both}
     .draw-card-right{margin-left:clamp(28px,2.5vw,38px);border-color:#d9c5e8;color:#70528e;background:#f5effb;animation:shuffle-right 1240ms cubic-bezier(.4,0,.2,1) both}
@@ -715,8 +723,8 @@
         return;
       }
     }
-    populateTextbookOptions(elements.textbookInput.value, elements.lessonInput.value);
     lastRosterClassId = nextClassId;
+    populateTextbookOptions(elements.textbookInput.value, elements.lessonInput.value);
     loadBuiltInRoster(nextClassId);
   }
 
@@ -1214,7 +1222,7 @@
     const student = attemptStudent(attempt);
     const lessonId = attempt.lessonId || state.session.lessonId;
     const lessonNumber = Model.getLessonNumber(lessonId);
-    const source = attempt.selectionMethod === "volunteer" ? "自愿发言" : "随机抽问";
+    const source = attempt.selectionMethod === "manual" ? "手动补记" : attempt.selectionMethod === "volunteer" ? "自愿发言" : "随机抽问";
     return `${source} · 学号末四位 ${studentIdSuffix(student)} · 第 ${attempt.roundNumber} 轮 · 第 ${lessonNumber} 课`;
   }
 
@@ -1276,16 +1284,14 @@
     const pendingId = pendingAttempt ? pendingAttempt.studentId : null;
     const summaries = Model.getSummary(state);
     elements.studentList.replaceChildren();
-    const query = studentSearchQuery.trim().toLocaleLowerCase();
-    const visibleStudents = state.roster.filter((student) => {
+    const visibleStudents = Model.findRosterStudents(state, studentSearchQuery).filter((student) => {
       const excluded = state.excludedStudentIds.includes(student.id);
       const answered = answeredIds.has(student.id);
       const statusMatches = studentStatusFilter === "all"
         || (studentStatusFilter === "available" && !excluded && !answered)
         || (studentStatusFilter === "answered" && answered)
         || (studentStatusFilter === "absent" && excluded);
-      const searchable = `${student.name} ${student.studentCode || ""}`.toLocaleLowerCase();
-      return statusMatches && (!query || searchable.includes(query));
+      return statusMatches;
     });
     if (visibleStudents.length === 0) {
       const empty = document.createElement("p");
@@ -1329,21 +1335,7 @@
       volunteerButton.disabled = excluded || isDrawing;
       volunteerButton.setAttribute("aria-label", `${student.name} 自愿发言加一次`);
       volunteerButton.title = excluded ? "请先改为到课，再记录发言" : "立即保存一次自愿回答，不影响正在进行的抽问";
-      volunteerButton.addEventListener("click", () => {
-        try {
-          state = Model.recordVolunteer(state, student.id, {
-            taskMode: state.session.taskMode,
-            taskTarget: taskDraftTarget,
-            taskPrompt: taskPromptDraft,
-            responseStatus: "answered"
-          });
-          persist();
-          renderApp();
-          showToast(`${student.name}：已在本机保存自愿发言一次；云端状态见上方。`);
-        } catch (error) {
-          showToast(error.message, true);
-        }
-      });
+      volunteerButton.addEventListener("click", () => recordVolunteer(student.id));
       const checkLabel = document.createElement("label");
       checkLabel.className = "absent-toggle";
       const checkbox = document.createElement("input");
@@ -1373,6 +1365,76 @@
     renderAttemptLists();
   }
 
+  function volunteerFeedback(message, warning = false) {
+    elements.volunteerFeedback.textContent = message;
+    elements.volunteerFeedback.classList.toggle("is-warning", warning);
+    showToast(message, warning);
+  }
+
+  function recordVolunteer(studentId) {
+    if (!state || isDrawing || state.session.status === "completed") return;
+    try {
+      const student = Model.getStudent(state, studentId);
+      state = Model.recordVolunteer(state, studentId, {
+        taskMode: state.session.taskMode,
+        taskTarget: taskDraftTarget,
+        taskPrompt: taskPromptDraft,
+        responseStatus: "answered"
+      });
+      const saved = persist();
+      renderApp();
+      volunteerFeedback(saved
+        ? `已记录：学号末四位 ${studentIdSuffix(student)} ${student.name}，自愿发言＋1。已保存在本机。`
+        : "本次记录暂未保存到本机，请保持页面打开并下载备份。", !saved);
+    } catch (error) {
+      volunteerFeedback(error.message, true);
+    }
+  }
+
+  function renderVolunteers() {
+    const ended = state.session.status === "completed";
+    elements.volunteerPanelButton.disabled = ended;
+    elements.undoVolunteerButton.disabled = ended || isDrawing
+      || state.undoStack.at(-1)?.event.type !== "volunteer_recorded";
+    if (!elements.volunteerDialog.open) return;
+    const focusedStudent = document.activeElement?.dataset.volunteerStudent;
+    const summaries = Model.getSummary(state);
+    const students = Model.findRosterStudents(state, elements.volunteerSearchInput.value);
+    elements.volunteerList.replaceChildren();
+    for (const student of students) {
+      const excluded = state.excludedStudentIds.includes(student.id);
+      const row = document.createElement("div");
+      row.className = "volunteer-row";
+      const seat = document.createElement("span");
+      seat.className = "student-seat";
+      seat.textContent = studentIdSuffix(student);
+      const identity = document.createElement("div");
+      const name = document.createElement("strong");
+      name.textContent = student.name;
+      const count = document.createElement("small");
+      count.textContent = excluded ? "缺席 · 请先在名单中改为到课"
+        : `本堂自愿发言 ${summaries.find(item => item.student.id === student.id)?.voluntarySpeakingCount || 0} 次`;
+      identity.append(name, count);
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "button button-secondary";
+      button.textContent = "＋1";
+      button.dataset.volunteerStudent = student.id;
+      button.setAttribute("aria-label", `学号末四位 ${studentIdSuffix(student)} ${student.name} 自愿发言加一次`);
+      button.disabled = excluded || ended || isDrawing;
+      button.addEventListener("click", () => recordVolunteer(student.id));
+      row.append(seat, identity, button);
+      elements.volunteerList.append(row);
+      if (focusedStudent === student.id) button.focus({ preventScroll: true });
+    }
+    if (!students.length) {
+      const empty = document.createElement("p");
+      empty.className = "student-list-empty";
+      empty.textContent = "没有找到学生，请换一个学号末四位或姓名。";
+      elements.volunteerList.append(empty);
+    }
+  }
+
   function renderApp() {
     if (!state) return;
     elements.appView.querySelectorAll("[data-ended-disabled]").forEach(control => { control.disabled = false; delete control.dataset.endedDisabled; });
@@ -1388,6 +1450,7 @@
     elements.taskTargetSelect.value = taskDraftTarget;
     renderMainStage(progress);
     renderSummary();
+    renderVolunteers();
     renderSavedTime();
     elements.presentationButton.textContent = studentDisplayWindow && !studentDisplayWindow.closed
       ? "学生画面已打开"
@@ -1720,10 +1783,12 @@
     if (students.has(preferred)) elements.recordsStudentSelect.value = preferred;
   }
 
-  function renderStudentRecords() {
+  let recordsRequest = 0;
+  async function renderStudentRecords() {
+    const requestId = ++recordsRequest;
     const classId = elements.recordsClassSelect.value;
     const studentKey = elements.recordsStudentSelect.value;
-    const rows = [];
+    let rows = [];
     allStoredSessions()
       .filter((entry) => entry.session.className === classId)
       .forEach((entry) => {
@@ -1735,16 +1800,30 @@
             if (key === studentKey) rows.push({ entry, attempt });
           });
       });
+    let scope = "仅本机记录（未连接云端）｜";
+    if (cloudReady()) {
+      elements.recordsSummary.textContent = "正在读取云端课堂记录…";
+      elements.recordsList.replaceChildren();
+      try {
+        rows = await global.RandomizerCloud.fetchStudentRecords(classId, studentKey);
+        scope = "云端记录｜";
+      } catch (error) {
+        scope = "云端读取失败，仅显示本机记录｜";
+        if (requestId === recordsRequest) showToast(error.message, true);
+      }
+    }
+    if (requestId !== recordsRequest) return;
     rows.sort((a, b) => String(b.attempt.drawnAt || b.entry.session.date).localeCompare(String(a.attempt.drawnAt || a.entry.session.date)));
-    const summary = Model.summarizeAttempts(rows.map(({ entry, attempt }) => ({ ...attempt, sessionDate: entry.session.date })));
-    elements.recordsSummary.textContent = rows.length
-      ? `回答 ${summary.totalAnswerCount} 次｜参与 ${summary.participationDayCount} 个上课日｜随机回答 ${summary.randomCallEffectiveAnswerCount} 次｜自愿回答 ${summary.voluntaryEffectiveAnswerCount} 次｜未回答 ${summary.notAnsweredCount} 次`
-      : "目前没有这位学生的回答记录。";
+    const answered = rows.filter(row => row.attempt.outcome === "answered");
+    const count = method => answered.filter(row => row.attempt.selectionMethod === method).length;
+    elements.recordsSummary.textContent = scope + (rows.length
+      ? `回答 ${answered.length} 次｜随机回答 ${count("random")} 次｜自愿回答 ${count("volunteer")} 次｜手动补记 ${count("manual")} 次｜未回答 ${rows.filter(row => row.attempt.outcome === "not_answered").length} 次`
+      : "没有查到这位学生的记录。");
     elements.recordsList.replaceChildren();
     if (rows.length === 0) {
       const empty = document.createElement("p");
       empty.className = "history-empty";
-      empty.textContent = "完成抽问并保存后，记录会显示在这里。";
+      empty.textContent = scope.startsWith("云端记录") ? "已查询云端抽问与学生管理系统记录。" : "本机结果不代表云端没有记录，请连接后重新查询。";
       elements.recordsList.appendChild(empty);
       return;
     }
@@ -1757,12 +1836,12 @@
       const context = document.createElement("div");
       context.className = "record-context";
       const title = document.createElement("strong");
-      title.textContent = Model.formatLessonLabel(
+      title.textContent = attempt.lessonLabel || (!attempt.textbookId && !entry.session.textbookId ? "课堂回答记录" : Model.formatLessonLabel(
         attempt.textbookId || entry.session.textbookId,
         attempt.lessonId || entry.session.lessonId
-      );
+      ));
       const detail = document.createElement("span");
-      const source = attempt.selectionMethod === "volunteer" ? "自愿发言" : "随机抽问";
+      const source = attempt.selectionMethod === "manual" ? "手动补记" : attempt.selectionMethod === "volunteer" ? "自愿发言" : "随机抽问";
       const status = attempt.outcome === "not_answered"
         ? `未回答：${noResponseReasonLabel(attempt.noResponseReason)}`
         : attempt.outcome === "pending"
@@ -1780,7 +1859,7 @@
       const assistance = attempt.assistance === true ? "｜有实质提示或协助" : attempt.assistance === false ? "｜无实质提示或协助" : "";
       const note = `${assistance}${attempt.taskPrompt ? `｜题目：${attempt.taskPrompt}` : ""}${attempt.note ? `｜${attempt.note}` : ""}`;
       const correction = attempt.recordStatus === "corrected" ? "｜已更正" : "";
-      detail.textContent = `${source} · 第 ${attempt.roundNumber} 轮 · ${status} · ${contextLabel}${correction}${note}`;
+      detail.textContent = `${source}${attempt.roundNumber ? ` · 第 ${attempt.roundNumber} 轮` : ""} · ${status} · ${contextLabel}${correction}${note}`;
       context.append(title, detail);
       const recordState = document.createElement("span");
       recordState.className = "record-status";
@@ -1881,6 +1960,29 @@
     answerContextDraft = event.target.value;
   });
   elements.drawButton.addEventListener("click", handleDraw);
+  elements.volunteerPanelButton.addEventListener("click", () => {
+    elements.volunteerSearchInput.value = "";
+    elements.volunteerFeedback.textContent = "每点一次，记录一次自愿发言。";
+    elements.volunteerFeedback.classList.remove("is-warning");
+    openDialog(elements.volunteerDialog);
+    renderVolunteers();
+    elements.volunteerSearchInput.focus();
+  });
+  elements.closeVolunteerButton.addEventListener("click", () => closeDialog(elements.volunteerDialog));
+  elements.volunteerDialog.addEventListener("close", () => elements.volunteerPanelButton.focus());
+  elements.volunteerSearchInput.addEventListener("input", renderVolunteers);
+  elements.undoVolunteerButton.addEventListener("click", () => {
+    if (!state || isDrawing || state.session.status === "completed"
+      || state.undoStack.at(-1)?.event.type !== "volunteer_recorded") return;
+    try {
+      state = Model.undoLastAction(state);
+      const saved = persist();
+      renderApp();
+      volunteerFeedback(saved ? "已撤销上一次自愿发言。" : "撤销暂未保存到本机，请保持页面打开并下载备份。", !saved);
+    } catch (error) {
+      volunteerFeedback(error.message, true);
+    }
+  });
   document.getElementById("newQuestionButton").addEventListener("click", () => {
     if (!state) { showToast("请先开始一堂课。", true); return; }
     state = Model.beginQuestion(state);
@@ -1929,6 +2031,7 @@
   });
   elements.closeHistoryButton.addEventListener("click", () => closeDialog(elements.historyDialog));
   document.addEventListener("keydown", (event) => {
+    if (document.querySelector("dialog[open]")) return;
     if (event.key.toLowerCase() === "f" && !isTypingTarget(event.target)) {
       event.preventDefault();
       toggleFullscreen();

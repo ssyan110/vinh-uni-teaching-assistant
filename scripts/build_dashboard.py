@@ -11,22 +11,20 @@ from typing import Any
 
 from production_gate import check as check_production_gate
 from validate_lesson_identity import validate as validate_lesson_identity
+from dashboard_context import load_dashboard_context
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-CONFIG = json.loads((PROJECT_ROOT / "project.config.json").read_text(encoding="utf-8"))
-LESSON_COUNT = int(CONFIG.get("lesson_count", 8))
-LESSON_ROOT = PROJECT_ROOT / CONFIG.get("lesson_collection_root", "lessons")
-TEXTBOOK_ID = str(CONFIG.get("active_context", {}).get("textbook_id", ""))
-OFFERING_ID = str(CONFIG.get("active_context", {}).get("offering_id", ""))
-LESSON_KEY_FORMAT = CONFIG.get("lesson_key_format", "<textbook_id>:<lesson_id>")
-LESSON_REGISTRY_PATH = PROJECT_ROOT / CONFIG.get(
-    "lesson_registry", "course/lesson-registry.json"
-)
-CATALOG_PATH = PROJECT_ROOT / CONFIG.get(
-    "lesson_catalog", f"textbooks/{TEXTBOOK_ID}/source/source-inventory.json"
-)
-DASHBOARD_ROOT = PROJECT_ROOT / CONFIG["dashboard_root"]
+Dashboard = load_dashboard_context(PROJECT_ROOT)
+CONFIG = Dashboard.config
+TEXTBOOK_ID = Dashboard.textbook_id
+OFFERING_ID = Dashboard.offering_id
+ACTIVE_LESSON_KEY = Dashboard.lesson_key
+LESSON_KEY_FORMAT = Dashboard.lesson_key_format
+LESSON_REGISTRY_PATH = Dashboard.lesson_registry_path
+LESSON_ROOT = Dashboard.lesson_context.lesson_root.parent
+CATALOG_PATH = PROJECT_ROOT / "textbooks" / TEXTBOOK_ID / "source" / "source-inventory.json"
+DASHBOARD_ROOT = Dashboard.dashboard_root
 OUTPUT_PATH = DASHBOARD_ROOT / "manifest.js"
 
 
@@ -640,12 +638,13 @@ def build() -> Path:
     if identity_errors:
         raise RuntimeError("lesson identity validation failed:\n" + "\n".join(identity_errors))
     registry, registry_lessons = scoped_registry()
+    lesson_count = len(registry_lessons)
     catalog = parse_lesson_catalog()
     lesson_summaries: list[dict[str, Any]] = []
     lesson_details: dict[str, dict[str, Any]] = {}
     previous_delivered = True
 
-    for number in range(1, LESSON_COUNT + 1):
+    for number in sorted(registry_lessons):
         summary, detail, delivered = build_lesson(
             number, catalog, previous_delivered, registry_lessons
         )
@@ -676,14 +675,18 @@ def build() -> Path:
             "blockers": result["blockers"],
         }
         for purpose in ("teacher-guide", "support", "prototype", "pptx", "release")
-        for result in [check_production_gate(purpose)]
+        for result in [check_production_gate(
+            purpose,
+            lesson_key=ACTIVE_LESSON_KEY,
+            offering_id=OFFERING_ID,
+        )]
     }
 
     course_documents = [
         ("课程清单", CONFIG.get("course_manifest")),
         (
             "当前开课实例",
-            f"course/offerings/{CONFIG.get('active_context', {}).get('offering_id')}/offering.json",
+            f"course/offerings/{OFFERING_ID}/offering.json",
         ),
         ("教材清单", CONFIG.get("textbook_registry")),
         ("课次身份索引", CONFIG.get("lesson_registry")),
@@ -707,12 +710,12 @@ def build() -> Path:
         "course": {
             "id": CONFIG["course_id"],
             "title": CONFIG.get("course_title", "榮市大學華語聽說課程"),
-            "offering_id": CONFIG.get("active_context", {}).get("offering_id"),
-            "textbook_id": CONFIG.get("active_context", {}).get("textbook_id"),
-            "textbook_title": CONFIG.get("active_textbook_title"),
-            "lesson_count": LESSON_COUNT,
+            "offering_id": OFFERING_ID,
+            "textbook_id": TEXTBOOK_ID,
+            "textbook_title": Dashboard.textbook_title,
+            "lesson_count": lesson_count,
             "lesson_key_format": LESSON_KEY_FORMAT,
-            "active_lesson_key": CONFIG.get("active_context", {}).get("lesson_key"),
+            "active_lesson_key": ACTIVE_LESSON_KEY,
             "lesson_registry": project_relative(LESSON_REGISTRY_PATH),
             "textbooks": registry.get("textbooks", []),
             "documents": documents,

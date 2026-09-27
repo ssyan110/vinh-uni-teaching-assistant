@@ -14,9 +14,9 @@ function loadRosters() {
 test("the three built-in class rosters are complete and uniquely identified", () => {
   const rosters = loadRosters().classes;
   assert.deepEqual(Object.fromEntries(Object.entries(rosters).map(([id, list]) => [id, list.length])), {
-    LT_01: 27,
-    LT_02: 30,
-    LT_03: 14
+    LT_01: 26,
+    LT_02: 25,
+    LT_03: 20
   });
 
   const allCodes = [];

@@ -4,6 +4,13 @@
   "lesson_key_format": "<textbook_id>:<lesson_id>",
   "textbooks": [
     {
+      "textbook_id": "boya-elementary-i",
+      "title": "《博雅汉语听说：初级起步篇 I》",
+      "status": "active_source_review",
+      "intended_stage": "first_year",
+      "manifest": "textbooks/boya-elementary-i/textbook.json"
+    },
+    {
       "textbook_id": "boya-quasi-intermediate-i",
       "title": "《博雅汉语听说：准中级加速篇 I》",
       "status": "active_source_review",

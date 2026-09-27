@@ -1,7 +1,7 @@
 import { expect, test } from 'vitest'
 import { createDemoSnapshot } from '../data/demoData'
 import type { RandomizerAttempt } from '../types'
-import { participationRows } from './participation'
+import { participationRecords, participationRows } from './participation'
 
 test('counts repeated unscored answers, volunteers and zero-answer students within the exact class session', () => {
   const s = createDemoSnapshot()
@@ -24,8 +24,8 @@ test('counts repeated unscored answers, volunteers and zero-answer students with
     attempt('other-course', { course_id: 'other' })]
   const rows = participationRows(s, course, session)
   expect(rows.find(r => r.student.id === student)).toMatchObject({ random: 2, voluntary: 2, total: 4 })
-  expect(rows).toHaveLength(27)
-  expect(rows.filter(r => r.total === 0)).toHaveLength(26)
+  expect(rows).toHaveLength(26)
+  expect(rows.filter(r => r.total === 0)).toHaveLength(25)
   s.attempts[0].record_status = 'voided'
   s.attempts[1].record_status = 'voided'
   expect(participationRows(s, course, session).find(r => r.student.id === student)?.total).toBe(3)
@@ -44,4 +44,17 @@ test('corrected raw answer records stay in history but no longer increase the co
   s.learningEvents = [event]
   s.attempts = [attempt]
   expect(participationRows(s, course, session).find(r => r.student.id === student)).toMatchObject({ random: 0, voluntary: 0, total: 0 })
+})
+
+test('manual participation adjustments count separately and expose the record for quick correction', () => {
+  const s = createDemoSnapshot()
+  const course = s.courses[0].id
+  const session = s.sessions.find(x => x.course_id === course)!.id
+  const student = s.enrollments.find(e => e.course_id === course)!
+  s.attempts = []
+  s.learningEvents = [{ ...s.learningEvents[0], id: 'manual-adjustment', course_id: course, session_id: session, student_id: student.student_id,
+    source: 'manual_adjustment' as const, textbook_id: null, lesson_id: null, lesson_label: null,
+    activity_label: '回答次數快速加記', response_status: 'answered' as const, record_status: 'valid' as const, counted_for_summary: true }]
+  expect(participationRows(s, course, session).find(r => r.student.id === student.student_id)).toMatchObject({ random: 0, voluntary: 0, manual: 1, total: 1 })
+  expect(participationRecords(s, course, session)).toMatchObject([{ recordType: 'learning_event', recordId: 'manual-adjustment', studentId: student.student_id, source: 'manual' }])
 })

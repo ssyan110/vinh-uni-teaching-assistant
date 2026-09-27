@@ -141,9 +141,11 @@ def validate(registry_path: Path, config_path: Path) -> list[str]:
                 )
 
     active = config.get("active_context", {})
+    if not isinstance(active, dict):
+        return errors + ["config active_context must be an object"]
     active_textbook = active.get("textbook_id")
     active_lesson = active.get("lesson_id")
-    active_key = active.get("lesson_key") or config.get("active_lesson_key")
+    active_key = active.get("lesson_key")
     if active_textbook and active_lesson:
         expected_active_key = f"{active_textbook}:{active_lesson}"
         if active_key != expected_active_key:
@@ -152,30 +154,15 @@ def validate(registry_path: Path, config_path: Path) -> list[str]:
             )
         if expected_active_key not in seen_keys:
             errors.append(f"active context is not registered: {expected_active_key}")
-        matching = next(
-            (item for item in lessons if item.get("lesson_key") == expected_active_key),
-            None,
-        )
-        if matching:
-            expected_root = matching.get("lesson_path")
-            configured_root = config.get("lesson_root")
-            if configured_root != expected_root:
-                errors.append(
-                    f"active lesson_root mismatch: expected {expected_root!r}, got {configured_root!r}"
-                )
-            expected_collection = str(expected_root).rsplit("/", 1)[0]
-            configured_collection = config.get("lesson_collection_root")
-            if configured_collection != expected_collection:
-                errors.append(
-                    "active lesson_collection_root mismatch: "
-                    f"expected {expected_collection!r}, got {configured_collection!r}"
-                )
-            expected_canonical_prefix = f"{expected_root}/00-source/"
-            canonical_source = config.get("canonical_source", "")
-            if canonical_source and not str(canonical_source).startswith(expected_canonical_prefix):
-                errors.append(
-                    f"active canonical_source must stay under {expected_canonical_prefix!r}, got {canonical_source!r}"
-                )
+
+    legacy = config.get("legacy_compatibility")
+    if legacy is not None:
+        if not isinstance(legacy, dict):
+            errors.append("config legacy_compatibility must be an object")
+        elif legacy.get("status") != "read-only-legacy":
+            errors.append("config legacy_compatibility must be read-only-legacy")
+        elif legacy.get("not_for_scoped_operations") is not True:
+            errors.append("config legacy_compatibility must prohibit scoped operations")
 
     return errors
 

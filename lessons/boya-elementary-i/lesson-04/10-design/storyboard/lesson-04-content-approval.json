@@ -1,0 +1,22 @@
+{
+  "lesson_key": "boya-elementary-i:lesson-04",
+  "offering_id": "2026-fall",
+  "gate": "lesson-content",
+  "status": "approved",
+  "approved_by": "Adam",
+  "approved_at": "2026-09-19T15:22:16+07:00",
+  "artifacts": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-04/00-source/canonical-source.json",
+      "sha256": "c7e08f5bdc7761042145d58af583bf6e1d082dcb2c185909387d8bec361bc025"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-04/10-design/storyboard/lesson-04-逐页文案审阅.md",
+      "sha256": "785c3c5c75278013f264a8a7fb40e88dc01a3bd444875913ad818d97722942e5"
+    }
+  ],
+  "evidence": "lessons/boya-elementary-i/lesson-04/10-design/storyboard/lesson-04-content-approval-evidence-2026-09-19.md",
+  "evidence_sha256": "329d5e08e5bc5148bf380597ecd460097308c0ded9e5ea86d274647ccd148129",
+  "review_document": "lessons/boya-elementary-i/lesson-04/10-design/storyboard/lesson-04-逐页文案审阅.md",
+  "reason": "Adam explicitly approved the current content review with \"approved, do next steps\". This authorizes the approved content to enter image and PPTX draft production; audio, teacher guide, human visual acceptance, rehearsal, authority, and release remain separate gates."
+}

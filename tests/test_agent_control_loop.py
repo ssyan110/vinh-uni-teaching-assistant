@@ -13,6 +13,7 @@ SCRIPTS_ROOT = PROJECT_ROOT / "scripts"
 sys.path.insert(0, str(SCRIPTS_ROOT))
 
 from agent_loop import (  # noqa: E402
+    _default_gate_runner,
     attach_external_check,
     create_run,
     record_attempt,
@@ -98,6 +99,26 @@ class AgentControlLoopTests(unittest.TestCase):
             "lessons/book-a/lesson-02/10-design/pptx-draft",
         )
         self.assertEqual([], validate_state(self.root, state, check_evidence=True))
+
+    def test_default_authority_gate_forwards_explicit_scope_not_active_context(self) -> None:
+        with mock.patch("production_gate.check", return_value={"status": "blocked", "blockers": []}) as gate:
+            result = _default_gate_runner(
+                PROJECT_ROOT,
+                {
+                    "gate_stage": "authority",
+                    "purpose": "teacher-manual",
+                    "lesson_key": "boya-quasi-intermediate-i:lesson-02",
+                    "offering_id": "2026-fall",
+                    "output_dir": "lessons/boya-quasi-intermediate-i/lesson-02/10-design",
+                },
+            )
+        self.assertEqual("blocked", result["status"])
+        gate.assert_called_once_with(
+            "teacher-manual",
+            "lessons/boya-quasi-intermediate-i/lesson-02/10-design",
+            lesson_key="boya-quasi-intermediate-i:lesson-02",
+            offering_id="2026-fall",
+        )
 
     def test_run_rejects_output_in_authority(self) -> None:
         with self.assertRaisesRegex(ValueError, "10-design"):

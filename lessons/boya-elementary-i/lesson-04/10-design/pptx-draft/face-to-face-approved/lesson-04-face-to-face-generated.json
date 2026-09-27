@@ -1,0 +1,639 @@
+{
+  "lesson_key": "boya-elementary-i:lesson-04",
+  "offering_id": "2026-fall",
+  "mode": "teacher_face_to_face_only",
+  "status": "draft_not_human_approved",
+  "content_review": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-04/10-design/storyboard/lesson-04-逐页文案审阅.md",
+  "content_review_sha256": "785c3c5c75278013f264a8a7fb40e88dc01a3bd444875913ad818d97722942e5",
+  "slide_count": 31,
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "你叫什么名字",
+      "layout": "cover",
+      "source_refs": [],
+      "textbook_page": null,
+      "audio": null,
+      "speaker_notes": "本课教材P16–23。提前准备教材和姓名卡。音频4-1至4-10尚未在项目取得；授课前必须准备并实测可用录音。",
+      "student_visible_text": [
+        "本课教材P16–23。提前准备教材和姓名卡。音频4-1至4-10尚未在项目取得；授课前必须准备并实测可用录音。",
+        "第4课",
+        "你叫什么名字",
+        "实体课"
+      ]
+    },
+    {
+      "slide_number": 2,
+      "title": "今天这样学",
+      "layout": "route",
+      "source_refs": [],
+      "textbook_page": null,
+      "audio": null,
+      "speaker_notes": "沿用前三课四步横向版式。词语准备、句子听说、语段理解、姓名交流。四个越南文流程标签为本册既有流程图例外；其余课堂内容采用简体中文。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "02",
+        "沿用前三课四步横向版式。词语准备、句子听说、语段理解、姓名交流。四个越南文流程标签为本册既有流程图例外；其余课堂内容采用简体中文。",
+        "今天这样学",
+        "Ôn từ vựng",
+        "Luyện nghe\nvà nói câu",
+        "Nghe hội thoại",
+        "Hỏi tên\nvà giới thiệu"
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "本课目标",
+      "layout": "goals",
+      "source_refs": [],
+      "textbook_page": null,
+      "audio": null,
+      "speaker_notes": "本页是课堂流程提示；不含教材作答内容。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "03",
+        "本页是课堂流程提示；不含教材作答内容。",
+        "本课目标",
+        "今天下课前，我能：",
+        "1",
+        "听懂别人的名字和身份。",
+        "2",
+        "问同学的名字和姓。",
+        "3",
+        "介绍一位刚认识的同学。"
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "词语",
+      "layout": "divider",
+      "source_refs": [],
+      "textbook_page": null,
+      "audio": null,
+      "speaker_notes": "本页是课堂流程提示；不含教材作答内容。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "04",
+        "本页是课堂流程提示；不含教材作答内容。",
+        "词语"
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "词语回顾",
+      "layout": "vocabulary-recall",
+      "source_refs": [
+        "canonical-source.json#sections.vocabulary"
+      ],
+      "textbook_page": "教材 P16",
+      "audio": "4-1",
+      "speaker_notes": "15个词语、4个专有名词；先核对预习，再抽听易错词，不逐词长讲。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "05",
+        "教材 ",
+        "P16",
+        "15个词语、4个专有名词；先核对预习，再抽听易错词，不逐词长讲。",
+        "词语回顾",
+        "你",
+        "nǐ",
+        "叫",
+        "jiào",
+        "什么",
+        "shénme",
+        "名字",
+        "míngzi",
+        "他",
+        "tā"
+      ]
+    },
+    {
+      "slide_number": 6,
+      "title": "词语回顾",
+      "layout": "vocabulary-recall",
+      "source_refs": [
+        "canonical-source.json#sections.vocabulary"
+      ],
+      "textbook_page": "教材 P16",
+      "audio": "4-1",
+      "speaker_notes": "15个词语、4个专有名词；先核对预习，再抽听易错词，不逐词长讲。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "06",
+        "教材 ",
+        "P16",
+        "15个词语、4个专有名词；先核对预习，再抽听易错词，不逐词长讲。",
+        "词语回顾",
+        "学",
+        "xué",
+        "姓",
+        "xìng",
+        "好",
+        "hǎo",
+        "我",
+        "wǒ",
+        "是",
+        "shì"
+      ]
+    },
+    {
+      "slide_number": 7,
+      "title": "词语回顾",
+      "layout": "vocabulary-recall",
+      "source_refs": [
+        "canonical-source.json#sections.vocabulary"
+      ],
+      "textbook_page": "教材 P16",
+      "audio": "4-1",
+      "speaker_notes": "15个词语、4个专有名词；先核对预习，再抽听易错词，不逐词长讲。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "07",
+        "教材 ",
+        "P16",
+        "15个词语、4个专有名词；先核对预习，再抽听易错词，不逐词长讲。",
+        "词语回顾",
+        "不",
+        "bù",
+        "老师",
+        "lǎoshī",
+        "学生",
+        "xuésheng",
+        "留学生",
+        "liúxuésheng",
+        "吗",
+        "ma"
+      ]
+    },
+    {
+      "slide_number": 8,
+      "title": "词语回顾",
+      "layout": "vocabulary-recall",
+      "source_refs": [
+        "canonical-source.json#sections.vocabulary"
+      ],
+      "textbook_page": "教材 P16–17",
+      "audio": "4-1",
+      "speaker_notes": "15个词语、4个专有名词；先核对预习，再抽听易错词，不逐词长讲。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "08",
+        "教材 ",
+        "P16–17",
+        "15个词语、4个专有名词；先核对预习，再抽听易错词，不逐词长讲。",
+        "词语回顾",
+        "中国",
+        "Zhōngguó",
+        "汉语",
+        "Hànyǔ",
+        "李",
+        "Lǐ",
+        "王",
+        "Wáng"
+      ]
+    },
+    {
+      "slide_number": 9,
+      "title": "听说词语",
+      "layout": "divider",
+      "source_refs": [],
+      "textbook_page": null,
+      "audio": null,
+      "speaker_notes": "本页是课堂流程提示；不含教材作答内容。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "09",
+        "本页是课堂流程提示；不含教材作答内容。",
+        "听说词语"
+      ]
+    },
+    {
+      "slide_number": 10,
+      "title": "练习4-2",
+      "layout": "textbook-exercise",
+      "source_refs": [
+        "canonical-source.json#sections.word_tones"
+      ],
+      "textbook_page": "教材 P17",
+      "audio": "4-2",
+      "speaker_notes": "12个单音节、7个词语。学生看教材并标调；根据实际听音结果核对，不能靠OCR还原声调选项。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "10",
+        "教材 ",
+        "P17",
+        "12个单音节、7个词语。学生看教材并标调；根据实际听音结果核对，不能靠OCR还原声调选项。",
+        "练习4-2"
+      ]
+    },
+    {
+      "slide_number": 11,
+      "title": "练习4-3",
+      "layout": "textbook-exercise",
+      "source_refs": [
+        "canonical-source.json#sections.word_choice"
+      ],
+      "textbook_page": "教材 P17",
+      "audio": "4-3",
+      "speaker_notes": "5组词语辨音。先看教材选项，再播放对应录音，学生在教材选择。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "11",
+        "教材 ",
+        "P17",
+        "5组词语辨音。先看教材选项，再播放对应录音，学生在教材选择。",
+        "练习4-3"
+      ]
+    },
+    {
+      "slide_number": 12,
+      "title": "练习4-4",
+      "layout": "textbook-exercise",
+      "source_refs": [
+        "canonical-source.json#sections.pinyin_choice"
+      ],
+      "textbook_page": "教材 P17",
+      "audio": "4-4",
+      "speaker_notes": "6题，各3个选项。学生在教材完成；不在投影片重排容易错调的拼音选项。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "12",
+        "教材 ",
+        "P17",
+        "6题，各3个选项。学生在教材完成；不在投影片重排容易错调的拼音选项。",
+        "练习4-4"
+      ]
+    },
+    {
+      "slide_number": 13,
+      "title": "朗读词语",
+      "layout": "textbook-exercise",
+      "source_refs": [
+        "canonical-source.json#sections.word_reading"
+      ],
+      "textbook_page": "教材 P18",
+      "audio": null,
+      "speaker_notes": "教材四组：你我他；老师/王老师/学生/留学生；是/不是/好/不好；叫什么/是什么/学什么/姓什么。小组轮流读，教师抽听并修补。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "13",
+        "教材 ",
+        "P18",
+        "教材四组：你我他；老师/王老师/学生/留学生；是/不是/好/不好；叫什么/是什么/学什么/姓什么。小组轮流读，教师抽听并修补。",
+        "朗读词语"
+      ]
+    },
+    {
+      "slide_number": 14,
+      "title": "读词语，连线",
+      "layout": "textbook-exercise",
+      "source_refs": [
+        "canonical-source.json#sections.word_matching"
+      ],
+      "textbook_page": "教材 P18",
+      "audio": null,
+      "speaker_notes": "教材左列是、姓、叫；右列大卫、留学生、王、老师、李、李军。完成连线后读出搭配；不把开放搭配误设成唯一一对一匹配。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "14",
+        "教材 ",
+        "P18",
+        "教材左列是、姓、叫；右列大卫、留学生、王、老师、李、李军。完成连线后读出搭配；不把开放搭配误设成唯一一对一匹配。",
+        "读词语，连线"
+      ]
+    },
+    {
+      "slide_number": 15,
+      "title": "中国人的姓名",
+      "layout": "name-order",
+      "source_refs": [
+        "canonical-source.json#sections.name_order"
+      ],
+      "textbook_page": "教材 P18",
+      "audio": null,
+      "speaker_notes": "教材说明：姓在前，名字在后；例子李军、王大卫。用不同色块显示姓/名字，不加入外国姓名的一概规则。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "15",
+        "教材 ",
+        "P18",
+        "教材说明：姓在前，名字在后；例子李军、王大卫。用不同色块显示姓/名字，不加入外国姓名的一概规则。",
+        "中国人的姓名",
+        "姓",
+        "名字",
+        "李",
+        "军",
+        "王",
+        "大卫"
+      ]
+    },
+    {
+      "slide_number": 16,
+      "title": "听说句子",
+      "layout": "divider",
+      "source_refs": [],
+      "textbook_page": null,
+      "audio": null,
+      "speaker_notes": "本页是课堂流程提示；不含教材作答内容。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "16",
+        "本页是课堂流程提示；不含教材作答内容。",
+        "听说句子"
+      ]
+    },
+    {
+      "slide_number": 17,
+      "title": "练习4-5",
+      "layout": "textbook-exercise",
+      "source_refs": [
+        "canonical-source.json#sections.sentence_fill"
+      ],
+      "textbook_page": "教材 P18–19",
+      "audio": "4-5",
+      "speaker_notes": "8题跨P18–19。先看题，听并补关键字，可写拼音；没有音频与答案证据时不提供猜测答案。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "17",
+        "教材 ",
+        "P18–19",
+        "8题跨P18–19。先看题，听并补关键字，可写拼音；没有音频与答案证据时不提供猜测答案。",
+        "练习4-5"
+      ]
+    },
+    {
+      "slide_number": 18,
+      "title": "练习4-6",
+      "layout": "textbook-exercise",
+      "source_refs": [
+        "canonical-source.json#sections.sentence_picture"
+      ],
+      "textbook_page": "教材 P19",
+      "audio": "4-6",
+      "speaker_notes": "4张图片，学生在教材图片下填写所听句子的序号。投影片不重绘原题图片，避免改变题目线索。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "18",
+        "教材 ",
+        "P19",
+        "4张图片，学生在教材图片下填写所听句子的序号。投影片不重绘原题图片，避免改变题目线索。",
+        "练习4-6"
+      ]
+    },
+    {
+      "slide_number": 19,
+      "title": "练习4-7",
+      "layout": "textbook-exercise",
+      "source_refs": [
+        "canonical-source.json#sections.sentence_repeat"
+      ],
+      "textbook_page": "教材 P19",
+      "audio": "4-7",
+      "speaker_notes": "教材未印出该录音全部句子与数量，跟录音重复；不能从其他题目推定录音文本。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "19",
+        "教材 ",
+        "P19",
+        "教材未印出该录音全部句子与数量，跟录音重复；不能从其他题目推定录音文本。",
+        "练习4-7"
+      ]
+    },
+    {
+      "slide_number": 20,
+      "title": "两个人一组，互相问答",
+      "layout": "textbook-exercise",
+      "source_refs": [
+        "canonical-source.json#sections.pair_questions"
+      ],
+      "textbook_page": "教材 P19–20",
+      "audio": null,
+      "speaker_notes": "8组开放回应。教材第一人问，另一人回答，交换问答角色；答案依本人信息变化。P19的1–3题与P20的4–8题均须完成。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "20",
+        "教材 ",
+        "P19–20",
+        "8组开放回应。教材第一人问，另一人回答，交换问答角色；答案依本人信息变化。P19的1–3题与P20的4–8题均须完成。",
+        "两个人一组，互相问答"
+      ]
+    },
+    {
+      "slide_number": 21,
+      "title": "练习4-8",
+      "layout": "textbook-exercise",
+      "source_refs": [
+        "canonical-source.json#sections.picture_answers"
+      ],
+      "textbook_page": "教材 P20",
+      "audio": "4-8",
+      "speaker_notes": "4张教材图片；先看图，再听问题、回答。图片包含医生、教师、李红和大卫，不把职业/姓名看图答案冒充未听到的完整问句。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "21",
+        "教材 ",
+        "P20",
+        "4张教材图片；先看图，再听问题、回答。图片包含医生、教师、李红和大卫，不把职业/姓名看图答案冒充未听到的完整问句。",
+        "练习4-8"
+      ]
+    },
+    {
+      "slide_number": 22,
+      "title": "听说一段话",
+      "layout": "divider",
+      "source_refs": [],
+      "textbook_page": null,
+      "audio": null,
+      "speaker_notes": "本页是课堂流程提示；不含教材作答内容。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "22",
+        "本页是课堂流程提示；不含教材作答内容。",
+        "听说一段话"
+      ]
+    },
+    {
+      "slide_number": 23,
+      "title": "练习4-9",
+      "layout": "textbook-exercise",
+      "source_refs": [
+        "canonical-source.json#sections.dialogue_1"
+      ],
+      "textbook_page": "教材 P21",
+      "audio": "4-9",
+      "speaker_notes": "先看第一段两题，再听并选择：李军是不是留学生、玛丽学不学汉语。核对以后再口头复述人物信息。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "23",
+        "教材 ",
+        "P21",
+        "先看第一段两题，再听并选择：李军是不是留学生、玛丽学不学汉语。核对以后再口头复述人物信息。",
+        "练习4-9"
+      ]
+    },
+    {
+      "slide_number": 24,
+      "title": "练习4-10",
+      "layout": "textbook-exercise",
+      "source_refs": [
+        "canonical-source.json#sections.dialogue_2"
+      ],
+      "textbook_page": "教材 P21",
+      "audio": "4-10",
+      "speaker_notes": "先看第二段两题，再听并选择：他是不是中国学生、老师姓什么。与第一段分别播放和核对。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "24",
+        "教材 ",
+        "P21",
+        "先看第二段两题，再听并选择：他是不是中国学生、老师姓什么。与第一段分别播放和核对。",
+        "练习4-10"
+      ]
+    },
+    {
+      "slide_number": 25,
+      "title": "朗读",
+      "layout": "textbook-exercise",
+      "source_refs": [
+        "canonical-source.json#sections.passage_reading"
+      ],
+      "textbook_page": "教材 P21",
+      "audio": null,
+      "speaker_notes": "教材三段短介绍均保留在书上。轮流朗读，听者确认说的是玛丽、李军还是王大卫。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "25",
+        "教材 ",
+        "P21",
+        "教材三段短介绍均保留在书上。轮流朗读，听者确认说的是玛丽、李军还是王大卫。",
+        "朗读"
+      ]
+    },
+    {
+      "slide_number": 26,
+      "title": "用所给的词语看图说话",
+      "layout": "textbook-exercise",
+      "source_refs": [
+        "canonical-source.json#sections.picture_speaking"
+      ],
+      "textbook_page": "教材 P22",
+      "audio": null,
+      "speaker_notes": "使用教材是、叫、姓、学四个提示词及王明老师、玛丽留学生、大卫留学生的原图，说出人物信息。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "26",
+        "教材 ",
+        "P22",
+        "使用教材是、叫、姓、学四个提示词及王明老师、玛丽留学生、大卫留学生的原图，说出人物信息。",
+        "用所给的词语看图说话"
+      ]
+    },
+    {
+      "slide_number": 27,
+      "title": "交际练习",
+      "layout": "textbook-exercise",
+      "source_refs": [
+        "canonical-source.json#sections.communication"
+      ],
+      "textbook_page": "教材 P22",
+      "audio": null,
+      "speaker_notes": "课前把实际学生姓名写在卡片上，打乱发放，确保每人拿到的不是本人。学生离座问答找人；遇到其他人也问清姓名并记录。教材活动5–10分钟。随后每人向小组介绍卡片上的人和新认识的人，教师抽听；误听姓名时用第三课“请再说一遍”修补。无需另造学生姓名。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "27",
+        "教材 ",
+        "P22",
+        "课前把实际学生姓名写在卡片上，打乱发放，确保每人拿到的不是本人。学生离座问答找人；遇到其他人也问清姓名并记录。教材活动5–10分钟。随后每人向小组介绍卡片上的人和新认识的人，教师抽听；误听姓名时用第三课“请再说一遍”修补。无需另造学生姓名。",
+        "交际练习"
+      ]
+    },
+    {
+      "slide_number": 28,
+      "title": "重点句子",
+      "layout": "divider",
+      "source_refs": [],
+      "textbook_page": null,
+      "audio": null,
+      "speaker_notes": "本页是课堂流程提示；不含教材作答内容。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "28",
+        "本页是课堂流程提示；不含教材作答内容。",
+        "重点句子"
+      ]
+    },
+    {
+      "slide_number": 29,
+      "title": "重点句子",
+      "layout": "key-sentences",
+      "source_refs": [
+        "canonical-source.json#sections.key_sentences"
+      ],
+      "textbook_page": "教材 P23",
+      "audio": null,
+      "speaker_notes": "教材8句全部回顾，先读再用真实信息替换姓名和身份。教材句子是语言例子，不是听力标准答案。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "29",
+        "教材 ",
+        "P23",
+        "教材8句全部回顾，先读再用真实信息替换姓名和身份。教材句子是语言例子，不是听力标准答案。",
+        "重点句子",
+        "1. 你好！",
+        "Nǐ hǎo!",
+        "2. 你叫什么名字？",
+        "Nǐ jiào shénme míngzi?",
+        "3. 我叫李军。",
+        "Wǒ jiào Lǐ Jūn."
+      ]
+    },
+    {
+      "slide_number": 30,
+      "title": "重点句子",
+      "layout": "key-sentences",
+      "source_refs": [
+        "canonical-source.json#sections.key_sentences"
+      ],
+      "textbook_page": "教材 P23",
+      "audio": null,
+      "speaker_notes": "教材8句全部回顾，先读再用真实信息替换姓名和身份。教材句子是语言例子，不是听力标准答案。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "30",
+        "教材 ",
+        "P23",
+        "教材8句全部回顾，先读再用真实信息替换姓名和身份。教材句子是语言例子，不是听力标准答案。",
+        "重点句子",
+        "4. 你是留学生吗？",
+        "Nǐ shì liúxuésheng ma?",
+        "5. 他不是留学生，是中国学生。",
+        "Tā bú shì liúxuésheng, shì Zhōngguó xuésheng."
+      ]
+    },
+    {
+      "slide_number": 31,
+      "title": "重点句子",
+      "layout": "key-sentences",
+      "source_refs": [
+        "canonical-source.json#sections.key_sentences"
+      ],
+      "textbook_page": "教材 P23",
+      "audio": null,
+      "speaker_notes": "教材8句全部回顾，先读再用真实信息替换姓名和身份。教材句子是语言例子，不是听力标准答案。",
+      "student_visible_text": [
+        "第四课｜你叫什么名字",
+        "31",
+        "教材 ",
+        "P23",
+        "教材8句全部回顾，先读再用真实信息替换姓名和身份。教材句子是语言例子，不是听力标准答案。",
+        "重点句子",
+        "6. 我学汉语。",
+        "Wǒ xué Hànyǔ.",
+        "7. 他姓什么？",
+        "Tā xìng shénme?",
+        "8. 他姓王。",
+        "Tā xìng Wáng."
+      ]
+    }
+  ]
+}

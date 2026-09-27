@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 
@@ -21,13 +22,14 @@ from workflow_integrity import (
 )
 from validate_lesson_identity import validate as validate_lesson_identity
 from lesson_context import LessonContext, LessonContextError, resolve_lesson_context
+from legacy_active_config import legacy_path, legacy_value
 from workflow_integrity import resolve_relative_path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((PROJECT_ROOT / "project.config.json").read_text(encoding="utf-8"))
-LESSON_ROOT = PROJECT_ROOT / CONFIG["lesson_root"]
-DESIGN_ROOT = PROJECT_ROOT / CONFIG["draft_root"]
+LESSON_ROOT = legacy_path("lesson_root", project_root=PROJECT_ROOT, config=CONFIG)
+DESIGN_ROOT = legacy_path("draft_root", project_root=PROJECT_ROOT, config=CONFIG)
 LESSON_REGISTRY = PROJECT_ROOT / CONFIG.get("lesson_registry", "course/lesson-registry.json")
 
 PRODUCTION_SCRIPTS = (
@@ -121,7 +123,7 @@ def validate_output_dir(value: str | None, purpose: str, blockers: list[str], co
 def add_file_status_blockers(manifest: dict[str, Any], blockers: list[str], context: LessonContext | None = None) -> None:
     audit = audit_authority_manifest(
         PROJECT_ROOT,
-        context.authority_root if context else PROJECT_ROOT / CONFIG["authority_root"],
+        context.authority_root if context else legacy_path("authority_root", project_root=PROJECT_ROOT, config=CONFIG),
         manifest,
     )
     blockers.extend(audit["failures"])
@@ -208,7 +210,7 @@ def load_base_manifests(blockers: list[str], context: LessonContext | None = Non
         for label, manifest in (("source", source_manifest), ("teaching-design", teaching_manifest), ("authority", authority_manifest)):
             check_manifest_scope(manifest, label, context, blockers, require_key=label == "source")
 
-    canonical = context.canonical_source if context else project_path(CONFIG["canonical_source"])
+    canonical = context.canonical_source if context else legacy_path("canonical_source", project_root=PROJECT_ROOT, config=CONFIG)
     if not canonical.is_file():
         blockers.append(f"canonical source is missing: {canonical.relative_to(PROJECT_ROOT)}")
     elif source_manifest.get("canonical_source_sha256") != sha256(canonical):
@@ -224,7 +226,7 @@ def load_base_manifests(blockers: list[str], context: LessonContext | None = Non
         source_package = authority_manifest.get("source_package")
         historical_source = (
             (source_package.get("path") if isinstance(source_package, dict) else None)
-            if context else CONFIG.get("historical_package_evidence")
+            if context else legacy_value("historical_package_evidence", project_root=PROJECT_ROOT, config=CONFIG)
         )
         if not historical_source:
             blockers.append("configured historical package evidence is missing")
@@ -251,6 +253,14 @@ def require_authority_manual(authority_manifest: dict[str, Any], blockers: list[
         blockers.append("teacher manual is not marked final_confirmed")
 
 
+def is_approved_status(value: Any) -> bool:
+    """Accept explicit states, never a substring such as not_approved."""
+    return isinstance(value, str) and (
+        value == "approved" or value.startswith("approved_by_adam_")
+        or value == "v5_approved_design_system_2026-08-20"
+    )
+
+
 def require_approved_design_inputs(blockers: list[str], context: LessonContext | None = None) -> None:
     design_root = context.design_root if context else LESSON_ROOT / "10-design"
     storyboard = read_json(design_root / "storyboard/manifest.json")
@@ -265,11 +275,11 @@ def require_approved_design_inputs(blockers: list[str], context: LessonContext |
         blockers.append(
             "PPT storyboard current revision is not approved; full PPTX generation is blocked"
         )
-    if "approved" not in str(visual.get("status", "")).lower():
+    if not is_approved_status(visual.get("status")):
         blockers.append("visual storyboard is not approved")
     if visual.get("current_pptx_alignment_status") != "approved":
         blockers.append("visual storyboard is not explicitly aligned to the current PPTX")
-    if "approved" not in str(prototype.get("status", "")).lower():
+    if not is_approved_status(prototype.get("status")):
         blockers.append("six-slide visual prototype is not approved")
     if not (design_root / "activity-package-manifest.json").is_file():
         blockers.append("activity package manifest is missing")
@@ -306,16 +316,75 @@ def require_release_ready(authority_manifest: dict[str, Any], blockers: list[str
         blockers.append("approved contact-hour teacher rehearsal is not passed")
 
 
+def check_content_approval(lesson_key: str | None, offering_id: str | None = None) -> dict[str, Any]:
+    """Read-only prerequisite for new images, prototypes and PPTX, including drafts.
+
+    Hashes prove which content was approved, not that a human actually approved it.
+    Agents must record genuine explicit user evidence; never infer it from routing.
+    """
+    blockers: list[str] = []
+    try:
+        if not lesson_key:
+            raise ValueError("explicit lesson_key is required")
+        context = resolve_lesson_context(PROJECT_ROOT, lesson_key, offering_id)
+        design = context.design_root
+        record_path = design / "storyboard" / f"{context.lesson_id}-content-approval.json"
+        resolve_relative_path(PROJECT_ROOT, record_path.relative_to(PROJECT_ROOT).as_posix(), required_root=design)
+        record = read_json(record_path)
+        if not isinstance(record, dict):
+            raise ValueError("record must be an object")
+        if record.get("status") != "approved":
+            raise ValueError("current content is pending explicit human approval")
+        if record.get("gate") != "lesson-content":
+            raise ValueError("boundary/structure approval is not lesson-content approval")
+        if record.get("lesson_key") != lesson_key or record.get("offering_id") != context.offering_id:
+            raise ValueError("lesson_key/offering_id mismatch")
+        if not isinstance(record.get("approved_by"), str) or not record["approved_by"].strip():
+            raise ValueError("named human approver is required")
+        approved_at = datetime.fromisoformat(record.get("approved_at") or "")
+        if approved_at.tzinfo is None:
+            raise ValueError("approval timestamp must include timezone")
+        artifacts = record.get("artifacts")
+        if not isinstance(artifacts, list) or not artifacts:
+            raise ValueError("approved content artifacts are required")
+        paths: set[str] = set()
+        for item in artifacts:
+            if not isinstance(item, dict):
+                raise ValueError("artifact must be an object")
+            path, normalized = resolve_relative_path(PROJECT_ROOT, item.get("path"), required_root=context.lesson_root)
+            if not (is_within(path, design) or is_within(path, context.source_root)) or path == record_path:
+                raise ValueError("content must be a source/design input, not approval or authority")
+            if normalized in paths or not path.is_file() or sha256(path) != item.get("sha256"):
+                raise ValueError(f"duplicate, missing or changed content: {normalized}")
+            paths.add(normalized)
+        required = {
+            context.canonical_source.relative_to(PROJECT_ROOT).as_posix(),
+            (design / "storyboard" / f"{context.lesson_id}-逐页文案审阅.md").relative_to(PROJECT_ROOT).as_posix(),
+        }
+        if not required.issubset(paths):
+            raise ValueError("approval must bind canonical source and current slide-copy review")
+        evidence, normalized = resolve_relative_path(PROJECT_ROOT, record.get("evidence"), required_root=design)
+        if evidence == record_path or normalized in paths or not evidence.is_file():
+            raise ValueError("independent human approval evidence is required")
+        if sha256(evidence) != record.get("evidence_sha256") or not evidence.read_text(encoding="utf-8").strip():
+            raise ValueError("human approval evidence is empty or changed")
+    except (ValueError, TypeError, OSError, LessonContextError) as error:
+        blockers.append(f"content approval required: {error}")
+    return with_blocker_records({"purpose": "content-approval", "lesson_key": lesson_key,
+                                 "status": "blocked" if blockers else "ready", "blockers": blockers},
+                                scope="lesson-content")
+
+
 def check_lesson_ppt_draft(lesson_key: str | None, output_dir: str | None = None) -> dict[str, Any]:
     """Gate a lesson-specific PPTX draft without granting authority.
 
     The authority gate requires full approval evidence for its lesson scope. Later
     lessons need a safe, explicit draft stage while their own authority
-    manifests are still being built.  This stage validates identity, source
-    integrity, boundary confirmation, and output scope; it never approves or
+    manifests are still being built.  This stage validates explicit content
+    approval, identity, source integrity, boundary confirmation, and output scope; it never approves or
     writes an authority file.
     """
-    blockers: list[str] = []
+    blockers: list[str] = list(check_content_approval(lesson_key)["blockers"])
     if not lesson_key:
         blockers.append("lesson-specific PPTX draft requires --lesson-key")
         return with_blocker_records({"purpose": "pptx", "stage": "draft", "status": "blocked", "output_dir": output_dir, "blockers": blockers}, scope="draft/pptx")
@@ -424,6 +493,8 @@ def check(purpose: str, output_dir: str | None = None, lesson_key: str | None = 
     # Keep legacy helper call shapes for existing integrations and mocks.
     scope = (context,) if context else ()
     design_root = context.design_root if context else LESSON_ROOT / "10-design"
+    if purpose in {"pptx", "prototype"}:
+        blockers.extend(check_content_approval(lesson_key, offering_id)["blockers"])
     if purpose not in {"audit", "teacher-guide", "support", "prototype", "pptx", "semester-manual", "release"}:
         blockers.append(f"unknown production purpose: {purpose}")
 
@@ -442,7 +513,7 @@ def check(purpose: str, output_dir: str | None = None, lesson_key: str | None = 
             visual = read_json(design_root / "visual-storyboard/manifest.json")
             if context:
                 check_manifest_scope(visual, "visual storyboard", context, blockers)
-            if "approved" not in str(visual.get("status", "")).lower():
+            if not is_approved_status(visual.get("status")):
                 blockers.append("visual storyboard is not approved")
         except (FileNotFoundError, json.JSONDecodeError) as error:
             blockers.append(f"visual storyboard manifest is unavailable or invalid: {error}")
@@ -477,8 +548,11 @@ def main() -> int:
     parser.add_argument("--output-dir")
     parser.add_argument("--stage", choices=("authority", "draft"), default="authority")
     parser.add_argument("--lesson-key")
+    parser.add_argument("--offering-id")
     args = parser.parse_args()
-    if args.stage == "draft":
+    if args.purpose == "content-approval":
+        result = check_content_approval(args.lesson_key, args.offering_id)
+    elif args.stage == "draft":
         if args.purpose != "pptx":
             result = {
                 "purpose": args.purpose,
@@ -491,7 +565,7 @@ def main() -> int:
         else:
             result = check_lesson_ppt_draft(args.lesson_key, args.output_dir)
     else:
-        result = check(args.purpose, args.output_dir, lesson_key=args.lesson_key)
+        result = check(args.purpose, args.output_dir, lesson_key=args.lesson_key, offering_id=args.offering_id)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0 if result["status"] == "ready" else 1
 

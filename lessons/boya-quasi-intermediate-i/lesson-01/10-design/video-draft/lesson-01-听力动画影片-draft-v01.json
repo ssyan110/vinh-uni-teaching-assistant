@@ -1,0 +1,415 @@
+{
+  "schema_version": "lesson-listening-video-draft-v1",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-01",
+  "offering_id": "2026-fall",
+  "title": "第一课听力动画",
+  "status": "draft_not_approved",
+  "output": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/video-draft/lesson-01-听力动画影片-draft-v01.mp4",
+  "duration_seconds": 680.775,
+  "resolution": "1280x720",
+  "frame_rate": 24,
+  "audio_policy": "使用当前项目中的1-1至1-8 MP3；未重新配音。",
+  "visual_policy": {
+    "true_false": "只显示相关图片，不显示句子文字。",
+    "dialogues": "画面显示两人对话字幕。",
+    "sentence_qa": "显示听到的句子和问题，不显示答案。",
+    "short_texts": "使用同一视觉风格的单人旁白卡片与字幕。"
+  },
+  "source_files": {
+    "source_extraction": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-extraction-draft.json",
+    "canonical_source": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/canonical-source.json",
+    "audio_root": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01"
+  },
+  "tracks": [
+    {
+      "track": "1-1",
+      "kind": "vocabulary",
+      "audio": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-1.mp3",
+      "visual_mode": "word_image_cards",
+      "segments": [
+        {
+          "card": "cards/01-vocab-01.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-02.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-03.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-04.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-05.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-06.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-07.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-08.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-09.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-10.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-11.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-12.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-13.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-14.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-15.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-16.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-17.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-18.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-19.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-20.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-21.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-22.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-23.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-24.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-25.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-26.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-27.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-28.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-29.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-30.png",
+          "duration_seconds": 2.66
+        },
+        {
+          "card": "cards/01-vocab-31.png",
+          "duration_seconds": 2.66
+        }
+      ],
+      "output": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/video-draft/tracks/1-1.mp4"
+    },
+    {
+      "track": "1-2",
+      "kind": "vocabulary_comprehension",
+      "audio": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-2.mp3",
+      "visual_mode": "category_image_cards",
+      "segments": [
+        {
+          "card": "cards/02-category-01.png",
+          "duration_seconds": 17.276
+        },
+        {
+          "card": "cards/02-category-02.png",
+          "duration_seconds": 17.276
+        },
+        {
+          "card": "cards/02-category-03.png",
+          "duration_seconds": 17.276
+        }
+      ],
+      "output": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/video-draft/tracks/1-2.mp4"
+    },
+    {
+      "track": "1-3",
+      "kind": "true_false_sentences",
+      "audio": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-3.mp3",
+      "visual_mode": "related_image_only",
+      "segments": [
+        {
+          "card": "cards/03-tf-01.png",
+          "duration_seconds": 22.561
+        },
+        {
+          "card": "cards/03-tf-02.png",
+          "duration_seconds": 22.561
+        },
+        {
+          "card": "cards/03-tf-03.png",
+          "duration_seconds": 22.561
+        },
+        {
+          "card": "cards/03-tf-04.png",
+          "duration_seconds": 22.561
+        },
+        {
+          "card": "cards/03-tf-05.png",
+          "duration_seconds": 22.561
+        },
+        {
+          "card": "cards/03-tf-06.png",
+          "duration_seconds": 22.561
+        },
+        {
+          "card": "cards/03-tf-07.png",
+          "duration_seconds": 22.561
+        },
+        {
+          "card": "cards/03-tf-08.png",
+          "duration_seconds": 22.561
+        },
+        {
+          "card": "cards/03-tf-09.png",
+          "duration_seconds": 22.561
+        }
+      ],
+      "output": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/video-draft/tracks/1-3.mp4"
+    },
+    {
+      "track": "1-4",
+      "kind": "dialogues",
+      "audio": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-4.mp3",
+      "visual_mode": "two_speaker_caption",
+      "segments": [
+        {
+          "card": "cards/04-dialogue-01.png",
+          "duration_seconds": 15.376
+        },
+        {
+          "card": "cards/04-dialogue-02.png",
+          "duration_seconds": 15.376
+        },
+        {
+          "card": "cards/04-dialogue-03.png",
+          "duration_seconds": 15.376
+        },
+        {
+          "card": "cards/04-dialogue-04.png",
+          "duration_seconds": 15.376
+        },
+        {
+          "card": "cards/04-dialogue-05.png",
+          "duration_seconds": 15.376
+        }
+      ],
+      "output": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/video-draft/tracks/1-4.mp4"
+    },
+    {
+      "track": "1-5",
+      "kind": "sentence_question_answer",
+      "audio": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-5.mp3",
+      "visual_mode": "statement_question_card",
+      "segments": [
+        {
+          "card": "cards/05-qa-01.png",
+          "duration_seconds": 6.648
+        },
+        {
+          "card": "cards/05-qa-02.png",
+          "duration_seconds": 6.648
+        },
+        {
+          "card": "cards/05-qa-03.png",
+          "duration_seconds": 6.648
+        },
+        {
+          "card": "cards/05-qa-04.png",
+          "duration_seconds": 6.648
+        },
+        {
+          "card": "cards/05-qa-05.png",
+          "duration_seconds": 6.648
+        },
+        {
+          "card": "cards/05-qa-06.png",
+          "duration_seconds": 6.648
+        },
+        {
+          "card": "cards/05-qa-07.png",
+          "duration_seconds": 6.648
+        },
+        {
+          "card": "cards/05-qa-08.png",
+          "duration_seconds": 6.648
+        }
+      ],
+      "output": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/video-draft/tracks/1-5.mp4"
+    },
+    {
+      "track": "1-6",
+      "kind": "short_text",
+      "title": "丽丽在北京找到了工作",
+      "audio": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-6.mp3",
+      "visual_mode": "single_narrator_caption",
+      "segments": [
+        {
+          "card": "cards/1-6-narration-01.png",
+          "duration_seconds": 8.197
+        },
+        {
+          "card": "cards/1-6-narration-02.png",
+          "duration_seconds": 4.805
+        },
+        {
+          "card": "cards/1-6-narration-03.png",
+          "duration_seconds": 8.48
+        },
+        {
+          "card": "cards/1-6-narration-04.png",
+          "duration_seconds": 8.48
+        },
+        {
+          "card": "cards/1-6-narration-05.png",
+          "duration_seconds": 14.698
+        },
+        {
+          "card": "cards/1-6-narration-06.png",
+          "duration_seconds": 10.175
+        },
+        {
+          "card": "cards/1-6-narration-07.png",
+          "duration_seconds": 17.524
+        }
+      ],
+      "output": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/video-draft/tracks/1-6.mp4"
+    },
+    {
+      "track": "1-7",
+      "kind": "short_text",
+      "title": "丽丽工作很努力",
+      "audio": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-7.mp3",
+      "visual_mode": "single_narrator_caption",
+      "segments": [
+        {
+          "card": "cards/1-7-narration-01.png",
+          "duration_seconds": 7.549
+        },
+        {
+          "card": "cards/1-7-narration-02.png",
+          "duration_seconds": 7.549
+        },
+        {
+          "card": "cards/1-7-narration-03.png",
+          "duration_seconds": 9.785
+        },
+        {
+          "card": "cards/1-7-narration-04.png",
+          "duration_seconds": 8.667
+        },
+        {
+          "card": "cards/1-7-narration-05.png",
+          "duration_seconds": 12.301
+        }
+      ],
+      "output": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/video-draft/tracks/1-7.mp4"
+    },
+    {
+      "track": "1-8",
+      "kind": "short_text",
+      "title": "丽丽的爱好很多",
+      "audio": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-8.mp3",
+      "visual_mode": "single_narrator_caption",
+      "segments": [
+        {
+          "card": "cards/1-8-narration-01.png",
+          "duration_seconds": 8.492
+        },
+        {
+          "card": "cards/1-8-narration-02.png",
+          "duration_seconds": 6.301
+        },
+        {
+          "card": "cards/1-8-narration-03.png",
+          "duration_seconds": 6.301
+        },
+        {
+          "card": "cards/1-8-narration-04.png",
+          "duration_seconds": 9.314
+        },
+        {
+          "card": "cards/1-8-narration-05.png",
+          "duration_seconds": 7.671
+        },
+        {
+          "card": "cards/1-8-narration-06.png",
+          "duration_seconds": 7.671
+        },
+        {
+          "card": "cards/1-8-narration-07.png",
+          "duration_seconds": 10.41
+        },
+        {
+          "card": "cards/1-8-narration-08.png",
+          "duration_seconds": 9.314
+        },
+        {
+          "card": "cards/1-8-narration-09.png",
+          "duration_seconds": 4.657
+        }
+      ],
+      "output": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/video-draft/tracks/1-8.mp4"
+    }
+  ],
+  "checks": {
+    "file_exists": true,
+    "sha256": "d73f07fdad772a2e90cd1f11374f94d5353a2cd1614eb42050a22df6ea2241ee",
+    "audio_semantic_review": "pending_teacher_listening",
+    "publisher_mapping_1_7_1_8": "pending",
+    "powerpoint_rehearsal": "not_applicable"
+  }
+}

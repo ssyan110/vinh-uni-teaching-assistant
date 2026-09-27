@@ -37,13 +37,48 @@ New teacher-facing files use `lesson-<nn>-<用途>.<extension>` with a two-digit
 
 Teacher guides, prep cards, activity materials, previews, audio, CSV exports, and ZIP packages use the same `lesson-01-<用途>` prefix. Existing approved or archived files keep their original names because their paths and hashes are part of the recorded evidence; new releases must use the canonical names.
 
-Build the read-only dashboard cache with:
+Build the dashboard cache with:
 
 ```bash
 python3 scripts/build_dashboard.py
 ```
 
+This command writes only `dashboard/manifest.js`; it does not write lesson
+materials, authority, QA, or release paths.
+
 The generated `dashboard/manifest.js` aggregates the active textbook's lesson summaries from its source inventory and any available `lessons/<textbook_id>/lesson-XX/20-approved/lesson-manifest.json` files. Each summary is keyed by `lesson_key`; the dashboard only expands the selected lesson and does not copy every lesson's evidence into the course overview.
+
+The audit is read-only and inventories remaining consumers as `migration-required`, `historical-legacy`, or `identity-compatibility`:
+
+```bash
+python3 scripts/audit_active_context_consumers.py
+```
+
+The audit does not execute builders or remove legacy config fields.
+
+Validate that direct legacy active-config fallbacks remain confined to the explicit
+historical allowlist:
+
+```bash
+python3 scripts/audit_legacy_usage.py
+```
+
+The audit is read-only. It allowlists `scripts/legacy/` and the `build_lesson_01_*`
+historical builder family; any direct legacy config fallback outside those scopes
+is a blocker.
+
+The audit is read-only and fails closed when a top-level requirements section has no registry mapping.
+
+```bash
+python3 scripts/audit_requirements_coverage.py
+```
+
+Audit lifecycle wording so technical verification, human approval, authority, and
+release are not conflated:
+
+```bash
+python3 scripts/audit_lifecycle_wording.py
+```
 
 Validate the identity boundary before rebuilding the dashboard:
 
@@ -119,7 +154,21 @@ Blooket import); the builder still refuses to publish until audio playback and
 the lesson's approved contact-hour rehearsal are recorded. No generic
 300-minute assumption is permitted.
 
-Before a generator writes a draft, it runs the lesson-specific fail-fast gate:
+Before dispatching image workers or promoting their assets, check explicit
+approval of the current lesson content (read-only; does not grant approval):
+
+```bash
+python3 scripts/production_gate.py --purpose content-approval --lesson-key boya-elementary-i:lesson-04 --offering-id 2026-fall
+```
+
+The canonical workflow contract defines the content-approval record and required
+hash-bound source, slide-copy review and independent human evidence. Pending,
+missing or changed content blocks production. Structure/boundary approval and
+"start/continue" are not content approval. Existing finalized read-only intake
+does not regenerate a lesson and is unchanged.
+
+Before a generator writes a draft, it runs the lesson-specific fail-fast gate
+(which includes the same content-approval check):
 
 ```bash
 python3 scripts/production_gate.py --purpose pptx --stage draft \\
@@ -277,7 +326,7 @@ retained as historical evidence and is not the current v11 delivery.
 - `legacy/build_lesson_01_source_review.js`
 - `legacy/build_lesson_01_teaching_design.js`
 
-Do not use them as the future classroom deck pipeline. The `scripts/legacy/` directory is read-only historical evidence; any fixed lesson counts, fixed hours, or HTML output there do not apply to current lesson requirements and must not be used as generator inputs or release criteria. Do not add HTML animation or an HTML presenter to the course workflow unless Adam explicitly changes the project requirement.
+Do not use them as the future classroom deck pipeline. The `scripts/legacy/` directory is read-only historical evidence; any fixed lesson counts, fixed hours, or HTML output there do not apply to current lesson requirements and must not be used as generator inputs or release criteria. For new decks, use the selected `native-pptx` or `open-slide` path documented in `AGENTS.md`; Open Slide remains draft-only until its lesson QA/release path is defined.
 
 ## Future production rule
 
@@ -319,3 +368,9 @@ For Vinh University, all student-facing PPTX, prep cards, activity cards, assess
 All human-facing outputs must read as finished professional teaching materials. Do not add AI self-descriptions, workflow explanations, tool references, or template openings such as “這不是……”. Keep source, QA, debug, and production notes in separate internal records.
 
 Read the repository root `AGENTS.md`, `PROJECT_REQUIREMENTS.md` and `.agent/skills/boya-lesson-production/SKILL.md` before adding or changing a production script.
+
+## Optimization closure boundaries
+
+Dashboard selection is centralized in `dashboard_context.py`, not removed. Its output root is restricted to `dashboard/`; no material paths are permitted.
+The active-context audit is a lexical inventory of Python/JavaScript files, not a complete data-flow or historical-builder safety proof. Unknown matches are blocked (exit 1); known compatibility matches remain review (exit 0).
+Requirements coverage checks top-level chapter mappings only. Empty input is blocked; this is not per-requirement acceptance or human approval. Remaining CLI consolidation and legacy removal are optional roadmap work, not automatic next tasks.

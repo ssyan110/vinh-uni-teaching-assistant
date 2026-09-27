@@ -1,0 +1,78 @@
+{
+  "schema_version": "boya-elementary-pptx-draft-v1",
+  "lesson_key": "boya-elementary-i:lesson-01",
+  "offering_id": "2026-fall",
+  "textbook_id": "boya-elementary-i",
+  "lesson_id": "lesson-01",
+  "title": "拼音和日常用语（一）",
+  "mode": "teacher_face_to_face_only",
+  "artifact_status": "draft_generated_not_approved",
+  "output": "lessons/boya-elementary-i/lesson-01/10-design/pptx-draft/face-to-face/lesson-01-实体课-draft-v01.pptx",
+  "slide_count": 55,
+  "slide_copy_source": "docs/boya-elementary-i-lesson-01-slide-copy-review-2026-09-15.md",
+  "slide_copy_source_sha256": "8ad6ded860d44d2cb5da63d8feb3053e1d58e886bc11119c21cc0245315517cc",
+  "storyboard": "lessons/boya-elementary-i/lesson-01/10-design/storyboard/lesson-01-face-to-face-generated.json",
+  "student_visible_minimum_pt": 23,
+  "textbook_page_marker_policy": "All slides using Boya textbook content carry the printed textbook page marker; supplemental pinyin pages are marked as supplemental and have no Boya marker.",
+  "audio": {
+    "embedded_tracks": [],
+    "semantic_status": "pending_teacher_listening",
+    "powerpoint_playback_status": "pending_teacher_playback"
+  },
+  "images": {
+    "embedded_assets": [
+      {
+        "asset_id": "learning-route-imagen",
+        "file": "learning-route-imagen.png",
+        "sha256": "de9b823702cef06945e7adaa335a0af39bb1021e0c11989722d02fd4246cb110"
+      },
+      {
+        "asset_id": "tone-chart-user",
+        "file": "tone-chart-user.png",
+        "sha256": "2afdd82c4f5e28dc733950bac17a1c5d4dce38b117c8d0b68014ab32e6f20ee9"
+      },
+      {
+        "asset_id": "divider-initials-imagen",
+        "file": "divider-initials-imagen.png",
+        "sha256": "80c59f014ee87aa4f78bf97e1f105fa52409893a5ab69b6e7a731692db713bb4"
+      },
+      {
+        "asset_id": "divider-finals-imagen",
+        "file": "divider-finals-imagen.png",
+        "sha256": "51520fd73cd843953ad0ec2408a363a5b3d32a736f811203c7949f146b6a9359"
+      },
+      {
+        "asset_id": "divider-tones-imagen",
+        "file": "divider-tones-imagen.png",
+        "sha256": "a2134c50824aa1d5b1294a9b8dfa01b4b3d3ff14d9b7fb62bc69c9ab4d1b83a8"
+      },
+      {
+        "asset_id": "divider-syllable-imagen",
+        "file": "divider-syllable-imagen.png",
+        "sha256": "b8890d7b652cabb954f4be7d2aded5c86f2170e2f7532005aab7bca3b8922062"
+      },
+      {
+        "asset_id": "divider-daily-imagen",
+        "file": "divider-daily-imagen.png",
+        "sha256": "6e08823824e9374bc30cd5d80d9aa0a166671732146ff70da079b3e8c489e6ea"
+      },
+      {
+        "asset_id": "pinyin-concept-2-crop",
+        "file": "pinyin-concept-2-crop.png",
+        "sha256": "0b1b7e81c4e12cf6b1616e7acfbf709d09212bfdb7185d76bc88ab9e9f1ac735"
+      },
+      {
+        "asset_id": "pinyin-greeting-crop",
+        "file": "pinyin-greeting-crop.png",
+        "sha256": "392eeb0d2fc4cb890edc94fdd4aa2f1aee1eb445fa8ad932a42533951378b82d"
+      }
+    ]
+  },
+  "open_gates": [
+    "semantic audio listening",
+    "PowerPoint playback",
+    "teacher rehearsal",
+    "Adam authority approval"
+  ],
+  "sha256": "d32ff79b33d7afbed6388a7b43ff930c6f3d6c0291732d1d6d1931829a383f37"
+}

@@ -40,7 +40,17 @@ test('new learning evidence belongs to a current session and survives repository
   const restored = await new DemoRepository().load()
   expect(restored.sessions.find(item=>item.id===sessionId)?.session_date).toBe(todayIso())
   expect(restored.learningEvents[0]).toMatchObject({session_id:sessionId,source:'voluntary_answer',task_completion:0,comprehensibility:null,lesson_id:'lesson-02'})
-  expect(before.courses.map(c=>before.enrollments.filter(e=>e.course_id===c.id).length)).toEqual([27,30,14])
+  expect(before.courses.map(c=>before.enrollments.filter(e=>e.course_id===c.id).length)).toEqual([26,30,15])
+})
+
+test('manual participation adjustment does not require a textbook context', async () => {
+  const repo = new DemoRepository()
+  const before = await repo.load()
+  const course = before.courses[0]
+  const student = before.enrollments.find(e => e.course_id === course.id)!
+  const sessionId = before.sessions.find(item => item.course_id === course.id)!.id
+  await repo.saveLearningEvent({ course_id: course.id, session_id: sessionId, student_id: student.student_id, source: 'manual_adjustment', textbook_id: null, lesson_id: null, lesson_label: null, activity_label: '回答次數快速加記', response_status: 'answered', record_status: 'valid', counted_for_summary: true, task_completion: null, comprehensibility: null, language_control: null, interaction: null, needs_review: false, counted_for_grade: false })
+  expect((await repo.load()).learningEvents[0]).toMatchObject({ source: 'manual_adjustment', textbook_id: null, lesson_id: null, lesson_label: null, activity_label: '回答次數快速加記' })
 })
 
 test('a student from another class cannot receive a record', async () => {

@@ -101,9 +101,8 @@ export function TodayPage() {
 
   return <div className="page today-page">
     <header className="page-heading">
-      <p className="eyebrow">班级总览</p>
-      <h1>先看班级，再处理少数学生</h1>
-      <p>首页先显示三个班级的最近一堂课摘要；完整名单、课堂历史和课后备注默认收起。</p>
+      <h1>班级总览</h1>
+      <p>查看最近一堂课的回答记录，继续课后跟进。</p>
     </header>
 
     <section className="class-cards" aria-label="三个班级摘要">
@@ -144,7 +143,7 @@ export function TodayPage() {
 
     <section className="panel urgent-panel" aria-labelledby="urgent-heading">
       <div className="panel-heading">
-        <div><p className="section-kicker">第二层</p><h2 id="urgent-heading">需要马上处理的学生</h2></div>
+        <div><h2 id="urgent-heading">需要跟进的学生</h2></div>
         <span>{urgentStudents.length ? `显示 ${urgentStudents.length} 人` : '目前没有'}</span>
       </div>
       <p className="section-lead">优先显示最近一堂课零回答或有当前待办的学生，最多显示 8 人。</p>

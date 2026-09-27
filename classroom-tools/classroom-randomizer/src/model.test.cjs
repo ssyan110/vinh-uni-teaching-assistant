@@ -49,6 +49,22 @@ function roster(count = 30) {
   }));
 }
 
+test("roster search accepts padded/full-width seats and names without changing eligibility or roster order", () => {
+  let state = model.createSession({ className: "QA", roster: [
+    { studentCode: "QA-A", seatNumber: "10", name: "林安" },
+    { studentCode: "QA-B", seatNumber: "2", name: "陈美玲" },
+    { studentCode: "QA-C", seatNumber: "1", name: "陈美玲" }
+  ] });
+  state = model.setAbsent(state, "QA-B", true);
+  assert.deepEqual(model.findRosterStudents(state).map(s => s.seatNumber), ["1", "2", "10"]);
+  assert.deepEqual(model.findRosterStudents(state, "０２").map(s => s.id), ["QA-B"]);
+  assert.equal(model.findRosterStudents(state, "陈美玲").length, 2);
+  assert.deepEqual(model.findRosterStudents(state, "qa-c").map(s => s.id), ["QA-C"]);
+  assert.equal(model.findRosterStudents(state, "不存在").length, 0);
+  assert.deepEqual(state.roster.map(s => s.seatNumber), ["10", "2", "1"]);
+  assert.deepEqual(state.excludedStudentIds, ["QA-B"]);
+});
+
 function drawById(state, studentId, options = {}) {
   const pool = model.getSelectablePool(state);
   const index = pool.findIndex((student) => student.id === studentId);

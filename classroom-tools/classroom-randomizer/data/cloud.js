@@ -255,6 +255,50 @@
     return result;
   }
 
+  async function fetchStudentRecords(classId, studentKey) {
+    const context = await fetchClassRoster(classId);
+    const student = context.roster.find(item => item.id === studentKey || item.studentCode === studentKey);
+    if (!student) throw new Error("云端名单中找不到这位学生，请刷新名单后重试。");
+    async function pages(table, select, filter) {
+      const rows = [];
+      for (let offset = 0; ; offset += 1000) {
+        const page = await request(`/rest/v1/${table}?select=${select}&course_id=eq.${encodeURIComponent(context.courseId)}&${filter}&order=id.asc&limit=1000&offset=${offset}`);
+        rows.push(...page);
+        if (page.length < 1000) return rows;
+      }
+    }
+    const [attempts, events] = await Promise.all([
+      pages("randomizer_attempts", "*,randomizer_sessions!randomizer_attempts_session_fk(class_sessions(session_date))", `or=(student_id.eq.${encodeURIComponent(student.id)},and(student_id.is.null,student_code.eq.${encodeURIComponent(student.studentCode)}))`),
+      pages("learning_events", "*,class_sessions(session_date)", `student_id=eq.${encodeURIComponent(student.id)}`)
+    ]);
+    const mirrored = new Set(attempts.map(row => row.client_attempt_id));
+    const valid = row => !["voided", "corrected"].includes(row.record_status);
+    const rows = [];
+    const seen = new Set();
+    attempts.forEach(a => {
+      if (seen.has(a.client_attempt_id)) return;
+      seen.add(a.client_attempt_id);
+      if (!valid(a) || a.outcome === "undone") return;
+      rows.push({ entry: { session: { date: a.randomizer_sessions?.class_sessions?.session_date || (a.drawn_at || "").slice(0, 10) } }, attempt: {
+        id: a.client_attempt_id, outcome: a.outcome, selectionMethod: a.selection_method,
+        drawnAt: a.drawn_at, textbookId: a.textbook_id, lessonId: a.lesson_id,
+        roundNumber: a.round_number, responseStatus: a.response_status,
+        noResponseReason: a.no_response_reason, answerContext: a.answer_context,
+        assistance: a.assistance, taskPrompt: a.task_prompt, note: a.note
+      } });
+    });
+    events.forEach(e => {
+      if (mirrored.has(e.client_event_id) || !valid(e) || e.counted_for_summary === false || e.source === "class_observation"
+        || ["no_response", "declined", "unobserved"].includes(e.response_status)) return;
+      rows.push({ entry: { session: { date: e.class_sessions?.session_date || (e.occurred_at || "").slice(0, 10) } }, attempt: {
+        id: e.id, outcome: "answered", selectionMethod: e.source === "manual_adjustment" ? "manual" : e.source === "voluntary_answer" ? "volunteer" : "random",
+        drawnAt: e.occurred_at, textbookId: e.textbook_id, lessonId: e.lesson_id,
+        lessonLabel: e.lesson_label, responseStatus: e.response_status, answerContext: e.answer_context, note: e.teacher_note
+      } });
+    });
+    return rows;
+  }
+
   function isoDate(value) {
     const candidate = text(value);
     return /^\d{4}-\d{2}-\d{2}$/.test(candidate)
@@ -666,6 +710,7 @@
     completeInvite,
     currentUserEmail,
     fetchClassRoster,
+    fetchStudentRecords,
     flushQueue,
     getAuthRedirectError,
     hasInviteSession,

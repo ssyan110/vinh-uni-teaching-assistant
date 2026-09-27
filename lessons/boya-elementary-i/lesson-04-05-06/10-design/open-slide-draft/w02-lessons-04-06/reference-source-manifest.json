@@ -1,0 +1,220 @@
+{
+  "format": "open-slide-image-only-reference",
+  "status": "design_draft",
+  "scope": "《博雅漢語聽說·初級起步篇 I》第4、5、6課合併授課",
+  "output_location": "lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06",
+  "source_path": "/Users/ssyan110/Desktop/lessons 4, 5, 6.pptx",
+  "source_sha256": "045d98f34826fa7016d0763a03bb357ff036334cc19e2b4630757551e496a6b6",
+  "source_slide_count": 23,
+  "content_handling": "原圖逐頁複製；未 OCR、改寫或重新排版",
+  "created_at": "2026-09-27T05:37:30.748000+00:00",
+  "slides": [
+    {
+      "slide": 1,
+      "asset": "page-01.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1318678,
+      "sha256": "1af609901cc256f4c1f1e94e5b2879c7a1533052c11463aefc6bc7e4d87fae51",
+      "source_member": "ppt/media/image1.png"
+    },
+    {
+      "slide": 2,
+      "asset": "page-02.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1349534,
+      "sha256": "d70b443afb8bb3ca0b0ff582efb2e967e7214f03d31c87582cbb37add51f6e50",
+      "source_member": "ppt/media/image2.png"
+    },
+    {
+      "slide": 3,
+      "asset": "page-03.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1376772,
+      "sha256": "bf9f6a70acc0ce61576aed04e211cc59d86b00fb16b624a44c4fb19b0ae222e0",
+      "source_member": "ppt/media/image3.png"
+    },
+    {
+      "slide": 4,
+      "asset": "page-04.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1277954,
+      "sha256": "368cbaeecef9fc97225aa6d2578e8cdc8720bb7c41b4bfbdecb830f4ba011d9e",
+      "source_member": "ppt/media/image4.png"
+    },
+    {
+      "slide": 5,
+      "asset": "page-05.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1339618,
+      "sha256": "e99b9156e7165a715380399b44d1c74200938ffc010d178026a4edd67519b987",
+      "source_member": "ppt/media/image5.png"
+    },
+    {
+      "slide": 6,
+      "asset": "page-06.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1320238,
+      "sha256": "3ae60e50fb429488e147857c1e7ac7944c93468c020f76af891880231e5d49d2",
+      "source_member": "ppt/media/image6.png"
+    },
+    {
+      "slide": 7,
+      "asset": "page-07.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1262798,
+      "sha256": "a5e6ad85314107dc4959270313a5fca5dd4252010b6f484f64b4f9fc1463524e",
+      "source_member": "ppt/media/image7.png"
+    },
+    {
+      "slide": 8,
+      "asset": "page-08.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1346783,
+      "sha256": "3b690ddf93b7655db8a5ae4d664acc10100763985a69ef8d4d78cf6a09d433fa",
+      "source_member": "ppt/media/image8.png"
+    },
+    {
+      "slide": 9,
+      "asset": "page-09.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1306207,
+      "sha256": "75e158279a29c2a03ece17105ceaa787593cfa9b9f8a803a09754b5d328e3525",
+      "source_member": "ppt/media/image9.png"
+    },
+    {
+      "slide": 10,
+      "asset": "page-10.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1345292,
+      "sha256": "92d146f2030fd11828d9e93273277c20f46f620e95983f0bcabcf56a0a7f3727",
+      "source_member": "ppt/media/image10.png"
+    },
+    {
+      "slide": 11,
+      "asset": "page-11.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1301907,
+      "sha256": "cb354c195474337c2bc517fbe17fa7d22a38f2ec92d3f8bafb013bd5dcdc2fd1",
+      "source_member": "ppt/media/image11.png"
+    },
+    {
+      "slide": 12,
+      "asset": "page-12.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1356086,
+      "sha256": "3e2224e08e5a556abd8be72c82007c18a5b5444cdedce57b3a9812ba2ea4c456",
+      "source_member": "ppt/media/image12.png"
+    },
+    {
+      "slide": 13,
+      "asset": "page-13.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 958380,
+      "sha256": "d3b576438291d259041c0642835bee27565abef87e954d856456cd93ba5e111a",
+      "source_member": "ppt/media/image13.png"
+    },
+    {
+      "slide": 14,
+      "asset": "page-14.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1331282,
+      "sha256": "d54c5ac5f366e4373b17c031323b11936c4368bb15bab3eba68f5241109d359f",
+      "source_member": "ppt/media/image14.png"
+    },
+    {
+      "slide": 15,
+      "asset": "page-15.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1326956,
+      "sha256": "f2dd3e0a922163ca5113289fa1919e2219457646b9df76f898a306cb4da558c3",
+      "source_member": "ppt/media/image15.png"
+    },
+    {
+      "slide": 16,
+      "asset": "page-16.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1387827,
+      "sha256": "7a1d23daa52d7aca2a4dbb58d3f1a9f837a492f7a5e2a0bd5088324f557746ec",
+      "source_member": "ppt/media/image16.png"
+    },
+    {
+      "slide": 17,
+      "asset": "page-17.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1308391,
+      "sha256": "7beee51fe59138a7b3c9ec80a9e134170ada9997a851aad693fcd027327afcfe",
+      "source_member": "ppt/media/image17.png"
+    },
+    {
+      "slide": 18,
+      "asset": "page-18.png",
+      "width": 1600,
+      "height": 900,
+      "bytes": 971324,
+      "sha256": "d9563e592fa0512871bbf1a9ea2f8ce11a5fe4d1a37fac0c45e2d1b521eade1a",
+      "source_member": "ppt/media/image18.png"
+    },
+    {
+      "slide": 19,
+      "asset": "page-19.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1325834,
+      "sha256": "2e2962a5fd8002fe33a8ae7a78152816357a749ea6e815c64007f85b70b25b46",
+      "source_member": "ppt/media/image19.png"
+    },
+    {
+      "slide": 20,
+      "asset": "page-20.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1282608,
+      "sha256": "b9f2906d8d69e21b0659cbe88ffd2cdabf0e29876c7af68658ff9500347330e9",
+      "source_member": "ppt/media/image20.png"
+    },
+    {
+      "slide": 21,
+      "asset": "page-21.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1354337,
+      "sha256": "d98f83f54c1479dff225f48d5b3c5abe35965f8eaebaa6b6e7d9bc32147dcff6",
+      "source_member": "ppt/media/image21.png"
+    },
+    {
+      "slide": 22,
+      "asset": "page-22.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1344622,
+      "sha256": "8d3e20918fbc71c22c5c259ea26b3cc8b3ffa215754dbdf330a9757a12f04375",
+      "source_member": "ppt/media/image22.png"
+    },
+    {
+      "slide": 23,
+      "asset": "page-23.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1287687,
+      "sha256": "b49e36a8cbeec2cddf1480f17c5a446ec780dfd954392d8b69b39b66cd466fbe",
+      "source_member": "ppt/media/image23.png"
+    }
+  ]
+}

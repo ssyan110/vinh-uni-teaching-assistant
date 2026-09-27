@@ -1,0 +1,25 @@
+{
+  "lesson_key": "boya-elementary-i:lesson-04",
+  "status": "passed",
+  "slide_count": 31,
+  "minimum_explicit_pt": 23.0,
+  "unique_embedded_images": 6,
+  "source_sections_covered": 18,
+  "failures": [],
+  "pptx_sha256": "0197e7145f20cb4d1d899e1d98b0f677e6b0c8f72381b3976dfd1561c0065122",
+  "human_review": "pending",
+  "audio_playback": "not_verified_missing_audio",
+  "pdf": {
+    "pages": 31,
+    "sha256": "ece59bd1bf61fbf0d56494585dfcfe29a5b488a2acd5bf891d482d4a9bb45e04",
+    "provenance": {
+      "renderer": "LibreOffice headless",
+      "powerpoint_open_verified": true,
+      "powerpoint_slide_count": 31,
+      "powerpoint_pdf_export": "AppleEvent timed out; no PDF created",
+      "computer_use_diagnostic": "Sky runtime returned: Trusted RPC service is not configured: sky",
+      "native_powerpoint_export_verified": false,
+      "human_rehearsal": "pending"
+    }
+  }
+}

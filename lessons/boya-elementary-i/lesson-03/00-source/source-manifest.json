@@ -1,0 +1,38 @@
+{
+  "schema_version": "boya-lesson-source-manifest-v1",
+  "manifest_type": "lesson-source-review",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-elementary-i",
+  "lesson_id": "lesson-03",
+  "lesson_key": "boya-elementary-i:lesson-03",
+  "lesson_number": 3,
+  "lesson_title": "拼音和日常用语（三）",
+  "language": "简体中文",
+  "package": "lesson-03-source-draft",
+  "prepared_at": "2026-09-19",
+  "source_status": "draft_source_package",
+  "source_qa_status": "visual_source_checked_audio_semantic_and_playback_pending",
+  "source_pdf": {
+    "path": "external-user-source:/Users/ssyan110/Desktop/Work/Teaching/02_教材/博雅漢語教材/1. 博雅汉语听说-初级起步篇I.pdf",
+    "sha256": "9a98ee0b376c9b5cff20622987a0e4b9cee68287e45dc547665a3cd537fb517a",
+    "printed_pages": "10–15",
+    "pdf_pages": "21–26",
+    "status": "user_local_source_verified"
+  },
+  "canonical_source": {
+    "path": "lessons/boya-elementary-i/lesson-03/00-source/canonical-source.json",
+    "sha256": "6bc929fa93a63af066c8429a763ff806c0ee7d3e284e23974fd97c9fb624ef90",
+    "status": "draft_source_package"
+  },
+  "canonical_source_sha256": "6bc929fa93a63af066c8429a763ff806c0ee7d3e284e23974fd97c9fb624ef90",
+  "derived_evidence": [
+    "lessons/boya-elementary-i/lesson-03/10-design/storyboard/lesson-03-source-content-map.md",
+    "lessons/boya-elementary-i/lesson-03/10-design/storyboard/lesson-03-逐页文案审阅.md"
+  ],
+  "review": {
+    "copy_approved_by_adam": "2026-09-19",
+    "source_approved": false,
+    "approval_scope": ["lesson-03 classroom PPT copy and y/w visualization rules"],
+    "human_gates_open": ["semantic audio listening", "PowerPoint playback", "teacher rehearsal", "authority promotion"]
+  }
+}

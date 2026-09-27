@@ -1,0 +1,45 @@
+{
+  "schema_version": "boya-lesson-source-manifest-v1",
+  "manifest_type": "lesson-source-review",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-elementary-i",
+  "lesson_id": "lesson-02",
+  "lesson_key": "boya-elementary-i:lesson-02",
+  "lesson_number": 2,
+  "lesson_title": "拼音和日常用语（二）",
+  "language": "简体中文",
+  "package": "lesson-02-source-draft",
+  "prepared_at": "2026-09-18",
+  "source_status": "draft_source_package",
+  "source_qa_status": "visual_source_checked_audio_semantic_and_playback_pending",
+  "source_pdf": {
+    "path": "external-user-source:/Users/ssyan110/Desktop/Work/Teaching/02_教材/博雅漢語教材/1. 博雅汉语听说-初级起步篇I.pdf",
+    "sha256": "9a98ee0b376c9b5cff20622987a0e4b9cee68287e45dc547665a3cd537fb517a",
+    "printed_pages": "6–9",
+    "pdf_pages": "17–20",
+    "status": "user_local_source_verified"
+  },
+  "canonical_source": {
+    "path": "lessons/boya-elementary-i/lesson-02/00-source/canonical-source.json",
+    "sha256": "dd3b9ea58447ec267809866958255074edf53c93d2bd3d6ce9d394c5dedc10e8",
+    "status": "draft_source_package"
+  },
+  "canonical_source_sha256": "dd3b9ea58447ec267809866958255074edf53c93d2bd3d6ce9d394c5dedc10e8",
+  "derived_evidence": [
+    "docs/boya-elementary-i-l01-l03-content-map-2026-09-15.md",
+    "lessons/boya-elementary-i/lesson-02/10-design/storyboard/lesson-02-逐页文案审阅.md"
+  ],
+  "review": {
+    "copy_approved_by_adam": "2026-09-18",
+    "source_approved": false,
+    "approval_scope": [
+      "lesson-02 classroom PPT copy and specified revisions"
+    ],
+    "human_gates_open": [
+      "semantic audio listening",
+      "PowerPoint playback",
+      "teacher rehearsal",
+      "authority promotion"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "type": "offline-procedural-decision-tests",
+  "results": [
+    {
+      "kind": "target",
+      "baseline": {
+        "choice": "a",
+        "reason": "stub",
+        "passed": false
+      },
+      "candidate": {
+        "choice": "a",
+        "reason": "stub",
+        "passed": true
+      }
+    },
+    {
+      "kind": "regression",
+      "baseline": {
+        "choice": "a",
+        "reason": "stub",
+        "passed": false
+      },
+      "candidate": {
+        "choice": "a",
+        "reason": "stub",
+        "passed": true
+      }
+    },
+    {
+      "kind": "heldout",
+      "baseline": {
+        "choice": "a",
+        "reason": "stub",
+        "passed": false
+      },
+      "candidate": {
+        "choice": "a",
+        "reason": "stub",
+        "passed": true
+      }
+    }
+  ],
+  "passed": true,
+  "candidate_hash": "456830d4301e0e9ad2d5e638bb25da0f775f101a95be9bed39b5edd7e89fbd9d",
+  "spec_hash": "487f1ce6457817a4eb1c5a90c40436cab29d4410aea38aa1a270420f1b934b80",
+  "limitation": "Decision tests do not establish live tool execution or general capability gains."
+}

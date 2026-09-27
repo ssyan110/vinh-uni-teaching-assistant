@@ -1,0 +1,11 @@
+{
+  "name": "learned-codex-skill-verification",
+  "baseline_hash": "edf64458b09bebcf98751bb5ae97847c0d2850faf73067db94b7e04685e8dd7d",
+  "spec_hash": "6af7c6d4b3c0874f2df19003a742c7efe0a38fca5e73496849d201183bece2ff",
+  "status": "rejected",
+  "created": 1789314042.636374,
+  "rounds": 1,
+  "candidate_hash": "72d7af52ff5058546aaa2b0fa915f2a11deb4b5ae44aeb9f8dfbb1d46bc88738",
+  "description": "Verify discovery and actual use after installing or updating a local Codex skill, especially when a task still shows an old skill catalog.",
+  "evaluation_hash": "9f8954e4119f9259fff936bca8ebfb8331b9b39b494f531c9bb004ff9b3a706f"
+}

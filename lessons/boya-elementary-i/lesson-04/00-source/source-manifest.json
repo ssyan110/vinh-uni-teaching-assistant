@@ -1,0 +1,14 @@
+{
+  "schema_version": "boya-lesson-source-manifest-v1",
+  "lesson_key": "boya-elementary-i:lesson-04",
+  "textbook_id": "boya-elementary-i",
+  "lesson_id": "lesson-04",
+  "offering_id": "2026-fall",
+  "title": "你叫什么名字",
+  "source_status": "draft_source_package",
+  "source_qa_status": "all_eight_printed_pages_visually_checked_audio_pending",
+  "canonical_source": {"path": "lessons/boya-elementary-i/lesson-04/00-source/canonical-source.json", "sha256": "c7e08f5bdc7761042145d58af583bf6e1d082dcb2c185909387d8bec361bc025"},
+  "canonical_source_sha256": "c7e08f5bdc7761042145d58af583bf6e1d082dcb2c185909387d8bec361bc025",
+  "source_pdf": {"path": "external-user-source:/Users/ssyan110/Desktop/Work/Teaching/02_教材/博雅漢語教材/1. 博雅汉语听说-初级起步篇I.pdf", "sha256": "9a98ee0b376c9b5cff20622987a0e4b9cee68287e45dc547665a3cd537fb517a", "printed_pages": "16–23", "pdf_pages": "27–34"},
+  "review": {"source_approved": false, "structure_and_exercise_title_policy_confirmed": "Adam 2026-09-19 current conversation", "human_gates_open": ["generated content/visual review", "audio semantic and playback verification", "teacher rehearsal", "authority approval"]}
+}

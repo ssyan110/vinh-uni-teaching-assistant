@@ -1,0 +1,144 @@
+{
+  "schema_version": "boya-lesson-audio-manifest-v1",
+  "lesson_key": "boya-elementary-i:lesson-04",
+  "audio_controls_in_pptx": false,
+  "embedded_tracks": [],
+  "tracks": [
+    {
+      "id": "4-1",
+      "printed_pages": [
+        16,
+        17
+      ],
+      "use": "词语",
+      "file": null,
+      "source_status": "printed_label_visually_verified",
+      "technical_decode": "not_run_file_missing",
+      "semantic_review": "not_run",
+      "powerpoint_playback": "not_run",
+      "external_playback": "not_verified"
+    },
+    {
+      "id": "4-2",
+      "printed_pages": [
+        17
+      ],
+      "use": "听录音，写声调",
+      "file": null,
+      "source_status": "printed_label_visually_verified",
+      "technical_decode": "not_run_file_missing",
+      "semantic_review": "not_run",
+      "powerpoint_playback": "not_run",
+      "external_playback": "not_verified"
+    },
+    {
+      "id": "4-3",
+      "printed_pages": [
+        17
+      ],
+      "use": "听录音，选择听到的词语",
+      "file": null,
+      "source_status": "printed_label_visually_verified",
+      "technical_decode": "not_run_file_missing",
+      "semantic_review": "not_run",
+      "powerpoint_playback": "not_run",
+      "external_playback": "not_verified"
+    },
+    {
+      "id": "4-4",
+      "printed_pages": [
+        17
+      ],
+      "use": "听录音，选择正确的拼音",
+      "file": null,
+      "source_status": "printed_label_visually_verified",
+      "technical_decode": "not_run_file_missing",
+      "semantic_review": "not_run",
+      "powerpoint_playback": "not_run",
+      "external_playback": "not_verified"
+    },
+    {
+      "id": "4-5",
+      "printed_pages": [
+        18,
+        19
+      ],
+      "use": "听录音，填空（可以写拼音）",
+      "file": null,
+      "source_status": "printed_label_visually_verified",
+      "technical_decode": "not_run_file_missing",
+      "semantic_review": "not_run",
+      "powerpoint_playback": "not_run",
+      "external_playback": "not_verified"
+    },
+    {
+      "id": "4-6",
+      "printed_pages": [
+        19
+      ],
+      "use": "听录音，把听到的句子的序号填到相应的图片下面",
+      "file": null,
+      "source_status": "printed_label_visually_verified",
+      "technical_decode": "not_run_file_missing",
+      "semantic_review": "not_run",
+      "powerpoint_playback": "not_run",
+      "external_playback": "not_verified"
+    },
+    {
+      "id": "4-7",
+      "printed_pages": [
+        19
+      ],
+      "use": "跟着录音重复句子",
+      "file": null,
+      "source_status": "printed_label_visually_verified",
+      "technical_decode": "not_run_file_missing",
+      "semantic_review": "not_run",
+      "powerpoint_playback": "not_run",
+      "external_playback": "not_verified"
+    },
+    {
+      "id": "4-8",
+      "printed_pages": [
+        20
+      ],
+      "use": "看图，回答录音中的问题",
+      "file": null,
+      "source_status": "printed_label_visually_verified",
+      "technical_decode": "not_run_file_missing",
+      "semantic_review": "not_run",
+      "powerpoint_playback": "not_run",
+      "external_playback": "not_verified"
+    },
+    {
+      "id": "4-9",
+      "printed_pages": [
+        21
+      ],
+      "use": "你叫什么名字",
+      "file": null,
+      "source_status": "printed_label_visually_verified",
+      "technical_decode": "not_run_file_missing",
+      "semantic_review": "not_run",
+      "powerpoint_playback": "not_run",
+      "external_playback": "not_verified"
+    },
+    {
+      "id": "4-10",
+      "printed_pages": [
+        21
+      ],
+      "use": "他是中国学生吗",
+      "file": null,
+      "source_status": "printed_label_visually_verified",
+      "technical_decode": "not_run_file_missing",
+      "semantic_review": "not_run",
+      "powerpoint_playback": "not_run",
+      "external_playback": "not_verified"
+    }
+  ],
+  "open_gates": [
+    "Acquire publisher/teacher audio 4-1 to 4-10",
+    "Verify semantic correspondence and teacher playback"
+  ]
+}

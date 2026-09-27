@@ -1,0 +1,822 @@
+{
+  "schema_version": "boya-elementary-face-to-face-storyboard-v1",
+  "lesson_key": "boya-elementary-i:lesson-02",
+  "offering_id": "2026-fall",
+  "title": "拼音和日常用语（二）",
+  "mode": "teacher_face_to_face_only",
+  "source_copy": "lessons/boya-elementary-i/lesson-02/10-design/storyboard/lesson-02-逐页文案审阅.md",
+  "source_refs": "lessons/boya-elementary-i/lesson-02/10-design/storyboard/lesson-02-source-refs.csv",
+  "student_visible_minimum_pt": 23,
+  "slide_count": 53,
+  "slides": [
+    {
+      "slide_number": 1,
+      "student_visible_text": [
+        "第2课",
+        "拼音和日常用语（二）",
+        "实体课"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "cover",
+      "speaker_notes": "打开教材 P6–P9，准备笔和笔记本。今天先做复韵母，再做标调和鼻音韵母，最后练习日常用语。",
+      "source_refs": [],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 2,
+      "student_visible_text": [
+        "今天这样学",
+        "Học vần ghép",
+        "Nghe và viết",
+        "Học vần mũi",
+        "Luyện nói hằng ngày"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "learning-route-imagen-template-family",
+      "speaker_notes": "学习流程图沿用第一课的四步版式。请学生按越南文图块理解今天的顺序；教材题目在书上完成，PPT 只提示当前动作。",
+      "source_refs": [],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 3,
+      "student_visible_text": [
+        "本课目标",
+        "今天下课前，我能：",
+        "读出13个复韵母和16个鼻音韵母。",
+        "听后选择、听写、补全音节，并标上声调。",
+        "在简单情景中使用本课的日常用语。"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "goals",
+      "speaker_notes": "目标对应今天的实际动作。学生卡住时短示范，再回到听、读、写和说。",
+      "source_refs": [],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 4,
+      "student_visible_text": [
+        "13个复韵母"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "section-divider-imagen",
+      "speaker_notes": "进入复韵母部分。先逐个示范，再完成教材 P6 的听辨和听写。",
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 5,
+      "student_visible_text": [
+        "ai"
+      ],
+      "textbook_page": "P6",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "复韵母 ai：教师示范，学生听后跟读；出现混淆时只做短对比。参考音频 2-1。",
+      "source_refs": [
+        "canonical-source.json#sections.compound_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 6,
+      "student_visible_text": [
+        "ei"
+      ],
+      "textbook_page": "P6",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "复韵母 ei：教师示范，学生听后跟读；出现混淆时只做短对比。参考音频 2-1。",
+      "source_refs": [
+        "canonical-source.json#sections.compound_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 7,
+      "student_visible_text": [
+        "ao"
+      ],
+      "textbook_page": "P6",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "复韵母 ao：教师示范，学生听后跟读；出现混淆时只做短对比。参考音频 2-1。",
+      "source_refs": [
+        "canonical-source.json#sections.compound_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 8,
+      "student_visible_text": [
+        "ou"
+      ],
+      "textbook_page": "P6",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "复韵母 ou：教师示范，学生听后跟读；出现混淆时只做短对比。参考音频 2-1。",
+      "source_refs": [
+        "canonical-source.json#sections.compound_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 9,
+      "student_visible_text": [
+        "ia"
+      ],
+      "textbook_page": "P6",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "复韵母 ia：教师示范，学生听后跟读；出现混淆时只做短对比。参考音频 2-1。",
+      "source_refs": [
+        "canonical-source.json#sections.compound_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 10,
+      "student_visible_text": [
+        "ie"
+      ],
+      "textbook_page": "P6",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "复韵母 ie：教师示范，学生听后跟读；出现混淆时只做短对比。参考音频 2-1。",
+      "source_refs": [
+        "canonical-source.json#sections.compound_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 11,
+      "student_visible_text": [
+        "ua"
+      ],
+      "textbook_page": "P6",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "复韵母 ua：教师示范，学生听后跟读；出现混淆时只做短对比。参考音频 2-1。",
+      "source_refs": [
+        "canonical-source.json#sections.compound_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 12,
+      "student_visible_text": [
+        "uo"
+      ],
+      "textbook_page": "P6",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "复韵母 uo：教师示范，学生听后跟读；出现混淆时只做短对比。参考音频 2-1。",
+      "source_refs": [
+        "canonical-source.json#sections.compound_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 13,
+      "student_visible_text": [
+        "üe"
+      ],
+      "textbook_page": "P6",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "复韵母 üe：教师示范，学生听后跟读；出现混淆时只做短对比。参考音频 2-1。",
+      "source_refs": [
+        "canonical-source.json#sections.compound_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 14,
+      "student_visible_text": [
+        "iao"
+      ],
+      "textbook_page": "P6",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "复韵母 iao：教师示范，学生听后跟读；出现混淆时只做短对比。参考音频 2-1。",
+      "source_refs": [
+        "canonical-source.json#sections.compound_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 15,
+      "student_visible_text": [
+        "iou（iu）"
+      ],
+      "textbook_page": "P6",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "复韵母 iou（iu）：教师示范，学生听后跟读；出现混淆时只做短对比。参考音频 2-1。",
+      "source_refs": [
+        "canonical-source.json#sections.compound_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 16,
+      "student_visible_text": [
+        "uai"
+      ],
+      "textbook_page": "P6",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "复韵母 uai：教师示范，学生听后跟读；出现混淆时只做短对比。参考音频 2-1。",
+      "source_refs": [
+        "canonical-source.json#sections.compound_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 17,
+      "student_visible_text": [
+        "uei（ui）"
+      ],
+      "textbook_page": "P6",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "复韵母 uei（ui）：教师示范，学生听后跟读；出现混淆时只做短对比。参考音频 2-1。",
+      "source_refs": [
+        "canonical-source.json#sections.compound_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 18,
+      "student_visible_text": [
+        "复韵母听辨",
+        "请看教材P6的（一）。\n听后选出听到的韵母。",
+        "1． ai　／　ei",
+        "2． uai　／　uei（ui）",
+        "3． ao　／　ou",
+        "4． iao　／　iou（iu）",
+        "5． ua　／　uo",
+        "6． ie　／　üe",
+        "7． ia　／　iao",
+        "8． ei　／　uei（ui）"
+      ],
+      "textbook_page": "P6",
+      "audio": [],
+      "layout": "listening-choice-grid",
+      "speaker_notes": "学生先看选项差别，再听 2-2 选择；第二次检查后核对，错项重读。",
+      "source_refs": [
+        "canonical-source.json#sections.compound_listening"
+      ],
+      "source_audio_reference": [
+        "2-2"
+      ]
+    },
+    {
+      "slide_number": 19,
+      "student_visible_text": [
+        "",
+        "听写"
+      ],
+      "textbook_page": "P6",
+      "audio": [],
+      "layout": "single-action",
+      "speaker_notes": "请学生直接看教材 P6 的听写练习。参考音频 2-3，完成12项后核对；答案不放在学生画面。",
+      "source_refs": [
+        "canonical-source.json#sections.compound_dictation"
+      ],
+      "source_audio_reference": [
+        "2-3"
+      ]
+    },
+    {
+      "slide_number": 20,
+      "student_visible_text": [
+        "声调标在哪里？"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "section-divider-imagen",
+      "speaker_notes": "进入标调注意事项。先看顺序，再看 iu、ui 的位置。",
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 21,
+      "student_visible_text": [
+        "标调顺序",
+        "a、o、e、i、u、ü",
+        "先找 a，再找 o、e。",
+        "hǎo　xiè　jiǎo　xué"
+      ],
+      "textbook_page": "P7",
+      "audio": [],
+      "layout": "tone-rule-order",
+      "speaker_notes": "请学生对照教材 P7 注意事项。教师指 a、o、e、i、u、ü 的顺序，朗读四个教材示例；这是规则示例，不是额外听写答案。",
+      "source_refs": [
+        "canonical-source.json#sections.tone_rules"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 22,
+      "student_visible_text": [
+        "iu、ui",
+        "声调标在后面的元音上。",
+        "diū　　duì",
+        "看清楚：i、u 一起出现时，看后面的元音。"
+      ],
+      "textbook_page": "P7",
+      "audio": [],
+      "layout": "tone-rule-iu-ui",
+      "speaker_notes": "请学生指着教材示例读 diū、duì。短讲不超过几分钟，马上进入教材练习。",
+      "source_refs": [
+        "canonical-source.json#sections.tone_rules"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 23,
+      "student_visible_text": [
+        "",
+        "请看教材P6、P7的（三）。\n听后标声调。"
+      ],
+      "textbook_page": "P6–7",
+      "audio": [],
+      "layout": "single-action",
+      "speaker_notes": "参考音频 2-4。先做P6的20个单音节，再做P7的15个词语；分两组播放、作答和核对，不能漏掉续页。",
+      "source_refs": [
+        "canonical-source.json#sections.compound_tone_marking"
+      ],
+      "source_audio_reference": [
+        "2-4"
+      ]
+    },
+    {
+      "slide_number": 24,
+      "student_visible_text": [
+        "小组练习",
+        "用教材P6、P7的（三）。",
+        "轮流读，其他同学写下来。",
+        "小组一起核对读音和拼写。",
+        "改好后，换人读。",
+        "直到每个人都读过一次。"
+      ],
+      "textbook_page": "P6–7",
+      "audio": [],
+      "layout": "group-four-steps",
+      "speaker_notes": "不规定小组人数。读已核对的项目，其他同学写下来；小组一起核对后换人，确保每个人都轮到读。",
+      "source_refs": [
+        "canonical-source.json#sections.compound_tone_marking",
+        "canonical-source.json#sections.compound_group"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 25,
+      "student_visible_text": [
+        "16个鼻音韵母"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "section-divider-imagen",
+      "speaker_notes": "进入鼻音韵母部分。先短复查上一节困难音，再逐个示范。",
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 26,
+      "student_visible_text": [
+        "an"
+      ],
+      "textbook_page": "P7",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "鼻音韵母 an：教师示范，学生听后跟读；相近音只在实际混淆时比较。参考音频 2-5。",
+      "source_refs": [
+        "canonical-source.json#sections.nasal_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 27,
+      "student_visible_text": [
+        "ian"
+      ],
+      "textbook_page": "P7",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "鼻音韵母 ian：教师示范，学生听后跟读；相近音只在实际混淆时比较。参考音频 2-5。",
+      "source_refs": [
+        "canonical-source.json#sections.nasal_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 28,
+      "student_visible_text": [
+        "uan"
+      ],
+      "textbook_page": "P7",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "鼻音韵母 uan：教师示范，学生听后跟读；相近音只在实际混淆时比较。参考音频 2-5。",
+      "source_refs": [
+        "canonical-source.json#sections.nasal_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 29,
+      "student_visible_text": [
+        "üan"
+      ],
+      "textbook_page": "P7",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "鼻音韵母 üan：教师示范，学生听后跟读；相近音只在实际混淆时比较。参考音频 2-5。",
+      "source_refs": [
+        "canonical-source.json#sections.nasal_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 30,
+      "student_visible_text": [
+        "ang"
+      ],
+      "textbook_page": "P7",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "鼻音韵母 ang：教师示范，学生听后跟读；相近音只在实际混淆时比较。参考音频 2-5。",
+      "source_refs": [
+        "canonical-source.json#sections.nasal_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 31,
+      "student_visible_text": [
+        "iang"
+      ],
+      "textbook_page": "P7",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "鼻音韵母 iang：教师示范，学生听后跟读；相近音只在实际混淆时比较。参考音频 2-5。",
+      "source_refs": [
+        "canonical-source.json#sections.nasal_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 32,
+      "student_visible_text": [
+        "uang"
+      ],
+      "textbook_page": "P7",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "鼻音韵母 uang：教师示范，学生听后跟读；相近音只在实际混淆时比较。参考音频 2-5。",
+      "source_refs": [
+        "canonical-source.json#sections.nasal_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 33,
+      "student_visible_text": [
+        "en"
+      ],
+      "textbook_page": "P7",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "鼻音韵母 en：教师示范，学生听后跟读；相近音只在实际混淆时比较。参考音频 2-5。",
+      "source_refs": [
+        "canonical-source.json#sections.nasal_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 34,
+      "student_visible_text": [
+        "in"
+      ],
+      "textbook_page": "P7",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "鼻音韵母 in：教师示范，学生听后跟读；相近音只在实际混淆时比较。参考音频 2-5。",
+      "source_refs": [
+        "canonical-source.json#sections.nasal_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 35,
+      "student_visible_text": [
+        "uen（un）"
+      ],
+      "textbook_page": "P7",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "鼻音韵母 uen（un）：教师示范，学生听后跟读；相近音只在实际混淆时比较。参考音频 2-5。",
+      "source_refs": [
+        "canonical-source.json#sections.nasal_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 36,
+      "student_visible_text": [
+        "üen（ün）"
+      ],
+      "textbook_page": "P7",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "鼻音韵母 üen（ün）：教师示范，学生听后跟读；相近音只在实际混淆时比较。参考音频 2-5。",
+      "source_refs": [
+        "canonical-source.json#sections.nasal_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 37,
+      "student_visible_text": [
+        "eng"
+      ],
+      "textbook_page": "P7",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "鼻音韵母 eng：教师示范，学生听后跟读；相近音只在实际混淆时比较。参考音频 2-5。",
+      "source_refs": [
+        "canonical-source.json#sections.nasal_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 38,
+      "student_visible_text": [
+        "ing"
+      ],
+      "textbook_page": "P7",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "鼻音韵母 ing：教师示范，学生听后跟读；相近音只在实际混淆时比较。参考音频 2-5。",
+      "source_refs": [
+        "canonical-source.json#sections.nasal_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 39,
+      "student_visible_text": [
+        "ueng"
+      ],
+      "textbook_page": "P7",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "鼻音韵母 ueng：教师示范，学生听后跟读；相近音只在实际混淆时比较。参考音频 2-5。",
+      "source_refs": [
+        "canonical-source.json#sections.nasal_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 40,
+      "student_visible_text": [
+        "ong"
+      ],
+      "textbook_page": "P7",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "鼻音韵母 ong：教师示范，学生听后跟读；相近音只在实际混淆时比较。参考音频 2-5。",
+      "source_refs": [
+        "canonical-source.json#sections.nasal_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 41,
+      "student_visible_text": [
+        "iong"
+      ],
+      "textbook_page": "P7",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "鼻音韵母 iong：教师示范，学生听后跟读；相近音只在实际混淆时比较。参考音频 2-5。",
+      "source_refs": [
+        "canonical-source.json#sections.nasal_finals"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 42,
+      "student_visible_text": [
+        "",
+        "请看教材P7、P8的（一）。\n按顺序读完两页。"
+      ],
+      "textbook_page": "P7–8",
+      "audio": [],
+      "layout": "single-action",
+      "speaker_notes": "参考音频 2-6。教师按行指向，学生完整读完 P7 表格和 P8 续表，包括 ji、qi、xi、zi、ci、si、zhi、chi、shi、ri。",
+      "source_refs": [
+        "canonical-source.json#sections.nasal_reading"
+      ],
+      "source_audio_reference": [
+        "2-6"
+      ]
+    },
+    {
+      "slide_number": 43,
+      "student_visible_text": [
+        "鼻音韵母听辨",
+        "请看教材P8的（二）。\n听后选出听到的韵母。",
+        "1． an　／　ang",
+        "2． en　／　eng",
+        "3． in　／　ing",
+        "4． ian　／　iang",
+        "5． uan　／　uang",
+        "6． ong　／　iong",
+        "7． un　／　uan",
+        "8． ueng　／　eng",
+        "9． ou　／　ong",
+        "10． in　／　en"
+      ],
+      "textbook_page": "P8",
+      "audio": [],
+      "layout": "listening-choice-grid",
+      "speaker_notes": "学生先看差别，再参考音频 2-7 选择；第二次检查后核对，实际错项再读一次。",
+      "source_refs": [
+        "canonical-source.json#sections.nasal_listening"
+      ],
+      "source_audio_reference": [
+        "2-7"
+      ]
+    },
+    {
+      "slide_number": 44,
+      "student_visible_text": [
+        "",
+        "请看教材P8的（三）。\n补全音节，标上声调。"
+      ],
+      "textbook_page": "P8",
+      "audio": [],
+      "layout": "single-action",
+      "speaker_notes": "参考音频 2-8。按教材三组分段完成，覆盖6、11、13项及每一个空格；完成后逐组核对。",
+      "source_refs": [
+        "canonical-source.json#sections.nasal_completion"
+      ],
+      "source_audio_reference": [
+        "2-8"
+      ]
+    },
+    {
+      "slide_number": 45,
+      "student_visible_text": [
+        "小组练习",
+        "用教材P8的（三）。",
+        "轮流读，其他同学写下来。",
+        "小组一起核对读音和拼写。",
+        "改好后，换人读。",
+        "直到每个人都读过一次。"
+      ],
+      "textbook_page": "P8–9",
+      "audio": [],
+      "layout": "group-four-steps",
+      "speaker_notes": "不规定小组人数。每人读、写、核对一次，再换人。",
+      "source_refs": [
+        "canonical-source.json#sections.nasal_completion",
+        "canonical-source.json#sections.nasal_group"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 46,
+      "student_visible_text": [
+        "日常用语"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "section-divider-imagen",
+      "speaker_notes": "进入日常用语部分。先跟读六句话，再用越南文情景提示说中文。",
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 47,
+      "student_visible_text": [
+        "日常用语",
+        "早上好！",
+        "晚上好！"
+      ],
+      "textbook_page": "P9",
+      "audio": [],
+      "layout": "daily-phrase-cards-no-pinyin",
+      "speaker_notes": "参考音频 2-9。先完整听，再逐句跟读；不显示拼音。教师用早晨、晚上动作提示场合。",
+      "source_refs": [
+        "canonical-source.json#sections.daily_phrases"
+      ],
+      "source_audio_reference": [
+        "2-9"
+      ]
+    },
+    {
+      "slide_number": 48,
+      "student_visible_text": [
+        "日常用语",
+        "明天见！",
+        "请进！"
+      ],
+      "textbook_page": "P9",
+      "audio": [],
+      "layout": "daily-phrase-cards-no-pinyin",
+      "speaker_notes": "参考音频 2-9。教师用告别和进门动作提示场合；学生跟读并用动作回应，不显示拼音。",
+      "source_refs": [
+        "canonical-source.json#sections.daily_phrases"
+      ],
+      "source_audio_reference": [
+        "2-9"
+      ]
+    },
+    {
+      "slide_number": 49,
+      "student_visible_text": [
+        "日常用语",
+        "什么？",
+        "多少钱？"
+      ],
+      "textbook_page": "P9",
+      "audio": [],
+      "layout": "daily-phrase-cards-no-pinyin",
+      "speaker_notes": "参考音频 2-9。教师示范疑问语气，学生跟读；不先扩展数字和价格回答，不显示拼音。",
+      "source_refs": [
+        "canonical-source.json#sections.daily_phrases"
+      ],
+      "source_audio_reference": [
+        "2-9"
+      ]
+    },
+    {
+      "slide_number": 50,
+      "student_visible_text": [
+        "Nhìn tình huống và nói bằng tiếng Trung.",
+        "Buổi sáng, bạn gặp thầy cô.",
+        "Buổi tối, bạn gặp bạn cùng lớp.",
+        "Bạn chào tạm biệt, ngày mai sẽ gặp lại."
+      ],
+      "textbook_page": "P9",
+      "audio": [],
+      "layout": "vietnamese-scenario-cards",
+      "speaker_notes": "学生从六句日常用语中选择合适表达。先自己说，再和同学交换；越南文只帮助理解场合。",
+      "source_refs": [
+        "canonical-source.json#sections.daily_phrases"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 51,
+      "student_visible_text": [
+        "Nhìn tình huống và nói bằng tiếng Trung.",
+        "Có người gõ cửa. Bạn mời họ vào.",
+        "Bạn không nghe rõ người kia vừa nói gì.",
+        "Bạn muốn biết giá một món đồ."
+      ],
+      "textbook_page": "P9",
+      "audio": [],
+      "layout": "vietnamese-scenario-cards",
+      "speaker_notes": "学生从六句日常用语中选择合适表达。只练请进、什么、多少钱三个问句，不扩展新的价格回答。",
+      "source_refs": [
+        "canonical-source.json#sections.daily_phrases"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 52,
+      "student_visible_text": [
+        "",
+        "请看教材P9的（二）。\n轮流问答，再交换角色。"
+      ],
+      "textbook_page": "P9",
+      "audio": [],
+      "layout": "single-action",
+      "speaker_notes": "完成教材三组问答，再交换角色重做。教师确认每位学生都实际开口，不在学生画面提供唯一答案。",
+      "source_refs": [
+        "canonical-source.json#sections.daily_pair_qa"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 53,
+      "student_visible_text": [
+        "",
+        "再读一次\n从今天改过的答案中选一个，读给同学听。"
+      ],
+      "textbook_page": "P6–9",
+      "audio": [],
+      "layout": "single-action",
+      "speaker_notes": "课末从今天改过的答案中选一个，读给同学听；同伴对照教材，教师抽听后结束。",
+      "source_refs": [
+        "lessons/boya-elementary-i/lesson-02/10-design/storyboard/lesson-02-逐页文案审阅.md"
+      ],
+      "source_audio_reference": []
+    }
+  ],
+  "notes": "Reversible draft storyboard generated from Adam-approved copy. It is not an authority or release record."
+}

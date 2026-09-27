@@ -3,21 +3,44 @@
   "offering_id": "2026-fall",
   "course_id": "vinh-chinese-listening-speaking",
   "status": "source_review",
-  "schedule_status": "draft_pending_source_approval_and_official_timetable",
+  "schedule_status": "official_timetable_registered_lesson_allocation_pending_reconciliation",
   "schedule_plan": {
     "start_date": "2026-09-07",
-    "end_date": "2026-11-22",
-    "week_count": 11,
+    "end_date": "2026-12-27",
+    "week_count": 16,
     "sessions_per_week": 1,
     "periods_per_session": 4,
     "minutes_per_period": 50,
-    "onsite_periods": 44,
-    "online_study": "self-paced outside study; does not replace or reduce onsite periods"
+    "onsite_periods": 64,
+    "online_study": "self-paced outside study; does not replace or reduce onsite periods",
+    "count_basis": "per class, recurring timetable before any holiday/exam exceptions",
+    "lesson_allocation_status": "16-week teaching plan adjusted 2026-09-27: W03 progress bridge; boya-quasi-intermediate-i:lesson-03 through lesson-12 scheduled W04–W13; project, simulation and final performance W14–W16; each class actual progress and holiday/exam exceptions remain subject to classroom records and school notices."
   },
   "primary_textbook_id": "boya-quasi-intermediate-i",
   "lesson_key_prefix": "boya-quasi-intermediate-i:",
   "lesson_registry": "course/lesson-registry.json",
   "textbooks": [
+    {
+      "textbook_id": "boya-elementary-i",
+      "role": "first_year",
+      "status": "active_source_review",
+      "manifest": "textbooks/boya-elementary-i/textbook.json",
+      "lesson_root": "lessons/boya-elementary-i",
+      "class_scope": {
+        "starts_on": "2026-09-21",
+        "ends_on": "2026-12-27",
+        "weekday": "周一",
+        "periods": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "room": "B3_504",
+        "course_code": null,
+        "class_code": null
+      }
+    },
     {
       "textbook_id": "boya-quasi-intermediate-i",
       "role": "primary",
@@ -27,7 +50,19 @@
     }
   ],
   "course_documents": {
-    "semester_overview": "course/offerings/2026-fall/semester-overview.md",
-    "teacher_manual": "course/offerings/2026-fall/semester-teacher-manual.docx"
-  }
+    "semester_overview": "course/offerings/2026-fall/博雅汉语听说准中级加速篇一/semester-overview.md",
+    "teacher_manual": "course/offerings/2026-fall/博雅汉语听说准中级加速篇一/semester-teacher-manual.docx",
+    "official_timetable": "course/offerings/2026-fall/official-timetable.md"
+  },
+  "previous_teaching_plan": {
+    "start_date": "2026-09-07",
+    "end_date": "2026-11-22",
+    "week_count": 11,
+    "sessions_per_week": 1,
+    "periods_per_session": 4,
+    "minutes_per_period": 50,
+    "onsite_periods": 44,
+    "online_study": "self-paced outside study; does not replace or reduce onsite periods"
+  },
+  "official_timetable": "course/offerings/2026-fall/official-timetable.json"
 }

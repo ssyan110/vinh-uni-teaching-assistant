@@ -1,0 +1,179 @@
+{
+  "schema_version": "boya-elementary-source-audit-v1",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-elementary-i",
+  "lesson_id": "lesson-02",
+  "lesson_key": "boya-elementary-i:lesson-02",
+  "lesson_number": 2,
+  "title": "拼音和日常用语（二）",
+  "title_source": "主教材 PDF 印刷 P6 课名页与目视核对",
+  "source_pdf": "external-user-source:/Users/ssyan110/Desktop/Work/Teaching/02_教材/博雅漢語教材/1. 博雅汉语听说-初级起步篇I.pdf",
+  "source_pdf_sha256": "9a98ee0b376c9b5cff20622987a0e4b9cee68287e45dc547665a3cd537fb517a",
+  "page_map": {
+    "printed_pages": [
+      6,
+      9
+    ],
+    "pdf_pages": [
+      17,
+      20
+    ],
+    "mapping_status": "visual_source_checked_2026-09-18"
+  },
+  "sections": [
+    {
+      "id": "compound_finals",
+      "title": "复韵母",
+      "printed_pages": [
+        6
+      ],
+      "audio": [
+        "2-1"
+      ],
+      "items": 13
+    },
+    {
+      "id": "compound_listening",
+      "title": "复韵母听辨选择",
+      "printed_pages": [
+        6
+      ],
+      "audio": [
+        "2-2"
+      ],
+      "items": 8
+    },
+    {
+      "id": "compound_dictation",
+      "title": "复韵母听写",
+      "printed_pages": [
+        6
+      ],
+      "audio": [
+        "2-3"
+      ],
+      "items": 12
+    },
+    {
+      "id": "compound_tone_marking",
+      "title": "复韵母标调练习",
+      "printed_pages": [
+        6,
+        7
+      ],
+      "audio": [
+        "2-4"
+      ],
+      "items": 35
+    },
+    {
+      "id": "tone_rules",
+      "title": "标调注意事项",
+      "printed_pages": [
+        7
+      ],
+      "audio": [],
+      "items": 2
+    },
+    {
+      "id": "compound_group",
+      "title": "复韵母小组读写互纠",
+      "printed_pages": [
+        7
+      ],
+      "audio": [],
+      "items": 4
+    },
+    {
+      "id": "nasal_finals",
+      "title": "鼻音韵母",
+      "printed_pages": [
+        7
+      ],
+      "audio": [
+        "2-5"
+      ],
+      "items": 16
+    },
+    {
+      "id": "nasal_reading",
+      "title": "鼻音韵母朗读",
+      "printed_pages": [
+        7,
+        8
+      ],
+      "audio": [
+        "2-6"
+      ],
+      "items": 42
+    },
+    {
+      "id": "nasal_listening",
+      "title": "鼻音韵母听辨选择",
+      "printed_pages": [
+        8
+      ],
+      "audio": [
+        "2-7"
+      ],
+      "items": 10
+    },
+    {
+      "id": "nasal_completion",
+      "title": "鼻音韵母补全",
+      "printed_pages": [
+        8
+      ],
+      "audio": [
+        "2-8"
+      ],
+      "items": 30
+    },
+    {
+      "id": "nasal_group",
+      "title": "鼻音韵母小组读写互纠",
+      "printed_pages": [
+        9
+      ],
+      "audio": [],
+      "items": 4
+    },
+    {
+      "id": "daily_phrases",
+      "title": "日常用语",
+      "printed_pages": [
+        9
+      ],
+      "audio": [
+        "2-9"
+      ],
+      "items": 6
+    },
+    {
+      "id": "daily_pair_qa",
+      "title": "日常用语问答",
+      "printed_pages": [
+        9
+      ],
+      "audio": [],
+      "items": 3
+    }
+  ],
+  "approved_content_decisions": {
+    "source_of_visible_copy": "lessons/boya-elementary-i/lesson-02/10-design/storyboard/lesson-02-逐页文案审阅.md",
+    "student_visible_minimum_pt": 23,
+    "compound_finals_one_slide_each": true,
+    "nasal_finals_one_slide_each": true,
+    "group_wording": "小组",
+    "daily_phrase_slides_no_pinyin": true,
+    "scenario_language": "Vietnamese labels only on scenario practice slides",
+    "audio_controls": "omitted; teacher uses textbook audio separately"
+  },
+  "source_status": "draft_source_package",
+  "approved": false,
+  "open_qa": [
+    "逐段语义听核 2-1 至 2-9",
+    "PowerPoint 实际播放",
+    "教师 rehearsal 与 final authority approval"
+  ]
+}

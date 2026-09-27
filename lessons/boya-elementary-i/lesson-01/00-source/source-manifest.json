@@ -1,0 +1,39 @@
+{
+  "schema_version": "boya-lesson-source-manifest-v1",
+  "manifest_type": "lesson-source-review",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-elementary-i",
+  "lesson_id": "lesson-01",
+  "lesson_key": "boya-elementary-i:lesson-01",
+  "lesson_number": 1,
+  "lesson_title": "拼音和日常用语（一）",
+  "language": "简体中文",
+  "package": "lesson-01-source-draft",
+  "prepared_at": "2026-09-15",
+  "source_status": "draft_source_package",
+  "source_qa_status": "technical_audio_verified_semantic_and_playback_pending",
+  "source_pdf": {
+    "path": "external-user-source:/Users/ssyan110/Desktop/Work/Teaching/02_教材/博雅漢語教材/1. 博雅汉语听说-初级起步篇I.pdf",
+    "sha256": "9a98ee0b376c9b5cff20622987a0e4b9cee68287e45dc547665a3cd537fb517a",
+    "printed_pages": "1–5",
+    "pdf_pages": "12–16",
+    "status": "user_local_source_verified"
+  },
+  "canonical_source": {
+    "path": "lessons/boya-elementary-i/lesson-01/00-source/canonical-source.json",
+    "sha256": null,
+    "status": "draft_source_package"
+  },
+  "canonical_source_sha256": null,
+  "derived_evidence": [
+    ".tmp/ocr-elementary-i/manifest.json",
+    "docs/boya-elementary-i-lesson-01-slide-copy-review-2026-09-15.md",
+    "textbooks/boya-elementary-i-ii/source/reference-dataset/manifest.json"
+  ],
+  "review": {
+    "copy_approved_by_adam": "2026-09-15",
+    "source_approved": false,
+    "approval_scope": ["lesson-01 slide copy and specified revisions"],
+    "human_gates_open": ["semantic audio listening", "PowerPoint playback", "teacher rehearsal", "authority promotion"]
+  }
+}

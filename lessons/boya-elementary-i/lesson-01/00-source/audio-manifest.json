@@ -1,0 +1,28 @@
+{
+  "schema_version": "boya-lesson-audio-manifest-v1",
+  "lesson_id": "lesson-01",
+  "lesson_key": "boya-elementary-i:lesson-01",
+  "textbook_id": "boya-elementary-i",
+  "lesson_title": "拼音和日常用语（一）",
+  "recorded_at": "2026-09-15",
+  "provenance": {
+    "source_type": "user_local_recovered_audio",
+    "source_directory": ".tmp/drive-audio-lesson-01",
+    "textbook_labels_seen": ["1-1","1-2","1-3","1-4","1-5","1-6","1-7","1-8","1-9"],
+    "semantic_status": "pending_teacher_listening",
+    "powerpoint_playback_status": "pending_teacher_playback"
+  },
+  "technical_evidence": "lessons/boya-elementary-i/lesson-01/00-source/audit/audio-technical-2026-09-15.md",
+  "tracks": [
+    {"label":"1-1","path":"textbooks/boya-elementary-i/source/audio/lesson-01/1-1.mp3","scope":"声母（教材 P1）","decode_status":"passed"},
+    {"label":"1-2","path":"textbooks/boya-elementary-i/source/audio/lesson-01/1-2.mp3","scope":"声母听辨（教材 P1）","decode_status":"passed"},
+    {"label":"1-3","path":"textbooks/boya-elementary-i/source/audio/lesson-01/1-3.mp3","scope":"声母听写（教材 P1）","decode_status":"passed"},
+    {"label":"1-4","path":"textbooks/boya-elementary-i/source/audio/lesson-01/1-4.mp3","scope":"韵母（教材 P2）","decode_status":"passed"},
+    {"label":"1-5","path":"textbooks/boya-elementary-i/source/audio/lesson-01/1-5.mp3","scope":"四声和轻声（教材 P2）","decode_status":"passed"},
+    {"label":"1-6","path":"textbooks/boya-elementary-i/source/audio/lesson-01/1-6.mp3","scope":"带调读音（教材 P2）","decode_status":"passed"},
+    {"label":"1-7","path":"textbooks/boya-elementary-i/source/audio/lesson-01/1-7.mp3","scope":"音节听辨（教材 P3）","decode_status":"passed"},
+    {"label":"1-8","path":"textbooks/boya-elementary-i/source/audio/lesson-01/1-8.mp3","scope":"音节补全（教材 P3–P4）","decode_status":"passed"},
+    {"label":"1-9","path":"textbooks/boya-elementary-i/source/audio/lesson-01/1-9.mp3","scope":"日常用语（教材 P4）","decode_status":"passed"}
+  ],
+  "status": "technical_decode_passed_semantic_and_playback_pending"
+}

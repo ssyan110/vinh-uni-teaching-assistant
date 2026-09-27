@@ -1,0 +1,860 @@
+{
+  "schema_version": "boya-elementary-face-to-face-storyboard-v1",
+  "lesson_key": "boya-elementary-i:lesson-01",
+  "offering_id": "2026-fall",
+  "title": "拼音和日常用语（一）",
+  "mode": "teacher_face_to_face_only",
+  "source_copy": "docs/boya-elementary-i-lesson-01-slide-copy-review-2026-09-15.md",
+  "source_refs": "lessons/boya-elementary-i/lesson-01/10-design/storyboard/lesson-01-source-refs.csv",
+  "student_visible_minimum_pt": 23,
+  "slide_count": 55,
+  "slides": [
+    {
+      "slide_number": 1,
+      "student_visible_text": [
+        "第1课",
+        "拼音和日常用语（一）",
+        "实体课"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "cover",
+      "speaker_notes": "打开教材 P1–P5，准备笔和笔记本。今天先做声母，再做韵母和声调，最后练习日常用语。",
+      "source_refs": []
+    },
+    {
+      "slide_number": 2,
+      "student_visible_text": [
+        "今天这样学",
+        "Nghe phụ âm",
+        "Đọc nguyên âm và thanh điệu",
+        "Luyện tập",
+        "Chào hỏi bằng tiếng Trung"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "learning-route-imagen",
+      "speaker_notes": "告诉学生：四个图块内的越南文是今天的学习路线；教材题目在书上完成，PPT 只提示现在做哪一项、听几次和怎样核对。",
+      "source_refs": []
+    },
+    {
+      "slide_number": 3,
+      "student_visible_text": [
+        "本课目标",
+        "今天下课前，我能：",
+        "听出并读出21个声母、6个单韵母。",
+        "听出并读出汉语的一、二、三、四、轻声。",
+        "使用汉语日常用语。"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "goals",
+      "speaker_notes": "目标是课堂动作，不是考试分数。学生不会的项目先记录，订正后再读一次。",
+      "source_refs": []
+    },
+    {
+      "slide_number": 4,
+      "student_visible_text": [
+        "声母"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "section-divider",
+      "speaker_notes": "进入声母部分。先看图，再进入教材的听辨与听写。",
+      "source_refs": []
+    },
+    {
+      "slide_number": 5,
+      "student_visible_text": [
+        "b",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "声母 b：播放音频 1-1 中对应的声音，学生先听、指向屏幕，再跟读。只在学生实际混淆时做短示范。",
+      "source_refs": [
+        "canonical-source.json#sections.initials"
+      ]
+    },
+    {
+      "slide_number": 6,
+      "student_visible_text": [
+        "p",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "声母 p：播放音频 1-1 中对应的声音，学生先听、指向屏幕，再跟读。只在学生实际混淆时做短示范。",
+      "source_refs": [
+        "canonical-source.json#sections.initials"
+      ]
+    },
+    {
+      "slide_number": 7,
+      "student_visible_text": [
+        "m",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "声母 m：播放音频 1-1 中对应的声音，学生先听、指向屏幕，再跟读。只在学生实际混淆时做短示范。",
+      "source_refs": [
+        "canonical-source.json#sections.initials"
+      ]
+    },
+    {
+      "slide_number": 8,
+      "student_visible_text": [
+        "f",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "声母 f：播放音频 1-1 中对应的声音，学生先听、指向屏幕，再跟读。只在学生实际混淆时做短示范。",
+      "source_refs": [
+        "canonical-source.json#sections.initials"
+      ]
+    },
+    {
+      "slide_number": 9,
+      "student_visible_text": [
+        "d",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "声母 d：播放音频 1-1 中对应的声音，学生先听、指向屏幕，再跟读。只在学生实际混淆时做短示范。",
+      "source_refs": [
+        "canonical-source.json#sections.initials"
+      ]
+    },
+    {
+      "slide_number": 10,
+      "student_visible_text": [
+        "t",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "声母 t：播放音频 1-1 中对应的声音，学生先听、指向屏幕，再跟读。只在学生实际混淆时做短示范。",
+      "source_refs": [
+        "canonical-source.json#sections.initials"
+      ]
+    },
+    {
+      "slide_number": 11,
+      "student_visible_text": [
+        "n",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "声母 n：播放音频 1-1 中对应的声音，学生先听、指向屏幕，再跟读。只在学生实际混淆时做短示范。",
+      "source_refs": [
+        "canonical-source.json#sections.initials"
+      ]
+    },
+    {
+      "slide_number": 12,
+      "student_visible_text": [
+        "l",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "声母 l：播放音频 1-1 中对应的声音，学生先听、指向屏幕，再跟读。只在学生实际混淆时做短示范。",
+      "source_refs": [
+        "canonical-source.json#sections.initials"
+      ]
+    },
+    {
+      "slide_number": 13,
+      "student_visible_text": [
+        "g",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "声母 g：播放音频 1-1 中对应的声音，学生先听、指向屏幕，再跟读。只在学生实际混淆时做短示范。",
+      "source_refs": [
+        "canonical-source.json#sections.initials"
+      ]
+    },
+    {
+      "slide_number": 14,
+      "student_visible_text": [
+        "k",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "声母 k：播放音频 1-1 中对应的声音，学生先听、指向屏幕，再跟读。只在学生实际混淆时做短示范。",
+      "source_refs": [
+        "canonical-source.json#sections.initials"
+      ]
+    },
+    {
+      "slide_number": 15,
+      "student_visible_text": [
+        "h",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "声母 h：播放音频 1-1 中对应的声音，学生先听、指向屏幕，再跟读。只在学生实际混淆时做短示范。",
+      "source_refs": [
+        "canonical-source.json#sections.initials"
+      ]
+    },
+    {
+      "slide_number": 16,
+      "student_visible_text": [
+        "j",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "声母 j：播放音频 1-1 中对应的声音，学生先听、指向屏幕，再跟读。只在学生实际混淆时做短示范。",
+      "source_refs": [
+        "canonical-source.json#sections.initials"
+      ]
+    },
+    {
+      "slide_number": 17,
+      "student_visible_text": [
+        "q",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "声母 q：播放音频 1-1 中对应的声音，学生先听、指向屏幕，再跟读。只在学生实际混淆时做短示范。",
+      "source_refs": [
+        "canonical-source.json#sections.initials"
+      ]
+    },
+    {
+      "slide_number": 18,
+      "student_visible_text": [
+        "x",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "声母 x：播放音频 1-1 中对应的声音，学生先听、指向屏幕，再跟读。只在学生实际混淆时做短示范。",
+      "source_refs": [
+        "canonical-source.json#sections.initials"
+      ]
+    },
+    {
+      "slide_number": 19,
+      "student_visible_text": [
+        "z",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "声母 z：播放音频 1-1 中对应的声音，学生先听、指向屏幕，再跟读。只在学生实际混淆时做短示范。",
+      "source_refs": [
+        "canonical-source.json#sections.initials"
+      ]
+    },
+    {
+      "slide_number": 20,
+      "student_visible_text": [
+        "c",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "声母 c：播放音频 1-1 中对应的声音，学生先听、指向屏幕，再跟读。只在学生实际混淆时做短示范。",
+      "source_refs": [
+        "canonical-source.json#sections.initials"
+      ]
+    },
+    {
+      "slide_number": 21,
+      "student_visible_text": [
+        "s",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "声母 s：播放音频 1-1 中对应的声音，学生先听、指向屏幕，再跟读。只在学生实际混淆时做短示范。",
+      "source_refs": [
+        "canonical-source.json#sections.initials"
+      ]
+    },
+    {
+      "slide_number": 22,
+      "student_visible_text": [
+        "zh",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "声母 zh：播放音频 1-1 中对应的声音，学生先听、指向屏幕，再跟读。只在学生实际混淆时做短示范。",
+      "source_refs": [
+        "canonical-source.json#sections.initials"
+      ]
+    },
+    {
+      "slide_number": 23,
+      "student_visible_text": [
+        "ch",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "声母 ch：播放音频 1-1 中对应的声音，学生先听、指向屏幕，再跟读。只在学生实际混淆时做短示范。",
+      "source_refs": [
+        "canonical-source.json#sections.initials"
+      ]
+    },
+    {
+      "slide_number": 24,
+      "student_visible_text": [
+        "sh",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "声母 sh：播放音频 1-1 中对应的声音，学生先听、指向屏幕，再跟读。只在学生实际混淆时做短示范。",
+      "source_refs": [
+        "canonical-source.json#sections.initials"
+      ]
+    },
+    {
+      "slide_number": 25,
+      "student_visible_text": [
+        "r",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "声母 r：播放音频 1-1 中对应的声音，学生先听、指向屏幕，再跟读。只在学生实际混淆时做短示范。",
+      "source_refs": [
+        "canonical-source.json#sections.initials"
+      ]
+    },
+    {
+      "slide_number": 26,
+      "student_visible_text": [
+        "声母拼读练习",
+        "先读声母，再读韵母，合起来读。",
+        "声母 + 韵母 = 音节",
+        "按行拼读。"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "initial-blending-table",
+      "speaker_notes": "先指一行，教师示范“声母—韵母—合起来读”，再让学生按行拼读。只使用表中已有音节；这是补充练习，不替代教材 P1 的声母听辨和听写。",
+      "source_refs": [
+        "pinyin-01/slides/12-pinyin-practice.html",
+        "pinyin-01/slides/assets/photos/pinyin-concept-2.png"
+      ]
+    },
+    {
+      "slide_number": 27,
+      "student_visible_text": [
+        "听力练习",
+        "先看每题的声母。听录音，圈出你听到的声母。",
+        "再听一次，检查答案。",
+        "1．  b　／　p",
+        "2．  d　／　t",
+        "3．  n　／　l　／　r",
+        "4．  g　／　k　／　h",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "listening-choice-grid",
+      "speaker_notes": "学生先独立选择，第一次播放后保留答案；第二次播放后小组比较，再核对教材 P1。",
+      "source_refs": [
+        "canonical-source.json#sections.initial_listening"
+      ]
+    },
+    {
+      "slide_number": 28,
+      "student_visible_text": [
+        "听力练习",
+        "先看每题的声母。听录音，圈出你听到的声母。",
+        "再听一次，检查答案。",
+        "5．  j　／　zh　／　z",
+        "6．  q　／　ch　／　c",
+        "7．  x　／　sh　／　s",
+        "8．  zh　／　ch　／　sh　／　r",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "listening-choice-grid",
+      "speaker_notes": "学生先独立选择，第一次播放后保留答案；第二次播放后小组比较，再核对教材 P1。",
+      "source_refs": [
+        "canonical-source.json#sections.initial_listening"
+      ]
+    },
+    {
+      "slide_number": 29,
+      "student_visible_text": [
+        "听写",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "single-action",
+      "speaker_notes": "请学生直接看教材 P1 的听写练习。播放 1-3，按教材原题分段；学生完成 1–15 项，听完后补写并核对。答案不放在学生画面。",
+      "source_refs": [
+        "canonical-source.json#sections.initial_dictation"
+      ]
+    },
+    {
+      "slide_number": 30,
+      "student_visible_text": [
+        "小组练习",
+        "按顺序完成下面四步。",
+        "从教材 P1 选择三个声母，轮流读出来。",
+        "其他同学听后写在笔记本上。",
+        "小组一起核对，读者和听者都改正。",
+        "换人，直到每个人都读过一次。",
+        "教材 P1"
+      ],
+      "textbook_page": "P1",
+      "audio": [],
+      "layout": "group-four-steps",
+      "speaker_notes": "不规定小组人数。巡视时确保每个人都轮到读和写；记录最常见的混淆，最后做一次短重读。",
+      "source_refs": [
+        "canonical-source.json#sections.initial_group"
+      ]
+    },
+    {
+      "slide_number": 31,
+      "student_visible_text": [
+        "韵母"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "section-divider",
+      "speaker_notes": "进入韵母部分。先看图，再读六个单韵母和带调读音。",
+      "source_refs": []
+    },
+    {
+      "slide_number": 32,
+      "student_visible_text": [
+        "a",
+        "教材 P2"
+      ],
+      "textbook_page": "P2",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "韵母 a：播放音频 1-4 中对应的声音，学生先听、指向屏幕，再跟读。需要时比较实际出现的混淆。",
+      "source_refs": [
+        "canonical-source.json#sections.finals"
+      ]
+    },
+    {
+      "slide_number": 33,
+      "student_visible_text": [
+        "o",
+        "教材 P2"
+      ],
+      "textbook_page": "P2",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "韵母 o：播放音频 1-4 中对应的声音，学生先听、指向屏幕，再跟读。需要时比较实际出现的混淆。",
+      "source_refs": [
+        "canonical-source.json#sections.finals"
+      ]
+    },
+    {
+      "slide_number": 34,
+      "student_visible_text": [
+        "e",
+        "教材 P2"
+      ],
+      "textbook_page": "P2",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "韵母 e：播放音频 1-4 中对应的声音，学生先听、指向屏幕，再跟读。需要时比较实际出现的混淆。",
+      "source_refs": [
+        "canonical-source.json#sections.finals"
+      ]
+    },
+    {
+      "slide_number": 35,
+      "student_visible_text": [
+        "i",
+        "教材 P2"
+      ],
+      "textbook_page": "P2",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "韵母 i：播放音频 1-4 中对应的声音，学生先听、指向屏幕，再跟读。需要时比较实际出现的混淆。",
+      "source_refs": [
+        "canonical-source.json#sections.finals"
+      ]
+    },
+    {
+      "slide_number": 36,
+      "student_visible_text": [
+        "u",
+        "教材 P2"
+      ],
+      "textbook_page": "P2",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "韵母 u：播放音频 1-4 中对应的声音，学生先听、指向屏幕，再跟读。需要时比较实际出现的混淆。",
+      "source_refs": [
+        "canonical-source.json#sections.finals"
+      ]
+    },
+    {
+      "slide_number": 37,
+      "student_visible_text": [
+        "ü",
+        "教材 P2"
+      ],
+      "textbook_page": "P2",
+      "audio": [],
+      "layout": "single-sound",
+      "speaker_notes": "韵母 ü：播放音频 1-4 中对应的声音，学生先听、指向屏幕，再跟读。需要时比较实际出现的混淆。",
+      "source_refs": [
+        "canonical-source.json#sections.finals"
+      ]
+    },
+    {
+      "slide_number": 38,
+      "student_visible_text": [
+        "声调"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "section-divider",
+      "speaker_notes": "进入声调部分。先看图理解一、二、三、四声和轻声，再做后面的声调练习。",
+      "source_refs": []
+    },
+    {
+      "slide_number": 39,
+      "student_visible_text": [
+        "图中越南文声调说明",
+        "教材 P2"
+      ],
+      "textbook_page": "P2",
+      "audio": [],
+      "layout": "user-provided-tone-chart",
+      "speaker_notes": "本页直接使用教师提供的声调图。请学生先看图，注意一、二、三、四声和轻声的音高走向；再使用教材 P2 的音频或教师示范跟读。",
+      "source_refs": [
+        "canonical-source.json#sections.tones"
+      ]
+    },
+    {
+      "slide_number": 40,
+      "student_visible_text": [
+        "加练：听声音，选声调",
+        "听老师读。",
+        "用1、2、3或4根手指表示你听到的声调。",
+        "1",
+        "2",
+        "3",
+        "4",
+        "核对后，再读一次。",
+        "教材 P2"
+      ],
+      "textbook_page": "P2",
+      "audio": [],
+      "layout": "tone-finger-drill",
+      "speaker_notes": "教师从 P2 的带调单韵母中选 6 项，逐项朗读。第一轮不做手势提示；全班用手指回答；核对后全班跟读。此页不显示答案。",
+      "source_refs": [
+        "canonical-source.json#sections.tones"
+      ]
+    },
+    {
+      "slide_number": 41,
+      "student_visible_text": [
+        "四声朗读",
+        "按行听，按行读。",
+        "a： ā　á　ǎ　à",
+        "o： ō　ó　ǒ　ò",
+        "e： ē　é　ě　è",
+        "i： ī　í　ǐ　ì",
+        "u： ū　ú　ǔ　ù",
+        "ü： ǖ　ǘ　ǚ　ǜ",
+        "教材 P2"
+      ],
+      "textbook_page": "P2",
+      "audio": [],
+      "layout": "accented-finals-table",
+      "speaker_notes": "按行播放、按行跟读。教师指向当前行，不让学生抢读下一行；这一页完成首轮接触。",
+      "source_refs": [
+        "canonical-source.json#sections.accented_finals"
+      ]
+    },
+    {
+      "slide_number": 42,
+      "student_visible_text": [
+        "拼音教材练习：听音选声调",
+        "听老师读，选择正确的声调。",
+        "1. A. pǒ　B. pō　C. pò　D. pó",
+        "2. A. wù　B. wǔ　C. wū　D. wú",
+        "3. A. yú　B. yù　C. yǔ　D. yū",
+        "4. A. á　B. à　C. ā　D. ǎ",
+        "5. A. bì　B. bī　C. bí　D. bǐ",
+        "6. A. fǎ　B. fá　C. fà　D. fā"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "supplemental-tone-choice",
+      "speaker_notes": "教师逐题朗读，学生独立选择，再由小组比较。答案以补充拼音教材题目版本核对后放在教师备课记录，不放在学生画面；若时间紧，后两题作为备用。",
+      "source_refs": [
+        "pinyin-01/slides/37-tone-choice-practice.html"
+      ]
+    },
+    {
+      "slide_number": 43,
+      "student_visible_text": [
+        "音节听辨和拼写"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "section-divider",
+      "speaker_notes": "进入音节听辨和拼写部分。先看图，再做听辨和教材补全。",
+      "source_refs": []
+    },
+    {
+      "slide_number": 44,
+      "student_visible_text": [
+        "音节听辨 1–10",
+        "请看教材P3的（二）。",
+        "1.  bā　／　bō",
+        "2.  nǐ　／　nǔ",
+        "3.  lù　／　nù",
+        "4.  gē　／　gū",
+        "5.  ná　／　lá",
+        "6.  cū　／　chū",
+        "7.  jǔ　／　zhǔ",
+        "8.  rè　／　lè",
+        "9.  zī　／　zū",
+        "10.  sè　／　sù",
+        "教材 P3"
+      ],
+      "textbook_page": "P3",
+      "audio": [],
+      "layout": "syllable-listening-grid",
+      "speaker_notes": "学生在教材 P3 圈答案。第一次听先选择，第二次检查；不要在播放前逐项带读成答案提示。",
+      "source_refs": [
+        "canonical-source.json#sections.syllable_listening"
+      ]
+    },
+    {
+      "slide_number": 45,
+      "student_visible_text": [
+        "音节听辨 11–20",
+        "请看教材P3的（二）。",
+        "11.  dà　／　tà",
+        "12.  jì　／　qù",
+        "13.  kè　／　kù",
+        "14.  xū　／　shū",
+        "15.  pí　／　pú",
+        "16.  fó　／　fú",
+        "17.  mò　／　mù",
+        "18.  mǎ　／　nǎ",
+        "19.  hù　／　tù",
+        "20.  shé　／　shá",
+        "教材 P3"
+      ],
+      "textbook_page": "P3",
+      "audio": [],
+      "layout": "syllable-listening-grid",
+      "speaker_notes": "学生在教材 P3 圈答案。第一次听先选择，第二次检查；不要在播放前逐项带读成答案提示。",
+      "source_refs": [
+        "canonical-source.json#sections.syllable_listening"
+      ]
+    },
+    {
+      "slide_number": 46,
+      "student_visible_text": [
+        "注意事项",
+        "j 后面的 ü 写成 u",
+        "jü → ju",
+        "读音还是 ü。",
+        "教材 P3"
+      ],
+      "textbook_page": "P3",
+      "audio": [],
+      "layout": "jqx-rule-single",
+      "speaker_notes": "让学生对照教材 P3 的注意事项，先看 jü → ju 的书写变化，再读出对应读音。三页都强调：j、q、x 后面的 ü 写成 u，但读音还是 ü。",
+      "source_refs": [
+        "pinyin-02/slides/37-rule-jqx-umlaut.html",
+        "canonical-source.json#sections.jqx_rule"
+      ]
+    },
+    {
+      "slide_number": 47,
+      "student_visible_text": [
+        "注意事项",
+        "q 后面的 ü 写成 u",
+        "qü → qu",
+        "读音还是 ü。",
+        "教材 P3"
+      ],
+      "textbook_page": "P3",
+      "audio": [],
+      "layout": "jqx-rule-single",
+      "speaker_notes": "让学生对照教材 P3 的注意事项，先看 qü → qu 的书写变化，再读出对应读音。三页都强调：j、q、x 后面的 ü 写成 u，但读音还是 ü。",
+      "source_refs": [
+        "pinyin-02/slides/37-rule-jqx-umlaut.html",
+        "canonical-source.json#sections.jqx_rule"
+      ]
+    },
+    {
+      "slide_number": 48,
+      "student_visible_text": [
+        "注意事项",
+        "x 后面的 ü 写成 u",
+        "xü → xu",
+        "读音还是 ü。",
+        "教材 P3"
+      ],
+      "textbook_page": "P3",
+      "audio": [],
+      "layout": "jqx-rule-single",
+      "speaker_notes": "让学生对照教材 P3 的注意事项，先看 xü → xu 的书写变化，再读出对应读音。三页都强调：j、q、x 后面的 ü 写成 u，但读音还是 ü。",
+      "source_refs": [
+        "pinyin-02/slides/37-rule-jqx-umlaut.html",
+        "canonical-source.json#sections.jqx_rule"
+      ]
+    },
+    {
+      "slide_number": 49,
+      "student_visible_text": [
+        "请看教材P3、P4的（三）。",
+        "教材 P3–4"
+      ],
+      "textbook_page": "P3–4",
+      "audio": [],
+      "layout": "single-action",
+      "speaker_notes": "播放 1-8，按教材四组分段；学生在书上补全全部四组，包括拼音和声调，再核对。不要把未完成内容标为完成。",
+      "source_refs": [
+        "canonical-source.json#sections.syllable_completion"
+      ]
+    },
+    {
+      "slide_number": 50,
+      "student_visible_text": [
+        "小组练习",
+        "按顺序完成下面四步。",
+        "从教材练习三中选择三个音节，轮流读出来。",
+        "其他同学听后写下来。",
+        "小组一起核对读音和拼写。",
+        "换人，直到每个人都读过一次。",
+        "教材 P4"
+      ],
+      "textbook_page": "P4",
+      "audio": [],
+      "layout": "group-four-steps",
+      "speaker_notes": "不规定小组人数。巡视时确保每个人都轮到读和写；记录最常见的混淆，最后做一次短重读。",
+      "source_refs": [
+        "canonical-source.json#sections.syllable_completion"
+      ]
+    },
+    {
+      "slide_number": 51,
+      "student_visible_text": [
+        "日常用语"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "section-divider",
+      "speaker_notes": "进入日常用语部分。先看图，再把六句话放进简单情景。",
+      "source_refs": []
+    },
+    {
+      "slide_number": 52,
+      "student_visible_text": [
+        "日常用语",
+        "1. 你好",
+        "2. 谢谢",
+        "3. 不客气",
+        "教材 P4"
+      ],
+      "textbook_page": "P4",
+      "audio": [],
+      "layout": "daily-phrase-cards",
+      "speaker_notes": "先完整播放，再逐句跟读。教师用动作提示使用场合，不先讲长篇翻译；拼音与轻声以教材 P4 和音频核对。",
+      "source_refs": [
+        "canonical-source.json#sections.daily_phrases"
+      ]
+    },
+    {
+      "slide_number": 53,
+      "student_visible_text": [
+        "继续日常用语",
+        "4. 对不起",
+        "5. 没关系",
+        "6. 再见",
+        "教材 P4"
+      ],
+      "textbook_page": "P4",
+      "audio": [],
+      "layout": "daily-phrase-cards",
+      "speaker_notes": "先完整播放，再逐句跟读。教师用动作提示使用场合，不先讲长篇翻译；拼音与轻声以教材 P4 和音频核对。",
+      "source_refs": [
+        "canonical-source.json#sections.daily_phrases"
+      ]
+    },
+    {
+      "slide_number": 54,
+      "student_visible_text": [
+        "加练：看情景，说一句话",
+        "先自己说，再和同学交换。",
+        "1. Vừa mới gặp nhau",
+        "2. Bạn học vừa giúp bạn",
+        "3. Bạn làm sai",
+        "4. Bạn sắp rời đi",
+        "教材 P4"
+      ],
+      "textbook_page": "P4",
+      "audio": [],
+      "layout": "vietnamese-scenario-cards",
+      "speaker_notes": "学生从本课六句日常用语中选择合适表达。每个情景先全班说，再小组交换；越南文标签只是帮助理解场合，不作为新词教学。",
+      "source_refs": [
+        "canonical-source.json#sections.daily_phrases"
+      ]
+    },
+    {
+      "slide_number": 55,
+      "student_visible_text": [
+        "请看教材P4、P5的（二）。",
+        "教材 P4–5"
+      ],
+      "textbook_page": "P4–5",
+      "audio": [],
+      "layout": "single-action",
+      "speaker_notes": "学生按照教材完成四组问答，再交换角色并重新说一遍。教师确认每个小组都实际开口，不提供学生画面上的唯一答案。",
+      "source_refs": [
+        "canonical-source.json#sections.daily_pair_qa"
+      ]
+    }
+  ],
+  "notes": "This is a draft storyboard generated alongside the reversible PPTX draft. It is not an approval record."
+}

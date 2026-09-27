@@ -1,0 +1,125 @@
+{
+  "schema_version": "boya-lesson-image-manifest-v1",
+  "lesson_key": "boya-elementary-i:lesson-04",
+  "run_id": "elementary-l04-approved-20260919",
+  "authorization_status": "approved_content_image_batch",
+  "can_enter_ppt": true,
+  "workers": [
+    {
+      "id": "worker-1",
+      "status": "success",
+      "ai_visual_qa": "passed",
+      "evidence": ".agent/runs/elementary-l04-approved-20260919/staging/worker-1/worker-result.json",
+      "sha256": "0a66e3f977b561fd0f0e0d7bccf64f5e903c11354482bc2be5d826f198a03678"
+    },
+    {
+      "id": "worker-2",
+      "status": "success",
+      "ai_visual_qa": "passed",
+      "evidence": ".agent/runs/elementary-l04-approved-20260919/staging/worker-2/worker-result.json",
+      "sha256": "692b922e8dfb74322da22ebe2d8ec5e67a3383269afe0560a45ec6c7777d0536"
+    }
+  ],
+  "assets": [
+    {
+      "name": "cover.png",
+      "file": "generated-approved-20260919/cover.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "fde6d94d3497a803a8f08000ee02c4b44e4e2d4f5c57a6f4a4edc64fcaf88dcc",
+      "ai_visual_qa": "passed",
+      "source_kind": "ai_image_generation_provider",
+      "visual_qa_notes": "Three adult university classmates greet at a classroom entrance; blank name card only; no visible text, logo, or watermark; clean pastel classroom illustration.",
+      "asset_id": "cover",
+      "source_file": ".agent/runs/elementary-l04-approved-20260919/staging/worker-1/cover.png",
+      "license_status": "AI-generated after lesson content approval; human visual acceptance pending"
+    },
+    {
+      "name": "route.png",
+      "file": "generated-approved-20260919/route.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "13c94bfaef708fe3b98d6b27c28052f8b6eedcdefcf8f1120e196f16c9b553e0",
+      "ai_visual_qa": "passed",
+      "source_kind": "ai_image_generation_provider",
+      "visual_qa_notes": "Horizontal four-moment sequence is visually separable: cards, listening/speaking, dialogue/listening, and introductions; no text labels, logo, or watermark.",
+      "asset_id": "route",
+      "source_file": ".agent/runs/elementary-l04-approved-20260919/staging/worker-1/route.png",
+      "license_status": "AI-generated after lesson content approval; human visual acceptance pending"
+    },
+    {
+      "name": "words.png",
+      "file": "generated-approved-20260919/words.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "5c2126abb75d88666a364a3b7337bc588e111bcf0a60558dbab6156d38da9bf7",
+      "ai_visual_qa": "passed",
+      "source_kind": "ai_image_generation_provider",
+      "visual_qa_notes": "Teacher and adult learners review blank cards in a simple classroom; cards are empty for slide text; no visible text, logo, or watermark.",
+      "asset_id": "words",
+      "source_file": ".agent/runs/elementary-l04-approved-20260919/staging/worker-1/words.png",
+      "license_status": "AI-generated after lesson content approval; human visual acceptance pending"
+    },
+    {
+      "name": "sentences.png",
+      "file": "generated-approved-20260919/sentences.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "cba0014c347815516085bf158d3e303b88d2126f315d3f6e2fe15d1b0d2cc2d7",
+      "ai_visual_qa": "passed",
+      "source_kind": "ai_image_generation_provider",
+      "visual_qa_notes": "Three adult learners repeat together; blank speech bubbles; no visible text, logo, or watermark; clean pastel classroom illustration.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "asset_id": "sentences",
+      "source_file": ".agent/runs/elementary-l04-approved-20260919/staging/worker-2/sentences.png",
+      "license_status": "AI-generated after lesson content approval; human visual acceptance pending"
+    },
+    {
+      "name": "listening.png",
+      "file": "generated-approved-20260919/listening.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "f14756e18935b9432af936f73de0f1fc45e8af505c64dce97a3bfbf785187458",
+      "ai_visual_qa": "passed",
+      "source_kind": "ai_image_generation_provider",
+      "visual_qa_notes": "Adult students listen with headphones and a plain audio device while viewing blank textbook pages; no visible text, logo, or watermark.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "asset_id": "listening",
+      "source_file": ".agent/runs/elementary-l04-approved-20260919/staging/worker-2/listening.png",
+      "license_status": "AI-generated after lesson content approval; human visual acceptance pending"
+    },
+    {
+      "name": "communication.png",
+      "file": "generated-approved-20260919/communication.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "5f443f3be07f57d063603ef77d32702f95f530e99582eab46c0f8f3fa7e2abf0",
+      "ai_visual_qa": "passed",
+      "source_kind": "ai_image_generation_provider",
+      "visual_qa_notes": "Three adult students exchange blank name cards in a friendly classroom interaction; no visible text, logo, or watermark.",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "asset_id": "communication",
+      "source_file": ".agent/runs/elementary-l04-approved-20260919/staging/worker-2/communication.png",
+      "license_status": "AI-generated after lesson content approval; human visual acceptance pending"
+    }
+  ],
+  "coordinator_visual_qa": "passed",
+  "human_visual_approval": false,
+  "approved_content_sha256": "785c3c5c75278013f264a8a7fb40e88dc01a3bd444875913ad818d97722942e5",
+  "canonical_source_sha256": "c7e08f5bdc7761042145d58af583bf6e1d082dcb2c185909387d8bec361bc025"
+}

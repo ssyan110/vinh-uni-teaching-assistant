@@ -1,0 +1,984 @@
+{
+  "schema_version": "boya-elementary-face-to-face-storyboard-v1",
+  "lesson_key": "boya-elementary-i:lesson-03",
+  "offering_id": "2026-fall",
+  "title": "拼音和日常用语（三）",
+  "mode": "teacher_face_to_face_only",
+  "source_copy": "lessons/boya-elementary-i/lesson-03/10-design/storyboard/lesson-03-逐页文案审阅.md",
+  "source_refs": "lessons/boya-elementary-i/lesson-03/10-design/storyboard/lesson-03-source-refs.csv",
+  "student_visible_minimum_pt": 23,
+  "slide_count": 52,
+  "slides": [
+    {
+      "slide_number": 1,
+      "student_visible_text": [
+        "第3课",
+        "拼音和日常用语（三）",
+        "实体课"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "cover",
+      "speaker_notes": "打开教材 P10–P15，准备笔和笔记本。今天先学 er 和儿化韵，再学 y、w 规则，之后练习声调变化和日常用语。",
+      "source_refs": [],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 2,
+      "student_visible_text": [
+        "今天这样学",
+        "Học âm er và âm cuốn lưỡi",
+        "Học quy tắc y và w",
+        "Luyện biến điệu",
+        "Luyện nói hằng ngày"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "learning-route-imagen-template-family",
+      "speaker_notes": "学习流程图沿用第一课和第二课的版式；图中文字是越南文。教材题目在书上完成，PPT 只提示当前动作。",
+      "source_refs": [],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 3,
+      "student_visible_text": [
+        "本课目标",
+        "今天下课前，我能：",
+        "读出 er 和儿化韵。",
+        "看懂 y、w 的拼写变化，并读出来。",
+        "听辨并读出三声、bu、yi 的变调。",
+        "用日常用语表达听不懂、请重复、价格和地点。"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "goals",
+      "speaker_notes": "目标对应今天的听、读、说动作。出现困难时只短示范，再回到教材练习。",
+      "source_refs": [],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 4,
+      "student_visible_text": [
+        "er 和儿化韵"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "section-divider-imagen",
+      "speaker_notes": "进入 er 和儿化韵。先示范 er，再回到教材 P10–P11 的对照和朗读。",
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 5,
+      "student_visible_text": [
+        "er"
+      ],
+      "textbook_page": "P10",
+      "audio": [],
+      "layout": "single-final-text-only",
+      "speaker_notes": "教师示范 er，学生听后跟读。参考音频 3-1。",
+      "source_refs": [
+        "canonical-source.json#sections.er_demo"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 6,
+      "student_visible_text": [
+        "跟读",
+        "er　　erzi　　nü’er"
+      ],
+      "textbook_page": "P10",
+      "audio": [
+        "3-2"
+      ],
+      "layout": "single-action",
+      "speaker_notes": "参考音频 3-2。先整体听，再分组跟读；必要时只重读学生混淆的项目。",
+      "source_refs": [
+        "canonical-source.json#sections.er_examples"
+      ],
+      "source_audio_reference": [
+        "3-2"
+      ]
+    },
+    {
+      "slide_number": 7,
+      "student_visible_text": [
+        "跟读",
+        "erni　　erduo　　erqie"
+      ],
+      "textbook_page": "P10",
+      "audio": [
+        "3-2"
+      ],
+      "layout": "single-action",
+      "speaker_notes": "参考音频 3-2。学生跟读后，同伴互听一个最不确定的项目。",
+      "source_refs": [
+        "canonical-source.json#sections.er_examples"
+      ],
+      "source_audio_reference": [
+        "3-2"
+      ]
+    },
+    {
+      "slide_number": 8,
+      "student_visible_text": [
+        "普通韵母和儿化韵",
+        "请看教材P10的对照表。\n先读左边，再读右边。"
+      ],
+      "textbook_page": "P10",
+      "audio": [
+        "3-3"
+      ],
+      "layout": "single-action",
+      "speaker_notes": "参考音频 3-3。教师按行指向；学生先读普通韵母，再读对应儿化韵。",
+      "source_refs": [
+        "canonical-source.json#sections.retroflex_pairs"
+      ],
+      "source_audio_reference": [
+        "3-3"
+      ]
+    },
+    {
+      "slide_number": 9,
+      "student_visible_text": [
+        "儿化韵朗读",
+        "请看教材P11的朗读部分。\n按顺序读。"
+      ],
+      "textbook_page": "P11",
+      "audio": [
+        "3-4"
+      ],
+      "layout": "single-action",
+      "speaker_notes": "参考音频 3-4。不要全班逐项轮流；按行跟读，教师抽听并重做错项。",
+      "source_refs": [
+        "canonical-source.json#sections.retroflex_reading"
+      ],
+      "source_audio_reference": [
+        "3-4"
+      ]
+    },
+    {
+      "slide_number": 10,
+      "student_visible_text": [
+        "y 的规则"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "section-divider-imagen",
+      "speaker_notes": "进入 y 的拼写规则。每次只看一个变化；最后用总表一次复习全部变化。",
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 11,
+      "student_visible_text": [
+        "没有声母时，i 写成 y",
+        "i → yi",
+        "读音不变。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。读音不变。",
+      "source_refs": [
+        "canonical-source.json#sections.y_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 12,
+      "student_visible_text": [
+        "没有声母时，in 写成 yin",
+        "in → yin",
+        "读音不变。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。读音不变。",
+      "source_refs": [
+        "canonical-source.json#sections.y_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 13,
+      "student_visible_text": [
+        "没有声母时，ing 写成 ying",
+        "ing → ying",
+        "读音不变。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。读音不变。",
+      "source_refs": [
+        "canonical-source.json#sections.y_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 14,
+      "student_visible_text": [
+        "没有声母时，ü 写成 yu",
+        "ü → yu",
+        "两点去掉，读音还是 ü。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。两点去掉，读音还是 ü。",
+      "source_refs": [
+        "canonical-source.json#sections.y_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 15,
+      "student_visible_text": [
+        "没有声母时，üe 写成 yue",
+        "üe → yue",
+        "两点去掉，读音还是 üe。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。两点去掉，读音还是 üe。",
+      "source_refs": [
+        "canonical-source.json#sections.y_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 16,
+      "student_visible_text": [
+        "没有声母时，üan 写成 yuan",
+        "üan → yuan",
+        "两点去掉，读音还是 üan。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。两点去掉，读音还是 üan。",
+      "source_refs": [
+        "canonical-source.json#sections.y_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 17,
+      "student_visible_text": [
+        "没有声母时，ün 写成 yun",
+        "ün → yun",
+        "两点去掉，读音还是 ün。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。两点去掉，读音还是 ün。",
+      "source_refs": [
+        "canonical-source.json#sections.y_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 18,
+      "student_visible_text": [
+        "没有声母时，ia 写成 ya",
+        "ia → ya",
+        "读音不变。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。读音不变。",
+      "source_refs": [
+        "canonical-source.json#sections.y_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 19,
+      "student_visible_text": [
+        "没有声母时，ie 写成 ye",
+        "ie → ye",
+        "读音不变。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。读音不变。",
+      "source_refs": [
+        "canonical-source.json#sections.y_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 20,
+      "student_visible_text": [
+        "没有声母时，iao 写成 yao",
+        "iao → yao",
+        "读音不变。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。读音不变。",
+      "source_refs": [
+        "canonical-source.json#sections.y_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 21,
+      "student_visible_text": [
+        "没有声母时，iou 写成 you",
+        "iou → you",
+        "读音不变。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。读音不变。",
+      "source_refs": [
+        "canonical-source.json#sections.y_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 22,
+      "student_visible_text": [
+        "没有声母时，ian 写成 yan",
+        "ian → yan",
+        "读音不变。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。读音不变。",
+      "source_refs": [
+        "canonical-source.json#sections.y_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 23,
+      "student_visible_text": [
+        "没有声母时，iang 写成 yang",
+        "iang → yang",
+        "读音不变。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。读音不变。",
+      "source_refs": [
+        "canonical-source.json#sections.y_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 24,
+      "student_visible_text": [
+        "没有声母时，iong 写成 yong",
+        "iong → yong",
+        "读音不变。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。读音不变。",
+      "source_refs": [
+        "canonical-source.json#sections.y_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 25,
+      "student_visible_text": [
+        "y 的全部变化",
+        "一次看完全部变化",
+        "i → yi",
+        "in → yin",
+        "ing → ying",
+        "ü → yu",
+        "üe → yue",
+        "üan → yuan",
+        "ün → yun",
+        "ia → ya",
+        "ie → ye",
+        "iao → yao",
+        "iou → you",
+        "ian → yan",
+        "iang → yang",
+        "iong → yong"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "rule-summary-table",
+      "speaker_notes": "请学生从上到下看总表；教师抽取两三个变化让学生口头读出。参考教材 P12、音频 3-5。",
+      "source_refs": [
+        "canonical-source.json#sections.y_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 26,
+      "student_visible_text": [
+        "w 的规则"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "section-divider-imagen",
+      "speaker_notes": "进入 w 的拼写规则。每次只看一个变化；最后用总表一次复习全部变化。",
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 27,
+      "student_visible_text": [
+        "没有声母时，u 写成 wu",
+        "u → wu",
+        "读音不变。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。",
+      "source_refs": [
+        "canonical-source.json#sections.w_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 28,
+      "student_visible_text": [
+        "u 开头的韵母，加 w",
+        "ua → wa",
+        "读音不变。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。",
+      "source_refs": [
+        "canonical-source.json#sections.w_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 29,
+      "student_visible_text": [
+        "u 开头的韵母，加 w",
+        "uo → wo",
+        "读音不变。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。",
+      "source_refs": [
+        "canonical-source.json#sections.w_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 30,
+      "student_visible_text": [
+        "u 开头的韵母，加 w",
+        "uai → wai",
+        "读音不变。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。",
+      "source_refs": [
+        "canonical-source.json#sections.w_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 31,
+      "student_visible_text": [
+        "u 开头的韵母，加 w",
+        "uei → wei",
+        "读音不变。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。",
+      "source_refs": [
+        "canonical-source.json#sections.w_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 32,
+      "student_visible_text": [
+        "u 开头的韵母，加 w",
+        "uan → wan",
+        "读音不变。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。",
+      "source_refs": [
+        "canonical-source.json#sections.w_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 33,
+      "student_visible_text": [
+        "u 开头的韵母，加 w",
+        "uen → wen",
+        "读音不变。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。",
+      "source_refs": [
+        "canonical-source.json#sections.w_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 34,
+      "student_visible_text": [
+        "u 开头的韵母，加 w",
+        "uang → wang",
+        "读音不变。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。",
+      "source_refs": [
+        "canonical-source.json#sections.w_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 35,
+      "student_visible_text": [
+        "u 开头的韵母，加 w",
+        "ueng → weng",
+        "读音不变。"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "single-rule-visualization",
+      "speaker_notes": "教师指着教材 P12 的对应行，先读变化前，再读变化后；参考音频 3-5。",
+      "source_refs": [
+        "canonical-source.json#sections.w_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 36,
+      "student_visible_text": [
+        "w 的全部变化",
+        "一次看完全部变化",
+        "u → wu",
+        "ua → wa",
+        "uo → wo",
+        "uai → wai",
+        "uei → wei",
+        "uan → wan",
+        "uen → wen",
+        "uang → wang",
+        "ueng → weng"
+      ],
+      "textbook_page": "P12",
+      "audio": [
+        "3-5"
+      ],
+      "layout": "rule-summary-table",
+      "speaker_notes": "请学生从上到下看总表；教师抽取两三个变化让学生口头读出。参考教材 P12、音频 3-5。",
+      "source_refs": [
+        "canonical-source.json#sections.w_rules"
+      ],
+      "source_audio_reference": [
+        "3-5"
+      ]
+    },
+    {
+      "slide_number": 37,
+      "student_visible_text": [
+        "y、w 规则后朗读",
+        "请看教材P12、P13的朗读部分。\n按顺序读。"
+      ],
+      "textbook_page": "P12–13",
+      "audio": [
+        "3-6"
+      ],
+      "layout": "single-action",
+      "speaker_notes": "参考音频 3-6。教师按行指向，学生先个人默读，再跟读和重读混淆项目。",
+      "source_refs": [
+        "canonical-source.json#sections.yw_reading"
+      ],
+      "source_audio_reference": [
+        "3-6"
+      ]
+    },
+    {
+      "slide_number": 38,
+      "student_visible_text": [
+        "汉语声调"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "section-divider-imagen",
+      "speaker_notes": "进入声调变化。先看三声变调，再看教材 P14 的一、不变调说明。",
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 39,
+      "student_visible_text": [
+        "三声变调",
+        "nǐ hǎo → ní hǎo",
+        "两个三声相连，前一个读二声。"
+      ],
+      "textbook_page": "P13",
+      "audio": [
+        "3-7"
+      ],
+      "layout": "tone-change-rule",
+      "speaker_notes": "请学生看教材 P13 的示例，先听教师示范，再读 nǐ hǎo 和 ní hǎo。参考音频 3-7。",
+      "source_refs": [
+        "canonical-source.json#sections.third_tone_sandhi"
+      ],
+      "source_audio_reference": [
+        "3-7"
+      ]
+    },
+    {
+      "slide_number": 40,
+      "student_visible_text": [
+        "三声变调朗读",
+        "请看教材P13的朗读部分。\n跟着老师读，注意三声变化。"
+      ],
+      "textbook_page": "P13",
+      "audio": [
+        "3-8"
+      ],
+      "layout": "single-action",
+      "speaker_notes": "参考音频 3-8。先听，再跟读；教师抽听后让混淆项目重做。",
+      "source_refs": [
+        "canonical-source.json#sections.third_tone_sandhi"
+      ],
+      "source_audio_reference": [
+        "3-8"
+      ]
+    },
+    {
+      "slide_number": 41,
+      "student_visible_text": [
+        "一、不变调",
+        "一　　不",
+        "请看教材 P14 的说明。"
+      ],
+      "textbook_page": "P14",
+      "audio": [],
+      "layout": "tone-change-textbook-entry",
+      "speaker_notes": "不把一、不规则写成抽象讲解；请学生打开教材 P14，教师按教材说明短讲后马上进入 3-9。",
+      "source_refs": [
+        "canonical-source.json#sections.bu_yi"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 42,
+      "student_visible_text": [
+        "一、不练习",
+        "请看教材P14的3-9。\n先标声调，再朗读。"
+      ],
+      "textbook_page": "P14",
+      "audio": [
+        "3-9"
+      ],
+      "layout": "single-action",
+      "speaker_notes": "参考音频 3-9。先完成教材练习，再按行核对；教师只修补实际错误。",
+      "source_refs": [
+        "canonical-source.json#sections.bu_yi"
+      ],
+      "source_audio_reference": [
+        "3-9"
+      ]
+    },
+    {
+      "slide_number": 43,
+      "student_visible_text": [
+        "听辨",
+        "请看教材P14的3-10。\n听后选择正确音节。"
+      ],
+      "textbook_page": "P14",
+      "audio": [
+        "3-10"
+      ],
+      "layout": "single-action",
+      "speaker_notes": "参考音频 3-10。学生先看两个选项的差别，再听、选择、核对。",
+      "source_refs": [
+        "canonical-source.json#sections.syllable_choice"
+      ],
+      "source_audio_reference": [
+        "3-10"
+      ]
+    },
+    {
+      "slide_number": 44,
+      "student_visible_text": [
+        "听音补全",
+        "请看教材P14的3-11。\n听后补全音节，标上声调。"
+      ],
+      "textbook_page": "P14",
+      "audio": [
+        "3-11"
+      ],
+      "layout": "single-action",
+      "speaker_notes": "参考音频 3-11。按教材三组完成并核对；PPT 不显示答案。",
+      "source_refs": [
+        "canonical-source.json#sections.syllable_completion"
+      ],
+      "source_audio_reference": [
+        "3-11"
+      ]
+    },
+    {
+      "slide_number": 45,
+      "student_visible_text": [
+        "小组练习",
+        "请看教材P15的练习四。",
+        "轮流读，其他同学写下来。",
+        "小组一起核对读音和拼写。",
+        "改好后，换人读。",
+        "直到每个人都读过一次。"
+      ],
+      "textbook_page": "P15",
+      "audio": [],
+      "layout": "group-four-steps",
+      "speaker_notes": "不规定小组人数。每人轮流读，其他同学写下来；小组一起核对，改好后换人读。",
+      "source_refs": [
+        "canonical-source.json#sections.syllable_completion",
+        "canonical-source.json#sections.group_read_write"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 46,
+      "student_visible_text": [
+        "日常用语"
+      ],
+      "textbook_page": null,
+      "audio": [],
+      "layout": "section-divider-imagen",
+      "speaker_notes": "进入日常用语。先跟读六句话，再用越南文情景提示说中文。",
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 47,
+      "student_visible_text": [
+        "日常用语",
+        "明白了！",
+        "我听不懂。",
+        "请再说一遍。"
+      ],
+      "textbook_page": "P15",
+      "audio": [
+        "3-12"
+      ],
+      "layout": "daily-phrase-cards-no-pinyin",
+      "speaker_notes": "参考音频 3-12。先完整听，再逐句跟读；学生看到的是汉字，不放拼音。",
+      "source_refs": [
+        "canonical-source.json#sections.daily_phrases"
+      ],
+      "source_audio_reference": [
+        "3-12"
+      ]
+    },
+    {
+      "slide_number": 48,
+      "student_visible_text": [
+        "日常用语",
+        "太贵了！",
+        "便宜（一）点儿吧！",
+        "厕所在哪儿？"
+      ],
+      "textbook_page": "P15",
+      "audio": [
+        "3-12"
+      ],
+      "layout": "daily-phrase-cards-no-pinyin",
+      "speaker_notes": "参考音频 3-12。教师示范语气和场合，学生跟读；学生看到的是汉字，不放拼音。",
+      "source_refs": [
+        "canonical-source.json#sections.daily_phrases"
+      ],
+      "source_audio_reference": [
+        "3-12"
+      ]
+    },
+    {
+      "slide_number": 49,
+      "student_visible_text": [
+        "Nhìn tình huống và nói bằng tiếng Trung.",
+        "Bạn đã hiểu rồi.",
+        "Bạn không hiểu.",
+        "Bạn muốn người kia nói lại."
+      ],
+      "textbook_page": "P15",
+      "audio": [],
+      "layout": "vietnamese-scenario-cards",
+      "speaker_notes": "学生根据越南文情境说出明白了、我听不懂、请再说一遍；先个人说，再和同学交换。",
+      "source_refs": [
+        "canonical-source.json#sections.daily_phrases"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 50,
+      "student_visible_text": [
+        "Nhìn tình huống và nói bằng tiếng Trung.",
+        "Giá quá đắt.",
+        "Bạn muốn mặc cả: rẻ hơn một chút nhé.",
+        "Bạn muốn hỏi nhà vệ sinh ở đâu."
+      ],
+      "textbook_page": "P15",
+      "audio": [],
+      "layout": "vietnamese-scenario-cards",
+      "speaker_notes": "学生根据越南文情境说出太贵了、便宜（一）点儿吧、厕所在哪儿；先个人说，再和同学交换。",
+      "source_refs": [
+        "canonical-source.json#sections.daily_phrases"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 51,
+      "student_visible_text": [
+        "日常用语问答",
+        "请看教材P15的（二）。\n轮流问答，再交换角色。"
+      ],
+      "textbook_page": "P15",
+      "audio": [],
+      "layout": "single-action",
+      "speaker_notes": "完成教材两组问答，再交换角色重做。教师确认每位学生都实际开口，不在学生画面提供唯一答案。",
+      "source_refs": [
+        "canonical-source.json#sections.daily_pair_qa"
+      ],
+      "source_audio_reference": []
+    },
+    {
+      "slide_number": 52,
+      "student_visible_text": [
+        "",
+        "再说一次\n从今天改过的答案中选一个，读给同学听。"
+      ],
+      "textbook_page": "P10–15",
+      "audio": [],
+      "layout": "single-action",
+      "speaker_notes": "课末从今天改过的答案中选一个，读给同学听；同伴对照教材，教师抽听后结束。",
+      "source_refs": [
+        "lessons/boya-elementary-i/lesson-03/10-design/storyboard/lesson-03-逐页文案审阅.md"
+      ],
+      "source_audio_reference": []
+    }
+  ],
+  "notes": "Reversible draft storyboard generated from Adam-approved copy. It is not an authority or release record."
+}

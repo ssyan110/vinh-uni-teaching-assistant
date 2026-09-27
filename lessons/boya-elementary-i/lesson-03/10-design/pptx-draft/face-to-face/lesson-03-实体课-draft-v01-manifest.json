@@ -1,0 +1,71 @@
+{
+  "schema_version": "boya-elementary-pptx-draft-v1",
+  "lesson_key": "boya-elementary-i:lesson-03",
+  "offering_id": "2026-fall",
+  "textbook_id": "boya-elementary-i",
+  "lesson_id": "lesson-03",
+  "title": "拼音和日常用语（三）",
+  "mode": "teacher_face_to_face_only",
+  "artifact_status": "draft_generated_not_approved",
+  "output": "lessons/boya-elementary-i/lesson-03/10-design/pptx-draft/face-to-face/lesson-03-实体课-draft-v01.pptx",
+  "slide_count": 52,
+  "slide_copy_source": "lessons/boya-elementary-i/lesson-03/10-design/storyboard/lesson-03-逐页文案审阅.md",
+  "slide_copy_source_sha256": "47f98bb70c488e840b35440be671e90631ee10dc9f68ac530496468284241b98",
+  "storyboard": "lessons/boya-elementary-i/lesson-03/10-design/storyboard/lesson-03-face-to-face-generated.json",
+  "student_visible_minimum_pt": 23,
+  "textbook_page_marker_policy": "All slides using Boya textbook content carry printed textbook page markers; cover, route, goals and section dividers omit markers.",
+  "audio": {
+    "embedded_tracks": [],
+    "source_tracks": [
+      "3-1",
+      "3-2",
+      "3-3",
+      "3-4",
+      "3-5",
+      "3-6",
+      "3-7",
+      "3-8",
+      "3-9",
+      "3-10",
+      "3-11",
+      "3-12"
+    ],
+    "semantic_status": "pending_teacher_listening",
+    "powerpoint_playback_status": "not_applicable_audio_controls_omitted"
+  },
+  "images": {
+    "embedded_assets": [
+      {
+        "asset_id": "learning-route-imagen",
+        "file": "learning-route-imagen.png",
+        "sha256": "cf26894ac36944f2ae02baeffb6a0e6319e46dca521bb9d6a870feb4cdb44b33"
+      },
+      {
+        "asset_id": "divider-er-imagen",
+        "file": "divider-er-imagen.png",
+        "sha256": "51520fd73cd843953ad0ec2408a363a5b3d32a736f811203c7949f146b6a9359"
+      },
+      {
+        "asset_id": "divider-yw-imagen",
+        "file": "divider-yw-imagen.png",
+        "sha256": "b8890d7b652cabb954f4be7d2aded5c86f2170e2f7532005aab7bca3b8922062"
+      },
+      {
+        "asset_id": "divider-tones-imagen",
+        "file": "divider-tones-imagen.png",
+        "sha256": "a2134c50824aa1d5b1294a9b8dfa01b4b3d3ff14d9b7fb62bc69c9ab4d1b83a8"
+      },
+      {
+        "asset_id": "divider-daily-imagen",
+        "file": "divider-daily-imagen.png",
+        "sha256": "6e08823824e9374bc30cd5d80d9aa0a166671732146ff70da079b3e8c489e6ea"
+      }
+    ]
+  },
+  "open_gates": [
+    "semantic audio listening",
+    "teacher rehearsal",
+    "Adam authority approval"
+  ],
+  "sha256": "2b03bde8416b2a49116ef7e2bb12207a2f753b53e20680e4f95c468198c56e38"
+}

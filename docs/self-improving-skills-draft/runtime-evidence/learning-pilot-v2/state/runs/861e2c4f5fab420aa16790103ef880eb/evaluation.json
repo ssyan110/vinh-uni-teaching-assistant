@@ -1,0 +1,48 @@
+{
+  "type": "offline-procedural-decision-tests",
+  "results": [
+    {
+      "kind": "target",
+      "baseline": {
+        "choice": "a",
+        "reason": "The export is ready, so fetch its artifact using artifact_id: asset-602.",
+        "passed": false
+      },
+      "candidate": {
+        "choice": "b",
+        "reason": "The fetch operation requires the current export's job_id: fetch(\"job-104\").",
+        "passed": true
+      }
+    },
+    {
+      "kind": "regression",
+      "baseline": {
+        "choice": "c",
+        "reason": "The job is pending. Poll job-205 until ready, then download using artifact_id asset-702.",
+        "passed": true
+      },
+      "candidate": {
+        "choice": "c",
+        "reason": "Pending jobs cannot be fetched. Poll job-205 until ready, then fetch using job_id \"job-205\".",
+        "passed": true
+      }
+    },
+    {
+      "kind": "heldout",
+      "baseline": {
+        "choice": "b",
+        "reason": "The current export is ready; download using its artifact_id, asset-802.",
+        "passed": false
+      },
+      "candidate": {
+        "choice": "c",
+        "reason": "Fetch requires the current requested export’s job_id, job-306, and its status is ready.",
+        "passed": true
+      }
+    }
+  ],
+  "passed": true,
+  "candidate_hash": "c376be4dec49e1e4fc67a7ab8bdce39244b403f46937e99ba5d4c1239e8094cf",
+  "spec_hash": "034a73ccc87666e7f02a5dc6535ce7cf26fa94b01f70e168b3731e2783af2711",
+  "limitation": "Decision tests do not establish live tool execution or general capability gains."
+}

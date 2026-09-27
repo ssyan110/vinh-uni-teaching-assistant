@@ -1,0 +1,21 @@
+{
+  "status": "approved",
+  "gate": "lesson-content",
+  "lesson_key": "boya-elementary-i:lesson-01",
+  "offering_id": "2026-fall",
+  "approved_by": "Adam Yan",
+  "approved_at": "2026-09-19T21:24:56+07:00",
+  "scope": "独立第一周零基础破冰投影 draft；不批准或覆盖正式教材 PPTX authority",
+  "artifacts": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-01/00-source/canonical-source.json",
+      "sha256": "c275c8a1128b33d641d075084e0cae920e71fe6b3fe2572521723ccc9887181f"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-01/10-design/storyboard/lesson-01-逐页文案审阅.md",
+      "sha256": "3f86e17ee9d0834cd16b18292793471a4d28586d91c33cead2f169322a9b0919"
+    }
+  ],
+  "evidence": "lessons/boya-elementary-i/lesson-01/10-design/storyboard/lesson-01-content-approval-evidence-2026-09-19.md",
+  "evidence_sha256": "de7a303e34794bd6db5a0bd49dc724299070c6fe2a7c1472eb8c4edf60119d8a"
+}

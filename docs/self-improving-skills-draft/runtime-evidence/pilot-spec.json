@@ -1,0 +1,35 @@
+{
+  "evidence": "Executed codex-cli 0.154.0-alpha.6.2 app-server skills/list with forceReload=true. The installed skill-evolution returned enabled=true with its exact absolute SKILL.md path. quick_validate alone only checked structure. Evidence: runtime-evidence/skills-list.json in this project.",
+  "cases": [
+    {
+      "kind": "target",
+      "prompt": "A new user skill was installed at an absolute path and quick_validate passed. What is the next read-only check that establishes whether this installed Codex runtime discovers it?",
+      "options": {
+        "a": "Call app-server skills/list with cwds and forceReload=true, then inspect the exact path and enabled value.",
+        "b": "Call codex plugin list and infer that a user skill is enabled if its parent folder exists.",
+        "c": "Report the skill is active because quick_validate returned valid."
+      },
+      "expected": "a"
+    },
+    {
+      "kind": "regression",
+      "prompt": "skills/list returns the exact new skill path with enabled=true. The user asks if a new task has actually used its procedure. What can be reported now?",
+      "options": {
+        "a": "All future tasks are guaranteed to use the skill.",
+        "b": "Discovery passed; actual use still needs a task that reads and applies the procedure.",
+        "c": "The enabled flag proves every procedural step passed."
+      },
+      "expected": "b"
+    },
+    {
+      "kind": "heldout",
+      "prompt": "An installed learned skill was modified. An old task still shows its previous description. Which verification preserves honest evidence?",
+      "options": {
+        "a": "Edit the old task transcript so its description matches the file.",
+        "b": "Treat a file hash change as proof that the old task reloaded it.",
+        "c": "Refresh discovery with skills/list forceReload and verify a subsequent relevant task reads the current file; distinguish that from the old task snapshot."
+      },
+      "expected": "c"
+    }
+  ]
+}

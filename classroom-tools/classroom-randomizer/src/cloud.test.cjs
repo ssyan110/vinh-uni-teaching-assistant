@@ -86,6 +86,8 @@ function createHarness({ failAttempts = false, expiredSession = false, failRefre
         }
         if (options.method === "POST") savedAttempts.set(body.client_attempt_id, body);
       }
+      if (!options.method && url.includes("/randomizer_attempts?")) data = recordAttempts;
+      if (!options.method && url.includes("/learning_events?")) data = recordEvents;
       return { ok: true, status: 200, text: async () => JSON.stringify(data) };
     }
   };
@@ -379,4 +381,21 @@ test("closing state queued during an earlier network write survives the first fl
   assert.equal(done.pending, 0);
   assert.ok(harness.paths.at(-1).includes("rpc/finish_randomizer_class"));
   assert.equal(harness.savedAttempts.size, 1);
+});
+
+
+test("student history includes manual records, preserves class date and excludes mirrors and corrections", async () => {
+  const event = { source: "manual_adjustment", record_status: "valid", response_status: "answered", counted_for_summary: true, occurred_at: "2026-09-22T05:04:19Z", class_sessions: { session_date: "2026-09-21" } };
+  const h = createHarness({
+    recordAttempts: [{ client_attempt_id: "withdrawn", record_status: "corrected", outcome: "answered" }, { client_attempt_id: "answer", outcome: "answered", selection_method: "volunteer", randomizer_sessions: { class_sessions: { session_date: "2026-09-20" } } }],
+    recordEvents: [{ ...event, id: "one" }, { ...event, id: "two" }, { ...event, id: "mirror", client_event_id: "withdrawn" }, { ...event, id: "void", record_status: "voided" }, { ...event, id: "excluded", counted_for_summary: false }]
+  });
+  const rows = await h.cloud.fetchStudentRecords("NNTQ1", "TEST");
+  assert.equal(rows.length, 3);
+  assert.equal(rows.filter(row => row.attempt.selectionMethod === "manual").length, 2);
+  assert.equal(rows.find(row => row.attempt.id === "one").entry.session.date, "2026-09-21");
+  assert.ok(h.paths.some(path => path.includes("student_id=eq.student")));
+  await assert.rejects(h.cloud.fetchStudentRecords("NNTQ1", "missing"), /找不到/);
+  const failing = createHarness({ failAttempts: true });
+  await assert.rejects(failing.cloud.fetchStudentRecords("NNTQ1", "TEST"), /offline/);
 });

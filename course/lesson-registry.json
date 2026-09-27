@@ -10,6 +10,19 @@
   },
   "textbooks": [
     {
+      "textbook_id": "boya-elementary-i",
+      "title": "《博雅汉语听说：初级起步篇 I》",
+      "status": "active_source_review",
+      "lesson_count": 25,
+      "lesson_key_prefix": "boya-elementary-i:",
+      "lesson_root": "lessons/boya-elementary-i",
+      "manifest": "textbooks/boya-elementary-i/textbook.json",
+      "source_inventory": "textbooks/boya-elementary-i/source/source-inventory.json",
+      "offering_ids": [
+        "2026-fall"
+      ]
+    },
+    {
       "textbook_id": "boya-intermediate-i",
       "title": "《博雅汉语听说：中级冲刺篇 I》",
       "status": "planned_for_2027_fall",
@@ -25,7 +38,7 @@
     {
       "textbook_id": "boya-quasi-intermediate-i",
       "title": "《博雅汉语听说：准中级加速篇 I》",
-      "status": "active_source_review",
+      "status": "completed_by_adam_2026-09-08",
       "lesson_count": 12,
       "lesson_key_prefix": "boya-quasi-intermediate-i:",
       "lesson_root": "lessons/boya-quasi-intermediate-i",
@@ -33,10 +46,93 @@
       "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
       "offering_ids": [
         "2026-fall"
-      ]
+      ],
+      "completion_record": {
+        "status": "completed_by_adam",
+        "confirmed_by": "Adam",
+        "confirmed_at": "2026-09-08",
+        "scope": "all_12_lessons_sources_finalized_pptx_and_reviews",
+        "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+        "technical_status_preserved": true
+      }
     }
   ],
   "lessons": [
+    {
+      "lesson_key": "boya-elementary-i:lesson-04",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": ["2026-fall"],
+      "textbook_id": "boya-elementary-i",
+      "lesson_id": "lesson-04",
+      "lesson_number": 4,
+      "title": "你叫什么名字",
+      "lesson_path": "lessons/boya-elementary-i/lesson-04",
+      "source_manifest": "lessons/boya-elementary-i/lesson-04/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-elementary-i/source/source-inventory.json",
+      "printed_pages": "16–23",
+      "pdf_page": 27,
+      "audio_count": 10,
+      "status": {"stage": "design_draft_after_content_approval", "source_status": "draft_source_package", "status": "pptx_draft_generated_technical_qa_passed_human_acceptance_pending", "audio_status": "files_missing_playback_pending"}
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-02",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": ["2026-fall"],
+      "textbook_id": "boya-elementary-i",
+      "lesson_id": "lesson-02",
+      "lesson_number": 2,
+      "title": "拼音和日常用语（二）",
+      "lesson_path": "lessons/boya-elementary-i/lesson-02",
+      "source_manifest": null,
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-elementary-i/source/source-inventory.json",
+      "printed_pages": "6–9",
+      "pdf_page": 17,
+      "audio_count": 9,
+      "status": {"stage": "source", "source_status": "intake_in_progress", "status": "content_review_draft_in_progress"}
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-03",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": ["2026-fall"],
+      "textbook_id": "boya-elementary-i",
+      "lesson_id": "lesson-03",
+      "lesson_number": 3,
+      "title": "拼音和日常用语（三）",
+      "lesson_path": "lessons/boya-elementary-i/lesson-03",
+      "source_manifest": "lessons/boya-elementary-i/lesson-03/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-elementary-i/source/source-inventory.json",
+      "printed_pages": "10–15",
+      "pdf_page": 21,
+      "audio_count": 12,
+      "status": {"stage": "source", "source_status": "draft_source_package", "status": "copy_approved_by_adam_2026-09-19_pptx_draft_in_progress"}
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-01",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-elementary-i",
+      "lesson_id": "lesson-01",
+      "lesson_number": 1,
+      "title": "拼音和日常用语（一）",
+      "lesson_path": "lessons/boya-elementary-i/lesson-01",
+      "source_manifest": "lessons/boya-elementary-i/lesson-01/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-elementary-i/source/source-inventory.json",
+      "printed_pages": "1–5",
+      "pdf_page": 12,
+      "audio_count": 9,
+      "status": {
+        "stage": "source",
+        "source_status": "draft_source_package",
+        "source_qa_status": "technical_audio_verified_semantic_and_playback_pending",
+        "status": "copy_approved_by_adam_2026-09-15_pptx_draft_pending"
+      }
+    },
     {
       "lesson_key": "boya-intermediate-i:lesson-01",
       "course_id": "vinh-chinese-listening-speaking",
@@ -252,7 +348,10 @@
         "content_status": "pptx_approved_by_department_chair_2026-08-29",
         "delivery_status": "pptx_only_handoff_pending_full_package",
         "pptx_draft_status": "promoted_to_locked_authority",
-        "release_status": "blocked_pending_full_package"
+        "release_status": "blocked_pending_full_package",
+        "completion_status": "completed_by_adam_2026-09-08",
+        "completion_confirmed_at": "2026-09-08",
+        "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
       }
     },
     {
@@ -282,7 +381,10 @@
           "online",
           "face-to-face"
         ],
-        "release_status": "blocked_pending_full_package"
+        "release_status": "blocked_pending_full_package",
+        "completion_status": "completed_by_adam_2026-09-08",
+        "completion_confirmed_at": "2026-09-08",
+        "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
       }
     },
     {
@@ -312,7 +414,10 @@
           "online",
           "face-to-face"
         ],
-        "release_status": "blocked_pending_full_package"
+        "release_status": "blocked_pending_full_package",
+        "completion_status": "completed_by_adam_2026-09-08",
+        "completion_confirmed_at": "2026-09-08",
+        "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
       }
     },
     {
@@ -342,7 +447,10 @@
           "online",
           "face-to-face"
         ],
-        "release_status": "blocked_pending_full_package"
+        "release_status": "blocked_pending_full_package",
+        "completion_status": "completed_by_adam_2026-09-08",
+        "completion_confirmed_at": "2026-09-08",
+        "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
       }
     },
     {
@@ -368,7 +476,10 @@
         "source_qa_status": "blocked",
         "authority_status": "two_pptx_user_approved_finalized_2026-09-03",
         "pptx_draft_status": "promoted_to_locked_authority",
-        "release_status": "blocked_pending_full_package"
+        "release_status": "blocked_pending_full_package",
+        "completion_status": "completed_by_adam_2026-09-08",
+        "completion_confirmed_at": "2026-09-08",
+        "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
       }
     },
     {
@@ -394,7 +505,10 @@
         "source_qa_status": "technical_audio_passed_semantic_playback_pending",
         "authority_status": "two_pptx_user_approved_finalized_2026-09-01",
         "pptx_draft_status": "promoted_to_locked_authority",
-        "release_status": "blocked_pending_full_package"
+        "release_status": "blocked_pending_full_package",
+        "completion_status": "completed_by_adam_2026-09-08",
+        "completion_confirmed_at": "2026-09-08",
+        "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
       }
     },
     {
@@ -420,7 +534,10 @@
         "source_qa_status": "technical_audio_passed_semantic_playback_pending",
         "authority_status": "two_pptx_user_approved_finalized_2026-09-01",
         "pptx_draft_status": "promoted_to_locked_authority",
-        "release_status": "blocked_pending_full_package"
+        "release_status": "blocked_pending_full_package",
+        "completion_status": "completed_by_adam_2026-09-08",
+        "completion_confirmed_at": "2026-09-08",
+        "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
       }
     },
     {
@@ -446,7 +563,10 @@
         "source_qa_status": "blocked",
         "authority_status": "two_pptx_user_approved_finalized_2026-09-03",
         "pptx_draft_status": "promoted_to_locked_authority",
-        "release_status": "blocked_pending_full_package"
+        "release_status": "blocked_pending_full_package",
+        "completion_status": "completed_by_adam_2026-09-08",
+        "completion_confirmed_at": "2026-09-08",
+        "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
       }
     },
     {
@@ -472,7 +592,10 @@
         "source_qa_status": "technical_audio_passed_semantic_playback_pending",
         "authority_status": "two_pptx_user_approved_finalized_2026-09-03",
         "pptx_draft_status": "promoted_to_locked_authority",
-        "release_status": "blocked_pending_full_package"
+        "release_status": "blocked_pending_full_package",
+        "completion_status": "completed_by_adam_2026-09-08",
+        "completion_confirmed_at": "2026-09-08",
+        "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
       }
     },
     {
@@ -496,7 +619,10 @@
         "stage": "source",
         "source_status": "pending_review",
         "source_qa_status": "technical_audio_passed_semantic_playback_pending",
-        "status": null
+        "status": null,
+        "completion_status": "completed_by_adam_2026-09-08",
+        "completion_confirmed_at": "2026-09-08",
+        "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
       }
     },
     {
@@ -520,7 +646,10 @@
         "stage": "source",
         "source_status": "pending_review",
         "source_qa_status": "blocked",
-        "status": null
+        "status": null,
+        "completion_status": "completed_by_adam_2026-09-08",
+        "completion_confirmed_at": "2026-09-08",
+        "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
       }
     },
     {
@@ -544,7 +673,10 @@
         "stage": "source",
         "source_status": "pending_review",
         "source_qa_status": "blocked",
-        "status": null
+        "status": null,
+        "completion_status": "completed_by_adam_2026-09-08",
+        "completion_confirmed_at": "2026-09-08",
+        "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
       }
     }
   ]

@@ -1,0 +1,22 @@
+{
+  "schema_version": "boya-lesson-audio-manifest-v1",
+  "lesson_id": "lesson-02",
+  "lesson_key": "boya-elementary-i:lesson-02",
+  "textbook_id": "boya-elementary-i",
+  "lesson_title": "拼音和日常用语（二）",
+  "recorded_at": "2026-09-18",
+  "provenance": {"source_type":"publisher_drive_inventory","source_directory":"external-user-source:Google Drive lesson-02 folder","textbook_labels_seen":["2-1","2-2","2-3","2-4","2-5","2-6","2-7","2-8","2-9"],"semantic_status":"pending_teacher_listening","powerpoint_playback_status":"not_applicable_audio_controls_omitted"},
+  "technical_evidence": "source inventory lists 2-1.mp3 through 2-9.mp3; files were not embedded in this classroom-only draft",
+  "tracks": [
+    {"label":"2-1","path":"external-user-source:lesson-02/2-1.mp3","scope":"复韵母（教材 P6）","decode_status":"not_downloaded"},
+    {"label":"2-2","path":"external-user-source:lesson-02/2-2.mp3","scope":"复韵母听辨（教材 P6）","decode_status":"not_downloaded"},
+    {"label":"2-3","path":"external-user-source:lesson-02/2-3.mp3","scope":"复韵母听写（教材 P6）","decode_status":"not_downloaded"},
+    {"label":"2-4","path":"external-user-source:lesson-02/2-4.mp3","scope":"复韵母标调（教材 P6–7）","decode_status":"not_downloaded"},
+    {"label":"2-5","path":"external-user-source:lesson-02/2-5.mp3","scope":"鼻音韵母（教材 P7）","decode_status":"not_downloaded"},
+    {"label":"2-6","path":"external-user-source:lesson-02/2-6.mp3","scope":"鼻音韵母朗读（教材 P7–8）","decode_status":"not_downloaded"},
+    {"label":"2-7","path":"external-user-source:lesson-02/2-7.mp3","scope":"鼻音韵母听辨（教材 P8）","decode_status":"not_downloaded"},
+    {"label":"2-8","path":"external-user-source:lesson-02/2-8.mp3","scope":"鼻音韵母补全（教材 P8）","decode_status":"not_downloaded"},
+    {"label":"2-9","path":"external-user-source:lesson-02/2-9.mp3","scope":"日常用语（教材 P9）","decode_status":"not_downloaded"}
+  ],
+  "status":"source_inventory_only_semantic_and_playback_pending"
+}

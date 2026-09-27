@@ -19,12 +19,14 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
+from legacy_active_config import legacy_path
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((PROJECT_ROOT / "project.config.json").read_text(encoding="utf-8"))
 HISTORICAL_LESSON_KEY = "boya-intermediate-i:lesson-01"
 active_lesson_key = CONFIG.get("active_context", {}).get("lesson_key")
-configured_lesson_root = (PROJECT_ROOT / CONFIG.get("lesson_root", "")).resolve()
+configured_lesson_root = legacy_path("lesson_root", project_root=PROJECT_ROOT, config=CONFIG)
 expected_lesson_root = (PROJECT_ROOT / "lessons/boya-intermediate-i/lesson-01").resolve()
 if active_lesson_key != HISTORICAL_LESSON_KEY or configured_lesson_root != expected_lesson_root:
     raise RuntimeError(

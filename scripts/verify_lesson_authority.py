@@ -13,6 +13,7 @@ from typing import Any
 
 from production_gate import check as check_production_workflow, check_manifest_scope
 from lesson_context import LessonContextError, resolve_lesson_context, _safe_project_path
+from legacy_active_config import legacy_path, legacy_value
 from workflow_integrity import (
     audit_authority_manifest,
     audit_frozen_source_package,
@@ -27,8 +28,8 @@ from workflow_integrity import (
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((PROJECT_ROOT / "project.config.json").read_text(encoding="utf-8"))
-AUTHORITY_ROOT = PROJECT_ROOT / CONFIG["authority_root"]
-RELEASE_ROOT = PROJECT_ROOT / CONFIG["release_root"]
+AUTHORITY_ROOT = legacy_path("authority_root")
+RELEASE_ROOT = legacy_path("release_root")
 MANIFEST_PATH = AUTHORITY_ROOT / "lesson-manifest.json"
 LATEST_PATH = RELEASE_ROOT / "latest-release.json"
 LEGACY_PACKAGE_NAME = "第一课-教学资料"
@@ -292,7 +293,7 @@ def verify(lesson_key: str | None = None, offering_id: str | None = None) -> dic
         PROJECT_ROOT,
         ((manifest.get("source_package") or {}).get("path", "")
          if context and isinstance(manifest.get("source_package"), dict)
-         else "" if context else CONFIG.get("historical_package_evidence", "")),
+         else "" if context else str(legacy_value("historical_package_evidence", "", project_root=PROJECT_ROOT, config=CONFIG))),
         manifest,
     )
     for failure in source_audit["failures"]:

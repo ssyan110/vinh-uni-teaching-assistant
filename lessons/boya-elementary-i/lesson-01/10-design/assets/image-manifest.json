@@ -1,0 +1,132 @@
+{
+  "schema_version": "boya-lesson-image-manifest-v1",
+  "lesson_key": "boya-elementary-i:lesson-01",
+  "textbook_id": "boya-elementary-i",
+  "lesson_id": "lesson-01",
+  "lesson_title": "拼音和日常用语（一）",
+  "generated_at": "2026-09-15",
+  "source_scope": {
+    "pinyin_material": "user_specified_external_pinyin_material",
+    "source_record": "lessons/boya-elementary-i/lesson-01/10-design/assets/pinyin-material-source-record.md",
+    "runtime_policy": "All used image files are copied into this lesson assets directory and embedded into the PPTX. No external path is used at runtime."
+  },
+  "approval_boundary": {
+    "generation_status": "copied_reference_assets_plus_user_requested_imagen_and_user_provided_tone_chart_for_draft",
+    "adam_review_status": "copy_scope_approved_2026-09-15",
+    "can_enter_draft_ppt": true,
+    "can_enter_approved_ppt": false,
+    "license_status": "user-provided local teaching-material reference; independent redistribution rights not verified"
+  },
+  "assets": [
+    {
+      "asset_id": "learning-route-imagen",
+      "file": "learning-route-imagen.png",
+      "use": [
+        "slide 2 learning-flow graphic"
+      ],
+      "source_locator": "openai-imagegen:exec-79204045-1053-4d5f-858a-747576769b19.png",
+      "generation_status": "generated_for_user_requested_slide_02_revision_2026-09-15",
+      "visible_labels": [
+        "Nghe phụ âm",
+        "Đọc nguyên âm và thanh điệu",
+        "Luyện tập",
+        "Chào hỏi bằng tiếng Trung"
+      ],
+      "sha256": "de9b823702cef06945e7adaa335a0af39bb1021e0c11989722d02fd4246cb110"
+    },
+    {
+      "asset_id": "tone-chart-user",
+      "file": "tone-chart-user.png",
+      "use": [
+        "slide 38 tone chart"
+      ],
+      "source_locator": "user-provided:/Users/ssyan110/Downloads/ChatGPT Image Sep 15, 2026, 05_09_55 PM.png",
+      "generation_status": "user_provided_for_user_requested_slide_38_revision_2026-09-15",
+      "visible_labels": [
+        "thanh 1",
+        "thanh 2",
+        "thanh 3",
+        "thanh 4",
+        "thanh nhẹ"
+      ],
+      "sha256": "2afdd82c4f5e28dc733950bac17a1c5d4dce38b117c8d0b68014ab32e6f20ee9"
+    },
+    {
+      "asset_id": "divider-initials-imagen",
+      "file": "divider-initials-imagen.png",
+      "use": [
+        "slide 4 声母 divider"
+      ],
+      "source_locator": "openai-imagegen:exec-f94680dc-bacf-42ba-aeb7-56967da9b855.png",
+      "generation_status": "generated_for_user_requested_divider_refresh_2026-09-15",
+      "visible_labels": [],
+      "sha256": "80c59f014ee87aa4f78bf97e1f105fa52409893a5ab69b6e7a731692db713bb4"
+    },
+    {
+      "asset_id": "divider-finals-imagen",
+      "file": "divider-finals-imagen.png",
+      "use": [
+        "slide 31 韵母 divider"
+      ],
+      "source_locator": "openai-imagegen:exec-9eb2bcbe-07ef-4921-a6de-e61522820fb4.png",
+      "generation_status": "generated_for_user_requested_divider_refresh_2026-09-15",
+      "visible_labels": [],
+      "sha256": "51520fd73cd843953ad0ec2408a363a5b3d32a736f811203c7949f146b6a9359"
+    },
+    {
+      "asset_id": "divider-tones-imagen",
+      "file": "divider-tones-imagen.png",
+      "use": [
+        "slide 38 声调 divider"
+      ],
+      "source_locator": "openai-imagegen:exec-c284d5a5-a56f-439b-8c2c-7f0e922e17b9.png",
+      "generation_status": "generated_for_user_requested_divider_refresh_2026-09-15",
+      "visible_labels": [],
+      "sha256": "a2134c50824aa1d5b1294a9b8dfa01b4b3d3ff14d9b7fb62bc69c9ab4d1b83a8"
+    },
+    {
+      "asset_id": "divider-syllable-imagen",
+      "file": "divider-syllable-imagen.png",
+      "use": [
+        "slide 43 音节听辨和拼写 divider"
+      ],
+      "source_locator": "openai-imagegen:exec-9f513e3a-8d83-47bc-8937-ea8b506061eb.png",
+      "generation_status": "generated_for_user_requested_divider_refresh_2026-09-15",
+      "visible_labels": [],
+      "sha256": "b8890d7b652cabb954f4be7d2aded5c86f2170e2f7532005aab7bca3b8922062"
+    },
+    {
+      "asset_id": "divider-daily-imagen",
+      "file": "divider-daily-imagen.png",
+      "use": [
+        "slide 51 日常用语 divider"
+      ],
+      "source_locator": "openai-imagegen:exec-fe59b8d2-452d-493a-bd30-a53578ceacf1.png",
+      "generation_status": "generated_for_user_requested_divider_refresh_2026-09-15",
+      "visible_labels": [],
+      "sha256": "6e08823824e9374bc30cd5d80d9aa0a166671732146ff70da079b3e8c489e6ea"
+    },
+    {
+      "asset_id": "pinyin-concept-2-crop",
+      "file": "pinyin-concept-2-crop.png",
+      "use": [
+        "slide 26 visual explanation"
+      ],
+      "source_locator": "external-pinyin-reference:pinyin-01/slides/assets/photos/pinyin-concept-2.png",
+      "sha256": "0b1b7e81c4e12cf6b1616e7acfbf709d09212bfdb7185d76bc88ab9e9f1ac735"
+    },
+    {
+      "asset_id": "pinyin-greeting-crop",
+      "file": "pinyin-greeting-crop.png",
+      "use": [
+        "slide 1 cover visual"
+      ],
+      "source_locator": "external-pinyin-reference:pinyin-01/slides/assets/photos/pinyin-concept-1.png",
+      "sha256": "392eeb0d2fc4cb890edc94fdd4aa2f1aee1eb445fa8ad932a42533951378b82d"
+    }
+  ],
+  "pptx_draft": {
+    "path": "lessons/boya-elementary-i/lesson-01/10-design/pptx-draft/face-to-face/lesson-01-实体课-draft-v01.pptx",
+    "embedded": true
+  }
+}

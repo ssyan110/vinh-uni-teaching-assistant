@@ -1,6 +1,7 @@
 """Shared structured blocker normalization for workflow command boundaries."""
 from __future__ import annotations
 
+import re
 from typing import Any
 
 HUMAN_TOKENS = (
@@ -17,25 +18,66 @@ BLOCKER_CODE_RULES = (
     ("artifact_conflict", ("already exists", "duplicate", "collision", "partial")),
 )
 
+BLOCKER_REQUIREMENT_RULES = {
+    "human_gate_required": ["QA-001", "DELIVERY-001"],
+    "identity_mismatch": ["ID-001", "ID-002"],
+    "path_unsafe": ["OPS-001"],
+    "artifact_missing": ["SOURCE-001"],
+    "hash_mismatch": ["AUTH-001"],
+    "schema_invalid": ["QA-001"],
+    "artifact_conflict": ["RELEASE-001", "RELEASE-002"],
+}
 
-def blocker_record(value: Any, *, scope: str = "workflow") -> dict[str, str]:
+
+def blocker_record(value: Any, *, scope: str = "workflow") -> dict[str, Any]:
     if isinstance(value, dict):
+        code = str(value.get("code", "workflow_blocked"))
         return {
-            "code": str(value.get("code", "workflow_blocked")),
+            "code": code,
             "message": str(value.get("message", value.get("detail", "blocker"))),
             "scope": str(value.get("scope", scope)),
+            "requirement_ids": list(value.get("requirement_ids", BLOCKER_REQUIREMENT_RULES.get(code, []))),
         }
     message = str(value)
     lowered = message.lower()
     code = "workflow_blocked"
     for candidate, tokens in BLOCKER_CODE_RULES:
-        if any(token in lowered for token in tokens):
+        if any(re.search(rf"(?<!\\w){re.escape(token)}(?!\\w)", lowered) for token in tokens):
             code = candidate
             break
-    return {"code": code, "message": message, "scope": scope}
+    if code == "workflow_blocked":
+        if "source" in lowered:
+            requirement_ids = ["SOURCE-001"]
+        elif "audio" in lowered or "media" in lowered:
+            requirement_ids = ["MEDIA-001"]
+        elif "qa" in lowered or "quality" in lowered:
+            requirement_ids = ["QA-001"]
+        elif "pbi" in lowered or "teaching-design" in lowered or "teacher manual" in lowered:
+            requirement_ids = ["PBI-001"]
+        elif "authority" in lowered:
+            requirement_ids = ["AUTH-001"]
+        elif "release" in lowered:
+            requirement_ids = ["RELEASE-001"]
+        else:
+            requirement_ids = ["QA-001"]
+    elif code == "artifact_missing":
+        if "qa" in lowered or "quality" in lowered:
+            requirement_ids = ["QA-001"]
+        elif "audio" in lowered or "media" in lowered:
+            requirement_ids = ["MEDIA-001"]
+        elif "authority" in lowered:
+            requirement_ids = ["AUTH-001"]
+        elif "release" in lowered:
+            requirement_ids = ["RELEASE-001"]
+        else:
+            requirement_ids = BLOCKER_REQUIREMENT_RULES[code]
+    else:
+        requirement_ids = BLOCKER_REQUIREMENT_RULES.get(code, [])
+    return {"code": code, "message": message, "scope": scope,
+            "requirement_ids": list(requirement_ids)}
 
 
-def blocker_records(values: list[Any], *, scope: str = "workflow") -> list[dict[str, str]]:
+def blocker_records(values: list[Any], *, scope: str = "workflow") -> list[dict[str, Any]]:
     return [blocker_record(value, scope=scope) for value in values]
 
 

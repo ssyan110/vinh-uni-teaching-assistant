@@ -1,0 +1,10 @@
+{
+  "name": "learned-fixture-check",
+  "baseline_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "spec_hash": "487f1ce6457817a4eb1c5a90c40436cab29d4410aea38aa1a270420f1b934b80",
+  "status": "staged",
+  "created": 1789313823.399086,
+  "rounds": 1,
+  "candidate_hash": "456830d4301e0e9ad2d5e638bb25da0f775f101a95be9bed39b5edd7e89fbd9d",
+  "description": "Verify a fixture download."
+}

@@ -9,14 +9,15 @@ from pathlib import Path
 from typing import Iterable, Sequence
 
 from production_gate import assert_ready
+from legacy_active_config import legacy_path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((PROJECT_ROOT / "project.config.json").read_text(encoding="utf-8"))
 HISTORICAL_LESSON_KEY = "boya-intermediate-i:lesson-01"
 active_lesson_key = CONFIG.get("active_context", {}).get("lesson_key")
+configured_lesson_root = legacy_path("lesson_root", project_root=PROJECT_ROOT, config=CONFIG)
 expected_lesson_root = (PROJECT_ROOT / "lessons/boya-intermediate-i/lesson-01").resolve()
-configured_lesson_root = (PROJECT_ROOT / CONFIG.get("lesson_root", "")).resolve()
 if active_lesson_key != HISTORICAL_LESSON_KEY or configured_lesson_root != expected_lesson_root:
     raise RuntimeError(
         "build_lesson_01_support_materials.py is historical and scoped to "
@@ -24,7 +25,7 @@ if active_lesson_key != HISTORICAL_LESSON_KEY or configured_lesson_root != expec
         f"and lesson_root is {configured_lesson_root}. Use a lesson-key-scoped builder for the current offering."
     )
 DESIGN = json.loads((PROJECT_ROOT / CONFIG["design_system"]).read_text(encoding="utf-8"))
-LESSON_ROOT = PROJECT_ROOT / CONFIG["lesson_root"]
+LESSON_ROOT = legacy_path("lesson_root", project_root=PROJECT_ROOT, config=CONFIG)
 # Generators write drafts only. An approved path must be supplied through the
 # explicit approval/migration workflow, never by a default build command.
 OUTPUT_ROOT = Path(os.environ.get("BOYA_LESSON_DRAFT_ROOT", str(LESSON_ROOT / "10-design" / "support-draft")))

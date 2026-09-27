@@ -212,8 +212,26 @@ def read_page_map(source_path: Path, storyboard_path: Path) -> dict[int, str]:
     missing_refs: list[str] = []
     missing_slide_numbers = 0
 
-    with storyboard_path.open(encoding="utf-8-sig", newline="") as handle:
-        rows = list(csv.DictReader(handle))
+    if storyboard_path.suffix.lower() == ".json":
+        storyboard = json.loads(storyboard_path.read_text(encoding="utf-8-sig"))
+        slide_items = storyboard.get("slides", []) if isinstance(storyboard, dict) else []
+        rows = []
+        for item in slide_items:
+            if not isinstance(item, dict):
+                continue
+            raw_refs = item.get("source_refs") or []
+            if isinstance(raw_refs, list):
+                raw_refs = ";".join(str(ref) for ref in raw_refs)
+            rows.append(
+                {
+                    "slide_number": str(item.get("slide_number", "")),
+                    "source_refs": str(raw_refs),
+                    "source_pages": str(item.get("textbook_page") or ""),
+                }
+            )
+    else:
+        with storyboard_path.open(encoding="utf-8-sig", newline="") as handle:
+            rows = list(csv.DictReader(handle))
 
     for row in rows:
         raw_refs = row.get("source_refs") or row.get("source_ref") or ""
@@ -229,11 +247,11 @@ def read_page_map(source_path: Path, storyboard_path: Path) -> dict[int, str]:
         for ref in refs:
             ref_pages = _pages_for_ref(source, ref)
             if not ref_pages:
-                # Keep the legacy record-id path for older source packages.
-                legacy_match = SOURCE_REF_RE.fullmatch(ref)
-                if legacy_match:
-                    missing_refs.append(ref)
-                else:
+                # A source ref that targets the canonical source (or a legacy
+                # record id) must resolve.  External teaching references such
+                # as the local pinyin HTML/images are intentionally page-less
+                # and should not block page-marker QA.
+                if "#" in ref or ref.endswith(".json") or SOURCE_REF_RE.fullmatch(ref):
                     missing_refs.append(ref)
                 continue
             derived_pages.extend(ref_pages)
@@ -242,11 +260,27 @@ def read_page_map(source_path: Path, storyboard_path: Path) -> dict[int, str]:
         # slide-level page scope than the canonical section-level pages. Use
         # that explicit scope when present, while still resolving every
         # source_ref and rejecting a page that falls outside its source.
-        explicit_pages = _page_numbers(
+        raw_page_scope = (
             row.get("source_pages")
             or row.get("textbook_printed_pages")
             or row.get("printed_pages")
         )
+        explicit_pages = _page_numbers(raw_page_scope)
+        # Preserve an explicit contiguous range such as ``P6–9`` as all
+        # pages in that range.  Without this expansion, the endpoints would
+        # be treated as a non-contiguous list and rendered as ``P6、9``.
+        raw_page_scope_text = str(raw_page_scope or "")
+        range_matches = re.findall(r"(\d+)\s*[–—-]\s*(\d+)", raw_page_scope_text)
+        if range_matches:
+            range_pages: list[int] = []
+            for start_raw, end_raw in range_matches:
+                start, end = int(start_raw), int(end_raw)
+                if start <= end:
+                    range_pages.extend(range(start, end + 1))
+                else:
+                    range_pages.extend(range(end, start + 1))
+            remainder = re.sub(r"\d+\s*[–—-]\s*\d+", "", raw_page_scope_text)
+            explicit_pages = sorted(set(range_pages + _page_numbers(remainder)))
         if explicit_pages:
             if derived_pages and not all(
                 min(derived_pages) <= page <= max(derived_pages)

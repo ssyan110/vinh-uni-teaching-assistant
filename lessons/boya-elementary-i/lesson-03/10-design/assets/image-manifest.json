@@ -1,0 +1,71 @@
+{
+  "schema_version": "boya-lesson-image-manifest-v1",
+  "lesson_key": "boya-elementary-i:lesson-03",
+  "textbook_id": "boya-elementary-i",
+  "lesson_id": "lesson-03",
+  "lesson_title": "拼音和日常用语（三）",
+  "generated_at": "2026-09-19",
+  "approval_boundary": {
+    "generation_status": "generated_or_reused_imagen_rasters_for_draft",
+    "adam_review_status": "copy_approved_2026-09-19",
+    "can_enter_draft_ppt": true,
+    "can_enter_approved_ppt": false,
+    "license_status": "AI-generated or approved project reference raster; final human visual review remains open"
+  },
+  "assets": [
+    {
+      "asset_id": "learning-route-imagen",
+      "file": "learning-route-imagen.png",
+      "use": [
+        "slide 2 Vietnamese learning-flow graphic"
+      ],
+      "source_locator": "openai-imagegen:local-generated-2026-09-19; reference=lesson-02 learning-route template family",
+      "generation_status": "generated_for_lesson_03",
+      "sha256": "cf26894ac36944f2ae02baeffb6a0e6319e46dca521bb9d6a870feb4cdb44b33"
+    },
+    {
+      "asset_id": "divider-er-imagen",
+      "file": "divider-er-imagen.png",
+      "use": [
+        "er and retroflex finals section divider"
+      ],
+      "source_locator": "approved project Imagen raster reference",
+      "generation_status": "available_for_draft",
+      "sha256": "51520fd73cd843953ad0ec2408a363a5b3d32a736f811203c7949f146b6a9359"
+    },
+    {
+      "asset_id": "divider-yw-imagen",
+      "file": "divider-yw-imagen.png",
+      "use": [
+        "y and w rules section divider"
+      ],
+      "source_locator": "approved project Imagen raster reference",
+      "generation_status": "available_for_draft",
+      "sha256": "b8890d7b652cabb954f4be7d2aded5c86f2170e2f7532005aab7bca3b8922062"
+    },
+    {
+      "asset_id": "divider-tones-imagen",
+      "file": "divider-tones-imagen.png",
+      "use": [
+        "tone-change section divider"
+      ],
+      "source_locator": "approved project Imagen raster reference",
+      "generation_status": "available_for_draft",
+      "sha256": "a2134c50824aa1d5b1294a9b8dfa01b4b3d3ff14d9b7fb62bc69c9ab4d1b83a8"
+    },
+    {
+      "asset_id": "divider-daily-imagen",
+      "file": "divider-daily-imagen.png",
+      "use": [
+        "daily language section divider"
+      ],
+      "source_locator": "approved project Imagen raster reference",
+      "generation_status": "available_for_draft",
+      "sha256": "6e08823824e9374bc30cd5d80d9aa0a166671732146ff70da079b3e8c489e6ea"
+    }
+  ],
+  "pptx_draft": {
+    "path": "lessons/boya-elementary-i/lesson-03/10-design/pptx-draft/face-to-face/lesson-03-实体课-draft-v01.pptx",
+    "embedded": true
+  }
+}

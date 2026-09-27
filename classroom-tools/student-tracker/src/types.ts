@@ -96,7 +96,7 @@ export interface Followup {
   completed_at: string | null
 }
 
-export type LearningEventSource = 'class_observation' | 'random_call' | 'voluntary_answer'
+export type LearningEventSource = 'class_observation' | 'random_call' | 'voluntary_answer' | 'manual_adjustment'
 export type ClassroomOpportunityStatus = 'called' | 'volunteered' | 'not_selected' | 'absent' | 'excused' | 'technical_issue'
 export type ClassroomResponseStatus = 'answered' | 'partial' | 'no_response' | 'declined' | 'peer_supported' | 'unobserved'
 export type NoResponseReason = 'unprepared' | 'unclear_prompt' | 'forgot' | 'anxious_unwell' | 'time_insufficient' | 'chose_skip' | 'absent' | 'other'
@@ -126,8 +126,8 @@ export interface ClassroomRecordCorrection {
 export interface LearningEvent {
   rubric_version?: string
   client_event_id?: string
-  textbook_id?: string
-  lesson_id?: string
+  textbook_id?: string | null
+  lesson_id?: string | null
   id: string
   owner_id: string
   course_id: string
@@ -135,7 +135,7 @@ export interface LearningEvent {
   student_id: string
   occurred_at: string
   source: LearningEventSource
-  lesson_label: string
+  lesson_label?: string | null
   activity_label: string
   task_completion: number | null
   comprehensibility: number | null

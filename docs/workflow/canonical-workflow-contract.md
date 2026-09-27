@@ -107,6 +107,32 @@ PPTX rules are not required for workflow, source-inventory, audio, classroom-too
 
 A valid approval identifies the exact `lesson_key`, artifact path, artifact hash, approver, timestamp, gate name, and evidence path. Approval is invalid if the file changes afterward.
 
+### Content approval before production (Adam, 2026-09-19)
+
+For all new lesson images, visual prototypes and PPTX (including drafts), stop
+before production until Adam explicitly approves the lesson's concrete content.
+"Start/continue the workflow", structure approval, exercise-title formatting and
+online/face boundary confirmation authorize preparation, not content approval.
+The later-lesson draft exception relaxes teacher-guide completion only; it never
+waives this prerequisite. Source inspection and review-copy drafting remain allowed.
+
+Store the decision in `10-design/storyboard/<lesson_id>-content-approval.json`:
+`status` must equal `approved`, `gate` must equal `lesson-content`, with exact
+`lesson_key`, `offering_id`, named `approved_by`, timezone-aware `approved_at`,
+`artifacts` containing project-relative `path` and `sha256` for the canonical
+source and `<lesson_id>-逐页文案审阅.md` (and any additional approved inputs),
+plus a separate `evidence` file and `evidence_sha256` containing the user's actual
+explicit decision and the version it refers to. Pending records have no approver
+or approval evidence. Do not write an inferred decision as a user quotation.
+
+Use `production_gate.py --purpose content-approval --lesson-key KEY` before image
+worker dispatch and asset promotion; draft and authority PPTX/prototype gates
+call the same check. Missing, pending, malformed, cross-lesson, unsafe or changed
+records fail closed. Hash validation cannot authenticate a human statement: the
+agent must verify the actual user message, and never manufacture evidence.
+No approval is granted by a passing gate. Finalized-PPTX read-only intake remains
+unchanged; historical decks are not rewritten to satisfy this new prerequisite.
+
 ## Verification baseline
 
 Before completion, run the smallest complete checks for the artifact type plus:

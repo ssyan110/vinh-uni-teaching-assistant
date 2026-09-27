@@ -21,11 +21,12 @@ from docx.shared import Inches, Pt, RGBColor
 from PIL import Image, ImageDraw, ImageFont
 
 from production_gate import assert_ready
+from legacy_active_config import legacy_path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((PROJECT_ROOT / "project.config.json").read_text(encoding="utf-8"))
-LESSON_DIR = PROJECT_ROOT / CONFIG["lesson_root"]
+LESSON_DIR = legacy_path("lesson_root", project_root=PROJECT_ROOT, config=CONFIG)
 LESSON_GUIDE = Path(os.environ.get(
     "BOYA_LESSON_GUIDE_PATH",
     str(LESSON_DIR / "10-design/teacher-manual-draft/lesson-01-teacher-guide.md"),
@@ -944,7 +945,7 @@ def write_manifest() -> None:
 
 def main() -> None:
     active_key = CONFIG.get("active_context", {}).get("lesson_key")
-    configured_root = (PROJECT_ROOT / CONFIG.get("lesson_root", "")).resolve()
+    configured_root = legacy_path("lesson_root", project_root=PROJECT_ROOT, config=CONFIG).resolve()
     if active_key != HISTORICAL_LESSON_KEY or configured_root != EXPECTED_HISTORICAL_LESSON_ROOT:
         raise RuntimeError(
             "build_full_teacher_manual.py is historical and scoped to "

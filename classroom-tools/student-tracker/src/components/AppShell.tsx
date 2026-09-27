@@ -5,7 +5,7 @@ import { Icon } from './Icon'
 const navigation = [
   { to: '/today', label: '班級', mark: 'house' },
   { to: '/students', label: '學生', mark: 'users' },
-  { to: '/participation', label: '回答次數', mark: 'users' },
+  { to: '/participation', label: '回答次數', mark: 'chart-no-axes-combined' },
   { to: '/followups', label: '待辦', mark: 'clipboard-check' },
   { to: '/more', label: '更多', mark: 'settings' },
 ]
@@ -19,7 +19,7 @@ export function AppShell() {
     <div className="app-frame">
       <aside className="sidebar">
         <NavLink to="/today" className="brand" aria-label="荣市大学_学生管理系统首页">
-          <img className="brand-logo" src={`${import.meta.env.BASE_URL}logo.svg`} alt="" />
+          <img className="brand-logo" src={`${import.meta.env.BASE_URL}logo-minimalist.png`} alt="" />
           <span><strong>荣市大学</strong><small>学生管理系统</small></span>
         </NavLink>
         <nav className="side-nav" aria-label="主要導覽">
@@ -38,7 +38,7 @@ export function AppShell() {
 
       <div className="main-column">
         <header className="topbar">
-      <div className="mobile-brand"><img className="brand-logo small" src={`${import.meta.env.BASE_URL}logo.svg`} alt="" /><strong>荣市大学</strong></div>
+      <div className="mobile-brand"><img className="brand-logo small" src={`${import.meta.env.BASE_URL}logo-minimalist.png`} alt="" /><strong>荣市大学</strong></div>
           <div className="save-state" aria-live="polite">
             <span className={busy ? 'state-dot saving' : 'state-dot'} />
             {busy ? '儲存中' : mode === 'demo' ? '範例資料' : refreshing ? '更新中' : refreshError ? '更新失敗' : `更新於 ${lastRefreshed ? new Date(lastRefreshed).toLocaleTimeString('zh-TW', {hour: '2-digit', minute: '2-digit', second: '2-digit'}) : '—'}`}

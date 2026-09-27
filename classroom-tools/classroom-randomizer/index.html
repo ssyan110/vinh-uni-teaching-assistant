@@ -6,20 +6,21 @@
     <meta name="theme-color" content="#17324d">
     <title>华语课堂抽问</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="logo-minimalist.png">
     <link rel="stylesheet" href="icons.css">
   </head>
   <body>
     <main class="app-shell">
       <header class="topbar">
         <div class="brand-lockup">
-          <img class="brand-logo" src="logo.svg" alt="">
+          <img class="brand-logo" src="logo-minimalist.png" alt="">
           <div>
             <p class="eyebrow">荣市大学｜华语听说课</p>
             <h1>华语课堂抽问</h1>
           </div>
         </div>
         <div class="top-actions">
+          <a class="has-icon icon-shuffle button button-secondary current-tool" href="#" aria-current="page">课堂抽问</a>
           <button class="has-icon icon-cloud button button-quiet" id="cloudButton" type="button">连接同步</button>
           <button class="has-icon icon-chart-no-axes-combined button button-quiet" id="recordsButton" type="button">学生课堂记录</button>
           <button class="has-icon icon-history button button-quiet" id="historyButton" type="button">历史课堂</button>
@@ -115,6 +116,7 @@
             <p class="session-meta" id="sessionMeta">—</p>
           </div>
           <div class="session-bar-actions">
+            <button class="has-icon icon-hand button button-primary" id="volunteerPanelButton" type="button" aria-haspopup="dialog" aria-controls="volunteerDialog">记录自愿发言</button>
             <button class="button button-primary" id="endSessionButton" type="button">结束课程</button>
             <button class="has-icon icon-clipboard-check button button-quiet" id="newSessionButton" type="button">开始下一堂</button>
             <button class="has-icon icon-monitor button button-secondary" id="presentationButton" type="button">打开学生画面</button>
@@ -340,6 +342,21 @@
         </footer>
       </section>
     </main>
+
+    <dialog class="dialog volunteer-drawer" id="volunteerDialog" aria-labelledby="volunteerTitle" aria-describedby="volunteerHint">
+      <div class="dialog-heading">
+        <div><p class="section-kicker">本班学生</p><h2 id="volunteerTitle">记录自愿发言</h2></div>
+        <button class="icon-button" id="closeVolunteerButton" type="button" aria-label="关闭自愿发言面板">×</button>
+      </div>
+      <p id="volunteerHint" class="dialog-copy">找到举手的学生，点击「＋1」。当前抽问会保留。</p>
+      <label class="volunteer-search" for="volunteerSearchInput">搜索学号末四位或姓名</label>
+      <input id="volunteerSearchInput" type="search" placeholder="输入学号末四位或姓名" autocomplete="off" autofocus>
+      <div class="volunteer-feedback">
+        <p id="volunteerFeedback" role="status" aria-live="polite">每点一次，记录一次自愿发言。</p>
+        <button class="button button-small button-secondary" id="undoVolunteerButton" type="button" disabled>撤销上一次</button>
+      </div>
+      <div id="volunteerList" class="volunteer-list" aria-label="自愿发言学生名单"></div>
+    </dialog>
 
     <dialog class="dialog" id="helpDialog">
       <div class="dialog-heading">

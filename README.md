@@ -26,6 +26,12 @@ archive/                        # 历史快照，不作为生产输入
 - 来源清单：`textbooks/<textbook_id>/source/source-inventory.json`
 - 逐课生产：`lessons/<textbook_id>/lesson-XX/`
 
+## 投影片製作方式
+
+每份新投影片可選 `native-pptx`（預設）或 `open-slide`。Open Slide framework 以 Git submodule 放在 [`tools/open-slide/`](tools/open-slide/)，來源為 [open-slide/open-slide](https://github.com/open-slide/open-slide)。選用時，請在該課 `10-design/open-slide-draft/` 製作，並明確指定瀏覽器簡報、HTML、PDF 或 PPTX 交付格式；在專用 QA／批准／release 流程建立前，它只算設計草稿。
+
+初次 checkout 後執行 `git submodule update --init tools/open-slide` 取得 framework。每課選擇製作方式不改變教材來源、內容批准或既有 authority gate。
+
 新增教材时，先建立 `textbooks/<textbook_id>/textbook.json` 并登记到 `textbooks/registry.json`，再建立同名的 `lessons/<textbook_id>/`。同一学期使用多本教材时，只需在对应 `course/offerings/<offering_id>/offering.json` 的 `textbooks` 数组中登记，不复制课程根目录。
 
 PDF、MP3 与大型衍生文件保留在本机，不提交 Git；QR、来源清单、下载来源、审核记录与生产 manifest 进入版本控制。

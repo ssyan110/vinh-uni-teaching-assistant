@@ -13,9 +13,13 @@ from __future__ import annotations
 import hashlib
 import json
 import shutil
+import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from legacy_active_config import legacy_path, legacy_value  # noqa: E402
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -27,12 +31,12 @@ def project_path(relative_path: str) -> Path:
     return PROJECT_ROOT / relative_path
 
 
-LESSON_ROOT = project_path(CONFIG["lesson_root"])
-SOURCE_PACKAGE = project_path(CONFIG["historical_package_evidence"])
-AUTHORITY_ROOT = project_path(CONFIG["authority_root"])
-QA_ROOT = project_path(CONFIG["qa_root"])
-RELEASE_ROOT = project_path(CONFIG["release_root"])
-LEGACY_ROOT = project_path(CONFIG["archive_root"]) / "boya-intermediate/lesson-01"
+LESSON_ROOT = legacy_path("lesson_root", project_root=PROJECT_ROOT, config=CONFIG)
+SOURCE_PACKAGE = legacy_path("historical_package_evidence", project_root=PROJECT_ROOT, config=CONFIG)
+AUTHORITY_ROOT = legacy_path("authority_root", project_root=PROJECT_ROOT, config=CONFIG)
+QA_ROOT = legacy_path("qa_root", project_root=PROJECT_ROOT, config=CONFIG)
+RELEASE_ROOT = legacy_path("release_root", project_root=PROJECT_ROOT, config=CONFIG)
+LEGACY_ROOT = legacy_path("archive_root", project_root=PROJECT_ROOT, config=CONFIG) / "boya-intermediate/lesson-01"
 COURSE_ROOT = PROJECT_ROOT / "course"
 
 
@@ -124,7 +128,7 @@ def build_manifest() -> dict[str, Any]:
         "content_status": "final_confirmed_by_adam_2026-08-21",
         "authority_rule": "20-approved is the only editable authority; 40-release is copy-only.",
         "source_package": {
-            "path": CONFIG["historical_package_evidence"],
+            "path": legacy_value("historical_package_evidence", project_root=PROJECT_ROOT, config=CONFIG),
             "status": "historical_evidence",
             "file_count": len(
                 [p for p in SOURCE_PACKAGE.rglob("*") if p.is_file()]

@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="荣市大学2026年秋季大一第一学期《博雅汉语听说·初级起步篇 I》14周课程教学规划。">
+  <title>2026秋季｜初级起步篇 I 整学期教学规划</title>
+  <style>
+    :root {
+      --ink: #20313d;
+      --muted: #5a6b77;
+      --paper: #f6f8f7;
+      --surface: #fff;
+      --line: #d8e1e3;
+      --navy: #17324d;
+      --teal: #2f7068;
+      --teal-soft: #e7f2ef;
+      --coral: #ad594a;
+      --gold-soft: #fbf2dc;
+      --shadow: 0 12px 30px rgba(23, 50, 77, .07);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: KaiTi, "STKaiti", serif;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+    a { color: #245e79; }
+    a:hover { color: var(--coral); }
+    h1, h2, h3 { color: var(--navy); line-height: 1.25; }
+    h1 { font-size: clamp(2rem, 4vw, 3.3rem); margin: 8px 0 14px; letter-spacing: -.025em; }
+    h2 { font-size: clamp(1.45rem, 2.5vw, 2rem); margin: 0 0 10px; }
+    h3 { font-size: 1.15rem; margin: 0 0 7px; }
+    p { margin: 0 0 12px; }
+    .layout { display: grid; grid-template-columns: 240px minmax(0, 1fr); min-height: 100vh; }
+    aside {
+      position: sticky; top: 0; height: 100vh; overflow: auto;
+      padding: 26px 18px; background: var(--navy); color: #eef4f3;
+    }
+    .brand { font-size: 1.08rem; font-weight: 700; margin: 0 0 5px; }
+    .subbrand { color: #c0d2d5; font-size: .92rem; margin-bottom: 24px; }
+    nav a { display: block; color: #e7efee; text-decoration: none; padding: 7px 10px; border-radius: 8px; }
+    nav a:hover, nav a:focus { background: rgba(255,255,255,.12); }
+    .aside-note { border-top: 1px solid rgba(255,255,255,.24); margin-top: 22px; padding-top: 16px; color: #cbd9db; font-size: .91rem; }
+    main { min-width: 0; }
+    .hero { padding: 56px clamp(22px, 5vw, 74px) 35px; background: linear-gradient(130deg, #eaf3f1, #fff 62%, #fbf1eb); border-bottom: 1px solid var(--line); }
+    .eyebrow { color: var(--teal); font-weight: 700; letter-spacing: .08em; }
+    .lede { max-width: 880px; color: #415967; font-size: 1.08rem; }
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .pill { background: #fff; border: 1px solid var(--line); border-radius: 99px; padding: 5px 11px; color: var(--navy); font-size: .91rem; }
+    .content { max-width: 1500px; padding: 30px clamp(18px, 4vw, 62px) 72px; }
+    section { margin: 0 0 48px; scroll-margin-top: 18px; }
+    .section-intro { color: var(--muted); max-width: 920px; margin-bottom: 17px; }
+    .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 23px 0 19px; }
+    .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 13px; padding: 14px 16px; box-shadow: var(--shadow); }
+    .stat strong { display: block; color: var(--navy); font-size: 1.45rem; }
+    .stat span { color: var(--muted); font-size: .92rem; }
+    .callout { padding: 14px 17px; border-left: 4px solid var(--teal); background: var(--teal-soft); border-radius: 0 10px 10px 0; margin: 16px 0; }
+    .callout.pending { border-color: #be8d32; background: var(--gold-soft); }
+    .table-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow); }
+    table { border-collapse: collapse; width: 100%; min-width: 900px; font-size: .96rem; }
+    th, td { padding: 11px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--navy); background: #edf3f3; position: sticky; top: 0; z-index: 1; }
+    tbody tr:last-child td { border-bottom: 0; }
+    tbody tr:nth-child(even) { background: #fbfcfc; }
+    .week { white-space: nowrap; font-weight: 700; color: var(--navy); }
+    .sessions { min-width: 205px; }
+    .session-list { margin: 0; padding-left: 1.1em; }
+    .session-list li + li { margin-top: 4px; }
+    .tag { display: inline-block; white-space: nowrap; border-radius: 99px; background: var(--teal-soft); color: #245e58; padding: 2px 8px; font-size: .86rem; }
+    .two-col { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: 13px; padding: 17px; box-shadow: var(--shadow); }
+    .card ul { margin: 8px 0 0; padding-left: 1.2em; }
+    .card li + li { margin-top: 5px; }
+    .small { color: var(--muted); font-size: .91rem; }
+    footer { padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+      aside { position: static; height: auto; padding: 15px 18px; }
+      .brand { margin-bottom: 2px; }
+      .subbrand, .aside-note { display: none; }
+      nav { display: flex; gap: 5px; overflow-x: auto; padding-top: 8px; }
+      nav a { white-space: nowrap; }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .two-col { grid-template-columns: 1fr; }
+    }
+    @media print {
+      body { background: #fff; font-size: 10.5pt; }
+      .layout { display: block; }
+      aside { display: none; }
+      .hero { padding: 18px 0; background: #fff; }
+      .content { max-width: none; padding: 18px 0; }
+      section { margin-bottom: 25px; break-inside: avoid; }
+      .table-wrap { overflow: visible; box-shadow: none; border-radius: 0; }
+      table { min-width: 0; font-size: 8.5pt; }
+      th, td { padding: 5px; }
+      th { position: static; }
+      .stat, .card { box-shadow: none; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <div class="brand">荣市大学｜课程规划</div>
+      <div class="subbrand">大一第一学期 · 2026秋季</div>
+      <nav aria-label="页面目录">
+        <a href="#overview">规划概览</a>
+        <a href="#calendar">14周进度表</a>
+        <a href="#coverage">25课覆盖表</a>
+        <a href="#approach">教学与评量</a>
+        <a href="#notes">执行说明</a>
+      </nav>
+      <div class="aside-note">适用范围仅为本届大一第一学期，不自动套用到其他班级。</div>
+    </aside>
+    <main>
+      <header class="hero">
+        <div class="eyebrow">BOYA-LS-E1-Y1S1-2026F</div>
+        <h1>《初级起步篇 I》<br>整学期课程教学规划</h1>
+        <p class="lede">以每周四节、每节50分钟安排14周实体课，完成《博雅汉语听说·初级起步篇 I》25课首轮覆盖。课程按学生要完成的沟通结果组织课堂；教材内容逐课安排到输入、任务、复现和个人证据中。</p>
+        <div class="pills">
+          <span class="pill">越南荣市大学</span>
+          <span class="pill">2026-09-21 至 2026-12-27</span>
+          <span class="pill">56节 · 2800分钟</span>
+          <span class="pill">听说为主</span>
+        </div>
+      </header>
+      <div class="content">
+        <section id="overview">
+          <h2>规划概览</h2>
+          <p class="section-intro">这份规划限定于本届大一第一学期和指定教材。25课首轮覆盖是教学进度目标，不代表每位学生已经熟练掌握；实际停课、调课和考试日期以学校通知为准。</p>
+          <div class="stats" aria-label="课程规模">
+            <div class="stat"><strong>14周</strong><span>名义教学周期</span></div>
+            <div class="stat"><strong>56节</strong><span>每周4节实体课</span></div>
+            <div class="stat"><strong>25课</strong><span>教材首轮覆盖目标</span></div>
+            <div class="stat"><strong>200分钟</strong><span>每周实体课，不由线上学习抵扣</span></div>
+          </div>
+          <div class="callout"><strong>当前确认：</strong>Adam已确认第1—6课均已 approved。规划表因此从第7课接续；它不代替课程登记表、课次 manifest 或具体课件的批准记录。</div>
+          <div class="callout pending"><strong>日历边界：</strong>周次日期按本届规划列出。校方正式考试日、停课和补课安排尚未在此确认；发生变动时调整对应周次和分钟预算，不补造已上课记录。</div>
+        </section>
+
+        <section id="calendar">
+          <h2>14周进度表</h2>
+          <p class="section-intro">常规双课周按T1—T4展开：第1节、第2节分别进入新课输入与小任务；第3节完成主任务；第4节改变条件后重做、核对个人表现。每节具体分钟可按学生表现调整，但每节计划合计50分钟。</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>周次／日期</th><th>课次与节次</th><th>四节课的安排重点</th><th>本周任务结果与个人证据</th></tr></thead>
+              <tbody>
+                <tr><td class="week">W01<br>09/21—09/27</td><td>第1—3课；01—04</td><td>保存实际拼音练习、第4课接触和“新生的一天”任务记录；不倒填未记录的逐节进度。</td><td>用实际作品和观察找出需要复现的语音、姓名、时间或参与问题。无证据记“未记录”，不推定达标。</td></tr>
+                <tr><td class="week">W02<br>09/28—10/04</td><td>第4—6课；05—08</td><td><ol class="session-list"><li>个人检查与身份听力，找指定同学。</li><li>听人物介绍、采访同伴、向第三人介绍。</li><li>听物品和归属信息，确认后归还。</li><li>换人名或物品资料重做，个人检查。</li></ol></td><td>找对指定人物、介绍能被辨认、物品交还给正确主人；每人独立听出一条身份或归属信息并完成问答。</td></tr>
+                <tr><td class="week">W03<br>10/05—10/11</td><td>第7—8课；09—12</td><td><ol class="session-list"><li>听住处／位置描述并补地点图。</li><li>听时间与空闲信息，回应邀请。</li><li>交换私有时间和地点资料，商定见面。</li><li>更改一个时间或地点后重新确认。</li></ol></td><td>形成包含人物、可行时间和地点的约定；每人说明自己的限制、提出必要问题并说清最终安排。</td></tr>
+                <tr><td class="week">W04<br>10/12—10/18</td><td>第9—10课；13—16</td><td><ol class="session-list"><li>听交通方式与模拟号码，核实集合点。</li><li>听价格、数量、总价和付款信息。</li><li>按需求和库存完成采购。</li><li>商品缺货或号码更正后更新订单并核账。</li></ol></td><td>买齐规定物品，数量、总价相符并说明交通方式；使用虚构价格和号码，不收集学生真实电话。</td></tr>
+                <tr><td class="week">W05<br>10/19—10/25</td><td>第11—12课；17—20</td><td><ol class="session-list"><li>听模拟天气，判断活动是否合适。</li><li>听同伴正在做什么、在哪里和何时有空。</li><li>交换天气与人员状态，修改原安排。</li><li>根据新消息重做，只改受影响部分。</li></ol></td><td>新安排符合天气和人员条件；每人指出一条新信息及其造成的调整。天气与交通情境均为教学模拟。</td></tr>
+                <tr><td class="week">W06<br>10/26—11/01</td><td>第13—14课；21—24</td><td><ol class="session-list"><li>听商品样子、颜色、质量和价格需要。</li><li>听生日安排，提出或回应建议。</li><li>结合偏好选礼物并排活动顺序。</li><li>预算或商品条件改变后提出替代并重做。</li></ol></td><td>选出符合角色需要的礼物，商定活动顺序并说明取舍；每人描述商品特点或回应一项建议。</td></tr>
+                <tr><td class="week">W07<br>11/02—11/08</td><td>第15课＋阶段检查；25—28</td><td><ol class="session-list"><li>听请求与回应，提出试用、询问或求助。</li><li>试用不合适时询问替代方案并换角色重做。</li><li>阶段检查第1—14课个人表现。</li><li>完成检查、反馈和回顾；第15课不临时纳入正式阶段必考范围。</li></ol></td><td>形成个人请求／回应样本，以及第1—14课的阶段性听力和互动证据；不把小组结果复制为个人表现。</td></tr>
+                <tr><td class="week">W08<br>11/09—11/15</td><td>第16—17课；29—32</td><td><ol class="session-list"><li>听餐食、人数、份量和口味信息。</li><li>听到访路线，再确认招待和饮品需要。</li><li>轮换主人、客人和餐饮服务角色，确认路线与订单。</li><li>路口或餐品变更后澄清并更新安排。</li></ol></td><td>客人找到正确地点，订单符合已知偏好；每人独立听出一条路线或餐饮信息，至少进行一次询问与确认。</td></tr>
+                <tr><td class="week">W09<br>11/16—11/22</td><td>第18—19课；33—36</td><td><ol class="session-list"><li>听作息及以前／现在的习惯并比较。</li><li>听消息、等候、熬夜或迟到经过。</li><li>通过问答重建事件顺序和原因，区分事实与猜测。</li><li>更正一条时间资料，澄清并重新约定。</li></ol></td><td>完成正确事件顺序，说明已知原因并确认下一步；每人说清一个时间关系或原因。</td></tr>
+                <tr><td class="week">W10<br>11/23—11/29</td><td>第20—21课；37—40</td><td><ol class="session-list"><li>听模拟请假／看病问答，核对日期和后续事项。</li><li>听考试组成与时长，说明耽误原因。</li><li>交换日历和活动资料，协商请假与补做。</li><li>时间不可用或活动变长后提出替代并复核。</li></ol></td><td>确认请求回应、日期／时长与补做事项；情境为语言练习，不提供医疗建议，也不要求披露真实健康情况。</td></tr>
+                <tr><td class="week">W11<br>11/30—12/06</td><td>第22—23课；41—44</td><td><ol class="session-list"><li>听课后活动与建议，确认参与者。</li><li>听假期兴趣、停留时间和未定事项。</li><li>比较时间与偏好，选定共同活动。</li><li>人员或时间改变后调整并向另一组说明。</li></ol></td><td>形成可行的共同活动安排，明确已决定和仍要确认的事项；每人提出或回应建议并说明计划状态。</td></tr>
+                <tr><td class="week">W12<br>12/07—12/13</td><td>第24—25课；45—48</td><td><ol class="session-list"><li>根据匿名或虚构样本说明具体表现。</li><li>听准备进度，核对完成与未完成事项。</li><li>交换活动准备资料，找缺口并分配下一步。</li><li>状态改变后更新清单，检查25课首轮覆盖。</li></ol></td><td>每人给出一条有实例的反馈和一项准备结果／待办；未获得输入或个人证据的内容列入W13补强。</td></tr>
+                <tr><td class="week">W13<br>12/14—12/20</td><td>全册补强／缓冲；49—52</td><td><ol class="session-list"><li>定位缺口，短时分层支持和重做检查。</li><li>完成新生服务综合任务，补听说证据。</li><li>组合餐饮、改约、时长与准备核对任务。</li><li>练习评量形式，更新个人与全册覆盖记录。</li></ol></td><td>依实际缺口补强；正常进度时做迁移任务。总计仍为200分钟，不另算第五节，也不重复计算补课和综合任务时数。</td></tr>
+                <tr><td class="week">W14<br>12/21—12/27</td><td>全册评量与回顾；53—56</td><td><ol class="session-list"><li>说明流程、个人听力与独立整理。</li><li>双人即时互动评量（与下一节合计100分钟）。</li><li>完成轮换、记录及必要机动时间。</li><li>共性反馈、改进后重做、个人进步与归档。</li></ol></td><td>每人留下听力、互动和个人简述证据，并根据反馈再做一次。正式校方考试日期与本课程评量安排分别记录。</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="coverage">
+          <h2>25课内容覆盖表</h2>
+          <p class="section-intro">教材范围为课程规划中的内容摘要，用来追踪每课的教学去向，不代替教材原文、正式词表或逐页来源核对。页码均为教材印刷页；斜线后的数字是PDF页码。</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>课次／周次</th><th>教材课名与页码</th><th>本课主要语言／内容</th><th>任务中的用途与可观察结果</th></tr></thead>
+              <tbody>
+                <tr><td class="week">01 · W01</td><td>拼音和日常用语（一）<br>P1—5／PDF 12—16</td><td>声母、单韵母、声调及基本日常应答。</td><td>辨听语音并完成基本应答；为后续听说支持提供个人诊断信息。</td></tr>
+                <tr><td class="week">02 · W01</td><td>拼音和日常用语（二）<br>P6—9／PDF 17—20</td><td>复韵母、鼻韵母、标调及日常用语。</td><td>听取并核对音节；正确读音作为证据之一，不直接等同于交际熟练。</td></tr>
+                <tr><td class="week">03 · W01</td><td>拼音和日常用语（三）<br>P10—15／PDF 21—26</td><td>er、儿化、y／w拼写、变调和求助用语。</td><td>听不懂时能请求重复、放慢或澄清；语音问题在后续交际任务中短复现。</td></tr>
+                <tr><td class="week">04 · W02</td><td>你叫什么名字<br>P16—23／PDF 27—34</td><td>姓名、姓氏、身份；是／不是、吗。</td><td>听信息找到指定同学，并核实身份。</td></tr>
+                <tr><td class="week">05 · W02</td><td>认识你很高兴<br>P24—32／PDF 35—43</td><td>认识与介绍、国籍、同学／同屋关系；呢、的等。</td><td>采访后向第三人介绍同伴，让听者辨认人物和关系。</td></tr>
+                <tr><td class="week">06 · W02</td><td>这是什么<br>P33—41／PDF 44—52</td><td>物品、语言、归属及简单描述与介绍。</td><td>确认失物主人并归还；可将物品描述用于教室或宿舍介绍。</td></tr>
+                <tr><td class="week">07 · W03</td><td>欢迎去我家玩儿<br>P42—49／PDF 53—60</td><td>住处、位置、里外左右、学校与专业等。</td><td>交换位置资料并确定见面地点。</td></tr>
+                <tr><td class="week">08 · W03</td><td>明天晚上你有时间吗<br>P50—57／PDF 61—68</td><td>时间、有空／有事、邀请与约定；两／二等。</td><td>找出共同有空的时段，回应邀请并确认约定。</td></tr>
+                <tr><td class="week">09 · W04</td><td>我们怎么去<br>P58—68／PDF 69—79</td><td>交通方式、号码、联系、集合与位置。</td><td>听准号码和交通信息，确认联系对象与到达方式。</td></tr>
+                <tr><td class="week">10 · W04</td><td>西瓜怎么卖<br>P69—79／PDF 80—90</td><td>价格、数量、量词、总价、付款与追加。</td><td>完成符合需求的采购并口头核账。</td></tr>
+                <tr><td class="week">11 · W05</td><td>明天天气怎么样<br>P80—88／PDF 91—99</td><td>天气、季节、温度、喜好及程度表达。</td><td>根据模拟天气选择或修改活动。</td></tr>
+                <tr><td class="week">12 · W05</td><td>我正在等公共汽车呢<br>P89—98／PDF 100—108；118</td><td>正在做什么、从……到……、每、都及时间安排。</td><td>听同伴状态与时间安排，调整共同计划。</td></tr>
+                <tr><td class="week">13 · W06</td><td>你打算买什么样子的<br>P99—108／PDF 109—117；119</td><td>颜色、样子、质量、价格；有点儿与……一点儿等。</td><td>选出合适或较合适的商品，并说明不足之处。</td></tr>
+                <tr><td class="week">14 · W06</td><td>祝你生日快乐<br>P109—118／PDF 120—129</td><td>祝贺、礼物、活动建议与先后；先、然后等。</td><td>选择礼物并商定生日活动顺序。</td></tr>
+                <tr><td class="week">15 · W07</td><td>我可以试试吗<br>P119—128／PDF 130—139</td><td>请求许可、试用、请假／求助、动词重叠、合适与否。</td><td>提出请求并试用或询问；依据回应作出购买、替代或放弃决定。</td></tr>
+                <tr><td class="week">16 · W08</td><td>来一斤饺子<br>P129—138／PDF 140—149</td><td>点餐、份量、菜品、馅儿、口味与远近。</td><td>了解客人需要，听懂点餐信息并核对餐食订单。</td></tr>
+                <tr><td class="week">17 · W08</td><td>喝茶还是喝咖啡<br>P139—149／PDF 150—160</td><td>待客、选择、会／帮忙、走法、往与路口。</td><td>听懂到访路线，确认饮品与帮助需要，完成招待安排。</td></tr>
+                <tr><td class="week">18 · W09</td><td>今天我七点半就起床了<br>P150—159／PDF 161—170</td><td>起居时间、就／才、以前和现在、习惯与适应。</td><td>比较作息习惯，按时间整理变化。</td></tr>
+                <tr><td class="week">19 · W09</td><td>你又熬夜了<br>P160—169／PDF 171—180</td><td>又／再、熬夜、等候、迟到、原因、道歉与时长。</td><td>查明未回复消息或迟到经过，澄清事实并重新约定。</td></tr>
+                <tr><td class="week">20 · W10</td><td>我想请一天假<br>P170—179／PDF 181—190</td><td>请假、看病情境、能／不能、如果……的话、跟。</td><td>完成模拟请假问答并确认需要补做的事项；不提供医疗建议。</td></tr>
+                <tr><td class="week">21 · W10</td><td>每个人要说多长时间<br>P180—188／PDF 191—199</td><td>时长、考试组成、因为、对……来说、故障与耽误。</td><td>核对口试安排及时长，说明耽误原因并协调。</td></tr>
+                <tr><td class="week">22 · W11</td><td>明天你下了课去哪儿<br>P189—197／PDF 200—208</td><td>课后活动、建议、提醒、事件顺序、快……了等。</td><td>协调共同活动，回应建议并提醒必要事项。</td></tr>
+                <tr><td class="week">23 · W11</td><td>假期有什么打算<br>P198—208／PDF 209—219</td><td>假期计划、旅行与停留、兴趣、未定计划、还是／或者。</td><td>比较选项，区分已决定与仍在考虑的安排。</td></tr>
+                <tr><td class="week">24 · W12</td><td>学得怎么样<br>P209—217／PDF 220—228</td><td>活动与学习表现、照片、记忆、得字补语等。</td><td>依据具体样本说明表现并给出可执行反馈。</td></tr>
+                <tr><td class="week">25 · W12</td><td>准备好了吗<br>P218—226／PDF 229—237</td><td>准备与结果、比赛、充值、聚餐、学期活动及结果表达。</td><td>核对准备结果与未完成事项，确认谁负责下一步。</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="approach">
+          <h2>课堂运行与评量安排</h2>
+          <div class="two-col">
+            <div class="card">
+              <h3>每课使用的学习证据</h3>
+              <ul>
+                <li><strong>听懂：</strong>听出主旨或关键细节，能核对信息，不只看完文字再答题。</li>
+                <li><strong>互动：</strong>提出必要问题、回应、确认或修补理解，完成共同任务结果。</li>
+                <li><strong>个人表达：</strong>每人留下简短口语、个人答复或独立听力结果；小组成果不能代替个人证据。</li>
+                <li><strong>反馈重做：</strong>根据一两项实际问题换条件再做，保留可比较的改进记录。</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>听力与语言支持</h3>
+              <ul>
+                <li>先看题目、抓关键词，再听并记重点，最后回答与核对。</li>
+                <li>先让学生用现有语言完成任务，再针对影响理解或任务完成的问题短讲解，原则上每节不超过5分钟。</li>
+                <li>未预习的学生用3—5分钟关键图词恢复，再回到共同任务。</li>
+                <li>教材录音须逐课核实文件、内容和播放情况；缺音频时可用明确标注的教师原创固定朗读稿替代。</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>按需提供支持与挑战</h3>
+              <ul>
+                <li>所有学生面对同一类任务结果；支持版可用图片、少量拼音和半句提示。</li>
+                <li>需要更多挑战时增加新信息、限制或矛盾点，让学生澄清并调整，不只是多做题。</li>
+                <li>支持按主题和当次表现切换，不按自报等级给学生固定分组。</li>
+                <li>每周重点观察约7人，四周轮换覆盖；人人仍保留简短个人证据。</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>关键检查点</h3>
+              <ul>
+                <li><strong>W01：</strong>记录入门实际表现，不补写不存在的成绩或出勤证据。</li>
+                <li><strong>W07：</strong>用100分钟检查第1—14课个人表现；新学的第15课不临时加入阶段必考范围。</li>
+                <li><strong>W12：</strong>核对25课首轮覆盖。上过教材不等于已取得每位学生的表现证据。</li>
+                <li><strong>W14：</strong>个人听力、双人即时互动、个人简述、反馈后重做并归档。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="callout"><strong>线上准备：</strong>学生在课外自行安排教材阅读、音频预听、词语理解、短文重点记录和个人问题准备。线上学习是额外准备，不设固定分钟数，不计时追踪，也不折抵每周200分钟实体课。</div>
+        </section>
+
+        <section id="notes">
+          <h2>执行说明与来源</h2>
+          <div class="two-col">
+            <div class="card">
+              <h3>排课边界</h3>
+              <ul>
+                <li>本表适用于2026-09-21至2026-12-27的荣市大学大一第一学期，课程为《博雅汉语听说·初级起步篇 I》。</li>
+                <li>14周、56节是本班规划；不改共用 offering 中其他课程的16周／64节安排。</li>
+                <li>W13的200分钟是本课程缓冲，不与补课、综合项目和预演重复计时。</li>
+                <li>正式停课、补课及学校考试日期待校方核实；日期改变后同步调整周次映射。</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>内容与证据边界</h3>
+              <ul>
+                <li>每课的范围文字是规划摘要，不是完整词表、语法目录或逐页核对证明。</li>
+                <li>课堂任务中的地点、价格、天气、号码、健康和假期资料使用虚构情境；不当作真实服务信息。</li>
+                <li>教材覆盖状态、学生个人表现、课件批准和发布状态分别记录，不能互相代替。</li>
+                <li>新课PPT仍须先确认具体逐页文案，再按项目审批与制作流程执行。</li>
+              </ul>
+            </div>
+          </div>
+          <p class="small" style="margin-top:16px">规划依据：<a href="../../../../docs/course-rules/BOYA-LS-E1-Y1S1-2026F/README.md">本班课程规划与第四课起PPT制作规则</a>；<a href="../../../../docs/course-rules/BOYA-LS-E1-Y1S1-2026F/BOYA_Y1S1_2026_TBL_AGENT_SPEC_zh-Hans.md">课程设计来源规格</a>。本页是便于查看和打印的课程规划呈现，不取代以上文件及课次级权威记录。</p>
+        </section>
+        <footer>文件：semester-plan.html · 本届专用规划 · 页面可用浏览器打印或另存为PDF</footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -16,7 +16,7 @@ The project has too many repeated rules, not too few. Workflow V2 establishes:
 5. Separate technical verification from human approval; neither may impersonate the other.
 6. A clear distinction between source truth, design evidence, authority, release, and historical evidence.
 
-This spec is the optimization contract. Existing long documents remain compatibility references until migrated and reduced; they must not introduce new rules that contradict this document.
+This spec is a historical implementation baseline and optional roadmap, not a higher-priority contract. AGENTS.md delegates generic workflow ownership to docs/workflow/canonical-workflow-contract.md and course/material acceptance to PROJECT_REQUIREMENTS.md. Unimplemented roadmap items do not block closure of the bounded optimization task.
 
 ## 2. Current problems found
 
@@ -47,7 +47,7 @@ This spec is the optimization contract. Existing long documents remain compatibi
 | Textbook identity/source inventory | `textbooks/registry.json`, `textbooks/<id>/textbook.json`, `textbooks/<id>/source/` | Link and summarize |
 | Lesson identity/status index | `course/lesson-registry.json` | Read; never duplicate status |
 | Selected lesson context | `scripts/lesson_context.py` + registry + explicit CLI `lesson_key` | Resolve dynamically |
-| Lifecycle/gates/state machine | This spec, then `docs/workflow/canonical-workflow-contract.md` | Link; no restatement |
+| Lifecycle/gates/state machine | `docs/workflow/canonical-workflow-contract.md` | Link; no restatement |
 | Artifact-specific requirements | `.agent/skills/<artifact>/SKILL.md` or `docs/contracts/<artifact>.md` | Link from router |
 | Execution evidence | `.agent/runs/<run-id>/` | Never become authority |
 | Authority | `lessons/<textbook>/<lesson>/20-approved/` + its manifest | Read-only unless explicit approval |

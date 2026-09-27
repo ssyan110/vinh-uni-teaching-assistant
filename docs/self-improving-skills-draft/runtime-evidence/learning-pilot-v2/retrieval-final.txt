@@ -1,0 +1,7 @@
+The skill requires `job_id`, not `artifact_id`:
+
+```text
+fetch(job_id="job-407")
+```
+
+No service was called or files modified.

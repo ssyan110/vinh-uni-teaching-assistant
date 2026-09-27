@@ -16,6 +16,7 @@ from typing import Any
 from production_gate import assert_ready, check as check_release_gate, check_manifest_scope
 from blocker_contract import blocker_records
 from lesson_context import LessonContextError, resolve_lesson_context, _safe_project_path
+from legacy_active_config import legacy_path
 from workflow_integrity import (
     expected_release_entries,
     material_files,
@@ -27,8 +28,8 @@ from workflow_integrity import (
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((PROJECT_ROOT / "project.config.json").read_text(encoding="utf-8"))
-AUTHORITY_ROOT = PROJECT_ROOT / CONFIG["authority_root"]
-RELEASE_ROOT = PROJECT_ROOT / CONFIG["release_root"]
+AUTHORITY_ROOT = legacy_path("authority_root")
+RELEASE_ROOT = legacy_path("release_root")
 MANIFEST_PATH = AUTHORITY_ROOT / "lesson-manifest.json"
 LATEST_PATH = RELEASE_ROOT / "latest-release.json"
 RELEASE_ID_PATTERN = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,79}")

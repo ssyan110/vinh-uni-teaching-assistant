@@ -43,9 +43,9 @@
   const RECORD_STATUS_IDS = Object.freeze(["valid", "corrected", "voided"]);
 
   const CLASS_OPTIONS = Object.freeze([
-    { id: "LT_01", label: "LT_01（27 人）", studentCount: 27 },
-    { id: "LT_02", label: "LT_02（30 人）", studentCount: 30 },
-    { id: "LT_03", label: "LT_03（14 人）", studentCount: 14 },
+    { id: "LT_01", label: "LT_01（26 人）", studentCount: 26 },
+    { id: "LT_02", label: "LT_02（25 人）", studentCount: 25 },
+    { id: "LT_03", label: "LT_03（20 人）", studentCount: 20 },
     { id: "NNTQ1", label: "NNTQ1（大学一年级，28 人）", studentCount: 28 }
   ]);
 
@@ -334,6 +334,15 @@
     });
     next.undoStack = [];
     return next;
+  }
+
+  function findRosterStudents(state, search = "") {
+    const query = String(search).normalize("NFKC").trim().toLocaleLowerCase();
+    return state.roster.filter(student => {
+      const text = `${student.name} ${student.seatNumber || ""} ${student.studentCode || ""}`.normalize("NFKC").toLocaleLowerCase();
+      return !query || text.includes(query)
+        || (/^\d+$/.test(query) && Boolean(student.seatNumber) && Number(student.seatNumber) === Number(query));
+    }).sort((a, b) => String(a.seatNumber || a.studentCode || "").localeCompare(String(b.seatNumber || b.studentCode || ""), undefined, { numeric: true }));
   }
 
   function getStudent(state, studentId) {
@@ -1118,6 +1127,7 @@
     parseCsvRows,
     parseRosterText,
     getStudent,
+    findRosterStudents,
     getEligibleStudents,
     getDrawingPool,
     getSelectablePool,

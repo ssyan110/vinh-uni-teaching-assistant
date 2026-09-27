@@ -1,0 +1,11 @@
+{
+  "name": "learned-fixture-export",
+  "baseline_hash": "1d7e7c6cabf84bf3ac2f24b36d605ef9bfba879b4a7a24443ea76f2208200474",
+  "spec_hash": "034a73ccc87666e7f02a5dc6535ce7cf26fa94b01f70e168b3731e2783af2711",
+  "status": "reverted",
+  "created": 1789314168.2565172,
+  "rounds": 1,
+  "candidate_hash": "c376be4dec49e1e4fc67a7ab8bdce39244b403f46937e99ba5d4c1239e8094cf",
+  "description": "Download exports from the local Aurora fixture API after observing its fetch-key contract.",
+  "evaluation_hash": "55c1759972656889ddf4b8b1c921c67d662309cada6e57669d933a43d4fcded7"
+}

@@ -272,19 +272,12 @@ def _default_gate_runner(project_root: Path, state: dict[str, Any]) -> dict[str,
     if state["gate_stage"] == "draft":
         return check_lesson_ppt_draft(state["lesson_key"], output)
 
-    config = json.loads((project_root / "project.config.json").read_text(encoding="utf-8"))
-    active = config.get("active_context", {})
-    if active.get("lesson_key") != state["lesson_key"]:
-        return {
-            "purpose": state["purpose"],
-            "stage": "authority",
-            "status": "blocked",
-            "output_dir": output,
-            "blockers": [
-                "authority gate is active-context scoped; selected lesson is not active"
-            ],
-        }
-    return check(state["purpose"], output)
+    return check(
+        state["purpose"],
+        output,
+        lesson_key=state["lesson_key"],
+        offering_id=state.get("offering_id"),
+    )
 
 
 def run_preflight(

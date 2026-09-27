@@ -1,0 +1,35 @@
+{
+  "evidence": "Executed the local fixture contract check: fetching by artifact_id failed with Unknown fetch key; fetching by job_id returned the expected exported bytes. This is a synthetic fixture protocol, not a production API. The pending job remained unavailable. See fixture-evidence.json.",
+  "cases": [
+    {
+      "kind": "target",
+      "prompt": "Aurora fixture export returned {\"status\":\"ready\",\"job_id\":\"job-104\",\"artifact_id\":\"asset-602\"}. Choose the fetch request for this export.",
+      "options": {
+        "a": "fetch(\"asset-602\")",
+        "b": "fetch(\"job-104\")",
+        "c": "fetch(\"job-104/asset-602\")"
+      },
+      "expected": "b"
+    },
+    {
+      "kind": "regression",
+      "prompt": "Aurora fixture export returned {\"status\":\"pending\",\"job_id\":\"job-205\",\"artifact_id\":\"asset-702\"}. What happens next?",
+      "options": {
+        "a": "fetch(\"job-205\") immediately",
+        "b": "fetch(\"asset-702\") immediately",
+        "c": "Poll job-205 until ready, then fetch using the documented key."
+      },
+      "expected": "c"
+    },
+    {
+      "kind": "heldout",
+      "prompt": "Two Aurora fixture exports completed. The current requested export is {\"status\":\"ready\",\"job_id\":\"job-306\",\"artifact_id\":\"asset-802\"}; an older export used job-104. Choose the current download request.",
+      "options": {
+        "a": "fetch(\"job-104\")",
+        "b": "fetch(\"asset-802\")",
+        "c": "fetch(\"job-306\")"
+      },
+      "expected": "c"
+    }
+  ]
+}

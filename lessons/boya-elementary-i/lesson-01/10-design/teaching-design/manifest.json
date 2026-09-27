@@ -1,0 +1,28 @@
+{
+  "schema_version": "boya-elementary-teaching-design-v1",
+  "lesson_key": "boya-elementary-i:lesson-01",
+  "textbook_id": "boya-elementary-i",
+  "lesson_id": "lesson-01",
+  "title": "拼音和日常用语（一）",
+  "status": "draft_from_adam_copy_approval",
+  "copy_source": "docs/boya-elementary-i-lesson-01-slide-copy-review-2026-09-15.md",
+  "copy_approval": {
+    "status": "approved_by_adam",
+    "date": "2026-09-15",
+    "scope": "full 52-slide face-to-face copy with specified merges, deletions, group wording, pinyin material additions and 23 pt minimum"
+  },
+  "pbi_alignment": {
+    "interpretive": "听辨声母、韵母、声调和音节",
+    "interpersonal": "小组读写互纠并完成日常用语问答",
+    "presentational": "在简单情景中说出合适的日常用语"
+  },
+  "delivery_mode": "teacher_face_to_face_only",
+  "student_prestudy_deck": "out_of_scope_other_teacher_school_system",
+  "formal_contact_hours": {
+    "periods": [2, 3, 4],
+    "minutes": 150,
+    "date": "2026-09-21",
+    "room": "B3_504"
+  },
+  "approval_state": "pptx_draft_authorized_not_approved"
+}

@@ -37,6 +37,16 @@ class GateContextScopingTests(unittest.TestCase):
             entries.append(entry)
             canonical = lesson / "00-source/canonical-source.json"
             self.write(canonical, {"lesson_key": key})
+            review = lesson / "10-design/storyboard" / f"{lesson_id}-逐页文案审阅.md"
+            approval_evidence = lesson / "10-design/storyboard/content-decision.md"
+            self.write(review, "Synthetic reviewed content; not a real lesson approval")
+            self.write(approval_evidence, "Synthetic explicit user content approval")
+            self.write(lesson / "10-design/storyboard" / f"{lesson_id}-content-approval.json", {
+                "lesson_key": key, "offering_id": "2026-fall", "gate": "lesson-content",
+                "status": "approved", "approved_by": "Adam", "approved_at": "2026-09-19T16:00:00+07:00",
+                "artifacts": [{"path": self.rel(p), "sha256": sha256(p)} for p in (canonical, review)],
+                "evidence": self.rel(approval_evidence), "evidence_sha256": sha256(approval_evidence),
+            })
             self.write(lesson / "00-source/source-manifest.json", {
                 "lesson_key": key, "source_status": "verified", "source_qa_status": "passed",
                 "canonical_source_sha256": sha256(canonical)})
@@ -196,10 +206,11 @@ class GateContextScopingTests(unittest.TestCase):
                 audit.assert_not_called()
                 self.assertIn("configured historical package evidence is missing", result["blockers"])
 
-    def test_legacy_no_key_preserves_active_defaults_and_identity_audit(self):
+    def test_legacy_no_key_cannot_bypass_content_approval(self):
         with mock.patch.object(gate, "audit_lesson_identity") as identity, mock.patch.object(gate, "resolve_lesson_context") as resolver:
             result = gate.check("pptx")
-        self.assertEqual("ready", result["status"], result["blockers"])
+        self.assertEqual("blocked", result["status"])
+        self.assertTrue(any("content approval required" in b for b in result["blockers"]))
         self.assertNotIn("lesson_key", result)
         self.assertEqual(str(gate.DESIGN_ROOT / "pptx-draft"), result["output_dir"])
         identity.assert_called_once()

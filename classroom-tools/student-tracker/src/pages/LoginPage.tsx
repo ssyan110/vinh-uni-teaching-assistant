@@ -26,11 +26,11 @@ export function LoginPage() {
   return (
     <main className="login-page">
       <section className="login-story">
-        <div className="login-brand"><img className="brand-logo large" src={`${import.meta.env.BASE_URL}logo.svg`} alt="" /><span>荣市大学</span></div>
+        <div className="login-brand"><img className="brand-logo large" src={`${import.meta.env.BASE_URL}logo-minimalist.png`} alt="" /><span>荣市大学</span></div>
         <div>
           <p className="eyebrow">教师端</p>
           <h1>荣市大学<br />学生管理系统</h1>
-          <p className="login-lead">用于管理课程、学生、出席和课堂记录。</p>
+          <p className="login-lead">查看班级参与、每次回答表现和学生跟进记录。</p>
         </div>
       </section>
 

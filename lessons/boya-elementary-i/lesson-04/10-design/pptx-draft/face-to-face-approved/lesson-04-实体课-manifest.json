@@ -1,0 +1,25 @@
+{
+  "lesson_key": "boya-elementary-i:lesson-04",
+  "offering_id": "2026-fall",
+  "artifact_status": "draft_after_content_approval_not_human_accepted",
+  "content_approval": "lessons/boya-elementary-i/lesson-04/10-design/storyboard/lesson-04-content-approval.json",
+  "content_approval_sha256": "c4e267217fb43233758e1508ec87b454f9825ed3dbfbb825159855d344690c38",
+  "content_review": "lessons/boya-elementary-i/lesson-04/10-design/storyboard/lesson-04-逐页文案审阅.md",
+  "content_review_sha256": "785c3c5c75278013f264a8a7fb40e88dc01a3bd444875913ad818d97722942e5",
+  "source_sha256": "c7e08f5bdc7761042145d58af583bf6e1d082dcb2c185909387d8bec361bc025",
+  "image_manifest": "lessons/boya-elementary-i/lesson-04/10-design/assets/image-manifest-approved-20260919.json",
+  "image_manifest_sha256": "2a9273e1a2d4a9fdc4f358523f8a1a2a301c910477fcc01b54204e3ca40aaa61",
+  "pptx": "lessons/boya-elementary-i/lesson-04/10-design/pptx-draft/face-to-face-approved/lesson-04-实体课.pptx",
+  "pptx_sha256": "da2e7d493a8647a00ccc25c3e73f836fd81c6a2e0d36f552be68249cb253277f",
+  "pdf_preview": "lessons/boya-elementary-i/lesson-04/10-design/pptx-draft/face-to-face-approved/lesson-04-实体课-powerpoint-预览.pdf",
+  "qa_report": "lessons/boya-elementary-i/lesson-04/10-design/qa-preview-approved-20260919/technical-qa.json",
+  "qa_status": "passed",
+  "audio_embedded": false,
+  "open_gates": [
+    "audio acquisition, semantic verification and playback",
+    "teacher guide completion and approval",
+    "human visual acceptance",
+    "teacher rehearsal",
+    "authority approval and release"
+  ]
+}

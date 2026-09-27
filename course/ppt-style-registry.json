@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "selection_policy": "Before starting each new PPT deck, ask Adam which registered visual style to use unless he already selected one in the current request.",
+  "styles": [
+    {
+      "style_id": "boya-classroom",
+      "display_name": "博雅课堂教材风格",
+      "status": "approved_project_baseline",
+      "profile": "scripts/boya_design_system.json",
+      "scope": "Existing project baseline; apply the course-specific typography and lesson rules."
+    },
+    {
+      "style_id": "openai-education",
+      "display_name": "OpenAI Education",
+      "status": "user-selected-reference-style",
+      "profile": "docs/ppt-styles/openai-education/README.md",
+      "source_reference": "/Users/ssyan110/Desktop/lessons 4, 5, 6.pptx",
+      "editable_reconstruction_draft": "docs/ppt-styles/openai-education/lessons-04-06-native-editable-reference.pptx",
+      "scope": "Project-wide selectable visual style, based on Adam's user-provided final deck."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "boya-elementary-i-image-manifest-v1",
+  "lesson_key": "boya-elementary-i:lesson-02",
+  "textbook_id": "boya-elementary-i",
+  "lesson_id": "lesson-02",
+  "generated_at": "2026-09-18",
+  "approval_boundary": {
+    "generation_status": "generated_after_copy_approval_for_draft",
+    "adam_review_status": "copy_approved_2026-09-18",
+    "can_enter_draft_ppt": true,
+    "can_enter_approved_ppt": false,
+    "license_status": "AI-generated draft assets; final human visual review remains open"
+  },
+  "assets": [
+    {
+      "asset_id": "learning-route-imagen",
+      "file": "learning-route-imagen.png",
+      "use": [
+        "slide 2 Vietnamese learning-flow graphic; same template family as Lesson 1"
+      ],
+      "source_locator": "openai-imagegen:exec-9437ef70-17ac-431b-beeb-663b1066558e.png; reference=lesson-01 learning-route-imagen.png",
+      "generation_status": "generated_2026-09-18_from_lesson-01-template",
+      "sha256": "f6b2ea95f0833e118c4929d480bddba7e909812c8b44928de29ef7e23daf3018"
+    },
+    {
+      "asset_id": "divider-finals-imagen",
+      "file": "divider-finals-imagen.png",
+      "use": [
+        "slide 4 13个复韵母 divider"
+      ],
+      "source_locator": "openai-imagegen:exec-ecaef298-a6f0-4361-b192-12342539fa28.png",
+      "generation_status": "generated_2026-09-18",
+      "sha256": "dc08a40292d51baac54560357b70e46c2d58fb35052c10b04ef12628373d48eb"
+    },
+    {
+      "asset_id": "divider-tones-imagen",
+      "file": "divider-tones-imagen.png",
+      "use": [
+        "slide 20 标调注意事项 divider"
+      ],
+      "source_locator": "openai-imagegen:exec-19168fc8-935b-4537-a72c-fa6351395d7c.png",
+      "generation_status": "generated_2026-09-18",
+      "sha256": "5d38b67a586eef5a61e617eff8e18539c6dc6ffe0fc52b52e6336d6b4fbedd9d"
+    },
+    {
+      "asset_id": "divider-nasals-imagen",
+      "file": "divider-nasals-imagen.png",
+      "use": [
+        "slide 25 16个鼻音韵母 divider"
+      ],
+      "source_locator": "openai-imagegen:exec-8b8da70e-ae5b-4ae4-81ba-3949d765f91a.png",
+      "generation_status": "generated_2026-09-18",
+      "sha256": "6ebbb1c1a6bb15b092b19438a58e2067d10405884aa356ec648a5ffeea682d30"
+    },
+    {
+      "asset_id": "divider-daily-imagen",
+      "file": "divider-daily-imagen.png",
+      "use": [
+        "slide 46 日常用语 divider"
+      ],
+      "source_locator": "openai-imagegen:exec-0b3d023f-e53c-4607-8870-72be3f2a9f60.png",
+      "generation_status": "generated_2026-09-18",
+      "sha256": "a151b8ae6a4d208eef7fcbd7d63d84c50b67b3861a9dc4939ad1bbd8caf96f63"
+    }
+  ],
+  "pptx_draft": {
+    "path": "lessons/boya-elementary-i/lesson-02/10-design/pptx-draft/face-to-face/lesson-02-实体课-draft-v01.pptx",
+    "embedded": true
+  }
+}

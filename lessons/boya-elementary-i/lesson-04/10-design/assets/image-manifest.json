@@ -1,0 +1,160 @@
+{
+  "schema_version": "boya-lesson-image-manifest-v1",
+  "lesson_key": "boya-elementary-i:lesson-04",
+  "run_id": "elementary-l04-20260919",
+  "can_enter_ppt": false,
+  "authorization_status": "blocked_content_not_approved",
+  "authorization_correction": "2026-09-19: images were generated prematurely; worker technical/visual results are retained but do not authorize use or production.",
+  "workers": [
+    {
+      "id": "worker-1",
+      "status": "success",
+      "ai_visual_qa": "passed",
+      "evidence": ".agent/runs/elementary-l04-20260919/staging/worker-1/worker-result.json",
+      "sha256": "b753583d1bffc9a6d487f256a21614703e1befa29f895699d9b2307e4bc208a2"
+    },
+    {
+      "id": "worker-2",
+      "status": "success",
+      "ai_visual_qa": "passed",
+      "evidence": ".agent/runs/elementary-l04-20260919/staging/worker-2/worker-result.json",
+      "sha256": "17f2fde60cb87dc710bbcde9cee3fde4e6c89b0d03da10c4e33e257217c3cc0c"
+    }
+  ],
+  "assets": [
+    {
+      "file": "generated-20260919/cover.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "4eb2e6a69b1c9135ee353fa2455397e7802c24da8e4bbbadb2a7936058bc54a1",
+      "png_decode": "passed",
+      "minimum_edge_768": "passed",
+      "ai_visual_qa": "passed",
+      "visual_qa_notes": "Three distinct young adult classmates greeting at classroom entrance; blank name card; no visible text, logos or watermark. Soft pastel textbook drawing with more mature proportions than reference.",
+      "generation_provenance": {
+        "tool": "image_gen.imagegen",
+        "original_file": "/Users/ssyan110/.codex/generated_images/01a0b8a1-95b2-7771-a57d-9231b6a7b04f/exec-fcabf088-7409-44c8-b412-1eeba431a5e0.png",
+        "prompt_file": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/.agent/runs/elementary-l04-20260919/staging/worker-1/prompts.md",
+        "prompt_section": "cover.png"
+      },
+      "asset_id": "cover",
+      "source_file": ".agent/runs/elementary-l04-20260919/staging/worker-1/cover.png",
+      "license_status": "AI-generated classroom draft; human visual acceptance pending"
+    },
+    {
+      "file": "generated-20260919/words.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "bbc4b2b403111a70df8bc3d44c8900c5e06312ff6f58613d579597c5074fac2b",
+      "png_decode": "passed",
+      "minimum_edge_768": "passed",
+      "ai_visual_qa": "passed",
+      "visual_qa_notes": "Male teacher with blank name card, male and female students holding blank-cover textbooks; no visible text, logos or watermark. Illustrated mature proportions; teacher wears academic jacket and tie.",
+      "generation_provenance": {
+        "tool": "image_gen.imagegen",
+        "original_file": "/Users/ssyan110/.codex/generated_images/01a0b8a1-95b2-7771-a57d-9231b6a7b04f/exec-d17ff6e8-d38f-4c1b-8c00-b981e679ad0b.png",
+        "prompt_file": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/.agent/runs/elementary-l04-20260919/staging/worker-1/prompts.md",
+        "prompt_section": "words.png"
+      },
+      "asset_id": "words",
+      "source_file": ".agent/runs/elementary-l04-20260919/staging/worker-1/words.png",
+      "license_status": "AI-generated classroom draft; human visual acceptance pending"
+    },
+    {
+      "file": "generated-20260919/route.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "a6307956c3af7e01513d4b109bce5f546409edd991b54b45dd0052543d7bb366",
+      "png_decode": "passed",
+      "minimum_edge_768": "passed",
+      "ai_visual_qa": "passed",
+      "visual_qa_notes": "Four evenly spaced mint/yellow/lavender/coral panels; three arrows; all four caption bands empty; requested four scenes present; generous white margins; no letters, numbers or phonetic symbols. Approximately 16:9, provider output 1672x941.",
+      "generation_provenance": {
+        "tool": "image_gen.imagegen",
+        "original_file": "/Users/ssyan110/.codex/generated_images/01a0b8a1-95b2-7771-a57d-9231b6a7b04f/exec-e5cf86c1-d255-479e-82ec-f5e41d21bd8f.png",
+        "prompt_file": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/.agent/runs/elementary-l04-20260919/staging/worker-1/prompts.md",
+        "prompt_section": "route.png"
+      },
+      "asset_id": "route",
+      "source_file": ".agent/runs/elementary-l04-20260919/staging/worker-1/route.png",
+      "license_status": "AI-generated classroom draft; human visual acceptance pending"
+    },
+    {
+      "file": "generated-20260919/sentences.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "7b1f980254319659ad34e586831b69dd415b8c348e7294d3c7724416191e54d2",
+      "png_decode": "passed",
+      "ai_visual_qa": "passed",
+      "visual_qa_notes": "Two young adult classmates with blank badges, empty speech bubbles, asking and self-identification gestures. Soft pastel textbook style; no visible writing.",
+      "generation_provenance": {
+        "tool": "image_gen.imagegen",
+        "intent": "generate",
+        "tool_managed_original": "/Users/ssyan110/.codex/generated_images/01a0b8a1-9625-7383-8ee8-a8333320e3f5/exec-ccc44ecb-313f-40f1-ab2a-705738468e0c.png",
+        "prompt_file": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/.agent/runs/elementary-l04-20260919/staging/worker-2/prompts.md",
+        "prompt_section": "sentences",
+        "reference_role": "Viewed lesson-03 learning-route and divider-daily for style only; no reused pixels",
+        "postprocessing": "none; byte-for-byte copy"
+      },
+      "asset_id": "sentences",
+      "source_file": ".agent/runs/elementary-l04-20260919/staging/worker-2/sentences.png",
+      "license_status": "AI-generated classroom draft; human visual acceptance pending"
+    },
+    {
+      "file": "generated-20260919/listening.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "5dbf0e42ea9260af038e5432a53487645ef00638fc111036982d38172ec5c364",
+      "png_decode": "passed",
+      "ai_visual_qa": "passed",
+      "visual_qa_notes": "Headphone listener with blank notebook and pen; two-person conversation vignette. Clear attentive pose; no visible writing.",
+      "generation_provenance": {
+        "tool": "image_gen.imagegen",
+        "intent": "generate",
+        "tool_managed_original": "/Users/ssyan110/.codex/generated_images/01a0b8a1-9625-7383-8ee8-a8333320e3f5/exec-3920f83e-fbb0-44e4-8fde-99e0d4f5d603.png",
+        "prompt_file": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/.agent/runs/elementary-l04-20260919/staging/worker-2/prompts.md",
+        "prompt_section": "listening",
+        "reference_role": "Viewed lesson-03 learning-route and divider-daily for style only; no reused pixels",
+        "postprocessing": "none; byte-for-byte copy"
+      },
+      "asset_id": "listening",
+      "source_file": ".agent/runs/elementary-l04-20260919/staging/worker-2/listening.png",
+      "license_status": "AI-generated classroom draft; human visual acceptance pending"
+    },
+    {
+      "file": "generated-20260919/communication.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "aacf851d6284291a19a3e73981ee3e11f4d2877b15345860313016f655b1c5fc",
+      "png_decode": "passed",
+      "ai_visual_qa": "passed",
+      "visual_qa_notes": "Five university classmates with blank name cards; foreground introduction and background pair conversation, friendly gestures. No visible writing.",
+      "generation_provenance": {
+        "tool": "image_gen.imagegen",
+        "intent": "generate",
+        "tool_managed_original": "/Users/ssyan110/.codex/generated_images/01a0b8a1-9625-7383-8ee8-a8333320e3f5/exec-b7e7e26a-4684-4b1b-8678-b9c5f28227c2.png",
+        "prompt_file": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/.agent/runs/elementary-l04-20260919/staging/worker-2/prompts.md",
+        "prompt_section": "communication",
+        "reference_role": "Viewed lesson-03 learning-route and divider-daily for style only; no reused pixels",
+        "postprocessing": "none; byte-for-byte copy"
+      },
+      "asset_id": "communication",
+      "source_file": ".agent/runs/elementary-l04-20260919/staging/worker-2/communication.png",
+      "license_status": "AI-generated classroom draft; human visual acceptance pending"
+    }
+  ],
+  "coordinator_visual_qa": "passed",
+  "human_visual_approval": false
+}

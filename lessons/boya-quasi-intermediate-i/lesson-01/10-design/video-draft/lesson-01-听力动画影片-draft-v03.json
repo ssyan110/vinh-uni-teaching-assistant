@@ -1,0 +1,1211 @@
+{
+  "schema_version": "lesson-listening-video-draft-v3",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-01",
+  "offering_id": "2026-fall",
+  "title": "第一课听力动画（稳定画面同步版）",
+  "status": "draft_not_approved",
+  "output": "lessons/boya-quasi-intermediate-i/lesson-01/10-design/video-draft/lesson-01-听力动画影片-draft-v03.mp4",
+  "duration_seconds": 548.039,
+  "resolution": "1280x720",
+  "frame_rate": 24,
+  "sync_policy": "以语音起点和停顿为画面边界；同一大题内画面保持静止，只在大题之间留出空白并播放转场标题。",
+  "motion_policy": "词语、判断、对话、问答和短文卡片均为固定画面；只有大题标题保留短淡入淡出。",
+  "visual_policy": {
+    "true_false": "只显示相关图片，不显示句子文字。",
+    "dialogues": "两个人物，A/B台词与1-3音频中的对话窗口同步。",
+    "sentence_qa": "听到的句子和问题与1-3音频中的问答窗口同步，不显示答案。",
+    "short_texts": "每个短文句子按语音窗口切换，同一位丽丽旁白。"
+  },
+  "source_files": {
+    "source_extraction": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-extraction-draft.json",
+    "canonical_source": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/canonical-source.json",
+    "audio_root": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01"
+  },
+  "observed_audio_mapping": {
+    "1-3": "实际文件含判断、对话、单句问答三段，按时间窗口拆分。",
+    "1-4": "当前本地文件实际听到短文一；用于短文一同步。",
+    "1-5": "当前本地文件实际听到短文二；用于短文二同步。",
+    "1-6": "当前本地文件实际听到短文三；用于短文三同步。",
+    "1-7_1-8": "与短文二、三内容重复的本地恢复音频，本版不重复播放。"
+  },
+  "timeline": [
+    {
+      "section": "1-1-vocabulary-title",
+      "type": "title",
+      "card": "cards/01-title-sync.png",
+      "audio_source": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-1.mp3",
+      "audio_window_seconds": [
+        0.0,
+        17.417
+      ],
+      "duration_seconds": 17.417
+    },
+    {
+      "section": "1-1-vocabulary",
+      "type": "audio_track",
+      "audio_source": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-1.mp3",
+      "audio_window_seconds": [
+        17.417,
+        75.502
+      ],
+      "duration_seconds": 58.085,
+      "segments": [
+        {
+          "card": "cards/01-vocab-sync-01.png",
+          "audio_window_seconds": [
+            17.417,
+            19.213
+          ],
+          "duration_seconds": 1.792,
+          "frame_window": [
+            0,
+            43
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-02.png",
+          "audio_window_seconds": [
+            19.213,
+            21.118
+          ],
+          "duration_seconds": 1.917,
+          "frame_window": [
+            43,
+            89
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-03.png",
+          "audio_window_seconds": [
+            21.118,
+            23.019
+          ],
+          "duration_seconds": 1.875,
+          "frame_window": [
+            89,
+            134
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-04.png",
+          "audio_window_seconds": [
+            23.019,
+            25.033
+          ],
+          "duration_seconds": 2.042,
+          "frame_window": [
+            134,
+            183
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-05.png",
+          "audio_window_seconds": [
+            25.033,
+            26.913
+          ],
+          "duration_seconds": 1.875,
+          "frame_window": [
+            183,
+            228
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-06.png",
+          "audio_window_seconds": [
+            26.913,
+            28.924
+          ],
+          "duration_seconds": 2.0,
+          "frame_window": [
+            228,
+            276
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-07.png",
+          "audio_window_seconds": [
+            28.924,
+            30.79
+          ],
+          "duration_seconds": 1.875,
+          "frame_window": [
+            276,
+            321
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-08.png",
+          "audio_window_seconds": [
+            30.79,
+            32.955
+          ],
+          "duration_seconds": 2.167,
+          "frame_window": [
+            321,
+            373
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-09.png",
+          "audio_window_seconds": [
+            32.955,
+            35.288
+          ],
+          "duration_seconds": 2.333,
+          "frame_window": [
+            373,
+            429
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-10.png",
+          "audio_window_seconds": [
+            35.288,
+            37.725
+          ],
+          "duration_seconds": 2.417,
+          "frame_window": [
+            429,
+            487
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-11.png",
+          "audio_window_seconds": [
+            37.725,
+            39.417
+          ],
+          "duration_seconds": 1.708,
+          "frame_window": [
+            487,
+            528
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-12.png",
+          "audio_window_seconds": [
+            39.417,
+            41.2
+          ],
+          "duration_seconds": 1.792,
+          "frame_window": [
+            528,
+            571
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-13.png",
+          "audio_window_seconds": [
+            41.2,
+            43.129
+          ],
+          "duration_seconds": 1.917,
+          "frame_window": [
+            571,
+            617
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-14.png",
+          "audio_window_seconds": [
+            43.129,
+            44.783
+          ],
+          "duration_seconds": 1.667,
+          "frame_window": [
+            617,
+            657
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-15.png",
+          "audio_window_seconds": [
+            44.783,
+            46.61
+          ],
+          "duration_seconds": 1.833,
+          "frame_window": [
+            657,
+            701
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-16.png",
+          "audio_window_seconds": [
+            46.61,
+            48.68
+          ],
+          "duration_seconds": 2.042,
+          "frame_window": [
+            701,
+            750
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-17.png",
+          "audio_window_seconds": [
+            48.68,
+            50.784
+          ],
+          "duration_seconds": 2.125,
+          "frame_window": [
+            750,
+            801
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-18.png",
+          "audio_window_seconds": [
+            50.784,
+            53.038
+          ],
+          "duration_seconds": 2.25,
+          "frame_window": [
+            801,
+            855
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-19.png",
+          "audio_window_seconds": [
+            53.038,
+            55.427
+          ],
+          "duration_seconds": 2.375,
+          "frame_window": [
+            855,
+            912
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-20.png",
+          "audio_window_seconds": [
+            55.427,
+            57.548
+          ],
+          "duration_seconds": 2.125,
+          "frame_window": [
+            912,
+            963
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-21.png",
+          "audio_window_seconds": [
+            57.548,
+            59.712
+          ],
+          "duration_seconds": 2.167,
+          "frame_window": [
+            963,
+            1015
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-22.png",
+          "audio_window_seconds": [
+            59.712,
+            61.686
+          ],
+          "duration_seconds": 1.958,
+          "frame_window": [
+            1015,
+            1062
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-23.png",
+          "audio_window_seconds": [
+            61.686,
+            64.247
+          ],
+          "duration_seconds": 2.583,
+          "frame_window": [
+            1062,
+            1124
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-24.png",
+          "audio_window_seconds": [
+            64.247,
+            66.098
+          ],
+          "duration_seconds": 1.833,
+          "frame_window": [
+            1124,
+            1168
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-25.png",
+          "audio_window_seconds": [
+            66.098,
+            68.061
+          ],
+          "duration_seconds": 1.958,
+          "frame_window": [
+            1168,
+            1215
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-26.png",
+          "audio_window_seconds": [
+            68.061,
+            70.389
+          ],
+          "duration_seconds": 2.333,
+          "frame_window": [
+            1215,
+            1271
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-27.png",
+          "audio_window_seconds": [
+            70.389,
+            72.863
+          ],
+          "duration_seconds": 2.5,
+          "frame_window": [
+            1271,
+            1331
+          ]
+        },
+        {
+          "card": "cards/01-vocab-sync-28.png",
+          "audio_window_seconds": [
+            72.863,
+            75.502
+          ],
+          "duration_seconds": 2.625,
+          "frame_window": [
+            1331,
+            1394
+          ]
+        }
+      ]
+    },
+    {
+      "section": "1-1-proper-noun-title",
+      "type": "title",
+      "card": "cards/01-proper-title-sync.png",
+      "audio_source": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-1.mp3",
+      "audio_window_seconds": [
+        75.502,
+        77.251
+      ],
+      "duration_seconds": 1.749
+    },
+    {
+      "section": "1-1-proper-nouns",
+      "type": "audio_track",
+      "audio_source": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-1.mp3",
+      "audio_window_seconds": [
+        77.251,
+        82.469
+      ],
+      "duration_seconds": 5.217,
+      "segments": [
+        {
+          "card": "cards/01-proper-01-sync.png",
+          "audio_window_seconds": [
+            77.251,
+            79.205
+          ],
+          "duration_seconds": 1.958,
+          "frame_window": [
+            0,
+            47
+          ]
+        },
+        {
+          "card": "cards/01-proper-02-sync.png",
+          "audio_window_seconds": [
+            79.205,
+            82.469
+          ],
+          "duration_seconds": 3.25,
+          "frame_window": [
+            47,
+            125
+          ]
+        }
+      ]
+    },
+    {
+      "section": "transition-to-1-2",
+      "type": "section_pause",
+      "duration_seconds": 0.75,
+      "visual": "静止浅色空白画面"
+    },
+    {
+      "section": "1-2-title",
+      "type": "title",
+      "card": "cards/02-title-sync.png",
+      "audio_source": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-2.mp3",
+      "audio_window_seconds": [
+        0.0,
+        16.86
+      ],
+      "duration_seconds": 16.86
+    },
+    {
+      "section": "1-2-category",
+      "type": "audio_track",
+      "audio_source": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-2.mp3",
+      "audio_window_seconds": [
+        16.86,
+        51.827
+      ],
+      "duration_seconds": 34.967,
+      "segments": [
+        {
+          "card": "cards/02-category-sync-01.png",
+          "audio_window_seconds": [
+            16.86,
+            27.64
+          ],
+          "duration_seconds": 10.792,
+          "frame_window": [
+            0,
+            259
+          ]
+        },
+        {
+          "card": "cards/02-category-sync-02.png",
+          "audio_window_seconds": [
+            27.64,
+            42.84
+          ],
+          "duration_seconds": 15.208,
+          "frame_window": [
+            259,
+            624
+          ]
+        },
+        {
+          "card": "cards/02-category-sync-03.png",
+          "audio_window_seconds": [
+            42.84,
+            51.827
+          ],
+          "duration_seconds": 8.958,
+          "frame_window": [
+            624,
+            839
+          ]
+        }
+      ]
+    },
+    {
+      "section": "transition-to-1-3-true-false",
+      "type": "section_pause",
+      "duration_seconds": 0.75,
+      "visual": "静止浅色空白画面"
+    },
+    {
+      "section": "1-3-true-false-title",
+      "type": "title",
+      "card": "cards/03-title-sync.png",
+      "audio_source": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-3.mp3",
+      "audio_window_seconds": [
+        0.0,
+        7.2
+      ],
+      "duration_seconds": 7.2
+    },
+    {
+      "section": "1-3-true-false",
+      "type": "audio_track",
+      "audio_source": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-3.mp3",
+      "audio_window_seconds": [
+        7.2,
+        58.86
+      ],
+      "duration_seconds": 51.66,
+      "segments": [
+        {
+          "card": "cards/03-tf-sync-01.png",
+          "audio_window_seconds": [
+            7.2,
+            12.24
+          ],
+          "duration_seconds": 5.042,
+          "frame_window": [
+            0,
+            121
+          ]
+        },
+        {
+          "card": "cards/03-tf-sync-02.png",
+          "audio_window_seconds": [
+            12.24,
+            16.84
+          ],
+          "duration_seconds": 4.583,
+          "frame_window": [
+            121,
+            231
+          ]
+        },
+        {
+          "card": "cards/03-tf-sync-03.png",
+          "audio_window_seconds": [
+            16.84,
+            23.8
+          ],
+          "duration_seconds": 6.958,
+          "frame_window": [
+            231,
+            398
+          ]
+        },
+        {
+          "card": "cards/03-tf-sync-04.png",
+          "audio_window_seconds": [
+            23.8,
+            30.0
+          ],
+          "duration_seconds": 6.208,
+          "frame_window": [
+            398,
+            547
+          ]
+        },
+        {
+          "card": "cards/03-tf-sync-05.png",
+          "audio_window_seconds": [
+            30.0,
+            37.76
+          ],
+          "duration_seconds": 7.75,
+          "frame_window": [
+            547,
+            733
+          ]
+        },
+        {
+          "card": "cards/03-tf-sync-06.png",
+          "audio_window_seconds": [
+            37.76,
+            43.34
+          ],
+          "duration_seconds": 5.583,
+          "frame_window": [
+            733,
+            867
+          ]
+        },
+        {
+          "card": "cards/03-tf-sync-07.png",
+          "audio_window_seconds": [
+            43.34,
+            48.08
+          ],
+          "duration_seconds": 4.75,
+          "frame_window": [
+            867,
+            981
+          ]
+        },
+        {
+          "card": "cards/03-tf-sync-08.png",
+          "audio_window_seconds": [
+            48.08,
+            53.36
+          ],
+          "duration_seconds": 5.292,
+          "frame_window": [
+            981,
+            1108
+          ]
+        },
+        {
+          "card": "cards/03-tf-sync-09.png",
+          "audio_window_seconds": [
+            53.36,
+            58.86
+          ],
+          "duration_seconds": 5.5,
+          "frame_window": [
+            1108,
+            1240
+          ]
+        }
+      ]
+    },
+    {
+      "section": "transition-to-1-3-dialogues",
+      "type": "section_pause",
+      "duration_seconds": 0.75,
+      "visual": "静止浅色空白画面"
+    },
+    {
+      "section": "1-3-dialogues-title",
+      "type": "title",
+      "card": "cards/04-title-sync.png",
+      "audio_source": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-3.mp3",
+      "audio_window_seconds": [
+        58.86,
+        63.84
+      ],
+      "duration_seconds": 4.98
+    },
+    {
+      "section": "1-3-dialogues",
+      "type": "audio_track",
+      "audio_source": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-3.mp3",
+      "audio_window_seconds": [
+        63.84,
+        112.58
+      ],
+      "duration_seconds": 48.74,
+      "segments": [
+        {
+          "card": "cards/04-dialogue-sync-01.png",
+          "audio_window_seconds": [
+            63.84,
+            72.96
+          ],
+          "duration_seconds": 9.125,
+          "frame_window": [
+            0,
+            219
+          ]
+        },
+        {
+          "card": "cards/04-dialogue-sync-02.png",
+          "audio_window_seconds": [
+            72.96,
+            84.02
+          ],
+          "duration_seconds": 11.042,
+          "frame_window": [
+            219,
+            484
+          ]
+        },
+        {
+          "card": "cards/04-dialogue-sync-03.png",
+          "audio_window_seconds": [
+            84.02,
+            94.56
+          ],
+          "duration_seconds": 10.542,
+          "frame_window": [
+            484,
+            737
+          ]
+        },
+        {
+          "card": "cards/04-dialogue-sync-04.png",
+          "audio_window_seconds": [
+            94.56,
+            103.34
+          ],
+          "duration_seconds": 8.792,
+          "frame_window": [
+            737,
+            948
+          ]
+        },
+        {
+          "card": "cards/04-dialogue-sync-05.png",
+          "audio_window_seconds": [
+            103.34,
+            112.58
+          ],
+          "duration_seconds": 9.25,
+          "frame_window": [
+            948,
+            1170
+          ]
+        }
+      ]
+    },
+    {
+      "section": "transition-to-1-3-qa",
+      "type": "section_pause",
+      "duration_seconds": 0.75,
+      "visual": "静止浅色空白画面"
+    },
+    {
+      "section": "1-3-qa-title",
+      "type": "title",
+      "card": "cards/05-title-sync.png",
+      "audio_source": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-3.mp3",
+      "audio_window_seconds": [
+        112.58,
+        116.88
+      ],
+      "duration_seconds": 4.3
+    },
+    {
+      "section": "1-3-qa",
+      "type": "audio_track",
+      "audio_source": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-3.mp3",
+      "audio_window_seconds": [
+        116.88,
+        203.05
+      ],
+      "duration_seconds": 86.17,
+      "segments": [
+        {
+          "card": "cards/05-qa-sync-01.png",
+          "audio_window_seconds": [
+            116.88,
+            127.26
+          ],
+          "duration_seconds": 10.375,
+          "frame_window": [
+            0,
+            249
+          ]
+        },
+        {
+          "card": "cards/05-qa-sync-02.png",
+          "audio_window_seconds": [
+            127.26,
+            137.5
+          ],
+          "duration_seconds": 10.25,
+          "frame_window": [
+            249,
+            495
+          ]
+        },
+        {
+          "card": "cards/05-qa-sync-03.png",
+          "audio_window_seconds": [
+            137.5,
+            148.22
+          ],
+          "duration_seconds": 10.708,
+          "frame_window": [
+            495,
+            752
+          ]
+        },
+        {
+          "card": "cards/05-qa-sync-04.png",
+          "audio_window_seconds": [
+            148.22,
+            161.22
+          ],
+          "duration_seconds": 13.0,
+          "frame_window": [
+            752,
+            1064
+          ]
+        },
+        {
+          "card": "cards/05-qa-sync-05.png",
+          "audio_window_seconds": [
+            161.22,
+            171.36
+          ],
+          "duration_seconds": 10.167,
+          "frame_window": [
+            1064,
+            1308
+          ]
+        },
+        {
+          "card": "cards/05-qa-sync-06.png",
+          "audio_window_seconds": [
+            171.36,
+            181.92
+          ],
+          "duration_seconds": 10.542,
+          "frame_window": [
+            1308,
+            1561
+          ]
+        },
+        {
+          "card": "cards/05-qa-sync-07.png",
+          "audio_window_seconds": [
+            181.92,
+            191.1
+          ],
+          "duration_seconds": 9.167,
+          "frame_window": [
+            1561,
+            1781
+          ]
+        },
+        {
+          "card": "cards/05-qa-sync-08.png",
+          "audio_window_seconds": [
+            191.1,
+            203.05
+          ],
+          "duration_seconds": 11.958,
+          "frame_window": [
+            1781,
+            2068
+          ]
+        }
+      ]
+    },
+    {
+      "section": "transition-to-short_text_1",
+      "type": "section_pause",
+      "duration_seconds": 0.75,
+      "visual": "静止浅色空白画面"
+    },
+    {
+      "section": "1-4-short-text-title",
+      "type": "title",
+      "card": "cards/1-4-title-sync.png",
+      "audio_source": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-4.mp3",
+      "audio_window_seconds": [
+        0.0,
+        8.66
+      ],
+      "duration_seconds": 8.66
+    },
+    {
+      "section": "1-4-short-text",
+      "type": "audio_track",
+      "audio_source": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-4.mp3",
+      "audio_window_seconds": [
+        8.66,
+        76.878
+      ],
+      "duration_seconds": 68.218,
+      "segments": [
+        {
+          "card": "cards/1-4-narration-sync-01.png",
+          "audio_window_seconds": [
+            8.66,
+            16.96
+          ],
+          "duration_seconds": 8.292,
+          "frame_window": [
+            0,
+            199
+          ]
+        },
+        {
+          "card": "cards/1-4-narration-sync-02.png",
+          "audio_window_seconds": [
+            16.96,
+            21.84
+          ],
+          "duration_seconds": 4.875,
+          "frame_window": [
+            199,
+            316
+          ]
+        },
+        {
+          "card": "cards/1-4-narration-sync-03.png",
+          "audio_window_seconds": [
+            21.84,
+            30.28
+          ],
+          "duration_seconds": 8.458,
+          "frame_window": [
+            316,
+            519
+          ]
+        },
+        {
+          "card": "cards/1-4-narration-sync-04.png",
+          "audio_window_seconds": [
+            30.28,
+            37.68
+          ],
+          "duration_seconds": 7.375,
+          "frame_window": [
+            519,
+            696
+          ]
+        },
+        {
+          "card": "cards/1-4-narration-sync-05.png",
+          "audio_window_seconds": [
+            37.68,
+            51.6
+          ],
+          "duration_seconds": 13.958,
+          "frame_window": [
+            696,
+            1031
+          ]
+        },
+        {
+          "card": "cards/1-4-narration-sync-06.png",
+          "audio_window_seconds": [
+            51.6,
+            61.32
+          ],
+          "duration_seconds": 9.708,
+          "frame_window": [
+            1031,
+            1264
+          ]
+        },
+        {
+          "card": "cards/1-4-narration-sync-07.png",
+          "audio_window_seconds": [
+            61.32,
+            76.878
+          ],
+          "duration_seconds": 15.542,
+          "frame_window": [
+            1264,
+            1637
+          ]
+        }
+      ]
+    },
+    {
+      "section": "transition-to-short_text_2",
+      "type": "section_pause",
+      "duration_seconds": 0.75,
+      "visual": "静止浅色空白画面"
+    },
+    {
+      "section": "1-5-short-text-title",
+      "type": "title",
+      "card": "cards/1-5-title-sync.png",
+      "audio_source": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-5.mp3",
+      "audio_window_seconds": [
+        0.0,
+        5.36
+      ],
+      "duration_seconds": 5.36
+    },
+    {
+      "section": "1-5-short-text",
+      "type": "audio_track",
+      "audio_source": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-5.mp3",
+      "audio_window_seconds": [
+        5.36,
+        53.185
+      ],
+      "duration_seconds": 47.825,
+      "segments": [
+        {
+          "card": "cards/1-5-narration-sync-01.png",
+          "audio_window_seconds": [
+            5.36,
+            9.74
+          ],
+          "duration_seconds": 4.375,
+          "frame_window": [
+            0,
+            105
+          ]
+        },
+        {
+          "card": "cards/1-5-narration-sync-02.png",
+          "audio_window_seconds": [
+            9.74,
+            20.34
+          ],
+          "duration_seconds": 10.625,
+          "frame_window": [
+            105,
+            360
+          ]
+        },
+        {
+          "card": "cards/1-5-narration-sync-03.png",
+          "audio_window_seconds": [
+            20.34,
+            30.44
+          ],
+          "duration_seconds": 10.083,
+          "frame_window": [
+            360,
+            602
+          ]
+        },
+        {
+          "card": "cards/1-5-narration-sync-04.png",
+          "audio_window_seconds": [
+            30.44,
+            39.08
+          ],
+          "duration_seconds": 8.625,
+          "frame_window": [
+            602,
+            809
+          ]
+        },
+        {
+          "card": "cards/1-5-narration-sync-05.png",
+          "audio_window_seconds": [
+            39.08,
+            53.185
+          ],
+          "duration_seconds": 14.125,
+          "frame_window": [
+            809,
+            1148
+          ]
+        }
+      ]
+    },
+    {
+      "section": "transition-to-short_text_3",
+      "type": "section_pause",
+      "duration_seconds": 0.75,
+      "visual": "静止浅色空白画面"
+    },
+    {
+      "section": "1-6-short-text-title",
+      "type": "title",
+      "card": "cards/1-6-title-sync.png",
+      "audio_source": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-6.mp3",
+      "audio_window_seconds": [
+        0.0,
+        5.06
+      ],
+      "duration_seconds": 5.06
+    },
+    {
+      "section": "1-6-short-text",
+      "type": "audio_track",
+      "audio_source": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-6.mp3",
+      "audio_window_seconds": [
+        5.06,
+        72.359
+      ],
+      "duration_seconds": 67.299,
+      "segments": [
+        {
+          "card": "cards/1-6-narration-sync-01.png",
+          "audio_window_seconds": [
+            5.06,
+            13.1
+          ],
+          "duration_seconds": 8.042,
+          "frame_window": [
+            0,
+            193
+          ]
+        },
+        {
+          "card": "cards/1-6-narration-sync-02.png",
+          "audio_window_seconds": [
+            13.1,
+            19.2
+          ],
+          "duration_seconds": 6.083,
+          "frame_window": [
+            193,
+            339
+          ]
+        },
+        {
+          "card": "cards/1-6-narration-sync-03.png",
+          "audio_window_seconds": [
+            19.2,
+            24.48
+          ],
+          "duration_seconds": 5.292,
+          "frame_window": [
+            339,
+            466
+          ]
+        },
+        {
+          "card": "cards/1-6-narration-sync-04.png",
+          "audio_window_seconds": [
+            24.48,
+            33.12
+          ],
+          "duration_seconds": 8.625,
+          "frame_window": [
+            466,
+            673
+          ]
+        },
+        {
+          "card": "cards/1-6-narration-sync-05.png",
+          "audio_window_seconds": [
+            33.12,
+            40.84
+          ],
+          "duration_seconds": 7.75,
+          "frame_window": [
+            673,
+            859
+          ]
+        },
+        {
+          "card": "cards/1-6-narration-sync-06.png",
+          "audio_window_seconds": [
+            40.84,
+            48.14
+          ],
+          "duration_seconds": 7.292,
+          "frame_window": [
+            859,
+            1034
+          ]
+        },
+        {
+          "card": "cards/1-6-narration-sync-07.png",
+          "audio_window_seconds": [
+            48.14,
+            58.46
+          ],
+          "duration_seconds": 10.333,
+          "frame_window": [
+            1034,
+            1282
+          ]
+        },
+        {
+          "card": "cards/1-6-narration-sync-08.png",
+          "audio_window_seconds": [
+            58.46,
+            66.9
+          ],
+          "duration_seconds": 8.417,
+          "frame_window": [
+            1282,
+            1484
+          ]
+        },
+        {
+          "card": "cards/1-6-narration-sync-09.png",
+          "audio_window_seconds": [
+            66.9,
+            72.359
+          ],
+          "duration_seconds": 5.458,
+          "frame_window": [
+            1484,
+            1615
+          ]
+        }
+      ]
+    },
+    {
+      "section": "end",
+      "type": "silent_title",
+      "card": "cards/99-end-sync.png",
+      "duration_seconds": 3.0
+    }
+  ],
+  "unresolved_source_differences": [
+    "1-1实际词语录音未清楚出现结构化来源中的‘越来越’，因此未把该卡覆盖到别的词语音频上。",
+    "出版社音频编号与当前落地文件的语义对应仍需教师听核；本版以实际声音内容同步画面。"
+  ],
+  "checks": {
+    "file_exists": true,
+    "sha256": "e4d3fa119bb2adf3bb1448989b08e4c720c2e503a0f31b57a164f4fa7982c05d",
+    "audio_semantic_review": "pending_teacher_listening",
+    "publisher_mapping": "pending",
+    "visual_timing_review": "passed_by_measured_audio_boundaries"
+  }
+}

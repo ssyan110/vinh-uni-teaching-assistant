@@ -14,13 +14,13 @@
 
 1. Adam 在當前對話中的最新明確決定
 2. 本 `AGENTS.md`
-3. `PROJECT_REQUIREMENTS.md`
-4. `.agent/skills/boya-lesson-production/SKILL.md`
-5. `memory/project-memory.md`
-6. 教材來源與結構化資料
-7. 舊的輸出、舊聊天內容與 legacy script
+3. `docs/workflow/canonical-workflow-contract.md`：通用 lifecycle、identity、gate、artifact state 與 output safety；`PROJECT_REQUIREMENTS.md`：課程與教材驗收要求。
+4. Task-specific skills 與 references：操作方法，不另訂 workflow 權威。
+5. 教材來源與結構化資料：依任務 intake 與下方 finalized 規則選定內容來源。
 
-若舊輸出與來源資料或使用者最新決定衝突，舊輸出不得作為規格。
+`memory/project-memory.md` 只提供 durable context，不是批准、交付或規則衝突的裁決來源。舊輸出、舊聊天與 legacy scripts 不列入現行規格權威；已確認過時的指引直接移除，不再沿用。
+
+本文件的 Adam-specific 安全決策與 finalized intake 例外仍優先。Roadmap 不是已實作功能，也不是自動追加的工作清單。
 
 ### Finalized PPTX 優先規則（Adam 確認，2026-09-04）
 
@@ -100,8 +100,13 @@
 
 ### PPT draft 啟動規則（Adam 確認，2026-08-29）
 
+**2026-09-19 更正（優先於下方舊 draft 例外）：**「開始製作流程」「繼續本課」、架構／練習標題確認、線上／實體邊界確認都不是逐頁內容批准。先提交本課逐頁文案（學生可見文字、教材頁碼、教師提示、分流及待決項），取得 Adam 對具體版本的明確批准，才可生成任何本課圖片、視覺 prototype 或 PPTX，含 draft。未批准時只能做來源核對、內容審閱稿及流程修正；停止在內容審閱，不自填批准。
+
+- 新生成前執行 `python3 scripts/production_gate.py --purpose content-approval --lesson-key <textbook_id>:<lesson_id> --offering-id <offering_id>`；圖片 worker 派發前和素材納入前都必須通過。PPTX draft／完整生成及 prototype 的共用 gate 同樣核對此批准。
+- 批准記錄為本課 `10-design/storyboard/<lesson_id>-content-approval.json`，綁定 canonical source、`<lesson_id>-逐页文案审阅.md` 等實際批准輸入及 SHA-256、批准者、含時區時間和獨立使用者批准證據。內容變更即失效；任何技術檢查、agent 摘要或自行編寫的邊界記錄都不能創造人類批准。具體機制見 canonical workflow contract 的 Human approval record。
+
 - 所有課次沿用第一課、第二課、第三課已確認的安排編排方式、layout、visual 與共用 sections；新課不得重新猜測整體結構。
-- 只要該課已有來源包（canonical source、教材頁碼、音檔盤點與可用圖片資產）並完成線上／實體邊界確認，即可開始製作線上／實體 PPTX draft；教師手冊與完整 storyboard 不再阻塞 draft 啟動。
+- 該課已有來源包、線上／實體邊界確認，且逐頁內容已明確批准後，才可製作線上／實體 PPTX draft；教師手冊與完整生產 storyboard 可同步補齊，但逐頁內容批准不可後補。
 - 教師手冊、storyboard、線上／實體分流記錄與來源細部修訂改為同步建立或後續補齊，仍是 `20-approved`、`40-release` 與正式交付前的必要 gate。
 - 來源包中尚未確認的內容必須標記在 draft manifest／QA 中，不得把 draft 當作 authority；不得因使用 recovery override 而省略來源、音檔或實播 QA。
 - 若來源包存在明確結構問題（例如 lesson identity、頁碼 mapping 或音檔檔案不存在），先修正可安全修正的 metadata 或標記 blocker，再繼續草稿生產；不以猜測補齊教材內容。
@@ -117,22 +122,28 @@
 
 ## 目前教材生產格式決策
 
-### PPTX-only
+### 可選投影片製作方式
 
-自 2026-08-19 起，本課程的課堂教材生產改為 PPTX-only：
-
-- 不製作 HTML source deck。
-- 不製作 HTML presenter。
-- 不製作 HTML 動畫。
-- 不把 HTML 當作未來 PPTX 的必要中間格式。
-- 課堂主媒體是原生、可編輯、可直接播放的 `.pptx`。
+- 每份新投影片依 Adam 當前指定選擇 `native-pptx`（預設）或 `open-slide`；未指定時沿用 native editable PPTX。
+- `native-pptx` 依本文件的 PPTX 規則製作原生、可編輯、可直接播放的 `.pptx`。
+- `open-slide` 使用 `tools/open-slide/` 中的 Open Slide framework 製作 1920×1080 React 投影片，可選擇瀏覽器簡報、靜態 HTML、PDF 或 PPTX 匯出。除非 Adam 指定，不能自行把其中一種匯出格式當成交付格式。
+- HTML deck、presenter 與動畫只可用於明確選擇 `open-slide` 的投影片；它們不是 native-pptx 的必要中間格式，也不能自動取代或批准任何課次的 authority／release。
+- Open Slide 草稿放在該課 `10-design/open-slide-draft/`；在建立正式 QA、批准與交付規則之前，它是設計草稿，不得寫入 `20-approved/`、`30-qa/` 或 `40-release/`。
+- 音檔優先嵌入選定的交付物；若 PowerPoint 相容性需要備份，應在交付說明中明確標示，不可假設連結一定可用。
+- PPTX 學生端圖片必須內嵌在 `ppt/media/` 中。Open Slide 輸出使用圖片時，應在 deck 內本地打包，不依賴本機絕對路徑或未交付的外部素材；交付前檢查所選格式的 package／預覽。
 - PPTX 使用靜態版面；除非 Adam 另行要求，不增加動畫。
 - 音檔優先嵌入 PPTX；若 PowerPoint 相容性需要備份，應在交付說明中明確標示，不可假設連結一定可用。
 - 音檔狀態必須分開記錄來源（出版社 QR／使用者補回）、技術解碼、語義核對與 PowerPoint 實播；線上課若未嵌入音檔，必須登記可實際測試的播放方式，不得只寫「已登記」。
 - 所有學生端圖片必須內嵌在 PPTX 的 `ppt/media/` 中，不得依賴本機路徑、外部連結或未打包的圖片資料夾；交付前必須檢查 ZIP 完整性、圖片檔案可獨立解碼，並用 PowerPoint／PDF 預覽確認圖片可見。
 - 活動卡目前只交付可編輯 DOCX，不把活動卡 PDF 放入 release；`10-design` 可為列印與版面 QA 產生內部 preview PDF，但不得把 preview 當成 authority 或學生交付物。
 
-「只需要 PPT」的正確解讀是：不需要 HTML；但教師手冊、學生預習卡、補充活動卡、評量表與音檔資料仍是完整可上課教材包的一部分。
+### PPT visual style selection
+
+- The project-wide style registry is `course/ppt-style-registry.json`. Before starting each new PPT deck, ask Adam which registered style to use unless he already selected one in the current request.
+- Available choices currently include `boya-classroom` and `openai-education`; read the selected style profile before visual production. A style choice does not replace lesson identity, source, copy, approval, readability or release requirements.
+- `openai-education` is the name Adam gave to the supplied reference deck and is documented at `docs/ppt-styles/openai-education/README.md`.
+
+「只需要 PPT」的正確解讀依本課指定格式決定；教師手冊、學生預習卡、補充活動卡、評量表與音檔資料仍是完整可上課教材包的一部分。
 
 ### 統一提交檔案命名規則（2026-08-29）
 
@@ -269,6 +280,8 @@
 教師手冊與學生材料不再以 HTML 交付；活動卡只保留可編輯 DOCX，預習卡、評量表與教師手冊是否另附 PDF 依各自交付規格決定。
 
 ## 介面與內容規則
+
+- Adam 於 2026-09-19 確認《初級起步篇 I》第四課起的教材練習頁只需顯示「练习4-9」這類 `练习n-n` 標題與教材印刷頁碼，省去教材已有的題目與操作說明。`n-n` 依教材實際標號；無此標號的朗讀、連線、問答或交際活動保留教材原題名與頁碼，不自造編號。這項規則優先於下方通用的「最短動作句」要求；教師組織與核對提示保留在 speaker notes。
 
 - 榮市大學硬性規則：課堂與學生端教材的結構、操作指示、目標、題目與回饋使用簡體中文；線上預習詞語頁的「意思」欄使用已審核的越南文詞彙，是唯一明確的學生端越南文例外。
 - 實體課 PPT、預習卡與補充活動卡不放越南文；線上預習除詞語「意思」欄外不放越南文。任何學生端都不使用英文詞義 fallback；拼音與越南文均依文字 script 使用 Times New Roman。

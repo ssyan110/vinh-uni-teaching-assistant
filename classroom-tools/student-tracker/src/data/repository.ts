@@ -147,7 +147,8 @@ export class DemoRepository implements TrackerRepository {
     const session = this.snapshot.sessions.find((item) => item.id === input.session_id && item.course_id === input.course_id)
     const enrolled = this.snapshot.enrollments.some((item) => item.course_id === input.course_id && item.student_id === input.student_id && item.status === 'active')
     if (!session || !enrolled) throw new Error('學生或課堂不屬於這個班級。')
-    if (!input.textbook_id || !input.lesson_id || !input.activity_label.trim()) throw new Error('請填寫教材、課次與活動。')
+    if (!input.activity_label.trim()) throw new Error('請填寫活動。')
+    if (input.source !== 'manual_adjustment' && (!input.textbook_id || !input.lesson_id || !input.lesson_label?.trim())) throw new Error('請填寫教材、課次與活動。')
     for (const value of [input.task_completion, input.comprehensibility, input.language_control, input.interaction]) {
       if (value !== null && (!Number.isInteger(value) || value < 0 || value > 3)) throw new Error('分數必須介於 0 到 3。')
     }

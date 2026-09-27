@@ -1,0 +1,21 @@
+{
+  "schema_version": "boya-elementary-classroom-content-contract-v1",
+  "lesson_key": "boya-elementary-i:lesson-04",
+  "offering_id": "2026-fall",
+  "boundary_confirmation": "lessons/boya-elementary-i/lesson-04/10-design/storyboard/lesson-04-boundary-confirmation-2026-09-19.md",
+  "mode": "proposed_teacher_face_to_face_only_pending_confirmation",
+  "content_status": "pending_human_content_approval",
+  "content_review": "lessons/boya-elementary-i/lesson-04/10-design/storyboard/lesson-04-逐页文案审阅.md",
+  "content_approval": "lessons/boya-elementary-i/lesson-04/10-design/storyboard/lesson-04-content-approval.json",
+  "structure_approval": "Adam current conversation 2026-09-19",
+  "exercise_title_policy": {
+    "numbered": "练习{publisher_audio_label}",
+    "unnumbered": "original textbook exercise title plus printed page",
+    "instructions": "omit repeated textbook instructions",
+    "do_not_invent_numbers": true
+  },
+  "vocabulary_policy": "PROPOSAL ONLY: four recap pages for 19 entries; requires explicit exception approval before replacing one-item-per-page vocabulary instruction. Online responsibility remains pending for this lesson.",
+  "student_visible_minimum_pt": 23,
+  "source": "lessons/boya-elementary-i/lesson-04/00-source/canonical-source.json",
+  "human_visual_approval": false
+}

@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-21",
+  "scope": "Reusable across all textbooks, classes, and year levels; HSK lists are difficulty references, not evidence of classroom mastery.",
+  "files": {
+    "vocabulary.csv": {
+      "sha256": "407544306239bc48041069c7f3b22065dbc162d6e92f9a71afab0b213c7935c2",
+      "row_count": 7224,
+      "columns": [
+        "source_entry_id",
+        "word_simplified",
+        "pinyin",
+        "part_of_speech_zh",
+        "hsk2_2015_level",
+        "hsk3_2025_band",
+        "hsk3_2025_order"
+      ]
+    },
+    "grammar.csv": {
+      "sha256": "a65f42c4d0a0359db10e41b99c7321f3284bc5f1de5f329099d84d018a6f3386",
+      "row_count": 459,
+      "level_counts": {
+        "1": 70,
+        "2": 78,
+        "3": 96,
+        "4": 95,
+        "5": 70,
+        "6": 50
+      },
+      "columns": [
+        "record_id",
+        "source_row",
+        "standard_id",
+        "level",
+        "grammar_item_zh",
+        "grammar_type_zh",
+        "category_zh",
+        "detail_zh"
+      ]
+    },
+    "level_profiles.csv": {
+      "sha256": "f13872a3882ff66b2c1bb47d4c566ac0bf0d3bc97a46bb02d7e511c5bdf908de",
+      "row_count": 18,
+      "columns": [
+        "standard_id",
+        "level",
+        "vocabulary_cumulative_target",
+        "grammar_cumulative_target",
+        "grammar_rows_in_local_database",
+        "vocabulary_count_basis",
+        "grammar_count_basis",
+        "official_source_url",
+        "local_data_file",
+        "notes"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "source_id": "hearmandarin_hsk_vocabulary_snapshot_2026_09_15",
+      "dataset_page": "https://hearmandarin.com/datasets/",
+      "source_csv": "https://hearmandarin.com/datasets/hsk-3-0-words.csv",
+      "dataset_version": "2026-09-15",
+      "retrieved_at": "2026-09-21",
+      "raw_sha256": "d7b72d6f2268bdf740ec2abf25582b3b968150871e74b47e1bb8d98e7df1c4f8",
+      "raw_row_count": 11147,
+      "local_row_count": 7224,
+      "license_as_stated_by_publisher": "CC BY 4.0",
+      "required_attribution": "HearMandarin (https://hearmandarin.com)",
+      "included_fields": [
+        "source_entry_id",
+        "word_simplified",
+        "pinyin",
+        "part_of_speech_zh",
+        "hsk2_2015_level",
+        "hsk3_2025_band",
+        "hsk3_2025_order"
+      ],
+      "omitted_fields": [
+        "traditional",
+        "pinyin_num",
+        "pos_en",
+        "gloss_en"
+      ],
+      "underlying_sources": [
+        "official 2015 HSK 2.0 vocabulary list",
+        "official 2025 HSK 3.0 exam syllabus"
+      ]
+    },
+    {
+      "source_id": "profesorm_hsk30_grammar_snapshot_2026_09_21",
+      "repository": "https://github.com/profesorm/hsk30",
+      "source_csv": "https://raw.githubusercontent.com/profesorm/hsk30/main/data/hsk_grammar.csv",
+      "retrieved_at": "2026-09-21",
+      "raw_sha256": "e840db29dc0a688a7e566fa76f2e5ecdd3c39ddaf0a03ed056246cf229292731",
+      "raw_row_count": 593,
+      "local_row_count": 459,
+      "license_as_stated_by_repository": "CC BY 4.0",
+      "required_attribution": "profesorm, hsk30 (https://github.com/profesorm/hsk30)",
+      "underlying_source": "2025 HSK 3.0 official examination syllabus",
+      "included_fields": [
+        "record_id",
+        "source_row",
+        "standard_id",
+        "level",
+        "grammar_item_zh",
+        "grammar_type_zh",
+        "category_zh",
+        "detail_zh"
+      ],
+      "omitted_fields": [
+        "cases"
+      ],
+      "quality_note": "Third-party extraction. Repository disclaims ownership of original materials. Verify any important entry against the official syllabus; upstream permission for every reproduced item has not been independently audited."
+    },
+    {
+      "source_id": "gf0025_2021_official_query",
+      "official_query": "https://admin.chinesetest.cn/standardsAction.do?means=standardInfo",
+      "official_announcement": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202103/t20210329_523304.html",
+      "local_data": "level_profiles.csv contains official cumulative level counts only; no full vocabulary or grammar text copied.",
+      "license_note": "Official query and standard links are references; no full official standard tables are redistributed here."
+    },
+    {
+      "source_id": "hsk2_0_2015_official_reference",
+      "official_vocabulary_xlsx": "https://admin.chinesetest.cn/userfiles/file/HSK/HSK-2015.xlsx",
+      "official_resource_center": "https://admin.chinesetest.cn/godownload.do",
+      "official_syllabus_note": "The 2015 six-level syllabus series includes language-point outlines; the CI portal's publication record describes this scope: https://ci.cn/xstd/jxzy/8ed3fe1f-f91f-4cf1-aeaf-32f728c8f5f1",
+      "local_data": "vocabulary.csv uses the attributed CC BY cross-reference dataset; no official XLSX copy is included. No complete, rights-verified HSK 2.0 grammar table is redistributed here; consult the matching level syllabus and the class textbook."
+    }
+  ]
+}

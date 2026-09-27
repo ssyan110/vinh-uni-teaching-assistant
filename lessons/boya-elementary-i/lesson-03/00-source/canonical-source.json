@@ -1,0 +1,71 @@
+{
+  "schema_version": "boya-elementary-source-audit-v1",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-elementary-i",
+  "lesson_id": "lesson-03",
+  "lesson_key": "boya-elementary-i:lesson-03",
+  "lesson_number": 3,
+  "title": "拼音和日常用语（三）",
+  "title_source": "主教材 PDF 印刷 P10 课名页与目视核对",
+  "source_pdf": "external-user-source:/Users/ssyan110/Desktop/Work/Teaching/02_教材/博雅漢語教材/1. 博雅汉语听说-初级起步篇I.pdf",
+  "source_pdf_sha256": "9a98ee0b376c9b5cff20622987a0e4b9cee68287e45dc547665a3cd537fb517a",
+  "page_map": {
+    "printed_pages": [10, 15],
+    "pdf_pages": [21, 26],
+    "mapping_status": "visual_source_checked_2026-09-19"
+  },
+  "sections": [
+    {"id": "er_demo", "title": "er 音示范", "printed_pages": [10], "audio": ["3-1"], "items": 1},
+    {"id": "er_examples", "title": "er 跟读", "printed_pages": [10], "audio": ["3-2"], "items": 6},
+    {"id": "retroflex_pairs", "title": "普通韵母与儿化韵对照", "printed_pages": [10], "audio": ["3-3"], "items": 14},
+    {"id": "retroflex_reading", "title": "儿化韵朗读", "printed_pages": [11], "audio": ["3-4"], "items": 30},
+    {
+      "id": "y_rules",
+      "title": "y 拼写规则",
+      "printed_pages": [12],
+      "audio": ["3-5"],
+      "items": 14,
+      "mappings": [
+        ["i", "yi"], ["in", "yin"], ["ing", "ying"], ["ü", "yu"], ["üe", "yue"], ["üan", "yuan"], ["ün", "yun"],
+        ["ia", "ya"], ["ie", "ye"], ["iao", "yao"], ["iou", "you"], ["ian", "yan"], ["iang", "yang"], ["iong", "yong"]
+      ]
+    },
+    {
+      "id": "w_rules",
+      "title": "w 拼写规则",
+      "printed_pages": [12],
+      "audio": ["3-5"],
+      "items": 9,
+      "mappings": [["u", "wu"], ["ua", "wa"], ["uo", "wo"], ["uai", "wai"], ["uei", "wei"], ["uan", "wan"], ["uen", "wen"], ["uang", "wang"], ["ueng", "weng"]]
+    },
+    {"id": "yw_reading", "title": "y、w 规则后朗读", "printed_pages": [12, 13], "audio": ["3-6"], "items": 18},
+    {"id": "third_tone_sandhi", "title": "三声变调", "printed_pages": [13], "audio": ["3-7", "3-8"], "items": 16},
+    {"id": "bu_yi", "title": "bu、yi 变调", "printed_pages": [14], "audio": ["3-9"], "items": 20},
+    {"id": "syllable_choice", "title": "听音选择正确音节", "printed_pages": [14], "audio": ["3-10"], "items": 10},
+    {"id": "syllable_completion", "title": "听音补全音节并标声调", "printed_pages": [14], "audio": ["3-11"], "items": 30},
+    {"id": "group_read_write", "title": "小组读写与互相纠正", "printed_pages": [15], "audio": [], "items": 1},
+    {"id": "daily_phrases", "title": "日常用语", "printed_pages": [15], "audio": ["3-12"], "items": 6},
+    {"id": "daily_pair_qa", "title": "日常用语问答", "printed_pages": [15], "audio": [], "items": 2}
+  ],
+  "approved_content_decisions": {
+    "source_of_visible_copy": "lesson-03 source content map plus Adam current slide-copy decision 2026-09-19",
+    "student_visible_minimum_pt": 23,
+    "face_to_face_only": true,
+    "y_one_transformation_per_slide": true,
+    "y_summary_table": true,
+    "w_one_transformation_per_slide": true,
+    "w_summary_table": true,
+    "rule_visualization_reference": "boya-elementary-i lesson 01 j/q/x single-rule slide",
+    "group_wording": "小组",
+    "audio_controls": "omitted; teacher uses textbook audio separately",
+    "isolated_syllable_backgrounds": "none"
+  },
+  "source_status": "draft_source_package",
+  "approved": false,
+  "open_qa": [
+    "semantic audio listening for 3-1 to 3-12",
+    "PowerPoint visual and text QA",
+    "teacher rehearsal",
+    "Adam authority approval"
+  ]
+}

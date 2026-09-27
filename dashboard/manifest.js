@@ -1,11 +1,12 @@
 window.DASHBOARD_MANIFEST = {
-  "schema_version": "2.0",
-  "manifest_type": "course-dashboard",
-  "generated_at": "2026-08-29",
+  "schema_version": "4.0",
+  "manifest_type": "course-dashboard-review",
+  "generated_at": "2026-09-08",
   "generated_from": {
     "authority_manifests": "lessons/boya-quasi-intermediate-i/lesson-XX/20-approved/lesson-manifest.json",
     "lesson_catalog": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
-    "lesson_registry": "course/lesson-registry.json"
+    "lesson_registry": "course/lesson-registry.json",
+    "canonical_sources": "lessons/<textbook_id>/lesson-XX/00-source/canonical-source.json"
   },
   "course": {
     "id": "vinh-chinese-listening-speaking",
@@ -29,12 +30,13 @@ window.DASHBOARD_MANIFEST = {
         "source_inventory": "textbooks/boya-intermediate-i/source/source-inventory.json",
         "offering_ids": [
           "2027-fall"
-        ]
+        ],
+        "completion_record": null
       },
       {
         "textbook_id": "boya-quasi-intermediate-i",
         "title": "《博雅汉语听说：准中级加速篇 I》",
-        "status": "active_source_review",
+        "status": "completed_by_adam_2026-09-08",
         "lesson_count": 12,
         "lesson_key_prefix": "boya-quasi-intermediate-i:",
         "lesson_root": "lessons/boya-quasi-intermediate-i",
@@ -42,7 +44,15 @@ window.DASHBOARD_MANIFEST = {
         "source_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
         "offering_ids": [
           "2026-fall"
-        ]
+        ],
+        "completion_record": {
+          "status": "completed_by_adam",
+          "confirmed_by": "Adam",
+          "confirmed_at": "2026-09-08",
+          "scope": "all_12_lessons_sources_finalized_pptx_and_reviews",
+          "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+          "technical_status_preserved": true
+        }
       }
     ],
     "documents": [
@@ -87,6 +97,310 @@ window.DASHBOARD_MANIFEST = {
   },
   "lessons": [
     {
+      "id": "boya-intermediate-i:lesson-01",
+      "lesson_key": "boya-intermediate-i:lesson-01",
+      "textbook_id": "boya-intermediate-i",
+      "offering_id": "2027-fall",
+      "lesson_id": "lesson-01",
+      "number": 1,
+      "title": "中国人的姓名",
+      "status": "approved",
+      "status_label": "authority 已确认",
+      "stage": "authority",
+      "next_action": "等待交付 gate",
+      "unlock_reason": "",
+      "progress": {
+        "completed": 0,
+        "total": 11,
+        "percent": 0
+      },
+      "catalog": {
+        "printed_pages": "待登记",
+        "pdf_pages": "待登记",
+        "audio_count": 11
+      },
+      "scope": {
+        "period_count": null,
+        "total_minutes": null,
+        "ppt_slide_count": null,
+        "activity_count": null
+      },
+      "counts": {
+        "source_sections": 0,
+        "exercises": null,
+        "audio": 11,
+        "authority_files": 0
+      },
+      "manifest_path": "lessons/boya-intermediate-i/lesson-01/20-approved/lesson-manifest.json",
+      "source_manifest_path": "lessons/boya-intermediate-i/lesson-01/00-source/source-manifest.json"
+    },
+    {
+      "id": "boya-intermediate-i:lesson-02",
+      "lesson_key": "boya-intermediate-i:lesson-02",
+      "textbook_id": "boya-intermediate-i",
+      "offering_id": "2027-fall",
+      "lesson_id": "lesson-02",
+      "number": 2,
+      "title": "真正的朋友",
+      "status": "available",
+      "status_label": "可查看",
+      "stage": "source",
+      "next_action": "等待来源审核",
+      "unlock_reason": "",
+      "progress": {
+        "completed": 0,
+        "total": 11,
+        "percent": 0
+      },
+      "catalog": {
+        "printed_pages": "待登记",
+        "pdf_pages": "待登记",
+        "audio_count": 12
+      },
+      "scope": {
+        "period_count": null,
+        "total_minutes": null,
+        "ppt_slide_count": null,
+        "activity_count": null
+      },
+      "counts": {
+        "source_sections": 0,
+        "exercises": null,
+        "audio": 12,
+        "authority_files": 0
+      },
+      "manifest_path": null,
+      "source_manifest_path": "lessons/boya-intermediate-i/lesson-02/00-source/source-manifest.json"
+    },
+    {
+      "id": "boya-intermediate-i:lesson-03",
+      "lesson_key": "boya-intermediate-i:lesson-03",
+      "textbook_id": "boya-intermediate-i",
+      "offering_id": "2027-fall",
+      "lesson_id": "lesson-03",
+      "number": 3,
+      "title": "宜居之地",
+      "status": "available",
+      "status_label": "可查看",
+      "stage": "source",
+      "next_action": "等待来源审核",
+      "unlock_reason": "",
+      "progress": {
+        "completed": 0,
+        "total": 11,
+        "percent": 0
+      },
+      "catalog": {
+        "printed_pages": "待登记",
+        "pdf_pages": "待登记",
+        "audio_count": 11
+      },
+      "scope": {
+        "period_count": null,
+        "total_minutes": null,
+        "ppt_slide_count": null,
+        "activity_count": null
+      },
+      "counts": {
+        "source_sections": 0,
+        "exercises": null,
+        "audio": 11,
+        "authority_files": 0
+      },
+      "manifest_path": null,
+      "source_manifest_path": "lessons/boya-intermediate-i/lesson-03/00-source/source-manifest.json"
+    },
+    {
+      "id": "boya-intermediate-i:lesson-04",
+      "lesson_key": "boya-intermediate-i:lesson-04",
+      "textbook_id": "boya-intermediate-i",
+      "offering_id": "2027-fall",
+      "lesson_id": "lesson-04",
+      "number": 4,
+      "title": "地球人的担忧",
+      "status": "available",
+      "status_label": "可查看",
+      "stage": "source",
+      "next_action": "等待来源审核",
+      "unlock_reason": "",
+      "progress": {
+        "completed": 0,
+        "total": 11,
+        "percent": 0
+      },
+      "catalog": {
+        "printed_pages": "待登记",
+        "pdf_pages": "待登记",
+        "audio_count": 12
+      },
+      "scope": {
+        "period_count": null,
+        "total_minutes": null,
+        "ppt_slide_count": null,
+        "activity_count": null
+      },
+      "counts": {
+        "source_sections": 0,
+        "exercises": null,
+        "audio": 12,
+        "authority_files": 0
+      },
+      "manifest_path": null,
+      "source_manifest_path": "lessons/boya-intermediate-i/lesson-04/00-source/source-manifest.json"
+    },
+    {
+      "id": "boya-intermediate-i:lesson-05",
+      "lesson_key": "boya-intermediate-i:lesson-05",
+      "textbook_id": "boya-intermediate-i",
+      "offering_id": "2027-fall",
+      "lesson_id": "lesson-05",
+      "number": 5,
+      "title": "音乐的魅力",
+      "status": "available",
+      "status_label": "可查看",
+      "stage": "source",
+      "next_action": "等待来源审核",
+      "unlock_reason": "",
+      "progress": {
+        "completed": 0,
+        "total": 11,
+        "percent": 0
+      },
+      "catalog": {
+        "printed_pages": "待登记",
+        "pdf_pages": "待登记",
+        "audio_count": 12
+      },
+      "scope": {
+        "period_count": null,
+        "total_minutes": null,
+        "ppt_slide_count": null,
+        "activity_count": null
+      },
+      "counts": {
+        "source_sections": 0,
+        "exercises": null,
+        "audio": 12,
+        "authority_files": 0
+      },
+      "manifest_path": null,
+      "source_manifest_path": "lessons/boya-intermediate-i/lesson-05/00-source/source-manifest.json"
+    },
+    {
+      "id": "boya-intermediate-i:lesson-06",
+      "lesson_key": "boya-intermediate-i:lesson-06",
+      "textbook_id": "boya-intermediate-i",
+      "offering_id": "2027-fall",
+      "lesson_id": "lesson-06",
+      "number": 6,
+      "title": "挑战",
+      "status": "available",
+      "status_label": "可查看",
+      "stage": "source",
+      "next_action": "等待来源审核",
+      "unlock_reason": "",
+      "progress": {
+        "completed": 0,
+        "total": 11,
+        "percent": 0
+      },
+      "catalog": {
+        "printed_pages": "待登记",
+        "pdf_pages": "待登记",
+        "audio_count": 12
+      },
+      "scope": {
+        "period_count": null,
+        "total_minutes": null,
+        "ppt_slide_count": null,
+        "activity_count": null
+      },
+      "counts": {
+        "source_sections": 0,
+        "exercises": null,
+        "audio": 12,
+        "authority_files": 0
+      },
+      "manifest_path": null,
+      "source_manifest_path": "lessons/boya-intermediate-i/lesson-06/00-source/source-manifest.json"
+    },
+    {
+      "id": "boya-intermediate-i:lesson-07",
+      "lesson_key": "boya-intermediate-i:lesson-07",
+      "textbook_id": "boya-intermediate-i",
+      "offering_id": "2027-fall",
+      "lesson_id": "lesson-07",
+      "number": 7,
+      "title": "我的同事",
+      "status": "available",
+      "status_label": "可查看",
+      "stage": "source",
+      "next_action": "等待来源审核",
+      "unlock_reason": "",
+      "progress": {
+        "completed": 0,
+        "total": 11,
+        "percent": 0
+      },
+      "catalog": {
+        "printed_pages": "待登记",
+        "pdf_pages": "待登记",
+        "audio_count": 10
+      },
+      "scope": {
+        "period_count": null,
+        "total_minutes": null,
+        "ppt_slide_count": null,
+        "activity_count": null
+      },
+      "counts": {
+        "source_sections": 0,
+        "exercises": null,
+        "audio": 10,
+        "authority_files": 0
+      },
+      "manifest_path": null,
+      "source_manifest_path": "lessons/boya-intermediate-i/lesson-07/00-source/source-manifest.json"
+    },
+    {
+      "id": "boya-intermediate-i:lesson-08",
+      "lesson_key": "boya-intermediate-i:lesson-08",
+      "textbook_id": "boya-intermediate-i",
+      "offering_id": "2027-fall",
+      "lesson_id": "lesson-08",
+      "number": 8,
+      "title": "学汉语的苦恼",
+      "status": "available",
+      "status_label": "可查看",
+      "stage": "source",
+      "next_action": "等待来源审核",
+      "unlock_reason": "",
+      "progress": {
+        "completed": 0,
+        "total": 11,
+        "percent": 0
+      },
+      "catalog": {
+        "printed_pages": "待登记",
+        "pdf_pages": "待登记",
+        "audio_count": 11
+      },
+      "scope": {
+        "period_count": null,
+        "total_minutes": null,
+        "ppt_slide_count": null,
+        "activity_count": null
+      },
+      "counts": {
+        "source_sections": 0,
+        "exercises": null,
+        "audio": 11,
+        "authority_files": 0
+      },
+      "manifest_path": null,
+      "source_manifest_path": "lessons/boya-intermediate-i/lesson-08/00-source/source-manifest.json"
+    },
+    {
       "id": "boya-quasi-intermediate-i:lesson-01",
       "lesson_key": "boya-quasi-intermediate-i:lesson-01",
       "textbook_id": "boya-quasi-intermediate-i",
@@ -94,10 +408,10 @@ window.DASHBOARD_MANIFEST = {
       "lesson_id": "lesson-01",
       "number": 1,
       "title": "丽丽是独生女",
-      "status": "in_progress",
-      "status_label": "制作中",
-      "stage": "来源审核",
-      "next_action": "完成「来源审核」并记录证据。",
+      "status": "done",
+      "status_label": "已完成（Adam 确认）",
+      "stage": "当前教材 review 已完成",
+      "next_action": "转入后续维护；新 textbook review workflow 独立准备",
       "unlock_reason": "",
       "draft_available": true,
       "drafts": [
@@ -118,8 +432,8 @@ window.DASHBOARD_MANIFEST = {
       ],
       "progress": {
         "completed": 1,
-        "total": 11,
-        "percent": 9
+        "total": 1,
+        "percent": 100
       },
       "catalog": {
         "title": "丽丽是独生女",
@@ -141,7 +455,10 @@ window.DASHBOARD_MANIFEST = {
         "activity_files": 0
       },
       "manifest_path": "lessons/boya-quasi-intermediate-i/lesson-01/20-approved/lesson-manifest.json",
-      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-manifest.json"
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-manifest.json",
+      "completion_status": "completed_by_adam",
+      "completion_confirmed_at": "2026-09-08",
+      "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
     },
     {
       "id": "boya-quasi-intermediate-i:lesson-02",
@@ -151,10 +468,10 @@ window.DASHBOARD_MANIFEST = {
       "lesson_id": "lesson-02",
       "number": 2,
       "title": "王红的一天",
-      "status": "draft_in_progress",
-      "status_label": "草稿製作中",
-      "stage": "10-design PPTX draft",
-      "next_action": "完成來源語義、教師手冊、配套、QA 與 rehearsal 後，才能升級 authority。",
+      "status": "done",
+      "status_label": "已完成（Adam 确认）",
+      "stage": "当前教材 review 已完成",
+      "next_action": "转入后续维护；新 textbook review workflow 独立准备",
       "unlock_reason": "來源包與線上／實體邊界已允許 draft；authority／release 仍依序鎖定。",
       "draft_available": true,
       "drafts": [
@@ -182,9 +499,9 @@ window.DASHBOARD_MANIFEST = {
         }
       ],
       "progress": {
-        "completed": 0,
-        "total": 11,
-        "percent": 0
+        "completed": 1,
+        "total": 1,
+        "percent": 100
       },
       "catalog": {
         "title": "王红的一天",
@@ -206,7 +523,10 @@ window.DASHBOARD_MANIFEST = {
         "activity_files": null
       },
       "manifest_path": null,
-      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/source-manifest.json"
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/source-manifest.json",
+      "completion_status": "completed_by_adam",
+      "completion_confirmed_at": "2026-09-08",
+      "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
     },
     {
       "id": "boya-quasi-intermediate-i:lesson-03",
@@ -216,10 +536,10 @@ window.DASHBOARD_MANIFEST = {
       "lesson_id": "lesson-03",
       "number": 3,
       "title": "我对学中文越来越有兴趣",
-      "status": "draft_in_progress",
-      "status_label": "草稿製作中",
-      "stage": "10-design PPTX draft",
-      "next_action": "完成來源語義、教師手冊、配套、QA 與 rehearsal 後，才能升級 authority。",
+      "status": "done",
+      "status_label": "已完成（Adam 确认）",
+      "stage": "当前教材 review 已完成",
+      "next_action": "转入后续维护；新 textbook review workflow 独立准备",
       "unlock_reason": "來源包與線上／實體邊界已允許 draft；authority／release 仍依序鎖定。",
       "draft_available": true,
       "drafts": [
@@ -247,9 +567,9 @@ window.DASHBOARD_MANIFEST = {
         }
       ],
       "progress": {
-        "completed": 0,
-        "total": 11,
-        "percent": 0
+        "completed": 1,
+        "total": 1,
+        "percent": 100
       },
       "catalog": {
         "title": "我对学中文越来越有兴趣",
@@ -271,7 +591,10 @@ window.DASHBOARD_MANIFEST = {
         "activity_files": null
       },
       "manifest_path": null,
-      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/source-manifest.json"
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/source-manifest.json",
+      "completion_status": "completed_by_adam",
+      "completion_confirmed_at": "2026-09-08",
+      "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
     },
     {
       "id": "boya-quasi-intermediate-i:lesson-04",
@@ -281,10 +604,10 @@ window.DASHBOARD_MANIFEST = {
       "lesson_id": "lesson-04",
       "number": 4,
       "title": "在中国学汉语",
-      "status": "draft_legacy_unverified",
-      "status_label": "旧草稿待核",
-      "stage": "10-design 旧 draft",
-      "next_action": "不要沿用旧草稿；先以本课 lesson_key、来源包与边界确认重新建立当前 draft。",
+      "status": "done",
+      "status_label": "已完成（Adam 确认）",
+      "stage": "当前教材 review 已完成",
+      "next_action": "转入后续维护；新 textbook review workflow 独立准备",
       "unlock_reason": "发现旧生成器草稿，但它没有当前生成器兼容声明，不能作为生产输入。",
       "draft_available": false,
       "drafts": [
@@ -312,9 +635,9 @@ window.DASHBOARD_MANIFEST = {
         }
       ],
       "progress": {
-        "completed": 0,
-        "total": 11,
-        "percent": 0
+        "completed": 1,
+        "total": 1,
+        "percent": 100
       },
       "catalog": {
         "title": "在中国学汉语",
@@ -336,7 +659,10 @@ window.DASHBOARD_MANIFEST = {
         "activity_files": null
       },
       "manifest_path": null,
-      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/source-manifest.json"
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/source-manifest.json",
+      "completion_status": "completed_by_adam",
+      "completion_confirmed_at": "2026-09-08",
+      "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
     },
     {
       "id": "boya-quasi-intermediate-i:lesson-05",
@@ -346,17 +672,17 @@ window.DASHBOARD_MANIFEST = {
       "lesson_id": "lesson-05",
       "number": 5,
       "title": "我的音乐老师",
-      "status": "locked",
-      "status_label": "锁定",
-      "stage": "等待上一课完成",
-      "next_action": "等待第 4 课完成交付后解锁。",
+      "status": "done",
+      "status_label": "已完成（Adam 确认）",
+      "stage": "当前教材 review 已完成",
+      "next_action": "转入后续维护；新 textbook review workflow 独立准备",
       "unlock_reason": "逐课生产规则：第 4 课尚未完成交付。",
       "draft_available": false,
       "drafts": [],
       "progress": {
-        "completed": 0,
-        "total": 11,
-        "percent": 0
+        "completed": 1,
+        "total": 1,
+        "percent": 100
       },
       "catalog": {
         "title": "我的音乐老师",
@@ -378,7 +704,10 @@ window.DASHBOARD_MANIFEST = {
         "activity_files": null
       },
       "manifest_path": null,
-      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/source-manifest.json"
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/source-manifest.json",
+      "completion_status": "completed_by_adam",
+      "completion_confirmed_at": "2026-09-08",
+      "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
     },
     {
       "id": "boya-quasi-intermediate-i:lesson-06",
@@ -388,17 +717,17 @@ window.DASHBOARD_MANIFEST = {
       "lesson_id": "lesson-06",
       "number": 6,
       "title": "大岛参加了学校的合唱团",
-      "status": "locked",
-      "status_label": "锁定",
-      "stage": "等待上一课完成",
-      "next_action": "等待第 5 课完成交付后解锁。",
+      "status": "done",
+      "status_label": "已完成（Adam 确认）",
+      "stage": "当前教材 review 已完成",
+      "next_action": "转入后续维护；新 textbook review workflow 独立准备",
       "unlock_reason": "逐课生产规则：第 5 课尚未完成交付。",
       "draft_available": false,
       "drafts": [],
       "progress": {
-        "completed": 0,
-        "total": 11,
-        "percent": 0
+        "completed": 1,
+        "total": 1,
+        "percent": 100
       },
       "catalog": {
         "title": "大岛参加了学校的合唱团",
@@ -421,7 +750,10 @@ window.DASHBOARD_MANIFEST = {
         "activity_files": null
       },
       "manifest_path": null,
-      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/source-manifest.json"
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/source-manifest.json",
+      "completion_status": "completed_by_adam",
+      "completion_confirmed_at": "2026-09-08",
+      "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
     },
     {
       "id": "boya-quasi-intermediate-i:lesson-07",
@@ -431,17 +763,17 @@ window.DASHBOARD_MANIFEST = {
       "lesson_id": "lesson-07",
       "number": 7,
       "title": "小张热爱登山",
-      "status": "locked",
-      "status_label": "锁定",
-      "stage": "等待上一课完成",
-      "next_action": "等待第 6 课完成交付后解锁。",
+      "status": "done",
+      "status_label": "已完成（Adam 确认）",
+      "stage": "当前教材 review 已完成",
+      "next_action": "转入后续维护；新 textbook review workflow 独立准备",
       "unlock_reason": "逐课生产规则：第 6 课尚未完成交付。",
       "draft_available": false,
       "drafts": [],
       "progress": {
-        "completed": 0,
-        "total": 11,
-        "percent": 0
+        "completed": 1,
+        "total": 1,
+        "percent": 100
       },
       "catalog": {
         "title": "小张热爱登山",
@@ -463,7 +795,10 @@ window.DASHBOARD_MANIFEST = {
         "activity_files": null
       },
       "manifest_path": null,
-      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/source-manifest.json"
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/source-manifest.json",
+      "completion_status": "completed_by_adam",
+      "completion_confirmed_at": "2026-09-08",
+      "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
     },
     {
       "id": "boya-quasi-intermediate-i:lesson-08",
@@ -473,17 +808,17 @@ window.DASHBOARD_MANIFEST = {
       "lesson_id": "lesson-08",
       "number": 8,
       "title": "孙子和《孙子兵法》",
-      "status": "locked",
-      "status_label": "锁定",
-      "stage": "等待上一课完成",
-      "next_action": "等待第 7 课完成交付后解锁。",
+      "status": "done",
+      "status_label": "已完成（Adam 确认）",
+      "stage": "当前教材 review 已完成",
+      "next_action": "转入后续维护；新 textbook review workflow 独立准备",
       "unlock_reason": "逐课生产规则：第 7 课尚未完成交付。",
       "draft_available": false,
       "drafts": [],
       "progress": {
-        "completed": 0,
-        "total": 11,
-        "percent": 0
+        "completed": 1,
+        "total": 1,
+        "percent": 100
       },
       "catalog": {
         "title": "孙子和《孙子兵法》",
@@ -505,7 +840,10 @@ window.DASHBOARD_MANIFEST = {
         "activity_files": null
       },
       "manifest_path": null,
-      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/source-manifest.json"
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/source-manifest.json",
+      "completion_status": "completed_by_adam",
+      "completion_confirmed_at": "2026-09-08",
+      "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
     },
     {
       "id": "boya-quasi-intermediate-i:lesson-09",
@@ -515,17 +853,17 @@ window.DASHBOARD_MANIFEST = {
       "lesson_id": "lesson-09",
       "number": 9,
       "title": "北方菜和南方菜",
-      "status": "locked",
-      "status_label": "锁定",
-      "stage": "等待上一课完成",
-      "next_action": "等待第 8 课完成交付后解锁。",
+      "status": "done",
+      "status_label": "已完成（Adam 确认）",
+      "stage": "当前教材 review 已完成",
+      "next_action": "转入后续维护；新 textbook review workflow 独立准备",
       "unlock_reason": "逐课生产规则：第 8 课尚未完成交付。",
       "draft_available": false,
       "drafts": [],
       "progress": {
-        "completed": 0,
-        "total": 11,
-        "percent": 0
+        "completed": 1,
+        "total": 1,
+        "percent": 100
       },
       "catalog": {
         "title": "北方菜和南方菜",
@@ -547,7 +885,10 @@ window.DASHBOARD_MANIFEST = {
         "activity_files": null
       },
       "manifest_path": null,
-      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/source-manifest.json"
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/source-manifest.json",
+      "completion_status": "completed_by_adam",
+      "completion_confirmed_at": "2026-09-08",
+      "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
     },
     {
       "id": "boya-quasi-intermediate-i:lesson-10",
@@ -557,17 +898,17 @@ window.DASHBOARD_MANIFEST = {
       "lesson_id": "lesson-10",
       "number": 10,
       "title": "中国人喜欢聚餐",
-      "status": "locked",
-      "status_label": "锁定",
-      "stage": "等待上一课完成",
-      "next_action": "等待第 9 课完成交付后解锁。",
+      "status": "done",
+      "status_label": "已完成（Adam 确认）",
+      "stage": "当前教材 review 已完成",
+      "next_action": "转入后续维护；新 textbook review workflow 独立准备",
       "unlock_reason": "逐课生产规则：第 9 课尚未完成交付。",
       "draft_available": false,
       "drafts": [],
       "progress": {
-        "completed": 0,
-        "total": 11,
-        "percent": 0
+        "completed": 1,
+        "total": 1,
+        "percent": 100
       },
       "catalog": {
         "title": "中国人喜欢聚餐",
@@ -589,7 +930,10 @@ window.DASHBOARD_MANIFEST = {
         "activity_files": null
       },
       "manifest_path": null,
-      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-10/00-source/source-manifest.json"
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-10/00-source/source-manifest.json",
+      "completion_status": "completed_by_adam",
+      "completion_confirmed_at": "2026-09-08",
+      "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
     },
     {
       "id": "boya-quasi-intermediate-i:lesson-11",
@@ -599,17 +943,17 @@ window.DASHBOARD_MANIFEST = {
       "lesson_id": "lesson-11",
       "number": 11,
       "title": "原来他们是关心我",
-      "status": "locked",
-      "status_label": "锁定",
-      "stage": "等待上一课完成",
-      "next_action": "等待第 10 课完成交付后解锁。",
+      "status": "done",
+      "status_label": "已完成（Adam 确认）",
+      "stage": "当前教材 review 已完成",
+      "next_action": "转入后续维护；新 textbook review workflow 独立准备",
       "unlock_reason": "逐课生产规则：第 10 课尚未完成交付。",
       "draft_available": false,
       "drafts": [],
       "progress": {
-        "completed": 0,
-        "total": 11,
-        "percent": 0
+        "completed": 1,
+        "total": 1,
+        "percent": 100
       },
       "catalog": {
         "title": "原来他们是关心我",
@@ -631,7 +975,10 @@ window.DASHBOARD_MANIFEST = {
         "activity_files": null
       },
       "manifest_path": null,
-      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/source-manifest.json"
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/source-manifest.json",
+      "completion_status": "completed_by_adam",
+      "completion_confirmed_at": "2026-09-08",
+      "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
     },
     {
       "id": "boya-quasi-intermediate-i:lesson-12",
@@ -641,17 +988,17 @@ window.DASHBOARD_MANIFEST = {
       "lesson_id": "lesson-12",
       "number": 12,
       "title": "散步",
-      "status": "locked",
-      "status_label": "锁定",
-      "stage": "等待上一课完成",
-      "next_action": "等待第 11 课完成交付后解锁。",
+      "status": "done",
+      "status_label": "已完成（Adam 确认）",
+      "stage": "当前教材 review 已完成",
+      "next_action": "转入后续维护；新 textbook review workflow 独立准备",
       "unlock_reason": "逐课生产规则：第 11 课尚未完成交付。",
       "draft_available": false,
       "drafts": [],
       "progress": {
-        "completed": 0,
-        "total": 11,
-        "percent": 0
+        "completed": 1,
+        "total": 1,
+        "percent": 100
       },
       "catalog": {
         "title": "散步",
@@ -673,7 +1020,10 @@ window.DASHBOARD_MANIFEST = {
         "activity_files": null
       },
       "manifest_path": null,
-      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/source-manifest.json"
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/source-manifest.json",
+      "completion_status": "completed_by_adam",
+      "completion_confirmed_at": "2026-09-08",
+      "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
     }
   ],
   "lesson_details": {
@@ -3644,6 +3994,28578 @@ window.DASHBOARD_MANIFEST = {
         "current QA is not recorded as passed",
         "PPTX audio playback is not recorded as passed",
         "approved contact-hour teacher rehearsal is not passed"
+      ]
+    }
+  },
+  "review_sources": {
+    "boya-intermediate-i:lesson-01": {
+      "available": false,
+      "review_complete": false,
+      "completion": null,
+      "reason": "当前 registry 课次没有 canonical-source.json；保留 source manifest 状态，不填入演示内容。",
+      "source_manifest": {
+        "package": "lesson-01-source-review",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-intermediate-i",
+        "lesson_id": "lesson-01",
+        "lesson_key": "boya-intermediate-i:lesson-01",
+        "generated_at": "2026-08-19T13:02:16.760Z",
+        "canonical_source": "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-01.json",
+        "canonical_source_sha256": "8e25f08ab6216135c8151fb67d0f92673e7ae06ea605d0801fca0810e41553e5",
+        "source_pdf": "textbooks/boya-intermediate-i/source/raw/博雅汉语听说-中级冲刺篇I.pdf",
+        "source_pdf_sha256": "c7aa70b16496aecc7d9979bc2744dbe22701650511e48e2433ed19d439d70ad9",
+        "audio_count": 11,
+        "audio_sha256": {
+          "1-1.mp3": "1b9a8013591ef0688767467cf1699b56154ef603c400fcbec142163c7572aefe",
+          "1-2.mp3": "51766f0650f79a457dedaa6188338b81d91b8cc01d1ad86178dbf6de1c357fad",
+          "1-3.mp3": "b66c6eff6ad2dc24a27e416d9b31591225c260877c50f47ca19bd63a93c6dc5c",
+          "1-4.mp3": "5eb6b1c3f521bc8b81eabc64d0e2418181aae866bbfa00ba9559fbfe7aa62bf3",
+          "1-5.mp3": "090209f2bd1e12228a39e023f6b7c81d1f361f605b686951c8c0f3baf27220e1",
+          "1-6.mp3": "3623f433b59eba2d17aa1c2fa7e12f3bc16bb9d7a1bf3dd021d00e9d08f9b820",
+          "2-1.mp3": "caedd482416b254492882e6d3c203dca9c46e3794181dfcdbe8baf0640a8a202",
+          "2-2.mp3": "cc57e8c4cb2d8d638b474d60f3237117d34e38d3bc09417e104c5c2889615a6c",
+          "2-3.mp3": "917f49f24f7fb3fa90c6078deae7f609e32b94850f22a169207c84f72436f1ee",
+          "2-4.mp3": "6fd6a30212feb909f695c4f8f13693b20282df54077d5e52e73a49244084b311",
+          "2-5.mp3": "cc05aa05496e8d6d47d5bcaa6663653d90b42023f0f3daf70b059bd954ec6ae7"
+        },
+        "lesson_title": "中国人的姓名",
+        "source_status": "verified",
+        "source_qa_status": "passed",
+        "section_count": 63,
+        "vocabulary_count": 34,
+        "grammar_count": 7,
+        "text_dialogue_count": 5,
+        "exercise_count": 35,
+        "answer_policy": "只记录教材明确印出的答案；本课扫描页未提供练习答案，不自行补写。"
+      },
+      "canonical_path": "lessons/boya-intermediate-i/lesson-01/00-source/canonical-source.json",
+      "source_manifest_path": "lessons/boya-intermediate-i/lesson-01/00-source/source-manifest.json",
+      "review_items": []
+    },
+    "boya-intermediate-i:lesson-02": {
+      "available": false,
+      "review_complete": false,
+      "completion": null,
+      "reason": "当前 registry 课次没有 canonical-source.json；保留 source manifest 状态，不填入演示内容。",
+      "source_manifest": {
+        "schema_version": "1.0",
+        "manifest_type": "lesson-source-review",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-intermediate-i",
+        "lesson_id": "lesson-02",
+        "lesson_key": "boya-intermediate-i:lesson-02",
+        "lesson_number": 2,
+        "lesson_title": "真正的朋友",
+        "language": "简体中文",
+        "package": "lesson-02-source-review",
+        "prepared_at": "2026-08-22",
+        "source_status": "pending_review",
+        "source_qa_status": "pending",
+        "extraction_status": "source_review_materialized",
+        "review_status": "awaiting_adam_review",
+        "canonical_source": {
+          "path": "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json",
+          "sha256": "34f8c10fb5d7678b02bc3443440a77cd37dd6001dba2a1fbf85941daca2b05cb",
+          "status": "source_review_snapshot",
+          "note": "已建立第二课 source-review 结构化快照；来源 QA、音频内容听核与 Adam 批准仍未完成。"
+        },
+        "source_pdf": {
+          "path": "textbooks/boya-intermediate-i/source/raw/博雅汉语听说-中级冲刺篇I.pdf",
+          "sha256": "c7aa70b16496aecc7d9979bc2744dbe22701650511e48e2433ed19d439d70ad9",
+          "total_pages": 148,
+          "textbook_page_range": "17–31",
+          "pdf_page_range": "28–42",
+          "page_count_in_review": 15,
+          "format": "scanned_image_pdf",
+          "text_layer_status": "empty; use OCR plus visual confirmation"
+        },
+        "ocr_package": {
+          "manifest_path": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-02/manifest.json",
+          "manifest_sha256": "f366864d850875a4d13c2c58a76a75f7d40e86355ea7a207aa188818f57b8be0",
+          "text_root": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-02",
+          "page_image_root": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview",
+          "render_dpi": 200,
+          "recognition_languages": [
+            "zh-Hans",
+            "en-US"
+          ],
+          "pages": [
+            {
+              "textbook_page": 17,
+              "pdf_page": 28,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-02/page-028.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/pdf-28.png",
+              "visual_status": "checked"
+            },
+            {
+              "textbook_page": 18,
+              "pdf_page": 29,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-02/page-029.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/pdf-29.png",
+              "visual_status": "checked"
+            },
+            {
+              "textbook_page": 19,
+              "pdf_page": 30,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-02/page-030.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/pdf-30.png",
+              "visual_status": "checked"
+            },
+            {
+              "textbook_page": 20,
+              "pdf_page": 31,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-02/page-031.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/pdf-31.png",
+              "visual_status": "checked"
+            },
+            {
+              "textbook_page": 21,
+              "pdf_page": 32,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-02/page-032.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/pdf-32.png",
+              "visual_status": "checked"
+            },
+            {
+              "textbook_page": 22,
+              "pdf_page": 33,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-02/page-033.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/pdf-33.png",
+              "visual_status": "checked"
+            },
+            {
+              "textbook_page": 23,
+              "pdf_page": 34,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-02/page-034.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/pdf-34.png",
+              "visual_status": "checked"
+            },
+            {
+              "textbook_page": 24,
+              "pdf_page": 35,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-02/page-035.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/pdf-35.png",
+              "visual_status": "checked"
+            },
+            {
+              "textbook_page": 25,
+              "pdf_page": 36,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-02/page-036.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/pdf-36.png",
+              "visual_status": "checked"
+            },
+            {
+              "textbook_page": 26,
+              "pdf_page": 37,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-02/page-037.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/pdf-37.png",
+              "visual_status": "checked"
+            },
+            {
+              "textbook_page": 27,
+              "pdf_page": 38,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-02/page-038.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/pdf-38.png",
+              "visual_status": "checked"
+            },
+            {
+              "textbook_page": 28,
+              "pdf_page": 39,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-02/page-039.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/pdf-39.png",
+              "visual_status": "checked"
+            },
+            {
+              "textbook_page": 29,
+              "pdf_page": 40,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-02/page-040.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/pdf-40.png",
+              "visual_status": "checked"
+            },
+            {
+              "textbook_page": 30,
+              "pdf_page": 41,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-02/page-041.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/pdf-41.png",
+              "visual_status": "checked"
+            },
+            {
+              "textbook_page": 31,
+              "pdf_page": 42,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-02/page-042.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/pdf-42.png",
+              "visual_status": "checked"
+            }
+          ]
+        },
+        "qr_source": {
+          "path": "textbooks/boya-intermediate-i/source/qr/captures/lesson-02.png",
+          "sha256": "67177deb3d8a75439a2cc31dabae4dddfeef00bebbc4a8c5ca941a40bddb9668",
+          "detection_record": "textbooks/boya-intermediate-i/source/qr/detection/lesson-02.txt",
+          "payload": "http://qr71.cn/oaAEJW/qfly6NC",
+          "status": "decoded"
+        },
+        "audio": {
+          "root": "textbooks/boya-intermediate-i/source/audio/lesson-02",
+          "provenance": "textbooks/boya-intermediate-i/source/audio/lesson-02/下载来源.md",
+          "count": 12,
+          "mapping_status": "pending_content_review",
+          "tracks": [
+            {
+              "file": "1-1.mp3",
+              "duration_seconds": 63.869,
+              "sha256": "769f47e24db77b0a717548265de4eb5fd71d4da26e7533eec3ad71423f6713bc",
+              "printed_label_evidence": "教材第17页词语",
+              "mapping_status": "pending_review"
+            },
+            {
+              "file": "1-2.mp3",
+              "duration_seconds": 106.632,
+              "sha256": "219d414f64024a162bd5109409815a427672c8956f07d29d6a18a757d9bffde0",
+              "printed_label_evidence": "教材第19页听对话，回答问题",
+              "mapping_status": "pending_review"
+            },
+            {
+              "file": "1-3.mp3",
+              "duration_seconds": 52.297,
+              "sha256": "1978495f9f0513620f1ab30dbb756a413b517e722b9980d0044495cd0c84b158",
+              "printed_label_evidence": "教材第19–20页选出与所听到的句子意思相近的一项",
+              "mapping_status": "pending_review"
+            },
+            {
+              "file": "1-4.mp3",
+              "duration_seconds": 54.387,
+              "sha256": "5f713b9cfccde23875527dd54e4eb24f1859db8922e79dada5405e092f62bfde",
+              "printed_label_evidence": "教材第20页语句理解",
+              "mapping_status": "pending_review"
+            },
+            {
+              "file": "1-5.mp3",
+              "duration_seconds": 41.796,
+              "sha256": "c44f5535a34adc73cfe9ad94c6110b2f0e9dd810aad32576e04cba42b8966b7a",
+              "printed_label_evidence": "教材第20页听记句子并复述",
+              "mapping_status": "pending_review"
+            },
+            {
+              "file": "1-6.mp3",
+              "duration_seconds": 202.684,
+              "sha256": "1a1c7973f96bdbc5f7f053f00d5ef94d9a11580edfa446ffedc375b51a126ee3",
+              "printed_label_evidence": "教材第21页语段理解",
+              "mapping_status": "pending_review"
+            },
+            {
+              "file": "2-1.mp3",
+              "duration_seconds": 56.895,
+              "sha256": "d72c605ec430e6129e63ee74f54a95351886fb25506c857fdcc83b8338708a23",
+              "printed_label_evidence": "教材第25页词语",
+              "mapping_status": "pending_review"
+            },
+            {
+              "file": "2-2.mp3",
+              "duration_seconds": 92.186,
+              "sha256": "6cf17fbc435559c3d295d63538411f1bcffae2bb94745691499fda01891424ea",
+              "printed_label_evidence": "教材第26页听对话，回答问题",
+              "mapping_status": "pending_review"
+            },
+            {
+              "file": "2-3.mp3",
+              "duration_seconds": 55.171,
+              "sha256": "46ea074c751ef871054d9df53b3d79c12504815c6b231e2248b544beec65b2d1",
+              "printed_label_evidence": "教材第26–27页选出与所听到的句子意思相近的一项",
+              "mapping_status": "pending_review"
+            },
+            {
+              "file": "2-4.mp3",
+              "duration_seconds": 56.451,
+              "sha256": "549b80928a18c818df7d40776a0249e67f685d4e0a59dd246100e4383a54f84c",
+              "printed_label_evidence": "教材第27页语句理解",
+              "mapping_status": "pending_review"
+            },
+            {
+              "file": "2-5.mp3",
+              "duration_seconds": 50.051,
+              "sha256": "45572a8677a74b81ac1d6aa396e35b5bb4bddc47d31b9de9ee1c6c4d6ed987d3",
+              "printed_label_evidence": "教材第28页听录音，填空并谈谈自己的感受",
+              "mapping_status": "pending_review"
+            },
+            {
+              "file": "2-6.mp3",
+              "duration_seconds": 200.255,
+              "sha256": "f7dff43089e614dac58c894ec646d1df2e70315337fb22c3f044abfb4f7b37b0",
+              "printed_label_evidence": "教材第28–29页语段理解",
+              "mapping_status": "pending_review"
+            }
+          ]
+        },
+        "visually_confirmed_inventory": {
+          "lesson_title": "第2课 真正的朋友",
+          "textbook_page_range": "17–31",
+          "section_headers": [
+            "听说（一）",
+            "词语理解",
+            "语句理解",
+            "语段理解",
+            "口语句式",
+            "文化知识",
+            "拓展练习",
+            "听说（二）"
+          ],
+          "vocabulary_sets": [
+            {
+              "audio_label": "1-1",
+              "textbook_page": 17,
+              "items": [
+                {
+                  "index": 1,
+                  "hanzi": "知音",
+                  "pinyin": "zhīyīn"
+                },
+                {
+                  "index": 2,
+                  "hanzi": "知己",
+                  "pinyin": "zhījǐ"
+                },
+                {
+                  "index": 3,
+                  "hanzi": "感叹",
+                  "pinyin": "gǎntàn"
+                },
+                {
+                  "index": 4,
+                  "hanzi": "大多",
+                  "pinyin": "dàduō"
+                },
+                {
+                  "index": 5,
+                  "hanzi": "可遇不可求",
+                  "pinyin": "kě yù bù kě qiú",
+                  "marked": true
+                },
+                {
+                  "index": 6,
+                  "hanzi": "算得上",
+                  "pinyin": "suàndeshàng"
+                },
+                {
+                  "index": 7,
+                  "hanzi": "蛮",
+                  "pinyin": "mán"
+                },
+                {
+                  "index": 8,
+                  "hanzi": "品学兼优",
+                  "pinyin": "pǐnxué-jiānyōu",
+                  "marked": true
+                },
+                {
+                  "index": 9,
+                  "hanzi": "排练",
+                  "pinyin": "páiliàn"
+                },
+                {
+                  "index": 10,
+                  "hanzi": "不再",
+                  "pinyin": "bú zài"
+                },
+                {
+                  "index": 11,
+                  "hanzi": "无非",
+                  "pinyin": "wúfēi"
+                }
+              ],
+              "status": "visually_checked"
+            },
+            {
+              "audio_label": "1-1",
+              "textbook_page": 18,
+              "items": [
+                {
+                  "index": 12,
+                  "hanzi": "难得",
+                  "pinyin": "nándé",
+                  "marked": true
+                },
+                {
+                  "index": 13,
+                  "hanzi": "转眼",
+                  "pinyin": "zhuǎnyǎn"
+                },
+                {
+                  "index": 14,
+                  "hanzi": "喜出望外",
+                  "pinyin": "xǐchūwàngwài",
+                  "marked": true
+                },
+                {
+                  "index": 15,
+                  "hanzi": "节奏",
+                  "pinyin": "jiézòu",
+                  "marked": true
+                },
+                {
+                  "index": 16,
+                  "hanzi": "充实",
+                  "pinyin": "chōngshí",
+                  "marked": true
+                },
+                {
+                  "index": 17,
+                  "hanzi": "迷",
+                  "pinyin": "mí"
+                },
+                {
+                  "index": 18,
+                  "hanzi": "协会",
+                  "pinyin": "xiéhuì"
+                },
+                {
+                  "index": 19,
+                  "hanzi": "（爱好）者",
+                  "pinyin": "（àihào）zhě"
+                },
+                {
+                  "index": 20,
+                  "hanzi": "亭子",
+                  "pinyin": "tíngzi"
+                },
+                {
+                  "index": 21,
+                  "hanzi": "琴",
+                  "pinyin": "qín"
+                },
+                {
+                  "index": 22,
+                  "hanzi": "足够",
+                  "pinyin": "zúgòu"
+                }
+              ],
+              "status": "visually_checked"
+            },
+            {
+              "audio_label": "2-1",
+              "textbook_page": 25,
+              "items": [
+                {
+                  "index": 1,
+                  "hanzi": "彼此",
+                  "pinyin": "bǐcǐ"
+                },
+                {
+                  "index": 2,
+                  "hanzi": "首选",
+                  "pinyin": "shǒuxuǎn"
+                },
+                {
+                  "index": 3,
+                  "hanzi": "着想",
+                  "pinyin": "zhuóxiǎng"
+                },
+                {
+                  "index": 4,
+                  "hanzi": "高尚",
+                  "pinyin": "gāoshàng",
+                  "marked": true
+                },
+                {
+                  "index": 5,
+                  "hanzi": "患难",
+                  "pinyin": "huànnàn"
+                },
+                {
+                  "index": 6,
+                  "hanzi": "屈指可数",
+                  "pinyin": "qūzhǐ-kěshǔ"
+                },
+                {
+                  "index": 7,
+                  "hanzi": "见死不救",
+                  "pinyin": "jiànsǐ-bùjiù"
+                },
+                {
+                  "index": 8,
+                  "hanzi": "疑神疑鬼",
+                  "pinyin": "yíshén-yíguǐ"
+                },
+                {
+                  "index": 9,
+                  "hanzi": "信任",
+                  "pinyin": "xìnrèn"
+                },
+                {
+                  "index": 10,
+                  "hanzi": "从何谈起",
+                  "pinyin": "cóng hé tán qǐ"
+                },
+                {
+                  "index": 11,
+                  "hanzi": "和睦相处",
+                  "pinyin": "hémù-xiāngchǔ"
+                },
+                {
+                  "index": 12,
+                  "hanzi": "结交",
+                  "pinyin": "jiéjiāo"
+                },
+                {
+                  "index": 13,
+                  "hanzi": "幽默",
+                  "pinyin": "yōumò",
+                  "marked": true
+                },
+                {
+                  "index": 14,
+                  "hanzi": "趣味",
+                  "pinyin": "qùwèi",
+                  "marked": true
+                },
+                {
+                  "index": 15,
+                  "hanzi": "落难",
+                  "pinyin": "luònàn"
+                },
+                {
+                  "index": 16,
+                  "hanzi": "境界",
+                  "pinyin": "jìngjiè",
+                  "marked": true
+                }
+              ],
+              "status": "visually_checked"
+            },
+            {
+              "audio_label": "2-1",
+              "textbook_page": 26,
+              "items": [
+                {
+                  "index": 17,
+                  "hanzi": "毫无疑问",
+                  "pinyin": "háowú-yíwèn"
+                },
+                {
+                  "index": 18,
+                  "hanzi": "顺境",
+                  "pinyin": "shùnjìng"
+                },
+                {
+                  "index": 19,
+                  "hanzi": "人间",
+                  "pinyin": "rénjiān"
+                },
+                {
+                  "index": 20,
+                  "hanzi": "人生",
+                  "pinyin": "rénshēng"
+                }
+              ],
+              "status": "visually_checked"
+            }
+          ],
+          "page_activity_map": [
+            {
+              "textbook_page": 17,
+              "pdf_page": 28,
+              "content": "课名、听说（一）、课前准备、词语1–11、音频1-1"
+            },
+            {
+              "textbook_page": 18,
+              "pdf_page": 29,
+              "content": "词语12–22、三分钟演讲准备、朋友名言名句5条"
+            },
+            {
+              "textbook_page": 19,
+              "pdf_page": 30,
+              "content": "小调查、词语理解音频1-2问题、音频1-3选择题1–4"
+            },
+            {
+              "textbook_page": 20,
+              "pdf_page": 31,
+              "content": "音频1-3选择题5、三至五句话回答5题、音频1-4跟读与看法、音频1-5听记并复述"
+            },
+            {
+              "textbook_page": 21,
+              "pdf_page": 32,
+              "content": "语段内容提示、音频1-6填空5题／判断3题／听后回答2题"
+            },
+            {
+              "textbook_page": 22,
+              "pdf_page": 33,
+              "content": "口语句式4项、句式练习第1题"
+            },
+            {
+              "textbook_page": 23,
+              "pdf_page": 34,
+              "content": "句式练习第2–4题、文化知识请你说说、俞伯牙阅读短文起始"
+            },
+            {
+              "textbook_page": 24,
+              "pdf_page": 35,
+              "content": "俞伯牙阅读短文续、读后回答2题、拓展练习4项"
+            },
+            {
+              "textbook_page": 25,
+              "pdf_page": 36,
+              "content": "听说（二）、词语1–16、查资料、课堂小组交流、音频2-2问题、音频2-3选择题起始"
+            },
+            {
+              "textbook_page": 26,
+              "pdf_page": 37,
+              "content": "词语17–20、音频2-2问题、音频2-3选择题起始与课堂小组交流"
+            },
+            {
+              "textbook_page": 27,
+              "pdf_page": 38,
+              "content": "音频2-3选择题续、三至五句话回答6题、音频2-4替换画线词语5题"
+            },
+            {
+              "textbook_page": 28,
+              "pdf_page": 39,
+              "content": "音频2-5填空并谈感受4题、语段内容提示、音频2-6填空5题／判断题起始"
+            },
+            {
+              "textbook_page": 29,
+              "pdf_page": 40,
+              "content": "音频2-6判断题续／听后回答、口语句式3项"
+            },
+            {
+              "textbook_page": 30,
+              "pdf_page": 41,
+              "content": "句式练习3题、文化知识请你说说、儒家思想阅读短文起始"
+            },
+            {
+              "textbook_page": 31,
+              "pdf_page": 42,
+              "content": "阅读短文续、读后回答2题、文化对比、拓展练习4项"
+            }
+          ]
+        },
+        "answer_policy": "扫描教材未提供完整答案；来源审核阶段只记录题干、教材明确示例与音频对应，不补写唯一标准答案。",
+        "pending_review": [
+          "完成结构化快照中全部词语、课文、句式、练习和拓展活动的逐页文字忠实度复核。",
+          "确认第一部分与第二部分的练习编号、题目边界和总 coverage 数量。",
+          "逐一听取12段音频，确认音频内容与教材区段的对应关系；当前仅有页面音频标签证据。",
+          "核对 OCR 与页面视觉差异，特别是拼音声调、词语分隔、填空线和题目标点。",
+          "确认开放题只保留教师提示／示例，不生成教材未提供的标准答案。",
+          "来源批准前不开始 PBI 教学重组、教师手册、学生配套、storyboard、prototype 或 PPTX。"
+        ],
+        "review_evidence": {
+          "markdown": "lessons/boya-intermediate-i/lesson-02/00-source/source-review.md",
+          "structured_source": "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-02.json",
+          "structured_source_sha256": "34f8c10fb5d7678b02bc3443440a77cd37dd6001dba2a1fbf85941daca2b05cb",
+          "source_qa_summary": "结构化快照已记录63个区段、42个词语、7个句式、38项练习、4笔阅读／内容提示与12段音频；source_qa仍为pending。",
+          "pdf_page_images": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/pdf-28.png through pdf-42.png",
+          "ocr_pages": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-02/page-028.txt through page-042.txt",
+          "source_index": "textbooks/boya-intermediate-i/source/source-index.md",
+          "qr_detection": "textbooks/boya-intermediate-i/source/qr/detection/lesson-02.txt"
+        }
+      },
+      "canonical_path": "lessons/boya-intermediate-i/lesson-02/00-source/canonical-source.json",
+      "source_manifest_path": "lessons/boya-intermediate-i/lesson-02/00-source/source-manifest.json",
+      "review_items": []
+    },
+    "boya-intermediate-i:lesson-03": {
+      "available": false,
+      "review_complete": false,
+      "completion": null,
+      "reason": "当前 registry 课次没有 canonical-source.json；保留 source manifest 状态，不填入演示内容。",
+      "source_manifest": {
+        "schema_version": "1.0",
+        "manifest_type": "lesson-source-review",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-intermediate-i",
+        "lesson_id": "lesson-03",
+        "lesson_key": "boya-intermediate-i:lesson-03",
+        "lesson_number": 3,
+        "lesson_title": "宜居之地",
+        "language": "简体中文",
+        "package": "lesson-03-source-review",
+        "prepared_at": "2026-08-22",
+        "source_status": "pending_review",
+        "source_qa_status": "pending",
+        "extraction_status": "source_review_materialized",
+        "review_status": "awaiting_adam_review",
+        "canonical_source": {
+          "path": "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json",
+          "sha256": "5e876c47a703457459b09e3a0837d29f1303dd7679cbbea8d88d59f72092b5ed",
+          "status": "source_review_snapshot",
+          "note": "页面结构与初步 OCR 已记录；四项词语修正、两处阅读文字修正、section/page mapping 已更新，11 段音频内容与教材 mapping 已由 Adam 确认；完整文字忠实度与来源批准仍待审核。"
+        },
+        "source_pdf": {
+          "path": "textbooks/boya-intermediate-i/source/raw/博雅汉语听说-中级冲刺篇I.pdf",
+          "sha256": "c7aa70b16496aecc7d9979bc2744dbe22701650511e48e2433ed19d439d70ad9",
+          "total_pages": 148,
+          "textbook_page_range": "32–45",
+          "pdf_page_range": "43–56",
+          "page_count_in_review": 14,
+          "format": "scanned_image_pdf",
+          "text_layer_status": "empty; use OCR plus visual confirmation"
+        },
+        "ocr_package": {
+          "manifest_path": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-03/manifest.json",
+          "text_root": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-03",
+          "page_image_root": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-03",
+          "render_dpi": 200,
+          "recognition_languages": [
+            "zh-Hans",
+            "en-US"
+          ],
+          "ocr_status": "copied_from_current_project_ocr_and_visually_checked",
+          "pages": [
+            {
+              "textbook_page": 32,
+              "pdf_page": 43,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-03/page-043.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-03/page-043.png",
+              "visual_status": "checked",
+              "inventory_status": "source_review_materialized",
+              "content": "课名；听说（一）；课前准备；词语1–12；音频1-1"
+            },
+            {
+              "textbook_page": 33,
+              "pdf_page": 44,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-03/page-044.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-03/page-044.png",
+              "visual_status": "checked",
+              "inventory_status": "source_review_materialized",
+              "content": "词语13–28；课堂小组交流；三分钟演讲准备"
+            },
+            {
+              "textbook_page": 34,
+              "pdf_page": 45,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-03/page-045.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-03/page-045.png",
+              "visual_status": "checked",
+              "inventory_status": "source_review_materialized",
+              "content": "词语理解；音频1-2听对话回答问题；音频1-3近义句选择起始"
+            },
+            {
+              "textbook_page": 35,
+              "pdf_page": 46,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-03/page-046.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-03/page-046.png",
+              "visual_status": "checked",
+              "inventory_status": "source_review_materialized",
+              "content": "音频1-3近义句选择续；三至五句话回答；音频1-4跟读与看法；音频1-5成语听读"
+            },
+            {
+              "textbook_page": 36,
+              "pdf_page": 47,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-03/page-047.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-03/page-047.png",
+              "visual_status": "checked",
+              "inventory_status": "source_review_materialized",
+              "content": "语段内容提示；音频1-6听第一遍填空起始"
+            },
+            {
+              "textbook_page": 37,
+              "pdf_page": 48,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-03/page-048.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-03/page-048.png",
+              "visual_status": "checked",
+              "inventory_status": "source_review_materialized",
+              "content": "音频1-6填空续、判断与听后回答；口语句式"
+            },
+            {
+              "textbook_page": 38,
+              "pdf_page": 49,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-03/page-049.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-03/page-049.png",
+              "visual_status": "checked",
+              "inventory_status": "source_review_materialized",
+              "content": "口语句式练习；文化知识讨论；《北京是一座绿色城市》阅读起始"
+            },
+            {
+              "textbook_page": 39,
+              "pdf_page": 50,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-03/page-050.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-03/page-050.png",
+              "visual_status": "checked",
+              "inventory_status": "source_review_materialized",
+              "content": "阅读续；读后回答；三分钟演讲、模拟空间、国际交流、旅游线路设计"
+            },
+            {
+              "textbook_page": 40,
+              "pdf_page": 51,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-03/page-051.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-03/page-051.png",
+              "visual_status": "checked",
+              "inventory_status": "source_review_materialized",
+              "content": "听说（二）《常回家看看》；课前准备；词语1–13；音频2-1"
+            },
+            {
+              "textbook_page": 41,
+              "pdf_page": 52,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-03/page-052.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-03/page-052.png",
+              "visual_status": "checked",
+              "inventory_status": "source_review_materialized",
+              "content": "词语14–17；课堂小组交流；采访；音频2-2听对话、音频2-3近义句选择起始"
+            },
+            {
+              "textbook_page": 42,
+              "pdf_page": 53,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-03/page-053.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-03/page-053.png",
+              "visual_status": "checked",
+              "inventory_status": "source_review_materialized",
+              "content": "音频2-3近义句选择续；三至五句话回答；音频2-4；语段内容提示；音频2-5起始"
+            },
+            {
+              "textbook_page": 43,
+              "pdf_page": 54,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-03/page-054.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-03/page-054.png",
+              "visual_status": "checked",
+              "inventory_status": "source_review_materialized",
+              "content": "音频2-5填空、判断、听后回答；口语句式"
+            },
+            {
+              "textbook_page": 44,
+              "pdf_page": 55,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-03/page-055.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-03/page-055.png",
+              "visual_status": "checked",
+              "inventory_status": "source_review_materialized",
+              "content": "口语句式练习；文化知识讨论；《我为什么选择住在农村而不住在城市？》阅读起始"
+            },
+            {
+              "textbook_page": 45,
+              "pdf_page": 56,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-03/page-056.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-03/page-056.png",
+              "visual_status": "checked",
+              "inventory_status": "source_review_materialized",
+              "content": "阅读续；读后回答；小辩论、成段叙述、采访、演讲等拓展练习"
+            }
+          ]
+        },
+        "qr_source": {
+          "path": "textbooks/boya-intermediate-i/source/qr/captures/lesson-03.png",
+          "sha256": "27195e99e47f7eb0500d715abf478e9b8e78bda4387162a0f3e33b13fc33cdc8",
+          "detection_record": "textbooks/boya-intermediate-i/source/qr/detection/lesson-03.txt",
+          "payload": "http://qr71.cn/oaAEJW/qbVOKaU",
+          "status": "decoded"
+        },
+        "audio": {
+          "root": "textbooks/boya-intermediate-i/source/audio/lesson-03",
+          "provenance": "textbooks/boya-intermediate-i/source/audio/lesson-03/下载来源.md",
+          "count": 11,
+          "duration_total_seconds": 1236.637,
+          "mapping_status": "confirmed_by_user",
+          "file_validation": "11/11 present; 11/11 ffmpeg decode passed",
+          "tracks": [
+            {
+              "audio_asset_id": "A03-001",
+              "track_label": "1-1",
+              "file": "textbooks/boya-intermediate-i/source/audio/lesson-03/1-1.mp3",
+              "duration_seconds": 86.125688,
+              "sha256": "0e6354cd2fa0676fcc42b97e809dbb2702f6b039bdeb7b90b46041745afb83ac",
+              "printed_label_evidence": "教材第32–33页词语",
+              "related_section_id": "S03-002-01",
+              "file_status": "present",
+              "decode_status": "ffmpeg_decode_pass",
+              "content_status": "confirmed_by_user"
+            },
+            {
+              "audio_asset_id": "A03-002",
+              "track_label": "1-2",
+              "file": "textbooks/boya-intermediate-i/source/audio/lesson-03/1-2.mp3",
+              "duration_seconds": 101.4335,
+              "sha256": "f984777756750403dd0f41f74b615556bb206e6b596ad202b39dadf6efc239e6",
+              "printed_label_evidence": "教材第34页听对话，回答问题",
+              "related_section_id": "S03-003-01",
+              "file_status": "present",
+              "decode_status": "ffmpeg_decode_pass",
+              "content_status": "confirmed_by_user"
+            },
+            {
+              "audio_asset_id": "A03-003",
+              "track_label": "1-3",
+              "file": "textbooks/boya-intermediate-i/source/audio/lesson-03/1-3.mp3",
+              "duration_seconds": 51.539563,
+              "sha256": "1ad922c7c6cb82cacd7e09729185d8168d15096dad0de62a8b8f5551a32a6175",
+              "printed_label_evidence": "教材第34–35页选出与所听到的句子意思相近的一项",
+              "related_section_id": "S03-003-02",
+              "file_status": "present",
+              "decode_status": "ffmpeg_decode_pass",
+              "content_status": "confirmed_by_user"
+            },
+            {
+              "audio_asset_id": "A03-004",
+              "track_label": "1-4",
+              "file": "textbooks/boya-intermediate-i/source/audio/lesson-03/1-4.mp3",
+              "duration_seconds": 52.558375,
+              "sha256": "50f2e9b51b243d3270cde60e4c0d6a4f8624271aa4e47537b7d25439b13459d9",
+              "printed_label_evidence": "教材第35页语句理解",
+              "related_section_id": "S03-004-01",
+              "file_status": "present",
+              "decode_status": "ffmpeg_decode_pass",
+              "content_status": "confirmed_by_user"
+            },
+            {
+              "audio_asset_id": "A03-005",
+              "track_label": "1-5",
+              "file": "textbooks/boya-intermediate-i/source/audio/lesson-03/1-5.mp3",
+              "duration_seconds": 46.759188,
+              "sha256": "36e1bf514495e590ad25d2dc7528c72ced9eae02c2a66bbf0198f1a59db62fdd",
+              "printed_label_evidence": "教材第35页带“海”字成语听读",
+              "related_section_id": "S03-004-02",
+              "file_status": "present",
+              "decode_status": "ffmpeg_decode_pass",
+              "content_status": "confirmed_by_user"
+            },
+            {
+              "audio_asset_id": "A03-006",
+              "track_label": "1-6",
+              "file": "textbooks/boya-intermediate-i/source/audio/lesson-03/1-6.mp3",
+              "duration_seconds": 409.991813,
+              "sha256": "098049ccda45dc65efe84a71fa60072609a75d94e920bce43f9a1bc207d607b6",
+              "printed_label_evidence": "教材第36–37页语段理解",
+              "related_section_id": "S03-005-02",
+              "file_status": "present",
+              "decode_status": "ffmpeg_decode_pass",
+              "content_status": "confirmed_by_user"
+            },
+            {
+              "audio_asset_id": "A03-007",
+              "track_label": "2-1",
+              "file": "textbooks/boya-intermediate-i/source/audio/lesson-03/2-1.mp3",
+              "duration_seconds": 38.45225,
+              "sha256": "6bb025f8bff60e608ddafaf1d6ab564a777e7aeab6224b3af356264d06b1d5dc",
+              "printed_label_evidence": "教材第40页词语",
+              "related_section_id": "S03-010-01",
+              "file_status": "present",
+              "decode_status": "ffmpeg_decode_pass",
+              "content_status": "confirmed_by_user"
+            },
+            {
+              "audio_asset_id": "A03-008",
+              "track_label": "2-2",
+              "file": "textbooks/boya-intermediate-i/source/audio/lesson-03/2-2.mp3",
+              "duration_seconds": 102.2955,
+              "sha256": "096657a16e88bc5cb8689fc709feaf8fb42968922ce7b452d00e6114907622b5",
+              "printed_label_evidence": "教材第41页听对话，回答问题",
+              "related_section_id": "S03-011-01",
+              "file_status": "present",
+              "decode_status": "ffmpeg_decode_pass",
+              "content_status": "confirmed_by_user"
+            },
+            {
+              "audio_asset_id": "A03-009",
+              "track_label": "2-3",
+              "file": "textbooks/boya-intermediate-i/source/audio/lesson-03/2-3.mp3",
+              "duration_seconds": 55.327375,
+              "sha256": "fd15e957b8cb45e04b0f0c752fd5f6087a94be2097a31b704ea0a9562e748ae5",
+              "printed_label_evidence": "教材第41–42页近义句选择",
+              "related_section_id": "S03-012-01",
+              "file_status": "present",
+              "decode_status": "ffmpeg_decode_pass",
+              "content_status": "confirmed_by_user"
+            },
+            {
+              "audio_asset_id": "A03-010",
+              "track_label": "2-4",
+              "file": "textbooks/boya-intermediate-i/source/audio/lesson-03/2-4.mp3",
+              "duration_seconds": 32.835938,
+              "sha256": "30bbda087a7f60e34cfd9815a11d68fc6b6a2b06483334e2e8292a876bde0a36",
+              "printed_label_evidence": "教材第42页语句理解",
+              "related_section_id": "S03-012-02",
+              "file_status": "present",
+              "decode_status": "ffmpeg_decode_pass",
+              "content_status": "confirmed_by_user"
+            },
+            {
+              "audio_asset_id": "A03-011",
+              "track_label": "2-5",
+              "file": "textbooks/boya-intermediate-i/source/audio/lesson-03/2-5.mp3",
+              "duration_seconds": 259.317563,
+              "sha256": "ca02435aac757aa414fb348df43fe903e928535519ece90292f3328b0c6b3664",
+              "printed_label_evidence": "教材第42–43页语段理解",
+              "related_section_id": "S03-013-02",
+              "file_status": "present",
+              "decode_status": "ffmpeg_decode_pass",
+              "content_status": "confirmed_by_user"
+            }
+          ]
+        },
+        "printed_structure": {
+          "section_headers": [
+            "听说（一）",
+            "词语理解",
+            "语句理解",
+            "语段理解",
+            "口语句式",
+            "文化知识",
+            "拓展练习",
+            "听说（二）"
+          ],
+          "section_count": 61,
+          "vocabulary_count": 45,
+          "grammar_pattern_count": 6,
+          "exercise_count": 37,
+          "text_content_count": 4,
+          "vocabulary_sets": [
+            {
+              "part": "听说（一）",
+              "textbook_pages": "32–33",
+              "count": 28,
+              "audio_label": "1-1",
+              "status": "visually_checked"
+            },
+            {
+              "part": "听说（二）",
+              "textbook_page": 40,
+              "count": 17,
+              "audio_label": "2-1",
+              "status": "visually_checked"
+            }
+          ],
+          "text_content_titles": [
+            {
+              "title": "海滨城市——三亚",
+              "textbook_page": 36,
+              "text_type": "content_prompt"
+            },
+            {
+              "title": "北京是一座绿色城市",
+              "textbook_pages": "38–39",
+              "text_type": "reading"
+            },
+            {
+              "title": "城市还是农村",
+              "textbook_page": 42,
+              "text_type": "content_prompt"
+            },
+            {
+              "title": "我为什么选择住在农村而不住在城市？",
+              "textbook_pages": "44–45",
+              "text_type": "reading"
+            }
+          ],
+          "grammar_patterns": [
+            {
+              "pattern": "时而……时而……",
+              "textbook_page": 37
+            },
+            {
+              "pattern": "还有什么比这更……的呢",
+              "textbook_page": 37
+            },
+            {
+              "pattern": "值得一……",
+              "textbook_page": 37
+            },
+            {
+              "pattern": "逢人便……",
+              "textbook_page": 43
+            },
+            {
+              "pattern": "不过说好了",
+              "textbook_page": 43
+            },
+            {
+              "pattern": "再说",
+              "textbook_page": 43
+            }
+          ],
+          "page_activity_map": [
+            {
+              "textbook_page": 32,
+              "pdf_page": 43,
+              "content": "课名；听说（一）；课前准备；词语1–12；音频1-1"
+            },
+            {
+              "textbook_page": 33,
+              "pdf_page": 44,
+              "content": "词语13–28；课堂小组交流；三分钟演讲准备"
+            },
+            {
+              "textbook_page": 34,
+              "pdf_page": 45,
+              "content": "词语理解；音频1-2听对话回答问题；音频1-3近义句选择起始"
+            },
+            {
+              "textbook_page": 35,
+              "pdf_page": 46,
+              "content": "音频1-3近义句选择续；三至五句话回答；音频1-4跟读与看法；音频1-5成语听读"
+            },
+            {
+              "textbook_page": 36,
+              "pdf_page": 47,
+              "content": "语段内容提示；音频1-6听第一遍填空起始"
+            },
+            {
+              "textbook_page": 37,
+              "pdf_page": 48,
+              "content": "音频1-6填空续、判断与听后回答；口语句式"
+            },
+            {
+              "textbook_page": 38,
+              "pdf_page": 49,
+              "content": "口语句式练习；文化知识讨论；《北京是一座绿色城市》阅读起始"
+            },
+            {
+              "textbook_page": 39,
+              "pdf_page": 50,
+              "content": "阅读续；读后回答；三分钟演讲、模拟空间、国际交流、旅游线路设计"
+            },
+            {
+              "textbook_page": 40,
+              "pdf_page": 51,
+              "content": "听说（二）《常回家看看》；课前准备；词语1–13；音频2-1"
+            },
+            {
+              "textbook_page": 41,
+              "pdf_page": 52,
+              "content": "词语14–17；课堂小组交流；采访；音频2-2听对话、音频2-3近义句选择起始"
+            },
+            {
+              "textbook_page": 42,
+              "pdf_page": 53,
+              "content": "音频2-3近义句选择续；三至五句话回答；音频2-4；语段内容提示；音频2-5起始"
+            },
+            {
+              "textbook_page": 43,
+              "pdf_page": 54,
+              "content": "音频2-5填空、判断、听后回答；口语句式"
+            },
+            {
+              "textbook_page": 44,
+              "pdf_page": 55,
+              "content": "口语句式练习；文化知识讨论；《我为什么选择住在农村而不住在城市？》阅读起始"
+            },
+            {
+              "textbook_page": 45,
+              "pdf_page": 56,
+              "content": "阅读续；读后回答；小辩论、成段叙述、采访、演讲等拓展练习"
+            }
+          ]
+        },
+        "answer_policy": "扫描教材未提供完整答案；来源审核阶段只记录可见题干、教材文本和音频标签，不补写唯一标准答案。",
+        "pending_review": [
+          "继续逐项复核45个词语的汉字、拼音声调、星号标记与页码；已记录并确认一干二净、礁石 jiāoshí、雾霾 wùmái、再说 zàishuō 四项修正。",
+          "逐项复核61个教材区段、37项练习的题干边界、题号和文字；当前为 source-review snapshot。",
+          "11段音频的内容与教材 mapping 已由 Adam 确认；本包不生成音频逐字转写。",
+          "确认4笔阅读／内容提示的全文忠实度、段落边界和对话／录音转写；当前文本与转写字段保持 pending_review。",
+          "教材未给出答案的开放题保持开放／not_provided_in_source，不生成标准答案。",
+          "来源批准前不进入 PBI 教学重组、教师手册、学生配套、storyboard、prototype 或 PPTX。"
+        ],
+        "review_evidence": {
+          "markdown": "lessons/boya-intermediate-i/lesson-03/00-source/source-review.md",
+          "structured_source": "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-03.json",
+          "source_index": "textbooks/boya-intermediate-i/source/source-index.md",
+          "page_images": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-03/",
+          "ocr_pages": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-03/",
+          "audio_validation": "11/11 files present; 11/11 ffmpeg decode passed; content and textbook mapping confirmed by Adam; transcript not produced",
+          "manual_corrections": "四项 OCR 文字修正记录在 textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-03/manifest.json"
+        }
+      },
+      "canonical_path": "lessons/boya-intermediate-i/lesson-03/00-source/canonical-source.json",
+      "source_manifest_path": "lessons/boya-intermediate-i/lesson-03/00-source/source-manifest.json",
+      "review_items": []
+    },
+    "boya-intermediate-i:lesson-04": {
+      "available": false,
+      "review_complete": false,
+      "completion": null,
+      "reason": "当前 registry 课次没有 canonical-source.json；保留 source manifest 状态，不填入演示内容。",
+      "source_manifest": {
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-intermediate-i",
+        "lesson_id": "lesson-04",
+        "lesson_key": "boya-intermediate-i:lesson-04",
+        "lesson_number": 4,
+        "lesson_title": "地球人的担忧",
+        "source_status": "pending_review",
+        "source_qa_status": "pending",
+        "review_status": "awaiting_adam_review",
+        "canonical_source": {
+          "path": "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json",
+          "sha256": "155485f337909eb8dbcf33c90ec57cf5e037e2dd75ebf7d60e2128a9e6bbf409",
+          "status": "source_review_snapshot",
+          "note": "已建立第4课结构化来源快照；逐字文字忠实度、答案状态和Adam批准仍待完成；音档由Adam确认，代理未进行语义听核。"
+        },
+        "source": {
+          "pdf": "textbooks/boya-intermediate-i/source/raw/博雅汉语听说-中级冲刺篇I.pdf",
+          "pdf_sha256": "c7aa70b16496aecc7d9979bc2744dbe22701650511e48e2433ed19d439d70ad9",
+          "textbook_printed_page_range": [
+            46,
+            62
+          ],
+          "source_pdf_page_range": [
+            57,
+            73
+          ],
+          "audio_directory": "textbooks/boya-intermediate-i/source/audio/lesson-04",
+          "qr_image": "textbooks/boya-intermediate-i/source/qr/captures/lesson-04.png",
+          "qr_payload": "http://qr71.cn/oaAEJW/qql6bLf",
+          "source_index": "textbooks/boya-intermediate-i/source/source-index.md"
+        },
+        "review_evidence": {
+          "markdown": "lessons/boya-intermediate-i/lesson-04/00-source/source-review.md",
+          "structured_source": "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-04.json",
+          "structured_source_sha256": "155485f337909eb8dbcf33c90ec57cf5e037e2dd75ebf7d60e2128a9e6bbf409",
+          "page_images": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-04/",
+          "ocr_pages": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-04/",
+          "ocr_manifest": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-04/manifest.json",
+          "source_qa_summary": "17页、16个教材区段、71个词语、6个句式、37项练习、4笔内容／阅读记录、12段音频；source_qa仍为pending。"
+        },
+        "pending_items": [
+          "逐页校正词语、拼音、标点、阅读文字和填空线",
+          "Adam已确认12段音档正确；本包不生成逐字转写，代理未进行语义听核",
+          "第4课练习记录多为题型摘要，逐字题干仍待人工核对",
+          "教材未提供的答案保持开放题或audio_dependent，不生成唯一答案",
+          "等待Adam来源更正或批准"
+        ]
+      },
+      "canonical_path": "lessons/boya-intermediate-i/lesson-04/00-source/canonical-source.json",
+      "source_manifest_path": "lessons/boya-intermediate-i/lesson-04/00-source/source-manifest.json",
+      "review_items": []
+    },
+    "boya-intermediate-i:lesson-05": {
+      "available": false,
+      "review_complete": false,
+      "completion": null,
+      "reason": "当前 registry 课次没有 canonical-source.json；保留 source manifest 状态，不填入演示内容。",
+      "source_manifest": {
+        "schema_version": "1.0",
+        "manifest_type": "lesson-source-review",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-intermediate-i",
+        "lesson_id": "lesson-05",
+        "lesson_key": "boya-intermediate-i:lesson-05",
+        "lesson_number": 5,
+        "lesson_title": "音乐的魅力",
+        "language": "简体中文",
+        "package": "lesson-05-source-review",
+        "prepared_at": "2026-08-22",
+        "source_status": "pending_review",
+        "source_qa_status": "pending QA",
+        "extraction_status": "source_review_materialized",
+        "review_status": "awaiting_adam_review",
+        "canonical_source": {
+          "path": "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-05.json",
+          "sha256": "fd74146e9d30f16aedbc84c56131a09b28b64fa806fc11ff2a3d3c915d2c4ddf",
+          "status": "source_review_snapshot",
+          "note": "本文件登记当前 PDF、页面、OCR 与音频证据的结构化快照；音档由Adam确认，代理未进行语义听核且不生成转写；旧 lesson-05.json 仅作 legacy 参考，不是 canonical source。"
+        },
+        "source_pdf": {
+          "path": "textbooks/boya-intermediate-i/source/raw/博雅汉语听说-中级冲刺篇I.pdf",
+          "sha256": "c7aa70b16496aecc7d9979bc2744dbe22701650511e48e2433ed19d439d70ad9",
+          "total_pages": 148,
+          "textbook_page_range": "63–78",
+          "pdf_page_range": "74–89",
+          "page_count_in_review": 16,
+          "format": "scanned_image_pdf",
+          "text_layer_status": "empty; use OCR plus visual confirmation"
+        },
+        "ocr_package": {
+          "manifest_path": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-05/manifest.json",
+          "manifest_sha256": "0f11055c4fa05a0e7a009733c1910d9c689ea6811d71a353f819356590225512",
+          "text_root": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-05",
+          "page_image_root": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-05",
+          "render_dpi": 144,
+          "recognition_languages": [
+            "zh-Hans",
+            "en-US"
+          ],
+          "reuse_status": "reused_after_pdf_render_comparison",
+          "pages": [
+            {
+              "textbook_page": 63,
+              "pdf_page": 74,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-05/page-074.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-05/page-074.png",
+              "visual_status": "checked_against_pdf_render",
+              "text_status": "pending_review"
+            },
+            {
+              "textbook_page": 64,
+              "pdf_page": 75,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-05/page-075.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-05/page-075.png",
+              "visual_status": "checked_against_pdf_render",
+              "text_status": "pending_review"
+            },
+            {
+              "textbook_page": 65,
+              "pdf_page": 76,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-05/page-076.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-05/page-076.png",
+              "visual_status": "checked_against_pdf_render",
+              "text_status": "pending_review"
+            },
+            {
+              "textbook_page": 66,
+              "pdf_page": 77,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-05/page-077.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-05/page-077.png",
+              "visual_status": "checked_against_pdf_render",
+              "text_status": "pending_review"
+            },
+            {
+              "textbook_page": 67,
+              "pdf_page": 78,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-05/page-078.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-05/page-078.png",
+              "visual_status": "checked_against_pdf_render",
+              "text_status": "pending_review"
+            },
+            {
+              "textbook_page": 68,
+              "pdf_page": 79,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-05/page-079.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-05/page-079.png",
+              "visual_status": "checked_against_pdf_render",
+              "text_status": "pending_review"
+            },
+            {
+              "textbook_page": 69,
+              "pdf_page": 80,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-05/page-080.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-05/page-080.png",
+              "visual_status": "checked_against_pdf_render",
+              "text_status": "pending_review"
+            },
+            {
+              "textbook_page": 70,
+              "pdf_page": 81,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-05/page-081.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-05/page-081.png",
+              "visual_status": "checked_against_pdf_render",
+              "text_status": "pending_review"
+            },
+            {
+              "textbook_page": 71,
+              "pdf_page": 82,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-05/page-082.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-05/page-082.png",
+              "visual_status": "checked_against_pdf_render",
+              "text_status": "pending_review"
+            },
+            {
+              "textbook_page": 72,
+              "pdf_page": 83,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-05/page-083.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-05/page-083.png",
+              "visual_status": "checked_against_pdf_render",
+              "text_status": "pending_review"
+            },
+            {
+              "textbook_page": 73,
+              "pdf_page": 84,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-05/page-084.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-05/page-084.png",
+              "visual_status": "checked_against_pdf_render",
+              "text_status": "pending_review"
+            },
+            {
+              "textbook_page": 74,
+              "pdf_page": 85,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-05/page-085.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-05/page-085.png",
+              "visual_status": "checked_against_pdf_render",
+              "text_status": "pending_review"
+            },
+            {
+              "textbook_page": 75,
+              "pdf_page": 86,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-05/page-086.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-05/page-086.png",
+              "visual_status": "checked_against_pdf_render",
+              "text_status": "pending_review"
+            },
+            {
+              "textbook_page": 76,
+              "pdf_page": 87,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-05/page-087.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-05/page-087.png",
+              "visual_status": "checked_against_pdf_render",
+              "text_status": "pending_review"
+            },
+            {
+              "textbook_page": 77,
+              "pdf_page": 88,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-05/page-088.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-05/page-088.png",
+              "visual_status": "checked_against_pdf_render",
+              "text_status": "pending_review"
+            },
+            {
+              "textbook_page": 78,
+              "pdf_page": 89,
+              "ocr_text": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-05/page-089.txt",
+              "page_image": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-05/page-089.png",
+              "visual_status": "checked_against_pdf_render",
+              "text_status": "pending_review"
+            }
+          ]
+        },
+        "qr_source": {
+          "path": "textbooks/boya-intermediate-i/source/qr/captures/lesson-05.png",
+          "sha256": "8a47ee749a5891acbbb643a4686fe89afa363e861885d7c0a2df45472bab20b5",
+          "detection_record": "textbooks/boya-intermediate-i/source/qr/detection/lesson-05.txt",
+          "payload": "http://qr71.cn/oaAEJW/q33qu36",
+          "status": "decoded"
+        },
+        "audio": {
+          "root": "textbooks/boya-intermediate-i/source/audio/lesson-05",
+          "provenance": "textbooks/boya-intermediate-i/source/audio/lesson-05/下载来源.md",
+          "count": 12,
+          "mapping_status": "confirmed_by_user",
+          "decode_status": "12/12",
+          "total_duration_seconds": 1108.976254,
+          "tracks": [
+            {
+              "track_label": "1-1",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-05/1-1.mp3",
+              "printed_page_range": [
+                63,
+                64
+              ],
+              "printed_label_evidence": "教材第63–64页词语与课前准备",
+              "duration_seconds": 69.17225,
+              "sha256": "9476a4092d51ef88ee1a05c675cac94a66130a6ce64954217e4917ae2cb258b3",
+              "decode_status": "pass",
+              "mapping_status": "confirmed_by_user",
+              "semantic_status": "confirmed_by_user"
+            },
+            {
+              "track_label": "1-2",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-05/1-2.mp3",
+              "printed_page_range": [
+                65,
+                65
+              ],
+              "printed_label_evidence": "教材第65页小调查后的听对话并回答问题",
+              "duration_seconds": 117.002438,
+              "sha256": "6faa5516083b2c861bdfbcb82226ff22a522f5244f8c2e76325526c7148155e3",
+              "decode_status": "pass",
+              "mapping_status": "confirmed_by_user",
+              "semantic_status": "confirmed_by_user"
+            },
+            {
+              "track_label": "1-3",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-05/1-3.mp3",
+              "printed_page_range": [
+                65,
+                66
+              ],
+              "printed_label_evidence": "教材第65–66页选择题",
+              "duration_seconds": 59.480813,
+              "sha256": "1d7e849f0a61c4badc0d2e40e3e7e23bd60ad8362d7fe74cdd59546d3f859b96",
+              "decode_status": "pass",
+              "mapping_status": "confirmed_by_user",
+              "semantic_status": "confirmed_by_user"
+            },
+            {
+              "track_label": "1-4",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-05/1-4.mp3",
+              "printed_page_range": [
+                66,
+                66
+              ],
+              "printed_label_evidence": "教材第66页跟读、评论句子",
+              "duration_seconds": 56.0065,
+              "sha256": "ba587eaa5dd459983294abead2ad0a524042987281ed4bd5c082a3b1c8ec51ff",
+              "decode_status": "pass",
+              "mapping_status": "confirmed_by_user",
+              "semantic_status": "confirmed_by_user"
+            },
+            {
+              "track_label": "1-5",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-05/1-5.mp3",
+              "printed_page_range": [
+                66,
+                66
+              ],
+              "printed_label_evidence": "教材第66页听记并复述句子",
+              "duration_seconds": 42.631813,
+              "sha256": "35af2d0d0b170b2d63f63589fafa61c736599b0dd12fc0942d83df81cfb66a09",
+              "decode_status": "pass",
+              "mapping_status": "confirmed_by_user",
+              "semantic_status": "confirmed_by_user"
+            },
+            {
+              "track_label": "1-6",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-05/1-6.mp3",
+              "printed_page_range": [
+                67,
+                67
+              ],
+              "printed_label_evidence": "教材第67页语段理解",
+              "duration_seconds": 207.647375,
+              "sha256": "06b401040e8d0dccae3b51e9669262a968284f30a38c117553b77247cb5ded40",
+              "decode_status": "pass",
+              "mapping_status": "confirmed_by_user",
+              "semantic_status": "confirmed_by_user"
+            },
+            {
+              "track_label": "2-1",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-05/2-1.mp3",
+              "printed_page_range": [
+                71,
+                72
+              ],
+              "printed_label_evidence": "教材第71–72页词语与课外实践",
+              "duration_seconds": 48.248188,
+              "sha256": "7b877d6ed81d7409b918176b74652844d63772efca0a4548ef5a2ce08befbc76",
+              "decode_status": "pass",
+              "mapping_status": "confirmed_by_user",
+              "semantic_status": "confirmed_by_user"
+            },
+            {
+              "track_label": "2-2",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-05/2-2.mp3",
+              "printed_page_range": [
+                72,
+                72
+              ],
+              "printed_label_evidence": "教材第72页听对话并回答问题",
+              "duration_seconds": 147.983688,
+              "sha256": "26db738b024f50df85f89b4cf719fd1a39bd9bbebb5d5b5c62beb9b78efb8c65",
+              "decode_status": "pass",
+              "mapping_status": "confirmed_by_user",
+              "semantic_status": "confirmed_by_user"
+            },
+            {
+              "track_label": "2-3",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-05/2-3.mp3",
+              "printed_page_range": [
+                72,
+                73
+              ],
+              "printed_label_evidence": "教材第72–73页选择题",
+              "duration_seconds": 54.125688,
+              "sha256": "5eb1a3df4ab7a6c36b3f03fb28fcc62e33cd627612b1caf82f5634be8826e04e",
+              "decode_status": "pass",
+              "mapping_status": "confirmed_by_user",
+              "semantic_status": "confirmed_by_user"
+            },
+            {
+              "track_label": "2-4",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-05/2-4.mp3",
+              "printed_page_range": [
+                73,
+                73
+              ],
+              "printed_label_evidence": "教材第73页跟读并替换画线词语",
+              "duration_seconds": 47.177125,
+              "sha256": "731ffaddcf5b203fbcdb3951bd6dc90cf2b5dae53c59f5e73981f47cc879f4b7",
+              "decode_status": "pass",
+              "mapping_status": "confirmed_by_user",
+              "semantic_status": "confirmed_by_user"
+            },
+            {
+              "track_label": "2-5",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-05/2-5.mp3",
+              "printed_page_range": [
+                74,
+                74
+              ],
+              "printed_label_evidence": "教材第74页听记并复述短文",
+              "duration_seconds": 44.094688,
+              "sha256": "911ca864e984d2a526dbf6dcb5e2e6d4aeeb6251344dd74a309502b8575e5e18",
+              "decode_status": "pass",
+              "mapping_status": "confirmed_by_user",
+              "semantic_status": "confirmed_by_user"
+            },
+            {
+              "track_label": "2-6",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-05/2-6.mp3",
+              "printed_page_range": [
+                74,
+                75
+              ],
+              "printed_label_evidence": "教材第74–75页语段理解",
+              "duration_seconds": 215.405688,
+              "sha256": "5cbc60042f811bfd3480ffd5a5b80d7ea814298074579330ceb41e11f8d06626",
+              "decode_status": "pass",
+              "mapping_status": "confirmed_by_user",
+              "semantic_status": "confirmed_by_user"
+            }
+          ]
+        },
+        "inventory_counts": {
+          "sections": 61,
+          "vocabulary": 49,
+          "grammar_patterns": 6,
+          "exercises": 37,
+          "texts_dialogues": 4,
+          "audio": 12,
+          "review_pages": 16
+        },
+        "review_evidence": {
+          "source_index": "textbooks/boya-intermediate-i/source/source-index.md",
+          "pdf_render_comparison": "16/16 page images byte-match current PDF renders at 144 dpi",
+          "visual_page_review": "PDF pages 74–89 checked against page images; layout and section boundaries recorded in structured source",
+          "ocr_manifest": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-05/manifest.json",
+          "audio_validation": "12/12 files exist, SHA-256 recorded, duration recorded, ffmpeg decode pass"
+        },
+        "pending_review": [
+          "OCR 逐字忠实度、拼音声调、词语分隔、填空线与题目标点仍需人工复核。",
+          "Adam已确认12段音档正确；本包不生成逐字转写，代理未进行语义听核；文件存在、标签／页码证据、时长、SHA-256 与 ffmpeg decode 已核对。",
+          "教材练习答案未补写；开放题、判断题与选择题答案仍待来源核对。",
+          "sections、vocabulary、texts_dialogues 与 exercises 已 materialize，但逐项文字与题目边界仍为 pending_review。",
+          "source QA 与 Adam 来源批准尚未完成；批准前不进入 PBI、教师手册、学生材料、设计或 PPTX。"
+        ]
+      },
+      "canonical_path": "lessons/boya-intermediate-i/lesson-05/00-source/canonical-source.json",
+      "source_manifest_path": "lessons/boya-intermediate-i/lesson-05/00-source/source-manifest.json",
+      "review_items": []
+    },
+    "boya-intermediate-i:lesson-06": {
+      "available": false,
+      "review_complete": false,
+      "completion": null,
+      "reason": "当前 registry 课次没有 canonical-source.json；保留 source manifest 状态，不填入演示内容。",
+      "source_manifest": {
+        "manifest_schema": "boya-source-review-manifest-0.1.0",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-intermediate-i",
+        "lesson_id": "lesson-06",
+        "lesson_key": "boya-intermediate-i:lesson-06",
+        "lesson_number": 6,
+        "lesson_title": "挑战",
+        "source_status": "pending_review",
+        "source_qa_status": "pending",
+        "canonical_source": {
+          "path": "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json",
+          "sha256": "5dcdb585e0d7b1e694540d30726c68c981e97bb3f1323426296773f102614a62",
+          "status": "source_review_snapshot",
+          "note": "已登记第6课结构化来源快照；逐字忠实度、教材疑误和Adam批准仍待完成；音档由Adam确认，代理未进行语义听核且不生成转写。"
+        },
+        "status": "source_review_materialized",
+        "review_status": "pending_review",
+        "qa_status": "pending QA",
+        "review_date": "2026-08-22",
+        "scope": {
+          "printed_pages": [
+            79,
+            95
+          ],
+          "pdf_pages": [
+            90,
+            106
+          ],
+          "page_count": 17,
+          "audio_count": 12,
+          "semantic_listening_performed": false
+        },
+        "source_files": {
+          "pdf": {
+            "path": "textbooks/boya-intermediate-i/source/raw/博雅汉语听说-中级冲刺篇I.pdf",
+            "sha256": "c7aa70b16496aecc7d9979bc2744dbe22701650511e48e2433ed19d439d70ad9",
+            "pdf_page_count": 148
+          },
+          "textbook_index": {
+            "path": "textbooks/boya-intermediate-i/source/source-index.md"
+          }
+        },
+        "artifacts": {
+          "structured_json": {
+            "path": "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-06.json",
+            "sha256": "5dcdb585e0d7b1e694540d30726c68c981e97bb3f1323426296773f102614a62"
+          },
+          "ocr_directory": {
+            "path": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-06/",
+            "manifest": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-06/manifest.json",
+            "file_count": 17,
+            "filename_pattern": "page-090.txt through page-106.txt"
+          },
+          "page_preview_directory": {
+            "path": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-06/",
+            "file_count": 17,
+            "filename_pattern": "pdf-090.png through pdf-106.png",
+            "render_dpi": 200
+          }
+        },
+        "pages": [
+          {
+            "pdf_page": 90,
+            "printed_page": 79,
+            "ocr_path": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-06/page-090.txt",
+            "ocr_sha256": "61f2a1aa58e12d2f3a72114a623a621c002e1be8c4945df73a51e91145449826",
+            "image_path": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-06/pdf-090.png",
+            "image_sha256": "3ba5efa3ba9f6097568d23b893483d6b39b31fc5c9e8a8a25121d7bac9012edd",
+            "image_dimensions": [
+              1617,
+              2253
+            ]
+          },
+          {
+            "pdf_page": 91,
+            "printed_page": 80,
+            "ocr_path": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-06/page-091.txt",
+            "ocr_sha256": "10d8f4b6beab641b70bf64a6b469991465aefe2e6dc374f8713814b64a74a80a",
+            "image_path": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-06/pdf-091.png",
+            "image_sha256": "4ed47538e11b11c71f89fdf8e00cc7fd63606fe89916829e52a6ef9f0d3ba9a8",
+            "image_dimensions": [
+              1617,
+              2250
+            ]
+          },
+          {
+            "pdf_page": 92,
+            "printed_page": 81,
+            "ocr_path": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-06/page-092.txt",
+            "ocr_sha256": "8994b69f58f5346c851bedb02433a4b1bcdae15f762974144bc4e7e494bb21cb",
+            "image_path": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-06/pdf-092.png",
+            "image_sha256": "0c6b3613779e3008969ead1d2507336ac3250b85a790c7531da1f59e3e29e965",
+            "image_dimensions": [
+              1617,
+              2259
+            ]
+          },
+          {
+            "pdf_page": 93,
+            "printed_page": 82,
+            "ocr_path": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-06/page-093.txt",
+            "ocr_sha256": "1094b408ffea05d583c606a10a4617a571449898a049415adf6dd296d5e4278b",
+            "image_path": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-06/pdf-093.png",
+            "image_sha256": "1239247cd084788559b28507d01ce69c389fe6bde78272006737bf77e1cb0760",
+            "image_dimensions": [
+              1617,
+              2256
+            ]
+          },
+          {
+            "pdf_page": 94,
+            "printed_page": 83,
+            "ocr_path": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-06/page-094.txt",
+            "ocr_sha256": "1cd9add5e57423bd11b45ae65ced9affef190c6dc9d55877a438d5c2eddd4568",
+            "image_path": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-06/pdf-094.png",
+            "image_sha256": "218622e1ee4272623e69cc9005de9bb9a0ec60e6e5b7e82f31f10f1ac7f0019d",
+            "image_dimensions": [
+              1617,
+              2256
+            ]
+          },
+          {
+            "pdf_page": 95,
+            "printed_page": 84,
+            "ocr_path": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-06/page-095.txt",
+            "ocr_sha256": "9b6c396c2d891a8edba19a33988df489623d18ea2c117d27d15e939d2ce046c5",
+            "image_path": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-06/pdf-095.png",
+            "image_sha256": "d3d75f8828562ddec3167bdbaedc246700144f7b2354e2b3dee9850635987c28",
+            "image_dimensions": [
+              1617,
+              2253
+            ]
+          },
+          {
+            "pdf_page": 96,
+            "printed_page": 85,
+            "ocr_path": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-06/page-096.txt",
+            "ocr_sha256": "5b1b76516418a9c52477a2270ef604db8e2a4a7e2b6ba13609873ea50484fff8",
+            "image_path": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-06/pdf-096.png",
+            "image_sha256": "f51dfdf94036781d8ff8d88911eda943a3121c65d28050e308fcc646f59e1d32",
+            "image_dimensions": [
+              1617,
+              2256
+            ]
+          },
+          {
+            "pdf_page": 97,
+            "printed_page": 86,
+            "ocr_path": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-06/page-097.txt",
+            "ocr_sha256": "7f893a69351ba2fa2d3ee08cd2b16ee9b6eaae2a68cdba8e4d79d154c155c4c5",
+            "image_path": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-06/pdf-097.png",
+            "image_sha256": "6bd8942a4c0433af76a1b8051431afaf689ffff6a34bffd26c7ac905bc160ccb",
+            "image_dimensions": [
+              1617,
+              2253
+            ]
+          },
+          {
+            "pdf_page": 98,
+            "printed_page": 87,
+            "ocr_path": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-06/page-098.txt",
+            "ocr_sha256": "4175e368cc8bb22883efc7313252369b073768b9f91550955fba78fc77ee623a",
+            "image_path": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-06/pdf-098.png",
+            "image_sha256": "8aa2d07abad018ccc3c78472d0c150944b17ab9a734a2aa3ee9d5cc703faa1d2",
+            "image_dimensions": [
+              1609,
+              2256
+            ]
+          },
+          {
+            "pdf_page": 99,
+            "printed_page": 88,
+            "ocr_path": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-06/page-099.txt",
+            "ocr_sha256": "e1d852b92ad9d0c72a95393d269f5462b89e23ec91edb5802e742a50a4a4a2b8",
+            "image_path": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-06/pdf-099.png",
+            "image_sha256": "dcce1c441b7f2e63de84b8ce89ac79ee8e667b1bce8dba91c5f8a0542fa4d769",
+            "image_dimensions": [
+              1617,
+              2250
+            ]
+          },
+          {
+            "pdf_page": 100,
+            "printed_page": 89,
+            "ocr_path": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-06/page-100.txt",
+            "ocr_sha256": "67a7e0e7614903933324702e2e84f9ba82c4da57d7ed7536e08d8db40008fca1",
+            "image_path": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-06/pdf-100.png",
+            "image_sha256": "071c4a1312441bf78c5f8f2a3b45b05937c1979c895c67a92f572d5ee17192ae",
+            "image_dimensions": [
+              1600,
+              2256
+            ]
+          },
+          {
+            "pdf_page": 101,
+            "printed_page": 90,
+            "ocr_path": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-06/page-101.txt",
+            "ocr_sha256": "9f173135bfb0b9a1d8e2eac8ae8925179dc69c289d35e26f21df44c89c4da82c",
+            "image_path": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-06/pdf-101.png",
+            "image_sha256": "6980d78ba9e61bb55cccab9140a6339a61aec9045741c5e3e4ae58d18de2e0a6",
+            "image_dimensions": [
+              1617,
+              2253
+            ]
+          },
+          {
+            "pdf_page": 102,
+            "printed_page": 91,
+            "ocr_path": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-06/page-102.txt",
+            "ocr_sha256": "eca872ace964886b00f6ba5ec13f58d703e29bfedb62019229d2670fa3dd9648",
+            "image_path": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-06/pdf-102.png",
+            "image_sha256": "de1b3b8ff09e36e21261cd86d21aa21eb496d3f6d325f420f8eda05d64d81030",
+            "image_dimensions": [
+              1617,
+              2256
+            ]
+          },
+          {
+            "pdf_page": 103,
+            "printed_page": 92,
+            "ocr_path": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-06/page-103.txt",
+            "ocr_sha256": "8cab258d9c23e009ae30be28e767559a219557e8378e491beea93490eb4e075e",
+            "image_path": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-06/pdf-103.png",
+            "image_sha256": "ae380eda5a066db54f625da9a65d538a2d7b26321fdcb86701996a8b34946307",
+            "image_dimensions": [
+              1617,
+              2256
+            ]
+          },
+          {
+            "pdf_page": 104,
+            "printed_page": 93,
+            "ocr_path": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-06/page-104.txt",
+            "ocr_sha256": "bb8deeb4007f11a2934b51a75a0b562b55bede9a3437eb9193a3362bcc44c949",
+            "image_path": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-06/pdf-104.png",
+            "image_sha256": "dfc61bccb59c04baa90173c54b8e0a9a46b58729ab93014608e34d4bc8489435",
+            "image_dimensions": [
+              1620,
+              2250
+            ]
+          },
+          {
+            "pdf_page": 105,
+            "printed_page": 94,
+            "ocr_path": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-06/page-105.txt",
+            "ocr_sha256": "20fd39273e5b29a3bcae18ffc224239a9ce58ea7a34434654888c88ae3ed49a0",
+            "image_path": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-06/pdf-105.png",
+            "image_sha256": "182b891c23044f83ef4a4b874171e207b6547a29834b70f713bbbde7910fb4ae",
+            "image_dimensions": [
+              1620,
+              2250
+            ]
+          },
+          {
+            "pdf_page": 106,
+            "printed_page": 95,
+            "ocr_path": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-06/page-106.txt",
+            "ocr_sha256": "659eab003ca7bcb4c4c497a76601150cca8b55f748f4297e3f9f3b7e4d72641c",
+            "image_path": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-06/pdf-106.png",
+            "image_sha256": "dbf16098ef29adcdd34e7aaeaf722884313927fac9323a025f8372948810a83c",
+            "image_dimensions": [
+              1620,
+              2262
+            ]
+          }
+        ],
+        "audio": {
+          "root": "textbooks/boya-intermediate-i/source/audio/lesson-06/",
+          "decode_method": "ffmpeg -v error -i <file> -f null -",
+          "decode_status": "passed",
+          "semantic_review_status": "confirmed_by_user",
+          "content_confirmation_note": "Adam已确认12段音档正确；代理未进行语义听核，本包不生成逐字转写。",
+          "tracks": [
+            {
+              "label": "1-1",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-06/1-1.mp3",
+              "duration_seconds": 66.691,
+              "size_bytes": 1067075,
+              "sha256": "fdb2db5d41934246c4a17c9ee77fb62270421fd57efce84d5af4ff93e301e763"
+            },
+            {
+              "label": "1-2",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-06/1-2.mp3",
+              "duration_seconds": 124.996,
+              "size_bytes": 1999960,
+              "sha256": "3db77f8bcf94aec47bf5872de9c2e9324296d4a3f49d87c033cbdb1251aa1b18"
+            },
+            {
+              "label": "1-3",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-06/1-3.mp3",
+              "duration_seconds": 59.638,
+              "size_bytes": 954226,
+              "sha256": "c83c84d1fc23f38e18a8f8824e739ee2359662d012ac44e881351e5e73596cc0"
+            },
+            {
+              "label": "1-4",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-06/1-4.mp3",
+              "duration_seconds": 61.388,
+              "size_bytes": 982229,
+              "sha256": "7f91e383e406ae839812442d60adc9c2cc7a1ce8b20ebee83017b9696f3e9c10"
+            },
+            {
+              "label": "1-5",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-06/1-5.mp3",
+              "duration_seconds": 65.646,
+              "size_bytes": 1050356,
+              "sha256": "ff55e7beaebffba5eb4ba866e667333239713202ad472dba3c58b4196e393d40"
+            },
+            {
+              "label": "1-6",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-06/1-6.mp3",
+              "duration_seconds": 240.013,
+              "size_bytes": 3840234,
+              "sha256": "25784e8c5e44ba1e8f8f8f669c724867f0b5861543a1a2f3785b800cfc8fc8a3"
+            },
+            {
+              "label": "2-1",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-06/2-1.mp3",
+              "duration_seconds": 56.137,
+              "size_bytes": 898219,
+              "sha256": "4c51e3b38df75aed9614bd0ffd0f923f6d6e8893e7332dea6a2b79e775d06d66"
+            },
+            {
+              "label": "2-2",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-06/2-2.mp3",
+              "duration_seconds": 113.267,
+              "size_bytes": 1812296,
+              "sha256": "81ecbeb950453be9e08dcf622023b1dd32f8b4b3760bd6a31e9b72c7d1330260"
+            },
+            {
+              "label": "2-3",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-06/2-3.mp3",
+              "duration_seconds": 72.594,
+              "size_bytes": 1161534,
+              "sha256": "89a9e6f5070054e1f8c8b1d51ffe2e6b90c3ef85a582894987cbcc0ac68cd8e4"
+            },
+            {
+              "label": "2-4",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-06/2-4.mp3",
+              "duration_seconds": 64.131,
+              "size_bytes": 1026115,
+              "sha256": "d5afe50b61a24fc7c1159c631753a343515c4a73a0f4275edf4fe212e0b0303c"
+            },
+            {
+              "label": "2-5",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-06/2-5.mp3",
+              "duration_seconds": 58.593,
+              "size_bytes": 937507,
+              "sha256": "c781c7531fedaa67266d064f4fd107b89b09c86da8f4f65b4b89e4c84d8f0d8e"
+            },
+            {
+              "label": "2-6",
+              "path": "textbooks/boya-intermediate-i/source/audio/lesson-06/2-6.mp3",
+              "duration_seconds": 199.654,
+              "size_bytes": 3194487,
+              "sha256": "396bf039d43b093fd6c2ee916a8a22fa915d8fe6f966fb4309cf8a6b0e697d03"
+            }
+          ],
+          "total_duration_seconds": 1182.748
+        },
+        "content_snapshot": {
+          "sections": 63,
+          "vocabulary_records": 54,
+          "glossary_records": 15,
+          "grammar_patterns": 7,
+          "text_dialogue_records": 4,
+          "exercise_records": 40,
+          "audio_records": 12,
+          "answers_materialized": false
+        },
+        "open_items": [
+          {
+            "id": "L06-O01",
+            "status": "pending_review",
+            "item": "OCR 與版面文字尚未逐字人工核對。"
+          },
+          {
+            "id": "L06-O02",
+            "status": "confirmed_by_user",
+            "item": "Adam已确认12段音档正确；代理未进行语义听核，本包不生成逐字转写；文件存在、哈希、时长与 ffmpeg decode 已验证。"
+          },
+          {
+            "id": "L06-O03",
+            "status": "pending_review",
+            "item": "教材未明示的答案不建立標準答案；開放題答案維持未定。"
+          },
+          {
+            "id": "L06-O05",
+            "status": "pending_review",
+            "item": "第87頁跨欄內容與聽說（二）起始位置需人工確認。"
+          }
+        ]
+      },
+      "canonical_path": "lessons/boya-intermediate-i/lesson-06/00-source/canonical-source.json",
+      "source_manifest_path": "lessons/boya-intermediate-i/lesson-06/00-source/source-manifest.json",
+      "review_items": []
+    },
+    "boya-intermediate-i:lesson-07": {
+      "available": false,
+      "review_complete": false,
+      "completion": null,
+      "reason": "当前 registry 课次没有 canonical-source.json；保留 source manifest 状态，不填入演示内容。",
+      "source_manifest": {
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-intermediate-i",
+        "lesson_id": "lesson-07",
+        "lesson_key": "boya-intermediate-i:lesson-07",
+        "lesson_number": 7,
+        "lesson_title": "我的同事",
+        "source_status": "pending_review",
+        "source_qa_status": "pending",
+        "review_status": "awaiting_adam_review",
+        "canonical_source": {
+          "path": "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-07.json",
+          "sha256": "fce6e6dc8f0b2d6feb696e762ff28880b0447e07d977783de5822c889699c01f",
+          "status": "source_review_snapshot",
+          "note": "已建立第7课结构化来源快照；逐字忠实度、教材疑误和Adam批准仍待完成；音档由Adam确认，代理未进行语义听核且不生成转写。"
+        },
+        "source": {
+          "pdf": "textbooks/boya-intermediate-i/source/raw/博雅汉语听说-中级冲刺篇I.pdf",
+          "pdf_sha256": "c7aa70b16496aecc7d9979bc2744dbe22701650511e48e2433ed19d439d70ad9",
+          "textbook_printed_page_range": [
+            96,
+            110
+          ],
+          "source_pdf_page_range": [
+            107,
+            121
+          ],
+          "audio_directory": "textbooks/boya-intermediate-i/source/audio/lesson-07",
+          "qr_image": "textbooks/boya-intermediate-i/source/qr/captures/lesson-07.png",
+          "source_index": "textbooks/boya-intermediate-i/source/source-index.md"
+        },
+        "review_evidence": {
+          "markdown": "lessons/boya-intermediate-i/lesson-07/00-source/source-review.md",
+          "structured_source": "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-07.json",
+          "structured_source_sha256": "fce6e6dc8f0b2d6feb696e762ff28880b0447e07d977783de5822c889699c01f",
+          "page_images": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-07/",
+          "ocr_pages": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-07/",
+          "ocr_manifest": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-07/manifest.json",
+          "source_qa_summary": "15页、37个区段、51个词语、6个句式、96项练习、4笔内容／阅读记录、10段音频；source_qa仍为pending。"
+        },
+        "pending_items": [
+          "逐页校正OCR文字、拼音、标点和阅读内容",
+          "第110页第3题“谦辞”与上下文“敬辞”疑似教材印刷问题，待教师决定",
+          "Adam已确认10段音档正确；本包不生成逐字转写，代理未进行语义听核",
+          "等待Adam来源更正或批准"
+        ]
+      },
+      "canonical_path": "lessons/boya-intermediate-i/lesson-07/00-source/canonical-source.json",
+      "source_manifest_path": "lessons/boya-intermediate-i/lesson-07/00-source/source-manifest.json",
+      "review_items": []
+    },
+    "boya-intermediate-i:lesson-08": {
+      "available": false,
+      "review_complete": false,
+      "completion": null,
+      "reason": "当前 registry 课次没有 canonical-source.json；保留 source manifest 状态，不填入演示内容。",
+      "source_manifest": {
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-intermediate-i",
+        "lesson_id": "lesson-08",
+        "lesson_key": "boya-intermediate-i:lesson-08",
+        "lesson_number": 8,
+        "lesson_title": "学汉语的苦恼",
+        "source_status": "pending_review",
+        "source_qa_status": "pending",
+        "review_status": "awaiting_adam_review",
+        "canonical_source": {
+          "path": "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json",
+          "sha256": "9a76ad87369541eaef9522a9edc30cb6c6285ebfaad82dfb147c10302506efe4",
+          "status": "source_review_snapshot",
+          "note": "已建立第8课结构化来源快照；逐字忠实度、答案状态和Adam批准仍待完成；音档由Adam确认，代理未进行语义听核且不生成转写。"
+        },
+        "source": {
+          "pdf": "textbooks/boya-intermediate-i/source/raw/博雅汉语听说-中级冲刺篇I.pdf",
+          "pdf_sha256": "c7aa70b16496aecc7d9979bc2744dbe22701650511e48e2433ed19d439d70ad9",
+          "textbook_printed_page_range": [
+            111,
+            126
+          ],
+          "source_pdf_page_range": [
+            122,
+            137
+          ],
+          "audio_directory": "textbooks/boya-intermediate-i/source/audio/lesson-08",
+          "qr_image": "textbooks/boya-intermediate-i/source/qr/captures/lesson-08.png",
+          "qr_payload": "http://qr71.cn/oaAEJW/qvdTo0V",
+          "source_index": "textbooks/boya-intermediate-i/source/source-index.md"
+        },
+        "review_evidence": {
+          "markdown": "lessons/boya-intermediate-i/lesson-08/00-source/source-review.md",
+          "structured_source": "textbooks/boya-intermediate-i/source/derived/extractions/structured-lesson-08.json",
+          "structured_source_sha256": "9a76ad87369541eaef9522a9edc30cb6c6285ebfaad82dfb147c10302506efe4",
+          "page_images": "textbooks/boya-intermediate-i/source/derived/extractions/pages-preview/lesson-08/",
+          "ocr_pages": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-08/",
+          "ocr_manifest": "textbooks/boya-intermediate-i/source/derived/extractions/ocr-lesson-08/manifest.json",
+          "source_qa_summary": "16页、16个教材区段、48个词语、7个句式、37项练习、4笔内容／阅读记录、11段音频；source_qa仍为pending。"
+        },
+        "pending_items": [
+          "逐页校正词语、拼音、标点、阅读文字和填空线",
+          "Adam已确认11段音档正确；本包不生成逐字转写，代理未进行语义听核",
+          "教材未提供的答案保持开放题或audio_dependent，不生成唯一答案",
+          "等待Adam来源更正或批准"
+        ]
+      },
+      "canonical_path": "lessons/boya-intermediate-i/lesson-08/00-source/canonical-source.json",
+      "source_manifest_path": "lessons/boya-intermediate-i/lesson-08/00-source/source-manifest.json",
+      "review_items": []
+    },
+    "boya-quasi-intermediate-i:lesson-01": {
+      "available": false,
+      "review_complete": true,
+      "completion": {
+        "status": "completed_by_adam",
+        "confirmed_by": "Adam",
+        "confirmed_at": "2026-09-08",
+        "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+        "technical_status_preserved": true
+      },
+      "reason": "本课 review 已由 Adam 于 2026-09-08 确认完成；canonical source 当前没有可审核的 sections，技术结构状态保留。",
+      "canonical": {
+        "schema_version": "quasi-intermediate-source-audit-v0.1",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_number": 1,
+        "lesson_id": "lesson-01",
+        "title": "丽丽是独生女",
+        "title_source": "丽丽是独生女",
+        "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+        "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+        "page_map": {
+          "printed_pages": [
+            1,
+            11
+          ],
+          "pdf_pages": [
+            14,
+            24
+          ],
+          "mapping_status": "first_pass_visual_verified"
+        },
+        "qr_evidence": {
+          "pdf_page": 14,
+          "qr_url": "http://qr31.cn/I3ilDX",
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-01-pdf-page-014.png",
+          "landing_page": "https://biz.cli.im/site/I3ilDX?qrurl=http://qr31.cn/I3ilDX&gtype=2&key=65d1c17d1d4ddc44487828089fb2cc75ccfcfef245"
+        },
+        "audio_map": [
+          {
+            "track_label": "1-1",
+            "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FoLz3BtWhyeedQ79W5vQMj3Yx16s",
+            "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-1.mp3",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "bytes": 1324503,
+            "duration_seconds": 82.469,
+            "sha256": "e01d4adf226d238d4bef5998e6e0bd6d7b114d2dde5d947775f8aad41f994153",
+            "textbook_page": "pending_section_mapping"
+          },
+          {
+            "track_label": "1-2",
+            "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FiUp9X-WHKvAj7LL8dwQrtOk7P0a",
+            "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-2.mp3",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "bytes": 834237,
+            "duration_seconds": 51.827,
+            "sha256": "1981e76366f895ecc770731366d35369aa5727844e2ba21df7c2327e806e7d1c",
+            "textbook_page": "pending_section_mapping"
+          },
+          {
+            "track_label": "1-3",
+            "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/lnVBZP7EHENoB01jP9JLILXWdbxr",
+            "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-3.mp3",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "bytes": 3253802,
+            "duration_seconds": 203.05,
+            "sha256": "4f2b32cabc71ebe5861a6f374435d44fb7c0a3ff1defb536a6987e7e55351f4f",
+            "textbook_page": "pending_section_mapping"
+          },
+          {
+            "track_label": "1-4",
+            "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FgW6A7GmTricr6AsbWAu34qETftm",
+            "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-4.mp3",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "bytes": 1235059,
+            "duration_seconds": 76.878,
+            "sha256": "500ae82dd025c88d5ad8edc0e96d7a93dafaad59d781219682bc3dce0d453a77",
+            "textbook_page": "pending_section_mapping"
+          },
+          {
+            "track_label": "1-5",
+            "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FnFjYjtaJZPgleZYItGEjz8jJi5C",
+            "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-5.mp3",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "bytes": 855970,
+            "duration_seconds": 53.185,
+            "sha256": "9062abe7f667c422bf72c3d76be237fc06a434fb6eec2f6dd54f77769be90c98",
+            "textbook_page": "pending_section_mapping"
+          },
+          {
+            "track_label": "1-6",
+            "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FnFEbDZS2WfgA5PCECBtEGj3LAsA",
+            "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-6.mp3",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "bytes": 1162752,
+            "duration_seconds": 72.359,
+            "sha256": "0a4ccf7a4c2b47651b46e3c30eaef9f3a9cca9fa82413380b6582f6bb343c5f2",
+            "textbook_page": "pending_section_mapping"
+          },
+          {
+            "track_label": "1-7",
+            "source_url": null,
+            "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-7.mp3",
+            "source_type": "local_recovered_audio",
+            "source_note": "教材印刷 P7 标示 1-7；不在当前 QR 落地页的 1-1 至 1-6 清单中。",
+            "download_status": "recovered_local",
+            "decode_status": "passed",
+            "bytes": 406125,
+            "duration_seconds": 45.851,
+            "sha256": "8436f27897869119956e107d8b391bdb6fa47b7fa338cf531b0a694c78e2cdcb",
+            "textbook_page": 7,
+            "semantic_status": "pending_teacher_listening"
+          },
+          {
+            "track_label": "1-8",
+            "source_url": null,
+            "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-8.mp3",
+            "source_type": "local_recovered_audio",
+            "source_note": "教材印刷 P8 标示 1-8；不在当前 QR 落地页的 1-1 至 1-6 清单中。",
+            "download_status": "recovered_local",
+            "decode_status": "passed",
+            "bytes": 696501,
+            "duration_seconds": 70.131,
+            "sha256": "359e19cbbcf9c950adc3787fb71870f58b4df1209a76b5b26d134599af12bdc9",
+            "textbook_page": 8,
+            "semantic_status": "pending_teacher_listening"
+          }
+        ],
+        "content_inventory": {
+          "vocabulary_count": null,
+          "texts_dialogues_count": null,
+          "grammar_pattern_count": null,
+          "exercise_count": null,
+          "status": "textual_extraction_pending"
+        },
+        "answer_policy": "仅记录参考答案 PDF 中可核对的答案；开放题不得自行补写。",
+        "review": {
+          "status": "source_audit_in_progress",
+          "approved": false,
+          "blockers": [
+            "全书扫描页需完成文字／教材区段逐页核对",
+            "音频需完成逐文件解码与内容级听核",
+            "第12课印刷页尾待确认"
+          ]
+        }
+      },
+      "source_manifest": {
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_id": "lesson-01",
+        "lesson_key": "boya-quasi-intermediate-i:lesson-01",
+        "completion_confirmation": {
+          "status": "completed_by_adam",
+          "confirmed_by": "Adam",
+          "confirmed_at": "2026-09-08",
+          "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+          "technical_status_preserved": true
+        },
+        "lesson_number": 1,
+        "lesson_title": "丽丽是独生女",
+        "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+        "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+        "canonical_source": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/canonical-source.json",
+        "canonical_source_sha256": "f630d77a7881e97a121e0877ab7a1ba05048924896187d429b0150cbfd3c6aab",
+        "qr_capture_root": "textbooks/boya-quasi-intermediate-i/source/qr/captures",
+        "audio_root": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01",
+        "status": "source_audit_in_progress",
+        "approved": false,
+        "notes": [
+          "此包只记录来源盘点与 QR／音频证据，不是教师手册、PPT 或 DOCX 成品。"
+        ],
+        "audio_count": 8,
+        "audio_count_note": "6 个出版社 QR 音频 + 2 个教材 P7–P8 标示且已在本地恢复的音频；1-7、1-8 的出版社 QR 映射与语义听核仍待确认。",
+        "audio_decode_status": "8/8 files decode passed",
+        "audio_manifest": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/audio-manifest.json",
+        "audio_technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/audit/audio-technical-2026-08-29.md"
+      },
+      "audio": {
+        "schema_version": "boya-lesson-audio-manifest-v1",
+        "lesson_key": "boya-quasi-intermediate-i:lesson-01",
+        "lesson_id": "lesson-01",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_title": "丽丽是独生女",
+        "recorded_at": "2026-08-29",
+        "provenance": {
+          "publisher_qr_url": "http://qr31.cn/I3ilDX",
+          "publisher_landing_page": "https://biz.cli.im/site/I3ilDX?qrurl=http://qr31.cn/I3ilDX&gtype=2&key=e951017ebc4dc2193878287b24d4f70c64e72eb149",
+          "publisher_tracks": [
+            "1-1",
+            "1-2",
+            "1-3",
+            "1-4",
+            "1-5",
+            "1-6"
+          ],
+          "local_recovery_tracks": [
+            "1-7",
+            "1-8"
+          ],
+          "note": "1-7、1-8 在教材 P7、P8 有编号且本地文件已恢复；当前出版社 QR 落地页只列 1-1 至 1-6，因此两段保持独立来源类型。"
+        },
+        "technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/audit/audio-technical-2026-08-29.md",
+        "tracks": [
+          {
+            "label": "1-1",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FoLz3BtWhyeedQ79W5vQMj3Yx16s",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-1.mp3",
+            "scope": "词语（P1–P2）",
+            "bytes": 1324503,
+            "sha256": "e01d4adf226d238d4bef5998e6e0bd6d7b114d2dde5d947775f8aad41f994153",
+            "duration_seconds": 82.468571,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_listening",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "1-2",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FiUp9X-WHKvAj7LL8dwQrtOk7P0a",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-2.mp3",
+            "scope": "词语理解（P3）",
+            "bytes": 834237,
+            "sha256": "1981e76366f895ecc770731366d35369aa5727844e2ba21df7c2327e806e7d1c",
+            "duration_seconds": 51.826939,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_listening",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "1-3",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/lnVBZP7EHENoB01jP9JLILXWdbxr",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-3.mp3",
+            "scope": "听句子，判断对错（P4）",
+            "bytes": 3253802,
+            "sha256": "4f2b32cabc71ebe5861a6f374435d44fb7c0a3ff1defb536a6987e7e55351f4f",
+            "duration_seconds": 203.049796,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_listening",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "1-4",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FgW6A7GmTricr6AsbWAu34qETftm",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-4.mp3",
+            "scope": "听小对话，选择答案（P4–P5）",
+            "bytes": 1235059,
+            "sha256": "500ae82dd025c88d5ad8edc0e96d7a93dafaad59d781219682bc3dce0d453a77",
+            "duration_seconds": 76.878367,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_listening",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "1-5",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FnFjYjtaJZPgleZYItGEjz8jJi5C",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-5.mp3",
+            "scope": "听句子，回答问题（P5–P6）",
+            "bytes": 855970,
+            "sha256": "9062abe7f667c422bf72c3d76be237fc06a434fb6eec2f6dd54f77769be90c98",
+            "duration_seconds": 53.185306,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_listening",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "1-6",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FnFEbDZS2WfgA5PCECBtEGj3LAsA",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-6.mp3",
+            "scope": "短文（一）《丽丽在北京找到了工作》（P5–P6）",
+            "bytes": 1162752,
+            "sha256": "0a4ccf7a4c2b47651b46e3c30eaef9f3a9cca9fa82413380b6582f6bb343c5f2",
+            "duration_seconds": 72.359184,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_listening",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "1-7",
+            "play_url": null,
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-7.mp3",
+            "scope": "短文（二）《丽丽工作很努力》（P7–P8）",
+            "bytes": 406125,
+            "sha256": "8436f27897869119956e107d8b391bdb6fa47b7fa338cf531b0a694c78e2cdcb",
+            "duration_seconds": 45.850958,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_listening",
+            "teacher_playback_status": "embedded_in_current_chair_approved_pptx_pending_manual_playback"
+          },
+          {
+            "label": "1-8",
+            "play_url": null,
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/1-8.mp3",
+            "scope": "短文（三）《丽丽的爱好很多》（P8–P9）",
+            "bytes": 696501,
+            "sha256": "359e19cbbcf9c950adc3787fb71870f58b4df1209a76b5b26d134599af12bdc9",
+            "duration_seconds": 70.130958,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_listening",
+            "teacher_playback_status": "embedded_in_current_chair_approved_pptx_pending_manual_playback"
+          }
+        ],
+        "status": "technical_pass_8_of_8_semantic_and_teacher_playback_pending",
+        "publisher_source_count": 6,
+        "local_recovery_count": 2
+      },
+      "canonical_path": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/canonical-source.json",
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/source-manifest.json",
+      "canonical_source_sha256": "f630d77a7881e97a121e0877ab7a1ba05048924896187d429b0150cbfd3c6aab",
+      "review_items": []
+    },
+    "boya-quasi-intermediate-i:lesson-02": {
+      "available": true,
+      "review_complete": true,
+      "completion": {
+        "status": "completed_by_adam",
+        "confirmed_by": "Adam",
+        "confirmed_at": "2026-09-08",
+        "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+        "technical_status_preserved": true
+      },
+      "reason": "",
+      "canonical": {
+        "schema_version": "quasi-intermediate-source-audit-v1.0",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_number": 2,
+        "lesson_id": "lesson-02",
+        "lesson_key": "boya-quasi-intermediate-i:lesson-02",
+        "title": "王红的一天",
+        "title_source": "主教材 PDF 第25页（印刷 P12）课名页视觉核对",
+        "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+        "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+        "page_map": {
+          "printed_pages": [
+            12,
+            21
+          ],
+          "pdf_pages": [
+            25,
+            34
+          ],
+          "answer_pdf_pages": [
+            8,
+            10
+          ],
+          "answer_printed_pages": [
+            5,
+            7
+          ],
+          "mapping_status": "visual_first_pass; textbook PDF pages 25-34 map to printed P12-P21; answer PDF files pages 8-10 map to answer printed P5-P7; textbook short text three is labelled 2-7; QR/source inventory lists 2-1 through 2-6 and a user-supplied 2-7 recovery is now present"
+        },
+        "qr_evidence": {
+          "pdf_page": 25,
+          "qr_url": "http://qr31.cn/H1krER",
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-02-pdf-page-025.png",
+          "landing_page": "https://biz.cli.im/site/H1krER?qrurl=http://qr31.cn/H1krER&gtype=2&key=2f3e4171ce1d0df5087828fc7991b4470b28d38181",
+          "decode_status": "source_inventory_verified",
+          "landing_audio_labels": [
+            "2-1",
+            "2-2",
+            "2-3",
+            "2-4",
+            "2-5",
+            "2-6"
+          ],
+          "textbook_labels_seen": [
+            "2-1",
+            "2-2",
+            "2-3",
+            "2-4",
+            "2-5",
+            "2-6",
+            "2-7"
+          ],
+          "label_discrepancy": "主教材 P18-P19 与答案 PDF 将短文三《课外活动》标为 2-7；QR/source inventory 仍只登记 2-1 至 2-6，2-7 由 Adam 提供 WAV 后恢复，未宣称为 QR 原始下载。"
+        },
+        "audio_map": [
+          {
+            "label": "2-1",
+            "coding": "AN1539798",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FrcsApC3vbzAKWKS-hUPQNs18T4v",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-1.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 861404,
+            "sha256": "9425046c170d85f1a8dd25fa9d7afce508811dafebcdc8b0b806938aca3d8a56",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 53.524898,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "2-2",
+            "coding": "UY1783192",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FuOLWdJhJOaCfDAOhTGm555Y2Eiv",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-2.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 683353,
+            "sha256": "5ad1a76dea86112f9a967a5d49ae124a7afbf01be77b0989bf8369dec2eed6fc",
+            "download_status": "passed_in_source_inventory_with_retry_error_recorded",
+            "source_inventory_error": "URLError: <urlopen error _ssl.c:1063: The handshake operation timed out>",
+            "decode_status": "passed",
+            "duration_seconds": 42.396735,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "2-3",
+            "coding": "MU1783193",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fn8_en5WTQpj8eLTt--rauvOi18M",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-3.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 1869103,
+            "sha256": "97b01a753c80a4b2ec850b0d0f60514c58e2455901dafc988958512de112a1db",
+            "download_status": "passed_in_source_inventory_with_retry_error_recorded",
+            "source_inventory_error": "URLError: <urlopen error [Errno 60] Operation timed out>",
+            "decode_status": "passed",
+            "duration_seconds": 116.506122,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "2-4",
+            "coding": "TV1783194",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FtAmltELpWLKXr_R4mjQWl-aepsK",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-4.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 1350834,
+            "sha256": "7dcd2b8934ab85277744aad0e39c9aa039af7803adcceb33269469c096a80fa3",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 84.114286,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "2-5",
+            "coding": "IX1783195",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FpZ_TqHXC83O_j9ELJ9jesJPS_D9",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-5.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 805815,
+            "sha256": "44dbd41d3631363b7c998e91730a412e12b537a65a8f88ed09884a3483e2e957",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 50.050612,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "2-6",
+            "coding": "NY1783196",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FmhttHW2y3TFGkjunvaqc9JRE7ek",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-6.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 1041962,
+            "sha256": "b59eb5af70b6928d11da243665eb8dd4e70d2dbef616f1a249816be6f1ab9265",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 64.809796,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "2-7",
+            "coding": null,
+            "play_url": null,
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-7.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 913702,
+            "sha256": "13e4a8068ce1b50a52243ed98b956484406b2678373e59f8cc66096652b735fd",
+            "download_status": "recovered_from_user_supplied_wav",
+            "decode_status": "passed",
+            "duration_seconds": 57.04,
+            "codec": "mp3",
+            "sample_rate_hz": 44100,
+            "channels": 1,
+            "semantic_status": "passed",
+            "teacher_playback_status": "passed",
+            "semantic_verified_by": "Adam",
+            "teacher_playback_verified_by": "Adam",
+            "verified_at": "2026-08-29",
+            "source_type": "user_supplied_recovery",
+            "original_filename": "2-7.wav",
+            "original_bytes": 2737964,
+            "original_sha256": "b4830c93f602533f75737d9bc2b34f835a42fc0e2df26cb031131253f930cb70",
+            "note": "主教材 P18-P19 与答案 PDF 文件页10均标示短文三《课外活动》音频 2-7；项目文件由 Adam 提供的 WAV 转换而来，QR/source inventory 仍只列 2-1 至 2-6。"
+          }
+        ],
+        "content_inventory": {
+          "vocabulary_count": 29,
+          "proper_noun_count": 0,
+          "vocabulary_comprehension_group_count": 3,
+          "vocabulary_comprehension_item_count": 11,
+          "listening_sentence_item_count": 10,
+          "dialogue_item_count": 5,
+          "texts_dialogues_count": 3,
+          "grammar_pattern_count": 15,
+          "listening_exercise_group_count": 7,
+          "comprehensive_exercise_count": 3,
+          "exercise_count": 31,
+          "status": "visual_source_snapshot_pending_adam_approval"
+        },
+        "answer_policy": "仅记录参考答案 PDF 中可核对的词语理解、听句子判断、听小对话选择答案与听力文本；开放式口语题、分组总结和拓展练习不补写唯一标准答案。",
+        "review": {
+          "status": "source_audit_in_progress",
+          "approved": false,
+          "approved_by": [],
+          "approved_at": null,
+          "blockers": [
+            "教材正文为扫描影像，最终来源批准需由 Adam 对视觉转录、教材页码、题组和答案证据确认。",
+            "主教材与答案均显示短文三《课外活动》音频标签为 2-7；Adam 已提供 WAV 并完成项目 MP3 转换，但 QR/source inventory 仍只登记 2-1 至 2-6，需保留用户来源说明。",
+            "2-1 至 2-7 已完成文件存在、bytes、SHA-256、ffprobe 时长和解码核对；教师逐段语义听核及 PowerPoint 实际播放测试尚未完成。",
+            "开放式口语题、综合填表、分组总结与拓展练习没有唯一标准答案，不补写答案。"
+          ],
+          "approval_basis": [
+            "主教材 PDF 第25-34页（印刷 P12-P21）高分辨率视觉核对",
+            "答案 PDF 文件第8-10页（答案印刷 P5-P7）题组答案与三段听力文本视觉核对",
+            "来源总盘点第二课 QR、音频 bytes、SHA-256、ffprobe 时长和解码记录；2-7 用户恢复记录见 audio technical audit"
+          ]
+        },
+        "sections": [
+          {
+            "id": "vocabulary",
+            "printed_pages": [
+              12,
+              13
+            ],
+            "audio": "2-1",
+            "entries": [
+              {
+                "no": 1,
+                "word": "排球",
+                "pinyin": "páiqiú",
+                "pos": "名",
+                "gloss": "volleyball"
+              },
+              {
+                "no": 2,
+                "word": "志愿者",
+                "pinyin": "zhìyuànzhě",
+                "pos": "名",
+                "gloss": "volunteer"
+              },
+              {
+                "no": 3,
+                "word": "讲解员",
+                "pinyin": "jiǎngjiěyuán",
+                "pos": "名",
+                "gloss": "docent"
+              },
+              {
+                "no": 4,
+                "word": "博物馆",
+                "pinyin": "bówùguǎn",
+                "pos": "名",
+                "gloss": "museum"
+              },
+              {
+                "no": 5,
+                "word": "展品",
+                "pinyin": "zhǎnpǐn",
+                "pos": "名",
+                "gloss": "exhibit"
+              },
+              {
+                "no": 6,
+                "word": "体育课",
+                "pinyin": "tǐyùkè",
+                "pos": "名",
+                "gloss": "physical education"
+              },
+              {
+                "no": 7,
+                "word": "了解",
+                "pinyin": "liǎojiě",
+                "pos": "动",
+                "gloss": "to understand"
+              },
+              {
+                "no": 8,
+                "word": "周围",
+                "pinyin": "zhōuwéi",
+                "pos": "名",
+                "gloss": "around; round"
+              },
+              {
+                "no": 9,
+                "word": "基本",
+                "pinyin": "jīběn",
+                "pos": "副",
+                "gloss": "basically"
+              },
+              {
+                "no": 10,
+                "word": "不知不觉",
+                "pinyin": "bùzhī-bùjué",
+                "pos": null,
+                "pos_status": "blank_in_source",
+                "gloss": "unknowingly"
+              },
+              {
+                "no": 11,
+                "word": "热烈",
+                "pinyin": "rèliè",
+                "pos": "形",
+                "gloss": "warm"
+              },
+              {
+                "no": 12,
+                "word": "游客",
+                "pinyin": "yóukè",
+                "pos": "名",
+                "gloss": "tourist"
+              },
+              {
+                "no": 13,
+                "word": "布置",
+                "pinyin": "bùzhì",
+                "pos": "动",
+                "gloss": "to decorate; to arrange"
+              },
+              {
+                "no": 14,
+                "word": "尤其",
+                "pinyin": "yóuqí",
+                "pos": "副",
+                "gloss": "especially",
+                "starred": true
+              },
+              {
+                "no": 15,
+                "word": "交流",
+                "pinyin": "jiāoliú",
+                "pos": "动",
+                "gloss": "to communicate",
+                "starred": true
+              },
+              {
+                "no": 16,
+                "word": "顿",
+                "pinyin": "dùn",
+                "pos": "量",
+                "gloss": "measure word for meal, etc."
+              },
+              {
+                "no": 17,
+                "word": "庆祝",
+                "pinyin": "qìngzhù",
+                "pos": "动",
+                "gloss": "to celebrate"
+              },
+              {
+                "no": 18,
+                "word": "特点",
+                "pinyin": "tèdiǎn",
+                "pos": "名",
+                "gloss": "characteristic",
+                "starred": true
+              },
+              {
+                "no": 19,
+                "word": "环境",
+                "pinyin": "huánjìng",
+                "pos": "名",
+                "gloss": "environment",
+                "starred": true
+              },
+              {
+                "no": 20,
+                "word": "熟悉",
+                "pinyin": "shúxī",
+                "pos": "动",
+                "gloss": "to be familiar with",
+                "starred": true
+              },
+              {
+                "no": 21,
+                "word": "感觉",
+                "pinyin": "gǎnjué",
+                "pos": "动",
+                "gloss": "to feel",
+                "starred": true
+              },
+              {
+                "no": 22,
+                "word": "收获",
+                "pinyin": "shōuhuò",
+                "pos": "名",
+                "gloss": "harvest; gain",
+                "starred": true
+              },
+              {
+                "no": 23,
+                "word": "插",
+                "pinyin": "chā",
+                "pos": "动",
+                "gloss": "to insert; to place"
+              },
+              {
+                "no": 24,
+                "word": "接着",
+                "pinyin": "jiēzhe",
+                "pos": "动／副",
+                "gloss": "to continue; afterwards"
+              },
+              {
+                "no": 25,
+                "word": "科学",
+                "pinyin": "kēxué",
+                "pos": "名",
+                "gloss": "science"
+              },
+              {
+                "no": 26,
+                "word": "参观",
+                "pinyin": "cānguān",
+                "pos": "动",
+                "gloss": "to visit; to tour"
+              },
+              {
+                "no": 27,
+                "word": "举办",
+                "pinyin": "jǔbàn",
+                "pos": "动",
+                "gloss": "to hold"
+              },
+              {
+                "no": 28,
+                "word": "增长",
+                "pinyin": "zēngzhǎng",
+                "pos": "动",
+                "gloss": "to increase; to grow"
+              },
+              {
+                "no": 29,
+                "word": "同时",
+                "pinyin": "tóngshí",
+                "pos": "连",
+                "gloss": "at the same time",
+                "starred": true
+              }
+            ],
+            "source_status": "visually_verified_pending_adam_approval"
+          },
+          {
+            "id": "vocabulary_comprehension",
+            "printed_pages": [
+              13,
+              14
+            ],
+            "audio": "2-2",
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "groups": [
+              {
+                "topic": "关于课外活动的词语",
+                "image_labels": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ],
+                "words": [
+                  "排球",
+                  "志愿者",
+                  "讲解员",
+                  "博物馆",
+                  "展品"
+                ],
+                "answer": [
+                  "1.A",
+                  "2.E",
+                  "3.B",
+                  "4.C",
+                  "5.D"
+                ]
+              },
+              {
+                "topic": "关于学习的词语",
+                "image_labels": [
+                  "A",
+                  "B",
+                  "C"
+                ],
+                "words": [
+                  "认真",
+                  "讨论",
+                  "上体育课"
+                ],
+                "answer": [
+                  "1.C",
+                  "2.B",
+                  "3.A"
+                ]
+              },
+              {
+                "topic": "关于生活的词语",
+                "image_labels": [
+                  "A",
+                  "B",
+                  "C"
+                ],
+                "words": [
+                  "蛋糕",
+                  "蜡烛",
+                  "面条儿"
+                ],
+                "answer": [
+                  "1.A",
+                  "2.C",
+                  "3.B"
+                ]
+              }
+            ],
+            "answer_status": "answers_checked_against_answer_pdf"
+          },
+          {
+            "id": "listening_sentences",
+            "printed_pages": [
+              14,
+              15
+            ],
+            "audio_tracks": [
+              "2-3"
+            ],
+            "exercises": {
+              "exercise_2_3": {
+                "heading_verbatim": "听句子，判断对错",
+                "items": [
+                  [
+                    1,
+                    "姐姐有3名同屋。",
+                    "错"
+                  ],
+                  [
+                    2,
+                    "同学们了解了大学学习的特点。",
+                    "错"
+                  ],
+                  [
+                    3,
+                    "大学周围有博物馆。",
+                    "错"
+                  ],
+                  [
+                    4,
+                    "毛毛对大学生活基本适应了。",
+                    "对"
+                  ],
+                  [
+                    5,
+                    "丽丽觉得数学课挺有用。",
+                    "对"
+                  ],
+                  [
+                    6,
+                    "不知不觉，到了下课时间。",
+                    "错"
+                  ],
+                  [
+                    7,
+                    "同学们讨论得很热烈。",
+                    "对"
+                  ],
+                  [
+                    8,
+                    "过新年的时候，那家公园游客不少。",
+                    "错"
+                  ],
+                  [
+                    9,
+                    "王红在博物馆当志愿者。",
+                    "对"
+                  ],
+                  [
+                    10,
+                    "展览是哥哥和他的朋友布置的。",
+                    "错"
+                  ]
+                ]
+              }
+            },
+            "answer_status": "answers_checked_against_answer_pdf"
+          },
+          {
+            "id": "listening_dialogue",
+            "printed_pages": [
+              15
+            ],
+            "audio": "2-4",
+            "title": "听小对话，选择正确答案",
+            "heading_verbatim": "听小对话，选择正确答案",
+            "items": [
+              {
+                "no": 1,
+                "dialogue": [
+                  "A：丽丽，明天上午你有空吗？一起去博物馆怎么样？",
+                  "B：不好意思，我很累，想在家好好儿休息休息。"
+                ],
+                "answer": "A"
+              },
+              {
+                "no": 2,
+                "dialogue": [
+                  "A：王红，你上大学了？",
+                  "B：嗯。我喜欢上课，尤其是数学课。"
+                ],
+                "answer": "A"
+              },
+              {
+                "no": 3,
+                "dialogue": [
+                  "A：阿里，老师说学校的排球比赛下星期一开始。",
+                  "B：好啊，我也想和中国同学交流交流。"
+                ],
+                "answer": "B"
+              },
+              {
+                "no": 4,
+                "dialogue": [
+                  "A：你看，教室里坐满了人。",
+                  "B：是啊，我们来晚了。"
+                ],
+                "answer": "A"
+              },
+              {
+                "no": 5,
+                "dialogue": [
+                  "A：明天晚上我们一起吃一顿饭吧。",
+                  "B：好啊，我想吃四川菜。"
+                ],
+                "answer": "B"
+              }
+            ],
+            "answer_status": "answers_checked_against_answer_pdf"
+          },
+          {
+            "id": "short_text_1",
+            "printed_pages": [
+              15,
+              16
+            ],
+            "audio": "2-5",
+            "title": "王红喜欢上课",
+            "text": "今天11月8日，星期二，是王红19岁生日。早上，同屋们对她说，中午要好好儿为她庆祝生日。两个月以前，王红开始了大学生活。现在她对大学的学习特点有了比较清楚的了解，基本适应了大学的生活和学习，对周围环境也熟悉了。王红喜欢上课，尤其是数学课，数学虽然不容易，可是很有用。今天头两节课就是数学课。她7点50分到教室，老师和大部分同学都已经到了。大家听课认真，讨论热烈，不知不觉就到了下课时间。同学们感觉很愉快，同时也很有收获。第三四节是体育课，王红她们和来学校交流的外国学生打了一场排球比赛。大家都觉得这样的交流很有意思。",
+            "exercises": {
+              "first_listen": [
+                "王红多大？",
+                "王红是大学生吗？",
+                "王红特别喜欢什么课？",
+                "王红觉得什么课不容易？",
+                "王红体育课做什么了？"
+              ],
+              "second_listen": [
+                "王红觉得大学生活怎么样？（了解  熟悉  适应）",
+                "王红上午上什么课了？她的课上得怎么样？（同时  讨论  认真  不知不觉）"
+              ],
+              "present": "请你说说王红的大学生活，重点说说她上课的情况。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：开始、每次、收获、周围、环境。常用表达参考：对……有了了解、对……熟悉了、尤其、虽然……可是……。",
+              "compare": "王红今年19岁，两个月以前开始上大学。现在，她对大学的学习特点有了了解，对周围环境也熟悉了，已经基本适应了大学生活。她喜欢上课，尤其是数学课。她觉得数学虽然很难，可是很有用。每次上课，她都觉得很有收获。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  15
+                ],
+                "audio_tracks": [
+                  "2-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  16
+                ],
+                "audio_tracks": [
+                  "2-5"
+                ]
+              }
+            },
+            "answer_status": "open_presentational_task_no_unique_answer"
+          },
+          {
+            "id": "common_expressions_school_life",
+            "printed_pages": [
+              16,
+              17
+            ],
+            "topic": "谈论学校生活",
+            "items": [
+              {
+                "expression": "对……熟悉／对……有了了解",
+                "examples": [
+                  "王红对学校的历史不太熟悉。",
+                  "我对同学们的情况有了一些了解。"
+                ]
+              },
+              {
+                "expression": "尤其",
+                "examples": [
+                  "我喜欢学历史，尤其是世界历史。",
+                  "我们班的同学都喜欢上体育课，尤其是小王。"
+                ]
+              },
+              {
+                "expression": "虽然……可是……",
+                "examples": [
+                  "我很喜欢我的专业，虽然很忙很累，可是我每天都很愉快。",
+                  "天气虽然很冷，可是来操场锻炼的学生还是很多。"
+                ]
+              },
+              {
+                "expression": "不知不觉",
+                "examples": [
+                  "时间过得真快，不知不觉，这个学期已经过了一半。",
+                  "大家讨论得很热烈，不知不觉，天已经黑了。"
+                ]
+              },
+              {
+                "expression": "同时",
+                "examples": [
+                  "我来中国，主要是学习中文，同时，也希望了解中国文化。",
+                  "出去旅游可以了解一个地方的历史，同时，也有可能交到中国朋友。"
+                ]
+              }
+            ],
+            "source_status": "examples_visually_verified"
+          },
+          {
+            "id": "short_text_2",
+            "printed_pages": [
+              17,
+              18
+            ],
+            "audio": "2-6",
+            "title": "生日午餐",
+            "text": "从体育馆出来，王红接到同屋李梅的电话，让她回宿舍。推开宿舍的门，王红看见宿舍里坐满了人，她的3名同屋还有其他几位同学坐在大桌子旁边。桌子上摆着面条儿、水果和一个大蛋糕，蛋糕上插着一根红蜡烛。看见王红进来，大家都站起来大声说：‘王红，生日快乐！’接着，她们还一起给王红唱了生日歌。王红高兴极了，她和同学、朋友们开开心心地吃了一顿饭。",
+            "exercises": {
+              "first_listen": [
+                "王红中午在哪里吃的饭？",
+                "王红她们中午吃什么了？",
+                "王红的同屋唱歌了吗？",
+                "王红感觉怎么样？"
+              ],
+              "second_listen": [
+                "和王红一起吃饭的人多不多？她们是谁？（同屋  坐满  朋友）",
+                "桌子上摆着什么？（摆  插）"
+              ],
+              "group_practice": {
+                "title": "王红的生日午餐",
+                "requirements": "一个人先说4～6个句子，不少于40字；然后其他同学补充；最后再由一名同学总结，说6～8个句子，不少于60字。",
+                "vocabulary_reference": [
+                  "摆",
+                  "插",
+                  "生日歌",
+                  "愉快"
+                ],
+                "expression_reference": [
+                  "给……开生日会",
+                  "顿",
+                  "开开心心"
+                ]
+              },
+              "compare": "今天是王红的生日。中午，同屋在宿舍给她开了一个生日会。桌子上摆着蛋糕，蛋糕上插着蜡烛。同学们一起唱了生日歌，王红跟同学们开开心心地吃了一顿饭。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  17
+                ],
+                "audio_tracks": [
+                  "2-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  17
+                ],
+                "audio_tracks": [
+                  "2-6"
+                ]
+              }
+            },
+            "answer_status": "open_presentational_task_no_unique_answer"
+          },
+          {
+            "id": "common_expressions_extra_curricular",
+            "printed_pages": [
+              18,
+              19,
+              20
+            ],
+            "topic": "谈论课外生活",
+            "items": [
+              {
+                "expression": "给……办／介绍",
+                "examples": [
+                  "大家给小丽办了一个生日会。",
+                  "请给大家介绍一下这道菜的做法。"
+                ]
+              },
+              {
+                "expression": "处所＋动词＋着＋人／物",
+                "examples": [
+                  "电影院里只坐着十几名观众。",
+                  "房间里摆着一张长沙发。"
+                ]
+              },
+              {
+                "expression": "接着",
+                "examples": [
+                  "星期天早上，我收拾了房间，接着，又把脏衣服洗了。",
+                  "我们去游泳馆游了一会儿泳，接着又去咖啡馆坐了坐。"
+                ]
+              },
+              {
+                "expression": "安安静静／舒舒服服／急急忙忙／开开心心＋（地）＋动词词组",
+                "examples": [
+                  "周末没有课，可以安安静静地在宿舍看书。",
+                  "丽丽过春节的时候可以舒舒服服地吃妈妈做的早饭，不用急急忙忙地赶着去上班。"
+                ]
+              },
+              {
+                "expression": "量词",
+                "examples": [
+                  "住在宿舍，一天三顿饭都在食堂吃。",
+                  "王红每个月都去看一场电影。"
+                ]
+              },
+              {
+                "expression": "自从……以来",
+                "examples": [
+                  "自从上大学以来，王红每周二下午都去博物馆当志愿者。",
+                  "自从开学以来，先后有500名同学参与了校园服务活动。"
+                ]
+              },
+              {
+                "expression": "每……都……",
+                "examples": [
+                  "我们这博物馆，每周六、日都有高中学生在这儿做讲解员。",
+                  "我们学校，每学期都会安排两次社会实践活动。"
+                ]
+              },
+              {
+                "expression": "不但……同时……",
+                "examples": [
+                  "参加志愿服务活动，不但可以帮助别人，同时，对自己也是很好的社会实践机会。",
+                  "这学期我参加了自行车俱乐部，不但有机会去以前没去过的地方游玩儿，同时，也认识了不少新朋友。"
+                ]
+              },
+              {
+                "expression": "其中",
+                "examples": [
+                  "报名参加这次活动的学生很多，其中不少是大一新生。",
+                  "学校举办了各种各样的讲座，其中，心理辅导讲座最受学生们欢迎。"
+                ]
+              },
+              {
+                "expression": "过得",
+                "examples": [
+                  "时间过得真快，这个学期结束了。",
+                  "丽丽觉得，周末可以过得轻松一点儿。"
+                ]
+              }
+            ],
+            "source_status": "examples_visually_verified"
+          },
+          {
+            "id": "short_text_3",
+            "printed_pages": [
+              18,
+              19
+            ],
+            "audio": "2-7",
+            "title": "课外活动",
+            "text": "王红下午没有课。自从上大学以来，她每星期二下午都去学校附近的科学博物馆做志愿者。这家博物馆已经有50年的历史了，里面的展品很丰富，每天都有不少游客来这里参观，其中一部分是本市的中小学生。下个月，博物馆要举办一次特别展览，王红今天去帮助他们翻译展品介绍、布置展品、回答网友提出的问题。特别展览开始以后，她还要去做讲解员。王红很喜欢这样的课外活动，因为这些课外活动不但可以增长科学知识，同时，也有机会为别人服务。今年这个生日，王红觉得过得很有意义。",
+            "exercises": {
+              "first_listen": [
+                "王红每星期二下午去哪儿？",
+                "下星期有什么活动？王红要做什么？",
+                "这个生日王红觉得过得怎么样？"
+              ],
+              "second_listen": [
+                "那个科学博物馆怎么样？（展品  参观  其中）",
+                "王红今天去做什么？（布置  回答  翻译）"
+              ],
+              "group_practice": {
+                "title": "大家一起谈谈王红的课外活动",
+                "requirements": "一名同学先说4～6个句子，不少于40字；然后其他同学补充；最后再由一名同学总结，说6～8个句子，不少于60字。",
+                "vocabulary_reference": [
+                  "当",
+                  "志愿者",
+                  "翻译",
+                  "布置",
+                  "回答",
+                  "讲解员",
+                  "增长",
+                  "服务"
+                ],
+                "expression_reference": [
+                  "自从……以来",
+                  "每……都……",
+                  "不但……同时……"
+                ]
+              },
+              "compare": "自从上大学以来，王红每周二下午都去博物馆当志愿者。她常做一些翻译材料、布置展品、回答网友问题这样的工作。在博物馆工作，不但可以增长知识，同时，也可以为别人服务。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  18
+                ],
+                "audio_tracks": [
+                  "2-7"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  19
+                ],
+                "audio_tracks": [
+                  "2-7"
+                ]
+              }
+            },
+            "answer_status": "audio_recovered_user_supplied; semantic_listening_pending; open_presentational_task_no_unique_answer"
+          },
+          {
+            "id": "comprehensive_practice",
+            "printed_pages": [
+              20,
+              21
+            ],
+            "audio_tracks": [
+              "2-5",
+              "2-6",
+              "2-7"
+            ],
+            "items": [
+              {
+                "id": "comprehensive_1",
+                "instruction": "这是王红一天的安排，请你根据听过的三段短文填表",
+                "table_transcription": [
+                  {
+                    "row": "11月8日 星期____ 今天是我的____",
+                    "cells": [
+                      "上午",
+                      "中午",
+                      "下午"
+                    ]
+                  },
+                  {
+                    "row": "上午",
+                    "cells": [
+                      "____课",
+                      "",
+                      "有收获"
+                    ]
+                  },
+                  {
+                    "row": "上午",
+                    "cells": [
+                      "体育课",
+                      "和外国学生________",
+                      "有意思"
+                    ]
+                  },
+                  {
+                    "row": "中午",
+                    "cells": [
+                      "在宿舍开________",
+                      "朋友们请我吃________、________、________",
+                      "________"
+                    ]
+                  },
+                  {
+                    "row": "下午",
+                    "cells": [
+                      "去博物馆做________",
+                      "________、________、回答网友问题",
+                      "有意义"
+                    ]
+                  }
+                ],
+                "answer_status": "open_table_teacher_check"
+              },
+              {
+                "id": "comprehensive_2",
+                "instruction": "根据上面的表格和下面给出的参考词语和常用表达，谈一谈：（1）王红的学校生活；（2）王红的生日午餐；（3）王红的课外活动。要求：一名同学先说6～8个句子，不少于60字；然后小组其他同学补充；最后由一名同学总结，说8～10个句子，不少于80字。词语参考：了解 熟悉 适应 有用 收获 摆 回答 讲解员 志愿者。常用表达参考：开开心心 顿 尤其。",
+                "answer_status": "open_presentational_task"
+              },
+              {
+                "id": "comprehensive_3",
+                "instruction": "拓展练习：你们学校生活怎么样？请你谈一谈：（1）自己的学校生活；（2）自己最难忘的生日；（3）自己的课外活动。要求：（1）使用这一课学过的词语和常用表达；（2）说8～10个句子，不少于80字。",
+                "answer_status": "open_presentational_task"
+              }
+            ],
+            "source_status": "visually_verified_pending_adam_approval"
+          }
+        ],
+        "extraction_snapshot": {
+          "page_audit": "audit/source-pages-12-21-audit-draft.md",
+          "answer_audit": "audit/answer-pages-8-10-audit-draft.md",
+          "audio_audit": "audit/audio-technical-2026-08-29.md",
+          "status": "draft_source_review_snapshot",
+          "created_at": "2026-08-28",
+          "note": "主教材为扫描影像；正文、题目、答案与三段听力文本按页面视觉核对。短文三在教材标为 2-7，Adam 提供的 WAV 已转换并登记为用户来源恢复；未将语义听核或教师播放测试标记为完成。"
+        },
+        "source_fingerprints": {
+          "source_pdf_sha256": "39899d0f400e187f57c16db821f8f4c207f936eae0e4fbfe3cab52c02bfea806",
+          "answer_pdf_sha256": "3c21e1574b0187259769799d183eca78a60a515b5b7fce202eda9e9ade2c20b8",
+          "qr_capture_sha256": "a007a443b36249a9d47ae494c678f9a3d25eca44a17cf945379b9a7c5cf25d16"
+        }
+      },
+      "source_manifest": {
+        "schema_version": "boya-lesson-source-manifest-v1",
+        "manifest_type": "lesson-source-review",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_id": "lesson-02",
+        "lesson_key": "boya-quasi-intermediate-i:lesson-02",
+        "completion_confirmation": {
+          "status": "completed_by_adam",
+          "confirmed_by": "Adam",
+          "confirmed_at": "2026-09-08",
+          "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+          "technical_status_preserved": true
+        },
+        "lesson_number": 2,
+        "lesson_title": "王红的一天",
+        "language": "简体中文",
+        "audio_count": 7,
+        "audio_count_note": "6 个出版社 QR 音频 + 1 个 Adam 提供并转换的 2-7 来源音频",
+        "package": "lesson-02-source-review",
+        "prepared_at": "2026-08-29",
+        "source_status": "pending_review",
+        "source_qa_status": "technical_audio_passed_7_of_7; 2-7_semantic_and_playback_approved; 2-1_to_2-6_pending",
+        "extraction_status": "source_review_materialized",
+        "review_status": "partial_adam_review_recorded",
+        "approved": false,
+        "approved_by": [],
+        "approved_at": null,
+        "adam_review": {
+          "status": "partial_approval",
+          "approved_by": "Adam",
+          "approved_at": "2026-08-29",
+          "scope": [
+            "audio_track:2-7",
+            "source_record",
+            "image_assets"
+          ],
+          "notes": "Adam 确认 2-7 与教材 P18-P19《课外活动》对应并通过播放；L2 图片与来源记录正确。2-1 至 2-6 的语义／PowerPoint 播放状态不因本次确认而改写。"
+        },
+        "canonical_source": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/canonical-source.json",
+          "sha256": "6dfb97de7500c888849dad2a5a1c93978542917d3a725a8aeafe53be16545fe3",
+          "status": "source_review_snapshot_with_adam_2-7_confirmation",
+          "note": "Adam 已确认 2-7、来源记录与图片；整体课次仍未成为 approved authority。"
+        },
+        "canonical_source_sha256": "6dfb97de7500c888849dad2a5a1c93978542917d3a725a8aeafe53be16545fe3",
+        "source_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+          "sha256": "39899d0f400e187f57c16db821f8f4c207f936eae0e4fbfe3cab52c02bfea806",
+          "total_pages": 134,
+          "textbook_page_range": "12-21",
+          "pdf_page_range": "25-34",
+          "page_count_in_review": 10,
+          "format": "scanned_image_pdf",
+          "text_layer_status": "empty; visual review used"
+        },
+        "answer_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+          "sha256": "3c21e1574b0187259769799d183eca78a60a515b5b7fce202eda9e9ade2c20b8",
+          "total_pages": 33,
+          "pdf_page_range_in_review": "8-10",
+          "printed_page_range_in_review": "答案 P5-P7",
+          "answer_status": "closed_answers_visual_checked; open_tasks_have_no_unique_answer",
+          "continuation_note": "文件页9-10承接三段听力文本；短文三标签为 2-7。"
+        },
+        "page_audit": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/audit/source-pages-12-21-audit-draft.md",
+          "sha256": "69738d61834d253a9060b755574cf7eced4a60492a4457a5b1596adf53f3ae67",
+          "status": "visual_first_pass"
+        },
+        "answer_audit": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/audit/answer-pages-8-10-audit-draft.md",
+          "sha256": "16207446a8ebe132bb4816440bd3cbe41ded1a941ea0f0f55bf9b3ace64823e0",
+          "status": "visual_first_pass"
+        },
+        "qr_source": {
+          "qr_url": "http://qr31.cn/H1krER",
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-02-pdf-page-025.png",
+          "capture_sha256": "a007a443b36249a9d47ae494c678f9a3d25eca44a17cf945379b9a7c5cf25d16",
+          "landing_page": "https://biz.cli.im/site/H1krER?qrurl=http://qr31.cn/H1krER&gtype=2&key=2f3e4171ce1d0df5087828fc7991b4470b28d38181",
+          "landing_audio_labels": [
+            "2-1",
+            "2-2",
+            "2-3",
+            "2-4",
+            "2-5",
+            "2-6"
+          ],
+          "textbook_labels_seen": [
+            "2-1",
+            "2-2",
+            "2-3",
+            "2-4",
+            "2-5",
+            "2-6",
+            "2-7"
+          ],
+          "status": "decoded_landing_page_2-1_to_2-6; user_supplied_2-7_recovered"
+        },
+        "audio": {
+          "root": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02",
+          "manifest_path": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/audio-manifest.json",
+          "manifest_sha256": "b2700867ebefaa506cd15721c2591b74a0e16e18cf081cfa5e4070b501c17718",
+          "technical_audit": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/audit/audio-technical-2026-08-29.md",
+          "technical_audit_sha256": "3aa21e84ccc59edb45eeabddcd83d26075e0451f0ac65a4c6d27ad5747539961",
+          "expected_track_count": 7,
+          "local_track_count": 7,
+          "decode_passed_count": 7,
+          "semantic_listening_count": 1,
+          "teacher_playback_count": 1,
+          "missing_tracks": [],
+          "recovered_tracks": [
+            "2-7"
+          ],
+          "status": "technical_pass_for_7_of_7; 2-7_semantic_and_playback_passed; 2-1_to_2-6_pending"
+        },
+        "listening_exercise_contract": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/listening-exercise-contract.json",
+          "sha256": "1b3d105ca9b42b4141a9fd72cfb76aa463c1391c1c8316e8eef0a358dd2cb9fe",
+          "status": "draft_pending_source_approval_semantic_audio_review",
+          "exercise_count": 10,
+          "missing_audio_tracks": []
+        },
+        "review_evidence": [
+          "lessons/boya-quasi-intermediate-i/lesson-02/00-source/audit/source-pages-12-21-audit-draft.md",
+          "lessons/boya-quasi-intermediate-i/lesson-02/00-source/audit/answer-pages-8-10-audit-draft.md",
+          "lessons/boya-quasi-intermediate-i/lesson-02/00-source/audit/audio-technical-2026-08-29.md",
+          "lessons/boya-quasi-intermediate-i/lesson-02/00-source/audit/audio-recovery-2026-08-29.md",
+          "lessons/boya-quasi-intermediate-i/lesson-02/00-source/audit/adam-review-2026-08-29.md"
+        ],
+        "counts": {
+          "vocabulary": 29,
+          "vocabulary_comprehension_groups": 3,
+          "vocabulary_comprehension_items": 11,
+          "listening_sentence_items": 10,
+          "dialogue_items": 5,
+          "short_texts": 3,
+          "listening_exercise_groups": 7,
+          "listening_contract_records": 10,
+          "common_expression_groups": 2,
+          "grammar_patterns": 15,
+          "comprehensive_exercises": 3
+        },
+        "blockers": [
+          "L2 来源记录与图片已由 Adam 确认；整体来源仍需完成剩余音频与课次级批准。",
+          "主教材与答案 PDF 显示短文三《课外活动》使用 2-7；Adam 已提供 WAV 并转换为项目 MP3，来源类型记录为用户提供恢复，不改写出版社 QR/source inventory。",
+          "2-7 已完成语义听核与 PowerPoint 播放确认；2-1 至 2-6 的教师语义听核与播放实测仍待完成。",
+          "开放式口语题、综合填表、分组总结与拓展练习没有唯一标准答案。"
+        ],
+        "next_minimum_step": "完成 2-1 至 2-6 的语义听核与 PowerPoint 播放；随后记录 L2 整体来源批准，来源批准前不得进入 PBI、教师手册或 PPTX。"
+      },
+      "audio": {
+        "schema_version": "boya-lesson-audio-manifest-v1",
+        "lesson_id": "lesson-02",
+        "lesson_key": "boya-quasi-intermediate-i:lesson-02",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_title": "王红的一天",
+        "audio_count": 7,
+        "audio_count_note": "6 个出版社 QR 音频 + 1 个 Adam 提供并转换的 2-7 来源音频",
+        "recorded_at": "2026-08-29",
+        "provenance": {
+          "source_type": "publisher_qr_landing_page",
+          "qr_url": "http://qr31.cn/H1krER",
+          "landing_page": "https://biz.cli.im/site/H1krER?qrurl=http://qr31.cn/H1krER&gtype=2&key=2f3e4171ce1d0df5087828fc7991b4470b28d38181",
+          "landing_audio_labels": [
+            "2-1",
+            "2-2",
+            "2-3",
+            "2-4",
+            "2-5",
+            "2-6"
+          ],
+          "textbook_labels_seen": [
+            "2-1",
+            "2-2",
+            "2-3",
+            "2-4",
+            "2-5",
+            "2-6",
+            "2-7"
+          ],
+          "expected_audio_labels": [
+            "2-1",
+            "2-2",
+            "2-3",
+            "2-4",
+            "2-5",
+            "2-6",
+            "2-7"
+          ],
+          "label_discrepancy": "主教材 P18-P19 及答案 PDF 文件页10标示短文三《课外活动》使用 2-7；publisher QR landing page 与 source inventory 仍只列 2-1 至 2-6，2-7 由 Adam 提供 WAV 后恢复。",
+          "recovery": {
+            "source_type": "user_supplied_audio",
+            "input_filename": "2-7.wav",
+            "input_sha256": "b4830c93f602533f75737d9bc2b34f835a42fc0e2df26cb031131253f930cb70",
+            "input_format": "wav_pcm_s16le",
+            "input_sample_rate_hz": 24000,
+            "input_channels": 1,
+            "input_duration_seconds": 57.04,
+            "output_path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-7.mp3",
+            "output_sha256": "13e4a8068ce1b50a52243ed98b956484406b2678373e59f8cc66096652b735fd",
+            "output_format": "mp3",
+            "conversion": "PCM WAV to MP3, 128 kbps CBR, 44100 Hz, mono",
+            "recovered_at": "2026-08-29"
+          }
+        },
+        "technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/audit/audio-technical-2026-08-29.md",
+        "tracks": [
+          {
+            "label": "2-1",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FrcsApC3vbzAKWKS-hUPQNs18T4v",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-1.mp3",
+            "scope": "词语（P12-P13）",
+            "bytes": 861404,
+            "sha256": "9425046c170d85f1a8dd25fa9d7afce508811dafebcdc8b0b806938aca3d8a56",
+            "duration_seconds": 53.524898,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "2-2",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FuOLWdJhJOaCfDAOhTGm555Y2Eiv",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-2.mp3",
+            "scope": "词语理解（P13-P14）",
+            "bytes": 683353,
+            "sha256": "5ad1a76dea86112f9a967a5d49ae124a7afbf01be77b0989bf8369dec2eed6fc",
+            "duration_seconds": 42.396735,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "2-3",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fn8_en5WTQpj8eLTt--rauvOi18M",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-3.mp3",
+            "scope": "听说句子（P14-P15）",
+            "bytes": 1869103,
+            "sha256": "97b01a753c80a4b2ec850b0d0f60514c58e2455901dafc988958512de112a1db",
+            "duration_seconds": 116.506122,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "2-4",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FtAmltELpWLKXr_R4mjQWl-aepsK",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-4.mp3",
+            "scope": "听小对话（P15）",
+            "bytes": 1350834,
+            "sha256": "7dcd2b8934ab85277744aad0e39c9aa039af7803adcceb33269469c096a80fa3",
+            "duration_seconds": 84.114286,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "2-5",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FpZ_TqHXC83O_j9ELJ9jesJPS_D9",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-5.mp3",
+            "scope": "短文一《王红喜欢上课》（P15-P16）",
+            "bytes": 805815,
+            "sha256": "44dbd41d3631363b7c998e91730a412e12b537a65a8f88ed09884a3483e2e957",
+            "duration_seconds": 50.050612,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "2-6",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FmhttHW2y3TFGkjunvaqc9JRE7ek",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-6.mp3",
+            "scope": "短文二《生日午餐》（P17-P18）",
+            "bytes": 1041962,
+            "sha256": "b59eb5af70b6928d11da243665eb8dd4e70d2dbef616f1a249816be6f1ab9265",
+            "duration_seconds": 64.809796,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "2-7",
+            "play_url": null,
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-7.mp3",
+            "scope": "短文三《课外活动》（P18-P19）",
+            "bytes": 913702,
+            "sha256": "13e4a8068ce1b50a52243ed98b956484406b2678373e59f8cc66096652b735fd",
+            "duration_seconds": 57.04,
+            "decode_status": "passed",
+            "semantic_status": "passed",
+            "teacher_playback_status": "passed"
+          }
+        ],
+        "missing_tracks": [],
+        "recovered_tracks": [
+          "2-7"
+        ],
+        "status": "technical_pass_for_7_of_7; 2-7_semantic_and_teacher_playback_passed; 2-1_to_2-6_pending",
+        "coverage_status": "tracks_2-1_to_2-7_mapped_to_source_sections; 2-7_user_supplied_recovery_approved_by_adam; 2-1_to_2-6_semantic_and_teacher_playback_pending",
+        "technical_summary": {
+          "expected_track_count": 7,
+          "local_track_count": 7,
+          "decode_passed": 7,
+          "missing_track_count": 0,
+          "semantic_listening_completed": 1,
+          "teacher_powerpoint_playback_completed": 1
+        }
+      },
+      "canonical_path": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/canonical-source.json",
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-02/00-source/source-manifest.json",
+      "canonical_source_sha256": "6dfb97de7500c888849dad2a5a1c93978542917d3a725a8aeafe53be16545fe3",
+      "review_items": [
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:1",
+          "value": {
+            "no": 1,
+            "word": "排球",
+            "pinyin": "páiqiú",
+            "pos": "名",
+            "gloss": "volleyball"
+          },
+          "title": "排球",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:2",
+          "value": {
+            "no": 2,
+            "word": "志愿者",
+            "pinyin": "zhìyuànzhě",
+            "pos": "名",
+            "gloss": "volunteer"
+          },
+          "title": "志愿者",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:3",
+          "value": {
+            "no": 3,
+            "word": "讲解员",
+            "pinyin": "jiǎngjiěyuán",
+            "pos": "名",
+            "gloss": "docent"
+          },
+          "title": "讲解员",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:4",
+          "value": {
+            "no": 4,
+            "word": "博物馆",
+            "pinyin": "bówùguǎn",
+            "pos": "名",
+            "gloss": "museum"
+          },
+          "title": "博物馆",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:5",
+          "value": {
+            "no": 5,
+            "word": "展品",
+            "pinyin": "zhǎnpǐn",
+            "pos": "名",
+            "gloss": "exhibit"
+          },
+          "title": "展品",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:6",
+          "value": {
+            "no": 6,
+            "word": "体育课",
+            "pinyin": "tǐyùkè",
+            "pos": "名",
+            "gloss": "physical education"
+          },
+          "title": "体育课",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:7",
+          "value": {
+            "no": 7,
+            "word": "了解",
+            "pinyin": "liǎojiě",
+            "pos": "动",
+            "gloss": "to understand"
+          },
+          "title": "了解",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:8",
+          "value": {
+            "no": 8,
+            "word": "周围",
+            "pinyin": "zhōuwéi",
+            "pos": "名",
+            "gloss": "around; round"
+          },
+          "title": "周围",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:9",
+          "value": {
+            "no": 9,
+            "word": "基本",
+            "pinyin": "jīběn",
+            "pos": "副",
+            "gloss": "basically"
+          },
+          "title": "基本",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:10",
+          "value": {
+            "no": 10,
+            "word": "不知不觉",
+            "pinyin": "bùzhī-bùjué",
+            "pos": null,
+            "pos_status": "blank_in_source",
+            "gloss": "unknowingly"
+          },
+          "title": "不知不觉",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:11",
+          "value": {
+            "no": 11,
+            "word": "热烈",
+            "pinyin": "rèliè",
+            "pos": "形",
+            "gloss": "warm"
+          },
+          "title": "热烈",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:12",
+          "value": {
+            "no": 12,
+            "word": "游客",
+            "pinyin": "yóukè",
+            "pos": "名",
+            "gloss": "tourist"
+          },
+          "title": "游客",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:13",
+          "value": {
+            "no": 13,
+            "word": "布置",
+            "pinyin": "bùzhì",
+            "pos": "动",
+            "gloss": "to decorate; to arrange"
+          },
+          "title": "布置",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:14",
+          "value": {
+            "no": 14,
+            "word": "尤其",
+            "pinyin": "yóuqí",
+            "pos": "副",
+            "gloss": "especially",
+            "starred": true
+          },
+          "title": "尤其",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:15",
+          "value": {
+            "no": 15,
+            "word": "交流",
+            "pinyin": "jiāoliú",
+            "pos": "动",
+            "gloss": "to communicate",
+            "starred": true
+          },
+          "title": "交流",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:16",
+          "value": {
+            "no": 16,
+            "word": "顿",
+            "pinyin": "dùn",
+            "pos": "量",
+            "gloss": "measure word for meal, etc."
+          },
+          "title": "顿",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:17",
+          "value": {
+            "no": 17,
+            "word": "庆祝",
+            "pinyin": "qìngzhù",
+            "pos": "动",
+            "gloss": "to celebrate"
+          },
+          "title": "庆祝",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:18",
+          "value": {
+            "no": 18,
+            "word": "特点",
+            "pinyin": "tèdiǎn",
+            "pos": "名",
+            "gloss": "characteristic",
+            "starred": true
+          },
+          "title": "特点",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:19",
+          "value": {
+            "no": 19,
+            "word": "环境",
+            "pinyin": "huánjìng",
+            "pos": "名",
+            "gloss": "environment",
+            "starred": true
+          },
+          "title": "环境",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:20",
+          "value": {
+            "no": 20,
+            "word": "熟悉",
+            "pinyin": "shúxī",
+            "pos": "动",
+            "gloss": "to be familiar with",
+            "starred": true
+          },
+          "title": "熟悉",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:21",
+          "value": {
+            "no": 21,
+            "word": "感觉",
+            "pinyin": "gǎnjué",
+            "pos": "动",
+            "gloss": "to feel",
+            "starred": true
+          },
+          "title": "感觉",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:22",
+          "value": {
+            "no": 22,
+            "word": "收获",
+            "pinyin": "shōuhuò",
+            "pos": "名",
+            "gloss": "harvest; gain",
+            "starred": true
+          },
+          "title": "收获",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:23",
+          "value": {
+            "no": 23,
+            "word": "插",
+            "pinyin": "chā",
+            "pos": "动",
+            "gloss": "to insert; to place"
+          },
+          "title": "插",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:24",
+          "value": {
+            "no": 24,
+            "word": "接着",
+            "pinyin": "jiēzhe",
+            "pos": "动／副",
+            "gloss": "to continue; afterwards"
+          },
+          "title": "接着",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:25",
+          "value": {
+            "no": 25,
+            "word": "科学",
+            "pinyin": "kēxué",
+            "pos": "名",
+            "gloss": "science"
+          },
+          "title": "科学",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:26",
+          "value": {
+            "no": 26,
+            "word": "参观",
+            "pinyin": "cānguān",
+            "pos": "动",
+            "gloss": "to visit; to tour"
+          },
+          "title": "参观",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:27",
+          "value": {
+            "no": 27,
+            "word": "举办",
+            "pinyin": "jǔbàn",
+            "pos": "动",
+            "gloss": "to hold"
+          },
+          "title": "举办",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:28",
+          "value": {
+            "no": 28,
+            "word": "增长",
+            "pinyin": "zēngzhǎng",
+            "pos": "动",
+            "gloss": "to increase; to grow"
+          },
+          "title": "增长",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:29",
+          "value": {
+            "no": 29,
+            "word": "同时",
+            "pinyin": "tóngshí",
+            "pos": "连",
+            "gloss": "at the same time",
+            "starred": true
+          },
+          "title": "同时",
+          "page": "12–13",
+          "audio": "2-1",
+          "type": "词语"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_1",
+          "value": {
+            "id": "short_text_1",
+            "printed_pages": [
+              15,
+              16
+            ],
+            "audio": "2-5",
+            "title": "王红喜欢上课",
+            "text": "今天11月8日，星期二，是王红19岁生日。早上，同屋们对她说，中午要好好儿为她庆祝生日。两个月以前，王红开始了大学生活。现在她对大学的学习特点有了比较清楚的了解，基本适应了大学的生活和学习，对周围环境也熟悉了。王红喜欢上课，尤其是数学课，数学虽然不容易，可是很有用。今天头两节课就是数学课。她7点50分到教室，老师和大部分同学都已经到了。大家听课认真，讨论热烈，不知不觉就到了下课时间。同学们感觉很愉快，同时也很有收获。第三四节是体育课，王红她们和来学校交流的外国学生打了一场排球比赛。大家都觉得这样的交流很有意思。",
+            "exercises": {
+              "first_listen": [
+                "王红多大？",
+                "王红是大学生吗？",
+                "王红特别喜欢什么课？",
+                "王红觉得什么课不容易？",
+                "王红体育课做什么了？"
+              ],
+              "second_listen": [
+                "王红觉得大学生活怎么样？（了解  熟悉  适应）",
+                "王红上午上什么课了？她的课上得怎么样？（同时  讨论  认真  不知不觉）"
+              ],
+              "present": "请你说说王红的大学生活，重点说说她上课的情况。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：开始、每次、收获、周围、环境。常用表达参考：对……有了了解、对……熟悉了、尤其、虽然……可是……。",
+              "compare": "王红今年19岁，两个月以前开始上大学。现在，她对大学的学习特点有了了解，对周围环境也熟悉了，已经基本适应了大学生活。她喜欢上课，尤其是数学课。她觉得数学虽然很难，可是很有用。每次上课，她都觉得很有收获。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  15
+                ],
+                "audio_tracks": [
+                  "2-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  16
+                ],
+                "audio_tracks": [
+                  "2-5"
+                ]
+              }
+            },
+            "answer_status": "open_presentational_task_no_unique_answer"
+          },
+          "title": "王红喜欢上课",
+          "page": "15–16",
+          "audio": "2-5",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_2",
+          "value": {
+            "id": "short_text_2",
+            "printed_pages": [
+              17,
+              18
+            ],
+            "audio": "2-6",
+            "title": "生日午餐",
+            "text": "从体育馆出来，王红接到同屋李梅的电话，让她回宿舍。推开宿舍的门，王红看见宿舍里坐满了人，她的3名同屋还有其他几位同学坐在大桌子旁边。桌子上摆着面条儿、水果和一个大蛋糕，蛋糕上插着一根红蜡烛。看见王红进来，大家都站起来大声说：‘王红，生日快乐！’接着，她们还一起给王红唱了生日歌。王红高兴极了，她和同学、朋友们开开心心地吃了一顿饭。",
+            "exercises": {
+              "first_listen": [
+                "王红中午在哪里吃的饭？",
+                "王红她们中午吃什么了？",
+                "王红的同屋唱歌了吗？",
+                "王红感觉怎么样？"
+              ],
+              "second_listen": [
+                "和王红一起吃饭的人多不多？她们是谁？（同屋  坐满  朋友）",
+                "桌子上摆着什么？（摆  插）"
+              ],
+              "group_practice": {
+                "title": "王红的生日午餐",
+                "requirements": "一个人先说4～6个句子，不少于40字；然后其他同学补充；最后再由一名同学总结，说6～8个句子，不少于60字。",
+                "vocabulary_reference": [
+                  "摆",
+                  "插",
+                  "生日歌",
+                  "愉快"
+                ],
+                "expression_reference": [
+                  "给……开生日会",
+                  "顿",
+                  "开开心心"
+                ]
+              },
+              "compare": "今天是王红的生日。中午，同屋在宿舍给她开了一个生日会。桌子上摆着蛋糕，蛋糕上插着蜡烛。同学们一起唱了生日歌，王红跟同学们开开心心地吃了一顿饭。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  17
+                ],
+                "audio_tracks": [
+                  "2-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  17
+                ],
+                "audio_tracks": [
+                  "2-6"
+                ]
+              }
+            },
+            "answer_status": "open_presentational_task_no_unique_answer"
+          },
+          "title": "生日午餐",
+          "page": "17–18",
+          "audio": "2-6",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_3",
+          "value": {
+            "id": "short_text_3",
+            "printed_pages": [
+              18,
+              19
+            ],
+            "audio": "2-7",
+            "title": "课外活动",
+            "text": "王红下午没有课。自从上大学以来，她每星期二下午都去学校附近的科学博物馆做志愿者。这家博物馆已经有50年的历史了，里面的展品很丰富，每天都有不少游客来这里参观，其中一部分是本市的中小学生。下个月，博物馆要举办一次特别展览，王红今天去帮助他们翻译展品介绍、布置展品、回答网友提出的问题。特别展览开始以后，她还要去做讲解员。王红很喜欢这样的课外活动，因为这些课外活动不但可以增长科学知识，同时，也有机会为别人服务。今年这个生日，王红觉得过得很有意义。",
+            "exercises": {
+              "first_listen": [
+                "王红每星期二下午去哪儿？",
+                "下星期有什么活动？王红要做什么？",
+                "这个生日王红觉得过得怎么样？"
+              ],
+              "second_listen": [
+                "那个科学博物馆怎么样？（展品  参观  其中）",
+                "王红今天去做什么？（布置  回答  翻译）"
+              ],
+              "group_practice": {
+                "title": "大家一起谈谈王红的课外活动",
+                "requirements": "一名同学先说4～6个句子，不少于40字；然后其他同学补充；最后再由一名同学总结，说6～8个句子，不少于60字。",
+                "vocabulary_reference": [
+                  "当",
+                  "志愿者",
+                  "翻译",
+                  "布置",
+                  "回答",
+                  "讲解员",
+                  "增长",
+                  "服务"
+                ],
+                "expression_reference": [
+                  "自从……以来",
+                  "每……都……",
+                  "不但……同时……"
+                ]
+              },
+              "compare": "自从上大学以来，王红每周二下午都去博物馆当志愿者。她常做一些翻译材料、布置展品、回答网友问题这样的工作。在博物馆工作，不但可以增长知识，同时，也可以为别人服务。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  18
+                ],
+                "audio_tracks": [
+                  "2-7"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  19
+                ],
+                "audio_tracks": [
+                  "2-7"
+                ]
+              }
+            },
+            "answer_status": "audio_recovered_user_supplied; semantic_listening_pending; open_presentational_task_no_unique_answer"
+          },
+          "title": "课外活动",
+          "page": "18–19",
+          "audio": "2-7",
+          "type": "短文"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1",
+          "value": {
+            "expression": {
+              "expression": "对……熟悉／对……有了了解",
+              "examples": [
+                "王红对学校的历史不太熟悉。",
+                "我对同学们的情况有了一些了解。"
+              ]
+            },
+            "topic": "谈论学校生活"
+          },
+          "title": {
+            "expression": "对……熟悉／对……有了了解",
+            "examples": [
+              "王红对学校的历史不太熟悉。",
+              "我对同学们的情况有了一些了解。"
+            ]
+          },
+          "page": "16–17",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:2",
+          "value": {
+            "expression": {
+              "expression": "尤其",
+              "examples": [
+                "我喜欢学历史，尤其是世界历史。",
+                "我们班的同学都喜欢上体育课，尤其是小王。"
+              ]
+            },
+            "topic": "谈论学校生活"
+          },
+          "title": {
+            "expression": "尤其",
+            "examples": [
+              "我喜欢学历史，尤其是世界历史。",
+              "我们班的同学都喜欢上体育课，尤其是小王。"
+            ]
+          },
+          "page": "16–17",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:3",
+          "value": {
+            "expression": {
+              "expression": "虽然……可是……",
+              "examples": [
+                "我很喜欢我的专业，虽然很忙很累，可是我每天都很愉快。",
+                "天气虽然很冷，可是来操场锻炼的学生还是很多。"
+              ]
+            },
+            "topic": "谈论学校生活"
+          },
+          "title": {
+            "expression": "虽然……可是……",
+            "examples": [
+              "我很喜欢我的专业，虽然很忙很累，可是我每天都很愉快。",
+              "天气虽然很冷，可是来操场锻炼的学生还是很多。"
+            ]
+          },
+          "page": "16–17",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:4",
+          "value": {
+            "expression": {
+              "expression": "不知不觉",
+              "examples": [
+                "时间过得真快，不知不觉，这个学期已经过了一半。",
+                "大家讨论得很热烈，不知不觉，天已经黑了。"
+              ]
+            },
+            "topic": "谈论学校生活"
+          },
+          "title": {
+            "expression": "不知不觉",
+            "examples": [
+              "时间过得真快，不知不觉，这个学期已经过了一半。",
+              "大家讨论得很热烈，不知不觉，天已经黑了。"
+            ]
+          },
+          "page": "16–17",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:5",
+          "value": {
+            "expression": {
+              "expression": "同时",
+              "examples": [
+                "我来中国，主要是学习中文，同时，也希望了解中国文化。",
+                "出去旅游可以了解一个地方的历史，同时，也有可能交到中国朋友。"
+              ]
+            },
+            "topic": "谈论学校生活"
+          },
+          "title": {
+            "expression": "同时",
+            "examples": [
+              "我来中国，主要是学习中文，同时，也希望了解中国文化。",
+              "出去旅游可以了解一个地方的历史，同时，也有可能交到中国朋友。"
+            ]
+          },
+          "page": "16–17",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:1",
+          "value": {
+            "expression": {
+              "expression": "给……办／介绍",
+              "examples": [
+                "大家给小丽办了一个生日会。",
+                "请给大家介绍一下这道菜的做法。"
+              ]
+            },
+            "topic": "谈论课外生活"
+          },
+          "title": {
+            "expression": "给……办／介绍",
+            "examples": [
+              "大家给小丽办了一个生日会。",
+              "请给大家介绍一下这道菜的做法。"
+            ]
+          },
+          "page": "18–19–20",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:2",
+          "value": {
+            "expression": {
+              "expression": "处所＋动词＋着＋人／物",
+              "examples": [
+                "电影院里只坐着十几名观众。",
+                "房间里摆着一张长沙发。"
+              ]
+            },
+            "topic": "谈论课外生活"
+          },
+          "title": {
+            "expression": "处所＋动词＋着＋人／物",
+            "examples": [
+              "电影院里只坐着十几名观众。",
+              "房间里摆着一张长沙发。"
+            ]
+          },
+          "page": "18–19–20",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:3",
+          "value": {
+            "expression": {
+              "expression": "接着",
+              "examples": [
+                "星期天早上，我收拾了房间，接着，又把脏衣服洗了。",
+                "我们去游泳馆游了一会儿泳，接着又去咖啡馆坐了坐。"
+              ]
+            },
+            "topic": "谈论课外生活"
+          },
+          "title": {
+            "expression": "接着",
+            "examples": [
+              "星期天早上，我收拾了房间，接着，又把脏衣服洗了。",
+              "我们去游泳馆游了一会儿泳，接着又去咖啡馆坐了坐。"
+            ]
+          },
+          "page": "18–19–20",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:4",
+          "value": {
+            "expression": {
+              "expression": "安安静静／舒舒服服／急急忙忙／开开心心＋（地）＋动词词组",
+              "examples": [
+                "周末没有课，可以安安静静地在宿舍看书。",
+                "丽丽过春节的时候可以舒舒服服地吃妈妈做的早饭，不用急急忙忙地赶着去上班。"
+              ]
+            },
+            "topic": "谈论课外生活"
+          },
+          "title": {
+            "expression": "安安静静／舒舒服服／急急忙忙／开开心心＋（地）＋动词词组",
+            "examples": [
+              "周末没有课，可以安安静静地在宿舍看书。",
+              "丽丽过春节的时候可以舒舒服服地吃妈妈做的早饭，不用急急忙忙地赶着去上班。"
+            ]
+          },
+          "page": "18–19–20",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:5",
+          "value": {
+            "expression": {
+              "expression": "量词",
+              "examples": [
+                "住在宿舍，一天三顿饭都在食堂吃。",
+                "王红每个月都去看一场电影。"
+              ]
+            },
+            "topic": "谈论课外生活"
+          },
+          "title": {
+            "expression": "量词",
+            "examples": [
+              "住在宿舍，一天三顿饭都在食堂吃。",
+              "王红每个月都去看一场电影。"
+            ]
+          },
+          "page": "18–19–20",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:6",
+          "value": {
+            "expression": {
+              "expression": "自从……以来",
+              "examples": [
+                "自从上大学以来，王红每周二下午都去博物馆当志愿者。",
+                "自从开学以来，先后有500名同学参与了校园服务活动。"
+              ]
+            },
+            "topic": "谈论课外生活"
+          },
+          "title": {
+            "expression": "自从……以来",
+            "examples": [
+              "自从上大学以来，王红每周二下午都去博物馆当志愿者。",
+              "自从开学以来，先后有500名同学参与了校园服务活动。"
+            ]
+          },
+          "page": "18–19–20",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:7",
+          "value": {
+            "expression": {
+              "expression": "每……都……",
+              "examples": [
+                "我们这博物馆，每周六、日都有高中学生在这儿做讲解员。",
+                "我们学校，每学期都会安排两次社会实践活动。"
+              ]
+            },
+            "topic": "谈论课外生活"
+          },
+          "title": {
+            "expression": "每……都……",
+            "examples": [
+              "我们这博物馆，每周六、日都有高中学生在这儿做讲解员。",
+              "我们学校，每学期都会安排两次社会实践活动。"
+            ]
+          },
+          "page": "18–19–20",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:8",
+          "value": {
+            "expression": {
+              "expression": "不但……同时……",
+              "examples": [
+                "参加志愿服务活动，不但可以帮助别人，同时，对自己也是很好的社会实践机会。",
+                "这学期我参加了自行车俱乐部，不但有机会去以前没去过的地方游玩儿，同时，也认识了不少新朋友。"
+              ]
+            },
+            "topic": "谈论课外生活"
+          },
+          "title": {
+            "expression": "不但……同时……",
+            "examples": [
+              "参加志愿服务活动，不但可以帮助别人，同时，对自己也是很好的社会实践机会。",
+              "这学期我参加了自行车俱乐部，不但有机会去以前没去过的地方游玩儿，同时，也认识了不少新朋友。"
+            ]
+          },
+          "page": "18–19–20",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:9",
+          "value": {
+            "expression": {
+              "expression": "其中",
+              "examples": [
+                "报名参加这次活动的学生很多，其中不少是大一新生。",
+                "学校举办了各种各样的讲座，其中，心理辅导讲座最受学生们欢迎。"
+              ]
+            },
+            "topic": "谈论课外生活"
+          },
+          "title": {
+            "expression": "其中",
+            "examples": [
+              "报名参加这次活动的学生很多，其中不少是大一新生。",
+              "学校举办了各种各样的讲座，其中，心理辅导讲座最受学生们欢迎。"
+            ]
+          },
+          "page": "18–19–20",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:10",
+          "value": {
+            "expression": {
+              "expression": "过得",
+              "examples": [
+                "时间过得真快，这个学期结束了。",
+                "丽丽觉得，周末可以过得轻松一点儿。"
+              ]
+            },
+            "topic": "谈论课外生活"
+          },
+          "title": {
+            "expression": "过得",
+            "examples": [
+              "时间过得真快，这个学期结束了。",
+              "丽丽觉得，周末可以过得轻松一点儿。"
+            ]
+          },
+          "page": "18–19–20",
+          "type": "语法／表达"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehension:1",
+          "value": {
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "words": [
+              "排球",
+              "志愿者",
+              "讲解员",
+              "博物馆",
+              "展品"
+            ],
+            "answer": [
+              "1.A",
+              "2.E",
+              "3.B",
+              "4.C",
+              "5.D"
+            ]
+          },
+          "title": "词语理解",
+          "page": "13–14",
+          "audio": "2-2",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehension:2",
+          "value": {
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "words": [
+              "认真",
+              "讨论",
+              "上体育课"
+            ],
+            "answer": [
+              "1.C",
+              "2.B",
+              "3.A"
+            ]
+          },
+          "title": "词语理解",
+          "page": "13–14",
+          "audio": "2-2",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehension:3",
+          "value": {
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "words": [
+              "蛋糕",
+              "蜡烛",
+              "面条儿"
+            ],
+            "answer": [
+              "1.A",
+              "2.C",
+              "3.B"
+            ]
+          },
+          "title": "词语理解",
+          "page": "13–14",
+          "audio": "2-2",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_2_3:1",
+          "value": {
+            "prompt": "姐姐有3名同屋。",
+            "answer": "错",
+            "number": 1,
+            "heading": "听句子，判断对错"
+          },
+          "title": "听句子，判断对错",
+          "page": "14–15",
+          "audio": "2-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_2_3:2",
+          "value": {
+            "prompt": "同学们了解了大学学习的特点。",
+            "answer": "错",
+            "number": 2,
+            "heading": "听句子，判断对错"
+          },
+          "title": "听句子，判断对错",
+          "page": "14–15",
+          "audio": "2-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_2_3:3",
+          "value": {
+            "prompt": "大学周围有博物馆。",
+            "answer": "错",
+            "number": 3,
+            "heading": "听句子，判断对错"
+          },
+          "title": "听句子，判断对错",
+          "page": "14–15",
+          "audio": "2-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_2_3:4",
+          "value": {
+            "prompt": "毛毛对大学生活基本适应了。",
+            "answer": "对",
+            "number": 4,
+            "heading": "听句子，判断对错"
+          },
+          "title": "听句子，判断对错",
+          "page": "14–15",
+          "audio": "2-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_2_3:5",
+          "value": {
+            "prompt": "丽丽觉得数学课挺有用。",
+            "answer": "对",
+            "number": 5,
+            "heading": "听句子，判断对错"
+          },
+          "title": "听句子，判断对错",
+          "page": "14–15",
+          "audio": "2-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_2_3:6",
+          "value": {
+            "prompt": "不知不觉，到了下课时间。",
+            "answer": "错",
+            "number": 6,
+            "heading": "听句子，判断对错"
+          },
+          "title": "听句子，判断对错",
+          "page": "14–15",
+          "audio": "2-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_2_3:7",
+          "value": {
+            "prompt": "同学们讨论得很热烈。",
+            "answer": "对",
+            "number": 7,
+            "heading": "听句子，判断对错"
+          },
+          "title": "听句子，判断对错",
+          "page": "14–15",
+          "audio": "2-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_2_3:8",
+          "value": {
+            "prompt": "过新年的时候，那家公园游客不少。",
+            "answer": "错",
+            "number": 8,
+            "heading": "听句子，判断对错"
+          },
+          "title": "听句子，判断对错",
+          "page": "14–15",
+          "audio": "2-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_2_3:9",
+          "value": {
+            "prompt": "王红在博物馆当志愿者。",
+            "answer": "对",
+            "number": 9,
+            "heading": "听句子，判断对错"
+          },
+          "title": "听句子，判断对错",
+          "page": "14–15",
+          "audio": "2-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_2_3:10",
+          "value": {
+            "prompt": "展览是哥哥和他的朋友布置的。",
+            "answer": "错",
+            "number": 10,
+            "heading": "听句子，判断对错"
+          },
+          "title": "听句子，判断对错",
+          "page": "14–15",
+          "audio": "2-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_dialogue:1",
+          "value": {
+            "no": 1,
+            "dialogue": [
+              "A：丽丽，明天上午你有空吗？一起去博物馆怎么样？",
+              "B：不好意思，我很累，想在家好好儿休息休息。"
+            ],
+            "answer": "A"
+          },
+          "title": "听小对话，选择正确答案",
+          "page": "15",
+          "audio": "2-4",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_dialogue:2",
+          "value": {
+            "no": 2,
+            "dialogue": [
+              "A：王红，你上大学了？",
+              "B：嗯。我喜欢上课，尤其是数学课。"
+            ],
+            "answer": "A"
+          },
+          "title": "听小对话，选择正确答案",
+          "page": "15",
+          "audio": "2-4",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_dialogue:3",
+          "value": {
+            "no": 3,
+            "dialogue": [
+              "A：阿里，老师说学校的排球比赛下星期一开始。",
+              "B：好啊，我也想和中国同学交流交流。"
+            ],
+            "answer": "B"
+          },
+          "title": "听小对话，选择正确答案",
+          "page": "15",
+          "audio": "2-4",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_dialogue:4",
+          "value": {
+            "no": 4,
+            "dialogue": [
+              "A：你看，教室里坐满了人。",
+              "B：是啊，我们来晚了。"
+            ],
+            "answer": "A"
+          },
+          "title": "听小对话，选择正确答案",
+          "page": "15",
+          "audio": "2-4",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_dialogue:5",
+          "value": {
+            "no": 5,
+            "dialogue": [
+              "A：明天晚上我们一起吃一顿饭吧。",
+              "B：好啊，我想吃四川菜。"
+            ],
+            "answer": "B"
+          },
+          "title": "听小对话，选择正确答案",
+          "page": "15",
+          "audio": "2-4",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:1",
+          "value": {
+            "prompt": "王红多大？",
+            "kind": "first_listen",
+            "textTitle": "王红喜欢上课"
+          },
+          "title": "王红喜欢上课 · first_listen",
+          "page": "15–16",
+          "audio": "2-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:2",
+          "value": {
+            "prompt": "王红是大学生吗？",
+            "kind": "first_listen",
+            "textTitle": "王红喜欢上课"
+          },
+          "title": "王红喜欢上课 · first_listen",
+          "page": "15–16",
+          "audio": "2-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:3",
+          "value": {
+            "prompt": "王红特别喜欢什么课？",
+            "kind": "first_listen",
+            "textTitle": "王红喜欢上课"
+          },
+          "title": "王红喜欢上课 · first_listen",
+          "page": "15–16",
+          "audio": "2-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:4",
+          "value": {
+            "prompt": "王红觉得什么课不容易？",
+            "kind": "first_listen",
+            "textTitle": "王红喜欢上课"
+          },
+          "title": "王红喜欢上课 · first_listen",
+          "page": "15–16",
+          "audio": "2-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:5",
+          "value": {
+            "prompt": "王红体育课做什么了？",
+            "kind": "first_listen",
+            "textTitle": "王红喜欢上课"
+          },
+          "title": "王红喜欢上课 · first_listen",
+          "page": "15–16",
+          "audio": "2-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:1",
+          "value": {
+            "prompt": "王红觉得大学生活怎么样？（了解  熟悉  适应）",
+            "kind": "second_listen",
+            "textTitle": "王红喜欢上课"
+          },
+          "title": "王红喜欢上课 · second_listen",
+          "page": "15–16",
+          "audio": "2-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:2",
+          "value": {
+            "prompt": "王红上午上什么课了？她的课上得怎么样？（同时  讨论  认真  不知不觉）",
+            "kind": "second_listen",
+            "textTitle": "王红喜欢上课"
+          },
+          "title": "王红喜欢上课 · second_listen",
+          "page": "15–16",
+          "audio": "2-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:present:1",
+          "value": {
+            "prompt": "请你说说王红的大学生活，重点说说她上课的情况。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：开始、每次、收获、周围、环境。常用表达参考：对……有了了解、对……熟悉了、尤其、虽然……可是……。",
+            "kind": "present",
+            "textTitle": "王红喜欢上课"
+          },
+          "title": "王红喜欢上课 · present",
+          "page": "15–16",
+          "audio": "2-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:compare:1",
+          "value": {
+            "prompt": "王红今年19岁，两个月以前开始上大学。现在，她对大学的学习特点有了了解，对周围环境也熟悉了，已经基本适应了大学生活。她喜欢上课，尤其是数学课。她觉得数学虽然很难，可是很有用。每次上课，她都觉得很有收获。",
+            "kind": "compare",
+            "textTitle": "王红喜欢上课"
+          },
+          "title": "王红喜欢上课 · compare",
+          "page": "15–16",
+          "audio": "2-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:1",
+          "value": {
+            "prompt": "王红中午在哪里吃的饭？",
+            "kind": "first_listen",
+            "textTitle": "生日午餐"
+          },
+          "title": "生日午餐 · first_listen",
+          "page": "17–18",
+          "audio": "2-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:2",
+          "value": {
+            "prompt": "王红她们中午吃什么了？",
+            "kind": "first_listen",
+            "textTitle": "生日午餐"
+          },
+          "title": "生日午餐 · first_listen",
+          "page": "17–18",
+          "audio": "2-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:3",
+          "value": {
+            "prompt": "王红的同屋唱歌了吗？",
+            "kind": "first_listen",
+            "textTitle": "生日午餐"
+          },
+          "title": "生日午餐 · first_listen",
+          "page": "17–18",
+          "audio": "2-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:4",
+          "value": {
+            "prompt": "王红感觉怎么样？",
+            "kind": "first_listen",
+            "textTitle": "生日午餐"
+          },
+          "title": "生日午餐 · first_listen",
+          "page": "17–18",
+          "audio": "2-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:1",
+          "value": {
+            "prompt": "和王红一起吃饭的人多不多？她们是谁？（同屋  坐满  朋友）",
+            "kind": "second_listen",
+            "textTitle": "生日午餐"
+          },
+          "title": "生日午餐 · second_listen",
+          "page": "17–18",
+          "audio": "2-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:2",
+          "value": {
+            "prompt": "桌子上摆着什么？（摆  插）",
+            "kind": "second_listen",
+            "textTitle": "生日午餐"
+          },
+          "title": "生日午餐 · second_listen",
+          "page": "17–18",
+          "audio": "2-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:group_practice:1",
+          "value": {
+            "prompt": {
+              "title": "王红的生日午餐",
+              "requirements": "一个人先说4～6个句子，不少于40字；然后其他同学补充；最后再由一名同学总结，说6～8个句子，不少于60字。",
+              "vocabulary_reference": [
+                "摆",
+                "插",
+                "生日歌",
+                "愉快"
+              ],
+              "expression_reference": [
+                "给……开生日会",
+                "顿",
+                "开开心心"
+              ]
+            },
+            "kind": "group_practice",
+            "textTitle": "生日午餐"
+          },
+          "title": "生日午餐 · group_practice",
+          "page": "17–18",
+          "audio": "2-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:compare:1",
+          "value": {
+            "prompt": "今天是王红的生日。中午，同屋在宿舍给她开了一个生日会。桌子上摆着蛋糕，蛋糕上插着蜡烛。同学们一起唱了生日歌，王红跟同学们开开心心地吃了一顿饭。",
+            "kind": "compare",
+            "textTitle": "生日午餐"
+          },
+          "title": "生日午餐 · compare",
+          "page": "17–18",
+          "audio": "2-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:1",
+          "value": {
+            "prompt": "王红每星期二下午去哪儿？",
+            "kind": "first_listen",
+            "textTitle": "课外活动"
+          },
+          "title": "课外活动 · first_listen",
+          "page": "18–19",
+          "audio": "2-7",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:2",
+          "value": {
+            "prompt": "下星期有什么活动？王红要做什么？",
+            "kind": "first_listen",
+            "textTitle": "课外活动"
+          },
+          "title": "课外活动 · first_listen",
+          "page": "18–19",
+          "audio": "2-7",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:3",
+          "value": {
+            "prompt": "这个生日王红觉得过得怎么样？",
+            "kind": "first_listen",
+            "textTitle": "课外活动"
+          },
+          "title": "课外活动 · first_listen",
+          "page": "18–19",
+          "audio": "2-7",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:1",
+          "value": {
+            "prompt": "那个科学博物馆怎么样？（展品  参观  其中）",
+            "kind": "second_listen",
+            "textTitle": "课外活动"
+          },
+          "title": "课外活动 · second_listen",
+          "page": "18–19",
+          "audio": "2-7",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:2",
+          "value": {
+            "prompt": "王红今天去做什么？（布置  回答  翻译）",
+            "kind": "second_listen",
+            "textTitle": "课外活动"
+          },
+          "title": "课外活动 · second_listen",
+          "page": "18–19",
+          "audio": "2-7",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:group_practice:1",
+          "value": {
+            "prompt": {
+              "title": "大家一起谈谈王红的课外活动",
+              "requirements": "一名同学先说4～6个句子，不少于40字；然后其他同学补充；最后再由一名同学总结，说6～8个句子，不少于60字。",
+              "vocabulary_reference": [
+                "当",
+                "志愿者",
+                "翻译",
+                "布置",
+                "回答",
+                "讲解员",
+                "增长",
+                "服务"
+              ],
+              "expression_reference": [
+                "自从……以来",
+                "每……都……",
+                "不但……同时……"
+              ]
+            },
+            "kind": "group_practice",
+            "textTitle": "课外活动"
+          },
+          "title": "课外活动 · group_practice",
+          "page": "18–19",
+          "audio": "2-7",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:compare:1",
+          "value": {
+            "prompt": "自从上大学以来，王红每周二下午都去博物馆当志愿者。她常做一些翻译材料、布置展品、回答网友问题这样的工作。在博物馆工作，不但可以增长知识，同时，也可以为别人服务。",
+            "kind": "compare",
+            "textTitle": "课外活动"
+          },
+          "title": "课外活动 · compare",
+          "page": "18–19",
+          "audio": "2-7",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:1",
+          "value": {
+            "prompt": {
+              "id": "comprehensive_1",
+              "instruction": "这是王红一天的安排，请你根据听过的三段短文填表",
+              "table_transcription": [
+                {
+                  "row": "11月8日 星期____ 今天是我的____",
+                  "cells": [
+                    "上午",
+                    "中午",
+                    "下午"
+                  ]
+                },
+                {
+                  "row": "上午",
+                  "cells": [
+                    "____课",
+                    "",
+                    "有收获"
+                  ]
+                },
+                {
+                  "row": "上午",
+                  "cells": [
+                    "体育课",
+                    "和外国学生________",
+                    "有意思"
+                  ]
+                },
+                {
+                  "row": "中午",
+                  "cells": [
+                    "在宿舍开________",
+                    "朋友们请我吃________、________、________",
+                    "________"
+                  ]
+                },
+                {
+                  "row": "下午",
+                  "cells": [
+                    "去博物馆做________",
+                    "________、________、回答网友问题",
+                    "有意义"
+                  ]
+                }
+              ],
+              "answer_status": "open_table_teacher_check"
+            }
+          },
+          "title": "综合练习",
+          "page": "20–21",
+          "audio": "2-5、2-6、2-7",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:2",
+          "value": {
+            "prompt": {
+              "id": "comprehensive_2",
+              "instruction": "根据上面的表格和下面给出的参考词语和常用表达，谈一谈：（1）王红的学校生活；（2）王红的生日午餐；（3）王红的课外活动。要求：一名同学先说6～8个句子，不少于60字；然后小组其他同学补充；最后由一名同学总结，说8～10个句子，不少于80字。词语参考：了解 熟悉 适应 有用 收获 摆 回答 讲解员 志愿者。常用表达参考：开开心心 顿 尤其。",
+              "answer_status": "open_presentational_task"
+            }
+          },
+          "title": "综合练习",
+          "page": "20–21",
+          "audio": "2-5、2-6、2-7",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:3",
+          "value": {
+            "prompt": {
+              "id": "comprehensive_3",
+              "instruction": "拓展练习：你们学校生活怎么样？请你谈一谈：（1）自己的学校生活；（2）自己最难忘的生日；（3）自己的课外活动。要求：（1）使用这一课学过的词语和常用表达；（2）说8～10个句子，不少于80字。",
+              "answer_status": "open_presentational_task"
+            }
+          },
+          "title": "综合练习",
+          "page": "20–21",
+          "audio": "2-5、2-6、2-7",
+          "type": "综合练习"
+        }
+      ]
+    },
+    "boya-quasi-intermediate-i:lesson-03": {
+      "available": true,
+      "review_complete": true,
+      "completion": {
+        "status": "completed_by_adam",
+        "confirmed_by": "Adam",
+        "confirmed_at": "2026-09-08",
+        "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+        "technical_status_preserved": true
+      },
+      "reason": "",
+      "canonical": {
+        "schema_version": "quasi-intermediate-source-audit-v1.0",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_number": 3,
+        "lesson_id": "lesson-03",
+        "lesson_key": "boya-quasi-intermediate-i:lesson-03",
+        "title": "我对学中文越来越有兴趣",
+        "title_source": "主教材 PDF 第35页（印刷 P22）课名页视觉核对",
+        "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+        "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+        "page_map": {
+          "printed_pages": [
+            22,
+            31
+          ],
+          "pdf_pages": [
+            35,
+            44
+          ],
+          "answer_pdf_pages": [
+            11,
+            13
+          ],
+          "answer_file_pages": [
+            11,
+            13
+          ],
+          "answer_index_pages": [
+            11,
+            13
+          ],
+          "mapping_status": "visual_verified_pdf_offset_plus_13; answer_file_page_12_is_in_range_continuation"
+        },
+        "qr_evidence": {
+          "pdf_page": 35,
+          "qr_url": "http://qr31.cn/IeruLV",
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-03-pdf-page-035.png",
+          "landing_page": "https://biz.cli.im/site/IeruLV?qrurl=http://qr31.cn/IeruLV&gtype=2&key=82ff4173cf8bafe74878285867a6fa3f53d5dc1924",
+          "decode_status": "source_inventory_verified",
+          "landing_audio_labels": [
+            "3-1",
+            "3-2",
+            "3-3",
+            "3-4",
+            "3-5",
+            "3-6"
+          ]
+        },
+        "audio_map": [
+          {
+            "label": "3-1",
+            "coding": "OV1539801",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Ft1QDnBokZmWrRT5bCaMwcMVb2lq",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-03/3-1.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 991389,
+            "sha256": "244ca28316b97f2ba6a3d71f24af09e49247f934d6b32665f25891f9818d0878",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 61.649,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "3-2",
+            "coding": "ES1783187",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FpwcUw7xm9WaPwY9Bj0I4XvFLM_h",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-03/3-2.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 645737,
+            "sha256": "f152ee86a7432f5fc8f115b23ecfa575a8f0084a37ea50f6565e63a7a0417c6d",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 40.046,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "3-3",
+            "coding": "RZ1783188",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FnnJlIJiOG8PJnO6NxdoPadP_LlD",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-03/3-3.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 1297741,
+            "sha256": "983613344869f0f5eb969c730f52f772f083c4d2320c993a45261c4a5654c276",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 80.797,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "3-4",
+            "coding": "MV1783189",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FmwI-DnIswYJnXjDoSnC_wZqaph9",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-03/3-4.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 1107164,
+            "sha256": "e0cee2a4a5be21321c2cc69897366d8b07f6bb1cda340a921640d55fc8ce250a",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 68.885,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "3-5",
+            "coding": "KL1783190",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fv7MVgJrNF9A9IHOC5mKDVeFrtX3",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-03/3-5.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 1176127,
+            "sha256": "7fbb009795228f6cf7131d12627cb3c6418e2e9b4efde9ad7cae3589d0b3047d",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 73.195,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "3-6",
+            "coding": "JW1783191",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FiRgwv_YOo1SvKSarKiDiQ0QcX4y",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-03/3-6.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 1136839,
+            "sha256": "6ec0ccb21950db29dcaf971fbe7e097b5cc14d65ea2e3a5b3a9cccdd755c3e96",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 70.74,
+            "semantic_status": "pending_teacher_playback"
+          }
+        ],
+        "content_inventory": {
+          "vocabulary_count": 23,
+          "proper_noun_count": 2,
+          "vocabulary_comprehension_group_count": 3,
+          "vocabulary_comprehension_item_count": 10,
+          "listening_sentence_item_count": 12,
+          "texts_dialogues_count": 3,
+          "grammar_pattern_count": 14,
+          "listening_exercise_group_count": 6,
+          "comprehensive_exercise_count": 3,
+          "exercise_count": 27,
+          "status": "visual_source_snapshot_adam_approved_2026-08-29"
+        },
+        "answer_policy": "仅记录参考答案 PDF 中可核对的选择／判断答案与听力文本；开放式口语题不补写唯一标准答案。",
+        "review": {
+          "status": "source_and_images_approved_by_adam",
+          "approved": true,
+          "approved_by": [
+            "Adam"
+          ],
+          "approved_at": "2026-08-29",
+          "blockers": [
+            "六段音频已完成文件存在、bytes、SHA-256、ffprobe 时长和解码核对；教师逐段播放及语义听核尚未完成。",
+            "开放式口语、综合填表、小组总结与拓展练习没有唯一标准答案，不补写答案。",
+            "来源盘点将答案 PDF 范围记为 [11,13]；实际答案文件第11、12、13页均属于本课证据，已在 page_map 标注第12页为连续页。"
+          ],
+          "approval_basis": [
+            "主教材 PDF 第35–44页（印刷 P22–P31）高分辨率视觉核对",
+            "答案 PDF 文件第11–13页（答案印刷 P8–P10）题目答案与三段听力文本视觉核对",
+            "来源总盘点第三课 QR、音频 bytes、hash、时长和解码记录",
+            "Adam 于 2026-08-29 确认第三课来源内容与图片；短文三题目使用“越来越”，不使用先前视觉草稿中的“越来越越”。"
+          ],
+          "approval_scope": [
+            "source_content",
+            "image_assets",
+            "wording:越来越"
+          ]
+        },
+        "sections": [
+          {
+            "id": "vocabulary",
+            "printed_pages": [
+              22,
+              23
+            ],
+            "audio": "3-1",
+            "entries": [
+              {
+                "no": 1,
+                "word": "兴趣",
+                "pinyin": "xìngqù",
+                "pos": "名",
+                "gloss": "interest"
+              },
+              {
+                "no": 2,
+                "word": "古老肉",
+                "pinyin": "gǔlǎoròu",
+                "pos": "名",
+                "gloss": "fried pork in sweet and sour sauce"
+              },
+              {
+                "no": 3,
+                "word": "西红柿炒鸡蛋",
+                "pinyin": "xīhóngshì chǎo jīdàn",
+                "pos": null,
+                "pos_status": "blank_in_source",
+                "gloss": "scrambled eggs with tomatoes"
+              },
+              {
+                "no": 4,
+                "word": "暑假",
+                "pinyin": "shǔjià",
+                "pos": "名",
+                "gloss": "summer vacation"
+              },
+              {
+                "no": 5,
+                "word": "招待",
+                "pinyin": "zhāodài",
+                "pos": "动",
+                "gloss": "to entertain; to cater"
+              },
+              {
+                "no": 6,
+                "word": "聊天儿",
+                "pinyin": "liáotiānr",
+                "pos": null,
+                "pos_status": "blank_in_source",
+                "gloss": "to chat",
+                "starred": true
+              },
+              {
+                "no": 7,
+                "word": "转学",
+                "pinyin": "zhuǎnxué",
+                "pos": null,
+                "pos_status": "blank_in_source",
+                "gloss": "to transfer to another school"
+              },
+              {
+                "no": 8,
+                "word": "另外",
+                "pinyin": "lìngwài",
+                "pos": "代",
+                "gloss": "another; other"
+              },
+              {
+                "no": 9,
+                "word": "互相",
+                "pinyin": "hùxiāng",
+                "pos": "副",
+                "gloss": "each other"
+              },
+              {
+                "no": 10,
+                "word": "有趣",
+                "pinyin": "yǒuqù",
+                "pos": "形",
+                "gloss": "interesting"
+              },
+              {
+                "no": 11,
+                "word": "声调",
+                "pinyin": "shēngdiào",
+                "pos": "名",
+                "gloss": "tone"
+              },
+              {
+                "no": 12,
+                "word": "重复",
+                "pinyin": "chóngfù",
+                "pos": "动",
+                "gloss": "to repeat",
+                "starred": true
+              },
+              {
+                "no": 13,
+                "word": "接触",
+                "pinyin": "jiēchù",
+                "pos": "动",
+                "gloss": "to contact"
+              },
+              {
+                "no": 14,
+                "word": "帮忙",
+                "pinyin": "bāngmáng",
+                "pos": null,
+                "pos_status": "blank_in_source",
+                "gloss": "to offer help",
+                "starred": true
+              },
+              {
+                "no": 15,
+                "word": "记得",
+                "pinyin": "jìde",
+                "pos": "动",
+                "gloss": "remember",
+                "starred": true
+              },
+              {
+                "no": 16,
+                "word": "例如",
+                "pinyin": "lìrú",
+                "pos": "动",
+                "gloss": "for example",
+                "starred": true
+              },
+              {
+                "no": 17,
+                "word": "中国通",
+                "pinyin": "Zhōngguótōng",
+                "pos": "名",
+                "gloss": "China hand"
+              },
+              {
+                "no": 18,
+                "word": "神秘",
+                "pinyin": "shénmì",
+                "pos": "形",
+                "gloss": "mysterious"
+              },
+              {
+                "no": 19,
+                "word": "开（课）",
+                "pinyin": "kāi (kè)",
+                "pos": "动",
+                "gloss": "to offer (a course)"
+              },
+              {
+                "no": 20,
+                "word": "总是",
+                "pinyin": "zǒngshì",
+                "pos": "副",
+                "gloss": "always"
+              },
+              {
+                "no": 21,
+                "word": "更",
+                "pinyin": "gèng",
+                "pos": "副",
+                "gloss": "even"
+              },
+              {
+                "no": 22,
+                "word": "于是",
+                "pinyin": "yúshì",
+                "pos": "连",
+                "gloss": "therefore"
+              },
+              {
+                "no": 23,
+                "word": "选修",
+                "pinyin": "xuǎnxiū",
+                "pos": "动",
+                "gloss": "to elect (a course)"
+              }
+            ],
+            "proper_nouns": [
+              {
+                "word": "德语",
+                "pinyin": "Déyǔ",
+                "gloss": "German language"
+              },
+              {
+                "word": "拉丁语",
+                "pinyin": "Lādīngyǔ",
+                "gloss": "Latin"
+              }
+            ],
+            "source_status": "visually_verified_adam_approved_2026-08-29"
+          },
+          {
+            "id": "vocabulary_comprehension",
+            "printed_pages": [
+              23,
+              24
+            ],
+            "audio": "3-2",
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "groups": [
+              {
+                "topic": "关于中国菜的词语",
+                "words": [
+                  "古老肉",
+                  "饺子",
+                  "西红柿炒鸡蛋"
+                ],
+                "answer": [
+                  "1.B",
+                  "2.A",
+                  "3.C"
+                ]
+              },
+              {
+                "topic": "关于学习的词语",
+                "words": [
+                  "画画儿",
+                  "大夫",
+                  "画花儿"
+                ],
+                "answer": [
+                  "1.A",
+                  "2.B",
+                  "3.C"
+                ]
+              },
+              {
+                "topic": "关于生活的词语",
+                "words": [
+                  "放暑假",
+                  "招待客人",
+                  "聊天儿",
+                  "看望"
+                ],
+                "answer": [
+                  "1.A",
+                  "2.D",
+                  "3.C",
+                  "4.B"
+                ]
+              }
+            ],
+            "answer_status": "answers_checked_against_answer_pdf"
+          },
+          {
+            "id": "listening_sentences",
+            "printed_pages": [
+              24,
+              25
+            ],
+            "audio_tracks": [
+              "3-3"
+            ],
+            "exercises": {
+              "exercise_3_3": {
+                "heading_verbatim": "一、听句子，判断对错",
+                "items": [
+                  [
+                    1,
+                    "丽丽不是客人。",
+                    "错"
+                  ],
+                  [
+                    2,
+                    "阿里家来客人了。",
+                    "错"
+                  ],
+                  [
+                    3,
+                    "李大为要去新学校。",
+                    "对"
+                  ],
+                  [
+                    4,
+                    "哥哥要再学一种外语。",
+                    "对"
+                  ],
+                  [
+                    5,
+                    "下星期二上课。",
+                    "错"
+                  ],
+                  [
+                    6,
+                    "姐姐常常去爷爷奶奶那儿。",
+                    "对"
+                  ],
+                  [
+                    7,
+                    "同学们不喜欢王红。",
+                    "错"
+                  ],
+                  [
+                    8,
+                    "李大为觉得写汉字挺好玩儿。",
+                    "对"
+                  ],
+                  [
+                    9,
+                    "李大为觉得声调最难。",
+                    "错"
+                  ],
+                  [
+                    10,
+                    "他们可以再说一遍。",
+                    "对"
+                  ],
+                  [
+                    11,
+                    "中文越来越难学。",
+                    "错"
+                  ],
+                  [
+                    12,
+                    "同学们觉得和中国人交流很难。",
+                    "错"
+                  ]
+                ]
+              }
+            },
+            "answer_status": "answers_checked_against_answer_pdf"
+          },
+          {
+            "id": "short_text_1",
+            "printed_pages": [
+              25,
+              26
+            ],
+            "audio": "3-4",
+            "title": "开始接触汉语并产生一定的兴趣",
+            "text": "我的中文名字叫李大为。我的爸爸妈妈都是大夫。上小学的时候，爸爸的一位中国朋友王先生和他的太太常常来我家做客。每年他们都请我们一家人和他们一起庆祝中国新年。有时候，王太太还让我帮忙招待客人。我记得每次他们都准备很多菜。我最爱吃的是古老肉、西红柿炒鸡蛋和饺子。那时候我学会了一些中文，例如“你好”“谢谢”“再见”“好吃”“我爱你”“没关系”“欢迎”“好说”“没办法”“中国通”什么的。我觉得中文挺有趣，也有点儿神秘，但是我还没有想到要在学校学习它。",
+            "text_source": "答案 PDF 文件第12页视觉转录；主教材第25页只显示题组与阅读比较提示",
+            "exercises": {
+              "first_listen": [
+                "王先生是谁？",
+                "有时候，李大为帮王太太做什么？",
+                "李大为会中文吗？",
+                "李大为上中文课吗？"
+              ],
+              "second_listen": [
+                "李大为喜欢吃什么中国菜？",
+                "李大为为什么会说一点儿中文？",
+                "李大为会说哪些中文词语？"
+              ],
+              "present": "请你介绍一下李大为：（1）李大为的家庭情况；（2）他们和王先生一家的关系；（3）李大为觉得中文怎么样。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：大夫、朋友、做客、庆祝、中国菜、中文、有趣、神秘。常用表达参考：……（的）时候。",
+              "compare": "李大为的爸爸妈妈都是大夫。王先生是爸爸的中国朋友，王先生和太太常常来李大为家做客，也请他们一起庆祝中国新年。李大为喜欢吃古老肉、西红柿炒鸡蛋和饺子，会说一些简单的中文，觉得中文有趣又有点儿神秘。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  25
+                ],
+                "audio_tracks": [
+                  "3-4"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，回答下面的问题，要求说两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  25
+                ],
+                "audio_tracks": [
+                  "3-4"
+                ]
+              },
+              "present": {
+                "heading_verbatim": "（三）请你介绍一下李大为",
+                "textbook_printed_pages": [
+                  25,
+                  26
+                ],
+                "audio_tracks": [
+                  "3-4"
+                ]
+              },
+              "compare": {
+                "heading_verbatim": "（四）读下面的短文，跟你说的进行比较",
+                "textbook_printed_pages": [
+                  26
+                ],
+                "audio_tracks": []
+              }
+            }
+          },
+          {
+            "id": "common_expressions_family",
+            "printed_pages": [
+              26
+            ],
+            "topic": "谈论家庭生活",
+            "items": [
+              {
+                "expression": "每＋量词",
+                "examples": [
+                  "每年李大为都去王先生家庆祝中国新年。",
+                  "每次回家，丽丽都给妈妈做一两个北方菜。"
+                ]
+              },
+              {
+                "expression": "帮／忙",
+                "examples": [
+                  "妈妈请客的时候，毛毛也帮忙做饭。",
+                  "爸爸的朋友请他帮一个忙。"
+                ]
+              },
+              {
+                "expression": "……什么的",
+                "examples": [
+                  "李大为喜欢吃中国菜，例如西红柿炒鸡蛋、古老肉什么的。",
+                  "玛丽会说一点儿中文，例如“谢谢”“不客气”什么的。"
+                ]
+              },
+              {
+                "expression": "……（的）时候",
+                "examples": [
+                  "上小学的时候，李大为常去王先生家。",
+                  "吃饭的时候，爷爷奶奶总是说：“多吃点儿。”"
+                ]
+              },
+              {
+                "expression": "记得",
+                "examples": [
+                  "丽丽记得十年前她和爸爸妈妈经常去养老院帮忙。",
+                  "阿里小时候去过不少地方，可是他已经不太记得了。"
+                ]
+              }
+            ],
+            "source_status": "examples_visually_verified_adam_approved_2026-08-29"
+          },
+          {
+            "id": "short_text_2",
+            "printed_pages": [
+              26,
+              27,
+              28
+            ],
+            "audio": "3-5",
+            "title": "为什么选修中文",
+            "text": "上中学时，我学了一年德语，我觉得德语挺有用，学德语也很有意思。第二年我要转学，到另外一所中学去上学，那所中学不开德语课，可是有汉语课和拉丁语课。放暑假的时候，王先生的爸爸妈妈从中国来了，爸爸妈妈带我去看望他们，中国爷爷和中国奶奶都不会说英文。吃饭的时候，他们总是对我说“多吃点儿，多吃点儿”，我觉得很好玩儿。中国爷爷汉字写得很漂亮，他还教我写了“我”“好”“人”。我对汉语的兴趣更大了。我想，中国人那么多，会说中文，可以和很多很多人交流，也可以了解中国文化。于是，我决定在新学校选修中文课。",
+            "text_source": "答案 PDF 文件第12页视觉转录；主教材第26–28页视觉核对",
+            "exercises": {
+              "first_listen": [
+                "李大为觉得学德语怎么样？",
+                "放暑假的时候，谁来了？",
+                "李大为决定在新学校学什么？"
+              ],
+              "second_listen": [
+                "李大为为什么不继续学德语了？（转 另外 所）",
+                "中国爷爷奶奶怎么样？（教 写）",
+                "李大为为什么选修中文？（兴趣 交流 了解）"
+              ],
+              "present": "请你说说李大为为什么决定选修中文：（1）李大为上中学时选了什么外语，第二年发生了什么；（2）中国爷爷奶奶怎么样；（3）李大为觉得会中文有什么好处。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：德语、第二年、转学、放暑假、认识、中国爷爷、教、写汉字、兴趣、决定、选修。常用表达参考：但是／可是、于是。",
+              "compare": "李大为上中学时学了一年德语。第二年他要转学，新学校不开德语课，所以他认识了中国爷爷奶奶，学会了一点儿汉字，也对中文产生了更大的兴趣，于是决定选修中文课。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  26
+                ],
+                "audio_tracks": [
+                  "3-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  27
+                ],
+                "audio_tracks": [
+                  "3-5"
+                ]
+              },
+              "present": {
+                "heading_verbatim": "（三）请你说说李大为为什么决定选修中文",
+                "textbook_printed_pages": [
+                  27
+                ],
+                "audio_tracks": [
+                  "3-5"
+                ]
+              },
+              "compare": {
+                "heading_verbatim": "（四）读下面的短文，跟你说的进行比较",
+                "textbook_printed_pages": [
+                  27
+                ],
+                "audio_tracks": []
+              }
+            }
+          },
+          {
+            "id": "common_expressions_study",
+            "printed_pages": [
+              27,
+              28
+            ],
+            "topic": "谈论学习工作",
+            "items": [
+              {
+                "expression": "可以……也可以……",
+                "examples": [
+                  "会说中文，可以和中国人交流，也可以了解中国文化。",
+                  "和中国人聊天儿，可以练习听力，也可以了解中国人的想法。"
+                ]
+              },
+              {
+                "expression": "另（外）",
+                "examples": [
+                  "另（外）一所学校／另（外）一门外语。",
+                  "另（外）一位老师／另外几家公司。"
+                ]
+              },
+              {
+                "expression": "更（1）",
+                "examples": [
+                  "阿里对汉语的兴趣更大了。",
+                  "同学们觉得中文更有趣了。"
+                ]
+              },
+              {
+                "expression": "动词＋得（1）",
+                "examples": [
+                  "中国爷爷写字写得很漂亮。",
+                  "中国人说话说得很快。"
+                ]
+              },
+              {
+                "expression": "但是",
+                "examples": [
+                  "李大为觉得中文挺有趣，但是他还没打算在学校学它。",
+                  "和中国人聊天儿很有意思，但是有时候听不懂。"
+                ]
+              },
+              {
+                "expression": "于是",
+                "examples": [
+                  "玛丽觉得中文很有趣，于是她开始学习中文。",
+                  "中村发现看中文电视可以练习中文，于是他每天看一小时中文电视。"
+                ]
+              }
+            ],
+            "source_status": "examples_visually_verified_adam_approved_2026-08-29"
+          },
+          {
+            "id": "short_text_3",
+            "printed_pages": [
+              28,
+              29
+            ],
+            "audio": "3-6",
+            "title": "中文课",
+            "text": "开始上中文课以后，我才知道学中文不容易。中文的声调很难，写汉字更难。比如，我喜欢画画儿，可是我说出的是“我喜欢画花儿”；我想写“我想当大夫”，可我写的是“我想当大天”；我想写“图书馆”，我写的是“图书饭”。不过，我们的老师教得很好，课堂上，同学们也常常互相帮助。每个月，老师都请一些中国留学生来和我们聊天儿。刚开始，我们觉得中国学生说话很快。我们听不懂的时候，就请他们重复一遍、两遍。现在，我们已经慢慢适应了。我们中文说得也越来越好了。和中国人交流，同学们都觉得很有收获。我觉得学中文越来越有意思了。",
+            "text_source": "答案 PDF 文件第12–13页视觉转录；主教材第28–29页视觉核对",
+            "exercises": {
+              "first_listen": [
+                "李大为觉得中文难不难？",
+                "李大为喜欢做什么？",
+                "李大为的中文老师怎么样？",
+                "李大为觉得上中文课有意思吗？"
+              ],
+              "second_listen": [
+                "李大为说错过什么？为什么？（声调）",
+                "李大为写错过什么？（可是）",
+                "李大为和他的同学们为什么喜欢和中国人聊天儿？（越来越 收获）"
+              ],
+              "group": "题目：大家一起谈谈李大为的中文课。要求：一个人先说4～6个句子，不少于40字；然后小组其他同学补充；最后再由一名同学总结，说6～8个句子，不少于60字。词语参考：不容易、老师、课堂上、聊天儿、重复、交流、有收获。常用表达参考：互相、每个月、越来越。",
+              "compare": "开始学汉语以后，李大为觉得学习汉语不容易。不过，老师教得很好，课堂上同学们常常互相帮助。每个月，他们还跟中国留学生聊一次天儿，听不懂时请对方重复。现在他们慢慢适应了，说中文越来越好，和中国人交流很有收获。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  28
+                ],
+                "audio_tracks": [
+                  "3-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  28
+                ],
+                "audio_tracks": [
+                  "3-6"
+                ]
+              },
+              "group": {
+                "heading_verbatim": "（三）分组练习",
+                "textbook_printed_pages": [
+                  29
+                ],
+                "audio_tracks": [
+                  "3-6"
+                ]
+              },
+              "compare": {
+                "heading_verbatim": "（四）读下面的短文，跟你说的进行比较",
+                "textbook_printed_pages": [
+                  29
+                ],
+                "audio_tracks": []
+              }
+            }
+          },
+          {
+            "id": "common_expressions_discuss",
+            "printed_pages": [
+              29
+            ],
+            "topic": "谈论中文课堂",
+            "items": [
+              {
+                "expression": "更（2）",
+                "examples": [
+                  "声调不容易，写汉字更难。",
+                  "大家听力不错，口语更好。"
+                ]
+              },
+              {
+                "expression": "互相",
+                "examples": [
+                  "同学们互相学习，互相帮助。",
+                  "朋友应该互相关心。"
+                ]
+              },
+              {
+                "expression": "遍",
+                "examples": [
+                  "每个生词要读三遍。",
+                  "这个电影我看过两遍。"
+                ]
+              }
+            ],
+            "source_status": "examples_visually_verified_adam_approved_2026-08-29"
+          },
+          {
+            "id": "comprehensive_practice",
+            "printed_pages": [
+              30,
+              31
+            ],
+            "audio_tracks": [
+              "3-4",
+              "3-5",
+              "3-6"
+            ],
+            "items": [
+              {
+                "id": "comprehensive_1",
+                "instruction": "请你根据听过的三段短文填表",
+                "table_rows": [
+                  {
+                    "topic": "李大为的家庭生活",
+                    "fields": [
+                      "家里有什么人",
+                      "他和爸爸妈妈做什么",
+                      "喜欢吃什么菜",
+                      "会说什么中文词语"
+                    ]
+                  },
+                  {
+                    "topic": "李大为为什么选中文课",
+                    "fields": [
+                      "学过什么外语",
+                      "为什么不学了",
+                      "为什么选修中文"
+                    ]
+                  },
+                  {
+                    "topic": "李大为的中文课",
+                    "fields": [
+                      "李大为觉得中文难不难",
+                      "李大为上中文课的时候做什么",
+                      "李大为喜欢不喜欢上中文课"
+                    ]
+                  }
+                ],
+                "answer_status": "open_table_teacher_check"
+              },
+              {
+                "id": "comprehensive_2",
+                "instruction": "小组活动：根据上面的表格和下面给出的参考词语和常用表达，谈一谈：（1）李大为小时候的生活；（2）李大为为什么选中文课；（3）李大为觉得学中文怎么样。要求：一名同学先说6～8个句子，不少于60字；然后小组其他同学补充；最后由一名同学总结，说8～10个句子，不少于80字。",
+                "vocabulary_reference": [
+                  "做客",
+                  "中文",
+                  "德语",
+                  "转学",
+                  "选修",
+                  "声调",
+                  "汉字",
+                  "聊天"
+                ],
+                "expression_reference": [
+                  "例如",
+                  "有兴趣",
+                  "互相",
+                  "越来越"
+                ],
+                "answer_status": "open_presentational_task"
+              },
+              {
+                "id": "comprehensive_3",
+                "instruction": "拓展练习：你是什么时候开始对中文有兴趣的？请你谈一谈：（1）自己小时候的生活；（2）为什么选修中文；（3）在国内怎么学中文。要求：（1）使用这一课学过的词语和常用表达；（2）说8～10个句子，不少于80字。",
+                "answer_status": "open_presentational_task"
+              }
+            ],
+            "source_status": "visually_verified_adam_approved_2026-08-29"
+          }
+        ]
+      },
+      "source_manifest": {
+        "schema_version": "boya-lesson-source-manifest-v1",
+        "manifest_type": "lesson-source-review",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_id": "lesson-03",
+        "lesson_key": "boya-quasi-intermediate-i:lesson-03",
+        "completion_confirmation": {
+          "status": "completed_by_adam",
+          "confirmed_by": "Adam",
+          "confirmed_at": "2026-09-08",
+          "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+          "technical_status_preserved": true
+        },
+        "lesson_number": 3,
+        "lesson_title": "我对学中文越来越有兴趣",
+        "language": "简体中文",
+        "package": "lesson-03-source-review",
+        "prepared_at": "2026-08-29",
+        "source_status": "partial_adam_review_source_and_images_audio_pending",
+        "source_qa_status": "source_content_and_images_passed; audio_semantic_playback_pending",
+        "extraction_status": "source_review_materialized",
+        "review_status": "source_and_images_approved_by_adam",
+        "approved": false,
+        "approved_by": [],
+        "approved_at": null,
+        "approval_scope": [
+          "source_content",
+          "image_assets",
+          "wording:越来越"
+        ],
+        "adam_review": {
+          "status": "source_and_images_approved",
+          "approved_by": "Adam",
+          "approved_at": "2026-08-29",
+          "scope": [
+            "source_content",
+            "image_assets",
+            "wording:越来越"
+          ],
+          "notes": "Adam 确认第三课来源与图片全部正确；短文三题目使用“越来越”。六段音频仍保留各自的教师语义听核与播放状态，未因本次来源／图片确认而改写。"
+        },
+        "canonical_source": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/canonical-source.json",
+          "sha256": "821f8009e7ec2b53d9f38b7adcb2421f0012c4730b61cc8db6a08bf2c59c5aa1",
+          "status": "partial_source_and_images_approved_audio_pending",
+          "note": "Adam 已确认来源内容、图片与“越来越”用字；音频语义听核／播放仍为独立 QA 项。"
+        },
+        "canonical_source_sha256": "821f8009e7ec2b53d9f38b7adcb2421f0012c4730b61cc8db6a08bf2c59c5aa1",
+        "source_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+          "sha256": "39899d0f400e187f57c16db821f8f4c207f936eae0e4fbfe3cab52c02bfea806",
+          "total_pages": 134,
+          "textbook_page_range": "22–31",
+          "pdf_page_range": "35–44",
+          "page_count_in_review": 10,
+          "format": "scanned_image_pdf",
+          "text_layer_status": "empty; visual review used"
+        },
+        "answer_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+          "sha256": "3c21e1574b0187259769799d183eca78a60a515b5b7fce202eda9e9ade2c20b8",
+          "total_pages": 33,
+          "pdf_page_range_in_review": "11–13",
+          "index_range": "[11,13]",
+          "continuation_note": "文件页12为本课听力文本主体；文件页13承接短文三续段；来源盘点使用区间端点记录，需人工确认编号口径。",
+          "answer_status": "closed_answers_visual_checked; open_tasks_have_no_unique_answer"
+        },
+        "page_audit": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/audit/source-pages-22-31-audit-draft.md",
+          "sha256": "34cd11890ea491b74a6e841857f7be5cfbf1f932185e362eb86febbcc40b8c2c",
+          "status": "visual_review_confirmed_by_adam_2026-08-29"
+        },
+        "answer_audit": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/audit/answer-pages-11-13-audit-draft.md",
+          "sha256": "91f567962a8ecec58ba39a40a491483c3ee36a94b6c5b9685f3526c3b50d5078",
+          "status": "visual_review_confirmed_by_adam_2026-08-29"
+        },
+        "qr_source": {
+          "qr_url": "http://qr31.cn/IeruLV",
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-03-pdf-page-035.png",
+          "landing_page": "https://biz.cli.im/site/IeruLV?qrurl=http://qr31.cn/IeruLV&gtype=2&key=82ff4173cf8bafe74878285867a6fa3f53d5dc1924",
+          "landing_audio_labels": [
+            "3-1",
+            "3-2",
+            "3-3",
+            "3-4",
+            "3-5",
+            "3-6"
+          ],
+          "status": "source_inventory_verified"
+        },
+        "audio": {
+          "root": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-03",
+          "manifest_path": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/audio-manifest.json",
+          "manifest_sha256": "a1ed9e45e39cc0707864ce4e731fe32787e4bc04856089886a383e52fa7f06f8",
+          "technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/audit/audio-technical-2026-08-28.md",
+          "track_count": 6,
+          "status": "technical_pass_semantic_pending"
+        },
+        "listening_exercise_contract": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/listening-exercise-contract.json",
+          "sha256": "a40cf98a075eb3d515208b980548fd5817da1968c8dcf5cfdf37093f3dc07c3c",
+          "status": "source_content_approved_audio_semantic_pending",
+          "exercise_count": 9
+        },
+        "review_evidence": [
+          "lessons/boya-quasi-intermediate-i/lesson-03/00-source/audit/source-pages-22-31-audit-draft.md",
+          "lessons/boya-quasi-intermediate-i/lesson-03/00-source/audit/answer-pages-11-13-audit-draft.md",
+          "lessons/boya-quasi-intermediate-i/lesson-03/00-source/audit/audio-technical-2026-08-28.md",
+          "lessons/boya-quasi-intermediate-i/lesson-03/00-source/audit/adam-review-2026-08-29.md"
+        ],
+        "blockers": [
+          "六段音频已完成文件存在、bytes、SHA-256、ffprobe 时长和解码核对；教师逐段语义听核及 PowerPoint 实际播放测试尚未完成。",
+          "扫描 PDF 无可用文字层；视觉转录、题目和教材印刷页码已由 Adam 确认。",
+          "开放式口语、综合填表、小组总结和拓展练习没有唯一标准答案，不补写答案。"
+        ],
+        "next_minimum_step": "完成六段音频的教师语义听核与 PowerPoint 播放测试；来源内容、图片与“越来越”用字已批准，音频 QA 完成后再更新 authority 设计与 PPTX 升格 gate。"
+      },
+      "audio": {
+        "schema_version": "boya-lesson-audio-manifest-v1",
+        "lesson_id": "lesson-03",
+        "lesson_key": "boya-quasi-intermediate-i:lesson-03",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_title": "我对学中文越来越有兴趣",
+        "recorded_at": "2026-08-29",
+        "provenance": {
+          "source_type": "publisher_qr_landing_page",
+          "qr_url": "http://qr31.cn/IeruLV",
+          "landing_page": "https://biz.cli.im/site/IeruLV?qrurl=http://qr31.cn/IeruLV&gtype=2&key=82ff4173cf8bafe74878285867a6fa3f53d5dc1924",
+          "landing_audio_labels": [
+            "3-1",
+            "3-2",
+            "3-3",
+            "3-4",
+            "3-5",
+            "3-6"
+          ],
+          "textbook_labels_seen": [
+            "3-1",
+            "3-2",
+            "3-3",
+            "3-4",
+            "3-5",
+            "3-6"
+          ],
+          "label_discrepancy": null
+        },
+        "technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/audit/audio-technical-2026-08-28.md",
+        "tracks": [
+          {
+            "label": "3-1",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Ft1QDnBokZmWrRT5bCaMwcMVb2lq",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-03/3-1.mp3",
+            "scope": "词语（P22–P23）",
+            "bytes": 991389,
+            "sha256": "244ca28316b97f2ba6a3d71f24af09e49247f934d6b32665f25891f9818d0878",
+            "duration_seconds": 61.64898,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "3-2",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FpwcUw7xm9WaPwY9Bj0I4XvFLM_h",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-03/3-2.mp3",
+            "scope": "词语理解（P23–P24）",
+            "bytes": 645737,
+            "sha256": "f152ee86a7432f5fc8f115b23ecfa575a8f0084a37ea50f6565e63a7a0417c6d",
+            "duration_seconds": 40.045714,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "3-3",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FnnJlIJiOG8PJnO6NxdoPadP_LlD",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-03/3-3.mp3",
+            "scope": "听说句子：判断对错（P24–P25）",
+            "bytes": 1297741,
+            "sha256": "983613344869f0f5eb969c730f52f772f083c4d2320c993a45261c4a5654c276",
+            "duration_seconds": 80.796735,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "3-4",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FmwI-DnIswYJnXjDoSnC_wZqaph9",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-03/3-4.mp3",
+            "scope": "短文一《开始接触汉语并产生一定的兴趣》（P25–P26）",
+            "bytes": 1107164,
+            "sha256": "e0cee2a4a5be21321c2cc69897366d8b07f6bb1cda340a921640d55fc8ce250a",
+            "duration_seconds": 68.884898,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "3-5",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fv7MVgJrNF9A9IHOC5mKDVeFrtX3",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-03/3-5.mp3",
+            "scope": "短文二《为什么选修中文》（P26–P28）",
+            "bytes": 1176127,
+            "sha256": "7fbb009795228f6cf7131d12627cb3c6418e2e9b4efde9ad7cae3589d0b3047d",
+            "duration_seconds": 73.195102,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "3-6",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FiRgwv_YOo1SvKSarKiDiQ0QcX4y",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-03/3-6.mp3",
+            "scope": "短文三《中文课》（P28–P29）",
+            "bytes": 1136839,
+            "sha256": "6ec0ccb21950db29dcaf971fbe7e097b5cc14d65ea2e3a5b3a9cccdd755c3e96",
+            "duration_seconds": 70.739592,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          }
+        ],
+        "status": "technical_pass_semantic_pending",
+        "coverage_status": "all_six_tracks_mapped_to_source_sections"
+      },
+      "canonical_path": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/canonical-source.json",
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-03/00-source/source-manifest.json",
+      "canonical_source_sha256": "821f8009e7ec2b53d9f38b7adcb2421f0012c4730b61cc8db6a08bf2c59c5aa1",
+      "review_items": [
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:1",
+          "value": {
+            "no": 1,
+            "word": "兴趣",
+            "pinyin": "xìngqù",
+            "pos": "名",
+            "gloss": "interest"
+          },
+          "title": "兴趣",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:2",
+          "value": {
+            "no": 2,
+            "word": "古老肉",
+            "pinyin": "gǔlǎoròu",
+            "pos": "名",
+            "gloss": "fried pork in sweet and sour sauce"
+          },
+          "title": "古老肉",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:3",
+          "value": {
+            "no": 3,
+            "word": "西红柿炒鸡蛋",
+            "pinyin": "xīhóngshì chǎo jīdàn",
+            "pos": null,
+            "pos_status": "blank_in_source",
+            "gloss": "scrambled eggs with tomatoes"
+          },
+          "title": "西红柿炒鸡蛋",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:4",
+          "value": {
+            "no": 4,
+            "word": "暑假",
+            "pinyin": "shǔjià",
+            "pos": "名",
+            "gloss": "summer vacation"
+          },
+          "title": "暑假",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:5",
+          "value": {
+            "no": 5,
+            "word": "招待",
+            "pinyin": "zhāodài",
+            "pos": "动",
+            "gloss": "to entertain; to cater"
+          },
+          "title": "招待",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:6",
+          "value": {
+            "no": 6,
+            "word": "聊天儿",
+            "pinyin": "liáotiānr",
+            "pos": null,
+            "pos_status": "blank_in_source",
+            "gloss": "to chat",
+            "starred": true
+          },
+          "title": "聊天儿",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:7",
+          "value": {
+            "no": 7,
+            "word": "转学",
+            "pinyin": "zhuǎnxué",
+            "pos": null,
+            "pos_status": "blank_in_source",
+            "gloss": "to transfer to another school"
+          },
+          "title": "转学",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:8",
+          "value": {
+            "no": 8,
+            "word": "另外",
+            "pinyin": "lìngwài",
+            "pos": "代",
+            "gloss": "another; other"
+          },
+          "title": "另外",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:9",
+          "value": {
+            "no": 9,
+            "word": "互相",
+            "pinyin": "hùxiāng",
+            "pos": "副",
+            "gloss": "each other"
+          },
+          "title": "互相",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:10",
+          "value": {
+            "no": 10,
+            "word": "有趣",
+            "pinyin": "yǒuqù",
+            "pos": "形",
+            "gloss": "interesting"
+          },
+          "title": "有趣",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:11",
+          "value": {
+            "no": 11,
+            "word": "声调",
+            "pinyin": "shēngdiào",
+            "pos": "名",
+            "gloss": "tone"
+          },
+          "title": "声调",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:12",
+          "value": {
+            "no": 12,
+            "word": "重复",
+            "pinyin": "chóngfù",
+            "pos": "动",
+            "gloss": "to repeat",
+            "starred": true
+          },
+          "title": "重复",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:13",
+          "value": {
+            "no": 13,
+            "word": "接触",
+            "pinyin": "jiēchù",
+            "pos": "动",
+            "gloss": "to contact"
+          },
+          "title": "接触",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:14",
+          "value": {
+            "no": 14,
+            "word": "帮忙",
+            "pinyin": "bāngmáng",
+            "pos": null,
+            "pos_status": "blank_in_source",
+            "gloss": "to offer help",
+            "starred": true
+          },
+          "title": "帮忙",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:15",
+          "value": {
+            "no": 15,
+            "word": "记得",
+            "pinyin": "jìde",
+            "pos": "动",
+            "gloss": "remember",
+            "starred": true
+          },
+          "title": "记得",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:16",
+          "value": {
+            "no": 16,
+            "word": "例如",
+            "pinyin": "lìrú",
+            "pos": "动",
+            "gloss": "for example",
+            "starred": true
+          },
+          "title": "例如",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:17",
+          "value": {
+            "no": 17,
+            "word": "中国通",
+            "pinyin": "Zhōngguótōng",
+            "pos": "名",
+            "gloss": "China hand"
+          },
+          "title": "中国通",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:18",
+          "value": {
+            "no": 18,
+            "word": "神秘",
+            "pinyin": "shénmì",
+            "pos": "形",
+            "gloss": "mysterious"
+          },
+          "title": "神秘",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:19",
+          "value": {
+            "no": 19,
+            "word": "开（课）",
+            "pinyin": "kāi (kè)",
+            "pos": "动",
+            "gloss": "to offer (a course)"
+          },
+          "title": "开（课）",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:20",
+          "value": {
+            "no": 20,
+            "word": "总是",
+            "pinyin": "zǒngshì",
+            "pos": "副",
+            "gloss": "always"
+          },
+          "title": "总是",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:21",
+          "value": {
+            "no": 21,
+            "word": "更",
+            "pinyin": "gèng",
+            "pos": "副",
+            "gloss": "even"
+          },
+          "title": "更",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:22",
+          "value": {
+            "no": 22,
+            "word": "于是",
+            "pinyin": "yúshì",
+            "pos": "连",
+            "gloss": "therefore"
+          },
+          "title": "于是",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:23",
+          "value": {
+            "no": 23,
+            "word": "选修",
+            "pinyin": "xuǎnxiū",
+            "pos": "动",
+            "gloss": "to elect (a course)"
+          },
+          "title": "选修",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "proper-noun:1",
+          "value": {
+            "word": "德语",
+            "pinyin": "Déyǔ",
+            "gloss": "German language"
+          },
+          "title": "德语",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "专名"
+        },
+        {
+          "area": "vocabulary",
+          "id": "proper-noun:2",
+          "value": {
+            "word": "拉丁语",
+            "pinyin": "Lādīngyǔ",
+            "gloss": "Latin"
+          },
+          "title": "拉丁语",
+          "page": "22–23",
+          "audio": "3-1",
+          "type": "专名"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_1",
+          "value": {
+            "id": "short_text_1",
+            "printed_pages": [
+              25,
+              26
+            ],
+            "audio": "3-4",
+            "title": "开始接触汉语并产生一定的兴趣",
+            "text": "我的中文名字叫李大为。我的爸爸妈妈都是大夫。上小学的时候，爸爸的一位中国朋友王先生和他的太太常常来我家做客。每年他们都请我们一家人和他们一起庆祝中国新年。有时候，王太太还让我帮忙招待客人。我记得每次他们都准备很多菜。我最爱吃的是古老肉、西红柿炒鸡蛋和饺子。那时候我学会了一些中文，例如“你好”“谢谢”“再见”“好吃”“我爱你”“没关系”“欢迎”“好说”“没办法”“中国通”什么的。我觉得中文挺有趣，也有点儿神秘，但是我还没有想到要在学校学习它。",
+            "text_source": "答案 PDF 文件第12页视觉转录；主教材第25页只显示题组与阅读比较提示",
+            "exercises": {
+              "first_listen": [
+                "王先生是谁？",
+                "有时候，李大为帮王太太做什么？",
+                "李大为会中文吗？",
+                "李大为上中文课吗？"
+              ],
+              "second_listen": [
+                "李大为喜欢吃什么中国菜？",
+                "李大为为什么会说一点儿中文？",
+                "李大为会说哪些中文词语？"
+              ],
+              "present": "请你介绍一下李大为：（1）李大为的家庭情况；（2）他们和王先生一家的关系；（3）李大为觉得中文怎么样。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：大夫、朋友、做客、庆祝、中国菜、中文、有趣、神秘。常用表达参考：……（的）时候。",
+              "compare": "李大为的爸爸妈妈都是大夫。王先生是爸爸的中国朋友，王先生和太太常常来李大为家做客，也请他们一起庆祝中国新年。李大为喜欢吃古老肉、西红柿炒鸡蛋和饺子，会说一些简单的中文，觉得中文有趣又有点儿神秘。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  25
+                ],
+                "audio_tracks": [
+                  "3-4"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，回答下面的问题，要求说两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  25
+                ],
+                "audio_tracks": [
+                  "3-4"
+                ]
+              },
+              "present": {
+                "heading_verbatim": "（三）请你介绍一下李大为",
+                "textbook_printed_pages": [
+                  25,
+                  26
+                ],
+                "audio_tracks": [
+                  "3-4"
+                ]
+              },
+              "compare": {
+                "heading_verbatim": "（四）读下面的短文，跟你说的进行比较",
+                "textbook_printed_pages": [
+                  26
+                ],
+                "audio_tracks": []
+              }
+            }
+          },
+          "title": "开始接触汉语并产生一定的兴趣",
+          "page": "25–26",
+          "audio": "3-4",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_2",
+          "value": {
+            "id": "short_text_2",
+            "printed_pages": [
+              26,
+              27,
+              28
+            ],
+            "audio": "3-5",
+            "title": "为什么选修中文",
+            "text": "上中学时，我学了一年德语，我觉得德语挺有用，学德语也很有意思。第二年我要转学，到另外一所中学去上学，那所中学不开德语课，可是有汉语课和拉丁语课。放暑假的时候，王先生的爸爸妈妈从中国来了，爸爸妈妈带我去看望他们，中国爷爷和中国奶奶都不会说英文。吃饭的时候，他们总是对我说“多吃点儿，多吃点儿”，我觉得很好玩儿。中国爷爷汉字写得很漂亮，他还教我写了“我”“好”“人”。我对汉语的兴趣更大了。我想，中国人那么多，会说中文，可以和很多很多人交流，也可以了解中国文化。于是，我决定在新学校选修中文课。",
+            "text_source": "答案 PDF 文件第12页视觉转录；主教材第26–28页视觉核对",
+            "exercises": {
+              "first_listen": [
+                "李大为觉得学德语怎么样？",
+                "放暑假的时候，谁来了？",
+                "李大为决定在新学校学什么？"
+              ],
+              "second_listen": [
+                "李大为为什么不继续学德语了？（转 另外 所）",
+                "中国爷爷奶奶怎么样？（教 写）",
+                "李大为为什么选修中文？（兴趣 交流 了解）"
+              ],
+              "present": "请你说说李大为为什么决定选修中文：（1）李大为上中学时选了什么外语，第二年发生了什么；（2）中国爷爷奶奶怎么样；（3）李大为觉得会中文有什么好处。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：德语、第二年、转学、放暑假、认识、中国爷爷、教、写汉字、兴趣、决定、选修。常用表达参考：但是／可是、于是。",
+              "compare": "李大为上中学时学了一年德语。第二年他要转学，新学校不开德语课，所以他认识了中国爷爷奶奶，学会了一点儿汉字，也对中文产生了更大的兴趣，于是决定选修中文课。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  26
+                ],
+                "audio_tracks": [
+                  "3-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  27
+                ],
+                "audio_tracks": [
+                  "3-5"
+                ]
+              },
+              "present": {
+                "heading_verbatim": "（三）请你说说李大为为什么决定选修中文",
+                "textbook_printed_pages": [
+                  27
+                ],
+                "audio_tracks": [
+                  "3-5"
+                ]
+              },
+              "compare": {
+                "heading_verbatim": "（四）读下面的短文，跟你说的进行比较",
+                "textbook_printed_pages": [
+                  27
+                ],
+                "audio_tracks": []
+              }
+            }
+          },
+          "title": "为什么选修中文",
+          "page": "26–27–28",
+          "audio": "3-5",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_3",
+          "value": {
+            "id": "short_text_3",
+            "printed_pages": [
+              28,
+              29
+            ],
+            "audio": "3-6",
+            "title": "中文课",
+            "text": "开始上中文课以后，我才知道学中文不容易。中文的声调很难，写汉字更难。比如，我喜欢画画儿，可是我说出的是“我喜欢画花儿”；我想写“我想当大夫”，可我写的是“我想当大天”；我想写“图书馆”，我写的是“图书饭”。不过，我们的老师教得很好，课堂上，同学们也常常互相帮助。每个月，老师都请一些中国留学生来和我们聊天儿。刚开始，我们觉得中国学生说话很快。我们听不懂的时候，就请他们重复一遍、两遍。现在，我们已经慢慢适应了。我们中文说得也越来越好了。和中国人交流，同学们都觉得很有收获。我觉得学中文越来越有意思了。",
+            "text_source": "答案 PDF 文件第12–13页视觉转录；主教材第28–29页视觉核对",
+            "exercises": {
+              "first_listen": [
+                "李大为觉得中文难不难？",
+                "李大为喜欢做什么？",
+                "李大为的中文老师怎么样？",
+                "李大为觉得上中文课有意思吗？"
+              ],
+              "second_listen": [
+                "李大为说错过什么？为什么？（声调）",
+                "李大为写错过什么？（可是）",
+                "李大为和他的同学们为什么喜欢和中国人聊天儿？（越来越 收获）"
+              ],
+              "group": "题目：大家一起谈谈李大为的中文课。要求：一个人先说4～6个句子，不少于40字；然后小组其他同学补充；最后再由一名同学总结，说6～8个句子，不少于60字。词语参考：不容易、老师、课堂上、聊天儿、重复、交流、有收获。常用表达参考：互相、每个月、越来越。",
+              "compare": "开始学汉语以后，李大为觉得学习汉语不容易。不过，老师教得很好，课堂上同学们常常互相帮助。每个月，他们还跟中国留学生聊一次天儿，听不懂时请对方重复。现在他们慢慢适应了，说中文越来越好，和中国人交流很有收获。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  28
+                ],
+                "audio_tracks": [
+                  "3-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  28
+                ],
+                "audio_tracks": [
+                  "3-6"
+                ]
+              },
+              "group": {
+                "heading_verbatim": "（三）分组练习",
+                "textbook_printed_pages": [
+                  29
+                ],
+                "audio_tracks": [
+                  "3-6"
+                ]
+              },
+              "compare": {
+                "heading_verbatim": "（四）读下面的短文，跟你说的进行比较",
+                "textbook_printed_pages": [
+                  29
+                ],
+                "audio_tracks": []
+              }
+            }
+          },
+          "title": "中文课",
+          "page": "28–29",
+          "audio": "3-6",
+          "type": "短文"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1",
+          "value": {
+            "expression": {
+              "expression": "每＋量词",
+              "examples": [
+                "每年李大为都去王先生家庆祝中国新年。",
+                "每次回家，丽丽都给妈妈做一两个北方菜。"
+              ]
+            },
+            "topic": "谈论家庭生活"
+          },
+          "title": {
+            "expression": "每＋量词",
+            "examples": [
+              "每年李大为都去王先生家庆祝中国新年。",
+              "每次回家，丽丽都给妈妈做一两个北方菜。"
+            ]
+          },
+          "page": "26",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:2",
+          "value": {
+            "expression": {
+              "expression": "帮／忙",
+              "examples": [
+                "妈妈请客的时候，毛毛也帮忙做饭。",
+                "爸爸的朋友请他帮一个忙。"
+              ]
+            },
+            "topic": "谈论家庭生活"
+          },
+          "title": {
+            "expression": "帮／忙",
+            "examples": [
+              "妈妈请客的时候，毛毛也帮忙做饭。",
+              "爸爸的朋友请他帮一个忙。"
+            ]
+          },
+          "page": "26",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:3",
+          "value": {
+            "expression": {
+              "expression": "……什么的",
+              "examples": [
+                "李大为喜欢吃中国菜，例如西红柿炒鸡蛋、古老肉什么的。",
+                "玛丽会说一点儿中文，例如“谢谢”“不客气”什么的。"
+              ]
+            },
+            "topic": "谈论家庭生活"
+          },
+          "title": {
+            "expression": "……什么的",
+            "examples": [
+              "李大为喜欢吃中国菜，例如西红柿炒鸡蛋、古老肉什么的。",
+              "玛丽会说一点儿中文，例如“谢谢”“不客气”什么的。"
+            ]
+          },
+          "page": "26",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:4",
+          "value": {
+            "expression": {
+              "expression": "……（的）时候",
+              "examples": [
+                "上小学的时候，李大为常去王先生家。",
+                "吃饭的时候，爷爷奶奶总是说：“多吃点儿。”"
+              ]
+            },
+            "topic": "谈论家庭生活"
+          },
+          "title": {
+            "expression": "……（的）时候",
+            "examples": [
+              "上小学的时候，李大为常去王先生家。",
+              "吃饭的时候，爷爷奶奶总是说：“多吃点儿。”"
+            ]
+          },
+          "page": "26",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:5",
+          "value": {
+            "expression": {
+              "expression": "记得",
+              "examples": [
+                "丽丽记得十年前她和爸爸妈妈经常去养老院帮忙。",
+                "阿里小时候去过不少地方，可是他已经不太记得了。"
+              ]
+            },
+            "topic": "谈论家庭生活"
+          },
+          "title": {
+            "expression": "记得",
+            "examples": [
+              "丽丽记得十年前她和爸爸妈妈经常去养老院帮忙。",
+              "阿里小时候去过不少地方，可是他已经不太记得了。"
+            ]
+          },
+          "page": "26",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:1",
+          "value": {
+            "expression": {
+              "expression": "可以……也可以……",
+              "examples": [
+                "会说中文，可以和中国人交流，也可以了解中国文化。",
+                "和中国人聊天儿，可以练习听力，也可以了解中国人的想法。"
+              ]
+            },
+            "topic": "谈论学习工作"
+          },
+          "title": {
+            "expression": "可以……也可以……",
+            "examples": [
+              "会说中文，可以和中国人交流，也可以了解中国文化。",
+              "和中国人聊天儿，可以练习听力，也可以了解中国人的想法。"
+            ]
+          },
+          "page": "27–28",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:2",
+          "value": {
+            "expression": {
+              "expression": "另（外）",
+              "examples": [
+                "另（外）一所学校／另（外）一门外语。",
+                "另（外）一位老师／另外几家公司。"
+              ]
+            },
+            "topic": "谈论学习工作"
+          },
+          "title": {
+            "expression": "另（外）",
+            "examples": [
+              "另（外）一所学校／另（外）一门外语。",
+              "另（外）一位老师／另外几家公司。"
+            ]
+          },
+          "page": "27–28",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:3",
+          "value": {
+            "expression": {
+              "expression": "更（1）",
+              "examples": [
+                "阿里对汉语的兴趣更大了。",
+                "同学们觉得中文更有趣了。"
+              ]
+            },
+            "topic": "谈论学习工作"
+          },
+          "title": {
+            "expression": "更（1）",
+            "examples": [
+              "阿里对汉语的兴趣更大了。",
+              "同学们觉得中文更有趣了。"
+            ]
+          },
+          "page": "27–28",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:4",
+          "value": {
+            "expression": {
+              "expression": "动词＋得（1）",
+              "examples": [
+                "中国爷爷写字写得很漂亮。",
+                "中国人说话说得很快。"
+              ]
+            },
+            "topic": "谈论学习工作"
+          },
+          "title": {
+            "expression": "动词＋得（1）",
+            "examples": [
+              "中国爷爷写字写得很漂亮。",
+              "中国人说话说得很快。"
+            ]
+          },
+          "page": "27–28",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:5",
+          "value": {
+            "expression": {
+              "expression": "但是",
+              "examples": [
+                "李大为觉得中文挺有趣，但是他还没打算在学校学它。",
+                "和中国人聊天儿很有意思，但是有时候听不懂。"
+              ]
+            },
+            "topic": "谈论学习工作"
+          },
+          "title": {
+            "expression": "但是",
+            "examples": [
+              "李大为觉得中文挺有趣，但是他还没打算在学校学它。",
+              "和中国人聊天儿很有意思，但是有时候听不懂。"
+            ]
+          },
+          "page": "27–28",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:6",
+          "value": {
+            "expression": {
+              "expression": "于是",
+              "examples": [
+                "玛丽觉得中文很有趣，于是她开始学习中文。",
+                "中村发现看中文电视可以练习中文，于是他每天看一小时中文电视。"
+              ]
+            },
+            "topic": "谈论学习工作"
+          },
+          "title": {
+            "expression": "于是",
+            "examples": [
+              "玛丽觉得中文很有趣，于是她开始学习中文。",
+              "中村发现看中文电视可以练习中文，于是他每天看一小时中文电视。"
+            ]
+          },
+          "page": "27–28",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:1",
+          "value": {
+            "expression": {
+              "expression": "更（2）",
+              "examples": [
+                "声调不容易，写汉字更难。",
+                "大家听力不错，口语更好。"
+              ]
+            },
+            "topic": "谈论中文课堂"
+          },
+          "title": {
+            "expression": "更（2）",
+            "examples": [
+              "声调不容易，写汉字更难。",
+              "大家听力不错，口语更好。"
+            ]
+          },
+          "page": "29",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:2",
+          "value": {
+            "expression": {
+              "expression": "互相",
+              "examples": [
+                "同学们互相学习，互相帮助。",
+                "朋友应该互相关心。"
+              ]
+            },
+            "topic": "谈论中文课堂"
+          },
+          "title": {
+            "expression": "互相",
+            "examples": [
+              "同学们互相学习，互相帮助。",
+              "朋友应该互相关心。"
+            ]
+          },
+          "page": "29",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:3",
+          "value": {
+            "expression": {
+              "expression": "遍",
+              "examples": [
+                "每个生词要读三遍。",
+                "这个电影我看过两遍。"
+              ]
+            },
+            "topic": "谈论中文课堂"
+          },
+          "title": {
+            "expression": "遍",
+            "examples": [
+              "每个生词要读三遍。",
+              "这个电影我看过两遍。"
+            ]
+          },
+          "page": "29",
+          "type": "语法／表达"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehension:1",
+          "value": {
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "words": [
+              "古老肉",
+              "饺子",
+              "西红柿炒鸡蛋"
+            ],
+            "answer": [
+              "1.B",
+              "2.A",
+              "3.C"
+            ]
+          },
+          "title": "词语理解",
+          "page": "23–24",
+          "audio": "3-2",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehension:2",
+          "value": {
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "words": [
+              "画画儿",
+              "大夫",
+              "画花儿"
+            ],
+            "answer": [
+              "1.A",
+              "2.B",
+              "3.C"
+            ]
+          },
+          "title": "词语理解",
+          "page": "23–24",
+          "audio": "3-2",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehension:3",
+          "value": {
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "words": [
+              "放暑假",
+              "招待客人",
+              "聊天儿",
+              "看望"
+            ],
+            "answer": [
+              "1.A",
+              "2.D",
+              "3.C",
+              "4.B"
+            ]
+          },
+          "title": "词语理解",
+          "page": "23–24",
+          "audio": "3-2",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_3_3:1",
+          "value": {
+            "prompt": "丽丽不是客人。",
+            "answer": "错",
+            "number": 1,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "24–25",
+          "audio": "3-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_3_3:2",
+          "value": {
+            "prompt": "阿里家来客人了。",
+            "answer": "错",
+            "number": 2,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "24–25",
+          "audio": "3-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_3_3:3",
+          "value": {
+            "prompt": "李大为要去新学校。",
+            "answer": "对",
+            "number": 3,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "24–25",
+          "audio": "3-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_3_3:4",
+          "value": {
+            "prompt": "哥哥要再学一种外语。",
+            "answer": "对",
+            "number": 4,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "24–25",
+          "audio": "3-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_3_3:5",
+          "value": {
+            "prompt": "下星期二上课。",
+            "answer": "错",
+            "number": 5,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "24–25",
+          "audio": "3-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_3_3:6",
+          "value": {
+            "prompt": "姐姐常常去爷爷奶奶那儿。",
+            "answer": "对",
+            "number": 6,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "24–25",
+          "audio": "3-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_3_3:7",
+          "value": {
+            "prompt": "同学们不喜欢王红。",
+            "answer": "错",
+            "number": 7,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "24–25",
+          "audio": "3-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_3_3:8",
+          "value": {
+            "prompt": "李大为觉得写汉字挺好玩儿。",
+            "answer": "对",
+            "number": 8,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "24–25",
+          "audio": "3-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_3_3:9",
+          "value": {
+            "prompt": "李大为觉得声调最难。",
+            "answer": "错",
+            "number": 9,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "24–25",
+          "audio": "3-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_3_3:10",
+          "value": {
+            "prompt": "他们可以再说一遍。",
+            "answer": "对",
+            "number": 10,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "24–25",
+          "audio": "3-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_3_3:11",
+          "value": {
+            "prompt": "中文越来越难学。",
+            "answer": "错",
+            "number": 11,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "24–25",
+          "audio": "3-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_3_3:12",
+          "value": {
+            "prompt": "同学们觉得和中国人交流很难。",
+            "answer": "错",
+            "number": 12,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "24–25",
+          "audio": "3-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:1",
+          "value": {
+            "prompt": "王先生是谁？",
+            "kind": "first_listen",
+            "textTitle": "开始接触汉语并产生一定的兴趣"
+          },
+          "title": "开始接触汉语并产生一定的兴趣 · first_listen",
+          "page": "25–26",
+          "audio": "3-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:2",
+          "value": {
+            "prompt": "有时候，李大为帮王太太做什么？",
+            "kind": "first_listen",
+            "textTitle": "开始接触汉语并产生一定的兴趣"
+          },
+          "title": "开始接触汉语并产生一定的兴趣 · first_listen",
+          "page": "25–26",
+          "audio": "3-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:3",
+          "value": {
+            "prompt": "李大为会中文吗？",
+            "kind": "first_listen",
+            "textTitle": "开始接触汉语并产生一定的兴趣"
+          },
+          "title": "开始接触汉语并产生一定的兴趣 · first_listen",
+          "page": "25–26",
+          "audio": "3-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:4",
+          "value": {
+            "prompt": "李大为上中文课吗？",
+            "kind": "first_listen",
+            "textTitle": "开始接触汉语并产生一定的兴趣"
+          },
+          "title": "开始接触汉语并产生一定的兴趣 · first_listen",
+          "page": "25–26",
+          "audio": "3-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:1",
+          "value": {
+            "prompt": "李大为喜欢吃什么中国菜？",
+            "kind": "second_listen",
+            "textTitle": "开始接触汉语并产生一定的兴趣"
+          },
+          "title": "开始接触汉语并产生一定的兴趣 · second_listen",
+          "page": "25–26",
+          "audio": "3-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:2",
+          "value": {
+            "prompt": "李大为为什么会说一点儿中文？",
+            "kind": "second_listen",
+            "textTitle": "开始接触汉语并产生一定的兴趣"
+          },
+          "title": "开始接触汉语并产生一定的兴趣 · second_listen",
+          "page": "25–26",
+          "audio": "3-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:3",
+          "value": {
+            "prompt": "李大为会说哪些中文词语？",
+            "kind": "second_listen",
+            "textTitle": "开始接触汉语并产生一定的兴趣"
+          },
+          "title": "开始接触汉语并产生一定的兴趣 · second_listen",
+          "page": "25–26",
+          "audio": "3-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:present:1",
+          "value": {
+            "prompt": "请你介绍一下李大为：（1）李大为的家庭情况；（2）他们和王先生一家的关系；（3）李大为觉得中文怎么样。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：大夫、朋友、做客、庆祝、中国菜、中文、有趣、神秘。常用表达参考：……（的）时候。",
+            "kind": "present",
+            "textTitle": "开始接触汉语并产生一定的兴趣"
+          },
+          "title": "开始接触汉语并产生一定的兴趣 · present",
+          "page": "25–26",
+          "audio": "3-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:compare:1",
+          "value": {
+            "prompt": "李大为的爸爸妈妈都是大夫。王先生是爸爸的中国朋友，王先生和太太常常来李大为家做客，也请他们一起庆祝中国新年。李大为喜欢吃古老肉、西红柿炒鸡蛋和饺子，会说一些简单的中文，觉得中文有趣又有点儿神秘。",
+            "kind": "compare",
+            "textTitle": "开始接触汉语并产生一定的兴趣"
+          },
+          "title": "开始接触汉语并产生一定的兴趣 · compare",
+          "page": "25–26",
+          "audio": "3-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:1",
+          "value": {
+            "prompt": "李大为觉得学德语怎么样？",
+            "kind": "first_listen",
+            "textTitle": "为什么选修中文"
+          },
+          "title": "为什么选修中文 · first_listen",
+          "page": "26–27–28",
+          "audio": "3-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:2",
+          "value": {
+            "prompt": "放暑假的时候，谁来了？",
+            "kind": "first_listen",
+            "textTitle": "为什么选修中文"
+          },
+          "title": "为什么选修中文 · first_listen",
+          "page": "26–27–28",
+          "audio": "3-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:3",
+          "value": {
+            "prompt": "李大为决定在新学校学什么？",
+            "kind": "first_listen",
+            "textTitle": "为什么选修中文"
+          },
+          "title": "为什么选修中文 · first_listen",
+          "page": "26–27–28",
+          "audio": "3-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:1",
+          "value": {
+            "prompt": "李大为为什么不继续学德语了？（转 另外 所）",
+            "kind": "second_listen",
+            "textTitle": "为什么选修中文"
+          },
+          "title": "为什么选修中文 · second_listen",
+          "page": "26–27–28",
+          "audio": "3-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:2",
+          "value": {
+            "prompt": "中国爷爷奶奶怎么样？（教 写）",
+            "kind": "second_listen",
+            "textTitle": "为什么选修中文"
+          },
+          "title": "为什么选修中文 · second_listen",
+          "page": "26–27–28",
+          "audio": "3-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:3",
+          "value": {
+            "prompt": "李大为为什么选修中文？（兴趣 交流 了解）",
+            "kind": "second_listen",
+            "textTitle": "为什么选修中文"
+          },
+          "title": "为什么选修中文 · second_listen",
+          "page": "26–27–28",
+          "audio": "3-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:present:1",
+          "value": {
+            "prompt": "请你说说李大为为什么决定选修中文：（1）李大为上中学时选了什么外语，第二年发生了什么；（2）中国爷爷奶奶怎么样；（3）李大为觉得会中文有什么好处。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：德语、第二年、转学、放暑假、认识、中国爷爷、教、写汉字、兴趣、决定、选修。常用表达参考：但是／可是、于是。",
+            "kind": "present",
+            "textTitle": "为什么选修中文"
+          },
+          "title": "为什么选修中文 · present",
+          "page": "26–27–28",
+          "audio": "3-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:compare:1",
+          "value": {
+            "prompt": "李大为上中学时学了一年德语。第二年他要转学，新学校不开德语课，所以他认识了中国爷爷奶奶，学会了一点儿汉字，也对中文产生了更大的兴趣，于是决定选修中文课。",
+            "kind": "compare",
+            "textTitle": "为什么选修中文"
+          },
+          "title": "为什么选修中文 · compare",
+          "page": "26–27–28",
+          "audio": "3-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:1",
+          "value": {
+            "prompt": "李大为觉得中文难不难？",
+            "kind": "first_listen",
+            "textTitle": "中文课"
+          },
+          "title": "中文课 · first_listen",
+          "page": "28–29",
+          "audio": "3-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:2",
+          "value": {
+            "prompt": "李大为喜欢做什么？",
+            "kind": "first_listen",
+            "textTitle": "中文课"
+          },
+          "title": "中文课 · first_listen",
+          "page": "28–29",
+          "audio": "3-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:3",
+          "value": {
+            "prompt": "李大为的中文老师怎么样？",
+            "kind": "first_listen",
+            "textTitle": "中文课"
+          },
+          "title": "中文课 · first_listen",
+          "page": "28–29",
+          "audio": "3-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:4",
+          "value": {
+            "prompt": "李大为觉得上中文课有意思吗？",
+            "kind": "first_listen",
+            "textTitle": "中文课"
+          },
+          "title": "中文课 · first_listen",
+          "page": "28–29",
+          "audio": "3-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:1",
+          "value": {
+            "prompt": "李大为说错过什么？为什么？（声调）",
+            "kind": "second_listen",
+            "textTitle": "中文课"
+          },
+          "title": "中文课 · second_listen",
+          "page": "28–29",
+          "audio": "3-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:2",
+          "value": {
+            "prompt": "李大为写错过什么？（可是）",
+            "kind": "second_listen",
+            "textTitle": "中文课"
+          },
+          "title": "中文课 · second_listen",
+          "page": "28–29",
+          "audio": "3-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:3",
+          "value": {
+            "prompt": "李大为和他的同学们为什么喜欢和中国人聊天儿？（越来越 收获）",
+            "kind": "second_listen",
+            "textTitle": "中文课"
+          },
+          "title": "中文课 · second_listen",
+          "page": "28–29",
+          "audio": "3-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:group:1",
+          "value": {
+            "prompt": "题目：大家一起谈谈李大为的中文课。要求：一个人先说4～6个句子，不少于40字；然后小组其他同学补充；最后再由一名同学总结，说6～8个句子，不少于60字。词语参考：不容易、老师、课堂上、聊天儿、重复、交流、有收获。常用表达参考：互相、每个月、越来越。",
+            "kind": "group",
+            "textTitle": "中文课"
+          },
+          "title": "中文课 · group",
+          "page": "28–29",
+          "audio": "3-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:compare:1",
+          "value": {
+            "prompt": "开始学汉语以后，李大为觉得学习汉语不容易。不过，老师教得很好，课堂上同学们常常互相帮助。每个月，他们还跟中国留学生聊一次天儿，听不懂时请对方重复。现在他们慢慢适应了，说中文越来越好，和中国人交流很有收获。",
+            "kind": "compare",
+            "textTitle": "中文课"
+          },
+          "title": "中文课 · compare",
+          "page": "28–29",
+          "audio": "3-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:1",
+          "value": {
+            "prompt": {
+              "id": "comprehensive_1",
+              "instruction": "请你根据听过的三段短文填表",
+              "table_rows": [
+                {
+                  "topic": "李大为的家庭生活",
+                  "fields": [
+                    "家里有什么人",
+                    "他和爸爸妈妈做什么",
+                    "喜欢吃什么菜",
+                    "会说什么中文词语"
+                  ]
+                },
+                {
+                  "topic": "李大为为什么选中文课",
+                  "fields": [
+                    "学过什么外语",
+                    "为什么不学了",
+                    "为什么选修中文"
+                  ]
+                },
+                {
+                  "topic": "李大为的中文课",
+                  "fields": [
+                    "李大为觉得中文难不难",
+                    "李大为上中文课的时候做什么",
+                    "李大为喜欢不喜欢上中文课"
+                  ]
+                }
+              ],
+              "answer_status": "open_table_teacher_check"
+            }
+          },
+          "title": "综合练习",
+          "page": "30–31",
+          "audio": "3-4、3-5、3-6",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:2",
+          "value": {
+            "prompt": {
+              "id": "comprehensive_2",
+              "instruction": "小组活动：根据上面的表格和下面给出的参考词语和常用表达，谈一谈：（1）李大为小时候的生活；（2）李大为为什么选中文课；（3）李大为觉得学中文怎么样。要求：一名同学先说6～8个句子，不少于60字；然后小组其他同学补充；最后由一名同学总结，说8～10个句子，不少于80字。",
+              "vocabulary_reference": [
+                "做客",
+                "中文",
+                "德语",
+                "转学",
+                "选修",
+                "声调",
+                "汉字",
+                "聊天"
+              ],
+              "expression_reference": [
+                "例如",
+                "有兴趣",
+                "互相",
+                "越来越"
+              ],
+              "answer_status": "open_presentational_task"
+            }
+          },
+          "title": "综合练习",
+          "page": "30–31",
+          "audio": "3-4、3-5、3-6",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:3",
+          "value": {
+            "prompt": {
+              "id": "comprehensive_3",
+              "instruction": "拓展练习：你是什么时候开始对中文有兴趣的？请你谈一谈：（1）自己小时候的生活；（2）为什么选修中文；（3）在国内怎么学中文。要求：（1）使用这一课学过的词语和常用表达；（2）说8～10个句子，不少于80字。",
+              "answer_status": "open_presentational_task"
+            }
+          },
+          "title": "综合练习",
+          "page": "30–31",
+          "audio": "3-4、3-5、3-6",
+          "type": "综合练习"
+        }
+      ]
+    },
+    "boya-quasi-intermediate-i:lesson-04": {
+      "available": true,
+      "review_complete": true,
+      "completion": {
+        "status": "completed_by_adam",
+        "confirmed_by": "Adam",
+        "confirmed_at": "2026-09-08",
+        "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+        "technical_status_preserved": true
+      },
+      "reason": "",
+      "canonical": {
+        "schema_version": "quasi-intermediate-source-audit-v1.0",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_key": "boya-quasi-intermediate-i:lesson-04",
+        "lesson_number": 4,
+        "lesson_id": "lesson-04",
+        "title": "在中国学汉语",
+        "title_source": "主教材 PDF 第45页（印刷 P32）课名页视觉核对",
+        "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+        "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+        "page_map": {
+          "printed_pages": [
+            32,
+            41
+          ],
+          "pdf_pages": [
+            45,
+            54
+          ],
+          "answer_pdf_pages": [
+            14,
+            16
+          ],
+          "answer_index_pages": [
+            14,
+            15
+          ],
+          "mapping_status": "visual_verified_pdf_offset_plus_13; answer_file_page_16_continuation_noted"
+        },
+        "qr_evidence": {
+          "pdf_page": 45,
+          "qr_url": "http://qr31.cn/I9bLMV",
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-04-pdf-page-045.png",
+          "landing_page": "https://biz.cli.im/site/I9bLMV?qrurl=http://qr31.cn/I9bLMV&gtype=2&key=c36f817489cc67e6287828f1f97c00a7fc43446948",
+          "decode_status": "source_inventory_verified",
+          "landing_audio_labels": [
+            "4-1",
+            "4-2",
+            "4-3",
+            "4-4",
+            "4-5",
+            "4-6"
+          ]
+        },
+        "audio_map": [
+          {
+            "label": "4-1",
+            "coding": "JZ1539803",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fuj6EZ_93nW0avU3822yEY3rVqPd",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-1.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 824205,
+            "sha256": "46f02a4c825b2c0e1d08d5a35496fa34453142ec0c8ad2514f9a0e02c3e26797",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 51.2,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "4-2",
+            "coding": "KN1783197",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FmhgvlQy5pQj_wkq5NbGKsu8G2qJ",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-2.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 530380,
+            "sha256": "2ce4035b96a931c3192f135707d04190d772dcc69b04b69a2cdf29d4a14c0689",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 32.836,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "4-3",
+            "coding": "EG1783198",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FlOJKyFFAWqTQLKN6tUQL0qnmF8z",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-3.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 1525541,
+            "sha256": "b7f2d459172de811c551557926474ef0318c7d2cffca4ecc7f69c81609bcd9d0",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 95.033,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "4-4",
+            "coding": "AP1783199",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FmwmH05bvsxa4_bClt9MxdMRmKXR",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-4.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 1125554,
+            "sha256": "ea9f2e63b3cb0971d621c8ce5460a04ef1308547f5635514bde80846bcbe479e",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 70.034,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "4-5",
+            "coding": "IT1783200",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FjGNrXScKTDec1d7-W2bz3pJIjgQ",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-5.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 981776,
+            "sha256": "76693000356a2b28cc1381e8a7e520943a3b2c178cd96a0f025f8ea2e1456083",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 61.048,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "4-6",
+            "coding": "UW1783201",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FiNhTId2ChbKv-LTKOCMcRFFiPOS",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-6.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 1359193,
+            "sha256": "c3f757061c2f300f21a3b8d2222f5eda6b29d3ce30c9224c8ae47734c66a8f11",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 84.637,
+            "semantic_status": "pending_teacher_playback"
+          }
+        ],
+        "content_inventory": {
+          "vocabulary_count": 24,
+          "proper_noun_count": 0,
+          "vocabulary_comprehension_group_count": 2,
+          "vocabulary_comprehension_item_count": 8,
+          "listening_sentence_item_count": 15,
+          "texts_dialogues_count": 3,
+          "grammar_pattern_count": 18,
+          "listening_exercise_group_count": 6,
+          "comprehensive_exercise_count": 3,
+          "exercise_count": 27,
+          "status": "visual_source_snapshot_pending_adam_approval"
+        },
+        "answer_policy": "仅记录参考答案 PDF 中可核对的选择／判断答案与听力文本；开放式口语题不补写唯一标准答案。",
+        "review": {
+          "status": "source_audit_in_progress",
+          "approved": false,
+          "approved_by": [],
+          "approved_at": null,
+          "blockers": [
+            "六段音频已完成文件存在、bytes、SHA-256、时长和解码核对；教师逐段播放及语义听核尚未完成。",
+            "扫描教材无可用文字层；最终来源批准需由 Adam 对视觉转录、教材页码和答案证据确认。",
+            "开放式口语题、综合填表与小组总结没有唯一标准答案，不补写答案。",
+            "答案索引标示第14–15页，但短文三听力文本在答案文件第16页有续段，已保留并标记。"
+          ],
+          "approval_basis": [
+            "主教材 PDF 第45–54页（印刷 P32–P41）高分辨率视觉核对",
+            "答案 PDF 文件第14–16页（答案印刷 P11–P13）题目答案与听力文本视觉核对",
+            "来源总盘点第四课 QR、音频 bytes、hash 和时长记录"
+          ]
+        },
+        "sections": [
+          {
+            "id": "vocabulary",
+            "printed_pages": [
+              32,
+              33
+            ],
+            "audio": "4-1",
+            "entries": [
+              {
+                "no": 1,
+                "word": "上（菜）",
+                "pinyin": "shàng (cài)",
+                "pos": "动",
+                "gloss": "to serve"
+              },
+              {
+                "no": 2,
+                "word": "司机",
+                "pinyin": "sījī",
+                "pos": "名",
+                "gloss": "driver"
+              },
+              {
+                "no": 3,
+                "word": "快餐店",
+                "pinyin": "kuàicāndiàn",
+                "pos": "名",
+                "gloss": "fast food restaurant"
+              },
+              {
+                "no": 4,
+                "word": "点（菜）",
+                "pinyin": "diǎn (cài)",
+                "pos": "动",
+                "gloss": "to order"
+              },
+              {
+                "no": 5,
+                "word": "阅读",
+                "pinyin": "yuèdú",
+                "pos": "动",
+                "gloss": "to read",
+                "starred": true
+              },
+              {
+                "no": 6,
+                "word": "语伴",
+                "pinyin": "yǔbàn",
+                "pos": "名",
+                "gloss": "language partner"
+              },
+              {
+                "no": 7,
+                "word": "讲座",
+                "pinyin": "jiǎngzuò",
+                "pos": "名",
+                "gloss": "speech"
+              },
+              {
+                "no": 8,
+                "word": "国际",
+                "pinyin": "guójì",
+                "pos": "形",
+                "gloss": "international",
+                "starred": true
+              },
+              {
+                "no": 9,
+                "word": "发现",
+                "pinyin": "fāxiàn",
+                "pos": "动",
+                "gloss": "to find; to discover"
+              },
+              {
+                "no": 10,
+                "word": "习惯",
+                "pinyin": "xíguàn",
+                "pos": "动",
+                "gloss": "to get used to"
+              },
+              {
+                "no": 11,
+                "word": "新闻",
+                "pinyin": "xīnwén",
+                "pos": "名",
+                "gloss": "news"
+              },
+              {
+                "no": 12,
+                "word": "字幕",
+                "pinyin": "zìmù",
+                "pos": "名",
+                "gloss": "subtitle; caption"
+              },
+              {
+                "no": 13,
+                "word": "加倍",
+                "pinyin": "jiābèi",
+                "pos": "副",
+                "gloss": "double"
+              },
+              {
+                "no": 14,
+                "word": "解释",
+                "pinyin": "jiěshì",
+                "pos": "动",
+                "gloss": "to explain",
+                "starred": true
+              },
+              {
+                "no": 15,
+                "word": "词语",
+                "pinyin": "cíyǔ",
+                "pos": "名",
+                "gloss": "word and expression"
+              },
+              {
+                "no": 16,
+                "word": "效率",
+                "pinyin": "xiàolǜ",
+                "pos": "名",
+                "gloss": "efficient"
+              },
+              {
+                "no": 17,
+                "word": "印象",
+                "pinyin": "yìnxiàng",
+                "pos": "名",
+                "gloss": "impression",
+                "starred": true
+              },
+              {
+                "no": 18,
+                "word": "吃惊",
+                "pinyin": "chījīng",
+                "pos": null,
+                "pos_status": "blank_in_source",
+                "gloss": "surprised; shocked",
+                "starred": true
+              },
+              {
+                "no": 19,
+                "word": "聊",
+                "pinyin": "liáo",
+                "pos": "动",
+                "gloss": "to chat"
+              },
+              {
+                "no": 20,
+                "word": "通常",
+                "pinyin": "tōngcháng",
+                "pos": "副",
+                "gloss": "usually",
+                "starred": true
+              },
+              {
+                "no": 21,
+                "word": "听力",
+                "pinyin": "tīnglì",
+                "pos": "名",
+                "gloss": "listening"
+              },
+              {
+                "no": 22,
+                "word": "异同",
+                "pinyin": "yìtóng",
+                "pos": "名",
+                "gloss": "similarities and differences"
+              },
+              {
+                "no": 23,
+                "word": "量",
+                "pinyin": "liàng",
+                "pos": "名",
+                "gloss": "amount; quantity"
+              },
+              {
+                "no": 24,
+                "word": "饿",
+                "pinyin": "è",
+                "pos": "形",
+                "gloss": "hungry"
+              }
+            ],
+            "source_status": "visually_verified_pending_adam_approval"
+          },
+          {
+            "id": "vocabulary_comprehension",
+            "printed_pages": [
+              33,
+              34
+            ],
+            "audio": "4-2",
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "groups": [
+              {
+                "topic": "关于生活的词语",
+                "words": [
+                  "上菜",
+                  "面包店",
+                  "司机",
+                  "快餐店",
+                  "点菜"
+                ],
+                "answer": [
+                  "1.D",
+                  "2.B",
+                  "3.C",
+                  "4.A",
+                  "5.E"
+                ]
+              },
+              {
+                "topic": "关于学习的词语",
+                "words": [
+                  "阅读",
+                  "语伴",
+                  "讲座"
+                ],
+                "answer": [
+                  "1.A",
+                  "2.C",
+                  "3.B"
+                ]
+              }
+            ],
+            "answer_status": "answers_checked_against_answer_pdf"
+          },
+          {
+            "id": "listening_sentences",
+            "printed_pages": [
+              34
+            ],
+            "audio_tracks": [
+              "4-3"
+            ],
+            "exercises": {
+              "exercise_4_3": {
+                "heading_verbatim": "一、听句子，判断对错",
+                "items": [
+                  [
+                    1,
+                    "毛毛以前没来过北京。",
+                    "错"
+                  ],
+                  [
+                    2,
+                    "姐姐学习历史。",
+                    "错"
+                  ],
+                  [
+                    3,
+                    "朴大宇看到很多新鲜事。",
+                    "对"
+                  ],
+                  [
+                    4,
+                    "丽丽还不习惯现在的生活。",
+                    "对"
+                  ],
+                  [
+                    5,
+                    "哥哥会开车。",
+                    "对"
+                  ],
+                  [
+                    6,
+                    "王红不爱吃快餐。",
+                    "错"
+                  ],
+                  [
+                    7,
+                    "中国新闻李大为看得懂。",
+                    "对"
+                  ],
+                  [
+                    8,
+                    "弟弟喜欢看书。",
+                    "对"
+                  ],
+                  [
+                    9,
+                    "阿里昨天看了一个中国电影。",
+                    "错"
+                  ],
+                  [
+                    10,
+                    "同学们去小学教课。",
+                    "错"
+                  ],
+                  [
+                    11,
+                    "那个电影是英文的。",
+                    "错"
+                  ],
+                  [
+                    12,
+                    "王红有很多韩国朋友。",
+                    "错"
+                  ],
+                  [
+                    13,
+                    "毛毛现在不努力。",
+                    "错"
+                  ],
+                  [
+                    14,
+                    "老师常常听写生词。",
+                    "错"
+                  ],
+                  [
+                    15,
+                    "我们学的词语很有用。",
+                    "对"
+                  ]
+                ]
+              }
+            },
+            "answer_status": "answers_checked_against_answer_pdf"
+          },
+          {
+            "id": "short_text_1",
+            "printed_pages": [
+              35
+            ],
+            "audio": "4-4",
+            "title": "对北京的印象",
+            "text": "朴大宇是大学二年级的学生，他的专业是国际关系。今年暑假他到了北京，要在北京大学学习两个月汉语。朴大宇小时候和父母来过北京，那是十多年前的事了。爸爸妈妈带着他去了哪些地方他都忘了，只记得在北京，街上有很多人，很多自行车。这次再来北京，他吃惊地发现，路上的汽车多了，外国快餐店、面包店到处都是。因为天气热、路又不熟，他有时候坐出租车。司机师傅常常问他：“您是哪儿人啊？”“觉得北京怎么样啊？”“生活习惯不习惯？”他听懂了，也能和司机聊几句了，他心里真高兴！",
+            "exercises": {
+              "first_listen": [
+                "朴大宇在哪里学习？",
+                "朴大宇以前来过中国吗？"
+              ],
+              "second_listen": [
+                "朴大宇为什么坐出租车？（天气  熟悉）"
+              ],
+              "present": "请你说说朴大宇在北京的生活：（1）以前来过北京；（2）这次有什么发现；（3）他觉得自己的中文怎么样。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：以前、汽车、出租车、司机、记得、听懂、高兴。常用表达参考：又、到处、聊几句、吃惊地发现。",
+              "compare": "朴大宇以前来过北京，但是他不太记得了。这次暑假来北京学习，他发现街上汽车多了，外国快餐店和面包店到处都是。因为天气热、路又不熟，他有时候坐出租车。他听得懂司机的话，也能和司机聊几句，心里很高兴。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  35
+                ],
+                "audio_tracks": [
+                  "4-4"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  35
+                ],
+                "audio_tracks": [
+                  "4-4"
+                ]
+              }
+            }
+          },
+          {
+            "id": "common_expressions_experience",
+            "printed_pages": [
+              36
+            ],
+            "topic": "说明情况",
+            "items": [
+              {
+                "expression": "年级",
+                "examples": [
+                  "弟弟上高中二年级。",
+                  "他们的语伴是大学二、三年级的学生。"
+                ]
+              },
+              {
+                "expression": "专业",
+                "examples": [
+                  "我想报考中文专业。",
+                  "我大学学习的专业是金融。"
+                ]
+              },
+              {
+                "expression": "这／那是……的事了",
+                "examples": [
+                  "不说这件事了，这都是五年前的事了。",
+                  "学音乐，那都是过去的事了。"
+                ]
+              },
+              {
+                "expression": "发现",
+                "examples": [
+                  "老师高兴地发现，同学们经过一个暑假，进步很快。",
+                  "他吃惊地发现，原来那家小饭馆儿已经没有了。"
+                ]
+              },
+              {
+                "expression": "到处",
+                "examples": [
+                  "街上到处都是电动车。",
+                  "快餐店到处都是。"
+                ]
+              },
+              {
+                "expression": "又（1）",
+                "examples": [
+                  "菜都是辣的，价钱又贵，我们就去了一家饭馆儿。",
+                  "价钱不贵，质量又好，我买了不少。"
+                ]
+              }
+            ],
+            "source_status": "examples_visually_verified"
+          },
+          {
+            "id": "short_text_2",
+            "printed_pages": [
+              36,
+              37
+            ],
+            "audio": "4-5",
+            "title": "学习内容",
+            "text": "在北京大学，朴大宇上三门课——汉语会话、新闻汉语和中国文化。他们每天上午都有课；星期二、星期四和星期五下午通常去参观或者听讲座；晚上和语伴互相学习。他们班每两名同学就有一位中国语伴，语伴是大二或者大三的学生。和语伴练习，既可以练习口语，又可以了解中国人的想法。朴大宇觉得自己的汉语阅读和口语进步挺快，不过听力还不行。看电视、看电影的时候，很多字幕他都能读懂，但还有很多地方听不懂，他决定加倍努力学习中文。",
+            "exercises": {
+              "first_listen": [
+                "朴大宇上几门课？",
+                "朴大宇什么时候上课？",
+                "朴大宇晚上做什么？"
+              ],
+              "second_listen": [
+                "朴大宇都上什么课？（新闻  文化）",
+                "朴大宇下午做什么？（参观  讲座）",
+                "朴大宇觉得和语伴一起学习怎么样？（既……又……）",
+                "朴大宇觉得自己的汉语怎么样？（进步  不过  加倍）"
+              ],
+              "present": "请你说说朴大宇在北京的学习情况。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：三门课、字幕、听力、决定。常用表达参考：每……都……、通常、既……又……、加倍。",
+              "compare": "朴大宇在北京大学上汉语会话、新闻汉语和中国文化三门课。每天上午都有课，下午通常参观或听讲座，晚上和语伴互相学习。和语伴练习既可以练口语，又可以了解中国人的想法。他的阅读和口语进步很快，但是听力还需要加倍努力。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  36
+                ],
+                "audio_tracks": [
+                  "4-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说一句，第3～4题要求说三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  37
+                ],
+                "audio_tracks": [
+                  "4-5"
+                ]
+              }
+            }
+          },
+          {
+            "id": "common_expressions_learning",
+            "printed_pages": [
+              37
+            ],
+            "topic": "谈论学习",
+            "items": [
+              {
+                "expression": "通常",
+                "examples": [
+                  "周末我们通常去参观博物馆。",
+                  "他们通常和中国语伴一起读报纸。"
+                ]
+              },
+              {
+                "expression": "既……又……",
+                "examples": [
+                  "看中文电影既可以练习听力，又可以了解中国社会。",
+                  "在公司实习，既可以锻炼自己的工作能力，又可以接触社会。"
+                ]
+              },
+              {
+                "expression": "不过",
+                "examples": [
+                  "王红口语挺流利，不过发音还有点儿问题。",
+                  "小张想考研究生，不过他还没决定学什么专业。"
+                ]
+              },
+              {
+                "expression": "决定",
+                "examples": [
+                  "朴大宇决定利用暑假去中国学习。",
+                  "经过认真考虑，丽丽决定转专业。"
+                ]
+              },
+              {
+                "expression": "加倍",
+                "examples": [
+                  "要想提高自己的汉语水平，一定要加倍努力。",
+                  "我们要加倍珍惜大学时光。"
+                ]
+              }
+            ],
+            "source_status": "examples_visually_verified"
+          },
+          {
+            "id": "short_text_3",
+            "printed_pages": [
+              38,
+              39
+            ],
+            "audio": "4-6",
+            "title": "在中国学汉语和在本国学汉语的异同",
+            "text": "在韩国的时候，朴大宇每星期只有6节汉语课，4节是大课，30名左右的同学一起学习。学习生词和语法的时候，老师常常用韩语解释，学生们对汉语生词、语法的意思和用法了解得比较清楚，可是练习中文听力的时间不多。另外两节是练习课，一个班只有5名同学，练习的机会多一些，同学们都很喜欢。不过，朴大宇觉得，在北京学汉语效率更高，上课的时候学到的生词、语法，下课后他马上就能用上。比如昨天上午上课，他们学了“睡得着”“吃不了”“买不起”“看不清楚”，中午在饭馆儿点菜，他和两名同学一共点了4个菜、1个汤。服务员告诉他们，他们饭馆儿的菜量比较大，4个菜他们不一定吃得了。朴大宇回答：“我们都很饿，吃得了。请快点儿上菜。”大家都笑了。",
+            "exercises": {
+              "first_listen": [
+                "在韩国的时候，朴大宇每个星期几节中文课？",
+                "在韩国上大课的时候一个班有多少学生？",
+                "在韩国上中文课的时候，老师说韩语吗？"
+              ],
+              "second_listen": [
+                "朴大宇在韩国上的中文课怎么样？（大课  练习课  解释）",
+                "朴大宇为什么觉得在中国学习汉语效率高？（马上  用得上）"
+              ],
+              "present": "请你比较朴大宇在韩国学汉语和在中国学汉语的异同。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：大课、小课、解释、了解、听力、效率、课上、马上、点菜。常用表达参考：用得上。",
+              "compare": "朴大宇在韩国每星期只有六节汉语课，大课人数多，老师用韩语解释，听力练习不多；小课人数少，练习机会多。在北京学汉语效率更高，课上学到的词语和语法下课后马上就能用上。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  38
+                ],
+                "audio_tracks": [
+                  "4-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  39
+                ],
+                "audio_tracks": [
+                  "4-6"
+                ]
+              }
+            }
+          },
+          {
+            "id": "common_expressions_discuss",
+            "printed_pages": [
+              39
+            ],
+            "topic": "谈论学习",
+            "items": [
+              {
+                "expression": "左右",
+                "examples": [
+                  "每天晚上要花两个小时左右复习。",
+                  "阿里每天都要写一篇200字左右的中文日记。"
+                ]
+              },
+              {
+                "expression": "只有",
+                "examples": [
+                  "上练习课的时候，班上只有5名学生。",
+                  "朴大宇每星期只有两节文化课。"
+                ]
+              },
+              {
+                "expression": "另外",
+                "examples": [
+                  "同学们这学期上四门课：汉语会话、新闻汉语、汉语语法，另外一门是中国文化。",
+                  "李大为新交了三名中国朋友，一名是自己的语伴，另外两名是一起打球的大学生。"
+                ]
+              },
+              {
+                "expression": "动词＋上",
+                "examples": [
+                  "写作文的时候要用上新学的成语和俗语。",
+                  "朴大宇的同学考上了中国人民大学新闻系。"
+                ]
+              },
+              {
+                "expression": "形容词＋一些",
+                "examples": [
+                  "朴大宇的听力好一些了。",
+                  "用汉语的机会多一些了。",
+                  "开始实习以后，学中文的时间少了一些。"
+                ]
+              },
+              {
+                "expression": "记得住／看得清楚",
+                "examples": [
+                  "一天学这么多生词你记得住吗？",
+                  "虽然坐在后面，黑板上的字他也看得清楚。"
+                ]
+              },
+              {
+                "expression": "动词＋两／几＋量词",
+                "examples": [
+                  "各位，我先说两句／几句。",
+                  "吃完饭，丽丽想去图书馆借两／几本书。"
+                ]
+              }
+            ],
+            "source_status": "examples_visually_verified"
+          },
+          {
+            "id": "comprehensive_practice",
+            "printed_pages": [
+              40,
+              41
+            ],
+            "audio_tracks": [
+              "4-4",
+              "4-5",
+              "4-6"
+            ],
+            "items": [
+              {
+                "id": "comprehensive_1",
+                "instruction": "请你根据听过的三段短文填表",
+                "table_headers": [
+                  "人物",
+                  "环境怎么样",
+                  "交通",
+                  "汉语使用",
+                  "上什么课",
+                  "课外活动",
+                  "汉语怎么样",
+                  "在韩国",
+                  "在中国"
+                ],
+                "answer_status": "open_table_teacher_check"
+              },
+              {
+                "id": "comprehensive_2",
+                "instruction": "小组活动：根据上面的表格和下面给出的参考词语和常用表达，谈一谈：（1）朴大宇在北京的生活；（2）朴大宇在北京的学习；（3）比较朴大宇在韩国和中国学汉语的异同。要求：一名同学先说6～8个句子；然后小组其他同学纠正补充；最后由一名同学总结，说10～12个句子，不少于100字。词语参考：以前、路上、坐出租车、聊天儿、三门课、语伴、大课、解释、效率。常用表达参考：到处、既……又……、吃惊地发现、用得上。",
+                "answer_status": "open_presentational_task"
+              },
+              {
+                "id": "comprehensive_3",
+                "instruction": "拓展练习：你以前来过中国吗？请你谈一谈：（1）什么时候来的；（2）来中国做什么；（3）对中国的印象怎么样。要求：（1）使用这一课学过的词语和常用表达；（2）说8～10个句子，不少于80字。",
+                "answer_status": "open_presentational_task"
+              }
+            ],
+            "source_status": "visually_verified_pending_adam_approval"
+          }
+        ]
+      },
+      "source_manifest": {
+        "schema_version": "boya-lesson-source-manifest-v1",
+        "manifest_type": "lesson-source-review",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_id": "lesson-04",
+        "lesson_key": "boya-quasi-intermediate-i:lesson-04",
+        "completion_confirmation": {
+          "status": "completed_by_adam",
+          "confirmed_by": "Adam",
+          "confirmed_at": "2026-09-08",
+          "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+          "technical_status_preserved": true
+        },
+        "lesson_number": 4,
+        "lesson_title": "在中国学汉语",
+        "language": "简体中文",
+        "package": "lesson-04-source-review",
+        "prepared_at": "2026-08-28",
+        "source_status": "pending_review",
+        "source_qa_status": "blocked",
+        "extraction_status": "source_review_materialized",
+        "review_status": "awaiting_adam_review",
+        "approved": false,
+        "approved_by": [],
+        "approved_at": null,
+        "canonical_source": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json",
+          "sha256": "0eb2afac761ba8a31682ae74cabf4a6faeebbd5e23ba8ea5d94b424014fe9aee",
+          "status": "source_review_snapshot",
+          "note": "结构化内容可供审核和下游 content-contract 草稿使用；尚未成为 approved authority。"
+        },
+        "canonical_source_sha256": "0eb2afac761ba8a31682ae74cabf4a6faeebbd5e23ba8ea5d94b424014fe9aee",
+        "source_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+          "total_pages": 134,
+          "textbook_page_range": "32–41",
+          "pdf_page_range": "45–54",
+          "page_count_in_review": 10,
+          "format": "scanned_image_pdf",
+          "text_layer_status": "empty; visual review used"
+        },
+        "answer_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+          "file_pages_in_review": "14–16",
+          "index_range": "P14–P15",
+          "continuation_note": "文件页16（答案印刷P13）承接短文三听力文本末段"
+        },
+        "page_audit": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/audit/source-pages-32-41-audit-draft.md",
+          "sha256": "66d3de51fde07b0206195e24f2e49ece906b0ae13a0fe7d7670e1bb18d5de6f8",
+          "status": "draft"
+        },
+        "answer_audit": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/audit/answer-pages-14-16-audit-draft.md",
+          "sha256": "b4a1ce58f1e05c2d7b8fed960b94fbc0aa675d56317f0a897a085c192c5d8de4",
+          "status": "draft"
+        },
+        "qr_source": {
+          "qr_url": "http://qr31.cn/I9bLMV",
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-04-pdf-page-045.png",
+          "landing_page": "https://biz.cli.im/site/I9bLMV?qrurl=http://qr31.cn/I9bLMV&gtype=2&key=c36f817489cc67e6287828f1f97c00a7fc43446948",
+          "landing_audio_labels": [
+            "4-1",
+            "4-2",
+            "4-3",
+            "4-4",
+            "4-5",
+            "4-6"
+          ],
+          "status": "source_inventory_verified"
+        },
+        "audio": {
+          "manifest_path": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/audio-manifest.json",
+          "manifest_sha256": "6ac862deb05b2ba93ce7bf3c5b1e6dd15ea870931244e36ab91083a7aa4d20bc",
+          "technical_audit": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/audit/audio-technical-2026-08-28.md",
+          "track_count": 6,
+          "status": "technical_pass_semantic_pending"
+        },
+        "listening_exercise_contract": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/listening-exercise-contract.json",
+          "sha256": "3888ee24eb40850b53bdfe2ec10dec396e51c5ec7dac6103ace6657dccbc8892",
+          "status": "draft",
+          "exercise_count": 9
+        },
+        "review_evidence": [
+          "lessons/boya-quasi-intermediate-i/lesson-04/00-source/audit/source-pages-32-41-audit-draft.md",
+          "lessons/boya-quasi-intermediate-i/lesson-04/00-source/audit/answer-pages-14-16-audit-draft.md",
+          "lessons/boya-quasi-intermediate-i/lesson-04/00-source/audit/audio-technical-2026-08-28.md"
+        ],
+        "blockers": [
+          "来源尚未 Adam 批准。",
+          "六段音频尚未教师逐段语义听核与 PowerPoint 实际播放测试。",
+          "扫描 PDF 的视觉转录仍需教师复核。",
+          "开放式口语题、综合填表和拓展练习没有唯一标准答案。"
+        ],
+        "next_minimum_step": "Adam 审核 canonical source、六个听力题组标题／页码／题目与答案证据；通过后再进入 PBI 教学设计。"
+      },
+      "audio": {
+        "schema_version": "boya-lesson-audio-manifest-v1",
+        "lesson_id": "lesson-04",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_title": "在中国学汉语",
+        "recorded_at": "2026-08-28",
+        "provenance": {
+          "source_type": "publisher_qr_landing_page",
+          "qr_url": "http://qr31.cn/I9bLMV",
+          "landing_page": "https://biz.cli.im/site/I9bLMV?qrurl=http://qr31.cn/I9bLMV&gtype=2&key=c36f817489cc67e6287828f1f97c00a7fc43446948",
+          "landing_audio_labels": [
+            "4-1",
+            "4-2",
+            "4-3",
+            "4-4",
+            "4-5",
+            "4-6"
+          ],
+          "textbook_labels_seen": [
+            "4-1",
+            "4-2",
+            "4-3",
+            "4-4",
+            "4-5",
+            "4-6"
+          ],
+          "label_discrepancy": null
+        },
+        "technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/audit/audio-technical-2026-08-28.md",
+        "tracks": [
+          {
+            "label": "4-1",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fuj6EZ_93nW0avU3822yEY3rVqPd",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-1.mp3",
+            "scope": "词语（P32–P33）",
+            "bytes": 824205,
+            "sha256": "46f02a4c825b2c0e1d08d5a35496fa34453142ec0c8ad2514f9a0e02c3e26797",
+            "duration_seconds": 51.2,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "4-2",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FmhgvlQy5pQj_wkq5NbGKsu8G2qJ",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-2.mp3",
+            "scope": "词语理解（P33）",
+            "bytes": 530380,
+            "sha256": "2ce4035b96a931c3192f135707d04190d772dcc69b04b69a2cdf29d4a14c0689",
+            "duration_seconds": 32.836,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "4-3",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FlOJKyFFAWqTQLKN6tUQL0qnmF8z",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-3.mp3",
+            "scope": "听说句子（P34）",
+            "bytes": 1525541,
+            "sha256": "b7f2d459172de811c551557926474ef0318c7d2cffca4ecc7f69c81609bcd9d0",
+            "duration_seconds": 95.033,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "4-4",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FmwmH05bvsxa4_bClt9MxdMRmKXR",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-4.mp3",
+            "scope": "短文一《对北京的印象》（P35–P36）",
+            "bytes": 1125554,
+            "sha256": "ea9f2e63b3cb0971d621c8ce5460a04ef1308547f5635514bde80846bcbe479e",
+            "duration_seconds": 70.034,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "4-5",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FjGNrXScKTDec1d7-W2bz3pJIjgQ",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-5.mp3",
+            "scope": "短文二《学习内容》（P36–P37）",
+            "bytes": 981776,
+            "sha256": "76693000356a2b28cc1381e8a7e520943a3b2c178cd96a0f025f8ea2e1456083",
+            "duration_seconds": 61.048,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "4-6",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FiNhTId2ChbKv-LTKOCMcRFFiPOS",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-04/4-6.mp3",
+            "scope": "短文三《在中国学汉语和在本国学汉语的异同》（P38–P39）",
+            "bytes": 1359193,
+            "sha256": "c3f757061c2f300f21a3b8d2222f5eda6b29d3ce30c9224c8ae47734c66a8f11",
+            "duration_seconds": 84.637,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          }
+        ],
+        "status": "technical_pass_semantic_pending",
+        "coverage_status": "all_six_tracks_mapped_to_source_sections"
+      },
+      "canonical_path": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json",
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/source-manifest.json",
+      "canonical_source_sha256": "0eb2afac761ba8a31682ae74cabf4a6faeebbd5e23ba8ea5d94b424014fe9aee",
+      "review_items": [
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:1",
+          "value": {
+            "no": 1,
+            "word": "上（菜）",
+            "pinyin": "shàng (cài)",
+            "pos": "动",
+            "gloss": "to serve"
+          },
+          "title": "上（菜）",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:2",
+          "value": {
+            "no": 2,
+            "word": "司机",
+            "pinyin": "sījī",
+            "pos": "名",
+            "gloss": "driver"
+          },
+          "title": "司机",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:3",
+          "value": {
+            "no": 3,
+            "word": "快餐店",
+            "pinyin": "kuàicāndiàn",
+            "pos": "名",
+            "gloss": "fast food restaurant"
+          },
+          "title": "快餐店",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:4",
+          "value": {
+            "no": 4,
+            "word": "点（菜）",
+            "pinyin": "diǎn (cài)",
+            "pos": "动",
+            "gloss": "to order"
+          },
+          "title": "点（菜）",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:5",
+          "value": {
+            "no": 5,
+            "word": "阅读",
+            "pinyin": "yuèdú",
+            "pos": "动",
+            "gloss": "to read",
+            "starred": true
+          },
+          "title": "阅读",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:6",
+          "value": {
+            "no": 6,
+            "word": "语伴",
+            "pinyin": "yǔbàn",
+            "pos": "名",
+            "gloss": "language partner"
+          },
+          "title": "语伴",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:7",
+          "value": {
+            "no": 7,
+            "word": "讲座",
+            "pinyin": "jiǎngzuò",
+            "pos": "名",
+            "gloss": "speech"
+          },
+          "title": "讲座",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:8",
+          "value": {
+            "no": 8,
+            "word": "国际",
+            "pinyin": "guójì",
+            "pos": "形",
+            "gloss": "international",
+            "starred": true
+          },
+          "title": "国际",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:9",
+          "value": {
+            "no": 9,
+            "word": "发现",
+            "pinyin": "fāxiàn",
+            "pos": "动",
+            "gloss": "to find; to discover"
+          },
+          "title": "发现",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:10",
+          "value": {
+            "no": 10,
+            "word": "习惯",
+            "pinyin": "xíguàn",
+            "pos": "动",
+            "gloss": "to get used to"
+          },
+          "title": "习惯",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:11",
+          "value": {
+            "no": 11,
+            "word": "新闻",
+            "pinyin": "xīnwén",
+            "pos": "名",
+            "gloss": "news"
+          },
+          "title": "新闻",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:12",
+          "value": {
+            "no": 12,
+            "word": "字幕",
+            "pinyin": "zìmù",
+            "pos": "名",
+            "gloss": "subtitle; caption"
+          },
+          "title": "字幕",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:13",
+          "value": {
+            "no": 13,
+            "word": "加倍",
+            "pinyin": "jiābèi",
+            "pos": "副",
+            "gloss": "double"
+          },
+          "title": "加倍",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:14",
+          "value": {
+            "no": 14,
+            "word": "解释",
+            "pinyin": "jiěshì",
+            "pos": "动",
+            "gloss": "to explain",
+            "starred": true
+          },
+          "title": "解释",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:15",
+          "value": {
+            "no": 15,
+            "word": "词语",
+            "pinyin": "cíyǔ",
+            "pos": "名",
+            "gloss": "word and expression"
+          },
+          "title": "词语",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:16",
+          "value": {
+            "no": 16,
+            "word": "效率",
+            "pinyin": "xiàolǜ",
+            "pos": "名",
+            "gloss": "efficient"
+          },
+          "title": "效率",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:17",
+          "value": {
+            "no": 17,
+            "word": "印象",
+            "pinyin": "yìnxiàng",
+            "pos": "名",
+            "gloss": "impression",
+            "starred": true
+          },
+          "title": "印象",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:18",
+          "value": {
+            "no": 18,
+            "word": "吃惊",
+            "pinyin": "chījīng",
+            "pos": null,
+            "pos_status": "blank_in_source",
+            "gloss": "surprised; shocked",
+            "starred": true
+          },
+          "title": "吃惊",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:19",
+          "value": {
+            "no": 19,
+            "word": "聊",
+            "pinyin": "liáo",
+            "pos": "动",
+            "gloss": "to chat"
+          },
+          "title": "聊",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:20",
+          "value": {
+            "no": 20,
+            "word": "通常",
+            "pinyin": "tōngcháng",
+            "pos": "副",
+            "gloss": "usually",
+            "starred": true
+          },
+          "title": "通常",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:21",
+          "value": {
+            "no": 21,
+            "word": "听力",
+            "pinyin": "tīnglì",
+            "pos": "名",
+            "gloss": "listening"
+          },
+          "title": "听力",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:22",
+          "value": {
+            "no": 22,
+            "word": "异同",
+            "pinyin": "yìtóng",
+            "pos": "名",
+            "gloss": "similarities and differences"
+          },
+          "title": "异同",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:23",
+          "value": {
+            "no": 23,
+            "word": "量",
+            "pinyin": "liàng",
+            "pos": "名",
+            "gloss": "amount; quantity"
+          },
+          "title": "量",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:24",
+          "value": {
+            "no": 24,
+            "word": "饿",
+            "pinyin": "è",
+            "pos": "形",
+            "gloss": "hungry"
+          },
+          "title": "饿",
+          "page": "32–33",
+          "audio": "4-1",
+          "type": "词语"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_1",
+          "value": {
+            "id": "short_text_1",
+            "printed_pages": [
+              35
+            ],
+            "audio": "4-4",
+            "title": "对北京的印象",
+            "text": "朴大宇是大学二年级的学生，他的专业是国际关系。今年暑假他到了北京，要在北京大学学习两个月汉语。朴大宇小时候和父母来过北京，那是十多年前的事了。爸爸妈妈带着他去了哪些地方他都忘了，只记得在北京，街上有很多人，很多自行车。这次再来北京，他吃惊地发现，路上的汽车多了，外国快餐店、面包店到处都是。因为天气热、路又不熟，他有时候坐出租车。司机师傅常常问他：“您是哪儿人啊？”“觉得北京怎么样啊？”“生活习惯不习惯？”他听懂了，也能和司机聊几句了，他心里真高兴！",
+            "exercises": {
+              "first_listen": [
+                "朴大宇在哪里学习？",
+                "朴大宇以前来过中国吗？"
+              ],
+              "second_listen": [
+                "朴大宇为什么坐出租车？（天气  熟悉）"
+              ],
+              "present": "请你说说朴大宇在北京的生活：（1）以前来过北京；（2）这次有什么发现；（3）他觉得自己的中文怎么样。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：以前、汽车、出租车、司机、记得、听懂、高兴。常用表达参考：又、到处、聊几句、吃惊地发现。",
+              "compare": "朴大宇以前来过北京，但是他不太记得了。这次暑假来北京学习，他发现街上汽车多了，外国快餐店和面包店到处都是。因为天气热、路又不熟，他有时候坐出租车。他听得懂司机的话，也能和司机聊几句，心里很高兴。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  35
+                ],
+                "audio_tracks": [
+                  "4-4"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  35
+                ],
+                "audio_tracks": [
+                  "4-4"
+                ]
+              }
+            }
+          },
+          "title": "对北京的印象",
+          "page": "35",
+          "audio": "4-4",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_2",
+          "value": {
+            "id": "short_text_2",
+            "printed_pages": [
+              36,
+              37
+            ],
+            "audio": "4-5",
+            "title": "学习内容",
+            "text": "在北京大学，朴大宇上三门课——汉语会话、新闻汉语和中国文化。他们每天上午都有课；星期二、星期四和星期五下午通常去参观或者听讲座；晚上和语伴互相学习。他们班每两名同学就有一位中国语伴，语伴是大二或者大三的学生。和语伴练习，既可以练习口语，又可以了解中国人的想法。朴大宇觉得自己的汉语阅读和口语进步挺快，不过听力还不行。看电视、看电影的时候，很多字幕他都能读懂，但还有很多地方听不懂，他决定加倍努力学习中文。",
+            "exercises": {
+              "first_listen": [
+                "朴大宇上几门课？",
+                "朴大宇什么时候上课？",
+                "朴大宇晚上做什么？"
+              ],
+              "second_listen": [
+                "朴大宇都上什么课？（新闻  文化）",
+                "朴大宇下午做什么？（参观  讲座）",
+                "朴大宇觉得和语伴一起学习怎么样？（既……又……）",
+                "朴大宇觉得自己的汉语怎么样？（进步  不过  加倍）"
+              ],
+              "present": "请你说说朴大宇在北京的学习情况。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：三门课、字幕、听力、决定。常用表达参考：每……都……、通常、既……又……、加倍。",
+              "compare": "朴大宇在北京大学上汉语会话、新闻汉语和中国文化三门课。每天上午都有课，下午通常参观或听讲座，晚上和语伴互相学习。和语伴练习既可以练口语，又可以了解中国人的想法。他的阅读和口语进步很快，但是听力还需要加倍努力。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  36
+                ],
+                "audio_tracks": [
+                  "4-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说一句，第3～4题要求说三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  37
+                ],
+                "audio_tracks": [
+                  "4-5"
+                ]
+              }
+            }
+          },
+          "title": "学习内容",
+          "page": "36–37",
+          "audio": "4-5",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_3",
+          "value": {
+            "id": "short_text_3",
+            "printed_pages": [
+              38,
+              39
+            ],
+            "audio": "4-6",
+            "title": "在中国学汉语和在本国学汉语的异同",
+            "text": "在韩国的时候，朴大宇每星期只有6节汉语课，4节是大课，30名左右的同学一起学习。学习生词和语法的时候，老师常常用韩语解释，学生们对汉语生词、语法的意思和用法了解得比较清楚，可是练习中文听力的时间不多。另外两节是练习课，一个班只有5名同学，练习的机会多一些，同学们都很喜欢。不过，朴大宇觉得，在北京学汉语效率更高，上课的时候学到的生词、语法，下课后他马上就能用上。比如昨天上午上课，他们学了“睡得着”“吃不了”“买不起”“看不清楚”，中午在饭馆儿点菜，他和两名同学一共点了4个菜、1个汤。服务员告诉他们，他们饭馆儿的菜量比较大，4个菜他们不一定吃得了。朴大宇回答：“我们都很饿，吃得了。请快点儿上菜。”大家都笑了。",
+            "exercises": {
+              "first_listen": [
+                "在韩国的时候，朴大宇每个星期几节中文课？",
+                "在韩国上大课的时候一个班有多少学生？",
+                "在韩国上中文课的时候，老师说韩语吗？"
+              ],
+              "second_listen": [
+                "朴大宇在韩国上的中文课怎么样？（大课  练习课  解释）",
+                "朴大宇为什么觉得在中国学习汉语效率高？（马上  用得上）"
+              ],
+              "present": "请你比较朴大宇在韩国学汉语和在中国学汉语的异同。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：大课、小课、解释、了解、听力、效率、课上、马上、点菜。常用表达参考：用得上。",
+              "compare": "朴大宇在韩国每星期只有六节汉语课，大课人数多，老师用韩语解释，听力练习不多；小课人数少，练习机会多。在北京学汉语效率更高，课上学到的词语和语法下课后马上就能用上。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  38
+                ],
+                "audio_tracks": [
+                  "4-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  39
+                ],
+                "audio_tracks": [
+                  "4-6"
+                ]
+              }
+            }
+          },
+          "title": "在中国学汉语和在本国学汉语的异同",
+          "page": "38–39",
+          "audio": "4-6",
+          "type": "短文"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1",
+          "value": {
+            "expression": {
+              "expression": "年级",
+              "examples": [
+                "弟弟上高中二年级。",
+                "他们的语伴是大学二、三年级的学生。"
+              ]
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "年级",
+            "examples": [
+              "弟弟上高中二年级。",
+              "他们的语伴是大学二、三年级的学生。"
+            ]
+          },
+          "page": "36",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:2",
+          "value": {
+            "expression": {
+              "expression": "专业",
+              "examples": [
+                "我想报考中文专业。",
+                "我大学学习的专业是金融。"
+              ]
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "专业",
+            "examples": [
+              "我想报考中文专业。",
+              "我大学学习的专业是金融。"
+            ]
+          },
+          "page": "36",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:3",
+          "value": {
+            "expression": {
+              "expression": "这／那是……的事了",
+              "examples": [
+                "不说这件事了，这都是五年前的事了。",
+                "学音乐，那都是过去的事了。"
+              ]
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "这／那是……的事了",
+            "examples": [
+              "不说这件事了，这都是五年前的事了。",
+              "学音乐，那都是过去的事了。"
+            ]
+          },
+          "page": "36",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:4",
+          "value": {
+            "expression": {
+              "expression": "发现",
+              "examples": [
+                "老师高兴地发现，同学们经过一个暑假，进步很快。",
+                "他吃惊地发现，原来那家小饭馆儿已经没有了。"
+              ]
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "发现",
+            "examples": [
+              "老师高兴地发现，同学们经过一个暑假，进步很快。",
+              "他吃惊地发现，原来那家小饭馆儿已经没有了。"
+            ]
+          },
+          "page": "36",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:5",
+          "value": {
+            "expression": {
+              "expression": "到处",
+              "examples": [
+                "街上到处都是电动车。",
+                "快餐店到处都是。"
+              ]
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "到处",
+            "examples": [
+              "街上到处都是电动车。",
+              "快餐店到处都是。"
+            ]
+          },
+          "page": "36",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:6",
+          "value": {
+            "expression": {
+              "expression": "又（1）",
+              "examples": [
+                "菜都是辣的，价钱又贵，我们就去了一家饭馆儿。",
+                "价钱不贵，质量又好，我买了不少。"
+              ]
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "又（1）",
+            "examples": [
+              "菜都是辣的，价钱又贵，我们就去了一家饭馆儿。",
+              "价钱不贵，质量又好，我买了不少。"
+            ]
+          },
+          "page": "36",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:1",
+          "value": {
+            "expression": {
+              "expression": "通常",
+              "examples": [
+                "周末我们通常去参观博物馆。",
+                "他们通常和中国语伴一起读报纸。"
+              ]
+            },
+            "topic": "谈论学习"
+          },
+          "title": {
+            "expression": "通常",
+            "examples": [
+              "周末我们通常去参观博物馆。",
+              "他们通常和中国语伴一起读报纸。"
+            ]
+          },
+          "page": "37",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:2",
+          "value": {
+            "expression": {
+              "expression": "既……又……",
+              "examples": [
+                "看中文电影既可以练习听力，又可以了解中国社会。",
+                "在公司实习，既可以锻炼自己的工作能力，又可以接触社会。"
+              ]
+            },
+            "topic": "谈论学习"
+          },
+          "title": {
+            "expression": "既……又……",
+            "examples": [
+              "看中文电影既可以练习听力，又可以了解中国社会。",
+              "在公司实习，既可以锻炼自己的工作能力，又可以接触社会。"
+            ]
+          },
+          "page": "37",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:3",
+          "value": {
+            "expression": {
+              "expression": "不过",
+              "examples": [
+                "王红口语挺流利，不过发音还有点儿问题。",
+                "小张想考研究生，不过他还没决定学什么专业。"
+              ]
+            },
+            "topic": "谈论学习"
+          },
+          "title": {
+            "expression": "不过",
+            "examples": [
+              "王红口语挺流利，不过发音还有点儿问题。",
+              "小张想考研究生，不过他还没决定学什么专业。"
+            ]
+          },
+          "page": "37",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:4",
+          "value": {
+            "expression": {
+              "expression": "决定",
+              "examples": [
+                "朴大宇决定利用暑假去中国学习。",
+                "经过认真考虑，丽丽决定转专业。"
+              ]
+            },
+            "topic": "谈论学习"
+          },
+          "title": {
+            "expression": "决定",
+            "examples": [
+              "朴大宇决定利用暑假去中国学习。",
+              "经过认真考虑，丽丽决定转专业。"
+            ]
+          },
+          "page": "37",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:5",
+          "value": {
+            "expression": {
+              "expression": "加倍",
+              "examples": [
+                "要想提高自己的汉语水平，一定要加倍努力。",
+                "我们要加倍珍惜大学时光。"
+              ]
+            },
+            "topic": "谈论学习"
+          },
+          "title": {
+            "expression": "加倍",
+            "examples": [
+              "要想提高自己的汉语水平，一定要加倍努力。",
+              "我们要加倍珍惜大学时光。"
+            ]
+          },
+          "page": "37",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:1",
+          "value": {
+            "expression": {
+              "expression": "左右",
+              "examples": [
+                "每天晚上要花两个小时左右复习。",
+                "阿里每天都要写一篇200字左右的中文日记。"
+              ]
+            },
+            "topic": "谈论学习"
+          },
+          "title": {
+            "expression": "左右",
+            "examples": [
+              "每天晚上要花两个小时左右复习。",
+              "阿里每天都要写一篇200字左右的中文日记。"
+            ]
+          },
+          "page": "39",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:2",
+          "value": {
+            "expression": {
+              "expression": "只有",
+              "examples": [
+                "上练习课的时候，班上只有5名学生。",
+                "朴大宇每星期只有两节文化课。"
+              ]
+            },
+            "topic": "谈论学习"
+          },
+          "title": {
+            "expression": "只有",
+            "examples": [
+              "上练习课的时候，班上只有5名学生。",
+              "朴大宇每星期只有两节文化课。"
+            ]
+          },
+          "page": "39",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:3",
+          "value": {
+            "expression": {
+              "expression": "另外",
+              "examples": [
+                "同学们这学期上四门课：汉语会话、新闻汉语、汉语语法，另外一门是中国文化。",
+                "李大为新交了三名中国朋友，一名是自己的语伴，另外两名是一起打球的大学生。"
+              ]
+            },
+            "topic": "谈论学习"
+          },
+          "title": {
+            "expression": "另外",
+            "examples": [
+              "同学们这学期上四门课：汉语会话、新闻汉语、汉语语法，另外一门是中国文化。",
+              "李大为新交了三名中国朋友，一名是自己的语伴，另外两名是一起打球的大学生。"
+            ]
+          },
+          "page": "39",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:4",
+          "value": {
+            "expression": {
+              "expression": "动词＋上",
+              "examples": [
+                "写作文的时候要用上新学的成语和俗语。",
+                "朴大宇的同学考上了中国人民大学新闻系。"
+              ]
+            },
+            "topic": "谈论学习"
+          },
+          "title": {
+            "expression": "动词＋上",
+            "examples": [
+              "写作文的时候要用上新学的成语和俗语。",
+              "朴大宇的同学考上了中国人民大学新闻系。"
+            ]
+          },
+          "page": "39",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:5",
+          "value": {
+            "expression": {
+              "expression": "形容词＋一些",
+              "examples": [
+                "朴大宇的听力好一些了。",
+                "用汉语的机会多一些了。",
+                "开始实习以后，学中文的时间少了一些。"
+              ]
+            },
+            "topic": "谈论学习"
+          },
+          "title": {
+            "expression": "形容词＋一些",
+            "examples": [
+              "朴大宇的听力好一些了。",
+              "用汉语的机会多一些了。",
+              "开始实习以后，学中文的时间少了一些。"
+            ]
+          },
+          "page": "39",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:6",
+          "value": {
+            "expression": {
+              "expression": "记得住／看得清楚",
+              "examples": [
+                "一天学这么多生词你记得住吗？",
+                "虽然坐在后面，黑板上的字他也看得清楚。"
+              ]
+            },
+            "topic": "谈论学习"
+          },
+          "title": {
+            "expression": "记得住／看得清楚",
+            "examples": [
+              "一天学这么多生词你记得住吗？",
+              "虽然坐在后面，黑板上的字他也看得清楚。"
+            ]
+          },
+          "page": "39",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:7",
+          "value": {
+            "expression": {
+              "expression": "动词＋两／几＋量词",
+              "examples": [
+                "各位，我先说两句／几句。",
+                "吃完饭，丽丽想去图书馆借两／几本书。"
+              ]
+            },
+            "topic": "谈论学习"
+          },
+          "title": {
+            "expression": "动词＋两／几＋量词",
+            "examples": [
+              "各位，我先说两句／几句。",
+              "吃完饭，丽丽想去图书馆借两／几本书。"
+            ]
+          },
+          "page": "39",
+          "type": "语法／表达"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehension:1",
+          "value": {
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "words": [
+              "上菜",
+              "面包店",
+              "司机",
+              "快餐店",
+              "点菜"
+            ],
+            "answer": [
+              "1.D",
+              "2.B",
+              "3.C",
+              "4.A",
+              "5.E"
+            ]
+          },
+          "title": "词语理解",
+          "page": "33–34",
+          "audio": "4-2",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehension:2",
+          "value": {
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "words": [
+              "阅读",
+              "语伴",
+              "讲座"
+            ],
+            "answer": [
+              "1.A",
+              "2.C",
+              "3.B"
+            ]
+          },
+          "title": "词语理解",
+          "page": "33–34",
+          "audio": "4-2",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_4_3:1",
+          "value": {
+            "prompt": "毛毛以前没来过北京。",
+            "answer": "错",
+            "number": 1,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "34",
+          "audio": "4-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_4_3:2",
+          "value": {
+            "prompt": "姐姐学习历史。",
+            "answer": "错",
+            "number": 2,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "34",
+          "audio": "4-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_4_3:3",
+          "value": {
+            "prompt": "朴大宇看到很多新鲜事。",
+            "answer": "对",
+            "number": 3,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "34",
+          "audio": "4-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_4_3:4",
+          "value": {
+            "prompt": "丽丽还不习惯现在的生活。",
+            "answer": "对",
+            "number": 4,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "34",
+          "audio": "4-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_4_3:5",
+          "value": {
+            "prompt": "哥哥会开车。",
+            "answer": "对",
+            "number": 5,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "34",
+          "audio": "4-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_4_3:6",
+          "value": {
+            "prompt": "王红不爱吃快餐。",
+            "answer": "错",
+            "number": 6,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "34",
+          "audio": "4-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_4_3:7",
+          "value": {
+            "prompt": "中国新闻李大为看得懂。",
+            "answer": "对",
+            "number": 7,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "34",
+          "audio": "4-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_4_3:8",
+          "value": {
+            "prompt": "弟弟喜欢看书。",
+            "answer": "对",
+            "number": 8,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "34",
+          "audio": "4-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_4_3:9",
+          "value": {
+            "prompt": "阿里昨天看了一个中国电影。",
+            "answer": "错",
+            "number": 9,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "34",
+          "audio": "4-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_4_3:10",
+          "value": {
+            "prompt": "同学们去小学教课。",
+            "answer": "错",
+            "number": 10,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "34",
+          "audio": "4-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_4_3:11",
+          "value": {
+            "prompt": "那个电影是英文的。",
+            "answer": "错",
+            "number": 11,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "34",
+          "audio": "4-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_4_3:12",
+          "value": {
+            "prompt": "王红有很多韩国朋友。",
+            "answer": "错",
+            "number": 12,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "34",
+          "audio": "4-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_4_3:13",
+          "value": {
+            "prompt": "毛毛现在不努力。",
+            "answer": "错",
+            "number": 13,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "34",
+          "audio": "4-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_4_3:14",
+          "value": {
+            "prompt": "老师常常听写生词。",
+            "answer": "错",
+            "number": 14,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "34",
+          "audio": "4-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_4_3:15",
+          "value": {
+            "prompt": "我们学的词语很有用。",
+            "answer": "对",
+            "number": 15,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "34",
+          "audio": "4-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:1",
+          "value": {
+            "prompt": "朴大宇在哪里学习？",
+            "kind": "first_listen",
+            "textTitle": "对北京的印象"
+          },
+          "title": "对北京的印象 · first_listen",
+          "page": "35",
+          "audio": "4-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:2",
+          "value": {
+            "prompt": "朴大宇以前来过中国吗？",
+            "kind": "first_listen",
+            "textTitle": "对北京的印象"
+          },
+          "title": "对北京的印象 · first_listen",
+          "page": "35",
+          "audio": "4-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:1",
+          "value": {
+            "prompt": "朴大宇为什么坐出租车？（天气  熟悉）",
+            "kind": "second_listen",
+            "textTitle": "对北京的印象"
+          },
+          "title": "对北京的印象 · second_listen",
+          "page": "35",
+          "audio": "4-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:present:1",
+          "value": {
+            "prompt": "请你说说朴大宇在北京的生活：（1）以前来过北京；（2）这次有什么发现；（3）他觉得自己的中文怎么样。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：以前、汽车、出租车、司机、记得、听懂、高兴。常用表达参考：又、到处、聊几句、吃惊地发现。",
+            "kind": "present",
+            "textTitle": "对北京的印象"
+          },
+          "title": "对北京的印象 · present",
+          "page": "35",
+          "audio": "4-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:compare:1",
+          "value": {
+            "prompt": "朴大宇以前来过北京，但是他不太记得了。这次暑假来北京学习，他发现街上汽车多了，外国快餐店和面包店到处都是。因为天气热、路又不熟，他有时候坐出租车。他听得懂司机的话，也能和司机聊几句，心里很高兴。",
+            "kind": "compare",
+            "textTitle": "对北京的印象"
+          },
+          "title": "对北京的印象 · compare",
+          "page": "35",
+          "audio": "4-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:1",
+          "value": {
+            "prompt": "朴大宇上几门课？",
+            "kind": "first_listen",
+            "textTitle": "学习内容"
+          },
+          "title": "学习内容 · first_listen",
+          "page": "36–37",
+          "audio": "4-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:2",
+          "value": {
+            "prompt": "朴大宇什么时候上课？",
+            "kind": "first_listen",
+            "textTitle": "学习内容"
+          },
+          "title": "学习内容 · first_listen",
+          "page": "36–37",
+          "audio": "4-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:3",
+          "value": {
+            "prompt": "朴大宇晚上做什么？",
+            "kind": "first_listen",
+            "textTitle": "学习内容"
+          },
+          "title": "学习内容 · first_listen",
+          "page": "36–37",
+          "audio": "4-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:1",
+          "value": {
+            "prompt": "朴大宇都上什么课？（新闻  文化）",
+            "kind": "second_listen",
+            "textTitle": "学习内容"
+          },
+          "title": "学习内容 · second_listen",
+          "page": "36–37",
+          "audio": "4-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:2",
+          "value": {
+            "prompt": "朴大宇下午做什么？（参观  讲座）",
+            "kind": "second_listen",
+            "textTitle": "学习内容"
+          },
+          "title": "学习内容 · second_listen",
+          "page": "36–37",
+          "audio": "4-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:3",
+          "value": {
+            "prompt": "朴大宇觉得和语伴一起学习怎么样？（既……又……）",
+            "kind": "second_listen",
+            "textTitle": "学习内容"
+          },
+          "title": "学习内容 · second_listen",
+          "page": "36–37",
+          "audio": "4-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:4",
+          "value": {
+            "prompt": "朴大宇觉得自己的汉语怎么样？（进步  不过  加倍）",
+            "kind": "second_listen",
+            "textTitle": "学习内容"
+          },
+          "title": "学习内容 · second_listen",
+          "page": "36–37",
+          "audio": "4-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:present:1",
+          "value": {
+            "prompt": "请你说说朴大宇在北京的学习情况。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：三门课、字幕、听力、决定。常用表达参考：每……都……、通常、既……又……、加倍。",
+            "kind": "present",
+            "textTitle": "学习内容"
+          },
+          "title": "学习内容 · present",
+          "page": "36–37",
+          "audio": "4-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:compare:1",
+          "value": {
+            "prompt": "朴大宇在北京大学上汉语会话、新闻汉语和中国文化三门课。每天上午都有课，下午通常参观或听讲座，晚上和语伴互相学习。和语伴练习既可以练口语，又可以了解中国人的想法。他的阅读和口语进步很快，但是听力还需要加倍努力。",
+            "kind": "compare",
+            "textTitle": "学习内容"
+          },
+          "title": "学习内容 · compare",
+          "page": "36–37",
+          "audio": "4-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:1",
+          "value": {
+            "prompt": "在韩国的时候，朴大宇每个星期几节中文课？",
+            "kind": "first_listen",
+            "textTitle": "在中国学汉语和在本国学汉语的异同"
+          },
+          "title": "在中国学汉语和在本国学汉语的异同 · first_listen",
+          "page": "38–39",
+          "audio": "4-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:2",
+          "value": {
+            "prompt": "在韩国上大课的时候一个班有多少学生？",
+            "kind": "first_listen",
+            "textTitle": "在中国学汉语和在本国学汉语的异同"
+          },
+          "title": "在中国学汉语和在本国学汉语的异同 · first_listen",
+          "page": "38–39",
+          "audio": "4-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:3",
+          "value": {
+            "prompt": "在韩国上中文课的时候，老师说韩语吗？",
+            "kind": "first_listen",
+            "textTitle": "在中国学汉语和在本国学汉语的异同"
+          },
+          "title": "在中国学汉语和在本国学汉语的异同 · first_listen",
+          "page": "38–39",
+          "audio": "4-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:1",
+          "value": {
+            "prompt": "朴大宇在韩国上的中文课怎么样？（大课  练习课  解释）",
+            "kind": "second_listen",
+            "textTitle": "在中国学汉语和在本国学汉语的异同"
+          },
+          "title": "在中国学汉语和在本国学汉语的异同 · second_listen",
+          "page": "38–39",
+          "audio": "4-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:2",
+          "value": {
+            "prompt": "朴大宇为什么觉得在中国学习汉语效率高？（马上  用得上）",
+            "kind": "second_listen",
+            "textTitle": "在中国学汉语和在本国学汉语的异同"
+          },
+          "title": "在中国学汉语和在本国学汉语的异同 · second_listen",
+          "page": "38–39",
+          "audio": "4-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:present:1",
+          "value": {
+            "prompt": "请你比较朴大宇在韩国学汉语和在中国学汉语的异同。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：大课、小课、解释、了解、听力、效率、课上、马上、点菜。常用表达参考：用得上。",
+            "kind": "present",
+            "textTitle": "在中国学汉语和在本国学汉语的异同"
+          },
+          "title": "在中国学汉语和在本国学汉语的异同 · present",
+          "page": "38–39",
+          "audio": "4-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:compare:1",
+          "value": {
+            "prompt": "朴大宇在韩国每星期只有六节汉语课，大课人数多，老师用韩语解释，听力练习不多；小课人数少，练习机会多。在北京学汉语效率更高，课上学到的词语和语法下课后马上就能用上。",
+            "kind": "compare",
+            "textTitle": "在中国学汉语和在本国学汉语的异同"
+          },
+          "title": "在中国学汉语和在本国学汉语的异同 · compare",
+          "page": "38–39",
+          "audio": "4-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:1",
+          "value": {
+            "prompt": {
+              "id": "comprehensive_1",
+              "instruction": "请你根据听过的三段短文填表",
+              "table_headers": [
+                "人物",
+                "环境怎么样",
+                "交通",
+                "汉语使用",
+                "上什么课",
+                "课外活动",
+                "汉语怎么样",
+                "在韩国",
+                "在中国"
+              ],
+              "answer_status": "open_table_teacher_check"
+            }
+          },
+          "title": "综合练习",
+          "page": "40–41",
+          "audio": "4-4、4-5、4-6",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:2",
+          "value": {
+            "prompt": {
+              "id": "comprehensive_2",
+              "instruction": "小组活动：根据上面的表格和下面给出的参考词语和常用表达，谈一谈：（1）朴大宇在北京的生活；（2）朴大宇在北京的学习；（3）比较朴大宇在韩国和中国学汉语的异同。要求：一名同学先说6～8个句子；然后小组其他同学纠正补充；最后由一名同学总结，说10～12个句子，不少于100字。词语参考：以前、路上、坐出租车、聊天儿、三门课、语伴、大课、解释、效率。常用表达参考：到处、既……又……、吃惊地发现、用得上。",
+              "answer_status": "open_presentational_task"
+            }
+          },
+          "title": "综合练习",
+          "page": "40–41",
+          "audio": "4-4、4-5、4-6",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:3",
+          "value": {
+            "prompt": {
+              "id": "comprehensive_3",
+              "instruction": "拓展练习：你以前来过中国吗？请你谈一谈：（1）什么时候来的；（2）来中国做什么；（3）对中国的印象怎么样。要求：（1）使用这一课学过的词语和常用表达；（2）说8～10个句子，不少于80字。",
+              "answer_status": "open_presentational_task"
+            }
+          },
+          "title": "综合练习",
+          "page": "40–41",
+          "audio": "4-4、4-5、4-6",
+          "type": "综合练习"
+        }
+      ]
+    },
+    "boya-quasi-intermediate-i:lesson-05": {
+      "available": true,
+      "review_complete": true,
+      "completion": {
+        "status": "completed_by_adam",
+        "confirmed_by": "Adam",
+        "confirmed_at": "2026-09-08",
+        "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+        "technical_status_preserved": true
+      },
+      "reason": "",
+      "canonical": {
+        "lesson_key": "boya-quasi-intermediate-i:lesson-05",
+        "schema_version": "quasi-intermediate-source-audit-v1.0",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_number": 5,
+        "lesson_id": "lesson-05",
+        "title": "我的音乐老师",
+        "title_source": "主教材 PDF 第55页（印刷 P42）课名页视觉核对",
+        "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+        "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+        "page_map": {
+          "printed_pages": [
+            42,
+            50
+          ],
+          "pdf_pages": [
+            55,
+            63
+          ],
+          "answer_pdf_pages": [
+            17,
+            18
+          ],
+          "mapping_status": "visual_verified_pdf_offset_plus_13; answer_pages_visual_first_pass"
+        },
+        "qr_evidence": {
+          "pdf_page": 55,
+          "qr_url": "http://qr31.cn/I69bRX",
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-05-pdf-page-055.png",
+          "landing_page": "https://biz.cli.im/site/I69bRX?qrurl=http://qr31.cn/I69bRX&gtype=2&key=51706170bd8e6b559878288aae4fdb0723d68a5972",
+          "decode_status": "source_inventory_verified",
+          "landing_audio_labels": [
+            "5-1",
+            "5-2",
+            "5-3",
+            "5-4",
+            "5-5",
+            "5-6"
+          ]
+        },
+        "audio_map": [
+          {
+            "label": "5-1",
+            "coding": "VY1539809",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FoIB78qgI_pFDMwGV49iFIj4qWIU",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-05/5-1.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 885645,
+            "sha256": "1c1d9029e5b40f886ea8203d8480add879170111ed44fba7d67ac6621e30d480",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 55.04,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "5-2",
+            "coding": "JT1783202",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fgpdiucp_bQPNaNsdHzNUmCrvt2O",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-05/5-2.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 585551,
+            "sha256": "ea449e40711cebcca767b5ab2374f30e90dcde11399975050ae2757c9b7ee5d7",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 36.284,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "5-3",
+            "coding": "CG1783203",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FkiobDOhbwG9t_nuvt6x6ZlVFrTh",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-05/5-3.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 983030,
+            "sha256": "4f335875bde65cf149b6f979511ff07b2fabc69a8fd4c0fdc11af0cc9bcd5a97",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 61.127,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "5-4",
+            "coding": "UY1783204",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FotVXE0VjRsi5JcfEkb5P7lldbBy",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-05/5-4.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 645737,
+            "sha256": "be587417124680e0a8a7f713967ee1b05a415a88944e5331c50e7bbb10f32454",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 40.046,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "5-5",
+            "coding": "OU1783205",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FnjV1KGwGnueHTJ_Ma8edmGzskSa",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-05/5-5.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 896512,
+            "sha256": "2a0aa676c6195103d295b3f9282c6625ff9ef99f844a541d51837ccd45b6b177",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 55.719,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "5-6",
+            "coding": "ER1783206",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FqJjYw3o4Rw1XiK2rmSTKbRq-qKw",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-05/5-6.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 788261,
+            "sha256": "ee68c73d15eb6dfbbc6aca39c01ff7649e2870fa624600091a6f66975b19d189",
+            "download_status": "passed_in_source_inventory",
+            "decode_status": "passed",
+            "duration_seconds": 48.953,
+            "semantic_status": "pending_teacher_playback"
+          }
+        ],
+        "content_inventory": {
+          "vocabulary_count": 24,
+          "proper_noun_count": 2,
+          "vocabulary_comprehension_group_count": 2,
+          "vocabulary_comprehension_item_count": 7,
+          "listening_sentence_item_count": 10,
+          "texts_dialogues_count": 3,
+          "grammar_pattern_count": 15,
+          "listening_exercise_group_count": 6,
+          "comprehensive_exercise_count": 3,
+          "exercise_count": 28,
+          "status": "visual_source_snapshot_pending_adam_approval"
+        },
+        "answer_policy": "仅记录参考答案 PDF 中可核对的选择／判断答案与听力文本；开放式口语题不补写唯一标准答案。",
+        "review": {
+          "status": "source_audit_in_progress",
+          "approved": false,
+          "approved_by": [],
+          "approved_at": null,
+          "blockers": [
+            "六段音频已完成文件存在、bytes、SHA-256、ffprobe 时长和解码核对；教师逐段播放及语义听核尚未完成。",
+            "扫描教材无可用文字层；最终来源批准需由 Adam 对视觉转录、教材页码和答案证据确认。",
+            "开放式口语与综合练习没有唯一标准答案，不补写答案。"
+          ],
+          "approval_basis": [
+            "主教材 PDF 第55–63页（印刷 P42–P50）高分辨率视觉核对",
+            "答案 PDF 第17–18页（答案印刷 P14–P15）题目答案与听力文本视觉核对",
+            "来源总盘点第五课 QR、音频 bytes、hash 和时长记录"
+          ]
+        },
+        "sections": [
+          {
+            "id": "vocabulary",
+            "printed_pages": [
+              42,
+              43
+            ],
+            "audio": "5-1",
+            "entries": [
+              {
+                "no": 1,
+                "word": "合唱",
+                "pinyin": "héchàng",
+                "pos": "动",
+                "gloss": "to chorus"
+              },
+              {
+                "no": 2,
+                "word": "迷",
+                "pinyin": "mí",
+                "pos": "名",
+                "gloss": "fan"
+              },
+              {
+                "no": 3,
+                "word": "吹",
+                "pinyin": "chuī",
+                "pos": "动",
+                "gloss": "to play; to blow"
+              },
+              {
+                "no": 4,
+                "word": "笛子",
+                "pinyin": "dízi",
+                "pos": "名",
+                "gloss": "bamboo flute"
+              },
+              {
+                "no": 5,
+                "word": "乐器",
+                "pinyin": "yuèqì",
+                "pos": "名",
+                "gloss": "musical instrument"
+              },
+              {
+                "no": 6,
+                "word": "享受",
+                "pinyin": "xiǎngshòu",
+                "pos": "动",
+                "gloss": "to enjoy",
+                "starred": true
+              },
+              {
+                "no": 7,
+                "word": "火",
+                "pinyin": "huǒ",
+                "pos": "名",
+                "gloss": "fire"
+              },
+              {
+                "no": 8,
+                "word": "有神",
+                "pinyin": "yǒushén",
+                "pos": "形",
+                "gloss": "bright; shining"
+              },
+              {
+                "no": 9,
+                "word": "从小",
+                "pinyin": "cóngxiǎo",
+                "pos": "副",
+                "gloss": "from childhood"
+              },
+              {
+                "no": 10,
+                "word": "积极",
+                "pinyin": "jījí",
+                "pos": "副",
+                "gloss": "positive; active",
+                "starred": true
+              },
+              {
+                "no": 11,
+                "word": "深奥",
+                "pinyin": "shēn'ào",
+                "pos": "形",
+                "gloss": "profound; abstruse"
+              },
+              {
+                "no": 12,
+                "word": "中等",
+                "pinyin": "zhōngděng",
+                "pos": "形",
+                "gloss": "medium"
+              },
+              {
+                "no": 13,
+                "word": "个子",
+                "pinyin": "gèzi",
+                "pos": "名",
+                "gloss": "height"
+              },
+              {
+                "no": 14,
+                "word": "欣赏",
+                "pinyin": "xīnshǎng",
+                "pos": "动",
+                "gloss": "to appreciate"
+              },
+              {
+                "no": 15,
+                "word": "民族",
+                "pinyin": "mínzú",
+                "pos": "名",
+                "gloss": "nationality; ethnic"
+              },
+              {
+                "no": 16,
+                "word": "鼓励",
+                "pinyin": "gǔlì",
+                "pos": "动",
+                "gloss": "to encourage",
+                "starred": true
+              },
+              {
+                "no": 17,
+                "word": "耐心",
+                "pinyin": "nàixīn",
+                "pos": "形",
+                "gloss": "patient",
+                "starred": true
+              },
+              {
+                "no": 18,
+                "word": "亲切",
+                "pinyin": "qīnqiè",
+                "pos": "形",
+                "gloss": "cordial; kind"
+              },
+              {
+                "no": 19,
+                "word": "理论",
+                "pinyin": "lǐlùn",
+                "pos": "名",
+                "gloss": "theory"
+              },
+              {
+                "no": 20,
+                "word": "影响",
+                "pinyin": "yǐngxiǎng",
+                "pos": "名",
+                "gloss": "influence"
+              },
+              {
+                "no": 21,
+                "word": "古典",
+                "pinyin": "gǔdiǎn",
+                "pos": "形",
+                "gloss": "classical",
+                "starred": true
+              },
+              {
+                "no": 22,
+                "word": "着迷",
+                "pinyin": "zháomí",
+                "pos": null,
+                "pos_status": "blank_in_source",
+                "gloss": "to be fascinated"
+              },
+              {
+                "no": 23,
+                "word": "乐曲",
+                "pinyin": "yuèqǔ",
+                "pos": "名",
+                "gloss": "melody"
+              },
+              {
+                "no": 24,
+                "word": "感情",
+                "pinyin": "gǎnqíng",
+                "pos": "名",
+                "gloss": "feeling; affection",
+                "starred": true
+              }
+            ],
+            "proper_nouns": [
+              {
+                "word": "《茉莉花》",
+                "pinyin": "Mòlìhuā",
+                "gloss": "Jasmine"
+              },
+              {
+                "word": "《康定情歌》",
+                "pinyin": "Kāngdìng Qínggē",
+                "gloss": "Love Song in Kangding"
+              }
+            ],
+            "source_status": "visually_verified_pending_adam_approval"
+          },
+          {
+            "id": "vocabulary_comprehension",
+            "printed_pages": [
+              43,
+              44
+            ],
+            "audio": "5-2",
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "groups": [
+              {
+                "topic": "关于音乐的词语",
+                "words": [
+                  "合唱",
+                  "音乐迷",
+                  "吹笛子",
+                  "乐器"
+                ],
+                "answer": [
+                  "1.A",
+                  "2.B",
+                  "3.D",
+                  "4.C"
+                ]
+              },
+              {
+                "topic": "关于生活的词语",
+                "words": [
+                  "享受",
+                  "火",
+                  "有神"
+                ],
+                "answer": [
+                  "1.A",
+                  "2.B",
+                  "3.C"
+                ]
+              }
+            ],
+            "answer_status": "answers_checked_against_answer_pdf"
+          },
+          {
+            "id": "listening_sentences",
+            "printed_pages": [
+              44
+            ],
+            "audio_tracks": [
+              "5-3"
+            ],
+            "exercises": {
+              "exercise_5_3": {
+                "heading_verbatim": "一、听句子，判断对错",
+                "items": [
+                  [
+                    1,
+                    "他从小就喜欢音乐。",
+                    "错"
+                  ],
+                  [
+                    2,
+                    "他积极参加合唱比赛。",
+                    "对"
+                  ],
+                  [
+                    3,
+                    "这门课我觉得很深奥。",
+                    "错"
+                  ],
+                  [
+                    4,
+                    "王红说听音乐是一种享受。",
+                    "错"
+                  ],
+                  [
+                    5,
+                    "爸爸个子很高。",
+                    "错"
+                  ],
+                  [
+                    6,
+                    "他们都对学习乐器很感兴趣。",
+                    "对"
+                  ],
+                  [
+                    7,
+                    "老师教我们欣赏欧洲音乐和民族音乐。",
+                    "错"
+                  ],
+                  [
+                    8,
+                    "老师鼓励同学们问问题。",
+                    "错"
+                  ],
+                  [
+                    9,
+                    "老师回答学生们的问题很耐心。",
+                    "对"
+                  ],
+                  [
+                    10,
+                    "李老师常常亲切地鼓励我们。",
+                    "错"
+                  ]
+                ]
+              }
+            },
+            "answer_status": "answers_checked_against_answer_pdf"
+          },
+          {
+            "id": "short_text_1",
+            "printed_pages": [
+              45
+            ],
+            "audio": "5-4",
+            "title": "我从小就喜欢唱歌",
+            "text": "我从小就喜欢唱歌。上小学的时候，每年学校举办合唱比赛，我都积极参加。可是，对于音乐，我是既喜欢又觉得深奥。我不懂音乐理论，也说不出多少音乐术语，可是音乐却让我觉得很亲切。如果说我喜欢唱歌是受了爸爸的影响，那真正让我成为音乐迷的却是我中学的音乐老师。",
+            "exercises": {
+              "first_listen": [
+                "“我”从小就喜欢什么？",
+                "“我”是不是音乐迷？"
+              ],
+              "second_listen": [
+                "“我”为何喜欢唱歌？（受……影响）",
+                "“我”觉得音乐怎么样？（既……又……）",
+                "“我”为何成为了音乐迷？（音乐老师）"
+              ],
+              "present": "请你说说“我”的音乐生活：（1）“我”从小就喜欢什么；（2）“我”受了哪些人的影响。要求：说6–8个句子，不少于60字。使用下面的词语和常用表达。词语参考：积极、参加、成为、音乐迷。常用表达参考：从小就、每……都……、既……又……、可是、受……影响。",
+              "compare": "我从小就喜欢唱歌，每年都积极参加合唱比赛。我对音乐既喜欢又觉得深奥。我不懂音乐理论，可是音乐让我觉得很亲切。我受爸爸和中学音乐老师的影响，成为了音乐迷。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  45
+                ],
+                "audio_tracks": [
+                  "5-4"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  45
+                ],
+                "audio_tracks": [
+                  "5-4"
+                ]
+              }
+            }
+          },
+          {
+            "id": "common_expressions_introduce_experience",
+            "printed_pages": [
+              46
+            ],
+            "topic": "介绍经历",
+            "items": [
+              {
+                "expression": "从小就",
+                "examples": [
+                  "丽丽从小就喜欢画画儿。",
+                  "朴大宇从小就对汉语有兴趣。"
+                ]
+              },
+              {
+                "expression": "每星期……都……",
+                "examples": [
+                  "王红每星期二都去做志愿者。",
+                  "朴大宇每星期三下午都去听讲座。"
+                ]
+              },
+              {
+                "expression": "对于",
+                "examples": [
+                  "对于音乐，我从小就喜欢。",
+                  "对于这个问题，王红做过一点儿研究。"
+                ]
+              },
+              {
+                "expression": "可是",
+                "examples": [
+                  "我喜欢逛公园，可是来北京以后，我只去过天安门。",
+                  "我喜欢唱歌，可是没有学过音乐理论。"
+                ]
+              },
+              {
+                "expression": "如果……那……",
+                "examples": [
+                  "如果我当初选择中文专业，那我现在可能已经是中国通了。",
+                  "如果不是对那家公司的工作很满意，那丽丽也不会到北京来工作。"
+                ]
+              },
+              {
+                "expression": "受……影响",
+                "examples": [
+                  "受老师的影响，丽丽决定学习设计专业。",
+                  "受中国朋友的影响，朴大宇去年开始看京剧。"
+                ]
+              }
+            ],
+            "source_status": "examples_visually_verified"
+          },
+          {
+            "id": "short_text_2",
+            "printed_pages": [
+              46,
+              47
+            ],
+            "audio": "5-5",
+            "title": "老师上课教什么",
+            "text": "我们的音乐老师姓李，是一位中等个子的中年男老师。他黑黑的头发，眼睛很有神。上课的时候，李老师教我们怎么欣赏欧洲古典音乐，也让我们了解中国民族音乐、民族乐器。李老师教我们全年级的同学学习吹笛子，很多同学都是第一次接触民族乐器，可是越学越着迷。不少同学每天把笛子带到学校，一有空儿就练习。我知道的民族乐曲，比如《茉莉花》《康定情歌》，大部分都是那时候了解的。",
+            "exercises": {
+              "first_listen": [
+                "李老师是男老师还是女老师？",
+                "“我们”上音乐课学什么？"
+              ],
+              "second_listen": [
+                "李老师教“我们”什么？（欣赏）",
+                "李老师教“我们”什么乐器？（吹）",
+                "同学们喜欢学什么？（吹、把、带、一……就……）"
+              ],
+              "present": "请你说说“我”的音乐课：李老师教“我们”什么；同学们为什么喜欢学吹笛子。要求：说6–8个句子，不少于60字。使用下面的词语和常用表达。词语参考：欣赏、欧洲、民族、吹、笛子。常用表达参考：越……越……、把、一……就……、比如。",
+              "compare": "李老师是一位中等个子的中年男老师，眼睛很有神。他教我们欣赏欧洲古典音乐，也让我们了解中国民族音乐和民族乐器。很多同学越学吹笛子越着迷，一有空儿就练习。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  46
+                ],
+                "audio_tracks": [
+                  "5-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说一句，第3题要求说三个句子，不少于30字",
+                "textbook_printed_pages": [
+                  46
+                ],
+                "audio_tracks": [
+                  "5-5"
+                ]
+              }
+            }
+          },
+          {
+            "id": "common_expressions_introduce_person",
+            "printed_pages": [
+              47
+            ],
+            "topic": "介绍人物",
+            "items": [
+              {
+                "expression": "外貌描写",
+                "examples": [
+                  "小姑娘黑头发，黑眼睛，长得很像妈妈。",
+                  "体育老师个子高高的，瘦瘦的。"
+                ]
+              },
+              {
+                "expression": "越……越……",
+                "examples": [
+                  "孩子越大越懂事。",
+                  "李大为觉得中文越学越有意思。"
+                ]
+              },
+              {
+                "expression": "把",
+                "examples": [
+                  "王红把妈妈当成自己最好的朋友。",
+                  "上大学以后，王红把头发剪短了。"
+                ]
+              },
+              {
+                "expression": "一……就……",
+                "examples": [
+                  "丽丽一说话就脸红。",
+                  "朴大宇很聪明，你一说他就明白。"
+                ]
+              },
+              {
+                "expression": "比如",
+                "examples": [
+                  "李大为喜欢吃中国菜，比如饺子和豆腐。",
+                  "王红喜欢体育活动，比如打球、跑步和游泳。"
+                ]
+              },
+              {
+                "expression": "大部分",
+                "examples": [
+                  "班上大部分同学都喜欢数学课。",
+                  "朴大宇晚上大部分时间都在学习中文。"
+                ]
+              }
+            ],
+            "source_status": "examples_visually_verified"
+          },
+          {
+            "id": "short_text_3",
+            "printed_pages": [
+              48
+            ],
+            "audio": "5-6",
+            "title": "老师讲课的风格",
+            "text": "李老师教音乐课特别有感情。他常常鼓励同学们问问题。同学们的问题，李老师都非常耐心地回答。李老师课讲得很清楚，内容也特别有意思。听李老师讲音乐，真是一种享受，就连以前对音乐理论不感兴趣的同学也越来越爱上音乐课了。从李老师那里，我了解了，音乐是夏天的风，也是冬天的火，让人感觉舒服，也让人觉得生活更美好。",
+            "text_source_note": "改编自叶文玲《灵魂的伊甸园》",
+            "exercises": {
+              "first_listen": [
+                "李老师教课怎么样？",
+                "音乐对人们的生活有什么影响？"
+              ],
+              "second_listen": [
+                "李老师讲课有什么特点？（耐心、特别、清楚）",
+                "同学们为什么喜欢上音乐课？（一种享受）",
+                "李老师让同学们明白了什么道理？（夏天的风、冬天的火、美好）"
+              ],
+              "present": "请你说说李老师的音乐有什么特色。要求：说6–8个句子，不少于60字。使用下面的词语和常用表达。词语参考：耐心、清楚、内容、夏天的风、冬天的火、生活、美好。常用表达参考：从……那里、对……感兴趣。",
+              "compare": "李老师教音乐课很有感情，讲得很清楚，内容也特别有意思。他常常鼓励同学问问题，而且非常耐心地回答。听他的课是一种享受，同学们越来越爱上音乐课，觉得音乐让生活更美好。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  48
+                ],
+                "audio_tracks": [
+                  "5-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  48
+                ],
+                "audio_tracks": [
+                  "5-6"
+                ]
+              }
+            }
+          },
+          {
+            "id": "common_expressions_discuss_learning",
+            "printed_pages": [
+              49
+            ],
+            "topic": "谈论学习",
+            "items": [
+              {
+                "expression": "真是一种享受",
+                "examples": [
+                  "听李老师上音乐课真是一种享受。",
+                  "和中国同学用中文一起讨论问题真是一种享受。"
+                ]
+              },
+              {
+                "expression": "连……都……",
+                "examples": [
+                  "刚来中国的时候，李大为连“你好”都不会说。",
+                  "朴大宇忙着准备考研究生，连星期日都不休息。"
+                ]
+              },
+              {
+                "expression": "对……感兴趣",
+                "examples": [
+                  "王红的专业是文学，可是她对数学也很感兴趣。",
+                  "李大为对现在的专业不感兴趣，打算转专业。"
+                ]
+              },
+              {
+                "expression": "从……那里",
+                "examples": [
+                  "从老师那里，我们也学到了做人的道理。",
+                  "朴大宇和中国同学互相学习，他们都从对方那里了解了不少有趣的看法。"
+                ]
+              }
+            ],
+            "source_status": "examples_visually_verified"
+          },
+          {
+            "id": "comprehensive_practice",
+            "printed_pages": [
+              49,
+              50
+            ],
+            "audio_tracks": [
+              "5-4",
+              "5-5",
+              "5-6"
+            ],
+            "items": [
+              {
+                "id": "comprehensive_1",
+                "instruction": "请你根据听过的三段短文填表",
+                "table_headers": [
+                  "人物",
+                  "喜欢什么",
+                  "为什么",
+                  "上李老师的课，有什么收获",
+                  "相貌",
+                  "上课教什么",
+                  "教课怎么样"
+                ],
+                "answer_status": "open_table_teacher_check"
+              },
+              {
+                "id": "comprehensive_2",
+                "instruction": "小组活动：根据上面的表格和下面给出的参考词语和常用表达，谈一谈：（1）我和音乐；（2）介绍一下李老师和他教的音乐课。要求一名同学先说6–8个句子，不少于60字；然后小组其他同学补充；最后由一名同学总结，说10–12个句子，不少于100字。",
+                "answer_status": "open_presentational_task"
+              },
+              {
+                "id": "comprehensive_3",
+                "instruction": "拓展练习：请你说一说：（1）你喜欢谁；（2）为什么喜欢；（3）介绍一下这个人。要求使用这一课学过的词语和常用表达；说10–12句话，不少于100字。",
+                "answer_status": "open_presentational_task"
+              }
+            ],
+            "source_status": "visually_verified_pending_adam_approval"
+          }
+        ]
+      },
+      "source_manifest": {
+        "schema_version": "boya-lesson-source-manifest-v1",
+        "manifest_type": "lesson-source-review",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_id": "lesson-05",
+        "lesson_key": "boya-quasi-intermediate-i:lesson-05",
+        "completion_confirmation": {
+          "status": "completed_by_adam",
+          "confirmed_by": "Adam",
+          "confirmed_at": "2026-09-08",
+          "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+          "technical_status_preserved": true
+        },
+        "lesson_number": 5,
+        "lesson_title": "我的音乐老师",
+        "language": "简体中文",
+        "package": "lesson-05-source-review",
+        "prepared_at": "2026-08-28",
+        "source_status": "pending_review",
+        "source_qa_status": "blocked",
+        "extraction_status": "source_review_materialized",
+        "review_status": "awaiting_adam_review",
+        "approved": false,
+        "approved_by": null,
+        "approved_at": null,
+        "canonical_source": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/canonical-source.json",
+        "canonical_source_sha256": "7311f648cfd3541b64ae8010457fa6d737c1aa3306ea23e9a3d8c63a9abef32c",
+        "source_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+          "sha256": "39899d0f400e187f57c16db821f8f4c207f936eae0e4fbfe3cab52c02bfea806",
+          "total_pages": 134,
+          "textbook_page_range": "42–50",
+          "pdf_page_range": "55–63",
+          "page_count_in_review": 9,
+          "format": "scanned_image_pdf",
+          "text_layer_status": "empty; visual review used"
+        },
+        "answer_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+          "sha256": "3c21e1574b0187259769799d183eca78a60a515b5b7fce202eda9e9ade2c20b8",
+          "total_pages": 33,
+          "pdf_page_range_in_review": "17–18",
+          "answer_page_range": "14–15 (inventory label P16–P17 pending confirmation)",
+          "answer_status": "closed_answers_visual_checked; open_tasks_have_no_unique_answer"
+        },
+        "page_audit": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/audit/source-pages-42-50-audit-draft.md",
+          "sha256": "054e18da9330f3ef6119ef23110dec65d95d7852b9dfa68fc8942780e94a1d00",
+          "status": "visual_first_pass"
+        },
+        "answer_audit": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/audit/source-pages-42-50-audit-draft.md",
+          "sha256": "054e18da9330f3ef6119ef23110dec65d95d7852b9dfa68fc8942780e94a1d00",
+          "status": "answer_pages_17-18_included_in_visual_first_pass"
+        },
+        "qr_source": {
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-05-pdf-page-055.png",
+          "capture_sha256": "19753958db05ed1c7464308578ee577d23e346f37d186f4741f2a42b9c40917a",
+          "qr_url": "http://qr31.cn/I69bRX",
+          "landing_page": "https://biz.cli.im/site/I69bRX?qrurl=http://qr31.cn/I69bRX&gtype=2&key=51706170bd8e6b559878288aae4fdb0723d68a5972",
+          "status": "decoded_landing_page_lists_5-1_to_5-6"
+        },
+        "audio": {
+          "root": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-05",
+          "manifest": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/audio-manifest.json",
+          "manifest_sha256": "8881142e2803efd2d289ee11c9b2dcf5f0c06298982ce685a53fca399c513189",
+          "technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/audit/audio-technical-2026-08-28.md",
+          "technical_evidence_sha256": "da52ee1da4b1416da844edcffc78500b3f8c4e376985ff1e5cad11b398db052b",
+          "expected_track_count": 6,
+          "local_track_count": 6,
+          "decode_passed_count": 6,
+          "semantic_listening_count": 0,
+          "teacher_playback_count": 0,
+          "status": "technical_pass_semantic_review_pending"
+        },
+        "listening_exercise_contract": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/listening-exercise-contract.json",
+        "listening_exercise_contract_sha256": "8189422789bb71d6a3ccd11328b12894aa8dc27658ab6f2f154de1edc98ca26d",
+        "listening_exercise_contract_detail": {
+          "status": "draft_pending_source_approval",
+          "exercise_count": 9
+        },
+        "review_evidence": {
+          "page_range": "P42–P50",
+          "answer_page_range": "答案 PDF 第17–18页／印刷 P14–P15（待确认）",
+          "vocabulary_count": 24,
+          "proper_noun_count": 2,
+          "vocabulary_comprehension_group_count": 2,
+          "vocabulary_comprehension_item_count": 7,
+          "listening_sentence_item_count": 10,
+          "short_text_count": 3,
+          "short_text_listen_group_count": 6,
+          "common_expression_group_count": 3,
+          "comprehensive_practice_count": 3,
+          "open_presentational_tasks": true,
+          "status": "page_answer_audio_mapping_written; final source approval pending"
+        },
+        "blockers": [
+          "六段音频仅完成文件存在、bytes、SHA-256、ffprobe 时长和解码核对；教师逐段播放及语义听核尚未完成。",
+          "扫描教材无可用文字层；最终来源批准需由 Adam 对视觉转录、教材页码和答案证据确认。",
+          "来源批准前不得进入教师手册、配套材料、PPT storyboard 或 PPTX 生成 gate。"
+        ],
+        "notes": [
+          "此包只记录来源盘点、页面证据、QR／音频映射与结构化草稿。",
+          "canonical-source.json 与 listening-exercise-contract.json 尚未成为 approved authority。",
+          "audio-manifest.json 只证明技术文件映射；semantic_status 与 teacher_playback_status 保持 pending。"
+        ]
+      },
+      "audio": {
+        "schema_version": "boya-lesson-audio-manifest-v1",
+        "lesson_id": "lesson-05",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_title": "我的音乐老师",
+        "recorded_at": "2026-08-28",
+        "provenance": {
+          "source_type": "publisher_qr_landing_page",
+          "qr_url": "http://qr31.cn/I69bRX",
+          "landing_page": "https://biz.cli.im/site/I69bRX?qrurl=http://qr31.cn/I69bRX&gtype=2&key=51706170bd8e6b559878288aae4fdb0723d68a5972",
+          "landing_audio_labels": [
+            "5-1",
+            "5-2",
+            "5-3",
+            "5-4",
+            "5-5",
+            "5-6"
+          ],
+          "textbook_labels_seen": [
+            "5-1",
+            "5-2",
+            "5-3",
+            "5-4",
+            "5-5",
+            "5-6"
+          ],
+          "label_discrepancy": null
+        },
+        "technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/audit/audio-technical-2026-08-28.md",
+        "tracks": [
+          {
+            "label": "5-1",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FoIB78qgI_pFDMwGV49iFIj4qWIU",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-05/5-1.mp3",
+            "scope": "词语（P42–P43）",
+            "bytes": 885645,
+            "sha256": "1c1d9029e5b40f886ea8203d8480add879170111ed44fba7d67ac6621e30d480",
+            "duration_seconds": 55.04,
+            "decode_status": "passed",
+            "semantic_status": "not_listened",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "5-2",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fgpdiucp_bQPNaNsdHzNUmCrvt2O",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-05/5-2.mp3",
+            "scope": "词语理解（P43–P44）",
+            "bytes": 585551,
+            "sha256": "ea449e40711cebcca767b5ab2374f30e90dcde11399975050ae2757c9b7ee5d7",
+            "duration_seconds": 36.284,
+            "decode_status": "passed",
+            "semantic_status": "not_listened",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "5-3",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FkiobDOhbwG9t_nuvt6x6ZlVFrTh",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-05/5-3.mp3",
+            "scope": "听说句子：判断对错（P44）",
+            "bytes": 983030,
+            "sha256": "4f335875bde65cf149b6f979511ff07b2fabc69a8fd4c0fdc11af0cc9bcd5a97",
+            "duration_seconds": 61.127,
+            "decode_status": "passed",
+            "semantic_status": "not_listened",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "5-4",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FotVXE0VjRsi5JcfEkb5P7lldbBy",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-05/5-4.mp3",
+            "scope": "短文一：我从小就喜欢唱歌（P45）",
+            "bytes": 645737,
+            "sha256": "be587417124680e0a8a7f713967ee1b05a415a88944e5331c50e7bbb10f32454",
+            "duration_seconds": 40.046,
+            "decode_status": "passed",
+            "semantic_status": "not_listened",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "5-5",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FnjV1KGwGnueHTJ_Ma8edmGzskSa",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-05/5-5.mp3",
+            "scope": "短文二：老师上课教什么（P46–P47）",
+            "bytes": 896512,
+            "sha256": "2a0aa676c6195103d295b3f9282c6625ff9ef99f844a541d51837ccd45b6b177",
+            "duration_seconds": 55.719,
+            "decode_status": "passed",
+            "semantic_status": "not_listened",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "5-6",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FqJjYw3o4Rw1XiK2rmSTKbRq-qKw",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-05/5-6.mp3",
+            "scope": "短文三：老师讲课的风格（P48）",
+            "bytes": 788261,
+            "sha256": "ee68c73d15eb6dfbbc6aca39c01ff7649e2870fa624600091a6f66975b19d189",
+            "duration_seconds": 48.953,
+            "decode_status": "passed",
+            "semantic_status": "not_listened",
+            "teacher_playback_status": "pending"
+          }
+        ],
+        "status": "draft_pending_source_approval",
+        "coverage_status": "5-1_to_5-6_technical_only;semantic_and_teacher_playback_pending"
+      },
+      "canonical_path": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/canonical-source.json",
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-05/00-source/source-manifest.json",
+      "canonical_source_sha256": "7311f648cfd3541b64ae8010457fa6d737c1aa3306ea23e9a3d8c63a9abef32c",
+      "review_items": [
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:1",
+          "value": {
+            "no": 1,
+            "word": "合唱",
+            "pinyin": "héchàng",
+            "pos": "动",
+            "gloss": "to chorus"
+          },
+          "title": "合唱",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:2",
+          "value": {
+            "no": 2,
+            "word": "迷",
+            "pinyin": "mí",
+            "pos": "名",
+            "gloss": "fan"
+          },
+          "title": "迷",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:3",
+          "value": {
+            "no": 3,
+            "word": "吹",
+            "pinyin": "chuī",
+            "pos": "动",
+            "gloss": "to play; to blow"
+          },
+          "title": "吹",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:4",
+          "value": {
+            "no": 4,
+            "word": "笛子",
+            "pinyin": "dízi",
+            "pos": "名",
+            "gloss": "bamboo flute"
+          },
+          "title": "笛子",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:5",
+          "value": {
+            "no": 5,
+            "word": "乐器",
+            "pinyin": "yuèqì",
+            "pos": "名",
+            "gloss": "musical instrument"
+          },
+          "title": "乐器",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:6",
+          "value": {
+            "no": 6,
+            "word": "享受",
+            "pinyin": "xiǎngshòu",
+            "pos": "动",
+            "gloss": "to enjoy",
+            "starred": true
+          },
+          "title": "享受",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:7",
+          "value": {
+            "no": 7,
+            "word": "火",
+            "pinyin": "huǒ",
+            "pos": "名",
+            "gloss": "fire"
+          },
+          "title": "火",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:8",
+          "value": {
+            "no": 8,
+            "word": "有神",
+            "pinyin": "yǒushén",
+            "pos": "形",
+            "gloss": "bright; shining"
+          },
+          "title": "有神",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:9",
+          "value": {
+            "no": 9,
+            "word": "从小",
+            "pinyin": "cóngxiǎo",
+            "pos": "副",
+            "gloss": "from childhood"
+          },
+          "title": "从小",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:10",
+          "value": {
+            "no": 10,
+            "word": "积极",
+            "pinyin": "jījí",
+            "pos": "副",
+            "gloss": "positive; active",
+            "starred": true
+          },
+          "title": "积极",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:11",
+          "value": {
+            "no": 11,
+            "word": "深奥",
+            "pinyin": "shēn'ào",
+            "pos": "形",
+            "gloss": "profound; abstruse"
+          },
+          "title": "深奥",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:12",
+          "value": {
+            "no": 12,
+            "word": "中等",
+            "pinyin": "zhōngděng",
+            "pos": "形",
+            "gloss": "medium"
+          },
+          "title": "中等",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:13",
+          "value": {
+            "no": 13,
+            "word": "个子",
+            "pinyin": "gèzi",
+            "pos": "名",
+            "gloss": "height"
+          },
+          "title": "个子",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:14",
+          "value": {
+            "no": 14,
+            "word": "欣赏",
+            "pinyin": "xīnshǎng",
+            "pos": "动",
+            "gloss": "to appreciate"
+          },
+          "title": "欣赏",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:15",
+          "value": {
+            "no": 15,
+            "word": "民族",
+            "pinyin": "mínzú",
+            "pos": "名",
+            "gloss": "nationality; ethnic"
+          },
+          "title": "民族",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:16",
+          "value": {
+            "no": 16,
+            "word": "鼓励",
+            "pinyin": "gǔlì",
+            "pos": "动",
+            "gloss": "to encourage",
+            "starred": true
+          },
+          "title": "鼓励",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:17",
+          "value": {
+            "no": 17,
+            "word": "耐心",
+            "pinyin": "nàixīn",
+            "pos": "形",
+            "gloss": "patient",
+            "starred": true
+          },
+          "title": "耐心",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:18",
+          "value": {
+            "no": 18,
+            "word": "亲切",
+            "pinyin": "qīnqiè",
+            "pos": "形",
+            "gloss": "cordial; kind"
+          },
+          "title": "亲切",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:19",
+          "value": {
+            "no": 19,
+            "word": "理论",
+            "pinyin": "lǐlùn",
+            "pos": "名",
+            "gloss": "theory"
+          },
+          "title": "理论",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:20",
+          "value": {
+            "no": 20,
+            "word": "影响",
+            "pinyin": "yǐngxiǎng",
+            "pos": "名",
+            "gloss": "influence"
+          },
+          "title": "影响",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:21",
+          "value": {
+            "no": 21,
+            "word": "古典",
+            "pinyin": "gǔdiǎn",
+            "pos": "形",
+            "gloss": "classical",
+            "starred": true
+          },
+          "title": "古典",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:22",
+          "value": {
+            "no": 22,
+            "word": "着迷",
+            "pinyin": "zháomí",
+            "pos": null,
+            "pos_status": "blank_in_source",
+            "gloss": "to be fascinated"
+          },
+          "title": "着迷",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:23",
+          "value": {
+            "no": 23,
+            "word": "乐曲",
+            "pinyin": "yuèqǔ",
+            "pos": "名",
+            "gloss": "melody"
+          },
+          "title": "乐曲",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:24",
+          "value": {
+            "no": 24,
+            "word": "感情",
+            "pinyin": "gǎnqíng",
+            "pos": "名",
+            "gloss": "feeling; affection",
+            "starred": true
+          },
+          "title": "感情",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "proper-noun:1",
+          "value": {
+            "word": "《茉莉花》",
+            "pinyin": "Mòlìhuā",
+            "gloss": "Jasmine"
+          },
+          "title": "《茉莉花》",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "专名"
+        },
+        {
+          "area": "vocabulary",
+          "id": "proper-noun:2",
+          "value": {
+            "word": "《康定情歌》",
+            "pinyin": "Kāngdìng Qínggē",
+            "gloss": "Love Song in Kangding"
+          },
+          "title": "《康定情歌》",
+          "page": "42–43",
+          "audio": "5-1",
+          "type": "专名"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_1",
+          "value": {
+            "id": "short_text_1",
+            "printed_pages": [
+              45
+            ],
+            "audio": "5-4",
+            "title": "我从小就喜欢唱歌",
+            "text": "我从小就喜欢唱歌。上小学的时候，每年学校举办合唱比赛，我都积极参加。可是，对于音乐，我是既喜欢又觉得深奥。我不懂音乐理论，也说不出多少音乐术语，可是音乐却让我觉得很亲切。如果说我喜欢唱歌是受了爸爸的影响，那真正让我成为音乐迷的却是我中学的音乐老师。",
+            "exercises": {
+              "first_listen": [
+                "“我”从小就喜欢什么？",
+                "“我”是不是音乐迷？"
+              ],
+              "second_listen": [
+                "“我”为何喜欢唱歌？（受……影响）",
+                "“我”觉得音乐怎么样？（既……又……）",
+                "“我”为何成为了音乐迷？（音乐老师）"
+              ],
+              "present": "请你说说“我”的音乐生活：（1）“我”从小就喜欢什么；（2）“我”受了哪些人的影响。要求：说6–8个句子，不少于60字。使用下面的词语和常用表达。词语参考：积极、参加、成为、音乐迷。常用表达参考：从小就、每……都……、既……又……、可是、受……影响。",
+              "compare": "我从小就喜欢唱歌，每年都积极参加合唱比赛。我对音乐既喜欢又觉得深奥。我不懂音乐理论，可是音乐让我觉得很亲切。我受爸爸和中学音乐老师的影响，成为了音乐迷。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  45
+                ],
+                "audio_tracks": [
+                  "5-4"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  45
+                ],
+                "audio_tracks": [
+                  "5-4"
+                ]
+              }
+            }
+          },
+          "title": "我从小就喜欢唱歌",
+          "page": "45",
+          "audio": "5-4",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_2",
+          "value": {
+            "id": "short_text_2",
+            "printed_pages": [
+              46,
+              47
+            ],
+            "audio": "5-5",
+            "title": "老师上课教什么",
+            "text": "我们的音乐老师姓李，是一位中等个子的中年男老师。他黑黑的头发，眼睛很有神。上课的时候，李老师教我们怎么欣赏欧洲古典音乐，也让我们了解中国民族音乐、民族乐器。李老师教我们全年级的同学学习吹笛子，很多同学都是第一次接触民族乐器，可是越学越着迷。不少同学每天把笛子带到学校，一有空儿就练习。我知道的民族乐曲，比如《茉莉花》《康定情歌》，大部分都是那时候了解的。",
+            "exercises": {
+              "first_listen": [
+                "李老师是男老师还是女老师？",
+                "“我们”上音乐课学什么？"
+              ],
+              "second_listen": [
+                "李老师教“我们”什么？（欣赏）",
+                "李老师教“我们”什么乐器？（吹）",
+                "同学们喜欢学什么？（吹、把、带、一……就……）"
+              ],
+              "present": "请你说说“我”的音乐课：李老师教“我们”什么；同学们为什么喜欢学吹笛子。要求：说6–8个句子，不少于60字。使用下面的词语和常用表达。词语参考：欣赏、欧洲、民族、吹、笛子。常用表达参考：越……越……、把、一……就……、比如。",
+              "compare": "李老师是一位中等个子的中年男老师，眼睛很有神。他教我们欣赏欧洲古典音乐，也让我们了解中国民族音乐和民族乐器。很多同学越学吹笛子越着迷，一有空儿就练习。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  46
+                ],
+                "audio_tracks": [
+                  "5-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说一句，第3题要求说三个句子，不少于30字",
+                "textbook_printed_pages": [
+                  46
+                ],
+                "audio_tracks": [
+                  "5-5"
+                ]
+              }
+            }
+          },
+          "title": "老师上课教什么",
+          "page": "46–47",
+          "audio": "5-5",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_3",
+          "value": {
+            "id": "short_text_3",
+            "printed_pages": [
+              48
+            ],
+            "audio": "5-6",
+            "title": "老师讲课的风格",
+            "text": "李老师教音乐课特别有感情。他常常鼓励同学们问问题。同学们的问题，李老师都非常耐心地回答。李老师课讲得很清楚，内容也特别有意思。听李老师讲音乐，真是一种享受，就连以前对音乐理论不感兴趣的同学也越来越爱上音乐课了。从李老师那里，我了解了，音乐是夏天的风，也是冬天的火，让人感觉舒服，也让人觉得生活更美好。",
+            "text_source_note": "改编自叶文玲《灵魂的伊甸园》",
+            "exercises": {
+              "first_listen": [
+                "李老师教课怎么样？",
+                "音乐对人们的生活有什么影响？"
+              ],
+              "second_listen": [
+                "李老师讲课有什么特点？（耐心、特别、清楚）",
+                "同学们为什么喜欢上音乐课？（一种享受）",
+                "李老师让同学们明白了什么道理？（夏天的风、冬天的火、美好）"
+              ],
+              "present": "请你说说李老师的音乐有什么特色。要求：说6–8个句子，不少于60字。使用下面的词语和常用表达。词语参考：耐心、清楚、内容、夏天的风、冬天的火、生活、美好。常用表达参考：从……那里、对……感兴趣。",
+              "compare": "李老师教音乐课很有感情，讲得很清楚，内容也特别有意思。他常常鼓励同学问问题，而且非常耐心地回答。听他的课是一种享受，同学们越来越爱上音乐课，觉得音乐让生活更美好。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  48
+                ],
+                "audio_tracks": [
+                  "5-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  48
+                ],
+                "audio_tracks": [
+                  "5-6"
+                ]
+              }
+            }
+          },
+          "title": "老师讲课的风格",
+          "page": "48",
+          "audio": "5-6",
+          "type": "短文"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1",
+          "value": {
+            "expression": {
+              "expression": "从小就",
+              "examples": [
+                "丽丽从小就喜欢画画儿。",
+                "朴大宇从小就对汉语有兴趣。"
+              ]
+            },
+            "topic": "介绍经历"
+          },
+          "title": {
+            "expression": "从小就",
+            "examples": [
+              "丽丽从小就喜欢画画儿。",
+              "朴大宇从小就对汉语有兴趣。"
+            ]
+          },
+          "page": "46",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:2",
+          "value": {
+            "expression": {
+              "expression": "每星期……都……",
+              "examples": [
+                "王红每星期二都去做志愿者。",
+                "朴大宇每星期三下午都去听讲座。"
+              ]
+            },
+            "topic": "介绍经历"
+          },
+          "title": {
+            "expression": "每星期……都……",
+            "examples": [
+              "王红每星期二都去做志愿者。",
+              "朴大宇每星期三下午都去听讲座。"
+            ]
+          },
+          "page": "46",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:3",
+          "value": {
+            "expression": {
+              "expression": "对于",
+              "examples": [
+                "对于音乐，我从小就喜欢。",
+                "对于这个问题，王红做过一点儿研究。"
+              ]
+            },
+            "topic": "介绍经历"
+          },
+          "title": {
+            "expression": "对于",
+            "examples": [
+              "对于音乐，我从小就喜欢。",
+              "对于这个问题，王红做过一点儿研究。"
+            ]
+          },
+          "page": "46",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:4",
+          "value": {
+            "expression": {
+              "expression": "可是",
+              "examples": [
+                "我喜欢逛公园，可是来北京以后，我只去过天安门。",
+                "我喜欢唱歌，可是没有学过音乐理论。"
+              ]
+            },
+            "topic": "介绍经历"
+          },
+          "title": {
+            "expression": "可是",
+            "examples": [
+              "我喜欢逛公园，可是来北京以后，我只去过天安门。",
+              "我喜欢唱歌，可是没有学过音乐理论。"
+            ]
+          },
+          "page": "46",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:5",
+          "value": {
+            "expression": {
+              "expression": "如果……那……",
+              "examples": [
+                "如果我当初选择中文专业，那我现在可能已经是中国通了。",
+                "如果不是对那家公司的工作很满意，那丽丽也不会到北京来工作。"
+              ]
+            },
+            "topic": "介绍经历"
+          },
+          "title": {
+            "expression": "如果……那……",
+            "examples": [
+              "如果我当初选择中文专业，那我现在可能已经是中国通了。",
+              "如果不是对那家公司的工作很满意，那丽丽也不会到北京来工作。"
+            ]
+          },
+          "page": "46",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:6",
+          "value": {
+            "expression": {
+              "expression": "受……影响",
+              "examples": [
+                "受老师的影响，丽丽决定学习设计专业。",
+                "受中国朋友的影响，朴大宇去年开始看京剧。"
+              ]
+            },
+            "topic": "介绍经历"
+          },
+          "title": {
+            "expression": "受……影响",
+            "examples": [
+              "受老师的影响，丽丽决定学习设计专业。",
+              "受中国朋友的影响，朴大宇去年开始看京剧。"
+            ]
+          },
+          "page": "46",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:1",
+          "value": {
+            "expression": {
+              "expression": "外貌描写",
+              "examples": [
+                "小姑娘黑头发，黑眼睛，长得很像妈妈。",
+                "体育老师个子高高的，瘦瘦的。"
+              ]
+            },
+            "topic": "介绍人物"
+          },
+          "title": {
+            "expression": "外貌描写",
+            "examples": [
+              "小姑娘黑头发，黑眼睛，长得很像妈妈。",
+              "体育老师个子高高的，瘦瘦的。"
+            ]
+          },
+          "page": "47",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:2",
+          "value": {
+            "expression": {
+              "expression": "越……越……",
+              "examples": [
+                "孩子越大越懂事。",
+                "李大为觉得中文越学越有意思。"
+              ]
+            },
+            "topic": "介绍人物"
+          },
+          "title": {
+            "expression": "越……越……",
+            "examples": [
+              "孩子越大越懂事。",
+              "李大为觉得中文越学越有意思。"
+            ]
+          },
+          "page": "47",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:3",
+          "value": {
+            "expression": {
+              "expression": "把",
+              "examples": [
+                "王红把妈妈当成自己最好的朋友。",
+                "上大学以后，王红把头发剪短了。"
+              ]
+            },
+            "topic": "介绍人物"
+          },
+          "title": {
+            "expression": "把",
+            "examples": [
+              "王红把妈妈当成自己最好的朋友。",
+              "上大学以后，王红把头发剪短了。"
+            ]
+          },
+          "page": "47",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:4",
+          "value": {
+            "expression": {
+              "expression": "一……就……",
+              "examples": [
+                "丽丽一说话就脸红。",
+                "朴大宇很聪明，你一说他就明白。"
+              ]
+            },
+            "topic": "介绍人物"
+          },
+          "title": {
+            "expression": "一……就……",
+            "examples": [
+              "丽丽一说话就脸红。",
+              "朴大宇很聪明，你一说他就明白。"
+            ]
+          },
+          "page": "47",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:5",
+          "value": {
+            "expression": {
+              "expression": "比如",
+              "examples": [
+                "李大为喜欢吃中国菜，比如饺子和豆腐。",
+                "王红喜欢体育活动，比如打球、跑步和游泳。"
+              ]
+            },
+            "topic": "介绍人物"
+          },
+          "title": {
+            "expression": "比如",
+            "examples": [
+              "李大为喜欢吃中国菜，比如饺子和豆腐。",
+              "王红喜欢体育活动，比如打球、跑步和游泳。"
+            ]
+          },
+          "page": "47",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:6",
+          "value": {
+            "expression": {
+              "expression": "大部分",
+              "examples": [
+                "班上大部分同学都喜欢数学课。",
+                "朴大宇晚上大部分时间都在学习中文。"
+              ]
+            },
+            "topic": "介绍人物"
+          },
+          "title": {
+            "expression": "大部分",
+            "examples": [
+              "班上大部分同学都喜欢数学课。",
+              "朴大宇晚上大部分时间都在学习中文。"
+            ]
+          },
+          "page": "47",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:1",
+          "value": {
+            "expression": {
+              "expression": "真是一种享受",
+              "examples": [
+                "听李老师上音乐课真是一种享受。",
+                "和中国同学用中文一起讨论问题真是一种享受。"
+              ]
+            },
+            "topic": "谈论学习"
+          },
+          "title": {
+            "expression": "真是一种享受",
+            "examples": [
+              "听李老师上音乐课真是一种享受。",
+              "和中国同学用中文一起讨论问题真是一种享受。"
+            ]
+          },
+          "page": "49",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:2",
+          "value": {
+            "expression": {
+              "expression": "连……都……",
+              "examples": [
+                "刚来中国的时候，李大为连“你好”都不会说。",
+                "朴大宇忙着准备考研究生，连星期日都不休息。"
+              ]
+            },
+            "topic": "谈论学习"
+          },
+          "title": {
+            "expression": "连……都……",
+            "examples": [
+              "刚来中国的时候，李大为连“你好”都不会说。",
+              "朴大宇忙着准备考研究生，连星期日都不休息。"
+            ]
+          },
+          "page": "49",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:3",
+          "value": {
+            "expression": {
+              "expression": "对……感兴趣",
+              "examples": [
+                "王红的专业是文学，可是她对数学也很感兴趣。",
+                "李大为对现在的专业不感兴趣，打算转专业。"
+              ]
+            },
+            "topic": "谈论学习"
+          },
+          "title": {
+            "expression": "对……感兴趣",
+            "examples": [
+              "王红的专业是文学，可是她对数学也很感兴趣。",
+              "李大为对现在的专业不感兴趣，打算转专业。"
+            ]
+          },
+          "page": "49",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:4",
+          "value": {
+            "expression": {
+              "expression": "从……那里",
+              "examples": [
+                "从老师那里，我们也学到了做人的道理。",
+                "朴大宇和中国同学互相学习，他们都从对方那里了解了不少有趣的看法。"
+              ]
+            },
+            "topic": "谈论学习"
+          },
+          "title": {
+            "expression": "从……那里",
+            "examples": [
+              "从老师那里，我们也学到了做人的道理。",
+              "朴大宇和中国同学互相学习，他们都从对方那里了解了不少有趣的看法。"
+            ]
+          },
+          "page": "49",
+          "type": "语法／表达"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehension:1",
+          "value": {
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "words": [
+              "合唱",
+              "音乐迷",
+              "吹笛子",
+              "乐器"
+            ],
+            "answer": [
+              "1.A",
+              "2.B",
+              "3.D",
+              "4.C"
+            ]
+          },
+          "title": "词语理解",
+          "page": "43–44",
+          "audio": "5-2",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehension:2",
+          "value": {
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "words": [
+              "享受",
+              "火",
+              "有神"
+            ],
+            "answer": [
+              "1.A",
+              "2.B",
+              "3.C"
+            ]
+          },
+          "title": "词语理解",
+          "page": "43–44",
+          "audio": "5-2",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_5_3:1",
+          "value": {
+            "prompt": "他从小就喜欢音乐。",
+            "answer": "错",
+            "number": 1,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "44",
+          "audio": "5-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_5_3:2",
+          "value": {
+            "prompt": "他积极参加合唱比赛。",
+            "answer": "对",
+            "number": 2,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "44",
+          "audio": "5-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_5_3:3",
+          "value": {
+            "prompt": "这门课我觉得很深奥。",
+            "answer": "错",
+            "number": 3,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "44",
+          "audio": "5-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_5_3:4",
+          "value": {
+            "prompt": "王红说听音乐是一种享受。",
+            "answer": "错",
+            "number": 4,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "44",
+          "audio": "5-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_5_3:5",
+          "value": {
+            "prompt": "爸爸个子很高。",
+            "answer": "错",
+            "number": 5,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "44",
+          "audio": "5-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_5_3:6",
+          "value": {
+            "prompt": "他们都对学习乐器很感兴趣。",
+            "answer": "对",
+            "number": 6,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "44",
+          "audio": "5-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_5_3:7",
+          "value": {
+            "prompt": "老师教我们欣赏欧洲音乐和民族音乐。",
+            "answer": "错",
+            "number": 7,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "44",
+          "audio": "5-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_5_3:8",
+          "value": {
+            "prompt": "老师鼓励同学们问问题。",
+            "answer": "错",
+            "number": 8,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "44",
+          "audio": "5-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_5_3:9",
+          "value": {
+            "prompt": "老师回答学生们的问题很耐心。",
+            "answer": "对",
+            "number": 9,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "44",
+          "audio": "5-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_5_3:10",
+          "value": {
+            "prompt": "李老师常常亲切地鼓励我们。",
+            "answer": "错",
+            "number": 10,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "44",
+          "audio": "5-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:1",
+          "value": {
+            "prompt": "“我”从小就喜欢什么？",
+            "kind": "first_listen",
+            "textTitle": "我从小就喜欢唱歌"
+          },
+          "title": "我从小就喜欢唱歌 · first_listen",
+          "page": "45",
+          "audio": "5-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:2",
+          "value": {
+            "prompt": "“我”是不是音乐迷？",
+            "kind": "first_listen",
+            "textTitle": "我从小就喜欢唱歌"
+          },
+          "title": "我从小就喜欢唱歌 · first_listen",
+          "page": "45",
+          "audio": "5-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:1",
+          "value": {
+            "prompt": "“我”为何喜欢唱歌？（受……影响）",
+            "kind": "second_listen",
+            "textTitle": "我从小就喜欢唱歌"
+          },
+          "title": "我从小就喜欢唱歌 · second_listen",
+          "page": "45",
+          "audio": "5-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:2",
+          "value": {
+            "prompt": "“我”觉得音乐怎么样？（既……又……）",
+            "kind": "second_listen",
+            "textTitle": "我从小就喜欢唱歌"
+          },
+          "title": "我从小就喜欢唱歌 · second_listen",
+          "page": "45",
+          "audio": "5-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:3",
+          "value": {
+            "prompt": "“我”为何成为了音乐迷？（音乐老师）",
+            "kind": "second_listen",
+            "textTitle": "我从小就喜欢唱歌"
+          },
+          "title": "我从小就喜欢唱歌 · second_listen",
+          "page": "45",
+          "audio": "5-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:present:1",
+          "value": {
+            "prompt": "请你说说“我”的音乐生活：（1）“我”从小就喜欢什么；（2）“我”受了哪些人的影响。要求：说6–8个句子，不少于60字。使用下面的词语和常用表达。词语参考：积极、参加、成为、音乐迷。常用表达参考：从小就、每……都……、既……又……、可是、受……影响。",
+            "kind": "present",
+            "textTitle": "我从小就喜欢唱歌"
+          },
+          "title": "我从小就喜欢唱歌 · present",
+          "page": "45",
+          "audio": "5-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:compare:1",
+          "value": {
+            "prompt": "我从小就喜欢唱歌，每年都积极参加合唱比赛。我对音乐既喜欢又觉得深奥。我不懂音乐理论，可是音乐让我觉得很亲切。我受爸爸和中学音乐老师的影响，成为了音乐迷。",
+            "kind": "compare",
+            "textTitle": "我从小就喜欢唱歌"
+          },
+          "title": "我从小就喜欢唱歌 · compare",
+          "page": "45",
+          "audio": "5-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:1",
+          "value": {
+            "prompt": "李老师是男老师还是女老师？",
+            "kind": "first_listen",
+            "textTitle": "老师上课教什么"
+          },
+          "title": "老师上课教什么 · first_listen",
+          "page": "46–47",
+          "audio": "5-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:2",
+          "value": {
+            "prompt": "“我们”上音乐课学什么？",
+            "kind": "first_listen",
+            "textTitle": "老师上课教什么"
+          },
+          "title": "老师上课教什么 · first_listen",
+          "page": "46–47",
+          "audio": "5-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:1",
+          "value": {
+            "prompt": "李老师教“我们”什么？（欣赏）",
+            "kind": "second_listen",
+            "textTitle": "老师上课教什么"
+          },
+          "title": "老师上课教什么 · second_listen",
+          "page": "46–47",
+          "audio": "5-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:2",
+          "value": {
+            "prompt": "李老师教“我们”什么乐器？（吹）",
+            "kind": "second_listen",
+            "textTitle": "老师上课教什么"
+          },
+          "title": "老师上课教什么 · second_listen",
+          "page": "46–47",
+          "audio": "5-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:3",
+          "value": {
+            "prompt": "同学们喜欢学什么？（吹、把、带、一……就……）",
+            "kind": "second_listen",
+            "textTitle": "老师上课教什么"
+          },
+          "title": "老师上课教什么 · second_listen",
+          "page": "46–47",
+          "audio": "5-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:present:1",
+          "value": {
+            "prompt": "请你说说“我”的音乐课：李老师教“我们”什么；同学们为什么喜欢学吹笛子。要求：说6–8个句子，不少于60字。使用下面的词语和常用表达。词语参考：欣赏、欧洲、民族、吹、笛子。常用表达参考：越……越……、把、一……就……、比如。",
+            "kind": "present",
+            "textTitle": "老师上课教什么"
+          },
+          "title": "老师上课教什么 · present",
+          "page": "46–47",
+          "audio": "5-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:compare:1",
+          "value": {
+            "prompt": "李老师是一位中等个子的中年男老师，眼睛很有神。他教我们欣赏欧洲古典音乐，也让我们了解中国民族音乐和民族乐器。很多同学越学吹笛子越着迷，一有空儿就练习。",
+            "kind": "compare",
+            "textTitle": "老师上课教什么"
+          },
+          "title": "老师上课教什么 · compare",
+          "page": "46–47",
+          "audio": "5-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:1",
+          "value": {
+            "prompt": "李老师教课怎么样？",
+            "kind": "first_listen",
+            "textTitle": "老师讲课的风格"
+          },
+          "title": "老师讲课的风格 · first_listen",
+          "page": "48",
+          "audio": "5-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:2",
+          "value": {
+            "prompt": "音乐对人们的生活有什么影响？",
+            "kind": "first_listen",
+            "textTitle": "老师讲课的风格"
+          },
+          "title": "老师讲课的风格 · first_listen",
+          "page": "48",
+          "audio": "5-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:1",
+          "value": {
+            "prompt": "李老师讲课有什么特点？（耐心、特别、清楚）",
+            "kind": "second_listen",
+            "textTitle": "老师讲课的风格"
+          },
+          "title": "老师讲课的风格 · second_listen",
+          "page": "48",
+          "audio": "5-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:2",
+          "value": {
+            "prompt": "同学们为什么喜欢上音乐课？（一种享受）",
+            "kind": "second_listen",
+            "textTitle": "老师讲课的风格"
+          },
+          "title": "老师讲课的风格 · second_listen",
+          "page": "48",
+          "audio": "5-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:3",
+          "value": {
+            "prompt": "李老师让同学们明白了什么道理？（夏天的风、冬天的火、美好）",
+            "kind": "second_listen",
+            "textTitle": "老师讲课的风格"
+          },
+          "title": "老师讲课的风格 · second_listen",
+          "page": "48",
+          "audio": "5-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:present:1",
+          "value": {
+            "prompt": "请你说说李老师的音乐有什么特色。要求：说6–8个句子，不少于60字。使用下面的词语和常用表达。词语参考：耐心、清楚、内容、夏天的风、冬天的火、生活、美好。常用表达参考：从……那里、对……感兴趣。",
+            "kind": "present",
+            "textTitle": "老师讲课的风格"
+          },
+          "title": "老师讲课的风格 · present",
+          "page": "48",
+          "audio": "5-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:compare:1",
+          "value": {
+            "prompt": "李老师教音乐课很有感情，讲得很清楚，内容也特别有意思。他常常鼓励同学问问题，而且非常耐心地回答。听他的课是一种享受，同学们越来越爱上音乐课，觉得音乐让生活更美好。",
+            "kind": "compare",
+            "textTitle": "老师讲课的风格"
+          },
+          "title": "老师讲课的风格 · compare",
+          "page": "48",
+          "audio": "5-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:1",
+          "value": {
+            "prompt": {
+              "id": "comprehensive_1",
+              "instruction": "请你根据听过的三段短文填表",
+              "table_headers": [
+                "人物",
+                "喜欢什么",
+                "为什么",
+                "上李老师的课，有什么收获",
+                "相貌",
+                "上课教什么",
+                "教课怎么样"
+              ],
+              "answer_status": "open_table_teacher_check"
+            }
+          },
+          "title": "综合练习",
+          "page": "49–50",
+          "audio": "5-4、5-5、5-6",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:2",
+          "value": {
+            "prompt": {
+              "id": "comprehensive_2",
+              "instruction": "小组活动：根据上面的表格和下面给出的参考词语和常用表达，谈一谈：（1）我和音乐；（2）介绍一下李老师和他教的音乐课。要求一名同学先说6–8个句子，不少于60字；然后小组其他同学补充；最后由一名同学总结，说10–12个句子，不少于100字。",
+              "answer_status": "open_presentational_task"
+            }
+          },
+          "title": "综合练习",
+          "page": "49–50",
+          "audio": "5-4、5-5、5-6",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:3",
+          "value": {
+            "prompt": {
+              "id": "comprehensive_3",
+              "instruction": "拓展练习：请你说一说：（1）你喜欢谁；（2）为什么喜欢；（3）介绍一下这个人。要求使用这一课学过的词语和常用表达；说10–12句话，不少于100字。",
+              "answer_status": "open_presentational_task"
+            }
+          },
+          "title": "综合练习",
+          "page": "49–50",
+          "audio": "5-4、5-5、5-6",
+          "type": "综合练习"
+        }
+      ]
+    },
+    "boya-quasi-intermediate-i:lesson-06": {
+      "available": true,
+      "review_complete": true,
+      "completion": {
+        "status": "completed_by_adam",
+        "confirmed_by": "Adam",
+        "confirmed_at": "2026-09-08",
+        "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+        "technical_status_preserved": true
+      },
+      "reason": "",
+      "canonical": {
+        "lesson_key": "boya-quasi-intermediate-i:lesson-06",
+        "schema_version": "quasi-intermediate-source-audit-v1.0",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_number": 6,
+        "lesson_id": "lesson-06",
+        "title": "大岛参加了学校的合唱团",
+        "title_source": "主教材印刷 P51 标题页视觉核对；Adam 于 2026-08-29 确认使用‘大岛’；source-inventory 中的‘大圣’保留为历史 OCR/索引差异",
+        "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+        "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+        "page_map": {
+          "printed_pages": [
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58
+          ],
+          "pdf_pages": [
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71
+          ],
+          "answer_pdf_pages": [
+            19,
+            20
+          ],
+          "mapping_status": "visually_verified_page_ranges; answer range contains lesson-06 transcript on PDF 19-20 despite inventory table 18-19"
+        },
+        "qr_evidence": {
+          "pdf_page": 64,
+          "qr_url": "http://qr31.cn/I4detK",
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-06-pdf-page-064.png",
+          "landing_page": "https://biz.cli.im/site/I4detK?qrurl=http://qr31.cn/I4detK&gtype=2&key=84d4f17ce1fdd90c6878280301fcf372341b1f6991",
+          "landing_page_status": "inventory_recorded; live semantic review pending",
+          "landing_audio_labels": [
+            "6-1",
+            "6-2",
+            "6-3",
+            "6-4",
+            "6-5",
+            "6-6"
+          ],
+          "textbook_audio_labels_expected": [
+            "6-1",
+            "6-2",
+            "6-3",
+            "6-4",
+            "6-5",
+            "6-6"
+          ],
+          "discrepancy": "source-inventory title uses 大圣; page images and transcript identify character as 大岛; Adam confirmed 大岛 on 2026-08-29"
+        },
+        "audio_map": [
+          {
+            "track_label": "6-1",
+            "coding": "LZ1539811",
+            "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FlRYydScPjHF5mhHrRw3vNlypFoD",
+            "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-1.mp3",
+            "textbook_printed_pages": [
+              51
+            ],
+            "content_scope": "词语",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "semantic_listening_status": "pending_teacher_playback",
+            "bytes": 835908,
+            "duration_seconds": 51.931429,
+            "sample_rate_hz": 44100,
+            "channels": 1,
+            "sha256": "e6a10655fad4e516ee464b3abf473a8b265690687fbcb503856e6f0f340e00e8"
+          },
+          {
+            "track_label": "6-2",
+            "coding": "TY1783207",
+            "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FnPkt_nYFaZsCmvGs5TFkkC0Wkt-",
+            "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-2.mp3",
+            "textbook_printed_pages": [
+              52
+            ],
+            "content_scope": "词语理解",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "semantic_listening_status": "pending_teacher_playback",
+            "bytes": 417531,
+            "duration_seconds": 25.782857,
+            "sample_rate_hz": 44100,
+            "channels": 1,
+            "sha256": "4fd7127fe75a122db88809a652f37116876fd117b9ade982d90fa64eec2b5b68"
+          },
+          {
+            "track_label": "6-3",
+            "coding": "IQ1783208",
+            "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Frqw6QqvokMwCqUea8ntq5yR_4VJ",
+            "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-3.mp3",
+            "textbook_printed_pages": [
+              53
+            ],
+            "content_scope": "听说句子",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "semantic_listening_status": "pending_teacher_playback",
+            "bytes": 1029841,
+            "duration_seconds": 64.052245,
+            "sample_rate_hz": 44100,
+            "channels": 1,
+            "sha256": "c12e3a9488ba340ea856e79b4881787ffa586886f170dcd47e5e570386403e83"
+          },
+          {
+            "track_label": "6-4",
+            "coding": "UW1783209",
+            "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FjkC3M1ZWlUNlSjjgSY_tZAAhnhv",
+            "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-4.mp3",
+            "textbook_printed_pages": [
+              53,
+              54
+            ],
+            "content_scope": "听说短文一",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "semantic_listening_status": "pending_teacher_playback",
+            "bytes": 921590,
+            "duration_seconds": 57.286531,
+            "sample_rate_hz": 44100,
+            "channels": 1,
+            "sha256": "fb40784e9b2d9a441d858900a77f1186134c82238d9423da572b9c2ee7dc414f"
+          },
+          {
+            "track_label": "6-5",
+            "coding": "NO1783210",
+            "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fqdkn8eQJgFlnoT6ku9SW9mDfXJU",
+            "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-5.mp3",
+            "textbook_printed_pages": [
+              54,
+              55
+            ],
+            "content_scope": "听说短文二",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "semantic_listening_status": "pending_teacher_playback",
+            "bytes": 949175,
+            "duration_seconds": 59.010612,
+            "sample_rate_hz": 44100,
+            "channels": 1,
+            "sha256": "03b57cddfcff2e4a76801a592d50af1eb449b984a4df5c465c2726d27512406e"
+          },
+          {
+            "track_label": "6-6",
+            "coding": "JM1783211",
+            "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FoXvWLwyvFzgCGiY_LTsqLaX1lAo",
+            "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-6.mp3",
+            "textbook_printed_pages": [
+              56,
+              57
+            ],
+            "content_scope": "听说短文三",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "semantic_listening_status": "pending_teacher_playback",
+            "bytes": 773214,
+            "duration_seconds": 48.013061,
+            "sample_rate_hz": 44100,
+            "channels": 1,
+            "sha256": "61198dc3eaef408f46b1b57c97952d9c91561b30f3ef4c2ce018185e1fc851e2"
+          }
+        ],
+        "content_inventory": {
+          "vocabulary_count": 25,
+          "vocabulary_comprehension_group_count": 1,
+          "listening_sentence_item_count": 10,
+          "texts_dialogues_count": 3,
+          "short_text_listening_group_count": 6,
+          "common_expression_group_count": 2,
+          "comprehensive_practice_count": 3,
+          "status": "source_review_snapshot"
+        },
+        "answer_policy": "仅记录参考答案 PDF 中可核对的词语理解与判断答案及听力文本；开放式口语题不补写唯一答案。",
+        "review": {
+          "status": "pending_review",
+          "approved": false,
+          "approved_by": [],
+          "approved_at": null,
+          "source_status": "pending_review",
+          "source_qa_status": "technical_audio_passed_semantic_playback_pending",
+          "blockers": [
+            "source-inventory OCR 索引仍写‘大圣’，作为历史差异保留；Adam 已于 2026-08-29 确认教材标题与人名使用‘大岛’",
+            "6段音频已完成文件解码核验，尚未完成逐段语义听核与 PowerPoint 播放实测"
+          ],
+          "approval_basis": "主教材 PDF P51-P58 与答案 PDF lesson-06 transcript visually checked; all source records remain draft"
+        },
+        "sections": [
+          {
+            "id": "vocabulary",
+            "printed_pages": [
+              51,
+              52
+            ],
+            "audio": "6-1",
+            "source_status": "visually_verified_pending_adam_approval",
+            "entries": [
+              {
+                "no": 1,
+                "word": "钢琴",
+                "pinyin": "gāngqín",
+                "pos": "名",
+                "gloss": "piano"
+              },
+              {
+                "no": 2,
+                "word": "合唱节",
+                "pinyin": "héchàngjié",
+                "pos": "名",
+                "gloss": "choral festival"
+              },
+              {
+                "no": 3,
+                "word": "话剧",
+                "pinyin": "huàjù",
+                "pos": "名",
+                "gloss": "drama; stage play"
+              },
+              {
+                "no": 4,
+                "word": "交响乐",
+                "pinyin": "jiāoxiǎngyuè",
+                "pos": "名",
+                "gloss": "symphony"
+              },
+              {
+                "no": 5,
+                "word": "住院",
+                "pinyin": "zhùyuàn",
+                "pos": null,
+                "pos_status": "blank_in_source",
+                "gloss": "to be hospitalized"
+              },
+              {
+                "no": 6,
+                "word": "弹",
+                "pinyin": "tán",
+                "pos": "动",
+                "gloss": "to play (piano, guitar, etc.)"
+              },
+              {
+                "no": 7,
+                "word": "翻译",
+                "pinyin": "fānyì",
+                "pos": "动",
+                "gloss": "to translate"
+              },
+              {
+                "no": 8,
+                "word": "硕士",
+                "pinyin": "shuòshì",
+                "pos": "名",
+                "gloss": "master’s degree"
+              },
+              {
+                "no": 9,
+                "word": "正式",
+                "pinyin": "zhèngshì",
+                "pos": "形",
+                "gloss": "formal"
+              },
+              {
+                "no": 10,
+                "word": "语速",
+                "pinyin": "yǔsù",
+                "pos": "名",
+                "gloss": "talking speed"
+              },
+              {
+                "no": 11,
+                "word": "代替",
+                "pinyin": "dàitì",
+                "pos": "动",
+                "gloss": "to replace"
+              },
+              {
+                "no": 12,
+                "word": "充实",
+                "pinyin": "chōngshí",
+                "pos": "形",
+                "gloss": "full; substantial"
+              },
+              {
+                "no": 13,
+                "word": "忙碌",
+                "pinyin": "mánglù",
+                "pos": "形",
+                "gloss": "busy"
+              },
+              {
+                "no": 14,
+                "word": "排练",
+                "pinyin": "páiliàn",
+                "pos": "动",
+                "gloss": "to rehearse"
+              },
+              {
+                "no": 15,
+                "word": "业余",
+                "pinyin": "yèyú",
+                "pos": "形",
+                "gloss": "non-professional; amateur"
+              },
+              {
+                "no": 16,
+                "word": "爱好",
+                "pinyin": "àihào",
+                "pos": "名",
+                "gloss": "hobby"
+              },
+              {
+                "no": 17,
+                "word": "研究生",
+                "pinyin": "yánjiūshēng",
+                "pos": "名",
+                "gloss": "graduate student"
+              },
+              {
+                "no": 18,
+                "word": "外向",
+                "pinyin": "wàixiàng",
+                "pos": "形",
+                "gloss": "outgoing"
+              },
+              {
+                "no": 19,
+                "word": "乐观",
+                "pinyin": "lèguān",
+                "pos": "形",
+                "gloss": "optimistic"
+              },
+              {
+                "no": 20,
+                "word": "相当",
+                "pinyin": "xiāngdāng",
+                "pos": "副",
+                "gloss": "quite"
+              },
+              {
+                "no": 21,
+                "word": "梦想",
+                "pinyin": "mèngxiǎng",
+                "pos": "名",
+                "gloss": "dream"
+              },
+              {
+                "no": 22,
+                "word": "伟大",
+                "pinyin": "wěidà",
+                "pos": "形",
+                "gloss": "great"
+              },
+              {
+                "no": 23,
+                "word": "作家",
+                "pinyin": "zuòjiā",
+                "pos": "名",
+                "gloss": "writer"
+              },
+              {
+                "no": 24,
+                "word": "作品",
+                "pinyin": "zuòpǐn",
+                "pos": "名",
+                "gloss": "work; writing"
+              },
+              {
+                "no": 25,
+                "word": "发音",
+                "pinyin": "fāyīn",
+                "pos": "名",
+                "gloss": "pronunciation"
+              }
+            ]
+          },
+          {
+            "id": "vocabulary_comprehension",
+            "printed_pages": [
+              52
+            ],
+            "audio": "6-2",
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "groups": [
+              {
+                "topic": "音乐与演出",
+                "image_labels": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ],
+                "words": [
+                  "钢琴",
+                  "合唱节",
+                  "话剧",
+                  "交响乐",
+                  "住院"
+                ],
+                "answer": [
+                  "1.E",
+                  "2.D",
+                  "3.C",
+                  "4.B",
+                  "5.A"
+                ]
+              }
+            ],
+            "answer_status": "answers_checked_against_answer_pdf_18/19"
+          },
+          {
+            "id": "listening_sentences",
+            "printed_pages": [
+              53
+            ],
+            "audio_tracks": [
+              "6-3"
+            ],
+            "exercise_6_3": {
+              "heading_verbatim": "听句子，判断对错",
+              "instruction": "听句子，判断对错",
+              "items": [
+                [
+                  1,
+                  "李大为会弹钢琴。",
+                  "对"
+                ],
+                [
+                  2,
+                  "这本书没有英文版。",
+                  "对"
+                ],
+                [
+                  3,
+                  "大岛不是本科生。",
+                  "对"
+                ],
+                [
+                  4,
+                  "朴大宇对学习口语很感兴趣。",
+                  "错"
+                ],
+                [
+                  5,
+                  "这个电影的故事不好懂。",
+                  "错"
+                ],
+                [
+                  6,
+                  "毛毛身体不舒服。",
+                  "对"
+                ],
+                [
+                  7,
+                  "朋友和姐姐一起比赛。",
+                  "错"
+                ],
+                [
+                  8,
+                  "王红放假的时候很无聊。",
+                  "错"
+                ],
+                [
+                  9,
+                  "大岛觉得忙一点儿好。",
+                  "对"
+                ],
+                [
+                  10,
+                  "大岛今天晚上有比赛。",
+                  "错"
+                ]
+              ],
+              "answer_status": "answers_checked_against_answer_pdf_19"
+            }
+          },
+          {
+            "id": "short_text_1",
+            "printed_pages": [
+              53,
+              54
+            ],
+            "audio": "6-4",
+            "title": "大岛的业余爱好",
+            "text": "大岛由美来自日本，是中国现代文学专业的硕士研究生。大岛性格外向、乐观、积极，她的业余爱好相当多。她会弹钢琴，也喜欢看话剧、参观博物馆。她的梦想是翻译中国伟大作家的作品。她正在尝试翻译一篇小说。来中国后，她已经看了几部中国话剧。她觉得，和电影相比，话剧演员的语速要慢一些，说话声音比较大，发音也更清楚。看话剧还可以了解比较正式的汉语，对她的专业学习和研究更有帮助。",
+            "exercises": {
+              "first_listen": {
+                "instruction": "（一）听第一遍，简单回答问题",
+                "items": [
+                  "大岛的专业是什么？",
+                  "大岛的爱好多不多？"
+                ]
+              },
+              "second_listen": {
+                "instruction": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "items": [
+                  "大岛的性格怎么样？（外向）",
+                  "大岛有什么爱好？（弹 参观）",
+                  "她正在做什么？（尝试）",
+                  "大岛为什么喜欢话剧？（语速 正式）"
+                ]
+              },
+              "present": "（三）请你说说大岛的爱好。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：专业 硕士生 弹 参观 话剧 语速 正式。常用表达参考：相当 和……相比。",
+              "compare": "（四）读下面的短文，跟你说的进行比较。大岛是中国文学专业的硕士生。她的爱好相当多。她会弹钢琴，也喜欢参观博物馆。她还喜欢看中国的话剧。和电影相比，话剧的语速慢一些，看话剧还能学到比较正式的语言。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  53
+                ],
+                "audio_tracks": [
+                  "6-4"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  53
+                ],
+                "audio_tracks": [
+                  "6-4"
+                ]
+              }
+            },
+            "answer_status": "open_presentational_task_no_unique_answer"
+          },
+          {
+            "id": "short_text_2",
+            "printed_pages": [
+              54,
+              55
+            ],
+            "audio": "6-5",
+            "title": "一次偶然事件让她进入了合唱团",
+            "text": "大岛小时候学过钢琴，也喜欢听歌、听交响乐，但是对唱歌不是特别感兴趣。上研究生一年级的时候，快过新年了，系里要参加学校的合唱节，可是，比赛前两天，团里的一名同学突然生病住院了。那位同学和大岛是好朋友，知道大岛会弹钢琴，懂音乐，就请大岛代替她。为了帮朋友的忙，大岛答应了。比赛的时候，大家的表现很好，得了第三名。学校合唱团的老师听了大岛的演唱，邀请大岛参加学校合唱团。大岛发现，和大家一起唱歌挺有意思的，就同意了。",
+            "exercises": {
+              "first_listen": {
+                "instruction": "（一）听第一遍，简单回答问题",
+                "items": [
+                  "大岛喜欢什么？不大喜欢什么？",
+                  "比赛结果怎么样？"
+                ]
+              },
+              "second_listen": {
+                "instruction": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "items": [
+                  "大岛为什么参加了合唱比赛？（合唱团 住院 代替）",
+                  "比赛后，发生了什么事？（邀请 参加）",
+                  "大岛为什么同意了？（和大家一起）"
+                ]
+              },
+              "present": "（三）请你说说大岛参加合唱团的经过。要求：说6～8个句子，不少于60字。词语参考：弹钢琴 交响乐 感兴趣 合唱比赛 住院 代替 答应 第三名 邀请 同意。常用表达参考：上……的时候。",
+              "compare": "（四）读下面的短文，跟你说的进行比较。大岛会弹钢琴，也喜欢听歌、听交响乐，但是对唱歌不是特别感兴趣。不过有一次，系里要参加合唱节，一名同学突然住院了，她请大岛代替她参加比赛。大家唱得很好，得了第三名。合唱团的老师邀请大岛参加合唱团，大岛同意了。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  54
+                ],
+                "audio_tracks": [
+                  "6-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  54
+                ],
+                "audio_tracks": [
+                  "6-5"
+                ]
+              }
+            },
+            "answer_status": "open_presentational_task_no_unique_answer"
+          },
+          {
+            "id": "short_text_3",
+            "printed_pages": [
+              56,
+              57
+            ],
+            "audio": "6-6",
+            "title": "参加合唱团的得与失",
+            "text": "参加合唱团以后，大岛的生活更充实也忙碌。合唱团每星期排练两个晚上。在合唱团，他们用汉语交流。可是，他们不光唱中文歌，还唱英文歌、德文歌、意大利文歌和韩文歌。不过，参加合唱团以后，大岛没有那么多时间看话剧了，她明白了‘有得必有失’的意思。",
+            "exercises": {
+              "first_listen": {
+                "instruction": "（一）听第一遍，简单回答问题",
+                "items": [
+                  "大岛一个星期排练几次？",
+                  "合唱团唱的都是中文歌吗？"
+                ]
+              },
+              "second_listen": {
+                "instruction": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "items": [
+                  "大岛为什么高兴？（排练 听课 交流）",
+                  "合唱团唱什么语言的歌？（不都是 还有）",
+                  "对大岛来说，‘有得必有失’是什么意思？（忙碌 没有那么多时间）"
+                ]
+              },
+              "present": "（三）请你说说大岛参加合唱团以后的情况。要求：说6～8个句子，不少于60字。词语参考：充实 忙碌 排练 中文。常用表达参考：没有那么多时间 有得必有失。",
+              "compare": "（四）读下面的短文，跟你说的进行比较。参加合唱团以后，大岛的生活充实而忙碌。合唱团每星期排练两次，他们用汉语交流，也唱英文、德文、意大利文和韩文歌。参加合唱团以后，大岛没有那么多时间看话剧了，她明白了‘有得必有失’的意思。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  56
+                ],
+                "audio_tracks": [
+                  "6-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  56
+                ],
+                "audio_tracks": [
+                  "6-6"
+                ]
+              }
+            },
+            "answer_status": "open_presentational_task_no_unique_answer"
+          },
+          {
+            "id": "common_expressions",
+            "printed_pages": [
+              54,
+              55,
+              56
+            ],
+            "audio": null,
+            "groups": [
+              {
+                "topic": "说明情况",
+                "items": [
+                  {
+                    "expression": "来自",
+                    "examples": [
+                      "朴大宇来自韩国。",
+                      "李老师来自北京。"
+                    ]
+                  },
+                  {
+                    "expression": "相当",
+                    "examples": [
+                      "朴大宇的留学生活相当忙碌。",
+                      "阿里的钢琴弹得相当好。"
+                    ]
+                  },
+                  {
+                    "expression": "和……相比",
+                    "examples": [
+                      "和山东菜相比，丽丽觉得广东菜更可口。",
+                      "和坐公共汽车相比，王红觉得坐地铁更方便。"
+                    ]
+                  },
+                  {
+                    "expression": "对……有帮助（2）",
+                    "examples": [
+                      "看中国话剧，对学中文有帮助。",
+                      "和中国人聊天儿，对练习口语有帮助。"
+                    ]
+                  }
+                ]
+              },
+              {
+                "topic": "谈论时间",
+                "items": [
+                  {
+                    "expression": "小时候",
+                    "examples": [
+                      "朴大宇小时候来过中国。",
+                      "大岛小时候学过钢琴。"
+                    ]
+                  },
+                  {
+                    "expression": "上……的时候",
+                    "examples": [
+                      "李大为上中学二年级的时候开始学习中文。",
+                      "大岛上研究生的时候参加了合唱团。"
+                    ]
+                  },
+                  {
+                    "expression": "快……的时候",
+                    "examples": [
+                      "快考试的时候，在图书馆复习的学生很多。",
+                      "快过春节的时候，火车票很难买。"
+                    ]
+                  },
+                  {
+                    "expression": "……前一/几天",
+                    "examples": [
+                      "比赛前一天，要休息好。",
+                      "开学前几天，大部分同学都回到了学校。"
+                    ]
+                  },
+                  {
+                    "expression": "让某人……的是",
+                    "examples": [
+                      "让她遗憾的是，她没有时间常去看话剧了。",
+                      "让他没想到的是，孩子们说的话那么不容易懂。"
+                    ]
+                  },
+                  {
+                    "expression": "要+动词+上+数量词",
+                    "examples": [
+                      "每天下班，路上都要花上两三个小时。",
+                      "我每个月都要吃上一两次饺子。"
+                    ]
+                  },
+                  {
+                    "expression": "没有那么多",
+                    "examples": [
+                      "现在没有那么多人来他的小店买东西了。",
+                      "她来到了陌生的城市，没有那么多朋友来看她了。"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "source_status": "visually_verified_pending_adam_approval"
+          },
+          {
+            "id": "comprehensive_practice",
+            "printed_pages": [
+              57,
+              58
+            ],
+            "audio_tracks": [
+              "6-4",
+              "6-5",
+              "6-6"
+            ],
+            "exercise_1": {
+              "instruction": "请你根据听过的三段短文填表",
+              "table_fields": {
+                "大岛的爱好": [
+                  "在哪儿学习",
+                  "喜欢什么",
+                  "为什么喜欢看话剧"
+                ],
+                "大岛参加了合唱比赛": [
+                  "不太喜欢什么",
+                  "比赛前几天",
+                  "比赛的时候"
+                ],
+                "大岛参加合唱团以后": [
+                  "高兴的事",
+                  "没想到的事",
+                  "有得必有失"
+                ]
+              }
+            },
+            "exercise_2": "根据上面的表格和下面给出的参考词语和常用表达，谈一谈：（1）大岛的爱好；（2）大岛参加了合唱比赛；（3）大岛参加了合唱团。要求：一名同学先说8～10个句子，不少于80字；然后小组其他同学纠正补充；最后由一名同学总结，说10～12个句子，不少于100字。词语参考：专业 硕士生 弹 参观 话剧 语速 正式 弹钢琴 交响乐 感兴趣 合唱比赛 住院 代替 答应 第三名 邀请 同意 充实 忙碌 排练 中文。常用表达参考：相当 和……相比 没有那么多时间 有得必有失",
+            "exercise_3": "拓展练习：你有什么爱好？请你说一说：（1）你喜欢什么；（2）为什么喜欢；（3）有什么有趣的事情。要求：（1）使用这一课学过的词语和常用表达；（2）说10～12个句子，不少于100字。",
+            "answer_status": "open_presentational_tasks_no_unique_answer"
+          }
+        ],
+        "extraction_snapshot": {
+          "page_audit": "audit/source-pages-51-58-audit-draft.md",
+          "answer_audit": "audit/answer-pages-18-19-audit-draft.md",
+          "audio_audit": "audit/audio-technical-2026-08-28.md",
+          "status": "draft_source_review_snapshot",
+          "created_at": "2026-08-28",
+          "note": "主教材为扫描影像；正文与答案按页面视觉核对。未将语义听核或教师播放测试标记为完成。"
+        }
+      },
+      "source_manifest": {
+        "schema_version": "quasi-intermediate-source-manifest-v1.0",
+        "manifest_type": "lesson-source-review",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_id": "lesson-06",
+        "lesson_key": "boya-quasi-intermediate-i:lesson-06",
+        "completion_confirmation": {
+          "status": "completed_by_adam",
+          "confirmed_by": "Adam",
+          "confirmed_at": "2026-09-08",
+          "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+          "technical_status_preserved": true
+        },
+        "lesson_number": 6,
+        "lesson_title": "大岛参加了学校的合唱团",
+        "source_status": "pending_review",
+        "source_qa_status": "technical_audio_passed_semantic_playback_pending",
+        "canonical_source": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/canonical-source.json",
+        "canonical_source_sha256": "d4233f801616869451703ead1981ee1ba4f19d2796e89074fe7854c2272ac70c",
+        "listening_exercise_contract_sha256": "a6681c0bec3f3a3f03c13f187b81ae3915a0bc1e57df4a0a10a53a08d153489a",
+        "audio_manifest_sha256": "2977587fe3ba1f07b0598a35197d6726bf8a04797155934386ff56e37d129cec",
+        "listening_exercise_contract": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/listening-exercise-contract.json",
+        "audio_manifest": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/audio-manifest.json",
+        "source_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+          "pdf_pages": [
+            64,
+            71
+          ],
+          "printed_pages": [
+            51,
+            58
+          ],
+          "format": "scanned_image_pdf",
+          "text_layer_status": "empty"
+        },
+        "answer_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+          "pdf_pages": [
+            19,
+            20
+          ],
+          "printed_pages": [
+            16,
+            17
+          ],
+          "note": "lesson-06 transcript begins on PDF page 19 and continues on 20; inventory table lists 18-19 and requires reconciliation"
+        },
+        "qr": {
+          "pdf_page": 64,
+          "url": "http://qr31.cn/I4detK",
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-06-pdf-page-064.png"
+        },
+        "counts": {
+          "vocabulary": 25,
+          "listening_exercise_groups": 6,
+          "short_texts": 3,
+          "common_expression_groups": 2,
+          "comprehensive_exercises": 3
+        },
+        "approved": false,
+        "blockers": [
+          "source-inventory OCR title 大圣 is retained as a historical discrepancy; Adam confirmed the printed title/person name 大岛 on 2026-08-29",
+          "semantic listening and PowerPoint playback not yet completed"
+        ],
+        "adam_review": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/audit/adam-review-2026-08-29.md",
+          "status": "partial_title_and_name_confirmation",
+          "confirmed_at": "2026-08-29"
+        },
+        "audit_files": [
+          "audit/source-pages-51-58-audit-draft.md",
+          "audit/answer-pages-18-19-audit-draft.md",
+          "audit/audio-technical-2026-08-28.md"
+        ]
+      },
+      "audio": {
+        "schema_version": "lesson-audio-manifest-v1.0",
+        "lesson_id": "lesson-06",
+        "source_root": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-06",
+        "status": "technical_decode_passed_semantic_playback_pending",
+        "tracks": [
+          {
+            "label": "6-1",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FlRYydScPjHF5mhHrRw3vNlypFoD",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-1.mp3",
+            "scope": "词语",
+            "bytes": 835908,
+            "sha256": "e6a10655fad4e516ee464b3abf473a8b265690687fbcb503856e6f0f340e00e8",
+            "duration_seconds": 51.931429,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "6-2",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FnPkt_nYFaZsCmvGs5TFkkC0Wkt-",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-2.mp3",
+            "scope": "词语理解",
+            "bytes": 417531,
+            "sha256": "4fd7127fe75a122db88809a652f37116876fd117b9ade982d90fa64eec2b5b68",
+            "duration_seconds": 25.782857,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "6-3",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Frqw6QqvokMwCqUea8ntq5yR_4VJ",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-3.mp3",
+            "scope": "听说句子",
+            "bytes": 1029841,
+            "sha256": "c12e3a9488ba340ea856e79b4881787ffa586886f170dcd47e5e570386403e83",
+            "duration_seconds": 64.052245,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "6-4",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FjkC3M1ZWlUNlSjjgSY_tZAAhnhv",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-4.mp3",
+            "scope": "短文一",
+            "bytes": 921590,
+            "sha256": "fb40784e9b2d9a441d858900a77f1186134c82238d9423da572b9c2ee7dc414f",
+            "duration_seconds": 57.286531,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "6-5",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fqdkn8eQJgFlnoT6ku9SW9mDfXJU",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-5.mp3",
+            "scope": "短文二",
+            "bytes": 949175,
+            "sha256": "03b57cddfcff2e4a76801a592d50af1eb449b984a4df5c465c2726d27512406e",
+            "duration_seconds": 59.010612,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "6-6",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FoXvWLwyvFzgCGiY_LTsqLaX1lAo",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-06/6-6.mp3",
+            "scope": "短文三",
+            "bytes": 773214,
+            "sha256": "61198dc3eaef408f46b1b57c97952d9c91561b30f3ef4c2ce018185e1fc851e2",
+            "duration_seconds": 48.013061,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          }
+        ],
+        "technical_summary": {
+          "track_count": 6,
+          "decode_passed": 6,
+          "semantic_listening_completed": 0,
+          "teacher_powerpoint_playback_completed": 0
+        }
+      },
+      "canonical_path": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/canonical-source.json",
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-06/00-source/source-manifest.json",
+      "canonical_source_sha256": "d4233f801616869451703ead1981ee1ba4f19d2796e89074fe7854c2272ac70c",
+      "review_items": [
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:1",
+          "value": {
+            "no": 1,
+            "word": "钢琴",
+            "pinyin": "gāngqín",
+            "pos": "名",
+            "gloss": "piano"
+          },
+          "title": "钢琴",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:2",
+          "value": {
+            "no": 2,
+            "word": "合唱节",
+            "pinyin": "héchàngjié",
+            "pos": "名",
+            "gloss": "choral festival"
+          },
+          "title": "合唱节",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:3",
+          "value": {
+            "no": 3,
+            "word": "话剧",
+            "pinyin": "huàjù",
+            "pos": "名",
+            "gloss": "drama; stage play"
+          },
+          "title": "话剧",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:4",
+          "value": {
+            "no": 4,
+            "word": "交响乐",
+            "pinyin": "jiāoxiǎngyuè",
+            "pos": "名",
+            "gloss": "symphony"
+          },
+          "title": "交响乐",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:5",
+          "value": {
+            "no": 5,
+            "word": "住院",
+            "pinyin": "zhùyuàn",
+            "pos": null,
+            "pos_status": "blank_in_source",
+            "gloss": "to be hospitalized"
+          },
+          "title": "住院",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:6",
+          "value": {
+            "no": 6,
+            "word": "弹",
+            "pinyin": "tán",
+            "pos": "动",
+            "gloss": "to play (piano, guitar, etc.)"
+          },
+          "title": "弹",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:7",
+          "value": {
+            "no": 7,
+            "word": "翻译",
+            "pinyin": "fānyì",
+            "pos": "动",
+            "gloss": "to translate"
+          },
+          "title": "翻译",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:8",
+          "value": {
+            "no": 8,
+            "word": "硕士",
+            "pinyin": "shuòshì",
+            "pos": "名",
+            "gloss": "master’s degree"
+          },
+          "title": "硕士",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:9",
+          "value": {
+            "no": 9,
+            "word": "正式",
+            "pinyin": "zhèngshì",
+            "pos": "形",
+            "gloss": "formal"
+          },
+          "title": "正式",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:10",
+          "value": {
+            "no": 10,
+            "word": "语速",
+            "pinyin": "yǔsù",
+            "pos": "名",
+            "gloss": "talking speed"
+          },
+          "title": "语速",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:11",
+          "value": {
+            "no": 11,
+            "word": "代替",
+            "pinyin": "dàitì",
+            "pos": "动",
+            "gloss": "to replace"
+          },
+          "title": "代替",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:12",
+          "value": {
+            "no": 12,
+            "word": "充实",
+            "pinyin": "chōngshí",
+            "pos": "形",
+            "gloss": "full; substantial"
+          },
+          "title": "充实",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:13",
+          "value": {
+            "no": 13,
+            "word": "忙碌",
+            "pinyin": "mánglù",
+            "pos": "形",
+            "gloss": "busy"
+          },
+          "title": "忙碌",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:14",
+          "value": {
+            "no": 14,
+            "word": "排练",
+            "pinyin": "páiliàn",
+            "pos": "动",
+            "gloss": "to rehearse"
+          },
+          "title": "排练",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:15",
+          "value": {
+            "no": 15,
+            "word": "业余",
+            "pinyin": "yèyú",
+            "pos": "形",
+            "gloss": "non-professional; amateur"
+          },
+          "title": "业余",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:16",
+          "value": {
+            "no": 16,
+            "word": "爱好",
+            "pinyin": "àihào",
+            "pos": "名",
+            "gloss": "hobby"
+          },
+          "title": "爱好",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:17",
+          "value": {
+            "no": 17,
+            "word": "研究生",
+            "pinyin": "yánjiūshēng",
+            "pos": "名",
+            "gloss": "graduate student"
+          },
+          "title": "研究生",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:18",
+          "value": {
+            "no": 18,
+            "word": "外向",
+            "pinyin": "wàixiàng",
+            "pos": "形",
+            "gloss": "outgoing"
+          },
+          "title": "外向",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:19",
+          "value": {
+            "no": 19,
+            "word": "乐观",
+            "pinyin": "lèguān",
+            "pos": "形",
+            "gloss": "optimistic"
+          },
+          "title": "乐观",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:20",
+          "value": {
+            "no": 20,
+            "word": "相当",
+            "pinyin": "xiāngdāng",
+            "pos": "副",
+            "gloss": "quite"
+          },
+          "title": "相当",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:21",
+          "value": {
+            "no": 21,
+            "word": "梦想",
+            "pinyin": "mèngxiǎng",
+            "pos": "名",
+            "gloss": "dream"
+          },
+          "title": "梦想",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:22",
+          "value": {
+            "no": 22,
+            "word": "伟大",
+            "pinyin": "wěidà",
+            "pos": "形",
+            "gloss": "great"
+          },
+          "title": "伟大",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:23",
+          "value": {
+            "no": 23,
+            "word": "作家",
+            "pinyin": "zuòjiā",
+            "pos": "名",
+            "gloss": "writer"
+          },
+          "title": "作家",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:24",
+          "value": {
+            "no": 24,
+            "word": "作品",
+            "pinyin": "zuòpǐn",
+            "pos": "名",
+            "gloss": "work; writing"
+          },
+          "title": "作品",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:25",
+          "value": {
+            "no": 25,
+            "word": "发音",
+            "pinyin": "fāyīn",
+            "pos": "名",
+            "gloss": "pronunciation"
+          },
+          "title": "发音",
+          "page": "51–52",
+          "audio": "6-1",
+          "type": "词语"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_1",
+          "value": {
+            "id": "short_text_1",
+            "printed_pages": [
+              53,
+              54
+            ],
+            "audio": "6-4",
+            "title": "大岛的业余爱好",
+            "text": "大岛由美来自日本，是中国现代文学专业的硕士研究生。大岛性格外向、乐观、积极，她的业余爱好相当多。她会弹钢琴，也喜欢看话剧、参观博物馆。她的梦想是翻译中国伟大作家的作品。她正在尝试翻译一篇小说。来中国后，她已经看了几部中国话剧。她觉得，和电影相比，话剧演员的语速要慢一些，说话声音比较大，发音也更清楚。看话剧还可以了解比较正式的汉语，对她的专业学习和研究更有帮助。",
+            "exercises": {
+              "first_listen": {
+                "instruction": "（一）听第一遍，简单回答问题",
+                "items": [
+                  "大岛的专业是什么？",
+                  "大岛的爱好多不多？"
+                ]
+              },
+              "second_listen": {
+                "instruction": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "items": [
+                  "大岛的性格怎么样？（外向）",
+                  "大岛有什么爱好？（弹 参观）",
+                  "她正在做什么？（尝试）",
+                  "大岛为什么喜欢话剧？（语速 正式）"
+                ]
+              },
+              "present": "（三）请你说说大岛的爱好。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：专业 硕士生 弹 参观 话剧 语速 正式。常用表达参考：相当 和……相比。",
+              "compare": "（四）读下面的短文，跟你说的进行比较。大岛是中国文学专业的硕士生。她的爱好相当多。她会弹钢琴，也喜欢参观博物馆。她还喜欢看中国的话剧。和电影相比，话剧的语速慢一些，看话剧还能学到比较正式的语言。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  53
+                ],
+                "audio_tracks": [
+                  "6-4"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  53
+                ],
+                "audio_tracks": [
+                  "6-4"
+                ]
+              }
+            },
+            "answer_status": "open_presentational_task_no_unique_answer"
+          },
+          "title": "大岛的业余爱好",
+          "page": "53–54",
+          "audio": "6-4",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_2",
+          "value": {
+            "id": "short_text_2",
+            "printed_pages": [
+              54,
+              55
+            ],
+            "audio": "6-5",
+            "title": "一次偶然事件让她进入了合唱团",
+            "text": "大岛小时候学过钢琴，也喜欢听歌、听交响乐，但是对唱歌不是特别感兴趣。上研究生一年级的时候，快过新年了，系里要参加学校的合唱节，可是，比赛前两天，团里的一名同学突然生病住院了。那位同学和大岛是好朋友，知道大岛会弹钢琴，懂音乐，就请大岛代替她。为了帮朋友的忙，大岛答应了。比赛的时候，大家的表现很好，得了第三名。学校合唱团的老师听了大岛的演唱，邀请大岛参加学校合唱团。大岛发现，和大家一起唱歌挺有意思的，就同意了。",
+            "exercises": {
+              "first_listen": {
+                "instruction": "（一）听第一遍，简单回答问题",
+                "items": [
+                  "大岛喜欢什么？不大喜欢什么？",
+                  "比赛结果怎么样？"
+                ]
+              },
+              "second_listen": {
+                "instruction": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "items": [
+                  "大岛为什么参加了合唱比赛？（合唱团 住院 代替）",
+                  "比赛后，发生了什么事？（邀请 参加）",
+                  "大岛为什么同意了？（和大家一起）"
+                ]
+              },
+              "present": "（三）请你说说大岛参加合唱团的经过。要求：说6～8个句子，不少于60字。词语参考：弹钢琴 交响乐 感兴趣 合唱比赛 住院 代替 答应 第三名 邀请 同意。常用表达参考：上……的时候。",
+              "compare": "（四）读下面的短文，跟你说的进行比较。大岛会弹钢琴，也喜欢听歌、听交响乐，但是对唱歌不是特别感兴趣。不过有一次，系里要参加合唱节，一名同学突然住院了，她请大岛代替她参加比赛。大家唱得很好，得了第三名。合唱团的老师邀请大岛参加合唱团，大岛同意了。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  54
+                ],
+                "audio_tracks": [
+                  "6-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  54
+                ],
+                "audio_tracks": [
+                  "6-5"
+                ]
+              }
+            },
+            "answer_status": "open_presentational_task_no_unique_answer"
+          },
+          "title": "一次偶然事件让她进入了合唱团",
+          "page": "54–55",
+          "audio": "6-5",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_3",
+          "value": {
+            "id": "short_text_3",
+            "printed_pages": [
+              56,
+              57
+            ],
+            "audio": "6-6",
+            "title": "参加合唱团的得与失",
+            "text": "参加合唱团以后，大岛的生活更充实也忙碌。合唱团每星期排练两个晚上。在合唱团，他们用汉语交流。可是，他们不光唱中文歌，还唱英文歌、德文歌、意大利文歌和韩文歌。不过，参加合唱团以后，大岛没有那么多时间看话剧了，她明白了‘有得必有失’的意思。",
+            "exercises": {
+              "first_listen": {
+                "instruction": "（一）听第一遍，简单回答问题",
+                "items": [
+                  "大岛一个星期排练几次？",
+                  "合唱团唱的都是中文歌吗？"
+                ]
+              },
+              "second_listen": {
+                "instruction": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "items": [
+                  "大岛为什么高兴？（排练 听课 交流）",
+                  "合唱团唱什么语言的歌？（不都是 还有）",
+                  "对大岛来说，‘有得必有失’是什么意思？（忙碌 没有那么多时间）"
+                ]
+              },
+              "present": "（三）请你说说大岛参加合唱团以后的情况。要求：说6～8个句子，不少于60字。词语参考：充实 忙碌 排练 中文。常用表达参考：没有那么多时间 有得必有失。",
+              "compare": "（四）读下面的短文，跟你说的进行比较。参加合唱团以后，大岛的生活充实而忙碌。合唱团每星期排练两次，他们用汉语交流，也唱英文、德文、意大利文和韩文歌。参加合唱团以后，大岛没有那么多时间看话剧了，她明白了‘有得必有失’的意思。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  56
+                ],
+                "audio_tracks": [
+                  "6-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  56
+                ],
+                "audio_tracks": [
+                  "6-6"
+                ]
+              }
+            },
+            "answer_status": "open_presentational_task_no_unique_answer"
+          },
+          "title": "参加合唱团的得与失",
+          "page": "56–57",
+          "audio": "6-6",
+          "type": "短文"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:1",
+          "value": {
+            "expression": {
+              "expression": "来自",
+              "examples": [
+                "朴大宇来自韩国。",
+                "李老师来自北京。"
+              ]
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "来自",
+            "examples": [
+              "朴大宇来自韩国。",
+              "李老师来自北京。"
+            ]
+          },
+          "page": "54–55–56",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:2",
+          "value": {
+            "expression": {
+              "expression": "相当",
+              "examples": [
+                "朴大宇的留学生活相当忙碌。",
+                "阿里的钢琴弹得相当好。"
+              ]
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "相当",
+            "examples": [
+              "朴大宇的留学生活相当忙碌。",
+              "阿里的钢琴弹得相当好。"
+            ]
+          },
+          "page": "54–55–56",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:3",
+          "value": {
+            "expression": {
+              "expression": "和……相比",
+              "examples": [
+                "和山东菜相比，丽丽觉得广东菜更可口。",
+                "和坐公共汽车相比，王红觉得坐地铁更方便。"
+              ]
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "和……相比",
+            "examples": [
+              "和山东菜相比，丽丽觉得广东菜更可口。",
+              "和坐公共汽车相比，王红觉得坐地铁更方便。"
+            ]
+          },
+          "page": "54–55–56",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:4",
+          "value": {
+            "expression": {
+              "expression": "对……有帮助（2）",
+              "examples": [
+                "看中国话剧，对学中文有帮助。",
+                "和中国人聊天儿，对练习口语有帮助。"
+              ]
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "对……有帮助（2）",
+            "examples": [
+              "看中国话剧，对学中文有帮助。",
+              "和中国人聊天儿，对练习口语有帮助。"
+            ]
+          },
+          "page": "54–55–56",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:2:1",
+          "value": {
+            "expression": {
+              "expression": "小时候",
+              "examples": [
+                "朴大宇小时候来过中国。",
+                "大岛小时候学过钢琴。"
+              ]
+            },
+            "topic": "谈论时间"
+          },
+          "title": {
+            "expression": "小时候",
+            "examples": [
+              "朴大宇小时候来过中国。",
+              "大岛小时候学过钢琴。"
+            ]
+          },
+          "page": "54–55–56",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:2:2",
+          "value": {
+            "expression": {
+              "expression": "上……的时候",
+              "examples": [
+                "李大为上中学二年级的时候开始学习中文。",
+                "大岛上研究生的时候参加了合唱团。"
+              ]
+            },
+            "topic": "谈论时间"
+          },
+          "title": {
+            "expression": "上……的时候",
+            "examples": [
+              "李大为上中学二年级的时候开始学习中文。",
+              "大岛上研究生的时候参加了合唱团。"
+            ]
+          },
+          "page": "54–55–56",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:2:3",
+          "value": {
+            "expression": {
+              "expression": "快……的时候",
+              "examples": [
+                "快考试的时候，在图书馆复习的学生很多。",
+                "快过春节的时候，火车票很难买。"
+              ]
+            },
+            "topic": "谈论时间"
+          },
+          "title": {
+            "expression": "快……的时候",
+            "examples": [
+              "快考试的时候，在图书馆复习的学生很多。",
+              "快过春节的时候，火车票很难买。"
+            ]
+          },
+          "page": "54–55–56",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:2:4",
+          "value": {
+            "expression": {
+              "expression": "……前一/几天",
+              "examples": [
+                "比赛前一天，要休息好。",
+                "开学前几天，大部分同学都回到了学校。"
+              ]
+            },
+            "topic": "谈论时间"
+          },
+          "title": {
+            "expression": "……前一/几天",
+            "examples": [
+              "比赛前一天，要休息好。",
+              "开学前几天，大部分同学都回到了学校。"
+            ]
+          },
+          "page": "54–55–56",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:2:5",
+          "value": {
+            "expression": {
+              "expression": "让某人……的是",
+              "examples": [
+                "让她遗憾的是，她没有时间常去看话剧了。",
+                "让他没想到的是，孩子们说的话那么不容易懂。"
+              ]
+            },
+            "topic": "谈论时间"
+          },
+          "title": {
+            "expression": "让某人……的是",
+            "examples": [
+              "让她遗憾的是，她没有时间常去看话剧了。",
+              "让他没想到的是，孩子们说的话那么不容易懂。"
+            ]
+          },
+          "page": "54–55–56",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:2:6",
+          "value": {
+            "expression": {
+              "expression": "要+动词+上+数量词",
+              "examples": [
+                "每天下班，路上都要花上两三个小时。",
+                "我每个月都要吃上一两次饺子。"
+              ]
+            },
+            "topic": "谈论时间"
+          },
+          "title": {
+            "expression": "要+动词+上+数量词",
+            "examples": [
+              "每天下班，路上都要花上两三个小时。",
+              "我每个月都要吃上一两次饺子。"
+            ]
+          },
+          "page": "54–55–56",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:2:7",
+          "value": {
+            "expression": {
+              "expression": "没有那么多",
+              "examples": [
+                "现在没有那么多人来他的小店买东西了。",
+                "她来到了陌生的城市，没有那么多朋友来看她了。"
+              ]
+            },
+            "topic": "谈论时间"
+          },
+          "title": {
+            "expression": "没有那么多",
+            "examples": [
+              "现在没有那么多人来他的小店买东西了。",
+              "她来到了陌生的城市，没有那么多朋友来看她了。"
+            ]
+          },
+          "page": "54–55–56",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehension:1",
+          "value": {
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "words": [
+              "钢琴",
+              "合唱节",
+              "话剧",
+              "交响乐",
+              "住院"
+            ],
+            "answer": [
+              "1.E",
+              "2.D",
+              "3.C",
+              "4.B",
+              "5.A"
+            ]
+          },
+          "title": "词语理解",
+          "page": "52",
+          "audio": "6-2",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:1",
+          "value": {
+            "prompt": {
+              "instruction": "（一）听第一遍，简单回答问题",
+              "items": [
+                "大岛的专业是什么？",
+                "大岛的爱好多不多？"
+              ]
+            },
+            "kind": "first_listen",
+            "textTitle": "大岛的业余爱好"
+          },
+          "title": "大岛的业余爱好 · first_listen",
+          "page": "53–54",
+          "audio": "6-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:1",
+          "value": {
+            "prompt": {
+              "instruction": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+              "items": [
+                "大岛的性格怎么样？（外向）",
+                "大岛有什么爱好？（弹 参观）",
+                "她正在做什么？（尝试）",
+                "大岛为什么喜欢话剧？（语速 正式）"
+              ]
+            },
+            "kind": "second_listen",
+            "textTitle": "大岛的业余爱好"
+          },
+          "title": "大岛的业余爱好 · second_listen",
+          "page": "53–54",
+          "audio": "6-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:present:1",
+          "value": {
+            "prompt": "（三）请你说说大岛的爱好。要求：说6～8个句子，不少于60字。使用下面的词语和常用表达。词语参考：专业 硕士生 弹 参观 话剧 语速 正式。常用表达参考：相当 和……相比。",
+            "kind": "present",
+            "textTitle": "大岛的业余爱好"
+          },
+          "title": "大岛的业余爱好 · present",
+          "page": "53–54",
+          "audio": "6-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:compare:1",
+          "value": {
+            "prompt": "（四）读下面的短文，跟你说的进行比较。大岛是中国文学专业的硕士生。她的爱好相当多。她会弹钢琴，也喜欢参观博物馆。她还喜欢看中国的话剧。和电影相比，话剧的语速慢一些，看话剧还能学到比较正式的语言。",
+            "kind": "compare",
+            "textTitle": "大岛的业余爱好"
+          },
+          "title": "大岛的业余爱好 · compare",
+          "page": "53–54",
+          "audio": "6-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:1",
+          "value": {
+            "prompt": {
+              "instruction": "（一）听第一遍，简单回答问题",
+              "items": [
+                "大岛喜欢什么？不大喜欢什么？",
+                "比赛结果怎么样？"
+              ]
+            },
+            "kind": "first_listen",
+            "textTitle": "一次偶然事件让她进入了合唱团"
+          },
+          "title": "一次偶然事件让她进入了合唱团 · first_listen",
+          "page": "54–55",
+          "audio": "6-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:1",
+          "value": {
+            "prompt": {
+              "instruction": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+              "items": [
+                "大岛为什么参加了合唱比赛？（合唱团 住院 代替）",
+                "比赛后，发生了什么事？（邀请 参加）",
+                "大岛为什么同意了？（和大家一起）"
+              ]
+            },
+            "kind": "second_listen",
+            "textTitle": "一次偶然事件让她进入了合唱团"
+          },
+          "title": "一次偶然事件让她进入了合唱团 · second_listen",
+          "page": "54–55",
+          "audio": "6-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:present:1",
+          "value": {
+            "prompt": "（三）请你说说大岛参加合唱团的经过。要求：说6～8个句子，不少于60字。词语参考：弹钢琴 交响乐 感兴趣 合唱比赛 住院 代替 答应 第三名 邀请 同意。常用表达参考：上……的时候。",
+            "kind": "present",
+            "textTitle": "一次偶然事件让她进入了合唱团"
+          },
+          "title": "一次偶然事件让她进入了合唱团 · present",
+          "page": "54–55",
+          "audio": "6-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:compare:1",
+          "value": {
+            "prompt": "（四）读下面的短文，跟你说的进行比较。大岛会弹钢琴，也喜欢听歌、听交响乐，但是对唱歌不是特别感兴趣。不过有一次，系里要参加合唱节，一名同学突然住院了，她请大岛代替她参加比赛。大家唱得很好，得了第三名。合唱团的老师邀请大岛参加合唱团，大岛同意了。",
+            "kind": "compare",
+            "textTitle": "一次偶然事件让她进入了合唱团"
+          },
+          "title": "一次偶然事件让她进入了合唱团 · compare",
+          "page": "54–55",
+          "audio": "6-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:1",
+          "value": {
+            "prompt": {
+              "instruction": "（一）听第一遍，简单回答问题",
+              "items": [
+                "大岛一个星期排练几次？",
+                "合唱团唱的都是中文歌吗？"
+              ]
+            },
+            "kind": "first_listen",
+            "textTitle": "参加合唱团的得与失"
+          },
+          "title": "参加合唱团的得与失 · first_listen",
+          "page": "56–57",
+          "audio": "6-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:1",
+          "value": {
+            "prompt": {
+              "instruction": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+              "items": [
+                "大岛为什么高兴？（排练 听课 交流）",
+                "合唱团唱什么语言的歌？（不都是 还有）",
+                "对大岛来说，‘有得必有失’是什么意思？（忙碌 没有那么多时间）"
+              ]
+            },
+            "kind": "second_listen",
+            "textTitle": "参加合唱团的得与失"
+          },
+          "title": "参加合唱团的得与失 · second_listen",
+          "page": "56–57",
+          "audio": "6-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:present:1",
+          "value": {
+            "prompt": "（三）请你说说大岛参加合唱团以后的情况。要求：说6～8个句子，不少于60字。词语参考：充实 忙碌 排练 中文。常用表达参考：没有那么多时间 有得必有失。",
+            "kind": "present",
+            "textTitle": "参加合唱团的得与失"
+          },
+          "title": "参加合唱团的得与失 · present",
+          "page": "56–57",
+          "audio": "6-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:compare:1",
+          "value": {
+            "prompt": "（四）读下面的短文，跟你说的进行比较。参加合唱团以后，大岛的生活充实而忙碌。合唱团每星期排练两次，他们用汉语交流，也唱英文、德文、意大利文和韩文歌。参加合唱团以后，大岛没有那么多时间看话剧了，她明白了‘有得必有失’的意思。",
+            "kind": "compare",
+            "textTitle": "参加合唱团的得与失"
+          },
+          "title": "参加合唱团的得与失 · compare",
+          "page": "56–57",
+          "audio": "6-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:exercise_1",
+          "value": {
+            "prompt": {
+              "instruction": "请你根据听过的三段短文填表",
+              "table_fields": {
+                "大岛的爱好": [
+                  "在哪儿学习",
+                  "喜欢什么",
+                  "为什么喜欢看话剧"
+                ],
+                "大岛参加了合唱比赛": [
+                  "不太喜欢什么",
+                  "比赛前几天",
+                  "比赛的时候"
+                ],
+                "大岛参加合唱团以后": [
+                  "高兴的事",
+                  "没想到的事",
+                  "有得必有失"
+                ]
+              }
+            }
+          },
+          "title": "综合练习",
+          "page": "57–58",
+          "audio": "6-4、6-5、6-6",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:exercise_2",
+          "value": {
+            "prompt": "根据上面的表格和下面给出的参考词语和常用表达，谈一谈：（1）大岛的爱好；（2）大岛参加了合唱比赛；（3）大岛参加了合唱团。要求：一名同学先说8～10个句子，不少于80字；然后小组其他同学纠正补充；最后由一名同学总结，说10～12个句子，不少于100字。词语参考：专业 硕士生 弹 参观 话剧 语速 正式 弹钢琴 交响乐 感兴趣 合唱比赛 住院 代替 答应 第三名 邀请 同意 充实 忙碌 排练 中文。常用表达参考：相当 和……相比 没有那么多时间 有得必有失"
+          },
+          "title": "综合练习",
+          "page": "57–58",
+          "audio": "6-4、6-5、6-6",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:exercise_3",
+          "value": {
+            "prompt": "拓展练习：你有什么爱好？请你说一说：（1）你喜欢什么；（2）为什么喜欢；（3）有什么有趣的事情。要求：（1）使用这一课学过的词语和常用表达；（2）说10～12个句子，不少于100字。"
+          },
+          "title": "综合练习",
+          "page": "57–58",
+          "audio": "6-4、6-5、6-6",
+          "type": "综合练习"
+        }
+      ]
+    },
+    "boya-quasi-intermediate-i:lesson-07": {
+      "available": true,
+      "review_complete": true,
+      "completion": {
+        "status": "completed_by_adam",
+        "confirmed_by": "Adam",
+        "confirmed_at": "2026-09-08",
+        "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+        "technical_status_preserved": true
+      },
+      "reason": "",
+      "canonical": {
+        "lesson_key": "boya-quasi-intermediate-i:lesson-07",
+        "schema_version": "quasi-intermediate-source-audit-v1.0",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_number": 7,
+        "lesson_id": "lesson-07",
+        "title": "小张热爱登山",
+        "title_source": "主教材 PDF 第72页（印刷 P59）课名页视觉核对",
+        "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+        "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+        "page_map": {
+          "printed_pages": [
+            59,
+            67
+          ],
+          "pdf_pages": [
+            72,
+            80
+          ],
+          "answer_pdf_pages": [
+            21,
+            22
+          ],
+          "mapping_status": "visual_verified_first_pass"
+        },
+        "qr_evidence": {
+          "pdf_page": 72,
+          "qr_url": "http://qr31.cn/I7dyDT",
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-07-pdf-page-072.png",
+          "landing_page": "https://biz.cli.im/site/I7dyDT?qrurl=http://qr31.cn/I7dyDT&gtype=2&key=1f37b1766d5d24adc878292076608ec1b666357015",
+          "landing_audio_labels": [
+            "7-1",
+            "7-2",
+            "7-3",
+            "7-4",
+            "7-5",
+            "7-6"
+          ],
+          "decode_status": "source_inventory_verified"
+        },
+        "audio_map": [
+          {
+            "label": "7-1",
+            "coding": "EM1539812",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fl6AbBu2IAsLCZeOG6Lud6gz3VN3",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-07/7-1.mp3",
+            "bytes": 917828,
+            "sha256": "65f215bffedcd77d2961e939ff98309f281ef933371454e85ef43b7893c0cae6",
+            "duration_seconds": 57.051,
+            "decode_status": "passed"
+          },
+          {
+            "label": "7-2",
+            "coding": "AT1783212",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fv1KPLHYilNPRMocACQbnOyEme84",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-07/7-2.mp3",
+            "bytes": 420875,
+            "sha256": "cb099fc04a47bca06833d839dd63110bbbab1907273d2909399ec3eba4aca500",
+            "duration_seconds": 25.992,
+            "decode_status": "passed"
+          },
+          {
+            "label": "7-3",
+            "coding": "HZ1783213",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FrEHDdPzJXG0DPn0RA9MLmkC_ze9",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-07/7-3.mp3",
+            "bytes": 932039,
+            "sha256": "c033e983392a4c89a6f8fc07647c6bff847b5f0cd2ddeb08b6a9560aa20cd669",
+            "duration_seconds": 57.94,
+            "decode_status": "passed"
+          },
+          {
+            "label": "7-4",
+            "coding": "FX1783214",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fm2U64p9MU2fViFi_FHmma4iSxjY",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-07/7-4.mp3",
+            "bytes": 995569,
+            "sha256": "bfc5fa1ea1d796e5607a9b7598d16f689466ce3e0dd9da93afee52875613b8f0",
+            "duration_seconds": 61.91,
+            "decode_status": "passed"
+          },
+          {
+            "label": "7-5",
+            "coding": "TW1783215",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FiGKpAdf35vQDYHFbSOJk822X1Ej",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-07/7-5.mp3",
+            "bytes": 955863,
+            "sha256": "e9ab7a6aad444d01b68f2945e75c67f455fef7126c8a5fb6da64c6fff216cec0",
+            "duration_seconds": 59.429,
+            "decode_status": "passed"
+          },
+          {
+            "label": "7-6",
+            "coding": "OT1783216",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FmVA1Mq_XzBfEUqNnbIWQ39oxbiW",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-07/7-6.mp3",
+            "bytes": 1029841,
+            "sha256": "5233d683bc73fd9d9675cade116a09f739533699121c96b18dc7531f92c584e3",
+            "duration_seconds": 64.052,
+            "decode_status": "passed"
+          }
+        ],
+        "content_inventory": {
+          "vocabulary_count": 26,
+          "proper_noun_count": 0,
+          "vocabulary_comprehension_group_count": 1,
+          "listening_sentence_item_count": 10,
+          "texts_dialogues_count": 3,
+          "listening_exercise_group_count": 6,
+          "common_expression_group_count": 1,
+          "common_expression_item_count": 16,
+          "comprehensive_exercise_count": 3,
+          "status": "visual_source_snapshot_pending_adam_approval"
+        },
+        "answer_policy": "仅记录参考答案 PDF 中可核对的答案；开放式口语题不补写唯一答案，保留教师示例和评量空间。",
+        "review": {
+          "status": "pending_review",
+          "approved": false,
+          "approved_by": [],
+          "approved_at": null,
+          "blockers": [
+            "扫描教材无可用文字层；最终来源批准需由 Adam 对视觉转录、教材页码和答案证据确认。",
+            "六段音频已通过本地文件 bytes、SHA-256、ffprobe 时长和解码核验；语义听核及教师 PowerPoint 播放实测仍待完成。",
+            "开放式口语、综合填表与小组总结没有唯一标准答案，不补写答案。"
+          ],
+          "approval_basis": [
+            "主教材 PDF 第72–80页（印刷 P59–P67）视觉核对",
+            "答案 PDF 文件第21–22页视觉核对",
+            "来源总盘点 QR、音频 bytes、hash 和时长记录"
+          ]
+        },
+        "sections": [
+          {
+            "id": "vocabulary",
+            "printed_pages": [
+              59,
+              60
+            ],
+            "audio": "7-1",
+            "entries": [
+              {
+                "no": 1,
+                "word": "登山",
+                "pinyin": "dēngshān",
+                "pos": "动",
+                "gloss": "to climb mountains"
+              },
+              {
+                "no": 2,
+                "word": "优美",
+                "pinyin": "yōuměi",
+                "pos": "形",
+                "gloss": "beautiful; graceful"
+              },
+              {
+                "no": 3,
+                "word": "热爱",
+                "pinyin": "rè'ài",
+                "pos": "动",
+                "gloss": "to love; adore"
+              },
+              {
+                "no": 4,
+                "word": "邻居",
+                "pinyin": "línjū",
+                "pos": "名",
+                "gloss": "neighbor"
+              },
+              {
+                "no": 5,
+                "word": "机会",
+                "pinyin": "jīhuì",
+                "pos": "名",
+                "gloss": "opportunity"
+              },
+              {
+                "no": 6,
+                "word": "耐力",
+                "pinyin": "nàilì",
+                "pos": "名",
+                "gloss": "endurance; stamina"
+              },
+              {
+                "no": 7,
+                "word": "放松",
+                "pinyin": "fàngsōng",
+                "pos": "动",
+                "gloss": "to relax"
+              },
+              {
+                "no": 8,
+                "word": "市民",
+                "pinyin": "shìmín",
+                "pos": "名",
+                "gloss": "citizen; resident"
+              },
+              {
+                "no": 9,
+                "word": "挑战",
+                "pinyin": "tiǎozhàn",
+                "pos": "动",
+                "gloss": "to challenge"
+              },
+              {
+                "no": 10,
+                "word": "根本",
+                "pinyin": "gēnběn",
+                "pos": "副",
+                "gloss": "fundamentally"
+              },
+              {
+                "no": 11,
+                "word": "合作",
+                "pinyin": "hézuò",
+                "pos": "动",
+                "gloss": "to cooperate"
+              },
+              {
+                "no": 12,
+                "word": "浪漫",
+                "pinyin": "làngmàn",
+                "pos": "形",
+                "gloss": "romantic"
+              },
+              {
+                "no": 13,
+                "word": "羡慕",
+                "pinyin": "xiànmù",
+                "pos": "动",
+                "gloss": "to admire; envy"
+              },
+              {
+                "no": 14,
+                "word": "地道",
+                "pinyin": "dìdao",
+                "pos": "形",
+                "gloss": "authentic; genuine"
+              },
+              {
+                "no": 15,
+                "word": "发亮",
+                "pinyin": "fāliàng",
+                "pos": "动",
+                "gloss": "to shine; glisten"
+              },
+              {
+                "no": 16,
+                "word": "不管",
+                "pinyin": "bùguǎn",
+                "pos": "连",
+                "gloss": "no matter how"
+              },
+              {
+                "no": 17,
+                "word": "肚子",
+                "pinyin": "dùzi",
+                "pos": "名",
+                "gloss": "stomach; belly"
+              },
+              {
+                "no": 18,
+                "word": "感受",
+                "pinyin": "gǎnshòu",
+                "pos": "动",
+                "gloss": "to feel"
+              },
+              {
+                "no": 19,
+                "word": "危险",
+                "pinyin": "wēixiǎn",
+                "pos": "形",
+                "gloss": "dangerous"
+              },
+              {
+                "no": 20,
+                "word": "将来",
+                "pinyin": "jiānglái",
+                "pos": "名",
+                "gloss": "future"
+              },
+              {
+                "no": 21,
+                "word": "山顶",
+                "pinyin": "shāndǐng",
+                "pos": "名",
+                "gloss": "hilltop"
+              },
+              {
+                "no": 22,
+                "word": "俱乐部",
+                "pinyin": "jùlèbù",
+                "pos": "名",
+                "gloss": "club"
+              },
+              {
+                "no": 23,
+                "word": "结交",
+                "pinyin": "jiéjiāo",
+                "pos": "动",
+                "gloss": "to get along with"
+              },
+              {
+                "no": 24,
+                "word": "害怕",
+                "pinyin": "hàipà",
+                "pos": "动",
+                "gloss": "to fear"
+              },
+              {
+                "no": 25,
+                "word": "信心",
+                "pinyin": "xìnxīn",
+                "pos": "名",
+                "gloss": "confidence"
+              },
+              {
+                "no": 26,
+                "word": "愉快",
+                "pinyin": "yúkuài",
+                "pos": "形",
+                "gloss": "happy; agreeable"
+              }
+            ],
+            "proper_nouns": [],
+            "source_status": "visual_transcription_pending_review"
+          },
+          {
+            "id": "vocabulary_comprehension",
+            "printed_pages": [
+              60
+            ],
+            "audio": "7-2",
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读。",
+            "groups": [
+              {
+                "words": [
+                  "乒乓球",
+                  "登山",
+                  "滑冰",
+                  "游泳",
+                  "优美",
+                  "登山鞋"
+                ],
+                "answer": [
+                  "1.E",
+                  "2.B",
+                  "3.C",
+                  "4.D",
+                  "5.A",
+                  "6.F"
+                ]
+              }
+            ],
+            "answer_status": "answers_checked_against_answer_pdf"
+          },
+          {
+            "id": "listening_sentences",
+            "printed_pages": [
+              61
+            ],
+            "audio_tracks": [
+              "7-3"
+            ],
+            "exercises": {
+              "exercise_7_3": {
+                "heading_verbatim": "一、听句子，判断对错",
+                "items": [
+                  [
+                    1,
+                    "李老师非常喜欢当老师。",
+                    "对"
+                  ],
+                  [
+                    2,
+                    "小张和丽丽是同学。",
+                    "错"
+                  ],
+                  [
+                    3,
+                    "小王钱不够。",
+                    "错"
+                  ],
+                  [
+                    4,
+                    "朴大宇不容易累。",
+                    "对"
+                  ],
+                  [
+                    5,
+                    "哥哥觉得很紧张。",
+                    "对"
+                  ],
+                  [
+                    6,
+                    "那个地方很漂亮。",
+                    "对"
+                  ],
+                  [
+                    7,
+                    "这个工作很有意思。",
+                    "错"
+                  ],
+                  [
+                    8,
+                    "大家登山的时间很少。",
+                    "错"
+                  ],
+                  [
+                    9,
+                    "同事们根本不愿意合作。",
+                    "错"
+                  ],
+                  [
+                    10,
+                    "大岛不懂浪漫。",
+                    "错"
+                  ]
+                ],
+                "audio_text": [
+                  [
+                    1,
+                    "李老师热爱教师这份工作。"
+                  ],
+                  [
+                    2,
+                    "小张是丽丽的邻居。"
+                  ],
+                  [
+                    3,
+                    "小王想去，可是一直没有机会。"
+                  ],
+                  [
+                    4,
+                    "朴大宇耐力很强。"
+                  ],
+                  [
+                    5,
+                    "哥哥想放松放松。"
+                  ],
+                  [
+                    6,
+                    "那个地方风景优美，是市民常去的地方。"
+                  ],
+                  [
+                    7,
+                    "这项工作很有挑战性。"
+                  ],
+                  [
+                    8,
+                    "大家根本没有时间登山。"
+                  ],
+                  [
+                    9,
+                    "同事们的合作出了点儿问题。"
+                  ],
+                  [
+                    10,
+                    "大岛是个浪漫的人。"
+                  ]
+                ],
+                "answer_source": "答案 PDF 文件第21页；学生题面与音频实际说法分开保存。"
+              }
+            }
+          },
+          {
+            "id": "short_text_1",
+            "printed_pages": [
+              61,
+              62
+            ],
+            "audio": "7-4",
+            "title": "小张是登山迷",
+            "text": "我的邻居小张热爱运动，打球、游泳、滑冰样样都会，让人羡慕。不过，他告诉我们，他最大的爱好是登山，是个地地道道的登山迷。一说起登山，他就兴奋得眼睛发亮。小张说，他小时候，家住在山里，不管是去上学，还是去市场，都要走好几里山路，走山路对他来说，就像走平路一样。那时候，小张每天很早就要出发去学校，下午放学后又要饿着肚子走山路回家，根本感受不到登山的快乐。小张真正喜欢上登山，是大学毕业开始工作以后。",
+            "exercises": {
+              "first_listen": [
+                "小张喜欢什么？",
+                "小张最大的爱好是什么？",
+                "小张小时候怎么样？"
+              ],
+              "second_listen": [
+                "谈起登山，小张怎么样？（兴奋）",
+                "小张小时候为什么不喜欢登山？（很早 饿着肚子 感受）",
+                "小张什么时候爱上登山的？（毕业 开始）"
+              ],
+              "present": "谈谈小张的爱好是什么。",
+              "compare": "小张的爱好和登山带来的好处。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  62
+                ],
+                "audio_tracks": [
+                  "7-4"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  62
+                ],
+                "audio_tracks": [
+                  "7-4"
+                ]
+              }
+            }
+          },
+          {
+            "id": "short_text_2",
+            "printed_pages": [
+              63,
+              64
+            ],
+            "audio": "7-5",
+            "title": "小张真正爱上了登山",
+            "text": "上大学以后，小张来到了大城市，登山的机会不多。毕业以后，小张来到了另一座城市。他的工作虽然很好，可是压力很大，非常需要放松。小张说，那座城市的郊区有很多山，市民周末和节假日常常去那里。周末去登山，慢慢成了小张的习惯。他说，登山很累，有时候可能还有点儿危险，可是登山可以锻炼身体，提高耐力。累的时候，还可以停下来欣赏优美的风景。他说，将来如果找到自己喜欢的女孩儿，一定要在山顶上对她说他爱她。他这个人还挺浪漫的。",
+            "exercises": {
+              "first_listen": [
+                "上大学以后，小张常常登山吗？",
+                "小张的工作怎么样？",
+                "小张工作的城市山多吗？"
+              ],
+              "second_listen": [
+                "为什么登山成了小张的习惯？（压力 放松 郊区）",
+                "小张觉得登山怎么样？（累 危险 锻炼 欣赏）",
+                "为什么说小张是个浪漫的人？（将来 山顶）"
+              ],
+              "present": "谈谈小张的爱好是什么。",
+              "compare": "小张的爱好和登山带来的好处。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  63
+                ],
+                "audio_tracks": [
+                  "7-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  63
+                ],
+                "audio_tracks": [
+                  "7-5"
+                ]
+              }
+            }
+          },
+          {
+            "id": "short_text_3",
+            "printed_pages": [
+              64,
+              65
+            ],
+            "audio": "7-6",
+            "title": "登山可以增进友谊",
+            "text": "因为登山，小张参加了登山俱乐部，认识了新朋友，结交了不少登山伙伴。有空儿的时候，他也会约上同事、在同一座城市工作的大学和中学同学，一起参加他们登山俱乐部的活动。他们去的往往是有挑战性的地方，跟他一起去的同学、同事刚开始觉得有点儿害怕，没有信心，这时候，小张就鼓励他们。慢慢地，大家也爱上了登山。不仅如此，同事们的关系越来越好，合作起来也更加愉快，工作效率也更高了。今年过生日的时候，同事、朋友们一起送了他一双登山鞋，他收到的时候十分激动。",
+            "exercises": {
+              "first_listen": [
+                "小张和谁一起登山？",
+                "他们去什么样的地方登山？",
+                "今年过生日，小张收到了什么礼物？"
+              ],
+              "second_listen": [
+                "登山给小张带来了什么好处？（认识 参加）",
+                "登山对小张的工作有什么好处？（关系 合作 效率）"
+              ],
+              "present": "谈谈小张的爱好是什么。",
+              "compare": "小张的爱好和登山带来的好处。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  64
+                ],
+                "audio_tracks": [
+                  "7-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  64
+                ],
+                "audio_tracks": [
+                  "7-6"
+                ]
+              }
+            }
+          },
+          {
+            "id": "common_expressions",
+            "printed_pages": [
+              62,
+              65
+            ],
+            "groups": [
+              {
+                "topic": "谈论个人生活",
+                "items": [
+                  "样样（量词重叠）",
+                  "地地道道（形容词重叠）",
+                  "不管……都……",
+                  "像……一样（1）",
+                  "又（2）",
+                  "根本",
+                  "另",
+                  "虽然……可是",
+                  "慢慢",
+                  "成了",
+                  "如果……一定……",
+                  "动词+上（2）",
+                  "往往",
+                  "刚开始……慢慢地",
+                  "不仅如此",
+                  "动词+起来（1）"
+                ]
+              }
+            ],
+            "source_status": "visual_transcription_pending_review"
+          },
+          {
+            "id": "comprehensive_practice",
+            "printed_pages": [
+              66,
+              67
+            ],
+            "audio_tracks": [
+              "7-4",
+              "7-5",
+              "7-6"
+            ],
+            "items": [
+              "请你根据听过的三段短文填表。",
+              "小组活动：谈一谈小张的爱好、登山经历和登山好处。",
+              "拓展练习：谈谈你喜欢的运动。"
+            ],
+            "source_status": "visual_transcription_pending_review"
+          }
+        ]
+      },
+      "source_manifest": {
+        "schema_version": "boya-lesson-source-manifest-v1",
+        "manifest_type": "lesson-source-review",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_id": "lesson-07",
+        "lesson_key": "boya-quasi-intermediate-i:lesson-07",
+        "completion_confirmation": {
+          "status": "completed_by_adam",
+          "confirmed_by": "Adam",
+          "confirmed_at": "2026-09-08",
+          "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+          "technical_status_preserved": true
+        },
+        "lesson_number": 7,
+        "lesson_title": "小张热爱登山",
+        "language": "简体中文",
+        "package": "lesson-07-source-review",
+        "prepared_at": "2026-08-28",
+        "source_status": "pending_review",
+        "source_qa_status": "blocked",
+        "extraction_status": "source_review_materialized",
+        "review_status": "awaiting_adam_review",
+        "approved": false,
+        "approved_by": [],
+        "approved_at": null,
+        "canonical_source": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json",
+          "sha256": "c529512b98b62bdf8dc72e98605f5ec047ba969d7d365bb9c23da904fc4df45e",
+          "status": "source_review_snapshot"
+        },
+        "canonical_source_sha256": "c529512b98b62bdf8dc72e98605f5ec047ba969d7d365bb9c23da904fc4df45e",
+        "source_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+          "sha256": "39899d0f400e187f57c16db821f8f4c207f936eae0e4fbfe3cab52c02bfea806",
+          "total_pages": 134,
+          "textbook_page_range": "59–67",
+          "pdf_page_range": "72–80",
+          "page_count_in_review": 9,
+          "format": "scanned_image_pdf",
+          "text_layer_status": "empty; visual review used"
+        },
+        "answer_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+          "sha256": "3c21e1574b0187259769799d183eca78a60a515b5b7fce202eda9e9ade2c20b8",
+          "total_pages": 33,
+          "pdf_page_range_in_review": "21–22",
+          "answer_status": "closed_answers_visual_checked; open_tasks_have_no_unique_answer"
+        },
+        "page_audit": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/audit/source-pages-59-67-audit-draft.md",
+          "sha256": "38a63346d5199aad4d96ee6b2459aa02ff91bc6f61169510d749ddf396eb9a38",
+          "status": "visual_first_pass"
+        },
+        "answer_audit": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/audit/answer-pages-21-22-correction-2026-09-02.md",
+          "sha256": "0e63fdffe2d013587b3154755c0f0414d260390e44893559ae64f8df1ce8704a",
+          "status": "visual_correction_recorded"
+        },
+        "qr_source": {
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-07-pdf-page-072.png",
+          "qr_url": "http://qr31.cn/I7dyDT",
+          "landing_page": "https://biz.cli.im/site/I7dyDT?qrurl=http://qr31.cn/I7dyDT&gtype=2&key=1f37b1766d5d24adc878292076608ec1b666357015",
+          "status": "decoded_landing_page_lists_1_to_6"
+        },
+        "audio": {
+          "root": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-07",
+          "manifest": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/audio-manifest.json",
+          "manifest_sha256": "362496771294081ee42f781ba863d6c329303f4baa62ba8ecec0f616c33b3574",
+          "technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/audit/audio-technical-2026-08-28.md",
+          "expected_track_count": 6,
+          "local_track_count": 6,
+          "decode_passed_count": 6,
+          "semantic_listening_count": 0,
+          "teacher_playback_count": 0,
+          "status": "technical_pass_semantic_review_pending"
+        },
+        "listening_exercise_contract": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/listening-exercise-contract.json",
+        "listening_exercise_contract_sha256": "4511d13f46e32771e6f0c63e37a2f409a3a0cd3cfbf7b00afbcb1092ae7cafba",
+        "listening_exercise_contract_detail": {
+          "status": "draft_validated",
+          "exercise_count": 9
+        },
+        "review_evidence": {
+          "page_range": "P59–P67",
+          "answer_page_range": "答案 PDF P21–P22",
+          "vocabulary_count": 26,
+          "proper_noun_count": 0,
+          "short_text_count": 3,
+          "short_text_listen_group_count": 6,
+          "status": "page_answer_audio_mapping_written; final source approval pending"
+        },
+        "blockers": [
+          "六段音频技术核验通过；语义听核和教师播放实测待完成。",
+          "扫描教材无文字层；需 Adam 核对视觉转录、页码和答案证据。",
+          "开放式题目无唯一答案，保持答案政策。"
+        ],
+        "next_minimum_step": "Adam 审核 canonical source 与 listening exercise contract"
+      },
+      "audio": {
+        "schema_version": "boya-lesson-audio-manifest-v1",
+        "lesson_id": "lesson-07",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_title": "小张热爱登山",
+        "recorded_at": "2026-08-28",
+        "provenance": {
+          "source_type": "publisher_qr_landing_page",
+          "qr_url": "http://qr31.cn/I7dyDT",
+          "landing_page": "https://biz.cli.im/site/I7dyDT?qrurl=http://qr31.cn/I7dyDT&gtype=2&key=1f37b1766d5d24adc878292076608ec1b666357015",
+          "landing_audio_labels": [
+            "7-1",
+            "7-2",
+            "7-3",
+            "7-4",
+            "7-5",
+            "7-6"
+          ],
+          "textbook_labels_seen": [
+            "7-1",
+            "7-2",
+            "7-3",
+            "7-4",
+            "7-5",
+            "7-6"
+          ],
+          "label_discrepancy": null
+        },
+        "technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/audit/audio-technical-2026-08-28.md",
+        "tracks": [
+          {
+            "label": "7-1",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fl6AbBu2IAsLCZeOG6Lud6gz3VN3",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-07/7-1.mp3",
+            "scope": "词语（P59–P60）",
+            "bytes": 917828,
+            "sha256": "65f215bffedcd77d2961e939ff98309f281ef933371454e85ef43b7893c0cae6",
+            "duration_seconds": 57.051,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "7-2",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fv1KPLHYilNPRMocACQbnOyEme84",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-07/7-2.mp3",
+            "scope": "词语理解（P60）",
+            "bytes": 420875,
+            "sha256": "cb099fc04a47bca06833d839dd63110bbbab1907273d2909399ec3eba4aca500",
+            "duration_seconds": 25.992,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "7-3",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FrEHDdPzJXG0DPn0RA9MLmkC_ze9",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-07/7-3.mp3",
+            "scope": "听说句子（P61）",
+            "bytes": 932039,
+            "sha256": "c033e983392a4c89a6f8fc07647c6bff847b5f0cd2ddeb08b6a9560aa20cd669",
+            "duration_seconds": 57.94,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "7-4",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fm2U64p9MU2fViFi_FHmma4iSxjY",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-07/7-4.mp3",
+            "scope": "短文一（P61–P62）",
+            "bytes": 995569,
+            "sha256": "bfc5fa1ea1d796e5607a9b7598d16f689466ce3e0dd9da93afee52875613b8f0",
+            "duration_seconds": 61.91,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "7-5",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FiGKpAdf35vQDYHFbSOJk822X1Ej",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-07/7-5.mp3",
+            "scope": "短文二（P63–P64）",
+            "bytes": 955863,
+            "sha256": "e9ab7a6aad444d01b68f2945e75c67f455fef7126c8a5fb6da64c6fff216cec0",
+            "duration_seconds": 59.429,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "7-6",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FmVA1Mq_XzBfEUqNnbIWQ39oxbiW",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-07/7-6.mp3",
+            "scope": "短文三（P64–P65）",
+            "bytes": 1029841,
+            "sha256": "5233d683bc73fd9d9675cade116a09f739533699121c96b18dc7531f92c584e3",
+            "duration_seconds": 64.052,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          }
+        ],
+        "status": "draft_pending_source_approval",
+        "coverage_status": "7-1_to_7-6_technical_only;semantic_and_teacher_playback_pending"
+      },
+      "canonical_path": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json",
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/source-manifest.json",
+      "canonical_source_sha256": "c529512b98b62bdf8dc72e98605f5ec047ba969d7d365bb9c23da904fc4df45e",
+      "review_items": [
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:1",
+          "value": {
+            "no": 1,
+            "word": "登山",
+            "pinyin": "dēngshān",
+            "pos": "动",
+            "gloss": "to climb mountains"
+          },
+          "title": "登山",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:2",
+          "value": {
+            "no": 2,
+            "word": "优美",
+            "pinyin": "yōuměi",
+            "pos": "形",
+            "gloss": "beautiful; graceful"
+          },
+          "title": "优美",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:3",
+          "value": {
+            "no": 3,
+            "word": "热爱",
+            "pinyin": "rè'ài",
+            "pos": "动",
+            "gloss": "to love; adore"
+          },
+          "title": "热爱",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:4",
+          "value": {
+            "no": 4,
+            "word": "邻居",
+            "pinyin": "línjū",
+            "pos": "名",
+            "gloss": "neighbor"
+          },
+          "title": "邻居",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:5",
+          "value": {
+            "no": 5,
+            "word": "机会",
+            "pinyin": "jīhuì",
+            "pos": "名",
+            "gloss": "opportunity"
+          },
+          "title": "机会",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:6",
+          "value": {
+            "no": 6,
+            "word": "耐力",
+            "pinyin": "nàilì",
+            "pos": "名",
+            "gloss": "endurance; stamina"
+          },
+          "title": "耐力",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:7",
+          "value": {
+            "no": 7,
+            "word": "放松",
+            "pinyin": "fàngsōng",
+            "pos": "动",
+            "gloss": "to relax"
+          },
+          "title": "放松",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:8",
+          "value": {
+            "no": 8,
+            "word": "市民",
+            "pinyin": "shìmín",
+            "pos": "名",
+            "gloss": "citizen; resident"
+          },
+          "title": "市民",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:9",
+          "value": {
+            "no": 9,
+            "word": "挑战",
+            "pinyin": "tiǎozhàn",
+            "pos": "动",
+            "gloss": "to challenge"
+          },
+          "title": "挑战",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:10",
+          "value": {
+            "no": 10,
+            "word": "根本",
+            "pinyin": "gēnběn",
+            "pos": "副",
+            "gloss": "fundamentally"
+          },
+          "title": "根本",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:11",
+          "value": {
+            "no": 11,
+            "word": "合作",
+            "pinyin": "hézuò",
+            "pos": "动",
+            "gloss": "to cooperate"
+          },
+          "title": "合作",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:12",
+          "value": {
+            "no": 12,
+            "word": "浪漫",
+            "pinyin": "làngmàn",
+            "pos": "形",
+            "gloss": "romantic"
+          },
+          "title": "浪漫",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:13",
+          "value": {
+            "no": 13,
+            "word": "羡慕",
+            "pinyin": "xiànmù",
+            "pos": "动",
+            "gloss": "to admire; envy"
+          },
+          "title": "羡慕",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:14",
+          "value": {
+            "no": 14,
+            "word": "地道",
+            "pinyin": "dìdao",
+            "pos": "形",
+            "gloss": "authentic; genuine"
+          },
+          "title": "地道",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:15",
+          "value": {
+            "no": 15,
+            "word": "发亮",
+            "pinyin": "fāliàng",
+            "pos": "动",
+            "gloss": "to shine; glisten"
+          },
+          "title": "发亮",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:16",
+          "value": {
+            "no": 16,
+            "word": "不管",
+            "pinyin": "bùguǎn",
+            "pos": "连",
+            "gloss": "no matter how"
+          },
+          "title": "不管",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:17",
+          "value": {
+            "no": 17,
+            "word": "肚子",
+            "pinyin": "dùzi",
+            "pos": "名",
+            "gloss": "stomach; belly"
+          },
+          "title": "肚子",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:18",
+          "value": {
+            "no": 18,
+            "word": "感受",
+            "pinyin": "gǎnshòu",
+            "pos": "动",
+            "gloss": "to feel"
+          },
+          "title": "感受",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:19",
+          "value": {
+            "no": 19,
+            "word": "危险",
+            "pinyin": "wēixiǎn",
+            "pos": "形",
+            "gloss": "dangerous"
+          },
+          "title": "危险",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:20",
+          "value": {
+            "no": 20,
+            "word": "将来",
+            "pinyin": "jiānglái",
+            "pos": "名",
+            "gloss": "future"
+          },
+          "title": "将来",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:21",
+          "value": {
+            "no": 21,
+            "word": "山顶",
+            "pinyin": "shāndǐng",
+            "pos": "名",
+            "gloss": "hilltop"
+          },
+          "title": "山顶",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:22",
+          "value": {
+            "no": 22,
+            "word": "俱乐部",
+            "pinyin": "jùlèbù",
+            "pos": "名",
+            "gloss": "club"
+          },
+          "title": "俱乐部",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:23",
+          "value": {
+            "no": 23,
+            "word": "结交",
+            "pinyin": "jiéjiāo",
+            "pos": "动",
+            "gloss": "to get along with"
+          },
+          "title": "结交",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:24",
+          "value": {
+            "no": 24,
+            "word": "害怕",
+            "pinyin": "hàipà",
+            "pos": "动",
+            "gloss": "to fear"
+          },
+          "title": "害怕",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:25",
+          "value": {
+            "no": 25,
+            "word": "信心",
+            "pinyin": "xìnxīn",
+            "pos": "名",
+            "gloss": "confidence"
+          },
+          "title": "信心",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:26",
+          "value": {
+            "no": 26,
+            "word": "愉快",
+            "pinyin": "yúkuài",
+            "pos": "形",
+            "gloss": "happy; agreeable"
+          },
+          "title": "愉快",
+          "page": "59–60",
+          "audio": "7-1",
+          "type": "词语"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_1",
+          "value": {
+            "id": "short_text_1",
+            "printed_pages": [
+              61,
+              62
+            ],
+            "audio": "7-4",
+            "title": "小张是登山迷",
+            "text": "我的邻居小张热爱运动，打球、游泳、滑冰样样都会，让人羡慕。不过，他告诉我们，他最大的爱好是登山，是个地地道道的登山迷。一说起登山，他就兴奋得眼睛发亮。小张说，他小时候，家住在山里，不管是去上学，还是去市场，都要走好几里山路，走山路对他来说，就像走平路一样。那时候，小张每天很早就要出发去学校，下午放学后又要饿着肚子走山路回家，根本感受不到登山的快乐。小张真正喜欢上登山，是大学毕业开始工作以后。",
+            "exercises": {
+              "first_listen": [
+                "小张喜欢什么？",
+                "小张最大的爱好是什么？",
+                "小张小时候怎么样？"
+              ],
+              "second_listen": [
+                "谈起登山，小张怎么样？（兴奋）",
+                "小张小时候为什么不喜欢登山？（很早 饿着肚子 感受）",
+                "小张什么时候爱上登山的？（毕业 开始）"
+              ],
+              "present": "谈谈小张的爱好是什么。",
+              "compare": "小张的爱好和登山带来的好处。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  62
+                ],
+                "audio_tracks": [
+                  "7-4"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  62
+                ],
+                "audio_tracks": [
+                  "7-4"
+                ]
+              }
+            }
+          },
+          "title": "小张是登山迷",
+          "page": "61–62",
+          "audio": "7-4",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_2",
+          "value": {
+            "id": "short_text_2",
+            "printed_pages": [
+              63,
+              64
+            ],
+            "audio": "7-5",
+            "title": "小张真正爱上了登山",
+            "text": "上大学以后，小张来到了大城市，登山的机会不多。毕业以后，小张来到了另一座城市。他的工作虽然很好，可是压力很大，非常需要放松。小张说，那座城市的郊区有很多山，市民周末和节假日常常去那里。周末去登山，慢慢成了小张的习惯。他说，登山很累，有时候可能还有点儿危险，可是登山可以锻炼身体，提高耐力。累的时候，还可以停下来欣赏优美的风景。他说，将来如果找到自己喜欢的女孩儿，一定要在山顶上对她说他爱她。他这个人还挺浪漫的。",
+            "exercises": {
+              "first_listen": [
+                "上大学以后，小张常常登山吗？",
+                "小张的工作怎么样？",
+                "小张工作的城市山多吗？"
+              ],
+              "second_listen": [
+                "为什么登山成了小张的习惯？（压力 放松 郊区）",
+                "小张觉得登山怎么样？（累 危险 锻炼 欣赏）",
+                "为什么说小张是个浪漫的人？（将来 山顶）"
+              ],
+              "present": "谈谈小张的爱好是什么。",
+              "compare": "小张的爱好和登山带来的好处。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  63
+                ],
+                "audio_tracks": [
+                  "7-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  63
+                ],
+                "audio_tracks": [
+                  "7-5"
+                ]
+              }
+            }
+          },
+          "title": "小张真正爱上了登山",
+          "page": "63–64",
+          "audio": "7-5",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_3",
+          "value": {
+            "id": "short_text_3",
+            "printed_pages": [
+              64,
+              65
+            ],
+            "audio": "7-6",
+            "title": "登山可以增进友谊",
+            "text": "因为登山，小张参加了登山俱乐部，认识了新朋友，结交了不少登山伙伴。有空儿的时候，他也会约上同事、在同一座城市工作的大学和中学同学，一起参加他们登山俱乐部的活动。他们去的往往是有挑战性的地方，跟他一起去的同学、同事刚开始觉得有点儿害怕，没有信心，这时候，小张就鼓励他们。慢慢地，大家也爱上了登山。不仅如此，同事们的关系越来越好，合作起来也更加愉快，工作效率也更高了。今年过生日的时候，同事、朋友们一起送了他一双登山鞋，他收到的时候十分激动。",
+            "exercises": {
+              "first_listen": [
+                "小张和谁一起登山？",
+                "他们去什么样的地方登山？",
+                "今年过生日，小张收到了什么礼物？"
+              ],
+              "second_listen": [
+                "登山给小张带来了什么好处？（认识 参加）",
+                "登山对小张的工作有什么好处？（关系 合作 效率）"
+              ],
+              "present": "谈谈小张的爱好是什么。",
+              "compare": "小张的爱好和登山带来的好处。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  64
+                ],
+                "audio_tracks": [
+                  "7-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  64
+                ],
+                "audio_tracks": [
+                  "7-6"
+                ]
+              }
+            }
+          },
+          "title": "登山可以增进友谊",
+          "page": "64–65",
+          "audio": "7-6",
+          "type": "短文"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:1",
+          "value": {
+            "expression": "样样（量词重叠）",
+            "topic": "谈论个人生活"
+          },
+          "title": "样样（量词重叠）",
+          "page": "62–65",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:2",
+          "value": {
+            "expression": "地地道道（形容词重叠）",
+            "topic": "谈论个人生活"
+          },
+          "title": "地地道道（形容词重叠）",
+          "page": "62–65",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:3",
+          "value": {
+            "expression": "不管……都……",
+            "topic": "谈论个人生活"
+          },
+          "title": "不管……都……",
+          "page": "62–65",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:4",
+          "value": {
+            "expression": "像……一样（1）",
+            "topic": "谈论个人生活"
+          },
+          "title": "像……一样（1）",
+          "page": "62–65",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:5",
+          "value": {
+            "expression": "又（2）",
+            "topic": "谈论个人生活"
+          },
+          "title": "又（2）",
+          "page": "62–65",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:6",
+          "value": {
+            "expression": "根本",
+            "topic": "谈论个人生活"
+          },
+          "title": "根本",
+          "page": "62–65",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:7",
+          "value": {
+            "expression": "另",
+            "topic": "谈论个人生活"
+          },
+          "title": "另",
+          "page": "62–65",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:8",
+          "value": {
+            "expression": "虽然……可是",
+            "topic": "谈论个人生活"
+          },
+          "title": "虽然……可是",
+          "page": "62–65",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:9",
+          "value": {
+            "expression": "慢慢",
+            "topic": "谈论个人生活"
+          },
+          "title": "慢慢",
+          "page": "62–65",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:10",
+          "value": {
+            "expression": "成了",
+            "topic": "谈论个人生活"
+          },
+          "title": "成了",
+          "page": "62–65",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:11",
+          "value": {
+            "expression": "如果……一定……",
+            "topic": "谈论个人生活"
+          },
+          "title": "如果……一定……",
+          "page": "62–65",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:12",
+          "value": {
+            "expression": "动词+上（2）",
+            "topic": "谈论个人生活"
+          },
+          "title": "动词+上（2）",
+          "page": "62–65",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:13",
+          "value": {
+            "expression": "往往",
+            "topic": "谈论个人生活"
+          },
+          "title": "往往",
+          "page": "62–65",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:14",
+          "value": {
+            "expression": "刚开始……慢慢地",
+            "topic": "谈论个人生活"
+          },
+          "title": "刚开始……慢慢地",
+          "page": "62–65",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:15",
+          "value": {
+            "expression": "不仅如此",
+            "topic": "谈论个人生活"
+          },
+          "title": "不仅如此",
+          "page": "62–65",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:16",
+          "value": {
+            "expression": "动词+起来（1）",
+            "topic": "谈论个人生活"
+          },
+          "title": "动词+起来（1）",
+          "page": "62–65",
+          "type": "语法／表达"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehension:1",
+          "value": {
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读。",
+            "words": [
+              "乒乓球",
+              "登山",
+              "滑冰",
+              "游泳",
+              "优美",
+              "登山鞋"
+            ],
+            "answer": [
+              "1.E",
+              "2.B",
+              "3.C",
+              "4.D",
+              "5.A",
+              "6.F"
+            ]
+          },
+          "title": "词语理解",
+          "page": "60",
+          "audio": "7-2",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_7_3:1",
+          "value": {
+            "prompt": "李老师非常喜欢当老师。",
+            "answer": "对",
+            "number": 1,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "61",
+          "audio": "7-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_7_3:2",
+          "value": {
+            "prompt": "小张和丽丽是同学。",
+            "answer": "错",
+            "number": 2,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "61",
+          "audio": "7-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_7_3:3",
+          "value": {
+            "prompt": "小王钱不够。",
+            "answer": "错",
+            "number": 3,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "61",
+          "audio": "7-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_7_3:4",
+          "value": {
+            "prompt": "朴大宇不容易累。",
+            "answer": "对",
+            "number": 4,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "61",
+          "audio": "7-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_7_3:5",
+          "value": {
+            "prompt": "哥哥觉得很紧张。",
+            "answer": "对",
+            "number": 5,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "61",
+          "audio": "7-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_7_3:6",
+          "value": {
+            "prompt": "那个地方很漂亮。",
+            "answer": "对",
+            "number": 6,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "61",
+          "audio": "7-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_7_3:7",
+          "value": {
+            "prompt": "这个工作很有意思。",
+            "answer": "错",
+            "number": 7,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "61",
+          "audio": "7-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_7_3:8",
+          "value": {
+            "prompt": "大家登山的时间很少。",
+            "answer": "错",
+            "number": 8,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "61",
+          "audio": "7-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_7_3:9",
+          "value": {
+            "prompt": "同事们根本不愿意合作。",
+            "answer": "错",
+            "number": 9,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "61",
+          "audio": "7-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_7_3:10",
+          "value": {
+            "prompt": "大岛不懂浪漫。",
+            "answer": "错",
+            "number": 10,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "61",
+          "audio": "7-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:1",
+          "value": {
+            "prompt": "小张喜欢什么？",
+            "kind": "first_listen",
+            "textTitle": "小张是登山迷"
+          },
+          "title": "小张是登山迷 · first_listen",
+          "page": "61–62",
+          "audio": "7-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:2",
+          "value": {
+            "prompt": "小张最大的爱好是什么？",
+            "kind": "first_listen",
+            "textTitle": "小张是登山迷"
+          },
+          "title": "小张是登山迷 · first_listen",
+          "page": "61–62",
+          "audio": "7-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:3",
+          "value": {
+            "prompt": "小张小时候怎么样？",
+            "kind": "first_listen",
+            "textTitle": "小张是登山迷"
+          },
+          "title": "小张是登山迷 · first_listen",
+          "page": "61–62",
+          "audio": "7-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:1",
+          "value": {
+            "prompt": "谈起登山，小张怎么样？（兴奋）",
+            "kind": "second_listen",
+            "textTitle": "小张是登山迷"
+          },
+          "title": "小张是登山迷 · second_listen",
+          "page": "61–62",
+          "audio": "7-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:2",
+          "value": {
+            "prompt": "小张小时候为什么不喜欢登山？（很早 饿着肚子 感受）",
+            "kind": "second_listen",
+            "textTitle": "小张是登山迷"
+          },
+          "title": "小张是登山迷 · second_listen",
+          "page": "61–62",
+          "audio": "7-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:3",
+          "value": {
+            "prompt": "小张什么时候爱上登山的？（毕业 开始）",
+            "kind": "second_listen",
+            "textTitle": "小张是登山迷"
+          },
+          "title": "小张是登山迷 · second_listen",
+          "page": "61–62",
+          "audio": "7-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:present:1",
+          "value": {
+            "prompt": "谈谈小张的爱好是什么。",
+            "kind": "present",
+            "textTitle": "小张是登山迷"
+          },
+          "title": "小张是登山迷 · present",
+          "page": "61–62",
+          "audio": "7-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:compare:1",
+          "value": {
+            "prompt": "小张的爱好和登山带来的好处。",
+            "kind": "compare",
+            "textTitle": "小张是登山迷"
+          },
+          "title": "小张是登山迷 · compare",
+          "page": "61–62",
+          "audio": "7-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:1",
+          "value": {
+            "prompt": "上大学以后，小张常常登山吗？",
+            "kind": "first_listen",
+            "textTitle": "小张真正爱上了登山"
+          },
+          "title": "小张真正爱上了登山 · first_listen",
+          "page": "63–64",
+          "audio": "7-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:2",
+          "value": {
+            "prompt": "小张的工作怎么样？",
+            "kind": "first_listen",
+            "textTitle": "小张真正爱上了登山"
+          },
+          "title": "小张真正爱上了登山 · first_listen",
+          "page": "63–64",
+          "audio": "7-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:3",
+          "value": {
+            "prompt": "小张工作的城市山多吗？",
+            "kind": "first_listen",
+            "textTitle": "小张真正爱上了登山"
+          },
+          "title": "小张真正爱上了登山 · first_listen",
+          "page": "63–64",
+          "audio": "7-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:1",
+          "value": {
+            "prompt": "为什么登山成了小张的习惯？（压力 放松 郊区）",
+            "kind": "second_listen",
+            "textTitle": "小张真正爱上了登山"
+          },
+          "title": "小张真正爱上了登山 · second_listen",
+          "page": "63–64",
+          "audio": "7-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:2",
+          "value": {
+            "prompt": "小张觉得登山怎么样？（累 危险 锻炼 欣赏）",
+            "kind": "second_listen",
+            "textTitle": "小张真正爱上了登山"
+          },
+          "title": "小张真正爱上了登山 · second_listen",
+          "page": "63–64",
+          "audio": "7-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:3",
+          "value": {
+            "prompt": "为什么说小张是个浪漫的人？（将来 山顶）",
+            "kind": "second_listen",
+            "textTitle": "小张真正爱上了登山"
+          },
+          "title": "小张真正爱上了登山 · second_listen",
+          "page": "63–64",
+          "audio": "7-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:present:1",
+          "value": {
+            "prompt": "谈谈小张的爱好是什么。",
+            "kind": "present",
+            "textTitle": "小张真正爱上了登山"
+          },
+          "title": "小张真正爱上了登山 · present",
+          "page": "63–64",
+          "audio": "7-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:compare:1",
+          "value": {
+            "prompt": "小张的爱好和登山带来的好处。",
+            "kind": "compare",
+            "textTitle": "小张真正爱上了登山"
+          },
+          "title": "小张真正爱上了登山 · compare",
+          "page": "63–64",
+          "audio": "7-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:1",
+          "value": {
+            "prompt": "小张和谁一起登山？",
+            "kind": "first_listen",
+            "textTitle": "登山可以增进友谊"
+          },
+          "title": "登山可以增进友谊 · first_listen",
+          "page": "64–65",
+          "audio": "7-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:2",
+          "value": {
+            "prompt": "他们去什么样的地方登山？",
+            "kind": "first_listen",
+            "textTitle": "登山可以增进友谊"
+          },
+          "title": "登山可以增进友谊 · first_listen",
+          "page": "64–65",
+          "audio": "7-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:3",
+          "value": {
+            "prompt": "今年过生日，小张收到了什么礼物？",
+            "kind": "first_listen",
+            "textTitle": "登山可以增进友谊"
+          },
+          "title": "登山可以增进友谊 · first_listen",
+          "page": "64–65",
+          "audio": "7-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:1",
+          "value": {
+            "prompt": "登山给小张带来了什么好处？（认识 参加）",
+            "kind": "second_listen",
+            "textTitle": "登山可以增进友谊"
+          },
+          "title": "登山可以增进友谊 · second_listen",
+          "page": "64–65",
+          "audio": "7-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:2",
+          "value": {
+            "prompt": "登山对小张的工作有什么好处？（关系 合作 效率）",
+            "kind": "second_listen",
+            "textTitle": "登山可以增进友谊"
+          },
+          "title": "登山可以增进友谊 · second_listen",
+          "page": "64–65",
+          "audio": "7-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:present:1",
+          "value": {
+            "prompt": "谈谈小张的爱好是什么。",
+            "kind": "present",
+            "textTitle": "登山可以增进友谊"
+          },
+          "title": "登山可以增进友谊 · present",
+          "page": "64–65",
+          "audio": "7-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:compare:1",
+          "value": {
+            "prompt": "小张的爱好和登山带来的好处。",
+            "kind": "compare",
+            "textTitle": "登山可以增进友谊"
+          },
+          "title": "登山可以增进友谊 · compare",
+          "page": "64–65",
+          "audio": "7-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:1",
+          "value": {
+            "prompt": "请你根据听过的三段短文填表。"
+          },
+          "title": "综合练习",
+          "page": "66–67",
+          "audio": "7-4、7-5、7-6",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:2",
+          "value": {
+            "prompt": "小组活动：谈一谈小张的爱好、登山经历和登山好处。"
+          },
+          "title": "综合练习",
+          "page": "66–67",
+          "audio": "7-4、7-5、7-6",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:3",
+          "value": {
+            "prompt": "拓展练习：谈谈你喜欢的运动。"
+          },
+          "title": "综合练习",
+          "page": "66–67",
+          "audio": "7-4、7-5、7-6",
+          "type": "综合练习"
+        }
+      ]
+    },
+    "boya-quasi-intermediate-i:lesson-08": {
+      "available": true,
+      "review_complete": true,
+      "completion": {
+        "status": "completed_by_adam",
+        "confirmed_by": "Adam",
+        "confirmed_at": "2026-09-08",
+        "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+        "technical_status_preserved": true
+      },
+      "reason": "",
+      "canonical": {
+        "lesson_key": "boya-quasi-intermediate-i:lesson-08",
+        "schema_version": "quasi-intermediate-source-audit-v1.0",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_number": 8,
+        "lesson_id": "lesson-08",
+        "title": "孙子和《孙子兵法》",
+        "title_source": "主教材 PDF 第81页（印刷 P68）课名页视觉核对",
+        "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+        "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+        "page_map": {
+          "printed_pages": [
+            68,
+            76
+          ],
+          "pdf_pages": [
+            81,
+            89
+          ],
+          "answer_pdf_pages": [
+            22,
+            23
+          ],
+          "mapping_status": "visual_verified_first_pass"
+        },
+        "qr_evidence": {
+          "pdf_page": 81,
+          "qr_url": "http://qr31.cn/JjDVWY",
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-08-pdf-page-081.png",
+          "landing_page": "https://biz.cli.im/site/JjDVWY?qrurl=http://qr31.cn/JjDVWY&gtype=2&key=67ae517d4ac066c8b87829448cdeba53bf434f2028",
+          "landing_audio_labels": [
+            "8-1",
+            "8-2",
+            "8-3",
+            "8-4",
+            "8-5",
+            "8-6"
+          ],
+          "decode_status": "source_inventory_verified"
+        },
+        "audio_map": [
+          {
+            "label": "8-1",
+            "coding": "VY1539814",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fs5tr7IkZUb9Gxj83gJU-uX3ofcK",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-08/8-1.mp3",
+            "bytes": 976761,
+            "sha256": "4ee0ae390aa808652db94f1af28358729422b59215aaaef5bfcda8e72d9638c2",
+            "duration_seconds": 60.735,
+            "decode_status": "passed"
+          },
+          {
+            "label": "8-2",
+            "coding": "BG1783217",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FrpdFK0rp3lQUAo-_YqsNhj0UJ6s",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-08/8-2.mp3",
+            "bytes": 405828,
+            "sha256": "4510530d12236865d6c35aa4640d388c83005716e45826ba589979a1a2980143",
+            "duration_seconds": 25.051,
+            "decode_status": "passed"
+          },
+          {
+            "label": "8-3",
+            "coding": "LO1783218",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fth40dIQu-9BXFsp6ObafCLnfZe7",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-08/8-3.mp3",
+            "bytes": 885645,
+            "sha256": "cdbeb41756155fe7435902859a07d0ad7d1acc55f5234b4e490a6786e8e1f474",
+            "duration_seconds": 55.04,
+            "decode_status": "passed"
+          },
+          {
+            "label": "8-4",
+            "coding": "NT1783219",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FgDbiW1RQgrJruOgJE25Grca5AFZ",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-08/8-4.mp3",
+            "bytes": 1158979,
+            "sha256": "6e8a109c37d868b290ee98647028607df9863f52052ddf75fe5c6b9d8a529536",
+            "duration_seconds": 72.124,
+            "decode_status": "passed"
+          },
+          {
+            "label": "8-5",
+            "coding": "IZ1783220",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FmzgBzpC9QtDGVhyyCSVyWw3lqFs",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-08/8-5.mp3",
+            "bytes": 1074981,
+            "sha256": "f5e40224124fabbe596cc3ed9e3e87194d0166a54598c9ce8e852da941e870fd",
+            "duration_seconds": 66.873,
+            "decode_status": "passed"
+          },
+          {
+            "label": "8-6",
+            "coding": "CH1783221",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fi6dgkPoem8ah75q-v69KhZh2yVq",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-08/8-6.mp3",
+            "bytes": 1049068,
+            "sha256": "1ce2666355336e2f89705864fb9e135ea000969b6a8e9286bf27a171d581b4e1",
+            "duration_seconds": 65.254,
+            "decode_status": "passed"
+          }
+        ],
+        "content_inventory": {
+          "vocabulary_count": 29,
+          "proper_noun_count": 2,
+          "vocabulary_comprehension_group_count": 1,
+          "listening_sentence_item_count": 10,
+          "texts_dialogues_count": 3,
+          "listening_exercise_group_count": 6,
+          "common_expression_group_count": 3,
+          "comprehensive_exercise_count": 3,
+          "status": "visual_source_snapshot_pending_adam_approval"
+        },
+        "answer_policy": "仅记录参考答案 PDF 中可核对的答案；开放式口语题不补写唯一答案，保留教师示例和评量空间。",
+        "review": {
+          "status": "pending_review",
+          "approved": false,
+          "approved_by": [],
+          "approved_at": null,
+          "blockers": [
+            "扫描教材无可用文字层；最终来源批准需由 Adam 对视觉转录、教材页码和答案证据确认。",
+            "六段音频已通过本地文件 bytes、SHA-256、ffprobe 时长和解码核验；语义听核及教师 PowerPoint 播放实测仍待完成。",
+            "开放式口语、综合填表与小组总结没有唯一标准答案，不补写答案。"
+          ],
+          "approval_basis": [
+            "主教材 PDF 第81–90页（印刷 P68–P76）视觉核对",
+            "答案 PDF 文件第22–23页视觉核对",
+            "来源总盘点 QR、音频 bytes、hash 和时长记录"
+          ]
+        },
+        "sections": [
+          {
+            "id": "vocabulary",
+            "printed_pages": [
+              68,
+              69
+            ],
+            "audio": "8-1",
+            "entries": [
+              {
+                "no": 1,
+                "word": "士兵",
+                "pinyin": "shìbīng",
+                "pos": "名",
+                "gloss": "soldier"
+              },
+              {
+                "no": 2,
+                "word": "打仗",
+                "pinyin": "dǎzhàng",
+                "pos": "动",
+                "gloss": "to go to war"
+              },
+              {
+                "no": 3,
+                "word": "训练",
+                "pinyin": "xùnliàn",
+                "pos": "动",
+                "gloss": "to train"
+              },
+              {
+                "no": 4,
+                "word": "进攻",
+                "pinyin": "jìngōng",
+                "pos": "动",
+                "gloss": "to attack"
+              },
+              {
+                "no": 5,
+                "word": "军事家",
+                "pinyin": "jūnshìjiā",
+                "pos": "名",
+                "gloss": "strategist"
+              },
+              {
+                "no": 6,
+                "word": "记载",
+                "pinyin": "jìzǎi",
+                "pos": "动",
+                "gloss": "to record"
+              },
+              {
+                "no": 7,
+                "word": "将军",
+                "pinyin": "jiāngjūn",
+                "pos": "名",
+                "gloss": "general; commander"
+              },
+              {
+                "no": 8,
+                "word": "权力",
+                "pinyin": "quánlì",
+                "pos": "名",
+                "gloss": "power"
+              },
+              {
+                "no": 9,
+                "word": "策略",
+                "pinyin": "cèlüè",
+                "pos": "名",
+                "gloss": "strategy"
+              },
+              {
+                "no": 10,
+                "word": "打败仗",
+                "pinyin": "dǎ bàizhàng",
+                "pos": "动",
+                "gloss": "to lose a battle"
+              },
+              {
+                "no": 11,
+                "word": "结束",
+                "pinyin": "jiéshù",
+                "pos": "动",
+                "gloss": "to finish"
+              },
+              {
+                "no": 12,
+                "word": "开设",
+                "pinyin": "kāishè",
+                "pos": "动",
+                "gloss": "to offer (a course)"
+              },
+              {
+                "no": 13,
+                "word": "带兵打仗",
+                "pinyin": "dài bīng dǎzhàng",
+                "pos": "动",
+                "gloss": "to command troops"
+              },
+              {
+                "no": 14,
+                "word": "严明",
+                "pinyin": "yánmíng",
+                "pos": "形",
+                "gloss": "strict and impartial"
+              },
+              {
+                "no": 15,
+                "word": "根据",
+                "pinyin": "gēnjù",
+                "pos": "介",
+                "gloss": "based on"
+              },
+              {
+                "no": 16,
+                "word": "曾经",
+                "pinyin": "céngjīng",
+                "pos": "副",
+                "gloss": "once"
+              },
+              {
+                "no": 17,
+                "word": "展示",
+                "pinyin": "zhǎnshì",
+                "pos": "动",
+                "gloss": "to show; display"
+              },
+              {
+                "no": 18,
+                "word": "妻子",
+                "pinyin": "qīzi",
+                "pos": "名",
+                "gloss": "wife"
+              },
+              {
+                "no": 19,
+                "word": "制定",
+                "pinyin": "zhìdìng",
+                "pos": "动",
+                "gloss": "to draw up"
+              },
+              {
+                "no": 20,
+                "word": "嘻嘻哈哈",
+                "pinyin": "xīxī-hāhā",
+                "pos": "形",
+                "gloss": "laughing and joking"
+              },
+              {
+                "no": 21,
+                "word": "严肃",
+                "pinyin": "yánsù",
+                "pos": "形",
+                "gloss": "serious"
+              },
+              {
+                "no": 22,
+                "word": "按",
+                "pinyin": "àn",
+                "pos": "介",
+                "gloss": "according to"
+              },
+              {
+                "no": 23,
+                "word": "军法",
+                "pinyin": "jūnfǎ",
+                "pos": "名",
+                "gloss": "military law"
+              },
+              {
+                "no": 24,
+                "word": "处死",
+                "pinyin": "chǔsǐ",
+                "pos": "动",
+                "gloss": "to execute"
+              },
+              {
+                "no": 25,
+                "word": "难过",
+                "pinyin": "nánguò",
+                "pos": "形",
+                "gloss": "sad"
+              },
+              {
+                "no": 26,
+                "word": "任命",
+                "pinyin": "rènmìng",
+                "pos": "动",
+                "gloss": "to appoint"
+              },
+              {
+                "no": 27,
+                "word": "打胜仗",
+                "pinyin": "dǎ shèngzhàng",
+                "pos": "动",
+                "gloss": "to win a battle"
+              },
+              {
+                "no": 28,
+                "word": "既",
+                "pinyin": "jì",
+                "pos": "副",
+                "gloss": "both ... (and)"
+              },
+              {
+                "no": 29,
+                "word": "战败",
+                "pinyin": "zhànbài",
+                "pos": "动",
+                "gloss": "to be defeated"
+              }
+            ],
+            "proper_nouns": [
+              [
+                "孙子",
+                "Sūn Zǐ",
+                "春秋时期军事家"
+              ],
+              [
+                "《孙子兵法》",
+                "Sūn Zǐ Bīngfǎ",
+                "The Art of War"
+              ]
+            ],
+            "source_status": "visual_transcription_pending_review"
+          },
+          {
+            "id": "vocabulary_comprehension",
+            "printed_pages": [
+              70
+            ],
+            "audio": "8-2",
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读。",
+            "groups": [
+              {
+                "words": [
+                  "士兵",
+                  "打仗",
+                  "训练",
+                  "进攻",
+                  "吴王"
+                ],
+                "answer": [
+                  "1.A",
+                  "2.E",
+                  "3.C",
+                  "4.D",
+                  "5.B"
+                ]
+              }
+            ],
+            "answer_status": "answers_checked_against_answer_pdf"
+          },
+          {
+            "id": "listening_sentences",
+            "printed_pages": [
+              70
+            ],
+            "audio_tracks": [
+              "8-3"
+            ],
+            "exercises": {
+              "exercise_8_3": {
+                "heading_verbatim": "一、听句子，判断对错",
+                "items": [
+                  [
+                    1,
+                    "他写了很多书。",
+                    "错"
+                  ],
+                  [
+                    2,
+                    "这件事有根据。",
+                    "对"
+                  ],
+                  [
+                    3,
+                    "他们下星期开始训练。",
+                    "错"
+                  ],
+                  [
+                    4,
+                    "将军权力很大。",
+                    "对"
+                  ],
+                  [
+                    5,
+                    "他提出的策略现在还有影响。",
+                    "对"
+                  ],
+                  [
+                    6,
+                    "我们打了败仗。",
+                    "错"
+                  ],
+                  [
+                    7,
+                    "战争结束了。",
+                    "对"
+                  ],
+                  [
+                    8,
+                    "下学期要开设两门新课。",
+                    "对"
+                  ],
+                  [
+                    9,
+                    "这几句话企业家们都知道。",
+                    "错"
+                  ],
+                  [
+                    10,
+                    "这本书大家都比较熟悉。",
+                    "对"
+                  ]
+                ]
+              }
+            }
+          },
+          {
+            "id": "short_text_1",
+            "printed_pages": [
+              71,
+              72
+            ],
+            "audio": "8-4",
+            "title": "孙子趣事",
+            "text": "孙子，名叫孙武（约公元前545年—公元前470年），是春秋时期有名的军事家。他很会带兵打仗，认为军法要严明，统治者要给将军足够的权力。根据《史记》记载，吴王阖闾曾经让孙子展示怎样训练军队，训练的对象是宫中的180名美女。孙子把她们分成两队，由吴王的两位妻子当队长。孙武制定了军法以后就开始训练。训练的时候，美女们嘻嘻哈哈，很不严肃，孙子就按军法把两位队长处死了。吴王虽然非常难过，可是他也明白了孙子带兵打仗的能力，任命他做了将军。",
+            "exercises": {
+              "first_listen": [
+                "孙武是谁？",
+                "吴王让他训练谁？",
+                "吴王明白了什么？"
+              ],
+              "second_listen": [
+                "孙武是什么时候的人？（春秋）",
+                "孙武对军法有什么样的看法？（严明 权力）",
+                "孙武杀了谁？为什么？（严肃 军法 队长）"
+              ],
+              "present": "谈一谈孙子和《孙子兵法》的主要内容。",
+              "compare": "孙子的军事理论及其世界影响。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  71
+                ],
+                "audio_tracks": [
+                  "8-4"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  71
+                ],
+                "audio_tracks": [
+                  "8-4"
+                ]
+              }
+            }
+          },
+          {
+            "id": "short_text_2",
+            "printed_pages": [
+              72,
+              73
+            ],
+            "audio": "8-5",
+            "title": "《孙子兵法》",
+            "text": "《孙子兵法》共有13篇，是关于战争理论的书。孙子觉得战争是国家大事，关系重大，必须仔细考察。他认为，如果可以通过其他方法解决问题而不用打仗的话，是最好的。如果必须打仗，要研究军事策略，而且要尽可能在短时间内结束战争，要在对方没有准备的时候进攻。孙子指出，要想打胜仗，还必须了解对方也要了解自己。如果既了解对方也了解自己，就不会战败。如果既不了解别人也不了解自己，每场都会打败仗。这就是有名的“攻其无备，出其不意”“知彼知己，百战不殆”“不知彼，不知己，每战必殆”的军事方法和策略。",
+            "exercises": {
+              "first_listen": [
+                "孙子写的书叫什么？",
+                "这本书里面有多少篇？"
+              ],
+              "second_listen": [
+                "这本书是关于什么的书？（理论）",
+                "孙子在书中谈到了哪些理论？（解决 短时间 了解对方和自己 进攻）",
+                "你能不能说出书中的原话？（百战不殆）"
+              ],
+              "present": "谈一谈孙子和《孙子兵法》的主要内容。",
+              "compare": "孙子的军事理论及其世界影响。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  72
+                ],
+                "audio_tracks": [
+                  "8-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  72
+                ],
+                "audio_tracks": [
+                  "8-5"
+                ]
+              }
+            }
+          },
+          {
+            "id": "short_text_3",
+            "printed_pages": [
+              74
+            ],
+            "audio": "8-6",
+            "title": "《孙子兵法》和它的影响",
+            "text": "无论是古代还是现代，《孙子兵法》的影响都很大。不仅在中国是这样，它被翻译介绍到国外之后，也很受欢迎。不管是网上，还是在国外的书店，都能找到英文版、法文版、日文版或者韩文版的《孙子兵法》。有些国外大学还开设了《孙子兵法》课程。书中所说的方法和策略，除了被用在军事活动中，在商业活动中使用得也比较多，比如“知彼知己，百战不殆”“攻其无备，出其不意”，已经成为企业家们熟悉的名句。",
+            "exercises": {
+              "first_listen": [
+                "《孙子兵法》在国外有没有影响？",
+                "在哪里可以找到外文版的《孙子兵法》？"
+              ],
+              "second_listen": [
+                "《孙子兵法》主要有哪几种外文版本？（或者）",
+                "《孙子兵法》对哪些活动有影响？（军事活动 商业活动）",
+                "请你解释一下‘攻其无备，出其不意’是什么意思。（没有准备 进攻）"
+              ],
+              "present": "谈一谈孙子和《孙子兵法》的主要内容。",
+              "compare": "孙子的军事理论及其世界影响。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  74
+                ],
+                "audio_tracks": [
+                  "8-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  74
+                ],
+                "audio_tracks": [
+                  "8-6"
+                ]
+              }
+            }
+          },
+          {
+            "id": "common_expressions",
+            "printed_pages": [
+              72,
+              73,
+              74
+            ],
+            "groups": [
+              {
+                "topic": "说明情况",
+                "items": [
+                  "根据",
+                  "曾经",
+                  "把……动词+成",
+                  "按",
+                  "把……动词+补语",
+                  "虽然（2）",
+                  "关于",
+                  "通过",
+                  "必须",
+                  "要在……内",
+                  "既……又/也……",
+                  "既不……也不……",
+                  "被翻译/介绍+到/成",
+                  "有的……有的……还有的……",
+                  "除了……还/也……",
+                  "比如",
+                  "已经成为"
+                ]
+              }
+            ],
+            "source_status": "visual_transcription_pending_review"
+          },
+          {
+            "id": "comprehensive_practice",
+            "printed_pages": [
+              75,
+              76
+            ],
+            "audio_tracks": [
+              "8-4",
+              "8-5",
+              "8-6"
+            ],
+            "items": [
+              "请你根据听过的三段短文填表。",
+              "小组活动：谈一谈孙武带兵的故事、军事理论和《孙子兵法》的影响。",
+              "拓展练习：谈谈你喜欢的历史人物。"
+            ],
+            "source_status": "visual_transcription_pending_review"
+          }
+        ]
+      },
+      "source_manifest": {
+        "schema_version": "boya-lesson-source-manifest-v1",
+        "manifest_type": "lesson-source-review",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_id": "lesson-08",
+        "lesson_key": "boya-quasi-intermediate-i:lesson-08",
+        "completion_confirmation": {
+          "status": "completed_by_adam",
+          "confirmed_by": "Adam",
+          "confirmed_at": "2026-09-08",
+          "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+          "technical_status_preserved": true
+        },
+        "lesson_number": 8,
+        "lesson_title": "孙子和《孙子兵法》",
+        "language": "简体中文",
+        "package": "lesson-08-source-review",
+        "prepared_at": "2026-08-28",
+        "source_status": "pending_review",
+        "source_qa_status": "blocked",
+        "extraction_status": "source_review_materialized",
+        "review_status": "awaiting_adam_review",
+        "approved": false,
+        "approved_by": [],
+        "approved_at": null,
+        "canonical_source": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json",
+          "sha256": "30bc7a4716233edf482abac6d8838a296359a51f2c5958efb9becf535f216b89",
+          "status": "source_review_snapshot"
+        },
+        "canonical_source_sha256": "30bc7a4716233edf482abac6d8838a296359a51f2c5958efb9becf535f216b89",
+        "source_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+          "sha256": "39899d0f400e187f57c16db821f8f4c207f936eae0e4fbfe3cab52c02bfea806",
+          "total_pages": 134,
+          "textbook_page_range": "68–76",
+          "pdf_page_range": "81–90",
+          "page_count_in_review": 10,
+          "format": "scanned_image_pdf",
+          "text_layer_status": "empty; visual review used"
+        },
+        "answer_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+          "sha256": "3c21e1574b0187259769799d183eca78a60a515b5b7fce202eda9e9ade2c20b8",
+          "total_pages": 33,
+          "pdf_page_range_in_review": "22–23",
+          "answer_status": "closed_answers_visual_checked; open_tasks_have_no_unique_answer"
+        },
+        "page_audit": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/audit/source-pages-68-76-audit-draft.md",
+          "sha256": "7192ce621b122815ae9caee1650e6b9a8d777956bb7f8a4a0f27d31e94e4043e",
+          "status": "visual_first_pass"
+        },
+        "answer_audit": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/audit/answer-pages-22-23-audit-draft.md",
+          "sha256": "d3490d7409dcc73b454bba807197846f5bf91a591f06d5157d3b6c86b1001d4c",
+          "status": "visual_first_pass"
+        },
+        "qr_source": {
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-08-pdf-page-081.png",
+          "qr_url": "http://qr31.cn/JjDVWY",
+          "landing_page": "https://biz.cli.im/site/JjDVWY?qrurl=http://qr31.cn/JjDVWY&gtype=2&key=67ae517d4ac066c8b87829448cdeba53bf434f2028",
+          "status": "decoded_landing_page_lists_1_to_6"
+        },
+        "audio": {
+          "root": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-08",
+          "manifest": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/audio-manifest.json",
+          "manifest_sha256": "ded3c457de89e6f1faab52f51fa2ff6bc53604651dda86a78aafb20215e442e1",
+          "technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/audit/audio-technical-2026-08-28.md",
+          "expected_track_count": 6,
+          "local_track_count": 6,
+          "decode_passed_count": 6,
+          "semantic_listening_count": 0,
+          "teacher_playback_count": 0,
+          "status": "technical_pass_semantic_review_pending"
+        },
+        "listening_exercise_contract": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/listening-exercise-contract.json",
+        "listening_exercise_contract_sha256": "dce6eb8c7a7477d2535ac7c3f3cd63f9e232bdd5db75d148f491ab66803ca81d",
+        "listening_exercise_contract_detail": {
+          "status": "draft_validated",
+          "exercise_count": 9
+        },
+        "review_evidence": {
+          "page_range": "P68–P76",
+          "answer_page_range": "答案 PDF P22–P23",
+          "vocabulary_count": 29,
+          "proper_noun_count": 2,
+          "short_text_count": 3,
+          "short_text_listen_group_count": 6,
+          "status": "page_answer_audio_mapping_written; final source approval pending"
+        },
+        "blockers": [
+          "六段音频技术核验通过；语义听核和教师播放实测待完成。",
+          "扫描教材无文字层；需 Adam 核对视觉转录、页码和答案证据。",
+          "开放式题目无唯一答案，保持答案政策。"
+        ],
+        "next_minimum_step": "Adam 审核 canonical source 与 listening exercise contract"
+      },
+      "audio": {
+        "schema_version": "boya-lesson-audio-manifest-v1",
+        "lesson_id": "lesson-08",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_title": "孙子和《孙子兵法》",
+        "recorded_at": "2026-08-28",
+        "provenance": {
+          "source_type": "publisher_qr_landing_page",
+          "qr_url": "http://qr31.cn/JjDVWY",
+          "landing_page": "https://biz.cli.im/site/JjDVWY?qrurl=http://qr31.cn/JjDVWY&gtype=2&key=67ae517d4ac066c8b87829448cdeba53bf434f2028",
+          "landing_audio_labels": [
+            "8-1",
+            "8-2",
+            "8-3",
+            "8-4",
+            "8-5",
+            "8-6"
+          ],
+          "textbook_labels_seen": [
+            "8-1",
+            "8-2",
+            "8-3",
+            "8-4",
+            "8-5",
+            "8-6"
+          ],
+          "label_discrepancy": null
+        },
+        "technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/audit/audio-technical-2026-08-28.md",
+        "tracks": [
+          {
+            "label": "8-1",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fs5tr7IkZUb9Gxj83gJU-uX3ofcK",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-08/8-1.mp3",
+            "scope": "词语（P68–P69）",
+            "bytes": 976761,
+            "sha256": "4ee0ae390aa808652db94f1af28358729422b59215aaaef5bfcda8e72d9638c2",
+            "duration_seconds": 60.735,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "8-2",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FrpdFK0rp3lQUAo-_YqsNhj0UJ6s",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-08/8-2.mp3",
+            "scope": "词语理解（P69–P70）",
+            "bytes": 405828,
+            "sha256": "4510530d12236865d6c35aa4640d388c83005716e45826ba589979a1a2980143",
+            "duration_seconds": 25.051,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "8-3",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fth40dIQu-9BXFsp6ObafCLnfZe7",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-08/8-3.mp3",
+            "scope": "听说句子（P70）",
+            "bytes": 885645,
+            "sha256": "cdbeb41756155fe7435902859a07d0ad7d1acc55f5234b4e490a6786e8e1f474",
+            "duration_seconds": 55.04,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "8-4",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FgDbiW1RQgrJruOgJE25Grca5AFZ",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-08/8-4.mp3",
+            "scope": "短文一（P71–P72）",
+            "bytes": 1158979,
+            "sha256": "6e8a109c37d868b290ee98647028607df9863f52052ddf75fe5c6b9d8a529536",
+            "duration_seconds": 72.124,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "8-5",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FmzgBzpC9QtDGVhyyCSVyWw3lqFs",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-08/8-5.mp3",
+            "scope": "短文二（P72–P73）",
+            "bytes": 1074981,
+            "sha256": "f5e40224124fabbe596cc3ed9e3e87194d0166a54598c9ce8e852da941e870fd",
+            "duration_seconds": 66.873,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "8-6",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fi6dgkPoem8ah75q-v69KhZh2yVq",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-08/8-6.mp3",
+            "scope": "短文三（P73–P74）",
+            "bytes": 1049068,
+            "sha256": "1ce2666355336e2f89705864fb9e135ea000969b6a8e9286bf27a171d581b4e1",
+            "duration_seconds": 65.254,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          }
+        ],
+        "status": "draft_pending_source_approval",
+        "coverage_status": "8-1_to_8-6_technical_only;semantic_and_teacher_playback_pending"
+      },
+      "canonical_path": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json",
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/source-manifest.json",
+      "canonical_source_sha256": "30bc7a4716233edf482abac6d8838a296359a51f2c5958efb9becf535f216b89",
+      "review_items": [
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:1",
+          "value": {
+            "no": 1,
+            "word": "士兵",
+            "pinyin": "shìbīng",
+            "pos": "名",
+            "gloss": "soldier"
+          },
+          "title": "士兵",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:2",
+          "value": {
+            "no": 2,
+            "word": "打仗",
+            "pinyin": "dǎzhàng",
+            "pos": "动",
+            "gloss": "to go to war"
+          },
+          "title": "打仗",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:3",
+          "value": {
+            "no": 3,
+            "word": "训练",
+            "pinyin": "xùnliàn",
+            "pos": "动",
+            "gloss": "to train"
+          },
+          "title": "训练",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:4",
+          "value": {
+            "no": 4,
+            "word": "进攻",
+            "pinyin": "jìngōng",
+            "pos": "动",
+            "gloss": "to attack"
+          },
+          "title": "进攻",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:5",
+          "value": {
+            "no": 5,
+            "word": "军事家",
+            "pinyin": "jūnshìjiā",
+            "pos": "名",
+            "gloss": "strategist"
+          },
+          "title": "军事家",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:6",
+          "value": {
+            "no": 6,
+            "word": "记载",
+            "pinyin": "jìzǎi",
+            "pos": "动",
+            "gloss": "to record"
+          },
+          "title": "记载",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:7",
+          "value": {
+            "no": 7,
+            "word": "将军",
+            "pinyin": "jiāngjūn",
+            "pos": "名",
+            "gloss": "general; commander"
+          },
+          "title": "将军",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:8",
+          "value": {
+            "no": 8,
+            "word": "权力",
+            "pinyin": "quánlì",
+            "pos": "名",
+            "gloss": "power"
+          },
+          "title": "权力",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:9",
+          "value": {
+            "no": 9,
+            "word": "策略",
+            "pinyin": "cèlüè",
+            "pos": "名",
+            "gloss": "strategy"
+          },
+          "title": "策略",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:10",
+          "value": {
+            "no": 10,
+            "word": "打败仗",
+            "pinyin": "dǎ bàizhàng",
+            "pos": "动",
+            "gloss": "to lose a battle"
+          },
+          "title": "打败仗",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:11",
+          "value": {
+            "no": 11,
+            "word": "结束",
+            "pinyin": "jiéshù",
+            "pos": "动",
+            "gloss": "to finish"
+          },
+          "title": "结束",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:12",
+          "value": {
+            "no": 12,
+            "word": "开设",
+            "pinyin": "kāishè",
+            "pos": "动",
+            "gloss": "to offer (a course)"
+          },
+          "title": "开设",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:13",
+          "value": {
+            "no": 13,
+            "word": "带兵打仗",
+            "pinyin": "dài bīng dǎzhàng",
+            "pos": "动",
+            "gloss": "to command troops"
+          },
+          "title": "带兵打仗",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:14",
+          "value": {
+            "no": 14,
+            "word": "严明",
+            "pinyin": "yánmíng",
+            "pos": "形",
+            "gloss": "strict and impartial"
+          },
+          "title": "严明",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:15",
+          "value": {
+            "no": 15,
+            "word": "根据",
+            "pinyin": "gēnjù",
+            "pos": "介",
+            "gloss": "based on"
+          },
+          "title": "根据",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:16",
+          "value": {
+            "no": 16,
+            "word": "曾经",
+            "pinyin": "céngjīng",
+            "pos": "副",
+            "gloss": "once"
+          },
+          "title": "曾经",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:17",
+          "value": {
+            "no": 17,
+            "word": "展示",
+            "pinyin": "zhǎnshì",
+            "pos": "动",
+            "gloss": "to show; display"
+          },
+          "title": "展示",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:18",
+          "value": {
+            "no": 18,
+            "word": "妻子",
+            "pinyin": "qīzi",
+            "pos": "名",
+            "gloss": "wife"
+          },
+          "title": "妻子",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:19",
+          "value": {
+            "no": 19,
+            "word": "制定",
+            "pinyin": "zhìdìng",
+            "pos": "动",
+            "gloss": "to draw up"
+          },
+          "title": "制定",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:20",
+          "value": {
+            "no": 20,
+            "word": "嘻嘻哈哈",
+            "pinyin": "xīxī-hāhā",
+            "pos": "形",
+            "gloss": "laughing and joking"
+          },
+          "title": "嘻嘻哈哈",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:21",
+          "value": {
+            "no": 21,
+            "word": "严肃",
+            "pinyin": "yánsù",
+            "pos": "形",
+            "gloss": "serious"
+          },
+          "title": "严肃",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:22",
+          "value": {
+            "no": 22,
+            "word": "按",
+            "pinyin": "àn",
+            "pos": "介",
+            "gloss": "according to"
+          },
+          "title": "按",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:23",
+          "value": {
+            "no": 23,
+            "word": "军法",
+            "pinyin": "jūnfǎ",
+            "pos": "名",
+            "gloss": "military law"
+          },
+          "title": "军法",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:24",
+          "value": {
+            "no": 24,
+            "word": "处死",
+            "pinyin": "chǔsǐ",
+            "pos": "动",
+            "gloss": "to execute"
+          },
+          "title": "处死",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:25",
+          "value": {
+            "no": 25,
+            "word": "难过",
+            "pinyin": "nánguò",
+            "pos": "形",
+            "gloss": "sad"
+          },
+          "title": "难过",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:26",
+          "value": {
+            "no": 26,
+            "word": "任命",
+            "pinyin": "rènmìng",
+            "pos": "动",
+            "gloss": "to appoint"
+          },
+          "title": "任命",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:27",
+          "value": {
+            "no": 27,
+            "word": "打胜仗",
+            "pinyin": "dǎ shèngzhàng",
+            "pos": "动",
+            "gloss": "to win a battle"
+          },
+          "title": "打胜仗",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:28",
+          "value": {
+            "no": 28,
+            "word": "既",
+            "pinyin": "jì",
+            "pos": "副",
+            "gloss": "both ... (and)"
+          },
+          "title": "既",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:29",
+          "value": {
+            "no": 29,
+            "word": "战败",
+            "pinyin": "zhànbài",
+            "pos": "动",
+            "gloss": "to be defeated"
+          },
+          "title": "战败",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "proper-noun:1",
+          "value": [
+            "孙子",
+            "Sūn Zǐ",
+            "春秋时期军事家"
+          ],
+          "title": "孙子",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "专名"
+        },
+        {
+          "area": "vocabulary",
+          "id": "proper-noun:2",
+          "value": [
+            "《孙子兵法》",
+            "Sūn Zǐ Bīngfǎ",
+            "The Art of War"
+          ],
+          "title": "《孙子兵法》",
+          "page": "68–69",
+          "audio": "8-1",
+          "type": "专名"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_1",
+          "value": {
+            "id": "short_text_1",
+            "printed_pages": [
+              71,
+              72
+            ],
+            "audio": "8-4",
+            "title": "孙子趣事",
+            "text": "孙子，名叫孙武（约公元前545年—公元前470年），是春秋时期有名的军事家。他很会带兵打仗，认为军法要严明，统治者要给将军足够的权力。根据《史记》记载，吴王阖闾曾经让孙子展示怎样训练军队，训练的对象是宫中的180名美女。孙子把她们分成两队，由吴王的两位妻子当队长。孙武制定了军法以后就开始训练。训练的时候，美女们嘻嘻哈哈，很不严肃，孙子就按军法把两位队长处死了。吴王虽然非常难过，可是他也明白了孙子带兵打仗的能力，任命他做了将军。",
+            "exercises": {
+              "first_listen": [
+                "孙武是谁？",
+                "吴王让他训练谁？",
+                "吴王明白了什么？"
+              ],
+              "second_listen": [
+                "孙武是什么时候的人？（春秋）",
+                "孙武对军法有什么样的看法？（严明 权力）",
+                "孙武杀了谁？为什么？（严肃 军法 队长）"
+              ],
+              "present": "谈一谈孙子和《孙子兵法》的主要内容。",
+              "compare": "孙子的军事理论及其世界影响。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  71
+                ],
+                "audio_tracks": [
+                  "8-4"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  71
+                ],
+                "audio_tracks": [
+                  "8-4"
+                ]
+              }
+            }
+          },
+          "title": "孙子趣事",
+          "page": "71–72",
+          "audio": "8-4",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_2",
+          "value": {
+            "id": "short_text_2",
+            "printed_pages": [
+              72,
+              73
+            ],
+            "audio": "8-5",
+            "title": "《孙子兵法》",
+            "text": "《孙子兵法》共有13篇，是关于战争理论的书。孙子觉得战争是国家大事，关系重大，必须仔细考察。他认为，如果可以通过其他方法解决问题而不用打仗的话，是最好的。如果必须打仗，要研究军事策略，而且要尽可能在短时间内结束战争，要在对方没有准备的时候进攻。孙子指出，要想打胜仗，还必须了解对方也要了解自己。如果既了解对方也了解自己，就不会战败。如果既不了解别人也不了解自己，每场都会打败仗。这就是有名的“攻其无备，出其不意”“知彼知己，百战不殆”“不知彼，不知己，每战必殆”的军事方法和策略。",
+            "exercises": {
+              "first_listen": [
+                "孙子写的书叫什么？",
+                "这本书里面有多少篇？"
+              ],
+              "second_listen": [
+                "这本书是关于什么的书？（理论）",
+                "孙子在书中谈到了哪些理论？（解决 短时间 了解对方和自己 进攻）",
+                "你能不能说出书中的原话？（百战不殆）"
+              ],
+              "present": "谈一谈孙子和《孙子兵法》的主要内容。",
+              "compare": "孙子的军事理论及其世界影响。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  72
+                ],
+                "audio_tracks": [
+                  "8-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  72
+                ],
+                "audio_tracks": [
+                  "8-5"
+                ]
+              }
+            }
+          },
+          "title": "《孙子兵法》",
+          "page": "72–73",
+          "audio": "8-5",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_3",
+          "value": {
+            "id": "short_text_3",
+            "printed_pages": [
+              74
+            ],
+            "audio": "8-6",
+            "title": "《孙子兵法》和它的影响",
+            "text": "无论是古代还是现代，《孙子兵法》的影响都很大。不仅在中国是这样，它被翻译介绍到国外之后，也很受欢迎。不管是网上，还是在国外的书店，都能找到英文版、法文版、日文版或者韩文版的《孙子兵法》。有些国外大学还开设了《孙子兵法》课程。书中所说的方法和策略，除了被用在军事活动中，在商业活动中使用得也比较多，比如“知彼知己，百战不殆”“攻其无备，出其不意”，已经成为企业家们熟悉的名句。",
+            "exercises": {
+              "first_listen": [
+                "《孙子兵法》在国外有没有影响？",
+                "在哪里可以找到外文版的《孙子兵法》？"
+              ],
+              "second_listen": [
+                "《孙子兵法》主要有哪几种外文版本？（或者）",
+                "《孙子兵法》对哪些活动有影响？（军事活动 商业活动）",
+                "请你解释一下‘攻其无备，出其不意’是什么意思。（没有准备 进攻）"
+              ],
+              "present": "谈一谈孙子和《孙子兵法》的主要内容。",
+              "compare": "孙子的军事理论及其世界影响。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  74
+                ],
+                "audio_tracks": [
+                  "8-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出两三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  74
+                ],
+                "audio_tracks": [
+                  "8-6"
+                ]
+              }
+            }
+          },
+          "title": "《孙子兵法》和它的影响",
+          "page": "74",
+          "audio": "8-6",
+          "type": "短文"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:1",
+          "value": {
+            "expression": "根据",
+            "topic": "说明情况"
+          },
+          "title": "根据",
+          "page": "72–73–74",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:2",
+          "value": {
+            "expression": "曾经",
+            "topic": "说明情况"
+          },
+          "title": "曾经",
+          "page": "72–73–74",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:3",
+          "value": {
+            "expression": "把……动词+成",
+            "topic": "说明情况"
+          },
+          "title": "把……动词+成",
+          "page": "72–73–74",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:4",
+          "value": {
+            "expression": "按",
+            "topic": "说明情况"
+          },
+          "title": "按",
+          "page": "72–73–74",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:5",
+          "value": {
+            "expression": "把……动词+补语",
+            "topic": "说明情况"
+          },
+          "title": "把……动词+补语",
+          "page": "72–73–74",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:6",
+          "value": {
+            "expression": "虽然（2）",
+            "topic": "说明情况"
+          },
+          "title": "虽然（2）",
+          "page": "72–73–74",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:7",
+          "value": {
+            "expression": "关于",
+            "topic": "说明情况"
+          },
+          "title": "关于",
+          "page": "72–73–74",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:8",
+          "value": {
+            "expression": "通过",
+            "topic": "说明情况"
+          },
+          "title": "通过",
+          "page": "72–73–74",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:9",
+          "value": {
+            "expression": "必须",
+            "topic": "说明情况"
+          },
+          "title": "必须",
+          "page": "72–73–74",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:10",
+          "value": {
+            "expression": "要在……内",
+            "topic": "说明情况"
+          },
+          "title": "要在……内",
+          "page": "72–73–74",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:11",
+          "value": {
+            "expression": "既……又/也……",
+            "topic": "说明情况"
+          },
+          "title": "既……又/也……",
+          "page": "72–73–74",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:12",
+          "value": {
+            "expression": "既不……也不……",
+            "topic": "说明情况"
+          },
+          "title": "既不……也不……",
+          "page": "72–73–74",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:13",
+          "value": {
+            "expression": "被翻译/介绍+到/成",
+            "topic": "说明情况"
+          },
+          "title": "被翻译/介绍+到/成",
+          "page": "72–73–74",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:14",
+          "value": {
+            "expression": "有的……有的……还有的……",
+            "topic": "说明情况"
+          },
+          "title": "有的……有的……还有的……",
+          "page": "72–73–74",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:15",
+          "value": {
+            "expression": "除了……还/也……",
+            "topic": "说明情况"
+          },
+          "title": "除了……还/也……",
+          "page": "72–73–74",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:16",
+          "value": {
+            "expression": "比如",
+            "topic": "说明情况"
+          },
+          "title": "比如",
+          "page": "72–73–74",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:17",
+          "value": {
+            "expression": "已经成为",
+            "topic": "说明情况"
+          },
+          "title": "已经成为",
+          "page": "72–73–74",
+          "type": "语法／表达"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehension:1",
+          "value": {
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读。",
+            "words": [
+              "士兵",
+              "打仗",
+              "训练",
+              "进攻",
+              "吴王"
+            ],
+            "answer": [
+              "1.A",
+              "2.E",
+              "3.C",
+              "4.D",
+              "5.B"
+            ]
+          },
+          "title": "词语理解",
+          "page": "70",
+          "audio": "8-2",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_8_3:1",
+          "value": {
+            "prompt": "他写了很多书。",
+            "answer": "错",
+            "number": 1,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "70",
+          "audio": "8-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_8_3:2",
+          "value": {
+            "prompt": "这件事有根据。",
+            "answer": "对",
+            "number": 2,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "70",
+          "audio": "8-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_8_3:3",
+          "value": {
+            "prompt": "他们下星期开始训练。",
+            "answer": "错",
+            "number": 3,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "70",
+          "audio": "8-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_8_3:4",
+          "value": {
+            "prompt": "将军权力很大。",
+            "answer": "对",
+            "number": 4,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "70",
+          "audio": "8-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_8_3:5",
+          "value": {
+            "prompt": "他提出的策略现在还有影响。",
+            "answer": "对",
+            "number": 5,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "70",
+          "audio": "8-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_8_3:6",
+          "value": {
+            "prompt": "我们打了败仗。",
+            "answer": "错",
+            "number": 6,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "70",
+          "audio": "8-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_8_3:7",
+          "value": {
+            "prompt": "战争结束了。",
+            "answer": "对",
+            "number": 7,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "70",
+          "audio": "8-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_8_3:8",
+          "value": {
+            "prompt": "下学期要开设两门新课。",
+            "answer": "对",
+            "number": 8,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "70",
+          "audio": "8-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_8_3:9",
+          "value": {
+            "prompt": "这几句话企业家们都知道。",
+            "answer": "错",
+            "number": 9,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "70",
+          "audio": "8-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_8_3:10",
+          "value": {
+            "prompt": "这本书大家都比较熟悉。",
+            "answer": "对",
+            "number": 10,
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "70",
+          "audio": "8-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:1",
+          "value": {
+            "prompt": "孙武是谁？",
+            "kind": "first_listen",
+            "textTitle": "孙子趣事"
+          },
+          "title": "孙子趣事 · first_listen",
+          "page": "71–72",
+          "audio": "8-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:2",
+          "value": {
+            "prompt": "吴王让他训练谁？",
+            "kind": "first_listen",
+            "textTitle": "孙子趣事"
+          },
+          "title": "孙子趣事 · first_listen",
+          "page": "71–72",
+          "audio": "8-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:3",
+          "value": {
+            "prompt": "吴王明白了什么？",
+            "kind": "first_listen",
+            "textTitle": "孙子趣事"
+          },
+          "title": "孙子趣事 · first_listen",
+          "page": "71–72",
+          "audio": "8-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:1",
+          "value": {
+            "prompt": "孙武是什么时候的人？（春秋）",
+            "kind": "second_listen",
+            "textTitle": "孙子趣事"
+          },
+          "title": "孙子趣事 · second_listen",
+          "page": "71–72",
+          "audio": "8-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:2",
+          "value": {
+            "prompt": "孙武对军法有什么样的看法？（严明 权力）",
+            "kind": "second_listen",
+            "textTitle": "孙子趣事"
+          },
+          "title": "孙子趣事 · second_listen",
+          "page": "71–72",
+          "audio": "8-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:3",
+          "value": {
+            "prompt": "孙武杀了谁？为什么？（严肃 军法 队长）",
+            "kind": "second_listen",
+            "textTitle": "孙子趣事"
+          },
+          "title": "孙子趣事 · second_listen",
+          "page": "71–72",
+          "audio": "8-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:present:1",
+          "value": {
+            "prompt": "谈一谈孙子和《孙子兵法》的主要内容。",
+            "kind": "present",
+            "textTitle": "孙子趣事"
+          },
+          "title": "孙子趣事 · present",
+          "page": "71–72",
+          "audio": "8-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:compare:1",
+          "value": {
+            "prompt": "孙子的军事理论及其世界影响。",
+            "kind": "compare",
+            "textTitle": "孙子趣事"
+          },
+          "title": "孙子趣事 · compare",
+          "page": "71–72",
+          "audio": "8-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:1",
+          "value": {
+            "prompt": "孙子写的书叫什么？",
+            "kind": "first_listen",
+            "textTitle": "《孙子兵法》"
+          },
+          "title": "《孙子兵法》 · first_listen",
+          "page": "72–73",
+          "audio": "8-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:2",
+          "value": {
+            "prompt": "这本书里面有多少篇？",
+            "kind": "first_listen",
+            "textTitle": "《孙子兵法》"
+          },
+          "title": "《孙子兵法》 · first_listen",
+          "page": "72–73",
+          "audio": "8-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:1",
+          "value": {
+            "prompt": "这本书是关于什么的书？（理论）",
+            "kind": "second_listen",
+            "textTitle": "《孙子兵法》"
+          },
+          "title": "《孙子兵法》 · second_listen",
+          "page": "72–73",
+          "audio": "8-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:2",
+          "value": {
+            "prompt": "孙子在书中谈到了哪些理论？（解决 短时间 了解对方和自己 进攻）",
+            "kind": "second_listen",
+            "textTitle": "《孙子兵法》"
+          },
+          "title": "《孙子兵法》 · second_listen",
+          "page": "72–73",
+          "audio": "8-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:3",
+          "value": {
+            "prompt": "你能不能说出书中的原话？（百战不殆）",
+            "kind": "second_listen",
+            "textTitle": "《孙子兵法》"
+          },
+          "title": "《孙子兵法》 · second_listen",
+          "page": "72–73",
+          "audio": "8-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:present:1",
+          "value": {
+            "prompt": "谈一谈孙子和《孙子兵法》的主要内容。",
+            "kind": "present",
+            "textTitle": "《孙子兵法》"
+          },
+          "title": "《孙子兵法》 · present",
+          "page": "72–73",
+          "audio": "8-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:compare:1",
+          "value": {
+            "prompt": "孙子的军事理论及其世界影响。",
+            "kind": "compare",
+            "textTitle": "《孙子兵法》"
+          },
+          "title": "《孙子兵法》 · compare",
+          "page": "72–73",
+          "audio": "8-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:1",
+          "value": {
+            "prompt": "《孙子兵法》在国外有没有影响？",
+            "kind": "first_listen",
+            "textTitle": "《孙子兵法》和它的影响"
+          },
+          "title": "《孙子兵法》和它的影响 · first_listen",
+          "page": "74",
+          "audio": "8-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:2",
+          "value": {
+            "prompt": "在哪里可以找到外文版的《孙子兵法》？",
+            "kind": "first_listen",
+            "textTitle": "《孙子兵法》和它的影响"
+          },
+          "title": "《孙子兵法》和它的影响 · first_listen",
+          "page": "74",
+          "audio": "8-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:1",
+          "value": {
+            "prompt": "《孙子兵法》主要有哪几种外文版本？（或者）",
+            "kind": "second_listen",
+            "textTitle": "《孙子兵法》和它的影响"
+          },
+          "title": "《孙子兵法》和它的影响 · second_listen",
+          "page": "74",
+          "audio": "8-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:2",
+          "value": {
+            "prompt": "《孙子兵法》对哪些活动有影响？（军事活动 商业活动）",
+            "kind": "second_listen",
+            "textTitle": "《孙子兵法》和它的影响"
+          },
+          "title": "《孙子兵法》和它的影响 · second_listen",
+          "page": "74",
+          "audio": "8-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:3",
+          "value": {
+            "prompt": "请你解释一下‘攻其无备，出其不意’是什么意思。（没有准备 进攻）",
+            "kind": "second_listen",
+            "textTitle": "《孙子兵法》和它的影响"
+          },
+          "title": "《孙子兵法》和它的影响 · second_listen",
+          "page": "74",
+          "audio": "8-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:present:1",
+          "value": {
+            "prompt": "谈一谈孙子和《孙子兵法》的主要内容。",
+            "kind": "present",
+            "textTitle": "《孙子兵法》和它的影响"
+          },
+          "title": "《孙子兵法》和它的影响 · present",
+          "page": "74",
+          "audio": "8-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:compare:1",
+          "value": {
+            "prompt": "孙子的军事理论及其世界影响。",
+            "kind": "compare",
+            "textTitle": "《孙子兵法》和它的影响"
+          },
+          "title": "《孙子兵法》和它的影响 · compare",
+          "page": "74",
+          "audio": "8-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:1",
+          "value": {
+            "prompt": "请你根据听过的三段短文填表。"
+          },
+          "title": "综合练习",
+          "page": "75–76",
+          "audio": "8-4、8-5、8-6",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:2",
+          "value": {
+            "prompt": "小组活动：谈一谈孙武带兵的故事、军事理论和《孙子兵法》的影响。"
+          },
+          "title": "综合练习",
+          "page": "75–76",
+          "audio": "8-4、8-5、8-6",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:3",
+          "value": {
+            "prompt": "拓展练习：谈谈你喜欢的历史人物。"
+          },
+          "title": "综合练习",
+          "page": "75–76",
+          "audio": "8-4、8-5、8-6",
+          "type": "综合练习"
+        }
+      ]
+    },
+    "boya-quasi-intermediate-i:lesson-09": {
+      "available": true,
+      "review_complete": true,
+      "completion": {
+        "status": "completed_by_adam",
+        "confirmed_by": "Adam",
+        "confirmed_at": "2026-09-08",
+        "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+        "technical_status_preserved": true
+      },
+      "reason": "",
+      "canonical": {
+        "lesson_key": "boya-quasi-intermediate-i:lesson-09",
+        "schema_version": "quasi-intermediate-source-audit-v1.0",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_number": 9,
+        "lesson_id": "lesson-09",
+        "title": "北方菜和南方菜",
+        "title_source": "主教材 PDF 第90页（印刷 P77）课名页视觉核对",
+        "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+        "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+        "page_map": {
+          "printed_pages": [
+            77,
+            86
+          ],
+          "pdf_pages": [
+            90,
+            99
+          ],
+          "answer_pdf_pages": [
+            24,
+            25
+          ],
+          "mapping_status": "visual_verified_pdf_offset_plus_13; inventory_answer_page_labels_retained",
+          "answer_visual_locator": {
+            "inventory_answer_pdf_pages": [
+              24,
+              25
+            ],
+            "rendered_internal_pages": [
+              25,
+              26
+            ],
+            "rendered_printed_labels": [
+              22,
+              23
+            ],
+            "status": "pending_adam_confirmation_of_answer_pdf_page_numbering"
+          }
+        },
+        "qr_evidence": {
+          "pdf_page": 90,
+          "qr_url": "http://qr31.cn/IloNOS",
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-09-pdf-page-090.png",
+          "landing_page": "https://biz.cli.im/site/IloNOS?qrurl=http://qr31.cn/IloNOS&gtype=2&key=995d2170976559ed387829f37eb237b28eec029042",
+          "decode_status": "source_inventory_verified",
+          "landing_audio_labels": [
+            "9-1",
+            "9-2",
+            "9-3",
+            "9-4",
+            "9-5",
+            "9-6"
+          ]
+        },
+        "audio_map": [
+          {
+            "label": "9-1",
+            "coding": "JP1539815",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FiocWTYN33Xkat-AB-7mCcCi-UVI",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-1.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 819190,
+            "sha256": "8322ba07d5f22db4c2a9f9b0f4cda6bda9e29db8b06871c77268e704b9a77320",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "duration_seconds": 50.887,
+            "technical_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "playback_status": "pending_teacher_playback"
+          },
+          {
+            "label": "9-2",
+            "coding": "AJ1783222",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FkUKsmZjlQxRjUW2E1SCDJycGAE_",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-2.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 434250,
+            "sha256": "39d304b722d8b382e41ff40467aa157c854f2a3b02d7cd781703f6259a02d292",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "duration_seconds": 26.828,
+            "technical_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "playback_status": "pending_teacher_playback"
+          },
+          {
+            "label": "9-3",
+            "coding": "GO1783223",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FplPzJNtiMTKVqriNR1XI4dawTaO",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-3.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 1074145,
+            "sha256": "68a1dc11366ed1c6d4949de1f76edf01e8f361408c0350eebdf6a9448b698fc2",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "duration_seconds": 66.821,
+            "technical_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "playback_status": "pending_teacher_playback"
+          },
+          {
+            "label": "9-4",
+            "coding": "QU1783224",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FsiUpkVRHilvVBUFc0CdchBN34s0",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-4.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 1106746,
+            "sha256": "9e5fbe68debdfe0fbaec36fd4264b14b6ed2bd9b930805a19d339d66961c234c",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "duration_seconds": 68.859,
+            "technical_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "playback_status": "pending_teacher_playback"
+          },
+          {
+            "label": "9-5",
+            "coding": "AE1783225",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FtFH9Y9G406dOZC0Me07nMT4RsHZ",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-5.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 1013959,
+            "sha256": "4cda86d58af50ca4ecd5dca46ec712537ae0c0d6545c41d3bc14355a97f46213",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "duration_seconds": 63.06,
+            "technical_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "playback_status": "pending_teacher_playback"
+          },
+          {
+            "label": "9-6",
+            "coding": "AG1783227",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fhq-iAZIOoP9lAlwN7qAmAeMH02M",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-6.mp3",
+            "content_type": "audio/mpeg",
+            "bytes": 874779,
+            "sha256": "e30f25b5a404d9f19e0c482181ed56a0fe62e49a144ea6bd86cf222f7c989ee7",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "duration_seconds": 54.361,
+            "technical_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "playback_status": "pending_teacher_playback"
+          }
+        ],
+        "content_inventory": {
+          "vocabulary_count": 27,
+          "proper_noun_count": 0,
+          "vocabulary_comprehension_group_count": 1,
+          "vocabulary_comprehension_item_count": 7,
+          "listening_sentence_item_count": 10,
+          "texts_dialogues_count": 3,
+          "grammar_pattern_count": 21,
+          "listening_exercise_group_count": 6,
+          "comprehensive_exercise_count": 3,
+          "exercise_count": 59,
+          "status": "visual_source_snapshot_pending_adam_approval"
+        },
+        "answer_policy": "仅记录参考答案 PDF 中可核对的词语选择／判断答案与听力文本；开放式口语、表格和拓展题不补写唯一标准答案。",
+        "review": {
+          "status": "source_audit_in_progress",
+          "approved": false,
+          "approved_by": [],
+          "approved_at": null,
+          "blockers": [
+            "六段音频文件存在、bytes、SHA-256、ffprobe 时长和解码已核对；教师逐段播放、语义听核和课堂设备播放尚未完成。",
+            "扫描教材 PDF 无可用文字层；最终来源批准需由 Adam 对视觉转录、教材页码和答案证据确认。",
+            "source-inventory 的答案 PDF 页码字段与本次视觉渲染的印刷页脚存在偏移（见 page_map.answer_visual_locator），需确认编号口径。",
+            "开放式口语、综合表格与拓展练习没有唯一标准答案，不补写答案。"
+          ],
+          "approval_basis": [
+            "主教材 PDF 第90–99页（印刷 P77–P86）逐页视觉核对",
+            "答案 PDF 相关页（inventory 页码 24–25；视觉渲染内部页 25–26，印刷页脚 P22–P23）题目答案与听力文本核对",
+            "来源总盘点第九课 QR、音频 bytes、hash、时长和解码记录"
+          ]
+        },
+        "visual_page_inventory": [
+          {
+            "pdf_page": 90,
+            "printed_page": 77,
+            "sections": [
+              "课名页",
+              "词语（1–17）",
+              "音频9-1"
+            ]
+          },
+          {
+            "pdf_page": 91,
+            "printed_page": 78,
+            "sections": [
+              "词语（18–27）",
+              "词语理解（音频9-2，图片A–G）"
+            ]
+          },
+          {
+            "pdf_page": 92,
+            "printed_page": 79,
+            "sections": [
+              "词语理解填空（7题）",
+              "听说句子（音频9-3，判断10题）"
+            ]
+          },
+          {
+            "pdf_page": 93,
+            "printed_page": 80,
+            "sections": [
+              "听说短文一《北京人常吃什么》（音频9-4，第一至三项）"
+            ]
+          },
+          {
+            "pdf_page": 94,
+            "printed_page": 81,
+            "sections": [
+              "短文一比较段",
+              "常用词语和表达：谈论习惯与爱好"
+            ]
+          },
+          {
+            "pdf_page": 95,
+            "printed_page": 82,
+            "sections": [
+              "听说短文二《北方人不爱喝汤吗》（音频9-5，第一至四项）"
+            ]
+          },
+          {
+            "pdf_page": 96,
+            "printed_page": 83,
+            "sections": [
+              "常用词语和表达：谈看法和建议",
+              "听说短文三《南方人爱喝早茶，爱吃大排档》（音频9-6，第一项）"
+            ]
+          },
+          {
+            "pdf_page": 97,
+            "printed_page": 84,
+            "sections": [
+              "短文三第二至四项",
+              "常用词语和表达：谈习惯和爱好"
+            ]
+          },
+          {
+            "pdf_page": 98,
+            "printed_page": 85,
+            "sections": [
+              "常用词语和表达续表",
+              "综合练习：根据三段短文填表、说一说"
+            ]
+          },
+          {
+            "pdf_page": 99,
+            "printed_page": 86,
+            "sections": [
+              "综合练习说一说要求",
+              "拓展练习"
+            ]
+          }
+        ],
+        "sections": [
+          {
+            "id": "vocabulary",
+            "printed_pages": [
+              77,
+              78
+            ],
+            "audio": "9-1",
+            "entries": [
+              {
+                "no": 1,
+                "word": "土豆",
+                "pinyin": "tǔdòu",
+                "pos": "名",
+                "gloss": "potato",
+                "starred": true
+              },
+              {
+                "no": 2,
+                "word": "蔬菜",
+                "pinyin": "shūcài",
+                "pos": "名",
+                "gloss": "vegetable"
+              },
+              {
+                "no": 3,
+                "word": "早茶",
+                "pinyin": "zǎochá",
+                "pos": "名",
+                "gloss": "dim sum"
+              },
+              {
+                "no": 4,
+                "word": "凉拌",
+                "pinyin": "liángbàn",
+                "pos": "动",
+                "gloss": "cold tossed"
+              },
+              {
+                "no": 5,
+                "word": "青菜",
+                "pinyin": "qīngcài",
+                "pos": "名",
+                "gloss": "green vegetable"
+              },
+              {
+                "no": 6,
+                "word": "酸辣汤",
+                "pinyin": "suānlàtāng",
+                "pos": "名",
+                "gloss": "hot and sour soup"
+              },
+              {
+                "no": 7,
+                "word": "涮",
+                "pinyin": "shuàn",
+                "pos": "动",
+                "gloss": "to boil instantly",
+                "starred": true
+              },
+              {
+                "no": 8,
+                "word": "口味",
+                "pinyin": "kǒuwèi",
+                "pos": "名",
+                "gloss": "taste",
+                "starred": true
+              },
+              {
+                "no": 9,
+                "word": "渐渐",
+                "pinyin": "jiànjiàn",
+                "pos": "副",
+                "gloss": "gradually"
+              },
+              {
+                "no": 10,
+                "word": "黄瓜",
+                "pinyin": "huángguā",
+                "pos": "名",
+                "gloss": "cucumber"
+              },
+              {
+                "no": 11,
+                "word": "炖",
+                "pinyin": "dùn",
+                "pos": "动",
+                "gloss": "to stew",
+                "starred": true
+              },
+              {
+                "no": 12,
+                "word": "夜宵",
+                "pinyin": "yèxiāo",
+                "pos": "名",
+                "gloss": "late-night snack"
+              },
+              {
+                "no": 13,
+                "word": "大排档",
+                "pinyin": "dàpáidàng",
+                "pos": "名",
+                "gloss": "food stalls",
+                "starred": true
+              },
+              {
+                "no": 14,
+                "word": "聚会",
+                "pinyin": "jùhuì",
+                "pos": "动",
+                "gloss": "to get together"
+              },
+              {
+                "no": 15,
+                "word": "聚餐",
+                "pinyin": "jùcān",
+                "pos": "动",
+                "gloss": "to have a dinner party",
+                "starred": true
+              },
+              {
+                "no": 16,
+                "word": "休闲",
+                "pinyin": "xiūxián",
+                "pos": "动",
+                "gloss": "to recreate"
+              },
+              {
+                "no": 17,
+                "word": "豆角",
+                "pinyin": "dòujiǎo",
+                "pos": "名",
+                "gloss": "french bean"
+              },
+              {
+                "no": 18,
+                "word": "不光",
+                "pinyin": "bùguāng",
+                "pos": "连",
+                "gloss": "not only"
+              },
+              {
+                "no": 19,
+                "word": "取代",
+                "pinyin": "qǔdài",
+                "pos": "动",
+                "gloss": "to replace"
+              },
+              {
+                "no": 20,
+                "word": "季节",
+                "pinyin": "jìjié",
+                "pos": "名",
+                "gloss": "season"
+              },
+              {
+                "no": 21,
+                "word": "种类",
+                "pinyin": "zhǒnglèi",
+                "pos": "名",
+                "gloss": "kind; type"
+              },
+              {
+                "no": 22,
+                "word": "普遍",
+                "pinyin": "pǔbiàn",
+                "pos": "形",
+                "gloss": "common; universal"
+              },
+              {
+                "no": 23,
+                "word": "年轻",
+                "pinyin": "niánqīng",
+                "pos": "形",
+                "gloss": "young"
+              },
+              {
+                "no": 24,
+                "word": "一般",
+                "pinyin": "yìbān",
+                "pos": "形",
+                "gloss": "usually"
+              },
+              {
+                "no": 25,
+                "word": "数量",
+                "pinyin": "shùliàng",
+                "pos": "名",
+                "gloss": "amount; quantity"
+              },
+              {
+                "no": 26,
+                "word": "增加",
+                "pinyin": "zēngjiā",
+                "pos": "动",
+                "gloss": "to increase"
+              },
+              {
+                "no": 27,
+                "word": "方式",
+                "pinyin": "fāngshì",
+                "pos": "名",
+                "gloss": "method; style",
+                "starred": true
+              }
+            ],
+            "source_status": "visually_verified_pending_adam_approval"
+          },
+          {
+            "id": "vocabulary_comprehension",
+            "printed_pages": [
+              78,
+              79
+            ],
+            "audio": "9-2",
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "groups": [
+              {
+                "topic": "饮食词语（图片A–G）",
+                "words": [
+                  "土豆",
+                  "蔬菜",
+                  "早茶",
+                  "凉拌西红柿",
+                  "青菜",
+                  "酸辣汤",
+                  "涮羊肉"
+                ],
+                "answer": [
+                  "1.C",
+                  "2.B",
+                  "3.A",
+                  "4.E",
+                  "5.D",
+                  "6.F",
+                  "7.G"
+                ]
+              }
+            ],
+            "exercises": {
+              "items": [
+                "土豆",
+                "蔬菜",
+                "早茶",
+                "凉拌西红柿",
+                "青菜",
+                "酸辣汤",
+                "涮羊肉"
+              ]
+            },
+            "answer_status": "answers_checked_against_answer_pdf"
+          },
+          {
+            "id": "listening_sentences",
+            "printed_pages": [
+              79
+            ],
+            "audio_tracks": [
+              "9-3"
+            ],
+            "exercises": {
+              "exercise_9_3": {
+                "heading_verbatim": "一、听句子，判断对错",
+                "items": [
+                  {
+                    "no": 1,
+                    "text": "大家喜欢的味道不一样。",
+                    "answer": "对"
+                  },
+                  {
+                    "no": 2,
+                    "text": "朴大宇每天都和中国人一起上课。",
+                    "answer": "错"
+                  },
+                  {
+                    "no": 3,
+                    "text": "王红的习惯和以前不一样了。",
+                    "answer": "对"
+                  },
+                  {
+                    "no": 4,
+                    "text": "现在大家不常出去吃饭了。",
+                    "answer": "错"
+                  },
+                  {
+                    "no": 5,
+                    "text": "小陈没做热菜。",
+                    "answer": "错"
+                  },
+                  {
+                    "no": 6,
+                    "text": "土豆、黄瓜是大家喜欢吃的。",
+                    "answer": "错"
+                  },
+                  {
+                    "no": 7,
+                    "text": "他们现在吃晚饭。",
+                    "answer": "错"
+                  },
+                  {
+                    "no": 8,
+                    "text": "南方在街上吃饭的地方很多，菜也很好吃。",
+                    "answer": "对"
+                  },
+                  {
+                    "no": 9,
+                    "text": "小张要开会。",
+                    "answer": "错"
+                  },
+                  {
+                    "no": 10,
+                    "text": "人们有空儿的时候喜欢一起吃饭。",
+                    "answer": "对"
+                  }
+                ]
+              }
+            },
+            "answer_status": "answers_checked_against_answer_pdf"
+          },
+          {
+            "id": "short_text_1",
+            "printed_pages": [
+              80,
+              81
+            ],
+            "audio": "9-4",
+            "title": "北京人常吃什么",
+            "text": "小陈是广东人，她18岁来北京上大学，大学毕业后留在北京工作，接触的北方菜多了，对北方菜越来越适应，她自己吃饭的口味也有了变化。北京人喜欢吃西红柿、茄子、豆角、黄瓜、白菜、土豆，但是吃绿叶菜不太多。夏天，北京人爱吃凉拌黄瓜、凉拌西红柿、凉面、炸酱面、茄子豆角面。到了冬天，北京人喜欢吃炖菜，比如白菜炖豆腐、牛肉炖土豆什么的。当然，涮羊肉也很受欢迎。现在，北京人不光涮羊肉，还涮牛肉片、鱼片、蔬菜什么的。可以说，各种各样的肉和菜都可以放进火锅里涮，但羊肉片是无法被取代的。",
+            "text_source": "答案 PDF 听力文本（视觉转录，语义待播放核对）",
+            "exercises": {
+              "first_listen": [
+                "小陈是哪儿的人？",
+                "小陈是什么时候来北京的？",
+                "北京人不喜欢吃什么菜？"
+              ],
+              "second_listen": [
+                "北京人夏天喜欢吃哪些菜？（凉拌）",
+                "北京人冬天喜欢吃哪些菜？（炖）",
+                "北京人还喜欢吃什么菜？（涮）"
+              ],
+              "present": "说说北京人喜欢吃什么菜。要求：说6–8句、不少于60字，使用词语和常用表达。词语参考：绿叶菜、土豆、豆角、西红柿、夏天、冬天、凉拌、炖、涮、取代；常用表达参考：不光。",
+              "compare": "北京人吃绿叶菜不太多。夏天常吃凉拌菜，比如凉拌黄瓜、西红柿。冬天吃炖菜，比如白菜炖豆腐。北京人还特别喜欢吃涮羊肉。现在，北京人不光涮羊肉，也涮鱼肉、牛肉和蔬菜什么的。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  80
+                ],
+                "audio_tracks": [
+                  "9-4"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  80
+                ],
+                "audio_tracks": [
+                  "9-4"
+                ]
+              }
+            }
+          },
+          {
+            "id": "common_expressions_habits_preferences_1",
+            "printed_pages": [
+              81
+            ],
+            "topic": "谈论习惯与爱好",
+            "items": [
+              {
+                "expression": "也",
+                "examples": [
+                  "在北京的时间长了，认识的人多了，生活也越来越有意思了。",
+                  "和中国人聊天儿，开始的时候听不懂，也说不出什么，几个月过去了，能听懂的越来越多，和中国人聊天儿也不那么难了。"
+                ]
+              },
+              {
+                "expression": "什么的",
+                "examples": [
+                  "大鸟的爱好很多，弹琴、看话剧什么的，她都喜欢。",
+                  "小张爱运动，游泳、打球什么的都会。"
+                ]
+              },
+              {
+                "expression": "不光……还……",
+                "examples": [
+                  "常和小张一起爬山的，不光有他的同学，还有他的同事。",
+                  "李大为不光爱吃中国菜，还会做几个中国菜。"
+                ]
+              },
+              {
+                "expression": "当然",
+                "examples": [
+                  "小陈觉得做北方菜花时间少，忙的时候她就常做北方菜。当然，如果有时间，她还是喜欢炖点儿汤。",
+                  "朴大宇已经适应了北京的生活，中文也有了一些进步。当然，他有时候也很想家，想妈妈做的菜。"
+                ]
+              },
+              {
+                "expression": "可以说",
+                "examples": [
+                  "来客人吃饺子，过春节也吃饺子，可以说，饺子对北方人来说是一种很重要的食品。",
+                  "朴大宇第一次来中国，看到街上有很多饭馆儿，每次去饭馆儿吃饭，里面的客人都很多。他想，要是来中国开饭馆儿，一定能赚很多钱。所以，朴大宇在大学选了中文。可以说，他学中文是为了来中国做生意。"
+                ]
+              }
+            ],
+            "source_status": "examples_visually_verified"
+          },
+          {
+            "id": "short_text_2",
+            "printed_pages": [
+              82
+            ],
+            "audio": "9-5",
+            "title": "北方人不爱喝汤吗",
+            "text": "小陈在家的时候，她妈妈只要有空儿，就给她做各种各样的汤。不同的季节喝的汤也不一样，比如，天气热的时候，冬瓜汤喝起来很舒服。妈妈说多喝汤对身体有好处。她生病的时候，妈妈也会给她炖汤，妈妈说，喝汤可以让她的病快一点儿好。来北京以后，小陈发现北方人不是每顿饭都喝汤，而且汤的种类不多。人们在家里常做的有西红柿鸡蛋汤、冬瓜丸子汤、酸辣汤，而且不像广东人那样，花好几个小时炖汤。学校食堂卖得最多的也是西红柿鸡蛋汤、黄瓜汤。",
+            "text_source": "答案 PDF 听力文本（视觉转录，语义待播放核对）",
+            "exercises": {
+              "first_listen": [
+                "小陈在家的时候，她妈妈常给她做什么？",
+                "北京人每顿饭都喝汤吗？",
+                "小陈学校的食堂常卖什么汤？"
+              ],
+              "second_listen": [
+                "妈妈觉得喝汤怎么样？（有好处）",
+                "小陈生病的时候，她妈妈为什么给她炖汤？（快一点儿）",
+                "广东人做汤和北京人有什么不同？（种类、时间）"
+              ],
+              "present": "说说北方人和广东人有什么不同。要求：说6–8句、不少于60字；词语参考：季节、不同、种类、西红柿、酸辣汤、冬瓜丸子、炖；常用表达参考：而且、对……有好处。",
+              "compare": "北方人做的汤，种类不多，常做的几种汤是西红柿鸡蛋汤、酸辣汤、冬瓜丸子汤。广东人做的汤种类就多，而且季节不同，汤的种类也不相同。如果一个人生病了，家人也会炖一些对病人身体有好处的汤。不仅如此，广东人炖汤往往要花上几个小时。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  82
+                ],
+                "audio_tracks": [
+                  "9-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  82
+                ],
+                "audio_tracks": [
+                  "9-5"
+                ]
+              }
+            }
+          },
+          {
+            "id": "common_expressions_views_suggestions",
+            "printed_pages": [
+              83
+            ],
+            "topic": "谈看法和建议",
+            "items": [
+              {
+                "expression": "只要……就……",
+                "examples": [
+                  "只要多花点儿时间，炖出来的汤就好喝。",
+                  "只要早一点儿起床，就能吃上早饭。"
+                ]
+              },
+              {
+                "expression": "各种各样",
+                "examples": [
+                  "图书馆有各种各样的中文书，朴大宇很喜欢去看。",
+                  "李大为在餐馆儿打工，每天接触各种各样的人。"
+                ]
+              },
+              {
+                "expression": "动词＋起来（2）",
+                "examples": [
+                  "炸酱面做起来不难，吃起来也很好吃。",
+                  "这首歌很好听，学起来也挺容易。"
+                ]
+              },
+              {
+                "expression": "对……（没）有好处（3）",
+                "examples": [
+                  "晚饭少吃一点儿，对身体有好处。",
+                  "多听多说，对练习中文发音有好处。"
+                ]
+              },
+              {
+                "expression": "形容词＋一点儿",
+                "examples": [
+                  "今天考试，李大为想早一点儿去学校。",
+                  "时间不早了，我们快一点儿走吧。"
+                ]
+              },
+              {
+                "expression": "而且",
+                "examples": [
+                  "小陈觉得北方菜也很好吃，而且做起来容易一些。",
+                  "丽丽现在骑车去公司，比坐公共汽车方便，而且可以锻炼身体。"
+                ]
+              }
+            ],
+            "source_status": "examples_visually_verified"
+          },
+          {
+            "id": "short_text_3",
+            "printed_pages": [
+              83,
+              84
+            ],
+            "audio": "9-6",
+            "title": "南方人爱喝早茶，爱吃大排档",
+            "text": "刚来北京上学的时候，小陈发现，北方人不怎么吃夜宵，虽说有小吃一条街，但是不像广州那样普遍，广州人半夜了还到街上吃大排档。四年过去了，北京人，特别是年轻人，晚上也喜欢去逛（guì）街，后海吃夜宵。在广州，亲戚朋友聚会，常常是约好到酒楼喝早茶，点一壶茶，吃上几样点心，特别舒服。北京人聚餐一般是吃午餐或晚餐，不过，随着在北京的广东餐馆儿数量的增加，周末“喝早茶”渐渐成了北京人，特别是年轻人的一种休闲方式。",
+            "text_source": "答案 PDF 听力文本（视觉转录；‘逛’后注音及‘后海’前动词按扫描图保留，待语义播放核对）",
+            "exercises": {
+              "first_listen": [
+                "小陈刚来北京的时候，有什么发现？",
+                "现在有没有变化？",
+                "北京人一般什么时候聚餐？"
+              ],
+              "second_listen": [
+                "广东人有什么习惯？（大排档）",
+                "广东人和亲友什么时候聚餐？吃什么？（点心）",
+                "北京人喝早茶吗？（随着）"
+              ],
+              "present": "说说北京人和广东人吃饭的习惯有什么不同。要求：说6–8句、不少于60字；词语参考：夜宵、早茶、聚餐、大排档、休闲方式、增加；常用表达参考：随着、不像……那样。",
+              "compare": "以前，北京人不像广东人那样爱吃夜宵，而广东人晚上常常吃大排档。现在的北京年轻人晚上也去逛街，之后吃夜宵。广东人常约亲友喝早茶，广东人聚餐一般选在中午或晚上。现在，随着广东餐馆儿的增多，喝早茶也成了北京人的一种休闲方式。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  83
+                ],
+                "audio_tracks": [
+                  "9-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  84
+                ],
+                "audio_tracks": [
+                  "9-6"
+                ]
+              }
+            }
+          },
+          {
+            "id": "common_expressions_habits_preferences_2",
+            "printed_pages": [
+              84,
+              85
+            ],
+            "topic": "谈习惯和爱好",
+            "items": [
+              {
+                "expression": "刚……的时候",
+                "examples": [
+                  "刚来中国的时候，朴大宇不习惯北京的天气。",
+                  "刚进合唱团的时候，大鸟觉得记歌词特别难。"
+                ]
+              },
+              {
+                "expression": "不怎么",
+                "examples": [
+                  "朴大宇觉得看懂中文不怎么难，可是听懂就不容易了。",
+                  "大鸟会弹钢琴，也爱听音乐，可是来中国以前不怎么喜欢唱歌。"
+                ]
+              },
+              {
+                "expression": "特别是",
+                "examples": [
+                  "李大为觉得学汉语不容易，特别是写汉字，更难。",
+                  "北方人喜欢吃面食，特别是饺子和面条儿。"
+                ]
+              },
+              {
+                "expression": "一般",
+                "examples": [
+                  "北方人早饭一般吃得比较多。",
+                  "只要有时间，小张周末一般都去登山。"
+                ]
+              },
+              {
+                "expression": "随着",
+                "examples": [
+                  "随着年龄的增长，李大为对汉语的兴趣越来越大。",
+                  "随着收入的增加，去饭馆儿吃饭不再是新鲜事。",
+                  "随着汉语水平的提高，朴大宇越来越想了解中国文化。"
+                ]
+              }
+            ],
+            "source_status": "examples_visually_verified"
+          },
+          {
+            "id": "comprehensive_practice",
+            "printed_pages": [
+              85,
+              86
+            ],
+            "audio_tracks": [
+              "9-4",
+              "9-5",
+              "9-6"
+            ],
+            "items": [
+              {
+                "id": "comprehensive_1",
+                "instruction": "请你根据听过的三段短文填表",
+                "table_headers": [
+                  "人物类别",
+                  "常吃什么",
+                  "不常吃什么",
+                  "有什么变化",
+                  "常做什么",
+                  "有什么特别的饮食习惯"
+                ],
+                "answer_status": "open_table_teacher_check"
+              },
+              {
+                "id": "comprehensive_2",
+                "instruction": "小组活动：根据上面的表格和参考词语、常用表达，谈一谈：（1）北京人常吃什么；（2）南方人的特色饮食；（3）南方人和北方人的饮食习惯。要求：一名同学说8–10个句子，不少于80字；小组其他同学补充；最后由一名同学总结，说10–12个句子，不少于100字。",
+                "answer_status": "open_presentational_task"
+              },
+              {
+                "id": "comprehensive_3",
+                "instruction": "拓展练习：说一说：（1）你喜欢吃哪些菜；（2）在你们国家，有什么特别的节日食品；（3）你自己做饭不做饭，你一般在哪儿吃饭。要求使用这一课学过的词语和常用表达；说10–12句话，不少于100字。",
+                "answer_status": "open_presentational_task"
+              }
+            ],
+            "source_status": "visually_verified_pending_adam_approval"
+          }
+        ],
+        "extraction_snapshot": {
+          "main_pdf_text_layer": "unavailable",
+          "visual_render_directory": "/tmp/boya-source-AHyKLM/main-090.png..main-099.png",
+          "answer_visual_render_directory": "/tmp/boya-source-AHyKLM/answer-25.png..answer-26.png",
+          "audio_technical_evidence": "source-inventory.json plus local MP3 bytes/hash/duration/decode",
+          "semantic_audio_status": "pending_teacher_playback",
+          "source_review_status": "pending_review"
+        }
+      },
+      "source_manifest": {
+        "schema_version": "quasi-intermediate-source-manifest-v1",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_id": "lesson-09",
+        "lesson_key": "boya-quasi-intermediate-i:lesson-09",
+        "completion_confirmation": {
+          "status": "completed_by_adam",
+          "confirmed_by": "Adam",
+          "confirmed_at": "2026-09-08",
+          "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+          "technical_status_preserved": true
+        },
+        "lesson_number": 9,
+        "title": "北方菜和南方菜",
+        "source_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+          "sha256": "39899d0f400e187f57c16db821f8f4c207f936eae0e4fbfe3cab52c02bfea806",
+          "pdf_pages": [
+            90,
+            99
+          ],
+          "printed_pages": [
+            77,
+            86
+          ]
+        },
+        "answer_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+          "sha256": "3c21e1574b0187259769799d183eca78a60a515b5b7fce202eda9e9ade2c20b8",
+          "inventory_pages": [
+            24,
+            25
+          ],
+          "visual_render_internal_pages": [
+            25,
+            26
+          ],
+          "visual_printed_labels": [
+            22,
+            23
+          ],
+          "page_numbering_status": "pending_adam_confirmation"
+        },
+        "qr": {
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-09-pdf-page-090.png",
+          "url": "http://qr31.cn/IloNOS",
+          "landing_page": "https://biz.cli.im/site/IloNOS?qrurl=http://qr31.cn/IloNOS&gtype=2&key=995d2170976559ed387829f37eb237b28eec029042",
+          "status": "verified_in_source_inventory"
+        },
+        "canonical_source": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json",
+          "sha256": "c928011dfed526c506af0c73ab0dd420bb0eba07f43938f179c08743c60b0da1"
+        },
+        "listening_contract": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/listening-exercise-contract.json",
+          "sha256": "23c66341a2e8101d10b8f1d341bb93f6e2c35c6b49c2f2bb0f873df2abf23f14",
+          "count": 9
+        },
+        "audio_manifest": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/audio-manifest.json",
+          "sha256": "a56870a2d601ad5a6eb082bb169e081df7def71005edfcfa567c8d695cb288a6",
+          "audio_root": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-09",
+          "count": 6,
+          "technical_status": "6/6 files present; bytes, SHA-256, duration and decode passed",
+          "semantic_status": "pending_teacher_playback"
+        },
+        "audit": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/source-pages-77-86-audit-draft.md",
+          "sha256": "8a9c1a49364b74ca5255ea2aa1d7949b34b7a3f4c6c6b0e331f79357816d2d47",
+          "status": "draft"
+        },
+        "answer_audit": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/answer-pages-24-25-audit-draft.md",
+          "sha256": "d11a91b60fc30122a4c80aa7296720575c9f4b59a6022d1c27da28ac0a2b34b7",
+          "status": "draft",
+          "scope": "答案页码口径、封闭答案、9-4/9-5/9-6视觉听力文本和开放题答案政策"
+        },
+        "audio_technical_audit": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/audit/audio-technical-2026-08-28.md",
+          "sha256": "a2afb6ad3b764a44bd870d00d64c2a420bd183511b1cdbb6d4856f208b55dda7",
+          "status": "technical_pass_semantic_pending",
+          "scope": "六段 MP3 文件、bytes、SHA-256、时长和解码"
+        },
+        "status": "pending_review",
+        "approved": false,
+        "approved_by": [],
+        "approved_at": null,
+        "notes": [
+          "本 source package 只记录来源盘点、页面／板块、听力题组契约、音频技术状态和答案证据；不构成教学手册、PPT 或 release authority。",
+          "所有音频 semantic_status 与 playback_status 保持 pending_teacher_playback；来源及 Adam 审核未完成前不得进入 20-approved。"
+        ]
+      },
+      "audio": {
+        "schema_version": "boya-audio-manifest-v1",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_id": "lesson-09",
+        "lesson_number": 9,
+        "status": "draft",
+        "review_status": "pending_review",
+        "qr_capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-09-pdf-page-090.png",
+        "qr_url": "http://qr31.cn/IloNOS",
+        "tracks": [
+          {
+            "label": "9-1",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FiocWTYN33Xkat-AB-7mCcCi-UVI",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-1.mp3",
+            "scope": "本课音档",
+            "bytes": 819190,
+            "sha256": "8322ba07d5f22db4c2a9f9b0f4cda6bda9e29db8b06871c77268e704b9a77320",
+            "duration_seconds": 50.887,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending_teacher_playback"
+          },
+          {
+            "label": "9-2",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FkUKsmZjlQxRjUW2E1SCDJycGAE_",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-2.mp3",
+            "scope": "本课音档",
+            "bytes": 434250,
+            "sha256": "39d304b722d8b382e41ff40467aa157c854f2a3b02d7cd781703f6259a02d292",
+            "duration_seconds": 26.828,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending_teacher_playback"
+          },
+          {
+            "label": "9-3",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FplPzJNtiMTKVqriNR1XI4dawTaO",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-3.mp3",
+            "scope": "本课音档",
+            "bytes": 1074145,
+            "sha256": "68a1dc11366ed1c6d4949de1f76edf01e8f361408c0350eebdf6a9448b698fc2",
+            "duration_seconds": 66.821,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending_teacher_playback"
+          },
+          {
+            "label": "9-4",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FsiUpkVRHilvVBUFc0CdchBN34s0",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-4.mp3",
+            "scope": "本课音档",
+            "bytes": 1106746,
+            "sha256": "9e5fbe68debdfe0fbaec36fd4264b14b6ed2bd9b930805a19d339d66961c234c",
+            "duration_seconds": 68.859,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending_teacher_playback"
+          },
+          {
+            "label": "9-5",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FtFH9Y9G406dOZC0Me07nMT4RsHZ",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-5.mp3",
+            "scope": "本课音档",
+            "bytes": 1013959,
+            "sha256": "4cda86d58af50ca4ecd5dca46ec712537ae0c0d6545c41d3bc14355a97f46213",
+            "duration_seconds": 63.06,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending_teacher_playback"
+          },
+          {
+            "label": "9-6",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fhq-iAZIOoP9lAlwN7qAmAeMH02M",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-09/9-6.mp3",
+            "scope": "本课音档",
+            "bytes": 874779,
+            "sha256": "e30f25b5a404d9f19e0c482181ed56a0fe62e49a144ea6bd86cf222f7c989ee7",
+            "duration_seconds": 54.361,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending_teacher_playback"
+          }
+        ],
+        "exercise_bindings": [
+          {
+            "exercise_id": "text.vocabulary",
+            "heading_verbatim": "词语",
+            "textbook_printed_pages": [
+              77,
+              78
+            ],
+            "audio_tracks": [
+              "9-1"
+            ],
+            "item_count": 27,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "exercise_id": "text.vocabulary_comprehension",
+            "heading_verbatim": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "textbook_printed_pages": [
+              78,
+              79
+            ],
+            "audio_tracks": [
+              "9-2"
+            ],
+            "item_count": 7,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "exercise_id": "text.listening_sentences.exercise_9_3",
+            "heading_verbatim": "一、听句子，判断对错",
+            "textbook_printed_pages": [
+              79
+            ],
+            "audio_tracks": [
+              "9-3"
+            ],
+            "item_count": 10,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "exercise_id": "text.short_text_1.exercise.first_listen",
+            "heading_verbatim": "（一）听第一遍，简单回答问题",
+            "textbook_printed_pages": [
+              80
+            ],
+            "audio_tracks": [
+              "9-4"
+            ],
+            "item_count": 3,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "exercise_id": "text.short_text_1.exercise.second_listen",
+            "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+            "textbook_printed_pages": [
+              80
+            ],
+            "audio_tracks": [
+              "9-4"
+            ],
+            "item_count": 3,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "exercise_id": "text.short_text_2.exercise.first_listen",
+            "heading_verbatim": "（一）听第一遍，简单回答问题",
+            "textbook_printed_pages": [
+              82
+            ],
+            "audio_tracks": [
+              "9-5"
+            ],
+            "item_count": 3,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "exercise_id": "text.short_text_2.exercise.second_listen",
+            "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+            "textbook_printed_pages": [
+              82
+            ],
+            "audio_tracks": [
+              "9-5"
+            ],
+            "item_count": 3,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "exercise_id": "text.short_text_3.exercise.first_listen",
+            "heading_verbatim": "（一）听第一遍，简单回答问题",
+            "textbook_printed_pages": [
+              83
+            ],
+            "audio_tracks": [
+              "9-6"
+            ],
+            "item_count": 3,
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "exercise_id": "text.short_text_3.exercise.second_listen",
+            "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+            "textbook_printed_pages": [
+              84
+            ],
+            "audio_tracks": [
+              "9-6"
+            ],
+            "item_count": 3,
+            "semantic_status": "pending_teacher_playback"
+          }
+        ],
+        "notes": [
+          "技术状态只表示本地文件完整性、解码和时长核对通过，不等于音频语义或课堂播放已批准。",
+          "听力题组题名、题目页、题数与音频绑定以 listening-exercise-contract.json 为准。"
+        ]
+      },
+      "canonical_path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json",
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/source-manifest.json",
+      "canonical_source_sha256": "c928011dfed526c506af0c73ab0dd420bb0eba07f43938f179c08743c60b0da1",
+      "review_items": [
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:1",
+          "value": {
+            "no": 1,
+            "word": "土豆",
+            "pinyin": "tǔdòu",
+            "pos": "名",
+            "gloss": "potato",
+            "starred": true
+          },
+          "title": "土豆",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:2",
+          "value": {
+            "no": 2,
+            "word": "蔬菜",
+            "pinyin": "shūcài",
+            "pos": "名",
+            "gloss": "vegetable"
+          },
+          "title": "蔬菜",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:3",
+          "value": {
+            "no": 3,
+            "word": "早茶",
+            "pinyin": "zǎochá",
+            "pos": "名",
+            "gloss": "dim sum"
+          },
+          "title": "早茶",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:4",
+          "value": {
+            "no": 4,
+            "word": "凉拌",
+            "pinyin": "liángbàn",
+            "pos": "动",
+            "gloss": "cold tossed"
+          },
+          "title": "凉拌",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:5",
+          "value": {
+            "no": 5,
+            "word": "青菜",
+            "pinyin": "qīngcài",
+            "pos": "名",
+            "gloss": "green vegetable"
+          },
+          "title": "青菜",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:6",
+          "value": {
+            "no": 6,
+            "word": "酸辣汤",
+            "pinyin": "suānlàtāng",
+            "pos": "名",
+            "gloss": "hot and sour soup"
+          },
+          "title": "酸辣汤",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:7",
+          "value": {
+            "no": 7,
+            "word": "涮",
+            "pinyin": "shuàn",
+            "pos": "动",
+            "gloss": "to boil instantly",
+            "starred": true
+          },
+          "title": "涮",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:8",
+          "value": {
+            "no": 8,
+            "word": "口味",
+            "pinyin": "kǒuwèi",
+            "pos": "名",
+            "gloss": "taste",
+            "starred": true
+          },
+          "title": "口味",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:9",
+          "value": {
+            "no": 9,
+            "word": "渐渐",
+            "pinyin": "jiànjiàn",
+            "pos": "副",
+            "gloss": "gradually"
+          },
+          "title": "渐渐",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:10",
+          "value": {
+            "no": 10,
+            "word": "黄瓜",
+            "pinyin": "huángguā",
+            "pos": "名",
+            "gloss": "cucumber"
+          },
+          "title": "黄瓜",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:11",
+          "value": {
+            "no": 11,
+            "word": "炖",
+            "pinyin": "dùn",
+            "pos": "动",
+            "gloss": "to stew",
+            "starred": true
+          },
+          "title": "炖",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:12",
+          "value": {
+            "no": 12,
+            "word": "夜宵",
+            "pinyin": "yèxiāo",
+            "pos": "名",
+            "gloss": "late-night snack"
+          },
+          "title": "夜宵",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:13",
+          "value": {
+            "no": 13,
+            "word": "大排档",
+            "pinyin": "dàpáidàng",
+            "pos": "名",
+            "gloss": "food stalls",
+            "starred": true
+          },
+          "title": "大排档",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:14",
+          "value": {
+            "no": 14,
+            "word": "聚会",
+            "pinyin": "jùhuì",
+            "pos": "动",
+            "gloss": "to get together"
+          },
+          "title": "聚会",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:15",
+          "value": {
+            "no": 15,
+            "word": "聚餐",
+            "pinyin": "jùcān",
+            "pos": "动",
+            "gloss": "to have a dinner party",
+            "starred": true
+          },
+          "title": "聚餐",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:16",
+          "value": {
+            "no": 16,
+            "word": "休闲",
+            "pinyin": "xiūxián",
+            "pos": "动",
+            "gloss": "to recreate"
+          },
+          "title": "休闲",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:17",
+          "value": {
+            "no": 17,
+            "word": "豆角",
+            "pinyin": "dòujiǎo",
+            "pos": "名",
+            "gloss": "french bean"
+          },
+          "title": "豆角",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:18",
+          "value": {
+            "no": 18,
+            "word": "不光",
+            "pinyin": "bùguāng",
+            "pos": "连",
+            "gloss": "not only"
+          },
+          "title": "不光",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:19",
+          "value": {
+            "no": 19,
+            "word": "取代",
+            "pinyin": "qǔdài",
+            "pos": "动",
+            "gloss": "to replace"
+          },
+          "title": "取代",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:20",
+          "value": {
+            "no": 20,
+            "word": "季节",
+            "pinyin": "jìjié",
+            "pos": "名",
+            "gloss": "season"
+          },
+          "title": "季节",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:21",
+          "value": {
+            "no": 21,
+            "word": "种类",
+            "pinyin": "zhǒnglèi",
+            "pos": "名",
+            "gloss": "kind; type"
+          },
+          "title": "种类",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:22",
+          "value": {
+            "no": 22,
+            "word": "普遍",
+            "pinyin": "pǔbiàn",
+            "pos": "形",
+            "gloss": "common; universal"
+          },
+          "title": "普遍",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:23",
+          "value": {
+            "no": 23,
+            "word": "年轻",
+            "pinyin": "niánqīng",
+            "pos": "形",
+            "gloss": "young"
+          },
+          "title": "年轻",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:24",
+          "value": {
+            "no": 24,
+            "word": "一般",
+            "pinyin": "yìbān",
+            "pos": "形",
+            "gloss": "usually"
+          },
+          "title": "一般",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:25",
+          "value": {
+            "no": 25,
+            "word": "数量",
+            "pinyin": "shùliàng",
+            "pos": "名",
+            "gloss": "amount; quantity"
+          },
+          "title": "数量",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:26",
+          "value": {
+            "no": 26,
+            "word": "增加",
+            "pinyin": "zēngjiā",
+            "pos": "动",
+            "gloss": "to increase"
+          },
+          "title": "增加",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:27",
+          "value": {
+            "no": 27,
+            "word": "方式",
+            "pinyin": "fāngshì",
+            "pos": "名",
+            "gloss": "method; style",
+            "starred": true
+          },
+          "title": "方式",
+          "page": "77–78",
+          "audio": "9-1",
+          "type": "词语"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_1",
+          "value": {
+            "id": "short_text_1",
+            "printed_pages": [
+              80,
+              81
+            ],
+            "audio": "9-4",
+            "title": "北京人常吃什么",
+            "text": "小陈是广东人，她18岁来北京上大学，大学毕业后留在北京工作，接触的北方菜多了，对北方菜越来越适应，她自己吃饭的口味也有了变化。北京人喜欢吃西红柿、茄子、豆角、黄瓜、白菜、土豆，但是吃绿叶菜不太多。夏天，北京人爱吃凉拌黄瓜、凉拌西红柿、凉面、炸酱面、茄子豆角面。到了冬天，北京人喜欢吃炖菜，比如白菜炖豆腐、牛肉炖土豆什么的。当然，涮羊肉也很受欢迎。现在，北京人不光涮羊肉，还涮牛肉片、鱼片、蔬菜什么的。可以说，各种各样的肉和菜都可以放进火锅里涮，但羊肉片是无法被取代的。",
+            "text_source": "答案 PDF 听力文本（视觉转录，语义待播放核对）",
+            "exercises": {
+              "first_listen": [
+                "小陈是哪儿的人？",
+                "小陈是什么时候来北京的？",
+                "北京人不喜欢吃什么菜？"
+              ],
+              "second_listen": [
+                "北京人夏天喜欢吃哪些菜？（凉拌）",
+                "北京人冬天喜欢吃哪些菜？（炖）",
+                "北京人还喜欢吃什么菜？（涮）"
+              ],
+              "present": "说说北京人喜欢吃什么菜。要求：说6–8句、不少于60字，使用词语和常用表达。词语参考：绿叶菜、土豆、豆角、西红柿、夏天、冬天、凉拌、炖、涮、取代；常用表达参考：不光。",
+              "compare": "北京人吃绿叶菜不太多。夏天常吃凉拌菜，比如凉拌黄瓜、西红柿。冬天吃炖菜，比如白菜炖豆腐。北京人还特别喜欢吃涮羊肉。现在，北京人不光涮羊肉，也涮鱼肉、牛肉和蔬菜什么的。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  80
+                ],
+                "audio_tracks": [
+                  "9-4"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  80
+                ],
+                "audio_tracks": [
+                  "9-4"
+                ]
+              }
+            }
+          },
+          "title": "北京人常吃什么",
+          "page": "80–81",
+          "audio": "9-4",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_2",
+          "value": {
+            "id": "short_text_2",
+            "printed_pages": [
+              82
+            ],
+            "audio": "9-5",
+            "title": "北方人不爱喝汤吗",
+            "text": "小陈在家的时候，她妈妈只要有空儿，就给她做各种各样的汤。不同的季节喝的汤也不一样，比如，天气热的时候，冬瓜汤喝起来很舒服。妈妈说多喝汤对身体有好处。她生病的时候，妈妈也会给她炖汤，妈妈说，喝汤可以让她的病快一点儿好。来北京以后，小陈发现北方人不是每顿饭都喝汤，而且汤的种类不多。人们在家里常做的有西红柿鸡蛋汤、冬瓜丸子汤、酸辣汤，而且不像广东人那样，花好几个小时炖汤。学校食堂卖得最多的也是西红柿鸡蛋汤、黄瓜汤。",
+            "text_source": "答案 PDF 听力文本（视觉转录，语义待播放核对）",
+            "exercises": {
+              "first_listen": [
+                "小陈在家的时候，她妈妈常给她做什么？",
+                "北京人每顿饭都喝汤吗？",
+                "小陈学校的食堂常卖什么汤？"
+              ],
+              "second_listen": [
+                "妈妈觉得喝汤怎么样？（有好处）",
+                "小陈生病的时候，她妈妈为什么给她炖汤？（快一点儿）",
+                "广东人做汤和北京人有什么不同？（种类、时间）"
+              ],
+              "present": "说说北方人和广东人有什么不同。要求：说6–8句、不少于60字；词语参考：季节、不同、种类、西红柿、酸辣汤、冬瓜丸子、炖；常用表达参考：而且、对……有好处。",
+              "compare": "北方人做的汤，种类不多，常做的几种汤是西红柿鸡蛋汤、酸辣汤、冬瓜丸子汤。广东人做的汤种类就多，而且季节不同，汤的种类也不相同。如果一个人生病了，家人也会炖一些对病人身体有好处的汤。不仅如此，广东人炖汤往往要花上几个小时。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  82
+                ],
+                "audio_tracks": [
+                  "9-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  82
+                ],
+                "audio_tracks": [
+                  "9-5"
+                ]
+              }
+            }
+          },
+          "title": "北方人不爱喝汤吗",
+          "page": "82",
+          "audio": "9-5",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_3",
+          "value": {
+            "id": "short_text_3",
+            "printed_pages": [
+              83,
+              84
+            ],
+            "audio": "9-6",
+            "title": "南方人爱喝早茶，爱吃大排档",
+            "text": "刚来北京上学的时候，小陈发现，北方人不怎么吃夜宵，虽说有小吃一条街，但是不像广州那样普遍，广州人半夜了还到街上吃大排档。四年过去了，北京人，特别是年轻人，晚上也喜欢去逛（guì）街，后海吃夜宵。在广州，亲戚朋友聚会，常常是约好到酒楼喝早茶，点一壶茶，吃上几样点心，特别舒服。北京人聚餐一般是吃午餐或晚餐，不过，随着在北京的广东餐馆儿数量的增加，周末“喝早茶”渐渐成了北京人，特别是年轻人的一种休闲方式。",
+            "text_source": "答案 PDF 听力文本（视觉转录；‘逛’后注音及‘后海’前动词按扫描图保留，待语义播放核对）",
+            "exercises": {
+              "first_listen": [
+                "小陈刚来北京的时候，有什么发现？",
+                "现在有没有变化？",
+                "北京人一般什么时候聚餐？"
+              ],
+              "second_listen": [
+                "广东人有什么习惯？（大排档）",
+                "广东人和亲友什么时候聚餐？吃什么？（点心）",
+                "北京人喝早茶吗？（随着）"
+              ],
+              "present": "说说北京人和广东人吃饭的习惯有什么不同。要求：说6–8句、不少于60字；词语参考：夜宵、早茶、聚餐、大排档、休闲方式、增加；常用表达参考：随着、不像……那样。",
+              "compare": "以前，北京人不像广东人那样爱吃夜宵，而广东人晚上常常吃大排档。现在的北京年轻人晚上也去逛街，之后吃夜宵。广东人常约亲友喝早茶，广东人聚餐一般选在中午或晚上。现在，随着广东餐馆儿的增多，喝早茶也成了北京人的一种休闲方式。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  83
+                ],
+                "audio_tracks": [
+                  "9-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  84
+                ],
+                "audio_tracks": [
+                  "9-6"
+                ]
+              }
+            }
+          },
+          "title": "南方人爱喝早茶，爱吃大排档",
+          "page": "83–84",
+          "audio": "9-6",
+          "type": "短文"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1",
+          "value": {
+            "expression": {
+              "expression": "也",
+              "examples": [
+                "在北京的时间长了，认识的人多了，生活也越来越有意思了。",
+                "和中国人聊天儿，开始的时候听不懂，也说不出什么，几个月过去了，能听懂的越来越多，和中国人聊天儿也不那么难了。"
+              ]
+            },
+            "topic": "谈论习惯与爱好"
+          },
+          "title": {
+            "expression": "也",
+            "examples": [
+              "在北京的时间长了，认识的人多了，生活也越来越有意思了。",
+              "和中国人聊天儿，开始的时候听不懂，也说不出什么，几个月过去了，能听懂的越来越多，和中国人聊天儿也不那么难了。"
+            ]
+          },
+          "page": "81",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:2",
+          "value": {
+            "expression": {
+              "expression": "什么的",
+              "examples": [
+                "大鸟的爱好很多，弹琴、看话剧什么的，她都喜欢。",
+                "小张爱运动，游泳、打球什么的都会。"
+              ]
+            },
+            "topic": "谈论习惯与爱好"
+          },
+          "title": {
+            "expression": "什么的",
+            "examples": [
+              "大鸟的爱好很多，弹琴、看话剧什么的，她都喜欢。",
+              "小张爱运动，游泳、打球什么的都会。"
+            ]
+          },
+          "page": "81",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:3",
+          "value": {
+            "expression": {
+              "expression": "不光……还……",
+              "examples": [
+                "常和小张一起爬山的，不光有他的同学，还有他的同事。",
+                "李大为不光爱吃中国菜，还会做几个中国菜。"
+              ]
+            },
+            "topic": "谈论习惯与爱好"
+          },
+          "title": {
+            "expression": "不光……还……",
+            "examples": [
+              "常和小张一起爬山的，不光有他的同学，还有他的同事。",
+              "李大为不光爱吃中国菜，还会做几个中国菜。"
+            ]
+          },
+          "page": "81",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:4",
+          "value": {
+            "expression": {
+              "expression": "当然",
+              "examples": [
+                "小陈觉得做北方菜花时间少，忙的时候她就常做北方菜。当然，如果有时间，她还是喜欢炖点儿汤。",
+                "朴大宇已经适应了北京的生活，中文也有了一些进步。当然，他有时候也很想家，想妈妈做的菜。"
+              ]
+            },
+            "topic": "谈论习惯与爱好"
+          },
+          "title": {
+            "expression": "当然",
+            "examples": [
+              "小陈觉得做北方菜花时间少，忙的时候她就常做北方菜。当然，如果有时间，她还是喜欢炖点儿汤。",
+              "朴大宇已经适应了北京的生活，中文也有了一些进步。当然，他有时候也很想家，想妈妈做的菜。"
+            ]
+          },
+          "page": "81",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:5",
+          "value": {
+            "expression": {
+              "expression": "可以说",
+              "examples": [
+                "来客人吃饺子，过春节也吃饺子，可以说，饺子对北方人来说是一种很重要的食品。",
+                "朴大宇第一次来中国，看到街上有很多饭馆儿，每次去饭馆儿吃饭，里面的客人都很多。他想，要是来中国开饭馆儿，一定能赚很多钱。所以，朴大宇在大学选了中文。可以说，他学中文是为了来中国做生意。"
+              ]
+            },
+            "topic": "谈论习惯与爱好"
+          },
+          "title": {
+            "expression": "可以说",
+            "examples": [
+              "来客人吃饺子，过春节也吃饺子，可以说，饺子对北方人来说是一种很重要的食品。",
+              "朴大宇第一次来中国，看到街上有很多饭馆儿，每次去饭馆儿吃饭，里面的客人都很多。他想，要是来中国开饭馆儿，一定能赚很多钱。所以，朴大宇在大学选了中文。可以说，他学中文是为了来中国做生意。"
+            ]
+          },
+          "page": "81",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:1",
+          "value": {
+            "expression": {
+              "expression": "只要……就……",
+              "examples": [
+                "只要多花点儿时间，炖出来的汤就好喝。",
+                "只要早一点儿起床，就能吃上早饭。"
+              ]
+            },
+            "topic": "谈看法和建议"
+          },
+          "title": {
+            "expression": "只要……就……",
+            "examples": [
+              "只要多花点儿时间，炖出来的汤就好喝。",
+              "只要早一点儿起床，就能吃上早饭。"
+            ]
+          },
+          "page": "83",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:2",
+          "value": {
+            "expression": {
+              "expression": "各种各样",
+              "examples": [
+                "图书馆有各种各样的中文书，朴大宇很喜欢去看。",
+                "李大为在餐馆儿打工，每天接触各种各样的人。"
+              ]
+            },
+            "topic": "谈看法和建议"
+          },
+          "title": {
+            "expression": "各种各样",
+            "examples": [
+              "图书馆有各种各样的中文书，朴大宇很喜欢去看。",
+              "李大为在餐馆儿打工，每天接触各种各样的人。"
+            ]
+          },
+          "page": "83",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:3",
+          "value": {
+            "expression": {
+              "expression": "动词＋起来（2）",
+              "examples": [
+                "炸酱面做起来不难，吃起来也很好吃。",
+                "这首歌很好听，学起来也挺容易。"
+              ]
+            },
+            "topic": "谈看法和建议"
+          },
+          "title": {
+            "expression": "动词＋起来（2）",
+            "examples": [
+              "炸酱面做起来不难，吃起来也很好吃。",
+              "这首歌很好听，学起来也挺容易。"
+            ]
+          },
+          "page": "83",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:4",
+          "value": {
+            "expression": {
+              "expression": "对……（没）有好处（3）",
+              "examples": [
+                "晚饭少吃一点儿，对身体有好处。",
+                "多听多说，对练习中文发音有好处。"
+              ]
+            },
+            "topic": "谈看法和建议"
+          },
+          "title": {
+            "expression": "对……（没）有好处（3）",
+            "examples": [
+              "晚饭少吃一点儿，对身体有好处。",
+              "多听多说，对练习中文发音有好处。"
+            ]
+          },
+          "page": "83",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:5",
+          "value": {
+            "expression": {
+              "expression": "形容词＋一点儿",
+              "examples": [
+                "今天考试，李大为想早一点儿去学校。",
+                "时间不早了，我们快一点儿走吧。"
+              ]
+            },
+            "topic": "谈看法和建议"
+          },
+          "title": {
+            "expression": "形容词＋一点儿",
+            "examples": [
+              "今天考试，李大为想早一点儿去学校。",
+              "时间不早了，我们快一点儿走吧。"
+            ]
+          },
+          "page": "83",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:6",
+          "value": {
+            "expression": {
+              "expression": "而且",
+              "examples": [
+                "小陈觉得北方菜也很好吃，而且做起来容易一些。",
+                "丽丽现在骑车去公司，比坐公共汽车方便，而且可以锻炼身体。"
+              ]
+            },
+            "topic": "谈看法和建议"
+          },
+          "title": {
+            "expression": "而且",
+            "examples": [
+              "小陈觉得北方菜也很好吃，而且做起来容易一些。",
+              "丽丽现在骑车去公司，比坐公共汽车方便，而且可以锻炼身体。"
+            ]
+          },
+          "page": "83",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:1",
+          "value": {
+            "expression": {
+              "expression": "刚……的时候",
+              "examples": [
+                "刚来中国的时候，朴大宇不习惯北京的天气。",
+                "刚进合唱团的时候，大鸟觉得记歌词特别难。"
+              ]
+            },
+            "topic": "谈习惯和爱好"
+          },
+          "title": {
+            "expression": "刚……的时候",
+            "examples": [
+              "刚来中国的时候，朴大宇不习惯北京的天气。",
+              "刚进合唱团的时候，大鸟觉得记歌词特别难。"
+            ]
+          },
+          "page": "84–85",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:2",
+          "value": {
+            "expression": {
+              "expression": "不怎么",
+              "examples": [
+                "朴大宇觉得看懂中文不怎么难，可是听懂就不容易了。",
+                "大鸟会弹钢琴，也爱听音乐，可是来中国以前不怎么喜欢唱歌。"
+              ]
+            },
+            "topic": "谈习惯和爱好"
+          },
+          "title": {
+            "expression": "不怎么",
+            "examples": [
+              "朴大宇觉得看懂中文不怎么难，可是听懂就不容易了。",
+              "大鸟会弹钢琴，也爱听音乐，可是来中国以前不怎么喜欢唱歌。"
+            ]
+          },
+          "page": "84–85",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:3",
+          "value": {
+            "expression": {
+              "expression": "特别是",
+              "examples": [
+                "李大为觉得学汉语不容易，特别是写汉字，更难。",
+                "北方人喜欢吃面食，特别是饺子和面条儿。"
+              ]
+            },
+            "topic": "谈习惯和爱好"
+          },
+          "title": {
+            "expression": "特别是",
+            "examples": [
+              "李大为觉得学汉语不容易，特别是写汉字，更难。",
+              "北方人喜欢吃面食，特别是饺子和面条儿。"
+            ]
+          },
+          "page": "84–85",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:4",
+          "value": {
+            "expression": {
+              "expression": "一般",
+              "examples": [
+                "北方人早饭一般吃得比较多。",
+                "只要有时间，小张周末一般都去登山。"
+              ]
+            },
+            "topic": "谈习惯和爱好"
+          },
+          "title": {
+            "expression": "一般",
+            "examples": [
+              "北方人早饭一般吃得比较多。",
+              "只要有时间，小张周末一般都去登山。"
+            ]
+          },
+          "page": "84–85",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:5",
+          "value": {
+            "expression": {
+              "expression": "随着",
+              "examples": [
+                "随着年龄的增长，李大为对汉语的兴趣越来越大。",
+                "随着收入的增加，去饭馆儿吃饭不再是新鲜事。",
+                "随着汉语水平的提高，朴大宇越来越想了解中国文化。"
+              ]
+            },
+            "topic": "谈习惯和爱好"
+          },
+          "title": {
+            "expression": "随着",
+            "examples": [
+              "随着年龄的增长，李大为对汉语的兴趣越来越大。",
+              "随着收入的增加，去饭馆儿吃饭不再是新鲜事。",
+              "随着汉语水平的提高，朴大宇越来越想了解中国文化。"
+            ]
+          },
+          "page": "84–85",
+          "type": "语法／表达"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehension:1",
+          "value": {
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "words": [
+              "土豆",
+              "蔬菜",
+              "早茶",
+              "凉拌西红柿",
+              "青菜",
+              "酸辣汤",
+              "涮羊肉"
+            ],
+            "answer": [
+              "1.C",
+              "2.B",
+              "3.A",
+              "4.E",
+              "5.D",
+              "6.F",
+              "7.G"
+            ]
+          },
+          "title": "词语理解",
+          "page": "78–79",
+          "audio": "9-2",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_9_3:1",
+          "value": {
+            "prompt": {
+              "no": 1,
+              "text": "大家喜欢的味道不一样。",
+              "answer": "对"
+            },
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "79",
+          "audio": "9-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_9_3:2",
+          "value": {
+            "prompt": {
+              "no": 2,
+              "text": "朴大宇每天都和中国人一起上课。",
+              "answer": "错"
+            },
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "79",
+          "audio": "9-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_9_3:3",
+          "value": {
+            "prompt": {
+              "no": 3,
+              "text": "王红的习惯和以前不一样了。",
+              "answer": "对"
+            },
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "79",
+          "audio": "9-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_9_3:4",
+          "value": {
+            "prompt": {
+              "no": 4,
+              "text": "现在大家不常出去吃饭了。",
+              "answer": "错"
+            },
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "79",
+          "audio": "9-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_9_3:5",
+          "value": {
+            "prompt": {
+              "no": 5,
+              "text": "小陈没做热菜。",
+              "answer": "错"
+            },
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "79",
+          "audio": "9-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_9_3:6",
+          "value": {
+            "prompt": {
+              "no": 6,
+              "text": "土豆、黄瓜是大家喜欢吃的。",
+              "answer": "错"
+            },
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "79",
+          "audio": "9-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_9_3:7",
+          "value": {
+            "prompt": {
+              "no": 7,
+              "text": "他们现在吃晚饭。",
+              "answer": "错"
+            },
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "79",
+          "audio": "9-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_9_3:8",
+          "value": {
+            "prompt": {
+              "no": 8,
+              "text": "南方在街上吃饭的地方很多，菜也很好吃。",
+              "answer": "对"
+            },
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "79",
+          "audio": "9-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_9_3:9",
+          "value": {
+            "prompt": {
+              "no": 9,
+              "text": "小张要开会。",
+              "answer": "错"
+            },
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "79",
+          "audio": "9-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_9_3:10",
+          "value": {
+            "prompt": {
+              "no": 10,
+              "text": "人们有空儿的时候喜欢一起吃饭。",
+              "answer": "对"
+            },
+            "heading": "一、听句子，判断对错"
+          },
+          "title": "一、听句子，判断对错",
+          "page": "79",
+          "audio": "9-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:1",
+          "value": {
+            "prompt": "小陈是哪儿的人？",
+            "kind": "first_listen",
+            "textTitle": "北京人常吃什么"
+          },
+          "title": "北京人常吃什么 · first_listen",
+          "page": "80–81",
+          "audio": "9-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:2",
+          "value": {
+            "prompt": "小陈是什么时候来北京的？",
+            "kind": "first_listen",
+            "textTitle": "北京人常吃什么"
+          },
+          "title": "北京人常吃什么 · first_listen",
+          "page": "80–81",
+          "audio": "9-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:3",
+          "value": {
+            "prompt": "北京人不喜欢吃什么菜？",
+            "kind": "first_listen",
+            "textTitle": "北京人常吃什么"
+          },
+          "title": "北京人常吃什么 · first_listen",
+          "page": "80–81",
+          "audio": "9-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:1",
+          "value": {
+            "prompt": "北京人夏天喜欢吃哪些菜？（凉拌）",
+            "kind": "second_listen",
+            "textTitle": "北京人常吃什么"
+          },
+          "title": "北京人常吃什么 · second_listen",
+          "page": "80–81",
+          "audio": "9-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:2",
+          "value": {
+            "prompt": "北京人冬天喜欢吃哪些菜？（炖）",
+            "kind": "second_listen",
+            "textTitle": "北京人常吃什么"
+          },
+          "title": "北京人常吃什么 · second_listen",
+          "page": "80–81",
+          "audio": "9-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:3",
+          "value": {
+            "prompt": "北京人还喜欢吃什么菜？（涮）",
+            "kind": "second_listen",
+            "textTitle": "北京人常吃什么"
+          },
+          "title": "北京人常吃什么 · second_listen",
+          "page": "80–81",
+          "audio": "9-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:present:1",
+          "value": {
+            "prompt": "说说北京人喜欢吃什么菜。要求：说6–8句、不少于60字，使用词语和常用表达。词语参考：绿叶菜、土豆、豆角、西红柿、夏天、冬天、凉拌、炖、涮、取代；常用表达参考：不光。",
+            "kind": "present",
+            "textTitle": "北京人常吃什么"
+          },
+          "title": "北京人常吃什么 · present",
+          "page": "80–81",
+          "audio": "9-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:compare:1",
+          "value": {
+            "prompt": "北京人吃绿叶菜不太多。夏天常吃凉拌菜，比如凉拌黄瓜、西红柿。冬天吃炖菜，比如白菜炖豆腐。北京人还特别喜欢吃涮羊肉。现在，北京人不光涮羊肉，也涮鱼肉、牛肉和蔬菜什么的。",
+            "kind": "compare",
+            "textTitle": "北京人常吃什么"
+          },
+          "title": "北京人常吃什么 · compare",
+          "page": "80–81",
+          "audio": "9-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:1",
+          "value": {
+            "prompt": "小陈在家的时候，她妈妈常给她做什么？",
+            "kind": "first_listen",
+            "textTitle": "北方人不爱喝汤吗"
+          },
+          "title": "北方人不爱喝汤吗 · first_listen",
+          "page": "82",
+          "audio": "9-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:2",
+          "value": {
+            "prompt": "北京人每顿饭都喝汤吗？",
+            "kind": "first_listen",
+            "textTitle": "北方人不爱喝汤吗"
+          },
+          "title": "北方人不爱喝汤吗 · first_listen",
+          "page": "82",
+          "audio": "9-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:3",
+          "value": {
+            "prompt": "小陈学校的食堂常卖什么汤？",
+            "kind": "first_listen",
+            "textTitle": "北方人不爱喝汤吗"
+          },
+          "title": "北方人不爱喝汤吗 · first_listen",
+          "page": "82",
+          "audio": "9-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:1",
+          "value": {
+            "prompt": "妈妈觉得喝汤怎么样？（有好处）",
+            "kind": "second_listen",
+            "textTitle": "北方人不爱喝汤吗"
+          },
+          "title": "北方人不爱喝汤吗 · second_listen",
+          "page": "82",
+          "audio": "9-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:2",
+          "value": {
+            "prompt": "小陈生病的时候，她妈妈为什么给她炖汤？（快一点儿）",
+            "kind": "second_listen",
+            "textTitle": "北方人不爱喝汤吗"
+          },
+          "title": "北方人不爱喝汤吗 · second_listen",
+          "page": "82",
+          "audio": "9-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:3",
+          "value": {
+            "prompt": "广东人做汤和北京人有什么不同？（种类、时间）",
+            "kind": "second_listen",
+            "textTitle": "北方人不爱喝汤吗"
+          },
+          "title": "北方人不爱喝汤吗 · second_listen",
+          "page": "82",
+          "audio": "9-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:present:1",
+          "value": {
+            "prompt": "说说北方人和广东人有什么不同。要求：说6–8句、不少于60字；词语参考：季节、不同、种类、西红柿、酸辣汤、冬瓜丸子、炖；常用表达参考：而且、对……有好处。",
+            "kind": "present",
+            "textTitle": "北方人不爱喝汤吗"
+          },
+          "title": "北方人不爱喝汤吗 · present",
+          "page": "82",
+          "audio": "9-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:compare:1",
+          "value": {
+            "prompt": "北方人做的汤，种类不多，常做的几种汤是西红柿鸡蛋汤、酸辣汤、冬瓜丸子汤。广东人做的汤种类就多，而且季节不同，汤的种类也不相同。如果一个人生病了，家人也会炖一些对病人身体有好处的汤。不仅如此，广东人炖汤往往要花上几个小时。",
+            "kind": "compare",
+            "textTitle": "北方人不爱喝汤吗"
+          },
+          "title": "北方人不爱喝汤吗 · compare",
+          "page": "82",
+          "audio": "9-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:1",
+          "value": {
+            "prompt": "小陈刚来北京的时候，有什么发现？",
+            "kind": "first_listen",
+            "textTitle": "南方人爱喝早茶，爱吃大排档"
+          },
+          "title": "南方人爱喝早茶，爱吃大排档 · first_listen",
+          "page": "83–84",
+          "audio": "9-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:2",
+          "value": {
+            "prompt": "现在有没有变化？",
+            "kind": "first_listen",
+            "textTitle": "南方人爱喝早茶，爱吃大排档"
+          },
+          "title": "南方人爱喝早茶，爱吃大排档 · first_listen",
+          "page": "83–84",
+          "audio": "9-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:3",
+          "value": {
+            "prompt": "北京人一般什么时候聚餐？",
+            "kind": "first_listen",
+            "textTitle": "南方人爱喝早茶，爱吃大排档"
+          },
+          "title": "南方人爱喝早茶，爱吃大排档 · first_listen",
+          "page": "83–84",
+          "audio": "9-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:1",
+          "value": {
+            "prompt": "广东人有什么习惯？（大排档）",
+            "kind": "second_listen",
+            "textTitle": "南方人爱喝早茶，爱吃大排档"
+          },
+          "title": "南方人爱喝早茶，爱吃大排档 · second_listen",
+          "page": "83–84",
+          "audio": "9-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:2",
+          "value": {
+            "prompt": "广东人和亲友什么时候聚餐？吃什么？（点心）",
+            "kind": "second_listen",
+            "textTitle": "南方人爱喝早茶，爱吃大排档"
+          },
+          "title": "南方人爱喝早茶，爱吃大排档 · second_listen",
+          "page": "83–84",
+          "audio": "9-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:3",
+          "value": {
+            "prompt": "北京人喝早茶吗？（随着）",
+            "kind": "second_listen",
+            "textTitle": "南方人爱喝早茶，爱吃大排档"
+          },
+          "title": "南方人爱喝早茶，爱吃大排档 · second_listen",
+          "page": "83–84",
+          "audio": "9-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:present:1",
+          "value": {
+            "prompt": "说说北京人和广东人吃饭的习惯有什么不同。要求：说6–8句、不少于60字；词语参考：夜宵、早茶、聚餐、大排档、休闲方式、增加；常用表达参考：随着、不像……那样。",
+            "kind": "present",
+            "textTitle": "南方人爱喝早茶，爱吃大排档"
+          },
+          "title": "南方人爱喝早茶，爱吃大排档 · present",
+          "page": "83–84",
+          "audio": "9-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:compare:1",
+          "value": {
+            "prompt": "以前，北京人不像广东人那样爱吃夜宵，而广东人晚上常常吃大排档。现在的北京年轻人晚上也去逛街，之后吃夜宵。广东人常约亲友喝早茶，广东人聚餐一般选在中午或晚上。现在，随着广东餐馆儿的增多，喝早茶也成了北京人的一种休闲方式。",
+            "kind": "compare",
+            "textTitle": "南方人爱喝早茶，爱吃大排档"
+          },
+          "title": "南方人爱喝早茶，爱吃大排档 · compare",
+          "page": "83–84",
+          "audio": "9-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:1",
+          "value": {
+            "prompt": {
+              "id": "comprehensive_1",
+              "instruction": "请你根据听过的三段短文填表",
+              "table_headers": [
+                "人物类别",
+                "常吃什么",
+                "不常吃什么",
+                "有什么变化",
+                "常做什么",
+                "有什么特别的饮食习惯"
+              ],
+              "answer_status": "open_table_teacher_check"
+            }
+          },
+          "title": "综合练习",
+          "page": "85–86",
+          "audio": "9-4、9-5、9-6",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:2",
+          "value": {
+            "prompt": {
+              "id": "comprehensive_2",
+              "instruction": "小组活动：根据上面的表格和参考词语、常用表达，谈一谈：（1）北京人常吃什么；（2）南方人的特色饮食；（3）南方人和北方人的饮食习惯。要求：一名同学说8–10个句子，不少于80字；小组其他同学补充；最后由一名同学总结，说10–12个句子，不少于100字。",
+              "answer_status": "open_presentational_task"
+            }
+          },
+          "title": "综合练习",
+          "page": "85–86",
+          "audio": "9-4、9-5、9-6",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:3",
+          "value": {
+            "prompt": {
+              "id": "comprehensive_3",
+              "instruction": "拓展练习：说一说：（1）你喜欢吃哪些菜；（2）在你们国家，有什么特别的节日食品；（3）你自己做饭不做饭，你一般在哪儿吃饭。要求使用这一课学过的词语和常用表达；说10–12句话，不少于100字。",
+              "answer_status": "open_presentational_task"
+            }
+          },
+          "title": "综合练习",
+          "page": "85–86",
+          "audio": "9-4、9-5、9-6",
+          "type": "综合练习"
+        }
+      ]
+    },
+    "boya-quasi-intermediate-i:lesson-10": {
+      "available": true,
+      "review_complete": true,
+      "completion": {
+        "status": "completed_by_adam",
+        "confirmed_by": "Adam",
+        "confirmed_at": "2026-09-08",
+        "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+        "technical_status_preserved": true
+      },
+      "reason": "",
+      "canonical": {
+        "lesson_key": "boya-quasi-intermediate-i:lesson-10",
+        "schema_version": "quasi-intermediate-source-audit-v1.0",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_number": 10,
+        "lesson_id": "lesson-10",
+        "title": "中国人喜欢聚餐",
+        "title_source": "主教材印刷 P87 标题页视觉核对",
+        "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+        "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+        "page_map": {
+          "printed_pages": [
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95
+          ],
+          "pdf_pages": [
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108
+          ],
+          "answer_pdf_pages": [
+            27,
+            28
+          ],
+          "mapping_status": "visually_verified_page_ranges; inventory answer range 26-27 is one page earlier than transcript content"
+        },
+        "qr_evidence": {
+          "pdf_page": 100,
+          "qr_url": "http://qr31.cn/HdituA",
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-10-pdf-page-100.png",
+          "landing_page": "https://biz.cli.im/site/HdituA?qrurl=http://qr31.cn/HdituA&gtype=2&key=cf41417fce89ea312878298034ac5e49206cb59056",
+          "landing_page_status": "inventory_recorded; live semantic review pending",
+          "landing_audio_labels": [
+            "10-1",
+            "10-2",
+            "10-3",
+            "10-4",
+            "10-5",
+            "10-6"
+          ],
+          "textbook_audio_labels_expected": [
+            "10-1",
+            "10-2",
+            "10-3",
+            "10-4",
+            "10-5",
+            "10-6"
+          ]
+        },
+        "audio_map": [
+          {
+            "track_label": "10-1",
+            "coding": "KY1539817",
+            "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FtnjwdBC8CXmeILFu0IAkLWVGEcl",
+            "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-10/10-1.mp3",
+            "textbook_printed_pages": [
+              87,
+              88
+            ],
+            "content_scope": "词语",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "semantic_listening_status": "pending_teacher_playback",
+            "bytes": 822534,
+            "duration_seconds": 51.09551,
+            "sample_rate_hz": 44100,
+            "channels": 1,
+            "sha256": "d350814320cef507831c2371153f75b743d99ca699010b5155ba6b2f5309f057"
+          },
+          {
+            "track_label": "10-2",
+            "coding": "ER1783228",
+            "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FktnS9Fx8TBDcuoBA4lyU-r3TozX",
+            "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-10/10-2.mp3",
+            "textbook_printed_pages": [
+              88
+            ],
+            "content_scope": "词语理解",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "semantic_listening_status": "pending_teacher_playback",
+            "bytes": 342717,
+            "duration_seconds": 21.106939,
+            "sample_rate_hz": 44100,
+            "channels": 1,
+            "sha256": "793e304a288aef1c068e39a8b90b354b3c5e206e9fba4089b3ef5a058a7a5d61"
+          },
+          {
+            "track_label": "10-3",
+            "coding": "DT1783229",
+            "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FgkA-oUcSLWVIzXBWfX05VE-Wml8",
+            "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-10/10-3.mp3",
+            "textbook_printed_pages": [
+              88,
+              89
+            ],
+            "content_scope": "听说句子",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "semantic_listening_status": "pending_teacher_playback",
+            "bytes": 1125554,
+            "duration_seconds": 70.034286,
+            "sample_rate_hz": 44100,
+            "channels": 1,
+            "sha256": "9f6b47496ed12b4983e595cb6f8715ec94d3c89d2ee248e33e856ae8e32f2795"
+          },
+          {
+            "track_label": "10-4",
+            "coding": "NQ1783230",
+            "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fgn2SJoMmxU_OU7sCzw1WnJdI34m",
+            "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-10/10-4.mp3",
+            "textbook_printed_pages": [
+              89,
+              90
+            ],
+            "content_scope": "短文一",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "semantic_listening_status": "pending_teacher_playback",
+            "bytes": 1045724,
+            "duration_seconds": 65.044898,
+            "sample_rate_hz": 44100,
+            "channels": 1,
+            "sha256": "bc5bb13e286bc5f27c1b18c647b5b67da216f0bac65a22749bf4c11546e70a90"
+          },
+          {
+            "track_label": "10-5",
+            "coding": "HR1783231",
+            "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fn9VhCHiJ-GfrwrpcEzVtgHgsuwX",
+            "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-10/10-5.mp3",
+            "textbook_printed_pages": [
+              91,
+              92
+            ],
+            "content_scope": "短文二",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "semantic_listening_status": "pending_teacher_playback",
+            "bytes": 842596,
+            "duration_seconds": 52.349388,
+            "sample_rate_hz": 44100,
+            "channels": 1,
+            "sha256": "c82e05aff3eef84dfbd67ea7b13d263bf3920d39d1bca6298afef3adc757dc70"
+          },
+          {
+            "track_label": "10-6",
+            "coding": "FH1783232",
+            "source_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FgfI_vdeh_shF33DKzRAAcPfq-FO",
+            "local_file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-10/10-6.mp3",
+            "textbook_printed_pages": [
+              92,
+              93
+            ],
+            "content_scope": "短文三",
+            "download_status": "passed",
+            "decode_status": "passed",
+            "semantic_listening_status": "pending_teacher_playback",
+            "bytes": 806651,
+            "duration_seconds": 50.102857,
+            "sample_rate_hz": 44100,
+            "channels": 1,
+            "sha256": "50945d2452e793281c3746a6c8047e719ddb9a37bcf2cde5fa6b2af98b3d1a27"
+          }
+        ],
+        "content_inventory": {
+          "vocabulary_count": 27,
+          "vocabulary_comprehension_group_count": 1,
+          "listening_sentence_item_count": 10,
+          "texts_dialogues_count": 3,
+          "short_text_listening_group_count": 6,
+          "common_expression_group_count": 2,
+          "comprehensive_practice_count": 3,
+          "status": "source_review_snapshot"
+        },
+        "answer_policy": "仅记录参考答案 PDF 中可核对的词语理解与判断答案及听力文本；开放式口语题不补写唯一答案。",
+        "review": {
+          "status": "pending_review",
+          "approved": false,
+          "approved_by": [],
+          "approved_at": null,
+          "source_status": "pending_review",
+          "source_qa_status": "technical_audio_passed_semantic_playback_pending",
+          "blockers": [
+            "六段音频已完成文件解码核验，尚未完成逐段语义听核与 PowerPoint 播放实测",
+            "扫描 PDF 的最终文字转录仍需教师/Adam 复核"
+          ],
+          "approval_basis": "主教材 PDF P87-P95 与答案 PDF 第27-28页视觉核对；所有来源记录保持 draft"
+        },
+        "sections": [
+          {
+            "id": "vocabulary",
+            "printed_pages": [
+              87,
+              88
+            ],
+            "audio": "10-1",
+            "entries": [
+              {
+                "no": 1,
+                "word": "穿戴",
+                "pinyin": "chuāndài",
+                "pos": "动",
+                "gloss": "to dress"
+              },
+              {
+                "no": 2,
+                "word": "整齐",
+                "pinyin": "zhěngqí",
+                "pos": "形",
+                "gloss": "tidy; neat"
+              },
+              {
+                "no": 3,
+                "word": "商量",
+                "pinyin": "shāngliang",
+                "pos": "动",
+                "gloss": "to consult"
+              },
+              {
+                "no": 4,
+                "word": "碰",
+                "pinyin": "pèng",
+                "pos": "动",
+                "gloss": "to come across"
+              },
+              {
+                "no": 5,
+                "word": "实习",
+                "pinyin": "shíxí",
+                "pos": "动",
+                "gloss": "to do internship"
+              },
+              {
+                "no": 6,
+                "word": "答应",
+                "pinyin": "dāying",
+                "pos": "动",
+                "gloss": "to agree; to promise"
+              },
+              {
+                "no": 7,
+                "word": "厨师",
+                "pinyin": "chúshī",
+                "pos": "名",
+                "gloss": "cook; chef"
+              },
+              {
+                "no": 8,
+                "word": "收入",
+                "pinyin": "shōurù",
+                "pos": "名",
+                "gloss": "income"
+              },
+              {
+                "no": 9,
+                "word": "社交",
+                "pinyin": "shèjiāo",
+                "pos": "名",
+                "gloss": "social intercourse"
+              },
+              {
+                "no": 10,
+                "word": "费用",
+                "pinyin": "fèiyòng",
+                "pos": "名",
+                "gloss": "expense"
+              },
+              {
+                "no": 11,
+                "word": "分摊",
+                "pinyin": "fēntān",
+                "pos": "动",
+                "gloss": "to share; split the bill"
+              },
+              {
+                "no": 12,
+                "word": "调查",
+                "pinyin": "diàochá",
+                "pos": "动",
+                "gloss": "to survey; investigate"
+              },
+              {
+                "no": 13,
+                "word": "功课",
+                "pinyin": "gōngkè",
+                "pos": "名",
+                "gloss": "homework"
+              },
+              {
+                "no": 14,
+                "word": "同乡",
+                "pinyin": "tóngxiāng",
+                "pos": "名",
+                "gloss": "person from same hometown"
+              },
+              {
+                "no": 15,
+                "word": "普通",
+                "pinyin": "pǔtōng",
+                "pos": "形",
+                "gloss": "ordinary"
+              },
+              {
+                "no": 16,
+                "word": "花费",
+                "pinyin": "huāfèi",
+                "pos": "动",
+                "gloss": "to spend"
+              },
+              {
+                "no": 17,
+                "word": "负担",
+                "pinyin": "fùdān",
+                "pos": null,
+                "pos_status": "blank_in_source",
+                "gloss": "to bear"
+              },
+              {
+                "no": 18,
+                "word": "请客",
+                "pinyin": "qǐngkè",
+                "pos": null,
+                "pos_status": "blank_in_source",
+                "gloss": "invite somebody to dinner"
+              },
+              {
+                "no": 19,
+                "word": "增多",
+                "pinyin": "zēngduō",
+                "pos": "动",
+                "gloss": "to increase"
+              },
+              {
+                "no": 20,
+                "word": "特色",
+                "pinyin": "tèsè",
+                "pos": "名",
+                "gloss": "distinguishing feature"
+              },
+              {
+                "no": 21,
+                "word": "比例",
+                "pinyin": "bǐlì",
+                "pos": "名",
+                "gloss": "proportion"
+              },
+              {
+                "no": 22,
+                "word": "行为",
+                "pinyin": "xíngwéi",
+                "pos": "名",
+                "gloss": "behavior"
+              },
+              {
+                "no": 23,
+                "word": "大饱口福",
+                "pinyin": "dà bǎo kǒu fú",
+                "pos": null,
+                "pos_status": "blank_in_source",
+                "gloss": "eat to one’s heart’s content"
+              },
+              {
+                "no": 24,
+                "word": "距离",
+                "pinyin": "jùlí",
+                "pos": "名",
+                "gloss": "distance"
+              },
+              {
+                "no": 25,
+                "word": "追求",
+                "pinyin": "zhuīqiú",
+                "pos": "动",
+                "gloss": "to pursue"
+              },
+              {
+                "no": 26,
+                "word": "和谐",
+                "pinyin": "héxié",
+                "pos": "形",
+                "gloss": "harmonious"
+              },
+              {
+                "no": 27,
+                "word": "相处",
+                "pinyin": "xiāngchǔ",
+                "pos": "动",
+                "gloss": "to get along"
+              }
+            ]
+          },
+          {
+            "id": "vocabulary_comprehension",
+            "printed_pages": [
+              88
+            ],
+            "audio": "10-2",
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "groups": [
+              {
+                "topic": "聚餐与社交",
+                "image_labels": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "words": [
+                  "聚餐",
+                  "穿戴整齐",
+                  "聚会",
+                  "商量"
+                ],
+                "answer": [
+                  "1.B",
+                  "2.A",
+                  "3.D",
+                  "4.C"
+                ]
+              }
+            ],
+            "answer_status": "answers_checked_against_answer_pdf"
+          },
+          {
+            "id": "listening_sentences",
+            "printed_pages": [
+              88,
+              89
+            ],
+            "audio_tracks": [
+              "10-3"
+            ],
+            "exercise_10_3": {
+              "heading_verbatim": "听句子，判断对错",
+              "instruction": "听句子，判断对错",
+              "items": [
+                [
+                  1,
+                  "周六丽丽打算和同事聚餐。",
+                  "错"
+                ],
+                [
+                  2,
+                  "翻译哪篇小说，大岛想和老师商量商量。",
+                  "错"
+                ],
+                [
+                  3,
+                  "朴大宇和高中同学一起来北京了。",
+                  "错"
+                ],
+                [
+                  4,
+                  "张华已经正式开始工作了。",
+                  "错"
+                ],
+                [
+                  5,
+                  "小李也去爬山。",
+                  "对"
+                ],
+                [
+                  6,
+                  "老张在食堂工作。",
+                  "对"
+                ],
+                [
+                  7,
+                  "小张挣的钱不少。",
+                  "对"
+                ],
+                [
+                  8,
+                  "小张常常和朋友一起玩儿。",
+                  "错"
+                ],
+                [
+                  9,
+                  "丽丽常请同事去饭馆儿吃饭。",
+                  "错"
+                ],
+                [
+                  10,
+                  "调查结果是，越来越多的人希望在家里吃年夜饭。",
+                  "对"
+                ]
+              ],
+              "answer_status": "answers_checked_against_answer_pdf"
+            }
+          },
+          {
+            "id": "short_text_1",
+            "printed_pages": [
+              89,
+              90
+            ],
+            "audio": "10-4",
+            "title": "周五晚上咱们聚餐怎么样",
+            "text": "张华是大学生，功课很多，除了上课，还要找实习单位、学开车，所以他每天都感觉时间不够用。星期五晚上是他觉得最放松的时间。今天就是星期五，昨天，高中时的班长赵红来电话说，他们高中时的班主任来北京开会，想跟在北京的几位同学见见面，赵红和老师商量好，大家周五晚上在老师住的宾馆附近的四川餐馆儿聚会。张华高兴地答应了。两年没见，他也很想好好儿和大家聚聚。走出宿舍楼的时候，他碰上了穿戴整齐的同学小刘，一问，原来，他是去和同乡聚餐。",
+            "exercises": {
+              "first_listen": {
+                "instruction": "（一）听第一遍，简单回答问题",
+                "items": [
+                  "张华上几年级？",
+                  "他星期几不忙？",
+                  "小刘去做什么？"
+                ]
+              },
+              "second_listen": {
+                "instruction": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "items": [
+                  "张华平时要做哪些事？（开车 实习）",
+                  "这星期五晚上张华是怎么安排的？（四川餐馆儿 高中老师和同学）",
+                  "张华喜欢不喜欢同学聚会？（好好儿）"
+                ]
+              },
+              "present": "（三）介绍一下张华。要求：说6～8个句子，不少于60字。词语参考：不够用 找 学 放松 二年级 星期五 四川餐馆儿。常用表达参考：还要 聚聚。",
+              "compare": "（四）读下面的短文，跟你说的进行比较。张华是大学二年级的学生。他要上课，要找实习单位，还要学开车。他总是觉得时间不够用。可是他觉得星期五晚上应该放松。这个星期五晚上，他和高中同学要和高中老师在一家四川餐馆儿聚餐，他想好好儿和老师、同学们聚聚。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  89
+                ],
+                "audio_tracks": [
+                  "10-4"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  90
+                ],
+                "audio_tracks": [
+                  "10-4"
+                ]
+              }
+            },
+            "answer_status": "open_presentational_task_no_unique_answer"
+          },
+          {
+            "id": "short_text_2",
+            "printed_pages": [
+              91,
+              92
+            ],
+            "audio": "10-5",
+            "title": "年轻人喜欢聚餐",
+            "text": "过去，中国人收入不高，一般都是自己做饭。对普通老百姓来说，去饭馆儿吃饭花费太高，负担不起。就连结婚请客往往也是把厨师请到家里，为客人们做饭。现在，人们收入增加了，而且社交活动增多，出去吃饭的次数越来越多，年轻人更是这样，同学聚会、同事喜庆等，都会选一家有特色的餐馆儿。一般来说，同事聚餐、同学聚会，费用大家一起分摊，也就是各付各的。根据调查，60%的年轻人认为，聚餐是重要的社交活动之一。",
+            "exercises": {
+              "first_listen": {
+                "instruction": "（一）听第一遍，简单回答问题",
+                "items": [
+                  "过去人们为什么不常去饭馆儿吃饭？",
+                  "现在为什么出去吃饭的次数多了？",
+                  "对年轻人来说，聚餐重要吗？"
+                ]
+              },
+              "second_listen": {
+                "instruction": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "items": [
+                  "过去，人们结婚常常在哪里请客？（厨师）",
+                  "现在，哪些活动安排在餐馆儿进行？（喜庆）",
+                  "一般来说，聚餐的费用谁付？（分摊）"
+                ]
+              },
+              "present": "（三）和过去相比，人们为什么去餐馆儿的越来越多了？要求：说6～8个句子，不少于60字。词语参考：收入 增加 社交活动 喜庆活动 聚会 进行 根据调查 年轻人。常用表达参考：负担不起 更是 一般来说。",
+              "compare": "（四）读下面的短文，跟你说的进行比较。过去，人们收入少，一般在家里自己做饭。如今，人们收入多起来了，而且社交活动也多了。各种聚会和喜庆活动往往选在饭馆儿进行。根据调查，60%的年轻人认为聚餐是重要的社交活动之一。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  91
+                ],
+                "audio_tracks": [
+                  "10-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  91
+                ],
+                "audio_tracks": [
+                  "10-5"
+                ]
+              }
+            },
+            "answer_status": "open_presentational_task_no_unique_answer"
+          },
+          {
+            "id": "short_text_3",
+            "printed_pages": [
+              92,
+              93
+            ],
+            "audio": "10-6",
+            "title": "聚餐是中国人最重要的社交活动",
+            "text": "有调查显示，中国人最为普及的三种社交活动为聚餐、体育运动和唱卡拉OK。其中，聚餐比例为46.4%，其次是体育运动和唱卡拉OK，比例分别是13%和12.12%。聚餐这种社交行为，既可以让人们大饱口福，也拉近了人与人之间的距离。从饮食文化上来说，聚餐体现了中国人对‘人和’的追求，希望人与人之间可以和谐相处。",
+            "exercises": {
+              "first_listen": {
+                "instruction": "（一）听第一遍，简单回答问题",
+                "items": [
+                  "中国人喜欢的社交活动有几种？",
+                  "人们最喜欢哪种？",
+                  "人们喜欢运动吗？"
+                ]
+              },
+              "second_listen": {
+                "instruction": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "items": [
+                  "中国人最喜欢的社交活动是什么？（聚餐）",
+                  "喜欢唱歌的比例是多少？（百分之）",
+                  "人们为什么喜欢聚餐？（大饱口福 和谐）"
+                ]
+              },
+              "present": "（三）请介绍一下中国人最喜欢的三种社交活动。要求：说8～10个句子，不少于80字。词语参考：显示 体育活动 聚餐 唱卡拉OK 比例 分别 大饱口福 拉近 距离。常用表达参考：从……来说。",
+              "compare": "（四）读下面的短文，跟你说的进行比较。调查显示，中国人最喜欢的社交活动分别是聚餐、体育活动和唱卡拉OK，比例分别是46.4%、13%和12.12%。聚餐可以大饱口福，从文化上来说，也拉近了人与人之间的距离。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  92
+                ],
+                "audio_tracks": [
+                  "10-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  92
+                ],
+                "audio_tracks": [
+                  "10-6"
+                ]
+              }
+            },
+            "answer_status": "open_presentational_task_no_unique_answer"
+          },
+          {
+            "id": "common_expressions",
+            "printed_pages": [
+              90,
+              91,
+              93
+            ],
+            "audio": null,
+            "groups": [
+              {
+                "topic": "谈论时间和安排",
+                "items": [
+                  {
+                    "expression": "还要",
+                    "examples": [
+                      "李大为星期六上中文学校，星期天还要参加篮球比赛。",
+                      "张红是星期一到星期三考试，星期四要去面试，周末还要去实习。"
+                    ]
+                  },
+                  {
+                    "expression": "就是",
+                    "examples": [
+                      "王红每年都和同学们一起过生日，后天就是她的生日。",
+                      "小陈家每年除夕都做很多菜，明天就是除夕了，小陈又可以大饱口福了。"
+                    ]
+                  },
+                  {
+                    "expression": "动词重叠",
+                    "examples": [
+                      "聚会的时候，大家好好儿聊聊。",
+                      "这个周末我不想出去，打算在家里看看书，休息休息。"
+                    ]
+                  },
+                  {
+                    "expression": "一 + 单音节动词",
+                    "examples": [
+                      "我到饭馆儿，等了半天，同学们都没来。打电话一问，才知道聚餐时间是明天。",
+                      "我收到一条短信，一看，是张华告诉我星期日聚会。"
+                    ]
+                  }
+                ]
+              },
+              {
+                "topic": "说明情况",
+                "items": [
+                  {
+                    "expression": "动词+不起",
+                    "examples": [
+                      "小张小时候常常走山路，可是家里没钱，买不起好的运动鞋。",
+                      "那家餐厅的菜太贵，学生们一般吃不起。"
+                    ]
+                  },
+                  {
+                    "expression": "连……都／也……",
+                    "examples": [
+                      "小张工作很忙，有时连周末也要加班。",
+                      "朴大宇喜欢做中国菜，她会做面条儿，连包饺子都会。"
+                    ]
+                  },
+                  {
+                    "expression": "更是",
+                    "examples": [
+                      "这家饭馆儿的菜很受欢迎，平时来吃饭的人就很多，周末的时候更是这样。",
+                      "这个学校的学生学习很努力，不上课的时候，他们都去图书馆学习，期末考试那两个星期更是这样。"
+                    ]
+                  },
+                  {
+                    "expression": "……等",
+                    "examples": [
+                      "北京人喜欢吃的有黄瓜、西红柿、豆角等。",
+                      "合唱团唱的歌很多，有《茉莉花》《康定情歌》《四季歌》等。"
+                    ]
+                  },
+                  {
+                    "expression": "一般来说",
+                    "examples": [
+                      "一般来说，人们愿意在饭馆儿请客，要是很好的朋友，也会请到家里。",
+                      "一般来说，音乐理论课不太容易受学生欢迎，可是李老师教得很有意思。"
+                    ]
+                  },
+                  {
+                    "expression": "大饱口福／眼福／耳福",
+                    "examples": [
+                      "每次回家，小陈都可以大饱口福。",
+                      "这次展览展出的都是有名的中国山水画，我们可以大饱眼福。",
+                      "上周几位有名的京剧演员来这里演出，同学们大饱了耳福。"
+                    ]
+                  },
+                  {
+                    "expression": "从……来说",
+                    "examples": [
+                      "从生活方面来说，住在大城市确实要方便一些。",
+                      "从人数上来说，在北京学习的外国留学生最多。"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "source_status": "visually_verified_pending_adam_approval"
+          },
+          {
+            "id": "comprehensive_practice",
+            "printed_pages": [
+              94,
+              95
+            ],
+            "audio_tracks": [
+              "10-4",
+              "10-5",
+              "10-6"
+            ],
+            "exercise_1": {
+              "instruction": "请你根据听过的三段短文填表",
+              "table_fields": {
+                "过去": [
+                  "收入低，一般",
+                  "办婚宴"
+                ],
+                "现在": [
+                  "人们最喜欢的三种社交活动是",
+                  "其中，最受欢迎的是",
+                  "原因是：1.；2."
+                ]
+              }
+            },
+            "exercise_2": "根据上面的表格和下面给出的参考词语和常用表达，谈一谈：（1）以张华为例，说说大学生的社交活动；（2）对比过去和现在，现在人们为什么常常出去吃饭；（3）中国人最喜欢的社交活动，为什么聚餐排在第一位。要求：一名同学先说8～10个句子，不少于80字；然后小组其他同学补充；最后由一名同学总结，说10～12个句子，不少于100字。词语参考：时间不够用 上课 实习 放松 聚会 收入 增加 比例 和谐相处 大饱口福。常用表达参考：从……来说 连……也…… 分别 其中 其次 一般来说。",
+            "exercise_3": "拓展练习：说一说：（1）你的社交活动有哪些；（2）在你们国家，人们喜欢不喜欢出去吃饭；（3）你们国家受欢迎的社交活动有哪些。要求：（1）使用这一课学过的词语和常用表达；（2）说10～12个句子，不少于100字。",
+            "answer_status": "open_presentational_tasks_no_unique_answer"
+          }
+        ],
+        "extraction_snapshot": {
+          "page_audit": "audit/source-pages-87-95-audit-draft.md",
+          "answer_audit": "audit/answer-pages-26-27-audit-draft.md",
+          "audio_audit": "audit/audio-technical-2026-08-28.md",
+          "status": "draft_source_review_snapshot",
+          "created_at": "2026-08-28",
+          "note": "主教材与答案 PDF 为扫描影像；页面与听力文本按视觉核对，语义与播放尚未完成。"
+        }
+      },
+      "source_manifest": {
+        "completion_confirmation": {
+          "status": "completed_by_adam",
+          "confirmed_by": "Adam",
+          "confirmed_at": "2026-09-08",
+          "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+          "technical_status_preserved": true
+        },
+        "schema_version": "quasi-intermediate-source-manifest-v1.0",
+        "manifest_type": "lesson-source-review",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_id": "lesson-10",
+        "lesson_key": "boya-quasi-intermediate-i:lesson-10",
+        "lesson_number": 10,
+        "lesson_title": "中国人喜欢聚餐",
+        "source_status": "pending_review",
+        "source_qa_status": "technical_audio_passed_semantic_playback_pending",
+        "canonical_source": "lessons/boya-quasi-intermediate-i/lesson-10/00-source/canonical-source.json",
+        "canonical_source_sha256": "379c2d4158ae7e96ef77451d33e1bba4cb2a87f8785af2d6a99795580acd19f2",
+        "listening_exercise_contract": "lessons/boya-quasi-intermediate-i/lesson-10/00-source/listening-exercise-contract.json",
+        "listening_exercise_contract_sha256": "3e072acb38dffb2c05bafca823c279417dd99a26349e5d25196e6752dfff6896",
+        "audio_manifest": "lessons/boya-quasi-intermediate-i/lesson-10/00-source/audio-manifest.json",
+        "audio_manifest_sha256": "c48f88b65712d1445b0509809b0de16158db05fbfa3394b59ac1e227c85dc771",
+        "source_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+          "pdf_pages": [
+            100,
+            108
+          ],
+          "printed_pages": [
+            87,
+            95
+          ],
+          "format": "scanned_image_pdf",
+          "text_layer_status": "empty"
+        },
+        "answer_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+          "pdf_pages": [
+            27,
+            28
+          ],
+          "note": "lesson transcript visually begins on PDF 27 and continues on 28; inventory table lists 26-27"
+        },
+        "qr": {
+          "pdf_page": 100,
+          "url": "http://qr31.cn/HdituA",
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-10-pdf-page-100.png"
+        },
+        "counts": {
+          "vocabulary": 27,
+          "listening_exercise_groups": 6,
+          "short_texts": 3,
+          "common_expression_groups": 2,
+          "comprehensive_exercises": 3
+        },
+        "approved": false,
+        "blockers": [
+          "六段音频尚未教师逐段语义听核与 PowerPoint 播放测试",
+          "扫描 PDF 最终文字转录仍需教师/Adam 复核"
+        ],
+        "audit_files": [
+          "lessons/boya-quasi-intermediate-i/lesson-10/00-source/audit/source-pages-87-95-audit-draft.md",
+          "lessons/boya-quasi-intermediate-i/lesson-10/00-source/audit/answer-pages-26-27-audit-draft.md",
+          "lessons/boya-quasi-intermediate-i/lesson-10/00-source/audit/audio-technical-2026-08-28.md"
+        ]
+      },
+      "audio": {
+        "schema_version": "lesson-audio-manifest-v1.0",
+        "lesson_id": "lesson-10",
+        "source_root": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-10",
+        "status": "technical_decode_passed_semantic_playback_pending",
+        "tracks": [
+          {
+            "label": "10-1",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FtnjwdBC8CXmeILFu0IAkLWVGEcl",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-10/10-1.mp3",
+            "scope": "词语",
+            "bytes": 822534,
+            "sha256": "d350814320cef507831c2371153f75b743d99ca699010b5155ba6b2f5309f057",
+            "duration_seconds": 51.09551,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "10-2",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FktnS9Fx8TBDcuoBA4lyU-r3TozX",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-10/10-2.mp3",
+            "scope": "词语理解",
+            "bytes": 342717,
+            "sha256": "793e304a288aef1c068e39a8b90b354b3c5e206e9fba4089b3ef5a058a7a5d61",
+            "duration_seconds": 21.106939,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "10-3",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FgkA-oUcSLWVIzXBWfX05VE-Wml8",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-10/10-3.mp3",
+            "scope": "听说句子",
+            "bytes": 1125554,
+            "sha256": "9f6b47496ed12b4983e595cb6f8715ec94d3c89d2ee248e33e856ae8e32f2795",
+            "duration_seconds": 70.034286,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "10-4",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fgn2SJoMmxU_OU7sCzw1WnJdI34m",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-10/10-4.mp3",
+            "scope": "短文一",
+            "bytes": 1045724,
+            "sha256": "bc5bb13e286bc5f27c1b18c647b5b67da216f0bac65a22749bf4c11546e70a90",
+            "duration_seconds": 65.044898,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "10-5",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fn9VhCHiJ-GfrwrpcEzVtgHgsuwX",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-10/10-5.mp3",
+            "scope": "短文二",
+            "bytes": 842596,
+            "sha256": "c82e05aff3eef84dfbd67ea7b13d263bf3920d39d1bca6298afef3adc757dc70",
+            "duration_seconds": 52.349388,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          },
+          {
+            "label": "10-6",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FgfI_vdeh_shF33DKzRAAcPfq-FO",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-10/10-6.mp3",
+            "scope": "短文三",
+            "bytes": 806651,
+            "sha256": "50945d2452e793281c3746a6c8047e719ddb9a37bcf2cde5fa6b2af98b3d1a27",
+            "duration_seconds": 50.102857,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback",
+            "teacher_playback_status": "pending"
+          }
+        ],
+        "technical_summary": {
+          "track_count": 6,
+          "decode_passed": 6,
+          "semantic_listening_completed": 0,
+          "teacher_powerpoint_playback_completed": 0
+        }
+      },
+      "canonical_path": "lessons/boya-quasi-intermediate-i/lesson-10/00-source/canonical-source.json",
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-10/00-source/source-manifest.json",
+      "canonical_source_sha256": "379c2d4158ae7e96ef77451d33e1bba4cb2a87f8785af2d6a99795580acd19f2",
+      "review_items": [
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:1",
+          "value": {
+            "no": 1,
+            "word": "穿戴",
+            "pinyin": "chuāndài",
+            "pos": "动",
+            "gloss": "to dress"
+          },
+          "title": "穿戴",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:2",
+          "value": {
+            "no": 2,
+            "word": "整齐",
+            "pinyin": "zhěngqí",
+            "pos": "形",
+            "gloss": "tidy; neat"
+          },
+          "title": "整齐",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:3",
+          "value": {
+            "no": 3,
+            "word": "商量",
+            "pinyin": "shāngliang",
+            "pos": "动",
+            "gloss": "to consult"
+          },
+          "title": "商量",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:4",
+          "value": {
+            "no": 4,
+            "word": "碰",
+            "pinyin": "pèng",
+            "pos": "动",
+            "gloss": "to come across"
+          },
+          "title": "碰",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:5",
+          "value": {
+            "no": 5,
+            "word": "实习",
+            "pinyin": "shíxí",
+            "pos": "动",
+            "gloss": "to do internship"
+          },
+          "title": "实习",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:6",
+          "value": {
+            "no": 6,
+            "word": "答应",
+            "pinyin": "dāying",
+            "pos": "动",
+            "gloss": "to agree; to promise"
+          },
+          "title": "答应",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:7",
+          "value": {
+            "no": 7,
+            "word": "厨师",
+            "pinyin": "chúshī",
+            "pos": "名",
+            "gloss": "cook; chef"
+          },
+          "title": "厨师",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:8",
+          "value": {
+            "no": 8,
+            "word": "收入",
+            "pinyin": "shōurù",
+            "pos": "名",
+            "gloss": "income"
+          },
+          "title": "收入",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:9",
+          "value": {
+            "no": 9,
+            "word": "社交",
+            "pinyin": "shèjiāo",
+            "pos": "名",
+            "gloss": "social intercourse"
+          },
+          "title": "社交",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:10",
+          "value": {
+            "no": 10,
+            "word": "费用",
+            "pinyin": "fèiyòng",
+            "pos": "名",
+            "gloss": "expense"
+          },
+          "title": "费用",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:11",
+          "value": {
+            "no": 11,
+            "word": "分摊",
+            "pinyin": "fēntān",
+            "pos": "动",
+            "gloss": "to share; split the bill"
+          },
+          "title": "分摊",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:12",
+          "value": {
+            "no": 12,
+            "word": "调查",
+            "pinyin": "diàochá",
+            "pos": "动",
+            "gloss": "to survey; investigate"
+          },
+          "title": "调查",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:13",
+          "value": {
+            "no": 13,
+            "word": "功课",
+            "pinyin": "gōngkè",
+            "pos": "名",
+            "gloss": "homework"
+          },
+          "title": "功课",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:14",
+          "value": {
+            "no": 14,
+            "word": "同乡",
+            "pinyin": "tóngxiāng",
+            "pos": "名",
+            "gloss": "person from same hometown"
+          },
+          "title": "同乡",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:15",
+          "value": {
+            "no": 15,
+            "word": "普通",
+            "pinyin": "pǔtōng",
+            "pos": "形",
+            "gloss": "ordinary"
+          },
+          "title": "普通",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:16",
+          "value": {
+            "no": 16,
+            "word": "花费",
+            "pinyin": "huāfèi",
+            "pos": "动",
+            "gloss": "to spend"
+          },
+          "title": "花费",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:17",
+          "value": {
+            "no": 17,
+            "word": "负担",
+            "pinyin": "fùdān",
+            "pos": null,
+            "pos_status": "blank_in_source",
+            "gloss": "to bear"
+          },
+          "title": "负担",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:18",
+          "value": {
+            "no": 18,
+            "word": "请客",
+            "pinyin": "qǐngkè",
+            "pos": null,
+            "pos_status": "blank_in_source",
+            "gloss": "invite somebody to dinner"
+          },
+          "title": "请客",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:19",
+          "value": {
+            "no": 19,
+            "word": "增多",
+            "pinyin": "zēngduō",
+            "pos": "动",
+            "gloss": "to increase"
+          },
+          "title": "增多",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:20",
+          "value": {
+            "no": 20,
+            "word": "特色",
+            "pinyin": "tèsè",
+            "pos": "名",
+            "gloss": "distinguishing feature"
+          },
+          "title": "特色",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:21",
+          "value": {
+            "no": 21,
+            "word": "比例",
+            "pinyin": "bǐlì",
+            "pos": "名",
+            "gloss": "proportion"
+          },
+          "title": "比例",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:22",
+          "value": {
+            "no": 22,
+            "word": "行为",
+            "pinyin": "xíngwéi",
+            "pos": "名",
+            "gloss": "behavior"
+          },
+          "title": "行为",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:23",
+          "value": {
+            "no": 23,
+            "word": "大饱口福",
+            "pinyin": "dà bǎo kǒu fú",
+            "pos": null,
+            "pos_status": "blank_in_source",
+            "gloss": "eat to one’s heart’s content"
+          },
+          "title": "大饱口福",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:24",
+          "value": {
+            "no": 24,
+            "word": "距离",
+            "pinyin": "jùlí",
+            "pos": "名",
+            "gloss": "distance"
+          },
+          "title": "距离",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:25",
+          "value": {
+            "no": 25,
+            "word": "追求",
+            "pinyin": "zhuīqiú",
+            "pos": "动",
+            "gloss": "to pursue"
+          },
+          "title": "追求",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:26",
+          "value": {
+            "no": 26,
+            "word": "和谐",
+            "pinyin": "héxié",
+            "pos": "形",
+            "gloss": "harmonious"
+          },
+          "title": "和谐",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:27",
+          "value": {
+            "no": 27,
+            "word": "相处",
+            "pinyin": "xiāngchǔ",
+            "pos": "动",
+            "gloss": "to get along"
+          },
+          "title": "相处",
+          "page": "87–88",
+          "audio": "10-1",
+          "type": "词语"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_1",
+          "value": {
+            "id": "short_text_1",
+            "printed_pages": [
+              89,
+              90
+            ],
+            "audio": "10-4",
+            "title": "周五晚上咱们聚餐怎么样",
+            "text": "张华是大学生，功课很多，除了上课，还要找实习单位、学开车，所以他每天都感觉时间不够用。星期五晚上是他觉得最放松的时间。今天就是星期五，昨天，高中时的班长赵红来电话说，他们高中时的班主任来北京开会，想跟在北京的几位同学见见面，赵红和老师商量好，大家周五晚上在老师住的宾馆附近的四川餐馆儿聚会。张华高兴地答应了。两年没见，他也很想好好儿和大家聚聚。走出宿舍楼的时候，他碰上了穿戴整齐的同学小刘，一问，原来，他是去和同乡聚餐。",
+            "exercises": {
+              "first_listen": {
+                "instruction": "（一）听第一遍，简单回答问题",
+                "items": [
+                  "张华上几年级？",
+                  "他星期几不忙？",
+                  "小刘去做什么？"
+                ]
+              },
+              "second_listen": {
+                "instruction": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "items": [
+                  "张华平时要做哪些事？（开车 实习）",
+                  "这星期五晚上张华是怎么安排的？（四川餐馆儿 高中老师和同学）",
+                  "张华喜欢不喜欢同学聚会？（好好儿）"
+                ]
+              },
+              "present": "（三）介绍一下张华。要求：说6～8个句子，不少于60字。词语参考：不够用 找 学 放松 二年级 星期五 四川餐馆儿。常用表达参考：还要 聚聚。",
+              "compare": "（四）读下面的短文，跟你说的进行比较。张华是大学二年级的学生。他要上课，要找实习单位，还要学开车。他总是觉得时间不够用。可是他觉得星期五晚上应该放松。这个星期五晚上，他和高中同学要和高中老师在一家四川餐馆儿聚餐，他想好好儿和老师、同学们聚聚。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  89
+                ],
+                "audio_tracks": [
+                  "10-4"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  90
+                ],
+                "audio_tracks": [
+                  "10-4"
+                ]
+              }
+            },
+            "answer_status": "open_presentational_task_no_unique_answer"
+          },
+          "title": "周五晚上咱们聚餐怎么样",
+          "page": "89–90",
+          "audio": "10-4",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_2",
+          "value": {
+            "id": "short_text_2",
+            "printed_pages": [
+              91,
+              92
+            ],
+            "audio": "10-5",
+            "title": "年轻人喜欢聚餐",
+            "text": "过去，中国人收入不高，一般都是自己做饭。对普通老百姓来说，去饭馆儿吃饭花费太高，负担不起。就连结婚请客往往也是把厨师请到家里，为客人们做饭。现在，人们收入增加了，而且社交活动增多，出去吃饭的次数越来越多，年轻人更是这样，同学聚会、同事喜庆等，都会选一家有特色的餐馆儿。一般来说，同事聚餐、同学聚会，费用大家一起分摊，也就是各付各的。根据调查，60%的年轻人认为，聚餐是重要的社交活动之一。",
+            "exercises": {
+              "first_listen": {
+                "instruction": "（一）听第一遍，简单回答问题",
+                "items": [
+                  "过去人们为什么不常去饭馆儿吃饭？",
+                  "现在为什么出去吃饭的次数多了？",
+                  "对年轻人来说，聚餐重要吗？"
+                ]
+              },
+              "second_listen": {
+                "instruction": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "items": [
+                  "过去，人们结婚常常在哪里请客？（厨师）",
+                  "现在，哪些活动安排在餐馆儿进行？（喜庆）",
+                  "一般来说，聚餐的费用谁付？（分摊）"
+                ]
+              },
+              "present": "（三）和过去相比，人们为什么去餐馆儿的越来越多了？要求：说6～8个句子，不少于60字。词语参考：收入 增加 社交活动 喜庆活动 聚会 进行 根据调查 年轻人。常用表达参考：负担不起 更是 一般来说。",
+              "compare": "（四）读下面的短文，跟你说的进行比较。过去，人们收入少，一般在家里自己做饭。如今，人们收入多起来了，而且社交活动也多了。各种聚会和喜庆活动往往选在饭馆儿进行。根据调查，60%的年轻人认为聚餐是重要的社交活动之一。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  91
+                ],
+                "audio_tracks": [
+                  "10-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  91
+                ],
+                "audio_tracks": [
+                  "10-5"
+                ]
+              }
+            },
+            "answer_status": "open_presentational_task_no_unique_answer"
+          },
+          "title": "年轻人喜欢聚餐",
+          "page": "91–92",
+          "audio": "10-5",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_3",
+          "value": {
+            "id": "short_text_3",
+            "printed_pages": [
+              92,
+              93
+            ],
+            "audio": "10-6",
+            "title": "聚餐是中国人最重要的社交活动",
+            "text": "有调查显示，中国人最为普及的三种社交活动为聚餐、体育运动和唱卡拉OK。其中，聚餐比例为46.4%，其次是体育运动和唱卡拉OK，比例分别是13%和12.12%。聚餐这种社交行为，既可以让人们大饱口福，也拉近了人与人之间的距离。从饮食文化上来说，聚餐体现了中国人对‘人和’的追求，希望人与人之间可以和谐相处。",
+            "exercises": {
+              "first_listen": {
+                "instruction": "（一）听第一遍，简单回答问题",
+                "items": [
+                  "中国人喜欢的社交活动有几种？",
+                  "人们最喜欢哪种？",
+                  "人们喜欢运动吗？"
+                ]
+              },
+              "second_listen": {
+                "instruction": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "items": [
+                  "中国人最喜欢的社交活动是什么？（聚餐）",
+                  "喜欢唱歌的比例是多少？（百分之）",
+                  "人们为什么喜欢聚餐？（大饱口福 和谐）"
+                ]
+              },
+              "present": "（三）请介绍一下中国人最喜欢的三种社交活动。要求：说8～10个句子，不少于80字。词语参考：显示 体育活动 聚餐 唱卡拉OK 比例 分别 大饱口福 拉近 距离。常用表达参考：从……来说。",
+              "compare": "（四）读下面的短文，跟你说的进行比较。调查显示，中国人最喜欢的社交活动分别是聚餐、体育活动和唱卡拉OK，比例分别是46.4%、13%和12.12%。聚餐可以大饱口福，从文化上来说，也拉近了人与人之间的距离。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  92
+                ],
+                "audio_tracks": [
+                  "10-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  92
+                ],
+                "audio_tracks": [
+                  "10-6"
+                ]
+              }
+            },
+            "answer_status": "open_presentational_task_no_unique_answer"
+          },
+          "title": "聚餐是中国人最重要的社交活动",
+          "page": "92–93",
+          "audio": "10-6",
+          "type": "短文"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:1",
+          "value": {
+            "expression": {
+              "expression": "还要",
+              "examples": [
+                "李大为星期六上中文学校，星期天还要参加篮球比赛。",
+                "张红是星期一到星期三考试，星期四要去面试，周末还要去实习。"
+              ]
+            },
+            "topic": "谈论时间和安排"
+          },
+          "title": {
+            "expression": "还要",
+            "examples": [
+              "李大为星期六上中文学校，星期天还要参加篮球比赛。",
+              "张红是星期一到星期三考试，星期四要去面试，周末还要去实习。"
+            ]
+          },
+          "page": "90–91–93",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:2",
+          "value": {
+            "expression": {
+              "expression": "就是",
+              "examples": [
+                "王红每年都和同学们一起过生日，后天就是她的生日。",
+                "小陈家每年除夕都做很多菜，明天就是除夕了，小陈又可以大饱口福了。"
+              ]
+            },
+            "topic": "谈论时间和安排"
+          },
+          "title": {
+            "expression": "就是",
+            "examples": [
+              "王红每年都和同学们一起过生日，后天就是她的生日。",
+              "小陈家每年除夕都做很多菜，明天就是除夕了，小陈又可以大饱口福了。"
+            ]
+          },
+          "page": "90–91–93",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:3",
+          "value": {
+            "expression": {
+              "expression": "动词重叠",
+              "examples": [
+                "聚会的时候，大家好好儿聊聊。",
+                "这个周末我不想出去，打算在家里看看书，休息休息。"
+              ]
+            },
+            "topic": "谈论时间和安排"
+          },
+          "title": {
+            "expression": "动词重叠",
+            "examples": [
+              "聚会的时候，大家好好儿聊聊。",
+              "这个周末我不想出去，打算在家里看看书，休息休息。"
+            ]
+          },
+          "page": "90–91–93",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1:4",
+          "value": {
+            "expression": {
+              "expression": "一 + 单音节动词",
+              "examples": [
+                "我到饭馆儿，等了半天，同学们都没来。打电话一问，才知道聚餐时间是明天。",
+                "我收到一条短信，一看，是张华告诉我星期日聚会。"
+              ]
+            },
+            "topic": "谈论时间和安排"
+          },
+          "title": {
+            "expression": "一 + 单音节动词",
+            "examples": [
+              "我到饭馆儿，等了半天，同学们都没来。打电话一问，才知道聚餐时间是明天。",
+              "我收到一条短信，一看，是张华告诉我星期日聚会。"
+            ]
+          },
+          "page": "90–91–93",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:2:1",
+          "value": {
+            "expression": {
+              "expression": "动词+不起",
+              "examples": [
+                "小张小时候常常走山路，可是家里没钱，买不起好的运动鞋。",
+                "那家餐厅的菜太贵，学生们一般吃不起。"
+              ]
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "动词+不起",
+            "examples": [
+              "小张小时候常常走山路，可是家里没钱，买不起好的运动鞋。",
+              "那家餐厅的菜太贵，学生们一般吃不起。"
+            ]
+          },
+          "page": "90–91–93",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:2:2",
+          "value": {
+            "expression": {
+              "expression": "连……都／也……",
+              "examples": [
+                "小张工作很忙，有时连周末也要加班。",
+                "朴大宇喜欢做中国菜，她会做面条儿，连包饺子都会。"
+              ]
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "连……都／也……",
+            "examples": [
+              "小张工作很忙，有时连周末也要加班。",
+              "朴大宇喜欢做中国菜，她会做面条儿，连包饺子都会。"
+            ]
+          },
+          "page": "90–91–93",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:2:3",
+          "value": {
+            "expression": {
+              "expression": "更是",
+              "examples": [
+                "这家饭馆儿的菜很受欢迎，平时来吃饭的人就很多，周末的时候更是这样。",
+                "这个学校的学生学习很努力，不上课的时候，他们都去图书馆学习，期末考试那两个星期更是这样。"
+              ]
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "更是",
+            "examples": [
+              "这家饭馆儿的菜很受欢迎，平时来吃饭的人就很多，周末的时候更是这样。",
+              "这个学校的学生学习很努力，不上课的时候，他们都去图书馆学习，期末考试那两个星期更是这样。"
+            ]
+          },
+          "page": "90–91–93",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:2:4",
+          "value": {
+            "expression": {
+              "expression": "……等",
+              "examples": [
+                "北京人喜欢吃的有黄瓜、西红柿、豆角等。",
+                "合唱团唱的歌很多，有《茉莉花》《康定情歌》《四季歌》等。"
+              ]
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "……等",
+            "examples": [
+              "北京人喜欢吃的有黄瓜、西红柿、豆角等。",
+              "合唱团唱的歌很多，有《茉莉花》《康定情歌》《四季歌》等。"
+            ]
+          },
+          "page": "90–91–93",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:2:5",
+          "value": {
+            "expression": {
+              "expression": "一般来说",
+              "examples": [
+                "一般来说，人们愿意在饭馆儿请客，要是很好的朋友，也会请到家里。",
+                "一般来说，音乐理论课不太容易受学生欢迎，可是李老师教得很有意思。"
+              ]
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "一般来说",
+            "examples": [
+              "一般来说，人们愿意在饭馆儿请客，要是很好的朋友，也会请到家里。",
+              "一般来说，音乐理论课不太容易受学生欢迎，可是李老师教得很有意思。"
+            ]
+          },
+          "page": "90–91–93",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:2:6",
+          "value": {
+            "expression": {
+              "expression": "大饱口福／眼福／耳福",
+              "examples": [
+                "每次回家，小陈都可以大饱口福。",
+                "这次展览展出的都是有名的中国山水画，我们可以大饱眼福。",
+                "上周几位有名的京剧演员来这里演出，同学们大饱了耳福。"
+              ]
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "大饱口福／眼福／耳福",
+            "examples": [
+              "每次回家，小陈都可以大饱口福。",
+              "这次展览展出的都是有名的中国山水画，我们可以大饱眼福。",
+              "上周几位有名的京剧演员来这里演出，同学们大饱了耳福。"
+            ]
+          },
+          "page": "90–91–93",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:2:7",
+          "value": {
+            "expression": {
+              "expression": "从……来说",
+              "examples": [
+                "从生活方面来说，住在大城市确实要方便一些。",
+                "从人数上来说，在北京学习的外国留学生最多。"
+              ]
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "从……来说",
+            "examples": [
+              "从生活方面来说，住在大城市确实要方便一些。",
+              "从人数上来说，在北京学习的外国留学生最多。"
+            ]
+          },
+          "page": "90–91–93",
+          "audio": null,
+          "type": "语法／表达"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehension:1",
+          "value": {
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "words": [
+              "聚餐",
+              "穿戴整齐",
+              "聚会",
+              "商量"
+            ],
+            "answer": [
+              "1.B",
+              "2.A",
+              "3.D",
+              "4.C"
+            ]
+          },
+          "title": "词语理解",
+          "page": "88",
+          "audio": "10-2",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:1",
+          "value": {
+            "prompt": {
+              "instruction": "（一）听第一遍，简单回答问题",
+              "items": [
+                "张华上几年级？",
+                "他星期几不忙？",
+                "小刘去做什么？"
+              ]
+            },
+            "kind": "first_listen",
+            "textTitle": "周五晚上咱们聚餐怎么样"
+          },
+          "title": "周五晚上咱们聚餐怎么样 · first_listen",
+          "page": "89–90",
+          "audio": "10-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:1",
+          "value": {
+            "prompt": {
+              "instruction": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+              "items": [
+                "张华平时要做哪些事？（开车 实习）",
+                "这星期五晚上张华是怎么安排的？（四川餐馆儿 高中老师和同学）",
+                "张华喜欢不喜欢同学聚会？（好好儿）"
+              ]
+            },
+            "kind": "second_listen",
+            "textTitle": "周五晚上咱们聚餐怎么样"
+          },
+          "title": "周五晚上咱们聚餐怎么样 · second_listen",
+          "page": "89–90",
+          "audio": "10-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:present:1",
+          "value": {
+            "prompt": "（三）介绍一下张华。要求：说6～8个句子，不少于60字。词语参考：不够用 找 学 放松 二年级 星期五 四川餐馆儿。常用表达参考：还要 聚聚。",
+            "kind": "present",
+            "textTitle": "周五晚上咱们聚餐怎么样"
+          },
+          "title": "周五晚上咱们聚餐怎么样 · present",
+          "page": "89–90",
+          "audio": "10-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:compare:1",
+          "value": {
+            "prompt": "（四）读下面的短文，跟你说的进行比较。张华是大学二年级的学生。他要上课，要找实习单位，还要学开车。他总是觉得时间不够用。可是他觉得星期五晚上应该放松。这个星期五晚上，他和高中同学要和高中老师在一家四川餐馆儿聚餐，他想好好儿和老师、同学们聚聚。",
+            "kind": "compare",
+            "textTitle": "周五晚上咱们聚餐怎么样"
+          },
+          "title": "周五晚上咱们聚餐怎么样 · compare",
+          "page": "89–90",
+          "audio": "10-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:1",
+          "value": {
+            "prompt": {
+              "instruction": "（一）听第一遍，简单回答问题",
+              "items": [
+                "过去人们为什么不常去饭馆儿吃饭？",
+                "现在为什么出去吃饭的次数多了？",
+                "对年轻人来说，聚餐重要吗？"
+              ]
+            },
+            "kind": "first_listen",
+            "textTitle": "年轻人喜欢聚餐"
+          },
+          "title": "年轻人喜欢聚餐 · first_listen",
+          "page": "91–92",
+          "audio": "10-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:1",
+          "value": {
+            "prompt": {
+              "instruction": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+              "items": [
+                "过去，人们结婚常常在哪里请客？（厨师）",
+                "现在，哪些活动安排在餐馆儿进行？（喜庆）",
+                "一般来说，聚餐的费用谁付？（分摊）"
+              ]
+            },
+            "kind": "second_listen",
+            "textTitle": "年轻人喜欢聚餐"
+          },
+          "title": "年轻人喜欢聚餐 · second_listen",
+          "page": "91–92",
+          "audio": "10-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:present:1",
+          "value": {
+            "prompt": "（三）和过去相比，人们为什么去餐馆儿的越来越多了？要求：说6～8个句子，不少于60字。词语参考：收入 增加 社交活动 喜庆活动 聚会 进行 根据调查 年轻人。常用表达参考：负担不起 更是 一般来说。",
+            "kind": "present",
+            "textTitle": "年轻人喜欢聚餐"
+          },
+          "title": "年轻人喜欢聚餐 · present",
+          "page": "91–92",
+          "audio": "10-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:compare:1",
+          "value": {
+            "prompt": "（四）读下面的短文，跟你说的进行比较。过去，人们收入少，一般在家里自己做饭。如今，人们收入多起来了，而且社交活动也多了。各种聚会和喜庆活动往往选在饭馆儿进行。根据调查，60%的年轻人认为聚餐是重要的社交活动之一。",
+            "kind": "compare",
+            "textTitle": "年轻人喜欢聚餐"
+          },
+          "title": "年轻人喜欢聚餐 · compare",
+          "page": "91–92",
+          "audio": "10-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:1",
+          "value": {
+            "prompt": {
+              "instruction": "（一）听第一遍，简单回答问题",
+              "items": [
+                "中国人喜欢的社交活动有几种？",
+                "人们最喜欢哪种？",
+                "人们喜欢运动吗？"
+              ]
+            },
+            "kind": "first_listen",
+            "textTitle": "聚餐是中国人最重要的社交活动"
+          },
+          "title": "聚餐是中国人最重要的社交活动 · first_listen",
+          "page": "92–93",
+          "audio": "10-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:1",
+          "value": {
+            "prompt": {
+              "instruction": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+              "items": [
+                "中国人最喜欢的社交活动是什么？（聚餐）",
+                "喜欢唱歌的比例是多少？（百分之）",
+                "人们为什么喜欢聚餐？（大饱口福 和谐）"
+              ]
+            },
+            "kind": "second_listen",
+            "textTitle": "聚餐是中国人最重要的社交活动"
+          },
+          "title": "聚餐是中国人最重要的社交活动 · second_listen",
+          "page": "92–93",
+          "audio": "10-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:present:1",
+          "value": {
+            "prompt": "（三）请介绍一下中国人最喜欢的三种社交活动。要求：说8～10个句子，不少于80字。词语参考：显示 体育活动 聚餐 唱卡拉OK 比例 分别 大饱口福 拉近 距离。常用表达参考：从……来说。",
+            "kind": "present",
+            "textTitle": "聚餐是中国人最重要的社交活动"
+          },
+          "title": "聚餐是中国人最重要的社交活动 · present",
+          "page": "92–93",
+          "audio": "10-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:compare:1",
+          "value": {
+            "prompt": "（四）读下面的短文，跟你说的进行比较。调查显示，中国人最喜欢的社交活动分别是聚餐、体育活动和唱卡拉OK，比例分别是46.4%、13%和12.12%。聚餐可以大饱口福，从文化上来说，也拉近了人与人之间的距离。",
+            "kind": "compare",
+            "textTitle": "聚餐是中国人最重要的社交活动"
+          },
+          "title": "聚餐是中国人最重要的社交活动 · compare",
+          "page": "92–93",
+          "audio": "10-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:exercise_1",
+          "value": {
+            "prompt": {
+              "instruction": "请你根据听过的三段短文填表",
+              "table_fields": {
+                "过去": [
+                  "收入低，一般",
+                  "办婚宴"
+                ],
+                "现在": [
+                  "人们最喜欢的三种社交活动是",
+                  "其中，最受欢迎的是",
+                  "原因是：1.；2."
+                ]
+              }
+            }
+          },
+          "title": "综合练习",
+          "page": "94–95",
+          "audio": "10-4、10-5、10-6",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:exercise_2",
+          "value": {
+            "prompt": "根据上面的表格和下面给出的参考词语和常用表达，谈一谈：（1）以张华为例，说说大学生的社交活动；（2）对比过去和现在，现在人们为什么常常出去吃饭；（3）中国人最喜欢的社交活动，为什么聚餐排在第一位。要求：一名同学先说8～10个句子，不少于80字；然后小组其他同学补充；最后由一名同学总结，说10～12个句子，不少于100字。词语参考：时间不够用 上课 实习 放松 聚会 收入 增加 比例 和谐相处 大饱口福。常用表达参考：从……来说 连……也…… 分别 其中 其次 一般来说。"
+          },
+          "title": "综合练习",
+          "page": "94–95",
+          "audio": "10-4、10-5、10-6",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:exercise_3",
+          "value": {
+            "prompt": "拓展练习：说一说：（1）你的社交活动有哪些；（2）在你们国家，人们喜欢不喜欢出去吃饭；（3）你们国家受欢迎的社交活动有哪些。要求：（1）使用这一课学过的词语和常用表达；（2）说10～12个句子，不少于100字。"
+          },
+          "title": "综合练习",
+          "page": "94–95",
+          "audio": "10-4、10-5、10-6",
+          "type": "综合练习"
+        }
+      ]
+    },
+    "boya-quasi-intermediate-i:lesson-11": {
+      "available": true,
+      "review_complete": true,
+      "completion": {
+        "status": "completed_by_adam",
+        "confirmed_by": "Adam",
+        "confirmed_at": "2026-09-08",
+        "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+        "technical_status_preserved": true
+      },
+      "reason": "",
+      "canonical": {
+        "schema_version": "quasi-intermediate-source-audit-v1.0",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_number": 11,
+        "lesson_id": "lesson-11",
+        "title": "原来他们是关心我",
+        "title_source": "主教材 PDF 第109页（印刷 P96）课名页视觉核对",
+        "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+        "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+        "page_map": {
+          "printed_pages": [
+            96,
+            104
+          ],
+          "pdf_pages": [
+            109,
+            117
+          ],
+          "answer_pdf_pages": [
+            26,
+            27
+          ],
+          "mapping_status": "visual_verified_pdf_offset_plus_13; answer_pages_visual_first_pass"
+        },
+        "qr_evidence": {
+          "pdf_page": 109,
+          "qr_url": "http://qr31.cn/H7bvDX",
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-11-pdf-page-109.png",
+          "landing_page": "https://biz.cli.im/site/H7bvDX?qrurl=http://qr31.cn/H7bvDX&gtype=2&key=b6d1d17498544ca2d87829c404bd59a05af5798075",
+          "decode_status": "source_inventory_verified",
+          "landing_audio_labels": [
+            "11-1",
+            "11-2",
+            "11-3",
+            "11-4",
+            "11-5",
+            "11-6"
+          ]
+        },
+        "audio_map": [
+          {
+            "label": "11-1",
+            "coding": "CV1539820",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FuefG1ONv7A1g5CqmMNFEOewoQeK",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-11/11-1.mp3",
+            "bytes": 899438,
+            "sha256": "bc6fc2e406010d0f76d1f7a20fd99fc9da0e0e289f74d80da7268cba4ab44151",
+            "duration_seconds": 55.902,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "11-2",
+            "coding": "DP1783233",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Ftx7Re57Lug4D8QG2HaKZgexqcda",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-11/11-2.mp3",
+            "bytes": 341881,
+            "sha256": "eccc0a7ebf0df79002ade08dd05c6a244bdd067656e43305aa29c6134cf18b6e",
+            "duration_seconds": 21.055,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "11-3",
+            "coding": "BK1783234",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FiZ2RBKqpA71LU9naQ74jcWBswqn",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-11/11-3.mp3",
+            "bytes": 1036111,
+            "sha256": "e3490f2ee73c936d93fbc621b8aa8f0d267dfc5c9fa03c3b77302d404f7a5bf0",
+            "duration_seconds": 64.444,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "11-4",
+            "coding": "HJ1783235",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fopeb8xJhfucN4VWnqJUX4xslVzn",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-11/11-4.mp3",
+            "bytes": 947085,
+            "sha256": "99e64747c173b08c2e6c6fc380ff67ac3eda51797cc647b4b86f4605be922e8f",
+            "duration_seconds": 58.88,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "11-5",
+            "coding": "BM1783236",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fu20BE9GqAIi23BwTFc11t-kK6E_",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-11/11-5.mp3",
+            "bytes": 805815,
+            "sha256": "e96f9b135039a57368e356a2c79367c204177f990082cd4a9bd36692b1494332",
+            "duration_seconds": 50.051,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "11-6",
+            "coding": "NQ1783237",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FkwAfZix73wGZ6qMRJTuadkx4bBE",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-11/11-6.mp3",
+            "bytes": 1272676,
+            "sha256": "bc1d3f73c6d0f5af0b6682a408d42aec13cf4ba19dfc723d5b901f57282ec790",
+            "duration_seconds": 79.229,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback"
+          }
+        ],
+        "content_inventory": {
+          "vocabulary_count": 23,
+          "idiom_count": 3,
+          "vocabulary_comprehension_group_count": 1,
+          "vocabulary_comprehension_item_count": 4,
+          "listening_sentence_item_count": 10,
+          "texts_dialogues_count": 3,
+          "grammar_pattern_count": 17,
+          "listening_exercise_group_count": 6,
+          "comprehensive_exercise_count": 3,
+          "status": "approved_source_snapshot"
+        },
+        "answer_policy": "仅记录参考答案 PDF 中可核对的选择／判断答案与听力文本；开放式口语题不补写唯一标准答案。",
+        "review": {
+          "status": "approved_by_adam",
+          "approved": true,
+          "approved_by": [
+            "Adam Yan"
+          ],
+          "approved_at": "2026-09-04T10:40:00+07:00",
+          "blockers": [],
+          "approval_basis": [
+            "主教材 PDF 第109–117页（印刷 P96–P104）视觉核对",
+            "答案 PDF 第26–27页（答案印刷 P26–P27）视觉核对",
+            "来源总盘点第11课 QR、音频 bytes、hash 和时长记录"
+          ]
+        },
+        "sections": [
+          {
+            "id": "vocabulary",
+            "printed_pages": [
+              96,
+              97
+            ],
+            "audio": "11-1",
+            "entries": [
+              {
+                "no": 1,
+                "word": "打招呼",
+                "pinyin": "dǎ zhāohu",
+                "pos": null,
+                "gloss": "to greet"
+              },
+              {
+                "no": 2,
+                "word": "拥抱",
+                "pinyin": "yōngbào",
+                "pos": "动",
+                "gloss": "to hug"
+              },
+              {
+                "no": 3,
+                "word": "鞠躬",
+                "pinyin": "jūgōng",
+                "pos": null,
+                "gloss": "to bow"
+              },
+              {
+                "no": 4,
+                "word": "握手",
+                "pinyin": "wòshǒu",
+                "pos": null,
+                "gloss": "to shake hands"
+              },
+              {
+                "no": 5,
+                "word": "问候",
+                "pinyin": "wènhòu",
+                "pos": "动",
+                "gloss": "to greet"
+              },
+              {
+                "no": 6,
+                "word": "点头",
+                "pinyin": "diǎntóu",
+                "pos": null,
+                "gloss": "to nod"
+              },
+              {
+                "no": 7,
+                "word": "俗语",
+                "pinyin": "súyǔ",
+                "pos": "名",
+                "gloss": "saying"
+              },
+              {
+                "no": 8,
+                "word": "管",
+                "pinyin": "guǎn",
+                "pos": "动",
+                "gloss": "to take care of"
+              },
+              {
+                "no": 9,
+                "word": "离",
+                "pinyin": "lí",
+                "pos": "动",
+                "gloss": "to be away from"
+              },
+              {
+                "no": 10,
+                "word": "交通",
+                "pinyin": "jiāotōng",
+                "pos": "名",
+                "gloss": "traffic; transportation"
+              },
+              {
+                "no": 11,
+                "word": "方便",
+                "pinyin": "fāngbiàn",
+                "pos": "形",
+                "gloss": "convenient"
+              },
+              {
+                "no": 12,
+                "word": "风和日丽",
+                "pinyin": "fēnghé-rìlì",
+                "pos": null,
+                "gloss": "warm and sunny spring days"
+              },
+              {
+                "no": 13,
+                "word": "关心",
+                "pinyin": "guānxīn",
+                "pos": "动",
+                "gloss": "to care for"
+              },
+              {
+                "no": 14,
+                "word": "瘦",
+                "pinyin": "shòu",
+                "pos": "形",
+                "gloss": "thin; skinny"
+              },
+              {
+                "no": 15,
+                "word": "说实话",
+                "pinyin": "shuō shíhuà",
+                "pos": null,
+                "gloss": "to tell the truth; frankly speaking"
+              },
+              {
+                "no": 16,
+                "word": "亲戚",
+                "pinyin": "qīnqi",
+                "pos": "名",
+                "gloss": "relative"
+              },
+              {
+                "no": 17,
+                "word": "串门",
+                "pinyin": "chuànmén",
+                "pos": null,
+                "gloss": "to call at somebody's home"
+              },
+              {
+                "no": 18,
+                "word": "冻",
+                "pinyin": "dòng",
+                "pos": "动",
+                "gloss": "to freeze"
+              },
+              {
+                "no": 19,
+                "word": "急于",
+                "pinyin": "jíyú",
+                "pos": "动",
+                "gloss": "to be eager to"
+              },
+              {
+                "no": 20,
+                "word": "脱",
+                "pinyin": "tuō",
+                "pos": "动",
+                "gloss": "to take off"
+              },
+              {
+                "no": 21,
+                "word": "过早",
+                "pinyin": "guòzǎo",
+                "pos": "形",
+                "gloss": "far too early"
+              },
+              {
+                "no": 22,
+                "word": "厚",
+                "pinyin": "hòu",
+                "pos": "形",
+                "gloss": "thick; warm (clothes)"
+              },
+              {
+                "no": 23,
+                "word": "远亲",
+                "pinyin": "yuǎnqīn",
+                "pos": "名",
+                "gloss": "distant relative"
+              }
+            ],
+            "idioms": [
+              {
+                "word": "春捂秋冻",
+                "pinyin": "chūnwǔ qiū dòng"
+              },
+              {
+                "word": "饱吹饿唱",
+                "pinyin": "bǎo chuī è chàng"
+              },
+              {
+                "word": "远亲不如近邻",
+                "pinyin": "yuǎnqīn bùrú jìnlín"
+              }
+            ]
+          },
+          {
+            "id": "vocabulary_comprehension",
+            "printed_pages": [
+              97
+            ],
+            "audio": "11-2",
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "groups": [
+              {
+                "topic": "问候与动作",
+                "words": [
+                  "打招呼",
+                  "拥抱",
+                  "鞠躬",
+                  "握手"
+                ],
+                "answer": [
+                  "1.B",
+                  "2.A",
+                  "3.C",
+                  "4.D"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "listening_sentences",
+            "printed_pages": [
+              98
+            ],
+            "audio_tracks": [
+              "11-3"
+            ],
+            "exercises": {
+              "exercise_11_3": {
+                "instruction": "听句子，判断对错",
+                "items": [
+                  [
+                    1,
+                    "中国人常常说“你好”。",
+                    "错"
+                  ],
+                  [
+                    2,
+                    "李大为喜欢吃饺子。",
+                    "对"
+                  ],
+                  [
+                    3,
+                    "我们不认识。",
+                    "错"
+                  ],
+                  [
+                    4,
+                    "他们关系很不错。",
+                    "对"
+                  ],
+                  [
+                    5,
+                    "朴大宇没有跟老师打招呼。",
+                    "错"
+                  ],
+                  [
+                    6,
+                    "中国大部分小学生学习外语。",
+                    "对"
+                  ],
+                  [
+                    7,
+                    "大岛喜欢学习书面语。",
+                    "错"
+                  ],
+                  [
+                    8,
+                    "他们知道的事很多。",
+                    "错"
+                  ],
+                  [
+                    9,
+                    "邻居对他很好。",
+                    "对"
+                  ],
+                  [
+                    10,
+                    "李明的爸爸妈妈关系很好。",
+                    "错"
+                  ]
+                ]
+              }
+            }
+          },
+          {
+            "id": "short_text_1",
+            "printed_pages": [
+              98,
+              99
+            ],
+            "audio": "11-4",
+            "title": "中国人打招呼时常说“你好”吗",
+            "text": "我叫马克。我第一天学汉语，学的是“你好”“您贵姓”“谢谢”“再见”。来到中国以后，我发现中国人见面互相问候不一定都说话，有时只是点点头，微笑一下，有的是鞠一躬，也有握手的，拥抱的极少，我只在电视上见过。还有不少人说另外一些话，我能听懂的是“你吃了吗”。我问我的汉语老师，“你好”是不是中国人最普遍的问候方式？老师说，对不熟悉的人或是在时间紧张的时候，人们会用“你好”打招呼，如果遇到熟人，或是没有急事的话，人们会停下来聊两句。",
+            "exercises": {
+              "first_listen": [
+                "马克第一天学习汉语，学的是什么？",
+                "来到中国以后，他有什么新发现？",
+                "他向了老师什么问题？"
+              ],
+              "second_listen": [
+                "来到中国以后，他看到了什么，听到了什么？（微笑、拥抱）",
+                "老师说，中国人怎么打招呼？（不熟悉的人、时间不紧张、停下来）"
+              ],
+              "present": "马克看到中国人见面怎么问候，老师是怎么说的。要求说6–8个句子，不少于60字。",
+              "compare": "马克发现中国人问候方式很多，熟人有时间会停下来聊天，不熟悉的人或时间紧张时常说“你好”。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  98
+                ],
+                "audio_tracks": [
+                  "11-4"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说一说，不少于30字",
+                "textbook_printed_pages": [
+                  99
+                ],
+                "audio_tracks": [
+                  "11-4"
+                ]
+              }
+            }
+          },
+          {
+            "id": "common_expressions_1",
+            "printed_pages": [
+              99
+            ],
+            "topic": "说明情况",
+            "items": [
+              {
+                "expression": "不一定"
+              },
+              {
+                "expression": "只是"
+              },
+              {
+                "expression": "点头"
+              },
+              {
+                "expression": "极少"
+              },
+              {
+                "expression": "如果……，或是……的话"
+              },
+              {
+                "expression": "停下来"
+              }
+            ]
+          },
+          {
+            "id": "short_text_2",
+            "printed_pages": [
+              100,
+              101
+            ],
+            "audio": "11-5",
+            "title": "我住进了中国人家里",
+            "text": "在中国学习的第一个学期，我住在学生宿舍。后来，我的一位中国朋友李明去国外留学，我就住到了他家。他家有爸爸、妈妈和一个17岁的男孩儿。男孩儿叫王亮，是李明的表弟。我和王亮住在一个房间。我白天去学校，晚饭我一般会回来和中国家人一起吃。李明家离学校不远，交通方便了。我一般骑自行车去上课，风和日丽的时候也走路，天气不好的话，就坐公共汽车。",
+            "exercises": {
+              "first_listen": [
+                "第一个学期马克住在哪里？",
+                "后来马克住在哪里？",
+                "马克晚上一般在哪里吃饭？"
+              ],
+              "second_listen": [
+                "马克为什么搬家了？（留学）",
+                "那家有什么人？（表弟）",
+                "马克怎么去学校？（骑、坐）"
+              ],
+              "present": "介绍一下马克在中国的住宿情况。要求说6–8个句子，不少于60字。",
+              "compare": "马克第一个学期住学生宿舍，后来住进朋友李明家，和表弟王亮住一个房间；天气好时骑车或走路，天气不好坐公交车。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  100
+                ],
+                "audio_tracks": [
+                  "11-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  100
+                ],
+                "audio_tracks": [
+                  "11-5"
+                ]
+              }
+            }
+          },
+          {
+            "id": "common_expressions_2",
+            "printed_pages": [
+              101
+            ],
+            "topic": "说明情况",
+            "items": [
+              {
+                "expression": "后来"
+              },
+              {
+                "expression": "就"
+              },
+              {
+                "expression": "……家有……"
+              },
+              {
+                "expression": "住（在）一个房间"
+              },
+              {
+                "expression": "离……远／不远"
+              },
+              {
+                "expression": "极了"
+              }
+            ]
+          },
+          {
+            "id": "short_text_3",
+            "printed_pages": [
+              102
+            ],
+            "audio": "11-6",
+            "title": "原来他们是关心我",
+            "text": "刚搬进李明家的时候，我有些不习惯。中国爸爸妈妈对我很照顾，可是我觉得他们管得有点儿多。早上我出门去上课，他们会说：“天冷，穿这么少冷不冷？多穿一件衣服吧。”吃晚饭的时候，李妈妈总说：“你这么瘦，得多吃点儿。”说实话，我真的有点儿不高兴。可是后来，邻居、亲戚们来李明家或是我们去别人家串门的时候，我发现，大家经常对年轻人说这些话。渐渐地，我明白了，他们这是关心我。从他们说的话里，我也了解了一些中国俗语，比如“春捂秋冻”“饱吹饿唱”“远亲不如近邻”。了解了中国文化的这些特点，我很高兴。",
+            "exercises": {
+              "first_listen": [
+                "开始的时候，马克住在李明家习惯吗？",
+                "吃晚饭的时候，李妈妈常说什么？",
+                "后来，马克明白了什么？"
+              ],
+              "second_listen": [
+                "马克为什么有点儿不高兴？（管）",
+                "大家常对年轻人说什么？（冷、多）",
+                "后来马克为什么很高兴？（俗语、文化）"
+              ],
+              "present": "说说马克明白了什么。要求说6–8个句子，不少于60字。",
+              "compare": "马克刚住进李明家不习惯，觉得中国家人管得多；后来他发现邻居亲戚也这样关心年轻人，渐渐了解了中国文化。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  102
+                ],
+                "audio_tracks": [
+                  "11-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  102
+                ],
+                "audio_tracks": [
+                  "11-6"
+                ]
+              }
+            }
+          },
+          {
+            "id": "common_expressions_3",
+            "printed_pages": [
+              102
+            ],
+            "topic": "谈自己的想法",
+            "items": [
+              {
+                "expression": "有些"
+              },
+              {
+                "expression": "对"
+              },
+              {
+                "expression": "动词+得（2）"
+              },
+              {
+                "expression": "多+动词+数词+量词+名词"
+              },
+              {
+                "expression": "渐渐地"
+              }
+            ]
+          },
+          {
+            "id": "comprehensive_practice",
+            "printed_pages": [
+              103,
+              104
+            ],
+            "audio_tracks": [
+              "11-4",
+              "11-5",
+              "11-6"
+            ],
+            "items": [
+              {
+                "id": "comprehensive_1",
+                "instruction": "请你根据听过的三段短文填表",
+                "answer_status": "open_table_teacher_check"
+              },
+              {
+                "id": "comprehensive_2",
+                "instruction": "小组活动：谈中国人打招呼的方式、马克眼里中国人怎么对别人表示关心、马克在李明家住得怎么样；一名同学说8–10个句子，不少于80字，最后总结10–12个句子，不少于100字。",
+                "answer_status": "open_presentational_task"
+              },
+              {
+                "id": "comprehensive_3",
+                "instruction": "拓展练习：说一说你们国家的人怎么打招呼、你上大学时住在哪里住得怎么样、你们国家的人怎么表示对别人的关心；说10–12个句子，不少于100字。",
+                "answer_status": "open_presentational_task"
+              }
+            ]
+          }
+        ],
+        "lesson_key": "boya-quasi-intermediate-i:lesson-11"
+      },
+      "source_manifest": {
+        "schema_version": "boya-lesson-source-manifest-v1",
+        "manifest_type": "lesson-source-review",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_id": "lesson-11",
+        "lesson_key": "boya-quasi-intermediate-i:lesson-11",
+        "completion_confirmation": {
+          "status": "completed_by_adam",
+          "confirmed_by": "Adam",
+          "confirmed_at": "2026-09-08",
+          "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+          "technical_status_preserved": true
+        },
+        "lesson_number": 11,
+        "lesson_title": "原来他们是关心我",
+        "language": "简体中文",
+        "package": "lesson-11-source-review",
+        "prepared_at": "2026-08-28",
+        "source_status": "approved",
+        "source_qa_status": "passed",
+        "extraction_status": "source_review_materialized",
+        "review_status": "approved_by_adam",
+        "approved": true,
+        "approved_by": "Adam Yan",
+        "approved_at": "2026-09-04T10:40:00+07:00",
+        "canonical_source": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/canonical-source.json",
+        "canonical_source_sha256": "eb453c8b40cff4092c9a4c5c8b6b3ce03238bf1c1fc2d40f52a392188c478882",
+        "source_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+          "sha256": "39899d0f400e187f57c16db821f8f4c207f936eae0e4fbfe3cab52c02bfea806",
+          "total_pages": 134,
+          "textbook_page_range": "96–104",
+          "pdf_page_range": "109–117",
+          "page_count_in_review": 9,
+          "format": "scanned_image_pdf",
+          "text_layer_status": "empty; visual review used"
+        },
+        "answer_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+          "sha256": "3c21e1574b0187259769799d183eca78a60a515b5b7fce202eda9e9ade2c20b8",
+          "total_pages": 33,
+          "pdf_page_range_in_review": "26–27",
+          "answer_status": "closed_answers_visual_checked; open_tasks_have_no_unique_answer"
+        },
+        "page_audit": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/audit/source-pages-96-104-audit-draft.md",
+          "sha256": "66026bd585d3d811161f83b61343ecfb07a6236cff8c60d9ea90e1a0cab11cbe",
+          "status": "visual_first_pass"
+        },
+        "answer_audit": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/audit/source-pages-96-104-audit-draft.md",
+          "sha256": "66026bd585d3d811161f83b61343ecfb07a6236cff8c60d9ea90e1a0cab11cbe",
+          "status": "answer_pages_26-27_included_in_visual_first_pass"
+        },
+        "qr_source": {
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-11-pdf-page-109.png",
+          "qr_url": "http://qr31.cn/H7bvDX",
+          "landing_page": "https://biz.cli.im/site/H7bvDX?qrurl=http://qr31.cn/H7bvDX&gtype=2&key=b6d1d17498544ca2d87829c404bd59a05af5798075",
+          "status": "decoded_landing_page_lists_11-1_to_11-6"
+        },
+        "audio": {
+          "root": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-11",
+          "manifest": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/audio-manifest.json",
+          "manifest_sha256": "fef4f9657e699e9fa9bbe0006173a3c93901e88f3b2726c45496f864ae605ab1",
+          "technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/audit/audio-technical-2026-08-28.md",
+          "expected_track_count": 6,
+          "local_track_count": 6,
+          "decode_passed_count": 6,
+          "semantic_listening_count": 6,
+          "teacher_playback_count": 6,
+          "status": "technical_semantic_teacher_playback_approved"
+        },
+        "listening_exercise_contract": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/listening-exercise-contract.json",
+        "listening_exercise_contract_sha256": "2c3f7c7e9f69402f6f152c80d0b8187ddea559cee4afde3671c9ff419ae394f1",
+        "listening_exercise_contract_detail": {
+          "status": "draft",
+          "exercise_count": 9
+        },
+        "review_evidence": {
+          "page_range": "P96–P104",
+          "answer_page_range": "答案 PDF P26–P27",
+          "vocabulary_count": 23,
+          "idiom_count": 3,
+          "vocabulary_comprehension_group_count": 1,
+          "listening_sentence_item_count": 10,
+          "short_text_count": 3,
+          "short_text_listen_group_count": 6,
+          "common_expression_group_count": 3,
+          "comprehensive_practice_count": 3,
+          "status": "source_pack_and_audio_approved_by_adam"
+        },
+        "blockers": []
+      },
+      "audio": {
+        "schema_version": "boya-lesson-audio-manifest-v1",
+        "lesson_id": "lesson-11",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_title": "原来他们是关心我",
+        "recorded_at": "2026-08-28",
+        "provenance": {
+          "source_type": "publisher_qr_landing_page",
+          "qr_url": "http://qr31.cn/H7bvDX",
+          "landing_page": "https://biz.cli.im/site/H7bvDX?qrurl=http://qr31.cn/H7bvDX&gtype=2&key=b6d1d17498544ca2d87829c404bd59a05af5798075",
+          "landing_audio_labels": [
+            "11-1",
+            "11-2",
+            "11-3",
+            "11-4",
+            "11-5",
+            "11-6"
+          ]
+        },
+        "technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/audit/audio-technical-2026-08-28.md",
+        "tracks": [
+          {
+            "label": "11-1",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FuefG1ONv7A1g5CqmMNFEOewoQeK",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-11/11-1.mp3",
+            "scope": "本课音档",
+            "bytes": 899438,
+            "sha256": "bc6fc2e406010d0f76d1f7a20fd99fc9da0e0e289f74d80da7268cba4ab44151",
+            "duration_seconds": 55.902,
+            "decode_status": "passed",
+            "semantic_status": "teacher_approved",
+            "teacher_playback_status": "approved_by_adam"
+          },
+          {
+            "label": "11-2",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Ftx7Re57Lug4D8QG2HaKZgexqcda",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-11/11-2.mp3",
+            "scope": "本课音档",
+            "bytes": 341881,
+            "sha256": "eccc0a7ebf0df79002ade08dd05c6a244bdd067656e43305aa29c6134cf18b6e",
+            "duration_seconds": 21.055,
+            "decode_status": "passed",
+            "semantic_status": "teacher_approved",
+            "teacher_playback_status": "approved_by_adam"
+          },
+          {
+            "label": "11-3",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FiZ2RBKqpA71LU9naQ74jcWBswqn",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-11/11-3.mp3",
+            "scope": "本课音档",
+            "bytes": 1036111,
+            "sha256": "e3490f2ee73c936d93fbc621b8aa8f0d267dfc5c9fa03c3b77302d404f7a5bf0",
+            "duration_seconds": 64.444,
+            "decode_status": "passed",
+            "semantic_status": "teacher_approved",
+            "teacher_playback_status": "approved_by_adam"
+          },
+          {
+            "label": "11-4",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fopeb8xJhfucN4VWnqJUX4xslVzn",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-11/11-4.mp3",
+            "scope": "本课音档",
+            "bytes": 947085,
+            "sha256": "99e64747c173b08c2e6c6fc380ff67ac3eda51797cc647b4b86f4605be922e8f",
+            "duration_seconds": 58.88,
+            "decode_status": "passed",
+            "semantic_status": "teacher_approved",
+            "teacher_playback_status": "approved_by_adam"
+          },
+          {
+            "label": "11-5",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/Fu20BE9GqAIi23BwTFc11t-kK6E_",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-11/11-5.mp3",
+            "scope": "本课音档",
+            "bytes": 805815,
+            "sha256": "e96f9b135039a57368e356a2c79367c204177f990082cd4a9bd36692b1494332",
+            "duration_seconds": 50.051,
+            "decode_status": "passed",
+            "semantic_status": "teacher_approved",
+            "teacher_playback_status": "approved_by_adam"
+          },
+          {
+            "label": "11-6",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FkwAfZix73wGZ6qMRJTuadkx4bBE",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-11/11-6.mp3",
+            "scope": "本课音档",
+            "bytes": 1272676,
+            "sha256": "bc1d3f73c6d0f5af0b6682a408d42aec13cf4ba19dfc723d5b901f57282ec790",
+            "duration_seconds": 79.229,
+            "decode_status": "passed",
+            "semantic_status": "teacher_approved",
+            "teacher_playback_status": "approved_by_adam"
+          }
+        ],
+        "status": "approved",
+        "coverage_status": "11-1_to_11-6_technical_semantic_teacher_playback_approved",
+        "approved_by": "Adam Yan",
+        "approved_at": "2026-09-04T10:40:00+07:00"
+      },
+      "canonical_path": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/canonical-source.json",
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-11/00-source/source-manifest.json",
+      "canonical_source_sha256": "eb453c8b40cff4092c9a4c5c8b6b3ce03238bf1c1fc2d40f52a392188c478882",
+      "review_items": [
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:1",
+          "value": {
+            "no": 1,
+            "word": "打招呼",
+            "pinyin": "dǎ zhāohu",
+            "pos": null,
+            "gloss": "to greet"
+          },
+          "title": "打招呼",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:2",
+          "value": {
+            "no": 2,
+            "word": "拥抱",
+            "pinyin": "yōngbào",
+            "pos": "动",
+            "gloss": "to hug"
+          },
+          "title": "拥抱",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:3",
+          "value": {
+            "no": 3,
+            "word": "鞠躬",
+            "pinyin": "jūgōng",
+            "pos": null,
+            "gloss": "to bow"
+          },
+          "title": "鞠躬",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:4",
+          "value": {
+            "no": 4,
+            "word": "握手",
+            "pinyin": "wòshǒu",
+            "pos": null,
+            "gloss": "to shake hands"
+          },
+          "title": "握手",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:5",
+          "value": {
+            "no": 5,
+            "word": "问候",
+            "pinyin": "wènhòu",
+            "pos": "动",
+            "gloss": "to greet"
+          },
+          "title": "问候",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:6",
+          "value": {
+            "no": 6,
+            "word": "点头",
+            "pinyin": "diǎntóu",
+            "pos": null,
+            "gloss": "to nod"
+          },
+          "title": "点头",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:7",
+          "value": {
+            "no": 7,
+            "word": "俗语",
+            "pinyin": "súyǔ",
+            "pos": "名",
+            "gloss": "saying"
+          },
+          "title": "俗语",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:8",
+          "value": {
+            "no": 8,
+            "word": "管",
+            "pinyin": "guǎn",
+            "pos": "动",
+            "gloss": "to take care of"
+          },
+          "title": "管",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:9",
+          "value": {
+            "no": 9,
+            "word": "离",
+            "pinyin": "lí",
+            "pos": "动",
+            "gloss": "to be away from"
+          },
+          "title": "离",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:10",
+          "value": {
+            "no": 10,
+            "word": "交通",
+            "pinyin": "jiāotōng",
+            "pos": "名",
+            "gloss": "traffic; transportation"
+          },
+          "title": "交通",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:11",
+          "value": {
+            "no": 11,
+            "word": "方便",
+            "pinyin": "fāngbiàn",
+            "pos": "形",
+            "gloss": "convenient"
+          },
+          "title": "方便",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:12",
+          "value": {
+            "no": 12,
+            "word": "风和日丽",
+            "pinyin": "fēnghé-rìlì",
+            "pos": null,
+            "gloss": "warm and sunny spring days"
+          },
+          "title": "风和日丽",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:13",
+          "value": {
+            "no": 13,
+            "word": "关心",
+            "pinyin": "guānxīn",
+            "pos": "动",
+            "gloss": "to care for"
+          },
+          "title": "关心",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:14",
+          "value": {
+            "no": 14,
+            "word": "瘦",
+            "pinyin": "shòu",
+            "pos": "形",
+            "gloss": "thin; skinny"
+          },
+          "title": "瘦",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:15",
+          "value": {
+            "no": 15,
+            "word": "说实话",
+            "pinyin": "shuō shíhuà",
+            "pos": null,
+            "gloss": "to tell the truth; frankly speaking"
+          },
+          "title": "说实话",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:16",
+          "value": {
+            "no": 16,
+            "word": "亲戚",
+            "pinyin": "qīnqi",
+            "pos": "名",
+            "gloss": "relative"
+          },
+          "title": "亲戚",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:17",
+          "value": {
+            "no": 17,
+            "word": "串门",
+            "pinyin": "chuànmén",
+            "pos": null,
+            "gloss": "to call at somebody's home"
+          },
+          "title": "串门",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:18",
+          "value": {
+            "no": 18,
+            "word": "冻",
+            "pinyin": "dòng",
+            "pos": "动",
+            "gloss": "to freeze"
+          },
+          "title": "冻",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:19",
+          "value": {
+            "no": 19,
+            "word": "急于",
+            "pinyin": "jíyú",
+            "pos": "动",
+            "gloss": "to be eager to"
+          },
+          "title": "急于",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:20",
+          "value": {
+            "no": 20,
+            "word": "脱",
+            "pinyin": "tuō",
+            "pos": "动",
+            "gloss": "to take off"
+          },
+          "title": "脱",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:21",
+          "value": {
+            "no": 21,
+            "word": "过早",
+            "pinyin": "guòzǎo",
+            "pos": "形",
+            "gloss": "far too early"
+          },
+          "title": "过早",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:22",
+          "value": {
+            "no": 22,
+            "word": "厚",
+            "pinyin": "hòu",
+            "pos": "形",
+            "gloss": "thick; warm (clothes)"
+          },
+          "title": "厚",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:23",
+          "value": {
+            "no": 23,
+            "word": "远亲",
+            "pinyin": "yuǎnqīn",
+            "pos": "名",
+            "gloss": "distant relative"
+          },
+          "title": "远亲",
+          "page": "96–97",
+          "audio": "11-1",
+          "type": "词语"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_1",
+          "value": {
+            "id": "short_text_1",
+            "printed_pages": [
+              98,
+              99
+            ],
+            "audio": "11-4",
+            "title": "中国人打招呼时常说“你好”吗",
+            "text": "我叫马克。我第一天学汉语，学的是“你好”“您贵姓”“谢谢”“再见”。来到中国以后，我发现中国人见面互相问候不一定都说话，有时只是点点头，微笑一下，有的是鞠一躬，也有握手的，拥抱的极少，我只在电视上见过。还有不少人说另外一些话，我能听懂的是“你吃了吗”。我问我的汉语老师，“你好”是不是中国人最普遍的问候方式？老师说，对不熟悉的人或是在时间紧张的时候，人们会用“你好”打招呼，如果遇到熟人，或是没有急事的话，人们会停下来聊两句。",
+            "exercises": {
+              "first_listen": [
+                "马克第一天学习汉语，学的是什么？",
+                "来到中国以后，他有什么新发现？",
+                "他向了老师什么问题？"
+              ],
+              "second_listen": [
+                "来到中国以后，他看到了什么，听到了什么？（微笑、拥抱）",
+                "老师说，中国人怎么打招呼？（不熟悉的人、时间不紧张、停下来）"
+              ],
+              "present": "马克看到中国人见面怎么问候，老师是怎么说的。要求说6–8个句子，不少于60字。",
+              "compare": "马克发现中国人问候方式很多，熟人有时间会停下来聊天，不熟悉的人或时间紧张时常说“你好”。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  98
+                ],
+                "audio_tracks": [
+                  "11-4"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说一说，不少于30字",
+                "textbook_printed_pages": [
+                  99
+                ],
+                "audio_tracks": [
+                  "11-4"
+                ]
+              }
+            }
+          },
+          "title": "中国人打招呼时常说“你好”吗",
+          "page": "98–99",
+          "audio": "11-4",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_2",
+          "value": {
+            "id": "short_text_2",
+            "printed_pages": [
+              100,
+              101
+            ],
+            "audio": "11-5",
+            "title": "我住进了中国人家里",
+            "text": "在中国学习的第一个学期，我住在学生宿舍。后来，我的一位中国朋友李明去国外留学，我就住到了他家。他家有爸爸、妈妈和一个17岁的男孩儿。男孩儿叫王亮，是李明的表弟。我和王亮住在一个房间。我白天去学校，晚饭我一般会回来和中国家人一起吃。李明家离学校不远，交通方便了。我一般骑自行车去上课，风和日丽的时候也走路，天气不好的话，就坐公共汽车。",
+            "exercises": {
+              "first_listen": [
+                "第一个学期马克住在哪里？",
+                "后来马克住在哪里？",
+                "马克晚上一般在哪里吃饭？"
+              ],
+              "second_listen": [
+                "马克为什么搬家了？（留学）",
+                "那家有什么人？（表弟）",
+                "马克怎么去学校？（骑、坐）"
+              ],
+              "present": "介绍一下马克在中国的住宿情况。要求说6–8个句子，不少于60字。",
+              "compare": "马克第一个学期住学生宿舍，后来住进朋友李明家，和表弟王亮住一个房间；天气好时骑车或走路，天气不好坐公交车。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  100
+                ],
+                "audio_tracks": [
+                  "11-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  100
+                ],
+                "audio_tracks": [
+                  "11-5"
+                ]
+              }
+            }
+          },
+          "title": "我住进了中国人家里",
+          "page": "100–101",
+          "audio": "11-5",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_3",
+          "value": {
+            "id": "short_text_3",
+            "printed_pages": [
+              102
+            ],
+            "audio": "11-6",
+            "title": "原来他们是关心我",
+            "text": "刚搬进李明家的时候，我有些不习惯。中国爸爸妈妈对我很照顾，可是我觉得他们管得有点儿多。早上我出门去上课，他们会说：“天冷，穿这么少冷不冷？多穿一件衣服吧。”吃晚饭的时候，李妈妈总说：“你这么瘦，得多吃点儿。”说实话，我真的有点儿不高兴。可是后来，邻居、亲戚们来李明家或是我们去别人家串门的时候，我发现，大家经常对年轻人说这些话。渐渐地，我明白了，他们这是关心我。从他们说的话里，我也了解了一些中国俗语，比如“春捂秋冻”“饱吹饿唱”“远亲不如近邻”。了解了中国文化的这些特点，我很高兴。",
+            "exercises": {
+              "first_listen": [
+                "开始的时候，马克住在李明家习惯吗？",
+                "吃晚饭的时候，李妈妈常说什么？",
+                "后来，马克明白了什么？"
+              ],
+              "second_listen": [
+                "马克为什么有点儿不高兴？（管）",
+                "大家常对年轻人说什么？（冷、多）",
+                "后来马克为什么很高兴？（俗语、文化）"
+              ],
+              "present": "说说马克明白了什么。要求说6–8个句子，不少于60字。",
+              "compare": "马克刚住进李明家不习惯，觉得中国家人管得多；后来他发现邻居亲戚也这样关心年轻人，渐渐了解了中国文化。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  102
+                ],
+                "audio_tracks": [
+                  "11-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  102
+                ],
+                "audio_tracks": [
+                  "11-6"
+                ]
+              }
+            }
+          },
+          "title": "原来他们是关心我",
+          "page": "102",
+          "audio": "11-6",
+          "type": "短文"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1",
+          "value": {
+            "expression": {
+              "expression": "不一定"
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "不一定"
+          },
+          "page": "99",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:2",
+          "value": {
+            "expression": {
+              "expression": "只是"
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "只是"
+          },
+          "page": "99",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:3",
+          "value": {
+            "expression": {
+              "expression": "点头"
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "点头"
+          },
+          "page": "99",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:4",
+          "value": {
+            "expression": {
+              "expression": "极少"
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "极少"
+          },
+          "page": "99",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:5",
+          "value": {
+            "expression": {
+              "expression": "如果……，或是……的话"
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "如果……，或是……的话"
+          },
+          "page": "99",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:6",
+          "value": {
+            "expression": {
+              "expression": "停下来"
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "停下来"
+          },
+          "page": "99",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:1",
+          "value": {
+            "expression": {
+              "expression": "后来"
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "后来"
+          },
+          "page": "101",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:2",
+          "value": {
+            "expression": {
+              "expression": "就"
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "就"
+          },
+          "page": "101",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:3",
+          "value": {
+            "expression": {
+              "expression": "……家有……"
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "……家有……"
+          },
+          "page": "101",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:4",
+          "value": {
+            "expression": {
+              "expression": "住（在）一个房间"
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "住（在）一个房间"
+          },
+          "page": "101",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:5",
+          "value": {
+            "expression": {
+              "expression": "离……远／不远"
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "离……远／不远"
+          },
+          "page": "101",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:6",
+          "value": {
+            "expression": {
+              "expression": "极了"
+            },
+            "topic": "说明情况"
+          },
+          "title": {
+            "expression": "极了"
+          },
+          "page": "101",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:1",
+          "value": {
+            "expression": {
+              "expression": "有些"
+            },
+            "topic": "谈自己的想法"
+          },
+          "title": {
+            "expression": "有些"
+          },
+          "page": "102",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:2",
+          "value": {
+            "expression": {
+              "expression": "对"
+            },
+            "topic": "谈自己的想法"
+          },
+          "title": {
+            "expression": "对"
+          },
+          "page": "102",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:3",
+          "value": {
+            "expression": {
+              "expression": "动词+得（2）"
+            },
+            "topic": "谈自己的想法"
+          },
+          "title": {
+            "expression": "动词+得（2）"
+          },
+          "page": "102",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:4",
+          "value": {
+            "expression": {
+              "expression": "多+动词+数词+量词+名词"
+            },
+            "topic": "谈自己的想法"
+          },
+          "title": {
+            "expression": "多+动词+数词+量词+名词"
+          },
+          "page": "102",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:5",
+          "value": {
+            "expression": {
+              "expression": "渐渐地"
+            },
+            "topic": "谈自己的想法"
+          },
+          "title": {
+            "expression": "渐渐地"
+          },
+          "page": "102",
+          "type": "语法／表达"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehension:1",
+          "value": {
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "words": [
+              "打招呼",
+              "拥抱",
+              "鞠躬",
+              "握手"
+            ],
+            "answer": [
+              "1.B",
+              "2.A",
+              "3.C",
+              "4.D"
+            ]
+          },
+          "title": "词语理解",
+          "page": "97",
+          "audio": "11-2",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_11_3:1",
+          "value": {
+            "prompt": "中国人常常说“你好”。",
+            "answer": "错",
+            "number": 1,
+            "heading": "exercise_11_3"
+          },
+          "title": "听力句子",
+          "page": "98",
+          "audio": "11-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_11_3:2",
+          "value": {
+            "prompt": "李大为喜欢吃饺子。",
+            "answer": "对",
+            "number": 2,
+            "heading": "exercise_11_3"
+          },
+          "title": "听力句子",
+          "page": "98",
+          "audio": "11-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_11_3:3",
+          "value": {
+            "prompt": "我们不认识。",
+            "answer": "错",
+            "number": 3,
+            "heading": "exercise_11_3"
+          },
+          "title": "听力句子",
+          "page": "98",
+          "audio": "11-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_11_3:4",
+          "value": {
+            "prompt": "他们关系很不错。",
+            "answer": "对",
+            "number": 4,
+            "heading": "exercise_11_3"
+          },
+          "title": "听力句子",
+          "page": "98",
+          "audio": "11-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_11_3:5",
+          "value": {
+            "prompt": "朴大宇没有跟老师打招呼。",
+            "answer": "错",
+            "number": 5,
+            "heading": "exercise_11_3"
+          },
+          "title": "听力句子",
+          "page": "98",
+          "audio": "11-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_11_3:6",
+          "value": {
+            "prompt": "中国大部分小学生学习外语。",
+            "answer": "对",
+            "number": 6,
+            "heading": "exercise_11_3"
+          },
+          "title": "听力句子",
+          "page": "98",
+          "audio": "11-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_11_3:7",
+          "value": {
+            "prompt": "大岛喜欢学习书面语。",
+            "answer": "错",
+            "number": 7,
+            "heading": "exercise_11_3"
+          },
+          "title": "听力句子",
+          "page": "98",
+          "audio": "11-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_11_3:8",
+          "value": {
+            "prompt": "他们知道的事很多。",
+            "answer": "错",
+            "number": 8,
+            "heading": "exercise_11_3"
+          },
+          "title": "听力句子",
+          "page": "98",
+          "audio": "11-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_11_3:9",
+          "value": {
+            "prompt": "邻居对他很好。",
+            "answer": "对",
+            "number": 9,
+            "heading": "exercise_11_3"
+          },
+          "title": "听力句子",
+          "page": "98",
+          "audio": "11-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_11_3:10",
+          "value": {
+            "prompt": "李明的爸爸妈妈关系很好。",
+            "answer": "错",
+            "number": 10,
+            "heading": "exercise_11_3"
+          },
+          "title": "听力句子",
+          "page": "98",
+          "audio": "11-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:1",
+          "value": {
+            "prompt": "马克第一天学习汉语，学的是什么？",
+            "kind": "first_listen",
+            "textTitle": "中国人打招呼时常说“你好”吗"
+          },
+          "title": "中国人打招呼时常说“你好”吗 · first_listen",
+          "page": "98–99",
+          "audio": "11-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:2",
+          "value": {
+            "prompt": "来到中国以后，他有什么新发现？",
+            "kind": "first_listen",
+            "textTitle": "中国人打招呼时常说“你好”吗"
+          },
+          "title": "中国人打招呼时常说“你好”吗 · first_listen",
+          "page": "98–99",
+          "audio": "11-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:3",
+          "value": {
+            "prompt": "他向了老师什么问题？",
+            "kind": "first_listen",
+            "textTitle": "中国人打招呼时常说“你好”吗"
+          },
+          "title": "中国人打招呼时常说“你好”吗 · first_listen",
+          "page": "98–99",
+          "audio": "11-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:1",
+          "value": {
+            "prompt": "来到中国以后，他看到了什么，听到了什么？（微笑、拥抱）",
+            "kind": "second_listen",
+            "textTitle": "中国人打招呼时常说“你好”吗"
+          },
+          "title": "中国人打招呼时常说“你好”吗 · second_listen",
+          "page": "98–99",
+          "audio": "11-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:2",
+          "value": {
+            "prompt": "老师说，中国人怎么打招呼？（不熟悉的人、时间不紧张、停下来）",
+            "kind": "second_listen",
+            "textTitle": "中国人打招呼时常说“你好”吗"
+          },
+          "title": "中国人打招呼时常说“你好”吗 · second_listen",
+          "page": "98–99",
+          "audio": "11-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:present:1",
+          "value": {
+            "prompt": "马克看到中国人见面怎么问候，老师是怎么说的。要求说6–8个句子，不少于60字。",
+            "kind": "present",
+            "textTitle": "中国人打招呼时常说“你好”吗"
+          },
+          "title": "中国人打招呼时常说“你好”吗 · present",
+          "page": "98–99",
+          "audio": "11-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:compare:1",
+          "value": {
+            "prompt": "马克发现中国人问候方式很多，熟人有时间会停下来聊天，不熟悉的人或时间紧张时常说“你好”。",
+            "kind": "compare",
+            "textTitle": "中国人打招呼时常说“你好”吗"
+          },
+          "title": "中国人打招呼时常说“你好”吗 · compare",
+          "page": "98–99",
+          "audio": "11-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:1",
+          "value": {
+            "prompt": "第一个学期马克住在哪里？",
+            "kind": "first_listen",
+            "textTitle": "我住进了中国人家里"
+          },
+          "title": "我住进了中国人家里 · first_listen",
+          "page": "100–101",
+          "audio": "11-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:2",
+          "value": {
+            "prompt": "后来马克住在哪里？",
+            "kind": "first_listen",
+            "textTitle": "我住进了中国人家里"
+          },
+          "title": "我住进了中国人家里 · first_listen",
+          "page": "100–101",
+          "audio": "11-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:3",
+          "value": {
+            "prompt": "马克晚上一般在哪里吃饭？",
+            "kind": "first_listen",
+            "textTitle": "我住进了中国人家里"
+          },
+          "title": "我住进了中国人家里 · first_listen",
+          "page": "100–101",
+          "audio": "11-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:1",
+          "value": {
+            "prompt": "马克为什么搬家了？（留学）",
+            "kind": "second_listen",
+            "textTitle": "我住进了中国人家里"
+          },
+          "title": "我住进了中国人家里 · second_listen",
+          "page": "100–101",
+          "audio": "11-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:2",
+          "value": {
+            "prompt": "那家有什么人？（表弟）",
+            "kind": "second_listen",
+            "textTitle": "我住进了中国人家里"
+          },
+          "title": "我住进了中国人家里 · second_listen",
+          "page": "100–101",
+          "audio": "11-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:3",
+          "value": {
+            "prompt": "马克怎么去学校？（骑、坐）",
+            "kind": "second_listen",
+            "textTitle": "我住进了中国人家里"
+          },
+          "title": "我住进了中国人家里 · second_listen",
+          "page": "100–101",
+          "audio": "11-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:present:1",
+          "value": {
+            "prompt": "介绍一下马克在中国的住宿情况。要求说6–8个句子，不少于60字。",
+            "kind": "present",
+            "textTitle": "我住进了中国人家里"
+          },
+          "title": "我住进了中国人家里 · present",
+          "page": "100–101",
+          "audio": "11-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:compare:1",
+          "value": {
+            "prompt": "马克第一个学期住学生宿舍，后来住进朋友李明家，和表弟王亮住一个房间；天气好时骑车或走路，天气不好坐公交车。",
+            "kind": "compare",
+            "textTitle": "我住进了中国人家里"
+          },
+          "title": "我住进了中国人家里 · compare",
+          "page": "100–101",
+          "audio": "11-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:1",
+          "value": {
+            "prompt": "开始的时候，马克住在李明家习惯吗？",
+            "kind": "first_listen",
+            "textTitle": "原来他们是关心我"
+          },
+          "title": "原来他们是关心我 · first_listen",
+          "page": "102",
+          "audio": "11-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:2",
+          "value": {
+            "prompt": "吃晚饭的时候，李妈妈常说什么？",
+            "kind": "first_listen",
+            "textTitle": "原来他们是关心我"
+          },
+          "title": "原来他们是关心我 · first_listen",
+          "page": "102",
+          "audio": "11-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:3",
+          "value": {
+            "prompt": "后来，马克明白了什么？",
+            "kind": "first_listen",
+            "textTitle": "原来他们是关心我"
+          },
+          "title": "原来他们是关心我 · first_listen",
+          "page": "102",
+          "audio": "11-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:1",
+          "value": {
+            "prompt": "马克为什么有点儿不高兴？（管）",
+            "kind": "second_listen",
+            "textTitle": "原来他们是关心我"
+          },
+          "title": "原来他们是关心我 · second_listen",
+          "page": "102",
+          "audio": "11-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:2",
+          "value": {
+            "prompt": "大家常对年轻人说什么？（冷、多）",
+            "kind": "second_listen",
+            "textTitle": "原来他们是关心我"
+          },
+          "title": "原来他们是关心我 · second_listen",
+          "page": "102",
+          "audio": "11-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:3",
+          "value": {
+            "prompt": "后来马克为什么很高兴？（俗语、文化）",
+            "kind": "second_listen",
+            "textTitle": "原来他们是关心我"
+          },
+          "title": "原来他们是关心我 · second_listen",
+          "page": "102",
+          "audio": "11-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:present:1",
+          "value": {
+            "prompt": "说说马克明白了什么。要求说6–8个句子，不少于60字。",
+            "kind": "present",
+            "textTitle": "原来他们是关心我"
+          },
+          "title": "原来他们是关心我 · present",
+          "page": "102",
+          "audio": "11-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:compare:1",
+          "value": {
+            "prompt": "马克刚住进李明家不习惯，觉得中国家人管得多；后来他发现邻居亲戚也这样关心年轻人，渐渐了解了中国文化。",
+            "kind": "compare",
+            "textTitle": "原来他们是关心我"
+          },
+          "title": "原来他们是关心我 · compare",
+          "page": "102",
+          "audio": "11-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:1",
+          "value": {
+            "prompt": {
+              "id": "comprehensive_1",
+              "instruction": "请你根据听过的三段短文填表",
+              "answer_status": "open_table_teacher_check"
+            }
+          },
+          "title": "综合练习",
+          "page": "103–104",
+          "audio": "11-4、11-5、11-6",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:2",
+          "value": {
+            "prompt": {
+              "id": "comprehensive_2",
+              "instruction": "小组活动：谈中国人打招呼的方式、马克眼里中国人怎么对别人表示关心、马克在李明家住得怎么样；一名同学说8–10个句子，不少于80字，最后总结10–12个句子，不少于100字。",
+              "answer_status": "open_presentational_task"
+            }
+          },
+          "title": "综合练习",
+          "page": "103–104",
+          "audio": "11-4、11-5、11-6",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:3",
+          "value": {
+            "prompt": {
+              "id": "comprehensive_3",
+              "instruction": "拓展练习：说一说你们国家的人怎么打招呼、你上大学时住在哪里住得怎么样、你们国家的人怎么表示对别人的关心；说10–12个句子，不少于100字。",
+              "answer_status": "open_presentational_task"
+            }
+          },
+          "title": "综合练习",
+          "page": "103–104",
+          "audio": "11-4、11-5、11-6",
+          "type": "综合练习"
+        }
+      ]
+    },
+    "boya-quasi-intermediate-i:lesson-12": {
+      "available": true,
+      "review_complete": true,
+      "completion": {
+        "status": "completed_by_adam",
+        "confirmed_by": "Adam",
+        "confirmed_at": "2026-09-08",
+        "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+        "technical_status_preserved": true
+      },
+      "reason": "",
+      "canonical": {
+        "schema_version": "quasi-intermediate-source-audit-v1.0",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_number": 12,
+        "lesson_id": "lesson-12",
+        "title": "散步",
+        "title_source": "主教材 PDF 第118页（印刷 P105）课名页视觉核对",
+        "source_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+        "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+        "page_map": {
+          "printed_pages": [
+            105,
+            113
+          ],
+          "pdf_pages": [
+            118,
+            126
+          ],
+          "answer_pdf_pages": [
+            28,
+            29
+          ],
+          "mapping_status": "visual_verified_pdf_offset_plus_13; answer_pages_visual_first_pass"
+        },
+        "qr_evidence": {
+          "pdf_page": 118,
+          "qr_url": "http://qr31.cn/IhjvBZ",
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-12-pdf-page-118.png",
+          "landing_page": "https://biz.cli.im/site/IhjvBZ?qrurl=http://qr31.cn/IhjvBZ&gtype=2&key=57f6317855318c071878297e5609bf670214049105",
+          "decode_status": "source_inventory_verified",
+          "landing_audio_labels": [
+            "12-1",
+            "12-2",
+            "12-3",
+            "12-4",
+            "12-5",
+            "12-6"
+          ]
+        },
+        "audio_map": [
+          {
+            "label": "12-1",
+            "coding": "LQ1539821",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FoSCwzhqnQpijl4Tj4OkTxECsRds",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-1.mp3",
+            "bytes": 751063,
+            "sha256": "0046a2acc58578a44402eed233213858b7bc33229a2665072a077a53df39adc5",
+            "duration_seconds": 46.629,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "12-2",
+            "coding": "JU1783238",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FjMAL2tgeG3tYnnLCp9xJVMS3ZZz",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-2.mp3",
+            "bytes": 388274,
+            "sha256": "427c06de928174b14cb3152bc9673ba67d9ad87b70f2f30a9d5ec7aec1d6ebdf",
+            "duration_seconds": 23.954,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "12-3",
+            "coding": "CU1783239",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FqfiHfNHBk19IZIH07KX_9TvVVnk",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-3.mp3",
+            "bytes": 848865,
+            "sha256": "cd6492e404f3e090c87c8eeb1246f43d70925c2cb4ac92bc072d0e14d03ccd44",
+            "duration_seconds": 52.741,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "12-4",
+            "coding": "CJ1783240",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FpT3oBC8EqfmUI8W9iXCSENiyszA",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-4.mp3",
+            "bytes": 939144,
+            "sha256": "9685d6f19a703e68786b3890da2dd5c1695d39f2888432ec773bad09569155af",
+            "duration_seconds": 58.384,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "12-5",
+            "coding": "NS1783241",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FqqpPoXC016Q9IrbZWipGRQe8fsn",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-5.mp3",
+            "bytes": 725567,
+            "sha256": "94256f12b0900b9d622a5c64e7b1d0d30aaf9d9f2641f5aedbc9f28a90446240",
+            "duration_seconds": 45.035,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback"
+          },
+          {
+            "label": "12-6",
+            "coding": "HY1783242",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FhXDg5c6dOiaHHuGuqT0c-n_qYHq",
+            "file": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-6.mp3",
+            "bytes": 971745,
+            "sha256": "fb8c2763dd7f5993a55871fc13df63a9af461bad1b684d9fbc7e4b7bfd23a179",
+            "duration_seconds": 60.421,
+            "decode_status": "passed",
+            "semantic_status": "pending_teacher_playback"
+          }
+        ],
+        "content_inventory": {
+          "vocabulary_count": 27,
+          "vocabulary_comprehension_group_count": 1,
+          "vocabulary_comprehension_item_count": 7,
+          "listening_sentence_item_count": 10,
+          "texts_dialogues_count": 3,
+          "grammar_pattern_count": 21,
+          "listening_exercise_group_count": 6,
+          "comprehensive_exercise_count": 3,
+          "status": "approved_source_snapshot"
+        },
+        "answer_policy": "仅记录参考答案 PDF 中可核对的选择／判断答案与听力文本；开放式口语题不补写唯一标准答案。",
+        "review": {
+          "status": "approved_by_adam",
+          "approved": true,
+          "approved_by": [
+            "Adam Yan"
+          ],
+          "approved_at": "2026-09-04T15:53:03+07:00",
+          "blockers": [],
+          "approval_basis": [
+            "主教材 PDF 第118–126页（印刷 P105–P113）视觉核对",
+            "答案 PDF 第28–29页（答案印刷 P28–P29）视觉核对",
+            "来源总盘点第12课 QR、音频 bytes、hash 和时长记录"
+          ]
+        },
+        "sections": [
+          {
+            "id": "vocabulary",
+            "printed_pages": [
+              105,
+              106
+            ],
+            "audio": "12-1",
+            "entries": [
+              {
+                "no": 1,
+                "word": "宽阔",
+                "pinyin": "kuānkuò",
+                "pos": "形",
+                "gloss": "wide"
+              },
+              {
+                "no": 2,
+                "word": "池塘",
+                "pinyin": "chítáng",
+                "pos": "名",
+                "gloss": "pond"
+              },
+              {
+                "no": 3,
+                "word": "背",
+                "pinyin": "bēi",
+                "pos": "动",
+                "gloss": "to carry"
+              },
+              {
+                "no": 4,
+                "word": "散步",
+                "pinyin": "sànbù",
+                "pos": null,
+                "gloss": "to take a walk"
+              },
+              {
+                "no": 5,
+                "word": "摸",
+                "pinyin": "mō",
+                "pos": "动",
+                "gloss": "to touch; to feel"
+              },
+              {
+                "no": 6,
+                "word": "本来",
+                "pinyin": "běnlái",
+                "pos": "副",
+                "gloss": "originally"
+              },
+              {
+                "no": 7,
+                "word": "突然",
+                "pinyin": "tūrán",
+                "pos": "形",
+                "gloss": "sudden"
+              },
+              {
+                "no": 8,
+                "word": "分歧",
+                "pinyin": "fēnqí",
+                "pos": "名",
+                "gloss": "difference; dispute"
+              },
+              {
+                "no": 9,
+                "word": "取决（于）",
+                "pinyin": "qǔjué (yú)",
+                "pos": "动",
+                "gloss": "to be decided by"
+              },
+              {
+                "no": 10,
+                "word": "强壮",
+                "pinyin": "qiángzhuàng",
+                "pos": "形",
+                "gloss": "strong; robust"
+              },
+              {
+                "no": 11,
+                "word": "稳",
+                "pinyin": "wěn",
+                "pos": "形",
+                "gloss": "steady"
+              },
+              {
+                "no": 12,
+                "word": "愿意",
+                "pinyin": "yuànyì",
+                "pos": "动",
+                "gloss": "to be willing"
+              },
+              {
+                "no": 13,
+                "word": "稍微",
+                "pinyin": "shāowéi",
+                "pos": "副",
+                "gloss": "a little"
+              },
+              {
+                "no": 14,
+                "word": "疲劳",
+                "pinyin": "píláo",
+                "pos": "形",
+                "gloss": "tired"
+              },
+              {
+                "no": 15,
+                "word": "尽量",
+                "pinyin": "jǐnliàng",
+                "pos": "副",
+                "gloss": "to do one's best"
+              },
+              {
+                "no": 16,
+                "word": "信服",
+                "pinyin": "xìnfú",
+                "pos": "动",
+                "gloss": "to trust; to be convinced"
+              },
+              {
+                "no": 17,
+                "word": "便",
+                "pinyin": "biàn",
+                "pos": "副",
+                "gloss": "therefore"
+              },
+              {
+                "no": 18,
+                "word": "叫",
+                "pinyin": "jiào",
+                "pos": "动",
+                "gloss": "to call; to shout"
+              },
+              {
+                "no": 19,
+                "word": "发生",
+                "pinyin": "fāshēng",
+                "pos": "动",
+                "gloss": "to happen"
+              },
+              {
+                "no": 20,
+                "word": "责任",
+                "pinyin": "zérèn",
+                "pos": "名",
+                "gloss": "responsibility"
+              },
+              {
+                "no": 21,
+                "word": "陪伴",
+                "pinyin": "péibàn",
+                "pos": "动",
+                "gloss": "to accompany"
+              },
+              {
+                "no": 22,
+                "word": "改",
+                "pinyin": "gǎi",
+                "pos": "动",
+                "gloss": "to change; to correct"
+              },
+              {
+                "no": 23,
+                "word": "主意",
+                "pinyin": "zhǔyi",
+                "pos": "名",
+                "gloss": "idea"
+              },
+              {
+                "no": 24,
+                "word": "金色",
+                "pinyin": "jīnsè",
+                "pos": "名",
+                "gloss": "golden"
+              },
+              {
+                "no": 25,
+                "word": "行",
+                "pinyin": "háng",
+                "pos": "量",
+                "gloss": "row"
+              },
+              {
+                "no": 26,
+                "word": "阳光",
+                "pinyin": "yángguāng",
+                "pos": "名",
+                "gloss": "sunshine"
+              },
+              {
+                "no": 27,
+                "word": "蹲",
+                "pinyin": "dūn",
+                "pos": "动",
+                "gloss": "to squat"
+              }
+            ]
+          },
+          {
+            "id": "vocabulary_comprehension",
+            "printed_pages": [
+              106
+            ],
+            "audio": "12-2",
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "groups": [
+              {
+                "topic": "散步与环境",
+                "words": [
+                  "外套",
+                  "小路",
+                  "宽阔",
+                  "池塘",
+                  "背",
+                  "散步",
+                  "摸"
+                ],
+                "answer": [
+                  "1.A",
+                  "2.E",
+                  "3.F",
+                  "4.D",
+                  "5.B",
+                  "6.C",
+                  "7.G"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "listening_sentences",
+            "printed_pages": [
+              107
+            ],
+            "audio_tracks": [
+              "12-3"
+            ],
+            "exercises": {
+              "exercise_12_3": {
+                "instruction": "听句子，判断对错",
+                "items": [
+                  [
+                    1,
+                    "妈妈一直不喜欢出去。",
+                    "错"
+                  ],
+                  [
+                    2,
+                    "学校前面是一条大路。",
+                    "对"
+                  ],
+                  [
+                    3,
+                    "我们给爸爸买的是裤子。",
+                    "错"
+                  ],
+                  [
+                    4,
+                    "我们没想到儿子会说话。",
+                    "对"
+                  ],
+                  [
+                    5,
+                    "我们的想法一样。",
+                    "错"
+                  ],
+                  [
+                    6,
+                    "大家都听妈妈的。",
+                    "对"
+                  ],
+                  [
+                    7,
+                    "爸爸拉着儿子的手。",
+                    "错"
+                  ],
+                  [
+                    8,
+                    "小张的身体更好了。",
+                    "对"
+                  ],
+                  [
+                    9,
+                    "爷爷的腿不好，走不了路。",
+                    "错"
+                  ],
+                  [
+                    10,
+                    "画儿不要用手碰。",
+                    "对"
+                  ]
+                ]
+              }
+            }
+          },
+          {
+            "id": "short_text_1",
+            "printed_pages": [
+              107,
+              108
+            ],
+            "audio": "12-4",
+            "title": "公园散步",
+            "text": "我们在公园里散步：我、我的母亲、我的妻子和儿子。母亲本来不愿意出门。她老了，身体不好，稍微走远一点儿就觉得很疲劳。我说正因为这样，才应该尽量多出去走走。母亲信服地点点头，便去拿外套。她现在很听我的话，就像我小时候很听她的话一样。天气很好，我和母亲走在前面，我的妻子和儿子走在后面。小家伙突然叫起来：“前面是妈妈和儿子，后面也是妈妈和儿子。”我们都笑了。",
+            "exercises": {
+              "first_listen": [
+                "母亲本来愿意不愿意出门？",
+                "母亲听谁的话？",
+                "去散步的都有谁？"
+              ],
+              "second_listen": [
+                "母亲开始时愿意出门吗？（疲劳）",
+                "“我”怎么说的？（正因为）",
+                "他们为什么都笑了？（前面、后面）"
+              ],
+              "present": "说说“我”怎么说服母亲的。要求说6–8个句子，不少于60字。",
+              "compare": "母亲本来不愿意出门，因为身体不好、走远会疲劳；“我”说正因为这样更应该多走走，母亲于是拿了外套。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  107
+                ],
+                "audio_tracks": [
+                  "12-4"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  108
+                ],
+                "audio_tracks": [
+                  "12-4"
+                ]
+              }
+            }
+          },
+          {
+            "id": "common_expressions_1",
+            "printed_pages": [
+              108,
+              109
+            ],
+            "topic": "情况描写",
+            "items": [
+              {
+                "expression": "本来"
+              },
+              {
+                "expression": "稍微+动词+一点儿"
+              },
+              {
+                "expression": "正因为……才……"
+              },
+              {
+                "expression": "尽量"
+              },
+              {
+                "expression": "像……一样（2）"
+              },
+              {
+                "expression": "突然"
+              }
+            ]
+          },
+          {
+            "id": "short_text_2",
+            "printed_pages": [
+              109,
+              110
+            ],
+            "audio": "12-5",
+            "title": "走大路还是走小路",
+            "text": "后来发生了分歧：母亲要走大路，大路宽阔；我的儿子要走小路，小路有意思。不过一切都取决于我。我的母亲老了，她已习惯听从她强壮的儿子；我的儿子还小，他还习惯听从他高大的父亲；妻子呢，在外面，她总是听我的。我感到自己的责任很大，可是，我想不出让母亲和儿子都高兴的办法。我想过分成两路，可是我不愿意一家人分开。",
+            "exercises": {
+              "first_listen": [
+                "母亲想走哪条路？",
+                "儿子想走哪条路？",
+                "妻子呢？"
+              ],
+              "second_listen": [
+                "母亲的想法和儿子的想法有什么不同？（宽阔、有意思）",
+                "家人听谁的话？（取决于）",
+                "想出了让母亲和儿子都高兴的办法吗？为什么？（分成、不愿意）"
+              ],
+              "present": "说说他们发生了什么分歧。要求说6–8个句子，不少于60字。",
+              "compare": "母亲喜欢宽阔的大路，儿子喜欢有意思的小路；妻子听“我”的，一切取决于“我”，但“我”不愿一家人分开。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  109
+                ],
+                "audio_tracks": [
+                  "12-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  109
+                ],
+                "audio_tracks": [
+                  "12-5"
+                ]
+              }
+            }
+          },
+          {
+            "id": "common_expressions_2",
+            "printed_pages": [
+              110
+            ],
+            "topic": "情况描写",
+            "items": [
+              {
+                "expression": "发生"
+              },
+              {
+                "expression": "取决于"
+              },
+              {
+                "expression": "习惯"
+              },
+              {
+                "expression": "总是"
+              },
+              {
+                "expression": "分成"
+              },
+              {
+                "expression": "愿意"
+              }
+            ]
+          },
+          {
+            "id": "short_text_3",
+            "printed_pages": [
+              111,
+              112
+            ],
+            "audio": "12-6",
+            "title": "阳光下的一家人",
+            "text": "我决定不听儿子的，因为我和他在一起的日子还长，我陪伴母亲的日子已经很短。我说：“走大路。”但是母亲摸摸儿子的头，改了主意，“还是走小路吧！”她看着前面的小路说：“那里有金色的花儿，两行整齐的树，再往前走，还有一个小小的池塘。我走不过去的地方，你就背着我。”这样，我们在阳光下，向着花儿、树、小池塘走去。走到一个地方，我蹲下来，背起母亲，妻子也蹲下来，背起儿子，我们走得很慢、很稳、很小心。那感觉真美好！",
+            "text_source_note": "改编自莫怀戚《散步》",
+            "exercises": {
+              "first_listen": [
+                "“我”的决定是什么？",
+                "母亲决定走哪条路？",
+                "他们走的是哪条路？"
+              ],
+              "second_listen": [
+                "“我”为什么不听儿子的？（陪伴、长、短）",
+                "母亲为什么听“我”儿子的？（整齐、池塘、背）",
+                "他们一家人走得快不快？大家感觉怎么样？（稳、美好）"
+              ],
+              "present": "说说他们最后怎么决定的。要求说6–8个句子，不少于60字。",
+              "compare": "“我”决定走大路，但母亲为了让儿子开心改主意走小路。最后一家人在阳光下慢慢、稳稳地走向花儿、树和池塘，感觉很美好。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  111
+                ],
+                "audio_tracks": [
+                  "12-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  111
+                ],
+                "audio_tracks": [
+                  "12-6"
+                ]
+              }
+            }
+          },
+          {
+            "id": "common_expressions_3",
+            "printed_pages": [
+              112
+            ],
+            "topic": "说明转变、叙述过程",
+            "items": [
+              {
+                "expression": "决定"
+              },
+              {
+                "expression": "改主意"
+              },
+              {
+                "expression": "还是……吧"
+              },
+              {
+                "expression": "再"
+              },
+              {
+                "expression": "动词+不／得+过去"
+              },
+              {
+                "expression": "很……，很……"
+              }
+            ]
+          },
+          {
+            "id": "comprehensive_practice",
+            "printed_pages": [
+              112,
+              113
+            ],
+            "audio_tracks": [
+              "12-4",
+              "12-5",
+              "12-6"
+            ],
+            "items": [
+              {
+                "id": "comprehensive_1",
+                "instruction": "请你根据听过的三段短文填表",
+                "answer_status": "open_table_teacher_check"
+              },
+              {
+                "id": "comprehensive_2",
+                "instruction": "小组活动：谈我怎么说服母亲一起去散步、散步时发生了什么分歧、我们决定走哪条路；一名同学先说8–10个句子，不少于80字，最后总结10–12个句子，不少于100字。",
+                "answer_status": "open_presentational_task"
+              },
+              {
+                "id": "comprehensive_3",
+                "instruction": "拓展练习：说一说你和家人在一起的一件事，包括大家打算做什么、发生了什么特别的事、你们是怎么解决的；说10–12个句子，不少于100字。",
+                "answer_status": "open_presentational_task"
+              }
+            ]
+          }
+        ],
+        "lesson_key": "boya-quasi-intermediate-i:lesson-12"
+      },
+      "source_manifest": {
+        "schema_version": "boya-lesson-source-manifest-v1",
+        "manifest_type": "lesson-source-review",
+        "course_id": "vinh-chinese-listening-speaking",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_id": "lesson-12",
+        "lesson_key": "boya-quasi-intermediate-i:lesson-12",
+        "completion_confirmation": {
+          "status": "completed_by_adam",
+          "confirmed_by": "Adam",
+          "confirmed_at": "2026-09-08",
+          "evidence": "course/textbook-completion-confirmation-2026-09-08.md",
+          "technical_status_preserved": true
+        },
+        "lesson_number": 12,
+        "lesson_title": "散步",
+        "language": "简体中文",
+        "package": "lesson-12-source-review",
+        "prepared_at": "2026-08-28",
+        "source_status": "approved",
+        "source_qa_status": "passed",
+        "extraction_status": "source_review_materialized",
+        "review_status": "approved_by_adam",
+        "approved": true,
+        "approved_by": "Adam Yan",
+        "approved_at": "2026-09-04T15:53:03+07:00",
+        "canonical_source": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json",
+        "canonical_source_sha256": "9a8767c6e2ad68e32f5c8757ea47004f5af3461004cae0bfb47a860f9d328afe",
+        "source_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+          "sha256": "39899d0f400e187f57c16db821f8f4c207f936eae0e4fbfe3cab52c02bfea806",
+          "total_pages": 134,
+          "textbook_page_range": "105–113",
+          "pdf_page_range": "118–126",
+          "page_count_in_review": 9,
+          "format": "scanned_image_pdf",
+          "text_layer_status": "empty; visual review used"
+        },
+        "answer_pdf": {
+          "path": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+          "sha256": "3c21e1574b0187259769799d183eca78a60a515b5b7fce202eda9e9ade2c20b8",
+          "total_pages": 33,
+          "pdf_page_range_in_review": "28–29",
+          "answer_status": "closed_answers_visual_checked; open_tasks_have_no_unique_answer"
+        },
+        "page_audit": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/audit/source-pages-105-113-audit-draft.md",
+          "sha256": "db1cc29bb4b6eaf19473af47498cb15baf4e5d93449d10e5beeba178b97f9142",
+          "status": "visual_first_pass"
+        },
+        "answer_audit": {
+          "path": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/audit/source-pages-105-113-audit-draft.md",
+          "sha256": "db1cc29bb4b6eaf19473af47498cb15baf4e5d93449d10e5beeba178b97f9142",
+          "status": "answer_pages_28-29_included_in_visual_first_pass"
+        },
+        "qr_source": {
+          "capture": "textbooks/boya-quasi-intermediate-i/source/qr/captures/lesson-12-pdf-page-118.png",
+          "qr_url": "http://qr31.cn/IhjvBZ",
+          "landing_page": "https://biz.cli.im/site/IhjvBZ?qrurl=http://qr31.cn/IhjvBZ&gtype=2&key=57f6317855318c071878297e5609bf670214049105",
+          "status": "decoded_landing_page_lists_12-1_to_12-6"
+        },
+        "audio": {
+          "root": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-12",
+          "manifest": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/audio-manifest.json",
+          "manifest_sha256": "205f334a669ef3d7b5d23853f8b5b22d0615c8b70c0d1f615c4ec541d8dfb458",
+          "technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/audit/audio-technical-2026-08-28.md",
+          "expected_track_count": 6,
+          "local_track_count": 6,
+          "decode_passed_count": 6,
+          "semantic_listening_count": 6,
+          "teacher_playback_count": 6,
+          "status": "technical_semantic_teacher_playback_approved"
+        },
+        "listening_exercise_contract": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/listening-exercise-contract.json",
+        "listening_exercise_contract_sha256": "d7f8b7ebd5a588e3b5eba1137abcd3e560ae15da915762fc29bba5460873db76",
+        "listening_exercise_contract_detail": {
+          "status": "draft",
+          "exercise_count": 9
+        },
+        "review_evidence": {
+          "page_range": "P105–P113",
+          "answer_page_range": "答案 PDF P28–P29",
+          "vocabulary_count": 27,
+          "vocabulary_comprehension_group_count": 1,
+          "listening_sentence_item_count": 10,
+          "short_text_count": 3,
+          "short_text_listen_group_count": 6,
+          "common_expression_group_count": 3,
+          "comprehensive_practice_count": 3,
+          "status": "source_pack_and_audio_approved_by_adam"
+        },
+        "blockers": []
+      },
+      "audio": {
+        "schema_version": "boya-lesson-audio-manifest-v1",
+        "lesson_id": "lesson-12",
+        "textbook_id": "boya-quasi-intermediate-i",
+        "lesson_title": "散步",
+        "recorded_at": "2026-08-28",
+        "provenance": {
+          "source_type": "publisher_qr_landing_page",
+          "qr_url": "http://qr31.cn/IhjvBZ",
+          "landing_page": "https://biz.cli.im/site/IhjvBZ?qrurl=http://qr31.cn/IhjvBZ&gtype=2&key=57f6317855318c071878297e5609bf670214049105",
+          "landing_audio_labels": [
+            "12-1",
+            "12-2",
+            "12-3",
+            "12-4",
+            "12-5",
+            "12-6"
+          ]
+        },
+        "technical_evidence": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/audit/audio-technical-2026-08-28.md",
+        "tracks": [
+          {
+            "label": "12-1",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FoSCwzhqnQpijl4Tj4OkTxECsRds",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-1.mp3",
+            "scope": "本课音档",
+            "bytes": 751063,
+            "sha256": "0046a2acc58578a44402eed233213858b7bc33229a2665072a077a53df39adc5",
+            "duration_seconds": 46.629,
+            "decode_status": "passed",
+            "semantic_status": "teacher_approved",
+            "teacher_playback_status": "approved_by_adam"
+          },
+          {
+            "label": "12-2",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FjMAL2tgeG3tYnnLCp9xJVMS3ZZz",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-2.mp3",
+            "scope": "本课音档",
+            "bytes": 388274,
+            "sha256": "427c06de928174b14cb3152bc9673ba67d9ad87b70f2f30a9d5ec7aec1d6ebdf",
+            "duration_seconds": 23.954,
+            "decode_status": "passed",
+            "semantic_status": "teacher_approved",
+            "teacher_playback_status": "approved_by_adam"
+          },
+          {
+            "label": "12-3",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FqfiHfNHBk19IZIH07KX_9TvVVnk",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-3.mp3",
+            "scope": "本课音档",
+            "bytes": 848865,
+            "sha256": "cd6492e404f3e090c87c8eeb1246f43d70925c2cb4ac92bc072d0e14d03ccd44",
+            "duration_seconds": 52.741,
+            "decode_status": "passed",
+            "semantic_status": "teacher_approved",
+            "teacher_playback_status": "approved_by_adam"
+          },
+          {
+            "label": "12-4",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FpT3oBC8EqfmUI8W9iXCSENiyszA",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-4.mp3",
+            "scope": "本课音档",
+            "bytes": 939144,
+            "sha256": "9685d6f19a703e68786b3890da2dd5c1695d39f2888432ec773bad09569155af",
+            "duration_seconds": 58.384,
+            "decode_status": "passed",
+            "semantic_status": "teacher_approved",
+            "teacher_playback_status": "approved_by_adam"
+          },
+          {
+            "label": "12-5",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FqqpPoXC016Q9IrbZWipGRQe8fsn",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-5.mp3",
+            "scope": "本课音档",
+            "bytes": 725567,
+            "sha256": "94256f12b0900b9d622a5c64e7b1d0d30aaf9d9f2641f5aedbc9f28a90446240",
+            "duration_seconds": 45.035,
+            "decode_status": "passed",
+            "semantic_status": "teacher_approved",
+            "teacher_playback_status": "approved_by_adam"
+          },
+          {
+            "label": "12-6",
+            "play_url": "https://tcv.clewm.net/f0ZhdfBuStBT1zwU3OUQUMDT9tQ=/FhXDg5c6dOiaHHuGuqT0c-n_qYHq",
+            "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-12/12-6.mp3",
+            "scope": "本课音档",
+            "bytes": 971745,
+            "sha256": "fb8c2763dd7f5993a55871fc13df63a9af461bad1b684d9fbc7e4b7bfd23a179",
+            "duration_seconds": 60.421,
+            "decode_status": "passed",
+            "semantic_status": "teacher_approved",
+            "teacher_playback_status": "approved_by_adam"
+          }
+        ],
+        "status": "approved",
+        "coverage_status": "12-1_to_12-6_technical_semantic_teacher_playback_approved",
+        "approved_by": "Adam Yan",
+        "approved_at": "2026-09-04T15:53:03+07:00"
+      },
+      "canonical_path": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/canonical-source.json",
+      "source_manifest_path": "lessons/boya-quasi-intermediate-i/lesson-12/00-source/source-manifest.json",
+      "canonical_source_sha256": "9a8767c6e2ad68e32f5c8757ea47004f5af3461004cae0bfb47a860f9d328afe",
+      "review_items": [
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:1",
+          "value": {
+            "no": 1,
+            "word": "宽阔",
+            "pinyin": "kuānkuò",
+            "pos": "形",
+            "gloss": "wide"
+          },
+          "title": "宽阔",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:2",
+          "value": {
+            "no": 2,
+            "word": "池塘",
+            "pinyin": "chítáng",
+            "pos": "名",
+            "gloss": "pond"
+          },
+          "title": "池塘",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:3",
+          "value": {
+            "no": 3,
+            "word": "背",
+            "pinyin": "bēi",
+            "pos": "动",
+            "gloss": "to carry"
+          },
+          "title": "背",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:4",
+          "value": {
+            "no": 4,
+            "word": "散步",
+            "pinyin": "sànbù",
+            "pos": null,
+            "gloss": "to take a walk"
+          },
+          "title": "散步",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:5",
+          "value": {
+            "no": 5,
+            "word": "摸",
+            "pinyin": "mō",
+            "pos": "动",
+            "gloss": "to touch; to feel"
+          },
+          "title": "摸",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:6",
+          "value": {
+            "no": 6,
+            "word": "本来",
+            "pinyin": "běnlái",
+            "pos": "副",
+            "gloss": "originally"
+          },
+          "title": "本来",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:7",
+          "value": {
+            "no": 7,
+            "word": "突然",
+            "pinyin": "tūrán",
+            "pos": "形",
+            "gloss": "sudden"
+          },
+          "title": "突然",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:8",
+          "value": {
+            "no": 8,
+            "word": "分歧",
+            "pinyin": "fēnqí",
+            "pos": "名",
+            "gloss": "difference; dispute"
+          },
+          "title": "分歧",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:9",
+          "value": {
+            "no": 9,
+            "word": "取决（于）",
+            "pinyin": "qǔjué (yú)",
+            "pos": "动",
+            "gloss": "to be decided by"
+          },
+          "title": "取决（于）",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:10",
+          "value": {
+            "no": 10,
+            "word": "强壮",
+            "pinyin": "qiángzhuàng",
+            "pos": "形",
+            "gloss": "strong; robust"
+          },
+          "title": "强壮",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:11",
+          "value": {
+            "no": 11,
+            "word": "稳",
+            "pinyin": "wěn",
+            "pos": "形",
+            "gloss": "steady"
+          },
+          "title": "稳",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:12",
+          "value": {
+            "no": 12,
+            "word": "愿意",
+            "pinyin": "yuànyì",
+            "pos": "动",
+            "gloss": "to be willing"
+          },
+          "title": "愿意",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:13",
+          "value": {
+            "no": 13,
+            "word": "稍微",
+            "pinyin": "shāowéi",
+            "pos": "副",
+            "gloss": "a little"
+          },
+          "title": "稍微",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:14",
+          "value": {
+            "no": 14,
+            "word": "疲劳",
+            "pinyin": "píláo",
+            "pos": "形",
+            "gloss": "tired"
+          },
+          "title": "疲劳",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:15",
+          "value": {
+            "no": 15,
+            "word": "尽量",
+            "pinyin": "jǐnliàng",
+            "pos": "副",
+            "gloss": "to do one's best"
+          },
+          "title": "尽量",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:16",
+          "value": {
+            "no": 16,
+            "word": "信服",
+            "pinyin": "xìnfú",
+            "pos": "动",
+            "gloss": "to trust; to be convinced"
+          },
+          "title": "信服",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:17",
+          "value": {
+            "no": 17,
+            "word": "便",
+            "pinyin": "biàn",
+            "pos": "副",
+            "gloss": "therefore"
+          },
+          "title": "便",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:18",
+          "value": {
+            "no": 18,
+            "word": "叫",
+            "pinyin": "jiào",
+            "pos": "动",
+            "gloss": "to call; to shout"
+          },
+          "title": "叫",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:19",
+          "value": {
+            "no": 19,
+            "word": "发生",
+            "pinyin": "fāshēng",
+            "pos": "动",
+            "gloss": "to happen"
+          },
+          "title": "发生",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:20",
+          "value": {
+            "no": 20,
+            "word": "责任",
+            "pinyin": "zérèn",
+            "pos": "名",
+            "gloss": "responsibility"
+          },
+          "title": "责任",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:21",
+          "value": {
+            "no": 21,
+            "word": "陪伴",
+            "pinyin": "péibàn",
+            "pos": "动",
+            "gloss": "to accompany"
+          },
+          "title": "陪伴",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:22",
+          "value": {
+            "no": 22,
+            "word": "改",
+            "pinyin": "gǎi",
+            "pos": "动",
+            "gloss": "to change; to correct"
+          },
+          "title": "改",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:23",
+          "value": {
+            "no": 23,
+            "word": "主意",
+            "pinyin": "zhǔyi",
+            "pos": "名",
+            "gloss": "idea"
+          },
+          "title": "主意",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:24",
+          "value": {
+            "no": 24,
+            "word": "金色",
+            "pinyin": "jīnsè",
+            "pos": "名",
+            "gloss": "golden"
+          },
+          "title": "金色",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:25",
+          "value": {
+            "no": 25,
+            "word": "行",
+            "pinyin": "háng",
+            "pos": "量",
+            "gloss": "row"
+          },
+          "title": "行",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:26",
+          "value": {
+            "no": 26,
+            "word": "阳光",
+            "pinyin": "yángguāng",
+            "pos": "名",
+            "gloss": "sunshine"
+          },
+          "title": "阳光",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "vocabulary",
+          "id": "vocabulary:27",
+          "value": {
+            "no": 27,
+            "word": "蹲",
+            "pinyin": "dūn",
+            "pos": "动",
+            "gloss": "to squat"
+          },
+          "title": "蹲",
+          "page": "105–106",
+          "audio": "12-1",
+          "type": "词语"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_1",
+          "value": {
+            "id": "short_text_1",
+            "printed_pages": [
+              107,
+              108
+            ],
+            "audio": "12-4",
+            "title": "公园散步",
+            "text": "我们在公园里散步：我、我的母亲、我的妻子和儿子。母亲本来不愿意出门。她老了，身体不好，稍微走远一点儿就觉得很疲劳。我说正因为这样，才应该尽量多出去走走。母亲信服地点点头，便去拿外套。她现在很听我的话，就像我小时候很听她的话一样。天气很好，我和母亲走在前面，我的妻子和儿子走在后面。小家伙突然叫起来：“前面是妈妈和儿子，后面也是妈妈和儿子。”我们都笑了。",
+            "exercises": {
+              "first_listen": [
+                "母亲本来愿意不愿意出门？",
+                "母亲听谁的话？",
+                "去散步的都有谁？"
+              ],
+              "second_listen": [
+                "母亲开始时愿意出门吗？（疲劳）",
+                "“我”怎么说的？（正因为）",
+                "他们为什么都笑了？（前面、后面）"
+              ],
+              "present": "说说“我”怎么说服母亲的。要求说6–8个句子，不少于60字。",
+              "compare": "母亲本来不愿意出门，因为身体不好、走远会疲劳；“我”说正因为这样更应该多走走，母亲于是拿了外套。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  107
+                ],
+                "audio_tracks": [
+                  "12-4"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  108
+                ],
+                "audio_tracks": [
+                  "12-4"
+                ]
+              }
+            }
+          },
+          "title": "公园散步",
+          "page": "107–108",
+          "audio": "12-4",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_2",
+          "value": {
+            "id": "short_text_2",
+            "printed_pages": [
+              109,
+              110
+            ],
+            "audio": "12-5",
+            "title": "走大路还是走小路",
+            "text": "后来发生了分歧：母亲要走大路，大路宽阔；我的儿子要走小路，小路有意思。不过一切都取决于我。我的母亲老了，她已习惯听从她强壮的儿子；我的儿子还小，他还习惯听从他高大的父亲；妻子呢，在外面，她总是听我的。我感到自己的责任很大，可是，我想不出让母亲和儿子都高兴的办法。我想过分成两路，可是我不愿意一家人分开。",
+            "exercises": {
+              "first_listen": [
+                "母亲想走哪条路？",
+                "儿子想走哪条路？",
+                "妻子呢？"
+              ],
+              "second_listen": [
+                "母亲的想法和儿子的想法有什么不同？（宽阔、有意思）",
+                "家人听谁的话？（取决于）",
+                "想出了让母亲和儿子都高兴的办法吗？为什么？（分成、不愿意）"
+              ],
+              "present": "说说他们发生了什么分歧。要求说6–8个句子，不少于60字。",
+              "compare": "母亲喜欢宽阔的大路，儿子喜欢有意思的小路；妻子听“我”的，一切取决于“我”，但“我”不愿一家人分开。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  109
+                ],
+                "audio_tracks": [
+                  "12-5"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  109
+                ],
+                "audio_tracks": [
+                  "12-5"
+                ]
+              }
+            }
+          },
+          "title": "走大路还是走小路",
+          "page": "109–110",
+          "audio": "12-5",
+          "type": "短文"
+        },
+        {
+          "area": "texts",
+          "id": "text:short_text_3",
+          "value": {
+            "id": "short_text_3",
+            "printed_pages": [
+              111,
+              112
+            ],
+            "audio": "12-6",
+            "title": "阳光下的一家人",
+            "text": "我决定不听儿子的，因为我和他在一起的日子还长，我陪伴母亲的日子已经很短。我说：“走大路。”但是母亲摸摸儿子的头，改了主意，“还是走小路吧！”她看着前面的小路说：“那里有金色的花儿，两行整齐的树，再往前走，还有一个小小的池塘。我走不过去的地方，你就背着我。”这样，我们在阳光下，向着花儿、树、小池塘走去。走到一个地方，我蹲下来，背起母亲，妻子也蹲下来，背起儿子，我们走得很慢、很稳、很小心。那感觉真美好！",
+            "text_source_note": "改编自莫怀戚《散步》",
+            "exercises": {
+              "first_listen": [
+                "“我”的决定是什么？",
+                "母亲决定走哪条路？",
+                "他们走的是哪条路？"
+              ],
+              "second_listen": [
+                "“我”为什么不听儿子的？（陪伴、长、短）",
+                "母亲为什么听“我”儿子的？（整齐、池塘、背）",
+                "他们一家人走得快不快？大家感觉怎么样？（稳、美好）"
+              ],
+              "present": "说说他们最后怎么决定的。要求说6–8个句子，不少于60字。",
+              "compare": "“我”决定走大路，但母亲为了让儿子开心改主意走小路。最后一家人在阳光下慢慢、稳稳地走向花儿、树和池塘，感觉很美好。"
+            },
+            "exercise_metadata": {
+              "first_listen": {
+                "heading_verbatim": "（一）听第一遍，简单回答问题",
+                "textbook_printed_pages": [
+                  111
+                ],
+                "audio_tracks": [
+                  "12-6"
+                ]
+              },
+              "second_listen": {
+                "heading_verbatim": "（二）听第二遍，用括号中的词语说出三个句子，不少于20字",
+                "textbook_printed_pages": [
+                  111
+                ],
+                "audio_tracks": [
+                  "12-6"
+                ]
+              }
+            }
+          },
+          "title": "阳光下的一家人",
+          "page": "111–112",
+          "audio": "12-6",
+          "type": "短文"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:1",
+          "value": {
+            "expression": {
+              "expression": "本来"
+            },
+            "topic": "情况描写"
+          },
+          "title": {
+            "expression": "本来"
+          },
+          "page": "108–109",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:2",
+          "value": {
+            "expression": {
+              "expression": "稍微+动词+一点儿"
+            },
+            "topic": "情况描写"
+          },
+          "title": {
+            "expression": "稍微+动词+一点儿"
+          },
+          "page": "108–109",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:3",
+          "value": {
+            "expression": {
+              "expression": "正因为……才……"
+            },
+            "topic": "情况描写"
+          },
+          "title": {
+            "expression": "正因为……才……"
+          },
+          "page": "108–109",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:4",
+          "value": {
+            "expression": {
+              "expression": "尽量"
+            },
+            "topic": "情况描写"
+          },
+          "title": {
+            "expression": "尽量"
+          },
+          "page": "108–109",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:5",
+          "value": {
+            "expression": {
+              "expression": "像……一样（2）"
+            },
+            "topic": "情况描写"
+          },
+          "title": {
+            "expression": "像……一样（2）"
+          },
+          "page": "108–109",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:1:6",
+          "value": {
+            "expression": {
+              "expression": "突然"
+            },
+            "topic": "情况描写"
+          },
+          "title": {
+            "expression": "突然"
+          },
+          "page": "108–109",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:1",
+          "value": {
+            "expression": {
+              "expression": "发生"
+            },
+            "topic": "情况描写"
+          },
+          "title": {
+            "expression": "发生"
+          },
+          "page": "110",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:2",
+          "value": {
+            "expression": {
+              "expression": "取决于"
+            },
+            "topic": "情况描写"
+          },
+          "title": {
+            "expression": "取决于"
+          },
+          "page": "110",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:3",
+          "value": {
+            "expression": {
+              "expression": "习惯"
+            },
+            "topic": "情况描写"
+          },
+          "title": {
+            "expression": "习惯"
+          },
+          "page": "110",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:4",
+          "value": {
+            "expression": {
+              "expression": "总是"
+            },
+            "topic": "情况描写"
+          },
+          "title": {
+            "expression": "总是"
+          },
+          "page": "110",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:5",
+          "value": {
+            "expression": {
+              "expression": "分成"
+            },
+            "topic": "情况描写"
+          },
+          "title": {
+            "expression": "分成"
+          },
+          "page": "110",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:2:6",
+          "value": {
+            "expression": {
+              "expression": "愿意"
+            },
+            "topic": "情况描写"
+          },
+          "title": {
+            "expression": "愿意"
+          },
+          "page": "110",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:1",
+          "value": {
+            "expression": {
+              "expression": "决定"
+            },
+            "topic": "说明转变、叙述过程"
+          },
+          "title": {
+            "expression": "决定"
+          },
+          "page": "112",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:2",
+          "value": {
+            "expression": {
+              "expression": "改主意"
+            },
+            "topic": "说明转变、叙述过程"
+          },
+          "title": {
+            "expression": "改主意"
+          },
+          "page": "112",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:3",
+          "value": {
+            "expression": {
+              "expression": "还是……吧"
+            },
+            "topic": "说明转变、叙述过程"
+          },
+          "title": {
+            "expression": "还是……吧"
+          },
+          "page": "112",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:4",
+          "value": {
+            "expression": {
+              "expression": "再"
+            },
+            "topic": "说明转变、叙述过程"
+          },
+          "title": {
+            "expression": "再"
+          },
+          "page": "112",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:5",
+          "value": {
+            "expression": {
+              "expression": "动词+不／得+过去"
+            },
+            "topic": "说明转变、叙述过程"
+          },
+          "title": {
+            "expression": "动词+不／得+过去"
+          },
+          "page": "112",
+          "type": "语法／表达"
+        },
+        {
+          "area": "grammar",
+          "id": "grammar:3:6",
+          "value": {
+            "expression": {
+              "expression": "很……，很……"
+            },
+            "topic": "说明转变、叙述过程"
+          },
+          "title": {
+            "expression": "很……，很……"
+          },
+          "page": "112",
+          "type": "语法／表达"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehension:1",
+          "value": {
+            "instruction": "听词语。听第一遍，从图片中选择你听到的词语，并标上序号；听第二遍，跟读",
+            "words": [
+              "外套",
+              "小路",
+              "宽阔",
+              "池塘",
+              "背",
+              "散步",
+              "摸"
+            ],
+            "answer": [
+              "1.A",
+              "2.E",
+              "3.F",
+              "4.D",
+              "5.B",
+              "6.C",
+              "7.G"
+            ]
+          },
+          "title": "词语理解",
+          "page": "106",
+          "audio": "12-2",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_12_3:1",
+          "value": {
+            "prompt": "妈妈一直不喜欢出去。",
+            "answer": "错",
+            "number": 1,
+            "heading": "exercise_12_3"
+          },
+          "title": "听力句子",
+          "page": "107",
+          "audio": "12-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_12_3:2",
+          "value": {
+            "prompt": "学校前面是一条大路。",
+            "answer": "对",
+            "number": 2,
+            "heading": "exercise_12_3"
+          },
+          "title": "听力句子",
+          "page": "107",
+          "audio": "12-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_12_3:3",
+          "value": {
+            "prompt": "我们给爸爸买的是裤子。",
+            "answer": "错",
+            "number": 3,
+            "heading": "exercise_12_3"
+          },
+          "title": "听力句子",
+          "page": "107",
+          "audio": "12-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_12_3:4",
+          "value": {
+            "prompt": "我们没想到儿子会说话。",
+            "answer": "对",
+            "number": 4,
+            "heading": "exercise_12_3"
+          },
+          "title": "听力句子",
+          "page": "107",
+          "audio": "12-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_12_3:5",
+          "value": {
+            "prompt": "我们的想法一样。",
+            "answer": "错",
+            "number": 5,
+            "heading": "exercise_12_3"
+          },
+          "title": "听力句子",
+          "page": "107",
+          "audio": "12-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_12_3:6",
+          "value": {
+            "prompt": "大家都听妈妈的。",
+            "answer": "对",
+            "number": 6,
+            "heading": "exercise_12_3"
+          },
+          "title": "听力句子",
+          "page": "107",
+          "audio": "12-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_12_3:7",
+          "value": {
+            "prompt": "爸爸拉着儿子的手。",
+            "answer": "错",
+            "number": 7,
+            "heading": "exercise_12_3"
+          },
+          "title": "听力句子",
+          "page": "107",
+          "audio": "12-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_12_3:8",
+          "value": {
+            "prompt": "小张的身体更好了。",
+            "answer": "对",
+            "number": 8,
+            "heading": "exercise_12_3"
+          },
+          "title": "听力句子",
+          "page": "107",
+          "audio": "12-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_12_3:9",
+          "value": {
+            "prompt": "爷爷的腿不好，走不了路。",
+            "answer": "错",
+            "number": 9,
+            "heading": "exercise_12_3"
+          },
+          "title": "听力句子",
+          "page": "107",
+          "audio": "12-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:listening_sentences:exercise_12_3:10",
+          "value": {
+            "prompt": "画儿不要用手碰。",
+            "answer": "对",
+            "number": 10,
+            "heading": "exercise_12_3"
+          },
+          "title": "听力句子",
+          "page": "107",
+          "audio": "12-3",
+          "type": "听力练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:1",
+          "value": {
+            "prompt": "母亲本来愿意不愿意出门？",
+            "kind": "first_listen",
+            "textTitle": "公园散步"
+          },
+          "title": "公园散步 · first_listen",
+          "page": "107–108",
+          "audio": "12-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:2",
+          "value": {
+            "prompt": "母亲听谁的话？",
+            "kind": "first_listen",
+            "textTitle": "公园散步"
+          },
+          "title": "公园散步 · first_listen",
+          "page": "107–108",
+          "audio": "12-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:first_listen:3",
+          "value": {
+            "prompt": "去散步的都有谁？",
+            "kind": "first_listen",
+            "textTitle": "公园散步"
+          },
+          "title": "公园散步 · first_listen",
+          "page": "107–108",
+          "audio": "12-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:1",
+          "value": {
+            "prompt": "母亲开始时愿意出门吗？（疲劳）",
+            "kind": "second_listen",
+            "textTitle": "公园散步"
+          },
+          "title": "公园散步 · second_listen",
+          "page": "107–108",
+          "audio": "12-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:2",
+          "value": {
+            "prompt": "“我”怎么说的？（正因为）",
+            "kind": "second_listen",
+            "textTitle": "公园散步"
+          },
+          "title": "公园散步 · second_listen",
+          "page": "107–108",
+          "audio": "12-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:second_listen:3",
+          "value": {
+            "prompt": "他们为什么都笑了？（前面、后面）",
+            "kind": "second_listen",
+            "textTitle": "公园散步"
+          },
+          "title": "公园散步 · second_listen",
+          "page": "107–108",
+          "audio": "12-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:present:1",
+          "value": {
+            "prompt": "说说“我”怎么说服母亲的。要求说6–8个句子，不少于60字。",
+            "kind": "present",
+            "textTitle": "公园散步"
+          },
+          "title": "公园散步 · present",
+          "page": "107–108",
+          "audio": "12-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_1:compare:1",
+          "value": {
+            "prompt": "母亲本来不愿意出门，因为身体不好、走远会疲劳；“我”说正因为这样更应该多走走，母亲于是拿了外套。",
+            "kind": "compare",
+            "textTitle": "公园散步"
+          },
+          "title": "公园散步 · compare",
+          "page": "107–108",
+          "audio": "12-4",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:1",
+          "value": {
+            "prompt": "母亲想走哪条路？",
+            "kind": "first_listen",
+            "textTitle": "走大路还是走小路"
+          },
+          "title": "走大路还是走小路 · first_listen",
+          "page": "109–110",
+          "audio": "12-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:2",
+          "value": {
+            "prompt": "儿子想走哪条路？",
+            "kind": "first_listen",
+            "textTitle": "走大路还是走小路"
+          },
+          "title": "走大路还是走小路 · first_listen",
+          "page": "109–110",
+          "audio": "12-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:first_listen:3",
+          "value": {
+            "prompt": "妻子呢？",
+            "kind": "first_listen",
+            "textTitle": "走大路还是走小路"
+          },
+          "title": "走大路还是走小路 · first_listen",
+          "page": "109–110",
+          "audio": "12-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:1",
+          "value": {
+            "prompt": "母亲的想法和儿子的想法有什么不同？（宽阔、有意思）",
+            "kind": "second_listen",
+            "textTitle": "走大路还是走小路"
+          },
+          "title": "走大路还是走小路 · second_listen",
+          "page": "109–110",
+          "audio": "12-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:2",
+          "value": {
+            "prompt": "家人听谁的话？（取决于）",
+            "kind": "second_listen",
+            "textTitle": "走大路还是走小路"
+          },
+          "title": "走大路还是走小路 · second_listen",
+          "page": "109–110",
+          "audio": "12-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:second_listen:3",
+          "value": {
+            "prompt": "想出了让母亲和儿子都高兴的办法吗？为什么？（分成、不愿意）",
+            "kind": "second_listen",
+            "textTitle": "走大路还是走小路"
+          },
+          "title": "走大路还是走小路 · second_listen",
+          "page": "109–110",
+          "audio": "12-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:present:1",
+          "value": {
+            "prompt": "说说他们发生了什么分歧。要求说6–8个句子，不少于60字。",
+            "kind": "present",
+            "textTitle": "走大路还是走小路"
+          },
+          "title": "走大路还是走小路 · present",
+          "page": "109–110",
+          "audio": "12-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_2:compare:1",
+          "value": {
+            "prompt": "母亲喜欢宽阔的大路，儿子喜欢有意思的小路；妻子听“我”的，一切取决于“我”，但“我”不愿一家人分开。",
+            "kind": "compare",
+            "textTitle": "走大路还是走小路"
+          },
+          "title": "走大路还是走小路 · compare",
+          "page": "109–110",
+          "audio": "12-5",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:1",
+          "value": {
+            "prompt": "“我”的决定是什么？",
+            "kind": "first_listen",
+            "textTitle": "阳光下的一家人"
+          },
+          "title": "阳光下的一家人 · first_listen",
+          "page": "111–112",
+          "audio": "12-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:2",
+          "value": {
+            "prompt": "母亲决定走哪条路？",
+            "kind": "first_listen",
+            "textTitle": "阳光下的一家人"
+          },
+          "title": "阳光下的一家人 · first_listen",
+          "page": "111–112",
+          "audio": "12-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:first_listen:3",
+          "value": {
+            "prompt": "他们走的是哪条路？",
+            "kind": "first_listen",
+            "textTitle": "阳光下的一家人"
+          },
+          "title": "阳光下的一家人 · first_listen",
+          "page": "111–112",
+          "audio": "12-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:1",
+          "value": {
+            "prompt": "“我”为什么不听儿子的？（陪伴、长、短）",
+            "kind": "second_listen",
+            "textTitle": "阳光下的一家人"
+          },
+          "title": "阳光下的一家人 · second_listen",
+          "page": "111–112",
+          "audio": "12-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:2",
+          "value": {
+            "prompt": "母亲为什么听“我”儿子的？（整齐、池塘、背）",
+            "kind": "second_listen",
+            "textTitle": "阳光下的一家人"
+          },
+          "title": "阳光下的一家人 · second_listen",
+          "page": "111–112",
+          "audio": "12-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:second_listen:3",
+          "value": {
+            "prompt": "他们一家人走得快不快？大家感觉怎么样？（稳、美好）",
+            "kind": "second_listen",
+            "textTitle": "阳光下的一家人"
+          },
+          "title": "阳光下的一家人 · second_listen",
+          "page": "111–112",
+          "audio": "12-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:present:1",
+          "value": {
+            "prompt": "说说他们最后怎么决定的。要求说6–8个句子，不少于60字。",
+            "kind": "present",
+            "textTitle": "阳光下的一家人"
+          },
+          "title": "阳光下的一家人 · present",
+          "page": "111–112",
+          "audio": "12-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:short_text_3:compare:1",
+          "value": {
+            "prompt": "“我”决定走大路，但母亲为了让儿子开心改主意走小路。最后一家人在阳光下慢慢、稳稳地走向花儿、树和池塘，感觉很美好。",
+            "kind": "compare",
+            "textTitle": "阳光下的一家人"
+          },
+          "title": "阳光下的一家人 · compare",
+          "page": "111–112",
+          "audio": "12-6",
+          "type": "短文练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:1",
+          "value": {
+            "prompt": {
+              "id": "comprehensive_1",
+              "instruction": "请你根据听过的三段短文填表",
+              "answer_status": "open_table_teacher_check"
+            }
+          },
+          "title": "综合练习",
+          "page": "112–113",
+          "audio": "12-4、12-5、12-6",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:2",
+          "value": {
+            "prompt": {
+              "id": "comprehensive_2",
+              "instruction": "小组活动：谈我怎么说服母亲一起去散步、散步时发生了什么分歧、我们决定走哪条路；一名同学先说8–10个句子，不少于80字，最后总结10–12个句子，不少于100字。",
+              "answer_status": "open_presentational_task"
+            }
+          },
+          "title": "综合练习",
+          "page": "112–113",
+          "audio": "12-4、12-5、12-6",
+          "type": "综合练习"
+        },
+        {
+          "area": "exercises",
+          "id": "exercise:comprehensive:3",
+          "value": {
+            "prompt": {
+              "id": "comprehensive_3",
+              "instruction": "拓展练习：说一说你和家人在一起的一件事，包括大家打算做什么、发生了什么特别的事、你们是怎么解决的；说10–12个句子，不少于100字。",
+              "answer_status": "open_presentational_task"
+            }
+          },
+          "title": "综合练习",
+          "page": "112–113",
+          "audio": "12-4、12-5、12-6",
+          "type": "综合练习"
+        }
       ]
     }
   }

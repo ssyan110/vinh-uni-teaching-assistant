@@ -13,6 +13,29 @@
     "lesson_id": "lesson-01",
     "lesson_key": "boya-quasi-intermediate-i:lesson-01"
   },
+  "legacy_compatibility": {
+    "status": "read-only-legacy",
+    "scope": "historical lesson-01 scripts and migration adapters only",
+    "not_for_scoped_operations": true,
+    "lesson_key": "boya-quasi-intermediate-i:lesson-01",
+    "deprecated_fields": [
+      "active_textbook_title",
+      "lesson_count",
+      "lesson_catalog",
+      "lesson_collection_root",
+      "active_lesson",
+      "active_lesson_key",
+      "lesson_root",
+      "canonical_source",
+      "draft_root",
+      "authority_root",
+      "qa_root",
+      "release_root",
+      "archive_root",
+      "historical_package_evidence"
+    ],
+    "migration_rule": "Explicit lesson_key operations must resolve through course/lesson-registry.json and LessonContext; these fields must not be used as scoped-operation defaults."
+  },
   "active_textbook_title": "《博雅汉语听说：准中级加速篇 I》",
   "lesson_count": 12,
   "lesson_catalog": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",

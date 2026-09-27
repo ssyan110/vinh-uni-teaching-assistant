@@ -1,0 +1,49 @@
+{
+  "schema_version": "boya-elementary-source-audit-v1",
+  "course_id": "vinh-chinese-listening-speaking",
+  "textbook_id": "boya-elementary-i",
+  "lesson_id": "lesson-01",
+  "lesson_key": "boya-elementary-i:lesson-01",
+  "lesson_number": 1,
+  "title": "拼音和日常用语（一）",
+  "title_source": "主教材 PDF 印刷 P1 课名页与 OCR page-012",
+  "source_pdf": "external-user-source:/Users/ssyan110/Desktop/Work/Teaching/02_教材/博雅漢語教材/1. 博雅汉语听说-初级起步篇I.pdf",
+  "source_pdf_sha256": "9a98ee0b376c9b5cff20622987a0e4b9cee68287e45dc547665a3cd537fb517a",
+  "page_map": {
+    "printed_pages": [1, 5],
+    "pdf_pages": [12, 16],
+    "mapping_status": "visual_and_ocr_first_pass"
+  },
+  "sections": [
+    {"id":"initials","title":"声母","printed_pages":[1],"audio":["1-1"],"items":21},
+    {"id":"initial_listening","title":"声母听辨选择","printed_pages":[1],"audio":["1-2"],"items":8},
+    {"id":"initial_dictation","title":"声母听写","printed_pages":[1],"audio":["1-3"],"items":15},
+    {"id":"initial_group","title":"声母小组读写互纠","printed_pages":[1],"audio":[],"items":4},
+    {"id":"finals","title":"韵母","printed_pages":[2],"audio":["1-4"],"items":6},
+    {"id":"tones","title":"四声和轻声","printed_pages":[2],"audio":["1-5"],"items":5},
+    {"id":"accented_finals","title":"带调读音","printed_pages":[2],"audio":["1-6"],"items":24},
+    {"id":"syllable_listening","title":"音节听辨","printed_pages":[3],"audio":["1-7"],"items":20},
+    {"id":"jqx_rule","title":"j、q、x 和 ü 注意事项","printed_pages":[3],"audio":[],"items":3},
+    {"id":"syllable_completion","title":"音节补全","printed_pages":[3,4],"audio":["1-8"],"items":39},
+    {"id":"daily_phrases","title":"日常用语","printed_pages":[4],"audio":["1-9"],"items":6},
+    {"id":"daily_pair_qa","title":"日常用语问答","printed_pages":[4,5],"audio":[],"items":4}
+  ],
+  "approved_content_decisions": {
+    "source_of_visible_copy": "docs/boya-elementary-i-lesson-01-slide-copy-review-2026-09-15.md",
+    "student_visible_minimum_pt": 23,
+    "initials_one_slide_each": true,
+    "finals_one_slide_each": true,
+    "merged_pages": ["8-9","15-16","22-25","31-32"],
+    "deleted_pages": [33,34],
+    "group_wording": "小组",
+    "daily_phrase_slides_no_pinyin": true,
+    "scenario_language": "Vietnamese labels only on the scenario practice slide"
+  },
+  "source_status": "draft_source_package",
+  "approved": false,
+  "open_qa": [
+    "逐段语义听核 1-1 至 1-9",
+    "PowerPoint 实际播放",
+    "教师 rehearsal 与 final authority approval"
+  ]
+}

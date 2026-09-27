@@ -8,6 +8,6 @@
 - `source/qr/captures/`：每课 QR 截图；`source/qr/scan.tsv` 保存扫描结果。
 - `source/audio/lesson-01/` 至 `lesson-12/`：本地音频，不上传 Git。
 - `source/audit/`：全书结构、OCR 限制、下载与解码验证记录。
-- 课程层级学期规划草案：`course/offerings/2026-fall/semester-overview.md`。
+- 课程层级学期规划草案：`course/offerings/2026-fall/博雅汉语听说准中级加速篇一/semester-overview.md`。
 
 旧《中级冲刺篇 I》材料保留在 `textbooks/boya-intermediate-i/`、`lessons/boya-intermediate-i/` 与历史归档中，不作为新教材的生成输入。

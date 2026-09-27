@@ -1,0 +1,25 @@
+{
+  "lesson_key": "boya-elementary-i:lesson-04",
+  "status": "passed",
+  "slide_count": 31,
+  "minimum_explicit_pt": 23.0,
+  "unique_embedded_images": 6,
+  "source_sections_covered": 18,
+  "failures": [],
+  "pptx_sha256": "da2e7d493a8647a00ccc25c3e73f836fd81c6a2e0d36f552be68249cb253277f",
+  "human_review": "pending",
+  "audio_playback": "not_verified_missing_audio",
+  "pdf": {
+    "pages": 31,
+    "sha256": "f478a7d812867510d5c82b89b63182aea939c42f5f851668ffb8f8faf1f7266b",
+    "provenance": {
+      "renderer": "Microsoft PowerPoint native PDF export",
+      "pptx_open_verified": true,
+      "pptx_slide_count": 31,
+      "native_powerpoint_export_verified": true,
+      "libreoffice_export": "retained separately for diagnostic comparison; it rendered CJK as tofu in this environment",
+      "human_rehearsal": "pending",
+      "audio_playback": "not_verified_missing_audio"
+    }
+  }
+}

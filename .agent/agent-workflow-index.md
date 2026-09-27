@@ -56,7 +56,8 @@ For authority/release work, use:
 
 `source gate → PBI redesign gate → teacher guide content master → teacher guide approval → support materials → PPT storyboard → visual storyboard → 6-slide prototype → native PPTX → QA → delivery`
 
-For later-lesson drafts, a source-package and boundary-confirmed lesson may use
+For later-lesson drafts, a source-package, boundary-confirmed and explicitly
+content-approved lesson may use
 the lesson-specific draft gate to write only to its own
 `lessons/<textbook_id>/<lesson_id>/10-design/pptx-draft/<mode>/`.
 
@@ -70,7 +71,12 @@ may run in parallel when each lesson has an explicit `lesson_key`, source packag
 and recorded online/face-to-face boundary; a draft never unlocks authority or
 release for the next lesson.
 
-PPTX is the only classroom deck format. Historical HTML review pages are kept under `archive/` and must not become the future production path. Teacher guides, prep cards, supplemental activity materials and assessments remain part of the complete lesson package.
+Before any new image worker, prototype or PPTX draft, run the shared
+`production_gate.py --purpose content-approval --lesson-key KEY` check. Follow
+the canonical contract's content-approval record; "continue" or structure approval
+never substitutes for explicit approval of the current slide-copy version.
+
+For each new deck, use the format Adam selected: `native-pptx` by default or `open-slide` from `tools/open-slide/`. Open Slide is currently draft-only until its lesson QA/release path is defined. Historical HTML review pages are not production inputs. Teacher guides, prep cards, supplemental activity materials and assessments remain part of the complete lesson package.
 
 The approved teacher guide comes before full PPTX/authority production: it defines
 the full lesson content, key points, timing, audio, exercise coverage, teacher
@@ -79,6 +85,8 @@ lesson-specific draft may precede guide approval only as reversible design
 evidence and must still trace back to the source package.
 
 ## Current PPTX rule set
+
+Before starting each new deck, follow `course/ppt-style-registry.json`: ask Adam to choose a registered style unless he already named one in the current request. Style selection does not replace lesson-specific workflow or content approval.
 
 The current student-deck decisions are recorded in `.agent/skills/boya-lesson-production/SKILL.md`, `AGENTS.md` and `PROJECT_REQUIREMENTS.md`. In short:
 
@@ -91,6 +99,7 @@ The current student-deck decisions are recorded in `.agent/skills/boya-lesson-pr
 - Use textbook section names as dividers and keep divider pages simple.
 - Merge continuous questions from the same audio when the page stays readable; keep different task types separate.
 - Use plain student action language, visible material names, clear audio buttons and varied layouts.
+- Before writing or revising classroom copy, follow `.agent/skills/boya-lesson-production/classroom-copy-review.md`: teacher execution check, student instruction check, then language polish and layout. Recheck generated visible text; a keyword-only task page cannot pass merely because its notes explain the task.
 - Keep teacher notes, internal IDs, time/group footers and QA information out of the student canvas.
 - Run native PowerPoint PDF, contact-sheet, text, audio, notes and canvas-boundary checks before delivery.
 
@@ -106,3 +115,8 @@ storyboard generator.
 
 Do not delete, move, overwrite, or broadly refactor project files unless Adam explicitly approves the scope.
 Never access password notes or use credit card information. Do not create or maintain `.kiro/`; treat old Kiro files as legacy context only.
+
+
+## 2026-09-21：仅本届大一第一学期的课程路由
+
+仅当年级=大一、学期=第一学期、日期=2026-09-21至2026-12-27、教材=`boya-elementary-i`同时匹配时，先读[本班课程规划与第四课起PPT制作规则](../docs/course-rules/BOYA-LS-E1-Y1S1-2026F/README.md)（`BOYA-LS-E1-Y1S1-2026F`）。按任务结果组织第四课起PPT，教材逐项覆盖；W02安排第4—6课，W12完成首轮覆盖、W13缓冲、W14评量规划。该局部规则取代本班旧课时预算与线性栏目顺序，不扩展到其他年级、学期或未来班级，不改共用offering顶层课表。现有教材与批准不回改；新版逐页内容仍须单独批准。新增双语说明仍待逐页决定，23 pt下限保持。
