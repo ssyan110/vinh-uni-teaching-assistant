@@ -5,7 +5,7 @@ const fs = require("node:fs");
 
 const cloudSource = fs.readFileSync(require.resolve("../data/cloud.js"), "utf8");
 
-function createHarness({ failAttempts = false, expiredSession = false, failRefresh = false, beforeRequest, initialAttendance = null, recordAttempts = [], recordEvents = [], activeClassSessionDate = "2026-09-08" } = {}) {
+function createHarness({ requestTimeout = 15000, failAttempts = false, expiredSession = false, failRefresh = false, beforeRequest, initialAttendance = null, recordAttempts = [], recordEvents = [], activeClassSessionDate = "2026-09-08" } = {}) {
   const initialSession = expiredSession
     ? {
         access_token: "expired",
@@ -31,6 +31,7 @@ function createHarness({ failAttempts = false, expiredSession = false, failRefre
   let accessToken = initialSession.access_token;
   let refreshCount = 0;
   const window = {
+    AbortController, setTimeout: (fn) => setTimeout(fn, requestTimeout), clearTimeout,
     localStorage: storage,
     sessionStorage: storage,
     location: { hash: "", search: "", pathname: "/" },
@@ -94,6 +95,7 @@ function createHarness({ failAttempts = false, expiredSession = false, failRefre
   vm.runInNewContext(cloudSource, { window, URLSearchParams, URL, console });
   return {
     cloud: window.RandomizerCloud,
+    values,
     paths,
     savedAttempts,
     savedRandomizerSessions,
@@ -398,4 +400,45 @@ test("student history includes manual records, preserves class date and excludes
   await assert.rejects(h.cloud.fetchStudentRecords("NNTQ1", "missing"), /找不到/);
   const failing = createHarness({ failAttempts: true });
   await assert.rejects(failing.cloud.fetchStudentRecords("NNTQ1", "TEST"), /offline/);
+});
+
+
+test("legacy undone responses normalize to the database invariant", async () => {
+  const { cloud, savedAttempts } = createHarness();
+  const result = await send(cloud, rawAttempt({ outcome: "undone", responseStatus: "answered" }));
+  assert.equal(result.pending, 0);
+  assert.equal(savedAttempts.get("answer-1").response_status, "unobserved");
+  assert.equal(savedAttempts.get("answer-1").assessment_status, "not_applicable");
+});
+
+test("unsupported legacy records remain backed up without blocking other classrooms", async () => {
+  const { cloud, values, savedAttempts } = createHarness();
+  const legacy = { kind: "legacy_assessment", client_event_id: "legacy-1", scores: { task_completion: 2 } };
+  values.set("vinh-uni-teaching/randomizer-sync-queue-v2", JSON.stringify([legacy]));
+  const result = await send(cloud, rawAttempt());
+  assert.equal(result.pending, 1);
+  assert.equal(result.failure.eventKind, "legacy_assessment");
+  assert.equal(savedAttempts.size, 1);
+  assert.deepEqual(JSON.parse(JSON.stringify(cloud.exportSyncBackup().queue)), [legacy]);
+});
+
+test("roster cache can be explicitly refreshed after a transfer", async () => {
+  const { cloud, paths } = createHarness();
+  await cloud.fetchClassRoster("LT_TEST");
+  await cloud.fetchClassRoster("LT_TEST");
+  assert.equal(paths.filter(path => path.includes("/enrollments?")).length, 1);
+  await cloud.fetchClassRoster("LT_TEST", { force: true });
+  assert.equal(paths.filter(path => path.includes("/enrollments?")).length, 2);
+});
+
+test("a hung request times out, preserves the queue and releases the retry lock", async () => {
+  let hang = true;
+  const { cloud } = createHarness({ requestTimeout: 10, beforeRequest: () => hang ? new Promise(() => {}) : undefined });
+  const first = await send(cloud, rawAttempt());
+  assert.equal(first.failure.kind, "network");
+  assert.equal(first.pending, 2);
+  hang = false;
+  const second = await cloud.flushQueue();
+  assert.equal(second.pending, 0);
+  assert.equal(second.sent, 2);
 });

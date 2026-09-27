@@ -140,6 +140,9 @@
   let taskDraftTarget = Model.DEFAULT_TASK_TARGET;
   let toastTimer = null;
   let lastRosterClassId = "";
+  let rosterEdited = false;
+  let rosterLoadId = 0;
+  let startingSession = false;
   let studentDisplayWindow = null;
   let drawingRevealTimer = null;
   let isDrawing = false;
@@ -251,6 +254,7 @@
     const pendingLabel = "本机保留了 " + pending + " 笔待同步记录。";
     const failure = result && result.failure || {};
     const signedIn = Boolean(global.RandomizerCloud && global.RandomizerCloud.isSignedIn());
+    if (failure.code === "UNSUPPORTED_EVENT") return "有旧版记录需要转换；其他课堂会继续同步。请下载待同步备份交给管理员，记录仍保留在本机。";
     if (failure.kind === "storage") return "本机无法保存同步队列；请立即下载完整备份后再继续。";
     if (failure.kind === "auth" || failure.status === 401 || !signedIn) {
       return "教师登录已过期；" + pendingLabel + "请点击上方「连接同步」重新登录。";
@@ -629,9 +633,7 @@
     elements.taskModeInput.value = current.session.taskMode || Model.DEFAULT_TASK_MODE;
     elements.taskTargetInput.value = current.session.taskTarget || Model.DEFAULT_TASK_TARGET;
     populateTextbookOptions(current.session.textbookId, current.session.lessonId);
-    elements.rosterInput.value = rosterToText(current.roster);
-    elements.rosterSource.textContent = "已加载这堂课创建时的名单；如需调整，可直接编辑。";
-    updateRosterCount();
+    loadBuiltInRoster(current.session.className);
   }
 
   function rosterToText(students) {
@@ -652,25 +654,26 @@
 
   async function loadCloudRoster(classId, options) {
     const silent = Boolean(options && options.silent);
+    const loadId = elements.classNameInput.value === classId ? ++rosterLoadId : rosterLoadId;
     if (!global.RandomizerCloud || !global.RandomizerCloud.isSignedIn()) {
       elements.rosterSource.textContent = "请先登录教师账号，系统才会加载这个班级的名单。";
       elements.rosterInput.value = "";
       updateRosterCount();
       return false;
     }
-    elements.rosterSource.textContent = "正在从教学数据库加载班级名单…";
+    if (elements.classNameInput.value === classId && !rosterEdited) elements.rosterSource.textContent = "正在从教学数据库加载班级名单…";
     try {
-      const result = await global.RandomizerCloud.fetchClassRoster(classId);
+      const result = await global.RandomizerCloud.fetchClassRoster(classId, { force: true });
       cloudRosterByClass[classId] = result.roster;
-      if (elements.classNameInput.value === classId && (!silent || !elements.rosterInput.value.trim())) {
+      if (elements.classNameInput.value === classId && !rosterEdited && loadId === rosterLoadId) {
         elements.rosterInput.value = rosterToText(result.roster);
         elements.rosterSource.textContent = `已从教学数据库加载 ${classId} 名册；课堂记录会同步保存。`;
         updateRosterCount();
       }
       return true;
     } catch (error) {
-      if (elements.classNameInput.value === classId && (!silent || !elements.rosterInput.value.trim())) {
-        elements.rosterSource.textContent = "尚未加载名单；请先在学生管理系统导入这个班级。";
+      if (elements.classNameInput.value === classId && !rosterEdited && loadId === rosterLoadId) {
+        elements.rosterSource.textContent = "名单加载失败，请检查连接后重新选择班级。";
         elements.rosterInput.value = "";
         updateRosterCount();
       }
@@ -687,17 +690,10 @@
   }
 
   function loadBuiltInRoster(classId) {
-    const roster = rosterForClass(classId);
-    if (roster.length === 0) {
-      void loadCloudRoster(classId);
-      elements.rosterInput.value = "";
-      updateRosterCount();
-      return false;
-    }
-    elements.rosterInput.value = rosterToText(roster);
-    elements.rosterSource.textContent = `已加载 ${classId} 班级名册；如需调整，可直接编辑。`;
+    rosterEdited = false;
+    elements.rosterInput.value = "";
     updateRosterCount();
-    return true;
+    if (classId) void loadCloudRoster(classId);
   }
 
   function updateRosterCount() {
@@ -747,6 +743,14 @@
         : `已连接：${global.RandomizerCloud.currentUserEmail()}。课堂与每次抽问记录会自动保存${pending ? `；待同步 ${pending} 笔` : ""}。`)
       : "尚未连接。开始课堂前请先登录，才能将记录保存到教学数据库。"
         + (pending ? "本机保留了 " + pending + " 笔待同步记录；登录后会继续同步。" : "");
+    const sync = global.RandomizerCloud && global.RandomizerCloud.getSyncStatus();
+    if (pending && sync && sync.failure) {
+      elements.cloudError.hidden = false;
+      elements.cloudError.textContent = cloudSyncWarning(sync)
+        + `（记录类型：${sync.failure.eventKind || "未知"}${sync.failure.code ? "；错误码：" + sync.failure.code : ""}）`;
+    } else {
+      elements.cloudError.hidden = true;
+    }
   }
 
   function openCloudDialog() {
@@ -833,7 +837,7 @@
     showToast("已退出登录；这台设备的离线备份仍然保留。");
   }
 
-  function startNewSession(event) {
+  async function startNewSession(event) {
     event.preventDefault();
     if (!cloudReady()) {
       openCloudDialog();
@@ -843,6 +847,14 @@
     if (!elements.classNameInput.value) {
       showToast("请先选择班级", true);
       return;
+    }
+    if (startingSession) return;
+    if (!rosterEdited) {
+      startingSession = true;
+      const classId = elements.classNameInput.value;
+      const loaded = await loadCloudRoster(classId);
+      startingSession = false;
+      if (!loaded || classId !== elements.classNameInput.value) return;
     }
     let roster;
     try {
@@ -1899,6 +1911,7 @@
   elements.sessionForm.addEventListener("submit", startNewSession);
   elements.classNameInput.addEventListener("change", handleClassChange);
   elements.rosterInput.addEventListener("input", () => {
+    rosterEdited = true;
     updateRosterCount();
     if (elements.rosterInput.value.trim()) {
       elements.rosterSource.textContent = "目前使用这堂课的名单；如需调整，可直接编辑。";
@@ -1908,6 +1921,7 @@
     const file = event.target.files && event.target.files[0];
     event.target.value = "";
     if (!file) return;
+    rosterEdited = true;
     elements.rosterInput.value = await file.text();
     elements.rosterSource.textContent = "已使用这次导入的名单；开始课堂前可直接检查或调整。";
     updateRosterCount();
@@ -2014,6 +2028,21 @@
     closeNoResponseDialog();
   });
   elements.cloudButton.addEventListener("click", openCloudDialog);
+  document.getElementById("cloudRetryButton").addEventListener("click", async (event) => {
+    const button = event.currentTarget;
+    button.disabled = true;
+    try { await flushCloudQueue(); } finally { button.disabled = false; }
+  });
+  document.getElementById("cloudBackupButton").addEventListener("click", () => {
+    downloadFile(`同步备份-${today()}.json`, JSON.stringify({
+      ...global.RandomizerCloud.exportSyncBackup(), current: state, history: readHistory()
+    }, null, 2), "application/json;charset=utf-8");
+  });
+  global.addEventListener("online", () => { void flushCloudQueue(); preloadCloudRosters(); });
+  global.addEventListener("focus", () => {
+    void flushCloudQueue();
+    if (!elements.startView.hidden && !rosterEdited) preloadCloudRosters();
+  });
   elements.closeCloudButton.addEventListener("click", () => closeDialog(elements.cloudDialog));
   elements.cloudInviteForm.addEventListener("submit", completeCloudInvite);
   elements.cloudLoginForm.addEventListener("submit", signInCloud);

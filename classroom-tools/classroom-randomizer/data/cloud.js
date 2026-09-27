@@ -24,6 +24,9 @@
   let authRedirectError = null;
   let flushPromise = null;
   let refreshPromise = null;
+  let lastSyncResult = null;
+  const REQUEST_TIMEOUT_MS = 15000;
+  const ROSTER_CACHE_MS = 60000;
   const rosterCache = new Map();
 
   function storageFor(key) {
@@ -111,6 +114,7 @@
       : `云端连接失败（${response.status}）`;
     const failure = new Error(message);
     failure.status = response.status;
+    failure.code = data && typeof data.code === "string" ? data.code : null;
     return failure;
   }
 
@@ -122,19 +126,41 @@
           : status >= 500 ? "server"
             : status >= 400 ? "rejected"
               : error && ["AbortError", "TypeError"].includes(error.name) ? "network" : "unknown";
-    return { kind, status };
+    return { kind, status, ...(error && error.code ? { code: error.code } : {}) };
+  }
+
+  async function fetchData(url, options) {
+    const controller = new root.AbortController();
+    let timer;
+    try {
+      return await Promise.race([
+        (async () => {
+          const response = await root.fetch(url, { ...options, signal: controller.signal, cache: "no-store" });
+          return { response, data: responseData(await response.text()) };
+        })(),
+        new Promise((_, reject) => {
+          timer = root.setTimeout(() => {
+            controller.abort();
+            const error = new Error("连接教学数据库超时，请重试；本机记录仍然保留。");
+            error.name = "AbortError";
+            reject(error);
+          }, REQUEST_TIMEOUT_MS);
+        })
+      ]);
+    } finally {
+      root.clearTimeout(timer);
+    }
   }
 
   async function refreshSession() {
     if (!session || !session.refresh_token) throw new Error("登录已过期，请重新登录教师账号。");
     if (!refreshPromise) {
       const refreshToken = session.refresh_token;
-      refreshPromise = root.fetch(`${PROJECT_URL}/auth/v1/token?grant_type=refresh_token`, {
+      refreshPromise = fetchData(`${PROJECT_URL}/auth/v1/token?grant_type=refresh_token`, {
         method: "POST",
         headers: { apikey: PUBLISHABLE_KEY, "Content-Type": "application/json" },
         body: JSON.stringify({ refresh_token: refreshToken })
-      }).then(async (response) => {
-        const data = responseData(await response.text());
+      }).then(({ response, data }) => {
         if (!response.ok) throw responseFailure(response, data);
         session = { ...session, ...data, invite_pending: false };
         writeJson(TOKEN_KEY, session);
@@ -161,12 +187,10 @@
         throw error;
       }
     }
-    const response = await root.fetch(`${PROJECT_URL}${path}`, {
+    const { response, data } = await fetchData(`${PROJECT_URL}${path}`, {
       ...options,
       headers: authHeaders({ "Content-Type": "application/json", ...(options && options.headers) })
     });
-    const responseText = await response.text();
-    const data = responseData(responseText);
     if (!response.ok && response.status === 401 && allowRefresh && session && session.refresh_token) {
       try {
         await refreshSession();
@@ -188,12 +212,11 @@
   }
 
   async function signIn(email, password) {
-    const response = await root.fetch(`${PROJECT_URL}/auth/v1/token?grant_type=password`, {
+    const { response, data } = await fetchData(`${PROJECT_URL}/auth/v1/token?grant_type=password`, {
       method: "POST",
       headers: { apikey: PUBLISHABLE_KEY, "Content-Type": "application/json" },
       body: JSON.stringify({ email: email.trim(), password })
     });
-    const data = await response.json();
     if (!response.ok) throw new Error(data.error_description || data.msg || "登录失败，请检查 email 与密码。");
     session = { ...data, invite_pending: false };
     writeJson(TOKEN_KEY, session);
@@ -236,9 +259,10 @@
     return user;
   }
 
-  async function fetchClassRoster(classId) {
+  async function fetchClassRoster(classId, options = {}) {
     requireSession();
-    if (rosterCache.has(classId)) return rosterCache.get(classId);
+    const cached = rosterCache.get(classId);
+    if (!options.force && cached && Date.now() - cached.fetchedAt < ROSTER_CACHE_MS) return cached.value;
     const courses = await request(`/rest/v1/courses?select=id,code,name&code=eq.${encodeURIComponent(classId)}&limit=1`);
     const course = Array.isArray(courses) ? courses[0] : null;
     if (!course) throw new Error(`数据库中还没有 ${classId} 班级，请先在学生管理系统导入名单。`);
@@ -251,7 +275,7 @@
     })).filter((student) => student.id && student.studentCode && student.name);
     if (!roster.length) throw new Error(`${classId} 尚未有可使用的学生名单。`);
     const result = { courseId: course.id, classId, roster };
-    rosterCache.set(classId, result);
+    rosterCache.set(classId, { value: result, fetchedAt: Date.now() });
     return result;
   }
 
@@ -430,9 +454,9 @@
     const selectionMethod = source.selectionMethod === "volunteer" ? "volunteer" : "random";
     const responseStatus = outcome === "not_answered"
       ? "no_response"
-      : ["answered", "partial", "peer_supported"].includes(source.responseStatus)
-        ? source.responseStatus
-        : outcome === "answered" ? "answered" : "unobserved";
+      : outcome === "answered"
+        ? (["answered", "partial", "peer_supported"].includes(source.responseStatus) ? source.responseStatus : "answered")
+        : "unobserved";
     const noResponseReason = responseStatus === "no_response" && NO_RESPONSE_REASON_IDS.has(source.noResponseReason)
       ? source.noResponseReason
       : responseStatus === "no_response" ? "other" : null;
@@ -603,7 +627,7 @@
   }
 
   function enqueue(event) {
-    const queue = readQueue(QUEUE_KEY).filter((item) => item.client_event_id !== event.client_event_id);
+    const queue = readQueue(QUEUE_KEY).filter((item) => (!item || item.client_event_id !== event.client_event_id));
     queue.push(event);
     if (!writeQueue(queue, QUEUE_KEY)) {
       const error = new Error("本机无法保存待同步记录。");
@@ -621,8 +645,16 @@
     let attempts = 0;
     let sessions = 0;
     let failure = null;
-    for (const item of queue) {
+    const blockedSessions = new Set();
+    for (const [index, item] of queue.entries()) {
+      const sessionKey = item && item.session && (item.session.classId || item.session.clientSessionId);
+      if (sessionKey && blockedSessions.has(sessionKey)) { remaining.push(item); continue; }
       try {
+        if (!item || !["session", "attempt", "attendance", "finish"].includes(item.kind)) {
+          const error = new Error("无法识别的同步数据。");
+          error.code = "UNSUPPORTED_EVENT";
+          throw error;
+        }
         if (item.kind === "session") {
           await syncSessionItem(item);
           sessions += 1;
@@ -638,15 +670,20 @@
         }
         sent += 1;
       } catch (error) {
-        failure = syncFailure(error);
-        remaining.push(...queue.slice(queue.indexOf(item)));
-        break;
+        const details = { ...syncFailure(error), eventKind: item && item.kind || "unknown", classId: item && item.session && item.session.classId || null };
+        failure = failure || details;
+        if (["auth", "permission", "network", "server"].includes(details.kind) || !isSignedIn()) {
+          remaining.push(...queue.slice(index));
+          break;
+        }
+        remaining.push(item);
+        if (sessionKey) blockedSessions.add(sessionKey);
       }
     }
     // Preserve records enqueued while a network request was in flight.
     const latest = readQueue(QUEUE_KEY);
-    const failed = new Set(remaining.map(item => item.client_event_id));
-    const retained = latest.filter(item => failed.has(item.client_event_id) || !queue.some(old => old.client_event_id === item.client_event_id && JSON.stringify(old) === JSON.stringify(item)));
+    const acknowledged = new Set(queue.filter(item => !remaining.includes(item)).map(item => JSON.stringify(item)));
+    const retained = latest.filter(item => !acknowledged.has(JSON.stringify(item)));
     if (!writeQueue(retained, QUEUE_KEY)) failure = { kind: "storage", status: null };
     return {
       sent,
@@ -669,7 +706,10 @@
       });
     }
     if (!flushPromise) {
-      flushPromise = flushQueueInternal().finally(() => {
+      flushPromise = flushQueueInternal().then(result => {
+        lastSyncResult = result;
+        return result;
+      }).finally(() => {
         flushPromise = null;
       });
     }
@@ -713,6 +753,14 @@
     fetchStudentRecords,
     flushQueue,
     getAuthRedirectError,
+    getSyncStatus: () => lastSyncResult,
+    exportSyncBackup: () => ({
+      version: 1,
+      exportedAt: new Date().toISOString(),
+      queue: readQueue(QUEUE_KEY),
+      attendanceAcknowledgements: readJson(ATTENDANCE_ACK_KEY) || {},
+      attendanceOriginals: readJson(ATTENDANCE_ORIGINAL_KEY) || {}
+    }),
     hasInviteSession,
     isSignedIn,
     pendingCount,

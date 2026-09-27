@@ -411,8 +411,9 @@
       <form class="cloud-auth-form" id="cloudLoginForm">
         <label class="field"><span>教师 email</span><input id="cloudEmailInput" type="email" autocomplete="email" required></label>
         <label class="field"><span>密码</span><input id="cloudPasswordInput" type="password" autocomplete="current-password" required></label>
-        <div class="form-actions"><button class="button button-primary" type="submit" id="cloudLoginButton">登录并同步</button><button class="button button-quiet" type="button" id="cloudLogoutButton" hidden>退出登录云端</button></div>
+        <div class="form-actions"><button class="button button-primary" type="submit" id="cloudLoginButton">登录并同步</button></div>
       </form>
+      <div class="form-actions"><button class="button button-primary" type="button" id="cloudRetryButton">立即重试同步</button><button class="button button-quiet" type="button" id="cloudBackupButton">下载待同步记录与历史备份</button><button class="button button-quiet" type="button" id="cloudLogoutButton" hidden>退出登录云端</button></div>
       <p class="form-error" id="cloudError" hidden role="alert"></p>
       <p class="dialog-footnote" id="cloudStatus">尚未连接。开始课堂前请先登录，才能将记录保存到教学数据库。</p>
     </dialog>
