@@ -114,6 +114,17 @@
     return failure;
   }
 
+  function syncFailure(error) {
+    const status = Number.isInteger(error && error.status) ? error.status : null;
+    const kind = status === 401 ? "auth"
+      : status === 403 ? "permission"
+        : status === 409 ? "conflict"
+          : status >= 500 ? "server"
+            : status >= 400 ? "rejected"
+              : error && ["AbortError", "TypeError"].includes(error.name) ? "network" : "unknown";
+    return { kind, status };
+  }
+
   async function refreshSession() {
     if (!session || !session.refresh_token) throw new Error("登录已过期，请重新登录教师账号。");
     if (!refreshPromise) {
@@ -258,7 +269,9 @@
   }
 
   async function ensureClassSession(context, sessionDate, metadata) {
-    const existing = await request(`/rest/v1/class_sessions?select=id&course_id=eq.${encodeURIComponent(context.courseId)}&session_date=eq.${encodeURIComponent(isoDate(sessionDate))}&status=eq.in_progress&limit=1`);
+    // class_sessions allows only one in-progress row per course, regardless of date.
+    const activeSessionPath = `/rest/v1/class_sessions?select=id&course_id=eq.${encodeURIComponent(context.courseId)}&status=eq.in_progress&limit=1`;
+    const existing = await request(activeSessionPath);
     if (Array.isArray(existing) && existing[0]) return existing[0].id;
     const details = metadata || {};
     const created = await request("/rest/v1/class_sessions", {
@@ -273,7 +286,7 @@
       })
     }).catch(async (error) => {
       if (error.status !== 409) throw error;
-      const retry = await request(`/rest/v1/class_sessions?select=id&course_id=eq.${encodeURIComponent(context.courseId)}&session_date=eq.${encodeURIComponent(isoDate(sessionDate))}&status=eq.in_progress&limit=1`);
+      const retry = await request(activeSessionPath);
       return retry;
     });
     const row = Array.isArray(created) ? created[0] : created;
@@ -538,7 +551,7 @@
   }
 
   function writeQueue(queue, key) {
-    writeJson(key, queue);
+    return writeJson(key, queue);
   }
 
   function pendingCount() {
@@ -548,7 +561,11 @@
   function enqueue(event) {
     const queue = readQueue(QUEUE_KEY).filter((item) => item.client_event_id !== event.client_event_id);
     queue.push(event);
-    writeQueue(queue, QUEUE_KEY);
+    if (!writeQueue(queue, QUEUE_KEY)) {
+      const error = new Error("本机无法保存待同步记录。");
+      error.syncFailure = { kind: "storage", status: null };
+      throw error;
+    }
   }
 
   async function flushQueueInternal() {
@@ -559,6 +576,7 @@
     let sent = 0;
     let attempts = 0;
     let sessions = 0;
+    let failure = null;
     for (const item of queue) {
       try {
         if (item.kind === "session") {
@@ -576,6 +594,7 @@
         }
         sent += 1;
       } catch (error) {
+        failure = syncFailure(error);
         remaining.push(...queue.slice(queue.indexOf(item)));
         break;
       }
@@ -584,12 +603,27 @@
     const latest = readQueue(QUEUE_KEY);
     const failed = new Set(remaining.map(item => item.client_event_id));
     const retained = latest.filter(item => failed.has(item.client_event_id) || !queue.some(old => old.client_event_id === item.client_event_id && JSON.stringify(old) === JSON.stringify(item)));
-    writeQueue(retained, QUEUE_KEY);
-    return { sent, pending: retained.length, attempts, sessions };
+    if (!writeQueue(retained, QUEUE_KEY)) failure = { kind: "storage", status: null };
+    return {
+      sent,
+      pending: failure && failure.kind === "storage" ? pendingCount() : retained.length,
+      attempts,
+      sessions,
+      ...(failure ? { failure } : {})
+    };
   }
 
   function flushQueue() {
-    if (!isSignedIn()) return Promise.resolve({ sent: 0, pending: pendingCount(), attempts: 0, sessions: 0 });
+    if (!isSignedIn()) {
+      const pending = pendingCount();
+      return Promise.resolve({
+        sent: 0,
+        pending,
+        attempts: 0,
+        sessions: 0,
+        ...(pending ? { failure: { kind: "auth", status: null } } : {})
+      });
+    }
     if (!flushPromise) {
       flushPromise = flushQueueInternal().finally(() => {
         flushPromise = null;

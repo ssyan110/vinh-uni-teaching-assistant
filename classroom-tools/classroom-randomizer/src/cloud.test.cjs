@@ -5,7 +5,7 @@ const fs = require("node:fs");
 
 const cloudSource = fs.readFileSync(require.resolve("../data/cloud.js"), "utf8");
 
-function createHarness({ failAttempts = false, expiredSession = false, beforeRequest, initialAttendance = null } = {}) {
+function createHarness({ failAttempts = false, expiredSession = false, failRefresh = false, beforeRequest, initialAttendance = null, recordAttempts = [], recordEvents = [], activeClassSessionDate = "2026-09-08" } = {}) {
   const initialSession = expiredSession
     ? {
         access_token: "expired",
@@ -23,6 +23,7 @@ function createHarness({ failAttempts = false, expiredSession = false, beforeReq
     removeItem: (key) => values.delete(key)
   };
   const savedAttempts = new Map();
+  const savedRandomizerSessions = [];
   let attendance = initialAttendance ? {id:'attendance-id',session_id:'session',student_id:'student',note:'preserve note',...initialAttendance} : null;
   const paths = [];
   const authorizationHeaders = [];
@@ -39,6 +40,7 @@ function createHarness({ failAttempts = false, expiredSession = false, beforeReq
       authorizationHeaders.push(options.headers && options.headers.Authorization);
       if (url.includes("/auth/v1/token?grant_type=refresh_token")) {
         refreshCount += 1;
+        if (failRefresh) return { ok: false, status: 400, text: async () => '{"message":"refresh token expired"}' };
         accessToken = "refreshed";
         return {
           ok: true,
@@ -61,8 +63,17 @@ function createHarness({ failAttempts = false, expiredSession = false, beforeReq
       if (url.includes("/enrollments?")) {
         data = [{ seat_number: 1, student: { id: "student", student_code: "TEST", chinese_name: "测试学生" } }];
       }
-      if (url.includes("/class_sessions?")) data = [{ id: "session" }];
-      if (url.includes("/randomizer_sessions?")) data = [{ id: "random-session" }];
+      if (url.includes("/class_sessions?")) {
+        const requestedDate = url.match(/[?&]session_date=eq\.([^&]+)/)?.[1];
+        data = !requestedDate || decodeURIComponent(requestedDate) === activeClassSessionDate ? [{ id: "session" }] : [];
+      }
+      if (url.endsWith("/class_sessions") && options.method === "POST") {
+        return { ok: false, status: 409, text: async () => '{"message":"active class session exists"}' };
+      }
+      if (url.includes("/randomizer_sessions?")) {
+        if (options.method === "POST") savedRandomizerSessions.push(body);
+        data = [{ id: "random-session" }];
+      }
       if (url.includes('/attendance_records?')) {
         if (options.method === 'POST') attendance = {id:'attendance-id', ...attendance, ...body};
         if (options.method === 'PATCH') attendance = {...attendance, ...body};
@@ -83,6 +94,7 @@ function createHarness({ failAttempts = false, expiredSession = false, beforeReq
     cloud: window.RandomizerCloud,
     paths,
     savedAttempts,
+    savedRandomizerSessions,
     attendance: () => attendance,
     authorizationHeaders,
     refreshCount: () => refreshCount,
@@ -300,6 +312,8 @@ test("failed raw-record writes stay queued and retry without duplication", async
   const harness = createHarness({ failAttempts: true });
   const result = await send(harness.cloud, rawAttempt({ id: "offline-1" }));
   assert.equal(result.pending, 1);
+  assert.equal(result.failure.kind, "server");
+  assert.equal(result.failure.status, 503);
   assert.equal(harness.cloud.pendingCount(), 1);
 
   harness.setAttemptFailure(false);
@@ -310,6 +324,16 @@ test("failed raw-record writes stay queued and retry without duplication", async
   await send(harness.cloud, rawAttempt({ id: "offline-1", note: "重試後保存" }));
   assert.equal(harness.savedAttempts.size, 1);
   assert.equal(harness.savedAttempts.get("offline-1").note, "重試後保存");
+});
+
+test("expired refresh keeps the sync queue and reports that the teacher must sign in again", async () => {
+  const harness = createHarness({ expiredSession: true, failRefresh: true });
+  const result = await send(harness.cloud, rawAttempt({ id: "expired-login-1" }));
+
+  assert.equal(result.pending, 2);
+  assert.equal(result.failure.status, 400);
+  assert.equal(harness.cloud.isSignedIn(), false);
+  assert.equal(harness.cloud.pendingCount(), 2);
 });
 
 test("finish is queued after all answers, waits for failed writes, and retries without duplicate answers", async () => {
@@ -323,7 +347,17 @@ test("finish is queued after all answers, waits for failed writes, and retries w
   assert.equal(second.pending, 0);
   assert.ok(harness.paths.at(-1).includes("rpc/finish_randomizer_class"));
   assert.equal(harness.savedAttempts.size, 1);
-  assert.ok(harness.paths.some(p => p.includes("class_sessions?") && p.includes("session_date=eq.2026-09-08")));
+  assert.ok(harness.paths.some(p => p.includes("class_sessions?") && p.includes("status=eq.in_progress")));
+});
+
+test("reuses the active tracker class session when the randomizer date differs", async () => {
+  const harness = createHarness({ activeClassSessionDate: "2026-09-23" });
+  const result = await send(harness.cloud, rawAttempt());
+
+  assert.equal(result.pending, 0);
+  assert.equal(harness.savedRandomizerSessions[0].class_session_id, "session");
+  assert.equal(harness.savedAttempts.has("answer-1"), true);
+  assert.ok(!harness.paths.some(path => path.endsWith("/class_sessions")));
 });
 
 test("closing state queued during an earlier network write survives the first flush", async () => {

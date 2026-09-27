@@ -239,6 +239,37 @@
     );
   }
 
+  function cloudSyncWarning(result) {
+    const pending = Number(result && result.pending) || 0;
+    const pendingLabel = "本机保留了 " + pending + " 笔待同步记录。";
+    const failure = result && result.failure || {};
+    const signedIn = Boolean(global.RandomizerCloud && global.RandomizerCloud.isSignedIn());
+    if (failure.kind === "storage") return "本机无法保存同步队列；请立即下载完整备份后再继续。";
+    if (failure.kind === "auth" || failure.status === 401 || !signedIn) {
+      return "教师登录已过期；" + pendingLabel + "请点击上方「连接同步」重新登录。";
+    }
+    if (failure.kind === "permission") {
+      return "当前教师账号没有写入权限（HTTP 403）；" + pendingLabel + "请用原教师账号重新登录。";
+    }
+    if (failure.kind === "network") return "网络暂时无法连接教学数据库；" + pendingLabel + "恢复连接后会自动重试。";
+    if (failure.kind === "conflict") return "云端课堂记录发生冲突（HTTP 409）；" + pendingLabel + "请重新连接后再试。";
+    if (failure.kind === "server") return "教学数据库暂时出错（HTTP " + failure.status + "）；" + pendingLabel + "稍后会自动重试。";
+    if (failure.kind === "rejected") return "教学数据库拒绝了记录（HTTP " + failure.status + "）；" + pendingLabel + "请保留备份并联系管理员。";
+    return "同步尚未完成；" + pendingLabel + "请打开「连接同步」查看状态。";
+  }
+
+  function handleCloudSyncResult(result) {
+    updateCloudStatus();
+    if (result.pending > 0) {
+      if (!cloudSyncWarned) {
+        showToast(cloudSyncWarning(result), true);
+        cloudSyncWarned = true;
+      }
+      return;
+    }
+    cloudSyncWarned = false;
+  }
+
   function syncCloudState() {
     if (!state || !cloudReady()) return;
     // Enqueue every snapshot immediately, including an ending class while
@@ -252,20 +283,15 @@
       roster: state.roster,
       attempts: state.attempts
     }).then((result) => {
-      updateCloudStatus();
-      if (result.pending > 0) {
-        if (!cloudSyncWarned) {
-          showToast("暂时无法连接；记录已放入待同步清单，连接恢复后会自动保存。", true);
-          cloudSyncWarned = true;
-        }
-      } else {
-        cloudSyncWarned = false;
-      }
-    }).catch(() => {
+      handleCloudSyncResult(result);
+    }).catch((error) => {
       if (!cloudSyncWarned) {
-        showToast("暂时无法同步；请保持登录，记录会在连接恢复后自动保存。", true);
+        showToast(error && error.syncFailure && error.syncFailure.kind === "storage"
+          ? "本机无法保存待同步记录；请立即下载完整备份后再继续。"
+          : "同步队列无法保存课堂数据；请立即下载完整备份后再试。", true);
         cloudSyncWarned = true;
       }
+      updateCloudStatus();
     });
   }
 
@@ -288,7 +314,7 @@
     toastTimer = global.setTimeout(() => {
       elements.toast.classList.remove("is-visible");
       toastTimer = null;
-    }, 2800);
+    }, warning ? 6000 : 2800);
   }
 
   function stopTimer() {
@@ -700,7 +726,7 @@
     const pending = global.RandomizerCloud && typeof global.RandomizerCloud.pendingCount === "function"
       ? global.RandomizerCloud.pendingCount()
       : 0;
-    elements.cloudButton.textContent = signedIn ? "已连接同步" : "连接同步";
+    elements.cloudButton.textContent = signedIn ? (pending ? "待同步 " + pending + " 笔" : "已连接同步") : "连接同步";
     elements.cloudButton.classList.toggle("is-connected", signedIn);
     elements.cloudLogoutButton.hidden = !signedIn;
     elements.cloudInvitePanel.hidden = !invitePending;
@@ -711,7 +737,8 @@
       ? (invitePending
         ? "邀请已确认，请先设置密码。"
         : `已连接：${global.RandomizerCloud.currentUserEmail()}。课堂与每次抽问记录会自动保存${pending ? `；待同步 ${pending} 笔` : ""}。`)
-      : "尚未连接。开始课堂前请先登录，才能将记录保存到教学数据库。";
+      : "尚未连接。开始课堂前请先登录，才能将记录保存到教学数据库。"
+        + (pending ? "本机保留了 " + pending + " 笔待同步记录；登录后会继续同步。" : "");
   }
 
   function openCloudDialog() {
@@ -730,8 +757,8 @@
     if (!global.RandomizerCloud) return;
     try {
       const result = await global.RandomizerCloud.flushQueue();
-      updateCloudStatus();
-      if (result.sent > 0) showToast(`已同步 ${result.sent} 笔课堂数据${result.pending ? `，还有 ${result.pending} 笔待同步` : ""}`);
+      handleCloudSyncResult(result);
+      if (result.sent > 0 && result.pending === 0) showToast("已同步 " + result.sent + " 笔课堂数据");
     } catch (error) {
       // Queue remains on the device and will retry on the next action or reload.
     }
