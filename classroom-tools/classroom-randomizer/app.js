@@ -1284,7 +1284,7 @@
         || (studentStatusFilter === "available" && !excluded && !answered)
         || (studentStatusFilter === "answered" && answered)
         || (studentStatusFilter === "absent" && excluded);
-      const searchable = `${student.name} ${student.seatNumber || ""} ${student.studentCode || ""}`.toLocaleLowerCase();
+      const searchable = `${student.name} ${student.studentCode || ""}`.toLocaleLowerCase();
       return statusMatches && (!query || searchable.includes(query));
     });
     if (visibleStudents.length === 0) {
@@ -1305,7 +1305,7 @@
       identity.className = "student-identity";
       const seat = document.createElement("span");
       seat.className = "student-seat";
-      seat.textContent = student.seatNumber || student.studentCode || "—";
+      seat.textContent = studentIdSuffix(student);
       const name = document.createElement("strong");
       name.textContent = student.name;
       identity.append(seat, name);
@@ -1715,8 +1715,7 @@
     elements.recordsStudentSelect.replaceChildren();
     Array.from(students.values()).forEach((student) => {
       const key = student.studentCode || student.id;
-      const seat = student.seatNumber ? `${student.seatNumber}｜` : "";
-      addOption(elements.recordsStudentSelect, key, `${seat}${student.name}`);
+      addOption(elements.recordsStudentSelect, key, `${studentIdSuffix(student)}｜${student.name}`);
     });
     if (students.has(preferred)) elements.recordsStudentSelect.value = preferred;
   }

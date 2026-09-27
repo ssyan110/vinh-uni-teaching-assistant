@@ -678,4 +678,4 @@ html, body { background: #f5f7f8; }
 .participation-table thead { background: #edf4ef; }
 .participation-table tbody tr:nth-child(even) { background: #f8faf8; }
 .participation-table small { display: block; font-weight: normal; color: #596b62; }
-.participation-table td:nth-child(6) { font-size: 24px; color: #20523e; }
+.participation-table td:nth-child(5) { font-size: 24px; color: #20523e; }

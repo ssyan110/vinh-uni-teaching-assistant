@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useTracker } from '../state/TrackerContext'
 import { participationRows } from '../utils/participation'
+import { studentCodeLastFour } from '../utils/studentIdentity'
 import type { ClassSession } from '../types'
 
 const MAX_URGENT_STUDENTS = 8
@@ -151,7 +152,7 @@ export function TodayPage() {
         {urgentStudents.map((item) => {
           const reason = [item.row.total === 0 ? '零回答' : '', item.followups.length ? `${item.followups.length} 项待办` : ''].filter(Boolean).join(' · ')
           return <article className="urgent-student-row" key={`${item.course.id}-${item.row.student.id}`}>
-            <span className="urgent-seat">{item.row.enrollment.seat_number ?? '—'}</span>
+            <span className="urgent-seat" aria-label={`學號末四位 ${studentCodeLastFour(item.row.student.student_code)}`}>{studentCodeLastFour(item.row.student.student_code)}</span>
             <div className="urgent-student-identity"><strong>{item.row.student.chinese_name}</strong><small>{item.course.code} · {reason}</small></div>
             <div className="urgent-actions">
               <Link to={participationHref(item.course.id, item.latest)}>查看回答次数</Link>
@@ -170,7 +171,7 @@ export function TodayPage() {
           {classViews.map((view) => <section className="roster-class" key={view.course.id}>
             <div className="roster-class-heading"><strong>{view.course.code}</strong><span>{view.roster.length} 人</span></div>
             <ol className="roster-list">
-              {view.roster.map(({ enrollment, student }) => <li key={student.id}><span>{enrollment.seat_number ?? '—'}</span><strong>{student.chinese_name}</strong><small>{student.student_code}</small></li>)}
+              {view.roster.map(({ student }) => <li key={student.id}><span aria-label={`學號末四位 ${studentCodeLastFour(student.student_code)}`}>{studentCodeLastFour(student.student_code)}</span><strong>{student.chinese_name}</strong><small>{student.original_name ?? ''}</small></li>)}
             </ol>
           </section>)}
         </div>

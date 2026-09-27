@@ -3,6 +3,7 @@ import { Link, Navigate, useNavigate, useParams, useSearchParams } from 'react-r
 import { StatusPill } from '../components/StatusPill'
 import { useTracker } from '../state/TrackerContext'
 import { validateSessionEdit } from '../data/repository'
+import { studentCodeLastFour } from '../utils/studentIdentity'
 import type { AttendanceStatus } from '../types'
 
 type SessionMode = 'attendance' | 'close'
@@ -135,8 +136,8 @@ export function SessionPage() {
             {roster.map(({ enrollment, student }) => {
               const record = sessionAttendance.find((item) => item.student_id === student.id)
               return <div className="attendance-row" key={student.id}>
-                <span className="seat-number">{String(enrollment.seat_number ?? '—').padStart(2, '0')}</span>
-                <span className="student-identity"><strong>{student.chinese_name}</strong><small>{privacy ? student.student_code : student.original_name ?? student.student_code}</small></span>
+                <span className="seat-number" aria-label={`學號末四位 ${studentCodeLastFour(student.student_code)}`}>{studentCodeLastFour(student.student_code)}</span>
+                <span className="student-identity"><strong>{student.chinese_name}</strong><small>{privacy ? '' : student.original_name ?? ''}</small></span>
                 <StatusPill value={record?.status ?? 'unconfirmed'} />
                 <div className="row-actions">{attendanceActions.map((action) => <button type="button" key={action.value} className={record?.status === action.value ? 'selected' : ''} disabled={busy} onClick={() => markAttendance(student.id, action.value)}>{action.label}</button>)}</div>
               </div>

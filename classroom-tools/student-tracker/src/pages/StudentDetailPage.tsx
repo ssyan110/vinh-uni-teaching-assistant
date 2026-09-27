@@ -4,6 +4,7 @@ import {useTracker} from '../state/TrackerContext'
 import {todayIso} from '../data/repository'
 import {eventDay,evidenceRows,currentNotes,noteLabels} from '../utils/classroomAnalysis'
 import {EvidenceList} from '../components/EvidenceList'
+import {studentCodeLastFour} from '../utils/studentIdentity'
 import {downloadCsv,exportClassroomCsv} from '../utils/classroomExport'
 import type {StudentNote,NoteInput} from '../types'
 export function StudentDetailPage() {
@@ -24,7 +25,7 @@ export function StudentDetailPage() {
  const edit=(n:StudentNote)=>{setEditing(n);setDate(n.note_date);setCategory(n.category);setBody(n.body);setReason('');setMessage('')}
  const oldVersions=(n:StudentNote)=>{const result:StudentNote[]=[];const visited=new Set<string>();let id=n.supersedes_id;while(id&&!visited.has(id)){visited.add(id);const old=notes.find(v=>v.id===id);if(!old) break;result.push(old);id=old.supersedes_id}return result}
  return <div className="page student-detail-page"><Link to="/students" className="back-link">← 學生名單</Link>
- <header className="page-heading"><p className="eyebrow">學生歷程 · {student.student_code}</p><h1>{student.chinese_name}</h1><p>{student.original_name}</p></header>
+ <header className="page-heading"><p className="eyebrow">學生歷程 · 學號末四位 {studentCodeLastFour(student.student_code)}</p><h1>{student.chinese_name}</h1><p>{student.original_name}</p></header>
  <section className="panel filter-panel"><label>查看班級<select disabled={busy} value={courseId} onChange={e=>{if((body.trim()||editing)&&!window.confirm("尚有未保存的備註，確定切換班級並放棄輸入？")) return;setParams(e.target.value?{course:e.target.value}:{});reset();setLesson('');setPage(1);setTodo('')}}><option value="">請選擇班級</option>{enrollmentCourses.map(c=><option key={c.id} value={c.id}>{c.code} · {c.name}</option>)}</select></label><label>開始日期<input type="date" value={from} onChange={e=>setFrom(e.target.value)}/></label><label>結束日期<input type="date" value={to} min={from} onChange={e=>setTo(e.target.value)}/></label><label>教材／課次<select value={lesson} onChange={e=>setLesson(e.target.value)}><option value="">全部課次</option>{[...new Set(all.map(r=>`${r.textbook}:${r.lesson}`))].map(l=><option key={l}>{l}</option>)}</select></label><button className="secondary-button" disabled={!courseId} onClick={()=>downloadCsv(exportClassroomCsv(snapshot,rows,courseId,student.id,from,to,`${from||'開始'} 至 ${to||'現在'}；${lesson||'全部課次'}`),`${student.student_code}-學生紀錄.csv`)}>匯出學生 CSV</button></section>
  {!courseId?<section className="panel">請選擇此學生的班級，備註與待辦會保存到選定班級。</section>:<>
  <div className="outcome-metrics"><div><span>回答紀錄</span><strong>{rows.filter(r=>r.included).length}</strong></div><div><span>參與上課日</span><strong>{new Set(rows.filter(r=>r.included).map(r=>eventDay(r.date))).size}</strong></div><div><span>自願回答</span><strong>{rows.filter(r=>r.included&&r.source==='自願發言').length}</strong></div><div><span>未回答紀錄</span><strong>{rows.filter(r=>r.status==='未回答').length}</strong></div></div>

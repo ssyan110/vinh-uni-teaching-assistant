@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTracker } from '../state/TrackerContext'
 import { evidenceRows } from '../utils/classroomAnalysis'
+import { studentCodeLastFour } from '../utils/studentIdentity'
 
 export function StudentsPage() {
   const { snapshot } = useTracker()
@@ -31,8 +32,8 @@ export function StudentsPage() {
             const lastActivity = evidence.find(item=>item.studentId===student.id&&(courseId==='all'||item.courseId===courseId))
             const open = snapshot.followups.filter((item) => item.student_id === student.id && item.status === 'open' && (courseId==='all'||item.course_id===courseId)).length
             return <Link className="student-row" to={`/students/${student.id}${courseId==='all'?'':`?course=${encodeURIComponent(courseId)}`}`} key={student.id}>
-              <span className="student-avatar">{student.chinese_name.slice(-2)}</span>
-              <span className="student-main"><strong>{student.chinese_name}</strong><small>{student.original_name ?? student.student_code}</small></span>
+              <span className="student-avatar" aria-label={`學號末四位 ${studentCodeLastFour(student.student_code)}`}>{studentCodeLastFour(student.student_code)}</span>
+              <span className="student-main"><strong>{student.chinese_name}</strong><small>{[student.original_name, `學號末四位 ${studentCodeLastFour(student.student_code)}`].filter(Boolean).join(' · ')}</small></span>
               <span className="course-mini">{courseNames || '未分班'}</span>
               <span className="student-latest">{lastActivity ? <span>{lastActivity.source} · {new Date(lastActivity.date).toLocaleDateString('zh-TW')}</span> : <span className="muted">尚無回答</span>}</span>
               <span className={open ? 'open-count visible' : 'open-count'}>{open ? `${open} 待辦` : '無待辦'}</span>

@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState, type ChangeEvent, type FormEvent } from '
 import { parseRosterCsv } from '../utils/csv'
 import { useTracker } from '../state/TrackerContext'
 import type { ImportStudentRow } from '../types'
+import { studentCodeLastFour } from '../utils/studentIdentity'
 
 function csvEscape(value: string | number | null | undefined) {
   const text = String(value ?? '')
@@ -20,7 +21,7 @@ function downloadFile(filename: string, body: string, type: string) {
 export function MorePage() {
   const { snapshot, importStudents, addCourse, signOut, busy } = useTracker()
   const [courseId, setCourseId] = useState(snapshot.courses[0]?.id ?? '')
-  const [csv, setCsv] = useState('學號,中文姓名,原名,常用名,座號\n')
+  const [csv, setCsv] = useState('學號,中文姓名,原名,常用名\n')
   const [importMessage, setImportMessage] = useState('')
   const [showCourseForm, setShowCourseForm] = useState(false)
   const [courseDraft, setCourseDraft] = useState({ code: '', name: '', room: '', scheduleText: '' })
@@ -83,11 +84,11 @@ export function MorePage() {
           <div className="import-editor">
             <label>加入哪一門課<select value={courseId} onChange={(event) => setCourseId(event.target.value)}>{snapshot.courses.map((course) => <option key={course.id} value={course.id}>{course.name}</option>)}</select></label>
             <label>名冊內容<textarea value={csv} onChange={(event) => { setCsv(event.target.value); setImportMessage('') }} rows={9} spellCheck={false} /></label>
-            <p className="field-help">標題至少要有「學號、中文姓名」；也可加入原名、常用名、座號。</p>
+            <p className="field-help">標題列至少要有「學號、中文姓名」；原名、常用名可選填。</p>
           </div>
           <div className="import-preview">
             <div className="preview-count"><strong>{parsed.rows.length}</strong><span>筆可匯入</span></div>
-            {parsed.errors.length ? <ul className="import-errors">{parsed.errors.slice(0, 5).map((message) => <li key={message}>{message}</li>)}</ul> : <div className="preview-sample">{parsed.rows.slice(0, 4).map((row) => <div key={row.student_code}><span>{row.seat_number ?? '—'}</span><strong>{row.chinese_name}</strong><small>{row.student_code}</small></div>)}</div>}
+            {parsed.errors.length ? <ul className="import-errors">{parsed.errors.slice(0, 5).map((message) => <li key={message}>{message}</li>)}</ul> : <div className="preview-sample">{parsed.rows.slice(0, 4).map((row) => <div key={row.student_code}><span aria-label={`學號末四位 ${studentCodeLastFour(row.student_code)}`}>{studentCodeLastFour(row.student_code)}</span><strong>{row.chinese_name}</strong><small>{row.original_name ?? row.preferred_name ?? ''}</small></div>)}</div>}
             {importMessage && <p className="success-message">{importMessage}</p>}
             <button className="primary-button full" disabled={busy || !courseId || !parsed.rows.length || parsed.errors.length > 0} onClick={doImport}>確認匯入</button>
           </div>
