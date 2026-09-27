@@ -93,11 +93,13 @@ function selectedContentMode(): "pinyin" | "vocabulary" | "mixed" {
 
 function promptActivityLabel(activity: FunctionPromptActivity): string {
   if (activity === "find-error") return "找错·纠音";
+  if (activity === "sentence-make") return "例句换说";
   return activity === "translate-vietnamese" ? "读例句·说越南文" : "句式造句";
 }
 
 function promptActivityTitle(activity: FunctionPromptActivity): string {
   if (activity === "find-error") return "找出错误，改正并读一遍";
+  if (activity === "sentence-make") return "读出例句，再换上自己的信息说一句";
   return activity === "translate-vietnamese" ? "读例句，再说出越南文意思" : "用这个句式造一个新句子";
 }
 
@@ -120,23 +122,29 @@ function boardPromptPoolForScope(
     ...sentencePatternPromptsForScope(content, selection),
     ...functionPromptsForScope(content, selection)
   ];
-  if (prompts.length >= requiredCount || sentencesForScope(content, selection).length === 0) return prompts;
+  const sourceSentences = sentencesForScope(content, selection);
+  const elementarySentenceTasks = content.textbook_id === "boya-elementary-i"
+    && sourceSentences.some((item) => item.activity === "sentence-make");
+  if ((!elementarySentenceTasks && prompts.length >= requiredCount) || sourceSentences.length === 0) return prompts;
 
-  // Some imported lesson packs keep textbook sentences in `sentences` but do
-  // not expand them into function exercises. Use those source sentences only
-  // when the board still needs more practice content, then rotate the pool if
-  // the lesson remains shorter than 81 cells.
+  // Elementary-I OCR examples are source-linked review items and stay in the
+  // function pool even when its pattern pool alone could fill the board.
   const promptTexts = new Set(prompts.map((prompt) => `${prompt.kind}\u0000${prompt.prompt}`));
-  const sentencePrompts = sentencesForScope(content, selection)
+  const sentencePrompts = sourceSentences
     .filter((item) => !promptTexts.has(`pattern-make\u0000${item.sentence}`))
-    .map((item): FunctionPrompt => ({
-      kind: "pattern-make",
-      prompt: item.sentence,
-      activity: "translate-vietnamese",
-      support: "请先读出课本例句，再说出它的越南文意思。",
-      seconds: 30,
-      sourceItemId: `sentence-${item.item_id}`
-    }));
+    .map((item): FunctionPrompt => {
+      const makeSentence = item.activity === "sentence-make";
+      return {
+        kind: "pattern-make",
+        prompt: item.sentence,
+        activity: makeSentence ? "sentence-make" : "translate-vietnamese",
+        support: makeSentence
+          ? item.instruction || "先读出例句，再换上自己的信息说一句。"
+          : "请先读出课本例句，再说出它的越南文意思。",
+        seconds: 30,
+        sourceItemId: `sentence-${item.item_id}`
+      };
+    });
   return [...prompts, ...sentencePrompts];
 }
 
@@ -165,10 +173,10 @@ function shell(content: string, options: { compact?: boolean; pinyin?: boolean }
 function renderHome(): void {
   const pinyin = selectedContentMode() === "pinyin";
   const elementary = pack?.textbook_id === "boya-elementary-i";
-  const hasContent = Boolean(pack && (pack.vocabulary.length || pack.exercises.length || pack.sentence_patterns?.length));
+  const hasContent = Boolean(pack && (pack.vocabulary.length || pack.exercises.length || pack.sentence_patterns?.length || pack.sentences.length));
   const lessonCount = pack?.lessons.filter((lesson) => lesson.active !== false).length ?? 0;
   const vocabularyCount = pack ? vocabularyForScope(pack, { mode: "all", lessonIds: [] }).length : 0;
-  const functionContentCount = (pack?.sentence_patterns?.length ?? 0) + (pack?.exercises.length ?? 0);
+  const functionContentCount = (pack?.sentence_patterns?.length ?? 0) + (pack?.exercises.length ?? 0) + (pack?.sentences.length ?? 0);
   const activeTextbooks = textbookCatalog
     .filter((entry) => entry.active !== false)
   const selectedEntry = activeTextbooks.find((entry) => entry.textbook_id === selectedTextbookId);
@@ -199,9 +207,9 @@ function renderHome(): void {
   app.innerHTML = shell(`
     <section class="hero">
       <div class="hero-copy">
-        <span class="eyebrow">${elementary ? "初级起步篇 I · 全十课" : "准中级加速篇 I · 全十二课"}</span>
+        <span class="eyebrow">${elementary ? "初级起步篇 I · 全二十五课" : "准中级加速篇 I · 全十二课"}</span>
         <h1>选教材，<br><em>${elementary ? "练拼音和表达。" : "说出来。"}</em></h1>
-        <p class="hero-lead">${elementary ? "第1–3课练拼音，第4–10课练词语和句式。学生读对或完成任务后，由教师确认并占格。" : "先选教材，再选择课次。两组轮流练习，学生先读词或完成任务，教师确认后占格；6–8列连四格、9列连五格获胜。"}</p>
+        <p class="hero-lead">${elementary ? "第1–3课练拼音，第4–25课练词语与表达。学生读对或完成任务后，由教师确认并占格。" : "先选教材，再选择课次。两组轮流练习，学生先读词或完成任务，教师确认后占格；6–8列连四格、9列连五格获胜。"}</p>
         <div class="hero-actions">
           <button class="button button--primary" data-action="setup" ${hasContent ? "" : "disabled"}>
             <span>进入选择课次</span><span aria-hidden="true">→</span>
@@ -215,7 +223,7 @@ function renderHome(): void {
             `<span class="sample-cell ${[0, 4, 8].includes(index) ? "sample-cell--marked" : ""}">${word}</span>`
           ).join("")}
         </div>
-        <p>${elementary ? "拼音 · 词语 · 句式" : "6 × 6 至 9 × 9"} <small>${elementary ? "前三课纠音，后七课练词语和句式" : "句式造句格上下左右不相邻"}</small></p>
+        <p>${elementary ? "拼音 · 词语 · 句式" : "6 × 6 至 9 × 9"} <small>${elementary ? "前三课纠音，后22课练词语与表达" : "句式造句格上下左右不相邻"}</small></p>
       </div>
     </section>
     <section class="book-picker" aria-label="选择教材">
@@ -251,6 +259,7 @@ function renderSetup(): void {
   const scopedPrompts = boardPromptPoolForScope(pack, currentSelection, firstRoundFunctionCount);
   const scopedPatternCount = sentencePatternPromptsForScope(pack, currentSelection).length;
   const scopedExampleCount = functionPromptsForScope(pack, currentSelection).length;
+  const scopedSentenceCount = sentencesForScope(pack, currentSelection).length;
   const needsFunctionPrompts = true;
   const canStart = selectedLessonIds.length > 0 && chosen.length > 0 && (!needsFunctionPrompts || scopedPrompts.length > 0);
   const lessonOptions = activeLessons.map((lesson) => {
@@ -263,12 +272,14 @@ function renderSetup(): void {
     : mixed
       ? "所选内容同时包含拼音和词语。普通格按内容朗读；功能格按图标找错纠音、读句式并说明越南文意思，教师确认后占格。"
       : elementary
-        ? "普通格每格一个词语；功能格练习本课句式并说出越南文意思，教师确认后占格。"
+        ? "普通格每格一个词语；功能格按题目提示练句式或读例句换说法，教师确认后占格。"
         : "第一课用 6 × 6，含31个词语和5个句式造句格。其他选课随词数调整，最多 9 × 9；句式造句格上下左右不相邻，词语混合分轮，不重复。";
   const functionInstruction = pinyin
     ? "找出错误 → 改正 → 朗读 · 教师确认后占格"
     : mixed
       ? "拼音课找错纠音；词语课朗读、说越南文意思或练句式 · 教师确认"
+      : elementary
+        ? "按提示练句式或读例句换说法 · 教师确认后占格"
       : "按图标选择：读句式并说越南文意思、造句；教师判定";
 
   app.innerHTML = shell(`
@@ -302,7 +313,7 @@ function renderSetup(): void {
         ${chosen.length
           ? `<div class="plan-line"><b>${firstRoundSide ** 2}</b><span>${firstRoundWordCount} 个词语 + ${firstRoundFunctionCount} 个功能格 · ${roundPlan.length} 轮</span></div>`
           : `<div class="plan-line"><b>${firstRoundSide ** 2}</b><span>格 · 请至少选择一课</span></div>`}
-        <div class="plan-functions"><span>可用功能格 <small>${pinyin ? "找错题" : mixed ? "找错题与句式题" : `句式 ${scopedPatternCount} · 例句 ${scopedExampleCount}`}</small></span><strong>${scopedPrompts.length}</strong><small>${firstRoundFunctionCount ? "按需要轮换功能题" : "本轮无需补入功能格"}</small></div>
+        <div class="plan-functions"><span>可用功能格 <small>${pinyin ? "找错题" : mixed ? "找错题与句式题" : `句式 ${scopedPatternCount} · 例句 ${scopedExampleCount + scopedSentenceCount}`}</small></span><strong>${scopedPrompts.length}</strong><small>${firstRoundFunctionCount ? "按需要轮换功能题" : "本轮无需补入功能格"}</small></div>
         <button class="button button--primary button--wide" data-action="start-game" ${canStart ? "" : "disabled"}>开始游戏 <span aria-hidden="true">→</span></button>
       </aside>
     </section>

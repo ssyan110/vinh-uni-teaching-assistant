@@ -34,6 +34,8 @@ export interface SentenceItem {
   tokens?: string[];
   pinyin?: string;
   meaning_vi?: string;
+  activity?: FunctionPromptActivity;
+  instruction?: string;
   introduced_lesson_id: string;
   review_lesson_ids?: string[];
   active?: boolean;
@@ -109,7 +111,7 @@ export type CellOwner = Team | null;
 export type GameMode = "modern" | "legacy";
 export type LegacySubmode = "classroom" | "solo";
 export type FunctionPromptKind = "pattern-make" | "dialogue-pattern" | "sentence-rewrite" | "find-error";
-export type FunctionPromptActivity = "make-sentence" | "translate-vietnamese" | "find-error";
+export type FunctionPromptActivity = "make-sentence" | "sentence-make" | "translate-vietnamese" | "find-error";
 
 export interface FunctionPrompt {
   kind: FunctionPromptKind;

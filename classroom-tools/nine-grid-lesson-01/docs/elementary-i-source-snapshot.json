@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "textbook_id": "boya-elementary-i",
+  "scope": "lesson-11 through lesson-25",
+  "review_status": "review_only_pending_human_source_translation_review",
+  "source_dataset": "textbooks/boya-elementary-i-ii/source/reference-dataset/csv",
+  "source_files_sha256": {
+    "lessons.csv": "de05b02c367dd48bfa7626ad3b1e4b9bdd30316615e51204bd06fa16e62cd66d",
+    "vocabulary_occurrences.csv": "d320d9e779abb7bbfe2b071da7067b27dcf24466b05ad1f177290f759650b06b",
+    "grammar_source_patterns.csv": "522c6650174c1f026a12b5c1c299f7ee2e08384874e62012145ab002f690c81f",
+    "grammar.csv": "11a673413d563609ce82faee6c0fd731a963ba3a6e4aa9dc8f287709c42d475d",
+    "reference_sentences.csv": "9172023f77b2cf99fe52a96a22a50f3a0549750f6bbd283f495993b3e69f47b5",
+    "docs/elementary-i-pdf-example-extract.json": "dc8edefd064ba1060c4fc9b1519181cb4d99752a71277b63cf463700fa4606a1"
+  },
+  "selection_policy": {
+    "vocabulary": "All ordered OCR vocabulary occurrences for lessons 11–25; retain raw text, translation and source statuses.",
+    "sentence_patterns": "Direct publisher-reference OCR rows for lessons 11–25, plus lesson-24 explicit-section audit candidates. Do not use sentence-inferred candidates or reference sentences.",
+    "translation_display": "Unreviewed pattern translations are retained as meaning_vi_draft and not exposed as approved meaning_vi.",
+    "example_sentences": "Deduplicate each lesson-keyed grammar.csv example_sentence_zh group, split at semicolons, strip an explicit example label, and omit incomplete pattern templates; supplement sparse lessons with short sentences manually checked against the user-provided scanned reference PDF. All remain review-only and keep lesson and page references.",
+    "provided_pdf_example_extract": {
+      "file_name": "2. 博雅汉语听说-初级起步篇I-听力文本及参考答案.pdf",
+      "sha256": "0da650144378dbfb108bb6050b782885e12182ee7dc44ee7d50bf26b77b9e3ed",
+      "extract_sha256": "dc8edefd064ba1060c4fc9b1519181cb4d99752a71277b63cf463700fa4606a1",
+      "visually_checked_pdf_pages": [
+        46,
+        50,
+        55,
+        58,
+        62,
+        66,
+        67,
+        71,
+        74,
+        79,
+        84,
+        90,
+        95,
+        101,
+        111,
+        112
+      ],
+      "sentence_count": 70
+    },
+    "game_instruction": "The read-and-rephrase instruction is a generic game task applied to source examples, not a textbook prompt.",
+    "reference_sentences_csv": "Not used to assign lessons because it has no lesson_key and its source page mapping conflicts with the lesson-keyed example groups."
+  },
+  "lessons": [
+    {
+      "lesson_key": "boya-elementary-i:lesson-11",
+      "title": "明天天气怎么样",
+      "source_status": "pdf_ocr_extracted_needs_translation_and_manual_review",
+      "source_printed_start_page": "80",
+      "source_pdf_start_page": "91",
+      "vocabulary_count": 33,
+      "pattern_source_ids": [
+        "boya-elementary-i:lesson-11:grammar-031"
+      ],
+      "grammar_example_sentence_count": 6,
+      "pdf_example_sentence_count": 9,
+      "sentence_count": 15,
+      "sentence_group_source_id": "boya-elementary-i:lesson-11:audit-grammar-001",
+      "omitted_pattern_templates": []
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-12",
+      "title": "我正在等公共汽车呢",
+      "source_status": "pdf_ocr_extracted_needs_translation_and_manual_review",
+      "source_printed_start_page": "89",
+      "source_pdf_start_page": "100",
+      "vocabulary_count": 22,
+      "pattern_source_ids": [
+        "boya-elementary-i:lesson-12:grammar-032",
+        "boya-elementary-i:lesson-12:grammar-033",
+        "boya-elementary-i:lesson-12:grammar-034"
+      ],
+      "grammar_example_sentence_count": 5,
+      "pdf_example_sentence_count": 6,
+      "sentence_count": 11,
+      "sentence_group_source_id": "boya-elementary-i:lesson-12:audit-grammar-001",
+      "omitted_pattern_templates": [
+        "……在哪儿？",
+        "……什么时候……？"
+      ]
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "title": "你打算买什么样子",
+      "source_status": "pdf_ocr_extracted_needs_translation_and_manual_review",
+      "source_printed_start_page": "99",
+      "source_pdf_start_page": "109",
+      "vocabulary_count": 26,
+      "pattern_source_ids": [
+        "boya-elementary-i:lesson-13:grammar-035",
+        "boya-elementary-i:lesson-13:grammar-036"
+      ],
+      "grammar_example_sentence_count": 5,
+      "pdf_example_sentence_count": 3,
+      "sentence_count": 8,
+      "sentence_group_source_id": "boya-elementary-i:lesson-13:audit-grammar-001",
+      "omitted_pattern_templates": [
+        "……怎么样？",
+        "……多少钱？"
+      ]
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "title": "祝你生日快乐",
+      "source_status": "pdf_ocr_extracted_needs_translation_and_manual_review",
+      "source_printed_start_page": "109",
+      "source_pdf_start_page": "120",
+      "vocabulary_count": 24,
+      "pattern_source_ids": [
+        "boya-elementary-i:lesson-14:grammar-037",
+        "boya-elementary-i:lesson-14:grammar-038",
+        "boya-elementary-i:lesson-14:grammar-039"
+      ],
+      "grammar_example_sentence_count": 5,
+      "pdf_example_sentence_count": 4,
+      "sentence_count": 9,
+      "sentence_group_source_id": "boya-elementary-i:lesson-14:audit-grammar-001",
+      "omitted_pattern_templates": [
+        "这是送给……",
+        "这是为你准备……"
+      ]
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-15",
+      "title": "我可以试试吗",
+      "source_status": "pdf_ocr_extracted_needs_translation_and_manual_review",
+      "source_printed_start_page": "119",
+      "source_pdf_start_page": "130",
+      "vocabulary_count": 25,
+      "pattern_source_ids": [],
+      "grammar_example_sentence_count": 7,
+      "pdf_example_sentence_count": 4,
+      "sentence_count": 11,
+      "sentence_group_source_id": "boya-elementary-i:lesson-15:audit-grammar-001",
+      "omitted_pattern_templates": []
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-16",
+      "title": "来一斤饺子",
+      "source_status": "pdf_ocr_extracted_needs_translation_and_manual_review",
+      "source_printed_start_page": "129",
+      "source_pdf_start_page": "140",
+      "vocabulary_count": 24,
+      "pattern_source_ids": [],
+      "grammar_example_sentence_count": 7,
+      "pdf_example_sentence_count": 5,
+      "sentence_count": 12,
+      "sentence_group_source_id": "boya-elementary-i:lesson-16:audit-grammar-001",
+      "omitted_pattern_templates": []
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-17",
+      "title": "喝茶还是喝咖啡",
+      "source_status": "pdf_ocr_extracted_needs_translation_and_manual_review",
+      "source_printed_start_page": "139",
+      "source_pdf_start_page": "150",
+      "vocabulary_count": 22,
+      "pattern_source_ids": [
+        "boya-elementary-i:lesson-17:grammar-040"
+      ],
+      "grammar_example_sentence_count": 4,
+      "pdf_example_sentence_count": 9,
+      "sentence_count": 13,
+      "sentence_group_source_id": "boya-elementary-i:lesson-17:audit-grammar-001",
+      "omitted_pattern_templates": [
+        "（是）……还是……？",
+        "A：你会……吗？B：会／不会。"
+      ]
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-18",
+      "title": "今天我七点半就起床了",
+      "source_status": "pdf_ocr_extracted_needs_translation_and_manual_review",
+      "source_printed_start_page": "150",
+      "source_pdf_start_page": "161",
+      "vocabulary_count": 23,
+      "pattern_source_ids": [
+        "boya-elementary-i:lesson-18:grammar-041",
+        "boya-elementary-i:lesson-18:grammar-042",
+        "boya-elementary-i:lesson-18:grammar-043"
+      ],
+      "grammar_example_sentence_count": 5,
+      "pdf_example_sentence_count": 5,
+      "sentence_count": 10,
+      "sentence_group_source_id": "boya-elementary-i:lesson-18:audit-grammar-001",
+      "omitted_pattern_templates": [
+        "……多长时间？",
+        "来中国以前……，来中国以后……",
+        "开始时候……，现在……"
+      ]
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-19",
+      "title": "你又熬夜了",
+      "source_status": "pdf_ocr_extracted_needs_translation_and_manual_review",
+      "source_printed_start_page": "160",
+      "source_pdf_start_page": "171",
+      "vocabulary_count": 28,
+      "pattern_source_ids": [],
+      "grammar_example_sentence_count": 5,
+      "pdf_example_sentence_count": 3,
+      "sentence_count": 8,
+      "sentence_group_source_id": "boya-elementary-i:lesson-19:audit-grammar-001",
+      "omitted_pattern_templates": []
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-20",
+      "title": "我想请一天假",
+      "source_status": "pdf_ocr_extracted_needs_translation_and_manual_review",
+      "source_printed_start_page": "170",
+      "source_pdf_start_page": "181",
+      "vocabulary_count": 26,
+      "pattern_source_ids": [],
+      "grammar_example_sentence_count": 7,
+      "pdf_example_sentence_count": 3,
+      "sentence_count": 10,
+      "sentence_group_source_id": "boya-elementary-i:lesson-20:audit-grammar-001",
+      "omitted_pattern_templates": []
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-21",
+      "title": "每个人要说多长时间",
+      "source_status": "pdf_ocr_extracted_needs_translation_and_manual_review",
+      "source_printed_start_page": "180",
+      "source_pdf_start_page": "191",
+      "vocabulary_count": 24,
+      "pattern_source_ids": [],
+      "grammar_example_sentence_count": 7,
+      "pdf_example_sentence_count": 5,
+      "sentence_count": 12,
+      "sentence_group_source_id": "boya-elementary-i:lesson-21:audit-grammar-001",
+      "omitted_pattern_templates": []
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-22",
+      "title": "明天你下了课去哪儿",
+      "source_status": "pdf_ocr_extracted_needs_translation_and_manual_review",
+      "source_printed_start_page": "189",
+      "source_pdf_start_page": "200",
+      "vocabulary_count": 26,
+      "pattern_source_ids": [],
+      "grammar_example_sentence_count": 8,
+      "pdf_example_sentence_count": 2,
+      "sentence_count": 10,
+      "sentence_group_source_id": "boya-elementary-i:lesson-22:audit-grammar-001",
+      "omitted_pattern_templates": []
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-23",
+      "title": "假期有什么打算",
+      "source_status": "pdf_ocr_extracted_needs_translation_and_manual_review",
+      "source_printed_start_page": "198",
+      "source_pdf_start_page": "209",
+      "vocabulary_count": 28,
+      "pattern_source_ids": [],
+      "grammar_example_sentence_count": 6,
+      "pdf_example_sentence_count": 2,
+      "sentence_count": 8,
+      "sentence_group_source_id": "boya-elementary-i:lesson-23:audit-grammar-001",
+      "omitted_pattern_templates": []
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-24",
+      "title": "学得怎么样",
+      "source_status": "pdf_ocr_extracted_needs_translation_and_manual_review",
+      "source_printed_start_page": "209",
+      "source_pdf_start_page": "220",
+      "vocabulary_count": 25,
+      "pattern_source_ids": [
+        "boya-elementary-i:lesson-24:audit-grammar-001",
+        "boya-elementary-i:lesson-24:audit-grammar-002",
+        "boya-elementary-i:lesson-24:audit-grammar-003",
+        "boya-elementary-i:lesson-24:audit-grammar-004",
+        "boya-elementary-i:lesson-24:audit-grammar-005",
+        "boya-elementary-i:lesson-24:audit-grammar-006",
+        "boya-elementary-i:lesson-24:audit-grammar-007",
+        "boya-elementary-i:lesson-24:audit-grammar-008"
+      ],
+      "grammar_example_sentence_count": 6,
+      "pdf_example_sentence_count": 0,
+      "sentence_count": 6,
+      "sentence_group_source_id": "boya-elementary-i:lesson-24:audit-grammar-001",
+      "omitted_pattern_templates": [
+        "参考句式：V.+得……"
+      ]
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-25",
+      "title": "准备好了吗",
+      "source_status": "pdf_ocr_extracted_needs_translation_and_manual_review",
+      "source_printed_start_page": "218",
+      "source_pdf_start_page": "229",
+      "vocabulary_count": 31,
+      "pattern_source_ids": [],
+      "grammar_example_sentence_count": 8,
+      "pdf_example_sentence_count": 10,
+      "sentence_count": 18,
+      "sentence_group_source_id": "boya-elementary-i:lesson-25:audit-grammar-001",
+      "omitted_pattern_templates": []
+    }
+  ],
+  "counts": {
+    "lessons": 15,
+    "vocabulary_occurrences": 387,
+    "direct_pattern_rows": 13,
+    "explicit_lesson_24_pattern_candidates": 8,
+    "sentence_patterns": 21,
+    "grammar_example_sentences": 91,
+    "pdf_example_sentences": 70,
+    "example_sentences": 161
+  }
+}
