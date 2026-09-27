@@ -45,7 +45,8 @@
   const CLASS_OPTIONS = Object.freeze([
     { id: "LT_01", label: "LT_01（27 人）", studentCount: 27 },
     { id: "LT_02", label: "LT_02（30 人）", studentCount: 30 },
-    { id: "LT_03", label: "LT_03（14 人）", studentCount: 14 }
+    { id: "LT_03", label: "LT_03（14 人）", studentCount: 14 },
+    { id: "NNTQ1", label: "NNTQ1（大学一年级，28 人）", studentCount: 28 }
   ]);
 
   const TEXTBOOK_OPTIONS = Object.freeze([
@@ -58,6 +59,39 @@
       id: "boya-intermediate-i",
       label: "《博雅汉语听说：中级冲刺篇 I》",
       lessonCount: 8
+    },
+    {
+      id: "boya-elementary-i",
+      label: "《博雅汉语听说：初级起步篇 I》",
+      lessonCount: 25,
+      classIds: ["NNTQ1"],
+      lessonTitles: [
+        "拼音和日常用语（一）",
+        "拼音和日常用语（二）",
+        "拼音和日常用语（三）",
+        "你叫什么名字",
+        "认识你很高兴",
+        "这是什么",
+        "欢迎去我家玩儿",
+        "明天晚上你有时间吗",
+        "我们怎么去",
+        "西瓜怎么卖",
+        "明天天气怎么样",
+        "我正在等公共汽车呢",
+        "你打算买什么样子的",
+        "祝你生日快乐",
+        "我可以试试吗",
+        "来一斤饺子",
+        "喝茶还是喝咖啡",
+        "今天我七点半就起床了",
+        "你又熬夜了",
+        "我想请一天假",
+        "每个人要说多长时间",
+        "明天你下了课去哪儿",
+        "假期有什么打算",
+        "学得怎么样",
+        "准备好了吗"
+      ]
     }
   ]);
 
@@ -108,6 +142,11 @@
     return TEXTBOOK_OPTIONS.find((item) => item.id === requested)
       || TEXTBOOK_OPTIONS.find((item) => item.id === DEFAULT_TEXTBOOK_ID)
       || TEXTBOOK_OPTIONS[0];
+  }
+
+  function getTextbookOptions(className) {
+    const classId = text(className);
+    return TEXTBOOK_OPTIONS.filter((item) => !item.classIds || item.classIds.includes(classId));
   }
 
   function getLessonNumber(lessonId) {
@@ -1068,6 +1107,7 @@
     RECORD_STATUS_IDS,
     TASK_MODES,
     TASK_TARGETS,
+    getTextbookOptions,
     getTextbook,
     getLessonNumber,
     normalizeLessonId,

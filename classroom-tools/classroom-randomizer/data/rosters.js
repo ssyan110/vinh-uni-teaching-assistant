@@ -8,7 +8,8 @@
     classes: Object.freeze({
       LT_01: Object.freeze([]),
       LT_02: Object.freeze([]),
-      LT_03: Object.freeze([])
+      LT_03: Object.freeze([]),
+      NNTQ1: Object.freeze([])
     })
   });
 }(typeof globalThis !== "undefined" ? globalThis : this));

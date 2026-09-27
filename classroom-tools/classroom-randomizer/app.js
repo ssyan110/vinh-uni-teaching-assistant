@@ -457,7 +457,7 @@
       } else if (attempt) {
         const student = attempt.studentSnapshot || Model.getStudent(state, attempt.studentId) || {};
         const target = Model.TASK_TARGETS[attempt.taskTarget] || "完整回答这一题";
-        doc.getElementById("displaySeat").textContent = student.seatNumber ? `座号 ${student.seatNumber}` : "";
+        doc.getElementById("displaySeat").textContent = `学号末四位 ${studentIdSuffix(student)}`;
         doc.getElementById("displayName").textContent = student.name || "这位同学";
         doc.getElementById("displayPrompt").textContent = target;
         if (timerDuration > 0) {
@@ -511,31 +511,38 @@
     elements.lessonInput.replaceChildren();
     for (let number = 1; number <= textbook.lessonCount; number += 1) {
       const lessonId = `lesson-${String(number).padStart(2, "0")}`;
-      addOption(elements.lessonInput, lessonId, `第 ${number} 课`);
+      const lessonTitle = textbook.lessonTitles && textbook.lessonTitles[number - 1];
+      addOption(elements.lessonInput, lessonId, lessonTitle ? `第 ${number} 课｜${lessonTitle}` : `第 ${number} 课`);
     }
     elements.lessonInput.value = normalized;
   }
 
   function populateTextbookOptions(selectedTextbookId, selectedLessonId) {
-    const selected = selectedTextbookId || Model.DEFAULT_TEXTBOOK_ID;
+    const options = Model.getTextbookOptions(elements.classNameInput.value);
+    const fallback = options.find((item) => item.id === Model.DEFAULT_TEXTBOOK_ID) || options[0];
+    const selected = selectedTextbookId || fallback.id;
+    const selectedIsAvailable = options.some((item) => item.id === selected);
     elements.textbookInput.replaceChildren();
-    Model.TEXTBOOK_OPTIONS.forEach((item) => addOption(elements.textbookInput, item.id, item.label));
-    elements.textbookInput.value = Model.TEXTBOOK_OPTIONS.some((item) => item.id === selected)
-      ? selected
-      : Model.DEFAULT_TEXTBOOK_ID;
-    updateLessonOptions(selectedLessonId);
+    options.forEach((item) => addOption(elements.textbookInput, item.id, item.label));
+    elements.textbookInput.value = selectedIsAvailable ? selected : fallback.id;
+    updateLessonOptions(selectedIsAvailable ? selectedLessonId : Model.DEFAULT_LESSON_ID);
   }
 
   function populateActiveContextSelectors() {
     if (!state) return;
     elements.activeTextbookSelect.replaceChildren();
-    Model.TEXTBOOK_OPTIONS.forEach((item) => addOption(elements.activeTextbookSelect, item.id, item.label));
+    const options = Model.getTextbookOptions(state.session.className);
+    if (!options.some((item) => item.id === state.session.textbookId)) {
+      options.push(Model.getTextbook(state.session.textbookId));
+    }
+    options.forEach((item) => addOption(elements.activeTextbookSelect, item.id, item.label));
     elements.activeTextbookSelect.value = state.session.textbookId;
     const textbook = Model.getTextbook(state.session.textbookId);
     elements.activeLessonSelect.replaceChildren();
     for (let number = 1; number <= textbook.lessonCount; number += 1) {
       const lessonId = `lesson-${String(number).padStart(2, "0")}`;
-      addOption(elements.activeLessonSelect, lessonId, `第 ${number} 课`);
+      const lessonTitle = textbook.lessonTitles && textbook.lessonTitles[number - 1];
+      addOption(elements.activeLessonSelect, lessonId, lessonTitle ? `第 ${number} 课｜${lessonTitle}` : `第 ${number} 课`);
     }
     elements.activeLessonSelect.value = Model.normalizeLessonId(state.session.lessonId, textbook.id);
   }
@@ -682,6 +689,7 @@
         return;
       }
     }
+    populateTextbookOptions(elements.textbookInput.value, elements.lessonInput.value);
     lastRosterClassId = nextClassId;
     loadBuiltInRoster(nextClassId);
   }
@@ -1149,7 +1157,7 @@
           button.disabled = true;
         });
       }
-      elements.studentNumber.textContent = "座号 —";
+      elements.studentNumber.textContent = "学号末四位 —";
       elements.studentName.textContent = "下一位同学";
       elements.pendingStatus.textContent = "正在洗牌";
       renderTimerState();
@@ -1157,7 +1165,7 @@
     }
 
     const student = attempt.studentSnapshot || Model.getStudent(state, attempt.studentId) || {};
-    elements.studentNumber.textContent = student.seatNumber ? `座号 ${student.seatNumber}` : (student.studentCode || "这位同学");
+    elements.studentNumber.textContent = `学号末四位 ${studentIdSuffix(student)}`;
     elements.studentName.textContent = student.name || "未填写姓名";
     elements.pendingStatus.textContent = attempt.selectionMethod === "volunteer" ? "自愿发言" : "等待回答";
     const target = Model.TASK_TARGETS[attempt.taskTarget] || "这题回答";
@@ -1170,13 +1178,17 @@
     return attempt.studentSnapshot || Model.getStudent(state, attempt.studentId) || {};
   }
 
+  function studentIdSuffix(student) {
+    const digits = String(student.studentCode || "").normalize("NFKC").replace(/\D/g, "");
+    return digits.slice(-4) || "不可用";
+  }
+
   function attemptMeta(attempt) {
     const student = attemptStudent(attempt);
-    const seat = student.seatNumber || student.studentCode;
     const lessonId = attempt.lessonId || state.session.lessonId;
     const lessonNumber = Model.getLessonNumber(lessonId);
     const source = attempt.selectionMethod === "volunteer" ? "自愿发言" : "随机抽问";
-    return `${source} · ${seat ? `座号 ${seat} · ` : ""}第 ${attempt.roundNumber} 轮 · 第 ${lessonNumber} 课`;
+    return `${source} · 学号末四位 ${studentIdSuffix(student)} · 第 ${attempt.roundNumber} 轮 · 第 ${lessonNumber} 课`;
   }
 
   function noResponseReasonLabel(reason) {
