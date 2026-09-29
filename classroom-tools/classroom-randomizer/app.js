@@ -265,8 +265,8 @@
     if (failure.kind === "network") return "网络暂时无法连接教学数据库；" + pendingLabel + "恢复连接后会自动重试。";
     if (failure.kind === "conflict") return "云端课堂记录发生冲突（HTTP 409）；" + pendingLabel + "请重新连接后再试。";
     if (failure.kind === "server") return "教学数据库暂时出错（HTTP " + failure.status + "）；" + pendingLabel + "稍后会自动重试。";
-    if (failure.kind === "rejected") return "教学数据库拒绝了记录（HTTP " + failure.status + "）；" + pendingLabel + "请保留备份并联系管理员。";
-    return "同步尚未完成；" + pendingLabel + "请打开「连接同步」查看状态。";
+    if (failure.kind === "rejected") return "教学数据库拒绝了记录（HTTP " + failure.status + "）；" + pendingLabel + "请保留备份并联系管理员。" + (failure.message ? " 原因：" + failure.message : "");
+    return "同步尚未完成；" + pendingLabel + "请打开「连接同步」查看状态。" + (failure.message ? " 原因：" + failure.message : "");
   }
 
   function handleCloudSyncResult(result) {
@@ -2090,7 +2090,8 @@
   if (global.RandomizerCloud && (global.RandomizerCloud.hasInviteSession() || global.RandomizerCloud.getAuthRedirectError())) {
     openCloudDialog();
   }
-  void flushCloudQueue();
+  if (state && cloudReady() && global.RandomizerCloud.pendingCount() > 0) syncCloudState();
+  else void flushCloudQueue();
   cloudSyncTimer = global.setInterval(flushCloudQueue, 30000);
   renderStart();
 }(window, document));

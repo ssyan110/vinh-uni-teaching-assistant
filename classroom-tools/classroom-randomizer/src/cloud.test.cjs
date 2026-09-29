@@ -5,7 +5,7 @@ const fs = require("node:fs");
 
 const cloudSource = fs.readFileSync(require.resolve("../data/cloud.js"), "utf8");
 
-function createHarness({ requestTimeout = 15000, failAttempts = false, expiredSession = false, failRefresh = false, beforeRequest, initialAttendance = null, recordAttempts = [], recordEvents = [], activeClassSessionDate = "2026-09-08" } = {}) {
+function createHarness({ requestTimeout = 15000, failAttempts = false, expiredSession = false, failRefresh = false, failStorageKey, beforeRequest, initialAttendance = null, recordAttempts = [], recordEvents = [], activeClassSessionDate = "2026-09-08", roster = [{ id: "student", studentCode: "TEST", name: "测试学生", seatNumber: "1" }], historicalEnrollments = [] } = {}) {
   const initialSession = expiredSession
     ? {
         access_token: "expired",
@@ -19,7 +19,10 @@ function createHarness({ requestTimeout = 15000, failAttempts = false, expiredSe
   ]);
   const storage = {
     getItem: (key) => values.get(key) || null,
-    setItem: (key, value) => values.set(key, value),
+    setItem: (key, value) => {
+      if (key === failStorageKey) throw new Error("Storage unavailable");
+      values.set(key, value);
+    },
     removeItem: (key) => values.delete(key)
   };
   const savedAttempts = new Map();
@@ -62,7 +65,13 @@ function createHarness({ requestTimeout = 15000, failAttempts = false, expiredSe
       let data = [];
       if (url.includes("/courses?")) data = [{ id: "course" }];
       if (url.includes("/enrollments?")) {
-        data = [{ seat_number: 1, student: { id: "student", student_code: "TEST", chinese_name: "测试学生" } }];
+        const studentCode = url.match(/student\.student_code=eq\.([^&]+)/)?.[1];
+        const studentId = url.match(/[?&]student_id=eq\.([^&]+)/)?.[1];
+        data = studentCode
+          ? historicalEnrollments.filter(row => row.student?.student_code === decodeURIComponent(studentCode))
+          : studentId
+            ? historicalEnrollments.filter(row => row.student_id === decodeURIComponent(studentId))
+            : roster.map((student, index) => ({ seat_number: student.seatNumber || index + 1, student: { id: student.id, student_code: student.studentCode, chinese_name: student.name } }));
       }
       if (url.includes("/class_sessions?")) {
         const requestedDate = url.match(/[?&]session_date=eq\.([^&]+)/)?.[1];
@@ -221,6 +230,85 @@ test("direct attendance upserts the linked class session once and retries failur
   await harness.cloud.recordState(input);
   assert.equal(writes.at(-1).status, 'present');
   assert.equal(harness.savedAttempts.size, 0);
+});
+
+test("queued attendance reuses the stable student id when the saved student code is stale", async () => {
+  const harness = createHarness();
+  const session = { classId: "QA", clientSessionId: "qa", sessionDate: "2026-09-18", textbookId: "boya-quasi-intermediate-i", lessonId: "lesson-01", currentRound: 1, answeredStudentIds: [], excludedStudentIds: [], rosterCount: 1, status: "completed" };
+  const change = { studentCode: "OLD-CODE", status: "absent", changedAt: "v1", changeId: "attendance-v1" };
+  harness.values.set("vinh-uni-teaching/randomizer-sync-queue-v2", JSON.stringify([
+    { kind: "attendance", client_event_id: "attendance:qa:OLD-CODE", session, change }
+  ]));
+
+  const result = await harness.cloud.recordState({ session: { id: "qa", className: "QA", date: "2026-09-18" }, attendanceChanges: { student: change } });
+
+  assert.equal(result.pending, 0);
+  assert.equal(harness.attendance().student_id, "student");
+  assert.equal(harness.attendance().status, "absent");
+});
+
+test("attendance retry resolves a withdrawn student through the same course enrollment", async () => {
+  const harness = createHarness({
+    roster: [{ id: "current-student", studentCode: "CURRENT", name: "在读学生", seatNumber: "1" }],
+    historicalEnrollments: [{ student_id: "withdrawn-student", status: "withdrawn", student: { id: "withdrawn-student", student_code: "OLD", chinese_name: "已退选学生" } }]
+  });
+
+  const result = await harness.cloud.recordState({ session: { id: "qa", className: "QA", date: "2026-09-18" }, attendanceChanges: {
+    OLD: { studentCode: "OLD", status: "absent", changedAt: "v1", changeId: "attendance-v1" }
+  } });
+
+  assert.equal(result.pending, 0);
+  assert.equal(harness.attendance().student_id, "withdrawn-student");
+});
+
+function confirmedTransferQueue() {
+  const session = { classId: "LT_02", clientSessionId: "session-mue657lp-5drimmpr", sessionDate: "2026-09-24", status: "completed" };
+  return [
+    "attendance-mufb5snl-jhf3hnuc", "attendance-mufbpk14-vkaiczxr",
+    "attendance-mufbpx52-p28d5r21", "attendance-mufbq3pb-sqd5k8f0", "attendance-mufbqb65-kdu8zvap"
+  ].map((changeId, index) => ({ kind: "attendance", client_event_id: `attendance:${session.clientSessionId}:TRANSFERRED-${index}`, session,
+    change: { studentCode: `TRANSFERRED-${index}`, status: "absent", changedAt: "2026-09-24T09:00:00Z", changeId }
+  })).concat({ kind: "finish", client_event_id: `finish:${session.clientSessionId}`, session });
+}
+
+test("confirmed transfers archive five cancellations and allow finish without attendance writes or replay", async () => {
+  const harness = createHarness();
+  const queue = confirmedTransferQueue();
+  harness.values.set("vinh-uni-teaching/randomizer-sync-queue-v2", JSON.stringify(queue));
+  const result = await harness.cloud.flushQueue();
+  assert.equal(result.pending, 0);
+  assert.equal(result.cancelled, 5);
+  assert.equal(result.sent, 1);
+  assert.equal(harness.paths.filter(path => path.includes("finish_randomizer_class")).length, 1);
+  const archive = harness.cloud.exportSyncBackup().attendanceCancellations;
+  assert.equal(Object.keys(archive).length, 5);
+  assert.equal(JSON.stringify(archive[queue[0].client_event_id].event), JSON.stringify(queue[0]));
+  await harness.cloud.recordState({ session: { id: queue[0].session.clientSessionId, className: "LT_02", date: "2026-09-24" },
+    attendanceChanges: Object.fromEntries(queue.slice(0, 5).map(item => [item.change.studentCode, item.change])) });
+  assert.equal(harness.paths.some(path => path.includes("attendance_records")), false);
+  assert.equal(harness.cloud.pendingCount(), 0);
+});
+
+test("cancellation recovery retains unapproved changes and stops if its archive or acknowledgement cannot save", async () => {
+  for (const failStorageKey of ["vinh-uni-teaching/randomizer-attendance-cancellations-v1", "vinh-uni-teaching/randomizer-attendance-ack-v1"]) {
+    const harness = createHarness({ failStorageKey });
+    harness.values.set("vinh-uni-teaching/randomizer-sync-queue-v2", JSON.stringify(confirmedTransferQueue()));
+    const result = await harness.cloud.flushQueue();
+    assert.equal(result.pending, 6);
+    assert.equal(result.failure.code, "ATTENDANCE_RECOVERY_STORAGE_FAILED");
+    assert.equal(harness.paths.length, 0);
+  }
+  for (const changed of ["changeId", "classId", "status"]) {
+    const harness = createHarness();
+    const queue = confirmedTransferQueue();
+    if (changed === "classId") queue[0].session.classId = "LT_03";
+    else queue[0].change[changed] = changed === "status" ? "present" : "new-unapproved-change";
+    harness.values.set("vinh-uni-teaching/randomizer-sync-queue-v2", JSON.stringify(queue));
+    const result = await harness.cloud.flushQueue();
+    assert.equal(result.pending, 6);
+    assert.equal(result.failure.code, "ATTENDANCE_STUDENT_NOT_FOUND");
+    assert.equal(Object.keys(harness.cloud.exportSyncBackup().attendanceCancellations).length, 0);
+  }
 });
 
 test("raw response records sync idempotently without scores or learning-event writes", async () => {
