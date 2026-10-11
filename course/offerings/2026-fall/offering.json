@@ -14,7 +14,7 @@
     "onsite_periods": 64,
     "online_study": "self-paced outside study; does not replace or reduce onsite periods",
     "count_basis": "per class, recurring timetable before any holiday/exam exceptions",
-    "lesson_allocation_status": "16-week teaching plan adjusted 2026-09-27: W03 progress bridge; boya-quasi-intermediate-i:lesson-03 through lesson-12 scheduled W04–W13; project, simulation and final performance W14–W16; each class actual progress and holiday/exam exceptions remain subject to classroom records and school notices."
+    "lesson_allocation_status": "Superseded for second-year quasi-intermediate by textbooks[].class_scope.teaching_plan (2026-10-02 military-training adjustment); base recurring timetable retained."
   },
   "primary_textbook_id": "boya-quasi-intermediate-i",
   "lesson_key_prefix": "boya-quasi-intermediate-i:",
@@ -46,7 +46,168 @@
       "role": "primary",
       "status": "active_source_review",
       "manifest": "textbooks/boya-quasi-intermediate-i/textbook.json",
-      "lesson_root": "lessons/boya-quasi-intermediate-i"
+      "lesson_root": "lessons/boya-quasi-intermediate-i",
+      "class_scope": {
+        "class_codes": [
+          "LT_01",
+          "LT_02",
+          "LT_03"
+        ],
+        "teaching_plan": {
+          "updated_on": "2026-10-02",
+          "exception_source": "Adam current chat: four weeks military training, return week of 2026-11-02",
+          "suspended_from": "2026-10-05",
+          "suspended_through": "2026-11-01",
+          "return_week_starts_on": "2026-11-02",
+          "ends_on": "2026-12-27",
+          "available_sessions": 12,
+          "available_onsite_periods": 48,
+          "post_return_sessions": 8,
+          "post_return_periods": 32,
+          "periods_per_session": 4,
+          "minutes_per_period": 50,
+          "progress_assumption": "lesson-03 completed before suspension; actual progress remains per classroom records",
+          "plan_status": "compact planning allocation; existing per-lesson approved hours and completion not overwritten",
+          "weeks": [
+            {
+              "week": 1,
+              "lesson_keys": [
+                "boya-quasi-intermediate-i:lesson-01"
+              ],
+              "onsite_periods": 4,
+              "title": "第1课《丽丽是独生女》",
+              "dates": "09/07–09/13"
+            },
+            {
+              "week": 2,
+              "lesson_keys": [
+                "boya-quasi-intermediate-i:lesson-02"
+              ],
+              "onsite_periods": 4,
+              "title": "第2课《王红的一天》",
+              "dates": "09/14–09/20"
+            },
+            {
+              "week": 3,
+              "lesson_keys": [
+                "boya-quasi-intermediate-i:lesson-03"
+              ],
+              "onsite_periods": 4,
+              "title": "进度衔接与第3课预习",
+              "dates": "09/21–09/27"
+            },
+            {
+              "week": 4,
+              "lesson_keys": [
+                "boya-quasi-intermediate-i:lesson-03"
+              ],
+              "onsite_periods": 4,
+              "title": "第3课《我对学中文越来越有兴趣》",
+              "dates": "09/28–10/04"
+            },
+            {
+              "week": 5,
+              "lesson_keys": [],
+              "onsite_periods": 0,
+              "title": "军事训练：停课",
+              "dates": "10/05–10/11"
+            },
+            {
+              "week": 6,
+              "lesson_keys": [],
+              "onsite_periods": 0,
+              "title": "军事训练：停课",
+              "dates": "10/12–10/18"
+            },
+            {
+              "week": 7,
+              "lesson_keys": [],
+              "onsite_periods": 0,
+              "title": "军事训练：停课",
+              "dates": "10/19–10/25"
+            },
+            {
+              "week": 8,
+              "lesson_keys": [],
+              "onsite_periods": 0,
+              "title": "军事训练：停课",
+              "dates": "10/26–11/01"
+            },
+            {
+              "week": 9,
+              "lesson_keys": [
+                "boya-quasi-intermediate-i:lesson-04",
+                "boya-quasi-intermediate-i:lesson-05"
+              ],
+              "onsite_periods": 4,
+              "title": "第4课《在中国学汉语》＋第5课《我的音乐老师》",
+              "dates": "11/02–11/08"
+            },
+            {
+              "week": 10,
+              "lesson_keys": [
+                "boya-quasi-intermediate-i:lesson-06",
+                "boya-quasi-intermediate-i:lesson-07"
+              ],
+              "onsite_periods": 4,
+              "title": "第6课《大圣参加了学校的合唱团》＋第7课《小张热爱登山》",
+              "dates": "11/09–11/15"
+            },
+            {
+              "week": 11,
+              "lesson_keys": [
+                "boya-quasi-intermediate-i:lesson-08"
+              ],
+              "onsite_periods": 4,
+              "title": "第8课《孙子和〈孙子兵法〉》",
+              "dates": "11/16–11/22"
+            },
+            {
+              "week": 12,
+              "lesson_keys": [
+                "boya-quasi-intermediate-i:lesson-09"
+              ],
+              "onsite_periods": 4,
+              "title": "第9课《北方菜和南方菜》",
+              "dates": "11/23–11/29"
+            },
+            {
+              "week": 13,
+              "lesson_keys": [
+                "boya-quasi-intermediate-i:lesson-10"
+              ],
+              "onsite_periods": 4,
+              "title": "第10课《中国人喜欢聚餐》",
+              "dates": "11/30–12/06"
+            },
+            {
+              "week": 14,
+              "lesson_keys": [
+                "boya-quasi-intermediate-i:lesson-11"
+              ],
+              "onsite_periods": 4,
+              "title": "第11课《原来他们是关心我》",
+              "dates": "12/07–12/13"
+            },
+            {
+              "week": 15,
+              "lesson_keys": [
+                "boya-quasi-intermediate-i:lesson-12"
+              ],
+              "onsite_periods": 4,
+              "title": "第12课《散步》",
+              "dates": "12/14–12/20"
+            },
+            {
+              "week": 16,
+              "lesson_keys": [],
+              "onsite_periods": 4,
+              "title": "期末整合表现、学习档案与课程总结",
+              "dates": "12/21–12/27"
+            }
+          ]
+        }
+      }
     }
   ],
   "course_documents": {
@@ -64,5 +225,7 @@
     "onsite_periods": 44,
     "online_study": "self-paced outside study; does not replace or reduce onsite periods"
   },
-  "official_timetable": "course/offerings/2026-fall/official-timetable.json"
+  "official_timetable": "course/offerings/2026-fall/official-timetable.json",
+  "clock_effective_from": "2026-10-12",
+  "clock_policy": "2026/10/12起（Adam于2026/10/10确认）：上午上课及下课延后30分钟，下午提前30分钟；每节50分钟，课间5分钟，每次4节净教学200分钟。NNTQ1周一、LT_03周五07:55–11:30；LT_01周三、LT_02周四13:00–16:35。教室与节次不变；先前日期保留旧作息，二年级军训停课2026/10/05–11/01保持。"
 }

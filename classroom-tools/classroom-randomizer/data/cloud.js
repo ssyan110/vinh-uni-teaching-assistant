@@ -327,9 +327,10 @@
 
   function isoDate(value) {
     const candidate = text(value);
-    return /^\d{4}-\d{2}-\d{2}$/.test(candidate)
-      ? candidate
-      : new Date().toISOString().slice(0, 10);
+    if (!candidate) return new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Ho_Chi_Minh", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(candidate) || Number.isNaN(Date.parse(candidate))
+      || new Date(`${candidate}T00:00:00Z`).toISOString().slice(0, 10) !== candidate) throw new Error("上课日期无效，请核对后再同步。");
+    return candidate;
   }
 
   function lessonId(value) {
@@ -338,35 +339,19 @@
     return `lesson-${String(number).padStart(2, "0")}`;
   }
 
-  async function ensureClassSession(context, sessionDate, metadata) {
-    // class_sessions allows only one in-progress row per course, regardless of date.
-    const activeSessionPath = `/rest/v1/class_sessions?select=id&course_id=eq.${encodeURIComponent(context.courseId)}&status=eq.in_progress&limit=1`;
-    const existing = await request(activeSessionPath);
-    if (Array.isArray(existing) && existing[0]) return existing[0].id;
-    const details = metadata || {};
-    const created = await request("/rest/v1/class_sessions", {
+  async function ensureClassSession(context, sessionDate) {
+    const date = isoDate(sessionDate);
+    const classSessionId = await request("/rest/v1/rpc/ensure_class_session", {
       method: "POST",
-      headers: { Prefer: "return=representation" },
-      body: JSON.stringify({
-        course_id: context.courseId,
-        session_date: isoDate(sessionDate),
-        status: "in_progress",
-        topic: details.topic || null,
-        observation_target: details.observationTarget || null
-      })
-    }).catch(async (error) => {
-      if (error.status !== 409) throw error;
-      const retry = await request(activeSessionPath);
-      return retry;
+      body: JSON.stringify({ p_course_id: context.courseId, p_session_date: date })
     });
-    const row = Array.isArray(created) ? created[0] : created;
-    if (!row || !row.id) throw new Error("无法创建云端课堂。");
-    return row.id;
+    if (!text(classSessionId)) throw new Error("无法连接云端课堂。");
+    return classSessionId;
   }
 
   async function startSession(classId, options) {
     const context = await fetchClassRoster(classId);
-    return ensureClassSession(context, options && options.sessionDate, options);
+    return ensureClassSession(context, options && options.sessionDate);
   }
 
   function normalizeSession(input) {
@@ -380,6 +365,7 @@
     return {
       classId,
       clientSessionId,
+      classSessionId: text(source.classSessionId) || null,
       sessionDate: isoDate(source.date),
       textbookId: text(source.textbookId) || "boya-quasi-intermediate-i",
       lessonId: normalizedLessonId,
@@ -401,20 +387,29 @@
 
   async function ensureRandomizerSession(normalized, context) {
     const rosterContext = context || await fetchClassRoster(normalized.classId);
-    const existing = await request(`/rest/v1/randomizer_sessions?select=id,class_session_id,status&course_id=eq.${encodeURIComponent(rosterContext.courseId)}&client_session_id=eq.${encodeURIComponent(normalized.clientSessionId)}&limit=1`);
+    const existing = await request(`/rest/v1/randomizer_sessions?select=id,class_session_id,status&client_session_id=eq.${encodeURIComponent(normalized.clientSessionId)}&limit=1`);
     const linked = Array.isArray(existing) && existing[0];
+    if (linked && normalized.classSessionId && linked.class_session_id !== normalized.classSessionId) {
+      throw new Error("本机课堂与已保存的云端课次不一致，记录已保留，请先核对课次。");
+    }
+    const classSessionId = linked && linked.class_session_id || normalized.classSessionId
+      || await ensureClassSession(rosterContext, normalized.sessionDate);
+    const classes = await request(`/rest/v1/class_sessions?select=id,course_id,session_date,status,completed_at&course_id=eq.${encodeURIComponent(rosterContext.courseId)}&id=eq.${encodeURIComponent(classSessionId)}&limit=1`);
+    const classroom = Array.isArray(classes) && classes[0];
+    if (!classroom || classroom.id !== classSessionId || classroom.course_id !== rosterContext.courseId) {
+      throw new Error("已关联的云端课堂不属于本班或无法访问，记录已保留。");
+    }
+    if (!linked && classroom.session_date !== normalized.sessionDate) {
+      throw new Error("上课日期与已选择的云端课次不一致，记录已保留。");
+    }
     if (linked && linked.class_session_id && linked.status === "completed") {
       return { context: rosterContext, classSessionId: linked.class_session_id, randomizerSessionId: linked.id };
     }
-    const classSessionId = linked && linked.class_session_id || await ensureClassSession(rosterContext, normalized.sessionDate, {
-      topic: `华语课堂抽问｜${normalized.textbookId}｜${normalized.lessonId}`,
-      observationTarget: normalized.activityLabel
-    });
     const body = {
       class_session_id: classSessionId,
       course_id: rosterContext.courseId,
       client_session_id: normalized.clientSessionId,
-      session_date: normalized.sessionDate,
+      session_date: classroom.session_date,
       textbook_id: normalized.textbookId,
       lesson_id: normalized.lessonId,
       scoring_mode: normalized.scoringMode,
@@ -424,7 +419,8 @@
       answered_student_ids: normalized.answeredStudentIds,
       excluded_student_ids: normalized.excludedStudentIds,
       roster_count: normalized.rosterCount,
-      status: "in_progress"
+      status: classroom.status === "completed" ? "completed" : "in_progress",
+      ...(classroom.status === "completed" ? { completed_at: classroom.completed_at || new Date().toISOString() } : {})
     };
     const saved = await request("/rest/v1/randomizer_sessions?on_conflict=owner_id,client_session_id", {
       method: "POST",
@@ -453,7 +449,7 @@
     // `pending` for an answered row. This is only a database compatibility
     // value; the randomizer never creates, edits, or synchronizes scores.
     const assessmentStatus = outcome === "answered" ? "pending" : "not_applicable";
-    const selectionMethod = source.selectionMethod === "volunteer" ? "volunteer" : "random";
+    const selectionMethod = ["volunteer", "teacher"].includes(source.selectionMethod) ? source.selectionMethod : "random";
     const responseStatus = outcome === "not_answered"
       ? "no_response"
       : outcome === "answered"
@@ -471,10 +467,11 @@
       studentName: studentName || "未填写姓名",
       seatNumber: text(snapshot.seatNumber || snapshot.seat_number) || null,
       roundNumber: Number(source.roundNumber) > 0 ? Number(source.roundNumber) : normalizedSession.currentRound,
-      eventType: source.eventType || (selectionMethod === "volunteer" ? "voluntary_speaking" : "random_call"),
+      eventType: source.eventType || (selectionMethod === "volunteer" ? "voluntary_speaking" : selectionMethod === "teacher" ? "teacher_call" : "random_call"),
       selectionMethod,
       opportunityStatus: source.opportunityStatus || (selectionMethod === "volunteer" ? "volunteered" : "called"),
       outcome,
+      roundSkipped: source.roundSkipped === true && ["not_answered", "undone"].includes(outcome),
       responseStatus,
       noResponseReason,
       answerContext: ["prepared", "unprepared", "unknown"].includes(source.answerContext) ? source.answerContext : "unknown",
@@ -502,6 +499,7 @@
         ? Number(source.eventOrder)
         : Number(source.roundNumber) > 0 ? Number(source.roundNumber) : 1,
       createdAt: source.createdAt || source.drawnAt || new Date().toISOString(),
+      sourceUpdatedAt: source.updatedAt || source.completedAt || source.drawnAt || null,
       drawnAt: source.drawnAt || new Date().toISOString(),
       completedAt: outcome === "pending" ? null : (source.completedAt || source.updatedAt || new Date().toISOString())
     };
@@ -524,6 +522,7 @@
       opportunity_status: normalizedAttempt.opportunityStatus,
       response_status: normalizedAttempt.responseStatus,
       outcome: normalizedAttempt.outcome,
+      round_skipped: normalizedAttempt.roundSkipped,
       no_response_reason: normalizedAttempt.noResponseReason,
       answer_context: normalizedAttempt.answerContext,
       attendance_status: normalizedAttempt.attendanceStatus,
@@ -543,7 +542,8 @@
       corrected_at: normalizedAttempt.correctedAt,
       created_at: normalizedAttempt.createdAt,
       drawn_at: normalizedAttempt.drawnAt,
-      completed_at: normalizedAttempt.completedAt
+      completed_at: normalizedAttempt.completedAt,
+      source_updated_at: normalizedAttempt.sourceUpdatedAt
     };
   }
 
@@ -645,7 +645,11 @@
       originals[key] = original;
       // Capture before writing, so an offline retry or interrupted request cannot
       // replace the true original with our own absence mark.
-      writeJson(ATTENDANCE_ORIGINAL_KEY, originals);
+      if (!writeJson(ATTENDANCE_ORIGINAL_KEY, originals)) {
+        const error = new Error("本机无法保存出席记录的原始状态，已暂停上传；请下载备份后重试。");
+        error.code = "ATTENDANCE_RECOVERY_STORAGE_FAILED";
+        throw error;
+      }
     }
     if (item.change.restoreOriginal) {
       const currentStatus = current ? current.status : null;
@@ -708,7 +712,7 @@
     let failure = null;
     const blockedSessions = new Set();
     for (const [index, item] of queue.entries()) {
-      const sessionKey = item && item.session && (item.session.classId || item.session.clientSessionId);
+      const sessionKey = item && item.session && `${item.session.classId}:${item.session.clientSessionId}`;
       if (sessionKey && blockedSessions.has(sessionKey)) { remaining.push(item); continue; }
       try {
         if (!item || !["session", "attempt", "attendance", "finish"].includes(item.kind)) {

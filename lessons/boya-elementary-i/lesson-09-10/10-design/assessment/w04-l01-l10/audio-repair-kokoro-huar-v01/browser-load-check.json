@@ -1,0 +1,15 @@
+{
+  "status": "local_load_pass",
+  "samples": [
+    {
+      "file": "E03-A01-default.wav",
+      "duration": 0.95
+    },
+    {
+      "file": "E03-A01-huar-phoneme-input.wav",
+      "duration": 0.8
+    }
+  ],
+  "auditory_quality_verified": false,
+  "network": "file only; others blocked"
+}

@@ -1,0 +1,27 @@
+{
+  "status": "local_load_pass",
+  "samples": [
+    {
+      "file": "../audio-repair-kokoro-huar-v01/E03-A01-default.wav",
+      "duration": 0.95
+    },
+    {
+      "file": "../audio-repair-kokoro-huar-v01/E03-A01-huar-phoneme-input.wav",
+      "duration": 0.8
+    },
+    {
+      "file": "../audio-repair-kokoro-fudao-v01/E08-C01-default.wav",
+      "duration": 9.7
+    },
+    {
+      "file": "../audio-repair-kokoro-fudao-v01/E08-C01-fudao-citation-tone.wav",
+      "duration": 9.7
+    },
+    {
+      "file": "E09-C01.wav",
+      "duration": 12.1
+    }
+  ],
+  "auditory_quality_verified": false,
+  "network": "file only; others blocked"
+}

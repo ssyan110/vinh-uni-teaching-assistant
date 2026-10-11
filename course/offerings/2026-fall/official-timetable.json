@@ -6,58 +6,58 @@
   "starts_on": "2026-09-07",
   "ends_on": "2026-12-27",
   "timezone": "Asia/Ho_Chi_Minh",
-  "clock_basis": "用户提供的夏季作息表；未推定冬季切换日期",
-  "exceptions_status": "未提供停课、补课或考试安排；逐次日期按每周课表推算",
+  "clock_basis": "2026/10/12起（Adam于2026/10/10确认）：上午上课及下课延后30分钟，下午提前30分钟；每节50分钟，课间5分钟，每次4节净教学200分钟。NNTQ1周一、LT_03周五07:55–11:30；LT_01周三、LT_02周四13:00–16:35。教室与节次不变；先前日期保留旧作息，二年级军训停课2026/10/05–11/01保持。",
+  "exceptions_status": "2026-10-02 Adam confirmed second-year military-training suspension 2026-10-05–2026-11-01; other make-up/exam exceptions not supplied.",
   "periods": [
     {
       "number": 1,
-      "start": "06:30",
-      "end": "07:20"
+      "start": "07:00",
+      "end": "07:50"
     },
     {
       "number": 2,
-      "start": "07:25",
-      "end": "08:15"
+      "start": "07:55",
+      "end": "08:45"
     },
     {
       "number": 3,
-      "start": "08:20",
-      "end": "09:10"
+      "start": "08:50",
+      "end": "09:40"
     },
     {
       "number": 4,
-      "start": "09:15",
-      "end": "10:05"
+      "start": "09:45",
+      "end": "10:35"
     },
     {
       "number": 5,
-      "start": "10:10",
-      "end": "11:00"
+      "start": "10:40",
+      "end": "11:30"
     },
     {
       "number": 6,
-      "start": "13:30",
-      "end": "14:20"
+      "start": "13:00",
+      "end": "13:50"
     },
     {
       "number": 7,
-      "start": "14:25",
-      "end": "15:15"
+      "start": "13:55",
+      "end": "14:45"
     },
     {
       "number": 8,
-      "start": "15:20",
-      "end": "16:10"
+      "start": "14:50",
+      "end": "15:40"
     },
     {
       "number": 9,
-      "start": "16:15",
-      "end": "17:05"
+      "start": "15:45",
+      "end": "16:35"
     },
     {
       "number": 10,
-      "start": "17:10",
-      "end": "18:00"
+      "start": "16:40",
+      "end": "17:30"
     }
   ],
   "classes": [
@@ -72,8 +72,8 @@
         8,
         9
       ],
-      "starts_at": "13:30",
-      "ends_at": "17:05",
+      "starts_at": "13:00",
+      "ends_at": "16:35",
       "scheduled_dates": [
         "2026-09-09",
         "2026-09-16",
@@ -104,8 +104,8 @@
         8,
         9
       ],
-      "starts_at": "13:30",
-      "ends_at": "17:05",
+      "starts_at": "13:00",
+      "ends_at": "16:35",
       "scheduled_dates": [
         "2026-09-10",
         "2026-09-17",
@@ -136,8 +136,8 @@
         4,
         5
       ],
-      "starts_at": "07:25",
-      "ends_at": "11:00",
+      "starts_at": "07:55",
+      "ends_at": "11:30",
       "scheduled_dates": [
         "2026-09-11",
         "2026-09-18",
@@ -168,5 +168,98 @@
       "sha256": "852d7db246e773b1088d107fb23af5a4654cf3d392af4a5dad22d98920231bf6"
     }
   ],
-  "excluded_course": "图片中划掉的周三上午 Tiếng Trung 2(126.1)_LT_01_(TC)"
+  "excluded_course": "图片中划掉的周三上午 Tiếng Trung 2(126.1)_LT_01_(TC)",
+  "schedule_exceptions": [
+    {
+      "textbook_id": "boya-quasi-intermediate-i",
+      "class_codes": [
+        "LT_01",
+        "LT_02",
+        "LT_03"
+      ],
+      "starts_on": "2026-10-05",
+      "ends_on": "2026-11-01",
+      "status": "suspended",
+      "reason": "军事训练",
+      "source": "Adam current chat, 2026-10-02",
+      "return_week_starts_on": "2026-11-02",
+      "note": "scheduled_dates retains recurring base dates; apply this overlay to compute available sessions. No completed attendance inferred."
+    }
+  ],
+  "clock_effective_from": "2026-10-12",
+  "clock_history": [
+    {
+      "starts_on": "2026-09-07",
+      "ends_on": "2026-10-11",
+      "periods": [
+        {
+          "number": 1,
+          "start": "06:30",
+          "end": "07:20"
+        },
+        {
+          "number": 2,
+          "start": "07:25",
+          "end": "08:15"
+        },
+        {
+          "number": 3,
+          "start": "08:20",
+          "end": "09:10"
+        },
+        {
+          "number": 4,
+          "start": "09:15",
+          "end": "10:05"
+        },
+        {
+          "number": 5,
+          "start": "10:10",
+          "end": "11:00"
+        },
+        {
+          "number": 6,
+          "start": "13:30",
+          "end": "14:20"
+        },
+        {
+          "number": 7,
+          "start": "14:25",
+          "end": "15:15"
+        },
+        {
+          "number": 8,
+          "start": "15:20",
+          "end": "16:10"
+        },
+        {
+          "number": 9,
+          "start": "16:15",
+          "end": "17:05"
+        },
+        {
+          "number": 10,
+          "start": "17:10",
+          "end": "18:00"
+        }
+      ],
+      "classes": [
+        {
+          "code": "LT_01",
+          "starts_at": "13:30",
+          "ends_at": "17:05"
+        },
+        {
+          "code": "LT_02",
+          "starts_at": "13:30",
+          "ends_at": "17:05"
+        },
+        {
+          "code": "LT_03",
+          "starts_at": "07:25",
+          "ends_at": "11:00"
+        }
+      ]
+    }
+  ]
 }

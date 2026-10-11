@@ -4,6 +4,7 @@ import {useTracker} from '../state/TrackerContext'
 import {todayIso} from '../data/repository'
 import {eventDay,evidenceRows,currentNotes,noteLabels} from '../utils/classroomAnalysis'
 import {EvidenceList} from '../components/EvidenceList'
+import {AttendanceExceptions} from '../components/AttendanceExceptions'
 import {studentCodeLastFour} from '../utils/studentIdentity'
 import {downloadCsv,exportClassroomCsv} from '../utils/classroomExport'
 import type {StudentNote,NoteInput} from '../types'
@@ -33,6 +34,7 @@ export function StudentDetailPage() {
  <section className="panel"><h2>事實備註</h2>{latest.map(n=><article key={n.id} className="fact-note"><p><time>{n.note_date}</time> · {noteLabels[n.category]}</p><p>{n.body}</p>{n.correction_reason&&<p>修正原因：{n.correction_reason}</p>}<button className="text-button" onClick={()=>edit(n)}>修正這筆</button><button className="text-button" onClick={()=>{setTodo(`${noteLabels[n.category]}：${n.body}`.slice(0,300));setDue('')}}>帶入跟進待辦</button>{n.supersedes_id&&<details><summary>查看修正前紀錄</summary>{oldVersions(n).map(old=><p key={old.id}>{old.note_date} · {noteLabels[old.category]} · {old.body}</p>)}</details>}</article>)}{!latest.length&&<p>選定日期尚無事實備註。</p>}</section>
  <section className="panel"><h2>跟進待辦</h2><form className="note-form" onSubmit={async e=>{e.preventDefault();setMessage('');try{await addFollowup({courseId,studentId:student.id,kind:'remind',title:todo,dueOn:due||undefined});setTodo('');setMessage('跟進待辦已保存。')}catch(err){setFormError(err instanceof Error?err.message:'待辦保存失敗。')}}}><label className="wide">需要跟進的事<input required maxLength={300} value={todo} onChange={e=>setTodo(e.target.value)}/></label><label>到期日（選填）<input type="date" value={due} onChange={e=>setDue(e.target.value)}/></label><button className="secondary-button" disabled={busy}>新增跟進待辦</button></form>{followups.map(f=><p key={f.id}>{f.title} · {f.due_on||'未定日期'} · {f.status==='open'?'待處理':f.status==='completed'?'已完成':'已取消'}</p>)}<Link to="/followups">處理待辦 →</Link></section>
  <section className="panel"><h2>每次回答</h2><p className="field-help">回答次數只計入有效回答；更正後保留原始紀錄、修正原因與時間，但不再計入次數。</p><EvidenceList rows={rows.slice(0,page*30)} onCorrect={(target,correctionReason)=>correctClassroomRecord({...target,reason:correctionReason}).then(()=>setMessage('回答紀錄已更正，回答次數已更新。'))}/>{rows.length>page*30&&<button onClick={()=>setPage(p=>p+1)}>再顯示 30 筆</button>}</section>
+ <AttendanceExceptions key={courseId} studentId={student.id} courseId={courseId} />
  <details className="panel"><summary>舊課堂觀察與出席紀錄（只讀歷史）</summary><p>目前出席以獨立 QR 點名 Google Sheet 為準，以下舊紀錄不代表已同步。</p>{snapshot.observations.filter(o=>o.student_id===student.id&&snapshot.sessions.some(s=>s.id===o.session_id&&s.course_id===courseId)).map(o=><p key={o.id}>{o.observed_at} · {o.result} · {o.note}</p>)}{snapshot.attendance.filter(a=>a.student_id===student.id&&snapshot.sessions.some(s=>s.id===a.session_id&&s.course_id===courseId)).map(a=><p key={a.id}>{snapshot.sessions.find(s=>s.id===a.session_id)?.session_date} · {a.status}</p>)}</details>
  </>}
  </div>

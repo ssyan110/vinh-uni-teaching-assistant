@@ -549,8 +549,18 @@ def main() -> int:
     parser.add_argument("--stage", choices=("authority", "draft"), default="authority")
     parser.add_argument("--lesson-key")
     parser.add_argument("--offering-id")
+    parser.add_argument("--exam-id")
     args = parser.parse_args()
-    if args.purpose == "content-approval":
+    if args.purpose == "assessment-audio":
+        from assessment_audio_gate import check_assessment_audio
+        result = check_assessment_audio(PROJECT_ROOT, args.exam_id, args.output_dir,
+                                        args.offering_id, args.lesson_key)
+        if args.stage != "authority":
+            result["blockers"].append("assessment-audio uses its isolated exam route, not the lesson draft route")
+            result["status"] = "blocked"
+    elif args.exam_id is not None:
+        result = {"status": "blocked", "blockers": ["exam-id only applies to assessment-audio"]}
+    elif args.purpose == "content-approval":
         result = check_content_approval(args.lesson_key, args.offering_id)
     elif args.stage == "draft":
         if args.purpose != "pptx":

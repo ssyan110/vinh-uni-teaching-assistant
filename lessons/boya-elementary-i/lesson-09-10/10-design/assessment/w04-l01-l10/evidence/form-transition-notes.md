@@ -1,0 +1,3 @@
+# 新Form登记转换
+
+新私有50题Form已由父线程浏览器负责方验证。旧Form/旧答卷未改。items question内容、ID、答案、音频与时间预算不变，仅资源metadata更新；新items SHA256为172064a4195ca8f8acaf22428781080ef1ca842319ee49ea76b8733ea32b4990。新Form全部题必填，原留空说明已标为待核，不冒称学生就绪。原Form更新计划已存evidence/original-legacy-form-update-plan.json，仅作历史证据。

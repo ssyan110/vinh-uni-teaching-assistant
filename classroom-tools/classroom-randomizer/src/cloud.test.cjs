@@ -5,7 +5,7 @@ const fs = require("node:fs");
 
 const cloudSource = fs.readFileSync(require.resolve("../data/cloud.js"), "utf8");
 
-function createHarness({ requestTimeout = 15000, failAttempts = false, expiredSession = false, failRefresh = false, failStorageKey, beforeRequest, initialAttendance = null, recordAttempts = [], recordEvents = [], activeClassSessionDate = "2026-09-08", roster = [{ id: "student", studentCode: "TEST", name: "测试学生", seatNumber: "1" }], historicalEnrollments = [] } = {}) {
+function createHarness({ requestTimeout = 15000, failAttempts = false, expiredSession = false, failRefresh = false, failStorageKey, beforeRequest, initialAttendance = null, recordAttempts = [], recordEvents = [], activeClassSessionDate = "2026-09-08", linkedRandomizer = null, classroomStatus = "in_progress", classroomId = "session", roster = [{ id: "student", studentCode: "TEST", name: "测试学生", seatNumber: "1" }], historicalEnrollments = [] } = {}) {
   const initialSession = expiredSession
     ? {
         access_token: "expired",
@@ -63,6 +63,10 @@ function createHarness({ requestTimeout = 15000, failAttempts = false, expiredSe
       }
       const body = options.body ? JSON.parse(options.body) : null;
       let data = [];
+      if (url.endsWith('/rpc/ensure_class_session')) {
+        if (body.p_session_date !== activeClassSessionDate) return {ok:false,status:400,text:async()=>JSON.stringify({code:'P0001',message:'旧课次尚未收尾'})};
+        data = classroomId;
+      }
       if (url.includes("/courses?")) data = [{ id: "course" }];
       if (url.includes("/enrollments?")) {
         const studentCode = url.match(/student\.student_code=eq\.([^&]+)/)?.[1];
@@ -75,14 +79,15 @@ function createHarness({ requestTimeout = 15000, failAttempts = false, expiredSe
       }
       if (url.includes("/class_sessions?")) {
         const requestedDate = url.match(/[?&]session_date=eq\.([^&]+)/)?.[1];
-        data = !requestedDate || decodeURIComponent(requestedDate) === activeClassSessionDate ? [{ id: "session" }] : [];
+        data = !requestedDate || decodeURIComponent(requestedDate) === activeClassSessionDate
+          ? [{ id: classroomId, course_id: 'course', session_date: activeClassSessionDate, status: classroomStatus }] : [];
       }
       if (url.endsWith("/class_sessions") && options.method === "POST") {
         return { ok: false, status: 409, text: async () => '{"message":"active class session exists"}' };
       }
       if (url.includes("/randomizer_sessions?")) {
         if (options.method === "POST") savedRandomizerSessions.push(body);
-        data = [{ id: "random-session" }];
+        data = options.method === 'POST' ? [{ id: "random-session" }] : linkedRandomizer ? [linkedRandomizer] : [];
       }
       if (url.includes('/attendance_records?')) {
         if (options.method === 'POST') attendance = {id:'attendance-id', ...attendance, ...body};
@@ -144,6 +149,59 @@ function send(cloud, attempt) {
   });
 }
 
+test('a started classroom ID is retained for every subsequent raw answer', async () => {
+  const harness = createHarness();
+  const classSessionId = await harness.cloud.startSession('QA', { sessionDate: '2026-09-08' });
+  assert.equal(classSessionId, 'session');
+  const result = await harness.cloud.recordState({ session: { id: 'bound', className: 'QA', date: '2026-09-08', classSessionId }, attempts: [rawAttempt({ roundSkipped: true, outcome: 'not_answered', noResponseReason: 'time_insufficient', updatedAt: '2026-09-08T01:03:00Z' })] });
+  assert.equal(result.pending, 0);
+  assert.equal(harness.paths.filter(p => p.endsWith('/rpc/ensure_class_session')).length, 1);
+  assert.equal(harness.savedRandomizerSessions[0].class_session_id, classSessionId);
+  assert.equal(harness.savedAttempts.get('answer-1').round_skipped, true);
+  assert.equal(harness.savedAttempts.get('answer-1').source_updated_at, '2026-09-08T01:03:00Z');
+});
+
+test('a linked old classroom is replayed without resolving the currently active classroom', async () => {
+  const harness = createHarness({ linkedRandomizer: {id:'saved',class_session_id:'old-class',status:'completed'}, classroomId:'old-class',activeClassSessionDate:'2026-09-09',classroomStatus:'completed' });
+  const result = await send(harness.cloud, rawAttempt());
+  assert.equal(result.pending, 0);
+  assert.equal(harness.savedAttempts.get('answer-1').randomizer_session_id, 'saved');
+  assert.ok(!harness.paths.some(p => p.includes('/rpc/ensure_class_session')));
+});
+
+test('a mismatched explicit classroom binding preserves the queue without writing answers', async () => {
+  const harness = createHarness({ linkedRandomizer:{id:'saved',class_session_id:'old-class',status:'in_progress'} });
+  const result = await harness.cloud.recordState({session:{id:'bound',className:'QA',date:'2026-09-08',classSessionId:'different-class'},attempts:[rawAttempt()]});
+  assert.equal(result.pending, 2);
+  assert.match(result.failure.message, /课次不一致/);
+  assert.equal(harness.savedAttempts.size, 0);
+});
+
+test('a corrected classroom date remains authoritative when an existing link is replayed', async () => {
+  const harness = createHarness({ linkedRandomizer:{id:'saved',class_session_id:'session',status:'in_progress'},activeClassSessionDate:'2026-09-09' });
+  const result = await send(harness.cloud, rawAttempt());
+  assert.equal(result.pending, 0);
+  assert.ok(harness.savedRandomizerSessions.every(s => s.session_date === '2026-09-09'));
+});
+
+test('an in-flight old answer never removes a newer queued correction', async () => {
+  let entered, release;
+  const ready = new Promise(resolve => { entered=resolve; });
+  const blocked = new Promise(resolve => { release=resolve; });
+  let once=true;
+  const harness=createHarness({beforeRequest:async url=>{if(once && url.includes('/randomizer_attempts?')){once=false;entered();await blocked;}}});
+  const initial=send(harness.cloud,rawAttempt({note:'old',updatedAt:'2026-09-08T01:00:00Z'}));
+  await ready;
+  const newer=send(harness.cloud,rawAttempt({note:'new',updatedAt:'2026-09-08T01:02:00Z'}));
+  release();
+  await initial;
+  await newer;
+  await harness.cloud.flushQueue();
+  assert.equal(harness.savedAttempts.size, 1);
+  assert.equal(harness.savedAttempts.get('answer-1').note, 'new');
+  assert.equal(harness.savedAttempts.get('answer-1').source_updated_at, '2026-09-08T01:02:00Z');
+});
+
 for (const originalStatus of ['excused', 'late', 'present', null]) {
   test(`undo first absence restores original ${originalStatus ?? 'missing record'} including offline retry`, async () => {
     const model = require('./model.js');
@@ -153,7 +211,7 @@ for (const originalStatus of ['excused', 'late', 'present', null]) {
         if (offline && url.includes('/attendance_records?') && ['PATCH','DELETE'].includes(options.method)) throw new Error('offline');
       }
     });
-    let state = model.createSession({className:'QA',sessionId:'qa-undo',roster:[{studentCode:'TEST',name:'Synthetic'}]});
+    let state = model.createSession({className:'QA',sessionId:'qa-undo',date:'2026-09-08',roster:[{studentCode:'TEST',name:'Synthetic'}]});
     state = model.setAbsent(state,'TEST',true);
     await harness.cloud.recordState(state);
     assert.equal(harness.attendance().status,'absent');
@@ -176,7 +234,7 @@ test('undo before first attendance upload does not invent or delete a cloud reco
   const harness = createHarness({initialAttendance:{status:'excused'},beforeRequest: async (url) => {
     if(offline && url.includes('/attendance_records?')) throw new Error('offline');
   }});
-  let state = model.createSession({className:'QA',sessionId:'qa-preupload',roster:[{studentCode:'TEST',name:'Synthetic'}]});
+  let state = model.createSession({className:'QA',sessionId:'qa-preupload',date:'2026-09-08',roster:[{studentCode:'TEST',name:'Synthetic'}]});
   state=model.setAbsent(state,'TEST',true);
   await harness.cloud.recordState(state);
   state=model.undoLastAction(state);
@@ -197,7 +255,7 @@ test('undo enqueued during an in-flight first absence restores no-record state a
       first=false; started(); await held;
     }
   }});
-  let state=model.createSession({className:'QA',sessionId:'qa-flight',roster:[{studentCode:'TEST',name:'Synthetic'}]});
+  let state=model.createSession({className:'QA',sessionId:'qa-flight',date:'2026-09-08',roster:[{studentCode:'TEST',name:'Synthetic'}]});
   state=model.setAbsent(state,'TEST',true);
   const saving=harness.cloud.recordState(state);
   await ready;
@@ -212,7 +270,7 @@ test('undo enqueued during an in-flight first absence restores no-record state a
 test("direct attendance upserts the linked class session once and retries failures", async () => {
   const writes = [];
   let offline = true;
-  const harness = createHarness({ beforeRequest: async (url, options) => {
+  const harness = createHarness({ activeClassSessionDate: '2026-09-18', beforeRequest: async (url, options) => {
     if (!url.includes('/attendance_records?') || options.method !== 'POST') return;
     if (offline) throw new Error('offline');
     writes.push(JSON.parse(options.body));
@@ -233,7 +291,7 @@ test("direct attendance upserts the linked class session once and retries failur
 });
 
 test("queued attendance reuses the stable student id when the saved student code is stale", async () => {
-  const harness = createHarness();
+  const harness = createHarness({ activeClassSessionDate: '2026-09-18' });
   const session = { classId: "QA", clientSessionId: "qa", sessionDate: "2026-09-18", textbookId: "boya-quasi-intermediate-i", lessonId: "lesson-01", currentRound: 1, answeredStudentIds: [], excludedStudentIds: [], rosterCount: 1, status: "completed" };
   const change = { studentCode: "OLD-CODE", status: "absent", changedAt: "v1", changeId: "attendance-v1" };
   harness.values.set("vinh-uni-teaching/randomizer-sync-queue-v2", JSON.stringify([
@@ -249,6 +307,7 @@ test("queued attendance reuses the stable student id when the saved student code
 
 test("attendance retry resolves a withdrawn student through the same course enrollment", async () => {
   const harness = createHarness({
+    activeClassSessionDate: '2026-09-18',
     roster: [{ id: "current-student", studentCode: "CURRENT", name: "在读学生", seatNumber: "1" }],
     historicalEnrollments: [{ student_id: "withdrawn-student", status: "withdrawn", student: { id: "withdrawn-student", student_code: "OLD", chinese_name: "已退选学生" } }]
   });
@@ -272,7 +331,7 @@ function confirmedTransferQueue() {
 }
 
 test("confirmed transfers archive five cancellations and allow finish without attendance writes or replay", async () => {
-  const harness = createHarness();
+  const harness = createHarness({ activeClassSessionDate: '2026-09-24' });
   const queue = confirmedTransferQueue();
   harness.values.set("vinh-uni-teaching/randomizer-sync-queue-v2", JSON.stringify(queue));
   const result = await harness.cloud.flushQueue();
@@ -439,17 +498,34 @@ test("finish is queued after all answers, waits for failed writes, and retries w
   assert.equal(second.pending, 0);
   assert.ok(harness.paths.at(-1).includes("rpc/finish_randomizer_class"));
   assert.equal(harness.savedAttempts.size, 1);
-  assert.ok(harness.paths.some(p => p.includes("class_sessions?") && p.includes("status=eq.in_progress")));
+  assert.ok(harness.paths.some(p => p.includes("rpc/ensure_class_session")));
 });
 
-test("reuses the active tracker class session when the randomizer date differs", async () => {
+test("rejects a different active class date and preserves the unsent answers", async () => {
   const harness = createHarness({ activeClassSessionDate: "2026-09-23" });
   const result = await send(harness.cloud, rawAttempt());
 
-  assert.equal(result.pending, 0);
-  assert.equal(harness.savedRandomizerSessions[0].class_session_id, "session");
-  assert.equal(harness.savedAttempts.has("answer-1"), true);
+  assert.equal(result.pending, 2);
+  assert.equal(result.failure.code, "P0001");
+  assert.equal(harness.savedRandomizerSessions.length, 0);
+  assert.equal(harness.savedAttempts.has("answer-1"), false);
   assert.ok(!harness.paths.some(path => path.endsWith("/class_sessions")));
+});
+
+test("invalid classroom dates never create or enqueue cloud records", async () => {
+  const harness = createHarness();
+  await assert.rejects(harness.cloud.recordState({ session: { id: "invalid", className: "QA", date: "2026-02-30" } }), /日期无效/);
+  assert.equal(harness.paths.length, 0);
+  assert.equal(harness.cloud.pendingCount(), 0);
+});
+
+test("attendance original storage failure stops upload and keeps the pending change", async () => {
+  const harness = createHarness({ failStorageKey: "vinh-uni-teaching/randomizer-attendance-original-v1", activeClassSessionDate: "2026-09-08" });
+  const result = await harness.cloud.recordState({ session: { id: "storage-test", className: "QA", date: "2026-09-08" },
+    attendanceChanges: { TEST: { studentCode: "TEST", status: "absent", changedAt: "v1" } } });
+  assert.equal(result.pending, 1);
+  assert.equal(result.failure.code, "ATTENDANCE_RECOVERY_STORAGE_FAILED");
+  assert.equal(harness.attendance(), null);
 });
 
 test("closing state queued during an earlier network write survives the first flush", async () => {
@@ -529,4 +605,36 @@ test("a hung request times out, preserves the queue and releases the retry lock"
   const second = await cloud.flushQueue();
   assert.equal(second.pending, 0);
   assert.equal(second.sent, 2);
+});
+
+test("teacher calls retain their source through offline retry and student history", async () => {
+  const harness = createHarness({ failAttempts: true, recordAttempts: [{
+    client_attempt_id: "teacher-answer", selection_method: "teacher", event_type: "teacher_call",
+    outcome: "answered", record_status: "valid"
+  }] });
+  assert.equal((await send(harness.cloud, rawAttempt({ selectionMethod: "teacher" }))).pending, 1);
+  harness.setAttemptFailure(false);
+  assert.equal((await harness.cloud.flushQueue()).pending, 0);
+  const saved = harness.savedAttempts.get("answer-1");
+  assert.equal(saved.selection_method, "teacher");
+  assert.equal(saved.event_type, "teacher_call");
+  assert.equal(saved.opportunity_status, "called");
+  const rows = await harness.cloud.fetchStudentRecords("NNTQ1", "TEST");
+  assert.equal(rows[0].attempt.selectionMethod, "teacher");
+});
+
+test("teacher source survives backup, raw export and independent summary columns", () => {
+  const model = require('./model.js');
+  let state = model.createSession({ className: 'QA', sessionId: 'teacher-source', roster: [{ studentCode: 'TEST', name: 'Synthetic' }] });
+  state = model.recordTeacherCall(state, 'TEST');
+  const restored = model.importBackup(model.exportBackup(state));
+  assert.equal(restored.attempts[0].selectionMethod, 'teacher');
+  assert.equal(restored.attempts[0].eventType, 'teacher_call');
+  const raw = model.getSessionExportRows(restored);
+  assert.equal(raw.rows[0][raw.headers.indexOf('selection_method')], 'teacher');
+  assert.equal(raw.rows[0][raw.headers.indexOf('event_type')], 'teacher_call');
+  const summary = model.getStudentSummaryRows(restored);
+  assert.equal(summary.rows[0][summary.headers.indexOf('teacher_call_count')], 1);
+  assert.equal(summary.rows[0][summary.headers.indexOf('random_call_count')], 0);
+  assert.equal(summary.rows[0][summary.headers.indexOf('voluntary_speaking_count')], 0);
 });

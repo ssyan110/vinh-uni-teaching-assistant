@@ -1,0 +1,313 @@
+{
+  "status": "review_only_not_teacher_audio_accepted",
+  "normal": [
+    {
+      "audio_id": "E09-A02",
+      "variant": "原速",
+      "file": "audio/lesson-09-测验音频-E09-A02-原速.mp3",
+      "source_sha256": "2f2e7e8f7e2bef150354fe2fea7a60e8a662be3176db43ceebbbf2b38341dcb1",
+      "sha256": "e377f927fda60f87f332338a53892a38ae08be01bb0100f3adf8fc73f3c7b77a",
+      "duration_seconds": 4.74,
+      "transform": "apad=pad_dur=1.5",
+      "source": "existing OmniVoice synthetic classroom bank",
+      "acceptance": "technical_preview_not_teacher_approved"
+    },
+    {
+      "audio_id": "E09-A03",
+      "variant": "原速",
+      "file": "audio/lesson-09-测验音频-E09-A03-原速.mp3",
+      "source_sha256": "7fe570bf221275fc763d5fe89b3fc5bd8ae37248dcc490199929e565cac04f71",
+      "sha256": "c39eabcdda1a7b2ba584bc5d1d953e1ac7652775434e28585e8438c81278a8dd",
+      "duration_seconds": 5.38,
+      "transform": "apad=pad_dur=1.5",
+      "source": "existing OmniVoice synthetic classroom bank",
+      "acceptance": "technical_preview_not_teacher_approved"
+    },
+    {
+      "audio_id": "E09-B01",
+      "variant": "原速",
+      "file": "audio/lesson-09-测验音频-E09-B01-原速.mp3",
+      "source_sha256": "85bd7a45df93d7faf816ca3b31a329c331192fe39e9dd72f99f59fa3ca2fe6f8",
+      "sha256": "c95cb94fbadfe0ade8ceb7124354a6aeee8d96287c02788d5b91c9fd39dc5bdf",
+      "duration_seconds": 13.51,
+      "transform": "apad=pad_dur=1.5",
+      "source": "existing OmniVoice synthetic classroom bank",
+      "acceptance": "technical_preview_not_teacher_approved"
+    },
+    {
+      "audio_id": "E09-B02",
+      "variant": "原速",
+      "file": "audio/lesson-09-测验音频-E09-B02-原速.mp3",
+      "source_sha256": "63a158cee600b663b08d79ffdae1323494a3494fc6fbb4714daab7180312dd6c",
+      "sha256": "a8c064fa01036f1ee3383fc31f89af366a86d2ddf43ac1d22aefb15517184667",
+      "duration_seconds": 16.87,
+      "transform": "apad=pad_dur=1.5",
+      "source": "existing OmniVoice synthetic classroom bank",
+      "acceptance": "technical_preview_not_teacher_approved"
+    },
+    {
+      "audio_id": "E09-C01",
+      "variant": "原速",
+      "file": "audio/lesson-09-测验音频-E09-C01-原速.mp3",
+      "source_sha256": "d930a801110d5ef7ff3ce072cf1c30e6d6bc162815c0da95ff2b6af0f98eca86",
+      "sha256": "0e5c225e0a8e6618d045d7109ae2f44fa5ca8be5246349e0f8dc3c7ca537f3ed",
+      "duration_seconds": 13.22,
+      "transform": "apad=pad_dur=1.5",
+      "source": "existing OmniVoice synthetic classroom bank",
+      "acceptance": "technical_preview_not_teacher_approved"
+    },
+    {
+      "audio_id": "E10-A01",
+      "variant": "原速",
+      "file": "audio/lesson-10-测验音频-E10-A01-原速.mp3",
+      "source_sha256": "7ae69b490d72d070bacdaa1fd73cbb456416afa17e4b9298d3420de30a713d2a",
+      "sha256": "fef5cc6326e8e3ae2ade9ff9c5cd9e4ac65e2c85a34d0f657d4a318dbd679640",
+      "duration_seconds": 3.5,
+      "transform": "apad=pad_dur=1.5",
+      "source": "existing OmniVoice synthetic classroom bank",
+      "acceptance": "technical_preview_not_teacher_approved"
+    },
+    {
+      "audio_id": "E10-A02",
+      "variant": "原速",
+      "file": "audio/lesson-10-测验音频-E10-A02-原速.mp3",
+      "source_sha256": "d1570544b58358665c10ea0d4c6c404641c6a578aef7d9dcbea69bdd794e767a",
+      "sha256": "711c6bf0cdc69c1b412e4a3196e1855d02ba0994851b305041757b44d566d2ed",
+      "duration_seconds": 3.56,
+      "transform": "apad=pad_dur=1.5",
+      "source": "existing OmniVoice synthetic classroom bank",
+      "acceptance": "technical_preview_not_teacher_approved"
+    },
+    {
+      "audio_id": "E10-B02",
+      "variant": "原速",
+      "file": "audio/lesson-10-测验音频-E10-B02-原速.mp3",
+      "source_sha256": "c7526b06b95eca5d2ed57150b39db06ff7b1b097edf42ca7d97b1014fd55e137",
+      "sha256": "437815ace7702ed5c67d1480dba6163a7a23d54892c464a4a9eb1e71c699b446",
+      "duration_seconds": 13.44,
+      "transform": "apad=pad_dur=1.5",
+      "source": "existing OmniVoice synthetic classroom bank",
+      "acceptance": "technical_preview_not_teacher_approved"
+    },
+    {
+      "audio_id": "E10-B03",
+      "variant": "原速",
+      "file": "audio/lesson-10-测验音频-E10-B03-原速.mp3",
+      "source_sha256": "46f6ad3752a7ef49e5f279855d6c15239d89d0c04795dc306fc1047bf719838e",
+      "sha256": "cfe67932a4cc67c146c2b6709bd259065709a6a470adb7453c3e9fef479ac50b",
+      "duration_seconds": 12.97,
+      "transform": "apad=pad_dur=1.5",
+      "source": "existing OmniVoice synthetic classroom bank",
+      "acceptance": "technical_preview_not_teacher_approved"
+    },
+    {
+      "audio_id": "E10-C02",
+      "variant": "原速",
+      "file": "audio/lesson-10-测验音频-E10-C02-原速.mp3",
+      "source_sha256": "02d252a340a609dcb7773955c9ed579d737c868eed393a727a262f3ef68f2aaa",
+      "sha256": "4e3aae8bb65ca60a0c6470655d657767053793a72b0f019dc725c683dc2ef7ca",
+      "duration_seconds": 10.02,
+      "transform": "apad=pad_dur=1.5",
+      "source": "existing OmniVoice synthetic classroom bank",
+      "acceptance": "technical_preview_not_teacher_approved"
+    }
+  ],
+  "regenerated": [
+    {
+      "audio_id": "E09-A02",
+      "variant": "重制缓速",
+      "file": "audio/lesson-09-测验音频-E09-A02-重制缓速.wav",
+      "model": "k2-fsa/OmniVoice",
+      "model_revision": "c5fdb5ccb189668d56333f77ba2629f4cd7535f4",
+      "speed": 0.82,
+      "speech_units": [
+        "他的房间号是三零六，不是三六零。"
+      ],
+      "unit_pause_ms": 600,
+      "final_silence_ms": 1500,
+      "sha256": "824f8ef610214bb8c9312ffb0147b2e0c3bdf5ec3add384a44dd9125a8594ac6",
+      "duration_seconds": 6.69,
+      "acceptance": "pending_independent_ASR_and_teacher_listening",
+      "native_tts_sha256": "6be54ab157c2cb96987b7e56e0207feec72ab8cdff09cdd74286523ceda3b094",
+      "postprocess": "atempo=0.80; pitch preserved"
+    },
+    {
+      "audio_id": "E09-A03",
+      "variant": "重制缓速",
+      "file": "audio/lesson-09-测验音频-E09-A03-重制缓速.wav",
+      "model": "k2-fsa/OmniVoice",
+      "model_revision": "c5fdb5ccb189668d56333f77ba2629f4cd7535f4",
+      "speed": 0.82,
+      "speech_units": [
+        "我不知道他的手机号，可是有他的微信号。"
+      ],
+      "unit_pause_ms": 600,
+      "final_silence_ms": 1500,
+      "sha256": "a1574b8ee927f78862ec9b9108db31d0123328303ecac90b9c07a398fd006d26",
+      "duration_seconds": 7.69,
+      "acceptance": "pending_independent_ASR_and_teacher_listening",
+      "native_tts_sha256": "b8620ffbd9f571f9b3c4d4c31d1a8cd73e93b90397e18ca26c1ed3e26558dacd",
+      "postprocess": "atempo=0.80; pitch preserved"
+    },
+    {
+      "audio_id": "E09-B01",
+      "variant": "重制缓速",
+      "file": "audio/lesson-09-测验音频-E09-B01-重制缓速.wav",
+      "model": "k2-fsa/OmniVoice",
+      "model_revision": "c5fdb5ccb189668d56333f77ba2629f4cd7535f4",
+      "speed": 0.82,
+      "speech_units": [
+        "小林，我们怎么去动物园？骑自行车吗？",
+        "小王，太远了，坐地铁吧。",
+        "小林，好，九点在学校东门见。"
+      ],
+      "unit_pause_ms": 800,
+      "final_silence_ms": 1700,
+      "sha256": "dc54778489b9372eb626148996a60e6d863c1ac9696e0d2446890d81aba20884",
+      "duration_seconds": 15.99,
+      "acceptance": "pending_independent_ASR_and_teacher_listening",
+      "native_tts_sha256": "1ac399dd9bc638ec6edf3ea3f717d2bc820a25a31c013db7331f34d8d1d2eeaf",
+      "postprocess": "atempo=0.80; pitch preserved"
+    },
+    {
+      "audio_id": "E09-B02",
+      "variant": "重制缓速",
+      "file": "audio/lesson-09-测验音频-E09-B02-重制缓速.wav",
+      "model": "k2-fsa/OmniVoice",
+      "model_revision": "c5fdb5ccb189668d56333f77ba2629f4cd7535f4",
+      "speed": 0.82,
+      "speech_units": [
+        "小林，李老师在办公室吗？",
+        "小王，不在，在教室。",
+        "小林，你有她的手机号吗？",
+        "小王，没有，只有办公室电话，零一零，零零零零，一二零六。"
+      ],
+      "unit_pause_ms": 800,
+      "final_silence_ms": 1700,
+      "sha256": "1de3e8cf68c6596ed2230fbb8e8c55dd0d65b84bd6118bb7c50eb383e30b53d0",
+      "duration_seconds": 21.46,
+      "acceptance": "pending_independent_ASR_and_teacher_listening",
+      "native_tts_sha256": "448402e2d7c07b7c3a0a858e0154a3ca37db146b59a9e9d8ed5d012ec0781762",
+      "postprocess": "atempo=0.80; pitch preserved"
+    },
+    {
+      "audio_id": "E09-C01",
+      "variant": "重制缓速",
+      "file": "audio/lesson-09-测验音频-E09-C01-重制缓速.wav",
+      "model": "k2-fsa/OmniVoice",
+      "model_revision": "c5fdb5ccb189668d56333f77ba2629f4cd7535f4",
+      "speed": 0.82,
+      "speech_units": [
+        "明天我们去动物园。",
+        "上午八点半在学校东门见，不在西门见。",
+        "我们坐地铁二号线去。",
+        "老师的办公室电话是零一零，零零零零，二三零一。"
+      ],
+      "unit_pause_ms": 600,
+      "final_silence_ms": 1500,
+      "sha256": "3154b6afe53603ec2d5d86dfaeb333bcd09d5aa6409c9f17f593df416472e46f",
+      "duration_seconds": 21.97,
+      "acceptance": "pending_independent_ASR_and_teacher_listening",
+      "native_tts_sha256": "4aa2f8f608fafbc6fdcdc1f9ce248b6a6a23a688d7c5dbe5fd6372cc99a5aa91",
+      "postprocess": "atempo=0.80; pitch preserved"
+    },
+    {
+      "audio_id": "E10-A01",
+      "variant": "重制缓速",
+      "file": "audio/lesson-10-测验音频-E10-A01-重制缓速.wav",
+      "model": "k2-fsa/OmniVoice",
+      "model_revision": "c5fdb5ccb189668d56333f77ba2629f4cd7535f4",
+      "speed": 0.82,
+      "speech_units": [
+        "苹果四块五一斤。"
+      ],
+      "unit_pause_ms": 600,
+      "final_silence_ms": 1500,
+      "sha256": "aafa31eb61030f6cb813a8a5c586f7f66a55b08aa7ffcb142cccb799c1b0ae1a",
+      "duration_seconds": 4.24,
+      "acceptance": "pending_independent_ASR_and_teacher_listening",
+      "native_tts_sha256": "0441c53f56b49f25ec514fabfae7a0007d150f4918c8eae36228b9353996a5fd",
+      "postprocess": "atempo=0.80; pitch preserved"
+    },
+    {
+      "audio_id": "E10-A02",
+      "variant": "重制缓速",
+      "file": "audio/lesson-10-测验音频-E10-A02-重制缓速.wav",
+      "model": "k2-fsa/OmniVoice",
+      "model_revision": "c5fdb5ccb189668d56333f77ba2629f4cd7535f4",
+      "speed": 0.82,
+      "speech_units": [
+        "我要两瓶牛奶，不要两杯。"
+      ],
+      "unit_pause_ms": 600,
+      "final_silence_ms": 1500,
+      "sha256": "5685e7de78da265d1270e73dd7aff7e7fa30718df06cef9cdee0ea4cdd48747f",
+      "duration_seconds": 4.61,
+      "acceptance": "pending_independent_ASR_and_teacher_listening",
+      "native_tts_sha256": "7cf4de22d19723ea6dd81c9cc867cf8bd7f7fa627ccef9a4b51a82286da0f93e",
+      "postprocess": "atempo=0.80; pitch preserved"
+    },
+    {
+      "audio_id": "E10-B02",
+      "variant": "重制缓速",
+      "file": "audio/lesson-10-测验音频-E10-B02-重制缓速.wav",
+      "model": "k2-fsa/OmniVoice",
+      "model_revision": "c5fdb5ccb189668d56333f77ba2629f4cd7535f4",
+      "speed": 0.82,
+      "speech_units": [
+        "小林，两杯咖啡多少钱？",
+        "小王，一杯十五，两杯三十。",
+        "小林，可以扫微信吗？",
+        "小王，可以。"
+      ],
+      "unit_pause_ms": 800,
+      "final_silence_ms": 1700,
+      "sha256": "86bd881e5a3bce22abe4a1b82c9b98eb309aaebb0191b3060ae100ea9dd74ac1",
+      "duration_seconds": 15.88,
+      "acceptance": "pending_independent_ASR_and_teacher_listening",
+      "native_tts_sha256": "5bd9a96a778267586b341f75d7958db39ed8ebc6dd5c5f44596de9d2900042d0",
+      "postprocess": "atempo=0.80; pitch preserved"
+    },
+    {
+      "audio_id": "E10-B03",
+      "variant": "重制缓速",
+      "file": "audio/lesson-10-测验音频-E10-B03-重制缓速.wav",
+      "model": "k2-fsa/OmniVoice",
+      "model_revision": "c5fdb5ccb189668d56333f77ba2629f4cd7535f4",
+      "speed": 0.82,
+      "speech_units": [
+        "小林，买两瓶水吗？",
+        "小王，不是，买三瓶，再买一瓶牛奶。",
+        "小林，还要面包吗？",
+        "小王，不要。"
+      ],
+      "unit_pause_ms": 800,
+      "final_silence_ms": 1700,
+      "sha256": "a8b62078ac43cd46573e0e34dae82c3924cde7bd5567e2ae40bbb87b0bc58b0e",
+      "duration_seconds": 16.16,
+      "acceptance": "pending_independent_ASR_and_teacher_listening",
+      "native_tts_sha256": "fcbd8c653da6f3ab3bb64a6690dee64ff8835e204ec4489b9422d5661d1fde70",
+      "postprocess": "atempo=0.80; pitch preserved"
+    },
+    {
+      "audio_id": "E10-C02",
+      "variant": "重制缓速",
+      "file": "audio/lesson-10-测验音频-E10-C02-重制缓速.wav",
+      "model": "k2-fsa/OmniVoice",
+      "model_revision": "c5fdb5ccb189668d56333f77ba2629f4cd7535f4",
+      "speed": 0.82,
+      "speech_units": [
+        "李明要买两斤苹果，每斤四块；还要一瓶水，两块钱。",
+        "一共十块。",
+        "商店没有可乐，所以他没有买可乐。"
+      ],
+      "unit_pause_ms": 600,
+      "final_silence_ms": 1500,
+      "sha256": "ce98da0723fa9051226bf850ee1cdaec203b7a4c055e4e9c2f325b2672375577",
+      "duration_seconds": 16.46,
+      "acceptance": "pending_independent_ASR_and_teacher_listening",
+      "native_tts_sha256": "c5ecfe0e70b33f98addb35c19ee05efc0a0a793ab52ca2570af63928217ee13c",
+      "postprocess": "atempo=0.80; pitch preserved"
+    }
+  ]
+}

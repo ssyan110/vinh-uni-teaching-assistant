@@ -1,0 +1,194 @@
+{
+  "status": "review_unpublished",
+  "cohort": "BOYA-LS-E1-Y1S1-2026F",
+  "offering_id": "2026-fall",
+  "week": "w06",
+  "lesson_keys": [
+    "boya-elementary-i:lesson-13",
+    "boya-elementary-i:lesson-14"
+  ],
+  "items": [
+    {
+      "type": "mc",
+      "audio_id": "E13-A01",
+      "prompt": "说话人想要哪一件？",
+      "options": [
+        "大一点儿的",
+        "小一点儿的",
+        "红色的",
+        "贵一点儿的"
+      ],
+      "answer_index": 1,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ],
+      "focus": "尺寸偏好",
+      "points": 2,
+      "id": "W06-01"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E13-A06",
+      "prompt": "两件衣服相比，哪件更便宜？",
+      "options": [
+        "红的",
+        "白的",
+        "蓝的",
+        "黑的"
+      ],
+      "answer_index": 2,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ],
+      "focus": "比较价格",
+      "points": 2,
+      "id": "W06-02"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E14-A01",
+      "prompt": "他们先做什么？",
+      "options": [
+        "唱歌",
+        "吃饭",
+        "买花",
+        "打电话"
+      ],
+      "answer_index": 1,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-14"
+      ],
+      "focus": "活动顺序",
+      "points": 2,
+      "id": "W06-03"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E14-A05",
+      "prompt": "说话人请对方带什么？",
+      "options": [
+        "蛋糕",
+        "礼物",
+        "饮料",
+        "花"
+      ],
+      "answer_index": 2,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-14"
+      ],
+      "focus": "分工",
+      "points": 2,
+      "id": "W06-04"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E13-B02",
+      "prompt": "小王最后选哪个手机？",
+      "options": [
+        "三千块、屏幕大的",
+        "两千块、屏幕小一点儿的",
+        "三千块、屏幕小的",
+        "两千块、屏幕大的"
+      ],
+      "answer_index": 1,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ],
+      "focus": "权衡价格与特点",
+      "points": 2,
+      "id": "W06-05"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E14-B01",
+      "prompt": "安娜的生日礼物决定买什么？",
+      "options": [
+        "蛋糕",
+        "一束花",
+        "衣服",
+        "汉语书"
+      ],
+      "answer_index": 1,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-14"
+      ],
+      "focus": "喜好与礼物",
+      "points": 2,
+      "id": "W06-06"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E14-B02",
+      "prompt": "最后约几点吃饭？",
+      "options": [
+        "六点",
+        "七点",
+        "七点半",
+        "八点半"
+      ],
+      "answer_index": 2,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-14"
+      ],
+      "focus": "按课程改时间",
+      "points": 2,
+      "id": "W06-07"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E13-C02",
+      "prompt": "安娜最后买了哪件衣服？",
+      "options": [
+        "红色、很贵的",
+        "蓝色、二百块的",
+        "蓝色、三百块的",
+        "白色、二百块的"
+      ],
+      "answer_index": 1,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ],
+      "focus": "最终选择",
+      "points": 2,
+      "id": "W06-08"
+    },
+    {
+      "type": "short",
+      "audio_id": "E14-C01",
+      "prompt": "周五大家几点、在哪里见面？",
+      "answer": "六点半，在学校对面的饭店。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-14"
+      ],
+      "focus": "集合信息",
+      "points": 4,
+      "id": "W06-09"
+    },
+    {
+      "type": "short",
+      "audio_id": "E13-C01",
+      "prompt": "想买的手机是什么颜色？价格大约多少？",
+      "answer": "白色，约两千块。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ],
+      "focus": "选购条件",
+      "points": 4,
+      "id": "W06-10"
+    }
+  ],
+  "oral_tasks": [
+    {
+      "title": "选礼物并排顺序",
+      "prompt": "同伴有寿星偏好卡：喜欢看书，晚上七点以后有空。你有商店卡：汉语书两百元，花三百元；饭店六点半和七点半各有位置。互相问清楚后，选礼物、定吃饭时间，并说先后顺序与理由。",
+      "evidence": "第13课商品选择与第14课生日安排都产生可观察结果。",
+      "points": 10
+    },
+    {
+      "title": "预算变化",
+      "prompt": "教师说：“书涨到四百元，预算只有三百元。”请向同伴提出替代并回应一次不同意见。",
+      "evidence": "能依新预算修改礼物并完成意见协商。",
+      "points": 10
+    }
+  ]
+}

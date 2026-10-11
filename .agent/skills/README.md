@@ -10,12 +10,15 @@ Project-specific skills are the durable production rules for this repository. Re
 
 ## Required skills
 
+Online classes remain unchanged and continue to prioritize PPT/PPTX, preserving one-word-per-page preparation and approved styles. Only physical classes prioritize HTML slides/OpenSlide, with optional editable PPTX backup (2026-10-07 06:52 UTC).
+
 - `harness-engineering/SKILL.md` — minimum artifact, gate, execution and verification loop for non-trivial work.
 - `boya-lesson-production/SKILL.md` — artifact-specific PPTX/content production procedures. Its ownership boundary is defined in `boya-lesson-production/references/ownership-map.md`; lifecycle, identity, gate and release semantics remain canonical elsewhere.
+- `boya-weekly-assessment/SKILL.md` — schedule-aligned Year 1 weekly listening/speaking assessment packs, including paired-lesson scope, item and audio QA, and unpublished Form review.
 
-Read `AGENTS.md`, `PROJECT_REQUIREMENTS.md` and `memory/project-memory.md` before either skill. New decks default to `native-pptx`; Adam may select the Open Slide path in `tools/open-slide/` for a deck. Open Slide remains draft-only until its lesson QA/release path is defined.
+Read `AGENTS.md`, `PROJECT_REQUIREMENTS.md` and `memory/project-memory.md` before either skill. Future face-to-face decks default to HTML/OpenSlide under `docs/classroom-html-standard-2026-10-07.md`; online preparation retains native-pptx unless otherwise selected. Open Slide remains draft-only until its lesson QA/release path is defined.
 
-The current student-deck rules are in `boya-lesson-production/SKILL.md`. They cover the approved educational textbook visual style, textbook section dividers, readable same-audio merging, plain student actions, visible material names, audio buttons, varied layouts and native PowerPoint QA. Retired v2/v3/v4 outline and deck scripts are not supported production inputs.
+The current student-deck rules are in `boya-lesson-production/SKILL.md`. They cover the approved educational textbook visual style, textbook section dividers, readable same-audio merging, plain student actions, visible material names, plain non-clickable top-right `Audio n-n` references, varied layouts and native PowerPoint QA. Future PPTs preserve the actual source track mapping without embedded audio, playback buttons or playable audio hyperlinks; the audio reference has no purple styling. Retired v2/v3/v4 outline and deck scripts are not supported production inputs.
 
 Reusable cross-project workflows should stay in:
 

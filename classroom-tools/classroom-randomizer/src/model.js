@@ -117,11 +117,7 @@
   }
 
   function localDate() {
-    const date = new Date();
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, "0");
-    const day = String(date.getDate()).padStart(2, "0");
-    return `${year}-${month}-${day}`;
+    return new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Ho_Chi_Minh", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
   }
 
   function timestamp() {
@@ -205,7 +201,7 @@
       attempt && attempt.responseStatus,
       attempt && attempt.outcome === "answered" ? "answered" : "unobserved"
     );
-    return attempt && attempt.outcome === "answered"
+    return attempt && !["voided", "corrected"].includes(attempt.recordStatus) && attempt.outcome === "answered"
       && ["answered", "partial", "peer_supported"].includes(responseStatus);
   }
 
@@ -355,17 +351,31 @@
   }
 
   function getDrawingPool(state) {
-    const answered = new Set(state.currentRound.answeredStudentIds);
+    const roundAttempts = state.attempts.filter(attempt => attempt.roundNumber === state.currentRound.number);
+    // Retain legacy backups without raw attempts, but do not retain corrected answers in the cached pool.
+    const answered = new Set(state.currentRound.answeredStudentIds.filter(id =>
+      !roundAttempts.some(attempt => attempt.studentId === id)));
+    roundAttempts.filter(attempt => isEffectiveAnswer(attempt) || (attempt.roundSkipped === true && attempt.outcome === "not_answered" && !["voided", "corrected"].includes(attempt.recordStatus)))
+      .forEach(attempt => answered.add(attempt.studentId));
     const excluded = new Set(state.excludedStudentIds);
     return state.roster
       .filter((student) => !excluded.has(student.id) && !answered.has(student.id));
   }
 
   function getLastParticipantId(state) {
-    // Attempt order survives round changes and backup imports; ignore withdrawn turns.
+    // Completion order can differ from draw order when another student speaks during a pending draw.
+    const undoneEvents = new Set((state.events || []).filter(event => event.type === "undo").map(event => event.undoOf));
+    for (const event of [...(state.events || [])].reverse()) {
+      if (undoneEvents.has(event.id)) continue;
+      const attempt = state.attempts.find(item => item.id === event.attemptId);
+      if (!attempt || ["voided", "corrected"].includes(attempt.recordStatus) || attempt.outcome === "undone") continue;
+      if ((["response_recorded", "volunteer_recorded", "teacher_recorded"].includes(event.type) && attempt.outcome === "answered")
+        || (event.type === "not_answered" && attempt.outcome === "not_answered")
+        || (["draw", "volunteer_selected", "teacher_selected"].includes(event.type) && attempt.outcome === "pending")) return attempt.studentId;
+    }
     for (let index = state.attempts.length - 1; index >= 0; index -= 1) {
       const attempt = state.attempts[index];
-      if (attempt.outcome !== "undone" && attempt.recordStatus !== "voided") return attempt.studentId;
+      if (attempt.outcome !== "undone" && !["voided", "corrected"].includes(attempt.recordStatus)) return attempt.studentId;
     }
     return null;
   }
@@ -470,7 +480,20 @@
   }
 
   function selectVolunteer(state, studentId, options) {
-    if (state.currentRound.pendingAttemptId) throw new Error("请先完成目前这位学生的回答");
+    const pending = pendingAttempt(state);
+    if (pending) {
+      if (pending.studentId !== studentId) throw new Error("请先完成目前这位学生的回答");
+      const selectionMethod = options?.selectionMethod === "teacher" ? "teacher" : "volunteer";
+      if (pending.selectionMethod === selectionMethod) return clone(state);
+      return updatePending(state, "selection_changed", { selectionMethod }, (next, attemptId) => {
+        const attempt = next.attempts.find(item => item.id === attemptId);
+        attempt.selectionMethod = selectionMethod;
+        attempt.eventType = selectionMethod === "teacher" ? "teacher_call" : "voluntary_speaking";
+        attempt.opportunityStatus = selectionMethod === "teacher" ? "called" : "volunteered";
+        attempt.updatedAt = timestamp();
+        return next;
+      });
+    }
     const student = getStudent(state, studentId);
     if (!student) throw new Error("找不到这位同学");
     if (state.excludedStudentIds.includes(studentId)) throw new Error("暂不抽问的学生不能记录自愿发言");
@@ -487,9 +510,9 @@
       drawnAt: selectedAt, createdAt: selectedAt, completedAt: null, updatedAt: selectedAt,
       outcome: "pending",
       note: "",
-      selectionMethod: "volunteer",
-      eventType: "voluntary_speaking",
-      opportunityStatus: "volunteered",
+      selectionMethod: settings.selectionMethod === "teacher" ? "teacher" : "volunteer",
+      eventType: settings.selectionMethod === "teacher" ? "teacher_call" : "voluntary_speaking",
+      opportunityStatus: settings.selectionMethod === "teacher" ? "called" : "volunteered",
       responseStatus: "unobserved",
       noResponseReason: null,
       answerContext: "unknown",
@@ -499,7 +522,7 @@
       correctedAt: null,
       eventOrder: nextEventOrder(state)
     };
-    return withMutation(state, "volunteer_selected", {
+    return withMutation(state, attempt.selectionMethod === "teacher" ? "teacher_selected" : "volunteer_selected", {
       attemptId: attempt.id, studentId: student.id, roundNumber: state.currentRound.number
     }, (next) => {
       next.attempts.push(attempt);
@@ -515,18 +538,27 @@
 
   // A completed volunteer answer is independent of the random call in progress.
   function recordVolunteer(state, studentId, options) {
+    if (pendingAttempt(state)?.studentId === studentId) {
+      return selectVolunteer(state, studentId, options);
+    }
     const working = clone(state);
     working.currentRound.pendingAttemptId = null;
     const recorded = recordResponse(selectVolunteer(working, studentId, options), options);
     const attempt = recorded.attempts[recorded.attempts.length - 1];
-    return withMutation(state, "volunteer_recorded", { attemptId: attempt.id, studentId }, next => {
+    return withMutation(state, attempt.selectionMethod === "teacher" ? "teacher_recorded" : "volunteer_recorded", { attemptId: attempt.id, studentId }, next => {
       next.attempts.push(attempt);
       next.session.activeQuestion = recorded.session.activeQuestion;
       return next;
     });
   }
 
-  function setAbsent(state, studentId, absent) {
+  function recordTeacherCall(state, studentId, options) {
+    return selectVolunteer(state, studentId, { ...options, selectionMethod: "teacher" });
+  }
+
+  function setAbsent(state, studentId, absent, options) {
+    const settings = options || {};
+    if (text(settings.taskPrompt).length > 500 || text(settings.note).length > 2000) throw new Error("题目限 500 字，备注限 2000 字");
     const student = getStudent(state, studentId);
     if (!student) throw new Error("找不到这位同学");
     return withMutation(state, "attendance_changed", { studentId }, next => {
@@ -536,6 +568,9 @@
       if (absent) next.excludedStudentIds.push(studentId);
       const pending = pendingAttempt(next);
       if (absent && pending && pending.studentId === studentId) {
+        if (settings.note !== undefined) pending.note = text(settings.note);
+        if (settings.answerContext !== undefined) pending.answerContext = normalizeAnswerContext(settings.answerContext);
+        if (settings.taskPrompt !== undefined) assignQuestion(next, pending, settings.taskPrompt);
         pending.outcome = "not_answered";
         pending.responseStatus = "no_response";
         pending.noResponseReason = "absent";
@@ -592,6 +627,8 @@
   function returnPending(state, options) {
     const settings = options || {};
     const reason = text(settings.noResponseReason);
+    if (text(settings.taskPrompt).length > 500 || text(settings.note).length > 2000) throw new Error("题目限 500 字，备注限 2000 字");
+    if (settings.roundSkipped && reason === "absent") throw new Error("缺席请登记考勤，不能登记为本轮跳过");
     if (!reason) {
       throw new Error("请选择未回答原因");
     }
@@ -599,12 +636,14 @@
       throw new Error("未回答原因不在可选范围内");
     }
     return updatePending(state, "not_answered", {
-      noResponseReason: reason
+      noResponseReason: reason,
+      roundSkipped: settings.roundSkipped === true || reason === "chose_skip"
     }, (next, attemptId) => {
       const attempt = next.attempts.find((item) => item.id === attemptId);
       attempt.outcome = "not_answered";
       attempt.responseStatus = "no_response";
       attempt.noResponseReason = reason;
+      attempt.roundSkipped = settings.roundSkipped === true || reason === "chose_skip";
       attempt.answerContext = normalizeAnswerContext(settings.answerContext);
       attempt.note = text(settings.note);
       assignQuestion(next, attempt, settings.taskPrompt);
@@ -723,7 +762,17 @@
       tombstone.note = tombstone.note || "已撤销";
       next.attempts.push(tombstone);
     }
-    next.events = [...entry.before.events, entry.event, undoEvent];
+    for (const attempt of state.attempts) {
+      if (!["voided", "corrected"].includes(attempt.recordStatus)) continue;
+      const existing = next.attempts.findIndex(item => item.id === attempt.id);
+      if (existing === -1) next.attempts.push(clone(attempt));
+    }
+    // Restored rows retain their identity, but the restoration is a new update.
+    for (const attempt of next.attempts) {
+      const previous = state.attempts.find(item => item.id === attempt.id);
+      if (previous && JSON.stringify(previous) !== JSON.stringify(attempt)) attempt.updatedAt = undoEvent.timestamp;
+    }
+    next.events = [...state.events, undoEvent];
     next.undoStack = state.undoStack.slice(0, -1);
     next.session.updatedAt = undoEvent.timestamp;
     return next;
@@ -731,12 +780,21 @@
 
   function getProgress(state) {
     const eligibleCount = getEligibleStudents(state).length;
-    const answeredCount = state.currentRound.answeredStudentIds.length;
     const pool = getDrawingPool(state);
+    const completedCount = eligibleCount - pool.length;
+    const eligibleIds = new Set(getEligibleStudents(state).map(student => student.id));
+    const answeredIds = new Set(state.attempts.filter(attempt => attempt.roundNumber === state.currentRound.number && isEffectiveAnswer(attempt)).map(attempt => attempt.studentId));
+    // Legacy backups may retain completed students without raw attempts.
+    state.currentRound.answeredStudentIds.forEach(studentId => {
+      if (!state.attempts.some(attempt => attempt.roundNumber === state.currentRound.number && attempt.studentId === studentId)) answeredIds.add(studentId);
+    });
+    const answeredCount = [...answeredIds].filter(studentId => eligibleIds.has(studentId)).length;
     return {
       roundNumber: state.currentRound.number,
       eligibleCount,
       answeredCount,
+      completedCount,
+      skippedCount: completedCount - answeredCount,
       poolCount: pool.length,
       pending: Boolean(state.currentRound.pendingAttemptId),
       roundComplete: eligibleCount > 0 && pool.length === 0 && !state.currentRound.pendingAttemptId,
@@ -745,16 +803,17 @@
   }
 
   function activeAttempts(state) {
-    return state.attempts.filter((attempt) => attempt.outcome !== "undone");
+    return state.attempts.filter((attempt) => attempt.outcome !== "undone" && !["voided", "corrected"].includes(attempt.recordStatus));
   }
 
   function summarizeAttemptCollection(input, includeLessonBreakdown) {
     const attempts = (Array.isArray(input) ? input : [])
-      .filter((attempt) => attempt && attempt.outcome !== "undone" && attempt.recordStatus !== "voided");
+      .filter((attempt) => attempt && attempt.outcome !== "undone" && !["voided", "corrected"].includes(attempt.recordStatus));
     const answered = attempts.filter((attempt) => attempt.outcome === "answered");
     const notAnswered = attempts.filter((attempt) => attempt.outcome === "not_answered");
     const effective = answered.filter(isEffectiveAnswer);
-    const randomCalls = attempts.filter((attempt) => attempt.selectionMethod !== "volunteer");
+    const randomCalls = attempts.filter((attempt) => attempt.selectionMethod === "random");
+    const teacherCalls = attempts.filter((attempt) => attempt.selectionMethod === "teacher");
     const volunteers = attempts.filter((attempt) => attempt.selectionMethod === "volunteer");
     const noResponseReasonStats = {};
     notAnswered.forEach((attempt) => {
@@ -783,6 +842,8 @@
       participationDayCount: new Set(answered.map((a) => a.sessionDate).filter(Boolean)).size,
       randomCallCount: randomCalls.length,
       randomCallEffectiveAnswerCount: randomCalls.filter(isEffectiveAnswer).length,
+      teacherCallCount: teacherCalls.length,
+      teacherCallEffectiveAnswerCount: teacherCalls.filter(isEffectiveAnswer).length,
       voluntarySpeakingCount: volunteers.length,
       voluntaryEffectiveAnswerCount: volunteers.filter(isEffectiveAnswer).length,
       responseStatusCounts,
@@ -892,7 +953,7 @@
       "session_id", "session_date", "class_name", "textbook_id", "textbook_title",
       "lesson_id", "lesson_number", "round_number", "event_order", "attempt_id", "event_type", "selection_method",
       "student_id", "student_code", "seat_number", "student_name",
-      "task_mode", "task_target", "opportunity_status", "response_status", "outcome", "no_response_reason", "no_response_reason_label", "answer_context", "attendance_status", "record_status",
+      "task_mode", "task_target", "opportunity_status", "response_status", "outcome", "no_response_reason", "no_response_reason_label", "round_skipped", "answer_context", "attendance_status", "record_status",
       "note", "correction_note", "corrected_at", "created_at", "drawn_at", "completed_at", "updated_at", "task_prompt", "assistance"
   ]);
 
@@ -915,7 +976,7 @@
         attempt.roundNumber,
         attempt.eventOrder,
         attempt.id,
-        attempt.eventType || (attempt.selectionMethod === "volunteer" ? "voluntary_speaking" : "random_call"),
+        attempt.eventType || (attempt.selectionMethod === "volunteer" ? "voluntary_speaking" : attempt.selectionMethod === "teacher" ? "teacher_call" : "random_call"),
         attempt.selectionMethod || "random",
         attempt.studentId,
         student.studentCode,
@@ -928,6 +989,7 @@
         attempt.outcome,
         attempt.noResponseReason,
         attempt.noResponseReason ? noResponseReasonLabel(attempt.noResponseReason) : "",
+        attempt.roundSkipped === true,
         attempt.answerContext || "unknown",
         attempt.attendanceStatus || "",
         attempt.recordStatus || "valid",
@@ -961,7 +1023,7 @@
     "class_name", "student_id", "student_code", "seat_number", "student_name",
     "total_attempt_count", "total_answer_count", "effective_answer_count", "random_call_count",
     "random_call_effective_answer_count", "voluntary_speaking_count", "voluntary_effective_answer_count",
-    "participation_day_count", "not_answered_count",
+    "teacher_call_count", "teacher_call_effective_answer_count", "participation_day_count", "not_answered_count",
     "no_response_reasons", "lesson_summaries"
   ]);
 
@@ -997,7 +1059,7 @@
         .join("；");
       const lessons = (summary.lessonBreakdown || [])
         .map((lesson) => {
-          return `${lesson.label}：回答 ${lesson.totalAnswerCount} 次，自愿回答 ${lesson.voluntaryEffectiveAnswerCount} 次`;
+          return `${lesson.label}：回答 ${lesson.totalAnswerCount} 次，自愿回答 ${lesson.voluntaryEffectiveAnswerCount} 次，老师主动叫后回答 ${lesson.teacherCallEffectiveAnswerCount} 次`;
         })
         .join("；");
       return [
@@ -1013,6 +1075,8 @@
         summary.randomCallEffectiveAnswerCount,
         summary.voluntarySpeakingCount,
         summary.voluntaryEffectiveAnswerCount,
+        summary.teacherCallCount,
+        summary.teacherCallEffectiveAnswerCount,
         summary.participationDayCount,
         summary.notAnsweredCount,
         reasons,
@@ -1060,7 +1124,8 @@
       lastNotAnsweredStudentId: parsed.currentRound.lastNotAnsweredStudentId || null
     };
     parsed.attempts = parsed.attempts.map((attempt, index) => {
-      const selectionMethod = attempt.selectionMethod === "volunteer" ? "volunteer" : "random";
+      if (!attempt || typeof attempt !== "object") throw new Error("备份的回答记录格式无效，未替换当前课堂。");
+      const selectionMethod = ["volunteer", "teacher"].includes(attempt.selectionMethod) ? attempt.selectionMethod : "random";
       const outcome = ["pending", "answered", "not_answered", "undone"].includes(attempt.outcome)
         ? attempt.outcome
         : "pending";
@@ -1079,7 +1144,7 @@
         ...attempt,
         sessionDate: attempt.sessionDate || parsed.session.date,
         selectionMethod,
-        eventType: attempt.eventType || (selectionMethod === "volunteer" ? "voluntary_speaking" : "random_call"),
+        eventType: attempt.eventType || (selectionMethod === "volunteer" ? "voluntary_speaking" : selectionMethod === "teacher" ? "teacher_call" : "random_call"),
         opportunityStatus: attempt.opportunityStatus || (selectionMethod === "volunteer" ? "volunteered" : "called"),
         outcome,
         responseStatus,
@@ -1096,6 +1161,36 @@
         textbookId: attempt.textbookId || textbook.id,
         lessonId: normalizeLessonId(attempt.lessonId || parsed.session.lessonId, attempt.textbookId || textbook.id)
       };
+    });
+    if (typeof parsed.session.id !== "string" || !text(parsed.session.id) || !Number.isInteger(parsed.currentRound.number)) throw new Error("备份的课堂身份或轮次无效，未替换当前课堂。");
+    const rosterIds = new Set();
+    for (const student of parsed.roster) {
+      if (!student || typeof student.id !== "string" || !student.id || rosterIds.has(student.id)) throw new Error("备份的学生名单无效，未替换当前课堂。");
+      rosterIds.add(student.id);
+    }
+    if (!rosterIds.size || [...parsed.excludedStudentIds, ...parsed.currentRound.answeredStudentIds].some(studentId => !rosterIds.has(studentId))) {
+      throw new Error("备份的抽问名单关联无效，未替换当前课堂。");
+    }
+    const attemptIds = new Set();
+    for (const attempt of parsed.attempts) {
+      if (typeof attempt.id !== "string" || !attempt.id || attemptIds.has(attempt.id) || !rosterIds.has(attempt.studentId)
+        || (attempt.sessionId && attempt.sessionId !== parsed.session.id)
+        || !Number.isInteger(attempt.roundNumber) || attempt.roundNumber < 1) throw new Error("备份的回答记录或学生关联无效，未替换当前课堂。");
+      attemptIds.add(attempt.id);
+    }
+    if (parsed.currentRound.pendingAttemptId) {
+      const pending = parsed.attempts.find(attempt => attempt.id === parsed.currentRound.pendingAttemptId);
+      if (!pending || pending.outcome !== "pending" || ["voided", "corrected"].includes(pending.recordStatus)
+        || pending.roundNumber !== parsed.currentRound.number
+        || parsed.excludedStudentIds.includes(pending.studentId)) throw new Error("备份的待回答记录关联无效，未替换当前课堂。");
+    }
+    const pendingIds = parsed.attempts.filter(attempt => attempt.outcome === "pending" && !["voided", "corrected"].includes(attempt.recordStatus)).map(attempt => attempt.id);
+    if (pendingIds.length !== (parsed.currentRound.pendingAttemptId ? 1 : 0)
+      || (pendingIds.length && pendingIds[0] !== parsed.currentRound.pendingAttemptId)) throw new Error("备份的待回答记录不一致，未替换当前课堂。");
+    parsed.undoStack = parsed.undoStack.map(entry => {
+      if (!entry || !entry.before || !entry.event || !text(entry.event.id) || !text(entry.event.type)
+        || entry.before.session?.id !== parsed.session.id) throw new Error("备份的撤销记录无效，未替换当前课堂。");
+      return { ...entry, before: importBackup({ ...entry.before, undoStack: [] }) };
     });
     parsed.schemaVersion = SCHEMA_VERSION;
     return parsed;
@@ -1137,6 +1232,7 @@
     drawStudent,
     selectVolunteer,
     recordVolunteer,
+    recordTeacherCall,
     setAbsent,
     recordResponse,
     returnPending,

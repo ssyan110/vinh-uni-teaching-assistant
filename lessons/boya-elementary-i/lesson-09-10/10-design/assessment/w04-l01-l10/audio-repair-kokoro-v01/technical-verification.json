@@ -1,0 +1,118 @@
+{
+  "status": "pass",
+  "samples": [
+    {
+      "audio_id": "E04-B01",
+      "seconds": 12.625,
+      "sha256": "6d7003ce10e57e507fb7102beb6036479471a3eec3a60bd2da496fa7ba9b4542",
+      "peak": 0.497528076171875,
+      "full_generator_coverage": true,
+      "planned_silence_exact": true,
+      "unit_count": 4
+    },
+    {
+      "audio_id": "E01-A02",
+      "seconds": 0.65,
+      "sha256": "d992d096263588cc645ed0ee5fe615ead89783a7445be23cb47705f7071469b4",
+      "peak": 0.24664306640625,
+      "full_generator_coverage": true,
+      "planned_silence_exact": true,
+      "unit_count": 1
+    },
+    {
+      "audio_id": "E03-A01",
+      "seconds": 0.95,
+      "sha256": "095616ce8f7d0483d9cddc2dd4209a6705bba669d139aa990ccb30ae7a8d36b9",
+      "peak": 0.496063232421875,
+      "full_generator_coverage": true,
+      "planned_silence_exact": true,
+      "unit_count": 1
+    },
+    {
+      "audio_id": "E03-A02",
+      "seconds": 0.9,
+      "sha256": "4cb51599e9a2c645c194c3cda8e0ba6be2e2e5ba8119a2fbbf3f96ec38bbb1c6",
+      "peak": 0.30523681640625,
+      "full_generator_coverage": true,
+      "planned_silence_exact": true,
+      "unit_count": 1
+    },
+    {
+      "audio_id": "E03-C01",
+      "seconds": 19.05,
+      "sha256": "ce579e1193996a2354f831f91b8bf7cdbcf9962936989ee3c992549499fd90e3",
+      "peak": 0.467071533203125,
+      "full_generator_coverage": true,
+      "planned_silence_exact": true,
+      "unit_count": 6
+    },
+    {
+      "audio_id": "E05-B01",
+      "seconds": 14.675,
+      "sha256": "9b577308f67d6609de92341063a027f063eb8c1029079250c1c607ff87a7ff44",
+      "peak": 0.503631591796875,
+      "full_generator_coverage": true,
+      "planned_silence_exact": true,
+      "unit_count": 4
+    },
+    {
+      "audio_id": "E08-C01",
+      "seconds": 9.7,
+      "sha256": "49d6d56d0010301a3d36a63036ebec692bf9033f842d6e9ea358af087bd7527b",
+      "peak": 0.495880126953125,
+      "full_generator_coverage": true,
+      "planned_silence_exact": true,
+      "unit_count": 1
+    },
+    {
+      "audio_id": "E09-C01",
+      "seconds": 12.1,
+      "sha256": "5de73ebd9921e49c9755fb4bf80919bfd6caeb30eb05671e37a5b56c28f37071",
+      "peak": 0.431304931640625,
+      "full_generator_coverage": true,
+      "planned_silence_exact": true,
+      "unit_count": 1
+    },
+    {
+      "audio_id": "E04-C01",
+      "seconds": 5.675,
+      "sha256": "70cc591c0c994514f9aea0d9cf64b23da678b05bc154e09fe22d0ce2cfba3cfa",
+      "peak": 0.476318359375,
+      "full_generator_coverage": true,
+      "planned_silence_exact": true,
+      "unit_count": 1
+    }
+  ],
+  "source_gate": {
+    "purpose": "assessment-audio",
+    "exam_id": "W04-L01L10-20261006",
+    "status": "ready",
+    "output_dir": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/audio-repair-kokoro-v01",
+    "blockers": [],
+    "offering_id": "2026-fall",
+    "textbook_id": "boya-elementary-i",
+    "cohort": "BOYA-LS-E1-Y1S1-2026F",
+    "lesson_keys": [
+      "boya-elementary-i:lesson-01",
+      "boya-elementary-i:lesson-02",
+      "boya-elementary-i:lesson-03",
+      "boya-elementary-i:lesson-04",
+      "boya-elementary-i:lesson-05",
+      "boya-elementary-i:lesson-06",
+      "boya-elementary-i:lesson-07",
+      "boya-elementary-i:lesson-08",
+      "boya-elementary-i:lesson-09",
+      "boya-elementary-i:lesson-10"
+    ],
+    "input_hashes": {
+      "items.json": "e876c3327e27cf513518f57718f051b88a8b9b27ccfa1875dbe55c7bda29b19e",
+      "audio-manifest.json": "a084690d6a307623d7f3bd17110a85b1037f0bfbeab48ba6ff04560473309f4f",
+      "teacher.md": "7dc8f07186c1bce95f118a4ff4e6ea446edaf29d0e9a995414ce9ad187185eec",
+      "student.md": "df3dec089e95443745789a11fde08e51f68ef88c4cd22e26c56daab37f64f858"
+    },
+    "artifact_state": "design_draft",
+    "human_audio_acceptance": false
+  },
+  "dashboard_unchanged": true,
+  "audio_quality_accepted": false
+}

@@ -4,7 +4,7 @@
   "private": true,
   "description": "Offline classroom random calling and response-record tool",
   "scripts": {
-    "test": "node --test src/model.test.cjs src/rosters.test.cjs src/cloud.test.cjs"
+    "test": "node --test src/model.test.cjs src/rosters.test.cjs src/cloud.test.cjs src/recovery.test.cjs"
   },
   "engines": {
     "node": ">=20"

@@ -1,0 +1,13 @@
+{
+  "management_and_response_link_readback": "pass",
+  "real_response_hyperlink_targets": "pass",
+  "canonical_registry_response_id_parity": "pass",
+  "two_required_unscored_identity_fields": "verified_by_browser_owner",
+  "optional_50_items_student_instruction_alignment": "pass",
+  "dashboard_controls": "pass",
+  "Form_item_ids": "not_extracted_no_invented_ids",
+  "question_sequence_mapping": "Q01_Q50_to_bank_rows_2_51",
+  "unpublished_teacher_review_status": "retained",
+  "post_submission_score_visibility": "not_tested",
+  "student_response_rows_read_or_submitted": false
+}

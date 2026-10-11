@@ -1,0 +1,15 @@
+{
+  "repo_id": "hexgrad/Kokoro-82M-v1.1-zh",
+  "revision": "01e7505bd6a7a2ac4975463114c3a7650a9f7218",
+  "voice": "zf_001",
+  "lang_code": "z",
+  "speed": 1.0,
+  "device": "cpu",
+  "dtype": "float32",
+  "seed": 20261010,
+  "frontend": "Misaki-0.9.4-ZHFrontend-1.1-unmodified",
+  "postprocessing": "PCM16 serialization only; no trim/normalization/time stretch",
+  "segmentation": "original source units only; consume all pipeline chunks; no digit splitting",
+  "max_attempts_per_sample": 1,
+  "settings_sha256": "883671a02e6dc7b9e48193803759b4fe9406db2805d3a2f868f7ec9c2c6bbbc0"
+}

@@ -5,7 +5,7 @@ import type { LearningEvent, NoResponseReason, RandomizerAttempt } from '../type
 test('summary excludes withdrawn and unobserved records but preserves genuine zero scores', () => {
   const event = { task_completion: 0, response_status: 'answered' } as LearningEvent
   expect(includedInSummary(event)).toBe(true)
-  expect(includedInSummary({...event, record_status:'corrected'})).toBe(true)
+  expect(includedInSummary({...event, record_status:'corrected'})).toBe(false)
   expect(includedInSummary({...event, record_status:'corrected', counted_for_summary:false})).toBe(false)
   expect(includedInSummary({...event, record_status:'voided'})).toBe(false)
   expect(includedInSummary({...event, counted_for_summary:false})).toBe(false)

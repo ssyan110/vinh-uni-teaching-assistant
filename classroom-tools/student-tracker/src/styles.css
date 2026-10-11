@@ -580,6 +580,11 @@ html, body { background: #f5f5f7; }
 .filter-panel,.note-form {display:flex;flex-wrap:wrap;gap:16px;align-items:end}
 .filter-panel label,.note-form label {display:grid;gap:7px;flex:1 1 190px;min-width:0}
 .note-form .wide {flex-basis:100%}
+.attendance-exception-form {margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.attendance-exceptions {margin-top:20px}
+.attendance-exceptions .panel-heading {flex-wrap:wrap}
+.attendance-exceptions select {max-width:100%}
+.attendance-exceptions .fact-note {overflow-wrap:anywhere}
 .note-form textarea {min-height:90px;width:100%;padding:12px;border:1px solid var(--line);border-radius:8px;font:inherit}
 .analysis-page .panel,.student-detail-page .panel {margin-bottom:20px}
 .analysis-page select {max-width:100%}
@@ -772,3 +777,13 @@ html, body { background: #f5f5f7; }
   .student-row { grid-template-columns: 28px minmax(0,1fr) auto 15px; }
   .student-preview { padding: 20px; }
 }
+
+/* Weekly review reuses the existing management panels and typography. */
+.weekly-source { border-top: 1px solid var(--line, #e5ebe7); padding: 16px 0; }
+.weekly-source dl div { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 12px; margin: 10px 0; }
+.weekly-source dd { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.weekly-review-page textarea { width: 100%; margin: 8px 0 12px; }
+.weekly-review-page li { margin: 12px 0; }
+.weekly-session-link { display: block; padding: 4px 0; }
+.followup-row:target { outline: 2px solid var(--forest); outline-offset: 4px; scroll-margin-top: 90px; }
+@media(max-width:600px) { .weekly-source dl div { grid-template-columns: 1fr; gap: 4px; } }

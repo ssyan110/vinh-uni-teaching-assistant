@@ -1,0 +1,205 @@
+{
+  "method": "local afplay existing WAV; no audio capture",
+  "results": [
+    {
+      "audio_id": "E01-A01",
+      "exit_code": 0,
+      "elapsed_seconds": 1.87,
+      "error": ""
+    },
+    {
+      "audio_id": "E01-A02",
+      "exit_code": 0,
+      "elapsed_seconds": 1.88,
+      "error": ""
+    },
+    {
+      "audio_id": "E01-A03",
+      "exit_code": 0,
+      "elapsed_seconds": 1.62,
+      "error": ""
+    },
+    {
+      "audio_id": "E02-A01",
+      "exit_code": 0,
+      "elapsed_seconds": 1.62,
+      "error": ""
+    },
+    {
+      "audio_id": "E02-A02",
+      "exit_code": 0,
+      "elapsed_seconds": 1.88,
+      "error": ""
+    },
+    {
+      "audio_id": "E02-A03",
+      "exit_code": 0,
+      "elapsed_seconds": 1.88,
+      "error": ""
+    },
+    {
+      "audio_id": "E03-A01",
+      "exit_code": 0,
+      "elapsed_seconds": 1.88,
+      "error": ""
+    },
+    {
+      "audio_id": "E03-A02",
+      "exit_code": 0,
+      "elapsed_seconds": 2.13,
+      "error": ""
+    },
+    {
+      "audio_id": "E03-A03",
+      "exit_code": 0,
+      "elapsed_seconds": 1.37,
+      "error": ""
+    },
+    {
+      "audio_id": "E04-A01",
+      "exit_code": 0,
+      "elapsed_seconds": 2.38,
+      "error": ""
+    },
+    {
+      "audio_id": "E04-B01",
+      "exit_code": 0,
+      "elapsed_seconds": 12.55,
+      "error": ""
+    },
+    {
+      "audio_id": "E05-A02",
+      "exit_code": 0,
+      "elapsed_seconds": 3.89,
+      "error": ""
+    },
+    {
+      "audio_id": "E05-B01",
+      "exit_code": 0,
+      "elapsed_seconds": 14.59,
+      "error": ""
+    },
+    {
+      "audio_id": "E06-A01",
+      "exit_code": 0,
+      "elapsed_seconds": 3.65,
+      "error": ""
+    },
+    {
+      "audio_id": "E06-B01",
+      "exit_code": 0,
+      "elapsed_seconds": 12.56,
+      "error": ""
+    },
+    {
+      "audio_id": "E07-A01",
+      "exit_code": 0,
+      "elapsed_seconds": 3.41,
+      "error": ""
+    },
+    {
+      "audio_id": "E07-B01",
+      "exit_code": 0,
+      "elapsed_seconds": 12.29,
+      "error": ""
+    },
+    {
+      "audio_id": "E08-A01",
+      "exit_code": 0,
+      "elapsed_seconds": 2.39,
+      "error": ""
+    },
+    {
+      "audio_id": "E08-B01",
+      "exit_code": 0,
+      "elapsed_seconds": 12.81,
+      "error": ""
+    },
+    {
+      "audio_id": "E09-A02",
+      "exit_code": 0,
+      "elapsed_seconds": 4.16,
+      "error": ""
+    },
+    {
+      "audio_id": "E09-B01",
+      "exit_code": 0,
+      "elapsed_seconds": 12.8,
+      "error": ""
+    },
+    {
+      "audio_id": "E10-A01",
+      "exit_code": 0,
+      "elapsed_seconds": 2.88,
+      "error": ""
+    },
+    {
+      "audio_id": "E10-B01",
+      "exit_code": 0,
+      "elapsed_seconds": 14.32,
+      "error": ""
+    },
+    {
+      "audio_id": "E01-C01",
+      "exit_code": 0,
+      "elapsed_seconds": 20.18,
+      "error": ""
+    },
+    {
+      "audio_id": "E02-C01",
+      "exit_code": 0,
+      "elapsed_seconds": 20.67,
+      "error": ""
+    },
+    {
+      "audio_id": "E03-C01",
+      "exit_code": 0,
+      "elapsed_seconds": 21.45,
+      "error": ""
+    },
+    {
+      "audio_id": "E04-C01",
+      "exit_code": 0,
+      "elapsed_seconds": 5.68,
+      "error": ""
+    },
+    {
+      "audio_id": "E05-C01",
+      "exit_code": 0,
+      "elapsed_seconds": 7.73,
+      "error": ""
+    },
+    {
+      "audio_id": "E06-C01",
+      "exit_code": 0,
+      "elapsed_seconds": 7.21,
+      "error": ""
+    },
+    {
+      "audio_id": "E07-C01",
+      "exit_code": 0,
+      "elapsed_seconds": 9.0,
+      "error": ""
+    },
+    {
+      "audio_id": "E08-C01",
+      "exit_code": 0,
+      "elapsed_seconds": 9.52,
+      "error": ""
+    },
+    {
+      "audio_id": "E09-C01",
+      "exit_code": 0,
+      "elapsed_seconds": 12.56,
+      "error": ""
+    },
+    {
+      "audio_id": "E10-C01",
+      "exit_code": 0,
+      "elapsed_seconds": 10.26,
+      "error": ""
+    }
+  ],
+  "subjective_pronunciation_review": "not_run",
+  "browser_media_playback": "not_run_browser_unavailable"
+}

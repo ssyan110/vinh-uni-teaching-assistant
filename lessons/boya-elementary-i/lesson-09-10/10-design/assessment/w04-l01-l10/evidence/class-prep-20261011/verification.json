@@ -1,0 +1,50 @@
+{
+  "assessment_id": "W04-L01L10-20261006",
+  "offering_id": "2026-fall",
+  "lesson_keys": [
+    "boya-elementary-i:lesson-01",
+    "boya-elementary-i:lesson-02",
+    "boya-elementary-i:lesson-03",
+    "boya-elementary-i:lesson-04",
+    "boya-elementary-i:lesson-05",
+    "boya-elementary-i:lesson-06",
+    "boya-elementary-i:lesson-07",
+    "boya-elementary-i:lesson-08",
+    "boya-elementary-i:lesson-09",
+    "boya-elementary-i:lesson-10"
+  ],
+  "artifact_state": "design_draft",
+  "phase": "needs_human",
+  "technical_checks": {
+    "33_browser_metadata_loads": true,
+    "33_audio_sha256_matches": true,
+    "two_controller_self_checks": true,
+    "actual_pause_resume_counts_once": true,
+    "actual_refresh_restores_no_autoplay": true,
+    "actual_error_reload_recovers": true,
+    "student_mobile_width": 390,
+    "student_mobile_scroll_width": 390,
+    "audition_zip_integrity": true,
+    "new_form_anonymous_entry": "redirects_to_google_login"
+  },
+  "human_audio_acceptance": false,
+  "publication_performed": false,
+  "form_submission_performed": false,
+  "source_exam_intake_changed": false,
+  "remaining": [
+    "teacher_full_listening_and_policy_review",
+    "classroom_speaker_projector_test",
+    "authenticated_form_student_permissions_submission_grade_visibility",
+    "lesson_09_10_registry_missing"
+  ],
+  "files_sha256": {
+    "lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/dashboard.html": "fe2816d80ca6150a1b3fc15560bbe13a63d1bcdb826aa1d688fdd980a31dce8a",
+    "lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/dashboard.js": "0514dea4323bbb4c0c101f2f41351e484e5177ce32aaafc96b083d214352820e",
+    "lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/student-instructions.html": "60e7d6928e381d52934a1668c0fb926bf1aab3593dddef4ac286951c6466ac86",
+    "lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/timing.md": "368e21a272e89913de5d2a7a315bdc9cc99344c4d4bc41782513ae8da7a9f400",
+    "lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/audio-repair-kokoro-v02/dashboard.html": "bfb58ed969d6a9e8d453fba1350880b6e2977c41e85f60cb7ebd800eb9b93324",
+    "lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/audio-repair-kokoro-v02/dashboard.js": "0514dea4323bbb4c0c101f2f41351e484e5177ce32aaafc96b083d214352820e",
+    "lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/audio-repair-kokoro-v02/lesson-09-测验音频试听.zip": "585033b7ffc7da06e1680d1677b1f5918ad04f604ea24c20e23afdbd92a5c6ad",
+    "lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/audio-repair-kokoro-v02/teacher-listening-checklist.csv": "62a4a57da4c8f576d53e6b558c2d5c65c964d0dfa0608c2f6b2dd17f9540d3f2"
+  }
+}

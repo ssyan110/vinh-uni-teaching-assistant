@@ -1,0 +1,253 @@
+{
+  "audit_status": "completed_with_unverified_human_scopes",
+  "timestamp_utc": "2026-10-10T18:04:58.658987+00:00",
+  "declared_scope": {
+    "exam_id": "W04-L01L10-20261006",
+    "offering_id": "2026-fall",
+    "textbook_id": "boya-elementary-i",
+    "lesson_keys": [
+      "boya-elementary-i:lesson-01",
+      "boya-elementary-i:lesson-02",
+      "boya-elementary-i:lesson-03",
+      "boya-elementary-i:lesson-04",
+      "boya-elementary-i:lesson-05",
+      "boya-elementary-i:lesson-06",
+      "boya-elementary-i:lesson-07",
+      "boya-elementary-i:lesson-08",
+      "boya-elementary-i:lesson-09",
+      "boya-elementary-i:lesson-10"
+    ],
+    "registry_resolved": true
+  },
+  "browser_operations": [
+    "browser-log-1.json",
+    "browser-log-2.json",
+    "browser-log-3.json",
+    "browser-track-metadata.json"
+  ],
+  "screenshots": [
+    "01-entry.png",
+    "02-double-next.png",
+    "03-pause-resume-count.png",
+    "04-load-failure.png",
+    "05-final-segment.png",
+    "06-selected-offscreen.png",
+    "07-final-controls.png",
+    "08-final-complete.png"
+  ],
+  "blockers": [],
+  "findings": [
+    {
+      "id": "T01",
+      "severity": "critical",
+      "title": "主頁音源未驗收且版本識別不足",
+      "evidence": "dashboard.html 的33條 file 全指向 audio-repair-qwen-serena-v01；該 repair-manifest status=technical_review_pending；頁首只寫「全部使用现有原速音频」。",
+      "expected": "入口應明確顯示音源版本、待審狀態、禁止正式施測；未驗收不應造成可用錯覺。",
+      "recommendation": "加入音源版本與驗收狀態；教師完成驗收前保留明確阻塞。",
+      "method": "browser_interaction_and_source_inspection",
+      "browser_verified": true
+    },
+    {
+      "id": "T02",
+      "severity": "high",
+      "title": "時間核算與主頁現行音源漂移",
+      "evidence": "由主頁資料計算一遍295.7028秒、按計畫533.9256秒；加看題665、間隔300、作答1650、切換198及前後360秒=3706.9256秒（61.78分）；timing.md仍為59.46分，頁首55–60分。",
+      "expected": "時間估算須綁目前音源版本。",
+      "recommendation": "重新核算目前未驗收版本並展示來源；正式時段仍由教師決定。",
+      "method": "read_only_source_inspection",
+      "browser_verified": false
+    },
+    {
+      "id": "T03",
+      "severity": "high",
+      "title": "暫停計數說明與程式條件不一致",
+      "evidence": "第30段播放0.707秒後按暫停，使用原生play續播至ended；實際顯示完整播放1次／計畫2次，與「中途暂停不计」不一致。browser-log-1/2，03截圖。",
+      "expected": "計數的文字定義與狀態轉移一致。",
+      "recommendation": "明確決定暫停續播是否算一遍並對齊程式及說明；需瀏覽器重測。",
+      "method": "browser_interaction_and_source_inspection",
+      "browser_verified": true
+    },
+    {
+      "id": "T04",
+      "severity": "medium",
+      "title": "載入失敗提示指向錯誤目錄",
+      "evidence": "只在隔離頁面DOM將audio.src改為不存在的file:///tmp/teacher-audit-nonexistent.wav，load後出現錯誤audio文件夹提示；重聽仍失敗；上一段→下一段重新載入恢復正在播放。未修改任何檔案。04截圖。",
+      "expected": "教師看提示即可定位目前缺失檔案。",
+      "recommendation": "顯示實際音檔相對路徑、版本及重新載入動作。",
+      "method": "browser_interaction_and_source_inspection",
+      "browser_verified": true
+    },
+    {
+      "id": "T05",
+      "severity": "medium",
+      "title": "計時僅涵蓋看題，作答與兩遍間隔需手動管理",
+      "evidence": "timer只讀preview_seconds；between_plays_seconds、answer_seconds僅顯示文字；沒有整卷elapsed或結束流程。",
+      "expected": "教師能分辨看題、第一次作答、第二次作答及提交階段。",
+      "recommendation": "提供教師可控階段計時與末段檢查／提交提示，避免自動縮短作答。",
+      "method": "browser_interaction_and_source_inspection",
+      "browser_verified": true
+    },
+    {
+      "id": "T06",
+      "severity": "medium",
+      "title": "可跳段與重整失去進度的防護不足",
+      "evidence": "兩次播完第1段後重整：回到第1段0次；選第33段後離頁about:blank再back，同樣第1段0次。未完計畫可next。清零立即執行無確認。原生dblclick下一段僅前進一段，不能宣稱雙擊必定跳段。",
+      "expected": "意外操作不應悄悄失去施測位置／次數。",
+      "recommendation": "增加未完播放提示、明確恢復政策及清零確認；雙擊與刷新仍待實測。",
+      "method": "browser_interaction_and_source_inspection",
+      "browser_verified": true
+    },
+    {
+      "id": "T07",
+      "severity": "medium",
+      "title": "字體與投影可讀性有待驗證",
+      "evidence": "1280×900真實Chrome截圖顯示教師控制面板與內部說明混在同頁；computed style為body/buttons 16px system-ui，timing17px，h1 26px；與字體規則不符。無橫向溢出，但實際教室投影未測。",
+      "expected": "中文與拉丁字體遵循專案規則，教室投影可讀。",
+      "recommendation": "提供教師／投影顯示分離，使用規定字體；以教室視距驗證。此處未測實際渲染。",
+      "method": "browser_interaction_and_source_inspection",
+      "browser_verified": true
+    },
+    {
+      "id": "T08",
+      "severity": "high",
+      "title": "Kokoro純台詞的人名身份仍需解決",
+      "evidence": "直接核對spoken-text-review.json的units.spoken_text與題干：以下證據列出指定題對應台詞；多處問小王／小林而台詞無自我介紹。此觀察屬文字語義，並非可靠聲調聽驗。",
+      "expected": "題干指定人物應能從錄音資訊識別。",
+      "recommendation": "先決定自我介紹、題干改為說話者或可識別聲線等方案，再批准新內容及驗收；不要將樣本替換主頁。",
+      "method": "read_only_source_inspection",
+      "browser_verified": false
+    },
+    {
+      "id": "T09",
+      "severity": "medium",
+      "title": "長列表選段後播放面板留在畫面外",
+      "evidence": "逐一按33段列表後，第33段已選中，但main.getBoundingClientRect().top=-1750.19、bottom=-1163.19，整個播放面板在viewport上方；06截圖僅見列表與清零。",
+      "expected": "選段後能直接操作播放並看見当前題號。",
+      "recommendation": "選段後將播放面板捲入可視區或固定控制列；保留題號與音源。",
+      "method": "browser_interaction",
+      "browser_verified": true
+    },
+    {
+      "id": "T10",
+      "severity": "low",
+      "title": "末段完成提示仍要求下一段",
+      "evidence": "第33段完整播放2次後status為「计划播放完成，请留时间作答，再到下一段」，但next已disabled。08-final-complete.png。",
+      "expected": "末段轉入檢查與提交提示。",
+      "recommendation": "末段顯示已播完、檢查姓名學號及答卷，再依教師指示提交；保留不自動提交。",
+      "method": "browser_interaction",
+      "browser_verified": true
+    }
+  ],
+  "role_text_evidence": [
+    {
+      "audio_id": "E05-B01",
+      "question_numbers": [
+        14,
+        15
+      ],
+      "spoken_units": [
+        "这是我的朋友安娜。",
+        "安娜，你是哪国人？",
+        "我是英国人。",
+        "我也是英国人，认识你很高兴。"
+      ]
+    },
+    {
+      "audio_id": "E06-B01",
+      "question_numbers": [
+        17,
+        18
+      ],
+      "spoken_units": [
+        "这是谁的笔？是你的吗？",
+        "不是我的，是李美的。",
+        "这个本子呢？",
+        "这个本子是我的。"
+      ]
+    },
+    {
+      "audio_id": "E07-B01",
+      "question_numbers": [
+        20,
+        21
+      ],
+      "spoken_units": [
+        "你住在学校里吗？",
+        "不，我住在学校外边。",
+        "远吗？",
+        "不远，就在学校东边。"
+      ]
+    },
+    {
+      "audio_id": "E08-B01",
+      "question_numbers": [
+        23,
+        24
+      ],
+      "spoken_units": [
+        "今晚六点一起吃饭吧。",
+        "六点我有课，七点下课。",
+        "那七点半食堂见。",
+        "好。"
+      ]
+    },
+    {
+      "audio_id": "E10-B01",
+      "question_numbers": [
+        29,
+        30
+      ],
+      "spoken_units": [
+        "西瓜怎么卖？",
+        "三块钱一斤。",
+        "我要两斤。",
+        "一共六块。",
+        "给你十块。"
+      ]
+    }
+  ],
+  "checks": {
+    "tracks": 33,
+    "unique_question_ids": 50,
+    "missing_referenced_audio": [],
+    "planned_playback_seconds": 533.9255833333333,
+    "browser_metadata_tracks": 33,
+    "browser_load_failures": [],
+    "browser_js_errors": "none observed",
+    "last_segment_completed_twice": true,
+    "answer_leak_on_local_dashboard": "No visible answer/transcript or outgoing link observed; no Form verification"
+  },
+  "input_sha256": {
+    "dashboard.html": "d1565c1c8a9bc8a2c072a738d8e1574e1ffddbf15c307593f046dfc03f74c2fe",
+    "dashboard.js": "82a48227423811df413be33e769fadd0c8d2441247b1702099f62adf4d513569",
+    "timing.md": "b9b60cedad588efcb6ede4ecd73224cc60df7a2626c1bc74f6bc6c4b356107c2",
+    "student.md": "df3dec089e95443745789a11fde08e51f68ef88c4cd22e26c56daab37f64f858",
+    "audio-repair-qwen-serena-v01/repair-manifest.json": "965a03e34f4b90f4b01e4f14dbfab7f483b76079ce299350e60fc029f7993c73",
+    "audio-repair-kokoro-v01/spoken-text-review.json": "7ec21b9d8895f700d517fb5223d2e2bc5c7f30e9bf4e1d73538767a060ed2a2b"
+  },
+  "untested": [
+    "real student Google Form screen/submission/score visibility",
+    "classroom projector/back-row readability",
+    "human tone/pronunciation validation",
+    "classroom speaker acoustics",
+    "real teacher study",
+    "timed completion of all 50 questions",
+    "all 33 audio content listening"
+  ],
+  "writes": "audit folder only; browser DOM failure simulation transient; no teaching source/code/cloud writes",
+  "browser": {
+    "cli": "/Users/ssyan110/node_modules/.bin/agent-browser",
+    "version": "0.33.2",
+    "session": "teacher-audit",
+    "cdp": "http://127.0.0.1:9236",
+    "profile": "/tmp/teacher-audit-chrome-20261010",
+    "isolated": true,
+    "mode": "headless",
+    "closed_after_audit": true
+  },
+  "corrections": [
+    "CLI installed outside PATH; initial missing-CLI claim withdrawn.",
+    "Cumulative exam identity supported by exam_id route; initial single-lesson init failure does not block audit.",
+    "assessment-audio gate ready permits technical work, not human acceptance."
+  ]
+}

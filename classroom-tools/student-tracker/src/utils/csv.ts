@@ -52,7 +52,10 @@ export function parseRosterCsv(source: string): { rows: ImportStudentRow[]; erro
       input[key] = key === 'student_code' || key === 'chinese_name' ? value : value || undefined
     })
     const parsed = rosterRow.safeParse(input)
-    if (parsed.success) rows.push(parsed.data)
+    if (parsed.success) {
+      if (rows.some(row => row.student_code === parsed.data.student_code)) errors.push(`第 ${rowIndex + 2} 列：學號 ${parsed.data.student_code} 重複，請核對後再匯入。`)
+      else rows.push(parsed.data)
+    }
     else errors.push(`第 ${rowIndex + 2} 列：${parsed.error.issues.map((issue) => issue.message).join('、')}`)
   })
   return { rows, errors }

@@ -1,0 +1,207 @@
+{
+  "confirmationPrompts": 32,
+  "loaded": 33,
+  "playerVisible": false,
+  "rows": [
+    {
+      "duration": 0.725,
+      "expected": 0.725,
+      "index": 1,
+      "range": "题1 · 第1段／共33段"
+    },
+    {
+      "duration": 0.65,
+      "expected": 0.65,
+      "index": 2,
+      "range": "题2 · 第2段／共33段"
+    },
+    {
+      "duration": 0.7,
+      "expected": 0.7,
+      "index": 3,
+      "range": "题3 · 第3段／共33段"
+    },
+    {
+      "duration": 0.725,
+      "expected": 0.725,
+      "index": 4,
+      "range": "题4 · 第4段／共33段"
+    },
+    {
+      "duration": 0.725,
+      "expected": 0.725,
+      "index": 5,
+      "range": "题5 · 第5段／共33段"
+    },
+    {
+      "duration": 0.7,
+      "expected": 0.7,
+      "index": 6,
+      "range": "题6 · 第6段／共33段"
+    },
+    {
+      "duration": 0.8,
+      "expected": 0.8,
+      "index": 7,
+      "range": "题7 · 第7段／共33段"
+    },
+    {
+      "duration": 0.9,
+      "expected": 0.9,
+      "index": 8,
+      "range": "题8 · 第8段／共33段"
+    },
+    {
+      "duration": 0.725,
+      "expected": 0.725,
+      "index": 9,
+      "range": "题9 · 第9段／共33段"
+    },
+    {
+      "duration": 2.425,
+      "expected": 2.425,
+      "index": 10,
+      "range": "题10 · 第10段／共33段"
+    },
+    {
+      "duration": 12.625,
+      "expected": 12.625,
+      "index": 11,
+      "range": "题11–12 · 第11段／共33段"
+    },
+    {
+      "duration": 3.775,
+      "expected": 3.775,
+      "index": 12,
+      "range": "题13 · 第12段／共33段"
+    },
+    {
+      "duration": 15.475,
+      "expected": 15.475,
+      "index": 13,
+      "range": "题14–15 · 第13段／共33段"
+    },
+    {
+      "duration": 3.65,
+      "expected": 3.65,
+      "index": 14,
+      "range": "题16 · 第14段／共33段"
+    },
+    {
+      "duration": 14.05,
+      "expected": 14.05,
+      "index": 15,
+      "range": "题17–18 · 第15段／共33段"
+    },
+    {
+      "duration": 3.7,
+      "expected": 3.7,
+      "index": 16,
+      "range": "题19 · 第16段／共33段"
+    },
+    {
+      "duration": 13.4,
+      "expected": 13.4,
+      "index": 17,
+      "range": "题20–21 · 第17段／共33段"
+    },
+    {
+      "duration": 2.575,
+      "expected": 2.575,
+      "index": 18,
+      "range": "题22 · 第18段／共33段"
+    },
+    {
+      "duration": 13.8,
+      "expected": 13.8,
+      "index": 19,
+      "range": "题23–24 · 第19段／共33段"
+    },
+    {
+      "duration": 4.3,
+      "expected": 4.3,
+      "index": 20,
+      "range": "题25 · 第20段／共33段"
+    },
+    {
+      "duration": 12.725,
+      "expected": 12.725,
+      "index": 21,
+      "range": "题26–27 · 第21段／共33段"
+    },
+    {
+      "duration": 2.55,
+      "expected": 2.55,
+      "index": 22,
+      "range": "题28 · 第22段／共33段"
+    },
+    {
+      "duration": 14.7,
+      "expected": 14.7,
+      "index": 23,
+      "range": "题29–30 · 第23段／共33段"
+    },
+    {
+      "duration": 19.25,
+      "expected": 19.25,
+      "index": 24,
+      "range": "题31–32 · 第24段／共33段"
+    },
+    {
+      "duration": 19.45,
+      "expected": 19.45,
+      "index": 25,
+      "range": "题33–34 · 第25段／共33段"
+    },
+    {
+      "duration": 19.05,
+      "expected": 19.05,
+      "index": 26,
+      "range": "题35–36 · 第26段／共33段"
+    },
+    {
+      "duration": 5.675,
+      "expected": 5.675,
+      "index": 27,
+      "range": "题37–38 · 第27段／共33段"
+    },
+    {
+      "duration": 7.15,
+      "expected": 7.15,
+      "index": 28,
+      "range": "题39–40 · 第28段／共33段"
+    },
+    {
+      "duration": 6.75,
+      "expected": 6.75,
+      "index": 29,
+      "range": "题41–42 · 第29段／共33段"
+    },
+    {
+      "duration": 8.75,
+      "expected": 8.75,
+      "index": 30,
+      "range": "题43–44 · 第30段／共33段"
+    },
+    {
+      "duration": 9.7,
+      "expected": 9.7,
+      "index": 31,
+      "range": "题45–46 · 第31段／共33段"
+    },
+    {
+      "duration": 12.1,
+      "expected": 12.1,
+      "index": 32,
+      "range": "题47–48 · 第32段／共33段"
+    },
+    {
+      "duration": 10.5,
+      "expected": 10.5,
+      "index": 33,
+      "range": "题49–50 · 第33段／共33段"
+    }
+  ],
+  "scrollWidth": 1280,
+  "viewport": 1280
+}

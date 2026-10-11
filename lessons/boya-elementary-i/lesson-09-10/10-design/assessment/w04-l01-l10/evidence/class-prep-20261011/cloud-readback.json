@@ -1,0 +1,214 @@
+{
+  "spreadsheetId": "1fhKUHCsyEYvSMrCgw5bL8vtazuwX77DKoa0ZCsQgIso",
+  "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1fhKUHCsyEYvSMrCgw5bL8vtazuwX77DKoa0ZCsQgIso/edit",
+  "properties": {
+    "title": "一年级｜综合测验统一管理｜新测验总表",
+    "locale": "en_AU",
+    "timeZone": "Pacific/Auckland"
+  },
+  "sheets": [
+    {
+      "properties": {
+        "sheetId": 1737213268,
+        "title": "测验总表",
+        "index": 0,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1000,
+          "columnCount": 26,
+          "frozenRowCount": 1
+        }
+      },
+      "data": [
+        {
+          "startRow": 1,
+          "startColumn": 13,
+          "rowData": [
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "stringValue": "主Qwen v01已否决；Kokoro v02候选33段浏览器加载通过，暂停续播与刷新恢复已实测；待教师全卷亲听及教室音箱验收"
+                  },
+                  "effectiveFormat": {
+                    "backgroundColor": {
+                      "red": 1,
+                      "green": 1,
+                      "blue": 1
+                    },
+                    "padding": {
+                      "top": 2,
+                      "right": 3,
+                      "bottom": 2,
+                      "left": 3
+                    },
+                    "horizontalAlignment": "LEFT",
+                    "verticalAlignment": "TOP",
+                    "wrapStrategy": "WRAP",
+                    "textFormat": {
+                      "fontFamily": "Arial",
+                      "fontSize": 11,
+                      "bold": false,
+                      "italic": false,
+                      "strikethrough": false,
+                      "underline": false
+                    },
+                    "hyperlinkDisplayType": "PLAIN_TEXT",
+                    "backgroundColorStyle": {
+                      "rgbColor": {
+                        "red": 1,
+                        "green": 1,
+                        "blue": 1
+                      }
+                    }
+                  }
+                },
+                {
+                  "userEnteredValue": {
+                    "stringValue": "2026-10-11重新核算：Kokoro v02候选60.08分钟，主Qwen v01为61.78分钟；旧59.46不代表现音源。保持50题、无口说，教师调整前三段，第四段只测验。Form仍未发布；匿名入口要求登录，学生收件与成绩显示待核。"
+                  },
+                  "effectiveFormat": {
+                    "backgroundColor": {
+                      "red": 1,
+                      "green": 1,
+                      "blue": 1
+                    },
+                    "padding": {
+                      "top": 2,
+                      "right": 3,
+                      "bottom": 2,
+                      "left": 3
+                    },
+                    "horizontalAlignment": "LEFT",
+                    "verticalAlignment": "TOP",
+                    "wrapStrategy": "WRAP",
+                    "textFormat": {
+                      "fontFamily": "Arial",
+                      "fontSize": 11,
+                      "bold": false,
+                      "italic": false,
+                      "strikethrough": false,
+                      "underline": false
+                    },
+                    "hyperlinkDisplayType": "PLAIN_TEXT",
+                    "backgroundColorStyle": {
+                      "rgbColor": {
+                        "red": 1,
+                        "green": 1,
+                        "blue": 1
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "properties": {
+        "sheetId": 1900606003,
+        "title": "W04-L01L10说明",
+        "index": 3,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 100,
+          "columnCount": 5,
+          "frozenRowCount": 1
+        }
+      },
+      "data": [
+        {
+          "startRow": 11,
+          "startColumn": 1,
+          "rowData": [
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "numberValue": 60.08
+                  },
+                  "effectiveFormat": {
+                    "backgroundColor": {
+                      "red": 1,
+                      "green": 1,
+                      "blue": 1
+                    },
+                    "padding": {
+                      "top": 2,
+                      "right": 3,
+                      "bottom": 2,
+                      "left": 3
+                    },
+                    "horizontalAlignment": "RIGHT",
+                    "verticalAlignment": "TOP",
+                    "wrapStrategy": "WRAP",
+                    "textFormat": {
+                      "fontFamily": "Arial",
+                      "fontSize": 11,
+                      "bold": false,
+                      "italic": false,
+                      "strikethrough": false,
+                      "underline": false
+                    },
+                    "hyperlinkDisplayType": "PLAIN_TEXT",
+                    "backgroundColorStyle": {
+                      "rgbColor": {
+                        "red": 1,
+                        "green": 1,
+                        "blue": 1
+                      }
+                    }
+                  },
+                  "note": "Kokoro v02候选音源的规划预算，尚未验收；非课堂完成记录。主Qwen v01已否决，其规划61.78分钟。"
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "stringValue": "Kokoro v02全卷试听已整理，教师亲听待完成；教室音箱未测。主Qwen v01不可正式施测。"
+                  },
+                  "effectiveFormat": {
+                    "backgroundColor": {
+                      "red": 1,
+                      "green": 1,
+                      "blue": 1
+                    },
+                    "padding": {
+                      "top": 2,
+                      "right": 3,
+                      "bottom": 2,
+                      "left": 3
+                    },
+                    "horizontalAlignment": "LEFT",
+                    "verticalAlignment": "TOP",
+                    "wrapStrategy": "WRAP",
+                    "textFormat": {
+                      "fontFamily": "Arial",
+                      "fontSize": 11,
+                      "bold": false,
+                      "italic": false,
+                      "strikethrough": false,
+                      "underline": false
+                    },
+                    "hyperlinkDisplayType": "PLAIN_TEXT",
+                    "backgroundColorStyle": {
+                      "rgbColor": {
+                        "red": 1,
+                        "green": 1,
+                        "blue": 1
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

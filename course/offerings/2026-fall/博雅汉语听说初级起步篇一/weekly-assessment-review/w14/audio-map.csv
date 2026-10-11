@@ -1,0 +1,43 @@
+audio_id,source_path,exists,decode_ok,duration_seconds,script_match,teacher_listen,student_playback,peak_dbfs,full_decode_ok,source_script,synthesis_input,speaker_names_spoken,pause_after_ms
+E08-B01,/Users/ssyan110/Development/vinh-uni-teaching-assistant/OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第08课-明天晚上你有时间吗/B-听对话/E08-07-08.wav,True,True,12.070000,manifest-only; human check pending,pending,pending,-6.0,True,"小林：今晚六点一起吃饭吧。
+小王：六点我有课，七点下课。
+小林：那七点半食堂见。
+小王：好。","小林，今晚六点一起吃饭吧。
+小王，六点我有课，七点下课。
+小林，那七点半食堂见。
+小王，好。",True,700;700;700
+E09-B01,/Users/ssyan110/Development/vinh-uni-teaching-assistant/OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第09课-我们怎么去/B-听对话/E09-07-08.wav,True,True,12.010000,manifest-only; human check pending,pending,pending,-6.0,True,"小林：我们怎么去动物园？骑自行车吗？
+小王：太远了，坐地铁吧。
+小林：好，九点在学校东门见。","小林，我们怎么去动物园？骑自行车吗？
+小王，太远了，坐地铁吧。
+小林，好，九点在学校东门见。",True,700;700
+E16-B01,/Users/ssyan110/Development/vinh-uni-teaching-assistant/OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第16课-来一斤饺子/B-听对话/E16-07-08.wav,True,True,10.500000,manifest-only; human check pending,pending,pending,-6.0,True,"小林：您好，几位？
+小王：三位。
+小林：请坐，要点菜吗？
+小王：先看菜单吧。","小林，您好，几位？
+小王，三位。
+小林，请坐，要点菜吗？
+小王，先看菜单吧。",True,700;700;700
+E20-B01,/Users/ssyan110/Development/vinh-uni-teaching-assistant/OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第20课-我想请一天假/B-听对话/E20-07-08.wav,True,True,13.830000,manifest-only; human check pending,pending,pending,-6.0,True,"小林：老师，我想请两天假。
+小王：怎么了？
+小林：身体不舒服，今天要去医院。
+小王：好，作业回来以后再交。","小林，老师，我想请两天假。
+小王，怎么了？
+小林，身体不舒服，今天要去医院。
+小王，好，作业回来以后再交。",True,700;700;700
+E24-C02,/Users/ssyan110/Development/vinh-uni-teaching-assistant/OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第24课-学得怎么样/C-听后填写/E24-18-20.wav,True,True,12.560000,manifest-only; human check pending,pending,pending,-6.0,True,小周今天完成了报告。内容准备得很好，可是讲得太快，大家没听清最后的安排。同学问了一次以后，他又慢慢地说了一遍，大家这次听明白了。,小周今天完成了报告。内容准备得很好，可是讲得太快，大家没听清最后的安排。同学问了一次以后，他又慢慢地说了一遍，大家这次听明白了。,False,
+E25-C01,/Users/ssyan110/Development/vinh-uni-teaching-assistant/OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第25课-准备好了吗/C-听后填写/E25-15-17.wav,True,True,13.000000,manifest-only; human check pending,pending,pending,-6.0,True,安娜为聚餐做准备。她已经订好了外卖，洗好了杯子，但忘了问小周来不来。小周的电话一直没人接。她决定先发微信，等他回了再确认最后的人数。,安娜为聚餐做准备。她已经订好了外卖，洗好了杯子，但忘了问小周来不来。小周的电话一直没人接。她决定先发微信，等他回了再确认最后的人数。,False,
+E12-B01,/Users/ssyan110/Development/vinh-uni-teaching-assistant/OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第12课-我正在等公共汽车呢/B-听对话/E12-07-08.wav,True,True,12.950000,manifest-only; human check pending,pending,pending,-6.0,True,"小林：你在哪儿？
+小王：在车站。
+小林：你在等车吗？
+小王：对，车还没来。请告诉老师，我晚一会儿到。","小林，你在哪儿？
+小王，在车站。
+小林，你在等车吗？
+小王，对，车还没来。请告诉老师，我晚一会儿到。",True,700;700;700
+E23-B02,/Users/ssyan110/Development/vinh-uni-teaching-assistant/OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第23课-假期有什么打算/B-听对话/E23-09-10.wav,True,True,14.330000,manifest-only; human check pending,pending,pending,-6.0,True,"小林：你想去云南还是西安？
+小王：还没决定。
+小林：你喜欢历史，西安也许适合你。
+小王：我再考虑一下，先不买票。","小林，你想去云南还是西安？
+小王，还没决定。
+小林，你喜欢历史，西安也许适合你。
+小王，我再考虑一下，先不买票。",True,700;700;700

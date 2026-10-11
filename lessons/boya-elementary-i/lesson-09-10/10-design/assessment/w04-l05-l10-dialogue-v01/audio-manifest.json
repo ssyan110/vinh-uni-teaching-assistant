@@ -1,0 +1,502 @@
+[
+  {
+    "order": 1,
+    "audio_id": "5-9",
+    "title": "认识你很高兴",
+    "file": "audio/5-9-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第5课/5-9.mp3",
+    "source_sha256": "e26220f9bc4d6e41db5913fd1adb63dab0de49404931ae861ff5325b112db015",
+    "sha256": "e38dfa2565b28c524c36c2e5ebef2122f2f8091957d2ad28a02d62df81134c8e",
+    "source_segments": [
+      {
+        "source_audio_id": "5-9",
+        "start_seconds": 12.1,
+        "end_seconds": 30.1,
+        "start_sample": 533610,
+        "end_sample": 1327410
+      }
+    ],
+    "duration_seconds": 18.0,
+    "question_ids": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "question_range": "1—4",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 20,
+    "between_plays_seconds": 10,
+    "answer_seconds": 60,
+    "source_section": "听说一段话",
+    "source_type": "dialogue",
+    "transcript": "玛丽：大卫，你好！这是我的同学，叫李美。\n大卫：你好，李美！认识你很高兴。\n李美：我也很高兴。我是韩国留学生，你呢？\n大卫：我是美国留学生，玛丽是我的好朋友。"
+  },
+  {
+    "order": 2,
+    "audio_id": "5-10",
+    "title": "她是英国人",
+    "file": "audio/5-10-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第5课/5-10.mp3",
+    "source_sha256": "47bc731c7161c563ea320a58aaa1c5d994a8b00e30a27c44f2b8a7e2eb91e83e",
+    "sha256": "fd571c6774045bdf9b17034f3916e8ca876366bf22395beaee4aae0309476053",
+    "source_segments": [
+      {
+        "source_audio_id": "5-10",
+        "start_seconds": 4.8,
+        "end_seconds": 17.8,
+        "start_sample": 211680,
+        "end_sample": 784980
+      }
+    ],
+    "duration_seconds": 13.0,
+    "question_ids": [
+      5,
+      6,
+      7
+    ],
+    "question_range": "5—7",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 20,
+    "between_plays_seconds": 10,
+    "answer_seconds": 45,
+    "source_section": "听说一段话",
+    "source_type": "dialogue",
+    "transcript": "大卫：安娜，你认识她吗？\n安娜：认识，她叫丽丽，是我的同学，也是我的同屋。\n大卫：她也是美国人吗？\n女声：不是，她是英国人。"
+  },
+  {
+    "order": 3,
+    "audio_id": "6-8",
+    "title": "那是什么",
+    "file": "audio/6-8-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第6课/6-8.mp3",
+    "source_sha256": "6604bb95afe1412d2f3c211cfb390e76b331a92bbbc663e02a7985f4327a6910",
+    "sha256": "33a5ff340dc6507068423dd398067297a42ae545e7ce758ec1e0446e036b0960",
+    "source_segments": [
+      {
+        "source_audio_id": "6-8",
+        "start_seconds": 11.1,
+        "end_seconds": 22.6,
+        "start_sample": 489510,
+        "end_sample": 996660
+      }
+    ],
+    "duration_seconds": 11.5,
+    "question_ids": [
+      8,
+      9,
+      10
+    ],
+    "question_range": "8—10",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 20,
+    "between_plays_seconds": 10,
+    "answer_seconds": 45,
+    "source_section": "听说一段话",
+    "source_type": "dialogue",
+    "transcript": "玛丽：大卫，那是什么？\n大卫：是书。\n玛丽：是什么书？谁的？你的吗？\n大卫：是汉语书，不是我的，是我同屋的。"
+  },
+  {
+    "order": 4,
+    "audio_id": "6-9",
+    "title": "这是谁的手机",
+    "file": "audio/6-9-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第6课/6-9.mp3",
+    "source_sha256": "1fab5eb95f08c4e38536df698d69dfbe2d3f09754dbc5379cc4e77ad924f5a10",
+    "sha256": "18b541a9f20b068af0caaa293d71a8c1a01bd0ae11891dce88c2a422fb17c8b3",
+    "source_segments": [
+      {
+        "source_audio_id": "6-9",
+        "start_seconds": 6.0,
+        "end_seconds": 18.2,
+        "start_sample": 264600,
+        "end_sample": 802620
+      }
+    ],
+    "duration_seconds": 12.2,
+    "question_ids": [
+      11,
+      12,
+      13
+    ],
+    "question_range": "11—13",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 20,
+    "between_plays_seconds": 10,
+    "answer_seconds": 45,
+    "source_section": "听说一段话",
+    "source_type": "dialogue",
+    "transcript": "女：马克，这是谁的手机？\n男：是大卫的。\n女：大卫是谁？你认识他吗？\n男：认识，他是我的同学，也是我的好朋友。"
+  },
+  {
+    "order": 5,
+    "audio_id": "7-8",
+    "title": "你住在哪儿",
+    "file": "audio/7-8-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第7课/7-8.mp3",
+    "source_sha256": "7ae46c7ef72bb370830944a348b13d1e5226f19b6691237788847667a9d54265",
+    "sha256": "f05738f0f862d1f05a5cd2889a4d961fc9b97ba9b70fb824ae1ded55745d5a49",
+    "source_segments": [
+      {
+        "source_audio_id": "7-8",
+        "start_seconds": 10.5,
+        "end_seconds": 27.8,
+        "start_sample": 463050,
+        "end_sample": 1225980
+      }
+    ],
+    "duration_seconds": 17.3,
+    "question_ids": [
+      14,
+      15,
+      16
+    ],
+    "question_range": "14—16",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 20,
+    "between_plays_seconds": 10,
+    "answer_seconds": 45,
+    "source_section": "听说一段话",
+    "source_type": "dialogue",
+    "transcript": "女：大卫，你住在哪儿？\n男：我住在学校的留学生宿舍里。你呢，玛丽？\n女：我住在学校外边，中国人的家里。\n男：远吗？\n女：不远，就在学校的东边。欢迎去我家玩儿！"
+  },
+  {
+    "order": 6,
+    "audio_id": "7-9",
+    "title": "这是你的房间吗",
+    "file": "audio/7-9-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第7课/7-9.mp3",
+    "source_sha256": "a4532dd380dab4f658d1d749b54f952214cf85324c3985087ce90083457f2e8a",
+    "sha256": "1796318589fca6944d4d0c9ebe9dfadddcaa96766b943e1694f783ff89be2c88",
+    "source_segments": [
+      {
+        "source_audio_id": "7-9",
+        "start_seconds": 5.0,
+        "end_seconds": 18.6,
+        "start_sample": 220500,
+        "end_sample": 820260
+      }
+    ],
+    "duration_seconds": 13.6,
+    "question_ids": [
+      17,
+      18,
+      19
+    ],
+    "question_range": "17—19",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 20,
+    "between_plays_seconds": 10,
+    "answer_seconds": 45,
+    "source_section": "听说一段话",
+    "source_type": "dialogue",
+    "transcript": "女：大卫，这是你的房间吗？\n男：不，这是我朋友的房间。我的房间在左边。\n女：右边是谁的房间？\n男：右边是马克的房间。"
+  },
+  {
+    "order": 7,
+    "audio_id": "8-8",
+    "title": "明天晚上你有时间吗",
+    "file": "audio/8-8-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第8课/8-8.mp3",
+    "source_sha256": "0582f1e4fb9e473d8ddbcf8ccba6ebbba16f999ce65a7251620f0747c4b41db7",
+    "sha256": "81d4b24d2c447c0057c51ca0e3742e4556c45eb0a01c0b8765ed70c71939ebb1",
+    "source_segments": [
+      {
+        "source_audio_id": "8-8",
+        "start_seconds": 12.5,
+        "end_seconds": 29.85,
+        "start_sample": 551250,
+        "end_sample": 1316385
+      }
+    ],
+    "duration_seconds": 17.35,
+    "question_ids": [
+      20,
+      21,
+      22
+    ],
+    "question_range": "20—22",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 20,
+    "between_plays_seconds": 10,
+    "answer_seconds": 45,
+    "source_section": "听说一段话",
+    "source_type": "dialogue",
+    "transcript": "女：李军，明天晚上你有时间吗？\n男：有啊，什么事儿？\n女：明天是丽丽的生日，我们一起吃饭吧？\n男：好。几点？在哪儿？\n女：晚上六点半，在丽丽的宿舍。"
+  },
+  {
+    "order": 8,
+    "audio_id": "8-9",
+    "title": "你有汉语辅导老师吗",
+    "file": "audio/8-9-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第8课/8-9.mp3",
+    "source_sha256": "372420de972e2d818880977cb6aa0c6af3d0860f7d2b7ed27c35f46f94fa5a85",
+    "sha256": "43ff5ef412b86fc7cb4f6d10be4330c5b36b23ece314a282cf5cbeb49585ca8c",
+    "source_segments": [
+      {
+        "source_audio_id": "8-9",
+        "start_seconds": 6.0,
+        "end_seconds": 28.6,
+        "start_sample": 264600,
+        "end_sample": 1261260
+      }
+    ],
+    "duration_seconds": 22.6,
+    "question_ids": [
+      23,
+      24,
+      25
+    ],
+    "question_range": "23—25",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 20,
+    "between_plays_seconds": 10,
+    "answer_seconds": 45,
+    "source_section": "听说一段话",
+    "source_type": "dialogue",
+    "transcript": "男：安娜，你有汉语辅导老师吗？\n女：没有，你呢？\n男：我有一个中国朋友，也是我的汉语辅导老师。\n女：他好吗？\n男：他很好。今天下午两点我去见他，你有时间一起去吗？\n女：我有时间。谢谢你！"
+  },
+  {
+    "order": 9,
+    "audio_id": "8-10",
+    "title": "明天你有课吗",
+    "file": "audio/8-10-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第8课/8-10.mp3",
+    "source_sha256": "4e204e127d30c1b8967376067497ebccc21348e64b98a83b594cb51e88716acc",
+    "sha256": "6ea1d6d30878aecaa34e66f6d2dc4748b79c6edd13f9af5772eb18c3faa1fc0d",
+    "source_segments": [
+      {
+        "source_audio_id": "8-10",
+        "start_seconds": 6.0,
+        "end_seconds": 28.8,
+        "start_sample": 264600,
+        "end_sample": 1270080
+      }
+    ],
+    "duration_seconds": 22.8,
+    "question_ids": [
+      26,
+      27,
+      28,
+      29
+    ],
+    "question_range": "26—29",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 20,
+    "between_plays_seconds": 10,
+    "answer_seconds": 60,
+    "source_section": "听说一段话",
+    "source_type": "dialogue",
+    "transcript": "男：玛丽，明天你有课吗？\n女：明天上午有课，下午没有课。\n男：上午几点下课？\n女：差十分十点下课，有事儿吗？\n男：没事儿，我十二点下课，中午一起吃饭吧？\n女：好啊。十二点一刻食堂见。"
+  },
+  {
+    "order": 10,
+    "audio_id": "9-10",
+    "title": "我们怎么去",
+    "file": "audio/9-10-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第9课/9-10.mp3",
+    "source_sha256": "5627d4e08b45b5609b0d5b3f5a44c421d807af0247d0d562d0254517f9d1a4a9",
+    "sha256": "3052bff3eb1742878c32eb2f1c43d0d83164bac21bb390602fbd0d42da4608a8",
+    "source_segments": [
+      {
+        "source_audio_id": "9-10",
+        "start_seconds": 10.4,
+        "end_seconds": 29.85,
+        "start_sample": 458640,
+        "end_sample": 1316385
+      }
+    ],
+    "duration_seconds": 19.45,
+    "question_ids": [
+      30,
+      31,
+      32,
+      33
+    ],
+    "question_range": "30—33",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 20,
+    "between_plays_seconds": 10,
+    "answer_seconds": 60,
+    "source_section": "听说一段话",
+    "source_type": "dialogue",
+    "transcript": "女：大卫，我和安娜星期六上午去动物园，你有时间一起去吗？\n男：有时间。我们怎么去？骑自行车吗？\n女：不，坐地铁吧，地铁四号线。\n男：好。我们几点在哪儿见呢？\n女：九点在学校东门见。"
+  },
+  {
+    "order": 11,
+    "audio_id": "9-11",
+    "title": "问电话号码",
+    "file": "audio/9-11-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第9课/9-11.mp3",
+    "source_sha256": "2e95332194be80770d5f52150d537433cad9218fe972b86b46b6196f6d6effdf",
+    "sha256": "cd69344bd55cd7edfb3f173d73482bbbf837d5f087766b79be01ac82d4ec7708",
+    "source_segments": [
+      {
+        "source_audio_id": "9-11",
+        "start_seconds": 4.65,
+        "end_seconds": 27.4,
+        "start_sample": 205065,
+        "end_sample": 1208340
+      }
+    ],
+    "duration_seconds": 22.75,
+    "question_ids": [
+      34,
+      35,
+      36,
+      37
+    ],
+    "question_range": "34—37",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 20,
+    "between_plays_seconds": 10,
+    "answer_seconds": 60,
+    "source_section": "听说一段话",
+    "source_type": "dialogue",
+    "transcript": "男：玛丽，你有李老师的电话号码吗？\n女：有，他办公室电话号码是62572305。\n男：他不在办公室。你有他的手机号吗？\n女：我没有老师的手机号。我有他的微信号。\n男：那我加一下儿他的微信吧。"
+  },
+  {
+    "order": 12,
+    "audio_id": "9-12",
+    "title": "送快递",
+    "file": "audio/9-12-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第9课/9-12.mp3",
+    "source_sha256": "1b36bf8697a65ce6d9736adbd089726af895036c7869fb0a9ca9866acedb9c30",
+    "sha256": "056448141225b3d0a83aad087dd106faec99767e6b297e2e852550cb060769a4",
+    "source_segments": [
+      {
+        "source_audio_id": "9-12",
+        "start_seconds": 3.8,
+        "end_seconds": 20.45,
+        "start_sample": 167580,
+        "end_sample": 901845
+      }
+    ],
+    "duration_seconds": 16.65,
+    "question_ids": [
+      38,
+      39,
+      40
+    ],
+    "question_range": "38—40",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 20,
+    "between_plays_seconds": 10,
+    "answer_seconds": 45,
+    "source_section": "听说一段话",
+    "source_type": "dialogue",
+    "transcript": "男：喂，您好！我是快递，您在家吗？\n女：我不在家，在外边。\n男：下午您在吗？\n女：下午也不在。这样吧，我朋友住在旁边的306房间，她在呢。你给她吧。\n男：好的。"
+  },
+  {
+    "order": 13,
+    "audio_id": "10-10",
+    "title": "买西瓜",
+    "file": "audio/10-10-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第10课/10-10.mp3",
+    "source_sha256": "ea9d4dfe4475c6e30d04180399b0fadb12f63b53e2540010c5ffba03d226846a",
+    "sha256": "f9ea37972d00c9a2edf1f3d146c105a3adf3b6706a0da03afcd9af4b8a1549fd",
+    "source_segments": [
+      {
+        "source_audio_id": "10-10",
+        "start_seconds": 11.1,
+        "end_seconds": 24.35,
+        "start_sample": 489510,
+        "end_sample": 1073835
+      }
+    ],
+    "duration_seconds": 13.25,
+    "question_ids": [
+      41,
+      42,
+      43
+    ],
+    "question_range": "41—43",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 20,
+    "between_plays_seconds": 10,
+    "answer_seconds": 45,
+    "source_section": "听说一段话",
+    "source_type": "dialogue",
+    "transcript": "女：师傅，西瓜怎么卖？\n男：西瓜两块五一斤，您要多少？\n女：我要这半个西瓜，多少钱？\n男：八斤，二十块。\n女：给你钱。"
+  },
+  {
+    "order": 14,
+    "audio_id": "10-11",
+    "title": "我也要一杯咖啡",
+    "file": "audio/10-11-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第10课/10-11.mp3",
+    "source_sha256": "d8939e3b4b4281be8623449e1293799c270285b16bc0bf0a316159c0b281c99c",
+    "sha256": "fc5a6c72ca6695c0897bc47ade5cb298cafaca6cb2a8e7922d662b6008c45599",
+    "source_segments": [
+      {
+        "source_audio_id": "10-11",
+        "start_seconds": 5.9,
+        "end_seconds": 26.9,
+        "start_sample": 260190,
+        "end_sample": 1186290
+      }
+    ],
+    "duration_seconds": 21.0,
+    "question_ids": [
+      44,
+      45,
+      46
+    ],
+    "question_range": "44—46",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 20,
+    "between_plays_seconds": 10,
+    "answer_seconds": 45,
+    "source_section": "听说一段话",
+    "source_type": "dialogue",
+    "transcript": "男：你要什么？一杯啤酒？\n女：我不要酒，要一杯咖啡吧。\n男：我也要一杯咖啡。服务员，两杯咖啡。\n服务员：好，您的两杯咖啡。\n男：多少钱？我扫微信吧。\n服务员：好的，二十五块钱一杯，一共五十。"
+  },
+  {
+    "order": 15,
+    "audio_id": "10-12",
+    "title": "再买两大瓶可乐",
+    "file": "audio/10-12-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第10课/10-12.mp3",
+    "source_sha256": "9bd5f41cc54bf13f4254c47449a495d71b3b309e677adb67eff153e2f9633420",
+    "sha256": "a15acafdf67b18869a5dfdc8fe60e436cbc55a6a838521e7394de529774df807",
+    "source_segments": [
+      {
+        "source_audio_id": "10-12",
+        "start_seconds": 5.9,
+        "end_seconds": 28.45,
+        "start_sample": 260190,
+        "end_sample": 1254645
+      }
+    ],
+    "duration_seconds": 22.55,
+    "question_ids": [
+      47,
+      48,
+      49,
+      50
+    ],
+    "question_range": "47—50",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 20,
+    "between_plays_seconds": 10,
+    "answer_seconds": 60,
+    "source_section": "听说一段话",
+    "source_type": "dialogue",
+    "transcript": "男：明天晚上小王和他的女朋友来我们家玩儿。\n女：他们几点来？\n男：六点。家里没有啤酒吧？\n女：明天上午我去买，买几瓶？\n男：买五瓶吧。再买两大瓶可乐。\n女：好，我再买一些苹果和香蕉。"
+  }
+]

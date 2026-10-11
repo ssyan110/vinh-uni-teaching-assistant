@@ -40,14 +40,16 @@ Each entry has:
 
 ## PPTX and visual delivery
 
+2026-10-07 06:52 UTC scope clarification: online classes remain unchanged and continue to prioritize PPT/PPTX, preserving one-word-per-page preparation and approved styles. HTML/OpenSlide priority applies only to physical classes; editable PPTX is their optional backup.
+
 | requirement_id | requirement | owner | scope | verification | status |
 |---|---|---|---|---|---|
-| PPTX-001 | New decks use the user-selected `native-pptx` (default) or `open-slide` path; Open Slide remains draft-only until its lesson QA/release path is defined. | `PROJECT_REQUIREMENTS.md` §3.1, §3.2 | lesson deck | Verify selected path and artifact format; PPTX exports receive PPTX QA | active |
-| PPTX-002 | Student-visible text is at least 20 pt for new drafts; notes and teacher-only documents are outside this display-size rule. | `PROJECT_REQUIREMENTS.md` §2.4, §3.4 | PPTX draft | PPTX XML/style audit plus PDF/PowerPoint visual review | active |
+| PPTX-001 | Future face-to-face decks default to HTML/OpenSlide under the 2026-10-07 classroom standard; online preparation retains native-pptx unless otherwise selected. Format choice does not grant authority or release approval. | `PROJECT_REQUIREMENTS.md` §3.1; `docs/classroom-html-standard-2026-10-07.md` | lesson deck | Offline HTML, once-on-entry motion, one key per page, reduced-motion visibility; backup PPTX receives PPTX QA | active |
+| PPTX-002 | PPTX text follows the applicable course minimum (23 pt for this Year 1 cohort; otherwise the scoped PPTX rule). HTML uses canvas-relative readability under the classroom standard. | `PROJECT_REQUIREMENTS.md` §2.4, §3.4; `docs/classroom-html-standard-2026-10-07.md` | slide draft | Format-specific size and visual review; notes and teacher-only documents excluded | active |
 | PPTX-003 | Student-facing pages that use textbook content include printed textbook page markers derived from canonical source and slide-level source mapping. | `PROJECT_REQUIREMENTS.md` §3.2A | PPTX draft | `add_textbook_page_markers.py`; `verify_textbook_page_markers.py`; PDF visual review | active |
 | VISUAL-001 | New decks reuse the approved visual master and shared layout family; major visual-system changes require explicit user approval. | `PROJECT_REQUIREMENTS.md` §3.4A, §3.4A-1 | textbook/lesson artifact | visual storyboard and prototype review; human approval for major change | active |
 | FONT-001 | Chinese text uses KaiTi and Vietnamese/Latin text uses Times New Roman across text-bearing outputs, subject to the stated artifact-specific exceptions. | `PROJECT_REQUIREMENTS.md` §3.2B | project artifact | Office XML/PPTX/DOCX font audit and PDF preview | active |
-| MEDIA-001 | Audio and embedded media must be technically valid and practically playable through the declared delivery method; source, decoding, semantic, and playback states remain distinct. | `PROJECT_REQUIREMENTS.md` §3.2, §5 | lesson artifact | package/codec checks plus actual PowerPoint playback | active |
+| MEDIA-001 | Future PPTs use plain non-clickable top-right `Audio n-n` text with the actual source track mapping and no purple audio styling, embedded audio, playback buttons or playable audio hyperlinks. Source audio outside the PPT remains technically valid and practically playable through the declared external method; source, decoding, semantic and playback states remain distinct. Historical evidence is preserved. | `PROJECT_REQUIREMENTS.md` §3.2C, §5 | lesson artifact | read-only package/action/link/track-mapping checks and visual review; source codec and actual external playback checks | active |
 
 ## Authority, QA, and release
 

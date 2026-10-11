@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "cohort": "BOYA-LS-E1-Y1S1-2026F",
+  "offering_id": "2026-fall",
+  "textbook_id": "boya-elementary-i",
+  "purpose": "Single central index for this and all future newly created examinations; legacy 25-lesson manager remains unchanged.",
+  "management_spreadsheet_id": "1fhKUHCsyEYvSMrCgw5bL8vtazuwX77DKoa0ZCsQgIso",
+  "url": "https://docs.google.com/spreadsheets/d/1fhKUHCsyEYvSMrCgw5bL8vtazuwX77DKoa0ZCsQgIso/edit",
+  "drive_folder_id": "1e-pAJ8PIRm6V4d10kmd9K6lQ6iwxJaV4",
+  "index_sheet": {
+    "title": "测验总表",
+    "sheet_id": 1737213268
+  },
+  "legacy_25_lesson_manager_id": "1Hqd3Kpr5VNq3hTsQmxDYBoa8QIo8Kg5ae77YFnzsorY",
+  "legacy_policy": "read_only_source_do_not_merge_or_write",
+  "decision_date": "2026-10-06",
+  "decision_evidence": "source_thread 01a0f0db-28c0-7447-b633-e68b2f01a03f; Sentinel_6f61263940908191b0e13c653b4f63a6",
+  "exams": [
+    {
+      "exam_id": "W04-L01L10-20261006",
+      "directory": "lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10",
+      "question_bank_sheet_id": 1900606001,
+      "audio_sheet_id": 1900606002,
+      "scope_sheet_id": 1900606003,
+      "status": "DRAFT_UNPUBLISHED/TEACHER_REVIEW",
+      "form_id": "1sWTvYRU62hX6g6q2Jb87ka0p_Zry7jRpbWSj-yxGzBo",
+      "form_edit_url": "https://docs.google.com/forms/d/1sWTvYRU62hX6g6q2Jb87ka0p_Zry7jRpbWSj-yxGzBo/edit",
+      "response_spreadsheet_id": "1_IjuwmwN48Ewu-wzaNhBeW9Ukvg3AlnNwa6D5PbjfPY",
+      "student_ready": false,
+      "pending": [
+        "teacher_content_and_pronunciation_review",
+        "publication_approval",
+        "student_grade_visibility_after_manual_grading",
+        "actual_form_item_ids_not_extracted"
+      ],
+      "timing_policy": "keep_50_questions_teacher_adjusts_first_three_periods_kokoro_v02_candidate_60.08_minutes_not_audio_accepted",
+      "response_sheet_id": 1361729076,
+      "identity_fields_verified": true,
+      "scored_questions_optional": true,
+      "superseded_by_review": "W04-DIALOGUE-L05L10-20261011"
+    },
+    {
+      "exam_id": "W04-DIALOGUE-L05L10-20261011",
+      "directory": "lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l05-l10-dialogue-v01",
+      "status": "DRAFT_UNPUBLISHED/TEACHER_REVIEW",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-05",
+        "boya-elementary-i:lesson-06",
+        "boya-elementary-i:lesson-07",
+        "boya-elementary-i:lesson-08",
+        "boya-elementary-i:lesson-09",
+        "boya-elementary-i:lesson-10"
+      ],
+      "question_count": 50,
+      "choice_count": 30,
+      "fill_count": 20,
+      "points": 100,
+      "audio_type": "textbook-dialogue-only",
+      "audio_count": 15,
+      "student_ready": false,
+      "form_id": null,
+      "timing_policy": "two_full_plays_per_edited_dialogue_planned_35.05_minutes",
+      "pending": [
+        "teacher_full_listening",
+        "classroom_audio_playback",
+        "actual_student_timing"
+      ],
+      "scope_decision": "2026-10-11 current conversation: only dialogue audio, cumulative lessons 5–10"
+    }
+  ],
+  "current_review_exam_id": "W04-DIALOGUE-L05L10-20261011"
+}

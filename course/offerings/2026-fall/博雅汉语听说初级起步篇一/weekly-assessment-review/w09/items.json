@@ -1,0 +1,247 @@
+{
+  "status": "审阅稿／未发布",
+  "cohort": "BOYA-LS-E1-Y1S1-2026F",
+  "offering_id": "2026-fall",
+  "week": "W09",
+  "lesson_keys": [
+    "boya-elementary-i:lesson-18",
+    "boya-elementary-i:lesson-19"
+  ],
+  "sources": [
+    "semester-teacher-manual.md:197-208,301-302",
+    "teaching-materials-database.sqlite source_pages: PDF161-162 (印刷P150-151), PDF171-172 (印刷P160-161); OCR待原页人工核对",
+    "OmniVoice/audio/博雅汉语测验音频/题号音频清单.jsonl；题库音频是既有课堂题库资产，不是教材 canonical 或出版社音频"
+  ],
+  "audio": [
+    {
+      "id": "W09-A1",
+      "lessons": [
+        18
+      ],
+      "plays": 1,
+      "pause_seconds": 8,
+      "script": "小林，你今天几点起床？\n小王，六点半。\n小林，这么早？\n小王，对，今天八点有课。以前我八点半才起。",
+      "speech_units": [
+        "小林，你今天几点起床？",
+        "小王，六点半。",
+        "小林，这么早？",
+        "小王，对，今天八点有课。以前我八点半才起。"
+      ],
+      "source_type": "既有 OmniVoice 题库配套朗读稿；非出版社原音",
+      "source_audio_id": "E18-B01",
+      "source_file": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第18课-今天我七点半就起床了/B-听对话/E18-07-08.wav",
+      "technical": {
+        "duration_s": 12.84,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "peak_fraction": 0.5,
+        "rms_fraction": 0.0804,
+        "wav_decode": "pass"
+      },
+      "role_marked_script": "小林：你今天几点起床？\n小王：六点半。\n小林：这么早？\n小王：对，今天八点有课。以前我八点半才起。"
+    },
+    {
+      "id": "W09-A2",
+      "lessons": [
+        19
+      ],
+      "plays": 2,
+      "pause_seconds": 10,
+      "script": "小林，早上给你发微信，你怎么没回？\n小王，不好意思，我昨天夜里两点才睡，今天十点才起。\n小林，你又熬夜了！",
+      "speech_units": [
+        "小林，早上给你发微信，你怎么没回？",
+        "小王，不好意思，我昨天夜里两点才睡，今天十点才起。",
+        "小林，你又熬夜了！"
+      ],
+      "source_type": "既有 OmniVoice 题库配套朗读稿；非出版社原音",
+      "source_audio_id": "E19-B01",
+      "source_file": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第19课-你又熬夜了/B-听对话/E19-07-08.wav",
+      "technical": {
+        "duration_s": 13.96,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "peak_fraction": 0.5,
+        "rms_fraction": 0.0743,
+        "wav_decode": "pass"
+      },
+      "role_marked_script": "小林：早上给你发微信，你怎么没回？\n小王：不好意思，我昨天夜里两点才睡，今天十点才起。\n小林：你又熬夜了！"
+    },
+    {
+      "id": "W09-A3",
+      "lessons": [
+        19
+      ],
+      "plays": 2,
+      "pause_seconds": 12,
+      "script": "小周约朋友两点在学校门口见。他一点半出门，路上堵车，两点二十才到。朋友等了二十分钟。他说：“不好意思，下次我一定早点儿出门。”",
+      "speech_units": [
+        "小周约朋友两点在学校门口见。他一点半出门，路上堵车，两点二十才到。朋友等了二十分钟。他说：“不好意思，下次我一定早点儿出门。”"
+      ],
+      "source_type": "既有 OmniVoice 题库配套朗读稿；非出版社原音",
+      "source_audio_id": "E19-C01",
+      "source_file": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第19课-你又熬夜了/C-听后填写/E19-15-17.wav",
+      "technical": {
+        "duration_s": 11.8,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "peak_fraction": 0.5,
+        "rms_fraction": 0.0841,
+        "wav_decode": "pass"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "W09-Q1",
+      "type": "mc",
+      "audio": "W09-A1",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-18"
+      ],
+      "prompt": "小王今天几点起床？",
+      "options": [
+        "六点半",
+        "八点",
+        "八点半"
+      ],
+      "answer": 0,
+      "points": 2,
+      "evidence": "六点半"
+    },
+    {
+      "id": "W09-Q2",
+      "type": "mc",
+      "audio": "W09-A1",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-18"
+      ],
+      "prompt": "小王以前几点才起床？",
+      "options": [
+        "六点半",
+        "八点",
+        "八点半"
+      ],
+      "answer": 2,
+      "points": 2,
+      "evidence": "以前八点半才起"
+    },
+    {
+      "id": "W09-Q7",
+      "type": "short",
+      "audio": "W09-A1",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-18"
+      ],
+      "prompt": "小王今天几点有课？",
+      "answer_text": "八点",
+      "points": 2,
+      "evidence": "八点"
+    },
+    {
+      "id": "W09-Q3",
+      "type": "mc",
+      "audio": "W09-A2",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-19"
+      ],
+      "prompt": "小王昨夜几点才睡？",
+      "options": [
+        "十二点",
+        "两点",
+        "十点"
+      ],
+      "answer": 1,
+      "points": 2,
+      "evidence": "昨天夜里两点才睡"
+    },
+    {
+      "id": "W09-Q4",
+      "type": "mc",
+      "audio": "W09-A2",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-19"
+      ],
+      "prompt": "小王今天几点才起床？",
+      "options": [
+        "八点",
+        "九点",
+        "十点"
+      ],
+      "answer": 2,
+      "points": 2,
+      "evidence": "今天十点才起"
+    },
+    {
+      "id": "W09-Q8",
+      "type": "short",
+      "audio": "W09-A2",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-19"
+      ],
+      "prompt": "小林为什么联系小王？写出她做的事。",
+      "answer_text": "早上给小王发微信，问他为什么没回。",
+      "points": 2,
+      "evidence": "早上给小王发微信，问他为什么没回。"
+    },
+    {
+      "id": "W09-Q5",
+      "type": "mc",
+      "audio": "W09-A3",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-19"
+      ],
+      "prompt": "小周和朋友约几点见？",
+      "options": [
+        "一点半",
+        "两点",
+        "两点二十"
+      ],
+      "answer": 1,
+      "points": 2,
+      "evidence": "约朋友两点见"
+    },
+    {
+      "id": "W09-Q6",
+      "type": "mc",
+      "audio": "W09-A3",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-19"
+      ],
+      "prompt": "小周迟到的原因是什么？",
+      "options": [
+        "睡过头",
+        "路上堵车",
+        "没看到消息"
+      ],
+      "answer": 1,
+      "points": 2,
+      "evidence": "路上堵车"
+    },
+    {
+      "id": "W09-Q9",
+      "type": "short",
+      "audio": "W09-A3",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-19"
+      ],
+      "prompt": "朋友等了多久？",
+      "answer_text": "二十分钟",
+      "points": 2,
+      "evidence": "二十分钟"
+    }
+  ],
+  "oral": {
+    "id": "W09-O1",
+    "lesson_keys": [
+      "boya-elementary-i:lesson-18",
+      "boya-elementary-i:lesson-19"
+    ],
+    "prompt": "两人一组。A有起床和出门记录，B有消息和到达记录。不要交换卡片。问清今天发生的事，区分听到的事实和自己猜的原因。教师更正一条时间后，两人重新约定明天见面的时间，并让对方复述确认。",
+    "teacher_card_A": "你今天七点起床，七点半出门。你八点四十看到改时间的消息；路上堵车。你想明天十点见。",
+    "teacher_card_B": "你今天八点发消息，把见面时间改为九点；对方九点半到。你原以为对方睡过头，但并不知道原因。",
+    "points": 4,
+    "rubric": "问出并准确重建至少两条时间事实1分；区分事实和猜测1分；根据更正修补叙述1分；重新约定并口头确认1分。无个人证据记NE。",
+    "teacher_change": "第二轮只告诉B：消息实际是八点半发出。"
+  },
+  "reuse_note": "听力改用已有 E 题库音频及其清单 source_text；题干和答案逐题改写对齐，不沿用旧版原创脚本。双课整合由口语任务承担。"
+}

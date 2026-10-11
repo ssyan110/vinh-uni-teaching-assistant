@@ -25,6 +25,12 @@ Every operation must carry an explicit `lesson_key` and, where required by the c
 
 Historical L01 procedures are compatibility-only. They must remain behind the declared legacy adapter and must not be used for scoped production operations.
 
+## Current face-to-face routing
+
+Online classes remain unchanged and continue to prioritize PPT/PPTX, including one-word-per-page preparation and approved styles. Only physical classes prioritize HTML slides/OpenSlide, with editable PPTX as an optional backup.
+
+Read [the 2026-10-07 classroom HTML standard](../../../docs/classroom-html-standard-2026-10-07.md) for future physical classes: HTML first, coherent TBL tasks, once-on-entry motion and level-appropriate TOCFL-style assessment. The PPTX reference is for online preparation, explicitly selected legacy maintenance, and format-specific backup checks; it does not replace this classroom standard.
+
 ## Focused procedure references
 
 Read only the relevant reference, plus the canonical sources above:

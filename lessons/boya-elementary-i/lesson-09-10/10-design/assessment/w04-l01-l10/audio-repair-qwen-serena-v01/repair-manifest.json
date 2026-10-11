@@ -1,0 +1,2655 @@
+{
+  "exam_id": "W04-L01L10-20261006",
+  "status": "technical_review_pending",
+  "gate_input_hashes": {
+    "items.json": "e876c3327e27cf513518f57718f051b88a8b9b27ccfa1875dbe55c7bda29b19e",
+    "audio-manifest.json": "a084690d6a307623d7f3bd17110a85b1037f0bfbeab48ba6ff04560473309f4f",
+    "teacher.md": "7dc8f07186c1bce95f118a4ff4e6ea446edaf29d0e9a995414ce9ad187185eec",
+    "student.md": "df3dec089e95443745789a11fde08e51f68ef88c4cd22e26c56daab37f64f858"
+  },
+  "clips": [
+    {
+      "order": 1,
+      "audio_id": "E01-A01",
+      "file": "E01-A01.wav",
+      "duration_seconds": 0.48,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第01课-拼音和日常用语（一）/A-听辨与理解/E01-01.wav",
+      "sha256": "b81f62588a60e22431247f61a130e25233d219c6ac0d32f68a03c3694ca64ce5",
+      "source_sha256": "497bc630b97e6dbecae50b0db1a1b2c8f5e1d5d72d1b47208e873a495945c4e7",
+      "source_text": "pā",
+      "speech_units": [
+        "趴"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-01"
+      ],
+      "question_numbers": [
+        1
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第1题",
+      "preview_seconds": 15,
+      "between_plays_seconds": 10,
+      "answer_seconds": 25,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "趴",
+          "file": "units/E01-A01-01.wav",
+          "sha256": "b81f62588a60e22431247f61a130e25233d219c6ac0d32f68a03c3694ca64ce5",
+          "start_seconds": 0.0,
+          "duration_seconds": 0.48,
+          "tokens": 6,
+          "generation_seconds": 0.21760787500534207
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 2,
+      "audio_id": "E01-A02",
+      "file": "E01-A02.wav",
+      "duration_seconds": 0.64,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第01课-拼音和日常用语（一）/A-听辨与理解/E01-02.wav",
+      "sha256": "087bdd092d069db1397f2cf3f0e10c840e98310dab7b1fe095b4f3d11b3d43be",
+      "source_sha256": "8f2e8b55d1b276ec6cca489c26ed09839dd36e3a225ee521152c261b5f6a76d4",
+      "source_text": "nǚ",
+      "speech_units": [
+        "女"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-02"
+      ],
+      "question_numbers": [
+        2
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第2题",
+      "preview_seconds": 15,
+      "between_plays_seconds": 10,
+      "answer_seconds": 25,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "女",
+          "file": "units/E01-A02-01.wav",
+          "sha256": "087bdd092d069db1397f2cf3f0e10c840e98310dab7b1fe095b4f3d11b3d43be",
+          "start_seconds": 0.0,
+          "duration_seconds": 0.64,
+          "tokens": 8,
+          "generation_seconds": 0.5549565840046853
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 3,
+      "audio_id": "E01-A03",
+      "file": "E01-A03.wav",
+      "duration_seconds": 0.72,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第01课-拼音和日常用语（一）/A-听辨与理解/E01-03.wav",
+      "sha256": "ad0cc1e0141464e7261332d85fd2223c892c863ec2b80ea82f28942c483481c6",
+      "source_sha256": "717cf3c41701366c84c74fa1af49238746af3cb2f9d69408ad630590f627dab5",
+      "source_text": "chī",
+      "speech_units": [
+        "吃"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-03"
+      ],
+      "question_numbers": [
+        3
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第3题",
+      "preview_seconds": 15,
+      "between_plays_seconds": 10,
+      "answer_seconds": 25,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "吃",
+          "file": "units/E01-A03-01.wav",
+          "sha256": "ad0cc1e0141464e7261332d85fd2223c892c863ec2b80ea82f28942c483481c6",
+          "start_seconds": 0.0,
+          "duration_seconds": 0.72,
+          "tokens": 9,
+          "generation_seconds": 0.2546552919084206
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 4,
+      "audio_id": "E02-A01",
+      "file": "E02-A01.wav",
+      "duration_seconds": 0.4,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第02课-拼音和日常用语（二）/A-听辨与理解/E02-01.wav",
+      "sha256": "0f1bf4c123b162868c9bfa312ccdb8509b35e63dbde120e8cd048f0e1fbd7cdf",
+      "source_sha256": "e952a79f57ce7b81f9b3dede0bf11e423bff1dd7da83c81b88449651851c8ca5",
+      "source_text": "bái",
+      "speech_units": [
+        "白"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-04"
+      ],
+      "question_numbers": [
+        4
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第4题",
+      "preview_seconds": 15,
+      "between_plays_seconds": 10,
+      "answer_seconds": 25,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "白",
+          "file": "units/E02-A01-01.wav",
+          "sha256": "0f1bf4c123b162868c9bfa312ccdb8509b35e63dbde120e8cd048f0e1fbd7cdf",
+          "start_seconds": 0.0,
+          "duration_seconds": 0.4,
+          "tokens": 5,
+          "generation_seconds": 0.16364258294925094
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 5,
+      "audio_id": "E02-A02",
+      "file": "E02-A02.wav",
+      "duration_seconds": 0.88,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第02课-拼音和日常用语（二）/A-听辨与理解/E02-02.wav",
+      "sha256": "605ea870476e05b8fa0b2a05168497482a972f56b7697c6830e4b6623406c672",
+      "source_sha256": "51751830d96f3def4370d0edc78153d212208e4309144f52165ff71d0ec8fa6b",
+      "source_text": "liú",
+      "speech_units": [
+        "流"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-05"
+      ],
+      "question_numbers": [
+        5
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第5题",
+      "preview_seconds": 15,
+      "between_plays_seconds": 10,
+      "answer_seconds": 25,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "流",
+          "file": "units/E02-A02-01.wav",
+          "sha256": "605ea870476e05b8fa0b2a05168497482a972f56b7697c6830e4b6623406c672",
+          "start_seconds": 0.0,
+          "duration_seconds": 0.88,
+          "tokens": 11,
+          "generation_seconds": 0.29866345797199756
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 6,
+      "audio_id": "E02-A03",
+      "file": "E02-A03.wav",
+      "duration_seconds": 0.72,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第02课-拼音和日常用语（二）/A-听辨与理解/E02-03.wav",
+      "sha256": "ea83485f6f0e9b1299d6326db209bcd392e32efd81028445775fc44634709e3a",
+      "source_sha256": "7551bf8d9727d37084a1ac42be156df11aa997896a9b55b3fd47b7cd7f95fdbf",
+      "source_text": "duì",
+      "speech_units": [
+        "对"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-06"
+      ],
+      "question_numbers": [
+        6
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第6题",
+      "preview_seconds": 15,
+      "between_plays_seconds": 10,
+      "answer_seconds": 25,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "对",
+          "file": "units/E02-A03-01.wav",
+          "sha256": "ea83485f6f0e9b1299d6326db209bcd392e32efd81028445775fc44634709e3a",
+          "start_seconds": 0.0,
+          "duration_seconds": 0.72,
+          "tokens": 9,
+          "generation_seconds": 0.2597727499669418
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 7,
+      "audio_id": "E03-A01",
+      "file": "E03-A01.wav",
+      "duration_seconds": 0.8,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第03课-拼音和日常用语（三）/A-听辨与理解/E03-01.wav",
+      "sha256": "2a4f1ff385e9c477e94959ea0273a8df1f9b725d5f00378011d1a6f160de082a",
+      "source_sha256": "7b7f3c6ce918080fd6e8b539dca56198700b37764c3d3ed53168da799e90fbe6",
+      "source_text": "huār",
+      "speech_units": [
+        "花儿"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-07"
+      ],
+      "question_numbers": [
+        7
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第7题",
+      "preview_seconds": 15,
+      "between_plays_seconds": 10,
+      "answer_seconds": 25,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "花儿",
+          "file": "units/E03-A01-01.wav",
+          "sha256": "2a4f1ff385e9c477e94959ea0273a8df1f9b725d5f00378011d1a6f160de082a",
+          "start_seconds": 0.0,
+          "duration_seconds": 0.8,
+          "tokens": 10,
+          "generation_seconds": 0.2790532090002671
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 8,
+      "audio_id": "E03-A02",
+      "file": "E03-A02.wav",
+      "duration_seconds": 1.04,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第03课-拼音和日常用语（三）/A-听辨与理解/E03-02.wav",
+      "sha256": "24aec268f3aa8e550a36ff78a9ebd4a32dd62594347dac307a97b0b2f4df1ae5",
+      "source_sha256": "30d486843fa118870921ae550bd6837386402eeacfc8586bdcdfc039825214cd",
+      "source_text": "nǚ’ér",
+      "speech_units": [
+        "女儿"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-08"
+      ],
+      "question_numbers": [
+        8
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第8题",
+      "preview_seconds": 15,
+      "between_plays_seconds": 10,
+      "answer_seconds": 25,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "女儿",
+          "file": "units/E03-A02-01.wav",
+          "sha256": "24aec268f3aa8e550a36ff78a9ebd4a32dd62594347dac307a97b0b2f4df1ae5",
+          "start_seconds": 0.0,
+          "duration_seconds": 1.04,
+          "tokens": 13,
+          "generation_seconds": 0.36252587498165667
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 9,
+      "audio_id": "E03-A03",
+      "file": "E03-A03.wav",
+      "duration_seconds": 0.72,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第03课-拼音和日常用语（三）/A-听辨与理解/E03-03.wav",
+      "sha256": "1ca68ee2b3002d2f65f73b5f947835619e04a0eeef82dc14cab31e933c079fbf",
+      "source_sha256": "1d8d980c68526c8a6f5aa25f6b816179607bd0da54378d3cbdfc1d68a7b9b35a",
+      "source_text": "wèn",
+      "speech_units": [
+        "问"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-09"
+      ],
+      "question_numbers": [
+        9
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第9题",
+      "preview_seconds": 15,
+      "between_plays_seconds": 10,
+      "answer_seconds": 25,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "问",
+          "file": "units/E03-A03-01.wav",
+          "sha256": "1ca68ee2b3002d2f65f73b5f947835619e04a0eeef82dc14cab31e933c079fbf",
+          "start_seconds": 0.0,
+          "duration_seconds": 0.72,
+          "tokens": 9,
+          "generation_seconds": 0.259923291974701
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 10,
+      "audio_id": "E04-A01",
+      "file": "E04-A01.wav",
+      "duration_seconds": 2.16,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第04课-你叫什么名字/A-听辨与理解/E04-01.wav",
+      "sha256": "2d756d1fcafa7c478d619d5b1b4455eae6d5f682fb4e4f14ca0e3123e530c91b",
+      "source_sha256": "2d9a5842f3677dc9235f72dfbf2fed9f23bed985fa6e71c80e3cdacf96d684dc",
+      "source_text": "我姓王，不姓李。",
+      "speech_units": [
+        "我姓王，不姓李。"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-10"
+      ],
+      "question_numbers": [
+        10
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第10题",
+      "preview_seconds": 15,
+      "between_plays_seconds": 10,
+      "answer_seconds": 25,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "我姓王，不姓李。",
+          "file": "units/E04-A01-01.wav",
+          "sha256": "2d756d1fcafa7c478d619d5b1b4455eae6d5f682fb4e4f14ca0e3123e530c91b",
+          "start_seconds": 0.0,
+          "duration_seconds": 2.16,
+          "tokens": 27,
+          "generation_seconds": 0.7129926660563797
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 11,
+      "audio_id": "E04-B01",
+      "file": "E04-B01.wav",
+      "duration_seconds": 15.6205,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第04课-你叫什么名字/B-听对话/E04-07-08.wav",
+      "sha256": "55bd3000868107c79dd9adc4fc136c7175474676be1fc9ec3c30b1d927206965",
+      "source_sha256": "5521cb0ea7975b5a1a3156e21fe26a89f5ccdc7b1d95f6cae5e16c5a47e99f0f",
+      "source_text": "小林：你好！你叫什么名字？\n安娜：我叫安娜。\n小林：你是老师吗？\n安娜：不是，我是学生。",
+      "speech_units": [
+        "小林，你好！你叫什么名字？",
+        "安娜，我叫安娜。",
+        "小林，你是老师吗？",
+        "安娜，不是，我是学生。"
+      ],
+      "pause_after_ms": [
+        700,
+        700,
+        700
+      ],
+      "source_speed": 0.9,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-11",
+        "W04-L01L10-12"
+      ],
+      "question_numbers": [
+        11,
+        12
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第11–12题",
+      "preview_seconds": 25,
+      "between_plays_seconds": 10,
+      "answer_seconds": 50,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "小林，你好！你叫什么名字？",
+          "file": "units/E04-B01-01.wav",
+          "sha256": "3bbbcf116a8ffd0a4bddf08215adc4a41d1085fe6e7ca9f1ab38514e8ef88fa9",
+          "start_seconds": 0.0,
+          "duration_seconds": 4.700958333333333,
+          "tokens": 53,
+          "generation_seconds": 1.3483819159446284
+        },
+        {
+          "text": "安娜，我叫安娜。",
+          "file": "units/E04-B01-02.wav",
+          "sha256": "7e52db58c39259a3f50c8814daa99561dd64ec29b74ceb867c82475ec6fc09b7",
+          "start_seconds": 5.4009583333333335,
+          "duration_seconds": 1.753625,
+          "tokens": 20,
+          "generation_seconds": 0.5469994999002665
+        },
+        {
+          "text": "小林，你是老师吗？",
+          "file": "units/E04-B01-03.wav",
+          "sha256": "93ce8a2c102d1bbfce3b1aca3e85641d13cf22f2dfddcfa8b258568515d92f12",
+          "start_seconds": 7.854583333333333,
+          "duration_seconds": 2.3008333333333333,
+          "tokens": 26,
+          "generation_seconds": 0.686746416031383
+        },
+        {
+          "text": "安娜，不是，我是学生。",
+          "file": "units/E04-B01-04.wav",
+          "sha256": "f1f2c5fee5cc3ff51803955790096baafea9e90e92abbba36423af53c15427c9",
+          "start_seconds": 10.855416666666667,
+          "duration_seconds": 3.265083333333333,
+          "tokens": 37,
+          "generation_seconds": 0.9414037090027705
+        }
+      ],
+      "planned_silence": [
+        {
+          "start_frame": 112823,
+          "frames": 16800,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 171710,
+          "frames": 16800,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 243730,
+          "frames": 16800,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 338892,
+          "frames": 36000,
+          "kind": "planned_final_silence"
+        }
+      ],
+      "final_silence_ms": 1500,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 12,
+      "audio_id": "E05-A02",
+      "file": "E05-A02.wav",
+      "duration_seconds": 3.52,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第05课-认识你很高兴/A-听辨与理解/E05-02.wav",
+      "sha256": "bc9dd6bb2c0c1b8d64111039b61f8096eefacb1e23aacbbed1d2969c40785d6d",
+      "source_sha256": "4e44b4affa8a10ca6ca8001107a8adfc8b472b9cfc60c08490a6e4be026832e9",
+      "source_text": "安娜是我的同学，不是我的同屋。",
+      "speech_units": [
+        "安娜是我的同学，不是我的同屋。"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-13"
+      ],
+      "question_numbers": [
+        13
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第13题",
+      "preview_seconds": 15,
+      "between_plays_seconds": 10,
+      "answer_seconds": 25,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "安娜是我的同学，不是我的同屋。",
+          "file": "units/E05-A02-01.wav",
+          "sha256": "bc9dd6bb2c0c1b8d64111039b61f8096eefacb1e23aacbbed1d2969c40785d6d",
+          "start_seconds": 0.0,
+          "duration_seconds": 3.52,
+          "tokens": 44,
+          "generation_seconds": 1.0778775409562513
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 13,
+      "audio_id": "E05-B01",
+      "file": "E05-B01.wav",
+      "duration_seconds": 18.489583333333332,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第05课-认识你很高兴/B-听对话/E05-07-08.wav",
+      "sha256": "fd8e11c3fd9466cc9bbd80b95f966c726889ecae92574c4c7f6530b75f4f33d6",
+      "source_sha256": "ae522d7e17abf7a450f8a26835a6e31dea6a7f5604ddb9e8a6f976580c61c722",
+      "source_text": "小林：这是我的朋友安娜。\n小王：安娜，你是哪国人？\n安娜：我是英国人。\n小王：我也是英国人，认识你很高兴。",
+      "speech_units": [
+        "小林，这是我的朋友安娜。",
+        "小王，安娜，你是哪国人？",
+        "安娜，我是英国人。",
+        "小王，我也是英国人，认识你很高兴。"
+      ],
+      "pause_after_ms": [
+        700,
+        700,
+        700
+      ],
+      "source_speed": 0.9,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-14",
+        "W04-L01L10-15"
+      ],
+      "question_numbers": [
+        14,
+        15
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第14–15题",
+      "preview_seconds": 25,
+      "between_plays_seconds": 10,
+      "answer_seconds": 50,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "小林，这是我的朋友安娜。",
+          "file": "units/E05-B01-01.wav",
+          "sha256": "d2593ea9abf1b052a7203c2a0667edf61e388084779ba0ad1e61e67862776407",
+          "start_seconds": 0.0,
+          "duration_seconds": 3.4595833333333332,
+          "tokens": 39,
+          "subunits": [
+            {
+              "text": "小林，这是我的朋友安娜。",
+              "tts_text": "小林，这是我的朋友安娜。",
+              "file": "units/E05-B01-01-part-01.wav",
+              "duration_seconds": 3.12,
+              "tokens": 39
+            }
+          ],
+          "generation_seconds": 1.0406195831019431
+        },
+        {
+          "text": "小王，安娜，你是哪国人？",
+          "file": "units/E05-B01-02.wav",
+          "sha256": "3300e89e76793e94a85fa4858c8928e16732226e7592686a56ccdb6a43fc10d9",
+          "start_seconds": 4.159583333333333,
+          "duration_seconds": 3.4589583333333334,
+          "tokens": 39,
+          "subunits": [
+            {
+              "text": "小王，安娜，你是哪国人？",
+              "tts_text": "小王，安娜，你是哪国人？",
+              "file": "units/E05-B01-02-part-01.wav",
+              "duration_seconds": 3.12,
+              "tokens": 39
+            }
+          ],
+          "generation_seconds": 1.0017874588957056
+        },
+        {
+          "text": "安娜，我是英国人。",
+          "file": "units/E05-B01-03.wav",
+          "sha256": "d1b68ed85790debadf701067d34e9bef2ab54c42d31de2e82926d42dc914a21d",
+          "start_seconds": 8.318541666666667,
+          "duration_seconds": 2.6552083333333334,
+          "tokens": 30,
+          "subunits": [
+            {
+              "text": "安娜，我是英国人。",
+              "tts_text": "安娜，我是英国人。",
+              "file": "units/E05-B01-03-part-01.wav",
+              "duration_seconds": 2.4,
+              "tokens": 30
+            }
+          ],
+          "generation_seconds": 0.7790241669863462
+        },
+        {
+          "text": "小王，我也是英国人，认识你很高兴。",
+          "file": "units/E05-B01-04.wav",
+          "sha256": "7ea1fd758ecc4c7b2ba8d48f9a4291143f1cd5e5ea691b3df08e9c96c9b29233",
+          "start_seconds": 11.67375,
+          "duration_seconds": 5.315833333333333,
+          "tokens": 60,
+          "subunits": [
+            {
+              "text": "小王，我也是英国人，认识你很高兴。",
+              "tts_text": "小王，我也是英国人，认识你很高兴。",
+              "file": "units/E05-B01-04-part-01.wav",
+              "duration_seconds": 4.8,
+              "tokens": 60
+            }
+          ],
+          "generation_seconds": 1.512091957964003
+        }
+      ],
+      "planned_silence": [
+        {
+          "start_frame": 83030,
+          "frames": 16800,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 182845,
+          "frames": 16800,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 263370,
+          "frames": 16800,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 407750,
+          "frames": 36000,
+          "kind": "planned_final_silence"
+        }
+      ],
+      "final_silence_ms": 1500,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 14,
+      "audio_id": "E06-A01",
+      "file": "E06-A01.wav",
+      "duration_seconds": 4.0,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第06课-这是什么/A-听辨与理解/E06-01.wav",
+      "sha256": "b18265efc4d1688dca8ac26935d97f83ecce7f0173c96d93a1190526f1a4fb16",
+      "source_sha256": "fd9d3008feb6a1af727ac1a6fcb71acf98044e2068fb6403e6460dfd74be6056",
+      "source_text": "这是我的书包，那是安娜的书包。",
+      "speech_units": [
+        "这是我的书包，那是安娜的书包。"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-16"
+      ],
+      "question_numbers": [
+        16
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第16题",
+      "preview_seconds": 15,
+      "between_plays_seconds": 10,
+      "answer_seconds": 25,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "这是我的书包，那是安娜的书包。",
+          "file": "units/E06-A01-01.wav",
+          "sha256": "b18265efc4d1688dca8ac26935d97f83ecce7f0173c96d93a1190526f1a4fb16",
+          "start_seconds": 0.0,
+          "duration_seconds": 4.0,
+          "tokens": 50,
+          "generation_seconds": 1.2293704589828849
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 15,
+      "audio_id": "E06-B01",
+      "file": "E06-B01.wav",
+      "duration_seconds": 18.512041666666665,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第06课-这是什么/B-听对话/E06-07-08.wav",
+      "sha256": "60c61b6fea374df4ee8d35061ed6b14611553a0e448cbdcb158961477e7cd4c7",
+      "source_sha256": "635a631b120c363efa3c79f67bac993374971f7ac192c5efbb23fe049c1a043f",
+      "source_text": "小林：这是谁的笔？是你的吗？\n小王：不是我的，是李美的。\n小林：这个本子呢？\n小王：这个本子是我的。",
+      "speech_units": [
+        "小林，这是谁的笔？是你的吗？",
+        "小王，不是我的，是李美的。",
+        "小林，这个本子呢？",
+        "小王，这个本子是我的。"
+      ],
+      "pause_after_ms": [
+        700,
+        700,
+        700
+      ],
+      "source_speed": 0.9,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-17",
+        "W04-L01L10-18"
+      ],
+      "question_numbers": [
+        17,
+        18
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第17–18题",
+      "preview_seconds": 25,
+      "between_plays_seconds": 10,
+      "answer_seconds": 50,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "小林，这是谁的笔？是你的吗？",
+          "file": "units/E06-B01-01.wav",
+          "sha256": "3e3cf3e9fdcd30267156e45509e11d7ce6dd75dac4738801f515e14e961d3bc5",
+          "start_seconds": 0.0,
+          "duration_seconds": 4.2265,
+          "tokens": 48,
+          "generation_seconds": 1.2141378748929128
+        },
+        {
+          "text": "小王，不是我的，是李美的。",
+          "file": "units/E06-B01-02.wav",
+          "sha256": "311e0133ae8894777f68c991c7b31540ed75fa389e45ebfe4da5827217e1abbf",
+          "start_seconds": 4.9265,
+          "duration_seconds": 4.251708333333333,
+          "tokens": 48,
+          "generation_seconds": 1.2157276249490678
+        },
+        {
+          "text": "小林，这个本子呢？",
+          "file": "units/E06-B01-03.wav",
+          "sha256": "5e6932de3739ce354dd3c3680bf857e6486b59eb94c4db3ded566fe5f793e1ef",
+          "start_seconds": 9.878208333333333,
+          "duration_seconds": 3.51875,
+          "tokens": 40,
+          "generation_seconds": 1.0300070000812411
+        },
+        {
+          "text": "小王，这个本子是我的。",
+          "file": "units/E06-B01-04.wav",
+          "sha256": "6223b1323f079618aec2b1eaf3863b177aa2a2072ef330447ca9e8dbb041768c",
+          "start_seconds": 14.096958333333333,
+          "duration_seconds": 2.9150833333333335,
+          "tokens": 33,
+          "generation_seconds": 0.8561283749295399
+        }
+      ],
+      "planned_silence": [
+        {
+          "start_frame": 101436,
+          "frames": 16800,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 220277,
+          "frames": 16800,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 321527,
+          "frames": 16800,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 408289,
+          "frames": 36000,
+          "kind": "planned_final_silence"
+        }
+      ],
+      "final_silence_ms": 1500,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 16,
+      "audio_id": "E07-A01",
+      "file": "E07-A01.wav",
+      "duration_seconds": 2.64,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第07课-欢迎去我家玩儿/A-听辨与理解/E07-01.wav",
+      "sha256": "71856550e9333b3f9516d5b2ab46df270f24b79881ab9700c9f408b5e699f39c",
+      "source_sha256": "686773dfac835192c90f718fd55b07451c4346e4ae65e840a1026ec82357d67f",
+      "source_text": "安娜不在宿舍，她在教室里。",
+      "speech_units": [
+        "安娜不在宿舍，她在教室里。"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-19"
+      ],
+      "question_numbers": [
+        19
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第19题",
+      "preview_seconds": 15,
+      "between_plays_seconds": 10,
+      "answer_seconds": 25,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "安娜不在宿舍，她在教室里。",
+          "file": "units/E07-A01-01.wav",
+          "sha256": "71856550e9333b3f9516d5b2ab46df270f24b79881ab9700c9f408b5e699f39c",
+          "start_seconds": 0.0,
+          "duration_seconds": 2.64,
+          "tokens": 33,
+          "generation_seconds": 0.8165477920556441
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 17,
+      "audio_id": "E07-B01",
+      "file": "E07-B01.wav",
+      "duration_seconds": 17.05441666666667,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第07课-欢迎去我家玩儿/B-听对话/E07-07-08.wav",
+      "sha256": "927e543da3f5d1c183747b93456a3e9024e004765b9e66f6d9144e22be02448a",
+      "source_sha256": "e65b25299c2f0e50ccc4e0bee70a90e2bd994b6ad1ce9ca03f1adce5aa5c944b",
+      "source_text": "小林：你住在学校里吗？\n小王：不，我住在学校外边。\n小林：远吗？\n小王：不远，就在学校东边。",
+      "speech_units": [
+        "小林，你住在学校里吗？",
+        "小王，不，我住在学校外边。",
+        "小林，远吗？",
+        "小王，不远，就在学校东边。"
+      ],
+      "pause_after_ms": [
+        700,
+        700,
+        700
+      ],
+      "source_speed": 0.9,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-20",
+        "W04-L01L10-21"
+      ],
+      "question_numbers": [
+        20,
+        21
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第20–21题",
+      "preview_seconds": 25,
+      "between_plays_seconds": 10,
+      "answer_seconds": 50,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "小林，你住在学校里吗？",
+          "file": "units/E07-B01-01.wav",
+          "sha256": "d8bd2afb2b883060984055a07a5e32008cb60567f9158f6ac93d31bc3ae34432",
+          "start_seconds": 0.0,
+          "duration_seconds": 3.2732083333333333,
+          "tokens": 37,
+          "subunits": [
+            {
+              "text": "小林，你住在学校里吗？",
+              "tts_text": "小林，你住在学校里吗？",
+              "file": "units/E07-B01-01-part-01.wav",
+              "duration_seconds": 2.96,
+              "tokens": 37
+            }
+          ],
+          "generation_seconds": 0.9702645000070333
+        },
+        {
+          "text": "小王，不，我住在学校外边。",
+          "file": "units/E07-B01-02.wav",
+          "sha256": "057312bc508a6476b099c9e3093078e782d91ceb9ca0218c218129b147365f78",
+          "start_seconds": 3.9732083333333335,
+          "duration_seconds": 3.709875,
+          "tokens": 42,
+          "subunits": [
+            {
+              "text": "小王，不，我住在学校外边。",
+              "tts_text": "小王，不，我住在学校外边。",
+              "file": "units/E07-B01-02-part-01.wav",
+              "duration_seconds": 3.36,
+              "tokens": 42
+            }
+          ],
+          "generation_seconds": 1.0706678749993443
+        },
+        {
+          "text": "小林，远吗？",
+          "file": "units/E07-B01-03.wav",
+          "sha256": "ddfe419ba23c29740f859a0a06c4d1f746e045fd27638712a2fc90a14acceb42",
+          "start_seconds": 8.383083333333333,
+          "duration_seconds": 2.655,
+          "tokens": 30,
+          "subunits": [
+            {
+              "text": "小林，远吗？",
+              "tts_text": "小林，远吗？",
+              "file": "units/E07-B01-03-part-01.wav",
+              "duration_seconds": 2.4,
+              "tokens": 30
+            }
+          ],
+          "generation_seconds": 0.7919235419249162
+        },
+        {
+          "text": "小王，不远，就在学校东边。",
+          "file": "units/E07-B01-04.wav",
+          "sha256": "07953ed6901ee16ab0eb1ee7761419227bd7156c3e0197f6c0cd7795f0f6a843",
+          "start_seconds": 11.738083333333334,
+          "duration_seconds": 3.816333333333333,
+          "tokens": 43,
+          "subunits": [
+            {
+              "text": "小王，不远，就在学校东边。",
+              "tts_text": "小王，不远，就在学校东边。",
+              "file": "units/E07-B01-04-part-01.wav",
+              "duration_seconds": 3.44,
+              "tokens": 43
+            }
+          ],
+          "generation_seconds": 1.1069260840304196
+        }
+      ],
+      "planned_silence": [
+        {
+          "start_frame": 78557,
+          "frames": 16800,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 184394,
+          "frames": 16800,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 264914,
+          "frames": 16800,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 373306,
+          "frames": 36000,
+          "kind": "planned_final_silence"
+        }
+      ],
+      "final_silence_ms": 1500,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 18,
+      "audio_id": "E08-A01",
+      "file": "E08-A01.wav",
+      "duration_seconds": 1.6,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第08课-明天晚上你有时间吗/A-听辨与理解/E08-01.wav",
+      "sha256": "f86fa9785356a4a7d65c40c05a7b99372606e5abf4b8c75890338265e71a75fb",
+      "source_sha256": "27135002a945b74e0d91478a8a22fe62091367705dc797ce3c85eee6f1fe7922",
+      "source_text": "现在差一刻九点。",
+      "speech_units": [
+        "现在差一刻九点。"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-22"
+      ],
+      "question_numbers": [
+        22
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第22题",
+      "preview_seconds": 15,
+      "between_plays_seconds": 10,
+      "answer_seconds": 25,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "现在差一刻九点。",
+          "file": "units/E08-A01-01.wav",
+          "sha256": "f86fa9785356a4a7d65c40c05a7b99372606e5abf4b8c75890338265e71a75fb",
+          "start_seconds": 0.0,
+          "duration_seconds": 1.6,
+          "tokens": 20,
+          "generation_seconds": 0.5118261669995263
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 19,
+      "audio_id": "E08-B01",
+      "file": "E08-B01.wav",
+      "duration_seconds": 18.171125,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第08课-明天晚上你有时间吗/B-听对话/E08-07-08.wav",
+      "sha256": "4b0114ad7fd57a9e14d4560c68b35e01825a15eb181aab024ce94b4997cdaf27",
+      "source_sha256": "d4e04b3068548aa1f02c110fbd5e6bece94e042e2ab9c8b5a1a7fc1b9d005e76",
+      "source_text": "小林：今晚六点一起吃饭吧。\n小王：六点我有课，七点下课。\n小林：那七点半食堂见。\n小王：好。",
+      "speech_units": [
+        "小林，今晚六点一起吃饭吧。",
+        "小王，六点我有课，七点下课。",
+        "小林，那七点半食堂见。",
+        "小王，好。"
+      ],
+      "pause_after_ms": [
+        700,
+        700,
+        700
+      ],
+      "source_speed": 0.9,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-23",
+        "W04-L01L10-24"
+      ],
+      "question_numbers": [
+        23,
+        24
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第23–24题",
+      "preview_seconds": 25,
+      "between_plays_seconds": 10,
+      "answer_seconds": 50,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "小林，今晚六点一起吃饭吧。",
+          "file": "units/E08-B01-01.wav",
+          "sha256": "a2a4b151cd4afffff079d169a7076d3ce1b9eed29f8298969da63ab64cec6132",
+          "start_seconds": 0.0,
+          "duration_seconds": 2.997333333333333,
+          "tokens": 34,
+          "generation_seconds": 0.915188290993683
+        },
+        {
+          "text": "小王，六点我有课，七点下课。",
+          "file": "units/E08-B01-02.wav",
+          "sha256": "ab745caa83a64f0e18a98f15c590063275ca1380b887ff396e7e3861bfb75fcd",
+          "start_seconds": 3.6973333333333334,
+          "duration_seconds": 5.493791666666667,
+          "tokens": 62,
+          "generation_seconds": 1.5802581669995561
+        },
+        {
+          "text": "小林，那七点半食堂见。",
+          "file": "units/E08-B01-03.wav",
+          "sha256": "83bcc96ac6b16bcaaa6da607f0128103c976d0a2b01a9f4a84cad62ca0eac47f",
+          "start_seconds": 9.891125,
+          "duration_seconds": 4.4305,
+          "tokens": 50,
+          "generation_seconds": 1.3027263330295682
+        },
+        {
+          "text": "小王，好。",
+          "file": "units/E08-B01-04.wav",
+          "sha256": "4d9b4e54a3eb5384aa45b3e33e2dff9e5b3577fa59681af7fcd1265d3ae79ad8",
+          "start_seconds": 15.021625,
+          "duration_seconds": 1.6495,
+          "tokens": 19,
+          "generation_seconds": 0.538617790909484
+        }
+      ],
+      "planned_silence": [
+        {
+          "start_frame": 71936,
+          "frames": 16800,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 220587,
+          "frames": 16800,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 343719,
+          "frames": 16800,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 400107,
+          "frames": 36000,
+          "kind": "planned_final_silence"
+        }
+      ],
+      "final_silence_ms": 1500,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 20,
+      "audio_id": "E09-A02",
+      "file": "E09-A02.wav",
+      "duration_seconds": 3.2,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第09课-我们怎么去/A-听辨与理解/E09-02.wav",
+      "sha256": "499d32ae677cdbed9b1f00a745b83b3b015b3160e5649e81d940f3aa15dd2c63",
+      "source_sha256": "2f2e7e8f7e2bef150354fe2fea7a60e8a662be3176db43ceebbbf2b38341dcb1",
+      "source_text": "他的房间号是三零六，不是三六零。",
+      "speech_units": [
+        "他的房间号是三零六，不是三六零。"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-25"
+      ],
+      "question_numbers": [
+        25
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第25题",
+      "preview_seconds": 15,
+      "between_plays_seconds": 10,
+      "answer_seconds": 25,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "他的房间号是三零六，不是三六零。",
+          "file": "units/E09-A02-01.wav",
+          "sha256": "499d32ae677cdbed9b1f00a745b83b3b015b3160e5649e81d940f3aa15dd2c63",
+          "start_seconds": 0.0,
+          "duration_seconds": 3.2,
+          "tokens": 40,
+          "generation_seconds": 1.041068583028391
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 21,
+      "audio_id": "E09-B01",
+      "file": "E09-B01.wav",
+      "duration_seconds": 15.192333333333334,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第09课-我们怎么去/B-听对话/E09-07-08.wav",
+      "sha256": "c1decff15639070bc4bbf28cd9fec7e79f668c5cc7b48b2f654433ef14bd241f",
+      "source_sha256": "85bd7a45df93d7faf816ca3b31a329c331192fe39e9dd72f99f59fa3ca2fe6f8",
+      "source_text": "小林：我们怎么去动物园？骑自行车吗？\n小王：太远了，坐地铁吧。\n小林：好，九点在学校东门见。",
+      "speech_units": [
+        "小林，我们怎么去动物园？骑自行车吗？",
+        "小王，太远了，坐地铁吧。",
+        "小林，好，九点在学校东门见。"
+      ],
+      "pause_after_ms": [
+        700,
+        700
+      ],
+      "source_speed": 0.9,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-26",
+        "W04-L01L10-27"
+      ],
+      "question_numbers": [
+        26,
+        27
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第26–27题",
+      "preview_seconds": 25,
+      "between_plays_seconds": 10,
+      "answer_seconds": 50,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "小林，我们怎么去动物园？骑自行车吗？",
+          "file": "units/E09-B01-01.wav",
+          "sha256": "8986bc503805ea6f57a4524f4d7ea06fcaa27b8cd86eba961593d4f0b62f4415",
+          "start_seconds": 0.0,
+          "duration_seconds": 4.048541666666667,
+          "tokens": 46,
+          "subunits": [
+            {
+              "text": "小林，我们怎么去动物园？骑自行车吗？",
+              "tts_text": "小林，我们怎么去动物园？骑自行车吗？",
+              "file": "units/E09-B01-01-part-01.wav",
+              "duration_seconds": 3.68,
+              "tokens": 46
+            }
+          ],
+          "generation_seconds": 1.1722427090862766
+        },
+        {
+          "text": "小王，太远了，坐地铁吧。",
+          "file": "units/E09-B01-02.wav",
+          "sha256": "0ab9dd8a64a9a5a5ec9377ddba4d5ef73259e9dc637d6a475288b620a66f2adb",
+          "start_seconds": 4.748541666666667,
+          "duration_seconds": 3.9864166666666665,
+          "tokens": 45,
+          "subunits": [
+            {
+              "text": "小王，太远了，坐地铁吧。",
+              "tts_text": "小王，太远了，坐地铁吧。",
+              "file": "units/E09-B01-02-part-01.wav",
+              "duration_seconds": 3.6,
+              "tokens": 45
+            }
+          ],
+          "generation_seconds": 1.1550966660724953
+        },
+        {
+          "text": "小林，好，九点在学校东门见。",
+          "file": "units/E09-B01-03.wav",
+          "sha256": "cb89d8151fdfde8b6cfac8b129d3d6f3ab1d716b88cd3859c9ef608f200ed813",
+          "start_seconds": 9.434958333333332,
+          "duration_seconds": 4.257375,
+          "tokens": 48,
+          "subunits": [
+            {
+              "text": "小林，好，九点在学校东门见。",
+              "tts_text": "小林，好，九点在学校东门见。",
+              "file": "units/E09-B01-03-part-01.wav",
+              "duration_seconds": 3.84,
+              "tokens": 48
+            }
+          ],
+          "generation_seconds": 1.2308874579612166
+        }
+      ],
+      "planned_silence": [
+        {
+          "start_frame": 97165,
+          "frames": 16800,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 209639,
+          "frames": 16800,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 328616,
+          "frames": 36000,
+          "kind": "planned_final_silence"
+        }
+      ],
+      "final_silence_ms": 1500,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 22,
+      "audio_id": "E10-A01",
+      "file": "E10-A01.wav",
+      "duration_seconds": 4.08,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第10课-西瓜怎么卖/A-听辨与理解/E10-01.wav",
+      "sha256": "8b7e50dd3967faefbc0fbb0015d697cae9c4530f1d1151b8e62b5e3ef70308e7",
+      "source_sha256": "7ae69b490d72d070bacdaa1fd73cbb456416afa17e4b9298d3420de30a713d2a",
+      "source_text": "苹果四块五一斤。",
+      "speech_units": [
+        "苹果四块五一斤。"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-28"
+      ],
+      "question_numbers": [
+        28
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第28题",
+      "preview_seconds": 15,
+      "between_plays_seconds": 10,
+      "answer_seconds": 25,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "苹果四块五一斤。",
+          "file": "units/E10-A01-01.wav",
+          "sha256": "8b7e50dd3967faefbc0fbb0015d697cae9c4530f1d1151b8e62b5e3ef70308e7",
+          "start_seconds": 0.0,
+          "duration_seconds": 4.08,
+          "tokens": 51,
+          "generation_seconds": 1.3441896250005811
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 23,
+      "audio_id": "E10-B01",
+      "file": "E10-B01.wav",
+      "duration_seconds": 23.822791666666667,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第10课-西瓜怎么卖/B-听对话/E10-07-08.wav",
+      "sha256": "87765d5f823e2583cb9e6a475a826b8350509f33a06ad8edbfe239e27bb586ed",
+      "source_sha256": "ee4753bc83855fb73f75f185cec1b0cece68d3ca23f766896a46650fb09dcd05",
+      "source_text": "小林：西瓜怎么卖？\n小王：三块钱一斤。\n小林：我要两斤。\n小王：一共六块。\n小林：给你十块。",
+      "speech_units": [
+        "小林，西瓜怎么卖？",
+        "小王，三块钱一斤。",
+        "小林，我要两斤。",
+        "小王，一共六块。",
+        "小林，给你十块。"
+      ],
+      "pause_after_ms": [
+        700,
+        700,
+        700,
+        700
+      ],
+      "source_speed": 0.9,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-29",
+        "W04-L01L10-30"
+      ],
+      "question_numbers": [
+        29,
+        30
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第29–30题",
+      "preview_seconds": 25,
+      "between_plays_seconds": 10,
+      "answer_seconds": 50,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "小林，西瓜怎么卖？",
+          "file": "units/E10-B01-01.wav",
+          "sha256": "3cca1034805852f0fbd5f5b05b844c2e6660852e91a765574cbbc17fc91151ca",
+          "start_seconds": 0.0,
+          "duration_seconds": 2.6432083333333334,
+          "tokens": 30,
+          "generation_seconds": 0.8382660830393434
+        },
+        {
+          "text": "小王，三块钱一斤。",
+          "file": "units/E10-B01-02.wav",
+          "sha256": "8926df2ae9a624000e5ee9032857fa66ab696deedc11aaa6b4ff79c3e26242c6",
+          "start_seconds": 3.343208333333333,
+          "duration_seconds": 3.781625,
+          "tokens": 43,
+          "generation_seconds": 1.166836166055873
+        },
+        {
+          "text": "小林，我要两斤。",
+          "file": "units/E10-B01-03.wav",
+          "sha256": "d4c4c2a18729dd0f96f1280f29673b8cea6c3821145b65f87ce62fcc1d59c6d7",
+          "start_seconds": 7.824833333333333,
+          "duration_seconds": 3.4273333333333333,
+          "tokens": 39,
+          "generation_seconds": 1.0769589580595493
+        },
+        {
+          "text": "小王，一共六块。",
+          "file": "units/E10-B01-04.wav",
+          "sha256": "77e4f672115427da023572f0174fce009490017446e202ce9dd5772c27732ca8",
+          "start_seconds": 11.952166666666667,
+          "duration_seconds": 6.655291666666667,
+          "tokens": 75,
+          "generation_seconds": 1.9778059999225661
+        },
+        {
+          "text": "小林，给你十块。",
+          "file": "units/E10-B01-05.wav",
+          "sha256": "f523de9aa405dfaa2eb176127cf6c0ec326ebfa613bcdd5d4d548218c0b1bd9b",
+          "start_seconds": 19.307458333333333,
+          "duration_seconds": 3.0153333333333334,
+          "tokens": 34,
+          "generation_seconds": 0.9471816670848057
+        }
+      ],
+      "planned_silence": [
+        {
+          "start_frame": 63437,
+          "frames": 16800,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 170996,
+          "frames": 16800,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 270052,
+          "frames": 16800,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 446579,
+          "frames": 16800,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 535747,
+          "frames": 36000,
+          "kind": "planned_final_silence"
+        }
+      ],
+      "final_silence_ms": 1500,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 24,
+      "audio_id": "E01-C01",
+      "file": "E01-C01.wav",
+      "duration_seconds": 18.52,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第01课-拼音和日常用语（一）/C-听后填写/E01-15-17.wav",
+      "sha256": "70cbc32e4ce99bf81dd9fa77915e956f5e34d7283eebdc38d3f992183e3e6984",
+      "source_sha256": "7ff571e45f90db39f8f369eb5afaafc9e3fef6a2866073666f66196ef5a2baec",
+      "source_text": "依次读三项，每项之间停三秒：dǎ；tè；nǚ。整组再读一遍。",
+      "speech_units": [
+        "打",
+        "特",
+        "女",
+        "打",
+        "特",
+        "女"
+      ],
+      "pause_after_ms": [
+        3000,
+        3000,
+        3000,
+        3000,
+        3000
+      ],
+      "source_speed": 1,
+      "play_count": 1,
+      "internal_repeat": true,
+      "question_ids": [
+        "W04-L01L10-31",
+        "W04-L01L10-32"
+      ],
+      "question_numbers": [
+        31,
+        32
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第31–32题",
+      "preview_seconds": 25,
+      "between_plays_seconds": 0,
+      "answer_seconds": 90,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "打",
+          "file": "units/E01-C01-01.wav",
+          "sha256": "df1adeb4162db7eb96c581e1ae338ae15d31e9efca3417e3e004579ef1ed6379",
+          "start_seconds": 0.0,
+          "duration_seconds": 0.48,
+          "tokens": 6,
+          "subunits": [
+            {
+              "text": "打",
+              "tts_text": "打。",
+              "file": "units/E01-C01-01-part-01.wav",
+              "duration_seconds": 0.48,
+              "tokens": 6
+            }
+          ],
+          "generation_seconds": 0.24937808292452246
+        },
+        {
+          "text": "特",
+          "file": "units/E01-C01-02.wav",
+          "sha256": "8574050881db7822065a6832656cb03bbc15db1a21a0b6934fd726c0cb33d2e8",
+          "start_seconds": 3.48,
+          "duration_seconds": 0.72,
+          "tokens": 9,
+          "subunits": [
+            {
+              "text": "特",
+              "tts_text": "特。",
+              "file": "units/E01-C01-02-part-01.wav",
+              "duration_seconds": 0.72,
+              "tokens": 9
+            }
+          ],
+          "generation_seconds": 0.2779733339557424
+        },
+        {
+          "text": "女",
+          "file": "units/E01-C01-03.wav",
+          "sha256": "1ed4ee94113b004012f55beff783ee5c5a68f089c8727f6b6861738eb53df18b",
+          "start_seconds": 7.2,
+          "duration_seconds": 0.56,
+          "tokens": 7,
+          "subunits": [
+            {
+              "text": "女",
+              "tts_text": "女。",
+              "file": "units/E01-C01-03-part-01.wav",
+              "duration_seconds": 0.56,
+              "tokens": 7
+            }
+          ],
+          "generation_seconds": 0.23571004206314683
+        },
+        {
+          "text": "打",
+          "file": "units/E01-C01-04.wav",
+          "sha256": "3e223e6bb0a709aa7c1d658784f5bbc1698dabf3fe0a1e1baf3d786be0c27d59",
+          "start_seconds": 10.76,
+          "duration_seconds": 0.48,
+          "tokens": 6,
+          "subunits": [
+            {
+              "text": "打",
+              "reused_unit": 1
+            }
+          ],
+          "generation_seconds": 0.0002959580160677433
+        },
+        {
+          "text": "特",
+          "file": "units/E01-C01-05.wav",
+          "sha256": "eff1a82e45851826d0ddd249afdffa1f8933a1d04337ab7b37ea46979f2df277",
+          "start_seconds": 14.24,
+          "duration_seconds": 0.72,
+          "tokens": 9,
+          "subunits": [
+            {
+              "text": "特",
+              "reused_unit": 2
+            }
+          ],
+          "generation_seconds": 0.00022416701540350914
+        },
+        {
+          "text": "女",
+          "file": "units/E01-C01-06.wav",
+          "sha256": "72a045918f57f8ec4d53e0d1cb555420edd8ebd7ce61149c24d50ec729352e7e",
+          "start_seconds": 17.96,
+          "duration_seconds": 0.56,
+          "tokens": 7,
+          "subunits": [
+            {
+              "text": "女",
+              "reused_unit": 3
+            }
+          ],
+          "generation_seconds": 0.0002037090016528964
+        }
+      ],
+      "planned_silence": [
+        {
+          "start_frame": 11520,
+          "frames": 72000,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 100800,
+          "frames": 72000,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 186240,
+          "frames": 72000,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 269760,
+          "frames": 72000,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 359040,
+          "frames": 72000,
+          "kind": "planned_turn_pause"
+        }
+      ],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 25,
+      "audio_id": "E02-C01",
+      "file": "E02-C01.wav",
+      "duration_seconds": 19.64,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第02课-拼音和日常用语（二）/C-听后填写/E02-15-17.wav",
+      "sha256": "dc36f328b5a2e14c221c78ab51ed7f31c163f2c131ba07097a7d4fc72a3f0058",
+      "source_sha256": "e72f19c9c6dbd6a9715885517815f50d7d8a26bdc97ebe68a8662b1714827369",
+      "source_text": "依次读：hǎo；xiè；guì。每项停三秒，再读整组。",
+      "speech_units": [
+        "好",
+        "谢",
+        "贵",
+        "好",
+        "谢",
+        "贵"
+      ],
+      "pause_after_ms": [
+        3000,
+        3000,
+        3000,
+        3000,
+        3000
+      ],
+      "source_speed": 1,
+      "play_count": 1,
+      "internal_repeat": true,
+      "question_ids": [
+        "W04-L01L10-33",
+        "W04-L01L10-34"
+      ],
+      "question_numbers": [
+        33,
+        34
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第33–34题",
+      "preview_seconds": 25,
+      "between_plays_seconds": 0,
+      "answer_seconds": 90,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "好",
+          "file": "units/E02-C01-01.wav",
+          "sha256": "b025320190f7fac991cf57da0f0ea3543a11b6e4569e16e433f2021846d78e4b",
+          "start_seconds": 0.0,
+          "duration_seconds": 1.12,
+          "tokens": 14,
+          "subunits": [
+            {
+              "text": "好",
+              "tts_text": "好。",
+              "file": "units/E02-C01-01-part-01.wav",
+              "duration_seconds": 1.12,
+              "tokens": 14
+            }
+          ],
+          "generation_seconds": 0.40801520796958357
+        },
+        {
+          "text": "谢",
+          "file": "units/E02-C01-02.wav",
+          "sha256": "de6d8aaa4b9f6e48b3aff184d580b19a5c0270244b3cbcad95188906d3ccb67b",
+          "start_seconds": 4.12,
+          "duration_seconds": 0.72,
+          "tokens": 9,
+          "subunits": [
+            {
+              "text": "谢",
+              "tts_text": "谢。",
+              "file": "units/E02-C01-02-part-01.wav",
+              "duration_seconds": 0.72,
+              "tokens": 9
+            }
+          ],
+          "generation_seconds": 0.29296512494329363
+        },
+        {
+          "text": "贵",
+          "file": "units/E02-C01-03.wav",
+          "sha256": "045be863b5b5a8806f32e0b11f584b9fe4a8b3c590963232593ae09f9022d70d",
+          "start_seconds": 7.84,
+          "duration_seconds": 0.48,
+          "tokens": 6,
+          "subunits": [
+            {
+              "text": "贵",
+              "tts_text": "贵。",
+              "file": "units/E02-C01-03-part-01.wav",
+              "duration_seconds": 0.48,
+              "tokens": 6
+            }
+          ],
+          "generation_seconds": 0.23565899999812245
+        },
+        {
+          "text": "好",
+          "file": "units/E02-C01-04.wav",
+          "sha256": "95de451e7452378814a854672835fa01537cc16f5c11b0a365824e670be5006c",
+          "start_seconds": 11.32,
+          "duration_seconds": 1.12,
+          "tokens": 14,
+          "subunits": [
+            {
+              "text": "好",
+              "reused_unit": 1
+            }
+          ],
+          "generation_seconds": 0.00030087505001574755
+        },
+        {
+          "text": "谢",
+          "file": "units/E02-C01-05.wav",
+          "sha256": "228ade93787e6425eda74455e174440f99ec5535b398c92ca92d198a331d2967",
+          "start_seconds": 15.44,
+          "duration_seconds": 0.72,
+          "tokens": 9,
+          "subunits": [
+            {
+              "text": "谢",
+              "reused_unit": 2
+            }
+          ],
+          "generation_seconds": 0.00021912495139986277
+        },
+        {
+          "text": "贵",
+          "file": "units/E02-C01-06.wav",
+          "sha256": "70473777a9858beb40558ff0f27198df082bbede804c16e567426168c5c50eda",
+          "start_seconds": 19.16,
+          "duration_seconds": 0.48,
+          "tokens": 6,
+          "subunits": [
+            {
+              "text": "贵",
+              "reused_unit": 3
+            }
+          ],
+          "generation_seconds": 0.00018812506459653378
+        }
+      ],
+      "planned_silence": [
+        {
+          "start_frame": 26880,
+          "frames": 72000,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 116160,
+          "frames": 72000,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 199680,
+          "frames": 72000,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 298560,
+          "frames": 72000,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 387840,
+          "frames": 72000,
+          "kind": "planned_turn_pause"
+        }
+      ],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 26,
+      "audio_id": "E03-C01",
+      "file": "E03-C01.wav",
+      "duration_seconds": 19.32,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第03课-拼音和日常用语（三）/C-听后填写/E03-15-17.wav",
+      "sha256": "51740e105e614400d4fbac7ff89d5ed8ecb6b75ecd93d5cd521ce4f851a3cd88",
+      "source_sha256": "753f870c84588c75c2d23e95d728f63cefa9c94808f16c88be8d6caddedd266c",
+      "source_text": "依次读：yǔ；wǎn；yuè。每项停三秒，再读整组。",
+      "speech_units": [
+        "雨",
+        "晚",
+        "月",
+        "雨",
+        "晚",
+        "月"
+      ],
+      "pause_after_ms": [
+        3000,
+        3000,
+        3000,
+        3000,
+        3000
+      ],
+      "source_speed": 1,
+      "play_count": 1,
+      "internal_repeat": true,
+      "question_ids": [
+        "W04-L01L10-35",
+        "W04-L01L10-36"
+      ],
+      "question_numbers": [
+        35,
+        36
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第35–36题",
+      "preview_seconds": 25,
+      "between_plays_seconds": 0,
+      "answer_seconds": 90,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "雨",
+          "file": "units/E03-C01-01.wav",
+          "sha256": "bf6fa5994da89b5ffb7e634941b149055f5a812d5c9d5e44ff8b2f846d7e04d0",
+          "start_seconds": 0.0,
+          "duration_seconds": 0.8,
+          "tokens": 10,
+          "subunits": [
+            {
+              "text": "雨",
+              "tts_text": "雨。",
+              "file": "units/E03-C01-01-part-01.wav",
+              "duration_seconds": 0.8,
+              "tokens": 10
+            }
+          ],
+          "generation_seconds": 0.3540810829726979
+        },
+        {
+          "text": "晚",
+          "file": "units/E03-C01-02.wav",
+          "sha256": "4bfb043d7962ca593aae454c6c89ca7f93a999b8feea9ad672acd5582500514f",
+          "start_seconds": 3.8,
+          "duration_seconds": 0.56,
+          "tokens": 7,
+          "subunits": [
+            {
+              "text": "晚",
+              "tts_text": "晚。",
+              "file": "units/E03-C01-02-part-01.wav",
+              "duration_seconds": 0.56,
+              "tokens": 7
+            }
+          ],
+          "generation_seconds": 0.23472275002859533
+        },
+        {
+          "text": "月",
+          "file": "units/E03-C01-03.wav",
+          "sha256": "c3ef034f8dc56a71b24321b545fe2b3937989c96441b36bdf3ca22a61536aa26",
+          "start_seconds": 7.36,
+          "duration_seconds": 0.8,
+          "tokens": 10,
+          "subunits": [
+            {
+              "text": "月",
+              "tts_text": "月。",
+              "file": "units/E03-C01-03-part-01.wav",
+              "duration_seconds": 0.8,
+              "tokens": 10
+            }
+          ],
+          "generation_seconds": 0.3268086250172928
+        },
+        {
+          "text": "雨",
+          "file": "units/E03-C01-04.wav",
+          "sha256": "d5f6c268a5c77f36957ed8922f8d7cbc9eb04707a4d82879de9250365cd579d6",
+          "start_seconds": 11.16,
+          "duration_seconds": 0.8,
+          "tokens": 10,
+          "subunits": [
+            {
+              "text": "雨",
+              "reused_unit": 1
+            }
+          ],
+          "generation_seconds": 0.0005642500473186374
+        },
+        {
+          "text": "晚",
+          "file": "units/E03-C01-05.wav",
+          "sha256": "7f67611b180072e5541d30881ef1dd908444970e63b0b0b7d81ea7a7a2ef3d4d",
+          "start_seconds": 14.96,
+          "duration_seconds": 0.56,
+          "tokens": 7,
+          "subunits": [
+            {
+              "text": "晚",
+              "reused_unit": 2
+            }
+          ],
+          "generation_seconds": 0.0005240830359980464
+        },
+        {
+          "text": "月",
+          "file": "units/E03-C01-06.wav",
+          "sha256": "6d251b92adb92d6dd2e63cc0689ce3aaa07b89ad4a399c103a88e20121d3f084",
+          "start_seconds": 18.52,
+          "duration_seconds": 0.8,
+          "tokens": 10,
+          "subunits": [
+            {
+              "text": "月",
+              "reused_unit": 3
+            }
+          ],
+          "generation_seconds": 0.0004602079279720783
+        }
+      ],
+      "planned_silence": [
+        {
+          "start_frame": 19200,
+          "frames": 72000,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 104640,
+          "frames": 72000,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 195840,
+          "frames": 72000,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 287040,
+          "frames": 72000,
+          "kind": "planned_turn_pause"
+        },
+        {
+          "start_frame": 372480,
+          "frames": 72000,
+          "kind": "planned_turn_pause"
+        }
+      ],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 27,
+      "audio_id": "E04-C01",
+      "file": "E04-C01.wav",
+      "duration_seconds": 5.84,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第04课-你叫什么名字/C-听后填写/E04-15-17.wav",
+      "sha256": "1daed926c34fdd2fd5236c7171b9bcb42dfbfb6f460f1d54da5fef6fca8418d6",
+      "source_sha256": "8195d738eaf342f019161928c82e775282ab471da65b5edbc569ad5e83176f26",
+      "source_text": "你好，我叫李明。我姓李。我是学生，不是老师。我学汉语。",
+      "speech_units": [
+        "你好，我叫李明。我姓李。我是学生，不是老师。我学汉语。"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-37",
+        "W04-L01L10-38"
+      ],
+      "question_numbers": [
+        37,
+        38
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第37–38题",
+      "preview_seconds": 25,
+      "between_plays_seconds": 10,
+      "answer_seconds": 90,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "你好，我叫李明。我姓李。我是学生，不是老师。我学汉语。",
+          "file": "units/E04-C01-01.wav",
+          "sha256": "1daed926c34fdd2fd5236c7171b9bcb42dfbfb6f460f1d54da5fef6fca8418d6",
+          "start_seconds": 0.0,
+          "duration_seconds": 5.84,
+          "tokens": 73,
+          "subunits": [
+            {
+              "text": "你好，我叫李明。",
+              "tts_text": "你好，我叫李明。",
+              "file": "units/E04-C01-01-part-01.wav",
+              "duration_seconds": 1.84,
+              "tokens": 23
+            },
+            {
+              "text": "我姓李。",
+              "tts_text": "我姓李。",
+              "file": "units/E04-C01-01-part-02.wav",
+              "duration_seconds": 1.12,
+              "tokens": 14
+            },
+            {
+              "text": "我是学生，不是老师。",
+              "tts_text": "我是学生，不是老师。",
+              "file": "units/E04-C01-01-part-03.wav",
+              "duration_seconds": 1.92,
+              "tokens": 24
+            },
+            {
+              "text": "我学汉语。",
+              "tts_text": "我学汉语。",
+              "file": "units/E04-C01-01-part-04.wav",
+              "duration_seconds": 0.96,
+              "tokens": 12
+            }
+          ],
+          "generation_seconds": 3.452733500045724
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 28,
+      "audio_id": "E05-C01",
+      "file": "E05-C01.wav",
+      "duration_seconds": 9.12,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第05课-认识你很高兴/C-听后填写/E05-15-17.wav",
+      "sha256": "1ec19e47bbecdf7b4ab1f2902a474a92dc2af6c1dfcefd0a59bf216808a1196b",
+      "source_sha256": "30889bc25f5a15ab3361c1956ab065c0ce2966863ce2f89d21f2d0ce15184a11",
+      "source_text": "这是我的同屋，叫安娜。她是英国人，也是我的同学。我们是北京大学的学生。",
+      "speech_units": [
+        "这是我的同屋，叫安娜。她是英国人，也是我的同学。我们是北京大学的学生。"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-39",
+        "W04-L01L10-40"
+      ],
+      "question_numbers": [
+        39,
+        40
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第39–40题",
+      "preview_seconds": 25,
+      "between_plays_seconds": 10,
+      "answer_seconds": 90,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "这是我的同屋，叫安娜。她是英国人，也是我的同学。我们是北京大学的学生。",
+          "file": "units/E05-C01-01.wav",
+          "sha256": "1ec19e47bbecdf7b4ab1f2902a474a92dc2af6c1dfcefd0a59bf216808a1196b",
+          "start_seconds": 0.0,
+          "duration_seconds": 9.12,
+          "tokens": 114,
+          "generation_seconds": 3.1669682919746265
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 29,
+      "audio_id": "E06-C01",
+      "file": "E06-C01.wav",
+      "duration_seconds": 10.56,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第06课-这是什么/C-听后填写/E06-15-17.wav",
+      "sha256": "d14d56eeb61587813fe1487d130a8ee62e83bdc5a30f7fdd5d9f529ae52c1083",
+      "source_sha256": "899c903d00764e0f2ee77054681c7b867fd298375221da9490a1e76552d1fc71",
+      "source_text": "这是我的书包。这是我的汉语书。这个本子和这支笔不是我的，是安娜的。",
+      "speech_units": [
+        "这是我的书包。这是我的汉语书。这个本子和这支笔不是我的，是安娜的。"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-41",
+        "W04-L01L10-42"
+      ],
+      "question_numbers": [
+        41,
+        42
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第41–42题",
+      "preview_seconds": 25,
+      "between_plays_seconds": 10,
+      "answer_seconds": 90,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "这是我的书包。这是我的汉语书。这个本子和这支笔不是我的，是安娜的。",
+          "file": "units/E06-C01-01.wav",
+          "sha256": "d14d56eeb61587813fe1487d130a8ee62e83bdc5a30f7fdd5d9f529ae52c1083",
+          "start_seconds": 0.0,
+          "duration_seconds": 10.56,
+          "tokens": 132,
+          "generation_seconds": 3.87459658307489
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 30,
+      "audio_id": "E07-C01",
+      "file": "E07-C01.wav",
+      "duration_seconds": 19.68,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第07课-欢迎去我家玩儿/C-听后填写/E07-15-17.wav",
+      "sha256": "570b80eda40fbefebf833640e3cc7dd00a59eb6d008c30e61fcfff2f836e9a71",
+      "source_sha256": "a0b20639d8f163bb656c3a62b18a64dac1fe446d6a44965ecc1d8d273279b17f",
+      "source_text": "我叫安娜。王老师的房间在我的房间左边，大卫的房间在我的房间右边。这儿就这三个房间。",
+      "speech_units": [
+        "我叫安娜。王老师的房间在我的房间左边，大卫的房间在我的房间右边。这儿就这三个房间。"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-43",
+        "W04-L01L10-44"
+      ],
+      "question_numbers": [
+        43,
+        44
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第43–44题",
+      "preview_seconds": 25,
+      "between_plays_seconds": 10,
+      "answer_seconds": 90,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "我叫安娜。王老师的房间在我的房间左边，大卫的房间在我的房间右边。这儿就这三个房间。",
+          "file": "units/E07-C01-01.wav",
+          "sha256": "570b80eda40fbefebf833640e3cc7dd00a59eb6d008c30e61fcfff2f836e9a71",
+          "start_seconds": 0.0,
+          "duration_seconds": 19.68,
+          "tokens": 246,
+          "generation_seconds": 8.652014125022106
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 31,
+      "audio_id": "E08-C01",
+      "file": "E08-C01.wav",
+      "duration_seconds": 10.24,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第08课-明天晚上你有时间吗/C-听后填写/E08-15-17.wav",
+      "sha256": "adfa2f44796e992f834d0eda2e9869fff1a64a0eb513be78cd7dc0c0c160ce02",
+      "source_sha256": "a80834bffdff720e4a72237b2e14b953447156add74447d8bc5da7df037c0ea3",
+      "source_text": "明天我上午八点上汉语课，十点下课。中午十一点半和安娜在食堂吃饭。下午两点去见辅导老师。",
+      "speech_units": [
+        "明天我上午八点上汉语课，十点下课。中午十一点半和安娜在食堂吃饭。下午两点去见辅导老师。"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-45",
+        "W04-L01L10-46"
+      ],
+      "question_numbers": [
+        45,
+        46
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第45–46题",
+      "preview_seconds": 25,
+      "between_plays_seconds": 10,
+      "answer_seconds": 90,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "明天我上午八点上汉语课，十点下课。中午十一点半和安娜在食堂吃饭。下午两点去见辅导老师。",
+          "file": "units/E08-C01-01.wav",
+          "sha256": "adfa2f44796e992f834d0eda2e9869fff1a64a0eb513be78cd7dc0c0c160ce02",
+          "start_seconds": 0.0,
+          "duration_seconds": 10.24,
+          "tokens": 128,
+          "subunits": [
+            {
+              "text": "明天我上午八点上汉语课，十点下课。",
+              "tts_text": "明天我上午八点上汉语课，十点下课。",
+              "file": "units/E08-C01-01-part-01.wav",
+              "duration_seconds": 4.08,
+              "tokens": 51
+            },
+            {
+              "text": "中午十一点半和安娜在食堂吃饭。",
+              "tts_text": "中午十一点半和安娜在食堂吃饭。",
+              "file": "units/E08-C01-01-part-02.wav",
+              "duration_seconds": 4.0,
+              "tokens": 50
+            },
+            {
+              "text": "下午两点去见辅导老师。",
+              "tts_text": "下午两点去见辅导老师。",
+              "file": "units/E08-C01-01-part-03.wav",
+              "duration_seconds": 2.16,
+              "tokens": 27
+            }
+          ],
+          "generation_seconds": 3.1779625420458615
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 32,
+      "audio_id": "E09-C01",
+      "file": "E09-C01.wav",
+      "duration_seconds": 14.72,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第09课-我们怎么去/C-听后填写/E09-15-17.wav",
+      "sha256": "f8c8749f0845cdc05ccd9d20384e8ff112069065389e57755d898b07947adacc",
+      "source_sha256": "d930a801110d5ef7ff3ce072cf1c30e6d6bc162815c0da95ff2b6af0f98eca86",
+      "source_text": "明天我们去动物园。上午八点半在学校东门见，不在西门见。我们坐地铁二号线去。老师的办公室电话是零一零，零零零零，二三零一。",
+      "speech_units": [
+        "明天我们去动物园。上午八点半在学校东门见，不在西门见。我们坐地铁二号线去。老师的办公室电话是零一零，零零零零，二三零一。"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-47",
+        "W04-L01L10-48"
+      ],
+      "question_numbers": [
+        47,
+        48
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第47–48题",
+      "preview_seconds": 25,
+      "between_plays_seconds": 10,
+      "answer_seconds": 90,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "明天我们去动物园。上午八点半在学校东门见，不在西门见。我们坐地铁二号线去。老师的办公室电话是零一零，零零零零，二三零一。",
+          "file": "units/E09-C01-01.wav",
+          "sha256": "f8c8749f0845cdc05ccd9d20384e8ff112069065389e57755d898b07947adacc",
+          "start_seconds": 0.0,
+          "duration_seconds": 14.72,
+          "tokens": 184,
+          "subunits": [
+            {
+              "text": "明天我们去动物园。",
+              "tts_text": "明天我们去动物园。",
+              "file": "units/E09-C01-01-part-01.wav",
+              "duration_seconds": 1.36,
+              "tokens": 17
+            },
+            {
+              "text": "上午八点半在学校东门见，不在西门见。",
+              "tts_text": "上午八点半在学校东门见，不在西门见。",
+              "file": "units/E09-C01-01-part-02.wav",
+              "duration_seconds": 3.76,
+              "tokens": 47
+            },
+            {
+              "text": "我们坐地铁二号线去。",
+              "tts_text": "我们坐地铁二号线去。",
+              "file": "units/E09-C01-01-part-03.wav",
+              "duration_seconds": 1.44,
+              "tokens": 18
+            },
+            {
+              "text": "老师的办公室电话是",
+              "tts_text": "老师的办公室电话是",
+              "file": "units/E09-C01-01-part-04.wav",
+              "duration_seconds": 2.08,
+              "tokens": 26
+            },
+            {
+              "text": "零",
+              "tts_text": "零。",
+              "file": "units/E09-C01-01-part-05.wav",
+              "duration_seconds": 0.48,
+              "tokens": 6
+            },
+            {
+              "text": "一",
+              "tts_text": "一。",
+              "file": "units/E09-C01-01-part-06.wav",
+              "duration_seconds": 0.64,
+              "tokens": 8
+            },
+            {
+              "text": "零，",
+              "tts_text": "零，。",
+              "file": "units/E09-C01-01-part-07.wav",
+              "duration_seconds": 0.56,
+              "tokens": 7
+            },
+            {
+              "text": "零",
+              "tts_text": "零。",
+              "file": "units/E09-C01-01-part-08.wav",
+              "duration_seconds": 0.48,
+              "tokens": 6
+            },
+            {
+              "text": "零",
+              "tts_text": "零。",
+              "file": "units/E09-C01-01-part-09.wav",
+              "duration_seconds": 0.56,
+              "tokens": 7
+            },
+            {
+              "text": "零",
+              "tts_text": "零。",
+              "file": "units/E09-C01-01-part-10.wav",
+              "duration_seconds": 0.64,
+              "tokens": 8
+            },
+            {
+              "text": "零，",
+              "tts_text": "零，。",
+              "file": "units/E09-C01-01-part-11.wav",
+              "duration_seconds": 0.48,
+              "tokens": 6
+            },
+            {
+              "text": "二",
+              "tts_text": "二。",
+              "file": "units/E09-C01-01-part-12.wav",
+              "duration_seconds": 0.56,
+              "tokens": 7
+            },
+            {
+              "text": "三",
+              "tts_text": "三。",
+              "file": "units/E09-C01-01-part-13.wav",
+              "duration_seconds": 0.64,
+              "tokens": 8
+            },
+            {
+              "text": "零",
+              "tts_text": "零。",
+              "file": "units/E09-C01-01-part-14.wav",
+              "duration_seconds": 0.56,
+              "tokens": 7
+            },
+            {
+              "text": "一。",
+              "tts_text": "一。",
+              "file": "units/E09-C01-01-part-15.wav",
+              "duration_seconds": 0.48,
+              "tokens": 6
+            }
+          ],
+          "generation_seconds": 6.548635125043802
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    },
+    {
+      "order": 33,
+      "audio_id": "E10-C01",
+      "file": "E10-C01.wav",
+      "duration_seconds": 13.6,
+      "sample_rate_hz": 24000,
+      "channels": 1,
+      "source_path": "OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第10课-西瓜怎么卖/C-听后填写/E10-15-17.wav",
+      "sha256": "7aeb48e71cdd2c256f24d3beb4be44aee38bfc3f6b218009ff8f1e8da63c4422",
+      "source_sha256": "0d9ca362e357efe14867eba21d97ab403de14ac2fd5ec846fc0f2f4f4aa111b0",
+      "source_text": "请听购物信息：安娜买一瓶牛奶，八块钱；一个面包，六块钱。她一共付十四块。她没有用现金，是扫微信付的。",
+      "speech_units": [
+        "请听购物信息：安娜买一瓶牛奶，八块钱；一个面包，六块钱。她一共付十四块。她没有用现金，是扫微信付的。"
+      ],
+      "pause_after_ms": [],
+      "source_speed": 1,
+      "play_count": 2,
+      "internal_repeat": false,
+      "question_ids": [
+        "W04-L01L10-49",
+        "W04-L01L10-50"
+      ],
+      "question_numbers": [
+        49,
+        50
+      ],
+      "pronunciation_status": "teacher_listening_pending",
+      "decode_status": "pass",
+      "question_range": "第49–50题",
+      "preview_seconds": 25,
+      "between_plays_seconds": 10,
+      "answer_seconds": 90,
+      "model": "Qwen3-TTS-1.7B-CustomVoice-4bit",
+      "speaker": "Serena",
+      "max_tokens": 4096,
+      "units": [
+        {
+          "text": "请听购物信息：安娜买一瓶牛奶，八块钱；一个面包，六块钱。她一共付十四块。她没有用现金，是扫微信付的。",
+          "file": "units/E10-C01-01.wav",
+          "sha256": "7aeb48e71cdd2c256f24d3beb4be44aee38bfc3f6b218009ff8f1e8da63c4422",
+          "start_seconds": 0.0,
+          "duration_seconds": 13.6,
+          "tokens": 170,
+          "generation_seconds": 5.204735958017409
+        }
+      ],
+      "planned_silence": [],
+      "final_silence_ms": 0,
+      "content_status": "asr_and_teacher_review_pending"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "purpose": "assessment-audio",
+  "exam_id": "W04-L01L10-20261006",
+  "status": "blocked",
+  "output_dir": "lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/audit-teacher-20261010",
+  "blockers": [
+    "output must be a direct audio-repair-* child of the registered exam directory"
+  ]
+}

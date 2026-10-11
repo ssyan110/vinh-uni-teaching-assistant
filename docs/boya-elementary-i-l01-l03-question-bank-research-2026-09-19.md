@@ -28,6 +28,8 @@
 
 ## 三、最接近本教材顺序的在线题库：University of Iowa
 
+历史记录：本届一年级已改用[综合测验统一管理总表](https://docs.google.com/spreadsheets/d/1fhKUHCsyEYvSMrCgw5bL8vtazuwX77DKoa0ZCsQgIso/edit)。下表的Google Forms旧练习不再发给学生；仅留链接供查档。第9课短链接目前无法打开。
+
 University of Iowa 的 [学习拼音课程页](https://pinyin.uiowa.edu/course-work) 依次列出以下练习：
 
 | Iowa 练习 | 对应《初级起步篇 I》 | 公开链接 |
@@ -43,7 +45,7 @@ University of Iowa 的 [学习拼音课程页](https://pinyin.uiowa.edu/course-w
 | Lesson 9：ang eng ing ong iang uang iong ueng | 第二课：后鼻韵母 | [Google Forms 练习](https://forms.gle/j4ZRC4FCkJU7ioSb9) |
 | Lesson 10：Chinese Syllables | 第二、三课：音节和拼写综合 | [Google Forms 练习](https://forms.gle/hzqD3bV9Mof4Kk6n9) |
 
-**使用判断：**这是最适合直接给学生练习的顺序型资源，但题目、音频和表单页面的再利用授权没有在课程总页明确说明，所以只能链接使用，不能把它当成可复制题库。
+**历史使用判断：**这些链接曾按教材顺序供练习参考；本届后续测验与练习统一从新总表管理。链接保留作旧资料索引，不再作为学生入口。
 
 ## 四、按第一至三课的可用资源安排
 

@@ -1,0 +1,43 @@
+{
+  "checks": {
+    "unique_50_question_ids": "pass",
+    "three_mc_two_fill_per_lesson": "pass",
+    "one_correct_choice_each": "pass",
+    "all_listening_only": "pass",
+    "points_100": "pass",
+    "audio_full_decode_33": "pass",
+    "audio_hash_matches_source": "pass",
+    "student_and_dashboard_no_key_or_transcript": "pass",
+    "Form_live_sync": "blocked_no_Forms_connector_or_browser",
+    "teacher_pronunciation": "not_run",
+    "registry_preflight": "blocked_missing_lesson_09",
+    "audio_actual_afplay_33": "pass",
+    "source_scripts_live_match_33": "pass",
+    "Sheet_live_exact_1020_cells_final": "pass",
+    "dashboard_controls_11_checks": "pass",
+    "browser_rendering_and_media": "not_run",
+    "timing_fit_50_minutes": "failed_normal_estimate_59.46"
+  },
+  "timing": {
+    "audio_one_play_seconds": 227.34,
+    "audio_scheduled_play_seconds": 394.76,
+    "preview_seconds": 665,
+    "between_plays_seconds": 300,
+    "answer_seconds": 1650,
+    "switch_seconds": 198,
+    "instructions_and_device_check_seconds": 180,
+    "submission_seconds": 180,
+    "estimated_seconds": 3567.76,
+    "estimated_minutes": 59.46,
+    "planning_range_minutes": [
+      55,
+      60
+    ],
+    "period_minutes": 50,
+    "remaining_TBL_minutes_range": [
+      0,
+      0
+    ],
+    "blocker": "50题正常预算超过一节50分钟，需主教案协调，不减少用户指定题数。"
+  }
+}

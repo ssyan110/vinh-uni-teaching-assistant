@@ -1,0 +1,306 @@
+[
+  {
+    "command": [
+      "click",
+      "@e10"
+    ],
+    "exit_code": 0,
+    "output": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "wait",
+      "20000"
+    ],
+    "exit_code": 0,
+    "output": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "get",
+      "text",
+      "#replays"
+    ],
+    "exit_code": 0,
+    "output": "完整播放 1 次／计划播放 2 次\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "screenshot",
+      "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/audit-teacher-20261010/03-pause-resume-count.png"
+    ],
+    "exit_code": 0,
+    "output": "✓ Screenshot saved to /Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/audit-teacher-20261010/03-pause-resume-count.png\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "click",
+      "#timer"
+    ],
+    "exit_code": 0,
+    "output": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "wait",
+      "1100"
+    ],
+    "exit_code": 0,
+    "output": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "click",
+      "#pause"
+    ],
+    "exit_code": 0,
+    "output": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "wait",
+      "1100"
+    ],
+    "exit_code": 0,
+    "output": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "get",
+      "text",
+      "#countdown"
+    ],
+    "exit_code": 0,
+    "output": "看题剩余23秒\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "click",
+      "#next"
+    ],
+    "exit_code": 0,
+    "output": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "eval",
+      "JSON.stringify({range:document.querySelector(\"#range\").textContent,paused:document.querySelector(\"audio\").paused,countdown:document.querySelector(\"#countdown\").textContent})"
+    ],
+    "exit_code": 0,
+    "output": "\"{\\\"range\\\":\\\"Nhóm 31 · 45–46 · 31 / 33\\\",\\\"paused\\\":true,\\\"countdown\\\":\\\"\\\"}\"\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "eval",
+      "document.querySelector(\"audio\").src=\"file:///tmp/teacher-audit-nonexistent.wav\";document.querySelector(\"audio\").load()"
+    ],
+    "exit_code": 0,
+    "output": "null\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "wait",
+      "500"
+    ],
+    "exit_code": 0,
+    "output": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "get",
+      "text",
+      "#error"
+    ],
+    "exit_code": 0,
+    "output": "音频无法加载；请把dashboard.html、dashboard.js和audio文件夹放在同一目录。\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "screenshot",
+      "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/audit-teacher-20261010/04-load-failure.png"
+    ],
+    "exit_code": 0,
+    "output": "✓ Screenshot saved to /Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/audit-teacher-20261010/04-load-failure.png\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "click",
+      "#play"
+    ],
+    "exit_code": 0,
+    "output": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "get",
+      "text",
+      "#error"
+    ],
+    "exit_code": 0,
+    "output": "播放失败，请检查音频文件和浏览器播放权限。\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "click",
+      "#prev"
+    ],
+    "exit_code": 0,
+    "output": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "click",
+      "#next"
+    ],
+    "exit_code": 0,
+    "output": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "click",
+      "#play"
+    ],
+    "exit_code": 0,
+    "output": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "wait",
+      "600"
+    ],
+    "exit_code": 0,
+    "output": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "get",
+      "text",
+      "#status"
+    ],
+    "exit_code": 0,
+    "output": "正在播放\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "click",
+      "#pause"
+    ],
+    "exit_code": 0,
+    "output": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "click",
+      "#queue li:nth-child(33) button"
+    ],
+    "exit_code": 0,
+    "output": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "get",
+      "text",
+      "#range"
+    ],
+    "exit_code": 0,
+    "output": "Nhóm 33 · 49–50 · 33 / 33\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "is",
+      "enabled",
+      "#next"
+    ],
+    "exit_code": 0,
+    "output": "false\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "screenshot",
+      "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/audit-teacher-20261010/05-final-segment.png"
+    ],
+    "exit_code": 0,
+    "output": "✓ Screenshot saved to /Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/audit-teacher-20261010/05-final-segment.png\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "eval",
+      "JSON.stringify({fonts:[\"body\",\"h1\",\".timing\",\"button\"].map(s=>({selector:s,font:getComputedStyle(document.querySelector(s)).font})),links:Array.from(document.querySelectorAll(\"a\")).map(x=>x.href),width:innerWidth,scroll:document.documentElement.scrollWidth,main:document.querySelector(\"main\").getBoundingClientRect().toJSON()})"
+    ],
+    "exit_code": 0,
+    "output": "\"{\\\"fonts\\\":[{\\\"selector\\\":\\\"body\\\",\\\"font\\\":\\\"16px system-ui, sans-serif\\\"},{\\\"selector\\\":\\\"h1\\\",\\\"font\\\":\\\"700 26px system-ui, sans-serif\\\"},{\\\"selector\\\":\\\".timing\\\",\\\"font\\\":\\\"17px system-ui, sans-serif\\\"},{\\\"selector\\\":\\\"button\\\",\\\"font\\\":\\\"16px system-ui, sans-serif\\\"}],\\\"links\\\":[],\\\"width\\\":1280,\\\"scroll\\\":1265,\\\"main\\\":{\\\"x\\\":107.5,\\\"y\\\":-1750.1875,\\\"width\\\":1050,\\\"height\\\":587,\\\"top\\\":-1750.1875,\\\"right\\\":1157.5,\\\"bottom\\\":-1163.1875,\\\"left\\\":107.5}}\"\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "open",
+      "about:blank"
+    ],
+    "exit_code": 0,
+    "output": "✓ \n  about:blank\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "back"
+    ],
+    "exit_code": 0,
+    "output": "file:///Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/dashboard.html\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "get",
+      "text",
+      "#range"
+    ],
+    "exit_code": 0,
+    "output": "Nhóm 1 · 1 · 1 / 33\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "get",
+      "text",
+      "#replays"
+    ],
+    "exit_code": 0,
+    "output": "完整播放 0 次／计划播放 2 次\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "errors"
+    ],
+    "exit_code": 0,
+    "output": "",
+    "stderr": ""
+  }
+]

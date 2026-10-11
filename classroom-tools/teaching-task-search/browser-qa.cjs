@@ -1,0 +1,26 @@
+const {chromium}=require('../../node_modules/playwright');
+const path=require('path');
+(async()=>{
+const browser=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});
+const page=await browser.newPage({viewport:{width:1280,height:900}}); const errors=[];
+page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://127.0.0.1:8767');await page.waitForSelector('article');
+const catalog=await (await page.request.get('http://127.0.0.1:8767/api/catalog')).json();
+if(catalog.tasks.length<40)throw Error('Corpus unexpectedly small');
+await page.screenshot({path:path.join(__dirname,'qa/desktop.png'),fullPage:false});
+await page.selectOption('#book','boya-intermediate-i');await page.fill('#current','1');await page.selectOption('#stage','0');await page.waitForFunction(()=>document.querySelector('#count').textContent.startsWith('找到 0 '));
+await page.selectOption('#stage','1');await page.waitForSelector('article');
+const early=await page.locator('article').count();
+await page.selectOption('#stage','3');await page.waitForFunction(n=>document.querySelectorAll('article').length>n,early);
+await page.locator('article a').first().click();await page.waitForSelector('dialog[open]');
+if(!(await page.locator('#source-text').textContent()).includes('registerPack'))throw Error('Source preview missing');await page.click('#close');
+await page.fill('#q','NO_SUCH_TASK_97865');await page.waitForFunction(()=>document.querySelector('#count').textContent.startsWith('找到 0 '));
+await page.fill('#q','');await page.selectOption('#book','boya-quasi-intermediate-i');await page.fill('#current','9');await page.waitForSelector('article');
+const response=await page.request.get('http://127.0.0.1:8767/api/source?id=../../AGENTS.md');if(response.status()!==404)throw Error('Traversal not rejected');
+const mobile=await browser.newPage({viewport:{width:390,height:844}});await mobile.goto('http://127.0.0.1:8767');await mobile.waitForSelector('article');
+const overflow=await mobile.evaluate(()=>document.documentElement.scrollWidth>innerWidth);if(overflow)throw Error('Mobile horizontal overflow');
+await mobile.screenshot({path:path.join(__dirname,'qa/mobile.png'),fullPage:false});
+if(errors.length)throw Error(errors.join('\n'));
+console.log(JSON.stringify({corpus:catalog.tasks.length,lessonKeys:[...new Set(catalog.tasks.map(t=>t.lesson_key))],earlyPackCount:early,desktop:'passed',mobile:'passed',sourcePreview:'passed',pathTraversal:response.status(),pageErrors:errors}));
+await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});

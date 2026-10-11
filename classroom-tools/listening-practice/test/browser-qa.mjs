@@ -1,0 +1,30 @@
+import { chromium } from '../../../node_modules/playwright/index.mjs';
+import { createApp } from '../server.mjs';
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+const dir=fs.mkdtempSync(path.resolve('qa/browser-'));
+const origin='http://127.0.0.1:4198';
+const server=createApp({dataDir:dir,password:'synthetic-browser-password',origin});
+await new Promise(r=>server.listen(4198,'127.0.0.1',r));
+const browser=await chromium.launch({headless:true,...(process.env.BROWSER_EXECUTABLE ? {executablePath:process.env.BROWSER_EXECUTABLE} : {})});
+try {
+ const ctx=await browser.newContext();const page=await ctx.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(origin+'/#teacher');await page.locator('#password').fill('synthetic-browser-password');await page.locator('#login button').click();await page.getByRole('heading',{name:'教师工作台'}).waitFor();
+ const fixture=await page.evaluate(async()=>{const r=await fetch('/api/teacher/template');return r.json();});
+ await page.locator('#import').setInputFiles({name:'fixture.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(fixture))});await page.locator('#set option').waitFor({state:'attached'});
+ await page.locator('#classId').fill('DEMO-class');await page.locator('#title').fill('演示班练习');await page.locator('#roster').fill('DEMO01,student-private-01\nDEMO02,student-private-02');await page.locator('#publish button').click();await page.getByRole('heading',{name:'未提交学生（2）'}).waitFor();
+ const link=await page.getByRole('textbox',{name:'学生入口链接'}).inputValue();await page.screenshot({path:path.resolve('qa/listening-formal-teacher.png'),fullPage:true});
+ const studentCtx=await browser.newContext({viewport:{width:390,height:844}});const student=await studentCtx.newPage();student.on('pageerror',e=>errors.push(e.message));await student.goto(link);await student.locator('#studentCode').fill('DEMO01');await student.locator('#pin').fill('student-private-01');await student.locator('#join button').click();await student.getByRole('heading',{name:'演示班练习'}).waitFor();
+ await student.getByRole('radio').first().check();await student.locator('textarea').fill('我自己的开放题答案。');await student.screenshot({path:path.resolve('qa/listening-formal-student.png'),fullPage:true});await student.locator('#quiz button').click();await student.getByRole('heading',{name:'练习提交成功'}).waitFor();
+ await page.locator('#refresh').click();await page.getByRole('heading',{name:'未提交学生（1）'}).waitFor();
+ const pendingDownload=page.waitForEvent('download');await page.locator('[data-export]').click();const csvStream=await(await pendingDownload).createReadStream();let csv='';for await(const chunk of csvStream)csv+=chunk;assert.ok(csv.includes('"manual","",""'),'pending manual score exports blank');assert.equal(csv.includes('"null"'),false);
+ await page.locator('details.answer-details > summary').click();await page.locator('.review-form input[name=points]').fill('2.5');await page.locator('.review-form textarea').fill('已核对，请补充一个细节。');await page.locator('.review-form button').click();await page.locator('#notice').filter({hasText:'批阅已保存'}).waitFor();
+ await student.locator('#results').click();await student.getByRole('heading',{name:'我的提交和反馈'}).waitFor();assert.ok((await student.locator('main').textContent()).includes('2.5 分'));assert.ok((await student.locator('main').textContent()).includes('请补充一个细节'));await student.locator('#back').click();await student.getByRole('radio').first().check();await student.locator('textarea').fill('网络回执丢失前的答案。');
+ let loseResponse=true;await student.route('**/api/student/attempts',async route=>{if(loseResponse){loseResponse=false;await route.fetch();await route.abort('failed');}else await route.continue();});
+ await student.locator('#quiz button').click();await student.locator('#notice').filter({hasText:'fetch'}).waitFor();
+ await student.locator('textarea').fill('回执丢失后修改的答案。');await student.locator('#quiz button').click();await student.getByRole('heading',{name:'这次提交已保存，当前答案与记录不同'}).waitFor();assert.ok((await student.locator('main').textContent()).includes('网络回执丢失前的答案。'));
+ const count=await page.evaluate(async()=>{const d=await(await fetch('/api/teacher/dashboard')).json();return d.assignments[0].attempts.length;});assert.equal(count,2);
+ await student.locator('#new-attempt').click();assert.equal(await student.locator('textarea').inputValue(),'');await student.getByRole('radio').first().check();await student.locator('textarea').fill('明确开始的第三次答案。');await student.locator('#quiz button').click();await student.getByRole('heading',{name:'练习提交成功'}).waitFor();assert.ok((await student.locator('main').textContent()).includes('第 3 次'));assert.deepEqual(errors,[]);
+ console.log('Browser QA passed: teacher login/import/publish, mobile student submit, roster, manual grading, isolated feedback, lost-response conflict and explicit new attempt; no page errors.');await studentCtx.close();await ctx.close();
+} finally {await browser.close();await new Promise(r=>server.close(r));}

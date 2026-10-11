@@ -1,0 +1,738 @@
+{
+  "status": "technical_pass",
+  "content_state": "review_only_pending_teacher_approval_not_imported",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-07",
+  "offering_id": "2026-fall",
+  "vocabulary_count": 26,
+  "proper_noun_count": 0,
+  "question_count": 78,
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-07/10-design/support-draft/blooket/lesson-07/lesson-07-blooket-审阅稿.csv",
+    "sha256": "a7489ff4795c7d24c98d605d676b90c61478506adddfe05b363b7e380557275f"
+  },
+  "inputs": [
+    {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-07/00-source/canonical-source.json",
+      "sha256": "c529512b98b62bdf8dc72e98605f5ec047ba969d7d365bb9c23da904fc4df45e"
+    },
+    {
+      "path": "course/boya-online-content-contract.json",
+      "sha256": "8cba56a2bd103dd66ed2a62fc3fc7d3bb6a168c79dcc283821a71ca187f592ff"
+    }
+  ],
+  "meaning_origin": "existing content contract, no new translations",
+  "answer_positions": {
+    "meaning": {
+      "1": 7,
+      "2": 7,
+      "3": 6,
+      "4": 6
+    },
+    "word_to_pinyin": {
+      "1": 7,
+      "2": 7,
+      "3": 6,
+      "4": 6
+    },
+    "pinyin_to_word": {
+      "1": 7,
+      "2": 7,
+      "3": 6,
+      "4": 6
+    }
+  },
+  "technical_checks": [
+    "UTF8 BOM",
+    "exact eight-column header",
+    "canonical full vocabulary and proper noun coverage",
+    "three interleaved families per word",
+    "four distinct options",
+    "answer index matches expected value",
+    "20-second time limit",
+    "balanced positions per family",
+    "semantic overlap groups excluded as distractors"
+  ],
+  "formal_support_preflight": {
+    "phase": "blocked",
+    "blockers": [
+      "teaching-design manifest is unavailable or invalid: /Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-07/10-design/teaching-design/manifest.json",
+      "source gate is not verified",
+      "source QA gate is not passed",
+      "PBI teaching-design gate is not approved",
+      "source package has unsupported status: 'active_source_pending_review'",
+      "frozen source package tree hash mismatch",
+      "frozen source package file count mismatch: manifest=None, actual=11",
+      "approved teacher manual is missing from 20-approved",
+      "teacher manual is not marked final_confirmed"
+    ]
+  },
+  "items": [
+    {
+      "word": "登山",
+      "pinyin": "dēngshān",
+      "meaning": "leo núi",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "优美",
+      "pinyin": "yōuměi",
+      "meaning": "đẹp; thanh nhã",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "热爱",
+      "pinyin": "rè'ài",
+      "meaning": "yêu thích; say mê",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "邻居",
+      "pinyin": "línjū",
+      "meaning": "hàng xóm",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "机会",
+      "pinyin": "jīhuì",
+      "meaning": "cơ hội",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "耐力",
+      "pinyin": "nàilì",
+      "meaning": "sức bền; sức chịu đựng",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "放松",
+      "pinyin": "fàngsōng",
+      "meaning": "thư giãn",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "市民",
+      "pinyin": "shìmín",
+      "meaning": "người dân thành phố",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "挑战",
+      "pinyin": "tiǎozhàn",
+      "meaning": "thách thức",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "根本",
+      "pinyin": "gēnběn",
+      "meaning": "hoàn toàn không (thường dùng trong câu phủ định)",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "合作",
+      "pinyin": "hézuò",
+      "meaning": "hợp tác",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "浪漫",
+      "pinyin": "làngmàn",
+      "meaning": "lãng mạn",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "羡慕",
+      "pinyin": "xiànmù",
+      "meaning": "ngưỡng mộ; ghen tị",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "地道",
+      "pinyin": "dìdao",
+      "meaning": "chính gốc; đích thực",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "发亮",
+      "pinyin": "fāliàng",
+      "meaning": "sáng lên; lấp lánh",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "不管",
+      "pinyin": "bùguǎn",
+      "meaning": "bất kể; dù",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "肚子",
+      "pinyin": "dùzi",
+      "meaning": "bụng",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "感受",
+      "pinyin": "gǎnshòu",
+      "meaning": "cảm nhận",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "危险",
+      "pinyin": "wēixiǎn",
+      "meaning": "nguy hiểm",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "将来",
+      "pinyin": "jiānglái",
+      "meaning": "tương lai",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "山顶",
+      "pinyin": "shāndǐng",
+      "meaning": "đỉnh núi",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "俱乐部",
+      "pinyin": "jùlèbù",
+      "meaning": "câu lạc bộ",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "结交",
+      "pinyin": "jiéjiāo",
+      "meaning": "kết giao; làm quen",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "害怕",
+      "pinyin": "hàipà",
+      "meaning": "sợ; sợ hãi",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "信心",
+      "pinyin": "xìnxīn",
+      "meaning": "niềm tin; sự tự tin",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "愉快",
+      "pinyin": "yúkuài",
+      "meaning": "vui vẻ; dễ chịu",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    }
+  ],
+  "question_answer_review": [
+    {
+      "question": 1,
+      "word": "登山",
+      "family": "meaning",
+      "correct": "leo núi"
+    },
+    {
+      "question": 2,
+      "word": "登山",
+      "family": "word_to_pinyin",
+      "correct": "dēngshān"
+    },
+    {
+      "question": 3,
+      "word": "登山",
+      "family": "pinyin_to_word",
+      "correct": "登山"
+    },
+    {
+      "question": 4,
+      "word": "优美",
+      "family": "meaning",
+      "correct": "đẹp; thanh nhã"
+    },
+    {
+      "question": 5,
+      "word": "优美",
+      "family": "word_to_pinyin",
+      "correct": "yōuměi"
+    },
+    {
+      "question": 6,
+      "word": "优美",
+      "family": "pinyin_to_word",
+      "correct": "优美"
+    },
+    {
+      "question": 7,
+      "word": "热爱",
+      "family": "meaning",
+      "correct": "yêu thích; say mê"
+    },
+    {
+      "question": 8,
+      "word": "热爱",
+      "family": "word_to_pinyin",
+      "correct": "rè'ài"
+    },
+    {
+      "question": 9,
+      "word": "热爱",
+      "family": "pinyin_to_word",
+      "correct": "热爱"
+    },
+    {
+      "question": 10,
+      "word": "邻居",
+      "family": "meaning",
+      "correct": "hàng xóm"
+    },
+    {
+      "question": 11,
+      "word": "邻居",
+      "family": "word_to_pinyin",
+      "correct": "línjū"
+    },
+    {
+      "question": 12,
+      "word": "邻居",
+      "family": "pinyin_to_word",
+      "correct": "邻居"
+    },
+    {
+      "question": 13,
+      "word": "机会",
+      "family": "meaning",
+      "correct": "cơ hội"
+    },
+    {
+      "question": 14,
+      "word": "机会",
+      "family": "word_to_pinyin",
+      "correct": "jīhuì"
+    },
+    {
+      "question": 15,
+      "word": "机会",
+      "family": "pinyin_to_word",
+      "correct": "机会"
+    },
+    {
+      "question": 16,
+      "word": "耐力",
+      "family": "meaning",
+      "correct": "sức bền; sức chịu đựng"
+    },
+    {
+      "question": 17,
+      "word": "耐力",
+      "family": "word_to_pinyin",
+      "correct": "nàilì"
+    },
+    {
+      "question": 18,
+      "word": "耐力",
+      "family": "pinyin_to_word",
+      "correct": "耐力"
+    },
+    {
+      "question": 19,
+      "word": "放松",
+      "family": "meaning",
+      "correct": "thư giãn"
+    },
+    {
+      "question": 20,
+      "word": "放松",
+      "family": "word_to_pinyin",
+      "correct": "fàngsōng"
+    },
+    {
+      "question": 21,
+      "word": "放松",
+      "family": "pinyin_to_word",
+      "correct": "放松"
+    },
+    {
+      "question": 22,
+      "word": "市民",
+      "family": "meaning",
+      "correct": "người dân thành phố"
+    },
+    {
+      "question": 23,
+      "word": "市民",
+      "family": "word_to_pinyin",
+      "correct": "shìmín"
+    },
+    {
+      "question": 24,
+      "word": "市民",
+      "family": "pinyin_to_word",
+      "correct": "市民"
+    },
+    {
+      "question": 25,
+      "word": "挑战",
+      "family": "meaning",
+      "correct": "thách thức"
+    },
+    {
+      "question": 26,
+      "word": "挑战",
+      "family": "word_to_pinyin",
+      "correct": "tiǎozhàn"
+    },
+    {
+      "question": 27,
+      "word": "挑战",
+      "family": "pinyin_to_word",
+      "correct": "挑战"
+    },
+    {
+      "question": 28,
+      "word": "根本",
+      "family": "meaning",
+      "correct": "hoàn toàn không (thường dùng trong câu phủ định)"
+    },
+    {
+      "question": 29,
+      "word": "根本",
+      "family": "word_to_pinyin",
+      "correct": "gēnběn"
+    },
+    {
+      "question": 30,
+      "word": "根本",
+      "family": "pinyin_to_word",
+      "correct": "根本"
+    },
+    {
+      "question": 31,
+      "word": "合作",
+      "family": "meaning",
+      "correct": "hợp tác"
+    },
+    {
+      "question": 32,
+      "word": "合作",
+      "family": "word_to_pinyin",
+      "correct": "hézuò"
+    },
+    {
+      "question": 33,
+      "word": "合作",
+      "family": "pinyin_to_word",
+      "correct": "合作"
+    },
+    {
+      "question": 34,
+      "word": "浪漫",
+      "family": "meaning",
+      "correct": "lãng mạn"
+    },
+    {
+      "question": 35,
+      "word": "浪漫",
+      "family": "word_to_pinyin",
+      "correct": "làngmàn"
+    },
+    {
+      "question": 36,
+      "word": "浪漫",
+      "family": "pinyin_to_word",
+      "correct": "浪漫"
+    },
+    {
+      "question": 37,
+      "word": "羡慕",
+      "family": "meaning",
+      "correct": "ngưỡng mộ; ghen tị"
+    },
+    {
+      "question": 38,
+      "word": "羡慕",
+      "family": "word_to_pinyin",
+      "correct": "xiànmù"
+    },
+    {
+      "question": 39,
+      "word": "羡慕",
+      "family": "pinyin_to_word",
+      "correct": "羡慕"
+    },
+    {
+      "question": 40,
+      "word": "地道",
+      "family": "meaning",
+      "correct": "chính gốc; đích thực"
+    },
+    {
+      "question": 41,
+      "word": "地道",
+      "family": "word_to_pinyin",
+      "correct": "dìdao"
+    },
+    {
+      "question": 42,
+      "word": "地道",
+      "family": "pinyin_to_word",
+      "correct": "地道"
+    },
+    {
+      "question": 43,
+      "word": "发亮",
+      "family": "meaning",
+      "correct": "sáng lên; lấp lánh"
+    },
+    {
+      "question": 44,
+      "word": "发亮",
+      "family": "word_to_pinyin",
+      "correct": "fāliàng"
+    },
+    {
+      "question": 45,
+      "word": "发亮",
+      "family": "pinyin_to_word",
+      "correct": "发亮"
+    },
+    {
+      "question": 46,
+      "word": "不管",
+      "family": "meaning",
+      "correct": "bất kể; dù"
+    },
+    {
+      "question": 47,
+      "word": "不管",
+      "family": "word_to_pinyin",
+      "correct": "bùguǎn"
+    },
+    {
+      "question": 48,
+      "word": "不管",
+      "family": "pinyin_to_word",
+      "correct": "不管"
+    },
+    {
+      "question": 49,
+      "word": "肚子",
+      "family": "meaning",
+      "correct": "bụng"
+    },
+    {
+      "question": 50,
+      "word": "肚子",
+      "family": "word_to_pinyin",
+      "correct": "dùzi"
+    },
+    {
+      "question": 51,
+      "word": "肚子",
+      "family": "pinyin_to_word",
+      "correct": "肚子"
+    },
+    {
+      "question": 52,
+      "word": "感受",
+      "family": "meaning",
+      "correct": "cảm nhận"
+    },
+    {
+      "question": 53,
+      "word": "感受",
+      "family": "word_to_pinyin",
+      "correct": "gǎnshòu"
+    },
+    {
+      "question": 54,
+      "word": "感受",
+      "family": "pinyin_to_word",
+      "correct": "感受"
+    },
+    {
+      "question": 55,
+      "word": "危险",
+      "family": "meaning",
+      "correct": "nguy hiểm"
+    },
+    {
+      "question": 56,
+      "word": "危险",
+      "family": "word_to_pinyin",
+      "correct": "wēixiǎn"
+    },
+    {
+      "question": 57,
+      "word": "危险",
+      "family": "pinyin_to_word",
+      "correct": "危险"
+    },
+    {
+      "question": 58,
+      "word": "将来",
+      "family": "meaning",
+      "correct": "tương lai"
+    },
+    {
+      "question": 59,
+      "word": "将来",
+      "family": "word_to_pinyin",
+      "correct": "jiānglái"
+    },
+    {
+      "question": 60,
+      "word": "将来",
+      "family": "pinyin_to_word",
+      "correct": "将来"
+    },
+    {
+      "question": 61,
+      "word": "山顶",
+      "family": "meaning",
+      "correct": "đỉnh núi"
+    },
+    {
+      "question": 62,
+      "word": "山顶",
+      "family": "word_to_pinyin",
+      "correct": "shāndǐng"
+    },
+    {
+      "question": 63,
+      "word": "山顶",
+      "family": "pinyin_to_word",
+      "correct": "山顶"
+    },
+    {
+      "question": 64,
+      "word": "俱乐部",
+      "family": "meaning",
+      "correct": "câu lạc bộ"
+    },
+    {
+      "question": 65,
+      "word": "俱乐部",
+      "family": "word_to_pinyin",
+      "correct": "jùlèbù"
+    },
+    {
+      "question": 66,
+      "word": "俱乐部",
+      "family": "pinyin_to_word",
+      "correct": "俱乐部"
+    },
+    {
+      "question": 67,
+      "word": "结交",
+      "family": "meaning",
+      "correct": "kết giao; làm quen"
+    },
+    {
+      "question": 68,
+      "word": "结交",
+      "family": "word_to_pinyin",
+      "correct": "jiéjiāo"
+    },
+    {
+      "question": 69,
+      "word": "结交",
+      "family": "pinyin_to_word",
+      "correct": "结交"
+    },
+    {
+      "question": 70,
+      "word": "害怕",
+      "family": "meaning",
+      "correct": "sợ; sợ hãi"
+    },
+    {
+      "question": 71,
+      "word": "害怕",
+      "family": "word_to_pinyin",
+      "correct": "hàipà"
+    },
+    {
+      "question": 72,
+      "word": "害怕",
+      "family": "pinyin_to_word",
+      "correct": "害怕"
+    },
+    {
+      "question": 73,
+      "word": "信心",
+      "family": "meaning",
+      "correct": "niềm tin; sự tự tin"
+    },
+    {
+      "question": 74,
+      "word": "信心",
+      "family": "word_to_pinyin",
+      "correct": "xìnxīn"
+    },
+    {
+      "question": 75,
+      "word": "信心",
+      "family": "pinyin_to_word",
+      "correct": "信心"
+    },
+    {
+      "question": 76,
+      "word": "愉快",
+      "family": "meaning",
+      "correct": "vui vẻ; dễ chịu"
+    },
+    {
+      "question": 77,
+      "word": "愉快",
+      "family": "word_to_pinyin",
+      "correct": "yúkuài"
+    },
+    {
+      "question": 78,
+      "word": "愉快",
+      "family": "pinyin_to_word",
+      "correct": "愉快"
+    }
+  ],
+  "semantic_review": {
+    "reviewer": "Codex AI agent",
+    "status": "AI reviewed; teacher confirmation pending",
+    "scope": "Read all 78 question prompts, options and indexed answers; Chinese and pinyin checked against canonical entries; Vietnamese checked against existing content contract",
+    "findings": [
+      "No question copy contains internal lesson/task labels",
+      "Meaning distractors exclude overlapping concept groups",
+      "Canonical tone marks, apostrophe, hyphen and proper-noun capitalization retained",
+      "No new Vietnamese translation; current content-contract meanings preserved"
+    ],
+    "remaining_review": [
+      "Formal source approval and support gate blockers remain",
+      "Meaning labels such as 根本, 既, 早茶 retain existing contract context; teacher may revise before import"
+    ]
+  }
+}

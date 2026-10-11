@@ -10,7 +10,7 @@ export function exportClassroomCsv(snapshot:TrackerSnapshot,rows:Evidence[],cour
  const course=snapshot.courses.find(c=>c.id===courseId)
  const headers=['資料類型','班級','學號','姓名','日期','篩選範圍','來源／類別','教材','課次','題目識別','題目／活動','回答狀態','納入回答次數','事實／備註','修正原因','原始識別','修正前識別','建立時間']
  const identity=(id:string|null,name='')=>{const s=snapshot.students.find(s=>s.id===id);return [course?.code||courseId,s?.student_code||'',s?.chinese_name||name]}
- const output:unknown[][]=rows.map(r=>['回答紀錄',...identity(r.studentId,r.studentName),r.date,filterLabel,r.source,r.textbook,r.lesson,r.questionId||'未登記',r.prompt||r.task,r.correction?'已更正':r.status,r.included?'是':'否',r.note,r.correction,r.id,'',''])
+ const output:unknown[][]=rows.filter(r=>r.courseId===courseId&&(!studentId||r.studentId===studentId)).map(r=>['回答紀錄',...identity(r.studentId,r.studentName),r.date,filterLabel,r.source,r.textbook,r.lesson,r.questionId||'未登記',r.prompt||r.task,r.correction?'已更正':r.status,r.included?'是':'否',r.note,r.correction,r.id,'',r.recordedAt])
  for(const enrollment of snapshot.enrollments.filter(e=>e.course_id===courseId&&(!studentId||e.student_id===studentId))) output.push(['學生名冊',...identity(enrollment.student_id),'','完整修課名冊；不按日期或題目縮減','','','','','',enrollment.status==='active'?'有效修課':enrollment.status==='withdrawn'?'已退選':enrollment.status,'','',enrollment.id,'','',''])
  const inDate=(d:string)=>(!from||d.slice(0,10)>=from)&&(!to||d.slice(0,10)<=to)
  for(const n of snapshot.studentNotes.filter(n=>n.course_id===courseId&&(!studentId||n.student_id===studentId)&&inDate(n.note_date))) output.push(['事實備註',...identity(n.student_id),n.note_date,'備註依日期篩選；不套用題目篩選',noteLabels[n.category],...Array.from({length:6},()=>''),n.body,n.correction_reason,n.id,n.supersedes_id,n.created_at])

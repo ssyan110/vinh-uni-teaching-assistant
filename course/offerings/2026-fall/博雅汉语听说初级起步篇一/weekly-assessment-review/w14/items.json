@@ -1,0 +1,249 @@
+{
+  "status": "审阅稿／未发布",
+  "cohort": "BOYA-LS-E1-Y1S1-2026F",
+  "week": "w14",
+  "offering_id": "2026-fall",
+  "items": [
+    {
+      "id": "W14-L01",
+      "type": "mc",
+      "lesson_key": "boya-elementary-i:lesson-08",
+      "audio_id": "E08-B01",
+      "prompt": "两人最后约几点见面？",
+      "options": [
+        "六点",
+        "七点",
+        "七点半"
+      ],
+      "answer_index": 2,
+      "points": 2,
+      "focus": "第8课·时间与约定",
+      "script": "小林，今晚六点一起吃饭吧。\n小王，六点我有课，七点下课。\n小林，那七点半食堂见。\n小王，好。",
+      "plays": 1,
+      "source_script": "小林：今晚六点一起吃饭吧。\n小王：六点我有课，七点下课。\n小林：那七点半食堂见。\n小王：好。",
+      "script_kind": "manifest.speech_units（送入语音模型的文本；非亲听转写）",
+      "pause_after_ms": [
+        700,
+        700,
+        700
+      ]
+    },
+    {
+      "id": "W14-L02",
+      "type": "mc",
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "audio_id": "E09-B01",
+      "prompt": "他们决定怎么去动物园？",
+      "options": [
+        "骑自行车",
+        "坐地铁",
+        "坐公共汽车"
+      ],
+      "answer_index": 1,
+      "points": 2,
+      "focus": "第9课·交通决定",
+      "script": "小林，我们怎么去动物园？骑自行车吗？\n小王，太远了，坐地铁吧。\n小林，好，九点在学校东门见。",
+      "plays": 1,
+      "source_script": "小林：我们怎么去动物园？骑自行车吗？\n小王：太远了，坐地铁吧。\n小林：好，九点在学校东门见。",
+      "script_kind": "manifest.speech_units（送入语音模型的文本；非亲听转写）",
+      "pause_after_ms": [
+        700,
+        700
+      ]
+    },
+    {
+      "id": "W14-L03",
+      "type": "mc",
+      "lesson_key": "boya-elementary-i:lesson-16",
+      "audio_id": "E16-B01",
+      "prompt": "一共几位客人？",
+      "options": [
+        "两位",
+        "三位",
+        "四位"
+      ],
+      "answer_index": 1,
+      "points": 2,
+      "focus": "第16课·点餐前信息",
+      "script": "小林，您好，几位？\n小王，三位。\n小林，请坐，要点菜吗？\n小王，先看菜单吧。",
+      "plays": 1,
+      "source_script": "小林：您好，几位？\n小王：三位。\n小林：请坐，要点菜吗？\n小王：先看菜单吧。",
+      "script_kind": "manifest.speech_units（送入语音模型的文本；非亲听转写）",
+      "pause_after_ms": [
+        700,
+        700,
+        700
+      ]
+    },
+    {
+      "id": "W14-L04",
+      "type": "mc",
+      "lesson_key": "boya-elementary-i:lesson-20",
+      "audio_id": "E20-B01",
+      "prompt": "学生为什么要请假？",
+      "options": [
+        "要去旅行",
+        "身体不舒服，要去医院",
+        "要参加比赛"
+      ],
+      "answer_index": 1,
+      "points": 2,
+      "focus": "第20课·原因",
+      "script": "小林，老师，我想请两天假。\n小王，怎么了？\n小林，身体不舒服，今天要去医院。\n小王，好，作业回来以后再交。",
+      "plays": 1,
+      "source_script": "小林：老师，我想请两天假。\n小王：怎么了？\n小林：身体不舒服，今天要去医院。\n小王：好，作业回来以后再交。",
+      "script_kind": "manifest.speech_units（送入语音模型的文本；非亲听转写）",
+      "pause_after_ms": [
+        700,
+        700,
+        700
+      ]
+    },
+    {
+      "id": "W14-L05",
+      "type": "mc",
+      "lesson_key": "boya-elementary-i:lesson-24",
+      "audio_id": "E24-C02",
+      "prompt": "小周第二次说明以后，大家听懂了吗？",
+      "options": [
+        "听懂了",
+        "还是听不懂",
+        "他没有再说明"
+      ],
+      "answer_index": 0,
+      "points": 2,
+      "focus": "第24课·沟通修正",
+      "script": "小周今天完成了报告。内容准备得很好，可是讲得太快，大家没听清最后的安排。同学问了一次以后，他又慢慢地说了一遍，大家这次听明白了。",
+      "plays": 1,
+      "source_script": "小周今天完成了报告。内容准备得很好，可是讲得太快，大家没听清最后的安排。同学问了一次以后，他又慢慢地说了一遍，大家这次听明白了。",
+      "script_kind": "manifest.speech_units（送入语音模型的文本；非亲听转写）",
+      "pause_after_ms": []
+    },
+    {
+      "id": "W14-L06",
+      "type": "mc",
+      "lesson_key": "boya-elementary-i:lesson-25",
+      "audio_id": "E25-C01",
+      "prompt": "安娜还需要确认什么？",
+      "options": [
+        "外卖有没有订",
+        "小周会不会来",
+        "杯子有没有洗"
+      ],
+      "answer_index": 1,
+      "points": 2,
+      "focus": "第25课·准备状态",
+      "script": "安娜为聚餐做准备。她已经订好了外卖，洗好了杯子，但忘了问小周来不来。小周的电话一直没人接。她决定先发微信，等他回了再确认最后的人数。",
+      "plays": 1,
+      "source_script": "安娜为聚餐做准备。她已经订好了外卖，洗好了杯子，但忘了问小周来不来。小周的电话一直没人接。她决定先发微信，等他回了再确认最后的人数。",
+      "script_kind": "manifest.speech_units（送入语音模型的文本；非亲听转写）",
+      "pause_after_ms": []
+    },
+    {
+      "id": "W14-S01",
+      "type": "short",
+      "lesson_key": "boya-elementary-i:lesson-12",
+      "audio_id": "E12-B01",
+      "prompt": "小王在哪里？他请小林帮他告诉老师什么？",
+      "answer": "在车站等车；请告诉老师他会晚一会儿到。",
+      "points": 4,
+      "focus": "第12课·地点与消息",
+      "script": "小林，你在哪儿？\n小王，在车站。\n小林，你在等车吗？\n小王，对，车还没来。请告诉老师，我晚一会儿到。",
+      "plays": 2,
+      "source_script": "小林：你在哪儿？\n小王：在车站。\n小林：你在等车吗？\n小王：对，车还没来。请告诉老师，我晚一会儿到。",
+      "script_kind": "manifest.speech_units（送入语音模型的文本；非亲听转写）",
+      "pause_after_ms": [
+        700,
+        700,
+        700
+      ]
+    },
+    {
+      "id": "W14-S02",
+      "type": "short",
+      "lesson_key": "boya-elementary-i:lesson-23",
+      "audio_id": "E23-B02",
+      "prompt": "小王有没有决定去哪里？为什么暂时不买票？",
+      "answer": "还没有决定去云南还是西安；还要考虑，所以先不买票。",
+      "points": 4,
+      "focus": "第23课·不确定信息",
+      "script": "小林，你想去云南还是西安？\n小王，还没决定。\n小林，你喜欢历史，西安也许适合你。\n小王，我再考虑一下，先不买票。",
+      "plays": 2,
+      "source_script": "小林：你想去云南还是西安？\n小王：还没决定。\n小林：你喜欢历史，西安也许适合你。\n小王：我再考虑一下，先不买票。",
+      "script_kind": "manifest.speech_units（送入语音模型的文本；非亲听转写）",
+      "pause_after_ms": [
+        700,
+        700,
+        700
+      ]
+    },
+    {
+      "id": "W14-O01",
+      "type": "oral",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-01",
+        "boya-elementary-i:lesson-02",
+        "boya-elementary-i:lesson-03",
+        "boya-elementary-i:lesson-04",
+        "boya-elementary-i:lesson-05",
+        "boya-elementary-i:lesson-06",
+        "boya-elementary-i:lesson-07",
+        "boya-elementary-i:lesson-08",
+        "boya-elementary-i:lesson-09",
+        "boya-elementary-i:lesson-10",
+        "boya-elementary-i:lesson-11",
+        "boya-elementary-i:lesson-12",
+        "boya-elementary-i:lesson-13",
+        "boya-elementary-i:lesson-14",
+        "boya-elementary-i:lesson-15",
+        "boya-elementary-i:lesson-16",
+        "boya-elementary-i:lesson-17",
+        "boya-elementary-i:lesson-18",
+        "boya-elementary-i:lesson-19",
+        "boya-elementary-i:lesson-20",
+        "boya-elementary-i:lesson-21",
+        "boya-elementary-i:lesson-22",
+        "boya-elementary-i:lesson-23",
+        "boya-elementary-i:lesson-24",
+        "boya-elementary-i:lesson-25"
+      ],
+      "prompt": "个人简述：拿到一张未提前公开的虚构日程/准备卡。用约一分钟说明目标、已确定的时间地点、还有哪项信息要确认，以及你接下来怎么做。教师不能在题卡上写出完整示范答案。",
+      "points": 10,
+      "focus": "全册整合·个人表达"
+    },
+    {
+      "id": "W14-O02",
+      "type": "oral",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-01",
+        "boya-elementary-i:lesson-02",
+        "boya-elementary-i:lesson-03",
+        "boya-elementary-i:lesson-04",
+        "boya-elementary-i:lesson-05",
+        "boya-elementary-i:lesson-06",
+        "boya-elementary-i:lesson-07",
+        "boya-elementary-i:lesson-08",
+        "boya-elementary-i:lesson-09",
+        "boya-elementary-i:lesson-10",
+        "boya-elementary-i:lesson-11",
+        "boya-elementary-i:lesson-12",
+        "boya-elementary-i:lesson-13",
+        "boya-elementary-i:lesson-14",
+        "boya-elementary-i:lesson-15",
+        "boya-elementary-i:lesson-16",
+        "boya-elementary-i:lesson-17",
+        "boya-elementary-i:lesson-18",
+        "boya-elementary-i:lesson-19",
+        "boya-elementary-i:lesson-20",
+        "boya-elementary-i:lesson-21",
+        "boya-elementary-i:lesson-22",
+        "boya-elementary-i:lesson-23",
+        "boya-elementary-i:lesson-24",
+        "boya-elementary-i:lesson-25"
+      ],
+      "prompt": "双人互动：两人各拿一张信息不同的虚构活动卡。先确认时间、地点和各自任务；教师加入一个临时变化（如有人迟到或一项准备未完成），两人提出替代办法、互相确认，并在反馈后重做一个关键回合。",
+      "points": 10,
+      "focus": "全册整合·信息差、协商、修正"
+    }
+  ]
+}

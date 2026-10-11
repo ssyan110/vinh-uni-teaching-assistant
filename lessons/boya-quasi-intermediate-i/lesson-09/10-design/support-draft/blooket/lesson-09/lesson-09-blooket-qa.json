@@ -1,0 +1,763 @@
+{
+  "status": "technical_pass",
+  "content_state": "review_only_pending_teacher_approval_not_imported",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-09",
+  "offering_id": "2026-fall",
+  "vocabulary_count": 27,
+  "proper_noun_count": 0,
+  "question_count": 81,
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-09/10-design/support-draft/blooket/lesson-09/lesson-09-blooket-审阅稿.csv",
+    "sha256": "2fb5be676c7e319bb9b04cd3d70e017d9d86aca3786b181a190d687fe2a1c764"
+  },
+  "inputs": [
+    {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-09/00-source/canonical-source.json",
+      "sha256": "c928011dfed526c506af0c73ab0dd420bb0eba07f43938f179c08743c60b0da1"
+    },
+    {
+      "path": "course/boya-online-content-contract.json",
+      "sha256": "8cba56a2bd103dd66ed2a62fc3fc7d3bb6a168c79dcc283821a71ca187f592ff"
+    }
+  ],
+  "meaning_origin": "existing content contract, no new translations",
+  "answer_positions": {
+    "meaning": {
+      "1": 7,
+      "2": 7,
+      "3": 7,
+      "4": 6
+    },
+    "word_to_pinyin": {
+      "1": 7,
+      "2": 7,
+      "3": 7,
+      "4": 6
+    },
+    "pinyin_to_word": {
+      "1": 7,
+      "2": 7,
+      "3": 7,
+      "4": 6
+    }
+  },
+  "technical_checks": [
+    "UTF8 BOM",
+    "exact eight-column header",
+    "canonical full vocabulary and proper noun coverage",
+    "three interleaved families per word",
+    "four distinct options",
+    "answer index matches expected value",
+    "20-second time limit",
+    "balanced positions per family",
+    "semantic overlap groups excluded as distractors"
+  ],
+  "formal_support_preflight": {
+    "phase": "blocked",
+    "blockers": [
+      "canonical source hash differs from the approved source manifest",
+      "source gate is not verified",
+      "source QA gate is not passed",
+      "PBI teaching-design gate is not approved",
+      "source package has unsupported status: 'active_source_pending_review'",
+      "frozen source package tree hash mismatch",
+      "frozen source package file count mismatch: manifest=None, actual=11",
+      "approved teacher manual is missing from 20-approved",
+      "teacher manual is not marked final_confirmed"
+    ]
+  },
+  "items": [
+    {
+      "word": "土豆",
+      "pinyin": "tǔdòu",
+      "meaning": "khoai tây",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "蔬菜",
+      "pinyin": "shūcài",
+      "meaning": "rau củ",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "早茶",
+      "pinyin": "zǎochá",
+      "meaning": "dim sum, điểm tâm sáng",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "凉拌",
+      "pinyin": "liángbàn",
+      "meaning": "trộn nguội",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "青菜",
+      "pinyin": "qīngcài",
+      "meaning": "rau xanh",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "酸辣汤",
+      "pinyin": "suānlàtāng",
+      "meaning": "canh chua cay",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "涮",
+      "pinyin": "shuàn",
+      "meaning": "nhúng vào nước lẩu đang sôi",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "口味",
+      "pinyin": "kǒuwèi",
+      "meaning": "khẩu vị",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "渐渐",
+      "pinyin": "jiànjiàn",
+      "meaning": "dần dần",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "黄瓜",
+      "pinyin": "huángguā",
+      "meaning": "dưa chuột; dưa leo",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "炖",
+      "pinyin": "dùn",
+      "meaning": "hầm; ninh",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "夜宵",
+      "pinyin": "yèxiāo",
+      "meaning": "bữa ăn khuya",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "大排档",
+      "pinyin": "dàpáidàng",
+      "meaning": "quán ăn đường phố bình dân",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "聚会",
+      "pinyin": "jùhuì",
+      "meaning": "tụ họp",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "聚餐",
+      "pinyin": "jùcān",
+      "meaning": "cùng nhau ăn một bữa",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "休闲",
+      "pinyin": "xiūxián",
+      "meaning": "thư giãn; giải trí",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "豆角",
+      "pinyin": "dòujiǎo",
+      "meaning": "đậu que",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "不光",
+      "pinyin": "bùguāng",
+      "meaning": "không chỉ",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "取代",
+      "pinyin": "qǔdài",
+      "meaning": "thay thế",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "季节",
+      "pinyin": "jìjié",
+      "meaning": "mùa",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "种类",
+      "pinyin": "zhǒnglèi",
+      "meaning": "loại; chủng loại",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "普遍",
+      "pinyin": "pǔbiàn",
+      "meaning": "phổ biến",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "年轻",
+      "pinyin": "niánqīng",
+      "meaning": "trẻ",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "一般",
+      "pinyin": "yìbān",
+      "meaning": "thường; thông thường",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "数量",
+      "pinyin": "shùliàng",
+      "meaning": "số lượng",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "增加",
+      "pinyin": "zēngjiā",
+      "meaning": "tăng lên",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "方式",
+      "pinyin": "fāngshì",
+      "meaning": "cách thức",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    }
+  ],
+  "question_answer_review": [
+    {
+      "question": 1,
+      "word": "土豆",
+      "family": "meaning",
+      "correct": "khoai tây"
+    },
+    {
+      "question": 2,
+      "word": "土豆",
+      "family": "word_to_pinyin",
+      "correct": "tǔdòu"
+    },
+    {
+      "question": 3,
+      "word": "土豆",
+      "family": "pinyin_to_word",
+      "correct": "土豆"
+    },
+    {
+      "question": 4,
+      "word": "蔬菜",
+      "family": "meaning",
+      "correct": "rau củ"
+    },
+    {
+      "question": 5,
+      "word": "蔬菜",
+      "family": "word_to_pinyin",
+      "correct": "shūcài"
+    },
+    {
+      "question": 6,
+      "word": "蔬菜",
+      "family": "pinyin_to_word",
+      "correct": "蔬菜"
+    },
+    {
+      "question": 7,
+      "word": "早茶",
+      "family": "meaning",
+      "correct": "dim sum, điểm tâm sáng"
+    },
+    {
+      "question": 8,
+      "word": "早茶",
+      "family": "word_to_pinyin",
+      "correct": "zǎochá"
+    },
+    {
+      "question": 9,
+      "word": "早茶",
+      "family": "pinyin_to_word",
+      "correct": "早茶"
+    },
+    {
+      "question": 10,
+      "word": "凉拌",
+      "family": "meaning",
+      "correct": "trộn nguội"
+    },
+    {
+      "question": 11,
+      "word": "凉拌",
+      "family": "word_to_pinyin",
+      "correct": "liángbàn"
+    },
+    {
+      "question": 12,
+      "word": "凉拌",
+      "family": "pinyin_to_word",
+      "correct": "凉拌"
+    },
+    {
+      "question": 13,
+      "word": "青菜",
+      "family": "meaning",
+      "correct": "rau xanh"
+    },
+    {
+      "question": 14,
+      "word": "青菜",
+      "family": "word_to_pinyin",
+      "correct": "qīngcài"
+    },
+    {
+      "question": 15,
+      "word": "青菜",
+      "family": "pinyin_to_word",
+      "correct": "青菜"
+    },
+    {
+      "question": 16,
+      "word": "酸辣汤",
+      "family": "meaning",
+      "correct": "canh chua cay"
+    },
+    {
+      "question": 17,
+      "word": "酸辣汤",
+      "family": "word_to_pinyin",
+      "correct": "suānlàtāng"
+    },
+    {
+      "question": 18,
+      "word": "酸辣汤",
+      "family": "pinyin_to_word",
+      "correct": "酸辣汤"
+    },
+    {
+      "question": 19,
+      "word": "涮",
+      "family": "meaning",
+      "correct": "nhúng vào nước lẩu đang sôi"
+    },
+    {
+      "question": 20,
+      "word": "涮",
+      "family": "word_to_pinyin",
+      "correct": "shuàn"
+    },
+    {
+      "question": 21,
+      "word": "涮",
+      "family": "pinyin_to_word",
+      "correct": "涮"
+    },
+    {
+      "question": 22,
+      "word": "口味",
+      "family": "meaning",
+      "correct": "khẩu vị"
+    },
+    {
+      "question": 23,
+      "word": "口味",
+      "family": "word_to_pinyin",
+      "correct": "kǒuwèi"
+    },
+    {
+      "question": 24,
+      "word": "口味",
+      "family": "pinyin_to_word",
+      "correct": "口味"
+    },
+    {
+      "question": 25,
+      "word": "渐渐",
+      "family": "meaning",
+      "correct": "dần dần"
+    },
+    {
+      "question": 26,
+      "word": "渐渐",
+      "family": "word_to_pinyin",
+      "correct": "jiànjiàn"
+    },
+    {
+      "question": 27,
+      "word": "渐渐",
+      "family": "pinyin_to_word",
+      "correct": "渐渐"
+    },
+    {
+      "question": 28,
+      "word": "黄瓜",
+      "family": "meaning",
+      "correct": "dưa chuột; dưa leo"
+    },
+    {
+      "question": 29,
+      "word": "黄瓜",
+      "family": "word_to_pinyin",
+      "correct": "huángguā"
+    },
+    {
+      "question": 30,
+      "word": "黄瓜",
+      "family": "pinyin_to_word",
+      "correct": "黄瓜"
+    },
+    {
+      "question": 31,
+      "word": "炖",
+      "family": "meaning",
+      "correct": "hầm; ninh"
+    },
+    {
+      "question": 32,
+      "word": "炖",
+      "family": "word_to_pinyin",
+      "correct": "dùn"
+    },
+    {
+      "question": 33,
+      "word": "炖",
+      "family": "pinyin_to_word",
+      "correct": "炖"
+    },
+    {
+      "question": 34,
+      "word": "夜宵",
+      "family": "meaning",
+      "correct": "bữa ăn khuya"
+    },
+    {
+      "question": 35,
+      "word": "夜宵",
+      "family": "word_to_pinyin",
+      "correct": "yèxiāo"
+    },
+    {
+      "question": 36,
+      "word": "夜宵",
+      "family": "pinyin_to_word",
+      "correct": "夜宵"
+    },
+    {
+      "question": 37,
+      "word": "大排档",
+      "family": "meaning",
+      "correct": "quán ăn đường phố bình dân"
+    },
+    {
+      "question": 38,
+      "word": "大排档",
+      "family": "word_to_pinyin",
+      "correct": "dàpáidàng"
+    },
+    {
+      "question": 39,
+      "word": "大排档",
+      "family": "pinyin_to_word",
+      "correct": "大排档"
+    },
+    {
+      "question": 40,
+      "word": "聚会",
+      "family": "meaning",
+      "correct": "tụ họp"
+    },
+    {
+      "question": 41,
+      "word": "聚会",
+      "family": "word_to_pinyin",
+      "correct": "jùhuì"
+    },
+    {
+      "question": 42,
+      "word": "聚会",
+      "family": "pinyin_to_word",
+      "correct": "聚会"
+    },
+    {
+      "question": 43,
+      "word": "聚餐",
+      "family": "meaning",
+      "correct": "cùng nhau ăn một bữa"
+    },
+    {
+      "question": 44,
+      "word": "聚餐",
+      "family": "word_to_pinyin",
+      "correct": "jùcān"
+    },
+    {
+      "question": 45,
+      "word": "聚餐",
+      "family": "pinyin_to_word",
+      "correct": "聚餐"
+    },
+    {
+      "question": 46,
+      "word": "休闲",
+      "family": "meaning",
+      "correct": "thư giãn; giải trí"
+    },
+    {
+      "question": 47,
+      "word": "休闲",
+      "family": "word_to_pinyin",
+      "correct": "xiūxián"
+    },
+    {
+      "question": 48,
+      "word": "休闲",
+      "family": "pinyin_to_word",
+      "correct": "休闲"
+    },
+    {
+      "question": 49,
+      "word": "豆角",
+      "family": "meaning",
+      "correct": "đậu que"
+    },
+    {
+      "question": 50,
+      "word": "豆角",
+      "family": "word_to_pinyin",
+      "correct": "dòujiǎo"
+    },
+    {
+      "question": 51,
+      "word": "豆角",
+      "family": "pinyin_to_word",
+      "correct": "豆角"
+    },
+    {
+      "question": 52,
+      "word": "不光",
+      "family": "meaning",
+      "correct": "không chỉ"
+    },
+    {
+      "question": 53,
+      "word": "不光",
+      "family": "word_to_pinyin",
+      "correct": "bùguāng"
+    },
+    {
+      "question": 54,
+      "word": "不光",
+      "family": "pinyin_to_word",
+      "correct": "不光"
+    },
+    {
+      "question": 55,
+      "word": "取代",
+      "family": "meaning",
+      "correct": "thay thế"
+    },
+    {
+      "question": 56,
+      "word": "取代",
+      "family": "word_to_pinyin",
+      "correct": "qǔdài"
+    },
+    {
+      "question": 57,
+      "word": "取代",
+      "family": "pinyin_to_word",
+      "correct": "取代"
+    },
+    {
+      "question": 58,
+      "word": "季节",
+      "family": "meaning",
+      "correct": "mùa"
+    },
+    {
+      "question": 59,
+      "word": "季节",
+      "family": "word_to_pinyin",
+      "correct": "jìjié"
+    },
+    {
+      "question": 60,
+      "word": "季节",
+      "family": "pinyin_to_word",
+      "correct": "季节"
+    },
+    {
+      "question": 61,
+      "word": "种类",
+      "family": "meaning",
+      "correct": "loại; chủng loại"
+    },
+    {
+      "question": 62,
+      "word": "种类",
+      "family": "word_to_pinyin",
+      "correct": "zhǒnglèi"
+    },
+    {
+      "question": 63,
+      "word": "种类",
+      "family": "pinyin_to_word",
+      "correct": "种类"
+    },
+    {
+      "question": 64,
+      "word": "普遍",
+      "family": "meaning",
+      "correct": "phổ biến"
+    },
+    {
+      "question": 65,
+      "word": "普遍",
+      "family": "word_to_pinyin",
+      "correct": "pǔbiàn"
+    },
+    {
+      "question": 66,
+      "word": "普遍",
+      "family": "pinyin_to_word",
+      "correct": "普遍"
+    },
+    {
+      "question": 67,
+      "word": "年轻",
+      "family": "meaning",
+      "correct": "trẻ"
+    },
+    {
+      "question": 68,
+      "word": "年轻",
+      "family": "word_to_pinyin",
+      "correct": "niánqīng"
+    },
+    {
+      "question": 69,
+      "word": "年轻",
+      "family": "pinyin_to_word",
+      "correct": "年轻"
+    },
+    {
+      "question": 70,
+      "word": "一般",
+      "family": "meaning",
+      "correct": "thường; thông thường"
+    },
+    {
+      "question": 71,
+      "word": "一般",
+      "family": "word_to_pinyin",
+      "correct": "yìbān"
+    },
+    {
+      "question": 72,
+      "word": "一般",
+      "family": "pinyin_to_word",
+      "correct": "一般"
+    },
+    {
+      "question": 73,
+      "word": "数量",
+      "family": "meaning",
+      "correct": "số lượng"
+    },
+    {
+      "question": 74,
+      "word": "数量",
+      "family": "word_to_pinyin",
+      "correct": "shùliàng"
+    },
+    {
+      "question": 75,
+      "word": "数量",
+      "family": "pinyin_to_word",
+      "correct": "数量"
+    },
+    {
+      "question": 76,
+      "word": "增加",
+      "family": "meaning",
+      "correct": "tăng lên"
+    },
+    {
+      "question": 77,
+      "word": "增加",
+      "family": "word_to_pinyin",
+      "correct": "zēngjiā"
+    },
+    {
+      "question": 78,
+      "word": "增加",
+      "family": "pinyin_to_word",
+      "correct": "增加"
+    },
+    {
+      "question": 79,
+      "word": "方式",
+      "family": "meaning",
+      "correct": "cách thức"
+    },
+    {
+      "question": 80,
+      "word": "方式",
+      "family": "word_to_pinyin",
+      "correct": "fāngshì"
+    },
+    {
+      "question": 81,
+      "word": "方式",
+      "family": "pinyin_to_word",
+      "correct": "方式"
+    }
+  ],
+  "semantic_review": {
+    "reviewer": "Codex AI agent",
+    "status": "AI reviewed; teacher confirmation pending",
+    "scope": "Read all 81 question prompts, options and indexed answers; Chinese and pinyin checked against canonical entries; Vietnamese checked against existing content contract",
+    "findings": [
+      "No question copy contains internal lesson/task labels",
+      "Meaning distractors exclude overlapping concept groups",
+      "Canonical tone marks, apostrophe, hyphen and proper-noun capitalization retained",
+      "No new Vietnamese translation; current content-contract meanings preserved"
+    ],
+    "remaining_review": [
+      "Formal source approval and support gate blockers remain",
+      "Meaning labels such as 根本, 既, 早茶 retain existing contract context; teacher may revise before import"
+    ]
+  }
+}

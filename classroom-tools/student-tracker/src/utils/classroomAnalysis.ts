@@ -1,18 +1,49 @@
 import type { TrackerSnapshot, PerformanceLevel, StudentNote, FactMarks, FactMark } from '../types'
+import { isAnsweredAttempt } from './participation'
+import { includedInSummary } from './learningEvents'
 export const levelLabels = { needs_support:'需要協助', mostly_complete:'大致完成', complete:'完成本題' }
 export const noteLabels = {homework_missing:'未交作業',textbook_missing:'未帶課本',classroom_rule:'課堂規則事件',other:'其他事實'}
 export interface Evidence {
  fact:FactMarks|null; factVersion:string|null; assistance:boolean|null
- id:string; courseId:string; studentId:string|null; studentName:string; date:string; source:string
+ id:string; courseId:string; studentId:string|null; studentName:string; date:string; recordedAt:string; source:string
  textbook:string; lesson:string; task:string; questionId:string|null; prompt:string; rubric:string
  status:string; level:PerformanceLevel|null; dimensions:(number|null)[]; total:number|null
  note:string; correction:string; included:boolean; kind:'attempt'|'legacy'
 }
 export function evidenceRows(snapshot:TrackerSnapshot):Evidence[] {
- const attemptIds=new Set(snapshot.attempts.map(a=>a.client_attempt_id))
- const attempts:Evidence[]=snapshot.attempts.map(a=>({fact:a.fact_marks??null,factVersion:a.fact_version??null,assistance:a.assistance??null,id:`attempt:${a.id}`,courseId:a.course_id,studentId:a.student_id,studentName:a.student_name,date:a.completed_at||a.drawn_at,source:a.selection_method==='volunteer'?'自願發言':'隨機抽問',textbook:a.textbook_id,lesson:a.lesson_id,task:a.task_target,questionId:a.question_id,prompt:a.task_prompt||'',rubric:a.fact_version?`FACT ${a.fact_version}`:a.assessment_status==='observed'?`描述 ${a.observation_version||'未登記'}`:`歷史評分 ${a.rubric_id}/${a.rubric_version}`,status:a.record_status==='voided'||a.outcome==='undone'?'已撤銷':a.outcome==='not_answered'?'未回答':a.outcome==='pending'?'尚未完成回答':a.assessment_status==='pending'?'已回答，待觀察':a.assessment_status==='observed'?'已觀察':'歷史評分',level:a.performance_level,dimensions:[a.task_completion,a.comprehensibility,a.language_control_vocabulary,a.content_interaction],total:a.total_score,note:a.note||'',correction:a.correction_note||'',included:a.record_status!=='voided'&&a.outcome==='answered'&&a.counted_for_summary!==false,kind:'attempt'}))
- const legacy:Evidence[]=snapshot.learningEvents.filter(e=>!e.client_event_id||!attemptIds.has(e.client_event_id)).map(e=>({fact:null,factVersion:null,assistance:null,id:`legacy:${e.id}`,courseId:e.course_id,studentId:e.student_id,studentName:snapshot.students.find(s=>s.id===e.student_id)?.chinese_name||'未連結學生',date:e.occurred_at,source:e.source==='voluntary_answer'?'自願發言':e.source==='random_call'?'隨機抽問':e.source==='manual_adjustment'?'快速調整':'課堂觀察',textbook:e.textbook_id||'未登記教材',lesson:e.lesson_id||e.lesson_label||'快速調整',task:e.activity_label,questionId:null,prompt:'',rubric:`歷史評分 ${e.rubric_version||'版本未登記'}`,status:e.record_status==='voided'?'已撤銷':'歷史評分',level:null,dimensions:[e.task_completion,e.comprehensibility,e.language_control,e.interaction],total:e.score??null,note:e.teacher_note||'',correction:e.correction_note||'',included:e.record_status!=='voided'&&e.counted_for_summary!==false&&!['no_response','unobserved','declined'].includes(e.response_status||''),kind:'legacy'}))
- return [...attempts,...legacy].sort((a,b)=>b.date.localeCompare(a.date))
+ const attemptIds = new Set(snapshot.attempts.map(a => `${a.course_id}:${a.client_attempt_id}`))
+ const seen = new Set<string>()
+ const attempts:Evidence[] = snapshot.attempts.filter(a => {
+  const key = `${a.course_id}:${a.client_attempt_id || a.id}`
+  if (seen.has(key)) return false
+  seen.add(key)
+  return true
+ }).map(a => {
+  const student = snapshot.students.find(s => s.id === a.student_id || (!a.student_id && s.student_code === a.student_code
+   && snapshot.enrollments.some(e => e.course_id === a.course_id && e.student_id === s.id)))
+  const session = snapshot.sessions.find(s => s.course_id === a.course_id && s.id === a.randomizer_sessions?.class_session_id)
+  return {fact:a.fact_marks??null,factVersion:a.fact_version??null,assistance:a.assistance??null,
+   id:`attempt:${a.id}`,courseId:a.course_id,studentId:student?.id??a.student_id,studentName:student?.chinese_name||a.student_name,
+   date:session?.session_date||a.completed_at||a.drawn_at,recordedAt:a.completed_at||a.drawn_at,
+   source:a.selection_method==='volunteer'?'自願發言':a.selection_method==='teacher'?'老師主動叫':'隨機抽問',
+   textbook:a.textbook_id,lesson:a.lesson_id,task:a.task_target,questionId:a.question_id,prompt:a.task_prompt||'',
+   rubric:a.fact_version?`FACT ${a.fact_version}`:a.assessment_status==='observed'?`描述 ${a.observation_version||'未登記'}`:`歷史評分 ${a.rubric_id}/${a.rubric_version}`,
+   status:a.record_status==='corrected'?'已更正':a.record_status==='voided'||a.outcome==='undone'?'已撤銷':a.outcome==='not_answered'?'未回答':a.outcome==='pending'?'尚未完成回答':'已回答',
+   level:a.performance_level,dimensions:[a.task_completion,a.comprehensibility,a.language_control_vocabulary,a.content_interaction],
+   total:a.total_score,note:a.note||'',correction:a.correction_note||'',included:isAnsweredAttempt(a),kind:'attempt'}
+ })
+ const legacy:Evidence[] = snapshot.learningEvents.filter(e => !e.client_event_id || !attemptIds.has(`${e.course_id}:${e.client_event_id}`)).map(e => ({
+  fact:null,factVersion:null,assistance:null,id:`legacy:${e.id}`,courseId:e.course_id,studentId:e.student_id,
+  studentName:snapshot.students.find(s=>s.id===e.student_id)?.chinese_name||'未連結學生',
+  date:snapshot.sessions.find(s=>s.course_id===e.course_id&&s.id===e.session_id)?.session_date||e.occurred_at,recordedAt:e.occurred_at,
+  source:e.source==='voluntary_answer'?'自願發言':e.source==='random_call'?'隨機抽問':e.source==='manual_adjustment'?'快速調整':'課堂觀察',
+  textbook:e.textbook_id||'未登記教材',lesson:e.lesson_id||e.lesson_label||'快速調整',task:e.activity_label,questionId:null,prompt:'',
+  rubric:`歷史評分 ${e.rubric_version||'版本未登記'}`,
+  status:e.record_status==='corrected'?'已更正':e.record_status==='voided'?'已撤銷':['no_response','declined'].includes(e.response_status||'')?'未回答':e.response_status==='unobserved'?'尚未完成回答':e.source==='class_observation'?'課堂觀察':'已回答',
+  level:null,dimensions:[e.task_completion,e.comprehensibility,e.language_control,e.interaction],total:e.score??null,note:e.teacher_note||'',
+  correction:e.correction_note||'',included:includedInSummary(e)&&e.source!=='class_observation',kind:'legacy'
+ }))
+ return [...attempts,...legacy].sort((a,b)=>b.date.localeCompare(a.date)||b.recordedAt.localeCompare(a.recordedAt)||b.id.localeCompare(a.id))
 }
 export const isEvaluated=(e:Evidence)=>e.included&&(e.level!==null||Object.values(e.fact||{}).some(v=>typeof v==='number')||e.dimensions.some(v=>v!==null))
 export function equalStudentMean(rows:Evidence[],dimension:number) {

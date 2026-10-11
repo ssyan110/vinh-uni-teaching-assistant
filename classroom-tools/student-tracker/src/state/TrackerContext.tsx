@@ -4,11 +4,13 @@ import { isSupabaseConfigured, supabase, supabaseConfigIssue } from '../lib/supa
 import { emptySnapshot, type AttendanceStatus, type ClassSession, type ClassroomRecordCorrectionInput, type FollowupKind, type FollowupStatus, type ImportStudentRow, type LearningEvent, type NoteInput, type ObservationResult, type TrackerSnapshot } from '../types'
 
 import { orderCourses } from '../utils/courseOrder'
+import type { AttendanceExceptionInput } from '../types'
 
 type AccessState = 'checking' | 'signed_out' | 'ready'
 type DataMode = 'demo' | 'supabase' | null
 
 interface TrackerContextValue {
+  saveAttendanceException(input: AttendanceExceptionInput): Promise<void>
   access: AccessState
   mode: DataMode
   snapshot: TrackerSnapshot
@@ -61,15 +63,19 @@ export function TrackerProvider({ children }: { children: ReactNode }) {
   const [refreshError, setRefreshError] = useState<string | null>(null)
   const [lastRefreshed, setLastRefreshed] = useState<string | null>(null)
   const refreshPending = useRef(false)
+  const actionPending = useRef(false)
   const revision = useRef(0)
   const repository = useRef<TrackerRepository | null>(null)
 
   const loadRepository = useCallback(async (nextRepository: TrackerRepository, nextMode: Exclude<DataMode, null>) => {
     revision.current += 1
+    const version = revision.current
     repository.current = nextRepository
     setMode(nextMode)
     sessionStorage.setItem(MODE_KEY, nextMode)
-    setSnapshot(await nextRepository.load())
+    const next = await nextRepository.load()
+    if (repository.current !== nextRepository || revision.current !== version) return
+    setSnapshot(next)
     setLastRefreshed(new Date().toISOString())
     setRefreshError(null)
     setAccess('ready')
@@ -104,7 +110,7 @@ export function TrackerProvider({ children }: { children: ReactNode }) {
 
   const refresh = useCallback(async () => {
     const repo = repository.current
-    if (!repo || mode !== 'supabase' || busy || refreshPending.current) return
+    if (!repo || mode !== 'supabase' || actionPending.current || busy || refreshPending.current) return
     const version = revision.current
     refreshPending.current = true
     setRefreshing(true)
@@ -138,19 +144,32 @@ export function TrackerProvider({ children }: { children: ReactNode }) {
   }, [access, mode, refresh])
 
   const run = useCallback(async <T,>(action: (repo: TrackerRepository) => Promise<T>): Promise<T> => {
-    if (!repository.current) throw new Error('資料尚未就緒。')
+    const repo = repository.current
+    if (!repo) throw new Error('資料尚未就緒。')
+    if (actionPending.current) throw new Error('上一筆操作正在保存，請稍後再試。')
+    actionPending.current = true
     revision.current += 1
     setBusy(true)
     setError(null)
     try {
-      const value = await action(repository.current)
-      setSnapshot(await repository.current.load())
+      const value = await action(repo)
+      try {
+        const next = await repo.load()
+        if (repository.current === repo) {
+          setSnapshot(next)
+          setLastRefreshed(new Date().toISOString())
+          setRefreshError(null)
+        }
+      } catch {
+        if (repository.current === repo) setRefreshError('操作已保存，但資料更新失敗。請按「更新資料」核對，避免重複記錄。')
+      }
       return value
     } catch (caught) {
       const message = caught instanceof Error ? caught.message : '操作失敗，請再試一次。'
       setError(message)
       throw caught
     } finally {
+      actionPending.current = false
       setBusy(false)
     }
   }, [])
@@ -188,6 +207,7 @@ export function TrackerProvider({ children }: { children: ReactNode }) {
       setAccess('signed_out')
     },
     addNote: (input) => run((repo) => repo.addNote(input)),
+    saveAttendanceException: (input) => run((repo) => repo.saveAttendanceException(input)),
     clearError: () => setError(null),
     startSession: (courseId) => run((repo) => repo.startSession(courseId)),
     updateSession: (sessionId, input) => run((repo) => repo.updateSession(sessionId, input)),

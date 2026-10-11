@@ -1,0 +1,631 @@
+[
+  {
+    "stableId": "v3-slide-01",
+    "sourceSlides": [
+      1
+    ],
+    "motion": "cover-route",
+    "focus": [],
+    "imageMotion": {
+      "alt": "bus",
+      "effect": "glide-right"
+    }
+  },
+  {
+    "stableId": "v3-slide-02",
+    "sourceSlides": [
+      2
+    ],
+    "motion": "stagger-rise",
+    "focus": []
+  },
+  {
+    "stableId": "v3-slide-03-04",
+    "sourceSlides": [
+      3,
+      4
+    ],
+    "motion": "facts-rise",
+    "focus": [
+      [
+        "10:00 以前",
+        "amber"
+      ]
+    ]
+  },
+  {
+    "stableId": "v3-slide-05-06",
+    "sourceSlides": [
+      5,
+      6
+    ],
+    "motion": "profiles-converge",
+    "focus": [
+      [
+        "不知道学校东门在哪儿",
+        "red"
+      ]
+    ]
+  },
+  {
+    "stableId": "v3-slide-07-08",
+    "sourceSlides": [
+      7,
+      8
+    ],
+    "motion": "transport-opposed",
+    "focus": [
+      [
+        "20 分钟",
+        "teal"
+      ],
+      [
+        "50 分钟",
+        "amber"
+      ],
+      [
+        "要换一次线",
+        "amber"
+      ]
+    ]
+  },
+  {
+    "stableId": "v3-slide-09",
+    "sourceSlides": [
+      9
+    ],
+    "motion": "parcel-pop",
+    "focus": [
+      [
+        "9:10 以后",
+        "amber"
+      ],
+      [
+        "必须有人去拿",
+        "red"
+      ]
+    ]
+  },
+  {
+    "stableId": "v3-slide-10-11",
+    "sourceSlides": [
+      10,
+      11
+    ],
+    "motion": "task-cascade",
+    "focus": []
+  },
+  {
+    "stableId": "v3-slide-12",
+    "sourceSlides": [
+      12
+    ],
+    "motion": "challenge-rise",
+    "focus": [
+      [
+        "HSK 3–6 挑战",
+        "amber",
+        "wiggle"
+      ]
+    ]
+  },
+  {
+    "stableId": "v3-slide-13",
+    "sourceSlides": [
+      13
+    ],
+    "motion": "alert-split",
+    "focus": [
+      [
+        "火车晚了",
+        "red"
+      ],
+      [
+        "东门关闭",
+        "red"
+      ],
+      [
+        "10:00 以前",
+        "amber"
+      ]
+    ],
+    "imageMotion": {
+      "alt": "train",
+      "effect": "nudge-once"
+    }
+  },
+  {
+    "stableId": "v3-slide-14",
+    "sourceSlides": [
+      14
+    ],
+    "motion": "debate-converge",
+    "focus": [
+      [
+        "有一个人不同意",
+        "amber"
+      ]
+    ]
+  },
+  {
+    "stableId": "v3-slide-15",
+    "sourceSlides": [
+      15
+    ],
+    "motion": "divider-gold",
+    "focus": [],
+    "imageMotion": {
+      "alt": "banana",
+      "effect": "rise-once"
+    }
+  },
+  {
+    "stableId": "v3-slide-16",
+    "sourceSlides": [
+      16
+    ],
+    "motion": "budget-pop",
+    "focus": [
+      [
+        "100 元",
+        "amber"
+      ]
+    ],
+    "imageMotion": {
+      "alt": "banana",
+      "effect": "soft-pop"
+    }
+  },
+  {
+    "stableId": "v3-slide-17",
+    "sourceSlides": [
+      17
+    ],
+    "motion": "goal-stagger",
+    "focus": []
+  },
+  {
+    "stableId": "v3-slide-18-19",
+    "sourceSlides": [
+      18,
+      19
+    ],
+    "motion": "market-grid",
+    "focus": []
+  },
+  {
+    "stableId": "v3-slide-20-21",
+    "sourceSlides": [
+      20,
+      21
+    ],
+    "motion": "roleplay-opposed",
+    "focus": []
+  },
+  {
+    "stableId": "v3-slide-22",
+    "sourceSlides": [
+      22
+    ],
+    "motion": "payment-image-stagger",
+    "focus": []
+  },
+  {
+    "stableId": "v3-slide-23",
+    "sourceSlides": [
+      23
+    ],
+    "motion": "divider-route",
+    "focus": [],
+    "imageMotion": {
+      "alt": "metro",
+      "effect": "glide-right"
+    }
+  },
+  {
+    "stableId": "v3-slide-24",
+    "sourceSlides": [
+      24
+    ],
+    "motion": "deadline-cover",
+    "focus": [
+      [
+        "10:45 以前",
+        "amber"
+      ]
+    ],
+    "imageMotion": {
+      "alt": "metro",
+      "effect": "glide-right"
+    }
+  },
+  {
+    "stableId": "v3-slide-25",
+    "sourceSlides": [
+      25
+    ],
+    "motion": "mission-cascade",
+    "focus": []
+  },
+  {
+    "stableId": "v3-slide-26",
+    "sourceSlides": [
+      26
+    ],
+    "motion": "timeline-line",
+    "focus": [
+      [
+        "9:20",
+        "amber"
+      ],
+      [
+        "10:45 以前",
+        "amber"
+      ]
+    ]
+  },
+  {
+    "stableId": "v3-slide-27-28",
+    "sourceSlides": [
+      27,
+      28
+    ],
+    "motion": "transport-split",
+    "focus": [
+      [
+        "20 分钟",
+        "teal"
+      ],
+      [
+        "50 分钟",
+        "amber"
+      ],
+      [
+        "36 元／车",
+        "amber"
+      ],
+      [
+        "0 元",
+        "teal"
+      ],
+      [
+        "只有 2 辆自行车",
+        "red"
+      ]
+    ]
+  },
+  {
+    "stableId": "v3-slide-29",
+    "sourceSlides": [
+      29
+    ],
+    "motion": "ledger-highlight",
+    "focus": [
+      [
+        "70 元",
+        "amber"
+      ]
+    ]
+  },
+  {
+    "stableId": "v3-slide-30",
+    "sourceSlides": [
+      30
+    ],
+    "motion": "report-speech",
+    "focus": []
+  },
+  {
+    "stableId": "added-zoo-plan-divider",
+    "sourceSlides": [],
+    "insertedBefore": 31,
+    "motion": "zoo-plan-divider",
+    "focus": [
+      [
+        "10:45 以前",
+        "amber"
+      ],
+      [
+        "70 元",
+        "amber"
+      ]
+    ],
+    "imageMotion": {
+      "alt": "metro",
+      "effect": "glide-right"
+    }
+  },
+  {
+    "stableId": "v3-slide-31-32",
+    "sourceSlides": [
+      31,
+      32
+    ],
+    "motion": "task-rail",
+    "focus": []
+  },
+  {
+    "stableId": "v3-slide-33",
+    "sourceSlides": [
+      33
+    ],
+    "motion": "phrase-emphasis",
+    "focus": []
+  },
+  {
+    "stableId": "v3-slide-34",
+    "sourceSlides": [
+      34
+    ],
+    "motion": "divider-bike",
+    "focus": [],
+    "imageMotion": {
+      "alt": "bicycle",
+      "effect": "glide-right"
+    }
+  },
+  {
+    "stableId": "v3-slide-35-36",
+    "sourceSlides": [
+      35,
+      36
+    ],
+    "motion": "route-expand",
+    "focus": []
+  },
+  {
+    "stableId": "v3-slide-37",
+    "sourceSlides": [
+      37
+    ],
+    "motion": "divider-room",
+    "focus": [],
+    "imageMotion": {
+      "alt": "commonRoom",
+      "effect": "soft-pop"
+    }
+  },
+  {
+    "stableId": "v3-slide-38",
+    "sourceSlides": [
+      38
+    ],
+    "motion": "welcome-cover",
+    "focus": [
+      [
+        "80 元",
+        "amber"
+      ]
+    ],
+    "imageMotion": {
+      "alt": "commonRoom",
+      "effect": "soft-pop"
+    }
+  },
+  {
+    "stableId": "v3-slide-39",
+    "sourceSlides": [
+      39
+    ],
+    "motion": "people-budget",
+    "focus": []
+  },
+  {
+    "stableId": "v3-slide-40",
+    "sourceSlides": [
+      40
+    ],
+    "motion": "anna-profile",
+    "focus": [
+      [
+        "今天第一次来学校",
+        "teal"
+      ]
+    ]
+  },
+  {
+    "stableId": "v3-slide-41-42",
+    "sourceSlides": [
+      41,
+      42
+    ],
+    "motion": "schedule-rows",
+    "focus": [
+      [
+        "17:30 以后",
+        "amber"
+      ]
+    ]
+  },
+  {
+    "stableId": "v3-slide-43",
+    "sourceSlides": [
+      43
+    ],
+    "motion": "venue-contrast",
+    "focus": [
+      [
+        "不能吃东西",
+        "red"
+      ],
+      [
+        "可以吃东西",
+        "teal"
+      ],
+      [
+        "人比较多",
+        "amber"
+      ]
+    ]
+  },
+  {
+    "stableId": "v3-slide-44",
+    "sourceSlides": [
+      44
+    ],
+    "motion": "train-arrival",
+    "focus": [
+      [
+        "15 分钟",
+        "teal"
+      ],
+      [
+        "35 分钟",
+        "amber"
+      ],
+      [
+        "2 元",
+        "teal"
+      ],
+      [
+        "20 元",
+        "amber"
+      ]
+    ]
+  },
+  {
+    "stableId": "v3-slide-45-46",
+    "sourceSlides": [
+      45,
+      46
+    ],
+    "motion": "market-grid",
+    "focus": []
+  },
+  {
+    "stableId": "v3-slide-47-48",
+    "sourceSlides": [
+      47,
+      48
+    ],
+    "motion": "ledger-highlight",
+    "focus": [
+      [
+        "80 元",
+        "amber"
+      ]
+    ]
+  },
+  {
+    "stableId": "v3-slide-49-50",
+    "sourceSlides": [
+      49,
+      50
+    ],
+    "motion": "plan-questions",
+    "focus": []
+  },
+  {
+    "stableId": "v3-slide-51",
+    "sourceSlides": [
+      51
+    ],
+    "motion": "divider-plane",
+    "focus": [],
+    "imageMotion": {
+      "alt": "airplane",
+      "effect": "glide-left"
+    }
+  },
+  {
+    "stableId": "v3-slide-52",
+    "sourceSlides": [
+      52
+    ],
+    "motion": "balanced-choice",
+    "focus": [
+      [
+        "自己找路",
+        "teal"
+      ],
+      [
+        "让朋友来接",
+        "amber"
+      ]
+    ]
+  },
+  {
+    "stableId": "v3-slide-53",
+    "sourceSlides": [
+      53
+    ],
+    "motion": "divider-clock",
+    "focus": [],
+    "imageMotion": {
+      "alt": "train",
+      "effect": "nudge-once"
+    }
+  },
+  {
+    "stableId": "v3-slide-54",
+    "sourceSlides": [
+      54
+    ],
+    "motion": "late-wiggle",
+    "focus": [
+      [
+        "迟到",
+        "red",
+        "wiggle"
+      ]
+    ]
+  },
+  {
+    "stableId": "v3-slide-55",
+    "sourceSlides": [
+      55
+    ],
+    "motion": "divider-apple",
+    "focus": [],
+    "imageMotion": {
+      "alt": "apple",
+      "effect": "soft-pop"
+    }
+  },
+  {
+    "stableId": "v3-slide-56",
+    "sourceSlides": [
+      56
+    ],
+    "motion": "balanced-choice",
+    "focus": [
+      [
+        "价格",
+        "amber"
+      ],
+      [
+        "质量",
+        "teal"
+      ]
+    ]
+  },
+  {
+    "stableId": "v3-slide-57",
+    "sourceSlides": [
+      57
+    ],
+    "motion": "divider-cash",
+    "focus": [],
+    "imageMotion": {
+      "alt": "cash",
+      "effect": "rise-once"
+    }
+  },
+  {
+    "stableId": "v3-slide-58",
+    "sourceSlides": [
+      58
+    ],
+    "motion": "payment-duel",
+    "focus": [
+      [
+        "AA 制",
+        "teal"
+      ],
+      [
+        "一个人先付钱",
+        "amber"
+      ]
+    ]
+  }
+]

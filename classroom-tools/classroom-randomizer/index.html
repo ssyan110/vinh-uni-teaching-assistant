@@ -117,6 +117,7 @@
           </div>
           <div class="session-bar-actions">
             <button class="has-icon icon-hand button button-primary" id="volunteerPanelButton" type="button" aria-haspopup="dialog" aria-controls="volunteerDialog">记录自愿发言</button>
+            <button class="button button-secondary" id="teacherPanelButton" type="button" aria-haspopup="dialog" aria-controls="volunteerDialog">老师主动叫</button>
             <button class="button button-primary" id="endSessionButton" type="button">结束课程</button>
             <button class="has-icon icon-clipboard-check button button-quiet" id="newSessionButton" type="button">开始下一堂</button>
             <button class="has-icon icon-monitor button button-secondary" id="presentationButton" type="button">打开学生画面</button>
@@ -148,6 +149,7 @@
                 <button class="has-icon icon-save button button-primary" id="recordNextButton" type="button">记录回答并抽下一位</button>
                 <button class="has-icon icon-save button button-secondary" id="recordCompleteButton" type="button">只记录这笔</button>
                 <button class="has-icon icon-circle-help button button-quiet" id="noAnswerButton" type="button">记录未回答</button>
+                <button class="button button-quiet" id="skipRoundButton" type="button">本轮跳过</button>
               </div>
             </div>
 
@@ -266,7 +268,7 @@
               <button class="has-icon icon-undo-2 button button-quiet" id="undoButton" type="button">返回上一步</button>
               <button class="has-icon icon-refresh-cw button button-secondary" id="nextRoundButton" type="button" hidden>开始下一轮抽问</button>
             </div>
-              <p class="privacy-note">完成本轮只代表学生已回答；次数、回答情境和备注会分别保存，不计算成绩。</p>
+              <p class="privacy-note">完成本轮代表到课学生已回答或已安排本轮跳过；次数、回答情境和备注会分别保存，不计算成绩。</p>
           </section>
 
           <aside class="side-panel" aria-label="本堂课记录">
@@ -295,7 +297,7 @@
                 </div>
                 <span class="muted" id="eligibleLabel">本轮 0 位</span>
               </div>
-              <p class="side-help">勾选「缺席」立即记录并停止抽问，取消勾选改为到课。学生回答后按「自愿发言 +1」立即加记一次，不影响正在进行的抽问。</p>
+              <p class="side-help">勾选「缺席」立即记录并停止抽问，取消勾选改为到课。学生回答后，按「自愿发言 +1」或「老师主动叫 +1」记录来源。该学生本轮暂停抽问，下一轮恢复。当前抽问会保留。</p>
               <div class="roster-view-tools">
                 <label class="student-search">
                   <span class="visually-hidden">搜索学生</span>
@@ -303,13 +305,13 @@
                 </label>
                 <select id="studentStatusFilter" aria-label="筛选学生状态">
                   <option value="all">全部学生</option>
-                  <option value="available">尚未抽问</option>
+                  <option value="available">待回答</option>
                   <option value="answered">本轮已完成</option>
                   <option value="absent">缺席</option>
                 </select>
               </div>
               <div class="roster-legend" aria-label="学生状态说明">
-                <span><i class="status-dot available"></i>尚未抽问</span>
+                <span><i class="status-dot available"></i>待回答</span>
                 <span><i class="status-dot answered"></i>本轮已完成</span>
                 <span><i class="status-dot absent"></i>缺席</span>
               </div>
@@ -348,7 +350,7 @@
         <div><p class="section-kicker">本班学生</p><h2 id="volunteerTitle">记录自愿发言</h2></div>
         <button class="icon-button" id="closeVolunteerButton" type="button" aria-label="关闭自愿发言面板">×</button>
       </div>
-      <p id="volunteerHint" class="dialog-copy">找到举手的学生，点击「＋1」。当前抽问会保留。</p>
+      <p id="volunteerHint" class="dialog-copy">找到自愿回答的学生，回答后点击「＋1」。该学生本轮暂停抽问，下一轮恢复。当前抽问会保留。</p>
       <label class="volunteer-search" for="volunteerSearchInput">搜索学号末四位或姓名</label>
       <input id="volunteerSearchInput" type="search" placeholder="输入学号末四位或姓名" autocomplete="off" autofocus>
       <div class="volunteer-feedback">
@@ -385,6 +387,8 @@
         <button class="icon-button" id="closeNoResponseDialogButton" type="button" aria-label="取消未回答记录">×</button>
       </div>
       <p class="dialog-copy" id="noResponseDialogCopy">为 <strong id="noResponseStudent">这位同学</strong> 选择一个原因；选定后会立即保存一笔未回答记录。</p>
+      <label class="field"><span><input id="roundSkipInput" type="checkbox"> 本轮跳过，下一轮恢复抽问</span></label>
+      <p class="dialog-copy">勾选后再选择原因；缺席会单独登记考勤。「选择跳过」会自动暂停本轮抽问。</p>
       <div class="no-response-reasons" id="noResponseReasonOptions" role="group" aria-label="未回答原因"></div>
       <div class="form-actions no-response-dialog-actions">
         <button class="button button-quiet" id="cancelNoResponseButton" type="button">取消，不记录</button>

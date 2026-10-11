@@ -1,0 +1,147 @@
+{
+  "status": "审阅稿／未发布",
+  "cohort": "BOYA-LS-E1-Y1S1-2026F",
+  "week": "w12",
+  "offering_id": "2026-fall",
+  "items": [
+    {
+      "id": "W12-L01",
+      "type": "mc",
+      "lesson_key": "boya-elementary-i:lesson-24",
+      "audio_id": "E24-B02",
+      "prompt": "他们最后决定保留哪张照片？",
+      "options": [
+        "第一张",
+        "第二张",
+        "第三张"
+      ],
+      "answer_index": 0,
+      "points": 2,
+      "focus": "第24课·具体反馈",
+      "script": "小林，这几张照片都要吗？\n小王，第一张很好，第二张太暗，第三张看不清楚。\n小林，那留第一张？\n小王，对，另外两张不要了。",
+      "plays": 1,
+      "source_script": "小林：这几张照片都要吗？\n小王：第一张很好，第二张太暗，第三张看不清楚。\n小林：那留第一张？\n小王：对，另外两张不要了。",
+      "script_kind": "manifest.speech_units（送入语音模型的文本；非亲听转写）",
+      "pause_after_ms": [
+        700,
+        700,
+        700
+      ]
+    },
+    {
+      "id": "W12-L02",
+      "type": "mc",
+      "lesson_key": "boya-elementary-i:lesson-24",
+      "audio_id": "E24-C02",
+      "prompt": "小周报告的主要问题是什么？",
+      "options": [
+        "内容没有准备好",
+        "讲得太快，大家没听清最后安排",
+        "没有回答同学的问题"
+      ],
+      "answer_index": 1,
+      "points": 2,
+      "focus": "第24课·反馈与修正",
+      "script": "小周今天完成了报告。内容准备得很好，可是讲得太快，大家没听清最后的安排。同学问了一次以后，他又慢慢地说了一遍，大家这次听明白了。",
+      "plays": 1,
+      "source_script": "小周今天完成了报告。内容准备得很好，可是讲得太快，大家没听清最后的安排。同学问了一次以后，他又慢慢地说了一遍，大家这次听明白了。",
+      "script_kind": "manifest.speech_units（送入语音模型的文本；非亲听转写）",
+      "pause_after_ms": []
+    },
+    {
+      "id": "W12-L03",
+      "type": "mc",
+      "lesson_key": "boya-elementary-i:lesson-25",
+      "audio_id": "E25-B01",
+      "prompt": "聚餐还有哪项信息不确定？",
+      "options": [
+        "吃的有没有买",
+        "杯子有没有洗",
+        "有多少人来"
+      ],
+      "answer_index": 2,
+      "points": 2,
+      "focus": "第25课·准备缺口",
+      "script": "小林，聚餐准备好了吗？\n小王，吃的已经买了，杯子也洗干净了，可是还不知道来几个人。\n小林，我先打电话问问。",
+      "plays": 1,
+      "source_script": "小林：聚餐准备好了吗？\n小王：吃的已经买了，杯子也洗干净了，可是还不知道来几个人。\n小林：我先打电话问问。",
+      "script_kind": "manifest.speech_units（送入语音模型的文本；非亲听转写）",
+      "pause_after_ms": [
+        700,
+        700
+      ]
+    },
+    {
+      "id": "W12-L04",
+      "type": "mc",
+      "lesson_key": "boya-elementary-i:lesson-25",
+      "audio_id": "E25-C01",
+      "prompt": "安娜接下来会怎么确认人数？",
+      "options": [
+        "先发微信，等小周回复",
+        "直接再订一份外卖",
+        "先取消聚餐"
+      ],
+      "answer_index": 0,
+      "points": 2,
+      "focus": "第25课·待办与确认",
+      "script": "安娜为聚餐做准备。她已经订好了外卖，洗好了杯子，但忘了问小周来不来。小周的电话一直没人接。她决定先发微信，等他回了再确认最后的人数。",
+      "plays": 1,
+      "source_script": "安娜为聚餐做准备。她已经订好了外卖，洗好了杯子，但忘了问小周来不来。小周的电话一直没人接。她决定先发微信，等他回了再确认最后的人数。",
+      "script_kind": "manifest.speech_units（送入语音模型的文本；非亲听转写）",
+      "pause_after_ms": []
+    },
+    {
+      "id": "W12-S01",
+      "type": "short",
+      "lesson_key": "boya-elementary-i:lesson-24",
+      "audio_id": "E24-C01",
+      "prompt": "安娜的汉语有什么进步？她接下来准备怎么练？",
+      "answer": "现在能说得快一些；把速度放慢一点儿，先说清楚。",
+      "points": 4,
+      "focus": "第24课·有证据的反馈",
+      "script": "安娜以前说汉语说得很慢，常常想很久。这个月她每天和同学练习，已经能说得快一些了。不过有的词说得还不清楚。她准备把速度放慢一点儿，先说清楚。",
+      "plays": 2,
+      "source_script": "安娜以前说汉语说得很慢，常常想很久。这个月她每天和同学练习，已经能说得快一些了。不过有的词说得还不清楚。她准备把速度放慢一点儿，先说清楚。",
+      "script_kind": "manifest.speech_units（送入语音模型的文本；非亲听转写）",
+      "pause_after_ms": []
+    },
+    {
+      "id": "W12-S02",
+      "type": "short",
+      "lesson_key": "boya-elementary-i:lesson-25",
+      "audio_id": "E25-C02",
+      "prompt": "小林第二次表演后，还有几个声调问题没改好？他打算怎么办？",
+      "answer": "还有一个；以后继续练。",
+      "points": 4,
+      "focus": "第25课·结果与下一步",
+      "script": "小林参加中文表演，第一次练习时有三个声调说错了。老师指出以后，他又练了两遍。第二次表演，两个问题改好了，还有一个没改好。他说以后还要继续练。",
+      "plays": 2,
+      "source_script": "小林参加中文表演，第一次练习时有三个声调说错了。老师指出以后，他又练了两遍。第二次表演，两个问题改好了，还有一个没改好。他说以后还要继续练。",
+      "script_kind": "manifest.speech_units（送入语音模型的文本；非亲听转写）",
+      "pause_after_ms": []
+    },
+    {
+      "id": "W12-O01",
+      "type": "oral",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-24",
+        "boya-elementary-i:lesson-25"
+      ],
+      "prompt": "口语 A：你们要准备一次虚构的新生活动。A 看一张练习表现记录，指出一项具体进步和一项需要改进的地方；B 看准备清单，告诉 A 哪些已完成、哪些还没确认。",
+      "points": 10,
+      "focus": "第24课＋第25课·具体反馈与准备清单"
+    },
+    {
+      "id": "W12-O02",
+      "type": "oral",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-24",
+        "boya-elementary-i:lesson-25"
+      ],
+      "prompt": "口语 B：教师临时宣布“负责订餐的人不能来了”。两人协商下一步，明确由谁确认人数、由谁处理订餐，并复述最终安排。",
+      "points": 10,
+      "focus": "第24课＋第25课·结果、待办与协商"
+    }
+  ]
+}

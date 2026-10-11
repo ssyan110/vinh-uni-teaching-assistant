@@ -1,0 +1,212 @@
+{
+  "role": "AI simulated Vietnamese beginner Mandarin learner, not a human participant",
+  "assessment_id": "W04-L01L10-20261006",
+  "offering_id": "2026-fall",
+  "lesson_keys": [
+    "boya-elementary-i:lesson-01",
+    "boya-elementary-i:lesson-02",
+    "boya-elementary-i:lesson-03",
+    "boya-elementary-i:lesson-04",
+    "boya-elementary-i:lesson-05",
+    "boya-elementary-i:lesson-06",
+    "boya-elementary-i:lesson-07",
+    "boya-elementary-i:lesson-08",
+    "boya-elementary-i:lesson-09",
+    "boya-elementary-i:lesson-10"
+  ],
+  "status": "audit_only_unpublished_no_content_changes",
+  "browser": "Actual isolated headless Chrome CDP 9237, agent-browser 0.33.2 session student-w04-audit; 390x844 mobile and 1366x768 desktop; browser closed. Initial launch failures superseded.",
+  "run_preflight_blocker": "agent_loop lesson init was inapplicable to cumulative exam; preserved diagnostic only, not assessment blocker",
+  "findings": [
+    {
+      "id": "S01",
+      "severity": "blocker",
+      "title": "主頁仍指向使用者否決的 Qwen v01",
+      "reproduction": "開啟 dashboard.html，檢查 track-data 的 file。",
+      "expected": "只使用明確可施測版本；未批准版本應先停止施測。",
+      "actual": "33段全部引用 audio-repair-qwen-serena-v01；使用者本次已明確否決。",
+      "simulated_student_quote": "這是老師決定使用的正式聲音嗎？",
+      "minimal_improvement": "先由教師決定音源版本，再檢查頁面映射；不能以 Kokoro 樣本自動替換。",
+      "evidence_type": "file_inspection",
+      "question_numbers": []
+    },
+    {
+      "id": "S02",
+      "severity": "high",
+      "title": "去除角色標籤後姓名不可識別",
+      "reproduction": "只看學生題幹15/18/20/21/23/30；把朗讀稿中的角色標籤視為不朗讀，核對剩餘內容。",
+      "expected": "聽得出題目指定的小王／小林與說話輪次的對應。",
+      "actual": "剩餘內容沒有小王／小林自我介紹。15有3人，18/20/21/23靠我的或我，30靠我要；知道教師答案不能補足聽者身份線索。現主頁v01仍讀出逗號人名，本項是去標籤版本的條件性缺口，不冒稱現音檔已去標籤。",
+      "simulated_student_quote": "我聽到「我」；可是誰是小王？聲音不同也不能告訴我名字。",
+      "minimal_improvement": "不改題目；在播放前提供非答案性的角色與聲音對應，並在可用音源中核對輪次；三人對話不能只靠兩種聲音。",
+      "evidence_type": "student_reasoning_then_teacher_crosscheck",
+      "question_numbers": [
+        15,
+        18,
+        20,
+        21,
+        23,
+        30
+      ]
+    },
+    {
+      "id": "S03",
+      "severity": "high",
+      "title": "學生不知道拼音錄音第三音節不用填",
+      "reproduction": "讀 student.md 第31–36題和總說明，再核對 E01/E02/E03-C01 合成清單。",
+      "expected": "知道每轮三音節，只回答第1和第2；第三是非作答項。",
+      "actual": "學生卷只說第一／第二音節，沒有第三音節不設題；教師面板才說明。合成清單每輪3項、整組2輪。 Chrome第24段實測可見這句教師提示，學生卷仍缺。",
+      "simulated_student_quote": "有第三個聲音，可是沒有第三個空；我是不是跳過了一題？",
+      "minimal_improvement": "在學生總說明補「每轮听三个音节，只填写前两个，第三个不用写」。不要把實際答案當示例。",
+      "evidence_type": "file_inspection",
+      "question_numbers": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "evidence_files": [
+        "02-mobile-pinyin.png",
+        "browser-log.json"
+      ]
+    },
+    {
+      "id": "S04",
+      "severity": "medium",
+      "title": "拼音輸入與容錯規則學生端不完整",
+      "reproduction": "閱讀學生總說明與31–36題，再交叉看 grading-guide.md。",
+      "expected": "手機使用者知道鍵盤替代格式，以及哪些題必須聲調。",
+      "actual": "學生知道可用ma3；但不知道ü/u:/v等價、空白／大小寫可忽略、37–50拼音可以不標聲調。35–36題幹未明說有聲調，僅總說明要求。人工容錯尚待教師審閱。",
+      "simulated_student_quote": "鍵盤沒有ü，可以打v嗎？後面的名字也要標每個聲調嗎？",
+      "minimal_improvement": "教師確認後向學生補一行非答案例子及分區聲調要求。",
+      "evidence_type": "file_inspection",
+      "question_numbers": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ]
+    },
+    {
+      "id": "S05",
+      "severity": "high",
+      "title": "缺少學生漏聽與提交失敗的恢復規則",
+      "reproduction": "從student.md初次進入，查找漏聽、舉手、網路、送出確認與失敗。",
+      "expected": "知道如何求助，何時可重播，如何確認提交成功並保留答案。",
+      "actual": "只寫不會可留空和檢查姓名學號再提交；沒有個人漏聽與全班音訊故障的區別，也没有成功畫面或失敗後重試方法。未開真Form，故不判定其實際保存能力。",
+      "simulated_student_quote": "剛才沒聲音，我要留空嗎？按提交後沒有成功訊息，我要再按嗎？",
+      "minimal_improvement": "施測前公布求助、重播公平規則；補網路失敗時保留本頁、通知教師與成功確認方法。",
+      "evidence_type": "file_inspection",
+      "question_numbers": []
+    },
+    {
+      "id": "S06",
+      "severity": "medium",
+      "title": "音訊失敗提示資料夾錯誤",
+      "reproduction": "在隔離Node VM觸發audio:error，核對主頁file路徑。",
+      "expected": "錯誤指示指向實際引用資料夾。",
+      "actual": "顯示把dashboard與audio文件夾放同目錄；目前file引用audio-repair-qwen-serena-v01。",
+      "simulated_student_quote": "老師照提示帶audio資料夾，還是不能播怎麼辦？",
+      "minimal_improvement": "錯誤提示列出目前失敗的相對檔案路徑及核對步驟。",
+      "evidence_type": "synthetic_runtime",
+      "question_numbers": []
+    },
+    {
+      "id": "S07",
+      "severity": "medium",
+      "title": "播完次數和計時只能靠教師維持",
+      "reproduction": "獨立Chrome手機viewport：首段play、等1200ms、確認1/2、next；reload；選第24段後about:blank再back。",
+      "expected": "播放不足可被提示；看題／兩遍間／答題時間有一致操作。",
+      "actual": "Chrome實際1/2遍可切第2段；reload回第1段0/2，選第24段離頁返回也回第1段0/2。只實作看題計時，其他時間為參考。",
+      "simulated_student_quote": "還沒聽第二遍就換題了，我能請老師回去嗎？",
+      "minimal_improvement": "給教師簡短操作檢查與學生重播求助規則；切段前提示未達計畫次數，保留人工決策。",
+      "evidence_type": "actual_local_browser_and_file_inspection",
+      "question_numbers": [],
+      "evidence_files": [
+        "browser-log.json",
+        "03-desktop-return.png"
+      ]
+    },
+    {
+      "id": "S08",
+      "severity": "medium",
+      "title": "投影學生可讀性未證，頁面屬教師控制",
+      "reproduction": "獨立Chrome以390×844開啟dashboard，截圖並取DOM尺寸／input／link計數；1366×768檢查字級。",
+      "expected": "投影有可辨題號及簡短學生提示；手機答題入口明確。",
+      "actual": "手機innerWidth390、scrollWidth375，無橫向溢出。首屏大量教師說明，播放器控制需往下捲；整頁input/textarea/form=0、a=0，沒有學生题目與入口。桌面body16px、timing17px。第24段「Nhóm 24 · 31–32 ·24/33」可見，但未標明題與段，並混合中越語。這是教師頁，非已交付學生答題頁。實際投影／手机键盘仍未測。",
+      "simulated_student_quote": "投影顯示Nhóm 17和17/33，我現在要做第17題嗎？",
+      "minimal_improvement": "施測前確認學生Form入口，投影顯著區分「題20–21」和「段17/33」，按實際教室距離驗證大小。",
+      "evidence_type": "actual_local_browser_viewport_and_screenshot",
+      "question_numbers": [],
+      "evidence_files": [
+        "01-mobile-entry.png",
+        "02-mobile-pinyin.png",
+        "03-desktop-return.png",
+        "browser-log.json"
+      ]
+    },
+    {
+      "id": "S09",
+      "severity": "medium",
+      "title": "預計時長與實際施測位置仍需教師說清",
+      "reproduction": "比對dashboard、timing.md、scope.md。",
+      "expected": "學生知道何時開始、結束、預留檢查提交。",
+      "actual": "按目前主頁33段資料重算約61.78分鐘（3706.9256秒），timing.md仍59.46分鐘，主頁仍55–60分鐘。最新決定是教師自行調整前三節、第四節只測驗，但學生未見具體起訖。不能自行縮題或縮等待。",
+      "simulated_student_quote": "下課到了，但我還有填空；會關表單嗎？",
+      "minimal_improvement": "綁定最終批准音源重算時間；教師施測前宣布本班具體起訖及收卷政策，保留題數。",
+      "evidence_type": "file_inspection",
+      "question_numbers": []
+    }
+  ],
+  "untested": [
+    "Human audible pronunciation/tone and role voice recognizability",
+    "Real Google Form rendering, validation, keyboard input, save/resume, submission and confirmation",
+    "Physical phone touch/keyboard and projector/back-row visibility",
+    "Real learner completion time or learner performance"
+  ],
+  "source_sha256": {
+    "dashboard.html": "d1565c1c8a9bc8a2c072a738d8e1574e1ffddbf15c307593f046dfc03f74c2fe",
+    "dashboard.js": "82a48227423811df413be33e769fadd0c8d2441247b1702099f62adf4d513569",
+    "student.md": "df3dec089e95443745789a11fde08e51f68ef88c4cd22e26c56daab37f64f858",
+    "items.json": "e876c3327e27cf513518f57718f051b88a8b9b27ccfa1875dbe55c7bda29b19e",
+    "teacher.md": "7dc8f07186c1bce95f118a4ff4e6ea446edaf29d0e9a995414ce9ad187185eec",
+    "grading-guide.md": "2227e709a0fac09ae358906a156649f9bb5408f64760c91c45b7dcb7d73e35aa"
+  },
+  "exam_preflight": {
+    "purpose": "assessment-audio",
+    "exam_id": "W04-L01L10-20261006",
+    "status": "ready",
+    "output_dir": "audio-repair-qwen-serena-v01",
+    "human_audio_acceptance": false,
+    "meaning": "read-only registered exam route and input checks; no audio generation, approval or fitness claim"
+  },
+  "browser_cli": "agent-browser 0.33.2 verified at /Users/ssyan110/node_modules/.bin/agent-browser; skill requires existing CDP; shared teacher browser not attached",
+  "browser_evidence": {
+    "log": "browser-log.json",
+    "screenshots": [
+      "01-mobile-entry.png",
+      "02-mobile-pinyin.png",
+      "03-desktop-return.png",
+      "04-student-md-native.png"
+    ],
+    "all_commands_exit_zero": true
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "status": "审阅稿／未发布",
+  "cohort": "BOYA-LS-E1-Y1S1-2026F",
+  "week": "w11",
+  "offering_id": "2026-fall",
+  "items": [
+    {
+      "id": "W11-L01",
+      "type": "mc",
+      "lesson_key": "boya-elementary-i:lesson-22",
+      "audio_id": "E22-B02",
+      "prompt": "聚会的活动顺序最后改成什么？",
+      "options": [
+        "先吃饭，再聊天，最后唱歌",
+        "先聊天，再吃饭，最后唱歌",
+        "先唱歌，再吃饭，最后聊天"
+      ],
+      "answer_index": 0,
+      "points": 2,
+      "focus": "第22课·建议与顺序",
+      "script": "小林，聚会有什么活动？\n小王，先聊天，吃饭以后唱歌。\n小林，能不能先吃饭？我下课以后很饿。\n小王，可以，我们改一下。",
+      "plays": 1,
+      "source_script": "小林：聚会有什么活动？\n小王：先聊天，吃饭以后唱歌。\n小林：能不能先吃饭？我下课以后很饿。\n小王：可以，我们改一下。",
+      "script_kind": "manifest.speech_units（送入语音模型的文本；非亲听转写）",
+      "pause_after_ms": [
+        700,
+        700,
+        700
+      ]
+    },
+    {
+      "id": "W11-L02",
+      "type": "mc",
+      "lesson_key": "boya-elementary-i:lesson-22",
+      "audio_id": "E22-C02",
+      "prompt": "他们最后约在哪里见面？",
+      "options": [
+        "下午两点在学校东门",
+        "下午三点半在学校东门",
+        "下午三点半在学校南门"
+      ],
+      "answer_index": 1,
+      "points": 2,
+      "focus": "第22课·时间与地点",
+      "script": "李明约安娜明天去看展览。安娜下午三点才下课，李明两点就下课了。他们决定三点半在学校东门见，先看展览，吃饭的事儿看完再安排。",
+      "plays": 1,
+      "source_script": "李明约安娜明天去看展览。安娜下午三点才下课，李明两点就下课了。他们决定三点半在学校东门见，先看展览，吃饭的事儿看完再安排。",
+      "script_kind": "manifest.speech_units（送入语音模型的文本；非亲听转写）",
+      "pause_after_ms": []
+    },
+    {
+      "id": "W11-L03",
+      "type": "mc",
+      "lesson_key": "boya-elementary-i:lesson-23",
+      "audio_id": "E23-B02",
+      "prompt": "小王现在决定买票了吗？",
+      "options": [
+        "已经买去西安的票",
+        "已经买去云南的票",
+        "还没有决定，暂时不买票"
+      ],
+      "answer_index": 2,
+      "points": 2,
+      "focus": "第23课·已定／未定",
+      "script": "小林，你想去云南还是西安？\n小王，还没决定。\n小林，你喜欢历史，西安也许适合你。\n小王，我再考虑一下，先不买票。",
+      "plays": 1,
+      "source_script": "小林：你想去云南还是西安？\n小王：还没决定。\n小林：你喜欢历史，西安也许适合你。\n小王：我再考虑一下，先不买票。",
+      "script_kind": "manifest.speech_units（送入语音模型的文本；非亲听转写）",
+      "pause_after_ms": [
+        700,
+        700,
+        700
+      ]
+    },
+    {
+      "id": "W11-L04",
+      "type": "mc",
+      "lesson_key": "boya-elementary-i:lesson-23",
+      "audio_id": "E23-C02",
+      "prompt": "小林为什么还没报名中文班？",
+      "options": [
+        "还要先问清楚放假时间",
+        "上午的课和旅行冲突",
+        "他已经决定先回家"
+      ],
+      "answer_index": 0,
+      "points": 2,
+      "focus": "第23课·计划与原因",
+      "script": "小林还没有决定假期怎么过。他想参加中文班，也想回家。中文班每天下午上课，上午没有课。他准备先问清楚放假时间，再决定回家的日子，现在还没报名。",
+      "plays": 1,
+      "source_script": "小林还没有决定假期怎么过。他想参加中文班，也想回家。中文班每天下午上课，上午没有课。他准备先问清楚放假时间，再决定回家的日子，现在还没报名。",
+      "script_kind": "manifest.speech_units（送入语音模型的文本；非亲听转写）",
+      "pause_after_ms": []
+    },
+    {
+      "id": "W11-S01",
+      "type": "short",
+      "lesson_key": "boya-elementary-i:lesson-22",
+      "audio_id": "E22-C01",
+      "prompt": "听完后写出聚会的两个活动，并说出谁负责准备游戏。",
+      "answer": "先在食堂吃饭、七点在教室玩游戏、最后看电影，任选两项；安娜准备游戏。",
+      "points": 4,
+      "focus": "第22课·活动与负责人",
+      "script": "我们班星期五晚上聚会。大家先在食堂吃饭，七点去教室玩游戏，最后一起看电影。小周负责下载电影，安娜准备游戏。老师请大家提出意见。",
+      "plays": 2,
+      "source_script": "我们班星期五晚上聚会。大家先在食堂吃饭，七点去教室玩游戏，最后一起看电影。小周负责下载电影，安娜准备游戏。老师请大家提出意见。",
+      "script_kind": "manifest.speech_units（送入语音模型的文本；非亲听转写）",
+      "pause_after_ms": []
+    },
+    {
+      "id": "W11-S02",
+      "type": "short",
+      "lesson_key": "boya-elementary-i:lesson-23",
+      "audio_id": "E23-C01",
+      "prompt": "安娜的假期安排中，哪一件事已经确定？她计划待几天？",
+      "answer": "已经买好星期五的车票；打算待三天。",
+      "points": 4,
+      "focus": "第23课·计划状态与时长",
+      "script": "我叫安娜。暑假想去上海看朋友，已经买好星期五的车票。我打算待三天，星期天晚上回来。朋友说先带我看看老街，再去吃当地的菜。我还想拍一些照片。",
+      "plays": 2,
+      "source_script": "我叫安娜。暑假想去上海看朋友，已经买好星期五的车票。我打算待三天，星期天晚上回来。朋友说先带我看看老街，再去吃当地的菜。我还想拍一些照片。",
+      "script_kind": "manifest.speech_units（送入语音模型的文本；非亲听转写）",
+      "pause_after_ms": []
+    },
+    {
+      "id": "W11-O01",
+      "type": "oral",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-22",
+        "boya-elementary-i:lesson-23"
+      ],
+      "prompt": "口语 A：你负责安排一次课后活动。同伴手上有假期和时间信息。先提出一个活动建议，问清对方哪天有空，再一起决定先做什么、后做什么。",
+      "points": 10,
+      "focus": "第22课＋第23课·建议、协商、计划状态"
+    },
+    {
+      "id": "W11-O02",
+      "type": "oral",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-22",
+        "boya-elementary-i:lesson-23"
+      ],
+      "prompt": "口语 B：教师告诉你们“原定参加者当天有课”。两人调整安排，明确说出已决定的部分和还要确认的一件事。",
+      "points": 10,
+      "focus": "第22课＋第23课·变化条件与确认"
+    }
+  ]
+}

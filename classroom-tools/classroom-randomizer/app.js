@@ -159,8 +159,7 @@
   const DRAW_REVEAL_DURATION = 1350;
 
   function today() {
-    const date = new Date();
-    return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+    return new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Ho_Chi_Minh", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
   }
 
   function safeStorageGet(key) {
@@ -482,7 +481,7 @@
       doc.getElementById("displayClass").textContent = state.session.className || "华语听说课";
       doc.getElementById("displayContext").textContent = `${textbook.label}｜第 ${lessonNumber} 课`;
       doc.getElementById("displayRound").textContent = `第 ${progress.roundNumber} 轮`;
-      doc.getElementById("displayProgress").textContent = `本轮完成 ${progress.answeredCount}／${progress.eligibleCount}`;
+      doc.getElementById("displayProgress").textContent = `本轮完成 ${progress.completedCount}／${progress.eligibleCount}`;
       root.classList.toggle("rolling", isDrawing);
       root.classList.toggle("complete", progress.roundComplete && !attempt && !isDrawing);
       const timer = doc.getElementById("displayTimer");
@@ -506,7 +505,7 @@
       } else if (progress.roundComplete) {
         doc.getElementById("displaySeat").textContent = "";
         doc.getElementById("displayName").textContent = "本轮完成！";
-        doc.getElementById("displayPrompt").textContent = "大家都完成回答了";
+        doc.getElementById("displayPrompt").textContent = "到课同学已回答或本轮跳过";
       } else {
         doc.getElementById("displaySeat").textContent = "";
         doc.getElementById("displayName").textContent = "准备好了吗？";
@@ -872,17 +871,34 @@
     if (state && !global.confirm("开始下一堂课前，上一堂课会保留在历史记录。要继续吗？")) {
       return;
     }
+    const classId = elements.classNameInput.value;
+    const sessionDate = elements.dateInput.value;
+    let classSessionId;
+    startingSession = true;
+    try {
+      classSessionId = await global.RandomizerCloud.startSession(classId, { sessionDate });
+      if (classId !== elements.classNameInput.value || sessionDate !== elements.dateInput.value) {
+        showToast("班级或日期已改变，请确认后重新开始。", true);
+        return;
+      }
+    } catch (error) {
+      showToast(error.message || "无法连接本堂课，请重试；已有记录仍保留。", true);
+      return;
+    } finally {
+      startingSession = false;
+    }
     if (state) archiveState(state);
 
     state = Model.createSession({
-      className: elements.classNameInput.value,
-      date: elements.dateInput.value,
+      className: classId,
+      date: sessionDate,
       textbookId: elements.textbookInput.value,
       lessonId: elements.lessonInput.value,
       taskMode: elements.taskModeInput.value,
       taskTarget: elements.taskTargetInput.value,
       roster
     });
+    state.session.classSessionId = classSessionId;
     resetTimer(false);
     taskDraftTarget = state.session.taskTarget || Model.DEFAULT_TASK_TARGET;
     resetResponseDraft();
@@ -1000,10 +1016,13 @@
         return;
       }
       const absentStudentId = selectedReason === "absent" && Model.pendingAttempt(state).studentId;
-      state = absentStudentId ? Model.setAbsent(state, absentStudentId, true) : Model.returnPending(state, {
+      state = absentStudentId ? Model.setAbsent(state, absentStudentId, true, {
+        note: noteDraft, taskPrompt: taskPromptDraft, answerContext: answerContextDraft
+      }) : Model.returnPending(state, {
         note: noteDraft,
         taskPrompt: taskPromptDraft,
         noResponseReason: selectedReason,
+        roundSkipped: document.getElementById("roundSkipInput").checked || selectedReason === "chose_skip",
         answerContext: answerContextDraft
       });
       stopTimer();
@@ -1011,7 +1030,7 @@
       resetResponseDraft();
       persist();
       renderApp();
-      showToast(absentStudentId ? "已记录缺席，本堂课不再抽问这位同学。" : "已记录未回答；这位同学仍会留在可抽名单中");
+      showToast(absentStudentId ? "已记录缺席，本堂课不再抽问这位同学。" : document.getElementById("roundSkipInput").checked || selectedReason === "chose_skip" ? "已记录未回答并本轮跳过，下一轮恢复抽问。" : "已记录未回答；这位同学仍会留在可抽名单中");
     } catch (error) {
       showToast(error.message, true);
     }
@@ -1109,6 +1128,7 @@
     const student = pending.studentSnapshot || Model.getStudent(state, pending.studentId) || {};
     elements.noResponseStudent.textContent = student.name || "这位同学";
     noResponseReasonDraft = "";
+    document.getElementById("roundSkipInput").checked = false;
     renderNoResponseReasonOptions();
     openDialog(elements.noResponseDialog);
     const firstOption = elements.noResponseReasonOptions.querySelector("button");
@@ -1118,18 +1138,18 @@
   function renderResponseForm(attempt) {
     ensurePendingDraft(attempt);
     const isVolunteer = attempt.selectionMethod === "volunteer";
-    const responseTitle = isVolunteer ? "记录自愿发言" : "记录这次回答";
+    const responseTitle = isVolunteer ? "记录自愿发言" : attempt.selectionMethod === "teacher" ? "记录老师主动叫后的回答" : "记录这次回答";
     elements.responseTitle.textContent = responseTitle;
     elements.quickResponseTitle.textContent = responseTitle;
     elements.quickResponseHint.textContent = isVolunteer
       ? "记录后会回到抽选区，继续课堂活动。"
-      : "记录后会自动回到抽选区，显示下一位学生。";
+      : "保存回答后，可继续抽问或留在当前课堂。";
     elements.quickResponseBar.classList.remove("is-drawing");
     elements.responseCard.classList.remove("is-drawing");
-    [elements.recordNextButton, elements.recordCompleteButton, elements.noAnswerButton].forEach((button) => {
+    [elements.recordNextButton, elements.recordCompleteButton, elements.noAnswerButton, document.getElementById("skipRoundButton")].forEach((button) => {
       button.disabled = false;
     });
-    elements.recordNextButton.textContent = attempt.selectionMethod !== "volunteer" && Model.getProgress(state).poolCount <= 1
+    elements.recordNextButton.textContent = Model.getDrawingPool(state).every(student => student.id === attempt.studentId)
       ? "记录回答并完成本轮"
       : "记录回答并抽下一位";
     elements.recordNextButton.hidden = false;
@@ -1200,7 +1220,7 @@
 
     if (isDrawing) {
       if (preserveResponseLayout) {
-        [elements.recordNextButton, elements.recordCompleteButton, elements.noAnswerButton].forEach((button) => {
+        [elements.recordNextButton, elements.recordCompleteButton, elements.noAnswerButton, document.getElementById("skipRoundButton")].forEach((button) => {
           button.disabled = true;
         });
       }
@@ -1214,7 +1234,7 @@
     const student = attempt.studentSnapshot || Model.getStudent(state, attempt.studentId) || {};
     elements.studentNumber.textContent = `学号末四位 ${studentIdSuffix(student)}`;
     elements.studentName.textContent = student.name || "未填写姓名";
-    elements.pendingStatus.textContent = attempt.selectionMethod === "volunteer" ? "自愿发言" : "等待回答";
+    elements.pendingStatus.textContent = attempt.selectionMethod === "volunteer" ? "自愿发言 · 等待记录" : attempt.selectionMethod === "teacher" ? "老师主动叫 · 等待回答" : "等待回答";
     const target = Model.TASK_TARGETS[attempt.taskTarget] || "这题回答";
     elements.pendingPrompt.textContent = `${Model.formatLessonLabel(attemptTextbookId, attemptLessonId)}｜${target}。请先让学生回答，再记录回答情况。`;
     renderResponseForm(attempt);
@@ -1234,7 +1254,7 @@
     const student = attemptStudent(attempt);
     const lessonId = attempt.lessonId || state.session.lessonId;
     const lessonNumber = Model.getLessonNumber(lessonId);
-    const source = attempt.selectionMethod === "manual" ? "手动补记" : attempt.selectionMethod === "volunteer" ? "自愿发言" : "随机抽问";
+    const source = attempt.selectionMethod === "manual" ? "手动补记" : attempt.selectionMethod === "volunteer" ? "自愿发言" : attempt.selectionMethod === "teacher" ? "老师主动叫" : "随机抽问";
     return `${source} · 学号末四位 ${studentIdSuffix(student)} · 第 ${attempt.roundNumber} 轮 · 第 ${lessonNumber} 课`;
   }
 
@@ -1265,7 +1285,7 @@
       const status = attempt.outcome === "pending"
         ? "等待回答"
         : attempt.outcome === "not_answered"
-          ? `未回答 · ${noResponseReasonLabel(attempt.noResponseReason)}`
+          ? `未回答${attempt.roundSkipped ? " · 本轮跳过" : ""} · ${noResponseReasonLabel(attempt.noResponseReason)}`
           : attempt.responseStatus === "partial"
             ? "部分回答"
             : attempt.responseStatus === "peer_supported"
@@ -1288,10 +1308,11 @@
     elements.pendingMetric.textContent = Model.pendingAttempt(state) ? "1" : "0";
     elements.notAnsweredMetric.textContent = String(summary.notAnsweredCount);
     elements.modePill.textContent = "原始记录";
-    elements.sessionRecordSummary.textContent = `回答 ${summary.totalAnswerCount} 次｜随机回答 ${summary.randomCallEffectiveAnswerCount} 次｜自愿回答 ${summary.voluntaryEffectiveAnswerCount} 次。每次回答独立保存。`;
+    elements.sessionRecordSummary.textContent = `回答 ${summary.totalAnswerCount} 次｜随机回答 ${summary.randomCallEffectiveAnswerCount} 次｜自愿回答 ${summary.voluntaryEffectiveAnswerCount} 次｜老师主动叫后回答 ${summary.teacherCallEffectiveAnswerCount} 次。每次回答独立保存。`;
     elements.eligibleLabel.textContent = `本轮 ${progress.eligibleCount} 位`;
 
-    const answeredIds = new Set(state.currentRound.answeredStudentIds);
+    const availableIds = new Set(Model.getDrawingPool(state).map(student => student.id));
+    const answeredIds = new Set(Model.getEligibleStudents(state).filter(student => !availableIds.has(student.id)).map(student => student.id));
     const pendingAttempt = Model.pendingAttempt(state);
     const pendingId = pendingAttempt ? pendingAttempt.studentId : null;
     const summaries = Model.getSummary(state);
@@ -1330,12 +1351,14 @@
 
       const summary = summaries.find((item) => item.student.id === student.id);
       const volunteerCount = summary ? summary.voluntarySpeakingCount : 0;
-      const volunteerSuffix = volunteerCount ? ` · 自愿 ${volunteerCount} 次` : "";
+      const volunteerSuffix = (volunteerCount ? ` · 自愿 ${volunteerCount} 次` : "")
+        + (summary?.teacherCallCount ? ` · 老师主动叫 ${summary.teacherCallCount} 次` : "");
       const status = document.createElement("span");
       status.className = "student-status";
       if (excluded) status.textContent = "缺席 · 不抽问";
       else if (pendingId === student.id) status.textContent = "等待回答";
-      else if (answeredIds.has(student.id)) status.textContent = `本轮已完成 · 回答 ${summary ? summary.totalAnswerCount : 0} 次${volunteerSuffix}`;
+      else if (state.attempts.some(a => a.studentId === student.id && a.roundNumber === state.currentRound.number && a.roundSkipped === true && a.outcome === "not_answered" && !["voided", "corrected"].includes(a.recordStatus))) status.textContent = "本轮跳过 · 下一轮恢复";
+      else if (answeredIds.has(student.id)) status.textContent = `本轮已回答 · 回答 ${summary ? summary.totalAnswerCount : 0} 次${volunteerSuffix}`;
       else status.textContent = `随机 ${summary ? summary.randomCallCount : 0} 次${volunteerSuffix}`;
 
       const controls = document.createElement("div");
@@ -1343,10 +1366,10 @@
       const volunteerButton = document.createElement("button");
       volunteerButton.type = "button";
       volunteerButton.className = "volunteer-button";
-      volunteerButton.textContent = "自愿发言 +1";
+      volunteerButton.textContent = pendingId === student.id ? "改为自愿发言" : "自愿发言 +1";
       volunteerButton.disabled = excluded || isDrawing;
       volunteerButton.setAttribute("aria-label", `${student.name} 自愿发言加一次`);
-      volunteerButton.title = excluded ? "请先改为到课，再记录发言" : "立即保存一次自愿回答，不影响正在进行的抽问";
+      volunteerButton.title = excluded ? "请先改为到课，再记录发言" : "保存一次自愿回答，该学生本轮暂停抽问，下一轮恢复";
       volunteerButton.addEventListener("click", () => recordVolunteer(student.id));
       const checkLabel = document.createElement("label");
       checkLabel.className = "absent-toggle";
@@ -1357,7 +1380,10 @@
       checkbox.setAttribute("aria-label", `${student.name} 缺席`);
       checkbox.addEventListener("change", () => {
         try {
-          state = Model.setAbsent(state, student.id, checkbox.checked);
+          const current = Model.pendingAttempt(state);
+          state = Model.setAbsent(state, student.id, checkbox.checked, current?.studentId === student.id
+            ? { taskPrompt: taskPromptDraft, note: noteDraft, answerContext: answerContextDraft }
+            : undefined);
           if (!Model.pendingAttempt(state)) { stopTimer(); resetResponseDraft(); }
           persist();
           renderApp();
@@ -1370,7 +1396,13 @@
       const checkText = document.createElement("span");
       checkText.textContent = "缺席";
       checkLabel.append(checkbox, checkText);
-      controls.append(status, volunteerButton, checkLabel);
+      const teacherButton = volunteerButton.cloneNode(false);
+      teacherButton.textContent = pendingId === student.id ? "改为老师主动叫" : "老师主动叫";
+      teacherButton.disabled = excluded || isDrawing || Boolean(pendingId && pendingId !== student.id);
+      teacherButton.setAttribute("aria-label", `${student.name} 老师主动叫，等待记录回答`);
+      teacherButton.title = "选择这位学生后，记录已回答或未回答";
+      teacherButton.addEventListener("click", () => recordVolunteer(student.id, "teacher"));
+      controls.append(status, volunteerButton, teacherButton, checkLabel);
       row.append(identity, controls);
       elements.studentList.appendChild(row);
     });
@@ -1383,20 +1415,26 @@
     showToast(message, warning);
   }
 
-  function recordVolunteer(studentId) {
+  function recordVolunteer(studentId, method = "volunteer") {
     if (!state || isDrawing || state.session.status === "completed") return;
     try {
       const student = Model.getStudent(state, studentId);
-      state = Model.recordVolunteer(state, studentId, {
+      const existingPending = Model.pendingAttempt(state);
+      const changesSource = existingPending?.studentId === studentId;
+      state = (method === "teacher" ? Model.recordTeacherCall : Model.recordVolunteer)(state, studentId, {
         taskMode: state.session.taskMode,
         taskTarget: taskDraftTarget,
         taskPrompt: taskPromptDraft,
         responseStatus: "answered"
       });
+      if ((method === "teacher" || changesSource) && elements.volunteerDialog.open) closeDialog(elements.volunteerDialog);
+      if (method === "teacher" && !existingPending) { resetResponseDraft(); ensurePendingDraft(Model.pendingAttempt(state)); }
       const saved = persist();
       renderApp();
       volunteerFeedback(saved
-        ? `已记录：学号末四位 ${studentIdSuffix(student)} ${student.name}，自愿发言＋1。已保存在本机。`
+        ? changesSource ? `已将 ${student.name} 的当前回答来源改为${method === "teacher" ? "老师主动叫" : "自愿发言"}，请保存回答结果。`
+        : method === "teacher" ? `已选择 ${student.name}，请记录已回答或未回答。`
+        : `已记录：学号末四位 ${studentIdSuffix(student)} ${student.name}，${method === "teacher" ? "老师主动叫" : "自愿发言"}＋1。本轮暂停抽问，下一轮恢复。已保存在本机。`
         : "本次记录暂未保存到本机，请保持页面打开并下载备份。", !saved);
     } catch (error) {
       volunteerFeedback(error.message, true);
@@ -1406,9 +1444,12 @@
   function renderVolunteers() {
     const ended = state.session.status === "completed";
     elements.volunteerPanelButton.disabled = ended;
+    document.getElementById("teacherPanelButton").disabled = ended;
     elements.undoVolunteerButton.disabled = ended || isDrawing
-      || state.undoStack.at(-1)?.event.type !== "volunteer_recorded";
+      || !["volunteer_recorded", "teacher_recorded"].includes(state.undoStack.at(-1)?.event.type);
     if (!elements.volunteerDialog.open) return;
+    const method = elements.volunteerDialog.dataset.method || "volunteer";
+    const label = method === "teacher" ? "老师主动叫" : "自愿发言";
     const focusedStudent = document.activeElement?.dataset.volunteerStudent;
     const summaries = Model.getSummary(state);
     const students = Model.findRosterStudents(state, elements.volunteerSearchInput.value);
@@ -1425,16 +1466,19 @@
       name.textContent = student.name;
       const count = document.createElement("small");
       count.textContent = excluded ? "缺席 · 请先在名单中改为到课"
-        : `本堂自愿发言 ${summaries.find(item => item.student.id === student.id)?.voluntarySpeakingCount || 0} 次`;
+        : `本堂${label} ${summaries.find(item => item.student.id === student.id)?.[method === "teacher" ? "teacherCallCount" : "voluntarySpeakingCount"] || 0} 次`;
       identity.append(name, count);
       const button = document.createElement("button");
       button.type = "button";
       button.className = "button button-secondary";
-      button.textContent = "＋1";
+      const pending = Model.pendingAttempt(state);
+      const isPendingStudent = pending?.studentId === student.id;
+      button.textContent = isPendingStudent ? "更正来源" : method === "teacher" ? "叫这位" : "＋1";
       button.dataset.volunteerStudent = student.id;
-      button.setAttribute("aria-label", `学号末四位 ${studentIdSuffix(student)} ${student.name} 自愿发言加一次`);
-      button.disabled = excluded || ended || isDrawing;
-      button.addEventListener("click", () => recordVolunteer(student.id));
+      button.setAttribute("aria-label", `学号末四位 ${studentIdSuffix(student)} ${student.name} ${label}加一次`);
+      button.disabled = excluded || ended || isDrawing || Boolean(method === "teacher" && pending && !isPendingStudent);
+      if (isPendingStudent) button.title = "更正当前回答的来源，再保存回答结果";
+      button.addEventListener("click", () => recordVolunteer(student.id, method));
       row.append(seat, identity, button);
       elements.volunteerList.append(row);
       if (focusedStudent === student.id) button.focus({ preventScroll: true });
@@ -1455,9 +1499,9 @@
     elements.sessionMeta.textContent = `${state.session.date || "未设置日期"} · ${state.session.status === "completed" ? "已结束" : "进行中"} · 课堂回答记录`;
     populateActiveContextSelectors();
     elements.roundNumber.textContent = String(progress.roundNumber);
-    elements.progressLabel.textContent = `本轮完成 ${progress.answeredCount}／${progress.eligibleCount}`;
+    elements.progressLabel.textContent = `本轮完成 ${progress.completedCount}／${progress.eligibleCount}`;
     elements.poolLabel.textContent = `尚未完成 ${progress.poolCount} 人`;
-    const percentage = progress.eligibleCount ? Math.round((progress.answeredCount / progress.eligibleCount) * 100) : 0;
+    const percentage = progress.eligibleCount ? Math.round((progress.completedCount / progress.eligibleCount) * 100) : 0;
     elements.progressBar.style.width = `${percentage}%`;
     elements.taskTargetSelect.value = taskDraftTarget;
     renderMainStage(progress);
@@ -1714,7 +1758,7 @@
       const attempts = entry.attempts.filter((attempt) => attempt.outcome !== "undone");
       const summary = Model.summarizeAttempts(attempts);
       const meta = document.createElement("span");
-      meta.textContent = `${entry.session.date || "未设置日期"} · ${Model.formatLessonLabel(entry.session.textbookId, entry.session.lessonId)} · ${summary.attempts} 条记录 · 回答 ${summary.totalAnswerCount} 次 · 自愿 ${summary.voluntarySpeakingCount} 次`;
+      meta.textContent = `${entry.session.date || "未设置日期"} · ${Model.formatLessonLabel(entry.session.textbookId, entry.session.lessonId)} · ${summary.attempts} 条记录 · 回答 ${summary.totalAnswerCount} 次 · 自愿 ${summary.voluntarySpeakingCount} 次 · 老师主动叫 ${summary.teacherCallCount} 次`;
       copy.append(title, meta);
       const button = document.createElement("button");
       button.type = "button";
@@ -1829,7 +1873,7 @@
     const answered = rows.filter(row => row.attempt.outcome === "answered");
     const count = method => answered.filter(row => row.attempt.selectionMethod === method).length;
     elements.recordsSummary.textContent = scope + (rows.length
-      ? `回答 ${answered.length} 次｜随机回答 ${count("random")} 次｜自愿回答 ${count("volunteer")} 次｜手动补记 ${count("manual")} 次｜未回答 ${rows.filter(row => row.attempt.outcome === "not_answered").length} 次`
+      ? `回答 ${answered.length} 次｜随机回答 ${count("random")} 次｜自愿回答 ${count("volunteer")} 次｜老师主动叫后回答 ${count("teacher")} 次｜手动补记 ${count("manual")} 次｜未回答 ${rows.filter(row => row.attempt.outcome === "not_answered").length} 次`
       : "没有查到这位学生的记录。");
     elements.recordsList.replaceChildren();
     if (rows.length === 0) {
@@ -1853,9 +1897,9 @@
         attempt.lessonId || entry.session.lessonId
       ));
       const detail = document.createElement("span");
-      const source = attempt.selectionMethod === "manual" ? "手动补记" : attempt.selectionMethod === "volunteer" ? "自愿发言" : "随机抽问";
+      const source = attempt.selectionMethod === "manual" ? "手动补记" : attempt.selectionMethod === "volunteer" ? "自愿发言" : attempt.selectionMethod === "teacher" ? "老师主动叫" : "随机抽问";
       const status = attempt.outcome === "not_answered"
-        ? `未回答：${noResponseReasonLabel(attempt.noResponseReason)}`
+        ? `未回答${attempt.roundSkipped ? " · 本轮跳过" : ""}：${noResponseReasonLabel(attempt.noResponseReason)}`
         : attempt.outcome === "pending"
           ? "等待回答"
           : attempt.responseStatus === "partial"
@@ -1974,25 +2018,38 @@
     answerContextDraft = event.target.value;
   });
   elements.drawButton.addEventListener("click", handleDraw);
-  elements.volunteerPanelButton.addEventListener("click", () => {
+  function openParticipationDialog(method) {
+    const label = method === "teacher" ? "老师主动叫" : "自愿发言";
+    elements.volunteerDialog.dataset.method = method;
+    document.getElementById("volunteerTitle").textContent = `记录${label}`;
+    elements.closeVolunteerButton.setAttribute("aria-label", `关闭${label}面板`);
+    document.getElementById("volunteerHint").textContent = method === "teacher"
+      ? "点击「叫这位」选择学生，再记录已回答或未回答。正在回答的学生可更正来源；请先完成当前回答，再叫另一位。"
+      : "学生回答后点击「＋1」。该学生本轮暂停抽问，下一轮恢复。正在回答的学生只更正来源，不会重复加一次。";
+    elements.volunteerList.setAttribute("aria-label", `${label}学生名单`);
+    elements.undoVolunteerButton.textContent = "撤销上一次发言记录";
     elements.volunteerSearchInput.value = "";
-    elements.volunteerFeedback.textContent = "每点一次，记录一次自愿发言。";
+    elements.volunteerFeedback.textContent = method === "teacher" ? "选择学生后再记录回答结果。" : "每点一次「＋1」，记录一次已发生的自愿发言。";
     elements.volunteerFeedback.classList.remove("is-warning");
     openDialog(elements.volunteerDialog);
     renderVolunteers();
     elements.volunteerSearchInput.focus();
-  });
+  }
+  elements.volunteerPanelButton.addEventListener("click", () => openParticipationDialog("volunteer"));
+  document.getElementById("teacherPanelButton").addEventListener("click", () => openParticipationDialog("teacher"));
   elements.closeVolunteerButton.addEventListener("click", () => closeDialog(elements.volunteerDialog));
-  elements.volunteerDialog.addEventListener("close", () => elements.volunteerPanelButton.focus());
+  elements.volunteerDialog.addEventListener("close", () => (elements.volunteerDialog.dataset.method === "teacher" ? document.getElementById("teacherPanelButton") : elements.volunteerPanelButton).focus());
   elements.volunteerSearchInput.addEventListener("input", renderVolunteers);
   elements.undoVolunteerButton.addEventListener("click", () => {
     if (!state || isDrawing || state.session.status === "completed"
-      || state.undoStack.at(-1)?.event.type !== "volunteer_recorded") return;
+      || !["volunteer_recorded", "teacher_recorded"].includes(state.undoStack.at(-1)?.event.type)) return;
     try {
       state = Model.undoLastAction(state);
+      if ((method === "teacher" || changesSource) && elements.volunteerDialog.open) closeDialog(elements.volunteerDialog);
+      if (method === "teacher" && !existingPending) { resetResponseDraft(); ensurePendingDraft(Model.pendingAttempt(state)); }
       const saved = persist();
       renderApp();
-      volunteerFeedback(saved ? "已撤销上一次自愿发言。" : "撤销暂未保存到本机，请保持页面打开并下载备份。", !saved);
+      volunteerFeedback(saved ? "已撤销上一次发言记录。" : "撤销暂未保存到本机，请保持页面打开并下载备份。", !saved);
     } catch (error) {
       volunteerFeedback(error.message, true);
     }
@@ -2010,6 +2067,7 @@
   elements.recordNextButton.addEventListener("click", () => handleResponse(true));
   elements.recordCompleteButton.addEventListener("click", () => handleResponse(false));
   elements.noAnswerButton.addEventListener("click", openNoResponseDialog);
+  document.getElementById("skipRoundButton").addEventListener("click", () => { openNoResponseDialog(); document.getElementById("roundSkipInput").checked = true; });
   elements.undoButton.addEventListener("click", handleUndo);
   elements.nextRoundButton.addEventListener("click", handleNextRound);
   elements.exportCsvButton.addEventListener("click", exportCsv);

@@ -1,17 +1,10 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useTracker } from '../state/TrackerContext'
-import { participationRows } from '../utils/participation'
+import { compareSessions, latestParticipationSession, participationRows } from '../utils/participation'
 import { studentCodeLastFour } from '../utils/studentIdentity'
 import type { ClassSession } from '../types'
 
 const MAX_URGENT_STUDENTS = 8
-
-function compareSessions(a: ClassSession, b: ClassSession) {
-  return b.session_date.localeCompare(a.session_date)
-    || (b.session_number ?? 0) - (a.session_number ?? 0)
-    || (b.created_at ?? '').localeCompare(a.created_at ?? '')
-    || b.id.localeCompare(a.id)
-}
 
 function participationHref(courseId: string, session?: ClassSession) {
   const params = new URLSearchParams({ course: courseId })
@@ -23,60 +16,46 @@ function participationHref(courseId: string, session?: ClassSession) {
 }
 
 export function TodayPage() {
-  const { snapshot, startSession, busy } = useTracker()
-  const navigate = useNavigate()
-
-  const openAfterClassRecord = async (courseId: string) => {
-    try {
-      const sessionId = await startSession(courseId)
-      navigate(`/sessions/${sessionId}?view=reflection`)
-    } catch {
-      // The provider displays the error banner.
-    }
-  }
+  const { snapshot } = useTracker()
 
   const classViews = snapshot.courses
     .filter((course) => !course.archived_at)
     .map((course, courseIndex) => {
-      const sessions = snapshot.sessions.filter((session) => session.course_id === course.id).sort(compareSessions)
-      const latest = sessions[0]
-      const running = sessions.find((session) => session.status === 'in_progress')
+      const latest = latestParticipationSession(snapshot, course.id)
       const activeEnrollments = snapshot.enrollments.filter((enrollment) => enrollment.course_id === course.id && enrollment.status === 'active')
       const roster = activeEnrollments.flatMap((enrollment) => {
         const student = snapshot.students.find((item) => item.id === enrollment.student_id)
         return student ? [{ enrollment, student }] : []
       })
-      const latestRows = latest
-        ? participationRows(snapshot, course.id, latest.id).filter((row) => row.enrollment.status === 'active')
-        : []
+      const latestRows = participationRows(snapshot, course.id, latest?.id ?? '').filter((row) => row.enrollment.status === 'active')
       const answeredStudents = latest ? latestRows.filter((row) => row.total > 0).length : null
       const openFollowupsFor = (studentId: string) => snapshot.followups.filter((followup) =>
         followup.status === 'open' && followup.course_id === course.id && followup.student_id === studentId)
       const candidates = latestRows
         .map((row) => {
           const followups = openFollowupsFor(row.student.id)
-          const hasNoAnswer = row.total === 0
+          const hasNoAnswer = Boolean(latest) && row.total === 0
           return {
             course,
             courseIndex,
             latest,
             row,
             followups,
+            hasNoAnswer,
             priority: hasNoAnswer && followups.length ? 0 : hasNoAnswer ? 1 : 2,
           }
         })
-        .filter((item) => item.row.total === 0 || item.followups.length > 0)
+        .filter((item) => item.hasNoAnswer || item.followups.length > 0)
 
       return {
         course,
-        sessions,
         latest,
-        running,
         roster,
         classSize: activeEnrollments.length,
         answeredStudents,
         zeroAnswerStudents: latest ? Math.max(activeEnrollments.length - (answeredStudents ?? 0), 0) : null,
         randomAnswers: latest ? latestRows.reduce((sum, row) => sum + row.random, 0) : null,
+        teacherAnswers: latest ? latestRows.reduce((sum, row) => sum + row.teacher, 0) : null,
         voluntaryAnswers: latest ? latestRows.reduce((sum, row) => sum + row.voluntary, 0) : null,
         candidates,
       }
@@ -118,13 +97,14 @@ export function TodayPage() {
           <p className="class-card-meta">{view.course.schedule_text || '尚未登记课表'} · {view.course.room || '教室未登记'}</p>
 
           <div className="class-participation" aria-label={`${view.course.name}最近一堂课的回答摘要`}>
-            <div className="class-participation-heading"><span>最近一堂课的回答摘要</span><small>{view.latest ? '每个回答事件各记一次' : '建立课次后显示'}</small></div>
+            <div className="class-participation-heading"><span>最近一堂课的回答摘要</span><small>{view.latest ? '每个回答事件各记一次' : '有课堂记录后显示'}</small></div>
             <div className="participation-metrics">
               <div><strong>{view.classSize}</strong><span>班级人数</span></div>
               <div><strong>{view.answeredStudents ?? '—'}</strong><span>已记录回答人数</span></div>
               <div className={view.zeroAnswerStudents ? 'attention' : ''}><strong>{view.zeroAnswerStudents ?? '—'}</strong><span>零回答人数</span></div>
               <div><strong>{view.randomAnswers ?? '—'}</strong><span>随机抽问</span></div>
               <div><strong>{view.voluntaryAnswers ?? '—'}</strong><span>自愿发言</span></div>
+              <div><strong>{view.teacherAnswers ?? '—'}</strong><span>老师主动叫</span></div>
             </div>
           </div>
 
@@ -133,7 +113,9 @@ export function TodayPage() {
             {view.latest
               ? <Link className="secondary-button compact" to={participationHref(view.course.id, view.latest)}>记录自愿发言</Link>
               : <span className="secondary-button compact disabled-action" aria-disabled="true">记录自愿发言</span>}
-            <button type="button" className="primary-button compact" disabled={busy} onClick={() => void openAfterClassRecord(view.course.id)}>记录课后状况</button>
+            {view.latest
+              ? <Link className="primary-button compact" to={`/sessions/${view.latest.id}?view=reflection`}>记录课后状况</Link>
+              : <span className="primary-button compact disabled-action" aria-disabled="true">记录课后状况</span>}
           </div>
         </article>
       ))}
@@ -149,13 +131,15 @@ export function TodayPage() {
       <p className="section-lead">优先显示最近一堂课零回答或有当前待办的学生，最多显示 8 人。</p>
       {urgentStudents.length ? <div className="urgent-student-list">
         {urgentStudents.map((item) => {
-          const reason = [item.row.total === 0 ? '零回答' : '', item.followups.length ? `${item.followups.length} 项待办` : ''].filter(Boolean).join(' · ')
+          const reason = [item.hasNoAnswer ? '零回答' : '', item.followups.length ? `${item.followups.length} 项待办` : ''].filter(Boolean).join(' · ')
           return <article className="urgent-student-row" key={`${item.course.id}-${item.row.student.id}`}>
             <span className="urgent-seat" aria-label={`學號末四位 ${studentCodeLastFour(item.row.student.student_code)}`}>{studentCodeLastFour(item.row.student.student_code)}</span>
             <div className="urgent-student-identity"><strong>{item.row.student.chinese_name}</strong><small>{item.course.code} · {reason}</small></div>
             <div className="urgent-actions">
               <Link to={participationHref(item.course.id, item.latest)}>查看回答次数</Link>
-              <Link to={participationHref(item.course.id, item.latest)}>记录自愿发言</Link>
+              {item.latest
+                ? <Link to={participationHref(item.course.id, item.latest)}>记录自愿发言</Link>
+                : <Link to={`/students/${item.row.student.id}?course=${item.course.id}`}>查看待办</Link>}
             </div>
           </article>
         })}
@@ -182,7 +166,7 @@ export function TodayPage() {
           {history.map((session) => {
             const course = courseForSession(session)
             return <article className="history-row" key={session.id}>
-              <div><strong>{course?.code ?? '未命名班级'}</strong><span>{session.session_date}</span></div>
+              <div><strong>{course?.code ?? '未命名班级'}</strong><Link to={`/sessions/${session.id}?view=reflection`}>{session.session_date}</Link></div>
               <small>{session.topic || '课堂记录'} · {session.status === 'in_progress' ? '进行中' : '已完成'}</small>
             </article>
           })}

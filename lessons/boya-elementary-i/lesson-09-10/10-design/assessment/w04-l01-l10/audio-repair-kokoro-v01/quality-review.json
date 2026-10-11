@@ -1,0 +1,42 @@
+{
+  "status": "samples_only_not_accepted",
+  "sample_count": 9,
+  "full_exam_clip_count": 33,
+  "model": "hexgrad/Kokoro-82M-v1.1-zh",
+  "revision": "01e7505bd6a7a2ac4975463114c3a7650a9f7218",
+  "voice": "zf_001",
+  "speed": 1.0,
+  "all_generator_output_consumed": true,
+  "technical_status": "9/9 pass",
+  "browser_status": "9/9 local metadata pass",
+  "human_listening_completed": false,
+  "batch_generation_authorized": false,
+  "dashboard_switched": false,
+  "statuses": {
+    "E04-B01": "two_asr_text_consistent_human_listening_pending",
+    "E01-A02": "isolated_syllable_asr_unreliable_human_listening_required",
+    "E03-A01": "blocked_frontend_non_erhua_conflicts_huar",
+    "E03-A02": "isolated_word_asr_disagrees_human_listening_required",
+    "E03-C01": "isolated_syllables_asr_unusable_human_listening_required",
+    "E05-B01": "two_asr_text_consistent_role_identity_unresolved",
+    "E08-C01": "natural_third_tone_sandhi_not_confirmed_frontend_error_asr_disagrees",
+    "E09-C01": "telephone_asr_disagrees_exact_digits_unverified",
+    "E04-C01": "two_asr_text_consistent_human_listening_pending"
+  },
+  "role_sensitive_questions": [
+    15,
+    18,
+    20,
+    21,
+    23,
+    30
+  ],
+  "telephone_expected_digits": "01000002301",
+  "limitations": [
+    "ASR cannot verify tone, erhua, naturalness or exact repeated digits",
+    "Default frontend phonemes for 花儿 are ㄏ穵1ㄦ2; separate er2 conflicts with huār",
+    "No frontend patch, digit stitching, model mixing, original question/answer edits or main dashboard update"
+  ],
+  "diagnosis_correction": "辅导 fu2 dao3 is normal third-tone sandhi; earlier confirmed-error label withdrawn",
+  "telephone_frontend": "11/11 digits exact in order; sound remains unverified"
+}

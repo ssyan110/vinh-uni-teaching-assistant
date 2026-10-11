@@ -1,0 +1,10 @@
+{
+  "mode": "Node VM synthetic DOM/audio events; not browser, sound or real playback",
+  "initial": "Nhóm 1 · 1 · 1 / 33",
+  "oneSyntheticEnded": "完整播放 1 次／计划播放 2 次",
+  "canAdvanceAfterOnePlay": "Nhóm 2 · 2 · 2 / 33",
+  "loadError": "音频无法加载；请把dashboard.html、dashboard.js和audio文件夹放在同一目录。",
+  "pinyinInstruction": "Audio E01-C01 · 18.52秒 · 录音内已读两轮，只播放整段一次；第三音节不设题",
+  "timerStart": "看题剩余25秒",
+  "trackFilesExist": true
+}

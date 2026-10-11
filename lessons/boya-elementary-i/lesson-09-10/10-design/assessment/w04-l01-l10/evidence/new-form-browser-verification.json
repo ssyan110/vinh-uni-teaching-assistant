@@ -1,0 +1,48 @@
+{
+  "form_id": "1sWTvYRU62hX6g6q2Jb87ka0p_Zry7jRpbWSj-yxGzBo",
+  "status": "DRAFT_UNPUBLISHED/TEACHER_REVIEW",
+  "student_ready": false,
+  "accepting_responses": false,
+  "response_count": 0,
+  "verification_source": "parent relayed supported browser owner validation; metadata independently reread in this thread",
+  "question_count": 50,
+  "mc_count": 30,
+  "manual_fill_count": 20,
+  "points_per_question": 2,
+  "points_total": 100,
+  "all_questions_required": false,
+  "questions_options_keys_types_points_mismatches": 0,
+  "fill_exact_match_keys": false,
+  "mark_all_other_answers_incorrect": false,
+  "email_collection": false,
+  "sign_in_required": false,
+  "show_correct_answers": false,
+  "show_missed_questions": false,
+  "show_point_values": false,
+  "grade_release": "immediate_coupled_with_email_collection_off",
+  "post_submission_grade_visibility": "untested_no_response_submitted",
+  "identity_fields": [
+    {
+      "title": "Họ và tên（姓名）",
+      "required": true,
+      "points": 0
+    },
+    {
+      "title": "MSSV（学号）",
+      "required": true,
+      "points": 0
+    }
+  ],
+  "response_spreadsheet_id": "1_IjuwmwN48Ewu-wzaNhBeW9Ukvg3AlnNwa6D5PbjfPY",
+  "publication": "not_authorized_or_performed",
+  "form_item_ids": "not_extracted_do_not_invent_sequence_maps_Q01_Q50_to_bank_rows_2_51",
+  "item_count_including_identity": 52,
+  "scored_questions_optional": true,
+  "identity_fields_verified": true,
+  "preview_required_fields": 2,
+  "preview_radio_groups": 30,
+  "preview_text_fields": 22,
+  "response_tab": "Form responses 1",
+  "response_sheet_id": 1361729076,
+  "response_sheet_header_check": "Timestamp/Score/Name/MSSV/Q01–Q50 order verified by browser owner; no response row read"
+}

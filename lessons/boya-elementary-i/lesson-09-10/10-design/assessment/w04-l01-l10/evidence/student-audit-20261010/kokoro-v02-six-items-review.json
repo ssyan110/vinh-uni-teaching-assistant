@@ -1,0 +1,229 @@
+{
+  "exam_id": "W04-L01L10-20261006",
+  "candidate": "audio-repair-kokoro-v02",
+  "review_scope": [
+    15,
+    18,
+    20,
+    21,
+    23,
+    30
+  ],
+  "method": "First extract pure spoken_text only, without role metadata or answers; form student inference; then check original items/options/answers. Verify sample-manifest text and audio hashes. Existing ASR used only to identify listening targets. Prior audit already knew answers; staged rereading is independent reasoning, not blinded human experiment.",
+  "status": "six_text_semantics_pass_human_audio_pending",
+  "no_content_changed": true,
+  "rows": [
+    {
+      "question": 15,
+      "audio_id": "E05-B01",
+      "verdict": "text_semantics_pass_audio_acceptance_pending",
+      "prompt": "小王是英国人吗？",
+      "options": [
+        "没有说",
+        "不是",
+        "是"
+      ],
+      "pure_spoken_text": [
+        "这是我的朋友安娜。",
+        "安娜，你是哪国人？",
+        "我是英国人。",
+        "我叫小王。我也是英国人，认识你很高兴。"
+      ],
+      "student_information_reasoning": "「我叫小王。我也是英国人」把名字與國籍放在同一輪。學生不必知道角色metadata；也仍須理解承接安娜的英国人。",
+      "original_answer_checked": "C／是",
+      "answer_unique": true,
+      "leakage_or_difficulty": "我叫小王只補身份，不增加新的國籍答案；我也是英国人原句保留。 沒有新增正解命題或刪除干擾資訊；相較缺姓名版，可答性提高是修復非目標歧義，非難度等值證據。",
+      "manifest_spoken_text_matches": true,
+      "audio_sha256_matches": true,
+      "existing_asr_observations": [
+        {
+          "model": "small",
+          "text": "這是我的朋友安娜。安娜,你是哪國人?我是英國人。我叫小王,我也是英國人,認識你很高興。"
+        },
+        {
+          "model": "base",
+          "text": "這是我的朋友安娜安娜 你是哪國人我是英國人我叫小王 我也是英國人認識你很高興"
+        }
+      ],
+      "acoustic_caution": "沒有做真人親聽，仍需核對姓名、語調、問答停頓及指涉。"
+    },
+    {
+      "question": 18,
+      "audio_id": "E06-B01",
+      "verdict": "text_semantics_pass_audio_acceptance_pending",
+      "prompt": "本子是谁的？",
+      "options": [
+        "小王的",
+        "小林的",
+        "李美的"
+      ],
+      "pure_spoken_text": [
+        "小王，这是谁的笔？是你的吗？",
+        "不是我的，是李美的。",
+        "这个本子呢？",
+        "这个本子是我的。"
+      ],
+      "student_information_reasoning": "「小王，这是谁的笔？是你的吗？」確定受話者；下一輪回答「不是我的，是李美的」，再問「这个本子呢？」後回答「这个本子是我的」。自然問答連續足以把本子所有者映射到小王。",
+      "original_answer_checked": "A／小王的",
+      "answer_unique": true,
+      "leakage_or_difficulty": "沒有新物品或所有權；仍須區分筆的李美與本子的小王。 沒有新增正解命題或刪除干擾資訊；相較缺姓名版，可答性提高是修復非目標歧義，非難度等值證據。",
+      "manifest_spoken_text_matches": true,
+      "audio_sha256_matches": true,
+      "existing_asr_observations": [
+        {
+          "model": "small",
+          "text": "肖王这是谁的笔,是你的吗?不是我的,是李美蒂。这个本子呢?这个本子是我的。"
+        },
+        {
+          "model": "base",
+          "text": "小王这是谁的笔 是你的吗?不是我的 是李美帝这个本子呢?这个本子是我的"
+        }
+      ],
+      "acoustic_caution": "small轉為肖王、base為小王；姓名及輪次須親聽，不以ASR作驗收。"
+    },
+    {
+      "question": 20,
+      "audio_id": "E07-B01",
+      "verdict": "text_semantics_pass_audio_acceptance_pending",
+      "prompt": "小王住哪儿？",
+      "options": [
+        "教室里",
+        "学校外边",
+        "学校宿舍"
+      ],
+      "pure_spoken_text": [
+        "小王，你住在学校里吗？",
+        "不，我住在学校外边。",
+        "远吗？",
+        "不远，就在学校东边。"
+      ],
+      "student_information_reasoning": "「小王，你住在学校里吗？」後答「不，我住在学校外边」，受話者及住處明確。",
+      "original_answer_checked": "B／学校外边",
+      "answer_unique": true,
+      "leakage_or_difficulty": "否定学校里與学校外边線索不變。 沒有新增正解命題或刪除干擾資訊；相較缺姓名版，可答性提高是修復非目標歧義，非難度等值證據。",
+      "manifest_spoken_text_matches": true,
+      "audio_sha256_matches": true,
+      "existing_asr_observations": [
+        {
+          "model": "small",
+          "text": "小王,你住在学校里吗?不,我住在学校外边。院吗?不,院就在学校东边。"
+        },
+        {
+          "model": "base",
+          "text": "小王,你住在学校里吗?不,我住在学校外边愿吗?不愿,就在学校东边"
+        }
+      ],
+      "acoustic_caution": "沒有做真人親聽，仍需核對姓名、語調、問答停頓及指涉。"
+    },
+    {
+      "question": 21,
+      "audio_id": "E07-B01",
+      "verdict": "text_semantics_pass_audio_acceptance_pending",
+      "prompt": "小王的家在学校哪边？",
+      "options": [
+        "北边",
+        "西边",
+        "东边"
+      ],
+      "pure_spoken_text": [
+        "小王，你住在学校里吗？",
+        "不，我住在学校外边。",
+        "远吗？",
+        "不远，就在学校东边。"
+      ],
+      "student_information_reasoning": "同一對話已以小王為受話者；「远吗？」後答「不远，就在学校东边」，仍承接其住處。",
+      "original_answer_checked": "C／东边",
+      "answer_unique": true,
+      "leakage_or_difficulty": "東邊與遠近線索不變。題幹「家」對應住處的既有推論仍在。 沒有新增正解命題或刪除干擾資訊；相較缺姓名版，可答性提高是修復非目標歧義，非難度等值證據。",
+      "manifest_spoken_text_matches": true,
+      "audio_sha256_matches": true,
+      "existing_asr_observations": [
+        {
+          "model": "small",
+          "text": "小王,你住在学校里吗?不,我住在学校外边。院吗?不,院就在学校东边。"
+        },
+        {
+          "model": "base",
+          "text": "小王,你住在学校里吗?不,我住在学校外边愿吗?不愿,就在学校东边"
+        }
+      ],
+      "acoustic_caution": "沒有做真人親聽，仍需核對姓名、語調、問答停頓及指涉。"
+    },
+    {
+      "question": 23,
+      "audio_id": "E08-B01",
+      "verdict": "text_semantics_pass_audio_acceptance_pending",
+      "prompt": "小王几点下课？",
+      "options": [
+        "7:30",
+        "6:00",
+        "7:00"
+      ],
+      "pure_spoken_text": [
+        "小王，今晚六点一起吃饭吧。",
+        "六点我有课，七点下课。",
+        "那七点半食堂见。",
+        "好。"
+      ],
+      "student_information_reasoning": "「小王，今晚六点一起吃饭吧」後答「六点我有课，七点下课」，再另約「七点半食堂见」；姓名及三個時間功能明確。",
+      "original_answer_checked": "C／7:00",
+      "answer_unique": true,
+      "leakage_or_difficulty": "仍須區分有課、下課、見面；六點／七點／七點半未變。 沒有新增正解命題或刪除干擾資訊；相較缺姓名版，可答性提高是修復非目標歧義，非難度等值證據。",
+      "manifest_spoken_text_matches": true,
+      "audio_sha256_matches": true,
+      "existing_asr_observations": [
+        {
+          "model": "small",
+          "text": "小王今晚6点一起吃饭吧。6点我有课,7点下课。那7点半时堂见。好。"
+        },
+        {
+          "model": "base",
+          "text": "小王今晚六點一起吃飯吧六點我有客七點下課那七點半時途見好"
+        }
+      ],
+      "acoustic_caution": "沒有做真人親聽，仍需核對姓名、語調、問答停頓及指涉。"
+    },
+    {
+      "question": 30,
+      "audio_id": "E10-B01",
+      "verdict": "text_semantics_pass_audio_acceptance_pending",
+      "prompt": "小林要多少西瓜？",
+      "options": [
+        "两斤",
+        "三斤",
+        "六斤"
+      ],
+      "pure_spoken_text": [
+        "西瓜怎么卖？",
+        "小林，三块钱一斤。",
+        "我要两斤。",
+        "一共六块。",
+        "给你十块。"
+      ],
+      "student_information_reasoning": "問「西瓜怎么卖？」後賣方答「小林，三块钱一斤」，自然稱呼把受話者／買方標為小林；隨後「我要两斤」，再由賣方算六塊，買方給十塊。無需以聲線猜姓名。",
+      "original_answer_checked": "A／两斤",
+      "answer_unique": true,
+      "leakage_or_difficulty": "兩斤、單價三塊、總價六塊與付款十塊未變；稱呼只補買方身份。 沒有新增正解命題或刪除干擾資訊；相較缺姓名版，可答性提高是修復非目標歧義，非難度等值證據。",
+      "manifest_spoken_text_matches": true,
+      "audio_sha256_matches": true,
+      "existing_asr_observations": [
+        {
+          "model": "small",
+          "text": "西瓜怎么卖?消灵 3 块钱一斤。我要 2 斤。一共 6 块。给你 10 块。"
+        },
+        {
+          "model": "base",
+          "text": "西瓜怎麼賣?小鈴三塊錢一斤我要兩斤一共六塊給你十塊"
+        }
+      ],
+      "acoustic_caution": "兩ASR把小林轉為消灵／小鈴；優先親聽姓名，ASR不是錯音定論。"
+    }
+  ],
+  "source_sha256": {
+    "items.json": "e876c3327e27cf513518f57718f051b88a8b9b27ccfa1875dbe55c7bda29b19e",
+    "audio-repair-kokoro-v02/spoken-text-review.json": "7809db5ddcf63708f876e202ecb02d7cb1acea5270a54e938854f4313d3f8905",
+    "audio-repair-kokoro-v02/sample-manifest.json": "edb16ff60527274e8a8c2d3f6fc5daffae234e2b5a7c16f9e8692e875879eee0",
+    "audio-repair-kokoro-v02/dialogue-changes.md": "5b942ce15c7fbb29ba39044b1ef4aeb66f3d0342dbb2164d27e47c2407ec3d4a",
+    "audio-repair-kokoro-v02/two-model-asr.json": "a7b883ec0bf066bfe20365c9ba54558ff399b87cb095fa62a13b0b7b6ab39040"
+  }
+}

@@ -51,14 +51,14 @@ This reference preserves artifact-specific rules moved from the main skill durin
 6. 依 `scripts/lesson_pptx_master_template.js` 與 `scripts/boya_design_system.json` 的共用 token 建立半固定課次骨架，再依教師手冊、學生配套與已批准邊界建立完整逐頁生產規格。每頁必填唯一 slide ID、deck、module ID、module instance、step、順序、section、學習目的、學生唯一動作、來源與原文、學生可見文字、教材頁碼、音檔、材料、學生產出、互動方式、speaker notes、`layout_id`、文字容量、圖片功能與授權、前後頁關係和驗收狀態。普通課次沿用共用 engine 與第一課 layout family，只按教材增減重複頁；字段未完成或學生文字未定稿，不得生成完整 PPTX。線上／實體分流必須先有該課 boundary confirmation record；補記錄不回改已批准 PPTX。
 7. 建立 Visual storyboard／版式映射。普通課次把每張 slide 映射到共用 design system 與已批准的第一課 layout family，並記錄文字上限、圖片功能、素材來源與授權。
 8. 所有完整 PPTX（包括普通課次）都必須先製作並審核 6 張視覺 prototype。草稿階段可以先審最長文字、含音頻頁、divider 與其他高風險映射，但不能用草稿審查取代 6 張 prototype gate。
-9. 圖片 worker 派發、素材納入、prototype 及 PPTX 生產均先依 canonical contract 通過本課 `content-approval` 檢查。未有具體逐頁內容的明確批准，停在文案审阅，不因 draft 例外而生成。批准後使用通過 draft gate 的 generator 生成原生 PPTX，加入 speaker notes、音檔與必要提示；課次 generator 不得自帶色票、字體或整體版式。準中級第 2、3 課使用 `scripts/build_l23_pptx_drafts.js`，只寫明確 `lesson_key` 的 `10-design/pptx-draft/<mode>/`。
+9. 圖片 worker 派發、素材納入、prototype 及 PPTX 生產均先依 canonical contract 通過本課 `content-approval` 檢查。未有具體逐頁內容的明確批准，停在文案审阅，不因 draft 例外而生成。批准後依所選格式與相應gate製作：實體課HTML按2026-10-07標準；線上或所需備份才生成原生PPTX，加入 speaker notes、來源對應的右上角不可點擊純文字 `Audio n-n` 與必要提示；不嵌入音檔，不加入播放按鈕或可播放音頻連結，標示不用紫色。課次 generator 不得自帶色票、字體或整體版式。準中級第 2、3 課使用 `scripts/build_l23_pptx_drafts.js`，只寫明確 `lesson_key` 的 `10-design/pptx-draft/<mode>/`。
 10. 保持學生主畫面不含內部備課資訊；所有投影片與學生材料必須能回溯到已批准的教師手冊。Draft PPTX 完成後，依 current storyboard 的 `source_refs` 與 canonical source 加入教材頁碼標記；不要在未記錄 `source_refs` 時猜測頁碼。
 
 ### Gate D：QA
 
 1. 來源忠實度與簡體字核對。
 2. 該課 canonical source 全部練習與所有活動 coverage 核對。
-3. 音檔逐一播放。
+3. 核對每頁 `Audio n-n` 與來源音軌，確認 PPT 沒有音檔、播放按鈕或可播放音頻連結；PPT 外的音檔按已登記方式逐一播放，來源／解碼／語義／實播狀態分開記錄。
 4. PPTX 開啟、編輯、投影與列印測試。
 5. 檢查文字溢出、低文字密度、字體大小、對比、圖片主體、素材授權、拼音與全中文指示。
 6. 檢查該課核准實體課時的時間與轉場。

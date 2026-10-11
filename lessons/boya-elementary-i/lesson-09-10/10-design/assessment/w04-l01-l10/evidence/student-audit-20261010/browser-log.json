@@ -1,0 +1,278 @@
+[
+  {
+    "command": [
+      "connect",
+      "http://127.0.0.1:9237"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": "[agent-browser] launched browser\n"
+  },
+  {
+    "command": [
+      "open",
+      "file:///Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/dashboard.html"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ W04 第1—10课听力｜教师播放\n  file:///Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/dashboard.html\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "get",
+      "title"
+    ],
+    "exit_code": 0,
+    "stdout": "W04 第1—10课听力｜教师播放\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "get",
+      "url"
+    ],
+    "exit_code": 0,
+    "stdout": "file:///Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/dashboard.html\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "snapshot"
+    ],
+    "exit_code": 0,
+    "stdout": "- banner\n  - heading \"W04 第1—10课综合听力｜教师播放\" [level=1, ref=e1]\n  - paragraph\n    - StaticText \"审阅稿 · 30选择＋20填空 · 100分 · 无口说题 · 每课5题\"\n  - paragraph\n    - StaticText \"新测验Form：私有未发布审阅稿；姓名/学号与答卷Sheet已核，50题可留空；学生入口待发布批准。本页仅供教师播放，不提供表单编辑链接。\"\n  - paragraph\n    - StaticText \"先看题 → 首听后先选 → 同一内容再听（拼音填空录音内已重复） → 检查答案。全卷正常预计55–60分钟；超过第四节50分钟，时段待协调。教师端使用；此页不含答案与逐字稿。\"\n  - StaticText \"全部使用现有原速音频，不自动换语速。真实发音、音箱和学生端Form仍待教师核验。\"\n- main\n  - heading \"Nhóm 1 · 1 · 1 / 33\" [level=2, ref=e2]\n  - paragraph\n    - StaticText \"Audio E01-A01 · 0.48秒 · 同一录音播放两次\"\n  - status\n    - StaticText \"先看题，准备播放\"\n  - alert\n  - Audio\n    - button \"play\" [ref=e10]\n    - slider \"audio time scrubber\" [ref=e11]: 0\n    - generic\n      - slider \"volume\" [ref=e13]: 100\n      - button \"mute\" [ref=e14]\n    - button \"show more media controls\" [ref=e12]\n  - progressbar \"音频播放进度\": 0\n  - paragraph\n    - StaticText \"0.0秒\"\n  - button \"上一段\" [disabled, ref=e3]\n  - button \"从头播放／重听\" [ref=e4]\n  - button \"暂停\" [ref=e5]\n  - button \"下一段\" [ref=e6]\n  - paragraph\n    - StaticText \"完整播放 0 次／计划播放 2 次\"\n  - paragraph\n    - StaticText \"参考：看题15秒，两遍间答题10秒，最后作答25秒。按实际需要调整。\"\n  - button \"开始本段看题计时\" [ref=e7]\n  - status\n  - paragraph\n    - StaticText \"完整播完次数仅在本页会话中计数；中途暂停或重播不计为一整遍。下一段不会自动播放，可先确认学生作答。\"\n- generic\n  - heading \"音频顺序\" [level=2, ref=e8]\n  - list\n    - listitem [level=1]\n      - ListMarker \"1. \"\n      - button \"Nhóm 1 · 1 · Audio E01-A01\" [ref=e15]\n    - listitem [level=1]\n      - ListMarker \"2. \"\n      - button \"Nhóm 2 · 2 · Audio E01-A02\" [ref=e16]\n    - listitem [level=1]\n      - ListMarker \"3. \"\n      - button \"Nhóm 3 · 3 · Audio E01-A03\" [ref=e17]\n    - listitem [level=1]\n      - ListMarker \"4. \"\n      - button \"Nhóm 4 · 4 · Audio E02-A01\" [ref=e18]\n    - listitem [level=1]\n      - ListMarker \"5. \"\n      - button \"Nhóm 5 · 5 · Audio E02-A02\" [ref=e19]\n    - listitem [level=1]\n      - ListMarker \"6. \"\n      - button \"Nhóm 6 · 6 · Audio E02-A03\" [ref=e20]\n    - listitem [level=1]\n      - ListMarker \"7. \"\n      - button \"Nhóm 7 · 7 · Audio E03-A01\" [ref=e21]\n    - listitem [level=1]\n      - ListMarker \"8. \"\n      - button \"Nhóm 8 · 8 · Audio E03-A02\" [ref=e22]\n    - listitem [level=1]\n      - ListMarker \"9. \"\n      - button \"Nhóm 9 · 9 · Audio E03-A03\" [ref=e23]\n    - listitem [level=1]\n      - ListMarker \"10. \"\n      - button \"Nhóm 10 · 10 · Audio E04-A01\" [ref=e24]\n    - listitem [level=1]\n      - ListMarker \"11. \"\n      - button \"Nhóm 11 · 11–12 · Audio E04-B01\" [ref=e25]\n    - listitem [level=1]\n      - ListMarker \"12. \"\n      - button \"Nhóm 12 · 13 · Audio E05-A02\" [ref=e26]\n    - listitem [level=1]\n      - ListMarker \"13. \"\n      - button \"Nhóm 13 · 14–15 · Audio E05-B01\" [ref=e27]\n    - listitem [level=1]\n      - ListMarker \"14. \"\n      - button \"Nhóm 14 · 16 · Audio E06-A01\" [ref=e28]\n    - listitem [level=1]\n      - ListMarker \"15. \"\n      - button \"Nhóm 15 · 17–18 · Audio E06-B01\" [ref=e29]\n    - listitem [level=1]\n      - ListMarker \"16. \"\n      - button \"Nhóm 16 · 19 · Audio E07-A01\" [ref=e30]\n    - listitem [level=1]\n      - ListMarker \"17. \"\n      - button \"Nhóm 17 · 20–21 · Audio E07-B01\" [ref=e31]\n    - listitem [level=1]\n      - ListMarker \"18. \"\n      - button \"Nhóm 18 · 22 · Audio E08-A01\" [ref=e32]\n    - listitem [level=1]\n      - ListMarker \"19. \"\n      - button \"Nhóm 19 · 23–24 · Audio E08-B01\" [ref=e33]\n    - listitem [level=1]\n      - ListMarker \"20. \"\n      - button \"Nhóm 20 · 25 · Audio E09-A02\" [ref=e34]\n    - listitem [level=1]\n      - ListMarker \"21. \"\n      - button \"Nhóm 21 · 26–27 · Audio E09-B01\" [ref=e35]\n    - listitem [level=1]\n      - ListMarker \"22. \"\n      - button \"Nhóm 22 · 28 · Audio E10-A01\" [ref=e36]\n    - listitem [level=1]\n      - ListMarker \"23. \"\n      - button \"Nhóm 23 · 29–30 · Audio E10-B01\" [ref=e37]\n    - listitem [level=1]\n      - ListMarker \"24. \"\n      - button \"Nhóm 24 · 31–32 · Audio E01-C01\" [ref=e38]\n    - listitem [level=1]\n      - ListMarker \"25. \"\n      - button \"Nhóm 25 · 33–34 · Audio E02-C01\" [ref=e39]\n    - listitem [level=1]\n      - ListMarker \"26. \"\n      - button \"Nhóm 26 · 35–36 · Audio E03-C01\" [ref=e40]\n    - listitem [level=1]\n      - ListMarker \"27. \"\n      - button \"Nhóm 27 · 37–38 · Audio E04-C01\" [ref=e41]\n    - listitem [level=1]\n      - ListMarker \"28. \"\n      - button \"Nhóm 28 · 39–40 · Audio E05-C01\" [ref=e42]\n    - listitem [level=1]\n      - ListMarker \"29. \"\n      - button \"Nhóm 29 · 41–42 · Audio E06-C01\" [ref=e43]\n    - listitem [level=1]\n      - ListMarker \"30. \"\n      - button \"Nhóm 30 · 43–44 · Audio E07-C01\" [ref=e44]\n    - listitem [level=1]\n      - ListMarker \"31. \"\n      - button \"Nhóm 31 · 45–46 · Audio E08-C01\" [ref=e45]\n    - listitem [level=1]\n      - ListMarker \"32. \"\n      - button \"Nhóm 32 · 47–48 · Audio E09-C01\" [ref=e46]\n    - listitem [level=1]\n      - ListMarker \"33. \"\n      - button \"Nhóm 33 · 49–50 · Audio E10-C01\" [ref=e47]\n  - button \"清零播放记录（本页）\" [ref=e9]\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "390",
+      "844"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "screenshot",
+      "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/evidence/student-audit-20261010/01-mobile-entry.png"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Screenshot saved to /Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/evidence/student-audit-20261010/01-mobile-entry.png\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "eval",
+      "JSON.stringify({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,visibleText:document.body.innerText,bodyFont:getComputedStyle(document.body).fontSize,inputCount:document.querySelectorAll(\"input,textarea,form\").length,links:document.querySelectorAll(\"a\").length})"
+    ],
+    "exit_code": 0,
+    "stdout": "\"{\\\"width\\\":390,\\\"scrollWidth\\\":375,\\\"visibleText\\\":\\\"W04 第1—10课综合听力｜教师播放\\\\n\\\\n审阅稿 · 30选择＋20填空 · 100分 · 无口说题 · 每课5题\\\\n\\\\n新测验Form：私有未发布审阅稿；姓名/学号与答卷Sheet已核，50题可留空；学生入口待发布批准。本页仅供教师播放，不提供表单编辑链接。\\\\n\\\\n先看题 → 首听后先选 → 同一内容再听（拼音填空录音内已重复） → 检查答案。全卷正常预计55–60分钟；超过第四节50分钟，时段待协调。教师端使用；此页不含答案与逐字稿。\\\\n\\\\n全部使用现有原速音频，不自动换语速。真实发音、音箱和学生端Form仍待教师核验。\\\\nNhóm 1 · 1 · 1 / 33\\\\n\\\\nAudio E01-A01 · 0.48秒 · 同一录音播放两次\\\\n\\\\n先看题，准备播放\\\\n\\\\n0.0秒\\\\n\\\\n上一段\\\\n从头播放／重听\\\\n暂停\\\\n下一段\\\\n\\\\n完整播放 0 次／计划播放 2 次\\\\n\\\\n参考：看题15秒，两遍间答题10秒，最后作答25秒。按实际需要调整。\\\\n\\\\n开始本段看题计时\\\\n\\\\n完整播完次数仅在本页会话中计数；中途暂停或重播不计为一整遍。下一段不会自动播放，可先确认学生作答。\\\\n\\\\n音频顺序\\\\nNhóm 1 · 1 · Audio E01-A01\\\\nNhóm 2 · 2 · Audio E01-A02\\\\nNhóm 3 · 3 · Audio E01-A03\\\\nNhóm 4 · 4 · Audio E02-A01\\\\nNhóm 5 · 5 · Audio E02-A02\\\\nNhóm 6 · 6 · Audio E02-A03\\\\nNhóm 7 · 7 · Audio E03-A01\\\\nNhóm 8 · 8 · Audio E03-A02\\\\nNhóm 9 · 9 · Audio E03-A03\\\\nNhóm 10 · 10 · Audio E04-A01\\\\nNhóm 11 · 11–12 · Audio E04-B01\\\\nNhóm 12 · 13 · Audio E05-A02\\\\nNhóm 13 · 14–15 · Audio E05-B01\\\\nNhóm 14 · 16 · Audio E06-A01\\\\nNhóm 15 · 17–18 · Audio E06-B01\\\\nNhóm 16 · 19 · Audio E07-A01\\\\nNhóm 17 · 20–21 · Audio E07-B01\\\\nNhóm 18 · 22 · Audio E08-A01\\\\nNhóm 19 · 23–24 · Audio E08-B01\\\\nNhóm 20 · 25 · Audio E09-A02\\\\nNhóm 21 · 26–27 · Audio E09-B01\\\\nNhóm 22 · 28 · Audio E10-A01\\\\nNhóm 23 · 29–30 · Audio E10-B01\\\\nNhóm 24 · 31–32 · Audio E01-C01\\\\nNhóm 25 · 33–34 · Audio E02-C01\\\\nNhóm 26 · 35–36 · Audio E03-C01\\\\nNhóm 27 · 37–38 · Audio E04-C01\\\\nNhóm 28 · 39–40 · Audio E05-C01\\\\nNhóm 29 · 41–42 · Audio E06-C01\\\\nNhóm 30 · 43–44 · Audio E07-C01\\\\nNhóm 31 · 45–46 · Audio E08-C01\\\\nNhóm 32 · 47–48 · Audio E09-C01\\\\nNhóm 33 · 49–50 · Audio E10-C01\\\\n清零播放记录（本页）\\\",\\\"bodyFont\\\":\\\"16px\\\",\\\"inputCount\\\":0,\\\"links\\\":0}\"\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "click",
+      "#play"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "wait",
+      "1200"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "get",
+      "text",
+      "#replays"
+    ],
+    "exit_code": 0,
+    "stdout": "完整播放 1 次／计划播放 2 次\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "click",
+      "#next"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "get",
+      "text",
+      "#range"
+    ],
+    "exit_code": 0,
+    "stdout": "Nhóm 2 · 2 · 2 / 33\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "reload"
+    ],
+    "exit_code": 0,
+    "stdout": "file:///Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/dashboard.html\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "get",
+      "text",
+      "#range"
+    ],
+    "exit_code": 0,
+    "stdout": "Nhóm 1 · 1 · 1 / 33\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "get",
+      "text",
+      "#replays"
+    ],
+    "exit_code": 0,
+    "stdout": "完整播放 0 次／计划播放 2 次\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "eval",
+      "document.querySelectorAll(\"#queue button\")[23].click()"
+    ],
+    "exit_code": 0,
+    "stdout": "null\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "get",
+      "text",
+      "main"
+    ],
+    "exit_code": 0,
+    "stdout": "Nhóm 24 · 31–32 · 24 / 33\n\nAudio E01-C01 · 18.52秒 · 录音内已读两轮，只播放整段一次；第三音节不设题\n\n先看题，准备播放\n\n0.0秒\n\n上一段\n从头播放／重听\n暂停\n下一段\n\n完整播放 0 次／计划播放 1 次\n\n参考：看题25秒，最后作答90秒。按实际需要调整。\n\n开始本段看题计时\n\n完整播完次数仅在本页会话中计数；中途暂停或重播不计为一整遍。下一段不会自动播放，可先确认学生作答。\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "screenshot",
+      "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/evidence/student-audit-20261010/02-mobile-pinyin.png"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Screenshot saved to /Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/evidence/student-audit-20261010/02-mobile-pinyin.png\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "open",
+      "about:blank"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ \n  about:blank\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "back"
+    ],
+    "exit_code": 0,
+    "stdout": "file:///Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/dashboard.html\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "get",
+      "text",
+      "#range"
+    ],
+    "exit_code": 0,
+    "stdout": "Nhóm 1 · 1 · 1 / 33\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "get",
+      "text",
+      "#replays"
+    ],
+    "exit_code": 0,
+    "stdout": "完整播放 0 次／计划播放 2 次\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1366",
+      "768"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "screenshot",
+      "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/evidence/student-audit-20261010/03-desktop-return.png"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Screenshot saved to /Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/evidence/student-audit-20261010/03-desktop-return.png\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "eval",
+      "JSON.stringify({bodyFont:getComputedStyle(document.body).fontSize,timingFont:getComputedStyle(document.querySelector(\"#timing\")).fontSize,range:document.querySelector(\"#range\").innerText})"
+    ],
+    "exit_code": 0,
+    "stdout": "\"{\\\"bodyFont\\\":\\\"16px\\\",\\\"timingFont\\\":\\\"17px\\\",\\\"range\\\":\\\"Nhóm 1 · 1 · 1 / 33\\\"}\"\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "open",
+      "file:///Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/student.md"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ \n  file:///Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/student.md\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "snapshot"
+    ],
+    "exit_code": 0,
+    "stdout": "- StaticText \"# W04 第1—10课综合听力测验（学生审阅稿）\\n\\n30道选择题＋20道听后填空，每题2分，共100分。没有口说题。\\n\\n听老师播放音频，选择或填写答案。拼音填空音频已含两次朗读，老师播放一次；其他每段播放两次。第1—3课填空写拼音和声调（可用声调数字）；第4—10课可写汉字、拼音或数字。先看题，第一次听后先选；第二次听后检查。不会的题可以空着。最后检查姓名和学号，再提交。\\n\\nChỉ kiểm tra nghe, không có phần nói. 30 câu chọn đáp án và 20 câu điền. Mỗi nội dung nghe hai lần; đoạn điền pinyin đã lặp trong tệp. Điền pinyin kèm dấu hoặc số thanh cho bài 1–3; bài 4–10 có thể ghi chữ Hán, pinyin hoặc số. Có thể để trống câu chưa làm. Kiểm tra họ tên và MSSV trước khi nộp.\\n\\n### Nhóm 1 · 1 · Audio E01-A01\\n\\n## 1. Chọn âm tiết nghe được.\\n\\nA. pā\\nB. mā\\nC. bā\\n\\n### Nhóm 2 · 2 · Audio E01-A02\\n\\n## 2. Chọn âm tiết nghe được.\\n\\nA. lǚ\\nB. nǚ\\nC. nǔ\\n\\n### Nhóm 3 · 3 · Audio E01-A03\\n\\n## 3. Chọn âm tiết nghe được.\\n\\nA. cī\\nB. chī\\nC. qī\\n\\n### Nhóm 4 · 4 · Audio E02-A01\\n\\n## 4. Chọn âm tiết nghe được.\\n\\nA. bái\\nB. béi\\nC. bāo\\n\\n### Nhóm 5 · 5 · Audio E02-A02\\n\\n## 5. Chọn âm tiết nghe được.\\n\\nA. liáo\\nB. léi\\nC. liú\\n\\n### Nhóm 6 · 6 · Audio E02-A03\\n\\n## 6. Chọn âm tiết nghe được.\\n\\nA. duì\\nB. diù\\nC. dòu\\n\\n### Nhóm 7 · 7 · Audio E03-A01\\n\\n## 7. Chọn âm nghe được.\\n\\nA. huār\\nB. huā\\nC. huà\\n\\n### Nhóm 8 · 8 · Audio E03-A02\\n\\n## 8. Chọn từ nghe được.\\n\\nA. nǎr\\nB. èr\\nC. nǚ’ér\\n\\n### Nhóm 9 · 9 · Audio E03-A03\\n\\n## 9. Chọn âm tiết nghe được.\\n\\nA. wèn\\nB. wén\\nC. wèng\\n\\n### Nhóm 10 · 10 · Audio E04-A01\\n\\n## 10. Người nói họ gì?\\n\\nA. 李 Lǐ\\nB. 不知道\\nC. 王 Wáng\\n\\n### Nhóm 11 · 11–12 · Audio E04-B01\\n\\n## 11. 安娜叫什么名字？\\n\\nA. 李明\\nB. 安娜\\nC. 大卫\\n\\n## 12. 安娜是老师吗？\\n\\nA. 不是\\nB. 没有说\\nC. 是\\n\\n### Nhóm 12 · 13 · Audio E05-A02\\n\\n## 13. 安娜和我是什么关系？\\n\\nA. 同学\\nB. 老师\\nC. 同屋\\n\\n### Nhóm 13 · 14–15 · Audio E05-B01\\n\\n## 14. 安娜是哪国人？\\n\\nA. 英国人\\nB. 美国人\\nC. 韩国人\\n\\n## 15. 小王是英国人吗？\\n\\nA. 没有说\\nB. 不是\\nC. 是\\n\\n### Nhóm 14 · 16 · Audio E06-A01\\n\\n## 16. “那”个书包是谁的？\\n\\nA. 我的\\nB. 老师的\\nC. 安娜的\\n\\n### Nhóm 15 · 17–18 · Audio E06-B01\\n\\n## 17. 笔是谁的？\\n\\nA. 李美的\\nB. 小王的\\nC. 小林的\\n\\n## 18. 本子是谁的？\\n\\nA. 小王的\\nB. 小林的\\nC. 李美的\\n\\n### Nhóm 16 · 19 · Audio E07-A01\\n\\n## 19. 安娜在哪儿？\\n\\nA. 学校外边\\nB. 教室里\\nC. 宿舍里\\n\\n### Nhóm 17 · 20–21 · Audio E07-B01\\n\\n## 20. 小王住哪儿？\\n\\nA. 教室里\\nB. 学校外边\\nC. 学校宿舍\\n\\n## 21. 小王的家在学校哪边？\\n\\nA. 北边\\nB. 西边\\nC. 东边\\n\\n### Nhóm 18 · 22 · Audio E08-A01\\n\\n## 22. 现在几点？\\n\\nA. 9:15\\nB. 9:45\\nC. 8:45\\n\\n### Nhóm 19 · 23–24 · Audio E08-B01\\n\\n## 23. 小王几点下课？\\n\\nA. 7:30\\nB. 6:00\\nC. 7:00\\n\\n## 24. 他们几点吃饭？\\n\\nA. 6:30\\nB. 7:30\\nC. 7:00\\n\\n### Nhóm 20 · 25 · Audio E09-A02\\n\\n## 25. 房间号是什么？\\n\\nA. 306\\nB. 630\\nC. 360\\n\\n### Nhóm 21 · 26–27 · Audio E09-B01\\n\\n## 26. 他们怎么去动物园？\\n\\nA. 坐公共汽车\\nB. 骑自行车\\nC. 坐地铁\\n\\n## 27. 他们几点见面？\\n\\nA. 九点\\nB. 十点\\nC. 八点\\n\\n### Nhóm 22 · 28 · Audio E10-A01\\n\\n## 28. 苹果一斤多少钱？\\n\\nA. 45元\\nB. 4.50元\\nC. 4.05元\\n\\n### Nhóm 23 · 29–30 · Audio E10-B01\\n\\n## 29. 西瓜一斤多少钱？\\n\\nA. 三块\\nB. 十块\\nC. 六块\\n\\n## 30. 小林要多少西瓜？\\n\\nA. 两斤\\nB. 三斤\\nC. 六斤\\n\\n### Nhóm 24 · 31–32 · Audio E01-C01\\n\\n## 31. Viết âm tiết thứ 1, có dấu thanh. (Có thể dùng số thanh 1–4, ví dụ ma3.)\\n\\n答案：____________________\\n\\n## 32. Viết âm tiết thứ 2, có dấu thanh. (Có thể dùng số thanh 1–4, ví dụ ma3.)\\n\\n答案：____________________\\n\\n### Nhóm 25 · 33–34 · Audio E02-C01\\n\\n## 33. Viết âm tiết thứ 1, có dấu thanh. (Có thể dùng số thanh 1–4, ví dụ ma3.)\\n\\n答案：____________________\\n\\n## 34. Viết âm tiết thứ 2, có dấu thanh. (Có thể dùng số thanh 1–4, ví dụ ma3.)\\n\\n答案：____________________\\n\\n### Nhóm 26 · 35–36 · Audio E03-C01\\n\\n## 35. Viết âm tiết thứ 1. (Có thể dùng số thanh 1–4, ví dụ ma3.)\\n\\n答案：____________________\\n\\n## 36. Viết âm tiết thứ 2. (Có thể dùng số thanh 1–4, ví dụ ma3.)\\n\\n答案：____________________\\n\\n### Nhóm 27 · 37–38 · Audio E04-C01\\n\\n## 37. Họ của người nói\\n\\n答案：____________________\\n\\n## 38. Tên đầy đủ của người nói\\n\\n答案：____________________\\n\\n### Nhóm 28 · 39–40 · Audio E05-C01\\n\\n## 39. 同屋叫什么？\\n\\n答案：____________________\\n\\n## 40. 同屋是哪国人？\\n\\n答案：____________________\\n\\n### Nhóm 29 · 41–42 · Audio E06-C01\\n\\n## 41. 书包是谁的？\\n\\n答案：____________________\\n\\n## 42. 这是什么书？\\n\\n答案：____________________\\n\\n### Nhóm 30 · 43–44 · Audio E07-C01\\n\\n## 43. 安娜左边的房间是谁的？\\n\\n答案：____________________\\n\\n## 44. 大卫的房间在安娜的哪边？\\n\\n答案：____________________\\n\\n### Nhóm 31 · 45–46 · Audio E08-C01\\n\\n## 45. 汉语课下课时间\\n\\n答案：____________________\\n\\n## 46. 午饭地点\\n\\n答案：____________________\\n\\n### Nhóm 32 · 47–48 · Audio E09-C01\\n\\n## 47. 见面时间\\n\\n答案：____________________\\n\\n## 48. 地铁几号线？\\n\\n答案：____________________\\n\\n### Nhóm 33 · 49–50 · Audio E10-C01\\n\\n## 49. 牛奶价格\\n\\n答案：____________________\\n\\n## 50. 一共付多少钱？\\n\\n答案：____________________\\n\"\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "screenshot",
+      "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/evidence/student-audit-20261010/04-student-md-native.png"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Screenshot saved to /Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/evidence/student-audit-20261010/04-student-md-native.png\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "close"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Browser closed\n",
+    "stderr": ""
+  }
+]

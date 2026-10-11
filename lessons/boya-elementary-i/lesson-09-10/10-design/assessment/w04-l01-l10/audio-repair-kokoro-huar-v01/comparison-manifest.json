@@ -1,0 +1,71 @@
+{
+  "purpose": "huār pronunciation comparison only",
+  "exam_id": "W04-L01L10-20261006",
+  "audio_id": "E03-A01",
+  "question_numbers": [
+    7
+  ],
+  "source_text": "花儿",
+  "target_pinyin": "huār",
+  "default_phonemes": "ㄏ穵1ㄦ2",
+  "override_phonemes": "ㄏ穵R1",
+  "api": "KPipeline.generate_from_tokens(raw phoneme string)",
+  "settings": {
+    "repo_id": "hexgrad/Kokoro-82M-v1.1-zh",
+    "revision": "01e7505bd6a7a2ac4975463114c3a7650a9f7218",
+    "voice": "zf_001",
+    "lang_code": "z",
+    "speed": 1.0,
+    "device": "cpu",
+    "dtype": "float32",
+    "seed": 20261010,
+    "frontend": "Misaki-0.9.4-ZHFrontend-1.1-unmodified",
+    "postprocessing": "PCM16 serialization only; no trim/normalization/time stretch",
+    "segmentation": "original source units only; consume all pipeline chunks; no digit splitting",
+    "max_attempts_per_sample": 1
+  },
+  "no_dependency_modification": true,
+  "all_generator_output_consumed": true,
+  "chunk_count": 1,
+  "duration_seconds": 0.8,
+  "wav_sha256": "76df36ff7b7ff0928333a6eb76366c55267771d2422a4918e6e85690f5cee2af",
+  "default_sha256": "095616ce8f7d0483d9cddc2dd4209a6705bba669d139aa990ccb30ae7a8d36b9",
+  "dashboard_unchanged": true,
+  "human_audio_acceptance": false,
+  "technical_only": true,
+  "official_api_source": "https://github.com/hexgrad/kokoro/blob/main/kokoro/pipeline.py",
+  "local_pipeline_source_sha256": "09da32aab781f7a163cbf9f6e379d53db40957cbbab50bc26a21c8440c0eabd6",
+  "gate": {
+    "purpose": "assessment-audio",
+    "exam_id": "W04-L01L10-20261006",
+    "status": "ready",
+    "output_dir": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/audio-repair-kokoro-huar-v01",
+    "blockers": [],
+    "offering_id": "2026-fall",
+    "textbook_id": "boya-elementary-i",
+    "cohort": "BOYA-LS-E1-Y1S1-2026F",
+    "lesson_keys": [
+      "boya-elementary-i:lesson-01",
+      "boya-elementary-i:lesson-02",
+      "boya-elementary-i:lesson-03",
+      "boya-elementary-i:lesson-04",
+      "boya-elementary-i:lesson-05",
+      "boya-elementary-i:lesson-06",
+      "boya-elementary-i:lesson-07",
+      "boya-elementary-i:lesson-08",
+      "boya-elementary-i:lesson-09",
+      "boya-elementary-i:lesson-10"
+    ],
+    "input_hashes": {
+      "items.json": "e876c3327e27cf513518f57718f051b88a8b9b27ccfa1875dbe55c7bda29b19e",
+      "audio-manifest.json": "a084690d6a307623d7f3bd17110a85b1037f0bfbeab48ba6ff04560473309f4f",
+      "teacher.md": "7dc8f07186c1bce95f118a4ff4e6ea446edaf29d0e9a995414ce9ad187185eec",
+      "student.md": "df3dec089e95443745789a11fde08e51f68ef88c4cd22e26c56daab37f64f858"
+    },
+    "artifact_state": "design_draft",
+    "human_audio_acceptance": false
+  },
+  "wav_decode_verified": true,
+  "peak": 0.5059814453125,
+  "browser_local_load": "2/2 pass"
+}

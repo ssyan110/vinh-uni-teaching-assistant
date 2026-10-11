@@ -1,0 +1,872 @@
+{
+  "status": "technical_pass",
+  "content_state": "review_only_pending_teacher_approval_not_imported",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-08",
+  "offering_id": "2026-fall",
+  "vocabulary_count": 31,
+  "proper_noun_count": 2,
+  "question_count": 93,
+  "output": {
+    "path": "lessons/boya-quasi-intermediate-i/lesson-08/10-design/support-draft/blooket/lesson-08/lesson-08-blooket-审阅稿.csv",
+    "sha256": "2a337655ea69cb7c0a854606676dee85ae1a5e8780bc86cdb3046c0969ec9f97"
+  },
+  "inputs": [
+    {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-08/00-source/canonical-source.json",
+      "sha256": "30bc7a4716233edf482abac6d8838a296359a51f2c5958efb9becf535f216b89"
+    },
+    {
+      "path": "course/boya-online-content-contract.json",
+      "sha256": "8cba56a2bd103dd66ed2a62fc3fc7d3bb6a168c79dcc283821a71ca187f592ff"
+    }
+  ],
+  "meaning_origin": "existing content contract; 既 gloss explanation shortened locally to vừa… vừa…",
+  "answer_positions": {
+    "meaning": {
+      "1": 8,
+      "2": 8,
+      "3": 8,
+      "4": 7
+    },
+    "word_to_pinyin": {
+      "1": 8,
+      "2": 8,
+      "3": 8,
+      "4": 7
+    },
+    "pinyin_to_word": {
+      "1": 8,
+      "2": 8,
+      "3": 8,
+      "4": 7
+    }
+  },
+  "technical_checks": [
+    "UTF8 BOM",
+    "exact eight-column header",
+    "canonical full vocabulary and proper noun coverage",
+    "three interleaved families per word",
+    "four distinct options",
+    "answer index matches expected value",
+    "20-second time limit",
+    "balanced positions per family",
+    "semantic overlap groups excluded as distractors"
+  ],
+  "formal_support_preflight": {
+    "phase": "blocked",
+    "blockers": [
+      "teaching-design manifest is unavailable or invalid: /Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-quasi-intermediate-i/lesson-08/10-design/teaching-design/manifest.json",
+      "source gate is not verified",
+      "source QA gate is not passed",
+      "PBI teaching-design gate is not approved",
+      "source package has unsupported status: 'active_source_pending_review'",
+      "frozen source package tree hash mismatch",
+      "frozen source package file count mismatch: manifest=None, actual=10",
+      "approved teacher manual is missing from 20-approved",
+      "teacher manual is not marked final_confirmed"
+    ]
+  },
+  "items": [
+    {
+      "word": "士兵",
+      "pinyin": "shìbīng",
+      "meaning": "binh lính; người lính",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "打仗",
+      "pinyin": "dǎzhàng",
+      "meaning": "đánh trận; giao chiến",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "训练",
+      "pinyin": "xùnliàn",
+      "meaning": "huấn luyện",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "进攻",
+      "pinyin": "jìngōng",
+      "meaning": "tấn công",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "军事家",
+      "pinyin": "jūnshìjiā",
+      "meaning": "nhà quân sự; nhà chiến lược quân sự",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "记载",
+      "pinyin": "jìzǎi",
+      "meaning": "ghi chép; ghi lại",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "将军",
+      "pinyin": "jiāngjūn",
+      "meaning": "tướng quân; viên tướng",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "权力",
+      "pinyin": "quánlì",
+      "meaning": "quyền lực",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "策略",
+      "pinyin": "cèlüè",
+      "meaning": "chiến lược; kế sách",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "打败仗",
+      "pinyin": "dǎ bàizhàng",
+      "meaning": "thua trận",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "结束",
+      "pinyin": "jiéshù",
+      "meaning": "kết thúc",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "开设",
+      "pinyin": "kāishè",
+      "meaning": "mở lớp; mở khóa học",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "带兵打仗",
+      "pinyin": "dài bīng dǎzhàng",
+      "meaning": "chỉ huy binh lính đánh trận",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "严明",
+      "pinyin": "yánmíng",
+      "meaning": "nghiêm minh",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "根据",
+      "pinyin": "gēnjù",
+      "meaning": "dựa vào; căn cứ vào",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "曾经",
+      "pinyin": "céngjīng",
+      "meaning": "đã từng",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "展示",
+      "pinyin": "zhǎnshì",
+      "meaning": "trình bày; thể hiện",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "妻子",
+      "pinyin": "qīzi",
+      "meaning": "vợ",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "制定",
+      "pinyin": "zhìdìng",
+      "meaning": "đề ra; xây dựng",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "嘻嘻哈哈",
+      "pinyin": "xīxī-hāhā",
+      "meaning": "cười đùa; nói cười vui vẻ",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "严肃",
+      "pinyin": "yánsù",
+      "meaning": "nghiêm túc",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "按",
+      "pinyin": "àn",
+      "meaning": "theo; chiếu theo",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "军法",
+      "pinyin": "jūnfǎ",
+      "meaning": "quân pháp; quân luật",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "处死",
+      "pinyin": "chǔsǐ",
+      "meaning": "xử tử",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "难过",
+      "pinyin": "nánguò",
+      "meaning": "buồn; đau lòng",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "任命",
+      "pinyin": "rènmìng",
+      "meaning": "bổ nhiệm; cử làm",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "打胜仗",
+      "pinyin": "dǎ shèngzhàng",
+      "meaning": "thắng trận",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "既",
+      "pinyin": "jì",
+      "meaning": "vừa… vừa…",
+      "meaning_origin": "existing_content_contract_simplified_for_CSV",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "战败",
+      "pinyin": "zhànbài",
+      "meaning": "bị đánh bại; thất trận",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "孙子",
+      "pinyin": "Sūn Zǐ",
+      "meaning": "Tôn Tử; nhà quân sự thời Xuân Thu",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    },
+    {
+      "word": "《孙子兵法》",
+      "pinyin": "Sūn Zǐ Bīngfǎ",
+      "meaning": "sách Binh pháp Tôn Tử; sách về lý thuyết chiến tranh",
+      "meaning_origin": "existing_content_contract",
+      "meaning_review_status": "reviewed"
+    }
+  ],
+  "question_answer_review": [
+    {
+      "question": 1,
+      "word": "士兵",
+      "family": "meaning",
+      "correct": "binh lính; người lính"
+    },
+    {
+      "question": 2,
+      "word": "士兵",
+      "family": "word_to_pinyin",
+      "correct": "shìbīng"
+    },
+    {
+      "question": 3,
+      "word": "士兵",
+      "family": "pinyin_to_word",
+      "correct": "士兵"
+    },
+    {
+      "question": 4,
+      "word": "打仗",
+      "family": "meaning",
+      "correct": "đánh trận; giao chiến"
+    },
+    {
+      "question": 5,
+      "word": "打仗",
+      "family": "word_to_pinyin",
+      "correct": "dǎzhàng"
+    },
+    {
+      "question": 6,
+      "word": "打仗",
+      "family": "pinyin_to_word",
+      "correct": "打仗"
+    },
+    {
+      "question": 7,
+      "word": "训练",
+      "family": "meaning",
+      "correct": "huấn luyện"
+    },
+    {
+      "question": 8,
+      "word": "训练",
+      "family": "word_to_pinyin",
+      "correct": "xùnliàn"
+    },
+    {
+      "question": 9,
+      "word": "训练",
+      "family": "pinyin_to_word",
+      "correct": "训练"
+    },
+    {
+      "question": 10,
+      "word": "进攻",
+      "family": "meaning",
+      "correct": "tấn công"
+    },
+    {
+      "question": 11,
+      "word": "进攻",
+      "family": "word_to_pinyin",
+      "correct": "jìngōng"
+    },
+    {
+      "question": 12,
+      "word": "进攻",
+      "family": "pinyin_to_word",
+      "correct": "进攻"
+    },
+    {
+      "question": 13,
+      "word": "军事家",
+      "family": "meaning",
+      "correct": "nhà quân sự; nhà chiến lược quân sự"
+    },
+    {
+      "question": 14,
+      "word": "军事家",
+      "family": "word_to_pinyin",
+      "correct": "jūnshìjiā"
+    },
+    {
+      "question": 15,
+      "word": "军事家",
+      "family": "pinyin_to_word",
+      "correct": "军事家"
+    },
+    {
+      "question": 16,
+      "word": "记载",
+      "family": "meaning",
+      "correct": "ghi chép; ghi lại"
+    },
+    {
+      "question": 17,
+      "word": "记载",
+      "family": "word_to_pinyin",
+      "correct": "jìzǎi"
+    },
+    {
+      "question": 18,
+      "word": "记载",
+      "family": "pinyin_to_word",
+      "correct": "记载"
+    },
+    {
+      "question": 19,
+      "word": "将军",
+      "family": "meaning",
+      "correct": "tướng quân; viên tướng"
+    },
+    {
+      "question": 20,
+      "word": "将军",
+      "family": "word_to_pinyin",
+      "correct": "jiāngjūn"
+    },
+    {
+      "question": 21,
+      "word": "将军",
+      "family": "pinyin_to_word",
+      "correct": "将军"
+    },
+    {
+      "question": 22,
+      "word": "权力",
+      "family": "meaning",
+      "correct": "quyền lực"
+    },
+    {
+      "question": 23,
+      "word": "权力",
+      "family": "word_to_pinyin",
+      "correct": "quánlì"
+    },
+    {
+      "question": 24,
+      "word": "权力",
+      "family": "pinyin_to_word",
+      "correct": "权力"
+    },
+    {
+      "question": 25,
+      "word": "策略",
+      "family": "meaning",
+      "correct": "chiến lược; kế sách"
+    },
+    {
+      "question": 26,
+      "word": "策略",
+      "family": "word_to_pinyin",
+      "correct": "cèlüè"
+    },
+    {
+      "question": 27,
+      "word": "策略",
+      "family": "pinyin_to_word",
+      "correct": "策略"
+    },
+    {
+      "question": 28,
+      "word": "打败仗",
+      "family": "meaning",
+      "correct": "thua trận"
+    },
+    {
+      "question": 29,
+      "word": "打败仗",
+      "family": "word_to_pinyin",
+      "correct": "dǎ bàizhàng"
+    },
+    {
+      "question": 30,
+      "word": "打败仗",
+      "family": "pinyin_to_word",
+      "correct": "打败仗"
+    },
+    {
+      "question": 31,
+      "word": "结束",
+      "family": "meaning",
+      "correct": "kết thúc"
+    },
+    {
+      "question": 32,
+      "word": "结束",
+      "family": "word_to_pinyin",
+      "correct": "jiéshù"
+    },
+    {
+      "question": 33,
+      "word": "结束",
+      "family": "pinyin_to_word",
+      "correct": "结束"
+    },
+    {
+      "question": 34,
+      "word": "开设",
+      "family": "meaning",
+      "correct": "mở lớp; mở khóa học"
+    },
+    {
+      "question": 35,
+      "word": "开设",
+      "family": "word_to_pinyin",
+      "correct": "kāishè"
+    },
+    {
+      "question": 36,
+      "word": "开设",
+      "family": "pinyin_to_word",
+      "correct": "开设"
+    },
+    {
+      "question": 37,
+      "word": "带兵打仗",
+      "family": "meaning",
+      "correct": "chỉ huy binh lính đánh trận"
+    },
+    {
+      "question": 38,
+      "word": "带兵打仗",
+      "family": "word_to_pinyin",
+      "correct": "dài bīng dǎzhàng"
+    },
+    {
+      "question": 39,
+      "word": "带兵打仗",
+      "family": "pinyin_to_word",
+      "correct": "带兵打仗"
+    },
+    {
+      "question": 40,
+      "word": "严明",
+      "family": "meaning",
+      "correct": "nghiêm minh"
+    },
+    {
+      "question": 41,
+      "word": "严明",
+      "family": "word_to_pinyin",
+      "correct": "yánmíng"
+    },
+    {
+      "question": 42,
+      "word": "严明",
+      "family": "pinyin_to_word",
+      "correct": "严明"
+    },
+    {
+      "question": 43,
+      "word": "根据",
+      "family": "meaning",
+      "correct": "dựa vào; căn cứ vào"
+    },
+    {
+      "question": 44,
+      "word": "根据",
+      "family": "word_to_pinyin",
+      "correct": "gēnjù"
+    },
+    {
+      "question": 45,
+      "word": "根据",
+      "family": "pinyin_to_word",
+      "correct": "根据"
+    },
+    {
+      "question": 46,
+      "word": "曾经",
+      "family": "meaning",
+      "correct": "đã từng"
+    },
+    {
+      "question": 47,
+      "word": "曾经",
+      "family": "word_to_pinyin",
+      "correct": "céngjīng"
+    },
+    {
+      "question": 48,
+      "word": "曾经",
+      "family": "pinyin_to_word",
+      "correct": "曾经"
+    },
+    {
+      "question": 49,
+      "word": "展示",
+      "family": "meaning",
+      "correct": "trình bày; thể hiện"
+    },
+    {
+      "question": 50,
+      "word": "展示",
+      "family": "word_to_pinyin",
+      "correct": "zhǎnshì"
+    },
+    {
+      "question": 51,
+      "word": "展示",
+      "family": "pinyin_to_word",
+      "correct": "展示"
+    },
+    {
+      "question": 52,
+      "word": "妻子",
+      "family": "meaning",
+      "correct": "vợ"
+    },
+    {
+      "question": 53,
+      "word": "妻子",
+      "family": "word_to_pinyin",
+      "correct": "qīzi"
+    },
+    {
+      "question": 54,
+      "word": "妻子",
+      "family": "pinyin_to_word",
+      "correct": "妻子"
+    },
+    {
+      "question": 55,
+      "word": "制定",
+      "family": "meaning",
+      "correct": "đề ra; xây dựng"
+    },
+    {
+      "question": 56,
+      "word": "制定",
+      "family": "word_to_pinyin",
+      "correct": "zhìdìng"
+    },
+    {
+      "question": 57,
+      "word": "制定",
+      "family": "pinyin_to_word",
+      "correct": "制定"
+    },
+    {
+      "question": 58,
+      "word": "嘻嘻哈哈",
+      "family": "meaning",
+      "correct": "cười đùa; nói cười vui vẻ"
+    },
+    {
+      "question": 59,
+      "word": "嘻嘻哈哈",
+      "family": "word_to_pinyin",
+      "correct": "xīxī-hāhā"
+    },
+    {
+      "question": 60,
+      "word": "嘻嘻哈哈",
+      "family": "pinyin_to_word",
+      "correct": "嘻嘻哈哈"
+    },
+    {
+      "question": 61,
+      "word": "严肃",
+      "family": "meaning",
+      "correct": "nghiêm túc"
+    },
+    {
+      "question": 62,
+      "word": "严肃",
+      "family": "word_to_pinyin",
+      "correct": "yánsù"
+    },
+    {
+      "question": 63,
+      "word": "严肃",
+      "family": "pinyin_to_word",
+      "correct": "严肃"
+    },
+    {
+      "question": 64,
+      "word": "按",
+      "family": "meaning",
+      "correct": "theo; chiếu theo"
+    },
+    {
+      "question": 65,
+      "word": "按",
+      "family": "word_to_pinyin",
+      "correct": "àn"
+    },
+    {
+      "question": 66,
+      "word": "按",
+      "family": "pinyin_to_word",
+      "correct": "按"
+    },
+    {
+      "question": 67,
+      "word": "军法",
+      "family": "meaning",
+      "correct": "quân pháp; quân luật"
+    },
+    {
+      "question": 68,
+      "word": "军法",
+      "family": "word_to_pinyin",
+      "correct": "jūnfǎ"
+    },
+    {
+      "question": 69,
+      "word": "军法",
+      "family": "pinyin_to_word",
+      "correct": "军法"
+    },
+    {
+      "question": 70,
+      "word": "处死",
+      "family": "meaning",
+      "correct": "xử tử"
+    },
+    {
+      "question": 71,
+      "word": "处死",
+      "family": "word_to_pinyin",
+      "correct": "chǔsǐ"
+    },
+    {
+      "question": 72,
+      "word": "处死",
+      "family": "pinyin_to_word",
+      "correct": "处死"
+    },
+    {
+      "question": 73,
+      "word": "难过",
+      "family": "meaning",
+      "correct": "buồn; đau lòng"
+    },
+    {
+      "question": 74,
+      "word": "难过",
+      "family": "word_to_pinyin",
+      "correct": "nánguò"
+    },
+    {
+      "question": 75,
+      "word": "难过",
+      "family": "pinyin_to_word",
+      "correct": "难过"
+    },
+    {
+      "question": 76,
+      "word": "任命",
+      "family": "meaning",
+      "correct": "bổ nhiệm; cử làm"
+    },
+    {
+      "question": 77,
+      "word": "任命",
+      "family": "word_to_pinyin",
+      "correct": "rènmìng"
+    },
+    {
+      "question": 78,
+      "word": "任命",
+      "family": "pinyin_to_word",
+      "correct": "任命"
+    },
+    {
+      "question": 79,
+      "word": "打胜仗",
+      "family": "meaning",
+      "correct": "thắng trận"
+    },
+    {
+      "question": 80,
+      "word": "打胜仗",
+      "family": "word_to_pinyin",
+      "correct": "dǎ shèngzhàng"
+    },
+    {
+      "question": 81,
+      "word": "打胜仗",
+      "family": "pinyin_to_word",
+      "correct": "打胜仗"
+    },
+    {
+      "question": 82,
+      "word": "既",
+      "family": "meaning",
+      "correct": "vừa… vừa…"
+    },
+    {
+      "question": 83,
+      "word": "既",
+      "family": "word_to_pinyin",
+      "correct": "jì"
+    },
+    {
+      "question": 84,
+      "word": "既",
+      "family": "pinyin_to_word",
+      "correct": "既"
+    },
+    {
+      "question": 85,
+      "word": "战败",
+      "family": "meaning",
+      "correct": "bị đánh bại; thất trận"
+    },
+    {
+      "question": 86,
+      "word": "战败",
+      "family": "word_to_pinyin",
+      "correct": "zhànbài"
+    },
+    {
+      "question": 87,
+      "word": "战败",
+      "family": "pinyin_to_word",
+      "correct": "战败"
+    },
+    {
+      "question": 88,
+      "word": "孙子",
+      "family": "meaning",
+      "correct": "Tôn Tử; nhà quân sự thời Xuân Thu"
+    },
+    {
+      "question": 89,
+      "word": "孙子",
+      "family": "word_to_pinyin",
+      "correct": "Sūn Zǐ"
+    },
+    {
+      "question": 90,
+      "word": "孙子",
+      "family": "pinyin_to_word",
+      "correct": "孙子"
+    },
+    {
+      "question": 91,
+      "word": "《孙子兵法》",
+      "family": "meaning",
+      "correct": "sách Binh pháp Tôn Tử; sách về lý thuyết chiến tranh"
+    },
+    {
+      "question": 92,
+      "word": "《孙子兵法》",
+      "family": "word_to_pinyin",
+      "correct": "Sūn Zǐ Bīngfǎ"
+    },
+    {
+      "question": 93,
+      "word": "《孙子兵法》",
+      "family": "pinyin_to_word",
+      "correct": "《孙子兵法》"
+    }
+  ],
+  "semantic_review": {
+    "reviewer": "Codex AI agent",
+    "status": "AI reviewed; teacher confirmation pending",
+    "scope": "Read all 93 question prompts, options and indexed answers; Chinese and pinyin checked against canonical entries; Vietnamese checked against existing content contract",
+    "findings": [
+      "No question copy contains internal lesson/task labels",
+      "Meaning distractors exclude overlapping concept groups",
+      "Canonical tone marks, apostrophe, hyphen and proper-noun capitalization retained",
+      "Existing meanings retained; 既 shortened locally without changing its paired-structure meaning"
+    ],
+    "remaining_review": [
+      "Formal source approval and support gate blockers remain",
+      "Meaning labels such as 根本, 既, 早茶 retain existing contract context; teacher may revise before import"
+    ]
+  },
+  "local_copy_edits": [
+    {
+      "word": "既",
+      "from": "dùng trong cấu trúc “既……又/也……” = vừa… vừa…",
+      "to": "vừa… vừa…",
+      "reason": "Keep student-facing answer in Vietnamese; remove grammar explanation and Chinese characters",
+      "contract_modified": false
+    }
+  ]
+}

@@ -7,6 +7,6 @@ export const performanceDimensions = [
 export const learningSourceLabels = { class_observation: '課堂觀察', random_call: '隨機抽問', voluntary_answer: '自願發言', manual_adjustment: '快速調整' }
 
 export function includedInSummary(event: LearningEvent) {
-  return event.record_status !== 'voided' && event.counted_for_summary !== false
+  return event.record_status !== 'voided' && event.record_status !== 'corrected' && event.counted_for_summary !== false
     && !['no_response', 'declined', 'unobserved'].includes(event.response_status ?? '')
 }

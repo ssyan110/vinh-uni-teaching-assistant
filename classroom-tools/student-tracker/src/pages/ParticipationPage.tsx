@@ -12,8 +12,15 @@ export function ParticipationPage() {
   const { snapshot, busy, saveLearningEvent, correctClassroomRecord } = useTracker()
   const [params, setParams] = useSearchParams()
   const courseId = params.get('course') || ''
-  const [date, setDate] = useState(() => params.get('date') || '')
-  const [sessionId, setSessionId] = useState(() => params.get('session') || '')
+  const date = params.get('date') || ''
+  const sessionId = params.get('session') || ''
+  const selectSession = (nextDate: string, nextSessionId = '') => {
+    const next = new URLSearchParams({ course: courseId })
+    if (nextDate) next.set('date', nextDate)
+    if (nextSessionId) next.set('session', nextSessionId)
+    setParams(next)
+    setContext(''); setNotice(''); setQuickStates({})
+  }
   const [context, setContext] = useState('')
   const [notice, setNotice] = useState('')
   const [search, setSearch] = useState('')
@@ -43,7 +50,7 @@ export function ParticipationPage() {
   }
 
   const addVoluntaryAnswer = async (studentId: string, name: string) => {
-    if (!session || !selectedContext || saving.current) return
+    if (!session || !selectedContext || saving.current || busy) return
     saving.current = true
     setNotice('')
     const [textbook, lesson] = selectedContext.split(':')
@@ -63,13 +70,18 @@ export function ParticipationPage() {
   }
 
   const adjustAnswerCount = async (row: ParticipationRow, delta: 1 | -1) => {
-    if (!session || busy || row.enrollment.status !== 'active') return
+    if (!session || busy || saving.current || row.enrollment.status !== 'active') return
     if (delta === -1 && row.total === 0) return
+    saving.current = true
     const name = row.student.chinese_name
     setQuickState(row.student.id, { status: 'saving', message: '保存中…' })
     try {
       if (delta === 1) {
+        const intent = `manual:${session.id}:${row.student.id}`
+        const clientEventId = pendingSaves.current.get(intent) || `manual:${crypto.randomUUID()}`
+        pendingSaves.current.set(intent, clientEventId)
         await saveLearningEvent({
+          client_event_id: clientEventId,
           course_id: courseId,
           session_id: session.id,
           student_id: row.student.id,
@@ -89,6 +101,7 @@ export function ParticipationPage() {
           interaction: null,
           needs_review: false,
         })
+        pendingSaves.current.delete(intent)
       } else {
         const latest = participationRecords(snapshot, courseId, session.id).find(record =>
           record.studentId === row.student.id || (!record.studentId && record.studentCode === row.student.student_code))
@@ -102,22 +115,24 @@ export function ParticipationPage() {
       setQuickState(row.student.id, { status: 'saved', message: delta === 1 ? '已增加 1 次' : '已減少 1 次' })
     } catch (caught) {
       setQuickState(row.student.id, { status: 'error', message: caught instanceof Error ? caught.message : '保存失敗，請再試一次。' })
+    } finally {
+      saving.current = false
     }
   }
 
   const exportTable = () => {
     if (!session || !course) return
-    const values = [['班級', '日期', '上課場次', '學號', '姓名', '抽問回答', '自願發言', '快速調整', '總回答次數'],
-      ...rows.map(r => [course.code, date, sessionLabel, r.student.student_code, r.student.chinese_name, r.random, r.voluntary, r.manual, r.total])]
+    const values = [['班級', '日期', '上課場次', '學號', '姓名', '抽問回答', '自願發言', '老師主動叫', '快速調整', '總回答次數'],
+      ...rows.map(r => [course.code, date, sessionLabel, r.student.student_code, r.student.chinese_name, r.random, r.voluntary, r.teacher, r.manual, r.total])]
     downloadCsv('\uFEFF' + values.map(row => row.map(csvCell).join(',')).join('\r\n'), `${course.code}-${date}-${sessionLabel.replaceAll(' ', '')}-回答次數.csv`)
   }
 
   return <div className="participation-page">
     <header className="page-heading"><h1>每堂課回答次數</h1><p>先選班級、日期和上課場次，再查看全班紀錄。每回答一次就計一次；回答次數可在本頁直接快速調整。</p></header>
     <div className="participation-filters">
-      <label>班級<select value={courseId} onChange={e => { setParams(e.target.value ? { course: e.target.value } : {}); setDate(''); setSessionId(''); setContext(''); setNotice(''); setQuickStates({}) }}><option value="">選擇班級</option>{snapshot.courses.map(c => <option key={c.id} value={c.id}>{c.code} · {c.name}</option>)}</select></label>
-      <label>上課日期<select value={date} disabled={!course} onChange={e => { setDate(e.target.value); const matches = sessions.filter(s => s.session_date === e.target.value); setSessionId(matches.length === 1 ? matches[0].id : ''); setContext(''); setNotice(''); setQuickStates({}) }}><option value="">選擇日期</option>{dates.map(d => <option key={d}>{d}</option>)}</select></label>
-      <label>上課場次<select value={session?.id || ''} disabled={!date} onChange={e => { setSessionId(e.target.value); setContext(''); setNotice(''); setQuickStates({}) }}><option value="">選擇上課場次</option>{sessions.filter(s => s.session_date === date).map(s => <option key={s.id} value={s.id}>{s.session_number ? `第 ${s.session_number} 次上課` : '場次未編號'}{s.starts_at ? ` · ${s.starts_at}` : ''}{s.topic ? ` · ${s.topic}` : ''}</option>)}</select></label>
+      <label>班級<select disabled={busy} value={courseId} onChange={e => { setParams(e.target.value ? { course: e.target.value } : {}); setContext(''); setNotice(''); setQuickStates({}) }}><option value="">選擇班級</option>{snapshot.courses.map(c => <option key={c.id} value={c.id}>{c.code} · {c.name}</option>)}</select></label>
+      <label>上課日期<select value={date} disabled={!course || busy} onChange={e => { const matches = sessions.filter(s => s.session_date === e.target.value); selectSession(e.target.value, matches.length === 1 ? matches[0].id : '') }}><option value="">選擇日期</option>{dates.map(d => <option key={d}>{d}</option>)}</select></label>
+      <label>上課場次<select value={session?.id || ''} disabled={!date || busy} onChange={e => selectSession(date, e.target.value)}><option value="">選擇上課場次</option>{sessions.filter(s => s.session_date === date).map(s => <option key={s.id} value={s.id}>{s.session_number ? `第 ${s.session_number} 次上課` : '場次未編號'}{s.starts_at ? ` · ${s.starts_at}` : ''}{s.topic ? ` · ${s.topic}` : ''}</option>)}</select></label>
     </div>
     {!session ? <p className="empty-state">{course && !sessions.length ? '這個班級尚未建立上課紀錄。請先到「班級」開始一堂課。' : '選好上課場次後，這裡會列出每位學生，包括回答 0 次的學生。'}</p> : <>
       <div className="participation-toolbar"><h2>{course?.code} · {date} · {sessionLabel}</h2><button className="secondary-button" onClick={exportTable}>匯出 CSV（Excel 可開啟）</button></div>
@@ -128,10 +143,10 @@ export function ParticipationPage() {
       <div className="quick-adjustment-guide" role="note"><strong>快速調整回答次數</strong><span>＋新增一筆快速調整；−更正最近一筆有效回答。每次操作會立即保存，並保留原始紀錄與更正原因。</span></div>
       {notice && <p className="inline-notice" role="status">{notice}</p>}
       <label>找學生<input type="search" value={search} onChange={e => setSearch(e.target.value)} placeholder="姓名、原名或學號末四位" /></label>
-      <div className="participation-table-wrap"><table className="participation-table"><caption>本堂課每位學生的回答紀錄</caption><thead><tr>{['學號末四位', '姓名', '抽問回答', '自願發言', '總回答次數', '快速調整', '明細'].map(h => <th key={h} scope="col">{h}</th>)}</tr></thead><tbody>{visibleRows.map(r => {
+      <div className="participation-table-wrap"><table className="participation-table"><caption>本堂課每位學生的回答紀錄</caption><thead><tr>{['學號末四位', '姓名', '抽問回答', '自願發言', '老師主動叫', '總回答次數', '快速調整', '明細'].map(h => <th key={h} scope="col">{h}</th>)}</tr></thead><tbody>{visibleRows.map(r => {
         const quickState = quickStates[r.student.id]
         const disabled = busy || r.enrollment.status !== 'active'
-        return <tr key={r.student.id}><td>{studentCodeLastFour(r.student.student_code)}</td><th scope="row">{r.student.chinese_name}<small>{r.student.original_name}</small></th><td>{r.random}</td><td>{r.voluntary}</td><td className="participation-total-cell"><strong>{r.total}</strong><small className="manual-adjustment-count">快速調整 {r.manual} 次</small></td><td className="quick-adjustment-cell"><div className="quick-adjustment-controls" aria-label={`${r.student.chinese_name}的回答次數快速調整`}><button type="button" className="quick-adjustment-button" disabled={disabled || r.total === 0} onClick={() => void adjustAnswerCount(r, -1)} aria-label={`${r.student.chinese_name}減少一次回答`} title="更正最近一筆有效回答">−</button><button type="button" className="quick-adjustment-button plus" disabled={disabled} onClick={() => void adjustAnswerCount(r, 1)} aria-label={`${r.student.chinese_name}增加一次回答`} title="新增一筆快速調整">＋</button></div>{quickState && <span className={`quick-adjustment-status ${quickState.status}`} role={quickState.status === 'error' ? 'alert' : 'status'} aria-live="polite">{quickState.message}</span>}</td><td><button className="secondary-button compact" disabled={busy || !selectedContext || r.enrollment.status !== 'active'} onClick={() => void addVoluntaryAnswer(r.student.id, r.student.chinese_name)} aria-label={`${r.student.chinese_name}自願發言加一次`}>自願發言 +1</button><Link className="text-button" to={`/students/${r.student.id}?course=${encodeURIComponent(courseId)}`}>查看明細</Link></td></tr>
+        return <tr key={r.student.id}><td>{studentCodeLastFour(r.student.student_code)}</td><th scope="row">{r.student.chinese_name}<small>{r.student.original_name}</small></th><td>{r.random}</td><td>{r.voluntary}</td><td>{r.teacher}</td><td className="participation-total-cell"><strong>{r.total}</strong><small className="manual-adjustment-count">快速調整 {r.manual} 次</small></td><td className="quick-adjustment-cell"><div className="quick-adjustment-controls" aria-label={`${r.student.chinese_name}的回答次數快速調整`}><button type="button" className="quick-adjustment-button" disabled={disabled || r.total === 0} onClick={() => void adjustAnswerCount(r, -1)} aria-label={`${r.student.chinese_name}減少一次回答`} title="更正最近一筆有效回答">−</button><button type="button" className="quick-adjustment-button plus" disabled={disabled} onClick={() => void adjustAnswerCount(r, 1)} aria-label={`${r.student.chinese_name}增加一次回答`} title="新增一筆快速調整">＋</button></div>{quickState && <span className={`quick-adjustment-status ${quickState.status}`} role={quickState.status === 'error' ? 'alert' : 'status'} aria-live="polite">{quickState.message}</span>}</td><td><button className="secondary-button compact" disabled={busy || !selectedContext || r.enrollment.status !== 'active'} onClick={() => void addVoluntaryAnswer(r.student.id, r.student.chinese_name)} aria-label={`${r.student.chinese_name}自願發言加一次`}>自願發言 +1</button><Link className="text-button" to={`/students/${r.student.id}?course=${encodeURIComponent(courseId)}`}>查看明細</Link></td></tr>
       })}</tbody></table></div>
       <p className="field-help">「−」不會刪除回答，而是把最近一筆有效回答標記為更正；需要查看來源或修改原因時，再開啟學生明細。</p>
     </>}

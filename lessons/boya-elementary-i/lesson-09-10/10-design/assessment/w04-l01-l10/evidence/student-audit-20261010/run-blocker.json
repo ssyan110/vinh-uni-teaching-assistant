@@ -1,0 +1,16 @@
+{
+  "phase": "needs_human",
+  "assessment_id": "W04-L01L10-20261006",
+  "exam_preflight": {
+    "purpose": "assessment-audio",
+    "exam_id": "W04-L01L10-20261006",
+    "status": "ready",
+    "output_dir": "audio-repair-qwen-serena-v01",
+    "human_audio_acceptance": false,
+    "meaning": "read-only registered exam route and input checks; no audio generation, approval or fitness claim"
+  },
+  "diagnostic": "agent_loop cumulative exam route unavailable; wrong lesson init not authoritative",
+  "remaining": "audio rejected/unapproved; human pronunciation and actual Google Form submission/recovery untested",
+  "human_gates_not_granted": true,
+  "browser_test": "completed dedicated student session and closed"
+}

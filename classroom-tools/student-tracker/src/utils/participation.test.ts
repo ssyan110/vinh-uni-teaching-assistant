@@ -1,7 +1,54 @@
 import { expect, test } from 'vitest'
 import { createDemoSnapshot } from '../data/demoData'
-import type { RandomizerAttempt } from '../types'
-import { participationRecords, participationRows } from './participation'
+import type { ClassSession, RandomizerAttempt } from '../types'
+import { latestParticipationSession, participationRecords, participationRows } from './participation'
+import { evidenceRows, eventDay } from './classroomAnalysis'
+
+test('evidence uses the linked class date, preserves recording time and counts unscored answers consistently', () => {
+  const snapshot = createDemoSnapshot()
+  const course = snapshot.courses[0].id
+  const session = snapshot.sessions.find(s => s.course_id === course)!
+  session.session_date = '2026-09-30'
+  const student = snapshot.enrollments.find(e => e.course_id === course)!.student_id
+  snapshot.learningEvents = []
+  snapshot.attempts = [{ id:'late-answer', client_attempt_id:'late-answer', course_id:course, student_id:student,
+    randomizer_sessions:{class_session_id:session.id}, outcome:'answered', record_status:'valid',
+    selection_method:'random', counted_for_summary:false, drawn_at:'2026-10-02T01:00:00Z', completed_at:'2026-10-02T01:00:05Z'
+  } as RandomizerAttempt]
+  expect(evidenceRows(snapshot)[0]).toMatchObject({date:'2026-09-30',recordedAt:'2026-10-02T01:00:05Z',included:true})
+  expect(participationRows(snapshot,course,session.id).find(r => r.student.id === student)?.total).toBe(1)
+  snapshot.attempts[0].record_status = 'corrected'
+  expect(evidenceRows(snapshot)[0]).toMatchObject({status:'已更正',included:false})
+  expect(eventDay('2026-10-01T18:30:00Z')).toBe('2026-10-02')
+  expect(eventDay('2026-09-30')).toBe('2026-09-30')
+});
+
+test('latest class skips an empty new session but retains classes with no answers', () => {
+  const snapshot = createDemoSnapshot()
+  const courseId = snapshot.courses[0].id
+  const previous = snapshot.sessions.find(session => session.course_id === courseId)!
+  previous.session_date = '2026-09-30'
+  previous.status = 'completed'
+  snapshot.attempts = []
+  snapshot.learningEvents = []
+  snapshot.attendance = []
+  snapshot.observations = []
+  const empty: ClassSession = { ...previous, id: 'empty-today', session_date: '2026-10-02', status: 'in_progress',
+    class_status: null, progress_text: null, what_worked: null, common_difficulty: null, next_adjustment: null, completed_at: null }
+  snapshot.sessions.unshift(empty)
+  expect(latestParticipationSession(snapshot, courseId)?.id).toBe(previous.id)
+  expect(participationRows(snapshot, courseId, previous.id).every(row => row.total === 0)).toBe(true)
+  snapshot.attempts = [{ id: 'no-answer', course_id: courseId, client_attempt_id: 'no-answer',
+    randomizer_sessions: { class_session_id: empty.id }, outcome: 'not_answered', record_status: 'valid' } as RandomizerAttempt]
+  expect(latestParticipationSession(snapshot, courseId)?.id).toBe(empty.id)
+  snapshot.attempts[0].course_id = 'another-course'
+  expect(latestParticipationSession(snapshot, courseId)?.id).toBe(previous.id)
+  snapshot.attempts = []
+  snapshot.sessions = [empty]
+  expect(latestParticipationSession(snapshot, courseId)).toBeUndefined()
+  empty.status = 'completed'
+  expect(latestParticipationSession(snapshot, courseId)?.id).toBe(empty.id)
+})
 
 test('counts repeated unscored answers, volunteers and zero-answer students within the exact class session', () => {
   const s = createDemoSnapshot()

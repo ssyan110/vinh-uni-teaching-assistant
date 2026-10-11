@@ -1,0 +1,157 @@
+{
+  "status": "review_unpublished",
+  "cohort": "BOYA-LS-E1-Y1S1-2026F",
+  "offering_id": "2026-fall",
+  "week": "w07/lesson15",
+  "lesson_keys": [
+    "boya-elementary-i:lesson-15"
+  ],
+  "items": [
+    {
+      "type": "mc",
+      "audio_id": "E15-A01",
+      "prompt": "说话人提出什么请求？",
+      "options": [
+        "试衣服",
+        "退衣服",
+        "换颜色",
+        "问价格"
+      ],
+      "answer_index": 0,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-15"
+      ],
+      "focus": "请求试用",
+      "points": 2,
+      "id": "W07-LESSON15-01"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E15-A03",
+      "prompt": "这件衣服有什么问题？",
+      "options": [
+        "太贵",
+        "太大",
+        "有点儿小",
+        "太长"
+      ],
+      "answer_index": 2,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-15"
+      ],
+      "focus": "不合适的原因",
+      "points": 2,
+      "id": "W07-LESSON15-02"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E15-A04",
+      "prompt": "说话人为什么想请假？",
+      "options": [
+        "要去机场接朋友",
+        "生病了",
+        "要看电影",
+        "要买衣服"
+      ],
+      "answer_index": 0,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-15"
+      ],
+      "focus": "请求理由",
+      "points": 2,
+      "id": "W07-LESSON15-03"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E15-B01",
+      "prompt": "试衣间在哪里？",
+      "options": [
+        "左边",
+        "右边",
+        "楼上",
+        "门外"
+      ],
+      "answer_index": 1,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-15"
+      ],
+      "focus": "许可后行动",
+      "points": 2,
+      "id": "W07-LESSON15-04"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E15-B02",
+      "prompt": "老师同意请假吗？",
+      "options": [
+        "同意，并请他回来后看看当天学的内容",
+        "不同意，因为他没说明原因",
+        "同意，并取消课程",
+        "没作出回应"
+      ],
+      "answer_index": 0,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-15"
+      ],
+      "focus": "听取回应",
+      "points": 2,
+      "id": "W07-LESSON15-05"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E15-B04",
+      "prompt": "小林最后打算怎么办？",
+      "options": [
+        "买白色手机",
+        "买蓝色手机",
+        "再看看别的",
+        "马上去试衣服"
+      ],
+      "answer_index": 2,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-15"
+      ],
+      "focus": "拒绝后决定",
+      "points": 2,
+      "id": "W07-LESSON15-06"
+    },
+    {
+      "type": "short",
+      "audio_id": "E15-C01",
+      "prompt": "安娜为什么换小号？最后买吗？",
+      "answer": "原来蓝色衣服有点儿大；换小号后正合适，她决定买。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-15"
+      ],
+      "focus": "试用和决定",
+      "points": 4,
+      "id": "W07-LESSON15-07"
+    },
+    {
+      "type": "short",
+      "audio_id": "E15-C02",
+      "prompt": "李明何时到教室？老师为什么希望他下午来？",
+      "answer": "下午两点；下午有重要的课。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-15"
+      ],
+      "focus": "请求后的条件",
+      "points": 4,
+      "id": "W07-LESSON15-08"
+    }
+  ],
+  "oral_tasks": [
+    {
+      "title": "店内请求",
+      "prompt": "顾客卡：想买蓝色衣服，先试大号，发现太大；预算三百元。店员卡：可试穿，小号有货，价格二百六十元。两人轮流问答；顾客最后决定买或不买并说明理由。",
+      "evidence": "请求、回应、修改决定都要说出。",
+      "points": 10
+    },
+    {
+      "title": "请假与补课",
+      "prompt": "学生卡：明天上午要去机场接家人，下午两点能到。教师卡：上午可请假，下午有重要课程，希望学生两点到。学生说明原因、请求请假并确认到课时间。",
+      "evidence": "用明确请求和确认结束对话。",
+      "points": 10
+    }
+  ]
+}

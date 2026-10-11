@@ -1,6 +1,8 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
 import { createDemoSnapshot } from './demoData'
+import { eventDay } from '../utils/classroomAnalysis'
 import type {
+  AttendanceExceptionInput,
   NoteInput,
   AttendanceStatus,
   ClassSession,
@@ -15,6 +17,7 @@ import type {
 } from '../types'
 
 export interface TrackerRepository {
+  saveAttendanceException(input: AttendanceExceptionInput): Promise<void>
   addNote(input: NoteInput): Promise<void>
   load(): Promise<TrackerSnapshot>
   startSession(courseId: string): Promise<string>
@@ -33,16 +36,28 @@ export interface TrackerRepository {
 
 const DEMO_KEY = 'keji-demo-snapshot-v1'
 
+export function validateAttendanceException(input: AttendanceExceptionInput): AttendanceExceptionInput {
+  if (!input.session_id || !input.student_id) throw new Error('請選擇課堂與學生。')
+  if (!['present', 'late', 'absent', 'excused'].includes(input.observed_status)) throw new Error('請選擇教師觀察狀態。')
+  const reason = input.reason.trim()
+  if (!reason || reason.length > 500) throw new Error('請填寫原因，最多 500 字。')
+  for (const time of [input.arrival_time, input.departure_time]) {
+    if (time && !/^([01]\d|2[0-3]):[0-5]\d(:00)?$/.test(time)) throw new Error('請填寫有效時間。')
+  }
+  if (input.arrival_time && input.departure_time && input.departure_time < input.arrival_time) throw new Error('離開時間不得早於到達時間。')
+  if (!['pending', 'completed'].includes(input.makeup_status) || !['unverified', 'confirmed'].includes(input.official_status)) throw new Error('補登狀態無效。')
+  const dateValid = (date: string | null) => date && /^\d{4}-\d{2}-\d{2}$/.test(date) && new Date(`${date}T00:00:00Z`).toISOString().slice(0, 10) === date
+  if (input.makeup_status === 'completed' && !dateValid(input.makeup_date)) throw new Error('請填寫有效補登日期。')
+  if (input.official_status === 'confirmed' && (input.makeup_status !== 'completed' || !dateValid(input.verified_on))) throw new Error('官方確認需要已完成補登與有效核對日期。')
+  return { session_id: input.session_id, student_id: input.student_id, observed_status: input.observed_status, reason, arrival_time: input.arrival_time || null, departure_time: input.departure_time || null, makeup_status: input.makeup_status, official_status: input.official_status, makeup_date: input.makeup_status === 'completed' ? input.makeup_date : null, verified_on: input.official_status === 'confirmed' ? input.verified_on : null }
+}
+
 function uid(prefix: string) {
   return `${prefix}-${crypto.randomUUID()}`
 }
 
 export function todayIso() {
-  const now = new Date()
-  const year = now.getFullYear()
-  const month = String(now.getMonth() + 1).padStart(2, '0')
-  const day = String(now.getDate()).padStart(2, '0')
-  return `${year}-${month}-${day}`
+  return eventDay(new Date().toISOString())
 }
 
 function readDemo(): TrackerSnapshot {
@@ -71,6 +86,18 @@ export class DemoRepository implements TrackerRepository {
     return structuredClone(this.snapshot)
   }
 
+  async saveAttendanceException(input: AttendanceExceptionInput) {
+    const cleaned = validateAttendanceException(input)
+    const session = this.snapshot.sessions.find(s => s.id === input.session_id)
+    if (!session || !this.snapshot.enrollments.some(e => e.course_id === session.course_id && e.student_id === input.student_id)) throw new Error('學生不屬於這個課堂。')
+    this.snapshot.attendanceExceptions ??= []
+    const existing = this.snapshot.attendanceExceptions.find(r => r.session_id === input.session_id && r.student_id === input.student_id)
+    const now = new Date().toISOString()
+    if (existing) Object.assign(existing, cleaned, { updated_at: now })
+    else this.snapshot.attendanceExceptions.push({ ...cleaned, id: uid('attendance-exception'), owner_id: 'demo-owner', created_at: now, updated_at: now })
+    this.save()
+  }
+
   async addNote(input: NoteInput) {
     validateNote(input)
     if (!this.snapshot.enrollments.some(e => e.course_id === input.course_id && e.student_id === input.student_id)) throw new Error('學生不屬於這個班級。')
@@ -81,14 +108,17 @@ export class DemoRepository implements TrackerRepository {
 
   async startSession(courseId: string) {
     const existing = this.snapshot.sessions.find((session) => session.course_id === courseId && session.status === 'in_progress')
-    if (existing) return existing.id
+    if (existing) {
+      if (existing.session_date !== todayIso()) throw new Error(`本班 ${existing.session_date} 的課次尚未收尾，請先核對並完成舊課次。`)
+      return existing.id
+    }
     const id = uid('session')
     this.snapshot.sessions.unshift({
       id,
       owner_id: 'demo-owner',
       course_id: courseId,
       session_date: todayIso(),
-      starts_at: new Date().toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit', hour12: false }),
+      starts_at: new Date().toLocaleTimeString('zh-TW', { timeZone: 'Asia/Ho_Chi_Minh', hour: '2-digit', minute: '2-digit', hour12: false }),
       topic: null,
       observation_target: null,
       status: 'in_progress',
@@ -193,7 +223,7 @@ export class DemoRepository implements TrackerRepository {
     const session = this.snapshot.sessions.find((item) => item.id === sessionId)
     if (!session) throw new Error('找不到這堂課。')
     validateSessionReflection(reflection)
-    Object.assign(session, reflection, { status: 'completed', completed_at: new Date().toISOString() })
+    Object.assign(session, reflection, { status: 'completed', completed_at: session.completed_at ?? new Date().toISOString() })
     this.save()
   }
 
@@ -223,9 +253,12 @@ export class DemoRepository implements TrackerRepository {
           original_name: row.original_name || null, preferred_name: row.preferred_name || null, status: 'active',
         }
         this.snapshot.students.push(student)
+      } else {
+        Object.assign(student, { chinese_name: row.chinese_name, original_name: row.original_name || null, preferred_name: row.preferred_name || null, status: 'active' })
       }
-      const exists = this.snapshot.enrollments.some((item) => item.course_id === courseId && item.student_id === student?.id)
-      if (!exists) this.snapshot.enrollments.push({ id: uid('enrollment'), owner_id: 'demo-owner', course_id: courseId, student_id: student.id, seat_number: row.seat_number ?? null, status: 'active' })
+      const existing = this.snapshot.enrollments.find((item) => item.course_id === courseId && item.student_id === student?.id)
+      if (existing) Object.assign(existing, { seat_number: row.seat_number ?? null, status: 'active' })
+      else this.snapshot.enrollments.push({ id: uid('enrollment'), owner_id: 'demo-owner', course_id: courseId, student_id: student.id, seat_number: row.seat_number ?? null, status: 'active' })
     })
     this.save()
   }
@@ -277,6 +310,13 @@ export function validateClassroomRecordCorrection(input: ClassroomRecordCorrecti
 export class SupabaseRepository implements TrackerRepository {
   constructor(private client: SupabaseClient, private ownerId: string) {}
 
+  async saveAttendanceException(input: AttendanceExceptionInput) {
+    const cleaned = validateAttendanceException(input)
+    const result = await this.client.from('attendance_exceptions').upsert({ ...cleaned, owner_id: this.ownerId }, { onConflict: 'session_id,student_id' })
+    if (result.error?.code === 'PGRST205' || result.error?.code === '42P01') throw new Error('補登紀錄資料表尚未啟用，請先套用 attendance_exceptions migration。')
+    assertNoError(result.error)
+  }
+
   async load(): Promise<TrackerSnapshot> {
     const tableNames = ['academic_terms', 'courses', 'students', 'enrollments', 'class_sessions', 'attendance_records', 'observation_records', 'followups', 'learning_events', 'randomizer_attempts', 'student_notes', 'classroom_record_corrections'] as const
     const results = await Promise.all(tableNames.map(async (table) => {
@@ -289,7 +329,17 @@ export class SupabaseRepository implements TrackerRepository {
       }
       return {data:rows}
     }))
+    const exceptions: unknown[] = []
+    let attendanceExceptionsAvailable = true
+    for (let offset = 0;; offset += 1000) {
+      const result = await this.client.from('attendance_exceptions').select('*').eq('owner_id', this.ownerId).order('id').range(offset, offset + 999)
+      if (result.error?.code === 'PGRST205' || result.error?.code === '42P01') { attendanceExceptionsAvailable = false; break }
+      assertNoError(result.error)
+      exceptions.push(...(result.data ?? []))
+      if ((result.data?.length ?? 0) < 1000) break
+    }
     return {
+      attendanceExceptions: exceptions, attendanceExceptionsAvailable,
       terms: results[0].data ?? [], courses: results[1].data ?? [], students: results[2].data ?? [], enrollments: results[3].data ?? [],
       sessions: results[4].data ?? [], attendance: results[5].data ?? [], observations: results[6].data ?? [], followups: results[7].data ?? [],
       learningEvents: results[8].data ?? [], attempts: results[9].data ?? [], studentNotes: results[10].data ?? [], correctionAudits: results[11].data ?? [],
@@ -304,13 +354,10 @@ export class SupabaseRepository implements TrackerRepository {
   }
 
   async startSession(courseId: string) {
-    const existing = await this.client.from('class_sessions').select('id').eq('owner_id', this.ownerId).eq('course_id', courseId).eq('status', 'in_progress').maybeSingle()
-    assertNoError(existing.error)
-    if (existing.data) return existing.data.id as string
-    const result = await this.client.from('class_sessions').insert({ owner_id: this.ownerId, course_id: courseId, session_date: todayIso(), status: 'in_progress' }).select('id').single()
+    const result = await this.client.rpc('ensure_class_session', { p_course_id: courseId, p_session_date: todayIso() })
     assertNoError(result.error)
     if (!result.data) throw new Error('無法建立課堂。')
-    return result.data.id as string
+    return result.data as string
   }
 
   async updateSession(sessionId: string, input: { sessionDate: string; sessionNumber: number | null; reason: string }) {
@@ -365,7 +412,9 @@ export class SupabaseRepository implements TrackerRepository {
 
   async closeSession(sessionId: string, reflection: Pick<ClassSession, 'class_status' | 'progress_text' | 'what_worked' | 'common_difficulty' | 'next_adjustment'>) {
     validateSessionReflection(reflection)
-    const result = await this.client.from('class_sessions').update({ ...reflection, status: 'completed', completed_at: new Date().toISOString() }).eq('id', sessionId).eq('owner_id', this.ownerId)
+    const current = await this.client.from('class_sessions').select('completed_at').eq('id', sessionId).eq('owner_id', this.ownerId).single()
+    assertNoError(current.error)
+    const result = await this.client.from('class_sessions').update({ ...reflection, status: 'completed', completed_at: current.data?.completed_at ?? new Date().toISOString() }).eq('id', sessionId).eq('owner_id', this.ownerId).select('id').single()
     assertNoError(result.error)
   }
 

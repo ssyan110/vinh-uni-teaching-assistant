@@ -1,0 +1,1271 @@
+{
+  "exam_id": "W04-L01L10-20261006",
+  "clips": [
+    {
+      "audio_id": "E01-A01",
+      "question_numbers": [
+        1
+      ],
+      "source_text": "pā",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "趴",
+          "spoken_text": "趴",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 1,
+          "prompt": "Chọn âm tiết nghe được.",
+          "answer": "pā"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E01-A02",
+      "question_numbers": [
+        2
+      ],
+      "source_text": "nǚ",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "女",
+          "spoken_text": "女",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 2,
+          "prompt": "Chọn âm tiết nghe được.",
+          "answer": "nǚ"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E01-A03",
+      "question_numbers": [
+        3
+      ],
+      "source_text": "chī",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "吃",
+          "spoken_text": "吃",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 3,
+          "prompt": "Chọn âm tiết nghe được.",
+          "answer": "chī"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E02-A01",
+      "question_numbers": [
+        4
+      ],
+      "source_text": "bái",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "白",
+          "spoken_text": "白",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 4,
+          "prompt": "Chọn âm tiết nghe được.",
+          "answer": "bái"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E02-A02",
+      "question_numbers": [
+        5
+      ],
+      "source_text": "liú",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "流",
+          "spoken_text": "流",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 5,
+          "prompt": "Chọn âm tiết nghe được.",
+          "answer": "liú"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E02-A03",
+      "question_numbers": [
+        6
+      ],
+      "source_text": "duì",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "对",
+          "spoken_text": "对",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 6,
+          "prompt": "Chọn âm tiết nghe được.",
+          "answer": "duì"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E03-A01",
+      "question_numbers": [
+        7
+      ],
+      "source_text": "huār",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "花儿",
+          "spoken_text": "花儿",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 7,
+          "prompt": "Chọn âm nghe được.",
+          "answer": "huār"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E03-A02",
+      "question_numbers": [
+        8
+      ],
+      "source_text": "nǚ’ér",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "女儿",
+          "spoken_text": "女儿",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 8,
+          "prompt": "Chọn từ nghe được.",
+          "answer": "nǚ’ér"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E03-A03",
+      "question_numbers": [
+        9
+      ],
+      "source_text": "wèn",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "问",
+          "spoken_text": "问",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 9,
+          "prompt": "Chọn âm tiết nghe được.",
+          "answer": "wèn"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E04-A01",
+      "question_numbers": [
+        10
+      ],
+      "source_text": "我姓王，不姓李。",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "我姓王，不姓李。",
+          "spoken_text": "我姓王，不姓李。",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 10,
+          "prompt": "Người nói họ gì?",
+          "answer": "王 Wáng"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E04-B01",
+      "question_numbers": [
+        11,
+        12
+      ],
+      "source_text": "小林：你好！你叫什么名字？\n安娜：我叫安娜。\n小林：你是老师吗？\n安娜：不是，我是学生。",
+      "units": [
+        {
+          "speaker": "小林",
+          "original_tts_input": "小林，你好！你叫什么名字？",
+          "spoken_text": "你好！你叫什么名字？",
+          "change": "remove_only_leading_speaker_label"
+        },
+        {
+          "speaker": "安娜",
+          "original_tts_input": "安娜，我叫安娜。",
+          "spoken_text": "我叫安娜。",
+          "change": "remove_only_leading_speaker_label"
+        },
+        {
+          "speaker": "小林",
+          "original_tts_input": "小林，你是老师吗？",
+          "spoken_text": "你是老师吗？",
+          "change": "remove_only_leading_speaker_label"
+        },
+        {
+          "speaker": "安娜",
+          "original_tts_input": "安娜，不是，我是学生。",
+          "spoken_text": "不是，我是学生。",
+          "change": "remove_only_leading_speaker_label"
+        }
+      ],
+      "pause_after_ms": [
+        700,
+        700,
+        700
+      ],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 0.9,
+      "question_answer_mapping": [
+        {
+          "number": 11,
+          "prompt": "安娜叫什么名字？",
+          "answer": "安娜"
+        },
+        {
+          "number": 12,
+          "prompt": "安娜是老师吗？",
+          "answer": "不是"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E05-A02",
+      "question_numbers": [
+        13
+      ],
+      "source_text": "安娜是我的同学，不是我的同屋。",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "安娜是我的同学，不是我的同屋。",
+          "spoken_text": "安娜是我的同学，不是我的同屋。",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 13,
+          "prompt": "安娜和我是什么关系？",
+          "answer": "同学"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E05-B01",
+      "question_numbers": [
+        14,
+        15
+      ],
+      "source_text": "小林：这是我的朋友安娜。\n小王：安娜，你是哪国人？\n安娜：我是英国人。\n小王：我也是英国人，认识你很高兴。",
+      "units": [
+        {
+          "speaker": "小林",
+          "original_tts_input": "小林，这是我的朋友安娜。",
+          "spoken_text": "这是我的朋友安娜。",
+          "change": "remove_only_leading_speaker_label"
+        },
+        {
+          "speaker": "小王",
+          "original_tts_input": "小王，安娜，你是哪国人？",
+          "spoken_text": "安娜，你是哪国人？",
+          "change": "remove_only_leading_speaker_label"
+        },
+        {
+          "speaker": "安娜",
+          "original_tts_input": "安娜，我是英国人。",
+          "spoken_text": "我是英国人。",
+          "change": "remove_only_leading_speaker_label"
+        },
+        {
+          "speaker": "小王",
+          "original_tts_input": "小王，我也是英国人，认识你很高兴。",
+          "spoken_text": "我也是英国人，认识你很高兴。",
+          "change": "remove_only_leading_speaker_label"
+        }
+      ],
+      "pause_after_ms": [
+        700,
+        700,
+        700
+      ],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 0.9,
+      "question_answer_mapping": [
+        {
+          "number": 14,
+          "prompt": "安娜是哪国人？",
+          "answer": "英国人"
+        },
+        {
+          "number": 15,
+          "prompt": "小王是英国人吗？",
+          "answer": "是"
+        }
+      ],
+      "role_identity_ambiguity_questions": [
+        15
+      ]
+    },
+    {
+      "audio_id": "E06-A01",
+      "question_numbers": [
+        16
+      ],
+      "source_text": "这是我的书包，那是安娜的书包。",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "这是我的书包，那是安娜的书包。",
+          "spoken_text": "这是我的书包，那是安娜的书包。",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 16,
+          "prompt": "“那”个书包是谁的？",
+          "answer": "安娜的"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E06-B01",
+      "question_numbers": [
+        17,
+        18
+      ],
+      "source_text": "小林：这是谁的笔？是你的吗？\n小王：不是我的，是李美的。\n小林：这个本子呢？\n小王：这个本子是我的。",
+      "units": [
+        {
+          "speaker": "小林",
+          "original_tts_input": "小林，这是谁的笔？是你的吗？",
+          "spoken_text": "这是谁的笔？是你的吗？",
+          "change": "remove_only_leading_speaker_label"
+        },
+        {
+          "speaker": "小王",
+          "original_tts_input": "小王，不是我的，是李美的。",
+          "spoken_text": "不是我的，是李美的。",
+          "change": "remove_only_leading_speaker_label"
+        },
+        {
+          "speaker": "小林",
+          "original_tts_input": "小林，这个本子呢？",
+          "spoken_text": "这个本子呢？",
+          "change": "remove_only_leading_speaker_label"
+        },
+        {
+          "speaker": "小王",
+          "original_tts_input": "小王，这个本子是我的。",
+          "spoken_text": "这个本子是我的。",
+          "change": "remove_only_leading_speaker_label"
+        }
+      ],
+      "pause_after_ms": [
+        700,
+        700,
+        700
+      ],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 0.9,
+      "question_answer_mapping": [
+        {
+          "number": 17,
+          "prompt": "笔是谁的？",
+          "answer": "李美的"
+        },
+        {
+          "number": 18,
+          "prompt": "本子是谁的？",
+          "answer": "小王的"
+        }
+      ],
+      "role_identity_ambiguity_questions": [
+        18
+      ]
+    },
+    {
+      "audio_id": "E07-A01",
+      "question_numbers": [
+        19
+      ],
+      "source_text": "安娜不在宿舍，她在教室里。",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "安娜不在宿舍，她在教室里。",
+          "spoken_text": "安娜不在宿舍，她在教室里。",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 19,
+          "prompt": "安娜在哪儿？",
+          "answer": "教室里"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E07-B01",
+      "question_numbers": [
+        20,
+        21
+      ],
+      "source_text": "小林：你住在学校里吗？\n小王：不，我住在学校外边。\n小林：远吗？\n小王：不远，就在学校东边。",
+      "units": [
+        {
+          "speaker": "小林",
+          "original_tts_input": "小林，你住在学校里吗？",
+          "spoken_text": "你住在学校里吗？",
+          "change": "remove_only_leading_speaker_label"
+        },
+        {
+          "speaker": "小王",
+          "original_tts_input": "小王，不，我住在学校外边。",
+          "spoken_text": "不，我住在学校外边。",
+          "change": "remove_only_leading_speaker_label"
+        },
+        {
+          "speaker": "小林",
+          "original_tts_input": "小林，远吗？",
+          "spoken_text": "远吗？",
+          "change": "remove_only_leading_speaker_label"
+        },
+        {
+          "speaker": "小王",
+          "original_tts_input": "小王，不远，就在学校东边。",
+          "spoken_text": "不远，就在学校东边。",
+          "change": "remove_only_leading_speaker_label"
+        }
+      ],
+      "pause_after_ms": [
+        700,
+        700,
+        700
+      ],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 0.9,
+      "question_answer_mapping": [
+        {
+          "number": 20,
+          "prompt": "小王住哪儿？",
+          "answer": "学校外边"
+        },
+        {
+          "number": 21,
+          "prompt": "小王的家在学校哪边？",
+          "answer": "东边"
+        }
+      ],
+      "role_identity_ambiguity_questions": [
+        20,
+        21
+      ]
+    },
+    {
+      "audio_id": "E08-A01",
+      "question_numbers": [
+        22
+      ],
+      "source_text": "现在差一刻九点。",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "现在差一刻九点。",
+          "spoken_text": "现在差一刻九点。",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 22,
+          "prompt": "现在几点？",
+          "answer": "8:45"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E08-B01",
+      "question_numbers": [
+        23,
+        24
+      ],
+      "source_text": "小林：今晚六点一起吃饭吧。\n小王：六点我有课，七点下课。\n小林：那七点半食堂见。\n小王：好。",
+      "units": [
+        {
+          "speaker": "小林",
+          "original_tts_input": "小林，今晚六点一起吃饭吧。",
+          "spoken_text": "今晚六点一起吃饭吧。",
+          "change": "remove_only_leading_speaker_label"
+        },
+        {
+          "speaker": "小王",
+          "original_tts_input": "小王，六点我有课，七点下课。",
+          "spoken_text": "六点我有课，七点下课。",
+          "change": "remove_only_leading_speaker_label"
+        },
+        {
+          "speaker": "小林",
+          "original_tts_input": "小林，那七点半食堂见。",
+          "spoken_text": "那七点半食堂见。",
+          "change": "remove_only_leading_speaker_label"
+        },
+        {
+          "speaker": "小王",
+          "original_tts_input": "小王，好。",
+          "spoken_text": "好。",
+          "change": "remove_only_leading_speaker_label"
+        }
+      ],
+      "pause_after_ms": [
+        700,
+        700,
+        700
+      ],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 0.9,
+      "question_answer_mapping": [
+        {
+          "number": 23,
+          "prompt": "小王几点下课？",
+          "answer": "7:00"
+        },
+        {
+          "number": 24,
+          "prompt": "他们几点吃饭？",
+          "answer": "7:30"
+        }
+      ],
+      "role_identity_ambiguity_questions": [
+        23
+      ]
+    },
+    {
+      "audio_id": "E09-A02",
+      "question_numbers": [
+        25
+      ],
+      "source_text": "他的房间号是三零六，不是三六零。",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "他的房间号是三零六，不是三六零。",
+          "spoken_text": "他的房间号是三零六，不是三六零。",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 25,
+          "prompt": "房间号是什么？",
+          "answer": "306"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E09-B01",
+      "question_numbers": [
+        26,
+        27
+      ],
+      "source_text": "小林：我们怎么去动物园？骑自行车吗？\n小王：太远了，坐地铁吧。\n小林：好，九点在学校东门见。",
+      "units": [
+        {
+          "speaker": "小林",
+          "original_tts_input": "小林，我们怎么去动物园？骑自行车吗？",
+          "spoken_text": "我们怎么去动物园？骑自行车吗？",
+          "change": "remove_only_leading_speaker_label"
+        },
+        {
+          "speaker": "小王",
+          "original_tts_input": "小王，太远了，坐地铁吧。",
+          "spoken_text": "太远了，坐地铁吧。",
+          "change": "remove_only_leading_speaker_label"
+        },
+        {
+          "speaker": "小林",
+          "original_tts_input": "小林，好，九点在学校东门见。",
+          "spoken_text": "好，九点在学校东门见。",
+          "change": "remove_only_leading_speaker_label"
+        }
+      ],
+      "pause_after_ms": [
+        700,
+        700
+      ],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 0.9,
+      "question_answer_mapping": [
+        {
+          "number": 26,
+          "prompt": "他们怎么去动物园？",
+          "answer": "坐地铁"
+        },
+        {
+          "number": 27,
+          "prompt": "他们几点见面？",
+          "answer": "九点"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E10-A01",
+      "question_numbers": [
+        28
+      ],
+      "source_text": "苹果四块五一斤。",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "苹果四块五一斤。",
+          "spoken_text": "苹果四块五一斤。",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 28,
+          "prompt": "苹果一斤多少钱？",
+          "answer": "4.50元"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E10-B01",
+      "question_numbers": [
+        29,
+        30
+      ],
+      "source_text": "小林：西瓜怎么卖？\n小王：三块钱一斤。\n小林：我要两斤。\n小王：一共六块。\n小林：给你十块。",
+      "units": [
+        {
+          "speaker": "小林",
+          "original_tts_input": "小林，西瓜怎么卖？",
+          "spoken_text": "西瓜怎么卖？",
+          "change": "remove_only_leading_speaker_label"
+        },
+        {
+          "speaker": "小王",
+          "original_tts_input": "小王，三块钱一斤。",
+          "spoken_text": "三块钱一斤。",
+          "change": "remove_only_leading_speaker_label"
+        },
+        {
+          "speaker": "小林",
+          "original_tts_input": "小林，我要两斤。",
+          "spoken_text": "我要两斤。",
+          "change": "remove_only_leading_speaker_label"
+        },
+        {
+          "speaker": "小王",
+          "original_tts_input": "小王，一共六块。",
+          "spoken_text": "一共六块。",
+          "change": "remove_only_leading_speaker_label"
+        },
+        {
+          "speaker": "小林",
+          "original_tts_input": "小林，给你十块。",
+          "spoken_text": "给你十块。",
+          "change": "remove_only_leading_speaker_label"
+        }
+      ],
+      "pause_after_ms": [
+        700,
+        700,
+        700,
+        700
+      ],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 0.9,
+      "question_answer_mapping": [
+        {
+          "number": 29,
+          "prompt": "西瓜一斤多少钱？",
+          "answer": "三块"
+        },
+        {
+          "number": 30,
+          "prompt": "小林要多少西瓜？",
+          "answer": "两斤"
+        }
+      ],
+      "role_identity_ambiguity_questions": [
+        30
+      ]
+    },
+    {
+      "audio_id": "E01-C01",
+      "question_numbers": [
+        31,
+        32
+      ],
+      "source_text": "依次读三项，每项之间停三秒：dǎ；tè；nǚ。整组再读一遍。",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "打",
+          "spoken_text": "打",
+          "change": "unchanged"
+        },
+        {
+          "speaker": null,
+          "original_tts_input": "特",
+          "spoken_text": "特",
+          "change": "unchanged"
+        },
+        {
+          "speaker": null,
+          "original_tts_input": "女",
+          "spoken_text": "女",
+          "change": "unchanged"
+        },
+        {
+          "speaker": null,
+          "original_tts_input": "打",
+          "spoken_text": "打",
+          "change": "unchanged"
+        },
+        {
+          "speaker": null,
+          "original_tts_input": "特",
+          "spoken_text": "特",
+          "change": "unchanged"
+        },
+        {
+          "speaker": null,
+          "original_tts_input": "女",
+          "spoken_text": "女",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [
+        3000,
+        3000,
+        3000,
+        3000,
+        3000
+      ],
+      "play_count": 1,
+      "internal_repeat": true,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 31,
+          "prompt": "Viết âm tiết thứ 1, có dấu thanh. (Có thể dùng số thanh 1–4, ví dụ ma3.)",
+          "answer": "dǎ"
+        },
+        {
+          "number": 32,
+          "prompt": "Viết âm tiết thứ 2, có dấu thanh. (Có thể dùng số thanh 1–4, ví dụ ma3.)",
+          "answer": "tè"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E02-C01",
+      "question_numbers": [
+        33,
+        34
+      ],
+      "source_text": "依次读：hǎo；xiè；guì。每项停三秒，再读整组。",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "好",
+          "spoken_text": "好",
+          "change": "unchanged"
+        },
+        {
+          "speaker": null,
+          "original_tts_input": "谢",
+          "spoken_text": "谢",
+          "change": "unchanged"
+        },
+        {
+          "speaker": null,
+          "original_tts_input": "贵",
+          "spoken_text": "贵",
+          "change": "unchanged"
+        },
+        {
+          "speaker": null,
+          "original_tts_input": "好",
+          "spoken_text": "好",
+          "change": "unchanged"
+        },
+        {
+          "speaker": null,
+          "original_tts_input": "谢",
+          "spoken_text": "谢",
+          "change": "unchanged"
+        },
+        {
+          "speaker": null,
+          "original_tts_input": "贵",
+          "spoken_text": "贵",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [
+        3000,
+        3000,
+        3000,
+        3000,
+        3000
+      ],
+      "play_count": 1,
+      "internal_repeat": true,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 33,
+          "prompt": "Viết âm tiết thứ 1, có dấu thanh. (Có thể dùng số thanh 1–4, ví dụ ma3.)",
+          "answer": "hǎo"
+        },
+        {
+          "number": 34,
+          "prompt": "Viết âm tiết thứ 2, có dấu thanh. (Có thể dùng số thanh 1–4, ví dụ ma3.)",
+          "answer": "xiè"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E03-C01",
+      "question_numbers": [
+        35,
+        36
+      ],
+      "source_text": "依次读：yǔ；wǎn；yuè。每项停三秒，再读整组。",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "雨",
+          "spoken_text": "雨",
+          "change": "unchanged"
+        },
+        {
+          "speaker": null,
+          "original_tts_input": "晚",
+          "spoken_text": "晚",
+          "change": "unchanged"
+        },
+        {
+          "speaker": null,
+          "original_tts_input": "月",
+          "spoken_text": "月",
+          "change": "unchanged"
+        },
+        {
+          "speaker": null,
+          "original_tts_input": "雨",
+          "spoken_text": "雨",
+          "change": "unchanged"
+        },
+        {
+          "speaker": null,
+          "original_tts_input": "晚",
+          "spoken_text": "晚",
+          "change": "unchanged"
+        },
+        {
+          "speaker": null,
+          "original_tts_input": "月",
+          "spoken_text": "月",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [
+        3000,
+        3000,
+        3000,
+        3000,
+        3000
+      ],
+      "play_count": 1,
+      "internal_repeat": true,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 35,
+          "prompt": "Viết âm tiết thứ 1. (Có thể dùng số thanh 1–4, ví dụ ma3.)",
+          "answer": "yǔ"
+        },
+        {
+          "number": 36,
+          "prompt": "Viết âm tiết thứ 2. (Có thể dùng số thanh 1–4, ví dụ ma3.)",
+          "answer": "wǎn"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E04-C01",
+      "question_numbers": [
+        37,
+        38
+      ],
+      "source_text": "你好，我叫李明。我姓李。我是学生，不是老师。我学汉语。",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "你好，我叫李明。我姓李。我是学生，不是老师。我学汉语。",
+          "spoken_text": "你好，我叫李明。我姓李。我是学生，不是老师。我学汉语。",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 37,
+          "prompt": "Họ của người nói",
+          "answer": "李／Lǐ"
+        },
+        {
+          "number": 38,
+          "prompt": "Tên đầy đủ của người nói",
+          "answer": "李明／Lǐ Míng"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E05-C01",
+      "question_numbers": [
+        39,
+        40
+      ],
+      "source_text": "这是我的同屋，叫安娜。她是英国人，也是我的同学。我们是北京大学的学生。",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "这是我的同屋，叫安娜。她是英国人，也是我的同学。我们是北京大学的学生。",
+          "spoken_text": "这是我的同屋，叫安娜。她是英国人，也是我的同学。我们是北京大学的学生。",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 39,
+          "prompt": "同屋叫什么？",
+          "answer": "安娜"
+        },
+        {
+          "number": 40,
+          "prompt": "同屋是哪国人？",
+          "answer": "英国人"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E06-C01",
+      "question_numbers": [
+        41,
+        42
+      ],
+      "source_text": "这是我的书包。这是我的汉语书。这个本子和这支笔不是我的，是安娜的。",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "这是我的书包。这是我的汉语书。这个本子和这支笔不是我的，是安娜的。",
+          "spoken_text": "这是我的书包。这是我的汉语书。这个本子和这支笔不是我的，是安娜的。",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 41,
+          "prompt": "书包是谁的？",
+          "answer": "我的／说话人的"
+        },
+        {
+          "number": 42,
+          "prompt": "这是什么书？",
+          "answer": "汉语书"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E07-C01",
+      "question_numbers": [
+        43,
+        44
+      ],
+      "source_text": "我叫安娜。王老师的房间在我的房间左边，大卫的房间在我的房间右边。这儿就这三个房间。",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "我叫安娜。王老师的房间在我的房间左边，大卫的房间在我的房间右边。这儿就这三个房间。",
+          "spoken_text": "我叫安娜。王老师的房间在我的房间左边，大卫的房间在我的房间右边。这儿就这三个房间。",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 43,
+          "prompt": "安娜左边的房间是谁的？",
+          "answer": "王老师的"
+        },
+        {
+          "number": 44,
+          "prompt": "大卫的房间在安娜的哪边？",
+          "answer": "右边"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E08-C01",
+      "question_numbers": [
+        45,
+        46
+      ],
+      "source_text": "明天我上午八点上汉语课，十点下课。中午十一点半和安娜在食堂吃饭。下午两点去见辅导老师。",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "明天我上午八点上汉语课，十点下课。中午十一点半和安娜在食堂吃饭。下午两点去见辅导老师。",
+          "spoken_text": "明天我上午八点上汉语课，十点下课。中午十一点半和安娜在食堂吃饭。下午两点去见辅导老师。",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 45,
+          "prompt": "汉语课下课时间",
+          "answer": "10:00／上午十点"
+        },
+        {
+          "number": 46,
+          "prompt": "午饭地点",
+          "answer": "食堂"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E09-C01",
+      "question_numbers": [
+        47,
+        48
+      ],
+      "source_text": "明天我们去动物园。上午八点半在学校东门见，不在西门见。我们坐地铁二号线去。老师的办公室电话是零一零，零零零零，二三零一。",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "明天我们去动物园。上午八点半在学校东门见，不在西门见。我们坐地铁二号线去。老师的办公室电话是零一零，零零零零，二三零一。",
+          "spoken_text": "明天我们去动物园。上午八点半在学校东门见，不在西门见。我们坐地铁二号线去。老师的办公室电话是零一零，零零零零，二三零一。",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 47,
+          "prompt": "见面时间",
+          "answer": "上午8:30"
+        },
+        {
+          "number": 48,
+          "prompt": "地铁几号线？",
+          "answer": "二号线／2号线"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    },
+    {
+      "audio_id": "E10-C01",
+      "question_numbers": [
+        49,
+        50
+      ],
+      "source_text": "请听购物信息：安娜买一瓶牛奶，八块钱；一个面包，六块钱。她一共付十四块。她没有用现金，是扫微信付的。",
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "请听购物信息：安娜买一瓶牛奶，八块钱；一个面包，六块钱。她一共付十四块。她没有用现金，是扫微信付的。",
+          "spoken_text": "请听购物信息：安娜买一瓶牛奶，八块钱；一个面包，六块钱。她一共付十四块。她没有用现金，是扫微信付的。",
+          "change": "unchanged"
+        }
+      ],
+      "pause_after_ms": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "question_answer_mapping": [
+        {
+          "number": 49,
+          "prompt": "牛奶价格",
+          "answer": "8元／八块"
+        },
+        {
+          "number": 50,
+          "prompt": "一共付多少钱？",
+          "answer": "14元／十四块"
+        }
+      ],
+      "role_identity_ambiguity_questions": []
+    }
+  ]
+}

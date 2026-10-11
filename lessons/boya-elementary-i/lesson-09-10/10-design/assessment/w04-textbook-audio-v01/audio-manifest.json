@@ -1,0 +1,554 @@
+[
+  {
+    "order": 1,
+    "audio_id": "1-2",
+    "file": "audio/1-2-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第1课/1-2.mp3",
+    "source_sha256": "c4eb3340798a390aea7c4cf0b365887b550a140ba3a63ba5fa32da30100c5383",
+    "sha256": "0421ffbe8487bd94d6565bf8de6ceb1bb618591e6c9b7176c30947355dc37e87",
+    "source_segments": [
+      {
+        "source_audio_id": "1-2",
+        "start_seconds": 6.45,
+        "end_seconds": 25.75,
+        "start_sample": 284445,
+        "end_sample": 1135575,
+        "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第1课/1-2.mp3",
+        "source_sha256": "c4eb3340798a390aea7c4cf0b365887b550a140ba3a63ba5fa32da30100c5383"
+      }
+    ],
+    "edit_version": "exam-edit-v02",
+    "duration_seconds": 19.3,
+    "question_ids": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "question_range": "1—5",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 15,
+    "between_plays_seconds": 10,
+    "answer_seconds": 45
+  },
+  {
+    "order": 2,
+    "audio_id": "2-2",
+    "file": "audio/2-2-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第2课/2-2.mp3",
+    "source_sha256": "a904c4052a8615ab592ee2324e9f7325257c1d4f6fb7921120f887e3ca659af2",
+    "sha256": "c922f78e1c2b75b3e3e8c0cf861ca42f66e522248835abb67c1733b7392d75a8",
+    "source_segments": [
+      {
+        "source_audio_id": "2-2",
+        "start_seconds": 7.15,
+        "end_seconds": 33.6,
+        "start_sample": 315315,
+        "end_sample": 1481760,
+        "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第2课/2-2.mp3",
+        "source_sha256": "a904c4052a8615ab592ee2324e9f7325257c1d4f6fb7921120f887e3ca659af2"
+      }
+    ],
+    "edit_version": "exam-edit-v02",
+    "duration_seconds": 26.45,
+    "question_ids": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "question_range": "6—10",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 15,
+    "between_plays_seconds": 10,
+    "answer_seconds": 45
+  },
+  {
+    "order": 3,
+    "audio_id": "3-2",
+    "file": "audio/3-2-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第3课/3-2.mp3",
+    "source_sha256": "5f0bc1756af77aa02c575cbeda4476eb0ad1e55d2e089398560f6a29b1ce31db",
+    "sha256": "0f49c0292a11a9233239c36fb89525c9ea12a44c6cc2baa851c84bdf9d11eff1",
+    "source_segments": [
+      {
+        "source_audio_id": "3-2",
+        "start_seconds": 4.7,
+        "end_seconds": 27.55,
+        "start_sample": 207270,
+        "end_sample": 1214955,
+        "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第3课/3-2.mp3",
+        "source_sha256": "5f0bc1756af77aa02c575cbeda4476eb0ad1e55d2e089398560f6a29b1ce31db"
+      }
+    ],
+    "edit_version": "exam-edit-v02",
+    "duration_seconds": 22.85,
+    "question_ids": [
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "question_range": "11—15",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 15,
+    "between_plays_seconds": 10,
+    "answer_seconds": 45
+  },
+  {
+    "order": 4,
+    "audio_id": "4-9",
+    "file": "audio/4-9-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第4课/4-9.mp3",
+    "source_sha256": "ff8d3dc9d140ed51bf4604d38718340c236fcdd60ec033ac9712419e45df4936",
+    "sha256": "89ada13ca38996a455b4f1191ab23fe5bb2257d4892f5491cf0aac947b03c6f6",
+    "source_segments": [
+      {
+        "source_audio_id": "4-9",
+        "start_seconds": 14.9,
+        "end_seconds": 29.65,
+        "start_sample": 657090,
+        "end_sample": 1307565,
+        "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第4课/4-9.mp3",
+        "source_sha256": "ff8d3dc9d140ed51bf4604d38718340c236fcdd60ec033ac9712419e45df4936"
+      }
+    ],
+    "edit_version": "exam-edit-v02",
+    "duration_seconds": 14.75,
+    "question_ids": [
+      16,
+      17,
+      18
+    ],
+    "question_range": "16—18",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 15,
+    "between_plays_seconds": 10,
+    "answer_seconds": 35
+  },
+  {
+    "order": 5,
+    "audio_id": "4-10",
+    "file": "audio/4-10-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第4课/4-10.mp3",
+    "source_sha256": "3ad796b548db2c3fd22359881e7c128896362aec3fdf02dc1c8c0c25cab50939",
+    "sha256": "9b4419265ba47e5f3d02a393ce8ae8de128171c4ab51426b210dd88c8f039921",
+    "source_segments": [
+      {
+        "source_audio_id": "4-10",
+        "start_seconds": 6.25,
+        "end_seconds": 16.2,
+        "start_sample": 275625,
+        "end_sample": 714420,
+        "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第4课/4-10.mp3",
+        "source_sha256": "3ad796b548db2c3fd22359881e7c128896362aec3fdf02dc1c8c0c25cab50939"
+      }
+    ],
+    "edit_version": "exam-edit-v02",
+    "duration_seconds": 9.95,
+    "question_ids": [
+      19,
+      20
+    ],
+    "question_range": "19—20",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 15,
+    "between_plays_seconds": 10,
+    "answer_seconds": 45
+  },
+  {
+    "order": 6,
+    "audio_id": "5-9",
+    "file": "audio/5-9-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第5课/5-9.mp3",
+    "source_sha256": "e26220f9bc4d6e41db5913fd1adb63dab0de49404931ae861ff5325b112db015",
+    "sha256": "e38dfa2565b28c524c36c2e5ebef2122f2f8091957d2ad28a02d62df81134c8e",
+    "source_segments": [
+      {
+        "source_audio_id": "5-9",
+        "start_seconds": 12.1,
+        "end_seconds": 30.1,
+        "start_sample": 533610,
+        "end_sample": 1327410,
+        "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第5课/5-9.mp3",
+        "source_sha256": "e26220f9bc4d6e41db5913fd1adb63dab0de49404931ae861ff5325b112db015"
+      }
+    ],
+    "edit_version": "exam-edit-v02",
+    "duration_seconds": 18.0,
+    "question_ids": [
+      21,
+      22,
+      23
+    ],
+    "question_range": "21—23",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 15,
+    "between_plays_seconds": 10,
+    "answer_seconds": 35
+  },
+  {
+    "order": 7,
+    "audio_id": "5-11",
+    "file": "audio/5-11-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第5课/5-11.mp3",
+    "source_sha256": "75e87dc864a86e7739762ee0b27de97692bb8638f98366b58b2e591002c9d90f",
+    "sha256": "7c3f07c2af95575be5ee216bb0b009fcff326cde4ee32b59a198e0ae49e5412c",
+    "source_segments": [
+      {
+        "source_audio_id": "5-11",
+        "start_seconds": 5.25,
+        "end_seconds": 18.95,
+        "start_sample": 231525,
+        "end_sample": 835695,
+        "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第5课/5-11.mp3",
+        "source_sha256": "75e87dc864a86e7739762ee0b27de97692bb8638f98366b58b2e591002c9d90f"
+      }
+    ],
+    "edit_version": "exam-edit-v02",
+    "duration_seconds": 13.7,
+    "question_ids": [
+      24,
+      25
+    ],
+    "question_range": "24—25",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 15,
+    "between_plays_seconds": 10,
+    "answer_seconds": 45
+  },
+  {
+    "order": 8,
+    "audio_id": "6-8",
+    "file": "audio/6-8-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第6课/6-8.mp3",
+    "source_sha256": "6604bb95afe1412d2f3c211cfb390e76b331a92bbbc663e02a7985f4327a6910",
+    "sha256": "33a5ff340dc6507068423dd398067297a42ae545e7ce758ec1e0446e036b0960",
+    "source_segments": [
+      {
+        "source_audio_id": "6-8",
+        "start_seconds": 11.1,
+        "end_seconds": 22.6,
+        "start_sample": 489510,
+        "end_sample": 996660,
+        "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第6课/6-8.mp3",
+        "source_sha256": "6604bb95afe1412d2f3c211cfb390e76b331a92bbbc663e02a7985f4327a6910"
+      }
+    ],
+    "edit_version": "exam-edit-v02",
+    "duration_seconds": 11.5,
+    "question_ids": [
+      26,
+      27,
+      28
+    ],
+    "question_range": "26—28",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 15,
+    "between_plays_seconds": 10,
+    "answer_seconds": 35
+  },
+  {
+    "order": 9,
+    "audio_id": "6-10",
+    "file": "audio/6-10-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第6课/6-10.mp3",
+    "source_sha256": "77ecbf1d3fc0722aef2e48578ca10679a1c145f1bfb49f406172f4f045c2b975",
+    "sha256": "7419a1662c48debebc4fef2e834a42b7b8cc3da84f395043ea03fa01621e0878",
+    "source_segments": [
+      {
+        "source_audio_id": "6-10",
+        "start_seconds": 4.65,
+        "end_seconds": 23.3,
+        "start_sample": 205065,
+        "end_sample": 1027530,
+        "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第6课/6-10.mp3",
+        "source_sha256": "77ecbf1d3fc0722aef2e48578ca10679a1c145f1bfb49f406172f4f045c2b975"
+      }
+    ],
+    "edit_version": "exam-edit-v02",
+    "duration_seconds": 18.65,
+    "question_ids": [
+      29,
+      30
+    ],
+    "question_range": "29—30",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 15,
+    "between_plays_seconds": 10,
+    "answer_seconds": 45
+  },
+  {
+    "order": 10,
+    "audio_id": "7-8",
+    "file": "audio/7-8-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第7课/7-8.mp3",
+    "source_sha256": "7ae46c7ef72bb370830944a348b13d1e5226f19b6691237788847667a9d54265",
+    "sha256": "f05738f0f862d1f05a5cd2889a4d961fc9b97ba9b70fb824ae1ded55745d5a49",
+    "source_segments": [
+      {
+        "source_audio_id": "7-8",
+        "start_seconds": 10.5,
+        "end_seconds": 27.8,
+        "start_sample": 463050,
+        "end_sample": 1225980,
+        "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第7课/7-8.mp3",
+        "source_sha256": "7ae46c7ef72bb370830944a348b13d1e5226f19b6691237788847667a9d54265"
+      }
+    ],
+    "edit_version": "exam-edit-v02",
+    "duration_seconds": 17.3,
+    "question_ids": [
+      31,
+      32,
+      33
+    ],
+    "question_range": "31—33",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 15,
+    "between_plays_seconds": 10,
+    "answer_seconds": 35
+  },
+  {
+    "order": 11,
+    "audio_id": "7-10",
+    "file": "audio/7-10-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第7课/7-10.mp3",
+    "source_sha256": "4596391359e4986dda34287f43cf54ab15f71c4a910f639e737443f709f56533",
+    "sha256": "5ffb2a9113645be33738ba83da0c1fad61c2ce5f8b857d121968371982ee0889",
+    "source_segments": [
+      {
+        "source_audio_id": "7-10",
+        "start_seconds": 6.8,
+        "end_seconds": 24.05,
+        "start_sample": 299880,
+        "end_sample": 1060605,
+        "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第7课/7-10.mp3",
+        "source_sha256": "4596391359e4986dda34287f43cf54ab15f71c4a910f639e737443f709f56533"
+      }
+    ],
+    "edit_version": "exam-edit-v02",
+    "duration_seconds": 17.25,
+    "question_ids": [
+      34,
+      35
+    ],
+    "question_range": "34—35",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 15,
+    "between_plays_seconds": 10,
+    "answer_seconds": 45
+  },
+  {
+    "order": 12,
+    "audio_id": "8-8",
+    "file": "audio/8-8-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第8课/8-8.mp3",
+    "source_sha256": "0582f1e4fb9e473d8ddbcf8ccba6ebbba16f999ce65a7251620f0747c4b41db7",
+    "sha256": "81d4b24d2c447c0057c51ca0e3742e4556c45eb0a01c0b8765ed70c71939ebb1",
+    "source_segments": [
+      {
+        "source_audio_id": "8-8",
+        "start_seconds": 12.5,
+        "end_seconds": 29.85,
+        "start_sample": 551250,
+        "end_sample": 1316385,
+        "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第8课/8-8.mp3",
+        "source_sha256": "0582f1e4fb9e473d8ddbcf8ccba6ebbba16f999ce65a7251620f0747c4b41db7"
+      }
+    ],
+    "edit_version": "exam-edit-v02",
+    "duration_seconds": 17.35,
+    "question_ids": [
+      36,
+      37,
+      38
+    ],
+    "question_range": "36—38",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 15,
+    "between_plays_seconds": 10,
+    "answer_seconds": 35
+  },
+  {
+    "order": 13,
+    "audio_id": "8-10",
+    "file": "audio/8-10-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第8课/8-10.mp3",
+    "source_sha256": "4e204e127d30c1b8967376067497ebccc21348e64b98a83b594cb51e88716acc",
+    "sha256": "6ea1d6d30878aecaa34e66f6d2dc4748b79c6edd13f9af5772eb18c3faa1fc0d",
+    "source_segments": [
+      {
+        "source_audio_id": "8-10",
+        "start_seconds": 6.0,
+        "end_seconds": 28.8,
+        "start_sample": 264600,
+        "end_sample": 1270080,
+        "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第8课/8-10.mp3",
+        "source_sha256": "4e204e127d30c1b8967376067497ebccc21348e64b98a83b594cb51e88716acc"
+      }
+    ],
+    "edit_version": "exam-edit-v02",
+    "duration_seconds": 22.8,
+    "question_ids": [
+      39,
+      40
+    ],
+    "question_range": "39—40",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 15,
+    "between_plays_seconds": 10,
+    "answer_seconds": 45
+  },
+  {
+    "order": 14,
+    "audio_id": "9-10",
+    "file": "audio/9-10-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第9课/9-10.mp3",
+    "source_sha256": "5627d4e08b45b5609b0d5b3f5a44c421d807af0247d0d562d0254517f9d1a4a9",
+    "sha256": "3052bff3eb1742878c32eb2f1c43d0d83164bac21bb390602fbd0d42da4608a8",
+    "source_segments": [
+      {
+        "source_audio_id": "9-10",
+        "start_seconds": 10.4,
+        "end_seconds": 29.85,
+        "start_sample": 458640,
+        "end_sample": 1316385,
+        "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第9课/9-10.mp3",
+        "source_sha256": "5627d4e08b45b5609b0d5b3f5a44c421d807af0247d0d562d0254517f9d1a4a9"
+      }
+    ],
+    "edit_version": "exam-edit-v02",
+    "duration_seconds": 19.45,
+    "question_ids": [
+      41,
+      42,
+      43
+    ],
+    "question_range": "41—43",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 15,
+    "between_plays_seconds": 10,
+    "answer_seconds": 35
+  },
+  {
+    "order": 15,
+    "audio_id": "9-11",
+    "file": "audio/9-11-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第9课/9-11.mp3",
+    "source_sha256": "2e95332194be80770d5f52150d537433cad9218fe972b86b46b6196f6d6effdf",
+    "sha256": "cd69344bd55cd7edfb3f173d73482bbbf837d5f087766b79be01ac82d4ec7708",
+    "source_segments": [
+      {
+        "source_audio_id": "9-11",
+        "start_seconds": 4.65,
+        "end_seconds": 27.4,
+        "start_sample": 205065,
+        "end_sample": 1208340,
+        "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第9课/9-11.mp3",
+        "source_sha256": "2e95332194be80770d5f52150d537433cad9218fe972b86b46b6196f6d6effdf"
+      }
+    ],
+    "edit_version": "exam-edit-v02",
+    "duration_seconds": 22.75,
+    "question_ids": [
+      44,
+      45
+    ],
+    "question_range": "44—45",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 15,
+    "between_plays_seconds": 10,
+    "answer_seconds": 45
+  },
+  {
+    "order": 16,
+    "audio_id": "10-10",
+    "file": "audio/10-10-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第10课/10-10.mp3",
+    "source_sha256": "ea9d4dfe4475c6e30d04180399b0fadb12f63b53e2540010c5ffba03d226846a",
+    "sha256": "f9ea37972d00c9a2edf1f3d146c105a3adf3b6706a0da03afcd9af4b8a1549fd",
+    "source_segments": [
+      {
+        "source_audio_id": "10-10",
+        "start_seconds": 11.1,
+        "end_seconds": 24.35,
+        "start_sample": 489510,
+        "end_sample": 1073835,
+        "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第10课/10-10.mp3",
+        "source_sha256": "ea9d4dfe4475c6e30d04180399b0fadb12f63b53e2540010c5ffba03d226846a"
+      }
+    ],
+    "edit_version": "exam-edit-v02",
+    "duration_seconds": 13.25,
+    "question_ids": [
+      46,
+      47,
+      48
+    ],
+    "question_range": "46—48",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 15,
+    "between_plays_seconds": 10,
+    "answer_seconds": 35
+  },
+  {
+    "order": 17,
+    "audio_id": "10-11",
+    "file": "audio/10-11-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第10课/10-11.mp3",
+    "source_sha256": "d8939e3b4b4281be8623449e1293799c270285b16bc0bf0a316159c0b281c99c",
+    "sha256": "84a50bcc277bbe2cc452d18a8a40112a5c5b226940ed5ad5071e7603aed12fc8",
+    "source_segments": [
+      {
+        "source_audio_id": "9-10",
+        "start_seconds": 27.02,
+        "end_seconds": 29.85,
+        "start_sample": 1191582,
+        "end_sample": 1316385,
+        "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第9课/9-10.mp3",
+        "source_sha256": "5627d4e08b45b5609b0d5b3f5a44c421d807af0247d0d562d0254517f9d1a4a9"
+      },
+      {
+        "source_audio_id": "10-11",
+        "start_seconds": 5.9,
+        "end_seconds": 26.9,
+        "start_sample": 260190,
+        "end_sample": 1186290,
+        "source": "/Users/ssyan110/Desktop/Work/Teaching/VinhUni/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第10课/10-11.mp3",
+        "source_sha256": "d8939e3b4b4281be8623449e1293799c270285b16bc0bf0a316159c0b281c99c"
+      }
+    ],
+    "edit_version": "exam-edit-v02",
+    "duration_seconds": 25.83,
+    "question_ids": [
+      49,
+      50
+    ],
+    "question_range": "49—50",
+    "play_count": 2,
+    "internal_repeat": false,
+    "preview_seconds": 15,
+    "between_plays_seconds": 10,
+    "answer_seconds": 45
+  }
+]

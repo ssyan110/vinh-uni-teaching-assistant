@@ -1,0 +1,68 @@
+{
+  "status": "frontend_exact_11_digits_in_order",
+  "expected": "01000002301",
+  "actual_from_phonemes": "01000002301",
+  "zero_count": 7,
+  "phoneme_tail": "ㄌ应2/ㄧ1ㄌ应2, ㄌ应2ㄌ应2ㄌ应2ㄌ应2, ㄦ4ㄙㄢ1/ㄌ应2/ㄧ1.",
+  "per_digit": [
+    {
+      "position": 1,
+      "digit": "0",
+      "phonemes": "ㄌ应2"
+    },
+    {
+      "position": 2,
+      "digit": "1",
+      "phonemes": "ㄧ1"
+    },
+    {
+      "position": 3,
+      "digit": "0",
+      "phonemes": "ㄌ应2"
+    },
+    {
+      "position": 4,
+      "digit": "0",
+      "phonemes": "ㄌ应2"
+    },
+    {
+      "position": 5,
+      "digit": "0",
+      "phonemes": "ㄌ应2"
+    },
+    {
+      "position": 6,
+      "digit": "0",
+      "phonemes": "ㄌ应2"
+    },
+    {
+      "position": 7,
+      "digit": "0",
+      "phonemes": "ㄌ应2"
+    },
+    {
+      "position": 8,
+      "digit": "2",
+      "phonemes": "ㄦ4"
+    },
+    {
+      "position": 9,
+      "digit": "3",
+      "phonemes": "ㄙㄢ1"
+    },
+    {
+      "position": 10,
+      "digit": "0",
+      "phonemes": "ㄌ应2"
+    },
+    {
+      "position": 11,
+      "digit": "1",
+      "phonemes": "ㄧ1"
+    }
+  ],
+  "audio_sha256": "5de73ebd9921e49c9755fb4bf80919bfd6caeb30eb05671e37a5b56c28f37071",
+  "audio_quality_accepted": false,
+  "regeneration_required": false,
+  "reason": "No frontend missing or added digits; ASR differences do not prove audio completeness"
+}

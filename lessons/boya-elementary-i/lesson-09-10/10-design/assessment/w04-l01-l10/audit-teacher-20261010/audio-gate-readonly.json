@@ -1,0 +1,30 @@
+{
+  "purpose": "assessment-audio",
+  "exam_id": "W04-L01L10-20261006",
+  "status": "ready",
+  "output_dir": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/audio-repair-qwen-serena-v01",
+  "blockers": [],
+  "offering_id": "2026-fall",
+  "textbook_id": "boya-elementary-i",
+  "cohort": "BOYA-LS-E1-Y1S1-2026F",
+  "lesson_keys": [
+    "boya-elementary-i:lesson-01",
+    "boya-elementary-i:lesson-02",
+    "boya-elementary-i:lesson-03",
+    "boya-elementary-i:lesson-04",
+    "boya-elementary-i:lesson-05",
+    "boya-elementary-i:lesson-06",
+    "boya-elementary-i:lesson-07",
+    "boya-elementary-i:lesson-08",
+    "boya-elementary-i:lesson-09",
+    "boya-elementary-i:lesson-10"
+  ],
+  "input_hashes": {
+    "items.json": "e876c3327e27cf513518f57718f051b88a8b9b27ccfa1875dbe55c7bda29b19e",
+    "audio-manifest.json": "a084690d6a307623d7f3bd17110a85b1037f0bfbeab48ba6ff04560473309f4f",
+    "teacher.md": "7dc8f07186c1bce95f118a4ff4e6ea446edaf29d0e9a995414ce9ad187185eec",
+    "student.md": "df3dec089e95443745789a11fde08e51f68ef88c4cd22e26c56daab37f64f858"
+  },
+  "artifact_state": "design_draft",
+  "human_audio_acceptance": false
+}

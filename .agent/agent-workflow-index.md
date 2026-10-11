@@ -50,9 +50,13 @@ an active project requirement or maintain it.
 
 ## Course-specific routing
 
+2026-10-07 06:52 UTC clarification: online classes remain unchanged and continue to prioritize PPT/PPTX, including one-word-per-page preparation and approved styles. Only physical classes prioritize HTML slides/OpenSlide, with optional editable PPTX backup.
+
+For future face-to-face decks, first apply the [2026-10-07 classroom HTML standard](../docs/classroom-html-standard-2026-10-07.md): HTML/OpenSlide first, the L9–10 46-slide visual/activity reference, and level-appropriate TOCFL-style assessment. This standing choice supersedes the native-pptx default and repeated style-selection question below for this scope. Keep online preparation, lesson-specific content approvals and release gates separate.
+
 For Boya lesson work, use the `boya-lesson-production` skill. The required route is:
 
-For authority/release work, use:
+For native-PPTX authority/release work, use (HTML follows the classroom standard and its applicable gates):
 
 `source gate → PBI redesign gate → teacher guide content master → teacher guide approval → support materials → PPT storyboard → visual storyboard → 6-slide prototype → native PPTX → QA → delivery`
 
@@ -76,7 +80,7 @@ Before any new image worker, prototype or PPTX draft, run the shared
 the canonical contract's content-approval record; "continue" or structure approval
 never substitutes for explicit approval of the current slide-copy version.
 
-For each new deck, use the format Adam selected: `native-pptx` by default or `open-slide` from `tools/open-slide/`. Open Slide is currently draft-only until its lesson QA/release path is defined. Historical HTML review pages are not production inputs. Teacher guides, prep cards, supplemental activity materials and assessments remain part of the complete lesson package.
+Future face-to-face decks default to HTML/OpenSlide; online preparation retains native-pptx unless otherwise selected. Open Slide is currently draft-only until its lesson QA/release path is defined. Historical HTML review pages are not production inputs. Teacher guides, prep cards, supplemental activity materials and assessments remain part of the complete lesson package.
 
 The approved teacher guide comes before full PPTX/authority production: it defines
 the full lesson content, key points, timing, audio, exercise coverage, teacher
@@ -84,9 +88,11 @@ actions, repair routes, answer policy, assessment and required materials. A
 lesson-specific draft may precede guide approval only as reversible design
 evidence and must still trace back to the source package.
 
-## Current PPTX rule set
+## Online / selected legacy PPTX rule set
 
-Before starting each new deck, follow `course/ppt-style-registry.json`: ask Adam to choose a registered style unless he already named one in the current request. Style selection does not replace lesson-specific workflow or content approval.
+The old typography, purple accents and fixed page layouts below apply only to online preparation or explicitly selected legacy PPTX maintenance. Future classroom HTML and its backup PPTX use the 2026-10-07 classroom standard.
+
+Face-to-face decks use the standing 2026-10-07 HTML style. For other scopes without a standing or current choice, use `course/ppt-style-registry.json` to select a style. Style selection does not replace lesson-specific workflow or content approval.
 
 The current student-deck decisions are recorded in `.agent/skills/boya-lesson-production/SKILL.md`, `AGENTS.md` and `PROJECT_REQUIREMENTS.md`. In short:
 
@@ -96,9 +102,9 @@ The current student-deck decisions are recorded in `.agent/skills/boya-lesson-pr
 - The finalized cover has no bottom subtitle. The third slide uses the lesson-specific learning-goals frame: title, teal label, then 3–4 numbered goals from the lesson content contract. Number markers are filled teal/coral/purple/yellow circles with white numerals, not outlined squares. Do not copy a protagonist, goal, subtitle, or fallback from another lesson.
 - Online vocabulary pages always keep the word, pinyin, part of speech, Vietnamese meaning and image. For new lesson drafts, every vocabulary item (including proper nouns) must have exactly two short examples in `course/boya-example-bank.json`; usage, usage detail, expansion, grammar detail and common phrase remain word-specific optional fields and are omitted when blank. Never use English or canonical gloss as the meaning, and never synthesize a filler example.
 - Online expression-practice pages keep only the purple rounded pattern box, two short examples at 35 pt, the student instruction and writing lines; omit the black expression title and visible context line. Context remains in the teacher-manual/design layer.
-- Use textbook section names as dividers and keep divider pages simple.
-- Merge continuous questions from the same audio when the page stays readable; keep different task types separate.
-- Use plain student action language, visible material names, clear audio buttons and varied layouts.
+- Online preparation uses textbook section names as dividers; classroom decks use meaningful activity/section titles under the classroom standard.
+- Keep coherent activities together when readable; split only for learning purpose or capacity, not merely because task types differ.
+- Use plain student action language, visible material names, plain non-clickable top-right `Audio n-n` references and varied layouts. Preserve the actual source track mapping; do not embed audio, add playback buttons or playable audio hyperlinks, or style the audio reference in purple.
 - Before writing or revising classroom copy, follow `.agent/skills/boya-lesson-production/classroom-copy-review.md`: teacher execution check, student instruction check, then language polish and layout. Recheck generated visible text; a keyword-only task page cannot pass merely because its notes explain the task.
 - Keep teacher notes, internal IDs, time/group footers and QA information out of the student canvas.
 - Run native PowerPoint PDF, contact-sheet, text, audio, notes and canvas-boundary checks before delivery.

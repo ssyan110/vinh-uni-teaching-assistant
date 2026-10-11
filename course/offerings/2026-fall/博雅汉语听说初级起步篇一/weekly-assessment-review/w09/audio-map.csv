@@ -1,0 +1,9 @@
+audio_id,source_audio_id,lesson_keys,file_path,duration_s,sample_rate_hz,channels,peak_fraction,rms_fraction,plays,pause_seconds,wav_decode,synthesis_input_from_manifest,role_marked_source_text,teacher_listened,live_playback_checked,status
+W09-A1,E18-B01,boya-elementary-i:lesson-18,OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第18课-今天我七点半就起床了/B-听对话/E18-07-08.wav,12.84,24000,1,0.5,0.0804,1,8,pass,小林，你今天几点起床？ / 小王，六点半。 / 小林，这么早？ / 小王，对，今天八点有课。以前我八点半才起。,"小林：你今天几点起床？
+小王：六点半。
+小林：这么早？
+小王：对，今天八点有课。以前我八点半才起。",no,no,技术可解码；教师亲听/播放待验
+W09-A2,E19-B01,boya-elementary-i:lesson-19,OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第19课-你又熬夜了/B-听对话/E19-07-08.wav,13.96,24000,1,0.5,0.0743,2,10,pass,小林，早上给你发微信，你怎么没回？ / 小王，不好意思，我昨天夜里两点才睡，今天十点才起。 / 小林，你又熬夜了！,"小林：早上给你发微信，你怎么没回？
+小王：不好意思，我昨天夜里两点才睡，今天十点才起。
+小林：你又熬夜了！",no,no,技术可解码；教师亲听/播放待验
+W09-A3,E19-C01,boya-elementary-i:lesson-19,OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第19课-你又熬夜了/C-听后填写/E19-15-17.wav,11.8,24000,1,0.5,0.0841,2,12,pass,小周约朋友两点在学校门口见。他一点半出门，路上堵车，两点二十才到。朋友等了二十分钟。他说：“不好意思，下次我一定早点儿出门。”,,no,no,技术可解码；教师亲听/播放待验

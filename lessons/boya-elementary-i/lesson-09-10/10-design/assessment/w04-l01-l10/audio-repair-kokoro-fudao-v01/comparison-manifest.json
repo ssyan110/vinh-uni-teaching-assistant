@@ -1,0 +1,72 @@
+{
+  "purpose": "fǔdǎo citation-tone input comparison only; natural fu2 dao3 is valid tone sandhi",
+  "exam_id": "W04-L01L10-20261006",
+  "audio_id": "E08-C01",
+  "question_numbers": [
+    45,
+    46
+  ],
+  "source_text": "明天我上午八点上汉语课，十点下课。中午十一点半和安娜在食堂吃饭。下午两点去见辅导老师。",
+  "target_pinyin": "fǔdǎo citation tones",
+  "default_phonemes": "ㄇ应2ㄊ言1/我3/ㄕㄤ4ㄨ3/ㄅㄚ1ㄉ言3/ㄕㄤ4/ㄏㄢ4ㄩ3/ㄎㄜ4, ㄕ十2ㄉ言3/ㄒ压4ㄎㄜ4. ㄓ中1ㄨ3/ㄕ十2ㄧ4ㄉ言3ㄅㄢ4/ㄏㄜ2/ㄢ1ㄋㄚ4/ㄗㄞ4/ㄕ十2ㄊㄤ2/ㄔ十1ㄈㄢ4. ㄒ压4ㄨ3/ㄌ阳2ㄉ言3/ㄑㄩ4/ㄐ言4/ㄈㄨ2ㄉㄠ3/ㄌㄠ3ㄕ十1.",
+  "override_phonemes": "ㄇ应2ㄊ言1/我3/ㄕㄤ4ㄨ3/ㄅㄚ1ㄉ言3/ㄕㄤ4/ㄏㄢ4ㄩ3/ㄎㄜ4, ㄕ十2ㄉ言3/ㄒ压4ㄎㄜ4. ㄓ中1ㄨ3/ㄕ十2ㄧ4ㄉ言3ㄅㄢ4/ㄏㄜ2/ㄢ1ㄋㄚ4/ㄗㄞ4/ㄕ十2ㄊㄤ2/ㄔ十1ㄈㄢ4. ㄒ压4ㄨ3/ㄌ阳2ㄉ言3/ㄑㄩ4/ㄐ言4/ㄈㄨ3ㄉㄠ3/ㄌㄠ3ㄕ十1.",
+  "api": "KPipeline.generate_from_tokens(raw phoneme string)",
+  "settings": {
+    "repo_id": "hexgrad/Kokoro-82M-v1.1-zh",
+    "revision": "01e7505bd6a7a2ac4975463114c3a7650a9f7218",
+    "voice": "zf_001",
+    "lang_code": "z",
+    "speed": 1.0,
+    "device": "cpu",
+    "dtype": "float32",
+    "seed": 20261010,
+    "frontend": "Misaki-0.9.4-ZHFrontend-1.1-unmodified",
+    "postprocessing": "PCM16 serialization only; no trim/normalization/time stretch",
+    "segmentation": "original source units only; consume all pipeline chunks; no digit splitting",
+    "max_attempts_per_sample": 1
+  },
+  "no_dependency_modification": true,
+  "all_generator_output_consumed": true,
+  "chunk_count": 1,
+  "duration_seconds": 9.7,
+  "wav_sha256": "67a3615878bb81ba55983e73ee0a67e6b0e33ae3c9d805c28b6061f22949ca1a",
+  "default_sha256": "49d6d56d0010301a3d36a63036ebec692bf9033f842d6e9ea358af087bd7527b",
+  "dashboard_unchanged": true,
+  "human_audio_acceptance": false,
+  "technical_only": true,
+  "diagnosis_correction": "fu2 dao3 is expected third-tone sandhi; earlier confirmed-error label withdrawn",
+  "official_api_source": "https://github.com/hexgrad/kokoro/blob/main/kokoro/pipeline.py",
+  "local_pipeline_source_sha256": "09da32aab781f7a163cbf9f6e379d53db40957cbbab50bc26a21c8440c0eabd6",
+  "gate": {
+    "purpose": "assessment-audio",
+    "exam_id": "W04-L01L10-20261006",
+    "status": "ready",
+    "output_dir": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/audio-repair-kokoro-fudao-v01",
+    "blockers": [],
+    "offering_id": "2026-fall",
+    "textbook_id": "boya-elementary-i",
+    "cohort": "BOYA-LS-E1-Y1S1-2026F",
+    "lesson_keys": [
+      "boya-elementary-i:lesson-01",
+      "boya-elementary-i:lesson-02",
+      "boya-elementary-i:lesson-03",
+      "boya-elementary-i:lesson-04",
+      "boya-elementary-i:lesson-05",
+      "boya-elementary-i:lesson-06",
+      "boya-elementary-i:lesson-07",
+      "boya-elementary-i:lesson-08",
+      "boya-elementary-i:lesson-09",
+      "boya-elementary-i:lesson-10"
+    ],
+    "input_hashes": {
+      "items.json": "e876c3327e27cf513518f57718f051b88a8b9b27ccfa1875dbe55c7bda29b19e",
+      "audio-manifest.json": "a084690d6a307623d7f3bd17110a85b1037f0bfbeab48ba6ff04560473309f4f",
+      "teacher.md": "7dc8f07186c1bce95f118a4ff4e6ea446edaf29d0e9a995414ce9ad187185eec",
+      "student.md": "df3dec089e95443745789a11fde08e51f68ef88c4cd22e26c56daab37f64f858"
+    },
+    "artifact_state": "design_draft",
+    "human_audio_acceptance": false
+  },
+  "wav_decode_verified": true,
+  "peak": 0.494598388671875
+}

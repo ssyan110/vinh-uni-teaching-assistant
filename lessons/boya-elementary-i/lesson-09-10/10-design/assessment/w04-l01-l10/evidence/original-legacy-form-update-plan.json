@@ -1,0 +1,750 @@
+{
+  "target_form_id": "1mtZi715lfJj_yPe0PvHp9IyYXSmcjFFX3g6wy7bi-EU",
+  "title": "一年级W04｜第1—10课综合听力测验｜审阅稿",
+  "description": "第四节课；50题，100分，只有听力，没有口说。每项听两遍（拼音填空录音内部已重复，整段只播放一次）。先看题，听后选择或填空。第1—3课填空写拼音及声调（可用声调数字）；第4—10课可写汉字、拼音或数字。只保存最终答案。",
+  "publish": false,
+  "collect_email": "preserve_existing",
+  "grade_release": "after_manual_review",
+  "show_correct_answers": false,
+  "show_missed_questions": false,
+  "show_point_values": false,
+  "shuffle_questions": false,
+  "shuffle_options": false,
+  "preserve_identity_fields": [
+    "姓名",
+    "学号",
+    "班级"
+  ],
+  "response_destination_id": "1fJ83LfUn78Ub1iVttIGA0qMRTe77m3KyGWkli811i2A",
+  "identity_required": true,
+  "questions_required": false,
+  "items": [
+    {
+      "question_id": "W04-L01L10-01",
+      "title": "01. Chọn âm tiết nghe được.",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "pā",
+        "mā",
+        "bā"
+      ],
+      "reference_answer": "pā",
+      "grading": "automatic",
+      "correct_answer": "pā",
+      "points": 2,
+      "required": false,
+      "audio_id": "E01-A01"
+    },
+    {
+      "question_id": "W04-L01L10-02",
+      "title": "02. Chọn âm tiết nghe được.",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "lǚ",
+        "nǚ",
+        "nǔ"
+      ],
+      "reference_answer": "nǚ",
+      "grading": "automatic",
+      "correct_answer": "nǚ",
+      "points": 2,
+      "required": false,
+      "audio_id": "E01-A02"
+    },
+    {
+      "question_id": "W04-L01L10-03",
+      "title": "03. Chọn âm tiết nghe được.",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "cī",
+        "chī",
+        "qī"
+      ],
+      "reference_answer": "chī",
+      "grading": "automatic",
+      "correct_answer": "chī",
+      "points": 2,
+      "required": false,
+      "audio_id": "E01-A03"
+    },
+    {
+      "question_id": "W04-L01L10-04",
+      "title": "04. Chọn âm tiết nghe được.",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "bái",
+        "béi",
+        "bāo"
+      ],
+      "reference_answer": "bái",
+      "grading": "automatic",
+      "correct_answer": "bái",
+      "points": 2,
+      "required": false,
+      "audio_id": "E02-A01"
+    },
+    {
+      "question_id": "W04-L01L10-05",
+      "title": "05. Chọn âm tiết nghe được.",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "liáo",
+        "léi",
+        "liú"
+      ],
+      "reference_answer": "liú",
+      "grading": "automatic",
+      "correct_answer": "liú",
+      "points": 2,
+      "required": false,
+      "audio_id": "E02-A02"
+    },
+    {
+      "question_id": "W04-L01L10-06",
+      "title": "06. Chọn âm tiết nghe được.",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "duì",
+        "diù",
+        "dòu"
+      ],
+      "reference_answer": "duì",
+      "grading": "automatic",
+      "correct_answer": "duì",
+      "points": 2,
+      "required": false,
+      "audio_id": "E02-A03"
+    },
+    {
+      "question_id": "W04-L01L10-07",
+      "title": "07. Chọn âm nghe được.",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "huār",
+        "huā",
+        "huà"
+      ],
+      "reference_answer": "huār",
+      "grading": "automatic",
+      "correct_answer": "huār",
+      "points": 2,
+      "required": false,
+      "audio_id": "E03-A01"
+    },
+    {
+      "question_id": "W04-L01L10-08",
+      "title": "08. Chọn từ nghe được.",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "nǎr",
+        "èr",
+        "nǚ’ér"
+      ],
+      "reference_answer": "nǚ’ér",
+      "grading": "automatic",
+      "correct_answer": "nǚ’ér",
+      "points": 2,
+      "required": false,
+      "audio_id": "E03-A02"
+    },
+    {
+      "question_id": "W04-L01L10-09",
+      "title": "09. Chọn âm tiết nghe được.",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "wèn",
+        "wén",
+        "wèng"
+      ],
+      "reference_answer": "wèn",
+      "grading": "automatic",
+      "correct_answer": "wèn",
+      "points": 2,
+      "required": false,
+      "audio_id": "E03-A03"
+    },
+    {
+      "question_id": "W04-L01L10-10",
+      "title": "10. Người nói họ gì?",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "李 Lǐ",
+        "不知道",
+        "王 Wáng"
+      ],
+      "reference_answer": "王 Wáng",
+      "grading": "automatic",
+      "correct_answer": "王 Wáng",
+      "points": 2,
+      "required": false,
+      "audio_id": "E04-A01"
+    },
+    {
+      "question_id": "W04-L01L10-11",
+      "title": "11. 安娜叫什么名字？",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "李明",
+        "安娜",
+        "大卫"
+      ],
+      "reference_answer": "安娜",
+      "grading": "automatic",
+      "correct_answer": "安娜",
+      "points": 2,
+      "required": false,
+      "audio_id": "E04-B01"
+    },
+    {
+      "question_id": "W04-L01L10-12",
+      "title": "12. 安娜是老师吗？",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "不是",
+        "没有说",
+        "是"
+      ],
+      "reference_answer": "不是",
+      "grading": "automatic",
+      "correct_answer": "不是",
+      "points": 2,
+      "required": false,
+      "audio_id": "E04-B01"
+    },
+    {
+      "question_id": "W04-L01L10-13",
+      "title": "13. 安娜和我是什么关系？",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "同学",
+        "老师",
+        "同屋"
+      ],
+      "reference_answer": "同学",
+      "grading": "automatic",
+      "correct_answer": "同学",
+      "points": 2,
+      "required": false,
+      "audio_id": "E05-A02"
+    },
+    {
+      "question_id": "W04-L01L10-14",
+      "title": "14. 安娜是哪国人？",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "英国人",
+        "美国人",
+        "韩国人"
+      ],
+      "reference_answer": "英国人",
+      "grading": "automatic",
+      "correct_answer": "英国人",
+      "points": 2,
+      "required": false,
+      "audio_id": "E05-B01"
+    },
+    {
+      "question_id": "W04-L01L10-15",
+      "title": "15. 小王是英国人吗？",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "没有说",
+        "不是",
+        "是"
+      ],
+      "reference_answer": "是",
+      "grading": "automatic",
+      "correct_answer": "是",
+      "points": 2,
+      "required": false,
+      "audio_id": "E05-B01"
+    },
+    {
+      "question_id": "W04-L01L10-16",
+      "title": "16. “那”个书包是谁的？",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "我的",
+        "老师的",
+        "安娜的"
+      ],
+      "reference_answer": "安娜的",
+      "grading": "automatic",
+      "correct_answer": "安娜的",
+      "points": 2,
+      "required": false,
+      "audio_id": "E06-A01"
+    },
+    {
+      "question_id": "W04-L01L10-17",
+      "title": "17. 笔是谁的？",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "李美的",
+        "小王的",
+        "小林的"
+      ],
+      "reference_answer": "李美的",
+      "grading": "automatic",
+      "correct_answer": "李美的",
+      "points": 2,
+      "required": false,
+      "audio_id": "E06-B01"
+    },
+    {
+      "question_id": "W04-L01L10-18",
+      "title": "18. 本子是谁的？",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "小王的",
+        "小林的",
+        "李美的"
+      ],
+      "reference_answer": "小王的",
+      "grading": "automatic",
+      "correct_answer": "小王的",
+      "points": 2,
+      "required": false,
+      "audio_id": "E06-B01"
+    },
+    {
+      "question_id": "W04-L01L10-19",
+      "title": "19. 安娜在哪儿？",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "学校外边",
+        "教室里",
+        "宿舍里"
+      ],
+      "reference_answer": "教室里",
+      "grading": "automatic",
+      "correct_answer": "教室里",
+      "points": 2,
+      "required": false,
+      "audio_id": "E07-A01"
+    },
+    {
+      "question_id": "W04-L01L10-20",
+      "title": "20. 小王住哪儿？",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "教室里",
+        "学校外边",
+        "学校宿舍"
+      ],
+      "reference_answer": "学校外边",
+      "grading": "automatic",
+      "correct_answer": "学校外边",
+      "points": 2,
+      "required": false,
+      "audio_id": "E07-B01"
+    },
+    {
+      "question_id": "W04-L01L10-21",
+      "title": "21. 小王的家在学校哪边？",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "北边",
+        "西边",
+        "东边"
+      ],
+      "reference_answer": "东边",
+      "grading": "automatic",
+      "correct_answer": "东边",
+      "points": 2,
+      "required": false,
+      "audio_id": "E07-B01"
+    },
+    {
+      "question_id": "W04-L01L10-22",
+      "title": "22. 现在几点？",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "9:15",
+        "9:45",
+        "8:45"
+      ],
+      "reference_answer": "8:45",
+      "grading": "automatic",
+      "correct_answer": "8:45",
+      "points": 2,
+      "required": false,
+      "audio_id": "E08-A01"
+    },
+    {
+      "question_id": "W04-L01L10-23",
+      "title": "23. 小王几点下课？",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "7:30",
+        "6:00",
+        "7:00"
+      ],
+      "reference_answer": "7:00",
+      "grading": "automatic",
+      "correct_answer": "7:00",
+      "points": 2,
+      "required": false,
+      "audio_id": "E08-B01"
+    },
+    {
+      "question_id": "W04-L01L10-24",
+      "title": "24. 他们几点吃饭？",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "6:30",
+        "7:30",
+        "7:00"
+      ],
+      "reference_answer": "7:30",
+      "grading": "automatic",
+      "correct_answer": "7:30",
+      "points": 2,
+      "required": false,
+      "audio_id": "E08-B01"
+    },
+    {
+      "question_id": "W04-L01L10-25",
+      "title": "25. 房间号是什么？",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "306",
+        "630",
+        "360"
+      ],
+      "reference_answer": "306",
+      "grading": "automatic",
+      "correct_answer": "306",
+      "points": 2,
+      "required": false,
+      "audio_id": "E09-A02"
+    },
+    {
+      "question_id": "W04-L01L10-26",
+      "title": "26. 他们怎么去动物园？",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "坐公共汽车",
+        "骑自行车",
+        "坐地铁"
+      ],
+      "reference_answer": "坐地铁",
+      "grading": "automatic",
+      "correct_answer": "坐地铁",
+      "points": 2,
+      "required": false,
+      "audio_id": "E09-B01"
+    },
+    {
+      "question_id": "W04-L01L10-27",
+      "title": "27. 他们几点见面？",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "九点",
+        "十点",
+        "八点"
+      ],
+      "reference_answer": "九点",
+      "grading": "automatic",
+      "correct_answer": "九点",
+      "points": 2,
+      "required": false,
+      "audio_id": "E09-B01"
+    },
+    {
+      "question_id": "W04-L01L10-28",
+      "title": "28. 苹果一斤多少钱？",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "45元",
+        "4.50元",
+        "4.05元"
+      ],
+      "reference_answer": "4.50元",
+      "grading": "automatic",
+      "correct_answer": "4.50元",
+      "points": 2,
+      "required": false,
+      "audio_id": "E10-A01"
+    },
+    {
+      "question_id": "W04-L01L10-29",
+      "title": "29. 西瓜一斤多少钱？",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "三块",
+        "十块",
+        "六块"
+      ],
+      "reference_answer": "三块",
+      "grading": "automatic",
+      "correct_answer": "三块",
+      "points": 2,
+      "required": false,
+      "audio_id": "E10-B01"
+    },
+    {
+      "question_id": "W04-L01L10-30",
+      "title": "30. 小林要多少西瓜？",
+      "type": "MULTIPLE_CHOICE",
+      "options": [
+        "两斤",
+        "三斤",
+        "六斤"
+      ],
+      "reference_answer": "两斤",
+      "grading": "automatic",
+      "correct_answer": "两斤",
+      "points": 2,
+      "required": false,
+      "audio_id": "E10-B01"
+    },
+    {
+      "question_id": "W04-L01L10-31",
+      "title": "31. Viết âm tiết thứ 1, có dấu thanh. (Có thể dùng số thanh 1–4, ví dụ ma3.)",
+      "type": "TEXT",
+      "options": [],
+      "reference_answer": "dǎ",
+      "grading": "manual",
+      "correct_answer": null,
+      "points": 2,
+      "required": false,
+      "audio_id": "E01-C01"
+    },
+    {
+      "question_id": "W04-L01L10-32",
+      "title": "32. Viết âm tiết thứ 2, có dấu thanh. (Có thể dùng số thanh 1–4, ví dụ ma3.)",
+      "type": "TEXT",
+      "options": [],
+      "reference_answer": "tè",
+      "grading": "manual",
+      "correct_answer": null,
+      "points": 2,
+      "required": false,
+      "audio_id": "E01-C01"
+    },
+    {
+      "question_id": "W04-L01L10-33",
+      "title": "33. Viết âm tiết thứ 1, có dấu thanh. (Có thể dùng số thanh 1–4, ví dụ ma3.)",
+      "type": "TEXT",
+      "options": [],
+      "reference_answer": "hǎo",
+      "grading": "manual",
+      "correct_answer": null,
+      "points": 2,
+      "required": false,
+      "audio_id": "E02-C01"
+    },
+    {
+      "question_id": "W04-L01L10-34",
+      "title": "34. Viết âm tiết thứ 2, có dấu thanh. (Có thể dùng số thanh 1–4, ví dụ ma3.)",
+      "type": "TEXT",
+      "options": [],
+      "reference_answer": "xiè",
+      "grading": "manual",
+      "correct_answer": null,
+      "points": 2,
+      "required": false,
+      "audio_id": "E02-C01"
+    },
+    {
+      "question_id": "W04-L01L10-35",
+      "title": "35. Viết âm tiết thứ 1. (Có thể dùng số thanh 1–4, ví dụ ma3.)",
+      "type": "TEXT",
+      "options": [],
+      "reference_answer": "yǔ",
+      "grading": "manual",
+      "correct_answer": null,
+      "points": 2,
+      "required": false,
+      "audio_id": "E03-C01"
+    },
+    {
+      "question_id": "W04-L01L10-36",
+      "title": "36. Viết âm tiết thứ 2. (Có thể dùng số thanh 1–4, ví dụ ma3.)",
+      "type": "TEXT",
+      "options": [],
+      "reference_answer": "wǎn",
+      "grading": "manual",
+      "correct_answer": null,
+      "points": 2,
+      "required": false,
+      "audio_id": "E03-C01"
+    },
+    {
+      "question_id": "W04-L01L10-37",
+      "title": "37. Họ của người nói",
+      "type": "TEXT",
+      "options": [],
+      "reference_answer": "李／Lǐ",
+      "grading": "manual",
+      "correct_answer": null,
+      "points": 2,
+      "required": false,
+      "audio_id": "E04-C01"
+    },
+    {
+      "question_id": "W04-L01L10-38",
+      "title": "38. Tên đầy đủ của người nói",
+      "type": "TEXT",
+      "options": [],
+      "reference_answer": "李明／Lǐ Míng",
+      "grading": "manual",
+      "correct_answer": null,
+      "points": 2,
+      "required": false,
+      "audio_id": "E04-C01"
+    },
+    {
+      "question_id": "W04-L01L10-39",
+      "title": "39. 同屋叫什么？",
+      "type": "TEXT",
+      "options": [],
+      "reference_answer": "安娜",
+      "grading": "manual",
+      "correct_answer": null,
+      "points": 2,
+      "required": false,
+      "audio_id": "E05-C01"
+    },
+    {
+      "question_id": "W04-L01L10-40",
+      "title": "40. 同屋是哪国人？",
+      "type": "TEXT",
+      "options": [],
+      "reference_answer": "英国人",
+      "grading": "manual",
+      "correct_answer": null,
+      "points": 2,
+      "required": false,
+      "audio_id": "E05-C01"
+    },
+    {
+      "question_id": "W04-L01L10-41",
+      "title": "41. 书包是谁的？",
+      "type": "TEXT",
+      "options": [],
+      "reference_answer": "我的／说话人的",
+      "grading": "manual",
+      "correct_answer": null,
+      "points": 2,
+      "required": false,
+      "audio_id": "E06-C01"
+    },
+    {
+      "question_id": "W04-L01L10-42",
+      "title": "42. 这是什么书？",
+      "type": "TEXT",
+      "options": [],
+      "reference_answer": "汉语书",
+      "grading": "manual",
+      "correct_answer": null,
+      "points": 2,
+      "required": false,
+      "audio_id": "E06-C01"
+    },
+    {
+      "question_id": "W04-L01L10-43",
+      "title": "43. 安娜左边的房间是谁的？",
+      "type": "TEXT",
+      "options": [],
+      "reference_answer": "王老师的",
+      "grading": "manual",
+      "correct_answer": null,
+      "points": 2,
+      "required": false,
+      "audio_id": "E07-C01"
+    },
+    {
+      "question_id": "W04-L01L10-44",
+      "title": "44. 大卫的房间在安娜的哪边？",
+      "type": "TEXT",
+      "options": [],
+      "reference_answer": "右边",
+      "grading": "manual",
+      "correct_answer": null,
+      "points": 2,
+      "required": false,
+      "audio_id": "E07-C01"
+    },
+    {
+      "question_id": "W04-L01L10-45",
+      "title": "45. 汉语课下课时间",
+      "type": "TEXT",
+      "options": [],
+      "reference_answer": "10:00／上午十点",
+      "grading": "manual",
+      "correct_answer": null,
+      "points": 2,
+      "required": false,
+      "audio_id": "E08-C01"
+    },
+    {
+      "question_id": "W04-L01L10-46",
+      "title": "46. 午饭地点",
+      "type": "TEXT",
+      "options": [],
+      "reference_answer": "食堂",
+      "grading": "manual",
+      "correct_answer": null,
+      "points": 2,
+      "required": false,
+      "audio_id": "E08-C01"
+    },
+    {
+      "question_id": "W04-L01L10-47",
+      "title": "47. 见面时间",
+      "type": "TEXT",
+      "options": [],
+      "reference_answer": "上午8:30",
+      "grading": "manual",
+      "correct_answer": null,
+      "points": 2,
+      "required": false,
+      "audio_id": "E09-C01"
+    },
+    {
+      "question_id": "W04-L01L10-48",
+      "title": "48. 地铁几号线？",
+      "type": "TEXT",
+      "options": [],
+      "reference_answer": "二号线／2号线",
+      "grading": "manual",
+      "correct_answer": null,
+      "points": 2,
+      "required": false,
+      "audio_id": "E09-C01"
+    },
+    {
+      "question_id": "W04-L01L10-49",
+      "title": "49. 牛奶价格",
+      "type": "TEXT",
+      "options": [],
+      "reference_answer": "8元／八块",
+      "grading": "manual",
+      "correct_answer": null,
+      "points": 2,
+      "required": false,
+      "audio_id": "E10-C01"
+    },
+    {
+      "question_id": "W04-L01L10-50",
+      "title": "50. 一共付多少钱？",
+      "type": "TEXT",
+      "options": [],
+      "reference_answer": "14元／十四块",
+      "grading": "manual",
+      "correct_answer": null,
+      "points": 2,
+      "required": false,
+      "audio_id": "E10-C01"
+    }
+  ],
+  "preconditions": [
+    "Read actual Form current question IDs, contents, answer keys and unpublished status in authenticated supported browser.",
+    "Export Form contents/settings including identity fields before modifying. Do not export student responses.",
+    "Confirm no changes since Oct5 or reconcile each user edit; never delete student responses or unrelated banks.",
+    "Reuse target Form and response spreadsheet; do not create another public Form.",
+    "Record actual new Form item IDs into W04 Sheet/local mapping; verify 30 MC keys and 20 manually graded blanks/points/order. No test submission."
+  ]
+}

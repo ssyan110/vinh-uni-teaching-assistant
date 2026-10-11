@@ -1,0 +1,18 @@
+{
+  "model": ".agent/runs/boya-elementary-i-l09-l10-video-20261005/staging/video/models/qwen-custom-voice-1.7b-4bit",
+  "speaker": "Serena",
+  "language": "Chinese",
+  "instruct": "用标准普通话，平稳自然、清楚地朗读原文，语速均匀。保持准确声调和儿化。不添加、遗漏或改写文字。",
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "top_k": 50,
+  "repetition_penalty": 1.1,
+  "max_tokens": 4096,
+  "seed": 20261011,
+  "stream": false,
+  "speech_rate": "native_uniform_instruction_no_time_stretch",
+  "postprocessing": "PCM16_conversion_only_no_trim_no_normalization_no_time_stretch",
+  "segment_policy": "exact_original_units_with_role_label_removed; no sentence_or_digit_splitting",
+  "retry_limit": 0,
+  "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d"
+}

@@ -1,0 +1,273 @@
+{
+  "status": "pass",
+  "clips": [
+    {
+      "audio_id": "E01-A01",
+      "expected_duration": 0.725,
+      "actual_duration": 0.725,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E01-A02",
+      "expected_duration": 0.65,
+      "actual_duration": 0.65,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E01-A03",
+      "expected_duration": 0.7,
+      "actual_duration": 0.7,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E02-A01",
+      "expected_duration": 0.725,
+      "actual_duration": 0.725,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E02-A02",
+      "expected_duration": 0.725,
+      "actual_duration": 0.725,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E02-A03",
+      "expected_duration": 0.7,
+      "actual_duration": 0.7,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E03-A01",
+      "expected_duration": 0.8,
+      "actual_duration": 0.8,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E03-A02",
+      "expected_duration": 0.9,
+      "actual_duration": 0.9,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E03-A03",
+      "expected_duration": 0.725,
+      "actual_duration": 0.725,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E04-A01",
+      "expected_duration": 2.425,
+      "actual_duration": 2.425,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E04-B01",
+      "expected_duration": 12.625,
+      "actual_duration": 12.625,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E05-A02",
+      "expected_duration": 3.775,
+      "actual_duration": 3.775,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E05-B01",
+      "expected_duration": 15.475,
+      "actual_duration": 15.475,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E06-A01",
+      "expected_duration": 3.65,
+      "actual_duration": 3.65,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E06-B01",
+      "expected_duration": 14.05,
+      "actual_duration": 14.05,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E07-A01",
+      "expected_duration": 3.7,
+      "actual_duration": 3.7,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E07-B01",
+      "expected_duration": 13.4,
+      "actual_duration": 13.4,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E08-A01",
+      "expected_duration": 2.575,
+      "actual_duration": 2.575,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E08-B01",
+      "expected_duration": 13.8,
+      "actual_duration": 13.8,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E09-A02",
+      "expected_duration": 4.3,
+      "actual_duration": 4.3,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E09-B01",
+      "expected_duration": 12.725,
+      "actual_duration": 12.725,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E10-A01",
+      "expected_duration": 2.55,
+      "actual_duration": 2.55,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E10-B01",
+      "expected_duration": 14.7,
+      "actual_duration": 14.7,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E01-C01",
+      "expected_duration": 19.25,
+      "actual_duration": 19.25,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 1 次"
+    },
+    {
+      "audio_id": "E02-C01",
+      "expected_duration": 19.45,
+      "actual_duration": 19.45,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 1 次"
+    },
+    {
+      "audio_id": "E03-C01",
+      "expected_duration": 19.05,
+      "actual_duration": 19.05,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 1 次"
+    },
+    {
+      "audio_id": "E04-C01",
+      "expected_duration": 5.675,
+      "actual_duration": 5.675,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E05-C01",
+      "expected_duration": 7.15,
+      "actual_duration": 7.15,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E06-C01",
+      "expected_duration": 6.75,
+      "actual_duration": 6.75,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E07-C01",
+      "expected_duration": 8.75,
+      "actual_duration": 8.75,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E08-C01",
+      "expected_duration": 9.7,
+      "actual_duration": 9.7,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E09-C01",
+      "expected_duration": 12.1,
+      "actual_duration": 12.1,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    },
+    {
+      "audio_id": "E10-C01",
+      "expected_duration": 10.5,
+      "actual_duration": 10.5,
+      "ended": true,
+      "error": "",
+      "counter": "完整播放 1 次／计划播放 2 次"
+    }
+  ],
+  "browser": "existing Chrome, headless",
+  "network": "blocked except local file:",
+  "playbackRate": 16,
+  "human_listening": false
+}

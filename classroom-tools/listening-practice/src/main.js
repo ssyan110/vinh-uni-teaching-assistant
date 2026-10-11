@@ -1,320 +1,73 @@
-import "./styles.css";
-import { seedClassroomConfig } from "./data/classroom.js";
-import { seedQuestionSets } from "./data/questions.js";
-import {
-  attemptsToCsv,
-  downloadText,
-  getStorageMode,
-  loadAttempts,
-  loadClassroomConfig,
-  loadQuestionBank,
-  saveAttempt,
-  saveClassroomConfig,
-  saveQuestionBank
-} from "./storage.js";
-
-const app = document.querySelector("#app");
-let questionSets = [];
-let classroomConfig = seedClassroomConfig;
-let visibleAttempts = [];
-
-function escapeHtml(value = "") {
-  return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
+import './styles.css';
+const app = document.querySelector('#app');
+const esc = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+async function api(route, body) {
+  const r = await fetch(`/api/${route}`,{credentials:'same-origin',...(body === undefined ? {} : {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})});
+  const data = await r.json(); if(!r.ok) throw Object.assign(new Error(data.error || '请求失败'),{status:r.status}); return data;
 }
-
-function formatDate(value) {
-  return new Date(value).toLocaleString("zh-CN", { dateStyle: "medium", timeStyle: "short" });
+const field = (label,name,type='text',extra='') => `<div class="field"><label for="${name}">${label}</label><input id="${name}" name="${name}" type="${type}" required ${extra}></div>`;
+function shell(content) {
+  app.innerHTML=`<header class="topbar"><a class="brand" href="#"><strong>荣市大学 · 听力练习</strong></a><nav><a href="#student">学生入口</a> <a href="#teacher">教师入口</a> <a href="#results">我的反馈</a> <button id="logout" class="text-button">退出</button></nav></header><main class="page-shell">${content}<p id="notice" role="status" aria-live="polite"></p></main>`;
+  app.querySelector('#logout').onclick=async()=>{await api('logout',{});location.hash='';await route();};
 }
-
-function shell(content, page = "home") {
-  app.innerHTML = `
-    <div class="shell">
-      <header class="topbar">
-        <button class="brand" data-route="home" aria-label="回到首页">
-          <span class="brand-mark" aria-hidden="true">听</span>
-          <span><strong>荣市大学</strong><small>听说课听力练习</small></span>
-        </button>
-        <nav class="topbar-actions" aria-label="页面切换">
-          <button class="${page === "student" ? "active" : ""}" data-route="student">学生练习</button>
-          <button class="${page === "teacher" ? "active" : ""}" data-route="teacher">教师入口</button>
-        </nav>
-      </header>
-      <main class="main">${content}</main>
-    </div>
-  `;
-  app.querySelectorAll("[data-route]").forEach((button) => button.addEventListener("click", () => navigate(button.dataset.route)));
+function message(error) { const n=app.querySelector('#notice'); if(n) n.textContent=error.message || error; }
+function bindForm(id, handler) {
+  app.querySelector(id).onsubmit=async e=>{e.preventDefault();const button=e.currentTarget.querySelector('button[type="submit"]'); button.disabled=true;try{await handler(new FormData(e.currentTarget));}catch(error){message(error);}finally{button.disabled=false;}};
 }
-
-function navigate(route) {
-  window.location.hash = route;
-  if (route === "teacher") renderTeacher();
-  else if (route === "student") renderStudentStart();
-  else renderHome();
+function teacherLogin() {
+  shell(`<section class="start-page"><h1>教师登录</h1><p>登录后可发布练习、查看提交和批阅开放题。</p><form id="login" class="panel">${field('教师密码','password','password','autocomplete="current-password"')}<button class="primary" type="submit">登录</button></form></section>`);
+  bindForm('#login',async f=>{await api('login',{password:f.get('password')});await teacher();});
 }
-
-function getRequestedSetId() {
-  const query = window.location.hash.split("?")[1] || "";
-  return new URLSearchParams(query).get("set") || "";
+async function teacher() {
+  let data; try{data=await api('teacher/dashboard');}catch(error){if((await api('session')).role!=='teacher')return teacherLogin();throw error;}
+  const options=data.sets.map(s=>`<option value="${esc(JSON.stringify([s.id,s.version]))}">${esc(s.title)} · ${esc(s.version)}${s.status==='demo'?' · 测试示例':''}</option>`).join('');
+  shell(`<section class="teacher-header"><div><h1>教师工作台</h1><p>题组每次修改须使用新版本。已发布的练习和历史答案保留原版本。</p></div><button id="refresh" class="secondary">刷新记录</button></section>
+    <section class="teacher-tools"><h2>导入题组</h2><p>上传 JSON。正式内容须已获批准，并填写 lessonKey、sourceStatus 和 approvalReference。示例仅用于测试流程。</p><input id="import" type="file" accept=".json,application/json" aria-label="导入题组 JSON"><button id="template" class="secondary">下载流程测试模板</button><p>已保存 ${data.sets.length} 个题组版本。</p></section>
+    <section class="teacher-tools"><h2>发布班级练习</h2><form id="publish"><div class="field"><label for="set">题组版本</label><select name="set" id="set" required>${options}</select></div>${field('班级标识（发布后固定）','classId')}${field('练习名称','title')}${field('截止时间（可选）','expiresAt','datetime-local').replace(' required','')}<div class="field"><label for="roster">学生名单：每行“学生编号,个人进入码”；进入码至少 8 位。请分别私下交给各学生。</label><textarea id="roster" name="roster" required placeholder="DEMO01,personal-code-01"></textarea></div><button class="primary" type="submit" ${data.sets.length?'':'disabled'}>发布练习</button></form></section>
+    ${data.assignments.map(a=>`<section class="teacher-panel panel"><h2>${esc(a.title)} · ${esc(a.classId)}</h2><p>${esc(a.setId)} / ${esc(a.version)} · ${a.closed?'已关闭':'可进入'}${a.expiresAt?' · 截止 '+esc(a.expiresAt):''}</p><label>学生入口<input readonly value="${esc(a.studentLink)}" aria-label="学生入口链接"></label><p>练习码：<code>${esc(a.code)}</code></p><button class="secondary" data-close="${esc(a.id)}" ${a.closed?'disabled':''}>关闭练习</button><button class="secondary" data-export="${esc(a.id)}">导出本次记录 CSV</button><h3>未提交学生（${a.unsubmitted.length}）</h3><p>${esc(a.unsubmitted.map(r=>r.studentCode).join('、')||'名单中的学生均已提交')}</p><h3>客观题错误统计</h3><p>按本练习全部尝试统计，重做也计入。</p>${a.errors.map(q=>`<p>${esc(q.prompt)}：${q.incorrect} 次错误 / ${q.submitted} 次提交</p>`).join('')||'<p>本题组没有客观题。</p>'}<h3>提交记录（${a.attempts.length} 次）</h3>${a.attempts.map(t=>renderAttempt(t,data.sets)).join('')||'<p>暂无提交。</p>'}</section>`).join('')}`);
+  app.querySelector('#refresh').onclick=()=>teacher().catch(message);
+  app.querySelector('#template').onclick=async()=>{try{const example=await api('teacher/template');download('listening-workflow-demo.json',JSON.stringify(example,null,2),'application/json');}catch(e){message(e);}};
+  app.querySelector('#import').onchange=async e=>{try{const f=e.target.files[0];if(!f)return;await api('teacher/sets',JSON.parse(await f.text()));await teacher();message('已保存新的题组版本。');}catch(error){message(error);}};
+  bindForm('#publish',async f=>{const [setId,version]=JSON.parse(f.get('set'));const roster=String(f.get('roster')).trim().split(/\r?\n/).map(line=>{const [studentCode,pin,...rest]=line.split(',');if(rest.length)throw new Error('名单每行只填写编号和进入码');return {studentCode:studentCode?.trim(),pin:pin?.trim()};});await api('teacher/assignments',{setId,version,classId:f.get('classId'),title:f.get('title'),roster,expiresAt:f.get('expiresAt')?new Date(f.get('expiresAt')).toISOString():null});await teacher();message('已发布。复制学生入口，并私下发送每位学生的个人进入码。');});
+  app.querySelectorAll('[data-close]').forEach(b=>b.onclick=async()=>{try{await api('teacher/close',{assignmentId:b.dataset.close});await teacher();}catch(e){message(e);}});
+  app.querySelectorAll('[data-export]').forEach(b=>b.onclick=()=>{const a=data.assignments.find(a=>a.id===b.dataset.export);const rows=[['assignment','studentCode','attempt','submittedAt','questionId','answer','grading','points','feedback']];for(const t of a.attempts)for(const r of t.responses){const review=t.reviews.filter(x=>x.questionId===r.questionId).at(-1);rows.push([a.title,t.studentCode,t.attemptNumber,t.submittedAt,r.questionId,r.answer,r.grading,review?.points??r.points??'',review?.feedback??'']);}download('listening-attempts.csv','\uFEFF'+rows.map(row=>row.map(v=>'"'+String(v).replace(/^[=+@\-\t\r]/,"'$&").replaceAll('"','""')+'"').join(',')).join('\r\n'),'text/csv');});
+  app.querySelectorAll('.review-form').forEach(form=>bindForm('#'+form.id,async f=>{await api('teacher/reviews',{attemptId:f.get('attemptId'),questionId:f.get('questionId'),points:Number(f.get('points')),feedback:f.get('feedback')});await teacher();message('批阅已保存；之前的批阅记录仍保留。');}));
 }
-
-function getRequestedClassId() {
-  const query = window.location.hash.split("?")[1] || "";
-  return new URLSearchParams(query).get("class") || "";
+function renderAttempt(t,sets) {
+  const set=sets.find(s=>s.id===t.setId&&s.version===t.version);
+  const latest=new Map(t.reviews.map(r=>[r.questionId,r]));
+  const pending=t.responses.filter(r=>r.grading==='manual'&&!latest.has(r.questionId)).length;
+  const total=t.responses.reduce((sum,r)=>sum+(latest.get(r.questionId)?.points??r.points),0);
+  return `<details class="answer-details"><summary>${esc(t.studentCode)} · 第 ${t.attemptNumber} 次 · ${esc(t.submittedAt)} · ${pending?"已评分部分 ":"总分 "}${total} 分${pending?' · '+pending+' 题待批阅':' · 已评分'}</summary>${t.responses.map((r,i)=>{const q=set.questions.find(q=>q.id===r.questionId);const review=latest.get(r.questionId);return `<article class="question"><h3>${i+1}. ${esc(q.prompt)}</h3><p>学生答案：${esc(r.answer)}</p>${r.grading==='automatic'?`<p>${r.isCorrect?'正确':'错误'} · ${r.points} / ${q.points} 分；正确选项：${esc(q.answer)}</p>`:`<p>${review?'最近批阅：'+review.points+' / '+q.points+' 分；'+esc(review.feedback):'等待人工批阅'}</p><form class="review-form" id="review-${t.id}-${i}"><input type="hidden" name="attemptId" value="${esc(t.id)}"><input type="hidden" name="questionId" value="${esc(q.id)}"><label>分数（0–${q.points}）<input name="points" type="number" min="0" max="${q.points}" step="0.5" required value="${review?.points??''}"></label><label>给学生的反馈<textarea name="feedback" maxlength="4000">${esc(review?.feedback||'')}</textarea></label><button type="submit" class="secondary">保存批阅</button></form><details><summary>批阅历史（${t.reviews.filter(x=>x.questionId===r.questionId).length}）</summary>${t.reviews.filter(x=>x.questionId===r.questionId).map(x=>`<p>${esc(x.reviewedAt)} · ${x.points} 分 · ${esc(x.feedback)}</p>`).join('')}</details>`}</article>`;}).join('')}</details>`;
 }
-
-function getStudentLink(setId = "", classId = "") {
-  const query = new URLSearchParams();
-  if (setId) query.set("set", setId);
-  if (classId) query.set("class", classId);
-  const suffix = query.toString() ? `?${query.toString()}` : "";
-  return `${window.location.origin}${window.location.pathname}#student${suffix}`;
+function download(name,content,type) {const a=document.createElement('a');const url=URL.createObjectURL(new Blob([content],{type}));a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function studentJoin() {
+  const code=new URLSearchParams(location.hash.split('?')[1]||'').get('code')||'';
+  shell(`<section class="start-page"><h1>进入听力练习</h1><p>打开教师发来的链接，填写自己的学生编号和个人进入码。进入码由教师私下提供。</p><form id="join" class="panel">${field('练习码','code','text',`value="${esc(code)}" autocomplete="off"`)}${field('学生编号','studentCode','text','autocomplete="username"')}${field('个人进入码','pin','password','autocomplete="current-password"')}<button type="submit" class="primary">进入练习</button></form></section>`);
+  bindForm('#join',async f=>{await api('join',Object.fromEntries(f));await student();});
 }
-
-function classesForCourse(courseId) {
-  return classroomConfig.classes.filter((item) => item.courseId === courseId && item.status !== "archived");
+async function student() {
+  let data;try{data=await api('student/practice');}catch(e){studentJoin();message(e);return;}
+  const {set,assignment,studentCode}=data;
+  const draftKey=`lp-draft:${assignment.id}:${studentCode}`; let draft;
+  try{draft=JSON.parse(sessionStorage.getItem(draftKey)||'null');}catch{draft=null;}
+  draft ||= {submissionKey:crypto.randomUUID(),answers:{}};
+  shell(`<section class="quiz-header"><h1>${esc(assignment.title)}</h1><p>${esc(assignment.classId)} · ${esc(studentCode)}</p></section>${set.status==='demo'?'<p class="notice">流程测试示例，非已批准课堂教材。</p>':''}<section class="quiz-main panel"><p>先看题目、找关键词，再听音频并记重点，最后回答所有题目。</p><h2>${esc(set.audio.label)}</h2>${set.audio.url?`<audio controls preload="none" src="${esc(set.audio.url)}"></audio>`:'<p>音频由教师外部播放。</p>'}<form id="quiz">${set.questions.map((q,i)=>`<article class="question"><h2>${i+1}. ${esc(q.prompt)}</h2><p>${q.points} 分${q.grading==='manual'?' · 教师批阅':''}</p>${q.options?`<div class="choice-list">${q.options.map(o=>`<label><input type="radio" name="${esc(q.id)}" value="${esc(o)}" required ${draft.answers[q.id]===o?'checked':''}>${esc(o)}</label>`).join('')}</div>`:`<textarea name="${esc(q.id)}" maxlength="4000" required aria-label="问题 ${i+1} 的答案">${esc(draft.answers[q.id]||'')}</textarea>`}</article>`).join('')}<p>网络中断时保留本页，恢复连接后点击提交重试。</p><button type="submit" class="primary">提交练习</button></form></section>`);
+  const quiz=app.querySelector('#quiz');quiz.oninput=()=>{draft.answers=Object.fromEntries(new FormData(quiz));try{sessionStorage.setItem(draftKey,JSON.stringify(draft));}catch{message('此浏览器无法暂存答案，请保留本页直到提交成功。');}};
+  bindForm('#quiz',async f=>{draft.answers=Object.fromEntries(f);try{sessionStorage.setItem(draftKey,JSON.stringify(draft));}catch{} let r;try{r=await api('student/attempts',draft);}catch(error){if(error.status===409){await conflictRecovery(draftKey);return;}throw error;}sessionStorage.removeItem(draftKey);shell(`<section class="success-page"><h1>练习提交成功</h1><p>${esc(studentCode)}，第 ${r.attemptNumber} 次提交已保存到教师的共享服务器。</p><p>开放题由教师批阅。</p><button id="results" class="secondary">查看自己的评分与反馈</button><button id="again" class="primary">重新练习（新增一次提交）</button></section>`);app.querySelector('#again').onclick=()=>student().catch(message);app.querySelector('#results').onclick=()=>results().catch(message);});
 }
-
-function activeCourses() {
-  return classroomConfig.courses.filter((item) => item.status !== "archived");
+async function conflictRecovery(draftKey) {
+  const saved=await api('student/results');
+  shell(`<section class="teacher-panel panel"><h1>这次提交已保存，当前答案与记录不同</h1><p>服务器已保存同一提交编号的答案。你后来修改了本页答案，重试不会覆盖原记录，也不会自动新增提交。</p><h2>已保存的提交</h2>${saved.map(t=>`<article class="question"><h3>第 ${t.attemptNumber} 次 · ${esc(t.submittedAt)}</h3>${t.responses.map((r,i)=>`<p>问题 ${i+1}：${esc(r.answer)}</p>`).join('')}</article>`).join('')}<p>查看评分与反馈可保留当前草稿。选择“开始新一次练习”会清空当前草稿，重新答题后新增一次提交。</p><button id="conflict-results" class="secondary">查看自己的评分与反馈</button> <button id="new-attempt" class="primary">开始新一次练习（清空草稿）</button></section>`);
+  app.querySelector('#conflict-results').onclick=()=>results().catch(message);
+  app.querySelector('#new-attempt').onclick=async()=>{sessionStorage.removeItem(draftKey);await student();};
 }
-
-function activeClasses() {
-  return classroomConfig.classes.filter((item) => item.status !== "archived");
+async function results() {
+  const records=await api('student/results');
+  shell(`<section class="teacher-panel panel"><h1>我的提交和反馈</h1>${records.map(t=>`<article class="question"><h2>第 ${t.attemptNumber} 次提交</h2><p>${esc(t.submittedAt)}</p>${t.responses.map((r,i)=>{const review=t.reviews.filter(x=>x.questionId===r.questionId).at(-1);return `<p>问题 ${i+1}：${esc(r.answer)} · ${r.grading==='manual'&&!review?'等待教师批阅':(review?.points??r.points)+' 分'}${review?' · '+esc(review.feedback):''}</p>`;}).join('')}</article>`).join('')||'<p>暂无提交。</p>'}<button id="back" class="primary">返回练习</button></section>`);
+  app.querySelector('#back').onclick=()=>student().catch(message);
 }
-
-function renderHome() {
-  shell(`
-    <section class="home-hero">
-      <div class="hero-copy">
-        <div class="eyebrow">听力练习</div>
-        <h1>听清楚，<em>再回答。</em></h1>
-        <p>选择练习，听音频，写下你的答案。每一次提交都会成为下一次复习的依据。</p>
-        <div class="hero-actions"><button class="primary large" data-route="student">开始练习</button><button class="text-button" data-route="teacher">教师入口 <span>↗</span></button></div>
-      </div>
-      <div class="practice-orbit" aria-hidden="true"><div class="orbit-ring ring-one"></div><div class="orbit-ring ring-two"></div><div class="orbit-core"><span>听</span><small>01</small></div><div class="orbit-note note-a">重听</div><div class="orbit-note note-b">记录</div><div class="orbit-note note-c">回答</div></div>
-    </section>
-    <section class="home-strip"><div><span class="strip-number">${questionSets.length}</span><span>个练习题组</span></div><div><span class="strip-number">${activeClasses().length}</span><span>个班级入口</span></div><div><span class="strip-number">∞</span><span>次练习记录</span></div></section>
-    <section class="practice-preview"><div class="section-heading"><h2>从一组练习开始</h2><p>扫码或选择题组，马上进入听力任务。</p></div><div class="set-preview-list">${questionSets.map((set, index) => `<button class="set-preview" data-set-preview="${escapeHtml(set.id)}"><span class="set-index">0${index + 1}</span><span class="set-info"><strong>${escapeHtml(set.title)}</strong><small>${escapeHtml(set.lessonTitle)} · ${set.questions.length} 个问题</small></span><span class="set-arrow">→</span></button>`).join("")}</div></section>
-  `);
-  app.querySelectorAll("[data-route]").forEach((button) => button.addEventListener("click", () => navigate(button.dataset.route)));
-  app.querySelectorAll("[data-set-preview]").forEach((button) => button.addEventListener("click", () => { window.location.hash = `student?set=${encodeURIComponent(button.dataset.setPreview)}`; renderStudentStart(); }));
+async function route() {
+  try{if(location.hash.startsWith('#results'))await results();else if(location.hash.startsWith('#teacher'))await teacher();else if(location.hash.startsWith('#student')){const s=await api('session');if(s.role==='student'&&!location.hash.includes('?code='))await student();else studentJoin();}else shell('<section class="start-page"><h1>听力练习</h1><p>学生请使用教师提供的练习链接和个人进入码。教师登录后可发布练习和查看记录。</p><a class="primary" href="#student">学生入口</a> <a class="secondary" href="#teacher">教师入口</a></section>');}catch(e){message(e);}
 }
-
-function renderStudentStart() {
-  const requestedSetId = getRequestedSetId();
-  const requestedClassId = getRequestedClassId();
-  const selectedSet = questionSets.find((set) => set.id === requestedSetId) || questionSets[0];
-  const requestedClass = activeClasses().find((item) => item.id === requestedClassId);
-  const selectedCourseId = requestedClass?.courseId || activeCourses()[0]?.id;
-  shell(`
-    <section class="page-intro"><div><div class="eyebrow">学生练习</div><h1>准备好，就开始。</h1><p>先看题目，抓关键词，再听音频并回答。</p></div><div class="step-line"><span class="current">01</span><span>进入</span><i></i><span>02</span><span>听与答</span><i></i><span>03</span><span>提交</span></div></section>
-    <section class="entry-layout">
-      <div class="entry-card panel">
-        <div class="card-heading"><span class="card-kicker">开始练习</span><h2>进入听力练习</h2><p>请使用老师分配的学生编号。</p></div>
-        <form id="student-start-form">
-          <div class="field"><label for="course-id">课程</label><select id="course-id" required>${activeCourses().map((item) => `<option value="${escapeHtml(item.id)}" ${item.id === selectedCourseId ? "selected" : ""}>${escapeHtml(item.label)}</option>`).join("")}</select></div>
-          <div class="field"><label for="class-id">班级</label><select id="class-id" required>${classesForCourse(selectedCourseId).map((item) => `<option value="${escapeHtml(item.id)}" ${item.id === requestedClassId ? "selected" : ""}>${escapeHtml(item.label)}</option>`).join("")}</select></div>
-          <div class="field"><label for="student-code">学生编号</label><input id="student-code" required maxlength="32" placeholder="例如 A012" /><small>只填写老师分配的编号。</small></div>
-          <div class="field"><label for="set-id">练习题组</label><select id="set-id" required>${questionSets.map((set) => `<option value="${escapeHtml(set.id)}" ${set.id === selectedSet?.id ? "selected" : ""}>${escapeHtml(set.title)} · ${escapeHtml(set.lessonTitle)}</option>`).join("")}</select></div>
-          <button class="primary full-button" type="submit">进入练习 <span>→</span></button>
-        </form>
-      </div>
-      <aside class="practice-card"><div class="audio-symbol" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div><h3>听力练习的节奏</h3><ol><li><strong>先看题目</strong><small>知道要找什么信息</small></li><li><strong>再听音频</strong><small>可以重听，记下关键词</small></li><li><strong>最后回答</strong><small>提交后留下练习记录</small></li></ol></aside>
-    </section>
-  `, "student");
-  app.querySelector("#course-id").addEventListener("change", (event) => {
-    app.querySelector("#class-id").innerHTML = classesForCourse(event.target.value).map((item) => `<option value="${escapeHtml(item.id)}">${escapeHtml(item.label)}</option>`).join("");
-  });
-  app.querySelector("#student-start-form").addEventListener("submit", (event) => {
-    event.preventDefault();
-    const set = questionSets.find((item) => item.id === app.querySelector("#set-id").value);
-    const courseId = app.querySelector("#course-id").value;
-    const classOption = activeClasses().find((item) => item.id === app.querySelector("#class-id").value);
-    if (set && classOption) renderQuiz(set, courseId, classOption, app.querySelector("#student-code").value.trim());
-  });
-}
-
-function renderAnswerInput(question) {
-  if (Array.isArray(question.options) && question.options.length) {
-    return `<div class="choice-list">${question.options.map((option, index) => `<label><input type="radio" name="${escapeHtml(question.id)}" value="${escapeHtml(option)}" ${index === 0 ? "" : ""} required /><span>${String.fromCharCode(65 + index)}</span>${escapeHtml(option)}</label>`).join("")}</div>`;
-  }
-  return question.type === "short" || question.type === "keywords" ? `<textarea name="${escapeHtml(question.id)}" placeholder="写下你的答案" required></textarea>` : `<input name="${escapeHtml(question.id)}" placeholder="写下你的答案" required />`;
-}
-
-function normalizeAnswer(value) {
-  return String(value || "").trim().toLowerCase().replaceAll(/[，。！？、\s]/g, "");
-}
-
-async function renderQuiz(set, courseId, classOption, studentCode) {
-  const submissionKey = globalThis.crypto?.randomUUID?.() || `submission-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
-  shell(`
-    <section class="quiz-header"><div><button class="back-button" data-route="student">← 返回题组</button><div class="eyebrow">${escapeHtml(set.lessonTitle)}</div><h1>${escapeHtml(set.title)}</h1></div><div class="quiz-identity"><span>${escapeHtml(classOption.label)}</span><strong>${escapeHtml(studentCode)}</strong></div></section>
-    <section class="quiz-layout">
-      <div class="quiz-main panel">
-        <div class="quiz-progress"><div><span>听力任务</span><strong>${set.questions.length} 个问题</strong></div><div class="progress-track"><span style="width: 34%"></span></div></div>
-        <div class="audio-box"><div class="audio-icon" aria-hidden="true">◖</div><div class="audio-copy"><strong>${escapeHtml(set.audio.label)}</strong><small>听音频，记关键词。需要时可以重听。</small></div><audio controls preload="metadata" src="${escapeHtml(set.audio.url)}"></audio></div>
-        <form id="quiz-form"><div class="question-list">${set.questions.map((question, index) => `<article class="question"><div class="question-top"><span>问题 ${String(index + 1).padStart(2, "0")}</span><small>${question.points} 分</small></div><h2>${escapeHtml(question.prompt)}</h2>${renderAnswerInput(question)}</article>`).join("")}</div><div class="quiz-submit"><span>确认答案后再提交。</span><button class="primary" type="submit">提交练习 <span>→</span></button></div></form>
-      </div>
-      <aside class="quiz-side"><div class="side-marker">${String(set.questions.length).padStart(2, "0")}</div><h3>这次练习</h3><p>先听，再写。不要急着看答案。</p><div class="side-rule"></div><span>${escapeHtml(set.lessonTitle)}</span></aside>
-    </section>
-  `, "student");
-  app.querySelectorAll('[data-route="student"]').forEach((button) => button.addEventListener("click", () => navigate("student")));
-  app.querySelector("#quiz-form").addEventListener("submit", async (event) => {
-    event.preventDefault();
-    const submit = event.currentTarget.querySelector("button[type=submit]");
-    submit.disabled = true;
-    submit.innerHTML = "正在保存…";
-    const formData = new FormData(event.currentTarget);
-    const responses = set.questions.map((question) => {
-      const answer = String(formData.get(question.id) || "").trim();
-      const isCorrect = question.answer === null || question.answer === undefined ? null : normalizeAnswer(answer) === normalizeAnswer(question.answer);
-      return { questionId: question.id, answer, grading: question.grading || (isCorrect === null ? "manual" : "automatic"), isCorrect, points: isCorrect ? question.points : 0 };
-    });
-    const result = await saveAttempt({
-      id: `attempt-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
-      submissionKey,
-      submittedAt: new Date().toISOString(),
-      courseId,
-      courseName: activeCourses().find((item) => item.id === courseId)?.label || courseId,
-      classId: classOption.id,
-      className: classOption.label,
-      studentCode,
-      lessonKey: set.lessonKey,
-      setId: set.id,
-      questionVersion: set.version,
-      automaticPoints: responses.reduce((sum, response) => sum + response.points, 0),
-      totalPoints: set.questions.reduce((sum, question) => sum + question.points, 0),
-      responses
-    });
-    renderSuccess(set, studentCode, responses, result.attempt, result.mode);
-  });
-}
-
-function renderSuccess(set, studentCode, responses, attempt, mode) {
-  const manualCount = responses.filter((response) => response.grading === "manual").length;
-  shell(`
-    <section class="success-page"><div class="success-mark">✓</div><div class="eyebrow">已完成</div><h1>练习提交成功。</h1><p>${escapeHtml(studentCode)}，这次练习已经记录下来。</p><div class="result-card"><div><span>练习题组</span><strong>${escapeHtml(set.title)}</strong></div><div><span>提交次数</span><strong>第 ${attempt?.attemptNumber || 1} 次</strong></div><div><span>结果</span><strong>${manualCount ? "等待教师查看" : "自动评分完成"}</strong></div></div><div class="success-actions"><button class="primary" data-route="student">再做一组</button><button class="text-button" data-route="home">回到首页</button></div><small class="save-state">${mode === "shared" ? "记录已保存" : "记录已保存在此设备"}</small></section>
-  `, "student");
-  app.querySelector('[data-route="student"]').addEventListener("click", () => navigate("student"));
-  app.querySelector('[data-route="home"]').addEventListener("click", () => navigate("home"));
-}
-
-async function renderTeacher() {
-  shell(`<section class="loading-state"><div class="loading-bar"></div><p>正在打开提交记录…</p></section>`, "teacher");
-  const attempts = await loadAttempts();
-  shell(`
-    <section class="teacher-header"><div><div class="eyebrow">教师入口</div><h1>提交记录</h1><p>按班级和题组查看学生的每一次练习。</p></div><div class="teacher-actions"><span class="sync-status ${getStorageMode() === "shared" ? "connected" : "local"}"><i></i>${getStorageMode() === "shared" ? "共享记录" : "此设备记录"}</span><button class="secondary" id="refresh-records">刷新</button><button class="primary" id="export-csv">导出 CSV</button></div></section>
-    <section class="teacher-panel panel"><div class="stats" id="stats"></div><div class="filter-bar"><div class="field"><label for="course-filter">课程</label><select id="course-filter"><option value="all">全部课程</option>${activeCourses().map((item) => `<option value="${escapeHtml(item.id)}">${escapeHtml(item.label)}</option>`).join("")}</select></div><div class="field"><label for="class-filter">班级</label><select id="class-filter"><option value="all">全部班级</option>${activeClasses().map((item) => `<option value="${escapeHtml(item.id)}">${escapeHtml(item.label)}</option>`).join("")}</select></div><div class="field"><label for="set-filter">题组</label><select id="set-filter"><option value="all">全部题组</option>${questionSets.map((set) => `<option value="${escapeHtml(set.id)}">${escapeHtml(set.title)}</option>`).join("")}</select></div><div class="field"><label for="date-from">开始日期</label><input id="date-from" type="date" /></div><div class="field"><label for="date-to">结束日期</label><input id="date-to" type="date" /></div><div class="field"><label for="student-search">学生编号</label><input id="student-search" type="search" placeholder="搜索编号" /></div><div class="filter-count" id="filter-count"></div></div><div id="attempts-table"></div></section>
-    <section class="teacher-tools"><div><h2>发布练习</h2><p>选择班级后复制专用入口，再制作 QR Code。</p></div><div class="publish-list">${questionSets.map((set) => `<div class="publish-row"><div><strong>${escapeHtml(set.title)}</strong><small>${escapeHtml(set.lessonTitle)}</small></div><div class="publish-controls"><select aria-label="选择班级" data-publish-class="${escapeHtml(set.id)}"><option value="">通用入口</option>${activeClasses().map((item) => `<option value="${escapeHtml(item.id)}">${escapeHtml(item.label)}</option>`).join("")}</select><button class="secondary" data-copy-set="${escapeHtml(set.id)}">复制学生链接</button></div></div>`).join("")}</div><details class="import-panel"><summary>导入新的题库</summary><p>使用 JSON 批量更新题组，不需要修改页面代码。</p><div class="import-actions"><button class="secondary" id="download-template">下载模板</button><input id="question-import" type="file" accept="application/json,.json" /></div></details></section>
-    <section class="teacher-tools class-management-section"><div><h2>班级设置</h2><p>学生会从下拉选单选择班级；新增或封存选项不会删除历史提交。</p></div><div class="class-management"><div class="managed-class-list" id="managed-class-list">${classroomConfig.classes.map((item) => `<div class="managed-class ${item.status === "archived" ? "archived" : ""}"><div><strong>${escapeHtml(item.label)}</strong><small>${escapeHtml(activeCourses().find((course) => course.id === item.courseId)?.label || item.courseId)} · ${item.status === "archived" ? "已封存" : "下拉选项启用"}</small></div><div class="managed-class-actions"><button class="secondary" data-rename-class="${escapeHtml(item.id)}">修改选项</button><button class="text-button" data-toggle-class="${escapeHtml(item.id)}">${item.status === "archived" ? "恢复" : "封存"}</button></div></div>`).join("")}</div><form class="add-class-form" id="add-class-form"><select id="new-class-course" required>${activeCourses().map((item) => `<option value="${escapeHtml(item.id)}">${escapeHtml(item.label)}</option>`).join("")}</select><input id="new-class-name" required maxlength="80" placeholder="例如 第4班" /><button class="primary" type="submit">新增下拉选项</button></form></div></section>
-  `, "teacher");
-  const update = () => updateTeacherTable(attempts);
-  app.querySelector("#course-filter").addEventListener("change", update);
-  app.querySelector("#class-filter").addEventListener("change", update);
-  app.querySelector("#set-filter").addEventListener("change", update);
-  app.querySelector("#date-from").addEventListener("change", update);
-  app.querySelector("#date-to").addEventListener("change", update);
-  app.querySelector("#student-search").addEventListener("input", update);
-  app.querySelector("#refresh-records").addEventListener("click", () => renderTeacher());
-  app.querySelector("#export-csv").addEventListener("click", () => downloadText("listening-practice-attempts.csv", attemptsToCsv(visibleAttempts), "text/csv;charset=utf-8"));
-  app.querySelector("#download-template").addEventListener("click", () => downloadText("listening-practice-question-bank.example.json", JSON.stringify(seedQuestionSets, null, 2)));
-  app.querySelector("#question-import").addEventListener("change", importQuestionBank);
-  app.querySelector("#add-class-form").addEventListener("submit", addClass);
-  app.querySelectorAll("[data-rename-class]").forEach((button) => button.addEventListener("click", renameClass));
-  app.querySelectorAll("[data-toggle-class]").forEach((button) => button.addEventListener("click", toggleClass));
-  app.querySelectorAll("[data-copy-set]").forEach((button) => button.addEventListener("click", async () => {
-    const classId = button.closest(".publish-row")?.querySelector("[data-publish-class]")?.value || "";
-    const link = getStudentLink(button.dataset.copySet, classId);
-    try {
-      await navigator.clipboard.writeText(link);
-      button.textContent = "已复制";
-      window.setTimeout(() => { button.textContent = "复制学生链接"; }, 1600);
-    } catch { window.prompt("复制下面的学生入口链接：", link); }
-  }));
-  update();
-}
-
-function updateTeacherTable(attempts) {
-  const courseValue = app.querySelector("#course-filter").value;
-  const classValue = app.querySelector("#class-filter").value;
-  const setValue = app.querySelector("#set-filter").value;
-  const dateFrom = app.querySelector("#date-from").value;
-  const dateTo = app.querySelector("#date-to").value;
-  const studentSearch = app.querySelector("#student-search").value.trim().toLowerCase();
-  const fromTime = dateFrom ? new Date(`${dateFrom}T00:00:00`).getTime() : null;
-  const toTime = dateTo ? new Date(`${dateTo}T23:59:59.999`).getTime() : null;
-  const filtered = attempts.filter((attempt) => {
-    const submittedTime = new Date(attempt.submittedAt).getTime();
-    return (courseValue === "all" || attempt.courseId === courseValue) && (classValue === "all" || attempt.classId === classValue) && (setValue === "all" || attempt.setId === setValue) && (!fromTime || submittedTime >= fromTime) && (!toTime || submittedTime <= toTime) && (!studentSearch || String(attempt.studentCode || "").toLowerCase().includes(studentSearch));
-  });
-  visibleAttempts = filtered;
-  const setTitles = new Map(questionSets.map((set) => [set.id, set.title]));
-  const classNames = new Map(activeClasses().map((item) => [item.id, item.label]));
-  const students = new Set(filtered.map((attempt) => `${attempt.classId}-${attempt.studentCode}`));
-  const classes = new Set(filtered.map((attempt) => attempt.classId));
-  app.querySelector("#stats").innerHTML = `<div class="stat"><span>提交次数</span><strong>${filtered.length}</strong><small>保留全部尝试</small></div><div class="stat"><span>学生人数</span><strong>${students.size}</strong><small>按班级和编号统计</small></div><div class="stat"><span>班级数</span><strong>${classes.size}</strong><small>当前筛选范围</small></div>`;
-  app.querySelector("#filter-count").textContent = filtered.length ? `显示 ${filtered.length} 次提交` : "暂无符合条件的记录";
-  app.querySelector("#attempts-table").innerHTML = filtered.length ? `<div class="table-wrap"><table><thead><tr><th>时间</th><th>班级</th><th>学生编号</th><th>次数</th><th>题组</th><th>状态</th><th>详情</th></tr></thead><tbody>${filtered.map((attempt) => `<tr><td>${escapeHtml(formatDate(attempt.submittedAt))}</td><td><span class="class-badge">${escapeHtml(attempt.className || classNames.get(attempt.classId) || attempt.classId)}</span></td><td><strong>${escapeHtml(attempt.studentCode)}</strong></td><td>第 ${escapeHtml(attempt.attemptNumber || "—")} 次</td><td>${escapeHtml(setTitles.get(attempt.setId) || attempt.setId)}</td><td>${attempt.responses.some((item) => item.grading === "manual") ? `<span class="status pending">待查看</span>` : `<span class="status done">已评分</span>`}</td><td><details class="answer-details"><summary>查看作答</summary><div class="answer-list">${attempt.responses.map((response, index) => `<div><span>问题 ${String(index + 1).padStart(2, "0")}</span><strong>${escapeHtml(response.answer || "（未填写）")}</strong>${response.isCorrect === null ? "" : `<small>${response.isCorrect ? "正确" : "需要复习"}</small>`}</div>`).join("")}</div></details></td></tr>`).join("")}</tbody></table></div>` : `<div class="empty"><strong>还没有提交记录</strong><span>请让一位学生先完成一次练习。</span></div>`;
-}
-
-async function addClass(event) {
-  event.preventDefault();
-  const courseId = app.querySelector("#new-class-course").value;
-  const label = app.querySelector("#new-class-name").value.trim();
-  if (!label) return;
-  classroomConfig.classes.push({ id: `${courseId}-class-${Date.now()}`, label, courseId, status: "active" });
-  const mode = await saveClassroomConfig(classroomConfig);
-  window.alert(`已新增班级${mode === "shared" ? "，共用配置已更新" : "，已保存于此设备"}。`);
-  renderTeacher();
-}
-
-async function renameClass(event) {
-  const classId = event.currentTarget.dataset.renameClass;
-  const item = classroomConfig.classes.find((entry) => entry.id === classId);
-  if (!item) return;
-  const label = window.prompt("请输入新的班级下拉选项：", item.label)?.trim();
-  if (!label || label === item.label) return;
-  item.label = label;
-  await saveClassroomConfig(classroomConfig);
-  renderTeacher();
-}
-
-async function toggleClass(event) {
-  const classId = event.currentTarget.dataset.toggleClass;
-  const item = classroomConfig.classes.find((entry) => entry.id === classId);
-  if (!item) return;
-  item.status = item.status === "archived" ? "active" : "archived";
-  await saveClassroomConfig(classroomConfig);
-  renderTeacher();
-}
-
-async function importQuestionBank(event) {
-  const file = event.target.files?.[0];
-  if (!file) return;
-  try {
-    const parsed = JSON.parse(await file.text());
-    if (!Array.isArray(parsed) || !parsed.every((set) => set.id && set.lessonKey && set.title && set.audio?.url && Array.isArray(set.questions) && set.questions.every((question) => question.id && question.prompt))) throw new Error("题库必须是题组数组，并包含完整的题组和题目字段。");
-    questionSets = parsed;
-    const mode = await saveQuestionBank(questionSets);
-    window.alert(`已导入 ${questionSets.length} 个题组${mode === "shared" ? "，共享入口已更新" : "，已保存于此设备"}。`);
-    renderTeacher();
-  } catch (error) {
-    window.alert(`导入失败：${error.message}`);
-  }
-}
-
-async function bootstrap() {
-  classroomConfig = await loadClassroomConfig(seedClassroomConfig);
-  questionSets = await loadQuestionBank(seedQuestionSets);
-  const initialRoute = window.location.hash.replace("#", "").split("?")[0];
-  if (initialRoute === "student") renderStudentStart();
-  else if (initialRoute === "teacher") renderTeacher();
-  else renderHome();
-}
-
-bootstrap();
+window.addEventListener('hashchange',route);route();

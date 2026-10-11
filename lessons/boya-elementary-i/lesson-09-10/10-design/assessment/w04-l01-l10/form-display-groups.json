@@ -1,0 +1,388 @@
+{
+  "assessment_id": "W04-L01L10-20261006",
+  "display_rule": "Show one audio identifier in each group heading; question titles show question number and prompt only.",
+  "question_title_pattern": "NN. <prompt>",
+  "group_header_pattern": "Nhóm N · question range · Audio <source audio_id>",
+  "groups": [
+    {
+      "group_no": 1,
+      "audio_id": "E01-A01",
+      "question_range": "1",
+      "question_ids": [
+        "W04-L01L10-01"
+      ],
+      "heading": "Nhóm 1 · 1 · Audio E01-A01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 2,
+      "audio_id": "E01-A02",
+      "question_range": "2",
+      "question_ids": [
+        "W04-L01L10-02"
+      ],
+      "heading": "Nhóm 2 · 2 · Audio E01-A02",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 3,
+      "audio_id": "E01-A03",
+      "question_range": "3",
+      "question_ids": [
+        "W04-L01L10-03"
+      ],
+      "heading": "Nhóm 3 · 3 · Audio E01-A03",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 4,
+      "audio_id": "E02-A01",
+      "question_range": "4",
+      "question_ids": [
+        "W04-L01L10-04"
+      ],
+      "heading": "Nhóm 4 · 4 · Audio E02-A01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 5,
+      "audio_id": "E02-A02",
+      "question_range": "5",
+      "question_ids": [
+        "W04-L01L10-05"
+      ],
+      "heading": "Nhóm 5 · 5 · Audio E02-A02",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 6,
+      "audio_id": "E02-A03",
+      "question_range": "6",
+      "question_ids": [
+        "W04-L01L10-06"
+      ],
+      "heading": "Nhóm 6 · 6 · Audio E02-A03",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 7,
+      "audio_id": "E03-A01",
+      "question_range": "7",
+      "question_ids": [
+        "W04-L01L10-07"
+      ],
+      "heading": "Nhóm 7 · 7 · Audio E03-A01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 8,
+      "audio_id": "E03-A02",
+      "question_range": "8",
+      "question_ids": [
+        "W04-L01L10-08"
+      ],
+      "heading": "Nhóm 8 · 8 · Audio E03-A02",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 9,
+      "audio_id": "E03-A03",
+      "question_range": "9",
+      "question_ids": [
+        "W04-L01L10-09"
+      ],
+      "heading": "Nhóm 9 · 9 · Audio E03-A03",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 10,
+      "audio_id": "E04-A01",
+      "question_range": "10",
+      "question_ids": [
+        "W04-L01L10-10"
+      ],
+      "heading": "Nhóm 10 · 10 · Audio E04-A01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 11,
+      "audio_id": "E04-B01",
+      "question_range": "11–12",
+      "question_ids": [
+        "W04-L01L10-11",
+        "W04-L01L10-12"
+      ],
+      "heading": "Nhóm 11 · 11–12 · Audio E04-B01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 12,
+      "audio_id": "E05-A02",
+      "question_range": "13",
+      "question_ids": [
+        "W04-L01L10-13"
+      ],
+      "heading": "Nhóm 12 · 13 · Audio E05-A02",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 13,
+      "audio_id": "E05-B01",
+      "question_range": "14–15",
+      "question_ids": [
+        "W04-L01L10-14",
+        "W04-L01L10-15"
+      ],
+      "heading": "Nhóm 13 · 14–15 · Audio E05-B01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 14,
+      "audio_id": "E06-A01",
+      "question_range": "16",
+      "question_ids": [
+        "W04-L01L10-16"
+      ],
+      "heading": "Nhóm 14 · 16 · Audio E06-A01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 15,
+      "audio_id": "E06-B01",
+      "question_range": "17–18",
+      "question_ids": [
+        "W04-L01L10-17",
+        "W04-L01L10-18"
+      ],
+      "heading": "Nhóm 15 · 17–18 · Audio E06-B01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 16,
+      "audio_id": "E07-A01",
+      "question_range": "19",
+      "question_ids": [
+        "W04-L01L10-19"
+      ],
+      "heading": "Nhóm 16 · 19 · Audio E07-A01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 17,
+      "audio_id": "E07-B01",
+      "question_range": "20–21",
+      "question_ids": [
+        "W04-L01L10-20",
+        "W04-L01L10-21"
+      ],
+      "heading": "Nhóm 17 · 20–21 · Audio E07-B01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 18,
+      "audio_id": "E08-A01",
+      "question_range": "22",
+      "question_ids": [
+        "W04-L01L10-22"
+      ],
+      "heading": "Nhóm 18 · 22 · Audio E08-A01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 19,
+      "audio_id": "E08-B01",
+      "question_range": "23–24",
+      "question_ids": [
+        "W04-L01L10-23",
+        "W04-L01L10-24"
+      ],
+      "heading": "Nhóm 19 · 23–24 · Audio E08-B01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 20,
+      "audio_id": "E09-A02",
+      "question_range": "25",
+      "question_ids": [
+        "W04-L01L10-25"
+      ],
+      "heading": "Nhóm 20 · 25 · Audio E09-A02",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 21,
+      "audio_id": "E09-B01",
+      "question_range": "26–27",
+      "question_ids": [
+        "W04-L01L10-26",
+        "W04-L01L10-27"
+      ],
+      "heading": "Nhóm 21 · 26–27 · Audio E09-B01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 22,
+      "audio_id": "E10-A01",
+      "question_range": "28",
+      "question_ids": [
+        "W04-L01L10-28"
+      ],
+      "heading": "Nhóm 22 · 28 · Audio E10-A01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 23,
+      "audio_id": "E10-B01",
+      "question_range": "29–30",
+      "question_ids": [
+        "W04-L01L10-29",
+        "W04-L01L10-30"
+      ],
+      "heading": "Nhóm 23 · 29–30 · Audio E10-B01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 24,
+      "audio_id": "E01-C01",
+      "question_range": "31–32",
+      "question_ids": [
+        "W04-L01L10-31",
+        "W04-L01L10-32"
+      ],
+      "heading": "Nhóm 24 · 31–32 · Audio E01-C01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 25,
+      "audio_id": "E02-C01",
+      "question_range": "33–34",
+      "question_ids": [
+        "W04-L01L10-33",
+        "W04-L01L10-34"
+      ],
+      "heading": "Nhóm 25 · 33–34 · Audio E02-C01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 26,
+      "audio_id": "E03-C01",
+      "question_range": "35–36",
+      "question_ids": [
+        "W04-L01L10-35",
+        "W04-L01L10-36"
+      ],
+      "heading": "Nhóm 26 · 35–36 · Audio E03-C01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 27,
+      "audio_id": "E04-C01",
+      "question_range": "37–38",
+      "question_ids": [
+        "W04-L01L10-37",
+        "W04-L01L10-38"
+      ],
+      "heading": "Nhóm 27 · 37–38 · Audio E04-C01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 28,
+      "audio_id": "E05-C01",
+      "question_range": "39–40",
+      "question_ids": [
+        "W04-L01L10-39",
+        "W04-L01L10-40"
+      ],
+      "heading": "Nhóm 28 · 39–40 · Audio E05-C01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 29,
+      "audio_id": "E06-C01",
+      "question_range": "41–42",
+      "question_ids": [
+        "W04-L01L10-41",
+        "W04-L01L10-42"
+      ],
+      "heading": "Nhóm 29 · 41–42 · Audio E06-C01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 30,
+      "audio_id": "E07-C01",
+      "question_range": "43–44",
+      "question_ids": [
+        "W04-L01L10-43",
+        "W04-L01L10-44"
+      ],
+      "heading": "Nhóm 30 · 43–44 · Audio E07-C01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 31,
+      "audio_id": "E08-C01",
+      "question_range": "45–46",
+      "question_ids": [
+        "W04-L01L10-45",
+        "W04-L01L10-46"
+      ],
+      "heading": "Nhóm 31 · 45–46 · Audio E08-C01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 32,
+      "audio_id": "E09-C01",
+      "question_range": "47–48",
+      "question_ids": [
+        "W04-L01L10-47",
+        "W04-L01L10-48"
+      ],
+      "heading": "Nhóm 32 · 47–48 · Audio E09-C01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    },
+    {
+      "group_no": 33,
+      "audio_id": "E10-C01",
+      "question_range": "49–50",
+      "question_ids": [
+        "W04-L01L10-49",
+        "W04-L01L10-50"
+      ],
+      "heading": "Nhóm 33 · 49–50 · Audio E10-C01",
+      "form_item_type": "non_scored_section_header",
+      "page_break": false
+    }
+  ]
+}

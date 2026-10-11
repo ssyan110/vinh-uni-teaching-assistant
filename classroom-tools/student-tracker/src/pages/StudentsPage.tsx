@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTracker } from '../state/TrackerContext'
-import { currentNotes, evidenceRows } from '../utils/classroomAnalysis'
+import { currentNotes, eventDay, evidenceRows } from '../utils/classroomAnalysis'
 import { studentCodeLastFour } from '../utils/studentIdentity'
 
 export function StudentsPage() {
@@ -49,7 +49,7 @@ export function StudentsPage() {
               <span className="student-seat-number" aria-label={`學號末四位 ${studentCodeLastFour(student.student_code)}`}>{studentCodeLastFour(student.student_code)}</span>
               <span className="student-main"><strong>{student.chinese_name}</strong><small>{[student.original_name, `學號末四位 ${studentCodeLastFour(student.student_code)}`].filter(Boolean).join(' · ')}</small></span>
               <span className="course-mini">{courseNames || '未分班'}</span>
-              <span className="student-latest">{lastActivity ? <span>{lastActivity.source} · {new Date(lastActivity.date).toLocaleDateString('zh-TW')}</span> : <span className="muted">尚無回答</span>}</span>
+              <span className="student-latest">{lastActivity ? <span>{lastActivity.source} · {eventDay(lastActivity.date)}</span> : <span className="muted">尚無回答</span>}</span>
               <span className={open ? 'open-count visible' : 'open-count'}>{open ? `${open} 待辦` : '無待辦'}</span>
               <b aria-hidden="true">→</b>
             </Link>
@@ -59,7 +59,7 @@ export function StudentsPage() {
       {selected && <aside className="student-preview" ref={previewRef} tabIndex={-1} aria-label={`${selected.chinese_name}的课堂记录`}>
         <header><div><h2>{selected.chinese_name}</h2><p>學號末四位 {studentCodeLastFour(selected.student_code)}{selected.original_name ? ` · ${selected.original_name}` : ''}</p></div><button className="text-button" aria-label="关闭学生预览" onClick={() => { setSelectedId(null); selectionTrigger.current?.focus() }}>×</button></header>
         <p className="field-help">修讀班級：{selectedEnrollments.map(item => snapshot.courses.find(course => course.id === item.course_id)?.code).filter(Boolean).join(' / ') || '未分班'}</p>
-        <section><h3>最近课堂记录</h3>{selectedRecords.length ? selectedRecords.map(row => <div className="preview-event" key={row.id}><time>{new Date(row.date).toLocaleDateString('zh-CN')}</time><strong>{row.source} · {row.included ? '已回答' : row.status}</strong></div>) : <p className="muted">尚无课堂回答记录。</p>}</section>
+        <section><h3>最近课堂记录</h3>{selectedRecords.length ? selectedRecords.map(row => <div className="preview-event" key={row.id}><time>{eventDay(row.date)}</time><strong>{row.source} · {row.included ? '已回答' : row.status}</strong></div>) : <p className="muted">尚无课堂回答记录。</p>}</section>
         <section><h3>教师备注</h3>{selectedNotes.length ? selectedNotes.map(note => <div className="preview-event" key={note.id}><time>{note.note_date}</time><p>{note.body}</p></div>) : <p className="muted">尚无备注。</p>}</section>
         <Link className="secondary-button" to={`/students/${selected.id}${courseId === 'all' ? '' : `?course=${encodeURIComponent(courseId)}`}`}>查看完整记录与待办 →</Link>
       </aside>}

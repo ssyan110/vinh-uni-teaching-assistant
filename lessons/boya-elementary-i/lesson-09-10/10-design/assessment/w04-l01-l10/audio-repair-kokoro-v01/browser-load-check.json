@@ -1,0 +1,43 @@
+{
+  "status": "local_load_pass",
+  "samples": [
+    {
+      "file": "E04-B01.wav",
+      "duration": 12.625
+    },
+    {
+      "file": "E01-A02.wav",
+      "duration": 0.65
+    },
+    {
+      "file": "E03-A01.wav",
+      "duration": 0.95
+    },
+    {
+      "file": "E03-A02.wav",
+      "duration": 0.9
+    },
+    {
+      "file": "E03-C01.wav",
+      "duration": 19.05
+    },
+    {
+      "file": "E05-B01.wav",
+      "duration": 14.675
+    },
+    {
+      "file": "E08-C01.wav",
+      "duration": 9.7
+    },
+    {
+      "file": "E09-C01.wav",
+      "duration": 12.1
+    },
+    {
+      "file": "E04-C01.wav",
+      "duration": 5.675
+    }
+  ],
+  "auditory_quality_verified": false,
+  "network": "file only; others blocked"
+}

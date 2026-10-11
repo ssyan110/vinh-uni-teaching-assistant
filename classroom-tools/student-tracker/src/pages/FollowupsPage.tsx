@@ -1,13 +1,14 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { StatusPill } from '../components/StatusPill'
 import { useTracker } from '../state/TrackerContext'
+import { todayIso } from '../data/repository'
 
 type Filter = 'open' | 'completed'
 
 function dueLabel(date: string | null) {
   if (!date) return '未設日期'
-  const today = new Date().toISOString().slice(0, 10)
+  const today = todayIso()
   if (date < today) return `已逾期 · ${date}`
   if (date === today) return '今天'
   return date
@@ -16,6 +17,12 @@ function dueLabel(date: string | null) {
 export function FollowupsPage() {
   const { snapshot, setFollowupStatus, busy } = useTracker()
   const [filter, setFilter] = useState<Filter>('open')
+  const { hash } = useLocation()
+  useEffect(() => {
+    if (!hash) return
+    const frame = requestAnimationFrame(() => { document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView({ block: 'center' }) })
+    return () => cancelAnimationFrame(frame)
+  }, [hash, snapshot.followups, filter])
   const items = snapshot.followups.filter((item) => item.status === filter).sort((a, b) => (a.due_on ?? '9999').localeCompare(b.due_on ?? '9999'))
 
   return (
@@ -26,8 +33,8 @@ export function FollowupsPage() {
         {items.length ? <div className="followup-list">{items.map((item) => {
           const student = snapshot.students.find((entry) => entry.id === item.student_id)
           const course = snapshot.courses.find((entry) => entry.id === item.course_id)
-          const overdue = filter === 'open' && item.due_on && item.due_on < new Date().toISOString().slice(0, 10)
-          return <article className="followup-row" key={item.id}>
+          const overdue = filter === 'open' && item.due_on && item.due_on < todayIso()
+          return <article className="followup-row" id={`followup-${item.id}`} key={item.id}>
             <button type="button" className={filter === 'completed' ? 'check-button checked' : 'check-button'} disabled={busy} onClick={() => setFollowupStatus(item.id, filter === 'open' ? 'completed' : 'open')} aria-label={filter === 'open' ? '標記完成' : '恢復待辦'}>{filter === 'completed' ? '✓' : ''}</button>
             <div className="followup-body"><div><StatusPill value={item.kind} /><span className={overdue ? 'due-date overdue' : 'due-date'}>{dueLabel(item.due_on)}</span></div><h2>{item.title}</h2><p>{course?.name ?? '未分類課程'}{student && <> · <Link to={`/students/${student.id}`}>{student.chinese_name}</Link></>}</p></div>
           </article>

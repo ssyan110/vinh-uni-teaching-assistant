@@ -31,11 +31,20 @@ test("volunteer +1 works during a pending draw, repeats, survives reload and und
   state = model.recordVolunteer(state, "S02", {});
   assert.equal(state.currentRound.pendingAttemptId, pending);
   assert.deepEqual(state.currentRound.answeredStudentIds, []);
+  assert.deepEqual(model.getDrawingPool(state).map(s => s.id), ["S01", "S03"]);
+  assert.equal(model.getProgress(state).answeredCount, 1);
   assert.equal(model.summarizeAttempts(state.attempts).voluntaryEffectiveAnswerCount, 2);
   state = model.importBackup(JSON.stringify(state));
+  assert.equal(model.getDrawingPool(state).some(s => s.id === "S02"), false);
   state = model.undoLastAction(state);
   assert.equal(model.summarizeAttempts(state.attempts).voluntaryEffectiveAnswerCount, 1);
   assert.equal(state.attempts.at(-1).recordStatus, "voided");
+  assert.equal(state.currentRound.pendingAttemptId, pending);
+  assert.equal(model.getDrawingPool(state).some(s => s.id === "S02"), false);
+  state = model.undoLastAction(state);
+  assert.equal(model.summarizeAttempts(state.attempts).voluntaryEffectiveAnswerCount, 0);
+  assert.equal(model.getDrawingPool(state).some(s => s.id === "S02"), true);
+  assert.equal(model.getProgress(state).answeredCount, 0);
   assert.equal(state.currentRound.pendingAttemptId, pending);
   state = model.setAbsent(state, "S03", true);
   assert.throws(() => model.recordVolunteer(state, "S03"), /不能记录/);
@@ -48,6 +57,16 @@ function roster(count = 30) {
     name: `学生${index + 1}`
   }));
 }
+
+test("corrected answers stop counting and restore drawing eligibility after backup import", () => {
+  let state = record(drawById(model.createSession({ roster: roster(2) }), "S01"));
+  assert.deepEqual(model.getDrawingPool(state).map(s => s.id), ["S02"]);
+  state.attempts[0].recordStatus = "corrected";
+  state = model.importBackup(model.exportBackup(state));
+  assert.equal(model.summarizeAttempts(state.attempts).totalAnswerCount, 0);
+  assert.deepEqual(model.getDrawingPool(state).map(s => s.id), ["S01", "S02"]);
+  assert.equal(state.attempts[0].recordStatus, "corrected");
+});
 
 test("roster search accepts padded/full-width seats and names without changing eligibility or roster order", () => {
   let state = model.createSession({ className: "QA", roster: [
@@ -75,6 +94,63 @@ function drawById(state, studentId, options = {}) {
 function record(state, options = {}) {
   return model.recordResponse(state, options);
 }
+
+test("pending student's source buttons cannot create a second answer, while other students may speak", () => {
+  let state = drawById(model.createSession({ roster: roster(3) }), "S01");
+  const attemptId = model.pendingAttempt(state).id;
+  state = model.recordVolunteer(state, "S01");
+  assert.equal(model.pendingAttempt(state).selectionMethod, "volunteer");
+  state = model.recordTeacherCall(state, "S01");
+  assert.equal(model.pendingAttempt(state).selectionMethod, "teacher");
+  assert.equal(model.pendingAttempt(state).id, attemptId);
+  assert.equal(model.summarizeAttempts(state.attempts).totalAnswerCount, 0);
+  assert.throws(() => model.recordTeacherCall(state, "S03"), /先完成/);
+  state = model.recordVolunteer(state, "S02");
+  assert.equal(model.pendingAttempt(state).studentId, "S01");
+  assert.equal(model.summarizeAttempts(state.attempts).totalAnswerCount, 1);
+});
+
+test("avoid previous participant follows completion order when answers overlap", () => {
+  let state = drawById(model.createSession({ roster: roster(2) }), "S01");
+  state = model.recordVolunteer(state, "S02");
+  state = record(state);
+  state = model.startNextRound(state);
+  assert.deepEqual(model.getSelectablePool(state).map(s => s.id), ["S02"]);
+});
+
+test("successive undo preserves every withdrawn answer and the audit events", () => {
+  let state = model.createSession({ roster: roster(2) });
+  state = model.recordVolunteer(state, "S01");
+  state = model.recordVolunteer(state, "S02");
+  state = model.undoLastAction(state);
+  state = model.undoLastAction(state);
+  assert.equal(state.attempts.length, 2);
+  assert.ok(state.attempts.every(attempt => attempt.recordStatus === "voided"));
+  assert.equal(state.events.filter(event => event.type === "undo").length, 2);
+  assert.equal(model.summarizeAttempts(state.attempts).totalAnswerCount, 0);
+  assert.equal(model.importBackup(model.exportBackup(state)).attempts.length, 2);
+});
+
+test("backup with a dangling or answered pending reference cannot replace the classroom", () => {
+  const state = drawById(model.createSession({ roster: roster(2) }), "S01");
+  const dangling = structuredClone(state);
+  dangling.currentRound.pendingAttemptId = "missing";
+  assert.throws(() => model.importBackup(dangling), /待回答记录关联无效/);
+  const completed = structuredClone(state);
+  completed.attempts[0].outcome = "answered";
+  assert.throws(() => model.importBackup(completed), /待回答记录关联无效/);
+  assert.equal(model.pendingAttempt(state).outcome, "pending");
+});
+
+test("marking the pending student absent retains the question and unsaved note", () => {
+  let state = drawById(model.createSession({ roster: roster(2) }), "S01");
+  state = model.setAbsent(state, "S01", true, {taskPrompt:"你喜欢什么？",note:"教师备注",answerContext:"textbook"});
+  assert.equal(state.attempts[0].taskPrompt, "你喜欢什么？");
+  assert.ok(state.attempts[0].questionId);
+  assert.equal(state.attempts[0].note, "教师备注");
+  assert.equal(state.attempts[0].noResponseReason, "absent");
+  assert.equal(model.pendingAttempt(state), null);
+});
 
 test("a 30-student round removes a student only after a response is recorded", () => {
   let state = model.createSession({ className: "LT_02", roster: roster() });
@@ -167,7 +243,7 @@ test("recording a response needs no score, rubric, or later assessment step", ()
   assert.equal(state.events.at(-1).type, "response_recorded");
 });
 
-test("voluntary speaking is recorded separately and does not consume random eligibility", () => {
+test("voluntary speaking stays separately counted and pauses drawing eligibility until the next round", () => {
   let state = model.createSession({ roster: roster(2) });
   for (let index = 0; index < 3; index += 1) {
     state = model.selectVolunteer(state, "S01");
@@ -177,12 +253,38 @@ test("voluntary speaking is recorded separately and does not consume random elig
   assert.equal(state.attempts.length, 3);
   assert.equal(state.attempts.every((attempt) => attempt.selectionMethod === "volunteer"), true);
   assert.deepEqual(state.currentRound.answeredStudentIds, []);
-  assert.deepEqual(model.getDrawingPool(state).map((student) => student.id), ["S01", "S02"]);
+  assert.deepEqual(model.getDrawingPool(state).map((student) => student.id), ["S02"]);
+  assert.deepEqual(model.getSelectablePool(state).map((student) => student.id), ["S02"]);
+  assert.equal(model.getProgress(state).answeredCount, 1);
   assert.equal(model.summarizeAttempts(state.attempts).voluntarySpeakingCount, 3);
 
   state = record(drawById(state, "S02"));
   assert.deepEqual(state.currentRound.answeredStudentIds, ["S02"]);
-  assert.equal(model.getDrawingPool(state).some((student) => student.id === "S01"), true);
+  assert.equal(model.getProgress(state).roundComplete, true);
+  assert.deepEqual(model.getDrawingPool(state), []);
+  state = model.startNextRound(state);
+  assert.deepEqual(model.getDrawingPool(state).map((student) => student.id), ["S01", "S02"]);
+  assert.equal(model.getProgress(state).answeredCount, 0);
+});
+
+test("legacy volunteer backup pauses only valid completed answers in the current round", () => {
+  let state = model.createSession({ roster: roster(3) });
+  state = model.recordVolunteer(state, "S01");
+  const legacy = JSON.parse(model.exportBackup(state));
+  legacy.schemaVersion = 3;
+  delete legacy.attempts[0].recordStatus;
+  assert.deepEqual(legacy.currentRound.answeredStudentIds, []);
+  let restored = model.importBackup(legacy);
+  assert.deepEqual(model.getDrawingPool(restored).map(s => s.id), ["S02", "S03"]);
+  assert.equal(model.getProgress(restored).answeredCount, 1);
+
+  legacy.attempts[0].recordStatus = "voided";
+  restored = model.importBackup(legacy);
+  assert.equal(model.getDrawingPool(restored).length, 3);
+  legacy.attempts[0].recordStatus = "valid";
+  legacy.currentRound.number = 2;
+  restored = model.importBackup(legacy);
+  assert.equal(model.getDrawingPool(restored).length, 3);
 });
 
 test("the next round resets eligibility and a new session starts with a clean pool", () => {
@@ -322,4 +424,41 @@ test("ending a class preserves answers and pending selection, cannot reopen thro
   assert.equal(model.importBackup(model.exportBackup(ended)).session.status, "completed");
   const next = model.createSession({ className: "LT_02", roster: roster(3) });
   assert.equal(next.session.status, "in_progress");
+});
+
+
+test("teacher call waits for an outcome and preserves a failed call source", () => {
+  let state = model.createSession({ roster: roster(2) });
+  state = model.recordTeacherCall(state, "S01");
+  assert.equal(model.pendingAttempt(state).selectionMethod, "teacher");
+  assert.equal(model.summarizeAttempts(state.attempts).totalAnswerCount, 0);
+  state = model.returnPending(state, { noResponseReason: "unprepared" });
+  assert.equal(state.attempts[0].selectionMethod, "teacher");
+  assert.equal(model.getProgress(state).poolCount, 2);
+});
+
+test("round skip retains a real failed opportunity, completes round without an answer, restores and undoes", () => {
+  let state = model.createSession({ roster: roster(1) });
+  state = model.recordTeacherCall(state, "S01");
+  state = model.returnPending(state, { noResponseReason: "anxious_unwell", roundSkipped: true, note: "稍后再试" });
+  const progress = model.getProgress(state);
+  assert.equal(progress.roundComplete, true);
+  assert.equal(progress.answeredCount, 0);
+  assert.equal(progress.skippedCount, 1);
+  assert.equal(model.summarizeAttempts(state.attempts).totalAnswerCount, 0);
+  const restored = model.importBackup(model.exportBackup(state));
+  assert.equal(model.getProgress(restored).roundComplete, true);
+  assert.equal(model.startNextRound(restored).currentRound.number, 2);
+  assert.equal(model.getProgress(model.startNextRound(restored)).poolCount, 1);
+  assert.equal(model.pendingAttempt(model.undoLastAction(restored)).studentId, "S01");
+  assert.ok(model.getSessionExportRows(state).headers.includes("round_skipped"));
+});
+
+test("undoing a later completion restores the actual previous participant", () => {
+  let state = drawById(model.createSession({ roster: roster(3) }), "S01");
+  state = model.recordVolunteer(state, "S02");
+  state = model.recordResponse(state);
+  assert.equal(model.getLastParticipantId(state), "S01");
+  state = model.undoLastAction(state);
+  assert.equal(model.getLastParticipantId(state), "S02");
 });

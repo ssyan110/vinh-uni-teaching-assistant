@@ -1,0 +1,476 @@
+{
+  "exam_id": "W04-L01L10-20261006",
+  "status": "samples_only_not_accepted",
+  "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+  "settings": {
+    "model": ".agent/runs/boya-elementary-i-l09-l10-video-20261005/staging/video/models/qwen-custom-voice-1.7b-4bit",
+    "speaker": "Serena",
+    "language": "Chinese",
+    "instruct": "用标准普通话，平稳自然、清楚地朗读原文，语速均匀。保持准确声调和儿化。不添加、遗漏或改写文字。",
+    "temperature": 0.3,
+    "top_p": 0.9,
+    "top_k": 50,
+    "repetition_penalty": 1.1,
+    "max_tokens": 4096,
+    "seed": 20261011,
+    "stream": false,
+    "speech_rate": "native_uniform_instruction_no_time_stretch",
+    "postprocessing": "PCM16_conversion_only_no_trim_no_normalization_no_time_stretch",
+    "segment_policy": "exact_original_units_with_role_label_removed; no sentence_or_digit_splitting",
+    "retry_limit": 0
+  },
+  "samples": [
+    {
+      "audio_id": "E04-B01",
+      "question_numbers": [
+        11,
+        12
+      ],
+      "file": "E04-B01.wav",
+      "sha256": "6468b8d68277396e2f05390e896960c6c8b02b37c8fd99e622fb9ee51e420706",
+      "duration_seconds": 10.88,
+      "units": [
+        {
+          "speaker": "小林",
+          "original_tts_input": "小林，你好！你叫什么名字？",
+          "spoken_text": "你好！你叫什么名字？",
+          "change": "remove_only_leading_speaker_label",
+          "file": "units/E04-B01-01.wav",
+          "sha256": "b7cd25396f93f3c1ea609e1230cd0d6fdc2391d6bd5f9ad1238743a343b83100",
+          "duration_seconds": 2.32,
+          "tokens": 29,
+          "start_frame": 0,
+          "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+          "generation_seconds": 2.433326083002612
+        },
+        {
+          "speaker": "安娜",
+          "original_tts_input": "安娜，我叫安娜。",
+          "spoken_text": "我叫安娜。",
+          "change": "remove_only_leading_speaker_label",
+          "file": "units/E04-B01-02.wav",
+          "sha256": "a0be76977ab978a074fe46c42896fa61eeeac16a3fcb34a3d3f5f0222f7370ce",
+          "duration_seconds": 1.36,
+          "tokens": 17,
+          "start_frame": 72480,
+          "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+          "generation_seconds": 0.857816458097659
+        },
+        {
+          "speaker": "小林",
+          "original_tts_input": "小林，你是老师吗？",
+          "spoken_text": "你是老师吗？",
+          "change": "remove_only_leading_speaker_label",
+          "file": "units/E04-B01-03.wav",
+          "sha256": "3950c114fd8dae2710bd5c6b4f9bc4f70d3ed75293a128ccce91480f76dd31eb",
+          "duration_seconds": 1.76,
+          "tokens": 22,
+          "start_frame": 121920,
+          "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+          "generation_seconds": 1.1677949998993427
+        },
+        {
+          "speaker": "安娜",
+          "original_tts_input": "安娜，不是，我是学生。",
+          "spoken_text": "不是，我是学生。",
+          "change": "remove_only_leading_speaker_label",
+          "file": "units/E04-B01-04.wav",
+          "sha256": "e47e07d6f058e935e4c3eb51ada12efb5c8ed95dc8a6b1e8e3883ee3c07e9fbb",
+          "duration_seconds": 1.84,
+          "tokens": 23,
+          "start_frame": 180960,
+          "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+          "generation_seconds": 1.2305344580672681
+        }
+      ],
+      "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+      "planned_silence": [
+        {
+          "start_frame": 55680,
+          "frames": 16800
+        },
+        {
+          "start_frame": 105120,
+          "frames": 16800
+        },
+        {
+          "start_frame": 164160,
+          "frames": 16800
+        },
+        {
+          "start_frame": 225120,
+          "frames": 36000
+        }
+      ],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 0.9,
+      "content_status": "not_passed_requires_two_asr_checks_and_user_listening",
+      "human_audio_acceptance": false
+    },
+    {
+      "audio_id": "E01-A02",
+      "question_numbers": [
+        2
+      ],
+      "file": "E01-A02.wav",
+      "sha256": "1b5ba98c80735e43a43a4ca0438649227778a72b06633ea1afa77f036287e4ca",
+      "duration_seconds": 1.12,
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "女",
+          "spoken_text": "女",
+          "change": "unchanged",
+          "file": "units/E01-A02-01.wav",
+          "sha256": "1b5ba98c80735e43a43a4ca0438649227778a72b06633ea1afa77f036287e4ca",
+          "duration_seconds": 1.12,
+          "tokens": 14,
+          "start_frame": 0,
+          "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+          "generation_seconds": 0.7535492079332471
+        }
+      ],
+      "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+      "planned_silence": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "content_status": "not_passed_requires_two_asr_checks_and_user_listening",
+      "human_audio_acceptance": false
+    },
+    {
+      "audio_id": "E03-A01",
+      "question_numbers": [
+        7
+      ],
+      "file": "E03-A01.wav",
+      "sha256": "82c0fe9721432b5bdcf914ab48052bbe0b07e1c0a057a79e22a939aee437dfe5",
+      "duration_seconds": 20.24,
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "花儿",
+          "spoken_text": "花儿",
+          "change": "unchanged",
+          "file": "units/E03-A01-01.wav",
+          "sha256": "82c0fe9721432b5bdcf914ab48052bbe0b07e1c0a057a79e22a939aee437dfe5",
+          "duration_seconds": 20.24,
+          "tokens": 253,
+          "start_frame": 0,
+          "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+          "generation_seconds": 13.881402209051885
+        }
+      ],
+      "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+      "planned_silence": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "content_status": "not_passed_requires_two_asr_checks_and_user_listening",
+      "human_audio_acceptance": false
+    },
+    {
+      "audio_id": "E03-C01",
+      "question_numbers": [
+        35,
+        36
+      ],
+      "file": "E03-C01.wav",
+      "sha256": "05c36a56e2591af06126c34dd5826cb5b2e633728bcde083267bc10f0fea7c86",
+      "duration_seconds": 18.68,
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "雨",
+          "spoken_text": "雨",
+          "change": "unchanged",
+          "file": "units/E03-C01-01.wav",
+          "sha256": "315284f02eb74582ee44abfab251b74029e8f3c9bb9a8757fe0294763c8b47e8",
+          "duration_seconds": 0.56,
+          "tokens": 7,
+          "start_frame": 0,
+          "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+          "generation_seconds": 0.7841915839817375
+        },
+        {
+          "speaker": null,
+          "original_tts_input": "晚",
+          "spoken_text": "晚",
+          "change": "unchanged",
+          "file": "units/E03-C01-02.wav",
+          "sha256": "894c5dd197bcaf0989de0c437ae868006aa539e58d8e3ef7cc2a5d0a986096de",
+          "duration_seconds": 0.8,
+          "tokens": 10,
+          "start_frame": 85440,
+          "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+          "generation_seconds": 0.6138414170127362
+        },
+        {
+          "speaker": null,
+          "original_tts_input": "月",
+          "spoken_text": "月",
+          "change": "unchanged",
+          "file": "units/E03-C01-03.wav",
+          "sha256": "35e3ddfef6d33ee062c346d494d2577c64ddf430c0e144aa5694fe76b66d2514",
+          "duration_seconds": 0.48,
+          "tokens": 6,
+          "start_frame": 176640,
+          "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+          "generation_seconds": 0.304933917010203
+        },
+        {
+          "speaker": null,
+          "original_tts_input": "雨",
+          "spoken_text": "雨",
+          "change": "unchanged",
+          "file": "units/E03-C01-04.wav",
+          "sha256": "315284f02eb74582ee44abfab251b74029e8f3c9bb9a8757fe0294763c8b47e8",
+          "duration_seconds": 0.56,
+          "tokens": 7,
+          "start_frame": 260160,
+          "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+          "generation_seconds": 0.3488679160363972
+        },
+        {
+          "speaker": null,
+          "original_tts_input": "晚",
+          "spoken_text": "晚",
+          "change": "unchanged",
+          "file": "units/E03-C01-05.wav",
+          "sha256": "894c5dd197bcaf0989de0c437ae868006aa539e58d8e3ef7cc2a5d0a986096de",
+          "duration_seconds": 0.8,
+          "tokens": 10,
+          "start_frame": 345600,
+          "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+          "generation_seconds": 0.544744584010914
+        },
+        {
+          "speaker": null,
+          "original_tts_input": "月",
+          "spoken_text": "月",
+          "change": "unchanged",
+          "file": "units/E03-C01-06.wav",
+          "sha256": "35e3ddfef6d33ee062c346d494d2577c64ddf430c0e144aa5694fe76b66d2514",
+          "duration_seconds": 0.48,
+          "tokens": 6,
+          "start_frame": 436800,
+          "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+          "generation_seconds": 0.3527318750275299
+        }
+      ],
+      "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+      "planned_silence": [
+        {
+          "start_frame": 13440,
+          "frames": 72000
+        },
+        {
+          "start_frame": 104640,
+          "frames": 72000
+        },
+        {
+          "start_frame": 188160,
+          "frames": 72000
+        },
+        {
+          "start_frame": 273600,
+          "frames": 72000
+        },
+        {
+          "start_frame": 364800,
+          "frames": 72000
+        }
+      ],
+      "play_count": 1,
+      "internal_repeat": true,
+      "source_speed": 1,
+      "content_status": "not_passed_requires_two_asr_checks_and_user_listening",
+      "human_audio_acceptance": false
+    },
+    {
+      "audio_id": "E05-B01",
+      "question_numbers": [
+        14,
+        15
+      ],
+      "file": "E05-B01.wav",
+      "sha256": "1939ec5bc879a72a8694499f62914f104f367a6515a8f197183177e4e51d63a8",
+      "duration_seconds": 11.6,
+      "units": [
+        {
+          "speaker": "小林",
+          "original_tts_input": "小林，这是我的朋友安娜。",
+          "spoken_text": "这是我的朋友安娜。",
+          "change": "remove_only_leading_speaker_label",
+          "file": "units/E05-B01-01.wav",
+          "sha256": "abbaaaf01a21dfbf0fb92ec34cb26073fadd193fd2551120222fed6949123690",
+          "duration_seconds": 1.6,
+          "tokens": 20,
+          "start_frame": 0,
+          "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+          "generation_seconds": 1.1192965829977766
+        },
+        {
+          "speaker": "小王",
+          "original_tts_input": "小王，安娜，你是哪国人？",
+          "spoken_text": "安娜，你是哪国人？",
+          "change": "remove_only_leading_speaker_label",
+          "file": "units/E05-B01-02.wav",
+          "sha256": "1b9d0863c4e4f8586dfe5d7f061c9ddec527229582d8ac8b50dca56d820271c2",
+          "duration_seconds": 2.32,
+          "tokens": 29,
+          "start_frame": 55200,
+          "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+          "generation_seconds": 1.5760308749740943
+        },
+        {
+          "speaker": "安娜",
+          "original_tts_input": "安娜，我是英国人。",
+          "spoken_text": "我是英国人。",
+          "change": "remove_only_leading_speaker_label",
+          "file": "units/E05-B01-03.wav",
+          "sha256": "6f285c239cfc64c6bdfa2af6eea5b8ca4ea2800e304a0dd509e2586eeb77faac",
+          "duration_seconds": 1.2,
+          "tokens": 15,
+          "start_frame": 127680,
+          "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+          "generation_seconds": 1.0312896670075133
+        },
+        {
+          "speaker": "小王",
+          "original_tts_input": "小王，我也是英国人，认识你很高兴。",
+          "spoken_text": "我也是英国人，认识你很高兴。",
+          "change": "remove_only_leading_speaker_label",
+          "file": "units/E05-B01-04.wav",
+          "sha256": "ec7c1ceef957d9a0116db8d76379068eaa1176a43fa65ca7f46f652f857b763b",
+          "duration_seconds": 2.88,
+          "tokens": 36,
+          "start_frame": 173280,
+          "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+          "generation_seconds": 1.3910275839734823
+        }
+      ],
+      "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+      "planned_silence": [
+        {
+          "start_frame": 38400,
+          "frames": 16800
+        },
+        {
+          "start_frame": 110880,
+          "frames": 16800
+        },
+        {
+          "start_frame": 156480,
+          "frames": 16800
+        },
+        {
+          "start_frame": 242400,
+          "frames": 36000
+        }
+      ],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 0.9,
+      "content_status": "not_passed_requires_two_asr_checks_and_user_listening",
+      "human_audio_acceptance": false
+    },
+    {
+      "audio_id": "E08-C01",
+      "question_numbers": [
+        45,
+        46
+      ],
+      "file": "E08-C01.wav",
+      "sha256": "35ea6e425be5f1409d6ec722c976e001b3c5a81654a564c513414f2cfd82f5f2",
+      "duration_seconds": 9.76,
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "明天我上午八点上汉语课，十点下课。中午十一点半和安娜在食堂吃饭。下午两点去见辅导老师。",
+          "spoken_text": "明天我上午八点上汉语课，十点下课。中午十一点半和安娜在食堂吃饭。下午两点去见辅导老师。",
+          "change": "unchanged",
+          "file": "units/E08-C01-01.wav",
+          "sha256": "35ea6e425be5f1409d6ec722c976e001b3c5a81654a564c513414f2cfd82f5f2",
+          "duration_seconds": 9.76,
+          "tokens": 123,
+          "start_frame": 0,
+          "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+          "generation_seconds": 6.240028083091602
+        }
+      ],
+      "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+      "planned_silence": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "content_status": "not_passed_requires_two_asr_checks_and_user_listening",
+      "human_audio_acceptance": false
+    },
+    {
+      "audio_id": "E09-C01",
+      "question_numbers": [
+        47,
+        48
+      ],
+      "file": "E09-C01.wav",
+      "sha256": "b80c9126b897011f54ebdfb458ef8cd2f48219c15e4210fa00425f3d0be2358a",
+      "duration_seconds": 23.44,
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "明天我们去动物园。上午八点半在学校东门见，不在西门见。我们坐地铁二号线去。老师的办公室电话是零一零，零零零零，二三零一。",
+          "spoken_text": "明天我们去动物园。上午八点半在学校东门见，不在西门见。我们坐地铁二号线去。老师的办公室电话是零一零，零零零零，二三零一。",
+          "change": "unchanged",
+          "file": "units/E09-C01-01.wav",
+          "sha256": "b80c9126b897011f54ebdfb458ef8cd2f48219c15e4210fa00425f3d0be2358a",
+          "duration_seconds": 23.44,
+          "tokens": 293,
+          "start_frame": 0,
+          "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+          "generation_seconds": 21.29893529205583
+        }
+      ],
+      "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+      "planned_silence": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "content_status": "not_passed_requires_two_asr_checks_and_user_listening",
+      "human_audio_acceptance": false
+    },
+    {
+      "audio_id": "E04-C01",
+      "question_numbers": [
+        37,
+        38
+      ],
+      "file": "E04-C01.wav",
+      "sha256": "a5c0a7aa11d3a9a55be2d9cc6e378f435ad8ca824f78f31c8a6e6a6319cb68ff",
+      "duration_seconds": 6.64,
+      "units": [
+        {
+          "speaker": null,
+          "original_tts_input": "你好，我叫李明。我姓李。我是学生，不是老师。我学汉语。",
+          "spoken_text": "你好，我叫李明。我姓李。我是学生，不是老师。我学汉语。",
+          "change": "unchanged",
+          "file": "units/E04-C01-01.wav",
+          "sha256": "a5c0a7aa11d3a9a55be2d9cc6e378f435ad8ca824f78f31c8a6e6a6319cb68ff",
+          "duration_seconds": 6.64,
+          "tokens": 83,
+          "start_frame": 0,
+          "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+          "generation_seconds": 6.736665416043252
+        }
+      ],
+      "settings_sha256": "bfba931c9a7e4d5f16d178d055240777024cddb9edfb215a081125a0aadc661d",
+      "planned_silence": [],
+      "play_count": 2,
+      "internal_repeat": false,
+      "source_speed": 1,
+      "content_status": "not_passed_requires_two_asr_checks_and_user_listening",
+      "human_audio_acceptance": false
+    }
+  ]
+}

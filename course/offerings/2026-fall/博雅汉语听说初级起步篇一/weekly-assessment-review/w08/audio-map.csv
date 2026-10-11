@@ -1,0 +1,7 @@
+audio_id,source_audio_id,lesson_keys,file_path,duration_s,sample_rate_hz,channels,peak_fraction,rms_fraction,plays,pause_seconds,wav_decode,synthesis_input_from_manifest,role_marked_source_text,teacher_listened,live_playback_checked,status
+W08-A1,E16-C01,boya-elementary-i:lesson-16,OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第16课-来一斤饺子/C-听后填写/E16-15-17.wav,9.75,24000,1,0.5,0.0794,1,8,pass,两位客人去饭店。他们点了一份鸡肉蘑菇面、一份猪肉白菜饺子和两杯水。饺子十八块，面条儿十六块，水免费。,,no,no,技术可解码；教师亲听/播放待验
+W08-A2,E17-B02,boya-elementary-i:lesson-17,OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第17课-喝茶还是喝咖啡/B-听对话/E17-09-10.wav,13.28,24000,1,0.5,0.0878,2,10,pass,小林，从学校到你家怎么走？ / 小王，一直往东走，到第二个路口往左。 / 小林，第一个路口吗？ / 小王，不是，第二个。,"小林：从学校到你家怎么走？
+小王：一直往东走，到第二个路口往左。
+小林：第一个路口吗？
+小王：不是，第二个。",no,no,技术可解码；教师亲听/播放待验
+W08-A3,E17-C02,boya-elementary-i:lesson-17,OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第17课-喝茶还是喝咖啡/C-听后填写/E17-18-20.wav,11.74,24000,1,0.5,0.0711,2,12,pass,周日朋友来我家。我准备了茶和咖啡。安娜喝茶，大卫喝咖啡。我做了面条儿，大家说味道不错。朋友想帮忙，我说不用，坐着聊天儿就好。,,no,no,技术可解码；教师亲听/播放待验

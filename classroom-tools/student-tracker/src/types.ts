@@ -73,6 +73,25 @@ export interface AttendanceRecord {
   note: string | null
 }
 
+/** Teacher exception log; never imported into official QR attendance automatically. */
+export interface AttendanceException {
+  id: string
+  owner_id: string
+  session_id: string
+  student_id: string
+  observed_status: Exclude<AttendanceStatus, 'unconfirmed'>
+  arrival_time: string | null
+  departure_time: string | null
+  reason: string
+  makeup_status: 'pending' | 'completed'
+  makeup_date: string | null
+  official_status: 'unverified' | 'confirmed'
+  verified_on: string | null
+  created_at: string
+  updated_at: string
+}
+export type AttendanceExceptionInput = Omit<AttendanceException, 'id' | 'owner_id' | 'created_at' | 'updated_at'>
+
 export interface ObservationRecord {
   id: string
   owner_id: string
@@ -166,7 +185,7 @@ export interface RandomizerAttempt {
  fact_marks?: FactMarks | null; fact_version?: string | null; assistance?: boolean | null
  id: string; owner_id: string; client_attempt_id: string; randomizer_session_id: string
  course_id: string; student_id: string | null; student_code: string; student_name: string
- selection_method: 'random' | 'volunteer'; outcome: 'pending' | 'answered' | 'not_answered' | 'undone'
+ selection_method: 'random' | 'volunteer' | 'teacher'; outcome: 'pending' | 'answered' | 'not_answered' | 'undone'; round_skipped?: boolean
  assessment_status: 'scored' | 'observed' | 'pending' | 'not_applicable'
  performance_level: PerformanceLevel | null; observation_version: string | null
  task_prompt: string | null; question_id: string | null; textbook_id: string; lesson_id: string
@@ -183,6 +202,8 @@ export interface StudentNote {
 export type NoteInput = Omit<StudentNote, 'id' | 'owner_id' | 'created_at'>
 
 export interface TrackerSnapshot {
+  attendanceExceptions?: AttendanceException[]
+  attendanceExceptionsAvailable?: boolean
   terms: AcademicTerm[]
   courses: Course[]
   students: Student[]

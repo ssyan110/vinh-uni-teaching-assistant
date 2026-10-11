@@ -1,0 +1,19 @@
+audio_id,source_path,exists,decode_ok,duration_seconds,script_match,teacher_listen,student_playback,peak_dbfs,full_decode_ok,source_script,synthesis_input,speaker_names_spoken,pause_after_ms
+E22-B02,/Users/ssyan110/Development/vinh-uni-teaching-assistant/OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第22课-明天你下了课去哪儿/B-听对话/E22-09-10.wav,True,True,13.860000,manifest-only; human check pending,pending,pending,-6.0,True,"小林：聚会有什么活动？
+小王：先聊天，吃饭以后唱歌。
+小林：能不能先吃饭？我下课以后很饿。
+小王：可以，我们改一下。","小林，聚会有什么活动？
+小王，先聊天，吃饭以后唱歌。
+小林，能不能先吃饭？我下课以后很饿。
+小王，可以，我们改一下。",True,700;700;700
+E22-C02,/Users/ssyan110/Development/vinh-uni-teaching-assistant/OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第22课-明天你下了课去哪儿/C-听后填写/E22-18-20.wav,True,True,12.080000,manifest-only; human check pending,pending,pending,-6.0,True,李明约安娜明天去看展览。安娜下午三点才下课，李明两点就下课了。他们决定三点半在学校东门见，先看展览，吃饭的事儿看完再安排。,李明约安娜明天去看展览。安娜下午三点才下课，李明两点就下课了。他们决定三点半在学校东门见，先看展览，吃饭的事儿看完再安排。,False,
+E23-B02,/Users/ssyan110/Development/vinh-uni-teaching-assistant/OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第23课-假期有什么打算/B-听对话/E23-09-10.wav,True,True,14.330000,manifest-only; human check pending,pending,pending,-6.0,True,"小林：你想去云南还是西安？
+小王：还没决定。
+小林：你喜欢历史，西安也许适合你。
+小王：我再考虑一下，先不买票。","小林，你想去云南还是西安？
+小王，还没决定。
+小林，你喜欢历史，西安也许适合你。
+小王，我再考虑一下，先不买票。",True,700;700;700
+E23-C02,/Users/ssyan110/Development/vinh-uni-teaching-assistant/OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第23课-假期有什么打算/C-听后填写/E23-18-20.wav,True,True,13.640000,manifest-only; human check pending,pending,pending,-6.0,True,小林还没有决定假期怎么过。他想参加中文班，也想回家。中文班每天下午上课，上午没有课。他准备先问清楚放假时间，再决定回家的日子，现在还没报名。,小林还没有决定假期怎么过。他想参加中文班，也想回家。中文班每天下午上课，上午没有课。他准备先问清楚放假时间，再决定回家的日子，现在还没报名。,False,
+E22-C01,/Users/ssyan110/Development/vinh-uni-teaching-assistant/OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第22课-明天你下了课去哪儿/C-听后填写/E22-15-17.wav,True,True,12.360000,manifest-only; human check pending,pending,pending,-6.0,True,我们班星期五晚上聚会。大家先在食堂吃饭，七点去教室玩游戏，最后一起看电影。小周负责下载电影，安娜准备游戏。老师请大家提出意见。,我们班星期五晚上聚会。大家先在食堂吃饭，七点去教室玩游戏，最后一起看电影。小周负责下载电影，安娜准备游戏。老师请大家提出意见。,False,
+E23-C01,/Users/ssyan110/Development/vinh-uni-teaching-assistant/OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第23课-假期有什么打算/C-听后填写/E23-15-17.wav,True,True,13.440000,manifest-only; human check pending,pending,pending,-6.0,True,我叫安娜。暑假想去上海看朋友，已经买好星期五的车票。我打算待三天，星期天晚上回来。朋友说先带我看看老街，再去吃当地的菜。我还想拍一些照片。,我叫安娜。暑假想去上海看朋友，已经买好星期五的车票。我打算待三天，星期天晚上回来。朋友说先带我看看老街，再去吃当地的菜。我还想拍一些照片。,False,

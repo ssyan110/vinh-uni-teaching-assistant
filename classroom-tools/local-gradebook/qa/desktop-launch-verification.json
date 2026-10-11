@@ -1,0 +1,10 @@
+{
+  "app": "/Users/ssyan110/Desktop/教师评分.app",
+  "cold_start": "passed",
+  "repeat_launch_same_pid": 66787,
+  "health": "vinh-local-gradebook",
+  "plist": "passed",
+  "signature": "passed",
+  "revision_after": 1,
+  "launch_mode": "background service + default browser"
+}

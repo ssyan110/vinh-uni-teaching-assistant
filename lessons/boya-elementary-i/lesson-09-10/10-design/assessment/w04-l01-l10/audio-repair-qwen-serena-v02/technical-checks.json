@@ -1,0 +1,79 @@
+{
+  "samples": [
+    {
+      "audio_id": "E04-B01",
+      "decode": "pass",
+      "settings_consistent": true,
+      "duration_seconds": 10.88,
+      "active_span_seconds": 9.236125,
+      "peak": 0.341583251953125,
+      "planned_silence": "pass"
+    },
+    {
+      "audio_id": "E01-A02",
+      "decode": "pass",
+      "settings_consistent": true,
+      "duration_seconds": 1.12,
+      "active_span_seconds": 0.9825833333333334,
+      "peak": 0.2330322265625,
+      "planned_silence": "pass"
+    },
+    {
+      "audio_id": "E03-A01",
+      "decode": "pass",
+      "settings_consistent": true,
+      "duration_seconds": 20.24,
+      "active_span_seconds": 20.113125,
+      "peak": 0.892608642578125,
+      "planned_silence": "pass"
+    },
+    {
+      "audio_id": "E03-C01",
+      "decode": "pass",
+      "settings_consistent": true,
+      "duration_seconds": 18.68,
+      "active_span_seconds": 18.533375,
+      "peak": 0.26641845703125,
+      "planned_silence": "pass"
+    },
+    {
+      "audio_id": "E05-B01",
+      "decode": "pass",
+      "settings_consistent": true,
+      "duration_seconds": 11.6,
+      "active_span_seconds": 9.960041666666667,
+      "peak": 0.30230712890625,
+      "planned_silence": "pass"
+    },
+    {
+      "audio_id": "E08-C01",
+      "decode": "pass",
+      "settings_consistent": true,
+      "duration_seconds": 9.76,
+      "active_span_seconds": 9.675333333333333,
+      "peak": 0.356048583984375,
+      "planned_silence": "pass"
+    },
+    {
+      "audio_id": "E09-C01",
+      "decode": "pass",
+      "settings_consistent": true,
+      "duration_seconds": 23.44,
+      "active_span_seconds": 23.264625,
+      "peak": 0.3194580078125,
+      "planned_silence": "pass"
+    },
+    {
+      "audio_id": "E04-C01",
+      "decode": "pass",
+      "settings_consistent": true,
+      "duration_seconds": 6.64,
+      "active_span_seconds": 6.52875,
+      "peak": 0.321319580078125,
+      "planned_silence": "pass"
+    }
+  ],
+  "human_audio_acceptance": false,
+  "main_dashboard_unchanged": true,
+  "waveform_checks_do_not_establish_quality": true
+}

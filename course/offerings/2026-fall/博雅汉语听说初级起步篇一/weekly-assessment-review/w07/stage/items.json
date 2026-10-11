@@ -1,0 +1,300 @@
+{
+  "status": "review_unpublished",
+  "cohort": "BOYA-LS-E1-Y1S1-2026F",
+  "offering_id": "2026-fall",
+  "week": "w07/stage",
+  "lesson_keys": [
+    "boya-elementary-i:lesson-01",
+    "boya-elementary-i:lesson-02",
+    "boya-elementary-i:lesson-03",
+    "boya-elementary-i:lesson-04",
+    "boya-elementary-i:lesson-05",
+    "boya-elementary-i:lesson-06",
+    "boya-elementary-i:lesson-07",
+    "boya-elementary-i:lesson-08",
+    "boya-elementary-i:lesson-09",
+    "boya-elementary-i:lesson-10",
+    "boya-elementary-i:lesson-11",
+    "boya-elementary-i:lesson-12",
+    "boya-elementary-i:lesson-13",
+    "boya-elementary-i:lesson-14"
+  ],
+  "items": [
+    {
+      "type": "mc",
+      "audio_id": "E04-B01",
+      "prompt": "安娜是老师还是学生？",
+      "options": [
+        "老师",
+        "学生",
+        "医生",
+        "售货员"
+      ],
+      "answer_index": 1,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-04"
+      ],
+      "focus": "身份",
+      "points": 2,
+      "id": "W07-STAGE-01"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E05-B01",
+      "prompt": "安娜是哪国人？",
+      "options": [
+        "中国人",
+        "美国人",
+        "英国人",
+        "法国人"
+      ],
+      "answer_index": 2,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-05"
+      ],
+      "focus": "国籍",
+      "points": 2,
+      "id": "W07-STAGE-02"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E06-B01",
+      "prompt": "笔是谁的？",
+      "options": [
+        "小林的",
+        "小王的",
+        "李美的",
+        "安娜的"
+      ],
+      "answer_index": 2,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-06"
+      ],
+      "focus": "归属",
+      "points": 2,
+      "id": "W07-STAGE-03"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E07-B01",
+      "prompt": "小王住在哪里？",
+      "options": [
+        "学校里",
+        "学校东边、校外",
+        "学校西边、校外",
+        "宿舍楼上"
+      ],
+      "answer_index": 1,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-07"
+      ],
+      "focus": "地点",
+      "points": 2,
+      "id": "W07-STAGE-04"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E08-B01",
+      "prompt": "最后约几点在食堂见？",
+      "options": [
+        "六点",
+        "七点",
+        "七点半",
+        "八点"
+      ],
+      "answer_index": 2,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-08"
+      ],
+      "focus": "改约时间",
+      "points": 2,
+      "id": "W07-STAGE-05"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E09-B01",
+      "prompt": "两人决定怎么去动物园？",
+      "options": [
+        "骑自行车",
+        "坐地铁",
+        "坐公共汽车",
+        "走路"
+      ],
+      "answer_index": 1,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-09"
+      ],
+      "focus": "交通方式",
+      "points": 2,
+      "id": "W07-STAGE-06"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E10-B01",
+      "prompt": "两斤西瓜共多少钱？",
+      "options": [
+        "三块",
+        "六块",
+        "十块",
+        "十三块"
+      ],
+      "answer_index": 1,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-10"
+      ],
+      "focus": "数量与总价",
+      "points": 2,
+      "id": "W07-STAGE-07"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E11-B01",
+      "prompt": "长城活动改到哪天？",
+      "options": [
+        "今天",
+        "明天",
+        "星期六",
+        "星期日"
+      ],
+      "answer_index": 3,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "focus": "天气与改期",
+      "points": 2,
+      "id": "W07-STAGE-08"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E12-B01",
+      "prompt": "小王请同伴转告老师什么？",
+      "options": [
+        "今天不去",
+        "晚一会儿到",
+        "要先去食堂",
+        "明天请假"
+      ],
+      "answer_index": 1,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "focus": "正在发生的状态",
+      "points": 2,
+      "id": "W07-STAGE-09"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E13-B02",
+      "prompt": "小王最终选哪种手机？",
+      "options": [
+        "三千块、屏幕大的",
+        "两千块、屏幕小一点儿的",
+        "黑色、三千块的",
+        "没有买"
+      ],
+      "answer_index": 1,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ],
+      "focus": "商品比较",
+      "points": 2,
+      "id": "W07-STAGE-10"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E14-B02",
+      "prompt": "两人最后决定何时吃饭？",
+      "options": [
+        "六点",
+        "七点",
+        "七点半",
+        "八点"
+      ],
+      "answer_index": 2,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-14"
+      ],
+      "focus": "协商时间",
+      "points": 2,
+      "id": "W07-STAGE-11"
+    },
+    {
+      "type": "short",
+      "audio_id": "E08-B01",
+      "prompt": "为什么不在六点吃饭？",
+      "answer": "小王六点有课，七点才下课。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-08"
+      ],
+      "focus": "改约理由",
+      "points": 4,
+      "id": "W07-STAGE-12"
+    },
+    {
+      "type": "short",
+      "audio_id": "E09-B01",
+      "prompt": "两人在哪里、几点见面？",
+      "answer": "九点在学校东门。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-09"
+      ],
+      "focus": "集合细节",
+      "points": 4,
+      "id": "W07-STAGE-13"
+    },
+    {
+      "type": "short",
+      "audio_id": "E11-B01",
+      "prompt": "为什么改变去长城的日子？",
+      "answer": "明天风很大，星期日晴天。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "focus": "改期理由",
+      "points": 4,
+      "id": "W07-STAGE-14"
+    },
+    {
+      "type": "short",
+      "audio_id": "E14-B01",
+      "prompt": "安娜喜欢什么？谁准备蛋糕？",
+      "answer": "她喜欢花；大卫准备蛋糕。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-14"
+      ],
+      "focus": "喜好与分工",
+      "points": 4,
+      "id": "W07-STAGE-15"
+    }
+  ],
+  "oral_tasks": [
+    {
+      "title": "个人信息与采购",
+      "prompt": "开场每位学生朗读语音卡：“你好、谢谢、再见、不要、一天”（第1–3课语音与声调抽样；每人约十秒）。随后教师给 A 卡：你叫安娜，周六九点在学校东门集合，要买两斤西瓜。教师给 B 卡：你叫李明，坐地铁去，西瓜每斤三块，商店十点开门。两人依次问答，确认集合、交通、总价，再各自说出采购方案。",
+      "evidence": "第1–3课抽样：五个词组的声母、韵母和声调可辨识，包含“不／一”变调；第4–10课抽样：身份／地点／时间／交通／购物；逐人记录。",
+      "points": 10,
+      "pronunciation_tone_check": {
+        "lesson_keys": [
+          "boya-elementary-i:lesson-01",
+          "boya-elementary-i:lesson-02",
+          "boya-elementary-i:lesson-03"
+        ],
+        "text": [
+          "你好",
+          "谢谢",
+          "再见",
+          "不要",
+          "一天"
+        ],
+        "points_within_oral_task_1": 2,
+        "not_additional_points": true
+      }
+    },
+    {
+      "title": "天气变化与生日计划",
+      "prompt": "教师给 A 卡：周六上午下雨、下午晴天，朋友正在上课，三点下课。教师给 B 卡：朋友过生日，喜欢看书；书二百元、花一百元，预算二百元。两人原定上午去公园，问清后改活动、选礼物、说明顺序。新条件：书已售完；每人独立回应替代方案。",
+      "evidence": "第11–14课抽样：天气、状态、商品与安排；每人要有新条件后的独立回应。",
+      "points": 10
+    }
+  ]
+}

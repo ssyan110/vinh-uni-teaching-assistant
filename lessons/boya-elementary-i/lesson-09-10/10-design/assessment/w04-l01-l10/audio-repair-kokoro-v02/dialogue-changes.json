@@ -1,0 +1,113 @@
+[
+  {
+    "audio_id": "E05-B01",
+    "turn": 4,
+    "before": "我也是英国人，认识你很高兴。",
+    "after": "我叫小王。我也是英国人，认识你很高兴。",
+    "reason": "自然自我介紹識別小王，國籍原句保留",
+    "questions": [
+      15
+    ],
+    "question_answer_mapping": [
+      {
+        "number": 14,
+        "prompt": "安娜是哪国人？",
+        "answer": "英国人"
+      },
+      {
+        "number": 15,
+        "prompt": "小王是英国人吗？",
+        "answer": "是"
+      }
+    ]
+  },
+  {
+    "audio_id": "E06-B01",
+    "turn": 1,
+    "before": "这是谁的笔？是你的吗？",
+    "after": "小王，这是谁的笔？是你的吗？",
+    "reason": "自然稱呼確立回答者，李美與本子所有權不變",
+    "questions": [
+      18
+    ],
+    "question_answer_mapping": [
+      {
+        "number": 17,
+        "prompt": "笔是谁的？",
+        "answer": "李美的"
+      },
+      {
+        "number": 18,
+        "prompt": "本子是谁的？",
+        "answer": "小王的"
+      }
+    ]
+  },
+  {
+    "audio_id": "E07-B01",
+    "turn": 1,
+    "before": "你住在学校里吗？",
+    "after": "小王，你住在学校里吗？",
+    "reason": "自然稱呼識別住處回答者，否定與東邊線索不變",
+    "questions": [
+      20,
+      21
+    ],
+    "question_answer_mapping": [
+      {
+        "number": 20,
+        "prompt": "小王住哪儿？",
+        "answer": "学校外边"
+      },
+      {
+        "number": 21,
+        "prompt": "小王的家在学校哪边？",
+        "answer": "东边"
+      }
+    ]
+  },
+  {
+    "audio_id": "E08-B01",
+    "turn": 1,
+    "before": "今晚六点一起吃饭吧。",
+    "after": "小王，今晚六点一起吃饭吧。",
+    "reason": "自然稱呼識別有課者，六點／七點／七點半不變",
+    "questions": [
+      23
+    ],
+    "question_answer_mapping": [
+      {
+        "number": 23,
+        "prompt": "小王几点下课？",
+        "answer": "7:00"
+      },
+      {
+        "number": 24,
+        "prompt": "他们几点吃饭？",
+        "answer": "7:30"
+      }
+    ]
+  },
+  {
+    "audio_id": "E10-B01",
+    "turn": 2,
+    "before": "三块钱一斤。",
+    "after": "小林，三块钱一斤。",
+    "reason": "賣方自然稱呼買方，價格、兩斤、付款不變",
+    "questions": [
+      30
+    ],
+    "question_answer_mapping": [
+      {
+        "number": 29,
+        "prompt": "西瓜一斤多少钱？",
+        "answer": "三块"
+      },
+      {
+        "number": 30,
+        "prompt": "小林要多少西瓜？",
+        "answer": "两斤"
+      }
+    ]
+  }
+]

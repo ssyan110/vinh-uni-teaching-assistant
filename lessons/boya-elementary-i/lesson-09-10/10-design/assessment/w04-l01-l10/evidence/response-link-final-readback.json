@@ -1,0 +1,56 @@
+{
+  "status": "pass",
+  "readbacks": [
+    {
+      "range": "'测验总表'!I2:O2",
+      "majorDimension": "ROWS",
+      "values": [
+        [
+          "v1／DRAFT_UNPUBLISHED／TEACHER_REVIEW；2身份必填、50测验可留空、答卷已关联",
+          "https://docs.google.com/forms/d/1sWTvYRU62hX6g6q2Jb87ka0p_Zry7jRpbWSj-yxGzBo/edit",
+          "https://docs.google.com/spreadsheets/d/1fhKUHCsyEYvSMrCgw5bL8vtazuwX77DKoa0ZCsQgIso/edit#gid=1900606001",
+          "lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/dashboard.html（本地，未部署）",
+          "https://docs.google.com/spreadsheets/d/1_IjuwmwN48Ewu-wzaNhBeW9Ukvg3AlnNwa6D5PbjfPY/edit#gid=1361729076",
+          "33条全解码＋本机实际播放通过；浏览器播放未测；发音待教师试听",
+          "正常59.46分钟；用户保持原内容，自行调整前三节；第四节只测验。发布/教师审题试听/提交后成绩显示待核；实际Form item IDs未提取。以后新卷登记本总表。"
+        ]
+      ]
+    },
+    {
+      "range": "'W04-L01L10说明'!A9:B15",
+      "majorDimension": "ROWS",
+      "values": [
+        [
+          "状态",
+          "DRAFT_UNPUBLISHED／TEACHER_REVIEW；50题与2身份栏已核；测验题可留空；答卷已关联"
+        ],
+        [
+          "Form编辑入口",
+          "https://docs.google.com/forms/d/1sWTvYRU62hX6g6q2Jb87ka0p_Zry7jRpbWSj-yxGzBo/edit"
+        ],
+        [
+          "答卷表",
+          "https://docs.google.com/spreadsheets/d/1_IjuwmwN48Ewu-wzaNhBeW9Ukvg3AlnNwa6D5PbjfPY/edit#gid=1361729076"
+        ],
+        [
+          "时间预算（分钟）",
+          "59.46"
+        ],
+        [
+          "教师试听",
+          "待确认"
+        ],
+        [
+          "canonical目录",
+          "lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10"
+        ],
+        [
+          "items_SHA256",
+          "e876c3327e27cf513518f57718f051b88a8b9b27ccfa1875dbe55c7bda29b19e"
+        ]
+      ]
+    }
+  ],
+  "response_sheet_metadata_checked": true,
+  "response_rows_read": false
+}

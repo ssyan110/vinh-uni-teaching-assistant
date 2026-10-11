@@ -3,11 +3,9 @@ import { parseRosterCsv } from '../utils/csv'
 import { useTracker } from '../state/TrackerContext'
 import type { ImportStudentRow } from '../types'
 import { studentCodeLastFour } from '../utils/studentIdentity'
-
-function csvEscape(value: string | number | null | undefined) {
-  const text = String(value ?? '')
-  return /[",\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text
-}
+import { Link } from 'react-router-dom'
+import { csvCell } from '../utils/classroomExport'
+import { todayIso } from '../data/repository'
 
 function downloadFile(filename: string, body: string, type: string) {
   const url = URL.createObjectURL(new Blob([body], { type }))
@@ -15,7 +13,7 @@ function downloadFile(filename: string, body: string, type: string) {
   anchor.href = url
   anchor.download = filename
   anchor.click()
-  URL.revokeObjectURL(url)
+    setTimeout(() => URL.revokeObjectURL(url), 1000)
 }
 
 export function MorePage() {
@@ -49,20 +47,23 @@ export function MorePage() {
 
   const createCourse = async (event: FormEvent) => {
     event.preventDefault()
-    await addCourse(courseDraft)
-    setCourseDraft({ code: '', name: '', room: '', scheduleText: '' })
-    setShowCourseForm(false)
+    try {
+      await addCourse(courseDraft)
+      setCourseDraft({ code: '', name: '', room: '', scheduleText: '' })
+      setShowCourseForm(false)
+    } catch { /* provider displays the error; keep the input */ }
   }
 
   const exportStudents = () => {
     const header = ['學號', '中文姓名', '原名', '常用名', '狀態']
-    const rows = snapshot.students.map((student) => [student.student_code, student.chinese_name, student.original_name, student.preferred_name, student.status].map(csvEscape).join(','))
-    downloadFile(`荣市大学-学生名册-${new Date().toISOString().slice(0, 10)}.csv`, `\uFEFF${header.join(',')}\n${rows.join('\n')}`, 'text/csv;charset=utf-8')
+    const rows = snapshot.students.map((student) => [student.student_code, student.chinese_name, student.original_name, student.preferred_name, student.status].map(csvCell).join(','))
+    downloadFile(`荣市大学-学生名册-${todayIso()}.csv`, `\uFEFF${header.join(',')}\n${rows.join('\n')}`, 'text/csv;charset=utf-8')
   }
 
-  const exportBackup = () => downloadFile(`荣市大学-完整备份-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(snapshot, null, 2), 'application/json')
+  const exportBackup = () => downloadFile(`荣市大学-完整备份-${todayIso()}.json`, JSON.stringify(snapshot, null, 2), 'application/json')
 
   return (
+    <><Link className="secondary-button" to="/weekly-review">每週教學回顧 →</Link> <Link className="primary-button" to="/attendance">點名例外／補登紀錄 →</Link>
     <div className="page more-page">
       <header className="page-heading"><p className="eyebrow">低頻管理</p><h1>更多</h1><p>課程、名冊與資料匯出集中在這裡，不佔用每天的操作空間。</p></header>
 
@@ -100,5 +101,6 @@ export function MorePage() {
         <div className="export-actions"><button className="secondary-button" onClick={exportStudents}>匯出學生名冊 CSV</button><button className="secondary-button" onClick={exportBackup}>下載完整備份</button><button className="text-button danger" onClick={signOut}>登出</button></div>
       </section>
     </div>
+    </>
   )
 }

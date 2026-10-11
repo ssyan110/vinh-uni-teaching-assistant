@@ -1,0 +1,194 @@
+{
+  "status": "review_unpublished",
+  "cohort": "BOYA-LS-E1-Y1S1-2026F",
+  "offering_id": "2026-fall",
+  "week": "w05",
+  "lesson_keys": [
+    "boya-elementary-i:lesson-11",
+    "boya-elementary-i:lesson-12"
+  ],
+  "items": [
+    {
+      "type": "mc",
+      "audio_id": "E11-A01",
+      "prompt": "明天最高多少度？",
+      "options": [
+        "五度",
+        "十五度",
+        "二十五度",
+        "三十五度"
+      ],
+      "answer_index": 1,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "focus": "温度",
+      "points": 2,
+      "id": "W05-01"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E11-A04",
+      "prompt": "哪天天气有小雨？",
+      "options": [
+        "今天",
+        "明天",
+        "星期五",
+        "星期日"
+      ],
+      "answer_index": 1,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "focus": "天气变化",
+      "points": 2,
+      "id": "W05-02"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E12-A01",
+      "prompt": "说话人现在做什么？",
+      "options": [
+        "在教室上课",
+        "在车站等车",
+        "在家做作业",
+        "在食堂吃饭"
+      ],
+      "answer_index": 1,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "focus": "正在进行的动作",
+      "points": 2,
+      "id": "W05-03"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E12-A02",
+      "prompt": "汉语课到几点结束？",
+      "options": [
+        "八点",
+        "九点",
+        "十点",
+        "十二点"
+      ],
+      "answer_index": 2,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "focus": "时间范围",
+      "points": 2,
+      "id": "W05-04"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E11-B01",
+      "prompt": "两人最后决定哪天去长城？",
+      "options": [
+        "今天",
+        "明天",
+        "星期六",
+        "星期日"
+      ],
+      "answer_index": 3,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "focus": "按天气改期",
+      "points": 2,
+      "id": "W05-05"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E12-B01",
+      "prompt": "小王请小林转告老师什么？",
+      "options": [
+        "他不去上课",
+        "他晚一会儿到",
+        "他已经到教室",
+        "他明天有事"
+      ],
+      "answer_index": 1,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "focus": "转述人员状态",
+      "points": 2,
+      "id": "W05-06"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E11-C01",
+      "prompt": "预报建议什么时候逛街？",
+      "options": [
+        "星期五上午",
+        "星期五下午",
+        "星期六上午",
+        "星期六下午"
+      ],
+      "answer_index": 3,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "focus": "筛选可行时间",
+      "points": 2,
+      "id": "W05-07"
+    },
+    {
+      "type": "mc",
+      "audio_id": "E12-C02",
+      "prompt": "电影改到什么时候？",
+      "options": [
+        "星期三下午",
+        "星期三晚上",
+        "星期四下午",
+        "星期四晚上"
+      ],
+      "answer_index": 2,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "focus": "日程调整",
+      "points": 2,
+      "id": "W05-08"
+    },
+    {
+      "type": "short",
+      "audio_id": "E11-B04",
+      "prompt": "外面现在下什么？多少度？",
+      "answer": "下雨，十二度。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "focus": "天气细节",
+      "points": 4,
+      "id": "W05-09"
+    },
+    {
+      "type": "short",
+      "audio_id": "E12-B04",
+      "prompt": "下午的课几点结束？两人约几点去食堂？",
+      "answer": "三点结束，三点一刻去食堂。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "focus": "时间安排",
+      "points": 4,
+      "id": "W05-10"
+    }
+  ],
+  "oral_tasks": [
+    {
+      "title": "天气与等车状态",
+      "prompt": "你和同学原定明天下午去公园。对方手上有天气卡，显示明天下午下雨；你手上有朋友状态卡，显示他正在车站等车、会晚到。互相询问后，说出保留什么、改动什么，以及新的见面时间或活动。",
+      "evidence": "天气、正在进行的动作、变更理由均说清楚。",
+      "points": 10
+    },
+    {
+      "title": "新消息后修订",
+      "prompt": "教师说：“雨停了，但朋友还在等车。”请只调整受影响的部分，向同伴确认新安排。",
+      "evidence": "能听取新条件、回应并确认。",
+      "points": 10
+    }
+  ]
+}

@@ -8,6 +8,15 @@ beforeEach(() => {
   vi.stubGlobal('sessionStorage', {getItem:(key:string)=>values.get(key) ?? null, setItem:(key:string,value:string)=>values.set(key,value)})
 })
 
+test('cloud classroom starts use the shared atomic session resolver', async () => {
+  const rpc = vi.fn().mockResolvedValue({ data: 'shared-classroom', error: null })
+  const repo = new SupabaseRepository({ rpc } as never, 'owner')
+  expect(await repo.startSession('course')).toBe('shared-classroom')
+  expect(rpc).toHaveBeenCalledWith('ensure_class_session', { p_course_id: 'course', p_session_date: todayIso() })
+  rpc.mockResolvedValueOnce({ data: null, error: { message: '旧课次尚未收尾' } })
+  await expect(repo.startSession('course')).rejects.toThrow('旧课次尚未收尾')
+})
+
 test('volunteer save retry uses the same event identity without adding a second answer', async () => {
   const repo = new DemoRepository()
   const before = await repo.load()

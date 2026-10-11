@@ -1,0 +1,7 @@
+audio_id,source_audio_id,lesson_keys,file_path,duration_s,sample_rate_hz,channels,peak_fraction,rms_fraction,plays,pause_seconds,wav_decode,synthesis_input_from_manifest,role_marked_source_text,teacher_listened,live_playback_checked,status
+W10-A1,E20-C01,boya-elementary-i:lesson-20,OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第20课-我想请一天假/C-听后填写/E20-15-17.wav,13.0,24000,1,0.4606,0.0799,1,8,pass,王红给老师打电话，说自己今天头疼，不能来上课，想请一天假。老师同意了，还说今天的听写可以明天下午补考。王红说明天来之前会先联系老师。,,no,no,技术可解码；教师亲听/播放待验
+W10-A2,E21-C01,boya-elementary-i:lesson-21,OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第21课-每个人要说多长时间/C-听后填写/E21-15-17.wav,12.36,24000,1,0.5,0.0738,2,10,pass,考试分两部分。第一部分是口语，每个人说四分钟。第二部分是笔试，一共三十分钟。老师让大家提前十分钟到教室。笔试里有语法，没有翻译。,,no,no,技术可解码；教师亲听/播放待验
+W10-A3,E20-B03,boya-elementary-i:lesson-20,OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第20课-我想请一天假/B-听对话/E20-11-12.wav,12.81,24000,1,0.5,0.0886,2,12,pass,小林，我今天听写不能来，能补考吗？ / 小王，可以，明天课间来找我。 / 小林，第一节课以后吗？ / 小王，对。,"小林：我今天听写不能来，能补考吗？
+小王：可以，明天课间来找我。
+小林：第一节课以后吗？
+小王：对。",no,no,技术可解码；教师亲听/播放待验

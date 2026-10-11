@@ -1,16 +1,11 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom'
-import { StatusPill } from '../components/StatusPill'
+import { AttendanceExceptions } from '../components/AttendanceExceptions'
 import { useTracker } from '../state/TrackerContext'
 import { validateSessionEdit } from '../data/repository'
-import { studentCodeLastFour } from '../utils/studentIdentity'
-import type { AttendanceStatus } from '../types'
 
 type SessionMode = 'attendance' | 'close'
 
-const attendanceActions: { value: AttendanceStatus; label: string }[] = [
-  { value: 'late', label: '遲到' }, { value: 'absent', label: '缺席' }, { value: 'excused', label: '請假' }, { value: 'present', label: '到課' },
-]
 
 function readReflectionDraft(sessionId: string | undefined, fallback: { classStatus: string; progressText: string; whatWorked: string; commonDifficulty: string; nextAdjustment: string }) {
   if (!sessionId) return fallback
@@ -25,7 +20,7 @@ function readReflectionDraft(sessionId: string | undefined, fallback: { classSta
 export function SessionPage() {
   const { sessionId } = useParams()
   const navigate = useNavigate()
-  const { snapshot, busy, saveAttendance, confirmRemainingPresent, closeSession, updateSession } = useTracker()
+  const { snapshot, busy, closeSession, updateSession } = useTracker()
   const [params] = useSearchParams()
   const [mode, setMode] = useState<SessionMode>(params.get('view')==='reflection'?'close':'attendance')
   const [privacy, setPrivacy] = useState(true)
@@ -64,8 +59,7 @@ export function SessionPage() {
 
   if (!sessionId || !session || !course) return <Navigate to="/today" replace />
 
-  const sessionAttendance = snapshot.attendance.filter((item) => item.session_id === session.id)
-  const unconfirmed = roster.length - sessionAttendance.length
+  const sessionExceptions = (snapshot.attendanceExceptions ?? []).filter((item) => item.session_id === session.id)
   const courseSessions = snapshot.sessions.filter((item) => item.course_id === course.id).sort((a, b) => a.session_date.localeCompare(b.session_date) || a.created_at?.localeCompare(b.created_at ?? '') || a.id.localeCompare(b.id))
   const displayedSessionNumber = session.session_number ?? courseSessions.findIndex((item) => item.id === session.id) + 1
 
@@ -88,9 +82,6 @@ export function SessionPage() {
     }
   }
 
-  const markAttendance = async (studentId: string, status: AttendanceStatus) => {
-    try { await saveAttendance(session.id, studentId, status) } catch { /* provider displays the error */ }
-  }
 
   const finish = async () => {
     try {
@@ -119,31 +110,13 @@ export function SessionPage() {
       {editingSession ? <section className="panel session-edit-panel"><div className="panel-heading"><div><p className="section-kicker">教師專用</p><h2>編輯上課場次</h2></div></div><p>這裡編輯的是課堂日期與場次序號，不會修改任何學生回答次數或原始課堂事件。每次修正都會保留日期、次數、原因與時間。</p><div className="reflection-form"><label>上課日期<input type="date" value={sessionDate} onChange={(event) => setSessionDate(event.target.value)} /></label><label>第幾次上課<input type="number" min="1" max="999" value={sessionNumber} onChange={(event) => setSessionNumber(event.target.value)} /></label><label className="wide">修正原因<textarea required maxLength={500} value={sessionEditReason} onChange={(event) => setSessionEditReason(event.target.value)} placeholder="例如：原先把正式第一堂課誤記為第 2 次。" /></label></div>{sessionEditError && <p role="alert">{sessionEditError}</p>}<div className="close-actions"><button type="button" className="text-button" onClick={() => setEditingSession(false)}>取消</button><button type="button" className="primary-button" disabled={busy} onClick={() => void saveSessionEdit()}>保存場次</button></div></section> : <button type="button" className="secondary-button session-edit-trigger" disabled={busy} onClick={openSessionEditor}>編輯上課日期／次數</button>}
 
       <div className="session-tabs" role="tablist" aria-label="課堂操作">
-        <button className={mode === 'attendance' ? 'active' : ''} onClick={() => setMode('attendance')} role="tab"><span>01</span>點名<b>{unconfirmed > 0 ? `${unconfirmed} 未確認` : '完成'}</b></button>
-        <button className={mode === 'close' ? 'active' : ''} onClick={() => setMode('close')} role="tab"><span>02</span>收尾<b>下堂提醒</b></button>
+        <button className={mode === 'attendance' ? 'active' : ''} onClick={() => setMode('attendance')} role="tab" aria-selected={mode === 'attendance'}><span>01</span>點名補登<b>{sessionExceptions.filter(r => r.makeup_status === 'pending').length} 待補登</b></button>
+        <button className={mode === 'close' ? 'active' : ''} onClick={() => setMode('close')} role="tab" aria-selected={mode === 'close'}><span>02</span>收尾<b>下堂提醒</b></button>
       </div>
 
       {mode === 'attendance' && (
         <section className="session-workspace">
-          <div className="workspace-heading"><div><p className="section-kicker">先記例外，再確認其餘學生</p><h2>點名</h2></div><button className="primary-button compact" disabled={busy || unconfirmed === 0} onClick={() => confirmRemainingPresent(session.id, roster.map((item) => item.student.id))}>確認其餘到課</button></div>
-          <div className="attendance-summary">
-            <span><strong>{roster.length}</strong>全班</span>
-            <span><strong>{sessionAttendance.filter((item) => item.status === 'present').length}</strong>到課</span>
-            <span><strong>{sessionAttendance.filter((item) => item.status === 'late').length}</strong>遲到</span>
-            <span><strong>{sessionAttendance.filter((item) => item.status === 'absent' || item.status === 'excused').length}</strong>未到</span>
-          </div>
-          <div className="attendance-list">
-            {roster.map(({ enrollment, student }) => {
-              const record = sessionAttendance.find((item) => item.student_id === student.id)
-              return <div className="attendance-row" key={student.id}>
-                <span className="seat-number" aria-label={`學號末四位 ${studentCodeLastFour(student.student_code)}`}>{studentCodeLastFour(student.student_code)}</span>
-                <span className="student-identity"><strong>{student.chinese_name}</strong><small>{privacy ? '' : student.original_name ?? ''}</small></span>
-                <StatusPill value={record?.status ?? 'unconfirmed'} />
-                <div className="row-actions">{attendanceActions.map((action) => <button type="button" key={action.value} className={record?.status === action.value ? 'selected' : ''} disabled={busy} onClick={() => markAttendance(student.id, action.value)}>{action.label}</button>)}</div>
-              </div>
-            })}
-          </div>
-          <div className="workspace-next"><span>點名完成後</span><button type="button" onClick={() => setMode('close')}>留下課後記錄 →</button></div>
+          <AttendanceExceptions key={session.id} sessionId={session.id} courseId={course.id} />
         </section>
       )}
 
@@ -162,8 +135,8 @@ export function SessionPage() {
             <label className="featured-field"><span>下一堂要調整什麼？</span><textarea rows={3} value={nextAdjustment} onChange={(event) => setNextAdjustment(event.target.value)} placeholder="例：板書兩個追問句，先讓同桌練一次。" /></label>
           </div>
           </details>
-          <div className="close-summary"><div><strong>{sessionAttendance.length}/{roster.length}</strong><span>已確認出席</span></div><div><strong>{snapshot.followups.filter((item) => item.session_id === session.id && item.status === 'open').length}</strong><span>留下待辦</span></div></div>
-          <div className="close-actions"><button type="button" className="text-button" onClick={() => navigate('/today')}>保留進行中</button><button type="button" className="primary-button" disabled={busy} onClick={finish}>{busy ? '儲存中…' : '完成這堂課'}</button></div>
+          <div className="close-summary"><div><strong>{sessionExceptions.length}</strong><span>例外紀錄（全班 {roster.length} 人）</span></div><div><strong>{snapshot.followups.filter((item) => item.session_id === session.id && item.status === 'open').length}</strong><span>留下待辦</span></div></div>
+          <div className="close-actions"><button type="button" className="text-button" onClick={() => navigate('/today')}>{session.status === 'completed' ? '返回班級' : '保留進行中'}</button><button type="button" className="primary-button" disabled={busy} onClick={finish}>{busy ? '儲存中…' : session.status === 'completed' ? '保存課後紀錄' : '完成這堂課'}</button></div>
         </section>
       )}
     </div>

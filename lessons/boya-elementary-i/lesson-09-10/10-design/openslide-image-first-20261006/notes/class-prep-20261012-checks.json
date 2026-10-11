@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-11",
+  "offering_id": "2026-fall",
+  "lesson_keys": [
+    "boya-elementary-i:lesson-09",
+    "boya-elementary-i:lesson-10"
+  ],
+  "html_pages": 46,
+  "local_resource_refs": 20,
+  "missing_resources": [],
+  "assessment_tracks": 33,
+  "assessment_questions": 50,
+  "audio_version": "audio-repair-qwen-serena-v01",
+  "human_audio_acceptance": false,
+  "run_init_blocker": "lesson_key must resolve to exactly one registry entry: boya-elementary-i:lesson-09",
+  "sha256": {
+    "lessons/boya-elementary-i/lesson-09-10/10-design/openslide-image-first-20261006/lesson-09-10.html": "93235ec98dca8d86945975ab9beaa47b5333b3df68a9f0e5663fd28acbab30e6",
+    "lessons/boya-elementary-i/lesson-09-10/10-design/openslide-image-first-20261006/lesson-09-10.pptx": "7a9adcf3c4c4e0afedbe83b6686abf48181a7d3a8b0f9f0d4a3ca10a8f4bfb4f",
+    "lessons/boya-elementary-i/lesson-09-10/10-design/openslide-image-first-20261006/lesson-09-10-html-export-final.zip": "b1c25cabd1d31cf344579f49320969bc9feddde2a023c09435f49799a6a964b1",
+    "lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10/dashboard.html": "d1565c1c8a9bc8a2c072a738d8e1574e1ffddbf15c307593f046dfc03f74c2fe"
+  }
+}
