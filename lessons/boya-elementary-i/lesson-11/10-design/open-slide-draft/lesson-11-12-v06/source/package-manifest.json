@@ -1,0 +1,41 @@
+{
+  "version": "v06",
+  "pages": 21,
+  "activities": 14,
+  "pdf_pages": 6,
+  "reading_messages": 8,
+  "files": [
+    {
+      "path": "lesson-11-12-实体课.html",
+      "sha256": "57b58971c05200d30a795c29ff29483de590a225844cfffe66879cad34d71ab6"
+    },
+    {
+      "path": "lesson-11-12-教师朗读稿.pdf",
+      "sha256": "41df609ee948ff4c04c51a808c7a853cbcf9d825cc99d636371ec338163c0936"
+    },
+    {
+      "path": "lesson-11-12-教师速用说明.md",
+      "sha256": "d052f5cc1b1eea254066ad159c02603f10afcb8f2191eb03a72e380310aa5361"
+    },
+    {
+      "path": "README.md",
+      "sha256": "78216e2209508d7db955b6b1d0c3be13923474b6a2df9beff6bd226173580080"
+    },
+    {
+      "path": "assets/story-lesson-11.png",
+      "sha256": "46ce5c8e276a606108ea4b7052e17333033965f633c4dd026fe5d9906f6f30be"
+    },
+    {
+      "path": "assets/story-lesson-12.png",
+      "sha256": "8c923a1c88db1e842c2a5d9d7774c4c7300a91a70bd71a20a76a63b344ba1c74"
+    },
+    {
+      "path": "assets/textbook-week-weather.png",
+      "sha256": "5a36de8e9702e84dc089480b367223d973e59c9434805ea3d77a6ca5274e1d16"
+    },
+    {
+      "path": "assets/cover-weather-daily-v06.png",
+      "sha256": "e4d954f25a02d3e63429d6424989b692a2857fc292bb0198435ee11c5a89baf7"
+    }
+  ]
+}

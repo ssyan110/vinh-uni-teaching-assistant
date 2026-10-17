@@ -1,0 +1,354 @@
+[
+  {
+    "audio_id": "BOOK-11-9",
+    "file": "audio/textbook-11-9.mp3",
+    "source_file": "/Users/ssyan110/Desktop/Work/teaching/vinh-university/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第11课/11-9.mp3",
+    "title": "第11课课本听力 11-9",
+    "duration_seconds": 40.39,
+    "sha256": "c3fbb262fdbb37c49c149df30957f57e00fc59483625958d21a1ff094d038d1b",
+    "source_type": "textbook_original",
+    "technical_status": "decoded",
+    "human_listening": "not claimed",
+    "question_range": "1–2",
+    "question_ids": [
+      "W05-OF3-01",
+      "W05-OF3-02"
+    ]
+  },
+  {
+    "audio_id": "BOOK-11-10",
+    "file": "audio/textbook-11-10.mp3",
+    "source_file": "/Users/ssyan110/Desktop/Work/teaching/vinh-university/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第11课/11-10.mp3",
+    "title": "第11课课本听力 11-10",
+    "duration_seconds": 52.9,
+    "sha256": "20f2de65d2c7b710756a0c4f77cede029271d3bbbcdcb97f38018632de8ca217",
+    "source_type": "textbook_original",
+    "technical_status": "decoded",
+    "human_listening": "not claimed",
+    "question_range": "3–5",
+    "question_ids": [
+      "W05-OF3-03",
+      "W05-OF3-04",
+      "W05-OF3-05"
+    ]
+  },
+  {
+    "audio_id": "BOOK-11-11",
+    "file": "audio/textbook-11-11.mp3",
+    "source_file": "/Users/ssyan110/Desktop/Work/teaching/vinh-university/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第11课/11-11.mp3",
+    "title": "第11课课本听力 11-11",
+    "duration_seconds": 40.54,
+    "sha256": "d692f6b2d2b6e610d510ee04e056154e54da4b9bde8ae2fd2bbe999abf27d4c3",
+    "source_type": "textbook_original",
+    "technical_status": "decoded",
+    "human_listening": "not claimed",
+    "question_range": "6–8",
+    "question_ids": [
+      "W05-OF3-06",
+      "W05-OF3-07",
+      "W05-OF3-08"
+    ]
+  },
+  {
+    "audio_id": "BOOK-12-10",
+    "file": "audio/textbook-12-10.mp3",
+    "source_file": "/Users/ssyan110/Desktop/Work/teaching/vinh-university/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第12课/12-10.mp3",
+    "title": "第12课课本听力 12-10",
+    "duration_seconds": 46.32,
+    "sha256": "033614362e9cb763118ab1448f07cbc1c85a99d24cbaff1412c1c4fec0225952",
+    "source_type": "textbook_original",
+    "technical_status": "decoded",
+    "human_listening": "not claimed",
+    "question_range": "9–10",
+    "question_ids": [
+      "W05-OF3-09",
+      "W05-OF3-10"
+    ]
+  },
+  {
+    "audio_id": "BOOK-12-11",
+    "file": "audio/textbook-12-11.mp3",
+    "source_file": "/Users/ssyan110/Desktop/Work/teaching/vinh-university/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第12课/12-11.mp3",
+    "title": "第12课课本听力 12-11",
+    "duration_seconds": 43.21,
+    "sha256": "dc508eaa7466e48228d227685c0aaa1339a1a59f2a0ea9b7ea593a44617c9cee",
+    "source_type": "textbook_original",
+    "technical_status": "decoded",
+    "human_listening": "not claimed",
+    "question_range": "11–12",
+    "question_ids": [
+      "W05-OF3-11",
+      "W05-OF3-12"
+    ]
+  },
+  {
+    "audio_id": "BOOK-12-12",
+    "file": "audio/textbook-12-12.mp3",
+    "source_file": "/Users/ssyan110/Desktop/Work/teaching/vinh-university/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第12课/12-12.mp3",
+    "title": "第12课课本听力 12-12",
+    "duration_seconds": 50.68,
+    "sha256": "0cabb8d190f973b4721d69f1207d451cf8d8eff80cdcc9996de0f484e9e90e0d",
+    "source_type": "textbook_original",
+    "technical_status": "decoded",
+    "human_listening": "not claimed",
+    "question_range": "13–14",
+    "question_ids": [
+      "W05-OF3-13",
+      "W05-OF3-14"
+    ]
+  },
+  {
+    "audio_id": "TOCFL-A4-Q24",
+    "source_key": "A4-Q24",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/027.mp3",
+    "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+    "source_question": 24,
+    "source_volume": 4,
+    "source_sha256": "9b70831aa0e6dff441120f431be3ef988d1411c97af314247fbc567e59b06440",
+    "source_clip_start": 2.25,
+    "source_clip_end": 11.3,
+    "title": "天气与散步",
+    "lesson_keys": [
+      "boya-elementary-i:lesson-11"
+    ],
+    "file": "course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w05/official-v3/audio/TOCFL-A4-Q24.mp3",
+    "duration_seconds": 9.05,
+    "sha256": "c9c4d814352342c5f0c6c79aca2be1d2ac996949198ee2cc13dc8f2890dbcb58",
+    "evidence_summary": "天气凉快、舒服；女生想出去走走。",
+    "play_count": 2,
+    "technical_status": "decoded",
+    "semantic_status": "official script + original/edited ASR reviewed; 25 answer evidence checks passed",
+    "human_listening": "not claimed",
+    "speech_modified": false,
+    "question_ids": [
+      "W05-OF3-15",
+      "W05-OF3-16"
+    ],
+    "question_range": "15–16"
+  },
+  {
+    "audio_id": "TOCFL-A5-Q35",
+    "source_key": "A5-Q35",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/039.mp3",
+    "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
+    "source_question": 35,
+    "source_volume": 5,
+    "source_sha256": "0c1a0002d7c088484a006a5e1d58dd71c38482d41965eb948955ce110c06f21c",
+    "source_clip_start": 2.2,
+    "source_clip_end": 13.1,
+    "title": "四季天气",
+    "lesson_keys": [
+      "boya-elementary-i:lesson-11"
+    ],
+    "file": "course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w05/official-v3/audio/TOCFL-A5-Q35.mp3",
+    "duration_seconds": 10.9,
+    "sha256": "9dc8cbad83b8f43267566429d6accc9cf24ff8a289d894894112c35dbc6db2d4",
+    "evidence_summary": "当地冬天冷、夏天热，春季经常有雨。",
+    "play_count": 2,
+    "technical_status": "decoded",
+    "semantic_status": "official script + original/edited ASR reviewed; 25 answer evidence checks passed",
+    "human_listening": "not claimed",
+    "speech_modified": false,
+    "question_ids": [
+      "W05-OF3-17",
+      "W05-OF3-18"
+    ],
+    "question_range": "17–18"
+  },
+  {
+    "audio_id": "TOCFL-A5-Q49",
+    "source_key": "A5-Q49",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/054.mp3",
+    "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
+    "source_question": 49,
+    "source_volume": 5,
+    "source_sha256": "a27a6dc4c8c1a5aed159a42fbe28e6773536d4fdf3a3045f9aa60a420e2338e1",
+    "source_clip_start": 2.1,
+    "source_clip_end": 25.0,
+    "title": "天热还出门吗",
+    "lesson_keys": [
+      "boya-elementary-i:lesson-11"
+    ],
+    "file": "course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w05/official-v3/audio/TOCFL-A5-Q49.mp3",
+    "duration_seconds": 22.9,
+    "sha256": "5aea042d10888203adad1f32bf0c0b7c80ac5840e8ec61a1dab96efd18ba5ac2",
+    "evidence_summary": "男生借天热提出留在家里；女生提醒他昨天答应今天出门买衣服。",
+    "play_count": 2,
+    "technical_status": "decoded",
+    "semantic_status": "official script + original/edited ASR reviewed; 25 answer evidence checks passed",
+    "human_listening": "not claimed",
+    "speech_modified": false,
+    "question_ids": [
+      "W05-OF3-19"
+    ],
+    "question_range": "19–19"
+  },
+  {
+    "audio_id": "TOCFL-A5-Q21",
+    "source_key": "A5-Q21",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/024.mp3",
+    "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
+    "source_question": 21,
+    "source_volume": 5,
+    "source_sha256": "91643e0e8deccc2b109f6b40af562def1103147de0c52442edea2105f1f5e451",
+    "source_clip_start": 2.9,
+    "source_clip_end": 14.4,
+    "title": "晚上还在工作",
+    "lesson_keys": [
+      "boya-elementary-i:lesson-12"
+    ],
+    "file": "course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w05/official-v3/audio/TOCFL-A5-Q21.mp3",
+    "duration_seconds": 11.5,
+    "sha256": "46d16c561e47f06012dad44af5f269bf96e79ed1b1d6e5218660eae66467534b",
+    "evidence_summary": "时间为晚上九点；办公室两个人还在开会。",
+    "play_count": 2,
+    "technical_status": "decoded",
+    "semantic_status": "official script + original/edited ASR reviewed; 25 answer evidence checks passed",
+    "human_listening": "not claimed",
+    "speech_modified": false,
+    "question_ids": [
+      "W05-OF3-20"
+    ],
+    "question_range": "20–20"
+  },
+  {
+    "audio_id": "TOCFL-A5-Q23",
+    "source_key": "A5-Q23",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/026.mp3",
+    "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
+    "source_question": 23,
+    "source_volume": 5,
+    "source_sha256": "5b7f8e10647db020c032d5f31f098087944b733c618bcd5b0bc371d5d09ad81d",
+    "source_clip_start": 2.7,
+    "source_clip_end": 11.0,
+    "title": "今天在哪里",
+    "lesson_keys": [
+      "boya-elementary-i:lesson-12"
+    ],
+    "file": "course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w05/official-v3/audio/TOCFL-A5-Q23.mp3",
+    "duration_seconds": 8.3,
+    "sha256": "0975ea21ab6b6e70c8d863ee7714ff9aa893ea7ca025c6b5b85ae42ab0ac358d",
+    "evidence_summary": "他今天没来上班，正在家中准备次日的报告。",
+    "play_count": 2,
+    "technical_status": "decoded",
+    "semantic_status": "official script + original/edited ASR reviewed; 25 answer evidence checks passed",
+    "human_listening": "not claimed",
+    "speech_modified": false,
+    "question_ids": [
+      "W05-OF3-21"
+    ],
+    "question_range": "21–21"
+  },
+  {
+    "audio_id": "TOCFL-A5-Q29",
+    "source_key": "A5-Q29",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/033.mp3",
+    "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
+    "source_question": 29,
+    "source_volume": 5,
+    "source_sha256": "e0b8a465af1fbeea8745b3333ec17b22a090d58f9e9cae04cfcb040cf636d13f",
+    "source_clip_start": 2.35,
+    "source_clip_end": 20.9,
+    "title": "调整见面时间",
+    "lesson_keys": [
+      "boya-elementary-i:lesson-12"
+    ],
+    "file": "course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w05/official-v3/audio/TOCFL-A5-Q29.mp3",
+    "duration_seconds": 18.55,
+    "sha256": "302afbaad4f52fbbc645cd36ff7755d6ec6b61a6beb6099c358e918128daf454",
+    "evidence_summary": "原定三点；两人同意提前半小时，地点仍是书店门口。",
+    "play_count": 2,
+    "technical_status": "decoded",
+    "semantic_status": "official script + original/edited ASR reviewed; 25 answer evidence checks passed",
+    "human_listening": "not claimed",
+    "speech_modified": false,
+    "question_ids": [
+      "W05-OF3-22"
+    ],
+    "question_range": "22–22"
+  },
+  {
+    "audio_id": "TOCFL-A4-Q29",
+    "source_key": "A4-Q29",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/033.mp3",
+    "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+    "source_question": 29,
+    "source_volume": 4,
+    "source_sha256": "097d1f342a176d215b1e3f736b92f34994df5b68215b01371190078c0de4ae03",
+    "source_clip_start": 2.35,
+    "source_clip_end": 33.1,
+    "title": "改上游泳课",
+    "lesson_keys": [
+      "boya-elementary-i:lesson-12"
+    ],
+    "file": "course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w05/official-v3/audio/TOCFL-A4-Q29.mp3",
+    "duration_seconds": 30.75,
+    "sha256": "ec21a8037508f75586066ea4718d1be3dae0111c8e050b6a9a2bb11e9d047579",
+    "evidence_summary": "学生更想游泳；可在星期三、星期五上游泳课。",
+    "play_count": 2,
+    "technical_status": "decoded",
+    "semantic_status": "official script + original/edited ASR reviewed; 25 answer evidence checks passed",
+    "human_listening": "not claimed",
+    "speech_modified": false,
+    "question_ids": [
+      "W05-OF3-23"
+    ],
+    "question_range": "23–23"
+  },
+  {
+    "audio_id": "TOCFL-A4-Q12",
+    "source_key": "A4-Q12",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/015.mp3",
+    "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+    "source_question": 12,
+    "source_volume": 4,
+    "source_sha256": "edcd6420398f65f9d684f2170d9efe347b9a835d7fec55e895e66e95127763b0",
+    "source_clip_start": 2.05,
+    "source_clip_end": 10.5,
+    "title": "放假的活动",
+    "lesson_keys": [
+      "boya-elementary-i:lesson-12"
+    ],
+    "file": "course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w05/official-v3/audio/TOCFL-A4-Q12.mp3",
+    "duration_seconds": 8.45,
+    "sha256": "f68a4bbe38e50a1b005c8a392b5ae0ef0e8bf3dc2785160c2658a8098dd6d726",
+    "evidence_summary": "女生放假时常去游泳。",
+    "play_count": 2,
+    "technical_status": "decoded",
+    "semantic_status": "official script + original/edited ASR reviewed; 25 answer evidence checks passed",
+    "human_listening": "not claimed",
+    "speech_modified": false,
+    "question_ids": [
+      "W05-OF3-24"
+    ],
+    "question_range": "24–24"
+  },
+  {
+    "audio_id": "TOCFL-A4-Q39",
+    "source_key": "A4-Q39",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/043.mp3",
+    "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+    "source_question": 39,
+    "source_volume": 4,
+    "source_sha256": "642a26a88ff13c12b3a0cdb6eb5fac469c95bdd484ab5118a45119d43a1f2ca3",
+    "source_clip_start": 2.2,
+    "source_clip_end": 27.7,
+    "title": "雨后晚上的活动",
+    "lesson_keys": [
+      "boya-elementary-i:lesson-11"
+    ],
+    "file": "course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w05/official-v3/audio/TOCFL-A4-Q39.mp3",
+    "duration_seconds": 25.5,
+    "sha256": "0896f2fdc95d990fa32459b247b9c3b201ba8ce633dad8537588cede6f39d1ef",
+    "evidence_summary": "夏天下午雨后，晚上凉快；女生会与家人在屋外观星聊天。",
+    "play_count": 2,
+    "technical_status": "decoded",
+    "semantic_status": "official script + original/edited ASR reviewed; 25 answer evidence checks passed",
+    "human_listening": "not claimed",
+    "speech_modified": false,
+    "question_ids": [
+      "W05-OF3-25"
+    ],
+    "question_range": "25–25"
+  }
+]

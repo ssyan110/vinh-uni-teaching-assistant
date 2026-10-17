@@ -1,0 +1,109 @@
+{
+  "status": "passed",
+  "pages": 21,
+  "activity_checks": [
+    {
+      "activity": "11-1",
+      "pages": [
+        3,
+        4
+      ],
+      "status": "passed"
+    },
+    {
+      "activity": "11-2",
+      "pages": [
+        5
+      ],
+      "status": "passed"
+    },
+    {
+      "activity": "11-3",
+      "pages": [
+        6
+      ],
+      "status": "passed"
+    },
+    {
+      "activity": "11-4",
+      "pages": [
+        7
+      ],
+      "status": "passed"
+    },
+    {
+      "activity": "11-5",
+      "pages": [
+        8,
+        9
+      ],
+      "status": "passed"
+    },
+    {
+      "activity": "11-6",
+      "pages": [
+        10
+      ],
+      "status": "passed"
+    },
+    {
+      "activity": "12-1",
+      "pages": [
+        11
+      ],
+      "status": "passed"
+    },
+    {
+      "activity": "12-2",
+      "pages": [
+        12,
+        13
+      ],
+      "status": "passed"
+    },
+    {
+      "activity": "12-3",
+      "pages": [
+        14
+      ],
+      "status": "passed"
+    },
+    {
+      "activity": "12-4",
+      "pages": [
+        15
+      ],
+      "status": "passed"
+    },
+    {
+      "activity": "12-5",
+      "pages": [
+        16,
+        17
+      ],
+      "status": "passed"
+    },
+    {
+      "activity": "12-6",
+      "pages": [
+        18
+      ],
+      "status": "passed"
+    }
+  ],
+  "integrated_questions": 3,
+  "reading_activities": 7,
+  "exact_messages": 9,
+  "pdf_pages": 7,
+  "fonts": [
+    "AAAAAA+KaiTi",
+    "BAAAAA+TimesNewRomanPSMT",
+    "CAAAAA+KaiTi",
+    "DAAAAA+TimesNewRomanPSMT",
+    "EAAAAA+KaiTi",
+    "FAAAAA+TimesNewRomanPSMT"
+  ],
+  "script_privacy": "all nine full messages absent from student deck",
+  "images": "unchanged complete comic assets",
+  "limits": "technical and content review; no actual classroom trial"
+}

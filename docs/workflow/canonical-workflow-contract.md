@@ -1,8 +1,8 @@
 # Canonical Workflow Contract
 
 Status: active workflow contract
-Version: 2.0.0
-Date: 2026-09-05
+Version: 2.1.0
+Date: 2026-10-15
 
 This file owns the project lifecycle, gate semantics, artifact states, and agent safety rules. It does not own lesson content, PPTX visual rules, audio details, or classroom activity design; those belong to the relevant artifact/domain contract.
 
@@ -16,6 +16,10 @@ Every lesson-scoped operation requires:
 - `lesson_key` in the form `<textbook_id>:<lesson_id>`
 
 Resolve lesson paths from `course/lesson-registry.json` through `scripts/lesson_context.py`. Do not select lesson-specific paths from hardcoded active-lesson fields.
+
+Project audits and tool maintenance declare their actual scope and allowed paths; they do not invent a lesson key. Assessment work uses an explicit exam ID plus its registered offering and lesson-key list. Course planning uses the actual offering/cohort. None of these identities grants lesson approval.
+
+For execution-only records, `agent_loop.py init --scope project|tool|course|assessment --purpose audit --output-dir <project-local-evidence-directory>` is implemented. Its preflight checks the execution boundary only (`production_authorized=false`); task-specific production and approval gates remain separate. See `scripts/README.md` for the command example.
 
 ## Lifecycle
 
@@ -109,7 +113,7 @@ A valid approval identifies the exact `lesson_key`, artifact path, artifact hash
 
 ### Content approval before production (Adam, 2026-09-19)
 
-For all new lesson images, visual prototypes and PPTX (including drafts), stop
+For all new lesson images, visual prototypes, classroom HTML and PPTX (including drafts), stop
 before production until Adam explicitly approves the lesson's concrete content.
 "Start/continue the workflow", structure approval, exercise-title formatting and
 online/face boundary confirmation authorize preparation, not content approval.
@@ -132,6 +136,23 @@ records fail closed. Hash validation cannot authenticate a human statement: the
 agent must verify the actual user message, and never manufacture evidence.
 No approval is granted by a passing gate. Finalized-PPTX read-only intake remains
 unchanged; historical decks are not rewritten to satisfy this new prerequisite.
+
+Classroom HTML follows `docs/workflow/classroom-html-lifecycle.md`. Its implemented
+`production_gate.py --purpose classroom-html --stage draft` route validates
+approved inputs and the declared draft output only. Formal HTML promotion/release
+is still unsupported; neither homepage sync nor the PPTX release writer fills
+that gap. Requested draft completion and formal release are distinct outcomes.
+
+## Rule maintenance
+
+When a current user decision changes a rule, update its owning text and remove or
+scope the superseded active clause. Inspect references, registries, templates,
+generators, checkers and tests in the affected route; appending a newer exception
+alone is not closure. Keep a dated disposition record listing old rule, current
+scope, owner, affected consumers and verification. Preserve historical evidence
+and approved artifacts. Global memory changes require explicit user authorization
+and the host's designated update mechanism; project cleanup does not authorize
+editing global memory or third-party managed skills.
 
 ## Verification baseline
 

@@ -1,0 +1,36 @@
+{
+  "assessment_id": "W04-DIALOGUE-L05L10-20261011",
+  "approved_by": "Adam",
+  "approved_at": "2026-10-11T06:08:34.678755+00:00",
+  "user_evidence": "Approved, update the old Google form.",
+  "scope": "current dialogue-only 50-question version and update existing form",
+  "hashes": {
+    "items.json": "ab3a7cd83b1187a9e4ec3c17b72780b2d7320bcd10450001b55bc050657206ee",
+    "audio-manifest.json": "914f84da5584fea939a41caac6c14b5a08e246252842c371b6d0e3cafd7187de",
+    "student.md": "ceaa5dcb14ef26ee9147c031781b05aded5f585892178c1a33f1a67b18be8620",
+    "teacher.md": "e69bda9126ebf347a5baba6132dc71008ef76e03ec83f45e34c9a5b866352211"
+  },
+  "human_audio_playback_verified": false,
+  "amendments": [
+    {
+      "kind": "answer_separator_format_only",
+      "approved_by": "Adam",
+      "recorded_at": "2026-10-11T08:15:53.241861+00:00",
+      "user_evidence": "有两项以上的答案，用【，】来分开；以后更新答案卷的时候必须同时更新题库，让两边都可以同步",
+      "previous_hashes": {
+        "items.json": "488cb92b9e7ae8b6ec70c77f72c8c56516b860304608b778c9518b19083f709d",
+        "audio-manifest.json": "914f84da5584fea939a41caac6c14b5a08e246252842c371b6d0e3cafd7187de",
+        "student.md": "ceaa5dcb14ef26ee9147c031781b05aded5f585892178c1a33f1a67b18be8620",
+        "teacher.md": "47f66f8906b1ca9ca40313224791388bcb2ef4ed7e0f248a4db2f298add80e46"
+      },
+      "changes": {
+        "同学；同屋": "同学，同屋",
+        "同学；好朋友": "同学，好朋友",
+        "九点；学校东门": "九点，学校东门",
+        "五；两": "五，两",
+        "苹果；香蕉": "苹果，香蕉"
+      },
+      "scope": "Only five multipart answer separators changed; questions, audio and semantic answers unchanged."
+    }
+  ]
+}

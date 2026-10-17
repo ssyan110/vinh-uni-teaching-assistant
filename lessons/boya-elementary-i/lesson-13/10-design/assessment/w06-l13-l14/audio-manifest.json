@@ -1,0 +1,350 @@
+[
+  {
+    "audio_id": "13-9",
+    "file": "audio/13-9-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/teaching/vinh-university/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第13课/13-9.mp3",
+    "source_sha256": "7b2b17b6c4dc51b20056386df42bdc0c20422942bb62ec144ff8bc479feb3089",
+    "sha256": "d3deb69d9a225b7cf0a5fc86784dc4ff21ce2a257e80ec8563615ec80644c238",
+    "source_segments": [
+      {
+        "start_seconds": 10.45,
+        "end_seconds": 40.6
+      }
+    ],
+    "duration_seconds": 30.15,
+    "question_ids": [
+      "W06-MX2-01",
+      "W06-MX2-02",
+      "W06-MX2-03"
+    ],
+    "question_range": "1–3",
+    "play_count": 2,
+    "title": "这是最新的手机",
+    "section_title": "第1–3题｜第13课课本听力｜Audio 13-9",
+    "script": "女：您好！您看一下儿，这是最新的手机。\n男：我不太喜欢这个颜色，样子也不太漂亮。\n女：您打算买什么样子的？\n男：这个手机屏幕有点儿小，有没有大一点儿的？\n女：有，您看这个怎么样？屏幕很大，有白、红、蓝、黑四种颜色。\n男：这个挺好，给我一个白的。",
+    "answer_book_pdf_pages": [
+      55,
+      56
+    ],
+    "source_status": "user_provided_publisher_original",
+    "semantic_status": "publisher_pages_visually_checked_with_asr_support",
+    "teacher_listening_accepted": false
+  },
+  {
+    "audio_id": "13-10",
+    "file": "audio/13-10-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/teaching/vinh-university/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第13课/13-10.mp3",
+    "source_sha256": "b59ebc87ded16f540b134aeb99d81772b962575467983968291899dcb0b67a5b",
+    "sha256": "e9035a6e3b823b346edd2addc5021781eae73b369a505c7cd490a7fafacbaf90",
+    "source_segments": [
+      {
+        "start_seconds": 5.92,
+        "end_seconds": 32.05
+      }
+    ],
+    "duration_seconds": 26.13,
+    "question_ids": [
+      "W06-MX2-04",
+      "W06-MX2-05",
+      "W06-MX2-06",
+      "W06-MX2-07",
+      "W06-MX2-08"
+    ],
+    "question_range": "4–8",
+    "play_count": 2,
+    "title": "这件衣服多少钱",
+    "section_title": "第4–8题｜第13课课本听力｜Audio 13-10",
+    "script": "男：这件衣服多少钱？\n女：这件388块。你喜欢吗？\n男：样子还可以，不过388块有点儿贵，便宜一点儿吧？\n女：这衣服质量挺好的，388不贵。要是你买两件，每件350块，怎么样？\n男：好吧，那我要两件，一件白的，一件蓝的。",
+    "answer_book_pdf_pages": [
+      56
+    ],
+    "source_status": "user_provided_publisher_original",
+    "semantic_status": "publisher_pages_visually_checked_with_asr_support",
+    "teacher_listening_accepted": false
+  },
+  {
+    "audio_id": "14-9",
+    "file": "audio/14-9-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/teaching/vinh-university/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第14课/14-9.mp3",
+    "source_sha256": "07a4d3143dcc089f52939afce900a231b61878ac7347753615d7ca372adb60cd",
+    "sha256": "2e5a88085d704cc04842a649b2d551975224fada33dff72f2c3247721547cfbd",
+    "source_segments": [
+      {
+        "start_seconds": 10.6,
+        "end_seconds": 35.55
+      }
+    ],
+    "duration_seconds": 24.95,
+    "question_ids": [
+      "W06-MX2-09",
+      "W06-MX2-10",
+      "W06-MX2-11"
+    ],
+    "question_range": "9–11",
+    "play_count": 2,
+    "title": "怎么过生日",
+    "section_title": "第9–11题｜第14课课本听力｜Audio 14-9",
+    "script": "男：丽丽，这个星期六是你的生日，你打算怎么过？\n女：我打算先给爸爸妈妈打个电话，然后几个朋友一起吃晚饭。你有时间吗？\n男：当然有时间。几点？在哪儿？\n女：晚上六点半，上海饭店，你知道那儿吗？\n男：知道，就在学校南门对面，挺近的。",
+    "answer_book_pdf_pages": [
+      58
+    ],
+    "source_status": "user_provided_publisher_original",
+    "semantic_status": "publisher_pages_visually_checked_with_asr_support",
+    "teacher_listening_accepted": false
+  },
+  {
+    "audio_id": "14-10",
+    "file": "audio/14-10-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/teaching/vinh-university/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第14课/14-10.mp3",
+    "source_sha256": "07ffab8a1d88e7e422f031ddd094ac2a27a579fef36d302be4a390f5c587d995",
+    "sha256": "37e608cc5dfb9b735f8ed6fd88a681f56ed79f7c7d58a6c5663e896632778da1",
+    "source_segments": [
+      {
+        "start_seconds": 4.88,
+        "end_seconds": 27.4
+      }
+    ],
+    "duration_seconds": 22.52,
+    "question_ids": [
+      "W06-MX2-12",
+      "W06-MX2-13"
+    ],
+    "question_range": "12–13",
+    "play_count": 2,
+    "title": "准备生日礼物",
+    "section_title": "第12–13题｜第14课课本听力｜Audio 14-10",
+    "script": "男：这个星期六是丽丽的生日，我打算给她准备一件生日礼物，不过这个星期我每天都有课，作业也挺多的，没有时间去逛街。我知道丽丽最喜欢花儿，所以我打算从网上买一束花儿送给她。",
+    "answer_book_pdf_pages": [
+      58,
+      59
+    ],
+    "source_status": "user_provided_publisher_original",
+    "semantic_status": "publisher_pages_visually_checked_with_asr_support",
+    "teacher_listening_accepted": false
+  },
+  {
+    "audio_id": "14-11",
+    "file": "audio/14-11-exam.wav",
+    "source": "/Users/ssyan110/Desktop/Work/teaching/vinh-university/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第14课/14-11.mp3",
+    "source_sha256": "3ee5f0556e470de3666a68b2c0f94cdcd83d309e69873767ca21eb1912197ead",
+    "sha256": "d0bf569ee1209e05161cf3e3fe075b20486ca3ba1f984cb3026fff376b8d57d2",
+    "source_segments": [
+      {
+        "start_seconds": 4.3,
+        "end_seconds": 41.2
+      }
+    ],
+    "duration_seconds": 36.9,
+    "question_ids": [
+      "W06-MX2-14"
+    ],
+    "question_range": "14",
+    "play_count": 2,
+    "title": "祝你生日快乐",
+    "section_title": "第14题｜第14课课本听力｜Audio 14-11",
+    "script": "大卫：丽丽，祝你生日快乐！这是送给你的生日礼物。\n丽丽：哇，这花儿太漂亮了！谢谢你，大卫！\n安娜：生日快乐！这是我们准备的生日蛋糕。\n丽丽：谢谢你们。不过，我最近有点儿胖，蛋糕要少吃一点儿，你们多吃一点儿。\n大卫：今天是你的生日，多吃一点儿没关系。\n安娜：好，听你的。咱们先吃饭吧，然后去唱卡拉OK，怎么样？\n丽丽：安娜，这是个好主意。",
+    "answer_book_pdf_pages": [
+      59
+    ],
+    "source_status": "user_provided_publisher_original",
+    "semantic_status": "publisher_pages_visually_checked_with_asr_support",
+    "teacher_listening_accepted": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q13",
+    "file": "audio/TOCFL-A4-Q13.mp3",
+    "title": "书的来源",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/016.mp3",
+    "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+    "source_volume": 4,
+    "source_question": 13,
+    "source_sha256": "34cb9a8782123a93b3e106927c2595d51663017457b643319cd5f8639ebbbee6",
+    "sha256": "dce2463a84b90f3f3875082cb858215ed229497515aff0b3ef246c6a397175de",
+    "source_segments": [
+      {
+        "start_seconds": 2.4,
+        "end_seconds": 8.0
+      }
+    ],
+    "duration_seconds": 5.6,
+    "script": "内容摘要（非逐字稿）：男生询问书的来源；女生说明是爸爸送的。",
+    "source_status": "TOCFL_official_original_audio",
+    "semantic_status": "official_script_compared_with_source_audio_asr",
+    "speech_modified": false,
+    "teacher_listening_accepted": false,
+    "lesson_keys": [
+      "boya-elementary-i:lesson-14"
+    ],
+    "question_ids": [
+      "W06-MX2-15"
+    ],
+    "question_range": "15",
+    "play_count": 2,
+    "section_title": "第15题｜TOCFL官方听力｜Audio TOCFL-A4-Q13"
+  },
+  {
+    "audio_id": "TOCFL-A4-Q14",
+    "file": "audio/TOCFL-A4-Q14.mp3",
+    "title": "更换衣服颜色",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/017.mp3",
+    "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+    "source_volume": 4,
+    "source_question": 14,
+    "source_sha256": "541947eef9d2b9b196ad8677b6f24a4718b6de884c8ae6c27d3292bb95e48cbb",
+    "sha256": "e980d99956ec943a37a5256c14787526317d701196d99ba47c0bf2b470aa333d",
+    "source_segments": [
+      {
+        "start_seconds": 2.5,
+        "end_seconds": 10.95
+      }
+    ],
+    "duration_seconds": 8.45,
+    "script": "内容摘要（非逐字稿）：女生带着昨天买的衣服回来，希望换成另一种颜色。",
+    "source_status": "TOCFL_official_original_audio",
+    "semantic_status": "official_script_compared_with_source_audio_asr",
+    "speech_modified": false,
+    "teacher_listening_accepted": false,
+    "lesson_keys": [
+      "boya-elementary-i:lesson-13"
+    ],
+    "question_ids": [
+      "W06-MX2-16"
+    ],
+    "question_range": "16",
+    "play_count": 2,
+    "section_title": "第16题｜TOCFL官方听力｜Audio TOCFL-A4-Q14"
+  },
+  {
+    "audio_id": "TOCFL-A4-Q23",
+    "file": "audio/TOCFL-A4-Q23.mp3",
+    "title": "衣服便宜",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/026.mp3",
+    "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+    "source_volume": 4,
+    "source_question": 23,
+    "source_sha256": "260a186c2826100893872a237b1acaebd72f012277306760d406de884f56ef02",
+    "sha256": "5c44dcb3f57c1628a823c6097881a549f9078e879fdd6c2aed14499a91257b4d",
+    "source_segments": [
+      {
+        "start_seconds": 2.4,
+        "end_seconds": 13.8
+      }
+    ],
+    "duration_seconds": 11.4,
+    "script": "内容摘要（非逐字稿）：男生问店外人多的原因；女生解释衣服价低，所以顾客多。",
+    "source_status": "TOCFL_official_original_audio",
+    "semantic_status": "official_script_compared_with_source_audio_asr",
+    "speech_modified": false,
+    "teacher_listening_accepted": false,
+    "lesson_keys": [
+      "boya-elementary-i:lesson-13"
+    ],
+    "question_ids": [
+      "W06-MX2-17",
+      "W06-MX2-18"
+    ],
+    "question_range": "17–18",
+    "play_count": 2,
+    "section_title": "第17–18题｜TOCFL官方听力｜Audio TOCFL-A4-Q23"
+  },
+  {
+    "audio_id": "TOCFL-A4-Q26",
+    "file": "audio/TOCFL-A4-Q26.mp3",
+    "title": "按喜好选礼物",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/030.mp3",
+    "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+    "source_volume": 4,
+    "source_question": 26,
+    "source_sha256": "216cc5de8e21f007dc19d24ba6fe6020abfeb96aecc605ae2a5474bb6f91f1e0",
+    "sha256": "7792d765fd082a7376c5993dc45f7e9e5e7157ceb099751b79c5b405a4bffffa",
+    "source_segments": [
+      {
+        "start_seconds": 2.3,
+        "end_seconds": 26.1
+      }
+    ],
+    "duration_seconds": 23.8,
+    "script": "内容摘要（非逐字稿）：两人商量去医院看陈老师；男生提水果和花，女生按老师爱读书的喜好提出送书。",
+    "source_status": "TOCFL_official_original_audio",
+    "semantic_status": "official_script_compared_with_source_audio_asr",
+    "speech_modified": false,
+    "teacher_listening_accepted": false,
+    "lesson_keys": [
+      "boya-elementary-i:lesson-14"
+    ],
+    "question_ids": [
+      "W06-MX2-19",
+      "W06-MX2-20"
+    ],
+    "question_range": "19–20",
+    "play_count": 2,
+    "section_title": "第19–20题｜TOCFL官方听力｜Audio TOCFL-A4-Q26"
+  },
+  {
+    "audio_id": "TOCFL-A4-Q28",
+    "file": "audio/TOCFL-A4-Q28.mp3",
+    "title": "衣服大小",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/032.mp3",
+    "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+    "source_volume": 4,
+    "source_question": 28,
+    "source_sha256": "d4170608d76be0e4e162c2637cdfe7ba4673a464c8ee873f36f6cec64c96a8db",
+    "sha256": "f13c21b34c30480af7e6230357c405fefb075326f281c78882e0863fdd002469",
+    "source_segments": [
+      {
+        "start_seconds": 2.35,
+        "end_seconds": 18.75
+      }
+    ],
+    "duration_seconds": 16.4,
+    "script": "内容摘要（非逐字稿）：男生试穿后觉得衣服小，希望找更大的；店员说明大号已售完。",
+    "source_status": "TOCFL_official_original_audio",
+    "semantic_status": "official_script_compared_with_source_audio_asr",
+    "speech_modified": false,
+    "teacher_listening_accepted": false,
+    "lesson_keys": [
+      "boya-elementary-i:lesson-13"
+    ],
+    "question_ids": [
+      "W06-MX2-21",
+      "W06-MX2-22"
+    ],
+    "question_range": "21–22",
+    "play_count": 2,
+    "section_title": "第21–22题｜TOCFL官方听力｜Audio TOCFL-A4-Q28"
+  },
+  {
+    "audio_id": "TOCFL-A5-Q37",
+    "file": "audio/TOCFL-A5-Q37.mp3",
+    "title": "生日礼物与安排",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/041.mp3",
+    "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
+    "source_volume": 5,
+    "source_question": 37,
+    "source_sha256": "e57066cfe95aadbf1b57790cf1c6d0529a06eb40c95469afcd3a1805ae9590ca",
+    "sha256": "abfae89b160d9d5c9da7fa8f081581aeb28099b95736d1e58a068899098df306",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 24.5
+      }
+    ],
+    "duration_seconds": 22.3,
+    "script": "内容摘要（非逐字稿）：两人为小春选生日礼物，按绘画爱好选择笔和装笔的袋子，并约当天课后购买。",
+    "source_status": "TOCFL_official_original_audio",
+    "semantic_status": "official_script_compared_with_source_audio_asr",
+    "speech_modified": false,
+    "teacher_listening_accepted": false,
+    "lesson_keys": [
+      "boya-elementary-i:lesson-14"
+    ],
+    "question_ids": [
+      "W06-MX2-23",
+      "W06-MX2-24",
+      "W06-MX2-25"
+    ],
+    "question_range": "23–25",
+    "play_count": 2,
+    "section_title": "第23–25题｜TOCFL官方听力｜Audio TOCFL-A5-Q37"
+  }
+]

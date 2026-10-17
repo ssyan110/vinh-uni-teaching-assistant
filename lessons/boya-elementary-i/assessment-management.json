@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "cohort": "BOYA-LS-E1-Y1S1-2026F",
   "offering_id": "2026-fall",
   "textbook_id": "boya-elementary-i",
-  "purpose": "Single central index for this and all future newly created examinations; legacy 25-lesson manager remains unchanged.",
+  "purpose": "Authoritative central index for all new examinations for BOYA-LS-E1-Y1S1-2026F; the former 25-lesson manager is archived and must not be used.",
   "management_spreadsheet_id": "1fhKUHCsyEYvSMrCgw5bL8vtazuwX77DKoa0ZCsQgIso",
   "url": "https://docs.google.com/spreadsheets/d/1fhKUHCsyEYvSMrCgw5bL8vtazuwX77DKoa0ZCsQgIso/edit",
   "drive_folder_id": "1e-pAJ8PIRm6V4d10kmd9K6lQ6iwxJaV4",
@@ -11,8 +11,7 @@
     "title": "测验总表",
     "sheet_id": 1737213268
   },
-  "legacy_25_lesson_manager_id": "1Hqd3Kpr5VNq3hTsQmxDYBoa8QIo8Kg5ae77YFnzsorY",
-  "legacy_policy": "read_only_source_do_not_merge_or_write",
+  "legacy_policy": "trashed_no_read_write; retired 25-lesson manager moved to Google Drive Trash on 2026-10-15",
   "decision_date": "2026-10-06",
   "decision_evidence": "source_thread 01a0f0db-28c0-7447-b633-e68b2f01a03f; Sentinel_6f61263940908191b0e13c653b4f63a6",
   "exams": [
@@ -22,7 +21,7 @@
       "question_bank_sheet_id": 1900606001,
       "audio_sheet_id": 1900606002,
       "scope_sheet_id": 1900606003,
-      "status": "DRAFT_UNPUBLISHED/TEACHER_REVIEW",
+      "status": "SUPERSEDED/HISTORICAL",
       "form_id": "1sWTvYRU62hX6g6q2Jb87ka0p_Zry7jRpbWSj-yxGzBo",
       "form_edit_url": "https://docs.google.com/forms/d/1sWTvYRU62hX6g6q2Jb87ka0p_Zry7jRpbWSj-yxGzBo/edit",
       "response_spreadsheet_id": "1_IjuwmwN48Ewu-wzaNhBeW9Ukvg3AlnNwa6D5PbjfPY",
@@ -37,12 +36,13 @@
       "response_sheet_id": 1361729076,
       "identity_fields_verified": true,
       "scored_questions_optional": true,
-      "superseded_by_review": "W04-DIALOGUE-L05L10-20261011"
+      "superseded_by_review": "W04-DIALOGUE-L05L10-20261011",
+      "form_current_exam_id": "W04-DIALOGUE-L05L10-20261011"
     },
     {
       "exam_id": "W04-DIALOGUE-L05L10-20261011",
       "directory": "lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l05-l10-dialogue-v01",
-      "status": "DRAFT_UNPUBLISHED/TEACHER_REVIEW",
+      "status": "CONTENT_APPROVED/FORM_SYNCED/PUBLISHED",
       "lesson_keys": [
         "boya-elementary-i:lesson-05",
         "boya-elementary-i:lesson-06",
@@ -58,15 +58,271 @@
       "audio_type": "textbook-dialogue-only",
       "audio_count": 15,
       "student_ready": false,
-      "form_id": null,
+      "form_id": "1sWTvYRU62hX6g6q2Jb87ka0p_Zry7jRpbWSj-yxGzBo",
       "timing_policy": "two_full_plays_per_edited_dialogue_planned_35.05_minutes",
       "pending": [
         "teacher_full_listening",
         "classroom_audio_playback",
         "actual_student_timing"
       ],
-      "scope_decision": "2026-10-11 current conversation: only dialogue audio, cumulative lessons 5–10"
+      "scope_decision": "2026-10-11 current conversation: only dialogue audio, cumulative lessons 5–10",
+      "form_edit_url": "https://docs.google.com/forms/d/1sWTvYRU62hX6g6q2Jb87ka0p_Zry7jRpbWSj-yxGzBo/edit",
+      "response_spreadsheet_id": "1659bS7DT-Ko-jJoUeEgpt3RnI2yTQ4dVG9Bg6Lt-k6c",
+      "response_sheet_id": 580900573,
+      "question_bank_sheet_id": 1900606020,
+      "audio_sheet_id": 1900606022,
+      "scope_sheet_id": 1900606025,
+      "content_approved": true,
+      "form_verified_at": "2026-10-11T06:11:06.839578+00:00",
+      "identity_fields_verified": true,
+      "scored_questions_optional": true,
+      "previous_response_destination": {
+        "spreadsheet_id": "1_IjuwmwN48Ewu-wzaNhBeW9Ukvg3AlnNwa6D5PbjfPY",
+        "sheet_id": 1361729076,
+        "role": "migration_backup_no_longer_receives_new_responses"
+      },
+      "confirmation_message": "测验结束，请等待其他同学做完。",
+      "grade_release": "after_manual_review",
+      "email_collection_type": "RESPONDER_INPUT",
+      "respondent_settings": {
+        "missed_questions": true,
+        "correct_answers": false,
+        "point_values": true
+      },
+      "fill_grade_method": "exact_accepted_format_variants_then_manual_review",
+      "student_result_test": {
+        "evidence": ".agent/runs/w04-student-result-test-20261011/student-result-verification.json",
+        "verified_questions": 50,
+        "test_student_code": "TEST-W04"
+      },
+      "fill_format_tolerance": {
+        "max_extra_spaces": 3,
+        "separators": [
+          "，",
+          ",",
+          "；",
+          ";"
+        ],
+        "evidence": ".agent/runs/w04-student-result-test-20261011/fill-format-variants-verification.json"
+      },
+      "paper_sheet_id": 1900606021,
+      "paper_filter_view_id": 1900620001,
+      "response_migration": {
+        "date": "2026-10-15",
+        "source_spreadsheet_id": "1fhKUHCsyEYvSMrCgw5bL8vtazuwX77DKoa0ZCsQgIso",
+        "source_sheet_id": 1597929810,
+        "snapshot_sheet_id": 2127224416,
+        "live_form_responses": 28,
+        "sheet_only_supplement_records": 1,
+        "live_answers_and_scores_equal": true
+      },
+      "question_version": 1,
+      "grade_sheet_id": 1900630401,
+      "grade_sheet_title": "成绩-W04-第5–10课",
+      "student_url": "https://docs.google.com/forms/d/e/1FAIpQLScsXBNUbo9fRxnRDQg1BpTCmP4MmORyvXoNbhkvwwXjVZm4Hg/viewform"
+    },
+    {
+      "exam_id": "W05-L11L12-20261015",
+      "directory": "course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w05",
+      "status": "OFFICIAL_AUDIO_V3_SYNCED_PENDING_HUMAN_AUDIO_ACCEPTANCE",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11",
+        "boya-elementary-i:lesson-12"
+      ],
+      "question_count": 25,
+      "choice_count": 25,
+      "fill_count": 0,
+      "points": 100,
+      "audio_count": 15,
+      "question_bank_sheet_id": 1900606020,
+      "audio_sheet_id": 1900606022,
+      "student_ready": false,
+      "pending": [
+        "teacher_full_listening",
+        "classroom_speaker_acceptance"
+      ],
+      "scope_sheet_id": 1900606025,
+      "paper_sheet_id": 1900606021,
+      "paper_filter_view_id": 1900620002,
+      "question_version": 3,
+      "form_id": "1AUqKIy1uqnyxu6W8Z8Etw8zeQR8go2pxrovDuN_3CT0",
+      "form_edit_url": "https://docs.google.com/forms/d/1AUqKIy1uqnyxu6W8Z8Etw8zeQR8go2pxrovDuN_3CT0/edit",
+      "response_spreadsheet_id": "1659bS7DT-Ko-jJoUeEgpt3RnI2yTQ4dVG9Bg6Lt-k6c",
+      "response_sheet_id": 2114838754,
+      "identity_fields_verified": true,
+      "scored_questions_optional": true,
+      "grade_release": "after_manual_review",
+      "form_verified_at": "2026-10-15T16:18:48.041670+00:00",
+      "publication_authorized": true,
+      "publication_evidence": ".agent/runs/w05-publication-20261015/authorization.json",
+      "dashboard_browser_start_verified": 15,
+      "dashboard_browser_start_evidence": "classroom-tools/audio-dashboard/verification.json",
+      "points_per_question": 4,
+      "audio_type": "textbook-original-listening-and-official-tocfl-audio",
+      "content_source": "Year 1 textbook lessons 11–12 original listening plus TOCFL Band A official audio",
+      "audio_verification_evidence": ".agent/runs/w05-official-audio-v2-20261015/audio-answer-verification.json",
+      "grade_sheet_id": 1900630501,
+      "grade_sheet_title": "成绩-W05-第11–12课",
+      "student_url": "https://docs.google.com/forms/d/e/1FAIpQLSdamXug95veHUdagBRXZibmB-R9trDRDWBYuHqh5wnh_MzmKw/viewform",
+      "form_revision": "000000f0",
+      "question_group_count": 15,
+      "independent_audit_evidence": ".tmp/w05-independent-audit/form/final-independent-proof.json",
+      "publisher_answer_evidence": ".tmp/w05-independent-audit/questions/textbook-semantic-matrix.json",
+      "central_current_version_only": true,
+      "central_question_count": 25,
+      "central_audio_count": 15,
+      "central_cleanup_evidence": ".tmp/w05-latest-only-cleanup/verification.json",
+      "central_superseded_versions_removed": [
+        1,
+        2
+      ]
+    },
+    {
+      "exam_id": "W06-L13L14-20261016",
+      "directory": "lessons/boya-elementary-i/lesson-13/10-design/assessment/w06-l13-l14",
+      "status": "DRAFT_MIXED_V2_SYNCED_PENDING_TEACHER_REVIEW",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13",
+        "boya-elementary-i:lesson-14"
+      ],
+      "week": 6,
+      "teaching_dates": "2026-10-26/2026-11-01",
+      "question_count": 25,
+      "choice_count": 25,
+      "fill_count": 0,
+      "points": 100,
+      "points_per_question": 4,
+      "question_version": 2,
+      "audio_count": 11,
+      "question_group_count": 11,
+      "audio_type": "textbook-original-and-official-tocfl",
+      "student_ready": false,
+      "publication_authorized": false,
+      "dashboard_draft": true,
+      "dashboard_label": "Week 6 · 第13–14课听力测验（审阅稿）",
+      "superseded_directories": [
+        "course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w06"
+      ],
+      "pending": [
+        "teacher_content_review",
+        "teacher_full_listening",
+        "classroom_speaker_acceptance",
+        "publication_authorization",
+        "connect_term_raw_response_destination_before_publication"
+      ],
+      "form_id": "1M33yrhHQHPAI2JE66VqO2nyuxNZQChUOwyWXIHGFnSU",
+      "form_edit_url": "https://docs.google.com/forms/d/1M33yrhHQHPAI2JE66VqO2nyuxNZQChUOwyWXIHGFnSU/edit",
+      "form_revision": "00000008",
+      "draft_form_readback_verified": true,
+      "question_bank_sheet_id": 1900606020,
+      "paper_sheet_id": 1900606021,
+      "audio_sheet_id": 1900606022,
+      "scope_sheet_id": 1900606025,
+      "paper_filter_view_id": 1900620003,
+      "grade_sheet_id": 1900630601,
+      "grade_sheet_title": "成绩-W06-第13–14课",
+      "central_current_version_only": true,
+      "superseded_local_evidence_directory": ".agent/runs/w06-l13l14-bank-20261016/history/w06-legacy",
+      "question_bank_sha256": "8ff4c9aa6ca04cec666d2a46cd1038fd4a3e386a9a62abea90e36dea3fce06ca",
+      "central_question_count": 25,
+      "central_audio_count": 11,
+      "dashboard_browser_full_play_verified": 11,
+      "dashboard_browser_full_play_evidence": ".tmp/w06-mixed-official/dashboard-playback.json",
+      "sync_verification_evidence": ".tmp/w06-mixed-official/sync-verification.json",
+      "content_approved": false,
+      "textbook_question_count": 14,
+      "tocfl_question_count": 11,
+      "textbook_audio_count": 5,
+      "tocfl_audio_count": 6,
+      "central_superseded_versions_removed": [
+        1
+      ],
+      "central_cleanup_evidence": ".tmp/w06-mixed-official/cleanup-plan.json",
+      "scope_decision": "2026-10-16 user: match L11–12 mixed textbook and suitable official TOCFL audio approach; synchronize Form, bank, teacher key and dashboard",
+      "superseded_version_evidence": {
+        "v1_all_textbook": ".tmp/w06-mixed-official/before"
+      }
     }
   ],
-  "current_review_exam_id": "W04-DIALOGUE-L05L10-20261011"
+  "current_review_exam_id": "W04-DIALOGUE-L05L10-20261011",
+  "audio_dashboard": "classroom-tools/audio-dashboard/index.html",
+  "response_policy": "Each year-1 exam has its own Form and raw response tab in the term backend, plus one clearly named dynamic grade sheet in the central workbook. Shared question, paper and audio tables contain current valid records; each new exam adds its rows, while verified replacement versions remove superseded rows under central_version_policy. Overview shows exam statistics only; hidden system grade data feeds the grade sheets.",
+  "archived_legacy_spreadsheet_id": "1Hqd3Kpr5VNq3hTsQmxDYBoa8QIo8Kg5ae77YFnzsorY",
+  "legacy_archive_folder_id": "1nqpQ2F5SEFUzf0rhphfEL7wme2YZKIrC",
+  "cleanup_2026_10_15": {
+    "verified_via": "Google Drive Bin UI",
+    "trashed_file_ids": [
+      "1Hqd3Kpr5VNq3hTsQmxDYBoa8QIo8Kg5ae77YFnzsorY",
+      "1_IjuwmwN48Ewu-wzaNhBeW9Ukvg3AlnNwa6D5PbjfPY",
+      "1fJ83LfUn78Ub1iVttIGA0qMRTe77m3KyGWkli811i2A",
+      "1mtZi715lfJj_yPe0PvHp9IyYXSmcjFFX3g6wy7bi-EU"
+    ],
+    "active_form_preserved": "1sWTvYRU62hX6g6q2Jb87ka0p_Zry7jRpbWSj-yxGzBo",
+    "structure_migration_status": "fixed_seven_sheets_migrated_response_destination_switched_formula_sync_active"
+  },
+  "scope_policy": "Only university year 1, BOYA-LS-E1-Y1S1-2026F, boya-elementary-i; year 2 excluded.",
+  "fixed_sheets": {
+    "测验总表": 1737213268,
+    "题库": 1900606020,
+    "组卷明细": 1900606021,
+    "音频库": 1900606022,
+    "成绩总览": 1900606024,
+    "使用说明": 1900606025,
+    "系统-成绩数据": 1900606023
+  },
+  "raw_response_spreadsheet_id": "1659bS7DT-Ko-jJoUeEgpt3RnI2yTQ4dVG9Bg6Lt-k6c",
+  "grade_sync": {
+    "method": "native Sheets REDUCE/VSTACK + IMPORTRANGE",
+    "raw_registry_sheet_id": 1900610000,
+    "raw_output_sheet_id": 1900610001,
+    "manual_grade_sheet_id": 1900610002,
+    "supplement_sheet_id": 1900610003,
+    "raw_limit_per_exam": 5000,
+    "registry_limit": 99,
+    "central_output_limit": 4999,
+    "latency": "Google recalculation; not real-time SLA",
+    "roster_missing_detection": "not_enabled_no_authoritative_exam_roster_connected",
+    "no_form_grade_writeback": true,
+    "central_hidden_sheet": "系统-成绩数据",
+    "per_exam_grade_sheets": true
+  },
+  "grade_sheet_policy": {
+    "one_sheet_per_exam": true,
+    "expected_max_exams_per_term": 10,
+    "name_template": "成绩-Wxx-第x–x课",
+    "data_method": "formula FILTER over hidden 系统-成绩数据",
+    "no_manual_score_entry_into_views": true,
+    "overview_contains_students": false
+  },
+  "interface_policy": {
+    "links": "Native HYPERLINK formulas with identical labels by purpose; never overwrite formulas with FORMATTED_VALUE labels",
+    "styles": "All active table templates have consistent header, font, wrap, columns, numeric and date formats; apply to appended rows",
+    "system_ids": "Hidden in overview and primary views; retained for identity",
+    "main_link_columns": {
+      "J": "学生作答",
+      "K": "本卷题目",
+      "L": "教师音频（本机）",
+      "M": "本卷成绩",
+      "U": "教师编辑／评分",
+      "V": "原始答卷（后台）"
+    }
+  },
+  "weekly_sync_workflow": "docs/workflow/weekly-assessment-sync.md",
+  "central_version_policy": {
+    "current_only": true,
+    "replacement_scope": "exam_id and registered current version",
+    "delete_after_replacement_readback": [
+      "superseded question rows",
+      "superseded paper rows",
+      "audio metadata with no remaining valid exam references"
+    ],
+    "online_archive_tabs": false,
+    "preserve": [
+      "other valid exam references",
+      "raw student responses",
+      "grades",
+      "approval and amendment evidence"
+    ],
+    "paper_lookup_policy": "Preserve question_id + version array lookups; do not manually overwrite formula spill outputs."
+  }
 }

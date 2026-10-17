@@ -1,0 +1,290 @@
+[
+  {
+    "asset": "visual-sunny.png",
+    "sheet": "weather-venues.png",
+    "crop_box": [
+      0,
+      0,
+      384,
+      341
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-cloudy.png",
+    "sheet": "weather-venues.png",
+    "crop_box": [
+      384,
+      0,
+      768,
+      341
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-rainy.png",
+    "sheet": "weather-venues.png",
+    "crop_box": [
+      768,
+      0,
+      1152,
+      341
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-windy.png",
+    "sheet": "weather-venues.png",
+    "crop_box": [
+      1152,
+      0,
+      1536,
+      341
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-park.png",
+    "sheet": "weather-venues.png",
+    "crop_box": [
+      0,
+      341,
+      384,
+      683
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-cinema.png",
+    "sheet": "weather-venues.png",
+    "crop_box": [
+      384,
+      341,
+      768,
+      683
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-mall.png",
+    "sheet": "weather-venues.png",
+    "crop_box": [
+      768,
+      341,
+      1152,
+      683
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-library.png",
+    "sheet": "weather-venues.png",
+    "crop_box": [
+      1152,
+      341,
+      1536,
+      683
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-classroom.png",
+    "sheet": "weather-venues.png",
+    "crop_box": [
+      0,
+      683,
+      384,
+      1024
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-computerlab.png",
+    "sheet": "weather-venues.png",
+    "crop_box": [
+      384,
+      683,
+      768,
+      1024
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-commonroom.png",
+    "sheet": "weather-venues.png",
+    "crop_box": [
+      768,
+      683,
+      1152,
+      1024
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-garden.png",
+    "sheet": "weather-venues.png",
+    "crop_box": [
+      1152,
+      683,
+      1536,
+      1024
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-homework.png",
+    "sheet": "student-actions.png",
+    "crop_box": [
+      0,
+      0,
+      362,
+      364
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-busstop.png",
+    "sheet": "student-actions.png",
+    "crop_box": [
+      362,
+      0,
+      724,
+      364
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-busphone.png",
+    "sheet": "student-actions.png",
+    "crop_box": [
+      724,
+      0,
+      1086,
+      364
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-inclass.png",
+    "sheet": "student-actions.png",
+    "crop_box": [
+      1086,
+      0,
+      1448,
+      364
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-reading.png",
+    "sheet": "student-actions.png",
+    "crop_box": [
+      0,
+      364,
+      362,
+      709
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-telephone.png",
+    "sheet": "student-actions.png",
+    "crop_box": [
+      362,
+      364,
+      724,
+      709
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-rolecards.png",
+    "sheet": "student-actions.png",
+    "crop_box": [
+      724,
+      364,
+      1086,
+      709
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-relay.png",
+    "sheet": "student-actions.png",
+    "crop_box": [
+      1086,
+      364,
+      1448,
+      709
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-planning.png",
+    "sheet": "student-actions.png",
+    "crop_box": [
+      0,
+      709,
+      362,
+      1086
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-broadcast.png",
+    "sheet": "student-actions.png",
+    "crop_box": [
+      362,
+      709,
+      724,
+      1086
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-listening.png",
+    "sheet": "student-actions.png",
+    "crop_box": [
+      724,
+      709,
+      1086,
+      1086
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  },
+  {
+    "asset": "visual-presenting.png",
+    "sheet": "student-actions.png",
+    "crop_box": [
+      1086,
+      709,
+      1448,
+      1086
+    ],
+    "source": "ChatGPT imagegen original classroom illustration",
+    "private_role_data": false
+  }
+]

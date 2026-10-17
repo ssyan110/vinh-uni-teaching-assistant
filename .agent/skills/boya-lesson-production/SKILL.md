@@ -19,9 +19,11 @@ Read these before using any procedure in this skill:
 
 The canonical workflow contract takes precedence over this skill. If a procedure here conflicts with the contract, stop and follow the contract; do not silently repair the conflict.
 
-## Explicit identity is mandatory
+## Explicit identity for lesson-scoped work
 
-Every operation must carry an explicit `lesson_key` and, where required by the command or contract, an explicit `offering_id`. Resolve paths through `LessonContext` and the project’s canonical lesson registry. Do not infer a lesson from active L01 configuration, current directories, filenames, or previously generated artifacts.
+Project, tool, course and assessment work use their actual scope and identifier under the canonical contract; do not invent a lesson_key or load unrelated production references.
+
+Every lesson-scoped operation must carry an explicit `lesson_key` and, where required by the command or contract, an explicit `offering_id`. Resolve paths through `LessonContext` and the project’s canonical lesson registry. Do not infer a lesson from active L01 configuration, current directories, filenames, or previously generated artifacts.
 
 Historical L01 procedures are compatibility-only. They must remain behind the declared legacy adapter and must not be used for scoped production operations.
 
@@ -30,6 +32,10 @@ Historical L01 procedures are compatibility-only. They must remain behind the de
 Online classes remain unchanged and continue to prioritize PPT/PPTX, including one-word-per-page preparation and approved styles. Only physical classes prioritize HTML slides/OpenSlide, with editable PPTX as an optional backup.
 
 Read [the 2026-10-07 classroom HTML standard](../../../docs/classroom-html-standard-2026-10-07.md) for future physical classes: HTML first, coherent TBL tasks, once-on-entry motion and level-appropriate TOCFL-style assessment. The PPTX reference is for online preparation, explicitly selected legacy maintenance, and format-specific backup checks; it does not replace this classroom standard.
+
+The standing visual baseline is the current L9–10 HTML, including its actual cover, learning route, layout families and role typography. Follow the standard's default execution and delivery self-check on every classroom deck: reuse the reference before layout, verify all rendered pages and visible content, check navigation and once-on-entry motion through the shared homepage, sync and build, then repair before delivery. Do not ask again for the standing style or add a style approval round. Keep lesson-specific content and human approvals independent.
+
+For future face-to-face slides only, follow [the standing activity workflow](../../../docs/classroom-activity-workflow.md). Default to one page per activity, at most two when necessary inputs need separation. Use simple executable Chinese and complete materials; increase reasoning rather than procedural complexity. Preserve meaningful basic/challenge routes without forcing them onto unified tasks or solo six-panel stories. Synchronize teacher reading PDFs, check comprehension before copy approval, then inspect every rendered page and shared-homepage navigation. Reuse the L9–10 visual baseline; do not ask for recurring style approval. Online PPT rules remain unchanged.
 
 ## Focused procedure references
 

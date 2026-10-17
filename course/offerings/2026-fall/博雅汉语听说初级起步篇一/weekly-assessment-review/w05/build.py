@@ -21,14 +21,31 @@ PACKS = {
 'w05': dict(title='第11–12课综合听说测验', dates='2026-10-19—2026-10-25', lessons=[11,12], page='教材 P80–98', minutes='听力约18分钟，口语每人约3分钟；听力可在第20节后、口语在活动轮换中实施',
 mc=[
 mc('E11-A01','明天最高多少度？',['五度','十五度','二十五度','三十五度'],1,[11],'温度'),
+mc('E11-A02','今天的天气怎么样？',['很冷，而且下雨','不太冷，但是风很大','很热，没有风','不冷，也没有风'],1,[11],'天气状况'),
+mc('E11-A03','说话人不喜欢夏天的原因是什么？',['夏天常下雨','夏天风很大','夏天太热','夏天太冷'],2,[11],'天气与偏好'),
 mc('E11-A04','哪天天气有小雨？',['今天','明天','星期五','星期日'],1,[11],'天气变化'),
+mc('E11-A05','现在多少度？',['零下三度','三度','十三度','三十度'],0,[11],'温度'),
+mc('E11-A06','说话人最喜欢哪个季节？',['春天','夏天','秋天','冬天'],2,[11],'季节偏好'),
 mc('E12-A01','说话人现在做什么？',['在教室上课','在车站等车','在家做作业','在食堂吃饭'],1,[12],'正在进行的动作'),
 mc('E12-A02','汉语课到几点结束？',['八点','九点','十点','十二点'],2,[12],'时间范围'),
+mc('E12-A03','他每个星期日做什么？',['去爬山','去上网','去看电影','给老师打电话'],0,[12],'每周习惯'),
+mc('E12-A04','请说话人转告老师什么？',['他今天不来','他晚一会儿到','他已经到教室','他明天再来'],1,[12],'转告信息'),
+mc('E12-A05','说话人现在做什么？',['正在上网','正在看电影','正在做作业','正在等公共汽车'],2,[12],'正在进行的动作'),
+mc('E12-A06','电影几点开始？',['上午八点','中午十二点','下午两点','下午四点'],2,[12],'时间信息'),
 mc('E11-B01','两人最后决定哪天去长城？',['今天','明天','星期六','星期日'],3,[11],'按天气改期'),
+mc('E11-B02','今天最高多少度？',['十八度','二十度','二十八度','三十八度'],2,[11],'天气细节'),
+mc('E11-B03','小王最喜欢哪个季节？',['春天','夏天','秋天','冬天'],0,[11],'季节偏好'),
+mc('E11-B04','外面现在的天气和温度是什么？',['下雪，十二度','下雨，十二度','下雨，零下十二度','阴天，二十度'],1,[11],'天气细节'),
 mc('E12-B01','小王请小林转告老师什么？',['他不去上课','他晚一会儿到','他已经到教室','他明天有事'],1,[12],'转述人员状态'),
+mc('E12-B02','两人约几点去看电影？',['两点','三点','四点','六点'],2,[12],'约定时间'),
+mc('E12-B03','小王这周哪天给家里打电话？',['星期五','星期六','星期日','下星期一'],2,[12],'习惯与当天安排'),
+mc('E12-B04','下午的课几点结束？两人约几点去食堂？',['两点结束，两点一刻去','三点结束，三点一刻去','三点结束，三点半去','四点结束，四点一刻去'],1,[12],'时间安排'),
+mc('E11-C02','安娜的同屋最喜欢哪个季节？',['春天','夏天','秋天','冬天'],3,[11],'季节偏好与理由'),
 mc('E11-C01','预报建议什么时候逛街？',['星期五上午','星期五下午','星期六上午','星期六下午'],3,[11],'筛选可行时间'),
+mc('E12-C01','中午，大卫在哪里？',['在食堂吃饭','在车站等车','在教室做作业','在家上网'],1,[12],'地点与正在进行的动作'),
+mc('E12-C01','王老师几点开始上课？',['上午八点','中午十二点','下午一点','下午三点'],2,[12],'时间信息'),
 mc('E12-C02','电影改到什么时候？',['星期三下午','星期三晚上','星期四下午','星期四晚上'],2,[12],'日程调整')],
-short=[short('E11-B04','外面现在下什么？多少度？','下雨，十二度。',[11],'天气细节'),short('E12-B04','下午的课几点结束？两人约几点去食堂？','三点结束，三点一刻去食堂。',[12],'时间安排')],
+short=[],
 oral=[('天气与等车状态','你和同学原定明天下午去公园。对方手上有天气卡，显示明天下午下雨；你手上有朋友状态卡，显示他正在车站等车、会晚到。互相询问后，说出保留什么、改动什么，以及新的见面时间或活动。','天气、正在进行的动作、变更理由均说清楚。'),('新消息后修订','教师说：“雨停了，但朋友还在等车。”请只调整受影响的部分，向同伴确认新安排。','能听取新条件、回应并确认。')]),
 'w06': dict(title='第13–14课综合听说测验', dates='2026-10-26—2026-11-01', lessons=[13,14], page='教材 P99–118', minutes='听力约18分钟，口语每人约3分钟；在第24节活动轮换中实施',
 mc=[
@@ -89,8 +106,14 @@ def audio_info(p):
 
 for key, pack in PACKS.items():
     out = BASE / key
+    if key == 'w05' and (out / 'items.json').exists() and json.loads((out / 'items.json').read_text()).get('version', 1) >= 2:
+        print('w05: preserve registered official-audio v2; legacy TTS generator skipped')
+        continue
     out.mkdir(parents=True, exist_ok=True)
     items = pack['mc'] + pack['short']
+    if key == 'w05':
+        for it in items:
+            if it['type'] == 'mc': it['points'] = 4
     for i, it in enumerate(items,1): it['id'] = f'{key.replace("/","-").upper()}-{i:02d}'
     scope = [f'# {pack["title"]}｜审阅稿／未发布', '', f'- 班级：BOYA-LS-E1-Y1S1-2026F；开课实例：2026-fall；周次：{key.split("/")[0].upper()}；课表日期：{pack["dates"]}。', f'- 课次：{", ".join(f"boya-elementary-i:lesson-{n:02}" for n in pack["lessons"])}。', f'- 教材范围：{pack["page"]}。', f'- 执行时间：{pack["minutes"]}。', '- 课程计划依据：`docs/course-rules/BOYA-LS-E1-Y1S1-2026F/README.md` 与 `course/offerings/2026-fall/博雅汉语听说初级起步篇一/semester-teacher-manual.md`。', '- 音频朗读稿依据：`OmniVoice/audio/博雅汉语测验音频/题号音频清单.jsonl`；这些是既有课堂题库 TTS，不是出版社录音。', '- 教材核对：`textbooks/boya-elementary-i/source/source-inventory.json` 与 `.tmp/ocr-elementary-i/page-*.txt` 的相应页；OCR 是待复核衍生资料。第11–15课无逐课 `00-source/canonical-source.json`，不能宣称逐题得到批准的 canonical source。', '- 本卷是参考 TOCFL 听力题型的课堂诊断题，未作官方等值定级。教学进度在考前需由任课教师确认。']
     scope += ['', '## 逐课教材对照']
@@ -103,10 +126,11 @@ for key, pack in PACKS.items():
     audio_groups={}
     for idx,it in enumerate(items,1): audio_groups.setdefault(it['audio_id'],[]).append(idx)
     shared_audio=any(len(v)>1 for v in audio_groups.values())
-    s=[f'# {pack["title"]}｜学生审阅稿／未发布','','姓名：________　班级：________','',f'听力选择题：{len(pack["mc"])}题，每题2分；简短回答：{len(pack["short"])}题，每题4分；口语任务：2题，每题10分。总分{sum(x["points"] for x in items)+20}分。','播放方法：先看题目；每段音频先听一遍，选答案或记关键词。有需要时教师再播放一次；第二次后交卷。不要看朗读稿。']
+    listening_points=sum(x['points'] for x in items if x['type']=='mc')
+    s=[f'# {pack["title"]}｜学生审阅稿／未发布','','姓名：________　班级：________','',f'听力选择题：{len(pack["mc"])}题，每题{4 if key=="w05" else 2}分，共{listening_points}分；口语任务：2题，每题10分，另计。','听力播放方法：先看题目、抓关键词；每段音频播放两遍，边听边记重点，再选答案并核对。不要看朗读稿。']
     if shared_audio: s.append('同一段音频可能对应多题；题号旁会注明，请听完该段后一起作答。')
     s.append('')
-    t=[f'# {pack["title"]}｜教师审阅稿／未发布','',f'时间：{pack["minutes"]}。选择题自动核分；简答与口语人工核分。', '音频仍需教师逐题亲听；播放次数为本班诊断安排，并非 TOCFL 官方统一规则。', '','## 逐题朗读稿、答案与依据','']
+    t=[f'# {pack["title"]}｜教师审阅稿／未发布','',f'时间：{pack["minutes"]}。选择题自动核分；简答与口语人工核分。', '本次Google Form范围为25道听力单选题（每题4分，共100分）；口语两题每题10分，单独计分，不纳入Form。', '音频仍需教师逐题亲听；建议每段音频播放两遍。播放安排是本班诊断方案，并非 TOCFL 官方统一规则。', '','## 逐题朗读稿、答案与依据','']
     for i,it in enumerate(items,1):
         d=AUDIOS[it['audio_id']]
         group=audio_groups[it['audio_id']]
@@ -118,7 +142,7 @@ for key, pack in PACKS.items():
         ans=it['options'][it['answer_index']] if it['type']=='mc' else it['answer']
         ans_display=ans.rstrip('。.')+'。'
         shared_play=[f'本音段也对应第{"、".join(str(n) for n in group if n!=i)}题；集中播放一次后作答，必要时整段重放一次。'] if len(group)>1 else []
-        t += [f'### {i}. {it["audio_id"]}｜{it["focus"]}',f'题目：{it["prompt"]}',f'题库角色标记稿（供教师辨识人物；非音档逐字稿）：{d["source_text"]}',f'实际送入语音模型的文本（manifest `speech_units`；未亲听核实输出）：{" / ".join(d["speech_units"])}',f'答案：{ans_display}',f'依据：上述题库文本中的直接陈述；课程范围 {", ".join(it["lesson_keys"])}。', *shared_play, '播放：一遍；需要诊断重听时再放一遍并记录。','']
+        t += [f'### {i}. {it["audio_id"]}｜{it["focus"]}',f'题目：{it["prompt"]}',f'题库角色标记稿（供教师辨识人物；非音档逐字稿）：{d["source_text"]}',f'实际送入语音模型的文本（manifest `speech_units`；未亲听核实输出）：{" / ".join(d["speech_units"])}',f'答案：{ans_display}',f'依据：上述题库文本中的直接陈述；课程范围 {", ".join(it["lesson_keys"])}。', *shared_play, '播放两遍；先看题目抓关键词，边听边记要点，再核对答案。','']
     s+=['## 口语任务','','根据教师给的两张不同资料卡，和同伴轮流问答。老师会记录每个人的表现。','']
     t+=['## 口语任务与量表','']
     student_oral={
@@ -145,8 +169,9 @@ for key, pack in PACKS.items():
             role_note='B类角色稿的“姓名：”在合成输入改成“姓名，”；可能听到姓名前缀，待亲听' if d['section']=='B' else '无B类角色前缀差异'
             w.writerow([it['id'],aid,str(p.relative_to(ROOT)),dur,rate,ch,bits,peak,rms,d['source_text'],' / '.join(d['speech_units']),role_note,'题号音频清单.jsonl',status,'题干/答案已对照两个文本版本；未完成独立语音识别','待教师亲听'])
     with (out/'score-sheet.csv').open('w',newline='',encoding='utf-8-sig') as f:
-        w=csv.writer(f);w.writerow(['学生姓名','学号']+[it['id']+f'/{it["points"]}' for it in items]+(['口语1内含-语音声调项/2（不可另加）'] if key=='w07/stage' else [])+['口语1/10','口语2/10','总分/'+str(sum(x['points'] for x in items)+20),'首听正确数','重听后正确数','教师备注'])
-    qa=[f'#{" "}{pack["title"]}｜核对记录', '', f'- 题数：{len(pack["mc"])}道单选、{len(pack["short"])}道简答、2道口语；总分{sum(x["points"] for x in items)+20}。', '- 单选每题一个指定正确项；教师卷保留朗读稿与答案。简答保留意义相同表达的人工核分空间。', '- 所引用 WAV 已逐项通过 `wave` 容器解码并登记采样率、时长等；尚未做主观音质、语速、发音逐题亲听，因此不能标“声音合格”。', '- 未建立 Google Form；`items.json` 与 `audio-map.csv` 可用于录入未发布审阅表单。', '- 教材 OCR 与题库仅作交叉依据，逐课 canonical source 缺失；教师应对照原教材与当前实际进度做最终内容核对。', '- 状态：审阅稿／未发布；无 20-approved 或 40-release 变更。']
+        w=csv.writer(f);score_items=[it for it in items if it['type']=='mc'] if key=='w05' else items;total=sum(x['points'] for x in score_items)+(20 if pack['oral'] and key!='w05' else 0);w.writerow(['学生姓名','学号']+[it['id']+f'/{it["points"]}' for it in score_items]+(['口语1内含-语音声调项/2（不可另加）'] if key=='w07/stage' else [])+(['口语1/10','口语2/10'] if key!='w05' else ['口语（另计，不纳入Form）'])+['总分/'+str(total),'首听正确数','重听后正确数','教师备注'])
+    qa=[f'# {pack["title"]}｜核对记录', '', f'- 题数：{len(pack["mc"])}道单选、{len(pack["short"])}道简答、2道口语；总分{sum(x["points"] for x in items)+20}。', '- 单选每题一个指定正确项；教师卷保留朗读稿与答案。简答保留意义相同表达的人工核分空间。', '- 所引用 WAV 已逐项通过 `wave` 容器解码并登记采样率、时长等；尚未做主观音质、语速、发音逐题亲听，因此不能标“声音合格”。', '- 未建立 Google Form；`items.json` 与 `audio-map.csv` 可用于录入未发布审阅表单。', '- 教材 OCR 与题库仅作交叉依据，逐课 canonical source 缺失；教师应对照原教材与当前实际进度做最终内容核对。', '- 状态：审阅稿／未发布；无 20-approved 或 40-release 变更。']
+    if key == 'w05': qa = [f'# {pack["title"]}｜核对记录', '', f'- 题数：{len(pack["mc"])}道单选，听力共{sum(x["points"] for x in items if x["type"]=="mc")}分；另有2道口语，各10分。', '- 本次Google Form范围为25道听力单选题，每题4分、共100分；口语任务不纳入Form。', '- 每道单选只有一个指定正确项；题目和选项依据听力稿中的直接信息改写，未复制外部范题。', '- 所引用 WAV 已逐项通过 `wave` 容器解码并登记采样率、时长等；尚未做主观音质、语速、发音逐题亲听，因此不能标“声音合格”。', '- Form尚未建立；`items.json` 与 `audio-map.csv` 可用于录入未发布审阅表单。', '- 教材 OCR 与题库仅作交叉依据，逐课 canonical source 缺失；教师应对照原教材与当前实际进度做最终内容核对。', '- 状态：审阅稿／未发布；无 20-approved 或 40-release 变更。']
     b_ids=sorted({it['audio_id'] for it in items if AUDIOS[it['audio_id']]['section']=='B'})
     qa.append(f'- B类引用逐一核对 manifest 的角色标记稿与实际合成输入：{", ".join(b_ids)}。这些音档的合成输入把“姓名：”改为“姓名，”，会影响听到的说话人提示；教师卷和音频表分列两个版本。此处仅确认输入文本，不声称已听到或已验收最终声音。')
     if key in ('w05','w06'):qa.append('- 两课各有单独听力题；口语任务明确整合两课。')

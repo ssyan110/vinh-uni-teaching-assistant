@@ -375,6 +375,37 @@ def check_content_approval(lesson_key: str | None, offering_id: str | None = Non
                                 scope="lesson-content")
 
 
+def check_classroom_html_draft(lesson_key: str | None, output_dir: str | None = None,
+                               offering_id: str | None = None) -> dict[str, Any]:
+    """Validate approved inputs and a lesson-local HTML draft destination only."""
+    blockers = list(check_content_approval(lesson_key, offering_id)["blockers"])
+    target = None
+    try:
+        if not lesson_key or not offering_id:
+            raise ValueError("classroom-html requires explicit lesson_key and offering_id")
+        context = resolve_lesson_context(PROJECT_ROOT, lesson_key, offering_id)
+        root = context.design_root / "open-slide-draft"
+        if not isinstance(output_dir, str) or not output_dir.strip():
+            raise ValueError("an explicit classroom HTML draft output directory is required")
+        raw = Path(output_dir)
+        relative = raw.relative_to(PROJECT_ROOT).as_posix() if raw.is_absolute() else output_dir
+        target, _ = resolve_relative_path(PROJECT_ROOT, relative, required_root=root)
+        if target == root or (target.exists() and not target.is_dir()):
+            raise ValueError("output must be a named directory below open-slide-draft")
+        if any(part in {"20-approved", "30-qa", "40-release", "90-archive", "archive"}
+               for part in target.relative_to(context.design_root).parts):
+            raise ValueError("protected directory names are not draft outputs")
+    except (ValueError, TypeError, OSError, LessonContextError) as error:
+        blockers.append(f"classroom HTML draft: {error}")
+    return with_blocker_records({
+        "purpose": "classroom-html", "stage": "draft", "lesson_key": lesson_key,
+        "offering_id": offering_id, "output_dir": str(target) if target else None,
+        "status": "blocked" if blockers else "ready", "blockers": blockers,
+        "write_performed": False, "artifact_state": "design_draft",
+        "approval_granted": False, "release_supported": False,
+    }, scope="draft/classroom-html")
+
+
 def check_lesson_ppt_draft(lesson_key: str | None, output_dir: str | None = None) -> dict[str, Any]:
     """Gate a lesson-specific PPTX draft without granting authority.
 
@@ -551,17 +582,24 @@ def main() -> int:
     parser.add_argument("--offering-id")
     parser.add_argument("--exam-id")
     args = parser.parse_args()
-    if args.purpose == "assessment-audio":
-        from assessment_audio_gate import check_assessment_audio
-        result = check_assessment_audio(PROJECT_ROOT, args.exam_id, args.output_dir,
+    if args.purpose in {"assessment-audio", "assessment-audio-current"}:
+        from assessment_audio_gate import check_assessment_audio, check_current_assessment_audio
+        assessment_checker = check_current_assessment_audio if args.purpose == "assessment-audio-current" else check_assessment_audio
+        result = assessment_checker(PROJECT_ROOT, args.exam_id, args.output_dir,
                                         args.offering_id, args.lesson_key)
         if args.stage != "authority":
             result["blockers"].append("assessment-audio uses its isolated exam route, not the lesson draft route")
             result["status"] = "blocked"
     elif args.exam_id is not None:
-        result = {"status": "blocked", "blockers": ["exam-id only applies to assessment-audio"]}
+        result = {"status": "blocked", "blockers": ["exam-id only applies to assessment-audio or assessment-audio-current"]}
     elif args.purpose == "content-approval":
         result = check_content_approval(args.lesson_key, args.offering_id)
+    elif args.purpose == "classroom-html":
+        result = check_classroom_html_draft(args.lesson_key, args.output_dir, args.offering_id)
+        if args.stage != "draft":
+            result["blockers"].append("classroom-html supports draft preflight only; authority/release is not implemented")
+            result["status"] = "blocked"
+            result["blocker_records"] = blocker_records(result["blockers"], scope="classroom-html")
     elif args.stage == "draft":
         if args.purpose != "pptx":
             result = {

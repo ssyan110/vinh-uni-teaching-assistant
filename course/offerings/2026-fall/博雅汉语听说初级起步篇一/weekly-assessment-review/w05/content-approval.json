@@ -1,0 +1,17 @@
+{
+  "assessment_id": "W05-L11L12-20261015",
+  "approved_by": "Adam",
+  "approval_date": "2026-10-15",
+  "recorded_at": "2026-10-15T06:07:14.784530+00:00",
+  "user_evidence": "已批准測驗",
+  "evidence_context": "Current conversation: approval directly follows W05 lessons 11–12 review request.",
+  "scope": "Current W05 content, 25 listening choice questions; no new claim of teacher listening or classroom acceptance.",
+  "hashes": {
+    "items.json": "70971a85d9a45d4053e7945b218dbfb1e981443c64120e1299e8f4e891138eb3",
+    "student.md": "cf8ef6d162f084c31a875c7d8d3113a38780c13a0895c352fbc32aa16b77d105",
+    "teacher.md": "e5369839ba7cee1b61852b5afdbd2b8205c720b6ac5f75230c4416fd834ba7d0",
+    "audio-map.csv": "49b3152131066a8a3610059b2860d79f8fbaf362edc7da0d5b7a476dfe9cb07b"
+  },
+  "technical_manifest": "audio-manifest.json",
+  "human_audio_acceptance": false
+}

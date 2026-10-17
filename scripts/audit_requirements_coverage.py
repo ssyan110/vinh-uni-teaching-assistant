@@ -9,6 +9,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 REQUIREMENTS = ROOT / "PROJECT_REQUIREMENTS.md"
 REGISTRY = ROOT / "docs/workflow/requirements-registry.md"
+REQUIREMENT_ID = re.compile(r"[A-Z]+(?:-[A-Z]+)*-\d{3}")
 
 
 def _top_level_sections(text: str) -> list[str]:
@@ -41,6 +42,18 @@ def audit(root: Path = ROOT) -> dict[str, Any]:
     sections = _top_level_sections(requirements_text)
     rows = _registry_rows(registry_text)
     findings: list[dict[str, str]] = []
+    seen = set()
+    for row in rows:
+        rid = row["requirement_id"]
+        if not REQUIREMENT_ID.fullmatch(rid) or rid in seen:
+            findings.append({"code": "registry_invalid_id", "section": rid, "message": f"invalid or duplicate requirement ID: {rid}"})
+        seen.add(rid)
+        if not row["scope"] or not row["verification"] or "`" not in row["owner"] or row["status"] not in {"active", "legacy-reference", "migration-target"}:
+            findings.append({"code": "registry_invalid_metadata", "section": rid, "message": f"missing/invalid owner, scope, verification or status: {rid}"})
+    supplemental = re.findall(r"^##\s+(?!\d+\.\s)(.+)$", requirements_text, re.MULTILINE)
+    for heading in supplemental:
+        if not any(heading in row["owner"] for row in rows):
+            findings.append({"code": "registry_supplement_unmapped", "section": heading, "message": f"supplemental requirements heading has no exact registry owner mapping: {heading}"})
     if not sections or not rows:
         findings.append({"code": "coverage_input_empty", "section": "", "message": "requirements sections and registry rows must not be empty"})
     coverage: dict[str, list[str]] = {}
@@ -64,6 +77,7 @@ def audit(root: Path = ROOT) -> dict[str, Any]:
         "requirements_path": str(requirements_path),
         "registry_path": str(registry_path),
         "sections": sections,
+        "supplemental_sections": supplemental,
         "coverage": coverage,
         "findings": findings,
     }

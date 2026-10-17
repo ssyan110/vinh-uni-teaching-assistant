@@ -1,0 +1,26 @@
+{
+  "method": "ChatGPT via Codex in-app browser",
+  "source_chats": [
+    "https://chatgpt.com/c/6acb3190-a118-83ec-a771-a7699e50154c",
+    "https://chatgpt.com/c/6acb31cb-c8a8-83ec-b142-da3928efd09a"
+  ],
+  "images": [
+    {
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "title": "两个人，两个校门",
+      "file": "assets/story-lesson-09.png",
+      "sha256": "3272e7ed4efa9b005e9f7579816be01966912fd380926b52b91fe67a4167ee64"
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "title": "欢迎会少了什么？",
+      "file": "assets/story-lesson-10-v4.png",
+      "sha256": "93b7c379c8ff76a2ba1c7a6186227b038d19cb7a59d47ed89501b6232a45d192",
+      "panel_count": 6,
+      "continuity": "17:00 preparation; select fruit; add two cola bottles; pay for all items; home no cups; guest brings cups",
+      "approved_revision": "好的，可以。如果五格不够显示的话，可以用六格，甚至七格都可以。"
+    }
+  ],
+  "human_classroom_rehearsal": false,
+  "formal_registry_gate": "legacy combined lesson entry absent; retained blocker; explicitly authorized source HTML amendment only"
+}

@@ -1,0 +1,367 @@
+{
+  "lesson_key": "boya-elementary-i:lesson-09",
+  "offering_id": "2026-fall",
+  "mapping_scope": "existing weekly review CSV questions, not full publisher exercise coverage",
+  "questions": [
+    {
+      "question": 1,
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "type": "情境问答",
+      "question_text": "“你怎么去学校？”应该回答：",
+      "correct_answer": "我坐地铁去。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide5.xml",
+          "text": "第九课｜我们怎么去 05 怎么 教材 P58 怎么 zěnme 词类：代词 意思：thế nào; bằng cách nào 用法：怎么  +  动词 例句1：你怎么去学校？ 例句2：这个字怎么 读 ？ Audio 9-1"
+        },
+        {
+          "slide_xml": "ppt/slides/slide69.xml",
+          "text": "第九课｜我们怎么去 69 教材 P62、65 怎么去 ……？ 例句1：你怎么去学校？ 例句2：你怎么去动物园？ 用“怎么去”问三个问题。 1. ____________________ 2. ____________________ 3. ____________________"
+        },
+        {
+          "slide_xml": "ppt/slides/slide70.xml",
+          "text": "第九课｜我们怎么去 70 教材 P61、65 我坐／骑……去。 例句1：我坐地铁去学校。 例句2：我骑自行车去动物园。 说三句自己会怎么去。 1. ____________________ 2. ____________________ 3. ____________________"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 2,
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "type": "句子填空",
+      "question_text": "他每天___自行车去学校。",
+      "correct_answer": "骑",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide8.xml",
+          "text": "第九课｜我们怎么去 08 骑 教材 P58 骑 qí 词类：动词 意思：đi  bằng ;  cưỡi 用法：骑  +  自行车／马  /  摩托车 例句1：他骑自行车去学校。 例句2：我们骑车去吧。 Audio 9-1"
+        },
+        {
+          "slide_xml": "ppt/slides/slide31.xml",
+          "text": "第九课｜我们怎么去 31 自行车 教材 P59 自行车 zìxíngchē 词类：名词 意思：xe đạp 扩展 ： 台湾常说【脚踏车 】、【 单车 】 例句1：我有一辆自行车。 例句2：她骑自行车来学校上课。 Audio 9-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 3,
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "type": "句子填空",
+      "question_text": "我们___公共汽车去动物园吧。",
+      "correct_answer": "坐",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide7.xml",
+          "text": "第九课｜我们怎么去 07 坐 教材 P58 坐 zuò 词类：动词 意思：đi bằng; ngồi 用法：坐  +  交通工具 例句1：我坐地铁去学校。 例句2：我们坐公共汽车去吧。 Audio 9-1"
+        },
+        {
+          "slide_xml": "ppt/slides/slide27.xml",
+          "text": "第九课｜我们怎么去 27 公共汽车 教材 P59 公共汽车 gōnggòng qìchē 词类：名词 意思：xe buýt 扩展 ： 口语常说【公交车 】； 台湾常说【公车 】 例句1：我们坐公共汽车去。 例句2：这辆公共汽车去学校。 Audio 9-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 4,
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "type": "短句理解",
+      "question_text": "“去学校坐几号线？”问的是：",
+      "correct_answer": "地铁",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide9.xml",
+          "text": "第九课｜我们怎么去 09 线 教材 P58 线 xiàn 词类：名词 意思：tuyến 用法：地铁  +  数字  +  号线 例句1：这是地铁四号线。 例句2：去学校坐几号线？ 4号线 Audio 9-1"
+        },
+        {
+          "slide_xml": "ppt/slides/slide26.xml",
+          "text": "第九课｜我们怎么去 26 地铁 教材 P59 地铁 dìtiě 词类：名词 意思：tàu điện ngầm 例句1：我坐地铁去动物园。 例句2：学校旁边有地铁站。 Audio 9-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 5,
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "type": "情境问答",
+      "question_text": "“你住几号房间？”应该回答：",
+      "correct_answer": "三零五。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide6.xml",
+          "text": "第九课｜我们怎么去 06 号 教材 P58 号 hào 词类：名词 意思：số 常见词语 ： 几号／房间号／几号楼 例句1：你住几号房间？ 例句2：我住三号楼。 305 Audio 9-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 6,
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "type": "选正确句",
+      "question_text": "问房间号，哪一句对？",
+      "correct_answer": "你住几号房间？",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide6.xml",
+          "text": "第九课｜我们怎么去 06 号 教材 P58 号 hào 词类：名词 意思：số 常见词语 ： 几号／房间号／几号楼 例句1：你住几号房间？ 例句2：我住三号楼。 305 Audio 9-1"
+        },
+        {
+          "slide_xml": "ppt/slides/slide20.xml",
+          "text": "第九课｜我们怎么去 20 号码 教材 P58 号码 hàomǎ 词类：名词 意思：số; mã số 常见短语 ： 手机号码 ； 电话号码 ； 房间号码 例句1：你的手机号码是多少？ 例句2：请再说一次房间号码。 3106 Audio 9-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 7,
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "type": "号码读法",
+      "question_text": "说练习号码“3106”时，“1”常读：",
+      "correct_answer": "幺（yāo）",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises.",
+      "ocr_evidence": {
+        "path": ".tmp/ocr-elementary-i/page-071.txt",
+        "sha256": "37fd115c24bc8cfa8913505a188bd16b8be4fe03d36d6fa71a0e5ca5f1821752",
+        "printed_page": 60
+      }
+    },
+    {
+      "question": 8,
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "type": "情境问答",
+      "question_text": "甲：我们几点见？乙：___",
+      "correct_answer": "九点见。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide3.xml",
+          "text": "第九课｜我们怎么去 03 学完这课后，我能…… 1 听懂号码、时间和见面的地方 。 2 问别人怎么去、几点见。 3 说出自己去学校的方法 。 4 准备一次和朋友出门的对话 。"
+        },
+        {
+          "slide_xml": "ppt/slides/slide57.xml",
+          "text": "第九课｜我们怎么去 57 我们怎么去 教材 P65 打开教材P65，听录音。 去哪儿：________________ 怎么去：________________ 几点、在哪儿见：________________ Audio 9-10"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 9,
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "type": "情境问答",
+      "question_text": "甲：我们在哪儿见？乙：___",
+      "correct_answer": "在学校东门。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide14.xml",
+          "text": "第九课｜我们怎么去 14 东门 教材 P58 东门 dōngmén 词类：名词 意思：cổng phía đông 扩展：东 / 西 / 南 / 北    +    门 例句1：我们在东门见吧。 例句2：学校北门在那儿。 东门 Audio 9-1"
+        },
+        {
+          "slide_xml": "ppt/slides/slide57.xml",
+          "text": "第九课｜我们怎么去 57 我们怎么去 教材 P65 打开教材P65，听录音。 去哪儿：________________ 怎么去：________________ 几点、在哪儿见：________________ Audio 9-10"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 10,
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "type": "情境问答",
+      "question_text": "甲：星期六你有时间吗？乙：___",
+      "correct_answer": "没有，我有课。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide25.xml",
+          "text": "第九课｜我们怎么去 25 星期六 教材 P58 星期六 xīngqīliù 词类：名词 意思：thứ bảy 例句1：星期六你有时间吗？ 例句2：我们星期六去动物园，你去吗？ 星期六 一 二 三 四 五 六 日 Audio 9-1"
+        },
+        {
+          "slide_xml": "ppt/slides/slide71.xml",
+          "text": "第九课｜我们怎么去 71 教材 P64、68 ……有时间吗？ 例句1：星期六你有时间吗？ 例句2：明天下午你有时间吗？ 准备三个约时间的问题。 1. ____________________ 2. ____________________ 3. ____________________"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 11,
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "type": "句子填空",
+      "question_text": "老师___学生都在办公室。",
+      "correct_answer": "和",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide18.xml",
+          "text": "第九课｜我们怎么去 18 和 教材 P58 和 hé 词类：连词 意思：và 用法 ： 人    +    和    +  人    +    做什么 名词1   +    和    +   名词2 例句1：我和朋友去学校。 例句2：桌子上有书和笔。 Audio 9-1"
+        },
+        {
+          "slide_xml": "ppt/slides/slide72.xml",
+          "text": "第九课｜我们怎么去 72 教材 P62 A 和 B …… 例句1：我和朋友去动物园。 例句2：老师和学生在办公室。 用“和”说三句话。 1. ____________________ 2. ____________________ 3. ____________________"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 12,
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "type": "句子填空",
+      "question_text": "请___我一支笔。",
+      "correct_answer": "给",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide11.xml",
+          "text": "第九课｜我们怎么去 11 给 教材 P58 给 gěi 词类：动词 意思：đưa; cho 用法：给  +  人  +  东西 例句1：请给我一本书。 例句2：我给朋友一支笔。 Audio 9-1"
+        },
+        {
+          "slide_xml": "ppt/slides/slide73.xml",
+          "text": "第九课｜我们怎么去 73 教材 P58、68 A 给 B …… 例句1：请给我一本书。 例句2：我给朋友一支笔。 用“给”说三句话。 1. ____________________ 2. ____________________ 3. ____________________"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 13,
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "type": "短句理解",
+      "question_text": "“学校旁边有商店。”商店在哪儿？",
+      "correct_answer": "学校旁边。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide17.xml",
+          "text": "第九课｜我们怎么去 17 旁边 教材 P58 旁边 pángbiān 词类：名词 意思：bên cạnh 用法 ： ( 在 )   +    地方 / 人 / 东西    +   ( 的 )   +    旁边 例句1：我坐在朋友的旁边。 例句2：学校旁边有商店。 Audio 9-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 14,
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "type": "情境表达",
+      "question_text": "想和朋友加微信，可以说：",
+      "correct_answer": "我加一下儿你的微信吧。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide19.xml",
+          "text": "第九课｜我们怎么去 19 加 教材 P58 加 jiā 词类：动词 意思：thêm; kết bạn (trên mạng xã hội) 使用场合：请求加联系方式 用法：加  +  人的  +  微信 / Zalo / 脸书 例句1：我可以加你的脸书吗？ 例句2：请加一下儿我的微信。 Audio 9-1"
+        },
+        {
+          "slide_xml": "ppt/slides/slide67.xml",
+          "text": "第九课｜我们怎么去 67 重点句子（二） 教材 P68 4　他不在办公室。 5　我加一下儿你的微信吧。 6　这样吧，快递你给我朋友吧。"
+        },
+        {
+          "slide_xml": "ppt/slides/slide74.xml",
+          "text": "第九课｜我们怎么去 74 教材 P63、68 动词   +   一下 儿 …… 例句1：我加一下儿你的微信吧。 例句2：请看一下儿这个号码。 用“一下儿”说三句话。 1. ____________________ 2. ____________________ 3. ____________________"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 15,
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "type": "短句理解",
+      "question_text": "“我不知道他的电话号码。”表示：",
+      "correct_answer": "我不能说出他的电话号码。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide20.xml",
+          "text": "第九课｜我们怎么去 20 号码 教材 P58 号码 hàomǎ 词类：名词 意思：số; mã số 常见短语 ： 手机号码 ； 电话号码 ； 房间号码 例句1：你的手机号码是多少？ 例句2：请再说一次房间号码。 3106 Audio 9-1"
+        },
+        {
+          "slide_xml": "ppt/slides/slide23.xml",
+          "text": "第九课｜我们怎么去 23 知道 教材 P58 知道 zhīdào 词类：动词 意思：biết 用法：知道  +  人／地方／号码  /  消息 注意 ： 不能说【知道  +  吃 / 喝 】 。 例如 ：【 我知道喝咖啡 】、【 我知道吃鱼露 】。 例句1：我知道老师在哪儿。 例句2：我不知道他的号码。 Audio 9-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 16,
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "type": "短句理解",
+      "question_text": "“我们坐火车去上海。”他们怎么去？",
+      "correct_answer": "坐火车。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide30.xml",
+          "text": "第九课｜我们怎么去 30 火车 教材 P59 火车 huǒchē 词类：名词 意思：tàu hỏa 例句1：我坐火车去上海。 例句2：他明天坐火车来荣市。 Audio 9-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 17,
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "type": "情境表达",
+      "question_text": "我们星期五有课。想改到星期六去，可以说：",
+      "correct_answer": "这样吧，我们星期六去。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide25.xml",
+          "text": "第九课｜我们怎么去 25 星期六 教材 P58 星期六 xīngqīliù 词类：名词 意思：thứ bảy 例句1：星期六你有时间吗？ 例句2：我们星期六去动物园，你去吗？ 星期六 一 二 三 四 五 六 日 Audio 9-1"
+        },
+        {
+          "slide_xml": "ppt/slides/slide76.xml",
+          "text": "第九课｜我们怎么去 76 教材 P66、68 这样吧，我们…… 例句1：这样吧，我们明天去。 例句2：这样吧，我们坐地铁去。 用“这样吧”说三个办法。 1. ____________________ 2. ____________________ 3. ____________________"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 18,
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "type": "短句理解",
+      "question_text": "“我去办公室找老师。”我去办公室做什么？",
+      "correct_answer": "找老师。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide24.xml",
+          "text": "第九课｜我们怎么去 24 办公室 教材 P58 办公室 bàngōngshì 词类：名词 意思：văn phòng 例句1：老师在办公室。 例句2：我去办公室找老师。 Audio 9-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 19,
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "type": "越南文词义",
+      "question_text": "“公共汽车”是越南语的：",
+      "correct_answer": "xe buýt",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide27.xml",
+          "text": "第九课｜我们怎么去 27 公共汽车 教材 P59 公共汽车 gōnggòng qìchē 词类：名词 意思：xe buýt 扩展 ： 口语常说【公交车 】； 台湾常说【公车 】 例句1：我们坐公共汽车去。 例句2：这辆公共汽车去学校。 Audio 9-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 20,
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "type": "句意功能",
+      "question_text": "“我们骑自行车去吧。”句末的“吧”表示：",
+      "correct_answer": "建议。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide75.xml",
+          "text": "第九课｜我们怎么去 75 教材 P63、68 我们……吧。 例句1：我们星期六去吧。 例句2：我们坐公共汽车去吧。 用“吧”说三个建议。 1. ____________________ 2. ____________________ 3. ____________________"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "status": "content_review_ready",
+  "user_edit_sha256_verified": true,
+  "activities": 12,
+  "integrated_original_questions": 3,
+  "proposed_pages": 21,
+  "teacher_reading_activities": 7,
+  "reading_messages": 9,
+  "all_activities_max_two_pages": true,
+  "deleted_activity_text_removed": true,
+  "official_sources": [
+    {
+      "title": "TOCFL官方口语测验简介与题型",
+      "url": "https://tocfl.edu.tw/tocfl/index.php/test/speaking/list/1",
+      "use": "回答问题、经验描述、陈述意见；课堂题不等同官方模拟题"
+    },
+    {
+      "title": "HSKK官方评分说明（自测用）",
+      "url": "https://www.chinesetest.cn/userfiles/file/HSKK-pingfen.pdf",
+      "use": "回答问题重视切题、内容和表达；不把HSK分组等同HSKK等级"
+    }
+  ],
+  "scope": "Markdown and JSON only; no courseware generation",
+  "review_boundary": "No actual classroom comprehension test; L6-8 theme grounding only, exact taught vocabulary not certified"
+}

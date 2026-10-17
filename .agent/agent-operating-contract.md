@@ -12,7 +12,7 @@ It does not redefine lesson approval, teaching content, QA or release authority.
 
 Before changing an artifact, the agent must identify:
 
-1. The exact `offering_id`, `textbook_id`, `lesson_id` and `lesson_key`.
+1. The scope (project, tool, course, lesson or assessment) and explicit identifier. Lesson work requires offering_id, textbook_id, lesson_id and lesson_key; other work must not invent lesson identity.
 2. The source-of-truth files and protected authority paths.
 3. The intended artifact, allowed output root and observable success criteria.
 4. The deterministic checks, artifact-level checks and human gates required.

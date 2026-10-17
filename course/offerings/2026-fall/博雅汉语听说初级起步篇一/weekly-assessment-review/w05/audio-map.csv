@@ -1,22 +1,16 @@
-﻿item_id,audio_id,file,seconds,sample_rate_hz,channels,bit_depth,peak_ratio,rms_ratio,role_marked_source_text,synthesis_input_speech_units,role_label_difference,script_source,technical_status,semantic_status,human_playback_status
-W05-01,E11-A01,OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第11课-明天天气怎么样/A-听辨与理解/E11-01.wav,2.56,24000,1,16,0.500,0.107,明天最高十五度，最低五度。,明天最高十五度，最低五度。,无B类角色前缀差异,题号音频清单.jsonl,PCM可解码；待教师亲听,题干/答案已对照两个文本版本；未完成独立语音识别,待教师亲听
-W05-02,E11-A04,OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第11课-明天天气怎么样/A-听辨与理解/E11-04.wav,3.04,24000,1,16,0.500,0.144,明天有小雨，今天是阴天，没有雨。,明天有小雨，今天是阴天，没有雨。,无B类角色前缀差异,题号音频清单.jsonl,PCM可解码；待教师亲听,题干/答案已对照两个文本版本；未完成独立语音识别,待教师亲听
-W05-03,E12-A01,OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第12课-我正在等公共汽车呢/A-听辨与理解/E12-01.wav,2.23,24000,1,16,0.500,0.127,我正在车站等公共汽车呢。,我正在车站等公共汽车呢。,无B类角色前缀差异,题号音频清单.jsonl,PCM可解码；待教师亲听,题干/答案已对照两个文本版本；未完成独立语音识别,待教师亲听
-W05-04,E12-A02,OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第12课-我正在等公共汽车呢/A-听辨与理解/E12-02.wav,2.76,24000,1,16,0.500,0.140,我们从八点到十点上汉语课。,我们从八点到十点上汉语课。,无B类角色前缀差异,题号音频清单.jsonl,PCM可解码；待教师亲听,题干/答案已对照两个文本版本；未完成独立语音识别,待教师亲听
-W05-05,E11-B01,OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第11课-明天天气怎么样/B-听对话/E11-07-08.wav,11.32,24000,1,16,0.500,0.075,"小林：明天去长城吧。
-小王：天气预报说明天风很大，星期日晴天。
-小林：那星期日去吧。",小林，明天去长城吧。 / 小王，天气预报说明天风很大，星期日晴天。 / 小林，那星期日去吧。,B类角色稿的“姓名：”在合成输入改成“姓名，”；可能听到姓名前缀，待亲听,题号音频清单.jsonl,PCM可解码；待教师亲听,题干/答案已对照两个文本版本；未完成独立语音识别,待教师亲听
-W05-06,E12-B01,OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第12课-我正在等公共汽车呢/B-听对话/E12-07-08.wav,12.95,24000,1,16,0.500,0.093,"小林：你在哪儿？
-小王：在车站。
-小林：你在等车吗？
-小王：对，车还没来。请告诉老师，我晚一会儿到。",小林，你在哪儿？ / 小王，在车站。 / 小林，你在等车吗？ / 小王，对，车还没来。请告诉老师，我晚一会儿到。,B类角色稿的“姓名：”在合成输入改成“姓名，”；可能听到姓名前缀，待亲听,题号音频清单.jsonl,PCM可解码；待教师亲听,题干/答案已对照两个文本版本；未完成独立语音识别,待教师亲听
-W05-07,E11-C01,OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第11课-明天天气怎么样/C-听后填写/E11-15-17.wav,11.36,24000,1,16,0.500,0.071,请听预报：星期五阴天，最高二十度，最低十二度；星期六上午有雨，下午晴天，最高二十三度。想去逛街的朋友，星期六下午可以去。,请听预报：星期五阴天，最高二十度，最低十二度；星期六上午有雨，下午晴天，最高二十三度。想去逛街的朋友，星期六下午可以去。,无B类角色前缀差异,题号音频清单.jsonl,PCM可解码；待教师亲听,题干/答案已对照两个文本版本；未完成独立语音识别,待教师亲听
-W05-08,E12-C02,OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第12课-我正在等公共汽车呢/C-听后填写/E12-18-20.wav,9.96,24000,1,16,0.500,0.106,我们每个星期三下午看中文电影，从两点到四点。今天星期三，可是老师有事，电影改在星期四下午看，时间不变。,我们每个星期三下午看中文电影，从两点到四点。今天星期三，可是老师有事，电影改在星期四下午看，时间不变。,无B类角色前缀差异,题号音频清单.jsonl,PCM可解码；待教师亲听,题干/答案已对照两个文本版本；未完成独立语音识别,待教师亲听
-W05-09,E11-B04,OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第11课-明天天气怎么样/B-听对话/E11-13-14.wav,10.12,24000,1,16,0.500,0.069,"小林：现在外边下雪吗？
-小王：没有，下雨呢。
-小林：很冷吗？
-小王：不冷，十二度。",小林，现在外边下雪吗？ / 小王，没有，下雨呢。 / 小林，很冷吗？ / 小王，不冷，十二度。,B类角色稿的“姓名：”在合成输入改成“姓名，”；可能听到姓名前缀，待亲听,题号音频清单.jsonl,PCM可解码；待教师亲听,题干/答案已对照两个文本版本；未完成独立语音识别,待教师亲听
-W05-10,E12-B04,OmniVoice/audio/博雅汉语测验音频/初级起步篇I/第12课-我正在等公共汽车呢/B-听对话/E12-13-14.wav,13.60,24000,1,16,0.500,0.078,"小林：下午的课从几点到几点？
-小王：从一点到三点。
-小林：那三点一刻一起去食堂？
-小王：好，下课以后去。",小林，下午的课从几点到几点？ / 小王，从一点到三点。 / 小林，那三点一刻一起去食堂？ / 小王，好，下课以后去。,B类角色稿的“姓名：”在合成输入改成“姓名，”；可能听到姓名前缀，待亲听,题号音频清单.jsonl,PCM可解码；待教师亲听,题干/答案已对照两个文本版本；未完成独立语音识别,待教师亲听
+﻿audio_id,file,seconds,lesson,title,source_type,question_range,question_ids,sha256,technical_status,semantic_status,human_playback_status
+BOOK-11-9,audio/textbook-11-9.mp3,40.39,11,第11课课本听力 11-9,textbook_original,1–2,W05-OF3-01，W05-OF3-02,c3fbb262fdbb37c49c149df30957f57e00fc59483625958d21a1ff094d038d1b,decoded,answer/source reviewed; human listening not claimed,not claimed
+BOOK-11-10,audio/textbook-11-10.mp3,52.9,11,第11课课本听力 11-10,textbook_original,3–5,W05-OF3-03，W05-OF3-04，W05-OF3-05,20f2de65d2c7b710756a0c4f77cede029271d3bbbcdcb97f38018632de8ca217,decoded,answer/source reviewed; human listening not claimed,not claimed
+BOOK-11-11,audio/textbook-11-11.mp3,40.54,11,第11课课本听力 11-11,textbook_original,6–8,W05-OF3-06，W05-OF3-07，W05-OF3-08,d692f6b2d2b6e610d510ee04e056154e54da4b9bde8ae2fd2bbe999abf27d4c3,decoded,answer/source reviewed; human listening not claimed,not claimed
+BOOK-12-10,audio/textbook-12-10.mp3,46.32,12,第12课课本听力 12-10,textbook_original,9–10,W05-OF3-09，W05-OF3-10,033614362e9cb763118ab1448f07cbc1c85a99d24cbaff1412c1c4fec0225952,decoded,answer/source reviewed; human listening not claimed,not claimed
+BOOK-12-11,audio/textbook-12-11.mp3,43.21,12,第12课课本听力 12-11,textbook_original,11–12,W05-OF3-11，W05-OF3-12,dc508eaa7466e48228d227685c0aaa1339a1a59f2a0ea9b7ea593a44617c9cee,decoded,answer/source reviewed; human listening not claimed,not claimed
+BOOK-12-12,audio/textbook-12-12.mp3,50.68,12,第12课课本听力 12-12,textbook_original,13–14,W05-OF3-13，W05-OF3-14,0cabb8d190f973b4721d69f1207d451cf8d8eff80cdcc9996de0f484e9e90e0d,decoded,answer/source reviewed; human listening not claimed,not claimed
+TOCFL-A4-Q24,course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w05/official-v3/audio/TOCFL-A4-Q24.mp3,9.05,0,天气与散步,tocfl_official,15–16,W05-OF3-15，W05-OF3-16,c9c4d814352342c5f0c6c79aca2be1d2ac996949198ee2cc13dc8f2890dbcb58,decoded,answer/source reviewed; human listening not claimed,not claimed
+TOCFL-A5-Q35,course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w05/official-v3/audio/TOCFL-A5-Q35.mp3,10.9,0,四季天气,tocfl_official,17–18,W05-OF3-17，W05-OF3-18,9dc8cbad83b8f43267566429d6accc9cf24ff8a289d894894112c35dbc6db2d4,decoded,answer/source reviewed; human listening not claimed,not claimed
+TOCFL-A5-Q49,course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w05/official-v3/audio/TOCFL-A5-Q49.mp3,22.9,0,天热还出门吗,tocfl_official,19–19,W05-OF3-19,5aea042d10888203adad1f32bf0c0b7c80ac5840e8ec61a1dab96efd18ba5ac2,decoded,answer/source reviewed; human listening not claimed,not claimed
+TOCFL-A5-Q21,course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w05/official-v3/audio/TOCFL-A5-Q21.mp3,11.5,0,晚上还在工作,tocfl_official,20–20,W05-OF3-20,46d16c561e47f06012dad44af5f269bf96e79ed1b1d6e5218660eae66467534b,decoded,answer/source reviewed; human listening not claimed,not claimed
+TOCFL-A5-Q23,course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w05/official-v3/audio/TOCFL-A5-Q23.mp3,8.3,0,今天在哪里,tocfl_official,21–21,W05-OF3-21,0975ea21ab6b6e70c8d863ee7714ff9aa893ea7ca025c6b5b85ae42ab0ac358d,decoded,answer/source reviewed; human listening not claimed,not claimed
+TOCFL-A5-Q29,course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w05/official-v3/audio/TOCFL-A5-Q29.mp3,18.55,0,调整见面时间,tocfl_official,22–22,W05-OF3-22,302afbaad4f52fbbc645cd36ff7755d6ec6b61a6beb6099c358e918128daf454,decoded,answer/source reviewed; human listening not claimed,not claimed
+TOCFL-A4-Q29,course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w05/official-v3/audio/TOCFL-A4-Q29.mp3,30.75,0,改上游泳课,tocfl_official,23–23,W05-OF3-23,ec21a8037508f75586066ea4718d1be3dae0111c8e050b6a9a2bb11e9d047579,decoded,answer/source reviewed; human listening not claimed,not claimed
+TOCFL-A4-Q12,course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w05/official-v3/audio/TOCFL-A4-Q12.mp3,8.45,0,放假的活动,tocfl_official,24–24,W05-OF3-24,f68a4bbe38e50a1b005c8a392b5ae0ef0e8bf3dc2785160c2658a8098dd6d726,decoded,answer/source reviewed; human listening not claimed,not claimed
+TOCFL-A4-Q39,course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w05/official-v3/audio/TOCFL-A4-Q39.mp3,25.5,0,雨后晚上的活动,tocfl_official,25–25,W05-OF3-25,0896f2fdc95d990fa32459b247b9c3b201ba8ce633dad8537588cede6f39d1ef,decoded,answer/source reviewed; human listening not claimed,not claimed

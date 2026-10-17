@@ -16,12 +16,12 @@ class LessonIdentityTests(unittest.TestCase):
             for item in registry["lessons"]
             if item["lesson_number"] == 1
         }
-        self.assertEqual(
-            first_lessons,
+        self.assertTrue(
             {
                 "boya-quasi-intermediate-i:lesson-01",
                 "boya-intermediate-i:lesson-01",
-            },
+            }.issubset(first_lessons),
+            "The two independently scoped first lessons must remain registered; additional textbooks are valid.",
         )
 
     def test_registry_and_active_context_validate(self):

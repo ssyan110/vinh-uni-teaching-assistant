@@ -1,0 +1,20 @@
+{
+  "version": "two-page-v02",
+  "page_count": 30,
+  "activity_count": 14,
+  "period_minutes": [
+    50,
+    50,
+    50,
+    50
+  ],
+  "reference": "lessons/boya-elementary-i/lesson-09-10/10-design/openslide-image-first-20261006/lesson-09-10.html",
+  "reference_sha256": "b15e98e2c020c4455f106c7982365e003bf8f2e0cc14e5815f45d35931caac63",
+  "approved_input": "lessons/boya-elementary-i/lesson-11/10-design/storyboard/lesson-11-双页活动-v02.json",
+  "approved_input_sha256": "94b202c86a4bb3f3b070d60bc877861985da10c77e28e73c0fb234c74d4de696",
+  "html_sha256": "c775744592ffb74752ff1c814c45ff3832f843875cdc42a206d3c9fbb59d173f",
+  "cover": "reference DOM and CSS, content-only changes",
+  "route": "reference three-column DOM; six meaningful groups cover fourteen actual activities; image height adjusted for fit",
+  "comics": "approved existing six-panel assets reused; necessary context and timestamps visible",
+  "stage": "design_draft; no authority/release promotion"
+}

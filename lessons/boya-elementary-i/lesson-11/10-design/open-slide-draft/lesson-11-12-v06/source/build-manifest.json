@@ -1,0 +1,36 @@
+{
+  "version": "v06",
+  "page_count": 21,
+  "activity_count": 14,
+  "approved_input": "lessons/boya-elementary-i/lesson-11/10-design/review-20261015/lesson-11-12-完整内容-v06.json",
+  "approved_sha256": "c60d671e7d4ad7b5892ac03f58b62b1198050c582ed21b80ed329c7d090276d9",
+  "reference": "lessons/boya-elementary-i/lesson-09-10/10-design/openslide-image-first-20261006/lesson-09-10.html",
+  "reference_sha256": "b15e98e2c020c4455f106c7982365e003bf8f2e0cc14e5815f45d35931caac63",
+  "html_sha256": "57b58971c05200d30a795c29ff29483de590a225844cfffe66879cad34d71ab6",
+  "stage": "content-approved design draft; no authority/release promotion",
+  "lesson_keys": [
+    "boya-elementary-i:lesson-11",
+    "boya-elementary-i:lesson-12"
+  ],
+  "teacher_pdf_pages": 6,
+  "teacher_messages": 8,
+  "resources": [
+    {
+      "path": "assets/story-lesson-11.png",
+      "sha256": "46ce5c8e276a606108ea4b7052e17333033965f633c4dd026fe5d9906f6f30be"
+    },
+    {
+      "path": "assets/story-lesson-12.png",
+      "sha256": "8c923a1c88db1e842c2a5d9d7774c4c7300a91a70bd71a20a76a63b344ba1c74"
+    },
+    {
+      "path": "assets/textbook-week-weather.png",
+      "sha256": "5a36de8e9702e84dc089480b367223d973e59c9434805ea3d77a6ca5274e1d16"
+    },
+    {
+      "path": "assets/cover-weather-daily-v06.png",
+      "sha256": "e4d954f25a02d3e63429d6424989b692a2857fc292bb0198435ee11c5a89baf7"
+    }
+  ],
+  "cover_generation_record": "source/cover-image-record.json"
+}

@@ -1,0 +1,39 @@
+{
+  "status": "technical_verified_for_preview",
+  "version": "two-page-v02",
+  "page_count": 30,
+  "activity_count": 14,
+  "activities_max_pages": 2,
+  "content_fidelity": "all approved goals, steps, both routes and outcomes exact; every actual input preserved",
+  "comics": "full six-panel images on page8 and22",
+  "student_comprehension_review": "author/facilitator and reader without chat context checks performed; task objects, questions, materials, recording and listener duties explicit. Not a student trial.",
+  "visual_review": "all30 screenshots reviewed; repairs: comic/footer space, updated schedule table headings, name and key phrase wrapping, listener recording fields moved before screen turn",
+  "geometry": "30 pages, no content below safe area, no missing images, no small projected text, no header overlap",
+  "homepage": "30 forward/29 backward, thumbnail jump22, arrow/space single-step, reduced-motion, return-first; keyboard navigation verified",
+  "final_motion_script_identical_to_full_playback_test": true,
+  "build": "passed; existing bundle-size warning only",
+  "tests": "2 workspace +3 sync regression checks passed",
+  "package": "all hashes and image decoding verified; offline local assets",
+  "not_done": [
+    "real student trial",
+    "teacher full-class rehearsal",
+    "formal authority/release promotion",
+    "new PPTX backup"
+  ],
+  "current_html_sha256": "651e91173268d0b3d2625f8974da43b99ef90c4c84cce87fc279d1219ba7ab7e",
+  "slide2_followup": {
+    "reason": "User rejected all-comic route images",
+    "change": "six native activity keywords, no images",
+    "homepage_render": "passed",
+    "other_29_pages": "unchanged DOM",
+    "build": "passed"
+  },
+  "solo_pdf_followup": {
+    "student_comics": "individual on pages7 and21",
+    "teacher_instructions": "individual; sampling, no peers or grouping",
+    "pdf": "2pages, four activities, six exact messages; KaiTi and Times New Roman embedded; both pages visually checked",
+    "homepage_solo_check": "passed",
+    "all30_geometry": "passed",
+    "package": "PDF included; all hashes match"
+  }
+}

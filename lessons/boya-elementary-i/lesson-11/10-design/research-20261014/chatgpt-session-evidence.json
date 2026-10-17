@@ -1,0 +1,30 @@
+{
+  "source": "actual ChatGPT webpage via native Chrome computer use",
+  "url": "https://chatgpt.com/c/6acf4f3a-7468-83ec-947d-defe144f5970?temporary-chat=true",
+  "mode": "Temporary chat; Unpersonalized",
+  "mode_ui_evidence": "This chat will ignore memory, plugins, and custom instructions, and it won’t appear in your history",
+  "sent": true,
+  "response_title": "《博雅汉语听说·初级起步篇I》第11—12课听说教学重构方案",
+  "response_status": "five completed responses observed; first and fifth saved; parts 2-4 extracted into edited review, full verbatim exports not confirmed",
+  "sources_observed": [
+    "CAST UDL Guidelines 3.0",
+    "EEF Oral Language Interventions",
+    "Vandergrift and Tafaghodtari 2010",
+    "Ellis 2003",
+    "Long 1996",
+    "Lyster and Ranta 1997"
+  ],
+  "new_rule_saved_to": [
+    "AGENTS.md",
+    "docs/classroom-html-standard-2026-10-07.md"
+  ],
+  "existing_deck_modified": false,
+  "memory_used": false,
+  "ui_blocker": null,
+  "saved_complete_part": "chatgpt-response-05.txt",
+  "old_deck_replaced": false,
+  "full_export_status": "partial; do not count response-02 duplicate as source",
+  "research_memory_used": false,
+  "workflow_memory_lookup_used": true,
+  "review_artifact": "lesson-11-12-学生页文案审阅-v02.md"
+}

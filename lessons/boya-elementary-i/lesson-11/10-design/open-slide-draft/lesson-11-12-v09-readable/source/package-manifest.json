@@ -1,0 +1,189 @@
+{
+  "version": "v09",
+  "stage": "design draft; no authority/release promotion",
+  "pages": 21,
+  "activities": 14,
+  "teacher_reading_pdf_pages": 6,
+  "files": [
+    {
+      "path": "lesson-11-12-实体课.html",
+      "sha256": "3ff376220782b1c31e706a44d8c9c539230625c0a930e852d2f3d43fee812ffb",
+      "bytes": 65096
+    },
+    {
+      "path": "lesson-11-12-教师朗读稿.pdf",
+      "sha256": "f31e09ff04e54ac9779b0b90b53d6113c937eee1d005555f19160b40649a4d3d",
+      "bytes": 105876
+    },
+    {
+      "path": "lesson-11-12-教师速用说明.md",
+      "sha256": "d358c0e582c8d52074f7ca826c2a002b16503745044e29b8a9bb7d159fbcb142",
+      "bytes": 14314
+    },
+    {
+      "path": "README.md",
+      "sha256": "0ac8a5f6fcaa6b9d8641a0707e5c6643e919be3158039f139d4eb17fa7f4419e",
+      "bytes": 929
+    },
+    {
+      "path": "assets/cover-weather-daily-v06.png",
+      "sha256": "e4d954f25a02d3e63429d6424989b692a2857fc292bb0198435ee11c5a89baf7",
+      "bytes": 1119698
+    },
+    {
+      "path": "assets/cover-weather-daily-v07.png",
+      "sha256": "e4d954f25a02d3e63429d6424989b692a2857fc292bb0198435ee11c5a89baf7",
+      "bytes": 1119698
+    },
+    {
+      "path": "assets/icon-atlas-generated.png",
+      "sha256": "9cc7ca138642f4b4bb31b81d0e2243b169c59b3dfc37608dcbc389efd86af6a1",
+      "bytes": 1323189
+    },
+    {
+      "path": "assets/icon-scenario-atlas-generated.png",
+      "sha256": "a9219a10d5fa359dfcb939130f9a4cf8a605f9ab009099a8f331bf2d5099c19b",
+      "bytes": 775740
+    },
+    {
+      "path": "assets/icons/book-pencil.png",
+      "sha256": "b97842336f3e54a843c0782393177e8bf20ed30638c0e8611cc9850282792a75",
+      "bytes": 107557
+    },
+    {
+      "path": "assets/icons/bus.png",
+      "sha256": "d48f52604b1f1129992c5a82f4ff6be185b0ab8b26afc1e11eb97bcc0cf0ea1a",
+      "bytes": 101741
+    },
+    {
+      "path": "assets/icons/calendar.png",
+      "sha256": "3da2f2dfa03ac5ace14b739b2887644e3e0fba67f843e12bebb6c5f91a894aa3",
+      "bytes": 123190
+    },
+    {
+      "path": "assets/icons/clock.png",
+      "sha256": "242d2a74471206e79f4b8503bd90bd933416d491915e6530199e5b7597767977",
+      "bytes": 157880
+    },
+    {
+      "path": "assets/icons/cloudy-v09.png",
+      "sha256": "7e7ca5c70479bcfd99461fecd3f13bfb646a4348b79ecd7056ce696cd7dd666f",
+      "bytes": 105473
+    },
+    {
+      "path": "assets/icons/conversation.png",
+      "sha256": "96491bb767d6e33d464f8957bed229cdf88eb566b50c59bb3d6806171bed7d3f",
+      "bytes": 183653
+    },
+    {
+      "path": "assets/icons/day-night.png",
+      "sha256": "aa17919d349d61ff7f6ea9721064cf2f580a83ad5edb2dd44d7632f909d38e42",
+      "bytes": 131359
+    },
+    {
+      "path": "assets/icons/fruit.png",
+      "sha256": "f0c506a501b7c180c221a61d9b89114e7f8f1279a84f57377ab3596f5c8c6265",
+      "bytes": 112851
+    },
+    {
+      "path": "assets/icons/listen.png",
+      "sha256": "3a16f13ea2c003a234c62f30f9fd4c019cc87e1ce97ad5ffa967ed080cfb133e",
+      "bytes": 206605
+    },
+    {
+      "path": "assets/icons/location.png",
+      "sha256": "ab0d5b82c428355936830dd4037f49d9524437ab2ed595572ca80b0a3ffe5244",
+      "bytes": 146323
+    },
+    {
+      "path": "assets/icons/notes.png",
+      "sha256": "1d0d9995b40db4470c4b203efb5568f8af800de91c9f5da7ef5de2460b6ae996",
+      "bytes": 121160
+    },
+    {
+      "path": "assets/icons/park.png",
+      "sha256": "bb9d06808c2cf8cf50c4e3b4e81f110274c7898d4b37b95336b1eccc6d4c02e7",
+      "bytes": 115953
+    },
+    {
+      "path": "assets/icons/partly-rain-v09.png",
+      "sha256": "5eb4e46fbb2c5b5cfaf6bb6dd0bcdb249be8ec432efe44565359142e82252e87",
+      "bytes": 155724
+    },
+    {
+      "path": "assets/icons/partly-rain.png",
+      "sha256": "290c322958cddf81315a2046279b443e99be5bd9cbdb955c5ff24ae9ab6f75d0",
+      "bytes": 136759
+    },
+    {
+      "path": "assets/icons/phone.png",
+      "sha256": "d3e791e0a9d2452965196998db07634a9ea10d2271896c66863a1036af29e108",
+      "bytes": 139425
+    },
+    {
+      "path": "assets/icons/rain-v09.png",
+      "sha256": "3ced6374045b96089fe021f822e9caddabde71e9ea5008a259806ec2647bc111",
+      "bytes": 126074
+    },
+    {
+      "path": "assets/icons/rain.png",
+      "sha256": "2ef794a1bc9661b73f0db9840e5214f5176db8dc784ecff0d30d04e5646b5216",
+      "bytes": 138585
+    },
+    {
+      "path": "assets/icons/school.png",
+      "sha256": "cdf2cfc3bd653ea0d4c4b2bfcdb41cce3eb4fbdc325a847be52f833269492060",
+      "bytes": 123885
+    },
+    {
+      "path": "assets/icons/shopping-bag.png",
+      "sha256": "72e7a2536b90c9cafbeea2b05fa232b78df87cf413b722e933dc429d684b9986",
+      "bytes": 105239
+    },
+    {
+      "path": "assets/icons/sun-rain.png",
+      "sha256": "2e5fe7dce4c57fa695e5fc3d667ab62a1937cdcd7eb0e71adde1a5d6620e8b44",
+      "bytes": 126003
+    },
+    {
+      "path": "assets/icons/sunny-v09.png",
+      "sha256": "42037b3023e370a2b68601e8ac85f3cecde8b106ff249d3db7a59f532114d412",
+      "bytes": 138313
+    },
+    {
+      "path": "assets/icons/sunny.png",
+      "sha256": "0a0417d7ae426b1fd0eb8ee4b4a8dadf1a45aba797c3f326888cfe9c1db88f31",
+      "bytes": 113462
+    },
+    {
+      "path": "assets/icons/walk.png",
+      "sha256": "e02752e12f4b978e1f610748172017fdd0732533a65a684923bb54ddb2024849",
+      "bytes": 143621
+    },
+    {
+      "path": "assets/icons/wallet.png",
+      "sha256": "e721e4b070c50e0aacc9e3d3a64fcb8577e2e2f240d984ddb122b50e4f872899",
+      "bytes": 81072
+    },
+    {
+      "path": "assets/story-lesson-11.png",
+      "sha256": "46ce5c8e276a606108ea4b7052e17333033965f633c4dd026fe5d9906f6f30be",
+      "bytes": 2556333
+    },
+    {
+      "path": "assets/story-lesson-12.png",
+      "sha256": "8c923a1c88db1e842c2a5d9d7774c4c7300a91a70bd71a20a76a63b344ba1c74",
+      "bytes": 2244297
+    },
+    {
+      "path": "assets/textbook-week-weather.png",
+      "sha256": "5a36de8e9702e84dc089480b367223d973e59c9434805ea3d77a6ca5274e1d16",
+      "bytes": 2750569
+    },
+    {
+      "path": "assets/weather-icons-v07.png",
+      "sha256": "00f7f9374161adc0936ac907e1f39a305ff7606528b1c1b781346f874cdf0df2",
+      "bytes": 1173779
+    }
+  ]
+}

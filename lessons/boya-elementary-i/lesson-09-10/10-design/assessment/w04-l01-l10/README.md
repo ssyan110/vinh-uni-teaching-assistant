@@ -5,7 +5,7 @@
 1. 先审阅teacher.md和grading-guide.md，再逐段试听音频。学生题目在student.md。
 2. 打开dashboard.html，33段音频依题序播放。可暂停、从头重听和切换；此页不含答案、逐字稿或Form编辑链接。
 3. 第1—3课填空音频内部已读两轮，整段播一次（第三音节不设题）；其余段播两次。未改变音频语速。
-4. 所有以后新测验登记同一管理总表：https://docs.google.com/spreadsheets/d/1fhKUHCsyEYvSMrCgw5bL8vtazuwX77DKoa0ZCsQgIso/edit 。旧25课表保持原样。
+4. 所有新测验登记在一年级综合测验中心：https://docs.google.com/spreadsheets/d/1fhKUHCsyEYvSMrCgw5bL8vtazuwX77DKoa0ZCsQgIso/edit 。旧25课管理表现已移入「旧版测验表归档（停止使用）」，仅保留历史记录，不得继续使用或写入。
 5. 新私有Form已经由浏览器负责方核对：姓名和学号必填、不计分；50测验题可留空；新答卷Sheet已关联。教师编辑入口与答卷入口见管理总表。旧Form/旧答卷未修改。
 6. 当前Kokoro v02候选版约60.08分钟；主Qwen v01约61.78分钟且已否决。两者都是规划估算，不是学生实际完成时长。用户保持原内容，自行调整前三节时间；第四节只测验。
 

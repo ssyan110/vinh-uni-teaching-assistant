@@ -1,9 +1,39 @@
 # Project scripts
 
+## Project and tool execution records
+
+For non-lesson work, `agent_loop.py init --scope project|tool|course|assessment --purpose audit --output-dir <project-local-evidence-directory>` creates an execution-only run. Do not pass a lesson/offering key. Course/assessment identities still belong in the task's scope/evidence; this execution record cannot authorize their production.
+
+Example (replace the run ID and criteria for the actual task):
+
+```sh
+python3 scripts/agent_loop.py init --run-id project-rules-review --scope project --purpose audit --artifact "Rules review" --output-dir docs/audits --success-criterion "Every finding has evidence and disposition"
+python3 scripts/agent_loop.py preflight --run-id project-rules-review
+```
+
+Preflight checks the execution boundary only and returns `production_authorized=false`. Record an attempt and hash-pinned evidence with the existing attempt/result commands. Completion describes the declared audit or maintenance work, never content approval. Protected source/authority/QA/release/archive output directories remain rejected.
+
+## Assessment audio review
+
+`production_gate.py --purpose assessment-audio-current --exam-id <registered-exam-id> --output-dir <registered-exam-directory>/audio-review-<run-id>` validates the current registered assessment's content approval hashes, identity, local audio bytes and question mapping. Omitting the exam ID selects `current_review_exam_id`. This is technical review only, not synthesis, publication or human listening acceptance. Changed approved inputs remain blocked until actual review; never rewrite approval hashes to pass.
+
+`--purpose assessment-audio` retains the explicitly historical W04 repair contract. It must not select current W04/W05 work or impose its old counts on them.
+
+## Classroom HTML and legacy PPTX
+
+```sh
+python3 scripts/production_gate.py --purpose classroom-html --stage draft --lesson-key boya-elementary-i:lesson-11 --offering-id 2026-fall --output-dir lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12
+```
+
+This is a read-only approved-input/output-boundary preflight. Follow `docs/workflow/classroom-html-lifecycle.md` for combined lessons, resource packaging, teacher materials, homepage QA and the unsupported formal HTML promotion/release boundary. It does not generate a deck or verify its rendered pages.
+
+`build_l23_pptx_drafts.js` defaults to online preparation. Its `--mode legacy-face` route and `verify_boya_face_to_face_order.py --mode legacy-face` are explicit maintenance routes for the old quasi-intermediate PPTX order contract, not the default future classroom workflow. Plain `Audio n-n` labels replace embedded audio; package verification rejects audio media/relationships/actions. Never run a builder simply to test routing.
+
+
 Canonical workflow contract: `docs/workflow/canonical-workflow-contract.md`
 Optimization roadmap: `docs/workflow/WORKFLOW_V2_OPTIMIZATION_SPEC.md`
 
-Use `lesson_key`-scoped commands and the canonical contract for all new work. This README documents command compatibility and implementation details; it does not redefine lifecycle or gate semantics.
+Use explicit task scope and the canonical contract for all new work. Lesson operations require `lesson_key`; project/tool maintenance does not invent one. This README documents command compatibility and implementation details; it does not redefine lifecycle or gate semantics.
 
 `lessonctl.py` is the normal agent-facing coordinator for the currently implemented
 preflight, compile, image-probe, build staging, and QA adapters. Its JSON results
@@ -30,10 +60,12 @@ The archived director-review snapshot is evidence only. Book-specific legacy gen
 
 ## Submission filenames
 
-New teacher-facing files use `lesson-<nn>-<用途>.<extension>` with a two-digit lesson number, hyphens, and a lowercase extension. The two classroom decks are always:
+New teacher-facing lesson files use `lesson-<nn>-<用途>.<extension>` with a two-digit lesson number, hyphens, and a lowercase extension. When the requested artifact is PPTX, the mode names are:
 
 - `lesson-01-在线预习.pptx`
 - `lesson-01-实体课.pptx`
+
+Future classroom decks use HTML/OpenSlide; the face-to-face PPTX is an optional static backup. These names do not require producing two PPTX files for every task.
 
 Teacher guides, prep cards, activity materials, previews, audio, CSV exports, and ZIP packages use the same `lesson-01-<用途>` prefix. Existing approved or archived files keep their original names because their paths and hashes are part of the recorded evidence; new releases must use the canonical names.
 

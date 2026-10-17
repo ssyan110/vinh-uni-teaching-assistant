@@ -1,0 +1,544 @@
+{
+  "status": "official_audio_v2_published",
+  "cohort": "BOYA-LS-E1-Y1S1-2026F",
+  "offering_id": "2026-fall",
+  "week": "w05",
+  "exam_id": "W05-L11L12-20261015",
+  "version": 2,
+  "lesson_keys": [
+    "boya-elementary-i:lesson-11",
+    "boya-elementary-i:lesson-12"
+  ],
+  "items": [
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A4-Q24",
+      "prompt": "现在的天气怎么样？",
+      "options": [
+        "很热，让人不舒服",
+        "很冷，而且下雪",
+        "凉快，让人觉得舒服",
+        "风很大，正在下雨"
+      ],
+      "answer_index": 2,
+      "focus": "天气感受",
+      "evidence": "女生回答凉快、舒服。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "id": "W05-OF2-01",
+      "question_id": "Y1-OF2-001",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A4-Q24",
+      "prompt": "女的现在想做什么？",
+      "options": [
+        "出去走走",
+        "回家睡觉",
+        "留在屋里看书",
+        "去买一件大衣"
+      ],
+      "answer_index": 0,
+      "focus": "按天气选择活动",
+      "evidence": "天气使她想外出散步。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11",
+        "boya-elementary-i:lesson-12"
+      ],
+      "id": "W05-OF2-02",
+      "question_id": "Y1-OF2-002",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q26",
+      "prompt": "冬天去找小明，应该注意什么？",
+      "options": [
+        "带上游泳衣",
+        "穿暖一点",
+        "少穿一点衣服",
+        "一定要晚上去"
+      ],
+      "answer_index": 1,
+      "focus": "低温与出行准备",
+      "evidence": "女生提醒冬天气温低，要穿暖一点。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "id": "W05-OF2-03",
+      "question_id": "Y1-OF2-003",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q26",
+      "prompt": "女的为什么提醒对方多穿衣服？",
+      "options": [
+        "小明今天生病了",
+        "那里夏天很热",
+        "他们要去游泳",
+        "那里冬天温度很低"
+      ],
+      "answer_index": 3,
+      "focus": "建议的理由",
+      "evidence": "提醒对应的是小明住处附近冬季低温。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "id": "W05-OF2-04",
+      "question_id": "Y1-OF2-004",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q35",
+      "prompt": "对话里提到的三个季节，哪一项说对了？",
+      "options": [
+        "冬天热，夏天冷，春天没雨",
+        "冬天冷，夏天热，春天常下雨",
+        "冬天常下雨，夏天冷，春天热",
+        "冬天不冷，夏天不热，春天没雨"
+      ],
+      "answer_index": 1,
+      "focus": "整合季节与天气",
+      "evidence": "整合女生的两次回答。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "id": "W05-OF2-05",
+      "question_id": "Y1-OF2-005",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q35",
+      "prompt": "这里的夏天怎么样？",
+      "options": [
+        "太热了",
+        "经常下雪",
+        "很冷",
+        "每天都有大风"
+      ],
+      "answer_index": 0,
+      "focus": "季节细节",
+      "evidence": "女生将夏天描述为太热。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "id": "W05-OF2-06",
+      "question_id": "Y1-OF2-006",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q35",
+      "prompt": "这里的春天常常怎么样？",
+      "options": [
+        "刮大风",
+        "下雪",
+        "很干燥",
+        "下雨"
+      ],
+      "answer_index": 3,
+      "focus": "天气频率",
+      "evidence": "春季的特点是经常降雨。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "id": "W05-OF2-07",
+      "question_id": "Y1-OF2-007",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A4-Q39",
+      "prompt": "夏天的下午下过雨以后，晚上会怎么样？",
+      "options": [
+        "比中午更热",
+        "一直下雪",
+        "很凉快",
+        "一定刮大风"
+      ],
+      "answer_index": 2,
+      "focus": "天气变化",
+      "evidence": "男生说明雨后夜间凉爽。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "id": "W05-OF2-08",
+      "question_id": "Y1-OF2-008",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A4-Q39",
+      "prompt": "这样的晚上，女的喜欢怎么安排活动？",
+      "options": [
+        "和同事在办公室开会",
+        "和家人在屋外看星星、聊天",
+        "一个人在家做作业",
+        "和朋友去买衣服"
+      ],
+      "answer_index": 1,
+      "focus": "结合天气与活动",
+      "evidence": "女生说明与家人去屋外观星聊天。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11",
+        "boya-elementary-i:lesson-12"
+      ],
+      "id": "W05-OF2-09",
+      "question_id": "Y1-OF2-009",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q49",
+      "prompt": "男的现在最想怎么安排？",
+      "options": [
+        "留在家里吹冷气",
+        "马上出门买衣服",
+        "去商店看比赛",
+        "和女的一起去游泳"
+      ],
+      "answer_index": 0,
+      "focus": "天气与行动意图",
+      "evidence": "男生提出在家吹冷气并取消买衣服。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11",
+        "boya-elementary-i:lesson-12"
+      ],
+      "id": "W05-OF2-10",
+      "question_id": "Y1-OF2-010",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q49",
+      "prompt": "女的为什么不同意取消今天的安排？",
+      "options": [
+        "她今天没带钥匙",
+        "她已经买好衣服了",
+        "男的昨天答应今天一起出门买衣服",
+        "她想去看棒球比赛"
+      ],
+      "answer_index": 2,
+      "focus": "安排与承诺",
+      "evidence": "女生提醒的是昨天作出的承诺。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11",
+        "boya-elementary-i:lesson-12"
+      ],
+      "id": "W05-OF2-11",
+      "question_id": "Y1-OF2-011",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q49",
+      "prompt": "男的先用什么理由提出不出门？",
+      "options": [
+        "现在太晚了",
+        "明天要考试",
+        "商店已经关门了",
+        "今天天气太热了"
+      ],
+      "answer_index": 3,
+      "focus": "辨识明确理由",
+      "evidence": "开头男生直接提到天气炎热。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "id": "W05-OF2-12",
+      "question_id": "Y1-OF2-012",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q21",
+      "prompt": "现在是什么时间？",
+      "options": [
+        "上午九点",
+        "晚上九点",
+        "下午三点",
+        "晚上十点"
+      ],
+      "answer_index": 1,
+      "focus": "听辨时间",
+      "evidence": "官方文本为晚上九点；原音ASR误写酒店，按来源文本校正。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "id": "W05-OF2-13",
+      "question_id": "Y1-OF2-013",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q21",
+      "prompt": "办公室里的人还在做什么？",
+      "options": [
+        "准备回家",
+        "吃晚饭",
+        "等公共汽车",
+        "开会"
+      ],
+      "answer_index": 3,
+      "focus": "正在进行的动作",
+      "evidence": "男生说明两个人仍在开会。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "id": "W05-OF2-14",
+      "question_id": "Y1-OF2-014",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q23",
+      "prompt": "今天没来上班的人在哪里？",
+      "options": [
+        "在家里",
+        "在车站",
+        "在办公室",
+        "在学校"
+      ],
+      "answer_index": 0,
+      "focus": "地点与状态",
+      "evidence": "女生问没来上班的原因，男生明确说明人在家。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "id": "W05-OF2-15",
+      "question_id": "Y1-OF2-015",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q23",
+      "prompt": "他今天没来上班，是因为正在做什么？",
+      "options": [
+        "等朋友来家里",
+        "准备今天的考试",
+        "准备明天的报告",
+        "帮王先生回电话"
+      ],
+      "answer_index": 2,
+      "focus": "动作与时间信息",
+      "evidence": "男生说明他正在准备次日的报告。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "id": "W05-OF2-16",
+      "question_id": "Y1-OF2-016",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q29",
+      "prompt": "两人最后约几点见面？",
+      "options": [
+        "两点",
+        "两点半",
+        "三点",
+        "三点半"
+      ],
+      "answer_index": 1,
+      "focus": "根据调整计算时间",
+      "evidence": "三点提前半小时等于两点半。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "id": "W05-OF2-17",
+      "question_id": "Y1-OF2-017",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q29",
+      "prompt": "时间改了以后，见面的地点怎么安排？",
+      "options": [
+        "改到电影院门口",
+        "改到学校门口",
+        "改到办公室",
+        "仍在书店门口"
+      ],
+      "answer_index": 3,
+      "focus": "确认保留的安排",
+      "evidence": "双方重复确认仍在书店门口。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "id": "W05-OF2-18",
+      "question_id": "Y1-OF2-018",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q36",
+      "prompt": "女的请男的先做什么？",
+      "options": [
+        "留下自己的电话号码",
+        "明天再来找她",
+        "现在给她打电话",
+        "把王先生的电话写下来"
+      ],
+      "answer_index": 0,
+      "focus": "请求与转告",
+      "evidence": "她要求留下来访者自己的电话号码。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "id": "W05-OF2-19",
+      "question_id": "Y1-OF2-019",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q36",
+      "prompt": "女的接下来会请王先生做什么？",
+      "options": [
+        "去男的家里",
+        "到书店见面",
+        "给男的打电话",
+        "帮男的准备报告"
+      ],
+      "answer_index": 2,
+      "focus": "转告后的行动",
+      "evidence": "她说会请王先生回电给来访者。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "id": "W05-OF2-20",
+      "question_id": "Y1-OF2-020",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A4-Q29",
+      "prompt": "同学们更想上什么课？",
+      "options": [
+        "篮球课",
+        "游泳课",
+        "汉语课",
+        "音乐课"
+      ],
+      "answer_index": 1,
+      "focus": "辨识希望调整的活动",
+      "evidence": "学生明确表示更想游泳。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "id": "W05-OF2-21",
+      "question_id": "Y1-OF2-021",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A4-Q29",
+      "prompt": "同学们可以在哪两天上游泳课？",
+      "options": [
+        "星期一和星期三",
+        "星期二和星期四",
+        "星期四和星期五",
+        "星期三和星期五"
+      ],
+      "answer_index": 3,
+      "focus": "确认可行日程",
+      "evidence": "另一个班这两天不练习，故周三周五可用。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "id": "W05-OF2-22",
+      "question_id": "Y1-OF2-022",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A4-Q35",
+      "prompt": "女的正在做什么？",
+      "options": [
+        "洗水果",
+        "煮咖啡",
+        "烤牛肉",
+        "买晚饭"
+      ],
+      "answer_index": 2,
+      "focus": "正在进行的动作",
+      "evidence": "女生回答正在烤牛肉。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "id": "W05-OF2-23",
+      "question_id": "Y1-OF2-023",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A4-Q35",
+      "prompt": "除了牛肉，女的还准备了哪几样东西？",
+      "options": [
+        "汤、水果和酒",
+        "汤、面包和茶",
+        "水果、咖啡和饺子",
+        "米饭、鸡蛋和牛奶"
+      ],
+      "answer_index": 0,
+      "focus": "活动中的物品细节",
+      "evidence": "女生列举汤、水果、酒。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "id": "W05-OF2-24",
+      "question_id": "Y1-OF2-024",
+      "version": 2
+    },
+    {
+      "type": "mc",
+      "audio_id": "TOCFL-A4-Q12",
+      "prompt": "女的放假的时候常常做什么？",
+      "options": [
+        "去爬山",
+        "去买衣服",
+        "去看电影",
+        "去游泳"
+      ],
+      "answer_index": 3,
+      "focus": "经常进行的活动",
+      "evidence": "女生说放假时常常游泳。",
+      "points": 4,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "id": "W05-OF2-25",
+      "question_id": "Y1-OF2-025",
+      "version": 2
+    }
+  ],
+  "oral_tasks": []
+}

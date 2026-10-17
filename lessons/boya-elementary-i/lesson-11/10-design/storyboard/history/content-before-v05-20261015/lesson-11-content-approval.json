@@ -1,0 +1,30 @@
+{
+  "lesson_key": "boya-elementary-i:lesson-11",
+  "offering_id": "2026-fall",
+  "gate": "lesson-content",
+  "status": "approved",
+  "approved_by": "Adam",
+  "approved_at": "2026-10-15T10:35:37.319975+07:00",
+  "timestamp_basis": "current-turn approval capture; original message time unavailable",
+  "artifacts": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-11/00-source/canonical-source.json",
+      "sha256": "04954932ff8b225ad1f0af9e854de7eac47573eccdf25ecee7a96723aeabb17a"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-11/10-design/storyboard/lesson-11-逐页文案审阅.md",
+      "sha256": "13d3ce9dfde49d900d4496aafdea35f0f8229c4fd7975062a07c0546bcc6accb"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-11/10-design/review-20261015/lesson-11-12-完整内容审阅-v04.md",
+      "sha256": "13d3ce9dfde49d900d4496aafdea35f0f8229c4fd7975062a07c0546bcc6accb"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-11/10-design/review-20261015/lesson-11-12-完整内容-v04.json",
+      "sha256": "aa68f24f8b51f33f8eb147a71bdea3728d3b10fa799d534cedce24051bd86c28"
+    }
+  ],
+  "evidence": "lessons/boya-elementary-i/lesson-11/10-design/storyboard/lesson-11-content-approval-evidence-v04-20261015.md",
+  "evidence_sha256": "ea8bd61a095dea2b31834f46769be84a7f25aa524119abc03f31590ad13a68f3",
+  "scope": "v04 classroom HTML and teacher reading PDF; no authority/release/rehearsal promotion"
+}

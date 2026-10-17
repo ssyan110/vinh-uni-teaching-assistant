@@ -1,0 +1,2187 @@
+{
+  "command": "qa",
+  "status": "passed",
+  "verification_status": "technical_pass",
+  "lesson_key": "boya-elementary-i:lesson-09",
+  "lesson_keys": [
+    "boya-elementary-i:lesson-09",
+    "boya-elementary-i:lesson-10"
+  ],
+  "offering_id": "2026-fall",
+  "content_state": "review_draft_not_imported",
+  "blockers": [],
+  "question_count": 80,
+  "original_question_count": 40,
+  "new_question_count": 40,
+  "exclusive_coverage": {
+    "lesson-09": 36,
+    "lesson-10": 36,
+    "both_lessons": 8
+  },
+  "new_item_skills": {
+    "对话理解": 2,
+    "修正信息理解": 3,
+    "细节辨识": 1,
+    "位置理解": 1,
+    "交际意图": 5,
+    "人物信息比较": 1,
+    "目的地辨识": 1,
+    "号码修正": 1,
+    "原因理解": 1,
+    "语境填空": 2,
+    "信息缺口问答": 2,
+    "信息整合": 1,
+    "对话信息整合": 1,
+    "价格信息整合": 2,
+    "否定信息理解": 1,
+    "数量修正": 1,
+    "价格比较": 1,
+    "句意理解": 1,
+    "已有与新增信息": 2,
+    "需求与数量比较": 1,
+    "价钱修正": 1,
+    "跨课信息整合": 1,
+    "跨课修正信息": 1,
+    "跨课问题解决": 1,
+    "跨课交际意图": 1,
+    "跨课地点整合": 1,
+    "跨课顺序理解": 1,
+    "跨课需求与金额比较": 1,
+    "跨课当前状态理解": 1
+  },
+  "time_limits": {
+    "60": 68,
+    "30": 7,
+    "45": 5
+  },
+  "correct_positions": {
+    "1": 20,
+    "3": 20,
+    "4": 20,
+    "2": 20
+  },
+  "maximum_question_characters": 52,
+  "original_40_unchanged": true,
+  "w03_template_preserved": true,
+  "csv_path": "lessons/boya-elementary-i/lesson-09-10/10-design/support-draft/blooket/lesson-09-10-blooket-80题.csv",
+  "csv_sha256": "0d7702dc6b72f49ed4b7072d995264ee41a57415649d955e156c9ac1e060bb61",
+  "original_qa_path": "lessons/boya-elementary-i/lesson-09-10/10-design/support-draft/blooket/lesson-09-10-blooket-qa.json",
+  "original_qa_sha256": "cde00bc2c2b0ade289d3b6d1ab1bce399a01a24a7f8e54c9887aad09a133f83d",
+  "additional_items_sha256": "4232049224e1dc917830225d7f4210089b1319821a4725e49a554537a926ef61",
+  "official_reference": "https://tocfl.edu.tw/tocfl/index.php/test/listening/list/4",
+  "assessment_mode": "Text-based Blooket review; independently authored dialogue comprehension items inspired by TOCFL. Not official TOCFL or an audio listening test.",
+  "limits": [
+    "Actual Blooket import not tested",
+    "Teacher acceptance and production/authority gates not inferred"
+  ],
+  "new_items": [
+    {
+      "question_number": 41,
+      "question": "甲：我们骑自行车去动物园吧。乙：我没有自行车。甲：那我们坐公共汽车去吧。两个人最后怎么去？",
+      "correct": "坐公共汽车。",
+      "distractors": [
+        "骑自行车。",
+        "坐出租车。",
+        "坐地铁。"
+      ],
+      "lessons": [
+        9
+      ],
+      "slides": {
+        "9": [
+          7,
+          8,
+          27,
+          75
+        ]
+      },
+      "skill": "对话理解",
+      "reason": "乙没有自行车，甲随后提出坐公共汽车。",
+      "answer_index": 4,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide7.xml",
+              "text": "第九课｜我们怎么去 07 坐 教材 P58 坐 zuò 词类：动词 意思：đi bằng; ngồi 用法：坐  +  交通工具 例句1：我坐地铁去学校。 例句2：我们坐公共汽车去吧。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide8.xml",
+              "text": "第九课｜我们怎么去 08 骑 教材 P58 骑 qí 词类：动词 意思：đi  bằng ;  cưỡi 用法：骑  +  自行车／马  /  摩托车 例句1：他骑自行车去学校。 例句2：我们骑车去吧。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide27.xml",
+              "text": "第九课｜我们怎么去 27 公共汽车 教材 P59 公共汽车 gōnggòng qìchē 词类：名词 意思：xe buýt 扩展 ： 口语常说【公交车 】； 台湾常说【公车 】 例句1：我们坐公共汽车去。 例句2：这辆公共汽车去学校。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide75.xml",
+              "text": "第九课｜我们怎么去 75 教材 P63、68 我们……吧。 例句1：我们星期六去吧。 例句2：我们坐公共汽车去吧。 用“吧”说三个建议。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 42,
+      "question": "甲：星期六上午九点在东门见吧。乙：九点我有课，十点可以吗？甲：可以，地方不变。他们最后怎么约？",
+      "correct": "星期六十点，东门见。",
+      "distractors": [
+        "星期六九点，东门见。",
+        "星期六十点，办公室见。",
+        "星期日十点，东门见。"
+      ],
+      "lessons": [
+        9
+      ],
+      "slides": {
+        "9": [
+          14,
+          25,
+          57,
+          71
+        ]
+      },
+      "skill": "修正信息理解",
+      "reason": "时间由九点改为十点，日期和地点没有改变。",
+      "answer_index": 4,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide14.xml",
+              "text": "第九课｜我们怎么去 14 东门 教材 P58 东门 dōngmén 词类：名词 意思：cổng phía đông 扩展：东 / 西 / 南 / 北    +    门 例句1：我们在东门见吧。 例句2：学校北门在那儿。 东门 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide25.xml",
+              "text": "第九课｜我们怎么去 25 星期六 教材 P58 星期六 xīngqīliù 词类：名词 意思：thứ bảy 例句1：星期六你有时间吗？ 例句2：我们星期六去动物园，你去吗？ 星期六 一 二 三 四 五 六 日 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide57.xml",
+              "text": "第九课｜我们怎么去 57 我们怎么去 教材 P65 打开教材P65，听录音。 去哪儿：________________ 怎么去：________________ 几点、在哪儿见：________________ Audio 9-10"
+            },
+            {
+              "slide_xml": "ppt/slides/slide71.xml",
+              "text": "第九课｜我们怎么去 71 教材 P64、68 ……有时间吗？ 例句1：星期六你有时间吗？ 例句2：明天下午你有时间吗？ 准备三个约时间的问题。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 43,
+      "question": "甲：你住三号楼吗？乙：不，我住五号楼，房间号是三零二。乙住在哪儿？",
+      "correct": "五号楼，302房间。",
+      "distractors": [
+        "三号楼，302房间。",
+        "五号楼，305房间。",
+        "三号楼，502房间。"
+      ],
+      "lessons": [
+        9
+      ],
+      "slides": {
+        "9": [
+          6,
+          12,
+          20
+        ]
+      },
+      "skill": "细节辨识",
+      "reason": "乙否定三号楼，说明五号楼和302房间。",
+      "answer_index": 1,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide6.xml",
+              "text": "第九课｜我们怎么去 06 号 教材 P58 号 hào 词类：名词 意思：số 常见词语 ： 几号／房间号／几号楼 例句1：你住几号房间？ 例句2：我住三号楼。 305 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide12.xml",
+              "text": "第九课｜我们怎么去 12 楼 教材 P58 楼 lóu 词类：名词 意思：tòa (nhà), nhà lầu, tầng nhà 例句1：这是我们的宿舍楼。 例句2：教室在三号楼的五楼。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide20.xml",
+              "text": "第九课｜我们怎么去 20 号码 教材 P58 号码 hàomǎ 词类：名词 意思：số; mã số 常见短语 ： 手机号码 ； 电话号码 ； 房间号码 例句1：你的手机号码是多少？ 例句2：请再说一次房间号码。 3106 Audio 9-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 44,
+      "question": "甲：你知道李老师办公室的电话号码吗？乙：不知道，不过我有他的手机号码。乙能给甲什么号码？",
+      "correct": "李老师的手机号码。",
+      "distractors": [
+        "李老师办公室的电话号码。",
+        "李老师的房间号码。",
+        "甲的手机号码。"
+      ],
+      "lessons": [
+        9
+      ],
+      "slides": {
+        "9": [
+          13,
+          20,
+          23,
+          59
+        ]
+      },
+      "skill": "对话理解",
+      "reason": "乙不知道办公室电话，但有李老师的手机号码。",
+      "answer_index": 4,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide13.xml",
+              "text": "第九课｜我们怎么去 13 电话 教材 P58 电话 diànhuà 词类：名词 意思：điện thoại 例句1：办公室里有电话。 例句2：你知道老师的电话吗？ Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide20.xml",
+              "text": "第九课｜我们怎么去 20 号码 教材 P58 号码 hàomǎ 词类：名词 意思：số; mã số 常见短语 ： 手机号码 ； 电话号码 ； 房间号码 例句1：你的手机号码是多少？ 例句2：请再说一次房间号码。 3106 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide23.xml",
+              "text": "第九课｜我们怎么去 23 知道 教材 P58 知道 zhīdào 词类：动词 意思：biết 用法：知道  +  人／地方／号码  /  消息 注意 ： 不能说【知道  +  吃 / 喝 】 。 例如 ：【 我知道喝咖啡 】、【 我知道吃鱼露 】。 例句1：我知道老师在哪儿。 例句2：我不知道他的号码。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide59.xml",
+              "text": "第九课｜我们怎么去 59 问电话号码 教材 P66 打开教材P66，听录音。 62572305是什么号码：________________ 李老师在哪儿：________________ 玛丽有什么号码：________________ Audio 9-11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 45,
+      "question": "甲：你现在在哪儿？乙：我在学校旁边的商店，不在学校里面。乙在哪儿？",
+      "correct": "学校外边的商店。",
+      "distractors": [
+        "学校里面的商店。",
+        "学校里面的办公室。",
+        "学校外边的宿舍。"
+      ],
+      "lessons": [
+        9
+      ],
+      "slides": {
+        "9": [
+          17,
+          24
+        ]
+      },
+      "skill": "位置理解",
+      "reason": "乙明确说在商店，且不在学校里面。",
+      "answer_index": 2,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide17.xml",
+              "text": "第九课｜我们怎么去 17 旁边 教材 P58 旁边 pángbiān 词类：名词 意思：bên cạnh 用法 ： ( 在 )   +    地方 / 人 / 东西    +   ( 的 )   +    旁边 例句1：我坐在朋友的旁边。 例句2：学校旁边有商店。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide24.xml",
+              "text": "第九课｜我们怎么去 24 办公室 教材 P58 办公室 bàngōngshì 词类：名词 意思：văn phòng 例句1：老师在办公室。 例句2：我去办公室找老师。 Audio 9-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 46,
+      "question": "甲：这是你的微信号吗？乙：是，你加一下儿吧。甲接下来最可能做什么？",
+      "correct": "加乙的微信。",
+      "distractors": [
+        "给乙送快递。",
+        "去乙的办公室。",
+        "问乙的房间号。"
+      ],
+      "lessons": [
+        9
+      ],
+      "slides": {
+        "9": [
+          15,
+          19,
+          74
+        ]
+      },
+      "skill": "交际意图",
+      "reason": "乙确认微信号并邀请甲添加。",
+      "answer_index": 3,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide15.xml",
+              "text": "第九课｜我们怎么去 15 微信 教材 P58 微信 wēixìn 词类：名词 意思：ứng dụng WeChat 常见短语：加微信 ； 微信号 例句1：给我你的微信号吧。 例句2：我加你的微信吧。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide19.xml",
+              "text": "第九课｜我们怎么去 19 加 教材 P58 加 jiā 词类：动词 意思：thêm; kết bạn (trên mạng xã hội) 使用场合：请求加联系方式 用法：加  +  人的  +  微信 / Zalo / 脸书 例句1：我可以加你的脸书吗？ 例句2：请加一下儿我的微信。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide74.xml",
+              "text": "第九课｜我们怎么去 74 教材 P63、68 动词   +   一下 儿 …… 例句1：我加一下儿你的微信吧。 例句2：请看一下儿这个号码。 用“一下儿”说三句话。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 47,
+      "question": "甲：你怎么去学校？乙：我坐地铁四号线。甲：我坐公共汽车。谁坐地铁去学校？",
+      "correct": "只有乙。",
+      "distractors": [
+        "只有甲。",
+        "甲和乙都坐地铁。",
+        "甲和乙都不坐地铁。"
+      ],
+      "lessons": [
+        9
+      ],
+      "slides": {
+        "9": [
+          7,
+          9,
+          26,
+          27,
+          70
+        ]
+      },
+      "skill": "人物信息比较",
+      "reason": "乙坐地铁，甲坐公共汽车。",
+      "answer_index": 1,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide7.xml",
+              "text": "第九课｜我们怎么去 07 坐 教材 P58 坐 zuò 词类：动词 意思：đi bằng; ngồi 用法：坐  +  交通工具 例句1：我坐地铁去学校。 例句2：我们坐公共汽车去吧。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide9.xml",
+              "text": "第九课｜我们怎么去 09 线 教材 P58 线 xiàn 词类：名词 意思：tuyến 用法：地铁  +  数字  +  号线 例句1：这是地铁四号线。 例句2：去学校坐几号线？ 4号线 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide26.xml",
+              "text": "第九课｜我们怎么去 26 地铁 教材 P59 地铁 dìtiě 词类：名词 意思：tàu điện ngầm 例句1：我坐地铁去动物园。 例句2：学校旁边有地铁站。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide27.xml",
+              "text": "第九课｜我们怎么去 27 公共汽车 教材 P59 公共汽车 gōnggòng qìchē 词类：名词 意思：xe buýt 扩展 ： 口语常说【公交车 】； 台湾常说【公车 】 例句1：我们坐公共汽车去。 例句2：这辆公共汽车去学校。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide70.xml",
+              "text": "第九课｜我们怎么去 70 教材 P61、65 我坐／骑……去。 例句1：我坐地铁去学校。 例句2：我骑自行车去动物园。 说三句自己会怎么去。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 48,
+      "question": "甲：我去三号楼找王老师。乙：他现在不在办公室，在东门。甲现在想见王老师，应该去哪儿？",
+      "correct": "东门。",
+      "distractors": [
+        "三号楼的办公室。",
+        "动物园。",
+        "学校旁边的商店。"
+      ],
+      "lessons": [
+        9
+      ],
+      "slides": {
+        "9": [
+          12,
+          14,
+          24,
+          67
+        ]
+      },
+      "skill": "修正信息理解",
+      "reason": "乙提供王老师现在在东门的新信息。",
+      "answer_index": 3,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide12.xml",
+              "text": "第九课｜我们怎么去 12 楼 教材 P58 楼 lóu 词类：名词 意思：tòa (nhà), nhà lầu, tầng nhà 例句1：这是我们的宿舍楼。 例句2：教室在三号楼的五楼。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide14.xml",
+              "text": "第九课｜我们怎么去 14 东门 教材 P58 东门 dōngmén 词类：名词 意思：cổng phía đông 扩展：东 / 西 / 南 / 北    +    门 例句1：我们在东门见吧。 例句2：学校北门在那儿。 东门 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide24.xml",
+              "text": "第九课｜我们怎么去 24 办公室 教材 P58 办公室 bàngōngshì 词类：名词 意思：văn phòng 例句1：老师在办公室。 例句2：我去办公室找老师。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide67.xml",
+              "text": "第九课｜我们怎么去 67 重点句子（二） 教材 P68 4　他不在办公室。 5　我加一下儿你的微信吧。 6　这样吧，快递你给我朋友吧。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 49,
+      "question": "送快递的人：你在哪儿？学生：我在学校。我的朋友在宿舍，快递给他吧。谁应该收到快递？",
+      "correct": "学生的朋友。",
+      "distractors": [
+        "学校的老师。",
+        "学生本人。",
+        "办公室里的服务员。"
+      ],
+      "lessons": [
+        9
+      ],
+      "slides": {
+        "9": [
+          11,
+          21,
+          61,
+          67
+        ]
+      },
+      "skill": "交际意图",
+      "reason": "学生要求把快递给在宿舍的朋友。",
+      "answer_index": 3,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide11.xml",
+              "text": "第九课｜我们怎么去 11 给 教材 P58 给 gěi 词类：动词 意思：đưa; cho 用法：给  +  人  +  东西 例句1：请给我一本书。 例句2：我给朋友一支笔。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide21.xml",
+              "text": "第九课｜我们怎么去 21 快递 教材 P58 快递 kuàidì 词类：名词 意思：chuyển phát nhanh; bưu kiện 例句1：这里有你的快递。 例句2：这个快递是老师的。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide61.xml",
+              "text": "第九课｜我们怎么去 61 送快递 教材 P66 打开教材P66，听录音。 男的是谁：________________ 女的在哪儿：________________ 朋友的房间号：________________ Audio 9-12"
+            },
+            {
+              "slide_xml": "ppt/slides/slide67.xml",
+              "text": "第九课｜我们怎么去 67 重点句子（二） 教材 P68 4　他不在办公室。 5　我加一下儿你的微信吧。 6　这样吧，快递你给我朋友吧。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 50,
+      "question": "甲：星期六我们坐地铁去动物园吧。乙：好，在学校东门见。两个人要去哪儿？",
+      "correct": "动物园。",
+      "distractors": [
+        "学校东门。",
+        "地铁站。",
+        "学校办公室。"
+      ],
+      "lessons": [
+        9
+      ],
+      "slides": {
+        "9": [
+          14,
+          26,
+          36,
+          57
+        ]
+      },
+      "skill": "目的地辨识",
+      "reason": "动物园是目的地，东门只是见面的地方。",
+      "answer_index": 3,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide14.xml",
+              "text": "第九课｜我们怎么去 14 东门 教材 P58 东门 dōngmén 词类：名词 意思：cổng phía đông 扩展：东 / 西 / 南 / 北    +    门 例句1：我们在东门见吧。 例句2：学校北门在那儿。 东门 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide26.xml",
+              "text": "第九课｜我们怎么去 26 地铁 教材 P59 地铁 dìtiě 词类：名词 意思：tàu điện ngầm 例句1：我坐地铁去动物园。 例句2：学校旁边有地铁站。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide36.xml",
+              "text": "第九课｜我们怎么去 36 动物园 教材 P59 动物园 dòngwùyuán 词类：名词 意思：vườn thú 例句1：我们去动物园吧。 例句2：动物园在学校旁边。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide57.xml",
+              "text": "第九课｜我们怎么去 57 我们怎么去 教材 P65 打开教材P65，听录音。 去哪儿：________________ 怎么去：________________ 几点、在哪儿见：________________ Audio 9-10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 51,
+      "question": "甲：你的电话号码是六二五七二三零五，对吗？乙：最后是零六，不是零五。乙的号码是哪一个？",
+      "correct": "62572306。",
+      "distractors": [
+        "62572305。",
+        "62572360。",
+        "62573206。"
+      ],
+      "lessons": [
+        9
+      ],
+      "slides": {
+        "9": [
+          20,
+          59,
+          66
+        ]
+      },
+      "skill": "号码修正",
+      "reason": "保留前六位625723，末两位改为06。",
+      "answer_index": 1,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide20.xml",
+              "text": "第九课｜我们怎么去 20 号码 教材 P58 号码 hàomǎ 词类：名词 意思：số; mã số 常见短语 ： 手机号码 ； 电话号码 ； 房间号码 例句1：你的手机号码是多少？ 例句2：请再说一次房间号码。 3106 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide59.xml",
+              "text": "第九课｜我们怎么去 59 问电话号码 教材 P66 打开教材P66，听录音。 62572305是什么号码：________________ 李老师在哪儿：________________ 玛丽有什么号码：________________ Audio 9-11"
+            },
+            {
+              "slide_xml": "ppt/slides/slide66.xml",
+              "text": "第九课｜我们怎么去 66 重点句子（一） 教材 P68 1　我们怎么去？ 2　我们骑自行车去吧。 3　他办公室的电话号码是62572305。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 52,
+      "question": "甲：我们下午去动物园吗？乙：我下午有课。上午没有课。甲：那上午去吧。他们为什么改到上午去？",
+      "correct": "乙下午有课。",
+      "distractors": [
+        "甲上午有课。",
+        "乙上午没有自行车。",
+        "甲下午在动物园。"
+      ],
+      "lessons": [
+        9
+      ],
+      "slides": {
+        "9": [
+          25,
+          36,
+          71,
+          76
+        ]
+      },
+      "skill": "原因理解",
+      "reason": "乙下午有课，上午有时间。",
+      "answer_index": 1,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide25.xml",
+              "text": "第九课｜我们怎么去 25 星期六 教材 P58 星期六 xīngqīliù 词类：名词 意思：thứ bảy 例句1：星期六你有时间吗？ 例句2：我们星期六去动物园，你去吗？ 星期六 一 二 三 四 五 六 日 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide36.xml",
+              "text": "第九课｜我们怎么去 36 动物园 教材 P59 动物园 dòngwùyuán 词类：名词 意思：vườn thú 例句1：我们去动物园吧。 例句2：动物园在学校旁边。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide71.xml",
+              "text": "第九课｜我们怎么去 71 教材 P64、68 ……有时间吗？ 例句1：星期六你有时间吗？ 例句2：明天下午你有时间吗？ 准备三个约时间的问题。 1. ____________________ 2. ____________________ 3. ____________________"
+            },
+            {
+              "slide_xml": "ppt/slides/slide76.xml",
+              "text": "第九课｜我们怎么去 76 教材 P66、68 这样吧，我们…… 例句1：这样吧，我们明天去。 例句2：这样吧，我们坐地铁去。 用“这样吧”说三个办法。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 53,
+      "question": "“我和朋友___地铁去动物园，你___自行车去学校。”应该填哪一组？",
+      "correct": "坐／骑",
+      "distractors": [
+        "骑／坐",
+        "坐／坐",
+        "骑／骑"
+      ],
+      "lessons": [
+        9
+      ],
+      "slides": {
+        "9": [
+          7,
+          8,
+          70,
+          72
+        ]
+      },
+      "skill": "语境填空",
+      "reason": "地铁搭配坐，自行车搭配骑。",
+      "answer_index": 3,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide7.xml",
+              "text": "第九课｜我们怎么去 07 坐 教材 P58 坐 zuò 词类：动词 意思：đi bằng; ngồi 用法：坐  +  交通工具 例句1：我坐地铁去学校。 例句2：我们坐公共汽车去吧。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide8.xml",
+              "text": "第九课｜我们怎么去 08 骑 教材 P58 骑 qí 词类：动词 意思：đi  bằng ;  cưỡi 用法：骑  +  自行车／马  /  摩托车 例句1：他骑自行车去学校。 例句2：我们骑车去吧。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide70.xml",
+              "text": "第九课｜我们怎么去 70 教材 P61、65 我坐／骑……去。 例句1：我坐地铁去学校。 例句2：我骑自行车去动物园。 说三句自己会怎么去。 1. ____________________ 2. ____________________ 3. ____________________"
+            },
+            {
+              "slide_xml": "ppt/slides/slide72.xml",
+              "text": "第九课｜我们怎么去 72 教材 P62 A 和 B …… 例句1：我和朋友去动物园。 例句2：老师和学生在办公室。 用“和”说三句话。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 54,
+      "question": "你只知道朋友住五号楼，还不知道房间号。接下来应该问什么？",
+      "correct": "你住几号房间？",
+      "distractors": [
+        "你住几号楼？",
+        "你坐几号线？",
+        "你星期几有课？"
+      ],
+      "lessons": [
+        9
+      ],
+      "slides": {
+        "9": [
+          6,
+          12,
+          20
+        ]
+      },
+      "skill": "信息缺口问答",
+      "reason": "楼号已知，缺少的只有房间号。",
+      "answer_index": 3,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide6.xml",
+              "text": "第九课｜我们怎么去 06 号 教材 P58 号 hào 词类：名词 意思：số 常见词语 ： 几号／房间号／几号楼 例句1：你住几号房间？ 例句2：我住三号楼。 305 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide12.xml",
+              "text": "第九课｜我们怎么去 12 楼 教材 P58 楼 lóu 词类：名词 意思：tòa (nhà), nhà lầu, tầng nhà 例句1：这是我们的宿舍楼。 例句2：教室在三号楼的五楼。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide20.xml",
+              "text": "第九课｜我们怎么去 20 号码 教材 P58 号码 hàomǎ 词类：名词 意思：số; mã số 常见短语 ： 手机号码 ； 电话号码 ； 房间号码 例句1：你的手机号码是多少？ 例句2：请再说一次房间号码。 3106 Audio 9-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 55,
+      "question": "甲：明天几点见？乙：上午十点。甲：在哪儿？乙：学校东门。哪一句正确说出了他们的约定？",
+      "correct": "明天上午十点在学校东门见。",
+      "distractors": [
+        "今天上午十点在学校东门见。",
+        "明天下午十点在学校东门见。",
+        "明天上午十点在学校办公室见。"
+      ],
+      "lessons": [
+        9
+      ],
+      "slides": {
+        "9": [
+          14,
+          57,
+          71
+        ]
+      },
+      "skill": "信息整合",
+      "reason": "约定包括明天、上午十点和学校东门。",
+      "answer_index": 2,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide14.xml",
+              "text": "第九课｜我们怎么去 14 东门 教材 P58 东门 dōngmén 词类：名词 意思：cổng phía đông 扩展：东 / 西 / 南 / 北    +    门 例句1：我们在东门见吧。 例句2：学校北门在那儿。 东门 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide57.xml",
+              "text": "第九课｜我们怎么去 57 我们怎么去 教材 P65 打开教材P65，听录音。 去哪儿：________________ 怎么去：________________ 几点、在哪儿见：________________ Audio 9-10"
+            },
+            {
+              "slide_xml": "ppt/slides/slide71.xml",
+              "text": "第九课｜我们怎么去 71 教材 P64、68 ……有时间吗？ 例句1：星期六你有时间吗？ 例句2：明天下午你有时间吗？ 准备三个约时间的问题。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 56,
+      "question": "甲：我没有你的号码，可以给我吗？乙：可以，我说，你记一下儿。甲想做什么？",
+      "correct": "知道乙的号码。",
+      "distractors": [
+        "告诉乙自己的号码。",
+        "知道乙的专业。",
+        "给乙一个新号码。"
+      ],
+      "lessons": [
+        9
+      ],
+      "slides": {
+        "9": [
+          13,
+          20,
+          23,
+          74
+        ]
+      },
+      "skill": "交际意图",
+      "reason": "甲请求乙提供号码，乙答应口述。",
+      "answer_index": 1,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide13.xml",
+              "text": "第九课｜我们怎么去 13 电话 教材 P58 电话 diànhuà 词类：名词 意思：điện thoại 例句1：办公室里有电话。 例句2：你知道老师的电话吗？ Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide20.xml",
+              "text": "第九课｜我们怎么去 20 号码 教材 P58 号码 hàomǎ 词类：名词 意思：số; mã số 常见短语 ： 手机号码 ； 电话号码 ； 房间号码 例句1：你的手机号码是多少？ 例句2：请再说一次房间号码。 3106 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide23.xml",
+              "text": "第九课｜我们怎么去 23 知道 教材 P58 知道 zhīdào 词类：动词 意思：biết 用法：知道  +  人／地方／号码  /  消息 注意 ： 不能说【知道  +  吃 / 喝 】 。 例如 ：【 我知道喝咖啡 】、【 我知道吃鱼露 】。 例句1：我知道老师在哪儿。 例句2：我不知道他的号码。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide74.xml",
+              "text": "第九课｜我们怎么去 74 教材 P63、68 动词   +   一下 儿 …… 例句1：我加一下儿你的微信吧。 例句2：请看一下儿这个号码。 用“一下儿”说三句话。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 57,
+      "question": "顾客：我要两瓶牛奶。店员：还要别的吗？顾客：再来一个面包吧。顾客最后要买什么？",
+      "correct": "两瓶牛奶和一个面包。",
+      "distractors": [
+        "一瓶牛奶和两个面包。",
+        "两瓶牛奶，不要面包。",
+        "一个面包，不要牛奶。"
+      ],
+      "lessons": [
+        10
+      ],
+      "slides": {
+        "10": [
+          15,
+          18,
+          24,
+          32,
+          78
+        ]
+      },
+      "skill": "对话信息整合",
+      "reason": "顾客先要两瓶牛奶，再加一个面包。",
+      "answer_index": 4,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide15.xml",
+              "text": "第十课｜西瓜怎么卖 15 教材 P69 面包 面包 miànbāo 词类：名词 意思：bánh mì 例句1：我要买一个面包。 例句2：这个面包多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide18.xml",
+              "text": "第十课｜西瓜怎么卖 18 教材 P69 牛奶 牛奶 niúnǎi 词类：名词 意思：sữa bò 例句1：我要一瓶牛奶。 例句2：这杯牛奶多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide24.xml",
+              "text": "第十课｜西瓜怎么卖 24 教材 P70 瓶 瓶 píng 词类：名词 意思：chai 用法：数字    +    瓶    +    东西 例句1：我要两瓶水。 例句2：这瓶牛奶多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide32.xml",
+              "text": "第十课｜西瓜怎么卖 32 教材 P70 再 再 zài 词类：副词 意思：thêm; nữa; lại 用法：再  +  动词 例句1：我再买一瓶牛奶。 例句2：请再给我一个面包。 Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide78.xml",
+              "text": "第十课｜西瓜怎么卖 78 教材 P70、79 再   +  动词  …… 例句1：我再买一瓶牛奶。 例句2：请再给我两个面包。 用“再”说三句话 。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 58,
+      "question": "店员：一共十八块。顾客：我没有现金，可以刷卡吗？店员：可以。顾客会怎么付钱？",
+      "correct": "刷卡。",
+      "distractors": [
+        "付现金。",
+        "扫微信。",
+        "不用付钱。"
+      ],
+      "lessons": [
+        10
+      ],
+      "slides": {
+        "10": [
+          17,
+          19,
+          20,
+          31
+        ]
+      },
+      "skill": "交际意图",
+      "reason": "顾客提出刷卡，店员允许；没有提出扫码。",
+      "answer_index": 3,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide17.xml",
+              "text": "第十课｜西瓜怎么卖 17 教材 P69 付 付 fù 词类：动词 意思：trả (tiền); thanh toán 常见短语 ： 付钱 ； 付现金 例句1：我来付钱吧。 例句2：你怎么付钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide19.xml",
+              "text": "第十课｜西瓜怎么卖 19 教材 P69 现金 现金 xiànjīn 词类：名词 意思：tiền mặt 常用短语：付现金 例句1：我没有现金，可以用微信付钱吗？ 例句2：可以付现金吗？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide20.xml",
+              "text": "第十课｜西瓜怎么卖 20 教材  P69 刷卡 刷卡 shuā kǎ 词类：动词短语 意思：quẹt thẻ 常用短语：可以刷卡吗？ 例句1：我刷卡。 例句2：这里可以刷卡吗？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide31.xml",
+              "text": "第十课｜西瓜怎么卖 31 教材 P70 一共 一共 yígòng 词类：副词 意思：tổng cộng 用法：一共  +  数量／金额 一共20块 例句1：一共二十块，你怎么付钱？ 例句2：三瓶水一共六块钱。 Audio 10-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 59,
+      "question": "顾客：苹果怎么卖？店员：五块钱一斤。顾客：我要两斤。顾客要付多少钱？",
+      "correct": "十块钱。",
+      "distractors": [
+        "五块钱。",
+        "七块钱。",
+        "十五块钱。"
+      ],
+      "lessons": [
+        10
+      ],
+      "slides": {
+        "10": [
+          13,
+          33,
+          71,
+          77
+        ]
+      },
+      "skill": "价格信息整合",
+      "reason": "每斤五块，买两斤，共十块。",
+      "answer_index": 2,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide13.xml",
+              "text": "第十课｜西瓜怎么卖 13 教材 P69 苹果 苹果 píngguǒ 词类：名词 意思：táo 例句1：我要两个苹果。 例句2：苹果多少钱一斤？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide33.xml",
+              "text": "第十课｜西瓜怎么卖 33 教材 P70 斤 斤 jīn 词类：量词 意思：đơn vị khối lượng bằng 500 gam 500克＝一斤 例句1：我要一斤苹果。 例句2：两斤西瓜多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide71.xml",
+              "text": "第十课｜西瓜怎么卖 71 教材 P76、79 ……多少钱？ 例句1：这些苹果多少钱？ 例句2：西瓜怎么卖？ 准备三个问价钱的问题。 1. ____________________ 2. ____________________ 3. ____________________"
+            },
+            {
+              "slide_xml": "ppt/slides/slide77.xml",
+              "text": "第十课｜西瓜怎么卖 77 教材 P72、79 一共…… 例句1：两瓶水一共六块钱。 例句2：一共十二块五毛。 用“一共”说三个总价。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 60,
+      "question": "顾客：有面包吗？店员：今天没有面包，有香蕉和苹果。顾客今天在这里买不到什么？",
+      "correct": "面包。",
+      "distractors": [
+        "香蕉。",
+        "苹果。",
+        "水果。"
+      ],
+      "lessons": [
+        10
+      ],
+      "slides": {
+        "10": [
+          13,
+          14,
+          15,
+          73
+        ]
+      },
+      "skill": "否定信息理解",
+      "reason": "店员明确说没有面包，有香蕉和苹果。",
+      "answer_index": 4,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide13.xml",
+              "text": "第十课｜西瓜怎么卖 13 教材 P69 苹果 苹果 píngguǒ 词类：名词 意思：táo 例句1：我要两个苹果。 例句2：苹果多少钱一斤？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide14.xml",
+              "text": "第十课｜西瓜怎么卖 14 教材 P69 香蕉 香蕉 xiāngjiāo 词类：名词 意思：chuối 例句1：我买一些香蕉。 例句2：香蕉怎么卖？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide15.xml",
+              "text": "第十课｜西瓜怎么卖 15 教材 P69 面包 面包 miànbāo 词类：名词 意思：bánh mì 例句1：我要买一个面包。 例句2：这个面包多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide73.xml",
+              "text": "第十课｜西瓜怎么卖 73 教材 P79 有……吗？ 例句1：有牛奶吗？ 例句2：这里有面包吗？ 准备三个问有没有的问题。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 61,
+      "question": "顾客：这瓶水两块五毛吗？店员：不是，两块五毛是牛奶，水两块。水多少钱？",
+      "correct": "两块。",
+      "distractors": [
+        "两块五毛。",
+        "五块。",
+        "五毛。"
+      ],
+      "lessons": [
+        10
+      ],
+      "slides": {
+        "10": [
+          9,
+          11,
+          18,
+          71
+        ]
+      },
+      "skill": "修正信息理解",
+      "reason": "店员把两块五毛对应牛奶，说明水价两块。",
+      "answer_index": 2,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide9.xml",
+              "text": "第十课｜西瓜怎么卖 09 教材 P69 块（元） 块（元） kuài（yuán） 词类：量词 意思：tệ; nhân dân tệ 用法 ： 数字    +    块    +   ( 钱 ) 数字    +    元 12元 例句1：一瓶水两块钱。 例句2：这个面包十二元。 Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide11.xml",
+              "text": "第十课｜西瓜怎么卖 11 教材 P69 毛（角） 毛（角） máo（jiǎo） 词类：量词 意思：hào; một phần mười tệ 用法：数字    +    毛 / 角    +    钱   1元＝10角 例句1：这支笔五毛钱。 例句2：一角钱就是一毛钱。 Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide18.xml",
+              "text": "第十课｜西瓜怎么卖 18 教材 P69 牛奶 牛奶 niúnǎi 词类：名词 意思：sữa bò 例句1：我要一瓶牛奶。 例句2：这杯牛奶多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide71.xml",
+              "text": "第十课｜西瓜怎么卖 71 教材 P76、79 ……多少钱？ 例句1：这些苹果多少钱？ 例句2：西瓜怎么卖？ 准备三个问价钱的问题。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 62,
+      "question": "顾客：我要三杯咖啡。店员：三杯，对吗？顾客：不，两杯，刚才说错了。店员应该给几杯？",
+      "correct": "两杯。",
+      "distractors": [
+        "三杯。",
+        "一杯。",
+        "五杯。"
+      ],
+      "lessons": [
+        10
+      ],
+      "slides": {
+        "10": [
+          29,
+          36,
+          74,
+          76
+        ]
+      },
+      "skill": "数量修正",
+      "reason": "顾客最终把三杯改为两杯。",
+      "answer_index": 1,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide29.xml",
+              "text": "第十课｜西瓜怎么卖 29 教材 P70 咖啡 咖啡 kāfēi 词类：名词 意思：cà phê 例句1：我要两杯咖啡。 例句2：这杯咖啡二十块钱。 Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide36.xml",
+              "text": "第十课｜西瓜怎么卖 36 教材 P70 杯 杯 bēi 词类：名词 意思：cốc; ly 例句1：我要一杯水。 例句2：这两杯咖啡多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide74.xml",
+              "text": "第十课｜西瓜怎么卖 74 教材 P73、79 你要几个／多少……？ 例句1：你要几个苹果？ 例句2：你要多少牛奶？ 用“几”或“多少”问三个问题。 1. ____________________ 2. ____________________ 3. ____________________"
+            },
+            {
+              "slide_xml": "ppt/slides/slide76.xml",
+              "text": "第十课｜西瓜怎么卖 76 教材 P73 两  +  量词  +  名词 例句1：我要两杯咖啡。 例句2：我买两个苹果。 用“两”说三句话。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 63,
+      "question": "甲：这里的苹果六块钱一斤。乙：学校旁边的商店五块钱一斤。只看价钱，哪儿的苹果便宜？",
+      "correct": "学校旁边的商店。",
+      "distractors": [
+        "这里的商店。",
+        "两家一样。",
+        "没有说学校旁边的价钱。"
+      ],
+      "lessons": [
+        10
+      ],
+      "slides": {
+        "10": [
+          13,
+          33,
+          71,
+          79
+        ]
+      },
+      "skill": "价格比较",
+      "reason": "比较同样一斤的价格，五块低于六块。",
+      "answer_index": 2,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide13.xml",
+              "text": "第十课｜西瓜怎么卖 13 教材 P69 苹果 苹果 píngguǒ 词类：名词 意思：táo 例句1：我要两个苹果。 例句2：苹果多少钱一斤？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide33.xml",
+              "text": "第十课｜西瓜怎么卖 33 教材 P70 斤 斤 jīn 词类：量词 意思：đơn vị khối lượng bằng 500 gam 500克＝一斤 例句1：我要一斤苹果。 例句2：两斤西瓜多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide71.xml",
+              "text": "第十课｜西瓜怎么卖 71 教材 P76、79 ……多少钱？ 例句1：这些苹果多少钱？ 例句2：西瓜怎么卖？ 准备三个问价钱的问题。 1. ____________________ 2. ____________________ 3. ____________________"
+            },
+            {
+              "slide_xml": "ppt/slides/slide79.xml",
+              "text": "第十课｜西瓜怎么卖 79 教材 P76 在……卖多少钱？ 例句1：苹果在这家商店卖多少钱？ 例句2：牛奶在那家商店卖多少钱？ 准备三个问商店价格的问题。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 64,
+      "question": "服务员：你要咖啡还是水？顾客：咖啡太贵了，给我一杯水吧。顾客最后要什么？",
+      "correct": "一杯水。",
+      "distractors": [
+        "一杯咖啡。",
+        "咖啡和水各一杯。",
+        "两杯咖啡。"
+      ],
+      "lessons": [
+        10
+      ],
+      "slides": {
+        "10": [
+          27,
+          29,
+          36,
+          72
+        ]
+      },
+      "skill": "交际意图",
+      "reason": "顾客最终要求一杯水。",
+      "answer_index": 4,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide27.xml",
+              "text": "第十课｜西瓜怎么卖 27 教材 P70 服务员 服务员 fúwùyuán 词类：名词 意思：nhân viên phục vụ 使用情况：用来叫服务员，像越南语的Anh / chị / em   ơi ! 例句1：服务员，请给我一杯水。 例句2：那位服务员会说汉语。 Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide29.xml",
+              "text": "第十课｜西瓜怎么卖 29 教材 P70 咖啡 咖啡 kāfēi 词类：名词 意思：cà phê 例句1：我要两杯咖啡。 例句2：这杯咖啡二十块钱。 Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide36.xml",
+              "text": "第十课｜西瓜怎么卖 36 教材 P70 杯 杯 bēi 词类：名词 意思：cốc; ly 例句1：我要一杯水。 例句2：这两杯咖啡多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide72.xml",
+              "text": "第十课｜西瓜怎么卖 72 教材 P78–79 我要…… 例句1：我要一杯咖啡。 例句2：我要买两个苹果。 说三句你要买什么。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 65,
+      "question": "一瓶牛奶四块钱，一个面包三块钱。小王买一瓶牛奶和一个面包，一共多少钱？",
+      "correct": "七块钱。",
+      "distractors": [
+        "四块钱。",
+        "三块钱。",
+        "八块钱。"
+      ],
+      "lessons": [
+        10
+      ],
+      "slides": {
+        "10": [
+          15,
+          18,
+          24,
+          31,
+          77
+        ]
+      },
+      "skill": "价格信息整合",
+      "reason": "四块牛奶加三块面包等于七块。",
+      "answer_index": 2,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide15.xml",
+              "text": "第十课｜西瓜怎么卖 15 教材 P69 面包 面包 miànbāo 词类：名词 意思：bánh mì 例句1：我要买一个面包。 例句2：这个面包多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide18.xml",
+              "text": "第十课｜西瓜怎么卖 18 教材 P69 牛奶 牛奶 niúnǎi 词类：名词 意思：sữa bò 例句1：我要一瓶牛奶。 例句2：这杯牛奶多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide24.xml",
+              "text": "第十课｜西瓜怎么卖 24 教材 P70 瓶 瓶 píng 词类：名词 意思：chai 用法：数字    +    瓶    +    东西 例句1：我要两瓶水。 例句2：这瓶牛奶多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide31.xml",
+              "text": "第十课｜西瓜怎么卖 31 教材 P70 一共 一共 yígòng 词类：副词 意思：tổng cộng 用法：一共  +  数量／金额 一共20块 例句1：一共二十块，你怎么付钱？ 例句2：三瓶水一共六块钱。 Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide77.xml",
+              "text": "第十课｜西瓜怎么卖 77 教材 P72、79 一共…… 例句1：两瓶水一共六块钱。 例句2：一共十二块五毛。 用“一共”说三个总价。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 66,
+      "question": "店员：你要几个苹果？顾客：不要苹果，我要一些香蕉。哪一句与顾客的意思相同？",
+      "correct": "顾客要香蕉，不要苹果。",
+      "distractors": [
+        "顾客要苹果，不要香蕉。",
+        "顾客要苹果，也要香蕉。",
+        "顾客不要苹果，也不要香蕉。"
+      ],
+      "lessons": [
+        10
+      ],
+      "slides": {
+        "10": [
+          13,
+          14,
+          23,
+          35,
+          74
+        ]
+      },
+      "skill": "句意理解",
+      "reason": "顾客明确拒绝苹果，改要香蕉。",
+      "answer_index": 4,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide13.xml",
+              "text": "第十课｜西瓜怎么卖 13 教材 P69 苹果 苹果 píngguǒ 词类：名词 意思：táo 例句1：我要两个苹果。 例句2：苹果多少钱一斤？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide14.xml",
+              "text": "第十课｜西瓜怎么卖 14 教材 P69 香蕉 香蕉 xiāngjiāo 词类：名词 意思：chuối 例句1：我买一些香蕉。 例句2：香蕉怎么卖？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide23.xml",
+              "text": "第十课｜西瓜怎么卖 23 教材 P69 要 要 yào 词类：动词 意思：muốn; lấy 用法 ： 要  +  东西 要    +    动词    +    东西 例句1：我要一杯咖啡。 例句2：你要买几个苹果？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide35.xml",
+              "text": "第十课｜西瓜怎么卖 35 教材 P70 一些 一些 yìxiē 词类：数量词 意思：một ít; một vài 用法：一些  +  名词 例句1：我想买一些水果。 例句2：桌上有一些面包。 Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide74.xml",
+              "text": "第十课｜西瓜怎么卖 74 教材 P73、79 你要几个／多少……？ 例句1：你要几个苹果？ 例句2：你要多少牛奶？ 用“几”或“多少”问三个问题。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 67,
+      "question": "甲：家里有牛奶吗？乙：有两瓶。甲：够了，再买两瓶可乐吧。他们还要买什么？",
+      "correct": "两瓶可乐。",
+      "distractors": [
+        "两瓶牛奶。",
+        "牛奶和可乐各两瓶。",
+        "两杯咖啡。"
+      ],
+      "lessons": [
+        10
+      ],
+      "slides": {
+        "10": [
+          18,
+          24,
+          32,
+          37,
+          64
+        ]
+      },
+      "skill": "已有与新增信息",
+      "reason": "家里已有牛奶，新增购物只有两瓶可乐。",
+      "answer_index": 3,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide18.xml",
+              "text": "第十课｜西瓜怎么卖 18 教材 P69 牛奶 牛奶 niúnǎi 词类：名词 意思：sữa bò 例句1：我要一瓶牛奶。 例句2：这杯牛奶多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide24.xml",
+              "text": "第十课｜西瓜怎么卖 24 教材 P70 瓶 瓶 píng 词类：名词 意思：chai 用法：数字    +    瓶    +    东西 例句1：我要两瓶水。 例句2：这瓶牛奶多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide32.xml",
+              "text": "第十课｜西瓜怎么卖 32 教材 P70 再 再 zài 词类：副词 意思：thêm; nữa; lại 用法：再  +  动词 例句1：我再买一瓶牛奶。 例句2：请再给我一个面包。 Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide37.xml",
+              "text": "第十课｜西瓜怎么卖 37 教材 P70 可乐 可乐 kělè 词类：名词 意思：nước ngọt cola 例句1：我要一瓶可乐。 例句2：这瓶可乐三块钱。 Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide64.xml",
+              "text": "第十课｜西瓜怎么卖 64 教材 P78 再买两大瓶可乐 打开教材P78，听录音。 谁来家里玩儿：________________ 家里有什么：________________ 还要买什么、多少：________________ Audio 10-12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 68,
+      "question": "顾客已经知道苹果五块钱一斤，还想知道买两斤要付多少。应该问什么？",
+      "correct": "两斤苹果一共多少钱？",
+      "distractors": [
+        "苹果多少钱一斤？",
+        "苹果在哪儿卖？",
+        "你要几斤苹果？"
+      ],
+      "lessons": [
+        10
+      ],
+      "slides": {
+        "10": [
+          13,
+          31,
+          33,
+          71,
+          77
+        ]
+      },
+      "skill": "信息缺口问答",
+      "reason": "单价已知，顾客要确认两斤的总价。",
+      "answer_index": 1,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide13.xml",
+              "text": "第十课｜西瓜怎么卖 13 教材 P69 苹果 苹果 píngguǒ 词类：名词 意思：táo 例句1：我要两个苹果。 例句2：苹果多少钱一斤？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide31.xml",
+              "text": "第十课｜西瓜怎么卖 31 教材 P70 一共 一共 yígòng 词类：副词 意思：tổng cộng 用法：一共  +  数量／金额 一共20块 例句1：一共二十块，你怎么付钱？ 例句2：三瓶水一共六块钱。 Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide33.xml",
+              "text": "第十课｜西瓜怎么卖 33 教材 P70 斤 斤 jīn 词类：量词 意思：đơn vị khối lượng bằng 500 gam 500克＝一斤 例句1：我要一斤苹果。 例句2：两斤西瓜多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide71.xml",
+              "text": "第十课｜西瓜怎么卖 71 教材 P76、79 ……多少钱？ 例句1：这些苹果多少钱？ 例句2：西瓜怎么卖？ 准备三个问价钱的问题。 1. ____________________ 2. ____________________ 3. ____________________"
+            },
+            {
+              "slide_xml": "ppt/slides/slide77.xml",
+              "text": "第十课｜西瓜怎么卖 77 教材 P72、79 一共…… 例句1：两瓶水一共六块钱。 例句2：一共十二块五毛。 用“一共”说三个总价。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 69,
+      "question": "“我要___瓶牛奶，再买___个面包。”两种东西各买两个，应该填哪一组？",
+      "correct": "两／两",
+      "distractors": [
+        "二／二",
+        "两／二",
+        "二／两"
+      ],
+      "lessons": [
+        10
+      ],
+      "slides": {
+        "10": [
+          15,
+          18,
+          24,
+          76
+        ]
+      },
+      "skill": "语境填空",
+      "reason": "数量二在瓶、个等量词前用两。",
+      "answer_index": 3,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide15.xml",
+              "text": "第十课｜西瓜怎么卖 15 教材 P69 面包 面包 miànbāo 词类：名词 意思：bánh mì 例句1：我要买一个面包。 例句2：这个面包多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide18.xml",
+              "text": "第十课｜西瓜怎么卖 18 教材 P69 牛奶 牛奶 niúnǎi 词类：名词 意思：sữa bò 例句1：我要一瓶牛奶。 例句2：这杯牛奶多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide24.xml",
+              "text": "第十课｜西瓜怎么卖 24 教材 P70 瓶 瓶 píng 词类：名词 意思：chai 用法：数字    +    瓶    +    东西 例句1：我要两瓶水。 例句2：这瓶牛奶多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide76.xml",
+              "text": "第十课｜西瓜怎么卖 76 教材 P73 两  +  量词  +  名词 例句1：我要两杯咖啡。 例句2：我买两个苹果。 用“两”说三句话。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 70,
+      "question": "甲：买三个面包吧。乙：我有两个，只要再买一个。乙还要买几个面包？",
+      "correct": "一个。",
+      "distractors": [
+        "两个。",
+        "三个。",
+        "五个。"
+      ],
+      "lessons": [
+        10
+      ],
+      "slides": {
+        "10": [
+          15,
+          32,
+          74,
+          78
+        ]
+      },
+      "skill": "已有与新增信息",
+      "reason": "乙已有两个，明确只需再买一个。",
+      "answer_index": 4,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide15.xml",
+              "text": "第十课｜西瓜怎么卖 15 教材 P69 面包 面包 miànbāo 词类：名词 意思：bánh mì 例句1：我要买一个面包。 例句2：这个面包多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide32.xml",
+              "text": "第十课｜西瓜怎么卖 32 教材 P70 再 再 zài 词类：副词 意思：thêm; nữa; lại 用法：再  +  动词 例句1：我再买一瓶牛奶。 例句2：请再给我一个面包。 Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide74.xml",
+              "text": "第十课｜西瓜怎么卖 74 教材 P73、79 你要几个／多少……？ 例句1：你要几个苹果？ 例句2：你要多少牛奶？ 用“几”或“多少”问三个问题。 1. ____________________ 2. ____________________ 3. ____________________"
+            },
+            {
+              "slide_xml": "ppt/slides/slide78.xml",
+              "text": "第十课｜西瓜怎么卖 78 教材 P70、79 再   +  动词  …… 例句1：我再买一瓶牛奶。 例句2：请再给我两个面包。 用“再”说三句话 。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 71,
+      "question": "甲：我想买两斤苹果。乙：这里只有一斤苹果，还有香蕉。这里的苹果够甲买吗？",
+      "correct": "不够，只有一斤。",
+      "distractors": [
+        "够，正好两斤。",
+        "够，有三斤苹果。",
+        "不够，这里没有苹果。"
+      ],
+      "lessons": [
+        10
+      ],
+      "slides": {
+        "10": [
+          13,
+          14,
+          33,
+          74
+        ]
+      },
+      "skill": "需求与数量比较",
+      "reason": "想买两斤，但现有苹果只有一斤，并非完全没有。",
+      "answer_index": 4,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide13.xml",
+              "text": "第十课｜西瓜怎么卖 13 教材 P69 苹果 苹果 píngguǒ 词类：名词 意思：táo 例句1：我要两个苹果。 例句2：苹果多少钱一斤？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide14.xml",
+              "text": "第十课｜西瓜怎么卖 14 教材 P69 香蕉 香蕉 xiāngjiāo 词类：名词 意思：chuối 例句1：我买一些香蕉。 例句2：香蕉怎么卖？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide33.xml",
+              "text": "第十课｜西瓜怎么卖 33 教材 P70 斤 斤 jīn 词类：量词 意思：đơn vị khối lượng bằng 500 gam 500克＝一斤 例句1：我要一斤苹果。 例句2：两斤西瓜多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide74.xml",
+              "text": "第十课｜西瓜怎么卖 74 教材 P73、79 你要几个／多少……？ 例句1：你要几个苹果？ 例句2：你要多少牛奶？ 用“几”或“多少”问三个问题。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 72,
+      "question": "顾客：一共十二块，对吗？店员：十二块五毛。顾客说的价钱少了多少？",
+      "correct": "五毛。",
+      "distractors": [
+        "五块。",
+        "一块。",
+        "十二块。"
+      ],
+      "lessons": [
+        10
+      ],
+      "slides": {
+        "10": [
+          9,
+          11,
+          31,
+          77
+        ]
+      },
+      "skill": "价钱修正",
+      "reason": "十二块五毛与十二块相差五毛。",
+      "answer_index": 4,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide9.xml",
+              "text": "第十课｜西瓜怎么卖 09 教材 P69 块（元） 块（元） kuài（yuán） 词类：量词 意思：tệ; nhân dân tệ 用法 ： 数字    +    块    +   ( 钱 ) 数字    +    元 12元 例句1：一瓶水两块钱。 例句2：这个面包十二元。 Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide11.xml",
+              "text": "第十课｜西瓜怎么卖 11 教材 P69 毛（角） 毛（角） máo（jiǎo） 词类：量词 意思：hào; một phần mười tệ 用法：数字    +    毛 / 角    +    钱   1元＝10角 例句1：这支笔五毛钱。 例句2：一角钱就是一毛钱。 Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide31.xml",
+              "text": "第十课｜西瓜怎么卖 31 教材 P70 一共 一共 yígòng 词类：副词 意思：tổng cộng 用法：一共  +  数量／金额 一共20块 例句1：一共二十块，你怎么付钱？ 例句2：三瓶水一共六块钱。 Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide77.xml",
+              "text": "第十课｜西瓜怎么卖 77 教材 P72、79 一共…… 例句1：两瓶水一共六块钱。 例句2：一共十二块五毛。 用“一共”说三个总价。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 73,
+      "question": "甲：我们坐地铁去学校旁边的商店，买两瓶牛奶吧。乙：好。哪一项符合他们的安排？",
+      "correct": "坐地铁去买牛奶。",
+      "distractors": [
+        "坐地铁去买咖啡。",
+        "骑自行车去买牛奶。",
+        "坐公共汽车去买咖啡。"
+      ],
+      "lessons": [
+        9,
+        10
+      ],
+      "slides": {
+        "9": [
+          17,
+          26,
+          70
+        ],
+        "10": [
+          18,
+          24,
+          72
+        ]
+      },
+      "skill": "跨课信息整合",
+      "reason": "交通是地铁，购物目标是牛奶。",
+      "answer_index": 2,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide17.xml",
+              "text": "第九课｜我们怎么去 17 旁边 教材 P58 旁边 pángbiān 词类：名词 意思：bên cạnh 用法 ： ( 在 )   +    地方 / 人 / 东西    +   ( 的 )   +    旁边 例句1：我坐在朋友的旁边。 例句2：学校旁边有商店。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide26.xml",
+              "text": "第九课｜我们怎么去 26 地铁 教材 P59 地铁 dìtiě 词类：名词 意思：tàu điện ngầm 例句1：我坐地铁去动物园。 例句2：学校旁边有地铁站。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide70.xml",
+              "text": "第九课｜我们怎么去 70 教材 P61、65 我坐／骑……去。 例句1：我坐地铁去学校。 例句2：我骑自行车去动物园。 说三句自己会怎么去。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        },
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide18.xml",
+              "text": "第十课｜西瓜怎么卖 18 教材 P69 牛奶 牛奶 niúnǎi 词类：名词 意思：sữa bò 例句1：我要一瓶牛奶。 例句2：这杯牛奶多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide24.xml",
+              "text": "第十课｜西瓜怎么卖 24 教材 P70 瓶 瓶 píng 词类：名词 意思：chai 用法：数字    +    瓶    +    东西 例句1：我要两瓶水。 例句2：这瓶牛奶多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide72.xml",
+              "text": "第十课｜西瓜怎么卖 72 教材 P78–79 我要…… 例句1：我要一杯咖啡。 例句2：我要买两个苹果。 说三句你要买什么。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 74,
+      "question": "甲：九点东门见，我们坐公共汽车去买水果。乙：九点我有课，十点可以吗？甲：好，还是东门。最后的安排是什么？",
+      "correct": "十点东门见，坐公共汽车买水果。",
+      "distractors": [
+        "九点东门见，坐公共汽车买水果。",
+        "十点办公室见，坐公共汽车买水果。",
+        "十点东门见，骑自行车买水果。"
+      ],
+      "lessons": [
+        9,
+        10
+      ],
+      "slides": {
+        "9": [
+          14,
+          27,
+          57,
+          71
+        ],
+        "10": [
+          35,
+          72
+        ]
+      },
+      "skill": "跨课修正信息",
+      "reason": "只将见面时间改为十点，地点、交通和购物目的保持。",
+      "answer_index": 3,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide14.xml",
+              "text": "第九课｜我们怎么去 14 东门 教材 P58 东门 dōngmén 词类：名词 意思：cổng phía đông 扩展：东 / 西 / 南 / 北    +    门 例句1：我们在东门见吧。 例句2：学校北门在那儿。 东门 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide27.xml",
+              "text": "第九课｜我们怎么去 27 公共汽车 教材 P59 公共汽车 gōnggòng qìchē 词类：名词 意思：xe buýt 扩展 ： 口语常说【公交车 】； 台湾常说【公车 】 例句1：我们坐公共汽车去。 例句2：这辆公共汽车去学校。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide57.xml",
+              "text": "第九课｜我们怎么去 57 我们怎么去 教材 P65 打开教材P65，听录音。 去哪儿：________________ 怎么去：________________ 几点、在哪儿见：________________ Audio 9-10"
+            },
+            {
+              "slide_xml": "ppt/slides/slide71.xml",
+              "text": "第九课｜我们怎么去 71 教材 P64、68 ……有时间吗？ 例句1：星期六你有时间吗？ 例句2：明天下午你有时间吗？ 准备三个约时间的问题。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        },
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide35.xml",
+              "text": "第十课｜西瓜怎么卖 35 教材 P70 一些 一些 yìxiē 词类：数量词 意思：một ít; một vài 用法：一些  +  名词 例句1：我想买一些水果。 例句2：桌上有一些面包。 Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide72.xml",
+              "text": "第十课｜西瓜怎么卖 72 教材 P78–79 我要…… 例句1：我要一杯咖啡。 例句2：我要买两个苹果。 说三句你要买什么。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 75,
+      "question": "甲：骑自行车去商店吧。乙：我没有自行车，也没有现金。甲：那坐地铁去，买东西刷卡吧。甲提出什么办法？",
+      "correct": "坐地铁，刷卡付钱。",
+      "distractors": [
+        "骑自行车，付现金。",
+        "坐地铁，付现金。",
+        "骑自行车，刷卡付钱。"
+      ],
+      "lessons": [
+        9,
+        10
+      ],
+      "slides": {
+        "9": [
+          8,
+          26,
+          76
+        ],
+        "10": [
+          19,
+          20
+        ]
+      },
+      "skill": "跨课问题解决",
+      "reason": "甲分别针对无自行车和无现金提出坐地铁、刷卡。",
+      "answer_index": 2,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide8.xml",
+              "text": "第九课｜我们怎么去 08 骑 教材 P58 骑 qí 词类：动词 意思：đi  bằng ;  cưỡi 用法：骑  +  自行车／马  /  摩托车 例句1：他骑自行车去学校。 例句2：我们骑车去吧。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide26.xml",
+              "text": "第九课｜我们怎么去 26 地铁 教材 P59 地铁 dìtiě 词类：名词 意思：tàu điện ngầm 例句1：我坐地铁去动物园。 例句2：学校旁边有地铁站。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide76.xml",
+              "text": "第九课｜我们怎么去 76 教材 P66、68 这样吧，我们…… 例句1：这样吧，我们明天去。 例句2：这样吧，我们坐地铁去。 用“这样吧”说三个办法。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        },
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide19.xml",
+              "text": "第十课｜西瓜怎么卖 19 教材 P69 现金 现金 xiànjīn 词类：名词 意思：tiền mặt 常用短语：付现金 例句1：我没有现金，可以用微信付钱吗？ 例句2：可以付现金吗？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide20.xml",
+              "text": "第十课｜西瓜怎么卖 20 教材  P69 刷卡 刷卡 shuā kǎ 词类：动词短语 意思：quẹt thẻ 常用短语：可以刷卡吗？ 例句1：我刷卡。 例句2：这里可以刷卡吗？ Audio 10-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 76,
+      "question": "甲：我坐公共汽车到东门。你帮我买两瓶水吧。乙：好，一瓶三块，一共六块。甲请乙做什么？",
+      "correct": "买两瓶水。",
+      "distractors": [
+        "坐公共汽车。",
+        "买六瓶水。",
+        "买三瓶牛奶。"
+      ],
+      "lessons": [
+        9,
+        10
+      ],
+      "slides": {
+        "9": [
+          14,
+          27
+        ],
+        "10": [
+          24,
+          31,
+          77
+        ]
+      },
+      "skill": "跨课交际意图",
+      "reason": "甲自己的交通和乙受托购物是不同信息，六块为价钱而非数量。",
+      "answer_index": 2,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide14.xml",
+              "text": "第九课｜我们怎么去 14 东门 教材 P58 东门 dōngmén 词类：名词 意思：cổng phía đông 扩展：东 / 西 / 南 / 北    +    门 例句1：我们在东门见吧。 例句2：学校北门在那儿。 东门 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide27.xml",
+              "text": "第九课｜我们怎么去 27 公共汽车 教材 P59 公共汽车 gōnggòng qìchē 词类：名词 意思：xe buýt 扩展 ： 口语常说【公交车 】； 台湾常说【公车 】 例句1：我们坐公共汽车去。 例句2：这辆公共汽车去学校。 Audio 9-1"
+            }
+          ]
+        },
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide24.xml",
+              "text": "第十课｜西瓜怎么卖 24 教材 P70 瓶 瓶 píng 词类：名词 意思：chai 用法：数字    +    瓶    +    东西 例句1：我要两瓶水。 例句2：这瓶牛奶多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide31.xml",
+              "text": "第十课｜西瓜怎么卖 31 教材 P70 一共 一共 yígòng 词类：副词 意思：tổng cộng 用法：一共  +  数量／金额 一共20块 例句1：一共二十块，你怎么付钱？ 例句2：三瓶水一共六块钱。 Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide77.xml",
+              "text": "第十课｜西瓜怎么卖 77 教材 P72、79 一共…… 例句1：两瓶水一共六块钱。 例句2：一共十二块五毛。 用“一共”说三个总价。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 77,
+      "question": "小王：我在五号楼，不在商店。请帮我买一瓶牛奶，送到五号楼三零二房间。朋友应该把牛奶送到哪儿？",
+      "correct": "五号楼302房间。",
+      "distractors": [
+        "五号楼的商店。",
+        "三号楼502房间。",
+        "学校东门的商店。"
+      ],
+      "lessons": [
+        9,
+        10
+      ],
+      "slides": {
+        "9": [
+          6,
+          12,
+          20
+        ],
+        "10": [
+          18,
+          24
+        ]
+      },
+      "skill": "跨课地点整合",
+      "reason": "牛奶的送达地点是五号楼302房间，商店是被否定的地点。",
+      "answer_index": 2,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide6.xml",
+              "text": "第九课｜我们怎么去 06 号 教材 P58 号 hào 词类：名词 意思：số 常见词语 ： 几号／房间号／几号楼 例句1：你住几号房间？ 例句2：我住三号楼。 305 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide12.xml",
+              "text": "第九课｜我们怎么去 12 楼 教材 P58 楼 lóu 词类：名词 意思：tòa (nhà), nhà lầu, tầng nhà 例句1：这是我们的宿舍楼。 例句2：教室在三号楼的五楼。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide20.xml",
+              "text": "第九课｜我们怎么去 20 号码 教材 P58 号码 hàomǎ 词类：名词 意思：số; mã số 常见短语 ： 手机号码 ； 电话号码 ； 房间号码 例句1：你的手机号码是多少？ 例句2：请再说一次房间号码。 3106 Audio 9-1"
+            }
+          ]
+        },
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide18.xml",
+              "text": "第十课｜西瓜怎么卖 18 教材 P69 牛奶 牛奶 niúnǎi 词类：名词 意思：sữa bò 例句1：我要一瓶牛奶。 例句2：这杯牛奶多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide24.xml",
+              "text": "第十课｜西瓜怎么卖 24 教材 P70 瓶 瓶 píng 词类：名词 意思：chai 用法：数字    +    瓶    +    东西 例句1：我要两瓶水。 例句2：这瓶牛奶多少钱？ Audio 10-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 78,
+      "question": "甲：星期六坐地铁去动物园吗？乙：好，我先买一些面包，我们在东门见。乙见面前要做什么？",
+      "correct": "买面包。",
+      "distractors": [
+        "去动物园找甲。",
+        "到办公室找老师。",
+        "买牛奶。"
+      ],
+      "lessons": [
+        9,
+        10
+      ],
+      "slides": {
+        "9": [
+          14,
+          25,
+          26,
+          36
+        ],
+        "10": [
+          15,
+          35
+        ]
+      },
+      "skill": "跨课顺序理解",
+      "reason": "乙说先买面包，然后在东门见面。",
+      "answer_index": 1,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide14.xml",
+              "text": "第九课｜我们怎么去 14 东门 教材 P58 东门 dōngmén 词类：名词 意思：cổng phía đông 扩展：东 / 西 / 南 / 北    +    门 例句1：我们在东门见吧。 例句2：学校北门在那儿。 东门 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide25.xml",
+              "text": "第九课｜我们怎么去 25 星期六 教材 P58 星期六 xīngqīliù 词类：名词 意思：thứ bảy 例句1：星期六你有时间吗？ 例句2：我们星期六去动物园，你去吗？ 星期六 一 二 三 四 五 六 日 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide26.xml",
+              "text": "第九课｜我们怎么去 26 地铁 教材 P59 地铁 dìtiě 词类：名词 意思：tàu điện ngầm 例句1：我坐地铁去动物园。 例句2：学校旁边有地铁站。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide36.xml",
+              "text": "第九课｜我们怎么去 36 动物园 教材 P59 动物园 dòngwùyuán 词类：名词 意思：vườn thú 例句1：我们去动物园吧。 例句2：动物园在学校旁边。 Audio 9-1"
+            }
+          ]
+        },
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide15.xml",
+              "text": "第十课｜西瓜怎么卖 15 教材 P69 面包 面包 miànbāo 词类：名词 意思：bánh mì 例句1：我要买一个面包。 例句2：这个面包多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide35.xml",
+              "text": "第十课｜西瓜怎么卖 35 教材 P70 一些 一些 yìxiē 词类：数量词 意思：một ít; một vài 用法：一些  +  名词 例句1：我想买一些水果。 例句2：桌上有一些面包。 Audio 10-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 79,
+      "question": "甲：我坐地铁去买两杯咖啡，一杯六块。乙：你有多少钱？甲：只有十块现金，也不能刷卡。甲的钱够买两杯吗？",
+      "correct": "不够，还差两块。",
+      "distractors": [
+        "够，正好十块。",
+        "够，还多两块。",
+        "不够，还差六块。"
+      ],
+      "lessons": [
+        9,
+        10
+      ],
+      "slides": {
+        "9": [
+          26
+        ],
+        "10": [
+          19,
+          20,
+          29,
+          36,
+          77
+        ]
+      },
+      "skill": "跨课需求与金额比较",
+      "reason": "两杯咖啡共十二块，现金只有十块且不能刷卡，还差两块。",
+      "answer_index": 1,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide26.xml",
+              "text": "第九课｜我们怎么去 26 地铁 教材 P59 地铁 dìtiě 词类：名词 意思：tàu điện ngầm 例句1：我坐地铁去动物园。 例句2：学校旁边有地铁站。 Audio 9-1"
+            }
+          ]
+        },
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide19.xml",
+              "text": "第十课｜西瓜怎么卖 19 教材 P69 现金 现金 xiànjīn 词类：名词 意思：tiền mặt 常用短语：付现金 例句1：我没有现金，可以用微信付钱吗？ 例句2：可以付现金吗？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide20.xml",
+              "text": "第十课｜西瓜怎么卖 20 教材  P69 刷卡 刷卡 shuā kǎ 词类：动词短语 意思：quẹt thẻ 常用短语：可以刷卡吗？ 例句1：我刷卡。 例句2：这里可以刷卡吗？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide29.xml",
+              "text": "第十课｜西瓜怎么卖 29 教材 P70 咖啡 咖啡 kāfēi 词类：名词 意思：cà phê 例句1：我要两杯咖啡。 例句2：这杯咖啡二十块钱。 Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide36.xml",
+              "text": "第十课｜西瓜怎么卖 36 教材 P70 杯 杯 bēi 词类：名词 意思：cốc; ly 例句1：我要一杯水。 例句2：这两杯咖啡多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide77.xml",
+              "text": "第十课｜西瓜怎么卖 77 教材 P72、79 一共…… 例句1：两瓶水一共六块钱。 例句2：一共十二块五毛。 用“一共”说三个总价。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_number": 80,
+      "question": "甲：你在东门吗？乙：还在商店买水，买完就去东门。甲：好，我在东门等你。谁现在在东门？",
+      "correct": "甲。",
+      "distractors": [
+        "乙。",
+        "甲和乙。",
+        "甲和乙都不在东门。"
+      ],
+      "lessons": [
+        9,
+        10
+      ],
+      "slides": {
+        "9": [
+          14,
+          17,
+          57
+        ],
+        "10": [
+          24,
+          72
+        ]
+      },
+      "skill": "跨课当前状态理解",
+      "reason": "甲明确在东门等，乙还在商店，尚未到东门。",
+      "answer_index": 1,
+      "sources": [
+        {
+          "lesson_key": "boya-elementary-i:lesson-09",
+          "path": "lessons/boya-elementary-i/lesson-09/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ffe3d8776e7ec1aa799ef8ea8bc3f8ce964ac7d1bb2a26c1cc1ef95e4cff493f",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide14.xml",
+              "text": "第九课｜我们怎么去 14 东门 教材 P58 东门 dōngmén 词类：名词 意思：cổng phía đông 扩展：东 / 西 / 南 / 北    +    门 例句1：我们在东门见吧。 例句2：学校北门在那儿。 东门 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide17.xml",
+              "text": "第九课｜我们怎么去 17 旁边 教材 P58 旁边 pángbiān 词类：名词 意思：bên cạnh 用法 ： ( 在 )   +    地方 / 人 / 东西    +   ( 的 )   +    旁边 例句1：我坐在朋友的旁边。 例句2：学校旁边有商店。 Audio 9-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide57.xml",
+              "text": "第九课｜我们怎么去 57 我们怎么去 教材 P65 打开教材P65，听录音。 去哪儿：________________ 怎么去：________________ 几点、在哪儿见：________________ Audio 9-10"
+            }
+          ]
+        },
+        {
+          "lesson_key": "boya-elementary-i:lesson-10",
+          "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+          "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81",
+          "slides": [
+            {
+              "slide_xml": "ppt/slides/slide24.xml",
+              "text": "第十课｜西瓜怎么卖 24 教材 P70 瓶 瓶 píng 词类：名词 意思：chai 用法：数字    +    瓶    +    东西 例句1：我要两瓶水。 例句2：这瓶牛奶多少钱？ Audio 10-1"
+            },
+            {
+              "slide_xml": "ppt/slides/slide72.xml",
+              "text": "第十课｜西瓜怎么卖 72 教材 P78–79 我要…… 例句1：我要一杯咖啡。 例句2：我要买两个苹果。 说三句你要买什么。 1. ____________________ 2. ____________________ 3. ____________________"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "semantic_review": {
+    "reviewer": "Codex",
+    "scope": "Read all generated questions and options; original 40 retained and previous semantic QA rechecked; new 40 reviewed for one defensible answer, current vs proposed information, pronoun references, quantity/currency calculations and independent question context.",
+    "findings": [
+      "Changed a redundant apple-price question to cash-sufficiency integration",
+      "Shuffled new answer positions while retaining 20 correct answers in each position across all 80",
+      "All new texts self-contained; no question relies on another question or unseen audio"
+    ],
+    "limits": [
+      "No student comprehension or game import test",
+      "Actual student mastery of every support word is not established"
+    ]
+  }
+}

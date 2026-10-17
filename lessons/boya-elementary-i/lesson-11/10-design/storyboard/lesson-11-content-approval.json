@@ -1,0 +1,30 @@
+{
+  "lesson_key": "boya-elementary-i:lesson-11",
+  "offering_id": "2026-fall",
+  "gate": "lesson-content",
+  "status": "approved",
+  "approved_by": "Adam",
+  "approved_at": "2026-10-15T16:45:58.189296+07:00",
+  "timestamp_basis": "current turn approval capture; user message timestamp unavailable",
+  "artifacts": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-11/00-source/canonical-source.json",
+      "sha256": "04954932ff8b225ad1f0af9e854de7eac47573eccdf25ecee7a96723aeabb17a"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-11/10-design/storyboard/lesson-11-逐页文案审阅.md",
+      "sha256": "9ebb50373173b4a7c20feaefe40c51e440bab0d0c5a1cda24e6b07f96f1b2b08"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-11/10-design/review-20261015/lesson-11-12-完整内容审阅-v07.md",
+      "sha256": "9ebb50373173b4a7c20feaefe40c51e440bab0d0c5a1cda24e6b07f96f1b2b08"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-11/10-design/review-20261015/lesson-11-12-完整内容-v07.json",
+      "sha256": "f139980226e5a8d341c1be3c5761d3639f200b962c0333a9df2d0978505926bc"
+    }
+  ],
+  "evidence": "lessons/boya-elementary-i/lesson-11/10-design/storyboard/lesson-11-content-approval-evidence-v07-20261015.md",
+  "evidence_sha256": "11f7382c9dd56b8c31973b2107f12839ebf1fb039299e0333cdd42efada2572b",
+  "scope": "v07 weather table redesign and generated pictograms; factual table values unchanged"
+}

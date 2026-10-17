@@ -1,7 +1,10 @@
 {
   "schema_version": 2,
   "contract_id": "boya-quasi-intermediate-i-face-to-face-v2",
-  "scope": "boya-quasi-intermediate-i:lesson-01..lesson-12",
+  "scope": "explicit legacy PPTX maintenance only; boya-quasi-intermediate-i:lesson-01..lesson-12",
+  "status": "legacy-reference",
+  "required_mode": "legacy-face",
+  "excluded_scope": "Current classroom HTML and its PPTX backups follow their approved activity route, not this historical sequence.",
   "student_facing_language": "简体中文；不含在线词语页的越南文意思层",
   "lesson_specific_routing_fields": {
     "sentence_patterns": "face_expression_routing",

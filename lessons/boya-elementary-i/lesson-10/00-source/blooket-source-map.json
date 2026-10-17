@@ -1,0 +1,339 @@
+{
+  "lesson_key": "boya-elementary-i:lesson-10",
+  "offering_id": "2026-fall",
+  "mapping_scope": "existing weekly review CSV questions, not full publisher exercise coverage",
+  "questions": [
+    {
+      "question": 21,
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "type": "情境表达",
+      "question_text": "想问苹果的价钱，应该说：",
+      "correct_answer": "这些苹果多少钱？",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide8.xml",
+          "text": "第十课｜西瓜怎么卖 08 教材 P69 钱 钱 qián 词类：名词 意思：tiền 常见短语 ： ... 多少 钱？ 付钱 例句1：这些苹果多少钱？ 例句2：我去付钱。 Audio 10-1"
+        },
+        {
+          "slide_xml": "ppt/slides/slide71.xml",
+          "text": "第十课｜西瓜怎么卖 71 教材 P76、79 ……多少钱？ 例句1：这些苹果多少钱？ 例句2：西瓜怎么卖？ 准备三个问价钱的问题。 1. ____________________ 2. ____________________ 3. ____________________"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 22,
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "type": "情境问答",
+      "question_text": "甲：你要买什么？乙：___",
+      "correct_answer": "我要两瓶牛奶。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide24.xml",
+          "text": "第十课｜西瓜怎么卖 24 教材 P70 瓶 瓶 píng 词类：名词 意思：chai 用法：数字    +    瓶    +    东西 例句1：我要两瓶水。 例句2：这瓶牛奶多少钱？ Audio 10-1"
+        },
+        {
+          "slide_xml": "ppt/slides/slide72.xml",
+          "text": "第十课｜西瓜怎么卖 72 教材 P78–79 我要…… 例句1：我要一杯咖啡。 例句2：我要买两个苹果。 说三句你要买什么。 1. ____________________ 2. ____________________ 3. ____________________"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 23,
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "type": "情境表达",
+      "question_text": "想知道商店有没有面包，应该问：",
+      "correct_answer": "这里有面包吗？",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide73.xml",
+          "text": "第十课｜西瓜怎么卖 73 教材 P79 有……吗？ 例句1：有牛奶吗？ 例句2：这里有面包吗？ 准备三个问有没有的问题。 1. ____________________ 2. ____________________ 3. ____________________"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 24,
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "type": "句子填空",
+      "question_text": "“我___现金。”",
+      "correct_answer": "付",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide17.xml",
+          "text": "第十课｜西瓜怎么卖 17 教材 P69 付 付 fù 词类：动词 意思：trả (tiền); thanh toán 常见短语 ： 付钱 ； 付现金 例句1：我来付钱吧。 例句2：你怎么付钱？ Audio 10-1"
+        },
+        {
+          "slide_xml": "ppt/slides/slide19.xml",
+          "text": "第十课｜西瓜怎么卖 19 教材 P69 现金 现金 xiànjīn 词类：名词 意思：tiền mặt 常用短语：付现金 例句1：我没有现金，可以用微信付钱吗？ 例句2：可以付现金吗？ Audio 10-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 25,
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "type": "情境问答",
+      "question_text": "甲：你怎么付钱？乙：___",
+      "correct_answer": "我刷卡。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide20.xml",
+          "text": "第十课｜西瓜怎么卖 20 教材  P69 刷卡 刷卡 shuā kǎ 词类：动词短语 意思：quẹt thẻ 常用短语：可以刷卡吗？ 例句1：我刷卡。 例句2：这里可以刷卡吗？ Audio 10-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 26,
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "type": "词义理解",
+      "question_text": "“请扫这个二维码。”这里的“扫”是：",
+      "correct_answer": "扫码。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide21.xml",
+          "text": "第十课｜西瓜怎么卖 21 教材 P69 扫 扫 sǎo 词类：动词 意思：quét; quét mã 常用短语 ： 扫   二维码 ； 扫微信 例句1：我扫微信付钱。 例句2：请扫这个二维码。 Audio 10-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 27,
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "type": "价钱理解",
+      "question_text": "“两块五毛”是：",
+      "correct_answer": "2.50元",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide9.xml",
+          "text": "第十课｜西瓜怎么卖 09 教材 P69 块（元） 块（元） kuài（yuán） 词类：量词 意思：tệ; nhân dân tệ 用法 ： 数字    +    块    +   ( 钱 ) 数字    +    元 12元 例句1：一瓶水两块钱。 例句2：这个面包十二元。 Audio 10-1"
+        },
+        {
+          "slide_xml": "ppt/slides/slide11.xml",
+          "text": "第十课｜西瓜怎么卖 11 教材 P69 毛（角） 毛（角） máo（jiǎo） 词类：量词 意思：hào; một phần mười tệ 用法：数字    +    毛 / 角    +    钱   1元＝10角 例句1：这支笔五毛钱。 例句2：一角钱就是一毛钱。 Audio 10-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 28,
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "type": "单位换算",
+      "question_text": "一元钱等于多少角？",
+      "correct_answer": "十角。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide9.xml",
+          "text": "第十课｜西瓜怎么卖 09 教材 P69 块（元） 块（元） kuài（yuán） 词类：量词 意思：tệ; nhân dân tệ 用法 ： 数字    +    块    +   ( 钱 ) 数字    +    元 12元 例句1：一瓶水两块钱。 例句2：这个面包十二元。 Audio 10-1"
+        },
+        {
+          "slide_xml": "ppt/slides/slide11.xml",
+          "text": "第十课｜西瓜怎么卖 11 教材 P69 毛（角） 毛（角） máo（jiǎo） 词类：量词 意思：hào; một phần mười tệ 用法：数字    +    毛 / 角    +    钱   1元＝10角 例句1：这支笔五毛钱。 例句2：一角钱就是一毛钱。 Audio 10-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 29,
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "type": "单位换算",
+      "question_text": "一毛钱等于多少分？",
+      "correct_answer": "十分。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide11.xml",
+          "text": "第十课｜西瓜怎么卖 11 教材 P69 毛（角） 毛（角） máo（jiǎo） 词类：量词 意思：hào; một phần mười tệ 用法：数字    +    毛 / 角    +    钱   1元＝10角 例句1：这支笔五毛钱。 例句2：一角钱就是一毛钱。 Audio 10-1"
+        },
+        {
+          "slide_xml": "ppt/slides/slide12.xml",
+          "text": "第十课｜西瓜怎么卖 12 教材 P69 分 分 fēn 词类：量词 意思：xu; một phần trăm tệ 用法：数字  +  分  +  钱 1元＝100分 元 角 分 例句1：这张纸五分钱。 例句2：一毛钱是十分钱。 Audio 10-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 30,
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "type": "单位换算",
+      "question_text": "本课中，一斤苹果是多少克？",
+      "correct_answer": "五百克。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide33.xml",
+          "text": "第十课｜西瓜怎么卖 33 教材 P70 斤 斤 jīn 词类：量词 意思：đơn vị khối lượng bằng 500 gam 500克＝一斤 例句1：我要一斤苹果。 例句2：两斤西瓜多少钱？ Audio 10-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 31,
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "type": "词义理解",
+      "question_text": "“两斤西瓜”中的“斤”表示：",
+      "correct_answer": "重量。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide33.xml",
+          "text": "第十课｜西瓜怎么卖 33 教材 P70 斤 斤 jīn 词类：量词 意思：đơn vị khối lượng bằng 500 gam 500克＝一斤 例句1：我要一斤苹果。 例句2：两斤西瓜多少钱？ Audio 10-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 32,
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "type": "句子填空",
+      "question_text": "我要___杯咖啡。（数量：2）",
+      "correct_answer": "两",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide76.xml",
+          "text": "第十课｜西瓜怎么卖 76 教材 P73 两  +  量词  +  名词 例句1：我要两杯咖啡。 例句2：我买两个苹果。 用“两”说三句话。 1. ____________________ 2. ____________________ 3. ____________________"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 33,
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "type": "价钱理解",
+      "question_text": "“二十块钱”写成数字是：",
+      "correct_answer": "20元",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide9.xml",
+          "text": "第十课｜西瓜怎么卖 09 教材 P69 块（元） 块（元） kuài（yuán） 词类：量词 意思：tệ; nhân dân tệ 用法 ： 数字    +    块    +   ( 钱 ) 数字    +    元 12元 例句1：一瓶水两块钱。 例句2：这个面包十二元。 Audio 10-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 34,
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "type": "选正确句",
+      "question_text": "问苹果的数量，哪一句对？",
+      "correct_answer": "你要几个苹果？",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide74.xml",
+          "text": "第十课｜西瓜怎么卖 74 教材 P73、79 你要几个／多少……？ 例句1：你要几个苹果？ 例句2：你要多少牛奶？ 用“几”或“多少”问三个问题。 1. ____________________ 2. ____________________ 3. ____________________"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 35,
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "type": "情境表达",
+      "question_text": "桌上已经有一瓶牛奶。我还想买一瓶，可以说：",
+      "correct_answer": "我再买一瓶牛奶。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide32.xml",
+          "text": "第十课｜西瓜怎么卖 32 教材 P70 再 再 zài 词类：副词 意思：thêm; nữa; lại 用法：再  +  动词 例句1：我再买一瓶牛奶。 例句2：请再给我一个面包。 Audio 10-1"
+        },
+        {
+          "slide_xml": "ppt/slides/slide78.xml",
+          "text": "第十课｜西瓜怎么卖 78 教材 P70、79 再   +  动词  …… 例句1：我再买一瓶牛奶。 例句2：请再给我两个面包。 用“再”说三句话 。 1. ____________________ 2. ____________________ 3. ____________________"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 36,
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "type": "总价理解",
+      "question_text": "一瓶水三块钱。买两瓶，一共多少钱？",
+      "correct_answer": "六块钱。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide77.xml",
+          "text": "第十课｜西瓜怎么卖 77 教材 P72、79 一共…… 例句1：两瓶水一共六块钱。 例句2：一共十二块五毛。 用“一共”说三个总价。 1. ____________________ 2. ____________________ 3. ____________________"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 37,
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "type": "词义理解",
+      "question_text": "“这些苹果”说的是：",
+      "correct_answer": "不止一个苹果。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide80.xml",
+          "text": "第十课｜西瓜怎么卖 80 教材 P72、79 这个／这些 …… 例句1：这个苹果多少钱？ 例句2：这些 香蕉一共八十块钱 。 用“这个”或“这些 ” 说三个句子 。 1. ____________________ 2. ____________________ 3. ____________________"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 38,
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "type": "拼音",
+      "question_text": "“买”的拼音是：",
+      "correct_answer": "mǎi",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide7.xml",
+          "text": "第十课｜西瓜怎么卖 07 教材 P69 买 买 mǎi 词类：动词 意思：mua 例句1：我要买两瓶牛奶。 例句2：你买什么水果？ Audio 10-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 39,
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "type": "越南文词义",
+      "question_text": "“卖”的越南语意思是：",
+      "correct_answer": "bán",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide6.xml",
+          "text": "第十课｜西瓜怎么卖 06 教材 P69 卖 卖 mài 词类：动词 意思：bán 常见用法 ： 卖  +  东 西 东西  +  怎么卖 ？ 例句1：这里卖苹果。 例句2：西瓜怎么卖？ Audio 10-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    },
+    {
+      "question": 40,
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "type": "情境表达",
+      "question_text": "想请服务员给你一杯水，可以说：",
+      "correct_answer": "服务员，请给我一杯水。",
+      "source_snapshot": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+      "source_slides": [
+        {
+          "slide_xml": "ppt/slides/slide27.xml",
+          "text": "第十课｜西瓜怎么卖 27 教材 P70 服务员 服务员 fúwùyuán 词类：名词 意思：nhân viên phục vụ 使用情况：用来叫服务员，像越南语的Anh / chị / em   ơi ! 例句1：服务员，请给我一杯水。 例句2：那位服务员会说汉语。 Audio 10-1"
+        },
+        {
+          "slide_xml": "ppt/slides/slide36.xml",
+          "text": "第十课｜西瓜怎么卖 36 教材 P70 杯 杯 bēi 词类：名词 意思：cốc; ly 例句1：我要一杯水。 例句2：这两杯咖啡多少钱？ Audio 10-1"
+        }
+      ],
+      "source_note": "Existing weekly review question; illustrative situations are not quotations from publisher exercises."
+    }
+  ]
+}

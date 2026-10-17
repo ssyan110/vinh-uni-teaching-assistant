@@ -15,21 +15,21 @@ Requirements registry: `docs/workflow/requirements-registry.md`
 
 ### 1.1 課程基線
 
-- 學生已完成《博雅漢語聽說：初級起步篇》第一、二冊。
-- 本學期教材已切換為《博雅漢語聽說：準中級加速篇 I》十二課；《中級衝刺篇 I》完整保留，規劃於三年級使用。
+- 本專案服務不同班級；教材、程度、已教內容與課表由明確 offering_id、textbook_id、class_scope 及班級紀錄決定。
+- 2026-fall 含一年級初級與準中級班；已完成初級兩冊只適用相應準中級班。中級教材保留供 2027-fall 規劃使用。
 - 課程核心技能是 listening + speaking。
 - 每節 50 分鐘；每次上課 4 節；每次上課 200 分鐘。
 - 每一課的實體課時不預設固定值，必須依各冊教材的實際課數、各課內容量與正式課表分配；可跨次上課或在同次安排多課。
 - 線上學習由學生自行安排，屬課外額外學習；各課核准的實體課時照常完成，線上時間不折抵、不替代、不縮減實體節數。排課先按教材與正式課表計算實體節數，再另列線上自學內容。
-- 當前第一個生產單位是 `boya-quasi-intermediate-i:lesson-01`（〈丽丽是独生女〉）；其完成與否只以該 `lesson_key` 的最新 manifest／交付紀錄及 Adam 最新明確決定為準，本規格不重複硬編碼狀態。
-- 逐課 authority／release 依序完成；若各課各自具備 `lesson_key`、來源包與線上／實體邊界確認，`10-design` draft 可以並行。新教材第一課完整 authority／release gate 未完成前，不得把後續課次宣稱為已批准或已交付。
+- 本次生產單位由明確課次身份決定；完成狀態以該課最新 manifest／交付紀錄及 Adam 最新明確決定為準。
+- 逐課 authority／release 依序完成；若各課各自具備 lesson_key、來源包、線上／實體邊界確認及具體逐頁內容批准，`10-design` draft 可以並行。新教材第一課完整 authority／release gate 未完成前，不得把後續課次宣稱為已批准或已交付。
 
 ### 1.1A 課次身份與教材範圍
 
 - `lesson-01`、`lesson-02` 等課號只在單一本教材內有效，不能作為全域唯一 ID。
 - 跨檔案、dashboard、QA、生成器與交付紀錄一律使用 `lesson_key`：`<textbook_id>:<lesson_id>`，必要時再帶 `offering_id`。
 - `boya-quasi-intermediate-i:lesson-01` 是《準中級加速篇 I》第一課〈丽丽是独生女〉；`boya-intermediate-i:lesson-01` 是《中級衝刺篇 I》第一課〈中国人的姓名〉。兩者都正確存在，不能互相覆蓋或互相解鎖。
-- 唯一的跨教材課次索引是 `course/lesson-registry.json`。`project.config.json.active_context.lesson_key` 決定目前生產上下文；狀態不得從裸課號或舊聊天記錄推定。
+- 唯一的跨教材課次索引是 `course/lesson-registry.json`。新工作使用明確 LessonContext；project.config.json.active_context.lesson_key 僅供 legacy consumer 相容；狀態不得從裸課號或舊聊天記錄推定。
 
 ### 1.2 《中級衝刺篇 I》第一課的既有批准狀態
 
@@ -52,7 +52,7 @@ Requirements registry: `docs/workflow/requirements-registry.md`
 - 教材来源：`textbooks/boya-quasi-intermediate-i/source/`。
 - 第一课来源包：`boya-quasi-intermediate-i:lesson-01` 对应的 `lessons/boya-quasi-intermediate-i/lesson-01/00-source/`。
 - 12 個課次的 QR／音檔索引已盤點；每課必須另外記錄出版社或使用者補回來源、技術解碼、語義核對與實際播放狀態，不能把全書總數當成單課可播放或來源批准證據。未來 PPT 依 3.2C 使用純文字音頻標示，播放在 PPT 外核實；歷史 PowerPoint 實播證據保持原樣。
-- 准中级第一课的 authority／release 决定以 `boya-quasi-intermediate-i:lesson-01` 为准；若 checkout 尚未有对应的 `20-approved/` 与 `40-release/`，不得把后续课次升格为 authority 或 release。只要后续课次各自已有来源包与边界确认，`10-design` draft 仍可并行制作。正式学期时数仍须依全书理解、来源批准与学校课表确认后定稿。
+- 准中级第一课的 authority／release 决定以 `boya-quasi-intermediate-i:lesson-01` 为准；若 checkout 尚未有对应的 `20-approved/` 与 `40-release/`，不得把后续课次升格为 authority 或 release。只有后续课次各自已有来源包、边界确认及绑定具体逐页文案的内容批准，`10-design` draft 仍可并行制作。正式学期时数仍须依全书理解、来源批准与学校课表确认后定稿。
 
 ## 2. 課堂設計要求
 
@@ -117,7 +117,13 @@ Requirements registry: `docs/workflow/requirements-registry.md`
 
 ### 3.1 可選製作方式
 
-**2026-10-07實體課優先規則：**未來實體課採用[實體課 HTML 與活動製作標準](docs/classroom-html-standard-2026-10-07.md)，HTML／OpenSlide優先、離線素材、必要時可編輯靜態PPTX備份，沿用第9–10課46頁參考的簡潔視覺、連貫TBL活動及有意義的短動畫，搭配TOCFL風格測驗。此範圍取代下方native-pptx預設與§3.4舊風格衝突要求，視為已有持續風格選擇，不需每次重問。線上、既有成品、課次身份與批准／QA／release規則保持；TOCFL偏好不把W04的50題規格通用化。
+**2026-10-15 实体课活动结构：**默认一页完成，每活动最多两页；仅必要资料需分开展示时拆页，不凑页、不强塞目标栏目或两档框。短指令须包含任务对象、必要资料和结果；基础／挑战提高表达与思考难度，不增加操作手续。看图说故事为单人六格同页，无分级框。详见实体课活动制作流程；本规则不改线上课程。活动同号同名，与路线、页序和索引一致；逐页渲染并从统一首页验证翻页。
+
+**2026-10-15 封面与编号统一：**实体课封面固定课次／模式「第N课 · 实体课」或「第N—M课 · 实体课」，主标题为具体主题名词，不用活动口号；新课封面默认新生成相关插画，不裁切复用漫画。活动改序后按展示顺序连续编号，同步学生页、路线、首页、教师朗读稿PDF、教师说明及数据／动画／包内清单；具体执行见 `docs/classroom-activity-workflow.md`。仅实体课，线上课程不变。
+
+**2026-10-11實體課一致性與首版驗收：**第9–10課當前HTML是持續視覺基準。後續封面、學習流程、版式、配色、字體與字號須直接沿用其實際頁型與角色尺寸，並執行[實體課製作標準](docs/classroom-html-standard-2026-10-07.md)中的預設執行與交付自檢：全頁內容／圖片／邊界／重疊檢查、統一首頁翻頁與動畫檢查、同步、回歸檢查及構建。agent先修正再交付，不反覆詢問已確認風格，不增設風格批准階段。課次內容、human gate與release要求仍獨立。
+
+**2026-10-07實體課優先規則：**未來實體課採用[實體課 HTML 與活動製作標準](docs/classroom-html-standard-2026-10-07.md)，HTML／OpenSlide優先、離線素材、必要時可編輯靜態PPTX備份，沿用第9–10課當前參考的簡潔視覺、連貫TBL活動及有意義的短動畫，搭配TOCFL風格測驗。此範圍取代下方native-pptx預設與§3.4舊風格衝突要求，視為已有持續風格選擇，不需每次重問。線上、既有成品、課次身份與批准／QA／release規則保持；TOCFL偏好不把W04的50題規格通用化。
 
 - 線上課（含預習）維持原狀，今後仍以PPT／PPTX優先。只有實體課以HTML／OpenSlide優先，依 `docs/classroom-html-standard-2026-10-07.md`，需要時提供可編輯靜態PPTX備份。
 - `native-pptx` 產生原生可編輯 `.pptx`，並遵守本節 PPTX、字體、媒體與 QA 規則。
@@ -195,13 +201,13 @@ archive/
 
 ### 3.2 PPTX 必須具備
 
-- 《初級起步篇 I》第四課起適用 Adam 於 2026-09-19 確認的教材練習頁例外：只顯示「练习n-n」標題與教材印刷頁碼，省略教材已有題目及操作說明；標號依原書，無標號活動保留原題名，不自造編號。教師操作寫入備註，不因通用文案完整性規則重新加回投影說明。
+- 《初級起步篇 I》第四課起適用 Adam 於 2026-09-19 確認的教材練習頁例外：只顯示「练习n-n」標題與教材印刷頁碼，省略教材已有題目及操作說明；標號依原書，無標號活動保留原題名，不自造編號。此例外只限學生可取得且已打開完整原題的教材練習；自編／改寫活動仍顯示任務對象、必要資料及成果。教師組織提示寫入備註。
 
 - 原生可編輯文字、表格、形狀與版面。
 - 16:9 投影比例。
 - 靜態投影片；除非另有要求，不使用動畫。
 - 全中文學生操作指示；目標內容原則上維持教材簡體字。
-- 榮市大學硬性規則：課堂與學生端教材的結構、操作指示、目標、題目與回饋全部使用簡體中文；線上預習詞語頁的「意思」欄是已審核的越南文詞彙，這是唯一明確的學生端越南文內容例外。實體課 PPT、預習卡與補充活動卡不放越南文。任何學生端都不使用英文詞義 fallback。
+- 榮市大學硬性規則：課堂與學生端教材的結構、操作指示、目標、題目與回饋全部使用簡體中文；線上預習詞語頁的「意思」欄是已審核的越南文詞彙，屬已批准的學生端越南文例外；另可保留指定線上／歷史 PPT 的已批准越南文流程圖及逐頁明確授權內容。其餘學生內容使用簡體中文，不擴大為任意雙語。任何學生端都不使用英文詞義 fallback。
 - 簡體中文目標內容；必要時附拼音。
 - 教師手冊與教師審閱文件統一使用簡體中文；線上詞語意思欄所需的越南文詞彙另依 content contract 管理，不把越南文擴散到其他學生端欄位。
 - 教師手冊與活動速用說明明確記錄活動目標、分組方式、時間、步驟與產出；學生 PPT 只顯示當下動作、必要材料與期待產出，不顯示時間／分組 footer。
@@ -237,7 +243,7 @@ archive/
 
 ### 3.3 PPT storyboard
 
-Storyboard 是內部必要資料，不需要另外製作 HTML。完整 authority storyboard 必須以教師手冊與學生配套材料為內容來源，不能由投影片反推本課內容；但後續課次在來源包與線上／實體邊界已確認後，可以先建立並驗證 `10-design` draft storyboard，後續再補齊教師手冊、配套與 authority gate。每張投影片至少記錄：
+Storyboard 是內部必要資料，不需要另外製作 HTML。完整 authority storyboard 必須以教師手冊與學生配套材料為內容來源，不能由投影片反推本課內容；但後續課次在來源包與線上／實體邊界已確認後，可以先建立文案審閱用 storyboard；只有具體逐頁內容批准通過後，才可生成視覺 draft 並驗證 `10-design` draft storyboard，後續再補齊教師手冊、配套與 authority gate。每張投影片至少記錄：
 
 - slide number
 - 服務的節次與分鐘
@@ -253,7 +259,7 @@ Storyboard 是內部必要資料，不需要另外製作 HTML。完整 authority
 
 ### 3.4 Visual storyboard 與簡報視覺標準
 
-教師手冊先決定本課要教什麼、怎麼教、學生要完成什麼；PPT storyboard 依批准的教師手冊與學生配套材料安排投影片流程。Visual storyboard 是 PPTX 生產前的必要設計 gate。沒有完成教師手冊、配套材料與 Visual storyboard，不得大量製作完整 PPTX。Visual storyboard 通過後，必須先做 6 張視覺 prototype，完成方向審核後才展開完整 deck。
+教師手冊先決定本課要教什麼、怎麼教、學生要完成什麼；PPT storyboard 依批准的教師手冊與學生配套材料安排投影片流程。Visual storyboard 是 PPTX 生產前的必要設計 gate。沒有完成教師手冊、配套材料與 Visual storyboard，不得大量製作完整 PPTX。線上／指定歷史原生 PPTX 在 Visual storyboard 通過後先做 6 張視覺 prototype 並審核；實體 HTML 與靜態備份依實體課標準逐頁 QA，不新增六張風格 prototype。所有新視覺皆須先通過具體逐頁內容批准。
 
 - 舊線上／指定歷史PPTX視覺方向：已批准的教育教材式插畫；投影片主畫布固定使用純白 `#FFFFFF`，搭配灰藍細線、低飽和粉彩、留白充足、版面有節奏。暖白只用於局部卡片、圖片框或插畫內容，不得作為整張投影片背景。專業感來自教材清晰度與版面品質，不另換成產品發表會／大型企業簡報風格。
 - `docs/ppt-reference/finalized-l01-l06/finalized-ppt-reference-manifest.json` 所登記的 L1–L6 finalized PPTX 是共用視覺行為的唯讀參考；頁數由每課內容決定，不把任何一課的 slide count 固定套用到後續課次。
@@ -321,7 +327,7 @@ Storyboard 是內部必要資料，不需要另外製作 HTML。完整 authority
 
 ### 3.6 當前 PPT 版本控制
 
-- 每課只保留一份 current outline、current visual storyboard，以及每種課堂模式各一份 current PPTX（online、face-to-face）；已被取代的版本不放在 `10-design` 的 current draft 區，避免未來生成時誤讀。
+- 每課只保留一份 current outline、current visual storyboard，以及本次所選格式各一份 current deck（線上 PPTX、實體 HTML，按需備份 PPTX）；已被取代的版本不放在 `10-design` 的 current draft 區，避免未來生成時誤讀。
 - 舊教材 `boya-intermediate-i:lesson-01` 的 current 檔案位於 `lessons/boya-intermediate-i/lesson-01/10-design/`、`20-approved/` 與 `30-qa/`；這些檔案不代表準中級第一課，也不能作為新教材輸入。
 - 舊教材第一課的生產入口是 `scripts/build_lesson_01_pptx.js`，實作是 `scripts/build_lesson_01_pptx_native.js`。舊版 v2 生成器、舊 69 頁 storyboard 與舊 visual storyboard 已退休，不得重新啟用；任何新教材生成器必須先以 `lesson_key` 選定教材。
 - current storyboard 必須讓教師先看到「教材內容」和「學生要做什麼」，核對編號只能放在最後欄；不能要求教師先解碼 E01-xxx。
@@ -330,13 +336,13 @@ Storyboard 是內部必要資料，不需要另外製作 HTML。完整 authority
 
 - dashboard 是內部製作進度與 gate 控制頁，必須顯示目前 active lesson、每個 gate 的狀態、證據檔案、下一個動作與鎖定課次。
 - dashboard 必須清楚區分「已完成」「待審核」「製作中」「尚未開始」與「鎖定」，不得把教師手冊完成誤寫成整課 PPT 已完成。
-- 每一本教材的 authority／release 只在自己的 `textbook_id` 範圍內依序解鎖；若課次各自具備來源包與邊界確認，dashboard 必須另顯示 `draft_available`，不能把可開始 draft 的課次誤標為完全 locked。例如準中級第 2 課不因中級第 1 課完成而解鎖，也不因中級第 2 課存在而改用中級來源。
+- 每一本教材的 authority／release 只在自己的 `textbook_id` 範圍內依序解鎖；若課次各自具備來源包、邊界確認及具體逐頁內容批准，dashboard 必須另顯示 `draft_available`，不能把可開始 draft 的課次誤標為完全 locked。例如準中級第 2 課不因中級第 1 課完成而解鎖，也不因中級第 2 課存在而改用中級來源。
 - dashboard 顯示的課次、權威檔案連結、QA 狀態和 release 位置必須由 `course/lesson-registry.json` 與 active `lesson_key` 對應的 manifest 產生，不得手動寫死另一教材的路徑。
 
 ### 3.8 生成器與交付規則
 
 - 生成器只寫入 `10-design/` 的 draft 位置；不得覆蓋 `20-approved/`。
-- 所有生成器在寫入前必須通過 `python3 scripts/production_gate.py`。後續課次 PPTX draft 使用 lesson-specific `--stage draft --lesson-key` gate，只檢查該課身份、來源包、邊界確認與輸出邊界，不授予 authority；完整 PPTX、authority 與 release 才檢查教師手冊、配套、Visual storyboard、prototype、PPT 外音檔實播與 rehearsal。gate 失敗時不得建立任何 draft 檔案。
+- 所有生成器在寫入前必須通過 `python3 scripts/production_gate.py`。後續課次 PPTX draft 使用 lesson-specific `--stage draft --lesson-key` gate，檢查該課身份、來源包、邊界確認、具體逐頁內容批准與輸出邊界，不授予 authority；完整 PPTX、authority 與 release 才檢查教師手冊、配套、Visual storyboard、prototype、PPT 外音檔實播與 rehearsal。gate 失敗時不得建立任何 draft 檔案。
 - storyboard、visual alignment 與 rehearsal 的狀態只能在實際人工審核／演練後，透過 `scripts/record_lesson_gate.py` 搭配完整 `--lesson-key`、同課次 evidence 和 `--confirm` 登記；不能為了讓生成器繼續而手動填寫批准狀態。
 - PowerPoint 中的人工修訂不能被生成器或 package builder 自動覆蓋。新的人工修訂必須另存 draft，經 Adam 明確批准後才更新 authority。
 - package builder 只讀 `20-approved/`，只把檔案複製到 `40-release/` 和 ZIP，不在 release 目錄重新生成教材文件。
@@ -384,7 +390,7 @@ Storyboard 是內部必要資料，不需要另外製作 HTML。完整 authority
 - 課堂評量與 exit ticket。
 - 備課材料清單、音檔播放點、轉場話術與課堂備案。
 
-完整學生材料與 authority PPT 必須依批准的教師手冊製作；PPT 不得反過來決定本課應教什麼。後續課次在來源包與線上／實體邊界確認後，可以先產生 `10-design` draft，教師手冊與配套仍是升級為 authority／release 的必要 gate。
+完整學生材料與 authority PPT 必須依批准的教師手冊製作；PPT 不得反過來決定本課應教什麼。後續課次在來源包、線上／實體邊界確認及具體逐頁內容批准通過後，可以先產生 `10-design` draft，教師手冊與配套仍是升級為 authority／release 的必要 gate。
 
 ### 4.2 學生預習卡
 
@@ -412,7 +418,7 @@ Storyboard 是內部必要資料，不需要另外製作 HTML。完整 authority
 
 可單獨發給學生使用的角色卡、客戶卡、資訊差卡與任務卡，必須一張卡獨占一頁；不得把多張可獨立使用的卡片放在同一頁，也不得依賴教師手動裁切。
 
-活動材料採「一個活動一個資料夾」的交付結構。每個活動資料夾必須包含一份教師速用說明，以及每張可獨立使用的角色卡、客戶卡、資訊差卡、任務卡或表格的可編輯 DOCX；目前不生成或交付活動卡 PDF。不同活動不得合併成同一份課堂發放檔；課程根目錄另提供 Word 格式的活動材料索引，方便教師按節次找到資料。
+活動材料採「一個活動一個資料夾」的交付結構。每個活動資料夾必須包含一份教師速用說明，以及每張可獨立使用的角色卡、客戶卡、資訊差卡、任務卡或表格的可編輯 DOCX；活動卡 PDF 只可作 10-design 內部 QA preview，不交付或放入 release。不同活動不得合併成同一份課堂發放檔；課程根目錄另提供 Word 格式的活動材料索引，方便教師按節次找到資料。
 
 活動材料依「學生實際使用的動作」拆分，而不是為每個小步驟都新增檔案。完成檢查、重做記錄或回饋欄位若與主要任務在同一流程中完成，應直接併入主要任務卡；只有在需要獨立發放、輪換、回收或由不同角色使用時，才建立獨立材料。
 
@@ -420,9 +426,9 @@ Storyboard 是內部必要資料，不需要另外製作 HTML。完整 authority
 
 ### 4.4 核心課堂檔（依教師手冊後製作）
 
-`lessons/<textbook_id>/lesson-<nn>/20-approved/pptx/<lesson>.pptx`
+線上使用 PPTX；實體使用 HTML／OpenSlide，按需提供可編輯靜態 PPTX 備份。HTML draft 的 manifest、QA 與正式 authority／release 邊界依 `docs/workflow/classroom-html-lifecycle.md`，不能把首頁同步當成批准或發布。
 
-它是主要課堂媒體，必須能支援該課核准的完整實體課時，不是只做一節示範課；投影片內容、活動順序與教師提示都必須能回溯到已批准的教師手冊。
+選定格式是主要課堂媒體，必須能支援該課核准的完整實體課時，不是只做一節示範課；投影片內容、活動順序與教師提示都必須能回溯到已批准的教師手冊。
 
 ## 5. 來源資料與內容忠實度
 
@@ -470,7 +476,7 @@ textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/
 13. 每一課在開始製作任何 PPT 前，先由 Adam 與 AI 共同討論並確認線上課程 PPT 與實體課程 PPT 的內容邊界，保存該課 `lesson_key` 的確認記錄；未完成不得進入 PPT storyboard 或 PPT 生產。既有已批准 PPTX 不因補記錄而回改。
 14. 依教師手冊、配套材料與已確認的線上／實體邊界建立內部 PPT storyboard。
 15. 建立 Visual storyboard，確認學生畫面文字、圖片、版面、字體、色彩與素材授權。
-16. 先製作 6 張 visual prototype，完成學生畫面方向與用詞審核。
+16. 線上／指定歷史原生 PPTX 先製作 6 張 visual prototype 並審核；實體 HTML 與靜態備份依實體課標準，不另加風格批准。
 17. 依批准的 prototype 與教師手冊建立 PPT master 與完整學生投影片。
 18. 加入 speaker notes、右上角純文字 `Audio n-n` 與活動提示，保留 PPT 外的音檔及播放紀錄。
 
@@ -484,7 +490,7 @@ textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/
 
 ### 6.1 逐課生產控制
 
-每一課的 authority／release 都必須走完 Phase 1–4 才能進入下一課的 authority／release。整學期課程表可以先規劃；後續課次只要各自有來源包與線上／實體邊界確認，`10-design` draft 可並行，不視為跳過 authority 順序：
+每一課的 authority／release 都必須走完 Phase 1–4 才能進入下一課的 authority／release。整學期課程表可以先規劃；後續課次只有各自具備來源包、線上／實體邊界確認及具體逐頁內容批准，`10-design` draft 可並行，不視為跳過 authority 順序：
 
 `<textbook_id>:lesson-01 來源 → <textbook_id>:lesson-01 教學設計 → <textbook_id>:lesson-01 教師手冊 → <textbook_id>:lesson-01 配套 → <textbook_id>:lesson-01 PPT storyboard → <textbook_id>:lesson-01 Visual storyboard → <textbook_id>:lesson-01 prototype → <textbook_id>:lesson-01 完整 PPTX → <textbook_id>:lesson-01 QA／rehearsal → <textbook_id>:lesson-01 交付 → <textbook_id>:lesson-02 來源`
 
@@ -495,7 +501,7 @@ textbooks/boya-quasi-intermediate-i/source/audio/lesson-01/
 - 來源已批准。
 - 教學重組已批准。
 - 教師手冊已完成並批准；它能讓另一位教師依流程上課，且所有 PPT／學生材料都能回溯到它。
-- PPTX 可編輯且可直接上課。
+- 本次聲明的交付物完成適用檢查：線上 PPTX 可編輯；實體 HTML 通過離線素材、全頁渲染與首頁播放檢查；備份 PPTX 只在需要時納入。HTML authority／release 邊界見 `docs/workflow/classroom-html-lifecycle.md`。
 - 所有使用課本內容的投影片都有正確的教材印刷頁碼標記；不使用課本內容的投影片沒有多餘標記，且頁碼 coverage、邊界、重疊與 PDF 可見性驗證通過。
 - 所有教材練習有 slide 或配套 coverage record。
 - 教師手冊可以讓另一位教師依流程上課。
@@ -526,9 +532,11 @@ lessons/<textbook_id>/lesson-<nn>/
 
 ## 9. 学习流程图统一规则（Adam 确认，2026-09-18）
 
+本节四步越南文流程图仅限线上／指定历史 PPT；未来实体 HTML 及静态备份第二页为「今天我们会做什么」，按实际活动数量列路线，不固定四步。
+
 本届一年级第一学期第9–25课另执行 [2026-10-05新教学方法](docs/course-rules/BOYA-LS-E1-Y1S1-2026F/EFL-REDESIGN-2026-10-05.md)。其按目标证据免练、动态核心/E/E＋路径、新输入与新交际目标、P/P/D/T及反馈重说要求，优先于本班旧统一核心操练的解释；仅改变指定班级教法。课本覆盖、50分钟课时、线上不折抵实体、PPT可读性与音频标示规则保留。源目录中的试行方案、审阅稿和候选材料不自动成为具体成品或学校评量批准。
 
-- 所有《初级起步篇 I》各课 PPT 的学习流程图沿用第一课已确认的同一视觉风格和版式：16:9、四个横向步骤、同样的留白、箭头位置、圆角色块、插画比例和文字层级。
+- 仅《初级起步篇 I》线上预习或明确指定的历史 PPT 维护，其学习流程图沿用第一课已确认的同一视觉风格和版式：16:9、四个横向步骤、同样的留白、箭头位置、圆角色块、插画比例和文字层级。
 - 每课只替换本课的越南文步骤文字和对应插画；不得因换课重新设计另一套流程图风格。
 - 流程图中的越南文必须在生成后人工检查声调符号、拼写和学生能否直接理解；生成图仍须内嵌到 PPTX，不能依赖外部路径。
 
@@ -548,3 +556,9 @@ lessons/<textbook_id>/lesson-<nn>/
 ## 2026/10/12起上课作息
 
 2026/10/12起（Adam于2026/10/10确认）：上午上课及下课延后30分钟，下午提前30分钟；每节50分钟，课间5分钟，每次4节净教学200分钟。NNTQ1周一、LT_03周五07:55–11:30；LT_01周三、LT_02周四13:00–16:35。教室与节次不变；先前日期保留旧作息，二年级军训停课2026/10/05–11/01保持。
+
+## 2026-10-14：每周实体课制作入口
+
+执行 [实体课活动制作流程](docs/classroom-activity-workflow.md)：先补齐实际输入、学生动作、成果及教师朗读／答案，制作者先做理解核对，再一次提交当周具体内容。已确认风格直接复用；默认一页、最多两页，按任务选择结构，不重复询问或增加例行批准轮次。内容批准后生产并自行完成全页QA；技术检查、试教与发布分别记录。
+
+2026-10-15 Adam最新指定的实体课封面插画风格：**minimal educational textbook style**。极简平面教材插画、简洁线条、有限海军蓝／青绿与少量暖黄、大面积白底留白；避免写实／动漫人物、3D质感、渐变、复杂光影与繁密场景。新生成封面图须先按此要求检查，不因“新生成”就自动采用。仅实体课封面插画，既有漫画及线上PPT不追溯修改。

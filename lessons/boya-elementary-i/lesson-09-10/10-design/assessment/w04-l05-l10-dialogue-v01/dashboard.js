@@ -20,9 +20,8 @@ function stopTimer() { if (timer !== null) clearInterval(timer); timer = null; e
 function displayCounts() {
   el('replays').textContent = `完整播放 ${completed[current]} 次／计划播放 ${tracks[current].play_count} 次`;
 }
-function selectTrack(n, ask = true, scroll = true) {
+function selectTrack(n, scroll = true) {
   if (n < 0 || n >= tracks.length) return;
-  if (ask && n !== current && completed[current] < tracks[current].play_count && !confirm('当前段尚未完成计划播放次数。仍要切换吗？')) return;
   player.pause(); stopTimer(); current = n; fullPlayback = false;
   const t = tracks[current];
   el('error').textContent = '';
@@ -34,7 +33,7 @@ function selectTrack(n, ask = true, scroll = true) {
   el('prev').disabled = current === 0; el('next').disabled = current === tracks.length - 1;
   el('progress').value = 0; el('elapsed').textContent = '0.0秒';
   player.src = t.file; player.load(); displayCounts(); saveProgress();
-  for (let i = 0; i < tracks.length; i++) el('queue').children[i].className = i === current ? 'current' : '';
+  for (let i = 0; i < tracks.length; i++) el('queue').children[i].classList.toggle('current', i === current);
   if (scroll) el('player-panel').scrollIntoView({block: 'start'});
 }
 async function playFromStart() {
@@ -44,6 +43,11 @@ async function playFromStart() {
   try { await player.play(); } catch (_) { fullPlayback = false; el('error').textContent = `播放失败：${tracks[current].file}。检查文件与播放权限，再按从头播放重试。`; el('status').textContent = '未播放'; }
 }
 player.addEventListener('play', () => { if (player.currentTime < 0.25) fullPlayback = true; el('status').textContent = '正在播放'; });
+player.addEventListener('playing', () => {
+  const button = el('queue').children[current].querySelector('button');
+  button.classList.add('played');
+  button.textContent = button.textContent.replace(/ · ✓ 已播放$/, '') + ' · ✓ 已播放';
+});
 player.addEventListener('pause', () => { if (!player.ended) { stopTimer(); el('status').textContent = '已暂停；从原位置续播仍可计为一遍'; } });
 player.addEventListener('seeking', () => { if (player.currentTime > 0.25) fullPlayback = false; });
 player.addEventListener('ended', () => {
@@ -67,7 +71,11 @@ el('prev').addEventListener('click', () => selectTrack(current - 1));
 el('next').addEventListener('click', () => selectTrack(current + 1));
 el('reset').addEventListener('click', () => {
   if (!confirm('清零所有播放遍数并回到第1段？已保存的进度也会清零。')) return;
-  player.pause(); stopTimer(); completed.fill(0); fullPlayback = false; selectTrack(0, false); el('status').textContent = '播放记录已清零';
+  player.pause(); stopTimer(); completed.fill(0); fullPlayback = false; selectTrack(0); el('status').textContent = '播放记录已清零';
+  for (const button of el('queue').querySelectorAll('button')) {
+    button.classList.remove('played');
+    button.textContent = button.textContent.replace(/ · ✓ 已播放$/, '');
+  }
 });
 el('timer').addEventListener('click', () => startTimer('看题', tracks[current].preview_seconds));
 el('between-timer').addEventListener('click', () => startTimer('两遍间作答', tracks[current].between_plays_seconds));
@@ -75,7 +83,7 @@ el('answer-timer').addEventListener('click', () => startTimer('最后作答', tr
 tracks.forEach((t, i) => {
   const li = document.createElement('li'), button = document.createElement('button');
   button.type = 'button'; button.textContent = `题${t.question_range.replace(/第|题/g, '')} · 第${i + 1}段 · Audio ${t.audio_id}`;
-  button.addEventListener('click', () => selectTrack(i)); li.appendChild(button); el('queue').appendChild(li);
+  button.addEventListener('click', () => { selectTrack(i, false); playFromStart(); }); li.appendChild(button); el('queue').appendChild(li);
 });
-selectTrack(current, false, false);
+selectTrack(current, false);
 if (restored) el('storage-status').textContent = '已恢复同一音源版本的段号与完整播放遍数；本段从头开始，不自动播放。';

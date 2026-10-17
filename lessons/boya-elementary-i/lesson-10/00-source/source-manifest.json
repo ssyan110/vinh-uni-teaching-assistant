@@ -1,0 +1,39 @@
+{
+  "schema_version": "boya-lesson-source-manifest-v1",
+  "lesson_key": "boya-elementary-i:lesson-10",
+  "textbook_id": "boya-elementary-i",
+  "lesson_id": "lesson-10",
+  "offering_id": "2026-fall",
+  "title": "西瓜怎么卖",
+  "source_status": "source_mapping_verified_for_existing_blooket_review",
+  "source_qa_status": "existing_csv_content_checked_against_online_courseware_and_ocr; full_publisher_coverage_not_audited",
+  "source_pdf": {
+    "path": "external-user-source:/Users/ssyan110/Desktop/Work/Teaching/02_教材/博雅漢語教材/1. 博雅汉语听说-初级起步篇I.pdf",
+    "sha256": "9a98ee0b376c9b5cff20622987a0e4b9cee68287e45dc547665a3cd537fb517a",
+    "printed_pages": "69–79",
+    "pdf_pages": "80–90"
+  },
+  "derived_sources": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-10/00-source/online-pptx-source-snapshot.json",
+      "sha256": "ba67dc7195e9f2cfc7483d0e9805f2b54b7ae6498343ecc53f6c6b009d079a81"
+    },
+    {
+      "path": "textbooks/boya-elementary-i-ii/source/reference-dataset/csv/lessons.csv",
+      "sha256": "de05b02c367dd48bfa7626ad3b1e4b9bdd30316615e51204bd06fa16e62cd66d"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-10/00-source/blooket-source-map.json",
+      "sha256": "c8be4e8a774007f6ac505b8c05db73c53fdbfc7aec8e15aca061918641ad8aa5"
+    }
+  ],
+  "scope": "Existing weekly Blooket review support only; no new textbook transcription or authority promotion",
+  "review": {
+    "source_approved": false,
+    "human_gates_open": [
+      "teacher acceptance",
+      "authority approval",
+      "release"
+    ]
+  }
+}

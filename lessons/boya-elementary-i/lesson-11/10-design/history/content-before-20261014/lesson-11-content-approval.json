@@ -1,0 +1,22 @@
+{
+  "lesson_key": "boya-elementary-i:lesson-11",
+  "offering_id": "2026-fall",
+  "gate": "lesson-content",
+  "status": "approved",
+  "approved_by": "Adam",
+  "approved_at": "2026-10-11T13:08:58.255241+07:00",
+  "timestamp_basis": "approval captured during current turn",
+  "artifacts": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-11/00-source/canonical-source.json",
+      "sha256": "0a41ea204889b9095aa0804bd39537c476e65d9d5953f04bb9ffe466e00b1e93"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-11/10-design/storyboard/lesson-11-逐页文案审阅.md",
+      "sha256": "e3a9ca0fd8c4cba0c602646f72c76e3f7cd149d1124e30942e901047d3f192c6"
+    }
+  ],
+  "evidence": "lessons/boya-elementary-i/lesson-11/10-design/storyboard/lesson-11-content-approval-evidence-2026-10-11.md",
+  "evidence_sha256": "99603bb7078975dbb48862ebe83fda50bd57a963c4ce0874c28ede656713f219",
+  "scope": "v03 original face-to-face task content; no publisher-audio, full-coverage, rehearsal, authority or release approval"
+}

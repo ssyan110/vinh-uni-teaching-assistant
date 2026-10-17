@@ -1,0 +1,17 @@
+{
+  "status": "technical_verified",
+  "version": "v04",
+  "html_sha256": "8d71832d0df10a6e9d50bc52e87a62dd1404ad6419a97e32dcb5b45514aa26de",
+  "pdf_sha256": "d7477a9008dc1f5a72434b2f6eba49a1140cfc679d0035b1aad5ea960c2c3b70",
+  "pages": 21,
+  "visual_inspection": "all21 slides rendered and reviewed; all7 PDF pages rendered and reviewed",
+  "content_check": "passed",
+  "navigation": "passed",
+  "build": "npm run build passed; existing bundle size warning",
+  "regressions": "2 workspace tests and3 sync tests passed",
+  "package": "passed",
+  "source_approval": "actual current-turn Adam v04 approval captured for both lesson keys",
+  "human_playback": "not performed by teacher",
+  "classroom_trial": "not observed",
+  "authority_release": "not promoted"
+}

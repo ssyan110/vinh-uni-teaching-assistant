@@ -149,7 +149,7 @@ $('export').addEventListener('click',e=>{if(dirty){e.preventDefault();message('�
 $('content').addEventListener('click',async e=>{
   const b=e.target.closest('button');if(!b || busy)return;
   try {
-    if(b.dataset.student){if(!mayLeave())return;studentCode=b.dataset.student;loadDraft();render();}
+    if(b.dataset.student){if(!mayLeave())return;studentCode=b.dataset.student;loadDraft();render();if(matchMedia('(max-width:650px)').matches)document.querySelector('.scoring')?.scrollIntoView({block:'start'});}
     else if(b.dataset.status){const status=b.dataset.status;if(['absent','pending'].includes(status)&&draft.scores.some(s=>s!==null)){if(!confirm('此状态不计分。清除当前分项分数吗？原表记录和修改历史仍会保留。'))return;draft.scores=draft.scores.map(()=>null);}draft.status=status;markDirty();render(true);}
     else if(b.dataset.criterion!==undefined){draft.scores[Number(b.dataset.criterion)]=Number(b.dataset.score);if(draft.status!=='supplement')draft.status='done';markDirty();render(true);}
     else if(b.dataset.clear!==undefined){draft.scores[Number(b.dataset.clear)]=null;markDirty();render(true);}
@@ -235,3 +235,13 @@ $('close-history').addEventListener('click',()=>$('history-dialog').close());
 window.addEventListener('beforeunload',e=>{if(dirty||busy){e.preventDefault();e.returnValue='';}});
 document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key==='Enter'&&view==='score'&&!$('assessment-dialog').open){e.preventDefault();save(true);}});
 refresh().catch(e=>message('无法读取本机资料：'+e.message,true));
+
+$('mobile-access').addEventListener('click', async () => {
+  try {
+    const result = await api('/api/mobile');
+    $('mobile-link').textContent = result.url;
+    $('mobile-link').href = result.url;
+    $('mobile-dialog').showModal();
+  } catch (error) { message(error.message, true); }
+});
+$('close-mobile').addEventListener('click', () => $('mobile-dialog').close());

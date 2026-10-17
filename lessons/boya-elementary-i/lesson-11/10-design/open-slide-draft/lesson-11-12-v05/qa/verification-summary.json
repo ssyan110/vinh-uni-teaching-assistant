@@ -1,0 +1,25 @@
+{
+  "status": "technical_pass",
+  "pages": 21,
+  "activities": 14,
+  "teacher_pdf_pages": 6,
+  "checks": [
+    "approved content fidelity",
+    "original weather image bytes preserved and all seven rows visually inspected",
+    "all21 pages rendered and visually reviewed in order",
+    "six PDF pages inspected and eight full messages text-matched",
+    "homepage 21 forward /20 backward /thumbnail /arrow /space /reduced motion",
+    "workspace sync and production build passed",
+    "ZIP integrity and seven resource hashes passed"
+  ],
+  "repair_notes": [
+    "Reduced original weather table display to keep seventh row and footer separate",
+    "First homepage test interrupted by concurrent build hot reload; reran after build, all47 navigation checks passed"
+  ],
+  "limitations": [
+    "No classroom trial or teacher rehearsal claimed",
+    "Existing build chunk-size warning; build succeeded"
+  ],
+  "html_sha256": "27d24bde77264a9b5f8a77489ac54b50e4964a682c6aa8c4b733b58b80dcb880",
+  "pdf_sha256": "ec9f3b5f401040338483b873b61bbcbd1cd59c9ab920f9ca60388c44c2cad9f3"
+}

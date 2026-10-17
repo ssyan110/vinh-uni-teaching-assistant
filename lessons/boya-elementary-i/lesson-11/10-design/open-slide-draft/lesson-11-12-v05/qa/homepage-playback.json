@@ -1,0 +1,383 @@
+{
+  "status": "passed",
+  "url": "http://127.0.0.1:5173/s/boya-elementary-i-lesson-11-12",
+  "errors": [],
+  "seen": [
+    {
+      "mode": "forward",
+      "page": 1,
+      "title": "说天气，问清楚，讲故事",
+      "activity": null,
+      "kind": "opening",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "forward",
+      "page": 2,
+      "title": "今天我们会做什么",
+      "activity": null,
+      "kind": "opening",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "forward",
+      "page": 3,
+      "title": "听天气，选时间",
+      "activity": "11-1",
+      "kind": "task",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "forward",
+      "page": 4,
+      "title": "听天气，选时间",
+      "activity": "11-1",
+      "kind": "data",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "forward",
+      "page": 5,
+      "title": "看天气，一起安排出游",
+      "activity": "11-2",
+      "kind": "task",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "forward",
+      "page": 6,
+      "title": "看天气，一起安排出游",
+      "activity": "11-2",
+      "kind": "data",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "forward",
+      "page": 7,
+      "title": "看图说故事",
+      "activity": "11-3",
+      "kind": "comic",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "forward",
+      "page": 8,
+      "title": "听新天气，改安排",
+      "activity": "11-5",
+      "kind": "task",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "forward",
+      "page": 9,
+      "title": "听新天气，改安排",
+      "activity": "11-5",
+      "kind": "data",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "forward",
+      "page": 10,
+      "title": "越南城市，你想去哪儿？",
+      "activity": "11-4",
+      "kind": "single",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "forward",
+      "page": 11,
+      "title": "平时做什么？现在呢？",
+      "activity": "12-1",
+      "kind": "single",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "forward",
+      "page": 12,
+      "title": "听三个人说：在哪儿、做什么",
+      "activity": "12-2",
+      "kind": "task",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "forward",
+      "page": 13,
+      "title": "听三个人说：在哪儿、做什么",
+      "activity": "12-2",
+      "kind": "data",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "forward",
+      "page": 14,
+      "title": "给同学打电话",
+      "activity": "12-3",
+      "kind": "single",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "forward",
+      "page": 15,
+      "title": "看图说故事",
+      "activity": "12-4",
+      "kind": "comic",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "forward",
+      "page": 16,
+      "title": "听小安说一天的生活",
+      "activity": "12-5",
+      "kind": "task",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "forward",
+      "page": 17,
+      "title": "听小安说一天的生活",
+      "activity": "12-5",
+      "kind": "data",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "forward",
+      "page": 18,
+      "title": "听通知，找不同",
+      "activity": "12-6",
+      "kind": "single",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "forward",
+      "page": 19,
+      "title": "说说你常用的一件东西",
+      "activity": "综合1",
+      "kind": "discussion",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "forward",
+      "page": 20,
+      "title": "周末出门，你会怎么选？",
+      "activity": "综合2",
+      "kind": "discussion",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "forward",
+      "page": 21,
+      "title": "去很近的地方，走路还是坐车？",
+      "activity": "综合3",
+      "kind": "discussion",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "backward",
+      "page": 20,
+      "title": "周末出门，你会怎么选？",
+      "activity": "综合2",
+      "kind": "discussion",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "backward",
+      "page": 19,
+      "title": "说说你常用的一件东西",
+      "activity": "综合1",
+      "kind": "discussion",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "backward",
+      "page": 18,
+      "title": "听通知，找不同",
+      "activity": "12-6",
+      "kind": "single",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "backward",
+      "page": 17,
+      "title": "听小安说一天的生活",
+      "activity": "12-5",
+      "kind": "data",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "backward",
+      "page": 16,
+      "title": "听小安说一天的生活",
+      "activity": "12-5",
+      "kind": "task",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "backward",
+      "page": 15,
+      "title": "看图说故事",
+      "activity": "12-4",
+      "kind": "comic",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "backward",
+      "page": 14,
+      "title": "给同学打电话",
+      "activity": "12-3",
+      "kind": "single",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "backward",
+      "page": 13,
+      "title": "听三个人说：在哪儿、做什么",
+      "activity": "12-2",
+      "kind": "data",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "backward",
+      "page": 12,
+      "title": "听三个人说：在哪儿、做什么",
+      "activity": "12-2",
+      "kind": "task",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "backward",
+      "page": 11,
+      "title": "平时做什么？现在呢？",
+      "activity": "12-1",
+      "kind": "single",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "backward",
+      "page": 10,
+      "title": "越南城市，你想去哪儿？",
+      "activity": "11-4",
+      "kind": "single",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "backward",
+      "page": 9,
+      "title": "听新天气，改安排",
+      "activity": "11-5",
+      "kind": "data",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "backward",
+      "page": 8,
+      "title": "听新天气，改安排",
+      "activity": "11-5",
+      "kind": "task",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "backward",
+      "page": 7,
+      "title": "看图说故事",
+      "activity": "11-3",
+      "kind": "comic",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "backward",
+      "page": 6,
+      "title": "看天气，一起安排出游",
+      "activity": "11-2",
+      "kind": "data",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "backward",
+      "page": 5,
+      "title": "看天气，一起安排出游",
+      "activity": "11-2",
+      "kind": "task",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "backward",
+      "page": 4,
+      "title": "听天气，选时间",
+      "activity": "11-1",
+      "kind": "data",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "backward",
+      "page": 3,
+      "title": "听天气，选时间",
+      "activity": "11-1",
+      "kind": "task",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "backward",
+      "page": 2,
+      "title": "今天我们会做什么",
+      "activity": null,
+      "kind": "opening",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "backward",
+      "page": 1,
+      "title": "说天气，问清楚，讲故事",
+      "activity": null,
+      "kind": "opening",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "direct-thumbnail",
+      "page": 15,
+      "title": "看图说故事",
+      "activity": "12-4",
+      "kind": "comic",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "keyboard-next",
+      "page": 16,
+      "title": "听小安说一天的生活",
+      "activity": "12-5",
+      "kind": "task",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "keyboard-space",
+      "page": 17,
+      "title": "听小安说一天的生活",
+      "activity": "12-5",
+      "kind": "data",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "keyboard-prev",
+      "page": 16,
+      "title": "听小安说一天的生活",
+      "activity": "12-5",
+      "kind": "task",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "reduced-motion",
+      "page": 17,
+      "title": "听小安说一天的生活",
+      "activity": "12-5",
+      "kind": "data",
+      "liveAnimations": 0
+    },
+    {
+      "mode": "return-first",
+      "page": 1,
+      "title": "说天气，问清楚，讲故事",
+      "activity": null,
+      "kind": "opening",
+      "liveAnimations": 0
+    }
+  ]
+}

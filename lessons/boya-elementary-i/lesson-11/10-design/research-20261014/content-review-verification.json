@@ -1,0 +1,141 @@
+{
+  "scope": "content review only",
+  "activity_count": 14,
+  "max_pages_per_activity": 2,
+  "planned_total_pages": 30,
+  "period_minutes": [
+    50,
+    50,
+    50,
+    50
+  ],
+  "total_minutes": 200,
+  "listening_scripts": [
+    "11-1",
+    "11-5",
+    "12-2",
+    "12-6"
+  ],
+  "comics_visually_inspected": true,
+  "checks": [
+    {
+      "activity": "11-1",
+      "input": "听老师读明天的天气预报。",
+      "first_action": "先看第二页的三道问题。听老师读天气预报，自己记三个时段的天气和温度。",
+      "outcome": "每人一份天气记录；每人说一个选择和理由。",
+      "page_count": 2,
+      "teacher_material_present": true
+    },
+    {
+      "activity": "11-2",
+      "input": "明天的三个安排",
+      "first_action": "看第二页三个安排。各自先选一个，想好理由。",
+      "outcome": "两人各说出同一个最终安排和理由。",
+      "page_count": 2,
+      "teacher_material_present": true
+    },
+    {
+      "activity": "11-3",
+      "input": "六格漫画：完整六格同屏，顺序①—⑥。",
+      "first_action": "看第二页六格漫画。A讲①②③，B讲④⑤⑥。",
+      "outcome": "每人讲完整故事；同桌能说出天气变化和最后的活动。",
+      "page_count": 2,
+      "teacher_material_present": true
+    },
+    {
+      "activity": "11-4",
+      "input": "12月的一天",
+      "first_action": "看第二页三个城市的天气，各选一个想去的城市。",
+      "outcome": "每人说最终选择；同桌能复述城市和理由。",
+      "page_count": 2,
+      "teacher_material_present": true
+    },
+    {
+      "activity": "11-5",
+      "input": "原计划：周日下午3:00去公园散步。",
+      "first_action": "看第二页原计划和四道问题，听老师读周日预报。",
+      "outcome": "每人一份听记和一次新安排；同桌能复述。",
+      "page_count": 2,
+      "teacher_material_present": true
+    },
+    {
+      "activity": "11-6",
+      "input": "周日最终安排",
+      "first_action": "A看第二页通知资料；B背对屏幕，只听。",
+      "outcome": "每人通知一次、听一次；听者记录准确。",
+      "page_count": 2,
+      "teacher_material_present": true
+    },
+    {
+      "activity": "12-1",
+      "input": "今天星期三，下午2:00。",
+      "first_action": "看第二页，选两个人，先自己想怎么介绍。",
+      "outcome": "两人讲清三个人；每人回答一次，听者复述正确。",
+      "page_count": 2,
+      "teacher_material_present": true
+    },
+    {
+      "activity": "12-2",
+      "input": "今天下午1:40。听老师读三人的消息。",
+      "first_action": "先看第二页四道问题；听老师读小林、小美、小王的三条消息。",
+      "outcome": "每人一份状态记录、一次介绍；挑战另说选择依据。",
+      "page_count": 2,
+      "teacher_material_present": true
+    },
+    {
+      "activity": "12-3",
+      "input": "现在下午1:40；课从下午2:00到4:00。",
+      "first_action": "在纸上记要问的三项：哪里、做什么、几点到。A先背对屏幕，B看第二页。",
+      "outcome": "每人问一次、答一次；两人确认到达时间。",
+      "page_count": 2,
+      "teacher_material_present": true
+    },
+    {
+      "activity": "12-4",
+      "input": "背景：小林每天坐公共汽车来学校；今天的课从下午2:00到4:00。",
+      "first_action": "看第二页六格漫画。A讲①②③，B讲④⑤⑥。",
+      "outcome": "每人完整讲一次，回答同桌一个问题。",
+      "page_count": 2,
+      "teacher_material_present": true
+    },
+    {
+      "activity": "12-5",
+      "input": "下周中文课",
+      "first_action": "在纸上写周一、周三、周五。B背对屏幕，A看第二页。",
+      "outcome": "每人一份三天记录；周三时间、教室正确。",
+      "page_count": 2,
+      "teacher_material_present": true
+    },
+    {
+      "activity": "12-6",
+      "input": "原课表",
+      "first_action": "看第二页原课表和四道问题。听老师读新通知，自己记变化。",
+      "outcome": "每人一份更新记录、一次说明。",
+      "page_count": 2,
+      "teacher_material_present": true
+    },
+    {
+      "activity": "12-7",
+      "input": "最终课表（讲的人看）",
+      "first_action": "B先在纸上写周三、周五，再背对屏幕；A看第二页。",
+      "outcome": "每人说一次、听一次；两天记录正确。",
+      "page_count": 2,
+      "teacher_material_present": true
+    },
+    {
+      "activity": "12-8",
+      "input": "今天星期五，现在下午1:30。",
+      "first_action": "看第二页情境，各自想一条发给同桌的口头消息。",
+      "outcome": "每人一条完整消息、一次听者确认和修正。",
+      "page_count": 2,
+      "teacher_material_present": true
+    }
+  ],
+  "human_readthrough": "Reviewed task objects, specific questions, available inputs, outputs, visibility and factual/simulation boundaries; repaired conflicts listed in full copy. Not actual student testing.",
+  "not_verified": [
+    "new deck layout/render/homepage playback",
+    "student comprehension in classroom",
+    "publisher complete audio/exercise coverage",
+    "full verbatim exports of response parts 2-4"
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "activity_count": 12,
+  "page_count": 14,
+  "comics_each_panels": 6,
+  "student_display": "bullets and essential information",
+  "detailed_instructions": "separate teacher guide",
+  "checks": [
+    {
+      "activity": 1,
+      "bullet_instructions": true,
+      "two_routes": true,
+      "result_present": true
+    },
+    {
+      "activity": 2,
+      "bullet_instructions": true,
+      "two_routes": true,
+      "result_present": true
+    },
+    {
+      "activity": 3,
+      "bullet_instructions": true,
+      "two_routes": true,
+      "result_present": true
+    },
+    {
+      "activity": 4,
+      "bullet_instructions": true,
+      "two_routes": true,
+      "result_present": true
+    },
+    {
+      "activity": 5,
+      "bullet_instructions": true,
+      "two_routes": true,
+      "result_present": true
+    },
+    {
+      "activity": 6,
+      "bullet_instructions": true,
+      "two_routes": true,
+      "result_present": true
+    },
+    {
+      "activity": 7,
+      "bullet_instructions": true,
+      "two_routes": true,
+      "result_present": true
+    },
+    {
+      "activity": 8,
+      "bullet_instructions": true,
+      "two_routes": true,
+      "result_present": true
+    },
+    {
+      "activity": 9,
+      "bullet_instructions": true,
+      "two_routes": true,
+      "result_present": true
+    },
+    {
+      "activity": 10,
+      "bullet_instructions": true,
+      "two_routes": true,
+      "result_present": true
+    },
+    {
+      "activity": 11,
+      "bullet_instructions": true,
+      "two_routes": true,
+      "result_present": true
+    },
+    {
+      "activity": 12,
+      "bullet_instructions": true,
+      "two_routes": true,
+      "result_present": true
+    }
+  ],
+  "publisher_audio": "not used; teacher reads original scripts",
+  "user_edit_direction": "source/display-edit-direction-20261014.md"
+}

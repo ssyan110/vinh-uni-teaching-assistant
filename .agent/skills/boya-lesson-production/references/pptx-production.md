@@ -23,7 +23,7 @@ This reference preserves artifact-specific rules moved from the main skill durin
 - 線上課（含預習）維持原狀，今後仍以PPT／PPTX優先。只有實體課以HTML／OpenSlide優先，依 `docs/classroom-html-standard-2026-10-07.md`，需要時提供可編輯靜態PPTX備份。
 - `native-pptx` 依本參考文件其餘規則製作與驗證。
 - `open-slide` framework 位於 `tools/open-slide/`。將其輸出保存在該課 `10-design/open-slide-draft/`，實體課以HTML為預設，額外匯出依需要選擇。
-- Open Slide 尚未接入本課 authority／QA／release 流程；其輸出只能是設計草稿。匯出的 PPTX 還須執行本參考文件的 PPTX 檢查，且不會因此取得批准。
+- Open Slide 按 `docs/workflow/classroom-html-lifecycle.md` 進行 draft preflight 與 QA；正式 authority／release 在專用實作支援前保持不可用。匯出的 PPTX 還須執行本參考文件的 PPTX 檢查，且不會因此取得批准。
 - `native-pptx` 必須建立內部 JSON／CSV storyboard；它是內容與頁面生產的必要資料，但通常不需要交付給使用者，除非使用者要求。
 
 
@@ -59,4 +59,4 @@ This reference preserves artifact-specific rules moved from the main skill durin
 - 短文、對話與文章類內容不在學生 PPT 中整段重排。線上使用「打開教材、讀／聽、找出並記錄」的短文記錄版式，實體使用聽力策略、問答、比較和口語發表版式；完整原文留在教材、canonical source、教師手冊或必要的學生閱讀材料。
 - 線上綜合練習沿用第一課公共版式；實體課依當課TBL結果組織，保留必要指令，不強套固定三步或拆頁。
 
-`scripts/build_lesson_01_pptx.js` 與 `scripts/build_lesson_01_pptx_native.js` 只屬於《中級衝刺篇 I》第一課的歷史生產流程，不是《準中級加速篇 I》的模板來源。《準中級加速篇 I》後續課次目前以 `scripts/build_l23_pptx_drafts.js` 產生 L2／L3 的 draft；該入口只能寫入對應課次的 `10-design/pptx-draft/`，並必須沿用第一課 approved layout family、共用 token 與共用素材，不得覆蓋 `20-approved/`。後續擴展生成器時，先抽出同一套共用元件，再接入各課 content contract 與 current storyboard。
+`scripts/build_lesson_01_pptx.js` 與 `scripts/build_lesson_01_pptx_native.js` 只屬於《中級衝刺篇 I》第一課的歷史生產流程，不是《準中級加速篇 I》的模板來源。《準中級加速篇 I》後續課次以 `scripts/build_l23_pptx_drafts.js` 作 L2／L3 線上 draft 的專用入口；歷史實體模式必須明確選取，不用於新 HTML 或其靜態備份；該入口只能寫入對應課次的 `10-design/pptx-draft/`，並必須沿用第一課 approved layout family、共用 token 與共用素材，不得覆蓋 `20-approved/`。後續擴展生成器時，先抽出同一套共用元件，再接入各課 content contract 與 current storyboard。

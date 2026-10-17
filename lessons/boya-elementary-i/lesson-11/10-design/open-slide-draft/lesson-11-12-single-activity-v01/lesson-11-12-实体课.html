@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第11–12课｜说天气，问清楚，讲故事</title><style>
+html, body { margin: 0; height: 100%; background: #000; overflow: hidden; font-family: system-ui, sans-serif; }
+.os-stage { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
+.os-frame { width: 1920px; height: 1080px; flex-shrink: 0; background: #fff; color: #000; transform-origin: center center; overflow: hidden; position: relative; }
+.os-page { position: absolute; inset: 0; }
+.os-page[hidden] { display: none !important; }
+.os-counter { position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%); color: #fff; background: rgba(0,0,0,.5); padding: 2px 10px; border-radius: 999px; font-size: 12px; z-index: 10; font-variant-numeric: tabular-nums; }
+
+.os-page [data-osd-step] { opacity: 1; visibility: visible; }
+.os-page.deck-enter [data-osd-step] {
+  animation-name: var(--os-step-animation, osRise);
+  animation-duration: 360ms;
+  animation-delay: min(calc(var(--os-step-order, 0) * 38ms), 342ms);
+  animation-timing-function: cubic-bezier(.22,1,.36,1);
+  animation-fill-mode: both;
+}
+.os-page.deck-enter h1:not([data-osd-step]) {
+  animation: osTitleIn 340ms cubic-bezier(.22,1,.36,1) both;
+}
+.os-page.deck-enter .os-illumination:not(.os-wiggle) {
+  animation: osGlowIn 420ms ease-out 1 both;
+}
+.os-page.deck-enter .os-wiggle {
+  animation: osWiggleOnce 360ms ease-in-out 1 both;
+}
+.os-page.deck-enter [data-image-motion="glide-right"] { animation: osImageRight 440ms cubic-bezier(.22,1,.36,1) both; }
+.os-page.deck-enter [data-image-motion="glide-left"] { animation: osImageLeft 440ms cubic-bezier(.22,1,.36,1) both; }
+.os-page.deck-enter [data-image-motion="rise-once"] { animation: osImageRise 420ms cubic-bezier(.22,1,.36,1) both; }
+.os-page.deck-enter [data-image-motion="soft-pop"] { animation: osImagePop 420ms cubic-bezier(.22,1,.36,1) both; }
+.os-page.deck-enter [data-image-motion="nudge-once"] { animation: osImageNudge 420ms ease-out both; }
+.os-question-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 14px 18px !important; }
+.os-illumination {
+  --os-ink: #087E8B;
+  --os-wash: rgba(8,126,139,.16);
+  --os-halo: rgba(8,126,139,.18);
+  color: var(--os-ink) !important;
+  font-weight: 760 !important;
+  border-radius: .13em;
+  padding: 0 .06em;
+  background: linear-gradient(transparent 48%, var(--os-wash) 48% 100%);
+  box-shadow: 0 0 .24em var(--os-halo);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.os-illumination.os-amber { --os-ink: #8A4B08; --os-wash: rgba(245,174,52,.24); --os-halo: rgba(218,140,28,.20); }
+.os-illumination.os-red { --os-ink: #A11F1F; --os-wash: rgba(211,58,50,.16); --os-halo: rgba(190,40,40,.18); }
+.os-illumination.os-teal { --os-ink: #087E8B; --os-wash: rgba(8,126,139,.15); --os-halo: rgba(8,126,139,.18); }
+.os-illumination.os-navy { --os-ink: #102A43; --os-wash: rgba(16,42,67,.12); --os-halo: rgba(16,42,67,.14); }
+.os-wiggle { display: inline-block; transform-origin: 50% 75%; }
+.os-controlbar {
+  position: fixed; right: 18px; bottom: 10px; z-index: 20;
+  display: flex; align-items: center; gap: 8px;
+  color: rgba(255,255,255,.88); font: 13px/1.2 system-ui, sans-serif;
+}
+.os-controlbar button {
+  appearance: none; border: 1px solid rgba(255,255,255,.42); border-radius: 999px;
+  min-height: 34px; padding: 7px 13px; background: rgba(9,28,43,.88); color: #fff;
+  font: 650 13px/1.2 system-ui, sans-serif; cursor: pointer;
+}
+.os-controlbar button:hover:not(:disabled), .os-controlbar button:focus-visible {
+  background: #087E8B; outline: 2px solid #fff; outline-offset: 2px;
+}
+.os-controlbar button:disabled { opacity: .55; cursor: default; }
+.os-controlbar .os-nav-hint { padding: 0 3px; text-shadow: 0 1px 3px rgba(0,0,0,.8); }
+@keyframes osRise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes osFromLeft { from { opacity: 0; transform: translateX(-16px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes osFromRight { from { opacity: 0; transform: translateX(16px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes osSplit { from { opacity: 0; transform: translateY(10px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes osPop { from { opacity: 0; transform: scale(.965); } to { opacity: 1; transform: scale(1); } }
+@keyframes osSoftFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes osDiagonal { from { opacity: 0; transform: translate(10px,8px); } to { opacity: 1; transform: translate(0,0); } }
+@keyframes osTitleIn { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes osGlowIn { 0% { background-size: 100% 0%; } 100% { background-size: 100% 100%; } }
+@keyframes osWiggleOnce { 0%,100% { transform: rotate(0); } 24% { transform: rotate(-1deg); } 52% { transform: rotate(1deg); } 78% { transform: rotate(-.5deg); } }
+@keyframes osImageRight { from { opacity: .72; transform: translateX(-16px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes osImageLeft { from { opacity: .72; transform: translateX(16px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes osImageRise { from { opacity: .7; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes osImagePop { from { opacity: .72; transform: scale(.96); } to { opacity: 1; transform: scale(1); } }
+@keyframes osImageNudge { 0%,100% { transform: translateX(0) rotate(0); } 38% { transform: translateX(-5px) rotate(-1deg); } 72% { transform: translateX(3px) rotate(.5deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .os-page.deck-enter, .os-page.deck-enter *, .os-page.deck-enter h1,
+  .os-page.deck-enter [data-osd-step], .os-page.deck-enter .os-illumination,
+  .os-page.deck-enter [data-image-motion] {
+    animation: none !important; transition: none !important; transform: none !important;
+  }
+  .os-page [data-osd-step] { opacity: 1 !important; visibility: visible !important; }
+}
+
+.activity{width:1920px;height:1080px;box-sizing:border-box;padding:74px 96px 68px;background:#fff;color:#102a43;font-family:'Times New Roman',KaiTi,serif;position:relative}
+.lesson-tag{color:#087e8b;font-size:45px;font-weight:700;letter-spacing:1px}.activity-label{position:absolute;right:96px;top:25px;font-size:36px;color:#087e8b;font-weight:700}
+.activity h1{margin:12px 0 0;font-size:74px;line-height:1.08;letter-spacing:-1px;font-weight:750}.rule{margin-top:28px;width:74px;height:7px;border-radius:4px;background:#087e8b}
+.activity-body{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:28px;height:648px}.material{font-size:45px;line-height:1.28;min-width:0}.material p{margin:0 0 20px}.steps,.story-steps{padding-left:1.15em;margin:0 0 26px}.steps li{margin:10px 0}.level ul{padding-left:1.1em;margin:0;font-size:45px;line-height:1.28}.level li{margin:10px 0}
+.levels{min-width:0}.level{border:1px solid #d9e3e8;border-radius:24px;padding:16px 20px;margin-bottom:18px;background:#f8fbfb}.level.challenge{background:#fffbf2;border-color:#e6d4aa}.level h2{margin:0 0 12px;color:#087e8b;font-size:40px;line-height:1.2}.level h2 span{font-family:'Times New Roman',serif;font-size:36px;color:#526579;margin-left:18px}.level.challenge h2{color:#8a4b08}.level p{font-size:45px;line-height:1.22;margin:0}.support{font-size:40px;line-height:1.3;color:#526579;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:45px;line-height:1.25;margin:12px 0 24px}td,th{padding:14px 15px;text-align:left;border-bottom:1px solid #d9e3e8}th{color:#087e8b;background:#f8fbfb;font-weight:650}.done{position:absolute;left:96px;right:96px;bottom:78px;border-left:7px solid #087e8b;padding:8px 18px;font-size:40px;line-height:1.25;color:#17324d;background:#f8fbfb}
+footer{position:absolute;bottom:38px;left:96px;right:96px;display:flex;justify-content:space-between;color:#526579;font-size:30px;line-height:1}
+.story h1{font-size:54px;line-height:1.1}.story .rule{margin-top:18px}.story .activity-body{grid-template-columns:1.18fr .82fr;height:648px;gap:30px}.story .material{font-size:40px;line-height:1.25}.story .material p{margin:10px 0 0}.story .level p,.story .level ul{font-size:40px;line-height:1.2}.story .level li{margin:4px 0}.story-steps{font-size:40px;line-height:1.2;margin:0 0 16px}.story-steps li{margin:5px 0}.story .level{padding:12px 18px}.story .support{font-size:38px;line-height:1.2;margin-top:6px}.comic{width:870px;max-width:100%;height:580px;margin:0 auto;position:relative;background:white}.comic img{width:100%;height:100%;object-fit:contain}.panel-label{position:absolute;font:32px/1.15 'Times New Roman',KaiTi,serif;background:white;color:#102a43;padding:3px 7px;border:1px solid #102a43}.story-data{color:#087e8b;font-size:38px}
+.route article img{height:90px!important}.route article h2{line-height:1.3}.route{position:relative}.route:after{content:'基础：HSK 1–3　｜　挑战：HSK 4–6';position:absolute;bottom:45px;left:96px;color:#526579;font-size:30px;font-family:'Times New Roman',KaiTi,serif}
+.wide-data .activity-body{display:block}.wide-data .material{font-size:45px;line-height:1.22}.data-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:8px 0 16px}.data-cards article{font-size:45px;line-height:1.22;padding:14px 20px;border:1px solid #d9e3e8;border-radius:20px;background:#f8fbfb}.wide-data .material p{margin:0 0 8px}.wide-data .levels{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:4px}.wide-data .level{margin:0;padding:10px 20px}.wide-data .level li{margin:6px 0}.wide-data .material>p:first-child{font-size:38px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style></head><body><div class="os-stage"><div class="os-frame" id="os-frame" data-osd-canvas><div class="os-page" data-idx="0"><div data-osd-source-slides="1" data-osd-stable-id="single-cover" data-slide-loc="317:33" style='width: 1920px; height: 1080px; box-sizing: border-box; padding: 110px 96px 68px; background: rgb(255, 255, 255); color: rgb(16, 42, 67); font-family: KaiTi, STKaiti, 楷体, "Times New Roman", serif; position: relative; overflow: hidden;'><div data-slide-loc="318:4" style="position: absolute; top: 84px; left: 96px; color: rgb(8, 126, 139); font-size: 45px; font-weight: 700; letter-spacing: 1px;">第11–12课 · 实体课</div><div data-slide-loc="319:4" style="height: 100%; display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 50px;"><div data-slide-loc="320:6" style="padding-bottom: 45px;"><h1 data-osd-step="true" data-slide-loc="320:41" style="margin: 0px; font-size: 82px; line-height: 1.12; letter-spacing: -2px; font-weight: 760;">说天气，问清楚，讲故事</h1><div data-slide-loc="320:163" style="margin-top: 34px; width: 90px; height: 8px; border-radius: 4px; background: rgb(8, 126, 139);"></div><p data-osd-step="true" data-slide-loc="320:253" style="margin: 34px 0px 0px; max-width: 900px; font-size: 48px; line-height: 1.35; color: rgb(82, 101, 121);">听懂消息，和同伴说清楚自己的想法。</p><div data-osd-step="true" data-slide-loc="320:378" style="margin-top: 38px; font-size: 45px; line-height: 1.25; font-weight: 650; color: rgb(8, 126, 139);">听说练习 · 两档难度 · 六格故事</div></div><div data-osd-step="true" data-slide-loc="321:6" style="height: 620px; display: grid; place-items: center; border-left: 1px solid rgb(217, 227, 232);"><img alt="bus" data-slide-loc="282:9" src="assets/bus.png" style="width: 690px; height: 590px; object-fit: contain;"/></div></div><div data-slide-loc="322:10" style="position: absolute; bottom: 96px; left: 96px; right: 96px; display: flex; justify-content: space-between; color: rgb(82, 101, 121); font-size: 30px;"><span data-slide-loc="322:159">博雅汉语 · 初级口语活动</span><span data-slide-loc="322:185">01 / 14</span></div></div></div><div class="os-page" data-idx="1" hidden=""><section class="route" data-osd-stable-id="single-route" style="width:1920px;height:1080px;box-sizing:border-box;padding:80px 96px;background:white;color:#17324d;font-family:KaiTi,'Times New Roman',serif"><h1 style="font-size:74px;margin:0 0 42px">今天我们会做什么</h1><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px"><article data-osd-step="true" style="background:#f8fbfb;border:1px solid #d8e7e9;border-radius:20px;padding:20px"><img alt="" src="assets/story-lesson-11.png" style="width:100%;height:230px;object-fit:contain"/><h2 style="font-size:40px;margin:16px 0;color:#087e8b">1　听天气，告诉同伴<br/>2　选出门安排</h2></article><article data-osd-step="true" style="background:#f8fbfb;border:1px solid #d8e7e9;border-radius:20px;padding:20px"><img alt="" src="assets/story-lesson-11.png" style="width:100%;height:230px;object-fit:contain"/><h2 style="font-size:40px;margin:16px 0;color:#087e8b">3　问季节，介绍同伴<br/>4　选城市，说建议</h2></article><article data-osd-step="true" style="background:#f8fbfb;border:1px solid #d8e7e9;border-radius:20px;padding:20px"><img alt="" src="assets/story-lesson-11.png" style="width:100%;height:230px;object-fit:contain"/><h2 style="font-size:40px;margin:16px 0;color:#087e8b">5　看图说故事：晴天出门<br/>6　发布活动通知</h2></article><article data-osd-step="true" style="background:#f8fbfb;border:1px solid #d8e7e9;border-radius:20px;padding:20px"><img alt="" src="assets/bus.png" style="width:100%;height:230px;object-fit:contain"/><h2 style="font-size:40px;margin:16px 0;color:#087e8b">7　听消息，说状态<br/>8　平时与现在</h2></article><article data-osd-step="true" style="background:#f8fbfb;border:1px solid #d8e7e9;border-radius:20px;padding:20px"><img alt="" src="assets/bus.png" style="width:100%;height:230px;object-fit:contain"/><h2 style="font-size:40px;margin:16px 0;color:#087e8b">9　打电话，问清楚<br/>10　看图说故事：我还在等车</h2></article><article data-osd-step="true" style="background:#f8fbfb;border:1px solid #d8e7e9;border-radius:20px;padding:20px"><img alt="" src="assets/bus.png" style="width:100%;height:230px;object-fit:contain"/><h2 style="font-size:40px;margin:16px 0;color:#087e8b">11　说课表，核对时间<br/>12　听新消息，转述</h2></article></div></section></div><div class="os-page" data-idx="2" data-activity="1" hidden><section class="activity " data-osd-stable-id="activity-1"><header><div class="lesson-tag">第11课 · 实体课</div><div class="activity-label">活动1｜听天气，告诉同伴</div><h1>听天气，告诉同伴</h1><div class="rule"></div></header><div class="activity-body"><div class="material" data-osd-step><ul class="steps"><li>两人一组：</li><li>看问题，自己听记</li><li>同伴核对；有疑问再听</li><li>轮流说明，补清后重说</li></ul><ul class="steps"><li>记录：上午／下午｜天气｜温度</li></ul><p class="support">可用：上午……，下午……。我想……，因为……。</p></div><div class="levels"><article data-osd-step class="level base"><h2>基础 <span>HSK 1–3</span></h2><ul><li>说清两段天气</li><li>选出门时段，说理由</li></ul></article><article data-osd-step class="level challenge"><h2>挑战 <span>HSK 4–6</span></h2><ul><li>记下两人的时间与决定</li><li>区分天气、个人想法；回应不同选择</li></ul></article></div></div><div class="done">完成：每人一份听记＋一次说明</div><footer><span>博雅汉语 · 初级口语活动</span><span>教材 P80–85 · 03 / 14</span></footer></section></div><div class="os-page" data-idx="3" data-activity="2" hidden><section class="activity wide-data" data-osd-stable-id="activity-2"><header><div class="lesson-tag">第11课 · 实体课</div><div class="activity-label">活动2｜选出门安排</div><h1>选出门安排</h1><div class="rule"></div></header><div class="activity-body"><div class="material" data-osd-step><ul class="steps"><li>模拟天气：</li></ul><div class="data-cards"><article>上午 · 24度<br/>晴天，风不大</article><article>下午 · 28度<br/>下雨</article><article>晚上 · 22度<br/>阴天，不下雨</article></div><ul class="steps"><li>两人轮流：选时段与活动 → 说理由 → 问一题 → 商定安排</li><li>可选：公园／逛街／电影／自己的活动</li></ul></div><div class="levels"><article data-osd-step class="level base"><h2>基础 <span>HSK 1–3</span></h2><ul><li>说清何时、做什么、为什么</li><li>问：下雨的时候，还去吗？</li></ul></article><article data-osd-step class="level challenge"><h2>挑战 <span>HSK 4–6</span></h2><ul><li>提出不同选择，说明各自看重什么</li><li>商定安排；说清什么天气会让你改变选择</li></ul></article></div></div><div class="done">完成：两人各说一份共同安排</div><footer><span>博雅汉语 · 初级口语活动</span><span>教材 P80–85 · 04 / 14</span></footer></section></div><div class="os-page" data-idx="4" data-activity="3" hidden><section class="activity " data-osd-stable-id="activity-3"><header><div class="lesson-tag">第11课 · 实体课</div><div class="activity-label">活动3｜问季节，介绍同伴</div><h1>问季节，介绍同伴</h1><div class="rule"></div></header><div class="activity-body"><div class="material" data-osd-step><ul class="steps"><li>两人轮流问：</li><li>最喜欢哪个季节？天气怎样？</li><li>常做什么？不太喜欢什么天气？</li></ul><ul class="steps"><li>记关键词 → 介绍同伴 → 请他确认</li><li>不想回答，可以换题</li></ul><p class="support">可用：春／夏／秋／冬｜雨季｜常常｜最喜欢</p></div><div class="levels"><article data-osd-step class="level base"><h2>基础 <span>HSK 1–3</span></h2><ul><li>回答前三题</li><li>介绍同伴的喜好与活动</li></ul></article><article data-osd-step class="level challenge"><h2>挑战 <span>HSK 4–6</span></h2><ul><li>比较两人的喜好；解释不同看法</li><li>根据回答再问一题，避免概括所有人</li></ul></article></div></div><div class="done">完成：每人介绍同伴＋回答一问</div><footer><span>博雅汉语 · 初级口语活动</span><span>教材 P80–85 · 05 / 14</span></footer></section></div><div class="os-page" data-idx="5" data-activity="4" hidden><section class="activity wide-data" data-osd-stable-id="activity-4"><header><div class="lesson-tag">第11课 · 实体课</div><div class="activity-label">活动4｜选城市，说建议</div><h1>选城市，说建议</h1><div class="rule"></div></header><div class="activity-body"><div class="material" data-osd-step><ul class="steps"><li>12月：模拟资料</li></ul><div class="data-cards"><article>北京<br/>冬天<br/>下雪，零下5度</article><article>曼谷<br/>12月<br/>晴天，32度</article><article>悉尼<br/>夏天<br/>晴天，25度</article></div><ul class="steps"><li>两人轮流：选地点 → 介绍天气与活动 → 说理由 → 听者问一题</li></ul></div><div class="levels"><article data-osd-step class="level base"><h2>基础 <span>HSK 1–3</span></h2><ul><li>用程度表达说明自己的感觉</li><li>太……了／不太……／最喜欢</li></ul></article><article data-osd-step class="level challenge"><h2>挑战 <span>HSK 4–6</span></h2><ul><li>比较两地，给不同喜好的人建议</li><li>指出天气资料不能告诉你什么</li></ul></article></div></div><div class="done">完成：每人一条有天气依据的建议</div><footer><span>博雅汉语 · 初级口语活动</span><span>教材 P81–87 · 06 / 14</span></footer></section></div><div class="os-page" data-idx="6" data-activity="5" hidden><section class="activity story" data-osd-stable-id="activity-5"><header><div class="lesson-tag">第11课 · 实体课</div><div class="activity-label">活动5｜看图说故事：晴天出门</div><h1>看图说故事：晴天出门</h1><div class="rule"></div></header><div class="activity-body"><div class="material" data-osd-step><div class="comic" data-osd-step><img src="assets/story-lesson-11.png" alt="第11课六格故事漫画，按一至六格顺序阅读"><span class="panel-label" style="left:0.0%;top:0%">1 · 08:30</span><span class="panel-label" style="left:33.333333333333336%;top:0%">2 · 09:30</span><span class="panel-label" style="left:66.66666666666667%;top:0%">3 · 12:30</span><span class="panel-label" style="left:0.0%;top:50%">4 · 13:30</span><span class="panel-label" style="left:33.333333333333336%;top:50%">5 · 14:00</span><span class="panel-label" style="left:66.66666666666667%;top:50%">6 · 14:20</span></div><p class="story-data">预报：上午晴24度；下午有雨28度。</p></div><div class="levels"><ul class="story-steps"><li>记关键词，按1—6格讲故事</li><li>听者问一处；补清后再讲</li><li>给故事起名字</li></ul><article data-osd-step class="level base"><h2>基础 <span>HSK 1–3</span></h2><ul><li>每格1—2句；加入2句人物对话</li><li>使用天气词与程度表达</li></ul></article><article data-osd-step class="level challenge"><h2>挑战 <span>HSK 4–6</span></h2><ul><li>解释活动变化、人物想法与所见</li><li>回应不同意见；给出另一合理选择</li></ul></article><p class="support">可用：晴天｜下雨｜天气预报｜太……了</p></div></div><div class="done">完成：每人讲完整故事＋回答一问</div><footer><span>博雅汉语 · 初级口语活动</span><span>教材 P80–85 · 07 / 14</span></footer></section></div><div class="os-page" data-idx="7" data-activity="6" hidden><section class="activity " data-osd-stable-id="activity-6"><header><div class="lesson-tag">第11课 · 实体课</div><div class="activity-label">活动6｜发布活动通知</div><h1>发布活动通知</h1><div class="rule"></div></header><div class="activity-body"><div class="material" data-osd-step><ul class="steps"><li>模拟天气：星期日</li><li>早上：晴天23度｜下午：下雨27度</li><li>原来想下午去公园</li></ul><ul class="steps"><li>两人提安排 → 听对方想法 → 说短通知</li><li>听者复述；补清后重说</li></ul></div><div class="levels"><article data-osd-step class="level base"><h2>基础 <span>HSK 1–3</span></h2><ul><li>说清时段、活动与理由</li><li>回答：那下午呢？</li></ul></article><article data-osd-step class="level challenge"><h2>挑战 <span>HSK 4–6</span></h2><ul><li>给不喜欢早起的人另一个办法</li><li>分清已决定、还要问大家的安排</li></ul></article></div></div><div class="done">完成：每人一则让听者知道怎么做的通知</div><footer><span>博雅汉语 · 初级口语活动</span><span>教材 P80–85 · 08 / 14</span></footer></section></div><div class="os-page" data-idx="8" data-activity="7" hidden><section class="activity " data-osd-stable-id="activity-7"><header><div class="lesson-tag">第12课 · 实体课</div><div class="activity-label">活动7｜听消息，说状态</div><h1>听消息，说状态</h1><div class="rule"></div></header><div class="activity-body"><div class="material" data-osd-step><ul class="steps"><li>两人一组：</li><li>看问题，独立听记</li><li>同伴比较；没听清再听</li><li>轮流说明，请对方确认</li></ul><ul class="steps"><li>记录：谁｜地点／动作｜请谁做什么</li></ul><p class="support">可用：正在……呢｜每天都……｜请……告诉……</p></div><div class="levels"><article data-osd-step class="level base"><h2>基础 <span>HSK 1–3</span></h2><ul><li>说三个人的当前动作</li><li>转述小王的请求；未提的地点记“没说”</li></ul></article><article data-osd-step class="level challenge"><h2>挑战 <span>HSK 4–6</span></h2><ul><li>另记习惯与今天的安排</li><li>能确定已经迟到吗？说出依据</li></ul></article></div></div><div class="done">完成：每人听记＋说明，猜测不算听到的信息</div><footer><span>博雅汉语 · 初级口语活动</span><span>教材 P89–95 · 09 / 14</span></footer></section></div><div class="os-page" data-idx="9" data-activity="8" hidden><section class="activity " data-osd-stable-id="activity-8"><header><div class="lesson-tag">第12课 · 实体课</div><div class="activity-label">活动8｜平时与现在</div><h1>平时与现在</h1><div class="rule"></div></header><div class="activity-body"><div class="material" data-osd-step><ul class="steps"><li>示例：</li><li>小王：每天坐车来学校／现在车站等车</li><li>安娜：每周日看电影／今天在家做作业</li></ul><ul class="steps"><li>各准备自己的或模拟情况</li><li>互问 → 记关键词 → 介绍同伴 → 核对</li></ul></div><div class="levels"><article data-osd-step class="level base"><h2>基础 <span>HSK 1–3</span></h2><ul><li>说清平时与现在两项</li><li>每天做什么？现在做什么？</li></ul></article><article data-osd-step class="level challenge"><h2>挑战 <span>HSK 4–6</span></h2><ul><li>再说下星期安排，根据回答继续问</li><li>解释：每周日看电影≠现在正在看</li></ul></article></div></div><div class="done">完成：每人介绍同伴，分清习惯／现在／未来</div><footer><span>博雅汉语 · 初级口语活动</span><span>教材 P89–95 · 10 / 14</span></footer></section></div><div class="os-page" data-idx="10" data-activity="9" hidden><section class="activity " data-osd-stable-id="activity-9"><header><div class="lesson-tag">第12课 · 实体课</div><div class="activity-label">活动9｜打电话，问清楚</div><h1>打电话，问清楚</h1><div class="rule"></div></header><div class="activity-body"><div class="material" data-osd-step><ul class="steps"><li>各选地点、动作，先不告诉同伴：</li><li>车站等车／教室做作业／宿舍上网</li></ul><ul class="steps"><li>两人轮流打电话：</li><li>问地点、动作与要转告的消息</li><li>复述确认 → 交换 → 同一通电话重说</li></ul></div><div class="levels"><article data-osd-step class="level base"><h2>基础 <span>HSK 1–3</span></h2><ul><li>消息：请他等一会儿／先去教室</li><li>喂，你好。你在哪儿？我正在……呢</li></ul></article><article data-osd-step class="level challenge"><h2>挑战 <span>HSK 4–6</span></h2><ul><li>先问朋友是否方便帮忙</li><li>若不方便，另商量办法；确认谁告诉谁什么</li></ul></article></div></div><div class="done">完成：两人都问过、答过、复述确认过</div><footer><span>博雅汉语 · 初级口语活动</span><span>教材 P89–96 · 11 / 14</span></footer></section></div><div class="os-page" data-idx="11" data-activity="10" hidden><section class="activity story" data-osd-stable-id="activity-10"><header><div class="lesson-tag">第12课 · 实体课</div><div class="activity-label">活动10｜看图说故事：我还在等车</div><h1>看图说故事：我还在等车</h1><div class="rule"></div></header><div class="activity-body"><div class="material" data-osd-step><div class="comic" data-osd-step><img src="assets/story-lesson-12.png" alt="第12课六格故事漫画，按一至六格顺序阅读"><span class="panel-label" style="left:0.0%;top:0%">1 · 13:00</span><span class="panel-label" style="left:33.333333333333336%;top:0%">2 · 13:30</span><span class="panel-label" style="left:66.66666666666667%;top:0%">3 · 13:40</span><span class="panel-label" style="left:0.0%;top:50%">4 · 13:50</span><span class="panel-label" style="left:33.333333333333336%;top:50%">5 · 14:00</span><span class="panel-label" style="left:66.66666666666667%;top:50%">6 · 14:10</span></div><p class="story-data">课：14:00–16:00，108教室。小王每天下午坐车来学校。</p></div><div class="levels"><ul class="story-steps"><li>按六格时间顺序，讲完整故事</li><li>听者问一处，补清后重讲</li><li>给故事起名字</li></ul><article data-osd-step class="level base"><h2>基础 <span>HSK 1–3</span></h2><ul><li>每格1—2句；加入2句电话对话</li><li>用进行状态、时间范围描述</li></ul></article><article data-osd-step class="level challenge"><h2>挑战 <span>HSK 4–6</span></h2><ul><li>分清平时习惯与今天经过</li><li>替等候者回应，提出不责怪对方的办法</li></ul></article><p class="support">可用：正在……呢｜从……到……</p></div></div><div class="done">完成：每人讲完整故事＋回答时间／动作一问</div><footer><span>博雅汉语 · 初级口语活动</span><span>教材 P89–98 · 12 / 14</span></footer></section></div><div class="os-page" data-idx="12" data-activity="11" hidden><section class="activity " data-osd-stable-id="activity-11"><header><div class="lesson-tag">第12课 · 实体课</div><div class="activity-label">活动11｜说课表，核对时间</div><h1>说课表，核对时间</h1><div class="rule"></div></header><div class="activity-body"><div class="material" data-osd-step><ul class="steps"><li>模拟课表：从下星期开始</li><li>周一—周五，每天有汉语课</li><li>8:00—10:00，108教室</li><li>星期三改在206教室</li></ul><ul class="steps"><li>两人轮流说明 → 听者问细节 → 确认后重说</li><li>用关键词，不照读整段</li></ul></div><div class="levels"><article data-osd-step class="level base"><h2>基础 <span>HSK 1–3</span></h2><ul><li>说清开始日、哪些天、时间与地点</li><li>星期三在哪儿？</li></ul></article><article data-osd-step class="level challenge"><h2>挑战 <span>HSK 4–6</span></h2><ul><li>给新同学说明，分清日期范围与例外</li><li>回应：每次都在108，对吗？</li></ul></article></div></div><div class="done">完成：听者说出下周三的上课时间与地点</div><footer><span>博雅汉语 · 初级口语活动</span><span>教材 P92–98 · 13 / 14</span></footer></section></div><div class="os-page" data-idx="13" data-activity="12" hidden><section class="activity " data-osd-stable-id="activity-12"><header><div class="lesson-tag">第12课 · 实体课</div><div class="activity-label">活动12｜听新消息，转述</div><h1>听新消息，转述</h1><div class="rule"></div></header><div class="activity-body"><div class="material" data-osd-step><ul class="steps"><li>独立听新消息，不用前面故事作答</li><li>记：明天天气｜现在动作｜下一步安排</li><li>有疑问再听</li></ul><ul class="steps"><li>轮流转述 → 听者问一题 → 修正后重说</li><li>不读完整稿</li></ul></div><div class="levels"><article data-osd-step class="level base"><h2>基础 <span>HSK 1–3</span></h2><ul><li>说清天气、动作与明天安排</li><li>电影从几点到几点？</li></ul></article><article data-osd-step class="level challenge"><h2>挑战 <span>HSK 4–6</span></h2><ul><li>比较平时与明天；现在出发了吗？</li><li>给建议，分清消息原话与自己的建议</li></ul></article></div></div><div class="done">完成：每人保留首听／修改记录＋独立说明</div><footer><span>博雅汉语 · 初级口语活动</span><span>教材 P80–85、P89–95 · 14 / 14</span></footer></section></div></div></div><div aria-label="页面导航" class="os-controlbar" role="navigation">
+<button aria-label="上一页" id="os-prev" type="button">← 上一页</button>
+<span aria-hidden="true" class="os-nav-hint">← → / 空格</span>
+<button aria-label="下一页" id="os-next" type="button">下一页 →</button>
+</div><div class="os-counter"><span id="os-cur">1</span> / <span id="os-total">51</span></div><script>
+(function () {
+  var pages = Array.from(document.querySelectorAll('.os-page'));
+  var plan = [{"stableId": "single-cover", "sourceSlides": [], "motion": "cover-route", "focus": []}, {"stableId": "single-route", "sourceSlides": [], "motion": "stagger-rise", "focus": []}, {"stableId": "activity-1", "sourceSlides": [], "motion": "stagger-rise", "focus": []}, {"stableId": "activity-2", "sourceSlides": [], "motion": "stagger-rise", "focus": []}, {"stableId": "activity-3", "sourceSlides": [], "motion": "stagger-rise", "focus": []}, {"stableId": "activity-4", "sourceSlides": [], "motion": "stagger-rise", "focus": []}, {"stableId": "activity-5", "sourceSlides": [], "motion": "stagger-rise", "focus": []}, {"stableId": "activity-6", "sourceSlides": [], "motion": "stagger-rise", "focus": []}, {"stableId": "activity-7", "sourceSlides": [], "motion": "stagger-rise", "focus": []}, {"stableId": "activity-8", "sourceSlides": [], "motion": "stagger-rise", "focus": []}, {"stableId": "activity-9", "sourceSlides": [], "motion": "stagger-rise", "focus": []}, {"stableId": "activity-10", "sourceSlides": [], "motion": "stagger-rise", "focus": []}, {"stableId": "activity-11", "sourceSlides": [], "motion": "stagger-rise", "focus": []}, {"stableId": "activity-12", "sourceSlides": [], "motion": "stagger-rise", "focus": []}];
+  var keyframes = {"cover-route":"osRise","stagger-rise":"osRise","facts-rise":"osFromLeft","value-pop":"osPop","profiles-converge":"osSplit","help-alert":"osFromRight","transport-opposed":"osSplit","speed-compare":"osPop","parcel-pop":"osPop","task-cascade":"osRise","question-cascade":"osFromLeft","challenge-rise":"osRise","alert-split":"osSplit","debate-converge":"osSplit","divider-gold":"osPop","budget-pop":"osPop","goal-stagger":"osRise","market-grid":"osFromLeft","price-spotlight":"osSoftFade","roleplay-opposed":"osSplit","checkout-trade":"osSplit","payment-image-stagger":"osPop","divider-route":"osFromRight","deadline-cover":"osRise","mission-cascade":"osRise","timeline-line":"osSoftFade","transport-split":"osSplit","constraint-red":"osFromLeft","ledger-highlight":"osDiagonal","report-speech":"osPop","task-rail":"osFromRight","remainder-question":"osSoftFade","phrase-emphasis":"osRise","divider-bike":"osFromRight","route-expand":"osSplit","compare-question":"osFromLeft","divider-room":"osPop","welcome-cover":"osDiagonal","people-budget":"osRise","anna-profile":"osFromLeft","schedule-rows":"osRise","decision-halo":"osPop","venue-contrast":"osSplit","train-arrival":"osFromRight","purchase-tiles":"osPop","money-report":"osDiagonal","plan-questions":"osRise","total-close":"osSoftFade","divider-plane":"osFromLeft","balanced-choice":"osSplit","divider-clock":"osFromRight","late-wiggle":"osRise","divider-apple":"osPop","divider-cash":"osPop","payment-duel":"osSplit","zoo-plan-divider":"osPop"};
+  var idx = -1;
+  var frame = document.getElementById('os-frame');
+  var cur = document.getElementById('os-cur');
+  var total = document.getElementById('os-total');
+  var prevButton = document.getElementById('os-prev');
+  var nextButton = document.getElementById('os-next');
+  var missingFocus = [];
+  if (pages.length !== plan.length) throw new Error('Slide plan/page count mismatch');
+
+  function markPhrase(root, phrase, color, effect, slideNumber) {
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    var node;
+    while ((node = walker.nextNode())) {
+      var value = node.nodeValue || '';
+      var pos = value.indexOf(phrase);
+      if (pos < 0) continue;
+      var range = document.createRange();
+      range.setStart(node, pos);
+      range.setEnd(node, pos + phrase.length);
+      var mark = document.createElement('span');
+      mark.className = 'os-illumination os-' + color + (effect === 'wiggle' ? ' os-wiggle' : '');
+      mark.textContent = phrase;
+      range.surroundContents(mark);
+      return true;
+    }
+    missingFocus.push({slide: slideNumber, phrase: phrase});
+    return false;
+  }
+
+  plan.forEach(function (item, i) {
+    var page = pages[i];
+    var identity = page.querySelector('[data-osd-stable-id]');
+    if (!identity || identity.dataset.osdStableId !== item.stableId) {
+      throw new Error('Stable slide mapping mismatch at output page ' + (i + 1));
+    }
+    page.dataset.motion = item.motion;
+    page.dataset.stableId = item.stableId;
+    page.dataset.sourceSlides = item.sourceSlides.join(',');
+    page.style.setProperty('--os-step-animation', keyframes[item.motion]);
+    var stepElements = page.querySelectorAll('[data-osd-step]');
+    if (item.sourceSlides.includes(13) && stepElements.length >= 6) stepElements[2].parentElement.classList.add('os-question-grid');
+    stepElements.forEach(function (el, n) {
+      el.style.setProperty('--os-step-order', String(n));
+      el.setAttribute('data-osd-step', 'revealed');
+    });
+    (item.focus || []).forEach(function (focus) {
+      markPhrase(page, focus[0], focus[1], focus[2], i + 1);
+    });
+    if (item.imageMotion) {
+      var image = page.querySelector('img[alt="' + item.imageMotion.alt + '"]');
+      if (image) image.dataset.imageMotion = item.imageMotion.effect;
+      else missingFocus.push({slide:i + 1, image:item.imageMotion.alt});
+    }
+  });
+  if (total) total.textContent = String(pages.length);
+
+  function fit() {
+    var scale = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+    frame.style.transform = 'scale(' + scale + ')';
+  }
+  function updateButtons() {
+    prevButton.disabled = idx <= 0;
+    nextButton.disabled = idx >= pages.length - 1;
+  }
+  function go(target) {
+    var next = Math.max(0, Math.min(pages.length - 1, target));
+    if (next === idx) return;
+    pages.forEach(function (page) {
+      page.classList.remove('deck-enter');
+      page.hidden = true;
+    });
+    idx = next;
+    var page = pages[idx];
+    page.hidden = false;
+    void page.offsetWidth;
+    page.classList.add('deck-enter');
+    if (cur) cur.textContent = String(idx + 1);
+    updateButtons();
+  }
+  function next() { go(idx + 1); }
+  function prev() { go(idx - 1); }
+  nextButton.addEventListener('click', next);
+  prevButton.addEventListener('click', prev);
+  window.addEventListener('resize', fit);
+  window.addEventListener('keydown', function (e) {
+    if (e.repeat) return;
+    if (['ArrowRight','ArrowDown','PageDown',' '].indexOf(e.key) >= 0) { e.preventDefault(); next(); }
+    else if (['ArrowLeft','ArrowUp','PageUp'].indexOf(e.key) >= 0) { e.preventDefault(); prev(); }
+    else if (e.key === 'Home') { e.preventDefault(); go(0); }
+    else if (e.key === 'End') { e.preventDefault(); go(pages.length - 1); }
+  });
+  fit();
+  go(0);
+  window.__classroomDeck = {
+    go: go,
+    index: function () { return idx; },
+    missingFocus: missingFocus,
+    plan: plan
+  };
+})();
+</script></body></html>

@@ -23,7 +23,7 @@ class RequirementsRegistryTests(unittest.TestCase):
             if not line.startswith("|") or line.startswith("|---") or "requirement_id" in line:
                 continue
             cells = [cell.strip() for cell in line.strip("|").split("|")]
-            if len(cells) == 6 and re.fullmatch(r"[A-Z]+-\d{3}", cells[0]):
+            if len(cells) == 6 and re.fullmatch(r"[A-Z]+(?:-[A-Z]+)*-\d{3}", cells[0]):
                 rows.append(cells)
         self.assertGreaterEqual(len(rows), 20)
         ids = [row[0] for row in rows]
@@ -37,7 +37,7 @@ class RequirementsRegistryTests(unittest.TestCase):
 
     def test_blocker_requirement_mappings_exist_in_registry(self) -> None:
         text = REGISTRY.read_text(encoding="utf-8")
-        ids = set(re.findall(r"^\| ([A-Z]+-\d{3}) \|", text, re.MULTILINE))
+        ids = set(re.findall(r"^\| ([A-Z]+(?:-[A-Z]+)*-\d{3}) \|", text, re.MULTILINE))
         for code, requirement_ids in BLOCKER_REQUIREMENT_RULES.items():
             self.assertTrue(requirement_ids, code)
             self.assertTrue(set(requirement_ids) <= ids, code)

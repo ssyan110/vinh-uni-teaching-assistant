@@ -1,0 +1,38 @@
+{
+  "version": "two-page-v02-simple-instructions",
+  "page_count": 30,
+  "activities": 14,
+  "reading_pdf_pages": 2,
+  "comic_mode": "individual",
+  "files": [
+    {
+      "path": "lesson-11-12-实体课.html",
+      "sha256": "c775744592ffb74752ff1c814c45ff3832f843875cdc42a206d3c9fbb59d173f"
+    },
+    {
+      "path": "lesson-11-12-教师速用说明.md",
+      "sha256": "5f3771e316f7c31c124fe24b5b862d4746d2d9a8d21bb8ab0ba354dda39f1470"
+    },
+    {
+      "path": "lesson-11-12-教师朗读稿.pdf",
+      "sha256": "8fbf5e1a30e7b7ace56e5f68c5e323a57bf27358cc13f1e811ee1f4e0ace02f5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "77e41c53e42c5a69db81f0cdb62315fbd48adbd6612c7b35cc3d0d35e9024ef4"
+    },
+    {
+      "path": "assets/bus.png",
+      "sha256": "801717b1bae97a62a80ddc0d81c367c6be58d7762169c1cb5b1530bcd5090292"
+    },
+    {
+      "path": "assets/story-lesson-11.png",
+      "sha256": "46ce5c8e276a606108ea4b7052e17333033965f633c4dd026fe5d9906f6f30be"
+    },
+    {
+      "path": "assets/story-lesson-12.png",
+      "sha256": "8c923a1c88db1e842c2a5d9d7774c4c7300a91a70bd71a20a76a63b344ba1c74"
+    }
+  ],
+  "instruction_language": "short common Chinese; original task demand retained"
+}

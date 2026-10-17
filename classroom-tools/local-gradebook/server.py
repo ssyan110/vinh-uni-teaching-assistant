@@ -1,10 +1,15 @@
-"""Single-teacher, loopback-only gradebook. SQLite + local JSON recovery snapshots."""
+"""Single-teacher, authenticated LAN gradebook. SQLite + local JSON recovery snapshots."""
 import argparse
 import feedback
 import io
 import json
 import math
 import secrets
+import socket
+import subprocess
+import sys
+import ipaddress
+from http.cookies import SimpleCookie
 import sqlite3
 import uuid
 from datetime import datetime, date
@@ -17,6 +22,23 @@ ROOT = Path(__file__).resolve().parent
 STATUSES = {'done', 'absent', 'pending', 'supplement'}
 MAX_BODY = 8_000_000
 CATALOG = json.loads((ROOT / 'catalog.json').read_text())
+
+def lan_address():
+    # VPN routes can select a tunnel IP; on this Mac advertise Wi-Fi/Ethernet first.
+    if sys.platform == 'darwin':
+        for interface in ('en0', 'en1'):
+            result = subprocess.run(['/usr/sbin/ipconfig', 'getifaddr', interface], capture_output=True, text=True)
+            if result.returncode == 0:
+                address = result.stdout.strip()
+                if ipaddress.ip_address(address).is_private:
+                    return address
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as connection:
+            connection.connect(('192.0.2.1', 9))
+            address = connection.getsockname()[0]
+        return address if ipaddress.ip_address(address).is_private and not ipaddress.ip_address(address).is_loopback else None
+    except OSError:
+        return None
 
 def now():
     return datetime.now(ZoneInfo('Asia/Ho_Chi_Minh')).isoformat(timespec='seconds')
@@ -330,6 +352,7 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header('Content-Type', mime)
         self.send_header('Cache-Control', 'no-store')
         self.send_header('X-Content-Type-Options', 'nosniff')
+        self.send_header('Referrer-Policy', 'no-referrer')
         self.send_header('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'")
         if filename:
             self.send_header('Content-Disposition', 'attachment; filename="' + filename + '"')
@@ -338,13 +361,48 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(value)
 
     def allowed(self):
-        return self.headers.get('Host') in (f'127.0.0.1:{self.server.server_port}', f'localhost:{self.server.server_port}')
+        return self.headers.get('Host') in self.server.allowed_hosts
+
+    def local(self):
+        return ipaddress.ip_address(self.client_address[0]).is_loopback
+
+    def authenticated(self):
+        if self.local():
+            return True
+        cookies = SimpleCookie()
+        try:
+            cookies.load(self.headers.get('Cookie', ''))
+            value = cookies.get('gradebook-access')
+            return bool(value and secrets.compare_digest(value.value.encode(), self.server.access_key.encode()))
+        except Exception:
+            return False
 
     def do_GET(self):
         if not self.allowed():
             return self.send(403, {'error': '本机访问地址不正确'})
         url = urlparse(self.path)
+        if url.path == '/connect':
+            key = parse_qs(url.query).get('key', [''])[0]
+            if not secrets.compare_digest(key.encode(), self.server.access_key.encode()):
+                return self.send(403, {'error': '手机入口已失效，请在电脑上重新打开“手机评分”。'})
+            self.send_response(303)
+            self.send_header('Location', '/')
+            self.send_header('Set-Cookie', f'gradebook-access={self.server.access_key}; HttpOnly; SameSite=Strict; Path=/')
+            self.send_header('Cache-Control', 'no-store')
+            self.send_header('Referrer-Policy', 'no-referrer')
+            self.send_header('Content-Length', '0')
+            self.end_headers()
+            return
+        if not self.authenticated():
+            return self.send(403, '请先使用电脑上“手机评分”提供的专属链接。', 'text/plain; charset=utf-8')
         try:
+            if url.path == '/api/mobile':
+                if not self.local():
+                    return self.send(403, {'error': '请在电脑上查看手机入口'})
+                address = lan_address()
+                if not address or f'{address}:{self.server.server_port}' not in self.server.allowed_hosts:
+                    raise ValueError('网络地址已变化或尚未连接网络，请重新启动教师评分。')
+                return self.send(200, {'url': f'http://{address}:{self.server.server_port}/connect?key={self.server.access_key}'})
             if url.path == '/api/health':
                 return self.send(200, {'ok': True, 'service': 'vinh-local-gradebook'})
             if url.path == '/api/catalog':
@@ -395,7 +453,7 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         origin = self.headers.get('Origin')
-        if not self.allowed() or self.headers.get('X-Gradebook-Token') != self.server.token or (origin and origin not in (f'http://127.0.0.1:{self.server.server_port}', f'http://localhost:{self.server.server_port}')):
+        if not self.allowed() or not self.authenticated() or self.headers.get('X-Gradebook-Token') != self.server.token or (origin and origin != 'http://' + self.headers.get('Host', '')):
             return self.send(403, {'error': '访问验证失败，请重新载入本机页面'})
         try:
             length = int(self.headers.get('Content-Length', '0'))
@@ -424,7 +482,7 @@ class Handler(BaseHTTPRequestHandler):
             raise
 
     def log_message(self, fmt, *args):
-        if args and str(args[1]) != '200':
+        if urlparse(self.path).path != '/connect' and args and str(args[1]) != '200':
             super().log_message(fmt, *args)
 
 def main():
@@ -435,9 +493,14 @@ def main():
     if not (ROOT == args.data_dir.resolve() or ROOT in args.data_dir.resolve().parents):
         parser.error('资料目录必须在本 App 文件夹内')
     store = Store(args.data_dir)
-    server = HTTPServer(('127.0.0.1', args.port), Handler)
+    server = HTTPServer(('0.0.0.0', args.port), Handler)
+    address = lan_address()
+    server.allowed_hosts = {f'127.0.0.1:{args.port}', f'localhost:{args.port}'}
+    if address:
+        server.allowed_hosts.add(f'{address}:{args.port}')
     server.store = store
     server.token = secrets.token_urlsafe(32)
+    server.access_key = secrets.token_urlsafe(32)
     print(f'教师评分已启动：http://127.0.0.1:{args.port}（Ctrl+C 关闭）', flush=True)
     try:
         server.serve_forever()

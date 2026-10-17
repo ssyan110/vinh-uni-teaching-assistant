@@ -1,6 +1,14 @@
 {
   "schema_version": 1,
-  "selection_policy": "Before starting each new PPT deck, ask Adam which registered visual style to use unless he already selected one in the current request.",
+  "selection_policy": "Use the applicable standing or current explicit choice; ask only when neither exists. Classroom HTML and optional backups use docs/classroom-html-standard-2026-10-07.md across cohorts. Style selection does not grant content approval.",
+  "standing_choices": [
+    {
+      "scope": "classroom HTML/OpenSlide and optional static PPTX backups across cohorts",
+      "reference": "docs/classroom-html-standard-2026-10-07.md",
+      "baseline": "current L9–10 HTML",
+      "decision_source": "AGENTS.md classroom format and visual-unification decisions"
+    }
+  ],
   "styles": [
     {
       "style_id": "boya-classroom",

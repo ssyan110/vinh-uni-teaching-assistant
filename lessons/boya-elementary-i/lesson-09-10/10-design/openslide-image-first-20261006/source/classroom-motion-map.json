@@ -12,6 +12,32 @@
     }
   },
   {
+    "stableId": "classroom-overview",
+    "sourceSlides": [],
+    "motion": "stagger-rise",
+    "focus": []
+  },
+  {
+    "stableId": "comic-story-09",
+    "sourceSlides": [],
+    "motion": "stagger-rise",
+    "focus": [],
+    "contentApproval": "20261011-comic-story-front"
+  },
+  {
+    "stableId": "comic-story-10",
+    "sourceSlides": [],
+    "motion": "stagger-rise",
+    "focus": [],
+    "contentApproval": "20261011-comic-story-front"
+  },
+  {
+    "sourceSlides": [],
+    "motion": "stagger-rise",
+    "focus": [],
+    "stableId": "activity-1-divider"
+  },
+  {
     "stableId": "v3-slide-02",
     "sourceSlides": [
       2
@@ -148,7 +174,7 @@
     ]
   },
   {
-    "stableId": "v3-slide-15",
+    "stableId": "activity-2-divider",
     "sourceSlides": [
       15
     ],
@@ -211,7 +237,7 @@
     "focus": []
   },
   {
-    "stableId": "v3-slide-23",
+    "stableId": "activity-3-divider",
     "sourceSlides": [
       23
     ],
@@ -353,7 +379,7 @@
     "focus": []
   },
   {
-    "stableId": "v3-slide-34",
+    "stableId": "activity-4-divider",
     "sourceSlides": [
       34
     ],
@@ -374,7 +400,7 @@
     "focus": []
   },
   {
-    "stableId": "v3-slide-37",
+    "stableId": "activity-5-divider",
     "sourceSlides": [
       37
     ],
@@ -514,6 +540,12 @@
     ],
     "motion": "plan-questions",
     "focus": []
+  },
+  {
+    "sourceSlides": [],
+    "motion": "stagger-rise",
+    "focus": [],
+    "stableId": "activity-6-divider"
   },
   {
     "stableId": "v3-slide-51",

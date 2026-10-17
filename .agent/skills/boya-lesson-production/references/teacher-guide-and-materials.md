@@ -7,7 +7,7 @@ This reference preserves artifact-specific rules moved from the main skill durin
 完整教材包至少包含（生產順序以教師手冊為起點）：
 
 - 教師手冊：流程、頁碼、音檔、canonical source 全部練習 coverage、分組、提示、修補、評量、答案政策與備案；必須先完成並批准。
-- 目前課次的線上與實體課 PPTX；必須依批准的教師手冊與內容邊界製作。
+- 目前課次的線上 PPTX 與實體 HTML，備份 PPTX 僅在需要時納入；依批准內容及適用格式檢查，HTML 狀態見 `docs/workflow/classroom-html-lifecycle.md`。
 - Visual storyboard：依教師手冊決定的內容製作，記錄版面、圖片、文字上限、設計 token 與素材授權規格。
 - 預習卡：指定閱讀／聽力、準備任務與帶課堂證據。
 - 活動材料：訪談卡、角色卡、資訊差卡、輪站卡、調查／研究表。
@@ -22,7 +22,7 @@ This reference preserves artifact-specific rules moved from the main skill durin
 
 ### Current draft 清理規則
 
-- 每課 `10-design` current draft 只保留一份現行 outline、visual storyboard、asset plan，以及 online 與 face-to-face 各一份 PPTX 和其最新 QA；被取代的 outline／storyboard／生成器要在依賴移除後刪除或移到明確的 `90-archive/`，不留在未標記的同一資料夾。
+- 每課 `10-design` current draft 只保留一份現行 outline、visual storyboard、asset plan，以及 本次所選格式各一份 current deck 和其最新 QA（線上 PPTX、實體 HTML，按需備份 PPTX）；被取代的 outline／storyboard／生成器要在依賴移除後刪除或移到明確的 `90-archive/`，不留在未標記的同一資料夾。
 - 舊 HTML review artifact 可以留作來源審閱證據，但不得再被生產器或 dashboard 當成課堂 deck 來源。
 - 新課次不得再把多份 PPT、活動卡或教師手冊互相複製成平行 authority；每次交付只從 `20-approved/` 建立一份 release。
 

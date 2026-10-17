@@ -1,0 +1,34 @@
+{
+  "readback": "passed",
+  "student_pages": 28,
+  "base_and_challenge_count": 14,
+  "teacher_script_visibility": "not in student copy",
+  "standing_rule_entrypoints_updated": [
+    "AGENTS.md",
+    "PROJECT_REQUIREMENTS.md",
+    "docs/classroom-html-standard-2026-10-07.md",
+    ".agent/skills/boya-lesson-production/SKILL.md",
+    ".agent/agent-workflow-index.md",
+    "memory/project-memory.md",
+    "docs/workflow/requirements-registry.md",
+    "docs/classroom-activity-workflow.md"
+  ],
+  "memory_note": "/Users/ssyan110/.codex/memories/extensions/ad_hoc/notes/2026-10-14T173300-classroom-two-page-workflow.md",
+  "sha256": {
+    "AGENTS.md": "7f9bb56cbeb516d944b423692c64a507e99d89802eed33dda7ad2c5e6c2a25e5",
+    "PROJECT_REQUIREMENTS.md": "fe7cece927144db4a74d34f7a8abf357e521e2ae261328a02a0099acde295a8b",
+    "docs/classroom-html-standard-2026-10-07.md": "b04d445ae4b0262a63ebf324b08a8167420271bb1c9ae4c0feb2c38cfbce37c0",
+    ".agent/skills/boya-lesson-production/SKILL.md": "5cb1a443dc22370b622b769579f16254299c972ea78e60ab5b170bd563648a14",
+    ".agent/agent-workflow-index.md": "53ff1859c2b6648c5fac4503b7850a7cf51c6ffb97889647f34238a0c8b6e2f0",
+    "memory/project-memory.md": "d24691e589526dd1e736dcb58401a1ba6012c924cbe8a148f9f81f315cde08b1",
+    "docs/workflow/requirements-registry.md": "91acfd655de4bfb379c35eb025d703dfbc0aaf7fc352a4fe58c98a96ca2d5551",
+    "docs/classroom-activity-workflow.md": "23c6b7adb69b106ca5e15904d772bea976670454193a26f8ff51ed7d7718a9df",
+    "lessons/boya-elementary-i/lesson-11/10-design/research-20261014/lesson-11-12-学生页文案审阅-v02.md": "48eb77969c3562bc7b48beddcafd5511d2df87f87f28d70ed5a135e10676fdc8",
+    "lessons/boya-elementary-i/lesson-11/10-design/research-20261014/lesson-11-12-双页活动-内容审阅-v02.md": "c29712f5d3e794f5a51156741afee6f9147d6ea298cdfd57c89d5601cc5140b3",
+    "lessons/boya-elementary-i/lesson-11/10-design/research-20261014/research-reconciliation.md": "230f67988b6f1827b442fb9ac39bf9ed0a4747c31208ec20190198059ce43889",
+    "lessons/boya-elementary-i/lesson-11/10-design/research-20261014/activity-review-v02.json": "94b202c86a4bb3f3b070d60bc877861985da10c77e28e73c0fb234c74d4de696"
+  },
+  "production_started": false,
+  "approval_created": false,
+  "classroom_tested": false
+}

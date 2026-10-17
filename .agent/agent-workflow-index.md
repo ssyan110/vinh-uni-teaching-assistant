@@ -8,18 +8,16 @@ Read the canonical contract first for lifecycle, gate, artifact-state, identity,
 
 This is the portable entry point for AI agents working in this project. The current course decisions are project requirements, not chat-only reminders.
 
-## Required reading order
+## Scope-based reading order
 
-1. `AGENTS.md`
-2. `PROJECT_REQUIREMENTS.md`
-3. `memory/project-memory.md`
-4. `.agent/agent-operating-contract.md`
-5. `.agent/skills/harness-engineering/SKILL.md`
-6. `.agent/skills/boya-lesson-production/SKILL.md`
-7. Canonical lesson source and the relevant PDF/audio index
-8. Shared reusable workflows: `/Users/ssyan110/Development/_agent_shared/WORKFLOW_INDEX.md`
+1. Read AGENTS.md, the canonical workflow contract and the operating contract.
+2. Declare project, tool, course, lesson or assessment scope; only lesson work requires lesson_key.
+3. Read relevant requirements and project context, then one matching task skill. Lesson artifacts use boya-lesson-production; assessments use boya-weekly-assessment; workflow/tool changes use harness-engineering without loading the PPTX bundle.
 
-If a current user decision changes the course workflow, update the project files and the ad-hoc memory note in the same task; do not leave the decision only in conversation.
+Year-1 weekly assessment creation, correction and cleanup follow [the fixed synchronization procedure](../docs/workflow/weekly-assessment-sync.md): one current input, all output surfaces synchronized and read back, one audio group per Section, and superseded active rows deleted after replacement verification. Preserve responses, grades and valid references from other exams.
+4. Read the focused artifact references and actual source/evidence needed. Shared workflows are optional context, not mandatory external dependencies.
+
+When an authorized decision changes workflow, update its owning project rule, remove or scope superseded clauses, reconcile consumers and registry entries, and record verification. Preserve historical approval evidence. Update global memory only when Adam explicitly requests a memory update; project rule maintenance does not imply that authorization.
 
 The adopted online/face-to-face baseline is content routing, not a time quota:
 online preparation covers textbook reading, audio preview, vocabulary and key-point
@@ -52,11 +50,11 @@ an active project requirement or maintain it.
 
 2026-10-07 06:52 UTC clarification: online classes remain unchanged and continue to prioritize PPT/PPTX, including one-word-per-page preparation and approved styles. Only physical classes prioritize HTML slides/OpenSlide, with optional editable PPTX backup.
 
-For future face-to-face decks, first apply the [2026-10-07 classroom HTML standard](../docs/classroom-html-standard-2026-10-07.md): HTML/OpenSlide first, the L9–10 46-slide visual/activity reference, and level-appropriate TOCFL-style assessment. This standing choice supersedes the native-pptx default and repeated style-selection question below for this scope. Keep online preparation, lesson-specific content approvals and release gates separate.
+For future face-to-face decks, first apply the [2026-10-07 classroom HTML standard](../docs/classroom-html-standard-2026-10-07.md): HTML/OpenSlide first, the current L9–10 visual/activity reference, and level-appropriate TOCFL-style assessment. This standing choice supersedes the native-pptx default and repeated style-selection question below for this scope. Keep online preparation, lesson-specific content approvals and release gates separate.
 
 For Boya lesson work, use the `boya-lesson-production` skill. The required route is:
 
-For native-PPTX authority/release work, use (HTML follows the classroom standard and its applicable gates):
+For online or explicitly selected historical native-PPTX authority/release work, use this route. Classroom HTML and its optional static backup follow the classroom standard and classroom-html-lifecycle contract, without another six-slide style prototype:
 
 `source gate → PBI redesign gate → teacher guide content master → teacher guide approval → support materials → PPT storyboard → visual storyboard → 6-slide prototype → native PPTX → QA → delivery`
 
@@ -72,7 +70,7 @@ the existing gate and later production steps remain separate.
 
 Authority and release remain lesson-by-lesson within each `textbook_id`. Drafts
 may run in parallel when each lesson has an explicit `lesson_key`, source package
-and recorded online/face-to-face boundary; a draft never unlocks authority or
+and recorded online/face-to-face boundary plus explicit approval of the current slide copy; a draft never unlocks authority or
 release for the next lesson.
 
 Before any new image worker, prototype or PPTX draft, run the shared
@@ -126,3 +124,17 @@ Never access password notes or use credit card information. Do not create or mai
 ## 2026-09-21：仅本届大一第一学期的课程路由
 
 仅当年级=大一、学期=第一学期、日期=2026-09-21至2026-12-27、教材=`boya-elementary-i`同时匹配时，先读[本班课程规划与第四课起PPT制作规则](../docs/course-rules/BOYA-LS-E1-Y1S1-2026F/README.md)（`BOYA-LS-E1-Y1S1-2026F`）。按任务结果组织第四课起PPT，教材逐项覆盖；W02安排第4—6课，W12完成首轮覆盖、W13缓冲、W14评量规划。该局部规则取代本班旧课时预算与线性栏目顺序，不扩展到其他年级、学期或未来班级，不改共用offering顶层课表。现有教材与批准不回改；新版逐页内容仍须单独批准。新增双语说明仍待逐页决定，23 pt下限保持。
+
+## OpenSlide 统一工作区（Adam 确认，2026-10-11）
+
+制作前先执行 `docs/classroom-html-standard-2026-10-07.md` 的「后续制作的默认执行与交付自检」。以第9–10课当前HTML的实际页型、封面、学习流程和字号为持续基准；制作agent自行完成全页内容／版面及首页播放检查，修复后交付，不重新询问已确认风格。
+
+实体课开头固定为：第一页封面，第二页「今天我们会做什么」活动路线，第三页开始主要内容。包含现有第9–10课、第11–12课和今后制作的实体课；具体标准见 `docs/classroom-html-standard-2026-10-07.md`。
+
+今后本项目所有 OpenSlide／课堂 HTML 简报必须登记到同一首页，不再建立孤立入口。工作区由 `course/open-slide-workspace.json` 指定；新增原生 React 简报放入该工作区的 `slides/<textbook-id>-<lesson-id>/`，HTML 简报登记到 `html_decks` 并运行同步。制作完成时验证首页可见及入口可打开。各课来源、设计、批准及交付记录仍留在原课目录；首页登记不授予教材批准。启动、同步和 HTML 播放限制见 `docs/open-slide-workspace.md`。
+
+首页接入须保留实际页数、逐页缩略图和OpenSlide翻页，不得将多页实体课slides作为一张图片或单页入口交付。
+
+## 2026-10-14 实体课默认制作
+
+先读 [实体课活动制作流程](../docs/classroom-activity-workflow.md)。默认一页完成，每活动最多两页，仅必要时分离任务和资料；不强塞分级框或额外纯标题divider。先验证输入—动作—成果和教师朗读／答案，再提交当周具体内容；已确认视觉和结构不重复询问。完成批准后自主排版与逐页QA，保留真实的人类内容批准及试教边界。

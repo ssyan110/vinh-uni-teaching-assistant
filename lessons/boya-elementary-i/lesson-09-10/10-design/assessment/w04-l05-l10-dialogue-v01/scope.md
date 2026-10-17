@@ -12,4 +12,4 @@ Adam最新改向：只考第5—10课教材对话，50题；保留30选择＋20�
 
 答案册：/Users/ssyan110/Desktop/Work/Teaching/02_教材/博雅漢語教材/2. 博雅汉语听说-初级起步篇I-听力文本及参考答案.pdf
 
-原音剪辑区间和SHA-256记于audio-manifest.json。旧1—10课原音卷保留为历史审阅，本卷是当前审阅范围。没有修改approved/release，也未同步旧Form；lesson-09/10注册表缺口仍不被本卷技术验证覆盖。
+原音剪辑区间和SHA-256记于audio-manifest.json。旧1—10课原音卷保留为历史审阅，本卷是当前审阅范围。没有修改approved/release，原Google Form已同步本卷并核验，保持未发布；lesson-09/10注册表缺口仍不被本卷技术验证覆盖。

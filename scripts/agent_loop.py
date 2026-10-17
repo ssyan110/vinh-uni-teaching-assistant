@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run a lesson-scoped, evidence-backed control loop around existing gates.
+"""Run an evidence-backed lesson or non-lesson execution control loop.
 
 The run packet tracks one agent execution. It never replaces lesson manifests,
 records human approval, promotes drafts or creates releases.
@@ -16,6 +16,7 @@ import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable
+from types import SimpleNamespace
 
 from lesson_context import LessonContext, resolve_lesson_context
 from blocker_contract import HUMAN_TOKENS, blocker_records
@@ -26,6 +27,19 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 RUN_ID_PATTERN = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,79}")
 PHASES = {"defined", "ready", "verifying", "needs_human", "blocked", "complete"}
 PURPOSES = {"audit", "teacher-guide", "support", "prototype", "pptx", "semester-manual", "release"}
+EXECUTION_SCOPES = {"project", "tool", "course", "assessment"}
+
+
+def execution_output(project_root: Path, output_dir: str | None) -> str:
+    if not output_dir:
+        raise ValueError("execution scope requires an explicit --output-dir")
+    resolved, normalized = resolve_scoped_path(project_root, output_dir)
+    if resolved == project_root.resolve() or any(part in {
+        "00-source", "20-approved", "30-qa", "40-release", "archive", "90-archive"
+    } for part in Path(normalized).parts):
+        raise ValueError("execution output cannot be project root or protected authority/source/history")
+    return normalized
+
 def utc_now() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
@@ -42,6 +56,9 @@ def validate_run_id(run_id: str) -> str:
 def run_paths(project_root: Path, run_id: str) -> dict[str, Path]:
     validate_run_id(run_id)
     root = project_root.resolve() / ".agent" / "runs" / run_id
+    resolved, _ = resolve_scoped_path(project_root, root)
+    if resolved != root:
+        raise ValueError("run packet must not traverse a symlink")
     return {
         "root": root,
         "state": root / "state.json",
@@ -175,7 +192,7 @@ def normalize_output_dir(
 def create_run(
     project_root: Path,
     run_id: str,
-    lesson_key: str,
+    lesson_key: str | None,
     artifact: str,
     purpose: str,
     gate_stage: str,
@@ -183,6 +200,7 @@ def create_run(
     output_dir: str | None = None,
     offering_id: str | None = None,
     max_attempts: int = 3,
+    scope: str = "lesson",
 ) -> dict[str, Any]:
     validate_run_id(run_id)
     if purpose not in PURPOSES:
@@ -196,14 +214,17 @@ def create_run(
     if max_attempts < 1 or max_attempts > 10:
         raise ValueError("max_attempts must be between 1 and 10")
 
-    context = resolve_lesson_context(project_root, lesson_key, offering_id)
-    normalized_output = normalize_output_dir(
-        project_root,
-        context,
-        purpose,
-        gate_stage,
-        output_dir,
-    )
+    if scope == "lesson":
+        context = resolve_lesson_context(project_root, lesson_key, offering_id)
+        normalized_output = normalize_output_dir(project_root, context, purpose, gate_stage, output_dir)
+    elif scope in EXECUTION_SCOPES:
+        if lesson_key or offering_id or purpose != "audit" or gate_stage != "draft":
+            raise ValueError("non-lesson execution requires purpose=audit, draft stage, and no lesson/offering identity; it grants no production approval")
+        normalized_output = execution_output(project_root, output_dir)
+        context = SimpleNamespace(lesson_key=None, offering_id=None, textbook_id=None, lesson_id=None, lesson_root=None)
+        gate_stage = "execution"
+    else:
+        raise ValueError(f"unsupported scope: {scope}")
     paths = run_paths(project_root, run_id)
     if paths["root"].exists():
         raise FileExistsError(f"run already exists: {run_id}")
@@ -211,12 +232,13 @@ def create_run(
     created_at = utc_now()
     state: dict[str, Any] = {
         "schema_version": 1,
+        "scope": scope,
         "run_id": run_id,
         "lesson_key": context.lesson_key,
         "offering_id": context.offering_id,
         "textbook_id": context.textbook_id,
         "lesson_id": context.lesson_id,
-        "lesson_root": context.lesson_root.relative_to(project_root.resolve()).as_posix(),
+        "lesson_root": context.lesson_root.relative_to(project_root.resolve()).as_posix() if context.lesson_root else None,
         "artifact": artifact.strip(),
         "purpose": purpose,
         "gate_stage": gate_stage,
@@ -243,6 +265,7 @@ def create_run(
     atomic_write_text(
         paths["plan"],
         f"# Run plan: {run_id}\n\n"
+        f"- Scope: `{scope}`; execution evidence does not grant content or release approval.\n"
         f"- Lesson: `{context.lesson_key}`\n"
         f"- Offering: `{context.offering_id}`\n"
         f"- Artifact: {artifact.strip()}\n"
@@ -264,6 +287,9 @@ def create_run(
 
 
 def _default_gate_runner(project_root: Path, state: dict[str, Any]) -> dict[str, Any]:
+    if state.get("scope", "lesson") in EXECUTION_SCOPES:
+        execution_output(project_root, state.get("output_dir"))
+        return {"status": "ready", "blockers": [], "check_kind": "execution-boundary-only", "production_authorized": False}
     if project_root.resolve() != PROJECT_ROOT.resolve():
         raise RuntimeError("default production gate runner is only available for this project")
     from production_gate import check, check_lesson_ppt_draft
@@ -561,6 +587,7 @@ def write_final_report(path: Path, state: dict[str, Any]) -> None:
     atomic_write_text(
         path,
         f"# Final report: {state['run_id']}\n\n"
+        f"- Scope: `{state.get('scope', 'lesson')}`; execution evidence does not grant content or release approval.\n"
         f"- Lesson: `{state['lesson_key']}`\n"
         f"- Artifact: {state['artifact']}\n"
         f"- Phase: `{state['phase']}`\n"
@@ -590,6 +617,11 @@ def validate_state(
         "gate_stage",
         "phase",
     )
+    execution = state.get("scope", "lesson") in EXECUTION_SCOPES
+    if execution:
+        required_strings = tuple(field for field in required_strings if field not in {"lesson_key", "offering_id", "textbook_id", "lesson_id", "lesson_root"})
+    elif state.get("scope", "lesson") != "lesson":
+        failures.append("unsupported scope")
     for field in required_strings:
         if not isinstance(state.get(field), str) or not state[field]:
             failures.append(f"{field} must be a non-empty string")
@@ -601,7 +633,7 @@ def validate_state(
         failures.append(str(error))
     if state["purpose"] not in PURPOSES:
         failures.append(f"unsupported purpose: {state['purpose']}")
-    if state["gate_stage"] not in {"draft", "authority"}:
+    if state["gate_stage"] not in ({"execution"} if execution else {"draft", "authority"}):
         failures.append(f"unsupported gate_stage: {state['gate_stage']}")
     if state["phase"] not in PHASES:
         failures.append(f"unsupported phase: {state['phase']}")
@@ -656,6 +688,22 @@ def validate_state(
             failures.append("blocker categories do not account for every blocker")
 
     try:
+        if execution:
+            if state["purpose"] != "audit" or any(state.get(field) is not None for field in ("lesson_key", "offering_id", "textbook_id", "lesson_id", "lesson_root")):
+                raise ValueError("execution scope must not claim lesson identity or production purpose")
+            normalized = execution_output(project_root, state.get("output_dir"))
+            if normalized != state.get("output_dir"):
+                raise ValueError("execution output is not normalized")
+        else:
+            _validate_lesson_context(project_root, state, failures)
+    except (OSError, ValueError, RuntimeError) as error:
+        failures.append(f"context validation failed: {error}")
+
+    return _validate_remaining_state(project_root, state, failures, attempts, evidence, check_evidence)
+
+
+def _validate_lesson_context(project_root, state, failures):
+    try:
         context = resolve_lesson_context(
             project_root,
             state["lesson_key"],
@@ -681,6 +729,7 @@ def validate_state(
     except (OSError, ValueError, RuntimeError) as error:
         failures.append(f"lesson context validation failed: {error}")
 
+def _validate_remaining_state(project_root, state, failures, attempts, evidence, check_evidence):
     external = state.get("latest_external_check")
     if external is not None:
         if not isinstance(external, dict):
@@ -750,6 +799,7 @@ def command_init(args: argparse.Namespace) -> dict[str, Any]:
         args.output_dir,
         args.offering_id,
         args.max_attempts,
+        args.scope,
     )
 
 
@@ -769,7 +819,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     init = subparsers.add_parser("init", help="Create a local run packet")
     init.add_argument("--run-id", required=True)
-    init.add_argument("--lesson-key", required=True)
+    init.add_argument("--lesson-key")
+    init.add_argument("--scope", choices=["lesson", *sorted(EXECUTION_SCOPES)], default="lesson")
     init.add_argument("--offering-id")
     init.add_argument("--artifact", required=True)
     init.add_argument("--purpose", required=True, choices=sorted(PURPOSES))

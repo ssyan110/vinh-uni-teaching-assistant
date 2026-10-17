@@ -1,0 +1,21 @@
+{
+  "exam_id": "W06-L13L14-20261016",
+  "version": 2,
+  "status": "SYNCED_VERIFIED",
+  "stage": "draft_unpublished",
+  "publication_authorized": false,
+  "revision_id": "00000008",
+  "synced_at": "2026-10-16T03:47:41.909539+00:00",
+  "verification": {
+    "input_hashes": {
+      "items_sha256": "8ff4c9aa6ca04cec666d2a46cd1038fd4a3e386a9a62abea90e36dea3fce06ca",
+      "sections_sha256": "ea040c6d468302a1a717f8e568a5d4e296b0e100a1566e69cc1ad24587ae3447",
+      "teacher_sha256": "09da1ce07827edb9f15efae87d202aebec7a29ebc832c1de7e140813ef6dac2a",
+      "audio_manifest_sha256": "b8694f98d9bfcfe0d70cb916710f24718ee499866e729b3965e8f6d283eda0b7"
+    },
+    "readback": ".tmp/w06-mixed-official/sync-verification.json",
+    "playback": ".tmp/w06-mixed-official/dashboard-playback.json",
+    "semantic_review": ".tmp/w06-mixed-official/semantic-review.json",
+    "scope": "Draft question contents, 100 options, keys, scores, groups, Sheet lookups and dashboard playback; publication and student submission not accepted"
+  }
+}

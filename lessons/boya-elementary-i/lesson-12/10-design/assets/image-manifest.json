@@ -1,0 +1,16 @@
+{
+  "lesson_key": "boya-elementary-i:lesson-12",
+  "images": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12-single-activity-v01/assets/story-lesson-12.png",
+      "sha256": "8c923a1c88db1e842c2a5d9d7774c4c7300a91a70bd71a20a76a63b344ba1c74",
+      "source": "OpenAI built-in image_gen, generated 2026-10-14",
+      "type": "original AI-generated six-panel teaching comic",
+      "license_status": "generated for user-authorized project; not a third-party stock asset",
+      "approval": "lesson-12-content-approval.json",
+      "panel_count": 6,
+      "visual_check": "panel order, character continuity, weather/action sequence checked; native panel labels added in HTML"
+    }
+  ],
+  "status": "generated and visually inspected; no human classroom acceptance implied"
+}

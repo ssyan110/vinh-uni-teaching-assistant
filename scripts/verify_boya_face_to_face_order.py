@@ -87,7 +87,9 @@ def expression_policy(source: dict) -> tuple[list[dict], bool]:
     return sections, grouped
 
 
-def verify_lesson(lesson_number: int) -> dict:
+def verify_lesson(lesson_number: int, *, mode: str) -> dict:
+    if mode != "legacy-face":
+        raise ValueError("this checker is only for explicit legacy-face PPTX maintenance")
     deck = deck_for(lesson_number)
     result = {
         "lesson_key": f"{TEXTBOOK}:lesson-{lesson_number:02d}",
@@ -201,10 +203,11 @@ def verify_lesson(lesson_number: int) -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
+    parser.add_argument("--mode", required=True, choices=["legacy-face"], help="Historical PPTX only; never apply to current classroom decks")
     parser.add_argument("--lesson", type=int, action="append", choices=range(1, 13))
     args = parser.parse_args()
     lesson_numbers = args.lesson or list(range(1, 13))
-    results = [verify_lesson(number) for number in lesson_numbers]
+    results = [verify_lesson(number, mode=args.mode) for number in lesson_numbers]
     failed = any(item["status"] == "failed" for item in results)
     blocked = any(item["status"] == "blocked" for item in results)
     summary = {

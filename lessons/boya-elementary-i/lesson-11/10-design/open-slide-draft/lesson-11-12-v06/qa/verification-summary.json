@@ -1,0 +1,25 @@
+{
+  "status": "technical_pass",
+  "pages": 21,
+  "activities": 14,
+  "teacher_pdf_pages": 6,
+  "teacher_messages": 8,
+  "cover_style": "minimal educational textbook style",
+  "cover_newly_generated": true,
+  "sequence": [
+    "11-1",
+    "11-2",
+    "11-3",
+    "11-4",
+    "11-5"
+  ],
+  "homepage_checks": 47,
+  "all_page_geometry": "passed",
+  "full_page_and_pdf_visual_review": "performed",
+  "build": "passed; existing bundle size warning",
+  "package_integrity": "passed; eight resource hashes",
+  "html_sha256": "57b58971c05200d30a795c29ff29483de590a225844cfffe66879cad34d71ab6",
+  "pdf_sha256": "41df609ee948ff4c04c51a808c7a853cbcf9d825cc99d636371ec338163c0936",
+  "zip_sha256": "19acbf398c3ee169482ed1e55cc438a1254c805c5dd913f2065c6cfabd94ef12",
+  "human_classroom_trial": "not_performed"
+}

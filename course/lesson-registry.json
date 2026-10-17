@@ -61,7 +61,9 @@
     {
       "lesson_key": "boya-elementary-i:lesson-04",
       "course_id": "vinh-chinese-listening-speaking",
-      "offering_ids": ["2026-fall"],
+      "offering_ids": [
+        "2026-fall"
+      ],
       "textbook_id": "boya-elementary-i",
       "lesson_id": "lesson-04",
       "lesson_number": 4,
@@ -73,12 +75,19 @@
       "printed_pages": "16–23",
       "pdf_page": 27,
       "audio_count": 10,
-      "status": {"stage": "design_draft_after_content_approval", "source_status": "draft_source_package", "status": "pptx_draft_generated_technical_qa_passed_human_acceptance_pending", "audio_status": "files_missing_playback_pending"}
+      "status": {
+        "stage": "design_draft_after_content_approval",
+        "source_status": "draft_source_package",
+        "status": "pptx_draft_generated_technical_qa_passed_human_acceptance_pending",
+        "audio_status": "files_missing_playback_pending"
+      }
     },
     {
       "lesson_key": "boya-elementary-i:lesson-02",
       "course_id": "vinh-chinese-listening-speaking",
-      "offering_ids": ["2026-fall"],
+      "offering_ids": [
+        "2026-fall"
+      ],
       "textbook_id": "boya-elementary-i",
       "lesson_id": "lesson-02",
       "lesson_number": 2,
@@ -90,12 +99,18 @@
       "printed_pages": "6–9",
       "pdf_page": 17,
       "audio_count": 9,
-      "status": {"stage": "source", "source_status": "intake_in_progress", "status": "content_review_draft_in_progress"}
+      "status": {
+        "stage": "source",
+        "source_status": "intake_in_progress",
+        "status": "content_review_draft_in_progress"
+      }
     },
     {
       "lesson_key": "boya-elementary-i:lesson-03",
       "course_id": "vinh-chinese-listening-speaking",
-      "offering_ids": ["2026-fall"],
+      "offering_ids": [
+        "2026-fall"
+      ],
       "textbook_id": "boya-elementary-i",
       "lesson_id": "lesson-03",
       "lesson_number": 3,
@@ -107,7 +122,11 @@
       "printed_pages": "10–15",
       "pdf_page": 21,
       "audio_count": 12,
-      "status": {"stage": "source", "source_status": "draft_source_package", "status": "copy_approved_by_adam_2026-09-19_pptx_draft_in_progress"}
+      "status": {
+        "stage": "source",
+        "source_status": "draft_source_package",
+        "status": "copy_approved_by_adam_2026-09-19_pptx_draft_in_progress"
+      }
     },
     {
       "lesson_key": "boya-elementary-i:lesson-01",
@@ -677,6 +696,92 @@
         "completion_status": "completed_by_adam_2026-09-08",
         "completion_confirmed_at": "2026-09-08",
         "completion_evidence": "course/textbook-completion-confirmation-2026-09-08.md"
+      }
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-11",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-elementary-i",
+      "lesson_id": "lesson-11",
+      "lesson_number": 11,
+      "title": "明天天气怎么样",
+      "lesson_path": "lessons/boya-elementary-i/lesson-11",
+      "source_manifest": null,
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-elementary-i/source/source-inventory.json",
+      "printed_pages": "80–88",
+      "status": {
+        "stage": "design_draft",
+        "source_status": "derived_original_tasks_publisher_coverage_pending",
+        "status": "v03_content_approved_openslide_requested"
+      }
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-12",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-elementary-i",
+      "lesson_id": "lesson-12",
+      "lesson_number": 12,
+      "title": "我正在等公共汽车呢",
+      "lesson_path": "lessons/boya-elementary-i/lesson-12",
+      "source_manifest": null,
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-elementary-i/source/source-inventory.json",
+      "printed_pages": "89–98",
+      "status": {
+        "stage": "design_draft",
+        "source_status": "derived_original_tasks_publisher_coverage_pending",
+        "status": "v03_content_approved_openslide_requested"
+      }
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-09",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-elementary-i",
+      "lesson_id": "lesson-09",
+      "lesson_number": 9,
+      "title": "我们怎么去",
+      "lesson_path": "lessons/boya-elementary-i/lesson-09",
+      "source_manifest": "lessons/boya-elementary-i/lesson-09/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-elementary-i/source/source-inventory.json",
+      "printed_pages": "58–68",
+      "pdf_page": 69,
+      "status": {
+        "stage": "design_draft",
+        "source_status": "existing_courseware_source_mapping_verified",
+        "status": "blooket_review_intake_teacher_acceptance_pending"
+      }
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-10",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-elementary-i",
+      "lesson_id": "lesson-10",
+      "lesson_number": 10,
+      "title": "西瓜怎么卖",
+      "lesson_path": "lessons/boya-elementary-i/lesson-10",
+      "source_manifest": "lessons/boya-elementary-i/lesson-10/00-source/source-manifest.json",
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-elementary-i/source/source-inventory.json",
+      "printed_pages": "69–79",
+      "pdf_page": 80,
+      "status": {
+        "stage": "design_draft",
+        "source_status": "existing_courseware_source_mapping_verified",
+        "status": "blooket_review_intake_teacher_acceptance_pending"
       }
     }
   ]

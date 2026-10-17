@@ -1,0 +1,33 @@
+{
+  "version": "two-page-v02",
+  "format": "classroom-html",
+  "page_count": 30,
+  "activity_count": 14,
+  "files": [
+    {
+      "path": "lesson-11-12-实体课.html",
+      "sha256": "7fef6aa31e6e39f0a48f6e940b4f7d88df95469f389b803fedfc046c649e6344"
+    },
+    {
+      "path": "lesson-11-12-教师速用说明.md",
+      "sha256": "304ee0c0f5f258fdfdfc09918737f1ff32a6fe87ac6e6dccfc24e4b5ca600957"
+    },
+    {
+      "path": "README.md",
+      "sha256": "4562df605702264590db2278a4c5f9b94c04566ad6024cb0676bb9de15eabe62"
+    },
+    {
+      "path": "assets/bus.png",
+      "sha256": "801717b1bae97a62a80ddc0d81c367c6be58d7762169c1cb5b1530bcd5090292"
+    },
+    {
+      "path": "assets/story-lesson-11.png",
+      "sha256": "46ce5c8e276a606108ea4b7052e17333033965f633c4dd026fe5d9906f6f30be"
+    },
+    {
+      "path": "assets/story-lesson-12.png",
+      "sha256": "8c923a1c88db1e842c2a5d9d7774c4c7300a91a70bd71a20a76a63b344ba1c74"
+    }
+  ],
+  "stage": "design_draft; preview technical verified"
+}

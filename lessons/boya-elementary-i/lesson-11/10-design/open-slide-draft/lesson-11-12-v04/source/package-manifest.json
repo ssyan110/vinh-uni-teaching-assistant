@@ -1,0 +1,33 @@
+{
+  "version": "v04",
+  "pages": 21,
+  "activities": 15,
+  "pdf_pages": 7,
+  "reading_messages": 9,
+  "files": [
+    {
+      "path": "lesson-11-12-实体课.html",
+      "sha256": "8d71832d0df10a6e9d50bc52e87a62dd1404ad6419a97e32dcb5b45514aa26de"
+    },
+    {
+      "path": "lesson-11-12-教师朗读稿.pdf",
+      "sha256": "d7477a9008dc1f5a72434b2f6eba49a1140cfc679d0035b1aad5ea960c2c3b70"
+    },
+    {
+      "path": "lesson-11-12-教师速用说明.md",
+      "sha256": "552e0b224babe58befaf46fd884dc17fca7f6376bdbcf771496085bc2bb52db8"
+    },
+    {
+      "path": "README.md",
+      "sha256": "3c401deb47a27d1eb1044567da000e6760216a6de14f525b97291a194be82e28"
+    },
+    {
+      "path": "assets/story-lesson-11.png",
+      "sha256": "46ce5c8e276a606108ea4b7052e17333033965f633c4dd026fe5d9906f6f30be"
+    },
+    {
+      "path": "assets/story-lesson-12.png",
+      "sha256": "8c923a1c88db1e842c2a5d9d7774c4c7300a91a70bd71a20a76a63b344ba1c74"
+    }
+  ]
+}

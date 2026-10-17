@@ -2,9 +2,22 @@
   "workspace": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06",
   "html_decks": [
     {
+      "id": "boya-elementary-i-lesson-11-12",
+      "lesson_key": "boya-elementary-i:lesson-11",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11",
+        "boya-elementary-i:lesson-12"
+      ],
+      "title": "初级起步篇｜第11—12课｜天气与日常活动（21页）",
+      "source": "lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12-v09-readable/lesson-11-12-实体课.html",
+      "created_at": "2026-10-11T13:23:54+07:00",
+      "updated_at": "2026-10-15",
+      "content_version": "v09-unified-icons-projector-readable"
+    },
+    {
       "id": "boya-elementary-i-lesson-09-10",
       "lesson_key": "boya-elementary-i:lesson-09-10",
-      "title": "初级起步篇｜第 9–10 课（46 页）",
+      "title": "初级起步篇｜第 9–10 课（51 页）",
       "source": "lessons/boya-elementary-i/lesson-09-10/10-design/openslide-image-first-20261006/lesson-09-10.html",
       "created_at": "2026-10-11T06:07:09.714340+00:00"
     }

@@ -1,0 +1,58 @@
+{
+  "state": "technical_verified; classroom acceptance pending",
+  "page_count": 14,
+  "complete_activity_count": 12,
+  "comic_panel_counts": [
+    6,
+    6
+  ],
+  "style": "existing L9–10 cover DOM, route card family, palette and font roles",
+  "display": "short bullet points; detailed explanation in teacher guide",
+  "checks": {
+    "all_page_render": true,
+    "content_and_footer_overflow": false,
+    "approved_activity_routes_retained": true,
+    "forward_backward_navigation": 14,
+    "direct_thumbnail_selection": 7,
+    "reduced_motion": true,
+    "local_images_decoded": true,
+    "reference_cover_geometry_equal": true,
+    "regression_tests_passed": 5,
+    "zip_integrity": true
+  },
+  "human_checks_not_done": [
+    "teacher live reading",
+    "classroom comprehension",
+    "actual 200-minute rehearsal"
+  ],
+  "files": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12-single-activity-v01/lesson-11-12-实体课.html",
+      "sha256": "a397865622489dc73414a5d5ce5bd3e07a8eb1518ed6bf3c629e7358a01bbd9f"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12-single-activity-v01/lesson-11-12-教师速用说明.md",
+      "sha256": "643c8e8a834f5f23702b3992fdc9dfe93bbe75bca17a9bac1b490c0122cdf9a1"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12-single-activity-v01/README.md",
+      "sha256": "9ec1741383cbdb415d46c56a0ce737054fef0a23fd5847d82938e38b25fca25c"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12-single-activity-v01/assets/bus.png",
+      "sha256": "801717b1bae97a62a80ddc0d81c367c6be58d7762169c1cb5b1530bcd5090292"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12-single-activity-v01/assets/story-lesson-11.png",
+      "sha256": "46ce5c8e276a606108ea4b7052e17333033965f633c4dd026fe5d9906f6f30be"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12-single-activity-v01/assets/story-lesson-12.png",
+      "sha256": "8c923a1c88db1e842c2a5d9d7774c4c7300a91a70bd71a20a76a63b344ba1c74"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12-single-activity-v01/lesson-11-12-教材包.zip",
+      "sha256": "fa8dc7d149c173436b06b18deb0d0b9c1c6992b97ad37ce91239256a93b3e422"
+    }
+  ]
+}

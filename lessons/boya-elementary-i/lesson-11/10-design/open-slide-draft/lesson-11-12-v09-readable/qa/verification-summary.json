@@ -1,0 +1,16 @@
+{
+  "status": "technical_pass",
+  "pages": 21,
+  "redesigned_table": "seven days, five columns, all source values matched",
+  "weather_icons": "new image_gen sprite",
+  "teacher_pdf_pages": 6,
+  "teacher_messages": 8,
+  "homepage_checks": 47,
+  "page_geometry": "passed",
+  "all_images": "loaded",
+  "zip": "verified with nine resource hashes",
+  "classroom_trial": "not performed",
+  "html_sha256": "904f0a2cd7ec1e54c5ca4589b0086bfb3f5fd9210bde4478e8be8dad395d6a13",
+  "pdf_sha256": "02ab49b84af77e65754ee1e7ad205f94086afa8da20e3463dc04ad8e08c12b2f",
+  "zip_sha256": "d98f8f8c0001c3ba6bfbc3854404374012530ceff0cf1be882bdc4b9a95c3e44"
+}

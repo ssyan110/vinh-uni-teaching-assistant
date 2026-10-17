@@ -1,4 +1,4 @@
-"""Read-only, version-bound audio repair gate for the existing W04 exam.
+"""Read-only assessment audio gates; legacy repair and current review are separate.
 
 This permits isolated technical review output only, never lesson promotion.
 """
@@ -6,6 +6,7 @@ from pathlib import Path
 import hashlib
 import json
 import re
+from datetime import datetime
 
 EXAM_ID = "W04-L01L10-20261006"
 DIRECTORY = "lessons/boya-elementary-i/lesson-09-10/10-design/assessment/w04-l01-l10"
@@ -23,6 +24,8 @@ def digest(path):
 
 
 def safe_path(root, value):
+    if not str(value).strip():
+        raise ValueError("empty path")
     path = Path(value)
     if ".." in path.parts or str(value).startswith("~"):
         raise ValueError("unsafe path")
@@ -40,6 +43,7 @@ def safe_path(root, value):
 
 
 def check_assessment_audio(root, exam_id, output_dir, offering_id=None, lesson_key=None):
+    """Legacy W04-L01L10 intake only; never selects the current exam."""
     blockers, hashes = [], {}
     result = {"purpose": "assessment-audio", "exam_id": exam_id,
               "status": "blocked", "output_dir": output_dir, "blockers": blockers}
@@ -99,6 +103,101 @@ def check_assessment_audio(root, exam_id, output_dir, offering_id=None, lesson_k
         result.update(identity, lesson_keys=keys, input_hashes=hashes,
                       output_dir=str(target), artifact_state="design_draft", human_audio_acceptance=False)
     except (ValueError, KeyError, OSError, TypeError) as error:
+        blockers.append(str(error))
+    result["status"] = "blocked" if blockers else "ready"
+    return result
+
+
+def check_current_assessment_audio(root, exam_id, output_dir, offering_id=None, lesson_key=None):
+    """Validate registered, approved inputs for isolated technical audio review.
+
+    Does not authorize synthesis, source edits, publication or human acceptance.
+    External publisher originals are not opened; their verification remains separate.
+    """
+    blockers = []
+    result = dict(purpose="assessment-audio-current", exam_id=exam_id, status="blocked",
+                  blockers=blockers, human_audio_acceptance=False,
+                  source_audio_verified=False, artifact_state="design_draft")
+    try:
+        root = Path(root).resolve()
+        if root == Path(root.anchor) or root == Path.home() or not root.is_dir():
+            raise ValueError("project root must be a specific existing workspace")
+        if lesson_key is not None:
+            raise ValueError("lesson_key is not an exam identity")
+        management = json.loads(safe_path(root, "lessons/boya-elementary-i/assessment-management.json").read_text())
+        exam_id = exam_id or management.get("current_review_exam_id")
+        result["exam_id"] = exam_id
+        exams = [x for x in management["exams"] if x["exam_id"] == exam_id]
+        if not exam_id or len(exams) != 1:
+            raise ValueError("exam must have a unique registered identity")
+        exam = exams[0]
+        if any(word in exam.get("status", "").upper() for word in ("HISTORICAL", "SUPERSEDED")):
+            raise ValueError("historical exam requires the explicit legacy repair route")
+        if offering_id is not None and offering_id != management["offering_id"]:
+            raise ValueError("offering mismatch")
+        base = safe_path(root, exam["directory"])
+        allowed = (root / "lessons" / management["textbook_id"],
+                   root / "course" / "offerings" / management["offering_id"])
+        if not any(base.is_relative_to(p) and base != p for p in allowed):
+            raise ValueError("registered exam directory is outside its assessment scope")
+        if any(p in base.parts for p in ("20-approved", "30-qa", "40-release", "archive")):
+            raise ValueError("protected exam directory")
+        if not output_dir:
+            raise ValueError("isolated audio review output directory is required")
+        target = safe_path(root, output_dir)
+        if target.parent != base or not re.fullmatch(r"audio-review-[a-z0-9-]+", target.name):
+            raise ValueError("output must be a direct audio-review-* child of the registered exam directory")
+        approval = json.loads(safe_path(root, base / "content-approval.json").read_text())
+        if (approval.get("assessment_id") != exam_id or not approval.get("approved_by")
+                or not approval.get("user_evidence") or not approval.get("scope")):
+            raise ValueError("missing independent assessment content approval evidence")
+        if datetime.fromisoformat(approval["approved_at"].replace("Z", "+00:00")).utcoffset() is None:
+            raise ValueError("approval timestamp must include timezone")
+        hashes = {}
+        for name in ("items.json", "audio-manifest.json", "student.md", "teacher.md"):
+            expected = approval["hashes"].get(name, "")
+            if not re.fullmatch(r"[0-9a-f]{64}", expected):
+                raise ValueError(f"missing approval input hash: {name}")
+            hashes[name] = digest(safe_path(root, base / name))
+            if hashes[name] != expected:
+                blockers.append(f"approved assessment input changed: {name}")
+        items = json.loads(safe_path(root, base / "items.json").read_text())
+        audio = json.loads(safe_path(root, base / "audio-manifest.json").read_text())
+        clips = audio if isinstance(audio, list) else audio["clips"]
+        if (items.get("assessment_id") != exam_id or items.get("offering_id") != management["offering_id"]
+                or items.get("cohort") != management["cohort"]):
+            raise ValueError("assessment input identity mismatch")
+        keys = exam["lesson_keys"]
+        if not keys or items.get("lesson_keys") != keys or len(set(keys)) != len(keys):
+            raise ValueError("assessment lesson scope mismatch")
+        if any(not k.startswith(management["textbook_id"] + ":lesson-") for k in keys):
+            raise ValueError("assessment textbook mismatch")
+        questions = items["items"]
+        numbers = [q["number"] for q in questions]
+        if len(questions) != exam["question_count"] or sorted(numbers) != list(range(1, len(questions) + 1)):
+            raise ValueError("question identity/count mismatch")
+        audio_ids = [c["audio_id"] for c in clips]
+        if len(clips) != exam["audio_count"] or len(set(audio_ids)) != len(audio_ids):
+            raise ValueError("audio identity/count mismatch")
+        mapped = []
+        for clip in clips:
+            path = safe_path(root, base / clip["file"])
+            if path.parent != base / "audio" or digest(path) != clip["sha256"]:
+                raise ValueError("audio hash/path mismatch")
+            if not clip.get("transcript") and not clip.get("source_text"):
+                raise ValueError("audio transcript is missing")
+            linked = [q for q in questions if q["audio_id"] == clip["audio_id"]]
+            expected_ids = [q.get("id", q["number"]) for q in linked]
+            if not linked or clip["question_ids"] != expected_ids:
+                raise ValueError("audio/question mapping mismatch")
+            mapped.extend(q["number"] for q in linked)
+        if sorted(mapped) != sorted(numbers) or any(q["lesson_key"] not in keys for q in questions):
+            raise ValueError("question coverage/scope mismatch")
+        result.update(output_dir=str(target), input_hashes=hashes, lesson_keys=keys,
+                      offering_id=management["offering_id"], audio_count=len(clips),
+                      question_count=len(questions), student_ready=False,
+                      pending=exam.get("pending", []))
+    except (ValueError, KeyError, OSError, TypeError, AttributeError) as error:
         blockers.append(str(error))
     result["status"] = "blocked" if blockers else "ready"
     return result

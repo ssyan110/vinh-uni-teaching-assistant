@@ -1,0 +1,22 @@
+### Result
+{"forward":[{"index":0,"active":1,"images":true,"title":"说天气，问清楚，讲故事"},{"index":1,"active":1,"images":true,"title":"今天我们会做什么"},{"index":2,"active":1,"images":true,"title":"听天气，告诉同伴"},{"index":3,"active":1,"images":true,"title":"选出门安排"},{"index":4,"active":1,"images":true,"title":"问季节，介绍同伴"},{"index":5,"active":1,"images":true,"title":"选城市，说建议"},{"index":6,"active":1,"images":true,"title":"看图说故事：晴天出门"},{"index":7,"active":1,"images":true,"title":"发布活动通知"},{"index":8,"active":1,"images":true,"title":"听消息，说状态"},{"index":9,"active":1,"images":true,"title":"平时与现在"},{"index":10,"active":1,"images":true,"title":"打电话，问清楚"},{"index":11,"active":1,"images":true,"title":"看图说故事：我还在等车"},{"index":12,"active":1,"images":true,"title":"说课表，核对时间"},{"index":13,"active":1,"images":true,"title":"听新消息，转述"}],"backward_pages":14,"thumbnail_page":7,"reduced_motion_animations":0,"first_last":true}
+### Ran Playwright code
+```js
+await (async(page)=>{
+ await page.getByRole('link',{name:'初级起步篇｜第 11–12 课（14 页）',exact:true}).click();
+ await page.getByRole('button',{name:'Present',exact:true}).click();
+ async function read(i){let f;for(let k=0;k<40;k++){f=page.frames().find(f=>f.url().includes('os-page='+i+'&os-static=0'));if(f)break;await page.waitForTimeout(150);}if(!f)throw new Error('frame missing page '+i);await f.waitForFunction(()=>window.__classroomDeck,{timeout:6000});await f.waitForTimeout(400);return await f.evaluate(()=>({index:window.__classroomDeck.index(),active:document.querySelectorAll('.os-page:not([hidden])').length,images:[...document.querySelector('.os-page:not([hidden])').querySelectorAll('img')].every(i=>i.complete&&i.naturalWidth>0),title:document.querySelector('.os-page:not([hidden]) h1')?.textContent}));}
+ const states=[await read(0)];for(let i=1;i<14;i++){await page.keyboard.press('ArrowRight');const s=await read(i);if(s.index!==i||s.active!==1||!s.images)throw new Error('page mismatch '+i);states.push(s);}
+ await page.keyboard.press('ArrowRight');if((await read(13)).index!==13)throw new Error('last boundary');
+ for(let i=12;i>=0;i--){await page.keyboard.press('ArrowLeft');if((await read(i)).index!==i)throw new Error('back mismatch');}
+ await page.emulateMedia({reducedMotion:'reduce'});await page.keyboard.press('ArrowRight');await read(1);const f=page.frames().find(f=>f.url().includes('os-page=1&os-static=0'));const motion=await f.evaluate(()=>document.getAnimations().length);if(motion)throw new Error('motion count '+motion);
+ await page.keyboard.press('Escape');await page.getByRole('button',{name:'Go to page 7',exact:true}).click();const chosen=await read(6);if(chosen.index!==6)throw new Error('thumbnail');
+ return {forward:states,backward_pages:14,thumbnail_page:7,reduced_motion_animations:motion,first_last:true};
+})(page);
+```
+### Page
+- Page URL: http://127.0.0.1:5173/s/boya-elementary-i-lesson-11-12?p=7
+- Page Title: 初级起步篇｜第 11–12 课（14 页）
+- Console: 1 errors, 1 warnings
+### Events
+- New console entries: .playwright-cli/console-2026-10-14T09-27-01-176Z.log#L19

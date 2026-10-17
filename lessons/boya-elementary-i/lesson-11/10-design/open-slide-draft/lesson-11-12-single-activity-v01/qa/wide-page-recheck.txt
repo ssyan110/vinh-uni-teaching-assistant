@@ -1,0 +1,22 @@
+### Result
+[{"page":4,"title":"选出门安排","issues":[],"imgs":[],"text":"第11课 · 实体课\n活动2｜选出门安排\n选出门安排\n模拟天气：\n上午 · 24度\n晴天，风不大\n下午 · 28度\n下雨\n晚上 · 22度\n阴天，不下雨\n两人轮流：选时段与活动 → 说理由 → 问一题 → 商定安排\n可选：公园／逛街／电影／自己的活动\n基础 HSK 1–3\n说清何时、做什么、为什么\n问：下雨的时候，还去吗？\n挑战 HSK 4–6\n提出不同选择，说明各自看重什么\n商定安排；说清什么天气会让你改变选择\n完成：两人各说一份共同安排\n博雅汉语 · 初级口语活动\n教材 P80–85 · 04 / 14"},{"page":6,"title":"选城市，说建议","issues":[],"imgs":[],"text":"第11课 · 实体课\n活动4｜选城市，说建议\n选城市，说建议\n12月：模拟资料\n北京\n冬天\n下雪，零下5度\n曼谷\n12月\n晴天，32度\n悉尼\n夏天\n晴天，25度\n两人轮流：选地点 → 介绍天气与活动 → 说理由 → 听者问一题\n基础 HSK 1–3\n用程度表达说明自己的感觉\n太……了／不太……／最喜欢\n挑战 HSK 4–6\n比较两地，给不同喜好的人建议\n指出天气资料不能告诉你什么\n完成：每人一条有天气依据的建议\n博雅汉语 · 初级口语活动\n教材 P81–87 · 06 / 14"}]
+### Ran Playwright code
+```js
+await (async (page) => {
+  await page.goto('http://127.0.0.1:8768/lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12-single-activity-v01/lesson-11-12-实体课.html'); const report = [];
+  for (const i of [3,5]) {
+    await page.evaluate(i => window.__classroomDeck.go(i),i);
+    await page.waitForTimeout(900);
+    report.push(await page.evaluate(() => {
+      const s=document.querySelector('.os-page:not([hidden])');
+      const done=s.querySelector('.done');
+      const floor=done?done.getBoundingClientRect().top:1030;
+      const issues=[...s.querySelectorAll('.material p,.material ul,.data-cards,.level,.support,.story-steps,.route article')].filter(e=>e.getBoundingClientRect().bottom>floor).map(e=>({text:e.textContent.slice(0,50),bottom:e.getBoundingClientRect().bottom,floor}));
+      const imgs=[...s.querySelectorAll('img')].map(e=>({src:e.getAttribute('src'),loaded:e.complete&&e.naturalWidth>0}));
+      return {page:window.__classroomDeck.index()+1,title:s.querySelector('h1')?.textContent,issues,imgs,text:s.innerText};
+    }));
+    await page.screenshot({path:'/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12-single-activity-v01/qa/page-'+String(i+1).padStart(2,'0')+'.png'});
+  }
+  return report;
+})(page);
+```

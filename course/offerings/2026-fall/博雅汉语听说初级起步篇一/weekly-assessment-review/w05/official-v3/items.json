@@ -1,0 +1,602 @@
+{
+  "status": "official_audio_v3_draft",
+  "cohort": "BOYA-LS-E1-Y1S1-2026F",
+  "offering_id": "2026-fall",
+  "week": "w05",
+  "exam_id": "W05-L11L12-20261015",
+  "version": 3,
+  "lesson_keys": [
+    "boya-elementary-i:lesson-11",
+    "boya-elementary-i:lesson-12"
+  ],
+  "items": [
+    {
+      "id": "W05-OF3-01",
+      "question_id": "Y1-OF3-001",
+      "type": "mc",
+      "audio_id": "BOOK-11-9",
+      "prompt": "明天天气怎么样？",
+      "options": [
+        "有雨",
+        "晴天",
+        "不热",
+        "下雪"
+      ],
+      "answer_index": 1,
+      "answer": "B",
+      "points": 4,
+      "focus": "天气",
+      "evidence": "课本第11–12课原题；答案按课本对话录音核对。",
+      "source": "textbook original audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "version": 3
+    },
+    {
+      "id": "W05-OF3-02",
+      "question_id": "Y1-OF3-002",
+      "type": "mc",
+      "audio_id": "BOOK-11-9",
+      "prompt": "明天最高多少度？",
+      "options": [
+        "20度",
+        "30度",
+        "32度",
+        "12度"
+      ],
+      "answer_index": 2,
+      "answer": "C",
+      "points": 4,
+      "focus": "温度",
+      "evidence": "课本第11–12课原题；答案按课本对话录音核对。",
+      "source": "textbook original audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "version": 3
+    },
+    {
+      "id": "W05-OF3-03",
+      "question_id": "Y1-OF3-003",
+      "type": "mc",
+      "audio_id": "BOOK-11-10",
+      "prompt": "男的圣诞节去哪儿玩儿？",
+      "options": [
+        "泰国",
+        "澳大利亚",
+        "北京",
+        "越南"
+      ],
+      "answer_index": 0,
+      "answer": "A",
+      "points": 4,
+      "focus": "出行地点",
+      "evidence": "课本第11–12课原题；答案按课本对话录音核对。",
+      "source": "textbook original audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "version": 3
+    },
+    {
+      "id": "W05-OF3-04",
+      "question_id": "Y1-OF3-004",
+      "type": "mc",
+      "audio_id": "BOOK-11-10",
+      "prompt": "澳大利亚现在是什么季节？",
+      "options": [
+        "冬天",
+        "夏天",
+        "雨季",
+        "春天"
+      ],
+      "answer_index": 1,
+      "answer": "B",
+      "points": 4,
+      "focus": "季节",
+      "evidence": "课本第11–12课原题；答案按课本对话录音核对。",
+      "source": "textbook original audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "version": 3
+    },
+    {
+      "id": "W05-OF3-05",
+      "question_id": "Y1-OF3-005",
+      "type": "mc",
+      "audio_id": "BOOK-11-10",
+      "prompt": "女的喜欢什么天气？",
+      "options": [
+        "冷天",
+        "热天",
+        "下雨天",
+        "刮风天"
+      ],
+      "answer_index": 1,
+      "answer": "B",
+      "points": 4,
+      "focus": "天气偏好",
+      "evidence": "课本第11–12课原题；答案按课本对话录音核对。",
+      "source": "textbook original audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "version": 3
+    },
+    {
+      "id": "W05-OF3-06",
+      "question_id": "Y1-OF3-006",
+      "type": "mc",
+      "audio_id": "BOOK-11-11",
+      "prompt": "星期几有雨？",
+      "options": [
+        "星期一",
+        "星期二",
+        "星期三",
+        "星期四"
+      ],
+      "answer_index": 2,
+      "answer": "C",
+      "points": 4,
+      "focus": "天气预报",
+      "evidence": "课本第11–12课原题；答案按课本对话录音核对。",
+      "source": "textbook original audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "version": 3
+    },
+    {
+      "id": "W05-OF3-07",
+      "question_id": "Y1-OF3-007",
+      "type": "mc",
+      "audio_id": "BOOK-11-11",
+      "prompt": "哪天有大风？",
+      "options": [
+        "今天",
+        "明天",
+        "星期三",
+        "星期四"
+      ],
+      "answer_index": 1,
+      "answer": "B",
+      "points": 4,
+      "focus": "天气预报",
+      "evidence": "课本第11–12课原题；答案按课本对话录音核对。",
+      "source": "textbook original audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "version": 3
+    },
+    {
+      "id": "W05-OF3-08",
+      "question_id": "Y1-OF3-008",
+      "type": "mc",
+      "audio_id": "BOOK-11-11",
+      "prompt": "他们哪天去长城？",
+      "options": [
+        "星期二",
+        "星期三",
+        "星期四",
+        "星期五"
+      ],
+      "answer_index": 2,
+      "answer": "C",
+      "points": 4,
+      "focus": "安排活动",
+      "evidence": "课本第11–12课原题；答案按课本对话录音核对。",
+      "source": "textbook original audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "version": 3
+    },
+    {
+      "id": "W05-OF3-09",
+      "question_id": "Y1-OF3-009",
+      "type": "mc",
+      "audio_id": "BOOK-12-10",
+      "prompt": "大卫在哪儿给安娜打电话呢？",
+      "options": [
+        "教室",
+        "车站",
+        "公共汽车上",
+        "宿舍"
+      ],
+      "answer_index": 1,
+      "answer": "B",
+      "points": 4,
+      "focus": "地点",
+      "evidence": "出版社《听力文本及参考答案》PDF第50–51页（印刷46–47页）：大卫正在等公共汽车，安娜在教室；原题答案B。",
+      "source": "textbook original audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "version": 3
+    },
+    {
+      "id": "W05-OF3-10",
+      "question_id": "Y1-OF3-010",
+      "type": "mc",
+      "audio_id": "BOOK-12-10",
+      "prompt": "大卫打电话要干什么？",
+      "options": [
+        "告诉老师自己晚到一会儿",
+        "告诉安娜在哪儿上汉语课",
+        "告诉安娜在公共汽车站等",
+        "请安娜替他请假"
+      ],
+      "answer_index": 0,
+      "answer": "A",
+      "points": 4,
+      "focus": "电话目的",
+      "evidence": "课本第11–12课原题；答案按课本对话录音核对。",
+      "source": "textbook original audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "version": 3
+    },
+    {
+      "id": "W05-OF3-11",
+      "question_id": "Y1-OF3-011",
+      "type": "mc",
+      "audio_id": "BOOK-12-11",
+      "prompt": "大卫在干什么呢？",
+      "options": [
+        "看哪天没有课",
+        "上网看天气预报",
+        "上网看西山的介绍",
+        "在家做作业"
+      ],
+      "answer_index": 2,
+      "answer": "C",
+      "points": 4,
+      "focus": "正在进行的动作",
+      "evidence": "课本第11–12课原题；答案按课本对话录音核对。",
+      "source": "textbook original audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "version": 3
+    },
+    {
+      "id": "W05-OF3-12",
+      "question_id": "Y1-OF3-012",
+      "type": "mc",
+      "audio_id": "BOOK-12-11",
+      "prompt": "他们哪天去西山玩儿？",
+      "options": [
+        "星期五",
+        "星期六",
+        "星期天",
+        "星期一"
+      ],
+      "answer_index": 2,
+      "answer": "C",
+      "points": 4,
+      "focus": "活动安排",
+      "evidence": "课本第11–12课原题；答案按课本对话录音核对。",
+      "source": "textbook original audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "version": 3
+    },
+    {
+      "id": "W05-OF3-13",
+      "question_id": "Y1-OF3-013",
+      "type": "mc",
+      "audio_id": "BOOK-12-12",
+      "prompt": "安娜今天干什么？",
+      "options": [
+        "去学校上课",
+        "在宿舍做作业",
+        "下午上电影课",
+        "去车站接大卫"
+      ],
+      "answer_index": 1,
+      "answer": "B",
+      "points": 4,
+      "focus": "日常活动",
+      "evidence": "课本第11–12课原题；答案按课本对话录音核对。",
+      "source": "textbook original audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "version": 3
+    },
+    {
+      "id": "W05-OF3-14",
+      "question_id": "Y1-OF3-014",
+      "type": "mc",
+      "audio_id": "BOOK-12-12",
+      "prompt": "安娜什么时候开始上电影课？",
+      "options": [
+        "下个星期二开始",
+        "从今天下午开始",
+        "从这个星期二开始",
+        "下个星期三开始"
+      ],
+      "answer_index": 0,
+      "answer": "A",
+      "points": 4,
+      "focus": "时间",
+      "evidence": "课本第11–12课原题；答案按课本对话录音核对。",
+      "source": "textbook original audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "version": 3
+    },
+    {
+      "id": "W05-OF3-15",
+      "question_id": "Y1-OF3-015",
+      "type": "mc",
+      "audio_id": "TOCFL-A4-Q24",
+      "prompt": "现在的天气怎么样？",
+      "options": [
+        "很热，让人不舒服",
+        "很冷，而且下雪",
+        "凉快，让人觉得舒服",
+        "风很大，正在下雨"
+      ],
+      "answer_index": 2,
+      "answer": "C",
+      "points": 4,
+      "focus": "天气感受",
+      "evidence": "女生回答凉快、舒服。",
+      "source": "TOCFL official audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "version": 3,
+      "source_question_id": "TOCFL-A4-Q24"
+    },
+    {
+      "id": "W05-OF3-16",
+      "question_id": "Y1-OF3-016",
+      "type": "mc",
+      "audio_id": "TOCFL-A4-Q24",
+      "prompt": "女的现在想做什么？",
+      "options": [
+        "出去走走",
+        "回家睡觉",
+        "留在屋里看书",
+        "去买一件大衣"
+      ],
+      "answer_index": 0,
+      "answer": "A",
+      "points": 4,
+      "focus": "按天气选择活动",
+      "evidence": "天气使她想外出散步。",
+      "source": "TOCFL official audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11",
+        "boya-elementary-i:lesson-12"
+      ],
+      "version": 3,
+      "source_question_id": "TOCFL-A4-Q24"
+    },
+    {
+      "id": "W05-OF3-17",
+      "question_id": "Y1-OF3-017",
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q35",
+      "prompt": "对话里提到的三个季节，哪一项说对了？",
+      "options": [
+        "冬天热，夏天冷，春天没雨",
+        "冬天冷，夏天热，春天常下雨",
+        "冬天常下雨，夏天冷，春天热",
+        "冬天不冷，夏天不热，春天没雨"
+      ],
+      "answer_index": 1,
+      "answer": "B",
+      "points": 4,
+      "focus": "整合季节与天气",
+      "evidence": "整合女生的两次回答。",
+      "source": "TOCFL official audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "version": 3,
+      "source_question_id": "TOCFL-A5-Q35"
+    },
+    {
+      "id": "W05-OF3-18",
+      "question_id": "Y1-OF3-018",
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q35",
+      "prompt": "这里的夏天怎么样？",
+      "options": [
+        "太热了",
+        "经常下雪",
+        "很冷",
+        "每天都有大风"
+      ],
+      "answer_index": 0,
+      "answer": "A",
+      "points": 4,
+      "focus": "季节细节",
+      "evidence": "女生将夏天描述为太热。",
+      "source": "TOCFL official audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "version": 3,
+      "source_question_id": "TOCFL-A5-Q35"
+    },
+    {
+      "id": "W05-OF3-19",
+      "question_id": "Y1-OF3-019",
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q49",
+      "prompt": "男的先用什么理由提出不出门？",
+      "options": [
+        "现在太晚了",
+        "明天要考试",
+        "商店已经关门了",
+        "今天天气太热了"
+      ],
+      "answer_index": 3,
+      "answer": "D",
+      "points": 4,
+      "focus": "辨识明确理由",
+      "evidence": "开头男生直接提到天气炎热。",
+      "source": "TOCFL official audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11"
+      ],
+      "version": 3,
+      "source_question_id": "TOCFL-A5-Q49"
+    },
+    {
+      "id": "W05-OF3-20",
+      "question_id": "Y1-OF3-020",
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q21",
+      "prompt": "现在是什么时间？",
+      "options": [
+        "上午九点",
+        "晚上九点",
+        "下午三点",
+        "晚上十点"
+      ],
+      "answer_index": 1,
+      "answer": "B",
+      "points": 4,
+      "focus": "听辨时间",
+      "evidence": "官方文本为晚上九点；原音ASR误写酒店，按来源文本校正。",
+      "source": "TOCFL official audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "version": 3,
+      "source_question_id": "TOCFL-A5-Q21"
+    },
+    {
+      "id": "W05-OF3-21",
+      "question_id": "Y1-OF3-021",
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q23",
+      "prompt": "今天没来上班的人在哪里？",
+      "options": [
+        "在家里",
+        "在车站",
+        "在办公室",
+        "在学校"
+      ],
+      "answer_index": 0,
+      "answer": "A",
+      "points": 4,
+      "focus": "地点与状态",
+      "evidence": "女生问没来上班的原因，男生明确说明人在家。",
+      "source": "TOCFL official audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "version": 3,
+      "source_question_id": "TOCFL-A5-Q23"
+    },
+    {
+      "id": "W05-OF3-22",
+      "question_id": "Y1-OF3-022",
+      "type": "mc",
+      "audio_id": "TOCFL-A5-Q29",
+      "prompt": "时间改了以后，见面的地点怎么安排？",
+      "options": [
+        "改到电影院门口",
+        "改到学校门口",
+        "改到办公室",
+        "仍在书店门口"
+      ],
+      "answer_index": 3,
+      "answer": "D",
+      "points": 4,
+      "focus": "确认保留的安排",
+      "evidence": "双方重复确认仍在书店门口。",
+      "source": "TOCFL official audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "version": 3,
+      "source_question_id": "TOCFL-A5-Q29"
+    },
+    {
+      "id": "W05-OF3-23",
+      "question_id": "Y1-OF3-023",
+      "type": "mc",
+      "audio_id": "TOCFL-A4-Q29",
+      "prompt": "同学们更想上什么课？",
+      "options": [
+        "篮球课",
+        "游泳课",
+        "汉语课",
+        "音乐课"
+      ],
+      "answer_index": 1,
+      "answer": "B",
+      "points": 4,
+      "focus": "辨识希望调整的活动",
+      "evidence": "学生明确表示更想游泳。",
+      "source": "TOCFL official audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "version": 3,
+      "source_question_id": "TOCFL-A4-Q29"
+    },
+    {
+      "id": "W05-OF3-24",
+      "question_id": "Y1-OF3-024",
+      "type": "mc",
+      "audio_id": "TOCFL-A4-Q12",
+      "prompt": "女的放假的时候常常做什么？",
+      "options": [
+        "去爬山",
+        "去买衣服",
+        "去看电影",
+        "去游泳"
+      ],
+      "answer_index": 3,
+      "answer": "D",
+      "points": 4,
+      "focus": "经常进行的活动",
+      "evidence": "女生说放假时常常游泳。",
+      "source": "TOCFL official audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12"
+      ],
+      "version": 3,
+      "source_question_id": "TOCFL-A4-Q12"
+    },
+    {
+      "id": "W05-OF3-25",
+      "question_id": "Y1-OF3-025",
+      "type": "mc",
+      "audio_id": "TOCFL-A4-Q39",
+      "prompt": "这样的晚上，女的喜欢怎么安排活动？",
+      "options": [
+        "和同事在办公室开会",
+        "和家人在屋外看星星、聊天",
+        "一个人在家做作业",
+        "和朋友去买衣服"
+      ],
+      "answer_index": 1,
+      "answer": "B",
+      "points": 4,
+      "focus": "结合天气与活动",
+      "evidence": "女生说明与家人去屋外观星聊天。",
+      "source": "TOCFL official audio",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11",
+        "boya-elementary-i:lesson-12"
+      ],
+      "version": 3,
+      "source_question_id": "TOCFL-A4-Q39"
+    }
+  ]
+}

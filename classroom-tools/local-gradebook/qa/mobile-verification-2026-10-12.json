@@ -1,0 +1,16 @@
+{
+  "restart_state_unchanged": true,
+  "revision": 6,
+  "records": 155,
+  "pre_restart_backup": "gradebook-manual-20261012-085642-367333.json",
+  "mobile_url_host": "172.16.128.35:8765",
+  "real_grades_modified": false,
+  "browser_checks": {
+    "390px": true,
+    "320px": true,
+    "isolated_first_year_save_and_next": true
+  },
+  "physical_phone_test": "not_run",
+  "production_mobile_entry_browser_verified": true,
+  "console_limit": "Only existing favicon.ico 404; no application errors"
+}

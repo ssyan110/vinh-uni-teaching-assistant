@@ -75,6 +75,7 @@ function validateOnlineLayoutContract() {
 validateOnlineLayoutContract();
 
 function validateFaceOrderContract() {
+  if (FACE_ORDER.status !== 'legacy-reference' || FACE_ORDER.required_mode !== 'legacy-face') throw new Error('Face order must remain explicit legacy maintenance only');
   if (FACE_ORDER.contract_id !== 'boya-quasi-intermediate-i-face-to-face-v2') throw new Error('Unexpected face-to-face order contract');
   if (FACE_ORDER.visual?.slide_background !== '#FFFFFF' || C.slideBackground !== 'FFFFFF') throw new Error('Finalized PPTX canvas must be pure white');
   if (FACE_ORDER.pptTypography?.visible_min_pt !== 20) throw new Error('Face-to-face typography contract is incomplete');
@@ -90,7 +91,7 @@ function validateFaceOrderContract() {
   }
 }
 
-validateFaceOrderContract();
+// Historical face order is validated only when explicitly selected.
 
 const LESSON_NUMBER_LABELS = {
   1: '一', 2: '二', 3: '三', 4: '四', 5: '五', 6: '六',
@@ -644,14 +645,8 @@ function firstContextFile(lesson, index = 0) {
 
 function addAudio(slide, lesson, track) {
   if (!track) return;
-  const filePath = path.join(lesson.audioRoot, `${track}.mp3`);
-  addBox(slide, 10.42, 0.96, 1.58, 0.62, C.coral, C.coral);
-  addLatin(slide, track, 10.52, 1.1, 1.38, 0.26, { fontSize: 20, color: C.white, align: 'center', bold: true });
-  if (fs.existsSync(filePath)) {
-    slide.addMedia({ type: 'audio', path: filePath, x: 12.05, y: 1.0, w: 0.52, h: 0.52, objectName: `音频 ${track} 播放` });
-  } else {
-    notes(slide, `音频 ${track} 文件尚未找到；本页保留教材编号，待音频 QA。`);
-  }
+  require('./pptx_audio_reference').addAudioReference(slide, track);
+  lesson.audioReferences.add(String(track));
 }
 
 function addBullets(slide, items, x, y, w, h, options = {}) {
@@ -1618,6 +1613,7 @@ function assertFaceDeckOrder(texts, lesson) {
 }
 
 function buildOnline(lesson) {
+  lesson.audioReferences = new Set();
   ACTIVE_MODE = 'online';
   const content = onlineContentFor(lesson);
   assertVocabularyImageMapping(lesson);
@@ -1708,8 +1704,9 @@ function buildOnline(lesson) {
 
   const outPath = path.join(outputDir, `lesson-${String(lesson.number).padStart(2, '0')}-在线预习.pptx`);
   const sourceAudioTracks = audioTrackLabels(lesson);
-  const embeddedAudioTracks = [...new Set(texts.filter((section) => section.audio).map((section) => String(section.audio)))];
+  const referencedAudioTracks = [...lesson.audioReferences];
   return pptx.writeFile({ fileName: outPath }).then(() => {
+    execFileSync(PYTHON, [path.join(ROOT, 'scripts/verify_pptx_audio_policy.py'), outPath]);
     assertOnlineDeckContract(outPath, lesson, numberRef.value);
     const manifest = {
       schema_version: 1,
@@ -1747,8 +1744,9 @@ function buildOnline(lesson) {
       vocabulary_image_assets: [...regularEntries, ...properEntries].map((entry) => ({ word: entry.word, asset: lesson.wordToAsset.get(entry.word) ? path.relative(ROOT, lesson.wordToAsset.get(entry.word)) : null, status: lesson.wordToAsset.get(entry.word) ? 'candidate' : 'pending_asset' })),
       slide_count: numberRef.value,
       audio_tracks_available: sourceAudioTracks,
-      audio_tracks_embedded: embeddedAudioTracks,
-      audio_playback_policy: 'embedded_on_audio-summary-slides; PowerPoint playback QA remains pending for draft',
+      audio_tracks_embedded: [],
+      audio_tracks_referenced: referencedAudioTracks,
+      audio_playback_policy: 'external_playback_pending; plain non-clickable Audio n-n references only',
       output: { path: path.relative(ROOT, outPath), sha256: sha256(outPath), bytes: fs.statSync(outPath).size },
       generated_at: new Date().toISOString()
     };
@@ -1937,6 +1935,7 @@ function addFaceSectionFollowUpSlide(slide, lesson, number, section, sectionInde
 }
 
 function buildFace(lesson) {
+  lesson.audioReferences = new Set();
   ACTIVE_MODE = 'face';
   const outputDir = path.join(lesson.outputRoot, 'face-to-face');
   runDraftGate(lesson, lesson.outputRoot);
@@ -2040,6 +2039,7 @@ function buildFace(lesson) {
   const outPath = path.join(outputDir, `lesson-${String(lesson.number).padStart(2, '0')}-实体课.pptx`);
   const audioTracks = audioTrackLabels(lesson);
   return pptx.writeFile({ fileName: outPath }).then(() => {
+    execFileSync(PYTHON, [path.join(ROOT, 'scripts/verify_pptx_audio_policy.py'), outPath]);
     assertFaceDeckContract(outPath, lesson, numberRef.value);
     const manifest = {
       schema_version: 1,
@@ -2060,7 +2060,10 @@ function buildFace(lesson) {
       lesson_specific_image_assets: (lesson.imageManifest.assets || []).map((asset) => ({ asset_id: asset.asset_id, file: asset.file, category: asset.category, status: asset.status, can_enter_ppt: asset.can_enter_ppt })),
       image_approval_status: lesson.imageManifest.approval_boundary?.authorization_status || 'pending_review',
       slide_count: numberRef.value,
-      audio_tracks_embedded: audioTracks,
+      audio_tracks_embedded: [],
+      audio_tracks_available: audioTracks,
+      audio_tracks_referenced: [...lesson.audioReferences],
+      audio_playback_policy: 'external_playback_pending; plain non-clickable Audio n-n references only',
       output: { path: path.relative(ROOT, outPath), sha256: sha256(outPath), bytes: fs.statSync(outPath).size },
       generated_at: new Date().toISOString()
     };
@@ -2070,14 +2073,14 @@ function buildFace(lesson) {
 }
 
 async function main() {
+  const mode = require('./pptx_audio_reference').requestedMode(process.argv.slice(2), process.env);
+  if (mode === 'legacy-face') validateFaceOrderContract();
   const lessons = requestedLessonNumbers().map(readLesson);
-  const onlineOnly = process.env.BOYA_ONLINE_ONLY === '1';
-  const faceOnly = process.env.BOYA_FACE_ONLY === '1';
   const results = [];
   for (const lesson of lessons) {
     const result = { lesson: lesson.lessonKey };
-    if (!faceOnly) result.online = await buildOnline(lesson);
-    if (!onlineOnly) result.face = await buildFace(lesson);
+    if (mode === 'online') result.online = await buildOnline(lesson);
+    if (mode === 'legacy-face') result.face = await buildFace(lesson);
     results.push(result);
   }
   console.log(JSON.stringify(results, null, 2));

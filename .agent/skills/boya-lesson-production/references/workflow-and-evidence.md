@@ -2,6 +2,10 @@
 
 This reference preserves artifact-specific rules moved from the main skill during the Workflow V2 decomposition. Read the canonical workflow contract and requirements registry first. This document does not redefine lifecycle, identity, gate, authority, or release semantics.
 
+## 來源入口
+
+finalized-pptx 唯讀 intake 依 AGENTS 的優先例外直接抽取 package 與 SHA-256，不被 repo source／PBI gate 阻擋，不授予新修改批准。下方新作流程適用 repo 內容生產；HTML lifecycle 見 `docs/workflow/classroom-html-lifecycle.md`。
+
 ## 單一權威來源架構
 
 本專案使用固定的課次目錄：`00-source/` 保存來源，`10-design/` 保存設計與 draft，`20-approved/` 保存唯一權威版本，`30-qa/current/` 保存只讀 QA，`30-qa/archive/` 保存舊 QA，`40-release/` 保存從 authority 複製出的不可變交付包。
@@ -9,7 +13,7 @@ This reference preserves artifact-specific rules moved from the main skill durin
 - 每課只使用一份 `20-approved/lesson-manifest.json`；檔案連結、版本、SHA-256、QA 與 release 都以此為準。
 - 生成器只能寫入 `10-design/` draft，不能覆蓋 `20-approved/`；PowerPoint 人工修訂須經 Adam 明確批准後才成為 authority。
 - release builder 只能讀 `20-approved/`，不得在 `40-release/` 重新生成教案、活動卡或 PPTX；不使用 `share`、`share 2`、`share 3` 作為工作流程目錄。
-- 活動卡只交付 DOCX；活動卡不生成 PDF，也不建立「可编辑原稿」中間層。
+- 活動卡只交付 DOCX；可在 10-design 渲染內部 QA preview PDF，但不交付或放入 release，也不建立「可编辑原稿」中間層。
 - dashboard 必須由 `course/lesson-registry.json` 與目前 `lesson_key` 對應的 lesson manifest 共同產生；歷史材料統一放在 `archive/`，不進入新的生產流程。
 - 任何 generator 開始寫檔前都必須執行 `python3 scripts/production_gate.py`。教師手冊、配套、prototype、semester manual、authority PPTX 與 release 使用 authority gate；PPTX 草稿使用 `--purpose pptx --stage draft --lesson-key <textbook_id>:<lesson_id> --output-dir <draft-dir>`。草稿 gate 核對本課明確內容批准、身份、來源、邊界與輸出範圍，不授予 authority；完整 authority／release 仍有其他批准輸入及 rehearsal gate。
 
@@ -47,10 +51,10 @@ This reference preserves artifact-specific rules moved from the main skill durin
 2. 先由 Adam 與 AI 確認初步線上／實體分流，再完成教師手冊內容母版：課堂目標、最終任務、該課核准實體課時流程、教材區段、練習 coverage、音檔、分組活動、學生產出、教師提示、即時修補、答案政策、評量與備案。各教材第一課之後的新課必須保存這項邊界確認；已鎖定第一課不因本流程回改。
 3. 教師手冊審核與批准；教師手冊是本課內容的 source of truth，不能在 PPT 完成後才補寫。
 4. 依批准的教師手冊規格化預習卡、角色卡、資訊站卡、調查表、rubric、exit ticket 與其他補充活動材料；材料不能偷偷增加新教學決定。
-5. 教師手冊與配套確認後，完成逐項線上／實體 routing record，保存含日期、版本、雙方確認、handoff evidence 的記錄；後續課次的 draft 可在來源包與邊界確認後先建立，但完整逐頁 authority 規格仍以教師手冊與配套為準。
+5. 教師手冊與配套確認後，完成逐項線上／實體 routing record，保存含日期、版本、雙方確認、handoff evidence 的記錄；後續課次的 draft 只有在來源包、邊界確認及具體逐頁內容批准通過後才可建立，但完整逐頁 authority 規格仍以教師手冊與配套為準。
 6. 依 `scripts/lesson_pptx_master_template.js` 與 `scripts/boya_design_system.json` 的共用 token 建立半固定課次骨架，再依教師手冊、學生配套與已批准邊界建立完整逐頁生產規格。每頁必填唯一 slide ID、deck、module ID、module instance、step、順序、section、學習目的、學生唯一動作、來源與原文、學生可見文字、教材頁碼、音檔、材料、學生產出、互動方式、speaker notes、`layout_id`、文字容量、圖片功能與授權、前後頁關係和驗收狀態。普通課次沿用共用 engine 與第一課 layout family，只按教材增減重複頁；字段未完成或學生文字未定稿，不得生成完整 PPTX。線上／實體分流必須先有該課 boundary confirmation record；補記錄不回改已批准 PPTX。
 7. 建立 Visual storyboard／版式映射。普通課次把每張 slide 映射到共用 design system 與已批准的第一課 layout family，並記錄文字上限、圖片功能、素材來源與授權。
-8. 所有完整 PPTX（包括普通課次）都必須先製作並審核 6 張視覺 prototype。草稿階段可以先審最長文字、含音頻頁、divider 與其他高風險映射，但不能用草稿審查取代 6 張 prototype gate。
+8. 線上／指定歷史原生 PPTX 完整生產先製作並審核 6 張視覺 prototype；實體 HTML 與靜態備份依實體課標準逐頁 QA，不新增六張風格 prototype。所有新視覺仍先通過具體逐頁內容批准。
 9. 圖片 worker 派發、素材納入、prototype 及 PPTX 生產均先依 canonical contract 通過本課 `content-approval` 檢查。未有具體逐頁內容的明確批准，停在文案审阅，不因 draft 例外而生成。批准後依所選格式與相應gate製作：實體課HTML按2026-10-07標準；線上或所需備份才生成原生PPTX，加入 speaker notes、來源對應的右上角不可點擊純文字 `Audio n-n` 與必要提示；不嵌入音檔，不加入播放按鈕或可播放音頻連結，標示不用紫色。課次 generator 不得自帶色票、字體或整體版式。準中級第 2、3 課使用 `scripts/build_l23_pptx_drafts.js`，只寫明確 `lesson_key` 的 `10-design/pptx-draft/<mode>/`。
 10. 保持學生主畫面不含內部備課資訊；所有投影片與學生材料必須能回溯到已批准的教師手冊。Draft PPTX 完成後，依 current storyboard 的 `source_refs` 與 canonical source 加入教材頁碼標記；不要在未記錄 `source_refs` 時猜測頁碼。
 

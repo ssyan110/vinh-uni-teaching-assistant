@@ -1,0 +1,153 @@
+{
+  "status": "passed",
+  "pages": 30,
+  "activities": 14,
+  "checks": [
+    {
+      "activity": "11-1",
+      "pages": [
+        3,
+        4
+      ],
+      "task_copy_exact": true,
+      "material_complete": true,
+      "both_levels": true
+    },
+    {
+      "activity": "11-2",
+      "pages": [
+        5,
+        6
+      ],
+      "task_copy_exact": true,
+      "material_complete": true,
+      "both_levels": true
+    },
+    {
+      "activity": "11-3",
+      "pages": [
+        7,
+        8
+      ],
+      "task_copy_exact": true,
+      "material_complete": true,
+      "both_levels": true
+    },
+    {
+      "activity": "11-4",
+      "pages": [
+        9,
+        10
+      ],
+      "task_copy_exact": true,
+      "material_complete": true,
+      "both_levels": true
+    },
+    {
+      "activity": "11-5",
+      "pages": [
+        11,
+        12
+      ],
+      "task_copy_exact": true,
+      "material_complete": true,
+      "both_levels": true
+    },
+    {
+      "activity": "11-6",
+      "pages": [
+        13,
+        14
+      ],
+      "task_copy_exact": true,
+      "material_complete": true,
+      "both_levels": true
+    },
+    {
+      "activity": "12-1",
+      "pages": [
+        15,
+        16
+      ],
+      "task_copy_exact": true,
+      "material_complete": true,
+      "both_levels": true
+    },
+    {
+      "activity": "12-2",
+      "pages": [
+        17,
+        18
+      ],
+      "task_copy_exact": true,
+      "material_complete": true,
+      "both_levels": true
+    },
+    {
+      "activity": "12-3",
+      "pages": [
+        19,
+        20
+      ],
+      "task_copy_exact": true,
+      "material_complete": true,
+      "both_levels": true
+    },
+    {
+      "activity": "12-4",
+      "pages": [
+        21,
+        22
+      ],
+      "task_copy_exact": true,
+      "material_complete": true,
+      "both_levels": true
+    },
+    {
+      "activity": "12-5",
+      "pages": [
+        23,
+        24
+      ],
+      "task_copy_exact": true,
+      "material_complete": true,
+      "both_levels": true
+    },
+    {
+      "activity": "12-6",
+      "pages": [
+        25,
+        26
+      ],
+      "task_copy_exact": true,
+      "material_complete": true,
+      "both_levels": true
+    },
+    {
+      "activity": "12-7",
+      "pages": [
+        27,
+        28
+      ],
+      "task_copy_exact": true,
+      "material_complete": true,
+      "both_levels": true
+    },
+    {
+      "activity": "12-8",
+      "pages": [
+        29,
+        30
+      ],
+      "task_copy_exact": true,
+      "material_complete": true,
+      "both_levels": true
+    }
+  ],
+  "teacher_material": "all full scripts, answers and helps in separate guide",
+  "semantic_layout_edits": [
+    "comic drafting captions converted to actual images/labels",
+    "table header duplicate listening annotation removed; task still names recording action",
+    "11-2 table replaced by three fully labelled time/weather/activity option cards"
+  ]
+}

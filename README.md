@@ -12,10 +12,11 @@ archive/                        # 历史快照，不作为生产输入
 
 ## 当前教材状态
 
+- `boya-elementary-i`：《初级起步篇 I》，2026-fall 一年级使用；具体班级、已教范围与课表从 offering 的 class_scope 和班级记录读取。
 - `boya-quasi-intermediate-i`：《准中级加速篇 I》，本学期使用；课次状态以 `boya-quasi-intermediate-i:<lesson_id>` 对应的 manifest 为准。
 - `boya-intermediate-i`：《中级冲刺篇 I》，完整保留并直接登记于 `2027-fall`，规划给三年级使用；其第一课身份是独立的 `boya-intermediate-i:lesson-01`。
 
-两本教材可以同时存在相同的课号。跨文件引用使用 `course/lesson-registry.json` 中的 `lesson_key`，不能只写 `lesson-01`。
+不同教材可以同时存在相同的课号。跨文件引用使用 `course/lesson-registry.json` 中的 `lesson_key`，不能只写 `lesson-01`。
 
 ## 路径规则
 
