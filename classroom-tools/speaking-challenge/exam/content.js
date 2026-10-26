@@ -271,73 +271,73 @@ window.ORAL_EXAM_BANK = {
     {
       "id": "B01",
       "title": "三个人见面",
-      "src": "assets/B01.webp",
+      "src": "assets/B01.webp?v=20261026-bubbles1",
       "alt": "三个人见面，按1到4的顺序讲述四张图片。"
     },
     {
       "id": "B02",
       "title": "谁的本子",
-      "src": "assets/B02.webp",
+      "src": "assets/B02.webp?v=20261026-bubbles1",
       "alt": "谁的本子，按1到4的顺序讲述四张图片。"
     },
     {
       "id": "B03",
       "title": "朋友在外边",
-      "src": "assets/B03.webp",
+      "src": "assets/B03.webp?v=20261026-bubbles1",
       "alt": "朋友在外边，按1到4的顺序讲述四张图片。"
     },
     {
       "id": "B04",
       "title": "下午见朋友",
-      "src": "assets/B04.webp",
+      "src": "assets/B04.webp?v=20261026-bubbles1",
       "alt": "下午见朋友，按1到4的顺序讲述四张图片。"
     },
     {
       "id": "B05",
       "title": "坐车去学校",
-      "src": "assets/B05.webp",
+      "src": "assets/B05.webp?v=20261026-bubbles1",
       "alt": "坐车去学校，按1到4的顺序讲述四张图片。"
     },
     {
       "id": "B06",
       "title": "买苹果",
-      "src": "assets/B06.webp",
+      "src": "assets/B06.webp?v=20261026-bubbles1",
       "alt": "买苹果，按1到4的顺序讲述四张图片。"
     },
     {
       "id": "B07",
       "title": "下雨了",
-      "src": "assets/B07.webp",
+      "src": "assets/B07.webp?v=20261026-bubbles1",
       "alt": "下雨了，按1到4的顺序讲述四张图片。"
     },
     {
       "id": "B08",
       "title": "朋友来了",
-      "src": "assets/B08.webp",
+      "src": "assets/B08.webp?v=20261026-bubbles1",
       "alt": "朋友来了，按1到4的顺序讲述四张图片。"
     },
     {
       "id": "B09",
       "title": "选蓝衣服",
-      "src": "assets/B09.webp",
+      "src": "assets/B09.webp?v=20261026-bubbles1",
       "alt": "选蓝衣服，按1到4的顺序讲述四张图片。"
     },
     {
       "id": "B10",
       "title": "小美过生日",
-      "src": "assets/B10.webp",
+      "src": "assets/B10.webp?v=20261026-bubbles1",
       "alt": "小美过生日，按1到4的顺序讲述四张图片。"
     },
     {
       "id": "B11",
       "title": "试衣服",
-      "src": "assets/B11.webp",
+      "src": "assets/B11.webp?v=20261026-bubbles1",
       "alt": "试衣服，按1到4的顺序讲述四张图片。"
     },
     {
       "id": "B12",
       "title": "用同学的笔",
-      "src": "assets/B12.webp",
+      "src": "assets/B12.webp?v=20261026-bubbles1",
       "alt": "用同学的笔，按1到4的顺序讲述四张图片。"
     }
   ]
