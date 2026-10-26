@@ -169,6 +169,8 @@ h1 { margin: 0; color: var(--navy); font: 700 clamp(32px, 3.2vw, 48px)/1.12 var(
 .timer { display: inline-block; min-width: 106px; padding: 12px 15px; border-radius: 13px; background: #edf1f5; color: var(--navy); text-align: center; font: 700 27px/1 var(--font-latin); font-variant-numeric: tabular-nums; }
 .pause-button { min-height: 44px; padding: 8px 16px; color: var(--navy); background: white; border: 1px solid #c7d2df; border-radius: 10px; cursor: pointer; font: 600 17px/1.1 var(--font-zh); }
 .pause-button:hover { background: #f3f6f9; }
+.skip-button { min-height: 44px; padding: 8px 16px; color: white; background: #52647d; border: 1px solid #52647d; border-radius: 10px; cursor: pointer; font: 600 17px/1.1 var(--font-zh); }
+.skip-button:hover { background: #3f5068; }
 .exam-status { min-height: 24px; margin: 0; color: #52647d; text-align: center; font: 500 17px/1.4 var(--font-zh); }
 .teacher-note { margin: 5px 0 0; color: #7c899a; text-align: center; font: 400 14px/1.35 var(--font-zh); }
 
@@ -217,8 +219,9 @@ h1 { margin: 0; color: var(--navy); font: 700 clamp(32px, 3.2vw, 48px)/1.12 var(
   .primary-button { min-width: 0; min-height: 54px; padding: 12px 17px; font-size: 20px; }
   .timer-panel { min-width: 88px; }
   .timer { min-width: 82px; padding: 10px; font-size: 23px; }
-  .control-bar { gap: 8px; }
+  .control-bar { gap: 8px; flex-wrap: wrap; }
   .pause-button { min-height: 40px; padding: 7px 10px; font-size: 15px; }
+  .skip-button { min-height: 40px; padding: 7px 10px; font-size: 15px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

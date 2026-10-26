@@ -43,6 +43,17 @@
       else if (action === 'prepare' && state.phase === 'selected') {
         state.phase = 'preparing';
         state.deadline = now + prepMs;
+      } else if (action === 'skipPreparation' && ['selected', 'preparing'].includes(state.phase)) {
+        state.phase = 'speaking';
+        if (state.pausedRemaining === null) state.deadline = now + speakMs;
+        else {
+          state.deadline = null;
+          state.pausedRemaining = speakMs;
+        }
+      } else if (action === 'finishSpeaking' && state.phase === 'speaking') {
+        state.phase = 'complete';
+        state.deadline = null;
+        state.pausedRemaining = null;
       } else if (action === 'pause' && state.pausedRemaining === null && ['preparing', 'speaking'].includes(state.phase)) {
         advance(now);
         if (['preparing', 'speaking'].includes(state.phase)) state.pausedRemaining = Math.max(0, state.deadline - now);

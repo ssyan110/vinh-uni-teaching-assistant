@@ -4,6 +4,7 @@
   const $ = (id) => document.getElementById(id);
   const mainAction = $('mainAction');
   const pauseAction = $('pauseAction');
+  const skipAction = $('skipAction');
   const questionBody = $('questionCardBody');
   const pictureBody = $('pictureCardBody');
   const status = $('examStatus');
@@ -117,6 +118,8 @@
     mainAction.disabled = !ready || ['drawing', 'preparing', 'speaking'].includes(state.phase);
     pauseAction.hidden = !['preparing', 'speaking'].includes(state.phase);
     pauseAction.textContent = state.pausedRemaining === null ? '暂停' : '继续';
+    skipAction.hidden = !['selected', 'preparing', 'speaking'].includes(state.phase);
+    skipAction.textContent = state.phase === 'speaking' ? '结束回答' : '跳过准备';
 
     if (state.phase === 'ready') {
       mainAction.textContent = '开始抽题';
@@ -217,6 +220,21 @@
     scheduleClock();
   }
 
+  function onSkipAction() {
+    if (!machine) return;
+    const phase = machine.getState().phase;
+    if (phase === 'selected' || phase === 'preparing') {
+      const next = machine.dispatch('skipPreparation', Date.now());
+      setStatus(next.pausedRemaining === null ? '已跳过准备时间，现在开始回答。' : '已跳过准备时间，继续计时后开始回答。');
+    } else if (phase === 'speaking') {
+      clearTimer();
+      machine.dispatch('finishSpeaking');
+      setStatus('回答已结束，可以再练一题。');
+    } else return;
+    render();
+    scheduleClock();
+  }
+
   async function loadBank() {
     const bank = window.ORAL_EXAM_BANK;
     if (!bank || !Array.isArray(bank.questions) || !bank.questions.length || !Array.isArray(bank.pictures) || !bank.pictures.length) {
@@ -256,6 +274,7 @@
 
   mainAction.addEventListener('click', onMainAction);
   pauseAction.addEventListener('click', onPauseAction);
+  skipAction.addEventListener('click', onSkipAction);
   document.addEventListener('visibilitychange', () => {
     if (!machine) return;
     if (machine.getState().phase === 'drawing' && drawDeadline !== null && Date.now() >= drawDeadline) {

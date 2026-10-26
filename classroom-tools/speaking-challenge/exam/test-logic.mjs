@@ -50,6 +50,43 @@ test('pause freezes remaining time and resume uses a new wall-clock deadline', (
   assert.equal(machine.dispatch('tick', 130_000).phase, 'speaking');
 });
 
+test('skip preparation starts the full answer timer and early finish completes the round', () => {
+  const machine = createMachine({ questions, pictures, random: () => 0 });
+  machine.dispatch('draw', 0);
+  machine.dispatch('reveal', 1600);
+  machine.dispatch('prepare', 2000);
+  const speaking = machine.dispatch('skipPreparation', 5000);
+  assert.equal(speaking.phase, 'speaking');
+  assert.equal(speaking.deadline, 125_000);
+  assert.equal(machine.getRemaining(5000), 120_000);
+  assert.equal(machine.dispatch('finishSpeaking', 6000).phase, 'complete');
+  assert.equal(machine.getRemaining(6000), null);
+});
+
+test('skip preparation is available immediately after the draw', () => {
+  const machine = createMachine({ questions, pictures, random: () => 0 });
+  machine.dispatch('draw', 0);
+  machine.dispatch('reveal', 1600);
+  const speaking = machine.dispatch('skipPreparation', 2000);
+  assert.equal(speaking.phase, 'speaking');
+  assert.equal(speaking.deadline, 122_000);
+});
+
+test('skip preparation while paused keeps the answer timer paused until resumed', () => {
+  const machine = createMachine({ questions, pictures, random: () => 0 });
+  machine.dispatch('draw', 0);
+  machine.dispatch('reveal', 1600);
+  machine.dispatch('prepare', 2000);
+  machine.dispatch('pause', 12_000);
+  const speaking = machine.dispatch('skipPreparation', 20_000);
+  assert.equal(speaking.phase, 'speaking');
+  assert.equal(speaking.deadline, null);
+  assert.equal(speaking.pausedRemaining, 120_000);
+  assert.equal(machine.dispatch('tick', 200_000).phase, 'speaking');
+  assert.equal(machine.dispatch('resume', 300_000).deadline, 420_000);
+  assert.equal(machine.dispatch('finishSpeaking').phase, 'complete');
+});
+
 test('a hidden-page time jump catches up through both deadlines', () => {
   const machine = createMachine({ questions, pictures, random: () => 0 });
   machine.dispatch('draw', 0);
