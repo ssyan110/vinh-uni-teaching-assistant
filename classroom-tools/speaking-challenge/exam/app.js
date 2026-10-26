@@ -3,6 +3,7 @@
 
   const $ = (id) => document.getElementById(id);
   const mainAction = $('mainAction');
+  const controlBar = document.querySelector('.control-bar');
   const pauseAction = $('pauseAction');
   const skipAction = $('skipAction');
   const questionBody = $('questionCardBody');
@@ -46,17 +47,6 @@
     if (drawTimer !== null) window.clearTimeout(drawTimer);
     drawTimer = null;
     drawDeadline = null;
-  }
-
-  function setStep(phase) {
-    const active = phase === 'selected' ? 'preparing' : phase === 'ready' || phase === 'drawing' ? 'draw' : phase;
-    for (const step of document.querySelectorAll('[data-step]')) {
-      const order = ['draw', 'preparing', 'speaking'];
-      const current = order.indexOf(step.dataset.step);
-      const activeIndex = order.indexOf(active);
-      step.classList.toggle('is-current', step.dataset.step === active);
-      step.classList.toggle('is-done', current < activeIndex);
-    }
   }
 
   function showQuestion(question) {
@@ -114,7 +104,9 @@
   function render() {
     if (!machine) return;
     const state = machine.getState();
-    setStep(state.phase);
+    const isTiming = ['preparing', 'speaking'].includes(state.phase);
+    controlBar.classList.toggle('is-timing', isTiming);
+    mainAction.hidden = isTiming;
     mainAction.disabled = !ready || ['drawing', 'preparing', 'speaking'].includes(state.phase);
     pauseAction.hidden = !['preparing', 'speaking'].includes(state.phase);
     pauseAction.textContent = state.pausedRemaining === null ? '暂停' : '继续';
@@ -156,8 +148,8 @@
       machine.dispatch('tick', Date.now());
       render();
       const next = machine.getState();
-      if (next.phase === 'speaking' && state.phase === 'preparing') setStatus('准备结束，现在开始回答。');
-      if (next.phase === 'complete') setStatus('本次练习结束，可以再练一题。');
+      if (next.phase === 'speaking' && state.phase === 'preparing') setStatus('现在开始回答。');
+      if (next.phase === 'complete') setStatus('回答结束。');
       scheduleClock();
     }, delay);
   }
@@ -168,7 +160,7 @@
     if (state.phase !== 'selected') return;
     showQuestion(state.question);
     showPicture(state.picture);
-    setStatus('题目和图片已抽出。按“开始准备”后计时。');
+    setStatus('看好两道题后，按「开始准备」。');
     render();
   }
 
@@ -181,7 +173,7 @@
       clearDraw();
       showShuffle(questionBody, 'question');
       showShuffle(pictureBody, 'picture');
-      setStatus('正在同时抽取问题和图片…');
+      setStatus('正在抽题…');
       render();
       const token = drawToken;
       drawDeadline = Date.now() + (reducedMotion.matches ? 0 : 1600);
@@ -190,7 +182,7 @@
       }, Math.max(0, drawDeadline - Date.now()));
     } else if (state.phase === 'selected') {
       machine.dispatch('prepare', Date.now());
-      setStatus('准备开始。剩余时间结束后自动进入回答。');
+      setStatus('准备结束后自动开始回答。');
       render();
       scheduleClock();
     } else if (state.phase === 'complete') {
@@ -203,7 +195,7 @@
       pictureBody.classList.remove('is-shuffling');
       placeholder(questionBody, '问题将在抽题后显示');
       placeholder(pictureBody, '图片将在抽题后显示', 'draw-placeholder picture-placeholder');
-      setStatus('正在准备下一次练习。');
+      setStatus('正在抽题…');
       render();
       onMainAction();
     }
@@ -215,7 +207,7 @@
     if (state.pausedRemaining === null) machine.dispatch('pause', Date.now());
     else machine.dispatch('resume', Date.now());
     const next = machine.getState();
-    setStatus(next.phase === 'complete' ? '本次练习结束，可以再练一题。' : next.pausedRemaining === null ? '计时继续。' : '计时已暂停。');
+    setStatus(next.phase === 'complete' ? '回答结束。' : next.pausedRemaining === null ? '计时继续。' : '计时已暂停。');
     render();
     scheduleClock();
   }
@@ -225,11 +217,11 @@
     const phase = machine.getState().phase;
     if (phase === 'selected' || phase === 'preparing') {
       const next = machine.dispatch('skipPreparation', Date.now());
-      setStatus(next.pausedRemaining === null ? '已跳过准备时间，现在开始回答。' : '已跳过准备时间，继续计时后开始回答。');
+      setStatus(next.pausedRemaining === null ? '现在开始回答。' : '按「继续」后开始回答。');
     } else if (phase === 'speaking') {
       clearTimer();
       machine.dispatch('finishSpeaking');
-      setStatus('回答已结束，可以再练一题。');
+      setStatus('回答结束。');
     } else return;
     render();
     scheduleClock();
@@ -268,7 +260,7 @@
     machine = window.ExamLogic.createMachine({ questions: bank.questions, pictures: bank.pictures });
     ready = true;
     mainAction.disabled = false;
-    setStatus(`题目与 ${results.length} 张图片已准备好。`);
+    setStatus('按「开始抽题」。');
     render();
   }
 
@@ -286,8 +278,8 @@
     scheduleClock();
     if (!document.hidden) {
       const state = machine.getState();
-      if (state.phase === 'speaking') setStatus('页面已返回，计时已按实际时间更新。');
-      else if (state.phase === 'complete') setStatus('本次练习结束，可以再练一题。');
+      if (state.phase === 'speaking') setStatus('正在回答。');
+      else if (state.phase === 'complete') setStatus('回答结束。');
     }
   });
 
