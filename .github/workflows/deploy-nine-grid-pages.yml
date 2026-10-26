@@ -42,6 +42,10 @@ jobs:
           mkdir -p dist/oral-practice/assets
           cp ../speaking-challenge/exam/{index.html,styles.css,app.js,logic.js,content.js} dist/oral-practice/
           cp ../speaking-challenge/exam/assets/B*.webp dist/oral-practice/assets/
+      - name: Include student speaking practice guide
+        run: |
+          mkdir -p dist/speaking-practice
+          cp site/speaking-practice/index.html dist/speaking-practice/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: classroom-tools/nine-grid-lesson-01/dist
