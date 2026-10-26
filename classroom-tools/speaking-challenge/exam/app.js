@@ -8,6 +8,8 @@
   const skipAction = $('skipAction');
   const questionBody = $('questionCardBody');
   const pictureBody = $('pictureCardBody');
+  const zoomPicture = $('zoomPicture');
+  const pictureDialog = $('pictureDialog');
   const status = $('examStatus');
   const timer = $('timer');
   const phaseLabel = $('phaseLabel');
@@ -74,8 +76,12 @@
 
   function showPicture(picture) {
     $('pictureTag').textContent = `图片 ${picture.id}`;
+    $('pictureCue').textContent = picture.cue;
     const image = preloadedPictures.get(picture.id);
     if (!image) throw new Error(`图片未预载：${picture.src}`);
+    $('pictureDialogTitle').textContent = `${picture.title} · 图片 ${picture.id}`;
+    $('largePicture').src = picture.src;
+    $('largePicture').alt = picture.alt;
     pictureBody.replaceChildren(image);
     pictureBody.classList.remove('is-shuffling');
   }
@@ -107,6 +113,7 @@
     const isTiming = ['preparing', 'speaking'].includes(state.phase);
     controlBar.classList.toggle('is-timing', isTiming);
     mainAction.hidden = isTiming;
+    zoomPicture.hidden = !state.picture || state.phase === 'drawing';
     mainAction.disabled = !ready || ['drawing', 'preparing', 'speaking'].includes(state.phase);
     pauseAction.hidden = !['preparing', 'speaking'].includes(state.phase);
     pauseAction.textContent = state.pausedRemaining === null ? '暂停' : '继续';
@@ -191,6 +198,7 @@
       machine.dispatch('next');
       $('questionTag').textContent = '问题 —';
       $('pictureTag').textContent = '图片 —';
+      $('pictureCue').textContent = '';
       questionBody.classList.remove('is-shuffling');
       pictureBody.classList.remove('is-shuffling');
       placeholder(questionBody, '问题将在抽题后显示');
@@ -238,7 +246,7 @@
       }
     }
     for (const [index, item] of bank.pictures.entries()) {
-      if (!item || !item.id || !item.title || !item.src || !item.alt) throw new Error(`图片题库第 ${index + 1} 项资料不完整；每张图片须有 id、title、src 和 alt。`);
+      if (!item || !item.id || !item.title || !item.cue || !item.src || !item.alt) throw new Error(`图片题库第 ${index + 1} 项资料不完整；每张图片须有 id、title、cue、src 和 alt。`);
     }
     const results = await Promise.all(bank.pictures.map(async (picture) => {
       const image = new Image();
@@ -267,6 +275,8 @@
   mainAction.addEventListener('click', onMainAction);
   pauseAction.addEventListener('click', onPauseAction);
   skipAction.addEventListener('click', onSkipAction);
+  zoomPicture.addEventListener('click', () => pictureDialog.showModal());
+  $('closePicture').addEventListener('click', () => pictureDialog.close());
   document.addEventListener('visibilitychange', () => {
     if (!machine) return;
     if (machine.getState().phase === 'drawing' && drawDeadline !== null && Date.now() >= drawDeadline) {
