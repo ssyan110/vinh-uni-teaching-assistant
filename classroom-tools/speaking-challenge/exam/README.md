@@ -1,0 +1,20 @@
+# 中文口语自练
+
+每次随机抽一道问题和一张四格图片，自己看题、准备和回答。
+
+1. 按“开始抽题”，问题和图片会一起揭晓。
+2. 按“开始准备”，有1分钟看题并记关键词。
+3. 准备结束后，自动进入2分钟作答。先回答问题，再按顺序说图片里的事。
+4. 需要时可暂停／继续。结束后按“再练一题”，重新抽出一组题。
+
+题库有12道问题和12张原创四格图片，两题独立随机抽选，可重复。题目和插画用于课堂练习，不是官方考试原题。
+
+网站：https://ssyan110.github.io/vinh-uni-teaching-assistant/oral-practice/
+
+页面使用本地HTML、CSS、JavaScript和WebP图片，可直接打开index.html离线练习。无需账号；没有录音、提交或自动评分功能。
+
+## 部署与检查
+
+现有GitHub Pages工作流程把本目录中的5个运行文件及12张WebP图复制到九宫格构建产物的oral-practice/，原九宫格入口仍在网站根目录。
+
+计时逻辑检查：`node --test classroom-tools/speaking-challenge/exam/test-logic.mjs`。
