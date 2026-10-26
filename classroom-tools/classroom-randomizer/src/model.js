@@ -46,7 +46,7 @@
     { id: "LT_01", label: "LT_01（26 人）", studentCount: 26 },
     { id: "LT_02", label: "LT_02（25 人）", studentCount: 25 },
     { id: "LT_03", label: "LT_03（20 人）", studentCount: 20 },
-    { id: "NNTQ1", label: "NNTQ1（大学一年级，28 人）", studentCount: 28 }
+    { id: "NNTQ1", label: "NNTQ1（大学一年级，30 人）", studentCount: 30 }
   ]);
 
   const TEXTBOOK_OPTIONS = Object.freeze([
