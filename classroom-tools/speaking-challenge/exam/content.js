@@ -271,74 +271,86 @@ window.ORAL_EXAM_BANK = {
     {
       "id": "B01",
       "title": "三个人见面",
-      "src": "assets/B01.webp?v=20261026-bubbles1",
-      "alt": "三个人见面，按1到4的顺序讲述四张图片。"
+      "cue": "小林在学校门口等小美。",
+      "src": "assets/B01.webp?v=20261026-sixgrid1",
+      "alt": "三个人见面，按1到6的顺序讲述六格图片。"
     },
     {
       "id": "B02",
       "title": "谁的本子",
-      "src": "assets/B02.webp?v=20261026-bubbles1",
-      "alt": "谁的本子，按1到4的顺序讲述四张图片。"
+      "cue": "小美的红本子在桌上。",
+      "src": "assets/B02.webp?v=20261026-sixgrid1",
+      "alt": "谁的本子，按1到6的顺序讲述六格图片。"
     },
     {
       "id": "B03",
       "title": "朋友在外边",
-      "src": "assets/B03.webp?v=20261026-bubbles1",
-      "alt": "朋友在外边，按1到4的顺序讲述四张图片。"
+      "cue": "小林在教室里，朋友在外边。",
+      "src": "assets/B03.webp?v=20261026-sixgrid1",
+      "alt": "朋友在外边，按1到6的顺序讲述六格图片。"
     },
     {
       "id": "B04",
       "title": "下午见朋友",
-      "src": "assets/B04.webp?v=20261026-bubbles1",
-      "alt": "下午见朋友，按1到4的顺序讲述四张图片。"
+      "cue": "小林今天下午三点去见朋友。",
+      "src": "assets/B04.webp?v=20261026-sixgrid1",
+      "alt": "下午见朋友，按1到6的顺序讲述六格图片。"
     },
     {
       "id": "B05",
       "title": "坐车去学校",
-      "src": "assets/B05.webp?v=20261026-bubbles1",
-      "alt": "坐车去学校，按1到4的顺序讲述四张图片。"
+      "cue": "小林在车站等公共汽车。",
+      "src": "assets/B05.webp?v=20261026-sixgrid1",
+      "alt": "坐车去学校，按1到6的顺序讲述六格图片。"
     },
     {
       "id": "B06",
       "title": "买苹果",
-      "src": "assets/B06.webp?v=20261026-bubbles1",
-      "alt": "买苹果，按1到4的顺序讲述四张图片。"
+      "cue": "小美想买苹果。",
+      "src": "assets/B06.webp?v=20261026-sixgrid1",
+      "alt": "买苹果，按1到6的顺序讲述六格图片。"
     },
     {
       "id": "B07",
       "title": "下雨了",
-      "src": "assets/B07.webp?v=20261026-bubbles1",
-      "alt": "下雨了，按1到4的顺序讲述四张图片。"
+      "cue": "小林和小美在外边玩儿。",
+      "src": "assets/B07.webp?v=20261026-sixgrid1",
+      "alt": "下雨了，按1到6的顺序讲述六格图片。"
     },
     {
       "id": "B08",
       "title": "朋友来了",
-      "src": "assets/B08.webp?v=20261026-bubbles1",
-      "alt": "朋友来了，按1到4的顺序讲述四张图片。"
+      "cue": "小林正在房间里做作业。",
+      "src": "assets/B08.webp?v=20261026-sixgrid1",
+      "alt": "朋友来了，按1到6的顺序讲述六格图片。"
     },
     {
       "id": "B09",
       "title": "选蓝衣服",
-      "src": "assets/B09.webp?v=20261026-bubbles1",
-      "alt": "选蓝衣服，按1到4的顺序讲述四张图片。"
+      "cue": "小美在店里看衣服。",
+      "src": "assets/B09.webp?v=20261026-sixgrid1",
+      "alt": "选蓝衣服，按1到6的顺序讲述六格图片。"
     },
     {
       "id": "B10",
       "title": "小美过生日",
-      "src": "assets/B10.webp?v=20261026-bubbles1",
-      "alt": "小美过生日，按1到4的顺序讲述四张图片。"
+      "cue": "今天小美过生日，小林准备礼物。",
+      "src": "assets/B10.webp?v=20261026-sixgrid1",
+      "alt": "小美过生日，按1到6的顺序讲述六格图片。"
     },
     {
       "id": "B11",
       "title": "试衣服",
-      "src": "assets/B11.webp?v=20261026-bubbles1",
-      "alt": "试衣服，按1到4的顺序讲述四张图片。"
+      "cue": "小林想试一件衣服。",
+      "src": "assets/B11.webp?v=20261026-sixgrid1",
+      "alt": "试衣服，按1到6的顺序讲述六格图片。"
     },
     {
       "id": "B12",
       "title": "用同学的笔",
-      "src": "assets/B12.webp?v=20261026-bubbles1",
-      "alt": "用同学的笔，按1到4的顺序讲述四张图片。"
+      "cue": "小林想做作业，桌上没有笔。",
+      "src": "assets/B12.webp?v=20261026-sixgrid1",
+      "alt": "用同学的笔，按1到6的顺序讲述六格图片。"
     }
   ]
 };

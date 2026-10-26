@@ -37,6 +37,13 @@ h1 { margin: 0; font: 700 clamp(29px, 3vw, 38px)/1.15 var(--font-zh); }
 .exam-card { min-width: 0; min-height: 470px; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--paper); }
 .card-heading { min-height: 64px; padding: 14px 22px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); }
 .card-heading h2 { margin: 0; font: 700 clamp(21px, 1.9vw, 26px)/1.2 var(--font-zh); white-space: nowrap; }
+.picture-card .card-heading { min-height: 80px; }
+.picture-heading-copy { min-width: 0; }
+.picture-cue { margin: 4px 0 0 28px; color: var(--muted); font: 500 16px/1.3 var(--font-zh); }
+.picture-cue:empty { display: none; }
+.picture-actions { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; }
+.zoom-button { min-height: 34px; padding: 5px 10px; border: 1px solid #d1d1d6; border-radius: 8px; background: #fff; color: var(--blue-dark); cursor: pointer; font: 700 15px/1.2 var(--font-zh); }
+.zoom-button:hover { background: var(--blue-soft); }
 .part-number { margin-right: 10px; color: var(--blue); font: 700 16px/1 var(--font-latin); }
 .item-tag { flex: 0 0 auto; padding: 7px 10px; border-radius: 8px; background: var(--blue-soft); color: var(--blue-dark); font: 700 15px/1.1 var(--font-zh); }
 .question-body { min-height: 406px; height: calc(100% - 64px); padding: clamp(25px, 3vw, 45px); display: flex; flex-direction: column; justify-content: center; gap: 27px; }
@@ -48,8 +55,16 @@ h1 { margin: 0; font: 700 clamp(29px, 3vw, 38px)/1.15 var(--font-zh); }
 .question-hints li::marker { color: var(--blue); }
 .draw-placeholder { margin: auto; color: #80808a; text-align: center; font: 500 24px/1.4 var(--font-zh); }
 .picture-body { height: calc(100% - 64px); min-height: 406px; padding: 15px; display: grid; place-items: center; overflow: hidden; }
+.picture-card .picture-body { height: calc(100% - 80px); }
 .picture-placeholder { width: 100%; height: 100%; display: grid; place-items: center; border: 1px dashed #c8c8d0; border-radius: 10px; background: #fafafa; }
 .picture-visual { display: block; width: 100%; height: 100%; object-fit: contain; }
+.picture-dialog { width: min(1200px, calc(100vw - 40px)); max-width: none; max-height: 94dvh; margin: auto; padding: 0; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 24px 70px #1d1d1f35; }
+.picture-dialog::backdrop { background: #1d1d1f99; }
+.dialog-heading { min-height: 62px; padding: 12px 18px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--line); }
+.dialog-heading h2 { margin: 0; font: 700 21px/1.2 var(--font-zh); }
+.dialog-hint { display: none; }
+.dialog-scroll { max-height: calc(94dvh - 62px); overflow: auto; -webkit-overflow-scrolling: touch; }
+.dialog-scroll img { display: block; width: 100%; height: auto; }
 .question-body.is-shuffling, .picture-body.is-shuffling { align-items: center; justify-content: center; padding: 24px; }
 .shuffle-stack { position: relative; width: clamp(150px, 31%, 220px); aspect-ratio: 1.22; display: grid; place-items: center; }
 .shuffle-card { position: absolute; inset: 0; border: 2px solid #a9cfff; border-radius: 14px; background: var(--blue-soft); }
@@ -75,7 +90,7 @@ h1 { margin: 0; font: 700 clamp(29px, 3vw, 38px)/1.15 var(--font-zh); }
   .exam-grid { grid-template-columns: 1fr; }
   .exam-card { min-height: 0; }
   .question-body { min-height: 230px; height: auto; }
-  .picture-body { height: auto; min-height: 0; aspect-ratio: 1.43; }
+  .picture-card .picture-body { height: auto; min-height: 0; aspect-ratio: 1.43; }
   .picture-visual { max-height: 100%; }
 }
 @media (max-width: 560px) {
@@ -98,6 +113,13 @@ h1 { margin: 0; font: 700 clamp(29px, 3vw, 38px)/1.15 var(--font-zh); }
   .card-heading h2 { font-size: 19px; }
   .part-number { margin-right: 5px; font-size: 13px; }
   .item-tag { font-size: 13px; padding: 6px 8px; }
+  .picture-card .card-heading { min-height: 72px; }
+  .picture-cue { margin-left: 20px; font-size: 13px; line-height: 1.2; }
+  .picture-actions { gap: 5px; }
+  .zoom-button { min-height: 30px; padding: 4px 7px; font-size: 13px; }
+  .picture-dialog { width: calc(100vw - 16px); }
+  .dialog-hint { display: block; margin: 0; padding: 6px 18px; color: var(--muted); font: 500 13px/1.3 var(--font-zh); }
+  .dialog-scroll img { width: 900px; max-width: none; }
   .question-body { min-height: 155px; padding: 17px 20px; gap: 14px; }
   .question-prompt { font-size: clamp(23px, 6vw, 29px); line-height: 1.45; }
   .question-hints { padding-top: 11px; font-size: 16px; }
