@@ -77,7 +77,7 @@
       item.textContent = hint;
       hints.append(item);
     }
-    questionBody.replaceChildren(prompt, hints);
+    questionBody.replaceChildren(prompt, ...(question.hints.length ? [hints] : []));
     questionBody.classList.remove('is-shuffling');
   }
 
@@ -223,8 +223,8 @@
       throw new Error('没有找到完整题库。请确认 content.js 已载入，并包含 questions 与 pictures。');
     }
     for (const [index, item] of bank.questions.entries()) {
-      if (!item || !item.id || !item.title || !item.prompt || !Array.isArray(item.hints) || item.hints.length !== 2 || item.hints.some((hint) => typeof hint !== 'string')) {
-        throw new Error(`问题题库第 ${index + 1} 项资料不完整；每题须有 id、title、prompt 和两条 hints。`);
+      if (!item || !item.id || !item.title || !item.prompt || !Array.isArray(item.hints) || item.hints.some((hint) => typeof hint !== 'string' || !hint.trim())) {
+        throw new Error(`问题题库第 ${index + 1} 项资料不完整；每题须有 id、title、prompt 和 hints 数组（可为空）。`);
       }
     }
     for (const [index, item] of bank.pictures.entries()) {
