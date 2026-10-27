@@ -82,6 +82,8 @@
     $('pictureDialogTitle').textContent = `${picture.title} · 图片 ${picture.id}`;
     $('largePicture').src = picture.src;
     $('largePicture').alt = picture.alt;
+    $('zoomGrid').setAttribute('aria-label', picture.alt);
+    document.querySelectorAll('.zoom-panel img').forEach((panel) => { panel.src = picture.src; });
     pictureBody.replaceChildren(image);
     pictureBody.classList.remove('is-shuffling');
   }

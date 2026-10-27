@@ -8,10 +8,10 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' data:; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; media-src 'none'; object-src 'none'; base-uri 'none'">
   <meta name="description" content="自己抽题、看图、说中文。问题和六格图片同时显示，准备1分钟，再用2分钟练习回答。">
   <title>口语练习｜问题与图片</title>
-  <link rel="stylesheet" href="styles.css?v=20261026-sixgrid1">
+  <link rel="stylesheet" href="styles.css?v=20261027-mobile1">
   <script defer src="content.js?v=20261026-sixgrid1"></script>
   <script defer src="logic.js?v=20261026-skipcontrols"></script>
-  <script defer src="app.js?v=20261026-sixgrid1"></script>
+  <script defer src="app.js?v=20261027-mobile1"></script>
 </head>
 <body>
   <main class="exam-shell">
@@ -68,8 +68,13 @@
       <h2 id="pictureDialogTitle">看图叙事</h2>
       <button class="zoom-button" id="closePicture" type="button">关闭</button>
     </div>
-    <p class="dialog-hint">左右滑动看六格</p>
-    <div class="dialog-scroll"><img id="largePicture" alt=""></div>
+    <div class="dialog-scroll">
+      <img id="largePicture" alt="">
+      <div class="zoom-grid" id="zoomGrid" role="img" aria-label="">
+        <div class="zoom-panel"><img alt=""></div><div class="zoom-panel"><img alt=""></div><div class="zoom-panel"><img alt=""></div>
+        <div class="zoom-panel"><img alt=""></div><div class="zoom-panel"><img alt=""></div><div class="zoom-panel"><img alt=""></div>
+      </div>
+    </div>
   </dialog>
 </body>
 </html>
