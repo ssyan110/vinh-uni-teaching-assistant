@@ -43,6 +43,9 @@
     "face_to_face": {
       "path": "lessons/boya-quasi-intermediate-i/lesson-04/20-approved/pptx/lesson-04-实体课.pptx",
       "status": "final_confirmed"
+    },
+    "activities": {
+      "file_count": 0
     }
   },
   "qa": {
@@ -55,5 +58,19 @@
     "delivery_status": "blocked",
     "latest_release_path": null,
     "latest_zip_path": null
-  }
+  },
+  "files": [
+    {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-04/20-approved/pptx/lesson-04-在线预习.pptx",
+      "sha256": "9d64a7ae2cac06f033907349a325a700406bc798b9a595830b7ce299080eb312",
+      "bytes": 20087746,
+      "status": "historical_inventory_only"
+    },
+    {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-04/20-approved/pptx/lesson-04-实体课.pptx",
+      "sha256": "f18c6a1d1b344784ea2b3863a32f6b7bf6b5ff899e6ae5d89b7c92f3f33a3218",
+      "bytes": 24327091,
+      "status": "historical_inventory_only"
+    }
+  ]
 }

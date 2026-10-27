@@ -130,7 +130,7 @@
         <div class="metric card"><span>已交付课次</span><strong>${text(summary.delivered)} / ${text(data.course && data.course.lesson_count)}</strong><small>交付包已锁定</small></div>
         <div class="metric card"><span>当前可工作</span><strong>${text(summary.available)}</strong><small>来源审核或制作中</small></div>
         <div class="metric card"><span>已完成 Gate</span><strong>${text(completedGates)} / ${text(totalGates)}</strong><small>全课程生产进度 ${gatePercent}%</small></div>
-        <div class="metric card"><span>锁定课次</span><strong>${text(summary.locked)}</strong><small>等待前一课交付</small></div>
+        <div class="metric card"><span>锁定课次</span><strong>${text(summary.locked)}</strong><small>课次身份待确认</small></div>
       </section>
 
       <section class="course-grid">
@@ -151,8 +151,8 @@
           </article>
           <article class="card side-card rule-card">
             <p class="eyebrow">WORKFLOW RULE</p>
-            <h3>逐课推进</h3>
-            <p>authority／release 依课次顺序推进；已确认来源包与边界的后续课次可以先制作 draft，但 draft 不会解锁下一课的 authority。</p>
+            <h3>按版本推进</h3>
+            <p>线上预习和实体课分别核对内容、批准及交付；每课独立推进，不等待其他课发布。</p>
           </article>
         </aside>
       </section>

@@ -1,0 +1,290 @@
+;
+; Archive created at 2026-10-25 23:53:09 +07
+;     dbname: supabase_restore_drill
+;     TOC Entries: 280
+;     Compression: gzip
+;     Dump Version: 1.16-0
+;     Format: CUSTOM
+;     Integer: 4 bytes
+;     Offset: 8 bytes
+;     Dumped from database version: 17.10 (Homebrew)
+;     Dumped by pg_dump version: 17.10 (Homebrew)
+;
+;
+; Selected TOC Entries:
+;
+5; 2615 17897 SCHEMA - auth ssyan110
+4410; 0 0 COMMENT - SCHEMA public pg_database_owner
+236; 1255 17903 FUNCTION auth uid() ssyan110
+255; 1255 18516 FUNCTION public correct_class_session(uuid, date, integer, text) ssyan110
+256; 1255 18557 FUNCTION public correct_classroom_record(text, uuid, text) ssyan110
+257; 1255 18568 FUNCTION public ensure_class_session(uuid, date) ssyan110
+253; 1255 18490 FUNCTION public finish_randomizer_class(text) ssyan110
+258; 1255 18569 FUNCTION public guard_class_session_start() ssyan110
+261; 1255 18596 FUNCTION public guard_class_session_update() ssyan110
+264; 1255 18646 FUNCTION public guard_enrollment_evidence() ssyan110
+263; 1255 18575 FUNCTION public guard_randomizer_attempt_replay() ssyan110
+259; 1255 18571 FUNCTION public guard_randomizer_class_link() ssyan110
+262; 1255 18486 FUNCTION public interact_classroom(text, uuid, text, jsonb) ssyan110
+238; 1255 18517 FUNCTION public keep_corrected_classroom_records_out_of_summary() ssyan110
+254; 1255 18491 FUNCTION public keep_randomizer_session_completed() ssyan110
+237; 1255 18159 FUNCTION public set_updated_at() ssyan110
+260; 1255 18573 FUNCTION public sync_class_session_randomizers() ssyan110
+240; 1255 18455 FUNCTION public valid_randomizer_fact_marks(jsonb) ssyan110
+239; 1255 18636 FUNCTION public validate_attendance_exception_enrollment() ssyan110
+241; 1255 18593 FUNCTION public validate_session_student_enrollment() ssyan110
+218; 1259 17898 TABLE auth users ssyan110
+219; 1259 17906 TABLE public academic_terms ssyan110
+235; 1259 18599 TABLE public attendance_exceptions ssyan110
+224; 1259 18050 TABLE public attendance_records ssyan110
+233; 1259 18495 TABLE public class_session_corrections ssyan110
+223; 1259 18019 TABLE public class_sessions ssyan110
+234; 1259 18522 TABLE public classroom_record_corrections ssyan110
+220; 1259 17929 TABLE public courses ssyan110
+222; 1259 17986 TABLE public enrollments ssyan110
+226; 1259 18111 TABLE public followups ssyan110
+232; 1259 18471 TABLE public interact_responses ssyan110
+231; 1259 18459 TABLE public interact_rooms ssyan110
+227; 1259 18204 TABLE public learning_events ssyan110
+225; 1259 18080 TABLE public observation_records ssyan110
+229; 1259 18303 TABLE public randomizer_attempts ssyan110
+228; 1259 18260 TABLE public randomizer_sessions ssyan110
+230; 1259 18408 TABLE public student_notes ssyan110
+221; 1259 17960 TABLE public students ssyan110
+4386; 0 17898 TABLE DATA auth users ssyan110
+4387; 0 17906 TABLE DATA public academic_terms ssyan110
+4403; 0 18599 TABLE DATA public attendance_exceptions ssyan110
+4392; 0 18050 TABLE DATA public attendance_records ssyan110
+4401; 0 18495 TABLE DATA public class_session_corrections ssyan110
+4391; 0 18019 TABLE DATA public class_sessions ssyan110
+4402; 0 18522 TABLE DATA public classroom_record_corrections ssyan110
+4388; 0 17929 TABLE DATA public courses ssyan110
+4390; 0 17986 TABLE DATA public enrollments ssyan110
+4394; 0 18111 TABLE DATA public followups ssyan110
+4400; 0 18471 TABLE DATA public interact_responses ssyan110
+4399; 0 18459 TABLE DATA public interact_rooms ssyan110
+4395; 0 18204 TABLE DATA public learning_events ssyan110
+4393; 0 18080 TABLE DATA public observation_records ssyan110
+4397; 0 18303 TABLE DATA public randomizer_attempts ssyan110
+4396; 0 18260 TABLE DATA public randomizer_sessions ssyan110
+4398; 0 18408 TABLE DATA public student_notes ssyan110
+4389; 0 17960 TABLE DATA public students ssyan110
+3982; 2606 17902 CONSTRAINT auth users users_pkey ssyan110
+3984; 2606 17923 CONSTRAINT public academic_terms academic_terms_owner_id_key ssyan110
+3986; 2606 17921 CONSTRAINT public academic_terms academic_terms_owner_name_key ssyan110
+3988; 2606 17919 CONSTRAINT public academic_terms academic_terms_pkey ssyan110
+4103; 2606 18618 CONSTRAINT public attendance_exceptions attendance_exceptions_pkey ssyan110
+4105; 2606 18620 CONSTRAINT public attendance_exceptions attendance_exceptions_session_id_student_id_key ssyan110
+4028; 2606 18062 CONSTRAINT public attendance_records attendance_records_pkey ssyan110
+4030; 2606 18064 CONSTRAINT public attendance_records attendance_session_student_key ssyan110
+4092; 2606 18504 CONSTRAINT public class_session_corrections class_session_corrections_pkey ssyan110
+4020; 2606 18039 CONSTRAINT public class_sessions class_sessions_owner_id_key ssyan110
+4022; 2606 18037 CONSTRAINT public class_sessions class_sessions_pkey ssyan110
+4096; 2606 18536 CONSTRAINT public classroom_record_corrections classroom_record_corrections_pkey ssyan110
+4098; 2606 18538 CONSTRAINT public classroom_record_corrections classroom_record_corrections_unique_record ssyan110
+3990; 2606 17947 CONSTRAINT public courses courses_owner_code_key ssyan110
+3992; 2606 17949 CONSTRAINT public courses courses_owner_id_key ssyan110
+3996; 2606 17945 CONSTRAINT public courses courses_pkey ssyan110
+4006; 2606 18001 CONSTRAINT public enrollments enrollments_course_student_key ssyan110
+4008; 2606 18203 CONSTRAINT public enrollments enrollments_owner_course_student_key ssyan110
+4010; 2606 18003 CONSTRAINT public enrollments enrollments_owner_id_key ssyan110
+4014; 2606 17999 CONSTRAINT public enrollments enrollments_pkey ssyan110
+4046; 2606 18125 CONSTRAINT public followups followups_pkey ssyan110
+4088; 2606 18478 CONSTRAINT public interact_responses interact_responses_pkey ssyan110
+4085; 2606 18470 CONSTRAINT public interact_rooms interact_rooms_pkey ssyan110
+4050; 2606 18258 CONSTRAINT public learning_events learning_events_owner_client_event_key ssyan110
+4054; 2606 18226 CONSTRAINT public learning_events learning_events_pkey ssyan110
+4034; 2606 18093 CONSTRAINT public observation_records observation_records_pkey ssyan110
+4036; 2606 18095 CONSTRAINT public observation_records observation_session_student_key ssyan110
+4066; 2606 18340 CONSTRAINT public randomizer_attempts randomizer_attempts_owner_client_key ssyan110
+4071; 2606 18338 CONSTRAINT public randomizer_attempts randomizer_attempts_owner_id_key ssyan110
+4074; 2606 18336 CONSTRAINT public randomizer_attempts randomizer_attempts_pkey ssyan110
+4056; 2606 18290 CONSTRAINT public randomizer_sessions randomizer_sessions_owner_client_key ssyan110
+4060; 2606 18292 CONSTRAINT public randomizer_sessions randomizer_sessions_owner_course_id_key ssyan110
+4062; 2606 18288 CONSTRAINT public randomizer_sessions randomizer_sessions_owner_id_key ssyan110
+4064; 2606 18286 CONSTRAINT public randomizer_sessions randomizer_sessions_pkey ssyan110
+4024; 2606 18201 CONSTRAINT public class_sessions sessions_owner_course_id_key ssyan110
+4077; 2606 18425 CONSTRAINT public student_notes student_notes_owner_id_course_id_student_id_id_key ssyan110
+4080; 2606 18421 CONSTRAINT public student_notes student_notes_pkey ssyan110
+4082; 2606 18423 CONSTRAINT public student_notes student_notes_supersedes_id_key ssyan110
+3999; 2606 17978 CONSTRAINT public students students_owner_code_key ssyan110
+4001; 2606 17980 CONSTRAINT public students students_owner_id_key ssyan110
+4004; 2606 17976 CONSTRAINT public students students_pkey ssyan110
+4099; 1259 18639 INDEX public attendance_exceptions_owner_pending_idx ssyan110
+4100; 1259 18641 INDEX public attendance_exceptions_owner_session_idx ssyan110
+4101; 1259 18645 INDEX public attendance_exceptions_owner_student_idx ssyan110
+4106; 1259 18640 INDEX public attendance_exceptions_student_idx ssyan110
+4025; 1259 18153 INDEX public attendance_owner_session_idx ssyan110
+4026; 1259 18249 INDEX public attendance_owner_student_idx ssyan110
+4031; 1259 18154 INDEX public attendance_student_idx ssyan110
+4090; 1259 18577 INDEX public class_session_corrections_owner_course_session_idx ssyan110
+4016; 1259 18494 INDEX public class_sessions_course_session_number_key ssyan110
+4017; 1259 18152 INDEX public class_sessions_one_active_course_idx ssyan110
+4018; 1259 18151 INDEX public class_sessions_owner_course_date_idx ssyan110
+4093; 1259 18554 INDEX public classroom_record_corrections_owner_course_idx ssyan110
+4094; 1259 18578 INDEX public classroom_record_corrections_owner_student_idx ssyan110
+3993; 1259 18146 INDEX public courses_owner_idx ssyan110
+3994; 1259 18247 INDEX public courses_owner_term_idx ssyan110
+3997; 1259 18147 INDEX public courses_term_idx ssyan110
+4011; 1259 18149 INDEX public enrollments_owner_idx ssyan110
+4012; 1259 18248 INDEX public enrollments_owner_student_idx ssyan110
+4015; 1259 18150 INDEX public enrollments_student_idx ssyan110
+4039; 1259 18251 INDEX public followups_owner_course_idx ssyan110
+4040; 1259 18591 INDEX public followups_owner_course_session_idx ssyan110
+4041; 1259 18592 INDEX public followups_owner_course_student_idx ssyan110
+4042; 1259 18253 INDEX public followups_owner_session_idx ssyan110
+4043; 1259 18157 INDEX public followups_owner_status_due_idx ssyan110
+4044; 1259 18252 INDEX public followups_owner_student_idx ssyan110
+4047; 1259 18158 INDEX public followups_student_idx ssyan110
+4086; 1259 18484 INDEX public interact_one_answer ssyan110
+4089; 1259 18485 INDEX public interact_room_answers ssyan110
+4048; 1259 18242 INDEX public learning_events_course_date ssyan110
+4051; 1259 18254 INDEX public learning_events_owner_course_session_idx ssyan110
+4052; 1259 18255 INDEX public learning_events_owner_course_student_idx ssyan110
+4032; 1259 18250 INDEX public observation_owner_student_idx ssyan110
+4037; 1259 18155 INDEX public observations_owner_session_idx ssyan110
+4038; 1259 18156 INDEX public observations_student_date_idx ssyan110
+4067; 1259 18389 INDEX public randomizer_attempts_owner_course_lesson_student_idx ssyan110
+4068; 1259 18370 INDEX public randomizer_attempts_owner_course_session_idx ssyan110
+4069; 1259 18358 INDEX public randomizer_attempts_owner_course_student_idx ssyan110
+4072; 1259 18357 INDEX public randomizer_attempts_owner_session_round_idx ssyan110
+4057; 1259 18369 INDEX public randomizer_sessions_owner_course_class_session_idx ssyan110
+4058; 1259 18356 INDEX public randomizer_sessions_owner_course_date_idx ssyan110
+4075; 1259 18579 INDEX public student_notes_course_student_idx ssyan110
+4078; 1259 18453 INDEX public student_notes_owner_student ssyan110
+4083; 1259 18580 INDEX public student_notes_supersession_idx ssyan110
+4002; 1259 18148 INDEX public students_owner_name_idx ssyan110
+4150; 2620 18160 TRIGGER public academic_terms academic_terms_set_updated_at ssyan110
+4159; 2620 18594 TRIGGER public attendance_records attendance_enrollment_guard ssyan110
+4172; 2620 18637 TRIGGER public attendance_exceptions attendance_exception_enrollment ssyan110
+4173; 2620 18638 TRIGGER public attendance_exceptions attendance_exceptions_updated_at ssyan110
+4160; 2620 18165 TRIGGER public attendance_records attendance_records_set_updated_at ssyan110
+4155; 2620 18574 TRIGGER public class_sessions class_session_randomizer_sync ssyan110
+4156; 2620 18570 TRIGGER public class_sessions class_session_start_guard ssyan110
+4157; 2620 18597 TRIGGER public class_sessions class_session_update_guard ssyan110
+4158; 2620 18164 TRIGGER public class_sessions class_sessions_set_updated_at ssyan110
+4151; 2620 18161 TRIGGER public courses courses_set_updated_at ssyan110
+4153; 2620 18647 TRIGGER public enrollments enrollment_evidence_guard ssyan110
+4154; 2620 18163 TRIGGER public enrollments enrollments_set_updated_at ssyan110
+4163; 2620 18167 TRIGGER public followups followups_set_updated_at ssyan110
+4164; 2620 18519 TRIGGER public learning_events learning_events_corrected_summary_guard ssyan110
+4165; 2620 18243 TRIGGER public learning_events learning_events_updated ssyan110
+4161; 2620 18595 TRIGGER public observation_records observation_enrollment_guard ssyan110
+4162; 2620 18166 TRIGGER public observation_records observation_records_set_updated_at ssyan110
+4169; 2620 18576 TRIGGER public randomizer_attempts randomizer_attempt_replay_guard ssyan110
+4170; 2620 18518 TRIGGER public randomizer_attempts randomizer_attempts_corrected_summary_guard ssyan110
+4171; 2620 18360 TRIGGER public randomizer_attempts randomizer_attempts_updated ssyan110
+4166; 2620 18572 TRIGGER public randomizer_sessions randomizer_class_link_guard ssyan110
+4167; 2620 18492 TRIGGER public randomizer_sessions randomizer_session_stays_completed ssyan110
+4168; 2620 18359 TRIGGER public randomizer_sessions randomizer_sessions_updated ssyan110
+4152; 2620 18162 TRIGGER public students students_set_updated_at ssyan110
+4107; 2606 17924 FK CONSTRAINT public academic_terms academic_terms_owner_id_fkey ssyan110
+4147; 2606 18621 FK CONSTRAINT public attendance_exceptions attendance_exceptions_owner_id_fkey ssyan110
+4148; 2606 18626 FK CONSTRAINT public attendance_exceptions attendance_exceptions_owner_id_session_id_fkey ssyan110
+4149; 2606 18631 FK CONSTRAINT public attendance_exceptions attendance_exceptions_owner_id_student_id_fkey ssyan110
+4116; 2606 18065 FK CONSTRAINT public attendance_records attendance_records_owner_id_fkey ssyan110
+4117; 2606 18070 FK CONSTRAINT public attendance_records attendance_session_owner_fk ssyan110
+4118; 2606 18075 FK CONSTRAINT public attendance_records attendance_student_owner_fk ssyan110
+4142; 2606 18505 FK CONSTRAINT public class_session_corrections class_session_corrections_owner_id_fkey ssyan110
+4143; 2606 18510 FK CONSTRAINT public class_session_corrections class_session_corrections_session_fk ssyan110
+4114; 2606 18045 FK CONSTRAINT public class_sessions class_sessions_course_owner_fk ssyan110
+4115; 2606 18040 FK CONSTRAINT public class_sessions class_sessions_owner_id_fkey ssyan110
+4144; 2606 18544 FK CONSTRAINT public classroom_record_corrections classroom_record_corrections_owner_course_fk ssyan110
+4145; 2606 18539 FK CONSTRAINT public classroom_record_corrections classroom_record_corrections_owner_id_fkey ssyan110
+4146; 2606 18549 FK CONSTRAINT public classroom_record_corrections classroom_record_corrections_owner_student_fk ssyan110
+4108; 2606 17950 FK CONSTRAINT public courses courses_owner_id_fkey ssyan110
+4109; 2606 17955 FK CONSTRAINT public courses courses_term_owner_fk ssyan110
+4111; 2606 18009 FK CONSTRAINT public enrollments enrollments_course_owner_fk ssyan110
+4112; 2606 18004 FK CONSTRAINT public enrollments enrollments_owner_id_fkey ssyan110
+4113; 2606 18014 FK CONSTRAINT public enrollments enrollments_student_owner_fk ssyan110
+4122; 2606 18131 FK CONSTRAINT public followups followups_course_owner_fk ssyan110
+4123; 2606 18581 FK CONSTRAINT public followups followups_course_session_fk ssyan110
+4124; 2606 18586 FK CONSTRAINT public followups followups_course_student_fk ssyan110
+4125; 2606 18126 FK CONSTRAINT public followups followups_owner_id_fkey ssyan110
+4126; 2606 18141 FK CONSTRAINT public followups followups_session_owner_fk ssyan110
+4127; 2606 18136 FK CONSTRAINT public followups followups_student_owner_fk ssyan110
+4141; 2606 18479 FK CONSTRAINT public interact_responses interact_responses_room_id_fkey ssyan110
+4128; 2606 18232 FK CONSTRAINT public learning_events learning_events_owner_id_course_id_session_id_fkey ssyan110
+4129; 2606 18237 FK CONSTRAINT public learning_events learning_events_owner_id_course_id_student_id_fkey ssyan110
+4130; 2606 18227 FK CONSTRAINT public learning_events learning_events_owner_id_fkey ssyan110
+4119; 2606 18096 FK CONSTRAINT public observation_records observation_records_owner_id_fkey ssyan110
+4120; 2606 18101 FK CONSTRAINT public observation_records observation_session_owner_fk ssyan110
+4121; 2606 18106 FK CONSTRAINT public observation_records observation_student_owner_fk ssyan110
+4133; 2606 18341 FK CONSTRAINT public randomizer_attempts randomizer_attempts_owner_id_fkey ssyan110
+4134; 2606 18346 FK CONSTRAINT public randomizer_attempts randomizer_attempts_session_fk ssyan110
+4135; 2606 18351 FK CONSTRAINT public randomizer_attempts randomizer_attempts_student_fk ssyan110
+4131; 2606 18298 FK CONSTRAINT public randomizer_sessions randomizer_sessions_class_session_fk ssyan110
+4132; 2606 18293 FK CONSTRAINT public randomizer_sessions randomizer_sessions_owner_id_fkey ssyan110
+4136; 2606 18441 FK CONSTRAINT public student_notes student_notes_course_id_student_id_fkey ssyan110
+4137; 2606 18431 FK CONSTRAINT public student_notes student_notes_owner_id_course_id_fkey ssyan110
+4138; 2606 18446 FK CONSTRAINT public student_notes student_notes_owner_id_course_id_student_id_supersedes_id_fkey ssyan110
+4139; 2606 18426 FK CONSTRAINT public student_notes student_notes_owner_id_fkey ssyan110
+4140; 2606 18436 FK CONSTRAINT public student_notes student_notes_owner_id_student_id_fkey ssyan110
+4110; 2606 17981 FK CONSTRAINT public students students_owner_id_fkey ssyan110
+4319; 0 17906 ROW SECURITY public academic_terms ssyan110
+4339; 3256 18171 POLICY public academic_terms academic_terms_owner_delete ssyan110
+4337; 3256 18169 POLICY public academic_terms academic_terms_owner_insert ssyan110
+4336; 3256 18168 POLICY public academic_terms academic_terms_owner_select ssyan110
+4338; 3256 18170 POLICY public academic_terms academic_terms_owner_update ssyan110
+4335; 0 18599 ROW SECURITY public attendance_exceptions ssyan110
+4375; 3256 18643 POLICY public attendance_exceptions attendance_exceptions_insert ssyan110
+4384; 3256 18642 POLICY public attendance_exceptions attendance_exceptions_select ssyan110
+4385; 3256 18644 POLICY public attendance_exceptions attendance_exceptions_update ssyan110
+4362; 3256 18191 POLICY public attendance_records attendance_owner_delete ssyan110
+4359; 3256 18189 POLICY public attendance_records attendance_owner_insert ssyan110
+4358; 3256 18188 POLICY public attendance_records attendance_owner_select ssyan110
+4361; 3256 18190 POLICY public attendance_records attendance_owner_update ssyan110
+4324; 0 18050 ROW SECURITY public attendance_records ssyan110
+4333; 0 18495 ROW SECURITY public class_session_corrections ssyan110
+4382; 3256 18515 POLICY public class_session_corrections class_session_corrections_owner_select ssyan110
+4323; 0 18019 ROW SECURITY public class_sessions ssyan110
+4357; 3256 18187 POLICY public class_sessions class_sessions_owner_delete ssyan110
+4354; 3256 18185 POLICY public class_sessions class_sessions_owner_insert ssyan110
+4353; 3256 18184 POLICY public class_sessions class_sessions_owner_select ssyan110
+4356; 3256 18186 POLICY public class_sessions class_sessions_owner_update ssyan110
+4334; 0 18522 ROW SECURITY public classroom_record_corrections ssyan110
+4383; 3256 18556 POLICY public classroom_record_corrections classroom_record_corrections_owner_select ssyan110
+4320; 0 17929 ROW SECURITY public courses ssyan110
+4343; 3256 18175 POLICY public courses courses_owner_delete ssyan110
+4341; 3256 18173 POLICY public courses courses_owner_insert ssyan110
+4340; 3256 18172 POLICY public courses courses_owner_select ssyan110
+4342; 3256 18174 POLICY public courses courses_owner_update ssyan110
+4322; 0 17986 ROW SECURITY public enrollments ssyan110
+4352; 3256 18183 POLICY public enrollments enrollments_owner_delete ssyan110
+4349; 3256 18181 POLICY public enrollments enrollments_owner_insert ssyan110
+4348; 3256 18180 POLICY public enrollments enrollments_owner_select ssyan110
+4351; 3256 18182 POLICY public enrollments enrollments_owner_update ssyan110
+4326; 0 18111 ROW SECURITY public followups ssyan110
+4372; 3256 18199 POLICY public followups followups_owner_delete ssyan110
+4369; 3256 18197 POLICY public followups followups_owner_insert ssyan110
+4368; 3256 18196 POLICY public followups followups_owner_select ssyan110
+4371; 3256 18198 POLICY public followups followups_owner_update ssyan110
+4332; 0 18471 ROW SECURITY public interact_responses ssyan110
+4331; 0 18459 ROW SECURITY public interact_rooms ssyan110
+4327; 0 18204 ROW SECURITY public learning_events ssyan110
+4374; 3256 18245 POLICY public learning_events learning_events_insert ssyan110
+4373; 3256 18244 POLICY public learning_events learning_events_read ssyan110
+4376; 3256 18246 POLICY public learning_events learning_events_update ssyan110
+4370; 3256 18452 POLICY public student_notes notes_insert ssyan110
+4365; 3256 18451 POLICY public student_notes notes_read ssyan110
+4325; 0 18080 ROW SECURITY public observation_records ssyan110
+4367; 3256 18195 POLICY public observation_records observations_owner_delete ssyan110
+4364; 3256 18193 POLICY public observation_records observations_owner_insert ssyan110
+4363; 3256 18192 POLICY public observation_records observations_owner_select ssyan110
+4366; 3256 18194 POLICY public observation_records observations_owner_update ssyan110
+4329; 0 18303 ROW SECURITY public randomizer_attempts ssyan110
+4381; 3256 18368 POLICY public randomizer_attempts randomizer_attempts_owner_delete ssyan110
+4360; 3256 18366 POLICY public randomizer_attempts randomizer_attempts_owner_insert ssyan110
+4355; 3256 18365 POLICY public randomizer_attempts randomizer_attempts_owner_select ssyan110
+4380; 3256 18367 POLICY public randomizer_attempts randomizer_attempts_owner_update ssyan110
+4328; 0 18260 ROW SECURITY public randomizer_sessions ssyan110
+4350; 3256 18364 POLICY public randomizer_sessions randomizer_sessions_owner_delete ssyan110
+4378; 3256 18362 POLICY public randomizer_sessions randomizer_sessions_owner_insert ssyan110
+4377; 3256 18361 POLICY public randomizer_sessions randomizer_sessions_owner_select ssyan110
+4379; 3256 18363 POLICY public randomizer_sessions randomizer_sessions_owner_update ssyan110
+4330; 0 18408 ROW SECURITY public student_notes ssyan110
+4321; 0 17960 ROW SECURITY public students ssyan110
+4347; 3256 18179 POLICY public students students_owner_delete ssyan110
+4345; 3256 18177 POLICY public students students_owner_insert ssyan110
+4344; 3256 18176 POLICY public students students_owner_select ssyan110
+4346; 3256 18178 POLICY public students students_owner_update ssyan110

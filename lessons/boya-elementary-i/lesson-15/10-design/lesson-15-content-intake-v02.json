@@ -1,0 +1,34 @@
+{
+  "status": "review-draft-not-approved",
+  "offering_id": "2026-fall",
+  "lesson_key": "boya-elementary-i:lesson-15",
+  "current_copy": "lessons/boya-elementary-i/lesson-15/10-design/storyboard/lesson-15-逐页文案审阅-v02.md",
+  "current_teacher_material": "lessons/boya-elementary-i/lesson-15/10-design/lesson-15-教师朗读与评量稿-v02.md",
+  "supersedes": [
+    "storyboard/lesson-15-逐页文案审阅-v01.md",
+    "lesson-15-教师朗读与评量稿-v01.md"
+  ],
+  "page_count": 14,
+  "sequence": [
+    "teacher listening and keyword reports",
+    "oral activities",
+    "six-panel individual stories",
+    "integrated review and brief assessment"
+  ],
+  "session_minutes": [
+    50,
+    50,
+    50,
+    50
+  ],
+  "checks": {
+    "page_numbers_contiguous": true,
+    "listening_before_oral_before_comics": true,
+    "two_complete_teacher_stories": true,
+    "reader_review": "Teacher execution and student action desk review; no classroom testing"
+  },
+  "hashes": {
+    "lessons/boya-elementary-i/lesson-15/10-design/storyboard/lesson-15-逐页文案审阅-v02.md": "b43e776e6a4929c7e5ff93dd22e3935dcd67a5e9e3c67394eea573020320f945",
+    "lessons/boya-elementary-i/lesson-15/10-design/lesson-15-教师朗读与评量稿-v02.md": "826294a68d2705b1a6b9de89444314407d08dd7a4b95876333db381285d0b6c7"
+  }
+}

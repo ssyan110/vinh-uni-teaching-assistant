@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "pages": 15,
+  "errors": [],
+  "issues": [
+    {
+      "page": 7,
+      "id": "w09-l04-l05-page-07",
+      "issues": [
+        {
+          "kind": "orphan-line",
+          "text": "解释",
+          "block": "周四 19:00—19:30\n两人聊天、互相提问；可请对方解释"
+        },
+        {
+          "kind": "orphan-line",
+          "text": "说。",
+          "block": "两人商量：为小安选两项合适的练习，安排在她有空的时间，并说明为什么。每个人都要说。"
+        }
+      ]
+    },
+    {
+      "page": 11,
+      "id": "w09-l04-l05-page-11",
+      "issues": [
+        {
+          "kind": "footer-clearance",
+          "footer_top": 1009,
+          "content_bottom": 1070.766,
+          "gap": -61.766,
+          "required": 64
+        }
+      ]
+    }
+  ],
+  "negative": [
+    {
+      "name": "footer-clearance",
+      "pass": true,
+      "expected_issue": "footer-clearance",
+      "observed_issues": [
+        "footer-clearance"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "orphan-line",
+      "pass": true,
+      "expected_issue": "orphan-line",
+      "observed_issues": [
+        "orphan-line"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "arbitrary-offcanvas-content",
+      "pass": true,
+      "expected_issue": "canvas-bounds",
+      "observed_issues": [
+        "canvas-bounds",
+        "body-bounds"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "arbitrary-offcanvas-painted-box",
+      "pass": true,
+      "expected_issue": "canvas-bounds",
+      "observed_issues": [
+        "canvas-bounds",
+        "body-bounds"
+      ],
+      "painted_box_count": 1
+    },
+    {
+      "name": "tiny-critical-text",
+      "pass": true,
+      "expected_issue": "font-size",
+      "observed_issues": [
+        "font-size"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "transformed-tiny-critical-text",
+      "pass": true,
+      "expected_issue": "font-size",
+      "observed_issues": [
+        "font-size"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "wrong-font-family",
+      "pass": true,
+      "expected_issue": "font-family",
+      "observed_issues": [
+        "font-family"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "missing-footer",
+      "pass": true,
+      "expected_issue": "missing-footer",
+      "observed_issues": [
+        "missing-footer",
+        "incomplete-coverage",
+        "missing-structure"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "missing-required-structure",
+      "pass": true,
+      "expected_issue": "missing-structure",
+      "observed_issues": [
+        "missing-structure"
+      ],
+      "painted_box_count": 0
+    }
+  ]
+}

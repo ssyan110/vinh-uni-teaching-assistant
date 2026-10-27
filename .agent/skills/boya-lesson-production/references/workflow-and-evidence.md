@@ -15,12 +15,12 @@ finalized-pptx 唯讀 intake 依 AGENTS 的優先例外直接抽取 package 與 
 - release builder 只能讀 `20-approved/`，不得在 `40-release/` 重新生成教案、活動卡或 PPTX；不使用 `share`、`share 2`、`share 3` 作為工作流程目錄。
 - 活動卡只交付 DOCX；可在 10-design 渲染內部 QA preview PDF，但不交付或放入 release，也不建立「可编辑原稿」中間層。
 - dashboard 必須由 `course/lesson-registry.json` 與目前 `lesson_key` 對應的 lesson manifest 共同產生；歷史材料統一放在 `archive/`，不進入新的生產流程。
-- 任何 generator 開始寫檔前都必須執行 `python3 scripts/production_gate.py`。教師手冊、配套、prototype、semester manual、authority PPTX 與 release 使用 authority gate；PPTX 草稿使用 `--purpose pptx --stage draft --lesson-key <textbook_id>:<lesson_id> --output-dir <draft-dir>`。草稿 gate 核對本課明確內容批准、身份、來源、邊界與輸出範圍，不授予 authority；完整 authority／release 仍有其他批准輸入及 rehearsal gate。
+- 任何 generator 開始寫檔前都必須執行 `python3 scripts/production_gate.py`。教師手冊、配套、prototype、semester manual、authority PPTX 與 release 使用 authority gate；PPTX 草稿使用 `--purpose pptx --stage draft --lesson-key <textbook_id>:<lesson_id> --output-dir <draft-dir>`。草稿 gate 核對本版本明確內容批准、身份、來源與輸出範圍，不授予 authority；正式批准與發布依各版本適用要求記錄；未要求的實體試教不視為通過。
 
 ### 統一提交檔案命名（2026-08-29）
 
 - 面向 Adam 的課次交付檔案（PPTX、DOCX、PDF、音檔、CSV、ZIP）一律使用 `lesson-<nn>-<用途>.<副檔名>`；`<nn>` 固定兩位數，使用半形 `-` 分隔，副檔名小寫。
-- 兩份課堂 PPTX 的 canonical 名稱格式是 `lesson-<nn>-在线预习.pptx` 與 `lesson-<nn>-实体课.pptx`。教師手冊、預習卡、活動材料、預覽、音檔與教材包也沿用 `lesson-<nn>-<用途>` 前綴。
+- 線上預習 PPTX 的名稱是 `lesson-<nn>-在线预习.pptx`；實體課使用 OpenSlide。歷史實體 PPTX 僅用於明確授權的既有檔案維護。教師手冊、預習卡、活動材料、預覽、音檔與教材包也沿用 `lesson-<nn>-<用途>` 前綴。
 - 提交前不得保留 `第一課`／`第一课`、`online`／`face-to-face`、空格、底線、日期或重複 `final`；版本與 hash 由 manifest／QA／release 紀錄管理。內部 draft 可暫加 `-draft-vNN`，提交時要改回 canonical 名稱。
 - schema 固定檔名、出版社／第三方來源檔名和歷史 archive 保留原名；既有 approved／release 不追溯改名，會改變 authority 路徑或 hash 時必須先取得 Adam 明確批准。
 
@@ -45,28 +45,16 @@ finalized-pptx 唯讀 intake 依 AGENTS 的優先例外直接抽取 package 與 
 4. 加入課前預習、group activities、supplemental activities、回饋與重做。
 5. 等待教師／Adam 明確批准。
 
-### Gate C：內容契約、教師手冊、配套與 PPT
+### Gate C：各版本內容、材料與製作
 
-1. 建立本課 content contract：把 canonical source 的每個詞語、句式、課文、音檔、練習與綜合任務建立穩定 `content_id`，記錄初步線上／實體分流；練習數量依本課 source package，不套用其他課次的固定總數。
-2. 先由 Adam 與 AI 確認初步線上／實體分流，再完成教師手冊內容母版：課堂目標、最終任務、該課核准實體課時流程、教材區段、練習 coverage、音檔、分組活動、學生產出、教師提示、即時修補、答案政策、評量與備案。各教材第一課之後的新課必須保存這項邊界確認；已鎖定第一課不因本流程回改。
-3. 教師手冊審核與批准；教師手冊是本課內容的 source of truth，不能在 PPT 完成後才補寫。
-4. 依批准的教師手冊規格化預習卡、角色卡、資訊站卡、調查表、rubric、exit ticket 與其他補充活動材料；材料不能偷偷增加新教學決定。
-5. 教師手冊與配套確認後，完成逐項線上／實體 routing record，保存含日期、版本、雙方確認、handoff evidence 的記錄；後續課次的 draft 只有在來源包、邊界確認及具體逐頁內容批准通過後才可建立，但完整逐頁 authority 規格仍以教師手冊與配套為準。
-6. 依 `scripts/lesson_pptx_master_template.js` 與 `scripts/boya_design_system.json` 的共用 token 建立半固定課次骨架，再依教師手冊、學生配套與已批准邊界建立完整逐頁生產規格。每頁必填唯一 slide ID、deck、module ID、module instance、step、順序、section、學習目的、學生唯一動作、來源與原文、學生可見文字、教材頁碼、音檔、材料、學生產出、互動方式、speaker notes、`layout_id`、文字容量、圖片功能與授權、前後頁關係和驗收狀態。普通課次沿用共用 engine 與第一課 layout family，只按教材增減重複頁；字段未完成或學生文字未定稿，不得生成完整 PPTX。線上／實體分流必須先有該課 boundary confirmation record；補記錄不回改已批准 PPTX。
-7. 建立 Visual storyboard／版式映射。普通課次把每張 slide 映射到共用 design system 與已批准的第一課 layout family，並記錄文字上限、圖片功能、素材來源與授權。
-8. 線上／指定歷史原生 PPTX 完整生產先製作並審核 6 張視覺 prototype；實體 HTML 與靜態備份依實體課標準逐頁 QA，不新增六張風格 prototype。所有新視覺仍先通過具體逐頁內容批准。
-9. 圖片 worker 派發、素材納入、prototype 及 PPTX 生產均先依 canonical contract 通過本課 `content-approval` 檢查。未有具體逐頁內容的明確批准，停在文案审阅，不因 draft 例外而生成。批准後依所選格式與相應gate製作：實體課HTML按2026-10-07標準；線上或所需備份才生成原生PPTX，加入 speaker notes、來源對應的右上角不可點擊純文字 `Audio n-n` 與必要提示；不嵌入音檔，不加入播放按鈕或可播放音頻連結，標示不用紫色。課次 generator 不得自帶色票、字體或整體版式。準中級第 2、3 課使用 `scripts/build_l23_pptx_drafts.js`，只寫明確 `lesson_key` 的 `10-design/pptx-draft/<mode>/`。
-10. 保持學生主畫面不含內部備課資訊；所有投影片與學生材料必須能回溯到已批准的教師手冊。Draft PPTX 完成後，依 current storyboard 的 `source_refs` 與 canonical source 加入教材頁碼標記；不要在未記錄 `source_refs` 時猜測頁碼。
+1. 依教材與課表核對本次使用的來源、頁碼和音軌並記錄；線上預習可在學期前批次準備，實體活動依實際進度於上課前約一個月至一週設計。
+2. 編寫該學期、班級及版本的逐頁審閱稿和必要教師材料；生成圖片、prototype、PPTX 或 OpenSlide 前，依 canonical contract 綁定來源核對報告、審閱稿及 Adam 的真實明確批准。跨課內容按每課分別綁定。
+3. 依用途製作線上原生 PPTX 或實體 OpenSlide；線上保留來源對應的右上角純文字 `Audio n-n`，不嵌入音檔或播放控制。學生畫面保留完整任務指令，教師材料能執行相應活動。
+4. 依各版本完成來源、學生可讀性、頁面、素材、技術和所需使用方式 QA，再取得成品批准及發布授權。其他課的正式發布不是前置條件。舊 L2–L3 生成器不支持新的版本專屬線上批准，不得用來生成新版本。
 
 ### Gate D：QA
 
-1. 來源忠實度與簡體字核對。
-2. 該課 canonical source 全部練習與所有活動 coverage 核對。
-3. 核對每頁 `Audio n-n` 與來源音軌，確認 PPT 沒有音檔、播放按鈕或可播放音頻連結；PPT 外的音檔按已登記方式逐一播放，來源／解碼／語義／實播狀態分開記錄。
-4. PPTX 開啟、編輯、投影與列印測試。
-5. 檢查文字溢出、低文字密度、字體大小、對比、圖片主體、素材授權、拼音與全中文指示。
-6. 檢查該課核准實體課時的時間與轉場。
-7. 教師 rehearsal 或課堂測試後記錄修訂。
+依格式核對來源、教材頁碼、音軌、可讀性、內容及素材；實體課逐頁渲染並從 OpenSlide 首頁驗證。教師試教與音響測試未要求時記為未要求；若實際執行，保留真實結果。線上來源音檔依其交付要求核對。技術通過不是人工批准。
 
 ### Gate D 的 PPTX 專項檢查
 

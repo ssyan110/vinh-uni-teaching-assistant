@@ -513,11 +513,22 @@ function audioTrackLabels(lesson) {
 }
 
 function runDraftGate(lesson, outputDir) {
+  const args = process.argv.slice(2);
+  if (args.includes('--approval-record') || args.includes('--artifact-id') || args.includes('--class-scope')) {
+    throw new Error('This legacy L2/L3 builder cannot consume scoped online copy; use a generator that validates the approved artifact-specific inputs.');
+  }
+  const registry = JSON.parse(fs.readFileSync(path.join(ROOT, 'course/lesson-registry.json'), 'utf8'));
+  const entries = registry.lessons.filter((entry) => entry.lesson_key === lesson.lessonKey);
+  if (entries.length !== 1) throw new Error('Lesson identity must resolve uniquely');
+  const index = args.indexOf('--offering-id');
+  const offering = index < 0 && entries[0].offering_ids.length === 1 ? entries[0].offering_ids[0] : args[index + 1];
+  if (!offering || !entries[0].offering_ids.includes(offering)) throw new Error('An exact registered --offering-id is required');
   execFileSync(PYTHON, [
     path.join(ROOT, 'scripts/production_gate.py'),
     '--purpose', 'pptx',
     '--stage', 'draft',
     '--lesson-key', lesson.lessonKey,
+    '--offering-id', offering,
     '--output-dir', outputDir
   ], { stdio: 'inherit' });
 }
@@ -1620,6 +1631,9 @@ function buildOnline(lesson) {
   assertExampleVariety(lesson);
   const outputDir = path.join(lesson.outputRoot, 'online');
   runDraftGate(lesson, lesson.outputRoot);
+  if (fs.existsSync(path.join(outputDir, `lesson-${String(lesson.number).padStart(2, '0')}-在线预习.pptx`)) || fs.existsSync(path.join(outputDir, 'manifest.json'))) {
+    throw new Error('Existing online draft or manifest must not be overwritten; use a new versioned production route.');
+  }
   fs.mkdirSync(outputDir, { recursive: true });
   const pptx = new PptxGenJS();
   pptx.layout = 'LAYOUT_WIDE';

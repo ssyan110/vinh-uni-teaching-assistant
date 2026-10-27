@@ -1,0 +1,106 @@
+{
+  "assessment_id": "W08-L16L17-20261023",
+  "status": "DRAFT_FORM_READBACK_VERIFIED",
+  "sections": [
+    {
+      "id": "w08-g01",
+      "title": "第1–3题｜第16课课本听力｜Audio 16-12",
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "question_start": 1,
+      "question_end": 3,
+      "audio_ids": [
+        "16-12"
+      ],
+      "form_item_id": "52b67c50"
+    },
+    {
+      "id": "w08-g02",
+      "title": "第4–6题｜第16课课本听力｜Audio 16-13",
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "question_start": 4,
+      "question_end": 6,
+      "audio_ids": [
+        "16-13"
+      ],
+      "form_item_id": "09a9e77b"
+    },
+    {
+      "id": "w08-g03",
+      "title": "第7–9题｜第16课课本听力｜Audio 16-11",
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "question_start": 7,
+      "question_end": 9,
+      "audio_ids": [
+        "16-11"
+      ],
+      "form_item_id": "56907bca"
+    },
+    {
+      "id": "w08-g04",
+      "title": "第10–12题｜第17课课本听力｜Audio 17-10",
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "question_start": 10,
+      "question_end": 12,
+      "audio_ids": [
+        "17-10"
+      ],
+      "form_item_id": "2eeac2a3"
+    },
+    {
+      "id": "w08-g05",
+      "title": "第13–15题｜第17课课本听力｜Audio 17-11",
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "question_start": 13,
+      "question_end": 15,
+      "audio_ids": [
+        "17-11"
+      ],
+      "form_item_id": "3d804b7c"
+    },
+    {
+      "id": "w08-g06",
+      "title": "第16–18题｜第17课课本听力｜Audio 17-12",
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "question_start": 16,
+      "question_end": 18,
+      "audio_ids": [
+        "17-12"
+      ],
+      "form_item_id": "4e3300d2"
+    },
+    {
+      "id": "w08-g07",
+      "title": "第19–20题｜TOCFL官方录音｜Audio TOCFL-A3-Q27",
+      "description": "先看本组题目，再听录音。录音播放两遍。词语提示：医院＝看病的地方；火车站＝坐火车的地方。",
+      "question_start": 19,
+      "question_end": 20,
+      "audio_ids": [
+        "TOCFL-A3-Q27"
+      ],
+      "form_item_id": "0ea7c705"
+    },
+    {
+      "id": "w08-g08",
+      "title": "第21–22题｜TOCFL官方录音｜Audio TOCFL-A3-Q20",
+      "description": "先看本组题目，再听录音。录音播放两遍。词语提示：火车站＝坐火车的地方；经过＝从那里走过；百货公司＝买东西的地方。",
+      "question_start": 21,
+      "question_end": 22,
+      "audio_ids": [
+        "TOCFL-A3-Q20"
+      ],
+      "form_item_id": "63312e94"
+    },
+    {
+      "id": "w08-g09",
+      "title": "第23–25题｜TOCFL官方录音｜Audio TOCFL-A3-Q38",
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "question_start": 23,
+      "question_end": 25,
+      "audio_ids": [
+        "TOCFL-A3-Q38"
+      ],
+      "form_item_id": "0bcfc94f"
+    }
+  ],
+  "form_id": "14BRT3qo2WTu2EZ5o-2hnQr_9vG8LA-0WRM5y0oYVWFE"
+}

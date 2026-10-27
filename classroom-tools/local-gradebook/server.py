@@ -1,5 +1,6 @@
 """Single-teacher, authenticated LAN gradebook. SQLite + local JSON recovery snapshots."""
 import argparse
+import base64
 import feedback
 import io
 import json
@@ -12,6 +13,7 @@ import ipaddress
 from http.cookies import SimpleCookie
 import sqlite3
 import uuid
+import qrcode
 from datetime import datetime, date
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from pathlib import Path
@@ -361,7 +363,14 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(value)
 
     def allowed(self):
-        return self.headers.get('Host') in self.server.allowed_hosts
+        # Resolve the active interface on each request: DHCP, Wi-Fi changes and
+        # waking offline must not leave a startup-only allowlist behind.
+        port = self.server.server_port
+        hosts = {f'127.0.0.1:{port}', f'localhost:{port}'}
+        address = lan_address()
+        if address:
+            hosts.add(f'{address}:{port}')
+        return self.headers.get('Host') in hosts
 
     def local(self):
         return ipaddress.ip_address(self.client_address[0]).is_loopback
@@ -400,9 +409,12 @@ class Handler(BaseHTTPRequestHandler):
                 if not self.local():
                     return self.send(403, {'error': '请在电脑上查看手机入口'})
                 address = lan_address()
-                if not address or f'{address}:{self.server.server_port}' not in self.server.allowed_hosts:
-                    raise ValueError('网络地址已变化或尚未连接网络，请重新启动教师评分。')
-                return self.send(200, {'url': f'http://{address}:{self.server.server_port}/connect?key={self.server.access_key}'})
+                if not address:
+                    raise ValueError('电脑尚未连接局域网。请连接 Wi-Fi 或手机热点后，再点击“手机评分”；无需重启。')
+                mobile_url = f'http://{address}:{self.server.server_port}/connect?key={self.server.access_key}'
+                qr_image = io.BytesIO()
+                qrcode.make(mobile_url).save(qr_image, format='PNG')
+                return self.send(200, {'url': mobile_url, 'qr': 'data:image/png;base64,' + base64.b64encode(qr_image.getvalue()).decode('ascii')})
             if url.path == '/api/health':
                 return self.send(200, {'ok': True, 'service': 'vinh-local-gradebook'})
             if url.path == '/api/catalog':
@@ -494,10 +506,6 @@ def main():
         parser.error('资料目录必须在本 App 文件夹内')
     store = Store(args.data_dir)
     server = HTTPServer(('0.0.0.0', args.port), Handler)
-    address = lan_address()
-    server.allowed_hosts = {f'127.0.0.1:{args.port}', f'localhost:{args.port}'}
-    if address:
-        server.allowed_hosts.add(f'{address}:{args.port}')
     server.store = store
     server.token = secrets.token_urlsafe(32)
     server.access_key = secrets.token_urlsafe(32)

@@ -14,6 +14,14 @@ KEY = 'boya-quasi-intermediate-i:lesson-10'
 
 
 class LessonctlSafetyTests(unittest.TestCase):
+    def test_missing_historical_files_identifies_new_classroom_route(self):
+        with tempfile.TemporaryDirectory() as temp:
+            result = lessonctl.finalized_preflight(KEY, Path(temp))
+            self.assertEqual(result['status'], 'blocked')
+            self.assertEqual(result['route_scope'], 'historical-finalized-pptx-intake')
+            self.assertIn('classroom-html', result['guidance'])
+            self.assertIn('only for this historical intake', result['guidance'])
+
     def test_duplicate_preflight_is_structured_blocker(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

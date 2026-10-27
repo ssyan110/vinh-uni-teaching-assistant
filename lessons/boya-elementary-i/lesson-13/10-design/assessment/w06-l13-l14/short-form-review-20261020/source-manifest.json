@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "variant_id": "W06-L13L14-10Q-20261020",
+  "exam_id": "W06-L13L14-20261016",
+  "status": "REVIEW_DRAFT_ONLY_NOT_APPROVED_NOT_SYNCED",
+  "parent_version": 2,
+  "parent_directory": "lessons/boya-elementary-i/lesson-13/10-design/assessment/w06-l13-l14",
+  "question_count": 10,
+  "points": 40,
+  "audio_group_count": 8,
+  "source_question_numbers_v2": [
+    2,
+    5,
+    8,
+    10,
+    12,
+    14,
+    17,
+    18,
+    20,
+    24
+  ],
+  "lesson_keys": [
+    "boya-elementary-i:lesson-13",
+    "boya-elementary-i:lesson-14"
+  ],
+  "source_files": {
+    "items.json": "8ff4c9aa6ca04cec666d2a46cd1038fd4a3e386a9a62abea90e36dea3fce06ca",
+    "audio-manifest.json": "b8694f98d9bfcfe0d70cb916710f24718ee499866e729b3965e8f6d283eda0b7"
+  },
+  "audio_groups": [
+    {
+      "audio_id": "13-9",
+      "file": "audio/13-9-exam.wav",
+      "sha256": "d3deb69d9a225b7cf0a5fc86784dc4ff21ce2a257e80ec8563615ec80644c238"
+    },
+    {
+      "audio_id": "13-10",
+      "file": "audio/13-10-exam.wav",
+      "sha256": "e9035a6e3b823b346edd2addc5021781eae73b369a505c7cd490a7fafacbaf90"
+    },
+    {
+      "audio_id": "14-9",
+      "file": "audio/14-9-exam.wav",
+      "sha256": "2e5a88085d704cc04842a649b2d551975224fada33dff72f2c3247721547cfbd"
+    },
+    {
+      "audio_id": "14-10",
+      "file": "audio/14-10-exam.wav",
+      "sha256": "37e608cc5dfb9b735f8ed6fd88a681f56ed79f7c7d58a6c5663e896632778da1"
+    },
+    {
+      "audio_id": "14-11",
+      "file": "audio/14-11-exam.wav",
+      "sha256": "d0bf569ee1209e05161cf3e3fe075b20486ca3ba1f984cb3026fff376b8d57d2"
+    },
+    {
+      "audio_id": "TOCFL-A4-Q23",
+      "file": "audio/TOCFL-A4-Q23.mp3",
+      "sha256": "5c44dcb3f57c1628a823c6097881a549f9078e879fdd6c2aed14499a91257b4d"
+    },
+    {
+      "audio_id": "TOCFL-A4-Q26",
+      "file": "audio/TOCFL-A4-Q26.mp3",
+      "sha256": "7792d765fd082a7376c5993dc45f7e9e5e7157ceb099751b79c5b405a4bffffa"
+    },
+    {
+      "audio_id": "TOCFL-A5-Q37",
+      "file": "audio/TOCFL-A5-Q37.mp3",
+      "sha256": "abfae89b160d9d5c9da7fa8f081581aeb28099b95736d1e58a068899098df306"
+    }
+  ]
+}

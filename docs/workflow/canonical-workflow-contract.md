@@ -120,28 +120,23 @@ online/face boundary confirmation authorize preparation, not content approval.
 The later-lesson draft exception relaxes teacher-guide completion only; it never
 waives this prerequisite. Source inspection and review-copy drafting remain allowed.
 
-Store the decision in `10-design/storyboard/<lesson_id>-content-approval.json`:
-`status` must equal `approved`, `gate` must equal `lesson-content`, with exact
-`lesson_key`, `offering_id`, named `approved_by`, timezone-aware `approved_at`,
-`artifacts` containing project-relative `path` and `sha256` for the canonical
-source and `<lesson_id>-逐页文案审阅.md` (and any additional approved inputs),
-plus a separate `evidence` file and `evidence_sha256` containing the user's actual
-explicit decision and the version it refers to. Pending records have no approver
-or approval evidence. Do not write an inferred decision as a user quotation.
+New work stores a separate decision under each lesson's `10-design/approvals/`. The JSON has `status: approved`, `gate: artifact-content`, `lesson_key`, `offering_id`, `artifact_scope` (`online` or `classroom`), `artifact_id`, `class_scope`, named `approved_by` and timezone-aware `approved_at`. `source_path`, `review_path` and `source_check_path` identify the actual source or lesson-local source snapshot, the concrete reviewed copy and a nonempty source-check report. All three must appear with their SHA-256 in `artifacts`; include other inputs relied on by the version. `evidence` and `evidence_sha256` point to the actual explicit user decision. One real decision can cover multiple specified artifacts, but create a separate scoped record for each lesson and version; do not invent a decision.
 
-Use `production_gate.py --purpose content-approval --lesson-key KEY` before image
-worker dispatch and asset promotion; draft and authority PPTX/prototype gates
-call the same check. Missing, pending, malformed, cross-lesson, unsafe or changed
-records fail closed. Hash validation cannot authenticate a human statement: the
-agent must verify the actual user message, and never manufacture evidence.
-No approval is granted by a passing gate. Finalized-PPTX read-only intake remains
-unchanged; historical decks are not rewritten to satisfy this new prerequisite.
+Before producing images, prototypes or a deck, run `production_gate.py --purpose content-approval --lesson-key KEY --offering-id OFFERING --approval-record PATH --artifact-scope online|classroom --artifact-id ID --class-scope CLASS`. Pass the same scope to the corresponding draft gate; online output is `10-design/pptx-draft/online/<offering>/<artifact-id>/`, classroom output is `10-design/open-slide-draft/<offering>/<artifact-id>/`. Source or copy changes invalidate only the records bound to changed files. Missing, unsafe, cross-scope or changed inputs fail closed. A hash verifies bytes, not the authenticity or pedagogical correctness of the decision: inspect the actual user message and source.
+
+The earlier `10-design/storyboard/<lesson_id>-content-approval.json` with `gate: lesson-content` is retained for existing artifacts and legacy compatibility; it cannot authorize new registered classroom decks or new scoped versions. Finalized-PPTX read-only intake remains unchanged. No gate creates human approval.
+
+Online PPTX versioned generation, QA, formal approval and immutable release follow `docs/workflow/online-pptx-lifecycle.md`. Each is independent of classroom production; source and actual audio playback requirements still apply to online content.
 
 Classroom HTML follows `docs/workflow/classroom-html-lifecycle.md`. Its implemented
 `production_gate.py --purpose classroom-html --stage draft` route validates
-approved inputs and the declared draft output only. Formal HTML promotion/release
-is still unsupported; neither homepage sync nor the PPTX release writer fills
-that gap. Requested draft completion and formal release are distinct outcomes.
+approved inputs and the declared draft output only. Registered HTML decks use
+`scripts/classroom_release.py` for separately authorized promotion, release and
+verification, as documented in the classroom HTML lifecycle. Homepage sync and
+the legacy PPTX release writer do not approve or publish an HTML deck. Requested
+draft completion and formal release remain distinct outcomes.
+
+The earlier `future-semester-workflow-audit-2026-10-27.md` is a preserved point-in-time audit; the implementation and verification follow-up is `future-semester-workflow-implementation-2026-10-27.md`.
 
 ## Rule maintenance
 

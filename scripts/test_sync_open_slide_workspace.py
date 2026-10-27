@@ -1,9 +1,19 @@
 """Bounded checks for registered classroom-page discovery."""
 import unittest
-from sync_open_slide_workspace import adapt_html, page_count
+from sync_open_slide_workspace import adapt_html, page_count, select_decks
 
 
 class PageDiscoveryTest(unittest.TestCase):
+    def test_scoped_sync_requires_one_registered_target_and_preserves_inventory(self):
+        decks = [{'id': 'target'}, {'id': 'other'}]
+        self.assertEqual(select_decks(decks, 'target'), [decks[0]])
+        self.assertIs(select_decks(decks), decks)
+        self.assertEqual(len(decks), 2)
+        with self.assertRaises(ValueError):
+            select_decks(decks, 'missing')
+        with self.assertRaises(ValueError):
+            select_decks([{'id': 'target'}, {'id': 'target'}], 'target')
+
     def test_entry_waits_for_assets_and_thumbnail_motion_is_frozen(self):
         source = '<head></head><body><script>fit();\n  go(0);\n</script></body>'
         result = adapt_html(source)

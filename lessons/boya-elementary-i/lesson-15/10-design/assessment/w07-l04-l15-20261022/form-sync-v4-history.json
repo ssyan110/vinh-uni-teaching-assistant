@@ -1,0 +1,26 @@
+{
+  "exam_id": "W07-L04L15-20261022",
+  "status": "SYNCED_VERIFIED_PUBLISHED",
+  "question_version": 4,
+  "version_directory": "",
+  "form_id": "1JTpDoiHrtX0nf8w_bcfWFrR7uGgWO8kVUc_IW-FGNNQ",
+  "question_count": 50,
+  "points": 100,
+  "question_bank_sha256": "eb93970d033b28329f35e06b41457fd05fd00c08d509c45cf3b72be16e0ac7d5",
+  "form_evidence": ".agent/runs/w07-difficulty-reorder-20261023/verification.json",
+  "sheet_evidence": ".agent/runs/w07-difficulty-reorder-20261023/verification.json",
+  "publication_authorized": true,
+  "synced_at": "2026-10-23T15:17:43.248430+07:00",
+  "content_approved": true,
+  "previous_readback_stale": false,
+  "previous_readback_revision": null,
+  "pending": [
+    "teacher full listening",
+    "classroom speaker acceptance"
+  ],
+  "audio_dashboard_browser_opened_tracks": 49,
+  "audio_dashboard_browser_decode_errors": 0,
+  "publication_evidence": ".agent/runs/w06-w07-publication-20261025/final-verification.json",
+  "published_at": "2026-10-25T18:30:02+07:00",
+  "accepting_responses": true
+}

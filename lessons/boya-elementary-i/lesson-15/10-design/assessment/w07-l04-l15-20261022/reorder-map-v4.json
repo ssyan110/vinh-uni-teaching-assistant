@@ -1,0 +1,306 @@
+{
+  "exam_id": "W07-L04L15-20261022",
+  "version": 4,
+  "mapping": [
+    {
+      "old_number": 40,
+      "new_number": 1,
+      "question_id": "W07-L04L15-03-40",
+      "audio_id": "TOCFL-N-Q00799500"
+    },
+    {
+      "old_number": 41,
+      "new_number": 2,
+      "question_id": "W07-L04L15-03-41",
+      "audio_id": "TOCFL-N-Q00799600"
+    },
+    {
+      "old_number": 42,
+      "new_number": 3,
+      "question_id": "W07-L04L15-03-42",
+      "audio_id": "TOCFL-N-Q00799700"
+    },
+    {
+      "old_number": 43,
+      "new_number": 4,
+      "question_id": "W07-L04L15-03-43",
+      "audio_id": "TOCFL-N-Q00799800"
+    },
+    {
+      "old_number": 44,
+      "new_number": 5,
+      "question_id": "W07-L04L15-03-44",
+      "audio_id": "TOCFL-N-Q00799900"
+    },
+    {
+      "old_number": 45,
+      "new_number": 6,
+      "question_id": "W07-L04L15-03-45",
+      "audio_id": "TOCFL-N-Q01025800"
+    },
+    {
+      "old_number": 46,
+      "new_number": 7,
+      "question_id": "W07-L04L15-03-46",
+      "audio_id": "TOCFL-N-Q01026000"
+    },
+    {
+      "old_number": 47,
+      "new_number": 8,
+      "question_id": "W07-L04L15-03-47",
+      "audio_id": "TOCFL-N-Q01026100"
+    },
+    {
+      "old_number": 1,
+      "new_number": 9,
+      "question_id": "W07-L04L15-01-01",
+      "audio_id": "TOCFL-A4-Q01"
+    },
+    {
+      "old_number": 2,
+      "new_number": 10,
+      "question_id": "W07-L04L15-01-02",
+      "audio_id": "TOCFL-A4-Q06"
+    },
+    {
+      "old_number": 3,
+      "new_number": 11,
+      "question_id": "W07-L04L15-01-03",
+      "audio_id": "TOCFL-A4-Q07"
+    },
+    {
+      "old_number": 4,
+      "new_number": 12,
+      "question_id": "W07-L04L15-01-04",
+      "audio_id": "TOCFL-A4-Q08"
+    },
+    {
+      "old_number": 26,
+      "new_number": 13,
+      "question_id": "W07-L04L15-01-26",
+      "audio_id": "TOCFL-A5-Q01"
+    },
+    {
+      "old_number": 27,
+      "new_number": 14,
+      "question_id": "W07-L04L15-01-27",
+      "audio_id": "TOCFL-A5-Q02"
+    },
+    {
+      "old_number": 28,
+      "new_number": 15,
+      "question_id": "W07-L04L15-01-28",
+      "audio_id": "TOCFL-A5-Q03"
+    },
+    {
+      "old_number": 29,
+      "new_number": 16,
+      "question_id": "W07-L04L15-01-29",
+      "audio_id": "TOCFL-A5-Q05"
+    },
+    {
+      "old_number": 30,
+      "new_number": 17,
+      "question_id": "W07-L04L15-01-30",
+      "audio_id": "TOCFL-A5-Q06"
+    },
+    {
+      "old_number": 31,
+      "new_number": 18,
+      "question_id": "W07-L04L15-01-31",
+      "audio_id": "TOCFL-A5-Q07"
+    },
+    {
+      "old_number": 32,
+      "new_number": 19,
+      "question_id": "W07-L04L15-01-32",
+      "audio_id": "TOCFL-A5-Q08"
+    },
+    {
+      "old_number": 33,
+      "new_number": 20,
+      "question_id": "W07-L04L15-01-33",
+      "audio_id": "TOCFL-A5-Q09"
+    },
+    {
+      "old_number": 5,
+      "new_number": 21,
+      "question_id": "W07-L04L15-01-05",
+      "audio_id": "TOCFL-A4-Q09"
+    },
+    {
+      "old_number": 6,
+      "new_number": 22,
+      "question_id": "W07-L04L15-01-06",
+      "audio_id": "TOCFL-A4-Q10"
+    },
+    {
+      "old_number": 7,
+      "new_number": 23,
+      "question_id": "W07-L04L15-01-07",
+      "audio_id": "TOCFL-A4-Q11"
+    },
+    {
+      "old_number": 8,
+      "new_number": 24,
+      "question_id": "W07-L04L15-01-08",
+      "audio_id": "TOCFL-A4-Q15"
+    },
+    {
+      "old_number": 10,
+      "new_number": 25,
+      "question_id": "W07-L04L15-01-10",
+      "audio_id": "TOCFL-A4-Q17"
+    },
+    {
+      "old_number": 11,
+      "new_number": 26,
+      "question_id": "W07-L04L15-01-11",
+      "audio_id": "TOCFL-A4-Q19"
+    },
+    {
+      "old_number": 14,
+      "new_number": 27,
+      "question_id": "W07-L04L15-01-14",
+      "audio_id": "TOCFL-A4-Q22"
+    },
+    {
+      "old_number": 15,
+      "new_number": 28,
+      "question_id": "W07-L04L15-01-15",
+      "audio_id": "TOCFL-A4-Q25"
+    },
+    {
+      "old_number": 16,
+      "new_number": 29,
+      "question_id": "W07-L04L15-01-16",
+      "audio_id": "TOCFL-A4-Q30"
+    },
+    {
+      "old_number": 17,
+      "new_number": 30,
+      "question_id": "W07-L04L15-01-17",
+      "audio_id": "TOCFL-A4-Q33"
+    },
+    {
+      "old_number": 18,
+      "new_number": 31,
+      "question_id": "W07-L04L15-01-18",
+      "audio_id": "TOCFL-A4-Q34"
+    },
+    {
+      "old_number": 34,
+      "new_number": 32,
+      "question_id": "W07-L04L15-01-34",
+      "audio_id": "TOCFL-A5-Q12"
+    },
+    {
+      "old_number": 36,
+      "new_number": 33,
+      "question_id": "W07-L04L15-01-36",
+      "audio_id": "TOCFL-A5-Q15"
+    },
+    {
+      "old_number": 38,
+      "new_number": 34,
+      "question_id": "W07-L04L15-01-38",
+      "audio_id": "TOCFL-A5-Q18"
+    },
+    {
+      "old_number": 39,
+      "new_number": 35,
+      "question_id": "W07-L04L15-01-39",
+      "audio_id": "TOCFL-A5-Q19"
+    },
+    {
+      "old_number": 48,
+      "new_number": 36,
+      "question_id": "W07-L04L15-03-48",
+      "audio_id": "TOCFL-A4-Q21"
+    },
+    {
+      "old_number": 49,
+      "new_number": 37,
+      "question_id": "W07-L04L15-03-49",
+      "audio_id": "TOCFL-A4-Q27"
+    },
+    {
+      "old_number": 50,
+      "new_number": 38,
+      "question_id": "W07-L04L15-03-50",
+      "audio_id": "TOCFL-A4-Q35"
+    },
+    {
+      "old_number": 35,
+      "new_number": 39,
+      "question_id": "W07-L04L15-01-35",
+      "audio_id": "TOCFL-A4-Q43"
+    },
+    {
+      "old_number": 12,
+      "new_number": 40,
+      "question_id": "W07-L04L15-02-12",
+      "audio_id": "BOYA-L15-15-11"
+    },
+    {
+      "old_number": 13,
+      "new_number": 41,
+      "question_id": "W07-L04L15-02-13",
+      "audio_id": "BOYA-L15-15-11"
+    },
+    {
+      "old_number": 9,
+      "new_number": 42,
+      "question_id": "W07-L04L15-01-09",
+      "audio_id": "TOCFL-A4-Q16"
+    },
+    {
+      "old_number": 19,
+      "new_number": 43,
+      "question_id": "W07-L04L15-01-19",
+      "audio_id": "TOCFL-A4-Q36"
+    },
+    {
+      "old_number": 20,
+      "new_number": 44,
+      "question_id": "W07-L04L15-01-20",
+      "audio_id": "TOCFL-A4-Q38"
+    },
+    {
+      "old_number": 21,
+      "new_number": 45,
+      "question_id": "W07-L04L15-01-21",
+      "audio_id": "TOCFL-A4-Q40"
+    },
+    {
+      "old_number": 23,
+      "new_number": 46,
+      "question_id": "W07-L04L15-01-23",
+      "audio_id": "TOCFL-A4-Q42"
+    },
+    {
+      "old_number": 24,
+      "new_number": 47,
+      "question_id": "W07-L04L15-01-24",
+      "audio_id": "TOCFL-A4-Q45"
+    },
+    {
+      "old_number": 25,
+      "new_number": 48,
+      "question_id": "W07-L04L15-01-25",
+      "audio_id": "TOCFL-A4-Q46"
+    },
+    {
+      "old_number": 22,
+      "new_number": 49,
+      "question_id": "W07-L04L15-01-22",
+      "audio_id": "TOCFL-A4-Q41"
+    },
+    {
+      "old_number": 37,
+      "new_number": 50,
+      "question_id": "W07-L04L15-01-37",
+      "audio_id": "TOCFL-A5-Q42"
+    }
+  ]
+}

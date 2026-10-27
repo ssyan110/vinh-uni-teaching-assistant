@@ -1,0 +1,185 @@
+{
+  "assessment_id": "W06-L13L14-20261016",
+  "version": 4,
+  "variant_id": "W06-L13L14-25Q-20261022",
+  "form_id": "1M33yrhHQHPAI2JE66VqO2nyuxNZQChUOwyWXIHGFnSU",
+  "status": "PREPARED_PENDING_SYNC",
+  "sections": [
+    {
+      "id": "w06-v4-g01",
+      "title": "第1–3题｜第13课课本听力｜Audio 13-9",
+      "question_start": 1,
+      "question_end": 3,
+      "audio_ids": [
+        "13-9"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "play_count": 2
+    },
+    {
+      "id": "w06-v4-g02",
+      "title": "第4–8题｜第13课课本听力｜Audio 13-10",
+      "question_start": 4,
+      "question_end": 8,
+      "audio_ids": [
+        "13-10"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "play_count": 2
+    },
+    {
+      "id": "w06-v4-g03",
+      "title": "第9–11题｜第14课课本听力｜Audio 14-9",
+      "question_start": 9,
+      "question_end": 11,
+      "audio_ids": [
+        "14-9"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "play_count": 2
+    },
+    {
+      "id": "w06-v4-g04",
+      "title": "第12–13题｜第14课课本听力｜Audio 14-10",
+      "question_start": 12,
+      "question_end": 13,
+      "audio_ids": [
+        "14-10"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "play_count": 2
+    },
+    {
+      "id": "w06-v4-g05",
+      "title": "第14题｜第14课课本听力｜Audio 14-11",
+      "question_start": 14,
+      "question_end": 14,
+      "audio_ids": [
+        "14-11"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "play_count": 2
+    },
+    {
+      "id": "w06-v4-g06",
+      "title": "第15题｜TOCFL官方听力｜Audio TOCFL-A4-Q13",
+      "question_start": 15,
+      "question_end": 15,
+      "audio_ids": [
+        "TOCFL-A4-Q13"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "play_count": 2
+    },
+    {
+      "id": "w06-v4-g07",
+      "title": "第16题｜TOCFL官方听力｜Audio TOCFL-A4-Q14",
+      "question_start": 16,
+      "question_end": 16,
+      "audio_ids": [
+        "TOCFL-A4-Q14"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "play_count": 2
+    },
+    {
+      "id": "w06-v4-g08",
+      "title": "第17题｜TOCFL官方听力｜Audio TOCFL-A4-Q23",
+      "question_start": 17,
+      "question_end": 17,
+      "audio_ids": [
+        "TOCFL-A4-Q23"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "play_count": 2
+    },
+    {
+      "id": "w06-v4-g09",
+      "title": "第18题｜TOCFL官方听力｜Audio TOCFL-A4-Q26",
+      "question_start": 18,
+      "question_end": 18,
+      "audio_ids": [
+        "TOCFL-A4-Q26"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "play_count": 2
+    },
+    {
+      "id": "w06-v4-g10",
+      "title": "第19题｜TOCFL官方听力｜Audio TOCFL-A4-Q28",
+      "question_start": 19,
+      "question_end": 19,
+      "audio_ids": [
+        "TOCFL-A4-Q28"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "play_count": 2
+    },
+    {
+      "id": "w06-v4-g11",
+      "title": "第20题｜TOCFL官方听力｜Audio TOCFL-A5-Q13",
+      "question_start": 20,
+      "question_end": 20,
+      "audio_ids": [
+        "TOCFL-A5-Q13"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "play_count": 2
+    },
+    {
+      "id": "w06-v4-g12",
+      "title": "第21题｜TOCFL官方听力｜Audio TOCFL-A5-Q25",
+      "question_start": 21,
+      "question_end": 21,
+      "audio_ids": [
+        "TOCFL-A5-Q25"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "play_count": 2
+    },
+    {
+      "id": "w06-v4-g13",
+      "title": "第22题｜TOCFL官方听力｜Audio TOCFL-A5-Q29",
+      "question_start": 22,
+      "question_end": 22,
+      "audio_ids": [
+        "TOCFL-A5-Q29"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "play_count": 2
+    },
+    {
+      "id": "w06-v4-g14",
+      "title": "第23题｜TOCFL官方听力｜Audio TOCFL-A5-Q31",
+      "question_start": 23,
+      "question_end": 23,
+      "audio_ids": [
+        "TOCFL-A5-Q31"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "play_count": 2
+    },
+    {
+      "id": "w06-v4-g15",
+      "title": "第24题｜TOCFL官方听力｜Audio TOCFL-A5-Q33",
+      "question_start": 24,
+      "question_end": 24,
+      "audio_ids": [
+        "TOCFL-A5-Q33"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "play_count": 2
+    },
+    {
+      "id": "w06-v4-g16",
+      "title": "第25题｜TOCFL官方听力｜Audio TOCFL-A5-Q37",
+      "question_start": 25,
+      "question_end": 25,
+      "audio_ids": [
+        "TOCFL-A5-Q37"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "play_count": 2
+    }
+  ]
+}

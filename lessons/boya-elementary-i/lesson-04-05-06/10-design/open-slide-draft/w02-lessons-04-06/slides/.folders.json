@@ -1,4 +1,27 @@
 {
-  "folders": [],
-  "assignments": {}
+  "folders": [
+    {
+      "id": "f-09ff4985",
+      "name": "NNTQ1",
+      "icon": {
+        "type": "color",
+        "value": "#e5484d"
+      }
+    },
+    {
+      "id": "f-b8bf9e72",
+      "name": "NNTQ3",
+      "icon": {
+        "type": "color",
+        "value": "#f76b15"
+      }
+    }
+  ],
+  "assignments": {
+    "boya-elementary-i-lesson-15-w07": "f-09ff4985",
+    "boya-elementary-i-lesson-09-10": "f-09ff4985",
+    "boya-elementary-i-lesson-13-14-w06": "f-09ff4985",
+    "boya-elementary-i-lesson-11-12": "f-09ff4985",
+    "boya-quasi-intermediate-i-lesson-04-05-w09": "f-b8bf9e72"
+  }
 }

@@ -1,0 +1,23 @@
+{
+  "schema_version": "boya-user-approved-localized-classroom-content-v1",
+  "lesson_key": "boya-elementary-i:lesson-15",
+  "offering_id": "2026-fall",
+  "title": "我可以试试吗",
+  "source_status": "user-provided localized classroom content; publisher-source coverage not asserted",
+  "source_inventory": "textbooks/boya-elementary-i/source/source-inventory.json",
+  "textbook_printed_pages": [
+    119,
+    128
+  ],
+  "user_supplied_online_pptx": "lessons/boya-elementary-i/lesson-15/10-design/pptx-draft/online/lesson-15-在线预习.pptx",
+  "user_supplied_online_pptx_sha256": "09be31dfc37913c04a40d7d68abcb0931d776e4e8d30e341f89552fec3bf5eb5",
+  "approved_design_input": "lessons/boya-elementary-i/lesson-15/10-design/storyboard/lesson-15-逐页文案审阅.md",
+  "approved_design_sha256": "1204003898b7e4b606114f25936949c1952a2153fd730735b7f2524f9fb5a2f0",
+  "teacher_material_input": "lessons/boya-elementary-i/lesson-15/10-design/lesson-15-教师朗读与评量稿-v04.md",
+  "teacher_material_sha256": "323441266372a7391e5eea04d61a379550a691551e98dda358ac5ccb5b7e7602",
+  "notes": [
+    "Classroom content and simulations follow the user-approved v04 copy.",
+    "Publisher coverage and the full-book source package have not been asserted.",
+    "Student-facing text is Simplified Chinese."
+  ]
+}

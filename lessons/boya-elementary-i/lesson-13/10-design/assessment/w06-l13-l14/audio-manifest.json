@@ -13,9 +13,9 @@
     ],
     "duration_seconds": 30.15,
     "question_ids": [
-      "W06-MX2-01",
-      "W06-MX2-02",
-      "W06-MX2-03"
+      "W06-MX4-01",
+      "W06-MX4-02",
+      "W06-MX4-03"
     ],
     "question_range": "1–3",
     "play_count": 2,
@@ -44,11 +44,11 @@
     ],
     "duration_seconds": 26.13,
     "question_ids": [
-      "W06-MX2-04",
-      "W06-MX2-05",
-      "W06-MX2-06",
-      "W06-MX2-07",
-      "W06-MX2-08"
+      "W06-MX4-04",
+      "W06-MX4-05",
+      "W06-MX4-06",
+      "W06-MX4-07",
+      "W06-MX4-08"
     ],
     "question_range": "4–8",
     "play_count": 2,
@@ -76,9 +76,9 @@
     ],
     "duration_seconds": 24.95,
     "question_ids": [
-      "W06-MX2-09",
-      "W06-MX2-10",
-      "W06-MX2-11"
+      "W06-MX4-09",
+      "W06-MX4-10",
+      "W06-MX4-11"
     ],
     "question_range": "9–11",
     "play_count": 2,
@@ -106,8 +106,8 @@
     ],
     "duration_seconds": 22.52,
     "question_ids": [
-      "W06-MX2-12",
-      "W06-MX2-13"
+      "W06-MX4-12",
+      "W06-MX4-13"
     ],
     "question_range": "12–13",
     "play_count": 2,
@@ -136,7 +136,7 @@
     ],
     "duration_seconds": 36.9,
     "question_ids": [
-      "W06-MX2-14"
+      "W06-MX4-14"
     ],
     "question_range": "14",
     "play_count": 2,
@@ -153,132 +153,134 @@
   {
     "audio_id": "TOCFL-A4-Q13",
     "file": "audio/TOCFL-A4-Q13.mp3",
-    "title": "书的来源",
+    "title": "礼物的赠送人",
     "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/016.mp3",
     "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
     "source_volume": 4,
     "source_question": 13,
     "source_sha256": "34cb9a8782123a93b3e106927c2595d51663017457b643319cd5f8639ebbbee6",
-    "sha256": "dce2463a84b90f3f3875082cb858215ed229497515aff0b3ef246c6a397175de",
+    "sha256": "a03eef135ce5ed43211e869a72afe7c055d25bfbcf12d1ef3aa17e07ef4dee22",
     "source_segments": [
       {
-        "start_seconds": 2.4,
-        "end_seconds": 8.0
+        "start_seconds": 2.2,
+        "end_seconds": 7.904
       }
     ],
-    "duration_seconds": 5.6,
-    "script": "内容摘要（非逐字稿）：男生询问书的来源；女生说明是爸爸送的。",
+    "duration_seconds": 5.704,
+    "script": "男：你怎么有这本书？\n女：我爸爸送我的。",
     "source_status": "TOCFL_official_original_audio",
-    "semantic_status": "official_script_compared_with_source_audio_asr",
+    "semantic_status": "official_script_and_key_compared; human_listening_pending",
     "speech_modified": false,
     "teacher_listening_accepted": false,
     "lesson_keys": [
       "boya-elementary-i:lesson-14"
     ],
     "question_ids": [
-      "W06-MX2-15"
+      "W06-MX4-15"
     ],
     "question_range": "15",
     "play_count": 2,
-    "section_title": "第15题｜TOCFL官方听力｜Audio TOCFL-A4-Q13"
+    "section_title": "第15题｜TOCFL官方听力｜Audio TOCFL-A4-Q13",
+    "clipping_note": "Remove announced source question number and second identical repetition; retain first complete dialogue and original spoken question where present. End located at first 5-second repeat pause; teacher hearing remains pending."
   },
   {
     "audio_id": "TOCFL-A4-Q14",
     "file": "audio/TOCFL-A4-Q14.mp3",
-    "title": "更换衣服颜色",
+    "title": "衣服颜色与换货",
     "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/017.mp3",
     "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
     "source_volume": 4,
     "source_question": 14,
     "source_sha256": "541947eef9d2b9b196ad8677b6f24a4718b6de884c8ae6c27d3292bb95e48cbb",
-    "sha256": "e980d99956ec943a37a5256c14787526317d701196d99ba47c0bf2b470aa333d",
+    "sha256": "907b19f3e1bccff7200082e1443c8c762e09c439ff28b22bb3531d5874d33b01",
     "source_segments": [
       {
-        "start_seconds": 2.5,
-        "end_seconds": 10.95
+        "start_seconds": 2.2,
+        "end_seconds": 10.807
       }
     ],
-    "duration_seconds": 8.45,
-    "script": "内容摘要（非逐字稿）：女生带着昨天买的衣服回来，希望换成另一种颜色。",
+    "duration_seconds": 8.607,
+    "script": "男：丽美，你怎么来了？\n女：昨天买的衣服想换不同的颜色。",
     "source_status": "TOCFL_official_original_audio",
-    "semantic_status": "official_script_compared_with_source_audio_asr",
+    "semantic_status": "official_script_and_key_compared; human_listening_pending",
     "speech_modified": false,
     "teacher_listening_accepted": false,
     "lesson_keys": [
       "boya-elementary-i:lesson-13"
     ],
     "question_ids": [
-      "W06-MX2-16"
+      "W06-MX4-16"
     ],
     "question_range": "16",
     "play_count": 2,
-    "section_title": "第16题｜TOCFL官方听力｜Audio TOCFL-A4-Q14"
+    "section_title": "第16题｜TOCFL官方听力｜Audio TOCFL-A4-Q14",
+    "clipping_note": "Remove announced source question number and second identical repetition; retain first complete dialogue and original spoken question where present. End located at first 5-second repeat pause; teacher hearing remains pending."
   },
   {
     "audio_id": "TOCFL-A4-Q23",
     "file": "audio/TOCFL-A4-Q23.mp3",
-    "title": "衣服便宜",
+    "title": "商品价格与选择",
     "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/026.mp3",
     "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
     "source_volume": 4,
     "source_question": 23,
     "source_sha256": "260a186c2826100893872a237b1acaebd72f012277306760d406de884f56ef02",
-    "sha256": "5c44dcb3f57c1628a823c6097881a549f9078e879fdd6c2aed14499a91257b4d",
+    "sha256": "861851eeca3d0f9eea7168baaae3afe0d383dd397d3d8c701c799497cb1baa70",
     "source_segments": [
       {
-        "start_seconds": 2.4,
-        "end_seconds": 13.8
+        "start_seconds": 2.2,
+        "end_seconds": 13.544
       }
     ],
-    "duration_seconds": 11.4,
-    "script": "内容摘要（非逐字稿）：男生问店外人多的原因；女生解释衣服价低，所以顾客多。",
+    "duration_seconds": 11.344,
+    "script": "男：这家店为什么这么多人在排队？\n女：因为这里的衣服很便宜，很多人来这里买衣服。",
     "source_status": "TOCFL_official_original_audio",
-    "semantic_status": "official_script_compared_with_source_audio_asr",
+    "semantic_status": "official_script_and_key_compared; human_listening_pending",
     "speech_modified": false,
     "teacher_listening_accepted": false,
     "lesson_keys": [
       "boya-elementary-i:lesson-13"
     ],
     "question_ids": [
-      "W06-MX2-17",
-      "W06-MX2-18"
+      "W06-MX4-17"
     ],
-    "question_range": "17–18",
+    "question_range": "17",
     "play_count": 2,
-    "section_title": "第17–18题｜TOCFL官方听力｜Audio TOCFL-A4-Q23"
+    "section_title": "第17题｜TOCFL官方听力｜Audio TOCFL-A4-Q23",
+    "clipping_note": "Remove announced source question number and second identical repetition; retain first complete dialogue and original spoken question where present. End located at first 5-second repeat pause; teacher hearing remains pending."
   },
   {
     "audio_id": "TOCFL-A4-Q26",
     "file": "audio/TOCFL-A4-Q26.mp3",
-    "title": "按喜好选礼物",
+    "title": "按喜好选择礼物",
     "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/030.mp3",
     "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
     "source_volume": 4,
     "source_question": 26,
     "source_sha256": "216cc5de8e21f007dc19d24ba6fe6020abfeb96aecc605ae2a5474bb6f91f1e0",
-    "sha256": "7792d765fd082a7376c5993dc45f7e9e5e7157ceb099751b79c5b405a4bffffa",
+    "sha256": "93c888ec9475fb3bd71dd71abd8fd6e2bf7fae11227be8a3592467ec1a0fd911",
     "source_segments": [
       {
-        "start_seconds": 2.3,
-        "end_seconds": 26.1
+        "start_seconds": 2.2,
+        "end_seconds": 31.854
       }
     ],
-    "duration_seconds": 23.8,
-    "script": "内容摘要（非逐字稿）：两人商量去医院看陈老师；男生提水果和花，女生按老师爱读书的喜好提出送书。",
+    "duration_seconds": 29.654,
+    "script": "男：怎么最近都没看到陈老师呢？\n女：听说陈老师生病了，现在在医院里。\n男：我们应该去医院看看他，我们带水果和花去看他，好不好？\n女：陈老师很喜欢看书，我想买几本有趣的书给他。\n男：请问这位小姐想带什么东西给陈老师？",
     "source_status": "TOCFL_official_original_audio",
-    "semantic_status": "official_script_compared_with_source_audio_asr",
+    "semantic_status": "official_script_and_key_compared; human_listening_pending",
     "speech_modified": false,
     "teacher_listening_accepted": false,
     "lesson_keys": [
       "boya-elementary-i:lesson-14"
     ],
     "question_ids": [
-      "W06-MX2-19",
-      "W06-MX2-20"
+      "W06-MX4-18"
     ],
-    "question_range": "19–20",
+    "question_range": "18",
     "play_count": 2,
-    "section_title": "第19–20题｜TOCFL官方听力｜Audio TOCFL-A4-Q26"
+    "section_title": "第18题｜TOCFL官方听力｜Audio TOCFL-A4-Q26",
+    "clipping_note": "Remove announced source question number and second identical repetition; retain first complete dialogue and original spoken question where present. End located at first 5-second repeat pause; teacher hearing remains pending."
   },
   {
     "audio_id": "TOCFL-A4-Q28",
@@ -289,62 +291,246 @@
     "source_volume": 4,
     "source_question": 28,
     "source_sha256": "d4170608d76be0e4e162c2637cdfe7ba4673a464c8ee873f36f6cec64c96a8db",
-    "sha256": "f13c21b34c30480af7e6230357c405fefb075326f281c78882e0863fdd002469",
+    "sha256": "2e1961322a592273968a5acf0fdef826853d071827ff1d9185f4c11ed51e1af1",
     "source_segments": [
       {
-        "start_seconds": 2.35,
-        "end_seconds": 18.75
+        "start_seconds": 2.2,
+        "end_seconds": 24.309
       }
     ],
-    "duration_seconds": 16.4,
-    "script": "内容摘要（非逐字稿）：男生试穿后觉得衣服小，希望找更大的；店员说明大号已售完。",
+    "duration_seconds": 22.109,
+    "script": "男：老板，我可以穿穿看这件衣服吗？\n女：可以，请到里面试试。\n男：这件衣服太小了，还有大一点儿的吗？\n女：对不起，大的已经卖完了。\n男：请问这位先生觉得这件衣服怎么样？",
     "source_status": "TOCFL_official_original_audio",
-    "semantic_status": "official_script_compared_with_source_audio_asr",
+    "semantic_status": "official_script_and_key_compared; human_listening_pending",
     "speech_modified": false,
     "teacher_listening_accepted": false,
     "lesson_keys": [
       "boya-elementary-i:lesson-13"
     ],
     "question_ids": [
-      "W06-MX2-21",
-      "W06-MX2-22"
+      "W06-MX4-19"
     ],
-    "question_range": "21–22",
+    "question_range": "19",
     "play_count": 2,
-    "section_title": "第21–22题｜TOCFL官方听力｜Audio TOCFL-A4-Q28"
+    "section_title": "第19题｜TOCFL官方听力｜Audio TOCFL-A4-Q28",
+    "clipping_note": "Remove announced source question number and second identical repetition; retain first complete dialogue and original spoken question where present. End located at first 5-second repeat pause; teacher hearing remains pending."
   },
   {
-    "audio_id": "TOCFL-A5-Q37",
-    "file": "audio/TOCFL-A5-Q37.mp3",
-    "title": "生日礼物与安排",
-    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/041.mp3",
+    "audio_id": "TOCFL-A5-Q13",
+    "file": "audio/TOCFL-A5-Q13.mp3",
+    "title": "蛋糕与所需物品",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/016.mp3",
     "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
     "source_volume": 5,
-    "source_question": 37,
-    "source_sha256": "e57066cfe95aadbf1b57790cf1c6d0529a06eb40c95469afcd3a1805ae9590ca",
-    "sha256": "abfae89b160d9d5c9da7fa8f081581aeb28099b95736d1e58a068899098df306",
+    "source_question": 13,
+    "source_sha256": "6ad4aa34e49a7112fca8dd5a5e63262deb98a42edfa8f72cee72044fe3df78c2",
+    "sha256": "2462ec537b9a884de1e100bd8013f4fba7843e6b7acf39646f5015d2108a7c09",
     "source_segments": [
       {
         "start_seconds": 2.2,
-        "end_seconds": 24.5
+        "end_seconds": 12.444
       }
     ],
-    "duration_seconds": 22.3,
-    "script": "内容摘要（非逐字稿）：两人为小春选生日礼物，按绘画爱好选择笔和装笔的袋子，并约当天课后购买。",
+    "duration_seconds": 10.244,
+    "script": "男：这是您的巧克力蛋糕，请问还需要什么吗？\n女：请再给我一个汤匙，我们要一起吃。",
     "source_status": "TOCFL_official_original_audio",
-    "semantic_status": "official_script_compared_with_source_audio_asr",
+    "semantic_status": "official_script_and_key_compared; human_listening_pending",
     "speech_modified": false,
     "teacher_listening_accepted": false,
     "lesson_keys": [
       "boya-elementary-i:lesson-14"
     ],
     "question_ids": [
-      "W06-MX2-23",
-      "W06-MX2-24",
-      "W06-MX2-25"
+      "W06-MX4-20"
     ],
-    "question_range": "23–25",
+    "question_range": "20",
     "play_count": 2,
-    "section_title": "第23–25题｜TOCFL官方听力｜Audio TOCFL-A5-Q37"
+    "section_title": "第20题｜TOCFL官方听力｜Audio TOCFL-A5-Q13",
+    "clipping_note": "Remove announced source question number and second identical repetition; retain first complete dialogue and original spoken question where present. End located at first 5-second repeat pause; teacher hearing remains pending."
+  },
+  {
+    "audio_id": "TOCFL-A5-Q46",
+    "file": "audio/TOCFL-A5-Q46.wav",
+    "source_file": "audio/TOCFL-A5-Q46.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/051.mp3",
+    "source_volume": 5,
+    "source_question": 46,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 48.38474
+      }
+    ],
+    "source_sha256": "30674eb95b71e2507e0128c0c0392e27ba6c5d902e4b4590a870e23dbc21e239",
+    "sha256": "70e719ca5a03f151fde3219feab9072d7404e239a2c8c6c6302dbf98ebab1f39",
+    "duration_seconds": 46.184739,
+    "question_ids": [
+      "W06-MX5-21"
+    ],
+    "question_range": "21",
+    "play_count": 2,
+    "title": "服装选择与活动计划",
+    "section_title": "第21题｜TOCFL官方短对话｜Audio TOCFL-A5-Q46",
+    "source_script_pdf": "source/A5-listen.pdf",
+    "source_script_pdf_pages": [
+      8
+    ],
+    "semantic_status": "official_script_options_and_key_compared; teacher_listening_pending",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "男：夏天到了，我们明天去海边吧！\n女：好啊！你觉得我应该穿短裙好呢？还是短裤好呢？\n男：我觉得你应该穿短裤，因为我们要在沙滩上打球。\n女：好啊，明天见。\n女：请问这位先生说了什么？",
+    "clip_policy": "complete_single_official_part4_question_with_spoken_answer_options_retained",
+    "first_second_rendition_waveform_correlation": null,
+    "speech_modified": false,
+    "lesson_keys": [
+      "boya-elementary-i:lesson-13"
+    ]
+  },
+  {
+    "audio_id": "TOCFL-A5-Q47",
+    "file": "audio/TOCFL-A5-Q47.wav",
+    "source_file": "audio/TOCFL-A5-Q47.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/052.mp3",
+    "source_volume": 5,
+    "source_question": 47,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 56.20966
+      }
+    ],
+    "source_sha256": "8a823d151ec77ddeacfd683c229418438e10873fef0721a923d69dc441ed2d43",
+    "sha256": "cb7bd2db14c76f77cb7f7a596ea988aa280ac044e462a44f5e4c004623faa12a",
+    "duration_seconds": 54.00966,
+    "question_ids": [
+      "W06-MX5-22"
+    ],
+    "question_range": "22",
+    "play_count": 2,
+    "title": "生日邀请与礼物意图",
+    "section_title": "第22题｜TOCFL官方短对话｜Audio TOCFL-A5-Q47",
+    "source_script_pdf": "source/A5-listen.pdf",
+    "source_script_pdf_pages": [
+      8
+    ],
+    "semantic_status": "official_script_options_and_key_compared; teacher_listening_pending",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "男：为了你的生日，我想请你吃蛋糕。\n女：你人来我就很开心了，蛋糕，我来准备就好了。\n男：这是为了感谢你请我参加明天的生日舞会，或是你有更想要的礼物吗？\n女：你太客气了。吃蛋糕和收礼物都不是最重要的事。\n女：请问这位小姐的意思是什么？",
+    "clip_policy": "complete_single_official_part4_question_with_spoken_answer_options_retained",
+    "first_second_rendition_waveform_correlation": null,
+    "speech_modified": false,
+    "lesson_keys": [
+      "boya-elementary-i:lesson-14"
+    ]
+  },
+  {
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/053.mp3",
+    "source_sha256": "3f4c69faf4df2b415368fc515a990cf8f85718690b0b6ef770a30cccb3bd6d9f",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 50.72746
+      }
+    ],
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "speech_modified": false,
+    "audio_id": "TOCFL-A5-Q48",
+    "file": "audio/TOCFL-A5-Q48.wav",
+    "sha256": "030bf6fe127b1748bbd39eb4dc2a8c28ac926d3e7bb247b2da85c232a6308438",
+    "title": "购物优惠与改变主意",
+    "script": "男：我要去逛百货公司，要一起吗？\n女：我最近花了太多钱了，还是不要吧。\n男：最近百货公司有活动，很多商品不但很便宜，还会给很多试用的东西。\n女：喔，有不用花钱的啊！那我们快走吧！\n女：为什么这位小姐想去百货公司？",
+    "question_ids": [
+      "W06-MX5-23"
+    ],
+    "question_range": "23",
+    "play_count": 2,
+    "lesson_keys": [
+      "boya-elementary-i:lesson-13"
+    ],
+    "section_title": "第23题｜TOCFL官方短对话｜Audio TOCFL-A5-Q48",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "semantic_status": "official_script_options_and_key_compared; teacher_listening_pending",
+    "source_volume": 5,
+    "source_question": 48,
+    "duration_seconds": 48.52746
+  },
+  {
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/054.mp3",
+    "source_sha256": "a27a6dc4c8c1a5aed159a42fbe28e6773536d4fdf3a3045f9aa60a420e2338e1",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 54.190681
+      }
+    ],
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "speech_modified": false,
+    "audio_id": "W06V5-TOCFL-A5-Q49",
+    "file": "audio/TOCFL-A5-Q49.wav",
+    "sha256": "8fb83705106de3a024cd5e67f2ca6c229367a1ab1f5c19f8347b1d4e46ddbe53",
+    "title": "买衣服的约定与说话意图",
+    "script": "男：今天天气好热，我们在家吹冷气多好，还是不要去买衣服了。\n女：不行，你昨天答应我今天要出门买衣服。\n男：可是你没发现衣服已经很多了吗？\n女：我觉得，你只是怕太晚回家，没办法看棒球比赛！\n女：请问下面哪一个是对的？",
+    "question_ids": [
+      "W06-MX5-24"
+    ],
+    "question_range": "24",
+    "play_count": 2,
+    "lesson_keys": [
+      "boya-elementary-i:lesson-13"
+    ],
+    "section_title": "第24题｜TOCFL官方短对话｜Audio TOCFL-A5-Q49",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "semantic_status": "official_script_options_and_key_compared; teacher_listening_pending",
+    "source_volume": 5,
+    "source_question": 49,
+    "duration_seconds": 51.99068,
+    "source_audio_id": "TOCFL-A5-Q49"
+  },
+  {
+    "audio_id": "TOCFL-A5-Q50",
+    "file": "audio/TOCFL-A5-Q50.wav",
+    "source_file": "audio/TOCFL-A5-Q50.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/055.mp3",
+    "source_volume": 5,
+    "source_question": 50,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 49.152835
+      }
+    ],
+    "source_sha256": "b3ea295f3e3064f1dbcc47d59b14c9e50ab38c8ebaeb30e618e7d2702a12c0d0",
+    "sha256": "05fd6df0f821528704d0327bdff6ca2ea211308d26fff34a0fe18bda41817267",
+    "duration_seconds": 46.952834,
+    "question_ids": [
+      "W06-MX5-25"
+    ],
+    "question_range": "25",
+    "play_count": 2,
+    "title": "购物换货条件",
+    "section_title": "第25题｜TOCFL官方短对话｜Audio TOCFL-A5-Q50",
+    "source_script_pdf": "source/A5-listen.pdf",
+    "source_script_pdf_pages": [
+      9
+    ],
+    "semantic_status": "official_script_options_and_key_compared; teacher_listening_pending",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "男：小姐，这是昨天跟你们买的牛奶，味道有点奇怪，我想换一瓶新的。\n女：请问您带了发票吗？\n男：喔，我没带来。\n女：我们要看到发票，才能换东西，不好意思。\n女：这位小姐的意思是什么？",
+    "clip_policy": "complete_single_official_part4_question_with_spoken_answer_options_retained",
+    "first_second_rendition_waveform_correlation": null,
+    "speech_modified": false,
+    "lesson_keys": [
+      "boya-elementary-i:lesson-13"
+    ]
   }
 ]

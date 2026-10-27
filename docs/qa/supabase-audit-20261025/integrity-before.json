@@ -1,0 +1,194 @@
+[
+  {
+    "audit": {
+      "counts": {
+        "courses": 4,
+        "students": 99,
+        "followups": 0,
+        "enrollments": 100,
+        "student_notes": 29,
+        "academic_terms": 1,
+        "class_sessions": 19,
+        "interact_rooms": 5,
+        "learning_events": 165,
+        "attendance_records": 7,
+        "interact_responses": 41,
+        "observation_records": 0,
+        "randomizer_attempts": 690,
+        "randomizer_sessions": 17
+      },
+      "integrity": {
+        "corrected_counted": 0,
+        "note_missing_reason": 0,
+        "duplicate_class_dates": 1,
+        "followup_not_enrolled": 0,
+        "followup_wrong_session": 0,
+        "attendance_not_enrolled": 0,
+        "observation_not_enrolled": 0,
+        "randomizer_date_mismatch": 0
+      },
+      "extensions": [
+        "plpgsql",
+        "pg_stat_statements",
+        "uuid-ossp",
+        "pgcrypto",
+        "supabase_vault"
+      ],
+      "db_settings": {
+        "timezone": "UTC",
+        "max_connections": "60"
+      },
+      "auth_summary": {
+        "users": 1,
+        "anonymous": 0,
+        "unconfirmed": 0
+      },
+      "default_privileges": [
+        {
+          "acl": "{postgres=arwdDxtm/postgres,anon=arwdDxtm/postgres,authenticated=arwdDxtm/postgres,service_role=arwdDxtm/postgres}",
+          "kind": "r",
+          "role": "postgres",
+          "schema": "public"
+        },
+        {
+          "acl": "{postgres=X/postgres,anon=X/postgres,authenticated=X/postgres,service_role=X/postgres}",
+          "kind": "f",
+          "role": "postgres",
+          "schema": "public"
+        },
+        {
+          "acl": "{postgres=rwU/postgres,anon=rwU/postgres,authenticated=rwU/postgres,service_role=rwU/postgres}",
+          "kind": "S",
+          "role": "postgres",
+          "schema": "public"
+        },
+        {
+          "acl": "{postgres=rwU/supabase_admin,anon=rwU/supabase_admin,authenticated=rwU/supabase_admin,service_role=rwU/supabase_admin}",
+          "kind": "S",
+          "role": "supabase_admin",
+          "schema": "public"
+        },
+        {
+          "acl": "{postgres=arwdDxtm/supabase_admin,anon=arwdDxtm/supabase_admin,authenticated=arwdDxtm/supabase_admin,service_role=arwdDxtm/supabase_admin}",
+          "kind": "r",
+          "role": "supabase_admin",
+          "schema": "public"
+        },
+        {
+          "acl": "{postgres=X/supabase_admin,anon=X/supabase_admin,authenticated=X/supabase_admin,service_role=X/supabase_admin}",
+          "kind": "f",
+          "role": "supabase_admin",
+          "schema": "public"
+        },
+        {
+          "acl": "{postgres=arwdDxtm/postgres,anon=arwdDxtm/postgres,authenticated=arwdDxtm/postgres,service_role=arwdDxtm/postgres}",
+          "kind": "r",
+          "role": "postgres",
+          "schema": "storage"
+        },
+        {
+          "acl": "{postgres=X/postgres,anon=X/postgres,authenticated=X/postgres,service_role=X/postgres}",
+          "kind": "f",
+          "role": "postgres",
+          "schema": "storage"
+        },
+        {
+          "acl": "{postgres=rwU/postgres,anon=rwU/postgres,authenticated=rwU/postgres,service_role=rwU/postgres}",
+          "kind": "S",
+          "role": "postgres",
+          "schema": "storage"
+        },
+        {
+          "acl": "{postgres=arwdDxtm/supabase_auth_admin,dashboard_user=arwdDxtm/supabase_auth_admin}",
+          "kind": "r",
+          "role": "supabase_auth_admin",
+          "schema": "auth"
+        },
+        {
+          "acl": "{postgres=rwU/supabase_auth_admin,dashboard_user=rwU/supabase_auth_admin}",
+          "kind": "S",
+          "role": "supabase_auth_admin",
+          "schema": "auth"
+        },
+        {
+          "acl": "{postgres=X/supabase_auth_admin,dashboard_user=X/supabase_auth_admin}",
+          "kind": "f",
+          "role": "supabase_auth_admin",
+          "schema": "auth"
+        },
+        {
+          "acl": "{postgres=rwU/supabase_admin,anon=rwU/supabase_admin,authenticated=rwU/supabase_admin,service_role=rwU/supabase_admin}",
+          "kind": "S",
+          "role": "supabase_admin",
+          "schema": "graphql_public"
+        },
+        {
+          "acl": "{postgres=arwdDxtm/supabase_admin,anon=arwdDxtm/supabase_admin,authenticated=arwdDxtm/supabase_admin,service_role=arwdDxtm/supabase_admin}",
+          "kind": "r",
+          "role": "supabase_admin",
+          "schema": "graphql_public"
+        },
+        {
+          "acl": "{postgres=X/supabase_admin,anon=X/supabase_admin,authenticated=X/supabase_admin,service_role=X/supabase_admin}",
+          "kind": "f",
+          "role": "supabase_admin",
+          "schema": "graphql_public"
+        },
+        {
+          "acl": "{postgres=a*r*w*d*D*x*t*m*/supabase_admin}",
+          "kind": "r",
+          "role": "supabase_admin",
+          "schema": "extensions"
+        },
+        {
+          "acl": "{postgres=X*/supabase_admin}",
+          "kind": "f",
+          "role": "supabase_admin",
+          "schema": "extensions"
+        },
+        {
+          "acl": "{postgres=r*w*U*/supabase_admin}",
+          "kind": "S",
+          "role": "supabase_admin",
+          "schema": "extensions"
+        },
+        {
+          "acl": "{postgres=arwdDxtm/supabase_admin,anon=arwdDxtm/supabase_admin,authenticated=arwdDxtm/supabase_admin,service_role=arwdDxtm/supabase_admin}",
+          "kind": "r",
+          "role": "supabase_admin",
+          "schema": "graphql"
+        },
+        {
+          "acl": "{postgres=X/supabase_admin,anon=X/supabase_admin,authenticated=X/supabase_admin,service_role=X/supabase_admin}",
+          "kind": "f",
+          "role": "supabase_admin",
+          "schema": "graphql"
+        },
+        {
+          "acl": "{postgres=rwU/supabase_admin,anon=rwU/supabase_admin,authenticated=rwU/supabase_admin,service_role=rwU/supabase_admin}",
+          "kind": "S",
+          "role": "supabase_admin",
+          "schema": "graphql"
+        },
+        {
+          "acl": "{postgres=rwU/supabase_admin,dashboard_user=rwU/supabase_admin}",
+          "kind": "S",
+          "role": "supabase_admin",
+          "schema": "realtime"
+        },
+        {
+          "acl": "{postgres=X/supabase_admin,dashboard_user=X/supabase_admin}",
+          "kind": "f",
+          "role": "supabase_admin",
+          "schema": "realtime"
+        },
+        {
+          "acl": "{postgres=a*r*wdDxtm/supabase_admin,dashboard_user=arwdDxtm/supabase_admin}",
+          "kind": "r",
+          "role": "supabase_admin",
+          "schema": "realtime"
+        }
+      ]
+    }
+  }
+]

@@ -60,7 +60,7 @@ export function MorePage() {
     downloadFile(`荣市大学-学生名册-${todayIso()}.csv`, `\uFEFF${header.join(',')}\n${rows.join('\n')}`, 'text/csv;charset=utf-8')
   }
 
-  const exportBackup = () => downloadFile(`荣市大学-完整备份-${todayIso()}.json`, JSON.stringify(snapshot, null, 2), 'application/json')
+  const exportSnapshot = () => downloadFile(`荣市大学-管理資料-${todayIso()}.json`, JSON.stringify(snapshot, null, 2), 'application/json')
 
   return (
     <><Link className="secondary-button" to="/weekly-review">每週教學回顧 →</Link> <Link className="primary-button" to="/attendance">點名例外／補登紀錄 →</Link>
@@ -98,7 +98,8 @@ export function MorePage() {
 
       <section className="panel settings-section">
         <div className="panel-heading"><div><p className="section-kicker">帶走自己的資料</p><h2>匯出與帳號</h2></div></div>
-        <div className="export-actions"><button className="secondary-button" onClick={exportStudents}>匯出學生名冊 CSV</button><button className="secondary-button" onClick={exportBackup}>下載完整備份</button><button className="text-button danger" onClick={signOut}>登出</button></div>
+        <p className="field-help">JSON 只匯出目前載入的管理資料，不包含完整抽問場次、互動課堂、帳號與資料庫設定，不能直接還原 Supabase。</p>
+        <div className="export-actions"><button className="secondary-button" onClick={exportStudents}>匯出學生名冊 CSV</button><button className="secondary-button" onClick={exportSnapshot}>匯出管理資料 JSON</button><button className="text-button danger" onClick={signOut}>登出</button></div>
       </section>
     </div>
     </>

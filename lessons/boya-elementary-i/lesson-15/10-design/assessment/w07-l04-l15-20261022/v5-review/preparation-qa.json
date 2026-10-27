@@ -1,0 +1,103 @@
+{
+  "exam_id": "W07-L04L15-20261022",
+  "version": 5,
+  "question_count": 50,
+  "points": 100,
+  "replacements": [
+    {
+      "number": 14,
+      "question_id": "W07-L04L15-01-27",
+      "source": "H11004",
+      "source_question": 12,
+      "new_audio_id": "HSK-H11004-Q12",
+      "answer": "C",
+      "candidate_segment": [
+        447.0,
+        463.0
+      ]
+    },
+    {
+      "number": 18,
+      "question_id": "W07-L04L15-01-31",
+      "source": "H11005",
+      "source_question": 18,
+      "new_audio_id": "HSK-H11005-Q18",
+      "answer": "A",
+      "candidate_segment": [
+        766.8,
+        779.8
+      ]
+    },
+    {
+      "number": 22,
+      "question_id": "W07-L04L15-01-06",
+      "source": "TOCFL-Q01250800",
+      "source_question": "Q01250800",
+      "new_audio_id": "TOCFL-N-Q01250800",
+      "answer": "A",
+      "candidate_segment": [
+        0.0,
+        22.4
+      ]
+    },
+    {
+      "number": 32,
+      "question_id": "W07-L04L15-01-34",
+      "source": "H20901",
+      "source_question": 12,
+      "new_audio_id": "HSK-H20901-Q12",
+      "answer": "A",
+      "candidate_segment": [
+        365.6,
+        383.6
+      ]
+    },
+    {
+      "number": 34,
+      "question_id": "W07-L04L15-01-38",
+      "source": "H10901",
+      "source_question": 13,
+      "new_audio_id": "HSK-H10901-Q13",
+      "answer": "A",
+      "candidate_segment": [
+        488.0,
+        500.0
+      ]
+    },
+    {
+      "number": 39,
+      "question_id": "W07-L04L15-01-35",
+      "source": "H10901",
+      "source_question": 16,
+      "new_audio_id": "HSK-H10901-Q16",
+      "answer": "B",
+      "candidate_segment": [
+        647.0,
+        658.5
+      ]
+    },
+    {
+      "number": 46,
+      "question_id": "W07-L04L15-01-23",
+      "source": "H20901",
+      "source_question": 15,
+      "new_audio_id": "HSK-H20901-Q15",
+      "answer": "B",
+      "candidate_segment": [
+        462.6,
+        473.6
+      ]
+    }
+  ],
+  "all_other_items_unchanged": true,
+  "all_assets_decoded": true,
+  "teacher_full_listening_accepted": false,
+  "form_sync": "not performed; live Form is published and accepting responses",
+  "publication_authorized": false,
+  "source_counts": {
+    "tocfl_novice": 9,
+    "tocfl_band_a": 33,
+    "hsk": 6,
+    "boya_l15": 2
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "assessment_id": "W06-L13L14-20261016",
+  "variant_id": "W06-L13L14-25Q-20261022",
+  "version": 4,
+  "source_selection": "14 textbook questions reused and source-checked from W06 v2;11 actual official TOCFL questions with official pictorial options and keys",
+  "publisher_source_record": {
+    "scope": "W06 draft source evidence; not lesson source approval",
+    "textbook_id": "boya-elementary-i",
+    "lesson_keys": [
+      "boya-elementary-i:lesson-13",
+      "boya-elementary-i:lesson-14"
+    ],
+    "publisher_script_pdf": "/Users/ssyan110/Desktop/Work/teaching/shared/textbooks/博雅漢語教材/2. 博雅汉语听说-初级起步篇I-听力文本及参考答案.pdf",
+    "publisher_script_sha256": "0da650144378dbfb108bb6050b782885e12182ee7dc44ee7d50bf26b77b9e3ed",
+    "publisher_pdf_pages_visually_checked": [
+      55,
+      56,
+      57,
+      58,
+      59
+    ],
+    "audio_manifest": "audio-manifest.json",
+    "asr_support_directory": ".tmp/w06-asr",
+    "source_evidence_directory": ".tmp/w06-source-ocr",
+    "assessment_version": 2,
+    "official_tocfl_sources": [
+      {
+        "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/016.mp3",
+        "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+        "source_sha256": "34cb9a8782123a93b3e106927c2595d51663017457b643319cd5f8639ebbbee6",
+        "source_volume": 4,
+        "source_question": 13
+      },
+      {
+        "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/017.mp3",
+        "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+        "source_sha256": "541947eef9d2b9b196ad8677b6f24a4718b6de884c8ae6c27d3292bb95e48cbb",
+        "source_volume": 4,
+        "source_question": 14
+      },
+      {
+        "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/026.mp3",
+        "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+        "source_sha256": "260a186c2826100893872a237b1acaebd72f012277306760d406de884f56ef02",
+        "source_volume": 4,
+        "source_question": 23
+      },
+      {
+        "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/030.mp3",
+        "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+        "source_sha256": "216cc5de8e21f007dc19d24ba6fe6020abfeb96aecc605ae2a5474bb6f91f1e0",
+        "source_volume": 4,
+        "source_question": 26
+      },
+      {
+        "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/032.mp3",
+        "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+        "source_sha256": "d4170608d76be0e4e162c2637cdfe7ba4673a464c8ee873f36f6cec64c96a8db",
+        "source_volume": 4,
+        "source_question": 28
+      },
+      {
+        "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/041.mp3",
+        "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
+        "source_sha256": "e57066cfe95aadbf1b57790cf1c6d0529a06eb40c95469afcd3a1805ae9590ca",
+        "source_volume": 5,
+        "source_question": 37
+      }
+    ],
+    "official_audio_evidence_directory": ".tmp/w06-mixed-official",
+    "source_selection": "14 textbook questions and 11 original classroom questions using TOCFL official Band A audio"
+  },
+  "official_source_pdfs": [
+    {
+      "path": "source/A4-answer.pdf",
+      "sha256": "40d5d8111bcbdf862bfd4e20d74fd78ba0d6eb63417d19e7982d0c719a8271bc",
+      "url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_answer.pdf"
+    },
+    {
+      "path": "source/A4-en_s.pdf",
+      "sha256": "cfc640d29784e4546607581af21cedfbd80e480aa2c9ac5f2db724695c276bb1",
+      "url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_en_s.pdf"
+    },
+    {
+      "path": "source/A4-listen.pdf",
+      "sha256": "1f6ae89727b7968c3d6cac9059e58a2029f5f25594beb6c7614652bcac99fe18",
+      "url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf"
+    },
+    {
+      "path": "source/A5-answer.pdf",
+      "sha256": "f1028a9a13cb38a88b615323d93e5b4f6c3959e67a3a3d9f573e20f39f3a8ea5",
+      "url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_answer.pdf"
+    },
+    {
+      "path": "source/A5-en_s.pdf",
+      "sha256": "a617a80b565f12be12a1cb9180d46d160969e5007d095e7909a14562d7c9e55c",
+      "url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_en_s.pdf"
+    },
+    {
+      "path": "source/A5-listen.pdf",
+      "sha256": "a2088536618c4d4a5a988d08bfc89c1e048c4a098440d62d02467ba26015475f",
+      "url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf"
+    }
+  ],
+  "image_crops": "source/image-crops.json",
+  "official_audio_map": "source/raw-audio-map.json",
+  "transcription_note": "Official scripts are faithfully transcribed in simplified Chinese; no new speech synthesis. Teacher may verify original PDF and source recording.",
+  "source_approval_granted": false
+}

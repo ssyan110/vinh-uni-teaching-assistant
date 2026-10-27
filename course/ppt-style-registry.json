@@ -1,12 +1,20 @@
 {
   "schema_version": 1,
-  "selection_policy": "Use the applicable standing or current explicit choice; ask only when neither exists. Classroom HTML and optional backups use docs/classroom-html-standard-2026-10-07.md across cohorts. Style selection does not grant content approval.",
+  "selection_policy": "Use the applicable actual approved reference and its native layout families. Year 1 online uses the user-specified L25 reference; Year 2 online retains its applicable finalized reference. All classroom sessions use OpenSlide with L9–10 cover/system, L11–12 route cards, and the nearest reviewed page for each activity type. No classroom PPTX backups. Style selection does not grant content approval.",
   "standing_choices": [
     {
-      "scope": "classroom HTML/OpenSlide and optional static PPTX backups across cohorts",
+      "scope": "classroom HTML/OpenSlide across cohorts",
       "reference": "docs/classroom-html-standard-2026-10-07.md",
-      "baseline": "current L9–10 HTML",
+      "baseline": "L9–10 cover/system; L11–12 icon-card route; nearest reviewed same activity type",
       "decision_source": "AGENTS.md classroom format and visual-unification decisions"
+    },
+    {
+      "scope": "Year 1 online preparation PPTX",
+      "reference": "docs/ppt-reference/year1-online-lesson25/lesson-25-在线预习-reference.pptx",
+      "sha256": "8836f816e3a7a4df1de4ecedac366e8442d3a696429e359d2624784da54a0720",
+      "source_reference": "/Users/ssyan110/Desktop/Work/teaching/vinh-university/00_上課教材/一年级/博雅汉语听说_初级起步篇I/线上预习/lesson-25-在线预习.pptx",
+      "baseline": "actual L25 native cover, four-step illustrated route, vocabulary cards with two examples and scene art, grouped vocabulary reviews, section dividers, source exercise prompts, listening records, key sentences, sentence practice and preparation",
+      "decision_source": "Adam current conversation 2026-10-27"
     }
   ],
   "styles": [

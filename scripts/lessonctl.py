@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""Safe, lesson-scoped entry point for the first Boya production gates.
+"""Compatibility entry point for existing Boya lesson inputs.
 
 This first implementation intentionally wraps existing read-only checks. It
 never builds PPTX, changes authority, or promotes assets. ``preflight`` is G0;
 ``compile`` is the narrow G1 compiler for existing lesson draft manifests.
+The default finalized-PPTX route reads historical paired PPTX files, not new
+classroom OpenSlide decks; use the classroom HTML lifecycle for new lessons.
 """
 
 from __future__ import annotations
@@ -285,6 +287,8 @@ def finalized_preflight(lesson_key: str | None, finalized_root: Path) -> dict[st
     return with_blocker_records({
         "command": "preflight",
         "source": "finalized-pptx",
+        "route_scope": "historical-finalized-pptx-intake",
+        "guidance": "New classroom lessons use the OpenSlide classroom-html draft gate; paired PPTX files are required only for this historical intake route.",
         "lesson_key": lesson_key,
         "status": "ready" if not blockers else "blocked",
         "finalized_root": str(finalized_root),
@@ -293,7 +297,7 @@ def finalized_preflight(lesson_key: str | None, finalized_root: Path) -> dict[st
     }, scope="preflight")
 
 
-def preflight(lesson_key: str | None, requested_output: str | None, source: str = "finalized-pptx", finalized_root: Path = DEFAULT_FINALIZED_ROOT) -> dict[str, Any]:
+def preflight(lesson_key: str | None, requested_output: str | None, source: str = "finalized-pptx", finalized_root: Path = DEFAULT_FINALIZED_ROOT, offering_id: str | None = None) -> dict[str, Any]:
     if source == "finalized-pptx":
         return finalized_preflight(lesson_key, finalized_root)
     blockers: list[str] = []
@@ -307,10 +311,12 @@ def preflight(lesson_key: str | None, requested_output: str | None, source: str 
         return fail_result("preflight", lesson_key, [f"lesson registry unavailable or invalid: {exc}"])
     if not entry:
         return fail_result("preflight", lesson_key, [f"lesson is not registered: {lesson_key}"])
+    if not offering_id and len(entry.get("offering_ids", [])) != 1:
+        return fail_result("preflight", lesson_key, ["explicit offering_id required for lessons used in multiple offerings"])
 
     candidate = output_path(lesson_key, requested_output)
     blockers.extend(validate_output_scope(lesson_key, candidate))
-    gate = check_lesson_ppt_draft(lesson_key, str(candidate))
+    gate = check_lesson_ppt_draft(lesson_key, str(candidate), offering_id)
     blockers.extend(gate.get("blockers", []))
 
     textbook_id, lesson_id = parsed
@@ -356,8 +362,8 @@ def preflight(lesson_key: str | None, requested_output: str | None, source: str 
     return with_blocker_records(result, scope="preflight")
 
 
-def compile_lesson(lesson_key: str | None, requested_output: str | None, run_id: str | None, source: str = "finalized-pptx", finalized_root: Path = DEFAULT_FINALIZED_ROOT) -> dict[str, Any]:
-    preflight_result = preflight(lesson_key, requested_output, source, finalized_root)
+def compile_lesson(lesson_key: str | None, requested_output: str | None, run_id: str | None, source: str = "finalized-pptx", finalized_root: Path = DEFAULT_FINALIZED_ROOT, offering_id: str | None = None) -> dict[str, Any]:
+    preflight_result = preflight(lesson_key, requested_output, source, finalized_root, offering_id)
     if preflight_result["status"] != "ready":
         preflight_result["command"] = "compile"
         preflight_result["stage"] = "G1"
@@ -449,14 +455,15 @@ def main() -> int:
         sub.add_argument("--finalized-root", type=Path, default=DEFAULT_FINALIZED_ROOT)
         if name in {"preflight", "compile"}:
             sub.add_argument("--output-dir")
-            sub.add_argument("--source", choices=("finalized-pptx", "repo"), default="finalized-pptx")
+            sub.add_argument("--offering-id", help="Exact offering for the legacy repo intake")
+            sub.add_argument("--source", choices=("finalized-pptx", "repo"), default="finalized-pptx", help="finalized-pptx is historical paired-file intake; new classroom OpenSlide decks use the classroom-html draft gate")
         if name in {"compile", "build", "qa"}:
             sub.add_argument("--run-id")
     args = parser.parse_args()
     if args.command == "preflight":
-        result = preflight(args.lesson_key, args.output_dir, args.source, args.finalized_root)
+        result = preflight(args.lesson_key, args.output_dir, args.source, args.finalized_root, args.offering_id)
     elif args.command == "compile":
-        result = compile_lesson(args.lesson_key, args.output_dir, args.run_id, args.source, args.finalized_root)
+        result = compile_lesson(args.lesson_key, args.output_dir, args.run_id, args.source, args.finalized_root, args.offering_id)
     elif args.command == "image-probe":
         result = image_probe_finalized(args.lesson_key, args.finalized_root)
     elif args.command == "build":

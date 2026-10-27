@@ -1,0 +1,319 @@
+{
+  "assessment_id": "W06-L13L14-20261016",
+  "version": 5,
+  "variant_id": "W06-L13L14-LONG-DIALOGUES-20261023",
+  "source_selection": "14 retained textbook questions;6 retained official picture questions;5 official text-choice dialogues A5 Q46–50",
+  "official_source_pdfs": [
+    {
+      "path": "source/A4-en_s.pdf",
+      "sha256": "cfc640d29784e4546607581af21cedfbd80e480aa2c9ac5f2db724695c276bb1",
+      "url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_en_s.pdf"
+    },
+    {
+      "path": "source/A4-listen.pdf",
+      "sha256": "1f6ae89727b7968c3d6cac9059e58a2029f5f25594beb6c7614652bcac99fe18",
+      "url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf"
+    },
+    {
+      "path": "source/A4-answer.pdf",
+      "sha256": "40d5d8111bcbdf862bfd4e20d74fd78ba0d6eb63417d19e7982d0c719a8271bc",
+      "url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_answer.pdf"
+    },
+    {
+      "path": "source/A5-en_s.pdf",
+      "sha256": "a617a80b565f12be12a1cb9180d46d160969e5007d095e7909a14562d7c9e55c",
+      "url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_en_s.pdf"
+    },
+    {
+      "path": "source/A5-listen.pdf",
+      "sha256": "a2088536618c4d4a5a988d08bfc89c1e048c4a098440d62d02467ba26015475f",
+      "url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf"
+    },
+    {
+      "path": "source/A5-answer.pdf",
+      "sha256": "f1028a9a13cb38a88b615323d93e5b4f6c3959e67a3a3d9f573e20f39f3a8ea5",
+      "url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_answer.pdf"
+    }
+  ],
+  "question_sources": [
+    {
+      "number": 1,
+      "question_id": "W06-MX4-01",
+      "audio_id": "13-9",
+      "source_type": "textbook_original_audio_original_questions",
+      "source_question_id": null,
+      "source_script_url": null,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ]
+    },
+    {
+      "number": 2,
+      "question_id": "W06-MX4-02",
+      "audio_id": "13-9",
+      "source_type": "textbook_original_audio_original_questions",
+      "source_question_id": null,
+      "source_script_url": null,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ]
+    },
+    {
+      "number": 3,
+      "question_id": "W06-MX4-03",
+      "audio_id": "13-9",
+      "source_type": "textbook_original_audio_original_questions",
+      "source_question_id": null,
+      "source_script_url": null,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ]
+    },
+    {
+      "number": 4,
+      "question_id": "W06-MX4-04",
+      "audio_id": "13-10",
+      "source_type": "textbook_original_audio_original_questions",
+      "source_question_id": null,
+      "source_script_url": null,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ]
+    },
+    {
+      "number": 5,
+      "question_id": "W06-MX4-05",
+      "audio_id": "13-10",
+      "source_type": "textbook_original_audio_original_questions",
+      "source_question_id": null,
+      "source_script_url": null,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ]
+    },
+    {
+      "number": 6,
+      "question_id": "W06-MX4-06",
+      "audio_id": "13-10",
+      "source_type": "textbook_original_audio_original_questions",
+      "source_question_id": null,
+      "source_script_url": null,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ]
+    },
+    {
+      "number": 7,
+      "question_id": "W06-MX4-07",
+      "audio_id": "13-10",
+      "source_type": "textbook_original_audio_original_questions",
+      "source_question_id": null,
+      "source_script_url": null,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ]
+    },
+    {
+      "number": 8,
+      "question_id": "W06-MX4-08",
+      "audio_id": "13-10",
+      "source_type": "textbook_original_audio_original_questions",
+      "source_question_id": null,
+      "source_script_url": null,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ]
+    },
+    {
+      "number": 9,
+      "question_id": "W06-MX4-09",
+      "audio_id": "14-9",
+      "source_type": "textbook_original_audio_original_questions",
+      "source_question_id": null,
+      "source_script_url": null,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-14"
+      ]
+    },
+    {
+      "number": 10,
+      "question_id": "W06-MX4-10",
+      "audio_id": "14-9",
+      "source_type": "textbook_original_audio_original_questions",
+      "source_question_id": null,
+      "source_script_url": null,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-14"
+      ]
+    },
+    {
+      "number": 11,
+      "question_id": "W06-MX4-11",
+      "audio_id": "14-9",
+      "source_type": "textbook_original_audio_original_questions",
+      "source_question_id": null,
+      "source_script_url": null,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-14"
+      ]
+    },
+    {
+      "number": 12,
+      "question_id": "W06-MX4-12",
+      "audio_id": "14-10",
+      "source_type": "textbook_original_audio_original_questions",
+      "source_question_id": null,
+      "source_script_url": null,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-14"
+      ]
+    },
+    {
+      "number": 13,
+      "question_id": "W06-MX4-13",
+      "audio_id": "14-10",
+      "source_type": "textbook_original_audio_original_questions",
+      "source_question_id": null,
+      "source_script_url": null,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13",
+        "boya-elementary-i:lesson-14"
+      ]
+    },
+    {
+      "number": 14,
+      "question_id": "W06-MX4-14",
+      "audio_id": "14-11",
+      "source_type": "textbook_original_audio_original_questions",
+      "source_question_id": null,
+      "source_script_url": null,
+      "lesson_keys": [
+        "boya-elementary-i:lesson-14"
+      ]
+    },
+    {
+      "number": 15,
+      "question_id": "W06-MX4-15",
+      "audio_id": "TOCFL-A4-Q13",
+      "source_type": "tocfl_official_original_item_with_picture_options",
+      "source_question_id": "TOCFL-A4-Q13",
+      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-14"
+      ]
+    },
+    {
+      "number": 16,
+      "question_id": "W06-MX4-16",
+      "audio_id": "TOCFL-A4-Q14",
+      "source_type": "tocfl_official_original_item_with_picture_options",
+      "source_question_id": "TOCFL-A4-Q14",
+      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ]
+    },
+    {
+      "number": 17,
+      "question_id": "W06-MX4-17",
+      "audio_id": "TOCFL-A4-Q23",
+      "source_type": "tocfl_official_original_item_with_picture_options",
+      "source_question_id": "TOCFL-A4-Q23",
+      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ]
+    },
+    {
+      "number": 18,
+      "question_id": "W06-MX4-18",
+      "audio_id": "TOCFL-A4-Q26",
+      "source_type": "tocfl_official_original_item_with_picture_options",
+      "source_question_id": "TOCFL-A4-Q26",
+      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-14"
+      ]
+    },
+    {
+      "number": 19,
+      "question_id": "W06-MX4-19",
+      "audio_id": "TOCFL-A4-Q28",
+      "source_type": "tocfl_official_original_item_with_picture_options",
+      "source_question_id": "TOCFL-A4-Q28",
+      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ]
+    },
+    {
+      "number": 20,
+      "question_id": "W06-MX4-20",
+      "audio_id": "TOCFL-A5-Q13",
+      "source_type": "tocfl_official_original_item_with_picture_options",
+      "source_question_id": "TOCFL-A5-Q13",
+      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-14"
+      ]
+    },
+    {
+      "number": 21,
+      "question_id": "W06-MX5-21",
+      "audio_id": "TOCFL-A5-Q46",
+      "source_type": "tocfl_official_original_text_choice_item",
+      "source_question_id": "TOCFL-A5-Q46",
+      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ]
+    },
+    {
+      "number": 22,
+      "question_id": "W06-MX5-22",
+      "audio_id": "TOCFL-A5-Q47",
+      "source_type": "tocfl_official_original_text_choice_item",
+      "source_question_id": "TOCFL-A5-Q47",
+      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-14"
+      ]
+    },
+    {
+      "number": 23,
+      "question_id": "W06-MX5-23",
+      "audio_id": "TOCFL-A5-Q48",
+      "source_type": "tocfl_official_original_text_choice_item",
+      "source_question_id": "TOCFL-A5-Q48",
+      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ]
+    },
+    {
+      "number": 24,
+      "question_id": "W06-MX5-24",
+      "audio_id": "W06V5-TOCFL-A5-Q49",
+      "source_type": "tocfl_official_original_text_choice_item",
+      "source_question_id": "TOCFL-A5-Q49",
+      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ]
+    },
+    {
+      "number": 25,
+      "question_id": "W06-MX5-25",
+      "audio_id": "TOCFL-A5-Q50",
+      "source_type": "tocfl_official_original_text_choice_item",
+      "source_question_id": "TOCFL-A5-Q50",
+      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ]
+    }
+  ],
+  "retained_textbook_provenance": "lessons/boya-elementary-i/lesson-13/10-design/assessment/w06-l13-l14/expanded-25q-20261022/source-manifest.json",
+  "teacher_listening_accepted": false,
+  "publication_authorized": false
+}

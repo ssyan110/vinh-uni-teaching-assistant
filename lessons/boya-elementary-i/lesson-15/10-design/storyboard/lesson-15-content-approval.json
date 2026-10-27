@@ -1,0 +1,29 @@
+{
+  "status": "approved",
+  "gate": "lesson-content",
+  "lesson_key": "boya-elementary-i:lesson-15",
+  "offering_id": "2026-fall",
+  "approved_by": "Adam",
+  "approved_at": "2026-10-27T13:26:29.613395+07:00",
+  "artifacts": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-15/00-source/canonical-source.json",
+      "sha256": "b18f5ce1709df0016be5484114a97492648234688367bba712779950929f26d0"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-15/10-design/storyboard/lesson-15-逐页文案审阅.md",
+      "sha256": "1204003898b7e4b606114f25936949c1952a2153fd730735b7f2524f9fb5a2f0"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-15/10-design/open-slide-draft/w07-l15/lesson-15-教师朗读稿.html",
+      "sha256": "cb65be0ec8eda1c37a37f40178176efeaae4890676cd6c4d174fecdd5e38d8eb"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-15/10-design/open-slide-draft/w07-l15/lesson-15-教师朗读稿.pdf",
+      "sha256": "675df0443962ac99b34e90ab62042ed740216adc7b6146fe0cf94e9ab4b7a080"
+    }
+  ],
+  "evidence": "lessons/boya-elementary-i/lesson-15/10-design/storyboard/lesson-15-content-approval-evidence-teacher-20261027.md",
+  "evidence_sha256": "ca0057f6ab625f378630e48714bc2a119a7b0f554ef9674e9d87df2534d4cd5e",
+  "prior_content_evidence": "lessons/boya-elementary-i/lesson-15/10-design/storyboard/lesson-15-content-approval-evidence-2026-10-21.md"
+}

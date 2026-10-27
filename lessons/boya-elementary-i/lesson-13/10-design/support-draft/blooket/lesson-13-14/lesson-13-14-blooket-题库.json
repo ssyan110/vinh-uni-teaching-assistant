@@ -1,0 +1,1440 @@
+{
+  "schema_version": "blooket-review-bank-1.0",
+  "title": "博雅汉语听说一-十三、十四课",
+  "offering_id": "2026-fall",
+  "lesson_keys": [
+    "boya-elementary-i:lesson-13",
+    "boya-elementary-i:lesson-14"
+  ],
+  "status": "review_draft_not_teacher_accepted",
+  "question_count": 80,
+  "source_inputs": {
+    "13": {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx",
+      "sha256": "84777ac142a03c82e6fa96dac8b98a07544749416f377264b5460a6553198261"
+    },
+    "14": {
+      "path": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx",
+      "sha256": "d569b1d951af4b3551a05131db033caff38af5b178b7a25b8530bcf4561c0da1"
+    }
+  },
+  "items": [
+    {
+      "question_number": 1,
+      "question_text": "“打算”的拼音是？",
+      "answers": [
+        "piányi",
+        "zuìjìn",
+        "yánsè",
+        "dǎsuàn"
+      ],
+      "correct_answer": "dǎsuàn",
+      "correct_answer_index": 4,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide5.xml",
+      "source_word": "打算",
+      "source_pinyin": "dǎsuàn"
+    },
+    {
+      "question_number": 2,
+      "question_text": "“样子”的拼音是？",
+      "answers": [
+        "jìn",
+        "yàngzi",
+        "yīfu",
+        "shù"
+      ],
+      "correct_answer": "yàngzi",
+      "correct_answer_index": 2,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide6.xml",
+      "source_word": "样子",
+      "source_pinyin": "yàngzi"
+    },
+    {
+      "question_number": 3,
+      "question_text": "“白”的拼音是？",
+      "answers": [
+        "bái",
+        "duìmiàn",
+        "ránhòu",
+        "zhǔnbèi"
+      ],
+      "correct_answer": "bái",
+      "correct_answer_index": 1,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide7.xml",
+      "source_word": "白",
+      "source_pinyin": "bái"
+    },
+    {
+      "question_number": 4,
+      "question_text": "“红”的拼音是？",
+      "answers": [
+        "píngmù",
+        "zhù",
+        "nán",
+        "hóng"
+      ],
+      "correct_answer": "hóng",
+      "correct_answer_index": 4,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide8.xml",
+      "source_word": "红",
+      "source_pinyin": "hóng"
+    },
+    {
+      "question_number": 5,
+      "question_text": "“黑”的拼音是？",
+      "answers": [
+        "hēi",
+        "suǒyǐ",
+        "yīfu",
+        "yìdiǎnr"
+      ],
+      "correct_answer": "hēi",
+      "correct_answer_index": 1,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide9.xml",
+      "source_word": "黑",
+      "source_pinyin": "hēi"
+    },
+    {
+      "question_number": 6,
+      "question_text": "“蓝”的拼音是？",
+      "answers": [
+        "bái",
+        "dāngrán",
+        "lán",
+        "suǒyǐ"
+      ],
+      "correct_answer": "lán",
+      "correct_answer_index": 3,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide11.xml",
+      "source_word": "蓝",
+      "source_pinyin": "lán"
+    },
+    {
+      "question_number": 7,
+      "question_text": "“颜色”的拼音是？",
+      "answers": [
+        "xiān",
+        "tǐng",
+        "piányi",
+        "yánsè"
+      ],
+      "correct_answer": "yánsè",
+      "correct_answer_index": 4,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide12.xml",
+      "source_word": "颜色",
+      "source_pinyin": "yánsè"
+    },
+    {
+      "question_number": 8,
+      "question_text": "“便宜”的拼音是？",
+      "answers": [
+        "hēi",
+        "piányi",
+        "nán",
+        "guò"
+      ],
+      "correct_answer": "piányi",
+      "correct_answer_index": 2,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide13.xml",
+      "source_word": "便宜",
+      "source_pinyin": "piányi"
+    },
+    {
+      "question_number": 9,
+      "question_text": "“贵”的拼音是？",
+      "answers": [
+        "zhǎo",
+        "guì",
+        "zhìliàng",
+        "hēi"
+      ],
+      "correct_answer": "guì",
+      "correct_answer_index": 2,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide14.xml",
+      "source_word": "贵",
+      "source_pinyin": "guì"
+    },
+    {
+      "question_number": 10,
+      "question_text": "“挺”的拼音是？",
+      "answers": [
+        "hóng",
+        "tǐng",
+        "bàba",
+        "dàngāo"
+      ],
+      "correct_answer": "tǐng",
+      "correct_answer_index": 2,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide15.xml",
+      "source_word": "挺",
+      "source_pinyin": "tǐng"
+    },
+    {
+      "question_number": 11,
+      "question_text": "“新”的拼音是？",
+      "answers": [
+        "jiàn",
+        "sòng",
+        "xīn",
+        "hóng"
+      ],
+      "correct_answer": "xīn",
+      "correct_answer_index": 3,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide17.xml",
+      "source_word": "新",
+      "source_pinyin": "xīn"
+    },
+    {
+      "question_number": 12,
+      "question_text": "“质量”的拼音是？",
+      "answers": [
+        "zhìliàng",
+        "lán",
+        "zhǔnbèi",
+        "hēi"
+      ],
+      "correct_answer": "zhìliàng",
+      "correct_answer_index": 1,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide18.xml",
+      "source_word": "质量",
+      "source_pinyin": "zhìliàng"
+    },
+    {
+      "question_number": 13,
+      "question_text": "“衣服”的拼音是？",
+      "answers": [
+        "suǒyǐ",
+        "chàng",
+        "yīfu",
+        "tīng"
+      ],
+      "correct_answer": "yīfu",
+      "correct_answer_index": 3,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide19.xml",
+      "source_word": "衣服",
+      "source_pinyin": "yīfu"
+    },
+    {
+      "question_number": 14,
+      "question_text": "“狗”的拼音是？",
+      "answers": [
+        "zhù",
+        "sòng",
+        "gǒu",
+        "yìdiǎnr"
+      ],
+      "correct_answer": "gǒu",
+      "correct_answer_index": 3,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide20.xml",
+      "source_word": "狗",
+      "source_pinyin": "gǒu"
+    },
+    {
+      "question_number": 15,
+      "question_text": "“要是”的拼音是？",
+      "answers": [
+        "yàoshi",
+        "bái",
+        "lǐwù",
+        "zánmen"
+      ],
+      "correct_answer": "yàoshi",
+      "correct_answer_index": 1,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide21.xml",
+      "source_word": "要是",
+      "source_pinyin": "yàoshi"
+    },
+    {
+      "question_number": 16,
+      "question_text": "“种”的拼音是？",
+      "answers": [
+        "yìdiǎnr",
+        "bàba",
+        "zhǒng",
+        "yàoshi"
+      ],
+      "correct_answer": "zhǒng",
+      "correct_answer_index": 3,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide23.xml",
+      "source_word": "种",
+      "source_pinyin": "zhǒng"
+    },
+    {
+      "question_number": 17,
+      "question_text": "“不过”的拼音是？",
+      "answers": [
+        "zhǔnbèi",
+        "māma",
+        "zhǒng",
+        "búguò"
+      ],
+      "correct_answer": "búguò",
+      "correct_answer_index": 4,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide24.xml",
+      "source_word": "不过",
+      "source_pinyin": "búguò"
+    },
+    {
+      "question_number": 18,
+      "question_text": "“件”的拼音是？",
+      "answers": [
+        "piányi",
+        "yǒudiǎnr",
+        "yánsè",
+        "jiàn"
+      ],
+      "correct_answer": "jiàn",
+      "correct_answer_index": 4,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide25.xml",
+      "source_word": "件",
+      "source_pinyin": "jiàn"
+    },
+    {
+      "question_number": 19,
+      "question_text": "“只”的拼音是？",
+      "answers": [
+        "guì",
+        "xiān",
+        "zhī",
+        "hóng"
+      ],
+      "correct_answer": "zhī",
+      "correct_answer_index": 3,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide26.xml",
+      "source_word": "只",
+      "source_pinyin": "zhī"
+    },
+    {
+      "question_number": 20,
+      "question_text": "“屏幕”的拼音是？",
+      "answers": [
+        "sòng",
+        "píngmù",
+        "kuàilè",
+        "pàng"
+      ],
+      "correct_answer": "píngmù",
+      "correct_answer_index": 2,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide27.xml",
+      "source_word": "屏幕",
+      "source_pinyin": "píngmù"
+    },
+    {
+      "question_number": 21,
+      "question_text": "“找”的拼音是？",
+      "answers": [
+        "pàng",
+        "yàoshi",
+        "zhǔnbèi",
+        "zhǎo"
+      ],
+      "correct_answer": "zhǎo",
+      "correct_answer_index": 4,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide29.xml",
+      "source_word": "找",
+      "source_pinyin": "zhǎo"
+    },
+    {
+      "question_number": 22,
+      "question_text": "“有点儿”的拼音是？",
+      "answers": [
+        "yǒudiǎnr",
+        "zhī",
+        "ránhòu",
+        "guò"
+      ],
+      "correct_answer": "yǒudiǎnr",
+      "correct_answer_index": 1,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide30.xml",
+      "source_word": "有点儿",
+      "source_pinyin": "yǒudiǎnr"
+    },
+    {
+      "question_number": 23,
+      "question_text": "“一点儿”的拼音是？",
+      "answers": [
+        "guò",
+        "yìdiǎnr",
+        "búguò",
+        "yánsè"
+      ],
+      "correct_answer": "yìdiǎnr",
+      "correct_answer_index": 2,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide31.xml",
+      "source_word": "一点儿",
+      "source_pinyin": "yìdiǎnr"
+    },
+    {
+      "question_number": 24,
+      "question_text": "“还可以”的拼音是？",
+      "answers": [
+        "dàngāo",
+        "yǒudiǎnr",
+        "gǒu",
+        "hái kěyǐ"
+      ],
+      "correct_answer": "hái kěyǐ",
+      "correct_answer_index": 4,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide32.xml",
+      "source_word": "还可以",
+      "source_pinyin": "hái kěyǐ"
+    },
+    {
+      "question_number": 25,
+      "question_text": "“近”的拼音是？",
+      "answers": [
+        "gǒu",
+        "jìn",
+        "huār",
+        "tīng"
+      ],
+      "correct_answer": "jìn",
+      "correct_answer_index": 2,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide33.xml",
+      "source_word": "近",
+      "source_pinyin": "jìn"
+    },
+    {
+      "question_number": 26,
+      "question_text": "“难”的拼音是？",
+      "answers": [
+        "suǒyǐ",
+        "yǒudiǎnr",
+        "nán",
+        "fàndiàn"
+      ],
+      "correct_answer": "nán",
+      "correct_answer_index": 3,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide35.xml",
+      "source_word": "难",
+      "source_pinyin": "nán"
+    },
+    {
+      "question_number": 27,
+      "question_text": "“祝”的拼音是？",
+      "answers": [
+        "zhī",
+        "dàngāo",
+        "búguò",
+        "zhù"
+      ],
+      "correct_answer": "zhù",
+      "correct_answer_index": 4,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide5.xml",
+      "source_word": "祝",
+      "source_pinyin": "zhù"
+    },
+    {
+      "question_number": 28,
+      "question_text": "“快乐”的拼音是？",
+      "answers": [
+        "gǒu",
+        "kuàilè",
+        "tīng",
+        "piányi"
+      ],
+      "correct_answer": "kuàilè",
+      "correct_answer_index": 2,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide6.xml",
+      "source_word": "快乐",
+      "source_pinyin": "kuàilè"
+    },
+    {
+      "question_number": 29,
+      "question_text": "“先”的拼音是？",
+      "answers": [
+        "xīn",
+        "jiàn",
+        "xiān",
+        "zhìliàng"
+      ],
+      "correct_answer": "xiān",
+      "correct_answer_index": 3,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide7.xml",
+      "source_word": "先",
+      "source_pinyin": "xiān"
+    },
+    {
+      "question_number": 30,
+      "question_text": "“花儿”的拼音是？",
+      "answers": [
+        "fàndiàn",
+        "huār",
+        "shù",
+        "dāngrán"
+      ],
+      "correct_answer": "huār",
+      "correct_answer_index": 2,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide8.xml",
+      "source_word": "花儿",
+      "source_pinyin": "huār"
+    },
+    {
+      "question_number": 31,
+      "question_text": "“礼物”的拼音是？",
+      "answers": [
+        "shù",
+        "zuìjìn",
+        "lǐwù",
+        "jiàn"
+      ],
+      "correct_answer": "lǐwù",
+      "correct_answer_index": 3,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide9.xml",
+      "source_word": "礼物",
+      "source_pinyin": "lǐwù"
+    },
+    {
+      "question_number": 32,
+      "question_text": "“最近”的拼音是？",
+      "answers": [
+        "tǐng",
+        "zuìjìn",
+        "hóng",
+        "piányi"
+      ],
+      "correct_answer": "zuìjìn",
+      "correct_answer_index": 2,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide11.xml",
+      "source_word": "最近",
+      "source_pinyin": "zuìjìn"
+    },
+    {
+      "question_number": 33,
+      "question_text": "“准备”的拼音是？",
+      "answers": [
+        "kuàilè",
+        "zhǔnbèi",
+        "lán",
+        "lǐwù"
+      ],
+      "correct_answer": "zhǔnbèi",
+      "correct_answer_index": 2,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide12.xml",
+      "source_word": "准备",
+      "source_pinyin": "zhǔnbèi"
+    },
+    {
+      "question_number": 34,
+      "question_text": "“然后”的拼音是？",
+      "answers": [
+        "ránhòu",
+        "dàngāo",
+        "zhī",
+        "jìn"
+      ],
+      "correct_answer": "ránhòu",
+      "correct_answer_index": 1,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide13.xml",
+      "source_word": "然后",
+      "source_pinyin": "ránhòu"
+    },
+    {
+      "question_number": 35,
+      "question_text": "“饭店”的拼音是？",
+      "answers": [
+        "jìn",
+        "pàng",
+        "fàndiàn",
+        "zhī"
+      ],
+      "correct_answer": "fàndiàn",
+      "correct_answer_index": 3,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide14.xml",
+      "source_word": "饭店",
+      "source_pinyin": "fàndiàn"
+    },
+    {
+      "question_number": 36,
+      "question_text": "“过”的拼音是？",
+      "answers": [
+        "guò",
+        "yǒudiǎnr",
+        "māma",
+        "huār"
+      ],
+      "correct_answer": "guò",
+      "correct_answer_index": 1,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide15.xml",
+      "source_word": "过",
+      "source_pinyin": "guò"
+    },
+    {
+      "question_number": 37,
+      "question_text": "“听”的拼音是？",
+      "answers": [
+        "tǐng",
+        "zhìliàng",
+        "ránhòu",
+        "tīng"
+      ],
+      "correct_answer": "tīng",
+      "correct_answer_index": 4,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide17.xml",
+      "source_word": "听",
+      "source_pinyin": "tīng"
+    },
+    {
+      "question_number": 38,
+      "question_text": "“送”的拼音是？",
+      "answers": [
+        "shù",
+        "píngmù",
+        "sòng",
+        "suǒyǐ"
+      ],
+      "correct_answer": "sòng",
+      "correct_answer_index": 3,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide18.xml",
+      "source_word": "送",
+      "source_pinyin": "sòng"
+    },
+    {
+      "question_number": 39,
+      "question_text": "“蛋糕”的拼音是？",
+      "answers": [
+        "pàng",
+        "dàngāo",
+        "māma",
+        "búguò"
+      ],
+      "correct_answer": "dàngāo",
+      "correct_answer_index": 2,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide19.xml",
+      "source_word": "蛋糕",
+      "source_pinyin": "dàngāo"
+    },
+    {
+      "question_number": 40,
+      "question_text": "“当然”的拼音是？",
+      "answers": [
+        "shù",
+        "piányi",
+        "zhī",
+        "dāngrán"
+      ],
+      "correct_answer": "dāngrán",
+      "correct_answer_index": 4,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide20.xml",
+      "source_word": "当然",
+      "source_pinyin": "dāngrán"
+    },
+    {
+      "question_number": 41,
+      "question_text": "“爸爸”的拼音是？",
+      "answers": [
+        "lán",
+        "ránhòu",
+        "yīfu",
+        "bàba"
+      ],
+      "correct_answer": "bàba",
+      "correct_answer_index": 4,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide21.xml",
+      "source_word": "爸爸",
+      "source_pinyin": "bàba"
+    },
+    {
+      "question_number": 42,
+      "question_text": "“妈妈”的拼音是？",
+      "answers": [
+        "suǒyǐ",
+        "shù",
+        "hēi",
+        "māma"
+      ],
+      "correct_answer": "māma",
+      "correct_answer_index": 4,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide23.xml",
+      "source_word": "妈妈",
+      "source_pinyin": "māma"
+    },
+    {
+      "question_number": 43,
+      "question_text": "“胖”的拼音是？",
+      "answers": [
+        "jìn",
+        "zánmen",
+        "pàng",
+        "búguò"
+      ],
+      "correct_answer": "pàng",
+      "correct_answer_index": 3,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide24.xml",
+      "source_word": "胖",
+      "source_pinyin": "pàng"
+    },
+    {
+      "question_number": 44,
+      "question_text": "“主意”的拼音是？",
+      "answers": [
+        "zhǔyi",
+        "nán",
+        "yánsè",
+        "hēi"
+      ],
+      "correct_answer": "zhǔyi",
+      "correct_answer_index": 1,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide25.xml",
+      "source_word": "主意",
+      "source_pinyin": "zhǔyi"
+    },
+    {
+      "question_number": 45,
+      "question_text": "“所以”的拼音是？",
+      "answers": [
+        "dǎsuàn",
+        "suǒyǐ",
+        "tǐng",
+        "sòng"
+      ],
+      "correct_answer": "suǒyǐ",
+      "correct_answer_index": 2,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide26.xml",
+      "source_word": "所以",
+      "source_pinyin": "suǒyǐ"
+    },
+    {
+      "question_number": 46,
+      "question_text": "“唱”的拼音是？",
+      "answers": [
+        "chàng",
+        "yìdiǎnr",
+        "yàoshi",
+        "nán"
+      ],
+      "correct_answer": "chàng",
+      "correct_answer_index": 1,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide27.xml",
+      "source_word": "唱",
+      "source_pinyin": "chàng"
+    },
+    {
+      "question_number": 47,
+      "question_text": "“咱们”的拼音是？",
+      "answers": [
+        "zánmen",
+        "yīfu",
+        "dàngāo",
+        "ránhòu"
+      ],
+      "correct_answer": "zánmen",
+      "correct_answer_index": 1,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide29.xml",
+      "source_word": "咱们",
+      "source_pinyin": "zánmen"
+    },
+    {
+      "question_number": 48,
+      "question_text": "“束”的拼音是？",
+      "answers": [
+        "shù",
+        "pàng",
+        "jiàn",
+        "zhǒng"
+      ],
+      "correct_answer": "shù",
+      "correct_answer_index": 1,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide30.xml",
+      "source_word": "束",
+      "source_pinyin": "shù"
+    },
+    {
+      "question_number": 49,
+      "question_text": "“对面”的拼音是？",
+      "answers": [
+        "dāngrán",
+        "duìmiàn",
+        "zhǎo",
+        "zhù"
+      ],
+      "correct_answer": "duìmiàn",
+      "correct_answer_index": 2,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide31.xml",
+      "source_word": "对面",
+      "source_pinyin": "duìmiàn"
+    },
+    {
+      "question_number": 50,
+      "question_text": "“卡拉OK”的拼音是？",
+      "answers": [
+        "kǎlā OK",
+        "yīfu",
+        "fàndiàn",
+        "lán"
+      ],
+      "correct_answer": "kǎlā OK",
+      "correct_answer_index": 1,
+      "time_limit": 30,
+      "question_type": "词语拼音",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide32.xml",
+      "source_word": "卡拉OK",
+      "source_pinyin": "kǎlā OK"
+    },
+    {
+      "question_text": "小明想买手机，周末准备去商店。他说：“我___买手机。”这里填什么？",
+      "answers": [
+        "颜色",
+        "打算",
+        "质量",
+        "屏幕"
+      ],
+      "correct_answer": "打算",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide5.xml",
+      "question_number": 51,
+      "correct_answer_index": 2
+    },
+    {
+      "question_text": "小红觉得这件衣服的样子很好看。她在说衣服的什么？",
+      "answers": [
+        "质量",
+        "颜色",
+        "价钱",
+        "样子"
+      ],
+      "correct_answer": "样子",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide6.xml",
+      "question_number": 52,
+      "correct_answer_index": 4
+    },
+    {
+      "question_text": "小美觉得这件衣服很漂亮。她可以怎么说？",
+      "answers": [
+        "这件衣服的质量挺好。",
+        "这件衣服有点儿小。",
+        "这件衣服挺漂亮的。",
+        "这件衣服的颜色是蓝色的。"
+      ],
+      "correct_answer": "这件衣服挺漂亮的。",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide15.xml",
+      "question_number": 53,
+      "correct_answer_index": 3
+    },
+    {
+      "question_text": "顾客想知道衣服做得好不好，问：“这件衣服的___怎么样？”应该填哪个词？",
+      "answers": [
+        "颜色",
+        "质量",
+        "样子",
+        "屏幕"
+      ],
+      "correct_answer": "质量",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide18.xml",
+      "question_number": 54,
+      "correct_answer_index": 2
+    },
+    {
+      "question_text": "外面可能下雨。小明说：“___下雨，我就在家。”这里填什么？",
+      "answers": [
+        "不过",
+        "要是",
+        "然后",
+        "当然"
+      ],
+      "correct_answer": "要是",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide21.xml",
+      "question_number": 55,
+      "correct_answer_index": 2
+    },
+    {
+      "question_text": "这件衣服有两___颜色：白色和黑色。这里少了哪个词？",
+      "answers": [
+        "只",
+        "束",
+        "种",
+        "件"
+      ],
+      "correct_answer": "种",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide23.xml",
+      "question_number": 56,
+      "correct_answer_index": 3
+    },
+    {
+      "question_text": "这只手机很漂亮，可是有点儿贵。用“不过”连接，应该怎么说：“这只手机很漂亮，___有点儿贵。”",
+      "answers": [
+        "不过",
+        "所以",
+        "然后",
+        "当然"
+      ],
+      "correct_answer": "不过",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide24.xml",
+      "question_number": 57,
+      "correct_answer_index": 1
+    },
+    {
+      "question_text": "小美觉得这件衣服有些小。她说：“这件衣服___小。”这里填什么？",
+      "answers": [
+        "有点儿",
+        "一点儿",
+        "还可以",
+        "挺"
+      ],
+      "correct_answer": "有点儿",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide30.xml",
+      "question_number": 58,
+      "correct_answer_index": 1
+    },
+    {
+      "question_text": "小明觉得手机太贵，想让价格低一点儿。他可以问：“能不能便宜___？”",
+      "answers": [
+        "一点儿",
+        "有点儿",
+        "然后",
+        "所以"
+      ],
+      "correct_answer": "一点儿",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide31.xml",
+      "question_number": 59,
+      "correct_answer_index": 1
+    },
+    {
+      "question_text": "小林觉得这件衣服不错，可以买。他说：“这件衣服___。”填什么？",
+      "answers": [
+        "要是",
+        "不过",
+        "最近",
+        "还可以"
+      ],
+      "correct_answer": "还可以",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx:ppt/slides/slide32.xml",
+      "question_number": 60,
+      "correct_answer_index": 4
+    },
+    {
+      "question_text": "小美明天过生日，朋友们要给她买蛋糕。朋友们准备买什么？",
+      "answers": [
+        "一件衣服",
+        "一部手机",
+        "一束花儿",
+        "一个生日蛋糕"
+      ],
+      "correct_answer": "一个生日蛋糕",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide12.xml",
+      "question_number": 61,
+      "correct_answer_index": 4
+    },
+    {
+      "question_text": "小明先去花店买花儿，然后去朋友家。买完花儿以后，他去哪儿？",
+      "answers": [
+        "回学校",
+        "去饭店",
+        "去朋友家",
+        "去蛋糕店"
+      ],
+      "correct_answer": "去朋友家",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide13.xml",
+      "question_number": 62,
+      "correct_answer_index": 3
+    },
+    {
+      "question_text": "饭店在学校的对面。饭店在哪儿？",
+      "answers": [
+        "学校里面",
+        "学校对面",
+        "宿舍旁边",
+        "车站附近"
+      ],
+      "correct_answer": "学校对面",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide14.xml",
+      "question_number": 63,
+      "correct_answer_index": 2
+    },
+    {
+      "question_text": "小安想和朋友一起过生日。他会怎么说？",
+      "answers": [
+        "我和朋友一起过生日。",
+        "我送朋友一束花儿。",
+        "我准备一个生日蛋糕。",
+        "我和朋友一起唱卡拉OK。"
+      ],
+      "correct_answer": "我和朋友一起过生日。",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide15.xml",
+      "question_number": 64,
+      "correct_answer_index": 1
+    },
+    {
+      "question_text": "小芳把一束花儿送给妈妈。她做了什么？",
+      "answers": [
+        "她买了一束花儿。",
+        "她在找一束花儿。",
+        "她听妈妈说话。",
+        "她把花儿送给妈妈。"
+      ],
+      "correct_answer": "她把花儿送给妈妈。",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide18.xml",
+      "question_number": 65,
+      "correct_answer_index": 4
+    },
+    {
+      "question_text": "朋友请小华去生日聚会。小华马上答应。他会怎么说？",
+      "answers": [
+        "我最近很忙。",
+        "我还没决定。",
+        "今天是你的生日，我当然要去！",
+        "以后再说吧。"
+      ],
+      "correct_answer": "今天是你的生日，我当然要去！",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide20.xml",
+      "question_number": 66,
+      "correct_answer_index": 3
+    },
+    {
+      "question_text": "小安想和朋友一起唱歌。他对朋友说什么？",
+      "answers": [
+        "我先去花店买花儿。",
+        "这家饭店在学校对面。",
+        "这是送给你的生日礼物。",
+        "咱们一起去唱卡拉OK吧。"
+      ],
+      "correct_answer": "咱们一起去唱卡拉OK吧。",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide27.xml",
+      "question_number": 67,
+      "correct_answer_index": 4
+    },
+    {
+      "question_text": "朋友说：“我们先去饭店吃饭，然后去看电影。”小玲同意说：“这是个好___。”这里填什么？",
+      "answers": [
+        "礼物",
+        "饭店",
+        "颜色",
+        "主意"
+      ],
+      "correct_answer": "主意",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide25.xml",
+      "question_number": 68,
+      "correct_answer_index": 4
+    },
+    {
+      "question_text": "小林想先吃饭，再看电影。他会怎么说？",
+      "answers": [
+        "我们先看电影，然后去吃饭。",
+        "我们先买花儿，然后去朋友家。",
+        "我们先吃饭，然后去看电影。",
+        "我们先去饭店，然后去唱歌。"
+      ],
+      "correct_answer": "我们先吃饭，然后去看电影。",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide13.xml",
+      "question_number": 69,
+      "correct_answer_index": 3
+    },
+    {
+      "question_text": "小美喜欢花儿。我准备送她一束花儿。用“因为……所以……”把两句话连起来，应该怎么说？",
+      "answers": [
+        "她喜欢花儿，不过我送她一束。",
+        "她喜欢花儿，然后我送她一束。",
+        "要是她喜欢花儿，我就送她一束。",
+        "因为她喜欢花儿，所以我送她一束。"
+      ],
+      "correct_answer": "因为她喜欢花儿，所以我送她一束。",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide26.xml",
+      "question_number": 70,
+      "correct_answer_index": 4
+    },
+    {
+      "question_text": "小芳送给朋友一个蛋糕。她说：“这是送给你的生日___。”这里填什么？",
+      "answers": [
+        "礼物",
+        "花儿",
+        "饭店",
+        "主意"
+      ],
+      "correct_answer": "礼物",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide9.xml",
+      "question_number": 71,
+      "correct_answer_index": 1
+    },
+    {
+      "question_text": "我先给妈妈打电话，然后去饭店吃饭。打完电话以后，我去哪儿？",
+      "answers": [
+        "去饭店吃饭",
+        "去花店买花儿",
+        "去蛋糕店买蛋糕",
+        "去卡拉OK唱歌"
+      ],
+      "correct_answer": "去饭店吃饭",
+      "time_limit": 45,
+      "question_type": "语境理解",
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide78.xml",
+      "question_number": 72,
+      "correct_answer_index": 1
+    },
+    {
+      "question_text": "小明要给朋友买新衣服。朋友喜欢蓝色。小明应该找什么衣服？",
+      "correct_answer": "找一件蓝色的衣服",
+      "answers": [
+        "给朋友买一个生日蛋糕",
+        "找一件蓝色的衣服",
+        "准备一束花儿",
+        "请朋友去唱卡拉OK"
+      ],
+      "time_limit": 60,
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-slide-contract.json:activity-3; lesson-14 activity-6",
+      "source_note": "原创复习情境，整合第13课选衣服与第14课生日计划。",
+      "question_type": "跨课整合",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13",
+        "boya-elementary-i:lesson-14"
+      ],
+      "question_number": 73,
+      "correct_answer_index": 2
+    },
+    {
+      "question_text": "明天是妈妈的生日。小芳先去花店买花儿，然后去饭店见妈妈。她最后去哪儿见妈妈？",
+      "correct_answer": "饭店",
+      "answers": [
+        "花店",
+        "蛋糕店",
+        "饭店",
+        "服装店"
+      ],
+      "time_limit": 60,
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide36.xml; slide14.xml",
+      "source_note": "原创复习情境，整合先后顺序与生日送礼。",
+      "question_type": "跨课整合",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13",
+        "boya-elementary-i:lesson-14"
+      ],
+      "question_number": 74,
+      "correct_answer_index": 3
+    },
+    {
+      "question_text": "小林要送朋友一件生日礼物。他打算买衣服。小林会怎么说？",
+      "correct_answer": "我打算买一件衣服送给他。",
+      "answers": [
+        "我打算买一件衣服送给他。",
+        "我打算买一束花儿送给她。",
+        "我打算给他打电话祝生日快乐。",
+        "我打算先去饭店，然后唱歌。"
+      ],
+      "time_limit": 60,
+      "source_ref": "lesson-13 vocabulary slide 5; lesson-14 vocabulary slides 9, 12",
+      "source_note": "原创复习句，组合两课词语。",
+      "question_type": "跨课整合",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13",
+        "boya-elementary-i:lesson-14"
+      ],
+      "question_number": 75,
+      "correct_answer_index": 1
+    },
+    {
+      "question_text": "朋友想买一件蓝色衣服，质量要好，价钱要合适。小美找到两件蓝色衣服，应该比较什么？",
+      "correct_answer": "衣服的质量和价钱",
+      "answers": [
+        "衣服的质量和价钱",
+        "衣服的颜色和样子",
+        "衣服的大小和颜色",
+        "衣服的样子和价钱"
+      ],
+      "time_limit": 60,
+      "source_ref": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-slide-contract.json:activity-3; lesson-14 activity-6",
+      "source_note": "原创复习情境，整合选衣服标准和生日礼物。",
+      "question_type": "跨课整合",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13",
+        "boya-elementary-i:lesson-14"
+      ],
+      "question_number": 76,
+      "correct_answer_index": 1
+    },
+    {
+      "question_text": "小明说：“我先选好衣服，再买生日蛋糕。”朋友问：“你先做什么？”",
+      "correct_answer": "选好衣服",
+      "answers": [
+        "买生日蛋糕",
+        "去朋友家",
+        "送花儿",
+        "选好衣服"
+      ],
+      "time_limit": 60,
+      "source_ref": "lesson-13 online vocabulary examples; lesson-14 online sentence-pattern slide 78",
+      "source_note": "原创复习句，考查两课活动顺序。",
+      "question_type": "跨课整合",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13",
+        "boya-elementary-i:lesson-14"
+      ],
+      "question_number": 77,
+      "correct_answer_index": 4
+    },
+    {
+      "question_text": "小芳先去花店买花儿，然后去蛋糕店买蛋糕。她最后去哪家店？",
+      "correct_answer": "去蛋糕店买蛋糕",
+      "answers": [
+        "去花店买花儿",
+        "去蛋糕店买蛋糕",
+        "去饭店吃饭",
+        "去服装店买衣服"
+      ],
+      "time_limit": 60,
+      "source_ref": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx:ppt/slides/slide36.xml; slide37.xml",
+      "source_note": "原创复习情境，使用两课词语。",
+      "question_type": "跨课整合",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13",
+        "boya-elementary-i:lesson-14"
+      ],
+      "question_number": 78,
+      "correct_answer_index": 2
+    },
+    {
+      "question_text": "你想买一件蓝色衣服，也想知道衣服的质量好不好。你怎么问售货员？",
+      "correct_answer": "这件衣服的质量怎么样？",
+      "answers": [
+        "这件衣服是什么颜色？",
+        "这件衣服多少钱？",
+        "这件衣服的质量怎么样？",
+        "这件衣服是什么样子？"
+      ],
+      "time_limit": 60,
+      "source_ref": "lesson-13 vocabulary slides 11, 18; lesson-14 vocabulary slide 9",
+      "source_note": "原创问题，整合颜色、质量和礼物情境。",
+      "question_type": "跨课整合",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13",
+        "boya-elementary-i:lesson-14"
+      ],
+      "question_number": 79,
+      "correct_answer_index": 3
+    },
+    {
+      "question_text": "丽丽过生日，大家先在饭店吃晚饭，然后去唱卡拉OK。晚饭以后，大家去哪儿？",
+      "correct_answer": "去唱卡拉OK",
+      "answers": [
+        "先在饭店吃晚饭",
+        "去花店买花儿",
+        "去唱卡拉OK",
+        "回学校上课"
+      ],
+      "time_limit": 60,
+      "source_ref": "lesson-14 online vocabulary slides 13, 14, 27; lesson-14 birthday activity",
+      "source_note": "原创理解题；正确答案依据题干未提供礼物信息。",
+      "question_type": "跨课整合",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13",
+        "boya-elementary-i:lesson-14"
+      ],
+      "question_number": 80,
+      "correct_answer_index": 3
+    }
+  ],
+  "question_types": {
+    "词语拼音": 50,
+    "语境理解": 22,
+    "跨课整合": 8
+  }
+}

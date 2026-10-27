@@ -33,6 +33,8 @@ def main():
     for src in seed['provenance']:
         if 'file' in src:
             path = Path('/Users/ssyan110/Desktop/Work/Teaching/VinhUni/02_評分') / src['file']
+            if not path.is_file():
+                path = ROOT / 'private' / 'sources' / src['file']
             assert hashlib.sha256(path.read_bytes()).hexdigest() == src['sha256'], 'Original workbook changed'
             wb = openpyxl.load_workbook(path, data_only=False)
             for key,r in seed['records'].items():

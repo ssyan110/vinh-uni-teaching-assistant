@@ -1,0 +1,158 @@
+{
+  "review_version": "v4",
+  "status": "content_review_pending",
+  "offering_id": "2026-fall",
+  "cohort": "BOYA-LS-E1-Y1S1-2026F",
+  "lesson_keys": [
+    "boya-elementary-i:lesson-04",
+    "boya-elementary-i:lesson-05",
+    "boya-elementary-i:lesson-06",
+    "boya-elementary-i:lesson-07",
+    "boya-elementary-i:lesson-08",
+    "boya-elementary-i:lesson-09",
+    "boya-elementary-i:lesson-10",
+    "boya-elementary-i:lesson-11",
+    "boya-elementary-i:lesson-12",
+    "boya-elementary-i:lesson-13",
+    "boya-elementary-i:lesson-14",
+    "boya-elementary-i:lesson-15"
+  ],
+  "review_path": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-speaking-content-review/lesson-15-口语题目审阅稿.md",
+  "sources": [
+    {
+      "source_id": "S1",
+      "title": "Council of Europe, CEFR Companion Volume（2020），印刷63–64页",
+      "url": "https://rm.coe.int/common-european-framework-of-reference-for-languages-learning-teaching/pdf/16809ea0d4",
+      "accessed_date": "2026-10-26",
+      "evidence": "A1可在准备后用简单句说日常生活；偏好解释、简单比较等在A2描述中列出。",
+      "design_inference": "保留熟悉生活内容，把“一条简单理由”作为可观察的伸展；不把长篇论证设为A1门槛。",
+      "limits": "能力描述不是本班试题的实测难度或等值证明。"
+    },
+    {
+      "source_id": "S2",
+      "title": "汉考国际，HSKK初级官方样卷，第2页（历史样卷）",
+      "url": "https://www.chinesetest.cn/userfiles/file/HSK-chuji.pdf",
+      "accessed_date": "2026-10-26",
+      "evidence": "真实样题分别让考生介绍朋友、评价熟悉职业并说明原因；每题1.5分钟。",
+      "design_inference": "采用一个熟悉主题加简短展开，不把五种交际动作堆成一张卡。",
+      "limits": "样卷属于旧版HSKK格式，不能当成当前所有HSK版本的统一标准，更不直接对应CEFR A1。"
+    },
+    {
+      "source_id": "S3",
+      "title": "汉考国际，HSK口语作答指导，初／中级页",
+      "url": "https://www.chinesetest.cn/userfiles/file/HSKkouyuzuoda_ch.pdf",
+      "accessed_date": "2026-10-26",
+      "evidence": "初级回答每题1分30秒；中级图述、回答各题2分钟。",
+      "design_inference": "本班1分钟准备加2分钟回答单独说明，不能借官方时长推定本班学生应该持续说满。",
+      "limits": "本班准备条件、题量和评分与官方不同。"
+    },
+    {
+      "source_id": "S4",
+      "title": "华测会，口语测验简介与题型说明",
+      "url": "https://tocfl.edu.tw/tocfl/index.php/test/speaking/list/1",
+      "accessed_date": "2026-10-26",
+      "evidence": "入门A1强调熟悉个人问题的短答及人物地点物品的简单描述；基础A2增加日常描述与短片内容。",
+      "design_inference": "基线观察简单表达，理由和衔接另记发展表现；不以本卷定级。",
+      "limits": "入门基础级Band A同时含A1与A2，不能把该级所有任务都称为纯A1任务。"
+    },
+    {
+      "source_id": "S5",
+      "title": "华测会，口语题型和时限",
+      "url": "https://tocfl.edu.tw/tocfl/index.php/test/speaking/list/3",
+      "accessed_date": "2026-10-26",
+      "evidence": "入门基础级短答30秒；经验／影片描述准备50秒、回答1分钟。",
+      "design_inference": "2分钟在本班应作为宽限窗口；去掉说满和固定句数的评分门槛。",
+      "limits": "官网当前低级别使用影片描述，并非本稿四格静态图；未核读RAR模拟卷内全部题目。"
+    },
+    {
+      "source_id": "S6",
+      "title": "Cambridge English，A1 Movers教师手册（2024），第50页",
+      "url": "https://www.cambridgeenglish.org/Images/357180-starters-movers-and-flyers-handbook-for-teachers-2024.pdf",
+      "accessed_date": "2026-10-26",
+      "evidence": "四图提供标题、人物和第一图介绍；教师手册明确不要求叙事技巧，允许逐格说少量内容，并允许考官提示。",
+      "design_inference": "四格、题名、首格导语统一；只测看得见的人物动作和简单先后。",
+      "limits": "儿童英语题型仅供任务负荷参考；本班是成人华语，不移植儿童场景或官方分数。",
+      "alternate_official_url": "https://www.cambridgeenglish.org/exams-and-tests/qualifications/young-learners/paper/movers/format/"
+    },
+    {
+      "source_id": "S7",
+      "title": "Cambridge English，A2 Key教师手册，印刷40–45页",
+      "url": "https://www.cambridgeenglish.org/Images/168163-cambridge-english-key-handbook-for-teachers.pdf",
+      "accessed_date": "2026-10-26",
+      "evidence": "熟悉日常主题的访谈鼓励理由和例子；偏好讨论有标准提示和考官支持。",
+      "design_inference": "保留Adam希望的“为什么”，但只需一条具体理由；支持问句可选、全体一致。",
+      "limits": "该任务是A2互动口试；本班单人陈述不能声称也测到了互动能力。"
+    },
+    {
+      "source_id": "S8",
+      "title": "华测会，入门基础级评分原则",
+      "url": "https://tocfl.edu.tw/tocfl/index.php/test/speaking/list/5",
+      "accessed_date": "2026-10-26",
+      "evidence": "评分结合切题、内容、语言运用和可理解度；允许不同程度的停顿和基础错误。",
+      "design_inference": "用可观察表现作记录，区分无证据与真实施测后未完成；不只数语法错误或句数。",
+      "limits": "本稿记录尺度属于课堂建议，不换算官方级分或校方权重。"
+    }
+  ],
+  "local_inputs": [
+    {
+      "path": ".agent/runs/w07-speaking-question-language-v3-20261026/speaking-prompts-v3.md",
+      "sha256": "a689608fe8921e6067136a6642a658f453ec13ae9f52867f8bf6c77ed2693a32"
+    },
+    {
+      "path": ".agent/runs/w07-listening-speaking-plan-20261026/review.md",
+      "sha256": "41e5e41245ef8b0ceca3bdda9b0d757c1f12b2b5741c77288d8dfbf479d099ec"
+    },
+    {
+      "path": "docs/workflow/canonical-workflow-contract.md",
+      "sha256": "094de66e35a06503047c4fe404b4488c9aae8ca5395096bd663667b33a2e4524"
+    },
+    {
+      "path": "docs/workflow/education-evidence-review.md",
+      "sha256": "27a82f0374050bc008f4fd0cd8a269066ad80f3c02a910d12b2355690d2fb077"
+    },
+    {
+      "path": "course/lesson-registry.json",
+      "sha256": "2dfb10d2df44f594b8c9818f4d6c7dff844e001e3e19b8b74df237608d7249ad"
+    },
+    {
+      "path": "course/offerings/2026-fall/博雅汉语听说初级起步篇一/semester-teacher-manual.md",
+      "sha256": "89352d6b0b074c033d96619bc784c2c11c3f01f1a1d37a0e6885a22cd79b1b0d"
+    },
+    {
+      "path": "textbooks/boya-elementary-i-ii/source/reference-dataset/csv/vocabulary_occurrences.csv",
+      "sha256": "d320d9e779abb7bbfe2b071da7067b27dcf24466b05ad1f177290f759650b06b"
+    },
+    {
+      "path": "textbooks/boya-elementary-i-ii/source/reference-dataset/csv/grammar.csv",
+      "sha256": "11a673413d563609ce82faee6c0fd731a963ba3a6e4aa9dc8f287709c42d475d"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/review-20261020-w06/lesson-13-14-逐页文案审阅.md",
+      "sha256": "884d09577271cf2a227754e8a3a53fda39d7386e4a2ca03e430d314f476b4de7"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-15/10-design/storyboard/lesson-15-逐页文案审阅-v04.md",
+      "sha256": "1204003898b7e4b606114f25936949c1952a2153fd730735b7f2524f9fb5a2f0"
+    }
+  ],
+  "new_image_content_approval": false,
+  "classroom_trial": "not_run",
+  "image_fidelity": "not_run",
+  "inter_item_equivalence": "not_calibrated",
+  "unresolved": [
+    "approval_of_question_content",
+    "interpretation_of_two_minute_response_window",
+    "taught_scope_and_task_vocabulary",
+    "image_production_after_content_approval",
+    "learner_trial_and_timing"
+  ],
+  "retrieved_primary_source_files": [
+    {
+      "path": ".agent/runs/w07-speaking-research-complete-review-20261026/sources/cambridge-a1-movers-handbook-2024.pdf",
+      "sha256": "22477a5b4aea5db3ec91b140457f61da13867b6f0b79c11c03539c2b3565324c",
+      "inspected_pdf_page": 50,
+      "text_extract": ".agent/runs/w07-speaking-research-complete-review-20261026/sources/a1-picture-task-extract.txt",
+      "visual_inspection": "source-page-viewed"
+    }
+  ]
+}

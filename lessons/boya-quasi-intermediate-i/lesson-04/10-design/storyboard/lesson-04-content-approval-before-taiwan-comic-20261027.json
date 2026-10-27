@@ -1,0 +1,20 @@
+{
+  "status": "approved",
+  "gate": "lesson-content",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-04",
+  "offering_id": "2026-fall",
+  "approved_by": "Adam",
+  "approved_at": "2026-10-27T11:23:54.081825+07:00",
+  "artifacts": [
+    {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json",
+      "sha256": "0eb2afac761ba8a31682ae74cabf4a6faeebbd5e23ba8ea5d94b424014fe9aee"
+    },
+    {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/storyboard/lesson-04-逐页文案审阅.md",
+      "sha256": "82510a777e8d775bfb8c63b3c6725f8174d5b3d9a6d5a313edf377a5c0885fa6"
+    }
+  ],
+  "evidence": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/storyboard/lesson-04-content-approval-evidence-w09-20261027.md",
+  "evidence_sha256": "d5c87f41b4bdd958371d863af9defc05d7c37472f30647b8285b596bf8f9fb7c"
+}

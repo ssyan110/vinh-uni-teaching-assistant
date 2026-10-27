@@ -1,0 +1,38 @@
+{
+  "lesson_key": "boya-elementary-i:lesson-13",
+  "offering_id": "2026-fall",
+  "gate": "lesson-content",
+  "status": "approved",
+  "approved_by": "Adam",
+  "approved_at": "2026-10-20T21:55:53+07:00",
+  "timestamp_basis": "Adam direct instruction in the current conversation specifying question-only slides 13 and 15, both HSK levels together on slides 14 and 16, and requesting the slides be corrected accordingly; slide 17–18 retains the previously reviewed Taipei birthday topic with paired level support.",
+  "artifacts": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/00-source/canonical-source.json",
+      "sha256": "dc74200a92a3e637ee4709ce37cd429205b05d0b7bf9a07c634954b510e846ad"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/storyboard/lesson-13-逐页文案审阅.md",
+      "sha256": "d9d85637cd989c3a877b800429630fa3e3a1e7987664ae479bdd87c59c548b9a"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/lesson-13-教师朗读稿.md",
+      "sha256": "5de5a549e16efe4542caa6b1eb805d87d8e6996420d400be83c757445bd59fb6"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-逐页文案审阅-v02.md",
+      "sha256": "b6b0d1d40b71b124e6432d0ed8d7cf2a8dacf0c9355d3aa3940cdcf8b96d53b7"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-逐页文案审阅-v03.md",
+      "sha256": "01164faac085ac28bf3fa3bb96568412f6b4f8e9c54b7e8d2b3809d72f704328"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-教师速用说明.md",
+      "sha256": "73b6a4e95294af7a1b3a0a3564e4cb3f17e1bdf4f4034ea3333ef0f31e8631cc"
+    }
+  ],
+  "evidence": "lessons/boya-elementary-i/lesson-13/10-design/storyboard/lesson-13-content-approval-evidence-2026-10-20-w06-paired-pages.md",
+  "evidence_sha256": "11df6f457b46710bcffd34c23fdb82546f76ca3ee1953746a63aa2c59a1b7b32",
+  "scope": "W06 combined 18-slide in-person HTML student content for the lesson pages in scope; design draft only, no authority promotion or release."
+}

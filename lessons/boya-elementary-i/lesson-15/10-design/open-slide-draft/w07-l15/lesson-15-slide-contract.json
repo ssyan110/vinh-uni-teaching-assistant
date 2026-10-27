@@ -1,0 +1,264 @@
+{
+  "schema_version": "classroom-slide-contract-v1",
+  "offering_id": "2026-fall",
+  "owner_lesson_key": "boya-elementary-i:lesson-15",
+  "lesson_keys": [
+    "boya-elementary-i:lesson-15"
+  ],
+  "source_identity": {
+    "textbook_id": "boya-elementary-i",
+    "owner_lesson_key": "boya-elementary-i:lesson-15",
+    "path": "lessons/boya-elementary-i/lesson-15/00-source/canonical-source.json",
+    "sha256": "b18f5ce1709df0016be5484114a97492648234688367bba712779950929f26d0"
+  },
+  "copy_inputs": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-15/10-design/storyboard/lesson-15-逐页文案审阅.md",
+      "sha256": "1204003898b7e4b606114f25936949c1952a2153fd730735b7f2524f9fb5a2f0",
+      "page_scope": "all 21 student pages; approved v04 copy"
+    }
+  ],
+  "decision_inputs": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-15/10-design/storyboard/lesson-15-content-approval-evidence-2026-10-21.md",
+      "sha256": "f6a936e11376a0614e587eb2ba6e1bbe9624815b6e14e00d54ff549789c29fcd",
+      "scope": "Adam approval for v04"
+    }
+  ],
+  "references": {
+    "layout": {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-实体课.html",
+      "sha256": "9ee3b24a73662ead2f0f3054b74dd6466ec74b85b280a131a212c56bbda6ddac"
+    },
+    "cover": {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-实体课.html",
+      "sha256": "9ee3b24a73662ead2f0f3054b74dd6466ec74b85b280a131a212c56bbda6ddac",
+      "page_index": 0
+    },
+    "route": {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-实体课.html",
+      "sha256": "9ee3b24a73662ead2f0f3054b74dd6466ec74b85b280a131a212c56bbda6ddac",
+      "page_index": 1
+    }
+  },
+  "footer_text": "博雅汉语 · 初级口语活动",
+  "normalization_exceptions": [],
+  "pages": [
+    {
+      "id": "w07-cover",
+      "role": "cover",
+      "expected_text_source": "approved v04 copy; stable page w07-cover",
+      "expected_text": "第15课 · 实体课 试穿与请求 在胡志明市买衣服、接朋友，用中文提出请求。 博雅汉语 · 初级口语活动 01 / 21",
+      "expected_images": [
+        "assets/cover-lesson15-clothing-request.png"
+      ]
+    },
+    {
+      "id": "w07-route",
+      "role": "route",
+      "expected_text_source": "approved v04 copy; stable page w07-route",
+      "expected_text": "今天我们会做什么 听故事 记重点、说经过 看图说故事 口语活动 试穿、城市旅行 听影片与复习 总结、介绍",
+      "expected_images": [
+        "assets/icons/listen.png",
+        "assets/icons/book-pencil.png",
+        "assets/icons/conversation.png",
+        "assets/icons/shopping-bag.png"
+      ],
+      "expected_route_cards": 4,
+      "expected_route_columns": 4,
+      "footer_exempt": true
+    },
+    {
+      "id": "w07-listen-clothes",
+      "role": "activity",
+      "expected_text_source": "approved v04 copy; stable page w07-listen-clothes",
+      "expected_text": "第15课 · 实体课 活动15-1｜听故事，记重点 在河内试衣服 听老师读两次，记关键词： 1 小兰想买什么？什么颜色？ 2 第一件多少钱？试穿后怎么样？ 3 第二件多少钱？合适吗？ 4 最后买哪件？为什么？ 博雅汉语 · 初级口语活动 03 / 21",
+      "expected_images": [
+        "assets/icons/listen.png"
+      ]
+    },
+    {
+      "id": "w07-report-clothes",
+      "role": "activity",
+      "expected_text_source": "approved v04 copy; stable page w07-report-clothes",
+      "expected_text": "第15课 · 实体课 活动15-1｜介绍听到的故事 介绍小兰买衣服的经过 先和同学核对关键词，再轮流介绍小兰买衣服的经过。 HSK 1–3 说颜色、价格、大小和最后的选择。 HSK 4–6 比较两件衣服，说清为什么换一件、为什么最后买这件。 博雅汉语 · 初级口语活动 04 / 21",
+      "expected_images": []
+    },
+    {
+      "id": "w07-listen-airport",
+      "role": "activity",
+      "expected_text_source": "approved v04 copy; stable page w07-listen-airport",
+      "expected_text": "第15课 · 实体课 活动15-1｜听故事，记重点 去机场接朋友 听老师读两次，记关键词： 1 谁来河内？飞机几点到？ 2 小明几点有课？为什么找老师？ 3 他想请多久假？老师怎么回答？ 4 最后怎么安排？ 博雅汉语 · 初级口语活动 05 / 21",
+      "expected_images": [
+        "assets/icons/listen.png"
+      ]
+    },
+    {
+      "id": "w07-report-airport",
+      "role": "activity",
+      "expected_text_source": "approved v04 copy; stable page w07-report-airport",
+      "expected_text": "第15课 · 实体课 活动15-1｜介绍听到的故事 介绍小明的接机安排 和同学核对关键词，再轮流介绍小明怎样请假、怎样接朋友。 HSK 1–3 说人物、时间、请假原因和最后的安排。 HSK 4–6 说明接机和上课时间有什么问题，小明怎样解决。 博雅汉语 · 初级口语活动 06 / 21",
+      "expected_images": []
+    },
+    {
+      "id": "w07-comic-airport",
+      "role": "comic",
+      "expected_text_source": "approved v04 copy; stable page w07-comic-airport",
+      "expected_text": "看图说故事 博雅汉语 · 初级口语活动 07 / 21",
+      "expected_images": [
+        "assets/comic-lesson15-airport-pickup.png"
+      ]
+    },
+    {
+      "id": "w07-task-try-on",
+      "role": "discussion_question",
+      "expected_text_source": "approved v04 copy; stable page w07-task-try-on",
+      "expected_text": "第15课 · 实体课 活动15-2｜试穿 在胡志明市试衣服 你想买一件蓝色上衣，最多花200,000越南盾。试了A，觉得有点儿小。 两人一组，一人是顾客，一人是店员。问价格、请求试穿、说合不合适，最后决定买不买。交换角色。 衣服 颜色 大小 价格 A 蓝色 M号 180,000₫ B 蓝色 L号 190,000₫ C 黑色 M号 160,000₫ A、B｜蓝色上衣 C｜黑色上衣 博雅汉语 · 初级口语活动 08 / 21",
+      "expected_images": [
+        "assets/shirt-a-blue.png",
+        "assets/shirt-b-black.jpg"
+      ],
+      "pair_key": "w07-task-try-on"
+    },
+    {
+      "id": "w07-task-try-on-support",
+      "role": "discussion_support",
+      "expected_text_source": "approved v04 copy; stable page w07-task-try-on-support",
+      "expected_text": "第15课 · 实体课 活动15-2｜试穿 在胡志明市试衣服 HSK 1–3｜可用词句 “这件多少钱？” “我可以试试吗？” “这件有点儿小，有大号的吗？” “还有别的颜色吗？” 结果介绍 我想买____。我先试了____，觉得____。店员介绍了____。最后我决定____，因为____。 HSK 4–6 如果大号的也不合适，比较别的颜色和大小，回应店员的建议，再决定买不买。 博雅汉语 · 初级口语活动 09 / 21",
+      "expected_images": [],
+      "pair_key": "w07-task-try-on",
+      "level_labels": [
+        "HSK 1–3",
+        "HSK 4–6"
+      ]
+    },
+    {
+      "id": "w07-comic-clothes",
+      "role": "comic",
+      "expected_text_source": "approved v04 copy; stable page w07-comic-clothes",
+      "expected_text": "看图说故事 博雅汉语 · 初级口语活动 10 / 21",
+      "expected_images": [
+        "assets/comic-lesson15-hanoi-try-on.png"
+      ]
+    },
+    {
+      "id": "w07-task-city-choice",
+      "role": "discussion_question",
+      "expected_text_source": "approved v04 copy; stable page w07-task-city-choice",
+      "expected_text": "第15课 · 实体课 活动15-3｜城市选择 推荐哪座城市？ 台湾朋友小杰第一次来越南，喜欢户外活动，你喜欢不太热的天气。两人各推荐一座城市，比较后选一座，向另一组介绍理由。 城市 体验日天气 每人当地活动预算 可以做什么 河内 阴，25℃ 180,000₫ 看湖、逛老街 胡志明市 晴，32℃ 150,000₫ 逛市场、吃东西 岘港 晴，29℃ 200,000₫ 海边散步 每人最多200,000越南盾；跨城市交通、住宿已经另行安排。 博雅汉语 · 初级口语活动 11 / 21",
+      "expected_images": [],
+      "pair_key": "w07-task-city-choice"
+    },
+    {
+      "id": "w07-task-city-choice-support",
+      "role": "discussion_support",
+      "expected_text_source": "approved v04 copy; stable page w07-task-city-choice-support",
+      "expected_text": "第15课 · 实体课 活动15-3｜城市选择 推荐哪座城市？ HSK 1–3｜参考回答 我的朋友小杰是台湾人，他喜欢____。我想推荐____。那里天气____，可以____。一天活动预算是____。不过，我的朋友想____。我们最后选____，因为____。 HSK 4–6 比较两个城市，回应同伴不同的喜好，说明为什么最后的选择适合两个人。 博雅汉语 · 初级口语活动 12 / 21",
+      "expected_images": [],
+      "pair_key": "w07-task-city-choice",
+      "level_labels": [
+        "HSK 1–3",
+        "HSK 4–6"
+      ]
+    },
+    {
+      "id": "w07-task-hanoi-half-day",
+      "role": "discussion_question",
+      "expected_text_source": "approved v04 copy; stable page w07-task-hanoi-half-day",
+      "expected_text": "第15课 · 实体课 活动15-4｜安排半天 河内半天怎么玩？ 你们现在在河内的酒店，上午10点出发，下午1点前回来。两人交通费合计最多100,000越南盾。 还剑湖散步 去程／回程各15分钟 公共汽车 两人往返40,000₫ 活动60分钟 老街逛街 去程／回程各20分钟 出租车 两人往返80,000₫ 活动90分钟 咖啡店坐坐 去程／回程各10分钟 走路 两人往返0₫ 活动60分钟 你喜欢散步，朋友不想走太多路。两人讨论，选一个活动，说明怎么去、几点回酒店、为什么这样选。 博雅汉语 · 初级口语活动 13 / 21",
+      "expected_images": [],
+      "pair_key": "w07-task-hanoi-half-day"
+    },
+    {
+      "id": "w07-task-hanoi-half-day-support",
+      "role": "discussion_support",
+      "expected_text_source": "approved v04 copy; stable page w07-task-hanoi-half-day-support",
+      "expected_text": "第15课 · 实体课 活动15-4｜安排半天 河内半天怎么玩？ HSK 1–3｜参考回答 我们上午十点从酒店出发，____去____，路上要____分钟。在那里____分钟，然后回酒店。我们____点____分回来，交通费一共____。我们这样选，是因为____。 HSK 4–6 比较两个安排的时间、交通费和喜好。说明为什么不选另一个，并确认同伴能接受。 博雅汉语 · 初级口语活动 14 / 21",
+      "expected_images": [],
+      "pair_key": "w07-task-hanoi-half-day",
+      "level_labels": [
+        "HSK 1–3",
+        "HSK 4–6"
+      ]
+    },
+    {
+      "id": "w07-task-danang-rain",
+      "role": "discussion_question",
+      "expected_text_source": "approved v04 copy; stable page w07-task-danang-rain",
+      "expected_text": "第15课 · 实体课 活动15-5｜改变计划 岘港下雨了，怎么办？ 现在下午2点，正在下大雨，不能按原计划去海边。你想逛市场，朋友喜欢喝咖啡。下午5点前要回酒店，交通费两人合计最多100,000越南盾。 室内咖啡店 去程／回程各10分钟 两人往返60,000₫ 活动90分钟 韩市场 去程／回程各20分钟 两人往返100,000₫ 活动90分钟 两人商量新的去处。每人提建议并回应，最后说清改去哪里、几点回来、为什么。 博雅汉语 · 初级口语活动 15 / 21",
+      "expected_images": [],
+      "pair_key": "w07-task-danang-rain"
+    },
+    {
+      "id": "w07-task-danang-rain-support",
+      "role": "discussion_support",
+      "expected_text_source": "approved v04 copy; stable page w07-task-danang-rain-support",
+      "expected_text": "第15课 · 实体课 活动15-5｜改变计划 岘港下雨了，怎么办？ HSK 1–3｜参考回答 我们本来想去____，可是现在____。我想改去____，因为____。朋友想____。我们商量以后，决定____。坐车要____分钟，____点____分回酒店，一共花____交通费。 HSK 4–6 比较两个新安排，说明价格、时间和喜好的取舍。朋友说“我不想去那里”，请回应并提出双方能接受的办法。 博雅汉语 · 初级口语活动 16 / 21",
+      "expected_images": [],
+      "pair_key": "w07-task-danang-rain",
+      "level_labels": [
+        "HSK 1–3",
+        "HSK 4–6"
+      ]
+    },
+    {
+      "id": "w07-video-listen",
+      "role": "activity",
+      "expected_text_source": "approved v04 copy; stable page w07-video-listen",
+      "expected_text": "第15课 · 实体课 活动15-6｜影片听力 看影片，听他们怎么选地方 看两次，记关键词： 天气 想去哪里 怎么去 最后的选择 野餐：带食物到户外一起吃。 博雅汉语 · 初级口语活动 17 / 21",
+      "expected_images": [
+        "assets/weekend-picnic-video.png"
+      ]
+    },
+    {
+      "id": "w07-video-questions",
+      "role": "activity",
+      "expected_text_source": "approved v04 copy; stable page w07-video-questions",
+      "expected_text": "第15课 · 实体课 活动15-6｜影片听力 他们最后选了哪里？ 先自己记答案，再和同学核对。 1 周末天气怎么样？ 2 一开始想去哪里？为什么后来不选那里？ 3 最后选哪里？怎么去？路上要多久？ 4 他们决定星期六还是星期日去？为什么？ 博雅汉语 · 初级口语活动 18 / 21",
+      "expected_images": []
+    },
+    {
+      "id": "w07-video-summary-city-intro",
+      "role": "activity",
+      "expected_text_source": "approved v04 copy; stable page w07-video-summary-city-intro",
+      "expected_text": "第15课 · 实体课 活动15-7｜总结与介绍 先介绍影片，再介绍你的地方 先向同学介绍影片 他们想____。一开始考虑____，但是____。后来选了____，因为____。他们打算____去。 再给台湾朋友介绍一个地方 河内、胡志明市或岘港，哪里适合周末去？怎么去？可以做什么？有什么要注意？ HSK 1–3 说明地点、交通、两件可以做的事和一个理由。 HSK 4–6 比较另一个地方，说明为什么更适合；同伴提出一个不同意见，你来回应。 博雅汉语 · 初级口语活动 19 / 21",
+      "expected_images": []
+    },
+    {
+      "id": "w07-integrated-listening",
+      "role": "activity",
+      "expected_text_source": "approved v04 copy; stable page w07-integrated-listening",
+      "expected_text": "第15课 · 实体课 综合复习｜听力 综合听力复习 听老师读两次，先自己记答案，再和同学核对。 1 她叫什么名字？是哪国人？ 2 他们星期几、几点见面？在哪里？ 3 他怎么去学校？ 4 天气怎么样？他们最后去哪儿？ 5 他最后买哪件衣服？多少钱？ 6 他为什么请假？请多久？ 博雅汉语 · 初级口语活动 20 / 21",
+      "expected_images": []
+    },
+    {
+      "id": "w07-integrated-speaking-check",
+      "role": "activity",
+      "expected_text_source": "approved v04 copy; stable page w07-integrated-speaking-check",
+      "expected_text": "第15课 · 实体课 综合复习｜双人口语 双人口语简短评量 两人一组，和老师说约2分钟。 1 介绍一个地方 每人介绍一个适合和朋友练中文的地方，说清可以做什么、为什么适合。 2 商量周六安排 周六下午2—4点有空，其中一人3点才有空。提出请求，决定几点、在哪里见面、做什么。 每人都要问，也要回答。 博雅汉语 · 初级口语活动 21 / 21",
+      "expected_images": []
+    }
+  ],
+  "page_pairs": [
+    {
+      "question_id": "w07-task-try-on",
+      "support_id": "w07-task-try-on-support",
+      "topic": "在胡志明市试衣服"
+    },
+    {
+      "question_id": "w07-task-city-choice",
+      "support_id": "w07-task-city-choice-support",
+      "topic": "推荐哪座城市"
+    },
+    {
+      "question_id": "w07-task-hanoi-half-day",
+      "support_id": "w07-task-hanoi-half-day-support",
+      "topic": "河内半天怎么玩"
+    },
+    {
+      "question_id": "w07-task-danang-rain",
+      "support_id": "w07-task-danang-rain-support",
+      "topic": "岘港下雨了"
+    }
+  ]
+}

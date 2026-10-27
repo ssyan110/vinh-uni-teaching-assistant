@@ -1,0 +1,748 @@
+{
+  "schema_version": 1,
+  "review_version": "v4",
+  "status": "content_review_pending",
+  "offering_id": "2026-fall",
+  "cohort": "BOYA-LS-E1-Y1S1-2026F",
+  "textbook_id": "boya-elementary-i",
+  "related_listening_exam_id": "W07-L04L15-20261022",
+  "oral_exam_registration_status": "not_registered_formal_exam",
+  "task_types": [
+    "answer_question",
+    "picture_narration"
+  ],
+  "prepare_seconds": 60,
+  "response_window_seconds": 120,
+  "response_window_interpretation": "proposed_maximum_pending_Adam_confirmation",
+  "question_count": 24,
+  "image_status": "storyboards_only_not_generated",
+  "items": [
+    {
+      "item_id": "A01",
+      "task_type": "answer_question",
+      "title": "一起学汉语",
+      "student_prompt": "你喜欢和同学一起学汉语，还是一个人学？为什么？",
+      "optional_prompts": [
+        "你们在哪儿学？",
+        "常常学什么？"
+      ],
+      "lesson_keys": [
+        "boya-elementary-i:lesson-04",
+        "boya-elementary-i:lesson-05"
+      ],
+      "teacher_focus": "共同学习；说出一种选择和一个与自己有关的理由。",
+      "source_status": "teacher_original_pending_review",
+      "requires_past_narrative": false,
+      "requires_hypothetical_problem_solving": false
+    },
+    {
+      "item_id": "A02",
+      "task_type": "answer_question",
+      "title": "和朋友做什么",
+      "student_prompt": "有时间的时候，你喜欢和朋友一起做什么？为什么？",
+      "optional_prompts": [
+        "常常在哪儿做？",
+        "什么时候做？"
+      ],
+      "lesson_keys": [
+        "boya-elementary-i:lesson-05",
+        "boya-elementary-i:lesson-08",
+        "boya-elementary-i:lesson-12"
+      ],
+      "teacher_focus": "说一种熟悉活动，再给一条简单理由。",
+      "source_status": "teacher_original_pending_review",
+      "requires_past_narrative": false,
+      "requires_hypothetical_problem_solving": false
+    },
+    {
+      "item_id": "A03",
+      "task_type": "answer_question",
+      "title": "我喜欢的东西",
+      "student_prompt": "书包、手机、电脑，你最喜欢哪一个？为什么？",
+      "optional_prompts": [
+        "是什么颜色的？",
+        "用它做什么？"
+      ],
+      "lesson_keys": [
+        "boya-elementary-i:lesson-06",
+        "boya-elementary-i:lesson-12",
+        "boya-elementary-i:lesson-13"
+      ],
+      "teacher_focus": "选择熟悉物品，并用样子、用途等具体信息说明。",
+      "source_status": "teacher_original_pending_review",
+      "requires_past_narrative": false,
+      "requires_hypothetical_problem_solving": false
+    },
+    {
+      "item_id": "A04",
+      "task_type": "answer_question",
+      "title": "在哪里见面",
+      "student_prompt": "你想和朋友在哪儿见面？为什么？",
+      "optional_prompts": [
+        "你想和谁见面？",
+        "见面后常做什么？"
+      ],
+      "lesson_keys": [
+        "boya-elementary-i:lesson-07",
+        "boya-elementary-i:lesson-08"
+      ],
+      "teacher_focus": "选择见面地点并说明一条理由；不要求说明路线。",
+      "source_status": "teacher_original_pending_review",
+      "requires_past_narrative": false,
+      "requires_hypothetical_problem_solving": false
+    },
+    {
+      "item_id": "A05",
+      "task_type": "answer_question",
+      "title": "什么时候去玩儿",
+      "student_prompt": "和朋友去玩儿，你喜欢上午去，还是下午去？为什么？",
+      "optional_prompts": [
+        "想去哪儿？",
+        "想几点见面？"
+      ],
+      "lesson_keys": [
+        "boya-elementary-i:lesson-07",
+        "boya-elementary-i:lesson-08"
+      ],
+      "teacher_focus": "表达时间偏好和简单原因；不用拟完整行程。",
+      "source_status": "teacher_original_pending_review",
+      "requires_past_narrative": false,
+      "requires_hypothetical_problem_solving": false
+    },
+    {
+      "item_id": "A06",
+      "task_type": "answer_question",
+      "title": "怎么来学校",
+      "student_prompt": "你平常怎么来学校？为什么这样来？",
+      "optional_prompts": [
+        "从哪儿来？",
+        "和谁一起？"
+      ],
+      "lesson_keys": [
+        "boya-elementary-i:lesson-07",
+        "boya-elementary-i:lesson-09"
+      ],
+      "teacher_focus": "介绍交通方式及一条个人理由；不要求下雨或晚点的假设处理。",
+      "source_status": "teacher_original_pending_review",
+      "requires_past_narrative": false,
+      "requires_hypothetical_problem_solving": false
+    },
+    {
+      "item_id": "A07",
+      "task_type": "answer_question",
+      "title": "想买什么",
+      "student_prompt": "你现在想买什么东西？为什么？",
+      "optional_prompts": [
+        "是什么样子的？",
+        "多少钱？"
+      ],
+      "lesson_keys": [
+        "boya-elementary-i:lesson-10",
+        "boya-elementary-i:lesson-13"
+      ],
+      "teacher_focus": "说一种想买的东西及简单原因；去掉抽象的购物优先顺序，不用讲过去购物经历。",
+      "source_status": "teacher_original_pending_review",
+      "requires_past_narrative": false,
+      "requires_hypothetical_problem_solving": false
+    },
+    {
+      "item_id": "A08",
+      "task_type": "answer_question",
+      "title": "夏天和冬天",
+      "student_prompt": "你喜欢夏天，还是冬天？为什么？",
+      "optional_prompts": [
+        "天气怎么样？",
+        "常做什么？"
+      ],
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11",
+        "boya-elementary-i:lesson-13"
+      ],
+      "teacher_focus": "表达季节偏好，可用天气、活动或个人感受作理由，不要求比较级。",
+      "source_status": "teacher_original_pending_review",
+      "requires_past_narrative": false,
+      "requires_hypothetical_problem_solving": false
+    },
+    {
+      "item_id": "A09",
+      "task_type": "answer_question",
+      "title": "有时间做什么",
+      "student_prompt": "有时间的时候，你喜欢在房间里看电影，还是去外边玩儿？为什么？",
+      "optional_prompts": [
+        "常和谁一起？",
+        "常做什么？"
+      ],
+      "lesson_keys": [
+        "boya-elementary-i:lesson-07",
+        "boya-elementary-i:lesson-12"
+      ],
+      "teacher_focus": "表达活动偏好和简单理由；不考等车、上车、迟到三段处理。",
+      "source_status": "teacher_original_pending_review",
+      "requires_past_narrative": false,
+      "requires_hypothetical_problem_solving": false
+    },
+    {
+      "item_id": "A10",
+      "task_type": "answer_question",
+      "title": "在哪里买衣服",
+      "student_prompt": "你喜欢去店里买衣服，还是在网上买？为什么？",
+      "optional_prompts": [
+        "想买什么衣服？",
+        "喜欢什么颜色？"
+      ],
+      "lesson_keys": [
+        "boya-elementary-i:lesson-12",
+        "boya-elementary-i:lesson-13",
+        "boya-elementary-i:lesson-15"
+      ],
+      "teacher_focus": "保留Adam指定的题目方向，理由可为便宜、能试、颜色、合适等；不要求讲退换货。",
+      "source_status": "teacher_original_pending_review",
+      "requires_past_narrative": false,
+      "requires_hypothetical_problem_solving": false
+    },
+    {
+      "item_id": "A11",
+      "task_type": "answer_question",
+      "title": "生日礼物",
+      "student_prompt": "朋友过生日，你想送什么礼物？为什么？",
+      "optional_prompts": [
+        "礼物是什么样子的？",
+        "想和朋友一起做什么？"
+      ],
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13",
+        "boya-elementary-i:lesson-14"
+      ],
+      "teacher_focus": "说出礼物和一条能表达的简单理由；不必推测或证明真实朋友的喜好，不要求整套生日流程。",
+      "source_status": "teacher_original_pending_review",
+      "requires_past_narrative": false,
+      "requires_hypothetical_problem_solving": false
+    },
+    {
+      "item_id": "A12",
+      "task_type": "answer_question",
+      "title": "问谁",
+      "student_prompt": "有不明白的问题，你喜欢问老师，还是问同学？为什么？",
+      "optional_prompts": [
+        "你会怎么问？",
+        "在哪儿问？"
+      ],
+      "lesson_keys": [
+        "boya-elementary-i:lesson-04",
+        "boya-elementary-i:lesson-05",
+        "boya-elementary-i:lesson-15"
+      ],
+      "teacher_focus": "选择求助对象并说简单理由；不评价学生是否更尊重老师。",
+      "source_status": "teacher_original_pending_review",
+      "requires_past_narrative": false,
+      "requires_hypothetical_problem_solving": false
+    },
+    {
+      "item_id": "B01",
+      "task_type": "picture_narration",
+      "title": "三个人见面",
+      "student_prompt": "看这四张图，按顺序说图里的事。",
+      "first_panel_orientation": "小林在学校门口等小美。",
+      "frames": [
+        {
+          "panel": 1,
+          "visual_brief": "小林站在学校门口，小美向他走来。两人的衣服颜色固定。"
+        },
+        {
+          "panel": 2,
+          "visual_brief": "小林和小美面对面挥手，正在打招呼。"
+        },
+        {
+          "panel": 3,
+          "visual_brief": "小王走到两人旁边，小林伸手指向小王，三人面向彼此。"
+        },
+        {
+          "panel": 4,
+          "visual_brief": "三人站在一起说话，表情友好。"
+        }
+      ],
+      "observable_after_orientation": [
+        "打招呼或说话",
+        "第三个人走来或被介绍",
+        "三人一起说话"
+      ],
+      "acceptable_variants_and_limits": "不要求猜谁初次见面、谁要找谁；不要求说出具体对话。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-04",
+        "boya-elementary-i:lesson-05"
+      ],
+      "source_status": "teacher_original_storyboard_pending_content_approval",
+      "image_status": "not_generated",
+      "assessed_panels": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "item_id": "B02",
+      "task_type": "picture_narration",
+      "title": "谁的本子",
+      "student_prompt": "看这四张图，按顺序说图里的事。",
+      "first_panel_orientation": "小美的红本子在桌上。",
+      "frames": [
+        {
+          "panel": 1,
+          "visual_brief": "小美把红本子留在教室桌上，起身向门口走去；本子和人物清楚可辨。"
+        },
+        {
+          "panel": 2,
+          "visual_brief": "小林走到同一张桌旁，看到红本子。"
+        },
+        {
+          "panel": 3,
+          "visual_brief": "小美回到桌旁，指向红本子，小林拿着本子。"
+        },
+        {
+          "panel": 4,
+          "visual_brief": "小林把红本子递给小美。"
+        }
+      ],
+      "observable_after_orientation": [
+        "小林看到或拿起本子",
+        "小美回来或指本子",
+        "小林把本子给小美"
+      ],
+      "acceptable_variants_and_limits": "第1格已交代物主；不要求学生证明物主身份、复述认领台词或使用“把”字句。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-06",
+        "boya-elementary-i:lesson-07"
+      ],
+      "source_status": "teacher_original_storyboard_pending_content_approval",
+      "image_status": "not_generated",
+      "assessed_panels": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "item_id": "B03",
+      "task_type": "picture_narration",
+      "title": "朋友在外边",
+      "student_prompt": "看这四张图，按顺序说图里的事。",
+      "first_panel_orientation": "小林在教室里，朋友在外边。",
+      "frames": [
+        {
+          "panel": 1,
+          "visual_brief": "小林在教室里，打开的门外能看见小王。"
+        },
+        {
+          "panel": 2,
+          "visual_brief": "小王站在门外向小林挥手，小林看向他。"
+        },
+        {
+          "panel": 3,
+          "visual_brief": "小林走出教室，向小王走去。"
+        },
+        {
+          "panel": 4,
+          "visual_brief": "两人在教室外边面对面说话。"
+        }
+      ],
+      "observable_after_orientation": [
+        "门外朋友挥手",
+        "小林走到外边",
+        "两人在外边说话"
+      ],
+      "acceptable_variants_and_limits": "用清楚的门内门外关系，不出多段路线或陌生住址；不要求猜电话内容。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-07",
+        "boya-elementary-i:lesson-09"
+      ],
+      "source_status": "teacher_original_storyboard_pending_content_approval",
+      "image_status": "not_generated",
+      "assessed_panels": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "item_id": "B04",
+      "task_type": "picture_narration",
+      "title": "下午见朋友",
+      "student_prompt": "看这四张图，按顺序说图里的事。",
+      "first_panel_orientation": "小林今天下午三点去见朋友。",
+      "frames": [
+        {
+          "panel": 1,
+          "visual_brief": "小林在房间准备出门；本格不画钟表，避免读两个时刻。"
+        },
+        {
+          "panel": 2,
+          "visual_brief": "小林在路上走，手中没有电话或地图等额外线索。"
+        },
+        {
+          "panel": 3,
+          "visual_brief": "学校门口的钟表为15:00，小美在门口，小林向她走来。"
+        },
+        {
+          "panel": 4,
+          "visual_brief": "两人一起向学校里面走。"
+        }
+      ],
+      "observable_after_orientation": [
+        "小林在路上走",
+        "三点到门口见到朋友",
+        "两人一起走"
+      ],
+      "acceptable_variants_and_limits": "首格导语提供约见背景；只需描述出门、到场和见面，不要求推断改约或谁迟到。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-08",
+        "boya-elementary-i:lesson-09"
+      ],
+      "source_status": "teacher_original_storyboard_pending_content_approval",
+      "image_status": "not_generated",
+      "assessed_panels": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "item_id": "B05",
+      "task_type": "picture_narration",
+      "title": "坐车去学校",
+      "student_prompt": "看这四张图，按顺序说图里的事。",
+      "first_panel_orientation": "小林在车站等公共汽车。",
+      "frames": [
+        {
+          "panel": 1,
+          "visual_brief": "小林站在有公共汽车图形标志的车站等车。"
+        },
+        {
+          "panel": 2,
+          "visual_brief": "同一辆公共汽车到站，车门打开，小林上车。"
+        },
+        {
+          "panel": 3,
+          "visual_brief": "小林坐在车内座位上，窗外场景变化。"
+        },
+        {
+          "panel": 4,
+          "visual_brief": "小林站在明显的学校门口，公共汽车正在离开。"
+        }
+      ],
+      "observable_after_orientation": [
+        "上车",
+        "在车里坐着",
+        "到了学校"
+      ],
+      "acceptable_variants_and_limits": "不用读线路号或复杂地图；“他在车里”“现在在学校”可替代不熟悉的上下车动词。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-09",
+        "boya-elementary-i:lesson-12"
+      ],
+      "source_status": "teacher_original_storyboard_pending_content_approval",
+      "image_status": "not_generated",
+      "assessed_panels": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "item_id": "B06",
+      "task_type": "picture_narration",
+      "title": "买苹果",
+      "student_prompt": "看这四张图，按顺序说图里的事。",
+      "first_panel_orientation": "小美想买苹果。",
+      "frames": [
+        {
+          "panel": 1,
+          "visual_brief": "小美站在水果摊前，摊上有清楚可见的苹果。"
+        },
+        {
+          "panel": 2,
+          "visual_brief": "小美指着苹果，店员拿起一袋苹果。"
+        },
+        {
+          "panel": 3,
+          "visual_brief": "小美递钱给店员，店员把同一袋苹果交给她。"
+        },
+        {
+          "panel": 4,
+          "visual_brief": "小美拿着苹果离开水果摊。"
+        }
+      ],
+      "observable_after_orientation": [
+        "看苹果或指苹果",
+        "付款或店员交苹果",
+        "拿苹果离开"
+      ],
+      "acceptable_variants_and_limits": "不考称重、找零或计算；数量不设隐藏标准答案。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-10",
+        "boya-elementary-i:lesson-13"
+      ],
+      "source_status": "teacher_original_storyboard_pending_content_approval",
+      "image_status": "not_generated",
+      "assessed_panels": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "item_id": "B07",
+      "task_type": "picture_narration",
+      "title": "下雨了",
+      "student_prompt": "看这四张图，按顺序说图里的事。",
+      "first_panel_orientation": "小林和小美在外边玩儿。",
+      "frames": [
+        {
+          "panel": 1,
+          "visual_brief": "两人在晴天的户外空地玩儿，旁边有同一栋房子。"
+        },
+        {
+          "panel": 2,
+          "visual_brief": "开始下雨，两人看向明显的雨点和天空。"
+        },
+        {
+          "panel": 3,
+          "visual_brief": "两人向刚才那栋房子的敞开门口走去，屋内清楚可见。"
+        },
+        {
+          "panel": 4,
+          "visual_brief": "两人在房间里看电影，窗外仍下雨。"
+        }
+      ],
+      "observable_after_orientation": [
+        "下雨",
+        "走到房子里面",
+        "在房间看电影"
+      ],
+      "acceptable_variants_and_limits": "天气变化直接画出来；不出现天气预报、可能下雨、协商取消等不可见判断。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-07",
+        "boya-elementary-i:lesson-11",
+        "boya-elementary-i:lesson-12"
+      ],
+      "source_status": "teacher_original_storyboard_pending_content_approval",
+      "image_status": "not_generated",
+      "assessed_panels": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "item_id": "B08",
+      "task_type": "picture_narration",
+      "title": "朋友来了",
+      "student_prompt": "看这四张图，按顺序说图里的事。",
+      "first_panel_orientation": "小林正在房间里做作业。",
+      "frames": [
+        {
+          "panel": 1,
+          "visual_brief": "小林坐在桌前做作业，本子和笔清楚可见。"
+        },
+        {
+          "panel": 2,
+          "visual_brief": "小林拿手机打电话，作业本仍在桌上。"
+        },
+        {
+          "panel": 3,
+          "visual_brief": "小美出现在打开的门口，小林看向她。"
+        },
+        {
+          "panel": 4,
+          "visual_brief": "两人坐在桌旁，各有本子，一起做作业。"
+        }
+      ],
+      "observable_after_orientation": [
+        "小林打电话",
+        "小美来到门口",
+        "两人一起做作业"
+      ],
+      "acceptable_variants_and_limits": "不要求猜电话邀请了什么、朋友为什么来；可逐图说正在做什么。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-05",
+        "boya-elementary-i:lesson-07",
+        "boya-elementary-i:lesson-12"
+      ],
+      "source_status": "teacher_original_storyboard_pending_content_approval",
+      "image_status": "not_generated",
+      "assessed_panels": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "item_id": "B09",
+      "task_type": "picture_narration",
+      "title": "选蓝衣服",
+      "student_prompt": "看这四张图，按顺序说图里的事。",
+      "first_panel_orientation": "小美在店里看衣服。",
+      "frames": [
+        {
+          "panel": 1,
+          "visual_brief": "小美面前并排挂着红、蓝两件同类上衣。"
+        },
+        {
+          "panel": 2,
+          "visual_brief": "小美指着蓝上衣，店员拿着那件蓝上衣。"
+        },
+        {
+          "panel": 3,
+          "visual_brief": "小美递钱给店员，蓝上衣在柜台上。"
+        },
+        {
+          "panel": 4,
+          "visual_brief": "小美提着装有同一件蓝上衣的透明袋离开。"
+        }
+      ],
+      "observable_after_orientation": [
+        "选或指蓝衣服",
+        "付款",
+        "拿蓝衣服离开"
+      ],
+      "acceptable_variants_and_limits": "固定唯一结局，不写“买下或换另一件”；不要求学生解释人物为什么喜欢蓝色。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-10",
+        "boya-elementary-i:lesson-13"
+      ],
+      "source_status": "teacher_original_storyboard_pending_content_approval",
+      "image_status": "not_generated",
+      "assessed_panels": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "item_id": "B10",
+      "task_type": "picture_narration",
+      "title": "小美过生日",
+      "student_prompt": "看这四张图，按顺序说图里的事。",
+      "first_panel_orientation": "今天小美过生日，小林准备礼物。",
+      "frames": [
+        {
+          "panel": 1,
+          "visual_brief": "小林在桌旁给一本本子包上礼物纸，半包装状态可看见本子。"
+        },
+        {
+          "panel": 2,
+          "visual_brief": "小林拿着包好的礼物来到朋友房间门口。"
+        },
+        {
+          "panel": 3,
+          "visual_brief": "小林把礼物交给小美，桌上有生日蛋糕。"
+        },
+        {
+          "panel": 4,
+          "visual_brief": "小美、小林和一名朋友坐在桌旁吃蛋糕。"
+        }
+      ],
+      "observable_after_orientation": [
+        "带礼物来",
+        "把礼物给小美",
+        "大家吃蛋糕"
+      ],
+      "acceptable_variants_and_limits": "生日身份由标题和导语交代；不考吹蜡烛习俗、不要求同格讲吃蛋糕又拍照。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-10",
+        "boya-elementary-i:lesson-14"
+      ],
+      "source_status": "teacher_original_storyboard_pending_content_approval",
+      "image_status": "not_generated",
+      "assessed_panels": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "item_id": "B11",
+      "task_type": "picture_narration",
+      "title": "试衣服",
+      "student_prompt": "看这四张图，按顺序说图里的事。",
+      "first_panel_orientation": "小林想试一件衣服。",
+      "frames": [
+        {
+          "panel": 1,
+          "visual_brief": "小林在店里指着一件外套，看向店员。"
+        },
+        {
+          "panel": 2,
+          "visual_brief": "店员把同一件外套递给小林。"
+        },
+        {
+          "panel": 3,
+          "visual_brief": "小林穿着外套站在镜子前，身形与衣服关系正常。"
+        },
+        {
+          "panel": 4,
+          "visual_brief": "小林递钱给店员，另一只手拿着刚才那件外套。"
+        }
+      ],
+      "observable_after_orientation": [
+        "店员递衣服",
+        "小林试穿或照镜子",
+        "小林付款买衣服"
+      ],
+      "acceptable_variants_and_limits": "不得要求猜是否获得许可或“觉得合适”的心理；学生可补简单请求，但不作为必答图示信息。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13",
+        "boya-elementary-i:lesson-15"
+      ],
+      "source_status": "teacher_original_storyboard_pending_content_approval",
+      "image_status": "not_generated",
+      "assessed_panels": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "item_id": "B12",
+      "task_type": "picture_narration",
+      "title": "用同学的笔",
+      "student_prompt": "看这四张图，按顺序说图里的事。",
+      "first_panel_orientation": "小林想做作业，桌上没有笔。",
+      "frames": [
+        {
+          "panel": 1,
+          "visual_brief": "小林桌上有打开的本子，没有笔；旁边小美有一支蓝笔和一支红笔。"
+        },
+        {
+          "panel": 2,
+          "visual_brief": "小林指向笔，小美把蓝笔递给他；红笔留在小美桌上。"
+        },
+        {
+          "panel": 3,
+          "visual_brief": "小林用同一支蓝笔做作业，小美仍在旁边，红笔留在小美桌上。"
+        },
+        {
+          "panel": 4,
+          "visual_brief": "小林把同一支蓝笔递回小美。"
+        }
+      ],
+      "observable_after_orientation": [
+        "小美给笔",
+        "小林做作业",
+        "小林把笔给回小美"
+      ],
+      "acceptable_variants_and_limits": "不强制使用“借／还”或复述未画出的许可对话；不能因此扣语言错误。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-06",
+        "boya-elementary-i:lesson-12",
+        "boya-elementary-i:lesson-15"
+      ],
+      "source_status": "teacher_original_storyboard_pending_content_approval",
+      "image_status": "not_generated",
+      "assessed_panels": [
+        2,
+        3,
+        4
+      ]
+    }
+  ]
+}

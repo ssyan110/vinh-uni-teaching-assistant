@@ -42,6 +42,9 @@ export function ParticipationPage() {
   ])]
   const selectedContext = contextOptions.includes(context) ? context : contexts.length === 1 ? contexts[0] : ''
   const rows = session ? participationRows(snapshot, courseId, session.id) : []
+  const records = session ? participationRecords(snapshot, courseId, session.id) : []
+  const unmatchedRecords = records.filter(record => !rows.some(row =>
+    record.studentId === row.student.id || (!record.studentId && record.studentCode === row.student.student_code)))
   const visibleRows = rows.filter(r => `${r.student.chinese_name} ${r.student.original_name} ${r.student.student_code} ${studentCodeLastFour(r.student.student_code)}`.toLocaleLowerCase().includes(search.trim().toLocaleLowerCase()))
   const sessionLabel = session?.session_number ? `第 ${session.session_number} 次上課` : '場次未編號'
 
@@ -123,7 +126,10 @@ export function ParticipationPage() {
   const exportTable = () => {
     if (!session || !course) return
     const values = [['班級', '日期', '上課場次', '學號', '姓名', '抽問回答', '自願發言', '老師主動叫', '快速調整', '總回答次數'],
-      ...rows.map(r => [course.code, date, sessionLabel, r.student.student_code, r.student.chinese_name, r.random, r.voluntary, r.teacher, r.manual, r.total])]
+      ...rows.map(r => [course.code, date, sessionLabel, r.student.student_code, r.student.chinese_name, r.random, r.voluntary, r.teacher, r.manual, r.total]),
+      ...(unmatchedRecords.length ? [[course.code, date, sessionLabel, '', '未匹配名冊的歷史回答',
+        ...(['random', 'voluntary', 'teacher', 'manual'] as const).map(source => unmatchedRecords.filter(record => record.source === source).length),
+        unmatchedRecords.length]] : [])]
     downloadCsv('\uFEFF' + values.map(row => row.map(csvCell).join(',')).join('\r\n'), `${course.code}-${date}-${sessionLabel.replaceAll(' ', '')}-回答次數.csv`)
   }
 
@@ -136,7 +142,8 @@ export function ParticipationPage() {
     </div>
     {!session ? <p className="empty-state">{course && !sessions.length ? '這個班級尚未建立上課紀錄。請先到「班級」開始一堂課。' : '選好上課場次後，這裡會列出每位學生，包括回答 0 次的學生。'}</p> : <>
       <div className="participation-toolbar"><h2>{course?.code} · {date} · {sessionLabel}</h2><button className="secondary-button" onClick={exportTable}>匯出 CSV（Excel 可開啟）</button></div>
-      <p>{rows.length} 名學生 · 總回答 {rows.reduce((sum, r) => sum + r.total, 0)} 次</p>
+      <p>目前名冊 {rows.length} 人 · 總回答 {records.length} 次</p>
+      {unmatchedRecords.length > 0 && <p className="field-help" role="status">其中 {unmatchedRecords.length} 次來自未匹配目前名冊的歷史紀錄；原紀錄已保留，未歸到其他學生名下。CSV 另列這些回答。</p>}
       <p className="field-help">抽問工具按「記錄回答」後會自動累計；未回答及撤銷紀錄不計入。<a href="https://classroom-randomizer-opal.vercel.app" target="_blank" rel="noreferrer">開啟課堂抽問 ↗</a></p>
       <label>新增自願發言的教材課次<select value={selectedContext} onChange={e => setContext(e.target.value)}><option value="">選擇本次發言的課次</option>{contextOptions.map(c => <option key={c} value={c}>{c.split(':')[0] === 'boya-quasi-intermediate-i' ? '準中級加速篇 I' : '中級衝刺篇 I'} · 第 {Number(c.split('lesson-')[1])} 課</option>)}</select></label>
       {!selectedContext && <p className="field-help" role="status">只有記錄「自願發言」時需要選教材課次；表格內的 ＋／− 可直接快速調整回答次數。</p>}

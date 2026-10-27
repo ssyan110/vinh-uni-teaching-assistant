@@ -9,7 +9,7 @@ create function auth.uid() returns uuid language sql stable as
   $$ select nullif(current_setting('request.jwt.claim.sub', true), '')::uuid $$;
 grant usage on schema auth to authenticated;
 grant execute on function auth.uid() to authenticated;
-\ir ../supabase/migrations/20260823090017_initial_student_tracker.sql
+\ir ../supabase/migrations/20260905103254_initial_student_tracker.sql
 \ir ../supabase/attendance-exceptions.sql
 
 begin;

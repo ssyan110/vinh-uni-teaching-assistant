@@ -1,0 +1,26 @@
+{
+  "status": "approved",
+  "gate": "lesson-content",
+  "lesson_key": "boya-quasi-intermediate-i:lesson-04",
+  "offering_id": "2026-fall",
+  "approved_by": "Adam Yan",
+  "approved_at": "2026-09-25T16:04:47+07:00",
+  "scope": "一张独立的第四课补充 infographic；不批准或修改现有 PPTX，也不预先批准生成后的图片 QA。",
+  "artifacts": [
+    {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json",
+      "sha256": "0eb2afac761ba8a31682ae74cabf4a6faeebbd5e23ba8ea5d94b424014fe9aee"
+    },
+    {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/storyboard/lesson-04-逐页文案审阅.md",
+      "sha256": "0d33f7a281c0b9e1305b32cd66e82f498ccb9c4a39c9211e4b970589a8323c2e"
+    },
+    {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/support-draft/infographic/lesson-04-逐页文案审阅.md",
+      "sha256": "0d33f7a281c0b9e1305b32cd66e82f498ccb9c4a39c9211e4b970589a8323c2e"
+    }
+  ],
+  "evidence": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/storyboard/lesson-04-content-approval-evidence-2026-09-25.md",
+  "evidence_sha256": "577bced093695305a993a316a6dca264adf6349d84a749bc8a75174452330ba7",
+  "review_document": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/storyboard/lesson-04-逐页文案审阅.md"
+}

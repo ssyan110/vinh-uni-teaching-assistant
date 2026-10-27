@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "checked_at": "2026-10-25T06:08:25.590Z",
+  "input_hashes": {
+    "items_sha256": "695a5274076d4fc90786d8f55b48dce3cec020bbeb3dbf09b8946ccde21b481e",
+    "sections_sha256": "f2efd54feb86c98b441e293b84867b450b12be799182eff5f84cfb6767b3fb1d",
+    "build_sha256": "d4d91de9e38874f7dac50b7f2e1a558a57788e6b8f613ab01bfcb9bb9e86e0e9",
+    "player_sha256": "c0dbdc3815130fc40717626a53aaa860a7caf6278235840b1bf716884893ccab",
+    "catalog_sha256": "a5d7fad5cc76f4637d99c2903086c59785419eeb8c291aba77a0f4993393188f",
+    "test_sha256": "609a78d0ed0eba994f090f9e02205a18bd0271bc287f6bf57fbb5beb1b77618a"
+  },
+  "books": 3,
+  "sets": 23,
+  "fileReferences": 291,
+  "w05V3FormSections": 15,
+  "w05V3AudioReferences": 15,
+  "w05V3UniqueTracks": 15,
+  "w05V3DirectPlayReferences": 15,
+  "w05EntryGatedUntilFormReadback": false,
+  "w04DirectPlay": 15,
+  "w04ExamQrEntry": true,
+  "examNextWithoutDialog": true,
+  "examQueueDirectPlay": true,
+  "qrDialog": true,
+  "noStaleExamLink": true,
+  "mobileOverflow": false,
+  "errors": []
+}

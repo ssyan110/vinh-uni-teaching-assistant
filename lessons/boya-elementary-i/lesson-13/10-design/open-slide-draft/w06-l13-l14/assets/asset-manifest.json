@@ -1,0 +1,129 @@
+{
+  "schema_version": "openslide-local-assets-v1",
+  "generated_assets": [
+    {
+      "path": "assets/cover-shopping-birthday.png",
+      "sha256": "3db7a95b4edf02d9bd41c5881d14b8531d2ac4955b064d490d17fe7a6be221e7",
+      "created_with": "OpenAI image generation",
+      "role": "cover-shopping-birthday",
+      "style_reference": "lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12-v09-readable/assets/cover-weather-daily-v07.png",
+      "note": "Generated in the established minimal textbook illustration style; replaces the scenic anime-like cover art."
+    },
+    {
+      "path": "assets/comic-l13-taipei-night-market.png",
+      "sha256": "0e1f01abe183c888fd7ee45ff22fe40b6114900cb124a66683c857ca1ace828f",
+      "created_with": "OpenAI image generation",
+      "role": "comic-l13-taipei-night-market"
+    },
+    {
+      "path": "assets/comic-l14-vinh-birthday.png",
+      "sha256": "20fe0e839a17d85ef4434cf4a15fc948132b329f606dac1f7e51bd39c1d556d5",
+      "created_with": "OpenAI image generation",
+      "role": "comic-l14-vinh-birthday"
+    },
+    {
+      "path": "assets/shirt-a-blue.png",
+      "sha256": "9a23de0fd85f1fe6543867d70d2c9816c7998fa3392b791961b947b5ab8ed18f",
+      "created_with": "OpenAI image generation",
+      "role": "plain blue tee for option A; user-supplied reference URL unavailable"
+    },
+    {
+      "path": "assets/taipei-night-market-food.png",
+      "sha256": "76b7dd8534ba229e4a50dd5aaad85a6c77fd8c1a1b734c0eb142f429044369c9",
+      "created_with": "OpenAI image generation",
+      "role": "Taipei birthday discussion option: night-market food"
+    },
+    {
+      "path": "assets/birthday-vinh-park.png",
+      "sha256": "4b0575c31587dd1666ecdb26313dd53869cfb43fd826eec6f07a921841fdaebb",
+      "created_with": "OpenAI image generation",
+      "role": "L14 birthday-plan outdoor option: friends walking in a Vinh park",
+      "prompt_summary": "Photorealistic-natural horizontal candid image of three Vietnamese university-age friends walking and talking on a modest tropical public-park path in Vinh; no text, logos, or watermarks.",
+      "prompt": "Use case: photorealistic-natural\nAsset type: local photo-style image for a Chinese speaking-class slide, one of four small activity options\nPrimary request: A natural candid documentary-style photograph of three Vietnamese university-age friends taking a relaxed walk and chatting together in a modest public park in Vinh, Vietnam. Make the outdoor park walk unmistakable so students can compare it with indoor hotpot, milk tea, and karaoke choices.\nScene/backdrop: a simple paved park path with tropical greenery and a few trees, plausible everyday Vinh city setting, no famous landmarks.\nSubject: three casually dressed university-age Vietnamese friends walking side by side, friendly and relaxed, full figures visible at a moderate distance.\nComposition: horizontal landscape crop, balanced group near center, clear readable scene when displayed as a small card beside other lifestyle photos.\nLighting and style: natural early-evening daylight, realistic colors, editorial lifestyle photography consistent with ordinary candid activity photos.\nAvoid: any text, logos, signs with legible writing, watermarks, staged advertising, exaggerated cinematic lighting, identifiable real people."
+    }
+  ],
+  "user_supplied_reference_images": [
+    {
+      "path": "assets/shirt-b-black.jpg",
+      "source_url": "https://images.openai.com/static-rsc-4/3wm42nHGMvwlWSAUZFHxkQK4HWsRihfsm61GpXg0x5sz1sF4L0_iTyMak7_5bjdc4EYpFndnxhRWmAsipfPL-m93XXwlkf6HSBnrHvVh3x6dreIUL155_O5lQ1M0nM3J5mxAqXEK2_MUEfPxWx2mdaqq8on17oPvtYlOABwC7Ec?purpose=inline",
+      "content_type": "image/jpeg",
+      "sha256": "898c0424261261c092f6fe88bb8f81467dfdec447743e9eecf57c2bb5f71b64e",
+      "rights_status": "user-supplied reference; reuse permission not independently verified"
+    },
+    {
+      "path": "assets/shirt-c-light-blue.jpg",
+      "source_url": "https://images.openai.com/static-rsc-4/ZkDC7Oz4QLQ16vlSQj6hprF5j0KdmzB9A6YtAOk55-AyV0Any_xFF7ZAlYoWGy6GoyaVt_cMaNuNIpEtclpwFEYkAHBeMZ5jW5GFkr97n8BvI73QF_mtshwgwBf92zUae7OCOMZKKtLXZgh142dKh2mOkgfaCmPbnu4OgGiEbd4?purpose=inline",
+      "content_type": "image/jpeg",
+      "sha256": "44fa15aed7ed9079621dd78af7ebea71cbdd8856b78fa183c000b97092cd62d9",
+      "rights_status": "user-supplied reference; reuse permission not independently verified"
+    },
+    {
+      "path": "assets/birthday-hotpot.jpg",
+      "source_url": "https://images.openai.com/static-rsc-4/ZqrvTEmulehBbGO0iQEX6DMzwSG9rJD1Ev-VlMVTGgz5psfoHW9QvJR981__YtnlSOINycMP9Dbl7g4F17Bkia-hoQYTB-M65-1Dh4tn9pSy2ehZ-F5Kz3MVkMoqj4eMRrXCsNY5Rr1nAQCsERy-7gUsau2bVPHeSalt1TDoo34?purpose=inline",
+      "content_type": "image/jpeg",
+      "sha256": "13cbb2e277029a1e9c926ddaf5d0c7de900172da7f260bbe47c211b0f3278756",
+      "rights_status": "user-supplied reference; reuse permission not independently verified"
+    },
+    {
+      "path": "assets/birthday-milk-tea.jpg",
+      "source_url": "https://images.openai.com/static-rsc-4/0qPN3SDM28OSY80WeMRHk66YoTV7QgYKHr656C-Amx1CixChzLogQWN3foBhosFvZNAbMjAratvruSCPaQph9KxhwPex9g_WWDiNHYruYeQWhwycTLk1v4r81AUWL-zoZJ8AsWAgtatSLGhyGx6L5dSefn7WB4XNRDwoMxvJhLc?purpose=inline",
+      "content_type": "image/jpeg",
+      "sha256": "f257a2f134997ddde73618206ec5f7924fd38585d12c2759196651ac54a2cb3d",
+      "rights_status": "user-supplied reference; reuse permission not independently verified"
+    },
+    {
+      "path": "assets/birthday-karaoke.jpg",
+      "source_url": "https://images.openai.com/static-rsc-4/x6pk_mcUAmm-5qdHwuzQ1VcAj3PO-dbiPyi-9GR7tHR-dc8gi6yhxBPw50hf4TJ-QH_YT4NUx3UicSVDBmZZo1rfaPgHTPBGGfK1qU9vO0ozP8aowO-v286hIEwNHF0W3S-FDoTtxksDW_PYHKbCB8ZOZrDLRwb3yBvgeufE3JDK0JANProNfLmn2_y5jDP8?purpose=inline",
+      "content_type": "image/jpeg",
+      "sha256": "0adb33c0aa29e7a35a4b517e2d4f9066bc50fd0d4761b2a9ea1893e0c2de2c7c",
+      "rights_status": "user-supplied reference; reuse permission not independently verified"
+    }
+  ],
+  "shared_classroom_icons": [
+    {
+      "path": "assets/icons/listen.png",
+      "sha256": "3a16f13ea2c003a234c62f30f9fd4c019cc87e1ce97ad5ffa967ed080cfb133e",
+      "source": "copied from lesson-11-12-v09-readable approved classroom icon family"
+    },
+    {
+      "path": "assets/icons/notes.png",
+      "sha256": "1d0d9995b40db4470c4b203efb5568f8af800de91c9f5da7ef5de2460b6ae996",
+      "source": "copied from lesson-11-12-v09-readable approved classroom icon family"
+    },
+    {
+      "path": "assets/icons/conversation.png",
+      "sha256": "96491bb767d6e33d464f8957bed229cdf88eb566b50c59bb3d6806171bed7d3f",
+      "source": "copied from lesson-11-12-v09-readable approved classroom icon family"
+    },
+    {
+      "path": "assets/icons/book-pencil.png",
+      "sha256": "b97842336f3e54a843c0782393177e8bf20ed30638c0e8611cc9850282792a75",
+      "source": "copied from lesson-11-12-v09-readable approved classroom icon family"
+    },
+    {
+      "path": "assets/icons/location.png",
+      "sha256": "ab0d5b82c428355936830dd4037f49d9524437ab2ed595572ca80b0a3ffe5244",
+      "source": "copied from lesson-11-12-v09-readable approved classroom icon family"
+    },
+    {
+      "path": "assets/icons/shopping-bag.png",
+      "sha256": "72e7a2536b90c9cafbeea2b05fa232b78df87cf413b722e933dc429d684b9986",
+      "source": "copied from lesson-11-12-v09-readable approved classroom icon family"
+    },
+    {
+      "path": "assets/icons/wallet.png",
+      "sha256": "e721e4b070c50e0aacc9e3d3a64fcb8577e2e2f240d984ddb122b50e4f872899",
+      "source": "copied from lesson-11-12-v09-readable approved classroom icon family"
+    },
+    {
+      "path": "assets/icons/school.png",
+      "sha256": "cdf2cfc3bd653ea0d4c4b2bfcdb41cce3eb4fbdc325a847be52f833269492060",
+      "source": "copied from lesson-11-12-v09-readable approved classroom icon family"
+    },
+    {
+      "path": "assets/icons/phone.png",
+      "sha256": "d3e791e0a9d2452965196998db07634a9ea10d2271896c66863a1036af29e108",
+      "source": "copied from lesson-11-12-v09-readable approved classroom icon family"
+    }
+  ]
+}

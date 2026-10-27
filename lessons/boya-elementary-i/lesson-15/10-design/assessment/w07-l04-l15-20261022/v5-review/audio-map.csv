@@ -1,0 +1,50 @@
+audio_id,audio_path,question_range,play_count,duration_seconds,sha256,source_type
+TOCFL-N-Q00799500,audio-single/TOCFL-N-Q00799500.wav,1,2,31.377868,67fd485bf07f61a2996e2dc6e3171c346745f0a63a80e37b161a2e2c35d5f962,official original first rendition; second repetition and middle pause trimmed
+TOCFL-N-Q00799600,audio-single/TOCFL-N-Q00799600.wav,2,2,28.902834,d0c571caefa1d57da05efbcf247c83eaae01b9f9f4ac3b57c021638ca34e9a40,official original first rendition; second repetition and middle pause trimmed
+TOCFL-N-Q00799700,audio-single/TOCFL-N-Q00799700.wav,3,2,24.411587,473e3395da68eddbcfb45905d36ac0148167fae5de5c3f3bc40872651d2d067e,official original first rendition; second repetition and middle pause trimmed
+TOCFL-N-Q00799800,audio-single/TOCFL-N-Q00799800.wav,4,2,30.68,5e4e64d20a546d438f95abc15852fc92ca04c9bedc1ca2c1350a763cafb11d1a,official original first rendition; second repetition and middle pause trimmed
+TOCFL-N-Q00799900,audio-single/TOCFL-N-Q00799900.wav,5,2,31.418095,d22c9d6d7d9d7e31ee5a738adb202aac4074851f8ab70f566ca7a206dbdd47c1,official original first rendition; second repetition and middle pause trimmed
+TOCFL-N-Q01025800,audio-single/TOCFL-N-Q01025800.wav,6,2,35.300136,84109a312321263a56895ce519b36eb466d52610b4e93a889062383c9e315fcb,official original first rendition; second repetition and middle pause trimmed
+TOCFL-N-Q01026000,audio-single/TOCFL-N-Q01026000.wav,7,2,32.93678,cb31e8ec96f08c024c676c4a19685d66865c566624afffe75aa0b905fc439c39,official original first rendition; second repetition and middle pause trimmed
+TOCFL-N-Q01026100,audio-single/TOCFL-N-Q01026100.wav,8,2,30.908163,72e07cf7d769b4a06949f0b8096dbaa0bbd966948fbb9aebea9581f12ebe16cb,official original first rendition; second repetition and middle pause trimmed
+TOCFL-A4-Q01,audio-single/TOCFL-A4-Q01.wav,9,2,12.935034,d3555eea65f86b66ef31eaa0853905795f6c780f9fe63e0357d2299c4f14469d,official_original_speech_excerpt_no_resynthesis
+TOCFL-A4-Q06,audio-single/TOCFL-A4-Q06.wav,10,2,14.929048,a3966a529c71c63f49272e2abc091fec610cfa6e3d4d9698fec0bd36a147bbdf,official_original_speech_excerpt_no_resynthesis
+TOCFL-A4-Q07,audio-single/TOCFL-A4-Q07.wav,11,2,17.171315,4a8c0eca4b3b4df923687b3de61a8eeeb438c97f8593312db052b81cc3b0c99e,official_original_speech_excerpt_no_resynthesis
+TOCFL-A4-Q08,audio-single/TOCFL-A4-Q08.wav,12,2,19.611224,4c12902268badf93889160098952d348ed65d2cf3e03c9384aaac41aba563f5a,official_original_speech_excerpt_no_resynthesis
+TOCFL-A5-Q01,audio-single/TOCFL-A5-Q01.wav,13,2,13.836145,0a0b23d723386b5a70fbff947dd8d0f6f55fc15fbfa8e8fed436a7db9eef12f7,official_original_speech_excerpt_no_resynthesis
+HSK-H11004-Q12,v5-review/audio/HSK-H11004-Q12.wav,14,2,10.300000,b2e7dd9ebc3a602df1690ff5156ec544ac59f96120ef864686275431a15f3a31,official original source speech; source-number cue and excess silence trimmed; no resynthesis
+TOCFL-A5-Q03,audio-single/TOCFL-A5-Q03.wav,15,2,20.587302,446bc5142e8cba9921b2a0d655333960c198f6e9e603623a8ff9c2c706e9eeaf,official_original_speech_excerpt_no_resynthesis
+TOCFL-A5-Q05,audio-single/TOCFL-A5-Q05.wav,16,2,16.144762,82ec8ef9c8917c64dc159509066578c6750ed8fc9470cdafbe211231d1df4a29,official_original_speech_excerpt_no_resynthesis
+TOCFL-A5-Q06,audio-single/TOCFL-A5-Q06.wav,17,2,21.505079,1c86e45ac7235c6c7a008b263c7ae00fe24aeb5e4aa5747fb0b8f837937758ac,official_original_speech_excerpt_no_resynthesis
+HSK-H11005-Q18,v5-review/audio/HSK-H11005-Q18.wav,18,2,8.500000,6c36a3bb94d4eb0bff53a9bfae8a00d586fdb794c182dbf2258052b110fe7500,official original source speech; source-number cue and excess silence trimmed; no resynthesis
+TOCFL-A5-Q08,audio-single/TOCFL-A5-Q08.wav,19,2,25.568481,cdea5a9bf43b17ddb08af294da6df11ab02a36e9599769ff7d67648948569ccb,official_original_speech_excerpt_no_resynthesis
+TOCFL-A5-Q09,audio-single/TOCFL-A5-Q09.wav,20,2,27.753787,066a07f9e74286317ab01da211d7ee1b989ca29669e1a3d3bda3ac156534161c,official_original_speech_excerpt_no_resynthesis
+TOCFL-A4-Q09,audio-single/TOCFL-A4-Q09.wav,21,2,20.383333,affa99946c3c1509c80537871a9a612712d57d93c47db80fc325d264405d17b0,official_original_speech_excerpt_no_resynthesis
+TOCFL-N-Q01250800,v5-review/audio/TOCFL-N-Q01250800.wav,22,2,18.3,cc6046bba3e21bf17c47d9a51157482f8517ef9014f41271622f1b1550790605,"official first rendition; complete A/B/C retained; 4.1s trailing digital silence removed; no resynthesis"
+TOCFL-A4-Q11,audio-single/TOCFL-A4-Q11.wav,23,2,10.342063,8c5239ce08cc4252cb8e5496f3c3ef922777d5ef79ef56098f93349b794417bd,official_original_speech_excerpt_no_resynthesis
+TOCFL-A4-Q15,audio-single/TOCFL-A4-Q15.wav,24,2,7.420544,68427e0dc523070b2cb05b67ccbf4a74ba27bb33732b5ddbde7594eb2cf14b6a,official_original_speech_excerpt_no_resynthesis
+TOCFL-A4-Q17,audio-single/TOCFL-A4-Q17.wav,25,2,12.981678,2c88f429a367275a9b146b1d816eae67be8dd0ece316c6480e04e8430d9d97ce,official_original_speech_excerpt_no_resynthesis
+TOCFL-A4-Q19,audio-single/TOCFL-A4-Q19.wav,26,2,6.803605,0a1633035087bf8f641e1f71071a4d2da53888a255f7fef9be3fc2739bfd8d52,official_original_speech_excerpt_no_resynthesis
+TOCFL-A4-Q22,audio-single/TOCFL-A4-Q22.wav,27,2,8.369819,8a7692941b9b4f6af52286d5807da4d76ccbb1dd642f2113c5a72ebcf378bacd,official_original_speech_excerpt_no_resynthesis
+TOCFL-A4-Q25,audio-single/TOCFL-A4-Q25.wav,28,2,9.094898,27f0618a7047b92b497561628a8c2b805d33cf22d560d0b76adefeb93b9225ef,official_original_speech_excerpt_no_resynthesis
+TOCFL-A4-Q30,audio-single/TOCFL-A4-Q30.wav,29,2,22.628141,daf30aeea6d1d3f5ec6624eee5cad6f097803e5020d7dbadae14a1e9dd0ca7cb,official_original_speech_excerpt_no_resynthesis
+TOCFL-A4-Q33,audio-single/TOCFL-A4-Q33.wav,30,2,28.648821,af9ff2a69b3664ef7e05772162afca825a68fb39201f443f9387ba79f7b168c5,official_original_speech_excerpt_no_resynthesis
+TOCFL-A4-Q34,audio-single/TOCFL-A4-Q34.wav,31,2,20.929365,bdc618a52f4e7d3a98bdfe3e9e306a0d3f05a93453bc8277e1df237f33cc0de5,official_original_speech_excerpt_no_resynthesis
+HSK-H20901-Q12,v5-review/audio/HSK-H20901-Q12.wav,32,2,6.400000,87717df3d5e45770d936eb03905303c60118dd2dfb0ccabcedda08c5ac6dc631,official original source speech; source-number cue and excess silence trimmed; no resynthesis
+TOCFL-A5-Q15,audio-single/TOCFL-A5-Q15.wav,33,2,7.63195,9ae7e219ea2771880c3ca2ddeb1d17d207a369c86186c0e4bdab79030002cbc5,official_original_speech_excerpt_no_resynthesis
+HSK-H10901-Q13,v5-review/audio/HSK-H10901-Q13.wav,34,2,7.100000,aedafe518ddef45e2cd2120e374f7a331ce4a88bd30ff1a70db21faa4f6f838c,official original source speech; source-number cue and excess silence trimmed; no resynthesis
+TOCFL-A5-Q19,audio-single/TOCFL-A5-Q19.wav,35,2,8.993447,2d8aa2c4691cc188bddeac81c0032c25d5a5962093ba1355788e3bd9623c8e07,official_original_speech_excerpt_no_resynthesis
+TOCFL-A4-Q21,audio-single/TOCFL-A4-Q21.wav,36,2,7.24,642fd243b80e33fb1bfc302a48d5f3f6e6322db0ebea042a6d8b3ddbf36cdef1,official original first rendition; repeated rendition trimmed
+TOCFL-A4-Q27,audio-single/TOCFL-A4-Q27.wav,37,2,18.59288,f1d2f665470add2577661590be5a91131790ab84cd81b7b0ee4a0823cc9a7c06,official original first rendition; repeated rendition trimmed
+TOCFL-A4-Q35,audio-single/TOCFL-A4-Q35.wav,38,2,22.498481,7362c5d5cf9d02f2e563976c46a7ee8fe5e425abe7a9730cf2ea342989f4e83f,official original first rendition; repeated rendition trimmed
+HSK-H10901-Q16,v5-review/audio/HSK-H10901-Q16.wav,39,2,7.900000,fb9bbbffaeb41f08e6183999e3c36bcb1ba6ce384b1b1acafe34525665c5b4f8,official original source speech; source-number cue and excess silence trimmed; no resynthesis
+BOYA-L15-15-11-W07V5,v5-review/audio/BOYA-L15-15-11.wav,40–41,2,32.100000,66c6ed7b23df3646161ab17d93ef85478511af9149f78113f01dda1c8822c91d,"W07 v5-only derivative; original shared publisher track 15-11 preserved; answer-revealing lead-in trimmed, complete dialogue/prompts retained; no resynthesis"
+TOCFL-A4-Q16,audio-single/TOCFL-A4-Q16.wav,42,2,13.991746,32303762dfd61382b9aeadb522c9bfbf990a39da445328d9e16f30f63a165195,official_original_speech_excerpt_no_resynthesis
+TOCFL-A4-Q36,audio-single/TOCFL-A4-Q36.wav,43,2,31.645374,81d9c8c51b681857b7e059ab9f1f524ffc09cdd366d596b16052908dee41aef4,official_original_speech_excerpt_no_resynthesis
+TOCFL-A4-Q38,audio-single/TOCFL-A4-Q38.wav,44,2,26.697415,984632c763d4a0eaf8ed357457f3089a382276c4d061ce7b3b8086413ef0bffd,official_original_speech_excerpt_no_resynthesis
+TOCFL-A4-Q40,audio-single/TOCFL-A4-Q40.wav,45,2,24.620998,feadc8249b1a1c5091e5fd6ec46e4697465d4b5b06830a24bb04e7e75456e2bb,official_original_speech_excerpt_no_resynthesis
+HSK-H20901-Q15,v5-review/audio/HSK-H20901-Q15.wav,46,2,8.300000,a59557eebf331f70d41bdf55583b9a8692f35b2928618451e0fd1397d157cf7a,official original source speech; source-number cue and excess silence trimmed; no resynthesis
+TOCFL-A4-Q45,audio-single/TOCFL-A4-Q45.wav,47,2,52.633605,94d741a5924a24a3d3a078677fd24cc54282146fd299fec08803833e78990a56,official_original_speech_excerpt_no_resynthesis
+TOCFL-A4-Q46,audio-single/TOCFL-A4-Q46.wav,48,2,52.500408,3ecde6149e35041bb4da1c6886e7bcdc89115e36d53ba72cffc583798049df1e,official_original_speech_excerpt_no_resynthesis
+TOCFL-A4-Q41,audio-single/TOCFL-A4-Q41.wav,49,2,53.158435,2c1215af03a22a5e42ffb59826df6aad0262adb5ef22262aaf427694008212e8,official_original_speech_excerpt_no_resynthesis
+TOCFL-A5-Q42,audio-single/TOCFL-A5-Q42.wav,50,2,56.324172,87c74f0d97300cec13b033ebb1373707fe28534875a1a6b3db7959a6ee5731bb,official_original_speech_excerpt_no_resynthesis

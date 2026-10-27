@@ -26,7 +26,7 @@ from workflow_integrity import resolve_relative_path, sha256
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 RUN_ID_PATTERN = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,79}")
 PHASES = {"defined", "ready", "verifying", "needs_human", "blocked", "complete"}
-PURPOSES = {"audit", "teacher-guide", "support", "prototype", "pptx", "semester-manual", "release"}
+PURPOSES = {"audit", "teacher-guide", "support", "prototype", "pptx", "classroom-html", "semester-manual", "release"}
 EXECUTION_SCOPES = {"project", "tool", "course", "assessment"}
 
 
@@ -157,8 +157,8 @@ def normalize_output_dir(
         if output_dir:
             raise ValueError(f"purpose={purpose} does not accept an output directory")
         return None
-    if gate_stage == "draft" and purpose != "pptx":
-        raise ValueError("draft gate stage is only supported for purpose=pptx")
+    if gate_stage == "draft" and purpose not in {"pptx", "classroom-html"}:
+        raise ValueError("draft gate stage is only supported for purpose=pptx or classroom-html")
 
     design_root = context.lesson_root / "10-design"
     defaults = {
@@ -166,6 +166,7 @@ def normalize_output_dir(
         "support": design_root / "support-draft",
         "prototype": design_root / "visual-prototype-draft",
         "pptx": design_root / "pptx-draft",
+        "classroom-html": design_root / "open-slide-draft" / "wNN-lesson",
         "semester-manual": design_root / "teacher-manual-export-draft",
     }
     default = defaults[purpose]
@@ -186,6 +187,10 @@ def normalize_output_dir(
         draft_root = (design_root / "pptx-draft").resolve()
         if not _is_within(resolved, draft_root):
             raise ValueError("PPTX run output must stay inside the lesson pptx-draft root")
+    if purpose == "classroom-html":
+        draft_root = (design_root / "open-slide-draft").resolve()
+        if not _is_within(resolved, draft_root) or resolved == draft_root:
+            raise ValueError("classroom HTML run output must be a named directory under the lesson open-slide-draft root")
     return normalized
 
 
@@ -201,6 +206,9 @@ def create_run(
     offering_id: str | None = None,
     max_attempts: int = 3,
     scope: str = "lesson",
+    approval_record: str | None = None,
+    artifact_id: str | None = None,
+    class_scope: str | None = None,
 ) -> dict[str, Any]:
     validate_run_id(run_id)
     if purpose not in PURPOSES:
@@ -213,6 +221,9 @@ def create_run(
         raise ValueError("at least one non-empty success criterion is required")
     if max_attempts < 1 or max_attempts > 10:
         raise ValueError("max_attempts must be between 1 and 10")
+    if any((approval_record, artifact_id, class_scope)):
+        if not all((approval_record, artifact_id, class_scope, offering_id)) or scope != "lesson" or gate_stage != "draft" or purpose not in {"pptx", "classroom-html"}:
+            raise ValueError("scoped draft approval requires lesson, offering, record, artifact ID and class scope")
 
     if scope == "lesson":
         context = resolve_lesson_context(project_root, lesson_key, offering_id)
@@ -243,6 +254,9 @@ def create_run(
         "purpose": purpose,
         "gate_stage": gate_stage,
         "output_dir": normalized_output,
+        "approval_record": approval_record,
+        "artifact_id": artifact_id,
+        "class_scope": class_scope,
         "success_criteria": success_criteria,
         "criteria_status": "pending",
         "phase": "defined",
@@ -296,7 +310,13 @@ def _default_gate_runner(project_root: Path, state: dict[str, Any]) -> dict[str,
 
     output = state.get("output_dir")
     if state["gate_stage"] == "draft":
-        return check_lesson_ppt_draft(state["lesson_key"], output)
+        if state["purpose"] == "classroom-html":
+            from production_gate import check_classroom_html_draft
+
+            return check_classroom_html_draft(
+                state["lesson_key"], output, state.get("offering_id"), state.get("approval_record"), state.get("artifact_id"), state.get("class_scope")
+            )
+        return check_lesson_ppt_draft(state["lesson_key"], output, state.get("offering_id"), state.get("approval_record"), state.get("artifact_id"), state.get("class_scope"))
 
     return check(
         state["purpose"],
@@ -800,6 +820,9 @@ def command_init(args: argparse.Namespace) -> dict[str, Any]:
         args.offering_id,
         args.max_attempts,
         args.scope,
+        args.approval_record,
+        args.artifact_id,
+        args.class_scope,
     )
 
 
@@ -822,6 +845,9 @@ def build_parser() -> argparse.ArgumentParser:
     init.add_argument("--lesson-key")
     init.add_argument("--scope", choices=["lesson", *sorted(EXECUTION_SCOPES)], default="lesson")
     init.add_argument("--offering-id")
+    init.add_argument("--approval-record")
+    init.add_argument("--artifact-id")
+    init.add_argument("--class-scope")
     init.add_argument("--artifact", required=True)
     init.add_argument("--purpose", required=True, choices=sorted(PURPOSES))
     init.add_argument("--gate-stage", choices=("draft", "authority"), default="draft")

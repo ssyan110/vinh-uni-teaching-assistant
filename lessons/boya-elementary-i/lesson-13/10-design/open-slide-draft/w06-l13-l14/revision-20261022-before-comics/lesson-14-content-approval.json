@@ -1,0 +1,26 @@
+{
+  "lesson_key": "boya-elementary-i:lesson-14",
+  "offering_id": "2026-fall",
+  "gate": "lesson-content",
+  "status": "approved",
+  "approved_by": "Adam",
+  "approved_at": "2026-10-20T21:55:53+07:00",
+  "timestamp_basis": "Adam direct instruction in the current conversation specifying question-only slides 13 and 15, both HSK levels together on slides 14 and 16, and requesting the slides be corrected accordingly; slide 17–18 retains the previously reviewed Taipei birthday topic with paired level support.",
+  "artifacts": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-14/00-source/canonical-source.json",
+      "sha256": "67c775b646404b6a58644ada5264324cce342d4475a4eabc44efa545a8c52791"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-14/10-design/storyboard/lesson-14-逐页文案审阅.md",
+      "sha256": "d1846d8c646ea7ce2be6a4e7f2873557d98424c16dbe873896abde1b58c5b78c"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-14/10-design/lesson-14-教师朗读稿.md",
+      "sha256": "c1568c0fdd559432c939dc406648a8a816e1555904253bdcfae5fcea46cf0549"
+    }
+  ],
+  "evidence": "lessons/boya-elementary-i/lesson-14/10-design/storyboard/lesson-14-content-approval-evidence-2026-10-20-w06-paired-pages.md",
+  "evidence_sha256": "e47bf78e2eda423dc73f34a7a8592cb6cad18e3ab6793651d8c4d6149c57f292",
+  "scope": "W06 combined 18-slide in-person HTML student content for the lesson pages in scope; design draft only, no authority promotion or release."
+}

@@ -1,10 +1,12 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTracker } from '../state/TrackerContext'
 import { compareSessions, latestParticipationSession, participationRows } from '../utils/participation'
 import { studentCodeLastFour } from '../utils/studentIdentity'
+import { nextClassQueue } from '../utils/nextClassQueue'
 import type { ClassSession } from '../types'
 
-const MAX_URGENT_STUDENTS = 8
+const MAX_QUEUE_ROWS = 8
 
 function participationHref(courseId: string, session?: ClassSession) {
   const params = new URLSearchParams({ course: courseId })
@@ -17,10 +19,12 @@ function participationHref(courseId: string, session?: ClassSession) {
 
 export function TodayPage() {
   const { snapshot } = useTracker()
+  const [selectedCourse, setSelectedCourse] = useState('')
+  const [showAll, setShowAll] = useState(false)
 
   const classViews = snapshot.courses
     .filter((course) => !course.archived_at)
-    .map((course, courseIndex) => {
+    .map((course) => {
       const latest = latestParticipationSession(snapshot, course.id)
       const activeEnrollments = snapshot.enrollments.filter((enrollment) => enrollment.course_id === course.id && enrollment.status === 'active')
       const roster = activeEnrollments.flatMap((enrollment) => {
@@ -29,23 +33,6 @@ export function TodayPage() {
       })
       const latestRows = participationRows(snapshot, course.id, latest?.id ?? '').filter((row) => row.enrollment.status === 'active')
       const answeredStudents = latest ? latestRows.filter((row) => row.total > 0).length : null
-      const openFollowupsFor = (studentId: string) => snapshot.followups.filter((followup) =>
-        followup.status === 'open' && followup.course_id === course.id && followup.student_id === studentId)
-      const candidates = latestRows
-        .map((row) => {
-          const followups = openFollowupsFor(row.student.id)
-          const hasNoAnswer = Boolean(latest) && row.total === 0
-          return {
-            course,
-            courseIndex,
-            latest,
-            row,
-            followups,
-            hasNoAnswer,
-            priority: hasNoAnswer && followups.length ? 0 : hasNoAnswer ? 1 : 2,
-          }
-        })
-        .filter((item) => item.hasNoAnswer || item.followups.length > 0)
 
       return {
         course,
@@ -57,17 +44,12 @@ export function TodayPage() {
         randomAnswers: latest ? latestRows.reduce((sum, row) => sum + row.random, 0) : null,
         teacherAnswers: latest ? latestRows.reduce((sum, row) => sum + row.teacher, 0) : null,
         voluntaryAnswers: latest ? latestRows.reduce((sum, row) => sum + row.voluntary, 0) : null,
-        candidates,
       }
     })
 
-  const urgentStudents = classViews
-    .flatMap((view) => view.candidates)
-    .sort((a, b) => a.priority - b.priority
-      || a.courseIndex - b.courseIndex
-      || (a.row.enrollment.seat_number ?? 999) - (b.row.enrollment.seat_number ?? 999))
-    .slice(0, MAX_URGENT_STUDENTS)
-  const totalUrgentStudents = classViews.reduce((sum, view) => sum + view.candidates.length, 0)
+  const queueCourse = classViews.find(view => view.course.id === selectedCourse)?.course ?? classViews[0]?.course
+  const queue = nextClassQueue(snapshot, queueCourse?.id ?? '')
+  const queueItems = showAll ? queue.items : queue.items.slice(0, MAX_QUEUE_ROWS)
   const history = [...snapshot.sessions].sort(compareSessions)
   const courseForSession = (session: ClassSession) => snapshot.courses.find((course) => course.id === session.course_id)
   const hasNotes = (session: ClassSession) => [
@@ -124,27 +106,23 @@ export function TodayPage() {
     {!classViews.length && <section className="panel empty-state">尚无班级。请先到「更多」新增班级并导入名册。</section>}
 
     <section className="panel urgent-panel" aria-labelledby="urgent-heading">
-      <div className="panel-heading">
-        <div><h2 id="urgent-heading">需要跟进的学生</h2></div>
-        <span>{urgentStudents.length ? `显示 ${urgentStudents.length} 人` : '目前没有'}</span>
-      </div>
-      <p className="section-lead">优先显示最近一堂课零回答或有当前待办的学生，最多显示 8 人。</p>
-      {urgentStudents.length ? <div className="urgent-student-list">
-        {urgentStudents.map((item) => {
-          const reason = [item.hasNoAnswer ? '零回答' : '', item.followups.length ? `${item.followups.length} 项待办` : ''].filter(Boolean).join(' · ')
-          return <article className="urgent-student-row" key={`${item.course.id}-${item.row.student.id}`}>
-            <span className="urgent-seat" aria-label={`學號末四位 ${studentCodeLastFour(item.row.student.student_code)}`}>{studentCodeLastFour(item.row.student.student_code)}</span>
-            <div className="urgent-student-identity"><strong>{item.row.student.chinese_name}</strong><small>{item.course.code} · {reason}</small></div>
-            <div className="urgent-actions">
-              <Link to={participationHref(item.course.id, item.latest)}>查看回答次数</Link>
-              {item.latest
-                ? <Link to={participationHref(item.course.id, item.latest)}>记录自愿发言</Link>
-                : <Link to={`/students/${item.row.student.id}?course=${item.course.id}`}>查看待办</Link>}
-            </div>
-          </article>
-        })}
-      </div> : <p className="empty-inline">{history.length ? '最近一堂课没有零回答学生，也没有学生待办。' : '建立第一堂课后，这里会列出零回答或有待办的学生。'}</p>}
-      {totalUrgentStudents > urgentStudents.length && <p className="field-help">还有 {totalUrgentStudents - urgentStudents.length} 人符合条件；完整名单已放在下方，默认收起。</p>}
+      <div className="panel-heading"><h2 id="urgent-heading">下堂课跟进</h2><span>{queue.items.length} 项</span></div>
+      <div className="filter-panel"><label>选择班级<select value={queueCourse?.id ?? ''} onChange={e => { setSelectedCourse(e.target.value); setShowAll(false) }}>
+        {!classViews.length && <option value="">尚无班级</option>}{classViews.map(view => <option key={view.course.id} value={view.course.id}>{view.course.name}</option>)}
+      </select></label>{queueCourse && <Link className="secondary-button compact" to={`/followups?course=${encodeURIComponent(queueCourse.id)}`}>处理本班待办</Link>}</div>
+      <p className="section-lead">先处理已记录的提醒与补做，再安排口语观察。同一学生合并显示；观察建议来自最近一堂课{queue.latest ? `（${queue.latest.session_date}）` : ''}的最后一条有效口语记录。</p>
+      {queueItems.length ? <div className="urgent-student-list">{queueItems.map(item => <article className="urgent-student-row" key={item.studentId ?? 'class'}>
+        <span className="urgent-seat">{item.student ? studentCodeLastFour(item.student.student_code) : '—'}</span>
+        <div className="urgent-student-identity"><strong>{item.student?.chinese_name ?? (item.studentId ? '学生资料未载入' : '全班待办')}</strong>
+          {item.followups.map(task => <small key={task.id}><Link to={`/followups?course=${encodeURIComponent(queueCourse!.id)}#followup-${encodeURIComponent(task.id)}`}>{task.title}</Link> · {task.due_on || '未设日期'}</small>)}
+          {item.observation && <small>{item.observation.reason} · {item.observation.evidence}</small>}
+        </div>
+        <div className="urgent-actions">{item.student && <Link to={`/students/${encodeURIComponent(item.student.id)}?course=${encodeURIComponent(queueCourse!.id)}`}>查看记录与跟进</Link>}
+          {item.observation && queue.latest && <Link to={`/sessions/${encodeURIComponent(queue.latest.id)}?view=reflection`}>查看来源课堂</Link>}
+        </div>
+      </article>)}</div> : <p className="empty-inline">{queue.latest ? '本班目前没有待办或需要再观察的记录。' : '本班尚无待办或课堂记录；建立课堂记录后再安排观察。'}</p>}
+      {queue.items.length > MAX_QUEUE_ROWS && <button type="button" className="text-button" onClick={() => setShowAll(!showAll)}>{showAll ? '收起名单' : `显示全部 ${queue.items.length} 项`}</button>}
+      <p className="field-help">未观察不代表零分、缺席或未交作业。补做只依据已建立且未完成的待办；观察建议不会自动建立待办或修改成绩。</p>
     </section>
 
     <section className="on-demand-grid" aria-label="按需查看的资料">

@@ -1,0 +1,15 @@
+{
+  "checks": [
+    "12 questions and 12 decoded local images load",
+    "valid random pair, animation lock, atomic decoded reveal",
+    "60s preparation then automatic 120s response, pause/resume, both cards remain",
+    "one-click repeat practice draws a fresh pair",
+    "background-style clock jump catches up across both deadlines",
+    "mobile no horizontal overflow; reduced-motion reveal",
+    "1280x720 laptop fits both panels, image and controls without clipping",
+    "file:// offline launch and local picture load",
+    "missing picture prevents draw and reports file"
+  ],
+  "pageErrors": [],
+  "status": "passed"
+}

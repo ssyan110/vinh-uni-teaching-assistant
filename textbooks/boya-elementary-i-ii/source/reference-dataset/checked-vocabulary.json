@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "source_pdf_sha256": "d87e803987b2e204945cb5af112b614a8c7a3444f84a00951c2db9aaa498a95b",
+  "lesson_key": "boya-elementary-ii:lesson-01",
+  "checked_at": "2026-10-27",
+  "checked_against": "supplied PDF pages 12–13, printed 1–2; source screenshot evidence in .agent/runs/next-semester-pilot-repair-20261027/staging/source-12.png and source-13.png",
+  "review_status": "source_image_checked; Vietnamese from Adam-approved lesson copy; not whole-dataset teacher approval",
+  "items": [
+    {
+      "item_order": 1,
+      "word": "订",
+      "pinyin": "dìng",
+      "part_of_speech": "动",
+      "meaning_en_source": "to book",
+      "meaning_vi": "đặt (vé)",
+      "source_pdf_page": 12,
+      "source_printed_page": 1
+    },
+    {
+      "item_order": 2,
+      "word": "机票",
+      "pinyin": "jīpiào",
+      "part_of_speech": "名",
+      "meaning_en_source": "airline ticket",
+      "meaning_vi": "vé máy bay",
+      "source_pdf_page": 12,
+      "source_printed_page": 1
+    },
+    {
+      "item_order": 3,
+      "word": "查",
+      "pinyin": "chá",
+      "part_of_speech": "动",
+      "meaning_en_source": "to check; to look up",
+      "meaning_vi": "tra; kiểm tra",
+      "source_pdf_page": 12,
+      "source_printed_page": 1
+    },
+    {
+      "item_order": 4,
+      "word": "次",
+      "pinyin": "cì",
+      "part_of_speech": "量",
+      "meaning_en_source": "measure word (for train or airplane)",
+      "meaning_vi": "chuyến; lần",
+      "source_pdf_page": 12,
+      "source_printed_page": 1
+    },
+    {
+      "item_order": 5,
+      "word": "接",
+      "pinyin": "jiē",
+      "part_of_speech": "动",
+      "meaning_en_source": "to meet; to welcome",
+      "meaning_vi": "đón",
+      "source_pdf_page": 12,
+      "source_printed_page": 1
+    },
+    {
+      "item_order": 6,
+      "word": "送",
+      "pinyin": "sòng",
+      "part_of_speech": "动",
+      "meaning_en_source": "to see sb. off",
+      "meaning_vi": "tiễn",
+      "source_pdf_page": 12,
+      "source_printed_page": 1
+    },
+    {
+      "item_order": 7,
+      "word": "晴",
+      "pinyin": "qíng",
+      "part_of_speech": "形",
+      "meaning_en_source": "sunny",
+      "meaning_vi": "nắng; trời quang",
+      "source_pdf_page": 12,
+      "source_printed_page": 1
+    },
+    {
+      "item_order": 8,
+      "word": "阴",
+      "pinyin": "yīn",
+      "part_of_speech": "形",
+      "meaning_en_source": "cloudy; overcast",
+      "meaning_vi": "âm u; nhiều mây",
+      "source_pdf_page": 12,
+      "source_printed_page": 1
+    },
+    {
+      "item_order": 9,
+      "word": "打折",
+      "pinyin": "dǎ zhé",
+      "part_of_speech": "",
+      "meaning_en_source": "to discount",
+      "meaning_vi": "giảm giá",
+      "source_pdf_page": 12,
+      "source_printed_page": 1
+    },
+    {
+      "item_order": 10,
+      "word": "飞机",
+      "pinyin": "fēijī",
+      "part_of_speech": "名",
+      "meaning_en_source": "airplane",
+      "meaning_vi": "máy bay",
+      "source_pdf_page": 12,
+      "source_printed_page": 1
+    },
+    {
+      "item_order": 11,
+      "word": "护照",
+      "pinyin": "hùzhào",
+      "part_of_speech": "名",
+      "meaning_en_source": "passport",
+      "meaning_vi": "hộ chiếu",
+      "source_pdf_page": 12,
+      "source_printed_page": 1
+    },
+    {
+      "item_order": 12,
+      "word": "晚点",
+      "pinyin": "wǎn diǎn",
+      "part_of_speech": "",
+      "meaning_en_source": "to be late; to be behind schedule",
+      "meaning_vi": "trễ giờ; chậm chuyến",
+      "source_pdf_page": 12,
+      "source_printed_page": 1
+    },
+    {
+      "item_order": 13,
+      "word": "机场",
+      "pinyin": "jīchǎng",
+      "part_of_speech": "名",
+      "meaning_en_source": "airport",
+      "meaning_vi": "sân bay",
+      "source_pdf_page": 12,
+      "source_printed_page": 1
+    },
+    {
+      "item_order": 14,
+      "word": "正点",
+      "pinyin": "zhèngdiǎn",
+      "part_of_speech": "动",
+      "meaning_en_source": "on time; punctually",
+      "meaning_vi": "đúng giờ",
+      "source_pdf_page": 12,
+      "source_printed_page": 1
+    },
+    {
+      "item_order": 15,
+      "word": "起飞",
+      "pinyin": "qǐfēi",
+      "part_of_speech": "动",
+      "meaning_en_source": "to take off",
+      "meaning_vi": "cất cánh",
+      "source_pdf_page": 12,
+      "source_printed_page": 1
+    },
+    {
+      "item_order": 16,
+      "word": "需要",
+      "pinyin": "xūyào",
+      "part_of_speech": "动",
+      "meaning_en_source": "to need",
+      "meaning_vi": "cần",
+      "source_pdf_page": 12,
+      "source_printed_page": 1
+    },
+    {
+      "item_order": 17,
+      "word": "航班",
+      "pinyin": "hángbān",
+      "part_of_speech": "名",
+      "meaning_en_source": "flight",
+      "meaning_vi": "chuyến bay",
+      "source_pdf_page": 12,
+      "source_printed_page": 1
+    },
+    {
+      "item_order": 18,
+      "word": "经济舱",
+      "pinyin": "jīngjìcāng",
+      "part_of_speech": "名",
+      "meaning_en_source": "economy class",
+      "meaning_vi": "hạng phổ thông",
+      "source_pdf_page": 13,
+      "source_printed_page": 2
+    },
+    {
+      "item_order": 19,
+      "word": "头等舱",
+      "pinyin": "tóuděngcāng",
+      "part_of_speech": "名",
+      "meaning_en_source": "first class",
+      "meaning_vi": "hạng nhất",
+      "source_pdf_page": 13,
+      "source_printed_page": 2
+    },
+    {
+      "item_order": 20,
+      "word": "父母",
+      "pinyin": "fùmǔ",
+      "part_of_speech": "名",
+      "meaning_en_source": "parents",
+      "meaning_vi": "cha mẹ",
+      "source_pdf_page": 13,
+      "source_printed_page": 2
+    },
+    {
+      "item_order": 21,
+      "word": "到达",
+      "pinyin": "dàodá",
+      "part_of_speech": "动",
+      "meaning_en_source": "to arrive",
+      "meaning_vi": "đến nơi",
+      "source_pdf_page": 13,
+      "source_printed_page": 2
+    },
+    {
+      "item_order": 22,
+      "word": "座位",
+      "pinyin": "zuòwèi",
+      "part_of_speech": "名",
+      "meaning_en_source": "seat",
+      "meaning_vi": "chỗ ngồi",
+      "source_pdf_page": 13,
+      "source_printed_page": 2
+    },
+    {
+      "item_order": 23,
+      "word": "原价",
+      "pinyin": "yuánjià",
+      "part_of_speech": "名",
+      "meaning_en_source": "original price",
+      "meaning_vi": "giá gốc",
+      "source_pdf_page": 13,
+      "source_printed_page": 2
+    }
+  ],
+  "related_appendix_repairs": [
+    {
+      "word": "巧",
+      "source_printed_page": 63,
+      "source_pdf_page": 74,
+      "reason": "source page 63 shows lesson 7, 巧 qiǎo 形 coincidental; remove false lesson-1 association caused by previous 订/巧 OCR match"
+    }
+  ]
+}

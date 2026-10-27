@@ -1,0 +1,28 @@
+{
+  "record_type": "assessment_content_approval",
+  "exam_id": "W06-L13L14-20261016",
+  "variant_id": "W06-L13L14-10Q-20261020",
+  "question_version": 3,
+  "approved_by": "Adam",
+  "approved_at": "2026-10-20T12:41:53+07:00",
+  "approval_evidence": {
+    "source": "current_conversation",
+    "exact_user_message": "approved",
+    "scope": "the current 10-question short-form review package in this conversation"
+  },
+  "approved_content_sha256": {
+    "student.md": "e6b9d9d1d34113c702179e56518dc43c1c4e07e6c80baba3cd1e6797731a2119",
+    "teacher.md": "4ca9a497d3d6440281b0c1b3d03c2b86540933b517dccfcd2277786d1ef95ac2",
+    "items.json": "b4c6638a536aa0e27166d2a9b5655e6582733480213034951b002e7102bed9ad",
+    "audio-map.csv": "2dd20afe4d6f73e3c1c8ca4d701bdf7b66cf5b6139eeb84e618e1635eebbfd4c",
+    "audio-manifest.json": "208e6e594c6265f18099bad1310f575f2dfcf9953a621579d9e1b9b73dea381d",
+    "source-manifest.json": "f2f5645d353db0208d3fb9636d15713879723031644d44ce9863cc8f09a66d84",
+    "scope.md": "ca4e9a76018b035ef0f8e3e350498058425a41e3908b0fc9a9709617eef9c90b"
+  },
+  "publication_authorized": false,
+  "teacher_full_listening_accepted": false,
+  "classroom_speaker_acceptance": false,
+  "approved_for_draft_sync": true,
+  "form_id": "1M33yrhHQHPAI2JE66VqO2nyuxNZQChUOwyWXIHGFnSU",
+  "form_revision_before_sync": "00000008"
+}

@@ -1,0 +1,134 @@
+{
+  "exam_id": "W07-L04L15-20261022",
+  "version": 5,
+  "record_type": "source_provenance_only_not_approval",
+  "sources": [
+    {
+      "question_number": 14,
+      "question_id": "W07-L04L15-01-27",
+      "source": "H11004",
+      "question": 12,
+      "pdf_url": "https://www.chinesetest.cn/userfiles/file/HSK/level1/H11004.pdf",
+      "audio_archive_url": "https://www.chinesetest.cn/userfiles/file/HSK/level1/H11004.rar",
+      "source_pdf_page": 5,
+      "source_option_map": [
+        "A",
+        "B",
+        "D"
+      ],
+      "source_key": "D",
+      "display_key": "C",
+      "source_pdf_sha256": "5b51bde9c9df652d7aa681313aee49dcda92aaa8e1b2f64682246c2a70bc6a07",
+      "source_audio_sha256": "ee5eb84151d7bbfd74800609b3dff7a02785043354fa2c39fb7c61217a023767",
+      "source_script": "女：喂，你回家了？男：没，我在出租车上，我去学校。"
+    },
+    {
+      "question_number": 18,
+      "question_id": "W07-L04L15-01-31",
+      "source": "H11005",
+      "question": 18,
+      "pdf_url": "https://www.chinesetest.cn/userfiles/file/HSK/level1/H11005.pdf",
+      "audio_archive_url": "https://www.chinesetest.cn/userfiles/file/HSK/level1/H11005.rar",
+      "source_pdf_page": 5,
+      "source_option_map": null,
+      "source_key": "A",
+      "display_key": "A",
+      "source_pdf_sha256": "25caf242ea1454e06a088a35b98f63bf1a3427418212c952a487df97cb5a97d7",
+      "source_audio_sha256": "d42621d4632a145ebd0584cb8e47a6ca837cf5d787e6d8404484485e9230beee",
+      "source_script": "我要这几本书，多少钱？问：他在买什么？"
+    },
+    {
+      "question_number": 22,
+      "question_id": "W07-L04L15-01-06",
+      "source": "TOCFL-Q01250800",
+      "question": "Q01250800",
+      "pdf_url": "https://tocfl.edu.tw/tocfl/assets/files/mock_database/N_L_Part%20Two_T.rar",
+      "audio_archive_url": "https://tocfl.edu.tw/tocfl/assets/files/mock_database/N_L_Part%20Two_MP3.rar",
+      "source_pdf_page": 1,
+      "source_option_map": null,
+      "source_key": "A",
+      "display_key": "A",
+      "source_pdf_sha256": "1c5840d6ab1cfb31f01b9d576eb6a6e01b79b91b4bafd76f6bcfe1df6a1466e5",
+      "source_audio_sha256": "117c27f2ac39f2a93293c56c180dbaa8a86ec728b2852f7397b367bb8018b04c",
+      "source_script": "A. 他在等车。B. 他在坐车。C. 他在开车。"
+    },
+    {
+      "question_number": 32,
+      "question_id": "W07-L04L15-01-34",
+      "source": "H20901",
+      "question": 12,
+      "pdf_url": "https://www.chinesetest.cn/userfiles/file/HSK/level2/H20901.pdf",
+      "audio_archive_url": "https://www.chinesetest.cn/userfiles/file/HSK/level2/H20901.rar",
+      "source_pdf_page": 4,
+      "source_option_map": [
+        "A",
+        "C",
+        "E"
+      ],
+      "source_key": "A",
+      "display_key": "A",
+      "source_pdf_sha256": "61575a9aa25c564e0d7fe147d52c10da49581543ec597074701bce4a308affe9",
+      "source_audio_sha256": "3d443c0b087ad46a295f4ddbce45d11d38eba9e4ab444f283686483044f37342",
+      "source_script": "男：生日快乐！这是我送给你的。女：谢谢你！"
+    },
+    {
+      "question_number": 34,
+      "question_id": "W07-L04L15-01-38",
+      "source": "H10901",
+      "question": 13,
+      "pdf_url": "https://www.chinesetest.cn/userfiles/file/HSK/level1/H10901.pdf",
+      "audio_archive_url": "https://www.chinesetest.cn/userfiles/file/HSK/level1/H10901.rar",
+      "source_pdf_page": 5,
+      "source_option_map": [
+        "A",
+        "E",
+        "F"
+      ],
+      "source_key": "A",
+      "display_key": "A",
+      "source_pdf_sha256": "550263995e8882e75bca1ad90a3c8468226fbbe1139fbecd058a5fc1f9928e53",
+      "source_audio_sha256": "de8f27e7b7dd10d54b66962c9728171e80d4006bc700f1007b917c0f7726a240",
+      "source_script": "男：你住在哪儿？女：我和妈妈都住在一零二。"
+    },
+    {
+      "question_number": 39,
+      "question_id": "W07-L04L15-01-35",
+      "source": "H10901",
+      "question": 16,
+      "pdf_url": "https://www.chinesetest.cn/userfiles/file/HSK/level1/H10901.pdf",
+      "audio_archive_url": "https://www.chinesetest.cn/userfiles/file/HSK/level1/H10901.rar",
+      "source_pdf_page": 5,
+      "source_option_map": null,
+      "source_key": "B",
+      "display_key": "B",
+      "source_pdf_sha256": "550263995e8882e75bca1ad90a3c8468226fbbe1139fbecd058a5fc1f9928e53",
+      "source_audio_sha256": "de8f27e7b7dd10d54b66962c9728171e80d4006bc700f1007b917c0f7726a240",
+      "source_script": "我的电脑在他的桌子上。问：那是谁的电脑？"
+    },
+    {
+      "question_number": 46,
+      "question_id": "W07-L04L15-01-23",
+      "source": "H20901",
+      "question": 15,
+      "pdf_url": "https://www.chinesetest.cn/userfiles/file/HSK/level2/H20901.pdf",
+      "audio_archive_url": "https://www.chinesetest.cn/userfiles/file/HSK/level2/H20901.rar",
+      "source_pdf_page": 4,
+      "source_option_map": [
+        "D",
+        "B",
+        "E"
+      ],
+      "source_key": "B",
+      "display_key": "B",
+      "source_pdf_sha256": "61575a9aa25c564e0d7fe147d52c10da49581543ec597074701bce4a308affe9",
+      "source_audio_sha256": "3d443c0b087ad46a295f4ddbce45d11d38eba9e4ab444f283686483044f37342",
+      "source_script": "女：这几件怎么样？你试一试？男：好，我喜欢这个颜色的。"
+    }
+  ],
+  "human_gates": {
+    "teacher_full_listening": "pending",
+    "classroom_speaker_acceptance": "pending",
+    "form_sync": "pending live status reconciliation",
+    "publication": "not authorized"
+  }
+}

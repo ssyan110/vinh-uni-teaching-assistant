@@ -79,14 +79,20 @@ def load_dashboard_context(project_root: Path) -> DashboardContext:
     dashboard_value = config.get("dashboard_root")
     if not isinstance(registry_value, str) or not isinstance(dashboard_value, str):
         raise LessonContextError("dashboard config has invalid registry or dashboard root")
+    registry_path = _safe_project_path(project, registry_value, 'lesson registry')
+    registry = json.loads(registry_path.read_text(encoding='utf-8'))
+    matches = [book for book in registry.get('textbooks', []) if book.get('textbook_id') == textbook_id]
+    if len(matches) != 1:
+        raise LessonContextError('dashboard textbook must match exactly one registry entry')
+    book = matches[0]
     return DashboardContext(
         config=config,
         lesson_context=context,
-        lesson_registry_path=_safe_project_path(project, registry_value, "lesson registry"),
+        lesson_registry_path=registry_path,
         dashboard_root=_safe_project_path(project, dashboard_value, "dashboard"),
         course_manifest=config.get("course_manifest"),
         textbook_registry=config.get("textbook_registry"),
-        textbook_manifest=(config.get("textbook") or {}).get("manifest") if isinstance(config.get("textbook"), dict) else None,
-        textbook_title=config.get("active_textbook_title"),
+        textbook_manifest=book.get('manifest'),
+        textbook_title=book.get('title'),
         lesson_key_format=str(config.get("lesson_key_format", "<textbook_id>:<lesson_id>")),
     )

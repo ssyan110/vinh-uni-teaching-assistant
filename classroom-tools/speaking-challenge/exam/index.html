@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f8f9fb">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data:; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; media-src 'none'; object-src 'none'; base-uri 'none'">
+  <meta name="description" content="自己抽题、看图、说中文。问题和四格图片同时显示，准备1分钟，再用2分钟练习回答。">
+  <title>口语练习｜问题与图片</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="content.js?v=20261026-approved30"></script>
+  <script defer src="logic.js"></script>
+  <script defer src="app.js?v=20261026-approved30"></script>
+</head>
+<body>
+  <main class="exam-shell">
+    <header class="exam-header">
+      <div class="heading-block">
+        <h1>口语练习</h1>
+        <p class="subhead">问题与图片 · 同时抽选</p>
+      </div>
+      <ol class="steps" aria-label="考试流程">
+        <li class="is-current" data-step="draw"><span>1</span>抽题</li>
+        <li data-step="preparing"><span>2</span>准备 1 分钟</li>
+        <li data-step="speaking"><span>3</span>回答 2 分钟</li>
+      </ol>
+    </header>
+
+    <section class="exam-grid" aria-label="抽到的题目和图片">
+      <article class="exam-card question-card" aria-labelledby="questionHeading">
+        <header class="card-heading">
+          <h2 id="questionHeading">第一部分 · 回答问题</h2>
+          <span class="item-tag" id="questionTag">问题 —</span>
+        </header>
+        <div class="question-body" id="questionCardBody">
+          <p class="draw-placeholder">问题将在抽题后显示</p>
+        </div>
+      </article>
+
+      <article class="exam-card picture-card" aria-labelledby="pictureHeading">
+        <header class="card-heading">
+          <h2 id="pictureHeading">第二部分 · 看图叙事</h2>
+          <span class="item-tag" id="pictureTag">图片 —</span>
+        </header>
+        <div class="picture-body" id="pictureCardBody">
+          <div class="draw-placeholder picture-placeholder">图片将在抽题后显示</div>
+        </div>
+      </article>
+    </section>
+
+    <section class="control-bar" aria-label="抽题与计时控制">
+      <button class="primary-button" id="mainAction" type="button" disabled>载入题目中…</button>
+      <div class="timer-panel" id="timerPanel">
+        <span class="phase-label" id="phaseLabel">等待抽题</span>
+        <div class="timer" id="timer" role="timer" aria-label="剩余时间">—:—</div>
+      </div>
+      <button class="pause-button" id="pauseAction" type="button" hidden>暂停</button>
+    </section>
+
+    <p class="exam-status" id="examStatus" role="status" aria-live="polite">正在检查题目和图片…</p>
+    <p class="teacher-note">两道题一起看，一起准备。准备结束后自动开始作答计时。</p>
+  </main>
+</body>
+</html>

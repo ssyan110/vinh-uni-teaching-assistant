@@ -1,0 +1,41 @@
+const { chromium } = require('playwright');
+const path = require('node:path');
+const fs = require('node:fs');
+const assert = require('node:assert/strict');
+(async () => {
+  const browser = await chromium.launch({ headless: true, channel: 'chrome' });
+  try {
+    const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+    const errors = [];
+    page.on('pageerror', error => errors.push(error.message));
+    const entry = 'file://' + path.resolve(__dirname, 'index.html');
+    await page.goto(entry + '#readiness/boya-elementary-i/2026-fall/boya-elementary-i%3Alesson-15');
+    await page.getByRole('heading', { name: '课前准备', exact: true }).waitFor();
+    assert.equal(await page.locator('#readiness-lesson').inputValue(), 'boya-elementary-i:lesson-15');
+    assert.match(await page.locator('.readiness-detail').innerText(), /HTML · 草稿/);
+    assert.match(await page.locator('.readiness-detail').innerText(), /教师播放与试教/);
+    await page.locator('#readiness-book').selectOption('boya-quasi-intermediate-i');
+    await page.waitForFunction(() => document.querySelector('.readiness-count')?.textContent.includes('12 课保留已有完成确认'));
+    assert.match(await page.locator('.readiness-count').innerText(), /0 课有待处理/);
+    await page.getByRole('link', { name: '课程总览', exact: true }).click();
+    await page.locator('.book-switcher').waitFor();
+    await page.locator('.lesson-row').first().click();
+    await page.locator('.tabs').waitFor();
+    await page.getByRole('link', { name: '课前准备', exact: true }).click();
+    await page.locator('#readiness-book').selectOption('boya-elementary-i');
+    await page.locator('#readiness-lesson').selectOption('boya-elementary-i:lesson-15');
+    const output = path.resolve(__dirname, 'qa/lesson-readiness');
+    fs.mkdirSync(output, { recursive: true });
+    await page.screenshot({ path: path.join(output, 'desktop.png'), fullPage: true });
+    const phone = await browser.newPage({ viewport: { width: 390, height: 844 } });
+    phone.on('pageerror', error => errors.push(error.message));
+    await phone.goto(entry + '#readiness/boya-elementary-i/2026-fall/boya-elementary-i%3Alesson-15');
+    await phone.locator('.readiness-detail').waitFor();
+    await phone.screenshot({ path: path.join(output, 'mobile.png'), fullPage: true });
+    const overflow = await phone.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
+    assert.equal(overflow, false, 'page must not overflow on a phone');
+    assert.deepEqual(errors, []);
+    fs.writeFileSync(path.join(output, 'verification.json'), JSON.stringify({ checked_at: new Date().toISOString(), checks: ['lesson selection', 'textbook switch', 'historical completion preserved', 'return to course and lesson review', 'phone overflow', 'no page errors'], passed: true }, null, 2));
+    console.log('Readiness browser checks passed.');
+  } finally { await browser.close(); }
+})().catch(error => { console.error(error); process.exitCode = 1; });

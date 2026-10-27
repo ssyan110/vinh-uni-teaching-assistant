@@ -1,0 +1,652 @@
+[
+  {
+    "number": 1,
+    "volume": 4,
+    "question": 1,
+    "source_pdf_page": 4,
+    "clip": [
+      129.75,
+      86.29998779296875,
+      276.75,
+      216.04998779296875
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q01.png"
+  },
+  {
+    "number": 2,
+    "volume": 4,
+    "question": 6,
+    "source_pdf_page": 5,
+    "clip": [
+      125.25,
+      87.25,
+      279.0,
+      213.25
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q06.png"
+  },
+  {
+    "number": 3,
+    "volume": 4,
+    "question": 7,
+    "source_pdf_page": 5,
+    "clip": [
+      130.5,
+      224.49996948242188,
+      279.0,
+      354.9999694824219
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q07.png"
+  },
+  {
+    "number": 4,
+    "volume": 4,
+    "question": 8,
+    "source_pdf_page": 5,
+    "clip": [
+      138.64999389648438,
+      367.0,
+      264.04998779296875,
+      492.3999938964844
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q08.png"
+  },
+  {
+    "number": 5,
+    "volume": 4,
+    "question": 9,
+    "source_pdf_page": 5,
+    "clip": [
+      137.85000610351562,
+      502.9999694824219,
+      263.25,
+      628.3999633789062
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q09.png"
+  },
+  {
+    "number": 6,
+    "volume": 4,
+    "question": 10,
+    "source_pdf_page": 5,
+    "clip": [
+      123.0,
+      643.3999633789062,
+      276.75,
+      768.6499633789062
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q10.png"
+  },
+  {
+    "number": 7,
+    "volume": 4,
+    "question": 11,
+    "source_pdf_page": 8,
+    "clip": [
+      93.74400329589844,
+      103.91033935546875,
+      536.1500244140625,
+      227.29998779296875
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q11.png"
+  },
+  {
+    "number": 8,
+    "volume": 4,
+    "question": 15,
+    "source_pdf_page": 8,
+    "clip": [
+      93.74400329589844,
+      629.2999877929688,
+      537.25,
+      751.5499877929688
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q15.png"
+  },
+  {
+    "number": 9,
+    "volume": 4,
+    "question": 16,
+    "source_pdf_page": 9,
+    "clip": [
+      93.74400329589844,
+      103.91033935546875,
+      540.9000244140625,
+      230.8499755859375
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q16.png"
+  },
+  {
+    "number": 10,
+    "volume": 4,
+    "question": 17,
+    "source_pdf_page": 9,
+    "clip": [
+      93.74400329589844,
+      235.31036376953125,
+      536.4000244140625,
+      361.79998779296875
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q17.png"
+  },
+  {
+    "number": 11,
+    "volume": 4,
+    "question": 19,
+    "source_pdf_page": 9,
+    "clip": [
+      93.74400329589844,
+      498.16033935546875,
+      532.1500244140625,
+      625.7999877929688
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q19.png"
+  },
+  {
+    "number": 12,
+    "volume": 4,
+    "question": 20,
+    "source_pdf_page": 9,
+    "clip": [
+      93.74400329589844,
+      626.8499755859375,
+      535.6500244140625,
+      752.25
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q20.png"
+  },
+  {
+    "number": 13,
+    "volume": 4,
+    "question": 21,
+    "source_pdf_page": 10,
+    "clip": [
+      92.66400146484375,
+      106.05001068115234,
+      538.1500244140625,
+      236.0
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q21.png"
+  },
+  {
+    "number": 14,
+    "volume": 4,
+    "question": 22,
+    "source_pdf_page": 10,
+    "clip": [
+      92.66400146484375,
+      237.350341796875,
+      533.4500122070312,
+      363.3499755859375
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q22.png"
+  },
+  {
+    "number": 15,
+    "volume": 4,
+    "question": 25,
+    "source_pdf_page": 10,
+    "clip": [
+      92.66400146484375,
+      636.5999755859375,
+      536.4000244140625,
+      762.0
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q25.png"
+  },
+  {
+    "number": 16,
+    "volume": 4,
+    "question": 30,
+    "source_pdf_page": 12,
+    "clip": [
+      93.74400329589844,
+      629.25,
+      538.5999755859375,
+      751.5
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q30.png"
+  },
+  {
+    "number": 17,
+    "volume": 4,
+    "question": 33,
+    "source_pdf_page": 13,
+    "clip": [
+      93.74400329589844,
+      366.7403259277344,
+      539.4000244140625,
+      492.4499816894531
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q33.png"
+  },
+  {
+    "number": 18,
+    "volume": 4,
+    "question": 34,
+    "source_pdf_page": 13,
+    "clip": [
+      93.74400329589844,
+      497.5499572753906,
+      539.4000244140625,
+      622.949951171875
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q34.png"
+  },
+  {
+    "number": 19,
+    "volume": 4,
+    "question": 36,
+    "source_pdf_page": 14,
+    "clip": [
+      93.74400329589844,
+      103.91033935546875,
+      539.4000244140625,
+      230.14996337890625
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q36.png"
+  },
+  {
+    "number": 20,
+    "volume": 4,
+    "question": 38,
+    "source_pdf_page": 14,
+    "clip": [
+      93.74400329589844,
+      366.7403259277344,
+      539.4000244140625,
+      492.4499816894531
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q38.png"
+  },
+  {
+    "number": 21,
+    "volume": 4,
+    "question": 40,
+    "source_pdf_page": 14,
+    "clip": [
+      93.74400329589844,
+      628.7999267578125,
+      539.4000244140625,
+      754.949951171875
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q40.png"
+  },
+  {
+    "number": 22,
+    "volume": 4,
+    "question": 41,
+    "source_pdf_page": 16,
+    "clip": [
+      112.0,
+      92.4503173828125,
+      550.0,
+      192.4503173828125
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q41.png"
+  },
+  {
+    "number": 23,
+    "volume": 4,
+    "question": 42,
+    "source_pdf_page": 16,
+    "clip": [
+      112.0,
+      210.43035888671875,
+      550.0,
+      310.43035888671875
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q42.png"
+  },
+  {
+    "number": 24,
+    "volume": 4,
+    "question": 45,
+    "source_pdf_page": 16,
+    "clip": [
+      112.0,
+      566.5203247070312,
+      550.0,
+      666.5203247070312
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q45.png"
+  },
+  {
+    "number": 25,
+    "volume": 4,
+    "question": 46,
+    "source_pdf_page": 17,
+    "clip": [
+      112.0,
+      92.4503173828125,
+      550.0,
+      192.4503173828125
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q46.png"
+  },
+  {
+    "number": 26,
+    "volume": 5,
+    "question": 1,
+    "source_pdf_page": 4,
+    "clip": [
+      128.89999389648438,
+      84.8499755859375,
+      253.89999389648438,
+      209.8499755859375
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q01.png"
+  },
+  {
+    "number": 27,
+    "volume": 5,
+    "question": 2,
+    "source_pdf_page": 4,
+    "clip": [
+      128.89999389648438,
+      223.3499755859375,
+      254.29998779296875,
+      348.7499694824219
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q02.png"
+  },
+  {
+    "number": 28,
+    "volume": 5,
+    "question": 3,
+    "source_pdf_page": 4,
+    "clip": [
+      128.89999389648438,
+      362.5999755859375,
+      254.14999389648438,
+      487.8499755859375
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q03.png"
+  },
+  {
+    "number": 29,
+    "volume": 5,
+    "question": 5,
+    "source_pdf_page": 4,
+    "clip": [
+      128.89999389648438,
+      639.9999389648438,
+      254.29998779296875,
+      765.3999633789062
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q05.png"
+  },
+  {
+    "number": 30,
+    "volume": 5,
+    "question": 6,
+    "source_pdf_page": 5,
+    "clip": [
+      128.89999389648438,
+      84.8499984741211,
+      254.14999389648438,
+      210.25
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q06.png"
+  },
+  {
+    "number": 31,
+    "volume": 5,
+    "question": 7,
+    "source_pdf_page": 5,
+    "clip": [
+      128.89999389648438,
+      223.3499755859375,
+      254.29998779296875,
+      348.7499694824219
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q07.png"
+  },
+  {
+    "number": 32,
+    "volume": 5,
+    "question": 8,
+    "source_pdf_page": 5,
+    "clip": [
+      128.89999389648438,
+      362.5999755859375,
+      254.14999389648438,
+      487.8499755859375
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q08.png"
+  },
+  {
+    "number": 33,
+    "volume": 5,
+    "question": 9,
+    "source_pdf_page": 5,
+    "clip": [
+      128.89999389648438,
+      501.8500061035156,
+      254.29998779296875,
+      627.25
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q09.png"
+  },
+  {
+    "number": 34,
+    "volume": 5,
+    "question": 12,
+    "source_pdf_page": 8,
+    "clip": [
+      67.7040023803711,
+      235.67034912109375,
+      550.9500122070312,
+      367.04998779296875
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q12.png"
+  },
+  {
+    "number": 35,
+    "volume": 4,
+    "question": 43,
+    "source_pdf_page": 16,
+    "clip": [
+      112.0,
+      328.54034423828125,
+      550.0,
+      428.54034423828125
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A4-Q43.png"
+  },
+  {
+    "number": 36,
+    "volume": 5,
+    "question": 15,
+    "source_pdf_page": 8,
+    "clip": [
+      67.7040023803711,
+      629.9203491210938,
+      551.2000122070312,
+      761.25
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q15.png"
+  },
+  {
+    "number": 37,
+    "volume": 5,
+    "question": 42,
+    "source_pdf_page": 18,
+    "clip": [
+      112.0,
+      210.43035888671875,
+      550.0,
+      310.43035888671875
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q42.png"
+  },
+  {
+    "number": 38,
+    "volume": 5,
+    "question": 18,
+    "source_pdf_page": 9,
+    "clip": [
+      67.34400177001953,
+      347.0603332519531,
+      551.0999755859375,
+      478.4499816894531
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q18.png"
+  },
+  {
+    "number": 39,
+    "volume": 5,
+    "question": 19,
+    "source_pdf_page": 9,
+    "clip": [
+      67.34400177001953,
+      478.4803466796875,
+      551.0999755859375,
+      609.8499755859375
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q19.png"
+  },
+  {
+    "number": 40,
+    "volume": 5,
+    "question": 20,
+    "source_pdf_page": 9,
+    "clip": [
+      67.34400177001953,
+      609.88037109375,
+      551.3499755859375,
+      741.25
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q20.png"
+  },
+  {
+    "number": 41,
+    "volume": 5,
+    "question": 24,
+    "source_pdf_page": 10,
+    "clip": [
+      67.34400177001953,
+      478.4803466796875,
+      551.0999755859375,
+      609.8499755859375
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q24.png"
+  },
+  {
+    "number": 42,
+    "volume": 5,
+    "question": 27,
+    "source_pdf_page": 11,
+    "clip": [
+      67.34400177001953,
+      215.63031005859375,
+      547.1500244140625,
+      340.9499816894531
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q27.png"
+  },
+  {
+    "number": 43,
+    "volume": 5,
+    "question": 28,
+    "source_pdf_page": 11,
+    "clip": [
+      67.34400177001953,
+      346.79998779296875,
+      550.9500122070312,
+      472.04998779296875
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q28.png"
+  },
+  {
+    "number": 44,
+    "volume": 5,
+    "question": 30,
+    "source_pdf_page": 14,
+    "clip": [
+      67.7040023803711,
+      235.39999389648438,
+      546.1000366210938,
+      360.79998779296875
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q30.png"
+  },
+  {
+    "number": 45,
+    "volume": 5,
+    "question": 32,
+    "source_pdf_page": 14,
+    "clip": [
+      67.7040023803711,
+      511.120361328125,
+      551.2999877929688,
+      642.0499877929688
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q32.png"
+  },
+  {
+    "number": 46,
+    "volume": 5,
+    "question": 34,
+    "source_pdf_page": 15,
+    "clip": [
+      67.7040023803711,
+      84.2303466796875,
+      550.9000244140625,
+      215.64996337890625
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q34.png"
+  },
+  {
+    "number": 47,
+    "volume": 5,
+    "question": 38,
+    "source_pdf_page": 15,
+    "clip": [
+      67.7040023803711,
+      622.4803466796875,
+      546.0499877929688,
+      748.3499755859375
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q38.png"
+  },
+  {
+    "number": 48,
+    "volume": 5,
+    "question": 46,
+    "source_pdf_page": 19,
+    "clip": [
+      112.0,
+      92.4503173828125,
+      550.0,
+      192.4503173828125
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q46.png"
+  },
+  {
+    "number": 49,
+    "volume": 5,
+    "question": 47,
+    "source_pdf_page": 19,
+    "clip": [
+      112.0,
+      212.4703369140625,
+      550.0,
+      312.4703369140625
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q47.png"
+  },
+  {
+    "number": 50,
+    "volume": 5,
+    "question": 50,
+    "source_pdf_page": 19,
+    "clip": [
+      112.0,
+      566.5203247070312,
+      550.0,
+      666.5203247070312
+    ],
+    "image": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-l04-l15-20261022/images/TOCFL-A5-Q50.png"
+  }
+]

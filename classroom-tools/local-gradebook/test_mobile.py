@@ -38,6 +38,7 @@ def main():
         else:
             raise AssertionError('Server did not start')
         assert status == 200 and lan_address(), 'Connect Mac to Wi-Fi for LAN integration test'
+        assert info['qr'].startswith('data:image/png;base64,')
         remote = 'http://' + lan_address() + ':8769'
         for path in ('/', '/api/state', '/api/catalog', '/api/export?class=LT_02', '/api/backups', '/api/health'):
             assert read(opener, remote + path)[0] == 403, path

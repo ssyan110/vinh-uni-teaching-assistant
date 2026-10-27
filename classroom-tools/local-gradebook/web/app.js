@@ -239,6 +239,7 @@ refresh().catch(e=>message('无法读取本机资料：'+e.message,true));
 $('mobile-access').addEventListener('click', async () => {
   try {
     const result = await api('/api/mobile');
+    $('mobile-qr').src = result.qr;
     $('mobile-link').textContent = result.url;
     $('mobile-link').href = result.url;
     $('mobile-dialog').showModal();

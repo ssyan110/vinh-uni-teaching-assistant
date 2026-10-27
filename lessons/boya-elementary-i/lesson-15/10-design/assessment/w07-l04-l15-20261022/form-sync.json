@@ -1,0 +1,26 @@
+{
+  "exam_id": "W07-L04L15-20261022",
+  "status": "SYNCED_VERIFIED_PUBLISHED",
+  "question_version": 5,
+  "version_directory": "v5-review",
+  "form_id": "1JTpDoiHrtX0nf8w_bcfWFrR7uGgWO8kVUc_IW-FGNNQ",
+  "question_count": 50,
+  "points": 100,
+  "question_bank_sha256": "a4a0524a74a89b72b4e5c27dde105c34e457078fd5f6ee65b5ad844c87fd67e3",
+  "form_evidence": "/Users/ssyan110/Documents/Codex/2026-10-27/task-4/w07-repair-receipt.json",
+  "sheet_evidence": ".agent/runs/w07-difficulty-reorder-20261023/verification.json",
+  "publication_authorized": true,
+  "synced_at": "2026-10-27T05:01:00Z",
+  "content_approved": true,
+  "previous_readback_stale": false,
+  "previous_readback_revision": null,
+  "pending": [
+    "teacher full listening",
+    "classroom speaker acceptance"
+  ],
+  "audio_dashboard_browser_opened_tracks": 49,
+  "audio_dashboard_browser_decode_errors": 0,
+  "publication_evidence": ".agent/runs/w06-w07-publication-20261025/final-verification.json",
+  "published_at": "2026-10-25T18:30:02+07:00",
+  "accepting_responses": true
+}

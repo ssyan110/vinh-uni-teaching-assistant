@@ -1,0 +1,16 @@
+{
+  "exam_id": "W08-L16L17-20261023",
+  "source_intake": ".agent/runs/w08-assessment-20261023/source-intake.md",
+  "vocabulary_snapshot": ".agent/runs/w08-assessment-20261023/vocabulary_occurrences-l01-l17.json",
+  "grammar_snapshot": ".agent/runs/w08-assessment-20261023/grammar-l01-l17.json",
+  "source_correction": "L16 离 OCR误识萬；以教材PDF140页为准；未回改数据库源",
+  "publisher_answer_book_missing_printed_pages": [
+    72,
+    73
+  ],
+  "official_archive_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/mock3_BandA_mp3_en.rar",
+  "official_archive_sha256": "6127063195dc5eeeb548cb2035ea12d216b1ea0f66907c2478ab2c84981cf874",
+  "items_sha256": "b30720e6a0ef3e94a7516cb71100d0603aa0c78f5115b9dbf1910a338f51da5a",
+  "scope_review": "scope.md",
+  "difficulty_review": "difficulty-review.csv"
+}

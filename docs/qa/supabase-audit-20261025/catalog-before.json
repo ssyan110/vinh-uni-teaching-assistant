@@ -1,0 +1,3015 @@
+{
+  "counts": {
+    "courses": 0,
+    "students": 0,
+    "followups": 0,
+    "enrollments": 0,
+    "student_notes": 0,
+    "academic_terms": 0,
+    "class_sessions": 1,
+    "interact_rooms": 0,
+    "learning_events": 0,
+    "attendance_records": 1,
+    "interact_responses": 0,
+    "observation_records": 0,
+    "randomizer_attempts": 690,
+    "randomizer_sessions": 17,
+    "class_session_corrections": 0,
+    "classroom_record_corrections": 0
+  },
+  "grants": [
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "class_session_corrections",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "classroom_record_corrections",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "academic_terms",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "academic_terms",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "academic_terms",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "academic_terms",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "academic_terms",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "academic_terms",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "academic_terms",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "courses",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "courses",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "courses",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "courses",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "courses",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "courses",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "courses",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "students",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "students",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "students",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "students",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "students",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "students",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "students",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "enrollments",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "enrollments",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "enrollments",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "enrollments",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "enrollments",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "enrollments",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "enrollments",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "attendance_records",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "attendance_records",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "attendance_records",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "attendance_records",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "attendance_records",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "attendance_records",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "attendance_records",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "observation_records",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "observation_records",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "observation_records",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "observation_records",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "observation_records",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "observation_records",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "observation_records",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "followups",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "followups",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "followups",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "followups",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "followups",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "followups",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "followups",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "class_sessions",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "class_sessions",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "class_sessions",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "class_sessions",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "class_sessions",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRUNCATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "class_sessions",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "REFERENCES",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "class_sessions",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "TRIGGER",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "randomizer_sessions",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "randomizer_sessions",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "randomizer_sessions",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "randomizer_sessions",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "randomizer_attempts",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "randomizer_attempts",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "randomizer_attempts",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "randomizer_attempts",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "DELETE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "learning_events",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "learning_events",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "learning_events",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "UPDATE",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "student_notes",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "INSERT",
+      "with_hierarchy": "NO"
+    },
+    {
+      "grantee": "authenticated",
+      "grantor": "postgres",
+      "table_name": "student_notes",
+      "is_grantable": "NO",
+      "table_schema": "public",
+      "table_catalog": "postgres",
+      "privilege_type": "SELECT",
+      "with_hierarchy": "YES"
+    }
+  ],
+  "indexes": [
+    {
+      "indexdef": "CREATE UNIQUE INDEX interact_rooms_pkey ON public.interact_rooms USING btree (id)",
+      "indexname": "interact_rooms_pkey",
+      "tablename": "interact_rooms",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX interact_responses_pkey ON public.interact_responses USING btree (id)",
+      "indexname": "interact_responses_pkey",
+      "tablename": "interact_responses",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX interact_one_answer ON public.interact_responses USING btree (room_id, question_id, participant_hash) WHERE once_only",
+      "indexname": "interact_one_answer",
+      "tablename": "interact_responses",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX interact_room_answers ON public.interact_responses USING btree (room_id, created_at)",
+      "indexname": "interact_room_answers",
+      "tablename": "interact_responses",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX class_session_corrections_pkey ON public.class_session_corrections USING btree (id)",
+      "indexname": "class_session_corrections_pkey",
+      "tablename": "class_session_corrections",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX classroom_record_corrections_pkey ON public.classroom_record_corrections USING btree (id)",
+      "indexname": "classroom_record_corrections_pkey",
+      "tablename": "classroom_record_corrections",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX classroom_record_corrections_unique_record ON public.classroom_record_corrections USING btree (owner_id, record_type, record_id)",
+      "indexname": "classroom_record_corrections_unique_record",
+      "tablename": "classroom_record_corrections",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX classroom_record_corrections_owner_course_idx ON public.classroom_record_corrections USING btree (owner_id, course_id, created_at DESC)",
+      "indexname": "classroom_record_corrections_owner_course_idx",
+      "tablename": "classroom_record_corrections",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX classroom_record_corrections_owner_record_idx ON public.classroom_record_corrections USING btree (owner_id, record_type, record_id)",
+      "indexname": "classroom_record_corrections_owner_record_idx",
+      "tablename": "classroom_record_corrections",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX academic_terms_pkey ON public.academic_terms USING btree (id)",
+      "indexname": "academic_terms_pkey",
+      "tablename": "academic_terms",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX academic_terms_owner_name_key ON public.academic_terms USING btree (owner_id, name)",
+      "indexname": "academic_terms_owner_name_key",
+      "tablename": "academic_terms",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX academic_terms_owner_id_key ON public.academic_terms USING btree (owner_id, id)",
+      "indexname": "academic_terms_owner_id_key",
+      "tablename": "academic_terms",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX courses_owner_idx ON public.courses USING btree (owner_id)",
+      "indexname": "courses_owner_idx",
+      "tablename": "courses",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX courses_pkey ON public.courses USING btree (id)",
+      "indexname": "courses_pkey",
+      "tablename": "courses",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX courses_owner_code_key ON public.courses USING btree (owner_id, code)",
+      "indexname": "courses_owner_code_key",
+      "tablename": "courses",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX courses_owner_id_key ON public.courses USING btree (owner_id, id)",
+      "indexname": "courses_owner_id_key",
+      "tablename": "courses",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX courses_term_idx ON public.courses USING btree (term_id)",
+      "indexname": "courses_term_idx",
+      "tablename": "courses",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX courses_owner_term_idx ON public.courses USING btree (owner_id, term_id)",
+      "indexname": "courses_owner_term_idx",
+      "tablename": "courses",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX students_pkey ON public.students USING btree (id)",
+      "indexname": "students_pkey",
+      "tablename": "students",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX students_owner_code_key ON public.students USING btree (owner_id, student_code)",
+      "indexname": "students_owner_code_key",
+      "tablename": "students",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX students_owner_id_key ON public.students USING btree (owner_id, id)",
+      "indexname": "students_owner_id_key",
+      "tablename": "students",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX students_owner_name_idx ON public.students USING btree (owner_id, chinese_name)",
+      "indexname": "students_owner_name_idx",
+      "tablename": "students",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX enrollments_pkey ON public.enrollments USING btree (id)",
+      "indexname": "enrollments_pkey",
+      "tablename": "enrollments",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX enrollments_course_student_key ON public.enrollments USING btree (course_id, student_id)",
+      "indexname": "enrollments_course_student_key",
+      "tablename": "enrollments",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX enrollments_owner_id_key ON public.enrollments USING btree (owner_id, id)",
+      "indexname": "enrollments_owner_id_key",
+      "tablename": "enrollments",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX enrollments_owner_idx ON public.enrollments USING btree (owner_id)",
+      "indexname": "enrollments_owner_idx",
+      "tablename": "enrollments",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX enrollments_student_idx ON public.enrollments USING btree (student_id)",
+      "indexname": "enrollments_student_idx",
+      "tablename": "enrollments",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX enrollments_owner_course_student_key ON public.enrollments USING btree (owner_id, course_id, student_id)",
+      "indexname": "enrollments_owner_course_student_key",
+      "tablename": "enrollments",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX enrollments_owner_student_idx ON public.enrollments USING btree (owner_id, student_id)",
+      "indexname": "enrollments_owner_student_idx",
+      "tablename": "enrollments",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX attendance_records_pkey ON public.attendance_records USING btree (id)",
+      "indexname": "attendance_records_pkey",
+      "tablename": "attendance_records",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX attendance_session_student_key ON public.attendance_records USING btree (session_id, student_id)",
+      "indexname": "attendance_session_student_key",
+      "tablename": "attendance_records",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX attendance_owner_session_idx ON public.attendance_records USING btree (owner_id, session_id)",
+      "indexname": "attendance_owner_session_idx",
+      "tablename": "attendance_records",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX attendance_student_idx ON public.attendance_records USING btree (student_id)",
+      "indexname": "attendance_student_idx",
+      "tablename": "attendance_records",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX attendance_owner_student_idx ON public.attendance_records USING btree (owner_id, student_id)",
+      "indexname": "attendance_owner_student_idx",
+      "tablename": "attendance_records",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX observation_records_pkey ON public.observation_records USING btree (id)",
+      "indexname": "observation_records_pkey",
+      "tablename": "observation_records",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX observation_session_student_key ON public.observation_records USING btree (session_id, student_id)",
+      "indexname": "observation_session_student_key",
+      "tablename": "observation_records",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX observations_owner_session_idx ON public.observation_records USING btree (owner_id, session_id)",
+      "indexname": "observations_owner_session_idx",
+      "tablename": "observation_records",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX observations_student_date_idx ON public.observation_records USING btree (student_id, observed_at DESC)",
+      "indexname": "observations_student_date_idx",
+      "tablename": "observation_records",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX observation_owner_student_idx ON public.observation_records USING btree (owner_id, student_id)",
+      "indexname": "observation_owner_student_idx",
+      "tablename": "observation_records",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX followups_pkey ON public.followups USING btree (id)",
+      "indexname": "followups_pkey",
+      "tablename": "followups",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX followups_owner_status_due_idx ON public.followups USING btree (owner_id, status, due_on)",
+      "indexname": "followups_owner_status_due_idx",
+      "tablename": "followups",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX followups_student_idx ON public.followups USING btree (student_id)",
+      "indexname": "followups_student_idx",
+      "tablename": "followups",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX followups_owner_course_idx ON public.followups USING btree (owner_id, course_id)",
+      "indexname": "followups_owner_course_idx",
+      "tablename": "followups",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX followups_owner_student_idx ON public.followups USING btree (owner_id, student_id)",
+      "indexname": "followups_owner_student_idx",
+      "tablename": "followups",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX followups_owner_session_idx ON public.followups USING btree (owner_id, session_id)",
+      "indexname": "followups_owner_session_idx",
+      "tablename": "followups",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX class_sessions_pkey ON public.class_sessions USING btree (id)",
+      "indexname": "class_sessions_pkey",
+      "tablename": "class_sessions",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX class_sessions_owner_id_key ON public.class_sessions USING btree (owner_id, id)",
+      "indexname": "class_sessions_owner_id_key",
+      "tablename": "class_sessions",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX class_sessions_owner_course_date_idx ON public.class_sessions USING btree (owner_id, course_id, session_date DESC)",
+      "indexname": "class_sessions_owner_course_date_idx",
+      "tablename": "class_sessions",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX class_sessions_one_active_course_idx ON public.class_sessions USING btree (course_id) WHERE (status = 'in_progress'::text)",
+      "indexname": "class_sessions_one_active_course_idx",
+      "tablename": "class_sessions",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX sessions_owner_course_id_key ON public.class_sessions USING btree (owner_id, course_id, id)",
+      "indexname": "sessions_owner_course_id_key",
+      "tablename": "class_sessions",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX class_sessions_course_session_number_key ON public.class_sessions USING btree (course_id, session_number) WHERE (session_number IS NOT NULL)",
+      "indexname": "class_sessions_course_session_number_key",
+      "tablename": "class_sessions",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX randomizer_sessions_pkey ON public.randomizer_sessions USING btree (id)",
+      "indexname": "randomizer_sessions_pkey",
+      "tablename": "randomizer_sessions",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX randomizer_sessions_owner_id_key ON public.randomizer_sessions USING btree (owner_id, id)",
+      "indexname": "randomizer_sessions_owner_id_key",
+      "tablename": "randomizer_sessions",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX randomizer_sessions_owner_client_key ON public.randomizer_sessions USING btree (owner_id, client_session_id)",
+      "indexname": "randomizer_sessions_owner_client_key",
+      "tablename": "randomizer_sessions",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX randomizer_sessions_owner_course_id_key ON public.randomizer_sessions USING btree (owner_id, course_id, id)",
+      "indexname": "randomizer_sessions_owner_course_id_key",
+      "tablename": "randomizer_sessions",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX randomizer_sessions_owner_course_date_idx ON public.randomizer_sessions USING btree (owner_id, course_id, session_date DESC)",
+      "indexname": "randomizer_sessions_owner_course_date_idx",
+      "tablename": "randomizer_sessions",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX randomizer_sessions_owner_course_class_session_idx ON public.randomizer_sessions USING btree (owner_id, course_id, class_session_id)",
+      "indexname": "randomizer_sessions_owner_course_class_session_idx",
+      "tablename": "randomizer_sessions",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX randomizer_attempts_pkey ON public.randomizer_attempts USING btree (id)",
+      "indexname": "randomizer_attempts_pkey",
+      "tablename": "randomizer_attempts",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX randomizer_attempts_owner_id_key ON public.randomizer_attempts USING btree (owner_id, id)",
+      "indexname": "randomizer_attempts_owner_id_key",
+      "tablename": "randomizer_attempts",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX randomizer_attempts_owner_client_key ON public.randomizer_attempts USING btree (owner_id, client_attempt_id)",
+      "indexname": "randomizer_attempts_owner_client_key",
+      "tablename": "randomizer_attempts",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX randomizer_attempts_owner_session_round_idx ON public.randomizer_attempts USING btree (owner_id, randomizer_session_id, round_number, drawn_at)",
+      "indexname": "randomizer_attempts_owner_session_round_idx",
+      "tablename": "randomizer_attempts",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX randomizer_attempts_owner_course_student_idx ON public.randomizer_attempts USING btree (owner_id, course_id, student_id, drawn_at DESC)",
+      "indexname": "randomizer_attempts_owner_course_student_idx",
+      "tablename": "randomizer_attempts",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX randomizer_attempts_owner_course_session_idx ON public.randomizer_attempts USING btree (owner_id, course_id, randomizer_session_id)",
+      "indexname": "randomizer_attempts_owner_course_session_idx",
+      "tablename": "randomizer_attempts",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX randomizer_attempts_owner_course_lesson_student_idx ON public.randomizer_attempts USING btree (owner_id, course_id, textbook_id, lesson_id, student_id, drawn_at DESC)",
+      "indexname": "randomizer_attempts_owner_course_lesson_student_idx",
+      "tablename": "randomizer_attempts",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX learning_events_pkey ON public.learning_events USING btree (id)",
+      "indexname": "learning_events_pkey",
+      "tablename": "learning_events",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX learning_events_course_date ON public.learning_events USING btree (owner_id, course_id, occurred_at DESC)",
+      "indexname": "learning_events_course_date",
+      "tablename": "learning_events",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX learning_events_owner_course_session_idx ON public.learning_events USING btree (owner_id, course_id, session_id)",
+      "indexname": "learning_events_owner_course_session_idx",
+      "tablename": "learning_events",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX learning_events_owner_course_student_idx ON public.learning_events USING btree (owner_id, course_id, student_id)",
+      "indexname": "learning_events_owner_course_student_idx",
+      "tablename": "learning_events",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX learning_events_owner_client_event_key ON public.learning_events USING btree (owner_id, client_event_id)",
+      "indexname": "learning_events_owner_client_event_key",
+      "tablename": "learning_events",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE INDEX student_notes_owner_student ON public.student_notes USING btree (owner_id, student_id, note_date)",
+      "indexname": "student_notes_owner_student",
+      "tablename": "student_notes",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX student_notes_pkey ON public.student_notes USING btree (id)",
+      "indexname": "student_notes_pkey",
+      "tablename": "student_notes",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX student_notes_supersedes_id_key ON public.student_notes USING btree (supersedes_id)",
+      "indexname": "student_notes_supersedes_id_key",
+      "tablename": "student_notes",
+      "schemaname": "public",
+      "tablespace": null
+    },
+    {
+      "indexdef": "CREATE UNIQUE INDEX student_notes_owner_id_course_id_student_id_id_key ON public.student_notes USING btree (owner_id, course_id, student_id, id)",
+      "indexname": "student_notes_owner_id_course_id_student_id_id_key",
+      "tablename": "student_notes",
+      "schemaname": "public",
+      "tablespace": null
+    }
+  ],
+  "schemas": [
+    "supabase_migrations",
+    "extensions",
+    "vault",
+    "graphql_public",
+    "graphql",
+    "auth",
+    "storage",
+    "public",
+    "realtime"
+  ],
+  "storage": null,
+  "policies": [
+    {
+      "cmd": "SELECT",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "class_session_corrections",
+      "permissive": "PERMISSIVE",
+      "policyname": "class_session_corrections_owner_select",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "classroom_record_corrections",
+      "permissive": "PERMISSIVE",
+      "policyname": "classroom_record_corrections_owner_select",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "DELETE",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "academic_terms",
+      "permissive": "PERMISSIVE",
+      "policyname": "academic_terms_owner_delete",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "INSERT",
+      "qual": null,
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "academic_terms",
+      "permissive": "PERMISSIVE",
+      "policyname": "academic_terms_owner_insert",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "academic_terms",
+      "permissive": "PERMISSIVE",
+      "policyname": "academic_terms_owner_select",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "UPDATE",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "academic_terms",
+      "permissive": "PERMISSIVE",
+      "policyname": "academic_terms_owner_update",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "DELETE",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "courses",
+      "permissive": "PERMISSIVE",
+      "policyname": "courses_owner_delete",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "INSERT",
+      "qual": null,
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "courses",
+      "permissive": "PERMISSIVE",
+      "policyname": "courses_owner_insert",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "courses",
+      "permissive": "PERMISSIVE",
+      "policyname": "courses_owner_select",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "UPDATE",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "courses",
+      "permissive": "PERMISSIVE",
+      "policyname": "courses_owner_update",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "DELETE",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "students",
+      "permissive": "PERMISSIVE",
+      "policyname": "students_owner_delete",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "INSERT",
+      "qual": null,
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "students",
+      "permissive": "PERMISSIVE",
+      "policyname": "students_owner_insert",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "students",
+      "permissive": "PERMISSIVE",
+      "policyname": "students_owner_select",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "UPDATE",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "students",
+      "permissive": "PERMISSIVE",
+      "policyname": "students_owner_update",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "DELETE",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "enrollments",
+      "permissive": "PERMISSIVE",
+      "policyname": "enrollments_owner_delete",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "INSERT",
+      "qual": null,
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "enrollments",
+      "permissive": "PERMISSIVE",
+      "policyname": "enrollments_owner_insert",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "enrollments",
+      "permissive": "PERMISSIVE",
+      "policyname": "enrollments_owner_select",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "UPDATE",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "enrollments",
+      "permissive": "PERMISSIVE",
+      "policyname": "enrollments_owner_update",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "DELETE",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "attendance_records",
+      "permissive": "PERMISSIVE",
+      "policyname": "attendance_owner_delete",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "INSERT",
+      "qual": null,
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "attendance_records",
+      "permissive": "PERMISSIVE",
+      "policyname": "attendance_owner_insert",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "attendance_records",
+      "permissive": "PERMISSIVE",
+      "policyname": "attendance_owner_select",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "UPDATE",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "attendance_records",
+      "permissive": "PERMISSIVE",
+      "policyname": "attendance_owner_update",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "DELETE",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "observation_records",
+      "permissive": "PERMISSIVE",
+      "policyname": "observations_owner_delete",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "INSERT",
+      "qual": null,
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "observation_records",
+      "permissive": "PERMISSIVE",
+      "policyname": "observations_owner_insert",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "observation_records",
+      "permissive": "PERMISSIVE",
+      "policyname": "observations_owner_select",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "UPDATE",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "observation_records",
+      "permissive": "PERMISSIVE",
+      "policyname": "observations_owner_update",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "DELETE",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "followups",
+      "permissive": "PERMISSIVE",
+      "policyname": "followups_owner_delete",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "INSERT",
+      "qual": null,
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "followups",
+      "permissive": "PERMISSIVE",
+      "policyname": "followups_owner_insert",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "followups",
+      "permissive": "PERMISSIVE",
+      "policyname": "followups_owner_select",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "UPDATE",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "followups",
+      "permissive": "PERMISSIVE",
+      "policyname": "followups_owner_update",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "DELETE",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "class_sessions",
+      "permissive": "PERMISSIVE",
+      "policyname": "class_sessions_owner_delete",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "INSERT",
+      "qual": null,
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "class_sessions",
+      "permissive": "PERMISSIVE",
+      "policyname": "class_sessions_owner_insert",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "class_sessions",
+      "permissive": "PERMISSIVE",
+      "policyname": "class_sessions_owner_select",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "UPDATE",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "class_sessions",
+      "permissive": "PERMISSIVE",
+      "policyname": "class_sessions_owner_update",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "DELETE",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "randomizer_sessions",
+      "permissive": "PERMISSIVE",
+      "policyname": "randomizer_sessions_owner_delete",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "INSERT",
+      "qual": null,
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "randomizer_sessions",
+      "permissive": "PERMISSIVE",
+      "policyname": "randomizer_sessions_owner_insert",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "randomizer_sessions",
+      "permissive": "PERMISSIVE",
+      "policyname": "randomizer_sessions_owner_select",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "UPDATE",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "randomizer_sessions",
+      "permissive": "PERMISSIVE",
+      "policyname": "randomizer_sessions_owner_update",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "DELETE",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "randomizer_attempts",
+      "permissive": "PERMISSIVE",
+      "policyname": "randomizer_attempts_owner_delete",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "INSERT",
+      "qual": null,
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "randomizer_attempts",
+      "permissive": "PERMISSIVE",
+      "policyname": "randomizer_attempts_owner_insert",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "randomizer_attempts",
+      "permissive": "PERMISSIVE",
+      "policyname": "randomizer_attempts_owner_select",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "UPDATE",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "randomizer_attempts",
+      "permissive": "PERMISSIVE",
+      "policyname": "randomizer_attempts_owner_update",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "INSERT",
+      "qual": null,
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "learning_events",
+      "permissive": "PERMISSIVE",
+      "policyname": "learning_events_insert",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "learning_events",
+      "permissive": "PERMISSIVE",
+      "policyname": "learning_events_read",
+      "schemaname": "public",
+      "with_check": null
+    },
+    {
+      "cmd": "UPDATE",
+      "qual": "(( SELECT auth.uid() AS uid) = owner_id)",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "learning_events",
+      "permissive": "PERMISSIVE",
+      "policyname": "learning_events_update",
+      "schemaname": "public",
+      "with_check": "(( SELECT auth.uid() AS uid) = owner_id)"
+    },
+    {
+      "cmd": "INSERT",
+      "qual": null,
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "student_notes",
+      "permissive": "PERMISSIVE",
+      "policyname": "notes_insert",
+      "schemaname": "public",
+      "with_check": "(owner_id = auth.uid())"
+    },
+    {
+      "cmd": "SELECT",
+      "qual": "(owner_id = auth.uid())",
+      "roles": [
+        "authenticated"
+      ],
+      "tablename": "student_notes",
+      "permissive": "PERMISSIVE",
+      "policyname": "notes_read",
+      "schemaname": "public",
+      "with_check": null
+    }
+  ],
+  "triggers": [
+    {
+      "table": "academic_terms",
+      "definition": "CREATE TRIGGER academic_terms_set_updated_at BEFORE UPDATE ON public.academic_terms FOR EACH ROW EXECUTE FUNCTION set_updated_at()"
+    },
+    {
+      "table": "courses",
+      "definition": "CREATE TRIGGER courses_set_updated_at BEFORE UPDATE ON public.courses FOR EACH ROW EXECUTE FUNCTION set_updated_at()"
+    },
+    {
+      "table": "students",
+      "definition": "CREATE TRIGGER students_set_updated_at BEFORE UPDATE ON public.students FOR EACH ROW EXECUTE FUNCTION set_updated_at()"
+    },
+    {
+      "table": "enrollments",
+      "definition": "CREATE TRIGGER enrollments_set_updated_at BEFORE UPDATE ON public.enrollments FOR EACH ROW EXECUTE FUNCTION set_updated_at()"
+    },
+    {
+      "table": "class_sessions",
+      "definition": "CREATE TRIGGER class_sessions_set_updated_at BEFORE UPDATE ON public.class_sessions FOR EACH ROW EXECUTE FUNCTION set_updated_at()"
+    },
+    {
+      "table": "attendance_records",
+      "definition": "CREATE TRIGGER attendance_records_set_updated_at BEFORE UPDATE ON public.attendance_records FOR EACH ROW EXECUTE FUNCTION set_updated_at()"
+    },
+    {
+      "table": "observation_records",
+      "definition": "CREATE TRIGGER observation_records_set_updated_at BEFORE UPDATE ON public.observation_records FOR EACH ROW EXECUTE FUNCTION set_updated_at()"
+    },
+    {
+      "table": "followups",
+      "definition": "CREATE TRIGGER followups_set_updated_at BEFORE UPDATE ON public.followups FOR EACH ROW EXECUTE FUNCTION set_updated_at()"
+    },
+    {
+      "table": "learning_events",
+      "definition": "CREATE TRIGGER learning_events_updated BEFORE UPDATE ON public.learning_events FOR EACH ROW EXECUTE FUNCTION set_updated_at()"
+    },
+    {
+      "table": "randomizer_sessions",
+      "definition": "CREATE TRIGGER randomizer_sessions_updated BEFORE UPDATE ON public.randomizer_sessions FOR EACH ROW EXECUTE FUNCTION set_updated_at()"
+    },
+    {
+      "table": "randomizer_attempts",
+      "definition": "CREATE TRIGGER randomizer_attempts_updated BEFORE UPDATE ON public.randomizer_attempts FOR EACH ROW EXECUTE FUNCTION set_updated_at()"
+    },
+    {
+      "table": "randomizer_attempts",
+      "definition": "CREATE TRIGGER randomizer_attempts_corrected_summary_guard BEFORE INSERT OR UPDATE ON public.randomizer_attempts FOR EACH ROW EXECUTE FUNCTION keep_corrected_classroom_records_out_of_summary()"
+    },
+    {
+      "table": "learning_events",
+      "definition": "CREATE TRIGGER learning_events_corrected_summary_guard BEFORE INSERT OR UPDATE ON public.learning_events FOR EACH ROW EXECUTE FUNCTION keep_corrected_classroom_records_out_of_summary()"
+    },
+    {
+      "table": "randomizer_sessions",
+      "definition": "CREATE TRIGGER randomizer_session_stays_completed BEFORE UPDATE ON public.randomizer_sessions FOR EACH ROW EXECUTE FUNCTION keep_randomizer_session_completed()"
+    },
+    {
+      "table": "class_sessions",
+      "definition": "CREATE TRIGGER class_session_start_guard BEFORE INSERT ON public.class_sessions FOR EACH ROW EXECUTE FUNCTION guard_class_session_start()"
+    },
+    {
+      "table": "randomizer_sessions",
+      "definition": "CREATE TRIGGER randomizer_class_link_guard BEFORE INSERT OR UPDATE ON public.randomizer_sessions FOR EACH ROW EXECUTE FUNCTION guard_randomizer_class_link()"
+    },
+    {
+      "table": "class_sessions",
+      "definition": "CREATE TRIGGER class_session_randomizer_sync AFTER UPDATE OF session_date, status ON public.class_sessions FOR EACH ROW EXECUTE FUNCTION sync_class_session_randomizers()"
+    },
+    {
+      "table": "randomizer_attempts",
+      "definition": "CREATE TRIGGER randomizer_attempt_replay_guard BEFORE UPDATE ON public.randomizer_attempts FOR EACH ROW EXECUTE FUNCTION guard_randomizer_attempt_replay()"
+    }
+  ],
+  "constraints": [
+    {
+      "name": "courses_owner_id_key",
+      "type": "u",
+      "table": "courses",
+      "definition": "UNIQUE (owner_id, id)"
+    },
+    {
+      "name": "courses_owner_id_fkey",
+      "type": "f",
+      "table": "courses",
+      "definition": "FOREIGN KEY (owner_id) REFERENCES auth.users(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "courses_term_owner_fk",
+      "type": "f",
+      "table": "courses",
+      "definition": "FOREIGN KEY (owner_id, term_id) REFERENCES academic_terms(owner_id, id) ON DELETE CASCADE"
+    },
+    {
+      "name": "enrollments_owner_id_fkey",
+      "type": "f",
+      "table": "enrollments",
+      "definition": "FOREIGN KEY (owner_id) REFERENCES auth.users(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "enrollments_course_owner_fk",
+      "type": "f",
+      "table": "enrollments",
+      "definition": "FOREIGN KEY (owner_id, course_id) REFERENCES courses(owner_id, id) ON DELETE CASCADE"
+    },
+    {
+      "name": "enrollments_student_owner_fk",
+      "type": "f",
+      "table": "enrollments",
+      "definition": "FOREIGN KEY (owner_id, student_id) REFERENCES students(owner_id, id) ON DELETE CASCADE"
+    },
+    {
+      "name": "attendance_session_owner_fk",
+      "type": "f",
+      "table": "attendance_records",
+      "definition": "FOREIGN KEY (owner_id, session_id) REFERENCES class_sessions(owner_id, id) ON DELETE CASCADE"
+    },
+    {
+      "name": "academic_terms_name_check",
+      "type": "c",
+      "table": "academic_terms",
+      "definition": "CHECK (((char_length(name) >= 1) AND (char_length(name) <= 80)))"
+    },
+    {
+      "name": "academic_terms_date_order",
+      "type": "c",
+      "table": "academic_terms",
+      "definition": "CHECK ((ends_on >= starts_on))"
+    },
+    {
+      "name": "academic_terms_pkey",
+      "type": "p",
+      "table": "academic_terms",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "academic_terms_owner_name_key",
+      "type": "u",
+      "table": "academic_terms",
+      "definition": "UNIQUE (owner_id, name)"
+    },
+    {
+      "name": "academic_terms_owner_id_key",
+      "type": "u",
+      "table": "academic_terms",
+      "definition": "UNIQUE (owner_id, id)"
+    },
+    {
+      "name": "academic_terms_owner_id_fkey",
+      "type": "f",
+      "table": "academic_terms",
+      "definition": "FOREIGN KEY (owner_id) REFERENCES auth.users(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "courses_code_check",
+      "type": "c",
+      "table": "courses",
+      "definition": "CHECK (((char_length(code) >= 1) AND (char_length(code) <= 40)))"
+    },
+    {
+      "name": "courses_name_check",
+      "type": "c",
+      "table": "courses",
+      "definition": "CHECK (((char_length(name) >= 1) AND (char_length(name) <= 120)))"
+    },
+    {
+      "name": "courses_room_check",
+      "type": "c",
+      "table": "courses",
+      "definition": "CHECK ((char_length(room) <= 80))"
+    },
+    {
+      "name": "courses_schedule_text_check",
+      "type": "c",
+      "table": "courses",
+      "definition": "CHECK ((char_length(schedule_text) <= 160))"
+    },
+    {
+      "name": "courses_attendance_mode_check",
+      "type": "c",
+      "table": "courses",
+      "definition": "CHECK ((attendance_mode = ANY (ARRAY['off'::text, 'exceptions'::text, 'confirm_all'::text])))"
+    },
+    {
+      "name": "courses_pkey",
+      "type": "p",
+      "table": "courses",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "courses_owner_code_key",
+      "type": "u",
+      "table": "courses",
+      "definition": "UNIQUE (owner_id, code)"
+    },
+    {
+      "name": "students_student_code_check",
+      "type": "c",
+      "table": "students",
+      "definition": "CHECK (((char_length(student_code) >= 1) AND (char_length(student_code) <= 60)))"
+    },
+    {
+      "name": "students_chinese_name_check",
+      "type": "c",
+      "table": "students",
+      "definition": "CHECK (((char_length(chinese_name) >= 1) AND (char_length(chinese_name) <= 100)))"
+    },
+    {
+      "name": "students_original_name_check",
+      "type": "c",
+      "table": "students",
+      "definition": "CHECK ((char_length(original_name) <= 160))"
+    },
+    {
+      "name": "students_preferred_name_check",
+      "type": "c",
+      "table": "students",
+      "definition": "CHECK ((char_length(preferred_name) <= 100))"
+    },
+    {
+      "name": "students_status_check",
+      "type": "c",
+      "table": "students",
+      "definition": "CHECK ((status = ANY (ARRAY['active'::text, 'withdrawn'::text, 'archived'::text])))"
+    },
+    {
+      "name": "students_pkey",
+      "type": "p",
+      "table": "students",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "students_owner_code_key",
+      "type": "u",
+      "table": "students",
+      "definition": "UNIQUE (owner_id, student_code)"
+    },
+    {
+      "name": "students_owner_id_key",
+      "type": "u",
+      "table": "students",
+      "definition": "UNIQUE (owner_id, id)"
+    },
+    {
+      "name": "students_owner_id_fkey",
+      "type": "f",
+      "table": "students",
+      "definition": "FOREIGN KEY (owner_id) REFERENCES auth.users(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "enrollments_seat_number_check",
+      "type": "c",
+      "table": "enrollments",
+      "definition": "CHECK (((seat_number IS NULL) OR (seat_number > 0)))"
+    },
+    {
+      "name": "enrollments_status_check",
+      "type": "c",
+      "table": "enrollments",
+      "definition": "CHECK ((status = ANY (ARRAY['active'::text, 'withdrawn'::text])))"
+    },
+    {
+      "name": "enrollments_pkey",
+      "type": "p",
+      "table": "enrollments",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "enrollments_course_student_key",
+      "type": "u",
+      "table": "enrollments",
+      "definition": "UNIQUE (course_id, student_id)"
+    },
+    {
+      "name": "enrollments_owner_id_key",
+      "type": "u",
+      "table": "enrollments",
+      "definition": "UNIQUE (owner_id, id)"
+    },
+    {
+      "name": "class_sessions_topic_check",
+      "type": "c",
+      "table": "class_sessions",
+      "definition": "CHECK ((char_length(topic) <= 200))"
+    },
+    {
+      "name": "class_sessions_observation_target_check",
+      "type": "c",
+      "table": "class_sessions",
+      "definition": "CHECK ((char_length(observation_target) <= 300))"
+    },
+    {
+      "name": "class_sessions_status_check",
+      "type": "c",
+      "table": "class_sessions",
+      "definition": "CHECK ((status = ANY (ARRAY['in_progress'::text, 'completed'::text])))"
+    },
+    {
+      "name": "class_sessions_what_worked_check",
+      "type": "c",
+      "table": "class_sessions",
+      "definition": "CHECK ((char_length(what_worked) <= 2000))"
+    },
+    {
+      "name": "class_sessions_common_difficulty_check",
+      "type": "c",
+      "table": "class_sessions",
+      "definition": "CHECK ((char_length(common_difficulty) <= 2000))"
+    },
+    {
+      "name": "class_sessions_next_adjustment_check",
+      "type": "c",
+      "table": "class_sessions",
+      "definition": "CHECK ((char_length(next_adjustment) <= 2000))"
+    },
+    {
+      "name": "class_sessions_pkey",
+      "type": "p",
+      "table": "class_sessions",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "class_sessions_owner_id_key",
+      "type": "u",
+      "table": "class_sessions",
+      "definition": "UNIQUE (owner_id, id)"
+    },
+    {
+      "name": "class_sessions_owner_id_fkey",
+      "type": "f",
+      "table": "class_sessions",
+      "definition": "FOREIGN KEY (owner_id) REFERENCES auth.users(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "class_sessions_course_owner_fk",
+      "type": "f",
+      "table": "class_sessions",
+      "definition": "FOREIGN KEY (owner_id, course_id) REFERENCES courses(owner_id, id) ON DELETE CASCADE"
+    },
+    {
+      "name": "attendance_records_status_check",
+      "type": "c",
+      "table": "attendance_records",
+      "definition": "CHECK ((status = ANY (ARRAY['present'::text, 'late'::text, 'absent'::text, 'excused'::text])))"
+    },
+    {
+      "name": "attendance_records_note_check",
+      "type": "c",
+      "table": "attendance_records",
+      "definition": "CHECK ((char_length(note) <= 500))"
+    },
+    {
+      "name": "attendance_records_pkey",
+      "type": "p",
+      "table": "attendance_records",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "attendance_session_student_key",
+      "type": "u",
+      "table": "attendance_records",
+      "definition": "UNIQUE (session_id, student_id)"
+    },
+    {
+      "name": "attendance_records_owner_id_fkey",
+      "type": "f",
+      "table": "attendance_records",
+      "definition": "FOREIGN KEY (owner_id) REFERENCES auth.users(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "enrollments_owner_course_student_key",
+      "type": "u",
+      "table": "enrollments",
+      "definition": "UNIQUE (owner_id, course_id, student_id)"
+    },
+    {
+      "name": "attendance_student_owner_fk",
+      "type": "f",
+      "table": "attendance_records",
+      "definition": "FOREIGN KEY (owner_id, student_id) REFERENCES students(owner_id, id) ON DELETE CASCADE"
+    },
+    {
+      "name": "observation_records_result_check",
+      "type": "c",
+      "table": "observation_records",
+      "definition": "CHECK ((result = ANY (ARRAY['independent'::text, 'with_prompt'::text, 'not_yet'::text])))"
+    },
+    {
+      "name": "observation_records_note_check",
+      "type": "c",
+      "table": "observation_records",
+      "definition": "CHECK ((char_length(note) <= 1000))"
+    },
+    {
+      "name": "observation_records_pkey",
+      "type": "p",
+      "table": "observation_records",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "observation_session_student_key",
+      "type": "u",
+      "table": "observation_records",
+      "definition": "UNIQUE (session_id, student_id)"
+    },
+    {
+      "name": "observation_records_owner_id_fkey",
+      "type": "f",
+      "table": "observation_records",
+      "definition": "FOREIGN KEY (owner_id) REFERENCES auth.users(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "observation_session_owner_fk",
+      "type": "f",
+      "table": "observation_records",
+      "definition": "FOREIGN KEY (owner_id, session_id) REFERENCES class_sessions(owner_id, id) ON DELETE CASCADE"
+    },
+    {
+      "name": "observation_student_owner_fk",
+      "type": "f",
+      "table": "observation_records",
+      "definition": "FOREIGN KEY (owner_id, student_id) REFERENCES students(owner_id, id) ON DELETE CASCADE"
+    },
+    {
+      "name": "followups_kind_check",
+      "type": "c",
+      "table": "followups",
+      "definition": "CHECK ((kind = ANY (ARRAY['reobserve'::text, 'remind'::text, 'makeup'::text])))"
+    },
+    {
+      "name": "followups_title_check",
+      "type": "c",
+      "table": "followups",
+      "definition": "CHECK (((char_length(title) >= 1) AND (char_length(title) <= 300)))"
+    },
+    {
+      "name": "followups_status_check",
+      "type": "c",
+      "table": "followups",
+      "definition": "CHECK ((status = ANY (ARRAY['open'::text, 'completed'::text, 'cancelled'::text])))"
+    },
+    {
+      "name": "followups_pkey",
+      "type": "p",
+      "table": "followups",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "followups_owner_id_fkey",
+      "type": "f",
+      "table": "followups",
+      "definition": "FOREIGN KEY (owner_id) REFERENCES auth.users(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "followups_course_owner_fk",
+      "type": "f",
+      "table": "followups",
+      "definition": "FOREIGN KEY (owner_id, course_id) REFERENCES courses(owner_id, id) ON DELETE CASCADE"
+    },
+    {
+      "name": "followups_student_owner_fk",
+      "type": "f",
+      "table": "followups",
+      "definition": "FOREIGN KEY (owner_id, student_id) REFERENCES students(owner_id, id) ON DELETE CASCADE"
+    },
+    {
+      "name": "followups_session_owner_fk",
+      "type": "f",
+      "table": "followups",
+      "definition": "FOREIGN KEY (owner_id, session_id) REFERENCES class_sessions(owner_id, id) ON DELETE CASCADE"
+    },
+    {
+      "name": "sessions_owner_course_id_key",
+      "type": "u",
+      "table": "class_sessions",
+      "definition": "UNIQUE (owner_id, course_id, id)"
+    },
+    {
+      "name": "learning_events_textbook_id_check",
+      "type": "c",
+      "table": "learning_events",
+      "definition": "CHECK (((length(textbook_id) >= 1) AND (length(textbook_id) <= 100)))"
+    },
+    {
+      "name": "learning_events_lesson_id_check",
+      "type": "c",
+      "table": "learning_events",
+      "definition": "CHECK ((lesson_id ~ '^lesson-[0-9]{2}$'::text))"
+    },
+    {
+      "name": "learning_events_lesson_label_check",
+      "type": "c",
+      "table": "learning_events",
+      "definition": "CHECK (((length(lesson_label) >= 1) AND (length(lesson_label) <= 200)))"
+    },
+    {
+      "name": "learning_events_activity_label_check",
+      "type": "c",
+      "table": "learning_events",
+      "definition": "CHECK (((length(activity_label) >= 1) AND (length(activity_label) <= 300)))"
+    },
+    {
+      "name": "learning_events_task_completion_check",
+      "type": "c",
+      "table": "learning_events",
+      "definition": "CHECK (((task_completion >= 0) AND (task_completion <= 3)))"
+    },
+    {
+      "name": "learning_events_comprehensibility_check",
+      "type": "c",
+      "table": "learning_events",
+      "definition": "CHECK (((comprehensibility >= 0) AND (comprehensibility <= 3)))"
+    },
+    {
+      "name": "learning_events_language_control_check",
+      "type": "c",
+      "table": "learning_events",
+      "definition": "CHECK (((language_control >= 0) AND (language_control <= 3)))"
+    },
+    {
+      "name": "learning_events_interaction_check",
+      "type": "c",
+      "table": "learning_events",
+      "definition": "CHECK (((interaction >= 0) AND (interaction <= 3)))"
+    },
+    {
+      "name": "learning_events_pkey",
+      "type": "p",
+      "table": "learning_events",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "learning_events_owner_id_fkey",
+      "type": "f",
+      "table": "learning_events",
+      "definition": "FOREIGN KEY (owner_id) REFERENCES auth.users(id)"
+    },
+    {
+      "name": "learning_events_owner_id_course_id_session_id_fkey",
+      "type": "f",
+      "table": "learning_events",
+      "definition": "FOREIGN KEY (owner_id, course_id, session_id) REFERENCES class_sessions(owner_id, course_id, id)"
+    },
+    {
+      "name": "learning_events_owner_id_course_id_student_id_fkey",
+      "type": "f",
+      "table": "learning_events",
+      "definition": "FOREIGN KEY (owner_id, course_id, student_id) REFERENCES enrollments(owner_id, course_id, student_id)"
+    },
+    {
+      "name": "learning_events_owner_client_event_key",
+      "type": "u",
+      "table": "learning_events",
+      "definition": "UNIQUE (owner_id, client_event_id)"
+    },
+    {
+      "name": "randomizer_sessions_client_session_id_check",
+      "type": "c",
+      "table": "randomizer_sessions",
+      "definition": "CHECK (((char_length(client_session_id) >= 1) AND (char_length(client_session_id) <= 120)))"
+    },
+    {
+      "name": "randomizer_sessions_textbook_id_check",
+      "type": "c",
+      "table": "randomizer_sessions",
+      "definition": "CHECK (((char_length(textbook_id) >= 1) AND (char_length(textbook_id) <= 100)))"
+    },
+    {
+      "name": "randomizer_sessions_lesson_id_check",
+      "type": "c",
+      "table": "randomizer_sessions",
+      "definition": "CHECK ((lesson_id ~ '^lesson-[0-9]{2}$'::text))"
+    },
+    {
+      "name": "randomizer_sessions_scoring_mode_check",
+      "type": "c",
+      "table": "randomizer_sessions",
+      "definition": "CHECK ((scoring_mode = ANY (ARRAY['graded'::text, 'practice'::text])))"
+    },
+    {
+      "name": "randomizer_sessions_task_mode_check",
+      "type": "c",
+      "table": "randomizer_sessions",
+      "definition": "CHECK (((char_length(task_mode) >= 1) AND (char_length(task_mode) <= 100)))"
+    },
+    {
+      "name": "randomizer_sessions_task_target_check",
+      "type": "c",
+      "table": "randomizer_sessions",
+      "definition": "CHECK (((char_length(task_target) >= 1) AND (char_length(task_target) <= 100)))"
+    },
+    {
+      "name": "randomizer_sessions_current_round_check",
+      "type": "c",
+      "table": "randomizer_sessions",
+      "definition": "CHECK ((current_round > 0))"
+    },
+    {
+      "name": "randomizer_sessions_roster_count_check",
+      "type": "c",
+      "table": "randomizer_sessions",
+      "definition": "CHECK ((roster_count >= 0))"
+    },
+    {
+      "name": "randomizer_sessions_status_check",
+      "type": "c",
+      "table": "randomizer_sessions",
+      "definition": "CHECK ((status = ANY (ARRAY['in_progress'::text, 'completed'::text])))"
+    },
+    {
+      "name": "randomizer_sessions_completion_check",
+      "type": "c",
+      "table": "randomizer_sessions",
+      "definition": "CHECK ((((status = 'in_progress'::text) AND (completed_at IS NULL)) OR ((status = 'completed'::text) AND (completed_at IS NOT NULL))))"
+    },
+    {
+      "name": "randomizer_sessions_pkey",
+      "type": "p",
+      "table": "randomizer_sessions",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "randomizer_sessions_owner_id_key",
+      "type": "u",
+      "table": "randomizer_sessions",
+      "definition": "UNIQUE (owner_id, id)"
+    },
+    {
+      "name": "randomizer_sessions_owner_client_key",
+      "type": "u",
+      "table": "randomizer_sessions",
+      "definition": "UNIQUE (owner_id, client_session_id)"
+    },
+    {
+      "name": "randomizer_sessions_owner_course_id_key",
+      "type": "u",
+      "table": "randomizer_sessions",
+      "definition": "UNIQUE (owner_id, course_id, id)"
+    },
+    {
+      "name": "randomizer_sessions_owner_id_fkey",
+      "type": "f",
+      "table": "randomizer_sessions",
+      "definition": "FOREIGN KEY (owner_id) REFERENCES auth.users(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "randomizer_sessions_class_session_fk",
+      "type": "f",
+      "table": "randomizer_sessions",
+      "definition": "FOREIGN KEY (owner_id, course_id, class_session_id) REFERENCES class_sessions(owner_id, course_id, id) ON DELETE RESTRICT"
+    },
+    {
+      "name": "randomizer_attempts_client_attempt_id_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((char_length(client_attempt_id) >= 1) AND (char_length(client_attempt_id) <= 160)))"
+    },
+    {
+      "name": "randomizer_attempts_student_code_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((char_length(student_code) >= 1) AND (char_length(student_code) <= 60)))"
+    },
+    {
+      "name": "randomizer_attempts_student_name_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((char_length(student_name) >= 1) AND (char_length(student_name) <= 100)))"
+    },
+    {
+      "name": "randomizer_attempts_round_number_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK ((round_number > 0))"
+    },
+    {
+      "name": "randomizer_attempts_outcome_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK ((outcome = ANY (ARRAY['pending'::text, 'answered'::text, 'not_answered'::text, 'undone'::text])))"
+    },
+    {
+      "name": "randomizer_attempts_textbook_id_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((char_length(textbook_id) >= 1) AND (char_length(textbook_id) <= 100)))"
+    },
+    {
+      "name": "randomizer_attempts_lesson_id_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK ((lesson_id ~ '^lesson-[0-9]{2}$'::text))"
+    },
+    {
+      "name": "randomizer_attempts_task_mode_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((char_length(task_mode) >= 1) AND (char_length(task_mode) <= 100)))"
+    },
+    {
+      "name": "randomizer_attempts_task_target_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((char_length(task_target) >= 1) AND (char_length(task_target) <= 100)))"
+    },
+    {
+      "name": "randomizer_attempts_rubric_id_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((char_length(rubric_id) >= 1) AND (char_length(rubric_id) <= 100)))"
+    },
+    {
+      "name": "randomizer_attempts_rubric_version_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((char_length(rubric_version) >= 1) AND (char_length(rubric_version) <= 40)))"
+    },
+    {
+      "name": "randomizer_attempts_task_completion_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((task_completion >= 0) AND (task_completion <= 3)))"
+    },
+    {
+      "name": "randomizer_attempts_comprehensibility_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((comprehensibility >= 0) AND (comprehensibility <= 3)))"
+    },
+    {
+      "name": "randomizer_attempts_language_control_vocabulary_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((language_control_vocabulary >= 0) AND (language_control_vocabulary <= 3)))"
+    },
+    {
+      "name": "randomizer_attempts_content_interaction_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((content_interaction >= 0) AND (content_interaction <= 3)))"
+    },
+    {
+      "name": "randomizer_attempts_total_score_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((total_score >= 0) AND (total_score <= 12)))"
+    },
+    {
+      "name": "randomizer_attempts_note_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK ((char_length(note) <= 2000))"
+    },
+    {
+      "name": "randomizer_attempts_scores_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK ((((assessment_status = 'scored'::text) AND (task_completion IS NOT NULL) AND (comprehensibility IS NOT NULL) AND (language_control_vocabulary IS NOT NULL) AND (content_interaction IS NOT NULL) AND (total_score IS NOT NULL)) OR ((assessment_status <> 'scored'::text) AND (task_completion IS NULL) AND (comprehensibility IS NULL) AND (language_control_vocabulary IS NULL) AND (content_interaction IS NULL) AND (total_score IS NULL))))"
+    },
+    {
+      "name": "student_notes_course_id_student_id_fkey",
+      "type": "f",
+      "table": "student_notes",
+      "definition": "FOREIGN KEY (course_id, student_id) REFERENCES enrollments(course_id, student_id)"
+    },
+    {
+      "name": "student_notes_owner_id_course_id_student_id_supersedes_id_fkey",
+      "type": "f",
+      "table": "student_notes",
+      "definition": "FOREIGN KEY (owner_id, course_id, student_id, supersedes_id) REFERENCES student_notes(owner_id, course_id, student_id, id)"
+    },
+    {
+      "name": "randomizer_attempts_corrected_not_counted_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((record_status <> 'corrected'::text) OR (counted_for_summary = false)))"
+    },
+    {
+      "name": "randomizer_attempts_completion_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK ((((outcome = 'pending'::text) AND (completed_at IS NULL)) OR ((outcome <> 'pending'::text) AND (completed_at IS NOT NULL))))"
+    },
+    {
+      "name": "randomizer_attempts_pkey",
+      "type": "p",
+      "table": "randomizer_attempts",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "randomizer_attempts_owner_id_key",
+      "type": "u",
+      "table": "randomizer_attempts",
+      "definition": "UNIQUE (owner_id, id)"
+    },
+    {
+      "name": "randomizer_attempts_owner_client_key",
+      "type": "u",
+      "table": "randomizer_attempts",
+      "definition": "UNIQUE (owner_id, client_attempt_id)"
+    },
+    {
+      "name": "randomizer_attempts_owner_id_fkey",
+      "type": "f",
+      "table": "randomizer_attempts",
+      "definition": "FOREIGN KEY (owner_id) REFERENCES auth.users(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "randomizer_attempts_session_fk",
+      "type": "f",
+      "table": "randomizer_attempts",
+      "definition": "FOREIGN KEY (owner_id, course_id, randomizer_session_id) REFERENCES randomizer_sessions(owner_id, course_id, id) ON DELETE RESTRICT"
+    },
+    {
+      "name": "randomizer_attempts_student_fk",
+      "type": "f",
+      "table": "randomizer_attempts",
+      "definition": "FOREIGN KEY (owner_id, course_id, student_id) REFERENCES enrollments(owner_id, course_id, student_id) ON DELETE RESTRICT"
+    },
+    {
+      "name": "randomizer_attempts_event_order_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK ((event_order > 0))"
+    },
+    {
+      "name": "randomizer_attempts_opportunity_status_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK ((opportunity_status = ANY (ARRAY['called'::text, 'volunteered'::text, 'not_selected'::text, 'absent'::text, 'excused'::text, 'technical_issue'::text])))"
+    },
+    {
+      "name": "randomizer_attempts_response_status_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK ((response_status = ANY (ARRAY['answered'::text, 'partial'::text, 'no_response'::text, 'declined'::text, 'peer_supported'::text, 'unobserved'::text])))"
+    },
+    {
+      "name": "interact_rooms_pkey",
+      "type": "p",
+      "table": "interact_rooms",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "interact_responses_pkey",
+      "type": "p",
+      "table": "interact_responses",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "randomizer_attempts_answer_context_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK ((answer_context = ANY (ARRAY['prepared'::text, 'unprepared'::text, 'unknown'::text])))"
+    },
+    {
+      "name": "randomizer_attempts_attendance_status_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((attendance_status IS NULL) OR (attendance_status = ANY (ARRAY['unconfirmed'::text, 'present'::text, 'late'::text, 'absent'::text, 'excused'::text]))))"
+    },
+    {
+      "name": "randomizer_attempts_record_status_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK ((record_status = ANY (ARRAY['valid'::text, 'corrected'::text, 'voided'::text])))"
+    },
+    {
+      "name": "randomizer_attempts_no_response_required_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((outcome <> 'not_answered'::text) OR (no_response_reason IS NOT NULL)))"
+    },
+    {
+      "name": "randomizer_attempts_score_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((score IS NULL) OR ((score >= 0) AND (score <= 12))))"
+    },
+    {
+      "name": "randomizer_attempts_response_outcome_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK ((((outcome = 'answered'::text) AND (response_status = ANY (ARRAY['answered'::text, 'partial'::text, 'peer_supported'::text]))) OR ((outcome = 'not_answered'::text) AND (response_status = 'no_response'::text)) OR ((outcome = ANY (ARRAY['pending'::text, 'undone'::text])) AND (response_status = 'unobserved'::text))))"
+    },
+    {
+      "name": "learning_events_event_order_check",
+      "type": "c",
+      "table": "learning_events",
+      "definition": "CHECK (((event_order IS NULL) OR (event_order > 0)))"
+    },
+    {
+      "name": "interact_responses_room_id_fkey",
+      "type": "f",
+      "table": "interact_responses",
+      "definition": "FOREIGN KEY (room_id) REFERENCES interact_rooms(id)"
+    },
+    {
+      "name": "learning_events_opportunity_status_check",
+      "type": "c",
+      "table": "learning_events",
+      "definition": "CHECK (((opportunity_status IS NULL) OR (opportunity_status = ANY (ARRAY['called'::text, 'volunteered'::text, 'not_selected'::text, 'absent'::text, 'excused'::text, 'technical_issue'::text]))))"
+    },
+    {
+      "name": "learning_events_response_status_check",
+      "type": "c",
+      "table": "learning_events",
+      "definition": "CHECK ((response_status = ANY (ARRAY['answered'::text, 'partial'::text, 'no_response'::text, 'declined'::text, 'peer_supported'::text, 'unobserved'::text])))"
+    },
+    {
+      "name": "learning_events_answer_context_check",
+      "type": "c",
+      "table": "learning_events",
+      "definition": "CHECK ((answer_context = ANY (ARRAY['prepared'::text, 'unprepared'::text, 'unknown'::text])))"
+    },
+    {
+      "name": "learning_events_attendance_status_check",
+      "type": "c",
+      "table": "learning_events",
+      "definition": "CHECK (((attendance_status IS NULL) OR (attendance_status = ANY (ARRAY['unconfirmed'::text, 'present'::text, 'late'::text, 'absent'::text, 'excused'::text]))))"
+    },
+    {
+      "name": "learning_events_score_check",
+      "type": "c",
+      "table": "learning_events",
+      "definition": "CHECK (((score IS NULL) OR ((score >= 0) AND (score <= 12))))"
+    },
+    {
+      "name": "learning_events_record_status_check",
+      "type": "c",
+      "table": "learning_events",
+      "definition": "CHECK ((record_status = ANY (ARRAY['valid'::text, 'corrected'::text, 'voided'::text])))"
+    },
+    {
+      "name": "randomizer_attempts_performance_level_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((performance_level IS NULL) OR (performance_level = ANY (ARRAY['needs_support'::text, 'mostly_complete'::text, 'complete'::text]))))"
+    },
+    {
+      "name": "randomizer_attempts_observation_version_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((observation_version IS NULL) OR (observation_version = '1.0'::text)))"
+    },
+    {
+      "name": "randomizer_attempts_task_prompt_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((task_prompt IS NULL) OR (char_length(task_prompt) <= 500)))"
+    },
+    {
+      "name": "randomizer_attempts_assessment_status_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK ((assessment_status = ANY (ARRAY['scored'::text, 'observed'::text, 'pending'::text, 'not_applicable'::text])))"
+    },
+    {
+      "name": "randomizer_attempts_outcome_status_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK ((((outcome = 'answered'::text) AND (assessment_status = ANY (ARRAY['scored'::text, 'observed'::text, 'pending'::text]))) OR ((outcome = ANY (ARRAY['pending'::text, 'not_answered'::text, 'undone'::text])) AND (assessment_status = 'not_applicable'::text))))"
+    },
+    {
+      "name": "student_notes_category_check",
+      "type": "c",
+      "table": "student_notes",
+      "definition": "CHECK ((category = ANY (ARRAY['homework_missing'::text, 'textbook_missing'::text, 'classroom_rule'::text, 'other'::text])))"
+    },
+    {
+      "name": "student_notes_body_check",
+      "type": "c",
+      "table": "student_notes",
+      "definition": "CHECK (((char_length(TRIM(BOTH FROM body)) >= 1) AND (char_length(TRIM(BOTH FROM body)) <= 2000)))"
+    },
+    {
+      "name": "student_notes_check",
+      "type": "c",
+      "table": "student_notes",
+      "definition": "CHECK (((supersedes_id IS NULL) OR ((char_length(TRIM(BOTH FROM correction_reason)) >= 1) AND (char_length(TRIM(BOTH FROM correction_reason)) <= 500))))"
+    },
+    {
+      "name": "student_notes_check1",
+      "type": "c",
+      "table": "student_notes",
+      "definition": "CHECK (((supersedes_id IS NULL) OR (correction_reason IS NOT NULL)))"
+    },
+    {
+      "name": "student_notes_pkey",
+      "type": "p",
+      "table": "student_notes",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "student_notes_supersedes_id_key",
+      "type": "u",
+      "table": "student_notes",
+      "definition": "UNIQUE (supersedes_id)"
+    },
+    {
+      "name": "student_notes_owner_id_course_id_student_id_id_key",
+      "type": "u",
+      "table": "student_notes",
+      "definition": "UNIQUE (owner_id, course_id, student_id, id)"
+    },
+    {
+      "name": "student_notes_owner_id_fkey",
+      "type": "f",
+      "table": "student_notes",
+      "definition": "FOREIGN KEY (owner_id) REFERENCES auth.users(id)"
+    },
+    {
+      "name": "student_notes_owner_id_course_id_fkey",
+      "type": "f",
+      "table": "student_notes",
+      "definition": "FOREIGN KEY (owner_id, course_id) REFERENCES courses(owner_id, id)"
+    },
+    {
+      "name": "student_notes_owner_id_student_id_fkey",
+      "type": "f",
+      "table": "student_notes",
+      "definition": "FOREIGN KEY (owner_id, student_id) REFERENCES students(owner_id, id)"
+    },
+    {
+      "name": "randomizer_attempts_question_id_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((question_id IS NULL) OR ((char_length(question_id) >= 1) AND (char_length(question_id) <= 160))))"
+    },
+    {
+      "name": "randomizer_attempts_fact_marks_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK ((((fact_marks IS NULL) AND (fact_version IS NULL)) OR ((fact_marks IS NOT NULL) AND (fact_version IS NOT NULL) AND (fact_version = '1.0'::text) AND valid_randomizer_fact_marks(fact_marks))))"
+    },
+    {
+      "name": "randomizer_attempts_fact_complete_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((fact_marks IS NULL) OR (assessment_status <> ALL (ARRAY['observed'::text, 'scored'::text])) OR (fact_marks ?& ARRAY['F'::text, 'A'::text, 'C'::text, 'T'::text])))"
+    },
+    {
+      "name": "randomizer_attempts_observation_required_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((assessment_status <> 'observed'::text) OR ((score IS NULL) AND (((performance_level IS NOT NULL) AND (observation_version IS NOT NULL)) OR ((fact_marks IS NOT NULL) AND (fact_version IS NOT NULL) AND (fact_marks ?& ARRAY['F'::text, 'A'::text, 'C'::text, 'T'::text]))))))"
+    },
+    {
+      "name": "class_sessions_session_number_check",
+      "type": "c",
+      "table": "class_sessions",
+      "definition": "CHECK (((session_number IS NULL) OR ((session_number >= 1) AND (session_number <= 999))))"
+    },
+    {
+      "name": "class_session_corrections_reason_check",
+      "type": "c",
+      "table": "class_session_corrections",
+      "definition": "CHECK (((char_length(btrim(reason)) >= 1) AND (char_length(btrim(reason)) <= 500)))"
+    },
+    {
+      "name": "class_session_corrections_pkey",
+      "type": "p",
+      "table": "class_session_corrections",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "class_session_corrections_owner_id_fkey",
+      "type": "f",
+      "table": "class_session_corrections",
+      "definition": "FOREIGN KEY (owner_id) REFERENCES auth.users(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "class_session_corrections_session_fk",
+      "type": "f",
+      "table": "class_session_corrections",
+      "definition": "FOREIGN KEY (owner_id, course_id, class_session_id) REFERENCES class_sessions(owner_id, course_id, id) ON DELETE CASCADE"
+    },
+    {
+      "name": "learning_events_corrected_not_counted_check",
+      "type": "c",
+      "table": "learning_events",
+      "definition": "CHECK (((record_status <> 'corrected'::text) OR (counted_for_summary = false)))"
+    },
+    {
+      "name": "classroom_record_corrections_record_type_check",
+      "type": "c",
+      "table": "classroom_record_corrections",
+      "definition": "CHECK ((record_type = ANY (ARRAY['randomizer_attempt'::text, 'learning_event'::text])))"
+    },
+    {
+      "name": "classroom_record_corrections_previous_record_status_check",
+      "type": "c",
+      "table": "classroom_record_corrections",
+      "definition": "CHECK ((previous_record_status = ANY (ARRAY['valid'::text, 'corrected'::text, 'voided'::text])))"
+    },
+    {
+      "name": "classroom_record_corrections_next_record_status_check",
+      "type": "c",
+      "table": "classroom_record_corrections",
+      "definition": "CHECK ((next_record_status = 'corrected'::text))"
+    },
+    {
+      "name": "classroom_record_corrections_reason_check",
+      "type": "c",
+      "table": "classroom_record_corrections",
+      "definition": "CHECK (((char_length(btrim(reason)) >= 1) AND (char_length(btrim(reason)) <= 500)))"
+    },
+    {
+      "name": "classroom_record_corrections_pkey",
+      "type": "p",
+      "table": "classroom_record_corrections",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "classroom_record_corrections_unique_record",
+      "type": "u",
+      "table": "classroom_record_corrections",
+      "definition": "UNIQUE (owner_id, record_type, record_id)"
+    },
+    {
+      "name": "classroom_record_corrections_owner_id_fkey",
+      "type": "f",
+      "table": "classroom_record_corrections",
+      "definition": "FOREIGN KEY (owner_id) REFERENCES auth.users(id) ON DELETE CASCADE"
+    },
+    {
+      "name": "classroom_record_corrections_owner_course_fk",
+      "type": "f",
+      "table": "classroom_record_corrections",
+      "definition": "FOREIGN KEY (owner_id, course_id) REFERENCES courses(owner_id, id) ON DELETE RESTRICT"
+    },
+    {
+      "name": "classroom_record_corrections_owner_student_fk",
+      "type": "f",
+      "table": "classroom_record_corrections",
+      "definition": "FOREIGN KEY (owner_id, student_id) REFERENCES students(owner_id, id) ON DELETE RESTRICT"
+    },
+    {
+      "name": "randomizer_attempts_no_response_reason_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((no_response_reason IS NULL) OR (no_response_reason = ANY (ARRAY['unprepared'::text, 'unclear_prompt'::text, 'forgot'::text, 'anxious_unwell'::text, 'time_insufficient'::text, 'chose_skip'::text, 'absent'::text, 'other'::text]))))"
+    },
+    {
+      "name": "learning_events_no_response_reason_check",
+      "type": "c",
+      "table": "learning_events",
+      "definition": "CHECK (((no_response_reason IS NULL) OR (no_response_reason = ANY (ARRAY['unprepared'::text, 'unclear_prompt'::text, 'forgot'::text, 'anxious_unwell'::text, 'time_insufficient'::text, 'chose_skip'::text, 'absent'::text, 'other'::text]))))"
+    },
+    {
+      "name": "learning_events_source_check",
+      "type": "c",
+      "table": "learning_events",
+      "definition": "CHECK ((source = ANY (ARRAY['class_observation'::text, 'random_call'::text, 'voluntary_answer'::text, 'manual_adjustment'::text])))"
+    },
+    {
+      "name": "learning_events_manual_adjustment_context_check",
+      "type": "c",
+      "table": "learning_events",
+      "definition": "CHECK (((source <> 'manual_adjustment'::text) OR ((textbook_id IS NULL) AND (lesson_id IS NULL) AND (lesson_label IS NULL))))"
+    },
+    {
+      "name": "class_sessions_class_status_check",
+      "type": "c",
+      "table": "class_sessions",
+      "definition": "CHECK ((char_length(class_status) <= 2000))"
+    },
+    {
+      "name": "class_sessions_progress_text_check",
+      "type": "c",
+      "table": "class_sessions",
+      "definition": "CHECK ((char_length(progress_text) <= 2000))"
+    },
+    {
+      "name": "randomizer_attempts_selection_method_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK ((selection_method = ANY (ARRAY['random'::text, 'volunteer'::text, 'teacher'::text])))"
+    },
+    {
+      "name": "randomizer_attempts_event_type_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK ((event_type = ANY (ARRAY['random_call'::text, 'voluntary_speaking'::text, 'teacher_call'::text])))"
+    },
+    {
+      "name": "randomizer_attempts_round_skip_check",
+      "type": "c",
+      "table": "randomizer_attempts",
+      "definition": "CHECK (((NOT round_skipped) OR (outcome = ANY (ARRAY['not_answered'::text, 'undone'::text]))))"
+    }
+  ]
+}

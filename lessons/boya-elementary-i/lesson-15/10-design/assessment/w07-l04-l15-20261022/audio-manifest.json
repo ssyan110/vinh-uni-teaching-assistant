@@ -1,0 +1,1736 @@
+[
+  {
+    "audio_id": "TOCFL-N-Q00799500",
+    "file": "audio-single/TOCFL-N-Q00799500.wav",
+    "source_file": "source/tocfl-novice-database-part3/audio/Q00799500.mp3",
+    "source_url": "https://tocfl.edu.tw/tocfl/assets/files/mock_database/N_L_Part%20Three_MP3.rar",
+    "source_status": "official original first rendition; second repetition and middle pause trimmed",
+    "source_segments": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 31.377868
+      }
+    ],
+    "source_sha256": "d337fb793ea55d11713292f035cbb40f7702109bd8c460d62b22f4ce4bd874ab",
+    "sha256": "67fd485bf07f61a2996e2dc6e3171c346745f0a63a80e37b161a2e2c35d5f962",
+    "duration_seconds": 31.377868,
+    "question_ids": [
+      "W07-L04L15-03-40"
+    ],
+    "question_range": "1",
+    "play_count": 2,
+    "title": "目的地辨认",
+    "section_title": "第1题｜TOCFL准备级｜Audio Q00799500",
+    "semantic_status": "official script and answer key matched; teacher listening pending",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "官方准备级第三部分Q00799500听力稿；答案B。",
+    "clip_policy": "first_complete_original_rendition",
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-N-Q00799600",
+    "file": "audio-single/TOCFL-N-Q00799600.wav",
+    "source_file": "source/tocfl-novice-database-part3/audio/Q00799600.mp3",
+    "source_url": "https://tocfl.edu.tw/tocfl/assets/files/mock_database/N_L_Part%20Three_MP3.rar",
+    "source_status": "official original first rendition; second repetition and middle pause trimmed",
+    "source_segments": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 28.902834
+      }
+    ],
+    "source_sha256": "474002dcb2c2a187b372794706da5903566868d03f290ec9ff616294047fc343",
+    "sha256": "d0c571caefa1d57da05efbcf247c83eaae01b9f9f4ac3b57c021638ca34e9a40",
+    "duration_seconds": 28.902834,
+    "question_ids": [
+      "W07-L04L15-03-41"
+    ],
+    "question_range": "2",
+    "play_count": 2,
+    "title": "明天的活动",
+    "section_title": "第2题｜TOCFL准备级｜Audio Q00799600",
+    "semantic_status": "official script and answer key matched; teacher listening pending",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "官方准备级第三部分Q00799600听力稿；答案A。",
+    "clip_policy": "first_complete_original_rendition",
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-N-Q00799700",
+    "file": "audio-single/TOCFL-N-Q00799700.wav",
+    "source_file": "source/tocfl-novice-database-part3/audio/Q00799700.mp3",
+    "source_url": "https://tocfl.edu.tw/tocfl/assets/files/mock_database/N_L_Part%20Three_MP3.rar",
+    "source_status": "official original first rendition; second repetition and middle pause trimmed",
+    "source_segments": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 24.411587
+      }
+    ],
+    "source_sha256": "2c41bb7cb5705459386a851bfc811c62728b422facb54779d29ba64a3f9255ae",
+    "sha256": "473e3395da68eddbcfb45905d36ac0148167fae5de5c3f3bc40872651d2d067e",
+    "duration_seconds": 24.411587,
+    "question_ids": [
+      "W07-L04L15-03-42"
+    ],
+    "question_range": "3",
+    "play_count": 2,
+    "title": "正在做的事",
+    "section_title": "第3题｜TOCFL准备级｜Audio Q00799700",
+    "semantic_status": "official script and answer key matched; teacher listening pending",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "官方准备级第三部分Q00799700听力稿；答案A。",
+    "clip_policy": "first_complete_original_rendition",
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-N-Q00799800",
+    "file": "audio-single/TOCFL-N-Q00799800.wav",
+    "source_file": "source/tocfl-novice-database-part3/audio/Q00799800.mp3",
+    "source_url": "https://tocfl.edu.tw/tocfl/assets/files/mock_database/N_L_Part%20Three_MP3.rar",
+    "source_status": "official original first rendition; second repetition and middle pause trimmed",
+    "source_segments": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 30.68
+      }
+    ],
+    "source_sha256": "b6e87f6ff1da64735930675de258ef28968ef589bf1880a32c0c9f9499f165ae",
+    "sha256": "5e4e64d20a546d438f95abc15852fc92ca04c9bedc1ca2c1350a763cafb11d1a",
+    "duration_seconds": 30.68,
+    "question_ids": [
+      "W07-L04L15-03-43"
+    ],
+    "question_range": "4",
+    "play_count": 2,
+    "title": "年龄数字",
+    "section_title": "第4题｜TOCFL准备级｜Audio Q00799800",
+    "semantic_status": "official script and answer key matched; teacher listening pending",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "官方准备级第三部分Q00799800听力稿；答案C。",
+    "clip_policy": "first_complete_original_rendition",
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-N-Q00799900",
+    "file": "audio-single/TOCFL-N-Q00799900.wav",
+    "source_file": "source/tocfl-novice-database-part3/audio/Q00799900.mp3",
+    "source_url": "https://tocfl.edu.tw/tocfl/assets/files/mock_database/N_L_Part%20Three_MP3.rar",
+    "source_status": "official original first rendition; second repetition and middle pause trimmed",
+    "source_segments": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 31.418095
+      }
+    ],
+    "source_sha256": "10935e99f0dc43d9057d72bfc2dbc99ec4568ff25240453067af582c32ed5489",
+    "sha256": "d22c9d6d7d9d7e31ee5a738adb202aac4074851f8ab70f566ca7a206dbdd47c1",
+    "duration_seconds": 31.418095,
+    "question_ids": [
+      "W07-L04L15-03-44"
+    ],
+    "question_range": "5",
+    "play_count": 2,
+    "title": "周日安排",
+    "section_title": "第5题｜TOCFL准备级｜Audio Q00799900",
+    "semantic_status": "official script and answer key matched; teacher listening pending",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "官方准备级第三部分Q00799900听力稿；答案C。",
+    "clip_policy": "first_complete_original_rendition",
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-N-Q01025800",
+    "file": "audio-single/TOCFL-N-Q01025800.wav",
+    "source_file": "source/tocfl-novice-database-part3/audio/Q01025800.mp3",
+    "source_url": "https://tocfl.edu.tw/tocfl/assets/files/mock_database/N_L_Part%20Three_MP3.rar",
+    "source_status": "official original first rendition; second repetition and middle pause trimmed",
+    "source_segments": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 35.300136
+      }
+    ],
+    "source_sha256": "354689227503f295d206c77434b5881721930265bea6360d857331891de0cfc2",
+    "sha256": "84109a312321263a56895ce519b36eb466d52610b4e93a889062383c9e315fcb",
+    "duration_seconds": 35.300136,
+    "question_ids": [
+      "W07-L04L15-03-45"
+    ],
+    "question_range": "6",
+    "play_count": 2,
+    "title": "生日日期",
+    "section_title": "第6题｜TOCFL准备级｜Audio Q01025800",
+    "semantic_status": "official script and answer key matched; teacher listening pending",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "官方准备级第三部分Q01025800听力稿；答案B。",
+    "clip_policy": "first_complete_original_rendition",
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-N-Q01026000",
+    "file": "audio-single/TOCFL-N-Q01026000.wav",
+    "source_file": "source/tocfl-novice-database-part3/audio/Q01026000.mp3",
+    "source_url": "https://tocfl.edu.tw/tocfl/assets/files/mock_database/N_L_Part%20Three_MP3.rar",
+    "source_status": "official original first rendition; second repetition and middle pause trimmed",
+    "source_segments": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 32.936780000000006
+      }
+    ],
+    "source_sha256": "64cf11c98ea27a4c713575a250e9ca42a1094d0c93331932544bae345b4a16e3",
+    "sha256": "cb31e8ec96f08c024c676c4a19685d66865c566624afffe75aa0b905fc439c39",
+    "duration_seconds": 32.93678,
+    "question_ids": [
+      "W07-L04L15-03-46"
+    ],
+    "question_range": "7",
+    "play_count": 2,
+    "title": "电话找人",
+    "section_title": "第7题｜TOCFL准备级｜Audio Q01026000",
+    "semantic_status": "official script and answer key matched; teacher listening pending",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "官方准备级第三部分Q01026000听力稿；答案C。",
+    "clip_policy": "first_complete_original_rendition",
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-N-Q01026100",
+    "file": "audio-single/TOCFL-N-Q01026100.wav",
+    "source_file": "source/tocfl-novice-database-part3/audio/Q01026100.mp3",
+    "source_url": "https://tocfl.edu.tw/tocfl/assets/files/mock_database/N_L_Part%20Three_MP3.rar",
+    "source_status": "official original first rendition; second repetition and middle pause trimmed",
+    "source_segments": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 30.908163
+      }
+    ],
+    "source_sha256": "41f3a7a983b79c8dc2a8dd8509c57ea635713fabdb8208b07cbe9422386b1625",
+    "sha256": "72e07cf7d769b4a06949f0b8096dbaa0bbd966948fbb9aebea9581f12ebe16cb",
+    "duration_seconds": 30.908163,
+    "question_ids": [
+      "W07-L04L15-03-47"
+    ],
+    "question_range": "8",
+    "play_count": 2,
+    "title": "交通方式",
+    "section_title": "第8题｜TOCFL准备级｜Audio Q01026100",
+    "semantic_status": "official script and answer key matched; teacher listening pending",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "官方准备级第三部分Q01026100听力稿；答案B。",
+    "clip_policy": "first_complete_original_rendition",
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q01",
+    "file": "audio-single/TOCFL-A4-Q01.wav",
+    "source_file": "audio/TOCFL-A4-Q01.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/003.mp3",
+    "source_volume": 4,
+    "source_question": 1,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 15.135034
+      }
+    ],
+    "source_sha256": "937ce0e7c3bbd4ca1b6a8791c9e6cb217ead727cd88fd95e3d62f9ab1eac398f",
+    "sha256": "d3555eea65f86b66ef31eaa0853905795f6c780f9fe63e0357d2299c4f14469d",
+    "duration_seconds": 12.935034,
+    "question_ids": [
+      "W07-L04L15-01-01"
+    ],
+    "question_range": "9",
+    "play_count": 2,
+    "title": "辨认地点",
+    "section_title": "第9题｜TOCFL官方听力｜Audio TOCFL-A4-Q01",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      1
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：图中为学校；原音三个地点名称中选择学校。 完整原稿见官方第4辑听力文本，第1题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 0.9485471697333989,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q06",
+    "file": "audio-single/TOCFL-A4-Q06.wav",
+    "source_file": "audio/TOCFL-A4-Q06.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/008.mp3",
+    "source_volume": 4,
+    "source_question": 6,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 17.129048
+      }
+    ],
+    "source_sha256": "04994c2d037c7f9df89b649f829d3855cc110f76a79cc28bdec1a99158931d8a",
+    "sha256": "a3966a529c71c63f49272e2abc091fec610cfa6e3d4d9698fec0bd36a147bbdf",
+    "duration_seconds": 14.929048,
+    "question_ids": [
+      "W07-L04L15-01-02"
+    ],
+    "question_range": "10",
+    "play_count": 2,
+    "title": "身份与职业",
+    "section_title": "第10题｜TOCFL官方听力｜Audio TOCFL-A4-Q06",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      2
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：图中身份为记者，对应原音职业选项C。 完整原稿见官方第4辑听力文本，第6题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 0.9944430565421356,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q07",
+    "file": "audio-single/TOCFL-A4-Q07.wav",
+    "source_file": "audio/TOCFL-A4-Q07.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/009.mp3",
+    "source_volume": 4,
+    "source_question": 7,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 19.371315
+      }
+    ],
+    "source_sha256": "3906422f63c957cfea7f4719b837a5404b2fb58d8832c4cab951bdb546e56d52",
+    "sha256": "4a8c0eca4b3b4df923687b3de61a8eeeb438c97f8593312db052b81cc3b0c99e",
+    "duration_seconds": 17.171315,
+    "question_ids": [
+      "W07-L04L15-01-03"
+    ],
+    "question_range": "11",
+    "play_count": 2,
+    "title": "天气与程度",
+    "section_title": "第11题｜TOCFL官方听力｜Audio TOCFL-A4-Q07",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      2
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：图中天气较热，原音选项C表达有一点热。 完整原稿见官方第4辑听力文本，第7题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 0.9890122517705165,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q08",
+    "file": "audio-single/TOCFL-A4-Q08.wav",
+    "source_file": "audio/TOCFL-A4-Q08.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/010.mp3",
+    "source_volume": 4,
+    "source_question": 8,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 21.811225
+      }
+    ],
+    "source_sha256": "0604b56c2db5688440ff488e7f6c30a1cd4e9097d450d281a0555006d2312bd5",
+    "sha256": "4c12902268badf93889160098952d348ed65d2cf3e03c9384aaac41aba563f5a",
+    "duration_seconds": 19.611224,
+    "question_ids": [
+      "W07-L04L15-01-04"
+    ],
+    "question_range": "12",
+    "play_count": 2,
+    "title": "物品与有／没有",
+    "section_title": "第12题｜TOCFL官方听力｜Audio TOCFL-A4-Q08",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      2
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：图中桌上有灯和卡片，对应B。 完整原稿见官方第4辑听力文本，第8题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 0.9214763822753388,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A5-Q01",
+    "file": "audio-single/TOCFL-A5-Q01.wav",
+    "source_file": "audio/TOCFL-A5-Q01.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/003.mp3",
+    "source_volume": 5,
+    "source_question": 1,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 16.036145
+      }
+    ],
+    "source_sha256": "0715fad9f55318b646153da9b8b0691122b21322a2b82c7cb123a83ac4a6df0c",
+    "sha256": "0a0b23d723386b5a70fbff947dd8d0f6f55fc15fbfa8e8fed436a7db9eef12f7",
+    "duration_seconds": 13.836145,
+    "question_ids": [
+      "W07-L04L15-01-26"
+    ],
+    "question_range": "13",
+    "play_count": 2,
+    "title": "人物与数量",
+    "section_title": "第13题｜TOCFL官方听力｜Audio TOCFL-A5-Q01",
+    "source_script_pdf": "source/A5-listen.pdf",
+    "source_script_pdf_pages": [
+      1
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：图中三个学生，对应原音选项A。 完整原稿见官方第5辑听力文本，第1题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 37270.68815351231,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A5-Q02",
+    "file": "audio-single/TOCFL-A5-Q02.wav",
+    "source_file": "audio/TOCFL-A5-Q02.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/004.mp3",
+    "source_volume": 5,
+    "source_question": 2,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 20.239841
+      }
+    ],
+    "source_sha256": "ffbc07e6a13e6e5f3596bced5e9c770f24c6039d80d028bd67f413cefe6e498f",
+    "sha256": "14d1002ed321babb0faa1278614f23ae45572762e9229e502536cb1ecd89c074",
+    "duration_seconds": 18.039841,
+    "question_ids": [
+      "W07-L04L15-01-27"
+    ],
+    "question_range": "14",
+    "play_count": 2,
+    "title": "正在进行的动作",
+    "section_title": "第14题｜TOCFL官方听力｜Audio TOCFL-A5-Q02",
+    "source_script_pdf": "source/A5-listen.pdf",
+    "source_script_pdf_pages": [
+      1
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：图中为打网球，对应B。 完整原稿见官方第5辑听力文本，第2题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 29703.77636302146,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A5-Q03",
+    "file": "audio-single/TOCFL-A5-Q03.wav",
+    "source_file": "audio/TOCFL-A5-Q03.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/005.mp3",
+    "source_volume": 5,
+    "source_question": 3,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 22.787302
+      }
+    ],
+    "source_sha256": "a33ceb889a95951e946791716034fc3eca3c7e3ac6cfdc2f345bf74382a14bd7",
+    "sha256": "446bc5142e8cba9921b2a0d655333960c198f6e9e603623a8ff9c2c706e9eeaf",
+    "duration_seconds": 20.587302,
+    "question_ids": [
+      "W07-L04L15-01-28"
+    ],
+    "question_range": "15",
+    "play_count": 2,
+    "title": "喜好与日常活动",
+    "section_title": "第15题｜TOCFL官方听力｜Audio TOCFL-A5-Q03",
+    "source_script_pdf": "source/A5-listen.pdf",
+    "source_script_pdf_pages": [
+      1
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：图中小美喜欢做菜，对应B。 完整原稿见官方第5辑听力文本，第3题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 25219.387680408545,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A5-Q05",
+    "file": "audio-single/TOCFL-A5-Q05.wav",
+    "source_file": "audio/TOCFL-A5-Q05.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/007.mp3",
+    "source_volume": 5,
+    "source_question": 5,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 18.344762
+      }
+    ],
+    "source_sha256": "098d389e838c4ad51f604027501cb022c72182b7db8e841773c41c7291f92b9f",
+    "sha256": "82ec8ef9c8917c64dc159509066578c6750ed8fc9470cdafbe211231d1df4a29",
+    "duration_seconds": 16.144762,
+    "question_ids": [
+      "W07-L04L15-01-29"
+    ],
+    "question_range": "16",
+    "play_count": 2,
+    "title": "赠送物品",
+    "section_title": "第16题｜TOCFL官方听力｜Audio TOCFL-A5-Q05",
+    "source_script_pdf": "source/A5-listen.pdf",
+    "source_script_pdf_pages": [
+      1
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：图中送的是水果，对应A。 完整原稿见官方第5辑听力文本，第5题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 27684.900487656705,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A5-Q06",
+    "file": "audio-single/TOCFL-A5-Q06.wav",
+    "source_file": "audio/TOCFL-A5-Q06.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/008.mp3",
+    "source_volume": 5,
+    "source_question": 6,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 23.705079
+      }
+    ],
+    "source_sha256": "7e73a7e2db042a3b5bcaea1fe335662ca03d121cfba0e7e5f63901e0d88e2b84",
+    "sha256": "1c86e45ac7235c6c7a008b263c7ae00fe24aeb5e4aa5747fb0b8f837937758ac",
+    "duration_seconds": 21.505079,
+    "question_ids": [
+      "W07-L04L15-01-30"
+    ],
+    "question_range": "17",
+    "play_count": 2,
+    "title": "地点与当前动作",
+    "section_title": "第17题｜TOCFL官方听力｜Audio TOCFL-A5-Q06",
+    "source_script_pdf": "source/A5-listen.pdf",
+    "source_script_pdf_pages": [
+      1
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：人物在办公室工作，对应B。 完整原稿见官方第5辑听力文本，第6题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 48466.4360556053,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A5-Q07",
+    "file": "audio-single/TOCFL-A5-Q07.wav",
+    "source_file": "audio/TOCFL-A5-Q07.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/009.mp3",
+    "source_volume": 5,
+    "source_question": 7,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 20.178254
+      }
+    ],
+    "source_sha256": "4dd70a97c265562bf40a5867b6e90e1c4055dfce4bbeb9a456850b5bdfb341a3",
+    "sha256": "adc8603e936ff470fcccbf89890d79225ad5a7bd9962dbf96385192589ca498e",
+    "duration_seconds": 17.978254,
+    "question_ids": [
+      "W07-L04L15-01-31"
+    ],
+    "question_range": "18",
+    "play_count": 2,
+    "title": "联系与当前动作",
+    "section_title": "第18题｜TOCFL官方听力｜Audio TOCFL-A5-Q07",
+    "source_script_pdf": "source/A5-listen.pdf",
+    "source_script_pdf_pages": [
+      2
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：图中女孩正在寄信，对应A。 完整原稿见官方第5辑听力文本，第7题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 45001.91607803572,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A5-Q08",
+    "file": "audio-single/TOCFL-A5-Q08.wav",
+    "source_file": "audio/TOCFL-A5-Q08.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/010.mp3",
+    "source_volume": 5,
+    "source_question": 8,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 27.768481
+      }
+    ],
+    "source_sha256": "7ce30e82cfe7a404e6a9889e2e30238c5155aefb41c0fbedcd727164c9d95ef8",
+    "sha256": "cdea5a9bf43b17ddb08af294da6df11ab02a36e9599769ff7d67648948569ccb",
+    "duration_seconds": 25.568481,
+    "question_ids": [
+      "W07-L04L15-01-32"
+    ],
+    "question_range": "19",
+    "play_count": 2,
+    "title": "物品与数量组合",
+    "section_title": "第19题｜TOCFL官方听力｜Audio TOCFL-A5-Q08",
+    "source_script_pdf": "source/A5-listen.pdf",
+    "source_script_pdf_pages": [
+      2
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：图中一本字典和两支毛笔，对应B。 完整原稿见官方第5辑听力文本，第8题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 65305.10290758684,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A5-Q09",
+    "file": "audio-single/TOCFL-A5-Q09.wav",
+    "source_file": "audio/TOCFL-A5-Q09.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/011.mp3",
+    "source_volume": 5,
+    "source_question": 9,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 29.953787
+      }
+    ],
+    "source_sha256": "2920478798e6a9a0bb271407764285e8922a4f064d841c52581b85979be42231",
+    "sha256": "066a07f9e74286317ab01da211d7ee1b989ca29669e1a3d3bda3ac156534161c",
+    "duration_seconds": 27.753787,
+    "question_ids": [
+      "W07-L04L15-01-33"
+    ],
+    "question_range": "20",
+    "play_count": 2,
+    "title": "同时进行的动作",
+    "section_title": "第20题｜TOCFL官方听力｜Audio TOCFL-A5-Q09",
+    "source_script_pdf": "source/A5-listen.pdf",
+    "source_script_pdf_pages": [
+      2
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：图中一边看电视一边吃东西，对应A。 完整原稿见官方第5辑听力文本，第9题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 41666.667129902635,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q09",
+    "file": "audio-single/TOCFL-A4-Q09.wav",
+    "source_file": "audio/TOCFL-A4-Q09.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/011.mp3",
+    "source_volume": 4,
+    "source_question": 9,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 22.583334
+      }
+    ],
+    "source_sha256": "b8cd8841ca501f5769cc7fcbe0e468930912019cb362d97fc01df999ccfc4def",
+    "sha256": "affa99946c3c1509c80537871a9a612712d57d93c47db80fc325d264405d17b0",
+    "duration_seconds": 20.383333,
+    "question_ids": [
+      "W07-L04L15-01-05"
+    ],
+    "question_range": "21",
+    "play_count": 2,
+    "title": "交通与准备动作",
+    "section_title": "第21题｜TOCFL官方听力｜Audio TOCFL-A4-Q09",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      2
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：人物正准备乘车，对应A。 完整原稿见官方第4辑听力文本，第9题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 0.9891713274748968,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q10",
+    "file": "audio-single/TOCFL-A4-Q10.wav",
+    "source_file": "audio/TOCFL-A4-Q10.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/012.mp3",
+    "source_volume": 4,
+    "source_question": 10,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 22.549184
+      }
+    ],
+    "source_sha256": "9eebb8768db2c600d501c96bdbcf4b674326cd210cd76f495d6c8c96a6926129",
+    "sha256": "bf98cbfa66fa89beb988ab3db820bbc340181898096e707be81384eb457dab95",
+    "duration_seconds": 20.349184,
+    "question_ids": [
+      "W07-L04L15-01-06"
+    ],
+    "question_range": "22",
+    "play_count": 2,
+    "title": "正在进行的动作",
+    "section_title": "第22题｜TOCFL官方听力｜Audio TOCFL-A4-Q10",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      2
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：图中人物正在收传真，对应A。 完整原稿见官方第4辑听力文本，第10题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 0.9652157254887291,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q11",
+    "file": "audio-single/TOCFL-A4-Q11.wav",
+    "source_file": "audio/TOCFL-A4-Q11.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/014.mp3",
+    "source_volume": 4,
+    "source_question": 11,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 12.542064
+      }
+    ],
+    "source_sha256": "a2d2d21943a8d8f998667f6520f37974d135943c9029d3c2c3b7d1828e7265fc",
+    "sha256": "8c5239ce08cc4252cb8e5496f3c3ef922777d5ef79ef56098f93349b794417bd",
+    "duration_seconds": 10.342063,
+    "question_ids": [
+      "W07-L04L15-01-07"
+    ],
+    "question_range": "23",
+    "play_count": 2,
+    "title": "结账与总价",
+    "section_title": "第23题｜TOCFL官方听力｜Audio TOCFL-A4-Q11",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      2
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：女方已吃饱，请对方计算总价；C为结账情境。 完整原稿见官方第4辑听力文本，第11题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 0.9092693826300222,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q15",
+    "file": "audio-single/TOCFL-A4-Q15.wav",
+    "source_file": "audio/TOCFL-A4-Q15.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/018.mp3",
+    "source_volume": 4,
+    "source_question": 15,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 9.620544
+      }
+    ],
+    "source_sha256": "ebb6dca9661b833b066b8c6e7c4afb5766da8db4ea26f52ec66278a85ca022b2",
+    "sha256": "68427e0dc523070b2cb05b67ccbf4a74ba27bb33732b5ddbde7594eb2cf14b6a",
+    "duration_seconds": 7.420544,
+    "question_ids": [
+      "W07-L04L15-01-08"
+    ],
+    "question_range": "24",
+    "play_count": 2,
+    "title": "回应选择与饮品",
+    "section_title": "第24题｜TOCFL官方听力｜Audio TOCFL-A4-Q15",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      3
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：女方没有选茶或咖啡，而是选啤酒，图片B。 完整原稿见官方第4辑听力文本，第15题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 0.7949389021747074,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q17",
+    "file": "audio-single/TOCFL-A4-Q17.wav",
+    "source_file": "audio/TOCFL-A4-Q17.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/020.mp3",
+    "source_volume": 4,
+    "source_question": 17,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 15.181678
+      }
+    ],
+    "source_sha256": "c5ee9e890432c996fba5a4a84315187f8d963ade2052c6e6d0df15fa9250f982",
+    "sha256": "2c88f429a367275a9b146b1d816eae67be8dd0ece316c6480e04e8430d9d97ce",
+    "duration_seconds": 12.981678,
+    "question_ids": [
+      "W07-L04L15-01-10"
+    ],
+    "question_range": "25",
+    "play_count": 2,
+    "title": "遗失物品与购买情境",
+    "section_title": "第25题｜TOCFL官方听力｜Audio TOCFL-A4-Q17",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      3
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：女方向警察说明钱包最后见于购物时，图片C。 完整原稿见官方第4辑听力文本，第17题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 0.9937602039780036,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q19",
+    "file": "audio-single/TOCFL-A4-Q19.wav",
+    "source_file": "audio/TOCFL-A4-Q19.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/022.mp3",
+    "source_volume": 4,
+    "source_question": 19,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 9.003606
+      }
+    ],
+    "source_sha256": "1eeaffe39bd9e83b5da5a66cfb75031ef47d53653ed77df8cff5ded9de7367c9",
+    "sha256": "0a1633035087bf8f641e1f71071a4d2da53888a255f7fef9be3fc2739bfd8d52",
+    "duration_seconds": 6.803605,
+    "question_ids": [
+      "W07-L04L15-01-11"
+    ],
+    "question_range": "26",
+    "play_count": 2,
+    "title": "物品的位置",
+    "section_title": "第26题｜TOCFL官方听力｜Audio TOCFL-A4-Q19",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      3
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：字典被拿到卧室，图片A。 完整原稿见官方第4辑听力文本，第19题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 0.9712379518835736,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q22",
+    "file": "audio-single/TOCFL-A4-Q22.wav",
+    "source_file": "audio/TOCFL-A4-Q22.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/025.mp3",
+    "source_volume": 4,
+    "source_question": 22,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 10.569819
+      }
+    ],
+    "source_sha256": "4e4cf5a782a576f418ac8117c140ccebcbfbc286adf3a81a908573f66099d307",
+    "sha256": "8a7692941b9b4f6af52286d5807da4d76ccbb1dd642f2113c5a72ebcf378bacd",
+    "duration_seconds": 8.369819,
+    "question_ids": [
+      "W07-L04L15-01-14"
+    ],
+    "question_range": "27",
+    "play_count": 2,
+    "title": "理解困难与求助回应",
+    "section_title": "第27题｜TOCFL官方听力｜Audio TOCFL-A4-Q22",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      4
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：女方仍然不明白要做什么，图片A。 完整原稿见官方第4辑听力文本，第22题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 0.9994205878558222,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q25",
+    "file": "audio-single/TOCFL-A4-Q25.wav",
+    "source_file": "audio/TOCFL-A4-Q25.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/028.mp3",
+    "source_volume": 4,
+    "source_question": 25,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 11.294898
+      }
+    ],
+    "source_sha256": "d843ac4f46d01144ed037cccca6f7f647a6a9de5e786e782ddd5a631da08e86e",
+    "sha256": "27f0618a7047b92b497561628a8c2b805d33cf22d560d0b76adefeb93b9225ef",
+    "duration_seconds": 9.094898,
+    "question_ids": [
+      "W07-L04L15-01-15"
+    ],
+    "question_range": "28",
+    "play_count": 2,
+    "title": "物品与并列信息",
+    "section_title": "第28题｜TOCFL官方听力｜Audio TOCFL-A4-Q25",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      4
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：洗衣机和冰箱都坏了，图片C。 完整原稿见官方第4辑听力文本，第25题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 0.9963202751502392,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q30",
+    "file": "audio-single/TOCFL-A4-Q30.wav",
+    "source_file": "audio/TOCFL-A4-Q30.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/034.mp3",
+    "source_volume": 4,
+    "source_question": 30,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 24.82814
+      }
+    ],
+    "source_sha256": "e7db46d20ee3a1df9a628064b3a4ee3eea221bf2aa95aad8f8f18a39bb342d07",
+    "sha256": "daf30aeea6d1d3f5ec6624eee5cad6f097803e5020d7dbadae14a1e9dd0ca7cb",
+    "duration_seconds": 22.628141,
+    "question_ids": [
+      "W07-L04L15-01-16"
+    ],
+    "question_range": "29",
+    "play_count": 2,
+    "title": "人物介绍与身份辨认",
+    "section_title": "第29题｜TOCFL官方听力｜Audio TOCFL-A4-Q30",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      5
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：女生家庭有父母、两个妹妹及自己，没有兄弟，图片C。 完整原稿见官方第4辑听力文本，第30题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 0.945147511742795,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q33",
+    "file": "audio-single/TOCFL-A4-Q33.wav",
+    "source_file": "audio/TOCFL-A4-Q33.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/037.mp3",
+    "source_volume": 4,
+    "source_question": 33,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 30.84882
+      }
+    ],
+    "source_sha256": "e990e1d0130ebab767625ff61549ff86c336958e0c535244d1b2b5a5642e665a",
+    "sha256": "af9ff2a69b3664ef7e05772162afca825a68fb39201f443f9387ba79f7b168c5",
+    "duration_seconds": 28.648821,
+    "question_ids": [
+      "W07-L04L15-01-17"
+    ],
+    "question_range": "30",
+    "play_count": 2,
+    "title": "教师指令与回应",
+    "section_title": "第30题｜TOCFL官方听力｜Audio TOCFL-A4-Q33",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      6
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：老师让月华到黑板回答问题，图片B。 完整原稿见官方第4辑听力文本，第33题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 0.997375884076537,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q34",
+    "file": "audio-single/TOCFL-A4-Q34.wav",
+    "source_file": "audio/TOCFL-A4-Q34.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/038.mp3",
+    "source_volume": 4,
+    "source_question": 34,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 23.129365
+      }
+    ],
+    "source_sha256": "286c31fd2cef6095040cba91faec6148b6ac281ccda39d919093f49518586892",
+    "sha256": "bdc618a52f4e7d3a98bdfe3e9e306a0d3f05a93453bc8277e1df237f33cc0de5",
+    "duration_seconds": 20.929365,
+    "question_ids": [
+      "W07-L04L15-01-18"
+    ],
+    "question_range": "31",
+    "play_count": 2,
+    "title": "交通物品与请求帮助",
+    "section_title": "第31题｜TOCFL官方听力｜Audio TOCFL-A4-Q34",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      6
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：要寻找即将登机所需的机票，图片B。 完整原稿见官方第4辑听力文本，第34题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 0.9888385184790341,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A5-Q12",
+    "file": "audio-single/TOCFL-A5-Q12.wav",
+    "source_file": "audio/TOCFL-A5-Q12.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/015.mp3",
+    "source_volume": 5,
+    "source_question": 12,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 6.55034
+      }
+    ],
+    "source_sha256": "605aff8ae3387bb264eac96a4a346918b5c918770266dfb77ad6d5b2cac1ef5a",
+    "sha256": "3f81b5e5342268fa8dd948da5c5cd6f87138c12d1073652b123bfc9e4833f502",
+    "duration_seconds": 4.35034,
+    "question_ids": [
+      "W07-L04L15-01-34"
+    ],
+    "question_range": "32",
+    "play_count": 2,
+    "title": "邀请与答应",
+    "section_title": "第32题｜TOCFL官方听力｜Audio TOCFL-A5-Q12",
+    "source_script_pdf": "source/A5-listen.pdf",
+    "source_script_pdf_pages": [
+      2
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：女方邀请去博物馆，男方答应；图片A。 完整原稿见官方第5辑听力文本，第12题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 144203.23168451432,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A5-Q15",
+    "file": "audio-single/TOCFL-A5-Q15.wav",
+    "source_file": "audio/TOCFL-A5-Q15.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/018.mp3",
+    "source_volume": 5,
+    "source_question": 15,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 9.83195
+      }
+    ],
+    "source_sha256": "c17d3723be7ea8ac67a07c033fbdbaf35b100e5942519f8b4e0b222aa984230e",
+    "sha256": "9ae7e219ea2771880c3ca2ddeb1d17d207a369c86186c0e4bdab79030002cbc5",
+    "duration_seconds": 7.63195,
+    "question_ids": [
+      "W07-L04L15-01-36"
+    ],
+    "question_range": "33",
+    "play_count": 2,
+    "title": "辨认人物特征",
+    "section_title": "第33题｜TOCFL官方听力｜Audio TOCFL-A5-Q15",
+    "source_script_pdf": "source/A5-listen.pdf",
+    "source_script_pdf_pages": [
+      3
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：妹妹为短发、戴眼镜的人；图片C。 完整原稿见官方第5辑听力文本，第15题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 96932.8721112106,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A5-Q18",
+    "file": "audio-single/TOCFL-A5-Q18.wav",
+    "source_file": "audio/TOCFL-A5-Q18.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/021.mp3",
+    "source_volume": 5,
+    "source_question": 18,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 12.397574
+      }
+    ],
+    "source_sha256": "973ac70619a12492f03992dcc6ab71040073a101c65e0208ded4d76fc37aa42a",
+    "sha256": "fce5e06df88cee0c6eb359d271f342e44a9af27180e313e2f1fbb56aa5465368",
+    "duration_seconds": 10.197574,
+    "question_ids": [
+      "W07-L04L15-01-38"
+    ],
+    "question_range": "34",
+    "play_count": 2,
+    "title": "物品位置",
+    "section_title": "第34题｜TOCFL官方听力｜Audio TOCFL-A5-Q18",
+    "source_script_pdf": "source/A5-listen.pdf",
+    "source_script_pdf_pages": [
+      3
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：小说留在浴室；图片A。 完整原稿见官方第5辑听力文本，第18题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 93688.96826345008,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A5-Q19",
+    "file": "audio-single/TOCFL-A5-Q19.wav",
+    "source_file": "audio/TOCFL-A5-Q19.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/022.mp3",
+    "source_volume": 5,
+    "source_question": 19,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 11.193446
+      }
+    ],
+    "source_sha256": "1e440c8bfb697ccabec2f8ee1a124cdf41e808fade51ba7a3da19ad77b545a99",
+    "sha256": "2d8aa2c4691cc188bddeac81c0032c25d5a5962093ba1355788e3bd9623c8e07",
+    "duration_seconds": 8.993447,
+    "question_ids": [
+      "W07-L04L15-01-39"
+    ],
+    "question_range": "35",
+    "play_count": 2,
+    "title": "礼物与位置",
+    "section_title": "第35题｜TOCFL官方听力｜Audio TOCFL-A5-Q19",
+    "source_script_pdf": "source/A5-listen.pdf",
+    "source_script_pdf_pages": [
+      3
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：所送的画挂在冰箱后面的墙上；图片A。 完整原稿见官方第5辑听力文本，第19题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 64236.114667437505,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q21",
+    "file": "audio-single/TOCFL-A4-Q21.wav",
+    "source_file": "audio/TOCFL-A4-Q21.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/024.mp3",
+    "source_status": "official original first rendition; repeated rendition trimmed",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 9.44
+      }
+    ],
+    "source_sha256": "ce295db849f3a117c00f334c30ac0baddc892d2f9f96a42a020f7e42e893b385",
+    "sha256": "642fd243b80e33fb1bfc302a48d5f3f6e6322db0ebea042a6d8b3ddbf36cdef1",
+    "duration_seconds": 7.24,
+    "question_ids": [
+      "W07-L04L15-03-48"
+    ],
+    "question_range": "36",
+    "play_count": 2,
+    "title": "电话联系",
+    "section_title": "第36题｜TOCFL官方短对话｜Audio A4-21",
+    "semantic_status": "official script matched to adapted one-detail question; teacher listening pending",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "TOCFL Band A第4辑第21题；改写问题答案A。",
+    "clip_policy": "first_complete_original_rendition",
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q27",
+    "file": "audio-single/TOCFL-A4-Q27.wav",
+    "source_file": "audio/TOCFL-A4-Q27.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/031.mp3",
+    "source_status": "official original first rendition; repeated rendition trimmed",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 20.79288
+      }
+    ],
+    "source_sha256": "7db19cb99d5e02e420bed421134dd89713e0d9ca7d509800b453eb8dce8be5d7",
+    "sha256": "f1d2f665470add2577661590be5a91131790ab84cd81b7b0ee4a0823cc9a7c06",
+    "duration_seconds": 18.59288,
+    "question_ids": [
+      "W07-L04L15-03-49"
+    ],
+    "question_range": "37",
+    "play_count": 2,
+    "title": "点餐饮料",
+    "section_title": "第37题｜TOCFL官方短对话｜Audio A4-27",
+    "semantic_status": "official script matched to adapted one-detail question; teacher listening pending",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "TOCFL Band A第4辑第27题；改写问题答案A。",
+    "clip_policy": "first_complete_original_rendition",
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q35",
+    "file": "audio-single/TOCFL-A4-Q35.wav",
+    "source_file": "audio/TOCFL-A4-Q35.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/039.mp3",
+    "source_status": "official original first rendition; repeated rendition trimmed",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 24.698481
+      }
+    ],
+    "source_sha256": "ccef59890835708c3c7ba9bab7ddb9cd9cd9b9f34cde1a8abe07361ef2de8b60",
+    "sha256": "7362c5d5cf9d02f2e563976c46a7ee8fe5e425abe7a9730cf2ea342989f4e83f",
+    "duration_seconds": 22.498481,
+    "question_ids": [
+      "W07-L04L15-03-50"
+    ],
+    "question_range": "38",
+    "play_count": 2,
+    "title": "晚餐准备",
+    "section_title": "第38题｜TOCFL官方短对话｜Audio A4-35",
+    "semantic_status": "official script matched to adapted one-detail question; teacher listening pending",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "TOCFL Band A第4辑第35题；改写问题答案A。",
+    "clip_policy": "first_complete_original_rendition",
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q43",
+    "file": "audio-single/TOCFL-A4-Q43.wav",
+    "source_file": "audio/TOCFL-A4-Q43.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/048.mp3",
+    "source_volume": 4,
+    "source_question": 43,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 46.834376
+      }
+    ],
+    "source_sha256": "6684a0aedd0d972149a05fd58fc7531d90e310feb78d57738ca5c8c5f3ee7ec9",
+    "sha256": "8aefa5611f0c523b8f38aeae7dfa5d09154c57509005f942e9be3554dcd94f69",
+    "duration_seconds": 44.634376,
+    "question_ids": [
+      "W07-L04L15-01-35"
+    ],
+    "question_range": "39",
+    "play_count": 2,
+    "title": "职业身份与服务回应",
+    "section_title": "第39题｜TOCFL官方听力｜Audio TOCFL-A4-Q43",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      8
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：谈话围绕顾客、经理和餐饮服务，男方身份是服务生；D。 完整原稿见官方第4辑听力文本，第43题。",
+    "clip_policy": "complete_single_official_part4_question_with_spoken_answer_options_retained",
+    "first_second_rendition_waveform_correlation": null,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "BOYA-L15-15-11",
+    "file": "audio-single/BOYA-L15-15-11.wav",
+    "source_file": "audio/BOYA-L15-15-11.mp3",
+    "source_origin": "/Users/ssyan110/Desktop/Work/teaching/vinh-university/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第15课/15-11.mp3",
+    "source_url": null,
+    "source_status": "publisher textbook audio track 15-11; original MP3 copied without speech edits",
+    "source_segments": [
+      {
+        "start_seconds": 0.0,
+        "end_seconds": 39.601633
+      }
+    ],
+    "source_sha256": "7d39198465dcf1f0582474a78d82f487e8014744cbfeb1f55c2f17d5146852e1",
+    "sha256": "6940f28d3bdd67442c77b409640007e0181f0f6be1609eb3c94618789668a9eb",
+    "duration_seconds": 39.601633,
+    "question_ids": [
+      "W07-L04L15-02-12",
+      "W07-L04L15-02-13"
+    ],
+    "question_range": "40–41",
+    "play_count": 2,
+    "title": "第15课短对话｜请假与机场接人",
+    "section_title": "第40–41题｜第15课课本原音｜Audio 15-11",
+    "source_lesson_key": "boya-elementary-i:lesson-15",
+    "source_textbook_printed_page": 126,
+    "source_textbook_exercise": "15-11",
+    "semantic_status": "textbook track number matched; teacher full listening and question-to-audio semantic review pending",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "教材P126听力练习15-11；完整出版社原音。教师答案依据为教材印出的两道问题及标准选项。",
+    "clip_policy": "complete_original_publisher_track_no_trim_no_resynthesis",
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q16",
+    "file": "audio-single/TOCFL-A4-Q16.wav",
+    "source_file": "audio/TOCFL-A4-Q16.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/019.mp3",
+    "source_volume": 4,
+    "source_question": 16,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 16.191746
+      }
+    ],
+    "source_sha256": "24b3f33ebf1a685215166a3968c716acce8e184263117317b913390cbd081f76",
+    "sha256": "32303762dfd61382b9aeadb522c9bfbf990a39da445328d9e16f30f63a165195",
+    "duration_seconds": 13.991746,
+    "question_ids": [
+      "W07-L04L15-01-09"
+    ],
+    "question_range": "42",
+    "play_count": 2,
+    "title": "位置与交通路线",
+    "section_title": "第42题｜TOCFL官方听力｜Audio TOCFL-A4-Q16",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      3
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：路线先直走，在第二个路口左转，图片A。 完整原稿见官方第4辑听力文本，第16题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 0.9949830353874517,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q36",
+    "file": "audio-single/TOCFL-A4-Q36.wav",
+    "source_file": "audio/TOCFL-A4-Q36.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/040.mp3",
+    "source_volume": 4,
+    "source_question": 36,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 33.845374
+      }
+    ],
+    "source_sha256": "bf60b848e0bc94eb45b66a808adfc7a95fb93b28b31c322376648244681087eb",
+    "sha256": "81d9c8c51b681857b7e059ab9f1f524ffc09cdd366d596b16052908dee41aef4",
+    "duration_seconds": 31.645374,
+    "question_ids": [
+      "W07-L04L15-01-19"
+    ],
+    "question_range": "43",
+    "play_count": 2,
+    "title": "居住环境与交通",
+    "section_title": "第43题｜TOCFL官方听力｜Audio TOCFL-A4-Q36",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      6
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：住处交通不便，因此学会开车，图片C。 完整原稿见官方第4辑听力文本，第36题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 0.9961325200169762,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q38",
+    "file": "audio-single/TOCFL-A4-Q38.wav",
+    "source_file": "audio/TOCFL-A4-Q38.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/042.mp3",
+    "source_volume": 4,
+    "source_question": 38,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 28.897414
+      }
+    ],
+    "source_sha256": "73bc9a0628702ee2f4775f34649a39b708f2dcded7ac9c4dd7c242e0c95e225a",
+    "sha256": "984632c763d4a0eaf8ed357457f3089a382276c4d061ce7b3b8086413ef0bffd",
+    "duration_seconds": 26.697415,
+    "question_ids": [
+      "W07-L04L15-01-20"
+    ],
+    "question_range": "44",
+    "play_count": 2,
+    "title": "假期计划与交通",
+    "section_title": "第44题｜TOCFL官方听力｜Audio TOCFL-A4-Q38",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      7
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：女方计划搭飞机去英国看朋友，图片A。 完整原稿见官方第4辑听力文本，第38题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 0.9965853885835496,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q40",
+    "file": "audio-single/TOCFL-A4-Q40.wav",
+    "source_file": "audio/TOCFL-A4-Q40.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/044.mp3",
+    "source_volume": 4,
+    "source_question": 40,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 26.820998
+      }
+    ],
+    "source_sha256": "1a25faea0d24ce9ceb95100fb5b5c726bd6578405c33a0d2ccb5c35596b596d5",
+    "sha256": "feadc8249b1a1c5091e5fd6ec46e4697465d4b5b06830a24bb04e7e75456e2bb",
+    "duration_seconds": 24.620998,
+    "question_ids": [
+      "W07-L04L15-01-21"
+    ],
+    "question_range": "45",
+    "play_count": 2,
+    "title": "房屋特点与价格比较",
+    "section_title": "第45题｜TOCFL官方听力｜Audio TOCFL-A4-Q40",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      7
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：选择先前看过、楼梯在室外且便宜两千元的房子，图片C。 完整原稿见官方第4辑听力文本，第40题。",
+    "clip_policy": "one_complete_first_rendition_including_original_question_and_spoken_options_when_present",
+    "first_second_rendition_waveform_correlation": 0.9618081962735152,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q42",
+    "file": "audio-single/TOCFL-A4-Q42.wav",
+    "source_file": "audio/TOCFL-A4-Q42.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/047.mp3",
+    "source_volume": 4,
+    "source_question": 42,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 52.923606
+      }
+    ],
+    "source_sha256": "f063dd6a98dba0dc306cf5198ff8a3af5cd5878d11ad9fc9040aba60bda08748",
+    "sha256": "d7229c762661d8e637a2632eea01f3c134185da90010645e96554ffea830ffdf",
+    "duration_seconds": 50.723605,
+    "question_ids": [
+      "W07-L04L15-01-23"
+    ],
+    "question_range": "46",
+    "play_count": 2,
+    "title": "关系与费用信息",
+    "section_title": "第46题｜TOCFL官方听力｜Audio TOCFL-A4-Q42",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      8
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：妈妈想先了解女儿将来读大学的费用；B。 完整原稿见官方第4辑听力文本，第42题。",
+    "clip_policy": "complete_single_official_part4_question_with_spoken_answer_options_retained",
+    "first_second_rendition_waveform_correlation": null,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q45",
+    "file": "audio-single/TOCFL-A4-Q45.wav",
+    "source_file": "audio/TOCFL-A4-Q45.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/050.mp3",
+    "source_volume": 4,
+    "source_question": 45,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 54.833605
+      }
+    ],
+    "source_sha256": "4b8755120c9c7c792342025051efdb0049084aeb836e164570841d226d7ab5c2",
+    "sha256": "94d741a5924a24a3d3a078677fd24cc54282146fd299fec08803833e78990a56",
+    "duration_seconds": 52.633605,
+    "question_ids": [
+      "W07-L04L15-01-24"
+    ],
+    "question_range": "47",
+    "play_count": 2,
+    "title": "认识他人与交流",
+    "section_title": "第47题｜TOCFL官方听力｜Audio TOCFL-A4-Q45",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      8
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：男方说他与第一次见面的明美聊得愉快；A。 完整原稿见官方第4辑听力文本，第45题。",
+    "clip_policy": "complete_single_official_part4_question_with_spoken_answer_options_retained",
+    "first_second_rendition_waveform_correlation": null,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q46",
+    "file": "audio-single/TOCFL-A4-Q46.wav",
+    "source_file": "audio/TOCFL-A4-Q46.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/051.mp3",
+    "source_volume": 4,
+    "source_question": 46,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 54.700408
+      }
+    ],
+    "source_sha256": "742430d98bfa0f62b506ad6c85155674eefae281a06163a513c9ba12c672d7c4",
+    "sha256": "3ecde6149e35041bb4da1c6886e7bcdc89115e36d53ba72cffc583798049df1e",
+    "duration_seconds": 52.500408,
+    "question_ids": [
+      "W07-L04L15-01-25"
+    ],
+    "question_range": "48",
+    "play_count": 2,
+    "title": "约会时间与态度",
+    "section_title": "第48题｜TOCFL官方听力｜Audio TOCFL-A4-Q46",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      8
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：女方迟到且反复使用同样理由，男方不高兴；B。 完整原稿见官方第4辑听力文本，第46题。",
+    "clip_policy": "complete_single_official_part4_question_with_spoken_answer_options_retained",
+    "first_second_rendition_waveform_correlation": null,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q41",
+    "file": "audio-single/TOCFL-A4-Q41.wav",
+    "source_file": "audio/TOCFL-A4-Q41.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/046.mp3",
+    "source_volume": 4,
+    "source_question": 41,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 55.358435
+      }
+    ],
+    "source_sha256": "c042a48546e239311876967f78c7b7d25979c9d2b8e2d46d37ba978d8dc062c3",
+    "sha256": "2c1215af03a22a5e42ffb59826df6aad0262adb5ef22262aaf427694008212e8",
+    "duration_seconds": 53.158435,
+    "question_ids": [
+      "W07-L04L15-01-22"
+    ],
+    "question_range": "49",
+    "play_count": 2,
+    "title": "方向与行动指令",
+    "section_title": "第49题｜TOCFL官方听力｜Audio TOCFL-A4-Q41",
+    "source_script_pdf": "source/A4-listen.pdf",
+    "source_script_pdf_pages": [
+      7
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：男方让大家朝楼梯方向走，不要搭电梯；C。 完整原稿见官方第4辑听力文本，第41题。",
+    "clip_policy": "complete_single_official_part4_question_with_spoken_answer_options_retained",
+    "first_second_rendition_waveform_correlation": null,
+    "speech_modified": false
+  },
+  {
+    "audio_id": "TOCFL-A5-Q42",
+    "file": "audio-single/TOCFL-A5-Q42.wav",
+    "source_file": "audio/TOCFL-A5-Q42.mp3",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/047.mp3",
+    "source_volume": 5,
+    "source_question": 42,
+    "source_status": "official_original_speech_excerpt_no_resynthesis",
+    "source_segments": [
+      {
+        "start_seconds": 2.2,
+        "end_seconds": 58.524172
+      }
+    ],
+    "source_sha256": "6f6c97d8fdc6516231d2709197868100fde6998a51bf8693fbd5876e5ec39754",
+    "sha256": "87c74f0d97300cec13b033ebb1373707fe28534875a1a6b3db7959a6ee5731bb",
+    "duration_seconds": 56.324172,
+    "question_ids": [
+      "W07-L04L15-01-37"
+    ],
+    "question_range": "50",
+    "play_count": 2,
+    "title": "旅行交通与遗失物品",
+    "section_title": "第50题｜TOCFL官方听力｜Audio TOCFL-A5-Q42",
+    "source_script_pdf": "source/A5-listen.pdf",
+    "source_script_pdf_pages": [
+      7
+    ],
+    "semantic_status": "official_question_script_key_and_source_label_mapping_reviewed",
+    "technical_decode": "pass",
+    "teacher_listening_accepted": false,
+    "classroom_speaker_acceptance": false,
+    "script": "内容摘要（非逐字稿）：交通、风景和行程均满意，但回国时钱包遗落旅馆；A。 完整原稿见官方第5辑听力文本，第42题。",
+    "clip_policy": "complete_single_official_part4_question_with_spoken_answer_options_retained",
+    "first_second_rendition_waveform_correlation": null,
+    "speech_modified": false
+  }
+]

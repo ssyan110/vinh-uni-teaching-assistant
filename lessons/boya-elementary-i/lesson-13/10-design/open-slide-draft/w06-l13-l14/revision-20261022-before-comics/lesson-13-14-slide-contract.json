@@ -1,0 +1,246 @@
+{
+  "schema_version": "classroom-slide-contract-v1",
+  "offering_id": "2026-fall",
+  "owner_lesson_key": "boya-elementary-i:lesson-13",
+  "lesson_keys": [
+    "boya-elementary-i:lesson-13",
+    "boya-elementary-i:lesson-14"
+  ],
+  "source_identity": {
+    "textbook_id": "boya-elementary-i",
+    "owner_lesson_key": "boya-elementary-i:lesson-13",
+    "path": "lessons/boya-elementary-i/lesson-13/00-source/canonical-source.json",
+    "sha256": "dc74200a92a3e637ee4709ce37cd429205b05d0b7bf9a07c634954b510e846ad"
+  },
+  "copy_inputs": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-逐页文案审阅-v02.md",
+      "sha256": "b6b0d1d40b71b124e6432d0ed8d7cf2a8dacf0c9355d3aa3940cdcf8b96d53b7",
+      "page_scope": "student pages 1–12; exact wording is the human-reviewed v02 copy"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-逐页文案审阅-v03.md",
+      "sha256": "01164faac085ac28bf3fa3bb96568412f6b4f8e9c54b7e8d2b3809d72f704328",
+      "page_scope": "student pages 13–18; question-only pages are followed by paired HSK support pages"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/storyboard/lesson-13-逐页文案审阅.md",
+      "sha256": "d9d85637cd989c3a877b800429630fa3e3a1e7987664ae479bdd87c59c548b9a",
+      "page_scope": "merged human review map; records the v02/v03 page ranges and page 10 punctuation normalization"
+    }
+  ],
+  "decision_inputs": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/storyboard/lesson-13-content-approval-evidence-2026-10-20-w06-paired-pages.md",
+      "sha256": "11df6f457b46710bcffd34c23fdb82546f76ca3ee1953746a63aa2c59a1b7b32",
+      "scope": "direct user decision record for question/support page pairing on pages 13–18"
+    }
+  ],
+  "references": {
+    "cover": {
+      "path": "lessons/boya-elementary-i/lesson-09-10/10-design/openslide-image-first-20261006/lesson-09-10.html",
+      "sha256": "b15e98e2c020c4455f106c7982365e003bf8f2e0cc14e5815f45d35931caac63",
+      "page_index": 0
+    },
+    "route": {
+      "path": "lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12-v09-readable/lesson-11-12-实体课.html",
+      "sha256": "3ff376220782b1c31e706a44d8c9c539230625c0a930e852d2f3d43fee812ffb",
+      "page_index": 1
+    }
+  },
+  "footer_text": "博雅汉语 · 初级口语活动",
+  "normalization_exceptions": [
+    "Page 10 in v02 ends with malformed repeated full stops and an empty underline. The merged reviewed copy records the approved normalized answer; expected_text uses the full-stop sentence ending and one set of blanks. No other copy punctuation is normalized."
+  ],
+  "pages": [
+    {
+      "id": "w06-cover",
+      "role": "cover",
+      "expected_text_source": "v02 §第1页｜封面 plus established cover/footer chrome",
+      "expected_text": "第13—14课 · 实体课 购物与生日 在荣市和台北的生活场景里选衣服、安排生日活动。 博雅汉语 · 初级口语活动 01 / 18",
+      "expected_images": [
+        "assets/cover-shopping-birthday.png"
+      ]
+    },
+    {
+      "id": "w06-route",
+      "role": "route",
+      "expected_route_cards": 4,
+      "expected_route_columns": 4,
+      "footer_exempt": true,
+      "expected_text_source": "v02 §第2页｜今天我们会做什么 plus established route heading",
+      "expected_text": "今天我们会做什么 个人报告 线上口语作业 听故事 记关键词并复述 看图说故事 讨论 选择、安排并汇报",
+      "expected_images": [
+        "assets/icons/conversation.png",
+        "assets/icons/listen.png",
+        "assets/icons/book-pencil.png",
+        "assets/icons/shopping-bag.png"
+      ]
+    },
+    {
+      "id": "w06-l13-listening",
+      "role": "activity",
+      "expected_text_source": "v02 §第3页｜第13课听力; approved prompt includes 他为什么",
+      "expected_text": "第13课 · 实体课 活动13-1｜听故事，记关键词 阿明在荣市买衣服 听老师读两次，记关键词： 1 什么衣服？ 2 什么颜色？ 3 多少钱？ 4 他为什么买这件？ 5 最后买了吗？ 博雅汉语 · 初级口语活动 03 / 18",
+      "expected_images": [
+        "assets/icons/listen.png"
+      ]
+    },
+    {
+      "id": "w06-l13-retell",
+      "role": "activity",
+      "expected_text_source": "v02 §第4页｜核对关键词，说出阿明的故事 plus established paired-flow labels",
+      "expected_text": "第13课 · 实体课 活动13-1｜核对关键词并复述 核对关键词，说出阿明的故事 先和同学核对 → 再用完整句子说出阿明买衣服的经过 基础 HSK 1–3 说说衣服、颜色、价格和最后的选择。 挑战 HSK 4–6 比较他看过的衣服，说说他决定的理由。 博雅汉语 · 初级口语活动 04 / 18",
+      "expected_images": [
+        "assets/icons/notes.png",
+        "assets/icons/conversation.png"
+      ]
+    },
+    {
+      "id": "w06-l14-listening",
+      "role": "activity",
+      "expected_text_source": "v02 §第5页｜第14课听力",
+      "expected_text": "第14课 · 实体课 活动14-1｜听故事，记关键词 越南学生在台北过生日 听老师读两次，记关键词： 1 谁？ 2 什么时候？ 3 在哪里？ 4 礼物是什么？ 5 先做什么，然后做什么？ 博雅汉语 · 初级口语活动 05 / 18",
+      "expected_images": [
+        "assets/icons/listen.png"
+      ]
+    },
+    {
+      "id": "w06-l14-retell",
+      "role": "activity",
+      "expected_text_source": "v02 §第6页｜核对关键词，介绍生日安排 plus established paired-flow labels",
+      "expected_text": "第14课 · 实体课 活动14-1｜核对关键词并介绍 核对关键词，介绍生日安排 先和同学核对关键词 → 再介绍小兰的生日安排 基础 HSK 1–3 说说人物、时间、地点、礼物和活动顺序。 挑战 HSK 4–6 按准备过程和时间顺序完整复述，并说说你觉得怎么样。 博雅汉语 · 初级口语活动 06 / 18",
+      "expected_images": [
+        "assets/icons/notes.png",
+        "assets/icons/conversation.png"
+      ]
+    },
+    {
+      "id": "w06-l13-comic",
+      "role": "comic",
+      "expected_text_source": "v02 §第7页｜看图说故事; only established title and footer are visible beside the comic image",
+      "expected_text": "看图说故事 博雅汉语 · 初级口语活动 07 / 18",
+      "expected_images": [
+        "assets/comic-l13-taipei-night-market.png"
+      ]
+    },
+    {
+      "id": "w06-l14-comic",
+      "role": "comic",
+      "expected_text_source": "v02 §第8页｜看图说故事; only established title and footer are visible beside the comic image",
+      "expected_text": "看图说故事 博雅汉语 · 初级口语活动 08 / 18",
+      "expected_images": [
+        "assets/comic-l14-vinh-birthday.png"
+      ]
+    },
+    {
+      "id": "w06-l13-choice",
+      "role": "activity",
+      "expected_text_source": "v02 §第9页｜帮台湾朋友挑衣服; prompt, budget, all simulated prices, quality, and both speaking levels",
+      "expected_text": "第13课 · 实体课 活动13-3｜帮台湾朋友挑衣服 帮台湾朋友挑衣服 台湾朋友喜欢蓝色，也重视质量，预算最多 200,000 越南盾。两人讨论，推荐一件衣服，并说明理由。 A · 蓝色 240,000₫ 质量挺好 B · 黑色 200,000₫ 质量很好 C · 浅蓝色 160,000₫ 质量还可以 基础 HSK 1–3 说颜色、质量、价格、钱不够怎么办、为什么。 挑战 HSK 4–6 比较三件衣服的价格和质量，说说你选哪件，钱不够怎么办，为什么。 博雅汉语 · 初级口语活动 09 / 18",
+      "expected_images": [
+        "assets/shirt-a-blue.png",
+        "assets/shirt-b-black.jpg",
+        "assets/shirt-c-light-blue.jpg"
+      ]
+    },
+    {
+      "id": "w06-l13-report",
+      "role": "report",
+      "expected_text_source": "v02 §第10页 plus merged reviewed copy's explicit punctuation/blank normalization",
+      "expected_text": "第13课 · 实体课 活动13-3｜汇报选择 汇报选择 HSK 1–3｜参考回答 我们推荐____。它是____色的，质量____，价格是____越南盾。 博雅汉语 · 初级口语活动 10 / 18",
+      "expected_images": []
+    },
+    {
+      "id": "w06-l14-party-plan",
+      "role": "activity",
+      "expected_text_source": "v02 §第11页｜为台湾朋友安排荣市生日聚会; prompt preserves source punctuation",
+      "expected_text": "第14课 · 实体课 活动14-3｜安排生日活动 为台湾朋友安排荣市生日聚会 十二月二十五日，一位台湾朋友第一次在荣市过生日。3—4人一组，为他安排晚上6点到8点的活动。 一起决定：什么时候、在哪、做什么、特色、理由 基础 HSK 1–3 说说你们的安排，然后说为什么。 挑战 HSK 4–6 比较室内和室外活动，说说你最后的安排和理由。 博雅汉语 · 初级口语活动 11 / 18",
+      "expected_images": []
+    },
+    {
+      "id": "w06-l14-report",
+      "role": "report",
+      "expected_text_source": "v02 §第12页｜汇报生日计划",
+      "expected_text": "第14课 · 实体课 活动14-3｜汇报生日计划 汇报生日计划 HSK 1–3｜参考回答 我们打算在____庆祝。先____，然后____，最后____。那个餐厅/咖啡馆/地方的特色是____。我们这样安排，是因为____。 博雅汉语 · 初级口语活动 12 / 18",
+      "expected_images": []
+    },
+    {
+      "id": "w06-life-vinh-shopping-question",
+      "role": "discussion_question",
+      "pair_key": "vinh-shopping",
+      "expected_text_source": "v03 §第13页｜在荣市买衣服题目页; direct question-only page decision",
+      "expected_text": "第13课 · 实体课 开放讨论 在荣市买衣服 在荣市买衣服，你比较喜欢去服装店，还是在网上买？为什么？ 博雅汉语 · 初级口语活动 13 / 18",
+      "expected_images": []
+    },
+    {
+      "id": "w06-life-vinh-shopping-support",
+      "role": "discussion_support",
+      "pair_key": "vinh-shopping",
+      "level_labels": [
+        "HSK 1–3",
+        "HSK 4–6"
+      ],
+      "expected_text_source": "v03 §第14页｜在荣市买衣服双等级支持页",
+      "expected_text": "第13课 · 实体课 开放讨论 在荣市买衣服 HSK 1–3 我比较喜欢____，因为____。去____买的时候，我可以____。 HSK 4–6 请选两个地方，比较优点和缺点。 博雅汉语 · 初级口语活动 14 / 18",
+      "expected_images": []
+    },
+    {
+      "id": "w06-life-vietnam-birthday-question",
+      "role": "discussion_question",
+      "pair_key": "vietnam-birthday",
+      "expected_text_source": "v03 §第15页｜给台湾朋友过生日题目页; direct question-only page decision",
+      "expected_text": "第14课 · 实体课 开放讨论 给台湾朋友过生日 农历春节的时候，台湾朋友在河内过生日，你想带他去哪里？送什么礼物？为什么？ 博雅汉语 · 初级口语活动 15 / 18",
+      "expected_images": []
+    },
+    {
+      "id": "w06-life-vietnam-birthday-support",
+      "role": "discussion_support",
+      "pair_key": "vietnam-birthday",
+      "level_labels": [
+        "HSK 1–3",
+        "HSK 4–6"
+      ],
+      "expected_text_source": "v03 §第16页｜给台湾朋友过生日双等级支持页",
+      "expected_text": "第14课 · 实体课 开放讨论 给台湾朋友过生日 HSK 1–3 我想带他去____。我们先____，然后____。我准备送他____，因为____。 HSK 4–6 请选两个地方，比较优点和缺点。 博雅汉语 · 初级口语活动 16 / 18",
+      "expected_images": []
+    },
+    {
+      "id": "w06-life-taipei-birthday-question",
+      "role": "discussion_question",
+      "pair_key": "taipei-birthday",
+      "expected_text_source": "v03 §第17页｜如果你在台北过生日题目页",
+      "expected_text": "第14课 · 实体课 开放讨论 如果你在台北过生日 生日的时候，你正在台北旅游，你打算如何过生日？请你安排一天的计划。 博雅汉语 · 初级口语活动 17 / 18",
+      "expected_images": []
+    },
+    {
+      "id": "w06-life-taipei-birthday-support",
+      "role": "discussion_support",
+      "pair_key": "taipei-birthday",
+      "level_labels": [
+        "HSK 1–3",
+        "HSK 4–6"
+      ],
+      "expected_text_source": "v03 §第18页｜如果你在台北过生日双等级支持页",
+      "expected_text": "第14课 · 实体课 开放讨论 如果你在台北过生日 HSK 1–3 和谁、去哪、做什么、吃什么、喝什么、看什么、为什么。 HSK 4–6 选两个地方，比较优缺点，再按时间顺序介绍一天的计划，并说明理由。 博雅汉语 · 初级口语活动 18 / 18",
+      "expected_images": []
+    }
+  ],
+  "page_pairs": [
+    {
+      "question_id": "w06-life-vinh-shopping-question",
+      "support_id": "w06-life-vinh-shopping-support",
+      "topic": "在荣市买衣服"
+    },
+    {
+      "question_id": "w06-life-vietnam-birthday-question",
+      "support_id": "w06-life-vietnam-birthday-support",
+      "topic": "给台湾朋友过生日"
+    },
+    {
+      "question_id": "w06-life-taipei-birthday-question",
+      "support_id": "w06-life-taipei-birthday-support",
+      "topic": "如果你在台北过生日"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "all_rows_match_latest_live_snapshot": true,
+  "tables": 17,
+  "migrations": 30,
+  "counts": {
+    "academic_terms": 1,
+    "courses": 4,
+    "students": 99,
+    "enrollments": 100,
+    "class_sessions": 18,
+    "attendance_records": 7,
+    "observation_records": 0,
+    "followups": 0,
+    "learning_events": 135,
+    "randomizer_sessions": 17,
+    "randomizer_attempts": 690,
+    "student_notes": 29,
+    "interact_rooms": 5,
+    "interact_responses": 41,
+    "class_session_corrections": 6,
+    "classroom_record_corrections": 3,
+    "attendance_exceptions": 0
+  },
+  "managed_auth_credentials_excluded": true,
+  "snapshot_sha256": "9f3c454c43e4440e1595d7e6bd6b50ece6016623e9578f33908332b6932bd583"
+}

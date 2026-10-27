@@ -1,0 +1,26 @@
+{
+  "lesson_key": "boya-elementary-i:lesson-13",
+  "offering_id": "2026-fall",
+  "gate": "lesson-content",
+  "status": "approved",
+  "approved_by": "Adam",
+  "approved_at": "2026-10-22T21:47:04.305264+07:00",
+  "timestamp_basis": "Current conversation: Adam approved exact reordered sequence then replied 可以 to both concrete six-panel replacement stories.",
+  "artifacts": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/00-source/canonical-source.json",
+      "sha256": "dc74200a92a3e637ee4709ce37cd429205b05d0b7bf9a07c634954b510e846ad"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/storyboard/lesson-13-逐页文案审阅.md",
+      "sha256": "d9d85637cd989c3a877b800429630fa3e3a1e7987664ae479bdd87c59c548b9a"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-漫画替换情节审阅.md",
+      "sha256": "28e4c2d2e058e87b15476a7d5b2de26b1371b6217a89ec992614a49028cfc991"
+    }
+  ],
+  "evidence": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-漫画及顺序批准证据-20261022.md",
+  "evidence_sha256": "0df4d4679ec8921ca0f5a9bc30c80d24b37b2d6f5d91ddb5e9c907187113a552",
+  "scope": "Current student slide content accepted by Adam; exact six-panel replacement comics and reordered page sequence. Excludes drifted teacher-reading texts, classroom acceptance and formal release. Previous broader approval preserved in revision backup."
+}

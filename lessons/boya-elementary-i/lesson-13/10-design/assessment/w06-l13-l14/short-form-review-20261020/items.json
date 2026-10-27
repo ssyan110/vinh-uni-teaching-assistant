@@ -1,0 +1,357 @@
+{
+  "exam_id": "W06-L13L14-20261016",
+  "version": 3,
+  "variant_id": "W06-L13L14-10Q-20261020",
+  "status": "SHORT_FORM_REVIEW_DRAFT_NOT_APPROVED_OR_SYNCED",
+  "cohort": "BOYA-LS-E1-Y1S1-2026F",
+  "offering_id": "2026-fall",
+  "textbook_id": "boya-elementary-i",
+  "week": "w06",
+  "teaching_dates": "2026-10-26/2026-11-01",
+  "lesson_keys": [
+    "boya-elementary-i:lesson-13",
+    "boya-elementary-i:lesson-14"
+  ],
+  "question_count": 10,
+  "points": 40,
+  "points_per_question": 4,
+  "textbook_question_count": 6,
+  "tocfl_question_count": 4,
+  "textbook_audio_count": 5,
+  "tocfl_audio_count": 3,
+  "question_group_count": 8,
+  "lesson_question_coverage": {
+    "boya-elementary-i:lesson-13": "3 textbook questions",
+    "boya-elementary-i:lesson-14": "3 textbook questions",
+    "integrated": "1 TOCFL adapted question links merchandise selection and birthday gift choice"
+  },
+  "configuration_basis": "User request 2026-10-20: prepare about 10 questions following W05 mixed textbook and TOCFL approach; six textbook questions, three per lesson, and four adapted TOCFL official-audio questions including one integrated question.",
+  "source_exam_version": 2,
+  "items": [
+    {
+      "type": "mc",
+      "points": 4,
+      "prompt": "男的最后要什么颜色的手机？",
+      "options": [
+        "蓝色的",
+        "黑色的",
+        "白色的",
+        "红色的"
+      ],
+      "answer_index": 2,
+      "answer": "C",
+      "answer_text": "白色的",
+      "audio_id": "13-9",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ],
+      "focus": "颜色",
+      "evidence": "男：这个挺好，给我一个白的。",
+      "source_type": "textbook_original_audio_original_questions",
+      "id": "W06-10Q-01",
+      "question_id": "W06-10Q-01",
+      "number": 1,
+      "source_exam_id": "W06-L13L14-20261016",
+      "source_question_id": "W06-MX2-02",
+      "source_question_number": 2,
+      "textbook_printed_page": 106,
+      "answer_book_pdf_pages": [
+        55,
+        56
+      ],
+      "version": 1,
+      "review_status": "REVIEW_DRAFT_NOT_APPROVED"
+    },
+    {
+      "type": "mc",
+      "points": 4,
+      "prompt": "男的为什么希望便宜一点儿？",
+      "options": [
+        "他不喜欢这件衣服的颜色",
+        "他觉得有点儿贵",
+        "他觉得质量不好",
+        "他只带了300块"
+      ],
+      "answer_index": 1,
+      "answer": "B",
+      "answer_text": "他觉得有点儿贵",
+      "audio_id": "13-10",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ],
+      "focus": "理由",
+      "evidence": "男：不过388块有点儿贵，便宜一点儿吧？",
+      "source_type": "textbook_original_audio_original_questions",
+      "id": "W06-10Q-02",
+      "question_id": "W06-10Q-02",
+      "number": 2,
+      "source_exam_id": "W06-L13L14-20261016",
+      "source_question_id": "W06-MX2-05",
+      "source_question_number": 5,
+      "textbook_printed_page": 106,
+      "answer_book_pdf_pages": [
+        56
+      ],
+      "version": 1,
+      "review_status": "REVIEW_DRAFT_NOT_APPROVED"
+    },
+    {
+      "type": "mc",
+      "points": 4,
+      "prompt": "男的最后买的两件衣服一共多少钱？",
+      "options": [
+        "700块",
+        "350块",
+        "388块",
+        "776块"
+      ],
+      "answer_index": 0,
+      "answer": "A",
+      "answer_text": "700块",
+      "audio_id": "13-10",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ],
+      "focus": "总价",
+      "evidence": "每件350块，买两件：350＋350＝700。",
+      "source_type": "textbook_original_audio_original_questions",
+      "id": "W06-10Q-03",
+      "question_id": "W06-10Q-03",
+      "number": 3,
+      "source_exam_id": "W06-L13L14-20261016",
+      "source_question_id": "W06-MX2-08",
+      "source_question_number": 8,
+      "textbook_printed_page": 106,
+      "answer_book_pdf_pages": [
+        56
+      ],
+      "version": 1,
+      "review_status": "REVIEW_DRAFT_NOT_APPROVED"
+    },
+    {
+      "type": "mc",
+      "points": 4,
+      "prompt": "丽丽打算先做什么？",
+      "options": [
+        "去逛街",
+        "给朋友买礼物",
+        "给爸爸妈妈打电话",
+        "和朋友吃晚饭"
+      ],
+      "answer_index": 2,
+      "answer": "C",
+      "answer_text": "给爸爸妈妈打电话",
+      "audio_id": "14-9",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-14"
+      ],
+      "focus": "先后顺序",
+      "evidence": "女：先给爸爸妈妈打个电话，然后几个朋友一起吃晚饭。",
+      "source_type": "textbook_original_audio_original_questions",
+      "id": "W06-10Q-04",
+      "question_id": "W06-10Q-04",
+      "number": 4,
+      "source_exam_id": "W06-L13L14-20261016",
+      "source_question_id": "W06-MX2-10",
+      "source_question_number": 10,
+      "textbook_printed_page": 115,
+      "answer_book_pdf_pages": [
+        58
+      ],
+      "version": 1,
+      "review_status": "REVIEW_DRAFT_NOT_APPROVED"
+    },
+    {
+      "type": "mc",
+      "points": 4,
+      "prompt": "男的打算在哪里买礼物？",
+      "options": [
+        "学校南门",
+        "花店里面",
+        "上海饭店",
+        "网上"
+      ],
+      "answer_index": 3,
+      "answer": "D",
+      "answer_text": "网上",
+      "audio_id": "14-10",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-14"
+      ],
+      "focus": "购买方式",
+      "evidence": "男：我打算从网上买一束花儿送给她。",
+      "source_type": "textbook_original_audio_original_questions",
+      "id": "W06-10Q-05",
+      "question_id": "W06-10Q-05",
+      "number": 5,
+      "source_exam_id": "W06-L13L14-20261016",
+      "source_question_id": "W06-MX2-12",
+      "source_question_number": 12,
+      "textbook_printed_page": 116,
+      "answer_book_pdf_pages": [
+        58,
+        59
+      ],
+      "version": 1,
+      "review_status": "REVIEW_DRAFT_NOT_APPROVED"
+    },
+    {
+      "type": "mc",
+      "points": 4,
+      "prompt": "安娜建议大家怎么安排活动？",
+      "options": [
+        "先唱卡拉OK，然后吃饭",
+        "先买花儿，然后逛街",
+        "先打电话，然后买蛋糕",
+        "先吃饭，然后唱卡拉OK"
+      ],
+      "answer_index": 3,
+      "answer": "D",
+      "answer_text": "先吃饭，然后唱卡拉OK",
+      "audio_id": "14-11",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-14"
+      ],
+      "focus": "先后顺序",
+      "evidence": "安娜：咱们先吃饭吧，然后去唱卡拉OK。",
+      "source_type": "textbook_original_audio_original_questions",
+      "id": "W06-10Q-06",
+      "question_id": "W06-10Q-06",
+      "number": 6,
+      "source_exam_id": "W06-L13L14-20261016",
+      "source_question_id": "W06-MX2-14",
+      "source_question_number": 14,
+      "textbook_printed_page": 116,
+      "answer_book_pdf_pages": [
+        59
+      ],
+      "version": 1,
+      "review_status": "REVIEW_DRAFT_NOT_APPROVED"
+    },
+    {
+      "type": "mc",
+      "points": 4,
+      "prompt": "为什么很多人来这家店？",
+      "options": [
+        "衣服很新",
+        "衣服很贵",
+        "衣服很便宜",
+        "衣服只有一种颜色"
+      ],
+      "answer_index": 2,
+      "answer": "C",
+      "answer_text": "衣服很便宜",
+      "audio_id": "TOCFL-A4-Q23",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ],
+      "focus": "价格与理由",
+      "evidence": "顾客多是因为衣服便宜。",
+      "source_type": "tocfl_official_audio_original_questions",
+      "id": "W06-10Q-07",
+      "question_id": "W06-10Q-07",
+      "number": 7,
+      "source_exam_id": "W06-L13L14-20261016",
+      "source_question_id": "W06-MX2-17",
+      "source_question_number": 17,
+      "textbook_printed_page": null,
+      "answer_book_pdf_pages": [],
+      "version": 1,
+      "review_status": "REVIEW_DRAFT_NOT_APPROVED"
+    },
+    {
+      "type": "mc",
+      "points": 4,
+      "prompt": "很多人来这里买什么？",
+      "options": [
+        "手机",
+        "书",
+        "花儿",
+        "衣服"
+      ],
+      "answer_index": 3,
+      "answer": "D",
+      "answer_text": "衣服",
+      "audio_id": "TOCFL-A4-Q23",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ],
+      "focus": "商品",
+      "evidence": "店里卖的是衣服。",
+      "source_type": "tocfl_official_audio_original_questions",
+      "id": "W06-10Q-08",
+      "question_id": "W06-10Q-08",
+      "number": 8,
+      "source_exam_id": "W06-L13L14-20261016",
+      "source_question_id": "W06-MX2-18",
+      "source_question_number": 18,
+      "textbook_printed_page": null,
+      "answer_book_pdf_pages": [],
+      "version": 1,
+      "review_status": "REVIEW_DRAFT_NOT_APPROVED"
+    },
+    {
+      "type": "mc",
+      "points": 4,
+      "prompt": "女的为什么选择送书？",
+      "options": [
+        "陈老师今天过生日",
+        "陈老师很喜欢看书",
+        "书比花儿便宜",
+        "陈老师请她买书"
+      ],
+      "answer_index": 1,
+      "answer": "B",
+      "answer_text": "陈老师很喜欢看书",
+      "audio_id": "TOCFL-A4-Q26",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-14"
+      ],
+      "focus": "按喜好选择礼物",
+      "evidence": "选择依据是老师爱读书。",
+      "source_type": "tocfl_official_audio_original_questions",
+      "id": "W06-10Q-09",
+      "question_id": "W06-10Q-09",
+      "number": 9,
+      "source_exam_id": "W06-L13L14-20261016",
+      "source_question_id": "W06-MX2-20",
+      "source_question_number": 20,
+      "textbook_printed_page": null,
+      "answer_book_pdf_pages": [],
+      "version": 1,
+      "review_status": "REVIEW_DRAFT_NOT_APPROVED"
+    },
+    {
+      "type": "mc",
+      "points": 4,
+      "prompt": "他们为什么选择这样的礼物？",
+      "options": [
+        "小春喜欢唱歌",
+        "小春喜欢画画",
+        "小春的手机坏了",
+        "小春要去旅行"
+      ],
+      "answer_index": 1,
+      "answer": "B",
+      "answer_text": "小春喜欢画画",
+      "audio_id": "TOCFL-A5-Q37",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13",
+        "boya-elementary-i:lesson-14"
+      ],
+      "focus": "选择理由",
+      "evidence": "礼物对应小春的绘画爱好。",
+      "source_type": "tocfl_official_audio_original_questions",
+      "id": "W06-10Q-10",
+      "question_id": "W06-10Q-10",
+      "number": 10,
+      "source_exam_id": "W06-L13L14-20261016",
+      "source_question_id": "W06-MX2-24",
+      "source_question_number": 24,
+      "textbook_printed_page": null,
+      "answer_book_pdf_pages": [],
+      "version": 1,
+      "review_status": "REVIEW_DRAFT_NOT_APPROVED"
+    }
+  ]
+}

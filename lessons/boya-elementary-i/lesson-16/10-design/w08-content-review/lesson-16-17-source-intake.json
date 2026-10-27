@@ -1,0 +1,125 @@
+{
+  "version": "v02",
+  "week": "W08",
+  "offering_id": "2026-fall",
+  "class_scope": "BOYA-LS-E1-Y1S1-2026F",
+  "lesson_keys": [
+    "boya-elementary-i:lesson-16",
+    "boya-elementary-i:lesson-17"
+  ],
+  "source_pdf": {
+    "path": "/Users/ssyan110/Desktop/Work/Teaching/shared/textbooks/博雅漢語教材/1. 博雅汉语听说-初级起步篇I.pdf",
+    "sha256": "9a98ee0b376c9b5cff20622987a0e4b9cee68287e45dc547665a3cd537fb517a",
+    "pages": 249,
+    "intake_pages": [
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160
+    ]
+  },
+  "vocabulary": {
+    "16": [
+      "饺子",
+      "包子",
+      "面条儿",
+      "份",
+      "两",
+      "座位",
+      "猪肉",
+      "白菜",
+      "光临",
+      "菜单",
+      "离",
+      "多",
+      "味道",
+      "北方",
+      "米饭",
+      "点",
+      "菜",
+      "这儿",
+      "面食",
+      "鸡肉",
+      "不错",
+      "位",
+      "南方",
+      "蘑菇",
+      "馅儿"
+    ],
+    "17": [
+      "喝",
+      "茶",
+      "还是",
+      "搬",
+      "往",
+      "尝",
+      "走",
+      "地方",
+      "进",
+      "以前",
+      "不用",
+      "做菜",
+      "红酒",
+      "会",
+      "帮忙",
+      "看起来",
+      "行",
+      "忙",
+      "走路",
+      "第一",
+      "随便",
+      "路口"
+    ]
+  },
+  "source_status": "book_scope_and_target_sentences_verified; exercise_answers_not_asserted",
+  "student_copy_status": "pending_review",
+  "visual_production_authorized": false,
+  "audio_policy": "Original teacher-read scripts; publisher Audio labels reserved for verified publisher tracks",
+  "references": [
+    {
+      "id": "boya-elementary-i-lesson-15-w07",
+      "path": "lessons/boya-elementary-i/lesson-15/10-design/open-slide-draft/w07-l15/lesson-15-实体课.html",
+      "sha256": "33bde6daaadc2c4b42686f683b6e2de0a93bba1ffcdd94e74db5dc1f28adbd15",
+      "bytes": 38735
+    },
+    {
+      "id": "boya-elementary-i-lesson-13-14-w06",
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-实体课.html",
+      "sha256": "9ee3b24a73662ead2f0f3054b74dd6466ec74b85b280a131a212c56bbda6ddac",
+      "bytes": 32768
+    },
+    {
+      "id": "boya-elementary-i-lesson-11-12",
+      "path": "lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12-v09-readable/lesson-11-12-实体课.html",
+      "sha256": "3ff376220782b1c31e706a44d8c9c539230625c0a930e852d2f3d43fee812ffb",
+      "bytes": 65096
+    },
+    {
+      "id": "boya-elementary-i-lesson-09-10",
+      "path": "lessons/boya-elementary-i/lesson-09-10/10-design/openslide-image-first-20261006/lesson-09-10.html",
+      "sha256": "b15e98e2c020c4455f106c7982365e003bf8f2e0cc14e5815f45d35931caac63",
+      "bytes": 342789
+    }
+  ],
+  "review_date": "2026-10-23",
+  "current_review": "lessons/boya-elementary-i/lesson-16/10-design/w08-content-review/lesson-16-17-逐页文案审阅.md",
+  "activity_count": 8,
+  "student_page_count": 14
+}

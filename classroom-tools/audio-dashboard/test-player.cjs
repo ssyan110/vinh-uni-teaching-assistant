@@ -15,7 +15,8 @@ const sha256 = file => crypto.createHash('sha256').update(fs.readFileSync(file))
   assert.equal(await page.locator('#queue button').count(),15);
   assert.equal(await page.locator('#lessons input:checked').count(),2);
   assert.match(await page.locator('#management-link').getAttribute('href'), /1fhKUHCsyEYvSMrCgw5bL8vtazuwX77DKoa0ZCsQgIso/);
-  assert.equal(await page.locator('#teacher-links a').count(),5);
+  assert.equal(await page.locator('#teacher-links a').count(),6);
+  assert.match(await page.getByRole('link',{name:'周测检查',exact:true}).getAttribute('href'), /closeout.html\?exam=W05-L11L12-20261015/);
   assert.match(await page.locator('#teacher-links a').first().getAttribute('href'), /1fhKUHCsyEYvSMrCgw5bL8vtazuwX77DKoa0ZCsQgIso\/edit#gid=1900630501/);
   const w05Dir = path.resolve(__dirname,'../../course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w05');
   const sections = JSON.parse(fs.readFileSync(path.join(w05Dir,'official-v3/form-sections.json'))).sections;

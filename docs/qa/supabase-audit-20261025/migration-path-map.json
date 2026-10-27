@@ -1,0 +1,82 @@
+[
+  {
+    "from": "20260823090017_initial_student_tracker.sql",
+    "to": "20260905103254_initial_student_tracker.sql"
+  },
+  {
+    "from": "20260905000000_learning_events.sql",
+    "to": "20260905103315_learning_events.sql"
+  },
+  {
+    "from": "20260905000001_foreign_key_indexes.sql",
+    "to": "20260905103443_foreign_key_indexes.sql"
+  },
+  {
+    "from": "20260905000002_learning_event_idempotency.sql",
+    "to": "20260905104043_learning_event_idempotency.sql"
+  },
+  {
+    "from": "20260905000003_learning_event_upsert_key.sql",
+    "to": "20260905104257_learning_event_upsert_key.sql"
+  },
+  {
+    "from": "20260905000004_learning_event_grade_flag.sql",
+    "to": "20260905104416_learning_event_grade_flag.sql"
+  },
+  {
+    "from": "20260905000005_randomizer_records.sql",
+    "to": "20260905151907_randomizer_records.sql"
+  },
+  {
+    "from": "20260905000006_randomizer_fk_indexes.sql",
+    "to": "20260905151937_randomizer_fk_indexes.sql"
+  },
+  {
+    "from": "20260908000001_randomizer_observations.sql",
+    "to": "20260908093817_randomizer_observations.sql"
+  },
+  {
+    "from": "20260908000002_dashboard_notes_questions.sql",
+    "to": "20260908094926_dashboard_notes_questions.sql"
+  },
+  {
+    "from": "20260908000003_randomizer_fact_marks.sql",
+    "to": "20260908095510_randomizer_fact_marks.sql"
+  },
+  {
+    "from": "20260910145000_finish_randomizer_class.sql",
+    "to": "20260910142434_finish_randomizer_class.sql"
+  },
+  {
+    "from": "20260911000000_editable_class_session_number.sql",
+    "to": "20260911083802_editable_class_session_number.sql"
+  },
+  {
+    "from": "20260911100000_class_session_correction_audit.sql",
+    "to": "20260911084209_class_session_correction_audit.sql"
+  },
+  {
+    "from": "20260911110000_harden_class_session_correction_grant.sql",
+    "to": "20260911084327_harden_class_session_correction_grant.sql"
+  },
+  {
+    "from": "20260916100000_classroom_record_correction_audit.sql",
+    "to": "20260916135307_classroom_record_correction_audit.sql"
+  },
+  {
+    "from": "20260916110000_allow_absent_no_response_reason.sql",
+    "to": "20260916135324_allow_absent_no_response_reason.sql"
+  },
+  {
+    "from": "20260909000000_class_session_notes.sql",
+    "to": "20260922044922_class_session_notes.sql"
+  },
+  {
+    "from": "20261002160000_preserve_classroom_record_corrections.sql",
+    "to": "20261002153752_preserve_classroom_record_corrections.sql"
+  },
+  {
+    "from": "20261002000000_randomizer_teacher_calls.sql",
+    "to": "20261002160035_randomizer_teacher_calls_and_session_safety.sql"
+  }
+]

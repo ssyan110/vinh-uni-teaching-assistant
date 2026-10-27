@@ -1,0 +1,26 @@
+{
+  "lesson_key": "boya-elementary-i:lesson-13",
+  "offering_id": "2026-fall",
+  "gate": "lesson-content",
+  "status": "approved",
+  "approved_by": "Adam",
+  "approved_at": "2026-10-20T12:01:14+07:00",
+  "timestamp_basis": "current turn approval capture; original user message timestamp unavailable",
+  "artifacts": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/00-source/canonical-source.json",
+      "sha256": "dc74200a92a3e637ee4709ce37cd429205b05d0b7bf9a07c634954b510e846ad"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/storyboard/lesson-13-逐页文案审阅.md",
+      "sha256": "a1a28303dcd31ed6d64bff5c5833a06ce478bacd66121c1872d3a7796e237e07"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/lesson-13-教师朗读稿.md",
+      "sha256": "5de5a549e16efe4542caa6b1eb805d87d8e6996420d400be83c757445bd59fb6"
+    }
+  ],
+  "evidence": "lessons/boya-elementary-i/lesson-13/10-design/storyboard/lesson-13-content-approval-evidence-2026-10-20.md",
+  "evidence_sha256": "fcf8a926f6ef4859de3012b99b96264fc841d08b405a015bf718fea8b4fa756c",
+  "scope": "user-confirmed 15-slide localized W06 classroom content; this lesson-specific copy and original teacher-read script only"
+}

@@ -1,0 +1,127 @@
+{
+  "schema_version": "openslide-draft-manifest-v1",
+  "deck_id": "boya-elementary-i-lesson-15-w07",
+  "status": "design-draft",
+  "offering_id": "2026-fall",
+  "lesson_keys": [
+    "boya-elementary-i:lesson-15"
+  ],
+  "format": "OpenSlides HTML",
+  "entry_file": "lesson-15-实体课.html",
+  "entry_sha256": "33bde6daaadc2c4b42686f683b6e2de0a93bba1ffcdd94e74db5dc1f28adbd15",
+  "teacher_guide": {
+    "path": "lesson-15-教师朗读稿.html",
+    "sha256": "cb65be0ec8eda1c37a37f40178176efeaae4890676cd6c4d174fecdd5e38d8eb"
+  },
+  "slide_count": 21,
+  "assets": [
+    {
+      "path": "assets/comic-lesson15-airport-pickup.png",
+      "exists": true,
+      "sha256": "912420ea0df90767f3bc0e064011764ae0954a6aae03e8f3cae3849a43045d30"
+    },
+    {
+      "path": "assets/comic-lesson15-hanoi-try-on.png",
+      "exists": true,
+      "sha256": "47b9fe0c65fc84e6c43466d2e8e55453bf11c171fad788c51fd898134d66ec12"
+    },
+    {
+      "path": "assets/cover-lesson15-clothing-request.png",
+      "exists": true,
+      "sha256": "e0da00560c7c7ce42185e8568cb0a99a9e85e77acd823db23bb682f4bfa75ea5"
+    },
+    {
+      "path": "assets/icons/book-pencil.png",
+      "exists": true,
+      "sha256": "b97842336f3e54a843c0782393177e8bf20ed30638c0e8611cc9850282792a75"
+    },
+    {
+      "path": "assets/icons/conversation.png",
+      "exists": true,
+      "sha256": "96491bb767d6e33d464f8957bed229cdf88eb566b50c59bb3d6806171bed7d3f"
+    },
+    {
+      "path": "assets/icons/listen.png",
+      "exists": true,
+      "sha256": "3a16f13ea2c003a234c62f30f9fd4c019cc87e1ce97ad5ffa967ed080cfb133e"
+    },
+    {
+      "path": "assets/icons/notes.png",
+      "exists": true,
+      "sha256": "1d0d9995b40db4470c4b203efb5568f8af800de91c9f5da7ef5de2460b6ae996"
+    },
+    {
+      "path": "assets/icons/shopping-bag.png",
+      "exists": true,
+      "sha256": "72e7a2536b90c9cafbeea2b05fa232b78df87cf413b722e933dc429d684b9986"
+    },
+    {
+      "path": "assets/shirt-a-blue.png",
+      "exists": true,
+      "sha256": "9a23de0fd85f1fe6543867d70d2c9816c7998fa3392b791961b947b5ab8ed18f"
+    },
+    {
+      "path": "assets/shirt-b-black.jpg",
+      "exists": true,
+      "sha256": "898c0424261261c092f6fe88bb8f81467dfdec447743e9eecf57c2bb5f71b64e"
+    },
+    {
+      "path": "assets/weekend-picnic-video.png",
+      "exists": true,
+      "sha256": "886d27006694385f64288bc49a1390929a4ea087424ce590977bd25d72ede4fb"
+    }
+  ],
+  "slide_order": [
+    "w07-cover",
+    "w07-route",
+    "w07-listen-clothes",
+    "w07-report-clothes",
+    "w07-listen-airport",
+    "w07-report-airport",
+    "w07-comic-airport",
+    "w07-task-try-on",
+    "w07-task-try-on-support",
+    "w07-comic-clothes",
+    "w07-task-city-choice",
+    "w07-task-city-choice-support",
+    "w07-task-hanoi-half-day",
+    "w07-task-hanoi-half-day-support",
+    "w07-task-danang-rain",
+    "w07-task-danang-rain-support",
+    "w07-video-listen",
+    "w07-video-questions",
+    "w07-video-summary-city-intro",
+    "w07-integrated-listening",
+    "w07-integrated-speaking-check"
+  ],
+  "order_adjustment": "Adam approved separating the two six-panel stories; airport story follows airport listening/retell, clothing story follows try-on task/support. Student-facing activity wording is unchanged.",
+  "copy_inputs": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-15/10-design/storyboard/lesson-15-逐页文案审阅.md",
+      "sha256": "1204003898b7e4b606114f25936949c1952a2153fd730735b7f2524f9fb5a2f0"
+    }
+  ],
+  "approval_record": {
+    "path": "lessons/boya-elementary-i/lesson-15/10-design/storyboard/lesson-15-content-approval.json",
+    "sha256": "3171a671255877e3a4234ca55bb27639e11adfa83524b05128ff9636ffd29e6b"
+  },
+  "style_reference": {
+    "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-实体课.html",
+    "sha256": "9ee3b24a73662ead2f0f3054b74dd6466ec74b85b280a131a212c56bbda6ddac"
+  },
+  "video_source": "https://www.youtube.com/watch?v=yaeECV1JRjM&t=37s",
+  "video_segment_seconds": {
+    "start": 37,
+    "end": 271
+  },
+  "external_video_playback_required": true,
+  "human_gates": {
+    "teacher_media_playback": "pending",
+    "classroom_rehearsal": "pending",
+    "authority_or_release": "not_approved"
+  },
+  "teacher_pdf": {
+    "path": "lesson-15-教师朗读稿.pdf",
+    "sha256": "675df0443962ac99b34e90ab62042ed740216adc7b6146fe0cf94e9ab4b7a080"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "assessment_id": "W06-L13L14-20261016",
+  "version": 3,
+  "variant_id": "W06-L13L14-10Q-20261020",
+  "form_id": "1M33yrhHQHPAI2JE66VqO2nyuxNZQChUOwyWXIHGFnSU",
+  "status": "SYNCED_VERIFIED",
+  "sections": [
+    {
+      "id": "w06-v3-g01",
+      "title": "第1题｜第13课课本听力｜Audio 13-9",
+      "question_start": 1,
+      "question_end": 1,
+      "audio_ids": [
+        "13-9"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "form_item_id": "32b857a2"
+    },
+    {
+      "id": "w06-v3-g02",
+      "title": "第2–3题｜第13课课本听力｜Audio 13-10",
+      "question_start": 2,
+      "question_end": 3,
+      "audio_ids": [
+        "13-10"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "form_item_id": "1c7735b8"
+    },
+    {
+      "id": "w06-v3-g03",
+      "title": "第4题｜第14课课本听力｜Audio 14-9",
+      "question_start": 4,
+      "question_end": 4,
+      "audio_ids": [
+        "14-9"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "form_item_id": "5110ea78"
+    },
+    {
+      "id": "w06-v3-g04",
+      "title": "第5题｜第14课课本听力｜Audio 14-10",
+      "question_start": 5,
+      "question_end": 5,
+      "audio_ids": [
+        "14-10"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "form_item_id": "49f69d2b"
+    },
+    {
+      "id": "w06-v3-g05",
+      "title": "第6题｜第14课课本听力｜Audio 14-11",
+      "question_start": 6,
+      "question_end": 6,
+      "audio_ids": [
+        "14-11"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "form_item_id": "3f19e135"
+    },
+    {
+      "id": "w06-v3-g06",
+      "title": "第7–8题｜TOCFL官方听力改编｜Audio TOCFL-A4-Q23",
+      "question_start": 7,
+      "question_end": 8,
+      "audio_ids": [
+        "TOCFL-A4-Q23"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "form_item_id": "25858a02"
+    },
+    {
+      "id": "w06-v3-g07",
+      "title": "第9题｜TOCFL官方听力改编｜Audio TOCFL-A4-Q26",
+      "question_start": 9,
+      "question_end": 9,
+      "audio_ids": [
+        "TOCFL-A4-Q26"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "form_item_id": "4f594acf"
+    },
+    {
+      "id": "w06-v3-g08",
+      "title": "第10题｜TOCFL官方听力改编｜Audio TOCFL-A5-Q37",
+      "question_start": 10,
+      "question_end": 10,
+      "audio_ids": [
+        "TOCFL-A5-Q37"
+      ],
+      "description": "先看本组题目，再听录音。录音播放两遍。",
+      "form_item_id": "65add328"
+    }
+  ],
+  "synced_at": "2026-10-20T12:55:06+07:00"
+}

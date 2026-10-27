@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -21,7 +22,7 @@ from workflow_integrity import (
     sha256,
 )
 from validate_lesson_identity import validate as validate_lesson_identity
-from lesson_context import LessonContext, LessonContextError, resolve_lesson_context
+from lesson_context import LessonContext, LessonContextError, resolve_lesson_context, _safe_project_path
 from legacy_active_config import legacy_path, legacy_value
 from workflow_integrity import resolve_relative_path
 
@@ -316,7 +317,9 @@ def require_release_ready(authority_manifest: dict[str, Any], blockers: list[str
         blockers.append("approved contact-hour teacher rehearsal is not passed")
 
 
-def check_content_approval(lesson_key: str | None, offering_id: str | None = None) -> dict[str, Any]:
+def check_content_approval(lesson_key: str | None, offering_id: str | None = None,
+                           approval_record: str | None = None, artifact_scope: str | None = None,
+                           artifact_id: str | None = None, class_scope: str | None = None) -> dict[str, Any]:
     """Read-only prerequisite for new images, prototypes and PPTX, including drafts.
 
     Hashes prove which content was approved, not that a human actually approved it.
@@ -328,15 +331,26 @@ def check_content_approval(lesson_key: str | None, offering_id: str | None = Non
             raise ValueError("explicit lesson_key is required")
         context = resolve_lesson_context(PROJECT_ROOT, lesson_key, offering_id)
         design = context.design_root
-        record_path = design / "storyboard" / f"{context.lesson_id}-content-approval.json"
-        resolve_relative_path(PROJECT_ROOT, record_path.relative_to(PROJECT_ROOT).as_posix(), required_root=design)
+        scoped = approval_record is not None or artifact_scope is not None or artifact_id is not None or class_scope is not None
+        if scoped:
+            if not offering_id or not approval_record or artifact_scope not in {"online", "classroom"} or not artifact_id or not class_scope:
+                raise ValueError("scoped approval requires offering_id, approval_record, artifact_scope, artifact_id and class_scope")
+            if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]{0,79}", artifact_id) or not class_scope.strip():
+                raise ValueError("artifact_id or class_scope is invalid")
+            record_path, _ = resolve_relative_path(PROJECT_ROOT, approval_record, required_root=design / "approvals")
+        else:
+            record_path = design / "storyboard" / f"{context.lesson_id}-content-approval.json"
+            resolve_relative_path(PROJECT_ROOT, record_path.relative_to(PROJECT_ROOT).as_posix(), required_root=design)
         record = read_json(record_path)
         if not isinstance(record, dict):
             raise ValueError("record must be an object")
         if record.get("status") != "approved":
             raise ValueError("current content is pending explicit human approval")
-        if record.get("gate") != "lesson-content":
+        if record.get("gate") != ("artifact-content" if scoped else "lesson-content"):
             raise ValueError("boundary/structure approval is not lesson-content approval")
+        if scoped and (record.get("artifact_scope") != artifact_scope or record.get("artifact_id") != artifact_id
+                       or record.get("class_scope") != class_scope):
+            raise ValueError("approval artifact scope, identity or class scope does not match")
         if record.get("lesson_key") != lesson_key or record.get("offering_id") != context.offering_id:
             raise ValueError("lesson_key/offering_id mismatch")
         if not isinstance(record.get("approved_by"), str) or not record["approved_by"].strip():
@@ -357,10 +371,22 @@ def check_content_approval(lesson_key: str | None, offering_id: str | None = Non
             if normalized in paths or not path.is_file() or sha256(path) != item.get("sha256"):
                 raise ValueError(f"duplicate, missing or changed content: {normalized}")
             paths.add(normalized)
-        required = {
-            context.canonical_source.relative_to(PROJECT_ROOT).as_posix(),
-            (design / "storyboard" / f"{context.lesson_id}-逐页文案审阅.md").relative_to(PROJECT_ROOT).as_posix(),
-        }
+        if scoped:
+            source, source_name = resolve_relative_path(PROJECT_ROOT, record.get("source_path"), required_root=context.lesson_root)
+            if not (is_within(source, context.source_root) or is_within(source, design / "source-snapshots")):
+                raise ValueError("source must be a lesson source or a versioned source snapshot")
+            review, review_name = resolve_relative_path(PROJECT_ROOT, record.get("review_path"), required_root=design)
+            source_check, check_name = resolve_relative_path(PROJECT_ROOT, record.get("source_check_path"), required_root=design)
+            if not source.is_file() or not review.is_file() or not source_check.is_file() or not source_check.read_text(encoding="utf-8").strip():
+                raise ValueError("scoped approval requires source snapshot, review copy and source check")
+            required = {source_name, review_name, check_name}
+            if len(required) != 3:
+                raise ValueError("source, review and source check must be distinct")
+        else:
+            required = {
+                context.canonical_source.relative_to(PROJECT_ROOT).as_posix(),
+                (design / "storyboard" / f"{context.lesson_id}-逐页文案审阅.md").relative_to(PROJECT_ROOT).as_posix(),
+            }
         if not required.issubset(paths):
             raise ValueError("approval must bind canonical source and current slide-copy review")
         evidence, normalized = resolve_relative_path(PROJECT_ROOT, record.get("evidence"), required_root=design)
@@ -371,14 +397,18 @@ def check_content_approval(lesson_key: str | None, offering_id: str | None = Non
     except (ValueError, TypeError, OSError, LessonContextError) as error:
         blockers.append(f"content approval required: {error}")
     return with_blocker_records({"purpose": "content-approval", "lesson_key": lesson_key,
+                                 "offering_id": offering_id, "artifact_scope": artifact_scope,
+                                 "artifact_id": artifact_id, "class_scope": class_scope, "approval_record": approval_record,
                                  "status": "blocked" if blockers else "ready", "blockers": blockers},
                                 scope="lesson-content")
 
 
 def check_classroom_html_draft(lesson_key: str | None, output_dir: str | None = None,
-                               offering_id: str | None = None) -> dict[str, Any]:
+                               offering_id: str | None = None, approval_record: str | None = None,
+                               artifact_id: str | None = None, class_scope: str | None = None) -> dict[str, Any]:
     """Validate approved inputs and a lesson-local HTML draft destination only."""
-    blockers = list(check_content_approval(lesson_key, offering_id)["blockers"])
+    blockers = list(check_content_approval(lesson_key, offering_id, approval_record,
+                    "classroom" if approval_record else None, artifact_id, class_scope)["blockers"])
     target = None
     try:
         if not lesson_key or not offering_id:
@@ -392,6 +422,8 @@ def check_classroom_html_draft(lesson_key: str | None, output_dir: str | None = 
         target, _ = resolve_relative_path(PROJECT_ROOT, relative, required_root=root)
         if target == root or (target.exists() and not target.is_dir()):
             raise ValueError("output must be a named directory below open-slide-draft")
+        if approval_record and target != _safe_project_path(root, f"{offering_id}/{artifact_id}"):
+            raise ValueError("scoped classroom output must use open-slide-draft/<offering>/<artifact-id>")
         if any(part in {"20-approved", "30-qa", "40-release", "90-archive", "archive"}
                for part in target.relative_to(context.design_root).parts):
             raise ValueError("protected directory names are not draft outputs")
@@ -406,7 +438,9 @@ def check_classroom_html_draft(lesson_key: str | None, output_dir: str | None = 
     }, scope="draft/classroom-html")
 
 
-def check_lesson_ppt_draft(lesson_key: str | None, output_dir: str | None = None) -> dict[str, Any]:
+def check_lesson_ppt_draft(lesson_key: str | None, output_dir: str | None = None,
+                           offering_id: str | None = None, approval_record: str | None = None,
+                           artifact_id: str | None = None, class_scope: str | None = None) -> dict[str, Any]:
     """Gate a lesson-specific PPTX draft without granting authority.
 
     The authority gate requires full approval evidence for its lesson scope. Later
@@ -415,7 +449,8 @@ def check_lesson_ppt_draft(lesson_key: str | None, output_dir: str | None = None
     approval, identity, source integrity, boundary confirmation, and output scope; it never approves or
     writes an authority file.
     """
-    blockers: list[str] = list(check_content_approval(lesson_key)["blockers"])
+    blockers: list[str] = list(check_content_approval(lesson_key, offering_id, approval_record,
+                               "online" if approval_record else None, artifact_id, class_scope)["blockers"])
     if not lesson_key:
         blockers.append("lesson-specific PPTX draft requires --lesson-key")
         return with_blocker_records({"purpose": "pptx", "stage": "draft", "status": "blocked", "output_dir": output_dir, "blockers": blockers}, scope="draft/pptx")
@@ -445,6 +480,13 @@ def check_lesson_ppt_draft(lesson_key: str | None, output_dir: str | None = None
         candidate = PROJECT_ROOT / candidate
     resolved = candidate.resolve()
     try:
+        relative = candidate.relative_to(PROJECT_ROOT).as_posix()
+        resolve_relative_path(PROJECT_ROOT, relative, required_root=draft_root)
+        if approval_record and resolved != _safe_project_path(draft_root, f"online/{offering_id}/{artifact_id}"):
+            raise ValueError("scoped online output must use pptx-draft/online/<offering>/<artifact-id>")
+    except (ValueError, OSError, LessonContextError) as error:
+        blockers.append(f"draft output is unsafe: {error}")
+    try:
         resolved.relative_to(draft_root.resolve())
     except ValueError:
         blockers.append(f"draft output must stay under {draft_root.resolve()}")
@@ -455,46 +497,47 @@ def check_lesson_ppt_draft(lesson_key: str | None, output_dir: str | None = None
         except ValueError:
             pass
 
-    canonical_path = lesson_root / "00-source" / "canonical-source.json"
-    source_manifest_path = lesson_root / "00-source" / "source-manifest.json"
-    refs_path = lesson_root / "10-design" / "storyboard" / f"{lesson_id}-source-refs.csv"
-    boundary_dir = lesson_root / "10-design" / "storyboard"
-    boundary_candidates = sorted(boundary_dir.glob(f"{lesson_id}-boundary-confirmation*.md"))
-    boundary_path = boundary_candidates[-1] if boundary_candidates else None
-    if not canonical_path.is_file():
-        blockers.append(f"canonical source is missing: {canonical_path.relative_to(PROJECT_ROOT)}")
-    if not source_manifest_path.is_file():
-        blockers.append(f"source manifest is missing: {source_manifest_path.relative_to(PROJECT_ROOT)}")
-    if not refs_path.is_file():
-        blockers.append(f"source refs CSV is missing: {refs_path.relative_to(PROJECT_ROOT)}")
-    if not boundary_path or not boundary_path.is_file():
-        blockers.append(f"online/face boundary confirmation is missing under: {boundary_dir.relative_to(PROJECT_ROOT)}")
-    if canonical_path.is_file() and source_manifest_path.is_file():
-        try:
-            canonical = read_json(canonical_path)
-            source_manifest = read_json(source_manifest_path)
-            canonical_key = canonical.get("lesson_key")
-            if canonical_key and canonical_key != lesson_key:
-                blockers.append("canonical source lesson_key does not match the requested lesson")
-            elif not canonical_key:
-                legacy_matches = (
-                    canonical.get("textbook_id") == textbook_id
-                    and canonical.get("lesson_id") == lesson_id
-                    and lesson_id == "lesson-01"
-                )
-                if not legacy_matches:
-                    blockers.append("canonical source lesson_key is missing for a non-legacy lesson")
-            if source_manifest.get("lesson_key") != lesson_key:
-                blockers.append("source manifest lesson_key does not match the requested lesson")
-            expected = source_manifest.get("canonical_source_sha256")
-            if expected and expected != sha256(canonical_path):
-                blockers.append("canonical source hash differs from the lesson source manifest")
-            if not (lesson_root / "00-source" / "audio-manifest.json").is_file():
-                blockers.append("lesson audio manifest is missing")
-            if not (lesson_root / "10-design" / "assets" / "image-manifest.json").is_file():
-                blockers.append("lesson image manifest is missing")
-        except (json.JSONDecodeError, OSError) as error:
-            blockers.append(f"lesson source metadata is unavailable or invalid: {error}")
+    if not approval_record:
+        canonical_path = lesson_root / "00-source" / "canonical-source.json"
+        source_manifest_path = lesson_root / "00-source" / "source-manifest.json"
+        refs_path = lesson_root / "10-design" / "storyboard" / f"{lesson_id}-source-refs.csv"
+        boundary_dir = lesson_root / "10-design" / "storyboard"
+        boundary_candidates = sorted(boundary_dir.glob(f"{lesson_id}-boundary-confirmation*.md"))
+        boundary_path = boundary_candidates[-1] if boundary_candidates else None
+        if not canonical_path.is_file():
+            blockers.append(f"canonical source is missing: {canonical_path.relative_to(PROJECT_ROOT)}")
+        if not source_manifest_path.is_file():
+            blockers.append(f"source manifest is missing: {source_manifest_path.relative_to(PROJECT_ROOT)}")
+        if not refs_path.is_file():
+            blockers.append(f"source refs CSV is missing: {refs_path.relative_to(PROJECT_ROOT)}")
+        if not approval_record and (not boundary_path or not boundary_path.is_file()):
+            blockers.append(f"online/face boundary confirmation is missing under: {boundary_dir.relative_to(PROJECT_ROOT)}")
+        if canonical_path.is_file() and source_manifest_path.is_file():
+            try:
+                canonical = read_json(canonical_path)
+                source_manifest = read_json(source_manifest_path)
+                canonical_key = canonical.get("lesson_key")
+                if canonical_key and canonical_key != lesson_key:
+                    blockers.append("canonical source lesson_key does not match the requested lesson")
+                elif not canonical_key:
+                    legacy_matches = (
+                        canonical.get("textbook_id") == textbook_id
+                        and canonical.get("lesson_id") == lesson_id
+                        and lesson_id == "lesson-01"
+                    )
+                    if not legacy_matches:
+                        blockers.append("canonical source lesson_key is missing for a non-legacy lesson")
+                if source_manifest.get("lesson_key") != lesson_key:
+                    blockers.append("source manifest lesson_key does not match the requested lesson")
+                expected = source_manifest.get("canonical_source_sha256")
+                if expected and expected != sha256(canonical_path):
+                    blockers.append("canonical source hash differs from the lesson source manifest")
+                if not (lesson_root / "00-source" / "audio-manifest.json").is_file():
+                    blockers.append("lesson audio manifest is missing")
+                if not (lesson_root / "10-design" / "assets" / "image-manifest.json").is_file():
+                    blockers.append("lesson image manifest is missing")
+            except (json.JSONDecodeError, OSError) as error:
+                blockers.append(f"lesson source metadata is unavailable or invalid: {error}")
 
     return with_blocker_records({
         "purpose": "pptx",
@@ -580,8 +623,14 @@ def main() -> int:
     parser.add_argument("--stage", choices=("authority", "draft"), default="authority")
     parser.add_argument("--lesson-key")
     parser.add_argument("--offering-id")
+    parser.add_argument("--approval-record", help="Scoped, hash-bound artifact approval under this lesson's 10-design/approvals")
+    parser.add_argument("--artifact-scope", choices=("online", "classroom"))
+    parser.add_argument("--artifact-id", help="Exact online artifact or classroom session ID")
+    parser.add_argument("--class-scope", help="Exact cohort or class group for the artifact")
     parser.add_argument("--exam-id")
     args = parser.parse_args()
+    if any((args.approval_record, args.artifact_scope, args.artifact_id, args.class_scope)) and not all((args.approval_record, args.artifact_scope, args.artifact_id, args.class_scope, args.offering_id)):
+        parser.error("scoped approval requires --offering-id, --approval-record, --artifact-scope, --artifact-id and --class-scope")
     if args.purpose in {"assessment-audio", "assessment-audio-current"}:
         from assessment_audio_gate import check_assessment_audio, check_current_assessment_audio
         assessment_checker = check_current_assessment_audio if args.purpose == "assessment-audio-current" else check_assessment_audio
@@ -593,11 +642,14 @@ def main() -> int:
     elif args.exam_id is not None:
         result = {"status": "blocked", "blockers": ["exam-id only applies to assessment-audio or assessment-audio-current"]}
     elif args.purpose == "content-approval":
-        result = check_content_approval(args.lesson_key, args.offering_id)
+        result = check_content_approval(args.lesson_key, args.offering_id, args.approval_record, args.artifact_scope, args.artifact_id, args.class_scope)
     elif args.purpose == "classroom-html":
-        result = check_classroom_html_draft(args.lesson_key, args.output_dir, args.offering_id)
+        if args.artifact_scope not in (None, "classroom"):
+            result = {"status": "blocked", "blockers": ["classroom HTML requires classroom artifact scope"]}
+        else:
+            result = check_classroom_html_draft(args.lesson_key, args.output_dir, args.offering_id, args.approval_record, args.artifact_id, args.class_scope)
         if args.stage != "draft":
-            result["blockers"].append("classroom-html supports draft preflight only; authority/release is not implemented")
+            result["blockers"].append("classroom-html production gate supports draft only; use the separately authorized classroom_release.py workflow for authority and release")
             result["status"] = "blocked"
             result["blocker_records"] = blocker_records(result["blockers"], scope="classroom-html")
     elif args.stage == "draft":
@@ -611,7 +663,10 @@ def main() -> int:
                 "blocker_records": blocker_records(["draft stage is only available for purpose=pptx"], scope="draft"),
             }
         else:
-            result = check_lesson_ppt_draft(args.lesson_key, args.output_dir)
+            if args.artifact_scope not in (None, "online"):
+                result = {"status": "blocked", "blockers": ["online PPT draft requires online artifact scope"]}
+            else:
+                result = check_lesson_ppt_draft(args.lesson_key, args.output_dir, args.offering_id, args.approval_record, args.artifact_id, args.class_scope)
     else:
         result = check(args.purpose, args.output_dir, lesson_key=args.lesson_key, offering_id=args.offering_id)
     print(json.dumps(result, ensure_ascii=False, indent=2))

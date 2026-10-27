@@ -1,0 +1,64 @@
+{
+  "auth_settings": {
+    "status": 200,
+    "response": {
+      "external": {
+        "anonymous_users": false,
+        "apple": false,
+        "azure": false,
+        "bitbucket": false,
+        "discord": false,
+        "facebook": false,
+        "snapchat": false,
+        "figma": false,
+        "fly": false,
+        "github": false,
+        "gitlab": false,
+        "google": false,
+        "keycloak": false,
+        "kakao": false,
+        "linkedin": false,
+        "linkedin_oidc": false,
+        "notion": false,
+        "spotify": false,
+        "slack": false,
+        "slack_oidc": false,
+        "workos": false,
+        "twitch": false,
+        "twitter": false,
+        "email": true,
+        "phone": false,
+        "zoom": false
+      },
+      "disable_signup": true,
+      "mailer_autoconfirm": false
+    }
+  },
+  "anonymous_roster": {
+    "status": 401,
+    "response": {
+      "code": "42501",
+      "details": null,
+      "hint": "Grant the required privileges to the current role with: GRANT SELECT ON public.students TO anon;",
+      "message": "permission denied for table students"
+    }
+  },
+  "anonymous_exception": {
+    "status": 401,
+    "response": {
+      "code": "42501",
+      "details": null,
+      "hint": "Grant the required privileges to the current role with: GRANT SELECT ON public.attendance_exceptions TO anon;",
+      "message": "permission denied for table attendance_exceptions"
+    }
+  },
+  "null_token": {
+    "status": 400,
+    "response": {
+      "code": "P0001",
+      "details": null,
+      "hint": null,
+      "message": "\u8bf7\u5237\u65b0\u9875\u9762\u540e\u91cd\u8bd5\u3002"
+    }
+  }
+}

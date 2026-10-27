@@ -1,0 +1,208 @@
+{
+  "schema_version": 2,
+  "pages": 15,
+  "errors": [],
+  "issues": [
+    {
+      "page": 3,
+      "id": "w09-l04-l05-page-03",
+      "issues": [
+        {
+          "kind": "font-size",
+          "text": "阿明来台湾以后，为什么觉得中文交流没有想象中容易？",
+          "font_px": 42,
+          "effective_font_px": 42,
+          "minimum_px": 45,
+          "tag": "span",
+          "classes": ""
+        },
+        {
+          "kind": "font-size",
+          "text": "他为什么没有参加星期三的中文讲座？",
+          "font_px": 42,
+          "effective_font_px": 42,
+          "minimum_px": 45,
+          "tag": "span",
+          "classes": ""
+        },
+        {
+          "kind": "font-size",
+          "text": "他怎样安排星期二和星期四的练习？两个安排分别帮助他做什么？",
+          "font_px": 42,
+          "effective_font_px": 42,
+          "minimum_px": 45,
+          "tag": "span",
+          "classes": ""
+        },
+        {
+          "kind": "font-size",
+          "text": "四周后他有哪些变化？还有什么需要继续练习？",
+          "font_px": 42,
+          "effective_font_px": 42,
+          "minimum_px": 45,
+          "tag": "span",
+          "classes": ""
+        },
+        {
+          "kind": "split-word",
+          "token": "为什么",
+          "block": "阿明来台湾以后，为什么觉得中文交流没有想象中容易？"
+        },
+        {
+          "kind": "orphan-line",
+          "text": "习？",
+          "block": "4\n四周后他有哪些变化？还有什么需要继续练习？"
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "id": "w09-l04-l05-page-05",
+      "issues": [
+        {
+          "kind": "font-size",
+          "text": "小兰为什么报名音乐活动？开始后为什么想退出？",
+          "font_px": 42,
+          "effective_font_px": 42,
+          "minimum_px": 45,
+          "tag": "span",
+          "classes": ""
+        },
+        {
+          "kind": "font-size",
+          "text": "老师怎样帮助她？同学又怎样帮助她？",
+          "font_px": 42,
+          "effective_font_px": 42,
+          "minimum_px": 45,
+          "tag": "span",
+          "classes": ""
+        },
+        {
+          "kind": "font-size",
+          "text": "小兰怎样安排练习？为什么没有每天练习一小时？",
+          "font_px": 42,
+          "effective_font_px": 42,
+          "minimum_px": 45,
+          "tag": "span",
+          "classes": ""
+        },
+        {
+          "kind": "font-size",
+          "text": "活动结束后，她对音乐和自己的看法有什么变化？",
+          "font_px": 42,
+          "effective_font_px": 42,
+          "minimum_px": 45,
+          "tag": "span",
+          "classes": ""
+        },
+        {
+          "kind": "orphan-line",
+          "text": "出？",
+          "block": "1\n小兰为什么报名音乐活动？开始后为什么想退出？"
+        },
+        {
+          "kind": "orphan-line",
+          "text": "时？",
+          "block": "3\n小兰怎样安排练习？为什么没有每天练习一小时？"
+        },
+        {
+          "kind": "split-word",
+          "token": "为什么",
+          "block": "小兰怎样安排练习？为什么没有每天练习一小时？"
+        },
+        {
+          "kind": "orphan-line",
+          "text": "化？",
+          "block": "4\n活动结束后，她对音乐和自己的看法有什么变化？"
+        }
+      ]
+    }
+  ],
+  "negative": [
+    {
+      "name": "footer-clearance",
+      "pass": true,
+      "expected_issue": "footer-clearance",
+      "observed_issues": [
+        "footer-clearance"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "orphan-line",
+      "pass": true,
+      "expected_issue": "orphan-line",
+      "observed_issues": [
+        "orphan-line"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "arbitrary-offcanvas-content",
+      "pass": true,
+      "expected_issue": "canvas-bounds",
+      "observed_issues": [
+        "canvas-bounds",
+        "body-bounds"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "arbitrary-offcanvas-painted-box",
+      "pass": true,
+      "expected_issue": "canvas-bounds",
+      "observed_issues": [
+        "canvas-bounds",
+        "body-bounds"
+      ],
+      "painted_box_count": 1
+    },
+    {
+      "name": "tiny-critical-text",
+      "pass": true,
+      "expected_issue": "font-size",
+      "observed_issues": [
+        "font-size"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "transformed-tiny-critical-text",
+      "pass": true,
+      "expected_issue": "font-size",
+      "observed_issues": [
+        "font-size"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "wrong-font-family",
+      "pass": true,
+      "expected_issue": "font-family",
+      "observed_issues": [
+        "font-family"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "missing-footer",
+      "pass": true,
+      "expected_issue": "missing-footer",
+      "observed_issues": [
+        "missing-footer",
+        "incomplete-coverage",
+        "missing-structure"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "missing-required-structure",
+      "pass": true,
+      "expected_issue": "missing-structure",
+      "observed_issues": [
+        "missing-structure"
+      ],
+      "painted_box_count": 0
+    }
+  ]
+}

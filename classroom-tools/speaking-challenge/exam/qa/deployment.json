@@ -1,0 +1,20 @@
+{
+  "status": "published_and_public_verified",
+  "url": "https://ssyan110.github.io/vinh-uni-teaching-assistant/oral-practice/",
+  "pull_request": "https://github.com/ssyan110/vinh-uni-teaching-assistant/pull/9",
+  "commit": "eda3c3647ca9570fd7780f8e50a804abda33f75b",
+  "workflow_run": 40310548806,
+  "question_count": 30,
+  "image_count": 12,
+  "source": "qa/review-30q-20261026/口语文字题-30题-审阅稿.md / 30题总表",
+  "source_sha256": "02ce57cbe55fd3e90f3ac874f766366eb9e8e4bef88049f5f3ffe876d9dd377a",
+  "verbatim_question_and_hint_check": 30,
+  "public_browser_checks": 9,
+  "public_file_hash_matches": 17,
+  "zero_hint_ids": [
+    "A23",
+    "A29"
+  ],
+  "timing": "60 seconds preparation then 120 seconds answer",
+  "limits": "No real student classroom trial; no recording or automatic grading."
+}

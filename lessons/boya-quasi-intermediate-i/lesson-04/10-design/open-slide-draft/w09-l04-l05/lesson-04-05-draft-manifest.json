@@ -1,0 +1,109 @@
+{
+  "schema_version": "openslide-draft-manifest-v1",
+  "deck_id": "boya-quasi-intermediate-i-lesson-04-05-w09",
+  "title": "准中级加速篇 I｜第4—5课｜学习经历与音乐老师（15页）",
+  "status": "design-draft",
+  "offering_id": "2026-fall",
+  "lesson_keys": [
+    "boya-quasi-intermediate-i:lesson-04",
+    "boya-quasi-intermediate-i:lesson-05"
+  ],
+  "format": "OpenSlides HTML",
+  "entry_file": "lesson-04-05-实体课.html",
+  "entry_sha256": "1ff42a811e80715a3297d83bd20bfb2a0b1bcd799cb72aec8b949002a0832b08",
+  "teacher_guide": {
+    "path": "lesson-04-05-教师朗读稿.md",
+    "sha256": "cc2ca82830567834287024ef02226a9ffb53f58f8c60870fd0e944899302d3c6"
+  },
+  "slide_count": 15,
+  "assets": [
+    {
+      "path": "assets/comic-1.png",
+      "sha256": "687a5bd4c909d3cf86387cbc4a3437db3338e7cccced75dcb9d031145b070208"
+    },
+    {
+      "path": "assets/comic-2.png",
+      "sha256": "9ab6ab8b2a5756bbebed23762dd8461ff0c7f0b93b2cb207741d99bfaf0f2b83"
+    },
+    {
+      "path": "assets/cover.png",
+      "sha256": "a3ede1ec19172a36e83abf3e3e2b8168c01a7fff24f759e531dc3694e375bb3e"
+    },
+    {
+      "path": "assets/icons/book-pencil.png",
+      "sha256": "b97842336f3e54a843c0782393177e8bf20ed30638c0e8611cc9850282792a75"
+    },
+    {
+      "path": "assets/icons/conversation.png",
+      "sha256": "96491bb767d6e33d464f8957bed229cdf88eb566b50c59bb3d6806171bed7d3f"
+    },
+    {
+      "path": "assets/icons/listen.png",
+      "sha256": "3a16f13ea2c003a234c62f30f9fd4c019cc87e1ce97ad5ffa967ed080cfb133e"
+    },
+    {
+      "path": "assets/icons/notes.png",
+      "sha256": "1d0d9995b40db4470c4b203efb5568f8af800de91c9f5da7ef5de2460b6ae996"
+    },
+    {
+      "path": "assets/icons/phone.png",
+      "sha256": "d3e791e0a9d2452965196998db07634a9ea10d2271896c66863a1036af29e108"
+    },
+    {
+      "path": "assets/icons/school.png",
+      "sha256": "cdf2cfc3bd653ea0d4c4b2bfcdb41cce3eb4fbdc325a847be52f833269492060"
+    },
+    {
+      "path": "assets/icons/shopping-bag.png",
+      "sha256": "72e7a2536b90c9cafbeea2b05fa232b78df87cf413b722e933dc429d684b9986"
+    },
+    {
+      "path": "assets/comic-1-xiaoan-taiwan.png",
+      "sha256": "db64af44aac4e7a463e91cd5ebc61b705dcdcd7470df9958cf26bdb48947dbc9"
+    }
+  ],
+  "workspace_synced": true,
+  "qa": "qa-xiaoan/rendered-layout.json",
+  "classroom_rehearsal": "pending",
+  "pages": {
+    "活动1": [
+      3,
+      4
+    ],
+    "活动2": [
+      5,
+      6
+    ],
+    "活动3": [
+      7,
+      8
+    ],
+    "活动4": [
+      9
+    ],
+    "活动5": [
+      10
+    ],
+    "活动6": [
+      11,
+      12
+    ],
+    "活动7": [
+      13
+    ],
+    "活动8": [
+      14
+    ],
+    "活动9": [
+      15
+    ]
+  },
+  "teacher_quick_guide": {
+    "path": "lesson-04-05-教师速用说明.md",
+    "sha256": "9c10399147899fb639fcbe3d05fdf67e6eca5b17ed762f2af7af08791cf77b09"
+  },
+  "oral_observation": {
+    "path": "lesson-04-05-口语观察记录表.md",
+    "sha256": "648f2a43aa8c7a85b16555fb2bb81eef85fcf0df32d56ad018874ec108a3aeb1"
+  }
+}

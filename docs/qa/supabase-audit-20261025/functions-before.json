@@ -1,0 +1,145 @@
+[
+  {
+    "schema": "public",
+    "proname": "interact_classroom",
+    "args": "p_action text, p_room uuid, p_token text, p_data jsonb",
+    "prosecdef": true,
+    "proconfig": [
+      "search_path=public, pg_temp"
+    ],
+    "proacl": "{postgres=X/postgres,anon=X/postgres,authenticated=X/postgres,service_role=X/postgres}",
+    "definition": "CREATE OR REPLACE FUNCTION public.interact_classroom(p_action text, p_room uuid DEFAULT NULL::uuid, p_token text DEFAULT ''::text, p_data jsonb DEFAULT '{}'::jsonb)\n RETURNS jsonb\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO 'public', 'pg_temp'\nAS $function$\ndeclare\n r public.interact_rooms;\n token_hash text;\n teacher boolean;\n q jsonb;\n item jsonb;\n v jsonb;\n qs jsonb;\n result_answers jsonb;\nbegin\n if length(p_token) < 32 or length(p_token) > 128 then raise exception '请刷新页面后重试。'; end if;\n token_hash := encode(sha256(convert_to(p_token,'UTF8')),'hex');\n if p_action = 'create' then\n  if length(btrim(coalesce(p_data->>'title',''))) not between 1 and 120 then raise exception '课堂名称须为 1 至 120 个字。'; end if;\n  insert into public.interact_rooms(teacher_hash,title) values(token_hash,btrim(p_data->>'title')) returning * into r;\n else\n  -- Serialize writes against stopping/launching; submissions never replace other answers.\n  if p_action = 'read' then select * into r from public.interact_rooms where id=p_room;\n  else select * into r from public.interact_rooms where id=p_room for update; end if;\n  if r.id is null then raise exception '找不到这个课堂，请重新扫描二维码。'; end if;\n end if;\n teacher := r.teacher_hash = token_hash;\n if p_action in ('update','end') then\n  if not teacher then raise exception '只有老师可以操作课堂。'; end if;\n  if p_action = 'end' then\n   update public.interact_rooms set ended=true, revision=revision+1 where id=r.id returning * into r;\n  else\n   if r.ended then raise exception '课堂已结束。'; end if;\n   if (p_data->>'revision')::int is distinct from r.revision then raise exception '课堂已更新，请重试。'; end if;\n   qs := p_data->'questions';\n   if jsonb_typeof(qs) is distinct from 'array' then raise exception '题目格式错误。'; end if;\n   if jsonb_array_length(qs)>200 or octet_length(qs::text)>500000 then raise exception '本堂题目已达上限，请创建新课堂。'; end if;\n   for item in select value from jsonb_array_elements(qs) loop\n    if item->>'type' not in ('open_response','poll','multiple_choice','true_false','short_answer')\n      or item->>'status' not in ('active','stopped')\n      or length(btrim(coalesce(item->>'promptText',''))) not between 1 and 4000\n      or jsonb_typeof(item->'options') is distinct from 'array'\n      or jsonb_typeof(item->'correctAnswers') is distinct from 'array'\n      or jsonb_typeof(item->'allowMultiple') is distinct from 'boolean'\n      or item->>'id' is null then raise exception '题目格式错误。'; end if;\n    perform (item->>'id')::uuid;\n   end loop;\n   if (select count(*) from jsonb_array_elements(qs) x where x->>'status'='active')>1 then raise exception '一次只能开放一道题。'; end if;\n   update public.interact_rooms set questions=qs,revision=revision+1 where id=r.id returning * into r;\n  end if;\n elsif p_action = 'answer' then\n  if r.ended then raise exception '课堂已结束。'; end if;\n  select value into q from jsonb_array_elements(r.questions) where value->>'id'=p_data->>'questionId' and value->>'status'='active';\n  if q is null then raise exception '老师已停止作答，请等待下一题。'; end if;\n  if length(btrim(coalesce(p_data->>'name',''))) not between 1 and 80 then raise exception '请输入姓名（最多 80 个字）。'; end if;\n  v := p_data->'value';\n  if q->>'type' in ('open_response','short_answer') then\n   if jsonb_typeof(v) is distinct from 'string' or length(btrim(v#>>'{}')) not between 1 and 2000 then raise exception '请输入答案（最多 2000 个字）。'; end if;\n  elsif (q->>'allowMultiple')::boolean then\n   if jsonb_typeof(v) is distinct from 'array' then raise exception '请选择答案。'; end if;\n   if jsonb_array_length(v)<1 or jsonb_array_length(v)>jsonb_array_length(q->'options') then raise exception '请选择有效选项。'; end if;\n   if exists(select 1 from jsonb_array_elements(v) a where jsonb_typeof(a) <> 'string' or not (q->'options' @> jsonb_build_array(a))) then raise exception '请选择有效选项。'; end if;\n   if (select count(distinct a) from jsonb_array_elements(v) a)<>jsonb_array_length(v) then raise exception '选项不能重复。'; end if;\n  else\n   if jsonb_typeof(v) is distinct from 'string' or not(q->'options' @> jsonb_build_array(v)) then raise exception '请选择有效选项。'; end if;\n  end if;\n  -- Reusing a request ID makes a network retry safe for repeatable responses.\n  if not exists(select 1 from public.interact_responses where id=(p_data->>'id')::uuid and room_id=r.id and participant_hash=token_hash) then\n   if exists(select 1 from public.interact_responses where room_id=r.id and participant_hash=token_hash and created_at>now()-interval '1 second') then raise exception '请稍候再提交。'; end if;\n   begin\n    insert into public.interact_responses(id,room_id,question_id,participant_hash,participant_name,value,once_only)\n     values((p_data->>'id')::uuid,r.id,(q->>'id')::uuid,token_hash,btrim(p_data->>'name'),v,q->>'type'<>'open_response');\n   exception when unique_violation then raise exception '这道题已提交答案。'; end;\n  end if;\n elsif p_action not in ('read','create') then raise exception '不支持的操作。';\n end if;\n select coalesce(jsonb_agg(jsonb_build_object('id',id,'questionId',question_id,'participantId',participant_hash,'participantName',participant_name,'value',value,'submittedAt',created_at) order by created_at),'[]') into result_answers\n from public.interact_responses where room_id=r.id and (teacher or participant_hash=token_hash);\n select coalesce(jsonb_agg(case when teacher then x else x || jsonb_build_object('correctAnswers','[]'::jsonb) end),'[]') into qs from jsonb_array_elements(r.questions) x;\n return jsonb_build_object('title',r.title,'code',r.id,'createdAt',r.created_at,'questions',qs,'answers',result_answers,'revision',r.revision,'ended',r.ended);\nend $function$\n"
+  },
+  {
+    "schema": "public",
+    "proname": "set_updated_at",
+    "args": "",
+    "prosecdef": false,
+    "proconfig": [
+      "search_path=\"\""
+    ],
+    "proacl": "{postgres=X/postgres,service_role=X/postgres}",
+    "definition": "CREATE OR REPLACE FUNCTION public.set_updated_at()\n RETURNS trigger\n LANGUAGE plpgsql\n SET search_path TO ''\nAS $function$\nbegin\n  new.updated_at = now();\n  return new;\nend;\n$function$\n"
+  },
+  {
+    "schema": "public",
+    "proname": "valid_randomizer_fact_marks",
+    "args": "marks jsonb",
+    "prosecdef": false,
+    "proconfig": [
+      "search_path=pg_catalog"
+    ],
+    "proacl": "{=X/postgres,postgres=X/postgres,anon=X/postgres,authenticated=X/postgres,service_role=X/postgres}",
+    "definition": "CREATE OR REPLACE FUNCTION public.valid_randomizer_fact_marks(marks jsonb)\n RETURNS boolean\n LANGUAGE sql\n IMMUTABLE\n SET search_path TO 'pg_catalog'\nAS $function$\n  select case when jsonb_typeof(marks) = 'object' then\n    not exists (\n      select 1 from jsonb_each(marks) as item(key, value)\n      where key not in ('F', 'A', 'C', 'T')\n        or value not in ('0'::jsonb, '1'::jsonb, '2'::jsonb, '3'::jsonb, '4'::jsonb, '\"na\"'::jsonb, '\"insufficient\"'::jsonb)\n    )\n  else false end;\n$function$\n"
+  },
+  {
+    "schema": "public",
+    "proname": "finish_randomizer_class",
+    "args": "p_client_session_id text",
+    "prosecdef": false,
+    "proconfig": [
+      "search_path=\"\""
+    ],
+    "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}",
+    "definition": "CREATE OR REPLACE FUNCTION public.finish_randomizer_class(p_client_session_id text)\n RETURNS void\n LANGUAGE plpgsql\n SET search_path TO ''\nAS $function$\ndeclare v_class_id uuid; v_course_id uuid; v_completed_at timestamptz;\nbegin\n  if auth.uid() is null then raise exception 'Authentication required'; end if;\n  select class_session_id, course_id into v_class_id, v_course_id\n    from public.randomizer_sessions\n    where owner_id = auth.uid() and client_session_id = p_client_session_id;\n  if v_class_id is null then raise exception 'Class session not found'; end if;\n  select coalesce(completed_at, now()) into v_completed_at from public.class_sessions\n    where id = v_class_id and course_id = v_course_id and owner_id = auth.uid() for update;\n  if not found then raise exception 'Class session not accessible'; end if;\n  update public.randomizer_sessions set status = 'completed', completed_at = coalesce(completed_at, v_completed_at)\n    where class_session_id = v_class_id and course_id = v_course_id and owner_id = auth.uid();\n  update public.class_sessions set status = 'completed', completed_at = v_completed_at\n    where id = v_class_id and course_id = v_course_id and owner_id = auth.uid();\nend;\n$function$\n"
+  },
+  {
+    "schema": "public",
+    "proname": "keep_randomizer_session_completed",
+    "args": "",
+    "prosecdef": false,
+    "proconfig": [
+      "search_path=\"\""
+    ],
+    "proacl": "{postgres=X/postgres,service_role=X/postgres}",
+    "definition": "CREATE OR REPLACE FUNCTION public.keep_randomizer_session_completed()\n RETURNS trigger\n LANGUAGE plpgsql\n SET search_path TO ''\nAS $function$\nbegin\n  if old.status = 'completed' then\n    new.status := 'completed';\n    new.completed_at := old.completed_at;\n    new.class_session_id := old.class_session_id;\n    new.course_id := old.course_id;\n  end if;\n  return new;\nend;\n$function$\n"
+  },
+  {
+    "schema": "public",
+    "proname": "correct_class_session",
+    "args": "p_session_id uuid, p_session_date date, p_session_number integer, p_reason text",
+    "prosecdef": true,
+    "proconfig": [
+      "search_path=\"\""
+    ],
+    "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}",
+    "definition": "CREATE OR REPLACE FUNCTION public.correct_class_session(p_session_id uuid, p_session_date date, p_session_number integer, p_reason text)\n RETURNS void\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO ''\nAS $function$\ndeclare\n  v_current public.class_sessions%rowtype;\nbegin\n  if auth.uid() is null then\n    raise exception '請先登入。';\n  end if;\n  if p_session_date is null then\n    raise exception '請填寫有效上課日期。';\n  end if;\n  if p_session_number is not null and (p_session_number < 1 or p_session_number > 999) then\n    raise exception '上課次數必須是 1 到 999 的整數。';\n  end if;\n  if char_length(btrim(coalesce(p_reason, ''))) not between 1 and 500 then\n    raise exception '請說明修正原因，最多 500 字。';\n  end if;\n  select * into v_current\n  from public.class_sessions\n  where id = p_session_id and owner_id = auth.uid()\n  for update;\n  if not found then\n    raise exception '找不到這堂課。';\n  end if;\n  if p_session_number is not null and exists (\n    select 1 from public.class_sessions\n    where owner_id = auth.uid() and course_id = v_current.course_id\n      and session_number = p_session_number and id <> p_session_id\n  ) then\n    raise exception '這個班級已有相同的上課次數。';\n  end if;\n  if v_current.session_date is not distinct from p_session_date\n     and v_current.session_number is not distinct from p_session_number then\n    return;\n  end if;\n  insert into public.class_session_corrections (\n    owner_id, course_id, class_session_id,\n    previous_session_date, next_session_date,\n    previous_session_number, next_session_number, reason\n  ) values (\n    auth.uid(), v_current.course_id, v_current.id,\n    v_current.session_date, p_session_date,\n    v_current.session_number, p_session_number, btrim(p_reason)\n  );\n  update public.class_sessions\n  set session_date = p_session_date, session_number = p_session_number\n  where id = v_current.id and owner_id = auth.uid();\nend;\n$function$\n"
+  },
+  {
+    "schema": "public",
+    "proname": "correct_classroom_record",
+    "args": "p_record_type text, p_record_id uuid, p_reason text",
+    "prosecdef": true,
+    "proconfig": [
+      "search_path=\"\""
+    ],
+    "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}",
+    "definition": "CREATE OR REPLACE FUNCTION public.correct_classroom_record(p_record_type text, p_record_id uuid, p_reason text)\n RETURNS void\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO ''\nAS $function$\ndeclare\n  v_owner_id uuid := auth.uid();\n  v_course_id uuid;\n  v_student_id uuid;\n  v_previous_status text;\n  v_reason text := btrim(coalesce(p_reason, ''));\nbegin\n  if v_owner_id is null then\n    raise exception '請先登入。';\n  end if;\n  if p_record_type is null or p_record_type not in ('randomizer_attempt', 'learning_event') then\n    raise exception '回答紀錄類型不正確。';\n  end if;\n  if p_record_id is null then\n    raise exception '找不到要修正的回答紀錄。';\n  end if;\n  if char_length(v_reason) not between 1 and 500 then\n    raise exception '請說明修正原因，最多 500 字。';\n  end if;\n\n  if p_record_type = 'randomizer_attempt' then\n    select course_id, student_id, record_status\n      into v_course_id, v_student_id, v_previous_status\n    from public.randomizer_attempts\n    where id = p_record_id and owner_id = v_owner_id\n    for update;\n\n    if not found then\n      raise exception '找不到這筆回答紀錄。';\n    end if;\n    if v_previous_status = 'corrected' then\n      raise exception '這筆回答紀錄已更正。';\n    end if;\n    if v_previous_status = 'voided' then\n      raise exception '這筆回答紀錄已撤銷。';\n    end if;\n\n    update public.randomizer_attempts\n    set record_status = 'corrected',\n        counted_for_summary = false,\n        correction_note = v_reason,\n        corrected_at = now()\n    where id = p_record_id and owner_id = v_owner_id;\n  else\n    select course_id, student_id, record_status\n      into v_course_id, v_student_id, v_previous_status\n    from public.learning_events\n    where id = p_record_id and owner_id = v_owner_id\n    for update;\n\n    if not found then\n      raise exception '找不到這筆回答紀錄。';\n    end if;\n    if v_previous_status = 'corrected' then\n      raise exception '這筆回答紀錄已更正。';\n    end if;\n    if v_previous_status = 'voided' then\n      raise exception '這筆回答紀錄已撤銷。';\n    end if;\n\n    update public.learning_events\n    set record_status = 'corrected',\n        counted_for_summary = false,\n        correction_note = v_reason,\n        corrected_at = now()\n    where id = p_record_id and owner_id = v_owner_id;\n  end if;\n\n  insert into public.classroom_record_corrections (\n    owner_id, record_type, record_id, course_id, student_id,\n    previous_record_status, next_record_status, reason\n  ) values (\n    v_owner_id, p_record_type, p_record_id, v_course_id, v_student_id,\n    v_previous_status, 'corrected', v_reason\n  );\nend;\n$function$\n"
+  },
+  {
+    "schema": "public",
+    "proname": "keep_corrected_classroom_records_out_of_summary",
+    "args": "",
+    "prosecdef": false,
+    "proconfig": [
+      "search_path=\"\""
+    ],
+    "proacl": "{postgres=X/postgres,service_role=X/postgres}",
+    "definition": "CREATE OR REPLACE FUNCTION public.keep_corrected_classroom_records_out_of_summary()\n RETURNS trigger\n LANGUAGE plpgsql\n SET search_path TO ''\nAS $function$\nbegin\n  if tg_op = 'UPDATE' and old.record_status in ('corrected', 'voided') then\n    new := old;\n  end if;\n  if new.record_status in ('corrected', 'voided') then\n    new.counted_for_summary := false;\n  end if;\n  return new;\nend;\n$function$\n"
+  },
+  {
+    "schema": "public",
+    "proname": "ensure_class_session",
+    "args": "p_course_id uuid, p_session_date date",
+    "prosecdef": false,
+    "proconfig": [
+      "search_path=\"\""
+    ],
+    "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}",
+    "definition": "CREATE OR REPLACE FUNCTION public.ensure_class_session(p_course_id uuid, p_session_date date)\n RETURNS uuid\n LANGUAGE plpgsql\n SET search_path TO ''\nAS $function$\ndeclare v_session public.class_sessions%rowtype;\nbegin\n  if auth.uid() is null then raise exception '请先登录教师账号。'; end if;\n  if p_session_date is null then raise exception '请填写有效上课日期。'; end if;\n  perform 1 from public.courses where id=p_course_id and owner_id=auth.uid() for update;\n  if not found then raise exception '找不到本班或没有访问权限。'; end if;\n  select * into v_session from public.class_sessions\n    where course_id=p_course_id and owner_id=auth.uid() and status='in_progress';\n  if found then\n    if v_session.session_date <> p_session_date then\n      raise exception '本班 % 的课次尚未收尾，不能写入 % 的记录。请先核对并完成旧课次；本机记录已保留。', v_session.session_date, p_session_date;\n    end if;\n    return v_session.id;\n  end if;\n  if exists (select 1 from public.class_sessions\n    where course_id=p_course_id and owner_id=auth.uid() and session_date=p_session_date) then\n    raise exception '本班 % 已有结束的课堂。补记请在学生管理系统选择原课次，不另建重复课堂。', p_session_date;\n  end if;\n  insert into public.class_sessions(owner_id,course_id,session_date,status)\n    values(auth.uid(),p_course_id,p_session_date,'in_progress') returning id into v_session.id;\n  return v_session.id;\nend;\n$function$\n"
+  },
+  {
+    "schema": "public",
+    "proname": "guard_class_session_start",
+    "args": "",
+    "prosecdef": false,
+    "proconfig": [
+      "search_path=\"\""
+    ],
+    "proacl": "{postgres=X/postgres,service_role=X/postgres}",
+    "definition": "CREATE OR REPLACE FUNCTION public.guard_class_session_start()\n RETURNS trigger\n LANGUAGE plpgsql\n SET search_path TO ''\nAS $function$\nbegin\n  perform 1 from public.courses where id=new.course_id and owner_id=new.owner_id for update;\n  if exists(select 1 from public.class_sessions\n    where owner_id=new.owner_id and course_id=new.course_id and session_date=new.session_date) then\n    raise exception '本班该日期已有课堂，请连接原课次。' using errcode='23505';\n  end if;\n  return new;\nend;\n$function$\n"
+  },
+  {
+    "schema": "public",
+    "proname": "guard_randomizer_class_link",
+    "args": "",
+    "prosecdef": false,
+    "proconfig": [
+      "search_path=\"\""
+    ],
+    "proacl": "{postgres=X/postgres,service_role=X/postgres}",
+    "definition": "CREATE OR REPLACE FUNCTION public.guard_randomizer_class_link()\n RETURNS trigger\n LANGUAGE plpgsql\n SET search_path TO ''\nAS $function$\ndeclare v_class public.class_sessions%rowtype;\nbegin\n  if tg_op='UPDATE' and (new.class_session_id<>old.class_session_id or new.course_id<>old.course_id\n    or new.owner_id<>old.owner_id or new.client_session_id<>old.client_session_id) then\n    raise exception '抽问记录已关联固定课次，不能在重试时改挂另一堂课。';\n  end if;\n  select * into v_class from public.class_sessions\n    where id=new.class_session_id and owner_id=new.owner_id and course_id=new.course_id;\n  if not found then raise exception '找不到对应的课堂。'; end if;\n  new.session_date := v_class.session_date;\n  if v_class.status='completed' then\n    new.status := 'completed';\n    new.completed_at := coalesce(new.completed_at,v_class.completed_at,now());\n  end if;\n  return new;\nend;\n$function$\n"
+  },
+  {
+    "schema": "public",
+    "proname": "sync_class_session_randomizers",
+    "args": "",
+    "prosecdef": false,
+    "proconfig": [
+      "search_path=\"\""
+    ],
+    "proacl": "{postgres=X/postgres,service_role=X/postgres}",
+    "definition": "CREATE OR REPLACE FUNCTION public.sync_class_session_randomizers()\n RETURNS trigger\n LANGUAGE plpgsql\n SET search_path TO ''\nAS $function$\nbegin\n  update public.randomizer_sessions set session_date=new.session_date,\n    status=case when new.status='completed' then 'completed' else status end,\n    completed_at=case when new.status='completed' then coalesce(completed_at,new.completed_at,now()) else completed_at end\n    where owner_id=new.owner_id and course_id=new.course_id and class_session_id=new.id;\n  return new;\nend;\n$function$\n"
+  },
+  {
+    "schema": "public",
+    "proname": "guard_randomizer_attempt_replay",
+    "args": "",
+    "prosecdef": false,
+    "proconfig": [
+      "search_path=\"\""
+    ],
+    "proacl": "{postgres=X/postgres,service_role=X/postgres}",
+    "definition": "CREATE OR REPLACE FUNCTION public.guard_randomizer_attempt_replay()\n RETURNS trigger\n LANGUAGE plpgsql\n SET search_path TO ''\nAS $function$\nbegin\n  if new.randomizer_session_id<>old.randomizer_session_id or new.course_id<>old.course_id\n    or new.owner_id<>old.owner_id or new.client_attempt_id<>old.client_attempt_id then\n    raise exception '发言记录不能在重试时改挂另一堂课。';\n  end if;\n  if old.record_status='corrected' and new.record_status<>'corrected' then return old; end if;\n  if new.assessment_status in ('pending','not_applicable') and old.source_updated_at is not null and (new.source_updated_at is null\n    or new.source_updated_at<old.source_updated_at) then return old; end if;\n  if old.assessment_status in ('observed','scored') and new.assessment_status in ('pending','not_applicable') then\n    new.assessment_status := old.assessment_status;\n    new.performance_level := old.performance_level;\n    new.observation_version := old.observation_version;\n    new.fact_marks := old.fact_marks;\n    new.fact_version := old.fact_version;\n    new.task_completion := old.task_completion;\n    new.comprehensibility := old.comprehensibility;\n    new.language_control_vocabulary := old.language_control_vocabulary;\n    new.content_interaction := old.content_interaction;\n    new.total_score := old.total_score;\n    new.score := old.score;\n    new.counted_for_grade := old.counted_for_grade;\n    new.counted_for_summary := old.counted_for_summary;\n    new.outcome := old.outcome;\n    new.response_status := old.response_status;\n    new.completed_at := old.completed_at;\n    new.no_response_reason := old.no_response_reason;\n  end if;\n  return new;\nend;\n$function$\n"
+  }
+]

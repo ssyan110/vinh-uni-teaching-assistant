@@ -22,6 +22,16 @@ Adam 目前使用的學生管理 Web App，網頁名稱為「荣市大学_学生
 - 2026-09-22 核准的 Apple 風格介面：白灰底、藍色操作、系統無襯線字體；學生使用座號與姓名，不放照片或頭像。點選名單可先預覽近期課堂紀錄與備註，再進入完整紀錄及待辦。
 - 正式登入後使用 Supabase 教學資料庫；未登入時仍可用範例資料了解介面流程。
 
+## 下堂課跟進
+
+班級總覽的「下堂课跟进」可切換班級。先顯示本班未完成的提醒、補做與再觀察待辦，再列出最近一堂課需要再觀察或尚無有效口語紀錄的學生；同一學生合併一列，預設八列，可展開全部。待辦可直接開啟原項目、標記完成或恢復；學生連結會保留班級範圍。待辦頁也可按班級篩選。
+
+觀察建議依最近一堂課最後一筆有效口語證據產生，保留具體任務或教師備註。已更正、撤銷及重複鏡像不作證據。明確記錄缺席／請假的學生不因缺少紀錄而自動列入觀察建議，但既有未完成待辦仍顯示。沒有紀錄只標示未觀察，不推定零分、缺席或未交作業。舊的缺交作業備註沒有完成狀態，須由教師在學生頁核對並使用既有「帶入跟進待辦」，才作為未完成事項處理。
+
+同課堂的再觀察待辦完成後，完成時間之前的觀察建議不再顯示；之後的新觀察仍可提出建議。取消但未記錄完成時間的待辦不會自動消除觀察證據。清單不寫入新任務、不修改成績，不需資料庫遷移。
+
+本機驗證使用範例資料，包含班級切換、展開／收起、原待辦連結、完成後更新、桌面與手機畫面；證據見 `qa/next-class-browser-result.json`。尚未部署或進行正式帳號驗收。
+
 ## 技術基線
 
 - Node.js 22 以上
@@ -46,7 +56,9 @@ npm run dev
 
 範例模式可直接試用。正式登入模式需要先套用新增表；尚未套用時會顯示未啟用提示並停用補登操作，原有學生資料仍可載入。
 
-可審閱的 SQL 位於 [supabase/attendance-exceptions.sql](supabase/attendance-exceptions.sql)。目前未套用遠端資料庫，也未自動建立 migration history。先使用 Supabase CLI 的 `supabase migration new attendance_exceptions` 建立正式 migration，將候選 SQL 放入該檔案，確認新增表、owner RLS 與修課檢查後，在取得資料庫變更批准後套用。新增表不修改既有出席或成績資料。正式 Supabase Auth／Data API 的端到端驗證仍待完成。
+The live database now includes attendance exceptions, applied on 2026-10-25 as [20261025163339_attendance_exceptions.sql](supabase/migrations/20261025163339_attendance_exceptions.sql), followed by its owner/student index. Owner isolation, enrollment checks, and separate makeup/official-verification states passed local and live rollback-only SQL tests. Real teacher login and browser save/reload acceptance remain untested. The standalone [attendance-exceptions.sql](supabase/attendance-exceptions.sql) is retained only for the disposable local test harness.
+
+The shared Supabase schema audit and completed follow-up checks are recorded in [the latest audit report](../../docs/qa/supabase-audit-20261025/remaining/report.md). All 30 local migration versions now match production history. Authenticated roster, participation, correction and attendance saves were read back after browser reload. The historical LT_03 data repair is a documented no-op on fresh rebuilds; its original applied SQL remains in the audit evidence. Do not replay old migrations manually against production.
 
 同一學生每個場次只有一筆例外紀錄；使用「編輯補登紀錄」更新。選擇「已手動補登」後仍保持「官方尚未核對」，直到教師查看官方系統，主動填寫核對日期。新表不提供刪除操作。
 
@@ -74,7 +86,7 @@ VITE_SUPABASE_PUBLISHABLE_KEY=YOUR_PUBLISHABLE_KEY
 
 ## 資料庫安全
 
-Migration 位於 `supabase/migrations/20260823090017_initial_student_tracker.sql`，包含：
+Migration 位於 `supabase/migrations/20260905103254_initial_student_tracker.sql`，包含：
 
 - 8 張核心表。
 - 每張表的 `owner_id`。

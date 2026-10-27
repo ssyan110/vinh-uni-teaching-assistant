@@ -1,0 +1,47 @@
+{
+  "status": "content-review-only-not-approved",
+  "offering_id": "2026-fall",
+  "lesson_key": "boya-elementary-i:lesson-15",
+  "week": "W07",
+  "source": {
+    "path": "/Users/ssyan110/Desktop/Work/teaching/vinh-university/00_上課教材/一年级/博雅汉语听说_初级起步篇I/线上预习/lesson-15-在线预习.pptx",
+    "sha256": "2759125d34c86cfbd0ae2c90fff3fa207b3ff653e134ca166fd9ddb14e49db89",
+    "slides": 77,
+    "actual_oral_tasks": [
+      72,
+      73
+    ],
+    "stale_prompt": {
+      "slide": 76,
+      "text": "我准备好了天气介绍和一个问题",
+      "used": false
+    }
+  },
+  "copy": {
+    "path": "lessons/boya-elementary-i/lesson-15/10-design/storyboard/lesson-15-逐页文案审阅-v01.md",
+    "sha256": "b898fcfb6ee734bea64a055322c45fbeab3a30483d7f166ca40b4cbe8b8a6be5",
+    "pages": 17
+  },
+  "teacher_material": {
+    "path": "lessons/boya-elementary-i/lesson-15/10-design/lesson-15-教师朗读与评量稿-v01.md",
+    "sha256": "3dd2d7f4ac5c93ac88c4809fd9b413df162334e3bc8a6890f1571b7f1886c5d3"
+  },
+  "verification": {
+    "source_task_images_read": true,
+    "six_listening_dialogues_questions_answers_reviewed": true,
+    "timing_minutes": [
+      50,
+      50,
+      50,
+      50
+    ],
+    "student_instruction_reader_review": "author and intended-reader desk review; no student testing",
+    "media_playback": "not_verified",
+    "publisher_full_coverage": "not_asserted"
+  },
+  "pending": [
+    "specific-copy approval",
+    "actual video playback/segment/answers",
+    "lesson registry and source package before visual production"
+  ]
+}

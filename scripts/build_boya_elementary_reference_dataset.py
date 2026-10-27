@@ -61,7 +61,7 @@ BOOKS: list[dict[str, Any]] = [
         "textbook_id": "boya-elementary-ii",
         "volume": "初级起步篇 II",
         "title": "博雅汉语听说·初级起步篇 II",
-        "pdf": Path("/Users/ssyan110/Desktop/Work/Teaching/博雅漢語教材/博雅汉语听说-初级起步篇II.pdf"),
+        "pdf": Path("/Users/ssyan110/Desktop/Work/teaching/shared/textbooks/博雅漢語教材/3. 博雅汉语听说-初级起步篇II.pdf"),
         "ocr_dir": ROOT / ".tmp" / "ocr-elementary-ii",
         "appendix_json_dir": ROOT / ".tmp" / "ocr-appendix-ii-json",
         "lesson_starts": [12, 23, 34, 44, 54, 64, 74, 83, 93, 102, 112, 123, 133, 143, 152, 161, 168, 178],
@@ -645,6 +645,48 @@ def infer_lesson_from_printed_page(book: dict[str, Any], printed_page: int) -> i
     return lesson
 
 
+def apply_checked_vocab(book, occurrences, appendix, correction_path=None):
+    """Apply image-checked source repairs before OCR/appendix matching."""
+    path = correction_path or OUT_DIR / 'checked-vocabulary.json'
+    if not path.exists():
+        return occurrences
+    record = json.loads(path.read_text(encoding='utf-8'))
+    textbook, lesson = record['lesson_key'].split(':')
+    if book['textbook_id'] != textbook:
+        return occurrences
+    if not book['pdf'].is_file() or sha256(book['pdf']) != record['source_pdf_sha256']:
+        raise ValueError('Checked vocabulary PDF is missing or changed')
+    old = [r for r in occurrences if r['lesson_id'] == lesson]
+    by_word = {r['word']: r for r in old}
+    if not old:
+        raise ValueError('Checked vocabulary lesson missing from extracted source')
+    corrected = []
+    for item in record['items']:
+        original = by_word.get(item['word']) or (old[0] if item['word'] == '订' else {})
+        row = {key: '' for key in old[0]}
+        row.update(original)
+        row.update(item)
+        row.update({'textbook_id': textbook, 'volume': book['volume'], 'lesson_id': lesson,
+                    'lesson_number': int(lesson[-2:]), 'lesson_title': book['lesson_titles'][int(lesson[-2:])-1],
+                    'source_section': 'lesson_vocab', 'source_status': 'source_image_checked',
+                    'meaning_vi_status': 'approved_lesson_copy',
+                    'source_notes': '2026-10-27按教材原页核对；保留原始OCR字段；checked-vocabulary.json'})
+        corrected.append(row)
+    words = {r['word']: r for r in corrected}
+    for row in appendix:
+        if row['word'] in words:
+            row['pinyin'] = words[row['word']]['pinyin']
+            if str(row.get('appendix_printed_page')) in ('1', '2'):
+                row['appendix_printed_page'] = words[row['word']]['source_printed_page']
+        for repair in record.get('related_appendix_repairs', []):
+            if row['word'] == repair['word']:
+                row['appendix_printed_page'] = repair['source_printed_page']
+    start = occurrences.index(old[0])
+    remaining = [r for r in occurrences if r['lesson_id'] != lesson]
+    remaining[start:start] = corrected
+    return remaining
+
+
 def merge_and_normalize_vocab(book: dict[str, Any], occurrences: list[dict[str, Any]], appendix: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     # Prefer the appendix spelling/pinyin when it can be matched; it is the
     # publisher's consolidated vocabulary index.  The key is word + pinyin,
@@ -1000,7 +1042,17 @@ def main() -> None:
         appendix_pinyin_keys = {clean_pinyin_key(row["pinyin"]) for row in appendix}
         appendix_words = {row["word"] for row in appendix}
         occurrences = extract_vocab_rows(book, appendix_pinyin_keys, appendix_words)
+        occurrences = apply_checked_vocab(book, occurrences, appendix)
         master, occurrences = merge_and_normalize_vocab(book, occurrences, appendix)
+        checked = OUT_DIR / 'checked-vocabulary.json'
+        if checked.exists():
+            record = json.loads(checked.read_text(encoding='utf-8'))
+            if record['lesson_key'].startswith(book['textbook_id'] + ':'):
+                source_items = {x['word']: x for x in record['items']}
+                for row in occurrences:
+                    if row['lesson_id'] == record['lesson_key'].split(':')[1]:
+                        row.update(source_items[row['word']])
+                        row['source_status'] = 'source_image_checked'
         patterns = extract_reference_patterns(book)
         sentences = extract_reference_sentences(book)
         for lesson_number, title in enumerate(book["lesson_titles"], 1):
@@ -1133,6 +1185,9 @@ def main() -> None:
     translation_override_path = OUT_DIR / "translation-overrides.csv"
     if translation_override_path.exists():
         output_paths.append(translation_override_path)
+    checked_vocabulary = OUT_DIR / 'checked-vocabulary.json'
+    if checked_vocabulary.exists():
+        output_paths.append(checked_vocabulary)
     for path in output_paths:
         manifest["files"][str(path.relative_to(OUT_DIR))] = {"sha256": sha256(path), "bytes": path.stat().st_size}
     (OUT_DIR / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

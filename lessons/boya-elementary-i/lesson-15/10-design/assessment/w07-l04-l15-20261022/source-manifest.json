@@ -1,0 +1,122 @@
+{
+  "record_type": "official_source_provenance_not_approval",
+  "retrieved_date": "2026-10-22",
+  "official_index": "https://tocfl.edu.tw/tocfl/index.php/teach/test/page/1",
+  "selection": "现行v4：准备级第1–8题；基础图片第9–20题；图片与短对话第21–35题；细节及推断第36–50题。题目和音频来源不变。",
+  "official_sources": [
+    {
+      "url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_en_s.pdf",
+      "local_file": "source/A4-en_s.pdf",
+      "sha256": "cfc640d29784e4546607581af21cedfbd80e480aa2c9ac5f2db724695c276bb1"
+    },
+    {
+      "url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+      "local_file": "source/A4-listen.pdf",
+      "sha256": "1f6ae89727b7968c3d6cac9059e58a2029f5f25594beb6c7614652bcac99fe18"
+    },
+    {
+      "url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_answer.pdf",
+      "local_file": "source/A4-answer.pdf",
+      "sha256": "40d5d8111bcbdf862bfd4e20d74fd78ba0d6eb63417d19e7982d0c719a8271bc"
+    },
+    {
+      "url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_en_s.pdf",
+      "local_file": "source/A5-en_s.pdf",
+      "sha256": "a617a80b565f12be12a1cb9180d46d160969e5007d095e7909a14562d7c9e55c"
+    },
+    {
+      "url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
+      "local_file": "source/A5-listen.pdf",
+      "sha256": "a2088536618c4d4a5a988d08bfc89c1e048c4a098440d62d02467ba26015475f"
+    },
+    {
+      "url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_answer.pdf",
+      "local_file": "source/A5-answer.pdf",
+      "sha256": "f1028a9a13cb38a88b615323d93e5b4f6c3959e67a3a3d9f573e20f39f3a8ea5"
+    }
+  ],
+  "question_source_ids": [
+    "Q00799500",
+    "Q00799600",
+    "Q00799700",
+    "Q00799800",
+    "Q00799900",
+    "Q01025800",
+    "Q01026000",
+    "Q01026100",
+    "TOCFL-A4-Q01",
+    "TOCFL-A4-Q06",
+    "TOCFL-A4-Q07",
+    "TOCFL-A4-Q08",
+    "TOCFL-A5-Q01",
+    "TOCFL-A5-Q02",
+    "TOCFL-A5-Q03",
+    "TOCFL-A5-Q05",
+    "TOCFL-A5-Q06",
+    "TOCFL-A5-Q07",
+    "TOCFL-A5-Q08",
+    "TOCFL-A5-Q09",
+    "TOCFL-A4-Q09",
+    "TOCFL-A4-Q10",
+    "TOCFL-A4-Q11",
+    "TOCFL-A4-Q15",
+    "TOCFL-A4-Q17",
+    "TOCFL-A4-Q19",
+    "TOCFL-A4-Q22",
+    "TOCFL-A4-Q25",
+    "TOCFL-A4-Q30",
+    "TOCFL-A4-Q33",
+    "TOCFL-A4-Q34",
+    "TOCFL-A5-Q12",
+    "TOCFL-A5-Q15",
+    "TOCFL-A5-Q18",
+    "TOCFL-A5-Q19",
+    "TOCFL-A4-Q21",
+    "TOCFL-A4-Q27",
+    "TOCFL-A4-Q35",
+    "TOCFL-A4-Q43",
+    "TOCFL-A4-Q16",
+    "TOCFL-A4-Q36",
+    "TOCFL-A4-Q38",
+    "TOCFL-A4-Q40",
+    "TOCFL-A4-Q42",
+    "TOCFL-A4-Q45",
+    "TOCFL-A4-Q46",
+    "TOCFL-A4-Q41",
+    "TOCFL-A5-Q42"
+  ],
+  "topic_coverage": "topic-coverage.csv",
+  "human_gates": {
+    "content_review": "approved_by_adam_2026-10-23",
+    "teacher_full_listening": "pending",
+    "classroom_speaker_acceptance": "pending",
+    "external_form_sheet_sync": "verified_2026-10-23",
+    "publication": "not_authorized"
+  },
+  "textbook_source": {
+    "lesson_key": "boya-elementary-i:lesson-15",
+    "textbook_printed_page": 126,
+    "exercise": "15-11",
+    "source_inventory": "textbooks/boya-elementary-i/source/source-inventory.json",
+    "audio_original_user_path": "/Users/ssyan110/Desktop/Work/teaching/vinh-university/00_上課教材/一年级/博雅汉语听说_初级起步篇I/博雅汉语听说初级起步篇1 MP3/第15课/15-11.mp3",
+    "audio_local_copy": "audio/BOYA-L15-15-11.mp3",
+    "audio_sha256": "7d39198465dcf1f0582474a78d82f487e8014744cbfeb1f55c2f17d5146852e1",
+    "publisher_original_unmodified": true,
+    "teacher_full_listening": "pending"
+  },
+  "tocfl_novice_bank": {
+    "index": "https://tocfl.edu.tw/tocfl/index.php/exam/test/page/1?pressBtn=(%E9%A1%8C%E5%BA%AB)",
+    "local_dir": "source/tocfl-novice-database-part3",
+    "question_ids": [
+      "Q00799500",
+      "Q00799600",
+      "Q00799700",
+      "Q00799800",
+      "Q00799900",
+      "Q01025800",
+      "Q01026000",
+      "Q01026100"
+    ],
+    "excluded": "Q01025900 both A and B true; not used"
+  }
+}

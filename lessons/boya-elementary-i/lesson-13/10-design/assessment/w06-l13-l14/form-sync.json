@@ -1,21 +1,21 @@
 {
   "exam_id": "W06-L13L14-20261016",
-  "version": 2,
-  "status": "SYNCED_VERIFIED",
-  "stage": "draft_unpublished",
-  "publication_authorized": false,
-  "revision_id": "00000008",
-  "synced_at": "2026-10-16T03:47:41.909539+00:00",
-  "verification": {
-    "input_hashes": {
-      "items_sha256": "8ff4c9aa6ca04cec666d2a46cd1038fd4a3e386a9a62abea90e36dea3fce06ca",
-      "sections_sha256": "ea040c6d468302a1a717f8e568a5d4e296b0e100a1566e69cc1ad24587ae3447",
-      "teacher_sha256": "09da1ce07827edb9f15efae87d202aebec7a29ebc832c1de7e140813ef6dac2a",
-      "audio_manifest_sha256": "b8694f98d9bfcfe0d70cb916710f24718ee499866e729b3965e8f6d283eda0b7"
-    },
-    "readback": ".tmp/w06-mixed-official/sync-verification.json",
-    "playback": ".tmp/w06-mixed-official/dashboard-playback.json",
-    "semantic_review": ".tmp/w06-mixed-official/semantic-review.json",
-    "scope": "Draft question contents, 100 options, keys, scores, groups, Sheet lookups and dashboard playback; publication and student submission not accepted"
-  }
+  "status": "SYNCED_VERIFIED_PUBLISHED",
+  "question_version": 5,
+  "version_directory": "long-dialogues-20261023",
+  "form_id": "1M33yrhHQHPAI2JE66VqO2nyuxNZQChUOwyWXIHGFnSU",
+  "question_count": 25,
+  "points": 100,
+  "question_bank_sha256": "cd178ab35746ef10d07f04565349809ffddb2661534926cfa301f0f5911b8b4e",
+  "form_evidence": ".agent/runs/w06-q21-25-20261023/form-readback.json",
+  "sheet_evidence": ".agent/runs/w06-q21-25-20261023/sheet/sheet-readback.json",
+  "publication_authorized": true,
+  "synced_at": "2026-10-23T03:02:03.187580+00:00",
+  "documents_audio_sync_evidence": ".agent/runs/w06-full-sync-20261023/verification.json",
+  "content_approved": true,
+  "finalized": true,
+  "content_approval_record": "lessons/boya-elementary-i/lesson-13/10-design/assessment/w06-l13-l14/content-approval.json",
+  "publication_evidence": ".agent/runs/w06-w07-publication-20261025/final-verification.json",
+  "published_at": "2026-10-25T18:30:02+07:00",
+  "accepting_responses": true
 }

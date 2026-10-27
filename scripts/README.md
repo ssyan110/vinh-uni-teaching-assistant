@@ -25,7 +25,7 @@ Preflight checks the execution boundary only and returns `production_authorized=
 python3 scripts/production_gate.py --purpose classroom-html --stage draft --lesson-key boya-elementary-i:lesson-11 --offering-id 2026-fall --output-dir lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12
 ```
 
-This is a read-only approved-input/output-boundary preflight. Follow `docs/workflow/classroom-html-lifecycle.md` for combined lessons, resource packaging, teacher materials, homepage QA and the unsupported formal HTML promotion/release boundary. It does not generate a deck or verify its rendered pages.
+This is a read-only approved-input/output-boundary preflight. Follow `docs/workflow/classroom-html-lifecycle.md` for combined lessons, resource packaging, teacher materials, homepage QA and the guarded formal HTML promotion/release process. It does not generate a deck or verify its rendered pages. The shared-homepage synchronizer separately requires each registered HTML deck to have a visual-check profile (unchanged L09–10/L11–12 baselines are SHA-pinned) and blocks preview writes when the profile fails; use `python3 scripts/sync_open_slide_workspace.py --check-only` for a read-only check.
 
 `build_l23_pptx_drafts.js` defaults to online preparation. Its `--mode legacy-face` route and `verify_boya_face_to_face_order.py --mode legacy-face` are explicit maintenance routes for the old quasi-intermediate PPTX order contract, not the default future classroom workflow. Plain `Audio n-n` labels replace embedded audio; package verification rejects audio media/relationships/actions. Never run a builder simply to test routing.
 
@@ -35,8 +35,8 @@ Optimization roadmap: `docs/workflow/WORKFLOW_V2_OPTIMIZATION_SPEC.md`
 
 Use explicit task scope and the canonical contract for all new work. Lesson operations require `lesson_key`; project/tool maintenance does not invent one. This README documents command compatibility and implementation details; it does not redefine lifecycle or gate semantics.
 
-`lessonctl.py` is the normal agent-facing coordinator for the currently implemented
-preflight, compile, image-probe, build staging, and QA adapters. Its JSON results
+`lessonctl.py` is a compatibility coordinator for the currently implemented
+preflight, compile, image-probe, build staging, and QA adapters. Its default finalized-PPTX route is for existing quasi-intermediate finalized files and requires both historical PPTX inputs; it is not the new-course OpenSlide workflow. Use the classroom HTML preflight and lifecycle above for new physical lessons. Its JSON results
 preserve legacy `blockers` strings and also expose shared `blocker_records` with
 stable `code`, `message`, and `scope`; this is diagnostic output, not an approval
 or release authorization.
@@ -63,9 +63,8 @@ The archived director-review snapshot is evidence only. Book-specific legacy gen
 New teacher-facing lesson files use `lesson-<nn>-<用途>.<extension>` with a two-digit lesson number, hyphens, and a lowercase extension. When the requested artifact is PPTX, the mode names are:
 
 - `lesson-01-在线预习.pptx`
-- `lesson-01-实体课.pptx`
 
-Future classroom decks use HTML/OpenSlide; the face-to-face PPTX is an optional static backup. These names do not require producing two PPTX files for every task.
+Across future semesters, Year 1 and Year 2 physical classes use OpenSlide and the shared homepage; do not produce a classroom PPTX backup. `lesson-01-实体课.pptx` refers only to an existing historical file.
 
 Teacher guides, prep cards, activity materials, previews, audio, CSV exports, and ZIP packages use the same `lesson-01-<用途>` prefix. Existing approved or archived files keep their original names because their paths and hashes are part of the recorded evidence; new releases must use the canonical names.
 
@@ -199,43 +198,10 @@ missing or changed content blocks production. Structure/boundary approval and
 "start/continue" are not content approval. Existing finalized read-only intake
 does not regenerate a lesson and is unchanged.
 
-Before a generator writes a draft, it runs the lesson-specific fail-fast gate
-(which includes the same content-approval check):
+For new versions, use `build_scoped_online_pptx.py` and the complete [online PPTX lifecycle](../docs/workflow/online-pptx-lifecycle.md); its version-specific gate binds the actual approved slide JSON and source snapshot, not the historical singleton. Historical `build_l23_pptx_drafts.js` accepts quasi-intermediate L02–L12 only, uses legacy shared inputs and requires explicit `--lesson-key`; it rejects new scoped approval and is not the new-semester generator. Historic boundary records remain evidence, but the standing online/classroom division does not require a new confirmation for each version.
 
-```bash
-python3 scripts/production_gate.py --purpose pptx --stage draft \\
-  --lesson-key boya-quasi-intermediate-i:lesson-02 \\
-  --output-dir lessons/boya-quasi-intermediate-i/lesson-02/10-design/pptx-draft/online
-```
-
-The draft gate rejects `archive/`, legacy `output/` and `share/` inputs, output paths
-outside the lesson's `10-design/pptx-draft/`, missing lesson identity/source package,
-missing boundary confirmation, and mismatched source hashes. It does not grant
-authority and does not replace the full authority/release gate, which checks
-approved design inputs, audio playback and the lesson's approved contact-hour
-rehearsal. The generator stops before creating files when a gate fails.
-
-The boundary confirmation is a lesson-scoped Markdown record at
-`lessons/<textbook_id>/<lesson_id>/10-design/storyboard/<lesson_id>-boundary-confirmation-YYYY-MM-DD.md`.
-It records content routing only: online preparation covers textbook reading, audio
-preview, vocabulary understanding, short-text key-point recording and personal
-question preparation; face-to-face class covers listening comprehension, peer
-questions, information-gap work, oral practice, presentation, feedback and retry.
-It must also state that online study is extra self-paced preparation, not a fixed
-time quota and not a substitute for approved contact hours. The record does not
-approve source content, teaching design, teacher guides, PPTX, playback, rehearsal
-or release.
-
-`scripts/build_l23_pptx_drafts.js` is currently scoped to
-`boya-quasi-intermediate-i:lesson-02` through `:lesson-10`; it rejects other
-lesson keys and requires an explicit `--lesson-key`, so a draft cannot silently
-leak into an unprepared lesson. Its face-to-face order is governed by
-`course/boya-face-to-face-order-contract.json`: lesson-wide foundation content
-comes first, then each short-text divider owns its complete listening, question,
-oral, comparison, expression and output block. Any
-older draft found under a later lesson must be treated as legacy evidence until
-that lesson has its own source package, boundary confirmation, and generator
-scope.
+The scoped builder also requires `layout_reference`, `reference_slide` and native `reference_shape_id` bindings. It copies the actual approved native layout with `render_reference_online_pptx.py` (Python with the existing `python-pptx` and Pillow dependencies); `render_scoped_online_pptx.js` is a historical free-coordinate renderer, not the new production path. Use the applicable reference in `course/ppt-style-registry.json`, inspect scene images and every rendered page, and compare rendered text coverage rather than relying only on slide XML or hashes.
+New or revised online PPTX student content defaults to a hard minimum of 25 pt. Only page headers, slide numbers, textbook markers and plain Audio labels may declare `text_role: chrome` and use the applicable 20/23 pt auxiliary minimum; the builder rejects other uses of that role. Historical PPTX files remain read-only references.
 
 The textbook-page marker tools require a slide-level storyboard. A candidate-page
 inventory such as `lesson-02-source-refs.csv` records source blocks rather than
@@ -358,21 +324,11 @@ retained as historical evidence and is not the current v11 delivery.
 - `legacy/build_lesson_01_source_review.js`
 - `legacy/build_lesson_01_teaching_design.js`
 
-Do not use them as the future classroom deck pipeline. The `scripts/legacy/` directory is read-only historical evidence; any fixed lesson counts, fixed hours, or HTML output there do not apply to current lesson requirements and must not be used as generator inputs or release criteria. For new decks, use the selected `native-pptx` or `open-slide` path documented in `AGENTS.md`; Open Slide remains draft-only until its lesson QA/release path is defined.
+Do not use them as the future classroom deck pipeline. The `scripts/legacy/` directory is read-only historical evidence; any fixed lesson counts, fixed hours, or HTML output there do not apply to current lesson requirements and must not be used as generator inputs or release criteria. For new decks, use the selected `native-pptx` or `open-slide` path documented in `AGENTS.md`; Registered OpenSlide HTML decks follow the guarded approval and release path in `docs/workflow/classroom-html-lifecycle.md`.
 
 ## Future production rule
 
-New lesson authority production should follow:
-
-`source gate → PBI redesign → teacher guide content master → teacher guide approval → prep/activity materials → internal PPT storyboard → visual storyboard → 6-slide prototype → native editable PPTX → audio/content/visual/layout QA`
-
-The teacher guide is the content source of truth. Run the textbook-scoped
-teacher-guide builder after the canonical source or approved coverage changes.
-It must be explicitly approved before it can enter `20-approved/`. For later
-lessons, a reversible `10-design/pptx-draft` may start after the source package
-and recorded online/face-to-face boundary pass the lesson-specific draft gate.
-That draft is design evidence only and cannot bypass the teacher-guide, support,
-visual, prototype, QA, rehearsal, or release gates.
+Online preparation and classroom sessions are independently scoped and produced. Use `docs/workflow/online-pptx-lifecycle.md` for a new online version and `docs/workflow/classroom-html-lifecycle.md` for OpenSlide. Exact content approval precedes visual production; each format has its own QA and formal authorization. Existing teacher-guide and historical PPTX builders are legacy-specific and do not impose a pre-class design or rehearsal gate on a new online PPT.
 
 Only when `boya-intermediate-i:lesson-01` is the active context may the preserved
 `build_lesson_01_pptx.js` entry run, and only after its teacher guide, support
@@ -406,3 +362,15 @@ Read the repository root `AGENTS.md`, `PROJECT_REQUIREMENTS.md` and `.agent/skil
 Dashboard selection is centralized in `dashboard_context.py`, not removed. Its output root is restricted to `dashboard/`; no material paths are permitted.
 The active-context audit is a lexical inventory of Python/JavaScript files, not a complete data-flow or historical-builder safety proof. Unknown matches are blocked (exit 1); known compatibility matches remain review (exit 0).
 Requirements coverage checks top-level chapter mappings only. Empty input is blocked; this is not per-requirement acceptance or human approval. Remaining CLI consolidation and legacy removal are optional roadmap work, not automatic next tasks.
+
+
+## Current classroom HTML verification
+
+Run `python3 scripts/verify_classroom_slides.py --deck-id <registered-id> --sync --build` after editing the registered source. It orchestrates existing content-approval preflights, reviewed page-contract validation, schema-v2 browser measurements/screenshots, guarded sync and the existing workspace build. Without flags it refreshes draft-local QA and performs read-only sync validation. `sync_open_slide_workspace.py --check-only` remains read-only and rerenders to verify current evidence. The page contract is a technical mapping of reviewed inputs, never a new approval record. Generic constraints live outside W06-specific data; the historical W06 tests do not define another lesson's content. Use the classroom standard as the single visual QA checklist.
+
+
+### Future-semester artifact scope
+
+New online and classroom production uses the scoped `artifact-content` record described in `docs/workflow/canonical-workflow-contract.md`. Pass all of `--offering-id`, `--approval-record`, `--artifact-scope`, `--artifact-id`, and `--class-scope` to `production_gate.py`; partial scope fails closed. `agent_loop.py init` accepts `--approval-record`, `--artifact-id`, and `--class-scope` with an explicit lesson and offering. Registered multi-lesson OpenSlide decks declare an `approval_records` map for all lesson keys.
+
+The legacy `build_l23_pptx_drafts.js` uses historical inputs and rejects scoped approvals and existing output paths. For future versions use `build_scoped_online_pptx.py` and `online_ppt_release.py`; commands, exact QA and evidence schema are in `docs/workflow/online-pptx-lifecycle.md`. The older PPTX authority/release tools retain their historical gates and do not govern this separately scoped online flow. Do not reuse a historical approval.

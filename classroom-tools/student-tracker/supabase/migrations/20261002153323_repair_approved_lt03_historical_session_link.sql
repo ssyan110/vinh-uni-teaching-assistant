@@ -1,0 +1,4 @@
+-- Already applied on production: an explicitly approved, data-only LT_03 repair.
+-- No schema changes. A fresh database has none of the referenced historical UUIDs.
+-- Intentionally no-op on rebuild; original SQL is preserved in the audit evidence
+-- docs/qa/supabase-audit-20261025/remote-migrations-after.json. Never replay on production.

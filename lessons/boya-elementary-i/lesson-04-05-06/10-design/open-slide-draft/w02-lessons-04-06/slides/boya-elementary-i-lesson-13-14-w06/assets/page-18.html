@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>初级起步篇｜第13—14课｜购物与生日（18页）</title><style>
+:root{--navy:#102A43;--teal:#087E8B;--teal-dark:#06616B;--warm:#E8A63A;--ink:#17324D;--muted:#526579;--line:#D9E3E8;--wash:#F7FAFA;--cream:#FFFBF2}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#000;font-family:"Times New Roman",KaiTi,STKaiti,"楷体",serif}
+.os-stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+.os-frame{width:1920px;height:1080px;flex:none;position:relative;overflow:hidden;transform-origin:center center;background:#fff;color:var(--ink)}
+.os-page{position:absolute;inset:0;background:#fff;overflow:hidden}
+.os-page[hidden]{display:none!important}
+.os-page.deck-enter [data-osd-step]{animation:rise-in .32s cubic-bezier(.22,1,.36,1) both;animation-delay:calc(var(--step,0)*32ms)}
+@keyframes rise-in{from{opacity:.25;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.activity{width:1920px;height:1080px;padding:74px 96px 68px;background:#fff;color:#102a43;font-family:"Times New Roman",KaiTi,serif;position:relative}
+.activity header{margin-bottom:28px}.page-header{margin-bottom:28px;padding-right:0}
+.lesson-tag{font-size:52px;line-height:1.2;color:var(--teal);font-weight:700}
+.activity-label{position:absolute;right:96px;top:25px;color:var(--teal);font-size:34px;font-weight:700;line-height:1.2;white-space:nowrap}
+.activity h1{font-size:74px;line-height:1.08;letter-spacing:-1px;margin:12px 0 0;font-weight:750;color:var(--navy)}
+.teal-rule{margin-top:22px;width:74px;height:7px;border-radius:4px;background:var(--teal)}
+.page-footer{position:absolute;bottom:38px;left:96px;right:96px;display:flex;justify-content:space-between;color:var(--muted);font-size:30px;line-height:1.1}
+.body-copy{font-size:50px;line-height:1.28;color:var(--navy)}
+.body-copy p{margin:0 0 22px}
+.small-copy{font-size:40px;line-height:1.28;color:var(--muted)}
+.big-instruction{font-size:58px;line-height:1.3;font-weight:600;color:var(--navy)}
+.listen-layout{display:grid;grid-template-columns:.85fr 1.35fr;gap:48px;align-items:stretch;margin-top:22px}
+.listen-callout{border-radius:24px;background:var(--wash);padding:40px 44px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.listen-callout img{width:112px;height:112px;object-fit:contain;margin-bottom:18px}
+.listen-callout .listen-strong{font-size:62px;line-height:1.2;color:var(--teal);font-weight:700}
+.listen-callout p{font-size:46px;line-height:1.3;margin:22px 0 0;color:var(--muted)}
+.question-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.question-card{min-height:138px;border:1px solid var(--line);border-radius:20px;background:var(--wash);display:flex;align-items:center;justify-content:flex-start;gap:20px;padding:20px 28px;font-size:50px;line-height:1.2;color:var(--navy)}
+.question-grid .question-card:last-child{grid-column:1 / -1}
+.question-card .q-mark{width:54px;height:54px;flex:0 0 54px;border-radius:50%;background:#E6F2F2;color:var(--teal);font-size:38px;font-weight:700;display:grid;place-items:center}
+.paired-flow{height:400px;display:grid;grid-template-columns:1fr 100px 1fr;align-items:center;gap:18px;margin-top:25px}
+.paired-card{height:350px;background:var(--wash);border:1px solid var(--line);border-radius:20px;padding:32px 44px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center}
+.paired-card img{width:112px;height:112px;flex:none;object-fit:contain;margin-bottom:18px}
+.paired-card strong{font-size:57px;line-height:1.25;color:var(--navy)}
+.paired-arrow{font:700 70px/1 Arial,sans-serif;color:var(--teal);text-align:center}
+
+
+
+
+
+
+
+
+
+
+.clothes-profile{font-size:46px;line-height:1.25;padding:14px 28px;border-left:8px solid var(--teal);background:var(--wash);border-radius:0 18px 18px 0;margin:18px 0 22px}
+.clothes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.clothes-card{height:220px;display:grid;grid-template-columns:235px 1fr;align-items:center;gap:18px;padding:18px 20px;border:1px solid var(--line);border-radius:20px;background:#fff}
+.clothes-card img{width:200px;height:180px;object-fit:contain}
+.clothes-info{font-size:43px;line-height:1.25}
+.clothes-info .option{font-size:48px;font-weight:700;color:var(--teal);margin-bottom:6px}
+.clothes-info .price{font-size:45px;font-weight:700;color:var(--navy);white-space:nowrap;margin:8px 0}
+.report-layout{height:620px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:46px}
+.report-question{font-size:50px;line-height:1.3;color:var(--muted)}
+
+
+
+
+
+.question-grid.birthday{grid-template-columns:repeat(2,1fr);gap:20px}
+.activity-instruction{margin-top:18px;font-size:48px;line-height:1.32;color:var(--navy)}
+.activity-instruction strong{color:var(--teal)}
+.party-prompt{font-size:45px;line-height:1.28;padding:22px 28px;background:var(--wash);border-radius:20px;margin:10px 0 22px}
+.party-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.party-card{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff}
+.party-card img{width:100%;height:270px;object-fit:cover;display:block}
+.party-card .party-label{font-size:42px;line-height:1.18;color:var(--teal);padding:12px 18px;text-align:center;font-weight:700}
+.party-questions{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:14px 0 8px}
+.party-q{font-size:40px;line-height:1.2;text-align:center;padding:16px 12px;border-radius:16px;background:#F7FAFA;color:var(--navy)}
+.party-close{font-size:38px;line-height:1.2;color:var(--muted);text-align:center}.discussion .question{font-size:56px!important;line-height:1.22!important;margin:18px 0 22px!important}.report-example-label{font-size:40px;line-height:1.2;color:#087e8b;font-weight:700}.report-phrase{font-size:60px;line-height:1.28;font-weight:650;color:#102a43;padding:26px 38px;border-radius:28px;background:#f8fbfb;max-width:1550px}.report-phrase p{font-size:56px;line-height:1.45;white-space:nowrap;margin:12px 0 0}
+.os-counter{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);color:#fff;background:rgba(0,0,0,.55);padding:2px 10px;border-radius:999px;font:12px/1.2 "Times New Roman",serif;z-index:10}
+.os-controlbar{position:fixed;right:18px;bottom:10px;z-index:20;display:flex;align-items:center;gap:8px;color:#fff;font:13px/1.2 system-ui,sans-serif}
+.os-controlbar button{appearance:none;border:1px solid rgba(255,255,255,.42);border-radius:999px;min-height:34px;padding:7px 13px;background:rgba(9,28,43,.88);color:#fff;font:650 13px/1.2 system-ui,sans-serif;cursor:pointer}
+.os-controlbar button:focus-visible{background:var(--teal);outline:2px solid #fff;outline-offset:2px}
+.os-controlbar button:disabled{opacity:.55;cursor:default}
+
+.route{position:relative}.route>h1{margin-bottom:42px!important}.route .route-card{height:340px!important;min-width:0;overflow:hidden}.route .route-card .route-icon{height:150px;width:180px;display:block;margin:0 auto;object-fit:contain}.route .route-card h2{font-size:44px!important;line-height:1.15!important;margin:10px 0 7px!important}.route .route-range{font-size:36px!important;line-height:1.12!important;margin:0}
+.activity footer{position:absolute;bottom:38px;left:96px;right:96px;display:flex;justify-content:space-between;color:#526579;font-size:30px;line-height:1.1}
+.rule{margin-top:22px;width:74px;height:7px;border-radius:4px;background:#087e8b}
+.comic-page header{margin-bottom:0!important}.comic-page main{padding:0!important;margin:0!important;height:700px!important;display:flex!important;align-items:center!important;justify-content:center!important}.activity .comic-layout{display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;height:700px!important;margin:0 auto!important}.activity .comic{position:relative!important;width:auto!important;height:700px!important;aspect-ratio:3/2!important;flex:none!important}.activity .comic img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important}.activity .price-tag{position:absolute;transform:translate(-50%,-50%);padding:4px 7px;border:1px solid #102a43;border-radius:4px;background:#fff;color:#102a43;font:700 20px/1.1 "Times New Roman",KaiTi,serif;white-space:nowrap}
+
+/* W06 proficiency cards follow the Lesson 11–12 discussion system. */
+.icon-prompt-strip{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:18px;margin:20px 0 24px;padding:15px 20px;background:#f8fbfb;border-radius:18px}
+.icon-prompt{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:#087e8b;font-size:30px;line-height:1.1;text-align:center}
+.discussion .icon-prompt{font-size:42px!important}
+
+.icon-prompt img{width:72px;height:72px;object-fit:contain}
+.discussion-flow{display:flex!important;align-items:center;gap:28px;padding:14px 22px!important;background:#f8fbfb;border-radius:18px;color:#087e8b;font-size:40px}
+.flow-icon{width:48px;height:48px;object-fit:contain;vertical-align:middle;margin:0 8px}
+.levels{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:22px}
+.level{padding:18px 24px;border:1px solid #d9e3e8;border-radius:20px;background:#f8fbfb}
+.level.challenge{background:#fffbf2;border-color:#e6d4aa}
+.level h2{margin:0 0 10px;color:#087e8b;font-size:40px;line-height:1.2}
+.level.challenge h2{color:#8a4b08}
+.level h2 span{font-size:34px;margin-left:15px;color:#526579}
+.level p{margin:0;font-size:45px;line-height:1.25;text-wrap:balance}
+.activity .level h2{font-size:45px!important;line-height:1.18!important}
+.activity .level h2 span{font-size:40px!important}
+.activity .level p{font-size:50px!important;line-height:1.2!important}
+.discussion .icon-prompt-strip{margin:10px 0!important}
+.discussion .levels{margin-top:14px!important;gap:22px}
+.discussion .level{padding:12px 18px!important}
+.discussion .level p{font-size:48px!important;line-height:1.18!important}
+.retell-levels{margin:12px 0 0!important;gap:24px}
+.retell-levels .level p{font-size:46px!important;line-height:1.24!important}
+.task-levels{margin:20px 0 0!important;gap:18px}
+.task-levels .level{padding:12px 18px}
+.task-levels .level h2{font-size:42px!important;margin-bottom:6px!important}
+.task-levels .level h2 span{font-size:40px!important}
+.task-levels .level p{font-size:46px!important;line-height:1.2!important}
+.party-levels{margin:2px 0 0!important;gap:18px}
+.party-levels .level{padding:10px 16px}
+.party-levels .level h2{font-size:42px!important;margin-bottom:5px!important}
+.party-levels .level h2 span{font-size:40px!important}
+.party-levels .level p{font-size:46px!important;line-height:1.16!important}
+.w06-party .party-card img{height:160px}
+.w06-party .party-card .party-label{font-size:34px;padding:8px 12px}
+.w06-party .party-prompt{font-size:46px;line-height:1.28;margin:12px 0 32px;padding:24px 30px}
+.w06-party .party-prompt p{font-size:46px;line-height:1.28;margin:0 0 14px}
+.w06-party .party-prompt p:last-child{margin-bottom:0}
+.w06-party .party-levels{margin-top:28px!important;gap:28px!important}
+.w06-party .party-levels .level{min-height:350px;padding:42px 46px!important;display:flex;flex-direction:column;justify-content:flex-start}
+.w06-party .party-levels .level h2{font-size:46px!important;margin-bottom:22px!important}
+.w06-party .party-levels .level h2 span{font-size:40px!important}
+.w06-party .party-levels .level p{font-size:46px!important;line-height:1.28!important}
+.w06-party .party-grid{display:none}
+.w06-party .party-questions{display:none}
+.w06-party .party-q{font-size:44px;padding:22px 28px}
+.w06-taipei .icon-prompt img{width:132px;height:88px;object-fit:cover;border-radius:10px}
+@media(prefers-reduced-motion:reduce){.icon-prompt img,.flow-icon{animation:none!important}}
+</style><style id="w06-paired-discussion-css">
+.discussion.question-page main{display:flex!important;align-items:center;justify-content:center;height:620px;margin-top:10px!important}
+.discussion.question-page .question{max-width:1540px;margin:0 auto!important;text-align:center}
+.discussion.support-page main{margin-top:46px!important}
+.discussion.support-page .levels{grid-template-columns:1fr 1fr!important;gap:32px!important;margin-top:0!important}
+.discussion.support-page .level{min-height:430px;padding:54px 44px!important;display:flex;flex-direction:column;justify-content:flex-start}
+.discussion.support-page .level h2{font-size:48px!important;line-height:1.18!important;margin-bottom:28px!important}
+.discussion.support-page .level p{font-size:50px!important;line-height:1.3!important;text-wrap:balance}
+</style><style>
+html.os-loading body { opacity: 0 !important; }
+html.os-loading *, html.os-static * { animation: none !important; transition: none !important; }
+</style><script>
+document.documentElement.classList.add('os-loading');
+if (new URLSearchParams(location.search).get('os-static') === '1')
+  document.documentElement.classList.add('os-static');
+</script></head><body><div class="os-stage"><div class="os-frame" data-osd-canvas="" id="os-frame"><section class="os-page" data-idx="0" data-osd-stable-id="w06-cover"><div data-osd-source-slides="1" data-osd-stable-id="w06-cover" style='width:1920px;height:1080px;box-sizing:border-box;padding:110px 96px 68px;background:rgb(255,255,255);color:rgb(16,42,67);font-family:KaiTi,STKaiti,楷体,"Times New Roman",serif;position:relative;overflow:hidden'>
+<div style="position:absolute;top:84px;left:96px;color:rgb(8,126,139);font-size:45px;font-weight:700;letter-spacing:1px">第13—14课 · 实体课</div>
+<div style="height:100%;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:50px"><div style="padding-bottom:45px"><h1 data-osd-step="true" style="margin:0;font-size:82px;line-height:1.12;letter-spacing:-2px;font-weight:760">购物与生日</h1><div style="margin-top:34px;width:90px;height:8px;border-radius:4px;background:rgb(8,126,139)"></div><p data-osd-step="true" style="margin:34px 0 0;max-width:900px;font-size:48px;line-height:1.35;color:rgb(82,101,121)">在荣市和台北的生活场景里选衣服、安排生日活动。</p></div><div data-osd-step="true" style="height:620px;display:grid;place-items:center;border-left:1px solid rgb(217,227,232)"><img alt="两位大学生挑选衣服并准备生日礼物" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width:690px;height:590px;object-fit:contain"/></div></div>
+<div style="position:absolute;bottom:96px;left:96px;right:96px;display:flex;justify-content:space-between;color:rgb(82,101,121);font-size:30px"><span>博雅汉语 · 初级口语活动</span><span>01 / 18</span></div></div></section><section class="os-page" data-idx="1" data-osd-stable-id="w06-route" hidden=""><section class="route" data-osd-stable-id="classroom-overview" style="width:1920px;height:1080px;box-sizing:border-box;padding:80px 96px;background:white;color:#17324d;font-family:KaiTi,'Times New Roman',serif">
+<h1 style="font-size:74px;margin:0 0 42px">今天我们会做什么</h1>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:26px">
+<article class="route-card" data-osd-step="true" style="background:#f8fbfb;border:1px solid #d8e7e9;border-radius:20px;padding:20px"><img alt="" aria-hidden="true" class="route-icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/><h2>听故事</h2><p class="route-range">活动1—2<br/>听记与复述</p></article>
+<article class="route-card" data-osd-step="true" style="background:#f8fbfb;border:1px solid #d8e7e9;border-radius:20px;padding:20px"><img alt="" aria-hidden="true" class="route-icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/><h2>购物练习</h2><p class="route-range">活动3—5<br/>选衣服、讲故事</p></article>
+<article class="route-card" data-osd-step="true" style="background:#f8fbfb;border:1px solid #d8e7e9;border-radius:20px;padding:20px"><img alt="" aria-hidden="true" class="route-icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/><h2>生日安排</h2><p class="route-range">活动6—7<br/>安排、讲故事</p></article>
+<article class="route-card" data-osd-step="true" style="background:#f8fbfb;border:1px solid #d8e7e9;border-radius:20px;padding:20px"><img alt="" aria-hidden="true" class="route-icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/><h2>生活讨论</h2><p class="route-range">活动8—9<br/>河内与台北</p></article>
+</div></section></section><section class="os-page activity" data-idx="2" data-osd-stable-id="w06-l13-listening" hidden=""><header class="page-header"><div class="lesson-tag">第13课 · 实体课</div><div class="activity-label">活动1｜听故事，记关键词</div><h1>阿明在荣市买衣服</h1><div class="teal-rule"></div></header><div class="listen-layout"><div class="listen-callout" data-osd-step="true"><img alt="" aria-hidden="true" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/><div class="listen-strong">听老师读两次，<br/>记关键词：</div></div><div class="question-grid"><div class="question-card" data-osd-step="true"><span class="q-mark">1</span><span>什么衣服？</span></div><div class="question-card" data-osd-step="true"><span class="q-mark">2</span><span>什么颜色？</span></div><div class="question-card" data-osd-step="true"><span class="q-mark">3</span><span>多少钱？</span></div><div class="question-card" data-osd-step="true"><span class="q-mark">4</span><span>他为什么<br/>买这件？</span></div><div class="question-card" data-osd-step="true"><span class="q-mark">5</span><span>最后买了吗？</span></div></div></div><div class="page-footer"><span>博雅汉语 · 初级口语活动</span><span>03 / 18</span></div></section><section class="os-page activity" data-idx="3" data-osd-stable-id="w06-l13-retell" hidden=""><header class="page-header"><div class="lesson-tag">第13课 · 实体课</div><div class="activity-label">活动1｜核对关键词并复述</div><h1>核对关键词，说出阿明的故事</h1><div class="teal-rule"></div></header><div class="paired-flow"><article class="paired-card" data-osd-step="true"><img alt="" aria-hidden="true" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/><strong>先和同学核对</strong></article><div class="paired-arrow" data-osd-step="true">→</div><article class="paired-card" data-osd-step="true"><img alt="" aria-hidden="true" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/><strong>再用完整句子说出<br/>阿明买衣服的经过</strong></article></div><div class="retell-levels levels"><article class="level base" data-osd-step="true"><h2>基础<span>HSK 1–3</span></h2><p>说说衣服、颜色、价格<br/>和最后的选择。</p></article><article class="level challenge" data-osd-step="true"><h2>挑战<span>HSK 4–6</span></h2><p>比较他看过的衣服，<br/>说说他决定的理由。</p></article></div><div class="page-footer"><span>博雅汉语 · 初级口语活动</span><span>04 / 18</span></div></section><section class="os-page activity" data-idx="4" data-osd-stable-id="w06-l14-listening" hidden=""><header class="page-header"><div class="lesson-tag">第14课 · 实体课</div><div class="activity-label">活动2｜听故事，记关键词</div><h1>越南学生在台北过生日</h1><div class="teal-rule"></div></header><div class="listen-layout"><div class="listen-callout" data-osd-step="true"><img alt="" aria-hidden="true" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/><div class="listen-strong">听老师读两次，<br/>记关键词：</div></div><div class="question-grid birthday"><div class="question-card" data-osd-step="true"><span class="q-mark">1</span><span>谁？</span></div><div class="question-card" data-osd-step="true"><span class="q-mark">2</span><span>什么时候？</span></div><div class="question-card" data-osd-step="true"><span class="q-mark">3</span><span>在哪里？</span></div><div class="question-card" data-osd-step="true"><span class="q-mark">4</span><span>礼物是什么？</span></div><div class="question-card" data-osd-step="true"><span class="q-mark">5</span><span>先做什么，然后做什么？</span></div></div></div><div class="page-footer"><span>博雅汉语 · 初级口语活动</span><span>05 / 18</span></div></section><section class="os-page activity" data-idx="5" data-osd-stable-id="w06-l14-retell" hidden=""><header class="page-header"><div class="lesson-tag">第14课 · 实体课</div><div class="activity-label">活动2｜核对关键词并介绍</div><h1>核对关键词，介绍生日安排</h1><div class="teal-rule"></div></header><div class="paired-flow"><article class="paired-card" data-osd-step="true"><img alt="" aria-hidden="true" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/><strong>先和同学核对关键词</strong></article><div class="paired-arrow" data-osd-step="true">→</div><article class="paired-card" data-osd-step="true"><img alt="" aria-hidden="true" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/><strong>再介绍小兰的生日安排</strong></article></div><div class="retell-levels levels"><article class="level base" data-osd-step="true"><h2>基础<span>HSK 1–3</span></h2><p>说说人物、时间、地点、<br/>礼物和活动顺序。</p></article><article class="level challenge" data-osd-step="true"><h2>挑战<span>HSK 4–6</span></h2><p>按准备过程和时间顺序完整复述，<br/>并说说你觉得怎么样。</p></article></div><div class="page-footer"><span>博雅汉语 · 初级口语活动</span><span>06 / 18</span></div></section><section class="os-page activity" data-idx="6" data-osd-stable-id="w06-l13-choice" hidden=""><header class="page-header"><div class="lesson-tag">第13课 · 实体课</div><div class="activity-label">活动3｜帮台湾朋友挑衣服</div><h1>帮台湾朋友挑衣服</h1><div class="teal-rule"></div></header><div class="clothes-profile">台湾朋友喜欢蓝色，也重视质量，预算最多 <strong>200,000 越南盾</strong>。<br/>两人讨论，推荐一件衣服，并说明理由。</div><div class="clothes-grid"><article class="clothes-card" data-osd-step="true"><img alt="蓝色短袖衣服" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/><div class="clothes-info"><div class="option">A · 蓝色</div><div class="price">240,000₫</div><div>质量挺好</div></div></article><article class="clothes-card" data-osd-step="true"><img alt="黑色短袖衣服" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/><div class="clothes-info"><div class="option">B · 黑色</div><div class="price">200,000₫</div><div>质量很好</div></div></article><article class="clothes-card" data-osd-step="true"><img alt="浅蓝色短袖衣服" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/><div class="clothes-info"><div class="option">C · 浅蓝色</div><div class="price">160,000₫</div><div>质量还可以</div></div></article></div><div class="task-levels levels"><article class="level base" data-osd-step="true"><h2>基础<span>HSK 1–3</span></h2><p>说颜色、质量、价格、<br/>钱不够怎么办、为什么。</p></article><article class="level challenge" data-osd-step="true"><h2>挑战<span>HSK 4–6</span></h2><p>比较三件衣服的价格和质量，<br/>说说你选哪件，<br/>钱不够怎么办，为什么。</p></article></div><div class="page-footer"><span>博雅汉语 · 初级口语活动</span><span>07 / 18</span></div></section><section class="os-page activity" data-idx="7" data-osd-stable-id="w06-l13-report" hidden=""><header class="page-header"><div class="lesson-tag">第13课 · 实体课</div><div class="activity-label">活动3｜汇报选择</div><h1>汇报选择</h1><div class="teal-rule"></div></header><div class="report-layout"><div class="report-phrase" data-osd-step="true"><div class="report-example-label">HSK 1–3｜参考回答</div><p>我们推荐____。<br/>它是____色的，质量____，<br/>价格是____越南盾。</p></div></div><div class="page-footer"><span>博雅汉语 · 初级口语活动</span><span>08 / 18</span></div></section><section class="os-page activity comic-page" data-idx="8" data-osd-stable-id="w06-l13-comic" hidden=""><header><h1>看图说故事</h1><div class="rule"></div></header><main><div class="comic-layout"><div class="comic" data-osd-step="true"><img alt="六格故事：买包后肩带断了，回店换包并试背" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/></div></div></main><footer><span>博雅汉语 · 初级口语活动</span><span>09 / 18</span></footer></section><section class="os-page activity discussion question-page" data-idx="9" data-osd-stable-id="w06-life-vinh-shopping-question" hidden=""><header><div class="lesson-tag">第13课 · 实体课</div><div class="activity-label">活动5｜在荣市买衣服</div><h1>在荣市买衣服</h1><div class="rule"></div></header><main><p class="question" data-osd-step="true">在荣市买衣服，你比较喜欢去服装店，<br/>还是在网上买？为什么？</p></main><footer><span>博雅汉语 · 初级口语活动</span><span>10 / 18</span></footer></section><section class="os-page activity discussion support-page" data-idx="10" data-osd-stable-id="w06-life-vinh-shopping-support" hidden=""><header><div class="lesson-tag">第13课 · 实体课</div><div class="activity-label">活动5｜在荣市买衣服</div><h1>在荣市买衣服</h1><div class="rule"></div></header><main><div class="levels"><article class="level base" data-osd-step="true"><h2>HSK 1–3</h2><p>我比较喜欢____，因为____。<br/>去____买的时候，<br/>我可以____。</p></article><article class="level challenge" data-osd-step="true"><h2>HSK 4–6</h2><p>请选两个地方，<br/>比较优点和缺点。</p></article></div></main><footer><span>博雅汉语 · 初级口语活动</span><span>11 / 18</span></footer></section><section class="os-page activity w06-party" data-idx="11" data-osd-stable-id="w06-l14-party-plan" hidden=""><header class="page-header"><div class="lesson-tag">第14课 · 实体课</div><div class="activity-label">活动6｜安排生日活动</div><h1>为台湾朋友安排荣市生日聚会</h1><div class="teal-rule"></div></header><div class="party-prompt"><p>十二月二十五日，一位台湾朋友第一次在荣市过生日。3—4人一组，为他安排晚上6点到8点的活动。</p><p>一起决定：什么时候、在哪、做什么、特色、理由</p></div><div class="party-levels levels"><article class="level base" data-osd-step="true"><h2>基础<span>HSK 1–3</span></h2><p>说说你们的安排，然后说为什么。</p></article><article class="level challenge" data-osd-step="true"><h2>挑战<span>HSK 4–6</span></h2><p>比较室内和室外活动，说说你最后的安排和理由。</p></article></div><div class="page-footer"><span>博雅汉语 · 初级口语活动</span><span>12 / 18</span></div></section><section class="os-page activity" data-idx="12" data-osd-stable-id="w06-l14-report" hidden=""><header class="page-header"><div class="lesson-tag">第14课 · 实体课</div><div class="activity-label">活动6｜汇报生日计划</div><h1>汇报生日计划</h1><div class="teal-rule"></div></header><div class="report-layout"><div class="report-phrase" data-osd-step="true"><div class="report-example-label">HSK 1–3｜参考回答</div><p>我们打算在____庆祝。<br/>先____，然后____，最后____。<br/>那个餐厅/咖啡馆/地方的特色是____。<br/>我们这样安排，是因为____。</p></div></div><div class="page-footer"><span>博雅汉语 · 初级口语活动</span><span>13 / 18</span></div></section><section class="os-page activity comic-page" data-idx="13" data-osd-stable-id="w06-l14-comic" hidden=""><header><h1>看图说故事</h1><div class="rule"></div></header><main><div class="comic-layout"><div class="comic" data-osd-step="true"><img alt="六格故事：生日野餐遇雨，搬到咖啡馆继续庆祝" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/></div></div></main><footer><span>博雅汉语 · 初级口语活动</span><span>14 / 18</span></footer></section><section class="os-page activity discussion question-page" data-idx="14" data-osd-stable-id="w06-life-vietnam-birthday-question" hidden=""><header><div class="lesson-tag">第14课 · 实体课</div><div class="activity-label">活动8｜给台湾朋友过生日</div><h1>给台湾朋友过生日</h1><div class="rule"></div></header><main><p class="question" data-osd-step="true">农历春节的时候，台湾朋友在河内过生日，<br/>你想带他去哪里？送什么礼物？为什么？</p></main><footer><span>博雅汉语 · 初级口语活动</span><span>15 / 18</span></footer></section><section class="os-page activity discussion support-page" data-idx="15" data-osd-stable-id="w06-life-vietnam-birthday-support" hidden=""><header><div class="lesson-tag">第14课 · 实体课</div><div class="activity-label">活动8｜给台湾朋友过生日</div><h1>给台湾朋友过生日</h1><div class="rule"></div></header><main><div class="levels"><article class="level base" data-osd-step="true"><h2>HSK 1–3</h2><p>我想带他去____。<br/>我们先____，然后____。<br/>我准备送他____，因为____。</p></article><article class="level challenge" data-osd-step="true"><h2>HSK 4–6</h2><p>请选两个地方，<br/>比较优点和缺点。</p></article></div></main><footer><span>博雅汉语 · 初级口语活动</span><span>16 / 18</span></footer></section><section class="os-page activity discussion question-page" data-idx="16" data-osd-stable-id="w06-life-taipei-birthday-question" hidden=""><header><div class="lesson-tag">第14课 · 实体课</div><div class="activity-label">活动9｜如果你在台北过生日</div><h1>如果你在台北过生日</h1><div class="rule"></div></header><main><p class="question" data-osd-step="true">生日的时候，你正在台北旅游，<br/>你打算如何过生日？<br/>请你安排一天的计划。</p></main><footer><span>博雅汉语 · 初级口语活动</span><span>17 / 18</span></footer></section><section class="os-page activity discussion support-page" data-idx="17" data-osd-stable-id="w06-life-taipei-birthday-support" hidden=""><header><div class="lesson-tag">第14课 · 实体课</div><div class="activity-label">活动9｜如果你在台北过生日</div><h1>如果你在台北过生日</h1><div class="rule"></div></header><main><div class="levels"><article class="level base" data-osd-step="true"><h2>HSK 1–3</h2><p>和谁、去哪、做什么、<br/>吃什么、喝什么、<br/>看什么、为什么。</p></article><article class="level challenge" data-osd-step="true"><h2>HSK 4–6</h2><p>选两个地方，比较优缺点，<br/>再按时间顺序介绍一天的计划，<br/>并说明理由。</p></article></div></main><footer><span>博雅汉语 · 初级口语活动</span><span>18 / 18</span></footer></section></div></div><div class="os-counter"><span id="os-cur">1</span> / <span id="os-total">18</span></div><nav aria-label="简报导航" class="os-controlbar"><button disabled="" id="os-prev" type="button">上一页</button><span>← → 翻页</span><button id="os-next" type="button">下一页</button></nav><script>
+(function(){
+  const pages=[...document.querySelectorAll('.os-page')];
+  const frame=document.getElementById('os-frame');
+  const current=document.getElementById('os-cur');
+  const total=document.getElementById('os-total');
+  const prevButton=document.getElementById('os-prev');
+  const nextButton=document.getElementById('os-next');
+  let index=-1;
+  if(pages.length!==18) throw new Error('Expected exactly 18 slides');
+  document.querySelectorAll('[data-osd-step]').forEach((el,i)=>el.style.setProperty('--step',String(i%8)));
+  if(total) total.textContent=String(pages.length);
+  function fit(){const scale=Math.min(window.innerWidth/1920,window.innerHeight/1080);frame.style.transform='scale('+scale+')'}
+  function update(){if(prevButton)prevButton.disabled=index<=0;if(nextButton)nextButton.disabled=index>=pages.length-1;if(current)current.textContent=String(index+1)}
+  function go(target){const next=Math.max(0,Math.min(pages.length-1,Number(target)||0));if(next===index)return;pages.forEach(p=>{p.hidden=true;p.classList.remove('deck-enter')});index=next;pages[index].hidden=false;void pages[index].offsetWidth;pages[index].classList.add('deck-enter');update()}
+  function next(){go(index+1)} function prev(){go(index-1)}
+  if(prevButton)prevButton.addEventListener('click',prev);if(nextButton)nextButton.addEventListener('click',next);
+  window.addEventListener('resize',fit);window.addEventListener('keydown',e=>{if(e.repeat)return;if(['ArrowRight','ArrowDown','PageDown',' '].includes(e.key)){e.preventDefault();next()}else if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();prev()}else if(e.key==='Home'){e.preventDefault();go(0)}else if(e.key==='End'){e.preventDefault();go(pages.length-1)}});
+  fit();
+  go(Number(new URLSearchParams(location.search).get('os-page')));
+  window.__classroomDeck={go,index:()=>index,plan:pages.map((p,i)=>({index:i,stableId:p.dataset.osdStableId}))};
+})();
+</script><style>.os-controls,.os-counter,.os-controlbar{display:none!important}</style>
+<script>
+window.addEventListener('load', function () {
+  var page = Number(new URLSearchParams(location.search).get('os-page'));
+  var pages = document.querySelectorAll('.os-page');
+  if (!Number.isInteger(page) || page < 0 || page >= pages.length)
+    throw new Error('Invalid classroom page');
+  window.__classroomDeck.go(page);
+  var active = pages[page];
+  active.classList.remove('deck-enter');
+  document.documentElement.classList.remove('os-loading');
+  void active.offsetWidth;
+  active.classList.add('deck-enter');
+});
+</script></body></html>

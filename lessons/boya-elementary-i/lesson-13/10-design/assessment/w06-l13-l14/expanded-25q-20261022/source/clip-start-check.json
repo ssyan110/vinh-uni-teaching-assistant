@@ -1,0 +1,151 @@
+[
+  {
+    "audio_id": "TOCFL-A4-Q13",
+    "crop_start": 2.2,
+    "initial_silence_intervals": [
+      [
+        0.0,
+        0.185193
+      ],
+      [
+        1.5837180000000002,
+        2.954308
+      ]
+    ],
+    "start_within_silence": true
+  },
+  {
+    "audio_id": "TOCFL-A4-Q14",
+    "crop_start": 2.2,
+    "initial_silence_intervals": [
+      [
+        0.0,
+        0.228345
+      ],
+      [
+        1.629229,
+        3.287302
+      ]
+    ],
+    "start_within_silence": true
+  },
+  {
+    "audio_id": "TOCFL-A4-Q23",
+    "crop_start": 2.2,
+    "initial_silence_intervals": [
+      [
+        1.7359410000000002,
+        2.762268
+      ],
+      [
+        3.791247,
+        4.0
+      ]
+    ],
+    "start_within_silence": true
+  },
+  {
+    "audio_id": "TOCFL-A4-Q26",
+    "crop_start": 2.2,
+    "initial_silence_intervals": [
+      [
+        0.0,
+        0.165669
+      ],
+      [
+        1.6322910000000002,
+        2.965488
+      ]
+    ],
+    "start_within_silence": true
+  },
+  {
+    "audio_id": "TOCFL-A4-Q28",
+    "crop_start": 2.2,
+    "initial_silence_intervals": [
+      [
+        0.0,
+        0.162154
+      ],
+      [
+        1.7209519999999998,
+        2.952381
+      ],
+      [
+        3.5858280000000002,
+        4.0
+      ]
+    ],
+    "start_within_silence": true
+  },
+  {
+    "audio_id": "TOCFL-A5-Q13",
+    "crop_start": 2.2,
+    "initial_silence_intervals": [
+      [
+        1.443628,
+        2.50161
+      ]
+    ],
+    "start_within_silence": true
+  },
+  {
+    "audio_id": "TOCFL-A5-Q25",
+    "crop_start": 2.2,
+    "initial_silence_intervals": [
+      [
+        1.5837190000000003,
+        2.724966
+      ],
+      [
+        3.252562,
+        3.977596
+      ]
+    ],
+    "start_within_silence": true
+  },
+  {
+    "audio_id": "TOCFL-A5-Q29",
+    "crop_start": 2.2,
+    "initial_silence_intervals": [
+      [
+        1.6050109999999997,
+        3.025079
+      ]
+    ],
+    "start_within_silence": true
+  },
+  {
+    "audio_id": "TOCFL-A5-Q31",
+    "crop_start": 2.2,
+    "initial_silence_intervals": [
+      [
+        1.587324,
+        2.524104
+      ]
+    ],
+    "start_within_silence": true
+  },
+  {
+    "audio_id": "TOCFL-A5-Q33",
+    "crop_start": 2.2,
+    "initial_silence_intervals": [
+      [
+        1.6484580000000002,
+        2.483061
+      ]
+    ],
+    "start_within_silence": true
+  },
+  {
+    "audio_id": "TOCFL-A5-Q37",
+    "crop_start": 2.2,
+    "initial_silence_intervals": [
+      [
+        1.645715,
+        2.634853
+      ]
+    ],
+    "start_within_silence": true
+  }
+]

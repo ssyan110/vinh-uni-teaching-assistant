@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
 from datetime import date
@@ -12,6 +13,9 @@ from typing import Any
 from production_gate import check as check_production_gate
 from validate_lesson_identity import validate as validate_lesson_identity
 from dashboard_context import load_dashboard_context
+from lesson_readiness import build_readiness
+from classroom_release import verify_release as verify_classroom_release
+from online_ppt_release import verify as verify_online_release
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -36,8 +40,8 @@ GATE_DEFINITIONS = [
     ("storyboard", "PPT storyboard", "逐页对应教材内容、学生动作、音档与课堂产出。"),
     ("visual_storyboard", "Visual storyboard", "确认版式、视觉用途、素材来源与学生画面文字上限。"),
     ("prototype", "6 张视觉 prototype", "确认学生画面方向、字级、留白与图片比例。"),
-    ("pptx", "完整原生 PPTX", "完成可编辑、静态、16:9 的课堂 PPTX。"),
-    ("audio_notes", "音档与 speaker notes", "完成音频嵌入、编号对应与 PowerPoint 播放测试。"),
+    ("pptx", "线上预习原生 PPTX", "完成可编辑、静态、16:9 的线上预习 PPTX；实体课使用 OpenSlide。"),
+    ("audio_notes", "音档与 speaker notes", "核对纯文字音轨编号、外部音频与实际播放方式；PPT 不嵌入音频。"),
     ("qa_rehearsal", "内容 QA、技术 QA 与教师 rehearsal", "依该课核准实体课时完成内容、版面、技术、列印与课堂流程验证。"),
     ("release", "不可变交付包", "从 authority 建立 release，并完成版本与 hash 登记。"),
 ]
@@ -208,7 +212,7 @@ def build_gates(
                         )
                     ]
                 )
-            status = first_status if number == 1 else "locked"
+            status = first_status if number == 1 else ("todo" if unlocked else "locked")
             gates.append(gate_record(number, key, title, description, status, evidence))
         return gates
 
@@ -225,9 +229,9 @@ def build_gates(
     teacher_manual = authority.get("authority", {}).get("teacher_manual", {})
     activities = authority.get("authority", {}).get("activities", {})
     pptx = authority.get("authority", {}).get("pptx", {})
-    qa = authority.get("qa", {})
-    rehearsal = qa.get("rehearsal", {})
-    release = authority.get("release", {})
+    qa = authority.get("qa") if isinstance(authority.get("qa"), dict) else {}
+    rehearsal = qa.get("rehearsal") if isinstance(qa.get("rehearsal"), dict) else {}
+    release = authority.get("release") if isinstance(authority.get("release"), dict) else {}
 
     checks = {
         "source_review": source_review,
@@ -383,17 +387,13 @@ def build_gates(
     }
 
     gates: list[dict[str, Any]] = []
-    previous_complete = True
     for number, (key, title, description) in enumerate(GATE_DEFINITIONS, start=1):
         complete = checks[key]
         if complete:
             status = "done"
-        elif previous_complete:
-            status = "review" if evidence_by_key[key] else "todo"
         else:
-            status = "locked"
+            status = "review" if evidence_by_key[key] else "todo"
         gates.append(gate_record(number, key, title, description, status, evidence_by_key[key]))
-        previous_complete = previous_complete and complete
     return gates
 
 
@@ -451,8 +451,8 @@ def build_file_groups(
     if design_files:
         groups.append({"id": "design", "title": "设计与来源证据", "files": design_files})
 
-    qa = authority.get("qa", {})
-    rehearsal = qa.get("rehearsal", {})
+    qa = authority.get("qa") if isinstance(authority.get("qa"), dict) else {}
+    rehearsal = qa.get("rehearsal") if isinstance(qa.get("rehearsal"), dict) else {}
     qa_files = evidence_items(
         [
             (qa.get("current_report"), "当前 QA 记录"),
@@ -467,6 +467,42 @@ def build_file_groups(
     )
     if qa_files:
         groups.append({"id": "qa", "title": "QA 与 release 证据", "files": qa_files})
+    classroom_files: list[dict[str, str]] = []
+    releases = authority.get("classroom_html_releases", {})
+    versions = authority.get("authority", {}).get("classroom_html", {})
+    if isinstance(releases, dict) and isinstance(versions, dict):
+        for release_id, record in releases.items():
+            if not isinstance(record, dict):
+                continue
+            version = versions.get(record.get("version"), {})
+            try:
+                verified = verify_classroom_release(authority["lesson_key"], version["offering_id"], release_id)
+                release_path = verified["path"]
+                classroom_files.extend(evidence_items([
+                    (f'{release_path}/{lesson_root.name}-教材包.zip', f'实体课 OpenSlide 交付包 · {release_id}'),
+                    (f'{release_path}/release.json', f'实体课交付记录 · {release_id}'),
+                ]))
+            except (KeyError, TypeError, ValueError, OSError, RuntimeError):
+                classroom_files.extend(evidence_items([(authority_manifest_path, f'实体课交付需复核 · {release_id}')]))
+    if classroom_files:
+        groups.append({"id": "classroom-html-release", "title": "实体课 OpenSlide 交付", "files": classroom_files})
+    online_files: list[dict[str, str]] = []
+    online_releases = authority.get("online_pptx_releases", {})
+    if isinstance(online_releases, dict):
+        for release_id, record in online_releases.items():
+            if not isinstance(record, dict):
+                continue
+            try:
+                verified = verify_online_release(authority["lesson_key"], record["offering_id"], release_id)
+                release_path = verified["path"]
+                online_files.extend(evidence_items([
+                    (f'{release_path}/{lesson_root.name}-在线预习.zip', f'线上预习 PPT 交付包 · {record["offering_id"]} · {release_id}'),
+                    (f'{release_path}/release.json', f'线上预习交付记录 · {release_id}'),
+                ]))
+            except (KeyError, TypeError, ValueError, OSError, RuntimeError):
+                online_files.extend(evidence_items([(authority_manifest_path, f'线上预习交付需复核 · {release_id}')]))
+    if online_files:
+        groups.append({"id": "online-pptx-release", "title": "线上预习 PPT 交付", "files": online_files})
     return groups
 
 
@@ -504,10 +540,8 @@ def build_lesson(
     drafts = draft_manifests(lesson_root)
     draft_available = any(item.get("compatibility_status") != "legacy_unverified" for item in drafts)
     legacy_draft_available = bool(drafts) and not draft_available
-    unlocked = previous_delivered
-    # A lesson with an explicitly scoped draft is actionable even when the
-    # previous lesson has not reached immutable release. Keep authority gates
-    # locked, but expose the source-review gate instead of hiding all work.
+    unlocked = bool(identity)
+    # Each registered lesson can proceed independently of earlier releases.
     gates = build_gates(number, lesson_root, authority, source, unlocked or draft_available)
     completed_gates = sum(1 for gate in gates if gate["status"] in {"done", "approved"})
     delivered = bool(
@@ -541,25 +575,25 @@ def build_lesson(
         status_label = "来源审核" if source else "可开始"
         stage = "来源审核" if source else "等待开始"
         next_action = "继续来源审核并记录批准。" if source else "开始来源审核。"
-        unlock_reason = "上一课已完成交付，当前课次已解锁。"
+        unlock_reason = "本课已登记，可独立检查来源和准备适用版本。"
     elif draft_available:
         status = "draft_in_progress"
         status_label = "草稿製作中"
         stage = "10-design PPTX draft"
-        next_action = "完成來源語義、教師手冊、配套、QA 與 rehearsal 後，才能升級 authority。"
-        unlock_reason = "來源包與線上／實體邊界已允許 draft；authority／release 仍依序鎖定。"
+        next_action = "依该版本用途核对内容批准、适用 QA 和正式授权。"
+        unlock_reason = "发现已登记草稿；正式交付需对应版本的批准和检查。"
     elif legacy_draft_available:
         status = "draft_legacy_unverified"
         status_label = "旧草稿待核"
         stage = "10-design 旧 draft"
-        next_action = "不要沿用旧草稿；先以本课 lesson_key、来源包与边界确认重新建立当前 draft。"
+        next_action = "不要沿用旧草稿；先以本课 lesson_key、来源及版本专属内容批准重新建立当前 draft。"
         unlock_reason = "发现旧生成器草稿，但它没有当前生成器兼容声明，不能作为生产输入。"
     else:
         status = "locked"
         status_label = "锁定"
-        stage = "等待上一课完成"
-        next_action = f"等待第 {number - 1} 课完成交付后解锁。"
-        unlock_reason = f"逐课生产规则：第 {number - 1} 课尚未完成交付。"
+        stage = "课次身份待登记"
+        next_action = "先在课次登记表确认教材、课次与开课。"
+        unlock_reason = "未找到对应的课次登记。"
 
     scope = (authority or {}).get("scope", {})
     authority_section = (authority or {}).get("authority", {})
@@ -634,6 +668,7 @@ def build_lesson(
 
 
 def build() -> Path:
+    build_readiness(PROJECT_ROOT)
     identity_errors = validate_lesson_identity(LESSON_REGISTRY_PATH, PROJECT_ROOT / "project.config.json")
     if identity_errors:
         raise RuntimeError("lesson identity validation failed:\n" + "\n".join(identity_errors))
@@ -741,4 +776,7 @@ def build() -> Path:
 
 
 if __name__ == "__main__":
-    print(build())
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--readiness-only", action="store_true", help="Refresh lesson readiness without replacing the review manifest")
+    args = parser.parse_args()
+    print(build_readiness(PROJECT_ROOT) if args.readiness_only else build())

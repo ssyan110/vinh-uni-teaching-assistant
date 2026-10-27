@@ -1,0 +1,375 @@
+{
+  "lt02": {
+    "verified": {
+      "ordinal": 1,
+      "sessions": 1,
+      "original_attempts": 33,
+      "correction_history": 2,
+      "manual_replacements": 0
+    }
+  },
+  "raw_attempts_preserved": 690,
+  "manual_replacements_deleted": 30,
+  "synthetic_fixtures_removed": true,
+  "live_participation_summary": {
+    "answered": 32,
+    "matched": 26,
+    "unmatched_historical": 6,
+    "pending": 1
+  },
+  "migrations": [
+    {
+      "version": "20260905103254",
+      "name": "initial_student_tracker"
+    },
+    {
+      "version": "20260905103315",
+      "name": "learning_events"
+    },
+    {
+      "version": "20260905103443",
+      "name": "foreign_key_indexes"
+    },
+    {
+      "version": "20260905104043",
+      "name": "learning_event_idempotency"
+    },
+    {
+      "version": "20260905104257",
+      "name": "learning_event_upsert_key"
+    },
+    {
+      "version": "20260905104416",
+      "name": "learning_event_grade_flag"
+    },
+    {
+      "version": "20260905151907",
+      "name": "randomizer_records"
+    },
+    {
+      "version": "20260905151937",
+      "name": "randomizer_fk_indexes"
+    },
+    {
+      "version": "20260905172541",
+      "name": "classroom_raw_records"
+    },
+    {
+      "version": "20260908093817",
+      "name": "randomizer_observations"
+    },
+    {
+      "version": "20260908094926",
+      "name": "dashboard_notes_questions"
+    },
+    {
+      "version": "20260908095510",
+      "name": "randomizer_fact_marks"
+    },
+    {
+      "version": "20260908125102",
+      "name": "interact_online_classroom"
+    },
+    {
+      "version": "20260910142434",
+      "name": "finish_randomizer_class"
+    },
+    {
+      "version": "20260911083724",
+      "name": "editable_class_session_number"
+    },
+    {
+      "version": "20260911083802",
+      "name": "editable_class_session_number"
+    },
+    {
+      "version": "20260911084209",
+      "name": "class_session_correction_audit"
+    },
+    {
+      "version": "20260911084327",
+      "name": "harden_class_session_correction_grant"
+    },
+    {
+      "version": "20260916135307",
+      "name": "classroom_record_correction_audit"
+    },
+    {
+      "version": "20260916135324",
+      "name": "allow_absent_no_response_reason"
+    },
+    {
+      "version": "20260918112930",
+      "name": "manual_participation_adjustments"
+    },
+    {
+      "version": "20260922044922",
+      "name": "class_session_notes"
+    },
+    {
+      "version": "20261002153323",
+      "name": "repair_approved_lt03_historical_session_link"
+    },
+    {
+      "version": "20261002153752",
+      "name": "preserve_classroom_record_corrections"
+    },
+    {
+      "version": "20261002160035",
+      "name": "randomizer_teacher_calls_and_session_safety"
+    },
+    {
+      "version": "20261025163327",
+      "name": "audit_schema_integrity_and_token_authorization"
+    },
+    {
+      "version": "20261025163339",
+      "name": "attendance_exceptions"
+    },
+    {
+      "version": "20261025163425",
+      "name": "attendance_exception_foreign_key_index"
+    },
+    {
+      "version": "20261025164154",
+      "name": "preserve_enrollment_classroom_evidence"
+    },
+    {
+      "version": "20261025165245",
+      "name": "remove_duplicate_correction_lookup_index"
+    }
+  ],
+  "production": {
+    "deployment": {
+      "id": "dpl_6KPpVDew25ixYVT1uUh3x6DBk75g",
+      "name": "student-tracker",
+      "url": "student-tracker-j13826mg9-ssyan110-gmailcoms-projects.vercel.app",
+      "type": "LAMBDAS",
+      "state": "READY",
+      "createdAt": 1792948295273,
+      "creator": {
+        "uid": "Zs7AhDGK64KQJAZqzaCmLc4v",
+        "username": "ssyan110-9288"
+      },
+      "project": {
+        "id": "prj_ZpqnbRAjW2bwQp43pqWod2nBfKxb",
+        "name": "student-tracker",
+        "framework": "vite"
+      },
+      "meta": {},
+      "alias": [
+        "student-tracker-ssyan110-gmailcoms-projects.vercel.app"
+      ],
+      "target": "production",
+      "regions": [
+        "iad1"
+      ],
+      "buildingAt": 1792948296487,
+      "ready": 1792948307272,
+      "readyState": "READY",
+      "source": "cli",
+      "aliasError": null
+    }
+  },
+  "performance": {
+    "lints": [
+      {
+        "name": "unused_index",
+        "title": "Unused Index",
+        "level": "INFO",
+        "facing": "EXTERNAL",
+        "categories": [
+          "PERFORMANCE"
+        ],
+        "description": "Detects if an index has never been used and may be a candidate for removal.",
+        "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+        "count": 18,
+        "findings": [
+          {
+            "detail": "Index \\`classroom_record_corrections_owner_course_idx\\` on table \\`public.classroom_record_corrections\\` has not been used",
+            "metadata": {
+              "name": "classroom_record_corrections",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T17:02:45.149Z"
+          },
+          {
+            "detail": "Index \\`class_session_corrections_owner_course_session_idx\\` on table \\`public.class_session_corrections\\` has not been used",
+            "metadata": {
+              "name": "class_session_corrections",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T17:02:45.149Z"
+          },
+          {
+            "detail": "Index \\`courses_owner_idx\\` on table \\`public.courses\\` has not been used",
+            "metadata": {
+              "name": "courses",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T17:02:45.149Z"
+          },
+          {
+            "detail": "Index \\`courses_term_idx\\` on table \\`public.courses\\` has not been used",
+            "metadata": {
+              "name": "courses",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T17:02:45.149Z"
+          },
+          {
+            "detail": "Index \\`students_owner_name_idx\\` on table \\`public.students\\` has not been used",
+            "metadata": {
+              "name": "students",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T17:02:45.149Z"
+          },
+          {
+            "detail": "Index \\`enrollments_owner_idx\\` on table \\`public.enrollments\\` has not been used",
+            "metadata": {
+              "name": "enrollments",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T17:02:45.149Z"
+          },
+          {
+            "detail": "Index \\`attendance_student_idx\\` on table \\`public.attendance_records\\` has not been used",
+            "metadata": {
+              "name": "attendance_records",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T17:02:45.149Z"
+          },
+          {
+            "detail": "Index \\`observations_student_date_idx\\` on table \\`public.observation_records\\` has not been used",
+            "metadata": {
+              "name": "observation_records",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T17:02:45.149Z"
+          },
+          {
+            "detail": "Index \\`followups_owner_status_due_idx\\` on table \\`public.followups\\` has not been used",
+            "metadata": {
+              "name": "followups",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T17:02:45.149Z"
+          },
+          {
+            "detail": "Index \\`followups_student_idx\\` on table \\`public.followups\\` has not been used",
+            "metadata": {
+              "name": "followups",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T17:02:45.149Z"
+          },
+          {
+            "detail": "Index \\`classroom_record_corrections_owner_student_idx\\` on table \\`public.classroom_record_corrections\\` has not been used",
+            "metadata": {
+              "name": "classroom_record_corrections",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T17:02:45.149Z"
+          },
+          {
+            "detail": "Index \\`learning_events_course_date\\` on table \\`public.learning_events\\` has not been used",
+            "metadata": {
+              "name": "learning_events",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T17:02:45.149Z"
+          },
+          {
+            "detail": "Index \\`attendance_exceptions_owner_pending_idx\\` on table \\`public.attendance_exceptions\\` has not been used",
+            "metadata": {
+              "name": "attendance_exceptions",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T17:02:45.149Z"
+          },
+          {
+            "detail": "Index \\`randomizer_sessions_owner_course_date_idx\\` on table \\`public.randomizer_sessions\\` has not been used",
+            "metadata": {
+              "name": "randomizer_sessions",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T17:02:45.149Z"
+          },
+          {
+            "detail": "Index \\`randomizer_attempts_owner_session_round_idx\\` on table \\`public.randomizer_attempts\\` has not been used",
+            "metadata": {
+              "name": "randomizer_attempts",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T17:02:45.149Z"
+          },
+          {
+            "detail": "Index \\`randomizer_attempts_owner_course_student_idx\\` on table \\`public.randomizer_attempts\\` has not been used",
+            "metadata": {
+              "name": "randomizer_attempts",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T17:02:45.149Z"
+          },
+          {
+            "detail": "Index \\`attendance_exceptions_student_idx\\` on table \\`public.attendance_exceptions\\` has not been used",
+            "metadata": {
+              "name": "attendance_exceptions",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T17:02:45.149Z"
+          },
+          {
+            "detail": "Index \\`randomizer_attempts_owner_course_lesson_student_idx\\` on table \\`public.randomizer_attempts\\` has not been used",
+            "metadata": {
+              "name": "randomizer_attempts",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T17:02:45.149Z"
+          }
+        ]
+      }
+    ]
+  },
+  "authenticated_tests": {
+    "roster": true,
+    "participation": true,
+    "correction": true,
+    "attendance": true,
+    "reload": true
+  },
+  "tracker_tests": 52,
+  "local_load": {
+    "clients": 5,
+    "transactions": 200,
+    "failed": 0,
+    "average_ms": 16.534
+  },
+  "csv_download_bytes_readback": false,
+  "logo_asset_restored": true,
+  "live_logo": {
+    "loaded": true,
+    "width": 1254,
+    "height": 1254
+  }
+}

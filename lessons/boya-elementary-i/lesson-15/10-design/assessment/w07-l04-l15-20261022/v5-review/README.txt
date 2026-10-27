@@ -1,0 +1,1 @@
+W07 v5: the 50-item Form, answer keys, five replacement images, Sheet bank and 49 audio groups are synchronized. The Form is published and accepting responses. API readback and an independent student-view inspection of all 50 questions and 31 images passed. Technical playback was checked; teacher full listening and classroom-speaker acceptance remain pending.

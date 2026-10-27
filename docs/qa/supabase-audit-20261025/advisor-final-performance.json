@@ -1,0 +1,272 @@
+{
+  "result": {
+    "lints": [
+      {
+        "name": "unused_index",
+        "title": "Unused Index",
+        "level": "INFO",
+        "facing": "EXTERNAL",
+        "categories": [
+          "PERFORMANCE"
+        ],
+        "description": "Detects if an index has never been used and may be a candidate for removal.",
+        "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+        "count": 28,
+        "findings": [
+          {
+            "detail": "Index \\`classroom_record_corrections_owner_course_idx\\` on table \\`public.classroom_record_corrections\\` has not been used",
+            "metadata": {
+              "name": "classroom_record_corrections",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`class_session_corrections_owner_course_session_idx\\` on table \\`public.class_session_corrections\\` has not been used",
+            "metadata": {
+              "name": "class_session_corrections",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`courses_owner_idx\\` on table \\`public.courses\\` has not been used",
+            "metadata": {
+              "name": "courses",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`courses_term_idx\\` on table \\`public.courses\\` has not been used",
+            "metadata": {
+              "name": "courses",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`students_owner_name_idx\\` on table \\`public.students\\` has not been used",
+            "metadata": {
+              "name": "students",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`enrollments_owner_idx\\` on table \\`public.enrollments\\` has not been used",
+            "metadata": {
+              "name": "enrollments",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`enrollments_student_idx\\` on table \\`public.enrollments\\` has not been used",
+            "metadata": {
+              "name": "enrollments",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`attendance_owner_session_idx\\` on table \\`public.attendance_records\\` has not been used",
+            "metadata": {
+              "name": "attendance_records",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`attendance_student_idx\\` on table \\`public.attendance_records\\` has not been used",
+            "metadata": {
+              "name": "attendance_records",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`observations_owner_session_idx\\` on table \\`public.observation_records\\` has not been used",
+            "metadata": {
+              "name": "observation_records",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`observations_student_date_idx\\` on table \\`public.observation_records\\` has not been used",
+            "metadata": {
+              "name": "observation_records",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`followups_owner_status_due_idx\\` on table \\`public.followups\\` has not been used",
+            "metadata": {
+              "name": "followups",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`followups_student_idx\\` on table \\`public.followups\\` has not been used",
+            "metadata": {
+              "name": "followups",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`classroom_record_corrections_owner_student_idx\\` on table \\`public.classroom_record_corrections\\` has not been used",
+            "metadata": {
+              "name": "classroom_record_corrections",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`student_notes_course_student_idx\\` on table \\`public.student_notes\\` has not been used",
+            "metadata": {
+              "name": "student_notes",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`student_notes_supersession_idx\\` on table \\`public.student_notes\\` has not been used",
+            "metadata": {
+              "name": "student_notes",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`followups_owner_course_session_idx\\` on table \\`public.followups\\` has not been used",
+            "metadata": {
+              "name": "followups",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`followups_owner_course_student_idx\\` on table \\`public.followups\\` has not been used",
+            "metadata": {
+              "name": "followups",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`learning_events_course_date\\` on table \\`public.learning_events\\` has not been used",
+            "metadata": {
+              "name": "learning_events",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`followups_owner_student_idx\\` on table \\`public.followups\\` has not been used",
+            "metadata": {
+              "name": "followups",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`learning_events_owner_course_student_idx\\` on table \\`public.learning_events\\` has not been used",
+            "metadata": {
+              "name": "learning_events",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`attendance_exceptions_owner_pending_idx\\` on table \\`public.attendance_exceptions\\` has not been used",
+            "metadata": {
+              "name": "attendance_exceptions",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`randomizer_sessions_owner_course_date_idx\\` on table \\`public.randomizer_sessions\\` has not been used",
+            "metadata": {
+              "name": "randomizer_sessions",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`randomizer_attempts_owner_session_round_idx\\` on table \\`public.randomizer_attempts\\` has not been used",
+            "metadata": {
+              "name": "randomizer_attempts",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`randomizer_attempts_owner_course_student_idx\\` on table \\`public.randomizer_attempts\\` has not been used",
+            "metadata": {
+              "name": "randomizer_attempts",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`randomizer_attempts_owner_course_session_idx\\` on table \\`public.randomizer_attempts\\` has not been used",
+            "metadata": {
+              "name": "randomizer_attempts",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`attendance_exceptions_student_idx\\` on table \\`public.attendance_exceptions\\` has not been used",
+            "metadata": {
+              "name": "attendance_exceptions",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          },
+          {
+            "detail": "Index \\`randomizer_attempts_owner_course_lesson_student_idx\\` on table \\`public.randomizer_attempts\\` has not been used",
+            "metadata": {
+              "name": "randomizer_attempts",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.223Z"
+          }
+        ]
+      }
+    ]
+  }
+}

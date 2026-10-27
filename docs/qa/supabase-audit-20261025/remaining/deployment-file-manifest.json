@@ -1,0 +1,267 @@
+[
+  {
+    "path": "classroom-tools/classroom-randomizer/data/rosters.d.ts",
+    "uid": "52e1c19e6ae66386ff1dacb98006dcaf90798978",
+    "staged_sha1": "52e1c19e6ae66386ff1dacb98006dcaf90798978",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/classroom-randomizer/data/rosters.js",
+    "uid": "5ae073e567c0d68c7e7e03d9a62834d83fda4bcb",
+    "staged_sha1": "5ae073e567c0d68c7e7e03d9a62834d83fda4bcb",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/dist/index.html",
+    "uid": "f506ae30c8199cf148050308b6c47d5f9e861fde",
+    "staged_sha1": "f506ae30c8199cf148050308b6c47d5f9e861fde",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/public/favicon.svg",
+    "uid": "03d7534edb904c4a1b75fa4b1ea55fb3e32fa2d6",
+    "staged_sha1": "03d7534edb904c4a1b75fa4b1ea55fb3e32fa2d6",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/public/logo.svg",
+    "uid": "b62e0bbecd8ca4c668b2ce94793ed2d6e3097824",
+    "staged_sha1": "b62e0bbecd8ca4c668b2ce94793ed2d6e3097824",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/.nvmrc",
+    "uid": "a66ca4290ebaf525721fc670ea53476a15957f9e",
+    "staged_sha1": "a66ca4290ebaf525721fc670ea53476a15957f9e",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/index.html",
+    "uid": "77721b2a25a5456b8130fe5bdc07a00488a80d70",
+    "staged_sha1": "77721b2a25a5456b8130fe5bdc07a00488a80d70",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/package-lock.json",
+    "uid": "81e30422f2e0f69720ffe7bb51c005431b068887",
+    "staged_sha1": "81e30422f2e0f69720ffe7bb51c005431b068887",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/package.json",
+    "uid": "aa04c460e901f7a1f09685098adc7a30205649de",
+    "staged_sha1": "aa04c460e901f7a1f09685098adc7a30205649de",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/App.tsx",
+    "uid": "c2a2c2d5a239e2d03a94f6c2a620b178515cb8c9",
+    "staged_sha1": "c2a2c2d5a239e2d03a94f6c2a620b178515cb8c9",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/components/AppShell.tsx",
+    "uid": "45be229721c1d7bd3fb50df9edede4cfb6b376f4",
+    "staged_sha1": "45be229721c1d7bd3fb50df9edede4cfb6b376f4",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/components/EvidenceList.tsx",
+    "uid": "2e2f5fa461f3cd8561ee3ea0a1f463bc59a65b7b",
+    "staged_sha1": "2e2f5fa461f3cd8561ee3ea0a1f463bc59a65b7b",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/components/Icon.tsx",
+    "uid": "b2ca33d1d9fc9ff660c6c7ee089803971ff5fc8f",
+    "staged_sha1": "b2ca33d1d9fc9ff660c6c7ee089803971ff5fc8f",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/components/StatusPill.tsx",
+    "uid": "627877f8f58314edc93513e436c3bea437bb306e",
+    "staged_sha1": "627877f8f58314edc93513e436c3bea437bb306e",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/data/demoData.ts",
+    "uid": "12e6f14aea8978a81d915fe913fe5ef5a98466b4",
+    "staged_sha1": "12e6f14aea8978a81d915fe913fe5ef5a98466b4",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/data/randomizerRosterAdapter.ts",
+    "uid": "1ed3002f4bf9267c489721b0594e477a564b0f01",
+    "staged_sha1": "1ed3002f4bf9267c489721b0594e477a564b0f01",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/data/repository.ts",
+    "uid": "6547e534c1f0f60cef782579ae702106c43c17f0",
+    "staged_sha1": "6547e534c1f0f60cef782579ae702106c43c17f0",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/lib/supabase.ts",
+    "uid": "1260f7f9a4dc6d52d0be1b7aa1446343e584a665",
+    "staged_sha1": "1260f7f9a4dc6d52d0be1b7aa1446343e584a665",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/main.tsx",
+    "uid": "ba3df6efecc74d4282f58bec3b720968d2daa884",
+    "staged_sha1": "ba3df6efecc74d4282f58bec3b720968d2daa884",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/pages/FollowupsPage.tsx",
+    "uid": "ad9ba3b82a1cbeea739e512b041382d0dfde57d1",
+    "staged_sha1": "ad9ba3b82a1cbeea739e512b041382d0dfde57d1",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/pages/LoginPage.tsx",
+    "uid": "5ce41207363aacecd4c2c7a1dee4e3ba265751d3",
+    "staged_sha1": "5ce41207363aacecd4c2c7a1dee4e3ba265751d3",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/pages/MorePage.tsx",
+    "uid": "c78979fd3979657367b6753b646594dc40ca3fd4",
+    "staged_sha1": "88f64f7ce0b8de43cbfc6dc3342f388e2d027eb1",
+    "changed": true
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/pages/ParticipationPage.tsx",
+    "uid": "31f0620b90102ca600e32948e02ad3c486a3e966",
+    "staged_sha1": "d6391ffd23a40ec111de1c199d1ada370d3edb15",
+    "changed": true
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/pages/SessionPage.tsx",
+    "uid": "df8f18e5cc2196ac07c091fcb552a1540bb0a825",
+    "staged_sha1": "df8f18e5cc2196ac07c091fcb552a1540bb0a825",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/pages/StudentDetailPage.tsx",
+    "uid": "4e7259f0c013b045f615365784014807cffee713",
+    "staged_sha1": "4e7259f0c013b045f615365784014807cffee713",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/pages/StudentsPage.tsx",
+    "uid": "ea05197e2b3741be76d6eaf92cc9c42d5e509b42",
+    "staged_sha1": "ea05197e2b3741be76d6eaf92cc9c42d5e509b42",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/pages/TodayPage.tsx",
+    "uid": "196194a93b6ddb37ab6922b8b64dac6637c2cae3",
+    "staged_sha1": "196194a93b6ddb37ab6922b8b64dac6637c2cae3",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/state/TrackerContext.tsx",
+    "uid": "2c451b56db254be919161f0a2a759b7806fcb9f1",
+    "staged_sha1": "2c451b56db254be919161f0a2a759b7806fcb9f1",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/styles.css",
+    "uid": "c73f7be1c8f950b9b14b2567eb06bf07e01bde76",
+    "staged_sha1": "c73f7be1c8f950b9b14b2567eb06bf07e01bde76",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/types.ts",
+    "uid": "6a0a372cae2ce51f81b4a20353c98f3a93936110",
+    "staged_sha1": "6a0a372cae2ce51f81b4a20353c98f3a93936110",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/utils/classroomAnalysis.ts",
+    "uid": "fcaeb530fa9287571658ab55be14a27ddd8649f8",
+    "staged_sha1": "fcaeb530fa9287571658ab55be14a27ddd8649f8",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/utils/classroomExport.ts",
+    "uid": "fed52a2c734d9e4e5474731e7ba5e38e9d516414",
+    "staged_sha1": "fed52a2c734d9e4e5474731e7ba5e38e9d516414",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/utils/courseOrder.ts",
+    "uid": "460c7d360e9582a1aeb6ec415b3c8079325c11e9",
+    "staged_sha1": "460c7d360e9582a1aeb6ec415b3c8079325c11e9",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/utils/csv.ts",
+    "uid": "32a96092c2cb93629326ef075fb047191181b647",
+    "staged_sha1": "32a96092c2cb93629326ef075fb047191181b647",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/utils/learningEvents.ts",
+    "uid": "df65b0f0ef26ebbf5a4603aceb7d218a596e2d99",
+    "staged_sha1": "df65b0f0ef26ebbf5a4603aceb7d218a596e2d99",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/utils/participation.ts",
+    "uid": "f6957a35d5db233ba5db86de99260478fd0b043e",
+    "staged_sha1": "f6957a35d5db233ba5db86de99260478fd0b043e",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/utils/studentIdentity.ts",
+    "uid": "d8223d97bcc510c306d0ff3958de07c5e92d7a9b",
+    "staged_sha1": "d8223d97bcc510c306d0ff3958de07c5e92d7a9b",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/src/vite-env.d.ts",
+    "uid": "e2eac6bcc8767d416f859eb09486cc8709de95a5",
+    "staged_sha1": "e2eac6bcc8767d416f859eb09486cc8709de95a5",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/tsconfig.app.json",
+    "uid": "6a0c7d40eea2b9454b58c177805b416e813e4574",
+    "staged_sha1": "6a0c7d40eea2b9454b58c177805b416e813e4574",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/tsconfig.json",
+    "uid": "916168243c072245e89f349fb50e0d11696086fb",
+    "staged_sha1": "916168243c072245e89f349fb50e0d11696086fb",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/tsconfig.node.json",
+    "uid": "668653bc68d8c53a4e706f2d3c8e5349ca811567",
+    "staged_sha1": "668653bc68d8c53a4e706f2d3c8e5349ca811567",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/vercel.json",
+    "uid": "0663b5a687753484fd0ca561f7966f0ad386e341",
+    "staged_sha1": "0663b5a687753484fd0ca561f7966f0ad386e341",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/vite.config.ts",
+    "uid": "b1e152e575bcd72495e7b20d2891d6f7e0e39a06",
+    "staged_sha1": "b1e152e575bcd72495e7b20d2891d6f7e0e39a06",
+    "changed": false
+  },
+  {
+    "path": "classroom-tools/student-tracker/public/logo-minimalist.png",
+    "uid": "949a2df7f3b344d8463c48867449b4e3574558fd",
+    "staged_sha1": "949a2df7f3b344d8463c48867449b4e3574558fd",
+    "changed": false,
+    "restored_from": "production classroom-randomizer/logo-minimalist.png"
+  }
+]

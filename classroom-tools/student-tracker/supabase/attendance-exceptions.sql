@@ -1,6 +1,6 @@
--- Reviewed migration candidate. No live database changes are made by the app.
--- Create a timestamped migration with `supabase migration new attendance_exceptions`,
--- then copy this SQL into that file before testing/applying it.
+-- Applied on 2026-10-25 as migrations/20261025163339_attendance_exceptions.sql.
+-- Kept as the standalone SQL input for the disposable local regression harness.
+-- Do not reapply this file to an existing database; use versioned migrations.
 begin;
 create table public.attendance_exceptions (
   id uuid primary key default gen_random_uuid(),

@@ -783,6 +783,113 @@
         "source_status": "existing_courseware_source_mapping_verified",
         "status": "blooket_review_intake_teacher_acceptance_pending"
       }
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-elementary-i",
+      "lesson_id": "lesson-13",
+      "lesson_number": 13,
+      "title": "你打算买什么样子的",
+      "lesson_path": "lessons/boya-elementary-i/lesson-13",
+      "source_manifest": null,
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-elementary-i/source/source-inventory.json",
+      "printed_pages": "99–108",
+      "status": {
+        "stage": "design_draft",
+        "source_status": "user_provided_lesson_content; publisher_coverage_not_asserted",
+        "status": "copy_approved_openslide_draft_requested_2026-10-20"
+      }
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-elementary-i",
+      "lesson_id": "lesson-14",
+      "lesson_number": 14,
+      "title": "祝你生日快乐",
+      "lesson_path": "lessons/boya-elementary-i/lesson-14",
+      "source_manifest": null,
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-elementary-i/source/source-inventory.json",
+      "printed_pages": "109–118",
+      "status": {
+        "stage": "design_draft",
+        "source_status": "user_provided_lesson_content; publisher_coverage_not_asserted",
+        "status": "copy_approved_openslide_draft_requested_2026-10-20"
+      }
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-15",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-elementary-i",
+      "lesson_id": "lesson-15",
+      "lesson_number": 15,
+      "title": "我可以试试吗",
+      "lesson_path": "lessons/boya-elementary-i/lesson-15",
+      "source_manifest": null,
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-elementary-i/source/source-inventory.json",
+      "printed_pages": "119–128",
+      "status": {
+        "stage": "design_draft",
+        "source_status": "user_provided_lesson_content; publisher_coverage_not_asserted",
+        "status": "copy_approved_openslide_draft_requested_2026-10-21"
+      }
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-16",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-elementary-i",
+      "lesson_id": "lesson-16",
+      "lesson_number": 16,
+      "title": "来一斤饺子",
+      "lesson_path": "lessons/boya-elementary-i/lesson-16",
+      "source_manifest": null,
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-elementary-i/source/source-inventory.json",
+      "printed_pages": "129–138",
+      "pdf_page": 140,
+      "status": {
+        "stage": "design_draft",
+        "source_status": "book_scope_verified_content_review_pending",
+        "status": "w08_chatgpt_research_content_preparation_2026-10-22"
+      }
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-17",
+      "course_id": "vinh-chinese-listening-speaking",
+      "offering_ids": [
+        "2026-fall"
+      ],
+      "textbook_id": "boya-elementary-i",
+      "lesson_id": "lesson-17",
+      "lesson_number": 17,
+      "title": "喝茶还是喝咖啡",
+      "lesson_path": "lessons/boya-elementary-i/lesson-17",
+      "source_manifest": null,
+      "authority_manifest": null,
+      "source_inventory": "textbooks/boya-elementary-i/source/source-inventory.json",
+      "printed_pages": "139–149",
+      "pdf_page": 150,
+      "status": {
+        "stage": "design_draft",
+        "source_status": "book_scope_verified_content_review_pending",
+        "status": "w08_chatgpt_research_content_preparation_2026-10-22"
+      }
     }
   ]
 }

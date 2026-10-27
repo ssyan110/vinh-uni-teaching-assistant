@@ -1,0 +1,49 @@
+{
+  "unaffected_tables_identical": 13,
+  "authorized_changes": {
+    "class_sessions": {
+      "removed": 1,
+      "added": 0,
+      "modified": [
+        {
+          "id": "b191bbe0-25bb-437e-8428-03eb5156ad93",
+          "fields": [
+            "updated_at",
+            "session_number"
+          ]
+        }
+      ]
+    },
+    "learning_events": {
+      "removed": 30,
+      "added": 0,
+      "modified": []
+    },
+    "randomizer_sessions": {
+      "removed": 0,
+      "added": 0,
+      "modified": [
+        {
+          "id": "3894ed0b-5178-4eb5-b679-c74936d6df15",
+          "fields": [
+            "updated_at"
+          ]
+        }
+      ]
+    },
+    "class_session_corrections": {
+      "removed": 0,
+      "added": 1,
+      "modified": [
+        {
+          "id": "1dfacac2-f8a1-4acf-95af-e775a9190fa0",
+          "fields": [
+            "class_session_id"
+          ]
+        }
+      ]
+    }
+  },
+  "all_690_raw_attempts_identical": true,
+  "synthetic_fixtures_removed": true
+}

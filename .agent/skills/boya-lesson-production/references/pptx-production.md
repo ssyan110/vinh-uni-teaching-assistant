@@ -4,7 +4,7 @@ This reference preserves artifact-specific rules moved from the main skill durin
 
 ### 0. 已批准的《準中級加速篇 I》視覺模板
 
-本節舊母版、固定頁序、紫色與pt字階只用於仍選用該母版的線上預習／明確指定的歷史PPTX維護；不適用未來實體課HTML或其PPTX備份。實體課依2026-10-07標準；PPTX匯出仍遵守適用課程的字級下限。
+本節舊母版、固定頁序、紫色與pt字階只用於仍選用該母版的線上預習／明確指定的歷史PPTX維護；不適用未來實體課 OpenSlide；實體課依2026-10-07標準。
 
 
 - 共用視覺與字體 token 登記在 `scripts/boya_design_system.json`（`system_id: boya-classroom-materials`），實作位於 `scripts/lesson_pptx_master_template.js`。
@@ -20,10 +20,13 @@ This reference preserves artifact-specific rules moved from the main skill durin
 
 ### 1. 投影片製作方式
 
-- 線上課（含預習）維持原狀，今後仍以PPT／PPTX優先。只有實體課以HTML／OpenSlide優先，依 `docs/classroom-html-standard-2026-10-07.md`，需要時提供可編輯靜態PPTX備份。
+- 新線上版本必須依 `course/ppt-style-registry.json` 讀取實際定稿參考並綁定其 hash、逐頁及原生 shape；一年級目前使用 Adam 2026-10-27 指定的第25課。只驗證「有文字、有圖片」不代表符合版式。詞語情景插畫、分組復習及適用欄目須實做，不能用通用圖示或簡化清單代替。實際導出後逐頁核對可見文字覆蓋及題目語義。具體 schema 見 `docs/workflow/online-pptx-lifecycle.md`。
+- 今後新製作或修訂的線上預習 PPTX，主要學生內容至少 `25 pt`，包括詞類、意思、用法、補充、例句、目標、指令、題目、表格與作答提示。舊定稿中 `20–24 pt` 的正文數值只作歷史記錄。只有頁眉、頁碼、教材頁碼和 Audio 純文字標記可使用該課輔助字級下限，須在新稿明確標成 `text_role: chrome`；空間不足就調版或拆頁，不縮小主要內容。實體課 OpenSlide 使用自己的 CSS 規則。
+
+- 今後一年級及二年級各學期的實體課使用 OpenSlide 並同步統一首頁；線上預習使用 PPT／PPTX，依 `docs/classroom-html-standard-2026-10-07.md` 製作實體課。新實體課不製作 PPTX 備份。
 - `native-pptx` 依本參考文件其餘規則製作與驗證。
 - `open-slide` framework 位於 `tools/open-slide/`。將其輸出保存在該課 `10-design/open-slide-draft/`，實體課以HTML為預設，額外匯出依需要選擇。
-- Open Slide 按 `docs/workflow/classroom-html-lifecycle.md` 進行 draft preflight 與 QA；正式 authority／release 在專用實作支援前保持不可用。匯出的 PPTX 還須執行本參考文件的 PPTX 檢查，且不會因此取得批准。
+- Open Slide 按 `docs/workflow/classroom-html-lifecycle.md` 進行 draft preflight 與 QA；已登記的 HTML 課件可在各項人類批准後使用專用 authority／release 流程。歷史 PPTX 維護仍須執行相應檢查，且不會因此取得批准。
 - `native-pptx` 必須建立內部 JSON／CSV storyboard；它是內容與頁面生產的必要資料，但通常不需要交付給使用者，除非使用者要求。
 
 
@@ -31,7 +34,7 @@ This reference preserves artifact-specific rules moved from the main skill durin
 
 以下學生可讀性、頁碼、材料與 QA 原則適用於所有課次的新生成或經批准的修訂；第一課已批准 PPTX 的具體教材內容和人工修訂不因本節回改。涉及特定教材的句式、E 編號、姓氏或課本文字，必須回到對應 `lesson_key` 的專屬規則：
 
-- 所有學生端 PPT（包括線上預習與實體課、第一課與後續課次）的投影畫面可見文字最低 20 pt；說明區、操作提示、活動說明與教材頁碼標記不得更小。speaker notes、教師手冊與活動卡不受此 PPT 字級限制。
+- 已批准歷史 PPTX 的投影畫面可見文字最低 20 pt。新線上稿的說明、操作提示與活動內容依 25 pt 主要內容規則；教材頁碼等輔助標記沿用該課下限。speaker notes、教師手冊與活動卡不受此 PPT 字級限制。
 - 使用已批准的教育教材式插畫 contact sheet：純白投影片畫布 `#FFFFFF`、灰藍細線、低飽和粉彩、清楚留白。暖白只可出現在局部卡片、圖片框或插畫內容中。不要換成企業發布會、產品宣傳或抽象難懂的視覺。
 - 線上教材section divider沿用教材原名；實體課使用有意義的活動／段落標題，不強套教材線性欄目。
 - 一頁承載一個連貫活動；保留清楚標題、必要指令和結果。同一活動的問題、準備、討論與發表可在可讀時合併，不按動作或題型強制拆頁。
@@ -59,4 +62,4 @@ This reference preserves artifact-specific rules moved from the main skill durin
 - 短文、對話與文章類內容不在學生 PPT 中整段重排。線上使用「打開教材、讀／聽、找出並記錄」的短文記錄版式，實體使用聽力策略、問答、比較和口語發表版式；完整原文留在教材、canonical source、教師手冊或必要的學生閱讀材料。
 - 線上綜合練習沿用第一課公共版式；實體課依當課TBL結果組織，保留必要指令，不強套固定三步或拆頁。
 
-`scripts/build_lesson_01_pptx.js` 與 `scripts/build_lesson_01_pptx_native.js` 只屬於《中級衝刺篇 I》第一課的歷史生產流程，不是《準中級加速篇 I》的模板來源。《準中級加速篇 I》後續課次以 `scripts/build_l23_pptx_drafts.js` 作 L2／L3 線上 draft 的專用入口；歷史實體模式必須明確選取，不用於新 HTML 或其靜態備份；該入口只能寫入對應課次的 `10-design/pptx-draft/`，並必須沿用第一課 approved layout family、共用 token 與共用素材，不得覆蓋 `20-approved/`。後續擴展生成器時，先抽出同一套共用元件，再接入各課 content contract 與 current storyboard。
+`scripts/build_lesson_01_pptx.js` 與 `scripts/build_lesson_01_pptx_native.js` 只屬於《中級衝刺篇 I》第一課的歷史生產流程，不是《準中級加速篇 I》的模板來源。`scripts/build_l23_pptx_drafts.js` 只處理準中級歷史 L02–L12 的線上 draft，不支援新學期版本專屬批准，不得用於新版本；歷史實體模式必須明確選取，不用於新實體課 OpenSlide；該入口只能寫入對應課次的 `10-design/pptx-draft/`，並必須沿用第一課 approved layout family、共用 token 與共用素材，不得覆蓋 `20-approved/`。後續擴展生成器時，先抽出同一套共用元件，再接入各課 content contract 與 current storyboard。

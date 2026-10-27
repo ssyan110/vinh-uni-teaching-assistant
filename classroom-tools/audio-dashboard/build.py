@@ -8,6 +8,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 import qrcode
+from closeout import build_closeouts
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = Path(__file__).resolve().parent
@@ -19,6 +20,26 @@ def track(path, audio_id, lesson, title, **extra):
     if not target.is_relative_to(ROOT):
         raise ValueError(f'Audio escapes project: {path}')
     return dict(id=audio_id, lesson=lesson, title=title, file=os.path.relpath(target, OUT) if target.is_file() else None, **extra)
+
+def assessment_tools(assessment):
+    return [
+        dict(label='本卷成绩', url=management['url'] + '#gid=' + str(assessment['grade_sheet_id']) if assessment.get('grade_sheet_id') else f'https://docs.google.com/spreadsheets/d/{assessment["response_spreadsheet_id"]}/edit#gid={assessment["response_sheet_id"]}'),
+        dict(label='题库／答案', url=management['url'] + '#gid=' + str(assessment.get('paper_sheet_id', assessment['question_bank_sheet_id'])) + ('&fvid=' + str(assessment['paper_filter_view_id']) if assessment.get('paper_filter_view_id') else '')),
+        dict(label='音频管理表', url=management['url'] + '#gid=' + str(assessment['audio_sheet_id'])),
+        dict(label='评分／表单回应', url=assessment['form_edit_url'] + '#responses'),
+        dict(label='表单设置', url=assessment['form_edit_url'] + '#settings'),
+    ]
+
+def assessment_label(assessment):
+    lessons = sorted({int(match.group(1)) for key in assessment['lesson_keys']
+                      if (match := re.search(r'lesson-(\d+)$', key))})
+    assert lessons and assessment.get('week')
+    source_label = assessment.get('dashboard_label', '')
+    scope = '累计' if '累计' in source_label else ''
+    kind = '综合测验' if '综合测验' in source_label else '听力测验'
+    label = f'Week {int(assessment["week"])} · 第{lessons[0]}–{lessons[-1]}课{scope}{kind}'
+    assert re.fullmatch(r'Week \d+ · 第\d+–\d+课(?:累计)?(?:听力|综合)测验', label)
+    return label
 
 management = json.loads((ROOT / 'lessons/boya-elementary-i/assessment-management.json').read_text())
 books['boya-elementary-i']['management_url'] = management['url'] + '#gid=' + str(management['index_sheet']['sheet_id'])
@@ -36,14 +57,8 @@ for t in tracks:
     section = next(s for s in sections['sections'] if t['id'] in s['audio_ids'])
     t['section_id'] = section['id']
     t['section_title'] = section['title']
-books['boya-elementary-i']['sets'].append(dict(id=exam['exam_id'], week='04', label='Week 4 · 第5–10课综合测验', status='测验内容已批准 · 15段对话 · 50题', tracks=tracks, dashboard=os.path.relpath(folder / 'dashboard.html', OUT)))
-books['boya-elementary-i']['sets'][0]['tools'] = [
-    dict(label='本卷成绩', url=management['url'] + '#gid=' + str(exam['grade_sheet_id']) if exam.get('grade_sheet_id') else f'https://docs.google.com/spreadsheets/d/{exam["response_spreadsheet_id"]}/edit#gid={exam["response_sheet_id"]}'),
-    dict(label='题库／答案', url=management['url'] + '#gid=' + str(exam.get('paper_sheet_id', exam['question_bank_sheet_id'])) + ('&fvid=' + str(exam['paper_filter_view_id']) if exam.get('paper_filter_view_id') else '')),
-    dict(label='音频管理表', url=management['url'] + '#gid=' + str(exam['audio_sheet_id'])),
-    dict(label='评分／表单回应', url=exam['form_edit_url'] + '#responses'),
-    dict(label='表单设置', url=exam['form_edit_url'] + '#settings'),
-]
+books['boya-elementary-i']['sets'].append(dict(id=exam['exam_id'], week='04', label=assessment_label(exam), status='测验内容已批准 · 15段对话 · 50题', tracks=tracks, dashboard=os.path.relpath(folder / 'dashboard.html', OUT)))
+books['boya-elementary-i']['sets'][0]['tools'] = assessment_tools(exam)
 entry = json.loads((OUT / 'form-entry.json').read_text())
 assert entry['assessment_id'] == exam['exam_id'] and entry['formId'] == exam['form_id']
 url = entry['responderUri']
@@ -61,13 +76,20 @@ for draft in management['exams']:
     if not draft.get('dashboard_draft'):
         continue
     draft_dir = ROOT / draft['directory']
-    draft_bank = json.loads((draft_dir / 'items.json').read_text())
-    draft_audio = json.loads((draft_dir / 'audio-manifest.json').read_text())
-    draft_sections = json.loads((draft_dir / 'form-sections.json').read_text())['sections']
+    version_sync_path = draft_dir / 'v5-review' / 'form-sync.json'
+    root_sync_path = draft_dir / 'form-sync.json'
+    sync_path = version_sync_path if version_sync_path.is_file() else root_sync_path
+    draft_sync = json.loads(sync_path.read_text()) if sync_path.is_file() else {}
+    source_dir = draft_dir / draft_sync.get('version_directory', '')
+    if not (source_dir / 'items.json').is_file():
+        source_dir = draft_dir
+    draft_bank = json.loads((source_dir / 'items.json').read_text())
+    draft_audio = json.loads((source_dir / 'audio-manifest.json').read_text())
+    draft_sections = json.loads((source_dir / 'form-sections.json').read_text())['sections']
     assert draft_bank['exam_id'] == draft['exam_id']
     assert len(draft_bank['items']) == draft['question_count']
     assert sum(q['points'] for q in draft_bank['items']) == draft['points']
-    assert len(draft_audio) == len(draft_sections) == draft['audio_count']
+    assert len(draft_audio) == len(draft_sections) == draft['audio_count'] == draft['question_group_count']
     draft_tracks, covered = [], []
     for section, source_track in zip(draft_sections, draft_audio):
         assert section['audio_ids'] == [source_track['audio_id']]
@@ -75,7 +97,15 @@ for draft in management['exams']:
         assert all(q['audio_id'] == source_track['audio_id'] for q in questions)
         assert [q['id'] for q in questions] == source_track['question_ids']
         covered.extend(q['id'] for q in questions)
-        audio_file = draft_dir / source_track['file']
+        audio_file = source_dir / source_track['file']
+        if not audio_file.is_file():
+            audio_file = draft_dir / source_track['file']
+        if not audio_file.is_file():
+            audio_file = ROOT / source_track['file']
+        if not audio_file.is_file() and source_track.get('student_audio_path'):
+            audio_file = source_dir / source_track['student_audio_path']
+        audio_file = audio_file.resolve()
+        assert audio_file.is_relative_to(ROOT) and audio_file.is_file(), f'Missing draft audio: {source_track["audio_id"]}'
         assert hashlib.sha256(audio_file.read_bytes()).hexdigest() == source_track['sha256']
         lesson_numbers = sorted({int(key.rsplit('-', 1)[1]) for q in questions for key in q['lesson_keys']})
         assert lesson_numbers
@@ -85,15 +115,49 @@ for draft in management['exams']:
             duration=source_track['duration_seconds'], lessons=lesson_numbers, section_id=section['id'],
             section_title=section['title'], section_question_ids=source_track['question_ids']))
     assert covered == [q['id'] for q in draft_bank['items']]
-    draft_tools = [dict(label='教师答案（审阅稿）', url=os.path.relpath(draft_dir / 'teacher.md', OUT))]
-    if draft.get('paper_filter_view_id'):
-        draft_tools.append(dict(label='本卷题库', url=management['url'] + '#gid=' + str(draft['paper_sheet_id']) + '&fvid=' + str(draft['paper_filter_view_id'])))
-    if draft.get('form_edit_url'):
-        draft_tools.append(dict(label='表单草稿', url=draft['form_edit_url']))
-    source_label = (f'{draft["textbook_audio_count"]}段课本原音＋{draft["tocfl_audio_count"]}段TOCFL官方音频'
-                    if draft.get('tocfl_audio_count') else f'{draft["audio_count"]}段课本原音')
+    verified_sync_statuses = {'SYNCED_VERIFIED', 'SYNCED_VERIFIED_UNPUBLISHED', 'SYNCED_VERIFIED_PUBLISHED'}
+    if draft.get('publication_authorized') and draft_sync.get('status') in verified_sync_statuses:
+        entry = json.loads((draft_dir / 'form-entry.json').read_text())
+        state = entry.get('publishSettings', {}).get('publishState', {})
+        bank_hash = hashlib.sha256((source_dir / 'items.json').read_bytes()).hexdigest()
+        assert draft.get('content_approved') is True and entry['formId'] == draft['form_id']
+        assert draft_sync.get('form_id') == draft['form_id']
+        assert draft_sync.get('status') in {'SYNCED_VERIFIED', 'SYNCED_VERIFIED_UNPUBLISHED', 'SYNCED_VERIFIED_PUBLISHED'}
+        assert draft_sync.get('question_version') == draft_bank.get('version') == draft['question_version']
+        assert draft_sync.get('question_bank_sha256') == draft.get('question_bank_sha256') == bank_hash
+        assert state.get('isPublished') is True and state.get('isAcceptingResponses') is True
+        url = entry['responderUri']
+        parsed = urlparse(url)
+        assert parsed.scheme == 'https' and parsed.netloc == 'docs.google.com' and parsed.path.startswith('/forms/d/e/') and parsed.path.endswith('/viewform')
+        qr_name = f'w{int(draft["week"]):02}-student-qr.png'
+        qrcode.make(url).save(OUT / qr_name)
+        source_parts = []
+        if draft.get('textbook_audio_count'):
+            source_parts.append(f'{draft["textbook_audio_count"]}段课本原音')
+        if draft.get('tocfl_audio_count'):
+            source_parts.append(f'{draft["tocfl_audio_count"]}段TOCFL官方音频')
+        if draft.get('hsk_audio_count'):
+            source_parts.append(f'{draft["hsk_audio_count"]}段HSK官方音频')
+        books['boya-elementary-i']['sets'].append(dict(id=draft['exam_id'], week=str(draft['week']).zfill(2),
+            label=assessment_label(draft),
+            status=f'已发布 · {draft["question_count"]}题 · {draft["points"]}分 · {"＋".join(source_parts)} · 每段播放两遍 · 教师亲听和教室音箱验收待完成',
+            tracks=draft_tracks, tools=assessment_tools(draft),
+            exam=dict(title=entry['title'], url=url, qr=qr_name, open=True, sync_verified=True, checked_at=entry['checked_at'])))
+        continue
+    teacher_file = source_dir / 'teacher-v3-synced.md'
+    if not teacher_file.is_file():
+        teacher_file = source_dir / 'teacher.md'
+    draft_tools = assessment_tools(draft) + [dict(label='教师答案（审阅稿）', url=os.path.relpath(teacher_file, OUT))]
+    source_parts = []
+    if draft.get('textbook_audio_count'):
+        source_parts.append(f'{draft["textbook_audio_count"]}段课本原音')
+    if draft.get('tocfl_audio_count'):
+        source_parts.append(f'{draft["tocfl_audio_count"]}段TOCFL官方音频')
+    source_label = '＋'.join(source_parts) or f'{draft["audio_count"]}段来源音频'
+    review_status = ('音频已同步 · v5表单同步/读回待完成' if draft_sync.get('status') == 'AUDIO_SYNCED_FORM_SYNC_PENDING'
+                     else '审阅稿 · 未发布')
     books['boya-elementary-i']['sets'].append(dict(id=draft['exam_id'], week=str(draft['week']).zfill(2),
-        label=draft['dashboard_label'], status=f'审阅稿 · 未发布 · {draft["question_count"]}题 · {draft["points"]}分 · {source_label} · 每段播放两遍',
+        label=assessment_label(draft), status=f'{review_status} · {draft["question_count"]}题 · {draft["points"]}分 · {source_label} · 每段手动播放两遍',
         tracks=draft_tracks, tools=draft_tools))
 superseded_dirs = {ROOT / directory for e in management['exams'] for directory in e.get('superseded_directories', [])}
 for p in sorted((ROOT / 'course/offerings/2026-fall').glob('*/weekly-assessment-review/**/audio-map.csv')):
@@ -183,13 +247,9 @@ for p in sorted((ROOT / 'course/offerings/2026-fall').glob('*/weekly-assessment-
                               and sync.get('status') == 'SYNCED_VERIFIED'
                               and all(verified_input_hashes.get(key) == value
                                       for key, value in current_input_hashes.items()))
-        tools = [dict(label='本卷成绩', url=management['url'] + '#gid=' + str(registered['grade_sheet_id']) if registered.get('grade_sheet_id') else f'https://docs.google.com/spreadsheets/d/{registered["response_spreadsheet_id"]}/edit#gid={registered["response_sheet_id"]}'),
-                 dict(label='题库／答案', url=management['url']+f'#gid={registered["paper_sheet_id"]}&fvid={registered["paper_filter_view_id"]}'),
-                 dict(label='音频管理表', url=management['url']+f'#gid={registered["audio_sheet_id"]}'),
-                 dict(label='评分／表单回应', url=registered['form_edit_url']+'#responses'),
-                 dict(label='表单设置', url=registered['form_edit_url']+'#settings')]
+        tools = assessment_tools(registered)
         books['boya-elementary-i']['sets'].append(dict(id=registered['exam_id'], week=week,
-            label=f'Week {int(week)} · 第11–12课听力测验',
+            label=assessment_label(registered),
             status=f'25题 · {registered["points"]}分 · 6段课本原音 + 9段TOCFL官方音频 · 每段手动播放两遍',
             tracks=entries, tools=tools,
             exam=dict(title=ent['title'], url=ent['responderUri'], qr=qr_name,
@@ -230,6 +290,24 @@ for book_id, book in books.items():
             subset = [t for t in entries if week in weeks.get(f'{book_id}:lesson-{t["lesson"]:02}', [])]
             if subset:
                 book['sets'].append(dict(id='source-w'+week, week=week, label=f'Week {int(week)} · 教材原音', status='按当前学期课表编排', tracks=subset))
+assessment_by_id = {assessment['exam_id']: assessment for assessment in management['exams']}
+common_tools = ['本卷成绩', '题库／答案', '音频管理表', '评分／表单回应', '表单设置']
+for assessment_set in books['boya-elementary-i']['sets']:
+    assessment = assessment_by_id.get(assessment_set['id'])
+    if assessment:
+        assert assessment_set['label'] == assessment_label(assessment)
+        assert [tool['label'] for tool in assessment_set.get('tools', [])[:5]] == common_tools
 books['boya-elementary-i']['sets'].sort(key=lambda s: int(s['week']) if s['week'].isdigit() else 999)
-(OUT / 'catalog.js').write_text('window.AUDIO_CATALOG = '+json.dumps(list(books.values()), ensure_ascii=False)+';\n')
+build_closeouts(ROOT, OUT, list(books.values()))
+catalog_content = 'window.AUDIO_CATALOG = '+json.dumps(list(books.values()), ensure_ascii=False)+';\n'
+(OUT / 'catalog.js').write_text(catalog_content)
+catalog_version = hashlib.sha256(catalog_content.encode('utf-8')).hexdigest()[:12]
+index_path = OUT / 'index.html'
+index_html = index_path.read_text()
+versioned_html, replaced = re.subn(r'catalog\.js(?:\?v=[^\"]*)?', f'catalog.js?v={catalog_version}', index_html, count=1)
+player_version = hashlib.sha256((OUT / 'player.js').read_bytes()).hexdigest()[:12]
+versioned_html = re.sub(r'player\.js(?:\?v=[^\"]*)?', f'player.js?v={player_version}', versioned_html, count=1)
+assert replaced == 1, 'Dashboard index must load catalog.js exactly once'
+if versioned_html != index_html:
+    index_path.write_text(versioned_html)
 print(json.dumps({b['id']: len(b['sets']) for b in books.values()}))

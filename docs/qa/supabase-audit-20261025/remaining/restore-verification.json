@@ -1,0 +1,78 @@
+{
+  "kind": "application-data restore drill; managed Auth credentials excluded",
+  "captured_at": "2026-10-25T16:45:14.683685+00:00",
+  "tables": {
+    "academic_terms": {
+      "rows": 1,
+      "sha256": "9f60bc45f75fafe640667bf73f48d46dd58e2125e174e3582b12c6e5ac9384cb"
+    },
+    "courses": {
+      "rows": 4,
+      "sha256": "e5fe39b87c5649eee52b7b6f4e7015c000ed30edb5454937413f2b664c6a0fa4"
+    },
+    "students": {
+      "rows": 99,
+      "sha256": "9fd5d759369a6d9c3d51a6e0643284ba345261b77b93103cb2242c4365ea9d70"
+    },
+    "enrollments": {
+      "rows": 100,
+      "sha256": "e830351411fc500fe097e6467f47d56ca2c54faf3cb17140ebc4a51b167b04f1"
+    },
+    "class_sessions": {
+      "rows": 19,
+      "sha256": "e6c0d0574cc8a1373a727ca0a10ad15b2b2bb3e759ac5ac0c3aae03e4f54e36f"
+    },
+    "attendance_records": {
+      "rows": 7,
+      "sha256": "ea9a9c3923edfd5c61ea4bf11268f1a8218a8bf5421229b498fc08eb4c1eb85e"
+    },
+    "observation_records": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "followups": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "learning_events": {
+      "rows": 165,
+      "sha256": "7caf501ca1abc27ee5faa774556e616f523d2376da1a5746b358172b827d8a49"
+    },
+    "randomizer_sessions": {
+      "rows": 17,
+      "sha256": "37179e0b6c501554888c68620612972ccb3d89e260a43c48cc79ace08ae8bd55"
+    },
+    "randomizer_attempts": {
+      "rows": 690,
+      "sha256": "27d4c00f81d58a1eb29a2b4fb71f35bda203e9b2607c11eff031fc8de91d8eba"
+    },
+    "student_notes": {
+      "rows": 29,
+      "sha256": "5341e2f09e42567844f09855655030a3a602877f77574d37bf5f0a6c0174db0e"
+    },
+    "interact_rooms": {
+      "rows": 5,
+      "sha256": "93410d82b562402bfdcbfddccd296a5d4c67fa6bdaa54ce6e487c6f2fbbb2f39"
+    },
+    "interact_responses": {
+      "rows": 41,
+      "sha256": "d5cd0e0d0d77d7fb8ad60b94ae7c42af06bb87d54cb972bbc602bc47a08a5cce"
+    },
+    "class_session_corrections": {
+      "rows": 5,
+      "sha256": "aee8131d4088b6ab8b8ebf1a36c6251a755927bef0d1e5d6e1718fa689bf953f"
+    },
+    "classroom_record_corrections": {
+      "rows": 3,
+      "sha256": "1d6c44c16b17a908e99211f12ba6706dbd1407511e277c0000dd00a6bd2639d1"
+    },
+    "attendance_exceptions": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  },
+  "all_rows_identical": true,
+  "foreign_keys_enforced": true,
+  "local_only_trigger_suspension": "Historical records restored without replaying insert/update business guards; all guards re-enabled",
+  "auth": "Placeholder owner IDs only; no passwords, sessions or managed Auth restoration"
+}

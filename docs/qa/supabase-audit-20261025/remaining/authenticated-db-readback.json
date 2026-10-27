@@ -1,0 +1,29 @@
+[
+  {
+    "evidence": {
+      "attempt_statuses": [
+        {
+          "count": 1,
+          "outcome": "pending",
+          "record_status": "valid",
+          "counted_for_summary": true
+        },
+        {
+          "count": 32,
+          "outcome": "answered",
+          "record_status": "valid",
+          "counted_for_summary": true
+        }
+      ],
+      "synthetic_events": [
+        {
+          "id": "0cf93dbc-dc16-4027-9f55-920de9c71d78",
+          "source": "manual_adjustment",
+          "counted": false,
+          "record_status": "corrected"
+        }
+      ],
+      "synthetic_corrections": 1
+    }
+  }
+]

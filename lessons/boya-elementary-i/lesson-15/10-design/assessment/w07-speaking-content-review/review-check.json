@@ -1,0 +1,49 @@
+{
+  "status": "review_text_and_structure_checked",
+  "question_count": 24,
+  "answer_question_count": 12,
+  "picture_question_count": 12,
+  "storyboard_panels": 48,
+  "max_main_question_characters": 30,
+  "md_json_consistent": true,
+  "coverage": [
+    "boya-elementary-i:lesson-04",
+    "boya-elementary-i:lesson-05",
+    "boya-elementary-i:lesson-06",
+    "boya-elementary-i:lesson-07",
+    "boya-elementary-i:lesson-08",
+    "boya-elementary-i:lesson-09",
+    "boya-elementary-i:lesson-10",
+    "boya-elementary-i:lesson-11",
+    "boya-elementary-i:lesson-12",
+    "boya-elementary-i:lesson-13",
+    "boya-elementary-i:lesson-14",
+    "boya-elementary-i:lesson-15"
+  ],
+  "source_input_hashes_match": true,
+  "official_sources_read": 8,
+  "independent_review": [
+    "question_language_and_hidden_criteria",
+    "picture_inference_and_object_continuity",
+    "validity_and_two_type_comparability"
+  ],
+  "repairs": [
+    "A04 open location question",
+    "A07 concrete purchase preference",
+    "A08 summer/winter removes comparison degree",
+    "A11 removes assumed friend preferences",
+    "optional hints explicit not required",
+    "B01 named waiting person",
+    "B04 removes extra clock",
+    "B12 blue pen continuity"
+  ],
+  "limitations": [
+    "content_review_pending",
+    "pictures_not_generated",
+    "student_trial_not_run",
+    "actual_taught_scope_not_observed",
+    "response_window_interpretation_pending_Adam",
+    "inter_item_equivalence_not_calibrated"
+  ],
+  "verification_note": "Counts and hashes check consistency only; author/facilitator and learner-facing wording also manually reviewed. No claim of learner trial."
+}

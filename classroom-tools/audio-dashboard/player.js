@@ -19,12 +19,21 @@ function changeBook() {
 function changeSet() {
   const book = AUDIO_CATALOG.find(b => b.id === el('book').value);
   selectedSet = book.sets.find(s => s.id === el('set').value);
+  const w07 = selectedSet?.id === 'W07-L04L15-20261022';
+  document.title = (w07 ? '荣市大学' : '榮市大学') + ' · 测验与音频中心';
+  document.querySelector('footer').textContent = (w07 ? '荣市大学' : '榮市大学') + '华语听说 · 教师使用';
   el('management-link').hidden = !book.management_url;
   if (book.management_url) el('management-link').href = book.management_url;
   el('teacher-links').replaceChildren();
   for (const tool of selectedSet?.tools || []) {
     const link = document.createElement('a');
     link.href = tool.url; link.textContent = tool.label; link.target = '_blank'; link.rel = 'noopener';
+    el('teacher-links').append(link);
+  }
+  if (selectedSet && /^W\d{2}-/.test(selectedSet.id)) {
+    const link = document.createElement('a');
+    link.href = `closeout.html?exam=${encodeURIComponent(selectedSet.id)}`;
+    link.textContent = '周测检查';
     el('teacher-links').append(link);
   }
   el('set-status').textContent = selectedSet?.status || '这本教材尚未登记播放清单。';

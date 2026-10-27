@@ -19,10 +19,10 @@ def _top_level_sections(text: str) -> list[str]:
 def _registry_rows(text: str) -> list[dict[str, str]]:
     rows: list[dict[str, str]] = []
     for line in text.splitlines():
-        if not line.startswith("|") or line.startswith("|---"):
+        if not line.startswith("|"):
             continue
         cells = [cell.strip() for cell in line.strip("|").split("|")]
-        if len(cells) != 6 or cells[0] == "requirement_id":
+        if len(cells) != 6 or cells[0] == "requirement_id" or all(re.fullmatch(r":?-{3,}:?", cell) for cell in cells):
             continue
         rows.append({
             "requirement_id": cells[0],

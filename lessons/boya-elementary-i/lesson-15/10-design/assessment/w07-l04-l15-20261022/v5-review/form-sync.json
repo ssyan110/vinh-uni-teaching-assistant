@@ -1,0 +1,35 @@
+{
+  "exam_id": "W07-L04L15-20261022",
+  "status": "SYNCED_VERIFIED_PUBLISHED",
+  "question_version": 5,
+  "version_directory": "v5-review",
+  "form_id": "1JTpDoiHrtX0nf8w_bcfWFrR7uGgWO8kVUc_IW-FGNNQ",
+  "live_form_version": 5,
+  "live_form_status": "PUBLISHED_ACCEPTING_RESPONSES",
+  "live_form_readback_source": "v5 Form API readback and independent student-view verification, 2026-10-27",
+  "question_count": 50,
+  "points": 100,
+  "question_bank_sha256": "a4a0524a74a89b72b4e5c27dde105c34e457078fd5f6ee65b5ad844c87fd67e3",
+  "form_sections_sha256": "c15b3c1df5c38a7db198302628ff8dbcd095d4b1b216a7749ad51d9be6fb018c",
+  "audio_manifest_sha256": "7a55960736ab38c375f5755c4b8f7ff00d6f02ca20002cf12f8485d63d76bc3f",
+  "audio_sync": {
+    "status": "DRIVE_AND_SHEET_READBACK_VERIFIED",
+    "drive_folder_id": "1e-pAJ8PIRm6V4d10kmd9K6lQ6iwxJaV4",
+    "preserved_drive_ids": 7,
+    "edited_audio_group_count": 8,
+    "new_w07_only_audio_id": "BOYA-L15-15-11-W07V5",
+    "new_w07_only_drive_id": "1oGHiVcqEw2xF1rB3FfZ5dsEuQGuJMNcX",
+    "sheet_id": "1fhKUHCsyEYvSMrCgw5bL8vtazuwX77DKoa0ZCsQgIso",
+    "audio_library_rows": [56, 60, 64, 74, 76, 81, 87, 103],
+    "assembly_rows": [116, 117],
+    "assembly_play_count_each": 2
+  },
+  "publication_authorized": true,
+  "student_entry_enabled": true,
+  "previous_v4_readback_stale_for_v5": false,
+  "previous_v4_form_revision": "00000021",
+  "pending": [
+    "teacher full listening",
+    "classroom speaker acceptance"
+  ]
+}

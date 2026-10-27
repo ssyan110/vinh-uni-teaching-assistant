@@ -69,6 +69,14 @@ class AudioPolicyTests(unittest.TestCase):
 
 
 class CoverageTests(unittest.TestCase):
+    def test_classroom_format_is_not_a_paired_pptx_requirement(self):
+        for name in ('AGENTS.md', 'PROJECT_REQUIREMENTS.md'):
+            with self.subTest(file=name):
+                text = (ROOT / name).read_text(encoding='utf-8')
+                self.assertIn('所有學期的實體課一律使用 OpenSlide', text)
+                self.assertIn('PPT／PPTX 用於線上預習', text)
+                self.assertNotIn('每課兩份課堂 PPTX 固定命名', text)
+
     def test_dated_heading_and_malformed_id_cannot_disappear(self):
         with tempfile.TemporaryDirectory(dir=ROOT / '.agent') as folder:
             root = Path(folder)

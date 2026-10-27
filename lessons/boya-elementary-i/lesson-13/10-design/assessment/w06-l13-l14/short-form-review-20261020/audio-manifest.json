@@ -1,0 +1,164 @@
+[
+  {
+    "audio_id": "13-9",
+    "file": "audio/13-9-exam.wav",
+    "student_audio_path": "../audio/13-9-exam.wav",
+    "question_ids": [
+      "W06-10Q-01"
+    ],
+    "question_range": "1",
+    "play_count": 2,
+    "section_title": "第1题｜第13课课本听力｜Audio 13-9",
+    "title": "这是最新的手机",
+    "source_type": "user_provided_publisher_original",
+    "source_url": null,
+    "source_script_url": null,
+    "source_start_seconds": 10.45,
+    "source_end_seconds": 40.6,
+    "duration_seconds": 30.15,
+    "sha256": "d3deb69d9a225b7cf0a5fc86784dc4ff21ce2a257e80ec8563615ec80644c238",
+    "teacher_listening_accepted": false
+  },
+  {
+    "audio_id": "13-10",
+    "file": "audio/13-10-exam.wav",
+    "student_audio_path": "../audio/13-10-exam.wav",
+    "question_ids": [
+      "W06-10Q-02",
+      "W06-10Q-03"
+    ],
+    "question_range": "2–3",
+    "play_count": 2,
+    "section_title": "第2–3题｜第13课课本听力｜Audio 13-10",
+    "title": "这件衣服多少钱",
+    "source_type": "user_provided_publisher_original",
+    "source_url": null,
+    "source_script_url": null,
+    "source_start_seconds": 5.92,
+    "source_end_seconds": 32.05,
+    "duration_seconds": 26.13,
+    "sha256": "e9035a6e3b823b346edd2addc5021781eae73b369a505c7cd490a7fafacbaf90",
+    "teacher_listening_accepted": false
+  },
+  {
+    "audio_id": "14-9",
+    "file": "audio/14-9-exam.wav",
+    "student_audio_path": "../audio/14-9-exam.wav",
+    "question_ids": [
+      "W06-10Q-04"
+    ],
+    "question_range": "4",
+    "play_count": 2,
+    "section_title": "第4题｜第14课课本听力｜Audio 14-9",
+    "title": "怎么过生日",
+    "source_type": "user_provided_publisher_original",
+    "source_url": null,
+    "source_script_url": null,
+    "source_start_seconds": 10.6,
+    "source_end_seconds": 35.55,
+    "duration_seconds": 24.95,
+    "sha256": "2e5a88085d704cc04842a649b2d551975224fada33dff72f2c3247721547cfbd",
+    "teacher_listening_accepted": false
+  },
+  {
+    "audio_id": "14-10",
+    "file": "audio/14-10-exam.wav",
+    "student_audio_path": "../audio/14-10-exam.wav",
+    "question_ids": [
+      "W06-10Q-05"
+    ],
+    "question_range": "5",
+    "play_count": 2,
+    "section_title": "第5题｜第14课课本听力｜Audio 14-10",
+    "title": "准备生日礼物",
+    "source_type": "user_provided_publisher_original",
+    "source_url": null,
+    "source_script_url": null,
+    "source_start_seconds": 4.88,
+    "source_end_seconds": 27.4,
+    "duration_seconds": 22.52,
+    "sha256": "37e608cc5dfb9b735f8ed6fd88a681f56ed79f7c7d58a6c5663e896632778da1",
+    "teacher_listening_accepted": false
+  },
+  {
+    "audio_id": "14-11",
+    "file": "audio/14-11-exam.wav",
+    "student_audio_path": "../audio/14-11-exam.wav",
+    "question_ids": [
+      "W06-10Q-06"
+    ],
+    "question_range": "6",
+    "play_count": 2,
+    "section_title": "第6题｜第14课课本听力｜Audio 14-11",
+    "title": "祝你生日快乐",
+    "source_type": "user_provided_publisher_original",
+    "source_url": null,
+    "source_script_url": null,
+    "source_start_seconds": 4.3,
+    "source_end_seconds": 41.2,
+    "duration_seconds": 36.9,
+    "sha256": "d0bf569ee1209e05161cf3e3fe075b20486ca3ba1f984cb3026fff376b8d57d2",
+    "teacher_listening_accepted": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q23",
+    "file": "audio/TOCFL-A4-Q23.mp3",
+    "student_audio_path": "../audio/TOCFL-A4-Q23.mp3",
+    "question_ids": [
+      "W06-10Q-07",
+      "W06-10Q-08"
+    ],
+    "question_range": "7–8",
+    "play_count": 2,
+    "section_title": "第7–8题｜TOCFL官方听力改编｜Audio TOCFL-A4-Q23",
+    "title": "衣服便宜",
+    "source_type": "TOCFL_official_original_audio",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/026.mp3",
+    "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+    "source_start_seconds": 2.4,
+    "source_end_seconds": 13.8,
+    "duration_seconds": 11.4,
+    "sha256": "5c44dcb3f57c1628a823c6097881a549f9078e879fdd6c2aed14499a91257b4d",
+    "teacher_listening_accepted": false
+  },
+  {
+    "audio_id": "TOCFL-A4-Q26",
+    "file": "audio/TOCFL-A4-Q26.mp3",
+    "student_audio_path": "../audio/TOCFL-A4-Q26.mp3",
+    "question_ids": [
+      "W06-10Q-09"
+    ],
+    "question_range": "9",
+    "play_count": 2,
+    "section_title": "第9题｜TOCFL官方听力改编｜Audio TOCFL-A4-Q26",
+    "title": "按喜好选礼物",
+    "source_type": "TOCFL_official_original_audio",
+    "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/030.mp3",
+    "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+    "source_start_seconds": 2.3,
+    "source_end_seconds": 26.1,
+    "duration_seconds": 23.8,
+    "sha256": "7792d765fd082a7376c5993dc45f7e9e5e7157ceb099751b79c5b405a4bffffa",
+    "teacher_listening_accepted": false
+  },
+  {
+    "audio_id": "TOCFL-A5-Q37",
+    "file": "audio/TOCFL-A5-Q37.mp3",
+    "student_audio_path": "../audio/TOCFL-A5-Q37.mp3",
+    "question_ids": [
+      "W06-10Q-10"
+    ],
+    "question_range": "10",
+    "play_count": 2,
+    "section_title": "第10题｜TOCFL官方听力改编｜Audio TOCFL-A5-Q37",
+    "title": "生日礼物与安排",
+    "source_type": "TOCFL_official_original_audio",
+    "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/041.mp3",
+    "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
+    "source_start_seconds": 2.2,
+    "source_end_seconds": 24.5,
+    "duration_seconds": 22.3,
+    "sha256": "abfae89b160d9d5c9da7fa8f081581aeb28099b95736d1e58a068899098df306",
+    "teacher_listening_accepted": false
+  }
+]

@@ -13,9 +13,9 @@
 
 ## Canonical ownership
 
-- 2026-10-07 06:52 UTC用户明确：线上课PPT维持原状，未来仍以PPT／PPTX优先，保留单词一页与已批准风格；只有实体课因需要灵活调整，才以HTML slides／OpenSlide优先，必要时另备可编辑PPTX。清理旧规则中的“移除PPTX优先”仅指实体课，不适用于线上课。
+- 2026-10-27 用户明确：今后一、二年级所有学期的实体课统一使用 OpenSlide 并同步首页，线上预习使用 PPT／PPTX；新实体课不制作 PPTX 备份。历史定稿保留。
 
-- 未来实体课HTML优先、视觉／动画／TBL活动与TOCFL风格测验：[`docs/classroom-html-standard-2026-10-07.md`](../docs/classroom-html-standard-2026-10-07.md)，由AGENTS与PROJECT_REQUIREMENTS引用；2026-10-07 06:24 UTC用户明确要求保存。以工作区索引所指第9–10课HTML为方法参考，不固定页数，取消版不作模板。此持续选择取代实体课旧PPTX默认与重复选风格要求；需要时另备可编辑静态PPTX。线上预习、已完成课次与各自批准保持独立。
+- 未来实体课HTML优先、视觉／动画／TBL活动与TOCFL风格测验：[`docs/classroom-html-standard-2026-10-07.md`](../docs/classroom-html-standard-2026-10-07.md)，由AGENTS与PROJECT_REQUIREMENTS引用；2026-10-07 06:24 UTC用户明确要求保存。以工作区索引所指第9–10课HTML为方法参考，不固定页数，取消版不作模板。此持续选择取代实体课旧PPTX默认与重复选风格要求；不制作新的实体课 PPTX 备份。线上预习、已完成课次与各自批准保持独立。
 - 同一标准保存：白／海军蓝／青绿、无紫色、简体中文；先来源与逐页计划、对象清单和素材contact sheet，再布局；离线资源、清楚指令、具体数据、连贯活动；入页短动画一次、一次按键一页、仅强调有意义变化。保留10月5日独立听说证据、动态路径及反馈后同内容重说。未来TOCFL风格依程度与课程出题，实际出卷核官方规格，不冒称官方题；测验范围与题数读取当卷登记。本学期一年级产出在 `lessons/boya-elementary-i/`，其他年级沿用自己的教材路径。
 
 - 本届一年级第一学期第9–25课的2026-10-05新教学方法：`docs/course-rules/BOYA-LS-E1-Y1S1-2026F/EFL-REDESIGN-2026-10-05.md`；课程与教材要求仍由 `PROJECT_REQUIREMENTS.md` 管理。
@@ -49,7 +49,7 @@
 
 ## 投影片與 artifact rules
 
-- 未來實體課依2026-10-07標準以HTML／OpenSlide優先，需要時另備原生可編輯、16:9、簡體中文靜態PPTX。其他未另指定的範圍仍沿用原有PPTX流程；舊禁止HTML條文不再適用未來實體課。
+- 未來一年級、二年級各學期實體課依2026-10-07標準使用 OpenSlide 並同步首頁；線上預習使用 PPTX。舊禁止 HTML 條文不適用未來實體課。
 - 中文漢字使用 `KaiTi`；越南文與其他 Latin-script 文字使用 `Times New Roman`，只依賴收件人電腦可用的系統字體。
 - PPTX遵守適用課程的字級下限（本屆一年級新課23 pt）；HTML依2026-10-07標準按畫布與投影可讀性驗證，不直接套pt字階。
 - 使用課本內容的學生端投影片必須顯示由 canonical source 與 slide-level storyboard mapping 推導的教材印刷頁碼；沒有課本內容的頁面不加多餘標記。

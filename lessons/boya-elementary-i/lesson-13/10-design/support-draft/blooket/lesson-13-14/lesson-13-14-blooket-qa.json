@@ -1,0 +1,283 @@
+{
+  "status": "technical_pass_review_draft",
+  "offering_id": "2026-fall",
+  "lesson_keys": [
+    "boya-elementary-i:lesson-13",
+    "boya-elementary-i:lesson-14"
+  ],
+  "question_count": 80,
+  "question_types": {
+    "词语拼音": 50,
+    "语境理解": 22,
+    "跨课整合": 8
+  },
+  "coverage": {
+    "lesson-13": 36,
+    "lesson-14": 36,
+    "both_lessons": 8
+  },
+  "correct_answer_positions": {
+    "1": 20,
+    "2": 20,
+    "3": 20,
+    "4": 20
+  },
+  "csv_utf8_bom": true,
+  "csv_sha256": "4c2d542584e01f22d660c163c19e4a87b489ad373c50acd21f8917944aaadad8",
+  "bank_sha256": "0e16af8b91d8dfb2aa2440d0eef4512e8bbad13d229f37544c7fc2fd3182bc08",
+  "source_inputs": {
+    "13": {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/pptx-draft/online/lesson-13-在线预习.pptx",
+      "sha256": "84777ac142a03c82e6fa96dac8b98a07544749416f377264b5460a6553198261"
+    },
+    "14": {
+      "path": "lessons/boya-elementary-i/lesson-14/10-design/pptx-draft/online/lesson-14-在线预习.pptx",
+      "sha256": "d569b1d951af4b3551a05131db033caff38af5b178b7a25b8530bcf4561c0da1"
+    }
+  },
+  "pinyin_correction": "Question 1 uses standard dǎsuàn; the tracked draft slide displays dǎsuan without the second tone mark.",
+  "limits": [
+    "The two online PPTX files are cited at slide level as visible word/pinyin and usage evidence; publisher-source coverage is not asserted.",
+    "Repository OCR pairings and Vietnamese translations are marked as needing review; the set uses pinyin and Simplified Chinese only.",
+    "Eight integrated contexts are newly authored from the user-approved classroom activities and are labeled in the local bank.",
+    "This text-based review set contains no audio.",
+    "Teacher acceptance is not claimed."
+  ],
+  "source_word_pinyin_crossread": "50/50 items match cited PPTX slides except documented missing tone mark on 打算; all unique answers and indices match.",
+  "csv_rows": 82,
+  "csv_format": "Blooket template preamble row + exact 8-column header + 80 questions; full CSV-to-bank field and answer-index match verified.",
+  "external_status": "new_private_set_csv_uploaded_and_saved_80_questions",
+  "blooket_set": {
+    "id": "6ade1ba3c7dbd5f0fe686577",
+    "url": "https://dashboard.blooket.com/set/6ade1ba3c7dbd5f0fe686577",
+    "edit_url": "https://dashboard.blooket.com/edit?id=6ade1ba3c7dbd5f0fe686577",
+    "visibility": "Private (Only playable by you)",
+    "question_count": 80,
+    "readback": "Saved My Sets card displayed 80 Questions; edit page displayed 80 Questions and the private lock; Edit Info showed Private (Only playable by you). Q51 imported choices and correct answer 2 were read back; Q71 imported choices and correct answer 1 were read back."
+  },
+  "revision_review": {
+    "reference_file": "lessons/boya-elementary-i/lesson-09-10/10-design/support-draft/blooket/lesson-09-10-blooket-80题.csv",
+    "reference_patterns": [
+      "short, direct student-facing questions",
+      "a concrete context or dialogue before the question",
+      "four meaningful, distinct answer options",
+      "ask what the dialogue says or what action fits, without meta-questions or missing-information traps"
+    ],
+    "revised_question_numbers": [
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80
+    ],
+    "changes": [
+      {
+        "question_number": 51,
+        "before": "小明想买一部手机，周末准备去商店。他说：“我___买手机。”这里应该填什么？",
+        "after": "小明想买手机，周末准备去商店。他说：“我___买手机。”这里填什么？"
+      },
+      {
+        "question_number": 52,
+        "before": "顾客想知道这件衣服的款式，问售货员：“这件衣服的___怎么样？”这里填哪个词？",
+        "after": "小红觉得这件衣服的样子很好看。她在说衣服的什么？"
+      },
+      {
+        "question_number": 53,
+        "before": "小美觉得这件衣服很漂亮，想用“挺”来表达。她应该说哪一句？",
+        "after": "小美觉得这件衣服很漂亮。她可以怎么说？"
+      },
+      {
+        "question_number": 54,
+        "before": "“这件衣服的___很好。”",
+        "after": "顾客想知道衣服做得好不好，问：“这件衣服的___怎么样？”应该填哪个词？"
+      },
+      {
+        "question_number": 55,
+        "before": "天气预报说可能下雨。小明说：“___下雨，我就在家。”这里应该填什么？",
+        "after": "外面可能下雨。小明说：“___下雨，我就在家。”这里填什么？"
+      },
+      {
+        "question_number": 56,
+        "before": "“这件衣服有两___颜色。”",
+        "after": "这件衣服有两___颜色：白色和黑色。这里少了哪个词？"
+      },
+      {
+        "question_number": 57,
+        "before": "这只手机很好看，价格也有点儿贵。用“不过”连接，应该说：“这只手机很漂亮，___有点儿贵。”",
+        "after": "这只手机很漂亮，可是有点儿贵。用“不过”连接，应该怎么说：“这只手机很漂亮，___有点儿贵。”"
+      },
+      {
+        "question_number": 58,
+        "before": "顾客试穿后觉得这件衣服有些小。她说：“这件衣服___小。”这里填哪个词？",
+        "after": "小美觉得这件衣服有些小。她说：“这件衣服___小。”这里填什么？"
+      },
+      {
+        "question_number": 59,
+        "before": "顾客觉得手机太贵，想让价格再低一些。她可以问：“能不能便宜___？”",
+        "after": "小明觉得手机太贵，想让价格低一点儿。他可以问：“能不能便宜___？”"
+      },
+      {
+        "question_number": 60,
+        "before": "小林试穿后觉得这件衣服可以接受。她说：“这件衣服___。”应该填什么？",
+        "after": "小林觉得这件衣服不错，可以买。他说：“这件衣服___。”填什么？"
+      },
+      {
+        "question_number": 61,
+        "before": "明天是小美的生日，朋友们准备买一个生日蛋糕送给她。朋友们要买什么？",
+        "after": "小美明天过生日，朋友们要给她买蛋糕。朋友们准备买什么？"
+      },
+      {
+        "question_number": 62,
+        "before": "“我先买花儿，___去朋友家。”",
+        "after": "小明先去花店买花儿，然后去朋友家。买完花儿以后，他去哪儿？"
+      },
+      {
+        "question_number": 63,
+        "before": "走出学校大门，正对面就是饭店。饭店在哪儿？",
+        "after": "饭店在学校的对面。饭店在哪儿？"
+      },
+      {
+        "question_number": 64,
+        "before": "生日那天，小安想和朋友一起庆祝。下面哪句话表达了这个意思？",
+        "after": "小安想和朋友一起过生日。他会怎么说？"
+      },
+      {
+        "question_number": 65,
+        "before": "“我___她一束花儿。”",
+        "after": "小芳把一束花儿送给妈妈。她做了什么？"
+      },
+      {
+        "question_number": 66,
+        "before": "朋友邀请小华参加生日聚会。小华马上答应，意思是“我肯定去”。他会怎么说？",
+        "after": "朋友请小华去生日聚会。小华马上答应。他会怎么说？"
+      },
+      {
+        "question_number": 67,
+        "before": "小安想邀请朋友一起唱歌，哪句话合适？",
+        "after": "小安想和朋友一起唱歌。他对朋友说什么？"
+      },
+      {
+        "question_number": 68,
+        "before": "朋友提议先去饭店吃饭，然后看电影。小玲同意说：“这是个好___。”应该填什么？",
+        "after": "朋友说：“我们先去饭店吃饭，然后去看电影。”小玲同意说：“这是个好___。”这里填什么？"
+      },
+      {
+        "question_number": 69,
+        "before": "小林计划先吃饭，再看电影。他会怎么说？",
+        "after": "小林想先吃饭，再看电影。他会怎么说？"
+      },
+      {
+        "question_number": 70,
+        "before": "小美喜欢花儿，我准备送她一束。哪句话说清了原因和结果？",
+        "after": "小美喜欢花儿。我准备送她一束花儿。用“因为……所以……”把两句话连起来，应该怎么说？"
+      },
+      {
+        "question_number": 71,
+        "before": "小芳把蛋糕送给朋友，说：“这是送给你的生日___。”这里填哪个词？",
+        "after": "小芳送给朋友一个蛋糕。她说：“这是送给你的生日___。”这里填什么？"
+      },
+      {
+        "question_number": 72,
+        "before": "“我先给妈妈打电话，___去吃饭。”",
+        "after": "我先给妈妈打电话，然后去饭店吃饭。打完电话以后，我去哪儿？"
+      },
+      {
+        "question_number": 73,
+        "before": "小明想给朋友买一件新衣服当生日礼物，朋友最喜欢蓝色。小明应该先找什么？",
+        "after": "小明要给朋友买新衣服。朋友喜欢蓝色。小明应该找什么衣服？"
+      },
+      {
+        "question_number": 74,
+        "before": "明天是妈妈的生日。小芳先去花店买花儿，然后去饭店见妈妈。她最后去哪儿见妈妈？",
+        "after": "明天是妈妈的生日。小芳先去花店买花儿，然后去饭店见妈妈。她最后去哪儿见妈妈？"
+      },
+      {
+        "question_number": 75,
+        "before": "朋友生日快到了，小林计划买一件衣服送给他。哪句话和小林的计划相同？",
+        "after": "小林要送朋友一件生日礼物。他打算买衣服。小林会怎么说？"
+      },
+      {
+        "question_number": 76,
+        "before": "朋友想要一件蓝色、质量好、价格合适的衣服。小美找到两件蓝色衣服，应该比较什么？",
+        "after": "朋友想买一件蓝色衣服，质量要好，价钱要合适。小美找到两件蓝色衣服，应该比较什么？"
+      },
+      {
+        "question_number": 77,
+        "before": "“我先选好衣服，再买生日蛋糕。”这句话里，先做什么？",
+        "after": "小明说：“我先选好衣服，再买生日蛋糕。”朋友问：“你先做什么？”"
+      },
+      {
+        "question_number": 78,
+        "before": "小兰要过生日，朋友先买花儿，再买蛋糕。哪件事发生在后面？",
+        "after": "小芳先去花店买花儿，然后去蛋糕店买蛋糕。她最后去哪家店？"
+      },
+      {
+        "question_number": 79,
+        "before": "你看中一件蓝色衣服，想知道它的质量好不好。你怎么问售货员？",
+        "after": "你想买一件蓝色衣服，也想知道衣服的质量好不好。你怎么问售货员？"
+      },
+      {
+        "question_number": 80,
+        "before": "大家在饭店吃晚饭，接着去唱卡拉OK。题目没有说明送了什么生日礼物，哪项正确？",
+        "after": "丽丽过生日，大家先在饭店吃晚饭，然后去唱卡拉OK。晚饭以后，大家去哪儿？"
+      }
+    ],
+    "manual_readability_review": "Read all 30 revised items as a Year 1 learner without chat history. Replaced loose cloze prompts, unfamiliar meta-wording, implausible distractors, and abstract questions with concrete situations and direct questions. Kept all 50 vocabulary-pinyin items unchanged.",
+    "technical_checks": {
+      "count": 80,
+      "csv_format": "exact Blooket 8-column import template with UTF-8 BOM",
+      "four_unique_options_each": true,
+      "correct_answer_indices_balanced": {
+        "1": 20,
+        "2": 20,
+        "3": 20,
+        "4": 20
+      },
+      "bank_csv_match": true,
+      "full_csv_to_bank_field_match": true,
+      "question_types": {
+        "词语拼音": 50,
+        "语境理解": 22,
+        "跨课整合": 8
+      },
+      "external_saved_set_id": "6ade1ba3c7dbd5f0fe686577",
+      "external_saved_question_count": 80,
+      "external_private_setting_readback": true,
+      "external_sample_answer_readbacks": {
+        "51": 2,
+        "71": 1
+      }
+    }
+  },
+  "replaced_set": {
+    "id": "6adde861ca99907cdd239931",
+    "title": "博雅汉语听说一-十三、十四课",
+    "deletion": "Permanently deleted after explicit user confirmation in response to Blooket warning that the action could not be undone."
+  },
+  "external_verified_at": "2026-10-25T15:12:22+00:00"
+}

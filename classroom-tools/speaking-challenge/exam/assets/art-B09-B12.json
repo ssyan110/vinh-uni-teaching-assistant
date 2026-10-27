@@ -1,0 +1,42 @@
+{
+  "created_date": "2026-10-26",
+  "generator": "built-in image_gen",
+  "asset_type": "four-panel speaking-exam picture sequence",
+  "format": {
+    "width": 1536,
+    "height": 1024,
+    "aspect_ratio": "3:2",
+    "layout": "2x2"
+  },
+  "style": "flat, minimal educational textbook illustration; adult proportions; navy, teal, coral, warm yellow; no anime, 3D, or photorealism",
+  "assets": [
+    {
+      "item_id": "B09",
+      "path": "B09.png",
+      "source_path": "/Users/ssyan110/.codex/generated_images/01a17687-287e-76b1-a537-16c7911d3178/exec-3d04e3bf-953a-432c-9218-d58464dc1b85.png",
+      "prompt": "A 3:2 landscape oral-exam illustration, exactly four equal panels in a 2x2 grid, read left-to-right then top-to-bottom, thin navy borders and white gutters. Only text: one large navy numeral 1, 2, 3, 4 at each panel upper-left. Adult university-age learners, clean flat educational textbook illustration, pale background, simple outlines, navy/teal/coral/warm-yellow palette, non-anime, non-3D, non-photorealistic. Xiaomei is the same woman in every panel: shoulder-length black hair, coral blouse, dark navy trousers. 1) She looks at two matching hanging shirts, one red and one blue. 2) She points to the blue shirt while the adult shop clerk holds that exact blue shirt. 3) She pays with a few simple yellow coins; the blue shirt lies on the counter. 4) She leaves carrying a simple semi-transparent shopping bag with the same blue shirt clearly visible inside. Keep people, outfits and objects consistent. No speech bubbles, captions, title, labels, written signs, logos, watermark or any text besides the four numerals.",
+      "visual_check": "Four ordered panels and digits 1-4 visible; blue shirt is selected, paid for, and visible in the bag. Character clothing is consistent."
+    },
+    {
+      "item_id": "B10",
+      "path": "B10.png",
+      "source_path": "/Users/ssyan110/.codex/generated_images/01a17687-287e-76b1-a537-16c7911d3178/exec-807072f3-1eac-401e-87f4-fadb22960160.png",
+      "prompt": "A 3:2 landscape oral-exam illustration, exactly four equal panels in a 2x2 grid, read left-to-right then top-to-bottom, thin navy borders and white gutters. Only text: one large navy numeral 1, 2, 3, 4 at each panel upper-left. Adult university-age friends, clean flat educational textbook illustration, pale background, simple outlines, navy/teal/coral/warm-yellow palette, non-anime, non-3D, non-photorealistic. Xiaolin is the same man in every panel: short black hair, teal overshirt, white T-shirt, dark navy trousers. Xiaomei is the same woman in every panel: shoulder-length black hair, coral blouse, dark navy trousers. 1) Xiaolin wraps a notebook in warm-yellow gift paper; the notebook is still partly visible because it is half wrapped. 2) He carries the fully wrapped gift to a friend’s room doorway. 3) He gives the gift to Xiaomei; a small birthday cake is on the table. 4) Xiaomei, Xiaolin, and one adult friend sit around the table eating cake. Keep faces, clothes and gift consistent. No speech bubbles, captions, title, labels, written signs, logos, watermark or any text besides the four numerals.",
+      "visual_check": "Four ordered panels and digits 1-4 visible; notebook is wrapped, gift is carried and given to Xiaomei, then the group eats birthday cake. Character clothing is consistent."
+    },
+    {
+      "item_id": "B11",
+      "path": "B11.png",
+      "source_path": "/Users/ssyan110/.codex/generated_images/01a17687-287e-76b1-a537-16c7911d3178/exec-21913dca-b728-4cfe-8f47-2452a41f1a18.png",
+      "prompt": "A 3:2 landscape oral-exam illustration, exactly four equal panels in a 2x2 grid, read left-to-right then top-to-bottom, thin navy borders and white gutters. Only text: one large navy numeral 1, 2, 3, 4 at each panel upper-left. Adult university-age learners, flat minimal educational textbook illustration, simplified shapes, solid fills, little to no shading, white/pale background, navy/teal/coral/warm-yellow palette, non-anime, non-3D, non-photorealistic. Xiaolin is the same man in every panel: short black hair, teal overshirt over white T-shirt, dark navy trousers. Adult shop clerk wears a coral/navy apron. 1) In a clothing store Xiaolin points to one mustard-yellow jacket on a rack and looks at the clerk. 2) The clerk hands him that exact yellow jacket. 3) Xiaolin tries on the same jacket and looks in a mirror. 4) Xiaolin pays the clerk and holds the same yellow jacket in his other hand. Keep faces, clothes and jacket consistent. No speech bubbles, captions, title, labels, written signs, logos, watermark or any text besides the four numerals.",
+      "visual_check": "Four ordered panels and digits 1-4 visible; same yellow jacket is handed over, tried on, and kept in the purchase scene. Payment is shown with a small hand-to-hand item."
+    },
+    {
+      "item_id": "B12",
+      "path": "B12.png",
+      "source_path": "/Users/ssyan110/.codex/generated_images/01a17687-287e-76b1-a537-16c7911d3178/exec-05997498-66cf-43f5-8986-23d2a9b4c2c1.png",
+      "prompt": "A 3:2 landscape oral-exam illustration, exactly four equal panels in a 2x2 grid, read left-to-right then top-to-bottom, thin navy borders and white gutters. Only text: one large navy numeral 1, 2, 3, 4 at each panel upper-left. Adult university-age learners, flat minimal educational textbook illustration, simplified shapes, solid fills, little to no shading, white/pale background, navy/teal/coral/warm-yellow palette, non-anime, non-3D, non-photorealistic. Xiaolin is the same man in every panel: short black hair, teal overshirt, white T-shirt, dark navy trousers. Xiaomei is the same woman in every panel: shoulder-length black hair, coral blouse, dark navy trousers. 1) Xiaolin has an open notebook and no pen; Xiaomei has exactly two pens, one clearly blue and one clearly red. 2) Xiaolin points; Xiaomei hands him the blue pen and keeps the red pen on her desk. 3) Xiaolin writes simple lines in the same notebook with that same blue pen; Xiaomei remains nearby and red pen stays on her desk. 4) Xiaolin returns the same blue pen to Xiaomei. Keep the pens, clothing and characters consistent. No speech bubbles, captions, title, labels, written signs, logos, watermark or any text besides the four numerals.",
+      "visual_check": "Four ordered panels and digits 1-4 visible; the blue pen is handed over, used for homework, and returned; red pen remains with Xiaomei."
+    }
+  ]
+}

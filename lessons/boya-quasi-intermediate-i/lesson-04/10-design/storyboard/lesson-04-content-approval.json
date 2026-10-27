@@ -3,9 +3,8 @@
   "gate": "lesson-content",
   "lesson_key": "boya-quasi-intermediate-i:lesson-04",
   "offering_id": "2026-fall",
-  "approved_by": "Adam Yan",
-  "approved_at": "2026-09-25T16:04:47+07:00",
-  "scope": "一张独立的第四课补充 infographic；不批准或修改现有 PPTX，也不预先批准生成后的图片 QA。",
+  "approved_by": "Adam",
+  "approved_at": "2026-10-27T13:50:02.482488+07:00",
   "artifacts": [
     {
       "path": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json",
@@ -13,14 +12,14 @@
     },
     {
       "path": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/storyboard/lesson-04-逐页文案审阅.md",
-      "sha256": "0d33f7a281c0b9e1305b32cd66e82f498ccb9c4a39c9211e4b970589a8323c2e"
+      "sha256": "82510a777e8d775bfb8c63b3c6725f8174d5b3d9a6d5a313edf377a5c0885fa6"
     },
     {
-      "path": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/support-draft/infographic/lesson-04-逐页文案审阅.md",
-      "sha256": "0d33f7a281c0b9e1305b32cd66e82f498ccb9c4a39c9211e4b970589a8323c2e"
+      "path": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/storyboard/lesson-04-活动4-小安在台湾的一天-内容.md",
+      "sha256": "5317432a684cbcc2f110be69dc6b4ac325b5ed6a18ac6a35344665d1663aa8c1"
     }
   ],
-  "evidence": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/storyboard/lesson-04-content-approval-evidence-2026-09-25.md",
-  "evidence_sha256": "577bced093695305a993a316a6dca264adf6349d84a749bc8a75174452330ba7",
-  "review_document": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/storyboard/lesson-04-逐页文案审阅.md"
+  "evidence": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/storyboard/lesson-04-活动4-小安-批准证据-20261027.md",
+  "evidence_sha256": "e894a8e9a090e3cec4ba7612395a89fdc7a2e1e018da5da79688cb1f804a0b45",
+  "prior_content_evidence": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/storyboard/lesson-04-content-approval-evidence-w09-20261027.md"
 }

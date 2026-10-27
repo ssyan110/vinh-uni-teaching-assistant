@@ -1,0 +1,5421 @@
+{
+  "schema_version": 2,
+  "deck": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/open-slide-draft/w09-l04-l05/lesson-04-05-实体课.html",
+  "deck_sha256": "9bb8f9b58a84b4a9943f75c0d6d7cf1101e56d48821e98e50659055cc4b5fe49",
+  "checker_sha256": "b2071c4c0a4743cfa0e3fdd2d27ad7e135a709fb461262470e238020c1d88167",
+  "contract_sha256": "38278bc7409227e456c77717af85082b5130044f74d8b6edb843e72455e501f9",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "policy": {
+    "body_inset_px": 96,
+    "image_inset_px": 64,
+    "footer_clearance_px": 64,
+    "minimum_text_font_px": 26.666666666666668,
+    "critical_text_font_px": 45,
+    "known_role_minimums_px": {
+      "h1": 45,
+      "h2": 40,
+      "lesson_tag": 40,
+      "activity_label": 30,
+      "route_range": 30,
+      "report_example_label": 40,
+      "page_footer": 26.666666666666668,
+      "question_number": 26.666666666666668
+    }
+  },
+  "asset_manifest": [
+    {
+      "path": "assets/comic-1.png",
+      "bytes": 2018477,
+      "sha256": "687a5bd4c909d3cf86387cbc4a3437db3338e7cccced75dcb9d031145b070208"
+    },
+    {
+      "path": "assets/comic-2.png",
+      "bytes": 2066339,
+      "sha256": "9ab6ab8b2a5756bbebed23762dd8461ff0c7f0b93b2cb207741d99bfaf0f2b83"
+    },
+    {
+      "path": "assets/cover.png",
+      "bytes": 1455482,
+      "sha256": "a3ede1ec19172a36e83abf3e3e2b8168c01a7fff24f759e531dc3694e375bb3e"
+    },
+    {
+      "path": "assets/icons/book-pencil.png",
+      "bytes": 107557,
+      "sha256": "b97842336f3e54a843c0782393177e8bf20ed30638c0e8611cc9850282792a75"
+    },
+    {
+      "path": "assets/icons/conversation.png",
+      "bytes": 183653,
+      "sha256": "96491bb767d6e33d464f8957bed229cdf88eb566b50c59bb3d6806171bed7d3f"
+    },
+    {
+      "path": "assets/icons/listen.png",
+      "bytes": 206605,
+      "sha256": "3a16f13ea2c003a234c62f30f9fd4c019cc87e1ce97ad5ffa967ed080cfb133e"
+    },
+    {
+      "path": "assets/icons/notes.png",
+      "bytes": 121160,
+      "sha256": "1d0d9995b40db4470c4b203efb5568f8af800de91c9f5da7ef5de2460b6ae996"
+    },
+    {
+      "path": "assets/icons/school.png",
+      "bytes": 123885,
+      "sha256": "cdf2cfc3bd653ea0d4c4b2bfcdb41cce3eb4fbdc325a847be52f833269492060"
+    },
+    {
+      "path": "assets/icons/shopping-bag.png",
+      "bytes": 105239,
+      "sha256": "72e7a2536b90c9cafbeea2b05fa232b78df87cf413b722e933dc429d684b9986"
+    }
+  ],
+  "asset_manifest_sha256": "24e644860325c6fc60e8514291ace2f464c79310845b171f176f333afb274a75",
+  "footerClearance": 64,
+  "errors": [],
+  "pages": [
+    {
+      "index": 0,
+      "page": 1,
+      "id": "w06-cover",
+      "role": "cover",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": false,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "brand-page-counter",
+        "footer_top": 950,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 12,
+        "painted_box_count": 3,
+        "text_run_count": 5,
+        "glyph_count": 56,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "brand-page-counter",
+          "top": 950,
+          "synthetic": false
+        },
+        "content_bottom": 871,
+        "minimum_footer_gap": 79
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 87,
+            "right": 512,
+            "bottom": 132,
+            "width": 416,
+            "height": 45
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "学习经历与音乐老师",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 393.781,
+            "right": 816,
+            "bottom": 475.781,
+            "width": 720,
+            "height": 82
+          },
+          "font_px": 82,
+          "effective_font_px": 82,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "760"
+        },
+        {
+          "text": "听故事、商量计划、讲故事，分享学习与音乐经历。",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 23,
+          "bounds": {
+            "x": 96,
+            "y": 565.609,
+            "right": 960,
+            "bottom": 678.406,
+            "width": 864,
+            "height": 112.797
+          },
+          "font_px": 48,
+          "effective_font_px": 48,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 952,
+            "right": 426,
+            "bottom": 982,
+            "width": 330,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "01 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1719,
+            "y": 952,
+            "right": 1824,
+            "bottom": 982,
+            "width": 105,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 1920,
+            "bottom": 1080,
+            "width": 1920,
+            "height": 1080
+          },
+          "background_color": "rgb(255, 255, 255)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 515.609,
+            "right": 186,
+            "bottom": 523.609,
+            "width": 90,
+            "height": 8
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 1068.891,
+            "y": 251,
+            "right": 1824,
+            "bottom": 871,
+            "width": 755.109,
+            "height": 620
+          },
+          "background_color": "rgba(0, 0, 0, 0)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/cover.png",
+          "alt": "学生讨论中文学习与音乐活动",
+          "loaded": true,
+          "natural_width": 1536,
+          "natural_height": 1024,
+          "rect": {
+            "x": 1101.938,
+            "y": 266,
+            "right": 1791.938,
+            "bottom": 856,
+            "width": 690,
+            "height": 590
+          }
+        }
+      ],
+      "issues": [],
+      "measurement_sha256": "d9abc78d92a6a9a4eaf4a92188479d50d03d146b65310424d47c06c4554d507d",
+      "screenshot": {
+        "file": "slide-01.png",
+        "sha256": "82d68f458152f0103170d498e60cb4832213aa72705006dc93e0368fa118db44",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 1,
+      "page": 2,
+      "id": "w06-route",
+      "role": "route",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": false,
+        "main": false,
+        "visible_body": true,
+        "footer": false,
+        "footer_kind": "route-bottom-reserve",
+        "footer_top": 1009,
+        "synthetic_footer": true
+      },
+      "coverage": {
+        "visible_element_count": 19,
+        "painted_box_count": 4,
+        "text_run_count": 9,
+        "glyph_count": 67,
+        "image_count": 4,
+        "loaded_image_count": 4,
+        "finite": true,
+        "footer": {
+          "kind": "route-bottom-reserve",
+          "top": 1009,
+          "synthetic": true
+        },
+        "content_bottom": 546,
+        "minimum_footer_gap": 463
+      },
+      "text_runs": [
+        {
+          "text": "今天我们会做什么",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 8,
+          "bounds": {
+            "x": 96,
+            "y": 85,
+            "right": 688,
+            "bottom": 159,
+            "width": 592,
+            "height": 74
+          },
+          "font_px": 74,
+          "effective_font_px": 74,
+          "font_family": "KaiTi, \"Times New Roman\", serif",
+          "color": "rgb(23, 50, 77)",
+          "weight": "700"
+        },
+        {
+          "text": "听故事",
+          "tag": "h2",
+          "classes": "",
+          "glyph_count": 3,
+          "bounds": {
+            "x": 117,
+            "y": 390,
+            "right": 249,
+            "bottom": 434,
+            "width": 132,
+            "height": 44
+          },
+          "font_px": 44,
+          "effective_font_px": 44,
+          "font_family": "KaiTi, \"Times New Roman\", serif",
+          "color": "rgb(23, 50, 77)",
+          "weight": "700"
+        },
+        {
+          "text": "活动1—2｜理解与发表",
+          "tag": "p",
+          "classes": "route-range",
+          "glyph_count": 11,
+          "bounds": {
+            "x": 117,
+            "y": 446.594,
+            "right": 477,
+            "bottom": 482.594,
+            "width": 360,
+            "height": 36
+          },
+          "font_px": 36,
+          "effective_font_px": 36,
+          "font_family": "KaiTi, \"Times New Roman\", serif",
+          "color": "rgb(23, 50, 77)",
+          "weight": "400"
+        },
+        {
+          "text": "学习计划",
+          "tag": "h2",
+          "classes": "",
+          "glyph_count": 4,
+          "bounds": {
+            "x": 555.5,
+            "y": 390,
+            "right": 731.5,
+            "bottom": 434,
+            "width": 176,
+            "height": 44
+          },
+          "font_px": 44,
+          "effective_font_px": 44,
+          "font_family": "KaiTi, \"Times New Roman\", serif",
+          "color": "rgb(23, 50, 77)",
+          "weight": "700"
+        },
+        {
+          "text": "活动3—5｜安排与讨论",
+          "tag": "p",
+          "classes": "route-range",
+          "glyph_count": 11,
+          "bounds": {
+            "x": 555.5,
+            "y": 446.594,
+            "right": 915.5,
+            "bottom": 482.594,
+            "width": 360,
+            "height": 36
+          },
+          "font_px": 36,
+          "effective_font_px": 36,
+          "font_family": "KaiTi, \"Times New Roman\", serif",
+          "color": "rgb(23, 50, 77)",
+          "weight": "400"
+        },
+        {
+          "text": "音乐活动",
+          "tag": "h2",
+          "classes": "",
+          "glyph_count": 4,
+          "bounds": {
+            "x": 994,
+            "y": 390,
+            "right": 1170,
+            "bottom": 434,
+            "width": 176,
+            "height": 44
+          },
+          "font_px": 44,
+          "effective_font_px": 44,
+          "font_family": "KaiTi, \"Times New Roman\", serif",
+          "color": "rgb(23, 50, 77)",
+          "weight": "700"
+        },
+        {
+          "text": "活动6—7｜安排与故事",
+          "tag": "p",
+          "classes": "route-range",
+          "glyph_count": 11,
+          "bounds": {
+            "x": 994,
+            "y": 446.594,
+            "right": 1354,
+            "bottom": 482.594,
+            "width": 360,
+            "height": 36
+          },
+          "font_px": 36,
+          "effective_font_px": 36,
+          "font_family": "KaiTi, \"Times New Roman\", serif",
+          "color": "rgb(23, 50, 77)",
+          "weight": "400"
+        },
+        {
+          "text": "分享想法",
+          "tag": "h2",
+          "classes": "",
+          "glyph_count": 4,
+          "bounds": {
+            "x": 1432.5,
+            "y": 390,
+            "right": 1608.5,
+            "bottom": 434,
+            "width": 176,
+            "height": 44
+          },
+          "font_px": 44,
+          "effective_font_px": 44,
+          "font_family": "KaiTi, \"Times New Roman\", serif",
+          "color": "rgb(23, 50, 77)",
+          "weight": "700"
+        },
+        {
+          "text": "活动8—9｜老师与兴趣",
+          "tag": "p",
+          "classes": "route-range",
+          "glyph_count": 11,
+          "bounds": {
+            "x": 1432.5,
+            "y": 446.594,
+            "right": 1792.5,
+            "bottom": 482.594,
+            "width": 360,
+            "height": 36
+          },
+          "font_px": 36,
+          "effective_font_px": 36,
+          "font_family": "KaiTi, \"Times New Roman\", serif",
+          "color": "rgb(23, 50, 77)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "article",
+          "classes": "route-card",
+          "rect": {
+            "x": 96,
+            "y": 206,
+            "right": 508.5,
+            "bottom": 546,
+            "width": 412.5,
+            "height": 340
+          },
+          "background_color": "rgb(248, 251, 251)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "article",
+          "classes": "route-card",
+          "rect": {
+            "x": 534.5,
+            "y": 206,
+            "right": 947,
+            "bottom": 546,
+            "width": 412.5,
+            "height": 340
+          },
+          "background_color": "rgb(248, 251, 251)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "article",
+          "classes": "route-card",
+          "rect": {
+            "x": 973,
+            "y": 206,
+            "right": 1385.5,
+            "bottom": 546,
+            "width": 412.5,
+            "height": 340
+          },
+          "background_color": "rgb(248, 251, 251)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "article",
+          "classes": "route-card",
+          "rect": {
+            "x": 1411.5,
+            "y": 206,
+            "right": 1824,
+            "bottom": 546,
+            "width": 412.5,
+            "height": 340
+          },
+          "background_color": "rgb(248, 251, 251)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/icons/listen.png",
+          "alt": "",
+          "loaded": true,
+          "natural_width": 512,
+          "natural_height": 512,
+          "rect": {
+            "x": 212.25,
+            "y": 227,
+            "right": 392.25,
+            "bottom": 377,
+            "width": 180,
+            "height": 150
+          }
+        },
+        {
+          "src": "assets/icons/shopping-bag.png",
+          "alt": "",
+          "loaded": true,
+          "natural_width": 512,
+          "natural_height": 512,
+          "rect": {
+            "x": 650.75,
+            "y": 227,
+            "right": 830.75,
+            "bottom": 377,
+            "width": 180,
+            "height": 150
+          }
+        },
+        {
+          "src": "assets/icons/book-pencil.png",
+          "alt": "",
+          "loaded": true,
+          "natural_width": 512,
+          "natural_height": 512,
+          "rect": {
+            "x": 1089.25,
+            "y": 227,
+            "right": 1269.25,
+            "bottom": 377,
+            "width": 180,
+            "height": 150
+          }
+        },
+        {
+          "src": "assets/icons/conversation.png",
+          "alt": "",
+          "loaded": true,
+          "natural_width": 512,
+          "natural_height": 512,
+          "rect": {
+            "x": 1527.75,
+            "y": 227,
+            "right": 1707.75,
+            "bottom": 377,
+            "width": 180,
+            "height": 150
+          }
+        }
+      ],
+      "issues": [],
+      "measurement_sha256": "4583f914df076f7681806ed716f0948cf3dae3d71f173fda7394ce09b7645702",
+      "screenshot": {
+        "file": "slide-02.png",
+        "sha256": "ea23e9ef2e97b1bdc580cf81df82eebbf57e6383ee4f043f79da2e183fb724ca",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 2,
+      "page": 3,
+      "id": "w09-l04-l05-page-03",
+      "role": "activity",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": true,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "semantic",
+        "footer_top": 1009,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 26,
+        "painted_box_count": 10,
+        "text_run_count": 15,
+        "glyph_count": 168,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "semantic",
+          "top": 1009,
+          "synthetic": false
+        },
+        "content_bottom": 755.297,
+        "minimum_footer_gap": 253.703
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "lesson-tag",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 76,
+            "right": 503.344,
+            "bottom": 133,
+            "width": 407.344,
+            "height": 57
+          },
+          "font_px": 52,
+          "effective_font_px": 52,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "活动1｜听故事，理解学习计划",
+          "tag": "div",
+          "classes": "activity-label",
+          "glyph_count": 14,
+          "bounds": {
+            "x": 1365,
+            "y": 26,
+            "right": 1824,
+            "bottom": 63,
+            "width": 459,
+            "height": 37
+          },
+          "font_px": 34,
+          "effective_font_px": 34,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "阿明在台湾学中文",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 8,
+          "bounds": {
+            "x": 96,
+            "y": 146.391,
+            "right": 680,
+            "bottom": 228.391,
+            "width": 584,
+            "height": 82
+          },
+          "font_px": 74,
+          "effective_font_px": 74,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "750"
+        },
+        {
+          "text": "听老师读两次",
+          "tag": "div",
+          "classes": "listen-strong",
+          "glyph_count": 6,
+          "bounds": {
+            "x": 130,
+            "y": 462,
+            "right": 454,
+            "bottom": 522,
+            "width": 324,
+            "height": 60
+          },
+          "font_px": 54,
+          "effective_font_px": 54,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "先了解故事，再记下帮助你回答问题的信息：",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 20,
+          "bounds": {
+            "x": 130,
+            "y": 550.797,
+            "right": 466,
+            "bottom": 705.984,
+            "width": 336,
+            "height": 155.187
+          },
+          "font_px": 42,
+          "effective_font_px": 42,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "1",
+          "tag": "span",
+          "classes": "q-mark",
+          "glyph_count": 1,
+          "bounds": {
+            "x": 581.063,
+            "y": 313.5,
+            "right": 600.063,
+            "bottom": 355.5,
+            "width": 19,
+            "height": 42
+          },
+          "font_px": 38,
+          "effective_font_px": 38,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "阿明来台湾以后，为什么觉得中文交流没有想象中容易？",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 25,
+          "bounds": {
+            "x": 637.563,
+            "y": 310.297,
+            "right": 1762.563,
+            "bottom": 360.297,
+            "width": 1125,
+            "height": 50
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "2",
+          "tag": "span",
+          "classes": "q-mark",
+          "glyph_count": 1,
+          "bounds": {
+            "x": 581.063,
+            "y": 425.5,
+            "right": 600.063,
+            "bottom": 467.5,
+            "width": 19,
+            "height": 42
+          },
+          "font_px": 38,
+          "effective_font_px": 38,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "他为什么没有参加星期三的中文讲座？",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 17,
+          "bounds": {
+            "x": 637.563,
+            "y": 422.297,
+            "right": 1402.563,
+            "bottom": 472.297,
+            "width": 765,
+            "height": 50
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "3",
+          "tag": "span",
+          "classes": "q-mark",
+          "glyph_count": 1,
+          "bounds": {
+            "x": 581.063,
+            "y": 554.5,
+            "right": 600.063,
+            "bottom": 596.5,
+            "width": 19,
+            "height": 42
+          },
+          "font_px": 38,
+          "effective_font_px": 38,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "他怎样安排星期二和星期四的练习？两个安排分别帮助他做什么？",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 29,
+          "bounds": {
+            "x": 637.563,
+            "y": 524.297,
+            "right": 1762.563,
+            "bottom": 628.297,
+            "width": 1125,
+            "height": 104
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "4",
+          "tag": "span",
+          "classes": "q-mark",
+          "glyph_count": 1,
+          "bounds": {
+            "x": 581.063,
+            "y": 683.5,
+            "right": 600.063,
+            "bottom": 725.5,
+            "width": 19,
+            "height": 42
+          },
+          "font_px": 38,
+          "effective_font_px": 38,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "四周后他有哪些变化？还有什么需要继续练习？",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 21,
+          "bounds": {
+            "x": 637.563,
+            "y": 680.297,
+            "right": 1582.563,
+            "bottom": 730.297,
+            "width": 945,
+            "height": 50
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 1009,
+            "right": 391,
+            "bottom": 1042,
+            "width": 295,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "03 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1740.656,
+            "y": 1009,
+            "right": 1824,
+            "bottom": 1042,
+            "width": 83.344,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "teal-rule",
+          "rect": {
+            "x": 96,
+            "y": 250.297,
+            "right": 170,
+            "bottom": 257.297,
+            "width": 74,
+            "height": 7
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "listen-callout",
+          "rect": {
+            "x": 96,
+            "y": 285.297,
+            "right": 510.563,
+            "bottom": 755.297,
+            "width": 414.563,
+            "height": 470
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "24px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "question-card",
+          "rect": {
+            "x": 542.563,
+            "y": 285.297,
+            "right": 1824,
+            "bottom": 385.297,
+            "width": 1281.438,
+            "height": 100
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "span",
+          "classes": "q-mark",
+          "rect": {
+            "x": 563.563,
+            "y": 308.297,
+            "right": 617.563,
+            "bottom": 362.297,
+            "width": 54,
+            "height": 54
+          },
+          "background_color": "rgb(230, 242, 242)",
+          "background_image": "none",
+          "border_radius": "50%",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "question-card",
+          "rect": {
+            "x": 542.563,
+            "y": 397.297,
+            "right": 1824,
+            "bottom": 497.297,
+            "width": 1281.438,
+            "height": 100
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "span",
+          "classes": "q-mark",
+          "rect": {
+            "x": 563.563,
+            "y": 420.297,
+            "right": 617.563,
+            "bottom": 474.297,
+            "width": 54,
+            "height": 54
+          },
+          "background_color": "rgb(230, 242, 242)",
+          "background_image": "none",
+          "border_radius": "50%",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "question-card",
+          "rect": {
+            "x": 542.563,
+            "y": 509.297,
+            "right": 1824,
+            "bottom": 643.297,
+            "width": 1281.438,
+            "height": 134
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "span",
+          "classes": "q-mark",
+          "rect": {
+            "x": 563.563,
+            "y": 549.297,
+            "right": 617.563,
+            "bottom": 603.297,
+            "width": 54,
+            "height": 54
+          },
+          "background_color": "rgb(230, 242, 242)",
+          "background_image": "none",
+          "border_radius": "50%",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "question-card",
+          "rect": {
+            "x": 542.563,
+            "y": 655.297,
+            "right": 1824,
+            "bottom": 755.297,
+            "width": 1281.438,
+            "height": 100
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "span",
+          "classes": "q-mark",
+          "rect": {
+            "x": 563.563,
+            "y": 678.297,
+            "right": 617.563,
+            "bottom": 732.297,
+            "width": 54,
+            "height": 54
+          },
+          "background_color": "rgb(230, 242, 242)",
+          "background_image": "none",
+          "border_radius": "50%",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/icons/listen.png",
+          "alt": "",
+          "loaded": true,
+          "natural_width": 512,
+          "natural_height": 512,
+          "rect": {
+            "x": 130,
+            "y": 330,
+            "right": 242,
+            "bottom": 442,
+            "width": 112,
+            "height": 112
+          }
+        }
+      ],
+      "issues": [],
+      "measurement_sha256": "7045a83f1d85a64c45b133ad180fbc5a22f4e77eff5979e54f6a51d00bcd5736",
+      "screenshot": {
+        "file": "slide-03.png",
+        "sha256": "6b895dc3a90cf050c82a3091f10af2161611365779bea96bd9760691fde1fedb",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 3,
+      "page": 4,
+      "id": "w09-l04-l05-page-04",
+      "role": "activity",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": true,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "semantic",
+        "footer_top": 1009,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 21,
+        "painted_box_count": 5,
+        "text_run_count": 12,
+        "glyph_count": 147,
+        "image_count": 2,
+        "loaded_image_count": 2,
+        "finite": true,
+        "footer": {
+          "kind": "semantic",
+          "top": 1009,
+          "synthetic": false
+        },
+        "content_bottom": 807.297,
+        "minimum_footer_gap": 201.703
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "lesson-tag",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 76,
+            "right": 503.344,
+            "bottom": 133,
+            "width": 407.344,
+            "height": 57
+          },
+          "font_px": 52,
+          "effective_font_px": 52,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "活动1｜核对信息并发表",
+          "tag": "div",
+          "classes": "activity-label",
+          "glyph_count": 11,
+          "bounds": {
+            "x": 1467,
+            "y": 26,
+            "right": 1824,
+            "bottom": 63,
+            "width": 357,
+            "height": 37
+          },
+          "font_px": 34,
+          "effective_font_px": 34,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "阿明的学习计划",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 7,
+          "bounds": {
+            "x": 96,
+            "y": 146.391,
+            "right": 607,
+            "bottom": 228.391,
+            "width": 511,
+            "height": 82
+          },
+          "font_px": 74,
+          "effective_font_px": 74,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "750"
+        },
+        {
+          "text": "先和同学核对信息",
+          "tag": "strong",
+          "classes": "",
+          "glyph_count": 8,
+          "bounds": {
+            "x": 314,
+            "y": 412.297,
+            "right": 674,
+            "bottom": 462.297,
+            "width": 360,
+            "height": 50
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "700"
+        },
+        {
+          "text": "→",
+          "tag": "div",
+          "classes": "paired-arrow",
+          "glyph_count": 1,
+          "bounds": {
+            "x": 925,
+            "y": 416.297,
+            "right": 995,
+            "bottom": 494.297,
+            "width": 70,
+            "height": 78
+          },
+          "font_px": 70,
+          "effective_font_px": 70,
+          "font_family": "Arial, sans-serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "轮流介绍阿明的困难、他选择的学习方法和四周后的变化。听的人问一个问题，说话的人回答。",
+          "tag": "strong",
+          "classes": "",
+          "glyph_count": 42,
+          "bounds": {
+            "x": 1066,
+            "y": 412.297,
+            "right": 1786,
+            "bottom": 574.797,
+            "width": 720,
+            "height": 162.5
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "700"
+        },
+        {
+          "text": "基础",
+          "tag": "b",
+          "classes": "",
+          "glyph_count": 2,
+          "bounds": {
+            "x": 120,
+            "y": 643.297,
+            "right": 206,
+            "bottom": 690.297,
+            "width": 86,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "说清一个困难、两个练习和一个变化。",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 17,
+          "bounds": {
+            "x": 120,
+            "y": 693.297,
+            "right": 851,
+            "bottom": 740.297,
+            "width": 731,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "挑战",
+          "tag": "b",
+          "classes": "",
+          "glyph_count": 2,
+          "bounds": {
+            "x": 996.5,
+            "y": 643.297,
+            "right": 1082.5,
+            "bottom": 690.297,
+            "width": 86,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "说明阿明为什么这样安排，并根据故事中的信息说明这个计划有什么不足。",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 33,
+          "bounds": {
+            "x": 996.5,
+            "y": 693.297,
+            "right": 1770.5,
+            "bottom": 790.297,
+            "width": 774,
+            "height": 97
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 1009,
+            "right": 391,
+            "bottom": 1042,
+            "width": 295,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "04 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1740.656,
+            "y": 1009,
+            "right": 1824,
+            "bottom": 1042,
+            "width": 83.344,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "teal-rule",
+          "rect": {
+            "x": 96,
+            "y": 250.297,
+            "right": 170,
+            "bottom": 257.297,
+            "width": 74,
+            "height": 7
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "article",
+          "classes": "paired-card",
+          "rect": {
+            "x": 96,
+            "y": 300.297,
+            "right": 892,
+            "bottom": 610.297,
+            "width": 796,
+            "height": 310
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "article",
+          "classes": "paired-card",
+          "rect": {
+            "x": 1028,
+            "y": 300.297,
+            "right": 1824,
+            "bottom": 610.297,
+            "width": 796,
+            "height": 310
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 625.297,
+            "right": 947.5,
+            "bottom": 807.297,
+            "width": 851.5,
+            "height": 182
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "18px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 972.5,
+            "y": 625.297,
+            "right": 1824,
+            "bottom": 807.297,
+            "width": 851.5,
+            "height": 182
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "18px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/icons/notes.png",
+          "alt": "",
+          "loaded": true,
+          "natural_width": 512,
+          "natural_height": 512,
+          "rect": {
+            "x": 454,
+            "y": 319.297,
+            "right": 534,
+            "bottom": 399.297,
+            "width": 80,
+            "height": 80
+          }
+        },
+        {
+          "src": "assets/icons/conversation.png",
+          "alt": "",
+          "loaded": true,
+          "natural_width": 512,
+          "natural_height": 512,
+          "rect": {
+            "x": 1386,
+            "y": 319.297,
+            "right": 1466,
+            "bottom": 399.297,
+            "width": 80,
+            "height": 80
+          }
+        }
+      ],
+      "issues": [],
+      "measurement_sha256": "9bf3c02ca93033ce98f22f311878c6c7e5c0b131b93482e3fc2a190770125c29",
+      "screenshot": {
+        "file": "slide-04.png",
+        "sha256": "3be6f35607f3cf11aa86ef017bc51ad704141b370c645b210f2472e658edae33",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 4,
+      "page": 5,
+      "id": "w09-l04-l05-page-05",
+      "role": "activity",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": true,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "semantic",
+        "footer_top": 1009,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 26,
+        "painted_box_count": 10,
+        "text_run_count": 15,
+        "glyph_count": 164,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "semantic",
+          "top": 1009,
+          "synthetic": false
+        },
+        "content_bottom": 721.875,
+        "minimum_footer_gap": 287.125
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "lesson-tag",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 76,
+            "right": 503.344,
+            "bottom": 133,
+            "width": 407.344,
+            "height": 57
+          },
+          "font_px": 52,
+          "effective_font_px": 52,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "活动2｜听故事，理解人物变化",
+          "tag": "div",
+          "classes": "activity-label",
+          "glyph_count": 14,
+          "bounds": {
+            "x": 1365,
+            "y": 26,
+            "right": 1824,
+            "bottom": 63,
+            "width": 459,
+            "height": 37
+          },
+          "font_px": 34,
+          "effective_font_px": 34,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "台湾学生小兰和她的音乐老师",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 13,
+          "bounds": {
+            "x": 96,
+            "y": 146.391,
+            "right": 1045,
+            "bottom": 228.391,
+            "width": 949,
+            "height": 82
+          },
+          "font_px": 74,
+          "effective_font_px": 74,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "750"
+        },
+        {
+          "text": "听老师读两次",
+          "tag": "div",
+          "classes": "listen-strong",
+          "glyph_count": 6,
+          "bounds": {
+            "x": 130,
+            "y": 445.297,
+            "right": 454,
+            "bottom": 505.297,
+            "width": 324,
+            "height": 60
+          },
+          "font_px": 54,
+          "effective_font_px": 54,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "先了解故事，再记下帮助你回答问题的信息：",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 20,
+          "bounds": {
+            "x": 130,
+            "y": 534.094,
+            "right": 466,
+            "bottom": 689.281,
+            "width": 336,
+            "height": 155.187
+          },
+          "font_px": 42,
+          "effective_font_px": 42,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "1",
+          "tag": "span",
+          "classes": "q-mark",
+          "glyph_count": 1,
+          "bounds": {
+            "x": 581.063,
+            "y": 313.563,
+            "right": 600.063,
+            "bottom": 355.563,
+            "width": 19,
+            "height": 42
+          },
+          "font_px": 38,
+          "effective_font_px": 38,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "小兰为什么报名音乐活动？开始后为什么想退出？",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 22,
+          "bounds": {
+            "x": 637.563,
+            "y": 310.359,
+            "right": 1627.563,
+            "bottom": 360.359,
+            "width": 990,
+            "height": 50
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "2",
+          "tag": "span",
+          "classes": "q-mark",
+          "glyph_count": 1,
+          "bounds": {
+            "x": 581.063,
+            "y": 425.703,
+            "right": 600.063,
+            "bottom": 467.703,
+            "width": 19,
+            "height": 42
+          },
+          "font_px": 38,
+          "effective_font_px": 38,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "老师怎样帮助她？同学又怎样帮助她？",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 17,
+          "bounds": {
+            "x": 637.563,
+            "y": 422.5,
+            "right": 1402.563,
+            "bottom": 472.5,
+            "width": 765,
+            "height": 50
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "3",
+          "tag": "span",
+          "classes": "q-mark",
+          "glyph_count": 1,
+          "bounds": {
+            "x": 581.063,
+            "y": 537.844,
+            "right": 600.063,
+            "bottom": 579.844,
+            "width": 19,
+            "height": 42
+          },
+          "font_px": 38,
+          "effective_font_px": 38,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "小兰怎样安排练习？为什么没有每天练习一小时？",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 22,
+          "bounds": {
+            "x": 637.563,
+            "y": 534.641,
+            "right": 1627.563,
+            "bottom": 584.641,
+            "width": 990,
+            "height": 50
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "4",
+          "tag": "span",
+          "classes": "q-mark",
+          "glyph_count": 1,
+          "bounds": {
+            "x": 581.063,
+            "y": 650,
+            "right": 600.063,
+            "bottom": 692,
+            "width": 19,
+            "height": 42
+          },
+          "font_px": 38,
+          "effective_font_px": 38,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "活动结束后，她对音乐和自己的看法有什么变化？",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 22,
+          "bounds": {
+            "x": 637.563,
+            "y": 646.797,
+            "right": 1627.563,
+            "bottom": 696.797,
+            "width": 990,
+            "height": 50
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 1009,
+            "right": 391,
+            "bottom": 1042,
+            "width": 295,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "05 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1740.656,
+            "y": 1009,
+            "right": 1824,
+            "bottom": 1042,
+            "width": 83.344,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "teal-rule",
+          "rect": {
+            "x": 96,
+            "y": 250.297,
+            "right": 170,
+            "bottom": 257.297,
+            "width": 74,
+            "height": 7
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "listen-callout",
+          "rect": {
+            "x": 96,
+            "y": 285.297,
+            "right": 510.563,
+            "bottom": 721.875,
+            "width": 414.563,
+            "height": 436.578
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "24px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "question-card",
+          "rect": {
+            "x": 542.563,
+            "y": 285.297,
+            "right": 1824,
+            "bottom": 385.438,
+            "width": 1281.438,
+            "height": 100.141
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "span",
+          "classes": "q-mark",
+          "rect": {
+            "x": 563.563,
+            "y": 308.359,
+            "right": 617.563,
+            "bottom": 362.359,
+            "width": 54,
+            "height": 54
+          },
+          "background_color": "rgb(230, 242, 242)",
+          "background_image": "none",
+          "border_radius": "50%",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "question-card",
+          "rect": {
+            "x": 542.563,
+            "y": 397.438,
+            "right": 1824,
+            "bottom": 497.578,
+            "width": 1281.438,
+            "height": 100.141
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "span",
+          "classes": "q-mark",
+          "rect": {
+            "x": 563.563,
+            "y": 420.5,
+            "right": 617.563,
+            "bottom": 474.5,
+            "width": 54,
+            "height": 54
+          },
+          "background_color": "rgb(230, 242, 242)",
+          "background_image": "none",
+          "border_radius": "50%",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "question-card",
+          "rect": {
+            "x": 542.563,
+            "y": 509.578,
+            "right": 1824,
+            "bottom": 609.719,
+            "width": 1281.438,
+            "height": 100.141
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "span",
+          "classes": "q-mark",
+          "rect": {
+            "x": 563.563,
+            "y": 532.641,
+            "right": 617.563,
+            "bottom": 586.641,
+            "width": 54,
+            "height": 54
+          },
+          "background_color": "rgb(230, 242, 242)",
+          "background_image": "none",
+          "border_radius": "50%",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "question-card",
+          "rect": {
+            "x": 542.563,
+            "y": 621.719,
+            "right": 1824,
+            "bottom": 721.875,
+            "width": 1281.438,
+            "height": 100.156
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "span",
+          "classes": "q-mark",
+          "rect": {
+            "x": 563.563,
+            "y": 644.797,
+            "right": 617.563,
+            "bottom": 698.797,
+            "width": 54,
+            "height": 54
+          },
+          "background_color": "rgb(230, 242, 242)",
+          "background_image": "none",
+          "border_radius": "50%",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/icons/listen.png",
+          "alt": "",
+          "loaded": true,
+          "natural_width": 512,
+          "natural_height": 512,
+          "rect": {
+            "x": 130,
+            "y": 313.297,
+            "right": 242,
+            "bottom": 425.297,
+            "width": 112,
+            "height": 112
+          }
+        }
+      ],
+      "issues": [],
+      "measurement_sha256": "b18ce5ca6b1ef5d7288431b91041b15fb4accb7e00434c4f0bd5e71077a6d763",
+      "screenshot": {
+        "file": "slide-05.png",
+        "sha256": "f06fb68272c9cbbb1d88412c0c93511e13600b05499dfe112ccb367ee602a29f",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 5,
+      "page": 6,
+      "id": "w09-l04-l05-page-06",
+      "role": "activity",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": true,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "semantic",
+        "footer_top": 1009,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 21,
+        "painted_box_count": 5,
+        "text_run_count": 12,
+        "glyph_count": 145,
+        "image_count": 2,
+        "loaded_image_count": 2,
+        "finite": true,
+        "footer": {
+          "kind": "semantic",
+          "top": 1009,
+          "synthetic": false
+        },
+        "content_bottom": 807.297,
+        "minimum_footer_gap": 201.703
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "lesson-tag",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 76,
+            "right": 503.344,
+            "bottom": 133,
+            "width": 407.344,
+            "height": 57
+          },
+          "font_px": 52,
+          "effective_font_px": 52,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "活动2｜核对信息并发表",
+          "tag": "div",
+          "classes": "activity-label",
+          "glyph_count": 11,
+          "bounds": {
+            "x": 1467,
+            "y": 26,
+            "right": 1824,
+            "bottom": 63,
+            "width": 357,
+            "height": 37
+          },
+          "font_px": 34,
+          "effective_font_px": 34,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "小兰和音乐老师",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 7,
+          "bounds": {
+            "x": 96,
+            "y": 146.391,
+            "right": 607,
+            "bottom": 228.391,
+            "width": 511,
+            "height": 82
+          },
+          "font_px": 74,
+          "effective_font_px": 74,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "750"
+        },
+        {
+          "text": "先和同学核对信息",
+          "tag": "strong",
+          "classes": "",
+          "glyph_count": 8,
+          "bounds": {
+            "x": 314,
+            "y": 412.297,
+            "right": 674,
+            "bottom": 462.297,
+            "width": 360,
+            "height": 50
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "700"
+        },
+        {
+          "text": "→",
+          "tag": "div",
+          "classes": "paired-arrow",
+          "glyph_count": 1,
+          "bounds": {
+            "x": 925,
+            "y": 416.297,
+            "right": 995,
+            "bottom": 494.297,
+            "width": 70,
+            "height": 78
+          },
+          "font_px": 70,
+          "effective_font_px": 70,
+          "font_family": "Arial, sans-serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "轮流讲述小兰遇到的困难、得到的帮助以及最后的变化。听的人问一个问题，说话的人回答。",
+          "tag": "strong",
+          "classes": "",
+          "glyph_count": 41,
+          "bounds": {
+            "x": 1066,
+            "y": 412.297,
+            "right": 1786,
+            "bottom": 574.797,
+            "width": 720,
+            "height": 162.5
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "700"
+        },
+        {
+          "text": "基础",
+          "tag": "b",
+          "classes": "",
+          "glyph_count": 2,
+          "bounds": {
+            "x": 120,
+            "y": 643.297,
+            "right": 206,
+            "bottom": 690.297,
+            "width": 86,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "说清困难、两种帮助和结果。",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 13,
+          "bounds": {
+            "x": 120,
+            "y": 693.297,
+            "right": 679,
+            "bottom": 740.297,
+            "width": 559,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "挑战",
+          "tag": "b",
+          "classes": "",
+          "glyph_count": 2,
+          "bounds": {
+            "x": 996.5,
+            "y": 643.297,
+            "right": 1082.5,
+            "bottom": 690.297,
+            "width": 86,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "用故事中的具体事情解释小兰为什么改变想法，并说出一件她还需要继续做的事。",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 36,
+          "bounds": {
+            "x": 996.5,
+            "y": 693.297,
+            "right": 1770.5,
+            "bottom": 790.297,
+            "width": 774,
+            "height": 97
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 1009,
+            "right": 391,
+            "bottom": 1042,
+            "width": 295,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "06 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1740.656,
+            "y": 1009,
+            "right": 1824,
+            "bottom": 1042,
+            "width": 83.344,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "teal-rule",
+          "rect": {
+            "x": 96,
+            "y": 250.297,
+            "right": 170,
+            "bottom": 257.297,
+            "width": 74,
+            "height": 7
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "article",
+          "classes": "paired-card",
+          "rect": {
+            "x": 96,
+            "y": 300.297,
+            "right": 892,
+            "bottom": 610.297,
+            "width": 796,
+            "height": 310
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "article",
+          "classes": "paired-card",
+          "rect": {
+            "x": 1028,
+            "y": 300.297,
+            "right": 1824,
+            "bottom": 610.297,
+            "width": 796,
+            "height": 310
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 625.297,
+            "right": 947.5,
+            "bottom": 807.297,
+            "width": 851.5,
+            "height": 182
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "18px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 972.5,
+            "y": 625.297,
+            "right": 1824,
+            "bottom": 807.297,
+            "width": 851.5,
+            "height": 182
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "18px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/icons/notes.png",
+          "alt": "",
+          "loaded": true,
+          "natural_width": 512,
+          "natural_height": 512,
+          "rect": {
+            "x": 454,
+            "y": 319.297,
+            "right": 534,
+            "bottom": 399.297,
+            "width": 80,
+            "height": 80
+          }
+        },
+        {
+          "src": "assets/icons/conversation.png",
+          "alt": "",
+          "loaded": true,
+          "natural_width": 512,
+          "natural_height": 512,
+          "rect": {
+            "x": 1386,
+            "y": 319.297,
+            "right": 1466,
+            "bottom": 399.297,
+            "width": 80,
+            "height": 80
+          }
+        }
+      ],
+      "issues": [],
+      "measurement_sha256": "670ac100dcdc74746e98600cf23e2fa90efc9fbcde666dc3c091ff33c2ddb03c",
+      "screenshot": {
+        "file": "slide-06.png",
+        "sha256": "a1fc524d1ab2a18ffcb546e5c2c689b3d9940cf25707b7924210b2005b4ee4e4",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 6,
+      "page": 7,
+      "id": "w09-l04-l05-page-07",
+      "role": "activity",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": true,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "semantic",
+        "footer_top": 1009,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 28,
+        "painted_box_count": 7,
+        "text_run_count": 22,
+        "glyph_count": 247,
+        "image_count": 3,
+        "loaded_image_count": 3,
+        "finite": true,
+        "footer": {
+          "kind": "semantic",
+          "top": 1009,
+          "synthetic": false
+        },
+        "content_bottom": 917.641,
+        "minimum_footer_gap": 91.359
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "lesson-tag",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 76,
+            "right": 503.344,
+            "bottom": 133,
+            "width": 407.344,
+            "height": 57
+          },
+          "font_px": 52,
+          "effective_font_px": 52,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "活动3｜帮小安安排中文练习",
+          "tag": "div",
+          "classes": "activity-label",
+          "glyph_count": 13,
+          "bounds": {
+            "x": 1399,
+            "y": 26,
+            "right": 1824,
+            "bottom": 63,
+            "width": 425,
+            "height": 37
+          },
+          "font_px": 34,
+          "effective_font_px": 34,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "帮小安安排中文练习",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 146.391,
+            "right": 753,
+            "bottom": 228.391,
+            "width": 657,
+            "height": 82
+          },
+          "font_px": 74,
+          "effective_font_px": 74,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "750"
+        },
+        {
+          "text": "小安想提高听力和口语。她周二和周四晚上有空，每次最多30分钟。",
+          "tag": "div",
+          "classes": "clothes-profile",
+          "glyph_count": 31,
+          "bounds": {
+            "x": 132,
+            "y": 302.297,
+            "right": 1512,
+            "bottom": 353.297,
+            "width": 1380,
+            "height": 51
+          },
+          "font_px": 46,
+          "effective_font_px": 46,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "A｜听新闻",
+          "tag": "strong",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 193,
+            "y": 410.797,
+            "right": 400.781,
+            "bottom": 459.797,
+            "width": 207.781,
+            "height": 49
+          },
+          "font_px": 44,
+          "effective_font_px": 44,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "周二 19:00—19:30",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 13,
+          "bounds": {
+            "x": 117,
+            "y": 484.516,
+            "right": 405.813,
+            "bottom": 525.516,
+            "width": 288.813,
+            "height": 41
+          },
+          "font_px": 37,
+          "effective_font_px": 37,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "听短新闻，记关键词；可以重听",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 14,
+          "bounds": {
+            "x": 117,
+            "y": 530.391,
+            "right": 635,
+            "bottom": 571.391,
+            "width": 518,
+            "height": 41
+          },
+          "font_px": 37,
+          "effective_font_px": 37,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "B｜语伴交流",
+          "tag": "strong",
+          "classes": "",
+          "glyph_count": 6,
+          "bounds": {
+            "x": 775,
+            "y": 410.797,
+            "right": 1024.359,
+            "bottom": 459.797,
+            "width": 249.359,
+            "height": 49
+          },
+          "font_px": 44,
+          "effective_font_px": 44,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "周四 19:00—19:30",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 13,
+          "bounds": {
+            "x": 699,
+            "y": 484.516,
+            "right": 987.813,
+            "bottom": 525.516,
+            "width": 288.813,
+            "height": 41
+          },
+          "font_px": 37,
+          "effective_font_px": 37,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "两人聊天、互相提问；",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 699,
+            "y": 530.391,
+            "right": 1069,
+            "bottom": 571.391,
+            "width": 370,
+            "height": 41
+          },
+          "font_px": 37,
+          "effective_font_px": 37,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "可请对方解释",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 6,
+          "bounds": {
+            "x": 699,
+            "y": 576.266,
+            "right": 921,
+            "bottom": 617.266,
+            "width": 222,
+            "height": 41
+          },
+          "font_px": 37,
+          "effective_font_px": 37,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "C｜中文讲座",
+          "tag": "strong",
+          "classes": "",
+          "glyph_count": 6,
+          "bounds": {
+            "x": 1357,
+            "y": 410.797,
+            "right": 1608.781,
+            "bottom": 459.797,
+            "width": 251.781,
+            "height": 49
+          },
+          "font_px": 44,
+          "effective_font_px": 44,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "周二 19:00—20:00",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 13,
+          "bounds": {
+            "x": 1281,
+            "y": 484.516,
+            "right": 1569.813,
+            "bottom": 525.516,
+            "width": 288.813,
+            "height": 41
+          },
+          "font_px": 37,
+          "effective_font_px": 37,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "听一小时讲座，现场提问",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 11,
+          "bounds": {
+            "x": 1281,
+            "y": 530.391,
+            "right": 1688,
+            "bottom": 571.391,
+            "width": 407,
+            "height": 41
+          },
+          "font_px": 37,
+          "effective_font_px": 37,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "两人商量：为小安选两项合适的练习，安排在她有空的时间，并说明为什么。",
+          "tag": "p",
+          "classes": "plan-action",
+          "glyph_count": 34,
+          "bounds": {
+            "x": 96,
+            "y": 665.141,
+            "right": 1558,
+            "bottom": 712.141,
+            "width": 1462,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "每个人都要说。",
+          "tag": "p",
+          "classes": "plan-action",
+          "glyph_count": 7,
+          "bounds": {
+            "x": 96,
+            "y": 718.891,
+            "right": 397,
+            "bottom": 765.891,
+            "width": 301,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "基础",
+          "tag": "b",
+          "classes": "",
+          "glyph_count": 2,
+          "bounds": {
+            "x": 120,
+            "y": 803.641,
+            "right": 206,
+            "bottom": 850.641,
+            "width": 86,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "：说出两项练习和理由。",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 11,
+          "bounds": {
+            "x": 206,
+            "y": 803.641,
+            "right": 679,
+            "bottom": 850.641,
+            "width": 473,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "挑战",
+          "tag": "b",
+          "classes": "",
+          "glyph_count": 2,
+          "bounds": {
+            "x": 996.5,
+            "y": 803.641,
+            "right": 1082.5,
+            "bottom": 850.641,
+            "width": 86,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "：比较三项，解释为什么不选另一项。",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 17,
+          "bounds": {
+            "x": 996.5,
+            "y": 803.641,
+            "right": 1727.5,
+            "bottom": 900.641,
+            "width": 731,
+            "height": 97
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 1009,
+            "right": 391,
+            "bottom": 1042,
+            "width": 295,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "07 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1740.656,
+            "y": 1009,
+            "right": 1824,
+            "bottom": 1042,
+            "width": 83.344,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "teal-rule",
+          "rect": {
+            "x": 96,
+            "y": 250.297,
+            "right": 170,
+            "bottom": 257.297,
+            "width": 74,
+            "height": 7
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "clothes-profile",
+          "rect": {
+            "x": 96,
+            "y": 285.297,
+            "right": 1824,
+            "bottom": 370.797,
+            "width": 1728,
+            "height": 85.5
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "0px 18px 18px 0px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "article",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 392.797,
+            "right": 660,
+            "bottom": 646.141,
+            "width": 564,
+            "height": 253.344
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "article",
+          "classes": "",
+          "rect": {
+            "x": 678,
+            "y": 392.797,
+            "right": 1242,
+            "bottom": 646.141,
+            "width": 564,
+            "height": 253.344
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "article",
+          "classes": "",
+          "rect": {
+            "x": 1260,
+            "y": 392.797,
+            "right": 1824,
+            "bottom": 646.141,
+            "width": 564,
+            "height": 253.344
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 785.641,
+            "right": 947.5,
+            "bottom": 917.641,
+            "width": 851.5,
+            "height": 132
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "18px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 972.5,
+            "y": 785.641,
+            "right": 1824,
+            "bottom": 917.641,
+            "width": 851.5,
+            "height": 132
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "18px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/icons/listen.png",
+          "alt": "",
+          "loaded": true,
+          "natural_width": 512,
+          "natural_height": 512,
+          "rect": {
+            "x": 117,
+            "y": 410.516,
+            "right": 179,
+            "bottom": 472.516,
+            "width": 62,
+            "height": 62
+          }
+        },
+        {
+          "src": "assets/icons/conversation.png",
+          "alt": "",
+          "loaded": true,
+          "natural_width": 512,
+          "natural_height": 512,
+          "rect": {
+            "x": 699,
+            "y": 410.516,
+            "right": 761,
+            "bottom": 472.516,
+            "width": 62,
+            "height": 62
+          }
+        },
+        {
+          "src": "assets/icons/school.png",
+          "alt": "",
+          "loaded": true,
+          "natural_width": 512,
+          "natural_height": 512,
+          "rect": {
+            "x": 1281,
+            "y": 410.516,
+            "right": 1343,
+            "bottom": 472.516,
+            "width": 62,
+            "height": 62
+          }
+        }
+      ],
+      "issues": [],
+      "measurement_sha256": "7912754bde6cb350902711febe437826e16a785e97d2be523bc1c7450ac43af7",
+      "screenshot": {
+        "file": "slide-07.png",
+        "sha256": "e56cb3161f96af24df165874ac044d5919fec296573d2c664cbd3897b09e1e38",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 7,
+      "page": 8,
+      "id": "w09-l04-l05-page-08",
+      "role": "report",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": true,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "semantic",
+        "footer_top": 1009,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 12,
+        "painted_box_count": 2,
+        "text_run_count": 9,
+        "glyph_count": 100,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "semantic",
+          "top": 1009,
+          "synthetic": false
+        },
+        "content_bottom": 820.078,
+        "minimum_footer_gap": 188.922
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "lesson-tag",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 76,
+            "right": 503.344,
+            "bottom": 133,
+            "width": 407.344,
+            "height": 57
+          },
+          "font_px": 52,
+          "effective_font_px": 52,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "活动3｜发表练习计划",
+          "tag": "div",
+          "classes": "activity-label",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 1501,
+            "y": 26,
+            "right": 1824,
+            "bottom": 63,
+            "width": 323,
+            "height": 37
+          },
+          "font_px": 34,
+          "effective_font_px": 34,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "发表练习计划",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 6,
+          "bounds": {
+            "x": 96,
+            "y": 146.391,
+            "right": 534,
+            "bottom": 228.391,
+            "width": 438,
+            "height": 82
+          },
+          "font_px": 74,
+          "effective_font_px": 74,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "750"
+        },
+        {
+          "text": "我们建议小安星期二……，星期四……。",
+          "tag": "div",
+          "classes": "report-phrase",
+          "glyph_count": 18,
+          "bounds": {
+            "x": 483,
+            "y": 460.516,
+            "right": 1437,
+            "bottom": 518.516,
+            "width": 954,
+            "height": 58
+          },
+          "font_px": 53,
+          "effective_font_px": 53,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "650"
+        },
+        {
+          "text": "我们这样安排，是因为……。",
+          "tag": "div",
+          "classes": "report-phrase",
+          "glyph_count": 13,
+          "bounds": {
+            "x": 615.5,
+            "y": 534.703,
+            "right": 1304.5,
+            "bottom": 592.703,
+            "width": 689,
+            "height": 58
+          },
+          "font_px": 53,
+          "effective_font_px": 53,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "650"
+        },
+        {
+          "text": "她还可以……。",
+          "tag": "div",
+          "classes": "report-phrase",
+          "glyph_count": 7,
+          "bounds": {
+            "x": 774.5,
+            "y": 608.891,
+            "right": 1145.5,
+            "bottom": 666.891,
+            "width": 371,
+            "height": 58
+          },
+          "font_px": 53,
+          "effective_font_px": 53,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "650"
+        },
+        {
+          "text": "每人介绍计划中的一项，并回答听者的一个问题。",
+          "tag": "p",
+          "classes": "report-task",
+          "glyph_count": 22,
+          "bounds": {
+            "x": 465,
+            "y": 770.078,
+            "right": 1455,
+            "bottom": 820.078,
+            "width": 990,
+            "height": 50
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 1009,
+            "right": 391,
+            "bottom": 1042,
+            "width": 295,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "08 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1740.656,
+            "y": 1009,
+            "right": 1824,
+            "bottom": 1042,
+            "width": 83.344,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "teal-rule",
+          "rect": {
+            "x": 96,
+            "y": 250.297,
+            "right": 170,
+            "bottom": 257.297,
+            "width": 74,
+            "height": 7
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "report-phrase",
+          "rect": {
+            "x": 445,
+            "y": 426.516,
+            "right": 1475,
+            "bottom": 701.078,
+            "width": 1030,
+            "height": 274.563
+          },
+          "background_color": "rgb(248, 251, 251)",
+          "background_image": "none",
+          "border_radius": "28px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/icons/conversation.png",
+          "alt": "",
+          "loaded": true,
+          "natural_width": 512,
+          "natural_height": 512,
+          "rect": {
+            "x": 915,
+            "y": 314.516,
+            "right": 1005,
+            "bottom": 404.516,
+            "width": 90,
+            "height": 90
+          }
+        }
+      ],
+      "issues": [],
+      "measurement_sha256": "a08509ca285f778f910b04f7adfb1bf9e57e6769128afe9416f7606a7fb73c3d",
+      "screenshot": {
+        "file": "slide-08.png",
+        "sha256": "efd68c98297a6d3ee10cb7254a7e71475f00377204052c7f400976ad9c777f4c",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 8,
+      "page": 9,
+      "id": "w09-l04-l05-page-09",
+      "role": "comic",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": true,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "semantic",
+        "footer_top": 1009,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 10,
+        "painted_box_count": 1,
+        "text_run_count": 5,
+        "glyph_count": 38,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "semantic",
+          "top": 1009,
+          "synthetic": false
+        },
+        "content_bottom": 985.297,
+        "minimum_footer_gap": 23.703
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "lesson-tag",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 76,
+            "right": 503.344,
+            "bottom": 133,
+            "width": 407.344,
+            "height": 57
+          },
+          "font_px": 52,
+          "effective_font_px": 52,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "活动4｜看图说故事",
+          "tag": "div",
+          "classes": "activity-label",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 1535,
+            "y": 26,
+            "right": 1824,
+            "bottom": 63,
+            "width": 289,
+            "height": 37
+          },
+          "font_px": 34,
+          "effective_font_px": 34,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "看图说故事",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 96,
+            "y": 146.391,
+            "right": 461,
+            "bottom": 228.391,
+            "width": 365,
+            "height": 82
+          },
+          "font_px": 74,
+          "effective_font_px": 74,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "750"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 1009,
+            "right": 391,
+            "bottom": 1042,
+            "width": 295,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "09 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1740.656,
+            "y": 1009,
+            "right": 1824,
+            "bottom": 1042,
+            "width": 83.344,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "teal-rule",
+          "rect": {
+            "x": 96,
+            "y": 250.297,
+            "right": 170,
+            "bottom": 257.297,
+            "width": 74,
+            "height": 7
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/comic-1.png",
+          "alt": "六格看图说故事",
+          "loaded": true,
+          "natural_width": 1672,
+          "natural_height": 941,
+          "rect": {
+            "x": 96,
+            "y": 285.297,
+            "right": 1146,
+            "bottom": 985.297,
+            "width": 1050,
+            "height": 700
+          }
+        }
+      ],
+      "issues": [
+        {
+          "kind": "role-mismatch",
+          "expected": "comic",
+          "inferred": "activity"
+        },
+        {
+          "kind": "footer-clearance",
+          "footer_top": 1009,
+          "content_bottom": 985.297,
+          "gap": 23.703,
+          "required": 64
+        },
+        {
+          "kind": "missing-structure",
+          "role": "comic",
+          "element": "comic header/main/footer and one image"
+        }
+      ],
+      "measurement_sha256": "dd069e94e6bde16f8232193028fefe96a66400791f6929e2c02d38bf8bb6a365",
+      "screenshot": {
+        "file": "slide-09.png",
+        "sha256": "0dfde3438154c3f13a2a004e46652655672666b59ec03a68248a5d10fe1cecc2",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 9,
+      "page": 10,
+      "id": "w09-l04-l05-page-10",
+      "role": "activity",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": true,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "semantic",
+        "footer_top": 1009,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 18,
+        "painted_box_count": 4,
+        "text_run_count": 11,
+        "glyph_count": 141,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "semantic",
+          "top": 1009,
+          "synthetic": false
+        },
+        "content_bottom": 733.172,
+        "minimum_footer_gap": 275.828
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "lesson-tag",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 76,
+            "right": 503.344,
+            "bottom": 133,
+            "width": 407.344,
+            "height": 57
+          },
+          "font_px": 52,
+          "effective_font_px": 52,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "活动5｜怎样练习中文",
+          "tag": "div",
+          "classes": "activity-label",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 1501,
+            "y": 26,
+            "right": 1824,
+            "bottom": 63,
+            "width": 323,
+            "height": 37
+          },
+          "font_px": 34,
+          "effective_font_px": 34,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "怎样练习中文？",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 7,
+          "bounds": {
+            "x": 96,
+            "y": 146.391,
+            "right": 607,
+            "bottom": 228.391,
+            "width": 511,
+            "height": 82
+          },
+          "font_px": 74,
+          "effective_font_px": 74,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "750"
+        },
+        {
+          "text": "如果你在荣市学习中文，没有机会每天和中国人说话，你会怎样练习听力和口语？为什么？",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 40,
+          "bounds": {
+            "x": 246,
+            "y": 322.297,
+            "right": 1758,
+            "bottom": 452.484,
+            "width": 1512,
+            "height": 130.187
+          },
+          "font_px": 54,
+          "effective_font_px": 54,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "两人轮流说出一种具体方法和理由，再问同伴一个问题。",
+          "tag": "p",
+          "classes": "discussion-action",
+          "glyph_count": 25,
+          "bounds": {
+            "x": 96,
+            "y": 516.672,
+            "right": 1221,
+            "bottom": 566.672,
+            "width": 1125,
+            "height": 50
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "基础",
+          "tag": "b",
+          "classes": "",
+          "glyph_count": 2,
+          "bounds": {
+            "x": 120,
+            "y": 619.172,
+            "right": 206,
+            "bottom": 666.172,
+            "width": 86,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "：我会……，因为……。",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 11,
+          "bounds": {
+            "x": 206,
+            "y": 619.172,
+            "right": 679,
+            "bottom": 666.172,
+            "width": 473,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "挑战",
+          "tag": "b",
+          "classes": "",
+          "glyph_count": 2,
+          "bounds": {
+            "x": 996.5,
+            "y": 619.172,
+            "right": 1082.5,
+            "bottom": 666.172,
+            "width": 86,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "：比较两种方法，说明各有什么优点和困难。",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 20,
+          "bounds": {
+            "x": 996.5,
+            "y": 619.172,
+            "right": 1770.5,
+            "bottom": 716.172,
+            "width": 774,
+            "height": 97
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 1009,
+            "right": 391,
+            "bottom": 1042,
+            "width": 295,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "10 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1740.656,
+            "y": 1009,
+            "right": 1824,
+            "bottom": 1042,
+            "width": 83.344,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "teal-rule",
+          "rect": {
+            "x": 96,
+            "y": 250.297,
+            "right": 170,
+            "bottom": 257.297,
+            "width": 74,
+            "height": 7
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "discussion-question",
+          "rect": {
+            "x": 96,
+            "y": 292.297,
+            "right": 1824,
+            "bottom": 482.672,
+            "width": 1728,
+            "height": 190.375
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 601.172,
+            "right": 947.5,
+            "bottom": 733.172,
+            "width": 851.5,
+            "height": 132
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "18px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 972.5,
+            "y": 601.172,
+            "right": 1824,
+            "bottom": 733.172,
+            "width": 851.5,
+            "height": 132
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "18px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/icons/conversation.png",
+          "alt": "",
+          "loaded": true,
+          "natural_width": 512,
+          "natural_height": 512,
+          "rect": {
+            "x": 128,
+            "y": 343.484,
+            "right": 216,
+            "bottom": 431.484,
+            "width": 88,
+            "height": 88
+          }
+        }
+      ],
+      "issues": [],
+      "measurement_sha256": "cfcf58e151f3382acbf5494e3c0cff8be96b5b15d3a108f9cace37796e12598c",
+      "screenshot": {
+        "file": "slide-10.png",
+        "sha256": "08c5476cd755ffcec63f03a55bc74faf30e85ec036ae9f5052f8ec39dfe16113",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 10,
+      "page": 11,
+      "id": "w09-l04-l05-page-11",
+      "role": "activity",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": true,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "semantic",
+        "footer_top": 1009,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 19,
+        "painted_box_count": 4,
+        "text_run_count": 12,
+        "glyph_count": 203,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "semantic",
+          "top": 1009,
+          "synthetic": false
+        },
+        "content_bottom": 821.297,
+        "minimum_footer_gap": 187.703
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "lesson-tag",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 76,
+            "right": 503.344,
+            "bottom": 133,
+            "width": 407.344,
+            "height": 57
+          },
+          "font_px": 52,
+          "effective_font_px": 52,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "活动6｜安排中文音乐体验活动",
+          "tag": "div",
+          "classes": "activity-label",
+          "glyph_count": 14,
+          "bounds": {
+            "x": 1365,
+            "y": 26,
+            "right": 1824,
+            "bottom": 63,
+            "width": 459,
+            "height": 37
+          },
+          "font_px": 34,
+          "effective_font_px": 34,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "安排中文音乐体验活动",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 146.391,
+            "right": 826,
+            "bottom": 228.391,
+            "width": 730,
+            "height": 82
+          },
+          "font_px": 74,
+          "effective_font_px": 74,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "750"
+        },
+        {
+          "text": "中文学习小组想在星期六下午办一场40分钟的音乐体验活动，让参加的人听中文、开口说中文。",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 43,
+          "bounds": {
+            "x": 120,
+            "y": 316.297,
+            "right": 1718,
+            "bottom": 427.047,
+            "width": 1598,
+            "height": 110.75
+          },
+          "font_px": 47,
+          "effective_font_px": 47,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "可用材料：一首中文歌曲、歌词、纸和笔；教室里可以播放音乐。",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 29,
+          "bounds": {
+            "x": 233,
+            "y": 458.422,
+            "right": 1596,
+            "bottom": 510.422,
+            "width": 1363,
+            "height": 52
+          },
+          "font_px": 47,
+          "effective_font_px": 47,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "3—4人一组，安排活动：先做什么、再做什么、最后做什么？每人提出一项建议，一起决定安排和理由。",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 47,
+          "bounds": {
+            "x": 120,
+            "y": 541.797,
+            "right": 1718,
+            "bottom": 652.547,
+            "width": 1598,
+            "height": 110.75
+          },
+          "font_px": 47,
+          "effective_font_px": 47,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "基础",
+          "tag": "b",
+          "classes": "",
+          "glyph_count": 2,
+          "bounds": {
+            "x": 120,
+            "y": 707.297,
+            "right": 206,
+            "bottom": 754.297,
+            "width": 86,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "：说出活动顺序和一条理由。",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 13,
+          "bounds": {
+            "x": 206,
+            "y": 707.297,
+            "right": 765,
+            "bottom": 754.297,
+            "width": 559,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "挑战",
+          "tag": "b",
+          "classes": "",
+          "glyph_count": 2,
+          "bounds": {
+            "x": 996.5,
+            "y": 707.297,
+            "right": 1082.5,
+            "bottom": 754.297,
+            "width": 86,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "：说明如何让不敢开口的人也有机会参加。",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 19,
+          "bounds": {
+            "x": 996.5,
+            "y": 707.297,
+            "right": 1770.5,
+            "bottom": 804.297,
+            "width": 774,
+            "height": 97
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 1009,
+            "right": 391,
+            "bottom": 1042,
+            "width": 295,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "11 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1741.766,
+            "y": 1009,
+            "right": 1824,
+            "bottom": 1042,
+            "width": 82.234,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "teal-rule",
+          "rect": {
+            "x": 96,
+            "y": 250.297,
+            "right": 170,
+            "bottom": 257.297,
+            "width": 74,
+            "height": 7
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "party-prompt",
+          "rect": {
+            "x": 96,
+            "y": 285.297,
+            "right": 1824,
+            "bottom": 684.297,
+            "width": 1728,
+            "height": 399
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 689.297,
+            "right": 947.5,
+            "bottom": 821.297,
+            "width": 851.5,
+            "height": 132
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "18px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 972.5,
+            "y": 689.297,
+            "right": 1824,
+            "bottom": 821.297,
+            "width": 851.5,
+            "height": 132
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "18px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/icons/book-pencil.png",
+          "alt": "",
+          "loaded": true,
+          "natural_width": 512,
+          "natural_height": 512,
+          "rect": {
+            "x": 120,
+            "y": 440.797,
+            "right": 208,
+            "bottom": 528.797,
+            "width": 88,
+            "height": 88
+          }
+        }
+      ],
+      "issues": [],
+      "measurement_sha256": "bc0fe2a00e4c37a13c9db3533443146b5f355545b8cab9e7131f90736fef781a",
+      "screenshot": {
+        "file": "slide-11.png",
+        "sha256": "d25d031ee074097bb8d35992cdfbf11a5b1a9eb9022f6b3a3bc764893bbcb081",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 11,
+      "page": 12,
+      "id": "w09-l04-l05-page-12",
+      "role": "report",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": true,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "semantic",
+        "footer_top": 1009,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 12,
+        "painted_box_count": 2,
+        "text_run_count": 9,
+        "glyph_count": 107,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "semantic",
+          "top": 1009,
+          "synthetic": false
+        },
+        "content_bottom": 820.078,
+        "minimum_footer_gap": 188.922
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "lesson-tag",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 76,
+            "right": 503.344,
+            "bottom": 133,
+            "width": 407.344,
+            "height": 57
+          },
+          "font_px": 52,
+          "effective_font_px": 52,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "活动6｜发表音乐活动安排",
+          "tag": "div",
+          "classes": "activity-label",
+          "glyph_count": 12,
+          "bounds": {
+            "x": 1433,
+            "y": 26,
+            "right": 1824,
+            "bottom": 63,
+            "width": 391,
+            "height": 37
+          },
+          "font_px": 34,
+          "effective_font_px": 34,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "发表音乐活动安排",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 8,
+          "bounds": {
+            "x": 96,
+            "y": 146.391,
+            "right": 680,
+            "bottom": 228.391,
+            "width": 584,
+            "height": 82
+          },
+          "font_px": 74,
+          "effective_font_px": 74,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "750"
+        },
+        {
+          "text": "我们的活动先……，然后……，最后……。",
+          "tag": "div",
+          "classes": "report-phrase",
+          "glyph_count": 19,
+          "bounds": {
+            "x": 456.5,
+            "y": 460.516,
+            "right": 1463.5,
+            "bottom": 518.516,
+            "width": 1007,
+            "height": 58
+          },
+          "font_px": 53,
+          "effective_font_px": 53,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "650"
+        },
+        {
+          "text": "我们选择……，因为……。",
+          "tag": "div",
+          "classes": "report-phrase",
+          "glyph_count": 12,
+          "bounds": {
+            "x": 642,
+            "y": 534.703,
+            "right": 1278,
+            "bottom": 592.703,
+            "width": 636,
+            "height": 58
+          },
+          "font_px": 53,
+          "effective_font_px": 53,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "650"
+        },
+        {
+          "text": "为了让每个人都开口，我们会……。",
+          "tag": "div",
+          "classes": "report-phrase",
+          "glyph_count": 16,
+          "bounds": {
+            "x": 536,
+            "y": 608.891,
+            "right": 1384,
+            "bottom": 666.891,
+            "width": 848,
+            "height": 58
+          },
+          "font_px": 53,
+          "effective_font_px": 53,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "650"
+        },
+        {
+          "text": "每人介绍一部分；听者问一个问题。",
+          "tag": "p",
+          "classes": "report-task",
+          "glyph_count": 16,
+          "bounds": {
+            "x": 600,
+            "y": 770.078,
+            "right": 1320,
+            "bottom": 820.078,
+            "width": 720,
+            "height": 50
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 1009,
+            "right": 391,
+            "bottom": 1042,
+            "width": 295,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "12 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1740.656,
+            "y": 1009,
+            "right": 1824,
+            "bottom": 1042,
+            "width": 83.344,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "teal-rule",
+          "rect": {
+            "x": 96,
+            "y": 250.297,
+            "right": 170,
+            "bottom": 257.297,
+            "width": 74,
+            "height": 7
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "report-phrase",
+          "rect": {
+            "x": 418.5,
+            "y": 426.516,
+            "right": 1501.5,
+            "bottom": 701.078,
+            "width": 1083,
+            "height": 274.563
+          },
+          "background_color": "rgb(248, 251, 251)",
+          "background_image": "none",
+          "border_radius": "28px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/icons/conversation.png",
+          "alt": "",
+          "loaded": true,
+          "natural_width": 512,
+          "natural_height": 512,
+          "rect": {
+            "x": 915,
+            "y": 314.516,
+            "right": 1005,
+            "bottom": 404.516,
+            "width": 90,
+            "height": 90
+          }
+        }
+      ],
+      "issues": [],
+      "measurement_sha256": "b6f53e0f9f520446e8d0a24bb599aef21b535bc456808d1f6fb1a71038e1db22",
+      "screenshot": {
+        "file": "slide-12.png",
+        "sha256": "da7945b380b5edc99e378868d5d720c015e130f8015fb7060ddefd234072b0e0",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 12,
+      "page": 13,
+      "id": "w09-l04-l05-page-13",
+      "role": "comic",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": true,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "semantic",
+        "footer_top": 1009,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 10,
+        "painted_box_count": 1,
+        "text_run_count": 5,
+        "glyph_count": 38,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "semantic",
+          "top": 1009,
+          "synthetic": false
+        },
+        "content_bottom": 985.297,
+        "minimum_footer_gap": 23.703
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "lesson-tag",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 76,
+            "right": 503.344,
+            "bottom": 133,
+            "width": 407.344,
+            "height": 57
+          },
+          "font_px": 52,
+          "effective_font_px": 52,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "活动7｜看图说故事",
+          "tag": "div",
+          "classes": "activity-label",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 1535,
+            "y": 26,
+            "right": 1824,
+            "bottom": 63,
+            "width": 289,
+            "height": 37
+          },
+          "font_px": 34,
+          "effective_font_px": 34,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "看图说故事",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 96,
+            "y": 146.391,
+            "right": 461,
+            "bottom": 228.391,
+            "width": 365,
+            "height": 82
+          },
+          "font_px": 74,
+          "effective_font_px": 74,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "750"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 1009,
+            "right": 391,
+            "bottom": 1042,
+            "width": 295,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "13 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1740.656,
+            "y": 1009,
+            "right": 1824,
+            "bottom": 1042,
+            "width": 83.344,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "teal-rule",
+          "rect": {
+            "x": 96,
+            "y": 250.297,
+            "right": 170,
+            "bottom": 257.297,
+            "width": 74,
+            "height": 7
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/comic-2.png",
+          "alt": "六格看图说故事",
+          "loaded": true,
+          "natural_width": 1672,
+          "natural_height": 941,
+          "rect": {
+            "x": 96,
+            "y": 285.297,
+            "right": 1146,
+            "bottom": 985.297,
+            "width": 1050,
+            "height": 700
+          }
+        }
+      ],
+      "issues": [
+        {
+          "kind": "role-mismatch",
+          "expected": "comic",
+          "inferred": "activity"
+        },
+        {
+          "kind": "footer-clearance",
+          "footer_top": 1009,
+          "content_bottom": 985.297,
+          "gap": 23.703,
+          "required": 64
+        },
+        {
+          "kind": "missing-structure",
+          "role": "comic",
+          "element": "comic header/main/footer and one image"
+        }
+      ],
+      "measurement_sha256": "0cd25021d1d4d3cb061c6ed372b19f05e3856cb5940dbeb44851f7bf158f621f",
+      "screenshot": {
+        "file": "slide-13.png",
+        "sha256": "e41f70733cb181c6ac700717859bb24f6b0b71bc037ceac36bffa00478a8b4d7",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 13,
+      "page": 14,
+      "id": "w09-l04-l05-page-14",
+      "role": "activity",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": true,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "semantic",
+        "footer_top": 1009,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 18,
+        "painted_box_count": 4,
+        "text_run_count": 11,
+        "glyph_count": 160,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "semantic",
+          "top": 1009,
+          "synthetic": false
+        },
+        "content_bottom": 733.172,
+        "minimum_footer_gap": 275.828
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "lesson-tag",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 76,
+            "right": 503.344,
+            "bottom": 133,
+            "width": 407.344,
+            "height": 57
+          },
+          "font_px": 52,
+          "effective_font_px": 52,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "活动8｜什么样的老师会影响学生",
+          "tag": "div",
+          "classes": "activity-label",
+          "glyph_count": 15,
+          "bounds": {
+            "x": 1331,
+            "y": 26,
+            "right": 1824,
+            "bottom": 63,
+            "width": 493,
+            "height": 37
+          },
+          "font_px": 34,
+          "effective_font_px": 34,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "什么样的老师会影响学生？",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 12,
+          "bounds": {
+            "x": 96,
+            "y": 146.391,
+            "right": 972,
+            "bottom": 228.391,
+            "width": 876,
+            "height": 82
+          },
+          "font_px": 74,
+          "effective_font_px": 74,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "750"
+        },
+        {
+          "text": "你觉得老师的什么做法能让学生更喜欢一门课？请举一个例子，说明为什么。",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 34,
+          "bounds": {
+            "x": 246,
+            "y": 322.297,
+            "right": 1758,
+            "bottom": 452.484,
+            "width": 1512,
+            "height": 130.187
+          },
+          "font_px": 54,
+          "effective_font_px": 54,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "两人轮流回答，并向同伴问一个问题。可以谈真实经历，也可以举虚构例子。",
+          "tag": "p",
+          "classes": "discussion-action",
+          "glyph_count": 34,
+          "bounds": {
+            "x": 96,
+            "y": 516.672,
+            "right": 1626,
+            "bottom": 566.672,
+            "width": 1530,
+            "height": 50
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "基础",
+          "tag": "b",
+          "classes": "",
+          "glyph_count": 2,
+          "bounds": {
+            "x": 120,
+            "y": 619.172,
+            "right": 206,
+            "bottom": 666.172,
+            "width": 86,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "：老师……，学生会……，因为……。",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 17,
+          "bounds": {
+            "x": 120,
+            "y": 619.172,
+            "right": 765,
+            "bottom": 716.172,
+            "width": 645,
+            "height": 97
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "挑战",
+          "tag": "b",
+          "classes": "",
+          "glyph_count": 2,
+          "bounds": {
+            "x": 996.5,
+            "y": 619.172,
+            "right": 1082.5,
+            "bottom": 666.172,
+            "width": 86,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "：比较两种做法，说明哪一种对你更有帮助。",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 20,
+          "bounds": {
+            "x": 996.5,
+            "y": 619.172,
+            "right": 1770.5,
+            "bottom": 716.172,
+            "width": 774,
+            "height": 97
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 1009,
+            "right": 391,
+            "bottom": 1042,
+            "width": 295,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "14 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1740.656,
+            "y": 1009,
+            "right": 1824,
+            "bottom": 1042,
+            "width": 83.344,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "teal-rule",
+          "rect": {
+            "x": 96,
+            "y": 250.297,
+            "right": 170,
+            "bottom": 257.297,
+            "width": 74,
+            "height": 7
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "discussion-question",
+          "rect": {
+            "x": 96,
+            "y": 292.297,
+            "right": 1824,
+            "bottom": 482.672,
+            "width": 1728,
+            "height": 190.375
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 601.172,
+            "right": 947.5,
+            "bottom": 733.172,
+            "width": 851.5,
+            "height": 132
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "18px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 972.5,
+            "y": 601.172,
+            "right": 1824,
+            "bottom": 733.172,
+            "width": 851.5,
+            "height": 132
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "18px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/icons/conversation.png",
+          "alt": "",
+          "loaded": true,
+          "natural_width": 512,
+          "natural_height": 512,
+          "rect": {
+            "x": 128,
+            "y": 343.484,
+            "right": 216,
+            "bottom": 431.484,
+            "width": 88,
+            "height": 88
+          }
+        }
+      ],
+      "issues": [],
+      "measurement_sha256": "a63bef9e7ad8e32f1268dcb801432cea26f1d3402851c3419ba8a59088dedfa9",
+      "screenshot": {
+        "file": "slide-14.png",
+        "sha256": "f82fea3115e858482809e2a695c20365c6c67cc15bbf1cf8e7b8056b5d4d9d2b",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 14,
+      "page": 15,
+      "id": "w09-l04-l05-page-15",
+      "role": "activity",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": true,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "semantic",
+        "footer_top": 1009,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 18,
+        "painted_box_count": 4,
+        "text_run_count": 11,
+        "glyph_count": 152,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "semantic",
+          "top": 1009,
+          "synthetic": false
+        },
+        "content_bottom": 733.172,
+        "minimum_footer_gap": 275.828
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "lesson-tag",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 76,
+            "right": 503.344,
+            "bottom": 133,
+            "width": 407.344,
+            "height": 57
+          },
+          "font_px": 52,
+          "effective_font_px": 52,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "活动9｜怎样坚持学习",
+          "tag": "div",
+          "classes": "activity-label",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 1501,
+            "y": 26,
+            "right": 1824,
+            "bottom": 63,
+            "width": 323,
+            "height": 37
+          },
+          "font_px": 34,
+          "effective_font_px": 34,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "怎样坚持学习？",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 7,
+          "bounds": {
+            "x": 96,
+            "y": 146.391,
+            "right": 607,
+            "bottom": 228.391,
+            "width": 511,
+            "height": 82
+          },
+          "font_px": 74,
+          "effective_font_px": 74,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "750"
+        },
+        {
+          "text": "你对一件事很感兴趣，可是学了一段时间以后觉得很难。你会继续学习吗？你会怎样做？为什么？",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 43,
+          "bounds": {
+            "x": 246,
+            "y": 322.297,
+            "right": 1758,
+            "bottom": 452.484,
+            "width": 1512,
+            "height": 130.187
+          },
+          "font_px": 54,
+          "effective_font_px": 54,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "每人说出自己的选择、一个具体做法和理由；听者复述对方的做法并确认。",
+          "tag": "p",
+          "classes": "discussion-action",
+          "glyph_count": 33,
+          "bounds": {
+            "x": 96,
+            "y": 516.672,
+            "right": 1581,
+            "bottom": 566.672,
+            "width": 1485,
+            "height": 50
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "基础",
+          "tag": "b",
+          "classes": "",
+          "glyph_count": 2,
+          "bounds": {
+            "x": 120,
+            "y": 619.172,
+            "right": 206,
+            "bottom": 666.172,
+            "width": 86,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "：我会……，因为……。",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 11,
+          "bounds": {
+            "x": 206,
+            "y": 619.172,
+            "right": 679,
+            "bottom": 666.172,
+            "width": 473,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "挑战",
+          "tag": "b",
+          "classes": "",
+          "glyph_count": 2,
+          "bounds": {
+            "x": 996.5,
+            "y": 619.172,
+            "right": 1082.5,
+            "bottom": 666.172,
+            "width": 86,
+            "height": 47
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "：比较继续和暂停的理由，再说自己的决定。",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 20,
+          "bounds": {
+            "x": 996.5,
+            "y": 619.172,
+            "right": 1770.5,
+            "bottom": 716.172,
+            "width": 774,
+            "height": 97
+          },
+          "font_px": 43,
+          "effective_font_px": 43,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 1009,
+            "right": 391,
+            "bottom": 1042,
+            "width": 295,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "15 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1740.656,
+            "y": 1009,
+            "right": 1824,
+            "bottom": 1042,
+            "width": 83.344,
+            "height": 33
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "\"Times New Roman\", KaiTi, serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "teal-rule",
+          "rect": {
+            "x": 96,
+            "y": 250.297,
+            "right": 170,
+            "bottom": 257.297,
+            "width": 74,
+            "height": 7
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "discussion-question",
+          "rect": {
+            "x": 96,
+            "y": 292.297,
+            "right": 1824,
+            "bottom": 482.672,
+            "width": 1728,
+            "height": 190.375
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "20px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 601.172,
+            "right": 947.5,
+            "bottom": 733.172,
+            "width": 851.5,
+            "height": 132
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "18px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 972.5,
+            "y": 601.172,
+            "right": 1824,
+            "bottom": 733.172,
+            "width": 851.5,
+            "height": 132
+          },
+          "background_color": "rgb(247, 250, 250)",
+          "background_image": "none",
+          "border_radius": "18px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/icons/conversation.png",
+          "alt": "",
+          "loaded": true,
+          "natural_width": 512,
+          "natural_height": 512,
+          "rect": {
+            "x": 128,
+            "y": 343.484,
+            "right": 216,
+            "bottom": 431.484,
+            "width": 88,
+            "height": 88
+          }
+        }
+      ],
+      "issues": [],
+      "measurement_sha256": "6a70845bec6ce2e96462d7db4c8d7474a28cd2e4dbc3b7d187277161e87a550d",
+      "screenshot": {
+        "file": "slide-15.png",
+        "sha256": "595859a0a67cea10a0a9eb650f03554cb08f43d7086f51a0ced58973c02d969e",
+        "stable": true,
+        "attempts": 3
+      }
+    }
+  ],
+  "negative": [
+    {
+      "name": "footer-clearance",
+      "pass": true,
+      "expected_issue": "footer-clearance",
+      "observed_issues": [
+        "footer-clearance"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "orphan-line",
+      "pass": true,
+      "expected_issue": "orphan-line",
+      "observed_issues": [
+        "orphan-line"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "arbitrary-offcanvas-content",
+      "pass": true,
+      "expected_issue": "canvas-bounds",
+      "observed_issues": [
+        "canvas-bounds",
+        "body-bounds"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "arbitrary-offcanvas-painted-box",
+      "pass": true,
+      "expected_issue": "canvas-bounds",
+      "observed_issues": [
+        "canvas-bounds",
+        "body-bounds"
+      ],
+      "painted_box_count": 1
+    },
+    {
+      "name": "tiny-critical-text",
+      "pass": true,
+      "expected_issue": "font-size",
+      "observed_issues": [
+        "font-size"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "transformed-tiny-critical-text",
+      "pass": true,
+      "expected_issue": "font-size",
+      "observed_issues": [
+        "font-size"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "wrong-font-family",
+      "pass": true,
+      "expected_issue": "font-family",
+      "observed_issues": [
+        "font-family"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "missing-footer",
+      "pass": true,
+      "expected_issue": "missing-footer",
+      "observed_issues": [
+        "missing-footer",
+        "incomplete-coverage",
+        "missing-structure"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "missing-required-structure",
+      "pass": true,
+      "expected_issue": "missing-structure",
+      "observed_issues": [
+        "missing-structure"
+      ],
+      "painted_box_count": 0
+    }
+  ]
+}

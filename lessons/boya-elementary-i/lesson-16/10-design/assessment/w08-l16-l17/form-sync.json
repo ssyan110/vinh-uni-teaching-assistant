@@ -1,0 +1,18 @@
+{
+  "exam_id": "W08-L16L17-20261023",
+  "version": 1,
+  "status": "CONTENT_SYNCED_VERIFIED_UNPUBLISHED_BACKEND_PENDING",
+  "form_id": "14BRT3qo2WTu2EZ5o-2hnQr_9vG8LA-0WRM5y0oYVWFE",
+  "form_revision": "0000000a",
+  "content_approved": false,
+  "items_sha256": "b30720e6a0ef3e94a7516cb71100d0603aa0c78f5115b9dbf1910a338f51da5a",
+  "checked_at": "2026-10-23T17:38:19.931974+07:00",
+  "verification_evidence": ".agent/runs/w08-assessment-20261023/verification.json",
+  "pending": [
+    "raw_response_backend_connection",
+    "content_review",
+    "teacher_full_listening",
+    "classroom_speaker_acceptance",
+    "publication_authorization"
+  ]
+}

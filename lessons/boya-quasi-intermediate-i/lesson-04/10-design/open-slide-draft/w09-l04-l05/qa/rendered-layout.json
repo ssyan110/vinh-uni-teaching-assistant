@@ -1,0 +1,3363 @@
+{
+  "schema_version": 2,
+  "deck": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/open-slide-draft/w09-l04-l05/lesson-04-05-实体课.html",
+  "deck_sha256": "f1410002b878a4dc39303ac89edff26d978e6990a09a7692bba98de44d2c210f",
+  "checker_sha256": "b2071c4c0a4743cfa0e3fdd2d27ad7e135a709fb461262470e238020c1d88167",
+  "contract_sha256": null,
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "policy": {
+    "body_inset_px": 96,
+    "image_inset_px": 64,
+    "footer_clearance_px": 64,
+    "minimum_text_font_px": 26.666666666666668,
+    "critical_text_font_px": 45,
+    "known_role_minimums_px": {
+      "h1": 45,
+      "h2": 40,
+      "lesson_tag": 40,
+      "activity_label": 30,
+      "route_range": 30,
+      "report_example_label": 40,
+      "page_footer": 26.666666666666668,
+      "question_number": 26.666666666666668
+    }
+  },
+  "asset_manifest": [
+    {
+      "path": "assets/comic-1.png",
+      "bytes": 2018477,
+      "sha256": "687a5bd4c909d3cf86387cbc4a3437db3338e7cccced75dcb9d031145b070208"
+    },
+    {
+      "path": "assets/comic-2.png",
+      "bytes": 2066339,
+      "sha256": "9ab6ab8b2a5756bbebed23762dd8461ff0c7f0b93b2cb207741d99bfaf0f2b83"
+    },
+    {
+      "path": "assets/cover.png",
+      "bytes": 1455482,
+      "sha256": "a3ede1ec19172a36e83abf3e3e2b8168c01a7fff24f759e531dc3694e375bb3e"
+    },
+    {
+      "path": "assets/icons/book-pencil.png",
+      "bytes": 107557,
+      "sha256": "b97842336f3e54a843c0782393177e8bf20ed30638c0e8611cc9850282792a75"
+    },
+    {
+      "path": "assets/icons/conversation.png",
+      "bytes": 183653,
+      "sha256": "96491bb767d6e33d464f8957bed229cdf88eb566b50c59bb3d6806171bed7d3f"
+    },
+    {
+      "path": "assets/icons/listen.png",
+      "bytes": 206605,
+      "sha256": "3a16f13ea2c003a234c62f30f9fd4c019cc87e1ce97ad5ffa967ed080cfb133e"
+    },
+    {
+      "path": "assets/icons/shopping-bag.png",
+      "bytes": 105239,
+      "sha256": "72e7a2536b90c9cafbeea2b05fa232b78df87cf413b722e933dc429d684b9986"
+    }
+  ],
+  "asset_manifest_sha256": "384a89a5d023e1f32cd881f5d441eb5ebc26bd20962025a8a704164bc7b57fc6",
+  "footerClearance": 64,
+  "errors": [
+    "Expected exactly 18 slides",
+    "Deck navigation failed at page 1",
+    "Deck navigation failed at page 2",
+    "Deck navigation failed at page 3",
+    "Deck navigation failed at page 4",
+    "Deck navigation failed at page 5",
+    "Deck navigation failed at page 6",
+    "Deck navigation failed at page 7",
+    "Deck navigation failed at page 8",
+    "Deck navigation failed at page 9",
+    "Deck navigation failed at page 10",
+    "Deck navigation failed at page 11",
+    "Deck navigation failed at page 12",
+    "Deck navigation failed at page 13",
+    "Deck navigation failed at page 14",
+    "Deck navigation failed at page 15"
+  ],
+  "pages": [
+    {
+      "index": 0,
+      "page": 1,
+      "id": "w06-cover",
+      "role": "cover",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": false,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "brand-page-counter",
+        "footer_top": 950,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 12,
+        "painted_box_count": 3,
+        "text_run_count": 5,
+        "glyph_count": 56,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "brand-page-counter",
+          "top": 950,
+          "synthetic": false
+        },
+        "content_bottom": 871,
+        "minimum_footer_gap": 79
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 87,
+            "right": 512,
+            "bottom": 132,
+            "width": 416,
+            "height": 45
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "学习经历与音乐老师",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 393.781,
+            "right": 816,
+            "bottom": 475.781,
+            "width": 720,
+            "height": 82
+          },
+          "font_px": 82,
+          "effective_font_px": 82,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "760"
+        },
+        {
+          "text": "听故事、商量计划、讲故事，分享学习与音乐经历。",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 23,
+          "bounds": {
+            "x": 96,
+            "y": 565.609,
+            "right": 960,
+            "bottom": 678.406,
+            "width": 864,
+            "height": 112.797
+          },
+          "font_px": 48,
+          "effective_font_px": 48,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 952,
+            "right": 426,
+            "bottom": 982,
+            "width": 330,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "01 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1719,
+            "y": 952,
+            "right": 1824,
+            "bottom": 982,
+            "width": 105,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 1920,
+            "bottom": 1080,
+            "width": 1920,
+            "height": 1080
+          },
+          "background_color": "rgb(255, 255, 255)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 515.609,
+            "right": 186,
+            "bottom": 523.609,
+            "width": 90,
+            "height": 8
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 1068.891,
+            "y": 251,
+            "right": 1824,
+            "bottom": 871,
+            "width": 755.109,
+            "height": 620
+          },
+          "background_color": "rgba(0, 0, 0, 0)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/cover.png",
+          "alt": "学生讨论中文学习与音乐活动",
+          "loaded": true,
+          "natural_width": 1536,
+          "natural_height": 1024,
+          "rect": {
+            "x": 1101.938,
+            "y": 266,
+            "right": 1791.938,
+            "bottom": 856,
+            "width": 690,
+            "height": 590
+          }
+        }
+      ],
+      "issues": [],
+      "measurement_sha256": "d9abc78d92a6a9a4eaf4a92188479d50d03d146b65310424d47c06c4554d507d",
+      "screenshot": {
+        "file": "slide-01.png",
+        "sha256": "e70dd41a3db6a7f5a9421c0a1e3551f9b5435c36daaa393416081e8c0b99e3cc",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 0,
+      "page": 1,
+      "id": "w06-cover",
+      "role": "cover",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": false,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "brand-page-counter",
+        "footer_top": 950,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 12,
+        "painted_box_count": 3,
+        "text_run_count": 5,
+        "glyph_count": 56,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "brand-page-counter",
+          "top": 950,
+          "synthetic": false
+        },
+        "content_bottom": 871,
+        "minimum_footer_gap": 79
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 87,
+            "right": 512,
+            "bottom": 132,
+            "width": 416,
+            "height": 45
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "学习经历与音乐老师",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 393.781,
+            "right": 816,
+            "bottom": 475.781,
+            "width": 720,
+            "height": 82
+          },
+          "font_px": 82,
+          "effective_font_px": 82,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "760"
+        },
+        {
+          "text": "听故事、商量计划、讲故事，分享学习与音乐经历。",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 23,
+          "bounds": {
+            "x": 96,
+            "y": 565.609,
+            "right": 960,
+            "bottom": 678.406,
+            "width": 864,
+            "height": 112.797
+          },
+          "font_px": 48,
+          "effective_font_px": 48,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 952,
+            "right": 426,
+            "bottom": 982,
+            "width": 330,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "01 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1719,
+            "y": 952,
+            "right": 1824,
+            "bottom": 982,
+            "width": 105,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 1920,
+            "bottom": 1080,
+            "width": 1920,
+            "height": 1080
+          },
+          "background_color": "rgb(255, 255, 255)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 515.609,
+            "right": 186,
+            "bottom": 523.609,
+            "width": 90,
+            "height": 8
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 1068.891,
+            "y": 251,
+            "right": 1824,
+            "bottom": 871,
+            "width": 755.109,
+            "height": 620
+          },
+          "background_color": "rgba(0, 0, 0, 0)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/cover.png",
+          "alt": "学生讨论中文学习与音乐活动",
+          "loaded": true,
+          "natural_width": 1536,
+          "natural_height": 1024,
+          "rect": {
+            "x": 1101.938,
+            "y": 266,
+            "right": 1791.938,
+            "bottom": 856,
+            "width": 690,
+            "height": 590
+          }
+        }
+      ],
+      "issues": [
+        {
+          "kind": "page-identity",
+          "expected": "w06-route",
+          "actual": "w06-cover"
+        }
+      ],
+      "measurement_sha256": "3e33f029c57e13c314928128b02005ebb14dd6349559edda8234382a82beb3a2",
+      "screenshot": {
+        "file": "slide-02.png",
+        "sha256": "e70dd41a3db6a7f5a9421c0a1e3551f9b5435c36daaa393416081e8c0b99e3cc",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 0,
+      "page": 1,
+      "id": "w06-cover",
+      "role": "cover",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": false,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "brand-page-counter",
+        "footer_top": 950,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 12,
+        "painted_box_count": 3,
+        "text_run_count": 5,
+        "glyph_count": 56,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "brand-page-counter",
+          "top": 950,
+          "synthetic": false
+        },
+        "content_bottom": 871,
+        "minimum_footer_gap": 79
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 87,
+            "right": 512,
+            "bottom": 132,
+            "width": 416,
+            "height": 45
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "学习经历与音乐老师",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 393.781,
+            "right": 816,
+            "bottom": 475.781,
+            "width": 720,
+            "height": 82
+          },
+          "font_px": 82,
+          "effective_font_px": 82,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "760"
+        },
+        {
+          "text": "听故事、商量计划、讲故事，分享学习与音乐经历。",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 23,
+          "bounds": {
+            "x": 96,
+            "y": 565.609,
+            "right": 960,
+            "bottom": 678.406,
+            "width": 864,
+            "height": 112.797
+          },
+          "font_px": 48,
+          "effective_font_px": 48,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 952,
+            "right": 426,
+            "bottom": 982,
+            "width": 330,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "01 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1719,
+            "y": 952,
+            "right": 1824,
+            "bottom": 982,
+            "width": 105,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 1920,
+            "bottom": 1080,
+            "width": 1920,
+            "height": 1080
+          },
+          "background_color": "rgb(255, 255, 255)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 515.609,
+            "right": 186,
+            "bottom": 523.609,
+            "width": 90,
+            "height": 8
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 1068.891,
+            "y": 251,
+            "right": 1824,
+            "bottom": 871,
+            "width": 755.109,
+            "height": 620
+          },
+          "background_color": "rgba(0, 0, 0, 0)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/cover.png",
+          "alt": "学生讨论中文学习与音乐活动",
+          "loaded": true,
+          "natural_width": 1536,
+          "natural_height": 1024,
+          "rect": {
+            "x": 1101.938,
+            "y": 266,
+            "right": 1791.938,
+            "bottom": 856,
+            "width": 690,
+            "height": 590
+          }
+        }
+      ],
+      "issues": [
+        {
+          "kind": "page-identity",
+          "expected": "w09-l04-l05-page-03",
+          "actual": "w06-cover"
+        }
+      ],
+      "measurement_sha256": "5285cab3c937d7a7d6ce695dadba65c5a03b1be36f21696666457badf557814e",
+      "screenshot": {
+        "file": "slide-03.png",
+        "sha256": "e70dd41a3db6a7f5a9421c0a1e3551f9b5435c36daaa393416081e8c0b99e3cc",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 0,
+      "page": 1,
+      "id": "w06-cover",
+      "role": "cover",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": false,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "brand-page-counter",
+        "footer_top": 950,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 12,
+        "painted_box_count": 3,
+        "text_run_count": 5,
+        "glyph_count": 56,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "brand-page-counter",
+          "top": 950,
+          "synthetic": false
+        },
+        "content_bottom": 871,
+        "minimum_footer_gap": 79
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 87,
+            "right": 512,
+            "bottom": 132,
+            "width": 416,
+            "height": 45
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "学习经历与音乐老师",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 393.781,
+            "right": 816,
+            "bottom": 475.781,
+            "width": 720,
+            "height": 82
+          },
+          "font_px": 82,
+          "effective_font_px": 82,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "760"
+        },
+        {
+          "text": "听故事、商量计划、讲故事，分享学习与音乐经历。",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 23,
+          "bounds": {
+            "x": 96,
+            "y": 565.609,
+            "right": 960,
+            "bottom": 678.406,
+            "width": 864,
+            "height": 112.797
+          },
+          "font_px": 48,
+          "effective_font_px": 48,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 952,
+            "right": 426,
+            "bottom": 982,
+            "width": 330,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "01 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1719,
+            "y": 952,
+            "right": 1824,
+            "bottom": 982,
+            "width": 105,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 1920,
+            "bottom": 1080,
+            "width": 1920,
+            "height": 1080
+          },
+          "background_color": "rgb(255, 255, 255)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 515.609,
+            "right": 186,
+            "bottom": 523.609,
+            "width": 90,
+            "height": 8
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 1068.891,
+            "y": 251,
+            "right": 1824,
+            "bottom": 871,
+            "width": 755.109,
+            "height": 620
+          },
+          "background_color": "rgba(0, 0, 0, 0)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/cover.png",
+          "alt": "学生讨论中文学习与音乐活动",
+          "loaded": true,
+          "natural_width": 1536,
+          "natural_height": 1024,
+          "rect": {
+            "x": 1101.938,
+            "y": 266,
+            "right": 1791.938,
+            "bottom": 856,
+            "width": 690,
+            "height": 590
+          }
+        }
+      ],
+      "issues": [
+        {
+          "kind": "page-identity",
+          "expected": "w09-l04-l05-page-04",
+          "actual": "w06-cover"
+        }
+      ],
+      "measurement_sha256": "8fc0a69681446f6fc63dd9befd40d68b460bcb37743554253968bd18b8e9ef00",
+      "screenshot": {
+        "file": "slide-04.png",
+        "sha256": "e70dd41a3db6a7f5a9421c0a1e3551f9b5435c36daaa393416081e8c0b99e3cc",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 0,
+      "page": 1,
+      "id": "w06-cover",
+      "role": "cover",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": false,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "brand-page-counter",
+        "footer_top": 950,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 12,
+        "painted_box_count": 3,
+        "text_run_count": 5,
+        "glyph_count": 56,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "brand-page-counter",
+          "top": 950,
+          "synthetic": false
+        },
+        "content_bottom": 871,
+        "minimum_footer_gap": 79
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 87,
+            "right": 512,
+            "bottom": 132,
+            "width": 416,
+            "height": 45
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "学习经历与音乐老师",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 393.781,
+            "right": 816,
+            "bottom": 475.781,
+            "width": 720,
+            "height": 82
+          },
+          "font_px": 82,
+          "effective_font_px": 82,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "760"
+        },
+        {
+          "text": "听故事、商量计划、讲故事，分享学习与音乐经历。",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 23,
+          "bounds": {
+            "x": 96,
+            "y": 565.609,
+            "right": 960,
+            "bottom": 678.406,
+            "width": 864,
+            "height": 112.797
+          },
+          "font_px": 48,
+          "effective_font_px": 48,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 952,
+            "right": 426,
+            "bottom": 982,
+            "width": 330,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "01 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1719,
+            "y": 952,
+            "right": 1824,
+            "bottom": 982,
+            "width": 105,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 1920,
+            "bottom": 1080,
+            "width": 1920,
+            "height": 1080
+          },
+          "background_color": "rgb(255, 255, 255)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 515.609,
+            "right": 186,
+            "bottom": 523.609,
+            "width": 90,
+            "height": 8
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 1068.891,
+            "y": 251,
+            "right": 1824,
+            "bottom": 871,
+            "width": 755.109,
+            "height": 620
+          },
+          "background_color": "rgba(0, 0, 0, 0)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/cover.png",
+          "alt": "学生讨论中文学习与音乐活动",
+          "loaded": true,
+          "natural_width": 1536,
+          "natural_height": 1024,
+          "rect": {
+            "x": 1101.938,
+            "y": 266,
+            "right": 1791.938,
+            "bottom": 856,
+            "width": 690,
+            "height": 590
+          }
+        }
+      ],
+      "issues": [
+        {
+          "kind": "page-identity",
+          "expected": "w09-l04-l05-page-05",
+          "actual": "w06-cover"
+        }
+      ],
+      "measurement_sha256": "a9dd8ddd69573750b57ecdee7aade32875116c7d7391ad214edd452f0cea8f6d",
+      "screenshot": {
+        "file": "slide-05.png",
+        "sha256": "e70dd41a3db6a7f5a9421c0a1e3551f9b5435c36daaa393416081e8c0b99e3cc",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 0,
+      "page": 1,
+      "id": "w06-cover",
+      "role": "cover",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": false,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "brand-page-counter",
+        "footer_top": 950,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 12,
+        "painted_box_count": 3,
+        "text_run_count": 5,
+        "glyph_count": 56,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "brand-page-counter",
+          "top": 950,
+          "synthetic": false
+        },
+        "content_bottom": 871,
+        "minimum_footer_gap": 79
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 87,
+            "right": 512,
+            "bottom": 132,
+            "width": 416,
+            "height": 45
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "学习经历与音乐老师",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 393.781,
+            "right": 816,
+            "bottom": 475.781,
+            "width": 720,
+            "height": 82
+          },
+          "font_px": 82,
+          "effective_font_px": 82,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "760"
+        },
+        {
+          "text": "听故事、商量计划、讲故事，分享学习与音乐经历。",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 23,
+          "bounds": {
+            "x": 96,
+            "y": 565.609,
+            "right": 960,
+            "bottom": 678.406,
+            "width": 864,
+            "height": 112.797
+          },
+          "font_px": 48,
+          "effective_font_px": 48,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 952,
+            "right": 426,
+            "bottom": 982,
+            "width": 330,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "01 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1719,
+            "y": 952,
+            "right": 1824,
+            "bottom": 982,
+            "width": 105,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 1920,
+            "bottom": 1080,
+            "width": 1920,
+            "height": 1080
+          },
+          "background_color": "rgb(255, 255, 255)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 515.609,
+            "right": 186,
+            "bottom": 523.609,
+            "width": 90,
+            "height": 8
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 1068.891,
+            "y": 251,
+            "right": 1824,
+            "bottom": 871,
+            "width": 755.109,
+            "height": 620
+          },
+          "background_color": "rgba(0, 0, 0, 0)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/cover.png",
+          "alt": "学生讨论中文学习与音乐活动",
+          "loaded": true,
+          "natural_width": 1536,
+          "natural_height": 1024,
+          "rect": {
+            "x": 1101.938,
+            "y": 266,
+            "right": 1791.938,
+            "bottom": 856,
+            "width": 690,
+            "height": 590
+          }
+        }
+      ],
+      "issues": [
+        {
+          "kind": "page-identity",
+          "expected": "w09-l04-l05-page-06",
+          "actual": "w06-cover"
+        }
+      ],
+      "measurement_sha256": "5b82611d4186fb4cf4e125b70c98189f9c70e50b22039d5f89c1203d855f8fbe",
+      "screenshot": {
+        "file": "slide-06.png",
+        "sha256": "e70dd41a3db6a7f5a9421c0a1e3551f9b5435c36daaa393416081e8c0b99e3cc",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 0,
+      "page": 1,
+      "id": "w06-cover",
+      "role": "cover",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": false,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "brand-page-counter",
+        "footer_top": 950,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 12,
+        "painted_box_count": 3,
+        "text_run_count": 5,
+        "glyph_count": 56,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "brand-page-counter",
+          "top": 950,
+          "synthetic": false
+        },
+        "content_bottom": 871,
+        "minimum_footer_gap": 79
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 87,
+            "right": 512,
+            "bottom": 132,
+            "width": 416,
+            "height": 45
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "学习经历与音乐老师",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 393.781,
+            "right": 816,
+            "bottom": 475.781,
+            "width": 720,
+            "height": 82
+          },
+          "font_px": 82,
+          "effective_font_px": 82,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "760"
+        },
+        {
+          "text": "听故事、商量计划、讲故事，分享学习与音乐经历。",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 23,
+          "bounds": {
+            "x": 96,
+            "y": 565.609,
+            "right": 960,
+            "bottom": 678.406,
+            "width": 864,
+            "height": 112.797
+          },
+          "font_px": 48,
+          "effective_font_px": 48,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 952,
+            "right": 426,
+            "bottom": 982,
+            "width": 330,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "01 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1719,
+            "y": 952,
+            "right": 1824,
+            "bottom": 982,
+            "width": 105,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 1920,
+            "bottom": 1080,
+            "width": 1920,
+            "height": 1080
+          },
+          "background_color": "rgb(255, 255, 255)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 515.609,
+            "right": 186,
+            "bottom": 523.609,
+            "width": 90,
+            "height": 8
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 1068.891,
+            "y": 251,
+            "right": 1824,
+            "bottom": 871,
+            "width": 755.109,
+            "height": 620
+          },
+          "background_color": "rgba(0, 0, 0, 0)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/cover.png",
+          "alt": "学生讨论中文学习与音乐活动",
+          "loaded": true,
+          "natural_width": 1536,
+          "natural_height": 1024,
+          "rect": {
+            "x": 1101.938,
+            "y": 266,
+            "right": 1791.938,
+            "bottom": 856,
+            "width": 690,
+            "height": 590
+          }
+        }
+      ],
+      "issues": [
+        {
+          "kind": "page-identity",
+          "expected": "w09-l04-l05-page-07",
+          "actual": "w06-cover"
+        }
+      ],
+      "measurement_sha256": "5fd226a91c3f72d3c83e4e8a9958e1c3cc35e830d53b4d137a5324dc34b4dbb1",
+      "screenshot": {
+        "file": "slide-07.png",
+        "sha256": "e70dd41a3db6a7f5a9421c0a1e3551f9b5435c36daaa393416081e8c0b99e3cc",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 0,
+      "page": 1,
+      "id": "w06-cover",
+      "role": "cover",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": false,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "brand-page-counter",
+        "footer_top": 950,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 12,
+        "painted_box_count": 3,
+        "text_run_count": 5,
+        "glyph_count": 56,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "brand-page-counter",
+          "top": 950,
+          "synthetic": false
+        },
+        "content_bottom": 871,
+        "minimum_footer_gap": 79
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 87,
+            "right": 512,
+            "bottom": 132,
+            "width": 416,
+            "height": 45
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "学习经历与音乐老师",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 393.781,
+            "right": 816,
+            "bottom": 475.781,
+            "width": 720,
+            "height": 82
+          },
+          "font_px": 82,
+          "effective_font_px": 82,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "760"
+        },
+        {
+          "text": "听故事、商量计划、讲故事，分享学习与音乐经历。",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 23,
+          "bounds": {
+            "x": 96,
+            "y": 565.609,
+            "right": 960,
+            "bottom": 678.406,
+            "width": 864,
+            "height": 112.797
+          },
+          "font_px": 48,
+          "effective_font_px": 48,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 952,
+            "right": 426,
+            "bottom": 982,
+            "width": 330,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "01 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1719,
+            "y": 952,
+            "right": 1824,
+            "bottom": 982,
+            "width": 105,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 1920,
+            "bottom": 1080,
+            "width": 1920,
+            "height": 1080
+          },
+          "background_color": "rgb(255, 255, 255)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 515.609,
+            "right": 186,
+            "bottom": 523.609,
+            "width": 90,
+            "height": 8
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 1068.891,
+            "y": 251,
+            "right": 1824,
+            "bottom": 871,
+            "width": 755.109,
+            "height": 620
+          },
+          "background_color": "rgba(0, 0, 0, 0)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/cover.png",
+          "alt": "学生讨论中文学习与音乐活动",
+          "loaded": true,
+          "natural_width": 1536,
+          "natural_height": 1024,
+          "rect": {
+            "x": 1101.938,
+            "y": 266,
+            "right": 1791.938,
+            "bottom": 856,
+            "width": 690,
+            "height": 590
+          }
+        }
+      ],
+      "issues": [
+        {
+          "kind": "page-identity",
+          "expected": "w09-l04-l05-page-08",
+          "actual": "w06-cover"
+        }
+      ],
+      "measurement_sha256": "6526c83fbacad6b42d1465db5a03a3950f721d10462ea2ae07cf0222e6a06f83",
+      "screenshot": {
+        "file": "slide-08.png",
+        "sha256": "e70dd41a3db6a7f5a9421c0a1e3551f9b5435c36daaa393416081e8c0b99e3cc",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 0,
+      "page": 1,
+      "id": "w06-cover",
+      "role": "cover",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": false,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "brand-page-counter",
+        "footer_top": 950,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 12,
+        "painted_box_count": 3,
+        "text_run_count": 5,
+        "glyph_count": 56,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "brand-page-counter",
+          "top": 950,
+          "synthetic": false
+        },
+        "content_bottom": 871,
+        "minimum_footer_gap": 79
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 87,
+            "right": 512,
+            "bottom": 132,
+            "width": 416,
+            "height": 45
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "学习经历与音乐老师",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 393.781,
+            "right": 816,
+            "bottom": 475.781,
+            "width": 720,
+            "height": 82
+          },
+          "font_px": 82,
+          "effective_font_px": 82,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "760"
+        },
+        {
+          "text": "听故事、商量计划、讲故事，分享学习与音乐经历。",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 23,
+          "bounds": {
+            "x": 96,
+            "y": 565.609,
+            "right": 960,
+            "bottom": 678.406,
+            "width": 864,
+            "height": 112.797
+          },
+          "font_px": 48,
+          "effective_font_px": 48,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 952,
+            "right": 426,
+            "bottom": 982,
+            "width": 330,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "01 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1719,
+            "y": 952,
+            "right": 1824,
+            "bottom": 982,
+            "width": 105,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 1920,
+            "bottom": 1080,
+            "width": 1920,
+            "height": 1080
+          },
+          "background_color": "rgb(255, 255, 255)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 515.609,
+            "right": 186,
+            "bottom": 523.609,
+            "width": 90,
+            "height": 8
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 1068.891,
+            "y": 251,
+            "right": 1824,
+            "bottom": 871,
+            "width": 755.109,
+            "height": 620
+          },
+          "background_color": "rgba(0, 0, 0, 0)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/cover.png",
+          "alt": "学生讨论中文学习与音乐活动",
+          "loaded": true,
+          "natural_width": 1536,
+          "natural_height": 1024,
+          "rect": {
+            "x": 1101.938,
+            "y": 266,
+            "right": 1791.938,
+            "bottom": 856,
+            "width": 690,
+            "height": 590
+          }
+        }
+      ],
+      "issues": [
+        {
+          "kind": "page-identity",
+          "expected": "w09-l04-l05-page-09",
+          "actual": "w06-cover"
+        }
+      ],
+      "measurement_sha256": "b6483984cb6f4282a33955160150c86a7b49e6aecad85af36c2f9c7568d2be02",
+      "screenshot": {
+        "file": "slide-09.png",
+        "sha256": "e70dd41a3db6a7f5a9421c0a1e3551f9b5435c36daaa393416081e8c0b99e3cc",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 0,
+      "page": 1,
+      "id": "w06-cover",
+      "role": "cover",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": false,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "brand-page-counter",
+        "footer_top": 950,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 12,
+        "painted_box_count": 3,
+        "text_run_count": 5,
+        "glyph_count": 56,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "brand-page-counter",
+          "top": 950,
+          "synthetic": false
+        },
+        "content_bottom": 871,
+        "minimum_footer_gap": 79
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 87,
+            "right": 512,
+            "bottom": 132,
+            "width": 416,
+            "height": 45
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "学习经历与音乐老师",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 393.781,
+            "right": 816,
+            "bottom": 475.781,
+            "width": 720,
+            "height": 82
+          },
+          "font_px": 82,
+          "effective_font_px": 82,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "760"
+        },
+        {
+          "text": "听故事、商量计划、讲故事，分享学习与音乐经历。",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 23,
+          "bounds": {
+            "x": 96,
+            "y": 565.609,
+            "right": 960,
+            "bottom": 678.406,
+            "width": 864,
+            "height": 112.797
+          },
+          "font_px": 48,
+          "effective_font_px": 48,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 952,
+            "right": 426,
+            "bottom": 982,
+            "width": 330,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "01 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1719,
+            "y": 952,
+            "right": 1824,
+            "bottom": 982,
+            "width": 105,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 1920,
+            "bottom": 1080,
+            "width": 1920,
+            "height": 1080
+          },
+          "background_color": "rgb(255, 255, 255)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 515.609,
+            "right": 186,
+            "bottom": 523.609,
+            "width": 90,
+            "height": 8
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 1068.891,
+            "y": 251,
+            "right": 1824,
+            "bottom": 871,
+            "width": 755.109,
+            "height": 620
+          },
+          "background_color": "rgba(0, 0, 0, 0)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/cover.png",
+          "alt": "学生讨论中文学习与音乐活动",
+          "loaded": true,
+          "natural_width": 1536,
+          "natural_height": 1024,
+          "rect": {
+            "x": 1101.938,
+            "y": 266,
+            "right": 1791.938,
+            "bottom": 856,
+            "width": 690,
+            "height": 590
+          }
+        }
+      ],
+      "issues": [
+        {
+          "kind": "page-identity",
+          "expected": "w09-l04-l05-page-10",
+          "actual": "w06-cover"
+        }
+      ],
+      "measurement_sha256": "bb92a9ebae7681592049952be7959c48f74c0eb495735f11f370e942a7468e48",
+      "screenshot": {
+        "file": "slide-10.png",
+        "sha256": "e70dd41a3db6a7f5a9421c0a1e3551f9b5435c36daaa393416081e8c0b99e3cc",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 0,
+      "page": 1,
+      "id": "w06-cover",
+      "role": "cover",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": false,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "brand-page-counter",
+        "footer_top": 950,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 12,
+        "painted_box_count": 3,
+        "text_run_count": 5,
+        "glyph_count": 56,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "brand-page-counter",
+          "top": 950,
+          "synthetic": false
+        },
+        "content_bottom": 871,
+        "minimum_footer_gap": 79
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 87,
+            "right": 512,
+            "bottom": 132,
+            "width": 416,
+            "height": 45
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "学习经历与音乐老师",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 393.781,
+            "right": 816,
+            "bottom": 475.781,
+            "width": 720,
+            "height": 82
+          },
+          "font_px": 82,
+          "effective_font_px": 82,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "760"
+        },
+        {
+          "text": "听故事、商量计划、讲故事，分享学习与音乐经历。",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 23,
+          "bounds": {
+            "x": 96,
+            "y": 565.609,
+            "right": 960,
+            "bottom": 678.406,
+            "width": 864,
+            "height": 112.797
+          },
+          "font_px": 48,
+          "effective_font_px": 48,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 952,
+            "right": 426,
+            "bottom": 982,
+            "width": 330,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "01 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1719,
+            "y": 952,
+            "right": 1824,
+            "bottom": 982,
+            "width": 105,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 1920,
+            "bottom": 1080,
+            "width": 1920,
+            "height": 1080
+          },
+          "background_color": "rgb(255, 255, 255)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 515.609,
+            "right": 186,
+            "bottom": 523.609,
+            "width": 90,
+            "height": 8
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 1068.891,
+            "y": 251,
+            "right": 1824,
+            "bottom": 871,
+            "width": 755.109,
+            "height": 620
+          },
+          "background_color": "rgba(0, 0, 0, 0)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/cover.png",
+          "alt": "学生讨论中文学习与音乐活动",
+          "loaded": true,
+          "natural_width": 1536,
+          "natural_height": 1024,
+          "rect": {
+            "x": 1101.938,
+            "y": 266,
+            "right": 1791.938,
+            "bottom": 856,
+            "width": 690,
+            "height": 590
+          }
+        }
+      ],
+      "issues": [
+        {
+          "kind": "page-identity",
+          "expected": "w09-l04-l05-page-11",
+          "actual": "w06-cover"
+        }
+      ],
+      "measurement_sha256": "d42155d337a4e68c4ef74e9ec432e1a3ca04d8943f157826199f1d71b1f5aeef",
+      "screenshot": {
+        "file": "slide-11.png",
+        "sha256": "e70dd41a3db6a7f5a9421c0a1e3551f9b5435c36daaa393416081e8c0b99e3cc",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 0,
+      "page": 1,
+      "id": "w06-cover",
+      "role": "cover",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": false,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "brand-page-counter",
+        "footer_top": 950,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 12,
+        "painted_box_count": 3,
+        "text_run_count": 5,
+        "glyph_count": 56,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "brand-page-counter",
+          "top": 950,
+          "synthetic": false
+        },
+        "content_bottom": 871,
+        "minimum_footer_gap": 79
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 87,
+            "right": 512,
+            "bottom": 132,
+            "width": 416,
+            "height": 45
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "学习经历与音乐老师",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 393.781,
+            "right": 816,
+            "bottom": 475.781,
+            "width": 720,
+            "height": 82
+          },
+          "font_px": 82,
+          "effective_font_px": 82,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "760"
+        },
+        {
+          "text": "听故事、商量计划、讲故事，分享学习与音乐经历。",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 23,
+          "bounds": {
+            "x": 96,
+            "y": 565.609,
+            "right": 960,
+            "bottom": 678.406,
+            "width": 864,
+            "height": 112.797
+          },
+          "font_px": 48,
+          "effective_font_px": 48,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 952,
+            "right": 426,
+            "bottom": 982,
+            "width": 330,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "01 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1719,
+            "y": 952,
+            "right": 1824,
+            "bottom": 982,
+            "width": 105,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 1920,
+            "bottom": 1080,
+            "width": 1920,
+            "height": 1080
+          },
+          "background_color": "rgb(255, 255, 255)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 515.609,
+            "right": 186,
+            "bottom": 523.609,
+            "width": 90,
+            "height": 8
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 1068.891,
+            "y": 251,
+            "right": 1824,
+            "bottom": 871,
+            "width": 755.109,
+            "height": 620
+          },
+          "background_color": "rgba(0, 0, 0, 0)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/cover.png",
+          "alt": "学生讨论中文学习与音乐活动",
+          "loaded": true,
+          "natural_width": 1536,
+          "natural_height": 1024,
+          "rect": {
+            "x": 1101.938,
+            "y": 266,
+            "right": 1791.938,
+            "bottom": 856,
+            "width": 690,
+            "height": 590
+          }
+        }
+      ],
+      "issues": [
+        {
+          "kind": "page-identity",
+          "expected": "w09-l04-l05-page-12",
+          "actual": "w06-cover"
+        }
+      ],
+      "measurement_sha256": "ce2d165c9a8b39576f516a2cc1f0041d517c357ab10deadb5e8ebd88c2c96ad6",
+      "screenshot": {
+        "file": "slide-12.png",
+        "sha256": "e70dd41a3db6a7f5a9421c0a1e3551f9b5435c36daaa393416081e8c0b99e3cc",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 0,
+      "page": 1,
+      "id": "w06-cover",
+      "role": "cover",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": false,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "brand-page-counter",
+        "footer_top": 950,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 12,
+        "painted_box_count": 3,
+        "text_run_count": 5,
+        "glyph_count": 56,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "brand-page-counter",
+          "top": 950,
+          "synthetic": false
+        },
+        "content_bottom": 871,
+        "minimum_footer_gap": 79
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 87,
+            "right": 512,
+            "bottom": 132,
+            "width": 416,
+            "height": 45
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "学习经历与音乐老师",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 393.781,
+            "right": 816,
+            "bottom": 475.781,
+            "width": 720,
+            "height": 82
+          },
+          "font_px": 82,
+          "effective_font_px": 82,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "760"
+        },
+        {
+          "text": "听故事、商量计划、讲故事，分享学习与音乐经历。",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 23,
+          "bounds": {
+            "x": 96,
+            "y": 565.609,
+            "right": 960,
+            "bottom": 678.406,
+            "width": 864,
+            "height": 112.797
+          },
+          "font_px": 48,
+          "effective_font_px": 48,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 952,
+            "right": 426,
+            "bottom": 982,
+            "width": 330,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "01 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1719,
+            "y": 952,
+            "right": 1824,
+            "bottom": 982,
+            "width": 105,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 1920,
+            "bottom": 1080,
+            "width": 1920,
+            "height": 1080
+          },
+          "background_color": "rgb(255, 255, 255)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 515.609,
+            "right": 186,
+            "bottom": 523.609,
+            "width": 90,
+            "height": 8
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 1068.891,
+            "y": 251,
+            "right": 1824,
+            "bottom": 871,
+            "width": 755.109,
+            "height": 620
+          },
+          "background_color": "rgba(0, 0, 0, 0)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/cover.png",
+          "alt": "学生讨论中文学习与音乐活动",
+          "loaded": true,
+          "natural_width": 1536,
+          "natural_height": 1024,
+          "rect": {
+            "x": 1101.938,
+            "y": 266,
+            "right": 1791.938,
+            "bottom": 856,
+            "width": 690,
+            "height": 590
+          }
+        }
+      ],
+      "issues": [
+        {
+          "kind": "page-identity",
+          "expected": "w09-l04-l05-page-13",
+          "actual": "w06-cover"
+        }
+      ],
+      "measurement_sha256": "59fd2fe44b6f5987a5561d7aba3047d27149e0c714c9ec9d9863ca2f5405830e",
+      "screenshot": {
+        "file": "slide-13.png",
+        "sha256": "e70dd41a3db6a7f5a9421c0a1e3551f9b5435c36daaa393416081e8c0b99e3cc",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 0,
+      "page": 1,
+      "id": "w06-cover",
+      "role": "cover",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": false,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "brand-page-counter",
+        "footer_top": 950,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 12,
+        "painted_box_count": 3,
+        "text_run_count": 5,
+        "glyph_count": 56,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "brand-page-counter",
+          "top": 950,
+          "synthetic": false
+        },
+        "content_bottom": 871,
+        "minimum_footer_gap": 79
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 87,
+            "right": 512,
+            "bottom": 132,
+            "width": 416,
+            "height": 45
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "学习经历与音乐老师",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 393.781,
+            "right": 816,
+            "bottom": 475.781,
+            "width": 720,
+            "height": 82
+          },
+          "font_px": 82,
+          "effective_font_px": 82,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "760"
+        },
+        {
+          "text": "听故事、商量计划、讲故事，分享学习与音乐经历。",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 23,
+          "bounds": {
+            "x": 96,
+            "y": 565.609,
+            "right": 960,
+            "bottom": 678.406,
+            "width": 864,
+            "height": 112.797
+          },
+          "font_px": 48,
+          "effective_font_px": 48,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 952,
+            "right": 426,
+            "bottom": 982,
+            "width": 330,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "01 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1719,
+            "y": 952,
+            "right": 1824,
+            "bottom": 982,
+            "width": 105,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 1920,
+            "bottom": 1080,
+            "width": 1920,
+            "height": 1080
+          },
+          "background_color": "rgb(255, 255, 255)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 515.609,
+            "right": 186,
+            "bottom": 523.609,
+            "width": 90,
+            "height": 8
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 1068.891,
+            "y": 251,
+            "right": 1824,
+            "bottom": 871,
+            "width": 755.109,
+            "height": 620
+          },
+          "background_color": "rgba(0, 0, 0, 0)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/cover.png",
+          "alt": "学生讨论中文学习与音乐活动",
+          "loaded": true,
+          "natural_width": 1536,
+          "natural_height": 1024,
+          "rect": {
+            "x": 1101.938,
+            "y": 266,
+            "right": 1791.938,
+            "bottom": 856,
+            "width": 690,
+            "height": 590
+          }
+        }
+      ],
+      "issues": [
+        {
+          "kind": "page-identity",
+          "expected": "w09-l04-l05-page-14",
+          "actual": "w06-cover"
+        }
+      ],
+      "measurement_sha256": "8e1afc942864d2431b734b0c67bf0b7f5c199fe8616266ae287ef44536e5707a",
+      "screenshot": {
+        "file": "slide-14.png",
+        "sha256": "e70dd41a3db6a7f5a9421c0a1e3551f9b5435c36daaa393416081e8c0b99e3cc",
+        "stable": true,
+        "attempts": 3
+      }
+    },
+    {
+      "index": 0,
+      "page": 1,
+      "id": "w06-cover",
+      "role": "cover",
+      "structure": {
+        "frame": true,
+        "page": true,
+        "visible_page_count": 1,
+        "heading": true,
+        "header": false,
+        "main": false,
+        "visible_body": true,
+        "footer": true,
+        "footer_kind": "brand-page-counter",
+        "footer_top": 950,
+        "synthetic_footer": false
+      },
+      "coverage": {
+        "visible_element_count": 12,
+        "painted_box_count": 3,
+        "text_run_count": 5,
+        "glyph_count": 56,
+        "image_count": 1,
+        "loaded_image_count": 1,
+        "finite": true,
+        "footer": {
+          "kind": "brand-page-counter",
+          "top": 950,
+          "synthetic": false
+        },
+        "content_bottom": 871,
+        "minimum_footer_gap": 79
+      },
+      "text_runs": [
+        {
+          "text": "第4—5课 · 实体课",
+          "tag": "div",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 87,
+            "right": 512,
+            "bottom": 132,
+            "width": 416,
+            "height": 45
+          },
+          "font_px": 45,
+          "effective_font_px": 45,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(8, 126, 139)",
+          "weight": "700"
+        },
+        {
+          "text": "学习经历与音乐老师",
+          "tag": "h1",
+          "classes": "",
+          "glyph_count": 9,
+          "bounds": {
+            "x": 96,
+            "y": 393.781,
+            "right": 816,
+            "bottom": 475.781,
+            "width": 720,
+            "height": 82
+          },
+          "font_px": 82,
+          "effective_font_px": 82,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(16, 42, 67)",
+          "weight": "760"
+        },
+        {
+          "text": "听故事、商量计划、讲故事，分享学习与音乐经历。",
+          "tag": "p",
+          "classes": "",
+          "glyph_count": 23,
+          "bounds": {
+            "x": 96,
+            "y": 565.609,
+            "right": 960,
+            "bottom": 678.406,
+            "width": 864,
+            "height": 112.797
+          },
+          "font_px": 48,
+          "effective_font_px": 48,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "博雅汉语 · 准中级听说",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 10,
+          "bounds": {
+            "x": 96,
+            "y": 952,
+            "right": 426,
+            "bottom": 982,
+            "width": 330,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        },
+        {
+          "text": "01 / 15",
+          "tag": "span",
+          "classes": "",
+          "glyph_count": 5,
+          "bounds": {
+            "x": 1719,
+            "y": 952,
+            "right": 1824,
+            "bottom": 982,
+            "width": 105,
+            "height": 30
+          },
+          "font_px": 30,
+          "effective_font_px": 30,
+          "font_family": "KaiTi, STKaiti, 楷体, \"Times New Roman\", serif",
+          "color": "rgb(82, 101, 121)",
+          "weight": "400"
+        }
+      ],
+      "painted_boxes": [
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 1920,
+            "bottom": 1080,
+            "width": 1920,
+            "height": 1080
+          },
+          "background_color": "rgb(255, 255, 255)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 96,
+            "y": 515.609,
+            "right": 186,
+            "bottom": 523.609,
+            "width": 90,
+            "height": 8
+          },
+          "background_color": "rgb(8, 126, 139)",
+          "background_image": "none",
+          "border_radius": "4px",
+          "box_shadow": "none"
+        },
+        {
+          "tag": "div",
+          "classes": "",
+          "rect": {
+            "x": 1068.891,
+            "y": 251,
+            "right": 1824,
+            "bottom": 871,
+            "width": 755.109,
+            "height": 620
+          },
+          "background_color": "rgba(0, 0, 0, 0)",
+          "background_image": "none",
+          "border_radius": "0px",
+          "box_shadow": "none"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/cover.png",
+          "alt": "学生讨论中文学习与音乐活动",
+          "loaded": true,
+          "natural_width": 1536,
+          "natural_height": 1024,
+          "rect": {
+            "x": 1101.938,
+            "y": 266,
+            "right": 1791.938,
+            "bottom": 856,
+            "width": 690,
+            "height": 590
+          }
+        }
+      ],
+      "issues": [
+        {
+          "kind": "page-identity",
+          "expected": "w09-l04-l05-page-15",
+          "actual": "w06-cover"
+        }
+      ],
+      "measurement_sha256": "3d5c34817b46b2c5ec6e667fb0c19f0cf25efd33e78f81f406664a09422533db",
+      "screenshot": {
+        "file": "slide-15.png",
+        "sha256": "e70dd41a3db6a7f5a9421c0a1e3551f9b5435c36daaa393416081e8c0b99e3cc",
+        "stable": true,
+        "attempts": 3
+      }
+    }
+  ],
+  "negative": [
+    {
+      "name": "footer-clearance",
+      "pass": true,
+      "expected_issue": "footer-clearance",
+      "observed_issues": [
+        "footer-clearance"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "orphan-line",
+      "pass": true,
+      "expected_issue": "orphan-line",
+      "observed_issues": [
+        "orphan-line"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "arbitrary-offcanvas-content",
+      "pass": true,
+      "expected_issue": "canvas-bounds",
+      "observed_issues": [
+        "canvas-bounds",
+        "body-bounds"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "arbitrary-offcanvas-painted-box",
+      "pass": true,
+      "expected_issue": "canvas-bounds",
+      "observed_issues": [
+        "canvas-bounds",
+        "body-bounds"
+      ],
+      "painted_box_count": 1
+    },
+    {
+      "name": "tiny-critical-text",
+      "pass": true,
+      "expected_issue": "font-size",
+      "observed_issues": [
+        "font-size"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "transformed-tiny-critical-text",
+      "pass": true,
+      "expected_issue": "font-size",
+      "observed_issues": [
+        "font-size"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "wrong-font-family",
+      "pass": true,
+      "expected_issue": "font-family",
+      "observed_issues": [
+        "font-family"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "missing-footer",
+      "pass": true,
+      "expected_issue": "missing-footer",
+      "observed_issues": [
+        "missing-footer",
+        "incomplete-coverage",
+        "missing-structure"
+      ],
+      "painted_box_count": 0
+    },
+    {
+      "name": "missing-required-structure",
+      "pass": true,
+      "expected_issue": "missing-structure",
+      "observed_issues": [
+        "missing-structure"
+      ],
+      "painted_box_count": 0
+    }
+  ]
+}

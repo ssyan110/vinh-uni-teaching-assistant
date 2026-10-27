@@ -49,3 +49,25 @@ node scripts/build-review-manifest.mjs --source-root /path/to/vinh-uni-teaching-
 生成 dashboard 前会运行 `scripts/validate_lesson_identity.py`；如果教材范围、课号或路径不一致，dashboard 不会更新。
 
 旧的 dashboard 快照已移至 `archive/legacy-materials-2026-08-27/material-production-dashboard/`；不要把它当作 dashboard 数据来源。
+
+## 课前准备
+
+打开首页顶部的「课前准备」，或直接进入 `index.html#readiness`。选择教材、学期与本次课次，查看教材来源、逐页内容批准、上课材料、教师播放与试教记录。课次按编号排列，页面不推定上课日期。
+
+刷新本机检查快照：
+
+```bash
+python3 scripts/build_dashboard.py --readiness-only
+```
+
+命令先验证课次身份，再从 registry、课次 manifest 与 OpenSlide 工作区登记生成 `readiness.js`；不覆盖现有 `manifest.js` 的教材审核资料。完整 Python dashboard 构建也会更新准备快照。运行 `build-review-manifest.mjs` 后，若来源有改动，再运行上述命令。页面显示快照时间，浏览器刷新不会自动重新读取本地文件。
+
+- 「本次文件核对一致」表示文件哈希或现有内容批准 gate 通过，不能代替教师验收。
+- 「已有核对记录」保留来源包的登记状态；本工具不会重新审核教材原页。
+- 「待处理」对应明确待办或文件版本问题；「待核实」对应缺失、损坏或不能绑定到当前版本的记录。缺少人工记录不表示教师没做过。
+- HTML 与教师用稿保留草稿标签；没有权威 manifest 不会隐藏已登记的 HTML。联合课次只使用登记的完整 lesson_key 与学期。
+- 已有 Adam 完成确认的教材保留该决定，不重新产生历史待办；材料与旧的技术记录仍从原教材工作区查看。
+
+这是只读准备工具，不改教材、批准、QA 或发布状态，不连接线上学生资料。
+
+验证：`python3 scripts/test_lesson_readiness.py`；浏览器检查：`node dashboard/test-readiness.cjs`。

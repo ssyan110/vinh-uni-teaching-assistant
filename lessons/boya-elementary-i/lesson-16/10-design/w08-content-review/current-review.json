@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "week": "W08",
+  "version": "v02",
+  "date": "2026-10-23",
+  "status": "pending_content_review",
+  "offering_id": "2026-fall",
+  "class_scope": "BOYA-LS-E1-Y1S1-2026F",
+  "lesson_keys": [
+    "boya-elementary-i:lesson-16",
+    "boya-elementary-i:lesson-17"
+  ],
+  "current_review": "lessons/boya-elementary-i/lesson-16/10-design/w08-content-review/lesson-16-17-逐页文案审阅.md",
+  "review_sha256": "3badfcad23bfa6d823f382c8fca9825df424bd34ea48680e9fc34c63c27bd4ef",
+  "student_page_count": 14,
+  "activity_count": 8,
+  "activities": [
+    {
+      "id": "01",
+      "name": "词语复习与个人报告",
+      "pages": [
+        3,
+        4
+      ],
+      "teacher_material": "01"
+    },
+    {
+      "id": "02",
+      "name": "听点餐，核对订单",
+      "pages": [
+        5
+      ],
+      "teacher_material": "02"
+    },
+    {
+      "id": "03",
+      "name": "一起点餐",
+      "pages": [
+        6,
+        7
+      ],
+      "teacher_material": "03"
+    },
+    {
+      "id": "04",
+      "name": "听路线，找到朋友家",
+      "pages": [
+        8
+      ],
+      "teacher_material": "04"
+    },
+    {
+      "id": "05",
+      "name": "招待朋友",
+      "pages": [
+        9
+      ],
+      "teacher_material": "05"
+    },
+    {
+      "id": "06",
+      "name": "看图说故事",
+      "pages": [
+        10
+      ],
+      "teacher_material": "06"
+    },
+    {
+      "id": "07",
+      "name": "朋友来玩，在家吃还是出去吃？",
+      "pages": [
+        11,
+        12
+      ],
+      "teacher_material": "07"
+    },
+    {
+      "id": "08",
+      "name": "个人检查",
+      "pages": [
+        13
+      ],
+      "teacher_material": "08"
+    }
+  ],
+  "superseded": [
+    ".agent/runs/w08-planning-20261022/staging/W08-活动与投影片规划-v01.md",
+    "v01 five-activity nine-page copy at current_review path"
+  ],
+  "history_snapshot": ".agent/runs/w08-unified-review-20261023/before-merge",
+  "content_approval": null,
+  "production_authorized": false
+}

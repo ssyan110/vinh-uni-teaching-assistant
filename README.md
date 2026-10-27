@@ -29,9 +29,9 @@ archive/                        # 历史快照，不作为生产输入
 
 ## 投影片製作方式
 
-2026-10-07 06:52 UTC確認：線上課PPT維持原狀，未來仍以PPT／PPTX優先，保留單詞一頁及已批准風格；只有實體課以HTML slides優先，需要時另備PPTX。
+2026-10-27 Adam 確認：今後一年級與二年級所有學期的實體課一律使用 OpenSlide 並同步統一首頁；PPT／PPTX 用於線上預習。新實體課不製作 PPTX 或 PPTX 備份；歷史 PPTX 僅在明確授權的既有定稿維護／唯讀 intake 使用。課次內容批准、教學分流及 release gate 保持獨立。
 
-未來實體課預設HTML／OpenSlide，沿用[2026-10-07實體課標準](docs/classroom-html-standard-2026-10-07.md)；線上預習未另指定時沿用native-pptx。Open Slide framework 以 Git submodule 放在 [`tools/open-slide/`](tools/open-slide/)，來源為 [open-slide/open-slide](https://github.com/open-slide/open-slide)。選用時，請在該課 `10-design/open-slide-draft/` 製作，實體課已有HTML交付偏好，額外匯出依需要選擇；在專用 QA／批准／release 流程建立前，它只算設計草稿。
+未來實體課預設HTML／OpenSlide，沿用[2026-10-07實體課標準](docs/classroom-html-standard-2026-10-07.md)；線上預習未另指定時沿用native-pptx。Open Slide framework 以 Git submodule 放在 [`tools/open-slide/`](tools/open-slide/)，來源為 [open-slide/open-slide](https://github.com/open-slide/open-slide)。選用時，請在該課 `10-design/open-slide-draft/` 製作，實體課統一使用 OpenSlide，不製作 PPTX 備份；正式歸檔和交付依 `docs/workflow/classroom-html-lifecycle.md`，需各項人類批准；同步首頁不等於正式發布。
 
 初次 checkout 後執行 `git submodule update --init tools/open-slide` 取得 framework。每課選擇製作方式不改變教材來源、內容批准或既有 authority gate。
 

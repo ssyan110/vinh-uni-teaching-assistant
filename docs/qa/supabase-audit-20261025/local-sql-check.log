@@ -1,0 +1,299 @@
+
+FILE: docs/qa/supabase-audit-20261025/local-bootstrap.sql
+CREATE ROLE
+CREATE ROLE
+CREATE ROLE
+CREATE SCHEMA
+CREATE TABLE
+CREATE FUNCTION
+GRANT
+GRANT
+ALTER DEFAULT PRIVILEGES
+ALTER DEFAULT PRIVILEGES
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260823090017_initial_student_tracker.sql
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE FUNCTION
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+REVOKE
+GRANT
+REVOKE
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260905000000_learning_events.sql
+ALTER TABLE
+ALTER TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE TRIGGER
+ALTER TABLE
+REVOKE
+GRANT
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260905000001_foreign_key_indexes.sql
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260905000002_learning_event_idempotency.sql
+ALTER TABLE
+CREATE INDEX
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260905000003_learning_event_upsert_key.sql
+DROP INDEX
+ALTER TABLE
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260905000004_learning_event_grade_flag.sql
+ALTER TABLE
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260905000005_randomizer_records.sql
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE TRIGGER
+CREATE TRIGGER
+ALTER TABLE
+ALTER TABLE
+REVOKE
+GRANT
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260905000006_randomizer_fk_indexes.sql
+CREATE INDEX
+CREATE INDEX
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260905172541_classroom_raw_records.sql
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+ALTER TABLE
+CREATE INDEX
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+ALTER TABLE
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260908000001_randomizer_observations.sql
+ALTER TABLE
+ALTER TABLE
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260908000002_dashboard_notes_questions.sql
+CREATE TABLE
+ALTER TABLE
+REVOKE
+GRANT
+CREATE POLICY
+CREATE POLICY
+CREATE INDEX
+ALTER TABLE
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260908000003_randomizer_fact_marks.sql
+CREATE FUNCTION
+ALTER TABLE
+ALTER TABLE
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260908125102_interact_online_classroom.sql
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+ALTER TABLE
+REVOKE
+CREATE FUNCTION
+REVOKE
+GRANT
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260909000000_class_session_notes.sql
+ALTER TABLE
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260910145000_finish_randomizer_class.sql
+CREATE FUNCTION
+REVOKE
+GRANT
+CREATE FUNCTION
+REVOKE
+CREATE TRIGGER
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260911000000_editable_class_session_number.sql
+ALTER TABLE
+DO
+CREATE INDEX
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260911100000_class_session_correction_audit.sql
+CREATE TABLE
+ALTER TABLE
+REVOKE
+GRANT
+CREATE POLICY
+CREATE FUNCTION
+REVOKE
+GRANT
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260911110000_harden_class_session_correction_grant.sql
+REVOKE
+GRANT
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260916100000_classroom_record_correction_audit.sql
+UPDATE 0
+UPDATE 0
+CREATE FUNCTION
+REVOKE
+CREATE TRIGGER
+CREATE TRIGGER
+ALTER TABLE
+ALTER TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+REVOKE
+GRANT
+CREATE POLICY
+CREATE FUNCTION
+REVOKE
+GRANT
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260916110000_allow_absent_no_response_reason.sql
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260918112930_manual_participation_adjustments.sql
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20261002000000_randomizer_teacher_calls.sql
+BEGIN
+ALTER TABLE
+ALTER TABLE
+CREATE FUNCTION
+REVOKE
+GRANT
+CREATE FUNCTION
+REVOKE
+CREATE TRIGGER
+CREATE FUNCTION
+REVOKE
+CREATE TRIGGER
+CREATE FUNCTION
+REVOKE
+CREATE TRIGGER
+CREATE FUNCTION
+REVOKE
+CREATE TRIGGER
+COMMIT
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20261002160000_preserve_classroom_record_corrections.sql
+CREATE FUNCTION
+
+FILE: classroom-tools/student-tracker/supabase/attendance-exceptions.sql
+BEGIN
+CREATE TABLE
+CREATE FUNCTION
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+REVOKE
+GRANT
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+REVOKE
+COMMIT
+
+FILE: docs/qa/supabase-audit-20261025/fixes.sql
+SET
+SET
+REVOKE
+psql:/Users/ssyan110/Development/vinh-uni-teaching-assistant/docs/qa/supabase-audit-20261025/fixes.sql:7: ERROR:  role "postgres" does not exist

@@ -1,0 +1,383 @@
+
+FILE: docs/qa/supabase-audit-20261025/local-bootstrap.sql
+DO
+CREATE SCHEMA
+CREATE TABLE
+CREATE FUNCTION
+GRANT
+GRANT
+ALTER DEFAULT PRIVILEGES
+ALTER DEFAULT PRIVILEGES
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260905103254_initial_student_tracker.sql
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE FUNCTION
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+REVOKE
+GRANT
+REVOKE
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260905103315_learning_events.sql
+ALTER TABLE
+ALTER TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE TRIGGER
+ALTER TABLE
+REVOKE
+GRANT
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260905103443_foreign_key_indexes.sql
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260905104043_learning_event_idempotency.sql
+ALTER TABLE
+CREATE INDEX
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260905104257_learning_event_upsert_key.sql
+DROP INDEX
+ALTER TABLE
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260905104416_learning_event_grade_flag.sql
+ALTER TABLE
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260905151907_randomizer_records.sql
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE TRIGGER
+CREATE TRIGGER
+ALTER TABLE
+ALTER TABLE
+REVOKE
+GRANT
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260905151937_randomizer_fk_indexes.sql
+CREATE INDEX
+CREATE INDEX
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260905172541_classroom_raw_records.sql
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+ALTER TABLE
+CREATE INDEX
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+ALTER TABLE
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260908093817_randomizer_observations.sql
+ALTER TABLE
+ALTER TABLE
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260908094926_dashboard_notes_questions.sql
+CREATE TABLE
+ALTER TABLE
+REVOKE
+GRANT
+CREATE POLICY
+CREATE POLICY
+CREATE INDEX
+ALTER TABLE
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260908095510_randomizer_fact_marks.sql
+CREATE FUNCTION
+ALTER TABLE
+ALTER TABLE
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260908125102_interact_online_classroom.sql
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+ALTER TABLE
+REVOKE
+CREATE FUNCTION
+REVOKE
+GRANT
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260910142434_finish_randomizer_class.sql
+CREATE FUNCTION
+REVOKE
+GRANT
+CREATE FUNCTION
+REVOKE
+CREATE TRIGGER
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260911083724_editable_class_session_number.sql
+ALTER TABLE
+ALTER TABLE
+CREATE INDEX
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260911083802_editable_class_session_number.sql
+psql:/Users/ssyan110/Development/vinh-uni-teaching-assistant/classroom-tools/student-tracker/supabase/migrations/20260911083802_editable_class_session_number.sql:4: NOTICE:  column "session_number" of relation "class_sessions" already exists, skipping
+ALTER TABLE
+DO
+psql:/Users/ssyan110/Development/vinh-uni-teaching-assistant/classroom-tools/student-tracker/supabase/migrations/20260911083802_editable_class_session_number.sql:23: NOTICE:  relation "class_sessions_course_session_number_key" already exists, skipping
+CREATE INDEX
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260911084209_class_session_correction_audit.sql
+CREATE TABLE
+ALTER TABLE
+REVOKE
+GRANT
+CREATE POLICY
+CREATE FUNCTION
+REVOKE
+GRANT
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260911084327_harden_class_session_correction_grant.sql
+REVOKE
+GRANT
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260916135307_classroom_record_correction_audit.sql
+UPDATE 0
+UPDATE 0
+CREATE FUNCTION
+REVOKE
+CREATE TRIGGER
+CREATE TRIGGER
+ALTER TABLE
+ALTER TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+REVOKE
+GRANT
+CREATE POLICY
+CREATE FUNCTION
+REVOKE
+GRANT
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260916135324_allow_absent_no_response_reason.sql
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260918112930_manual_participation_adjustments.sql
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20260922044922_class_session_notes.sql
+ALTER TABLE
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20261002153323_repair_approved_lt03_historical_session_link.sql
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20261002153752_preserve_classroom_record_corrections.sql
+CREATE FUNCTION
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20261002160035_randomizer_teacher_calls_and_session_safety.sql
+psql:/Users/ssyan110/Development/vinh-uni-teaching-assistant/classroom-tools/student-tracker/supabase/migrations/20261002160035_randomizer_teacher_calls_and_session_safety.sql:2: WARNING:  there is already a transaction in progress
+BEGIN
+ALTER TABLE
+ALTER TABLE
+CREATE FUNCTION
+REVOKE
+GRANT
+CREATE FUNCTION
+REVOKE
+CREATE TRIGGER
+CREATE FUNCTION
+REVOKE
+CREATE TRIGGER
+CREATE FUNCTION
+REVOKE
+CREATE TRIGGER
+CREATE FUNCTION
+REVOKE
+CREATE TRIGGER
+COMMIT
+WARNING:  there is no transaction in progress
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20261025163327_audit_schema_integrity_and_token_authorization.sql
+SET
+SET
+REVOKE
+ALTER DEFAULT PRIVILEGES
+ALTER DEFAULT PRIVILEGES
+ALTER POLICY
+ALTER POLICY
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE FUNCTION
+REVOKE
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE FUNCTION
+REVOKE
+CREATE TRIGGER
+CREATE FUNCTION
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20261025163339_attendance_exceptions.sql
+psql:/Users/ssyan110/Development/vinh-uni-teaching-assistant/classroom-tools/student-tracker/supabase/migrations/20261025163339_attendance_exceptions.sql:4: WARNING:  there is already a transaction in progress
+BEGIN
+CREATE TABLE
+CREATE FUNCTION
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+REVOKE
+GRANT
+CREATE POLICY
+CREATE POLICY
+CREATE POLICY
+REVOKE
+COMMIT
+WARNING:  there is no transaction in progress
+
+FILE: classroom-tools/student-tracker/supabase/migrations/20261025163425_attendance_exception_foreign_key_index.sql
+CREATE INDEX
+
+FILE: docs/qa/supabase-audit-20261025/local-fixtures.sql
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+
+FILE: docs/qa/supabase-audit-20261025/regression.sql
+psql:/Users/ssyan110/Development/vinh-uni-teaching-assistant/docs/qa/supabase-audit-20261025/regression.sql:2: WARNING:  there is already a transaction in progress
+BEGIN
+              set_config              
+--------------------------------------
+ 00000000-0000-0000-0000-000000000001
+(1 row)
+
+SET
+DO
+              set_config              
+--------------------------------------
+ 00000000-0000-0000-0000-000000000099
+(1 row)
+
+DO
+RESET
+SET
+DO
+RESET
+ROLLBACK
+                                                                                     result                                                                                     
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ PASS: membership, date collision, closure, attendance exception, privileges, token authorization, answer privacy, idempotency, owner isolation; all fixture writes rolled back
+(1 row)
+
+WARNING:  there is no transaction in progress
+
+FILE: classroom-tools/classroom-randomizer/qa/database-session-check.sql
+psql:/Users/ssyan110/Development/vinh-uni-teaching-assistant/classroom-tools/classroom-randomizer/qa/database-session-check.sql:2: WARNING:  there is already a transaction in progress
+BEGIN
+              set_config              
+--------------------------------------
+ 00000000-0000-0000-0000-000000000001
+(1 row)
+
+SET
+psql:/Users/ssyan110/Development/vinh-uni-teaching-assistant/classroom-tools/classroom-randomizer/qa/database-session-check.sql:75: NOTICE:  PASS: session binding, duplicate/date rejection, skips, stale replay, correction/observation and closure protection
+DO
+                                             result                                              
+-------------------------------------------------------------------------------------------------
+ PASS: session binding, date/duplicate rejection, skip, replay, correction, observation, closure
+(1 row)
+
+ROLLBACK
+WARNING:  there is no transaction in progress

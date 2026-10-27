@@ -1,0 +1,32 @@
+{
+  "deployment": {
+    "id": "dpl_6KPpVDew25ixYVT1uUh3x6DBk75g",
+    "name": "student-tracker",
+    "url": "student-tracker-j13826mg9-ssyan110-gmailcoms-projects.vercel.app",
+    "type": "LAMBDAS",
+    "state": "READY",
+    "createdAt": 1792948295273,
+    "creator": {
+      "uid": "Zs7AhDGK64KQJAZqzaCmLc4v",
+      "username": "ssyan110-9288"
+    },
+    "project": {
+      "id": "prj_ZpqnbRAjW2bwQp43pqWod2nBfKxb",
+      "name": "student-tracker",
+      "framework": "vite"
+    },
+    "meta": {},
+    "alias": [
+      "student-tracker-ssyan110-gmailcoms-projects.vercel.app"
+    ],
+    "target": "production",
+    "regions": [
+      "iad1"
+    ],
+    "buildingAt": 1792948296487,
+    "ready": 1792948307272,
+    "readyState": "READY",
+    "source": "cli",
+    "aliasError": null
+  }
+}

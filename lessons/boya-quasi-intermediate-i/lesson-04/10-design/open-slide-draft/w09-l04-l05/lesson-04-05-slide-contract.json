@@ -1,0 +1,192 @@
+{
+  "schema_version": "classroom-slide-contract-v1",
+  "offering_id": "2026-fall",
+  "owner_lesson_key": "boya-quasi-intermediate-i:lesson-04",
+  "lesson_keys": [
+    "boya-quasi-intermediate-i:lesson-04",
+    "boya-quasi-intermediate-i:lesson-05"
+  ],
+  "source_identity": {
+    "textbook_id": "boya-quasi-intermediate-i",
+    "owner_lesson_key": "boya-quasi-intermediate-i:lesson-04",
+    "path": "lessons/boya-quasi-intermediate-i/lesson-04/00-source/canonical-source.json",
+    "sha256": "0eb2afac761ba8a31682ae74cabf4a6faeebbd5e23ba8ea5d94b424014fe9aee"
+  },
+  "copy_inputs": [
+    {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/storyboard/lesson-04-逐页文案审阅.md",
+      "sha256": "82510a777e8d775bfb8c63b3c6725f8174d5b3d9a6d5a313edf377a5c0885fa6",
+      "page_scope": "v3 approved combined lesson pages 1–15"
+    },
+    {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-05/10-design/storyboard/lesson-05-逐页文案审阅.md",
+      "sha256": "82510a777e8d775bfb8c63b3c6725f8174d5b3d9a6d5a313edf377a5c0885fa6",
+      "page_scope": "v3 approved combined lesson pages 1–15"
+    },
+    {
+      "path": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/storyboard/lesson-04-活动4-小安在台湾的一天-内容.md",
+      "sha256": "5317432a684cbcc2f110be69dc6b4ac325b5ed6a18ac6a35344665d1663aa8c1",
+      "page_scope": "page 9 revised six-panel story"
+    }
+  ],
+  "references": {
+    "cover": {
+      "path": "lessons/boya-elementary-i/lesson-09-10/10-design/openslide-image-first-20261006/lesson-09-10.html",
+      "sha256": "b15e98e2c020c4455f106c7982365e003bf8f2e0cc14e5815f45d35931caac63",
+      "page_index": 0
+    },
+    "route": {
+      "path": "lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12-v09-readable/lesson-11-12-实体课.html",
+      "sha256": "3ff376220782b1c31e706a44d8c9c539230625c0a930e852d2f3d43fee812ffb",
+      "page_index": 1
+    }
+  },
+  "footer_text": "博雅汉语 · 准中级听说",
+  "pages": [
+    {
+      "id": "w06-cover",
+      "role": "cover",
+      "expected_text_source": "v3 approved review page 1, arranged in first-year reference layouts",
+      "expected_text": "第4—5课 · 实体课 学习经历与音乐老师 听故事、商量计划、讲故事，分享学习与音乐经历。 博雅汉语 · 准中级听说 01 / 15",
+      "expected_images": [
+        "assets/cover.png"
+      ]
+    },
+    {
+      "id": "w06-route",
+      "role": "route",
+      "expected_text_source": "v3 approved review page 2, arranged in first-year reference layouts",
+      "expected_text": "今天我们会做什么 听故事 活动1—2｜理解与发表 学习计划 活动3—5｜安排与讨论 音乐活动 活动6—7｜安排与故事 分享想法 活动8—9｜老师与兴趣",
+      "expected_images": [
+        "assets/icons/listen.png",
+        "assets/icons/shopping-bag.png",
+        "assets/icons/book-pencil.png",
+        "assets/icons/conversation.png"
+      ],
+      "expected_route_cards": 4,
+      "expected_route_columns": 4,
+      "footer_exempt": true
+    },
+    {
+      "id": "w09-l04-l05-page-03",
+      "role": "activity",
+      "expected_text_source": "v3 approved review page 3, arranged in first-year reference layouts",
+      "expected_text": "第4—5课 · 实体课 活动1｜听故事，理解学习计划 阿明在台湾学中文 听老师读两次 先了解故事，再记下帮助你回答问题的信息： 1 阿明来台湾以后，为什么觉得中文交流没有想象中容易？ 2 他为什么没有参加星期三的中文讲座？ 3 他怎样安排星期二和星期四的练习？两个安排分别帮助他做什么？ 4 四周后他有哪些变化？还有什么需要继续练习？ 博雅汉语 · 准中级听说 03 / 15",
+      "expected_images": [
+        "assets/icons/listen.png"
+      ]
+    },
+    {
+      "id": "w09-l04-l05-page-04",
+      "role": "activity",
+      "expected_text_source": "v3 approved review page 4, arranged in first-year reference layouts",
+      "expected_text": "第4—5课 · 实体课 活动1｜核对信息并发表 阿明的学习计划 先和同学核对信息 → 轮流介绍阿明的困难、他选择的学习方法和四周后的变化。听的人问一个问题，说话的人回答。 基础 说清一个困难、两个练习和一个变化。 挑战 说明阿明为什么这样安排，并根据故事中的信息说明这个计划有什么不足。 博雅汉语 · 准中级听说 04 / 15",
+      "expected_images": [
+        "assets/icons/notes.png",
+        "assets/icons/conversation.png"
+      ]
+    },
+    {
+      "id": "w09-l04-l05-page-05",
+      "role": "activity",
+      "expected_text_source": "v3 approved review page 5, arranged in first-year reference layouts",
+      "expected_text": "第4—5课 · 实体课 活动2｜听故事，理解人物变化 台湾学生小兰和她的音乐老师 听老师读两次 先了解故事，再记下帮助你回答问题的信息： 1 小兰为什么报名音乐活动？开始后为什么想退出？ 2 老师怎样帮助她？同学又怎样帮助她？ 3 小兰怎样安排练习？为什么没有每天练习一小时？ 4 活动结束后，她对音乐和自己的看法有什么变化？ 博雅汉语 · 准中级听说 05 / 15",
+      "expected_images": [
+        "assets/icons/listen.png"
+      ]
+    },
+    {
+      "id": "w09-l04-l05-page-06",
+      "role": "activity",
+      "expected_text_source": "v3 approved review page 6, arranged in first-year reference layouts",
+      "expected_text": "第4—5课 · 实体课 活动2｜核对信息并发表 小兰和音乐老师 先和同学核对信息 → 轮流讲述小兰遇到的困难、得到的帮助以及最后的变化。听的人问一个问题，说话的人回答。 基础 说清困难、两种帮助和结果。 挑战 用故事中的具体事情解释小兰为什么改变想法，并说出一件她还需要继续做的事。 博雅汉语 · 准中级听说 06 / 15",
+      "expected_images": [
+        "assets/icons/notes.png",
+        "assets/icons/conversation.png"
+      ]
+    },
+    {
+      "id": "w09-l04-l05-page-07",
+      "role": "activity",
+      "expected_text_source": "v3 approved review page 7, arranged in first-year reference layouts",
+      "expected_text": "第4—5课 · 实体课 活动3｜帮小安安排中文练习 帮小安安排中文练习 小安想提高听力和口语。她周二和周四晚上有空，每次最多30分钟。 A｜听新闻 周二 19:00—19:30 听短新闻，记关键词；可以重听 B｜语伴交流 周四 19:00—19:30 两人聊天、互相提问； 可请对方解释 C｜中文讲座 周二 19:00—20:00 听一小时讲座，现场提问 两人商量：为小安选两项合适的练习，安排在她有空的时间，并说明为什么。 每个人都要说。 基础 ：说出两项练习和理由。 挑战 ：比较三项，解释为什么不选另一项。 博雅汉语 · 准中级听说 07 / 15",
+      "expected_images": [
+        "assets/icons/listen.png",
+        "assets/icons/conversation.png",
+        "assets/icons/school.png"
+      ]
+    },
+    {
+      "id": "w09-l04-l05-page-08",
+      "role": "report",
+      "expected_text_source": "v3 approved review page 8, arranged in first-year reference layouts",
+      "expected_text": "第4—5课 · 实体课 活动3｜发表练习计划 发表练习计划 我们建议小安星期二……，星期四……。 我们这样安排，是因为……。 她还可以……。 每人介绍计划中的一项，并回答听者的一个问题。 博雅汉语 · 准中级听说 08 / 15",
+      "expected_images": [
+        "assets/icons/conversation.png"
+      ]
+    },
+    {
+      "id": "w09-l04-l05-page-09",
+      "role": "comic",
+      "expected_text_source": "v3 approved review page 9, arranged in first-year reference layouts; 2026-10-27 user requested visible activity numbering",
+      "expected_text": "活动4｜看图说故事 博雅汉语 · 准中级听说 09 / 15",
+      "expected_images": [
+        "assets/comic-1-xiaoan-taiwan.png"
+      ]
+    },
+    {
+      "id": "w09-l04-l05-page-10",
+      "role": "activity",
+      "expected_text_source": "v3 approved review page 10, arranged in first-year reference layouts",
+      "expected_text": "第4—5课 · 实体课 活动5｜怎样练习中文 怎样练习中文？ 如果你在荣市学习中文，没有机会每天和中国人说话，你会怎样练习听力和口语？为什么？ 两人轮流说出一种具体方法和理由，再问同伴一个问题。 基础 ：我会……，因为……。 挑战 ：比较两种方法，说明各有什么优点和困难。 博雅汉语 · 准中级听说 10 / 15",
+      "expected_images": [
+        "assets/icons/conversation.png"
+      ]
+    },
+    {
+      "id": "w09-l04-l05-page-11",
+      "role": "activity",
+      "expected_text_source": "v3 approved review page 11, arranged in first-year reference layouts",
+      "expected_text": "第4—5课 · 实体课 活动6｜安排中文音乐体验活动 安排中文音乐体验活动 中文学习小组想在星期六下午办一场40分钟的音乐体验活动，让参加的人听中文、开口说中文。 可用材料：一首中文歌曲、歌词、纸和笔；教室里可以播放音乐。 3—4人一组，安排活动：先做什么、再做什么、最后做什么？每人提出一项建议，一起决定安排和理由。 基础 ：说出活动顺序和一条理由。 挑战 ：说明如何让不敢开口的人也有机会参加。 博雅汉语 · 准中级听说 11 / 15",
+      "expected_images": [
+        "assets/icons/book-pencil.png"
+      ]
+    },
+    {
+      "id": "w09-l04-l05-page-12",
+      "role": "report",
+      "expected_text_source": "v3 approved review page 12, arranged in first-year reference layouts",
+      "expected_text": "第4—5课 · 实体课 活动6｜发表音乐活动安排 发表音乐活动安排 我们的活动先……，然后……，最后……。 我们选择……，因为……。 为了让每个人都开口，我们会……。 每人介绍一部分；听者问一个问题。 博雅汉语 · 准中级听说 12 / 15",
+      "expected_images": [
+        "assets/icons/conversation.png"
+      ]
+    },
+    {
+      "id": "w09-l04-l05-page-13",
+      "role": "comic",
+      "expected_text_source": "v3 approved review page 13, arranged in first-year reference layouts; 2026-10-27 user requested visible activity numbering",
+      "expected_text": "活动7｜看图说故事 博雅汉语 · 准中级听说 13 / 15",
+      "expected_images": [
+        "assets/comic-2.png"
+      ]
+    },
+    {
+      "id": "w09-l04-l05-page-14",
+      "role": "activity",
+      "expected_text_source": "v3 approved review page 14, arranged in first-year reference layouts",
+      "expected_text": "第4—5课 · 实体课 活动8｜什么样的老师会影响学生 什么样的老师会影响学生？ 你觉得老师的什么做法能让学生更喜欢一门课？请举一个例子，说明为什么。 两人轮流回答，并向同伴问一个问题。可以谈真实经历，也可以举虚构例子。 基础 ：老师……，学生会……，因为……。 挑战 ：比较两种做法，说明哪一种对你更有帮助。 博雅汉语 · 准中级听说 14 / 15",
+      "expected_images": [
+        "assets/icons/conversation.png"
+      ]
+    },
+    {
+      "id": "w09-l04-l05-page-15",
+      "role": "activity",
+      "expected_text_source": "v3 approved review page 15, arranged in first-year reference layouts",
+      "expected_text": "第4—5课 · 实体课 活动9｜怎样坚持学习 怎样坚持学习？ 你对一件事很感兴趣，可是学了一段时间以后觉得很难。你会继续学习吗？你会怎样做？为什么？ 每人说出自己的选择、一个具体做法和理由；听者复述对方的做法并确认。 基础 ：我会……，因为……。 挑战 ：比较继续和暂停的理由，再说自己的决定。 博雅汉语 · 准中级听说 15 / 15",
+      "expected_images": [
+        "assets/icons/conversation.png"
+      ]
+    }
+  ]
+}

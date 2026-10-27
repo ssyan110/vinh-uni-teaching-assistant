@@ -1,0 +1,131 @@
+{
+  "result": {
+    "lints": [
+      {
+        "name": "rls_enabled_no_policy",
+        "title": "RLS Enabled No Policy",
+        "level": "INFO",
+        "facing": "EXTERNAL",
+        "categories": [
+          "SECURITY"
+        ],
+        "description": "Detects cases where row level security (RLS) has been enabled on a table but no RLS policies have been created.",
+        "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+        "count": 2,
+        "findings": [
+          {
+            "detail": "Table \\`public.interact_responses\\` has RLS enabled, but no policies exist",
+            "metadata": {
+              "name": "interact_responses",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.803Z"
+          },
+          {
+            "detail": "Table \\`public.interact_rooms\\` has RLS enabled, but no policies exist",
+            "metadata": {
+              "name": "interact_rooms",
+              "type": "table",
+              "schema": "public"
+            },
+            "observed_at": "2026-10-25T16:42:53.803Z"
+          }
+        ]
+      },
+      {
+        "name": "anon_security_definer_function_executable",
+        "title": "Public Can Execute SECURITY DEFINER Function",
+        "level": "WARN",
+        "facing": "EXTERNAL",
+        "categories": [
+          "SECURITY"
+        ],
+        "description": "Detects `SECURITY DEFINER` functions that are callable without signing in. Revoke `EXECUTE`, switch the function to `SECURITY INVOKER`, or move it out of your exposed API schema if it is not meant to be public.",
+        "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0028_anon_security_definer_function_executable",
+        "count": 1,
+        "findings": [
+          {
+            "detail": "Function `public.interact_classroom(p_action text, p_room uuid, p_token text, p_data jsonb)` can be executed by the `anon` role as a `SECURITY DEFINER` function via `/rest/v1/rpc/interact_classroom`. Revoke `EXECUTE` or switch it to `SECURITY INVOKER` if that is not intentional.",
+            "metadata": {
+              "name": "interact_classroom",
+              "schema": "public",
+              "language": "plpgsql",
+              "arguments": "p_action text, p_room uuid, p_token text, p_data jsonb",
+              "security_definer": true
+            },
+            "observed_at": "2026-10-25T16:42:53.803Z"
+          }
+        ]
+      },
+      {
+        "name": "authenticated_security_definer_function_executable",
+        "title": "Signed-In Users Can Execute SECURITY DEFINER Function",
+        "level": "WARN",
+        "facing": "EXTERNAL",
+        "categories": [
+          "SECURITY"
+        ],
+        "description": "Detects `SECURITY DEFINER` functions that are callable by signed-in users. Revoke `EXECUTE`, switch the function to `SECURITY INVOKER`, or move it out of your exposed API schema if signed-in users should not call it.",
+        "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0029_authenticated_security_definer_function_executable",
+        "count": 3,
+        "findings": [
+          {
+            "detail": "Function `public.correct_class_session(p_session_id uuid, p_session_date date, p_session_number integer, p_reason text)` can be executed by the `authenticated` role as a `SECURITY DEFINER` function via `/rest/v1/rpc/correct_class_session`. Revoke `EXECUTE` or switch it to `SECURITY INVOKER` if that is not intentional.",
+            "metadata": {
+              "name": "correct_class_session",
+              "schema": "public",
+              "language": "plpgsql",
+              "arguments": "p_session_id uuid, p_session_date date, p_session_number integer, p_reason text",
+              "security_definer": true
+            },
+            "observed_at": "2026-10-25T16:42:53.803Z"
+          },
+          {
+            "detail": "Function `public.correct_classroom_record(p_record_type text, p_record_id uuid, p_reason text)` can be executed by the `authenticated` role as a `SECURITY DEFINER` function via `/rest/v1/rpc/correct_classroom_record`. Revoke `EXECUTE` or switch it to `SECURITY INVOKER` if that is not intentional.",
+            "metadata": {
+              "name": "correct_classroom_record",
+              "schema": "public",
+              "language": "plpgsql",
+              "arguments": "p_record_type text, p_record_id uuid, p_reason text",
+              "security_definer": true
+            },
+            "observed_at": "2026-10-25T16:42:53.803Z"
+          },
+          {
+            "detail": "Function `public.interact_classroom(p_action text, p_room uuid, p_token text, p_data jsonb)` can be executed by the `authenticated` role as a `SECURITY DEFINER` function via `/rest/v1/rpc/interact_classroom`. Revoke `EXECUTE` or switch it to `SECURITY INVOKER` if that is not intentional.",
+            "metadata": {
+              "name": "interact_classroom",
+              "schema": "public",
+              "language": "plpgsql",
+              "arguments": "p_action text, p_room uuid, p_token text, p_data jsonb",
+              "security_definer": true
+            },
+            "observed_at": "2026-10-25T16:42:53.803Z"
+          }
+        ]
+      },
+      {
+        "name": "auth_leaked_password_protection",
+        "title": "Leaked Password Protection Disabled",
+        "level": "WARN",
+        "facing": "EXTERNAL",
+        "categories": [
+          "SECURITY"
+        ],
+        "description": "Leaked password protection is currently disabled.",
+        "remediation": "https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection",
+        "count": 1,
+        "findings": [
+          {
+            "detail": "Supabase Auth prevents the use of compromised passwords by checking against HaveIBeenPwned.org. Enable this feature to enhance security.",
+            "metadata": {
+              "type": "auth",
+              "entity": "Auth"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

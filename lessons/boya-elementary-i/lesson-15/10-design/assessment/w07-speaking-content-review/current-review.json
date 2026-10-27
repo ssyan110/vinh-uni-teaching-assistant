@@ -1,0 +1,18 @@
+{
+  "version": "v4",
+  "status": "content_review_pending",
+  "document": "lesson-15-口语题目审阅稿.md",
+  "data": "items-review.json",
+  "sources": "source-manifest.json",
+  "supersedes": [
+    ".agent/runs/w07-listening-speaking-plan-20261026/review.md",
+    ".agent/runs/w07-speaking-question-research-v2-20261026/speaking-prompts-v2.md",
+    ".agent/runs/w07-speaking-question-language-v3-20261026/speaking-prompts-v3.md"
+  ],
+  "sha256": {
+    "lesson-15-口语题目审阅稿.md": "c01072e99488d97c182080c400e2310add095ca184b4bf80073e5f697a40975d",
+    "items-review.json": "e4f98bc46f5de6764fcca2b438844d29029b5c8943c295e3f1dc6026ffcd0597",
+    "source-manifest.json": "44fcf08e67916298bba297aeefa6bfb74ece454eebcf291a509c8b230556e1d3",
+    "review-check.json": "00a488574149c631c3587a9ba46b3f2fcd8c6ad3b01890ee063b58ae875c5b47"
+  }
+}

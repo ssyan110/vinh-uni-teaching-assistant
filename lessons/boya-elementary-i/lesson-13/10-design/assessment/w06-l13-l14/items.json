@@ -1,7 +1,7 @@
 {
   "exam_id": "W06-L13L14-20261016",
-  "version": 2,
-  "status": "DRAFT_SYNCED_PENDING_TEACHER_REVIEW",
+  "version": 5,
+  "status": "DRAFT_V5_SYNCED_UNPUBLISHED",
   "cohort": "BOYA-LS-E1-Y1S1-2026F",
   "offering_id": "2026-fall",
   "week": "w06",
@@ -13,16 +13,16 @@
   "question_count": 25,
   "points": 100,
   "points_per_question": 4,
-  "configuration_basis": "2026-10-16 user correction: partial textbook plus suitable official TOCFL audio, matching W05 14+11 question allocation",
+  "configuration_basis": "2026-10-23 Adam requested related longer dialogues at Q21–25; first20 retained;25x4;unpublished review",
   "textbook_question_count": 14,
   "tocfl_question_count": 11,
   "textbook_audio_count": 5,
-  "tocfl_audio_count": 6,
-  "question_group_count": 11,
+  "tocfl_audio_count": 11,
+  "question_group_count": 16,
   "items": [
     {
-      "id": "W06-MX2-01",
-      "question_id": "W06-MX2-01",
+      "id": "W06-MX4-01",
+      "question_id": "W06-MX4-01",
       "number": 1,
       "type": "mc",
       "points": 4,
@@ -48,11 +48,13 @@
         55,
         56
       ],
-      "version": 2
+      "version": 5,
+      "review_status": "draft_unpublished",
+      "teacher_listening_accepted": false
     },
     {
-      "id": "W06-MX2-02",
-      "question_id": "W06-MX2-02",
+      "id": "W06-MX4-02",
+      "question_id": "W06-MX4-02",
       "number": 2,
       "type": "mc",
       "points": 4,
@@ -78,11 +80,13 @@
         55,
         56
       ],
-      "version": 2
+      "version": 5,
+      "review_status": "draft_unpublished",
+      "teacher_listening_accepted": false
     },
     {
-      "id": "W06-MX2-03",
-      "question_id": "W06-MX2-03",
+      "id": "W06-MX4-03",
+      "question_id": "W06-MX4-03",
       "number": 3,
       "type": "mc",
       "points": 4,
@@ -108,11 +112,13 @@
         55,
         56
       ],
-      "version": 2
+      "version": 5,
+      "review_status": "draft_unpublished",
+      "teacher_listening_accepted": false
     },
     {
-      "id": "W06-MX2-04",
-      "question_id": "W06-MX2-04",
+      "id": "W06-MX4-04",
+      "question_id": "W06-MX4-04",
       "number": 4,
       "type": "mc",
       "points": 4,
@@ -137,11 +143,13 @@
       "answer_book_pdf_pages": [
         56
       ],
-      "version": 2
+      "version": 5,
+      "review_status": "draft_unpublished",
+      "teacher_listening_accepted": false
     },
     {
-      "id": "W06-MX2-05",
-      "question_id": "W06-MX2-05",
+      "id": "W06-MX4-05",
+      "question_id": "W06-MX4-05",
       "number": 5,
       "type": "mc",
       "points": 4,
@@ -166,11 +174,13 @@
       "answer_book_pdf_pages": [
         56
       ],
-      "version": 2
+      "version": 5,
+      "review_status": "draft_unpublished",
+      "teacher_listening_accepted": false
     },
     {
-      "id": "W06-MX2-06",
-      "question_id": "W06-MX2-06",
+      "id": "W06-MX4-06",
+      "question_id": "W06-MX4-06",
       "number": 6,
       "type": "mc",
       "points": 4,
@@ -195,11 +205,13 @@
       "answer_book_pdf_pages": [
         56
       ],
-      "version": 2
+      "version": 5,
+      "review_status": "draft_unpublished",
+      "teacher_listening_accepted": false
     },
     {
-      "id": "W06-MX2-07",
-      "question_id": "W06-MX2-07",
+      "id": "W06-MX4-07",
+      "question_id": "W06-MX4-07",
       "number": 7,
       "type": "mc",
       "points": 4,
@@ -224,11 +236,13 @@
       "answer_book_pdf_pages": [
         56
       ],
-      "version": 2
+      "version": 5,
+      "review_status": "draft_unpublished",
+      "teacher_listening_accepted": false
     },
     {
-      "id": "W06-MX2-08",
-      "question_id": "W06-MX2-08",
+      "id": "W06-MX4-08",
+      "question_id": "W06-MX4-08",
       "number": 8,
       "type": "mc",
       "points": 4,
@@ -253,11 +267,13 @@
       "answer_book_pdf_pages": [
         56
       ],
-      "version": 2
+      "version": 5,
+      "review_status": "draft_unpublished",
+      "teacher_listening_accepted": false
     },
     {
-      "id": "W06-MX2-09",
-      "question_id": "W06-MX2-09",
+      "id": "W06-MX4-09",
+      "question_id": "W06-MX4-09",
       "number": 9,
       "type": "mc",
       "points": 4,
@@ -282,11 +298,13 @@
       "answer_book_pdf_pages": [
         58
       ],
-      "version": 2
+      "version": 5,
+      "review_status": "draft_unpublished",
+      "teacher_listening_accepted": false
     },
     {
-      "id": "W06-MX2-10",
-      "question_id": "W06-MX2-10",
+      "id": "W06-MX4-10",
+      "question_id": "W06-MX4-10",
       "number": 10,
       "type": "mc",
       "points": 4,
@@ -311,11 +329,13 @@
       "answer_book_pdf_pages": [
         58
       ],
-      "version": 2
+      "version": 5,
+      "review_status": "draft_unpublished",
+      "teacher_listening_accepted": false
     },
     {
-      "id": "W06-MX2-11",
-      "question_id": "W06-MX2-11",
+      "id": "W06-MX4-11",
+      "question_id": "W06-MX4-11",
       "number": 11,
       "type": "mc",
       "points": 4,
@@ -340,11 +360,13 @@
       "answer_book_pdf_pages": [
         58
       ],
-      "version": 2
+      "version": 5,
+      "review_status": "draft_unpublished",
+      "teacher_listening_accepted": false
     },
     {
-      "id": "W06-MX2-12",
-      "question_id": "W06-MX2-12",
+      "id": "W06-MX4-12",
+      "question_id": "W06-MX4-12",
       "number": 12,
       "type": "mc",
       "points": 4,
@@ -370,11 +392,13 @@
         58,
         59
       ],
-      "version": 2
+      "version": 5,
+      "review_status": "draft_unpublished",
+      "teacher_listening_accepted": false
     },
     {
-      "id": "W06-MX2-13",
-      "question_id": "W06-MX2-13",
+      "id": "W06-MX4-13",
+      "question_id": "W06-MX4-13",
       "number": 13,
       "type": "mc",
       "points": 4,
@@ -401,11 +425,13 @@
         58,
         59
       ],
-      "version": 2
+      "version": 5,
+      "review_status": "draft_unpublished",
+      "teacher_listening_accepted": false
     },
     {
-      "id": "W06-MX2-14",
-      "question_id": "W06-MX2-14",
+      "id": "W06-MX4-14",
+      "question_id": "W06-MX4-14",
       "number": 14,
       "type": "mc",
       "points": 4,
@@ -430,316 +456,402 @@
       "answer_book_pdf_pages": [
         59
       ],
-      "version": 2
+      "version": 5,
+      "review_status": "draft_unpublished",
+      "teacher_listening_accepted": false
     },
     {
-      "type": "mc",
-      "audio_id": "TOCFL-A4-Q13",
-      "prompt": "女的这本书是谁送的？",
-      "options": [
-        "爸爸",
-        "妈妈",
-        "老师",
-        "朋友"
-      ],
-      "answer_index": 0,
-      "answer": "A",
-      "answer_text": "爸爸",
-      "evidence": "爸爸送书。",
-      "focus": "礼物与人物",
-      "lesson_keys": [
-        "boya-elementary-i:lesson-14"
-      ],
-      "source_question_id": "TOCFL-A4-Q13",
-      "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/016.mp3",
-      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
-      "id": "W06-MX2-15",
-      "question_id": "W06-MX2-15",
+      "id": "W06-MX4-15",
+      "question_id": "W06-MX4-15",
       "number": 15,
-      "version": 2,
-      "points": 4,
-      "source_type": "tocfl_official_audio_original_questions"
-    },
-    {
+      "version": 5,
       "type": "mc",
-      "audio_id": "TOCFL-A4-Q14",
-      "prompt": "女的想换衣服的什么？",
-      "options": [
-        "价格",
-        "颜色",
-        "大小",
-        "质量"
-      ],
-      "answer_index": 1,
-      "answer": "B",
-      "answer_text": "颜色",
-      "evidence": "女生想要不同的颜色。",
-      "focus": "商品颜色",
-      "lesson_keys": [
-        "boya-elementary-i:lesson-13"
-      ],
-      "source_question_id": "TOCFL-A4-Q14",
-      "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/017.mp3",
-      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
-      "id": "W06-MX2-16",
-      "question_id": "W06-MX2-16",
-      "number": 16,
-      "version": 2,
       "points": 4,
-      "source_type": "tocfl_official_audio_original_questions"
-    },
-    {
-      "type": "mc",
-      "audio_id": "TOCFL-A4-Q23",
-      "prompt": "为什么很多人来这家店？",
+      "prompt": "请听对话，选择最合适的图片。",
       "options": [
-        "衣服很新",
-        "衣服很贵",
-        "衣服很便宜",
-        "衣服只有一种颜色"
+        "A",
+        "B",
+        "C"
       ],
       "answer_index": 2,
       "answer": "C",
-      "answer_text": "衣服很便宜",
-      "evidence": "顾客多是因为衣服便宜。",
-      "focus": "价格与理由",
-      "lesson_keys": [
-        "boya-elementary-i:lesson-13"
-      ],
-      "source_question_id": "TOCFL-A4-Q23",
-      "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/026.mp3",
-      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
-      "id": "W06-MX2-17",
-      "question_id": "W06-MX2-17",
-      "number": 17,
-      "version": 2,
-      "points": 4,
-      "source_type": "tocfl_official_audio_original_questions"
-    },
-    {
-      "type": "mc",
-      "audio_id": "TOCFL-A4-Q23",
-      "prompt": "很多人来这里买什么？",
-      "options": [
-        "手机",
-        "书",
-        "花儿",
-        "衣服"
-      ],
-      "answer_index": 3,
-      "answer": "D",
-      "answer_text": "衣服",
-      "evidence": "店里卖的是衣服。",
-      "focus": "商品",
-      "lesson_keys": [
-        "boya-elementary-i:lesson-13"
-      ],
-      "source_question_id": "TOCFL-A4-Q23",
-      "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/026.mp3",
-      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
-      "id": "W06-MX2-18",
-      "question_id": "W06-MX2-18",
-      "number": 18,
-      "version": 2,
-      "points": 4,
-      "source_type": "tocfl_official_audio_original_questions"
-    },
-    {
-      "type": "mc",
-      "audio_id": "TOCFL-A4-Q26",
-      "prompt": "女的想给陈老师带什么？",
-      "options": [
-        "几本书",
-        "一些水果",
-        "一束花儿",
-        "一个蛋糕"
-      ],
-      "answer_index": 0,
-      "answer": "A",
-      "answer_text": "几本书",
-      "evidence": "女生提出买书，水果和花是男生的提议。",
-      "focus": "区分说话人的选择",
+      "answer_text": "C",
+      "evidence": "C图是爸爸送书，A图是买书，B图是妈妈送书。",
+      "focus": "礼物的赠送人",
       "lesson_keys": [
         "boya-elementary-i:lesson-14"
       ],
-      "source_question_id": "TOCFL-A4-Q26",
-      "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/030.mp3",
+      "audio_id": "TOCFL-A4-Q13",
+      "source_type": "tocfl_official_original_item_with_picture_options",
+      "source_question_id": "TOCFL-A4-Q13",
+      "source_volume": 4,
+      "source_question": 13,
+      "source_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_en_s.pdf",
       "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
-      "id": "W06-MX2-19",
-      "question_id": "W06-MX2-19",
-      "number": 19,
-      "version": 2,
-      "points": 4,
-      "source_type": "tocfl_official_audio_original_questions"
+      "source_answer_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_answer.pdf",
+      "option_image": "images/TOCFL-A4-Q13-options.png",
+      "source_pdf_page": 8,
+      "source_option_order_preserved": true,
+      "script": "男：你怎么有这本书？\n女：我爸爸送我的。",
+      "review_status": "draft_unpublished",
+      "option_image_url": "https://drive.google.com/uc?export=download&id=1iYJsATnW_IcVTqQxazu-l-BRq6ACzUfe"
     },
     {
+      "id": "W06-MX4-16",
+      "question_id": "W06-MX4-16",
+      "number": 16,
+      "version": 5,
       "type": "mc",
-      "audio_id": "TOCFL-A4-Q26",
-      "prompt": "女的为什么选择送书？",
+      "points": 4,
+      "prompt": "请听对话，选择最合适的图片。",
       "options": [
-        "陈老师今天过生日",
-        "陈老师很喜欢看书",
-        "书比花儿便宜",
-        "陈老师请她买书"
+        "A",
+        "B",
+        "C"
+      ],
+      "answer_index": 2,
+      "answer": "C",
+      "answer_text": "C",
+      "evidence": "C图是服装店；A图水果店、B图运动用品店不符。",
+      "focus": "衣服颜色与换货",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ],
+      "audio_id": "TOCFL-A4-Q14",
+      "source_type": "tocfl_official_original_item_with_picture_options",
+      "source_question_id": "TOCFL-A4-Q14",
+      "source_volume": 4,
+      "source_question": 14,
+      "source_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_en_s.pdf",
+      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+      "source_answer_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_answer.pdf",
+      "option_image": "images/TOCFL-A4-Q14-options.png",
+      "source_pdf_page": 8,
+      "source_option_order_preserved": true,
+      "script": "男：丽美，你怎么来了？\n女：昨天买的衣服想换不同的颜色。",
+      "review_status": "draft_unpublished",
+      "option_image_url": "https://drive.google.com/uc?export=download&id=15YE7Mp1FIDvp5zXeeCWVhbGQf23OVb4A"
+    },
+    {
+      "id": "W06-MX4-17",
+      "question_id": "W06-MX4-17",
+      "number": 17,
+      "version": 5,
+      "type": "mc",
+      "points": 4,
+      "prompt": "请听对话，选择最合适的图片。",
+      "options": [
+        "A",
+        "B",
+        "C"
       ],
       "answer_index": 1,
       "answer": "B",
-      "answer_text": "陈老师很喜欢看书",
-      "evidence": "选择依据是老师爱读书。",
+      "answer_text": "B",
+      "evidence": "B图招牌为服装；A图是鞋帽等配件，C图是蔬果。",
+      "focus": "商品价格与选择",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ],
+      "audio_id": "TOCFL-A4-Q23",
+      "source_type": "tocfl_official_original_item_with_picture_options",
+      "source_question_id": "TOCFL-A4-Q23",
+      "source_volume": 4,
+      "source_question": 23,
+      "source_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_en_s.pdf",
+      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+      "source_answer_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_answer.pdf",
+      "option_image": "images/TOCFL-A4-Q23-options.png",
+      "source_pdf_page": 10,
+      "source_option_order_preserved": true,
+      "script": "男：这家店为什么这么多人在排队？\n女：因为这里的衣服很便宜，很多人来这里买衣服。",
+      "review_status": "draft_unpublished",
+      "option_image_url": "https://drive.google.com/uc?export=download&id=1P12qDVyVHE8w8ggvlO89VWWkI-QoAd2s"
+    },
+    {
+      "id": "W06-MX4-18",
+      "question_id": "W06-MX4-18",
+      "number": 18,
+      "version": 5,
+      "type": "mc",
+      "points": 4,
+      "prompt": "请问这位小姐想带什么东西给陈老师？",
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "answer_index": 0,
+      "answer": "A",
+      "answer_text": "A",
+      "evidence": "A图是书。水果和花是男生的提议，女生提议买书。",
       "focus": "按喜好选择礼物",
       "lesson_keys": [
         "boya-elementary-i:lesson-14"
       ],
+      "audio_id": "TOCFL-A4-Q26",
+      "source_type": "tocfl_official_original_item_with_picture_options",
       "source_question_id": "TOCFL-A4-Q26",
-      "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/030.mp3",
+      "source_volume": 4,
+      "source_question": 26,
+      "source_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_en_s.pdf",
       "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
-      "id": "W06-MX2-20",
-      "question_id": "W06-MX2-20",
-      "number": 20,
-      "version": 2,
-      "points": 4,
-      "source_type": "tocfl_official_audio_original_questions"
+      "source_answer_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_answer.pdf",
+      "option_image": "images/TOCFL-A4-Q26-options.png",
+      "source_pdf_page": 12,
+      "source_option_order_preserved": true,
+      "script": "男：怎么最近都没看到陈老师呢？\n女：听说陈老师生病了，现在在医院里。\n男：我们应该去医院看看他，我们带水果和花去看他，好不好？\n女：陈老师很喜欢看书，我想买几本有趣的书给他。\n男：请问这位小姐想带什么东西给陈老师？",
+      "review_status": "draft_unpublished",
+      "option_image_url": "https://drive.google.com/uc?export=download&id=1cvG3ipazXVfXBIbCBkgGYtWd0lxcX6qy"
     },
     {
+      "id": "W06-MX4-19",
+      "question_id": "W06-MX4-19",
+      "number": 19,
+      "version": 5,
       "type": "mc",
-      "audio_id": "TOCFL-A4-Q28",
-      "prompt": "男的觉得这件衣服怎么样？",
-      "options": [
-        "有点儿贵",
-        "颜色太深",
-        "太小了",
-        "太大了"
-      ],
-      "answer_index": 2,
-      "answer": "C",
-      "answer_text": "太小了",
-      "evidence": "试穿后的问题是衣服太小。",
-      "focus": "商品大小",
-      "lesson_keys": [
-        "boya-elementary-i:lesson-13"
-      ],
-      "source_question_id": "TOCFL-A4-Q28",
-      "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/032.mp3",
-      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
-      "id": "W06-MX2-21",
-      "question_id": "W06-MX2-21",
-      "number": 21,
-      "version": 2,
       "points": 4,
-      "source_type": "tocfl_official_audio_original_questions"
-    },
-    {
-      "type": "mc",
-      "audio_id": "TOCFL-A4-Q28",
-      "prompt": "男的想要什么样的衣服？",
+      "prompt": "请问这位先生觉得这件衣服怎么样？",
       "options": [
-        "便宜一点儿的",
-        "颜色白一点儿的",
-        "小一点儿的",
-        "大一点儿的"
-      ],
-      "answer_index": 3,
-      "answer": "D",
-      "answer_text": "大一点儿的",
-      "evidence": "男生提出想找大一些的衣服。",
-      "focus": "表达选择条件",
-      "lesson_keys": [
-        "boya-elementary-i:lesson-13"
-      ],
-      "source_question_id": "TOCFL-A4-Q28",
-      "source_url": "https://eapi.sc-top.org.tw/video/A4/AE/032.mp3",
-      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
-      "id": "W06-MX2-22",
-      "question_id": "W06-MX2-22",
-      "number": 22,
-      "version": 2,
-      "points": 4,
-      "source_type": "tocfl_official_audio_original_questions"
-    },
-    {
-      "type": "mc",
-      "audio_id": "TOCFL-A5-Q37",
-      "prompt": "他们决定送小春什么生日礼物？",
-      "options": [
-        "画画用的笔和放笔的袋子",
-        "一本书和一束花儿",
-        "一件衣服和一个蛋糕",
-        "一个书包和一个手机"
-      ],
-      "answer_index": 0,
-      "answer": "A",
-      "answer_text": "画画用的笔和放笔的袋子",
-      "evidence": "两人先确定绘画用笔，再加放笔的袋子。",
-      "focus": "整合礼物选择",
-      "lesson_keys": [
-        "boya-elementary-i:lesson-14"
-      ],
-      "source_question_id": "TOCFL-A5-Q37",
-      "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/041.mp3",
-      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
-      "id": "W06-MX2-23",
-      "question_id": "W06-MX2-23",
-      "number": 23,
-      "version": 2,
-      "points": 4,
-      "source_type": "tocfl_official_audio_original_questions"
-    },
-    {
-      "type": "mc",
-      "audio_id": "TOCFL-A5-Q37",
-      "prompt": "他们为什么选择这样的礼物？",
-      "options": [
-        "小春喜欢唱歌",
-        "小春喜欢画画",
-        "小春的手机坏了",
-        "小春要去旅行"
+        "A",
+        "B",
+        "C"
       ],
       "answer_index": 1,
       "answer": "B",
-      "answer_text": "小春喜欢画画",
-      "evidence": "礼物对应小春的绘画爱好。",
-      "focus": "选择理由",
+      "answer_text": "B",
+      "evidence": "B图衣服太小；A图太大，C图衣服破损。",
+      "focus": "衣服大小",
       "lesson_keys": [
-        "boya-elementary-i:lesson-13",
-        "boya-elementary-i:lesson-14"
+        "boya-elementary-i:lesson-13"
       ],
-      "source_question_id": "TOCFL-A5-Q37",
-      "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/041.mp3",
-      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
-      "id": "W06-MX2-24",
-      "question_id": "W06-MX2-24",
-      "number": 24,
-      "version": 2,
-      "points": 4,
-      "source_type": "tocfl_official_audio_original_questions"
+      "audio_id": "TOCFL-A4-Q28",
+      "source_type": "tocfl_official_original_item_with_picture_options",
+      "source_question_id": "TOCFL-A4-Q28",
+      "source_volume": 4,
+      "source_question": 28,
+      "source_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_en_s.pdf",
+      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_listen.pdf",
+      "source_answer_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock4_test_BandA_answer.pdf",
+      "option_image": "images/TOCFL-A4-Q28-options.png",
+      "source_pdf_page": 12,
+      "source_option_order_preserved": true,
+      "script": "男：老板，我可以穿穿看这件衣服吗？\n女：可以，请到里面试试。\n男：这件衣服太小了，还有大一点儿的吗？\n女：对不起，大的已经卖完了。\n男：请问这位先生觉得这件衣服怎么样？",
+      "review_status": "draft_unpublished",
+      "option_image_url": "https://drive.google.com/uc?export=download&id=1BgqIjwEp-Z1CzgKQgYo980PGk5J7Sm9j"
     },
     {
+      "id": "W06-MX4-20",
+      "question_id": "W06-MX4-20",
+      "number": 20,
+      "version": 5,
       "type": "mc",
-      "audio_id": "TOCFL-A5-Q37",
-      "prompt": "他们打算什么时候去买礼物？",
+      "points": 4,
+      "prompt": "请听对话，选择最合适的图片。",
       "options": [
-        "明天下课以后",
-        "今天上课以前",
-        "今天下课以后",
-        "小春生日以后"
+        "A",
+        "B",
+        "C"
       ],
       "answer_index": 2,
       "answer": "C",
-      "answer_text": "今天下课以后",
-      "evidence": "购买安排在当天课后。",
-      "focus": "活动安排",
+      "answer_text": "C",
+      "evidence": "C图为蛋糕和汤匙；A图说的是叉子，B图是冰淇淋。",
+      "focus": "蛋糕与所需物品",
       "lesson_keys": [
         "boya-elementary-i:lesson-14"
       ],
-      "source_question_id": "TOCFL-A5-Q37",
-      "source_url": "https://eapi.sc-top.org.tw/video/A5/AE/041.mp3",
+      "audio_id": "TOCFL-A5-Q13",
+      "source_type": "tocfl_official_original_item_with_picture_options",
+      "source_question_id": "TOCFL-A5-Q13",
+      "source_volume": 5,
+      "source_question": 13,
+      "source_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_en_s.pdf",
       "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
-      "id": "W06-MX2-25",
-      "question_id": "W06-MX2-25",
-      "number": 25,
-      "version": 2,
+      "source_answer_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_answer.pdf",
+      "option_image": "images/TOCFL-A5-Q13-options.png",
+      "source_pdf_page": 8,
+      "source_option_order_preserved": true,
+      "script": "男：这是您的巧克力蛋糕，请问还需要什么吗？\n女：请再给我一个汤匙，我们要一起吃。",
+      "review_status": "draft_unpublished",
+      "option_image_url": "https://drive.google.com/uc?export=download&id=1aWuFEDEjbZOCgE7rKANPyZbn-Luw6YYn"
+    },
+    {
+      "id": "W06-MX5-21",
+      "question_id": "W06-MX5-21",
+      "number": 21,
+      "version": 5,
+      "type": "mc",
       "points": 4,
-      "source_type": "tocfl_official_audio_original_questions"
+      "prompt": "请问这位先生说了什么？",
+      "options": [
+        "他刚从海边回来",
+        "他喜欢夏天去海边玩",
+        "他给这位小姐买了裤子",
+        "他约了这位小姐明天去运动"
+      ],
+      "answer": "D",
+      "answer_index": 3,
+      "answer_text": "他约了这位小姐明天去运动",
+      "focus": "服装选择与活动计划",
+      "evidence": "男方提出明天去海边，并说明要在沙滩上打球；D。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ],
+      "audio_id": "TOCFL-A5-Q46",
+      "source_type": "tocfl_official_original_text_choice_item",
+      "source_question_id": "TOCFL-A5-Q46",
+      "source_volume": 5,
+      "source_question": 46,
+      "source_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_en_s.pdf",
+      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
+      "source_answer_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_answer.pdf",
+      "source_option_order_preserved": true,
+      "script": "男：夏天到了，我们明天去海边吧！\n女：好啊！你觉得我应该穿短裙好呢？还是短裤好呢？\n男：我觉得你应该穿短裤，因为我们要在沙滩上打球。\n女：好啊，明天见。\n女：请问这位先生说了什么？",
+      "review_status": "draft_unpublished",
+      "play_count": 2
+    },
+    {
+      "id": "W06-MX5-22",
+      "question_id": "W06-MX5-22",
+      "number": 22,
+      "version": 5,
+      "type": "mc",
+      "points": 4,
+      "prompt": "请问这位小姐的意思是什么？",
+      "options": [
+        "她不想请这位先生吃蛋糕",
+        "她想帮这位先生庆祝生日",
+        "她要朋友来参加舞会就好",
+        "她想要大家一起唱生日歌"
+      ],
+      "answer": "C",
+      "answer_index": 2,
+      "answer_text": "她要朋友来参加舞会就好",
+      "focus": "生日邀请与礼物意图",
+      "evidence": "女方说人来就很开心，蛋糕自己准备，蛋糕和礼物都不是最重要的；C。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-14"
+      ],
+      "audio_id": "TOCFL-A5-Q47",
+      "source_type": "tocfl_official_original_text_choice_item",
+      "source_question_id": "TOCFL-A5-Q47",
+      "source_volume": 5,
+      "source_question": 47,
+      "source_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_en_s.pdf",
+      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
+      "source_answer_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_answer.pdf",
+      "source_option_order_preserved": true,
+      "script": "男：为了你的生日，我想请你吃蛋糕。\n女：你人来我就很开心了，蛋糕，我来准备就好了。\n男：这是为了感谢你请我参加明天的生日舞会，或是你有更想要的礼物吗？\n女：你太客气了。吃蛋糕和收礼物都不是最重要的事。\n女：请问这位小姐的意思是什么？",
+      "review_status": "draft_unpublished",
+      "play_count": 2
+    },
+    {
+      "id": "W06-MX5-23",
+      "question_id": "W06-MX5-23",
+      "number": 23,
+      "version": 5,
+      "type": "mc",
+      "points": 4,
+      "prompt": "为什么这位小姐想去百货公司？",
+      "options": [
+        "她想拿商店送的东西",
+        "她最近很想花钱买东西",
+        "她想要这位先生送她礼物",
+        "她想和这位先生一起去逛街"
+      ],
+      "answer": "A",
+      "answer_index": 0,
+      "answer_text": "她想拿商店送的东西",
+      "focus": "购物优惠与改变主意",
+      "evidence": "女方原本不想花钱，听到有不用花钱的试用品后才决定去；A。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ],
+      "audio_id": "TOCFL-A5-Q48",
+      "source_type": "tocfl_official_original_text_choice_item",
+      "source_question_id": "TOCFL-A5-Q48",
+      "source_volume": 5,
+      "source_question": 48,
+      "source_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_en_s.pdf",
+      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
+      "source_answer_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_answer.pdf",
+      "source_option_order_preserved": true,
+      "script": "男：我要去逛百货公司，要一起吗？\n女：我最近花了太多钱了，还是不要吧。\n男：最近百货公司有活动，很多商品不但很便宜，还会给很多试用的东西。\n女：喔，有不用花钱的啊！那我们快走吧！\n女：为什么这位小姐想去百货公司？",
+      "review_status": "draft_unpublished",
+      "play_count": 2
+    },
+    {
+      "id": "W06-MX5-24",
+      "question_id": "W06-MX5-24",
+      "number": 24,
+      "version": 5,
+      "type": "mc",
+      "points": 4,
+      "prompt": "请问下面哪一个是对的？",
+      "options": [
+        "这位先生今天想留在家里",
+        "这位小姐怕自己太晚回家",
+        "他们两人今天都想看棒球比赛",
+        "他们已经买完衣服回家休息了"
+      ],
+      "answer": "A",
+      "answer_index": 0,
+      "answer_text": "这位先生今天想留在家里",
+      "focus": "买衣服的约定与说话意图",
+      "evidence": "男方明确说在家吹冷气多好，提出不要去买衣服；A。女方关于棒球的判断不是男方亲口确认的事实。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ],
+      "audio_id": "W06V5-TOCFL-A5-Q49",
+      "source_type": "tocfl_official_original_text_choice_item",
+      "source_question_id": "TOCFL-A5-Q49",
+      "source_volume": 5,
+      "source_question": 49,
+      "source_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_en_s.pdf",
+      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
+      "source_answer_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_answer.pdf",
+      "source_option_order_preserved": true,
+      "script": "男：今天天气好热，我们在家吹冷气多好，还是不要去买衣服了。\n女：不行，你昨天答应我今天要出门买衣服。\n男：可是你没发现衣服已经很多了吗？\n女：我觉得，你只是怕太晚回家，没办法看棒球比赛！\n女：请问下面哪一个是对的？",
+      "review_status": "draft_unpublished",
+      "play_count": 2
+    },
+    {
+      "id": "W06-MX5-25",
+      "question_id": "W06-MX5-25",
+      "number": 25,
+      "version": 5,
+      "type": "mc",
+      "points": 4,
+      "prompt": "这位小姐的意思是什么？",
+      "options": [
+        "她要把钱还给客人",
+        "东西卖出去就不能换了",
+        "她没有东西可以换给客人",
+        "没有发票，就不能换东西"
+      ],
+      "answer": "D",
+      "answer_index": 3,
+      "answer_text": "没有发票，就不能换东西",
+      "focus": "购物换货条件",
+      "evidence": "店员明确说要看到发票才能换东西；D。",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13"
+      ],
+      "audio_id": "TOCFL-A5-Q50",
+      "source_type": "tocfl_official_original_text_choice_item",
+      "source_question_id": "TOCFL-A5-Q50",
+      "source_volume": 5,
+      "source_question": 50,
+      "source_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_en_s.pdf",
+      "source_script_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_listen.pdf",
+      "source_answer_url": "https://tocfl.edu.tw/tocfl/assets/files/mock/ls_mock5_test_BandA_answer.pdf",
+      "source_option_order_preserved": true,
+      "script": "男：小姐，这是昨天跟你们买的牛奶，味道有点奇怪，我想换一瓶新的。\n女：请问您带了发票吗？\n男：喔，我没带来。\n女：我们要看到发票，才能换东西，不好意思。\n女：这位小姐的意思是什么？",
+      "review_status": "draft_unpublished",
+      "play_count": 2
     }
-  ]
+  ],
+  "variant_id": "W06-L13L14-LONG-DIALOGUES-20261023",
+  "publication_authorized": false
 }

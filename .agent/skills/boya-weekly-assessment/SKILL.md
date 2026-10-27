@@ -5,6 +5,8 @@ description: Produce and audit schedule-aligned weekly listening and speaking as
 
 # 一年级每周综合听说测验
 
+命题或审阅时，另用 [`education-evidence-review.md`](../../../docs/workflow/education-evidence-review.md) 的 assessment check 核对「目标→学生表现→答案／量表→分数→教学决定」，并核查题目是否混入阅读负担、音频不清或同伴表现等无关因素。此审阅只生成修订意见；本卷来源、答案同步、教师亲听和批准要求仍以下文为准。
+
 适用范围仅为 `BOYA-LS-E1-Y1S1-2026F`／`2026-fall`／`boya-elementary-i`。先读专案 `AGENTS.md`、`PROJECT_REQUIREMENTS.md`、`memory/project-memory.md`、`.agent/agent-workflow-index.md`、`.agent/agent-operating-contract.md` 与 `.agent/skills/boya-lesson-production/SKILL.md`；依专案 run loop 留下来源、验证和停止原因。课程周次以 `docs/course-rules/BOYA-LS-E1-Y1S1-2026F/README.md` 的当前版本为准，每次制作前重新核对。不要把大二课表或其他《博雅》册次混入。
 
 ## 每周固定同步流程（Adam，2026-10-16）

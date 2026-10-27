@@ -1,0 +1,42 @@
+{
+  "record_type": "assessment_content_approval",
+  "assessment_id": "W06-L13L14-20261016",
+  "exam_id": "W06-L13L14-20261016",
+  "variant_id": "W06-L13L14-LONG-DIALOGUES-20261023",
+  "question_version": 5,
+  "status": "approved",
+  "finalized": true,
+  "gate": "assessment-content",
+  "approved_by": "Adam",
+  "approved_at": "2026-10-23T11:20:06.912680+07:00",
+  "scope": "Current synchronized25-question100-point W06 test Form and its matching content package",
+  "user_evidence": ".agent/runs/w06-final-approval-20261023/approval-evidence.md",
+  "evidence_sha256": "9ed5e83f63ff208c4969caab208cc699f64a2f03bb4bcdc4891d78aa8188d70a",
+  "form_id": "1M33yrhHQHPAI2JE66VqO2nyuxNZQChUOwyWXIHGFnSU",
+  "form_revision": "00000036",
+  "form_snapshot": ".agent/runs/w06-final-approval-20261023/form-at-approval.json",
+  "form_snapshot_sha256": "8f010ac5086f1086b3214126663a1d0273651ee9ecfbfd73aad5724a675ecc31",
+  "hashes": {
+    "items.json": "cd178ab35746ef10d07f04565349809ffddb2661534926cfa301f0f5911b8b4e",
+    "audio-manifest.json": "4f80d1a7bcbc2f42f1684f9d786ea4f774b13b7f9c31015502d63e4cc7615b5b",
+    "student.md": "749bcf0a539d92a6f3effbc8decc44453c93e37b54ed5e853ae948c83bfecf80",
+    "teacher.md": "33c1b44472fa39ac8ed75df9712c7d676f32363b3b727037552196dede141591",
+    "form-sections.json": "67e0e2f06a30c5e2c242923d9214b5f780bae574877f6c3c29e60e575aa8f56b",
+    "audio-map.csv": "c1f7b9222030f307f8c6cac1ed48cfdce5248eec7cc4468f2065ed3ce1ec9679",
+    "source-manifest.json": "60db9ae8f8431b30709a5eeb4d864cead3e6398299d99fc0a7961790d70a4f38",
+    "scope.md": "856adf24f706fbd554848f70ce8a2336ece084f9f908439d7e77c5a70e9b5fd5"
+  },
+  "version_directory_hashes": {
+    "items.json": "cd178ab35746ef10d07f04565349809ffddb2661534926cfa301f0f5911b8b4e",
+    "audio-manifest.json": "4f80d1a7bcbc2f42f1684f9d786ea4f774b13b7f9c31015502d63e4cc7615b5b",
+    "student.md": "749bcf0a539d92a6f3effbc8decc44453c93e37b54ed5e853ae948c83bfecf80",
+    "teacher.md": "33c1b44472fa39ac8ed75df9712c7d676f32363b3b727037552196dede141591",
+    "form-sections.json": "67e0e2f06a30c5e2c242923d9214b5f780bae574877f6c3c29e60e575aa8f56b",
+    "audio-map.csv": "69b8aec5e7b27ddfcb34b463ca05f6eaeafe31a7a17f7d386a41da5ca9840dd3",
+    "source-manifest.json": "60db9ae8f8431b30709a5eeb4d864cead3e6398299d99fc0a7961790d70a4f38",
+    "scope.md": "856adf24f706fbd554848f70ce8a2336ece084f9f908439d7e77c5a70e9b5fd5"
+  },
+  "publication_authorized": false,
+  "teacher_full_listening_accepted": false,
+  "classroom_speaker_acceptance": false
+}

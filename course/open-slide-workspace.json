@@ -2,6 +2,127 @@
   "workspace": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06",
   "html_decks": [
     {
+      "id": "boya-quasi-intermediate-i-lesson-04-05-w09",
+      "lesson_key": "boya-quasi-intermediate-i:lesson-04",
+      "lesson_keys": [
+        "boya-quasi-intermediate-i:lesson-04",
+        "boya-quasi-intermediate-i:lesson-05"
+      ],
+      "offering_id": "2026-fall",
+      "title": "准中级加速篇 I｜第4—5课｜学习经历与音乐老师（15页）",
+      "source": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/open-slide-draft/w09-l04-l05/lesson-04-05-实体课.html",
+      "created_at": "2026-10-27T00:00:00+07:00",
+      "updated_at": "2026-10-27",
+      "content_version": "v3-approved-20261027",
+      "visual_check": {
+        "reference": "lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12-v09-readable/lesson-11-12-实体课.html",
+        "reference_sha256": "3ff376220782b1c31e706a44d8c9c539230625c0a930e852d2f3d43fee812ffb",
+        "expected_route_cards": 4,
+        "expected_route_columns": 4,
+        "content_contract": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/open-slide-draft/w09-l04-l05/lesson-04-05-slide-contract.json",
+        "draft_manifest": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/open-slide-draft/w09-l04-l05/lesson-04-05-draft-manifest.json",
+        "rendered_layout_report": "lessons/boya-quasi-intermediate-i/lesson-04/10-design/open-slide-draft/w09-l04-l05/qa-xiaoan/rendered-layout.json",
+        "page_types": {
+          "discussion": [
+            "w09-l04-l05-page-10",
+            "w09-l04-l05-page-14",
+            "w09-l04-l05-page-15"
+          ],
+          "comic": [
+            "w09-l04-l05-page-09",
+            "w09-l04-l05-page-13"
+          ],
+          "report": [
+            "w09-l04-l05-page-08",
+            "w09-l04-l05-page-12"
+          ]
+        }
+      }
+    },
+    {
+      "id": "boya-elementary-i-lesson-15-w07",
+      "lesson_key": "boya-elementary-i:lesson-15",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-15"
+      ],
+      "title": "初级起步篇｜第15课｜试穿与请求（21页）",
+      "source": "lessons/boya-elementary-i/lesson-15/10-design/open-slide-draft/w07-l15/lesson-15-实体课.html",
+      "created_at": "2026-10-21T00:00:00+07:00",
+      "updated_at": "2026-10-21",
+      "content_version": "v04-approved-w07-2026-10-21",
+      "visual_check": {
+        "reference": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-实体课.html",
+        "reference_sha256": "9ee3b24a73662ead2f0f3054b74dd6466ec74b85b280a131a212c56bbda6ddac",
+        "expected_route_cards": 4,
+        "expected_route_columns": 4,
+        "page_types": {
+          "discussion": [
+            "w07-task-try-on",
+            "w07-task-try-on-support",
+            "w07-task-city-choice",
+            "w07-task-city-choice-support",
+            "w07-task-hanoi-half-day",
+            "w07-task-hanoi-half-day-support",
+            "w07-task-danang-rain",
+            "w07-task-danang-rain-support"
+          ],
+          "comic": [
+            "w07-comic-clothes",
+            "w07-comic-airport"
+          ],
+          "report": [
+            "w07-report-clothes",
+            "w07-report-airport"
+          ]
+        },
+        "rendered_layout_report": "lessons/boya-elementary-i/lesson-15/10-design/open-slide-draft/w07-l15/qa/rendered-layout.json",
+        "content_contract": "lessons/boya-elementary-i/lesson-15/10-design/open-slide-draft/w07-l15/lesson-15-slide-contract.json",
+        "draft_manifest": "lessons/boya-elementary-i/lesson-15/10-design/open-slide-draft/w07-l15/lesson-15-draft-manifest.json"
+      },
+      "offering_id": "2026-fall"
+    },
+    {
+      "id": "boya-elementary-i-lesson-13-14-w06",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13",
+        "boya-elementary-i:lesson-14"
+      ],
+      "title": "初级起步篇｜第13—14课｜购物与生日（18页）",
+      "source": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-实体课.html",
+      "created_at": "2026-10-20T12:01:14+07:00",
+      "updated_at": "2026-10-22",
+      "content_version": "adam-approved-reorder-two-comics-20261022",
+      "visual_check": {
+        "reference": "lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12-v09-readable/lesson-11-12-实体课.html",
+        "reference_sha256": "3ff376220782b1c31e706a44d8c9c539230625c0a930e852d2f3d43fee812ffb",
+        "expected_route_cards": 4,
+        "expected_route_columns": 4,
+        "page_types": {
+          "discussion": [
+            "w06-life-vinh-shopping-question",
+            "w06-life-vinh-shopping-support",
+            "w06-life-vietnam-birthday-question",
+            "w06-life-vietnam-birthday-support",
+            "w06-life-taipei-birthday-question",
+            "w06-life-taipei-birthday-support"
+          ],
+          "comic": [
+            "w06-l13-comic",
+            "w06-l14-comic"
+          ],
+          "report": [
+            "w06-l13-report",
+            "w06-l14-report"
+          ]
+        },
+        "rendered_layout_report": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/rendered-layout.json",
+        "content_contract": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-slide-contract.json",
+        "draft_manifest": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-draft-manifest.json"
+      },
+      "offering_id": "2026-fall"
+    },
+    {
       "id": "boya-elementary-i-lesson-11-12",
       "lesson_key": "boya-elementary-i:lesson-11",
       "lesson_keys": [

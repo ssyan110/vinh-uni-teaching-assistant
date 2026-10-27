@@ -1,0 +1,349 @@
+{
+  "schema_version": "openslide-draft-manifest-v1",
+  "deck_id": "boya-elementary-i-lesson-13-14-w06",
+  "status": "design-draft",
+  "offering_id": "2026-fall",
+  "lesson_keys": [
+    "boya-elementary-i:lesson-13",
+    "boya-elementary-i:lesson-14"
+  ],
+  "format": "OpenSlides HTML",
+  "entry_file": "lesson-13-14-实体课.html",
+  "entry_sha256": "9ee3b24a73662ead2f0f3054b74dd6466ec74b85b280a131a212c56bbda6ddac",
+  "teacher_guide": {
+    "path": "lesson-13-14-教师速用说明.md",
+    "sha256": "685053a7fa0b1b2ce0809e11d56ea7d0cecc9bfdd142e33c0c5ad2a90e1cbfe2"
+  },
+  "slide_count": 18,
+  "workspace_entry": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/boya-elementary-i-lesson-13-14-w06/index.tsx",
+  "workspace_synced": true,
+  "assets": [
+    {
+      "path": "assets/asset-manifest.json",
+      "exists": true,
+      "sha256": "bc48c065aa7ffe3f26e3684881fdd8aad712d8a32d91d4fd3941ea2f8ed0ede4"
+    },
+    {
+      "path": "assets/birthday-hotpot.jpg",
+      "exists": true,
+      "sha256": "13cbb2e277029a1e9c926ddaf5d0c7de900172da7f260bbe47c211b0f3278756"
+    },
+    {
+      "path": "assets/birthday-karaoke.jpg",
+      "exists": true,
+      "sha256": "0adb33c0aa29e7a35a4b517e2d4f9066bc50fd0d4761b2a9ea1893e0c2de2c7c"
+    },
+    {
+      "path": "assets/birthday-milk-tea.jpg",
+      "exists": true,
+      "sha256": "f257a2f134997ddde73618206ec5f7924fd38585d12c2759196651ac54a2cb3d"
+    },
+    {
+      "path": "assets/birthday-vinh-park.png",
+      "exists": true,
+      "sha256": "4b0575c31587dd1666ecdb26313dd53869cfb43fd826eec6f07a921841fdaebb"
+    },
+    {
+      "path": "assets/comic-birthday-rain.png",
+      "exists": true,
+      "sha256": "99c861ebb3839576f0e78ac6911b090c577abfb7e0ac527d1d93f894ae69f203"
+    },
+    {
+      "path": "assets/comic-l13-taipei-night-market.png",
+      "exists": true,
+      "sha256": "0e1f01abe183c888fd7ee45ff22fe40b6114900cb124a66683c857ca1ace828f"
+    },
+    {
+      "path": "assets/comic-l14-vinh-birthday.png",
+      "exists": true,
+      "sha256": "20fe0e839a17d85ef4434cf4a15fc948132b329f606dac1f7e51bd39c1d556d5"
+    },
+    {
+      "path": "assets/comic-shopping-broken-bag.png",
+      "exists": true,
+      "sha256": "ac6cb827b7413c8ce2433bd017e4dd9dd8e1f20cba9c6cec0c23eb23592021a6"
+    },
+    {
+      "path": "assets/cover-shopping-birthday.png",
+      "exists": true,
+      "sha256": "3db7a95b4edf02d9bd41c5881d14b8531d2ac4955b064d490d17fe7a6be221e7"
+    },
+    {
+      "path": "assets/icons/book-pencil.png",
+      "exists": true,
+      "sha256": "b97842336f3e54a843c0782393177e8bf20ed30638c0e8611cc9850282792a75"
+    },
+    {
+      "path": "assets/icons/conversation.png",
+      "exists": true,
+      "sha256": "96491bb767d6e33d464f8957bed229cdf88eb566b50c59bb3d6806171bed7d3f"
+    },
+    {
+      "path": "assets/icons/listen.png",
+      "exists": true,
+      "sha256": "3a16f13ea2c003a234c62f30f9fd4c019cc87e1ce97ad5ffa967ed080cfb133e"
+    },
+    {
+      "path": "assets/icons/location.png",
+      "exists": true,
+      "sha256": "ab0d5b82c428355936830dd4037f49d9524437ab2ed595572ca80b0a3ffe5244"
+    },
+    {
+      "path": "assets/icons/notes.png",
+      "exists": true,
+      "sha256": "1d0d9995b40db4470c4b203efb5568f8af800de91c9f5da7ef5de2460b6ae996"
+    },
+    {
+      "path": "assets/icons/phone.png",
+      "exists": true,
+      "sha256": "d3e791e0a9d2452965196998db07634a9ea10d2271896c66863a1036af29e108"
+    },
+    {
+      "path": "assets/icons/school.png",
+      "exists": true,
+      "sha256": "cdf2cfc3bd653ea0d4c4b2bfcdb41cce3eb4fbdc325a847be52f833269492060"
+    },
+    {
+      "path": "assets/icons/shopping-bag.png",
+      "exists": true,
+      "sha256": "72e7a2536b90c9cafbeea2b05fa232b78df87cf413b722e933dc429d684b9986"
+    },
+    {
+      "path": "assets/icons/wallet.png",
+      "exists": true,
+      "sha256": "e721e4b070c50e0aacc9e3d3a64fcb8577e2e2f240d984ddb122b50e4f872899"
+    },
+    {
+      "path": "assets/shirt-a-blue.png",
+      "exists": true,
+      "sha256": "9a23de0fd85f1fe6543867d70d2c9816c7998fa3392b791961b947b5ab8ed18f"
+    },
+    {
+      "path": "assets/shirt-b-black.jpg",
+      "exists": true,
+      "sha256": "898c0424261261c092f6fe88bb8f81467dfdec447743e9eecf57c2bb5f71b64e"
+    },
+    {
+      "path": "assets/shirt-c-light-blue.jpg",
+      "exists": true,
+      "sha256": "44fa15aed7ed9079621dd78af7ebea71cbdd8856b78fa183c000b97092cd62d9"
+    },
+    {
+      "path": "assets/taipei-night-market-food.png",
+      "exists": true,
+      "sha256": "76b7dd8534ba229e4a50dd5aaad85a6c77fd8c1a1b734c0eb142f429044369c9"
+    }
+  ],
+  "visual_render_status": "2026-10-21: 18 current pages passed full copy/image contract and browser checks; actual unified homepage and 18 embedded pages checked; minimum footer clearance 71.594px.",
+  "release_status": "not approved or released",
+  "style_references": {
+    "lesson-09-10": {
+      "path": "lessons/boya-elementary-i/lesson-09-10/10-design/openslide-image-first-20261006/lesson-09-10.html",
+      "sha256": "b15e98e2c020c4455f106c7982365e003bf8f2e0cc14e5815f45d35931caac63"
+    },
+    "lesson-11-12": {
+      "path": "lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12-v09-readable/lesson-11-12-实体课.html",
+      "sha256": "3ff376220782b1c31e706a44d8c9c539230625c0a930e852d2f3d43fee812ffb"
+    }
+  },
+  "design_correction": "Root-cause controls: separate cover/route references; per-deck reviewed content/image contract; generic glyph/font/geometry measurement; current-render verification at synchronization. Restored approved omissions on slides 3 and 9 and removed five superseded CSS rules.",
+  "static_visual_check": {
+    "status": "passed",
+    "script": "scripts/check_open_slide_visual_consistency.py",
+    "script_sha256": "8035cb5b8350d9c57504d6e741922c3509677052894b4d1f25bf78a7e00dda93",
+    "contract": "lesson-13-14-slide-contract.json",
+    "contract_sha256": "024e220eb1b3ca9bbcd451578f3cc439eec71aabc0a734f6920581728080d56f",
+    "checks": [
+      "Full ordered reviewed text, images, roles, page pairs and reference shell",
+      "Registered source, owner, offering and existing approval preflight",
+      "43 Python tests; nine browser negative cases"
+    ]
+  },
+  "copy_inputs": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-逐页文案审阅-v02.md",
+      "sha256": "b6b0d1d40b71b124e6432d0ed8d7cf2a8dacf0c9355d3aa3940cdcf8b96d53b7",
+      "scope": "slides 1–12"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-逐页文案审阅-v03.md",
+      "sha256": "01164faac085ac28bf3fa3bb96568412f6b4f8e9c54b7e8d2b3809d72f704328",
+      "scope": "slides 13–18"
+    }
+  ],
+  "approval_records": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/storyboard/lesson-13-content-approval.json",
+      "sha256": "1ff0187687c4e2b0d32a4a8f62f13abed28f094c394b6cd5a6e34c4eecf7ee8d"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-14/10-design/storyboard/lesson-14-content-approval.json",
+      "sha256": "285a73ecbaa26ca113780d288ec3ecc4d00681bd95fdaf8699db7c84d0deabc8"
+    }
+  ],
+  "static_qa": {
+    "path": "lesson-13-14-static-qa.md",
+    "sha256": "1e16701f4d6d281c1ddfec3cf0f10b7036be4448042ae6cc428a7ecfe62d5293"
+  },
+  "visual_evidence": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-01.png",
+      "sha256": "8b38899da42d7ce09b3d70f64ea158f03b26c1a40b2647b362b1525d55f8c677"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-02.png",
+      "sha256": "19f030b8e6f40338a5ee2ced481de565d351f94656f2311b5122e2a68fdcbe06"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-03.png",
+      "sha256": "cf925b4f31282cfaaeb68261041962377ea210c9b5ab0f68e495e6129a4fb6b6"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-04.png",
+      "sha256": "3bb9a977c69243c4a693bfa86fbf3bd7edbe320ee63da00132424691d12681cc"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-05.png",
+      "sha256": "558e71d08cc9ad708d764410077202e5b6df7f862ea1d0c63ec64e68f8ad0d2d"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-06.png",
+      "sha256": "89888f7d0626de437e777c2eb4aa5ad217a15abc467a89dd0c03651afeba7436"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-07.png",
+      "sha256": "8e66099accd1e08e1d26c38ecbfe0c0836c80df6dda08a188a050aac675acca8"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-08.png",
+      "sha256": "7e54ff94f8b5760e426b054803dc98083bdc9e3db7e340a7e10e612ee91ffff2"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-09.png",
+      "sha256": "95957c99dda56974e7172e0b9792937a5bfdf50210f3c2884f59f9879a084cdb"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-10.png",
+      "sha256": "e3a5b62581994518d5f5518e3f481ea88266922c524ab75dd868f310affca5bb"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-11.png",
+      "sha256": "32776e0d430243b8e2d79b10cb8220c3fcd25a7828f2e57d14d538edddf86c21"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-12.png",
+      "sha256": "7d17600ae19069557e47dcc027776054b419a0c145ef7afaefb7a22368b36633"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-13.png",
+      "sha256": "b32635be4fb5e15500d38df5a6f1c451d1938433c9cd950b411c4c9d46d76ab7"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-14.png",
+      "sha256": "b05cfd5ff817a8127cdcebc4adb12cb141e650b2e3b8b6967ec09e2c484ce522"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-15.png",
+      "sha256": "2437b172ad23d0d785a96026fb4a60b253027eb0ba7b6b6f088375fc1793d097"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-16.png",
+      "sha256": "4e6374b9167e8381f2e0b830045caabd86f9845c1e6cfbf0851c60f87737844d"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-17.png",
+      "sha256": "435a35e44e12246717fb36445c5cac2684e88d7730e4b2b2dd08f00f610f983e"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-18.png",
+      "sha256": "38cebbf25fffe545023a9c7d4d990600a139c996b677c86e87a14ef0bbe6db8d"
+    },
+    {
+      "path": ".agent/runs/classroom-slide-controls-20261021/screenshots/workspace-10.png",
+      "sha256": "72ff2eb2d2169850c12f1f314feef7b5910b784bb23bec1a40e6d6489ad69c98"
+    },
+    {
+      "path": ".agent/runs/classroom-slide-controls-20261021/screenshots/workspace-12.png",
+      "sha256": "f7168c40f98570efc6a9b78d94d48f622549e2342a501f2c1dea7e3f8eed38f6"
+    },
+    {
+      "path": ".agent/runs/classroom-slide-controls-20261021/screenshots/workspace-13.png",
+      "sha256": "cf781e66357b690f5c05c1e8234f70a27ad4603e3375c040862cced925f43a15"
+    },
+    {
+      "path": ".agent/runs/classroom-slide-controls-20261021/screenshots/workspace-14.png",
+      "sha256": "9f4bf868d988baca027e4835288fed2879087bc5f75aaeed11b5568efec27124"
+    },
+    {
+      "path": ".agent/runs/classroom-slide-controls-20261021/screenshots/workspace-16.png",
+      "sha256": "5c4e8bab148d599e471341165b1200685cbbed6a7decce555fabffe8edf30897"
+    },
+    {
+      "path": ".agent/runs/classroom-slide-controls-20261021/screenshots/workspace-18.png",
+      "sha256": "569a104b2ee3babf6bcdde29abd5d061be8338c69d9383d87cb94b4454bb1fc7"
+    },
+    {
+      "path": ".agent/runs/classroom-slide-controls-20261021/screenshots/workspace-4.png",
+      "sha256": "9682f4187a9f273d6b077b9f69383e8c0cacd9fb5895378aad0b423954395d72"
+    },
+    {
+      "path": ".agent/runs/classroom-slide-controls-20261021/screenshots/workspace-6.png",
+      "sha256": "341fd7410ae273598bfd4c3fcd77489919221c2da2625e5969007b0cdf750367"
+    },
+    {
+      "path": ".agent/runs/classroom-slide-controls-20261021/screenshots/workspace-9.png",
+      "sha256": "ba5dd894dd6674614436631f0f97859bb600eff26efd820b7e305b5b15889d38"
+    }
+  ],
+  "rendered_visual_check": {
+    "status": "passed",
+    "schema_version": 2,
+    "report": "qa/rendered-layout.json",
+    "report_sha256": "d5bbcd3b4db6be38fdb141f4d80f71eae06cd2c914eb1a7ae5d895af8d80b21a",
+    "pages": 18,
+    "visual_review": "All 18 rendered pages inspected; both generated six-panel stories inspected at full resolution.",
+    "workspace_navigation": "CUA: opened W06 from shared homepage; presented page1 then 17 Right presses verified pages2–18, then Left to comic page9; no extra click steps.",
+    "build": "npm exec -- open-slide build after guarded scoped sync",
+    "full_workspace_sync": "blocked by unrelated L15 existing teacher-script approval hash; scoped W06 sync passed with all W06 checks"
+  },
+  "revision": "2026-10-22 approved reorder and both comic replacements",
+  "open_limitations": [
+    "Pre-existing reading texts differ from student-slide names/places; excluded from this image/order approval."
+  ],
+  "comic_generation": {
+    "method": "OpenAI built-in image_gen",
+    "date": "2026-10-22",
+    "review": "Both six-panel outputs visually inspected: clear broken strap/replacement, and rain/indoor move/continued birthday; title and image only.",
+    "paths": [
+      "assets/comic-shopping-broken-bag.png",
+      "assets/comic-birthday-rain.png"
+    ]
+  },
+  "teacher_pdf": {
+    "path": "lesson-13-14-教师朗读稿.pdf",
+    "sha256": "66f05c2f16df131088aefba5a0fa4f72b2de33ef42058d9c0ac9a5e8b38985ff",
+    "pages": 6,
+    "blank_pages": 0,
+    "content_limit": "Current 18-slide arrangement; reading scripts match 阿明 in 荣市 and 小兰 in 台北. Comic cues match pages 9 and 14."
+  },
+  "current_screenshots": [
+    "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-01.png",
+    "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-02.png",
+    "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-03.png",
+    "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-04.png",
+    "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-05.png",
+    "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-06.png",
+    "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-07.png",
+    "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-08.png",
+    "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-09.png",
+    "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-10.png",
+    "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-11.png",
+    "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-12.png",
+    "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-13.png",
+    "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-14.png",
+    "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-15.png",
+    "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-16.png",
+    "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-17.png",
+    "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/slide-18.png"
+  ]
+}

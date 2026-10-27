@@ -1,0 +1,178 @@
+{
+  "status": "passed",
+  "question_count": 30,
+  "retained_current_ids": 12,
+  "new_candidates": 18,
+  "esl_adapted_new_count": 8,
+  "primary_lesson_coverage": [
+    {
+      "lesson": 4,
+      "title": "你叫什么名字",
+      "primary_ids": [
+        "A13"
+      ],
+      "secondary_ids": [
+        "A01",
+        "A14",
+        "A26",
+        "A30"
+      ]
+    },
+    {
+      "lesson": 5,
+      "title": "认识你很高兴",
+      "primary_ids": [
+        "A01",
+        "A14"
+      ],
+      "secondary_ids": [
+        "A13",
+        "A22",
+        "A25",
+        "A26",
+        "A30"
+      ]
+    },
+    {
+      "lesson": 6,
+      "title": "这是什么",
+      "primary_ids": [
+        "A02",
+        "A15"
+      ],
+      "secondary_ids": [
+        "A25"
+      ]
+    },
+    {
+      "lesson": 7,
+      "title": "欢迎去我家玩儿",
+      "primary_ids": [
+        "A03",
+        "A04",
+        "A16"
+      ],
+      "secondary_ids": [
+        "A06",
+        "A29"
+      ]
+    },
+    {
+      "lesson": 8,
+      "title": "明天晚上你有时间吗",
+      "primary_ids": [
+        "A05",
+        "A17",
+        "A18"
+      ],
+      "secondary_ids": [
+        "A04",
+        "A09",
+        "A21",
+        "A24"
+      ]
+    },
+    {
+      "lesson": 9,
+      "title": "我们怎么去",
+      "primary_ids": [
+        "A06",
+        "A19",
+        "A20"
+      ],
+      "secondary_ids": [
+        "A03",
+        "A16"
+      ]
+    },
+    {
+      "lesson": 10,
+      "title": "西瓜怎么卖",
+      "primary_ids": [
+        "A07",
+        "A21",
+        "A22"
+      ],
+      "secondary_ids": [
+        "A19",
+        "A20",
+        "A28",
+        "A29"
+      ]
+    },
+    {
+      "lesson": 11,
+      "title": "明天天气怎么样",
+      "primary_ids": [
+        "A08",
+        "A23",
+        "A24"
+      ],
+      "secondary_ids": [
+        "A19"
+      ]
+    },
+    {
+      "lesson": 12,
+      "title": "我正在等公共汽车呢",
+      "primary_ids": [
+        "A09",
+        "A25",
+        "A26"
+      ],
+      "secondary_ids": [
+        "A05",
+        "A08",
+        "A14",
+        "A15",
+        "A17",
+        "A18",
+        "A21",
+        "A23"
+      ]
+    },
+    {
+      "lesson": 13,
+      "title": "你打算买什么样子的",
+      "primary_ids": [
+        "A10",
+        "A27",
+        "A28"
+      ],
+      "secondary_ids": [
+        "A11",
+        "A12"
+      ]
+    },
+    {
+      "lesson": 14,
+      "title": "祝你生日快乐",
+      "primary_ids": [
+        "A11",
+        "A29"
+      ],
+      "secondary_ids": []
+    },
+    {
+      "lesson": 15,
+      "title": "我可以试试吗",
+      "primary_ids": [
+        "A12",
+        "A30"
+      ],
+      "secondary_ids": [
+        "A02",
+        "A04",
+        "A10",
+        "A13",
+        "A27",
+        "A28"
+      ]
+    }
+  ],
+  "no_duplicate_prompt": true,
+  "runtime_17_files_unchanged": true,
+  "publication_performed": false,
+  "manual_review_pending": true,
+  "limits": "No classroom calibration or proof of taught completion."
+}

@@ -1,0 +1,54 @@
+{
+  "questions": 25,
+  "points": 100,
+  "audio_count": 16,
+  "first20_unchanged": true,
+  "changed_numbers": [
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "form_readback": {
+    "form_id": "1M33yrhHQHPAI2JE66VqO2nyuxNZQChUOwyWXIHGFnSU",
+    "revision": "00000036",
+    "questions": 25,
+    "points": 100,
+    "sections": 16,
+    "unpublished": true,
+    "existing_question_ids_preserved": 25,
+    "responses_preserved": 0,
+    "first20_identical": true,
+    "old_option_images_removed": 5,
+    "readback_utc": "2026-10-23T02:57:16.256160+00:00"
+  },
+  "sheet_readback": {
+    "passed": true,
+    "exam_id": "W06-L13L14-20261016",
+    "version": 5,
+    "questions": 25,
+    "points": 100,
+    "audio": 16,
+    "audio_ids_reused": [
+      "TOCFL-A5-Q46",
+      "TOCFL-A5-Q47",
+      "TOCFL-A5-Q50"
+    ],
+    "removed": {
+      "题库": 25,
+      "组卷明细": 25,
+      "音频库": 5
+    },
+    "grade_sheet_id": 1900630601,
+    "grade_sheet_title": "成绩-W06-第13–14课",
+    "paper_filter_view_id": 1900620003,
+    "other_exam_inputs_and_grades_preserved": true,
+    "formula_errors": [],
+    "unpublished_required": true,
+    "checked_utc": "2026-10-23T02:58:28.322890+00:00"
+  },
+  "teacher_full_listening": "pending",
+  "classroom_speaker_acceptance": "pending",
+  "publication_authorized": false
+}

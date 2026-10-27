@@ -1,0 +1,156 @@
+{
+  "question_count": 25,
+  "total_points": 100,
+  "textbook_questions": 14,
+  "official_tocfl_questions": 11,
+  "audio_groups": 16,
+  "all_question_numbers_contiguous": true,
+  "all_answer_indices_and_texts_consistent": true,
+  "all_audio_files_decode": true,
+  "all_audio_hashes_match": true,
+  "all_source_option_images_decode": true,
+  "source_crops_visual_review": "11 of11 reviewed; labels and complete pictures retained; official source numbers omitted",
+  "all_section_question_ids_match": true,
+  "audio_checks": [
+    {
+      "audio_id": "13-9",
+      "sha256": "d3deb69d9a225b7cf0a5fc86784dc4ff21ce2a257e80ec8563615ec80644c238",
+      "decode": "pass",
+      "question_ids": [
+        "W06-MX4-01",
+        "W06-MX4-02",
+        "W06-MX4-03"
+      ]
+    },
+    {
+      "audio_id": "13-10",
+      "sha256": "e9035a6e3b823b346edd2addc5021781eae73b369a505c7cd490a7fafacbaf90",
+      "decode": "pass",
+      "question_ids": [
+        "W06-MX4-04",
+        "W06-MX4-05",
+        "W06-MX4-06",
+        "W06-MX4-07",
+        "W06-MX4-08"
+      ]
+    },
+    {
+      "audio_id": "14-9",
+      "sha256": "2e5a88085d704cc04842a649b2d551975224fada33dff72f2c3247721547cfbd",
+      "decode": "pass",
+      "question_ids": [
+        "W06-MX4-09",
+        "W06-MX4-10",
+        "W06-MX4-11"
+      ]
+    },
+    {
+      "audio_id": "14-10",
+      "sha256": "37e608cc5dfb9b735f8ed6fd88a681f56ed79f7c7d58a6c5663e896632778da1",
+      "decode": "pass",
+      "question_ids": [
+        "W06-MX4-12",
+        "W06-MX4-13"
+      ]
+    },
+    {
+      "audio_id": "14-11",
+      "sha256": "d0bf569ee1209e05161cf3e3fe075b20486ca3ba1f984cb3026fff376b8d57d2",
+      "decode": "pass",
+      "question_ids": [
+        "W06-MX4-14"
+      ]
+    },
+    {
+      "audio_id": "TOCFL-A4-Q13",
+      "sha256": "a03eef135ce5ed43211e869a72afe7c055d25bfbcf12d1ef3aa17e07ef4dee22",
+      "decode": "pass",
+      "question_ids": [
+        "W06-MX4-15"
+      ]
+    },
+    {
+      "audio_id": "TOCFL-A4-Q14",
+      "sha256": "907b19f3e1bccff7200082e1443c8c762e09c439ff28b22bb3531d5874d33b01",
+      "decode": "pass",
+      "question_ids": [
+        "W06-MX4-16"
+      ]
+    },
+    {
+      "audio_id": "TOCFL-A4-Q23",
+      "sha256": "861851eeca3d0f9eea7168baaae3afe0d383dd397d3d8c701c799497cb1baa70",
+      "decode": "pass",
+      "question_ids": [
+        "W06-MX4-17"
+      ]
+    },
+    {
+      "audio_id": "TOCFL-A4-Q26",
+      "sha256": "93c888ec9475fb3bd71dd71abd8fd6e2bf7fae11227be8a3592467ec1a0fd911",
+      "decode": "pass",
+      "question_ids": [
+        "W06-MX4-18"
+      ]
+    },
+    {
+      "audio_id": "TOCFL-A4-Q28",
+      "sha256": "2e1961322a592273968a5acf0fdef826853d071827ff1d9185f4c11ed51e1af1",
+      "decode": "pass",
+      "question_ids": [
+        "W06-MX4-19"
+      ]
+    },
+    {
+      "audio_id": "TOCFL-A5-Q13",
+      "sha256": "2462ec537b9a884de1e100bd8013f4fba7843e6b7acf39646f5015d2108a7c09",
+      "decode": "pass",
+      "question_ids": [
+        "W06-MX4-20"
+      ]
+    },
+    {
+      "audio_id": "TOCFL-A5-Q25",
+      "sha256": "de6c536c7e48f0853df8be0adc56afd9a3f6c43434be6b64e055c41983e73b7a",
+      "decode": "pass",
+      "question_ids": [
+        "W06-MX4-21"
+      ]
+    },
+    {
+      "audio_id": "TOCFL-A5-Q29",
+      "sha256": "034453020ea419e305e85f7912686bfb923022a33922fde46d31eee2df0ed8c9",
+      "decode": "pass",
+      "question_ids": [
+        "W06-MX4-22"
+      ]
+    },
+    {
+      "audio_id": "TOCFL-A5-Q31",
+      "sha256": "df4a7342327ffeba9f6845b50e283818cb850b7650e11ffc6d9f6052ea7b545c",
+      "decode": "pass",
+      "question_ids": [
+        "W06-MX4-23"
+      ]
+    },
+    {
+      "audio_id": "TOCFL-A5-Q33",
+      "sha256": "e26e5df1f486db706448b19504df9321b9d92efacc75eabc3a868fe8d692ed76",
+      "decode": "pass",
+      "question_ids": [
+        "W06-MX4-24"
+      ]
+    },
+    {
+      "audio_id": "TOCFL-A5-Q37",
+      "sha256": "0425f6dd035b4c840680277beae4c826a04e96a30f7f6631cb7593a859b419c6",
+      "decode": "pass",
+      "question_ids": [
+        "W06-MX4-25"
+      ]
+    }
+  ],
+  "teacher_listening": "pending",
+  "remote_sync": "root agent in progress",
+  "publication_authorized": false
+}

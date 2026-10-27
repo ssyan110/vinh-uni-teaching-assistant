@@ -1,0 +1,302 @@
+[
+  {
+    "id": "A01",
+    "before": {
+      "id": "A01",
+      "title": "一起学汉语",
+      "prompt": "你喜欢和同学一起学汉语，还是一个人学？为什么？",
+      "hints": [
+        "你们在哪儿学？",
+        "常常学什么？"
+      ]
+    },
+    "after": {
+      "id": "A01",
+      "title": "室友",
+      "prompt": "你喜欢和越南同学住在一起，还是和外国同学住在一起？为什么？",
+      "hints": [
+        "可以一起做什么？",
+        "说话方便吗？"
+      ]
+    },
+    "source_location": "第4–6课实体PPT，第19页",
+    "source_quote": "室友是越南人，还是外国人？你选哪个？为什么？",
+    "revision_reason": "改写选择双方，去掉优缺点、适合人群等多重要求。",
+    "status": "teacher_review_not_classroom_calibrated"
+  },
+  {
+    "id": "A02",
+    "before": {
+      "id": "A02",
+      "title": "和朋友做什么",
+      "prompt": "有时间的时候，你喜欢和朋友一起做什么？为什么？",
+      "hints": [
+        "常常在哪儿做？",
+        "什么时候做？"
+      ]
+    },
+    "after": {
+      "id": "A02",
+      "title": "谁的书",
+      "prompt": "教室里有一本书，你不知道是谁的。你会问同学，还是交给老师？为什么？",
+      "hints": [
+        "你会怎么问？",
+        "怎么找到书的主人？"
+      ]
+    },
+    "source_location": "第4–6课实体PPT，第15页",
+    "source_quote": "发现别人的东西，自己找主人比较好，还是交给老师比较好？",
+    "revision_reason": "加上教室和书，去掉安全、可靠、人际关系等额外分析。",
+    "status": "teacher_review_not_classroom_calibrated"
+  },
+  {
+    "id": "A03",
+    "before": {
+      "id": "A03",
+      "title": "我喜欢的东西",
+      "prompt": "书包、手机、电脑，你最喜欢哪一个？为什么？",
+      "hints": [
+        "是什么颜色的？",
+        "用它做什么？"
+      ]
+    },
+    "after": {
+      "id": "A03",
+      "title": "住在哪里",
+      "prompt": "你喜欢住在学校旁边，还是住在市中心？为什么？",
+      "hints": [
+        "来学校方便吗？",
+        "附近有什么？"
+      ]
+    },
+    "source_location": "第7–8课实体PPT，第38页",
+    "source_quote": "住在学校附近比较好，还是住在市中心比较好？为什么？",
+    "revision_reason": "用喜欢替代抽象评价，保留原来的地点选择。",
+    "status": "teacher_review_not_classroom_calibrated"
+  },
+  {
+    "id": "A04",
+    "before": {
+      "id": "A04",
+      "title": "在哪里见面",
+      "prompt": "你想和朋友在哪儿见面？为什么？",
+      "hints": [
+        "你想和谁见面？",
+        "见面后常做什么？"
+      ]
+    },
+    "after": {
+      "id": "A04",
+      "title": "一起学汉语",
+      "prompt": "下课后，你和朋友想一起学汉语。你们在教室见，还是在图书馆见？为什么？",
+      "hints": [
+        "在那里可以做什么？",
+        "你们想学什么？"
+      ]
+    },
+    "source_location": "第7–8课实体PPT，第35、40页；第15课实体HTML，第21页",
+    "source_quote": "集合地点在哪里最好？／约朋友见面，地点近比较重要，还是环境好比较重要？／介绍一个适合和朋友练中文的地方。",
+    "revision_reason": "给出见面用途和两个地点，避免没有目的地选地点。",
+    "status": "teacher_review_not_classroom_calibrated"
+  },
+  {
+    "id": "A05",
+    "before": {
+      "id": "A05",
+      "title": "什么时候去玩儿",
+      "prompt": "和朋友去玩儿，你喜欢上午去，还是下午去？为什么？",
+      "hints": [
+        "想去哪儿？",
+        "想几点见面？"
+      ]
+    },
+    "after": {
+      "id": "A05",
+      "title": "什么时候去玩儿",
+      "prompt": "星期六，你和朋友想出去玩儿。你想上午去，还是下午去？为什么？",
+      "hints": [
+        "想几点见面？",
+        "想去哪儿？"
+      ]
+    },
+    "source_location": "第7–8课实体PPT，第34、37页",
+    "source_quote": "你想约朋友周末一起出去。你想约谁？几点？去哪里？为什么？",
+    "revision_reason": "明确星期六；主问题只选一个时段，其他安排为可选提示。",
+    "status": "teacher_review_not_classroom_calibrated"
+  },
+  {
+    "id": "A06",
+    "before": {
+      "id": "A06",
+      "title": "怎么来学校",
+      "prompt": "你平常怎么来学校？为什么这样来？",
+      "hints": [
+        "从哪儿来？",
+        "和谁一起？"
+      ]
+    },
+    "after": {
+      "id": "A06",
+      "title": "怎么来学校",
+      "prompt": "你平常怎么来学校？为什么这样来？",
+      "hints": [
+        "住得远不远？",
+        "路上要多长时间？"
+      ]
+    },
+    "source_location": "第9课线上PPT，第5、69页；第9–10课实体PPT，第5页",
+    "source_quote": "你怎么去学校？／你们选哪一种？为什么？",
+    "revision_reason": "保留原主问题，提示改为距离和时间，支持具体理由。",
+    "status": "teacher_review_not_classroom_calibrated"
+  },
+  {
+    "id": "A07",
+    "before": {
+      "id": "A07",
+      "title": "想买什么",
+      "prompt": "你现在想买什么东西？为什么？",
+      "hints": [
+        "是什么样子的？",
+        "多少钱？"
+      ]
+    },
+    "after": {
+      "id": "A07",
+      "title": "怎么付钱",
+      "prompt": "买东西的时候，你常用现金，还是用手机付钱？为什么？",
+      "hints": [
+        "常在哪儿买东西？",
+        "这样付钱方便吗？"
+      ]
+    },
+    "source_location": "第9–10课实体PPT，第16页；第10课线上PPT，第17页",
+    "source_quote": "说说你常怎么付钱，为什么？／你怎么付钱？",
+    "revision_reason": "用已有的付款题替换没有购物需求前提的“现在想买什么”；给两种常见方式。",
+    "status": "teacher_review_not_classroom_calibrated"
+  },
+  {
+    "id": "A08",
+    "before": {
+      "id": "A08",
+      "title": "夏天和冬天",
+      "prompt": "你喜欢夏天，还是冬天？为什么？",
+      "hints": [
+        "天气怎么样？",
+        "常做什么？"
+      ]
+    },
+    "after": {
+      "id": "A08",
+      "title": "夏天和冬天",
+      "prompt": "你喜欢夏天，还是冬天？为什么？",
+      "hints": [
+        "天气怎么样？",
+        "这个时候常做什么？"
+      ]
+    },
+    "source_location": "第11课线上PPT，第27、43页；第11–12课实体HTML，第5页",
+    "source_quote": "这里冬天常下雪，你喜欢吗？／你喜欢澳大利亚的冬天吗？／看天气，一起安排出游。",
+    "revision_reason": "保留原主问题；属于按天气主题改编，不标成课堂原句。",
+    "status": "teacher_review_not_classroom_calibrated"
+  },
+  {
+    "id": "A09",
+    "before": {
+      "id": "A09",
+      "title": "有时间做什么",
+      "prompt": "有时间的时候，你喜欢在房间里看电影，还是去外边玩儿？为什么？",
+      "hints": [
+        "常和谁一起？",
+        "常做什么？"
+      ]
+    },
+    "after": {
+      "id": "A09",
+      "title": "晚上做什么",
+      "prompt": "晚上八点没有课的时候，你常做什么？为什么？",
+      "hints": [
+        "在哪儿做？",
+        "和谁一起？"
+      ]
+    },
+    "source_location": "第11–12课实体HTML，第11页",
+    "source_quote": "A、B说晚上八点常做什么、为什么。",
+    "revision_reason": "从课上问过的晚上八点活动取题，补“没有课”，避免只问不明时段的“有时间”。",
+    "status": "teacher_review_not_classroom_calibrated"
+  },
+  {
+    "id": "A10",
+    "before": {
+      "id": "A10",
+      "title": "在哪里买衣服",
+      "prompt": "你喜欢去店里买衣服，还是在网上买？为什么？",
+      "hints": [
+        "想买什么衣服？",
+        "喜欢什么颜色？"
+      ]
+    },
+    "after": {
+      "id": "A10",
+      "title": "在哪里买衣服",
+      "prompt": "你喜欢去店里买衣服，还是在网上买？为什么？",
+      "hints": [
+        "在店里可以做什么？",
+        "在网上买方便吗？"
+      ]
+    },
+    "source_location": "第13–14课实体HTML，第13页",
+    "source_quote": "在荣市买衣服，你比较喜欢去服装店，还是在网上买？为什么？",
+    "revision_reason": "保留已用题；提示帮助解释购物方式，而非另外要求想出购物需求。",
+    "status": "teacher_review_not_classroom_calibrated"
+  },
+  {
+    "id": "A11",
+    "before": {
+      "id": "A11",
+      "title": "生日礼物",
+      "prompt": "朋友过生日，你想送什么礼物？为什么？",
+      "hints": [
+        "礼物是什么样子的？",
+        "想和朋友一起做什么？"
+      ]
+    },
+    "after": {
+      "id": "A11",
+      "title": "生日礼物",
+      "prompt": "朋友过生日，你想送他什么礼物？为什么？",
+      "hints": [
+        "朋友喜欢什么？",
+        "可以说蛋糕、书或衣服。"
+      ]
+    },
+    "source_location": "第13–14课实体HTML，第15页",
+    "source_quote": "农历春节的时候，台湾朋友在河内过生日，你想带他去哪里？送什么礼物？为什么？",
+    "revision_reason": "去掉节日、城市和旅游安排，只保留明确的生日送礼情境；提示给类别但不给理由。",
+    "status": "teacher_review_not_classroom_calibrated"
+  },
+  {
+    "id": "A12",
+    "before": {
+      "id": "A12",
+      "title": "问谁",
+      "prompt": "有不明白的问题，你喜欢问老师，还是问同学？为什么？",
+      "hints": [
+        "你会怎么问？",
+        "在哪儿问？"
+      ]
+    },
+    "after": {
+      "id": "A12",
+      "title": "买衣服先试试",
+      "prompt": "在店里买衣服，你会先试试吗？为什么？",
+      "hints": [
+        "大小合适吗？",
+        "颜色喜欢吗？"
+      ]
+    },
+    "source_location": "第15课线上PPT，第62页；第15课实体HTML，第9页",
+    "source_quote": "这件衣服我可以试试吗？／这件有点儿小，有大号的吗？",
+    "revision_reason": "用试衣的具体选择取代缺乏学习情境的“有不明白的问题问谁”；不要求有买衣服的近期计划。",
+    "status": "teacher_review_not_classroom_calibrated"
+  }
+]

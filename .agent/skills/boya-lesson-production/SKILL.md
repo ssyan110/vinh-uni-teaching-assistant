@@ -27,15 +27,17 @@ Every lesson-scoped operation must carry an explicit `lesson_key` and, where req
 
 Historical L01 procedures are compatibility-only. They must remain behind the declared legacy adapter and must not be used for scoped production operations.
 
+For new online PPTX versions, use [the online PPTX lifecycle](../../../docs/workflow/online-pptx-lifecycle.md). Its scoped generator and release tool bind the actual approved slide copy; old PPTX generators and release gates are historical compatibility only.
+
 ## Current face-to-face routing
 
-Online classes remain unchanged and continue to prioritize PPT/PPTX, including one-word-per-page preparation and approved styles. Only physical classes prioritize HTML slides/OpenSlide, with editable PPTX as an optional backup.
+Across future semesters, Year 1 and Year 2 physical classes use OpenSlide and its shared homepage; online preparation uses PPT/PPTX, including the applicable approved online style. Do not create classroom PPTX backups. Historical finalized PPTX is retained for explicit maintenance or read-only intake.
 
-Read [the 2026-10-07 classroom HTML standard](../../../docs/classroom-html-standard-2026-10-07.md) for future physical classes: HTML first, coherent TBL tasks, once-on-entry motion and level-appropriate TOCFL-style assessment. The PPTX reference is for online preparation, explicitly selected legacy maintenance, and format-specific backup checks; it does not replace this classroom standard.
+Read [the 2026-10-07 classroom HTML standard](../../../docs/classroom-html-standard-2026-10-07.md) for future physical classes: HTML first, coherent TBL tasks, once-on-entry motion and level-appropriate TOCFL-style assessment. The PPTX reference is for online preparation, explicitly selected legacy maintenance, and its format-specific checks; it does not replace this classroom standard.
 
-The standing visual baseline is the current L9–10 HTML, including its actual cover, learning route, layout families and role typography. Follow the standard's default execution and delivery self-check on every classroom deck: reuse the reference before layout, verify all rendered pages and visible content, check navigation and once-on-entry motion through the shared homepage, sync and build, then repair before delivery. Do not ask again for the standing style or add a style approval round. Keep lesson-specific content and human approvals independent.
+Use the references by role: L9–10 for the cover and overall visual system; L11–12 for the icon-card learning route; and the nearest reviewed page with the same activity type for each repeated activity. Do not treat L9–10 as the route template. Follow the single current QA checklist in [the classroom HTML standard](../../../docs/classroom-html-standard-2026-10-07.md), including its 2026-10-20 additions. Do not ask again for the standing style or add a style approval round. Keep lesson-specific content and human approvals independent.
 
-For future face-to-face slides only, follow [the standing activity workflow](../../../docs/classroom-activity-workflow.md). Default to one page per activity, at most two when necessary inputs need separation. Use simple executable Chinese and complete materials; increase reasoning rather than procedural complexity. Preserve meaningful basic/challenge routes without forcing them onto unified tasks or solo six-panel stories. Synchronize teacher reading PDFs, check comprehension before copy approval, then inspect every rendered page and shared-homepage navigation. Reuse the L9–10 visual baseline; do not ask for recurring style approval. Online PPT rules remain unchanged.
+For future face-to-face slides only, follow [the standing activity workflow](../../../docs/classroom-activity-workflow.md) for activity design and copy. Default to one page per activity, at most two when necessary inputs need separation. Use simple executable Chinese and complete materials; increase reasoning rather than procedural complexity. Set basic/challenge support from the current class and proficiency evidence; do not assign fixed HSK bands unless the current class's approved plan specifies them (W06 specifies HSK 1–3 and HSK 4–6). Do not force tiers onto unified tasks or solo six-panel stories. Online PPT rules remain unchanged.
 
 ## Focused procedure references
 
@@ -45,6 +47,7 @@ Read only the relevant reference, plus the canonical sources above:
 - `references/teacher-guide-and-materials.md` — teacher guide, supporting materials, preparation requirements, draft cleanup, and delivery language.
 - `references/pptx-production.md` — selectable slide-authoring paths, student deck rules, page markers, layouts, and PPTX-specific constraints.
 - `references/workflow-and-evidence.md` — shared workflow gates, authority/source architecture, evidence expectations, and reporting format.
+- `../../../docs/workflow/education-evidence-review.md` — focused draft review of language demands, individual oral evidence, support, feedback and retry; use for lesson activities or performance checks.
 
 These references describe artifact procedures only. They do not grant approval or release readiness.
 
@@ -74,4 +77,4 @@ Report the exact scope, command or procedure used, artifact paths touched, block
 
 ## 2026-09-21：仅本届大一第一学期的课程路由
 
-仅当年级=大一、学期=第一学期、日期=2026-09-21至2026-12-27、教材=`boya-elementary-i`同时匹配时，先读[本班课程规划与第四课起PPT制作规则](../../../docs/course-rules/BOYA-LS-E1-Y1S1-2026F/README.md)（`BOYA-LS-E1-Y1S1-2026F`）。按任务结果组织第四课起PPT，教材逐项覆盖；W02安排第4—6课，W12完成首轮覆盖、W13缓冲、W14评量规划。该局部规则取代本班旧课时预算与线性栏目顺序，不扩展到其他年级、学期或未来班级，不改共用offering顶层课表。现有教材与批准不回改；新版逐页内容仍须单独批准。新增双语说明仍待逐页决定，23 pt下限保持。
+仅当年级=大一、学期=第一学期、日期=2026-09-21至2026-12-27、教材=`boya-elementary-i`同时匹配时，先读[本班课程规划与第四课起PPT制作规则](../../../docs/course-rules/BOYA-LS-E1-Y1S1-2026F/README.md)（`BOYA-LS-E1-Y1S1-2026F`）。按任务结果组织第四课起PPT，教材逐项覆盖；W02安排第4—6课，W12完成首轮覆盖、W13缓冲、W14评量规划。该局部规则取代本班旧课时预算与线性栏目顺序，不扩展到其他年级、学期或未来班级，不改共用offering顶层课表。现有教材与批准不回改；新版逐页内容仍须单独批准。新增双语说明仍待逐页决定；历史成品不回改，今后新线上稿主要内容依25 pt下限，页码等辅助标记仍用该班23 pt下限。

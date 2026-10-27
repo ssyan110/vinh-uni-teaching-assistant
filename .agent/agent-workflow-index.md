@@ -19,13 +19,7 @@ Year-1 weekly assessment creation, correction and cleanup follow [the fixed sync
 
 When an authorized decision changes workflow, update its owning project rule, remove or scope superseded clauses, reconcile consumers and registry entries, and record verification. Preserve historical approval evidence. Update global memory only when Adam explicitly requests a memory update; project rule maintenance does not imply that authorization.
 
-The adopted online/face-to-face baseline is content routing, not a time quota:
-online preparation covers textbook reading, audio preview, vocabulary and key-point
-recording, and preparation of personal information/questions; face-to-face work
-covers listening comprehension, peer interaction, information-gap work, oral
-practice, presentation, feedback and retry. Each `lesson_key` must keep a dated
-boundary confirmation record under its own `10-design/storyboard/`; the record
-does not approve the source, teacher guide, PPTX, playback, rehearsal or release.
+The adopted baseline assigns reading, audio preview, vocabulary and preparation to online PPT; in-person OpenSlide covers listening, interaction, presentation and feedback. Batch online materials ahead of the semester; plan each in-person session approximately one month to one week before class using actual progress. Do not require a new per-lesson confirmation of the established division. Exact version content still requires explicit approval.
 
 ## Default harness
 
@@ -48,39 +42,13 @@ an active project requirement or maintain it.
 
 ## Course-specific routing
 
-2026-10-07 06:52 UTC clarification: online classes remain unchanged and continue to prioritize PPT/PPTX, including one-word-per-page preparation and approved styles. Only physical classes prioritize HTML slides/OpenSlide, with optional editable PPTX backup.
+2026-10-27: Across future semesters, Year 1 and Year 2 physical classes use OpenSlide and the shared homepage; online preparation uses PPT/PPTX. Do not create classroom PPTX backups. Existing finalized PPTX is retained for explicit historical maintenance and read-only intake.
 
 For future face-to-face decks, first apply the [2026-10-07 classroom HTML standard](../docs/classroom-html-standard-2026-10-07.md): HTML/OpenSlide first, the current L9–10 visual/activity reference, and level-appropriate TOCFL-style assessment. This standing choice supersedes the native-pptx default and repeated style-selection question below for this scope. Keep online preparation, lesson-specific content approvals and release gates separate.
 
-For Boya lesson work, use the `boya-lesson-production` skill. The required route is:
+For Boya lesson work, use the `boya-lesson-production` skill. Follow the canonical contract for lesson, offering, class, mode and artifact-specific content approval. Online and classroom versions proceed independently; neither depends on the release of a previous lesson. Existing historical records stay intact. For registered classroom HTML, use the classroom HTML lifecycle for QA, formal approval and release; homepage sync is a preview, not release. The legacy quasi-intermediate L02–L12 PPT generator does not support new scoped online versions; use the online PPTX lifecycle for new versions.
 
-For online or explicitly selected historical native-PPTX authority/release work, use this route. Classroom HTML and its optional static backup follow the classroom standard and classroom-html-lifecycle contract, without another six-slide style prototype:
-
-`source gate → PBI redesign gate → teacher guide content master → teacher guide approval → support materials → PPT storyboard → visual storyboard → 6-slide prototype → native PPTX → QA → delivery`
-
-For later-lesson drafts, a source-package, boundary-confirmed and explicitly
-content-approved lesson may use
-the lesson-specific draft gate to write only to its own
-`lessons/<textbook_id>/<lesson_id>/10-design/pptx-draft/<mode>/`.
-
-When Adam confirms a lesson boundary, first write or update the lesson-scoped
-`<lesson_id>-boundary-confirmation-YYYY-MM-DD.md` record and link it from the
-lesson content contract. This step does not require reading or modifying PPTX;
-the existing gate and later production steps remain separate.
-
-Authority and release remain lesson-by-lesson within each `textbook_id`. Drafts
-may run in parallel when each lesson has an explicit `lesson_key`, source package
-and recorded online/face-to-face boundary plus explicit approval of the current slide copy; a draft never unlocks authority or
-release for the next lesson.
-
-Before any new image worker, prototype or PPTX draft, run the shared
-`production_gate.py --purpose content-approval --lesson-key KEY` check. Follow
-the canonical contract's content-approval record; "continue" or structure approval
-never substitutes for explicit approval of the current slide-copy version.
-
-Future face-to-face decks default to HTML/OpenSlide; online preparation retains native-pptx unless otherwise selected. Open Slide is currently draft-only until its lesson QA/release path is defined. Historical HTML review pages are not production inputs. Teacher guides, prep cards, supplemental activity materials and assessments remain part of the complete lesson package.
-
-The approved teacher guide comes before full PPTX/authority production: it defines
+For a classroom package, the approved teacher guide or practical teacher instructions define the activity before classroom authority production: it defines
 the full lesson content, key points, timing, audio, exercise coverage, teacher
 actions, repair routes, answer policy, assessment and required materials. A
 lesson-specific draft may precede guide approval only as reversible design
@@ -88,7 +56,7 @@ evidence and must still trace back to the source package.
 
 ## Online / selected legacy PPTX rule set
 
-The old typography, purple accents and fixed page layouts below apply only to online preparation or explicitly selected legacy PPTX maintenance. Future classroom HTML and its backup PPTX use the 2026-10-07 classroom standard.
+The old typography, purple accents and fixed page layouts below apply only to online preparation or explicitly selected legacy PPTX maintenance. Future classroom OpenSlide uses the 2026-10-07 classroom standard.
 
 Face-to-face decks use the standing 2026-10-07 HTML style. For other scopes without a standing or current choice, use `course/ppt-style-registry.json` to select a style. Style selection does not replace lesson-specific workflow or content approval.
 

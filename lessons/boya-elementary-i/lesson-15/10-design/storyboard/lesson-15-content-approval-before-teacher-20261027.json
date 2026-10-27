@@ -1,0 +1,24 @@
+{
+  "status": "approved",
+  "gate": "lesson-content",
+  "lesson_key": "boya-elementary-i:lesson-15",
+  "offering_id": "2026-fall",
+  "approved_by": "Adam",
+  "approved_at": "2026-10-21T11:42:54+07:00",
+  "artifacts": [
+    {
+      "path": "lessons/boya-elementary-i/lesson-15/00-source/canonical-source.json",
+      "sha256": "b18f5ce1709df0016be5484114a97492648234688367bba712779950929f26d0"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-15/10-design/storyboard/lesson-15-逐页文案审阅.md",
+      "sha256": "1204003898b7e4b606114f25936949c1952a2153fd730735b7f2524f9fb5a2f0"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-15/10-design/lesson-15-教师朗读与评量稿-v04.md",
+      "sha256": "323441266372a7391e5eea04d61a379550a691551e98dda358ac5ccb5b7e7602"
+    }
+  ],
+  "evidence": "lessons/boya-elementary-i/lesson-15/10-design/storyboard/lesson-15-content-approval-evidence-2026-10-21.md",
+  "evidence_sha256": "f6a936e11376a0614e587eb2ba6e1bbe9624815b6e14e00d54ff549789c29fcd"
+}

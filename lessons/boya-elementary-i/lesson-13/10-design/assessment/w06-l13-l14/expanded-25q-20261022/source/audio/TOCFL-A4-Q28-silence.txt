@@ -1,0 +1,22 @@
+[in#0/mp3 @ 0x7a34808000] Estimating duration from bitrate, this may be inaccurate
+Input #0, mp3, from '/Users/ssyan110/Development/vinh-uni-teaching-assistant/lessons/boya-elementary-i/lesson-13/10-design/assessment/w06-l13-l14/expanded-25q-20261022/source/audio/TOCFL-A4-Q28.mp3':
+  Metadata:
+    genre           : Other
+  Duration: 00:00:55.51, start: 0.000000, bitrate: 256 kb/s
+  Stream #0:0: Audio: mp3 (mp3float), 44100 Hz, stereo, fltp, 256 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (mp3float) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    genre           : Other
+    encoder         : Lavf62.12.100
+  Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc62.28.100 pcm_s16le
+[Parsed_silencedetect_0 @ 0x7a34834900] silence_start: 24.059161
+[Parsed_silencedetect_0 @ 0x7a34834900] silence_end: 29.282653 | silence_duration: 5.223492
+[Parsed_silencedetect_0 @ 0x7a34834900] silence_start: 50.391156
+[Parsed_silencedetect_0 @ 0x7a34834900] silence_end: 55.510204 | silence_duration: 5.119048
+[out#0/null @ 0x7a34834180] video:0KiB audio:9562KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:00:55.51 bitrate=N/A speed= 761x elapsed=0:00:00.07    

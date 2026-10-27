@@ -1,0 +1,38 @@
+BEGIN
+              set_config              
+--------------------------------------
+ 00000000-0000-0000-0000-000000000001
+(1 row)
+
+SET
+DO
+              set_config              
+--------------------------------------
+ 00000000-0000-0000-0000-000000000099
+(1 row)
+
+DO
+RESET
+SET
+DO
+RESET
+ROLLBACK
+                                                                                     result                                                                                     
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ PASS: membership, date collision, closure, attendance exception, privileges, token authorization, answer privacy, idempotency, owner isolation; all fixture writes rolled back
+(1 row)
+
+BEGIN
+              set_config              
+--------------------------------------
+ 00000000-0000-0000-0000-000000000001
+(1 row)
+
+SET
+DO
+                                             result                                              
+-------------------------------------------------------------------------------------------------
+ PASS: session binding, date/duplicate rejection, skip, replay, correction, observation, closure
+(1 row)
+
+ROLLBACK

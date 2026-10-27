@@ -1,0 +1,102 @@
+[
+  {
+    "version": "20260905103254",
+    "name": "initial_student_tracker"
+  },
+  {
+    "version": "20260905103315",
+    "name": "learning_events"
+  },
+  {
+    "version": "20260905103443",
+    "name": "foreign_key_indexes"
+  },
+  {
+    "version": "20260905104043",
+    "name": "learning_event_idempotency"
+  },
+  {
+    "version": "20260905104257",
+    "name": "learning_event_upsert_key"
+  },
+  {
+    "version": "20260905104416",
+    "name": "learning_event_grade_flag"
+  },
+  {
+    "version": "20260905151907",
+    "name": "randomizer_records"
+  },
+  {
+    "version": "20260905151937",
+    "name": "randomizer_fk_indexes"
+  },
+  {
+    "version": "20260905172541",
+    "name": "classroom_raw_records"
+  },
+  {
+    "version": "20260908093817",
+    "name": "randomizer_observations"
+  },
+  {
+    "version": "20260911084327",
+    "name": "harden_class_session_correction_grant"
+  },
+  {
+    "version": "20260908094926",
+    "name": "dashboard_notes_questions"
+  },
+  {
+    "version": "20260908095510",
+    "name": "randomizer_fact_marks"
+  },
+  {
+    "version": "20260908125102",
+    "name": "interact_online_classroom"
+  },
+  {
+    "version": "20260910142434",
+    "name": "finish_randomizer_class"
+  },
+  {
+    "version": "20260911083724",
+    "name": "editable_class_session_number"
+  },
+  {
+    "version": "20260911083802",
+    "name": "editable_class_session_number"
+  },
+  {
+    "version": "20260911084209",
+    "name": "class_session_correction_audit"
+  },
+  {
+    "version": "20260916135307",
+    "name": "classroom_record_correction_audit"
+  },
+  {
+    "version": "20260916135324",
+    "name": "allow_absent_no_response_reason"
+  },
+  {
+    "version": "20260918112930",
+    "name": "manual_participation_adjustments"
+  },
+  {
+    "version": "20260922044922",
+    "name": "class_session_notes"
+  },
+  {
+    "version": "20261002153323",
+    "name": "repair_approved_lt03_historical_session_link"
+  },
+  {
+    "version": "20261002153752",
+    "name": "preserve_classroom_record_corrections"
+  },
+  {
+    "version": "20261002160035",
+    "name": "randomizer_teacher_calls_and_session_safety"
+  }
+]

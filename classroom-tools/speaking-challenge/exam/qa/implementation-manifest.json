@@ -1,0 +1,25 @@
+{
+  "status": "local_operable_verified",
+  "authorization": "2026-10-26 current conversation: user approved simultaneous prototype and requested implementation, then asked to open the page for trying the draw and timers",
+  "source_review": "lessons/boya-elementary-i/lesson-15/10-design/assessment/w07-speaking-content-review/items-review.json",
+  "source_review_sha256": "e4f98bc46f5de6764fcca2b438844d29029b5c8943c295e3f1dc6026ffcd0597",
+  "question_count": 12,
+  "picture_count": 12,
+  "random_policy": "independent uniform draws with replacement, repetitions allowed",
+  "timing_seconds": {
+    "preparation": 60,
+    "speaking": 120
+  },
+  "verification": "qa/browser-verification.json",
+  "files": {
+    "index.html": "5c3d89aa145f01e7b4fc1515e700c1714c3bfaa1a244f5f52b5a9827ddeeb314",
+    "styles.css": "4f4d64eee2c3b566b14a2f91344334516d918465c34439e6726393b5b37a7529",
+    "app.js": "a2dd818a03b15f3f934fbb5dcd144b388076ee7b23c9960b91da2d4f2a40ea2c",
+    "logic.js": "aa69fa549e7329de7d9ade0fcd29b57ec5fe4a5546e4eb2e13a65b951c8a04a9",
+    "content.js": "d40c82f225f6973aafdac90695aa6a5c86cad7542f240a163e1c89a1166fa247",
+    "test-logic.mjs": "09c787dbba0d0d1cb67d7a5e06dd5b100296d0b568a13e4ee8e4c201743f4fe3"
+  },
+  "deployment": "not_deployed",
+  "live_trial_url": "http://127.0.0.1:8768/exam/",
+  "lesson_approval_records_modified": false
+}
