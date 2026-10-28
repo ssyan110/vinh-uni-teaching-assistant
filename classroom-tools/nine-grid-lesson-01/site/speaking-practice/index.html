@@ -25,6 +25,15 @@ vertical-align: middle;
 body { font-family: "Times New Roman", "KaiTi", serif; color: #17324D; font-size: 12pt; line-height: 1.5; max-width: 820px; margin: 2rem auto; padding: 0 1.2rem; }
 h1 { font-size: 20pt; color: #0B5664; }
 h2 { font-size: 15pt; color: #0B5664; margin-top: 2rem; }
+.quick-start { margin: 1.25rem 0; padding: .75rem 1rem; background: #f2f8f8; border-left: 4px solid #0B7781; border-radius: 6px; }
+.quick-start h2 { margin-top: .25rem; }
+.guide-fold { margin: .8rem 0; border: 1px solid #d6e1e5; border-radius: 8px; background: #fff; }
+.guide-fold > summary { cursor: pointer; padding: .8rem 1rem; color: #0B5664; font-weight: 700; }
+.guide-fold > summary:hover { background: #f4f8f9; }
+.guide-fold > summary:focus-visible { outline: 3px solid #0B7781; outline-offset: 2px; }
+.guide-fold[open] > summary { border-bottom: 1px solid #d6e1e5; }
+.guide-fold > :not(summary) { margin-left: 1rem; margin-right: 1rem; }
+.guide-fold > :last-child { margin-bottom: 1rem; }
 img { display: block; max-width: 100%; max-height: 360px; object-fit: contain; border: 1px solid #ccd9df; border-radius: 8px; margin: 1rem auto .35rem; }
 p:has(> img) { break-inside: avoid; }
 blockquote { border-left: 4px solid #0B7781; margin: 1.2rem 0; padding: .5rem 1rem; background: #f2f8f8; }
@@ -40,24 +49,40 @@ li { margin: .45rem 0; }
 <body>
 <h1 id="hướng-dẫn-luyện-nói-tiếng-trung-tại-nhà-với-ai">Tự luyện
 nói tiếng Trung tại nhà với AI</h1>
-<p>Bạn có thể dùng ChatGPT, Gemini hoặc Grok để luyện trả lời câu hỏi về
-những chủ đề đã học. Hướng dẫn thao tác và hình minh họa dưới đây dùng
-ChatGPT; nếu dùng Gemini hoặc Grok, hãy làm theo cách tương tự trên ứng
-dụng đó. Bạn không cần có slide/PPT bài giảng: hãy dùng sách giáo trình,
-chụp rõ trang có nội dung muốn luyện rồi tải ảnh lên. Khi luyện, hãy tự
-nói câu trả lời bằng tiếng Trung, nghe góp ý cụ thể rồi thử nói lại. Bạn
-vẫn có thể gõ để chọn bài, hỏi từ hoặc nhờ AI giải thích; riêng phần trả
-lời phải nói thành tiếng.</p>
-<blockquote>
-<p><strong>Cần chuẩn bị:</strong> tài khoản trên một ứng dụng AI bạn có
-thể dùng bằng giọng nói và sách giáo trình.
-Bạn có thể chụp các trang sách muốn luyện
-để tải lên; nếu đã có file PDF thì dùng PDF cũng được. Nên tạo một
-Project riêng để lưu prompt và tài liệu cho những lần luyện sau. Đừng
-chia sẻ Project có sách hoặc thông tin cá nhân với người khác.</p>
-</blockquote>
-<h2 id="tạo-project-riêng-để-luyện-nói">1. Tạo Project riêng để luyện
-nói</h2>
+<p>Bạn có thể dùng ChatGPT, Gemini hoặc Grok. Các bước và hình minh họa
+bên dưới dùng ChatGPT; giao diện ở ứng dụng khác có thể khác. Chụp trang
+sách muốn luyện rồi tải ảnh lên. AI sẽ hỏi, bạn trả lời bằng tiếng Trung
+qua chế độ giọng nói, nghe góp ý rồi thử lại. Không cần slide/PPT bài
+giảng.</p>
+
+<section class="quick-start"><h2 id="bắt-đầu-buổi-luyện-đầu-tiên">Cách bắt đầu buổi luyện</h2>
+<ol type="1">
+<li>Nếu dùng ChatGPT Project, trở lại trang chính của Project rồi mở
+<strong>New chat</strong>. Với Gemini hoặc Grok, mở một cuộc trò chuyện
+mới. Bắt đầu chế độ giọng nói của ứng dụng. Nếu đã lưu prompt và tài liệu
+trong Project, chúng sẽ sẵn sàng trong chat mới. Nếu ứng dụng không có
+Project, hãy tải ảnh sách lên chat mới rồi dán prompt ở mục “Thêm prompt”
+trước khi bắt đầu nói. Nếu chỉ gửi ảnh trực tiếp trong một chat, hãy tiếp
+tục luyện ở chính chat đó.</li>
+<li>Trong chế độ giọng nói, hãy nói bạn muốn luyện bài nào. Ví dụ:
+<strong>“我想练第8课的口语问答。请给我一道新题。”</strong> Bạn có
+thể thay số bài. Muốn AI tự chọn chủ đề trong phạm vi đã điền ở prompt,
+hãy nói: <strong>“请随机选一个主题，给我一道新题。”</strong></li>
+<li>Đọc hoặc nghe câu hỏi, rồi nghĩ nhanh vài từ khóa theo thứ tự: <em>trả lời →
+lý do → một chi tiết</em>. Đừng viết sẵn cả đoạn để đọc lại.</li>
+<li>Trong chế độ giọng nói, hãy trả lời thành tiếng bằng tiếng Trung.
+Nói xong thì nói với AI:
+<strong>“说完了，请给我反馈。”</strong> Đọc góp ý
+và xem AI có hiểu đúng ý bạn không. Chọn 1–2 điểm muốn sửa, rồi tự trả
+lời lại thành tiếng cho cùng câu hỏi. Đừng học thuộc nguyên đoạn AI
+viết.</li>
+</ol>
+<p><strong>Một lượt luyện mẫu:</strong> Chọn bài và chủ đề → đọc câu hỏi
+→ nghĩ vài từ khóa → trả lời thành tiếng → nói “说完了，请给我反馈。” →
+đọc góp ý → tự trả lời lại cùng câu hỏi. Sau đó bạn mới đổi câu.</p></section>
+
+<details class="guide-fold"><summary>Tạo Project riêng để luyện nói</summary>
+
 <ol type="1">
 <li>Mở <a href="https://chatgpt.com/">ChatGPT</a> và đăng nhập. Nếu bạn
 dùng Gemini hoặc Grok, hãy mở ứng dụng đó và làm theo các bước tương tự.
@@ -65,8 +90,7 @@ Trên máy
  tính, chọn <strong>Projects</strong> ở thanh bên rồi chọn <strong>New
 project</strong>. Trên điện thoại, mở menu và chọn
 <strong>Projects</strong>.</li>
-<li>Đặt tên dễ nhớ, chẳng hạn <strong>Luyện nói tiếng Trung bài
-4–15</strong>, rồi chọn <strong>Create project</strong>. Hãy giữ
+<li>Đặt tên dễ nhớ, chẳng hạn <strong>Luyện nói tiếng Trung</strong>, rồi chọn <strong>Create project</strong>. Hãy giữ
 Project ở chế độ riêng tư.</li>
 </ol>
 <figure>
@@ -75,8 +99,9 @@ Project ở chế độ riêng tư.</li>
 <p><em>Ảnh 1. Đặt tên cho Project rồi chọn “Create project”.</em></p>
 <p>Nếu chưa thấy hoặc không muốn dùng <strong>Projects</strong>, bạn vẫn
 có thể luyện trong chat thường. Xem hướng dẫn ở cuối trang.</p>
-<h2 id="thêm-sách-hoặc-tài-liệu-vào-project">2. Thêm sách hoặc
-tài liệu vào Project</h2>
+</details>
+<details class="guide-fold"><summary>Thêm sách hoặc tài liệu vào Project</summary>
+
 <ol type="1">
 <li>Mở Project vừa tạo, chọn <strong>Sources</strong> rồi chọn
 <strong>Add sources</strong>.</li>
@@ -104,8 +129,9 @@ vào Project Sources; nếu chỉ gửi ảnh trong một chat, hãy tiếp tụ
 <p><strong>Lưu ý:</strong> AI có thể đọc nhầm tài liệu, nhất là PDF
 scan từ sách. Nếu AI dùng từ hoặc nêu nội dung bạn chưa học,
 hãy mở sách kiểm tra lại.</p>
-<h2 id="thêm-prompt-luyện-nói-vào-project-instructions">3. Thêm prompt
-luyện nói vào Project Instructions</h2>
+</details>
+<details class="guide-fold"><summary>Thêm prompt luyện nói vào Project Instructions</summary>
+
 <p>Trong Project, chọn dấu <strong>•••</strong> cạnh tên Project, rồi
 chọn <strong>Project settings</strong> → <strong>Instructions</strong>.
 Trước khi sao chép prompt bên dưới, hãy điền hai chỗ trong ngoặc vuông:
@@ -121,7 +147,7 @@ trong Project, nên bạn chỉ cần lưu một lần.</p>
 trang sách muốn luyện lên chat đó rồi dán prompt đã điền ở mục 3 làm tin
 nhắn đầu tiên. Khi muốn tiếp tục với những ảnh này, hãy dùng lại chính
 chat đó.</p>
-<pre class="text"><code>你是我的初级汉语口语陪练。我是大学一年级学生，主要用纸质课本学习。我会把想练的课文或练习页拍照，上传到当前 AI 应用的项目资料区（如果有）或当前聊天；如果有 PDF，也可能上传 PDF。不必要求我提供课堂 PPT。请优先参考我上传的教材内容，只用我学过的主题和基础语言。照片看不清时，请告诉我哪一页需要重拍；不确定教材内容时，请说明不确定，不要编造课文。
+<pre class="text"><code>你是我的汉语口语陪练。我是大学生，主要用纸质课本学习。我会把想练的课文或练习页拍照，上传到当前 AI 应用的项目资料区（如果有）或当前聊天；如果有 PDF，也可能上传 PDF。不必要求我提供课堂 PPT。请优先参考我上传的教材内容，只用我学过的主题和基础语言。照片看不清时，请告诉我哪一页需要重拍；不确定教材内容时，请说明不确定，不要编造课文。
 
 练习范围：[请填写要练的课次、课名或内容]
 反馈语言：[中文/越南语]
@@ -140,68 +166,19 @@ chat đó.</p>
 5. 【再说一次 / Nói lại】用所选反馈语言给我一个明确的小目标，用简单中文提示我再口头回答同一道题。不要给整段答案，也不要打分。
 
 我重说后，用所选反馈语言指出一个具体进步，以及下一题可以继续注意的一件事。若没有收到两次回答，就只比较实际收到的内容，不要假装听过。</code></pre>
-<h2 id="bắt-đầu-buổi-luyện-đầu-tiên">4. Bắt đầu buổi luyện đầu tiên</h2>
-<ol type="1">
-<li>Nếu dùng ChatGPT Project, trở lại trang chính của Project rồi mở
-<strong>New chat</strong>. Với Gemini hoặc Grok, mở một cuộc trò chuyện
-mới. Bắt đầu chế độ giọng nói của ứng dụng. Nếu đã lưu prompt và tài liệu
-trong Project, chúng sẽ sẵn sàng trong chat mới. Nếu chỉ gửi ảnh sách
-trực tiếp trong một chat, hãy tiếp tục luyện ở chính chat đó.</li>
-<li>Trong chế độ giọng nói, hãy nói bạn muốn luyện bài nào. Ví dụ:
-<strong>“我想练第8课的口语问答。请给我一道新题。”</strong> Bạn có
-thể thay số bài. Muốn AI tự chọn chủ đề trong phạm vi đã điền ở prompt,
-hãy nói: <strong>“请随机选一个主题，给我一道新题。”</strong></li>
-<li>Đọc hoặc nghe câu hỏi, rồi nghĩ nhanh vài từ khóa theo thứ tự: <em>trả lời →
-lý do → một chi tiết</em>. Đừng viết sẵn cả đoạn để đọc lại.</li>
-<li>Trong chế độ giọng nói, hãy trả lời thành tiếng bằng tiếng Trung.
-Nói xong thì nói với AI:
-<strong>“说完了，请给我反馈。”</strong> Đọc góp ý
-và xem AI có hiểu đúng ý bạn không. Chọn 1–2 điểm muốn sửa, rồi tự trả
-lời lại thành tiếng cho cùng câu hỏi. Đừng học thuộc nguyên đoạn AI
-viết.</li>
-</ol>
-<p><strong>Một lượt luyện mẫu:</strong> Chọn bài và chủ đề → đọc câu hỏi
-→ nghĩ vài từ khóa → trả lời thành tiếng → nói “说完了，请给我反馈。” →
-đọc góp ý → tự trả lời lại cùng câu hỏi. Sau đó bạn mới đổi câu.</p>
-<h2 id="luyện-các-chủ-đề-trong-phạm-vi-đã-học">5. Luyện các chủ đề trong
-phạm vi đã học</h2>
-<table>
-<thead>
-<tr>
-<th>Bài</th>
-<th>Chủ đề luyện nói</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>4–6</td>
-<td>Giới thiệu bản thân và bạn bè; hỏi đồ vật tên gì, của ai</td>
-</tr>
-<tr>
-<td>7–8</td>
-<td>Nói về chỗ ở, mời bạn, hẹn thời gian và địa điểm</td>
-</tr>
-<tr>
-<td>9–10</td>
-<td>Nói về đi lại, hỏi đường và chỉ đường, mua đồ và hỏi giá</td>
-</tr>
-<tr>
-<td>11–12</td>
-<td>Nói về thời tiết, kế hoạch, sinh hoạt hằng ngày và việc đang làm</td>
-</tr>
-<tr>
-<td>13–15</td>
-<td>Nói về quần áo, mua sắm, sinh nhật; hỏi đồ có vừa không</td>
-</tr>
-</tbody>
-</table>
-<p>Mỗi buổi, bạn có thể chọn một nhóm bài và luyện vài câu hỏi mới. Khi
-muốn AI tự chọn chủ đề trong phạm vi đã điền ở prompt, hãy gửi:
+</details>
+<details class="guide-fold"><summary>Chọn chủ đề luyện tập</summary>
+
+
+<p>Trong prompt, hãy ghi bài học hoặc chủ đề bạn muốn luyện. Mỗi buổi,
+bạn có thể chọn một nhóm nội dung hoặc để AI tự chọn trong phạm vi đã
+điền ở prompt. Hãy gửi:
 <strong>“请从我填写的练习范围里随机选一个主题，给我一道新题，不要先告诉我是哪一课。”</strong>
 Nếu câu hỏi vượt quá nội dung đã học, trả lời
 <strong>“这部分我还没学，请换一题。”</strong></p>
-<h2 id="nếu-chưa-dùng-được-project-hoặc-voice">Nếu bạn chưa dùng được
-Project hoặc Voice</h2>
+</details>
+<details class="guide-fold"><summary>Nếu bạn chưa dùng được Project hoặc Voice</summary>
+
 <p>Nếu không dùng được Projects, bạn vẫn có thể luyện trong chat thường.
 Mở một chat mới, tải lên ảnh chụp rõ những trang sách muốn luyện (hoặc
 file PDF nếu có), rồi dán prompt đã điền ở mục 3 làm tin nhắn đầu tiên.
@@ -213,5 +190,6 @@ học: một người nêu tình
 huống và đặt câu hỏi theo chủ đề bài học, người kia nghĩ vài từ khóa rồi
 trả lời thành tiếng. Sau đó đổi vai. Nếu AI dùng từ hoặc hỏi nội dung
 bạn chưa học, hãy mở sách kiểm tra hoặc yêu cầu AI đổi câu hỏi.</p>
+</details>
 </body>
 </html>
