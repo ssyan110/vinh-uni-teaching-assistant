@@ -1,7 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
-  <title id="title">榮市大學華語課堂</title>
-  <desc id="desc">對話框與口語記錄線條組成的標誌</desc>
-  <rect width="64" height="64" rx="16" fill="#12372d"/>
-  <path d="M15 14h34c2.2 0 4 1.8 4 4v21c0 2.2-1.8 4-4 4H32l-9 8v-8h-8c-2.2 0-4-1.8-4-4V18c0-2.2 1.8-4 4-4Z" fill="#e7f7f0"/>
-  <path d="M20 25h24M20 32h17M20 39h9" fill="none" stroke="#109b76" stroke-width="4" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Student Tracker proposal</title>
+  <desc id="desc">A jade clipboard with three response lines and a blue confirmation stroke.</desc>
+  <rect width="256" height="256" rx="52" fill="#12372d"/>
+  <path fill="#e7f7f0" d="M65 54h126c9 0 16 7 16 16v91c0 9-7 16-16 16h-46l-24 24v-24H65c-9 0-16-7-16-16V70c0-9 7-16 16-16Z"/>
+  <path fill="none" stroke="#109b76" stroke-linecap="round" stroke-width="16" d="M80 94h96M80 126h72M80 158h42"/>
+  <path fill="none" stroke="#3a7cf4" stroke-linecap="round" stroke-linejoin="round" stroke-width="18" d="m144 160 18 18 37-42"/>
 </svg>
