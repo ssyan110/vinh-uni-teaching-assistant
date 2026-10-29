@@ -17,7 +17,7 @@ export function AppShell() {
     <div className="app-frame">
       <aside className="sidebar">
         <NavLink to="/today" className="brand" aria-label="課跡首頁">
-          <span className="brand-mark">課</span>
+          <img className="brand-logo" src={`${import.meta.env.BASE_URL}logo-minimalist.png`} alt="" />
           <span><strong>課跡</strong><small>教師課堂手記</small></span>
         </NavLink>
         <nav className="side-nav" aria-label="主要導覽">
@@ -36,7 +36,7 @@ export function AppShell() {
 
       <div className="main-column">
         <header className="topbar">
-          <div className="mobile-brand"><span className="brand-mark small">課</span><strong>課跡</strong></div>
+          <div className="mobile-brand"><img className="brand-logo small" src={`${import.meta.env.BASE_URL}logo-minimalist.png`} alt="" /><strong>課跡</strong></div>
           <div className="save-state" aria-live="polite">
             <span className={busy ? 'state-dot saving' : 'state-dot'} />
             {busy ? '儲存中' : mode === 'demo' ? '範例資料' : '已儲存'}

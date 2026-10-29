@@ -1,5 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="18" fill="#12372d"/>
-  <path d="M17 15h30v29c0 5-4 9-9 9H17z" fill="#e7cf8a"/>
-  <path d="M23 24h18M23 32h18M23 40h12" stroke="#12372d" stroke-width="4" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Student Tracker proposal</title>
+  <desc id="desc">A jade clipboard with three response lines and a blue confirmation stroke.</desc>
+  <rect width="256" height="256" rx="52" fill="#12372d"/>
+  <path fill="#e7f7f0" d="M65 54h126c9 0 16 7 16 16v91c0 9-7 16-16 16h-46l-24 24v-24H65c-9 0-16-7-16-16V70c0-9 7-16 16-16Z"/>
+  <path fill="none" stroke="#109b76" stroke-linecap="round" stroke-width="16" d="M80 94h96M80 126h72M80 158h42"/>
+  <path fill="none" stroke="#3a7cf4" stroke-linecap="round" stroke-linejoin="round" stroke-width="18" d="m144 160 18 18 37-42"/>
 </svg>

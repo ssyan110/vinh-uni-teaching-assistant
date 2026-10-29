@@ -25,7 +25,7 @@ export function LoginPage() {
   return (
     <main className="login-page">
       <section className="login-story">
-        <div className="login-brand"><span className="brand-mark large">課</span><span>課跡</span></div>
+        <div className="login-brand"><img className="brand-logo large" src={`${import.meta.env.BASE_URL}logo-minimalist.png`} alt="" /><span>課跡</span></div>
         <div>
           <p className="eyebrow">你的課堂，不漏掉下一步</p>
           <h1>記得學生，也記得<br />下一堂要怎麼教。</h1>
