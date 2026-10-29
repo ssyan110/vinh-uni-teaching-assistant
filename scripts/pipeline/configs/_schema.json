@@ -138,6 +138,13 @@
         "teacher_only",
         "optional_student_visible"
       ]
+    },
+    "source_material": {
+      "type": "string"
+    },
+    "total_lessons": {
+      "type": "integer",
+      "minimum": 1
     }
   },
   "additionalProperties": false

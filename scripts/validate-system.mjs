@@ -12,6 +12,7 @@
  */
 import fs from 'fs/promises';
 import path from 'path';
+import { spawnSync } from 'child_process';
 
 const root = process.cwd();
 const args = process.argv.slice(2);
@@ -159,6 +160,15 @@ console.log('\n── Pipeline configs ──');
 const configsDir = path.join(root, 'scripts/pipeline/configs');
 const configFiles = (await fs.readdir(configsDir).catch(() => [])).filter(f => f.endsWith('.json') && !f.startsWith('_'));
 check('at least 2 lesson type configs', configFiles.length >= 2, configFiles.join(', '));
+
+const configCheck = spawnSync('python3', ['-B', '-c', `from pathlib import Path
+from scripts.pipeline.validator import validate_config
+for name in ('regular', 'pinyin'):
+    config = validate_config(Path('scripts/pipeline/configs') / (name + '.json'))
+    assert config.lesson_type == name, name
+print('regular, pinyin')`], {cwd: root, encoding: 'utf8'});
+check('pipeline configs validate against schema', configCheck.status === 0, (configCheck.status === 0 ? configCheck.stdout : configCheck.stderr || configCheck.error?.message || 'Python validation failed').trim());
+
 
 // ── Lesson-specific validation (optional) ────────────────────────────────────
 if (lessonArg) {

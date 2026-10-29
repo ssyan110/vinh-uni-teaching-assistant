@@ -39,3 +39,11 @@ work/
 
 # Source textbook PDFs (too large for git)
 Giáo trình full/
+
+# Local teaching dashboard records
+dashboard/data/
+dashboard/dashboard-server.log
+
+# Private classroom records and backups
+/classroom-tools/private/
+/classroom-tools/local-gradebook/private/
