@@ -40,8 +40,10 @@ jobs:
       - name: Include student oral self-practice
         run: |
           mkdir -p dist/oral-practice/assets
-          cp ../speaking-challenge/exam/{index.html,styles.css,app.js,logic.js,content.js} dist/oral-practice/
+          cp ../speaking-challenge/exam/{index.html,styles.css,app.js,logic.js,year1-content.js,year2-content.js,select-bank.js} dist/oral-practice/
           cp ../speaking-challenge/exam/assets/B*.webp dist/oral-practice/assets/
+          mkdir -p dist/oral-practice/assets/year2
+          cp ../speaking-challenge/exam/assets/year2/B*.png dist/oral-practice/assets/year2/
       - name: Include student speaking practice guide
         run: |
           mkdir -p dist/speaking-practice
