@@ -9,7 +9,9 @@
   <meta name="description" content="自己抽题、看图、说中文。问题和六格图片同时显示，准备1分钟，再用2分钟练习回答。">
   <title>口语练习｜问题与图片</title>
   <link rel="stylesheet" href="styles.css?v=20261027-mobile1">
-  <script defer src="content.js?v=20261026-sixgrid1"></script>
+  <script defer src="year1-content.js"></script>
+  <script defer src="year2-content.js"></script>
+  <script defer src="select-bank.js"></script>
   <script defer src="logic.js?v=20261026-skipcontrols"></script>
   <script defer src="app.js?v=20261027-mobile1"></script>
 </head>
@@ -18,10 +20,12 @@
     <header class="exam-header">
       <div class="heading-block">
         <p class="eyebrow">荣市大学 · 华语听说课</p>
-        <h1>口语练习</h1>
+        <h1>口语考试审阅</h1>
       </div>
       <p class="exam-format">准备 1 分钟 <span aria-hidden="true">·</span> 回答 2 分钟</p>
     </header>
+
+    <div class="class-selector"><label for="yearSelect">选择年级</label> <select id="yearSelect"><option value="1">一年级</option><option value="2">二年级（审阅稿）</option></select><span>请在抽题前选择；切换年级会重新开始。</span></div>
 
     <section class="control-bar" aria-label="抽题与计时控制">
       <button class="primary-button" id="mainAction" type="button" disabled>载入题目中…</button>

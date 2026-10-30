@@ -112,6 +112,7 @@
   function render() {
     if (!machine) return;
     const state = machine.getState();
+    document.getElementById('yearSelect').disabled = !['ready', 'complete'].includes(state.phase);
     const isTiming = ['preparing', 'speaking'].includes(state.phase);
     controlBar.classList.toggle('is-timing', isTiming);
     mainAction.hidden = isTiming;
