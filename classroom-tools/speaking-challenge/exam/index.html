@@ -7,25 +7,29 @@
   <meta name="theme-color" content="#f5f5f7">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' data:; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; media-src 'none'; object-src 'none'; base-uri 'none'">
   <meta name="description" content="自己抽题、看图、说中文。问题和六格图片同时显示，准备1分钟，再用2分钟练习回答。">
-  <title>口语练习｜问题与图片</title>
-  <link rel="stylesheet" href="styles.css?v=20261027-mobile1">
-  <script defer src="year1-content.js"></script>
-  <script defer src="year2-content.js"></script>
-  <script defer src="select-bank.js"></script>
+  <title>口语抽题与计时</title>
+  <link rel="stylesheet" href="styles.css?v=20261031-term-catalog">
+  <script defer src="bank-catalog.js?v=20261031-term-catalog"></script>
+  <script defer src="select-bank.js?v=20261031-term-catalog"></script>
   <script defer src="logic.js?v=20261026-skipcontrols"></script>
-  <script defer src="app.js?v=20261027-mobile1"></script>
+  <script defer src="app.js?v=20261031-term-catalog"></script>
 </head>
 <body>
   <main class="exam-shell">
     <header class="exam-header">
       <div class="heading-block">
         <p class="eyebrow">荣市大学 · 华语听说课</p>
-        <h1>口语考试审阅</h1>
+        <h1>口语抽题与计时</h1>
       </div>
       <p class="exam-format">准备 1 分钟 <span aria-hidden="true">·</span> 回答 2 分钟</p>
     </header>
 
-    <div class="class-selector"><label for="yearSelect">选择年级</label> <select id="yearSelect"><option value="1">一年级</option><option value="2">二年级（审阅稿）</option></select><span>请在抽题前选择；切换年级会重新开始。</span></div>
+    <div class="class-selector" role="group" aria-label="选择考试题库">
+      <label for="bankSelect">学期 / 年级 / 题库</label>
+      <select id="bankSelect" aria-describedby="bankStatus bankHelp"></select>
+      <span id="bankStatus" role="status" aria-live="polite">正在载入题库信息…</span>
+      <span id="bankHelp" class="selector-help">选项按学期分组，抽题后暂时不能切换题库。</span>
+    </div>
 
     <section class="control-bar" aria-label="抽题与计时控制">
       <button class="primary-button" id="mainAction" type="button" disabled>载入题目中…</button>
