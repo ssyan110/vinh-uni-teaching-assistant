@@ -17,13 +17,12 @@ Use this skill when generating 作業題庫 / homework-question banks for beginn
 Primary reference:
 - From the repo root: `reference/chinese_language_exercise_report.md`
 
-## Default audience and language
+## Audience and language
 
-- Learners: Vietnamese university beginners.
-- Instructions and explanations: Vietnamese.
-- Target language: Simplified Chinese.
+- Resolve the actual offering, learner level and lesson scope first. Follow the current user request and applicable course workflow for the language of instructions and explanations; Vietnamese is an option when appropriate, not a universal classroom default.
+- Target language: Simplified Chinese for this project's Chinese courseware, unless the user specifies otherwise.
 - Pronunciation support: pinyin, tapered inside the assignment.
-- Do not use Traditional Chinese unless Adam explicitly asks.
+- Do not silently change the requested character variant.
 - Keep student-facing copy direct and simple.
 
 ## Core design rule
@@ -39,7 +38,7 @@ Recognition → controlled production → guided communication.
 
 ## Default lesson-level blueprint
 
-For a normal beginner lesson with about 11 new words, 1–2 grammar targets, and one short dialogue:
+For a normal beginner homework lesson with about 11 new words, 1–2 grammar targets, and one short dialogue, the following is a starting point, not a fixed quota. Adapt to the requested purpose, available time, learner level and approved course plan; it does not prescribe a Blooket game's composition:
 
 - 13–15 prompts total.
 - About 22–27 response actions.
@@ -94,8 +93,7 @@ Each generated item should include:
 - `bloom_level`: Remember, Understand, Apply, Analyze
 - `delivery_mode`: Google Forms, Formative, Printable PDF, Kahoot/Blooket optional
 - `question_type`
-- `prompt_vi`
-- `prompt_zh` when useful
+- The student prompt in the language required for the assignment (for example, `prompt_vi` and/or `prompt_zh`), with field names matching the destination schema.
 - `student_input_type`
 - `options` when applicable
 - `answer_key` or `rubric`
@@ -128,11 +126,8 @@ Recommended files:
 
 Before saying the bank is done:
 
-- Confirm item count and response-action count.
-- Confirm all required skill areas are present.
-- Confirm Bloom balance is close to the beginner default.
-- Confirm at least one hanzi retrieval task exists.
-- Confirm at least one short output task exists.
+- Check each question from the student's perspective: what is being asked, what information is provided, what response is expected, and whether the answer is supported and unambiguous. Use an approved comparable set where relevant; keep answer keys on the teacher side.
+- Confirm the requested item count and response-action count; check skill coverage, retrieval and output against the assignment's actual purpose, rather than enforcing example proportions on unrelated formats.
 - Confirm source pages are preserved.
-- Confirm no Traditional Chinese or English UI labels are introduced.
+- Confirm the requested language and character variant are used consistently.
 - Confirm all items are marked `draft_for_review`, unless teacher approval has happened.

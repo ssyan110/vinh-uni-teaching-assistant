@@ -1,5 +1,7 @@
 # Lesson Slide Template Guide
 
+> Scope: This HTML presenter guidance is for legacy or other explicitly requested formats. Future Vinh in-person OpenSlide decks must use directly editable text and draggable elements, without wrapped HTML or iframes; see `docs/open-slide-workspace.md`. Existing content and approval gates remain in force.
+
 Use Lesson 01 as the template for future regular lessons:
 
 ```text

@@ -1,5 +1,7 @@
 # Portable Slide Template Guide
 
+> Scope: This HTML presenter guidance is for legacy or other explicitly requested formats. Future Vinh in-person OpenSlide decks must use directly editable text and draggable elements, without wrapped HTML or iframes; see `docs/open-slide-workspace.md`. Existing content and approval gates remain in force.
+
 Use this guide when a future project already has approved slide content and needs the same **Soft Classroom Presenter** slides as this project—without repeating lesson discovery, content extraction, or design exploration.
 
 This is an HTML-first deck system: editable slide HTML plus a browser presenter. It is not a PPTX workflow. The result is visually identical only when the source template HTML and its assets are copied; do not redraw the system from a written description.

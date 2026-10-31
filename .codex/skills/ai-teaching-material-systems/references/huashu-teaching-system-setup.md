@@ -1,5 +1,7 @@
 # Huashu Teaching System Setup Reference
 
+> Scope: This HTML presenter guidance is for legacy or other explicitly requested formats. Future Vinh in-person OpenSlide decks must use directly editable text and draggable elements, without wrapped HTML or iframes; see `docs/open-slide-workspace.md`. Existing content and approval gates remain in force.
+
 Session-derived reference for building Adam's local AI teaching material system with huashu-design.
 
 ## Goal

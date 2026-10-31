@@ -1,5 +1,7 @@
 # VP Pinyin Lesson Database + Copyright-Safe Redesign
 
+> Scope: This HTML presenter guidance is for legacy or other explicitly requested formats. Future Vinh in-person OpenSlide decks must use directly editable text and draggable elements, without wrapped HTML or iframes; see `docs/open-slide-workspace.md`. Existing content and approval gates remain in force.
+
 Use this reference when Adam provides a Pinyin lesson PDF and asks to implement the VP production flow or redesign slides from a reference file.
 
 ## Core VP rule

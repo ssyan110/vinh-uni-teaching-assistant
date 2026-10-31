@@ -1,25 +1,42 @@
-# Agent instructions — ai-teaching-material-system
+# Vinh University teaching project — agent instructions
 
-Keep this file small; Codex reads `AGENTS.md` automatically.
+## Safety and scope
 
-## Critical defaults
+- Work only in this project unless Adam explicitly authorizes another location. Preserve unrelated changes and existing outputs; do not perform destructive or broad changes without confirmation.
+- Do not read password notes or use Adam's credit card. Do not expose or commit secrets, local databases, or private data.
+- For Notion, use the Notion MCP first. Do not use browser or desktop automation; use an API fallback only when allowed by Adam's global rules.
 
-- Work only in this project unless Adam explicitly asks for cross-project changes.
-- Be conservative: no destructive/broad changes without confirmation.
-- Do not read secrets/password notes or use Adam's credit card.
-- Do not commit or expose secrets from `.env`, local DBs, or private data.
-- For Notion tasks, use Notion MCP/API only; do not open Notion in browser/desktop.
+## Current teaching workflow
 
-## Project note
+- Identify the offering, class and full `<textbook_id>:<lesson_id>` before lesson-specific work. Check the actual lesson source and current approval state; a plan, preview, technical check or agent run does not establish human approval or classroom acceptance.
+- For substantive work, define the scope, perform the applicable preflight, make a bounded change, verify it and record evidence. Where the project requires content approval, obtain Adam's explicit approval of the specific content version before producing its visuals or slide drafts. Keep content approval, classroom playback or rehearsal, and release decisions separate; do not fabricate, bypass or repeat an already satisfied gate.
+- Reuse the confirmed style for the relevant course and format; ask about style only if it cannot be determined from Adam's request or the existing references.
+- For every Vinh in-person class deck, author directly human-editable text and individually draggable elements in the shared OpenSlide workspace; wrapped HTML, iframe slides, flattened slide images and a separate HTML editor do not satisfy this requirement. Verify edits and moves persist after reload. If the available editor cannot do so, report the blocker; do not substitute HTML. Do not create PPT/PPTX backups unless Adam explicitly requests them. Online pre-study presentations use PPT/PPTX as applicable. A change to one format does not automatically change the other.
+- For every Vinh in-person deck, project OpenSlide rules own the output format. Do not follow generic/global slide-skill instructions that prescribe HTML, iframe or single-file HTML output; carry over only visual guidance that works in directly editable native OpenSlide elements.
+- Route every new in-person deck through `production_gate.py --purpose classroom-native --stage draft`; after authoring, run the same gate with `--verify-native-output` and complete the live OpenSlide edit, drag and save/reopen check before delivery. `classroom-html` is historical only and its draft gate is disabled.
+- The local semester progress dashboard is a tracking tool, separate from the OpenSlide workspace and from source approval or release records.
+- Reuse the confirmed OpenSlide cover, route and activity layouts appropriate to the task. Register completed classroom decks in the shared workspace and verify their real page count, thumbnails and playback. Registration and technical QA do not grant content or release approval.
+- Before updating an existing teaching artifact, identify its current authoritative source and version, including recent user edits. Check dependent materials affected by the change (such as slide order, activity numbers, teacher scripts, answers, manifests and workspace registration); update only those within the authorized scope, or report any remaining mismatch. Do not regenerate an entire package for a localized correction.
+- For student-facing activities and questions, check as a student without the chat history: the task, necessary information, expected response and answer basis must be clear. Compare an approved same-course example when useful; automated counts or layout checks alone do not establish comprehension.
 
-AI teaching-material system. For structural/generator work, read `.codex/agent-guide-full.md` first; do not use `/Users/ssyan110/Development/huashu_design` for this project.
+## In-person slide reference and density checks
 
-Slide style gate: before generating any slide deck, ask Adam which style — `original`, `coral-studio`, or `slate-citrus` (default: Slate Citrus). Skins: `output/pinyin/pinyin-01/design-prototypes/<style>-full-deck/prototype.css`, visual-only, applied as the last stylesheet per slide.
+- For the current two revisions and future new decks, turn suitable text-heavy content into meaningful infographics: group related information with relevant icons, categories, columns or comparison/sequence structures within the confirmed reference design. Show the real relationship, not decorative icon cards around unchanged paragraphs. Preserve executable student instructions, task materials, conditions, numbers and answer privacy; do not replace them with unexplained icons or labels. Verify reading order and complete task comprehension in the rendered page. Do not retrofit other finished decks.
 
-## Load-on-demand docs
+- For the current Year 1 W08 and Year 2 W10 revisions and future new in-person decks, use elementary Lessons 11–12 and 13–14 plus quasi-intermediate Lessons 4–5 as the primary route/activity-structure references, with explicit page-type mapping in `docs/classroom-activity-workflow.md`. Preserve other finished decks. Retain existing confirmed lesson content; reference reuse does not authorize new activities, fixed page counts, or another course's HSK labels. Lessons 9–10 remain cover/overall-visual reference only.
+- Apply `docs/classroom-activity-workflow.md` during activity research and selection, before review-copy drafting. Check method relevance, concrete inputs/output, procedure burden and whole-class timing against current course decisions and actual approved examples. Do not defer these checks until after content approval or treat every activity as a mandatory sequence of peer-check, question, exchange, repair and report.
+- In every current/new slide, replace empty generic prompts such as “两人轮流发表；听者提问，说话的人回答，必要时修改安排” with activity-specific objects, available materials and the content to explain, ask, confirm or revise. If the task already states these, omit the redundant tail; preserve essential student directions. Apply to the current two revisions and future decks, without editing other finished decks.
+- Before drafting student copy, open the actual approved same-type activity pages as well as the cover and route references. Plan what students must see, hear and say; separate student instructions/data from teacher facilitation. A complete activity plan is not a paragraph to paste onto a slide. Follow the existing activity-page limit and playback rules; do not add click-to-reveal steps or extra pages merely to fit prose.
+- Before content approval and generation, map the whole activity chain (input, student action, oral outcome, next activity connection) and each page to an actual primary reference page with a pedagogical reason. Build contract expectations independently from reviewed copy and this mapping, never by extracting the generated slides; compare generated text as actual values only. Read back updated guidance in the active environment and record stale consumers.
+- Future new in-person decks must omit the “今天我能说清什么” closing slide and must not automatically add an equivalent recap/self-check page. Retain applicable personal evidence through existing activities and teacher records without reinstating deleted tasks. For current Year 1 student v04, remove pages 14–15 and use page 12 data → page 13 sentence support; do not enforce task-first order universally. Preserve other finished decks.
+- Keep upper-right activity remarks consistent with the selected references: `活动<number>｜<name or page phase>`. Pages in one activity share identity/number but may label listening, checking or reporting differently; do not force identical wording. Keep plain non-clickable `Audio n-n` separately positioned without overlap. Apply to the current two revisions and future new decks only.
+- Reproduce the same-type reference page's actual visual hierarchy, layout, grouping and spacing in directly editable OpenSlide elements. Historical DOM and CSS are visual references, not a required output structure; a reference hash alone is not template reuse. Preserve the reference's visual hierarchy, image/data prominence, grouping and whitespace; do not reduce meaningful text to unexplained labels or shrink type to fit.
+- For approved content, keep required questions, facts, conditions, answer privacy and student-visible instructions. An authorized request to reduce text permits concise equivalent wording and removal of duplication, with a source-to-revision mapping; it does not authorize dropping task requirements or moving essential student context into teacher notes. Keep the approved original intact and identify any material content change separately.
+- Alongside the canonical classroom QA checklist, compare each new activity-page type and every dense page with its actual reference at the same rendered scale. Record the paired page paths/indices and the concrete difference resolved (for example, a paragraph replaced by a record table, or repeated instructions removed). Check the full-deck contact sheet for repeated text blocks and missing visual variety. Character counts, required classes, no overflow and a successful build are diagnostic evidence, not a visual-density pass; do not report reference fidelity without this comparison.
 
-- Full previous project instructions: `.codex/agent-guide-full.md`
-- Legacy materials index: `.codex/kiro-parity-index.md`
-- Direct legacy folders: `.codex/skills/`, `.codex/specs/`, `.codex/steering/`
+## Load current guidance on demand
 
-Do not scan migrated skills/specs by default. Load only the relevant files for the current task.
+- For teaching-material work, consult `docs/workflow/canonical-workflow-contract.md`, `PROJECT_REQUIREMENTS.md` and the task-specific workflow, including `docs/classroom-activity-workflow.md` and `docs/open-slide-workspace.md` for in-person OpenSlide work.
+- Some current teaching files may be absent in this checkout. If a required file is missing, inspect the existing `vinh-uni-main` version read-only with `git show vinh-uni-main:<path>` when available; report the limitation and do not switch branches or overwrite files merely to obtain guidance.
+- Current user decisions and the applicable course workflow govern over generic skill defaults and historical reference files. Check whether a rule applies to the requested course and format before asking for a choice or applying it. If an active rule is superseded, update its owning source and affected active consumers within scope; preserve historical records.
+- Do not create or maintain `.kiro/`.

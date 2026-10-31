@@ -7,4 +7,3 @@ Legacy materials live in `.codex/kiro-parity-index.md` and the direct folders be
 - `skills/`
 - `steering/`
 - `specs/`
-- `hooks/`, `settings/`

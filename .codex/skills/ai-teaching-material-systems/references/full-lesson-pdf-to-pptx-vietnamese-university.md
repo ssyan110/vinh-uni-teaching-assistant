@@ -86,7 +86,7 @@ For `GT Hán Ngữ 1`, Lesson 1 (`第一课 · 你好`) was extracted from PDF p
 - For chips, use `<div class="pill"><p>text</p></div>`.
 - If grid rows have variable lengths, dynamically set `grid-template-columns: repeat(${row.length}, 1fr)` to avoid blank cells in HTML/PPTX.
 - Avoid CSS that Huashu's editable exporter cannot map reliably (heavy shadows, gradients, complex pseudo-elements for essential content).
-- Deprecated PPTX note: older exports needed URL-encoded media filenames. Current lessons should keep image assets in the HTML presenter workflow and track them through `slides/assets/asset-manifest.json`.
+- Historical HTML presenter note: older exports needed URL-encoded media filenames and tracked images through `slides/assets/asset-manifest.json`. Future Vinh in-person decks use native editable OpenSlide pages as specified in `docs/open-slide-workspace.md`.
 - For writing slides, local stroke-order GIFs are reliable for HTML/PDF; editable PPTX may embed the first frame/static media depending on exporter support. Keep the slide usable even if animation is flattened.
 
 ## Writing-stroke visuals

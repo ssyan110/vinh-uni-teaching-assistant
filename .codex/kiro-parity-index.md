@@ -1,13 +1,12 @@
 # Legacy Materials Index
 
-Kiro is retired. Use this file only when a task needs a legacy skill, steering note, spec, or hook.
+Kiro is retired. Use this file only when a task needs historical material.
 
 ## Main paths
 
 - `skills/`
 - `steering/`
 - `specs/`
-- `hooks/`
 
 ## Core skills
 
@@ -26,6 +25,5 @@ Kiro is retired. Use this file only when a task needs a legacy skill, steering n
 - `steering/ai-teaching-material-system.md`
 - `steering/portable-agent-workflows.md`
 - `specs/lesson-type-routing/`
-- `hooks/rebuild-slide-data.kiro.hook`
 
 Load only the file you need for the current task.
