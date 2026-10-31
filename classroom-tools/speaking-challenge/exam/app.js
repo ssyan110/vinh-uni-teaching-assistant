@@ -112,7 +112,7 @@
   function render() {
     if (!machine) return;
     const state = machine.getState();
-    document.getElementById('yearSelect').disabled = !['ready', 'complete'].includes(state.phase);
+    document.getElementById('bankSelect').disabled = !['ready', 'complete'].includes(state.phase);
     const isTiming = ['preparing', 'speaking'].includes(state.phase);
     controlBar.classList.toggle('is-timing', isTiming);
     mainAction.hidden = isTiming;
@@ -239,9 +239,10 @@
   }
 
   async function loadBank() {
+    await window.ORAL_EXAM_BANK_READY;
     const bank = window.ORAL_EXAM_BANK;
     if (!bank || !Array.isArray(bank.questions) || !bank.questions.length || !Array.isArray(bank.pictures) || !bank.pictures.length) {
-      throw new Error('没有找到完整题库。请确认 content.js 已载入，并包含 questions 与 pictures。');
+      throw new Error('没有找到完整题库。请检查题库清单、内容脚本编号，以及 questions 和 pictures 数据。');
     }
     for (const [index, item] of bank.questions.entries()) {
       if (!item || !item.id || !item.title || !item.prompt || !Array.isArray(item.hints) || item.hints.some((hint) => typeof hint !== 'string' || !hint.trim())) {
@@ -293,6 +294,13 @@
       const state = machine.getState();
       if (state.phase === 'speaking') setStatus('正在回答。');
       else if (state.phase === 'complete') setStatus('回答结束。');
+    }
+  });
+
+  window.addEventListener('beforeunload', (event) => {
+    if (machine && ['preparing', 'speaking'].includes(machine.getState().phase)) {
+      event.preventDefault();
+      event.returnValue = '';
     }
   });
 

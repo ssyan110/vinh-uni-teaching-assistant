@@ -1,4 +1,5 @@
-window.YEAR1_BANK = {
+window.ORAL_EXAM_BANKS = window.ORAL_EXAM_BANKS || {};
+window.ORAL_EXAM_BANKS["2026-fall-year1"] = {
   "questions": [
     {
       "id": "A01",

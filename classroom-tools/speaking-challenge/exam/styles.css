@@ -170,3 +170,4 @@ h1 { margin: 0; font: 700 clamp(29px, 3vw, 38px)/1.15 var(--font-zh); }
 .class-selector label { font-weight: 700; }
 .class-selector select { font: inherit; padding: 9px 12px; border: 1px solid #aab6c7; border-radius: 8px; background: white; color: #17243a; }
 .class-selector span { color: #566273; }
+.class-selector .selector-help { flex-basis: 100%; font-size: 14px; }
