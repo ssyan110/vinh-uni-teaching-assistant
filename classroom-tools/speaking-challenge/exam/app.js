@@ -116,7 +116,7 @@
     const isTiming = ['preparing', 'speaking'].includes(state.phase);
     controlBar.classList.toggle('is-timing', isTiming);
     mainAction.hidden = isTiming;
-    zoomPicture.hidden = !state.picture || state.phase === 'drawing';
+    zoomPicture.hidden = !state.picture || state.phase === 'drawing' || state.stage !== 'picture';
     mainAction.disabled = !ready || ['drawing', 'preparing', 'speaking'].includes(state.phase);
     pauseAction.hidden = !['preparing', 'speaking'].includes(state.phase);
     pauseAction.textContent = state.pausedRemaining === null ? '暂停' : '继续';
@@ -128,12 +128,12 @@
       phaseLabel.textContent = '等待抽题';
       timer.textContent = '—:—';
     } else if (state.phase === 'drawing') {
-      mainAction.textContent = '抽题中…';
-      phaseLabel.textContent = '正在抽题';
+      mainAction.textContent = state.stage === 'question' ? '正在抽问题…' : '正在抽图片…';
+      phaseLabel.textContent = state.stage === 'question' ? '抽取问题' : '抽取图片';
       timer.textContent = '—:—';
     } else if (state.phase === 'selected') {
-      mainAction.textContent = '开始准备';
-      phaseLabel.textContent = '准备时间';
+      mainAction.textContent = state.stage === 'question' ? '开始准备回答问题' : '开始准备看图说故事';
+      phaseLabel.textContent = state.stage === 'question' ? '问题已抽出' : '图片已抽出';
       timer.textContent = '01:00';
     } else if (state.phase === 'preparing' || state.phase === 'speaking') {
       mainAction.textContent = state.phase === 'preparing' ? '准备中' : '回答中';
@@ -158,19 +158,37 @@
       machine.dispatch('tick', Date.now());
       render();
       const next = machine.getState();
-      if (next.phase === 'speaking' && state.phase === 'preparing') setStatus('现在开始回答。');
-      if (next.phase === 'complete') setStatus('回答结束。');
+      if (next.phase === 'speaking' && state.phase === 'preparing') setStatus(next.stage === 'question' ? '现在回答问题。' : '现在看图说故事。');
+      if (next.phase === 'drawing' && next.stage === 'picture') {
+        beginPictureDraw();
+        return;
+      }
+      if (next.phase === 'complete') setStatus('两项口语作答结束。');
       scheduleClock();
     }, delay);
+  }
+
+  function beginPictureDraw() {
+    if (drawDeadline !== null) return;
+    setStatus('问题回答结束，正在抽图片…');
+    showShuffle(pictureBody, 'picture');
+    render();
+    const token = drawToken;
+    drawDeadline = Date.now() + (reducedMotion.matches ? 0 : 1600);
+    drawTimer = window.setTimeout(() => { if (token === drawToken) revealAfterDraw(); }, Math.max(0, drawDeadline - Date.now()));
   }
 
   function revealAfterDraw() {
     clearDraw();
     const state = machine.dispatch('reveal');
     if (state.phase !== 'selected') return;
-    showQuestion(state.question);
-    showPicture(state.picture);
-    setStatus('看好两道题后，按「开始准备」。');
+    if (state.stage === 'question') {
+      showQuestion(state.question);
+      setStatus('问题已抽出。准备1分钟后自动开始回答，回答1分钟。');
+    } else {
+      showPicture(state.picture);
+      setStatus('图片已抽出。准备1分钟后自动开始讲述，讲述1分钟。');
+    }
     render();
   }
 
@@ -182,8 +200,8 @@
       if (selected.phase !== 'drawing') return;
       clearDraw();
       showShuffle(questionBody, 'question');
-      showShuffle(pictureBody, 'picture');
-      setStatus('正在抽题…');
+      placeholder(pictureBody, '回答完问题后再抽图片', 'draw-placeholder picture-placeholder');
+      setStatus('正在抽问题…');
       render();
       const token = drawToken;
       drawDeadline = Date.now() + (reducedMotion.matches ? 0 : 1600);
@@ -192,7 +210,7 @@
       }, Math.max(0, drawDeadline - Date.now()));
     } else if (state.phase === 'selected') {
       machine.dispatch('prepare', Date.now());
-      setStatus('准备结束后自动开始回答。');
+      setStatus(state.stage === 'question' ? '准备1分钟后自动开始回答，回答1分钟。' : '准备1分钟后自动开始讲述，讲述1分钟。');
       render();
       scheduleClock();
     } else if (state.phase === 'complete') {
@@ -218,6 +236,7 @@
     if (state.pausedRemaining === null) machine.dispatch('pause', Date.now());
     else machine.dispatch('resume', Date.now());
     const next = machine.getState();
+    if (next.phase === 'drawing' && next.stage === 'picture') { beginPictureDraw(); return; }
     setStatus(next.phase === 'complete' ? '回答结束。' : next.pausedRemaining === null ? '计时继续。' : '计时已暂停。');
     render();
     scheduleClock();
@@ -231,8 +250,9 @@
       setStatus(next.pausedRemaining === null ? '现在开始回答。' : '按「继续」后开始回答。');
     } else if (phase === 'speaking') {
       clearTimer();
-      machine.dispatch('finishSpeaking');
-      setStatus('回答结束。');
+      const next = machine.dispatch('finishSpeaking');
+      if (next.phase === 'drawing') { beginPictureDraw(); return; }
+      setStatus('两项口语作答结束。');
     } else return;
     render();
     scheduleClock();
@@ -289,6 +309,7 @@
     }
     machine.dispatch('tick', Date.now());
     render();
+    if (machine.getState().phase === 'drawing' && machine.getState().stage === 'picture') { beginPictureDraw(); return; }
     scheduleClock();
     if (!document.hidden) {
       const state = machine.getState();

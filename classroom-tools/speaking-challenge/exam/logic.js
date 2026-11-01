@@ -17,14 +17,19 @@
     const pictures = options.pictures || [];
     const random = options.random || Math.random;
     const prepMs = options.prepMs || 60_000;
-    const speakMs = options.speakMs || 120_000;
-    let state = { phase: 'ready', question: null, picture: null, deadline: null, pausedRemaining: null };
+    const speakMs = options.speakMs || 60_000;
+    let state = { phase: 'ready', stage: 'question', question: null, picture: null, deadline: null, pausedRemaining: null };
 
     function advance(now) {
       while (state.pausedRemaining === null && state.deadline !== null && now >= state.deadline) {
         if (state.phase === 'preparing') {
           state.phase = 'speaking';
           state.deadline += speakMs;
+        } else if (state.phase === 'speaking' && state.stage === 'question') {
+          state.phase = 'drawing';
+          state.stage = 'picture';
+          state.picture = choose(pictures, random);
+          state.deadline = null;
         } else if (state.phase === 'speaking') {
           state.phase = 'complete';
           state.deadline = null;
@@ -38,20 +43,21 @@
       now = Number.isFinite(now) ? now : Date.now();
       if (action === 'tick') advance(now);
       else if (action === 'draw' && state.phase === 'ready') {
-        state = { phase: 'drawing', question: choose(questions, random), picture: choose(pictures, random), deadline: null, pausedRemaining: null };
+        state = { phase: 'drawing', stage: 'question', question: choose(questions, random), picture: null, deadline: null, pausedRemaining: null };
       } else if (action === 'reveal' && state.phase === 'drawing') state.phase = 'selected';
       else if (action === 'prepare' && state.phase === 'selected') {
         state.phase = 'preparing';
         state.deadline = now + prepMs;
       } else if (action === 'skipPreparation' && ['selected', 'preparing'].includes(state.phase)) {
         state.phase = 'speaking';
-        if (state.pausedRemaining === null) state.deadline = now + speakMs;
-        else {
-          state.deadline = null;
-          state.pausedRemaining = speakMs;
-        }
+        state.deadline = state.pausedRemaining === null ? now + speakMs : null;
+        if (state.pausedRemaining !== null) state.pausedRemaining = speakMs;
       } else if (action === 'finishSpeaking' && state.phase === 'speaking') {
-        state.phase = 'complete';
+        state.phase = state.stage === 'question' ? 'drawing' : 'complete';
+        if (state.stage === 'question') {
+          state.stage = 'picture';
+          state.picture = choose(pictures, random);
+        }
         state.deadline = null;
         state.pausedRemaining = null;
       } else if (action === 'pause' && state.pausedRemaining === null && ['preparing', 'speaking'].includes(state.phase)) {
@@ -63,7 +69,7 @@
         state.deadline = now + remaining;
         advance(now);
       } else if (action === 'next' && state.phase === 'complete') {
-        state = { phase: 'ready', question: null, picture: null, deadline: null, pausedRemaining: null };
+        state = { phase: 'ready', stage: 'question', question: null, picture: null, deadline: null, pausedRemaining: null };
       }
       return snapshot();
     }
