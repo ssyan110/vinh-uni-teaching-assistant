@@ -7,19 +7,19 @@
   <meta name="theme-color" content="#f5f5f7">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' data:; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; media-src 'none'; object-src 'none'; base-uri 'none'">
   <meta name="description" content="依次抽取口语问题和六格图片；每项准备1分钟、回答1分钟。">
-  <title>口语抽题与计时</title>
+  <title>期中口语考试</title>
   <link rel="stylesheet" href="styles.css?v=20261101-two-stage">
-  <script defer src="bank-catalog.js?v=20261031-term-catalog"></script>
+  <script defer src="bank-catalog.js?v=20261101-midterm"></script>
   <script defer src="select-bank.js?v=20261031-term-catalog"></script>
   <script defer src="logic.js?v=20261101-two-stage"></script>
-  <script defer src="app.js?v=20261101-two-stage"></script>
+  <script defer src="app.js?v=20261101-midterm"></script>
 </head>
 <body>
   <main class="exam-shell">
     <header class="exam-header">
       <div class="heading-block">
         <p class="eyebrow">荣市大学 · 华语听说课</p>
-        <h1>口语抽题与计时</h1>
+        <h1>期中口语考试</h1>
       </div>
       <p class="exam-format">先回答问题：准备1分钟、回答1分钟 <span aria-hidden="true">·</span> 再看图说故事：准备1分钟、回答1分钟</p>
     </header>
@@ -56,7 +56,7 @@
       <article class="exam-card picture-card" aria-labelledby="pictureHeading">
         <header class="card-heading">
           <div class="picture-heading-copy">
-            <h2 id="pictureHeading"><span class="part-number">02</span> 看图叙事</h2>
+            <h2 id="pictureHeading"><span class="part-number">02</span> 看图说故事</h2>
             <p class="picture-cue" id="pictureCue"></p>
           </div>
           <div class="picture-actions">
@@ -73,7 +73,7 @@
   </main>
   <dialog class="picture-dialog" id="pictureDialog" aria-labelledby="pictureDialogTitle">
     <div class="dialog-heading">
-      <h2 id="pictureDialogTitle">看图叙事</h2>
+      <h2 id="pictureDialogTitle">看图说故事</h2>
       <button class="zoom-button" id="closePicture" type="button">关闭</button>
     </div>
     <div class="dialog-scroll">

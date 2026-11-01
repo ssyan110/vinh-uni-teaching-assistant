@@ -140,8 +140,8 @@
       phaseLabel.textContent = state.phase === 'preparing' ? '准备剩余' : '回答剩余';
       timer.textContent = formatTime(machine.getRemaining());
     } else if (state.phase === 'complete') {
-      mainAction.textContent = '再练一题';
-      phaseLabel.textContent = '本次练习结束';
+      mainAction.textContent = '下一位考生（抽问题）';
+      phaseLabel.textContent = '本位考生考试结束';
       timer.textContent = '00:00';
     }
   }
@@ -163,7 +163,7 @@
         beginPictureDraw();
         return;
       }
-      if (next.phase === 'complete') setStatus('两项口语作答结束。');
+      if (next.phase === 'complete') setStatus('本位考生考试结束。请按「下一位考生（抽问题）」继续。');
       scheduleClock();
     }, delay);
   }
@@ -184,10 +184,10 @@
     if (state.phase !== 'selected') return;
     if (state.stage === 'question') {
       showQuestion(state.question);
-      setStatus('问题已抽出。准备1分钟后自动开始回答，回答1分钟。');
+      setStatus('问题已抽出。请按「开始准备回答问题」；准备1分钟后自动开始回答，回答1分钟。');
     } else {
       showPicture(state.picture);
-      setStatus('图片已抽出。准备1分钟后自动开始讲述，讲述1分钟。');
+      setStatus('图片已抽出。请按「开始准备看图说故事」；准备1分钟后自动开始讲述，讲述1分钟。');
     }
     render();
   }
@@ -252,7 +252,7 @@
       clearTimer();
       const next = machine.dispatch('finishSpeaking');
       if (next.phase === 'drawing') { beginPictureDraw(); return; }
-      setStatus('两项口语作答结束。');
+      setStatus('本位考生考试结束。请按「下一位考生（抽问题）」继续。');
     } else return;
     render();
     scheduleClock();
