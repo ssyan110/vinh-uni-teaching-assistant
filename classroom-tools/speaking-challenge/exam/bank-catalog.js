@@ -12,10 +12,10 @@
       cohortId: 'year1',
       cohortOrder: 1,
       cohortLabel: '一年级',
-      title: '口语练习',
-      status: '练习题库',
+      title: '期中口语考试',
+      status: '考试题库',
       isDefault: true,
-      source: 'banks/2026-fall-year1.js?v=20261031-term-catalog',
+      source: 'banks/2026-fall-year1.js?v=20261101-midterm',
     },
     {
       id: '2026-fall-year2',
