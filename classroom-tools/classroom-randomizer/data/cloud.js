@@ -339,11 +339,15 @@
     return `lesson-${String(number).padStart(2, "0")}`;
   }
 
-  async function ensureClassSession(context, sessionDate) {
+  async function ensureClassSession(context, sessionDate, allowRestart = false) {
     const date = isoDate(sessionDate);
     const classSessionId = await request("/rest/v1/rpc/ensure_class_session", {
       method: "POST",
-      body: JSON.stringify({ p_course_id: context.courseId, p_session_date: date })
+      body: JSON.stringify({
+        p_course_id: context.courseId,
+        p_session_date: date,
+        ...(allowRestart ? { p_allow_restart: true } : {})
+      })
     });
     if (!text(classSessionId)) throw new Error("无法连接云端课堂。");
     return classSessionId;
@@ -351,7 +355,7 @@
 
   async function startSession(classId, options) {
     const context = await fetchClassRoster(classId);
-    return ensureClassSession(context, options && options.sessionDate);
+    return ensureClassSession(context, options && options.sessionDate, true);
   }
 
   function normalizeSession(input) {

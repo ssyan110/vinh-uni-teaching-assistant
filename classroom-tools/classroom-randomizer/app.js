@@ -864,15 +864,21 @@
       return;
     }
 
-    if (state && state.session.status !== "completed") {
-      showToast("请先回到本堂课，按「结束课程」后再开始下一堂。", true);
-      return;
-    }
-    if (state && !global.confirm("开始下一堂课前，上一堂课会保留在历史记录。要继续吗？")) {
-      return;
-    }
     const classId = elements.classNameInput.value;
     const sessionDate = elements.dateInput.value;
+    const hasOpenLocalSession = state && state.session.status !== "completed";
+    const willClosePreviousSession = hasOpenLocalSession
+      && (state.session.className !== classId || state.session.date !== sessionDate);
+    const hasPendingAttempt = hasOpenLocalSession && Model.pendingAttempt(state);
+    if (state && !global.confirm(willClosePreviousSession
+      ? hasPendingAttempt
+        ? "开始新课后，上一堂会自动结束；当前抽到的学生尚未记录回答，这次不计回答次数。已记录的回答会保留。要继续吗？"
+        : "开始新课后，上一堂会自动结束；已记录的回答会保留。要继续吗？"
+      : hasOpenLocalSession
+        ? "开始新课会沿用同一天的课堂记录；已有数据会保留。要继续吗？"
+      : "开始下一堂课？上一堂记录会保留。")) {
+      return;
+    }
     let classSessionId;
     startingSession = true;
     try {
@@ -887,7 +893,13 @@
     } finally {
       startingSession = false;
     }
-    if (state) archiveState(state);
+    if (state) {
+      if (willClosePreviousSession) {
+        state = Model.finishSession(state);
+        persist();
+      }
+      archiveState(state);
+    }
 
     state = Model.createSession({
       className: classId,
@@ -1528,11 +1540,11 @@
       elements.startNote.textContent = "上一堂课已结束，记录已保留。确认日期后可开始下一堂。";
     } else if (saved) {
       elements.startNote.textContent = cloudReady()
-        ? `有一堂尚未结束的课；开始新课前会先保留它。课堂记录会保存到教学数据库，已有 ${readHistory().length} 堂历史记录。`
-        : `有一堂尚未结束的课；开始新课前会先保留它。请先登录教师账号，才能继续保存课堂记录。`;
+        ? `有一堂尚未结束的课；开始同班的新日期课堂时会自动结束它，并保留已记录数据。已有 ${readHistory().length} 堂历史记录。`
+        : "有一堂尚未结束的课。请先登录教师账号，才能开始新课并保存课堂记录。";
     } else {
       elements.startNote.textContent = cloudReady()
-        ? "课堂记录会保存到教学数据库；离线时会暂存在本机，连接恢复后自动同步。"
+        ? "开始同班的新日期课堂时，上一堂尚未结束的课会自动收尾；已记录数据会保留。课堂记录会保存到教学数据库。"
         : "开始课堂前请先登录教师账号；登录后才能将课堂记录保存到教学数据库。";
     }
     updateRosterCount();
