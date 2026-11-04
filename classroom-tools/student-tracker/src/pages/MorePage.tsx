@@ -2,11 +2,10 @@ import { useEffect, useMemo, useState, type ChangeEvent, type FormEvent } from '
 import { parseRosterCsv } from '../utils/csv'
 import { useTracker } from '../state/TrackerContext'
 import type { ImportStudentRow } from '../types'
-
-function csvEscape(value: string | number | null | undefined) {
-  const text = String(value ?? '')
-  return /[",\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text
-}
+import { studentCodeLastFour } from '../utils/studentIdentity'
+import { Link } from 'react-router-dom'
+import { csvCell } from '../utils/classroomExport'
+import { todayIso } from '../data/repository'
 
 function downloadFile(filename: string, body: string, type: string) {
   const url = URL.createObjectURL(new Blob([body], { type }))
@@ -14,13 +13,13 @@ function downloadFile(filename: string, body: string, type: string) {
   anchor.href = url
   anchor.download = filename
   anchor.click()
-  URL.revokeObjectURL(url)
+    setTimeout(() => URL.revokeObjectURL(url), 1000)
 }
 
 export function MorePage() {
   const { snapshot, importStudents, addCourse, signOut, busy } = useTracker()
   const [courseId, setCourseId] = useState(snapshot.courses[0]?.id ?? '')
-  const [csv, setCsv] = useState('學號,中文姓名,原名,常用名,座號\n')
+  const [csv, setCsv] = useState('學號,中文姓名,原名,常用名\n')
   const [importMessage, setImportMessage] = useState('')
   const [showCourseForm, setShowCourseForm] = useState(false)
   const [courseDraft, setCourseDraft] = useState({ code: '', name: '', room: '', scheduleText: '' })
@@ -48,20 +47,23 @@ export function MorePage() {
 
   const createCourse = async (event: FormEvent) => {
     event.preventDefault()
-    await addCourse(courseDraft)
-    setCourseDraft({ code: '', name: '', room: '', scheduleText: '' })
-    setShowCourseForm(false)
+    try {
+      await addCourse(courseDraft)
+      setCourseDraft({ code: '', name: '', room: '', scheduleText: '' })
+      setShowCourseForm(false)
+    } catch { /* provider displays the error; keep the input */ }
   }
 
   const exportStudents = () => {
     const header = ['學號', '中文姓名', '原名', '常用名', '狀態']
-    const rows = snapshot.students.map((student) => [student.student_code, student.chinese_name, student.original_name, student.preferred_name, student.status].map(csvEscape).join(','))
-    downloadFile(`課跡-學生名冊-${new Date().toISOString().slice(0, 10)}.csv`, `\uFEFF${header.join(',')}\n${rows.join('\n')}`, 'text/csv;charset=utf-8')
+    const rows = snapshot.students.map((student) => [student.student_code, student.chinese_name, student.original_name, student.preferred_name, student.status].map(csvCell).join(','))
+    downloadFile(`荣市大学-学生名册-${todayIso()}.csv`, `\uFEFF${header.join(',')}\n${rows.join('\n')}`, 'text/csv;charset=utf-8')
   }
 
-  const exportBackup = () => downloadFile(`課跡-完整備份-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(snapshot, null, 2), 'application/json')
+  const exportSnapshot = () => downloadFile(`荣市大学-管理資料-${todayIso()}.json`, JSON.stringify(snapshot, null, 2), 'application/json')
 
   return (
+    <><Link className="secondary-button" to="/weekly-review">每週教學回顧 →</Link> <Link className="primary-button" to="/attendance">點名例外／補登紀錄 →</Link>
     <div className="page more-page">
       <header className="page-heading"><p className="eyebrow">低頻管理</p><h1>更多</h1><p>課程、名冊與資料匯出集中在這裡，不佔用每天的操作空間。</p></header>
 
@@ -83,11 +85,11 @@ export function MorePage() {
           <div className="import-editor">
             <label>加入哪一門課<select value={courseId} onChange={(event) => setCourseId(event.target.value)}>{snapshot.courses.map((course) => <option key={course.id} value={course.id}>{course.name}</option>)}</select></label>
             <label>名冊內容<textarea value={csv} onChange={(event) => { setCsv(event.target.value); setImportMessage('') }} rows={9} spellCheck={false} /></label>
-            <p className="field-help">標題至少要有「學號、中文姓名」；也可加入原名、常用名、座號。</p>
+            <p className="field-help">標題列至少要有「學號、中文姓名」；原名、常用名可選填。</p>
           </div>
           <div className="import-preview">
             <div className="preview-count"><strong>{parsed.rows.length}</strong><span>筆可匯入</span></div>
-            {parsed.errors.length ? <ul className="import-errors">{parsed.errors.slice(0, 5).map((message) => <li key={message}>{message}</li>)}</ul> : <div className="preview-sample">{parsed.rows.slice(0, 4).map((row) => <div key={row.student_code}><span>{row.seat_number ?? '—'}</span><strong>{row.chinese_name}</strong><small>{row.student_code}</small></div>)}</div>}
+            {parsed.errors.length ? <ul className="import-errors">{parsed.errors.slice(0, 5).map((message) => <li key={message}>{message}</li>)}</ul> : <div className="preview-sample">{parsed.rows.slice(0, 4).map((row) => <div key={row.student_code}><span aria-label={`學號末四位 ${studentCodeLastFour(row.student_code)}`}>{studentCodeLastFour(row.student_code)}</span><strong>{row.chinese_name}</strong><small>{row.original_name ?? row.preferred_name ?? ''}</small></div>)}</div>}
             {importMessage && <p className="success-message">{importMessage}</p>}
             <button className="primary-button full" disabled={busy || !courseId || !parsed.rows.length || parsed.errors.length > 0} onClick={doImport}>確認匯入</button>
           </div>
@@ -96,8 +98,10 @@ export function MorePage() {
 
       <section className="panel settings-section">
         <div className="panel-heading"><div><p className="section-kicker">帶走自己的資料</p><h2>匯出與帳號</h2></div></div>
-        <div className="export-actions"><button className="secondary-button" onClick={exportStudents}>匯出學生名冊 CSV</button><button className="secondary-button" onClick={exportBackup}>下載完整備份</button><button className="text-button danger" onClick={signOut}>登出</button></div>
+        <p className="field-help">JSON 只匯出目前載入的管理資料，不包含完整抽問場次、互動課堂、帳號與資料庫設定，不能直接還原 Supabase。</p>
+        <div className="export-actions"><button className="secondary-button" onClick={exportStudents}>匯出學生名冊 CSV</button><button className="secondary-button" onClick={exportSnapshot}>匯出管理資料 JSON</button><button className="text-button danger" onClick={signOut}>登出</button></div>
       </section>
     </div>
+    </>
   )
 }

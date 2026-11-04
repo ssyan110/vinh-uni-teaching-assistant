@@ -92,7 +92,7 @@ async function createMainWindow() {
     height: 860,
     minWidth: 960,
     minHeight: 640,
-    title: '課跡',
+    title: '荣市大学_学生管理系统',
     backgroundColor: '#f4f2ea',
     icon: iconPath,
     webPreferences: {

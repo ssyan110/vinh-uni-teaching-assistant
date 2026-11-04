@@ -1,6 +1,9 @@
 #!/bin/zsh
 set -euo pipefail
 
+print -u2 "旧桌面工具已停用，请使用学生管理系统网页。"
+exit 1
+
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 TARGET="/Applications/課跡.app"
