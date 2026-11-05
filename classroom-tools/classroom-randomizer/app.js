@@ -146,6 +146,7 @@
   let studentDisplayWindow = null;
   let drawingRevealTimer = null;
   let isDrawing = false;
+  let focusResponseOnParticipationClose = false;
   let timerDuration = 20;
   let timerRemaining = 20;
   let timerRunning = false;
@@ -1439,10 +1440,18 @@
         taskPrompt: taskPromptDraft,
         responseStatus: "answered"
       });
-      if ((method === "teacher" || changesSource) && elements.volunteerDialog.open) closeDialog(elements.volunteerDialog);
+      const closingParticipationDialog = (method === "teacher" || changesSource) && elements.volunteerDialog.open;
+      if (closingParticipationDialog) {
+        focusResponseOnParticipationClose = method === "teacher";
+        closeDialog(elements.volunteerDialog);
+      }
       if (method === "teacher" && !existingPending) { resetResponseDraft(); ensurePendingDraft(Model.pendingAttempt(state)); }
       const saved = persist();
       renderApp();
+      if (method === "teacher") {
+        elements.quickResponseBar.scrollIntoView({ block: "center" });
+        if (!closingParticipationDialog) elements.recordCompleteButton.focus({ preventScroll: true });
+      }
       volunteerFeedback(saved
         ? changesSource ? `已将 ${student.name} 的当前回答来源改为${method === "teacher" ? "老师主动叫" : "自愿发言"}，请保存回答结果。`
         : method === "teacher" ? `已选择 ${student.name}，请记录已回答或未回答。`
@@ -2050,7 +2059,14 @@
   elements.volunteerPanelButton.addEventListener("click", () => openParticipationDialog("volunteer"));
   document.getElementById("teacherPanelButton").addEventListener("click", () => openParticipationDialog("teacher"));
   elements.closeVolunteerButton.addEventListener("click", () => closeDialog(elements.volunteerDialog));
-  elements.volunteerDialog.addEventListener("close", () => (elements.volunteerDialog.dataset.method === "teacher" ? document.getElementById("teacherPanelButton") : elements.volunteerPanelButton).focus());
+  elements.volunteerDialog.addEventListener("close", () => {
+    if (focusResponseOnParticipationClose) {
+      focusResponseOnParticipationClose = false;
+      elements.recordCompleteButton.focus({ preventScroll: true });
+      return;
+    }
+    (elements.volunteerDialog.dataset.method === "teacher" ? document.getElementById("teacherPanelButton") : elements.volunteerPanelButton).focus();
+  });
   elements.volunteerSearchInput.addEventListener("input", renderVolunteers);
   elements.undoVolunteerButton.addEventListener("click", () => {
     if (!state || isDrawing || state.session.status === "completed"
