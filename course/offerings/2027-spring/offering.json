@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "offering_id": "2027-spring",
+  "course_id": "vinh-chinese-listening-speaking",
+  "status": "source_review_pending",
+  "schedule_status": "not_registered",
+  "class_scope": "一年级下学期全班",
+  "textbooks": [
+    {
+      "textbook_id": "boya-elementary-ii",
+      "title": "博雅汉语听说·初级起步篇 II",
+      "status": "source_review_pending",
+      "lesson_count": 18,
+      "lesson_key_prefix": "boya-elementary-ii:",
+      "lesson_root": "lessons/boya-elementary-ii",
+      "manifest": "textbooks/boya-elementary-ii/textbook.json",
+      "source_database": "textbooks/boya-elementary-ii/source/derived/teaching-materials-database.sqlite",
+      "offering_ids": [
+        "2027-spring"
+      ]
+    }
+  ],
+  "registration_source": {
+    "path": "textbooks/boya-elementary-ii/source/derived/teaching-materials-database.sqlite",
+    "sha256": "f2e9b06e0dadc63f69422d619c787b35720ea4adaa42ed664508552bf64a366f",
+    "tables": [
+      "course_index",
+      "lesson_index"
+    ],
+    "purpose": "identity registration only; no content approval"
+  }
+}

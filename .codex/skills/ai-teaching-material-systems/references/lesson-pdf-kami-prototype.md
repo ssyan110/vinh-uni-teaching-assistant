@@ -1,5 +1,7 @@
 # Lesson PDF → Kami-style Huashu Prototype
 
+> Historical implementation reference only. Current online pre-study uses editable PPTX (`docs/workflow/online-pptx-lifecycle.md`); new/revised in-person decks use native React OpenSlide (`docs/open-slide-workspace.md`). The old HTML, VP-stage, style-choice and language defaults below do not govern either current route. Preserve approved artifacts and apply the current scoped content-approval gate.
+
 ## When to use
 
 Use this when Adam provides a textbook PDF and asks for only one lesson/prototype deck before approving a full lesson/course generation, especially when a visual theme repo such as `tw93/Kami` is specified.

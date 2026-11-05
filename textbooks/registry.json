@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "lesson_registry": "course/lesson-registry.json",
+  "lesson_key_format": "<textbook_id>:<lesson_id>",
+  "textbooks": [
+    {
+      "textbook_id": "boya-elementary-i",
+      "title": "《博雅汉语听说：初级起步篇 I》",
+      "status": "active_source_review",
+      "intended_stage": "first_year",
+      "manifest": "textbooks/boya-elementary-i/textbook.json"
+    },
+    {
+      "textbook_id": "boya-quasi-intermediate-i",
+      "title": "《博雅汉语听说：准中级加速篇 I》",
+      "status": "active_source_review",
+      "manifest": "textbooks/boya-quasi-intermediate-i/textbook.json"
+    },
+    {
+      "textbook_id": "boya-intermediate-i",
+      "title": "《博雅汉语听说：中级冲刺篇 I》",
+      "status": "planned_for_2027_fall",
+      "intended_stage": "third_year",
+      "manifest": "textbooks/boya-intermediate-i/textbook.json"
+    },
+    {
+      "textbook_id": "boya-elementary-ii",
+      "title": "博雅汉语听说·初级起步篇 II",
+      "status": "source_review_pending",
+      "manifest": "textbooks/boya-elementary-ii/textbook.json"
+    }
+  ]
+}

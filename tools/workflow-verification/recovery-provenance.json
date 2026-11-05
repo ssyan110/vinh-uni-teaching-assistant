@@ -1,0 +1,90 @@
+{
+  "drive-audio-recovery.json": [
+    {
+      "name": "2-9.mp3",
+      "drive_id": "193K__qqOohgOeWDuPoxf9OWlWCW6Yx7y",
+      "bytes": 558872,
+      "sha256": "2bf02c10cb58560c219440833e9537720a44a9012f450ea522b0d2ffb43a7831",
+      "path": "textbooks/boya-elementary-i/source/audio/lesson-02/2-9.mp3"
+    },
+    {
+      "name": "2-8.mp3",
+      "drive_id": "1csl9KI-UEgZ1W_s_-7MRKWS6iiDdu-6j",
+      "bytes": 1910552,
+      "sha256": "83b9d248026d3e203c6be1d86faee0194ca8e12da5f502e5ef4e8f560c6a4f39",
+      "path": "textbooks/boya-elementary-i/source/audio/lesson-02/2-8.mp3"
+    },
+    {
+      "name": "2-7.mp3",
+      "drive_id": "1w0BlaYEEIardOKNVQyQHvemBiU2h8a-O",
+      "bytes": 650823,
+      "sha256": "52efab9bc76e3af4deb6cd6a21d1f616b136dae06f908aef9524b1d8297b58e6",
+      "path": "textbooks/boya-elementary-i/source/audio/lesson-02/2-7.mp3"
+    },
+    {
+      "name": "2-6.mp3",
+      "drive_id": "1O0eDSIuXbmxJHr6P2ihSviwRXN44YBXQ",
+      "bytes": 2328093,
+      "sha256": "9fc1ac727f496c6dac420ee95a1a8942f198d2a759cb41149950a84556527dd4",
+      "path": "textbooks/boya-elementary-i/source/audio/lesson-02/2-6.mp3"
+    },
+    {
+      "name": "2-5.mp3",
+      "drive_id": "1OOFeJbve16uSjE42Akzub1QgaizKeVOk",
+      "bytes": 979757,
+      "sha256": "d23f44c5adc57fac3d855adf1f62bdb829fe405279a66ac413335e6a85c14c88",
+      "path": "textbooks/boya-elementary-i/source/audio/lesson-02/2-5.mp3"
+    },
+    {
+      "name": "2-4.mp3",
+      "drive_id": "11uSYW1UYF_rPuIxZ4BKjocuixI2qx-Pd",
+      "bytes": 2186823,
+      "sha256": "5933f199b03d93a110d25ae75a5ce8ccb3fb2ba1b010f0699ffdd9c6e78ee562",
+      "path": "textbooks/boya-elementary-i/source/audio/lesson-02/2-4.mp3"
+    },
+    {
+      "name": "2-3.mp3",
+      "drive_id": "1gv8bIaE9IB1rNyYab8r1WWF9bY-723iR",
+      "bytes": 873595,
+      "sha256": "dabebb8f0df2d3e1e7595097775ac83abeceba818f3f0ce2afeef7de602905c0",
+      "path": "textbooks/boya-elementary-i/source/audio/lesson-02/2-3.mp3"
+    },
+    {
+      "name": "2-2.mp3",
+      "drive_id": "1trN15K892RFudsOiDuVhPQVtPwiuRHWp",
+      "bytes": 840576,
+      "sha256": "a904c4052a8615ab592ee2324e9f7325257c1d4f6fb7921120f887e3ca659af2",
+      "path": "textbooks/boya-elementary-i/source/audio/lesson-02/2-2.mp3"
+    },
+    {
+      "name": "2-1.mp3",
+      "drive_id": "1aCn1fg0v_D6uf5tFHJ7ms346tok6r5XT",
+      "bytes": 1028658,
+      "sha256": "12ecbab7aab2a77a9848587b849025ace96494738fd695b0328f7ffdc0d695ca",
+      "path": "textbooks/boya-elementary-i/source/audio/lesson-02/2-1.mp3"
+    }
+  ],
+  "publisher-downloads.json": [
+    {
+      "label": "2-3",
+      "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-3.mp3",
+      "sha256": "97b01a753c80a4b2ec850b0d0f60514c58e2455901dafc988958512de112a1db",
+      "status": "hash-matched"
+    },
+    {
+      "label": "2-4",
+      "path": "textbooks/boya-quasi-intermediate-i/source/audio/lesson-02/2-4.mp3",
+      "sha256": "7dcd2b8934ab85277744aad0e39c9aa039af7803adcceb33269469c096a80fa3",
+      "status": "hash-matched"
+    }
+  ],
+  "book2-registration.json": {
+    "path": "textbooks/boya-elementary-ii/source/derived/teaching-materials-database.sqlite",
+    "sha256": "f2e9b06e0dadc63f69422d619c787b35720ea4adaa42ed664508552bf64a366f",
+    "tables": [
+      "course_index",
+      "lesson_index"
+    ],
+    "purpose": "identity registration only; no content approval"
+  }
+}

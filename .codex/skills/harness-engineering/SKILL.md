@@ -14,7 +14,7 @@ Keep project work scoped, inspectable and verified.
 ## Loop
 
 1. Define the artifact
-   - Lesson database, HTML deck, presenter, slide asset, vocabulary image set, homework bank, Google Sheets export, PDF backup, teacher guide, script, or docs.
+   - Lesson database, online PPTX, native classroom OpenSlide, historical HTML deck, presenter, slide asset, vocabulary image set, homework bank, Google Sheets export, PDF backup, teacher guide, script, or docs.
    - Name the success gate before editing: build passes, screenshots inspected, no overflow, database schema valid, source pages mapped, or presenter opens, as applicable.
 
 2. Load local context

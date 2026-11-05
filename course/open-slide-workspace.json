@@ -1,0 +1,108 @@
+{
+  "workspace": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06",
+  "html_decks": [
+    {
+      "id": "boya-elementary-i-lesson-09-10",
+      "lesson_key": "boya-elementary-i:lesson-09-10",
+      "title": "初级起步篇｜第 9–10 课（51 页）",
+      "source": "lessons/boya-elementary-i/lesson-09-10/10-design/openslide-image-first-20261006/lesson-09-10.html",
+      "created_at": "2026-10-11T06:07:09.714340+00:00"
+    },
+    {
+      "id": "boya-elementary-i-lesson-11-12",
+      "lesson_key": "boya-elementary-i:lesson-11",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-11",
+        "boya-elementary-i:lesson-12"
+      ],
+      "title": "初级起步篇｜第11—12课｜天气与日常活动（21页）",
+      "source": "lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12-v09-readable/lesson-11-12-实体课.html",
+      "created_at": "2026-10-11T13:23:54+07:00",
+      "updated_at": "2026-10-15",
+      "content_version": "v09-unified-icons-projector-readable"
+    },
+    {
+      "id": "boya-elementary-i-lesson-13-14-w06",
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "lesson_keys": [
+        "boya-elementary-i:lesson-13",
+        "boya-elementary-i:lesson-14"
+      ],
+      "title": "初级起步篇｜第13—14课｜购物与生日（18页）",
+      "source": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-实体课.html",
+      "created_at": "2026-10-20T12:01:14+07:00",
+      "updated_at": "2026-10-22",
+      "content_version": "adam-approved-reorder-two-comics-20261022",
+      "visual_check": {
+        "reference": "lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12-v09-readable/lesson-11-12-实体课.html",
+        "reference_sha256": "3ff376220782b1c31e706a44d8c9c539230625c0a930e852d2f3d43fee812ffb",
+        "expected_route_cards": 4,
+        "expected_route_columns": 4,
+        "page_types": {
+          "discussion": [
+            "w06-life-vinh-shopping-question",
+            "w06-life-vinh-shopping-support",
+            "w06-life-vietnam-birthday-question",
+            "w06-life-vietnam-birthday-support",
+            "w06-life-taipei-birthday-question",
+            "w06-life-taipei-birthday-support"
+          ],
+          "comic": [
+            "w06-l13-comic",
+            "w06-l14-comic"
+          ],
+          "report": [
+            "w06-l13-report",
+            "w06-l14-report"
+          ]
+        },
+        "rendered_layout_report": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/qa/rendered-layout.json",
+        "content_contract": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-slide-contract.json",
+        "draft_manifest": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-draft-manifest.json"
+      },
+      "offering_id": "2026-fall"
+    }
+  ],
+  "native_decks": [
+    {
+      "id": "boya-elementary-i-lesson-15-w07",
+      "source": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/boya-elementary-i-lesson-15-w07",
+      "title": "初级起步篇｜第15课｜试穿与请求（21页）"
+    },
+    {
+      "id": "boya-quasi-intermediate-i-lesson-04-05-w09",
+      "source": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/boya-quasi-intermediate-i-lesson-04-05-w09",
+      "title": "准中级加速篇 I｜第4—5课｜学习经历与音乐老师（17页）"
+    },
+    {
+      "id": "jady-review-01",
+      "source": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/jady-review-01",
+      "title": "Jady｜複習第 01 堂｜第 1–8 課"
+    },
+    {
+      "id": "jady-review-02",
+      "source": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/jady-review-02",
+      "title": "Jady｜複習第 02 堂｜第 1 課問路"
+    },
+    {
+      "id": "y1-w08-l16-l17",
+      "source": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/y1-w08-l16-l17",
+      "title": "初级起步篇 I｜第16—17课｜点餐与待客（13页）"
+    },
+    {
+      "id": "y1-w09-l18-l19",
+      "source": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/y1-w09-l18-l19",
+      "title": "初级起步篇 I｜第18—19课｜作息、消息与约定（12页）"
+    },
+    {
+      "id": "y2-w10-l06",
+      "source": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/y2-w10-l06",
+      "title": "准中级加速篇 I｜第6–7课｜爱好与社团生活、运动爱好与经历（16页）"
+    },
+    {
+      "id": "y2-w11-l08",
+      "source": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/y2-w11-l08",
+      "title": "准中级加速篇 I｜第8课｜孙子和《孙子兵法》（11页）"
+    }
+  ]
+}

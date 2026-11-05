@@ -1,0 +1,83 @@
+{
+  "schema_version": 2,
+  "project_id": "vinh-uni-teaching-assistant",
+  "course_id": "vinh-chinese-listening-speaking",
+  "course_title": "榮市大學華語聽說中級課程",
+  "course_manifest": "course/course-manifest.json",
+  "textbook_registry": "textbooks/registry.json",
+  "lesson_registry": "course/lesson-registry.json",
+  "lesson_key_format": "<textbook_id>:<lesson_id>",
+  "active_context": {
+    "offering_id": "2026-fall",
+    "textbook_id": "boya-quasi-intermediate-i",
+    "lesson_id": "lesson-01",
+    "lesson_key": "boya-quasi-intermediate-i:lesson-01"
+  },
+  "legacy_compatibility": {
+    "status": "read-only-legacy",
+    "scope": "historical lesson-01 scripts and migration adapters only",
+    "not_for_scoped_operations": true,
+    "lesson_key": "boya-quasi-intermediate-i:lesson-01",
+    "deprecated_fields": [
+      "active_textbook_title",
+      "lesson_count",
+      "lesson_catalog",
+      "lesson_collection_root",
+      "active_lesson",
+      "active_lesson_key",
+      "lesson_root",
+      "canonical_source",
+      "draft_root",
+      "authority_root",
+      "qa_root",
+      "release_root",
+      "archive_root",
+      "historical_package_evidence"
+    ],
+    "migration_rule": "Explicit lesson_key operations must resolve through course/lesson-registry.json and LessonContext; these fields must not be used as scoped-operation defaults."
+  },
+  "active_textbook_title": "《博雅汉语听说：准中级加速篇 I》",
+  "lesson_count": 12,
+  "lesson_catalog": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
+  "lesson_collection_root": "lessons/boya-quasi-intermediate-i",
+  "active_lesson": "lesson-01",
+  "active_lesson_key": "boya-quasi-intermediate-i:lesson-01",
+  "font_policy": {
+    "cjk": "KaiTi",
+    "latin": "Times New Roman",
+    "scope": "Every project output containing text uses KaiTi for Chinese characters and Times New Roman for Vietnamese and other Latin-script text.",
+    "system_fonts_only": true,
+    "allow_custom_fonts": false,
+    "allow_font_file_dependencies": false
+  },
+  "design_system": "scripts/boya_design_system.json",
+  "open_slide_workspace": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06",
+  "lesson_root": "lessons/boya-quasi-intermediate-i/lesson-01",
+  "canonical_source": "lessons/boya-quasi-intermediate-i/lesson-01/00-source/canonical-source.json",
+  "textbook": {
+    "textbook_id": "boya-quasi-intermediate-i",
+    "manifest": "textbooks/boya-quasi-intermediate-i/textbook.json",
+    "source_root": "textbooks/boya-quasi-intermediate-i/source",
+    "main_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I.pdf",
+    "answer_pdf": "textbooks/boya-quasi-intermediate-i/source/raw/博雅汉语听说-准中级加速篇I-听力文本及参考答案.pdf",
+    "qr_audio_inventory": "textbooks/boya-quasi-intermediate-i/source/source-inventory.json",
+    "qr_capture_root": "textbooks/boya-quasi-intermediate-i/source/qr/captures",
+    "local_audio_root": "textbooks/boya-quasi-intermediate-i/source/audio"
+  },
+  "archive_root": "archive/legacy-materials-2026-08-27",
+  "historical_package_evidence": "archive/legacy-materials-2026-08-27/boya-intermediate/lesson-01/share/第一课-教学资料",
+  "draft_root": "lessons/boya-quasi-intermediate-i/lesson-01/10-design",
+  "authority_root": "lessons/boya-quasi-intermediate-i/lesson-01/20-approved",
+  "qa_root": "lessons/boya-quasi-intermediate-i/lesson-01/30-qa",
+  "release_root": "lessons/boya-quasi-intermediate-i/lesson-01/40-release",
+  "dashboard_root": "dashboard",
+  "protected_roots": [
+    "lessons/boya-quasi-intermediate-i/lesson-01/20-approved",
+    "lessons/boya-quasi-intermediate-i/lesson-01/30-qa",
+    "lessons/boya-quasi-intermediate-i/lesson-01/40-release",
+    "lessons/boya-intermediate-i/lesson-01/20-approved",
+    "lessons/boya-intermediate-i/lesson-01/30-qa",
+    "lessons/boya-intermediate-i/lesson-01/40-release",
+    "archive/legacy-materials-2026-08-27/boya-intermediate/lesson-01/share"
+  ]
+}

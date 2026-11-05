@@ -1,6 +1,6 @@
 # VP Pinyin Lesson Database + Copyright-Safe Redesign
 
-> Scope: This HTML presenter guidance is for legacy or other explicitly requested formats. Future Vinh in-person OpenSlide decks must use directly editable text and draggable elements, without wrapped HTML or iframes; see `docs/open-slide-workspace.md`. Existing content and approval gates remain in force.
+> Historical implementation reference only. Current online pre-study uses editable PPTX (`docs/workflow/online-pptx-lifecycle.md`); new/revised in-person decks use native React OpenSlide (`docs/open-slide-workspace.md`). The old HTML, VP-stage, style-choice and language defaults below do not govern either current route. Preserve approved artifacts and apply the current scoped content-approval gate.
 
 Use this reference when Adam provides a Pinyin lesson PDF and asks to implement the VP production flow or redesign slides from a reference file.
 

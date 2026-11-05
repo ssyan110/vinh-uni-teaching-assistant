@@ -1,5 +1,7 @@
 # Full Lesson PDF → Vietnamese University PPTX Workflow
 
+> Historical implementation reference only. Current online pre-study uses editable PPTX (`docs/workflow/online-pptx-lifecycle.md`); new/revised in-person decks use native React OpenSlide (`docs/open-slide-workspace.md`). The old HTML, VP-stage, style-choice and language defaults below do not govern either current route. Preserve approved artifacts and apply the current scoped content-approval gate.
+
 Use this reference when Adam asks to turn one textbook lesson into a full, editable PPTX using the local Huashu teaching-material system.
 
 ## Trigger

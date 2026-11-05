@@ -1,0 +1,213 @@
+{
+  "scope": "capability inputs only; artifact-specific approvals and QA remain scoped gate requirements",
+  "inputs": [
+    {
+      "path": "course/boya-example-bank.json",
+      "available": true,
+      "kind": "file",
+      "restoration": "authoritative local project/source; never substitute test fixtures",
+      "sha256": "891fcff53ad652db108493dbbbd3c5ba54a8b92aa6bfa47e9eb6e75157c96d0c"
+    },
+    {
+      "path": "course/boya-online-content-contract.json",
+      "available": true,
+      "kind": "file",
+      "restoration": "authoritative local project/source; never substitute test fixtures",
+      "sha256": "8cba56a2bd103dd66ed2a62fc3fc7d3bb6a168c79dcc283821a71ca187f592ff"
+    },
+    {
+      "path": "course/open-slide-workspace.json",
+      "available": true,
+      "kind": "file",
+      "restoration": "authoritative local project/source; never substitute test fixtures",
+      "sha256": "eba66ec7bde09273804df44b3c226603d9aff6c812869766b00f6cd407fc9758"
+    },
+    {
+      "path": "course/ppt-style-registry.json",
+      "available": true,
+      "kind": "file",
+      "restoration": "authoritative local project/source; never substitute test fixtures",
+      "sha256": "82fe6bb8e319248acceb153b9f98ed7bb83dbcdf91de78983c619a037979ef84"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/boya-elementary-i-lesson-15-w07",
+      "available": true,
+      "kind": "directory",
+      "restoration": "authoritative local project/source; never substitute test fixtures",
+      "files": [
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/boya-elementary-i-lesson-15-w07/index.tsx",
+          "sha256": "19b67adf5bfbac5f4c7847b822521639b364fae92352668b24f06be666104891"
+        },
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/boya-elementary-i-lesson-15-w07/mapping.json",
+          "sha256": "091b29d206a5f02d67bbc56b96ff9762e8e0f78ccd2858f2df1f698f137ac423"
+        },
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/boya-elementary-i-lesson-15-w07/styles.css",
+          "sha256": "5628b5fd01bd8654ebddebfe9132eb3c98f614ba8dd7dc69ed7a96d4bed6006a"
+        }
+      ]
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/boya-quasi-intermediate-i-lesson-04-05-w09",
+      "available": true,
+      "kind": "directory",
+      "restoration": "authoritative local project/source; never substitute test fixtures",
+      "files": [
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/boya-quasi-intermediate-i-lesson-04-05-w09/index.tsx",
+          "sha256": "5a9fe9052aa6c0584c33540ea687a011446329c5ed0c9a73726b02cfc75f4fb4"
+        },
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/boya-quasi-intermediate-i-lesson-04-05-w09/mapping.json",
+          "sha256": "acfa691c2faaaa3a4a9dc9de806651f64eb6b30bd0aa8f54ec9a4f862a6714f6"
+        },
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/boya-quasi-intermediate-i-lesson-04-05-w09/styles.css",
+          "sha256": "1f5ca7e4678c0e32847d806dfb3845f9196195fd80939c243cec031ac5b46ddc"
+        }
+      ]
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/jady-review-01",
+      "available": true,
+      "kind": "directory",
+      "restoration": "authoritative local project/source; never substitute test fixtures",
+      "files": [
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/jady-review-01/index.tsx",
+          "sha256": "d88b78113c96a9da1c1f65e838185d5ba911f895167e2a4599cad69c5d20523b"
+        },
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/jady-review-01/jady.css",
+          "sha256": "172ba0e3c451ddf60b23035b2a8f76f8deb5c5fd744e324a3c0b9b664fbb91d0"
+        },
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/jady-review-01/shared.tsx",
+          "sha256": "9ae5fab4f0e15969f541d1b84f2c0fbfa3856ece678f48865298f9089be9c3c6"
+        }
+      ]
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/jady-review-02",
+      "available": true,
+      "kind": "directory",
+      "restoration": "authoritative local project/source; never substitute test fixtures",
+      "files": [
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/jady-review-02/index.tsx",
+          "sha256": "a8f8811428b1fd233d3cf11479bb25dd698bb71dad211abc99fa52d075ca38e4"
+        },
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/jady-review-02/jady.css",
+          "sha256": "172ba0e3c451ddf60b23035b2a8f76f8deb5c5fd744e324a3c0b9b664fbb91d0"
+        },
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/jady-review-02/shared.tsx",
+          "sha256": "9ae5fab4f0e15969f541d1b84f2c0fbfa3856ece678f48865298f9089be9c3c6"
+        }
+      ]
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/y1-w08-l16-l17",
+      "available": true,
+      "kind": "directory",
+      "restoration": "authoritative local project/source; never substitute test fixtures",
+      "files": [
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/y1-w08-l16-l17/index.tsx",
+          "sha256": "ed0cf918d2a0bfede50002fc09b568bb4e249eb2b8a3b3deac93b453f71a8db0"
+        },
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/y1-w08-l16-l17/mapping.json",
+          "sha256": "e61de8ae5c4685e07f9da8399f075caad80eb9a03ba80d316cec04afc7f1c4ac"
+        },
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/y1-w08-l16-l17/styles.css",
+          "sha256": "95a95139977b7e321a18cc5ae72011c6a345e9997fe457326b89f524eda5b62d"
+        }
+      ]
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/y1-w09-l18-l19",
+      "available": true,
+      "kind": "directory",
+      "restoration": "authoritative local project/source; never substitute test fixtures",
+      "files": [
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/y1-w09-l18-l19/index.tsx",
+          "sha256": "24c17fe75e7ff7692e02c3da5d6fbc7d4dba3a887b545876955f63c3abc32d4d"
+        },
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/y1-w09-l18-l19/styles.css",
+          "sha256": "386a8ffb165eac53b8761c470e4850a53ea37d9ce82bf02ee6667bd9bb3ca8ec"
+        }
+      ]
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/y2-w10-l06",
+      "available": true,
+      "kind": "directory",
+      "restoration": "authoritative local project/source; never substitute test fixtures",
+      "files": [
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/y2-w10-l06/index.tsx",
+          "sha256": "b5a2b58e61a2228a097e240bb8ce67299b3bb64f1f37a12be3ca5188003bba1c"
+        },
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/y2-w10-l06/mapping.json",
+          "sha256": "bfe2d42bbf1bd2de47f8c63916fc2ec9f00c00593302087b498e4050e73bcb49"
+        },
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/y2-w10-l06/styles.css",
+          "sha256": "2a1f34b092d6fb77d8dcf5ee152e791f7a3c312ac2d3f0a42b73ea2e74a5ae47"
+        }
+      ]
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/y2-w11-l08",
+      "available": true,
+      "kind": "directory",
+      "restoration": "authoritative local project/source; never substitute test fixtures",
+      "files": [
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/y2-w11-l08/index.tsx",
+          "sha256": "dc51f2e61ecf1076a949e5eb6935c426fe9d063d670ce541defa1f2a7145c971"
+        },
+        {
+          "path": "lessons/boya-elementary-i/lesson-04-05-06/10-design/open-slide-draft/w02-lessons-04-06/slides/y2-w11-l08/styles.css",
+          "sha256": "009050c479282fde8ec14b942ed603ed8b8dbc3f3e1802b6ce7ee1b33d128b86"
+        }
+      ]
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-09-10/10-design/openslide-image-first-20261006/lesson-09-10.html",
+      "available": true,
+      "kind": "file",
+      "restoration": "authoritative local project/source; never substitute test fixtures",
+      "sha256": "b15e98e2c020c4455f106c7982365e003bf8f2e0cc14e5815f45d35931caac63"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-11/10-design/open-slide-draft/lesson-11-12-v09-readable/lesson-11-12-实体课.html",
+      "available": true,
+      "kind": "file",
+      "restoration": "authoritative local project/source; never substitute test fixtures",
+      "sha256": "3ff376220782b1c31e706a44d8c9c539230625c0a930e852d2f3d43fee812ffb"
+    },
+    {
+      "path": "lessons/boya-elementary-i/lesson-13/10-design/open-slide-draft/w06-l13-l14/lesson-13-14-实体课.html",
+      "available": true,
+      "kind": "file",
+      "restoration": "authoritative local project/source; never substitute test fixtures",
+      "sha256": "9ee3b24a73662ead2f0f3054b74dd6466ec74b85b280a131a212c56bbda6ddac"
+    },
+    {
+      "path": "textbooks/boya-elementary-ii/source/derived/teaching-materials-database.sqlite",
+      "available": true,
+      "kind": "file",
+      "restoration": "authoritative local project/source; never substitute test fixtures",
+      "sha256": "f2e9b06e0dadc63f69422d619c787b35720ea4adaa42ed664508552bf64a366f"
+    }
+  ]
+}

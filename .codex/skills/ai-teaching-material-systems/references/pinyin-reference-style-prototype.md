@@ -1,5 +1,7 @@
 # Pinyin reference-style prototype workflow
 
+> Historical implementation reference only. Current online pre-study uses editable PPTX (`docs/workflow/online-pptx-lifecycle.md`); new/revised in-person decks use native React OpenSlide (`docs/open-slide-workspace.md`). The old HTML, VP-stage, style-choice and language defaults below do not govern either current route. Preserve approved artifacts and apply the current scoped content-approval gate.
+
 Use when Adam asks for a small pinyin lesson prototype based on an attached design reference.
 
 For full pinyin lesson decks, use `output/pinyin/pinyin-01` as the template baseline. Do not build future pinyin lessons from scratch; keep the Pinyin Lesson 1 slide rhythm, soft textbook/course visual language, objectives/dividers/concept/tone/vocabulary/flashcard/input-setup/closing patterns, and presenter setup. Swap only lesson-specific text, taught sounds, vocabulary, exercises, and images.

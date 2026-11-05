@@ -1,9 +1,8 @@
 # AI 教材簡報製作系統：Requirements + Project Context
 
-> Portable project spec. Combines Adam's original planning document with current implementation decisions.
-> If this document conflicts with older conversations or files, the "Project implementation status" section takes precedence.
+> Historical classic-system specification. The implementation table below records an earlier HTML workflow; it has no precedence over current project rules. For current work read `AGENTS.md`, `PROJECT_REQUIREMENTS.md`, and `docs/workflow/canonical-workflow-contract.md`. Online decks use editable PPTX; in-person decks use native OpenSlide. Do not apply this document’s HTML, language, style-choice or VP-stage defaults to those routes.
 
-## Project implementation status
+## Historical implementation snapshot
 
 | Decision | Current rule |
 |---|---|

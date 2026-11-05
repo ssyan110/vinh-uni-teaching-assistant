@@ -1,6 +1,6 @@
 # Huashu Teaching System Setup Reference
 
-> Scope: This HTML presenter guidance is for legacy or other explicitly requested formats. Future Vinh in-person OpenSlide decks must use directly editable text and draggable elements, without wrapped HTML or iframes; see `docs/open-slide-workspace.md`. Existing content and approval gates remain in force.
+> Historical implementation reference only. Current online pre-study uses editable PPTX (`docs/workflow/online-pptx-lifecycle.md`); new/revised in-person decks use native React OpenSlide (`docs/open-slide-workspace.md`). The old HTML, VP-stage, style-choice and language defaults below do not govern either current route. Preserve approved artifacts and apply the current scoped content-approval gate.
 
 Session-derived reference for building Adam's local AI teaching material system with huashu-design.
 
@@ -75,7 +75,7 @@ npm run assets:manifest -- output/book-1/lesson-XX
 npm run assets:qa -- output/book-1/lesson-XX
 ```
 
-PPTX is deprecated in this project. HTML presenter is the classroom format.
+In this historical setup, PPTX was deprecated and HTML was the classroom format. That decision is superseded by the current format routes stated above.
 
 ## Visual Bug Encountered and Fix
 

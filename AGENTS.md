@@ -1,5 +1,11 @@
 # Vinh University teaching project — agent instructions
 
+## Presentation routing
+
+- Online pre-study PPTX: use `docs/workflow/online-pptx-lifecycle.md`; classroom activity-page limits and OpenSlide tooling do not apply to online decks.
+- Use `.codex/steering/agent-routing.md` as the task router in this checkout. Historical HTML guides, classic README instructions and project memory cannot override the format and approval owners below.
+
+
 ## Safety and scope
 
 - Work only in this project unless Adam explicitly authorizes another location. Preserve unrelated changes and existing outputs; do not perform destructive or broad changes without confirmation.
@@ -36,7 +42,18 @@
 
 ## Load current guidance on demand
 
+- For every new or revised audio-dashboard book, lesson, playlist, management entry or related page, follow `docs/workflow/audio-dashboard-standard.md`. Reuse the shared `dashboard.css` and `ui.js`, run the scoped consistency check, and verify the rendered controls at desktop and phone widths before delivery. Always retain the same seven Year 1 management buttons in the confirmed order for every book and playlist; missing destinations remain visibly disabled with an explanation. Adding a lesson or book does not authorize a separate naming or layout convention.
 - For teaching-material work, consult `docs/workflow/canonical-workflow-contract.md`, `PROJECT_REQUIREMENTS.md` and the task-specific workflow, including `docs/classroom-activity-workflow.md` and `docs/open-slide-workspace.md` for in-person OpenSlide work.
+- For Blooket question-bank CSVs, follow `docs/workflow/blooket-question-bank-standard.md`; it sets the default question mix and import format unless Adam specifies otherwise.
+- For teacher read-aloud scripts, deliver a teacher-facing PDF in the Year 1 format defined by `docs/workflow/teacher-read-aloud-pdf-standard.md`, unless Adam requests another format.
 - Some current teaching files may be absent in this checkout. If a required file is missing, inspect the existing `vinh-uni-main` version read-only with `git show vinh-uni-main:<path>` when available; report the limitation and do not switch branches or overwrite files merely to obtain guidance.
 - Current user decisions and the applicable course workflow govern over generic skill defaults and historical reference files. Check whether a rule applies to the requested course and format before asking for a choice or applying it. If an active rule is superseded, update its owning source and affected active consumers within scope; preserve historical records.
 - Do not create or maintain `.kiro/`.
+
+
+## 实体课 ChatGPT 研究前置门禁（2026-11-04）
+
+所有新设计或实质重设计的实体课活动，必须先实际使用 ChatGPT 研究，再编写活动方案和学生文案；不得以自行构思、旧记忆或旧研究替代本次研究。保存实际提示词、完整回复、会话链接、来源核对及后续改写对照。提交内容审阅前运行 classroom-research 门禁；内容批准与 classroom-native 制作门禁同时要求 --research-record，缺失、空白、范围不符、哈希变化或研究时间晚于改写均阻断。记录和哈希只能证明材料完整性，不能替代真实会话证据；禁止伪造。此要求不追溯改写已完成课件，不增加人工批准阶段。
+
+<!-- project-rule-repairs-20261105 -->
+Research scope clarification: unchanged pre-2026-11-04 scoped content approvals retain their historical status only after all bound source/review/check/decision hashes pass. New or changed activity content requires the current research gate. Shared combined-lesson packets and independent lesson approval bindings follow `docs/workflow/classroom-chatgpt-research-gate.md`. Run `python3 scripts/check_governance.py` after changes to routing or workflow owners.
