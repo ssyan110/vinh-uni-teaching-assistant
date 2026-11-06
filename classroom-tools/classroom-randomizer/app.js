@@ -146,7 +146,6 @@
   let studentDisplayWindow = null;
   let drawingRevealTimer = null;
   let isDrawing = false;
-  let focusResponseOnParticipationClose = false;
   let timerDuration = 20;
   let timerRemaining = 20;
   let timerRunning = false;
@@ -1410,10 +1409,10 @@
       checkText.textContent = "缺席";
       checkLabel.append(checkbox, checkText);
       const teacherButton = volunteerButton.cloneNode(false);
-      teacherButton.textContent = pendingId === student.id ? "改为老师主动叫" : "老师主动叫";
+      teacherButton.textContent = "老师主动叫 +1";
       teacherButton.disabled = excluded || isDrawing;
-      teacherButton.setAttribute("aria-label", `${student.name} 老师主动叫，等待记录回答`);
-      teacherButton.title = "选择这位学生后，记录已回答或未回答";
+      teacherButton.setAttribute("aria-label", `${student.name} 老师主动叫加一次`);
+      teacherButton.title = "记录一次老师主动叫后的回答";
       teacherButton.addEventListener("click", () => recordVolunteer(student.id, "teacher"));
       controls.append(status, volunteerButton, teacherButton, checkLabel);
       row.append(identity, controls);
@@ -1428,74 +1427,35 @@
     showToast(message, warning);
   }
 
-  function recordVolunteer(studentId, method = "volunteer", handoff = null) {
+  function recordVolunteer(studentId, method = "volunteer") {
     if (!state || isDrawing || state.session.status === "completed") return;
     try {
       const student = Model.getStudent(state, studentId);
       const existingPending = Model.pendingAttempt(state);
       const changesSource = existingPending?.studentId === studentId;
-      let next = state;
-      if (method === "teacher" && existingPending && !changesSource) {
-        const dialog = document.getElementById("handoffDialog");
-        if (!handoff) {
-          dialog.dataset.attempt = existingPending.id;
-          dialog.dataset.student = studentId;
-          document.getElementById("handoffTitle").textContent = `叫 ${student.name} 之前，${existingPending.studentSnapshot.name} 回答了吗？`;
-          document.getElementById("handoffReason").value = "";
-          dialog.showModal();
-          return;
-        }
-        if (existingPending.id !== handoff.attempt) throw new Error("当前学生已变化，请重新选择。");
-        const context = { note: noteDraft, taskPrompt: taskPromptDraft, answerContext: answerContextDraft };
-        if (handoff.reason === "answered") {
-          next = Model.recordResponse(state, { ...context, responseStatus: responseStatusDraft, assistance: assistanceDraft });
-        } else if (handoff.reason === "absent") {
-          next = Model.setAbsent(state, existingPending.studentId, true, context);
-        } else {
-          next = Model.returnPending(state, { ...context, noResponseReason: handoff.reason });
-        }
+      const opts = { taskMode: state.session.taskMode, taskTarget: taskDraftTarget,
+        taskPrompt: taskPromptDraft, responseStatus: "answered", selectionMethod: method };
+      if (method === "teacher" && changesSource) {
+        state = Model.recordResponse(Model.recordTeacherCall(state, studentId, opts), {
+          ...opts, responseStatus: responseStatusDraft, assistance: assistanceDraft,
+          note: noteDraft, answerContext: answerContextDraft
+        });
+        stopTimer();
+        resetResponseDraft();
+      } else {
+        state = Model.recordVolunteer(state, studentId, opts);
       }
-      state = (method === "teacher" ? Model.recordTeacherCall : Model.recordVolunteer)(next, studentId, {
-        taskMode: state.session.taskMode,
-        taskTarget: taskDraftTarget,
-        taskPrompt: taskPromptDraft,
-        responseStatus: "answered"
-      });
-      const closingParticipationDialog = (method === "teacher" || changesSource) && elements.volunteerDialog.open;
-      if (closingParticipationDialog) {
-        focusResponseOnParticipationClose = method === "teacher";
-        closeDialog(elements.volunteerDialog);
-      }
-      if (handoff) { stopTimer(); timerRemaining = timerDuration; }
-      if (method === "teacher" && !changesSource) { resetResponseDraft(); ensurePendingDraft(Model.pendingAttempt(state)); }
+      if (method === "volunteer" && changesSource && elements.volunteerDialog.open) closeDialog(elements.volunteerDialog);
       const saved = persist();
       renderApp();
-      if (method === "teacher") {
-        elements.quickResponseBar.scrollIntoView({ block: "center" });
-        if (!closingParticipationDialog) elements.recordCompleteButton.focus({ preventScroll: true });
-      }
       volunteerFeedback(saved
-        ? changesSource ? `已将 ${student.name} 的当前回答来源改为${method === "teacher" ? "老师主动叫" : "自愿发言"}，请保存回答结果。`
-        : method === "teacher" ? `已选择 ${student.name}，请记录已回答或未回答。`
+        ? changesSource && method === "volunteer" ? `已将 ${student.name} 的当前回答来源改为${method === "teacher" ? "老师主动叫" : "自愿发言"}，请保存回答结果。`
         : `已记录：学号末四位 ${studentIdSuffix(student)} ${student.name}，${method === "teacher" ? "老师主动叫" : "自愿发言"}＋1。本轮暂停抽问，下一轮恢复。已保存在本机。`
         : "本次记录暂未保存到本机，请保持页面打开并下载备份。", !saved);
     } catch (error) {
       volunteerFeedback(error.message, true);
     }
   }
-
-  const handoffDialog = document.getElementById("handoffDialog");
-  for (const reason of Model.NO_RESPONSE_REASONS) {
-    document.getElementById("handoffReason").add(new Option("未回答：" + reason.label, reason.id));
-  }
-  document.getElementById("handoffCancel").onclick = () => handoffDialog.close();
-  document.getElementById("handoffForm").onsubmit = event => {
-    event.preventDefault();
-    handoffDialog.close();
-    recordVolunteer(handoffDialog.dataset.student, "teacher", {
-      attempt: handoffDialog.dataset.attempt, reason: document.getElementById("handoffReason").value
-    });
-  };
 
   function renderVolunteers() {
     const ended = state.session.status === "completed";
@@ -1529,11 +1489,11 @@
       button.className = "button button-secondary";
       const pending = Model.pendingAttempt(state);
       const isPendingStudent = pending?.studentId === student.id;
-      button.textContent = isPendingStudent ? "更正来源" : method === "teacher" ? "叫这位" : "＋1";
+      button.textContent = isPendingStudent && method === "volunteer" ? "更正来源" : "＋1";
       button.dataset.volunteerStudent = student.id;
       button.setAttribute("aria-label", `学号末四位 ${studentIdSuffix(student)} ${student.name} ${label}加一次`);
       button.disabled = excluded || ended || isDrawing;
-      if (isPendingStudent) button.title = "更正当前回答的来源，再保存回答结果";
+      if (isPendingStudent && method === "volunteer") button.title = "更正当前回答的来源，再保存回答结果";
       button.addEventListener("click", () => recordVolunteer(student.id, method));
       row.append(seat, identity, button);
       elements.volunteerList.append(row);
@@ -2080,12 +2040,12 @@
     document.getElementById("volunteerTitle").textContent = `记录${label}`;
     elements.closeVolunteerButton.setAttribute("aria-label", `关闭${label}面板`);
     document.getElementById("volunteerHint").textContent = method === "teacher"
-      ? "点击「叫这位」选择学生，再记录已回答或未回答。正在回答的学生可更正来源；叫另一位时，请先选择当前学生的回答结果。"
+      ? "学生回答后，点姓名旁的「＋1」记录一次老师主动叫。"
       : "学生回答后点击「＋1」。该学生本轮暂停抽问，下一轮恢复。正在回答的学生只更正来源，不会重复加一次。";
     elements.volunteerList.setAttribute("aria-label", `${label}学生名单`);
     elements.undoVolunteerButton.textContent = "撤销上一次发言记录";
     elements.volunteerSearchInput.value = "";
-    elements.volunteerFeedback.textContent = method === "teacher" ? "选择学生后再记录回答结果。" : "每点一次「＋1」，记录一次已发生的自愿发言。";
+    elements.volunteerFeedback.textContent = method === "teacher" ? "每点一次「＋1」，记录一次老师主动叫后的回答。" : "每点一次「＋1」，记录一次已发生的自愿发言。";
     elements.volunteerFeedback.classList.remove("is-warning");
     openDialog(elements.volunteerDialog);
     renderVolunteers();
@@ -2094,23 +2054,13 @@
   elements.volunteerPanelButton.addEventListener("click", () => openParticipationDialog("volunteer"));
   document.getElementById("teacherPanelButton").addEventListener("click", () => openParticipationDialog("teacher"));
   elements.closeVolunteerButton.addEventListener("click", () => closeDialog(elements.volunteerDialog));
-  elements.volunteerDialog.addEventListener("close", () => {
-    if (focusResponseOnParticipationClose) {
-      focusResponseOnParticipationClose = false;
-      elements.recordCompleteButton.focus({ preventScroll: true });
-      return;
-    }
-    (elements.volunteerDialog.dataset.method === "teacher" ? document.getElementById("teacherPanelButton") : elements.volunteerPanelButton).focus();
-  });
+  elements.volunteerDialog.addEventListener("close", () => (elements.volunteerDialog.dataset.method === "teacher" ? document.getElementById("teacherPanelButton") : elements.volunteerPanelButton).focus());
   elements.volunteerSearchInput.addEventListener("input", renderVolunteers);
   elements.undoVolunteerButton.addEventListener("click", () => {
     if (!state || isDrawing || state.session.status === "completed"
       || !["volunteer_recorded", "teacher_recorded"].includes(state.undoStack.at(-1)?.event.type)) return;
     try {
       state = Model.undoLastAction(state);
-      if ((method === "teacher" || changesSource) && elements.volunteerDialog.open) closeDialog(elements.volunteerDialog);
-      if (handoff) { stopTimer(); timerRemaining = timerDuration; }
-      if (method === "teacher" && !changesSource) { resetResponseDraft(); ensurePendingDraft(Model.pendingAttempt(state)); }
       const saved = persist();
       renderApp();
       volunteerFeedback(saved ? "已撤销上一次发言记录。" : "撤销暂未保存到本机，请保持页面打开并下载备份。", !saved);
