@@ -13,12 +13,19 @@ W07 现行v4审阅清单依难度播放49段音频、覆盖50题：第1–8题�
 从项目根目录启动本机网页：
 
 ```sh
-python3 -m http.server 8876 --bind 127.0.0.1 --directory /Users/ssyan110/Development/vinh-uni-teaching-assistant
+node classroom-tools/audio-dashboard/serve.cjs
 ```
 
 地址：<http://127.0.0.1:8876/classroom-tools/audio-dashboard/>。服务器只接受本机连接，终端退出后可直接打开 HTML 或重新启动。
 
-更新来源清单后执行 `python3 classroom-tools/audio-dashboard/build.py`。生成器读取测验登记的版本目录、音频 manifest、题目与分段表，并校验15段音频和25题是否被各Form分段准确引用一次；它不修改题目、原音或批准记录。运行 `node classroom-tools/audio-dashboard/test-player.cjs` 检查15个W05 v3分段、15个播放入口及15段不同音频的起播、课次筛选、手机宽度及W04主持页交互。
+更新单音频周测后，可核对登记版本并生成指定清单的审阅副本。以下命令核对 W05 的 25 题、15 个分段与音频文件哈希。需要生成完整目录副本时，加 `--output .agent/runs/<run>/staging/catalog.js`，其他清单、二维码和表单开放状态沿用现有记录。
+
+```sh
+python3 classroom-tools/audio-dashboard/build.py --exam-id W05-L11L12-20261015 --offering-id 2026-fall --version-directory 'course/offerings/2026-fall/博雅汉语听说初级起步篇一/weekly-assessment-review/w05/official-v3'
+node classroom-tools/audio-dashboard/test-player.cjs
+```
+
+浏览器检查包括 W05 的 15 个播放入口、课次筛选、桌面与手机宽度及 W04 二维码。
 
 ## W08 第16–17课听力测验
 
@@ -71,14 +78,14 @@ W06现行审阅稿为25题、每题4分（共100分）：14道课本题及11道T
 检查由 `assessment-management.json` 的现行目录及 `form-sync.json` 的版本目录生成，排除已被取代的测验。修改资料后，在项目根目录运行：
 
 ```sh
-python3 classroom-tools/audio-dashboard/build.py
+python3 classroom-tools/audio-dashboard/closeout.py
 ```
 
 页面显示本地检查时间。若既有播放器构建因其他资料错误中止，可单独运行 `python3 classroom-tools/audio-dashboard/closeout.py` 刷新检查；此模式不核对播放台缓存。随后重新打开或刷新「周测检查」。
 
 「本地检查通过」只描述列明的本地项目。Form／Sheets 只检查已保存的记录、输入哈希与证据文件是否存在，未实时连接线上；没有完整证据时显示「尚未核实」，输入哈希改变时显示「记录已过期」。教师亲听、教室播放和作答后台另列，不自动批准或发布。当前 W04 保存的六个 Section 对应十五段音频，会提示与现行单音频题组规则不一致；本功能不修改历史卷或作答。
 
-验证：`python3 classroom-tools/audio-dashboard/test_closeout.py`；`node classroom-tools/audio-dashboard/test-closeout.cjs`。浏览器证据在 `qa-closeout/`，不覆盖既有播放验收记录。
+历史检查页的浏览器证据保存在 `qa-closeout/`。当前清单核对使用 `node classroom-tools/audio-dashboard/check-consistency.cjs --strict`。
 
 读回记录也支持现有的合并证明：测验身份、题库哈希与 Form revision 必须一致，Form 与 Sheets 的不一致数必须都明确为整数零。音频库检查不替代 Sheets 题库逐题读回；旧证明缺少身份或其输入哈希与现行题库不同，会显示具体限制。
 
@@ -89,4 +96,4 @@ python3 classroom-tools/audio-dashboard/build.py
 
 本次在浏览器检查3本教材、24份清单、69个逐课筛选组合及5份周测检查；页面宽度1280、390与320 px均无水平溢出。二维码开关、起播、上一段／下一段及返回清单已检查。证据：`.agent/runs/audio-dashboard-consistency-20261104/`。
 
-现有资料缺口：初级起步篇I第2课9个原音条目、准中级加速篇I第2课2个原音条目未登记文件；中级冲刺篇I未登记清单。W04完整主持页及依赖未在本检出中提供，首页会检查可用性并说明，不再提供失效链接。检查页刷新命令使用当前存在的 `closeout.py`；这只刷新检查快照，不重建播放清单。旧文所述 `build.py`、`test-player.cjs`、`test-closeout.cjs` 与 `test_closeout.py` 在本检出中缺失，本次未运行，也未重建目录或改写审批状态。未核验线上Google表单／表格，也未完整亲听所有音频。
+2026-11-04 检查时的资料缺口：初级起步篇I第2课9个原音条目、准中级加速篇I第2课2个原音条目未登记文件；中级冲刺篇I未登记清单。W04完整主持页及依赖未在本检出中提供，首页会检查可用性并说明，不再提供失效链接。检查页刷新命令使用当前存在的 `closeout.py`；这只刷新检查快照，不重建播放清单。旧文所述 `build.py`、`test-player.cjs`、`test-closeout.cjs` 与 `test_closeout.py` 在本检出中缺失，本次未运行，也未重建目录或改写审批状态。未核验线上Google表单／表格，也未完整亲听所有音频。

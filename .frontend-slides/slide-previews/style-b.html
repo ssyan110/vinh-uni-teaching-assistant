@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的大学生活与新学期计划</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&family=Noto+Serif+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* === THEME: BLOCKFRAME-INSPIRED CAMPUS POSTER === */
+        :root {
+            --stage-bg: #111111;
+            --slide-bg: #fffdf5;
+            --paper: #fffdf5;
+            --ink: #101010;
+            --pink: #fe90e8;
+            --blue: #c0f7fe;
+            --green: #99e885;
+            --yellow: #f7cb46;
+            --coral: #ff705d;
+            --font-display: "KaiTi", "Noto Serif SC", serif;
+            --font-body: "KaiTi", "Noto Serif SC", serif;
+            --font-latin: "Times New Roman", "Noto Sans SC", sans-serif;
+            --ease-pop: cubic-bezier(0.22, 1.35, 0.36, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* === FIXED 16:9 STAGE: MANDATORY BASE STYLES === */
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background: var(--stage-bg, #000);
+        }
+
+        .deck-viewport {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            background: var(--stage-bg, #000);
+        }
+
+        .deck-stage {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            transform-origin: 0 0;
+            background: var(--slide-bg, #fff);
+        }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            display: block;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            background: var(--slide-bg, #fff);
+        }
+
+        .slide.active,
+        .slide.visible {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+            z-index: 1;
+        }
+
+        img,
+        video,
+        canvas,
+        svg {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .deck-controls {
+            position: fixed;
+            left: 50%;
+            bottom: 22px;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+
+        @media print {
+            html,
+            body {
+                width: 1920px;
+                height: auto;
+                overflow: visible;
+                background: #fff;
+            }
+
+            .deck-viewport { position: static; overflow: visible; background: #fff; }
+            .deck-stage { position: static; width: auto; height: auto; transform: none !important; background: none; }
+            .slide { position: relative; display: block !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; width: 1920px; height: 1080px; break-after: page; page-break-after: always; }
+            .slide:last-child { break-after: auto; page-break-after: auto; }
+            .deck-controls { display: none !important; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.2s !important;
+            }
+        }
+
+        /* === PAPER AND FRAME === */
+        .poster {
+            position: absolute;
+            inset: 0;
+            background: var(--paper);
+        }
+
+        .poster::before {
+            content: "";
+            position: absolute;
+            left: 88px;
+            top: 84px;
+            right: 88px;
+            bottom: 84px;
+            border: 4px solid var(--ink);
+            pointer-events: none;
+        }
+
+        .poster::after {
+            content: "";
+            position: absolute;
+            left: 102px;
+            top: 98px;
+            right: 74px;
+            bottom: 70px;
+            border: 3px solid var(--ink);
+            pointer-events: none;
+        }
+
+        .header-line {
+            position: absolute;
+            top: 118px;
+            left: 136px;
+            right: 142px;
+            z-index: 3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--ink);
+            font-family: var(--font-body);
+            font-size: 25px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+        }
+
+        .header-line .slash { color: var(--coral); font-family: var(--font-latin); font-size: 34px; }
+
+        /* === MAIN COLLAGE === */
+        .hero-card {
+            position: absolute;
+            left: 136px;
+            top: 230px;
+            z-index: 2;
+            width: 1020px;
+            min-height: 430px;
+            padding: 52px 62px 48px;
+            background: var(--blue);
+            border: 4px solid var(--ink);
+            box-shadow: 12px 12px 0 var(--ink);
+            transform: rotate(-1.2deg);
+        }
+
+        .hero-card h1 {
+            color: var(--ink);
+            font-family: var(--font-display);
+            font-size: 108px;
+            line-height: 1.04;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+        }
+
+        .hero-card h1 span { display: block; }
+
+        .hero-card .under {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px 8px;
+            background: var(--ink);
+            color: var(--paper);
+            font-family: var(--font-body);
+            font-size: 34px;
+            font-weight: 700;
+        }
+
+        .green-note {
+            position: absolute;
+            right: 180px;
+            top: 224px;
+            z-index: 4;
+            width: 330px;
+            min-height: 190px;
+            padding: 34px 32px;
+            background: var(--green);
+            border: 4px solid var(--ink);
+            box-shadow: 8px 8px 0 var(--ink);
+            transform: rotate(4.5deg);
+        }
+
+        .green-note .big {
+            display: block;
+            color: var(--ink);
+            font-family: var(--font-latin);
+            font-size: 82px;
+            line-height: 0.9;
+            font-weight: 900;
+        }
+
+        .green-note .label { color: var(--ink); font-family: var(--font-body); font-size: 33px; font-weight: 700; }
+
+        .pink-sticker {
+            position: absolute;
+            right: 246px;
+            top: 512px;
+            z-index: 4;
+            width: 226px;
+            height: 226px;
+            display: grid;
+            place-items: center;
+            border: 4px solid var(--ink);
+            border-radius: 50%;
+            background: var(--pink);
+            color: var(--ink);
+            font-family: var(--font-body);
+            font-size: 38px;
+            line-height: 1.13;
+            text-align: center;
+            box-shadow: 8px 8px 0 var(--ink);
+            transform: rotate(-7deg);
+        }
+
+        .bottom-strip {
+            position: absolute;
+            left: 136px;
+            right: 142px;
+            bottom: 132px;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            color: var(--ink);
+            font-family: var(--font-body);
+            font-size: 31px;
+            font-weight: 700;
+        }
+
+        .bottom-strip .dot { width: 22px; height: 22px; background: var(--coral); border: 3px solid var(--ink); border-radius: 50%; }
+        .bottom-strip .arrow { font-family: var(--font-latin); font-size: 44px; }
+
+        .corner-star {
+            position: absolute;
+            right: 108px;
+            bottom: 104px;
+            z-index: 4;
+            width: 100px;
+            height: 100px;
+            background: var(--yellow);
+            border: 4px solid var(--ink);
+            clip-path: polygon(50% 0%, 61% 37%, 100% 27%, 70% 53%, 96% 82%, 59% 66%, 48% 100%, 39% 65%, 4% 81%, 31% 53%, 0% 28%, 40% 37%);
+            transform: rotate(12deg);
+        }
+
+        /* === REVEAL MOTION === */
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.55s ease, transform 0.75s var(--ease-pop); }
+        .slide.visible .reveal { opacity: 1; transform: translateY(0); }
+        .slide.visible .hero-card { animation: poster-pop 0.8s var(--ease-pop) 0.08s both; }
+        .slide.visible .green-note { animation: note-drop 0.8s var(--ease-pop) 0.22s both; }
+        .slide.visible .pink-sticker { animation: sticker-pop 0.8s var(--ease-pop) 0.35s both; }
+
+        @keyframes poster-pop { from { opacity: 0; transform: rotate(-1.2deg) translate(-36px, 36px) scale(0.92); } to { opacity: 1; transform: rotate(-1.2deg) translate(0, 0) scale(1); } }
+        @keyframes note-drop { from { opacity: 0; transform: rotate(4.5deg) translate(34px, -40px) scale(0.9); } to { opacity: 1; transform: rotate(4.5deg) translate(0, 0) scale(1); } }
+        @keyframes sticker-pop { from { opacity: 0; transform: rotate(-7deg) scale(0.55); } to { opacity: 1; transform: rotate(-7deg) scale(1); } }
+
+        /* === EDIT MODE === */
+        .edit-hotzone { position: fixed; top: 0; left: 0; width: 84px; height: 84px; z-index: 10000; cursor: pointer; }
+        .edit-toggle { position: fixed; top: 18px; left: 18px; z-index: 10001; opacity: 0; pointer-events: none; border: 0; border-radius: 50%; width: 44px; height: 44px; background: var(--ink); color: #fff; cursor: pointer; transition: opacity 0.3s ease; }
+        .edit-toggle.show, .edit-toggle.active { opacity: 1; pointer-events: auto; }
+        .editing [contenteditable="true"] { outline: 3px dashed var(--coral); outline-offset: 5px; cursor: text; }
+
+        /* === CHROME OUTSIDE THE STAGE === */
+        .deck-controls { color: rgba(16, 16, 16, 0.55); font: 16px var(--font-latin); letter-spacing: 0.12em; }
+    </style>
+</head>
+<body>
+    <div class="deck-viewport">
+        <main class="deck-stage" id="deckStage">
+            <section class="slide active visible" aria-label="第一周投影活动">
+                <div class="poster"></div>
+                <div class="header-line reveal"><span>第一周 <span class="slash">/</span> 大学生活</span><span class="latin">01</span></div>
+                <div class="hero-card" data-editable="true">
+                    <h1><span>我的大学生活</span><span>与新学期计划</span></h1>
+                    <span class="under">先听，再问，最后提案</span>
+                </div>
+                <div class="green-note reveal"><span class="big latin">3 + 1</span><span class="label">记住事实和目标</span></div>
+                <div class="pink-sticker reveal">学生<br>接着来问</div>
+                <div class="bottom-strip reveal"><span class="dot"></span><span>老师先说</span><span class="arrow">→</span><span>你来问</span><span class="arrow">→</span><span>一起提案</span></div>
+                <div class="corner-star reveal" aria-hidden="true"></div>
+            </section>
+        </main>
+    </div>
+    <div class="deck-controls" aria-label="投影片进度"><span>01 / 01</span></div>
+    <div class="edit-hotzone" aria-hidden="true"></div>
+    <button class="edit-toggle" id="editToggle" title="Edit mode (E)" aria-label="开启编辑模式">✎</button>
+    <script>
+        /* === FIXED-STAGE PRESENTATION CONTROLLER === */
+        class SlidePresentation {
+            constructor() { this.slides = Array.from(document.querySelectorAll('.slide')); this.currentSlide = 0; this.stage = document.getElementById('deckStage'); this.setupStageScale(); this.setupKeyboardNav(); this.setupTouchNav(); this.setupWheelNav(); this.showSlide(0); }
+            setupStageScale() { const scale = () => { const factor = Math.min(window.innerWidth / 1920, window.innerHeight / 1080); const x = (window.innerWidth - 1920 * factor) / 2; const y = (window.innerHeight - 1080 * factor) / 2; this.stage.style.transform = `translate(${x}px, ${y}px) scale(${factor})`; }; scale(); window.addEventListener('resize', scale); }
+            setupKeyboardNav() { document.addEventListener('keydown', (event) => { if (event.target && event.target.getAttribute('contenteditable') === 'true') return; if (['ArrowRight', 'ArrowDown', ' ', 'PageDown'].includes(event.key)) { event.preventDefault(); this.showSlide(this.currentSlide + 1); } if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(event.key)) { event.preventDefault(); this.showSlide(this.currentSlide - 1); } }); }
+            setupTouchNav() { let startX = 0; document.addEventListener('touchstart', (event) => { startX = event.changedTouches[0].screenX; }, { passive: true }); document.addEventListener('touchend', (event) => { const delta = event.changedTouches[0].screenX - startX; if (Math.abs(delta) > 50) this.showSlide(this.currentSlide + (delta < 0 ? 1 : -1)); }, { passive: true }); }
+            setupWheelNav() { document.addEventListener('wheel', (event) => { if (Math.abs(event.deltaY) > 20) this.showSlide(this.currentSlide + (event.deltaY > 0 ? 1 : -1)); }, { passive: true }); }
+            showSlide(index) { this.currentSlide = Math.max(0, Math.min(index, this.slides.length - 1)); this.slides.forEach((slide, i) => { slide.classList.toggle('active', i === this.currentSlide); slide.classList.toggle('visible', i === this.currentSlide); }); }
+        }
+
+        /* === LIGHTWEIGHT INLINE EDITOR === */
+        class InlineEditor {
+            constructor() { this.isActive = false; this.toggle = document.getElementById('editToggle'); this.bind(); }
+            bind() { this.toggle.addEventListener('click', () => this.toggleEditMode()); document.addEventListener('keydown', (event) => { if ((event.key === 'e' || event.key === 'E') && !event.target.getAttribute('contenteditable')) this.toggleEditMode(); if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 's') { event.preventDefault(); this.save(); } }); const hotzone = document.querySelector('.edit-hotzone'); let hideTimeout = null; hotzone.addEventListener('mouseenter', () => { clearTimeout(hideTimeout); this.toggle.classList.add('show'); }); hotzone.addEventListener('mouseleave', () => { hideTimeout = setTimeout(() => { if (!this.isActive) this.toggle.classList.remove('show'); }, 400); }); this.toggle.addEventListener('mouseenter', () => clearTimeout(hideTimeout)); this.toggle.addEventListener('mouseleave', () => { hideTimeout = setTimeout(() => { if (!this.isActive) this.toggle.classList.remove('show'); }, 400); }); hotzone.addEventListener('click', () => this.toggleEditMode()); }
+            toggleEditMode() { this.isActive = !this.isActive; document.body.classList.toggle('editing', this.isActive); document.querySelectorAll('.slide [data-editable]').forEach((node) => { node.contentEditable = this.isActive ? 'true' : 'false'; }); this.toggle.classList.toggle('active', this.isActive); }
+            save() { localStorage.setItem('frontend-slides-style-b', document.querySelector('.deck-stage').innerHTML); }
+        }
+
+        new SlidePresentation();
+        new InlineEditor();
+    </script>
+</body>
+</html>

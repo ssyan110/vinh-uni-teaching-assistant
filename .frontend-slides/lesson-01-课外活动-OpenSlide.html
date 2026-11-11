@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="第一周课外活动：学生先认识老师，再让老师认识学生。">
+    <title>第一周课外活动｜Open-Slide 1920 Canvas</title>
+    <style>
+        :root {
+            --bg: #f1efea;
+            --ink: #161616;
+            --accent: #c5e803;
+            --muted: #6d6a63;
+            --line: #d7d2c8;
+            --soft: #e7e3da;
+            --surface: #fffdf8;
+            --dark-surface: #1e1e1c;
+            --font-cjk: "KaiTi", "STKaiti", serif;
+            --font-latin: "Times New Roman", serif;
+            --font-mono: "SFMono-Regular", Menlo, Consolas, monospace;
+            --ease: cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        * { box-sizing: border-box; }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background: #d5d2cb;
+        }
+
+        body {
+            color: var(--ink);
+            font-family: var(--font-cjk);
+            user-select: none;
+        }
+
+        .viewport {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            background: #d5d2cb;
+        }
+
+        .canvas {
+            position: absolute;
+            width: 1920px;
+            height: 1080px;
+            left: 50%;
+            top: 50%;
+            transform-origin: center center;
+            background: var(--bg);
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            background: var(--bg);
+            transition: opacity 0.45s var(--ease), visibility 0s linear 0.45s;
+        }
+
+        .slide.active {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+            z-index: 2;
+            transition-delay: 0s;
+        }
+
+        .slide-inner {
+            position: absolute;
+            inset: 0;
+            padding: 96px 128px 84px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slide::before {
+            content: "";
+            position: absolute;
+            left: 128px;
+            right: 128px;
+            top: 72px;
+            height: 1px;
+            background: var(--line);
+        }
+
+        .topbar,
+        .slide-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 22px;
+            line-height: 1;
+        }
+
+        .topbar {
+            min-height: 34px;
+            color: var(--muted);
+        }
+
+        .topbar .left,
+        .topbar .right,
+        .slide-footer .left,
+        .slide-footer .right {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .mono {
+            font-family: var(--font-mono);
+            letter-spacing: 0.09em;
+            font-size: 18px;
+        }
+
+        .dot-mark {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: inline-block;
+        }
+
+        .slide-footer {
+            margin-top: auto;
+            padding-top: 24px;
+            color: var(--muted);
+            border-top: 1px solid var(--line);
+        }
+
+        .slide-footer .right { color: var(--ink); }
+
+        .eyebrow {
+            font-family: var(--font-mono);
+            color: var(--muted);
+            font-size: 22px;
+            letter-spacing: 0.13em;
+            line-height: 1.2;
+        }
+
+        h1,
+        h2,
+        h3,
+        p { margin: 0; }
+
+        h1 {
+            font-size: 160px;
+            line-height: 1.04;
+            font-weight: 400;
+            letter-spacing: -0.055em;
+        }
+
+        h2 {
+            font-size: 88px;
+            line-height: 1.12;
+            font-weight: 400;
+            letter-spacing: -0.045em;
+        }
+
+        h3 {
+            font-size: 48px;
+            line-height: 1.2;
+            font-weight: 400;
+            letter-spacing: -0.03em;
+        }
+
+        .body-lg {
+            font-size: 42px;
+            line-height: 1.48;
+        }
+
+        .body {
+            font-size: 34px;
+            line-height: 1.55;
+        }
+
+        .caption {
+            color: var(--muted);
+            font-size: 28px;
+            line-height: 1.45;
+        }
+
+        .small-label {
+            color: var(--muted);
+            font-size: 24px;
+            line-height: 1.25;
+            letter-spacing: 0.08em;
+        }
+
+        .accent-text { color: var(--accent); }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(16px);
+        }
+
+        .slide.active .reveal {
+            animation: reveal 0.72s var(--ease) forwards;
+        }
+
+        .slide.active .delay-1 { animation-delay: 0.08s; }
+        .slide.active .delay-2 { animation-delay: 0.16s; }
+        .slide.active .delay-3 { animation-delay: 0.24s; }
+        .slide.active .delay-4 { animation-delay: 0.32s; }
+
+        @keyframes reveal {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .cover-grid {
+            flex: 1;
+            min-height: 0;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 96px;
+            align-items: center;
+            padding: 64px 0 38px;
+        }
+
+        .cover-copy { position: relative; z-index: 2; }
+
+        .cover-copy h1 { margin-top: 30px; }
+
+        .cover-copy h1 span {
+            display: inline-block;
+            background: var(--accent);
+            padding: 0 22px 8px 18px;
+            margin-left: -18px;
+        }
+
+        .cover-lead {
+            margin-top: 48px;
+            max-width: 800px;
+            font-size: 42px;
+            line-height: 1.45;
+        }
+
+        .signature {
+            margin-top: 58px;
+            display: flex;
+            align-items: baseline;
+            gap: 26px;
+        }
+
+        .signature small {
+            color: var(--muted);
+            font-size: 28px;
+        }
+
+        .signature strong {
+            font-size: 64px;
+            font-weight: 400;
+        }
+
+        .cover-route {
+            position: relative;
+            padding: 42px 44px 38px;
+            border: 2px solid var(--ink);
+            background: var(--surface);
+            box-shadow: 18px 18px 0 var(--accent);
+        }
+
+        .cover-route::before {
+            content: "";
+            position: absolute;
+            width: 118px;
+            height: 118px;
+            right: -60px;
+            top: -60px;
+            border-radius: 50%;
+            background: var(--ink);
+        }
+
+        .route-title {
+            font-size: 38px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 24px;
+            margin-bottom: 18px;
+        }
+
+        .route-item {
+            display: grid;
+            grid-template-columns: 78px 170px 1fr;
+            gap: 14px;
+            align-items: baseline;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .route-item:last-child { border-bottom: 0; padding-bottom: 0; }
+        .route-item b { font-family: var(--font-mono); font-size: 24px; color: var(--muted); }
+        .route-item strong { font-size: 36px; font-weight: 400; }
+        .route-item span { font-size: 28px; line-height: 1.4; color: var(--muted); }
+
+        .bottom-note {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 28px;
+        }
+
+        .bottom-note span:first-child {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .bottom-note span:first-child::before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background: var(--accent);
+            display: inline-block;
+        }
+
+        .section-head {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 44px;
+            margin-top: 62px;
+        }
+
+        .section-number {
+            font-family: var(--font-mono);
+            font-size: 80px;
+            line-height: 1;
+            color: var(--muted);
+        }
+
+        .section-head h2 { max-width: 1180px; }
+        .section-head .body-lg { max-width: 1180px; margin-top: 30px; }
+
+        .rule-board {
+            margin-top: 58px;
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 32px;
+            align-items: stretch;
+        }
+
+        .rule-main {
+            padding: 38px 44px;
+            background: var(--dark-surface);
+            color: #f7f6f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 260px;
+        }
+
+        .rule-main .tag,
+        .dark-card .tag {
+            color: var(--accent);
+            font-family: var(--font-mono);
+            font-size: 20px;
+            letter-spacing: 0.12em;
+        }
+
+        .rule-main strong {
+            display: block;
+            font-size: 45px;
+            line-height: 1.35;
+            font-weight: 400;
+            max-width: 650px;
+        }
+
+        .flow-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .flow-card {
+            min-height: 260px;
+            padding: 28px 26px;
+            border: 1px solid var(--line);
+            background: var(--surface);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .flow-card b {
+            font-family: var(--font-mono);
+            color: var(--muted);
+            font-size: 22px;
+        }
+
+        .flow-card strong { font-size: 38px; font-weight: 400; }
+        .flow-card span { color: var(--muted); font-size: 26px; line-height: 1.42; }
+
+        .content-layout {
+            display: grid;
+            grid-template-columns: 0.72fr 1.28fr;
+            gap: 54px;
+            align-items: stretch;
+            flex: 1;
+            min-height: 0;
+            margin-top: 48px;
+        }
+
+        .dark-card {
+            position: relative;
+            padding: 44px;
+            background: var(--dark-surface);
+            color: #f7f6f0;
+            overflow: hidden;
+        }
+
+        .dark-card::after {
+            content: "";
+            position: absolute;
+            width: 240px;
+            height: 240px;
+            right: -80px;
+            bottom: -95px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .dark-card h3 { margin-top: 38px; max-width: 550px; }
+
+        .topic-list {
+            margin-top: 54px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .topic-line {
+            display: flex;
+            align-items: baseline;
+            gap: 22px;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 34px;
+        }
+
+        .topic-line b {
+            color: var(--accent);
+            font-family: var(--font-mono);
+            font-size: 20px;
+        }
+
+        .script-card {
+            padding: 44px 54px;
+            border: 1px solid var(--line);
+            background: var(--surface);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .script-card .small-label { margin-bottom: 20px; }
+
+        .script-line {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--line);
+            font-size: 45px;
+            line-height: 1.35;
+        }
+
+        .script-line:last-child { border-bottom: 0; }
+
+        .script-line .fill {
+            display: inline-block;
+            min-width: 190px;
+            color: var(--muted);
+            border-bottom: 2px solid var(--ink);
+            line-height: 1;
+        }
+
+        .action-strip {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 0.38fr 1fr;
+            gap: 22px;
+            align-items: start;
+            padding: 22px 26px;
+            background: var(--accent);
+            color: var(--ink);
+        }
+
+        .action-strip strong { font-size: 28px; font-weight: 400; }
+        .action-strip span { font-size: 30px; line-height: 1.35; }
+
+        .listen-layout {
+            display: grid;
+            grid-template-columns: 0.26fr 0.74fr;
+            gap: 60px;
+            flex: 1;
+            min-height: 0;
+            margin-top: 62px;
+        }
+
+        .big-step {
+            font-family: var(--font-mono);
+            font-size: 170px;
+            line-height: 0.85;
+            color: var(--accent);
+            -webkit-text-stroke: 2px var(--ink);
+        }
+
+        .listen-main { display: flex; flex-direction: column; min-height: 0; }
+        .listen-main h2 { max-width: 1120px; }
+        .listen-main > .body-lg { max-width: 1120px; margin-top: 26px; }
+
+        .question-board {
+            margin-top: 42px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .question-card {
+            min-height: 202px;
+            padding: 28px 30px;
+            border: 1px solid var(--line);
+            background: var(--surface);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .question-card b {
+            font-family: var(--font-mono);
+            color: var(--muted);
+            font-size: 20px;
+        }
+
+        .question-card span { font-size: 36px; line-height: 1.32; }
+
+        .tip-line {
+            margin-top: auto;
+            padding: 24px 28px;
+            border-left: 12px solid var(--accent);
+            background: var(--soft);
+            font-size: 32px;
+            line-height: 1.4;
+        }
+
+        .tip-line strong { font-weight: 400; }
+
+        .answer-layout {
+            display: grid;
+            grid-template-columns: 0.82fr 1.18fr;
+            gap: 50px;
+            margin-top: 62px;
+            flex: 1;
+            min-height: 0;
+        }
+
+        .answer-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .answer-card {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 18px;
+            align-items: center;
+            min-height: 108px;
+            padding: 20px 28px;
+            border: 1px solid var(--line);
+            background: var(--surface);
+        }
+
+        .answer-card b {
+            font-family: var(--font-mono);
+            font-size: 23px;
+            color: var(--muted);
+        }
+
+        .answer-card span { font-size: 38px; line-height: 1.25; }
+
+        .answer-result {
+            padding: 42px 48px;
+            background: var(--dark-surface);
+            color: #f7f6f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .answer-result h3 { color: var(--accent); margin-bottom: 30px; }
+        .answer-result p { font-size: 46px; line-height: 1.55; }
+        .answer-result .result-note { margin-top: 40px; color: #d2d0c9; font-size: 30px; line-height: 1.45; }
+
+        .question-bank {
+            margin-top: 48px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .question-bank .question-card { min-height: 192px; }
+
+        .question-bank .question-card span { font-size: 34px; }
+
+        .support-line {
+            margin-top: auto;
+            display: flex;
+            gap: 18px;
+            align-items: baseline;
+            padding: 22px 28px;
+            background: var(--accent);
+            font-size: 32px;
+        }
+
+        .support-line b { font-size: 26px; font-weight: 400; }
+
+        .dialogue-layout {
+            display: grid;
+            grid-template-columns: 0.7fr 1.3fr;
+            gap: 64px;
+            flex: 1;
+            min-height: 0;
+            margin-top: 58px;
+            align-items: center;
+        }
+
+        .dialogue-intro h2 { max-width: 580px; }
+        .dialogue-intro .body-lg { margin-top: 30px; max-width: 560px; }
+
+        .dialogue-card {
+            padding: 46px 54px;
+            background: var(--dark-surface);
+            color: #f7f6f0;
+            box-shadow: 20px 20px 0 var(--accent);
+        }
+
+        .dialogue-row {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 24px;
+            align-items: baseline;
+            padding: 22px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+            font-size: 43px;
+            line-height: 1.35;
+        }
+
+        .dialogue-row:last-child { border-bottom: 0; }
+
+        .dialogue-row b {
+            color: var(--accent);
+            font-size: 28px;
+            font-weight: 400;
+        }
+
+        .dialogue-row em {
+            color: var(--accent);
+            font-style: normal;
+        }
+
+        .dialogue-foot {
+            margin-top: 34px;
+            padding-top: 28px;
+            border-top: 1px solid rgba(255, 255, 255, 0.22);
+            color: #d2d0c9;
+            font-size: 32px;
+            line-height: 1.4;
+        }
+
+        .teacher-question-layout {
+            display: grid;
+            grid-template-columns: 1fr 0.75fr;
+            gap: 50px;
+            flex: 1;
+            min-height: 0;
+            margin-top: 54px;
+        }
+
+        .question-list {
+            border-top: 2px solid var(--ink);
+        }
+
+        .question-list-row {
+            display: grid;
+            grid-template-columns: 90px 1fr;
+            gap: 22px;
+            align-items: center;
+            min-height: 112px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .question-list-row b {
+            font-family: var(--font-mono);
+            color: var(--muted);
+            font-size: 22px;
+        }
+
+        .question-list-row span { font-size: 42px; }
+
+        .response-card {
+            padding: 46px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .response-card h3 { margin-bottom: 32px; }
+        .response-card p { font-size: 42px; line-height: 1.55; }
+        .response-card .answer-line { margin-top: 34px; color: var(--muted); font-size: 30px; line-height: 1.55; }
+
+        .same-layout {
+            display: grid;
+            grid-template-columns: 0.72fr 1.28fr;
+            gap: 62px;
+            flex: 1;
+            min-height: 0;
+            margin-top: 58px;
+            align-items: center;
+        }
+
+        .same-copy h2 { max-width: 570px; }
+        .same-copy .body-lg { margin-top: 26px; max-width: 560px; }
+
+        .same-card {
+            position: relative;
+            padding: 48px 54px;
+            background: var(--accent);
+            border: 2px solid var(--ink);
+        }
+
+        .same-card::before {
+            content: "";
+            position: absolute;
+            width: 104px;
+            height: 104px;
+            right: 42px;
+            top: -52px;
+            border-radius: 50%;
+            background: var(--ink);
+        }
+
+        .same-card .same-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-top: 34px;
+        }
+
+        .same-option {
+            padding: 20px 24px;
+            border: 1px solid rgba(22, 22, 22, 0.4);
+            font-size: 31px;
+        }
+
+        .same-frame {
+            margin-top: 34px;
+            padding: 24px 28px;
+            background: var(--surface);
+            font-size: 42px;
+            line-height: 1.4;
+        }
+
+        .same-note { margin-top: 22px; font-size: 27px; line-height: 1.42; }
+
+        .know-layout {
+            display: grid;
+            grid-template-columns: 0.74fr 1.26fr;
+            gap: 54px;
+            flex: 1;
+            min-height: 0;
+            margin-top: 52px;
+        }
+
+        .know-steps {
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .know-step {
+            display: grid;
+            grid-template-columns: 92px 1fr;
+            gap: 22px;
+            align-items: center;
+            padding: 22px 28px;
+            border: 1px solid var(--line);
+            background: var(--surface);
+        }
+
+        .know-step b {
+            font-family: var(--font-mono);
+            font-size: 24px;
+            color: var(--muted);
+        }
+
+        .know-step span { font-size: 40px; line-height: 1.25; }
+
+        .know-output {
+            padding: 48px 54px;
+            background: var(--dark-surface);
+            color: #f7f6f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .know-output .tag { color: var(--accent); font-family: var(--font-mono); font-size: 22px; letter-spacing: 0.1em; }
+        .know-output h3 { margin-top: 28px; color: #f7f6f0; }
+        .know-output .line { padding: 26px 0; border-bottom: 1px solid rgba(255,255,255,0.22); font-size: 43px; line-height: 1.4; }
+        .know-output .line:last-child { border-bottom: 0; }
+
+        /* 第 10 页同时保留三句示范和页脚；只收紧本页，不降低投影可读性。 */
+        .slide[data-slide-id="10"] .know-layout { margin-top: 36px; }
+        .slide[data-slide-id="10"] .know-steps { gap: 12px; }
+        .slide[data-slide-id="10"] .know-step { padding: 16px 22px; }
+        .slide[data-slide-id="10"] .know-step span { font-size: 34px; }
+        .slide[data-slide-id="10"] .know-output { padding: 30px 42px; }
+        .slide[data-slide-id="10"] .know-output h3 { margin-top: 16px; }
+        .slide[data-slide-id="10"] .know-output .line { padding: 14px 0; font-size: 38px; line-height: 1.28; }
+
+        .hope-layout {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 62px;
+            flex: 1;
+            min-height: 0;
+            margin-top: 54px;
+            align-items: center;
+        }
+
+        .hope-copy h2 { max-width: 700px; }
+        .hope-copy .body-lg { margin-top: 28px; max-width: 620px; }
+
+        .hope-card {
+            padding: 44px 50px;
+            border: 2px solid var(--ink);
+            background: var(--surface);
+            box-shadow: 18px 18px 0 var(--accent);
+        }
+
+        .hope-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-top: 28px;
+        }
+
+        .hope-option {
+            min-height: 88px;
+            padding: 20px 22px;
+            border: 1px solid var(--line);
+            display: flex;
+            align-items: center;
+            font-size: 32px;
+        }
+
+        .hope-sentence {
+            margin-top: 32px;
+            padding: 26px 28px;
+            background: var(--accent);
+            font-size: 40px;
+            line-height: 1.4;
+        }
+
+        .hope-result {
+            margin-top: 22px;
+            color: var(--muted);
+            font-size: 28px;
+            line-height: 1.45;
+        }
+
+        .close-layout {
+            flex: 1;
+            min-height: 0;
+            display: grid;
+            grid-template-columns: 0.68fr 1.32fr;
+            gap: 70px;
+            align-items: center;
+            margin-top: 54px;
+        }
+
+        .close-copy h2 { max-width: 570px; }
+        .close-copy .body-lg { margin-top: 28px; max-width: 520px; }
+
+        .close-card {
+            padding: 52px 58px;
+            background: var(--dark-surface);
+            color: #f7f6f0;
+        }
+
+        .close-card .close-line {
+            padding: 26px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.22);
+            font-size: 48px;
+            line-height: 1.4;
+        }
+
+        .close-card .close-line:last-of-type { border-bottom: 0; }
+        .close-card .close-label { display: block; color: var(--accent); font-size: 24px; margin-bottom: 10px; }
+        .close-card .close-hint { margin-top: 34px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,0.22); color: #d2d0c9; font-size: 30px; line-height: 1.45; }
+
+        .controls {
+            position: fixed;
+            left: 50%;
+            bottom: 22px;
+            transform: translate(-50%, 14px);
+            opacity: 0;
+            pointer-events: none;
+            z-index: 40;
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            padding: 10px 16px;
+            background: rgba(22, 22, 22, 0.9);
+            color: #f7f6f0;
+            border-radius: 999px;
+            font-family: var(--font-mono);
+            font-size: 14px;
+            transition: opacity 0.2s ease, transform 0.2s var(--ease);
+        }
+
+        body.controls-visible .controls,
+        .controls:focus-within {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translate(-50%, 0);
+        }
+
+        .controls button {
+            border: 0;
+            background: transparent;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            padding: 0 5px;
+        }
+
+        .controls button:hover { color: var(--accent); }
+        .controls .count { min-width: 70px; text-align: center; }
+
+        .notes-panel {
+            position: fixed;
+            left: 50%;
+            bottom: 76px;
+            transform: translate(-50%, 12px);
+            opacity: 0;
+            pointer-events: none;
+            z-index: 45;
+            width: min(860px, calc(100vw - 48px));
+            padding: 22px 26px;
+            background: rgba(255, 253, 248, 0.97);
+            border: 1px solid var(--ink);
+            box-shadow: 10px 10px 0 var(--accent);
+            transition: opacity 0.22s ease, transform 0.22s var(--ease);
+        }
+
+        .notes-panel.open {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translate(-50%, 0);
+        }
+
+        .notes-panel .notes-title { font-family: var(--font-mono); font-size: 17px; letter-spacing: 0.1em; color: var(--muted); }
+        .notes-panel .notes-text { margin-top: 12px; font-size: 28px; line-height: 1.48; }
+        .notes-panel .notes-help { margin-top: 12px; color: var(--muted); font-size: 18px; }
+
+        body.editing [data-editable="true"] {
+            outline: 2px dashed var(--accent);
+            outline-offset: 5px;
+            cursor: text;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        @media print {
+            html, body { width: 1920px; height: auto; overflow: visible; background: #fff; }
+            .viewport { position: static; overflow: visible; }
+            .canvas { position: static; transform: none !important; }
+            .slide { position: relative; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; break-after: page; }
+            .controls, .notes-panel { display: none !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="viewport" id="viewport" aria-label="第一周课外活动投影 deck">
+        <main class="canvas" id="canvas">
+            <section class="slide active" data-slide-id="01" aria-label="今天认识老师">
+                <div class="slide-inner">
+                    <div class="topbar">
+                        <div class="left"><span class="dot-mark"></span><span>第一周 · 华语听说</span></div>
+                        <div class="right mono">SUPPLEMENT / OPEN-SLIDE</div>
+                    </div>
+                    <div class="cover-grid">
+                        <div class="cover-copy reveal">
+                            <div class="eyebrow">先认识老师</div>
+                            <h1>今天，<br><span>认识老师</span></h1>
+                            <p class="cover-lead">同学已经互相认识。<br>今天，我们把问题放在老师身上。</p>
+                            <div class="signature"><small>本学期老师</small><strong data-editable="true">颜士翔</strong></div>
+                        </div>
+                        <div class="cover-route reveal delay-2">
+                            <div class="route-title">今天，我们这样做</div>
+                            <div class="route-item"><b>01</b><strong>我先说</strong><span>名字、家乡、家庭、喜欢的事</span></div>
+                            <div class="route-item"><b>02</b><strong>你来听</strong><span>听两遍，记住三个信息</span></div>
+                            <div class="route-item"><b>03</b><strong>你来问</strong><span>每人问老师一个问题</span></div>
+                            <div class="route-item"><b>04</b><strong>我来问</strong><span>你说两三句，让老师认识你</span></div>
+                        </div>
+                    </div>
+                    <div class="bottom-note reveal delay-3"><span>不需要纸张，先听和说</span><span>听 · 问 · 说</span></div>
+                    <div class="slide-footer"><span class="left">第一周课外活动 · 先认识老师</span><span class="right mono">№01 / 12</span></div>
+                </div>
+            </section>
+
+            <section class="slide" data-slide-id="02" aria-label="今天的任务和流程">
+                <div class="slide-inner">
+                    <div class="topbar"><div class="left"><span class="dot-mark"></span><span>先说明</span></div><div class="right mono">01 / ROUTE</div></div>
+                    <div class="section-head reveal">
+                        <div class="section-number">00</div>
+                        <div>
+                            <div class="eyebrow">今天的任务</div>
+                            <h2>今天不是重新认识同学</h2>
+                            <p class="body-lg">你们已经认识彼此。今天先认识新老师，老师也想听听你的情况。</p>
+                        </div>
+                    </div>
+                    <div class="rule-board reveal delay-1">
+                        <div class="rule-main">
+                            <span class="tag">完成以后</span>
+                            <strong>你能问老师一个问题，也能用两三句话介绍自己。</strong>
+                        </div>
+                        <div class="flow-row">
+                            <div class="flow-card"><b>01</b><strong>老师说</strong><span>我先介绍自己。</span></div>
+                            <div class="flow-card"><b>02</b><strong>学生听</strong><span>先听大意，再记信息。</span></div>
+                            <div class="flow-card"><b>03</b><strong>学生问</strong><span>选择一个问题问老师。</span></div>
+                            <div class="flow-card"><b>04</b><strong>老师问</strong><span>你说自己的情况。</span></div>
+                        </div>
+                    </div>
+                    <div class="slide-footer"><span class="left">先看路线，再开始</span><span class="right mono">№02 / 12</span></div>
+                </div>
+            </section>
+
+            <section class="slide" data-slide-id="03" aria-label="老师先介绍自己">
+                <div class="slide-inner">
+                    <div class="topbar"><div class="left"><span class="dot-mark"></span><span>01 · 老师先说</span></div><div class="right mono">SPEAK / TEACHER</div></div>
+                    <div class="content-layout reveal">
+                        <div class="dark-card">
+                            <span class="tag">老师先说四件事</span>
+                            <h3>不用讲很长。每一件事说一两句。</h3>
+                            <div class="topic-list">
+                                <div class="topic-line"><b>01</b><span>我叫什么名字？</span></div>
+                                <div class="topic-line"><b>02</b><span>我从哪里来？</span></div>
+                                <div class="topic-line"><b>03</b><span>我家有几个人？</span></div>
+                                <div class="topic-line"><b>04</b><span>我喜欢什么、平时做什么？</span></div>
+                            </div>
+                        </div>
+                        <div class="script-card reveal delay-2">
+                            <div class="small-label">老师可以这样说</div>
+                            <div class="script-line">大家好，我叫<span data-editable="true">颜士翔</span>。</div>
+                            <div class="script-line">我来自<span class="fill" data-editable="true">________</span>。</div>
+                            <div class="script-line">我家有<span class="fill" data-editable="true">________</span>。</div>
+                            <div class="script-line">我喜欢<span class="fill" data-editable="true">________</span>。</div>
+                            <div class="script-line">我平时<span class="fill" data-editable="true">________</span>。</div>
+                        </div>
+                    </div>
+                    <div class="action-strip reveal delay-3"><strong>学生现在做什么？</strong><span>先听老师说，不打断；听不清时，可以说“请再说一遍”。</span></div>
+                    <div class="slide-footer"><span class="left">准备真实内容，不要编造经历</span><span class="right mono">№03 / 12</span></div>
+                </div>
+            </section>
+
+            <section class="slide" data-slide-id="04" aria-label="第一次听老师介绍">
+                <div class="slide-inner">
+                    <div class="topbar"><div class="left"><span class="dot-mark"></span><span>02 · 第一次听</span></div><div class="right mono">LISTEN / ONE</div></div>
+                    <div class="listen-layout reveal">
+                        <div class="big-step">01</div>
+                        <div class="listen-main">
+                            <div class="eyebrow">第一次：先听大意</div>
+                            <h2>老师说一遍，你先听懂“在说什么”</h2>
+                            <p class="body-lg">不用写完整句子，也不用马上回答。先抓住下面三个方向。</p>
+                            <div class="question-board reveal delay-1">
+                                <div class="question-card"><b>A / 来自哪里</b><span>老师从哪里来？</span></div>
+                                <div class="question-card"><b>B / 家庭</b><span>老师家里有几个人？</span></div>
+                                <div class="question-card"><b>C / 喜欢和日常</b><span>老师喜欢什么？平时做什么？</span></div>
+                            </div>
+                            <div class="tip-line reveal delay-2"><strong>学生动作：</strong>老师说完以后，用一句话说“我听到老师在介绍……”。</div>
+                        </div>
+                    </div>
+                    <div class="slide-footer"><span class="left">先听大意，不急着记每个词</span><span class="right mono">№04 / 12</span></div>
+                </div>
+            </section>
+
+            <section class="slide" data-slide-id="05" aria-label="第二次听并记住信息">
+                <div class="slide-inner">
+                    <div class="topbar"><div class="left"><span class="dot-mark"></span><span>03 · 第二次听</span></div><div class="right mono">LISTEN / TWO</div></div>
+                    <div class="listen-layout reveal">
+                        <div class="big-step">02</div>
+                        <div class="listen-main">
+                            <div class="eyebrow">第二次：记住三个信息</div>
+                            <h2>这一次，听清楚答案</h2>
+                            <p class="body-lg">老师按相同内容再说一遍。你只要记住三个关键词，不需要写很多。</p>
+                            <div class="question-board reveal delay-1">
+                                <div class="question-card"><b>问题 1</b><span>老师来自哪里？<br><small>来自……</small></span></div>
+                                <div class="question-card"><b>问题 2</b><span>老师喜欢什么？<br><small>喜欢……</small></span></div>
+                                <div class="question-card"><b>问题 3</b><span>老师平时做什么？<br><small>平时……</small></span></div>
+                            </div>
+                            <div class="tip-line reveal delay-2"><strong>完成方法：</strong>听完后，三位同学各说一个答案；老师只做确认和补充。</div>
+                        </div>
+                    </div>
+                    <div class="slide-footer"><span class="left">记住关键词就可以</span><span class="right mono">№05 / 12</span></div>
+                </div>
+            </section>
+
+            <section class="slide" data-slide-id="06" aria-label="学生向老师提问">
+                <div class="slide-inner">
+                    <div class="topbar"><div class="left"><span class="dot-mark"></span><span>04 · 你来问我</span></div><div class="right mono">ASK / TEACHER</div></div>
+                    <div class="section-head reveal">
+                        <div class="section-number">03</div>
+                        <div>
+                            <div class="eyebrow">每人一个问题</div>
+                            <h2>你还想知道老师什么？</h2>
+                            <p class="body-lg">选择屏幕上的一个问题，举手问老师。老师听完问题再回答。</p>
+                        </div>
+                    </div>
+                    <div class="question-bank reveal delay-1">
+                        <div class="question-card"><b>可以这样问</b><span>您来自哪里？</span></div>
+                        <div class="question-card"><b>可以这样问</b><span>您喜欢做什么？</span></div>
+                        <div class="question-card"><b>可以这样问</b><span>您为什么教汉语？</span></div>
+                    </div>
+                    <div class="support-line reveal delay-2"><b>轮流方式</b><span>一位同学问，一位同学听；老师回答以后，再换下一位。</span></div>
+                    <div class="slide-footer"><span class="left">不会问，就直接读屏幕上的句子</span><span class="right mono">№06 / 12</span></div>
+                </div>
+            </section>
+
+            <section class="slide" data-slide-id="07" aria-label="根据老师的回答再问一句">
+                <div class="slide-inner">
+                    <div class="topbar"><div class="left"><span class="dot-mark"></span><span>05 · 听完再问</span></div><div class="right mono">ASK / AGAIN</div></div>
+                    <div class="dialogue-layout reveal">
+                        <div class="dialogue-intro">
+                            <div class="eyebrow">回答以后，再问一句</div>
+                            <h2>接着刚才的回答问</h2>
+                            <p class="body-lg">不是重新换一个话题。先听回答，再找一个和回答有关的问题。</p>
+                        </div>
+                        <div class="dialogue-card reveal delay-2">
+                            <div class="dialogue-row"><b>学生</b><span>您喜欢做什么？</span></div>
+                            <div class="dialogue-row"><b>老师</b><span>我喜欢喝咖啡。</span></div>
+                            <div class="dialogue-row"><b>学生</b><span>您<em>什么时候</em>喝咖啡？</span></div>
+                            <div class="dialogue-foot">老师先示范一轮。然后请一位同学照着这个方法再问一句。</div>
+                        </div>
+                    </div>
+                    <div class="slide-footer"><span class="left">先听回答，再找有关的问题</span><span class="right mono">№07 / 12</span></div>
+                </div>
+            </section>
+
+            <section class="slide" data-slide-id="08" aria-label="老师向学生提问">
+                <div class="slide-inner">
+                    <div class="topbar"><div class="left"><span class="dot-mark"></span><span>06 · 换我来问</span></div><div class="right mono">ASK / STUDENT</div></div>
+                    <div class="teacher-question-layout reveal">
+                        <div>
+                            <div class="eyebrow">现在老师问你</div>
+                            <h2>说说你自己</h2>
+                            <p class="body-lg" style="margin-top:28px;">每人选择一个问题回答。说两三句就可以。</p>
+                            <div class="support-line" style="margin-top:42px;"><b>提醒</b><span>不用回答四个问题，选一个说清楚。</span></div>
+                        </div>
+                        <div class="question-list reveal delay-2">
+                            <div class="question-list-row"><b>Q1</b><span>你叫什么名字？</span></div>
+                            <div class="question-list-row"><b>Q2</b><span>你家有几个人？</span></div>
+                            <div class="question-list-row"><b>Q3</b><span>你喜欢做什么？</span></div>
+                            <div class="question-list-row"><b>Q4</b><span>你为什么学汉语？</span></div>
+                        </div>
+                    </div>
+                    <div class="slide-footer"><span class="left">老师问，学生回答</span><span class="right mono">№08 / 12</span></div>
+                </div>
+            </section>
+
+            <section class="slide" data-slide-id="09" aria-label="找出师生之间一样的地方">
+                <div class="slide-inner">
+                    <div class="topbar"><div class="left"><span class="dot-mark"></span><span>07 · 找到一样</span></div><div class="right mono">CONNECT / SAME</div></div>
+                    <div class="same-layout reveal">
+                        <div class="same-copy">
+                            <div class="eyebrow">我和老师有一样的地方</div>
+                            <h2>找一个就好</h2>
+                            <p class="body-lg">可以是喜欢的食物、喜欢做的事、生活经验，或者都在学汉语。</p>
+                        </div>
+                        <div class="same-card reveal delay-2">
+                            <div class="small-label">可以从这里找</div>
+                            <div class="same-options">
+                                <div class="same-option">喜欢吃的东西</div>
+                                <div class="same-option">喜欢做的事</div>
+                                <div class="same-option">家乡或生活</div>
+                                <div class="same-option">学习汉语</div>
+                            </div>
+                            <div class="same-frame">我和老师都喜欢<span data-editable="true">________</span>。</div>
+                            <div class="same-note">如果没有完全一样，可以说：我和老师都在学汉语。</div>
+                        </div>
+                    </div>
+                    <div class="slide-footer"><span class="left">找到以后，举手说一句</span><span class="right mono">№09 / 12</span></div>
+                </div>
+            </section>
+
+            <section class="slide" data-slide-id="10" aria-label="让老师认识学生">
+                <div class="slide-inner">
+                    <div class="topbar"><div class="left"><span class="dot-mark"></span><span>08 · 让老师认识你</span></div><div class="right mono">SPEAK / STUDENT</div></div>
+                    <div class="section-head reveal">
+                        <div class="section-number">07</div>
+                        <div>
+                            <div class="eyebrow">说清楚你的情况</div>
+                            <h2>老师听完以后，再问你一句</h2>
+                            <p class="body-lg">请几位同学说两三句。你说完，老师会根据你的回答再问一句。</p>
+                        </div>
+                    </div>
+                    <div class="know-layout reveal delay-1">
+                        <div class="know-steps">
+                            <div class="know-step"><b>01</b><span>我叫……。</span></div>
+                            <div class="know-step"><b>02</b><span>我喜欢……。</span></div>
+                            <div class="know-step"><b>03</b><span>这学期，我希望学会……。</span></div>
+                        </div>
+                        <div class="know-output">
+                            <div class="tag">你可以这样说</div>
+                            <h3>把三个信息连起来</h3>
+                            <div class="line">我叫________。</div>
+                            <div class="line">我喜欢________。</div>
+                            <div class="line">这学期，我希望学会________。</div>
+                        </div>
+                    </div>
+                    <div class="slide-footer"><span class="left">学生说两三句，老师听完，再问一句</span><span class="right mono">№10 / 12</span></div>
+                </div>
+            </section>
+
+            <section class="slide" data-slide-id="11" aria-label="学生说出对课程的希望">
+                <div class="slide-inner">
+                    <div class="topbar"><div class="left"><span class="dot-mark"></span><span>09 · 说出希望</span></div><div class="right mono">CLASS / HOPE</div></div>
+                    <div class="hope-layout reveal">
+                        <div class="hope-copy">
+                            <div class="eyebrow">这门课，你希望怎么上？</div>
+                            <h2>说一个你真的希望学会的东西</h2>
+                            <p class="body-lg">不需要说得很复杂。先从“我希望……”开始。</p>
+                        </div>
+                        <div class="hope-card reveal delay-2">
+                            <div class="small-label">可以选择一个方向</div>
+                            <div class="hope-options">
+                                <div class="hope-option">多听一点</div>
+                                <div class="hope-option">多说一点</div>
+                                <div class="hope-option">学会介绍自己</div>
+                                <div class="hope-option">学会和别人聊天</div>
+                            </div>
+                            <div class="hope-sentence">我希望多________，学会________。</div>
+                            <div class="hope-result">老师听完几位同学的希望，记住大家最常说的两个方向。</div>
+                        </div>
+                    </div>
+                    <div class="slide-footer"><span class="left">每人说一个希望</span><span class="right mono">№11 / 12</span></div>
+                </div>
+            </section>
+
+            <section class="slide" data-slide-id="12" aria-label="活动结束回顾">
+                <div class="slide-inner">
+                    <div class="topbar"><div class="left"><span class="dot-mark"></span><span>最后 · 说两句话</span></div><div class="right mono">CLOSE / TODAY</div></div>
+                    <div class="close-layout reveal">
+                        <div class="close-copy">
+                            <div class="eyebrow">今天，我们认识了老师</div>
+                            <h2>最后，每人说一句</h2>
+                            <p class="body-lg">选你最记得的一件事，再说一个这学期的希望。</p>
+                        </div>
+                        <div class="close-card reveal delay-2">
+                            <div class="close-line"><span class="close-label">关于老师，我记得</span>________。</div>
+                            <div class="close-line"><span class="close-label">这学期，我希望</span>________。</div>
+                            <div class="close-hint">老师听完以后说：谢谢大家，第一堂课见。</div>
+                        </div>
+                    </div>
+                    <div class="slide-footer"><span class="left">谢谢大家 · 颜士翔</span><span class="right mono">№12 / 12</span></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="controls" id="controls" aria-label="投影控制">
+        <button type="button" id="prevButton" aria-label="上一页">←</button>
+        <span class="count" id="count">01 / 12</span>
+        <button type="button" id="nextButton" aria-label="下一页">→</button>
+        <button type="button" id="notesButton" aria-label="教师提示">N</button>
+        <button type="button" id="editButton" aria-label="编辑文字">E</button>
+    </div>
+
+    <aside class="notes-panel" id="notesPanel" aria-hidden="true">
+        <div class="notes-title">教师口头提示</div>
+        <div class="notes-text" id="notesText"></div>
+        <div class="notes-help">按 N 显示或隐藏；方向键或空格继续；按 E 编辑带虚线的文字。</div>
+    </aside>
+
+    <script>
+        const TEACHER_NOTES = [
+            "打开第一页，先告诉学生：他们已经彼此认识，今天把重点放在新老师身上。你只需要带着大家听、问、说，不发纸。",
+            "请学生看路线。说明最后要完成两件事：每人问老师一个问题；每人用两三句话说自己的情况。",
+            "上课前把空格换成你的真实内容。按照名字、家乡、家庭、喜欢或日常生活的顺序说，每项一两句就够。",
+            "第一次只说一遍。请学生先听大意，不要求马上回答。有人没听清，可以让他直接说“请再说一遍”。",
+            "第二次按相同顺序再说一遍。说完请三位学生各说一个答案，你只确认或补充，不要重新讲很长。",
+            "让学生从屏幕选择问题。每人问一个；你听完问题再回答。学生卡住时，让他直接读屏幕上的句子。",
+            "先和一位学生示范三句对话。第二个问题要接着第一个回答，不要突然换话题；然后请学生试一轮。",
+            "现在交换方向，由你问学生。每人选一个问题说两三句，不要求每个人回答全部问题。根据回答自然地再问一句。",
+            "请学生找一个和你一样的地方。可以是食物、兴趣、生活或学汉语。没有完全一样时，就用屏幕上的替代句。",
+            "请几位学生用三句话说自己的情况。听完后根据其中一个信息再问一句，让学生感到你真的记住了他的回答。",
+            "请每位学生说一个希望。你可以口头记住大家最常说的两个方向，作为之后课堂活动的参考。",
+            "最后每人说两句话中的一句或两句。听完后用“谢谢大家，第一堂课见”结束，不再增加新任务。"
+        ];
+
+        class OpenSlideDeck {
+            constructor() {
+                this.canvas = document.getElementById('canvas');
+                this.slides = Array.from(document.querySelectorAll('.slide'));
+                this.count = document.getElementById('count');
+                this.notesPanel = document.getElementById('notesPanel');
+                this.notesText = document.getElementById('notesText');
+                this.current = this.fromHash();
+                this.wheelLocked = false;
+                this.controlsTimer = null;
+                this.scaleStage();
+                this.bindKeyboard();
+                this.bindPointer();
+                this.bindTouch();
+                this.bindWheel();
+                document.getElementById('prevButton').addEventListener('click', (event) => { event.stopPropagation(); this.previous(); });
+                document.getElementById('nextButton').addEventListener('click', (event) => { event.stopPropagation(); this.next(); });
+                document.getElementById('notesButton').addEventListener('click', (event) => { event.stopPropagation(); this.toggleNotes(); });
+                window.addEventListener('hashchange', () => this.show(this.fromHash(), false));
+                this.show(this.current, false);
+            }
+
+            fromHash() {
+                const match = window.location.hash.match(/slide=(\d+)/);
+                const candidate = match ? Number(match[1]) - 1 : 0;
+                return Math.max(0, Math.min(this.slides.length - 1, Number.isFinite(candidate) ? candidate : 0));
+            }
+
+            scaleStage() {
+                const scale = () => {
+                    const factor = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+                    this.canvas.style.transform = `translate(-50%, -50%) scale(${factor})`;
+                };
+                scale();
+                window.addEventListener('resize', scale);
+            }
+
+            show(index, updateHash = true) {
+                this.current = Math.max(0, Math.min(index, this.slides.length - 1));
+                this.slides.forEach((slide, slideIndex) => slide.classList.toggle('active', slideIndex === this.current));
+                this.count.textContent = `${String(this.current + 1).padStart(2, '0')} / ${String(this.slides.length).padStart(2, '0')}`;
+                this.notesText.textContent = TEACHER_NOTES[this.current];
+                if (updateHash) window.location.hash = `slide=${this.current + 1}`;
+            }
+
+            next() {
+                if (this.current < this.slides.length - 1) this.show(this.current + 1);
+            }
+
+            previous() {
+                if (this.current > 0) this.show(this.current - 1);
+            }
+
+            toggleNotes() {
+                const open = this.notesPanel.classList.toggle('open');
+                this.notesPanel.setAttribute('aria-hidden', String(!open));
+            }
+
+            closeNotes() {
+                this.notesPanel.classList.remove('open');
+                this.notesPanel.setAttribute('aria-hidden', 'true');
+            }
+
+            bindKeyboard() {
+                document.addEventListener('keydown', (event) => {
+                    const editing = event.target && event.target.getAttribute && event.target.getAttribute('contenteditable') === 'true';
+                    if (editing && !['Escape', 'Tab'].includes(event.key)) return;
+                    if (event.key === 'n' || event.key === 'N') { event.preventDefault(); this.toggleNotes(); return; }
+                    if (event.key === 'Escape') { this.closeNotes(); return; }
+                    if (['ArrowRight', 'ArrowDown', 'PageDown', ' ', 'Enter'].includes(event.key)) { event.preventDefault(); this.next(); return; }
+                    if (['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace'].includes(event.key)) { event.preventDefault(); this.previous(); return; }
+                    if (event.key === 'Home') { event.preventDefault(); this.show(0); return; }
+                    if (event.key === 'End') { event.preventDefault(); this.show(this.slides.length - 1); }
+                });
+            }
+
+            bindPointer() {
+                this.canvas.addEventListener('click', (event) => {
+                    if (event.target.closest('[contenteditable="true"], button')) return;
+                    this.next();
+                });
+                document.addEventListener('mousemove', (event) => {
+                    if (event.clientY > window.innerHeight - 100) {
+                        document.body.classList.add('controls-visible');
+                        window.clearTimeout(this.controlsTimer);
+                        this.controlsTimer = window.setTimeout(() => document.body.classList.remove('controls-visible'), 1800);
+                    }
+                });
+            }
+
+            bindTouch() {
+                let startX = 0;
+                document.addEventListener('touchstart', (event) => { startX = event.changedTouches[0].screenX; }, { passive: true });
+                document.addEventListener('touchend', (event) => {
+                    const delta = event.changedTouches[0].screenX - startX;
+                    if (Math.abs(delta) > 50) delta < 0 ? this.next() : this.previous();
+                }, { passive: true });
+            }
+
+            bindWheel() {
+                document.addEventListener('wheel', (event) => {
+                    if (this.wheelLocked || Math.abs(event.deltaY) < 20) return;
+                    this.wheelLocked = true;
+                    event.deltaY > 0 ? this.next() : this.previous();
+                    window.setTimeout(() => { this.wheelLocked = false; }, 450);
+                }, { passive: true });
+            }
+        }
+
+        class InlineEditor {
+            constructor() {
+                this.storageKey = 'lesson-01-open-slide-activity-copy-v1';
+                this.button = document.getElementById('editButton');
+                this.active = false;
+                this.restore();
+                this.button.addEventListener('click', (event) => { event.stopPropagation(); this.toggle(); });
+                document.addEventListener('keydown', (event) => {
+                    const editing = event.target && event.target.getAttribute && event.target.getAttribute('contenteditable') === 'true';
+                    if ((event.key === 'e' || event.key === 'E') && !editing) this.toggle();
+                    if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 's') { event.preventDefault(); this.save(); }
+                });
+            }
+
+            toggle() {
+                this.active = !this.active;
+                document.body.classList.toggle('editing', this.active);
+                document.querySelectorAll('[data-editable="true"]').forEach((node) => { node.contentEditable = this.active ? 'true' : 'false'; });
+                this.button.style.color = this.active ? 'var(--accent)' : '';
+            }
+
+            save() {
+                const values = {};
+                document.querySelectorAll('[data-editable="true"]').forEach((node, index) => { values[index] = node.textContent; });
+                localStorage.setItem(this.storageKey, JSON.stringify(values));
+                this.button.title = '已保存到本机浏览器';
+            }
+
+            restore() {
+                try {
+                    const values = JSON.parse(localStorage.getItem(this.storageKey) || '{}');
+                    document.querySelectorAll('[data-editable="true"]').forEach((node, index) => {
+                        if (typeof values[index] === 'string' && values[index].trim()) node.textContent = values[index];
+                    });
+                } catch (error) {
+                    // 使用文件里的默认文案。
+                }
+            }
+        }
+
+        window.deck = new OpenSlideDeck();
+        window.editor = new InlineEditor();
+    </script>
+</body>
+</html>

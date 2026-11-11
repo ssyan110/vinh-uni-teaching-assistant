@@ -40,3 +40,5 @@ Use the language-specific writing skill required by Adam's instructions. Do not 
 ## Checkout capability preflight
 
 Before online, native classroom, or assessment-audio production, run `python3 scripts/check_project_readiness.py --capability online|native|assessment-audio` with the actual choice. `inputs-and-runtime-present` is availability only; run scoped content/production gates afterward. Missing dependencies remain blocked. Do not switch branches, copy old approvals or replace the requested format to pass. Review `docs/workflow/project-portability.md` before sharing or committing workflow changes.
+
+For a specific assessment, add `--exam-id ID --offering-id TERM` to `check_project_readiness.py --capability assessment-audio`. An unscoped capability pass checks register and runtime availability only.

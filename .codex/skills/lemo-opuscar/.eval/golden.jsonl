@@ -1,0 +1,2 @@
+{"id": "code-film", "input": "Direct a code-built short film in Lemo-Opuscar style.", "expected": {"trigger": "lemo-opuscar", "outputContains": ["style", "scene"]}}
+{"id": "custom-film", "input": "Create a code-rendered explainer with a custom visual style and timed animation.", "expected": {"trigger": "lemo-opuscar", "outputContains": ["style", "timing"]}}

@@ -1,5 +1,14 @@
 # Hệ thống học liệu AI · Huashu Design
 
+## Current Vinh presentation workflow
+
+Online pre-study uses editable **PPTX**; new and revised in-person classes use **native OpenSlide React pages** with editable text and draggable elements. Start with [AGENTS.md](AGENTS.md), [online production](docs/workflow/online-pptx-lifecycle.md), or [the shared OpenSlide workspace](docs/open-slide-workspace.md). Confirmed content, course-specific style, QA and release rules remain separate.
+
+## Historical classic HTML system
+
+The remaining README documents the earlier classic system and sample commands. Its HTML defaults, VP step approvals, languages and templates are historical context only; do not use them to start a current Vinh deck. It does not establish the current checkout’s production readiness.
+
+
 Mục tiêu: tạo học liệu sẵn sàng cho giảng viên bằng repo `huashu-design` cục bộ làm quy trình thiết kế, tạo slide HTML và xuất PDF backup.
 
 ## Bắt đầu với bản classic

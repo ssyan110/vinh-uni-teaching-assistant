@@ -1,0 +1,290 @@
+[
+  {
+    "id": "boya-elementary-i",
+    "title": "《博雅汉语听说：初级起步篇 I》",
+    "lessons": [
+      {
+        "key": "boya-elementary-i:lesson-01",
+        "title": "拼音和日常用语（一）",
+        "number": 1,
+        "registered": true
+      },
+      {
+        "key": "boya-elementary-i:lesson-02",
+        "title": "拼音和日常用语（二）",
+        "number": 2,
+        "registered": true
+      },
+      {
+        "key": "boya-elementary-i:lesson-03",
+        "title": "拼音和日常用语（三）",
+        "number": 3,
+        "registered": true
+      },
+      {
+        "key": "boya-elementary-i:lesson-04",
+        "title": "你叫什么名字",
+        "number": 4,
+        "registered": true
+      },
+      {
+        "number": 5,
+        "key": "boya-elementary-i:lesson-05",
+        "title": "",
+        "registered": false
+      },
+      {
+        "number": 6,
+        "key": "boya-elementary-i:lesson-06",
+        "title": "",
+        "registered": false
+      },
+      {
+        "number": 7,
+        "key": "boya-elementary-i:lesson-07",
+        "title": "",
+        "registered": false
+      },
+      {
+        "number": 8,
+        "key": "boya-elementary-i:lesson-08",
+        "title": "",
+        "registered": false
+      },
+      {
+        "number": 9,
+        "key": "boya-elementary-i:lesson-09",
+        "title": "",
+        "registered": false
+      },
+      {
+        "number": 10,
+        "key": "boya-elementary-i:lesson-10",
+        "title": "",
+        "registered": false
+      },
+      {
+        "number": 11,
+        "key": "boya-elementary-i:lesson-11",
+        "title": "",
+        "registered": false
+      },
+      {
+        "number": 12,
+        "key": "boya-elementary-i:lesson-12",
+        "title": "",
+        "registered": false
+      },
+      {
+        "number": 13,
+        "key": "boya-elementary-i:lesson-13",
+        "title": "",
+        "registered": false
+      },
+      {
+        "number": 14,
+        "key": "boya-elementary-i:lesson-14",
+        "title": "",
+        "registered": false
+      },
+      {
+        "number": 15,
+        "key": "boya-elementary-i:lesson-15",
+        "title": "",
+        "registered": false
+      },
+      {
+        "number": 16,
+        "key": "boya-elementary-i:lesson-16",
+        "title": "",
+        "registered": false
+      },
+      {
+        "number": 17,
+        "key": "boya-elementary-i:lesson-17",
+        "title": "",
+        "registered": false
+      },
+      {
+        "number": 18,
+        "key": "boya-elementary-i:lesson-18",
+        "title": "",
+        "registered": false
+      },
+      {
+        "number": 19,
+        "key": "boya-elementary-i:lesson-19",
+        "title": "",
+        "registered": false
+      },
+      {
+        "number": 20,
+        "key": "boya-elementary-i:lesson-20",
+        "title": "",
+        "registered": false
+      },
+      {
+        "number": 21,
+        "key": "boya-elementary-i:lesson-21",
+        "title": "",
+        "registered": false
+      },
+      {
+        "number": 22,
+        "key": "boya-elementary-i:lesson-22",
+        "title": "",
+        "registered": false
+      },
+      {
+        "number": 23,
+        "key": "boya-elementary-i:lesson-23",
+        "title": "",
+        "registered": false
+      },
+      {
+        "number": 24,
+        "key": "boya-elementary-i:lesson-24",
+        "title": "",
+        "registered": false
+      },
+      {
+        "number": 25,
+        "key": "boya-elementary-i:lesson-25",
+        "title": "",
+        "registered": false
+      }
+    ]
+  },
+  {
+    "id": "boya-intermediate-i",
+    "title": "《博雅汉语听说：中级冲刺篇 I》",
+    "lessons": [
+      {
+        "key": "boya-intermediate-i:lesson-01",
+        "title": "中国人的姓名",
+        "number": 1,
+        "registered": true
+      },
+      {
+        "key": "boya-intermediate-i:lesson-02",
+        "title": "真正的朋友",
+        "number": 2,
+        "registered": true
+      },
+      {
+        "key": "boya-intermediate-i:lesson-03",
+        "title": "宜居之地",
+        "number": 3,
+        "registered": true
+      },
+      {
+        "key": "boya-intermediate-i:lesson-04",
+        "title": "地球人的担忧",
+        "number": 4,
+        "registered": true
+      },
+      {
+        "key": "boya-intermediate-i:lesson-05",
+        "title": "音乐的魅力",
+        "number": 5,
+        "registered": true
+      },
+      {
+        "key": "boya-intermediate-i:lesson-06",
+        "title": "挑战",
+        "number": 6,
+        "registered": true
+      },
+      {
+        "key": "boya-intermediate-i:lesson-07",
+        "title": "我的同事",
+        "number": 7,
+        "registered": true
+      },
+      {
+        "key": "boya-intermediate-i:lesson-08",
+        "title": "学汉语的苦恼",
+        "number": 8,
+        "registered": true
+      }
+    ]
+  },
+  {
+    "id": "boya-quasi-intermediate-i",
+    "title": "《博雅汉语听说：准中级加速篇 I》",
+    "lessons": [
+      {
+        "key": "boya-quasi-intermediate-i:lesson-01",
+        "title": "丽丽是独生女",
+        "number": 1,
+        "registered": true
+      },
+      {
+        "key": "boya-quasi-intermediate-i:lesson-02",
+        "title": "王红的一天",
+        "number": 2,
+        "registered": true
+      },
+      {
+        "key": "boya-quasi-intermediate-i:lesson-03",
+        "title": "我对学中文越来越有兴趣",
+        "number": 3,
+        "registered": true
+      },
+      {
+        "key": "boya-quasi-intermediate-i:lesson-04",
+        "title": "在中国学汉语",
+        "number": 4,
+        "registered": true
+      },
+      {
+        "key": "boya-quasi-intermediate-i:lesson-05",
+        "title": "我的音乐老师",
+        "number": 5,
+        "registered": true
+      },
+      {
+        "key": "boya-quasi-intermediate-i:lesson-06",
+        "title": "大岛参加了学校的合唱团",
+        "number": 6,
+        "registered": true
+      },
+      {
+        "key": "boya-quasi-intermediate-i:lesson-07",
+        "title": "小张热爱登山",
+        "number": 7,
+        "registered": true
+      },
+      {
+        "key": "boya-quasi-intermediate-i:lesson-08",
+        "title": "孙子和《孙子兵法》",
+        "number": 8,
+        "registered": true
+      },
+      {
+        "key": "boya-quasi-intermediate-i:lesson-09",
+        "title": "北方菜和南方菜",
+        "number": 9,
+        "registered": true
+      },
+      {
+        "key": "boya-quasi-intermediate-i:lesson-10",
+        "title": "中国人喜欢聚餐",
+        "number": 10,
+        "registered": true
+      },
+      {
+        "key": "boya-quasi-intermediate-i:lesson-11",
+        "title": "原来他们是关心我",
+        "number": 11,
+        "registered": true
+      },
+      {
+        "key": "boya-quasi-intermediate-i:lesson-12",
+        "title": "散步",
+        "number": 12,
+        "registered": true
+      }
+    ]
+  }
+]

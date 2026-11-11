@@ -47,3 +47,32 @@ dashboard/dashboard-server.log
 # Private classroom records and backups
 /classroom-tools/private/
 /classroom-tools/local-gradebook/private/
+
+# Local teaching databases, browser evidence, app recovery copies and service metadata.
+*.sqlite
+*.sqlite3
+*.db
+*.sqlite-*
+*.sqlite3-*
+*.db-wal
+*.db-shm
+.vercel/
+.student-tracker-restore.*/
+classroom-tools/oral-exam-order/qa/
+classroom-tools/oral-portfolio/qa/test-data/
+/tools/listening-exam/.runtime/
+/tools/listening-exam/*.pt
+/tools/listening-exam/试听-*/
+/tools/listening-exam/独立模拟卷-*/
+/tools/listening-exam/听力原稿.txt
+/tools/listening-exam/命题对照表.csv
+/tools/listening-exam/播放设置.json
+
+# Browser state and classroom screenshots can contain real names, responses or grades.
+.playwright-cli/
+/classroom-tools/student-tracker/qa/**/*.png
+/classroom-tools/student-tracker/qa/**/*.xlsx
+/classroom-tools/oral-portfolio/qa/**/*.png
+/classroom-tools/classroom-randomizer/qa/**/*.png
+/classroom-tools/local-gradebook/qa/**/*.png
+/classroom-tools/local-gradebook/qa/**/*.xlsx

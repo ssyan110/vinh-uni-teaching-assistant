@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": [
+    "source workbook hashes and every imported raw record",
+    "four rosters and historical preservation",
+    "score completeness/range/half-point/status validation",
+    "stale page conflict prevention",
+    "flagged import review gate",
+    "restart persistence",
+    "partial grades and true zero",
+    "invalid restore rejection and pre-restore snapshot",
+    "independent first-year assessment",
+    "more than twelve exams and dynamic export",
+    "textbook identity validation and scored rubric locking",
+    "XLSX sheet counts and formula injection prevention",
+    "loopback Host/token/Origin protection"
+  ],
+  "test_directory": "/Users/ssyan110/Development/vinh-uni-teaching-assistant/classroom-tools/local-gradebook/private/qa-u0id63bp",
+  "real_database_modified": false
+}

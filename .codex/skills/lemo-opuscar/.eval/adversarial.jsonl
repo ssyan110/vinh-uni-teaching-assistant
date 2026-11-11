@@ -1,0 +1,2 @@
+{"id": "outside-scope-1", "input": "Convert a lecture recording to MP4 without changing its content.", "expectedReject": true}
+{"id": "outside-scope-2", "input": "Prepare an editable online vocabulary PPTX.", "expectedReject": true}

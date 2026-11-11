@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><title>课堂抽问悬浮窗</title>
+<style>body{max-width:38rem;margin:12vh auto;padding:1rem;font:18px/1.7 system-ui;color:#17324d}a{display:inline-block;background:#006b66;color:white;border-radius:.6rem;padding:.5rem 1rem}li{margin:.6rem 0}</style>
+<h1>课堂抽问悬浮窗</h1>
+<ol><li>用桌面版 Chrome 打开本页，将下面的“悬浮抽问”拖到书签栏。按 ⌘ Shift B 可显示书签栏。</li><li>回到已经开始上课的随机抽问页面，点刚保存的书签。</li><li>拖动小窗顶部调整位置，然后切回 OpenSlide 或 Pages。上课期间请保留原抽问标签页。</li></ol>
+<a id="install">悬浮抽问</a>
+<script>
+</script><script src="floating-draw.js"></script><script>
+const install = document.getElementById('install');
+install.href = 'javascript:' + encodeURIComponent('void (' + openFloatingDraw.toString() + ')()');
+install.onclick = event => { event.preventDefault(); alert('请把这个按钮拖到 Chrome 书签栏，然后在抽问页面点书签。'); };
+</script></html>

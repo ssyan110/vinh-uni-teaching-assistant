@@ -1,0 +1,14 @@
+{
+  "tier": "draft-only",
+  "tokenBudget": {
+    "maxTokens": 2200
+  },
+  "rollout": {
+    "enabled": false
+  },
+  "skillId": "lemo-opuscar",
+  "triggerSignals": [
+    "Lemo-Opuscar style",
+    "code-built short film"
+  ]
+}

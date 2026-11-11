@@ -1,0 +1,14 @@
+{
+  "tier": "draft-only",
+  "tokenBudget": {
+    "maxTokens": 2200
+  },
+  "rollout": {
+    "enabled": false
+  },
+  "skillId": "chinese-conversation-long-video",
+  "triggerSignals": [
+    "extended Chinese conversation",
+    "multi-scene listening video"
+  ]
+}

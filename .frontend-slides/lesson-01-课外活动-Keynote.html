@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一周课外活动｜先认识老师</title>
+    <style>
+        :root {
+            --stage-bg: #dfe3e9;
+            --paper: #f7f7f5;
+            --ink: #17181b;
+            --muted: #71757c;
+            --blue: #bfd7f8;
+            --mint: #c9e8d8;
+            --coral: #f1b9ad;
+            --yellow: #f1d28e;
+            --lavender: #d7cff1;
+            --font-cjk: "KaiTi", "STKaiti", serif;
+            --font-latin: "Times New Roman", serif;
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-spring: cubic-bezier(0.22, 1.25, 0.36, 1);
+        }
+
+        * { box-sizing: border-box; }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background: var(--stage-bg);
+        }
+
+        body {
+            color: var(--ink);
+            font-family: var(--font-cjk);
+            user-select: none;
+        }
+
+        .deck-viewport {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            background: var(--stage-bg);
+        }
+
+        .deck-stage {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            transform-origin: 0 0;
+            background: var(--paper);
+        }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            background: var(--paper);
+            transition: opacity 0.55s var(--ease-out), visibility 0s linear 0.55s;
+        }
+
+        .slide.active,
+        .slide.visible {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+            z-index: 1;
+            transition-delay: 0s;
+        }
+
+        .paper {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            isolation: isolate;
+        }
+
+        .paper::before {
+            content: "";
+            position: absolute;
+            inset: 54px;
+            border: 1px solid rgba(23, 24, 27, 0.12);
+            border-radius: 34px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .keyword-stage {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            z-index: 5;
+        }
+
+        .keyword-stage.align-left {
+            place-items: center start;
+            padding-left: 260px;
+        }
+
+        .keyword {
+            margin: 0;
+            color: var(--ink);
+            font-family: var(--font-cjk);
+            font-size: 310px;
+            font-weight: 400;
+            line-height: 0.9;
+            letter-spacing: 0.01em;
+            white-space: nowrap;
+            text-shadow: 0 12px 34px rgba(23, 24, 27, 0.07);
+            animation: keyword-in 0.85s var(--ease-spring) both;
+        }
+
+        .keyword.small { font-size: 278px; }
+
+        .signature {
+            position: absolute;
+            left: 265px;
+            bottom: 208px;
+            z-index: 7;
+            color: var(--ink);
+            font-family: var(--font-cjk);
+            font-size: 72px;
+            line-height: 1;
+            letter-spacing: 0.08em;
+            transform: rotate(-4deg);
+        }
+
+        .signature::after {
+            content: "";
+            position: absolute;
+            left: 4px;
+            right: -16px;
+            bottom: -22px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--coral);
+            transform: rotate(-2deg);
+        }
+
+        .cue-block {
+            position: absolute;
+            left: 150px;
+            right: 150px;
+            bottom: 108px;
+            z-index: 8;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            gap: 34px;
+            pointer-events: none;
+        }
+
+        body.editing .cue-block { pointer-events: auto; }
+
+        .cue-cell {
+            min-height: 116px;
+            padding: 18px 26px 16px;
+            border-top: 2px solid rgba(23, 24, 27, 0.24);
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.34);
+        }
+
+        .cue-label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-family: var(--font-cjk);
+            font-size: 28px;
+            letter-spacing: 0.1em;
+        }
+
+        .cue-text {
+            margin: 0;
+            color: var(--ink);
+            font-family: var(--font-cjk);
+            font-size: 36px;
+            line-height: 1.28;
+        }
+
+        body.editing .cue-text { cursor: text; }
+
+        .build {
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(18px) scale(0.96);
+            transition: opacity 0.55s var(--ease-out), transform 0.7s var(--ease-spring), visibility 0s linear 0.55s;
+        }
+
+        .paper > .build { position: absolute; pointer-events: none; }
+
+        .build.shown {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            transition-delay: 0.03s;
+        }
+
+        .soft-orb,
+        .soft-ring,
+        .thin-line,
+        .dot,
+        .sound-bars,
+        .bubble,
+        .person,
+        .node,
+        .arc,
+        .swap-arrow {
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .soft-orb {
+            border-radius: 50%;
+            filter: blur(0.2px);
+            opacity: 0.82;
+            mix-blend-mode: multiply;
+        }
+
+        .soft-ring {
+            border: 2px solid rgba(23, 24, 27, 0.18);
+            border-radius: 50%;
+        }
+
+        .thin-line {
+            height: 2px;
+            background: rgba(23, 24, 27, 0.2);
+            transform-origin: left center;
+        }
+
+        .dot {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+        }
+
+        .slide-01 { background: #f7f7f5; }
+        .slide-01 .orb-a { width: 470px; height: 470px; left: -84px; top: -98px; background: var(--blue); }
+        .slide-01 .orb-b { width: 320px; height: 320px; right: 108px; bottom: -70px; background: var(--coral); }
+        .slide-01 .ring-a { width: 700px; height: 700px; left: 590px; top: 194px; }
+        .slide-01 .ring-b { width: 940px; height: 940px; left: 470px; top: 74px; border-color: rgba(23, 24, 27, 0.08); }
+        .slide-01 .build-dot { width: 34px; height: 34px; right: 310px; top: 224px; background: var(--yellow); }
+        .slide-01 .line-a { left: 252px; bottom: 196px; width: 180px; transform: rotate(-12deg); }
+        .slide-01 .line-b { right: 265px; top: 312px; width: 165px; transform: rotate(72deg); }
+
+        .slide-02 { background: #f1f6fb; }
+        .slide-02 .orb-a { width: 620px; height: 620px; right: -130px; top: -168px; background: var(--blue); opacity: 0.66; }
+        .slide-02 .orb-b { width: 250px; height: 250px; left: 190px; bottom: 90px; background: var(--mint); }
+        .slide-02 .ring-a { width: 500px; height: 500px; right: 220px; top: 265px; border-color: rgba(23, 24, 27, 0.13); }
+        .slide-02 .ring-b { width: 720px; height: 720px; right: 110px; top: 155px; border-color: rgba(23, 24, 27, 0.06); }
+        .slide-02 .build-dot { width: 28px; height: 28px; right: 388px; bottom: 236px; background: var(--coral); }
+
+        .slide-03 { background: #fffaf1; }
+        .slide-03 .orb-a { width: 400px; height: 400px; left: -98px; bottom: -130px; background: var(--yellow); opacity: 0.75; }
+        .slide-03 .orb-b { width: 260px; height: 260px; right: 140px; top: 120px; background: var(--mint); opacity: 0.76; }
+        .slide-03 .ring-a { width: 920px; height: 920px; left: 510px; top: 80px; border-color: rgba(23, 24, 27, 0.08); }
+        .sound-bars { left: 650px; bottom: 188px; width: 620px; height: 110px; display: flex; align-items: center; justify-content: center; gap: 16px; }
+        .sound-bars span { width: 14px; border-radius: 20px; background: var(--ink); opacity: 0.82; transform-origin: center; }
+        .sound-bars span:nth-child(1) { height: 30px; }
+        .sound-bars span:nth-child(2) { height: 70px; }
+        .sound-bars span:nth-child(3) { height: 108px; }
+        .sound-bars span:nth-child(4) { height: 54px; }
+        .sound-bars span:nth-child(5) { height: 86px; }
+        .sound-bars span:nth-child(6) { height: 42px; }
+        .sound-bars span:nth-child(7) { height: 96px; }
+        .sound-bars span:nth-child(8) { height: 34px; }
+        .slide.visible .sound-bars.shown span { animation: sound-pulse 1.5s ease-in-out infinite alternate; }
+        .slide.visible .sound-bars.shown span:nth-child(2n) { animation-delay: 0.2s; }
+        .slide.visible .sound-bars.shown span:nth-child(3n) { animation-delay: 0.4s; }
+
+        .slide-04 { background: #f5f1fb; }
+        .slide-04 .orb-a { width: 500px; height: 500px; right: -80px; bottom: -150px; background: var(--lavender); }
+        .slide-04 .orb-b { width: 270px; height: 270px; left: 140px; top: 110px; background: var(--coral); opacity: 0.6; }
+        .slide-04 .guess-dot { width: 106px; height: 106px; border-radius: 50%; box-shadow: 0 12px 26px rgba(23, 24, 27, 0.12); }
+        .slide-04 .guess-a { left: 365px; bottom: 246px; background: var(--coral); }
+        .slide-04 .guess-b { right: 366px; top: 218px; background: var(--blue); }
+        .slide-04 .guess-c { right: 270px; bottom: 230px; background: var(--mint); }
+
+        .slide-05 { background: #f2f8f3; }
+        .slide-05 .orb-a { width: 370px; height: 370px; left: -92px; top: 100px; background: var(--mint); }
+        .slide-05 .orb-b { width: 530px; height: 530px; right: -168px; bottom: -180px; background: var(--blue); opacity: 0.62; }
+        .slide-05 .ring-a { width: 700px; height: 700px; left: 610px; top: 168px; border-color: rgba(23, 24, 27, 0.1); }
+        .bubble { width: 226px; height: 138px; border: 2px solid var(--ink); border-radius: 72px; background: rgba(255, 255, 255, 0.42); box-shadow: 0 12px 24px rgba(23, 24, 27, 0.07); }
+        .bubble::after { content: ""; position: absolute; left: 34px; bottom: -18px; width: 34px; height: 34px; border-left: 2px solid var(--ink); border-bottom: 2px solid var(--ink); background: inherit; transform: skewY(-28deg) rotate(-16deg); }
+        .slide-05 .bubble-a { left: 265px; top: 220px; transform: rotate(-8deg); }
+        .slide-05 .bubble-b { right: 290px; top: 250px; transform: rotate(7deg); }
+        .slide-05 .bubble-c { left: 420px; bottom: 166px; transform: rotate(4deg); }
+
+        .slide-06 { background: #fff4f2; }
+        .slide-06 .orb-a { width: 640px; height: 640px; left: -210px; bottom: -218px; background: var(--coral); opacity: 0.56; }
+        .slide-06 .orb-b { width: 300px; height: 300px; right: 130px; top: -90px; background: var(--yellow); opacity: 0.68; }
+        .slide-06 .ring-a { width: 760px; height: 760px; left: 580px; top: 140px; border-color: rgba(23, 24, 27, 0.11); }
+        .slide-06 .ring-b { width: 530px; height: 530px; left: 695px; top: 255px; border-color: rgba(23, 24, 27, 0.08); }
+        .slide-06 .build-q { right: 428px; bottom: 212px; width: 72px; height: 100px; color: var(--ink); font-family: var(--font-latin); font-size: 92px; line-height: 1; font-weight: 400; }
+        .slide-06 .build-q::after { content: ""; position: absolute; left: 18px; bottom: -10px; width: 10px; height: 10px; border-radius: 50%; background: var(--coral); }
+
+        .slide-07 { background: #eef4fd; }
+        .slide-07 .orb-a { width: 490px; height: 490px; left: -130px; bottom: -122px; background: var(--blue); }
+        .slide-07 .orb-b { width: 340px; height: 340px; right: 80px; top: 88px; background: var(--yellow); opacity: 0.68; }
+        .slide-07 .swap-dot { width: 132px; height: 132px; border-radius: 50%; box-shadow: 0 14px 28px rgba(23, 24, 27, 0.1); }
+        .slide-07 .swap-a { left: 300px; top: 238px; background: var(--coral); }
+        .slide-07 .swap-b { right: 298px; bottom: 228px; background: var(--mint); }
+        .swap-arrow { left: 802px; top: 505px; width: 320px; height: 90px; border-top: 3px solid var(--ink); border-radius: 50%; transform: rotate(-12deg); }
+        .swap-arrow::after { content: ""; position: absolute; right: -4px; top: -11px; width: 22px; height: 22px; border-top: 3px solid var(--ink); border-right: 3px solid var(--ink); transform: rotate(34deg); }
+
+        .slide-08 { background: #eff8f3; }
+        .slide-08 .orb-a { width: 500px; height: 500px; right: -150px; top: -160px; background: var(--mint); }
+        .slide-08 .orb-b { width: 260px; height: 260px; left: 150px; bottom: 100px; background: var(--coral); opacity: 0.62; }
+        .person { width: 214px; height: 214px; border: 3px solid var(--ink); border-radius: 50%; background: rgba(255, 255, 255, 0.55); box-shadow: 0 14px 30px rgba(23, 24, 27, 0.09); }
+        .person::before { content: ""; position: absolute; left: 74px; top: 39px; width: 62px; height: 62px; border: 3px solid var(--ink); border-radius: 50%; background: var(--yellow); }
+        .person::after { content: ""; position: absolute; left: 43px; bottom: 29px; width: 122px; height: 66px; border: 3px solid var(--ink); border-radius: 72px 72px 42px 42px; background: var(--blue); }
+        .slide-08 .person-a { left: 312px; top: 243px; }
+        .slide-08 .person-b { right: 302px; bottom: 220px; }
+        .slide-08 .connect { left: 755px; top: 505px; width: 410px; height: 2px; background: var(--ink); transform: rotate(14deg); transform-origin: center; }
+        .slide-08 .connect::before, .slide-08 .connect::after { content: ""; position: absolute; top: -5px; width: 12px; height: 12px; border-radius: 50%; background: var(--ink); }
+        .slide-08 .connect::before { left: 0; }
+        .slide-08 .connect::after { right: 0; }
+
+        .slide-09 { background: #fbf5e8; }
+        .slide-09 .orb-a { width: 540px; height: 540px; left: -168px; top: -178px; background: var(--yellow); opacity: 0.62; }
+        .slide-09 .orb-b { width: 420px; height: 420px; right: -90px; bottom: -142px; background: var(--coral); opacity: 0.58; }
+        .slide-09 .ring-a { width: 880px; height: 880px; left: 520px; top: 94px; border-color: rgba(23, 24, 27, 0.08); }
+        .slide-09 .profile-line { left: 602px; top: 525px; width: 700px; height: 2px; background: rgba(23, 24, 27, 0.28); }
+        .slide-09 .profile-line::before, .slide-09 .profile-line::after { content: ""; position: absolute; top: -32px; width: 64px; height: 64px; border: 2px solid var(--ink); border-radius: 50%; background: var(--paper); }
+        .slide-09 .profile-line::before { left: 0; }
+        .slide-09 .profile-line::after { right: 0; background: var(--coral); }
+
+        .slide-10 { background: #f5f1fb; }
+        .slide-10 .orb-a { width: 400px; height: 400px; left: -122px; bottom: -130px; background: var(--lavender); }
+        .slide-10 .orb-b { width: 260px; height: 260px; right: 150px; top: 130px; background: var(--mint); opacity: 0.72; }
+        .slide-10 .plan-line { position: absolute; left: 568px; top: 378px; width: 780px; height: 300px; border-top: 2px solid rgba(23, 24, 27, 0.25); border-bottom: 2px solid rgba(23, 24, 27, 0.25); transform: rotate(-8deg); }
+        .slide-10 .plan-line::before { content: ""; position: absolute; left: 12%; top: 48%; width: 76%; height: 2px; background: rgba(23, 24, 27, 0.25); transform: rotate(22deg); }
+        .node { width: 52px; height: 52px; border: 3px solid var(--ink); border-radius: 50%; box-shadow: 0 10px 20px rgba(23, 24, 27, 0.1); }
+        .slide-10 .node-a { left: 536px; top: 338px; background: var(--coral); }
+        .slide-10 .node-b { right: 544px; top: 310px; background: var(--blue); }
+        .slide-10 .node-c { left: 630px; bottom: 252px; background: var(--yellow); }
+        .slide-10 .node-d { right: 470px; bottom: 238px; background: var(--mint); }
+
+        .slide-11 { background: #eef7fc; }
+        .slide-11 .orb-a { width: 530px; height: 530px; right: -160px; bottom: -172px; background: var(--blue); opacity: 0.68; }
+        .slide-11 .orb-b { width: 270px; height: 270px; left: 122px; top: 124px; background: var(--coral); opacity: 0.62; }
+        .arc { left: 560px; top: 420px; width: 800px; height: 240px; border: 3px solid var(--ink); border-color: var(--ink) transparent transparent transparent; border-radius: 50%; transform: rotate(-9deg); }
+        .arc::after { content: ""; position: absolute; right: 0; top: -10px; width: 20px; height: 20px; border-top: 3px solid var(--ink); border-right: 3px solid var(--ink); transform: rotate(22deg); }
+        .slide-11 .arc-b { left: 620px; top: 458px; width: 680px; height: 190px; border-width: 2px; opacity: 0.45; transform: rotate(12deg); }
+        .slide-11 .share-dot { width: 32px; height: 32px; right: 420px; top: 315px; background: var(--yellow); }
+
+        .slide-12 { background: #f7f7f5; }
+        .slide-12 .orb-a { width: 420px; height: 420px; left: -122px; top: -126px; background: var(--mint); opacity: 0.62; }
+        .slide-12 .orb-b { width: 360px; height: 360px; right: -108px; bottom: -110px; background: var(--coral); opacity: 0.58; }
+        .slide-12 .ring-a { width: 630px; height: 630px; left: 642px; top: 205px; border-color: rgba(23, 24, 27, 0.1); }
+        .slide-12 .ring-b { width: 820px; height: 820px; left: 547px; top: 110px; border-color: rgba(23, 24, 27, 0.05); }
+        .slide-12 .check { left: 862px; top: 468px; width: 210px; height: 120px; border-left: 5px solid var(--ink); border-bottom: 5px solid var(--ink); transform: rotate(-45deg); border-radius: 4px; }
+        .slide-12 .finish-dot { width: 32px; height: 32px; left: 1190px; bottom: 252px; background: var(--yellow); }
+
+        .chrome {
+            position: fixed;
+            left: 50%;
+            bottom: 22px;
+            z-index: 50;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 10px;
+            border: 1px solid rgba(23, 24, 27, 0.18);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.76);
+            box-shadow: 0 10px 26px rgba(23, 24, 27, 0.1);
+            opacity: 0;
+            transform: translate(-50%, 12px);
+            pointer-events: none;
+            transition: opacity 0.25s ease, transform 0.25s var(--ease-out);
+            backdrop-filter: blur(12px);
+        }
+
+        body.controls-visible .chrome,
+        .chrome:focus-within {
+            opacity: 1;
+            transform: translate(-50%, 0);
+            pointer-events: auto;
+        }
+
+        .counter {
+            min-width: 72px;
+            color: var(--ink);
+            font-family: var(--font-latin);
+            font-size: 16px;
+            text-align: center;
+            letter-spacing: 0.06em;
+        }
+
+        .nav-btn,
+        .edit-btn {
+            width: 34px;
+            height: 30px;
+            border: 0;
+            border-radius: 999px;
+            background: transparent;
+            color: var(--ink);
+            font-family: var(--font-latin);
+            font-size: 18px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .nav-btn:hover,
+        .edit-btn:hover,
+        .edit-btn.active { background: rgba(23, 24, 27, 0.1); }
+
+        .edit-btn { font-family: var(--font-cjk); font-size: 18px; }
+
+        .notes-panel {
+            position: fixed;
+            left: 50%;
+            bottom: 78px;
+            z-index: 60;
+            width: min(720px, calc(100vw - 48px));
+            padding: 20px 24px 18px;
+            border: 1px solid rgba(23, 24, 27, 0.15);
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.94);
+            box-shadow: 0 18px 46px rgba(23, 24, 27, 0.18);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translate(-50%, 18px);
+            transition: opacity 0.25s var(--ease-out), transform 0.35s var(--ease-out), visibility 0s linear 0.35s;
+        }
+
+        .notes-panel.open {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: translate(-50%, 0);
+            transition-delay: 0s;
+        }
+
+        .notes-kicker {
+            color: var(--muted);
+            font-size: 16px;
+            letter-spacing: 0.08em;
+        }
+
+        .notes-text {
+            margin-top: 8px;
+            color: var(--ink);
+            font-size: 27px;
+            line-height: 1.45;
+        }
+
+        .notes-help {
+            margin-top: 10px;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .editing [data-editable="true"] {
+            outline: 2px dashed rgba(23, 24, 27, 0.4);
+            outline-offset: 10px;
+            user-select: text;
+        }
+
+        @keyframes keyword-in {
+            0% { opacity: 0; transform: translateY(30px) scale(0.94); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        @keyframes sound-pulse {
+            0% { transform: scaleY(0.62); opacity: 0.54; }
+            100% { transform: scaleY(1); opacity: 0.95; }
+        }
+
+
+        /* Student instructions stay visible throughout each activity. */
+        .lesson-copy { position:absolute; inset:115px 150px 105px; z-index:6; display:flex; flex-direction:column; }
+        .lesson-copy h1 { margin:0 0 26px; font-size:94px; line-height:1.12; font-weight:400; }
+        .lesson-copy h2 { margin:0 0 30px; color:#536c67; font-size:54px; line-height:1.25; font-weight:400; }
+        .activity-copy { font-size:46px; line-height:1.55; }
+        .activity-copy p { margin:0 0 20px; }
+        .example, .dialogue { border-left:7px solid var(--coral); padding:18px 38px; background:rgba(255,255,255,.7); border-radius:0 22px 22px 0; margin:12px 0 20px; }
+        .dialogue p { margin:0 0 14px; }
+        .dialogue b { display:inline-block; margin-right:40px; color:#536c67; font-weight:400; }
+        .three { display:grid; grid-template-columns:repeat(3,1fr); gap:30px; margin:30px 0; }
+        .three div { padding:28px; background:rgba(255,255,255,.75); border-radius:24px; }
+        .three b { display:block; font-size:54px; font-weight:400; margin-bottom:20px; }
+        .three span { font-size:42px; }
+        .four { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:25px 0; }
+        .four span { padding:18px 28px; background:rgba(255,255,255,.75); border-radius:20px; }
+        .questions p { padding-left:28px; border-left:6px solid var(--mint); }
+        .student-help { margin:auto 0 0; padding-top:20px; border-top:2px solid #c7cecb; color:#384b47; font-size:34px; line-height:1.45; }
+        .slide-01 .lesson-copy h1 { font-size:148px; margin-bottom:45px; }
+
+        @media print {
+            html, body { width: 1920px; height: auto; overflow: visible; background: #fff; }
+            .deck-viewport { position: static; overflow: visible; background: #fff; }
+            .deck-stage { position: static; width: auto; height: auto; transform: none !important; }
+            .slide { position: relative; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; width: 1920px; height: 1080px; break-after: page; page-break-after: always; }
+            .slide:last-child { break-after: auto; page-break-after: auto; }
+            .chrome, .notes-panel { display: none !important; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="deck-viewport" id="deckViewport" aria-label="第一周课外活动幻灯片">
+        <main class="deck-stage" id="deckStage">
+            <section class="slide slide-01 active" aria-label="认识老师和同学">
+                <div class="paper">
+                    <div class="soft-orb orb-a"></div><div class="soft-orb orb-b"></div>
+                    <div class="soft-ring ring-a"></div><div class="soft-ring ring-b"></div>
+                    <div class="thin-line line-a"></div><div class="thin-line line-b"></div>
+                    <div class="dot build-dot build" data-build="1"></div>
+                    <div class="keyword-stage"><h1 class="keyword" data-editable="true">认识</h1></div>
+                    <div class="cue-block">
+                        <div class="cue-cell"><span class="cue-label">老师</span><p class="cue-text" data-editable="true">先说名字。</p></div>
+                        <div class="cue-cell"><span class="cue-label">学生</span><p class="cue-text" data-editable="true">准备听老师介绍。</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide slide-02" aria-label="认识新老师">
+                <div class="paper">
+                    <div class="soft-orb orb-a"></div><div class="soft-orb orb-b"></div>
+                    <div class="soft-ring ring-a"></div><div class="soft-ring ring-b"></div>
+                    <div class="dot build-dot build" data-build="1"></div>
+                    <div class="keyword-stage"><h1 class="keyword small" data-editable="true">我</h1></div>
+                    <div class="signature build" data-build="2" data-editable="true">颜士翔</div>
+                    <div class="cue-block">
+                        <div class="cue-cell"><span class="cue-label">老师</span><p class="cue-text" data-editable="true">介绍：名字、家乡、家里、喜欢什么。</p></div>
+                        <div class="cue-cell"><span class="cue-label">学生</span><p class="cue-text" data-editable="true">听老师说。</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide slide-03" aria-label="听老师介绍自己">
+                <div class="paper">
+                    <div class="soft-orb orb-a"></div><div class="soft-orb orb-b"></div>
+                    <div class="soft-ring ring-a"></div>
+                    <div class="sound-bars build" data-build="1" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                    <div class="keyword-stage"><h1 class="keyword" data-editable="true">听</h1></div>
+                    <div class="cue-block">
+                        <div class="cue-cell"><span class="cue-label">老师</span><p class="cue-text" data-editable="true">同一段话说两次。</p></div>
+                        <div class="cue-cell"><span class="cue-label">学生</span><p class="cue-text" data-editable="true">第二次听时，记住几个词。</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide slide-04" aria-label="选一选老师的事情">
+                <div class="paper">
+                    <div class="soft-orb orb-a"></div><div class="soft-orb orb-b"></div>
+                    <div class="dot guess-dot guess-a build" data-build="1"></div>
+                    <div class="dot guess-dot guess-b build" data-build="2"></div>
+                    <div class="dot guess-dot guess-c build" data-build="3"></div>
+                    <div class="keyword-stage"><h1 class="keyword" data-editable="true">选</h1></div>
+                    <div class="cue-block">
+                        <div class="cue-cell"><span class="cue-label">老师</span><p class="cue-text" data-editable="true">说三件自己的事。</p></div>
+                        <div class="cue-cell"><span class="cue-label">学生</span><p class="cue-text" data-editable="true">听完后选：以前、现在、以后。</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide slide-05" aria-label="向老师提问">
+                <div class="paper">
+                    <div class="soft-orb orb-a"></div><div class="soft-orb orb-b"></div>
+                    <div class="soft-ring ring-a"></div>
+                    <div class="bubble bubble-a build" data-build="1"></div>
+                    <div class="bubble bubble-b build" data-build="2"></div>
+                    <div class="bubble bubble-c build" data-build="3"></div>
+                    <div class="keyword-stage"><h1 class="keyword" data-editable="true">问</h1></div>
+                    <div class="cue-block">
+                        <div class="cue-cell"><span class="cue-label">老师</span><p class="cue-text" data-editable="true">回答大家的问题。</p></div>
+                        <div class="cue-cell"><span class="cue-label">学生</span><p class="cue-text" data-editable="true">每人问老师一个问题。</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide slide-06" aria-label="回答以后再问一句">
+                <div class="paper">
+                    <div class="soft-orb orb-a"></div><div class="soft-orb orb-b"></div>
+                    <div class="soft-ring ring-a"></div><div class="soft-ring ring-b"></div>
+                    <div class="build build-q" data-build="1" aria-hidden="true">?</div>
+                    <div class="keyword-stage"><h1 class="keyword small" data-editable="true">再问</h1></div>
+                    <div class="cue-block">
+                        <div class="cue-cell"><span class="cue-label">老师</span><p class="cue-text" data-editable="true">回答后示范再问。</p></div>
+                        <div class="cue-cell"><span class="cue-label">学生</span><p class="cue-text" data-editable="true">接着刚才的话，再问一句。</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide slide-07" aria-label="交换角色，老师来问">
+                <div class="paper">
+                    <div class="soft-orb orb-a"></div><div class="soft-orb orb-b"></div>
+                    <div class="swap-dot swap-a build" data-build="1"></div>
+                    <div class="swap-dot swap-b build" data-build="2"></div>
+                    <div class="swap-arrow build" data-build="3" aria-hidden="true"></div>
+                    <div class="keyword-stage"><h1 class="keyword" data-editable="true">换</h1></div>
+                    <div class="cue-block">
+                        <div class="cue-cell"><span class="cue-label">老师</span><p class="cue-text" data-editable="true">问：名字、家里、喜欢什么、为什么学汉语。</p></div>
+                        <div class="cue-cell"><span class="cue-label">学生</span><p class="cue-text" data-editable="true">每人说两三句。</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide slide-08" aria-label="记住关于老师的事">
+                <div class="paper">
+                    <div class="soft-orb orb-a"></div><div class="soft-orb orb-b"></div>
+                    <div class="person person-a build" data-build="1"></div>
+                    <div class="person person-b build" data-build="2"></div>
+                    <div class="connect build" data-build="3"></div>
+                    <div class="keyword-stage"><h1 class="keyword" data-editable="true">记住</h1></div>
+                    <div class="cue-block">
+                        <div class="cue-cell"><span class="cue-label">老师</span><p class="cue-text" data-editable="true">再说三件自己的事。</p></div>
+                        <div class="cue-cell"><span class="cue-label">学生</span><p class="cue-text" data-editable="true">记住：家乡、喜欢什么、平时做什么。</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide slide-09" aria-label="找出我和老师一样的地方">
+                <div class="paper">
+                    <div class="soft-orb orb-a"></div><div class="soft-orb orb-b"></div>
+                    <div class="soft-ring ring-a"></div>
+                    <div class="profile-line build" data-build="1"></div>
+                    <div class="keyword-stage"><h1 class="keyword small" data-editable="true">一样</h1></div>
+                    <div class="cue-block">
+                        <div class="cue-cell"><span class="cue-label">老师</span><p class="cue-text" data-editable="true">请大家找一样的地方。</p></div>
+                        <div class="cue-cell"><span class="cue-label">学生</span><p class="cue-text" data-editable="true">说：我和老师都喜欢……</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide slide-10" aria-label="说说自己的情况">
+                <div class="paper">
+                    <div class="soft-orb orb-a"></div><div class="soft-orb orb-b"></div>
+                    <div class="plan-line build" data-build="1"></div>
+                    <div class="node node-a build" data-build="2"></div>
+                    <div class="node node-b build" data-build="3"></div>
+                    <div class="node node-c build" data-build="4"></div>
+                    <div class="keyword-stage"><h1 class="keyword small" data-editable="true">说</h1></div>
+                    <div class="cue-block">
+                        <div class="cue-cell"><span class="cue-label">老师</span><p class="cue-text" data-editable="true">问三个简单的问题。</p></div>
+                        <div class="cue-cell"><span class="cue-label">学生</span><p class="cue-text" data-editable="true">说清楚自己的情况，再问老师一句。</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide slide-11" aria-label="说说对这门课的希望">
+                <div class="paper">
+                    <div class="soft-orb orb-a"></div><div class="soft-orb orb-b"></div>
+                    <div class="arc build" data-build="1"></div>
+                    <div class="arc arc-b build" data-build="2"></div>
+                    <div class="dot share-dot build" data-build="3"></div>
+                    <div class="keyword-stage"><h1 class="keyword" data-editable="true">希望</h1></div>
+                    <div class="cue-block">
+                        <div class="cue-cell"><span class="cue-label">老师</span><p class="cue-text" data-editable="true">问大家希望怎么上课。</p></div>
+                        <div class="cue-cell"><span class="cue-label">学生</span><p class="cue-text" data-editable="true">说：我希望多听、多说，学会……</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide slide-12" aria-label="最后说一说">
+                <div class="paper">
+                    <div class="soft-orb orb-a"></div><div class="soft-orb orb-b"></div>
+                    <div class="soft-ring ring-a"></div><div class="soft-ring ring-b"></div>
+                    <div class="check build" data-build="1" aria-hidden="true"></div>
+                    <div class="dot finish-dot build" data-build="2"></div>
+                    <div class="keyword-stage"><h1 class="keyword" data-editable="true">最后</h1></div>
+                    <div class="cue-block">
+                        <div class="cue-cell"><span class="cue-label">老师</span><p class="cue-text" data-editable="true">请大家说最后两句。</p></div>
+                        <div class="cue-cell"><span class="cue-label">学生</span><p class="cue-text" data-editable="true">说：我记得……；我希望……</p></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="chrome" id="chrome" aria-label="演示控制">
+        <button class="nav-btn" id="prevBtn" type="button" aria-label="上一页">‹</button>
+        <div class="counter" id="counter" aria-live="polite">01 / 12</div>
+        <button class="nav-btn" id="nextBtn" type="button" aria-label="下一页">›</button>
+        <button class="edit-btn" id="editBtn" type="button" aria-label="编辑文字" title="按 E 编辑">字</button>
+    </div>
+
+    <aside class="notes-panel" id="notesPanel" aria-hidden="true" aria-label="教师口头提示">
+        <div class="notes-kicker">教师口头提示</div>
+        <div class="notes-text" id="notesText"></div>
+        <div class="notes-help">按 N 显示或隐藏提示；点击页面或按方向键继续。</div>
+    </aside>
+
+    <script>
+        const TEACHER_NOTES = [
+            "今天先认识新老师。你们已经互相认识了，所以我们只认识老师。大家听和说，不用拿纸。",
+            "我先介绍自己。只说大家学过的话题：名字、家乡、家庭、喜欢的东西和每天做的事。屏幕上会出现我的名字，其他内容我来介绍。",
+            "我先说一小段。大家先听我在说什么。第二次听时，记住几个词：我从哪里来、喜欢什么、平时做什么。听不清，可以说：请再说一遍。",
+            "我会说三件自己的事。请选一选：哪一件是以前的事？哪一件是现在的事？哪一件是以后想做的事？先和旁边同学说，再问我。",
+            "每人问我一个你想知道的问题。可以问我的名字、家乡、家里有几个人、喜欢吃什么、喜欢做什么，或者平时几点起床。不知道怎么问，可以说：您喜欢……吗？您为什么喜欢……？",
+            "我回答以后，再问一个和刚才有关的问题。比如我说喜欢咖啡，你可以问：您什么时候喝咖啡？也可以问：您呢？我先示范一次。",
+            "现在换我问大家。问题都是你们学过的：你叫什么名字？你家有几个人？你喜欢做什么？你为什么学汉语？每个人说两三句就可以。",
+            "我再说几件自己的事。请大家记住，等一下我要问：我的家乡在哪里？我喜欢什么？我平时做什么？可以和同学小声说一说。",
+            "请找一个你和我一样的地方。可以说喜欢的食物、喜欢做的事、家乡、以前在哪里学汉语，或者平时做什么。找到以后说：我和老师都喜欢……。",
+            "我来问三个简单的问题，请大家说一说。说完以后，可以再问我一个新问题。把自己的情况说清楚，不用写下来。",
+            "你希望这门课怎么上？可以说：我希望多听、多说，学会……。听完几位同学说的内容，我们一起说好一件上课的事。",
+            "最后，每个人说两句：关于老师，我记得……；这学期，我希望……。请说一件你记住的事，结束今天的活动。"
+        ];
+
+        class SlidePresentation {
+            constructor() {
+                this.slides = Array.from(document.querySelectorAll('.slide'));
+                this.currentSlide = 0;
+                this.buildIndex = -1;
+                this.stage = document.getElementById('deckStage');
+                this.counter = document.getElementById('counter');
+                this.notesPanel = document.getElementById('notesPanel');
+                this.notesText = document.getElementById('notesText');
+                this.wheelLocked = false;
+                this.setupStageScale();
+                this.setupKeyboardNav();
+                this.setupPointerNav();
+                this.setupTouchNav();
+                this.setupWheelNav();
+                document.getElementById('prevBtn').addEventListener('click', (event) => { event.stopPropagation(); this.back(); });
+                document.getElementById('nextBtn').addEventListener('click', (event) => { event.stopPropagation(); this.advance(); });
+                this.showSlide(0);
+            }
+
+            setupStageScale() {
+                const scale = () => {
+                    const factor = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+                    const x = (window.innerWidth - 1920 * factor) / 2;
+                    const y = (window.innerHeight - 1080 * factor) / 2;
+                    this.stage.style.transform = `translate(${x}px, ${y}px) scale(${factor})`;
+                };
+                scale();
+                window.addEventListener('resize', scale);
+            }
+
+            setupKeyboardNav() {
+                document.addEventListener('keydown', (event) => {
+                    const target = event.target;
+                    const editing = target && target.getAttribute && target.getAttribute('contenteditable') === 'true';
+                    if (editing && !['Escape', 'Tab'].includes(event.key)) return;
+                    if (event.key === 'n' || event.key === 'N') { event.preventDefault(); this.toggleNotes(); return; }
+                    if (event.key === 'Escape') { this.closeNotes(); return; }
+                    if (['ArrowRight', 'ArrowDown', ' ', 'PageDown', 'Enter'].includes(event.key)) { event.preventDefault(); this.advance(); return; }
+                    if (['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace'].includes(event.key)) { event.preventDefault(); this.back(); return; }
+                    if (event.key === 'Home') { event.preventDefault(); this.showSlide(0); return; }
+                    if (event.key === 'End') { event.preventDefault(); this.showSlide(this.slides.length - 1); }
+                });
+            }
+
+            setupPointerNav() {
+                this.stage.addEventListener('click', (event) => {
+                    if (event.target.closest('[contenteditable="true"], button')) return;
+                    this.advance();
+                });
+                document.addEventListener('mousemove', (event) => {
+                    if (event.clientY > window.innerHeight - 120) {
+                        document.body.classList.add('controls-visible');
+                        window.clearTimeout(this.controlsTimer);
+                        this.controlsTimer = window.setTimeout(() => document.body.classList.remove('controls-visible'), 1800);
+                    }
+                });
+            }
+
+            setupTouchNav() {
+                let startX = 0;
+                document.addEventListener('touchstart', (event) => { startX = event.changedTouches[0].screenX; }, { passive: true });
+                document.addEventListener('touchend', (event) => {
+                    const delta = event.changedTouches[0].screenX - startX;
+                    if (Math.abs(delta) > 50) delta < 0 ? this.advance() : this.back();
+                }, { passive: true });
+            }
+
+            setupWheelNav() {
+                document.addEventListener('wheel', (event) => {
+                    if (this.wheelLocked || Math.abs(event.deltaY) < 20) return;
+                    this.wheelLocked = true;
+                    event.deltaY > 0 ? this.advance() : this.back();
+                    window.setTimeout(() => { this.wheelLocked = false; }, 500);
+                }, { passive: true });
+            }
+
+            showSlide(index) {
+                this.currentSlide = Math.max(0, Math.min(index, this.slides.length - 1));
+                this.buildIndex = -1;
+                this.slides.forEach((slide, indexValue) => {
+                    slide.classList.remove('visible');
+                    slide.classList.toggle('active', indexValue === this.currentSlide);
+                    slide.querySelectorAll('.build').forEach((element) => element.classList.remove('shown'));
+                });
+                window.requestAnimationFrame(() => {
+                    const active = this.slides[this.currentSlide];
+                    if (active) active.classList.add('visible');
+                });
+                this.counter.textContent = `${String(this.currentSlide + 1).padStart(2, '0')} / ${String(this.slides.length).padStart(2, '0')}`;
+                this.notesText.textContent = TEACHER_NOTES[this.currentSlide];
+            }
+
+            advance() {
+                const active = this.slides[this.currentSlide];
+                const builds = active ? Array.from(active.querySelectorAll('.build')).sort((a, b) => Number(a.dataset.build || 0) - Number(b.dataset.build || 0)) : [];
+                if (this.buildIndex < builds.length - 1) {
+                    this.buildIndex += 1;
+                    builds.forEach((element, indexValue) => {
+                        if (indexValue <= this.buildIndex) element.classList.add('shown');
+                    });
+                    return;
+                }
+                if (this.currentSlide < this.slides.length - 1) this.showSlide(this.currentSlide + 1);
+            }
+
+            back() {
+                if (this.buildIndex >= 0) {
+                    const active = this.slides[this.currentSlide];
+                    const builds = active ? Array.from(active.querySelectorAll('.build')).sort((a, b) => Number(a.dataset.build || 0) - Number(b.dataset.build || 0)) : [];
+                    if (builds[this.buildIndex]) builds[this.buildIndex].classList.remove('shown');
+                    this.buildIndex -= 1;
+                    return;
+                }
+                if (this.currentSlide > 0) this.showSlide(this.currentSlide - 1);
+            }
+
+            toggleNotes() {
+                const open = this.notesPanel.classList.toggle('open');
+                this.notesPanel.setAttribute('aria-hidden', String(!open));
+            }
+
+            closeNotes() {
+                this.notesPanel.classList.remove('open');
+                this.notesPanel.setAttribute('aria-hidden', 'true');
+            }
+        }
+
+        class InlineEditor {
+            constructor() {
+                this.isActive = false;
+                this.storageKey = 'lesson-01-keynote-activity-copy-v3';
+                this.button = document.getElementById('editBtn');
+                this.restore();
+                this.button.addEventListener('click', (event) => { event.stopPropagation(); this.toggle(); });
+                document.addEventListener('keydown', (event) => {
+                    const editing = event.target && event.target.getAttribute && event.target.getAttribute('contenteditable') === 'true';
+                    if ((event.key === 'e' || event.key === 'E') && !editing) this.toggle();
+                    if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 's') { event.preventDefault(); this.save(); }
+                });
+            }
+
+            toggle() {
+                this.isActive = !this.isActive;
+                document.body.classList.toggle('editing', this.isActive);
+                document.querySelectorAll('[data-editable="true"]').forEach((node) => { node.contentEditable = this.isActive ? 'true' : 'false'; });
+                this.button.classList.toggle('active', this.isActive);
+            }
+
+            save() {
+                const values = {};
+                document.querySelectorAll('[data-editable="true"]').forEach((node, indexValue) => { values[indexValue] = node.textContent; });
+                localStorage.setItem(this.storageKey, JSON.stringify(values));
+                this.button.title = '已保存到本机浏览器';
+            }
+
+            restore() {
+                try {
+                    const values = JSON.parse(localStorage.getItem(this.storageKey) || '{}');
+                    document.querySelectorAll('[data-editable="true"]').forEach((node, indexValue) => {
+                        if (typeof values[indexValue] === 'string' && values[indexValue].trim()) node.textContent = values[indexValue];
+                    });
+                } catch (error) {
+                    // 保留随文件打包的默认文案。
+                }
+            }
+        }
+
+        window.presentation = new SlidePresentation();
+        window.editor = new InlineEditor();
+    </script>
+</body>
+</html>

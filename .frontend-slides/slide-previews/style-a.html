@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的大学生活与新学期计划</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* === THEME: SPLIT PASTEL === */
+        :root {
+            --stage-bg: #d8d1e9;
+            --slide-bg: #f5e6dc;
+            --peach: #f5e6dc;
+            --lavender: #e4dff0;
+            --ink: #1b1a1c;
+            --muted: #6d6870;
+            --teal: #147d78;
+            --coral: #e87961;
+            --yellow: #f4c95d;
+            --font-display: "KaiTi", "Noto Serif SC", serif;
+            --font-body: "KaiTi", "Noto Serif SC", serif;
+            --font-latin: "Times New Roman", "Noto Sans SC", sans-serif;
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* === FIXED 16:9 STAGE: MANDATORY BASE STYLES === */
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background: var(--stage-bg, #000);
+        }
+
+        .deck-viewport {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            background: var(--stage-bg, #000);
+        }
+
+        .deck-stage {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            transform-origin: 0 0;
+            background: var(--slide-bg, #fff);
+        }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            display: block;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            background: var(--slide-bg, #fff);
+        }
+
+        .slide.active,
+        .slide.visible {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+            z-index: 1;
+        }
+
+        img,
+        video,
+        canvas,
+        svg {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .deck-controls {
+            position: fixed;
+            left: 50%;
+            bottom: 22px;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+
+        @media print {
+            html,
+            body {
+                width: 1920px;
+                height: auto;
+                overflow: visible;
+                background: #fff;
+            }
+
+            .deck-viewport {
+                position: static;
+                overflow: visible;
+                background: #fff;
+            }
+
+            .deck-stage {
+                position: static;
+                width: auto;
+                height: auto;
+                transform: none !important;
+                background: none;
+            }
+
+            .slide {
+                position: relative;
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                pointer-events: auto !important;
+                width: 1920px;
+                height: 1080px;
+                break-after: page;
+                page-break-after: always;
+            }
+
+            .slide:last-child {
+                break-after: auto;
+                page-break-after: auto;
+            }
+
+            .deck-controls {
+                display: none !important;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.2s !important;
+            }
+        }
+
+        /* === PRESENTATION CHROME === */
+        .slide-frame {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, var(--peach) 0 54%, var(--lavender) 54% 100%);
+        }
+
+        .slide-frame::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 46%;
+            height: 100%;
+            opacity: 0.24;
+            background-image: linear-gradient(rgba(20, 125, 120, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(20, 125, 120, 0.2) 1px, transparent 1px);
+            background-size: 52px 52px;
+            mask-image: linear-gradient(90deg, transparent, #000 24%, #000 100%);
+        }
+
+        .masthead {
+            position: absolute;
+            top: 74px;
+            left: 116px;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            color: var(--muted);
+            font-family: var(--font-body);
+            font-size: 28px;
+            letter-spacing: 0.04em;
+        }
+
+        .masthead .mark {
+            width: 76px;
+            height: 10px;
+            background: var(--coral);
+        }
+
+        .headline {
+            position: absolute;
+            top: 202px;
+            left: 116px;
+            z-index: 2;
+            color: var(--ink);
+            font-family: var(--font-display);
+            font-size: 112px;
+            font-weight: 700;
+            line-height: 1.06;
+            letter-spacing: 0.02em;
+        }
+
+        .headline span { display: block; }
+
+        .kicker {
+            position: absolute;
+            top: 544px;
+            left: 120px;
+            z-index: 2;
+            color: var(--teal);
+            font-family: var(--font-display);
+            font-size: 46px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+        }
+
+        .subcopy {
+            position: absolute;
+            top: 635px;
+            left: 120px;
+            z-index: 2;
+            width: 720px;
+            color: var(--muted);
+            font-family: var(--font-body);
+            font-size: 31px;
+            line-height: 1.5;
+        }
+
+        .task-line {
+            position: absolute;
+            left: 120px;
+            bottom: 105px;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            color: var(--ink);
+            font-family: var(--font-body);
+            font-size: 29px;
+        }
+
+        .task-line .arrow { color: var(--coral); font-family: var(--font-latin); font-size: 38px; }
+
+        /* === THREE-PHASE VISUAL === */
+        .phase-cluster {
+            position: absolute;
+            top: 208px;
+            right: 178px;
+            z-index: 2;
+            width: 650px;
+            height: 620px;
+        }
+
+        .phase {
+            position: absolute;
+            width: 274px;
+            height: 274px;
+            border: 3px solid currentColor;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: var(--teal);
+            background: rgba(255, 255, 255, 0.22);
+            font-family: var(--font-display);
+            font-size: 43px;
+            font-weight: 700;
+            box-shadow: 0 14px 0 rgba(255, 255, 255, 0.25);
+        }
+
+        .phase.past { top: 0; left: 78px; }
+        .phase.now { top: 236px; left: 250px; color: var(--coral); background: rgba(255, 237, 230, 0.72); }
+        .phase.future { top: 346px; left: 0; color: #7561c5; background: rgba(244, 240, 255, 0.74); }
+
+        .phase-arrow {
+            position: absolute;
+            z-index: 3;
+            color: rgba(27, 26, 28, 0.28);
+            font-family: var(--font-latin);
+            font-size: 55px;
+        }
+
+        .phase-arrow.one { top: 112px; left: 370px; }
+        .phase-arrow.two { top: 380px; left: 180px; }
+
+        .start-badge {
+            position: absolute;
+            right: 168px;
+            bottom: 78px;
+            z-index: 2;
+            padding: 17px 26px 14px;
+            background: var(--yellow);
+            color: var(--ink);
+            font-family: var(--font-body);
+            font-size: 25px;
+            font-weight: 700;
+            transform: rotate(-3deg);
+        }
+
+        /* === REVEAL MOTION === */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+        }
+
+        .slide.visible .reveal { opacity: 1; transform: translateY(0); }
+        .slide.visible .reveal:nth-child(2) { transition-delay: 0.08s; }
+        .slide.visible .reveal:nth-child(3) { transition-delay: 0.16s; }
+        .slide.visible .reveal:nth-child(4) { transition-delay: 0.24s; }
+
+        .phase-cluster .phase { animation: float-in 0.9s var(--ease-out-expo) both; }
+        .slide.visible .phase.past { animation-delay: 0.2s; }
+        .slide.visible .phase.now { animation-delay: 0.34s; }
+        .slide.visible .phase.future { animation-delay: 0.48s; }
+
+        @keyframes float-in {
+            from { opacity: 0; transform: scale(0.82) translateY(24px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        /* === EDIT MODE === */
+        .edit-hotzone { position: fixed; top: 0; left: 0; width: 84px; height: 84px; z-index: 10000; cursor: pointer; }
+        .edit-toggle { position: fixed; top: 18px; left: 18px; z-index: 10001; opacity: 0; pointer-events: none; border: 0; border-radius: 50%; width: 44px; height: 44px; background: var(--ink); color: #fff; cursor: pointer; transition: opacity 0.3s ease; }
+        .edit-toggle.show, .edit-toggle.active { opacity: 1; pointer-events: auto; }
+        .editing [contenteditable="true"] { outline: 3px dashed var(--coral); outline-offset: 5px; cursor: text; }
+
+        /* === CHROME OUTSIDE THE STAGE === */
+        .deck-controls { color: rgba(27, 26, 28, 0.55); font: 16px var(--font-latin); letter-spacing: 0.12em; }
+    </style>
+</head>
+<body>
+    <div class="deck-viewport">
+        <main class="deck-stage" id="deckStage">
+            <section class="slide active visible" aria-label="第一周投影活动">
+                <div class="slide-frame"></div>
+                <div class="masthead reveal"><span class="mark"></span><span>第一周　/　投影活动</span></div>
+                <h1 class="headline reveal"><span>我的大学生活</span><span>与新学期计划</span></h1>
+                <p class="kicker reveal">先从老师开始</p>
+                <p class="subcopy reveal">听老师说一段话，记住 <span class="latin">3</span> 项事实和 <span class="latin">1</span> 个目标。</p>
+                <div class="phase-cluster" aria-label="过去、现在、未来">
+                    <div class="phase past">过去</div>
+                    <div class="phase now">现在</div>
+                    <div class="phase future">未来</div>
+                    <div class="phase-arrow one">→</div>
+                    <div class="phase-arrow two">↗</div>
+                </div>
+                <div class="task-line reveal"><span>老师先说</span><span class="arrow">→</span><span>你来问</span><span class="arrow">→</span><span>一起提案</span></div>
+                <div class="start-badge reveal">学生接着来</div>
+            </section>
+        </main>
+    </div>
+    <div class="deck-controls" aria-label="投影片进度"><span>01 / 01</span></div>
+    <div class="edit-hotzone" aria-hidden="true"></div>
+    <button class="edit-toggle" id="editToggle" title="Edit mode (E)" aria-label="开启编辑模式">✎</button>
+    <script>
+        /* === FIXED-STAGE PRESENTATION CONTROLLER === */
+        class SlidePresentation {
+            constructor() {
+                this.slides = Array.from(document.querySelectorAll('.slide'));
+                this.currentSlide = 0;
+                this.stage = document.getElementById('deckStage');
+                this.setupStageScale();
+                this.setupKeyboardNav();
+                this.setupTouchNav();
+                this.setupWheelNav();
+                this.showSlide(0);
+            }
+
+            setupStageScale() {
+                const scale = () => {
+                    const factor = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+                    const x = (window.innerWidth - 1920 * factor) / 2;
+                    const y = (window.innerHeight - 1080 * factor) / 2;
+                    this.stage.style.transform = `translate(${x}px, ${y}px) scale(${factor})`;
+                };
+                scale();
+                window.addEventListener('resize', scale);
+            }
+
+            setupKeyboardNav() {
+                document.addEventListener('keydown', (event) => {
+                    if (event.target && event.target.getAttribute('contenteditable') === 'true') return;
+                    if (['ArrowRight', 'ArrowDown', ' ', 'PageDown'].includes(event.key)) { event.preventDefault(); this.showSlide(this.currentSlide + 1); }
+                    if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(event.key)) { event.preventDefault(); this.showSlide(this.currentSlide - 1); }
+                });
+            }
+
+            setupTouchNav() {
+                let startX = 0;
+                document.addEventListener('touchstart', (event) => { startX = event.changedTouches[0].screenX; }, { passive: true });
+                document.addEventListener('touchend', (event) => { const delta = event.changedTouches[0].screenX - startX; if (Math.abs(delta) > 50) this.showSlide(this.currentSlide + (delta < 0 ? 1 : -1)); }, { passive: true });
+            }
+
+            setupWheelNav() {
+                document.addEventListener('wheel', (event) => { if (Math.abs(event.deltaY) > 20) this.showSlide(this.currentSlide + (event.deltaY > 0 ? 1 : -1)); }, { passive: true });
+            }
+
+            showSlide(index) {
+                this.currentSlide = Math.max(0, Math.min(index, this.slides.length - 1));
+                this.slides.forEach((slide, i) => { slide.classList.toggle('active', i === this.currentSlide); slide.classList.toggle('visible', i === this.currentSlide); });
+            }
+        }
+
+        /* === LIGHTWEIGHT INLINE EDITOR === */
+        class InlineEditor {
+            constructor() { this.isActive = false; this.toggle = document.getElementById('editToggle'); this.bind(); }
+            bind() {
+                this.toggle.addEventListener('click', () => this.toggleEditMode());
+                document.addEventListener('keydown', (event) => { if ((event.key === 'e' || event.key === 'E') && !event.target.getAttribute('contenteditable')) this.toggleEditMode(); if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 's') { event.preventDefault(); this.save(); } });
+                const hotzone = document.querySelector('.edit-hotzone'); let hideTimeout = null;
+                hotzone.addEventListener('mouseenter', () => { clearTimeout(hideTimeout); this.toggle.classList.add('show'); });
+                hotzone.addEventListener('mouseleave', () => { hideTimeout = setTimeout(() => { if (!this.isActive) this.toggle.classList.remove('show'); }, 400); });
+                this.toggle.addEventListener('mouseenter', () => clearTimeout(hideTimeout));
+                this.toggle.addEventListener('mouseleave', () => { hideTimeout = setTimeout(() => { if (!this.isActive) this.toggle.classList.remove('show'); }, 400); });
+                hotzone.addEventListener('click', () => this.toggleEditMode());
+            }
+            toggleEditMode() { this.isActive = !this.isActive; document.body.classList.toggle('editing', this.isActive); document.querySelectorAll('.slide [data-editable]').forEach((node) => { node.contentEditable = this.isActive ? 'true' : 'false'; }); this.toggle.classList.toggle('active', this.isActive); }
+            save() { localStorage.setItem('frontend-slides-style-a', document.querySelector('.deck-stage').innerHTML); }
+        }
+
+        new SlidePresentation();
+        new InlineEditor();
+    </script>
+</body>
+</html>

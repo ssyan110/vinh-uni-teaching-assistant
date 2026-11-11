@@ -1,14 +1,10 @@
 {
-  "skillId": "ai-teaching-material-systems",
+  "skillId": "vinh-teaching-materials",
   "tier": "draft-only",
   "status": "bootstrapped",
   "triggerSignals": [
-    "teaching material system",
-    "teacher deck pipeline",
-    "lesson production workflow",
-    "html teaching deck",
-    "courseware system",
-    "classroom-ready validation"
+    "editable online pre-study",
+    "native classroom OpenSlide"
   ],
   "tokenBudget": {
     "maxTokens": 9000,

@@ -1,0 +1,75 @@
+{
+  "artifact": "第一周课外活动 HTML slide 三种视觉 prototype",
+  "status": "selected_open_slide_teacher_focus_draft",
+  "scope": "supplementary_and_activity_slides_only",
+  "main_course_slides": "keep_existing_pptx",
+  "selected_style": "Open-Slide 1920 Canvas",
+  "base_style": "Ash & Lime",
+  "expanded_deck": "../lesson-01-课外活动-OpenSlide.html",
+  "format": "single_self_contained_html_per_prototype",
+  "fixed_stage": "1920x1080",
+  "delivery": "projector_first_no_printed_handouts",
+  "student_display_rule": "visible_route_and_activity_prompts",
+  "cue_layout": "content_led_cards_dialogue_and_sentence_frames",
+  "teacher_name": "颜士翔",
+  "content_focus": "teacher_student_get_to_know_each_other_with_elementary_topics",
+  "interaction": {
+    "click": "advance_build_then_slide",
+    "keyboard": "arrow_space_enter_home_end",
+    "touch": "swipe_left_right",
+    "teacher_notes": "press_N",
+    "inline_editing": "press_E_then_command_or_control_S"
+  },
+  "visible_slide_titles": [
+    "今天，认识老师",
+    "今天不是重新认识同学",
+    "老师先说四件事",
+    "第一次听：先听大意",
+    "第二次听：记住三个信息",
+    "你还想知道老师什么？",
+    "回答以后，再问一句",
+    "说说你自己",
+    "我和老师有一样的地方",
+    "说清楚你的情况",
+    "说一个你真的希望学会的东西",
+    "最后，每人说一句"
+  ],
+  "prototypes": [
+    {
+      "id": "A",
+      "name": "分屏柔和风",
+      "origin": "Frontend Slides safe preset: Split Pastel",
+      "file": "style-a.html",
+      "animation": "staggered reveal and floating timeline circles"
+    },
+    {
+      "id": "B",
+      "name": "校园海报风",
+      "origin": "Frontend Slides bold preview principles: BlockFrame-inspired",
+      "file": "style-b.html",
+      "animation": "pop-in cards and sticker entrance"
+    },
+    {
+      "id": "C",
+      "name": "校园讯号风",
+      "origin": "custom wildcard design authored for the listening-speaking activity",
+      "file": "style-c.html",
+      "animation": "signal-point entrance and orbital label reveal"
+    }
+  ],
+  "qa": {
+    "fixed_stage_css": "included",
+    "reduced_motion": "included",
+    "keyboard_touch_wheel_navigation": "included",
+    "inline_editing": "included",
+    "browser_render": "passed_at_1920x1080",
+    "expanded_deck_slide_count": 12,
+    "expanded_deck_page_errors": 0,
+    "expanded_deck_overflow_checks": "passed_all_12_slides",
+    "expanded_deck_visible_cue_checks": "passed_all_12_slides_with_visible_actions",
+    "expanded_deck_interaction_checks": "passed_click_keyboard_notes_and_scaling",
+    "manual_classroom_rehearsal": "pending"
+  },
+  "source_reference": "https://github.com/1weiho/open-slide",
+  "skill_reference": "deck-open-slide-canvas"
+}

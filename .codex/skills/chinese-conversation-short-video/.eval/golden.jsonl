@@ -1,0 +1,2 @@
+{"id": "single-exchange", "input": "Create a short video for one Mandarin ordering exchange with editable speaker captions.", "expected": {"trigger": "chinese-conversation-short-video", "outputContains": ["dialogue", "captions"]}}
+{"id": "short-recut", "input": "Recut this 25-second illustrated classroom conversation to remove a repeated line.", "expected": {"trigger": "chinese-conversation-short-video", "outputContains": ["audio", "captions"]}}

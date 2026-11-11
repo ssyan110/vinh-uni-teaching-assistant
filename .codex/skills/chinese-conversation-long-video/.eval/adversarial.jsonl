@@ -1,0 +1,2 @@
+{"id": "outside-scope-1", "input": "Make one short cafe-ordering dialogue clip.", "expectedReject": true}
+{"id": "outside-scope-2", "input": "Trim the silence at the end of an existing recording.", "expectedReject": true}

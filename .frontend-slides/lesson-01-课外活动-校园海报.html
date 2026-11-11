@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一周课外活动｜我的大学生活与新学期计划</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&family=Noto+Serif+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* === THEME: BLOCKFRAME-INSPIRED CAMPUS POSTER === */
+        :root {
+            --stage-bg: #111111;
+            --slide-bg: #fffdf5;
+            --paper: #fffdf5;
+            --white: #ffffff;
+            --ink: #000000;
+            --pink: #fe90e8;
+            --blue: #c0f7fe;
+            --green: #99e885;
+            --yellow: #f7cb46;
+            --cream: #ffdc8b;
+            --muted: #454545;
+            --font-display: "KaiTi", "Noto Sans SC", sans-serif;
+            --font-body: "KaiTi", "Noto Sans SC", sans-serif;
+            --font-latin: "Times New Roman", serif;
+            --ease-pop: cubic-bezier(0.22, 1.35, 0.36, 1);
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* === FIXED 16:9 STAGE: MANDATORY BASE STYLES === */
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background: var(--stage-bg, #000);
+        }
+
+        .deck-viewport {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            background: var(--stage-bg, #000);
+        }
+
+        .deck-stage {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            transform-origin: 0 0;
+            background: var(--slide-bg, #fff);
+        }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            display: block;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            background: var(--slide-bg, #fff);
+        }
+
+        .slide.active,
+        .slide.visible {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+            z-index: 1;
+        }
+
+        img,
+        video,
+        canvas,
+        svg {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .deck-controls {
+            position: fixed;
+            left: 50%;
+            bottom: 22px;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+
+        @media print {
+            html,
+            body {
+                width: 1920px;
+                height: auto;
+                overflow: visible;
+                background: #fff;
+            }
+
+            .deck-viewport {
+                position: static;
+                overflow: visible;
+                background: #fff;
+            }
+
+            .deck-stage {
+                position: static;
+                width: auto;
+                height: auto;
+                transform: none !important;
+                background: none;
+            }
+
+            .slide {
+                position: relative;
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                pointer-events: auto !important;
+                width: 1920px;
+                height: 1080px;
+                break-after: page;
+                page-break-after: always;
+            }
+
+            .slide:last-child {
+                break-after: auto;
+                page-break-after: auto;
+            }
+
+            .deck-controls {
+                display: none !important;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.2s !important;
+            }
+        }
+
+        /* === SHARED DECK CHROME === */
+        .slide-shell {
+            position: absolute;
+            inset: 0;
+            padding: 60px;
+            background: var(--paper);
+        }
+
+        .slide-shell.blue { background: var(--blue); }
+        .slide-shell.pink { background: var(--pink); }
+        .slide-shell.green { background: var(--green); }
+        .slide-shell.yellow { background: var(--yellow); }
+        .slide-shell.cream { background: var(--cream); }
+        .slide-shell.black { background: var(--ink); color: var(--white); }
+
+        .frame-line {
+            position: absolute;
+            inset: 28px;
+            border: 4px solid var(--ink);
+            pointer-events: none;
+        }
+
+        .black .frame-line { border-color: var(--white); }
+
+        .topbar {
+            position: absolute;
+            top: 78px;
+            left: 112px;
+            right: 112px;
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--ink);
+            font-family: var(--font-body);
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .black .topbar { color: var(--white); }
+        .topbar .divider { flex: 1; height: 4px; margin: 0 26px; background: var(--ink); }
+        .black .topbar .divider { background: var(--white); }
+        .topbar .counter { font-family: var(--font-latin); font-size: 27px; letter-spacing: 0.06em; }
+
+        .label-pill {
+            display: inline-flex;
+            align-items: center;
+            min-height: 48px;
+            padding: 8px 20px 6px;
+            border: 3px solid var(--ink);
+            background: var(--white);
+            color: var(--ink);
+            box-shadow: 4px 4px 0 var(--ink);
+            font-family: var(--font-body);
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .label-pill.blue { background: var(--blue); }
+        .label-pill.pink { background: var(--pink); }
+        .label-pill.green { background: var(--green); }
+        .label-pill.yellow { background: var(--yellow); }
+        .label-pill.cream { background: var(--cream); }
+        .black .label-pill { border-color: var(--white); background: var(--yellow); color: var(--ink); box-shadow: 4px 4px 0 var(--white); }
+
+        .counter-box {
+            position: fixed;
+            left: 24px;
+            bottom: 20px;
+            z-index: 1001;
+            padding: 11px 18px 9px;
+            border: 3px solid var(--ink);
+            background: var(--white);
+            color: var(--ink);
+            box-shadow: 4px 4px 0 var(--ink);
+            font-family: var(--font-latin);
+            font-size: 17px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+        }
+
+        .nav-buttons {
+            position: fixed;
+            right: 24px;
+            bottom: 20px;
+            z-index: 1001;
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-btn {
+            width: 48px;
+            height: 48px;
+            border: 3px solid var(--ink);
+            background: var(--white);
+            color: var(--ink);
+            box-shadow: 4px 4px 0 var(--ink);
+            cursor: pointer;
+            font-family: var(--font-latin);
+            font-size: 25px;
+            line-height: 1;
+            transition: transform 0.16s ease, box-shadow 0.16s ease;
+        }
+
+        .nav-btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+        .nav-btn:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+
+        /* === REUSABLE DECORATION === */
+        .dot-grid {
+            position: absolute;
+            width: 260px;
+            height: 180px;
+            opacity: 0.38;
+            background-image: radial-gradient(circle, var(--ink) 1.4px, transparent 1.4px);
+            background-size: 24px 24px;
+            pointer-events: none;
+        }
+
+        .stripe-block {
+            position: absolute;
+            width: 138px;
+            height: 46px;
+            border: 3px solid var(--ink);
+            background: repeating-linear-gradient(45deg, var(--ink), var(--ink) 4px, var(--green) 4px, var(--green) 12px);
+            transform: rotate(-8deg);
+            pointer-events: none;
+        }
+
+        .star-burst {
+            position: absolute;
+            width: 112px;
+            height: 112px;
+            border: 3px solid var(--ink);
+            background: var(--pink);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            pointer-events: none;
+        }
+
+        .corner-bracket {
+            position: absolute;
+            width: 38px;
+            height: 38px;
+            border-top: 3px solid var(--ink);
+            border-left: 3px solid var(--ink);
+            pointer-events: none;
+        }
+
+        .corner-bracket.br { transform: rotate(180deg); }
+
+        .hard-card {
+            border: 4px solid var(--ink);
+            background: var(--white);
+            color: var(--ink);
+            box-shadow: 8px 8px 0 var(--ink);
+        }
+
+        .small-card {
+            border: 3px solid var(--ink);
+            background: var(--white);
+            color: var(--ink);
+            box-shadow: 4px 4px 0 var(--ink);
+        }
+
+        .card-title {
+            color: var(--ink);
+            font-family: var(--font-body);
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .body-copy {
+            color: var(--ink);
+            font-family: var(--font-body);
+            font-size: 28px;
+            line-height: 1.55;
+        }
+
+        .latin { font-family: var(--font-latin); }
+
+        /* === SLIDE 01: COVER === */
+        .cover .hero-card {
+            position: absolute;
+            left: 126px;
+            top: 232px;
+            z-index: 3;
+            width: 1030px;
+            min-height: 440px;
+            padding: 56px 64px 48px;
+            background: var(--blue);
+            transform: rotate(-1.1deg);
+        }
+
+        .cover h1 {
+            color: var(--ink);
+            font-family: var(--font-display);
+            font-size: 108px;
+            font-weight: 700;
+            line-height: 1.08;
+            letter-spacing: 0;
+        }
+
+        .cover h1 span { display: block; }
+
+        .cover .hero-tag {
+            display: inline-block;
+            margin-top: 34px;
+            padding: 12px 24px 10px;
+            background: var(--ink);
+            color: var(--white);
+            font-family: var(--font-body);
+            font-size: 35px;
+            font-weight: 700;
+        }
+
+        .cover .stat-card {
+            position: absolute;
+            top: 248px;
+            right: 156px;
+            z-index: 5;
+            width: 360px;
+            min-height: 198px;
+            padding: 30px 30px 24px;
+            background: var(--green);
+            transform: rotate(4deg);
+        }
+
+        .cover .stat-number {
+            color: var(--ink);
+            font-family: var(--font-latin);
+            font-size: 86px;
+            font-weight: 900;
+            line-height: 0.9;
+        }
+
+        .cover .stat-label { margin-top: 14px; color: var(--ink); font-family: var(--font-body); font-size: 31px; font-weight: 700; }
+
+        .cover .student-sticker {
+            position: absolute;
+            right: 220px;
+            top: 520px;
+            z-index: 5;
+            width: 230px;
+            height: 230px;
+            display: grid;
+            place-items: center;
+            border: 4px solid var(--ink);
+            border-radius: 50%;
+            background: var(--pink);
+            color: var(--ink);
+            box-shadow: 8px 8px 0 var(--ink);
+            font-family: var(--font-body);
+            font-size: 37px;
+            font-weight: 700;
+            line-height: 1.15;
+            text-align: center;
+            transform: rotate(-7deg);
+        }
+
+        .cover .flow {
+            position: absolute;
+            left: 128px;
+            bottom: 124px;
+            z-index: 4;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            color: var(--ink);
+            font-family: var(--font-body);
+            font-size: 31px;
+            font-weight: 700;
+        }
+
+        .cover .flow .arrow { font-family: var(--font-latin); font-size: 42px; }
+
+        /* === SLIDE 02: TEACHER LISTENING === */
+        .listen-layout {
+            position: absolute;
+            left: 118px;
+            right: 118px;
+            top: 178px;
+            bottom: 112px;
+            z-index: 3;
+        }
+
+        .listen-layout .label-pill { margin-bottom: 28px; }
+        .listen-layout h2, .ask-layout h2, .question-layout h2, .pair-layout h2, .share-layout h2, .proposal-layout h2, .close-layout h2 {
+            color: var(--ink);
+            font-family: var(--font-display);
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 1.15;
+        }
+
+        .listen-layout .prompt-card {
+            position: absolute;
+            left: 0;
+            top: 178px;
+            width: 1030px;
+            min-height: 420px;
+            padding: 48px 56px;
+            transform: rotate(-1deg);
+        }
+
+        .prompt-card .prompt-list {
+            display: grid;
+            gap: 18px;
+            color: var(--ink);
+            font-family: var(--font-body);
+            font-size: 39px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .prompt-list span::before { content: "?"; display: inline-grid; place-items: center; width: 42px; height: 42px; margin-right: 18px; border: 3px solid var(--ink); background: var(--yellow); font-family: var(--font-latin); font-size: 27px; vertical-align: 8px; }
+
+        .listen-layout .stat-card {
+            position: absolute;
+            right: 0;
+            top: 200px;
+            width: 420px;
+            min-height: 300px;
+            padding: 38px;
+            background: var(--pink);
+            transform: rotate(3.2deg);
+        }
+
+        .listen-layout .stat-card .big { color: var(--ink); font-family: var(--font-latin); font-size: 88px; font-weight: 900; line-height: 0.9; }
+        .listen-layout .stat-card .small { margin-top: 24px; color: var(--ink); font-family: var(--font-body); font-size: 34px; font-weight: 700; line-height: 1.35; }
+        .listen-layout .finish-line { position: absolute; left: 8px; bottom: 0; color: var(--ink); font-family: var(--font-body); font-size: 31px; font-weight: 700; }
+
+        /* === SLIDE 03: NOTE-TAKING === */
+        .note-layout {
+            position: absolute;
+            left: 118px;
+            right: 118px;
+            top: 174px;
+            bottom: 110px;
+            z-index: 3;
+        }
+
+        .note-layout h2 { color: var(--ink); font-family: var(--font-display); font-size: 70px; font-weight: 700; line-height: 1.15; }
+        .note-layout .hint { margin-top: 20px; color: var(--ink); font-family: var(--font-body); font-size: 31px; font-weight: 700; }
+
+        .timeline-grid {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 190px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 26px;
+        }
+
+        .timeline-card { min-height: 360px; padding: 30px 30px 26px; position: relative; }
+        .timeline-card:nth-child(1) { background: var(--blue); transform: rotate(-1.4deg); }
+        .timeline-card:nth-child(2) { background: var(--yellow); transform: rotate(1.2deg); }
+        .timeline-card:nth-child(3) { background: var(--green); transform: rotate(-0.7deg); }
+        .timeline-card .num { color: var(--ink); font-family: var(--font-latin); font-size: 66px; font-weight: 900; line-height: 0.9; }
+        .timeline-card h3 { margin-top: 18px; color: var(--ink); font-family: var(--font-body); font-size: 42px; font-weight: 700; }
+        .timeline-card p { margin-top: 28px; color: var(--ink); font-family: var(--font-body); font-size: 31px; line-height: 1.45; }
+        .timeline-card .blank-line { position: absolute; left: 30px; right: 30px; bottom: 30px; height: 3px; background: var(--ink); }
+
+        .note-layout .bottom-callout { position: absolute; left: 0; bottom: 0; padding: 14px 22px 11px; background: var(--ink); color: var(--white); font-family: var(--font-body); font-size: 29px; font-weight: 700; }
+
+        /* === SLIDE 04: ASK THE TEACHER === */
+        .ask-layout {
+            position: absolute;
+            left: 118px;
+            right: 118px;
+            top: 172px;
+            bottom: 112px;
+            z-index: 3;
+        }
+
+        .ask-layout h2 { margin-top: 26px; }
+        .ask-layout .main-question { position: absolute; left: 0; top: 206px; width: 750px; min-height: 228px; padding: 42px 48px; background: var(--white); transform: rotate(-1.2deg); }
+        .main-question .question-label { color: var(--ink); font-family: var(--font-body); font-size: 30px; font-weight: 700; }
+        .main-question .question { margin-top: 16px; color: var(--ink); font-family: var(--font-body); font-size: 65px; font-weight: 700; line-height: 1.1; }
+
+        .followup-stack { position: absolute; right: 0; top: 196px; width: 610px; display: grid; gap: 18px; }
+        .followup { padding: 22px 28px 18px; min-height: 82px; font-family: var(--font-body); font-size: 32px; font-weight: 700; line-height: 1.25; }
+        .followup:nth-child(1) { background: var(--pink); transform: rotate(2deg); }
+        .followup:nth-child(2) { background: var(--green); transform: rotate(-1.2deg); }
+        .followup:nth-child(3) { background: var(--blue); transform: rotate(1deg); }
+
+        .ask-layout .sequence { position: absolute; left: 0; bottom: 0; display: flex; align-items: center; gap: 20px; color: var(--ink); font-family: var(--font-body); font-size: 28px; font-weight: 700; }
+        .sequence .arrow { font-family: var(--font-latin); font-size: 38px; }
+        .ask-layout .task-tag { position: absolute; right: 0; bottom: 0; padding: 15px 24px 12px; background: var(--ink); color: var(--white); font-family: var(--font-body); font-size: 27px; font-weight: 700; transform: rotate(-2deg); }
+
+        /* === SLIDE 05: TEACHER ASKS STUDENTS === */
+        .question-layout {
+            position: absolute;
+            left: 118px;
+            right: 118px;
+            top: 172px;
+            bottom: 112px;
+            z-index: 3;
+        }
+
+        .question-layout h2 { margin-top: 26px; }
+        .three-questions { position: absolute; left: 0; right: 0; top: 196px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .three-questions .question-card { min-height: 300px; padding: 30px; }
+        .question-card:nth-child(1) { background: var(--blue); transform: rotate(-1deg); }
+        .question-card:nth-child(2) { background: var(--white); transform: rotate(1.2deg); }
+        .question-card:nth-child(3) { background: var(--yellow); transform: rotate(-0.6deg); }
+        .question-card .phase { color: var(--ink); font-family: var(--font-latin); font-size: 25px; font-weight: 900; letter-spacing: 0.06em; }
+        .question-card h3 { margin-top: 22px; color: var(--ink); font-family: var(--font-body); font-size: 38px; font-weight: 700; }
+        .question-card p { margin-top: 20px; color: var(--ink); font-family: var(--font-body); font-size: 29px; line-height: 1.45; }
+        .question-layout .answer-rule { position: absolute; left: 0; bottom: 0; padding: 16px 24px 12px; background: var(--ink); color: var(--white); font-family: var(--font-body); font-size: 30px; font-weight: 700; }
+        .question-layout .answer-rule span { color: var(--yellow); }
+
+        /* === SLIDE 06: PAIR INTERVIEW === */
+        .pair-layout {
+            position: absolute;
+            left: 118px;
+            right: 118px;
+            top: 172px;
+            bottom: 112px;
+            z-index: 3;
+        }
+
+        .pair-layout h2 { margin-top: 26px; }
+        .pair-layout .left-card { position: absolute; left: 0; top: 200px; width: 860px; min-height: 390px; padding: 38px 44px; background: var(--white); transform: rotate(-1deg); }
+        .left-card .card-title { margin-bottom: 28px; }
+        .interview-list { display: grid; gap: 18px; color: var(--ink); font-family: var(--font-body); font-size: 34px; font-weight: 700; line-height: 1.35; }
+        .interview-list .q::before { content: "?"; display: inline-grid; place-items: center; width: 40px; height: 40px; margin-right: 15px; border: 3px solid var(--ink); background: var(--pink); font-family: var(--font-latin); font-size: 26px; vertical-align: 7px; }
+
+        .pair-layout .right-card { position: absolute; right: 0; top: 190px; width: 510px; min-height: 410px; padding: 32px; background: var(--yellow); transform: rotate(2.3deg); }
+        .rule-list { display: grid; gap: 22px; margin-top: 22px; }
+        .rule { display: flex; gap: 16px; align-items: flex-start; color: var(--ink); font-family: var(--font-body); font-size: 29px; font-weight: 700; line-height: 1.35; }
+        .rule .num { flex: 0 0 40px; height: 40px; display: grid; place-items: center; border: 3px solid var(--ink); background: var(--green); font-family: var(--font-latin); font-size: 23px; }
+        .pair-layout .bottom-note { position: absolute; left: 0; bottom: 0; color: var(--ink); font-family: var(--font-body); font-size: 31px; font-weight: 700; }
+
+        /* === SLIDE 07: INTRODUCE A CLASSMATE === */
+        .share-layout {
+            position: absolute;
+            left: 118px;
+            right: 118px;
+            top: 172px;
+            bottom: 112px;
+            z-index: 3;
+        }
+
+        .share-layout h2 { margin-top: 26px; }
+        .share-layout .quote-card { position: absolute; left: 0; top: 204px; width: 1190px; min-height: 306px; padding: 46px 54px; background: var(--white); transform: rotate(-0.8deg); }
+        .quote-card .quote-mark { color: var(--pink); font-family: var(--font-latin); font-size: 83px; font-weight: 900; line-height: 0.6; }
+        .quote-card .quote-text { margin-top: 22px; color: var(--ink); font-family: var(--font-body); font-size: 42px; font-weight: 700; line-height: 1.35; }
+        .quote-card .quote-text strong { background: var(--yellow); font-weight: 700; }
+        .share-layout .teacher-card { position: absolute; right: 0; top: 236px; width: 420px; min-height: 242px; padding: 30px; background: var(--green); transform: rotate(4deg); }
+        .teacher-card .card-title { font-size: 32px; }
+        .teacher-card p { margin-top: 18px; color: var(--ink); font-family: var(--font-body); font-size: 29px; line-height: 1.4; }
+        .share-layout .duration { position: absolute; left: 0; bottom: 0; padding: 14px 24px 11px; background: var(--ink); color: var(--white); font-family: var(--font-body); font-size: 29px; font-weight: 700; }
+
+        /* === SLIDE 08: GROUP PROPOSAL === */
+        .proposal-layout {
+            position: absolute;
+            left: 118px;
+            right: 118px;
+            top: 158px;
+            bottom: 110px;
+            z-index: 3;
+        }
+
+        .proposal-layout h2 { margin-top: 26px; }
+        .proposal-layout .brief { margin-top: 15px; color: var(--ink); font-family: var(--font-body); font-size: 31px; font-weight: 700; }
+        .proposal-grid { position: absolute; left: 0; right: 0; top: 260px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; }
+        .proposal-card { min-height: 250px; padding: 24px 22px; }
+        .proposal-card:nth-child(1) { background: var(--blue); transform: rotate(-1.8deg); }
+        .proposal-card:nth-child(2) { background: var(--pink); transform: rotate(1.3deg); }
+        .proposal-card:nth-child(3) { background: var(--green); transform: rotate(-0.8deg); }
+        .proposal-card:nth-child(4) { background: var(--yellow); transform: rotate(1.7deg); }
+        .proposal-card:nth-child(5) { background: var(--white); transform: rotate(-1.1deg); }
+        .proposal-card .step { color: var(--ink); font-family: var(--font-latin); font-size: 58px; font-weight: 900; line-height: 0.9; opacity: 0.55; }
+        .proposal-card h3 { margin-top: 20px; color: var(--ink); font-family: var(--font-body); font-size: 34px; font-weight: 700; }
+        .proposal-card p { margin-top: 14px; color: var(--ink); font-family: var(--font-body); font-size: 25px; line-height: 1.42; }
+        .proposal-layout .report-tag { position: absolute; left: 0; bottom: 0; padding: 14px 24px 11px; background: var(--ink); color: var(--white); font-family: var(--font-body); font-size: 29px; font-weight: 700; }
+        .proposal-layout .report-tag span { color: var(--yellow); }
+
+        /* === SLIDE 09: CLOSE === */
+        .close-layout {
+            position: absolute;
+            inset: 118px;
+            z-index: 3;
+            color: var(--white);
+        }
+
+        .close-layout .close-frame { position: absolute; inset: 0; border: 4px solid var(--white); box-shadow: 12px 12px 0 var(--yellow); }
+        .close-layout .label-pill { position: absolute; top: 56px; left: 58px; }
+        .close-layout h2 { position: absolute; top: 198px; left: 58px; color: var(--white); font-size: 96px; line-height: 1.12; }
+        .close-layout .close-sub { position: absolute; left: 64px; top: 490px; color: var(--cream); font-family: var(--font-body); font-size: 36px; font-weight: 700; }
+        .close-layout .three-return { position: absolute; left: 58px; right: 58px; bottom: 82px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .return-card { min-height: 126px; padding: 24px; border: 3px solid var(--ink); color: var(--ink); font-family: var(--font-body); font-size: 31px; font-weight: 700; box-shadow: 4px 4px 0 var(--white); }
+        .return-card:nth-child(1) { background: var(--blue); }
+        .return-card:nth-child(2) { background: var(--pink); }
+        .return-card:nth-child(3) { background: var(--yellow); }
+        .close-layout .final-tag { position: absolute; right: 58px; top: 56px; padding: 15px 22px 12px; border: 3px solid var(--ink); background: var(--yellow); color: var(--ink); box-shadow: 4px 4px 0 var(--white); font-family: var(--font-body); font-size: 29px; font-weight: 700; transform: rotate(3deg); }
+
+        /* === SLIDE DECORATION POSITIONS === */
+        .s1-grid { right: 52px; top: 86px; }
+        .s1-stripe { right: 118px; bottom: 170px; }
+        .s1-star { right: 92px; bottom: 90px; }
+        .s2-dot { right: 70px; bottom: 150px; background-position: 0 0; }
+        .s3-stripe { right: 118px; top: 145px; }
+        .s4-star { right: 92px; top: 142px; background: var(--green); }
+        .s5-grid { right: 72px; bottom: 100px; }
+        .s6-stripe { right: 110px; bottom: 144px; background: repeating-linear-gradient(45deg, var(--ink), var(--ink) 4px, var(--pink) 4px, var(--pink) 12px); }
+        .s7-star { right: 82px; top: 124px; background: var(--yellow); }
+        .s8-grid { right: 60px; bottom: 110px; }
+        .s9-star { right: 92px; bottom: 82px; background: var(--pink); border-color: var(--white); }
+
+        /* === REVEAL ANIMATIONS === */
+        .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s var(--ease-out), transform 0.7s var(--ease-out); }
+        .slide.visible .reveal { opacity: 1; transform: translateY(0); }
+        .slide.visible .reveal:nth-child(2) { transition-delay: 0.08s; }
+        .slide.visible .reveal:nth-child(3) { transition-delay: 0.16s; }
+        .slide.visible .reveal:nth-child(4) { transition-delay: 0.24s; }
+        .slide.visible .hard-card { animation: card-pop 0.75s var(--ease-pop) 0.14s both; }
+        .slide.visible .small-card { animation: card-pop 0.65s var(--ease-pop) 0.24s both; }
+        .slide.visible .star-burst { animation: star-pop 0.75s var(--ease-pop) 0.34s both; }
+        .slide.visible .stripe-block { animation: stripe-in 0.7s var(--ease-out) 0.2s both; }
+
+        @keyframes card-pop { from { opacity: 0; transform: translateY(28px) scale(0.94) rotate(0deg); } to { opacity: 1; } }
+        @keyframes star-pop { from { opacity: 0; transform: scale(0.4) rotate(-18deg); } to { opacity: 1; } }
+        @keyframes stripe-in { from { opacity: 0; transform: translateX(48px) rotate(-8deg); } to { opacity: 1; } }
+
+        /* === INLINE EDITING === */
+        .edit-hotzone { position: fixed; top: 0; left: 0; width: 84px; height: 84px; z-index: 10000; cursor: pointer; }
+        .edit-toggle { position: fixed; top: 18px; left: 18px; z-index: 10001; opacity: 0; pointer-events: none; border: 0; border-radius: 50%; width: 44px; height: 44px; background: var(--ink); color: var(--white); cursor: pointer; transition: opacity 0.3s ease; }
+        .edit-toggle.show, .edit-toggle.active { opacity: 1; pointer-events: auto; }
+        .editing [data-editable="true"] { outline: 3px dashed var(--pink); outline-offset: 5px; cursor: text; }
+    </style>
+</head>
+<body>
+    <div class="deck-viewport">
+        <main class="deck-stage" id="deckStage">
+            <!-- === SLIDE 01: REAL FIRST-WEEK COVER === -->
+            <section class="slide cover active visible" aria-label="第一周课外活动">
+                <div class="slide-shell">
+                    <div class="frame-line"></div>
+                    <div class="topbar reveal"><span>第一周　/　大学生活</span><span class="divider"></span><span class="counter latin">01</span></div>
+                    <div class="hero-card hard-card" data-editable="true">
+                        <h1><span>我的大学生活</span><span>与新学期计划</span></h1>
+                        <span class="hero-tag">先听，再问，最后提案</span>
+                    </div>
+                    <div class="stat-card hard-card reveal"><div class="stat-number latin">3 + 1</div><div class="stat-label">记住事实和目标</div></div>
+                    <div class="student-sticker reveal">学生<br>接着来问</div>
+                    <div class="flow reveal"><span>老师先说</span><span class="arrow">→</span><span>你来问</span><span class="arrow">→</span><span>一起提案</span></div>
+                    <div class="dot-grid s1-grid" aria-hidden="true"></div>
+                    <div class="stripe-block s1-stripe" aria-hidden="true"></div>
+                    <div class="star-burst s1-star" aria-hidden="true"></div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 02: TEACHER FIRST === -->
+            <section class="slide" aria-label="先听老师说">
+                <div class="slide-shell blue">
+                    <div class="frame-line"></div>
+                    <div class="topbar reveal"><span>第一周　/　大学生活</span><span class="divider"></span><span class="counter latin">02</span></div>
+                    <div class="listen-layout">
+                        <div class="label-pill pink reveal">01　听老师</div>
+                        <h2 class="reveal">先听老师说</h2>
+                        <div class="prompt-card hard-card reveal">
+                            <div class="prompt-list">
+                                <span>我是谁？</span>
+                                <span>我怎样生活？</span>
+                                <span>我遇到过什么？</span>
+                                <span>我这学期想做什么？</span>
+                            </div>
+                        </div>
+                        <div class="stat-card hard-card reveal"><div class="big latin">60–90</div><div class="small">秒<br>学生先听，不急着提问。</div></div>
+                        <p class="finish-line reveal">完成：记住 3 项事实和 1 个目标。</p>
+                    </div>
+                    <div class="dot-grid s2-dot" aria-hidden="true"></div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 03: KEYWORDS === -->
+            <section class="slide" aria-label="只记关键词">
+                <div class="slide-shell">
+                    <div class="frame-line"></div>
+                    <div class="topbar reveal"><span>第一周　/　大学生活</span><span class="divider"></span><span class="counter latin">03</span></div>
+                    <div class="note-layout">
+                        <div class="label-pill green reveal">02　记重点</div>
+                        <h2 class="reveal">不要写每一个字</h2>
+                        <p class="hint reveal">只抓关键词：过去、现在、未来。</p>
+                        <div class="timeline-grid">
+                            <div class="timeline-card hard-card reveal"><div class="num latin">01</div><h3>过去</h3><p>一个经历<br>一个变化<br>一个难忘的故事</p><div class="blank-line"></div></div>
+                            <div class="timeline-card hard-card reveal"><div class="num latin">02</div><h3>现在</h3><p>一种生活<br>一个兴趣<br>一个正在做的事</p><div class="blank-line"></div></div>
+                            <div class="timeline-card hard-card reveal"><div class="num latin">03</div><h3>未来</h3><p>一个目标<br>一个计划<br>一个想解决的问题</p><div class="blank-line"></div></div>
+                        </div>
+                        <div class="bottom-callout reveal">记关键词，不要求逐字复述。</div>
+                    </div>
+                    <div class="stripe-block s3-stripe" aria-hidden="true"></div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 04: ASK THE TEACHER === -->
+            <section class="slide" aria-label="学生提问老师">
+                <div class="slide-shell yellow">
+                    <div class="frame-line"></div>
+                    <div class="topbar reveal"><span>第一周　/　大学生活</span><span class="divider"></span><span class="counter latin">04</span></div>
+                    <div class="ask-layout">
+                        <div class="label-pill blue reveal">03　问老师</div>
+                        <h2 class="reveal">听完以后，轮到你。</h2>
+                        <div class="main-question hard-card reveal"><div class="question-label">先问一个主问题</div><div class="question">你为什么……？</div></div>
+                        <div class="followup-stack">
+                            <div class="followup small-card reveal">后来呢？</div>
+                            <div class="followup small-card reveal">跟谁一起？</div>
+                            <div class="followup small-card reveal">如果再来一次，你会……吗？</div>
+                        </div>
+                        <div class="sequence reveal"><span>主问题</span><span class="arrow">→</span><span>老师回答</span><span class="arrow">→</span><span>追问</span></div>
+                        <div class="task-tag reveal">每人：1 个主问题＋1 个追问</div>
+                    </div>
+                    <div class="star-burst s4-star" aria-hidden="true"></div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 05: TEACHER ASKS STUDENTS === -->
+            <section class="slide" aria-label="老师提问学生">
+                <div class="slide-shell pink">
+                    <div class="frame-line"></div>
+                    <div class="topbar reveal"><span>第一周　/　大学生活</span><span class="divider"></span><span class="counter latin">05</span></div>
+                    <div class="question-layout">
+                        <div class="label-pill yellow reveal">04　回答老师</div>
+                        <h2 class="reveal">现在，老师来问你。</h2>
+                        <div class="three-questions">
+                            <div class="question-card hard-card reveal"><div class="phase latin">PAST</div><h3>你以前做过什么？</h3><p>说一件经历，再补充一个细节。</p></div>
+                            <div class="question-card hard-card reveal"><div class="phase latin">NOW</div><h3>你现在的生活怎么样？</h3><p>说一个习惯、兴趣或正在做的事。</p></div>
+                            <div class="question-card hard-card reveal"><div class="phase latin">FUTURE</div><h3>这学期最想完成什么？</h3><p>说目标，也说说为什么。</p></div>
+                        </div>
+                        <div class="answer-rule reveal">回答时不要只说一个词：<span>答案＋原因＋以后</span></div>
+                    </div>
+                    <div class="dot-grid s5-grid" aria-hidden="true"></div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 06: PAIR INTERVIEW === -->
+            <section class="slide" aria-label="采访同学">
+                <div class="slide-shell green">
+                    <div class="frame-line"></div>
+                    <div class="topbar reveal"><span>第一周　/　大学生活</span><span class="divider"></span><span class="counter latin">06</span></div>
+                    <div class="pair-layout">
+                        <div class="label-pill pink reveal">05　采访同学</div>
+                        <h2 class="reveal">找到一个不同的答案</h2>
+                        <div class="left-card hard-card reveal">
+                            <div class="card-title">你可以这样问</div>
+                            <div class="interview-list">
+                                <div class="q">你为什么学中文？</div>
+                                <div class="q">你平常喜欢做什么？</div>
+                                <div class="q">这学期你最想完成什么？</div>
+                            </div>
+                        </div>
+                        <div class="right-card hard-card reveal">
+                            <div class="card-title">采访规则</div>
+                            <div class="rule-list">
+                                <div class="rule"><span class="num latin">1</span><span>一人问，一人答。</span></div>
+                                <div class="rule"><span class="num latin">2</span><span>至少追问一个细节。</span></div>
+                                <div class="rule"><span class="num latin">3</span><span>交换角色，再做一次。</span></div>
+                            </div>
+                        </div>
+                        <p class="bottom-note reveal">最后：把你的同学介绍给老师。</p>
+                    </div>
+                    <div class="stripe-block s6-stripe" aria-hidden="true"></div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 07: SHARE A CLASSMATE === -->
+            <section class="slide" aria-label="介绍同学">
+                <div class="slide-shell blue">
+                    <div class="frame-line"></div>
+                    <div class="topbar reveal"><span>第一周　/　大学生活</span><span class="divider"></span><span class="counter latin">07</span></div>
+                    <div class="share-layout">
+                        <div class="label-pill yellow reveal">06　介绍同学</div>
+                        <h2 class="reveal">把同学介绍给老师</h2>
+                        <div class="quote-card hard-card reveal">
+                            <div class="quote-mark latin">“</div>
+                            <div class="quote-text">这是……。他／她以前 <strong>……</strong>，现在 <strong>……</strong>，这学期想 <strong>……</strong>。</div>
+                        </div>
+                        <div class="teacher-card hard-card reveal"><div class="card-title">老师会继续问</div><p>为什么？<br>后来呢？<br>你们有什么不一样？</p></div>
+                        <div class="duration reveal">每人说 30–45 秒。</div>
+                    </div>
+                    <div class="star-burst s7-star" aria-hidden="true"></div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 08: GROUP PROPOSAL === -->
+            <section class="slide" aria-label="小组提案">
+                <div class="slide-shell cream">
+                    <div class="frame-line"></div>
+                    <div class="topbar reveal"><span>第一周　/　大学生活</span><span class="divider"></span><span class="counter latin">08</span></div>
+                    <div class="proposal-layout">
+                        <div class="label-pill blue reveal">07　小组提案</div>
+                        <h2 class="reveal">如果你是班级顾问？</h2>
+                        <p class="brief reveal">四人小组：设计一项周末活动或学习计划。</p>
+                        <div class="proposal-grid">
+                            <div class="proposal-card hard-card reveal"><div class="step latin">01</div><h3>时间</h3><p>什么时候？<br>多长时间？</p></div>
+                            <div class="proposal-card hard-card reveal"><div class="step latin">02</div><h3>地点</h3><p>在哪里？<br>怎么去？</p></div>
+                            <div class="proposal-card hard-card reveal"><div class="step latin">03</div><h3>内容</h3><p>做什么？<br>吃什么？</p></div>
+                            <div class="proposal-card hard-card reveal"><div class="step latin">04</div><h3>理由</h3><p>谁会喜欢？<br>为什么？</p></div>
+                            <div class="proposal-card hard-card reveal"><div class="step latin">05</div><h3>备选</h3><p>遇到问题<br>怎么办？</p></div>
+                        </div>
+                        <div class="report-tag reveal">最后：每组准备 <span>60–90 秒</span> 方案。</div>
+                    </div>
+                    <div class="dot-grid s8-grid" aria-hidden="true"></div>
+                </div>
+            </section>
+
+            <!-- === SLIDE 09: CLOSE === -->
+            <section class="slide" aria-label="课末回顾">
+                <div class="slide-shell black">
+                    <div class="close-layout">
+                        <div class="close-frame"></div>
+                        <div class="label-pill">08　最后一句</div>
+                        <h2 class="reveal">今天先认识彼此。</h2>
+                        <p class="close-sub reveal">从一个问题开始，把新学期说出来。</p>
+                        <div class="three-return">
+                            <div class="return-card reveal">我听见了……</div>
+                            <div class="return-card reveal">我问到了……</div>
+                            <div class="return-card reveal">我想知道……</div>
+                        </div>
+                        <div class="final-tag reveal">这学期我建议……</div>
+                    </div>
+                    <div class="star-burst s9-star" aria-hidden="true"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- === PERSISTENT PRESENTATION CONTROLS === -->
+    <div class="counter-box" id="counterBox" aria-live="polite">01 / 09</div>
+    <div class="nav-buttons" aria-label="投影片导航">
+        <button class="nav-btn" id="prevBtn" aria-label="上一张">←</button>
+        <button class="nav-btn" id="nextBtn" aria-label="下一张">→</button>
+    </div>
+
+    <!-- === INLINE EDITING CONTROLS === -->
+    <div class="edit-hotzone" aria-hidden="true"></div>
+    <button class="edit-toggle" id="editToggle" title="Edit mode (E)" aria-label="开启编辑模式">✎</button>
+
+    <script>
+        /* === FIXED-STAGE PRESENTATION CONTROLLER === */
+        class SlidePresentation {
+            constructor() {
+                this.slides = Array.from(document.querySelectorAll('.slide'));
+                this.currentSlide = 0;
+                this.stage = document.getElementById('deckStage');
+                this.counter = document.getElementById('counterBox');
+                this.setupStageScale();
+                this.setupKeyboardNav();
+                this.setupTouchNav();
+                this.setupWheelNav();
+                document.getElementById('prevBtn').addEventListener('click', () => this.showSlide(this.currentSlide - 1));
+                document.getElementById('nextBtn').addEventListener('click', () => this.showSlide(this.currentSlide + 1));
+                this.showSlide(0);
+            }
+
+            setupStageScale() {
+                const scale = () => {
+                    const factor = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+                    const x = (window.innerWidth - 1920 * factor) / 2;
+                    const y = (window.innerHeight - 1080 * factor) / 2;
+                    this.stage.style.transform = `translate(${x}px, ${y}px) scale(${factor})`;
+                };
+                scale();
+                window.addEventListener('resize', scale);
+            }
+
+            setupKeyboardNav() {
+                document.addEventListener('keydown', (event) => {
+                    if (event.target && event.target.getAttribute && event.target.getAttribute('contenteditable') === 'true') return;
+                    if (['ArrowRight', 'ArrowDown', ' ', 'PageDown'].includes(event.key)) { event.preventDefault(); this.showSlide(this.currentSlide + 1); }
+                    if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(event.key)) { event.preventDefault(); this.showSlide(this.currentSlide - 1); }
+                    if (event.key === 'Home') { event.preventDefault(); this.showSlide(0); }
+                    if (event.key === 'End') { event.preventDefault(); this.showSlide(this.slides.length - 1); }
+                });
+            }
+
+            setupTouchNav() {
+                let startX = 0;
+                document.addEventListener('touchstart', (event) => { startX = event.changedTouches[0].screenX; }, { passive: true });
+                document.addEventListener('touchend', (event) => { const delta = event.changedTouches[0].screenX - startX; if (Math.abs(delta) > 50) this.showSlide(this.currentSlide + (delta < 0 ? 1 : -1)); }, { passive: true });
+            }
+
+            setupWheelNav() {
+                let locked = false;
+                document.addEventListener('wheel', (event) => {
+                    if (locked || Math.abs(event.deltaY) < 20) return;
+                    locked = true;
+                    this.showSlide(this.currentSlide + (event.deltaY > 0 ? 1 : -1));
+                    window.setTimeout(() => { locked = false; }, 500);
+                }, { passive: true });
+            }
+
+            showSlide(index) {
+                this.currentSlide = Math.max(0, Math.min(index, this.slides.length - 1));
+                this.slides.forEach((slide, i) => {
+                    slide.classList.remove('visible');
+                    slide.classList.toggle('active', i === this.currentSlide);
+                });
+                window.requestAnimationFrame(() => {
+                    const active = this.slides[this.currentSlide];
+                    if (active) active.classList.add('visible');
+                });
+                this.counter.textContent = `${String(this.currentSlide + 1).padStart(2, '0')} / ${String(this.slides.length).padStart(2, '0')}`;
+            }
+        }
+
+        /* === LIGHTWEIGHT INLINE EDITOR === */
+        class InlineEditor {
+            constructor() {
+                this.isActive = false;
+                this.toggle = document.getElementById('editToggle');
+                this.storageKey = 'lesson-01-campus-activity-html-b';
+                this.bind();
+            }
+
+            bind() {
+                this.toggle.addEventListener('click', () => this.toggleEditMode());
+                document.addEventListener('keydown', (event) => {
+                    const target = event.target;
+                    const editingText = target && target.getAttribute && target.getAttribute('contenteditable') === 'true';
+                    if ((event.key === 'e' || event.key === 'E') && !editingText) this.toggleEditMode();
+                    if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 's') { event.preventDefault(); this.save(); }
+                });
+                const hotzone = document.querySelector('.edit-hotzone');
+                let hideTimeout = null;
+                hotzone.addEventListener('mouseenter', () => { clearTimeout(hideTimeout); this.toggle.classList.add('show'); });
+                hotzone.addEventListener('mouseleave', () => { hideTimeout = setTimeout(() => { if (!this.isActive) this.toggle.classList.remove('show'); }, 400); });
+                this.toggle.addEventListener('mouseenter', () => clearTimeout(hideTimeout));
+                this.toggle.addEventListener('mouseleave', () => { hideTimeout = setTimeout(() => { if (!this.isActive) this.toggle.classList.remove('show'); }, 400); });
+                hotzone.addEventListener('click', () => this.toggleEditMode());
+            }
+
+            toggleEditMode() {
+                this.isActive = !this.isActive;
+                document.body.classList.toggle('editing', this.isActive);
+                document.querySelectorAll('[data-editable="true"]').forEach((node) => { node.contentEditable = this.isActive ? 'true' : 'false'; });
+                this.toggle.classList.toggle('active', this.isActive);
+            }
+
+            save() {
+                localStorage.setItem(this.storageKey, document.querySelector('.deck-stage').innerHTML);
+                this.toggle.title = 'Saved locally';
+            }
+        }
+
+        /* === INITIALIZE === */
+        window.presentation = new SlidePresentation();
+        window.editor = new InlineEditor();
+    </script>
+</body>
+</html>

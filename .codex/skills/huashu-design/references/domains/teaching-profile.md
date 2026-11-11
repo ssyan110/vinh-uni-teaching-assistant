@@ -1,5 +1,9 @@
 # Teaching Domain Profile
 
+> 2026-11-04 字号优先级：未来新制 Vinh 实体课原生 OpenSlide 的学生正文按 `docs/classroom-html-standard-2026-10-07.md` 的新课规则执行：1920×1080 画布默认 56 px，最低 54 px，通常 54–60 px；其他画布按比例换算。复用旧参考的布局与层级时，不复用其较小正文字号。现有课件不回改，线上 PPTX 与其他媒介不适用此 px 规则。
+
+> 本文的 24 px 等通用演示下限不适用于上述 Vinh 新课；网页、印刷和其他场景的规则仍保留各自范围。
+
 > Domain profile for educators and instructional designers creating lecture slides, tutorial infographics, course module covers, educational posters, and animated concept explainers. This profile configures design tokens, style recommendations, scene templates, workflow presets, and trigger words for the Teaching domain.
 
 ---
@@ -140,7 +144,7 @@ Each major teaching deliverable type is mapped to 3 recommended styles from the 
 - **Layout Constraints**:
   - Slide padding: 64px on all sides (safe zone for projector cropping)
   - Title: top 20% of slide, minimum 44px font size
-  - Body text: minimum 24px font size (legible at 10m projection distance)
+  - Generic body-text baseline: minimum 24px. This is not a verified classroom-distance guarantee and does not apply to future new Vinh classroom decks: follow the 2026-11-04 project rule above (56px default, 54px minimum at 1920×1080).
   - Maximum 6 lines of body text per slide (one core message rule)
   - Visual/diagram area: 60% of slide width when text + visual layout
   - Page/slide number: bottom-right corner, 18px caption size. For Adam's textbook courseware, the visible slide `.page-indicator` must show the printed textbook page/range from the database, not the slide number or PDF page; navigation counters belong only in the presenter chrome. Generated classroom activity sections that do not appear directly in the textbook, especially `Luyện tập tổng hợp` and `Văn hóa bổ sung`, omit `.page-indicator`.

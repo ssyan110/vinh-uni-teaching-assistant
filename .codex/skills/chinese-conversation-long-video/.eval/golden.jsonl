@@ -1,0 +1,2 @@
+{"id": "connected-scenes", "input": "Plan a multi-scene Chinese conversation for a full listening lesson.", "expected": {"trigger": "chinese-conversation-long-video", "outputContains": ["scene", "dialogue"]}}
+{"id": "listening-breaks", "input": "Edit a long illustrated classroom dialogue so learners can pause and retell between scenes.", "expected": {"trigger": "chinese-conversation-long-video", "outputContains": ["scene", "captions"]}}

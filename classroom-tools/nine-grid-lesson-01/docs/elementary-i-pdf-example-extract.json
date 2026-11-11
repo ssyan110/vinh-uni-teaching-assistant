@@ -1,0 +1,591 @@
+{
+  "schema_version": 1,
+  "textbook_id": "boya-elementary-i",
+  "review_status": "review_only_pending_human_source_translation_review",
+  "source_document": {
+    "file_name": "2. 博雅汉语听说-初级起步篇I-听力文本及参考答案.pdf",
+    "sha256": "0da650144378dbfb108bb6050b782885e12182ee7dc44ee7d50bf26b77b9e3ed",
+    "pdf_page_count": 116,
+    "visually_checked_pdf_pages": [
+      46,
+      50,
+      55,
+      58,
+      62,
+      66,
+      67,
+      71,
+      74,
+      79,
+      84,
+      90,
+      95,
+      101,
+      111,
+      112
+    ],
+    "extraction_method": "macOS Vision OCR-assisted extraction followed by visual comparison with each cited PDF page; only the example sentence text is retained."
+  },
+  "examples": [
+    {
+      "lesson_key": "boya-elementary-i:lesson-11",
+      "sentence": "外边雨不太大。",
+      "pdf_page": 46,
+      "audio_track": "11-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 1
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-11",
+      "sentence": "我最喜欢晴天。",
+      "pdf_page": 46,
+      "audio_track": "11-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 2
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-11",
+      "sentence": "今天24度，不冷不热。",
+      "pdf_page": 46,
+      "audio_track": "11-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 3
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-11",
+      "sentence": "我不喜欢夏天，太热了。",
+      "pdf_page": 46,
+      "audio_track": "11-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 4
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-11",
+      "sentence": "天气预报说明天有大风。",
+      "pdf_page": 46,
+      "audio_track": "11-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 5
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-11",
+      "sentence": "星期六她常去逛街。",
+      "pdf_page": 46,
+      "audio_track": "11-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 6
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-11",
+      "sentence": "现在是冬天，外边很冷。",
+      "pdf_page": 46,
+      "audio_track": "11-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 7
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-11",
+      "sentence": "秋天是最好的季节。",
+      "pdf_page": 46,
+      "audio_track": "11-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 8
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-11",
+      "sentence": "没有雨，明天是晴天，天气很好。",
+      "pdf_page": 46,
+      "audio_track": "11-9",
+      "source_section": "听说一段话/第一段录音",
+      "source_index": null
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-12",
+      "sentence": "我在宿舍做作业呢。",
+      "pdf_page": 50,
+      "audio_track": "12-9",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 1
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-12",
+      "sentence": "我每天都骑自行车去学校。",
+      "pdf_page": 50,
+      "audio_track": "12-9",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 2
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-12",
+      "sentence": "我很喜欢看电影。",
+      "pdf_page": 50,
+      "audio_track": "12-9",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 3
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-12",
+      "sentence": "他每个星期都给家人打电话。",
+      "pdf_page": 50,
+      "audio_track": "12-9",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 5
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-12",
+      "sentence": "朋友明天从上海坐飞机来北京。",
+      "pdf_page": 50,
+      "audio_track": "12-9",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 6
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-12",
+      "sentence": "我告诉老师今天晚到一会儿。",
+      "pdf_page": 50,
+      "audio_track": "12-9",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 8
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "sentence": "这个手机挺便宜的。",
+      "pdf_page": 55,
+      "audio_track": "13-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 1
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "sentence": "他买的两件毛衣都是红的。",
+      "pdf_page": 55,
+      "audio_track": "13-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 4
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-13",
+      "sentence": "今天我要早一点儿去学校。",
+      "pdf_page": 55,
+      "audio_track": "13-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 8
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "sentence": "我要给爸爸妈妈打个电话。",
+      "pdf_page": 58,
+      "audio_track": "14-8",
+      "source_section": "听说句子/音轨14-8连续句子列表",
+      "source_index": 4
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "sentence": "你们先去，我等一会儿就去。",
+      "pdf_page": 58,
+      "audio_track": "14-8",
+      "source_section": "听说句子/音轨14-8连续句子列表",
+      "source_index": 5
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "sentence": "这个主意挺好的。",
+      "pdf_page": 58,
+      "audio_track": "14-8",
+      "source_section": "听说句子/音轨14-8连续句子列表",
+      "source_index": 7
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-14",
+      "sentence": "朋友过生日的时候，我打算送她一束花儿。",
+      "pdf_page": 58,
+      "audio_track": "14-8",
+      "source_section": "听说句子/音轨14-8连续句子列表",
+      "source_index": 8
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-15",
+      "sentence": "明天的课我可以请假吗？",
+      "pdf_page": 62,
+      "audio_track": "15-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 3
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-15",
+      "sentence": "今天挺冷的，你多穿一些衣服。",
+      "pdf_page": 62,
+      "audio_track": "15-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 4
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-15",
+      "sentence": "他说什么？我不太明白。",
+      "pdf_page": 62,
+      "audio_track": "15-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 5
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-15",
+      "sentence": "每天他都有很多问题问老师。",
+      "pdf_page": 62,
+      "audio_track": "15-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 8
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-16",
+      "sentence": "我家在南方，不过我妈妈是北方人。",
+      "pdf_page": 66,
+      "audio_track": "16-11",
+      "source_section": "听说一段话/第一段录音",
+      "source_index": null
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-16",
+      "sentence": "我们家常吃面食。",
+      "pdf_page": 66,
+      "audio_track": "16-11",
+      "source_section": "听说一段话/第一段录音",
+      "source_index": null
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-16",
+      "sentence": "一共十二块五。刷卡吧。",
+      "pdf_page": 66,
+      "audio_track": "16-12",
+      "source_section": "听说一段话/第二段录音",
+      "source_index": null
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-16",
+      "sentence": "对不起，这儿有人。",
+      "pdf_page": 67,
+      "audio_track": "16-12",
+      "source_section": "听说一段话/第二段录音",
+      "source_index": null
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-16",
+      "sentence": "哎，安娜，这儿有一个座位。",
+      "pdf_page": 67,
+      "audio_track": "16-12",
+      "source_section": "听说一段话/第二段录音",
+      "source_index": null
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-17",
+      "sentence": "这是我第一次去中国人家里吃饭。",
+      "pdf_page": 71,
+      "audio_track": "17-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 1
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-17",
+      "sentence": "今天早饭我们吃包子吧。",
+      "pdf_page": 71,
+      "audio_track": "17-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 2
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-17",
+      "sentence": "我只会做意大利面。",
+      "pdf_page": 71,
+      "audio_track": "17-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 3
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-17",
+      "sentence": "这是我给你准备的礼物。",
+      "pdf_page": 71,
+      "audio_track": "17-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 4
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-17",
+      "sentence": "咱们每个人做一个菜，一起吃。",
+      "pdf_page": 71,
+      "audio_track": "17-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 5
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-17",
+      "sentence": "等一会儿你们尝尝我做的菜。",
+      "pdf_page": 71,
+      "audio_track": "17-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 6
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-17",
+      "sentence": "要是有问题就给我打电话。",
+      "pdf_page": 71,
+      "audio_track": "17-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 7
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-17",
+      "sentence": "师傅，我到前面第二个路口下车。",
+      "pdf_page": 71,
+      "audio_track": "17-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 8
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-17",
+      "sentence": "我不会做菜。",
+      "pdf_page": 71,
+      "audio_track": "17-9",
+      "source_section": "六、听录音短语组句的参考句",
+      "source_index": 1
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-18",
+      "sentence": "他常常晚上十二点才睡觉。",
+      "pdf_page": 74,
+      "audio_track": "18-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 2
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-18",
+      "sentence": "今天的天气真好。",
+      "pdf_page": 74,
+      "audio_track": "18-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 3
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-18",
+      "sentence": "我学汉语已经两个多月了。",
+      "pdf_page": 74,
+      "audio_track": "18-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 4
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-18",
+      "sentence": "早睡早起对身体很好。",
+      "pdf_page": 74,
+      "audio_track": "18-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 6
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-18",
+      "sentence": "对不起，我来晚了。",
+      "pdf_page": 74,
+      "audio_track": "18-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 7
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-19",
+      "sentence": "今天路上堵车很厉害。",
+      "pdf_page": 79,
+      "audio_track": "19-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 3
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-19",
+      "sentence": "那个地方好像很热闹。",
+      "pdf_page": 79,
+      "audio_track": "19-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 6
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-19",
+      "sentence": "咱们找个安静的地方坐一会儿。",
+      "pdf_page": 79,
+      "audio_track": "19-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 7
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-20",
+      "sentence": "他今天不能来上课了。",
+      "pdf_page": 84,
+      "audio_track": "20-9",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 1
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-20",
+      "sentence": "大夫给我开了病假条。",
+      "pdf_page": 84,
+      "audio_track": "20-9",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 5
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-20",
+      "sentence": "要是不舒服就去医院看看。",
+      "pdf_page": 84,
+      "audio_track": "20-9",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 8
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-21",
+      "sentence": "我学了两个月汉语了。",
+      "pdf_page": 90,
+      "audio_track": "21-9",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 1
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-21",
+      "sentence": "这一段时间他真倒霉。",
+      "pdf_page": 90,
+      "audio_track": "21-9",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 2
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-21",
+      "sentence": "请你帮我翻译一下儿这段话。",
+      "pdf_page": 90,
+      "audio_track": "21-9",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 4
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-21",
+      "sentence": "他打电话说有急事找我。",
+      "pdf_page": 90,
+      "audio_track": "21-9",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 5
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-21",
+      "sentence": "来以前请提前告诉我一下儿。",
+      "pdf_page": 90,
+      "audio_track": "21-9",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 7
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-22",
+      "sentence": "今晚的聚会有什么活动？",
+      "pdf_page": 95,
+      "audio_track": "22-9",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 5
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-22",
+      "sentence": "我约了朋友去看展览。",
+      "pdf_page": 95,
+      "audio_track": "22-9",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 8
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-23",
+      "sentence": "这个问题我再考虑考虑。",
+      "pdf_page": 101,
+      "audio_track": "23-9",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 3
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-23",
+      "sentence": "昨天我一直待在家里。",
+      "pdf_page": 101,
+      "audio_track": "23-9",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 7
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-25",
+      "sentence": "我们很努力，可是结果还是输了。",
+      "pdf_page": 111,
+      "audio_track": "25-5",
+      "source_section": "听说句子/一、听录音填空的参考句",
+      "source_index": 2
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-25",
+      "sentence": "我在网上买到了那本书。",
+      "pdf_page": 112,
+      "audio_track": "25-9",
+      "source_section": "六、听录音中的三个短语，然后按照正确的顺序组成一句话，并读出来",
+      "source_index": 1
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-25",
+      "sentence": "第一次上课的时候我走错了教室。",
+      "pdf_page": 111,
+      "audio_track": "25-5",
+      "source_section": "听说句子/一、听录音填空的参考句",
+      "source_index": 4
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-25",
+      "sentence": "我们从饭店订了两只烤鸭。",
+      "pdf_page": 111,
+      "audio_track": "25-5",
+      "source_section": "听说句子/一、听录音填空的参考句",
+      "source_index": 5
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-25",
+      "sentence": "打电话叫个外卖吧。",
+      "pdf_page": 111,
+      "audio_track": "25-5",
+      "source_section": "听说句子/一、听录音填空的参考句",
+      "source_index": 6
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-25",
+      "sentence": "我请老师帮我纠正声调问题。",
+      "pdf_page": 111,
+      "audio_track": "25-5",
+      "source_section": "听说句子/一、听录音填空的参考句",
+      "source_index": 8
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-25",
+      "sentence": "我没找到你说的那个地方。",
+      "pdf_page": 112,
+      "audio_track": "25-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 3
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-25",
+      "sentence": "我给你发了微信，你没收到吗？",
+      "pdf_page": 112,
+      "audio_track": "25-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 4
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-25",
+      "sentence": "他表演的节目很有意思。",
+      "pdf_page": 112,
+      "audio_track": "25-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 5
+    },
+    {
+      "lesson_key": "boya-elementary-i:lesson-25",
+      "sentence": "你想了这么多办法，辛苦你了！",
+      "pdf_page": 112,
+      "audio_track": "25-8",
+      "source_section": "四、跟着录音重复句子",
+      "source_index": 8
+    }
+  ]
+}
