@@ -54,13 +54,29 @@ npm run dev
 
 開啟 `http://127.0.0.1:4317`。沒有 `.env` 時，登入頁會提供「使用範例資料進入」。範例變更只保留在目前瀏覽器分頁。
 
+### Vercel deployment
+
+The `student-tracker` Vercel project builds `classroom-tools/student-tracker` from this repository. Production follows `main`. Create preview branches from a commit containing this directory and verify the exact candidate before pushing.
+
+```sh
+# From the repository root
+git cat-file -e HEAD:classroom-tools/student-tracker/package.json
+cd classroom-tools/student-tracker
+nvm use
+npm ci
+npm test
+npm run build:vercel
+```
+
+The Vercel build serves `dist/` at the domain root. Its SPA rewrites serve direct requests to `/today` and `/participation`. Test both routes on the preview deployment.
+
 ### 啟用補登紀錄的資料表
 
 範例模式可直接試用。正式登入模式需要先套用新增表；尚未套用時會顯示未啟用提示並停用補登操作，原有學生資料仍可載入。
 
-The live database now includes attendance exceptions, applied on 2026-10-25 as [20261025163339_attendance_exceptions.sql](supabase/migrations/20261025163339_attendance_exceptions.sql), followed by its owner/student index. Owner isolation, enrollment checks, and separate makeup/official-verification states passed local and live rollback-only SQL tests. Real teacher login and browser save/reload acceptance remain untested. The standalone [attendance-exceptions.sql](supabase/attendance-exceptions.sql) is retained only for the disposable local test harness.
+The versioned [attendance exceptions migration](supabase/migrations/20261025163339_attendance_exceptions.sql) adds the table and its owner-scoped policies. A subsequent migration adds the owner/student index.
 
-The shared Supabase schema audit and completed follow-up checks are recorded in [the latest audit report](../../docs/qa/supabase-audit-20261025/remaining/report.md). All 30 local migration versions now match production history. Authenticated roster, participation, correction and attendance saves were read back after browser reload. The historical LT_03 data repair is a documented no-op on fresh rebuilds; its original applied SQL remains in the audit evidence. Do not replay old migrations manually against production.
+The 31-file schema history was recovered from `vinh-uni-main` at `e4cebf3b19325b74b2af2dc0900e7f84b2136aaf`. It starts with `20260905103254_initial_student_tracker.sql` and includes the classroom-session restart migration. The historical LT_03 data repair is a no-op on fresh rebuilds. Use this history for fresh local databases. Reconcile existing hosted migration history separately before any hosted schema change.
 
 同一學生每個場次只有一筆例外紀錄；使用「編輯補登紀錄」更新。選擇「已手動補登」後仍保持「官方尚未核對」，直到教師查看官方系統，主動填寫核對日期。新表不提供刪除操作。
 
@@ -132,7 +148,7 @@ npm run build
 ## 目前界線
 
 - Adam 的 Supabase 專案已連接並部署；真實帳號登入、跨 owner RLS 與遠端寫入仍需在瀏覽器完成最後端到端走查。
-- 本機沒有可用的 Docker daemon，migration 已完成靜態審查，但尚未在本機 Supabase 容器執行 `db reset`。
+- The migration chain was tested in disposable PostgreSQL 17 with synthetic Auth roles and fixtures. The full Supabase stack and hosted migration history require separate verification.
 - 第一版只支援 CSV，不直接解析 XLSX。
 - 沒有完整離線資料庫；範例模式與未送出的頁面狀態使用瀏覽器分頁暫存。
 
