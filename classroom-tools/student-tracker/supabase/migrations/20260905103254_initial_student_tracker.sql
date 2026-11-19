@@ -210,3 +210,4 @@ create policy "followups_owner_delete" on public.followups for delete to authent
 revoke all on table public.academic_terms, public.courses, public.students, public.enrollments, public.class_sessions, public.attendance_records, public.observation_records, public.followups from anon;
 grant select, insert, update, delete on table public.academic_terms, public.courses, public.students, public.enrollments, public.class_sessions, public.attendance_records, public.observation_records, public.followups to authenticated;
 revoke execute on function public.set_updated_at() from public, anon, authenticated;
+
